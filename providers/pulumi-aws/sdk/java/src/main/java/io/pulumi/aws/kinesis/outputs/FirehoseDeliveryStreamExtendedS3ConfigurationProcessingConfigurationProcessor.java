@@ -4,13 +4,13 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor {
     /**
      * Array of processor parameters. More details are given below
@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor(
-        @OutputCustomType.Parameter("parameters") @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("parameters") @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters,
+        @CustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.type = type;
     }

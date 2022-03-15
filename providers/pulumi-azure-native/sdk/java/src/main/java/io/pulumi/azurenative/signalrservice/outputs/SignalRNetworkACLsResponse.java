@@ -5,14 +5,14 @@ package io.pulumi.azurenative.signalrservice.outputs;
 
 import io.pulumi.azurenative.signalrservice.outputs.NetworkACLResponse;
 import io.pulumi.azurenative.signalrservice.outputs.PrivateEndpointACLResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SignalRNetworkACLsResponse {
     /**
      * Default action when no other rule matches
@@ -30,11 +30,11 @@ public final class SignalRNetworkACLsResponse {
      */
     private final @Nullable NetworkACLResponse publicNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SignalRNetworkACLsResponse(
-        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
-        @OutputCustomType.Parameter("privateEndpoints") @Nullable List<PrivateEndpointACLResponse> privateEndpoints,
-        @OutputCustomType.Parameter("publicNetwork") @Nullable NetworkACLResponse publicNetwork) {
+        @CustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @CustomType.Parameter("privateEndpoints") @Nullable List<PrivateEndpointACLResponse> privateEndpoints,
+        @CustomType.Parameter("publicNetwork") @Nullable NetworkACLResponse publicNetwork) {
         this.defaultAction = defaultAction;
         this.privateEndpoints = privateEndpoints;
         this.publicNetwork = publicNetwork;

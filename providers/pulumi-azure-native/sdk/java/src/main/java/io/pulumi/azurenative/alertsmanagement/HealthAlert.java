@@ -9,7 +9,7 @@ import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertActionResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertCriteriaResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={HealthAlertActionResponse.class})
+    @Export(name="actions", type=List.class, parameters={HealthAlertActionResponse.class})
     private Output</* @Nullable */ List<HealthAlertActionResponse>> actions;
 
     /**
@@ -52,7 +52,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * defines the specific alert criteria information.
      * 
      */
-    @OutputExport(name="criteria", type=HealthAlertCriteriaResponse.class, parameters={})
+    @Export(name="criteria", type=HealthAlertCriteriaResponse.class, parameters={})
     private Output<HealthAlertCriteriaResponse> criteria;
 
     /**
@@ -66,7 +66,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * the description of the health alert that will be included in the alert email.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -80,7 +80,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * the flag that indicates whether the health alert is enabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
@@ -94,7 +94,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * Last time the rule was updated in ISO8601 format.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -108,7 +108,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -122,7 +122,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * the list of resource id's that this health alert is scoped to.
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={String.class})
+    @Export(name="scopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> scopes;
 
     /**
@@ -150,7 +150,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class HealthAlert extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

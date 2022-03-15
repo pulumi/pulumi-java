@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
      * Name of the configuration.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class ConfigurationInfoResponse extends io.pulumi.resources.InvokeA
      * Version of the configuration.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

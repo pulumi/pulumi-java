@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigResult {
     /**
      * An optional description of the RuntimeConfig object.
@@ -20,10 +20,10 @@ public final class GetConfigResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name) {
         this.description = description;
         this.name = name;
     }

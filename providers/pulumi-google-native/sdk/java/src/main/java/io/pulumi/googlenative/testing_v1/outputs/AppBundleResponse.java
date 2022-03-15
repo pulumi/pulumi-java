@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppBundleResponse {
     /**
      * .aab file representing the app bundle under test.
@@ -15,8 +15,8 @@ public final class AppBundleResponse {
      */
     private final FileReferenceResponse bundleLocation;
 
-    @OutputCustomType.Constructor
-    private AppBundleResponse(@OutputCustomType.Parameter("bundleLocation") FileReferenceResponse bundleLocation) {
+    @CustomType.Constructor
+    private AppBundleResponse(@CustomType.Parameter("bundleLocation") FileReferenceResponse bundleLocation) {
         this.bundleLocation = bundleLocation;
     }
 

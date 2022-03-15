@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.BackupArgs;
@@ -23,7 +23,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The time the CreateBackup request is received. If the request does not specify `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
      * 
      */
-    @OutputExport(name="database", type=String.class, parameters={})
+    @Export(name="database", type=String.class, parameters={})
     private Output<String> database;
 
     /**
@@ -51,7 +51,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The database dialect information for the backup.
      * 
      */
-    @OutputExport(name="databaseDialect", type=String.class, parameters={})
+    @Export(name="databaseDialect", type=String.class, parameters={})
     private Output<String> databaseDialect;
 
     /**
@@ -65,7 +65,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The encryption information for the backup.
      * 
      */
-    @OutputExport(name="encryptionInfo", type=EncryptionInfoResponse.class, parameters={})
+    @Export(name="encryptionInfo", type=EncryptionInfoResponse.class, parameters={})
     private Output<EncryptionInfoResponse> encryptionInfo;
 
     /**
@@ -79,7 +79,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -93,7 +93,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The names of the restored databases that reference the backup. The database names are of the form `projects//instances//databases/`. Referencing databases may exist in different instances. The existence of any referencing database prevents the backup from being deleted. When a restored database from the backup enters the `READY` state, the reference to the backup is removed.
      * 
      */
-    @OutputExport(name="referencingDatabases", type=List.class, parameters={String.class})
+    @Export(name="referencingDatabases", type=List.class, parameters={String.class})
     private Output<List<String>> referencingDatabases;
 
     /**
@@ -121,7 +121,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Size of the backup in bytes.
      * 
      */
-    @OutputExport(name="sizeBytes", type=String.class, parameters={})
+    @Export(name="sizeBytes", type=String.class, parameters={})
     private Output<String> sizeBytes;
 
     /**
@@ -135,7 +135,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The current state of the backup.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -149,7 +149,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
      * 
      */
-    @OutputExport(name="versionTime", type=String.class, parameters={})
+    @Export(name="versionTime", type=String.class, parameters={})
     private Output<String> versionTime;
 
     /**

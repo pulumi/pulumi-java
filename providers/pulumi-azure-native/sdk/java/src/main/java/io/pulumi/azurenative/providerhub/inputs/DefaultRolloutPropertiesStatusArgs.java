@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.enums.TrafficRegionCategory;
 import io.pulumi.azurenative.providerhub.inputs.ExtendedErrorInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,35 +20,35 @@ public final class DefaultRolloutPropertiesStatusArgs extends io.pulumi.resource
 
     public static final DefaultRolloutPropertiesStatusArgs Empty = new DefaultRolloutPropertiesStatusArgs();
 
-    @InputImport(name="completedRegions")
+    @Import(name="completedRegions")
       private final @Nullable Output<List<String>> completedRegions;
 
     public Output<List<String>> getCompletedRegions() {
         return this.completedRegions == null ? Output.empty() : this.completedRegions;
     }
 
-    @InputImport(name="failedOrSkippedRegions")
+    @Import(name="failedOrSkippedRegions")
       private final @Nullable Output<Map<String,ExtendedErrorInfoArgs>> failedOrSkippedRegions;
 
     public Output<Map<String,ExtendedErrorInfoArgs>> getFailedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Output.empty() : this.failedOrSkippedRegions;
     }
 
-    @InputImport(name="nextTrafficRegion")
+    @Import(name="nextTrafficRegion")
       private final @Nullable Output<Either<String,TrafficRegionCategory>> nextTrafficRegion;
 
     public Output<Either<String,TrafficRegionCategory>> getNextTrafficRegion() {
         return this.nextTrafficRegion == null ? Output.empty() : this.nextTrafficRegion;
     }
 
-    @InputImport(name="nextTrafficRegionScheduledTime")
+    @Import(name="nextTrafficRegionScheduledTime")
       private final @Nullable Output<String> nextTrafficRegionScheduledTime;
 
     public Output<String> getNextTrafficRegionScheduledTime() {
         return this.nextTrafficRegionScheduledTime == null ? Output.empty() : this.nextTrafficRegionScheduledTime;
     }
 
-    @InputImport(name="subscriptionReregistrationResult")
+    @Import(name="subscriptionReregistrationResult")
       private final @Nullable Output<Either<String,SubscriptionReregistrationResult>> subscriptionReregistrationResult;
 
     public Output<Either<String,SubscriptionReregistrationResult>> getSubscriptionReregistrationResult() {

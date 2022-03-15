@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetPluginArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPluginArgs Empty = new GetPluginArgs();
 
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable String alias;
 
     public Optional<String> getAlias() {
         return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {

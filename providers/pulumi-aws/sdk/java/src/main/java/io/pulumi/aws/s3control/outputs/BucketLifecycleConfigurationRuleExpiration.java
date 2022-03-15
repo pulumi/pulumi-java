@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3control.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleConfigurationRuleExpiration {
     /**
      * Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
@@ -29,11 +29,11 @@ public final class BucketLifecycleConfigurationRuleExpiration {
      */
     private final @Nullable Boolean expiredObjectDeleteMarker;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleConfigurationRuleExpiration(
-        @OutputCustomType.Parameter("date") @Nullable String date,
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("expiredObjectDeleteMarker") @Nullable Boolean expiredObjectDeleteMarker) {
+        @CustomType.Parameter("date") @Nullable String date,
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("expiredObjectDeleteMarker") @Nullable Boolean expiredObjectDeleteMarker) {
         this.date = date;
         this.days = days;
         this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;

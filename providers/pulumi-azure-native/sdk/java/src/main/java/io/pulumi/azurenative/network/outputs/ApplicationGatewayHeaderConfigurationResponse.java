@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayHeaderConfigurationResponse {
     /**
      * Header name of the header configuration.
@@ -22,10 +22,10 @@ public final class ApplicationGatewayHeaderConfigurationResponse {
      */
     private final @Nullable String headerValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayHeaderConfigurationResponse(
-        @OutputCustomType.Parameter("headerName") @Nullable String headerName,
-        @OutputCustomType.Parameter("headerValue") @Nullable String headerValue) {
+        @CustomType.Parameter("headerName") @Nullable String headerName,
+        @CustomType.Parameter("headerValue") @Nullable String headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.SubnetGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the subnet group.
@@ -34,12 +34,12 @@ public final class GetSubnetGroupResult {
      */
     private final @Nullable List<SubnetGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetGroupResult(
-        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") @Nullable List<SubnetGroupTag> tags) {
+        @CustomType.Parameter("aRN") @Nullable String aRN,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @CustomType.Parameter("tags") @Nullable List<SubnetGroupTag> tags) {
         this.aRN = aRN;
         this.description = description;
         this.subnetIds = subnetIds;

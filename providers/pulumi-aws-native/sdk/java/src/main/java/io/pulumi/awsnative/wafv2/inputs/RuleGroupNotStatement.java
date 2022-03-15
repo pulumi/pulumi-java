@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatement;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -12,7 +12,7 @@ public final class RuleGroupNotStatement extends io.pulumi.resources.InvokeArgs 
 
     public static final RuleGroupNotStatement Empty = new RuleGroupNotStatement();
 
-    @InputImport(name="statement", required=true)
+    @Import(name="statement", required=true)
       private final RuleGroupStatement statement;
 
     public RuleGroupStatement getStatement() {

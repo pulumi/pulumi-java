@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * The dimension value.
      * 
      */
-    @InputImport(name="sourceName", required=true)
+    @Import(name="sourceName", required=true)
       private final Output<String> sourceName;
 
     public Output<String> getSourceName() {
@@ -32,7 +32,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * The dimension type.
      * 
      */
-    @InputImport(name="sourceType", required=true)
+    @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
 
     public Output<String> getSourceType() {

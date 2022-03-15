@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * The S3 bucket name to store the logs in.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -30,7 +30,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * Boolean to enable / disable `access_logs`. Defaults to `false`, even when `bucket` is specified.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -41,7 +41,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * The S3 bucket prefix. Logs are stored in the root if not configured.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

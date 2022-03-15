@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NicIPAddressSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NicIPSettingsResponse {
     /**
      * Gets or sets the nic allocation method.
@@ -54,16 +54,16 @@ public final class NicIPSettingsResponse {
      */
     private final @Nullable String subnetMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NicIPSettingsResponse(
-        @OutputCustomType.Parameter("allocationMethod") @Nullable String allocationMethod,
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("gateway") @Nullable List<String> gateway,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("ipAddressInfo") List<NicIPAddressSettingsResponse> ipAddressInfo,
-        @OutputCustomType.Parameter("primaryWinsServer") String primaryWinsServer,
-        @OutputCustomType.Parameter("secondaryWinsServer") String secondaryWinsServer,
-        @OutputCustomType.Parameter("subnetMask") @Nullable String subnetMask) {
+        @CustomType.Parameter("allocationMethod") @Nullable String allocationMethod,
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("gateway") @Nullable List<String> gateway,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("ipAddressInfo") List<NicIPAddressSettingsResponse> ipAddressInfo,
+        @CustomType.Parameter("primaryWinsServer") String primaryWinsServer,
+        @CustomType.Parameter("secondaryWinsServer") String secondaryWinsServer,
+        @CustomType.Parameter("subnetMask") @Nullable String subnetMask) {
         this.allocationMethod = allocationMethod;
         this.dnsServers = dnsServers;
         this.gateway = gateway;

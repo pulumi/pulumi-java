@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends io.pulumi.
      * The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="exact")
+    @Import(name="exact")
       private final @Nullable Output<String> exact;
 
     public Output<String> getExact() {
@@ -31,7 +31,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends io.pulumi.
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -42,7 +42,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends io.pulumi.
      * The object that specifies the range of numbers that the value sent by the client must be included in.
      * 
      */
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> range;
 
     public Output<RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs> getRange() {
@@ -53,7 +53,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends io.pulumi.
      * The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<String> regex;
 
     public Output<String> getRegex() {
@@ -64,7 +64,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchGetArgs extends io.pulumi.
      * The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="suffix")
+    @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
     public Output<String> getSuffix() {

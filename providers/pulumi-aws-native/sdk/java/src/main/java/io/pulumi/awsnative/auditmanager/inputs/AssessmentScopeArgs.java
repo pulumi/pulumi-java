@@ -6,7 +6,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSAccountArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSServiceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
      * The AWS accounts included in scope.
      * 
      */
-    @InputImport(name="awsAccounts")
+    @Import(name="awsAccounts")
       private final @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
 
     public Output<List<AssessmentAWSAccountArgs>> getAwsAccounts() {
@@ -35,7 +35,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
      * The AWS services included in scope.
      * 
      */
-    @InputImport(name="awsServices")
+    @Import(name="awsServices")
       private final @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
 
     public Output<List<AssessmentAWSServiceArgs>> getAwsServices() {

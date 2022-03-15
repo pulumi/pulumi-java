@@ -5,14 +5,14 @@ package io.pulumi.aws.lakeformation.outputs;
 
 import io.pulumi.aws.lakeformation.outputs.GetDataLakeSettingsCreateDatabaseDefaultPermission;
 import io.pulumi.aws.lakeformation.outputs.GetDataLakeSettingsCreateTableDefaultPermission;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataLakeSettingsResult {
     /**
      * List of ARNs of AWS Lake Formation principals (IAM users or roles).
@@ -41,14 +41,14 @@ public final class GetDataLakeSettingsResult {
      */
     private final List<String> trustedResourceOwners;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataLakeSettingsResult(
-        @OutputCustomType.Parameter("admins") List<String> admins,
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("createDatabaseDefaultPermissions") List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions,
-        @OutputCustomType.Parameter("createTableDefaultPermissions") List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("trustedResourceOwners") List<String> trustedResourceOwners) {
+        @CustomType.Parameter("admins") List<String> admins,
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("createDatabaseDefaultPermissions") List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions,
+        @CustomType.Parameter("createTableDefaultPermissions") List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("trustedResourceOwners") List<String> trustedResourceOwners) {
         this.admins = admins;
         this.catalogId = catalogId;
         this.createDatabaseDefaultPermissions = createDatabaseDefaultPermissions;

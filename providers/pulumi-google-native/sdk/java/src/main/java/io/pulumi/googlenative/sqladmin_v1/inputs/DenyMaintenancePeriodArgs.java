@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * "deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the no maintenance interval recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
      * 
      */
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
@@ -33,7 +33,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * "deny maintenance period" start date. If the year of the start date is empty, the year of the end date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
      * 
      */
-    @InputImport(name="startDate")
+    @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
     public Output<String> getStartDate() {
@@ -44,7 +44,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * Time in UTC when the "deny maintenance period" starts on start_date and ends on end_date. The time is in format: HH:mm:SS, i.e., 00:00:00
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {

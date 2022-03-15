@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicSchemaSettings {
     /**
      * The encoding of messages validated against schema.
@@ -27,10 +27,10 @@ public final class TopicSchemaSettings {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicSchemaSettings(
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("schema") String schema) {
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }

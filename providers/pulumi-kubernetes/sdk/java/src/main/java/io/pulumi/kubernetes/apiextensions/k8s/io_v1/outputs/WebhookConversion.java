@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.WebhookClientConfig;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookConversion {
     /**
      * clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
@@ -24,10 +24,10 @@ public final class WebhookConversion {
      */
     private final List<String> conversionReviewVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookConversion(
-        @OutputCustomType.Parameter("clientConfig") @Nullable WebhookClientConfig clientConfig,
-        @OutputCustomType.Parameter("conversionReviewVersions") List<String> conversionReviewVersions) {
+        @CustomType.Parameter("clientConfig") @Nullable WebhookClientConfig clientConfig,
+        @CustomType.Parameter("conversionReviewVersions") List<String> conversionReviewVersions) {
         this.clientConfig = clientConfig;
         this.conversionReviewVersions = conversionReviewVersions;
     }

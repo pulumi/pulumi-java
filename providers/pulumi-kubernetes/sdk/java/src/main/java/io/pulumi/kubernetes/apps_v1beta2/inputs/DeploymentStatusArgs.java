@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.DeploymentConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
      * 
      */
-    @InputImport(name="availableReplicas")
+    @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
 
     public Output<Integer> getAvailableReplicas() {
@@ -35,7 +35,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Count of hash collisions for the Deployment. The Deployment controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ReplicaSet.
      * 
      */
-    @InputImport(name="collisionCount")
+    @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
 
     public Output<Integer> getCollisionCount() {
@@ -46,7 +46,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Represents the latest available observations of a deployment's current state.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<DeploymentConditionArgs>> conditions;
 
     public Output<List<DeploymentConditionArgs>> getConditions() {
@@ -57,7 +57,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * The generation observed by the deployment controller.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
@@ -68,7 +68,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Total number of ready pods targeted by this deployment.
      * 
      */
-    @InputImport(name="readyReplicas")
+    @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
     public Output<Integer> getReadyReplicas() {
@@ -79,7 +79,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Total number of non-terminated pods targeted by this deployment (their labels match the selector).
      * 
      */
-    @InputImport(name="replicas")
+    @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {
@@ -90,7 +90,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Total number of unavailable pods targeted by this deployment. This is the total number of pods that are still required for the deployment to have 100% available capacity. They may either be pods that are running but not yet available or pods that still have not been created.
      * 
      */
-    @InputImport(name="unavailableReplicas")
+    @Import(name="unavailableReplicas")
       private final @Nullable Output<Integer> unavailableReplicas;
 
     public Output<Integer> getUnavailableReplicas() {
@@ -101,7 +101,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Total number of non-terminated pods targeted by this deployment that have the desired template spec.
      * 
      */
-    @InputImport(name="updatedReplicas")
+    @Import(name="updatedReplicas")
       private final @Nullable Output<Integer> updatedReplicas;
 
     public Output<Integer> getUpdatedReplicas() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerRegistryResponse {
     private final String password;
     /**
@@ -19,11 +19,11 @@ public final class ContainerRegistryResponse {
     private final @Nullable String registryServer;
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerRegistryResponse(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("registryServer") @Nullable String registryServer,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("registryServer") @Nullable String registryServer,
+        @CustomType.Parameter("userName") String userName) {
         this.password = password;
         this.registryServer = registryServer;
         this.userName = userName;

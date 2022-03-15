@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
      */
-    @InputImport(name="pullDeps", required=true)
+    @Import(name="pullDeps", required=true)
       private final Boolean pullDeps;
 
     public Boolean getPullDeps() {
@@ -32,7 +32,7 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
      * An rpm package.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse getSource() {

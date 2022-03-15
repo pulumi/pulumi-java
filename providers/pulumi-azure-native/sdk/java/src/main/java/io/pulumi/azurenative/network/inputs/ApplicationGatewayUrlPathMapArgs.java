@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPathRuleArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Default backend address pool resource of URL path map.
      * 
      */
-    @InputImport(name="defaultBackendAddressPool")
+    @Import(name="defaultBackendAddressPool")
       private final @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
 
     public Output<SubResourceArgs> getDefaultBackendAddressPool() {
@@ -36,7 +36,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Default backend http settings resource of URL path map.
      * 
      */
-    @InputImport(name="defaultBackendHttpSettings")
+    @Import(name="defaultBackendHttpSettings")
       private final @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
 
     public Output<SubResourceArgs> getDefaultBackendHttpSettings() {
@@ -47,7 +47,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Default redirect configuration resource of URL path map.
      * 
      */
-    @InputImport(name="defaultRedirectConfiguration")
+    @Import(name="defaultRedirectConfiguration")
       private final @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
 
     public Output<SubResourceArgs> getDefaultRedirectConfiguration() {
@@ -58,7 +58,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Default Rewrite rule set resource of URL path map.
      * 
      */
-    @InputImport(name="defaultRewriteRuleSet")
+    @Import(name="defaultRewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
 
     public Output<SubResourceArgs> getDefaultRewriteRuleSet() {
@@ -69,7 +69,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -80,7 +80,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Name of the URL path map that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -91,7 +91,7 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * Path rule of URL path map resource.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
     public Output<List<ApplicationGatewayPathRuleArgs>> getPathRules() {

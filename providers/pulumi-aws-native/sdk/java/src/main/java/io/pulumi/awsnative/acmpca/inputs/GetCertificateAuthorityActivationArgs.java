@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCertificateAuthorityActivationArgs extends io.pulumi.resou
      * Arn of the Certificate Authority.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final String certificateAuthorityArn;
 
     public String getCertificateAuthorityArn() {

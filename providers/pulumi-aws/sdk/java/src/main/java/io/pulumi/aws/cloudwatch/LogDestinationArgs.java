@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the log destination
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to put data into the target
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -40,7 +40,7 @@ public final class LogDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the target Amazon Kinesis stream resource for the destination
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

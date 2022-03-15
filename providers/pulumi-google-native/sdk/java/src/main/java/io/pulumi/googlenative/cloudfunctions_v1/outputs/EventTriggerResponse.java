@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.FailurePolicyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventTriggerResponse {
     /**
      * The type of event to observe. For example: `providers/cloud.storage/eventTypes/object.change` and `providers/cloud.pubsub/eventTypes/topic.publish`. Event types match pattern `providers/*{@literal /}eventTypes/*.*`. The pattern contains: 1. namespace: For example, `cloud.storage` and `google.firebase.analytics`. 2. resource type: The type of resource on which event occurs. For example, the Google Cloud Storage API includes the type `object`. 3. action: The action that generates the event. For example, action for a Google Cloud Storage Object is 'change'. These parts are lower case.
@@ -31,12 +31,12 @@ public final class EventTriggerResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTriggerResponse(
-        @OutputCustomType.Parameter("eventType") String eventType,
-        @OutputCustomType.Parameter("failurePolicy") FailurePolicyResponse failurePolicy,
-        @OutputCustomType.Parameter("resource") String resource,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("eventType") String eventType,
+        @CustomType.Parameter("failurePolicy") FailurePolicyResponse failurePolicy,
+        @CustomType.Parameter("resource") String resource,
+        @CustomType.Parameter("service") String service) {
         this.eventType = eventType;
         this.failurePolicy = failurePolicy;
         this.resource = resource;

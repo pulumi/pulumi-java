@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayProbeHealthResponseMatchResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -36,7 +36,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Host name to send the probe to.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable String host;
 
     public Optional<String> getHost() {
@@ -47,7 +47,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -58,7 +58,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {
@@ -69,7 +69,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Criterion for classifying a healthy probe response.
      * 
      */
-    @InputImport(name="match")
+    @Import(name="match")
       private final @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match;
 
     public Optional<ApplicationGatewayProbeHealthResponseMatchResponse> getMatch() {
@@ -80,7 +80,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Minimum number of servers that are always marked healthy. Default value is 0.
      * 
      */
-    @InputImport(name="minServers")
+    @Import(name="minServers")
       private final @Nullable Integer minServers;
 
     public Optional<Integer> getMinServers() {
@@ -91,7 +91,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Name of the probe that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -102,7 +102,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -113,7 +113,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Whether the host header should be picked from the backend http settings. Default value is false.
      * 
      */
-    @InputImport(name="pickHostNameFromBackendHttpSettings")
+    @Import(name="pickHostNameFromBackendHttpSettings")
       private final @Nullable Boolean pickHostNameFromBackendHttpSettings;
 
     public Optional<Boolean> getPickHostNameFromBackendHttpSettings() {
@@ -124,7 +124,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -135,7 +135,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * The protocol used for the probe.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -146,7 +146,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * The provisioning state of the probe resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -157,7 +157,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
@@ -168,7 +168,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -179,7 +179,7 @@ public final class ApplicationGatewayProbeResponse extends io.pulumi.resources.I
      * The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Integer unhealthyThreshold;
 
     public Optional<Integer> getUnhealthyThreshold() {

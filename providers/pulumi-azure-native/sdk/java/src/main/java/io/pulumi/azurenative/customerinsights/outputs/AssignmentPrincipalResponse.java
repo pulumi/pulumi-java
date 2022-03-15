@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentPrincipalResponse {
     /**
      * The principal id being assigned to.
@@ -27,11 +27,11 @@ public final class AssignmentPrincipalResponse {
      */
     private final String principalType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentPrincipalResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("principalMetadata") @Nullable Map<String,String> principalMetadata,
-        @OutputCustomType.Parameter("principalType") String principalType) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("principalMetadata") @Nullable Map<String,String> principalMetadata,
+        @CustomType.Parameter("principalType") String principalType) {
         this.principalId = principalId;
         this.principalMetadata = principalMetadata;
         this.principalType = principalType;

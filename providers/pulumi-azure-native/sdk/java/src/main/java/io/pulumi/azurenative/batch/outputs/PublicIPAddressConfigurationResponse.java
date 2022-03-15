@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PublicIPAddressConfigurationResponse {
     /**
      * The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
@@ -23,10 +23,10 @@ public final class PublicIPAddressConfigurationResponse {
      */
     private final @Nullable String provision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicIPAddressConfigurationResponse(
-        @OutputCustomType.Parameter("ipAddressIds") @Nullable List<String> ipAddressIds,
-        @OutputCustomType.Parameter("provision") @Nullable String provision) {
+        @CustomType.Parameter("ipAddressIds") @Nullable List<String> ipAddressIds,
+        @CustomType.Parameter("provision") @Nullable String provision) {
         this.ipAddressIds = ipAddressIds;
         this.provision = provision;
     }

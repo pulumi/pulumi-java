@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is `false`.
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
@@ -36,7 +36,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
      * 
      */
-    @InputImport(name="deletionWindowInDays")
+    @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
     public Output<Integer> getDeletionWindowInDays() {
@@ -47,7 +47,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the KMS key.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,14 +58,14 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. The default value is `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -76,7 +76,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
      * 
      */
-    @InputImport(name="primaryKeyArn", required=true)
+    @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
 
     public Output<String> getPrimaryKeyArn() {
@@ -87,7 +87,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

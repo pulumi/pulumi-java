@@ -8,7 +8,7 @@ import io.pulumi.aws.codestarnotifications.NotificationRuleArgs;
 import io.pulumi.aws.codestarnotifications.inputs.NotificationRuleState;
 import io.pulumi.aws.codestarnotifications.outputs.NotificationRuleTarget;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * The codestar notification rule ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
      * 
      */
-    @OutputExport(name="detailType", type=String.class, parameters={})
+    @Export(name="detailType", type=String.class, parameters={})
     private Output<String> detailType;
 
     /**
@@ -64,7 +64,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
      * 
      */
-    @OutputExport(name="eventTypeIds", type=List.class, parameters={String.class})
+    @Export(name="eventTypeIds", type=List.class, parameters={String.class})
     private Output<List<String>> eventTypeIds;
 
     /**
@@ -79,7 +79,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * The name of notification rule.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * The ARN of the resource to associate with the notification rule.
      * 
      */
-    @OutputExport(name="resource", type=String.class, parameters={})
+    @Export(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
     /**
@@ -107,7 +107,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -121,7 +121,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -149,7 +149,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
      * 
      */
-    @OutputExport(name="targets", type=List.class, parameters={NotificationRuleTarget.class})
+    @Export(name="targets", type=List.class, parameters={NotificationRuleTarget.class})
     private Output</* @Nullable */ List<NotificationRuleTarget>> targets;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="maximumBackoff")
+    @Import(name="maximumBackoff")
       private final @Nullable Output<String> maximumBackoff;
 
     public Output<String> getMaximumBackoff() {
@@ -31,7 +31,7 @@ public final class SubscriptionRetryPolicyArgs extends io.pulumi.resources.Resou
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="minimumBackoff")
+    @Import(name="minimumBackoff")
       private final @Nullable Output<String> minimumBackoff;
 
     public Output<String> getMinimumBackoff() {

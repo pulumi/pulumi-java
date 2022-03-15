@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedNetworkGroupResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -69,19 +69,19 @@ public final class ManagedNetworkGroupResponse {
      */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedNetworkGroupResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
-        @OutputCustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
+        @CustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

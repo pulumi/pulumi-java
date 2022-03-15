@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
      * The elements included in the set.
      * 
      */
-    @InputImport(name="elements")
+    @Import(name="elements")
       private final @Nullable Output<List<String>> elements;
 
     public Output<List<String>> getElements() {
@@ -34,7 +34,7 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
      * The elements that are not included in the set, in case elements contains '*' indicating 'all'.
      * 
      */
-    @InputImport(name="exceptions")
+    @Import(name="exceptions")
       private final @Nullable Output<List<String>> exceptions;
 
     public Output<List<String>> getExceptions() {

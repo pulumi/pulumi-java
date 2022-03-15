@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.wafregional.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class XssMatchSetXssMatchTupleFieldToMatch {
     /**
      * When the value of `type` is `HEADER`, enter the name of the header that you want the WAF to search, for example, `User-Agent` or `Referer`. If the value of `type` is any other value, omit `data`.
@@ -22,10 +22,10 @@ public final class XssMatchSetXssMatchTupleFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private XssMatchSetXssMatchTupleFieldToMatch(
-        @OutputCustomType.Parameter("data") @Nullable String data,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("data") @Nullable String data,
+        @CustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp.outputs;
 import io.pulumi.azurenative.netapp.outputs.MountTargetPropertiesResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseDataProtection;
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseExportPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVolumeResult {
     /**
      * UUID v4 or resource identifier used to identify the Backup.
@@ -155,36 +155,36 @@ public final class GetVolumeResult {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVolumeResult(
-        @OutputCustomType.Parameter("backupId") @Nullable String backupId,
-        @OutputCustomType.Parameter("baremetalTenantId") String baremetalTenantId,
-        @OutputCustomType.Parameter("creationToken") String creationToken,
-        @OutputCustomType.Parameter("dataProtection") @Nullable VolumePropertiesResponseDataProtection dataProtection,
-        @OutputCustomType.Parameter("encryptionKeySource") @Nullable String encryptionKeySource,
-        @OutputCustomType.Parameter("exportPolicy") @Nullable VolumePropertiesResponseExportPolicy exportPolicy,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isRestoring") @Nullable Boolean isRestoring,
-        @OutputCustomType.Parameter("kerberosEnabled") @Nullable Boolean kerberosEnabled,
-        @OutputCustomType.Parameter("ldapEnabled") @Nullable Boolean ldapEnabled,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("mountTargets") List<MountTargetPropertiesResponse> mountTargets,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protocolTypes") @Nullable List<String> protocolTypes,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("securityStyle") @Nullable String securityStyle,
-        @OutputCustomType.Parameter("serviceLevel") @Nullable String serviceLevel,
-        @OutputCustomType.Parameter("smbContinuouslyAvailable") @Nullable Boolean smbContinuouslyAvailable,
-        @OutputCustomType.Parameter("smbEncryption") @Nullable Boolean smbEncryption,
-        @OutputCustomType.Parameter("snapshotDirectoryVisible") @Nullable Boolean snapshotDirectoryVisible,
-        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("throughputMibps") @Nullable Double throughputMibps,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("usageThreshold") Double usageThreshold,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("backupId") @Nullable String backupId,
+        @CustomType.Parameter("baremetalTenantId") String baremetalTenantId,
+        @CustomType.Parameter("creationToken") String creationToken,
+        @CustomType.Parameter("dataProtection") @Nullable VolumePropertiesResponseDataProtection dataProtection,
+        @CustomType.Parameter("encryptionKeySource") @Nullable String encryptionKeySource,
+        @CustomType.Parameter("exportPolicy") @Nullable VolumePropertiesResponseExportPolicy exportPolicy,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isRestoring") @Nullable Boolean isRestoring,
+        @CustomType.Parameter("kerberosEnabled") @Nullable Boolean kerberosEnabled,
+        @CustomType.Parameter("ldapEnabled") @Nullable Boolean ldapEnabled,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("mountTargets") List<MountTargetPropertiesResponse> mountTargets,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protocolTypes") @Nullable List<String> protocolTypes,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("securityStyle") @Nullable String securityStyle,
+        @CustomType.Parameter("serviceLevel") @Nullable String serviceLevel,
+        @CustomType.Parameter("smbContinuouslyAvailable") @Nullable Boolean smbContinuouslyAvailable,
+        @CustomType.Parameter("smbEncryption") @Nullable Boolean smbEncryption,
+        @CustomType.Parameter("snapshotDirectoryVisible") @Nullable Boolean snapshotDirectoryVisible,
+        @CustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("throughputMibps") @Nullable Double throughputMibps,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("usageThreshold") Double usageThreshold,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.backupId = backupId;
         this.baremetalTenantId = baremetalTenantId;
         this.creationToken = creationToken;

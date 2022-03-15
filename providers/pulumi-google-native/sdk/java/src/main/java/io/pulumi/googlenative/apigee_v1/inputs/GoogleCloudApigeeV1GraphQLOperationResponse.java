@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
      * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
      * 
      */
-    @InputImport(name="operation", required=true)
+    @Import(name="operation", required=true)
       private final String operation;
 
     public String getOperation() {
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse extends io.pulumi
      * GraphQL operation types. Valid values include `query` or `mutation`. **Note**: Apigee does not currently support `subscription` types.
      * 
      */
-    @InputImport(name="operationTypes", required=true)
+    @Import(name="operationTypes", required=true)
       private final List<String> operationTypes;
 
     public List<String> getOperationTypes() {

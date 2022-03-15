@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Policy {
     /**
      * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
@@ -22,10 +22,10 @@ public final class Policy {
      */
     private final @Nullable List<String> stages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Policy(
-        @OutputCustomType.Parameter("level") String level,
-        @OutputCustomType.Parameter("stages") @Nullable List<String> stages) {
+        @CustomType.Parameter("level") String level,
+        @CustomType.Parameter("stages") @Nullable List<String> stages) {
         this.level = level;
         this.stages = stages;
     }

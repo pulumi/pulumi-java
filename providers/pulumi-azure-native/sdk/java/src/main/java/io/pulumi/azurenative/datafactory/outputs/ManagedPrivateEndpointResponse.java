@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ConnectionStatePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedPrivateEndpointResponse {
     /**
      * The managed private endpoint connection state
@@ -45,14 +45,14 @@ public final class ManagedPrivateEndpointResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedPrivateEndpointResponse(
-        @OutputCustomType.Parameter("connectionState") @Nullable ConnectionStatePropertiesResponse connectionState,
-        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("isReserved") Boolean isReserved,
-        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("connectionState") @Nullable ConnectionStatePropertiesResponse connectionState,
+        @CustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("isReserved") Boolean isReserved,
+        @CustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.connectionState = connectionState;
         this.fqdns = fqdns;
         this.groupId = groupId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionArgs extends io.pulu
      * The action subType. Valid values are `STOP_EC2_INSTANCES` or `STOP_RDS_INSTANCES`.
      * 
      */
-    @InputImport(name="actionSubType", required=true)
+    @Import(name="actionSubType", required=true)
       private final Output<String> actionSubType;
 
     public Output<String> getActionSubType() {
@@ -29,7 +29,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionArgs extends io.pulu
      * The EC2 and RDS instance IDs.
      * 
      */
-    @InputImport(name="instanceIds", required=true)
+    @Import(name="instanceIds", required=true)
       private final Output<List<String>> instanceIds;
 
     public Output<List<String>> getInstanceIds() {
@@ -40,7 +40,7 @@ public final class BudgetActionDefinitionSsmActionDefinitionArgs extends io.pulu
      * The Region to run the SSM document.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {

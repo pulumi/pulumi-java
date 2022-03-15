@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
      * Indicates whether or not inter cluster node communication is encrypted in transit.
      * 
      */
-    @InputImport(name="isEncryptionInTransitEnabled")
+    @Import(name="isEncryptionInTransitEnabled")
       private final @Nullable Output<Boolean> isEncryptionInTransitEnabled;
 
     public Output<Boolean> getIsEncryptionInTransitEnabled() {

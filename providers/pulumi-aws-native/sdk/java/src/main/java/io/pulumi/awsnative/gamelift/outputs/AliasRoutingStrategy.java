@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.enums.AliasRoutingStrategyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AliasRoutingStrategy {
     /**
      * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
@@ -28,11 +28,11 @@ public final class AliasRoutingStrategy {
      */
     private final AliasRoutingStrategyType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasRoutingStrategy(
-        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") AliasRoutingStrategyType type) {
+        @CustomType.Parameter("fleetId") @Nullable String fleetId,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") AliasRoutingStrategyType type) {
         this.fleetId = fleetId;
         this.message = message;
         this.type = type;

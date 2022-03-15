@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreColumn;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreSchemaDefinition {
     private final @Nullable List<DatastoreColumn> columns;
 
-    @OutputCustomType.Constructor
-    private DatastoreSchemaDefinition(@OutputCustomType.Parameter("columns") @Nullable List<DatastoreColumn> columns) {
+    @CustomType.Constructor
+    private DatastoreSchemaDefinition(@CustomType.Parameter("columns") @Nullable List<DatastoreColumn> columns) {
         this.columns = columns;
     }
 

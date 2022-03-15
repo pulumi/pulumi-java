@@ -13,7 +13,7 @@ import io.pulumi.awsnative.databrew.outputs.JobProfileConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobRecipe;
 import io.pulumi.awsnative.databrew.outputs.JobSample;
 import io.pulumi.awsnative.databrew.outputs.JobValidationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     private final @Nullable List<JobDataCatalogOutput> dataCatalogOutputs;
     private final @Nullable List<JobDatabaseOutput> databaseOutputs;
@@ -93,25 +93,25 @@ public final class GetJobResult {
      */
     private final @Nullable List<JobValidationConfiguration> validationConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("dataCatalogOutputs") @Nullable List<JobDataCatalogOutput> dataCatalogOutputs,
-        @OutputCustomType.Parameter("databaseOutputs") @Nullable List<JobDatabaseOutput> databaseOutputs,
-        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
-        @OutputCustomType.Parameter("encryptionKeyArn") @Nullable String encryptionKeyArn,
-        @OutputCustomType.Parameter("encryptionMode") @Nullable JobEncryptionMode encryptionMode,
-        @OutputCustomType.Parameter("jobSample") @Nullable JobSample jobSample,
-        @OutputCustomType.Parameter("logSubscription") @Nullable JobLogSubscription logSubscription,
-        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
-        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
-        @OutputCustomType.Parameter("outputLocation") @Nullable JobOutputLocation outputLocation,
-        @OutputCustomType.Parameter("outputs") @Nullable List<JobOutput> outputs,
-        @OutputCustomType.Parameter("profileConfiguration") @Nullable JobProfileConfiguration profileConfiguration,
-        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
-        @OutputCustomType.Parameter("recipe") @Nullable JobRecipe recipe,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("validationConfigurations") @Nullable List<JobValidationConfiguration> validationConfigurations) {
+        @CustomType.Parameter("dataCatalogOutputs") @Nullable List<JobDataCatalogOutput> dataCatalogOutputs,
+        @CustomType.Parameter("databaseOutputs") @Nullable List<JobDatabaseOutput> databaseOutputs,
+        @CustomType.Parameter("datasetName") @Nullable String datasetName,
+        @CustomType.Parameter("encryptionKeyArn") @Nullable String encryptionKeyArn,
+        @CustomType.Parameter("encryptionMode") @Nullable JobEncryptionMode encryptionMode,
+        @CustomType.Parameter("jobSample") @Nullable JobSample jobSample,
+        @CustomType.Parameter("logSubscription") @Nullable JobLogSubscription logSubscription,
+        @CustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @CustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
+        @CustomType.Parameter("outputLocation") @Nullable JobOutputLocation outputLocation,
+        @CustomType.Parameter("outputs") @Nullable List<JobOutput> outputs,
+        @CustomType.Parameter("profileConfiguration") @Nullable JobProfileConfiguration profileConfiguration,
+        @CustomType.Parameter("projectName") @Nullable String projectName,
+        @CustomType.Parameter("recipe") @Nullable JobRecipe recipe,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("validationConfigurations") @Nullable List<JobValidationConfiguration> validationConfigurations) {
         this.dataCatalogOutputs = dataCatalogOutputs;
         this.databaseOutputs = databaseOutputs;
         this.datasetName = datasetName;

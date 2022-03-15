@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProjectEnvironmentRegistryCredential {
     /**
      * ARN or name of credentials created using AWS Secrets Manager.
@@ -20,10 +20,10 @@ public final class ProjectEnvironmentRegistryCredential {
      */
     private final String credentialProvider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectEnvironmentRegistryCredential(
-        @OutputCustomType.Parameter("credential") String credential,
-        @OutputCustomType.Parameter("credentialProvider") String credentialProvider) {
+        @CustomType.Parameter("credential") String credential,
+        @CustomType.Parameter("credentialProvider") String credentialProvider) {
         this.credential = credential;
         this.credentialProvider = credentialProvider;
     }

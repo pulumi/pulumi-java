@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
      * Example: 12345.
      * 
      */
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
     public Output<String> getCertificateId() {
@@ -39,7 +39,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
      * `certificateId` field with an update request.
      * 
      */
-    @InputImport(name="pendingManagedCertificateId")
+    @Import(name="pendingManagedCertificateId")
       private final @Nullable Output<String> pendingManagedCertificateId;
 
     public Output<String> getPendingManagedCertificateId() {
@@ -52,7 +52,7 @@ public final class DomainMappingSslSettingsGetArgs extends io.pulumi.resources.R
      * Possible values are `AUTOMATIC` and `MANUAL`.
      * 
      */
-    @InputImport(name="sslManagementType", required=true)
+    @Import(name="sslManagementType", required=true)
       private final Output<String> sslManagementType;
 
     public Output<String> getSslManagementType() {

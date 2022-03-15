@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetClusterDefaultSnatStatus extends io.pulumi.resources.Invok
 
     public static final GetClusterDefaultSnatStatus Empty = new GetClusterDefaultSnatStatus();
 
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {

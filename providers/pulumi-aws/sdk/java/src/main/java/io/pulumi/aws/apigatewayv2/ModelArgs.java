@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -40,7 +40,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the model. Must be between 1 and 128 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<String> schema;
 
     public Output<String> getSchema() {

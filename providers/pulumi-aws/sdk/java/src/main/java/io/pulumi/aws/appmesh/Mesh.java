@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.MeshArgs;
 import io.pulumi.aws.appmesh.inputs.MeshState;
 import io.pulumi.aws.appmesh.outputs.MeshSpec;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The ARN of the service mesh.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The creation date of the service mesh.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -62,7 +62,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The last update date of the service mesh.
      * 
      */
-    @OutputExport(name="lastUpdatedDate", type=String.class, parameters={})
+    @Export(name="lastUpdatedDate", type=String.class, parameters={})
     private Output<String> lastUpdatedDate;
 
     /**
@@ -76,7 +76,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the service mesh's owner.
      * 
      */
-    @OutputExport(name="meshOwner", type=String.class, parameters={})
+    @Export(name="meshOwner", type=String.class, parameters={})
     private Output<String> meshOwner;
 
     /**
@@ -90,7 +90,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The name to use for the service mesh. Must be between 1 and 255 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The resource owner's AWS account ID.
      * 
      */
-    @OutputExport(name="resourceOwner", type=String.class, parameters={})
+    @Export(name="resourceOwner", type=String.class, parameters={})
     private Output<String> resourceOwner;
 
     /**
@@ -118,7 +118,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * The service mesh specification to apply.
      * 
      */
-    @OutputExport(name="spec", type=MeshSpec.class, parameters={})
+    @Export(name="spec", type=MeshSpec.class, parameters={})
     private Output</* @Nullable */ MeshSpec> spec;
 
     /**
@@ -132,7 +132,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -146,7 +146,7 @@ public class Mesh extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

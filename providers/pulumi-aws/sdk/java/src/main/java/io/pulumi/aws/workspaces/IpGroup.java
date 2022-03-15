@@ -8,7 +8,7 @@ import io.pulumi.aws.workspaces.IpGroupArgs;
 import io.pulumi.aws.workspaces.inputs.IpGroupState;
 import io.pulumi.aws.workspaces.outputs.IpGroupRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * The description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -49,7 +49,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * The name of the IP group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={IpGroupRule.class})
+    @Export(name="rules", type=List.class, parameters={IpGroupRule.class})
     private Output</* @Nullable */ List<IpGroupRule>> rules;
 
     /**
@@ -77,7 +77,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -91,7 +91,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

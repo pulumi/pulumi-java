@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * Dedicated LA cluster resourceId that is linked to the workspaces.
      * 
      */
-    @InputImport(name="clusterResourceId")
+    @Import(name="clusterResourceId")
       private final @Nullable String clusterResourceId;
 
     public Optional<String> getClusterResourceId() {
@@ -34,7 +34,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * Disable Non-AAD based Auth.
      * 
      */
-    @InputImport(name="disableLocalAuth")
+    @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> getDisableLocalAuth() {
@@ -45,7 +45,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * Flag that indicate if data should be exported.
      * 
      */
-    @InputImport(name="enableDataExport")
+    @Import(name="enableDataExport")
       private final @Nullable Boolean enableDataExport;
 
     public Optional<Boolean> getEnableDataExport() {
@@ -56,7 +56,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * Flag that indicate which permission to use - resource or workspace or both.
      * 
      */
-    @InputImport(name="enableLogAccessUsingOnlyResourcePermissions")
+    @Import(name="enableLogAccessUsingOnlyResourcePermissions")
       private final @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions;
 
     public Optional<Boolean> getEnableLogAccessUsingOnlyResourcePermissions() {
@@ -67,7 +67,7 @@ public final class WorkspaceFeaturesResponse extends io.pulumi.resources.InvokeA
      * Flag that describes if we want to remove the data after 30 days.
      * 
      */
-    @InputImport(name="immediatePurgeDataOn30Days")
+    @Import(name="immediatePurgeDataOn30Days")
       private final @Nullable Boolean immediatePurgeDataOn30Days;
 
     public Optional<Boolean> getImmediatePurgeDataOn30Days() {

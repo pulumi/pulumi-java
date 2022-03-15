@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFolderResult {
     /**
      * Timestamp when the Folder was created. Assigned by the server.
@@ -35,13 +35,13 @@ public final class GetFolderResult {
      */
     private final String parent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFolderResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("lifecycleState") String lifecycleState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.lifecycleState = lifecycleState;

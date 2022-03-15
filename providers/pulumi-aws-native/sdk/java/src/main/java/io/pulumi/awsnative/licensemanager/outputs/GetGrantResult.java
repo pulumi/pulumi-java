@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGrantResult {
     /**
      * Arn of the grant.
@@ -38,14 +38,14 @@ public final class GetGrantResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGrantResult(
-        @OutputCustomType.Parameter("grantArn") @Nullable String grantArn,
-        @OutputCustomType.Parameter("grantName") @Nullable String grantName,
-        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
-        @OutputCustomType.Parameter("licenseArn") @Nullable String licenseArn,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("grantArn") @Nullable String grantArn,
+        @CustomType.Parameter("grantName") @Nullable String grantName,
+        @CustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @CustomType.Parameter("licenseArn") @Nullable String licenseArn,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.grantArn = grantArn;
         this.grantName = grantName;
         this.homeRegion = homeRegion;

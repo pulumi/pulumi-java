@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1.GameServerClusterArgs;
@@ -24,7 +24,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The state of the Kubernetes cluster, this will be available if 'view' is set to `FULL` in the relevant List/Get/Preview request.
      * 
      */
-    @OutputExport(name="clusterState", type=KubernetesClusterStateResponse.class, parameters={})
+    @Export(name="clusterState", type=KubernetesClusterStateResponse.class, parameters={})
     private Output<KubernetesClusterStateResponse> clusterState;
 
     /**
@@ -38,7 +38,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The game server cluster connection information. This information is used to manage game server clusters.
      * 
      */
-    @OutputExport(name="connectionInfo", type=GameServerClusterConnectionInfoResponse.class, parameters={})
+    @Export(name="connectionInfo", type=GameServerClusterConnectionInfoResponse.class, parameters={})
     private Output<GameServerClusterConnectionInfoResponse> connectionInfo;
 
     /**
@@ -52,7 +52,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -66,7 +66,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * Human readable description of the cluster.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -80,7 +80,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * ETag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -94,7 +94,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The labels associated with this game server cluster. Each label is a key-value pair.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -108,7 +108,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The last-modified time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

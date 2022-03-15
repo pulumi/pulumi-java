@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSystemTopicEventSubscriptionFullUrlResult {
     /**
      * The URL that represents the endpoint of the destination of an event subscription.
@@ -17,8 +17,8 @@ public final class GetSystemTopicEventSubscriptionFullUrlResult {
      */
     private final @Nullable String endpointUrl;
 
-    @OutputCustomType.Constructor
-    private GetSystemTopicEventSubscriptionFullUrlResult(@OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl) {
+    @CustomType.Constructor
+    private GetSystemTopicEventSubscriptionFullUrlResult(@CustomType.Parameter("endpointUrl") @Nullable String endpointUrl) {
         this.endpointUrl = endpointUrl;
     }
 

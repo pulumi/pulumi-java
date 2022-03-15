@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VideoSequenceAbsoluteTimeMarkersResponse {
     /**
      * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
@@ -21,10 +21,10 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoSequenceAbsoluteTimeMarkersResponse(
-        @OutputCustomType.Parameter("ranges") String ranges,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("ranges") String ranges,
+        @CustomType.Parameter("type") String type) {
         this.ranges = ranges;
         this.type = type;
     }

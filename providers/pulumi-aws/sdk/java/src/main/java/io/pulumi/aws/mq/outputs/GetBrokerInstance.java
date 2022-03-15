@@ -3,22 +3,22 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerInstance {
     private final String consoleUrl;
     private final List<String> endpoints;
     private final String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerInstance(
-        @OutputCustomType.Parameter("consoleUrl") String consoleUrl,
-        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
+        @CustomType.Parameter("consoleUrl") String consoleUrl,
+        @CustomType.Parameter("endpoints") List<String> endpoints,
+        @CustomType.Parameter("ipAddress") String ipAddress) {
         this.consoleUrl = consoleUrl;
         this.endpoints = endpoints;
         this.ipAddress = ipAddress;

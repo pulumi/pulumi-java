@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CloudRunResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -31,7 +31,7 @@ public final class CloudRunResponse extends io.pulumi.resources.InvokeArgs {
      * The region the Cloud Run service is deployed in.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -42,7 +42,7 @@ public final class CloudRunResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project as the trigger object can be addressed.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

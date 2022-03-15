@@ -4,14 +4,14 @@
 package io.pulumi.aws.apigatewayv2.outputs;
 
 import io.pulumi.aws.apigatewayv2.outputs.GetApiCorsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApiResult {
     /**
      * The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
@@ -84,22 +84,22 @@ public final class GetApiResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiResult(
-        @OutputCustomType.Parameter("apiEndpoint") String apiEndpoint,
-        @OutputCustomType.Parameter("apiId") String apiId,
-        @OutputCustomType.Parameter("apiKeySelectionExpression") String apiKeySelectionExpression,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("corsConfigurations") List<GetApiCorsConfiguration> corsConfigurations,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disableExecuteApiEndpoint") Boolean disableExecuteApiEndpoint,
-        @OutputCustomType.Parameter("executionArn") String executionArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protocolType") String protocolType,
-        @OutputCustomType.Parameter("routeSelectionExpression") String routeSelectionExpression,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("apiEndpoint") String apiEndpoint,
+        @CustomType.Parameter("apiId") String apiId,
+        @CustomType.Parameter("apiKeySelectionExpression") String apiKeySelectionExpression,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("corsConfigurations") List<GetApiCorsConfiguration> corsConfigurations,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disableExecuteApiEndpoint") Boolean disableExecuteApiEndpoint,
+        @CustomType.Parameter("executionArn") String executionArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protocolType") String protocolType,
+        @CustomType.Parameter("routeSelectionExpression") String routeSelectionExpression,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") String version) {
         this.apiEndpoint = apiEndpoint;
         this.apiId = apiId;
         this.apiKeySelectionExpression = apiKeySelectionExpression;

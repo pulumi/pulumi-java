@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkRuleResponse {
     /**
      * The action of virtual network rule.
@@ -27,11 +27,11 @@ public final class VirtualNetworkRuleResponse {
      */
     private final String virtualNetworkResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkRuleResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("virtualNetworkResourceId") String virtualNetworkResourceId) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("virtualNetworkResourceId") String virtualNetworkResourceId) {
         this.action = action;
         this.state = state;
         this.virtualNetworkResourceId = virtualNetworkResourceId;

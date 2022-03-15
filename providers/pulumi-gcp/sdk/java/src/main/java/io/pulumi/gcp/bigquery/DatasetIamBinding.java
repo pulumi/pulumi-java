@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetIamBindingArgs;
@@ -72,7 +72,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:bigquery/datasetIamBinding:DatasetIamBinding")
 public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=DatasetIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=DatasetIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DatasetIamBindingCondition> condition;
 
     public Output</* @Nullable */ DatasetIamBindingCondition> getCondition() {
@@ -82,7 +82,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * The dataset ID.
      * 
      */
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     /**
@@ -96,7 +96,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -106,7 +106,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -117,7 +117,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -134,7 +134,7 @@ public class DatasetIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

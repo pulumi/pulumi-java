@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineThumbnailConfig {
     /**
      * The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
@@ -22,10 +22,10 @@ public final class PipelineThumbnailConfig {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineThumbnailConfig(
-        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
-        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
+        @CustomType.Parameter("bucket") @Nullable String bucket,
+        @CustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.bucket = bucket;
         this.storageClass = storageClass;
     }

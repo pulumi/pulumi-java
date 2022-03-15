@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionMonitorTestResult {
     /**
      * The Connection Monitor test destination
@@ -65,18 +65,18 @@ public final class GetConnectionMonitorTestResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionMonitorTestResult(
-        @OutputCustomType.Parameter("destination") @Nullable String destination,
-        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isTestSuccessful") Boolean isTestSuccessful,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") List<String> path,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourceAgent") @Nullable String sourceAgent,
-        @OutputCustomType.Parameter("testFrequencyInSec") @Nullable Integer testFrequencyInSec,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("destination") @Nullable String destination,
+        @CustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isTestSuccessful") Boolean isTestSuccessful,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") List<String> path,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourceAgent") @Nullable String sourceAgent,
+        @CustomType.Parameter("testFrequencyInSec") @Nullable Integer testFrequencyInSec,
+        @CustomType.Parameter("type") String type) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.id = id;

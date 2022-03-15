@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.RestApiPolicyArgs;
 import io.pulumi.aws.apigateway.inputs.RestApiPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class RestApiPolicy extends io.pulumi.resources.CustomResource {
      * JSON formatted policy document that controls access to the API Gateway.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -48,7 +48,7 @@ public class RestApiPolicy extends io.pulumi.resources.CustomResource {
      * The ID of the REST API.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**

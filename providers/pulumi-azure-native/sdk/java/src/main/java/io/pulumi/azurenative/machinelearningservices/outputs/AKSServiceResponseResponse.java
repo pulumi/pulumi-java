@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.AKSServiceResponseR
 import io.pulumi.azurenative.machinelearningservices.outputs.ContainerResourceRequirementsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSServiceResponseResponse {
     /**
      * Whether or not AAD authentication is enabled.
@@ -172,37 +172,37 @@ public final class AKSServiceResponseResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSServiceResponseResponse(
-        @OutputCustomType.Parameter("aadAuthEnabled") @Nullable Boolean aadAuthEnabled,
-        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
-        @OutputCustomType.Parameter("authEnabled") @Nullable Boolean authEnabled,
-        @OutputCustomType.Parameter("autoScaler") @Nullable AKSServiceResponseResponseAutoScaler autoScaler,
-        @OutputCustomType.Parameter("computeName") @Nullable String computeName,
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @OutputCustomType.Parameter("dataCollection") @Nullable AKSServiceResponseResponseDataCollection dataCollection,
-        @OutputCustomType.Parameter("deploymentStatus") AKSServiceResponseResponseDeploymentStatus deploymentStatus,
-        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("environmentImageRequest") @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
-        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
-        @OutputCustomType.Parameter("livenessProbeRequirements") @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements,
-        @OutputCustomType.Parameter("maxConcurrentRequestsPerContainer") @Nullable Integer maxConcurrentRequestsPerContainer,
-        @OutputCustomType.Parameter("maxQueueWaitMs") @Nullable Integer maxQueueWaitMs,
-        @OutputCustomType.Parameter("modelConfigMap") Map<String,Object> modelConfigMap,
-        @OutputCustomType.Parameter("models") @Nullable List<ModelResponse> models,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("numReplicas") @Nullable Integer numReplicas,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("scoringTimeoutMs") @Nullable Integer scoringTimeoutMs,
-        @OutputCustomType.Parameter("scoringUri") String scoringUri,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
-        @OutputCustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("aadAuthEnabled") @Nullable Boolean aadAuthEnabled,
+        @CustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @CustomType.Parameter("authEnabled") @Nullable Boolean authEnabled,
+        @CustomType.Parameter("autoScaler") @Nullable AKSServiceResponseResponseAutoScaler autoScaler,
+        @CustomType.Parameter("computeName") @Nullable String computeName,
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @CustomType.Parameter("dataCollection") @Nullable AKSServiceResponseResponseDataCollection dataCollection,
+        @CustomType.Parameter("deploymentStatus") AKSServiceResponseResponseDeploymentStatus deploymentStatus,
+        @CustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("environmentImageRequest") @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
+        @CustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @CustomType.Parameter("livenessProbeRequirements") @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements,
+        @CustomType.Parameter("maxConcurrentRequestsPerContainer") @Nullable Integer maxConcurrentRequestsPerContainer,
+        @CustomType.Parameter("maxQueueWaitMs") @Nullable Integer maxQueueWaitMs,
+        @CustomType.Parameter("modelConfigMap") Map<String,Object> modelConfigMap,
+        @CustomType.Parameter("models") @Nullable List<ModelResponse> models,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("numReplicas") @Nullable Integer numReplicas,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("scoringTimeoutMs") @Nullable Integer scoringTimeoutMs,
+        @CustomType.Parameter("scoringUri") String scoringUri,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("swaggerUri") String swaggerUri,
+        @CustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.aadAuthEnabled = aadAuthEnabled;
         this.appInsightsEnabled = appInsightsEnabled;
         this.authEnabled = authEnabled;

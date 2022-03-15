@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceLocationDataContractResponse {
     /**
      * The city or locality where the resource is located.
@@ -32,12 +32,12 @@ public final class ResourceLocationDataContractResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceLocationDataContractResponse(
-        @OutputCustomType.Parameter("city") @Nullable String city,
-        @OutputCustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
-        @OutputCustomType.Parameter("district") @Nullable String district,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("city") @Nullable String city,
+        @CustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
+        @CustomType.Parameter("district") @Nullable String district,
+        @CustomType.Parameter("name") String name) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.district = district;

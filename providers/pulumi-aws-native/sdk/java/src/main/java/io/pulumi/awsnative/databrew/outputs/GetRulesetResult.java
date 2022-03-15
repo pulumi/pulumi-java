@@ -5,14 +5,14 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RulesetRule;
 import io.pulumi.awsnative.databrew.outputs.RulesetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRulesetResult {
     /**
      * Description of the Ruleset
@@ -26,11 +26,11 @@ public final class GetRulesetResult {
     private final @Nullable List<RulesetRule> rules;
     private final @Nullable List<RulesetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRulesetResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("rules") @Nullable List<RulesetRule> rules,
-        @OutputCustomType.Parameter("tags") @Nullable List<RulesetTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("rules") @Nullable List<RulesetRule> rules,
+        @CustomType.Parameter("tags") @Nullable List<RulesetTag> tags) {
         this.description = description;
         this.rules = rules;
         this.tags = tags;

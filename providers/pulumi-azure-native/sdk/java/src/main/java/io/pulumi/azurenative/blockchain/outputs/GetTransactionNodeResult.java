@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransactionNodeResult {
     /**
      * Gets or sets the transaction node dns endpoint.
@@ -64,18 +64,18 @@ public final class GetTransactionNodeResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransactionNodeResult(
-        @OutputCustomType.Parameter("dns") String dns,
-        @OutputCustomType.Parameter("firewallRules") @Nullable List<FirewallRuleResponse> firewallRules,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("dns") String dns,
+        @CustomType.Parameter("firewallRules") @Nullable List<FirewallRuleResponse> firewallRules,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") String userName) {
         this.dns = dns;
         this.firewallRules = firewallRules;
         this.id = id;

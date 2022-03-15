@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowDatadogSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor
-    private FlowDatadogSourceProperties(@OutputCustomType.Parameter("object") String object) {
+    @CustomType.Constructor
+    private FlowDatadogSourceProperties(@CustomType.Parameter("object") String object) {
         this.object = object;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.OrganizationSecurityPolicyAssociationArgs;
@@ -38,7 +38,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * The resource that the security policy is attached to.
      * 
      */
-    @OutputExport(name="attachmentId", type=String.class, parameters={})
+    @Export(name="attachmentId", type=String.class, parameters={})
     private Output<String> attachmentId;
 
     /**
@@ -52,7 +52,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * The display name of the security policy of the association.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * The name for an association.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class OrganizationSecurityPolicyAssociation extends io.pulumi.resources.C
      * The security policy ID of the association.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**

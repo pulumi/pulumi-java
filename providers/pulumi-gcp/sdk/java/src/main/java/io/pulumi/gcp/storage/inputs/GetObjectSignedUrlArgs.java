@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * The name of the bucket to read the object from
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -32,7 +32,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * If you provide this in the datasource, the client (e.g. browser, curl) must provide the `Content-MD5` HTTP header with this same value in its request.
      * 
      */
-    @InputImport(name="contentMd5")
+    @Import(name="contentMd5")
       private final @Nullable String contentMd5;
 
     public Optional<String> getContentMd5() {
@@ -43,7 +43,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * If you specify this in the datasource, the client must provide the `Content-Type` HTTP header with the same value in its request.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -55,7 +55,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * This data source checks the following locations for credentials, in order of preference: data source `credentials` attribute, provider `credentials` attribute and finally the GOOGLE_APPLICATION_CREDENTIALS environment variable.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
@@ -67,7 +67,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duration formats.
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable String duration;
 
     public Optional<String> getDuration() {
@@ -79,7 +79,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * Any header starting with `x-goog-` is accepted but see the [Google Docs](https://cloud.google.com/storage/docs/xml-api/reference-headers) for list of headers that are supported by Google.
      * 
      */
-    @InputImport(name="extensionHeaders")
+    @Import(name="extensionHeaders")
       private final @Nullable Map<String,String> extensionHeaders;
 
     public Map<String,String> getExtensionHeaders() {
@@ -90,7 +90,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * What HTTP Method will the signed URL allow (defaults to `GET`)
      * 
      */
-    @InputImport(name="httpMethod")
+    @Import(name="httpMethod")
       private final @Nullable String httpMethod;
 
     public Optional<String> getHttpMethod() {
@@ -101,7 +101,7 @@ public final class GetObjectSignedUrlArgs extends io.pulumi.resources.InvokeArgs
      * The full path to the object inside the bucket
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {

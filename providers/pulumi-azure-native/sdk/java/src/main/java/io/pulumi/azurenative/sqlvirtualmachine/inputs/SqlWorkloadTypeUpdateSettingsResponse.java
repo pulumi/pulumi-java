@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends io.pulumi.resou
      * SQL Server workload type.
      * 
      */
-    @InputImport(name="sqlWorkloadType")
+    @Import(name="sqlWorkloadType")
       private final @Nullable String sqlWorkloadType;
 
     public Optional<String> getSqlWorkloadType() {

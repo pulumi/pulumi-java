@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects {
     /**
      * Whether the existing objects should be replicated. Either `"Enabled"` or `"Disabled"`.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncry
      */
     private final String status;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects(@OutputCustomType.Parameter("status") String status) {
+    @CustomType.Constructor
+    private BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects(@CustomType.Parameter("status") String status) {
         this.status = status;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot;
 
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -29,7 +29,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * The log level to use. Valid values are: ERROR, WARN, INFO, DEBUG, or DISABLED.
      * 
      */
-    @InputImport(name="defaultLogLevel", required=true)
+    @Import(name="defaultLogLevel", required=true)
       private final Output<LoggingDefaultLogLevel> defaultLogLevel;
 
     public Output<LoggingDefaultLogLevel> getDefaultLogLevel() {
@@ -40,7 +40,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the role that allows IoT to write to Cloudwatch logs.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

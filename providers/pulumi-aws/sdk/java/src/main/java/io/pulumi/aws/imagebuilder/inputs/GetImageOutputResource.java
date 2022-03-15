@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetImageOutputResourceAmi;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetImageOutputResource extends io.pulumi.resources.InvokeArgs
      * Set of objects with each Amazon Machine Image (AMI) created.
      * 
      */
-    @InputImport(name="amis", required=true)
+    @Import(name="amis", required=true)
       private final List<GetImageOutputResourceAmi> amis;
 
     public List<GetImageOutputResourceAmi> getAmis() {

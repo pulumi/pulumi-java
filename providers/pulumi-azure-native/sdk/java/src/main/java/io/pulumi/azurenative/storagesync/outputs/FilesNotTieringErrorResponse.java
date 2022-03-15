@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilesNotTieringErrorResponse {
     /**
      * Error code (HResult)
@@ -21,10 +21,10 @@ public final class FilesNotTieringErrorResponse {
      */
     private final Double fileCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilesNotTieringErrorResponse(
-        @OutputCustomType.Parameter("errorCode") Integer errorCode,
-        @OutputCustomType.Parameter("fileCount") Double fileCount) {
+        @CustomType.Parameter("errorCode") Integer errorCode,
+        @CustomType.Parameter("fileCount") Double fileCount) {
         this.errorCode = errorCode;
         this.fileCount = fileCount;
     }

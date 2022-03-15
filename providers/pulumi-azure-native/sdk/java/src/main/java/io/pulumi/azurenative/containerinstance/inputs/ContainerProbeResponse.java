@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.ContainerExecResponse;
 import io.pulumi.azurenative.containerinstance.inputs.ContainerHttpGetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The execution command to probe
      * 
      */
-    @InputImport(name="exec")
+    @Import(name="exec")
       private final @Nullable ContainerExecResponse exec;
 
     public Optional<ContainerExecResponse> getExec() {
@@ -35,7 +35,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The failure threshold.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
 
     public Optional<Integer> getFailureThreshold() {
@@ -46,7 +46,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The Http Get settings to probe
      * 
      */
-    @InputImport(name="httpGet")
+    @Import(name="httpGet")
       private final @Nullable ContainerHttpGetResponse httpGet;
 
     public Optional<ContainerHttpGetResponse> getHttpGet() {
@@ -57,7 +57,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The initial delay seconds.
      * 
      */
-    @InputImport(name="initialDelaySeconds")
+    @Import(name="initialDelaySeconds")
       private final @Nullable Integer initialDelaySeconds;
 
     public Optional<Integer> getInitialDelaySeconds() {
@@ -68,7 +68,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The period seconds.
      * 
      */
-    @InputImport(name="periodSeconds")
+    @Import(name="periodSeconds")
       private final @Nullable Integer periodSeconds;
 
     public Optional<Integer> getPeriodSeconds() {
@@ -79,7 +79,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The success threshold.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
 
     public Optional<Integer> getSuccessThreshold() {
@@ -90,7 +90,7 @@ public final class ContainerProbeResponse extends io.pulumi.resources.InvokeArgs
      * The timeout seconds.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> getTimeoutSeconds() {

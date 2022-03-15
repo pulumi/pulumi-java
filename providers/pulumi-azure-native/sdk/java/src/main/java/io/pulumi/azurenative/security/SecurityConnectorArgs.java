@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArgs;
 import io.pulumi.azurenative.security.inputs.SecurityConnectorPropertiesOrganizationalDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * The multi cloud resource's cloud name.
      * 
      */
-    @InputImport(name="cloudName")
+    @Import(name="cloudName")
       private final @Nullable Output<Either<String,CloudName>> cloudName;
 
     public Output<Either<String,CloudName>> getCloudName() {
@@ -38,7 +38,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * The multi cloud resource identifier (account id in case of AWS connector).
      * 
      */
-    @InputImport(name="hierarchyIdentifier")
+    @Import(name="hierarchyIdentifier")
       private final @Nullable Output<String> hierarchyIdentifier;
 
     public Output<String> getHierarchyIdentifier() {
@@ -49,7 +49,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * Kind of the resource
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -60,7 +60,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * Location where the resource is stored
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -71,7 +71,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * A collection of offerings for the security connector.
      * 
      */
-    @InputImport(name="offerings")
+    @Import(name="offerings")
       private final @Nullable Output<List<Object>> offerings;
 
     public Output<List<Object>> getOfferings() {
@@ -82,7 +82,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * The multi cloud account's organizational data
      * 
      */
-    @InputImport(name="organizationalData")
+    @Import(name="organizationalData")
       private final @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
     public Output<SecurityConnectorPropertiesOrganizationalDataArgs> getOrganizationalData() {
@@ -93,7 +93,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -104,7 +104,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * The security connector name.
      * 
      */
-    @InputImport(name="securityConnectorName")
+    @Import(name="securityConnectorName")
       private final @Nullable Output<String> securityConnectorName;
 
     public Output<String> getSecurityConnectorName() {
@@ -115,7 +115,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * A list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

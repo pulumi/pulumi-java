@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.DeviceDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.DisplayInfoResponse;
 import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProductDetailsResponse {
     /**
      * Quantity of the product
@@ -42,13 +42,13 @@ public final class ProductDetailsResponse {
      */
     private final String productDoubleEncryptionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProductDetailsResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("deviceDetails") List<DeviceDetailsResponse> deviceDetails,
-        @OutputCustomType.Parameter("displayInfo") @Nullable DisplayInfoResponse displayInfo,
-        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
-        @OutputCustomType.Parameter("productDoubleEncryptionStatus") String productDoubleEncryptionStatus) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("deviceDetails") List<DeviceDetailsResponse> deviceDetails,
+        @CustomType.Parameter("displayInfo") @Nullable DisplayInfoResponse displayInfo,
+        @CustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @CustomType.Parameter("productDoubleEncryptionStatus") String productDoubleEncryptionStatus) {
         this.count = count;
         this.deviceDetails = deviceDetails;
         this.displayInfo = displayInfo;

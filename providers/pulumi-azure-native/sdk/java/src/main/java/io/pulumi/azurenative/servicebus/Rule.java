@@ -10,7 +10,7 @@ import io.pulumi.azurenative.servicebus.outputs.CorrelationFilterResponse;
 import io.pulumi.azurenative.servicebus.outputs.SqlFilterResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
      */
-    @OutputExport(name="action", type=ActionResponse.class, parameters={})
+    @Export(name="action", type=ActionResponse.class, parameters={})
     private Output</* @Nullable */ ActionResponse> action;
 
     /**
@@ -51,7 +51,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Properties of correlationFilter
      * 
      */
-    @OutputExport(name="correlationFilter", type=CorrelationFilterResponse.class, parameters={})
+    @Export(name="correlationFilter", type=CorrelationFilterResponse.class, parameters={})
     private Output</* @Nullable */ CorrelationFilterResponse> correlationFilter;
 
     /**
@@ -65,7 +65,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Filter type that is evaluated against a BrokeredMessage.
      * 
      */
-    @OutputExport(name="filterType", type=String.class, parameters={})
+    @Export(name="filterType", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterType;
 
     /**
@@ -79,7 +79,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Properties of sqlFilter
      * 
      */
-    @OutputExport(name="sqlFilter", type=SqlFilterResponse.class, parameters={})
+    @Export(name="sqlFilter", type=SqlFilterResponse.class, parameters={})
     private Output</* @Nullable */ SqlFilterResponse> sqlFilter;
 
     /**
@@ -107,7 +107,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

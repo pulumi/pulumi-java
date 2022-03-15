@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,49 +15,49 @@ public final class FunctionIamMemberState extends io.pulumi.resources.ResourceAr
 
     public static final FunctionIamMemberState Empty = new FunctionIamMemberState();
 
-    @InputImport(name="cloudFunction")
+    @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
         return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
     }
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<FunctionIamMemberConditionGetArgs> condition;
 
     public Output<FunctionIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
         return this.member == null ? Output.empty() : this.member;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
         return this.region == null ? Output.empty() : this.region;
     }
 
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

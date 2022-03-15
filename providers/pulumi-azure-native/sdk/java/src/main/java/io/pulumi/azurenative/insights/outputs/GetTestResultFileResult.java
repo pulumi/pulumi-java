@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTestResultFileResult {
     /**
      * File contents.
@@ -22,10 +22,10 @@ public final class GetTestResultFileResult {
      */
     private final @Nullable String nextLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestResultFileResult(
-        @OutputCustomType.Parameter("data") @Nullable String data,
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink) {
+        @CustomType.Parameter("data") @Nullable String data,
+        @CustomType.Parameter("nextLink") @Nullable String nextLink) {
         this.data = data;
         this.nextLink = nextLink;
     }

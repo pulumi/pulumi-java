@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BasicYarnAutoscalingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed.Bounds: 2m, 1d. Default: 2m.
      * 
      */
-    @InputImport(name="cooldownPeriod")
+    @Import(name="cooldownPeriod")
       private final @Nullable Output<String> cooldownPeriod;
 
     public Output<String> getCooldownPeriod() {
@@ -34,7 +34,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * Optional. YARN autoscaling configuration.
      * 
      */
-    @InputImport(name="yarnConfig")
+    @Import(name="yarnConfig")
       private final @Nullable Output<BasicYarnAutoscalingConfigArgs> yarnConfig;
 
     public Output<BasicYarnAutoscalingConfigArgs> getYarnConfig() {

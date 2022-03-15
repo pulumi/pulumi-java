@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * A globally unique ID identifying the associated Kubernetes cluster
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * Certificate that contains the Kubernetes cluster public key used to verify signing
      * 
      */
-    @InputImport(name="publicSigningKey", required=true)
+    @Import(name="publicSigningKey", required=true)
       private final Output<String> publicSigningKey;
 
     public Output<String> getPublicSigningKey() {
@@ -44,7 +44,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * Unique thumbprint returned to customer to verify the certificate being uploaded
      * 
      */
-    @InputImport(name="signingCertificateThumbprint")
+    @Import(name="signingCertificateThumbprint")
       private final @Nullable Output<String> signingCertificateThumbprint;
 
     public Output<String> getSigningCertificateThumbprint() {

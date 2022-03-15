@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.BoundingPolyArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
      * The list of polygons outlining the sensitive regions in the image.
      * 
      */
-    @InputImport(name="boundingPolys")
+    @Import(name="boundingPolys")
       private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
     public Output<List<BoundingPolyArgs>> getBoundingPolys() {
@@ -35,7 +35,7 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
      * 0-based index of the image frame. For example, an image frame in a DICOM instance.
      * 
      */
-    @InputImport(name="frameIndex")
+    @Import(name="frameIndex")
       private final @Nullable Output<Integer> frameIndex;
 
     public Output<Integer> getFrameIndex() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.workspaces.inputs;
 
 import io.pulumi.awsnative.workspaces.enums.ConnectionAliasAssociationAssociationStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class ConnectionAliasAssociation extends io.pulumi.resources.Invoke
 
     public static final ConnectionAliasAssociation Empty = new ConnectionAliasAssociation();
 
-    @InputImport(name="associatedAccountId")
+    @Import(name="associatedAccountId")
       private final @Nullable String associatedAccountId;
 
     public Optional<String> getAssociatedAccountId() {
         return this.associatedAccountId == null ? Optional.empty() : Optional.ofNullable(this.associatedAccountId);
     }
 
-    @InputImport(name="associationStatus")
+    @Import(name="associationStatus")
       private final @Nullable ConnectionAliasAssociationAssociationStatus associationStatus;
 
     public Optional<ConnectionAliasAssociationAssociationStatus> getAssociationStatus() {
         return this.associationStatus == null ? Optional.empty() : Optional.ofNullable(this.associationStatus);
     }
 
-    @InputImport(name="connectionIdentifier")
+    @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
 
     public Optional<String> getConnectionIdentifier() {
         return this.connectionIdentifier == null ? Optional.empty() : Optional.ofNullable(this.connectionIdentifier);
     }
 
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

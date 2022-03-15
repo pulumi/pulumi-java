@@ -4,13 +4,13 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendVirtualServiceClientPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackendVirtualService {
     /**
      * The client policy for the backend.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendVirtualService {
      */
     private final String virtualServiceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecBackendVirtualService(
-        @OutputCustomType.Parameter("clientPolicy") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicy clientPolicy,
-        @OutputCustomType.Parameter("virtualServiceName") String virtualServiceName) {
+        @CustomType.Parameter("clientPolicy") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicy clientPolicy,
+        @CustomType.Parameter("virtualServiceName") String virtualServiceName) {
         this.clientPolicy = clientPolicy;
         this.virtualServiceName = virtualServiceName;
     }

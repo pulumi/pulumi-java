@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionAutoscalingPolicyIamPolicyResult {
     /**
      * Associates a list of members to a role. Optionally, may specify a condition that determines how and when the bindings are applied. Each of the bindings must contain at least one member.
@@ -28,11 +28,11 @@ public final class GetRegionAutoscalingPolicyIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionAutoscalingPolicyIamPolicyResult(
-        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.version = version;

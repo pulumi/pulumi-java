@@ -10,7 +10,7 @@ import io.pulumi.azurenative.sql.outputs.FailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.PartnerInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * List of databases in the failover group.
      * 
      */
-    @OutputExport(name="databases", type=List.class, parameters={String.class})
+    @Export(name="databases", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> databases;
 
     /**
@@ -52,7 +52,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -66,7 +66,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * List of partner server information for the failover group.
      * 
      */
-    @OutputExport(name="partnerServers", type=List.class, parameters={PartnerInfoResponse.class})
+    @Export(name="partnerServers", type=List.class, parameters={PartnerInfoResponse.class})
     private Output<List<PartnerInfoResponse>> partnerServers;
 
     /**
@@ -94,7 +94,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Read-only endpoint of the failover group instance.
      * 
      */
-    @OutputExport(name="readOnlyEndpoint", type=FailoverGroupReadOnlyEndpointResponse.class, parameters={})
+    @Export(name="readOnlyEndpoint", type=FailoverGroupReadOnlyEndpointResponse.class, parameters={})
     private Output</* @Nullable */ FailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint;
 
     /**
@@ -108,7 +108,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Read-write endpoint of the failover group instance.
      * 
      */
-    @OutputExport(name="readWriteEndpoint", type=FailoverGroupReadWriteEndpointResponse.class, parameters={})
+    @Export(name="readWriteEndpoint", type=FailoverGroupReadWriteEndpointResponse.class, parameters={})
     private Output<FailoverGroupReadWriteEndpointResponse> readWriteEndpoint;
 
     /**
@@ -122,7 +122,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Local replication role of the failover group instance.
      * 
      */
-    @OutputExport(name="replicationRole", type=String.class, parameters={})
+    @Export(name="replicationRole", type=String.class, parameters={})
     private Output<String> replicationRole;
 
     /**
@@ -136,7 +136,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Replication state of the failover group instance.
      * 
      */
-    @OutputExport(name="replicationState", type=String.class, parameters={})
+    @Export(name="replicationState", type=String.class, parameters={})
     private Output<String> replicationState;
 
     /**
@@ -150,7 +150,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class FailoverGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ObbFileResponse;
 import io.pulumi.googlenative.testing_v1.outputs.RegularFileResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeviceFileResponse {
     /**
      * A reference to an opaque binary blob file.
@@ -21,10 +21,10 @@ public final class DeviceFileResponse {
      */
     private final RegularFileResponse regularFile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceFileResponse(
-        @OutputCustomType.Parameter("obbFile") ObbFileResponse obbFile,
-        @OutputCustomType.Parameter("regularFile") RegularFileResponse regularFile) {
+        @CustomType.Parameter("obbFile") ObbFileResponse obbFile,
+        @CustomType.Parameter("regularFile") RegularFileResponse regularFile) {
         this.obbFile = obbFile;
         this.regularFile = regularFile;
     }

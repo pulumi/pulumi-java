@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZoneServiceDirectoryConfigNamespace;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneServiceDirectoryConfig {
     /**
      * The namespace associated with the zone.
@@ -16,8 +16,8 @@ public final class ManagedZoneServiceDirectoryConfig {
      */
     private final ManagedZoneServiceDirectoryConfigNamespace namespace;
 
-    @OutputCustomType.Constructor
-    private ManagedZoneServiceDirectoryConfig(@OutputCustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespace namespace) {
+    @CustomType.Constructor
+    private ManagedZoneServiceDirectoryConfig(@CustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespace namespace) {
         this.namespace = namespace;
     }
 

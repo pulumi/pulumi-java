@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SentimentAnalysisSettingsPropertiesArgs extends io.pulumi.res
      * Enable to call Amazon Comprehend for Sentiment natively within Lex
      * 
      */
-    @InputImport(name="detectSentiment", required=true)
+    @Import(name="detectSentiment", required=true)
       private final Output<Boolean> detectSentiment;
 
     public Output<Boolean> getDetectSentiment() {

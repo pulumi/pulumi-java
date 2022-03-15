@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.SsisEnvironmentResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisFolderResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisPackageResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisProjectResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationRuntimeObjectMetadatumResult {
     /**
      * The link to the next page of results, if any remaining results exist.
@@ -28,10 +28,10 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
      */
     private final @Nullable List<Object> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationRuntimeObjectMetadatumResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<Object> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<Object> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

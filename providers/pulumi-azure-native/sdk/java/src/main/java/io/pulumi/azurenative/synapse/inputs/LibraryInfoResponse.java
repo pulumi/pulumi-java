@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Storage blob container name.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
@@ -33,7 +33,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Creator Id of the library/package.
      * 
      */
-    @InputImport(name="creatorId", required=true)
+    @Import(name="creatorId", required=true)
       private final String creatorId;
 
     public String getCreatorId() {
@@ -44,7 +44,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the library.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Storage blob path of library.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -66,7 +66,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Provisioning status of the library/package.
      * 
      */
-    @InputImport(name="provisioningStatus", required=true)
+    @Import(name="provisioningStatus", required=true)
       private final String provisioningStatus;
 
     public String getProvisioningStatus() {
@@ -77,7 +77,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the library.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -88,7 +88,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The last update time of the library.
      * 
      */
-    @InputImport(name="uploadedTimestamp", required=true)
+    @Import(name="uploadedTimestamp", required=true)
       private final String uploadedTimestamp;
 
     public String getUploadedTimestamp() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.athena.DatabaseArgs;
 import io.pulumi.aws.athena.inputs.DatabaseState;
 import io.pulumi.aws.athena.outputs.DatabaseEncryptionConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Name of s3 bucket to save the results of the query execution.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -40,7 +40,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
      * 
      */
-    @OutputExport(name="encryptionConfiguration", type=DatabaseEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=DatabaseEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ DatabaseEncryptionConfiguration> encryptionConfiguration;
 
     /**
@@ -54,7 +54,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -68,7 +68,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Name of the database to create.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

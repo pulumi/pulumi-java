@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.DataPrivacyProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBotResult {
     private final @Nullable String arn;
     /**
@@ -29,15 +29,15 @@ public final class GetBotResult {
     private final @Nullable String name;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBotResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("dataPrivacy") @Nullable DataPrivacyProperties dataPrivacy,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("idleSessionTTLInSeconds") @Nullable Integer idleSessionTTLInSeconds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("dataPrivacy") @Nullable DataPrivacyProperties dataPrivacy,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("idleSessionTTLInSeconds") @Nullable Integer idleSessionTTLInSeconds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.arn = arn;
         this.dataPrivacy = dataPrivacy;
         this.description = description;

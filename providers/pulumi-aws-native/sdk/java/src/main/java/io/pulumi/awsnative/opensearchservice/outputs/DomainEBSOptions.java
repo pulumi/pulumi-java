@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainEBSOptions {
     private final @Nullable Boolean eBSEnabled;
     private final @Nullable Integer iops;
     private final @Nullable Integer volumeSize;
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainEBSOptions(
-        @OutputCustomType.Parameter("eBSEnabled") @Nullable Boolean eBSEnabled,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("eBSEnabled") @Nullable Boolean eBSEnabled,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.eBSEnabled = eBSEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;

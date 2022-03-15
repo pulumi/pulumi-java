@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.TwitterRegistrationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TwitterResponse {
     /**
      * <code>false</code> if the Twitter provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -23,10 +23,10 @@ public final class TwitterResponse {
      */
     private final @Nullable TwitterRegistrationResponse registration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TwitterResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("registration") @Nullable TwitterRegistrationResponse registration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("registration") @Nullable TwitterRegistrationResponse registration) {
         this.enabled = enabled;
         this.registration = registration;
     }

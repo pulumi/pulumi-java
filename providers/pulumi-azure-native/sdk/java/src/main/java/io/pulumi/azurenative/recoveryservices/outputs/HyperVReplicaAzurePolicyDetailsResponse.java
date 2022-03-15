@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HyperVReplicaAzurePolicyDetailsResponse {
     /**
      * The active storage account Id.
@@ -49,15 +49,15 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
      */
     private final @Nullable Integer replicationInterval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HyperVReplicaAzurePolicyDetailsResponse(
-        @OutputCustomType.Parameter("activeStorageAccountId") @Nullable String activeStorageAccountId,
-        @OutputCustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @OutputCustomType.Parameter("encryption") @Nullable String encryption,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
-        @OutputCustomType.Parameter("recoveryPointHistoryDurationInHours") @Nullable Integer recoveryPointHistoryDurationInHours,
-        @OutputCustomType.Parameter("replicationInterval") @Nullable Integer replicationInterval) {
+        @CustomType.Parameter("activeStorageAccountId") @Nullable String activeStorageAccountId,
+        @CustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
+        @CustomType.Parameter("encryption") @Nullable String encryption,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
+        @CustomType.Parameter("recoveryPointHistoryDurationInHours") @Nullable Integer recoveryPointHistoryDurationInHours,
+        @CustomType.Parameter("replicationInterval") @Nullable Integer replicationInterval) {
         this.activeStorageAccountId = activeStorageAccountId;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.encryption = encryption;

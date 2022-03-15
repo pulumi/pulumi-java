@@ -6,11 +6,11 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.SelectedCertificateInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTdeCertificatesSqlTaskInputResponse {
     /**
      * Backup file share information for file share to be used for temporarily storing files.
@@ -28,11 +28,11 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
      */
     private final List<SelectedCertificateInputResponse> selectedCertificates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTdeCertificatesSqlTaskInputResponse(
-        @OutputCustomType.Parameter("backupFileShare") FileShareResponse backupFileShare,
-        @OutputCustomType.Parameter("connectionInfo") SqlConnectionInfoResponse connectionInfo,
-        @OutputCustomType.Parameter("selectedCertificates") List<SelectedCertificateInputResponse> selectedCertificates) {
+        @CustomType.Parameter("backupFileShare") FileShareResponse backupFileShare,
+        @CustomType.Parameter("connectionInfo") SqlConnectionInfoResponse connectionInfo,
+        @CustomType.Parameter("selectedCertificates") List<SelectedCertificateInputResponse> selectedCertificates) {
         this.backupFileShare = backupFileShare;
         this.connectionInfo = connectionInfo;
         this.selectedCertificates = selectedCertificates;

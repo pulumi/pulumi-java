@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
      * The current primary key that clients can use to authenticate with Redis cache.
      * 
      */
-    @InputImport(name="primaryKey", required=true)
+    @Import(name="primaryKey", required=true)
       private final String primaryKey;
 
     public String getPrimaryKey() {
@@ -31,7 +31,7 @@ public final class RedisAccessKeysResponse extends io.pulumi.resources.InvokeArg
      * The current secondary key that clients can use to authenticate with Redis cache.
      * 
      */
-    @InputImport(name="secondaryKey", required=true)
+    @Import(name="secondaryKey", required=true)
       private final String secondaryKey;
 
     public String getSecondaryKey() {

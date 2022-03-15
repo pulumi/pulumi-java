@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagepool.enums.DiskPoolTier;
 import io.pulumi.azurenative.storagepool.inputs.DiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * List of additional capabilities for a Disk pool.
      * 
      */
-    @InputImport(name="additionalCapabilities")
+    @Import(name="additionalCapabilities")
       private final @Nullable Output<List<String>> additionalCapabilities;
 
     public Output<List<String>> getAdditionalCapabilities() {
@@ -34,7 +34,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Logical zone for Disk pool resource; example: ["1"].
      * 
      */
-    @InputImport(name="availabilityZones", required=true)
+    @Import(name="availabilityZones", required=true)
       private final Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -45,7 +45,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Disk pool.
      * 
      */
-    @InputImport(name="diskPoolName")
+    @Import(name="diskPoolName")
       private final @Nullable Output<String> diskPoolName;
 
     public Output<String> getDiskPoolName() {
@@ -56,7 +56,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<List<DiskArgs>> disks;
 
     public Output<List<DiskArgs>> getDisks() {
@@ -67,7 +67,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Azure Resource ID of a Subnet for the Disk pool.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -100,7 +100,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Determines the SKU of VM deployed for Disk pool
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<Either<String,DiskPoolTier>> tier;
 
     public Output<Either<String,DiskPoolTier>> getTier() {

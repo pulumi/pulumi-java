@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
      * The parameter name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -34,7 +34,7 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
      * Expected value is 'Value'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -45,7 +45,7 @@ public final class ScriptStringExecutionParameterResponse extends io.pulumi.reso
      * The value for the passed parameter
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

@@ -18,7 +18,7 @@ import io.pulumi.azurenative.storage.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.storage.outputs.RoutingPreferenceResponse;
 import io.pulumi.azurenative.storage.outputs.SasPolicyResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStorageAccountResult {
     /**
      * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
@@ -220,46 +220,46 @@ public final class GetStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStorageAccountResult(
-        @OutputCustomType.Parameter("accessTier") String accessTier,
-        @OutputCustomType.Parameter("allowBlobPublicAccess") @Nullable Boolean allowBlobPublicAccess,
-        @OutputCustomType.Parameter("allowSharedKeyAccess") @Nullable Boolean allowSharedKeyAccess,
-        @OutputCustomType.Parameter("azureFilesIdentityBasedAuthentication") @Nullable AzureFilesIdentityBasedAuthenticationResponse azureFilesIdentityBasedAuthentication,
-        @OutputCustomType.Parameter("blobRestoreStatus") BlobRestoreStatusResponse blobRestoreStatus,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("customDomain") CustomDomainResponse customDomain,
-        @OutputCustomType.Parameter("enableHttpsTrafficOnly") @Nullable Boolean enableHttpsTrafficOnly,
-        @OutputCustomType.Parameter("enableNfsV3") @Nullable Boolean enableNfsV3,
-        @OutputCustomType.Parameter("encryption") EncryptionResponse encryption,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("failoverInProgress") Boolean failoverInProgress,
-        @OutputCustomType.Parameter("geoReplicationStats") GeoReplicationStatsResponse geoReplicationStats,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("isHnsEnabled") @Nullable Boolean isHnsEnabled,
-        @OutputCustomType.Parameter("keyCreationTime") KeyCreationTimeResponse keyCreationTime,
-        @OutputCustomType.Parameter("keyPolicy") KeyPolicyResponse keyPolicy,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("largeFileSharesState") @Nullable String largeFileSharesState,
-        @OutputCustomType.Parameter("lastGeoFailoverTime") String lastGeoFailoverTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkRuleSet") NetworkRuleSetResponse networkRuleSet,
-        @OutputCustomType.Parameter("primaryEndpoints") EndpointsResponse primaryEndpoints,
-        @OutputCustomType.Parameter("primaryLocation") String primaryLocation,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routingPreference") @Nullable RoutingPreferenceResponse routingPreference,
-        @OutputCustomType.Parameter("sasPolicy") SasPolicyResponse sasPolicy,
-        @OutputCustomType.Parameter("secondaryEndpoints") EndpointsResponse secondaryEndpoints,
-        @OutputCustomType.Parameter("secondaryLocation") String secondaryLocation,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("statusOfPrimary") String statusOfPrimary,
-        @OutputCustomType.Parameter("statusOfSecondary") String statusOfSecondary,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessTier") String accessTier,
+        @CustomType.Parameter("allowBlobPublicAccess") @Nullable Boolean allowBlobPublicAccess,
+        @CustomType.Parameter("allowSharedKeyAccess") @Nullable Boolean allowSharedKeyAccess,
+        @CustomType.Parameter("azureFilesIdentityBasedAuthentication") @Nullable AzureFilesIdentityBasedAuthenticationResponse azureFilesIdentityBasedAuthentication,
+        @CustomType.Parameter("blobRestoreStatus") BlobRestoreStatusResponse blobRestoreStatus,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("customDomain") CustomDomainResponse customDomain,
+        @CustomType.Parameter("enableHttpsTrafficOnly") @Nullable Boolean enableHttpsTrafficOnly,
+        @CustomType.Parameter("enableNfsV3") @Nullable Boolean enableNfsV3,
+        @CustomType.Parameter("encryption") EncryptionResponse encryption,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("failoverInProgress") Boolean failoverInProgress,
+        @CustomType.Parameter("geoReplicationStats") GeoReplicationStatsResponse geoReplicationStats,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("isHnsEnabled") @Nullable Boolean isHnsEnabled,
+        @CustomType.Parameter("keyCreationTime") KeyCreationTimeResponse keyCreationTime,
+        @CustomType.Parameter("keyPolicy") KeyPolicyResponse keyPolicy,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("largeFileSharesState") @Nullable String largeFileSharesState,
+        @CustomType.Parameter("lastGeoFailoverTime") String lastGeoFailoverTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkRuleSet") NetworkRuleSetResponse networkRuleSet,
+        @CustomType.Parameter("primaryEndpoints") EndpointsResponse primaryEndpoints,
+        @CustomType.Parameter("primaryLocation") String primaryLocation,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routingPreference") @Nullable RoutingPreferenceResponse routingPreference,
+        @CustomType.Parameter("sasPolicy") SasPolicyResponse sasPolicy,
+        @CustomType.Parameter("secondaryEndpoints") EndpointsResponse secondaryEndpoints,
+        @CustomType.Parameter("secondaryLocation") String secondaryLocation,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("statusOfPrimary") String statusOfPrimary,
+        @CustomType.Parameter("statusOfSecondary") String statusOfSecondary,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accessTier = accessTier;
         this.allowBlobPublicAccess = allowBlobPublicAccess;
         this.allowSharedKeyAccess = allowSharedKeyAccess;

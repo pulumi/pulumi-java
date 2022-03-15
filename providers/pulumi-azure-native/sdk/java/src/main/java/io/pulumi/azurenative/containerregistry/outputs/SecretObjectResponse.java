@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretObjectResponse {
     /**
      * The type of the secret object which determines how the value of the secret object has to be
@@ -25,10 +25,10 @@ public final class SecretObjectResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretObjectResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.type = type;
         this.value = value;
     }

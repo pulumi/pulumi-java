@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resource
      * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -27,7 +27,7 @@ public final class RouterMd5AuthenticationKeyResponse extends io.pulumi.resource
      * Name used to identify the key. Must be unique within a router. Must be referenced by at least one bgpPeer. Must comply with RFC1035.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

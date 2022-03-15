@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDashboardArgs Empty = new GetDashboardArgs();
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
     }
 
-    @InputImport(name="dashboardId", required=true)
+    @Import(name="dashboardId", required=true)
       private final String dashboardId;
 
     public String getDashboardId() {

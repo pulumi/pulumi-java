@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomaticResolutionPropertiesResponse {
     /**
      * Gets the MoveResource ARM ID of
@@ -18,8 +18,8 @@ public final class AutomaticResolutionPropertiesResponse {
      */
     private final @Nullable String moveResourceId;
 
-    @OutputCustomType.Constructor
-    private AutomaticResolutionPropertiesResponse(@OutputCustomType.Parameter("moveResourceId") @Nullable String moveResourceId) {
+    @CustomType.Constructor
+    private AutomaticResolutionPropertiesResponse(@CustomType.Parameter("moveResourceId") @Nullable String moveResourceId) {
         this.moveResourceId = moveResourceId;
     }
 

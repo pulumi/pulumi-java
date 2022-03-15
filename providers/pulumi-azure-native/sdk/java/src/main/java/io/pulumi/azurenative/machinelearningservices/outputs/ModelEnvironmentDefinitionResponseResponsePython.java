@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelEnvironmentDefinitionResponseResponsePython {
     private final @Nullable String baseCondaEnvironment;
     /**
@@ -30,12 +30,12 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
      */
     private final @Nullable Boolean userManagedDependencies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponsePython(
-        @OutputCustomType.Parameter("baseCondaEnvironment") @Nullable String baseCondaEnvironment,
-        @OutputCustomType.Parameter("condaDependencies") @Nullable Object condaDependencies,
-        @OutputCustomType.Parameter("interpreterPath") @Nullable String interpreterPath,
-        @OutputCustomType.Parameter("userManagedDependencies") @Nullable Boolean userManagedDependencies) {
+        @CustomType.Parameter("baseCondaEnvironment") @Nullable String baseCondaEnvironment,
+        @CustomType.Parameter("condaDependencies") @Nullable Object condaDependencies,
+        @CustomType.Parameter("interpreterPath") @Nullable String interpreterPath,
+        @CustomType.Parameter("userManagedDependencies") @Nullable Boolean userManagedDependencies) {
         this.baseCondaEnvironment = baseCondaEnvironment;
         this.condaDependencies = condaDependencies;
         this.interpreterPath = interpreterPath;

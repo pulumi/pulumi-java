@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation {
     /**
      * The SANs for a TLS validation context.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation {
      */
     private final VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation(
-        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        @OutputCustomType.Parameter("trust") VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
+        @CustomType.Parameter("subjectAlternativeNames") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @CustomType.Parameter("trust") VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

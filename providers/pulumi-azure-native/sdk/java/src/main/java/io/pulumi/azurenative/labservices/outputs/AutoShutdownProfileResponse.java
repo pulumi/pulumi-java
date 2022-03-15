@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoShutdownProfileResponse {
     /**
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
@@ -42,14 +42,14 @@ public final class AutoShutdownProfileResponse {
      */
     private final @Nullable String shutdownWhenNotConnected;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoShutdownProfileResponse(
-        @OutputCustomType.Parameter("disconnectDelay") @Nullable String disconnectDelay,
-        @OutputCustomType.Parameter("idleDelay") @Nullable String idleDelay,
-        @OutputCustomType.Parameter("noConnectDelay") @Nullable String noConnectDelay,
-        @OutputCustomType.Parameter("shutdownOnDisconnect") @Nullable String shutdownOnDisconnect,
-        @OutputCustomType.Parameter("shutdownOnIdle") @Nullable String shutdownOnIdle,
-        @OutputCustomType.Parameter("shutdownWhenNotConnected") @Nullable String shutdownWhenNotConnected) {
+        @CustomType.Parameter("disconnectDelay") @Nullable String disconnectDelay,
+        @CustomType.Parameter("idleDelay") @Nullable String idleDelay,
+        @CustomType.Parameter("noConnectDelay") @Nullable String noConnectDelay,
+        @CustomType.Parameter("shutdownOnDisconnect") @Nullable String shutdownOnDisconnect,
+        @CustomType.Parameter("shutdownOnIdle") @Nullable String shutdownOnIdle,
+        @CustomType.Parameter("shutdownWhenNotConnected") @Nullable String shutdownWhenNotConnected) {
         this.disconnectDelay = disconnectDelay;
         this.idleDelay = idleDelay;
         this.noConnectDelay = noConnectDelay;

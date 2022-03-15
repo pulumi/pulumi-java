@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ConfigurationType;
 import io.pulumi.azurenative.network.inputs.NetworkManagerPropertiesNetworkManagerScopesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the network manager.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the network manager.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -56,7 +56,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName")
+    @Import(name="networkManagerName")
       private final @Nullable Output<String> networkManagerName;
 
     public Output<String> getNetworkManagerName() {
@@ -78,7 +78,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Scope Access.
      * 
      */
-    @InputImport(name="networkManagerScopeAccesses")
+    @Import(name="networkManagerScopeAccesses")
       private final @Nullable Output<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses;
 
     public Output<List<Either<String,ConfigurationType>>> getNetworkManagerScopeAccesses() {
@@ -89,7 +89,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Scope of Network Manager.
      * 
      */
-    @InputImport(name="networkManagerScopes")
+    @Import(name="networkManagerScopes")
       private final @Nullable Output<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes;
 
     public Output<NetworkManagerPropertiesNetworkManagerScopesArgs> getNetworkManagerScopes() {
@@ -100,7 +100,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -111,7 +111,7 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

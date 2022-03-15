@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.PrePostStepResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * The list of step group names on which this step group depends on.
      * 
      */
-    @InputImport(name="dependsOnStepGroups")
+    @Import(name="dependsOnStepGroups")
       private final @Nullable List<String> dependsOnStepGroups;
 
     public List<String> getDependsOnStepGroups() {
@@ -35,7 +35,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * The resource Id of service unit to be deployed. The service unit should be from the service topology referenced in targetServiceTopologyId
      * 
      */
-    @InputImport(name="deploymentTargetId", required=true)
+    @Import(name="deploymentTargetId", required=true)
       private final String deploymentTargetId;
 
     public String getDeploymentTargetId() {
@@ -46,7 +46,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the step group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -57,7 +57,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * The list of steps to be run after deploying the target.
      * 
      */
-    @InputImport(name="postDeploymentSteps")
+    @Import(name="postDeploymentSteps")
       private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
 
     public List<PrePostStepResponse> getPostDeploymentSteps() {
@@ -68,7 +68,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * The list of steps to be run before deploying the target.
      * 
      */
-    @InputImport(name="preDeploymentSteps")
+    @Import(name="preDeploymentSteps")
       private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
     public List<PrePostStepResponse> getPreDeploymentSteps() {

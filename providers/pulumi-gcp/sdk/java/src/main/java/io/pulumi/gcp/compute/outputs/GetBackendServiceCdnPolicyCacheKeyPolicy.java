@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
     private final Boolean includeHost;
     private final Boolean includeProtocol;
@@ -17,13 +17,13 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
     private final List<String> queryStringBlacklists;
     private final List<String> queryStringWhitelists;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceCdnPolicyCacheKeyPolicy(
-        @OutputCustomType.Parameter("includeHost") Boolean includeHost,
-        @OutputCustomType.Parameter("includeProtocol") Boolean includeProtocol,
-        @OutputCustomType.Parameter("includeQueryString") Boolean includeQueryString,
-        @OutputCustomType.Parameter("queryStringBlacklists") List<String> queryStringBlacklists,
-        @OutputCustomType.Parameter("queryStringWhitelists") List<String> queryStringWhitelists) {
+        @CustomType.Parameter("includeHost") Boolean includeHost,
+        @CustomType.Parameter("includeProtocol") Boolean includeProtocol,
+        @CustomType.Parameter("includeQueryString") Boolean includeQueryString,
+        @CustomType.Parameter("queryStringBlacklists") List<String> queryStringBlacklists,
+        @CustomType.Parameter("queryStringWhitelists") List<String> queryStringWhitelists) {
         this.includeHost = includeHost;
         this.includeProtocol = includeProtocol;
         this.includeQueryString = includeQueryString;

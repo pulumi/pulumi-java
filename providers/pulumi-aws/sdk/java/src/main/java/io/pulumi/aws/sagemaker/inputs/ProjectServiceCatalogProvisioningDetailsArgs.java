@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
      * The path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path.
      * 
      */
-    @InputImport(name="pathId")
+    @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
     public Output<String> getPathId() {
@@ -31,7 +31,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
      * The ID of the product to provision.
      * 
      */
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final Output<String> productId;
 
     public Output<String> getProductId() {
@@ -42,7 +42,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
      * The ID of the provisioning artifact.
      * 
      */
-    @InputImport(name="provisioningArtifactId")
+    @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
     public Output<String> getProvisioningArtifactId() {
@@ -53,7 +53,7 @@ public final class ProjectServiceCatalogProvisioningDetailsArgs extends io.pulum
      * A list of key value pairs that you specify when you provision a product. See Provisioning Parameter below.
      * 
      */
-    @InputImport(name="provisioningParameters")
+    @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> provisioningParameters;
 
     public Output<List<ProjectServiceCatalogProvisioningDetailsProvisioningParameterArgs>> getProvisioningParameters() {

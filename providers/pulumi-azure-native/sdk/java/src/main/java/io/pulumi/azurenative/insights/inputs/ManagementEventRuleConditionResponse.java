@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ManagementEventAggregationCondition
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class ManagementEventRuleConditionResponse extends io.pulumi.resour
      * How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.
      * 
      */
-    @InputImport(name="aggregation")
+    @Import(name="aggregation")
       private final @Nullable ManagementEventAggregationConditionResponse aggregation;
 
     public Optional<ManagementEventAggregationConditionResponse> getAggregation() {
@@ -37,7 +37,7 @@ public final class ManagementEventRuleConditionResponse extends io.pulumi.resour
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
      */
-    @InputImport(name="dataSource")
+    @Import(name="dataSource")
       private final @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource;
 
     public Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> getDataSource() {
@@ -49,7 +49,7 @@ public final class ManagementEventRuleConditionResponse extends io.pulumi.resour
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

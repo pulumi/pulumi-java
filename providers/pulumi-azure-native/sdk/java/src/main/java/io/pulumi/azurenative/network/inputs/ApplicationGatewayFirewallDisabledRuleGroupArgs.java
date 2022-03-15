@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
      * The name of the rule group that will be disabled.
      * 
      */
-    @InputImport(name="ruleGroupName", required=true)
+    @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
 
     public Output<String> getRuleGroupName() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
      * The list of rules that will be disabled. If null, all rules of the rule group will be disabled.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<Integer>> rules;
 
     public Output<List<Integer>> getRules() {

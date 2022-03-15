@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.A2AContainerMappingInputArg
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtContainerMappingInputArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
      * Applicable policy.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -36,7 +36,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
      * Provider specific input for pairing.
      * 
      */
-    @InputImport(name="providerSpecificInput")
+    @Import(name="providerSpecificInput")
       private final @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
     public Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> getProviderSpecificInput() {
@@ -47,7 +47,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
      * The target unique protection container name.
      * 
      */
-    @InputImport(name="targetProtectionContainerId")
+    @Import(name="targetProtectionContainerId")
       private final @Nullable Output<String> targetProtectionContainerId;
 
     public Output<String> getTargetProtectionContainerId() {

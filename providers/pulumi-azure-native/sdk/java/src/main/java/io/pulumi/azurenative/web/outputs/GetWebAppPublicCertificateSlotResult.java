@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppPublicCertificateSlotResult {
     /**
      * Public Certificate byte array
@@ -47,15 +47,15 @@ public final class GetWebAppPublicCertificateSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppPublicCertificateSlotResult(
-        @OutputCustomType.Parameter("blob") @Nullable String blob,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicCertificateLocation") @Nullable String publicCertificateLocation,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("blob") @Nullable String blob,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicCertificateLocation") @Nullable String publicCertificateLocation,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type) {
         this.blob = blob;
         this.id = id;
         this.kind = kind;

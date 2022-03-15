@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.enums.SslStatus;
 import io.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The details of the storage account password.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
 
     public Output<AsymmetricEncryptedSecretArgs> getAccessKey() {
@@ -32,7 +32,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The storage endpoint
      * 
      */
-    @InputImport(name="endPoint", required=true)
+    @Import(name="endPoint", required=true)
       private final Output<String> endPoint;
 
     public Output<String> getEndPoint() {
@@ -43,7 +43,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -54,7 +54,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -65,7 +65,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * Signifies whether SSL needs to be enabled or not.
      * 
      */
-    @InputImport(name="sslStatus", required=true)
+    @Import(name="sslStatus", required=true)
       private final Output<SslStatus> sslStatus;
 
     public Output<SslStatus> getSslStatus() {
@@ -87,7 +87,7 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * The storage account credential name.
      * 
      */
-    @InputImport(name="storageAccountCredentialName")
+    @Import(name="storageAccountCredentialName")
       private final @Nullable Output<String> storageAccountCredentialName;
 
     public Output<String> getStorageAccountCredentialName() {

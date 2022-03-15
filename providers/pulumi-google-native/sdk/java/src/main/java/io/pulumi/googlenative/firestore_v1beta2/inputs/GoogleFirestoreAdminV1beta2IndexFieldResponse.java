@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
      * Indicates that this field supports operations on `array_value`s.
      * 
      */
-    @InputImport(name="arrayConfig", required=true)
+    @Import(name="arrayConfig", required=true)
       private final String arrayConfig;
 
     public String getArrayConfig() {
@@ -31,7 +31,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
      * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
      * 
      */
-    @InputImport(name="fieldPath", required=true)
+    @Import(name="fieldPath", required=true)
       private final String fieldPath;
 
     public String getFieldPath() {
@@ -42,7 +42,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldResponse extends io.pulu
      * Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
      * 
      */
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final String order;
 
     public String getOrder() {

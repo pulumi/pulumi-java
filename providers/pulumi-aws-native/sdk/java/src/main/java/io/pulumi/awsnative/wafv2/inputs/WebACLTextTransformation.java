@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLTextTransformationType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class WebACLTextTransformation extends io.pulumi.resources.InvokeAr
 
     public static final WebACLTextTransformation Empty = new WebACLTextTransformation();
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final WebACLTextTransformationType type;
 
     public WebACLTextTransformationType getType() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -36,7 +36,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * The list of event types that cause this trigger to fire.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final Output<List<Object>> events;
 
     public Output<List<Object>> getEvents() {
@@ -58,7 +58,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
@@ -69,7 +69,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * The ARM resource ID of the Azure Event Grid Topic.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -80,7 +80,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
      */
-    @InputImport(name="subjectBeginsWith")
+    @Import(name="subjectBeginsWith")
       private final @Nullable Output<String> subjectBeginsWith;
 
     public Output<String> getSubjectBeginsWith() {
@@ -91,7 +91,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.
      * 
      */
-    @InputImport(name="subjectEndsWith")
+    @Import(name="subjectEndsWith")
       private final @Nullable Output<String> subjectEndsWith;
 
     public Output<String> getSubjectEndsWith() {
@@ -103,7 +103,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'CustomEventsTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

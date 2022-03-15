@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmUtilizationInfoResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUtilizationReportResult {
     /**
      * The time the report was created (this refers to the time of the request, not the time the report creation completed).
@@ -64,18 +64,18 @@ public final class GetUtilizationReportResult {
      */
     private final List<VmUtilizationInfoResponse> vms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUtilizationReportResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("frameEndTime") String frameEndTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateTime") String stateTime,
-        @OutputCustomType.Parameter("timeFrame") String timeFrame,
-        @OutputCustomType.Parameter("vmCount") Integer vmCount,
-        @OutputCustomType.Parameter("vms") List<VmUtilizationInfoResponse> vms) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("frameEndTime") String frameEndTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("timeFrame") String timeFrame,
+        @CustomType.Parameter("vmCount") Integer vmCount,
+        @CustomType.Parameter("vms") List<VmUtilizationInfoResponse> vms) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.error = error;

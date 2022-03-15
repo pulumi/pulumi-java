@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean flag to indicate if the certificate should be active
      * 
      */
-    @InputImport(name="active", required=true)
+    @Import(name="active", required=true)
       private final Output<Boolean> active;
 
     public Output<Boolean> getActive() {
@@ -34,7 +34,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * for more information on generating keys and a certificate.
      * 
      */
-    @InputImport(name="csr")
+    @Import(name="csr")
       private final @Nullable Output<String> csr;
 
     public Output<String> getCsr() {

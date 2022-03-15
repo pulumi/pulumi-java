@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SourceRepositoryResponse extends io.pulumi.resources.InvokeAr
      * The URL pointing to the hosted repository where the function were defined at the time of deployment. It always points to a specific commit in the format described above.
      * 
      */
-    @InputImport(name="deployedUrl", required=true)
+    @Import(name="deployedUrl", required=true)
       private final String deployedUrl;
 
     public String getDeployedUrl() {
@@ -31,7 +31,7 @@ public final class SourceRepositoryResponse extends io.pulumi.resources.InvokeAr
      * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats: To refer to a specific commit: `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}revisions/*{@literal /}paths/*` To refer to a moveable alias (branch): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}moveable-aliases/*{@literal /}paths/*` In particular, to refer to HEAD use `master` moveable alias. To refer to a specific fixed alias (tag): `https://source.developers.google.com/projects/*{@literal /}repos/*{@literal /}fixed-aliases/*{@literal /}paths/*` You may omit `paths/*` if you want to use the main directory.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

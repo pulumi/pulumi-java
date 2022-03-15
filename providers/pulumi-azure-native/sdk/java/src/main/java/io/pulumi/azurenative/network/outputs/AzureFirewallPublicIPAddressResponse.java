@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallPublicIPAddressResponse {
     /**
      * Public IP Address value.
@@ -17,8 +17,8 @@ public final class AzureFirewallPublicIPAddressResponse {
      */
     private final @Nullable String address;
 
-    @OutputCustomType.Constructor
-    private AzureFirewallPublicIPAddressResponse(@OutputCustomType.Parameter("address") @Nullable String address) {
+    @CustomType.Constructor
+    private AzureFirewallPublicIPAddressResponse(@CustomType.Parameter("address") @Nullable String address) {
         this.address = address;
     }
 

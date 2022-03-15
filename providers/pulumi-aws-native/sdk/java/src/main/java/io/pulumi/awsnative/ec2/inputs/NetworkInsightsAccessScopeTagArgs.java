@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class NetworkInsightsAccessScopeTagArgs extends io.pulumi.resources
 
     public static final NetworkInsightsAccessScopeTagArgs Empty = new NetworkInsightsAccessScopeTagArgs();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

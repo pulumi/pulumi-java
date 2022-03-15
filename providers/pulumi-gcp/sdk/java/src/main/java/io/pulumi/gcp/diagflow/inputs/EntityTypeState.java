@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeEntityGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * The name of this entity type to be displayed on the console.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Enables fuzzy entity extraction during classification.
      * 
      */
-    @InputImport(name="enableFuzzyExtraction")
+    @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
@@ -44,7 +44,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="entities")
+    @Import(name="entities")
       private final @Nullable Output<List<EntityTypeEntityGetArgs>> entities;
 
     public Output<List<EntityTypeEntityGetArgs>> getEntities() {
@@ -60,7 +60,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -71,7 +71,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -83,7 +83,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

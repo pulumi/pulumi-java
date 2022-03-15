@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.ArtifactResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.CommandResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SourceResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildProvenanceResponse {
     /**
      * Special options applied to this build. This is a catch-all field where build providers can enter any desired additional details.
@@ -75,20 +75,20 @@ public final class BuildProvenanceResponse {
      */
     private final String triggerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildProvenanceResponse(
-        @OutputCustomType.Parameter("buildOptions") Map<String,String> buildOptions,
-        @OutputCustomType.Parameter("builderVersion") String builderVersion,
-        @OutputCustomType.Parameter("builtArtifacts") List<ArtifactResponse> builtArtifacts,
-        @OutputCustomType.Parameter("commands") List<CommandResponse> commands,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("creator") String creator,
-        @OutputCustomType.Parameter("finishTime") String finishTime,
-        @OutputCustomType.Parameter("logsBucket") String logsBucket,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("sourceProvenance") SourceResponse sourceProvenance,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("triggerId") String triggerId) {
+        @CustomType.Parameter("buildOptions") Map<String,String> buildOptions,
+        @CustomType.Parameter("builderVersion") String builderVersion,
+        @CustomType.Parameter("builtArtifacts") List<ArtifactResponse> builtArtifacts,
+        @CustomType.Parameter("commands") List<CommandResponse> commands,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creator") String creator,
+        @CustomType.Parameter("finishTime") String finishTime,
+        @CustomType.Parameter("logsBucket") String logsBucket,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("sourceProvenance") SourceResponse sourceProvenance,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("triggerId") String triggerId) {
         this.buildOptions = buildOptions;
         this.builderVersion = builderVersion;
         this.builtArtifacts = builtArtifacts;

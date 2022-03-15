@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RouterBgpArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bgp")
+    @Import(name="bgp")
       private final @Nullable Output<RouterBgpArgs> bgp;
 
     public Output<RouterBgpArgs> getBgp() {
@@ -32,7 +32,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * User-specified description for the IP range.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * Not currently available publicly.
      * 
      */
-    @InputImport(name="encryptedInterconnectRouter")
+    @Import(name="encryptedInterconnectRouter")
       private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
     public Output<Boolean> getEncryptedInterconnectRouter() {
@@ -61,7 +61,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the network to which this router belongs.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -84,7 +84,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -95,7 +95,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * Region where the router resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

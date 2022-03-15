@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSServiceResponseResponseAutoScaler {
     /**
      * Option to enable/disable auto scaling.
@@ -38,13 +38,13 @@ public final class AKSServiceResponseResponseAutoScaler {
      */
     private final @Nullable Integer targetUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSServiceResponseResponseAutoScaler(
-        @OutputCustomType.Parameter("autoscaleEnabled") @Nullable Boolean autoscaleEnabled,
-        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
-        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
-        @OutputCustomType.Parameter("refreshPeriodInSeconds") @Nullable Integer refreshPeriodInSeconds,
-        @OutputCustomType.Parameter("targetUtilization") @Nullable Integer targetUtilization) {
+        @CustomType.Parameter("autoscaleEnabled") @Nullable Boolean autoscaleEnabled,
+        @CustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @CustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @CustomType.Parameter("refreshPeriodInSeconds") @Nullable Integer refreshPeriodInSeconds,
+        @CustomType.Parameter("targetUtilization") @Nullable Integer targetUtilization) {
         this.autoscaleEnabled = autoscaleEnabled;
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;

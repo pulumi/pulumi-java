@@ -8,7 +8,7 @@ import io.pulumi.awsnative.location.MapArgs;
 import io.pulumi.awsnative.location.enums.MapPricingPlan;
 import io.pulumi.awsnative.location.outputs.MapConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,55 +19,55 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:location:Map")
 public class Map extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="configuration", type=MapConfiguration.class, parameters={})
+    @Export(name="configuration", type=MapConfiguration.class, parameters={})
     private Output<MapConfiguration> configuration;
 
     public Output<MapConfiguration> getConfiguration() {
         return this.configuration;
     }
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    @OutputExport(name="dataSource", type=String.class, parameters={})
+    @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
     public Output<String> getDataSource() {
         return this.dataSource;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="mapArn", type=String.class, parameters={})
+    @Export(name="mapArn", type=String.class, parameters={})
     private Output<String> mapArn;
 
     public Output<String> getMapArn() {
         return this.mapArn;
     }
-    @OutputExport(name="mapName", type=String.class, parameters={})
+    @Export(name="mapName", type=String.class, parameters={})
     private Output<String> mapName;
 
     public Output<String> getMapName() {
         return this.mapName;
     }
-    @OutputExport(name="pricingPlan", type=MapPricingPlan.class, parameters={})
+    @Export(name="pricingPlan", type=MapPricingPlan.class, parameters={})
     private Output</* @Nullable */ MapPricingPlan> pricingPlan;
 
     public Output</* @Nullable */ MapPricingPlan> getPricingPlan() {
         return this.pricingPlan;
     }
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

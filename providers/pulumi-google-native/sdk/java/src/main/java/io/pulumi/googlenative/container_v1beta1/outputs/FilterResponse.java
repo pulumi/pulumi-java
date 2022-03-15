@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterResponse {
     /**
      * Event types to allowlist.
@@ -16,8 +16,8 @@ public final class FilterResponse {
      */
     private final List<String> eventType;
 
-    @OutputCustomType.Constructor
-    private FilterResponse(@OutputCustomType.Parameter("eventType") List<String> eventType) {
+    @CustomType.Constructor
+    private FilterResponse(@CustomType.Parameter("eventType") List<String> eventType) {
         this.eventType = eventType;
     }
 

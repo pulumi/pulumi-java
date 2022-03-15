@@ -5,7 +5,7 @@ package io.pulumi.awsnative.healthlake.inputs;
 
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreKmsEncryptionConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
 
     public static final FHIRDatastoreSseConfigurationArgs Empty = new FHIRDatastoreSseConfigurationArgs();
 
-    @InputImport(name="kmsEncryptionConfig", required=true)
+    @Import(name="kmsEncryptionConfig", required=true)
       private final Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
 
     public Output<FHIRDatastoreKmsEncryptionConfigArgs> getKmsEncryptionConfig() {

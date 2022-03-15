@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.MaterialResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaBuilderResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaMetadataResponse;
@@ -20,7 +20,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
      * required
      * 
      */
-    @InputImport(name="builder", required=true)
+    @Import(name="builder", required=true)
       private final SlsaBuilderResponse builder;
 
     public SlsaBuilderResponse getBuilder() {
@@ -31,14 +31,14 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
      * The collection of artifacts that influenced the build including sources, dependencies, build tools, base images, and so on. This is considered to be incomplete unless metadata.completeness.materials is true. Unset or null is equivalent to empty.
      * 
      */
-    @InputImport(name="materials", required=true)
+    @Import(name="materials", required=true)
       private final List<MaterialResponse> materials;
 
     public List<MaterialResponse> getMaterials() {
         return this.materials;
     }
 
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final SlsaMetadataResponse metadata;
 
     public SlsaMetadataResponse getMetadata() {
@@ -49,7 +49,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
      * Identifies the configuration used for the build. When combined with materials, this SHOULD fully describe the build, such that re-running this recipe results in bit-for-bit identical output (if the build is reproducible). required
      * 
      */
-    @InputImport(name="recipe", required=true)
+    @Import(name="recipe", required=true)
       private final SlsaRecipeResponse recipe;
 
     public SlsaRecipeResponse getRecipe() {

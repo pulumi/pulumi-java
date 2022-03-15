@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleEndpointInputS3InputMode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
 
     public static final MonitoringScheduleEndpointInput Empty = new MonitoringScheduleEndpointInput();
 
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -31,7 +31,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
      * Path to the filesystem where the endpoint data is available to the container.
      * 
      */
-    @InputImport(name="localPath", required=true)
+    @Import(name="localPath", required=true)
       private final String localPath;
 
     public String getLocalPath() {
@@ -42,7 +42,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
      */
-    @InputImport(name="s3DataDistributionType")
+    @Import(name="s3DataDistributionType")
       private final @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType;
 
     public Optional<MonitoringScheduleEndpointInputS3DataDistributionType> getS3DataDistributionType() {
@@ -53,7 +53,7 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
      */
-    @InputImport(name="s3InputMode")
+    @Import(name="s3InputMode")
       private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
     public Optional<MonitoringScheduleEndpointInputS3InputMode> getS3InputMode() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyPolicyMapArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyTagMapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +22,14 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Data Location Constraint of the Policy.
      * 
      */
-    @InputImport(name="dataLocationConstraint")
+    @Import(name="dataLocationConstraint")
       private final @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
     public Output<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
         return this.dataLocationConstraint == null ? Output.empty() : this.dataLocationConstraint;
     }
 
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<ResiliencyPolicyPolicyMapArgs> policy;
 
     public Output<ResiliencyPolicyPolicyMapArgs> getPolicy() {
@@ -40,7 +40,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Description of Resiliency Policy.
      * 
      */
-    @InputImport(name="policyDescription")
+    @Import(name="policyDescription")
       private final @Nullable Output<String> policyDescription;
 
     public Output<String> getPolicyDescription() {
@@ -51,14 +51,14 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Name of Resiliency Policy.
      * 
      */
-    @InputImport(name="policyName", required=true)
+    @Import(name="policyName", required=true)
       private final Output<String> policyName;
 
     public Output<String> getPolicyName() {
         return this.policyName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
 
     public Output<ResiliencyPolicyTagMapArgs> getTags() {
@@ -69,7 +69,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Resiliency Policy Tier.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<ResiliencyPolicyTier> tier;
 
     public Output<ResiliencyPolicyTier> getTier() {

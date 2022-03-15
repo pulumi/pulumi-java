@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.rds.ClusterInstanceArgs;
 import io.pulumi.aws.rds.inputs.ClusterInstanceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -49,7 +49,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * are applied immediately, or during the next maintenance window. Default is`false`.
      * 
      */
-    @OutputExport(name="applyImmediately", type=Boolean.class, parameters={})
+    @Export(name="applyImmediately", type=Boolean.class, parameters={})
     private Output<Boolean> applyImmediately;
 
     /**
@@ -64,7 +64,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of cluster instance
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -78,7 +78,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
      * 
      */
-    @OutputExport(name="autoMinorVersionUpgrade", type=Boolean.class, parameters={})
+    @Export(name="autoMinorVersionUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoMinorVersionUpgrade;
 
     /**
@@ -92,7 +92,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -106,7 +106,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The identifier of the CA certificate for the DB instance.
      * 
      */
-    @OutputExport(name="caCertIdentifier", type=String.class, parameters={})
+    @Export(name="caCertIdentifier", type=String.class, parameters={})
     private Output<String> caCertIdentifier;
 
     /**
@@ -120,7 +120,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The identifier of the `aws.rds.Cluster` in which to launch this instance.
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output<String> clusterIdentifier;
 
     /**
@@ -134,7 +134,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
      * 
      */
-    @OutputExport(name="copyTagsToSnapshot", type=Boolean.class, parameters={})
+    @Export(name="copyTagsToSnapshot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> copyTagsToSnapshot;
 
     /**
@@ -148,7 +148,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The name of the DB parameter group to associate with this instance.
      * 
      */
-    @OutputExport(name="dbParameterGroupName", type=String.class, parameters={})
+    @Export(name="dbParameterGroupName", type=String.class, parameters={})
     private Output<String> dbParameterGroupName;
 
     /**
@@ -162,7 +162,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
      * 
      */
-    @OutputExport(name="dbSubnetGroupName", type=String.class, parameters={})
+    @Export(name="dbSubnetGroupName", type=String.class, parameters={})
     private Output<String> dbSubnetGroupName;
 
     /**
@@ -176,7 +176,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The region-unique, immutable identifier for the DB instance.
      * 
      */
-    @OutputExport(name="dbiResourceId", type=String.class, parameters={})
+    @Export(name="dbiResourceId", type=String.class, parameters={})
     private Output<String> dbiResourceId;
 
     /**
@@ -190,7 +190,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The DNS address for this instance. May not be writable
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -207,7 +207,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * in the Amazon RDS User Guide.
      * 
      */
-    @OutputExport(name="engine", type=String.class, parameters={})
+    @Export(name="engine", type=String.class, parameters={})
     private Output</* @Nullable */ String> engine;
 
     /**
@@ -224,7 +224,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The database engine version.
      * 
      */
-    @OutputExport(name="engineVersion", type=String.class, parameters={})
+    @Export(name="engineVersion", type=String.class, parameters={})
     private Output<String> engineVersion;
 
     /**
@@ -238,7 +238,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The database engine version
      * 
      */
-    @OutputExport(name="engineVersionActual", type=String.class, parameters={})
+    @Export(name="engineVersionActual", type=String.class, parameters={})
     private Output<String> engineVersionActual;
 
     /**
@@ -252,7 +252,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @OutputExport(name="identifier", type=String.class, parameters={})
+    @Export(name="identifier", type=String.class, parameters={})
     private Output<String> identifier;
 
     /**
@@ -266,7 +266,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @OutputExport(name="identifierPrefix", type=String.class, parameters={})
+    @Export(name="identifierPrefix", type=String.class, parameters={})
     private Output<String> identifierPrefix;
 
     /**
@@ -281,7 +281,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
      * 
      */
-    @OutputExport(name="instanceClass", type=String.class, parameters={})
+    @Export(name="instanceClass", type=String.class, parameters={})
     private Output<String> instanceClass;
 
     /**
@@ -296,7 +296,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The ARN for the KMS encryption key if one is set to the cluster.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -310,7 +310,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
      * 
      */
-    @OutputExport(name="monitoringInterval", type=Integer.class, parameters={})
+    @Export(name="monitoringInterval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monitoringInterval;
 
     /**
@@ -326,7 +326,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
      * 
      */
-    @OutputExport(name="monitoringRoleArn", type=String.class, parameters={})
+    @Export(name="monitoringRoleArn", type=String.class, parameters={})
     private Output<String> monitoringRoleArn;
 
     /**
@@ -342,7 +342,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Specifies whether Performance Insights is enabled or not.
      * 
      */
-    @OutputExport(name="performanceInsightsEnabled", type=Boolean.class, parameters={})
+    @Export(name="performanceInsightsEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> performanceInsightsEnabled;
 
     /**
@@ -356,7 +356,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
      * 
      */
-    @OutputExport(name="performanceInsightsKmsKeyId", type=String.class, parameters={})
+    @Export(name="performanceInsightsKmsKeyId", type=String.class, parameters={})
     private Output<String> performanceInsightsKmsKeyId;
 
     /**
@@ -370,7 +370,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
      * 
      */
-    @OutputExport(name="performanceInsightsRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="performanceInsightsRetentionPeriod", type=Integer.class, parameters={})
     private Output<Integer> performanceInsightsRetentionPeriod;
 
     /**
@@ -384,7 +384,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * The database port
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -399,7 +399,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Eg: "04:00-09:00"
      * 
      */
-    @OutputExport(name="preferredBackupWindow", type=String.class, parameters={})
+    @Export(name="preferredBackupWindow", type=String.class, parameters={})
     private Output<String> preferredBackupWindow;
 
     /**
@@ -415,7 +415,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
      * 
      */
-    @OutputExport(name="preferredMaintenanceWindow", type=String.class, parameters={})
+    @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output<String> preferredMaintenanceWindow;
 
     /**
@@ -430,7 +430,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
      * 
      */
-    @OutputExport(name="promotionTier", type=Integer.class, parameters={})
+    @Export(name="promotionTier", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> promotionTier;
 
     /**
@@ -446,7 +446,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * details on controlling this property.
      * 
      */
-    @OutputExport(name="publiclyAccessible", type=Boolean.class, parameters={})
+    @Export(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAccessible;
 
     /**
@@ -462,7 +462,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Specifies whether the DB cluster is encrypted.
      * 
      */
-    @OutputExport(name="storageEncrypted", type=Boolean.class, parameters={})
+    @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output<Boolean> storageEncrypted;
 
     /**
@@ -476,7 +476,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -490,7 +490,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -504,7 +504,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
      * 
      */
-    @OutputExport(name="writer", type=Boolean.class, parameters={})
+    @Export(name="writer", type=Boolean.class, parameters={})
     private Output<Boolean> writer;
 
     /**

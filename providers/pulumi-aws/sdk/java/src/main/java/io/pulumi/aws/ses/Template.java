@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.TemplateArgs;
 import io.pulumi.aws.ses.inputs.TemplateState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The ARN of the SES template
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    @OutputExport(name="html", type=String.class, parameters={})
+    @Export(name="html", type=String.class, parameters={})
     private Output</* @Nullable */ String> html;
 
     /**
@@ -60,7 +60,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -74,7 +74,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The subject line of the email.
      * 
      */
-    @OutputExport(name="subject", type=String.class, parameters={})
+    @Export(name="subject", type=String.class, parameters={})
     private Output</* @Nullable */ String> subject;
 
     /**
@@ -88,7 +88,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    @OutputExport(name="text", type=String.class, parameters={})
+    @Export(name="text", type=String.class, parameters={})
     private Output</* @Nullable */ String> text;
 
     /**

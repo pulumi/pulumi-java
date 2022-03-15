@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of storage container.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {

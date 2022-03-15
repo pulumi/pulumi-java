@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageClassificationMappingPropertiesResponse {
     /**
      * Target storage object Id.
@@ -17,8 +17,8 @@ public final class StorageClassificationMappingPropertiesResponse {
      */
     private final @Nullable String targetStorageClassificationId;
 
-    @OutputCustomType.Constructor
-    private StorageClassificationMappingPropertiesResponse(@OutputCustomType.Parameter("targetStorageClassificationId") @Nullable String targetStorageClassificationId) {
+    @CustomType.Constructor
+    private StorageClassificationMappingPropertiesResponse(@CustomType.Parameter("targetStorageClassificationId") @Nullable String targetStorageClassificationId) {
         this.targetStorageClassificationId = targetStorageClassificationId;
     }
 

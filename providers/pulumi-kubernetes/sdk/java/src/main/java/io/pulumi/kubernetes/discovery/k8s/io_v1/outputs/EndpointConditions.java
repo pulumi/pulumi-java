@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConditions {
     /**
      * ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints.
@@ -27,11 +27,11 @@ public final class EndpointConditions {
      */
     private final @Nullable Boolean terminating;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConditions(
-        @OutputCustomType.Parameter("ready") @Nullable Boolean ready,
-        @OutputCustomType.Parameter("serving") @Nullable Boolean serving,
-        @OutputCustomType.Parameter("terminating") @Nullable Boolean terminating) {
+        @CustomType.Parameter("ready") @Nullable Boolean ready,
+        @CustomType.Parameter("serving") @Nullable Boolean serving,
+        @CustomType.Parameter("terminating") @Nullable Boolean terminating) {
         this.ready = ready;
         this.serving = serving;
         this.terminating = terminating;

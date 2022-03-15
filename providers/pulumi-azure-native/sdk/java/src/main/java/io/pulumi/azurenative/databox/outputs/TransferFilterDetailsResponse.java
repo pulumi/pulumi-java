@@ -6,14 +6,14 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.AzureFileFilterDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.BlobFilterDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.FilterFileDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferFilterDetailsResponse {
     /**
      * Filter details to transfer Azure files.
@@ -36,12 +36,12 @@ public final class TransferFilterDetailsResponse {
      */
     private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferFilterDetailsResponse(
-        @OutputCustomType.Parameter("azureFileFilterDetails") @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
-        @OutputCustomType.Parameter("blobFilterDetails") @Nullable BlobFilterDetailsResponse blobFilterDetails,
-        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
-        @OutputCustomType.Parameter("filterFileDetails") @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
+        @CustomType.Parameter("azureFileFilterDetails") @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
+        @CustomType.Parameter("blobFilterDetails") @Nullable BlobFilterDetailsResponse blobFilterDetails,
+        @CustomType.Parameter("dataAccountType") String dataAccountType,
+        @CustomType.Parameter("filterFileDetails") @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
         this.azureFileFilterDetails = azureFileFilterDetails;
         this.blobFilterDetails = blobFilterDetails;
         this.dataAccountType = dataAccountType;

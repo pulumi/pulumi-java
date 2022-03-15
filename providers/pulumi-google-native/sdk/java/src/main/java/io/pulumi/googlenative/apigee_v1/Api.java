@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ApiArgs;
@@ -24,7 +24,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * User labels applied to this API Proxy.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -38,7 +38,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * The id of the most recently created revision for this api proxy.
      * 
      */
-    @OutputExport(name="latestRevisionId", type=String.class, parameters={})
+    @Export(name="latestRevisionId", type=String.class, parameters={})
     private Output<String> latestRevisionId;
 
     /**
@@ -52,7 +52,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Metadata describing the API proxy.
      * 
      */
-    @OutputExport(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
+    @Export(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData;
 
     /**
@@ -66,7 +66,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Name of the API proxy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * List of revisons defined for the API proxy.
      * 
      */
-    @OutputExport(name="revision", type=List.class, parameters={String.class})
+    @Export(name="revision", type=List.class, parameters={String.class})
     private Output<List<String>> revision;
 
     /**

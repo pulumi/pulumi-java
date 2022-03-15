@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InventorySchedule {
     /**
      * Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
@@ -15,8 +15,8 @@ public final class InventorySchedule {
      */
     private final String frequency;
 
-    @OutputCustomType.Constructor
-    private InventorySchedule(@OutputCustomType.Parameter("frequency") String frequency) {
+    @CustomType.Constructor
+    private InventorySchedule(@CustomType.Parameter("frequency") String frequency) {
         this.frequency = frequency;
     }
 

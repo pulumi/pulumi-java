@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this model.
@@ -25,11 +25,11 @@ public final class ModelReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelReferenceResponse(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("modelId") String modelId,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("modelId") String modelId,
+        @CustomType.Parameter("project") String project) {
         this.datasetId = datasetId;
         this.modelId = modelId;
         this.project = project;

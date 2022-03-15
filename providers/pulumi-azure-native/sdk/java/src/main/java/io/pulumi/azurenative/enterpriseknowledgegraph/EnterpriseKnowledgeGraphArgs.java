@@ -6,7 +6,7 @@ package io.pulumi.azurenative.enterpriseknowledgegraph;
 import io.pulumi.azurenative.enterpriseknowledgegraph.inputs.EnterpriseKnowledgeGraphPropertiesArgs;
 import io.pulumi.azurenative.enterpriseknowledgegraph.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
      * The set of properties specific to EnterpriseKnowledgeGraph resource
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<EnterpriseKnowledgeGraphPropertiesArgs> properties;
 
     public Output<EnterpriseKnowledgeGraphPropertiesArgs> getProperties() {
@@ -43,7 +43,7 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
      * The name of the EnterpriseKnowledgeGraph resource group in the user subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
      * The name of the EnterpriseKnowledgeGraph resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -65,7 +65,7 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
      * Gets or sets the SKU of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -76,7 +76,7 @@ public final class EnterpriseKnowledgeGraphArgs extends io.pulumi.resources.Reso
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

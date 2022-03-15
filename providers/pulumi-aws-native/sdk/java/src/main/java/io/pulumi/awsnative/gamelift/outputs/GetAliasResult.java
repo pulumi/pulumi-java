@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.outputs.AliasRoutingStrategy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAliasResult {
     /**
      * Unique alias ID
@@ -33,12 +33,12 @@ public final class GetAliasResult {
      */
     private final @Nullable AliasRoutingStrategy routingStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAliasResult(
-        @OutputCustomType.Parameter("aliasId") @Nullable String aliasId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("routingStrategy") @Nullable AliasRoutingStrategy routingStrategy) {
+        @CustomType.Parameter("aliasId") @Nullable String aliasId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("routingStrategy") @Nullable AliasRoutingStrategy routingStrategy) {
         this.aliasId = aliasId;
         this.description = description;
         this.name = name;

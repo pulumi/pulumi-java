@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resour
      * Comparing operation. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable String operation;
 
     public Optional<String> getOperation() {
@@ -33,7 +33,7 @@ public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resour
      * Property name to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
-    @InputImport(name="property")
+    @Import(name="property")
       private final @Nullable String property;
 
     public Optional<String> getProperty() {
@@ -44,7 +44,7 @@ public final class LiveEventInputTrackSelectionResponse extends io.pulumi.resour
      * Property value to select. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

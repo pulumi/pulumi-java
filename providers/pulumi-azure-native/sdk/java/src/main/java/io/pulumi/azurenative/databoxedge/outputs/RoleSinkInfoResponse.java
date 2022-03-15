@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RoleSinkInfoResponse {
     /**
      * Compute role ID.
@@ -15,8 +15,8 @@ public final class RoleSinkInfoResponse {
      */
     private final String roleId;
 
-    @OutputCustomType.Constructor
-    private RoleSinkInfoResponse(@OutputCustomType.Parameter("roleId") String roleId) {
+    @CustomType.Constructor
+    private RoleSinkInfoResponse(@CustomType.Parameter("roleId") String roleId) {
         this.roleId = roleId;
     }
 

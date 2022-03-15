@@ -5,12 +5,12 @@ package io.pulumi.aws.ecr.outputs;
 
 import io.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfigurationRuleDestination;
 import io.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationReplicationConfigurationRule {
     /**
      * the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
@@ -23,10 +23,10 @@ public final class ReplicationConfigurationReplicationConfigurationRule {
      */
     private final @Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter> repositoryFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationConfigurationReplicationConfigurationRule(
-        @OutputCustomType.Parameter("destinations") List<ReplicationConfigurationReplicationConfigurationRuleDestination> destinations,
-        @OutputCustomType.Parameter("repositoryFilters") @Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter> repositoryFilters) {
+        @CustomType.Parameter("destinations") List<ReplicationConfigurationReplicationConfigurationRuleDestination> destinations,
+        @CustomType.Parameter("repositoryFilters") @Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter> repositoryFilters) {
         this.destinations = destinations;
         this.repositoryFilters = repositoryFilters;
     }

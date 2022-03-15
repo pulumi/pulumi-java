@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
      * The name of server azure active directory only authentication.
      * 
      */
-    @InputImport(name="authenticationName", required=true)
+    @Import(name="authenticationName", required=true)
       private final String authenticationName;
 
     public String getAuthenticationName() {
@@ -27,7 +27,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
     public String getManagedInstanceName() {
@@ -38,7 +38,7 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationArgs extends io.pu
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

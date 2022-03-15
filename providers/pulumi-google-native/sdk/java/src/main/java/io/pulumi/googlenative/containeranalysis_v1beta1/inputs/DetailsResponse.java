@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AttestationResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Attestation for the resource.
      * 
      */
-    @InputImport(name="attestation", required=true)
+    @Import(name="attestation", required=true)
       private final AttestationResponse attestation;
 
     public AttestationResponse getAttestation() {

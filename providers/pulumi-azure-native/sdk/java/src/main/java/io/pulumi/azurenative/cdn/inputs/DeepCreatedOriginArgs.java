@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * Origin is enabled for load balancing or not. By default, origin is always enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The address of the origin. It can be a domain name, IPv4 address, or IPv6 address. This should be unique across all origins in an endpoint.
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -46,7 +46,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpPort")
+    @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
     public Output<Integer> getHttpPort() {
@@ -57,7 +57,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpsPort")
+    @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
     public Output<Integer> getHttpsPort() {
@@ -68,7 +68,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * Origin name which must be unique within the endpoint.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
      */
-    @InputImport(name="originHostHeader")
+    @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
     public Output<String> getOriginHostHeader() {
@@ -90,7 +90,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -101,7 +101,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
      * 
      */
-    @InputImport(name="privateLinkAlias")
+    @Import(name="privateLinkAlias")
       private final @Nullable Output<String> privateLinkAlias;
 
     public Output<String> getPrivateLinkAlias() {
@@ -112,7 +112,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * A custom message to be included in the approval request to connect to the Private Link.
      * 
      */
-    @InputImport(name="privateLinkApprovalMessage")
+    @Import(name="privateLinkApprovalMessage")
       private final @Nullable Output<String> privateLinkApprovalMessage;
 
     public Output<String> getPrivateLinkApprovalMessage() {
@@ -123,7 +123,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
      */
-    @InputImport(name="privateLinkLocation")
+    @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
 
     public Output<String> getPrivateLinkLocation() {
@@ -134,7 +134,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -145,7 +145,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

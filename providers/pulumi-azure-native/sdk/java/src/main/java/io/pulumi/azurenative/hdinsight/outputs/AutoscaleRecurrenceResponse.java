@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.AutoscaleScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleRecurrenceResponse {
     /**
      * Array of schedule-based autoscale rules
@@ -24,10 +24,10 @@ public final class AutoscaleRecurrenceResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscaleRecurrenceResponse(
-        @OutputCustomType.Parameter("schedule") @Nullable List<AutoscaleScheduleResponse> schedule,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("schedule") @Nullable List<AutoscaleScheduleResponse> schedule,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.schedule = schedule;
         this.timeZone = timeZone;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The protocol used to connect to the target.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {
@@ -33,7 +33,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The type of the resource.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {
@@ -44,7 +44,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * Duration in mins the session has been active.
      * 
      */
-    @InputImport(name="sessionDurationInMins", required=true)
+    @Import(name="sessionDurationInMins", required=true)
       private final Double sessionDurationInMins;
 
     public Double getSessionDurationInMins() {
@@ -55,7 +55,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * A unique id for the session.
      * 
      */
-    @InputImport(name="sessionId", required=true)
+    @Import(name="sessionId", required=true)
       private final String sessionId;
 
     public String getSessionId() {
@@ -66,7 +66,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The time when the session started.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Object startTime;
 
     public Object getStartTime() {
@@ -77,7 +77,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The host name of the target.
      * 
      */
-    @InputImport(name="targetHostName", required=true)
+    @Import(name="targetHostName", required=true)
       private final String targetHostName;
 
     public String getTargetHostName() {
@@ -88,7 +88,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The IP Address of the target.
      * 
      */
-    @InputImport(name="targetIpAddress", required=true)
+    @Import(name="targetIpAddress", required=true)
       private final String targetIpAddress;
 
     public String getTargetIpAddress() {
@@ -99,7 +99,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The resource group of the target.
      * 
      */
-    @InputImport(name="targetResourceGroup", required=true)
+    @Import(name="targetResourceGroup", required=true)
       private final String targetResourceGroup;
 
     public String getTargetResourceGroup() {
@@ -110,7 +110,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The resource id of the target.
      * 
      */
-    @InputImport(name="targetResourceId", required=true)
+    @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
 
     public String getTargetResourceId() {
@@ -121,7 +121,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The subscription id for the target virtual machine.
      * 
      */
-    @InputImport(name="targetSubscriptionId", required=true)
+    @Import(name="targetSubscriptionId", required=true)
       private final String targetSubscriptionId;
 
     public String getTargetSubscriptionId() {
@@ -132,7 +132,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * The user name who is active on this session.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.outputs.AddonTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAddonResult {
     /**
      * Version of Addon
@@ -34,12 +34,12 @@ public final class GetAddonResult {
      */
     private final @Nullable List<AddonTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAddonResult(
-        @OutputCustomType.Parameter("addonVersion") @Nullable String addonVersion,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("serviceAccountRoleArn") @Nullable String serviceAccountRoleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<AddonTag> tags) {
+        @CustomType.Parameter("addonVersion") @Nullable String addonVersion,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("serviceAccountRoleArn") @Nullable String serviceAccountRoleArn,
+        @CustomType.Parameter("tags") @Nullable List<AddonTag> tags) {
         this.addonVersion = addonVersion;
         this.arn = arn;
         this.serviceAccountRoleArn = serviceAccountRoleArn;

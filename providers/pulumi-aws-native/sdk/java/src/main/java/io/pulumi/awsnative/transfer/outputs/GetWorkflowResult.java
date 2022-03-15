@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.outputs.WorkflowTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkflowResult {
     /**
      * Specifies the unique Amazon Resource Name (ARN) for the workflow.
@@ -29,11 +29,11 @@ public final class GetWorkflowResult {
      */
     private final @Nullable String workflowId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkflowResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<WorkflowTag> tags,
-        @OutputCustomType.Parameter("workflowId") @Nullable String workflowId) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<WorkflowTag> tags,
+        @CustomType.Parameter("workflowId") @Nullable String workflowId) {
         this.arn = arn;
         this.tags = tags;
         this.workflowId = workflowId;

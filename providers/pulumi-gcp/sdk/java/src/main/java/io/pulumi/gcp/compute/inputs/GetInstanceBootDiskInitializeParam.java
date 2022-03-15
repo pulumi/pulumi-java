@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
      * The image from which this disk was initialised.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
@@ -30,7 +30,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
      * A set of key/value label pairs assigned to the instance.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,Object> labels;
 
     public Map<String,Object> getLabels() {
@@ -41,7 +41,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
      * The size of the image in gigabytes.
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Integer size;
 
     public Integer getSize() {
@@ -52,7 +52,7 @@ public final class GetInstanceBootDiskInitializeParam extends io.pulumi.resource
      * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.SchemaConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse {
     /**
      * BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
@@ -32,12 +32,12 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(
-        @OutputCustomType.Parameter("datasetUri") String datasetUri,
-        @OutputCustomType.Parameter("force") Boolean force,
-        @OutputCustomType.Parameter("schemaConfig") SchemaConfigResponse schemaConfig,
-        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
+        @CustomType.Parameter("datasetUri") String datasetUri,
+        @CustomType.Parameter("force") Boolean force,
+        @CustomType.Parameter("schemaConfig") SchemaConfigResponse schemaConfig,
+        @CustomType.Parameter("writeDisposition") String writeDisposition) {
         this.datasetUri = datasetUri;
         this.force = force;
         this.schemaConfig = schemaConfig;

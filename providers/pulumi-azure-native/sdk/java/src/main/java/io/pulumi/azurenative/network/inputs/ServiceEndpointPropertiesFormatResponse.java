@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends io.pulumi.res
      * A list of locations.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
@@ -34,7 +34,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends io.pulumi.res
      * The provisioning state of the service endpoint resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -45,7 +45,7 @@ public final class ServiceEndpointPropertiesFormatResponse extends io.pulumi.res
      * The type of the endpoint service.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable String service;
 
     public Optional<String> getService() {

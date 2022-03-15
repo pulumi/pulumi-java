@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.enums.SessionEntityTypeEntityOverrideMode;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EntityTypeEntityArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
 
     public static final SessionEntityTypeArgs Empty = new SessionEntityTypeArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -28,7 +28,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * The collection of entities to override or supplement the custom entity type.
      * 
      */
-    @InputImport(name="entities", required=true)
+    @Import(name="entities", required=true)
       private final Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
 
     public Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> getEntities() {
@@ -39,21 +39,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
      */
-    @InputImport(name="entityOverrideMode", required=true)
+    @Import(name="entityOverrideMode", required=true)
       private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
     public Output<SessionEntityTypeEntityOverrideMode> getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,21 +64,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * The unique identifier of the session entity type. Format: `projects//locations//agents//sessions//entityTypes/` or `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="sessionId", required=true)
+    @Import(name="sessionId", required=true)
       private final Output<String> sessionId;
 
     public Output<String> getSessionId() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.PermissionScopeResponse;
 import io.pulumi.azurenative.storage.outputs.SshPublicKeyResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalUserResult {
     /**
      * Indicates whether shared key exists. Set it to false to remove existing shared key.
@@ -72,19 +72,19 @@ public final class GetLocalUserResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalUserResult(
-        @OutputCustomType.Parameter("hasSharedKey") @Nullable Boolean hasSharedKey,
-        @OutputCustomType.Parameter("hasSshKey") @Nullable Boolean hasSshKey,
-        @OutputCustomType.Parameter("hasSshPassword") @Nullable Boolean hasSshPassword,
-        @OutputCustomType.Parameter("homeDirectory") @Nullable String homeDirectory,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("permissionScopes") @Nullable List<PermissionScopeResponse> permissionScopes,
-        @OutputCustomType.Parameter("sid") String sid,
-        @OutputCustomType.Parameter("sshAuthorizedKeys") @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hasSharedKey") @Nullable Boolean hasSharedKey,
+        @CustomType.Parameter("hasSshKey") @Nullable Boolean hasSshKey,
+        @CustomType.Parameter("hasSshPassword") @Nullable Boolean hasSshPassword,
+        @CustomType.Parameter("homeDirectory") @Nullable String homeDirectory,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("permissionScopes") @Nullable List<PermissionScopeResponse> permissionScopes,
+        @CustomType.Parameter("sid") String sid,
+        @CustomType.Parameter("sshAuthorizedKeys") @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.hasSharedKey = hasSharedKey;
         this.hasSshKey = hasSshKey;
         this.hasSshPassword = hasSshPassword;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * Expected value is 'Purchase'.
      * 
      */
-    @InputImport(name="billingType", required=true)
+    @Import(name="billingType", required=true)
       private final String billingType;
 
     public String getBillingType() {
@@ -33,7 +33,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * Charging type.
      * 
      */
-    @InputImport(name="chargingType", required=true)
+    @Import(name="chargingType", required=true)
       private final String chargingType;
 
     public String getChargingType() {
@@ -44,7 +44,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * Billing unit applicable for Pav2 billing
      * 
      */
-    @InputImport(name="multiplier", required=true)
+    @Import(name="multiplier", required=true)
       private final Double multiplier;
 
     public Double getMultiplier() {
@@ -55,7 +55,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * Product Id
      * 
      */
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final String productId;
 
     public String getProductId() {
@@ -66,7 +66,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * Sku Id
      * 
      */
-    @InputImport(name="skuId", required=true)
+    @Import(name="skuId", required=true)
       private final String skuId;
 
     public String getSkuId() {
@@ -77,7 +77,7 @@ public final class PurchaseMeterDetailsResponse extends io.pulumi.resources.Invo
      * Term Id
      * 
      */
-    @InputImport(name="termId", required=true)
+    @Import(name="termId", required=true)
       private final String termId;
 
     public String getTermId() {

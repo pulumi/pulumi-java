@@ -10,7 +10,7 @@ import io.pulumi.azurenative.quantum.outputs.QuantumWorkspaceResponseIdentity;
 import io.pulumi.azurenative.quantum.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The URI of the workspace endpoint.
      * 
      */
-    @OutputExport(name="endpointUri", type=String.class, parameters={})
+    @Export(name="endpointUri", type=String.class, parameters={})
     private Output<String> endpointUri;
 
     /**
@@ -52,7 +52,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Managed Identity information.
      * 
      */
-    @OutputExport(name="identity", type=QuantumWorkspaceResponseIdentity.class, parameters={})
+    @Export(name="identity", type=QuantumWorkspaceResponseIdentity.class, parameters={})
     private Output</* @Nullable */ QuantumWorkspaceResponseIdentity> identity;
 
     /**
@@ -66,7 +66,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * List of Providers selected for this Workspace
      * 
      */
-    @OutputExport(name="providers", type=List.class, parameters={ProviderResponse.class})
+    @Export(name="providers", type=List.class, parameters={ProviderResponse.class})
     private Output</* @Nullable */ List<ProviderResponse>> providers;
 
     /**
@@ -108,7 +108,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Provisioning status field
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * ARM Resource Id of the storage account associated with this workspace.
      * 
      */
-    @OutputExport(name="storageAccount", type=String.class, parameters={})
+    @Export(name="storageAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccount;
 
     /**
@@ -136,7 +136,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * System metadata
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -150,7 +150,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -178,7 +178,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Whether the current workspace is ready to accept Jobs.
      * 
      */
-    @OutputExport(name="usable", type=String.class, parameters={})
+    @Export(name="usable", type=String.class, parameters={})
     private Output<String> usable;
 
     /**

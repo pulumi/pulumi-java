@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TopologySelectorTerm;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageClass {
     /**
      * AllowVolumeExpansion shows whether the storage class allow volume expand
@@ -67,18 +67,18 @@ public final class StorageClass {
      */
     private final @Nullable String volumeBindingMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageClass(
-        @OutputCustomType.Parameter("allowVolumeExpansion") @Nullable Boolean allowVolumeExpansion,
-        @OutputCustomType.Parameter("allowedTopologies") @Nullable List<TopologySelectorTerm> allowedTopologies,
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("provisioner") String provisioner,
-        @OutputCustomType.Parameter("reclaimPolicy") @Nullable String reclaimPolicy,
-        @OutputCustomType.Parameter("volumeBindingMode") @Nullable String volumeBindingMode) {
+        @CustomType.Parameter("allowVolumeExpansion") @Nullable Boolean allowVolumeExpansion,
+        @CustomType.Parameter("allowedTopologies") @Nullable List<TopologySelectorTerm> allowedTopologies,
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("provisioner") String provisioner,
+        @CustomType.Parameter("reclaimPolicy") @Nullable String reclaimPolicy,
+        @CustomType.Parameter("volumeBindingMode") @Nullable String volumeBindingMode) {
         this.allowVolumeExpansion = allowVolumeExpansion;
         this.allowedTopologies = allowedTopologies;
         this.apiVersion = apiVersion;

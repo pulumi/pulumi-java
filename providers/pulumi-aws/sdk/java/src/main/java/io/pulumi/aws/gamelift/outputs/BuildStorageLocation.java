@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildStorageLocation {
     /**
      * Name of your S3 bucket.
@@ -25,11 +25,11 @@ public final class BuildStorageLocation {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildStorageLocation(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucket = bucket;
         this.key = key;
         this.roleArn = roleArn;

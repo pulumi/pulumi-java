@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
      * 
      */
-    @InputImport(name="comparator")
+    @Import(name="comparator")
       private final @Nullable Output<String> comparator;
 
     public Output<String> getComparator() {
@@ -30,7 +30,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * The object property to use in the condition.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -41,7 +41,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      * An array that lists the values to use in the condition.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

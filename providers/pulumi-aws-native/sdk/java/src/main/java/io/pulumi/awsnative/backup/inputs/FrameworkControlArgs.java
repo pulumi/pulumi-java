@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlControlScopePropertiesArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlInputParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
      * A list of ParameterName and ParameterValue pairs.
      * 
      */
-    @InputImport(name="controlInputParameters")
+    @Import(name="controlInputParameters")
       private final @Nullable Output<List<FrameworkControlInputParameterArgs>> controlInputParameters;
 
     public Output<List<FrameworkControlInputParameterArgs>> getControlInputParameters() {
@@ -32,7 +32,7 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
      * The name of a control. This name is between 1 and 256 characters.
      * 
      */
-    @InputImport(name="controlName", required=true)
+    @Import(name="controlName", required=true)
       private final Output<String> controlName;
 
     public Output<String> getControlName() {
@@ -43,7 +43,7 @@ public final class FrameworkControlArgs extends io.pulumi.resources.ResourceArgs
      * The scope of a control. The control scope defines what the control will evaluate. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
      * 
      */
-    @InputImport(name="controlScope")
+    @Import(name="controlScope")
       private final @Nullable Output<FrameworkControlControlScopePropertiesArgs> controlScope;
 
     public Output<FrameworkControlControlScopePropertiesArgs> getControlScope() {

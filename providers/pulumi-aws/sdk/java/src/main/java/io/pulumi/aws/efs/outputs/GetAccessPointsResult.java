@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointsResult {
     /**
      * Set of Amazon Resource Names (ARNs).
@@ -27,12 +27,12 @@ public final class GetAccessPointsResult {
      */
     private final List<String> ids;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointsResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids) {
         this.arns = arns;
         this.fileSystemId = fileSystemId;
         this.id = id;

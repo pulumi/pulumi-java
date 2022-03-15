@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSet
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsSharingSettingsGetArgs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * The execution role ARN for the user.
      * 
      */
-    @InputImport(name="executionRole", required=true)
+    @Import(name="executionRole", required=true)
       private final Output<String> executionRole;
 
     public Output<String> getExecutionRole() {
@@ -34,7 +34,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * The Jupyter server's app settings. See Jupyter Server App Settings below.
      * 
      */
-    @InputImport(name="jupyterServerAppSettings")
+    @Import(name="jupyterServerAppSettings")
       private final @Nullable Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> jupyterServerAppSettings;
 
     public Output<UserProfileUserSettingsJupyterServerAppSettingsGetArgs> getJupyterServerAppSettings() {
@@ -45,7 +45,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * The kernel gateway app settings. See Kernel Gateway App Settings below.
      * 
      */
-    @InputImport(name="kernelGatewayAppSettings")
+    @Import(name="kernelGatewayAppSettings")
       private final @Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> kernelGatewayAppSettings;
 
     public Output<UserProfileUserSettingsKernelGatewayAppSettingsGetArgs> getKernelGatewayAppSettings() {
@@ -56,7 +56,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * The security groups.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -67,7 +67,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * The sharing settings. See Sharing Settings below.
      * 
      */
-    @InputImport(name="sharingSettings")
+    @Import(name="sharingSettings")
       private final @Nullable Output<UserProfileUserSettingsSharingSettingsGetArgs> sharingSettings;
 
     public Output<UserProfileUserSettingsSharingSettingsGetArgs> getSharingSettings() {
@@ -78,7 +78,7 @@ public final class UserProfileUserSettingsGetArgs extends io.pulumi.resources.Re
      * The TensorBoard app settings. See TensorBoard App Settings below.
      * 
      */
-    @InputImport(name="tensorBoardAppSettings")
+    @Import(name="tensorBoardAppSettings")
       private final @Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> tensorBoardAppSettings;
 
     public Output<UserProfileUserSettingsTensorBoardAppSettingsGetArgs> getTensorBoardAppSettings() {

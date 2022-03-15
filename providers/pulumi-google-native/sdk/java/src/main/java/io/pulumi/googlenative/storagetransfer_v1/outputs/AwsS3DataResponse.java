@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AwsAccessKeyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsS3DataResponse {
     /**
      * Input only. AWS access key used to sign the API requests to the AWS S3 bucket. Permissions on the bucket must be granted to the access ID of the AWS access key. For information on our data retention policy for user credentials, see [User credentials](/storage-transfer/docs/data-retention#user-credentials).
@@ -31,12 +31,12 @@ public final class AwsS3DataResponse {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsS3DataResponse(
-        @OutputCustomType.Parameter("awsAccessKey") AwsAccessKeyResponse awsAccessKey,
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("awsAccessKey") AwsAccessKeyResponse awsAccessKey,
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = bucketName;
         this.path = path;

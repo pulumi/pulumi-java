@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
     /**
      * Name of the cookie.
@@ -26,11 +26,11 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
      */
     private final DurationResponse ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsistentHashLoadBalancerSettingsHttpCookieResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("ttl") DurationResponse ttl) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("ttl") DurationResponse ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The autoscale policy to apply on a pool.
      * 
      */
-    @InputImport(name="autoscale")
+    @Import(name="autoscale")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> getAutoscale() {
@@ -31,14 +31,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Channel specifies the release channel of the pool.
      * 
      */
-    @InputImport(name="channel")
+    @Import(name="channel")
       private final @Nullable Output<String> channel;
 
     public Output<String> getChannel() {
         return this.channel == null ? Output.empty() : this.channel;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -49,7 +49,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -60,7 +60,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the instance in which to create the new worker pool. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -71,14 +71,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the created worker pool. A valid pool ID must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
      * 
      */
-    @InputImport(name="poolId")
+    @Import(name="poolId")
       private final @Nullable Output<String> poolId;
 
     public Output<String> getPoolId() {
         return this.poolId == null ? Output.empty() : this.poolId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -89,7 +89,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> getWorkerConfig() {
@@ -100,7 +100,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The desired number of workers in the worker pool. Must be a value between 0 and 15000.
      * 
      */
-    @InputImport(name="workerCount")
+    @Import(name="workerCount")
       private final @Nullable Output<String> workerCount;
 
     public Output<String> getWorkerCount() {

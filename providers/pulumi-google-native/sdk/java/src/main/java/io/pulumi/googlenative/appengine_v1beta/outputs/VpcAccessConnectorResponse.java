@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpcAccessConnectorResponse {
     /**
      * The egress setting for the connector, controlling what traffic is diverted through it.
@@ -20,10 +20,10 @@ public final class VpcAccessConnectorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcAccessConnectorResponse(
-        @OutputCustomType.Parameter("egressSetting") String egressSetting,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("egressSetting") String egressSetting,
+        @CustomType.Parameter("name") String name) {
         this.egressSetting = egressSetting;
         this.name = name;
     }

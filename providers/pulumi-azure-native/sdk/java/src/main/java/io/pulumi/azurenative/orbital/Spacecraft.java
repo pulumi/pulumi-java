@@ -9,7 +9,7 @@ import io.pulumi.azurenative.orbital.outputs.SpacecraftLinkResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Authorization status of spacecraft.
      * 
      */
-    @OutputExport(name="authorizationStatus", type=String.class, parameters={})
+    @Export(name="authorizationStatus", type=String.class, parameters={})
     private Output<String> authorizationStatus;
 
     /**
@@ -51,7 +51,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Details of the authorization status.
      * 
      */
-    @OutputExport(name="authorizationStatusExtended", type=String.class, parameters={})
+    @Export(name="authorizationStatusExtended", type=String.class, parameters={})
     private Output<String> authorizationStatusExtended;
 
     /**
@@ -65,7 +65,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -79,7 +79,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Links of the Spacecraft
      * 
      */
-    @OutputExport(name="links", type=List.class, parameters={SpacecraftLinkResponse.class})
+    @Export(name="links", type=List.class, parameters={SpacecraftLinkResponse.class})
     private Output</* @Nullable */ List<SpacecraftLinkResponse>> links;
 
     /**
@@ -93,7 +93,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * NORAD ID of the spacecraft.
      * 
      */
-    @OutputExport(name="noradId", type=String.class, parameters={})
+    @Export(name="noradId", type=String.class, parameters={})
     private Output<String> noradId;
 
     /**
@@ -135,7 +135,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -149,7 +149,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Title line of Two Line Element (TLE).
      * 
      */
-    @OutputExport(name="titleLine", type=String.class, parameters={})
+    @Export(name="titleLine", type=String.class, parameters={})
     private Output</* @Nullable */ String> titleLine;
 
     /**
@@ -177,7 +177,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Line 1 of Two Line Element (TLE).
      * 
      */
-    @OutputExport(name="tleLine1", type=String.class, parameters={})
+    @Export(name="tleLine1", type=String.class, parameters={})
     private Output</* @Nullable */ String> tleLine1;
 
     /**
@@ -191,7 +191,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * Line 2 of Two Line Element (TLE).
      * 
      */
-    @OutputExport(name="tleLine2", type=String.class, parameters={})
+    @Export(name="tleLine2", type=String.class, parameters={})
     private Output</* @Nullable */ String> tleLine2;
 
     /**
@@ -205,7 +205,7 @@ public class Spacecraft extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetSqlDbTaskInputResponse {
     /**
      * Connection information for target SQL DB
@@ -15,8 +15,8 @@ public final class ConnectToTargetSqlDbTaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
-    private ConnectToTargetSqlDbTaskInputResponse(@OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
+    @CustomType.Constructor
+    private ConnectToTargetSqlDbTaskInputResponse(@CustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.targetConnectionInfo = targetConnectionInfo;
     }
 

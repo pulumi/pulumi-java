@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
      * If you specify a server name, API Gateway uses it to verify the hostname on the integration's certificate. The server name is also included in the TLS handshake to support Server Name Indication (SNI) or virtual hosting.
      * 
      */
-    @InputImport(name="serverNameToVerify")
+    @Import(name="serverNameToVerify")
       private final @Nullable Output<String> serverNameToVerify;
 
     public Output<String> getServerNameToVerify() {

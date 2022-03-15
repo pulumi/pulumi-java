@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VpcPeeringConnectivityResponse extends io.pulumi.resources.In
      * The name of the VPC network to peer with the Cloud SQL private network.
      * 
      */
-    @InputImport(name="vpc", required=true)
+    @Import(name="vpc", required=true)
       private final String vpc;
 
     public String getVpc() {

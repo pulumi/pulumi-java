@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketEncryption {
     private final String defaultKmsKeyName;
 
-    @OutputCustomType.Constructor
-    private GetBucketEncryption(@OutputCustomType.Parameter("defaultKmsKeyName") String defaultKmsKeyName) {
+    @CustomType.Constructor
+    private GetBucketEncryption(@CustomType.Parameter("defaultKmsKeyName") String defaultKmsKeyName) {
         this.defaultKmsKeyName = defaultKmsKeyName;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointVpcConfiguration {
     /**
      * This access point will only allow connections from the specified VPC ID.
@@ -15,8 +15,8 @@ public final class AccessPointVpcConfiguration {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
-    private AccessPointVpcConfiguration(@OutputCustomType.Parameter("vpcId") String vpcId) {
+    @CustomType.Constructor
+    private AccessPointVpcConfiguration(@CustomType.Parameter("vpcId") String vpcId) {
         this.vpcId = vpcId;
     }
 

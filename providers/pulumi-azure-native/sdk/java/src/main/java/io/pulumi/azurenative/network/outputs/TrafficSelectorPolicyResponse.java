@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TrafficSelectorPolicyResponse {
     /**
      * A collection of local address spaces in CIDR format.
@@ -21,10 +21,10 @@ public final class TrafficSelectorPolicyResponse {
      */
     private final List<String> remoteAddressRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrafficSelectorPolicyResponse(
-        @OutputCustomType.Parameter("localAddressRanges") List<String> localAddressRanges,
-        @OutputCustomType.Parameter("remoteAddressRanges") List<String> remoteAddressRanges) {
+        @CustomType.Parameter("localAddressRanges") List<String> localAddressRanges,
+        @CustomType.Parameter("remoteAddressRanges") List<String> remoteAddressRanges) {
         this.localAddressRanges = localAddressRanges;
         this.remoteAddressRanges = remoteAddressRanges;
     }

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ResourceRangeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedMachineConfigurationResponse {
     /**
      * Describes the resource range.
@@ -22,10 +22,10 @@ public final class RecommendedMachineConfigurationResponse {
      */
     private final @Nullable ResourceRangeResponse vCPUs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedMachineConfigurationResponse(
-        @OutputCustomType.Parameter("memory") @Nullable ResourceRangeResponse memory,
-        @OutputCustomType.Parameter("vCPUs") @Nullable ResourceRangeResponse vCPUs) {
+        @CustomType.Parameter("memory") @Nullable ResourceRangeResponse memory,
+        @CustomType.Parameter("vCPUs") @Nullable ResourceRangeResponse vCPUs) {
         this.memory = memory;
         this.vCPUs = vCPUs;
     }

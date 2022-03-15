@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetFolderReplayArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderReplayArgs Empty = new GetFolderReplayArgs();
 
-    @InputImport(name="folderId", required=true)
+    @Import(name="folderId", required=true)
       private final String folderId;
 
     public String getFolderId() {
         return this.folderId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="replayId", required=true)
+    @Import(name="replayId", required=true)
       private final String replayId;
 
     public String getReplayId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIpamPreviewNextCidrResult {
     /**
      * The previewed CIDR from the pool.
@@ -27,13 +27,13 @@ public final class GetIpamPreviewNextCidrResult {
     private final String ipamPoolId;
     private final @Nullable Integer netmaskLength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIpamPreviewNextCidrResult(
-        @OutputCustomType.Parameter("cidr") String cidr,
-        @OutputCustomType.Parameter("disallowedCidrs") @Nullable List<String> disallowedCidrs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipamPoolId") String ipamPoolId,
-        @OutputCustomType.Parameter("netmaskLength") @Nullable Integer netmaskLength) {
+        @CustomType.Parameter("cidr") String cidr,
+        @CustomType.Parameter("disallowedCidrs") @Nullable List<String> disallowedCidrs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipamPoolId") String ipamPoolId,
+        @CustomType.Parameter("netmaskLength") @Nullable Integer netmaskLength) {
         this.cidr = cidr;
         this.disallowedCidrs = disallowedCidrs;
         this.id = id;

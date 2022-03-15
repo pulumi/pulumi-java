@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
      * The association ID for the the IPv4 CIDR block.
      * 
      */
-    @InputImport(name="associationId", required=true)
+    @Import(name="associationId", required=true)
       private final String associationId;
 
     public String getAssociationId() {
@@ -27,7 +27,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
      * The cidr block of the desired VPC.
      * 
      */
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
     public String getCidrBlock() {
@@ -39,7 +39,7 @@ public final class GetVpcCidrBlockAssociation extends io.pulumi.resources.Invoke
      * Can be either `"pending"` or `"available"`.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

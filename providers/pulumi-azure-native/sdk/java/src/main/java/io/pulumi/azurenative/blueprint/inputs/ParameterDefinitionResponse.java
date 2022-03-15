@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * Array of allowed values for this parameter.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable List<Object> allowedValues;
 
     public List<Object> getAllowedValues() {
@@ -35,7 +35,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * Default Value for this parameter.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {
@@ -46,7 +46,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * Description of this parameter/resourceGroup.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -57,7 +57,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * DisplayName of this parameter/resourceGroup.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -68,7 +68,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
      * 
      */
-    @InputImport(name="strongType")
+    @Import(name="strongType")
       private final @Nullable String strongType;
 
     public Optional<String> getStrongType() {
@@ -79,7 +79,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * Allowed data types for Resource Manager template parameters.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

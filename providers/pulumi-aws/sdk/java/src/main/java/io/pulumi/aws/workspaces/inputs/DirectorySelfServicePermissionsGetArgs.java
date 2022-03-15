@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
      * 
      */
-    @InputImport(name="changeComputeType")
+    @Import(name="changeComputeType")
       private final @Nullable Output<Boolean> changeComputeType;
 
     public Output<Boolean> getChangeComputeType() {
@@ -29,7 +29,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
      * 
      */
-    @InputImport(name="increaseVolumeSize")
+    @Import(name="increaseVolumeSize")
       private final @Nullable Output<Boolean> increaseVolumeSize;
 
     public Output<Boolean> getIncreaseVolumeSize() {
@@ -40,7 +40,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
      * 
      */
-    @InputImport(name="rebuildWorkspace")
+    @Import(name="rebuildWorkspace")
       private final @Nullable Output<Boolean> rebuildWorkspace;
 
     public Output<Boolean> getRebuildWorkspace() {
@@ -51,7 +51,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * Whether WorkSpaces directory users can restart their workspace. Default `true`.
      * 
      */
-    @InputImport(name="restartWorkspace")
+    @Import(name="restartWorkspace")
       private final @Nullable Output<Boolean> restartWorkspace;
 
     public Output<Boolean> getRestartWorkspace() {
@@ -62,7 +62,7 @@ public final class DirectorySelfServicePermissionsGetArgs extends io.pulumi.reso
      * Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
      * 
      */
-    @InputImport(name="switchRunningMode")
+    @Import(name="switchRunningMode")
       private final @Nullable Output<Boolean> switchRunningMode;
 
     public Output<Boolean> getSwitchRunningMode() {

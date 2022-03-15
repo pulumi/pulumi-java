@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class PatchBaselineApprovalRulePatchFilterArgs extends io.pulumi.re
 
     public static final PatchBaselineApprovalRulePatchFilterArgs Empty = new PatchBaselineApprovalRulePatchFilterArgs();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

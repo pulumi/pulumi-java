@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkRuleResponse {
     /**
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
@@ -23,10 +23,10 @@ public final class VirtualNetworkRuleResponse {
      */
     private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkRuleResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ignoreMissingVNetServiceEndpoint") @Nullable Boolean ignoreMissingVNetServiceEndpoint) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ignoreMissingVNetServiceEndpoint") @Nullable Boolean ignoreMissingVNetServiceEndpoint) {
         this.id = id;
         this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
     }

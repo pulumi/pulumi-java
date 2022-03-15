@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbDatabaseI
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> selectedDatabases;
 
     public Output<List<MigrateSqlServerSqlDbDatabaseInputArgs>> getSelectedDatabases() {
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * Information for connecting to source
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      * Information for connecting to target
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
@@ -60,7 +60,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
      *  2.) Schema Validation: Performs a thorough schema comparison between the source and target tables and provides a list of differences between the source and target database, 3.) Query Analysis: Executes a set of queries picked up automatically either from the Query Plan Cache or Query Store and execute them and compares the execution time between the source and target database.
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
     public Output<MigrationValidationOptionsArgs> getValidationOptions() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
      * The workspace daily quota for ingestion.
      * 
      */
-    @InputImport(name="dailyQuotaGb")
+    @Import(name="dailyQuotaGb")
       private final @Nullable Double dailyQuotaGb;
 
     public Optional<Double> getDailyQuotaGb() {
@@ -34,7 +34,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
      * The status of data ingestion for this workspace.
      * 
      */
-    @InputImport(name="dataIngestionStatus", required=true)
+    @Import(name="dataIngestionStatus", required=true)
       private final String dataIngestionStatus;
 
     public String getDataIngestionStatus() {
@@ -45,7 +45,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
      * The time when the quota will be rest.
      * 
      */
-    @InputImport(name="quotaNextResetTime", required=true)
+    @Import(name="quotaNextResetTime", required=true)
       private final String quotaNextResetTime;
 
     public String getQuotaNextResetTime() {

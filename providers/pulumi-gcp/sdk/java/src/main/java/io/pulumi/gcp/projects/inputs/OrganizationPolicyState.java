@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyBooleanPolicyGetArgs;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyListPolicyGetArgs;
 import io.pulumi.gcp.projects.inputs.OrganizationPolicyRestorePolicyGetArgs;
@@ -22,7 +22,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * A boolean policy is a constraint that is either enforced or not. Structure is documented below.
      * 
      */
-    @InputImport(name="booleanPolicy")
+    @Import(name="booleanPolicy")
       private final @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
 
     public Output<OrganizationPolicyBooleanPolicyGetArgs> getBooleanPolicy() {
@@ -33,7 +33,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    @InputImport(name="constraint")
+    @Import(name="constraint")
       private final @Nullable Output<String> constraint;
 
     public Output<String> getConstraint() {
@@ -44,7 +44,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -55,7 +55,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    @InputImport(name="listPolicy")
+    @Import(name="listPolicy")
       private final @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
 
     public Output<OrganizationPolicyListPolicyGetArgs> getListPolicy() {
@@ -66,7 +66,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * The project id of the project to set the policy for.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -77,7 +77,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    @InputImport(name="restorePolicy")
+    @Import(name="restorePolicy")
       private final @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
 
     public Output<OrganizationPolicyRestorePolicyGetArgs> getRestorePolicy() {
@@ -88,7 +88,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * (Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -99,7 +99,7 @@ public final class OrganizationPolicyState extends io.pulumi.resources.ResourceA
      * Version of the Policy. Default version is 0.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

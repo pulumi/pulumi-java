@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure defined below.
      * 
      */
-    @InputImport(name="clusterConfig")
+    @Import(name="clusterConfig")
       private final @Nullable Output<ClusterClusterConfigArgs> clusterConfig;
 
     public Output<ClusterClusterConfigArgs> getClusterConfig() {
@@ -33,7 +33,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * terraform apply
      * 
      */
-    @InputImport(name="gracefulDecommissionTimeout")
+    @Import(name="gracefulDecommissionTimeout")
       private final @Nullable Output<String> gracefulDecommissionTimeout;
 
     public Output<String> getGracefulDecommissionTimeout() {
@@ -46,7 +46,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * which is the name of the cluster.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -58,7 +58,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * zone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -82,7 +82,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to `global`.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

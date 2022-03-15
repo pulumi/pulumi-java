@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
      * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
      * 
      */
-    @InputImport(name="testingChallenge")
+    @Import(name="testingChallenge")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
     public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> getTestingChallenge() {
@@ -34,7 +34,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
      * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
      * 
      */
-    @InputImport(name="testingScore")
+    @Import(name="testingScore")
       private final @Nullable Output<Double> testingScore;
 
     public Output<Double> getTestingScore() {

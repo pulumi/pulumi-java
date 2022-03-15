@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceGroupValueResponse {
     /**
      * Location of the resource group.
@@ -22,10 +22,10 @@ public final class ResourceGroupValueResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceGroupValueResponse(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.location = location;
         this.name = name;
     }

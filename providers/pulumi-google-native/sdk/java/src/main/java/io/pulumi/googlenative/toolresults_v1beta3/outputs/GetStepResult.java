@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.MultiStepResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.OutcomeResponse;
@@ -17,7 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStepResult {
     /**
      * The time when the step status was set to complete. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set
@@ -95,23 +95,23 @@ public final class GetStepResult {
      */
     private final ToolExecutionStepResponse toolExecutionStep;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStepResult(
-        @OutputCustomType.Parameter("completionTime") TimestampResponse completionTime,
-        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("deviceUsageDuration") DurationResponse deviceUsageDuration,
-        @OutputCustomType.Parameter("dimensionValue") List<StepDimensionValueEntryResponse> dimensionValue,
-        @OutputCustomType.Parameter("hasImages") Boolean hasImages,
-        @OutputCustomType.Parameter("labels") List<StepLabelsEntryResponse> labels,
-        @OutputCustomType.Parameter("multiStep") MultiStepResponse multiStep,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outcome") OutcomeResponse outcome,
-        @OutputCustomType.Parameter("runDuration") DurationResponse runDuration,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stepId") String stepId,
-        @OutputCustomType.Parameter("testExecutionStep") TestExecutionStepResponse testExecutionStep,
-        @OutputCustomType.Parameter("toolExecutionStep") ToolExecutionStepResponse toolExecutionStep) {
+        @CustomType.Parameter("completionTime") TimestampResponse completionTime,
+        @CustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("deviceUsageDuration") DurationResponse deviceUsageDuration,
+        @CustomType.Parameter("dimensionValue") List<StepDimensionValueEntryResponse> dimensionValue,
+        @CustomType.Parameter("hasImages") Boolean hasImages,
+        @CustomType.Parameter("labels") List<StepLabelsEntryResponse> labels,
+        @CustomType.Parameter("multiStep") MultiStepResponse multiStep,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outcome") OutcomeResponse outcome,
+        @CustomType.Parameter("runDuration") DurationResponse runDuration,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stepId") String stepId,
+        @CustomType.Parameter("testExecutionStep") TestExecutionStepResponse testExecutionStep,
+        @CustomType.Parameter("toolExecutionStep") ToolExecutionStepResponse toolExecutionStep) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.description = description;

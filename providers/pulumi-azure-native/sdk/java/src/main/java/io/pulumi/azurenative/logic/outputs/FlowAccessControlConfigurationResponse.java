@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.FlowAccessControlConfigurationPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowAccessControlConfigurationResponse {
     /**
      * The access control configuration for workflow actions.
@@ -32,12 +32,12 @@ public final class FlowAccessControlConfigurationResponse {
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowAccessControlConfigurationResponse(
-        @OutputCustomType.Parameter("actions") @Nullable FlowAccessControlConfigurationPolicyResponse actions,
-        @OutputCustomType.Parameter("contents") @Nullable FlowAccessControlConfigurationPolicyResponse contents,
-        @OutputCustomType.Parameter("triggers") @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
-        @OutputCustomType.Parameter("workflowManagement") @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
+        @CustomType.Parameter("actions") @Nullable FlowAccessControlConfigurationPolicyResponse actions,
+        @CustomType.Parameter("contents") @Nullable FlowAccessControlConfigurationPolicyResponse contents,
+        @CustomType.Parameter("triggers") @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
+        @CustomType.Parameter("workflowManagement") @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
         this.actions = actions;
         this.contents = contents;
         this.triggers = triggers;

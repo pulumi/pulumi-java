@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecGetArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecLogDriverGetArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecPlacementGetArgs;
@@ -21,56 +21,56 @@ public final class ServiceTaskSpecGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final ServiceTaskSpecGetArgs Empty = new ServiceTaskSpecGetArgs();
 
-    @InputImport(name="containerSpec", required=true)
+    @Import(name="containerSpec", required=true)
       private final Output<ServiceTaskSpecContainerSpecGetArgs> containerSpec;
 
     public Output<ServiceTaskSpecContainerSpecGetArgs> getContainerSpec() {
         return this.containerSpec;
     }
 
-    @InputImport(name="forceUpdate")
+    @Import(name="forceUpdate")
       private final @Nullable Output<Integer> forceUpdate;
 
     public Output<Integer> getForceUpdate() {
         return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
     }
 
-    @InputImport(name="logDriver")
+    @Import(name="logDriver")
       private final @Nullable Output<ServiceTaskSpecLogDriverGetArgs> logDriver;
 
     public Output<ServiceTaskSpecLogDriverGetArgs> getLogDriver() {
         return this.logDriver == null ? Output.empty() : this.logDriver;
     }
 
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<String>> networks;
 
     public Output<List<String>> getNetworks() {
         return this.networks == null ? Output.empty() : this.networks;
     }
 
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable Output<ServiceTaskSpecPlacementGetArgs> placement;
 
     public Output<ServiceTaskSpecPlacementGetArgs> getPlacement() {
         return this.placement == null ? Output.empty() : this.placement;
     }
 
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<ServiceTaskSpecResourcesGetArgs> resources;
 
     public Output<ServiceTaskSpecResourcesGetArgs> getResources() {
         return this.resources == null ? Output.empty() : this.resources;
     }
 
-    @InputImport(name="restartPolicy")
+    @Import(name="restartPolicy")
       private final @Nullable Output<ServiceTaskSpecRestartPolicyGetArgs> restartPolicy;
 
     public Output<ServiceTaskSpecRestartPolicyGetArgs> getRestartPolicy() {
         return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
     }
 
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {

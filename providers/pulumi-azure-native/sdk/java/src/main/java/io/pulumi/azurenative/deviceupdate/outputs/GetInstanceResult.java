@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.DiagnosticStoragePropertiesResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.IotHubSettingsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * Parent Device Update Account name which Instance belongs to.
@@ -73,19 +73,19 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("diagnosticStorageProperties") @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties,
-        @OutputCustomType.Parameter("enableDiagnostics") @Nullable Boolean enableDiagnostics,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("iotHubs") @Nullable List<IotHubSettingsResponse> iotHubs,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("diagnosticStorageProperties") @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties,
+        @CustomType.Parameter("enableDiagnostics") @Nullable Boolean enableDiagnostics,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("iotHubs") @Nullable List<IotHubSettingsResponse> iotHubs,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.diagnosticStorageProperties = diagnosticStorageProperties;
         this.enableDiagnostics = enableDiagnostics;

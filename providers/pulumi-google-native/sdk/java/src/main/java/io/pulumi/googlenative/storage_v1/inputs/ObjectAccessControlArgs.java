@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlProjectTeamArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -34,7 +34,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The domain associated with the entity, if any.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -45,7 +45,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The email address associated with the entity, if any.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -67,7 +67,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
      * 
      */
-    @InputImport(name="entity")
+    @Import(name="entity")
       private final @Nullable Output<String> entity;
 
     public Output<String> getEntity() {
@@ -78,7 +78,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The ID for the entity, if any.
      * 
      */
-    @InputImport(name="entityId")
+    @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
     public Output<String> getEntityId() {
@@ -89,7 +89,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * HTTP 1.1 Entity tag for the access-control entry.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -100,7 +100,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The content generation of the object, if applied to an object.
      * 
      */
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable Output<String> generation;
 
     public Output<String> getGeneration() {
@@ -111,7 +111,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The ID of the access-control entry.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -122,7 +122,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -133,7 +133,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The name of the object, if applied to an object.
      * 
      */
-    @InputImport(name="object")
+    @Import(name="object")
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {
@@ -144,7 +144,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The project team associated with the entity, if any.
      * 
      */
-    @InputImport(name="projectTeam")
+    @Import(name="projectTeam")
       private final @Nullable Output<ObjectAccessControlProjectTeamArgs> projectTeam;
 
     public Output<ObjectAccessControlProjectTeamArgs> getProjectTeam() {
@@ -155,7 +155,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The access permission for the entity.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -166,7 +166,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The link to this access-control entry.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {

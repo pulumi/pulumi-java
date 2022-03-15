@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendAuthorizationHeaderCredentialsResponse {
     /**
      * Authentication Parameter value.
@@ -20,10 +20,10 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
      */
     private final String scheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendAuthorizationHeaderCredentialsResponse(
-        @OutputCustomType.Parameter("parameter") String parameter,
-        @OutputCustomType.Parameter("scheme") String scheme) {
+        @CustomType.Parameter("parameter") String parameter,
+        @CustomType.Parameter("scheme") String scheme) {
         this.parameter = parameter;
         this.scheme = scheme;
     }

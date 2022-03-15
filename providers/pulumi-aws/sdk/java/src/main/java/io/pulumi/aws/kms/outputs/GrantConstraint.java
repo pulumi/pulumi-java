@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GrantConstraint {
     /**
      * A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
@@ -22,10 +22,10 @@ public final class GrantConstraint {
      */
     private final @Nullable Map<String,String> encryptionContextSubset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GrantConstraint(
-        @OutputCustomType.Parameter("encryptionContextEquals") @Nullable Map<String,String> encryptionContextEquals,
-        @OutputCustomType.Parameter("encryptionContextSubset") @Nullable Map<String,String> encryptionContextSubset) {
+        @CustomType.Parameter("encryptionContextEquals") @Nullable Map<String,String> encryptionContextEquals,
+        @CustomType.Parameter("encryptionContextSubset") @Nullable Map<String,String> encryptionContextSubset) {
         this.encryptionContextEquals = encryptionContextEquals;
         this.encryptionContextSubset = encryptionContextSubset;
     }

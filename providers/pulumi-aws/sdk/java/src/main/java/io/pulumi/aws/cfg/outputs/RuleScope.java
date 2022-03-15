@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleScope {
     /**
      * The IDs of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
@@ -33,12 +33,12 @@ public final class RuleScope {
      */
     private final @Nullable String tagValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleScope(
-        @OutputCustomType.Parameter("complianceResourceId") @Nullable String complianceResourceId,
-        @OutputCustomType.Parameter("complianceResourceTypes") @Nullable List<String> complianceResourceTypes,
-        @OutputCustomType.Parameter("tagKey") @Nullable String tagKey,
-        @OutputCustomType.Parameter("tagValue") @Nullable String tagValue) {
+        @CustomType.Parameter("complianceResourceId") @Nullable String complianceResourceId,
+        @CustomType.Parameter("complianceResourceTypes") @Nullable List<String> complianceResourceTypes,
+        @CustomType.Parameter("tagKey") @Nullable String tagKey,
+        @CustomType.Parameter("tagValue") @Nullable String tagValue) {
         this.complianceResourceId = complianceResourceId;
         this.complianceResourceTypes = complianceResourceTypes;
         this.tagKey = tagKey;

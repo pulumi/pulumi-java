@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleDestinationGetA
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleFilterGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
      * 
      */
-    @InputImport(name="deleteMarkerReplicationStatus")
+    @Import(name="deleteMarkerReplicationStatus")
       private final @Nullable Output<String> deleteMarkerReplicationStatus;
 
     public Output<String> getDeleteMarkerReplicationStatus() {
@@ -33,7 +33,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * Specifies the destination for the rule (documented below).
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<BucketReplicationConfigurationRuleDestinationGetArgs> destination;
 
     public Output<BucketReplicationConfigurationRuleDestinationGetArgs> getDestination() {
@@ -44,7 +44,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * Filter that identifies subset of objects to which the replication rule applies (documented below).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketReplicationConfigurationRuleFilterGetArgs> filter;
 
     public Output<BucketReplicationConfigurationRuleFilterGetArgs> getFilter() {
@@ -55,7 +55,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -66,7 +66,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -77,7 +77,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -88,7 +88,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * Specifies special object selection criteria (documented below).
      * 
      */
-    @InputImport(name="sourceSelectionCriteria")
+    @Import(name="sourceSelectionCriteria")
       private final @Nullable Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs> sourceSelectionCriteria;
 
     public Output<BucketReplicationConfigurationRuleSourceSelectionCriteriaGetArgs> getSourceSelectionCriteria() {
@@ -99,7 +99,7 @@ public final class BucketReplicationConfigurationRuleGetArgs extends io.pulumi.r
      * The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OnPremClusterResponse {
     /**
      * Immutable. Whether the cluster is an admin cluster.
@@ -26,11 +26,11 @@ public final class OnPremClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnPremClusterResponse(
-        @OutputCustomType.Parameter("adminCluster") Boolean adminCluster,
-        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
-        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
+        @CustomType.Parameter("adminCluster") Boolean adminCluster,
+        @CustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @CustomType.Parameter("resourceLink") String resourceLink) {
         this.adminCluster = adminCluster;
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;

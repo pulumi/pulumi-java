@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationS3SourceProperties {
     private final String bucketName;
     private final @Nullable String bucketPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationS3SourceProperties(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
     }

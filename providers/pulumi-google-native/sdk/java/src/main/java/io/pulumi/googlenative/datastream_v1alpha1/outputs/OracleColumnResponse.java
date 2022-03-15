@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OracleColumnResponse {
     /**
      * Column name.
@@ -57,17 +57,17 @@ public final class OracleColumnResponse {
      */
     private final Integer scale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OracleColumnResponse(
-        @OutputCustomType.Parameter("columnName") String columnName,
-        @OutputCustomType.Parameter("dataType") String dataType,
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("length") Integer length,
-        @OutputCustomType.Parameter("nullable") Boolean nullable,
-        @OutputCustomType.Parameter("ordinalPosition") Integer ordinalPosition,
-        @OutputCustomType.Parameter("precision") Integer precision,
-        @OutputCustomType.Parameter("primaryKey") Boolean primaryKey,
-        @OutputCustomType.Parameter("scale") Integer scale) {
+        @CustomType.Parameter("columnName") String columnName,
+        @CustomType.Parameter("dataType") String dataType,
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("length") Integer length,
+        @CustomType.Parameter("nullable") Boolean nullable,
+        @CustomType.Parameter("ordinalPosition") Integer ordinalPosition,
+        @CustomType.Parameter("precision") Integer precision,
+        @CustomType.Parameter("primaryKey") Boolean primaryKey,
+        @CustomType.Parameter("scale") Integer scale) {
         this.columnName = columnName;
         this.dataType = dataType;
         this.encoding = encoding;

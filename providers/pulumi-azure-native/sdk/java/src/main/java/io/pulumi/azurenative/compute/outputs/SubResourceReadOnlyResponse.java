@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubResourceReadOnlyResponse {
     /**
      * Resource Id
@@ -15,8 +15,8 @@ public final class SubResourceReadOnlyResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private SubResourceReadOnlyResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private SubResourceReadOnlyResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

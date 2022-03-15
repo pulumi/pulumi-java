@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointGroupEndpointConfiguration {
     /**
      * true if client ip should be preserved
@@ -29,11 +29,11 @@ public final class EndpointGroupEndpointConfiguration {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointGroupEndpointConfiguration(
-        @OutputCustomType.Parameter("clientIPPreservationEnabled") @Nullable Boolean clientIPPreservationEnabled,
-        @OutputCustomType.Parameter("endpointId") String endpointId,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("clientIPPreservationEnabled") @Nullable Boolean clientIPPreservationEnabled,
+        @CustomType.Parameter("endpointId") String endpointId,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
         this.endpointId = endpointId;
         this.weight = weight;

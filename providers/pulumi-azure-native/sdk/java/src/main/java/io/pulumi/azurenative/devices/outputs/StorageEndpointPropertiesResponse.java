@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageEndpointPropertiesResponse {
     /**
      * Specifies authentication type being used for connecting to the storage account.
@@ -32,12 +32,12 @@ public final class StorageEndpointPropertiesResponse {
      */
     private final @Nullable String sasTtlAsIso8601;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageEndpointPropertiesResponse(
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("connectionString") String connectionString,
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("sasTtlAsIso8601") @Nullable String sasTtlAsIso8601) {
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("connectionString") String connectionString,
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("sasTtlAsIso8601") @Nullable String sasTtlAsIso8601) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.containerName = containerName;

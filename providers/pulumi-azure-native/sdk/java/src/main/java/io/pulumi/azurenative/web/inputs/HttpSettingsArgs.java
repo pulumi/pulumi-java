@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ForwardProxyArgs;
 import io.pulumi.azurenative.web.inputs.HttpSettingsRoutesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of a forward proxy used to make the requests.
      * 
      */
-    @InputImport(name="forwardProxy")
+    @Import(name="forwardProxy")
       private final @Nullable Output<ForwardProxyArgs> forwardProxy;
 
     public Output<ForwardProxyArgs> getForwardProxy() {
@@ -35,7 +35,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * <code>false</code> if the authentication/authorization responses not having the HTTPS scheme are permissible; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="requireHttps")
+    @Import(name="requireHttps")
       private final @Nullable Output<Boolean> requireHttps;
 
     public Output<Boolean> getRequireHttps() {
@@ -46,7 +46,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the paths HTTP requests.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<HttpSettingsRoutesArgs> routes;
 
     public Output<HttpSettingsRoutesArgs> getRoutes() {

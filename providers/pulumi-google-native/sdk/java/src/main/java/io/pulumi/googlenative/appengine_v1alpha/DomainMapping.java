@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1alpha.DomainMappingArgs;
@@ -25,7 +25,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -39,7 +39,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.
      * 
      */
-    @OutputExport(name="resourceRecords", type=List.class, parameters={ResourceRecordResponse.class})
+    @Export(name="resourceRecords", type=List.class, parameters={ResourceRecordResponse.class})
     private Output<List<ResourceRecordResponse>> resourceRecords;
 
     /**
@@ -53,7 +53,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
      * 
      */
-    @OutputExport(name="sslSettings", type=SslSettingsResponse.class, parameters={})
+    @Export(name="sslSettings", type=SslSettingsResponse.class, parameters={})
     private Output<SslSettingsResponse> sslSettings;
 
     /**

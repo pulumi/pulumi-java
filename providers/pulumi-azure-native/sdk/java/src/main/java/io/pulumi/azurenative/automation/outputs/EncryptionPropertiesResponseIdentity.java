@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPropertiesResponseIdentity {
     /**
      * The user identity used for CMK. It will be an ARM resource id in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
@@ -17,8 +17,8 @@ public final class EncryptionPropertiesResponseIdentity {
      */
     private final @Nullable Object userAssignedIdentity;
 
-    @OutputCustomType.Constructor
-    private EncryptionPropertiesResponseIdentity(@OutputCustomType.Parameter("userAssignedIdentity") @Nullable Object userAssignedIdentity) {
+    @CustomType.Constructor
+    private EncryptionPropertiesResponseIdentity(@CustomType.Parameter("userAssignedIdentity") @Nullable Object userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 

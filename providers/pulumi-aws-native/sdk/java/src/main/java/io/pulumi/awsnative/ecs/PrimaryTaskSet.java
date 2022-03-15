@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ecs.PrimaryTaskSetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    @OutputExport(name="cluster", type=String.class, parameters={})
+    @Export(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
     /**
@@ -35,7 +35,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -49,7 +49,7 @@ public class PrimaryTaskSet extends io.pulumi.resources.CustomResource {
      * The ID or full Amazon Resource Name (ARN) of the task set.
      * 
      */
-    @OutputExport(name="taskSetId", type=String.class, parameters={})
+    @Export(name="taskSetId", type=String.class, parameters={})
     private Output<String> taskSetId;
 
     /**

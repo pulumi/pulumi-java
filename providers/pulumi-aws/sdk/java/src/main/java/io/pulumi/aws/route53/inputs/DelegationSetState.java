@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Delegation Set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * (effectively a list of NS records).
      * 
      */
-    @InputImport(name="nameServers")
+    @Import(name="nameServers")
       private final @Nullable Output<List<String>> nameServers;
 
     public Output<List<String>> getNameServers() {
@@ -43,7 +43,7 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
      * (helpful for identifying single delegation set amongst others)
      * 
      */
-    @InputImport(name="referenceName")
+    @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
     public Output<String> getReferenceName() {

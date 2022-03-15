@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1RenewalSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
      * Commitment end timestamp.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
      * Optional. Renewal settings applicable for a commitment-based Offer.
      * 
      */
-    @InputImport(name="renewalSettings", required=true)
+    @Import(name="renewalSettings", required=true)
       private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
 
     public GoogleCloudChannelV1RenewalSettingsResponse getRenewalSettings() {
@@ -43,7 +43,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
      * Commitment start timestamp.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

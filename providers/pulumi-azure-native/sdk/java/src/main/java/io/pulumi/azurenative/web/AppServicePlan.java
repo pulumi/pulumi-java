@@ -10,7 +10,7 @@ import io.pulumi.azurenative.web.outputs.KubeEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -40,7 +40,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * The time when the server farm free offer expires.
      * 
      */
-    @OutputExport(name="freeOfferExpirationTime", type=String.class, parameters={})
+    @Export(name="freeOfferExpirationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> freeOfferExpirationTime;
 
     /**
@@ -54,7 +54,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Geographical location for the App Service plan.
      * 
      */
-    @OutputExport(name="geoRegion", type=String.class, parameters={})
+    @Export(name="geoRegion", type=String.class, parameters={})
     private Output<String> geoRegion;
 
     /**
@@ -68,7 +68,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Specification for the App Service Environment to use for the App Service plan.
      * 
      */
-    @OutputExport(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
+    @Export(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
     private Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile;
 
     /**
@@ -82,7 +82,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
      * 
      */
-    @OutputExport(name="hyperV", type=Boolean.class, parameters={})
+    @Export(name="hyperV", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hyperV;
 
     /**
@@ -96,7 +96,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * If <code>true</code>, this App Service Plan owns spot instances.
      * 
      */
-    @OutputExport(name="isSpot", type=Boolean.class, parameters={})
+    @Export(name="isSpot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSpot;
 
     /**
@@ -110,7 +110,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Obsolete: If Hyper-V container app service plan <code>true</code>, <code>false</code> otherwise.
      * 
      */
-    @OutputExport(name="isXenon", type=Boolean.class, parameters={})
+    @Export(name="isXenon", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isXenon;
 
     /**
@@ -124,7 +124,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -138,7 +138,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Specification for the Kubernetes Environment to use for the App Service plan.
      * 
      */
-    @OutputExport(name="kubeEnvironmentProfile", type=KubeEnvironmentProfileResponse.class, parameters={})
+    @Export(name="kubeEnvironmentProfile", type=KubeEnvironmentProfileResponse.class, parameters={})
     private Output</* @Nullable */ KubeEnvironmentProfileResponse> kubeEnvironmentProfile;
 
     /**
@@ -152,7 +152,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -166,7 +166,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Maximum number of total workers allowed for this ElasticScaleEnabled App Service Plan
      * 
      */
-    @OutputExport(name="maximumElasticWorkerCount", type=Integer.class, parameters={})
+    @Export(name="maximumElasticWorkerCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumElasticWorkerCount;
 
     /**
@@ -180,7 +180,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Maximum number of instances that can be assigned to this App Service plan.
      * 
      */
-    @OutputExport(name="maximumNumberOfWorkers", type=Integer.class, parameters={})
+    @Export(name="maximumNumberOfWorkers", type=Integer.class, parameters={})
     private Output<Integer> maximumNumberOfWorkers;
 
     /**
@@ -194,7 +194,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -208,7 +208,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Number of apps assigned to this App Service plan.
      * 
      */
-    @OutputExport(name="numberOfSites", type=Integer.class, parameters={})
+    @Export(name="numberOfSites", type=Integer.class, parameters={})
     private Output<Integer> numberOfSites;
 
     /**
@@ -223,7 +223,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * If <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan.
      * 
      */
-    @OutputExport(name="perSiteScaling", type=Boolean.class, parameters={})
+    @Export(name="perSiteScaling", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> perSiteScaling;
 
     /**
@@ -238,7 +238,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Provisioning state of the App Service Plan.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -252,7 +252,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * If Linux app service plan <code>true</code>, <code>false</code> otherwise.
      * 
      */
-    @OutputExport(name="reserved", type=Boolean.class, parameters={})
+    @Export(name="reserved", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reserved;
 
     /**
@@ -266,7 +266,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Resource group of the App Service plan.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -280,7 +280,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Description of a SKU for a scalable resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuDescriptionResponse.class, parameters={})
+    @Export(name="sku", type=SkuDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ SkuDescriptionResponse> sku;
 
     /**
@@ -294,7 +294,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * The time when the server farm expires. Valid only if it is a spot server farm.
      * 
      */
-    @OutputExport(name="spotExpirationTime", type=String.class, parameters={})
+    @Export(name="spotExpirationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> spotExpirationTime;
 
     /**
@@ -308,7 +308,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * App Service plan status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -322,7 +322,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * App Service plan subscription.
      * 
      */
-    @OutputExport(name="subscription", type=String.class, parameters={})
+    @Export(name="subscription", type=String.class, parameters={})
     private Output<String> subscription;
 
     /**
@@ -336,7 +336,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -350,7 +350,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Scaling worker count.
      * 
      */
-    @OutputExport(name="targetWorkerCount", type=Integer.class, parameters={})
+    @Export(name="targetWorkerCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> targetWorkerCount;
 
     /**
@@ -364,7 +364,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Scaling worker size ID.
      * 
      */
-    @OutputExport(name="targetWorkerSizeId", type=Integer.class, parameters={})
+    @Export(name="targetWorkerSizeId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> targetWorkerSizeId;
 
     /**
@@ -378,7 +378,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -392,7 +392,7 @@ public class AppServicePlan extends io.pulumi.resources.CustomResource {
      * Target worker tier assigned to the App Service plan.
      * 
      */
-    @OutputExport(name="workerTierName", type=String.class, parameters={})
+    @Export(name="workerTierName", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerTierName;
 
     /**

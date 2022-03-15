@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupCustomResponseBody {
     /**
      * The payload of the custom response.
@@ -25,11 +25,11 @@ public final class RuleGroupCustomResponseBody {
      */
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupCustomResponseBody(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("key") String key) {
         this.content = content;
         this.contentType = contentType;
         this.key = key;

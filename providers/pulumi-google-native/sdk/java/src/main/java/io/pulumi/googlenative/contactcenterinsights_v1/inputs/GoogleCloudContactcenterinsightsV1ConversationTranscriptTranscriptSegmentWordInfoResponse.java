@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * A confidence estimate between 0.0 and 1.0 of the fidelity of this word. A default value of 0.0 indicates that the value is unset.
      * 
      */
-    @InputImport(name="confidence", required=true)
+    @Import(name="confidence", required=true)
       private final Double confidence;
 
     public Double getConfidence() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * Time offset of the end of this word relative to the beginning of the total conversation.
      * 
      */
-    @InputImport(name="endOffset", required=true)
+    @Import(name="endOffset", required=true)
       private final String endOffset;
 
     public String getEndOffset() {
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * Time offset of the start of this word relative to the beginning of the total conversation.
      * 
      */
-    @InputImport(name="startOffset", required=true)
+    @Import(name="startOffset", required=true)
       private final String startOffset;
 
     public String getStartOffset() {
@@ -54,7 +54,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * The word itself. Includes punctuation marks that surround the word.
      * 
      */
-    @InputImport(name="word", required=true)
+    @Import(name="word", required=true)
       private final String word;
 
     public String getWord() {

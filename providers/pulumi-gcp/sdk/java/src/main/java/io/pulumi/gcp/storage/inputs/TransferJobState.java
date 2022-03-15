@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecGetArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * When the Transfer Job was created.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -31,7 +31,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * When the Transfer Job was deleted.
      * 
      */
-    @InputImport(name="deletionTime")
+    @Import(name="deletionTime")
       private final @Nullable Output<String> deletionTime;
 
     public Output<String> getDeletionTime() {
@@ -42,7 +42,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * Unique description to identify the Transfer Job.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * When the Transfer Job was last modified.
      * 
      */
-    @InputImport(name="lastModificationTime")
+    @Import(name="lastModificationTime")
       private final @Nullable Output<String> lastModificationTime;
 
     public Output<String> getLastModificationTime() {
@@ -64,7 +64,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * The name of the Transfer Job.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -87,7 +87,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<TransferJobScheduleGetArgs> schedule;
 
     public Output<TransferJobScheduleGetArgs> getSchedule() {
@@ -98,7 +98,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -109,7 +109,7 @@ public final class TransferJobState extends io.pulumi.resources.ResourceArgs {
      * Transfer specification. Structure documented below.
      * 
      */
-    @InputImport(name="transferSpec")
+    @Import(name="transferSpec")
       private final @Nullable Output<TransferJobTransferSpecGetArgs> transferSpec;
 
     public Output<TransferJobTransferSpecGetArgs> getTransferSpec() {

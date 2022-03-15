@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.awsnative.redshift.inputs.EndpointAccessNetworkInterface;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
      * One or more network interfaces of the endpoint. Also known as an interface endpoint.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable List<EndpointAccessNetworkInterface> networkInterfaces;
 
     public List<EndpointAccessNetworkInterface> getNetworkInterfaces() {
@@ -35,7 +35,7 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
      * The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable String vpcEndpointId;
 
     public Optional<String> getVpcEndpointId() {
@@ -46,7 +46,7 @@ public final class VpcEndpointProperties extends io.pulumi.resources.InvokeArgs 
      * The VPC identifier that the endpoint is associated.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {

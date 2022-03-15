@@ -49,7 +49,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -69,7 +69,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * List of activities in pipeline.
      * 
      */
-    @OutputExport(name="activities", type=List.class, parameters={Object.class})
+    @Export(name="activities", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> activities;
 
     /**
@@ -83,7 +83,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * List of tags that can be used for describing the Pipeline.
      * 
      */
-    @OutputExport(name="annotations", type=List.class, parameters={Object.class})
+    @Export(name="annotations", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> annotations;
 
     /**
@@ -97,7 +97,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The max number of concurrent runs for the pipeline.
      * 
      */
-    @OutputExport(name="concurrency", type=Integer.class, parameters={})
+    @Export(name="concurrency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> concurrency;
 
     /**
@@ -111,7 +111,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The description of the pipeline.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -125,7 +125,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Etag identifies change in the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -139,7 +139,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
      */
-    @OutputExport(name="folder", type=PipelineResponseFolder.class, parameters={})
+    @Export(name="folder", type=PipelineResponseFolder.class, parameters={})
     private Output</* @Nullable */ PipelineResponseFolder> folder;
 
     /**
@@ -153,7 +153,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -167,7 +167,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * List of parameters for pipeline.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterSpecificationResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,ParameterSpecificationResponse>> parameters;
 
     /**
@@ -181,7 +181,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Pipeline Policy.
      * 
      */
-    @OutputExport(name="policy", type=PipelinePolicyResponse.class, parameters={})
+    @Export(name="policy", type=PipelinePolicyResponse.class, parameters={})
     private Output</* @Nullable */ PipelinePolicyResponse> policy;
 
     /**
@@ -195,7 +195,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Dimensions emitted by Pipeline.
      * 
      */
-    @OutputExport(name="runDimensions", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="runDimensions", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> runDimensions;
 
     /**
@@ -209,7 +209,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -223,7 +223,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * List of variables for pipeline.
      * 
      */
-    @OutputExport(name="variables", type=Map.class, parameters={String.class, VariableSpecificationResponse.class})
+    @Export(name="variables", type=Map.class, parameters={String.class, VariableSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,VariableSpecificationResponse>> variables;
 
     /**

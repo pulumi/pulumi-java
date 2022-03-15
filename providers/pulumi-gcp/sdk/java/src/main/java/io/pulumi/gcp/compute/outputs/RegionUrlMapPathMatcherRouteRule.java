@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleRouteAction;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcherRouteRule {
     /**
      * Specifies changes to request and response headers that need to take effect for
@@ -73,14 +73,14 @@ public final class RegionUrlMapPathMatcherRouteRule {
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapPathMatcherRouteRule(
-        @OutputCustomType.Parameter("headerAction") @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction,
-        @OutputCustomType.Parameter("matchRules") @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("routeAction") @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction,
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("urlRedirect") @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        @CustomType.Parameter("headerAction") @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction,
+        @CustomType.Parameter("matchRules") @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeAction") @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction,
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("urlRedirect") @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
         this.priority = priority;

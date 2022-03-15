@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlColumnResponse {
     /**
      * Column collation.
@@ -47,15 +47,15 @@ public final class MysqlColumnResponse {
      */
     private final Boolean primaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlColumnResponse(
-        @OutputCustomType.Parameter("collation") String collation,
-        @OutputCustomType.Parameter("column") String column,
-        @OutputCustomType.Parameter("dataType") String dataType,
-        @OutputCustomType.Parameter("length") Integer length,
-        @OutputCustomType.Parameter("nullable") Boolean nullable,
-        @OutputCustomType.Parameter("ordinalPosition") Integer ordinalPosition,
-        @OutputCustomType.Parameter("primaryKey") Boolean primaryKey) {
+        @CustomType.Parameter("collation") String collation,
+        @CustomType.Parameter("column") String column,
+        @CustomType.Parameter("dataType") String dataType,
+        @CustomType.Parameter("length") Integer length,
+        @CustomType.Parameter("nullable") Boolean nullable,
+        @CustomType.Parameter("ordinalPosition") Integer ordinalPosition,
+        @CustomType.Parameter("primaryKey") Boolean primaryKey) {
         this.collation = collation;
         this.column = column;
         this.dataType = dataType;

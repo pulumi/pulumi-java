@@ -7,13 +7,13 @@ import io.pulumi.azurenative.migrate.outputs.DatabasesSolutionSummaryResponse;
 import io.pulumi.azurenative.migrate.outputs.ServersSolutionSummaryResponse;
 import io.pulumi.azurenative.migrate.outputs.SolutionDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SolutionPropertiesResponse {
     /**
      * Gets or sets the cleanup state of the solution.
@@ -51,15 +51,15 @@ public final class SolutionPropertiesResponse {
      */
     private final @Nullable String tool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SolutionPropertiesResponse(
-        @OutputCustomType.Parameter("cleanupState") @Nullable String cleanupState,
-        @OutputCustomType.Parameter("details") @Nullable SolutionDetailsResponse details,
-        @OutputCustomType.Parameter("goal") @Nullable String goal,
-        @OutputCustomType.Parameter("purpose") @Nullable String purpose,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("summary") @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
-        @OutputCustomType.Parameter("tool") @Nullable String tool) {
+        @CustomType.Parameter("cleanupState") @Nullable String cleanupState,
+        @CustomType.Parameter("details") @Nullable SolutionDetailsResponse details,
+        @CustomType.Parameter("goal") @Nullable String goal,
+        @CustomType.Parameter("purpose") @Nullable String purpose,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("summary") @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
+        @CustomType.Parameter("tool") @Nullable String tool) {
         this.cleanupState = cleanupState;
         this.details = details;
         this.goal = goal;

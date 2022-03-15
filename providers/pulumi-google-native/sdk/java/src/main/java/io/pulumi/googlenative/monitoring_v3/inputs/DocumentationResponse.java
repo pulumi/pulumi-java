@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -31,7 +31,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * The format of the content field. Presently, only the value "text/markdown" is supported. See Markdown (https://en.wikipedia.org/wiki/Markdown) for more information.
      * 
      */
-    @InputImport(name="mimeType", required=true)
+    @Import(name="mimeType", required=true)
       private final String mimeType;
 
     public String getMimeType() {

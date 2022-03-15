@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * (Required) Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with block device mappings for the the image recipe. Detailed below.
      * 
      */
-    @InputImport(name="blockDeviceMappings")
+    @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
     public Output<List<ImageRecipeBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
@@ -44,7 +44,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Ordered configuration block(s) with components for the image recipe. Detailed below.
      * 
      */
-    @InputImport(name="components")
+    @Import(name="components")
       private final @Nullable Output<List<ImageRecipeComponentGetArgs>> components;
 
     public Output<List<ImageRecipeComponentGetArgs>> getComponents() {
@@ -55,7 +55,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Date the image recipe was created.
      * 
      */
-    @InputImport(name="dateCreated")
+    @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
     public Output<String> getDateCreated() {
@@ -66,7 +66,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Description of the image recipe.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -77,7 +77,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Name of the image recipe.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Owner of the image recipe.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -99,7 +99,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Platform of the image recipe.
      * 
      */
-    @InputImport(name="parentImage")
+    @Import(name="parentImage")
       private final @Nullable Output<String> parentImage;
 
     public Output<String> getParentImage() {
@@ -110,7 +110,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Platform of the image recipe.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -121,7 +121,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -132,7 +132,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -143,7 +143,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Base64 encoded user data. Use this to provide commands or a command script to run when you launch your build instance.
      * 
      */
-    @InputImport(name="userDataBase64")
+    @Import(name="userDataBase64")
       private final @Nullable Output<String> userDataBase64;
 
     public Output<String> getUserDataBase64() {
@@ -154,7 +154,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * Version of the image recipe.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -165,7 +165,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
      * The working directory to be used during build and test workflows.
      * 
      */
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

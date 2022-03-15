@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
@@ -43,14 +43,14 @@ public final class GetEnvironmentResult {
      */
     private final List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("testCasesConfig") GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("versionConfigs") List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("testCasesConfig") GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("versionConfigs") List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;

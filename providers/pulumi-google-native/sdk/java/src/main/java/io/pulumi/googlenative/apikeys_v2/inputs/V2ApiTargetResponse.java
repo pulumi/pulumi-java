@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
      * 
      */
-    @InputImport(name="methods", required=true)
+    @Import(name="methods", required=true)
       private final List<String> methods;
 
     public List<String> getMethods() {
@@ -32,7 +32,7 @@ public final class V2ApiTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The service for this restriction. It should be the canonical service name, for example: `translate.googleapis.com`. You can use [`gcloud services list`](/sdk/gcloud/reference/services/list) to get a list of services that are enabled in the project.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringResponse;
 import io.pulumi.azurenative.network.outputs.RouteFilterRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteFilterResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -66,18 +66,18 @@ public final class GetRouteFilterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteFilterResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipv6Peerings") List<ExpressRouteCircuitPeeringResponse> ipv6Peerings,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerings") List<ExpressRouteCircuitPeeringResponse> peerings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rules") @Nullable List<RouteFilterRuleResponse> rules,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipv6Peerings") List<ExpressRouteCircuitPeeringResponse> ipv6Peerings,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerings") List<ExpressRouteCircuitPeeringResponse> peerings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rules") @Nullable List<RouteFilterRuleResponse> rules,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.ipv6Peerings = ipv6Peerings;

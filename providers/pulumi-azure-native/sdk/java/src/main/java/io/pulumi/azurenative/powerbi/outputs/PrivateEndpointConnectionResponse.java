@@ -6,13 +6,13 @@ package io.pulumi.azurenative.powerbi.outputs;
 import io.pulumi.azurenative.powerbi.outputs.ConnectionStateResponse;
 import io.pulumi.azurenative.powerbi.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.powerbi.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionResponse {
     /**
      * Specifies the id of the resource.
@@ -50,15 +50,15 @@ public final class PrivateEndpointConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.privateEndpoint = privateEndpoint;

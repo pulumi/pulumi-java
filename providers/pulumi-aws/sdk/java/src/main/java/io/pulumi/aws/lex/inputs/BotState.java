@@ -7,7 +7,7 @@ import io.pulumi.aws.lex.inputs.BotAbortStatementGetArgs;
 import io.pulumi.aws.lex.inputs.BotClarificationPromptGetArgs;
 import io.pulumi.aws.lex.inputs.BotIntentGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,14 +25,14 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The message that Amazon Lex uses to abort a conversation. Attributes are documented under statement.
      * 
      */
-    @InputImport(name="abortStatement")
+    @Import(name="abortStatement")
       private final @Nullable Output<BotAbortStatementGetArgs> abortStatement;
 
     public Output<BotAbortStatementGetArgs> getAbortStatement() {
         return this.abortStatement == null ? Output.empty() : this.abortStatement;
     }
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * included as an argument because the resource will add it automatically when updating the bot.
      * 
      */
-    @InputImport(name="checksum")
+    @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
     public Output<String> getChecksum() {
@@ -55,7 +55,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * By specifying true, you confirm that your use of Amazon Lex is related to a website, program, or other application that is directed or targeted, in whole or in part, to children under age 13 and subject to COPPA. For more information see the [Amazon Lex FAQ](https://aws.amazon.com/lex/faqs#data-security) and the [Amazon Lex PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-childDirected).
      * 
      */
-    @InputImport(name="childDirected")
+    @Import(name="childDirected")
       private final @Nullable Output<Boolean> childDirected;
 
     public Output<Boolean> getChildDirected() {
@@ -66,7 +66,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The message that Amazon Lex uses when it doesn't understand the user's request. Attributes are documented under prompt.
      * 
      */
-    @InputImport(name="clarificationPrompt")
+    @Import(name="clarificationPrompt")
       private final @Nullable Output<BotClarificationPromptGetArgs> clarificationPrompt;
 
     public Output<BotClarificationPromptGetArgs> getClarificationPrompt() {
@@ -77,7 +77,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
      * 
      */
-    @InputImport(name="createVersion")
+    @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
     public Output<Boolean> getCreateVersion() {
@@ -88,7 +88,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The date when the bot version was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -99,7 +99,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -110,7 +110,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don't specify detectSentiment, the default is `false`.
      * 
      */
-    @InputImport(name="detectSentiment")
+    @Import(name="detectSentiment")
       private final @Nullable Output<Boolean> detectSentiment;
 
     public Output<Boolean> getDetectSentiment() {
@@ -121,7 +121,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
      * 
      */
-    @InputImport(name="enableModelImprovements")
+    @Import(name="enableModelImprovements")
       private final @Nullable Output<Boolean> enableModelImprovements;
 
     public Output<Boolean> getEnableModelImprovements() {
@@ -132,7 +132,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
      * 
      */
-    @InputImport(name="failureReason")
+    @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
     public Output<String> getFailureReason() {
@@ -143,7 +143,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
      * 
      */
-    @InputImport(name="idleSessionTtlInSeconds")
+    @Import(name="idleSessionTtlInSeconds")
       private final @Nullable Output<Integer> idleSessionTtlInSeconds;
 
     public Output<Integer> getIdleSessionTtlInSeconds() {
@@ -154,7 +154,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
      * 
      */
-    @InputImport(name="intents")
+    @Import(name="intents")
       private final @Nullable Output<List<BotIntentGetArgs>> intents;
 
     public Output<List<BotIntentGetArgs>> getIntents() {
@@ -165,7 +165,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The date when the $LATEST version of this bot was updated.
      * 
      */
-    @InputImport(name="lastUpdatedDate")
+    @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
     public Output<String> getLastUpdatedDate() {
@@ -176,7 +176,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
      * 
      */
-    @InputImport(name="locale")
+    @Import(name="locale")
       private final @Nullable Output<String> locale;
 
     public Output<String> getLocale() {
@@ -187,7 +187,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -198,7 +198,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
      * 
      */
-    @InputImport(name="nluIntentConfidenceThreshold")
+    @Import(name="nluIntentConfidenceThreshold")
       private final @Nullable Output<Double> nluIntentConfidenceThreshold;
 
     public Output<Double> getNluIntentConfidenceThreshold() {
@@ -209,7 +209,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn't build it. Default is `SAVE`.
      * 
      */
-    @InputImport(name="processBehavior")
+    @Import(name="processBehavior")
       private final @Nullable Output<String> processBehavior;
 
     public Output<String> getProcessBehavior() {
@@ -223,7 +223,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * failure_reason response element.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -234,7 +234,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The version of the bot.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -245,7 +245,7 @@ public final class BotState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Polly voice ID that you want Amazon Lex to use for voice interactions with the user. The locale configured for the voice must match the locale of the bot. For more information, see [Available Voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) in the Amazon Polly Developer Guide.
      * 
      */
-    @InputImport(name="voiceId")
+    @Import(name="voiceId")
       private final @Nullable Output<String> voiceId;
 
     public Output<String> getVoiceId() {

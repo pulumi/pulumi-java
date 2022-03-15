@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The ARM identifier for Private Endpoint.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {

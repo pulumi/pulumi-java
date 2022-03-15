@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * If provided, get the source from this location in a Cloud Source Repository.
@@ -27,11 +27,11 @@ public final class SourceResponse {
      */
     private final StorageSourceManifestResponse storageSourceManifest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("repoSource") RepoSourceResponse repoSource,
-        @OutputCustomType.Parameter("storageSource") StorageSourceResponse storageSource,
-        @OutputCustomType.Parameter("storageSourceManifest") StorageSourceManifestResponse storageSourceManifest) {
+        @CustomType.Parameter("repoSource") RepoSourceResponse repoSource,
+        @CustomType.Parameter("storageSource") StorageSourceResponse storageSource,
+        @CustomType.Parameter("storageSourceManifest") StorageSourceManifestResponse storageSourceManifest) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
         this.storageSourceManifest = storageSourceManifest;

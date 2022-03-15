@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class NodePoolAutoscalingGetArgs extends io.pulumi.resources.Resour
      * Maximum number of nodes in the NodePool. Must be >= min_node_count.
      * 
      */
-    @InputImport(name="maxNodeCount", required=true)
+    @Import(name="maxNodeCount", required=true)
       private final Output<Integer> maxNodeCount;
 
     public Output<Integer> getMaxNodeCount() {
@@ -29,7 +29,7 @@ public final class NodePoolAutoscalingGetArgs extends io.pulumi.resources.Resour
      * <= `max_node_count`.
      * 
      */
-    @InputImport(name="minNodeCount", required=true)
+    @Import(name="minNodeCount", required=true)
       private final Output<Integer> minNodeCount;
 
     public Output<Integer> getMinNodeCount() {

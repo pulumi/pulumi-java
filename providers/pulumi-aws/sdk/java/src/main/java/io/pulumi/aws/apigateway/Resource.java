@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.ResourceArgs;
 import io.pulumi.aws.apigateway.inputs.ResourceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The ID of the parent API resource
      * 
      */
-    @OutputExport(name="parentId", type=String.class, parameters={})
+    @Export(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
     /**
@@ -46,7 +46,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The complete path for this API resource, including all parent paths.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
@@ -60,7 +60,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The last path segment of this API resource.
      * 
      */
-    @OutputExport(name="pathPart", type=String.class, parameters={})
+    @Export(name="pathPart", type=String.class, parameters={})
     private Output<String> pathPart;
 
     /**
@@ -74,7 +74,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * The ID of the associated REST API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**

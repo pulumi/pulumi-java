@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.PolicyArgs;
@@ -25,7 +25,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified.
      * 
      */
-    @OutputExport(name="alternativeNameServerConfig", type=PolicyAlternativeNameServerConfigResponse.class, parameters={})
+    @Export(name="alternativeNameServerConfig", type=PolicyAlternativeNameServerConfigResponse.class, parameters={})
     private Output<PolicyAlternativeNameServerConfigResponse> alternativeNameServerConfig;
 
     /**
@@ -39,7 +39,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the policy's function.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -53,7 +53,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks that are bound to this policy.
      * 
      */
-    @OutputExport(name="enableInboundForwarding", type=Boolean.class, parameters={})
+    @Export(name="enableInboundForwarding", type=Boolean.class, parameters={})
     private Output<Boolean> enableInboundForwarding;
 
     /**
@@ -67,7 +67,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Controls whether logging is enabled for the networks bound to this policy. Defaults to no logging if not set.
      * 
      */
-    @OutputExport(name="enableLogging", type=Boolean.class, parameters={})
+    @Export(name="enableLogging", type=Boolean.class, parameters={})
     private Output<Boolean> enableLogging;
 
     /**
@@ -77,7 +77,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getEnableLogging() {
         return this.enableLogging;
     }
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
@@ -87,7 +87,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * User-assigned name for this policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -101,7 +101,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * List of network names specifying networks to which this policy is applied.
      * 
      */
-    @OutputExport(name="networks", type=List.class, parameters={PolicyNetworkResponse.class})
+    @Export(name="networks", type=List.class, parameters={PolicyNetworkResponse.class})
     private Output<List<PolicyNetworkResponse>> networks;
 
     /**

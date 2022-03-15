@@ -6,14 +6,14 @@ package io.pulumi.aws.iam.outputs;
 import io.pulumi.aws.iam.outputs.GetPolicyDocumentStatementCondition;
 import io.pulumi.aws.iam.outputs.GetPolicyDocumentStatementNotPrincipal;
 import io.pulumi.aws.iam.outputs.GetPolicyDocumentStatementPrincipal;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyDocumentStatement {
     /**
      * List of actions that this statement either allows or denies. For example, `["ec2:RunInstances", "s3:*"]`.
@@ -61,17 +61,17 @@ public final class GetPolicyDocumentStatement {
      */
     private final @Nullable String sid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyDocumentStatement(
-        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
-        @OutputCustomType.Parameter("conditions") @Nullable List<GetPolicyDocumentStatementCondition> conditions,
-        @OutputCustomType.Parameter("effect") @Nullable String effect,
-        @OutputCustomType.Parameter("notActions") @Nullable List<String> notActions,
-        @OutputCustomType.Parameter("notPrincipals") @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals,
-        @OutputCustomType.Parameter("notResources") @Nullable List<String> notResources,
-        @OutputCustomType.Parameter("principals") @Nullable List<GetPolicyDocumentStatementPrincipal> principals,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
-        @OutputCustomType.Parameter("sid") @Nullable String sid) {
+        @CustomType.Parameter("actions") @Nullable List<String> actions,
+        @CustomType.Parameter("conditions") @Nullable List<GetPolicyDocumentStatementCondition> conditions,
+        @CustomType.Parameter("effect") @Nullable String effect,
+        @CustomType.Parameter("notActions") @Nullable List<String> notActions,
+        @CustomType.Parameter("notPrincipals") @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals,
+        @CustomType.Parameter("notResources") @Nullable List<String> notResources,
+        @CustomType.Parameter("principals") @Nullable List<GetPolicyDocumentStatementPrincipal> principals,
+        @CustomType.Parameter("resources") @Nullable List<String> resources,
+        @CustomType.Parameter("sid") @Nullable String sid) {
         this.actions = actions;
         this.conditions = conditions;
         this.effect = effect;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.intune.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
      * Location hostName for the tenant
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final String hostName;
 
     public String getHostName() {
@@ -29,7 +29,7 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
      * Unique name for the policy
      * 
      */
-    @InputImport(name="policyName", required=true)
+    @Import(name="policyName", required=true)
       private final String policyName;
 
     public String getPolicyName() {
@@ -40,7 +40,7 @@ public final class GetAndroidMAMPolicyByNameArgs extends io.pulumi.resources.Inv
      * select specific fields in entity.
      * 
      */
-    @InputImport(name="select")
+    @Import(name="select")
       private final @Nullable String select;
 
     public Optional<String> getSelect() {

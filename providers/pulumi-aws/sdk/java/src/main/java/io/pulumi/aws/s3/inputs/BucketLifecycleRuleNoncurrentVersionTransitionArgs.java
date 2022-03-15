@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionArgs extends io
      * Specifies the number of days noncurrent object versions transition.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -30,7 +30,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionArgs extends io
      * Specifies the Amazon S3 [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Transition.html#AmazonS3-Type-Transition-StorageClass) to which you want the object to transition.
      * 
      */
-    @InputImport(name="storageClass", required=true)
+    @Import(name="storageClass", required=true)
       private final Output<String> storageClass;
 
     public Output<String> getStorageClass() {

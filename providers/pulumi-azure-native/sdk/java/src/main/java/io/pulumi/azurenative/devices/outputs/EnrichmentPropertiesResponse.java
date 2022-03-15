@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnrichmentPropertiesResponse {
     /**
      * The list of endpoints for which the enrichment is applied to the message.
@@ -26,11 +26,11 @@ public final class EnrichmentPropertiesResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnrichmentPropertiesResponse(
-        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("endpointNames") List<String> endpointNames,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.endpointNames = endpointNames;
         this.key = key;
         this.value = value;

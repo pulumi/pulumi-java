@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
      * Denotes whether move operation is in progress
      * 
      */
-    @InputImport(name="operationInProgress")
+    @Import(name="operationInProgress")
       private final @Nullable String operationInProgress;
 
     public Optional<String> getOperationInProgress() {
@@ -33,7 +33,7 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
      * Denotes the timeout of the operation to finish
      * 
      */
-    @InputImport(name="operationInProgressLockTimeoutInUTC")
+    @Import(name="operationInProgressLockTimeoutInUTC")
       private final @Nullable String operationInProgressLockTimeoutInUTC;
 
     public Optional<String> getOperationInProgressLockTimeoutInUTC() {

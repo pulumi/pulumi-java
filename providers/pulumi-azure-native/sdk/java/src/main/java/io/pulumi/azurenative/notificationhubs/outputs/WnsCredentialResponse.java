@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WnsCredentialResponse {
     /**
      * The package ID for this credential.
@@ -27,11 +27,11 @@ public final class WnsCredentialResponse {
      */
     private final @Nullable String windowsLiveEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WnsCredentialResponse(
-        @OutputCustomType.Parameter("packageSid") @Nullable String packageSid,
-        @OutputCustomType.Parameter("secretKey") @Nullable String secretKey,
-        @OutputCustomType.Parameter("windowsLiveEndpoint") @Nullable String windowsLiveEndpoint) {
+        @CustomType.Parameter("packageSid") @Nullable String packageSid,
+        @CustomType.Parameter("secretKey") @Nullable String secretKey,
+        @CustomType.Parameter("windowsLiveEndpoint") @Nullable String windowsLiveEndpoint) {
         this.packageSid = packageSid;
         this.secretKey = secretKey;
         this.windowsLiveEndpoint = windowsLiveEndpoint;

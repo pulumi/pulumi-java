@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @InputImport(name="flow")
+    @Import(name="flow")
       private final @Nullable Output<String> flow;
 
     public Output<String> getFlow() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3TestConfigArgs extends io.pulumi.res
      * Session parameters to be compared when calculating differences.
      * 
      */
-    @InputImport(name="trackingParameters")
+    @Import(name="trackingParameters")
       private final @Nullable Output<List<String>> trackingParameters;
 
     public Output<List<String>> getTrackingParameters() {

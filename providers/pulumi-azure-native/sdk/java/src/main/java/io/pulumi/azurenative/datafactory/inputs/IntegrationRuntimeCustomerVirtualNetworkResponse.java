@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse extends io.p
      * The ID of subnet to which Azure-SSIS integration runtime will join.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {

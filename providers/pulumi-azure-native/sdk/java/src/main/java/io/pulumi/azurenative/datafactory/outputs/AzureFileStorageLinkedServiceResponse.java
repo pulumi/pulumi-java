@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFileStorageLinkedServiceResponse {
     /**
      * The Azure key vault secret reference of accountKey in connection string.
@@ -96,23 +96,23 @@ public final class AzureFileStorageLinkedServiceResponse {
      */
     private final @Nullable Object userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFileStorageLinkedServiceResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("fileShare") @Nullable Object fileShare,
-        @OutputCustomType.Parameter("host") @Nullable Object host,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
-        @OutputCustomType.Parameter("sasUri") @Nullable Object sasUri,
-        @OutputCustomType.Parameter("snapshot") @Nullable Object snapshot,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userId") @Nullable Object userId) {
+        @CustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("fileShare") @Nullable Object fileShare,
+        @CustomType.Parameter("host") @Nullable Object host,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
+        @CustomType.Parameter("sasUri") @Nullable Object sasUri,
+        @CustomType.Parameter("snapshot") @Nullable Object snapshot,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userId") @Nullable Object userId) {
         this.accountKey = accountKey;
         this.annotations = annotations;
         this.connectVia = connectVia;

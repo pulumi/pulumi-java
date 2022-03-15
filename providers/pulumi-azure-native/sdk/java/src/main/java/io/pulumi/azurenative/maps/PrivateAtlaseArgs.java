@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.maps;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Maps Account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Private Atlas instance.
      * 
      */
-    @InputImport(name="privateAtlasName")
+    @Import(name="privateAtlasName")
       private final @Nullable Output<String> privateAtlasName;
 
     public Output<String> getPrivateAtlasName() {
@@ -52,7 +52,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class PrivateAtlaseArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

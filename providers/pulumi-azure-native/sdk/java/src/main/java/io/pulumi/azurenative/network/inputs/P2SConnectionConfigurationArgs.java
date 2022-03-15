@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
      * 
      */
-    @InputImport(name="enableInternetSecurity")
+    @Import(name="enableInternetSecurity")
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
     public Output<Boolean> getEnableInternetSecurity() {
@@ -36,7 +36,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @InputImport(name="routingConfiguration")
+    @Import(name="routingConfiguration")
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
     public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
@@ -69,7 +69,7 @@ public final class P2SConnectionConfigurationArgs extends io.pulumi.resources.Re
      * The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
      */
-    @InputImport(name="vpnClientAddressPool")
+    @Import(name="vpnClientAddressPool")
       private final @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
 
     public Output<AddressSpaceArgs> getVpnClientAddressPool() {

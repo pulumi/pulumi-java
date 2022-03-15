@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.LinuxUpdateClasses;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * packages excluded from the software update configuration.
      * 
      */
-    @InputImport(name="excludedPackageNameMasks")
+    @Import(name="excludedPackageNameMasks")
       private final @Nullable Output<List<String>> excludedPackageNameMasks;
 
     public Output<List<String>> getExcludedPackageNameMasks() {
@@ -36,7 +36,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * Update classifications included in the software update configuration.
      * 
      */
-    @InputImport(name="includedPackageClassifications")
+    @Import(name="includedPackageClassifications")
       private final @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
     public Output<Either<String,LinuxUpdateClasses>> getIncludedPackageClassifications() {
@@ -47,7 +47,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * packages included from the software update configuration.
      * 
      */
-    @InputImport(name="includedPackageNameMasks")
+    @Import(name="includedPackageNameMasks")
       private final @Nullable Output<List<String>> includedPackageNameMasks;
 
     public Output<List<String>> getIncludedPackageNameMasks() {
@@ -58,7 +58,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * Reboot setting for the software update configuration.
      * 
      */
-    @InputImport(name="rebootSetting")
+    @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;
 
     public Output<String> getRebootSetting() {

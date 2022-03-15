@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotStillWaitingResponseSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
      * 
      */
-    @InputImport(name="continueResponse", required=true)
+    @Import(name="continueResponse", required=true)
       private final Output<BotResponseSpecificationArgs> continueResponse;
 
     public Output<BotResponseSpecificationArgs> getContinueResponse() {
@@ -35,7 +35,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * Specifies whether the bot will wait for a user to respond.
      * 
      */
-    @InputImport(name="isActive")
+    @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
     public Output<Boolean> getIsActive() {
@@ -46,7 +46,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * The response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user.
      * 
      */
-    @InputImport(name="stillWaitingResponse")
+    @Import(name="stillWaitingResponse")
       private final @Nullable Output<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
 
     public Output<BotStillWaitingResponseSpecificationArgs> getStillWaitingResponse() {
@@ -57,7 +57,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue.
      * 
      */
-    @InputImport(name="waitingResponse", required=true)
+    @Import(name="waitingResponse", required=true)
       private final Output<BotResponseSpecificationArgs> waitingResponse;
 
     public Output<BotResponseSpecificationArgs> getWaitingResponse() {

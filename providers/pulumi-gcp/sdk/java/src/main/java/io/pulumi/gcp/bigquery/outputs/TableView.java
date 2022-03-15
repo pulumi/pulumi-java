@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableView {
     /**
      * A query whose result is persisted.
@@ -24,10 +24,10 @@ public final class TableView {
      */
     private final @Nullable Boolean useLegacySql;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableView(
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql) {
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql) {
         this.query = query;
         this.useLegacySql = useLegacySql;
     }

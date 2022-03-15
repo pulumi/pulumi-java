@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ReservationConfigResponse extends io.pulumi.resources.InvokeA
      * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
      */
-    @InputImport(name="throughputReservation", required=true)
+    @Import(name="throughputReservation", required=true)
       private final String throughputReservation;
 
     public String getThroughputReservation() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -16,56 +16,56 @@ public final class ListenerRuleAuthenticateCognitoConfig extends io.pulumi.resou
 
     public static final ListenerRuleAuthenticateCognitoConfig Empty = new ListenerRuleAuthenticateCognitoConfig();
 
-    @InputImport(name="authenticationRequestExtraParams")
+    @Import(name="authenticationRequestExtraParams")
       private final @Nullable Object authenticationRequestExtraParams;
 
     public Optional<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Optional.empty() : Optional.ofNullable(this.authenticationRequestExtraParams);
     }
 
-    @InputImport(name="onUnauthenticatedRequest")
+    @Import(name="onUnauthenticatedRequest")
       private final @Nullable String onUnauthenticatedRequest;
 
     public Optional<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Optional.empty() : Optional.ofNullable(this.onUnauthenticatedRequest);
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
-    @InputImport(name="sessionCookieName")
+    @Import(name="sessionCookieName")
       private final @Nullable String sessionCookieName;
 
     public Optional<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Optional.empty() : Optional.ofNullable(this.sessionCookieName);
     }
 
-    @InputImport(name="sessionTimeout")
+    @Import(name="sessionTimeout")
       private final @Nullable Integer sessionTimeout;
 
     public Optional<Integer> getSessionTimeout() {
         return this.sessionTimeout == null ? Optional.empty() : Optional.ofNullable(this.sessionTimeout);
     }
 
-    @InputImport(name="userPoolArn", required=true)
+    @Import(name="userPoolArn", required=true)
       private final String userPoolArn;
 
     public String getUserPoolArn() {
         return this.userPoolArn;
     }
 
-    @InputImport(name="userPoolClientId", required=true)
+    @Import(name="userPoolClientId", required=true)
       private final String userPoolClientId;
 
     public String getUserPoolClientId() {
         return this.userPoolClientId;
     }
 
-    @InputImport(name="userPoolDomain", required=true)
+    @Import(name="userPoolDomain", required=true)
       private final String userPoolDomain;
 
     public String getUserPoolDomain() {

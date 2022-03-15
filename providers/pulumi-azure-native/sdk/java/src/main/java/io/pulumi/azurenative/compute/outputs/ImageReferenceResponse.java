@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageReferenceResponse {
     /**
      * Specifies in decimal numbers, the version of platform image or marketplace image used to create the virtual machine. This readonly field differs from 'version', only if the value specified in 'version' field is 'latest'.
@@ -42,14 +42,14 @@ public final class ImageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageReferenceResponse(
-        @OutputCustomType.Parameter("exactVersion") String exactVersion,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("offer") @Nullable String offer,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("exactVersion") String exactVersion,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("offer") @Nullable String offer,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.exactVersion = exactVersion;
         this.id = id;
         this.offer = offer;

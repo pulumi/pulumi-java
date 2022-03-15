@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.WebServiceParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphNodeResponse {
     /**
      * The id of the asset represented by this node.
@@ -34,12 +34,12 @@ public final class GraphNodeResponse {
      */
     private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphNodeResponse(
-        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
-        @OutputCustomType.Parameter("inputId") @Nullable String inputId,
-        @OutputCustomType.Parameter("outputId") @Nullable String outputId,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters) {
+        @CustomType.Parameter("assetId") @Nullable String assetId,
+        @CustomType.Parameter("inputId") @Nullable String inputId,
+        @CustomType.Parameter("outputId") @Nullable String outputId,
+        @CustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters) {
         this.assetId = assetId;
         this.inputId = inputId;
         this.outputId = outputId;

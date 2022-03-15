@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserPoolSigningCertificateResult {
     /**
      * The certificate string
@@ -21,11 +21,11 @@ public final class GetUserPoolSigningCertificateResult {
     private final String id;
     private final String userPoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserPoolSigningCertificateResult(
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("userPoolId") String userPoolId) {
         this.certificate = certificate;
         this.id = id;
         this.userPoolId = userPoolId;

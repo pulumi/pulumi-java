@@ -5,7 +5,7 @@ package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerUserBucketGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * The description of the disk image being imported.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * The format of the disk image being imported. One of `VHD` or `VMDK`.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
@@ -41,7 +41,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * The URL to the Amazon S3-based disk image being imported. It can either be a https URL (https://..) or an Amazon S3 URL (s3://..). One of `url` or `user_bucket` must be set.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -52,7 +52,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
      * The Amazon S3 bucket for the disk image. One of `url` or `user_bucket` must be set. Detailed below.
      * 
      */
-    @InputImport(name="userBucket")
+    @Import(name="userBucket")
       private final @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
 
     public Output<SnapshotImportDiskContainerUserBucketGetArgs> getUserBucket() {

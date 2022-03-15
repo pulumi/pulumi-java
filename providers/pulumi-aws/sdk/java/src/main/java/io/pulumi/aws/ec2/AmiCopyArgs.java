@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.AmiCopyEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiCopyEphemeralBlockDeviceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * A longer, human-readable description for the AMI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
      * 
      */
-    @InputImport(name="destinationOutpostArn")
+    @Import(name="destinationOutpostArn")
       private final @Nullable Output<String> destinationOutpostArn;
 
     public Output<String> getDestinationOutpostArn() {
@@ -47,7 +47,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Output<List<AmiCopyEbsBlockDeviceArgs>> getEbsBlockDevices() {
@@ -58,7 +58,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -70,7 +70,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiCopyEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
@@ -83,7 +83,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * if this parameter is not specified, the default CMK for EBS is used
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -94,7 +94,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -106,7 +106,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * given by `source_ami_region`.
      * 
      */
-    @InputImport(name="sourceAmiId", required=true)
+    @Import(name="sourceAmiId", required=true)
       private final Output<String> sourceAmiId;
 
     public Output<String> getSourceAmiId() {
@@ -118,7 +118,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * same as the AWS provider region in order to create a copy within the same region.
      * 
      */
-    @InputImport(name="sourceAmiRegion", required=true)
+    @Import(name="sourceAmiRegion", required=true)
       private final Output<String> sourceAmiRegion;
 
     public Output<String> getSourceAmiRegion() {
@@ -129,7 +129,7 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

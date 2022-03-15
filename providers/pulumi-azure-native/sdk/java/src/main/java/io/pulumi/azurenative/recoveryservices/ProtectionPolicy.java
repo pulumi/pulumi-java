@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.GenericProtectionPolicyRes
 import io.pulumi.azurenative.recoveryservices.outputs.MabProtectionPolicyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * Optional ETag.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -56,7 +56,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -70,7 +70,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * Resource name associated with the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -84,7 +84,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * ProtectionPolicyResource properties
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -98,7 +98,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -112,7 +112,7 @@ public class ProtectionPolicy extends io.pulumi.resources.CustomResource {
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

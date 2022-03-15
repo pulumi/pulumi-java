@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
      * Flag to indicate whether the value represents a secret or not.
      * 
      */
-    @InputImport(name="isSecret")
+    @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
 
     public Optional<Boolean> getIsSecret() {
@@ -34,7 +34,7 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the overridable value.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class SetValueResponse extends io.pulumi.resources.InvokeArgs {
      * The overridable value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

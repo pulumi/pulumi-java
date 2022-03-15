@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesMetadataResponse {
     /**
      * Kubernetes API server version string as reported by `/version`.
@@ -41,14 +41,14 @@ public final class KubernetesMetadataResponse {
      */
     private final Integer vcpuCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesMetadataResponse(
-        @OutputCustomType.Parameter("kubernetesApiServerVersion") String kubernetesApiServerVersion,
-        @OutputCustomType.Parameter("memoryMb") Integer memoryMb,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("nodeProviderId") String nodeProviderId,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("vcpuCount") Integer vcpuCount) {
+        @CustomType.Parameter("kubernetesApiServerVersion") String kubernetesApiServerVersion,
+        @CustomType.Parameter("memoryMb") Integer memoryMb,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("nodeProviderId") String nodeProviderId,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("vcpuCount") Integer vcpuCount) {
         this.kubernetesApiServerVersion = kubernetesApiServerVersion;
         this.memoryMb = memoryMb;
         this.nodeCount = nodeCount;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSubscriptionNetworkManagerConnectionArgs extends io.pulumi
      * Name for the network manager connection.
      * 
      */
-    @InputImport(name="networkManagerConnectionName", required=true)
+    @Import(name="networkManagerConnectionName", required=true)
       private final String networkManagerConnectionName;
 
     public String getNetworkManagerConnectionName() {

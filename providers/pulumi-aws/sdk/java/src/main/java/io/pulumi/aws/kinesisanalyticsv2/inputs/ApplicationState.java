@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationCloudwatchLoggingOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The application's configuration
      * 
      */
-    @InputImport(name="applicationConfiguration")
+    @Import(name="applicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationGetArgs> applicationConfiguration;
 
     public Output<ApplicationApplicationConfigurationGetArgs> getApplicationConfiguration() {
@@ -34,7 +34,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the application.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A CloudWatch log stream to monitor application configuration errors.
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<ApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Output<ApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
@@ -56,7 +56,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The current timestamp when the application was created.
      * 
      */
-    @InputImport(name="createTimestamp")
+    @Import(name="createTimestamp")
       private final @Nullable Output<String> createTimestamp;
 
     public Output<String> getCreateTimestamp() {
@@ -67,7 +67,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A summary description of the application.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Whether to force stop an unresponsive Flink-based application.
      * 
      */
-    @InputImport(name="forceStop")
+    @Import(name="forceStop")
       private final @Nullable Output<Boolean> forceStop;
 
     public Output<Boolean> getForceStop() {
@@ -89,7 +89,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The current timestamp when the application was last updated.
      * 
      */
-    @InputImport(name="lastUpdateTimestamp")
+    @Import(name="lastUpdateTimestamp")
       private final @Nullable Output<String> lastUpdateTimestamp;
 
     public Output<String> getLastUpdateTimestamp() {
@@ -100,7 +100,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The name of the application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The runtime environment for the application. Valid values: `SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, `FLINK-1_11`.
      * 
      */
-    @InputImport(name="runtimeEnvironment")
+    @Import(name="runtimeEnvironment")
       private final @Nullable Output<String> runtimeEnvironment;
 
     public Output<String> getRuntimeEnvironment() {
@@ -122,7 +122,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role used by the application to access Kinesis data streams, Kinesis Data Firehose delivery streams, Amazon S3 objects, and other external resources.
      * 
      */
-    @InputImport(name="serviceExecutionRole")
+    @Import(name="serviceExecutionRole")
       private final @Nullable Output<String> serviceExecutionRole;
 
     public Output<String> getServiceExecutionRole() {
@@ -133,7 +133,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Whether to start or stop the application.
      * 
      */
-    @InputImport(name="startApplication")
+    @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
     public Output<Boolean> getStartApplication() {
@@ -144,7 +144,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The status of the application.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -155,7 +155,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -166,7 +166,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -177,7 +177,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The current application version. Kinesis Data Analytics updates the `version_id` each time the application is updated.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<Integer> versionId;
 
     public Output<Integer> getVersionId() {

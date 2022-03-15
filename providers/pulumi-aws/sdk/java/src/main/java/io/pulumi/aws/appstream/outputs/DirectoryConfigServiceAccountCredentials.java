@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DirectoryConfigServiceAccountCredentials {
     /**
      * User name of the account. This account must have the following privileges: create computer objects, join computers to the domain, and change/reset the password on descendant computer objects for the organizational units specified.
@@ -20,10 +20,10 @@ public final class DirectoryConfigServiceAccountCredentials {
      */
     private final String accountPassword;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectoryConfigServiceAccountCredentials(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("accountPassword") String accountPassword) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("accountPassword") String accountPassword) {
         this.accountName = accountName;
         this.accountPassword = accountPassword;
     }

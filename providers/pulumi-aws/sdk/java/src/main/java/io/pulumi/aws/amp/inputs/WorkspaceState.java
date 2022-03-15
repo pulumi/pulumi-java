@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -29,7 +29,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the workspace.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * Prometheus endpoint available for this workspace.
      * 
      */
-    @InputImport(name="prometheusEndpoint")
+    @Import(name="prometheusEndpoint")
       private final @Nullable Output<String> prometheusEndpoint;
 
     public Output<String> getPrometheusEndpoint() {

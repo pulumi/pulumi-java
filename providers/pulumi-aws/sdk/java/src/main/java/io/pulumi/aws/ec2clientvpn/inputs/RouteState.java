@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="clientVpnEndpointId")
+    @Import(name="clientVpnEndpointId")
       private final @Nullable Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
@@ -29,7 +29,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * A brief description of the authorization rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * The IPv4 address range, in CIDR notation, of the route destination.
      * 
      */
-    @InputImport(name="destinationCidrBlock")
+    @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -51,7 +51,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
      * 
      */
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
@@ -62,7 +62,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Subnet to route the traffic through. It must already be attached to the Client VPN.
      * 
      */
-    @InputImport(name="targetVpcSubnetId")
+    @Import(name="targetVpcSubnetId")
       private final @Nullable Output<String> targetVpcSubnetId;
 
     public Output<String> getTargetVpcSubnetId() {
@@ -73,7 +73,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
      * The type of the route.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

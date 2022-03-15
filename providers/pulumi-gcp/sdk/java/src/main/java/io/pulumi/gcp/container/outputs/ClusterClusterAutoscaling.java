@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterClusterAutoscalingAutoProvisioningDefaults;
 import io.pulumi.gcp.container.outputs.ClusterClusterAutoscalingResourceLimit;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterAutoscaling {
     /**
      * Contains defaults for a node pool created by NAP.
@@ -44,12 +44,12 @@ public final class ClusterClusterAutoscaling {
      */
     private final @Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterAutoscaling(
-        @OutputCustomType.Parameter("autoProvisioningDefaults") @Nullable ClusterClusterAutoscalingAutoProvisioningDefaults autoProvisioningDefaults,
-        @OutputCustomType.Parameter("autoscalingProfile") @Nullable String autoscalingProfile,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("resourceLimits") @Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits) {
+        @CustomType.Parameter("autoProvisioningDefaults") @Nullable ClusterClusterAutoscalingAutoProvisioningDefaults autoProvisioningDefaults,
+        @CustomType.Parameter("autoscalingProfile") @Nullable String autoscalingProfile,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("resourceLimits") @Nullable List<ClusterClusterAutoscalingResourceLimit> resourceLimits) {
         this.autoProvisioningDefaults = autoProvisioningDefaults;
         this.autoscalingProfile = autoscalingProfile;
         this.enabled = enabled;

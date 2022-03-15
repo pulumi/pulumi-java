@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogAnalyticsDestinationResponse {
     /**
      * A friendly name for the destination.
@@ -28,11 +28,11 @@ public final class LogAnalyticsDestinationResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogAnalyticsDestinationResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.name = name;
         this.workspaceId = workspaceId;
         this.workspaceResourceId = workspaceResourceId;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TaxonomyArgs;
@@ -41,7 +41,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
      * 
      */
-    @OutputExport(name="activatedPolicyTypes", type=List.class, parameters={String.class})
+    @Export(name="activatedPolicyTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> activatedPolicyTypes;
 
     /**
@@ -59,7 +59,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -78,7 +78,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * long when encoded in UTF-8.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -95,7 +95,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Resource name of this taxonomy, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -125,7 +125,7 @@ public class Taxonomy extends io.pulumi.resources.CustomResource {
      * Taxonomy location region.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**

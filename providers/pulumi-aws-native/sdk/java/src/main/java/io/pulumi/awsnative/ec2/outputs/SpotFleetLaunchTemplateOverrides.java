@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetInstanceRequirementsRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetLaunchTemplateOverrides {
     private final @Nullable String availabilityZone;
     private final @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
@@ -20,14 +20,14 @@ public final class SpotFleetLaunchTemplateOverrides {
     private final @Nullable String subnetId;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetLaunchTemplateOverrides(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;

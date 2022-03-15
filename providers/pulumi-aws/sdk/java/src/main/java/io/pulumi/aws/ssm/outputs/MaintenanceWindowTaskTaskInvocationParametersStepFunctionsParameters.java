@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters {
     /**
      * The inputs for the STEP_FUNCTION task.
@@ -22,10 +22,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters(
-        @OutputCustomType.Parameter("input") @Nullable String input,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("input") @Nullable String input,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.input = input;
         this.name = name;
     }

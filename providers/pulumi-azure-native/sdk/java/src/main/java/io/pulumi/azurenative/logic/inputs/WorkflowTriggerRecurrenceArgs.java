@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.logic.inputs.RecurrenceScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * The end time.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -37,7 +37,7 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * The frequency.
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable Output<Either<String,RecurrenceFrequency>> frequency;
 
     public Output<Either<String,RecurrenceFrequency>> getFrequency() {
@@ -48,7 +48,7 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * The interval.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -59,7 +59,7 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * The recurrence schedule.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<RecurrenceScheduleArgs> schedule;
 
     public Output<RecurrenceScheduleArgs> getSchedule() {
@@ -70,7 +70,7 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * The start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -81,7 +81,7 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
      * The time zone.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

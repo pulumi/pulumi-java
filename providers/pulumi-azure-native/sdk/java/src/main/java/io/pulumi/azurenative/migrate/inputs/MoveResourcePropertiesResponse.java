@@ -20,7 +20,7 @@ import io.pulumi.azurenative.migrate.inputs.SqlElasticPoolResourceSettingsRespon
 import io.pulumi.azurenative.migrate.inputs.SqlServerResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -42,7 +42,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the move resource dependencies.
      * 
      */
-    @InputImport(name="dependsOn", required=true)
+    @Import(name="dependsOn", required=true)
       private final List<MoveResourceDependencyResponse> dependsOn;
 
     public List<MoveResourceDependencyResponse> getDependsOn() {
@@ -53,7 +53,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the move resource dependencies overrides.
      * 
      */
-    @InputImport(name="dependsOnOverrides")
+    @Import(name="dependsOnOverrides")
       private final @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
 
     public List<MoveResourceDependencyOverrideResponse> getDependsOnOverrides() {
@@ -64,7 +64,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Defines the move resource errors.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final MoveResourcePropertiesResponseErrors errors;
 
     public MoveResourcePropertiesResponseErrors getErrors() {
@@ -75,7 +75,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the existing target ARM Id of the resource.
      * 
      */
-    @InputImport(name="existingTargetId")
+    @Import(name="existingTargetId")
       private final @Nullable String existingTargetId;
 
     public Optional<String> getExistingTargetId() {
@@ -86,7 +86,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets a value indicating whether the resolve action is required over the move collection.
      * 
      */
-    @InputImport(name="isResolveRequired", required=true)
+    @Import(name="isResolveRequired", required=true)
       private final Boolean isResolveRequired;
 
     public Boolean getIsResolveRequired() {
@@ -97,7 +97,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Defines the move resource status.
      * 
      */
-    @InputImport(name="moveStatus", required=true)
+    @Import(name="moveStatus", required=true)
       private final MoveResourcePropertiesResponseMoveStatus moveStatus;
 
     public MoveResourcePropertiesResponseMoveStatus getMoveStatus() {
@@ -108,7 +108,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Defines the provisioning states.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -119,7 +119,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the resource settings.
      * 
      */
-    @InputImport(name="resourceSettings")
+    @Import(name="resourceSettings")
       private final @Nullable Object resourceSettings;
 
     public Object getResourceSettings() {
@@ -130,7 +130,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the Source ARM Id of the resource.
      * 
      */
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final String sourceId;
 
     public String getSourceId() {
@@ -141,7 +141,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the source resource settings.
      * 
      */
-    @InputImport(name="sourceResourceSettings", required=true)
+    @Import(name="sourceResourceSettings", required=true)
       private final Object sourceResourceSettings;
 
     public Object getSourceResourceSettings() {
@@ -152,7 +152,7 @@ public final class MoveResourcePropertiesResponse extends io.pulumi.resources.In
      * Gets or sets the Target ARM Id of the resource.
      * 
      */
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final String targetId;
 
     public String getTargetId() {

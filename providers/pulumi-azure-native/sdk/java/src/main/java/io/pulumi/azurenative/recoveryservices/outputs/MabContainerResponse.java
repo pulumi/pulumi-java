@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.MABContainerHealthDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabContainerExtendedInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MabContainerResponse {
     /**
      * Agent version of this container.
@@ -81,20 +81,20 @@ public final class MabContainerResponse {
      */
     private final @Nullable String registrationStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MabContainerResponse(
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
-        @OutputCustomType.Parameter("containerHealthState") @Nullable String containerHealthState,
-        @OutputCustomType.Parameter("containerId") @Nullable Double containerId,
-        @OutputCustomType.Parameter("containerType") String containerType,
-        @OutputCustomType.Parameter("extendedInfo") @Nullable MabContainerExtendedInfoResponse extendedInfo,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
-        @OutputCustomType.Parameter("mabContainerHealthDetails") @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails,
-        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
-        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
+        @CustomType.Parameter("containerHealthState") @Nullable String containerHealthState,
+        @CustomType.Parameter("containerId") @Nullable Double containerId,
+        @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("extendedInfo") @Nullable MabContainerExtendedInfoResponse extendedInfo,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @CustomType.Parameter("mabContainerHealthDetails") @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails,
+        @CustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @CustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
         this.agentVersion = agentVersion;
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;

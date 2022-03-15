@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.CidrBlockArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
      * cidr_blocks define up to 50 external networks that could access Kubernetes master through HTTPS.
      * 
      */
-    @InputImport(name="cidrBlocks")
+    @Import(name="cidrBlocks")
       private final @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
 
     public Output<List<CidrBlockArgs>> getCidrBlocks() {
@@ -35,7 +35,7 @@ public final class MasterAuthorizedNetworksConfigArgs extends io.pulumi.resource
      * Whether or not master authorized networks is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetBackendServiceCircuitBreakerConnectTimeout;
 import java.lang.Integer;
 import java.util.List;
@@ -14,42 +14,42 @@ public final class GetBackendServiceCircuitBreaker extends io.pulumi.resources.I
 
     public static final GetBackendServiceCircuitBreaker Empty = new GetBackendServiceCircuitBreaker();
 
-    @InputImport(name="connectTimeouts", required=true)
+    @Import(name="connectTimeouts", required=true)
       private final List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
 
     public List<GetBackendServiceCircuitBreakerConnectTimeout> getConnectTimeouts() {
         return this.connectTimeouts;
     }
 
-    @InputImport(name="maxConnections", required=true)
+    @Import(name="maxConnections", required=true)
       private final Integer maxConnections;
 
     public Integer getMaxConnections() {
         return this.maxConnections;
     }
 
-    @InputImport(name="maxPendingRequests", required=true)
+    @Import(name="maxPendingRequests", required=true)
       private final Integer maxPendingRequests;
 
     public Integer getMaxPendingRequests() {
         return this.maxPendingRequests;
     }
 
-    @InputImport(name="maxRequests", required=true)
+    @Import(name="maxRequests", required=true)
       private final Integer maxRequests;
 
     public Integer getMaxRequests() {
         return this.maxRequests;
     }
 
-    @InputImport(name="maxRequestsPerConnection", required=true)
+    @Import(name="maxRequestsPerConnection", required=true)
       private final Integer maxRequestsPerConnection;
 
     public Integer getMaxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
 
-    @InputImport(name="maxRetries", required=true)
+    @Import(name="maxRetries", required=true)
       private final Integer maxRetries;
 
     public Integer getMaxRetries() {

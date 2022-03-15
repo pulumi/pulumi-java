@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.NetworkAclEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.NetworkAclIngressGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the network ACL
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * Specifies an egress rule. Parameters defined below.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<List<NetworkAclEgressGetArgs>> egress;
 
     public Output<List<NetworkAclEgressGetArgs>> getEgress() {
@@ -44,7 +44,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * Specifies an ingress rule. Parameters defined below.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<NetworkAclIngressGetArgs>> ingress;
 
     public Output<List<NetworkAclIngressGetArgs>> getIngress() {
@@ -55,7 +55,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS account that owns the network ACL.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -66,7 +66,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * A list of Subnet IDs to apply the ACL to
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -77,7 +77,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * A mapping of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -99,7 +99,7 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated VPC.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

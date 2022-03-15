@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.ExprArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
      * The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ExprArgs> condition;
 
     public Output<ExprArgs> getCondition() {
@@ -40,7 +40,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
      * - projectViewer:projectid — Viewers of the given project. For example, projectViewer:my-example-project
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -61,7 +61,7 @@ public final class BucketIamPolicyBindingsItemArgs extends io.pulumi.resources.R
      * - roles/storage.legacyBucketOwner — Read and write access to existing buckets with object listing/creation/deletion. Equivalent to an ACL entry on a bucket with the OWNER role.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

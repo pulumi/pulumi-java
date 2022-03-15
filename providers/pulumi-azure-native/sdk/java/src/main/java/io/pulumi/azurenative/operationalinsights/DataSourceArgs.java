@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.operationalinsights.enums.DataSourceKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the datasource resource.
      * 
      */
-    @InputImport(name="dataSourceName")
+    @Import(name="dataSourceName")
       private final @Nullable Output<String> dataSourceName;
 
     public Output<String> getDataSourceName() {
@@ -33,7 +33,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the DataSource.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,DataSourceKind>> kind;
 
     public Output<Either<String,DataSourceKind>> getKind() {
@@ -44,7 +44,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The data source properties in raw json format, each kind of data source have it's own schema.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -55,7 +55,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -77,7 +77,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

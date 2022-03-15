@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse extends io.p
      * Optional. The collection of the agent's responses.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final List<String> text;
 
     public List<String> getText() {

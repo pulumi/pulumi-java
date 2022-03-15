@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelVariableValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelExpressionVariable {
     /**
      * The friendly name of the variable to be used in the expression.
@@ -21,10 +21,10 @@ public final class AssetModelExpressionVariable {
      */
     private final AssetModelVariableValue value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelExpressionVariable(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") AssetModelVariableValue value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") AssetModelVariableValue value) {
         this.name = name;
         this.value = value;
     }

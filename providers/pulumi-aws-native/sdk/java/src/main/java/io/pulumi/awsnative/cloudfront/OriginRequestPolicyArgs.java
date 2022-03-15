@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
 
     public static final OriginRequestPolicyArgs Empty = new OriginRequestPolicyArgs();
 
-    @InputImport(name="originRequestPolicyConfig", required=true)
+    @Import(name="originRequestPolicyConfig", required=true)
       private final Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
 
     public Output<OriginRequestPolicyConfigArgs> getOriginRequestPolicyConfig() {

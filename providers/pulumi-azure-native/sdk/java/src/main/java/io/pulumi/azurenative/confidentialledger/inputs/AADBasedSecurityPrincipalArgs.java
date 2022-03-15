@@ -6,7 +6,7 @@ package io.pulumi.azurenative.confidentialledger.inputs;
 import io.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
      * LedgerRole associated with the Security Principal of Ledger
      * 
      */
-    @InputImport(name="ledgerRoleName")
+    @Import(name="ledgerRoleName")
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
     public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {
@@ -35,7 +35,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
      * UUID/GUID based Principal Id of the Security Principal
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -46,7 +46,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
      * UUID/GUID based Tenant Id of the Security Principal
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

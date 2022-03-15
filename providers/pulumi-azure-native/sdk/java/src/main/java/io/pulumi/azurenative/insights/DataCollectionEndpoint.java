@@ -11,7 +11,7 @@ import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseLogs
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseNetworkAcls;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The endpoint used by agents to access their configuration.
      * 
      */
-    @OutputExport(name="configurationAccess", type=DataCollectionEndpointResponseConfigurationAccess.class, parameters={})
+    @Export(name="configurationAccess", type=DataCollectionEndpointResponseConfigurationAccess.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> configurationAccess;
 
     /**
@@ -53,7 +53,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * Description of the data collection endpoint.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -67,7 +67,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * Resource entity tag (ETag).
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -81,7 +81,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
      * 
      */
-    @OutputExport(name="immutableId", type=String.class, parameters={})
+    @Export(name="immutableId", type=String.class, parameters={})
     private Output</* @Nullable */ String> immutableId;
 
     /**
@@ -95,7 +95,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The kind of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -109,7 +109,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -123,7 +123,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The endpoint used by clients to ingest logs.
      * 
      */
-    @OutputExport(name="logsIngestion", type=DataCollectionEndpointResponseLogsIngestion.class, parameters={})
+    @Export(name="logsIngestion", type=DataCollectionEndpointResponseLogsIngestion.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> logsIngestion;
 
     /**
@@ -137,7 +137,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * Network access control rules for the endpoints.
      * 
      */
-    @OutputExport(name="networkAcls", type=DataCollectionEndpointResponseNetworkAcls.class, parameters={})
+    @Export(name="networkAcls", type=DataCollectionEndpointResponseNetworkAcls.class, parameters={})
     private Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> networkAcls;
 
     /**
@@ -165,7 +165,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The resource provisioning state. This property is READ-ONLY.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -179,7 +179,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=DataCollectionEndpointResourceResponseSystemData.class, parameters={})
+    @Export(name="systemData", type=DataCollectionEndpointResourceResponseSystemData.class, parameters={})
     private Output<DataCollectionEndpointResourceResponseSystemData> systemData;
 
     /**
@@ -193,7 +193,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -207,7 +207,7 @@ public class DataCollectionEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.Invo
 
     public static final TaskSchedulingPolicyResponse Empty = new TaskSchedulingPolicyResponse();
 
-    @InputImport(name="nodeFillType", required=true)
+    @Import(name="nodeFillType", required=true)
       private final String nodeFillType;
 
     public String getNodeFillType() {

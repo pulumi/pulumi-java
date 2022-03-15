@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkforceOidcConfig {
     /**
      * The OIDC IdP authorization endpoint used to configure your private workforce.
@@ -50,16 +50,16 @@ public final class WorkforceOidcConfig {
      */
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkforceOidcConfig(
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("jwksUri") String jwksUri,
-        @OutputCustomType.Parameter("logoutEndpoint") String logoutEndpoint,
-        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
-        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("jwksUri") String jwksUri,
+        @CustomType.Parameter("logoutEndpoint") String logoutEndpoint,
+        @CustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @CustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

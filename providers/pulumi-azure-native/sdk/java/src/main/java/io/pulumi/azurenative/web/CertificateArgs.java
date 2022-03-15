@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * CNAME of the certificate to be issued via free certificate
      * 
      */
-    @InputImport(name="canonicalName")
+    @Import(name="canonicalName")
       private final @Nullable Output<String> canonicalName;
 
     public Output<String> getCanonicalName() {
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Method of domain validation for free cert
      * 
      */
-    @InputImport(name="domainValidationMethod")
+    @Import(name="domainValidationMethod")
       private final @Nullable Output<String> domainValidationMethod;
 
     public Output<String> getDomainValidationMethod() {
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Host names the certificate applies to.
      * 
      */
-    @InputImport(name="hostNames")
+    @Import(name="hostNames")
       private final @Nullable Output<List<String>> hostNames;
 
     public Output<List<String>> getHostNames() {
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Key Vault Csm resource Id.
      * 
      */
-    @InputImport(name="keyVaultId")
+    @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
     public Output<String> getKeyVaultId() {
@@ -64,7 +64,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Key Vault secret name.
      * 
      */
-    @InputImport(name="keyVaultSecretName")
+    @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
     public Output<String> getKeyVaultSecretName() {
@@ -75,7 +75,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -86,7 +86,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -97,7 +97,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the certificate.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -108,7 +108,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Certificate password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -119,7 +119,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Pfx blob.
      * 
      */
-    @InputImport(name="pfxBlob")
+    @Import(name="pfxBlob")
       private final @Nullable Output<String> pfxBlob;
 
     public Output<String> getPfxBlob() {
@@ -130,7 +130,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -141,7 +141,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
      */
-    @InputImport(name="serverFarmId")
+    @Import(name="serverFarmId")
       private final @Nullable Output<String> serverFarmId;
 
     public Output<String> getServerFarmId() {
@@ -152,7 +152,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AudioOverlayResponse {
     /**
      * The gain level of audio in the overlay. The value should be in the range [0, 1.0]. The default is 1.0.
@@ -49,15 +49,15 @@ public final class AudioOverlayResponse {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioOverlayResponse(
-        @OutputCustomType.Parameter("audioGainLevel") @Nullable Double audioGainLevel,
-        @OutputCustomType.Parameter("end") @Nullable String end,
-        @OutputCustomType.Parameter("fadeInDuration") @Nullable String fadeInDuration,
-        @OutputCustomType.Parameter("fadeOutDuration") @Nullable String fadeOutDuration,
-        @OutputCustomType.Parameter("inputLabel") String inputLabel,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("start") @Nullable String start) {
+        @CustomType.Parameter("audioGainLevel") @Nullable Double audioGainLevel,
+        @CustomType.Parameter("end") @Nullable String end,
+        @CustomType.Parameter("fadeInDuration") @Nullable String fadeInDuration,
+        @CustomType.Parameter("fadeOutDuration") @Nullable String fadeOutDuration,
+        @CustomType.Parameter("inputLabel") String inputLabel,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("start") @Nullable String start) {
         this.audioGainLevel = audioGainLevel;
         this.end = end;
         this.fadeInDuration = fadeInDuration;

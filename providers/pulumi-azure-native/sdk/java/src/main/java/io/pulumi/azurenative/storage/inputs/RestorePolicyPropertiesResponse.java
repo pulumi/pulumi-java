@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
@@ -35,7 +35,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * Blob restore is enabled if set to true.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -46,7 +46,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * Deprecated in favor of minRestoreTime property.
      * 
      */
-    @InputImport(name="lastEnabledTime", required=true)
+    @Import(name="lastEnabledTime", required=true)
       private final String lastEnabledTime;
 
     public String getLastEnabledTime() {
@@ -57,7 +57,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * Returns the minimum date and time that the restore can be started.
      * 
      */
-    @InputImport(name="minRestoreTime", required=true)
+    @Import(name="minRestoreTime", required=true)
       private final String minRestoreTime;
 
     public String getMinRestoreTime() {

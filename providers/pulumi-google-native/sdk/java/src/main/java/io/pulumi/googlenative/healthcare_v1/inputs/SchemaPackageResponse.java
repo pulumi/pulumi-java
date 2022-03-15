@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7SchemaConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7TypesConfigResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
      * 
      */
-    @InputImport(name="ignoreMinOccurs", required=true)
+    @Import(name="ignoreMinOccurs", required=true)
       private final Boolean ignoreMinOccurs;
 
     public Boolean getIgnoreMinOccurs() {
@@ -35,7 +35,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
      * 
      */
-    @InputImport(name="schemas", required=true)
+    @Import(name="schemas", required=true)
       private final List<Hl7SchemaConfigResponse> schemas;
 
     public List<Hl7SchemaConfigResponse> getSchemas() {
@@ -46,7 +46,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * Determines how messages that fail to parse are handled.
      * 
      */
-    @InputImport(name="schematizedParsingType", required=true)
+    @Import(name="schematizedParsingType", required=true)
       private final String schematizedParsingType;
 
     public String getSchematizedParsingType() {
@@ -57,7 +57,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
      * 
      */
-    @InputImport(name="types", required=true)
+    @Import(name="types", required=true)
       private final List<Hl7TypesConfigResponse> types;
 
     public List<Hl7TypesConfigResponse> getTypes() {
@@ -68,7 +68,7 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
      * Determines how unexpected segments (segments not matched to the schema) are handled.
      * 
      */
-    @InputImport(name="unexpectedSegmentHandling", required=true)
+    @Import(name="unexpectedSegmentHandling", required=true)
       private final String unexpectedSegmentHandling;
 
     public String getUnexpectedSegmentHandling() {

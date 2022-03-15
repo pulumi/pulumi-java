@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileOAuthProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSAPODataConnectorProfileProperties {
     private final @Nullable String applicationHostUrl;
     private final @Nullable String applicationServicePath;
@@ -21,15 +21,15 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
     private final @Nullable Integer portNumber;
     private final @Nullable String privateLinkServiceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileProperties(
-        @OutputCustomType.Parameter("applicationHostUrl") @Nullable String applicationHostUrl,
-        @OutputCustomType.Parameter("applicationServicePath") @Nullable String applicationServicePath,
-        @OutputCustomType.Parameter("clientNumber") @Nullable String clientNumber,
-        @OutputCustomType.Parameter("logonLanguage") @Nullable String logonLanguage,
-        @OutputCustomType.Parameter("oAuthProperties") @Nullable ConnectorProfileOAuthProperties oAuthProperties,
-        @OutputCustomType.Parameter("portNumber") @Nullable Integer portNumber,
-        @OutputCustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName) {
+        @CustomType.Parameter("applicationHostUrl") @Nullable String applicationHostUrl,
+        @CustomType.Parameter("applicationServicePath") @Nullable String applicationServicePath,
+        @CustomType.Parameter("clientNumber") @Nullable String clientNumber,
+        @CustomType.Parameter("logonLanguage") @Nullable String logonLanguage,
+        @CustomType.Parameter("oAuthProperties") @Nullable ConnectorProfileOAuthProperties oAuthProperties,
+        @CustomType.Parameter("portNumber") @Nullable Integer portNumber,
+        @CustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName) {
         this.applicationHostUrl = applicationHostUrl;
         this.applicationServicePath = applicationServicePath;
         this.clientNumber = clientNumber;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.enums.ManagedIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * The type of managed identity for the resource.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ManagedIdentityType> type;
 
     public Output<ManagedIdentityType> getType() {
@@ -37,7 +37,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

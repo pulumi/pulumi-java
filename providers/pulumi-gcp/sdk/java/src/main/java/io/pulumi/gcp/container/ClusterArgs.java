@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterAddonsConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterAuthenticatorGroupsConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingArgs;
@@ -48,7 +48,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="addonsConfig")
+    @Import(name="addonsConfig")
       private final @Nullable Output<ClusterAddonsConfigArgs> addonsConfig;
 
     public Output<ClusterAddonsConfigArgs> getAddonsConfig() {
@@ -61,7 +61,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="authenticatorGroupsConfig")
+    @Import(name="authenticatorGroupsConfig")
       private final @Nullable Output<ClusterAuthenticatorGroupsConfigArgs> authenticatorGroupsConfig;
 
     public Output<ClusterAuthenticatorGroupsConfigArgs> getAuthenticatorGroupsConfig() {
@@ -76,7 +76,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * for more details. Structure is documented below.
      * 
      */
-    @InputImport(name="clusterAutoscaling")
+    @Import(name="clusterAutoscaling")
       private final @Nullable Output<ClusterClusterAutoscalingArgs> clusterAutoscaling;
 
     public Output<ClusterClusterAutoscalingArgs> getClusterAutoscaling() {
@@ -90,7 +90,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * only work for routes-based clusters, where `ip_allocation_policy` is not defined.
      * 
      */
-    @InputImport(name="clusterIpv4Cidr")
+    @Import(name="clusterIpv4Cidr")
       private final @Nullable Output<String> clusterIpv4Cidr;
 
     public Output<String> getClusterIpv4Cidr() {
@@ -103,7 +103,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="clusterTelemetry")
+    @Import(name="clusterTelemetry")
       private final @Nullable Output<ClusterClusterTelemetryArgs> clusterTelemetry;
 
     public Output<ClusterClusterTelemetryArgs> getClusterTelemetry() {
@@ -114,7 +114,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for [Confidential Nodes](https://cloud.google.com/kubernetes-engine/docs/how-to/confidential-gke-nodes) feature. Structure is documented below documented below.
      * 
      */
-    @InputImport(name="confidentialNodes")
+    @Import(name="confidentialNodes")
       private final @Nullable Output<ClusterConfidentialNodesArgs> confidentialNodes;
 
     public Output<ClusterConfidentialNodesArgs> getConfidentialNodes() {
@@ -125,7 +125,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="databaseEncryption")
+    @Import(name="databaseEncryption")
       private final @Nullable Output<ClusterDatabaseEncryptionArgs> databaseEncryption;
 
     public Output<ClusterDatabaseEncryptionArgs> getDatabaseEncryption() {
@@ -136,7 +136,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
      * 
      */
-    @InputImport(name="datapathProvider")
+    @Import(name="datapathProvider")
       private final @Nullable Output<String> datapathProvider;
 
     public Output<String> getDatapathProvider() {
@@ -150,7 +150,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * for more information.
      * 
      */
-    @InputImport(name="defaultMaxPodsPerNode")
+    @Import(name="defaultMaxPodsPerNode")
       private final @Nullable Output<Integer> defaultMaxPodsPerNode;
 
     public Output<Integer> getDefaultMaxPodsPerNode() {
@@ -161,7 +161,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * [GKE SNAT](https://cloud.google.com/kubernetes-engine/docs/how-to/ip-masquerade-agent#how_ipmasq_works) DefaultSnatStatus contains the desired state of whether default sNAT should be disabled on the cluster, [API doc](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#networkconfig). Structure is documented below
      * 
      */
-    @InputImport(name="defaultSnatStatus")
+    @Import(name="defaultSnatStatus")
       private final @Nullable Output<ClusterDefaultSnatStatusArgs> defaultSnatStatus;
 
     public Output<ClusterDefaultSnatStatusArgs> getDefaultSnatStatus() {
@@ -172,7 +172,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the cluster.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -183,7 +183,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
      * 
      */
-    @InputImport(name="dnsConfig")
+    @Import(name="dnsConfig")
       private final @Nullable Output<ClusterDnsConfigArgs> dnsConfig;
 
     public Output<ClusterDnsConfigArgs> getDnsConfig() {
@@ -197,7 +197,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * for available features.
      * 
      */
-    @InputImport(name="enableAutopilot")
+    @Import(name="enableAutopilot")
       private final @Nullable Output<Boolean> enableAutopilot;
 
     public Output<Boolean> getEnableAutopilot() {
@@ -209,7 +209,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * If enabled, all container images will be validated by Google Binary Authorization.
      * 
      */
-    @InputImport(name="enableBinaryAuthorization")
+    @Import(name="enableBinaryAuthorization")
       private final @Nullable Output<Boolean> enableBinaryAuthorization;
 
     public Output<Boolean> getEnableBinaryAuthorization() {
@@ -220,7 +220,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
      * 
      */
-    @InputImport(name="enableIntranodeVisibility")
+    @Import(name="enableIntranodeVisibility")
       private final @Nullable Output<Boolean> enableIntranodeVisibility;
 
     public Output<Boolean> getEnableIntranodeVisibility() {
@@ -233,7 +233,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * and will be automatically deleted after 30 days.
      * 
      */
-    @InputImport(name="enableKubernetesAlpha")
+    @Import(name="enableKubernetesAlpha")
       private final @Nullable Output<Boolean> enableKubernetesAlpha;
 
     public Output<Boolean> getEnableKubernetesAlpha() {
@@ -244,7 +244,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Whether L4ILB Subsetting is enabled for this cluster.
      * 
      */
-    @InputImport(name="enableL4IlbSubsetting")
+    @Import(name="enableL4IlbSubsetting")
       private final @Nullable Output<Boolean> enableL4IlbSubsetting;
 
     public Output<Boolean> getEnableL4IlbSubsetting() {
@@ -258,7 +258,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to `false`
      * 
      */
-    @InputImport(name="enableLegacyAbac")
+    @Import(name="enableLegacyAbac")
       private final @Nullable Output<Boolean> enableLegacyAbac;
 
     public Output<Boolean> getEnableLegacyAbac() {
@@ -269,7 +269,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
      * 
      */
-    @InputImport(name="enableShieldedNodes")
+    @Import(name="enableShieldedNodes")
       private final @Nullable Output<Boolean> enableShieldedNodes;
 
     public Output<Boolean> getEnableShieldedNodes() {
@@ -281,7 +281,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
      * 
      */
-    @InputImport(name="enableTpu")
+    @Import(name="enableTpu")
       private final @Nullable Output<Boolean> enableTpu;
 
     public Output<Boolean> getEnableTpu() {
@@ -292,7 +292,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * . Structure is documented below.
      * 
      */
-    @InputImport(name="identityServiceConfig")
+    @Import(name="identityServiceConfig")
       private final @Nullable Output<ClusterIdentityServiceConfigArgs> identityServiceConfig;
 
     public Output<ClusterIdentityServiceConfigArgs> getIdentityServiceConfig() {
@@ -308,7 +308,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * `remove_default_node_pool` to `true`.
      * 
      */
-    @InputImport(name="initialNodeCount")
+    @Import(name="initialNodeCount")
       private final @Nullable Output<Integer> initialNodeCount;
 
     public Output<Integer> getInitialNodeCount() {
@@ -322,7 +322,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * below.
      * 
      */
-    @InputImport(name="ipAllocationPolicy")
+    @Import(name="ipAllocationPolicy")
       private final @Nullable Output<ClusterIpAllocationPolicyArgs> ipAllocationPolicy;
 
     public Output<ClusterIpAllocationPolicyArgs> getIpAllocationPolicy() {
@@ -338,7 +338,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * the region, and with default node locations in those zones as well
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -350,7 +350,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<ClusterLoggingConfigArgs> loggingConfig;
 
     public Output<ClusterLoggingConfigArgs> getLoggingConfig() {
@@ -363,7 +363,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * `logging.googleapis.com/kubernetes`(Stackdriver Kubernetes Engine Logging), and `none`. Defaults to `logging.googleapis.com/kubernetes`
      * 
      */
-    @InputImport(name="loggingService")
+    @Import(name="loggingService")
       private final @Nullable Output<String> loggingService;
 
     public Output<String> getLoggingService() {
@@ -375,7 +375,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * documented below.
      * 
      */
-    @InputImport(name="maintenancePolicy")
+    @Import(name="maintenancePolicy")
       private final @Nullable Output<ClusterMaintenancePolicyArgs> maintenancePolicy;
 
     public Output<ClusterMaintenancePolicyArgs> getMaintenancePolicy() {
@@ -391,7 +391,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="masterAuth")
+    @Import(name="masterAuth")
       private final @Nullable Output<ClusterMasterAuthArgs> masterAuth;
 
     public Output<ClusterMasterAuthArgs> getMasterAuth() {
@@ -406,7 +406,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="masterAuthorizedNetworksConfig")
+    @Import(name="masterAuthorizedNetworksConfig")
       private final @Nullable Output<ClusterMasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
     public Output<ClusterMasterAuthorizedNetworksConfigArgs> getMasterAuthorizedNetworksConfig() {
@@ -425,7 +425,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * describe the various acceptable formats for this field.
      * 
      */
-    @InputImport(name="minMasterVersion")
+    @Import(name="minMasterVersion")
       private final @Nullable Output<String> minMasterVersion;
 
     public Output<String> getMinMasterVersion() {
@@ -437,7 +437,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="monitoringConfig")
+    @Import(name="monitoringConfig")
       private final @Nullable Output<ClusterMonitoringConfigArgs> monitoringConfig;
 
     public Output<ClusterMonitoringConfigArgs> getMonitoringConfig() {
@@ -454,7 +454,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to `monitoring.googleapis.com/kubernetes`
      * 
      */
-    @InputImport(name="monitoringService")
+    @Import(name="monitoringService")
       private final @Nullable Output<String> monitoringService;
 
     public Output<String> getMonitoringService() {
@@ -466,7 +466,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * location.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -479,7 +479,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * shared network.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -492,7 +492,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * feature. Structure is documented below.
      * 
      */
-    @InputImport(name="networkPolicy")
+    @Import(name="networkPolicy")
       private final @Nullable Output<ClusterNetworkPolicyArgs> networkPolicy;
 
     public Output<ClusterNetworkPolicyArgs> getNetworkPolicy() {
@@ -505,7 +505,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * and requires the `ip_allocation_policy` block to be defined. By default when this field is unspecified, GKE will create a `ROUTES`-based cluster.
      * 
      */
-    @InputImport(name="networkingMode")
+    @Import(name="networkingMode")
       private final @Nullable Output<String> networkingMode;
 
     public Output<String> getNetworkingMode() {
@@ -520,7 +520,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nodeConfig")
+    @Import(name="nodeConfig")
       private final @Nullable Output<ClusterNodeConfigArgs> nodeConfig;
 
     public Output<ClusterNodeConfigArgs> getNodeConfig() {
@@ -534,7 +534,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * a zonal cluster, omit the cluster's zone.
      * 
      */
-    @InputImport(name="nodeLocations")
+    @Import(name="nodeLocations")
       private final @Nullable Output<List<String>> nodeLocations;
 
     public Output<List<String>> getNodeLocations() {
@@ -550,7 +550,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * gcp.container.NodePool resource instead of this property.
      * 
      */
-    @InputImport(name="nodePools")
+    @Import(name="nodePools")
       private final @Nullable Output<List<ClusterNodePoolArgs>> nodePools;
 
     public Output<List<ClusterNodePoolArgs>> getNodePools() {
@@ -568,7 +568,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * To update nodes in other node pools, use the `version` attribute on the node pool.
      * 
      */
-    @InputImport(name="nodeVersion")
+    @Import(name="nodeVersion")
       private final @Nullable Output<String> nodeVersion;
 
     public Output<String> getNodeVersion() {
@@ -579,7 +579,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the [cluster upgrade notifications](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-upgrade-notifications) feature. Structure is documented below.
      * 
      */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<ClusterNotificationConfigArgs> notificationConfig;
 
     public Output<ClusterNotificationConfigArgs> getNotificationConfig() {
@@ -592,7 +592,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="podSecurityPolicyConfig")
+    @Import(name="podSecurityPolicyConfig")
       private final @Nullable Output<ClusterPodSecurityPolicyConfigArgs> podSecurityPolicyConfig;
 
     public Output<ClusterPodSecurityPolicyConfigArgs> getPodSecurityPolicyConfig() {
@@ -604,7 +604,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * clusters with private nodes. Structure is documented below.
      * 
      */
-    @InputImport(name="privateClusterConfig")
+    @Import(name="privateClusterConfig")
       private final @Nullable Output<ClusterPrivateClusterConfigArgs> privateClusterConfig;
 
     public Output<ClusterPrivateClusterConfigArgs> getPrivateClusterConfig() {
@@ -615,7 +615,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4).
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess")
+    @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<String> privateIpv6GoogleAccess;
 
     public Output<String> getPrivateIpv6GoogleAccess() {
@@ -627,7 +627,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -646,7 +646,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * channel. Structure is documented below.
      * 
      */
-    @InputImport(name="releaseChannel")
+    @Import(name="releaseChannel")
       private final @Nullable Output<ClusterReleaseChannelArgs> releaseChannel;
 
     public Output<ClusterReleaseChannelArgs> getReleaseChannel() {
@@ -660,7 +660,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * setting `initial_node_count` to at least `1`.
      * 
      */
-    @InputImport(name="removeDefaultNodePool")
+    @Import(name="removeDefaultNodePool")
       private final @Nullable Output<Boolean> removeDefaultNodePool;
 
     public Output<Boolean> getRemoveDefaultNodePool() {
@@ -671,7 +671,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
      * 
      */
-    @InputImport(name="resourceLabels")
+    @Import(name="resourceLabels")
       private final @Nullable Output<Map<String,String>> resourceLabels;
 
     public Output<Map<String,String>> getResourceLabels() {
@@ -684,7 +684,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="resourceUsageExportConfig")
+    @Import(name="resourceUsageExportConfig")
       private final @Nullable Output<ClusterResourceUsageExportConfigArgs> resourceUsageExportConfig;
 
     public Output<ClusterResourceUsageExportConfigArgs> getResourceUsageExportConfig() {
@@ -696,7 +696,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * subnetwork in which the cluster's instances are launched.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -708,7 +708,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="verticalPodAutoscaling")
+    @Import(name="verticalPodAutoscaling")
       private final @Nullable Output<ClusterVerticalPodAutoscalingArgs> verticalPodAutoscaling;
 
     public Output<ClusterVerticalPodAutoscalingArgs> getVerticalPodAutoscaling() {
@@ -721,7 +721,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="workloadIdentityConfig")
+    @Import(name="workloadIdentityConfig")
       private final @Nullable Output<ClusterWorkloadIdentityConfigArgs> workloadIdentityConfig;
 
     public Output<ClusterWorkloadIdentityConfigArgs> getWorkloadIdentityConfig() {

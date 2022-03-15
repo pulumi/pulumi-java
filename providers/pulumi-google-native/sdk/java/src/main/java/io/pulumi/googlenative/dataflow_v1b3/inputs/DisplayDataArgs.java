@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of a boolean type.
      * 
      */
-    @InputImport(name="boolValue")
+    @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
     public Output<Boolean> getBoolValue() {
@@ -35,7 +35,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of duration type.
      * 
      */
-    @InputImport(name="durationValue")
+    @Import(name="durationValue")
       private final @Nullable Output<String> durationValue;
 
     public Output<String> getDurationValue() {
@@ -46,7 +46,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of float type.
      * 
      */
-    @InputImport(name="floatValue")
+    @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
     public Output<Double> getFloatValue() {
@@ -57,7 +57,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of int64 type.
      * 
      */
-    @InputImport(name="int64Value")
+    @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
 
     public Output<String> getInt64Value() {
@@ -68,7 +68,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of java class type.
      * 
      */
-    @InputImport(name="javaClassValue")
+    @Import(name="javaClassValue")
       private final @Nullable Output<String> javaClassValue;
 
     public Output<String> getJavaClassValue() {
@@ -79,7 +79,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * The key identifying the display data. This is intended to be used as a label for the display data when viewed in a dax monitoring system.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -90,7 +90,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * An optional label to display in a dax UI for the element.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -101,7 +101,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace for the key. This is usually a class name or programming language namespace (i.e. python module) which defines the display data. This allows a dax monitoring system to specially handle the data and perform custom rendering.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -112,7 +112,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * A possible additional shorter value to display. For example a java_class_name_value of com.mypackage.MyDoFn will be stored with MyDoFn as the short_str_value and com.mypackage.MyDoFn as the java_class_name value. short_str_value can be displayed and java_class_name_value will be displayed as a tooltip.
      * 
      */
-    @InputImport(name="shortStrValue")
+    @Import(name="shortStrValue")
       private final @Nullable Output<String> shortStrValue;
 
     public Output<String> getShortStrValue() {
@@ -123,7 +123,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of string type.
      * 
      */
-    @InputImport(name="strValue")
+    @Import(name="strValue")
       private final @Nullable Output<String> strValue;
 
     public Output<String> getStrValue() {
@@ -134,7 +134,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * Contains value if the data is of timestamp type.
      * 
      */
-    @InputImport(name="timestampValue")
+    @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {
@@ -145,7 +145,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
      * An optional full URL.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectorySelfServicePermissions {
     /**
      * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
@@ -37,13 +37,13 @@ public final class DirectorySelfServicePermissions {
      */
     private final @Nullable Boolean switchRunningMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectorySelfServicePermissions(
-        @OutputCustomType.Parameter("changeComputeType") @Nullable Boolean changeComputeType,
-        @OutputCustomType.Parameter("increaseVolumeSize") @Nullable Boolean increaseVolumeSize,
-        @OutputCustomType.Parameter("rebuildWorkspace") @Nullable Boolean rebuildWorkspace,
-        @OutputCustomType.Parameter("restartWorkspace") @Nullable Boolean restartWorkspace,
-        @OutputCustomType.Parameter("switchRunningMode") @Nullable Boolean switchRunningMode) {
+        @CustomType.Parameter("changeComputeType") @Nullable Boolean changeComputeType,
+        @CustomType.Parameter("increaseVolumeSize") @Nullable Boolean increaseVolumeSize,
+        @CustomType.Parameter("rebuildWorkspace") @Nullable Boolean rebuildWorkspace,
+        @CustomType.Parameter("restartWorkspace") @Nullable Boolean restartWorkspace,
+        @CustomType.Parameter("switchRunningMode") @Nullable Boolean switchRunningMode) {
         this.changeComputeType = changeComputeType;
         this.increaseVolumeSize = increaseVolumeSize;
         this.rebuildWorkspace = rebuildWorkspace;

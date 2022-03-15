@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * This is private endpoint resource created with Microsoft.Network resource provider.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {

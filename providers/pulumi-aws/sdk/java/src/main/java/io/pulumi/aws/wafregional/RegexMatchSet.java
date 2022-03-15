@@ -8,7 +8,7 @@ import io.pulumi.aws.wafregional.RegexMatchSetArgs;
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetState;
 import io.pulumi.aws.wafregional.outputs.RegexMatchSetRegexMatchTuple;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class RegexMatchSet extends io.pulumi.resources.CustomResource {
      * The name or description of the Regex Match Set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class RegexMatchSet extends io.pulumi.resources.CustomResource {
      * The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
      * 
      */
-    @OutputExport(name="regexMatchTuples", type=List.class, parameters={RegexMatchSetRegexMatchTuple.class})
+    @Export(name="regexMatchTuples", type=List.class, parameters={RegexMatchSetRegexMatchTuple.class})
     private Output</* @Nullable */ List<RegexMatchSetRegexMatchTuple>> regexMatchTuples;
 
     /**

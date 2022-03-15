@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.MaterialResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SlsaBuilderResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SlsaMetadataResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SlsaRecipeRespo
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SlsaProvenanceResponse {
     /**
      * builder is the builder of this provenance
@@ -34,12 +34,12 @@ public final class SlsaProvenanceResponse {
      */
     private final SlsaRecipeResponse recipe;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlsaProvenanceResponse(
-        @OutputCustomType.Parameter("builder") SlsaBuilderResponse builder,
-        @OutputCustomType.Parameter("materials") List<MaterialResponse> materials,
-        @OutputCustomType.Parameter("metadata") SlsaMetadataResponse metadata,
-        @OutputCustomType.Parameter("recipe") SlsaRecipeResponse recipe) {
+        @CustomType.Parameter("builder") SlsaBuilderResponse builder,
+        @CustomType.Parameter("materials") List<MaterialResponse> materials,
+        @CustomType.Parameter("metadata") SlsaMetadataResponse metadata,
+        @CustomType.Parameter("recipe") SlsaRecipeResponse recipe) {
         this.builder = builder;
         this.materials = materials;
         this.metadata = metadata;

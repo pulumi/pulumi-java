@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AzureStaticWebAppsRegistrationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureStaticWebAppsResponse {
     /**
      * <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -23,10 +23,10 @@ public final class AzureStaticWebAppsResponse {
      */
     private final @Nullable AzureStaticWebAppsRegistrationResponse registration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureStaticWebAppsResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("registration") @Nullable AzureStaticWebAppsRegistrationResponse registration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("registration") @Nullable AzureStaticWebAppsRegistrationResponse registration) {
         this.enabled = enabled;
         this.registration = registration;
     }

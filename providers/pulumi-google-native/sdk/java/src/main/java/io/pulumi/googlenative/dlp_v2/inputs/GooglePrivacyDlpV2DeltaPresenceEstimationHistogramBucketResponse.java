@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * Number of records within these probability bounds.
      * 
      */
-    @InputImport(name="bucketSize", required=true)
+    @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
     public String getBucketSize() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * Total number of distinct quasi-identifier tuple values in this bucket.
      * 
      */
-    @InputImport(name="bucketValueCount", required=true)
+    @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
     public String getBucketValueCount() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
      */
-    @InputImport(name="bucketValues", required=true)
+    @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> getBucketValues() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * Always greater than or equal to min_probability.
      * 
      */
-    @InputImport(name="maxProbability", required=true)
+    @Import(name="maxProbability", required=true)
       private final Double maxProbability;
 
     public Double getMaxProbability() {
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * Between 0 and 1.
      * 
      */
-    @InputImport(name="minProbability", required=true)
+    @Import(name="minProbability", required=true)
       private final Double minProbability;
 
     public Double getMinProbability() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedPrefixListEntry {
     /**
      * CIDR block of this entry.
@@ -22,10 +22,10 @@ public final class ManagedPrefixListEntry {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedPrefixListEntry(
-        @OutputCustomType.Parameter("cidr") String cidr,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("cidr") String cidr,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.cidr = cidr;
         this.description = description;
     }

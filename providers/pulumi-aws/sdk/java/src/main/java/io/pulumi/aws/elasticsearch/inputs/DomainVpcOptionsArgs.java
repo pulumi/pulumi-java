@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DomainVpcOptionsArgs Empty = new DomainVpcOptionsArgs();
 
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -26,7 +26,7 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
      * List of VPC Security Group IDs to be applied to the Elasticsearch domain endpoints. If omitted, the default Security Group for the VPC will be used.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -37,14 +37,14 @@ public final class DomainVpcOptionsArgs extends io.pulumi.resources.ResourceArgs
      * List of VPC Subnet IDs for the Elasticsearch domain endpoints to be created in.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

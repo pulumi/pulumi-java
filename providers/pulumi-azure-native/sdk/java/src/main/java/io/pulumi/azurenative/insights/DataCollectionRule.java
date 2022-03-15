@@ -10,7 +10,7 @@ import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDestinat
 import io.pulumi.azurenative.insights.outputs.DataFlowResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The specification of data flows.
      * 
      */
-    @OutputExport(name="dataFlows", type=List.class, parameters={DataFlowResponse.class})
+    @Export(name="dataFlows", type=List.class, parameters={DataFlowResponse.class})
     private Output</* @Nullable */ List<DataFlowResponse>> dataFlows;
 
     /**
@@ -53,7 +53,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
      * 
      */
-    @OutputExport(name="dataSources", type=DataCollectionRuleResponseDataSources.class, parameters={})
+    @Export(name="dataSources", type=DataCollectionRuleResponseDataSources.class, parameters={})
     private Output</* @Nullable */ DataCollectionRuleResponseDataSources> dataSources;
 
     /**
@@ -68,7 +68,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * Description of the data collection rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -82,7 +82,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The specification of destinations.
      * 
      */
-    @OutputExport(name="destinations", type=DataCollectionRuleResponseDestinations.class, parameters={})
+    @Export(name="destinations", type=DataCollectionRuleResponseDestinations.class, parameters={})
     private Output</* @Nullable */ DataCollectionRuleResponseDestinations> destinations;
 
     /**
@@ -96,7 +96,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * Resource entity tag (ETag).
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The immutable ID of this data collection rule. This property is READ-ONLY.
      * 
      */
-    @OutputExport(name="immutableId", type=String.class, parameters={})
+    @Export(name="immutableId", type=String.class, parameters={})
     private Output<String> immutableId;
 
     /**
@@ -124,7 +124,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The kind of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -138,7 +138,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -152,7 +152,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The resource provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -180,7 +180,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -194,7 +194,7 @@ public class DataCollectionRule extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

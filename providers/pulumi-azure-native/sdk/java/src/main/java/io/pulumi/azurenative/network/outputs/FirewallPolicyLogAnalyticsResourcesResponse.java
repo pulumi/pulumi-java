@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyLogAnalyticsWorkspaceResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyLogAnalyticsResourcesResponse {
     /**
      * The default workspace Id for Firewall Policy Insights.
@@ -24,10 +24,10 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse {
      */
     private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyLogAnalyticsResourcesResponse(
-        @OutputCustomType.Parameter("defaultWorkspaceId") @Nullable SubResourceResponse defaultWorkspaceId,
-        @OutputCustomType.Parameter("workspaces") @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces) {
+        @CustomType.Parameter("defaultWorkspaceId") @Nullable SubResourceResponse defaultWorkspaceId,
+        @CustomType.Parameter("workspaces") @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces) {
         this.defaultWorkspaceId = defaultWorkspaceId;
         this.workspaces = workspaces;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleGetArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<SecurityScanConfigAuthenticationGetArgs> authentication;
 
     public Output<SecurityScanConfigAuthenticationGetArgs> getAuthentication() {
@@ -36,7 +36,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * https://cloud.google.com/security-scanner/docs/excluded-urls
      * 
      */
-    @InputImport(name="blacklistPatterns")
+    @Import(name="blacklistPatterns")
       private final @Nullable Output<List<String>> blacklistPatterns;
 
     public Output<List<String>> getBlacklistPatterns() {
@@ -47,7 +47,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * The user provider display name of the ScanConfig.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -60,7 +60,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * Possible values are `ENABLED` and `DISABLED`.
      * 
      */
-    @InputImport(name="exportToSecurityCommandCenter")
+    @Import(name="exportToSecurityCommandCenter")
       private final @Nullable Output<String> exportToSecurityCommandCenter;
 
     public Output<String> getExportToSecurityCommandCenter() {
@@ -72,7 +72,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * Defaults to 15.
      * 
      */
-    @InputImport(name="maxQps")
+    @Import(name="maxQps")
       private final @Nullable Output<Integer> maxQps;
 
     public Output<Integer> getMaxQps() {
@@ -83,7 +83,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -107,7 +107,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<SecurityScanConfigScheduleGetArgs> schedule;
 
     public Output<SecurityScanConfigScheduleGetArgs> getSchedule() {
@@ -118,7 +118,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * The starting URLs from which the scanner finds site pages.
      * 
      */
-    @InputImport(name="startingUrls")
+    @Import(name="startingUrls")
       private final @Nullable Output<List<String>> startingUrls;
 
     public Output<List<String>> getStartingUrls() {
@@ -130,7 +130,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * Each value may be one of `APP_ENGINE` and `COMPUTE`.
      * 
      */
-    @InputImport(name="targetPlatforms")
+    @Import(name="targetPlatforms")
       private final @Nullable Output<List<String>> targetPlatforms;
 
     public Output<List<String>> getTargetPlatforms() {
@@ -143,7 +143,7 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
      * Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
      * 
      */
-    @InputImport(name="userAgent")
+    @Import(name="userAgent")
       private final @Nullable Output<String> userAgent;
 
     public Output<String> getUserAgent() {

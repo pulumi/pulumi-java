@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RuleResultsPropertiesResponse extends io.pulumi.resources.Inv
      * Expected results in the baseline.
      * 
      */
-    @InputImport(name="results")
+    @Import(name="results")
       private final @Nullable List<List<String>> results;
 
     public List<List<String>> getResults() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetActiveReceiptRuleSetResult {
     /**
      * The SES receipt rule set ARN.
@@ -25,11 +25,11 @@ public final class GetActiveReceiptRuleSetResult {
      */
     private final String ruleSetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetActiveReceiptRuleSetResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ruleSetName") String ruleSetName) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ruleSetName") String ruleSetName) {
         this.arn = arn;
         this.id = id;
         this.ruleSetName = ruleSetName;

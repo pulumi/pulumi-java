@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMutationProtection;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupAssociationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallRuleGroupAssociationResult {
     /**
      * Arn
@@ -77,20 +77,20 @@ public final class GetFirewallRuleGroupAssociationResult {
      */
     private final @Nullable List<FirewallRuleGroupAssociationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallRuleGroupAssociationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
-        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
-        @OutputCustomType.Parameter("mutationProtection") @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("status") @Nullable FirewallRuleGroupAssociationStatus status,
-        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
-        @OutputCustomType.Parameter("tags") @Nullable List<FirewallRuleGroupAssociationTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
+        @CustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @CustomType.Parameter("mutationProtection") @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("status") @Nullable FirewallRuleGroupAssociationStatus status,
+        @CustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @CustomType.Parameter("tags") @Nullable List<FirewallRuleGroupAssociationTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;

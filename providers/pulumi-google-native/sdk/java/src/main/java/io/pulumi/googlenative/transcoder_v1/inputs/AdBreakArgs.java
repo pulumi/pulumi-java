@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AdBreakArgs extends io.pulumi.resources.ResourceArgs {
      * Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
      * 
      */
-    @InputImport(name="startTimeOffset")
+    @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
     public Output<String> getStartTimeOffset() {

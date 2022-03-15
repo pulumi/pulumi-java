@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowTaskType;
 import io.pulumi.awsnative.appflow.inputs.FlowConnectorOperatorArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskPropertiesObjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Operation to be performed on provided source fields
      * 
      */
-    @InputImport(name="connectorOperator")
+    @Import(name="connectorOperator")
       private final @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
 
     public Output<FlowConnectorOperatorArgs> getConnectorOperator() {
@@ -33,7 +33,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * A field value on which source field should be validated
      * 
      */
-    @InputImport(name="destinationField")
+    @Import(name="destinationField")
       private final @Nullable Output<String> destinationField;
 
     public Output<String> getDestinationField() {
@@ -44,7 +44,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Source fields on which particular task will be applied
      * 
      */
-    @InputImport(name="sourceFields", required=true)
+    @Import(name="sourceFields", required=true)
       private final Output<List<String>> sourceFields;
 
     public Output<List<String>> getSourceFields() {
@@ -55,7 +55,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * A Map used to store task related info
      * 
      */
-    @InputImport(name="taskProperties")
+    @Import(name="taskProperties")
       private final @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
     public Output<List<FlowTaskPropertiesObjectArgs>> getTaskProperties() {
@@ -66,7 +66,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Type of task
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final Output<FlowTaskType> taskType;
 
     public Output<FlowTaskType> getTaskType() {

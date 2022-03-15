@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegularFileResponse {
     /**
      * The source file.
@@ -21,10 +21,10 @@ public final class RegularFileResponse {
      */
     private final String devicePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegularFileResponse(
-        @OutputCustomType.Parameter("content") FileReferenceResponse content,
-        @OutputCustomType.Parameter("devicePath") String devicePath) {
+        @CustomType.Parameter("content") FileReferenceResponse content,
+        @CustomType.Parameter("devicePath") String devicePath) {
         this.content = content;
         this.devicePath = devicePath;
     }

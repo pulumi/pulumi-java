@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudfront.OriginAccessIdentityArgs;
 import io.pulumi.aws.cloudfront.inputs.OriginAccessIdentityState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -55,7 +55,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * updates to the origin access identity.
      * 
      */
-    @OutputExport(name="callerReference", type=String.class, parameters={})
+    @Export(name="callerReference", type=String.class, parameters={})
     private Output<String> callerReference;
 
     /**
@@ -71,7 +71,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * origin access identity to use in CloudFront, see below.
      * 
      */
-    @OutputExport(name="cloudfrontAccessIdentityPath", type=String.class, parameters={})
+    @Export(name="cloudfrontAccessIdentityPath", type=String.class, parameters={})
     private Output<String> cloudfrontAccessIdentityPath;
 
     /**
@@ -86,7 +86,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * An optional comment for the origin access identity.
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
@@ -101,7 +101,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -118,7 +118,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * E2QWRUHAPOMQZL`.
      * 
      */
-    @OutputExport(name="iamArn", type=String.class, parameters={})
+    @Export(name="iamArn", type=String.class, parameters={})
     private Output<String> iamArn;
 
     /**
@@ -136,7 +136,7 @@ public class OriginAccessIdentity extends io.pulumi.resources.CustomResource {
      * permission to an object in Amazon S3.
      * 
      */
-    @OutputExport(name="s3CanonicalUserId", type=String.class, parameters={})
+    @Export(name="s3CanonicalUserId", type=String.class, parameters={})
     private Output<String> s3CanonicalUserId;
 
     /**

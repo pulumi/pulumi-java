@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReportConfigTimePeriodResponse {
     /**
      * The start date to pull data from.
@@ -20,10 +20,10 @@ public final class ReportConfigTimePeriodResponse {
      */
     private final String to;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportConfigTimePeriodResponse(
-        @OutputCustomType.Parameter("from") String from,
-        @OutputCustomType.Parameter("to") String to) {
+        @CustomType.Parameter("from") String from,
+        @CustomType.Parameter("to") String to) {
         this.from = from;
         this.to = to;
     }

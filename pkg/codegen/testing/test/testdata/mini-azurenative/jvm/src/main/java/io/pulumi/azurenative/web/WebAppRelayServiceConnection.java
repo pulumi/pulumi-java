@@ -6,14 +6,14 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppRelayServiceConnectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
 @ResourceType(type="azure-native:web:WebAppRelayServiceConnection")
 public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
     public Output</* @Nullable */ String> getPropResourceType() {
@@ -23,7 +23,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.PrivateLinkConnectionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionResponse {
     /**
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to. Required on PUT (CreateOrUpdate) requests.
@@ -34,12 +34,12 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final @Nullable String requestMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage) {
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage) {
         this.groupIds = groupIds;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.privateLinkServiceId = privateLinkServiceId;

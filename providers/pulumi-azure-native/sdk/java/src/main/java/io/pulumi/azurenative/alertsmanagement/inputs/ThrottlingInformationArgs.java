@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ThrottlingInformationArgs extends io.pulumi.resources.Resourc
      * The required duration (in ISO8601 format) to wait before notifying on the alert rule again. The time granularity must be in minutes and minimum value is 0 minutes
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
      * 
      */
-    @InputImport(name="voiceId", required=true)
+    @Import(name="voiceId", required=true)
       private final Output<String> voiceId;
 
     public Output<String> getVoiceId() {

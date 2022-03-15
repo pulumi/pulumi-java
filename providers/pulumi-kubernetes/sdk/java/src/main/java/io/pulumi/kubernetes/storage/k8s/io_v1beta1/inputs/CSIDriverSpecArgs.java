@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.TokenRequestArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
      * 
      */
-    @InputImport(name="attachRequired")
+    @Import(name="attachRequired")
       private final @Nullable Output<Boolean> attachRequired;
 
     public Output<Boolean> getAttachRequired() {
@@ -36,7 +36,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Defines if the underlying volume supports changing ownership and permission of the volume before being mounted. Refer to the specific FSGroupPolicy values for additional details. This field is alpha-level, and is only honored by servers that enable the CSIVolumeFSGroupPolicy feature gate.
      * 
      */
-    @InputImport(name="fsGroupPolicy")
+    @Import(name="fsGroupPolicy")
       private final @Nullable Output<String> fsGroupPolicy;
 
     public Output<String> getFsGroupPolicy() {
@@ -50,7 +50,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * "csi.storage.k8s.io/ephemeral" is a new feature in Kubernetes 1.16. It is only required for drivers which support both the "Persistent" and "Ephemeral" VolumeLifecycleMode. Other drivers can leave pod info disabled and/or ignore this field. As Kubernetes 1.15 doesn't support this field, drivers can only support one mode when deployed on such a cluster and the deployment determines which mode that is, for example via a command line parameter of the driver.
      * 
      */
-    @InputImport(name="podInfoOnMount")
+    @Import(name="podInfoOnMount")
       private final @Nullable Output<Boolean> podInfoOnMount;
 
     public Output<Boolean> getPodInfoOnMount() {
@@ -65,7 +65,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.
      * 
      */
-    @InputImport(name="requiresRepublish")
+    @Import(name="requiresRepublish")
       private final @Nullable Output<Boolean> requiresRepublish;
 
     public Output<Boolean> getRequiresRepublish() {
@@ -82,7 +82,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This is an alpha field and only available when the CSIStorageCapacity feature is enabled. The default is false.
      * 
      */
-    @InputImport(name="storageCapacity")
+    @Import(name="storageCapacity")
       private final @Nullable Output<Boolean> storageCapacity;
 
     public Output<Boolean> getStorageCapacity() {
@@ -103,7 +103,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This is an alpha feature and only available when the CSIServiceAccountToken feature is enabled.
      * 
      */
-    @InputImport(name="tokenRequests")
+    @Import(name="tokenRequests")
       private final @Nullable Output<List<TokenRequestArgs>> tokenRequests;
 
     public Output<List<TokenRequestArgs>> getTokenRequests() {
@@ -114,7 +114,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * VolumeLifecycleModes defines what kind of volumes this CSI volume driver supports. The default if the list is empty is "Persistent", which is the usage defined by the CSI specification and implemented in Kubernetes via the usual PV/PVC mechanism. The other mode is "Ephemeral". In this mode, volumes are defined inline inside the pod spec with CSIVolumeSource and their lifecycle is tied to the lifecycle of that pod. A driver has to be aware of this because it is only going to get a NodePublishVolume call for such a volume. For more information about implementing this mode, see https://kubernetes-csi.github.io/docs/ephemeral-local-volumes.html A driver can support one or more of these modes and more modes may be added in the future.
      * 
      */
-    @InputImport(name="volumeLifecycleModes")
+    @Import(name="volumeLifecycleModes")
       private final @Nullable Output<List<String>> volumeLifecycleModes;
 
     public Output<List<String>> getVolumeLifecycleModes() {

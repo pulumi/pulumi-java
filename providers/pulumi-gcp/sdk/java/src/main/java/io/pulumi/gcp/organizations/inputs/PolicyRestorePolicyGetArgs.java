@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PolicyRestorePolicyGetArgs extends io.pulumi.resources.Resour
      * May only be set to true. If set, then the default Policy is restored.
      * 
      */
-    @InputImport(name="default", required=true)
+    @Import(name="default", required=true)
       private final Output<Boolean> $default;
 
     public Output<Boolean> get$default() {

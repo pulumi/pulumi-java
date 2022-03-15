@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListenerHealthCheck {
     /**
      * The number of consecutive successful health checks that must occur before declaring listener healthy.
@@ -48,15 +48,15 @@ public final class VirtualGatewaySpecListenerHealthCheck {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecListenerHealthCheck(
-        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
-        @OutputCustomType.Parameter("intervalMillis") Integer intervalMillis,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("timeoutMillis") Integer timeoutMillis,
-        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
+        @CustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @CustomType.Parameter("intervalMillis") Integer intervalMillis,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("timeoutMillis") Integer timeoutMillis,
+        @CustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.intervalMillis = intervalMillis;
         this.path = path;

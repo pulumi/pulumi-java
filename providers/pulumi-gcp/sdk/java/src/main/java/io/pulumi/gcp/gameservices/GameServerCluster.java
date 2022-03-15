@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerClusterArgs;
@@ -48,7 +48,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * Required. The resource name of the game server cluster
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -64,7 +64,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="connectionInfo", type=GameServerClusterConnectionInfo.class, parameters={})
+    @Export(name="connectionInfo", type=GameServerClusterConnectionInfo.class, parameters={})
     private Output<GameServerClusterConnectionInfo> connectionInfo;
 
     /**
@@ -80,7 +80,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * Human readable description of the cluster.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -95,7 +95,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * key-value pair.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -110,7 +110,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * Location of the Cluster.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -126,7 +126,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -143,7 +143,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -158,7 +158,7 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
      * The realm id of the game server realm.
      * 
      */
-    @OutputExport(name="realmId", type=String.class, parameters={})
+    @Export(name="realmId", type=String.class, parameters={})
     private Output<String> realmId;
 
     /**

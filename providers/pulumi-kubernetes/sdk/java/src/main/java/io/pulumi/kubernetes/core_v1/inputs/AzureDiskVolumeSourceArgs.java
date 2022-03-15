@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Host Caching mode: None, Read Only, Read Write.
      * 
      */
-    @InputImport(name="cachingMode")
+    @Import(name="cachingMode")
       private final @Nullable Output<String> cachingMode;
 
     public Output<String> getCachingMode() {
@@ -34,7 +34,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * The Name of the data disk in the blob storage
      * 
      */
-    @InputImport(name="diskName", required=true)
+    @Import(name="diskName", required=true)
       private final Output<String> diskName;
 
     public Output<String> getDiskName() {
@@ -45,7 +45,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * The URI the data disk in the blob storage
      * 
      */
-    @InputImport(name="diskURI", required=true)
+    @Import(name="diskURI", required=true)
       private final Output<String> diskURI;
 
     public Output<String> getDiskURI() {
@@ -56,7 +56,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -67,7 +67,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -78,7 +78,7 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {

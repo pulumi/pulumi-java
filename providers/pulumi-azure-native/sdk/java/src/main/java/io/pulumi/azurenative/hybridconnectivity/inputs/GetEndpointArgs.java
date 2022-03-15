@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridconnectivity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The endpoint name.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -27,7 +27,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

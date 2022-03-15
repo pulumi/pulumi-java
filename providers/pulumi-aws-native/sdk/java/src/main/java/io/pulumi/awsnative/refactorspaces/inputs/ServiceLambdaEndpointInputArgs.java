@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.refactorspaces.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class ServiceLambdaEndpointInputArgs extends io.pulumi.resources.Re
 
     public static final ServiceLambdaEndpointInputArgs Empty = new ServiceLambdaEndpointInputArgs();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {

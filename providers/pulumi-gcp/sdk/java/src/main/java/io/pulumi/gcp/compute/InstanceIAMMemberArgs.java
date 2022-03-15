@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<InstanceIAMMemberConditionArgs> condition;
 
     public Output<InstanceIAMMemberConditionArgs> getCondition() {
@@ -31,14 +31,14 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
     public Output<String> getInstanceName() {
         return this.instanceName;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -50,7 +50,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -63,7 +63,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -76,7 +76,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * zone is specified, it is taken from the provider configuration.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

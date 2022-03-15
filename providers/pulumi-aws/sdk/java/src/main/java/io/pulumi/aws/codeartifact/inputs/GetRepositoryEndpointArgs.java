@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * The name of the domain that contains the repository.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final String domain;
 
     public String getDomain() {
@@ -29,7 +29,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @InputImport(name="domainOwner")
+    @Import(name="domainOwner")
       private final @Nullable String domainOwner;
 
     public Optional<String> getDomainOwner() {
@@ -40,7 +40,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * Which endpoint of a repository to return. A repository has one endpoint for each package format: `npm`, `pypi`, `maven`, and `nuget`.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final String format;
 
     public String getFormat() {
@@ -51,7 +51,7 @@ public final class GetRepositoryEndpointArgs extends io.pulumi.resources.InvokeA
      * The name of the repository.
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final String repository;
 
     public String getRepository() {

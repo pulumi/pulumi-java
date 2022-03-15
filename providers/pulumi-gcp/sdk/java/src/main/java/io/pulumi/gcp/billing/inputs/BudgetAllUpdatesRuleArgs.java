@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class BudgetAllUpdatesRuleArgs extends io.pulumi.resources.Resource
      * Account Users IAM roles for the target account.
      * 
      */
-    @InputImport(name="disableDefaultIamRecipients")
+    @Import(name="disableDefaultIamRecipients")
       private final @Nullable Output<Boolean> disableDefaultIamRecipients;
 
     public Output<Boolean> getDisableDefaultIamRecipients() {
@@ -37,7 +37,7 @@ public final class BudgetAllUpdatesRuleArgs extends io.pulumi.resources.Resource
      * A maximum of 5 channels are allowed.
      * 
      */
-    @InputImport(name="monitoringNotificationChannels")
+    @Import(name="monitoringNotificationChannels")
       private final @Nullable Output<List<String>> monitoringNotificationChannels;
 
     public Output<List<String>> getMonitoringNotificationChannels() {
@@ -51,7 +51,7 @@ public final class BudgetAllUpdatesRuleArgs extends io.pulumi.resources.Resource
      * at regular intervals to the topic.
      * 
      */
-    @InputImport(name="pubsubTopic")
+    @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {
@@ -64,7 +64,7 @@ public final class BudgetAllUpdatesRuleArgs extends io.pulumi.resources.Resource
      * https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
      * 
      */
-    @InputImport(name="schemaVersion")
+    @Import(name="schemaVersion")
       private final @Nullable Output<String> schemaVersion;
 
     public Output<String> getSchemaVersion() {

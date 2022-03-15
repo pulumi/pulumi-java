@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v2beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v2beta1.FolderArgs;
@@ -22,7 +22,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * Timestamp when the Folder was created. Assigned by the server.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the regular expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -50,7 +50,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The lifecycle state of the folder. Updates to the lifecycle_state must be performed via DeleteFolder and UndeleteFolder.
      * 
      */
-    @OutputExport(name="lifecycleState", type=String.class, parameters={})
+    @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
@@ -64,7 +64,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The resource name of the Folder. Its format is `folders/{folder_id}`, for example: "folders/1234".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The Folder's parent's resource name. Updates to the folder's parent must be performed via MoveFolder.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**

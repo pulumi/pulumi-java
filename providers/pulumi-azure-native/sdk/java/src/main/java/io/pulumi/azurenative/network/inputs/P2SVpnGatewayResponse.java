@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.P2SConnectionConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.azurenative.network.inputs.VpnClientConnectionHealthResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * List of all customer specified DNS servers IP addresses.
      * 
      */
-    @InputImport(name="customDnsServers")
+    @Import(name="customDnsServers")
       private final @Nullable List<String> customDnsServers;
 
     public List<String> getCustomDnsServers() {
@@ -40,7 +40,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -51,7 +51,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -62,7 +62,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
      */
-    @InputImport(name="isRoutingPreferenceInternet")
+    @Import(name="isRoutingPreferenceInternet")
       private final @Nullable Boolean isRoutingPreferenceInternet;
 
     public Optional<Boolean> getIsRoutingPreferenceInternet() {
@@ -73,7 +73,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * Resource location.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -84,7 +84,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -95,7 +95,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * List of all p2s connection configurations of the gateway.
      * 
      */
-    @InputImport(name="p2SConnectionConfigurations")
+    @Import(name="p2SConnectionConfigurations")
       private final @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations;
 
     public List<P2SConnectionConfigurationResponse> getP2SConnectionConfigurations() {
@@ -106,7 +106,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * The provisioning state of the P2S VPN gateway resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -117,7 +117,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -128,7 +128,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -139,7 +139,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * The VirtualHub to which the gateway belongs.
      * 
      */
-    @InputImport(name="virtualHub")
+    @Import(name="virtualHub")
       private final @Nullable SubResourceResponse virtualHub;
 
     public Optional<SubResourceResponse> getVirtualHub() {
@@ -150,7 +150,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * All P2S VPN clients' connection health status.
      * 
      */
-    @InputImport(name="vpnClientConnectionHealth", required=true)
+    @Import(name="vpnClientConnectionHealth", required=true)
       private final VpnClientConnectionHealthResponse vpnClientConnectionHealth;
 
     public VpnClientConnectionHealthResponse getVpnClientConnectionHealth() {
@@ -161,7 +161,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * The scale unit for this p2s vpn gateway.
      * 
      */
-    @InputImport(name="vpnGatewayScaleUnit")
+    @Import(name="vpnGatewayScaleUnit")
       private final @Nullable Integer vpnGatewayScaleUnit;
 
     public Optional<Integer> getVpnGatewayScaleUnit() {
@@ -172,7 +172,7 @@ public final class P2SVpnGatewayResponse extends io.pulumi.resources.InvokeArgs 
      * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
      */
-    @InputImport(name="vpnServerConfiguration")
+    @Import(name="vpnServerConfiguration")
       private final @Nullable SubResourceResponse vpnServerConfiguration;
 
     public Optional<SubResourceResponse> getVpnServerConfiguration() {

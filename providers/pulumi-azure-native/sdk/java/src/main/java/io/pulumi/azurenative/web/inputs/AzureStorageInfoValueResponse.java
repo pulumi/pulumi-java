@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * Access key for the storage account.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable String accessKey;
 
     public Optional<String> getAccessKey() {
@@ -33,7 +33,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * Name of the storage account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
@@ -44,7 +44,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * Path to mount the storage within the site's runtime environment.
      * 
      */
-    @InputImport(name="mountPath")
+    @Import(name="mountPath")
       private final @Nullable String mountPath;
 
     public Optional<String> getMountPath() {
@@ -55,7 +55,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * Name of the file share (container name, for Blob storage).
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable String shareName;
 
     public Optional<String> getShareName() {
@@ -66,7 +66,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * State of the storage account.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -77,7 +77,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * Type of storage.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

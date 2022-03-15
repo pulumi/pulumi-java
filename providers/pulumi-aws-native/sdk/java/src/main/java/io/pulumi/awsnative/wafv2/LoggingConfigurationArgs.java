@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingFilterPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * 
      */
-    @InputImport(name="logDestinationConfigs", required=true)
+    @Import(name="logDestinationConfigs", required=true)
       private final Output<List<String>> logDestinationConfigs;
 
     public Output<List<String>> getLogDestinationConfigs() {
@@ -32,7 +32,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
      * 
      */
-    @InputImport(name="loggingFilter")
+    @Import(name="loggingFilter")
       private final @Nullable Output<LoggingFilterPropertiesArgs> loggingFilter;
 
     public Output<LoggingFilterPropertiesArgs> getLoggingFilter() {
@@ -43,7 +43,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
      * 
      */
-    @InputImport(name="redactedFields")
+    @Import(name="redactedFields")
       private final @Nullable Output<List<LoggingConfigurationFieldToMatchArgs>> redactedFields;
 
     public Output<List<LoggingConfigurationFieldToMatchArgs>> getRedactedFields() {
@@ -54,7 +54,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

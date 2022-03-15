@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFunctionEventSubscriptionDestinationResponse {
     /**
      * Type of the endpoint for the event subscription destination.
@@ -34,12 +34,12 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFunctionEventSubscriptionDestinationResponse(
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
-        @OutputCustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
+        @CustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.maxEventsPerBatch = maxEventsPerBatch;
         this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageShippingDetailsResponse {
     /**
      * Name of the carrier.
@@ -25,11 +25,11 @@ public final class PackageShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageShippingDetailsResponse(
-        @OutputCustomType.Parameter("carrierName") String carrierName,
-        @OutputCustomType.Parameter("trackingId") String trackingId,
-        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
+        @CustomType.Parameter("carrierName") String carrierName,
+        @CustomType.Parameter("trackingId") String trackingId,
+        @CustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierName = carrierName;
         this.trackingId = trackingId;
         this.trackingUrl = trackingUrl;

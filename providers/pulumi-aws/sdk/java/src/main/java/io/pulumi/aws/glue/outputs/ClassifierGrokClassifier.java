@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassifierGrokClassifier {
     /**
      * An identifier of the data format that the classifier matches.
@@ -27,11 +27,11 @@ public final class ClassifierGrokClassifier {
      */
     private final String grokPattern;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassifierGrokClassifier(
-        @OutputCustomType.Parameter("classification") String classification,
-        @OutputCustomType.Parameter("customPatterns") @Nullable String customPatterns,
-        @OutputCustomType.Parameter("grokPattern") String grokPattern) {
+        @CustomType.Parameter("classification") String classification,
+        @CustomType.Parameter("customPatterns") @Nullable String customPatterns,
+        @CustomType.Parameter("grokPattern") String grokPattern) {
         this.classification = classification;
         this.customPatterns = customPatterns;
         this.grokPattern = grokPattern;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AccountResponse;
 import io.pulumi.googlenative.testing_v1.inputs.ApkResponse;
 import io.pulumi.googlenative.testing_v1.inputs.DeviceFileResponse;
@@ -26,7 +26,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * The device will be logged in on this account for the duration of the test.
      * 
      */
-    @InputImport(name="account", required=true)
+    @Import(name="account", required=true)
       private final AccountResponse account;
 
     public AccountResponse getAccount() {
@@ -37,7 +37,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * APKs to install in addition to those being directly tested. Currently capped at 100.
      * 
      */
-    @InputImport(name="additionalApks", required=true)
+    @Import(name="additionalApks", required=true)
       private final List<ApkResponse> additionalApks;
 
     public List<ApkResponse> getAdditionalApks() {
@@ -48,7 +48,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * List of directories on the device to upload to GCS at the end of the test; they must be absolute paths under /sdcard, /storage or /data/local/tmp. Path names are restricted to characters a-z A-Z 0-9 _ - . + and / Note: The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device.
      * 
      */
-    @InputImport(name="directoriesToPull", required=true)
+    @Import(name="directoriesToPull", required=true)
       private final List<String> directoriesToPull;
 
     public List<String> getDirectoriesToPull() {
@@ -59,7 +59,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to prevent all runtime permissions to be granted at app install
      * 
      */
-    @InputImport(name="dontAutograntPermissions", required=true)
+    @Import(name="dontAutograntPermissions", required=true)
       private final Boolean dontAutograntPermissions;
 
     public Boolean getDontAutograntPermissions() {
@@ -70,7 +70,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * Environment variables to set for the test (only applicable for instrumentation tests).
      * 
      */
-    @InputImport(name="environmentVariables", required=true)
+    @Import(name="environmentVariables", required=true)
       private final List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
@@ -81,7 +81,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * List of files to push to the device before starting the test.
      * 
      */
-    @InputImport(name="filesToPush", required=true)
+    @Import(name="filesToPush", required=true)
       private final List<DeviceFileResponse> filesToPush;
 
     public List<DeviceFileResponse> getFilesToPush() {
@@ -92,7 +92,7 @@ public final class TestSetupResponse extends io.pulumi.resources.InvokeArgs {
      * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
      * 
      */
-    @InputImport(name="networkProfile", required=true)
+    @Import(name="networkProfile", required=true)
       private final String networkProfile;
 
     public String getNetworkProfile() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AutoScalingResourceMetricResponse extends io.pulumi.resources
      * Expected value is 'Resource'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -32,7 +32,7 @@ public final class AutoScalingResourceMetricResponse extends io.pulumi.resources
      * Name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

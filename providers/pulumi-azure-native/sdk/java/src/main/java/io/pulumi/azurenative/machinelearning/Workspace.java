@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearning.WorkspaceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The creation time for this workspace resource.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -49,7 +49,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The key vault identifier used for encrypted workspaces.
      * 
      */
-    @OutputExport(name="keyVaultIdentifierId", type=String.class, parameters={})
+    @Export(name="keyVaultIdentifierId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultIdentifierId;
 
     /**
@@ -63,7 +63,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -77,7 +77,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The email id of the owner for this workspace.
      * 
      */
-    @OutputExport(name="ownerEmail", type=String.class, parameters={})
+    @Export(name="ownerEmail", type=String.class, parameters={})
     private Output<String> ownerEmail;
 
     /**
@@ -105,7 +105,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The regional endpoint for the machine learning studio service which hosts this workspace.
      * 
      */
-    @OutputExport(name="studioEndpoint", type=String.class, parameters={})
+    @Export(name="studioEndpoint", type=String.class, parameters={})
     private Output<String> studioEndpoint;
 
     /**
@@ -119,7 +119,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -147,7 +147,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The fully qualified arm id of the storage account associated with this workspace.
      * 
      */
-    @OutputExport(name="userStorageAccountId", type=String.class, parameters={})
+    @Export(name="userStorageAccountId", type=String.class, parameters={})
     private Output<String> userStorageAccountId;
 
     /**
@@ -161,7 +161,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The immutable id associated with this workspace.
      * 
      */
-    @OutputExport(name="workspaceId", type=String.class, parameters={})
+    @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
@@ -175,7 +175,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The current state of workspace resource.
      * 
      */
-    @OutputExport(name="workspaceState", type=String.class, parameters={})
+    @Export(name="workspaceState", type=String.class, parameters={})
     private Output<String> workspaceState;
 
     /**
@@ -189,7 +189,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The type of this workspace.
      * 
      */
-    @OutputExport(name="workspaceType", type=String.class, parameters={})
+    @Export(name="workspaceType", type=String.class, parameters={})
     private Output<String> workspaceType;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * Bundle ID of the app.
      * 
      */
-    @InputImport(name="bundleId", required=true)
+    @Import(name="bundleId", required=true)
       private final String bundleId;
 
     public String getBundleId() {
@@ -31,7 +31,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * Xcode version that the test was run with.
      * 
      */
-    @InputImport(name="xcodeVersion", required=true)
+    @Import(name="xcodeVersion", required=true)
       private final String xcodeVersion;
 
     public String getXcodeVersion() {

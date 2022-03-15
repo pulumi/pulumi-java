@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
      * 
      */
-    @InputImport(name="compatibilityLevel")
+    @Import(name="compatibilityLevel")
       private final @Nullable Integer compatibilityLevel;
 
     public Optional<Integer> getCompatibilityLevel() {
@@ -35,7 +35,7 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
      * Value that indicates whether the rule action requires preprocessing.
      * 
      */
-    @InputImport(name="requiresPreprocessing")
+    @Import(name="requiresPreprocessing")
       private final @Nullable Boolean requiresPreprocessing;
 
     public Optional<Boolean> getRequiresPreprocessing() {
@@ -46,7 +46,7 @@ public final class SqlFilterResponse extends io.pulumi.resources.InvokeArgs {
      * The SQL expression. e.g. MyProperty='ABC'
      * 
      */
-    @InputImport(name="sqlExpression")
+    @Import(name="sqlExpression")
       private final @Nullable String sqlExpression;
 
     public Optional<String> getSqlExpression() {

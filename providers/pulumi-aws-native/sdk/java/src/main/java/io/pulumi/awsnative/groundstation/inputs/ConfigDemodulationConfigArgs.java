@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ConfigDemodulationConfigArgs extends io.pulumi.resources.Reso
 
     public static final ConfigDemodulationConfigArgs Empty = new ConfigDemodulationConfigArgs();
 
-    @InputImport(name="unvalidatedJSON")
+    @Import(name="unvalidatedJSON")
       private final @Nullable Output<String> unvalidatedJSON;
 
     public Output<String> getUnvalidatedJSON() {

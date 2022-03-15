@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceAbpV11Args;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV10xArgs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceOtaaV11Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,49 +18,49 @@ public final class WirelessDeviceLoRaWANDeviceArgs extends io.pulumi.resources.R
 
     public static final WirelessDeviceLoRaWANDeviceArgs Empty = new WirelessDeviceLoRaWANDeviceArgs();
 
-    @InputImport(name="abpV10x")
+    @Import(name="abpV10x")
       private final @Nullable Output<WirelessDeviceAbpV10xArgs> abpV10x;
 
     public Output<WirelessDeviceAbpV10xArgs> getAbpV10x() {
         return this.abpV10x == null ? Output.empty() : this.abpV10x;
     }
 
-    @InputImport(name="abpV11")
+    @Import(name="abpV11")
       private final @Nullable Output<WirelessDeviceAbpV11Args> abpV11;
 
     public Output<WirelessDeviceAbpV11Args> getAbpV11() {
         return this.abpV11 == null ? Output.empty() : this.abpV11;
     }
 
-    @InputImport(name="devEui")
+    @Import(name="devEui")
       private final @Nullable Output<String> devEui;
 
     public Output<String> getDevEui() {
         return this.devEui == null ? Output.empty() : this.devEui;
     }
 
-    @InputImport(name="deviceProfileId")
+    @Import(name="deviceProfileId")
       private final @Nullable Output<String> deviceProfileId;
 
     public Output<String> getDeviceProfileId() {
         return this.deviceProfileId == null ? Output.empty() : this.deviceProfileId;
     }
 
-    @InputImport(name="otaaV10x")
+    @Import(name="otaaV10x")
       private final @Nullable Output<WirelessDeviceOtaaV10xArgs> otaaV10x;
 
     public Output<WirelessDeviceOtaaV10xArgs> getOtaaV10x() {
         return this.otaaV10x == null ? Output.empty() : this.otaaV10x;
     }
 
-    @InputImport(name="otaaV11")
+    @Import(name="otaaV11")
       private final @Nullable Output<WirelessDeviceOtaaV11Args> otaaV11;
 
     public Output<WirelessDeviceOtaaV11Args> getOtaaV11() {
         return this.otaaV11 == null ? Output.empty() : this.otaaV11;
     }
 
-    @InputImport(name="serviceProfileId")
+    @Import(name="serviceProfileId")
       private final @Nullable Output<String> serviceProfileId;
 
     public Output<String> getServiceProfileId() {

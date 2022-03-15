@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TagTemplateFieldTypeEnumTypeAllowedValue {
     /**
      * The display name for this template.
@@ -15,8 +15,8 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor
-    private TagTemplateFieldTypeEnumTypeAllowedValue(@OutputCustomType.Parameter("displayName") String displayName) {
+    @CustomType.Constructor
+    private TagTemplateFieldTypeEnumTypeAllowedValue(@CustomType.Parameter("displayName") String displayName) {
         this.displayName = displayName;
     }
 

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.batch.outputs.EncryptionPropertiesResponse;
 import io.pulumi.azurenative.batch.outputs.KeyVaultReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.batch.outputs.VirtualMachineFamilyCoreQuotaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBatchAccountResult {
     /**
      * The account endpoint used to interact with the Batch service.
@@ -114,28 +114,28 @@ public final class GetBatchAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBatchAccountResult(
-        @OutputCustomType.Parameter("accountEndpoint") String accountEndpoint,
-        @OutputCustomType.Parameter("activeJobAndJobScheduleQuota") Integer activeJobAndJobScheduleQuota,
-        @OutputCustomType.Parameter("autoStorage") AutoStoragePropertiesResponse autoStorage,
-        @OutputCustomType.Parameter("dedicatedCoreQuota") Integer dedicatedCoreQuota,
-        @OutputCustomType.Parameter("dedicatedCoreQuotaPerVMFamily") List<VirtualMachineFamilyCoreQuotaResponse> dedicatedCoreQuotaPerVMFamily,
-        @OutputCustomType.Parameter("dedicatedCoreQuotaPerVMFamilyEnforced") Boolean dedicatedCoreQuotaPerVMFamilyEnforced,
-        @OutputCustomType.Parameter("encryption") EncryptionPropertiesResponse encryption,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable BatchAccountIdentityResponse identity,
-        @OutputCustomType.Parameter("keyVaultReference") KeyVaultReferenceResponse keyVaultReference,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("lowPriorityCoreQuota") Integer lowPriorityCoreQuota,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("poolAllocationMode") String poolAllocationMode,
-        @OutputCustomType.Parameter("poolQuota") Integer poolQuota,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") String publicNetworkAccess,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountEndpoint") String accountEndpoint,
+        @CustomType.Parameter("activeJobAndJobScheduleQuota") Integer activeJobAndJobScheduleQuota,
+        @CustomType.Parameter("autoStorage") AutoStoragePropertiesResponse autoStorage,
+        @CustomType.Parameter("dedicatedCoreQuota") Integer dedicatedCoreQuota,
+        @CustomType.Parameter("dedicatedCoreQuotaPerVMFamily") List<VirtualMachineFamilyCoreQuotaResponse> dedicatedCoreQuotaPerVMFamily,
+        @CustomType.Parameter("dedicatedCoreQuotaPerVMFamilyEnforced") Boolean dedicatedCoreQuotaPerVMFamilyEnforced,
+        @CustomType.Parameter("encryption") EncryptionPropertiesResponse encryption,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable BatchAccountIdentityResponse identity,
+        @CustomType.Parameter("keyVaultReference") KeyVaultReferenceResponse keyVaultReference,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("lowPriorityCoreQuota") Integer lowPriorityCoreQuota,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("poolAllocationMode") String poolAllocationMode,
+        @CustomType.Parameter("poolQuota") Integer poolQuota,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") String publicNetworkAccess,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accountEndpoint = accountEndpoint;
         this.activeJobAndJobScheduleQuota = activeJobAndJobScheduleQuota;
         this.autoStorage = autoStorage;

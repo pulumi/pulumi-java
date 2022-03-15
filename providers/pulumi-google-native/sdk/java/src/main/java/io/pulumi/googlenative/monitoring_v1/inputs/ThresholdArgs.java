@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdColor;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdDirection;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdTargetAxis;
@@ -26,7 +26,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * The state color for this threshold. Color is not allowed in a XyChart.
      * 
      */
-    @InputImport(name="color")
+    @Import(name="color")
       private final @Nullable Output<ThresholdColor> color;
 
     public Output<ThresholdColor> getColor() {
@@ -37,7 +37,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * The direction for the current threshold. Direction is not allowed in a XyChart.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<ThresholdDirection> direction;
 
     public Output<ThresholdDirection> getDirection() {
@@ -48,7 +48,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * A label for the threshold.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -59,7 +59,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
      * 
      */
-    @InputImport(name="targetAxis")
+    @Import(name="targetAxis")
       private final @Nullable Output<ThresholdTargetAxis> targetAxis;
 
     public Output<ThresholdTargetAxis> getTargetAxis() {
@@ -70,7 +70,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the threshold. The value should be defined in the native scale of the metric.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {

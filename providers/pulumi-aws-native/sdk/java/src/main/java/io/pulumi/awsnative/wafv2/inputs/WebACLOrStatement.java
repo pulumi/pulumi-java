@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class WebACLOrStatement extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLOrStatement Empty = new WebACLOrStatement();
 
-    @InputImport(name="statements", required=true)
+    @Import(name="statements", required=true)
       private final List<WebACLStatement> statements;
 
     public List<WebACLStatement> getStatements() {

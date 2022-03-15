@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * Reference data flow parameters from dataset.
      * 
      */
-    @InputImport(name="datasetParameters")
+    @Import(name="datasetParameters")
       private final @Nullable Output<Object> datasetParameters;
 
     public Output<Object> getDatasetParameters() {
@@ -35,7 +35,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * Data flow parameters
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
@@ -46,7 +46,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * Reference data flow name.
      * 
      */
-    @InputImport(name="referenceName", required=true)
+    @Import(name="referenceName", required=true)
       private final Output<String> referenceName;
 
     public Output<String> getReferenceName() {
@@ -57,7 +57,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * Data flow reference type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

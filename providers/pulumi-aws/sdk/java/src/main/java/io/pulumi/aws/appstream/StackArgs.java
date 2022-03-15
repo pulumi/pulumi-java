@@ -8,7 +8,7 @@ import io.pulumi.aws.appstream.inputs.StackApplicationSettingsArgs;
 import io.pulumi.aws.appstream.inputs.StackStorageConnectorArgs;
 import io.pulumi.aws.appstream.inputs.StackUserSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StackArgs Empty = new StackArgs();
 
-    @InputImport(name="accessEndpoints")
+    @Import(name="accessEndpoints")
       private final @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
 
     public Output<List<StackAccessEndpointArgs>> getAccessEndpoints() {
@@ -31,7 +31,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for application settings persistence.
      * 
      */
-    @InputImport(name="applicationSettings")
+    @Import(name="applicationSettings")
       private final @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
 
     public Output<StackApplicationSettingsArgs> getApplicationSettings() {
@@ -42,7 +42,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Description for the AppStream stack.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Stack name to display.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -64,7 +64,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
      * 
      */
-    @InputImport(name="embedHostDomains")
+    @Import(name="embedHostDomains")
       private final @Nullable Output<List<String>> embedHostDomains;
 
     public Output<List<String>> getEmbedHostDomains() {
@@ -75,7 +75,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * URL that users are redirected to after they click the Send Feedback link. If no URL is specified, no Send Feedback link is displayed. .
      * 
      */
-    @InputImport(name="feedbackUrl")
+    @Import(name="feedbackUrl")
       private final @Nullable Output<String> feedbackUrl;
 
     public Output<String> getFeedbackUrl() {
@@ -86,7 +86,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name for the AppStream stack.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * URL that users are redirected to after their streaming session ends.
      * 
      */
-    @InputImport(name="redirectUrl")
+    @Import(name="redirectUrl")
       private final @Nullable Output<String> redirectUrl;
 
     public Output<String> getRedirectUrl() {
@@ -108,14 +108,14 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the storage connectors to enable. See below.
      * 
      */
-    @InputImport(name="storageConnectors")
+    @Import(name="storageConnectors")
       private final @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
 
     public Output<List<StackStorageConnectorArgs>> getStorageConnectors() {
         return this.storageConnectors == null ? Output.empty() : this.storageConnectors;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -126,7 +126,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
      * 
      */
-    @InputImport(name="userSettings")
+    @Import(name="userSettings")
       private final @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
     public Output<List<StackUserSettingArgs>> getUserSettings() {

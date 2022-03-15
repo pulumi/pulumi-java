@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     /**
      * The key status.
@@ -61,18 +61,18 @@ public final class GetKeyResult {
      */
     private final String validBeforeTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
-        @OutputCustomType.Parameter("keyOrigin") String keyOrigin,
-        @OutputCustomType.Parameter("keyType") String keyType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateKeyData") String privateKeyData,
-        @OutputCustomType.Parameter("privateKeyType") String privateKeyType,
-        @OutputCustomType.Parameter("publicKeyData") String publicKeyData,
-        @OutputCustomType.Parameter("validAfterTime") String validAfterTime,
-        @OutputCustomType.Parameter("validBeforeTime") String validBeforeTime) {
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @CustomType.Parameter("keyOrigin") String keyOrigin,
+        @CustomType.Parameter("keyType") String keyType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateKeyData") String privateKeyData,
+        @CustomType.Parameter("privateKeyType") String privateKeyType,
+        @CustomType.Parameter("publicKeyData") String publicKeyData,
+        @CustomType.Parameter("validAfterTime") String validAfterTime,
+        @CustomType.Parameter("validBeforeTime") String validBeforeTime) {
         this.disabled = disabled;
         this.keyAlgorithm = keyAlgorithm;
         this.keyOrigin = keyOrigin;

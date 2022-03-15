@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Amazon Resource Name (ARN) of the configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Date when the configuration was created.
      * 
      */
-    @InputImport(name="dateCreated")
+    @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
     public Output<String> getDateCreated() {
@@ -44,7 +44,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Date when the configuration was updated.
      * 
      */
-    @InputImport(name="dateUpdated")
+    @Import(name="dateUpdated")
       private final @Nullable Output<String> dateUpdated;
 
     public Output<String> getDateUpdated() {
@@ -55,7 +55,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Description for the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -66,7 +66,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Name of IAM Instance Profile.
      * 
      */
-    @InputImport(name="instanceProfileName")
+    @Import(name="instanceProfileName")
       private final @Nullable Output<String> instanceProfileName;
 
     public Output<String> getInstanceProfileName() {
@@ -77,7 +77,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Set of EC2 Instance Types.
      * 
      */
-    @InputImport(name="instanceTypes")
+    @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
     public Output<List<String>> getInstanceTypes() {
@@ -88,7 +88,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Name of EC2 Key Pair.
      * 
      */
-    @InputImport(name="keyPair")
+    @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
     public Output<String> getKeyPair() {
@@ -99,7 +99,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Configuration block with logging settings. Detailed below.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<InfrastructureConfigurationLoggingGetArgs> logging;
 
     public Output<InfrastructureConfigurationLoggingGetArgs> getLogging() {
@@ -110,7 +110,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Name for the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -121,7 +121,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Key-value map of resource tags to assign to infrastructure created by the configuration.
      * 
      */
-    @InputImport(name="resourceTags")
+    @Import(name="resourceTags")
       private final @Nullable Output<Map<String,String>> resourceTags;
 
     public Output<Map<String,String>> getResourceTags() {
@@ -132,7 +132,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Set of EC2 Security Group identifiers.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -143,7 +143,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Amazon Resource Name (ARN) of SNS Topic.
      * 
      */
-    @InputImport(name="snsTopicArn")
+    @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -154,7 +154,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * EC2 Subnet identifier. Also requires `security_group_ids` argument.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -165,7 +165,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Key-value map of resource tags to assign to the configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -176,7 +176,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -187,7 +187,7 @@ public final class InfrastructureConfigurationState extends io.pulumi.resources.
      * Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
      * 
      */
-    @InputImport(name="terminateInstanceOnFailure")
+    @Import(name="terminateInstanceOnFailure")
       private final @Nullable Output<Boolean> terminateInstanceOnFailure;
 
     public Output<Boolean> getTerminateInstanceOnFailure() {

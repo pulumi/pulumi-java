@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * This is the ARM ID of the source object to be used to create the target object.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {

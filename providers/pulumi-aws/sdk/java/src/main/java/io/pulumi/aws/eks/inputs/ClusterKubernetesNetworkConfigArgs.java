@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * The IP family used to assign Kubernetes pod and service addresses. Valid values are `ipv4` (default) and `ipv6`. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.
      * 
      */
-    @InputImport(name="ipFamily")
+    @Import(name="ipFamily")
       private final @Nullable Output<String> ipFamily;
 
     public Output<String> getIpFamily() {
@@ -29,7 +29,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * The CIDR block to assign Kubernetes service IP addresses from. If you don't specify a block, Kubernetes assigns addresses from either the 10.100.0.0/16 or 172.20.0.0/16 CIDR blocks. We recommend that you specify a block that does not overlap with resources in other networks that are peered or connected to your VPC. You can only specify a custom CIDR block when you create a cluster, changing this value will force a new cluster to be created. The block must meet the following requirements:
      * 
      */
-    @InputImport(name="serviceIpv4Cidr")
+    @Import(name="serviceIpv4Cidr")
       private final @Nullable Output<String> serviceIpv4Cidr;
 
     public Output<String> getServiceIpv4Cidr() {

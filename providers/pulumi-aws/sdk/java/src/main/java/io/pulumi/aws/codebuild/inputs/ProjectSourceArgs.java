@@ -7,7 +7,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectSourceAuthArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceBuildStatusConfigArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceGitSubmodulesConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<ProjectSourceAuthArgs> auth;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
@@ -39,7 +39,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Contains information that defines how the build project reports the build status to the source provider. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`.
      * 
      */
-    @InputImport(name="buildStatusConfig")
+    @Import(name="buildStatusConfig")
       private final @Nullable Output<ProjectSourceBuildStatusConfigArgs> buildStatusConfig;
 
     public Output<ProjectSourceBuildStatusConfigArgs> getBuildStatusConfig() {
@@ -50,7 +50,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Build specification to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
      * 
      */
-    @InputImport(name="buildspec")
+    @Import(name="buildspec")
       private final @Nullable Output<String> buildspec;
 
     public Output<String> getBuildspec() {
@@ -61,7 +61,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Truncate git history to this many commits. Use `0` for a `Full` checkout which you need to run commands like `git branch --show-current`. See [AWS CodePipeline User Guide: Tutorial: Use full clone with a GitHub pipeline source](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github-gitclone.html) for details.
      * 
      */
-    @InputImport(name="gitCloneDepth")
+    @Import(name="gitCloneDepth")
       private final @Nullable Output<Integer> gitCloneDepth;
 
     public Output<Integer> getGitCloneDepth() {
@@ -72,7 +72,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="gitSubmodulesConfig")
+    @Import(name="gitSubmodulesConfig")
       private final @Nullable Output<ProjectSourceGitSubmodulesConfigArgs> gitSubmodulesConfig;
 
     public Output<ProjectSourceGitSubmodulesConfigArgs> getGitSubmodulesConfig() {
@@ -83,7 +83,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Ignore SSL warnings when connecting to source control.
      * 
      */
-    @InputImport(name="insecureSsl")
+    @Import(name="insecureSsl")
       private final @Nullable Output<Boolean> insecureSsl;
 
     public Output<Boolean> getInsecureSsl() {
@@ -94,7 +94,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the source code from git or s3.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -105,7 +105,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
      * 
      */
-    @InputImport(name="reportBuildStatus")
+    @Import(name="reportBuildStatus")
       private final @Nullable Output<Boolean> reportBuildStatus;
 
     public Output<Boolean> getReportBuildStatus() {
@@ -116,7 +116,7 @@ public final class ProjectSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

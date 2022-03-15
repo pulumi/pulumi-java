@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DashboardResourcePermissionArgs extends io.pulumi.resources.R
      * <p>The IAM action to grant or revoke permissions on.</p>
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
@@ -47,7 +47,7 @@ public final class DashboardResourcePermissionArgs extends io.pulumi.resources.R
      *          </ul>
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final Output<String> principal;
 
     public Output<String> getPrincipal() {

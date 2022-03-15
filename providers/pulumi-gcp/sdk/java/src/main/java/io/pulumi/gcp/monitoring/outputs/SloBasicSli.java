@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloBasicSliAvailability;
 import io.pulumi.gcp.monitoring.outputs.SloBasicSliLatency;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloBasicSli {
     /**
      * Availability based SLI, dervied from count of requests made to this service that return successfully.
@@ -57,13 +57,13 @@ public final class SloBasicSli {
      */
     private final @Nullable List<String> versions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloBasicSli(
-        @OutputCustomType.Parameter("availability") @Nullable SloBasicSliAvailability availability,
-        @OutputCustomType.Parameter("latency") @Nullable SloBasicSliLatency latency,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
-        @OutputCustomType.Parameter("versions") @Nullable List<String> versions) {
+        @CustomType.Parameter("availability") @Nullable SloBasicSliAvailability availability,
+        @CustomType.Parameter("latency") @Nullable SloBasicSliLatency latency,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("methods") @Nullable List<String> methods,
+        @CustomType.Parameter("versions") @Nullable List<String> versions) {
         this.availability = availability;
         this.latency = latency;
         this.locations = locations;

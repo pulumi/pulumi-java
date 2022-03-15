@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeGutterStyle {
     /**
      * <p>This Boolean value controls whether to display a gutter space between sheet tiles.
@@ -18,8 +18,8 @@ public final class ThemeGutterStyle {
      */
     private final @Nullable Boolean show;
 
-    @OutputCustomType.Constructor
-    private ThemeGutterStyle(@OutputCustomType.Parameter("show") @Nullable Boolean show) {
+    @CustomType.Constructor
+    private ThemeGutterStyle(@CustomType.Parameter("show") @Nullable Boolean show) {
         this.show = show;
     }
 

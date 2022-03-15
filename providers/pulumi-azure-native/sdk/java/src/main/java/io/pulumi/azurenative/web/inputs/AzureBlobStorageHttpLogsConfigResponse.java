@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.reso
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -37,7 +37,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.reso
      * 0 or lower means no retention.
      * 
      */
-    @InputImport(name="retentionInDays")
+    @Import(name="retentionInDays")
       private final @Nullable Integer retentionInDays;
 
     public Optional<Integer> getRetentionInDays() {
@@ -48,7 +48,7 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends io.pulumi.reso
      * SAS url to a azure blob container with read/write/list/delete permissions.
      * 
      */
-    @InputImport(name="sasUrl")
+    @Import(name="sasUrl")
       private final @Nullable String sasUrl;
 
     public Optional<String> getSasUrl() {

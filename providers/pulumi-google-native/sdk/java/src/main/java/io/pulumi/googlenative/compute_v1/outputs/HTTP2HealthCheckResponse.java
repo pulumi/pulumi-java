@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HTTP2HealthCheckResponse {
     /**
      * The value of the host header in the HTTP/2 health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
@@ -46,15 +46,15 @@ public final class HTTP2HealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HTTP2HealthCheckResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("portSpecification") String portSpecification,
-        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
-        @OutputCustomType.Parameter("requestPath") String requestPath,
-        @OutputCustomType.Parameter("response") String response) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("portSpecification") String portSpecification,
+        @CustomType.Parameter("proxyHeader") String proxyHeader,
+        @CustomType.Parameter("requestPath") String requestPath,
+        @CustomType.Parameter("response") String response) {
         this.host = host;
         this.port = port;
         this.portName = portName;

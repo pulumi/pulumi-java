@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
      * 
      */
-    @InputImport(name="allowedRequestExtensions")
+    @Import(name="allowedRequestExtensions")
       private final @Nullable Output<List<String>> allowedRequestExtensions;
 
     public Output<List<String>> getAllowedRequestExtensions() {
@@ -34,7 +34,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
      * 
      */
-    @InputImport(name="allowedResponseExtensions")
+    @Import(name="allowedResponseExtensions")
       private final @Nullable Output<List<String>> allowedResponseExtensions;
 
     public Output<List<String>> getAllowedResponseExtensions() {
@@ -45,7 +45,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of full type names of provided contexts.
      * 
      */
-    @InputImport(name="provided")
+    @Import(name="provided")
       private final @Nullable Output<List<String>> provided;
 
     public Output<List<String>> getProvided() {
@@ -56,7 +56,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of full type names of requested contexts.
      * 
      */
-    @InputImport(name="requested")
+    @Import(name="requested")
       private final @Nullable Output<List<String>> requested;
 
     public Output<List<String>> getRequested() {
@@ -67,7 +67,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {

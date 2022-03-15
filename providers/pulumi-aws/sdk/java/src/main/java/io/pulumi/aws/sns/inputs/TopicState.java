@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * IAM role for failure feedback
      * 
      */
-    @InputImport(name="applicationFailureFeedbackRoleArn")
+    @Import(name="applicationFailureFeedbackRoleArn")
       private final @Nullable Output<String> applicationFailureFeedbackRoleArn;
 
     public Output<String> getApplicationFailureFeedbackRoleArn() {
@@ -32,7 +32,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The IAM role permitted to receive success feedback for this topic
      * 
      */
-    @InputImport(name="applicationSuccessFeedbackRoleArn")
+    @Import(name="applicationSuccessFeedbackRoleArn")
       private final @Nullable Output<String> applicationSuccessFeedbackRoleArn;
 
     public Output<String> getApplicationSuccessFeedbackRoleArn() {
@@ -43,7 +43,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Percentage of success to sample
      * 
      */
-    @InputImport(name="applicationSuccessFeedbackSampleRate")
+    @Import(name="applicationSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> applicationSuccessFeedbackSampleRate;
 
     public Output<Integer> getApplicationSuccessFeedbackSampleRate() {
@@ -54,7 +54,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the SNS topic, as a more obvious property (clone of id)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -65,7 +65,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Enables content-based deduplication for FIFO topics. For more information, see the [related documentation](https://docs.aws.amazon.com/sns/latest/dg/fifo-message-dedup.html)
      * 
      */
-    @InputImport(name="contentBasedDeduplication")
+    @Import(name="contentBasedDeduplication")
       private final @Nullable Output<Boolean> contentBasedDeduplication;
 
     public Output<Boolean> getContentBasedDeduplication() {
@@ -76,7 +76,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
      * 
      */
-    @InputImport(name="deliveryPolicy")
+    @Import(name="deliveryPolicy")
       private final @Nullable Output<String> deliveryPolicy;
 
     public Output<String> getDeliveryPolicy() {
@@ -87,7 +87,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The display name for the topic
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -98,7 +98,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Boolean indicating whether or not to create a FIFO (first-in-first-out) topic (default is `false`).
      * 
      */
-    @InputImport(name="fifoTopic")
+    @Import(name="fifoTopic")
       private final @Nullable Output<Boolean> fifoTopic;
 
     public Output<Boolean> getFifoTopic() {
@@ -109,7 +109,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * IAM role for failure feedback
      * 
      */
-    @InputImport(name="firehoseFailureFeedbackRoleArn")
+    @Import(name="firehoseFailureFeedbackRoleArn")
       private final @Nullable Output<String> firehoseFailureFeedbackRoleArn;
 
     public Output<String> getFirehoseFailureFeedbackRoleArn() {
@@ -120,7 +120,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The IAM role permitted to receive success feedback for this topic
      * 
      */
-    @InputImport(name="firehoseSuccessFeedbackRoleArn")
+    @Import(name="firehoseSuccessFeedbackRoleArn")
       private final @Nullable Output<String> firehoseSuccessFeedbackRoleArn;
 
     public Output<String> getFirehoseSuccessFeedbackRoleArn() {
@@ -131,7 +131,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Percentage of success to sample
      * 
      */
-    @InputImport(name="firehoseSuccessFeedbackSampleRate")
+    @Import(name="firehoseSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> firehoseSuccessFeedbackSampleRate;
 
     public Output<Integer> getFirehoseSuccessFeedbackSampleRate() {
@@ -142,7 +142,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * IAM role for failure feedback
      * 
      */
-    @InputImport(name="httpFailureFeedbackRoleArn")
+    @Import(name="httpFailureFeedbackRoleArn")
       private final @Nullable Output<String> httpFailureFeedbackRoleArn;
 
     public Output<String> getHttpFailureFeedbackRoleArn() {
@@ -153,7 +153,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The IAM role permitted to receive success feedback for this topic
      * 
      */
-    @InputImport(name="httpSuccessFeedbackRoleArn")
+    @Import(name="httpSuccessFeedbackRoleArn")
       private final @Nullable Output<String> httpSuccessFeedbackRoleArn;
 
     public Output<String> getHttpSuccessFeedbackRoleArn() {
@@ -164,7 +164,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Percentage of success to sample
      * 
      */
-    @InputImport(name="httpSuccessFeedbackSampleRate")
+    @Import(name="httpSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> httpSuccessFeedbackSampleRate;
 
     public Output<Integer> getHttpSuccessFeedbackSampleRate() {
@@ -175,7 +175,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
      * 
      */
-    @InputImport(name="kmsMasterKeyId")
+    @Import(name="kmsMasterKeyId")
       private final @Nullable Output<String> kmsMasterKeyId;
 
     public Output<String> getKmsMasterKeyId() {
@@ -186,7 +186,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * IAM role for failure feedback
      * 
      */
-    @InputImport(name="lambdaFailureFeedbackRoleArn")
+    @Import(name="lambdaFailureFeedbackRoleArn")
       private final @Nullable Output<String> lambdaFailureFeedbackRoleArn;
 
     public Output<String> getLambdaFailureFeedbackRoleArn() {
@@ -197,7 +197,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The IAM role permitted to receive success feedback for this topic
      * 
      */
-    @InputImport(name="lambdaSuccessFeedbackRoleArn")
+    @Import(name="lambdaSuccessFeedbackRoleArn")
       private final @Nullable Output<String> lambdaSuccessFeedbackRoleArn;
 
     public Output<String> getLambdaSuccessFeedbackRoleArn() {
@@ -208,7 +208,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Percentage of success to sample
      * 
      */
-    @InputImport(name="lambdaSuccessFeedbackSampleRate")
+    @Import(name="lambdaSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> lambdaSuccessFeedbackSampleRate;
 
     public Output<Integer> getLambdaSuccessFeedbackSampleRate() {
@@ -219,7 +219,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The name of the topic. Topic names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 256 characters long. For a FIFO (first-in-first-out) topic, the name must end with the `.fifo` suffix. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -230,7 +230,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -241,7 +241,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The AWS Account ID of the SNS topic owner
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -252,7 +252,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The fully-formed AWS policy as JSON.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -263,7 +263,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * IAM role for failure feedback
      * 
      */
-    @InputImport(name="sqsFailureFeedbackRoleArn")
+    @Import(name="sqsFailureFeedbackRoleArn")
       private final @Nullable Output<String> sqsFailureFeedbackRoleArn;
 
     public Output<String> getSqsFailureFeedbackRoleArn() {
@@ -274,7 +274,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * The IAM role permitted to receive success feedback for this topic
      * 
      */
-    @InputImport(name="sqsSuccessFeedbackRoleArn")
+    @Import(name="sqsSuccessFeedbackRoleArn")
       private final @Nullable Output<String> sqsSuccessFeedbackRoleArn;
 
     public Output<String> getSqsSuccessFeedbackRoleArn() {
@@ -285,7 +285,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Percentage of success to sample
      * 
      */
-    @InputImport(name="sqsSuccessFeedbackSampleRate")
+    @Import(name="sqsSuccessFeedbackSampleRate")
       private final @Nullable Output<Integer> sqsSuccessFeedbackSampleRate;
 
     public Output<Integer> getSqsSuccessFeedbackSampleRate() {
@@ -296,7 +296,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `defaultTags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -307,7 +307,7 @@ public final class TopicState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

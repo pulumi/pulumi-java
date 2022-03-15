@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.PrivateClusterMasterGlobalAccessConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * Whether the master's internal IP address is used as the cluster endpoint.
      * 
      */
-    @InputImport(name="enablePrivateEndpoint", required=true)
+    @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
     public Boolean getEnablePrivateEndpoint() {
@@ -33,7 +33,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
      * 
      */
-    @InputImport(name="enablePrivateNodes", required=true)
+    @Import(name="enablePrivateNodes", required=true)
       private final Boolean enablePrivateNodes;
 
     public Boolean getEnablePrivateNodes() {
@@ -44,7 +44,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * Controls master global access settings.
      * 
      */
-    @InputImport(name="masterGlobalAccessConfig", required=true)
+    @Import(name="masterGlobalAccessConfig", required=true)
       private final PrivateClusterMasterGlobalAccessConfigResponse masterGlobalAccessConfig;
 
     public PrivateClusterMasterGlobalAccessConfigResponse getMasterGlobalAccessConfig() {
@@ -55,7 +55,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
      * 
      */
-    @InputImport(name="masterIpv4CidrBlock", required=true)
+    @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
     public String getMasterIpv4CidrBlock() {
@@ -66,7 +66,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * The peering name in the customer VPC used by this cluster.
      * 
      */
-    @InputImport(name="peeringName", required=true)
+    @Import(name="peeringName", required=true)
       private final String peeringName;
 
     public String getPeeringName() {
@@ -77,7 +77,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * The internal IP address of this cluster's master endpoint.
      * 
      */
-    @InputImport(name="privateEndpoint", required=true)
+    @Import(name="privateEndpoint", required=true)
       private final String privateEndpoint;
 
     public String getPrivateEndpoint() {
@@ -88,7 +88,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * The external IP address of this cluster's master endpoint.
      * 
      */
-    @InputImport(name="publicEndpoint", required=true)
+    @Import(name="publicEndpoint", required=true)
       private final String publicEndpoint;
 
     public String getPublicEndpoint() {

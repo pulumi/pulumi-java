@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InboundNatRuleResponse {
     /**
      * The port to which the external traffic will be redirected.
@@ -28,11 +28,11 @@ public final class InboundNatRuleResponse {
      */
     private final @Nullable String transportProtocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InboundNatRuleResponse(
-        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
-        @OutputCustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
-        @OutputCustomType.Parameter("transportProtocol") @Nullable String transportProtocol) {
+        @CustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @CustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
+        @CustomType.Parameter("transportProtocol") @Nullable String transportProtocol) {
         this.backendPort = backendPort;
         this.frontendPort = frontendPort;
         this.transportProtocol = transportProtocol;

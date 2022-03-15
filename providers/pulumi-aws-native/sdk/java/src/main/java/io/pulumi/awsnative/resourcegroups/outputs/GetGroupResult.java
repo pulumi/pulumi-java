@@ -6,14 +6,14 @@ package io.pulumi.awsnative.resourcegroups.outputs;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupConfigurationItem;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupResourceQuery;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * The Resource Group ARN.
@@ -30,14 +30,14 @@ public final class GetGroupResult {
     private final @Nullable List<String> resources;
     private final @Nullable List<GroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("configuration") @Nullable List<GroupConfigurationItem> configuration,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("resourceQuery") @Nullable GroupResourceQuery resourceQuery,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
-        @OutputCustomType.Parameter("tags") @Nullable List<GroupTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("configuration") @Nullable List<GroupConfigurationItem> configuration,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("resourceQuery") @Nullable GroupResourceQuery resourceQuery,
+        @CustomType.Parameter("resources") @Nullable List<String> resources,
+        @CustomType.Parameter("tags") @Nullable List<GroupTag> tags) {
         this.arn = arn;
         this.configuration = configuration;
         this.description = description;

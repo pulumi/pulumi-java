@@ -6,13 +6,13 @@ package io.pulumi.aws.codedeploy.outputs;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
     /**
      * Configuration block for the production traffic route (documented below).
@@ -30,11 +30,11 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
      */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfo(
-        @OutputCustomType.Parameter("prodTrafficRoute") DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
-        @OutputCustomType.Parameter("targetGroups") List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
-        @OutputCustomType.Parameter("testTrafficRoute") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
+        @CustomType.Parameter("prodTrafficRoute") DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
+        @CustomType.Parameter("targetGroups") List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
+        @CustomType.Parameter("testTrafficRoute") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
         this.prodTrafficRoute = prodTrafficRoute;
         this.targetGroups = targetGroups;
         this.testTrafficRoute = testTrafficRoute;

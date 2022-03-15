@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.OpenAuthenticationProviderType;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationPolicyClaimArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
      * The access policy claims.
      * 
      */
-    @InputImport(name="claims")
+    @Import(name="claims")
       private final @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
     public Output<List<OpenAuthenticationPolicyClaimArgs>> getClaims() {
@@ -37,7 +37,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
      * Type of provider for OAuth.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
     public Output<Either<String,OpenAuthenticationProviderType>> getType() {

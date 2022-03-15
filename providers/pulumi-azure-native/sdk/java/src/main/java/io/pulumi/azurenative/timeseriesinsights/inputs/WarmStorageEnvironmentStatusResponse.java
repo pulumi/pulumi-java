@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WarmStorageEnvironmentStatusResponse extends io.pulumi.resour
      * A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
      * 
      */
-    @InputImport(name="currentCount")
+    @Import(name="currentCount")
       private final @Nullable Integer currentCount;
 
     public Optional<Integer> getCurrentCount() {
@@ -34,7 +34,7 @@ public final class WarmStorageEnvironmentStatusResponse extends io.pulumi.resour
      * A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
      * 
      */
-    @InputImport(name="maxCount")
+    @Import(name="maxCount")
       private final @Nullable Integer maxCount;
 
     public Optional<Integer> getMaxCount() {
@@ -45,7 +45,7 @@ public final class WarmStorageEnvironmentStatusResponse extends io.pulumi.resour
      * This string represents the state of warm storage properties usage. It can be "Ok", "Error", "Unknown".
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

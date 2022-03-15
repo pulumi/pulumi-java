@@ -10,7 +10,7 @@ import io.pulumi.azurenative.securityinsights.outputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentOwnerInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * Additional data on the incident
      * 
      */
-    @OutputExport(name="additionalData", type=IncidentAdditionalDataResponse.class, parameters={})
+    @Export(name="additionalData", type=IncidentAdditionalDataResponse.class, parameters={})
     private Output<IncidentAdditionalDataResponse> additionalData;
 
     /**
@@ -52,7 +52,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The reason the incident was closed
      * 
      */
-    @OutputExport(name="classification", type=String.class, parameters={})
+    @Export(name="classification", type=String.class, parameters={})
     private Output</* @Nullable */ String> classification;
 
     /**
@@ -66,7 +66,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * Describes the reason the incident was closed
      * 
      */
-    @OutputExport(name="classificationComment", type=String.class, parameters={})
+    @Export(name="classificationComment", type=String.class, parameters={})
     private Output</* @Nullable */ String> classificationComment;
 
     /**
@@ -80,7 +80,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The classification reason the incident was closed with
      * 
      */
-    @OutputExport(name="classificationReason", type=String.class, parameters={})
+    @Export(name="classificationReason", type=String.class, parameters={})
     private Output</* @Nullable */ String> classificationReason;
 
     /**
@@ -94,7 +94,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The time the incident was created
      * 
      */
-    @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
+    @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
@@ -108,7 +108,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The description of the incident
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -122,7 +122,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -136,7 +136,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The time of the first activity in the incident
      * 
      */
-    @OutputExport(name="firstActivityTimeUtc", type=String.class, parameters={})
+    @Export(name="firstActivityTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstActivityTimeUtc;
 
     /**
@@ -150,7 +150,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * A sequential number
      * 
      */
-    @OutputExport(name="incidentNumber", type=Integer.class, parameters={})
+    @Export(name="incidentNumber", type=Integer.class, parameters={})
     private Output<Integer> incidentNumber;
 
     /**
@@ -164,7 +164,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The deep-link url to the incident in Azure portal
      * 
      */
-    @OutputExport(name="incidentUrl", type=String.class, parameters={})
+    @Export(name="incidentUrl", type=String.class, parameters={})
     private Output<String> incidentUrl;
 
     /**
@@ -178,7 +178,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * List of labels relevant to this incident
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={IncidentLabelResponse.class})
+    @Export(name="labels", type=List.class, parameters={IncidentLabelResponse.class})
     private Output</* @Nullable */ List<IncidentLabelResponse>> labels;
 
     /**
@@ -192,7 +192,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The time of the last activity in the incident
      * 
      */
-    @OutputExport(name="lastActivityTimeUtc", type=String.class, parameters={})
+    @Export(name="lastActivityTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastActivityTimeUtc;
 
     /**
@@ -206,7 +206,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The last time the incident was updated
      * 
      */
-    @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
@@ -220,7 +220,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -234,7 +234,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * Describes a user that the incident is assigned to
      * 
      */
-    @OutputExport(name="owner", type=IncidentOwnerInfoResponse.class, parameters={})
+    @Export(name="owner", type=IncidentOwnerInfoResponse.class, parameters={})
     private Output</* @Nullable */ IncidentOwnerInfoResponse> owner;
 
     /**
@@ -248,7 +248,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * List of resource ids of Analytic rules related to the incident
      * 
      */
-    @OutputExport(name="relatedAnalyticRuleIds", type=List.class, parameters={String.class})
+    @Export(name="relatedAnalyticRuleIds", type=List.class, parameters={String.class})
     private Output<List<String>> relatedAnalyticRuleIds;
 
     /**
@@ -262,7 +262,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The severity of the incident
      * 
      */
-    @OutputExport(name="severity", type=String.class, parameters={})
+    @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
@@ -276,7 +276,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The status of the incident
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -290,7 +290,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * The title of the incident
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
@@ -304,7 +304,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

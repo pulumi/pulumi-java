@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QuotaLimitResponse {
     /**
      * Default number of tokens that can be consumed during the specified duration. This is the number of tokens assigned when a client application developer activates the service for his/her project. Specifying a value of 0 will block all requests. This can be used if you are provisioning quota to selected consumers and blocking others. Similarly, a value of -1 will indicate an unlimited quota. No other negative values are allowed. Used by group-based quotas only.
@@ -61,18 +61,18 @@ public final class QuotaLimitResponse {
      */
     private final Map<String,String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuotaLimitResponse(
-        @OutputCustomType.Parameter("defaultLimit") String defaultLimit,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("freeTier") String freeTier,
-        @OutputCustomType.Parameter("maxLimit") String maxLimit,
-        @OutputCustomType.Parameter("metric") String metric,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("values") Map<String,String> values) {
+        @CustomType.Parameter("defaultLimit") String defaultLimit,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("freeTier") String freeTier,
+        @CustomType.Parameter("maxLimit") String maxLimit,
+        @CustomType.Parameter("metric") String metric,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("values") Map<String,String> values) {
         this.defaultLimit = defaultLimit;
         this.description = description;
         this.displayName = displayName;

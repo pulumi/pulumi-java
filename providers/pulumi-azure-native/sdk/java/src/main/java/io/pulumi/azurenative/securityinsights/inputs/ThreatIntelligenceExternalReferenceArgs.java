@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * External reference description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * External reference ID
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -45,7 +45,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * External reference hashes
      * 
      */
-    @InputImport(name="hashes")
+    @Import(name="hashes")
       private final @Nullable Output<Map<String,String>> hashes;
 
     public Output<Map<String,String>> getHashes() {
@@ -56,7 +56,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * External reference source name
      * 
      */
-    @InputImport(name="sourceName")
+    @Import(name="sourceName")
       private final @Nullable Output<String> sourceName;
 
     public Output<String> getSourceName() {
@@ -67,7 +67,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
      * External reference URL
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

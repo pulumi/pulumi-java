@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CanaryTimelineArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time the canary was created.
      * 
      */
-    @InputImport(name="created")
+    @Import(name="created")
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
@@ -29,7 +29,7 @@ public final class CanaryTimelineArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time the canary was most recently modified.
      * 
      */
-    @InputImport(name="lastModified")
+    @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
     public Output<String> getLastModified() {
@@ -40,7 +40,7 @@ public final class CanaryTimelineArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time that the canary's most recent run started.
      * 
      */
-    @InputImport(name="lastStarted")
+    @Import(name="lastStarted")
       private final @Nullable Output<String> lastStarted;
 
     public Output<String> getLastStarted() {
@@ -51,7 +51,7 @@ public final class CanaryTimelineArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time that the canary's most recent run ended.
      * 
      */
-    @InputImport(name="lastStopped")
+    @Import(name="lastStopped")
       private final @Nullable Output<String> lastStopped;
 
     public Output<String> getLastStopped() {

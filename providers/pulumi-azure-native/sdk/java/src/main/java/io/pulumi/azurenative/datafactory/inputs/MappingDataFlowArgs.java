@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowSinkArgs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TransformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * List of tags that can be used for describing the data flow.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -39,7 +39,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * The description of the data flow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
 
     public Output<DataFlowFolderArgs> getFolder() {
@@ -61,7 +61,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * DataFlow script.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
@@ -72,7 +72,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * Data flow script lines.
      * 
      */
-    @InputImport(name="scriptLines")
+    @Import(name="scriptLines")
       private final @Nullable Output<List<String>> scriptLines;
 
     public Output<List<String>> getScriptLines() {
@@ -83,7 +83,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * List of sinks in data flow.
      * 
      */
-    @InputImport(name="sinks")
+    @Import(name="sinks")
       private final @Nullable Output<List<DataFlowSinkArgs>> sinks;
 
     public Output<List<DataFlowSinkArgs>> getSinks() {
@@ -94,7 +94,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * List of sources in data flow.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<DataFlowSourceArgs>> sources;
 
     public Output<List<DataFlowSourceArgs>> getSources() {
@@ -105,7 +105,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * List of transformations in data flow.
      * 
      */
-    @InputImport(name="transformations")
+    @Import(name="transformations")
       private final @Nullable Output<List<TransformationArgs>> transformations;
 
     public Output<List<TransformationArgs>> getTransformations() {
@@ -117,7 +117,7 @@ public final class MappingDataFlowArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'MappingDataFlow'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

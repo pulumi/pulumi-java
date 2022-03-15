@@ -5,7 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
      * The settings that determine the size and behavior of the connection pool for the target group.
      * 
      */
-    @InputImport(name="connectionPoolConfig")
+    @Import(name="connectionPoolConfig")
       private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
     public Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> getConnectionPoolConfig() {
@@ -30,7 +30,7 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
      * Name of the RDS DB Proxy.
      * 
      */
-    @InputImport(name="dbProxyName", required=true)
+    @Import(name="dbProxyName", required=true)
       private final Output<String> dbProxyName;
 
     public Output<String> getDbProxyName() {

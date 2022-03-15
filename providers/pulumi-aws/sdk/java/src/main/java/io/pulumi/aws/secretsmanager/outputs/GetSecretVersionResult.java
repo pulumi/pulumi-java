@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.secretsmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretVersionResult {
     /**
      * The ARN of the secret.
@@ -41,16 +41,16 @@ public final class GetSecretVersionResult {
     private final @Nullable String versionStage;
     private final List<String> versionStages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretVersionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("secretBinary") String secretBinary,
-        @OutputCustomType.Parameter("secretId") String secretId,
-        @OutputCustomType.Parameter("secretString") String secretString,
-        @OutputCustomType.Parameter("versionId") String versionId,
-        @OutputCustomType.Parameter("versionStage") @Nullable String versionStage,
-        @OutputCustomType.Parameter("versionStages") List<String> versionStages) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("secretBinary") String secretBinary,
+        @CustomType.Parameter("secretId") String secretId,
+        @CustomType.Parameter("secretString") String secretString,
+        @CustomType.Parameter("versionId") String versionId,
+        @CustomType.Parameter("versionStage") @Nullable String versionStage,
+        @CustomType.Parameter("versionStages") List<String> versionStages) {
         this.arn = arn;
         this.id = id;
         this.secretBinary = secretBinary;

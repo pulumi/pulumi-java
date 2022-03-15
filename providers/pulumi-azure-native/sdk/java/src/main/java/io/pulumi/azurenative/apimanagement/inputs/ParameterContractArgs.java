@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * Default parameter value.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -35,7 +35,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * Parameter description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * Parameter name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether parameter is required or not.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
     public Output<Boolean> getRequired() {
@@ -68,7 +68,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * Parameter type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -79,7 +79,7 @@ public final class ParameterContractArgs extends io.pulumi.resources.ResourceArg
      * Parameter values.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.RegionCommitmentCategory;
 import io.pulumi.googlenative.compute_v1.enums.RegionCommitmentPlan;
 import io.pulumi.googlenative.compute_v1.enums.RegionCommitmentType;
@@ -26,7 +26,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
@@ -37,7 +37,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * The category of the commitment. Category MACHINE specifies commitments composed of machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments composed of software licenses, listed in licenseResources. Note that only MACHINE commitments should have a Type specified.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<RegionCommitmentCategory> category;
 
     public Output<RegionCommitmentCategory> getCategory() {
@@ -48,7 +48,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * The license specification required as part of a license commitment.
      * 
      */
-    @InputImport(name="licenseResource")
+    @Import(name="licenseResource")
       private final @Nullable Output<LicenseResourceCommitmentArgs> licenseResource;
 
     public Output<LicenseResourceCommitmentArgs> getLicenseResource() {
@@ -70,7 +70,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,28 +81,28 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * The plan for this commitment, which determines duration and discount rate. The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<RegionCommitmentPlan> plan;
 
     public Output<RegionCommitmentPlan> getPlan() {
         return this.plan == null ? Output.empty() : this.plan;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -113,7 +113,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * List of reservations in this commitment.
      * 
      */
-    @InputImport(name="reservations")
+    @Import(name="reservations")
       private final @Nullable Output<List<ReservationArgs>> reservations;
 
     public Output<List<ReservationArgs>> getReservations() {
@@ -124,7 +124,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource commitments must occur together.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<ResourceCommitmentArgs>> resources;
 
     public Output<List<ResourceCommitmentArgs>> getResources() {
@@ -135,7 +135,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
      * The type of commitment, which affects the discount rate and the eligible resources. Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized machines.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<RegionCommitmentType> type;
 
     public Output<RegionCommitmentType> getType() {

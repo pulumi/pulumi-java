@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ProjectMetadataArgs;
@@ -41,7 +41,7 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * A series of key value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
@@ -56,7 +56,7 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

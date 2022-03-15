@@ -7,7 +7,7 @@ import io.pulumi.azurenative.appplatform.enums.BindingType;
 import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingLaunchPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * Buildpack Binding Type
      * 
      */
-    @InputImport(name="bindingType")
+    @Import(name="bindingType")
       private final @Nullable Output<Either<String,BindingType>> bindingType;
 
     public Output<Either<String,BindingType>> getBindingType() {
@@ -36,7 +36,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * The object describes the buildpack binding launch properties
      * 
      */
-    @InputImport(name="launchProperties")
+    @Import(name="launchProperties")
       private final @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
     public Output<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.NetworkRoutingConfigRoutingMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
      * The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.
      * 
      */
-    @InputImport(name="routingMode")
+    @Import(name="routingMode")
       private final @Nullable Output<NetworkRoutingConfigRoutingMode> routingMode;
 
     public Output<NetworkRoutingConfigRoutingMode> getRoutingMode() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanNotificationTargetItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponsePlanIncidentTemplate {
     /**
      * The deduplication string.
@@ -40,13 +40,13 @@ public final class ResponsePlanIncidentTemplate {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponsePlanIncidentTemplate(
-        @OutputCustomType.Parameter("dedupeString") @Nullable String dedupeString,
-        @OutputCustomType.Parameter("impact") Integer impact,
-        @OutputCustomType.Parameter("notificationTargets") @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
-        @OutputCustomType.Parameter("summary") @Nullable String summary,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("dedupeString") @Nullable String dedupeString,
+        @CustomType.Parameter("impact") Integer impact,
+        @CustomType.Parameter("notificationTargets") @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
+        @CustomType.Parameter("summary") @Nullable String summary,
+        @CustomType.Parameter("title") String title) {
         this.dedupeString = dedupeString;
         this.impact = impact;
         this.notificationTargets = notificationTargets;

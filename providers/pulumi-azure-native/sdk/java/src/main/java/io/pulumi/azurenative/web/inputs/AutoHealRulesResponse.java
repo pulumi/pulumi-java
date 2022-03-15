@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AutoHealActionsResponse;
 import io.pulumi.azurenative.web.inputs.AutoHealTriggersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutoHealRulesResponse extends io.pulumi.resources.InvokeArgs 
      * Actions to be executed when a rule is triggered.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable AutoHealActionsResponse actions;
 
     public Optional<AutoHealActionsResponse> getActions() {
@@ -34,7 +34,7 @@ public final class AutoHealRulesResponse extends io.pulumi.resources.InvokeArgs 
      * Conditions that describe when to execute the auto-heal actions.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable AutoHealTriggersResponse triggers;
 
     public Optional<AutoHealTriggersResponse> getTriggers() {

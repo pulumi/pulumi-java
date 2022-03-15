@@ -7,7 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateEdiPartyNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateOtherNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,56 +21,56 @@ public final class CertificateGeneralNameArgs extends io.pulumi.resources.Resour
 
     public static final CertificateGeneralNameArgs Empty = new CertificateGeneralNameArgs();
 
-    @InputImport(name="directoryName")
+    @Import(name="directoryName")
       private final @Nullable Output<CertificateSubjectArgs> directoryName;
 
     public Output<CertificateSubjectArgs> getDirectoryName() {
         return this.directoryName == null ? Output.empty() : this.directoryName;
     }
 
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
         return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
-    @InputImport(name="ediPartyName")
+    @Import(name="ediPartyName")
       private final @Nullable Output<CertificateEdiPartyNameArgs> ediPartyName;
 
     public Output<CertificateEdiPartyNameArgs> getEdiPartyName() {
         return this.ediPartyName == null ? Output.empty() : this.ediPartyName;
     }
 
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
         return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
-    @InputImport(name="otherName")
+    @Import(name="otherName")
       private final @Nullable Output<CertificateOtherNameArgs> otherName;
 
     public Output<CertificateOtherNameArgs> getOtherName() {
         return this.otherName == null ? Output.empty() : this.otherName;
     }
 
-    @InputImport(name="registeredId")
+    @Import(name="registeredId")
       private final @Nullable Output<String> registeredId;
 
     public Output<String> getRegisteredId() {
         return this.registeredId == null ? Output.empty() : this.registeredId;
     }
 
-    @InputImport(name="rfc822Name")
+    @Import(name="rfc822Name")
       private final @Nullable Output<String> rfc822Name;
 
     public Output<String> getRfc822Name() {
         return this.rfc822Name == null ? Output.empty() : this.rfc822Name;
     }
 
-    @InputImport(name="uniformResourceIdentifier")
+    @Import(name="uniformResourceIdentifier")
       private final @Nullable Output<String> uniformResourceIdentifier;
 
     public Output<String> getUniformResourceIdentifier() {

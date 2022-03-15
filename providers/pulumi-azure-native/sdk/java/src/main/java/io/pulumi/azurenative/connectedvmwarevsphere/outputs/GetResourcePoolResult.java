@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePoolResult {
     /**
      * Gets or sets CPULimitMHz which specifies a CPU usage limit in MHz.
@@ -134,30 +134,30 @@ public final class GetResourcePoolResult {
      */
     private final @Nullable String vCenterId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePoolResult(
-        @OutputCustomType.Parameter("cpuLimitMHz") Double cpuLimitMHz,
-        @OutputCustomType.Parameter("cpuReservationMHz") Double cpuReservationMHz,
-        @OutputCustomType.Parameter("cpuSharesLevel") String cpuSharesLevel,
-        @OutputCustomType.Parameter("customResourceName") String customResourceName,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("memLimitMB") Double memLimitMB,
-        @OutputCustomType.Parameter("memReservationMB") Double memReservationMB,
-        @OutputCustomType.Parameter("memSharesLevel") String memSharesLevel,
-        @OutputCustomType.Parameter("moName") String moName,
-        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uuid") String uuid,
-        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId) {
+        @CustomType.Parameter("cpuLimitMHz") Double cpuLimitMHz,
+        @CustomType.Parameter("cpuReservationMHz") Double cpuReservationMHz,
+        @CustomType.Parameter("cpuSharesLevel") String cpuSharesLevel,
+        @CustomType.Parameter("customResourceName") String customResourceName,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("memLimitMB") Double memLimitMB,
+        @CustomType.Parameter("memReservationMB") Double memReservationMB,
+        @CustomType.Parameter("memSharesLevel") String memSharesLevel,
+        @CustomType.Parameter("moName") String moName,
+        @CustomType.Parameter("moRefId") @Nullable String moRefId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uuid") String uuid,
+        @CustomType.Parameter("vCenterId") @Nullable String vCenterId) {
         this.cpuLimitMHz = cpuLimitMHz;
         this.cpuReservationMHz = cpuReservationMHz;
         this.cpuSharesLevel = cpuSharesLevel;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.DdosCustomPolicyProtocol;
 import io.pulumi.azurenative.network.enums.DdosCustomPolicyTriggerSensitivityOverride;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * The protocol for which the DDoS protection policy is being customized.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
 
     public Output<Either<String,DdosCustomPolicyProtocol>> getProtocol() {
@@ -36,7 +36,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * The customized DDoS protection source rate.
      * 
      */
-    @InputImport(name="sourceRateOverride")
+    @Import(name="sourceRateOverride")
       private final @Nullable Output<String> sourceRateOverride;
 
     public Output<String> getSourceRateOverride() {
@@ -47,7 +47,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * The customized DDoS protection trigger rate.
      * 
      */
-    @InputImport(name="triggerRateOverride")
+    @Import(name="triggerRateOverride")
       private final @Nullable Output<String> triggerRateOverride;
 
     public Output<String> getTriggerRateOverride() {
@@ -58,7 +58,7 @@ public final class ProtocolCustomSettingsFormatArgs extends io.pulumi.resources.
      * The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
      * 
      */
-    @InputImport(name="triggerSensitivityOverride")
+    @Import(name="triggerSensitivityOverride")
       private final @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 
     public Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> getTriggerSensitivityOverride() {

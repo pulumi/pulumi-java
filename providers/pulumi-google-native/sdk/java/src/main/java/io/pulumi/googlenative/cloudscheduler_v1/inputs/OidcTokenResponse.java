@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
      * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
      * 
      */
-    @InputImport(name="audience", required=true)
+    @Import(name="audience", required=true)
       private final String audience;
 
     public String getAudience() {
@@ -31,7 +31,7 @@ public final class OidcTokenResponse extends io.pulumi.resources.InvokeArgs {
      * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
     public String getServiceAccountEmail() {

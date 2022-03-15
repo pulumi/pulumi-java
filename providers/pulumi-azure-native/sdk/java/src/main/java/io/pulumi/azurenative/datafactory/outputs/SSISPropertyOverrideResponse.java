@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SSISPropertyOverrideResponse {
     /**
      * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
@@ -23,10 +23,10 @@ public final class SSISPropertyOverrideResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSISPropertyOverrideResponse(
-        @OutputCustomType.Parameter("isSensitive") @Nullable Boolean isSensitive,
-        @OutputCustomType.Parameter("value") Object value) {
+        @CustomType.Parameter("isSensitive") @Nullable Boolean isSensitive,
+        @CustomType.Parameter("value") Object value) {
         this.isSensitive = isSensitive;
         this.value = value;
     }

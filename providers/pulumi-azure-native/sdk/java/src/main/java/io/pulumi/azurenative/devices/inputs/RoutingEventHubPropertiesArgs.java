@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * Method used to authenticate against the event hub endpoint
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
     public Output<Either<String,AuthenticationType>> getAuthenticationType() {
@@ -35,7 +35,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * The connection string of the event hub endpoint.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -46,7 +46,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * The url of the event hub endpoint. It must include the protocol sb://
      * 
      */
-    @InputImport(name="endpointUri")
+    @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
     public Output<String> getEndpointUri() {
@@ -57,7 +57,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * Event hub name on the event hub namespace
      * 
      */
-    @InputImport(name="entityPath")
+    @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
     public Output<String> getEntityPath() {
@@ -68,7 +68,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * Id of the event hub endpoint
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -79,7 +79,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * The name of the resource group of the event hub endpoint.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -101,7 +101,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * The subscription identifier of the event hub endpoint.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {

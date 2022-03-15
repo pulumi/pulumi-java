@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConfigurationEncryptionConfigurationS3Encryption {
     /**
      * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationS3Encryption {
      */
     private final @Nullable String s3EncryptionMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationS3Encryption(
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("s3EncryptionMode") @Nullable String s3EncryptionMode) {
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("s3EncryptionMode") @Nullable String s3EncryptionMode) {
         this.kmsKeyArn = kmsKeyArn;
         this.s3EncryptionMode = s3EncryptionMode;
     }

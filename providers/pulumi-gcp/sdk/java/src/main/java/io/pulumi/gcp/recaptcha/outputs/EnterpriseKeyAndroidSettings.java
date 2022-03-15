@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterpriseKeyAndroidSettings {
     /**
      * If set to true, it means allowed_package_names will not be enforced.
@@ -24,10 +24,10 @@ public final class EnterpriseKeyAndroidSettings {
      */
     private final @Nullable List<String> allowedPackageNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterpriseKeyAndroidSettings(
-        @OutputCustomType.Parameter("allowAllPackageNames") @Nullable Boolean allowAllPackageNames,
-        @OutputCustomType.Parameter("allowedPackageNames") @Nullable List<String> allowedPackageNames) {
+        @CustomType.Parameter("allowAllPackageNames") @Nullable Boolean allowAllPackageNames,
+        @CustomType.Parameter("allowedPackageNames") @Nullable List<String> allowedPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         this.allowedPackageNames = allowedPackageNames;
     }

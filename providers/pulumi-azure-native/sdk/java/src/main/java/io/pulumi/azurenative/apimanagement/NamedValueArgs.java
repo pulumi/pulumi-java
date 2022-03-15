@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * KeyVault location details of the namedValue.
      * 
      */
-    @InputImport(name="keyVault")
+    @Import(name="keyVault")
       private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
     public Output<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
@@ -43,7 +43,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the NamedValue.
      * 
      */
-    @InputImport(name="namedValueId")
+    @Import(name="namedValueId")
       private final @Nullable Output<String> namedValueId;
 
     public Output<String> getNamedValueId() {
@@ -54,7 +54,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<Boolean> secret;
 
     public Output<Boolean> getSecret() {
@@ -76,7 +76,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -87,7 +87,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * Optional tags that when provided can be used to filter the NamedValue list.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -98,7 +98,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * Value of the NamedValue. Can contain policy expressions. It may not be empty or consist only of whitespace. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

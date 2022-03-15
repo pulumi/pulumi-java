@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * The ID of the dataset containing this model.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -28,7 +28,7 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * The ID of the model.
      * 
      */
-    @InputImport(name="modelId", required=true)
+    @Import(name="modelId", required=true)
       private final Output<String> modelId;
 
     public Output<String> getModelId() {
@@ -39,7 +39,7 @@ public final class JobExtractSourceModelArgs extends io.pulumi.resources.Resourc
      * The ID of the project containing this model.
      * 
      */
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
     public Output<String> getProjectId() {

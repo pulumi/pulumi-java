@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MetricBucketOptionsLinearBucketsArgs extends io.pulumi.resour
      * Must be greater than 0.
      * 
      */
-    @InputImport(name="numFiniteBuckets")
+    @Import(name="numFiniteBuckets")
       private final @Nullable Output<Integer> numFiniteBuckets;
 
     public Output<Integer> getNumFiniteBuckets() {
@@ -30,7 +30,7 @@ public final class MetricBucketOptionsLinearBucketsArgs extends io.pulumi.resour
      * Lower bound of the first bucket.
      * 
      */
-    @InputImport(name="offset")
+    @Import(name="offset")
       private final @Nullable Output<Double> offset;
 
     public Output<Double> getOffset() {
@@ -41,7 +41,7 @@ public final class MetricBucketOptionsLinearBucketsArgs extends io.pulumi.resour
      * Must be greater than 0.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<Double> width;
 
     public Output<Double> getWidth() {

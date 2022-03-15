@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressClassParametersReference {
     /**
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
@@ -37,13 +37,13 @@ public final class IngressClassParametersReference {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressClassParametersReference(
-        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("scope") @Nullable String scope) {
+        @CustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("scope") @Nullable String scope) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;

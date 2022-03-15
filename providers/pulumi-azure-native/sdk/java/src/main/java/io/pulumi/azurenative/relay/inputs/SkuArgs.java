@@ -6,7 +6,7 @@ package io.pulumi.azurenative.relay.inputs;
 import io.pulumi.azurenative.relay.enums.SkuName;
 import io.pulumi.azurenative.relay.enums.SkuTier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * Name of this SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<SkuName> name;
 
     public Output<SkuName> getName() {
@@ -34,7 +34,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of this SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;
 
     public Output<SkuTier> getTier() {

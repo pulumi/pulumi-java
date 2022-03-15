@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
      * An array of tags. Each tag must be 1-63 characters long, and comply with RFC1035.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<String>> items;
 
     public Output<List<String>> getItems() {

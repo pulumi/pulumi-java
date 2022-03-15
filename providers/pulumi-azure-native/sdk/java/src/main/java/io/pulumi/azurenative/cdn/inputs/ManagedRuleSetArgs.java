@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ManagedRuleGroupOverrideArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
      * 
      */
-    @InputImport(name="anomalyScore")
+    @Import(name="anomalyScore")
       private final @Nullable Output<Integer> anomalyScore;
 
     public Output<Integer> getAnomalyScore() {
@@ -36,7 +36,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the rule overrides to apply to the rule set.
      * 
      */
-    @InputImport(name="ruleGroupOverrides")
+    @Import(name="ruleGroupOverrides")
       private final @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
     public Output<List<ManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
@@ -47,7 +47,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the rule set type to use.
      * 
      */
-    @InputImport(name="ruleSetType", required=true)
+    @Import(name="ruleSetType", required=true)
       private final Output<String> ruleSetType;
 
     public Output<String> getRuleSetType() {
@@ -58,7 +58,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the version of the rule set to use.
      * 
      */
-    @InputImport(name="ruleSetVersion", required=true)
+    @Import(name="ruleSetVersion", required=true)
       private final Output<String> ruleSetVersion;
 
     public Output<String> getRuleSetVersion() {

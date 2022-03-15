@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureStorageContainerResponse {
     /**
      * Type of backup management for the container.
@@ -62,17 +62,17 @@ public final class AzureStorageContainerResponse {
      */
     private final @Nullable String storageAccountVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureStorageContainerResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("containerType") String containerType,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
-        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
-        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
-        @OutputCustomType.Parameter("storageAccountVersion") @Nullable String storageAccountVersion) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @CustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @CustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @CustomType.Parameter("storageAccountVersion") @Nullable String storageAccountVersion) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.friendlyName = friendlyName;

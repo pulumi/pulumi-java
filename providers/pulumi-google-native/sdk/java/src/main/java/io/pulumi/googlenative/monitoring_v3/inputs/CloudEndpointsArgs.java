@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CloudEndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

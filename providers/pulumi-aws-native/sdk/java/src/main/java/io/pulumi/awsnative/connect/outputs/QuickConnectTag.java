@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QuickConnectTag {
     /**
      * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
@@ -20,10 +20,10 @@ public final class QuickConnectTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuickConnectTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

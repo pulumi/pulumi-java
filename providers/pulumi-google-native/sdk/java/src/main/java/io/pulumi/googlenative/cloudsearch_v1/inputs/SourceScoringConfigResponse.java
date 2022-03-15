@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SourceScoringConfigResponse extends io.pulumi.resources.Invok
      * Importance of the source.
      * 
      */
-    @InputImport(name="sourceImportance", required=true)
+    @Import(name="sourceImportance", required=true)
       private final String sourceImportance;
 
     public String getSourceImportance() {

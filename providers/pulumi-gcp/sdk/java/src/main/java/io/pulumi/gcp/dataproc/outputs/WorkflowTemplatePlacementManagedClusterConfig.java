@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigEndpointConfig;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfig {
     /**
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
@@ -101,23 +101,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfig {
      */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfig(
-        @OutputCustomType.Parameter("autoscalingConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig autoscalingConfig,
-        @OutputCustomType.Parameter("encryptionConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig,
-        @OutputCustomType.Parameter("endpointConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig,
-        @OutputCustomType.Parameter("gceClusterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig,
-        @OutputCustomType.Parameter("gkeClusterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig,
-        @OutputCustomType.Parameter("initializationActions") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions,
-        @OutputCustomType.Parameter("lifecycleConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig,
-        @OutputCustomType.Parameter("masterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig,
-        @OutputCustomType.Parameter("metastoreConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig,
-        @OutputCustomType.Parameter("secondaryWorkerConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig,
-        @OutputCustomType.Parameter("securityConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig,
-        @OutputCustomType.Parameter("softwareConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig,
-        @OutputCustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
-        @OutputCustomType.Parameter("tempBucket") @Nullable String tempBucket,
-        @OutputCustomType.Parameter("workerConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
+        @CustomType.Parameter("autoscalingConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig autoscalingConfig,
+        @CustomType.Parameter("encryptionConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig,
+        @CustomType.Parameter("endpointConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig,
+        @CustomType.Parameter("gceClusterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig,
+        @CustomType.Parameter("gkeClusterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig,
+        @CustomType.Parameter("initializationActions") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions,
+        @CustomType.Parameter("lifecycleConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig,
+        @CustomType.Parameter("masterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig,
+        @CustomType.Parameter("metastoreConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig,
+        @CustomType.Parameter("secondaryWorkerConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig,
+        @CustomType.Parameter("securityConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig,
+        @CustomType.Parameter("softwareConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig,
+        @CustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
+        @CustomType.Parameter("tempBucket") @Nullable String tempBucket,
+        @CustomType.Parameter("workerConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.encryptionConfig = encryptionConfig;
         this.endpointConfig = endpointConfig;

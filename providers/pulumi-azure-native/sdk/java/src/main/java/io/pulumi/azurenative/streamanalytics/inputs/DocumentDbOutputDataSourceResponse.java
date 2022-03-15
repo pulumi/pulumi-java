@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable String accountId;
 
     public Optional<String> getAccountId() {
@@ -33,7 +33,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable String accountKey;
 
     public Optional<String> getAccountKey() {
@@ -44,7 +44,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="collectionNamePattern")
+    @Import(name="collectionNamePattern")
       private final @Nullable String collectionNamePattern;
 
     public Optional<String> getCollectionNamePattern() {
@@ -55,7 +55,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable String database;
 
     public Optional<String> getDatabase() {
@@ -66,7 +66,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * The name of the field in output events used to specify the primary key which insert or update operations are based on.
      * 
      */
-    @InputImport(name="documentId")
+    @Import(name="documentId")
       private final @Nullable String documentId;
 
     public Optional<String> getDocumentId() {
@@ -77,7 +77,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * The name of the field in output events used to specify the key for partitioning output across collections. If 'collectionNamePattern' contains the {partition} token, this property is required to be specified.
      * 
      */
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
@@ -89,7 +89,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * Expected value is 'Microsoft.Storage/DocumentDB'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

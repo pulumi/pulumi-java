@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.memcache_v1beta2.outputs.MemcacheParametersResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeResponse {
     /**
      * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
@@ -48,15 +48,15 @@ public final class NodeResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("nodeId") String nodeId,
-        @OutputCustomType.Parameter("parameters") MemcacheParametersResponse parameters,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateAvailable") Boolean updateAvailable,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("nodeId") String nodeId,
+        @CustomType.Parameter("parameters") MemcacheParametersResponse parameters,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateAvailable") Boolean updateAvailable,
+        @CustomType.Parameter("zone") String zone) {
         this.host = host;
         this.nodeId = nodeId;
         this.parameters = parameters;

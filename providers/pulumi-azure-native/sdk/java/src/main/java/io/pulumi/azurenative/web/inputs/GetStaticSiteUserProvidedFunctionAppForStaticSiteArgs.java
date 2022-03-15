@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * Name of the function app registered with the static site.
      * 
      */
-    @InputImport(name="functionAppName", required=true)
+    @Import(name="functionAppName", required=true)
       private final String functionAppName;
 
     public String getFunctionAppName() {
@@ -27,7 +27,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * Name of the static site.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

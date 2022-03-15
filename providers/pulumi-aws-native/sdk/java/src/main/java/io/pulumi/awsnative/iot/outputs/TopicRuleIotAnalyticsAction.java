@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleIotAnalyticsAction {
     private final @Nullable Boolean batchMode;
     private final String channelName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleIotAnalyticsAction(
-        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
-        @OutputCustomType.Parameter("channelName") String channelName,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @CustomType.Parameter("channelName") String channelName,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.batchMode = batchMode;
         this.channelName = channelName;
         this.roleArn = roleArn;

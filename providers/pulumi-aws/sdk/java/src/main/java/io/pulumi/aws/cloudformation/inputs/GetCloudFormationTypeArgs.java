@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * Amazon Resource Name (ARN) of the CloudFormation Type. For example, `arn:aws:cloudformation:us-west-2::type/resource/AWS-EC2-VPC`.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -29,7 +29,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * CloudFormation Registry Type. For example, `RESOURCE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -40,7 +40,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * CloudFormation Type name. For example, `AWS::EC2::VPC`.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable String typeName;
 
     public Optional<String> getTypeName() {
@@ -51,7 +51,7 @@ public final class GetCloudFormationTypeArgs extends io.pulumi.resources.InvokeA
      * Identifier of the CloudFormation Type version.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable String versionId;
 
     public Optional<String> getVersionId() {

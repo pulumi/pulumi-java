@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceTagFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
      * The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
      * 
      */
-    @InputImport(name="cloudformationStackArn")
+    @Import(name="cloudformationStackArn")
       private final @Nullable Output<String> cloudformationStackArn;
 
     public Output<String> getCloudformationStackArn() {
@@ -31,7 +31,7 @@ public final class ScalingPlanApplicationSourceArgs extends io.pulumi.resources.
      * A set of tags.
      * 
      */
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable Output<List<ScalingPlanApplicationSourceTagFilterArgs>> tagFilters;
 
     public Output<List<ScalingPlanApplicationSourceTagFilterArgs>> getTagFilters() {

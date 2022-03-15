@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codestarconnections.ConnectionArgs;
 import io.pulumi.aws.codestarconnections.inputs.ConnectionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The codestar connection ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
      * 
      */
-    @OutputExport(name="connectionStatus", type=String.class, parameters={})
+    @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
@@ -63,7 +63,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
      * 
      */
-    @OutputExport(name="hostArn", type=String.class, parameters={})
+    @Export(name="hostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostArn;
 
     /**
@@ -77,7 +77,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
      * 
      */
-    @OutputExport(name="providerType", type=String.class, parameters={})
+    @Export(name="providerType", type=String.class, parameters={})
     private Output<String> providerType;
 
     /**
@@ -105,7 +105,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Map of key-value resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -119,7 +119,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

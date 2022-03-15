@@ -5,7 +5,7 @@ package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import io.pulumi.awsnative.refactorspaces.enums.RouteMethod;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,19 +13,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteUriPathRouteInput {
     private final RouteActivationState activationState;
     private final @Nullable Boolean includeChildPaths;
     private final @Nullable List<RouteMethod> methods;
     private final @Nullable String sourcePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteUriPathRouteInput(
-        @OutputCustomType.Parameter("activationState") RouteActivationState activationState,
-        @OutputCustomType.Parameter("includeChildPaths") @Nullable Boolean includeChildPaths,
-        @OutputCustomType.Parameter("methods") @Nullable List<RouteMethod> methods,
-        @OutputCustomType.Parameter("sourcePath") @Nullable String sourcePath) {
+        @CustomType.Parameter("activationState") RouteActivationState activationState,
+        @CustomType.Parameter("includeChildPaths") @Nullable Boolean includeChildPaths,
+        @CustomType.Parameter("methods") @Nullable List<RouteMethod> methods,
+        @CustomType.Parameter("sourcePath") @Nullable String sourcePath) {
         this.activationState = activationState;
         this.includeChildPaths = includeChildPaths;
         this.methods = methods;

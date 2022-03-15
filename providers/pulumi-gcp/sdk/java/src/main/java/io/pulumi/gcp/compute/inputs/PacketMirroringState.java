@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.PacketMirroringCollectorIlbGetArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringFilterGetArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesGetArgs;
@@ -27,7 +27,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="collectorIlb")
+    @Import(name="collectorIlb")
       private final @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
 
     public Output<PacketMirroringCollectorIlbGetArgs> getCollectorIlb() {
@@ -38,7 +38,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * A human-readable description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<PacketMirroringFilterGetArgs> filter;
 
     public Output<PacketMirroringFilterGetArgs> getFilter() {
@@ -62,7 +62,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="mirroredResources")
+    @Import(name="mirroredResources")
       private final @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
 
     public Output<PacketMirroringMirroredResourcesGetArgs> getMirroredResources() {
@@ -73,7 +73,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * The name of the packet mirroring rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<PacketMirroringNetworkGetArgs> network;
 
     public Output<PacketMirroringNetworkGetArgs> getNetwork() {
@@ -100,7 +100,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * the same instances.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -112,7 +112,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -124,7 +124,7 @@ public final class PacketMirroringState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

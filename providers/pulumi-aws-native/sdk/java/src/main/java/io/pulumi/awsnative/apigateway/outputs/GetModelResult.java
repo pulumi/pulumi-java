@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetModelResult {
     /**
      * A description that identifies this model.
@@ -23,10 +23,10 @@ public final class GetModelResult {
      */
     private final @Nullable Object schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetModelResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("schema") @Nullable Object schema) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("schema") @Nullable Object schema) {
         this.description = description;
         this.schema = schema;
     }

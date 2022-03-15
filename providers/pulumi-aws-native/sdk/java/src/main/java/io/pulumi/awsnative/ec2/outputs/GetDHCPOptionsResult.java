@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.DHCPOptionsTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDHCPOptionsResult {
     private final @Nullable String dhcpOptionsId;
     /**
@@ -20,10 +20,10 @@ public final class GetDHCPOptionsResult {
      */
     private final @Nullable List<DHCPOptionsTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDHCPOptionsResult(
-        @OutputCustomType.Parameter("dhcpOptionsId") @Nullable String dhcpOptionsId,
-        @OutputCustomType.Parameter("tags") @Nullable List<DHCPOptionsTag> tags) {
+        @CustomType.Parameter("dhcpOptionsId") @Nullable String dhcpOptionsId,
+        @CustomType.Parameter("tags") @Nullable List<DHCPOptionsTag> tags) {
         this.dhcpOptionsId = dhcpOptionsId;
         this.tags = tags;
     }

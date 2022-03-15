@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outposts.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetOutpostArgs extends io.pulumi.resources.InvokeArgs {
      * Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -29,7 +29,7 @@ public final class GetOutpostArgs extends io.pulumi.resources.InvokeArgs {
      * Identifier of the Outpost.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -40,7 +40,7 @@ public final class GetOutpostArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Outpost.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -51,7 +51,7 @@ public final class GetOutpostArgs extends io.pulumi.resources.InvokeArgs {
      * AWS Account identifier of the Outpost owner.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {

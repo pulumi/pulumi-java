@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.BoundingPolyResponse;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageAnnotationResponse {
     /**
      * The list of polygons outlining the sensitive regions in the image.
@@ -22,10 +22,10 @@ public final class ImageAnnotationResponse {
      */
     private final Integer frameIndex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageAnnotationResponse(
-        @OutputCustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
-        @OutputCustomType.Parameter("frameIndex") Integer frameIndex) {
+        @CustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
+        @CustomType.Parameter("frameIndex") Integer frameIndex) {
         this.boundingPolys = boundingPolys;
         this.frameIndex = frameIndex;
     }

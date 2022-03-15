@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
 
     public static final PolicyTagIamMemberArgs Empty = new PolicyTagIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
 
     public Output<PolicyTagIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -33,7 +33,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="policyTag", required=true)
+    @Import(name="policyTag", required=true)
       private final Output<String> policyTag;
 
     public Output<String> getPolicyTag() {
@@ -46,7 +46,7 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

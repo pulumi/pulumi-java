@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensEncryption {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageLensEncryption() {
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * The list of facility names.
      * 
      */
-    @InputImport(name="facilityNames")
+    @Import(name="facilityNames")
       private final @Nullable List<String> facilityNames;
 
     public List<String> getFacilityNames() {
@@ -35,7 +35,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * The log levels to collect.
      * 
      */
-    @InputImport(name="logLevels")
+    @Import(name="logLevels")
       private final @Nullable List<String> logLevels;
 
     public List<String> getLogLevels() {
@@ -47,7 +47,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -59,7 +59,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable List<String> streams;
 
     public List<String> getStreams() {

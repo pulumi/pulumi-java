@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtEnableMigrationInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
      * The policy Id.
      * 
      */
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -33,7 +33,7 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
      * The provider specific details.
      * 
      */
-    @InputImport(name="providerSpecificDetails", required=true)
+    @Import(name="providerSpecificDetails", required=true)
       private final Output<VMwareCbtEnableMigrationInputArgs> providerSpecificDetails;
 
     public Output<VMwareCbtEnableMigrationInputArgs> getProviderSpecificDetails() {

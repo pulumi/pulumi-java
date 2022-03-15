@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.enums.JobTemplateAction;
 import io.pulumi.awsnative.iot.enums.JobTemplateFailureType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * The type of job action to take to initiate the job abort.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<JobTemplateAction> action;
 
     public Output<JobTemplateAction> getAction() {
@@ -35,7 +35,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * The type of job execution failures that can initiate a job abort.
      * 
      */
-    @InputImport(name="failureType", required=true)
+    @Import(name="failureType", required=true)
       private final Output<JobTemplateFailureType> failureType;
 
     public Output<JobTemplateFailureType> getFailureType() {
@@ -46,7 +46,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * The minimum number of things which must receive job execution notifications before the job can be aborted.
      * 
      */
-    @InputImport(name="minNumberOfExecutedThings", required=true)
+    @Import(name="minNumberOfExecutedThings", required=true)
       private final Output<Integer> minNumberOfExecutedThings;
 
     public Output<Integer> getMinNumberOfExecutedThings() {
@@ -57,7 +57,7 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * 
      */
-    @InputImport(name="thresholdPercentage", required=true)
+    @Import(name="thresholdPercentage", required=true)
       private final Output<Double> thresholdPercentage;
 
     public Output<Double> getThresholdPercentage() {

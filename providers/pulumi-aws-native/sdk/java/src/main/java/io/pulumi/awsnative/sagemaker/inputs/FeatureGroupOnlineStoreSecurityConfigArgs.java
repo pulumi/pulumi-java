@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class FeatureGroupOnlineStoreSecurityConfigArgs extends io.pulumi.r
 
     public static final FeatureGroupOnlineStoreSecurityConfigArgs Empty = new FeatureGroupOnlineStoreSecurityConfigArgs();
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {

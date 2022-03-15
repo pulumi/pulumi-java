@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -34,7 +34,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * If set to true, any aggregation will be skipped. Default is false. Type: boolean.
      * 
      */
-    @InputImport(name="flushImmediately")
+    @Import(name="flushImmediately")
       private final @Nullable Output<Object> flushImmediately;
 
     public Output<Object> getFlushImmediately() {
@@ -45,7 +45,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * An explicit column mapping description provided in a json format. Type: string.
      * 
      */
-    @InputImport(name="ingestionMappingAsJson")
+    @Import(name="ingestionMappingAsJson")
       private final @Nullable Output<Object> ingestionMappingAsJson;
 
     public Output<Object> getIngestionMappingAsJson() {
@@ -56,7 +56,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * A name of a pre-created csv mapping that was defined on the target Kusto table. Type: string.
      * 
      */
-    @InputImport(name="ingestionMappingName")
+    @Import(name="ingestionMappingName")
       private final @Nullable Output<Object> ingestionMappingName;
 
     public Output<Object> getIngestionMappingName() {
@@ -67,7 +67,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -78,7 +78,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sinkRetryCount")
+    @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
     public Output<Object> getSinkRetryCount() {
@@ -89,7 +89,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sinkRetryWait")
+    @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
     public Output<Object> getSinkRetryWait() {
@@ -101,7 +101,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * Expected value is 'AzureDataExplorerSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -112,7 +112,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="writeBatchSize")
+    @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
     public Output<Object> getWriteBatchSize() {
@@ -123,7 +123,7 @@ public final class AzureDataExplorerSinkArgs extends io.pulumi.resources.Resourc
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="writeBatchTimeout")
+    @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
     public Output<Object> getWriteBatchTimeout() {

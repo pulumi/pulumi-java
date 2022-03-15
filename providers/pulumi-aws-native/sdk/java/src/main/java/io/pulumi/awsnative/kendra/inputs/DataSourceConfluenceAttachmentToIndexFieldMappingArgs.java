@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluenceAttachmentFieldName;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMappingArgs extends
 
     public static final DataSourceConfluenceAttachmentToIndexFieldMappingArgs Empty = new DataSourceConfluenceAttachmentToIndexFieldMappingArgs();
 
-    @InputImport(name="dataSourceFieldName", required=true)
+    @Import(name="dataSourceFieldName", required=true)
       private final Output<DataSourceConfluenceAttachmentFieldName> dataSourceFieldName;
 
     public Output<DataSourceConfluenceAttachmentFieldName> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
-    @InputImport(name="dateFieldFormat")
+    @Import(name="dateFieldFormat")
       private final @Nullable Output<String> dateFieldFormat;
 
     public Output<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Output.empty() : this.dateFieldFormat;
     }
 
-    @InputImport(name="indexFieldName", required=true)
+    @Import(name="indexFieldName", required=true)
       private final Output<String> indexFieldName;
 
     public Output<String> getIndexFieldName() {

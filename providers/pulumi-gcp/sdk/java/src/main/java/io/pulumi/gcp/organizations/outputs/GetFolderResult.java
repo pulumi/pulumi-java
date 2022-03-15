@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFolderResult {
     /**
      * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -51,18 +51,18 @@ public final class GetFolderResult {
      */
     private final String parent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFolderResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("folder") String folder,
-        @OutputCustomType.Parameter("folderId") String folderId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
-        @OutputCustomType.Parameter("lookupOrganization") @Nullable Boolean lookupOrganization,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("organization") String organization,
-        @OutputCustomType.Parameter("parent") String parent) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("folder") String folder,
+        @CustomType.Parameter("folderId") String folderId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lifecycleState") String lifecycleState,
+        @CustomType.Parameter("lookupOrganization") @Nullable Boolean lookupOrganization,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("organization") String organization,
+        @CustomType.Parameter("parent") String parent) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.folder = folder;

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainNameEndpointConfiguration {
     /**
      * List of endpoint types.
@@ -16,8 +16,8 @@ public final class GetDomainNameEndpointConfiguration {
      */
     private final List<String> types;
 
-    @OutputCustomType.Constructor
-    private GetDomainNameEndpointConfiguration(@OutputCustomType.Parameter("types") List<String> types) {
+    @CustomType.Constructor
+    private GetDomainNameEndpointConfiguration(@CustomType.Parameter("types") List<String> types) {
         this.types = types;
     }
 

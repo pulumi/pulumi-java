@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
      * The name of the VPC interface to use for this output.
      * 
      */
-    @InputImport(name="vpcInterfaceName")
+    @Import(name="vpcInterfaceName")
       private final @Nullable Output<String> vpcInterfaceName;
 
     public Output<String> getVpcInterfaceName() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.SshProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxOperatingSystemProfileResponse {
     /**
      * The password.
@@ -28,11 +28,11 @@ public final class LinuxOperatingSystemProfileResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinuxOperatingSystemProfileResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("sshProfile") @Nullable SshProfileResponse sshProfile,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("sshProfile") @Nullable SshProfileResponse sshProfile,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.sshProfile = sshProfile;
         this.username = username;

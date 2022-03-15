@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestAllocationStrategy;
 import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestInstanceInterruptionBehavior;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetMaintenanceStrategies;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetSpotOptionsRequest {
     private final @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy;
     private final @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior;
@@ -25,16 +25,16 @@ public final class EC2FleetSpotOptionsRequest {
     private final @Nullable Boolean singleAvailabilityZone;
     private final @Nullable Boolean singleInstanceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetSpotOptionsRequest(
-        @OutputCustomType.Parameter("allocationStrategy") @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy,
-        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior,
-        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
-        @OutputCustomType.Parameter("maintenanceStrategies") @Nullable EC2FleetMaintenanceStrategies maintenanceStrategies,
-        @OutputCustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
-        @OutputCustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
-        @OutputCustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
-        @OutputCustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
+        @CustomType.Parameter("allocationStrategy") @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy,
+        @CustomType.Parameter("instanceInterruptionBehavior") @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior,
+        @CustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @CustomType.Parameter("maintenanceStrategies") @Nullable EC2FleetMaintenanceStrategies maintenanceStrategies,
+        @CustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
+        @CustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
+        @CustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
+        @CustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;

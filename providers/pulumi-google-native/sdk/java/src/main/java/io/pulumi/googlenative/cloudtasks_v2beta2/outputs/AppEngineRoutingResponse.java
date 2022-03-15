@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppEngineRoutingResponse {
     /**
      * The host that the task is sent to. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the queue's project ID. Some tasks which were created using the App Engine SDK use a custom domain name. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the task will be sent to the service which is the default service when the task is attempted. If version is empty, then the task will be sent to the version which is the default version when the task is attempted. If instance is empty, then the task will be sent to an instance which is available when the task is attempted. If service, version, or instance is invalid, then the task will be sent to the default version of the default service when the task is attempted.
@@ -30,12 +30,12 @@ public final class AppEngineRoutingResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppEngineRoutingResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("version") String version) {
         this.host = host;
         this.instance = instance;
         this.service = service;

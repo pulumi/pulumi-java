@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceAttachedDiskArgs;
 import io.pulumi.gcp.compute.inputs.InstanceBootDiskArgs;
@@ -33,7 +33,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Configure Nested Virtualisation and Simultaneous Hyper Threading  on this VM. Structure is documented below
      * 
      */
-    @InputImport(name="advancedMachineFeatures")
+    @Import(name="advancedMachineFeatures")
       private final @Nullable Output<InstanceAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Output<InstanceAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
@@ -45,7 +45,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If you try to update a property that requires stopping the instance without setting this field, the update will fail.
      * 
      */
-    @InputImport(name="allowStoppingForUpdate")
+    @Import(name="allowStoppingForUpdate")
       private final @Nullable Output<Boolean> allowStoppingForUpdate;
 
     public Output<Boolean> getAllowStoppingForUpdate() {
@@ -56,7 +56,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Additional disks to attach to the instance. Can be repeated multiple times for multiple disks. Structure is documented below.
      * 
      */
-    @InputImport(name="attachedDisks")
+    @Import(name="attachedDisks")
       private final @Nullable Output<List<InstanceAttachedDiskArgs>> attachedDisks;
 
     public Output<List<InstanceAttachedDiskArgs>> getAttachedDisks() {
@@ -68,7 +68,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bootDisk", required=true)
+    @Import(name="bootDisk", required=true)
       private final Output<InstanceBootDiskArgs> bootDisk;
 
     public Output<InstanceBootDiskArgs> getBootDisk() {
@@ -81,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * This defaults to false.
      * 
      */
-    @InputImport(name="canIpForward")
+    @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
@@ -92,7 +92,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
      */
-    @InputImport(name="confidentialInstanceConfig")
+    @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<InstanceConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Output<InstanceConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
@@ -104,7 +104,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * **Note:** you must disable deletion protection before removing the resource (e.g., via `pulumi destroy`), or the instance cannot be deleted and the provider run will not complete successfully.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -115,7 +115,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A brief description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -127,7 +127,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * `"RUNNING"` or `"TERMINATED"`.
      * 
      */
-    @InputImport(name="desiredStatus")
+    @Import(name="desiredStatus")
       private final @Nullable Output<String> desiredStatus;
 
     public Output<String> getDesiredStatus() {
@@ -139,7 +139,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="enableDisplay")
+    @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;
 
     public Output<Boolean> getEnableDisplay() {
@@ -151,7 +151,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * **Note:** GPU accelerators can only be used with `on_host_maintenance` option set to TERMINATE.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<InstanceGuestAcceleratorArgs>> guestAccelerators;
 
     public Output<List<InstanceGuestAcceleratorArgs>> getGuestAccelerators() {
@@ -164,7 +164,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -175,7 +175,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A map of key/value label pairs to assign to the instance.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -186,7 +186,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The machine type to create.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -199,7 +199,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Add them to your config in order to keep them attached to your instance.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -219,7 +219,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * is desired, you will need to modify your state file.
      * 
      */
-    @InputImport(name="metadataStartupScript")
+    @Import(name="metadataStartupScript")
       private final @Nullable Output<String> metadataStartupScript;
 
     public Output<String> getMetadataStartupScript() {
@@ -232,7 +232,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -244,7 +244,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -256,7 +256,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * be specified multiple times. Structure is documented below.
      * 
      */
-    @InputImport(name="networkInterfaces", required=true)
+    @Import(name="networkInterfaces", required=true)
       private final Output<List<InstanceNetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<InstanceNetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -271,7 +271,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * in order for this setting to take effect.
      * 
      */
-    @InputImport(name="networkPerformanceConfig")
+    @Import(name="networkPerformanceConfig")
       private final @Nullable Output<InstanceNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Output<InstanceNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
@@ -283,7 +283,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -295,7 +295,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="reservationAffinity")
+    @Import(name="reservationAffinity")
       private final @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
     public Output<InstanceReservationAffinityArgs> getReservationAffinity() {
@@ -306,7 +306,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * -- A list of short names or self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.
      * 
      */
-    @InputImport(name="resourcePolicies")
+    @Import(name="resourcePolicies")
       private final @Nullable Output<String> resourcePolicies;
 
     public Output<String> getResourcePolicies() {
@@ -318,7 +318,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * this configuration option are detailed below.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<InstanceSchedulingArgs> scheduling;
 
     public Output<InstanceSchedulingArgs> getScheduling() {
@@ -330,7 +330,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * specified multiple times for multiple scratch disks. Structure is documented below.
      * 
      */
-    @InputImport(name="scratchDisks")
+    @Import(name="scratchDisks")
       private final @Nullable Output<List<InstanceScratchDiskArgs>> scratchDisks;
 
     public Output<List<InstanceScratchDiskArgs>> getScratchDisks() {
@@ -343,7 +343,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<InstanceServiceAccountArgs> serviceAccount;
 
     public Output<InstanceServiceAccountArgs> getServiceAccount() {
@@ -356,7 +356,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<InstanceShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -367,7 +367,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A list of network tags to attach to the instance.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -378,7 +378,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The zone that the machine should be created in. If it is not provided, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

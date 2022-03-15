@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDeleteMarkerReplicationStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketDeleteMarkerReplication {
     private final @Nullable BucketDeleteMarkerReplicationStatus status;
 
-    @OutputCustomType.Constructor
-    private BucketDeleteMarkerReplication(@OutputCustomType.Parameter("status") @Nullable BucketDeleteMarkerReplicationStatus status) {
+    @CustomType.Constructor
+    private BucketDeleteMarkerReplication(@CustomType.Parameter("status") @Nullable BucketDeleteMarkerReplicationStatus status) {
         this.status = status;
     }
 

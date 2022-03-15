@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.DiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HyperVReplicaReplicationDetailsResponse {
     /**
      * Initial replication details.
@@ -57,16 +57,16 @@ public final class HyperVReplicaReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HyperVReplicaReplicationDetailsResponse(
-        @OutputCustomType.Parameter("initialReplicationDetails") @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("lastReplicatedTime") @Nullable String lastReplicatedTime,
-        @OutputCustomType.Parameter("vMDiskDetails") @Nullable List<DiskDetailsResponse> vMDiskDetails,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
-        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
-        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
-        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
+        @CustomType.Parameter("initialReplicationDetails") @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("lastReplicatedTime") @Nullable String lastReplicatedTime,
+        @CustomType.Parameter("vMDiskDetails") @Nullable List<DiskDetailsResponse> vMDiskDetails,
+        @CustomType.Parameter("vmId") @Nullable String vmId,
+        @CustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @CustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @CustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.initialReplicationDetails = initialReplicationDetails;
         this.instanceType = instanceType;
         this.lastReplicatedTime = lastReplicatedTime;

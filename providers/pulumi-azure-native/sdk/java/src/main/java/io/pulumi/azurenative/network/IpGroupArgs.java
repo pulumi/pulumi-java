@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -31,7 +31,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * IpAddresses/IpAddressPrefixes in the IpGroups resource.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
@@ -42,7 +42,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the ipGroups.
      * 
      */
-    @InputImport(name="ipGroupsName")
+    @Import(name="ipGroupsName")
       private final @Nullable Output<String> ipGroupsName;
 
     public Output<String> getIpGroupsName() {
@@ -53,7 +53,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class MetricStreamExcludeFilterArgs extends io.pulumi.resources.Res
      * Name of the metric namespace in the filter.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

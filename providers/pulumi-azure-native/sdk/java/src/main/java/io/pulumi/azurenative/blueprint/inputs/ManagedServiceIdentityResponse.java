@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.inputs.UserAssignedIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * Azure Active Directory principal ID associated with this Identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
@@ -35,7 +35,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * ID of the Azure Active Directory.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -46,7 +46,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * Type of the managed identity.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -57,7 +57,7 @@ public final class ManagedServiceIdentityResponse extends io.pulumi.resources.In
      * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
     public Map<String,UserAssignedIdentityResponse> getUserAssignedIdentities() {

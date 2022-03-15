@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.WinRMListenerResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class WinRMConfigurationResponse extends io.pulumi.resources.Invoke
      * The list of Windows Remote Management listeners
      * 
      */
-    @InputImport(name="listeners")
+    @Import(name="listeners")
       private final @Nullable List<WinRMListenerResponse> listeners;
 
     public List<WinRMListenerResponse> getListeners() {

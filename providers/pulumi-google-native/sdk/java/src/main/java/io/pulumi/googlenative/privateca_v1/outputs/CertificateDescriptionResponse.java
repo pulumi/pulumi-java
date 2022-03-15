@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateFingerprintResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.KeyIdResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.PublicKeyResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateDescriptionResponse {
     /**
      * Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.
@@ -56,16 +56,16 @@ public final class CertificateDescriptionResponse {
      */
     private final X509ParametersResponse x509Description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateDescriptionResponse(
-        @OutputCustomType.Parameter("aiaIssuingCertificateUrls") List<String> aiaIssuingCertificateUrls,
-        @OutputCustomType.Parameter("authorityKeyId") KeyIdResponse authorityKeyId,
-        @OutputCustomType.Parameter("certFingerprint") CertificateFingerprintResponse certFingerprint,
-        @OutputCustomType.Parameter("crlDistributionPoints") List<String> crlDistributionPoints,
-        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
-        @OutputCustomType.Parameter("subjectDescription") SubjectDescriptionResponse subjectDescription,
-        @OutputCustomType.Parameter("subjectKeyId") KeyIdResponse subjectKeyId,
-        @OutputCustomType.Parameter("x509Description") X509ParametersResponse x509Description) {
+        @CustomType.Parameter("aiaIssuingCertificateUrls") List<String> aiaIssuingCertificateUrls,
+        @CustomType.Parameter("authorityKeyId") KeyIdResponse authorityKeyId,
+        @CustomType.Parameter("certFingerprint") CertificateFingerprintResponse certFingerprint,
+        @CustomType.Parameter("crlDistributionPoints") List<String> crlDistributionPoints,
+        @CustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @CustomType.Parameter("subjectDescription") SubjectDescriptionResponse subjectDescription,
+        @CustomType.Parameter("subjectKeyId") KeyIdResponse subjectKeyId,
+        @CustomType.Parameter("x509Description") X509ParametersResponse x509Description) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyId = authorityKeyId;
         this.certFingerprint = certFingerprint;

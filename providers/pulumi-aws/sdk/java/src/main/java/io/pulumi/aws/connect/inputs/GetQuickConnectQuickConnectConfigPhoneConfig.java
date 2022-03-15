@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig extends io.pulum
      * Specifies the phone number in in E.164 format.
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
     public String getPhoneNumber() {

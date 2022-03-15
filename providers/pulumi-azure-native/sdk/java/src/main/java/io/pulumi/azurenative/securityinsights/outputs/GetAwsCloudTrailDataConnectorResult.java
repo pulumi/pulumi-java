@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnectorDataTypesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAwsCloudTrailDataConnectorResult {
     /**
      * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
@@ -49,15 +49,15 @@ public final class GetAwsCloudTrailDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAwsCloudTrailDataConnectorResult(
-        @OutputCustomType.Parameter("awsRoleArn") @Nullable String awsRoleArn,
-        @OutputCustomType.Parameter("dataTypes") @Nullable AwsCloudTrailDataConnectorDataTypesResponse dataTypes,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("awsRoleArn") @Nullable String awsRoleArn,
+        @CustomType.Parameter("dataTypes") @Nullable AwsCloudTrailDataConnectorDataTypesResponse dataTypes,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.awsRoleArn = awsRoleArn;
         this.dataTypes = dataTypes;
         this.etag = etag;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayClientAuthConfigur
 import io.pulumi.azurenative.network.inputs.ApplicationGatewaySslPolicyArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * Client authentication configuration of the application gateway resource.
      * 
      */
-    @InputImport(name="clientAuthConfiguration")
+    @Import(name="clientAuthConfiguration")
       private final @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
     public Output<ApplicationGatewayClientAuthConfigurationArgs> getClientAuthConfiguration() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * Name of the SSL profile that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * SSL policy of the application gateway resource.
      * 
      */
-    @InputImport(name="sslPolicy")
+    @Import(name="sslPolicy")
       private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
     public Output<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
@@ -70,7 +70,7 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * Array of references to application gateway trusted client certificates.
      * 
      */
-    @InputImport(name="trustedClientCertificates")
+    @Import(name="trustedClientCertificates")
       private final @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;
 
     public Output<List<SubResourceArgs>> getTrustedClientCertificates() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SuppressionScheduleResponse {
     /**
      * End date for suppression
@@ -39,13 +39,13 @@ public final class SuppressionScheduleResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SuppressionScheduleResponse(
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("recurrenceValues") @Nullable List<Integer> recurrenceValues,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("recurrenceValues") @Nullable List<Integer> recurrenceValues,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.endDate = endDate;
         this.endTime = endTime;
         this.recurrenceValues = recurrenceValues;

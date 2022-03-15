@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CachePolicyHeadersConfig {
     private final String headerBehavior;
     private final @Nullable List<String> headers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CachePolicyHeadersConfig(
-        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
-        @OutputCustomType.Parameter("headers") @Nullable List<String> headers) {
+        @CustomType.Parameter("headerBehavior") String headerBehavior,
+        @CustomType.Parameter("headers") @Nullable List<String> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

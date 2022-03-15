@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class SpotFleetFleetLaunchTemplateSpecification extends io.pulumi.r
 
     public static final SpotFleetFleetLaunchTemplateSpecification Empty = new SpotFleetFleetLaunchTemplateSpecification();
 
-    @InputImport(name="launchTemplateId")
+    @Import(name="launchTemplateId")
       private final @Nullable String launchTemplateId;
 
     public Optional<String> getLaunchTemplateId() {
         return this.launchTemplateId == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateId);
     }
 
-    @InputImport(name="launchTemplateName")
+    @Import(name="launchTemplateName")
       private final @Nullable String launchTemplateName;
 
     public Optional<String> getLaunchTemplateName() {
         return this.launchTemplateName == null ? Optional.empty() : Optional.ofNullable(this.launchTemplateName);
     }
 
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

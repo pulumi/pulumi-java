@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -32,7 +32,7 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The list of host patterns to match. They must be valid hostnames with optional port numbers in the format host:port. * matches any string of ([a-z0-9-.]*). In that case, * must be the first character and must be followed in the pattern by either - or .. * based matching is not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final List<String> hosts;
 
     public List<String> getHosts() {
@@ -43,7 +43,7 @@ public final class HostRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the PathMatcher to use to match the path portion of the URL if the hostRule matches the URL's host portion.
      * 
      */
-    @InputImport(name="pathMatcher", required=true)
+    @Import(name="pathMatcher", required=true)
       private final String pathMatcher;
 
     public String getPathMatcher() {

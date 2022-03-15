@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Whether this site is enabled for block user upload.
      * 
      */
-    @InputImport(name="isBlockUserUploadEnabled")
+    @Import(name="isBlockUserUploadEnabled")
       private final @Nullable Boolean isBlockUserUploadEnabled;
 
     public Optional<Boolean> getIsBlockUserUploadEnabled() {
@@ -35,7 +35,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Whether this site is enabled for DirectLine channel.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -46,7 +46,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Whether this site is enabled for authentication with Bot Framework.
      * 
      */
-    @InputImport(name="isSecureSiteEnabled")
+    @Import(name="isSecureSiteEnabled")
       private final @Nullable Boolean isSecureSiteEnabled;
 
     public Optional<Boolean> getIsSecureSiteEnabled() {
@@ -57,7 +57,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Whether this site is enabled for Bot Framework V1 protocol.
      * 
      */
-    @InputImport(name="isV1Enabled", required=true)
+    @Import(name="isV1Enabled", required=true)
       private final Boolean isV1Enabled;
 
     public Boolean getIsV1Enabled() {
@@ -68,7 +68,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Whether this site is enabled for Bot Framework V1 protocol.
      * 
      */
-    @InputImport(name="isV3Enabled", required=true)
+    @Import(name="isV3Enabled", required=true)
       private final Boolean isV3Enabled;
 
     public Boolean getIsV3Enabled() {
@@ -79,7 +79,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -90,7 +90,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="key2", required=true)
+    @Import(name="key2", required=true)
       private final String key2;
 
     public String getKey2() {
@@ -101,7 +101,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Site Id
      * 
      */
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final String siteId;
 
     public String getSiteId() {
@@ -112,7 +112,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * Site name
      * 
      */
-    @InputImport(name="siteName", required=true)
+    @Import(name="siteName", required=true)
       private final String siteName;
 
     public String getSiteName() {
@@ -123,7 +123,7 @@ public final class DirectLineSiteResponse extends io.pulumi.resources.InvokeArgs
      * List of Trusted Origin URLs for this site. This field is applicable only if isSecureSiteEnabled is True.
      * 
      */
-    @InputImport(name="trustedOrigins")
+    @Import(name="trustedOrigins")
       private final @Nullable List<String> trustedOrigins;
 
     public List<String> getTrustedOrigins() {

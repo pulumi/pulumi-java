@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the 3rd party component.
      * 
      */
-    @InputImport(name="componentName", required=true)
+    @Import(name="componentName", required=true)
       private final Output<String> componentName;
 
     public Output<String> getComponentName() {
@@ -36,7 +36,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * The license key to activate the component.
      * 
      */
-    @InputImport(name="licenseKey")
+    @Import(name="licenseKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> licenseKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getLicenseKey() {
@@ -48,7 +48,7 @@ public final class ComponentSetupArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'ComponentSetup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

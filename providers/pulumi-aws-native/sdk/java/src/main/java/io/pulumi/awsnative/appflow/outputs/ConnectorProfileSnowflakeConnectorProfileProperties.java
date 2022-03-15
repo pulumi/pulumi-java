@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSnowflakeConnectorProfileProperties {
     /**
      * The name of the account.
@@ -48,15 +48,15 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
      */
     private final String warehouse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSnowflakeConnectorProfileProperties(
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("warehouse") String warehouse) {
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("warehouse") String warehouse) {
         this.accountName = accountName;
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;

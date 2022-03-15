@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * The complexity of the password.
      * 
      */
-    @InputImport(name="complexity", required=true)
+    @Import(name="complexity", required=true)
       private final String complexity;
 
     public String getComplexity() {
@@ -33,7 +33,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * Disallow username as a part of the password.
      * 
      */
-    @InputImport(name="disallowUsernameSubstring", required=true)
+    @Import(name="disallowUsernameSubstring", required=true)
       private final Boolean disallowUsernameSubstring;
 
     public Boolean getDisallowUsernameSubstring() {
@@ -44,7 +44,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * Minimum number of characters allowed.
      * 
      */
-    @InputImport(name="minLength", required=true)
+    @Import(name="minLength", required=true)
       private final Integer minLength;
 
     public Integer getMinLength() {
@@ -55,7 +55,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
      * 
      */
-    @InputImport(name="passwordChangeInterval", required=true)
+    @Import(name="passwordChangeInterval", required=true)
       private final String passwordChangeInterval;
 
     public String getPasswordChangeInterval() {
@@ -66,7 +66,7 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
      * Number of previous passwords that cannot be reused.
      * 
      */
-    @InputImport(name="reuseInterval", required=true)
+    @Import(name="reuseInterval", required=true)
       private final Integer reuseInterval;
 
     public Integer getReuseInterval() {

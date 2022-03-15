@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemoteImageBuild {
     private final @Nullable Map<String,String> buildArg;
     private final @Nullable String dockerfile;
@@ -24,17 +24,17 @@ public final class RemoteImageBuild {
     private final @Nullable List<String> tags;
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemoteImageBuild(
-        @OutputCustomType.Parameter("buildArg") @Nullable Map<String,String> buildArg,
-        @OutputCustomType.Parameter("dockerfile") @Nullable String dockerfile,
-        @OutputCustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
-        @OutputCustomType.Parameter("label") @Nullable Map<String,String> label,
-        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("remove") @Nullable Boolean remove,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("buildArg") @Nullable Map<String,String> buildArg,
+        @CustomType.Parameter("dockerfile") @Nullable String dockerfile,
+        @CustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
+        @CustomType.Parameter("label") @Nullable Map<String,String> label,
+        @CustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("remove") @Nullable Boolean remove,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.buildArg = buildArg;
         this.dockerfile = dockerfile;
         this.forceRemove = forceRemove;

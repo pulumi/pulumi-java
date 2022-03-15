@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class IntegrationRuntimeReferenceResponse extends io.pulumi.resourc
      * Arguments for integration runtime.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeReferenceResponse extends io.pulumi.resourc
      * Reference integration runtime name.
      * 
      */
-    @InputImport(name="referenceName", required=true)
+    @Import(name="referenceName", required=true)
       private final String referenceName;
 
     public String getReferenceName() {
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeReferenceResponse extends io.pulumi.resourc
      * Type of integration runtime.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

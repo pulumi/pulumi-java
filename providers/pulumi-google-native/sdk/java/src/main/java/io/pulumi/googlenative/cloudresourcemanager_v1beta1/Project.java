@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.ProjectArgs;
@@ -23,7 +23,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Creation time. Read-only.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The labels associated with this Project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: a-z{0,62}. Label values must be between 0 and 63 characters long and must conform to the regular expression [a-z0-9_-]{0,63}. A label value can be empty. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"environment" : "dev"` Read-write.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -51,7 +51,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The Project lifecycle state. Read-only.
      * 
      */
-    @OutputExport(name="lifecycleState", type=String.class, parameters={})
+    @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
@@ -65,7 +65,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The optional user-assigned display name of the Project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project` Read-write.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * An optional reference to a parent Resource. Supported parent types include "organization" and "folder". Once set, the parent cannot be cleared. The `parent` can be set on creation or using the `UpdateProject` method; the end user must have the `resourcemanager.projects.create` permission on the parent. Read-write.
      * 
      */
-    @OutputExport(name="parent", type=ResourceIdResponse.class, parameters={})
+    @Export(name="parent", type=ResourceIdResponse.class, parameters={})
     private Output<ResourceIdResponse> parent;
 
     /**
@@ -93,7 +93,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123` Read-only after creation.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
@@ -107,7 +107,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The number uniquely identifying the project. Example: `415104041262` Read-only.
      * 
      */
-    @OutputExport(name="projectNumber", type=String.class, parameters={})
+    @Export(name="projectNumber", type=String.class, parameters={})
     private Output<String> projectNumber;
 
     /**

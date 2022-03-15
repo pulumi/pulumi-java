@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class InstanceMemcacheNodeGetArgs extends io.pulumi.resources.Resou
 
     public static final InstanceMemcacheNodeGetArgs Empty = new InstanceMemcacheNodeGetArgs();
 
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
         return this.host == null ? Output.empty() : this.host;
     }
 
-    @InputImport(name="nodeId")
+    @Import(name="nodeId")
       private final @Nullable Output<String> nodeId;
 
     public Output<String> getNodeId() {
         return this.nodeId == null ? Output.empty() : this.nodeId;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
         return this.state == null ? Output.empty() : this.state;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

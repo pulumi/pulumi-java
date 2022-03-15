@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ToolExitCodeResponse {
     /**
      * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
@@ -15,8 +15,8 @@ public final class ToolExitCodeResponse {
      */
     private final Integer number;
 
-    @OutputCustomType.Constructor
-    private ToolExitCodeResponse(@OutputCustomType.Parameter("number") Integer number) {
+    @CustomType.Constructor
+    private ToolExitCodeResponse(@CustomType.Parameter("number") Integer number) {
         this.number = number;
     }
 

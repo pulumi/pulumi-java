@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.management.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementGroupChildInfoResponse {
     /**
      * The list of children.
@@ -38,13 +38,13 @@ public final class ManagementGroupChildInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementGroupChildInfoResponse(
-        @OutputCustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.children = children;
         this.displayName = displayName;
         this.id = id;

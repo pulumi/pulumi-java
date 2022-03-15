@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling;
 
 import io.pulumi.aws.autoscaling.inputs.TagTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Autoscaling Group to apply the tag to.
      * 
      */
-    @InputImport(name="autoscalingGroupName", required=true)
+    @Import(name="autoscalingGroupName", required=true)
       private final Output<String> autoscalingGroupName;
 
     public Output<String> getAutoscalingGroupName() {
@@ -29,7 +29,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * The tag to create. The `tag` block is documented below.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final Output<TagTagArgs> tag;
 
     public Output<TagTagArgs> getTag() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterArgs;
@@ -53,7 +53,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="bgp", type=RouterBgp.class, parameters={})
+    @Export(name="bgp", type=RouterBgp.class, parameters={})
     private Output</* @Nullable */ RouterBgp> bgp;
 
     /**
@@ -68,7 +68,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -82,7 +82,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * User-specified description for the IP range.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -98,7 +98,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Not currently available publicly.
      * 
      */
-    @OutputExport(name="encryptedInterconnectRouter", type=Boolean.class, parameters={})
+    @Export(name="encryptedInterconnectRouter", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encryptedInterconnectRouter;
 
     /**
@@ -119,7 +119,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * A reference to the network to which this router belongs.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -153,7 +153,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -168,7 +168,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Region where the router resides.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -182,7 +182,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

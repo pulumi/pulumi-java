@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
     /**
      * The [RFC 3339](https://tools.ietf.org/html/rfc3339)
@@ -30,11 +30,11 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork(
-        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("value") String value) {
         this.expirationTime = expirationTime;
         this.name = name;
         this.value = value;

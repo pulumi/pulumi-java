@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetSecretRotation extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretRotation Empty = new GetSecretRotation();
 
-    @InputImport(name="nextRotationTime", required=true)
+    @Import(name="nextRotationTime", required=true)
       private final String nextRotationTime;
 
     public String getNextRotationTime() {
         return this.nextRotationTime;
     }
 
-    @InputImport(name="rotationPeriod", required=true)
+    @Import(name="rotationPeriod", required=true)
       private final String rotationPeriod;
 
     public String getRotationPeriod() {

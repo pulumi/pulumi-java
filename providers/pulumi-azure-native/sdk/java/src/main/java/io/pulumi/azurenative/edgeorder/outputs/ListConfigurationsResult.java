@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.ConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListConfigurationsResult {
     /**
      * Link for the next set of configurations.
@@ -24,10 +24,10 @@ public final class ListConfigurationsResult {
      */
     private final List<ConfigurationResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListConfigurationsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") List<ConfigurationResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") List<ConfigurationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

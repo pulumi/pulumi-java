@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigWebServerNetworkAccessControl {
     private final @Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
 
-    @OutputCustomType.Constructor
-    private EnvironmentConfigWebServerNetworkAccessControl(@OutputCustomType.Parameter("allowedIpRanges") @Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
+    @CustomType.Constructor
+    private EnvironmentConfigWebServerNetworkAccessControl(@CustomType.Parameter("allowedIpRanges") @Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 

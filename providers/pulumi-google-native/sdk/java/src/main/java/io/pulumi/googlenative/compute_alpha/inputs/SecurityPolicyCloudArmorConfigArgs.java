@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
      * If set to true, enables Cloud Armor Machine Learning.
      * 
      */
-    @InputImport(name="enableMl")
+    @Import(name="enableMl")
       private final @Nullable Output<Boolean> enableMl;
 
     public Output<Boolean> getEnableMl() {

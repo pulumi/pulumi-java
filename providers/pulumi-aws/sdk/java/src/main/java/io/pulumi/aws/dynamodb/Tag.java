@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dynamodb.TagArgs;
 import io.pulumi.aws.dynamodb.inputs.TagState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * Tag name.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -42,7 +42,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DynamoDB resource to tag.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**
@@ -56,7 +56,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * Tag value.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

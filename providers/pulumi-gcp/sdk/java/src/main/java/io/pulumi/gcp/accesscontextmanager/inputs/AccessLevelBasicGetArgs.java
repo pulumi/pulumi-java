@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
      * Possible values are `AND` and `OR`.
      * 
      */
-    @InputImport(name="combiningFunction")
+    @Import(name="combiningFunction")
       private final @Nullable Output<String> combiningFunction;
 
     public Output<String> getCombiningFunction() {
@@ -38,7 +38,7 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<AccessLevelBasicConditionGetArgs>> conditions;
 
     public Output<List<AccessLevelBasicConditionGetArgs>> getConditions() {

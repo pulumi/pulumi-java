@@ -5,13 +5,13 @@ package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleFilterAnd;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleFilterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleFilter {
     /**
      * A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
@@ -29,11 +29,11 @@ public final class BucketReplicationConfigRuleFilter {
      */
     private final @Nullable BucketReplicationConfigRuleFilterTag tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigRuleFilter(
-        @OutputCustomType.Parameter("and") @Nullable BucketReplicationConfigRuleFilterAnd and,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("tag") @Nullable BucketReplicationConfigRuleFilterTag tag) {
+        @CustomType.Parameter("and") @Nullable BucketReplicationConfigRuleFilterAnd and,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("tag") @Nullable BucketReplicationConfigRuleFilterTag tag) {
         this.and = and;
         this.prefix = prefix;
         this.tag = tag;

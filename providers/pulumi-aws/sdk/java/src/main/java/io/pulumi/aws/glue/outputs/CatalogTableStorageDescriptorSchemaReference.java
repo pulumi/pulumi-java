@@ -4,14 +4,14 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptorSchemaReferenceSchemaId;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CatalogTableStorageDescriptorSchemaReference {
     /**
      * Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
@@ -29,11 +29,11 @@ public final class CatalogTableStorageDescriptorSchemaReference {
      */
     private final Integer schemaVersionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CatalogTableStorageDescriptorSchemaReference(
-        @OutputCustomType.Parameter("schemaId") @Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId,
-        @OutputCustomType.Parameter("schemaVersionId") @Nullable String schemaVersionId,
-        @OutputCustomType.Parameter("schemaVersionNumber") Integer schemaVersionNumber) {
+        @CustomType.Parameter("schemaId") @Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId,
+        @CustomType.Parameter("schemaVersionId") @Nullable String schemaVersionId,
+        @CustomType.Parameter("schemaVersionNumber") Integer schemaVersionNumber) {
         this.schemaId = schemaId;
         this.schemaVersionId = schemaVersionId;
         this.schemaVersionNumber = schemaVersionNumber;

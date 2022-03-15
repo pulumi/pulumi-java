@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * List of ports, or port pairs, to forward from the virtual machine to the application container.
      * 
      */
-    @InputImport(name="forwardedPorts")
+    @Import(name="forwardedPorts")
       private final @Nullable Output<List<String>> forwardedPorts;
 
     public Output<List<String>> getForwardedPorts() {
@@ -31,7 +31,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * Tag to apply to the instance during creation.
      * 
      */
-    @InputImport(name="instanceTag")
+    @Import(name="instanceTag")
       private final @Nullable Output<String> instanceTag;
 
     public Output<String> getInstanceTag() {
@@ -42,7 +42,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * Enable session affinity.
      * 
      */
-    @InputImport(name="sessionAffinity")
+    @Import(name="sessionAffinity")
       private final @Nullable Output<Boolean> sessionAffinity;
 
     public Output<Boolean> getSessionAffinity() {
@@ -68,7 +68,7 @@ public final class FlexibleAppVersionNetworkArgs extends io.pulumi.resources.Res
      * If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {

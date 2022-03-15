@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.aws.elasticache.inputs.ParameterGroupParameterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * The AWS ARN associated with the parameter group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * The family of the ElastiCache parameter group.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -54,7 +54,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * The name of the ElastiCache parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * A list of ElastiCache parameters to apply.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ParameterGroupParameterGetArgs>> parameters;
 
     public Output<List<ParameterGroupParameterGetArgs>> getParameters() {
@@ -76,7 +76,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class ParameterGroupState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

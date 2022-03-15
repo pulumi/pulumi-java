@@ -5,7 +5,7 @@ package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * The unique ID for an Amplify app.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -32,7 +32,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) for the domain association.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * The DNS record for certificate verification.
      * 
      */
-    @InputImport(name="certificateVerificationDnsRecord")
+    @Import(name="certificateVerificationDnsRecord")
       private final @Nullable Output<String> certificateVerificationDnsRecord;
 
     public Output<String> getCertificateVerificationDnsRecord() {
@@ -54,7 +54,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * The domain name for the domain association.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -65,7 +65,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * The setting for the subdomain. Documented below.
      * 
      */
-    @InputImport(name="subDomains")
+    @Import(name="subDomains")
       private final @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
 
     public Output<List<DomainAssociationSubDomainGetArgs>> getSubDomains() {
@@ -76,7 +76,7 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
      * If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
      * 
      */
-    @InputImport(name="waitForVerification")
+    @Import(name="waitForVerification")
       private final @Nullable Output<Boolean> waitForVerification;
 
     public Output<Boolean> getWaitForVerification() {

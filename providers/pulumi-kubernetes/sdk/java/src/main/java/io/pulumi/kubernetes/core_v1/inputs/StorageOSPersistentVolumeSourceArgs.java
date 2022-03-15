@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -35,7 +35,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -46,7 +46,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<ObjectReferenceArgs> secretRef;
 
     public Output<ObjectReferenceArgs> getSecretRef() {
@@ -57,7 +57,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.
      * 
      */
-    @InputImport(name="volumeName")
+    @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {
@@ -68,7 +68,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to "default" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.
      * 
      */
-    @InputImport(name="volumeNamespace")
+    @Import(name="volumeNamespace")
       private final @Nullable Output<String> volumeNamespace;
 
     public Output<String> getVolumeNamespace() {

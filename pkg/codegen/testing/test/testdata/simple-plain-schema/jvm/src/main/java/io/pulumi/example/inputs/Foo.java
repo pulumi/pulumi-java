@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,42 +16,42 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
 
     public static final Foo Empty = new Foo();
 
-    @InputImport(name="a", required=true)
+    @Import(name="a", required=true)
       private final Boolean a;
 
     public Boolean getA() {
         return this.a;
     }
 
-    @InputImport(name="b")
+    @Import(name="b")
       private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
         return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
-    @InputImport(name="c", required=true)
+    @Import(name="c", required=true)
       private final Integer c;
 
     public Integer getC() {
         return this.c;
     }
 
-    @InputImport(name="d")
+    @Import(name="d")
       private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
         return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
-    @InputImport(name="e", required=true)
+    @Import(name="e", required=true)
       private final String e;
 
     public String getE() {
         return this.e;
     }
 
-    @InputImport(name="f")
+    @Import(name="f")
       private final @Nullable String f;
 
     public Optional<String> getF() {

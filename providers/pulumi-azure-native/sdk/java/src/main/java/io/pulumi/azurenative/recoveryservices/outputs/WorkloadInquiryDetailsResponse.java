@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.InquiryValidationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadInquiryDetailsResponse {
     /**
      * Inquiry validation such as permissions and other backup validations.
@@ -29,11 +29,11 @@ public final class WorkloadInquiryDetailsResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadInquiryDetailsResponse(
-        @OutputCustomType.Parameter("inquiryValidation") @Nullable InquiryValidationResponse inquiryValidation,
-        @OutputCustomType.Parameter("itemCount") @Nullable Double itemCount,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("inquiryValidation") @Nullable InquiryValidationResponse inquiryValidation,
+        @CustomType.Parameter("itemCount") @Nullable Double itemCount,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.inquiryValidation = inquiryValidation;
         this.itemCount = itemCount;
         this.type = type;

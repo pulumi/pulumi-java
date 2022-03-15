@@ -8,7 +8,7 @@ import io.pulumi.awsnative.codegurureviewer.RepositoryAssociationArgs;
 import io.pulumi.awsnative.codegurureviewer.enums.RepositoryAssociationType;
 import io.pulumi.awsnative.codegurureviewer.outputs.RepositoryAssociationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the repository association.
      * 
      */
-    @OutputExport(name="associationArn", type=String.class, parameters={})
+    @Export(name="associationArn", type=String.class, parameters={})
     private Output<String> associationArn;
 
     /**
@@ -40,7 +40,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * The name of the S3 bucket associated with an associated S3 repository. It must start with `codeguru-reviewer-`.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
     /**
@@ -54,7 +54,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection.
      * 
      */
-    @OutputExport(name="connectionArn", type=String.class, parameters={})
+    @Export(name="connectionArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionArn;
 
     /**
@@ -68,7 +68,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * Name of the repository to be associated.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * The owner of the repository. For a Bitbucket repository, this is the username for the account that owns the repository.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output</* @Nullable */ String> owner;
 
     /**
@@ -96,7 +96,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * The tags associated with a repository association.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RepositoryAssociationTag.class})
+    @Export(name="tags", type=List.class, parameters={RepositoryAssociationTag.class})
     private Output</* @Nullable */ List<RepositoryAssociationTag>> tags;
 
     /**
@@ -110,7 +110,7 @@ public class RepositoryAssociation extends io.pulumi.resources.CustomResource {
      * The type of repository to be associated.
      * 
      */
-    @OutputExport(name="type", type=RepositoryAssociationType.class, parameters={})
+    @Export(name="type", type=RepositoryAssociationType.class, parameters={})
     private Output<RepositoryAssociationType> type;
 
     /**

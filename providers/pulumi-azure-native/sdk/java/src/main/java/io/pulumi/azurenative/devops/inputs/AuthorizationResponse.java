@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devops.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * Type of authorization.
      * 
      */
-    @InputImport(name="authorizationType", required=true)
+    @Import(name="authorizationType", required=true)
       private final String authorizationType;
 
     public String getAuthorizationType() {
@@ -34,7 +34,7 @@ public final class AuthorizationResponse extends io.pulumi.resources.InvokeArgs 
      * Authorization parameters corresponding to the authorization type.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {

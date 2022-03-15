@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.IntentArgs;
@@ -44,7 +44,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Note: The action name must not contain whitespaces.
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -61,7 +61,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
      * 
      */
-    @OutputExport(name="defaultResponsePlatforms", type=List.class, parameters={String.class})
+    @Export(name="defaultResponsePlatforms", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> defaultResponsePlatforms;
 
     /**
@@ -77,7 +77,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The name of this intent to be displayed on the console.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -93,7 +93,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
      * 
      */
-    @OutputExport(name="events", type=List.class, parameters={String.class})
+    @Export(name="events", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> events;
 
     /**
@@ -110,7 +110,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * in the output.
      * 
      */
-    @OutputExport(name="followupIntentInfos", type=List.class, parameters={IntentFollowupIntentInfo.class})
+    @Export(name="followupIntentInfos", type=List.class, parameters={IntentFollowupIntentInfo.class})
     private Output<List<IntentFollowupIntentInfo>> followupIntentInfos;
 
     /**
@@ -126,7 +126,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
      * 
      */
-    @OutputExport(name="inputContextNames", type=List.class, parameters={String.class})
+    @Export(name="inputContextNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> inputContextNames;
 
     /**
@@ -141,7 +141,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Indicates whether this is a fallback intent.
      * 
      */
-    @OutputExport(name="isFallback", type=Boolean.class, parameters={})
+    @Export(name="isFallback", type=Boolean.class, parameters={})
     private Output<Boolean> isFallback;
 
     /**
@@ -157,7 +157,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * ONLY match mode. Also, auto-markup in the UI is turned off.
      * 
      */
-    @OutputExport(name="mlDisabled", type=Boolean.class, parameters={})
+    @Export(name="mlDisabled", type=Boolean.class, parameters={})
     private Output<Boolean> mlDisabled;
 
     /**
@@ -173,7 +173,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -188,7 +188,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @OutputExport(name="parentFollowupIntentName", type=String.class, parameters={})
+    @Export(name="parentFollowupIntentName", type=String.class, parameters={})
     private Output<String> parentFollowupIntentName;
 
     /**
@@ -206,7 +206,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -224,7 +224,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -239,7 +239,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Indicates whether to delete all contexts in the current session when this intent is matched.
      * 
      */
-    @OutputExport(name="resetContexts", type=Boolean.class, parameters={})
+    @Export(name="resetContexts", type=Boolean.class, parameters={})
     private Output<Boolean> resetContexts;
 
     /**
@@ -254,7 +254,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @OutputExport(name="rootFollowupIntentName", type=String.class, parameters={})
+    @Export(name="rootFollowupIntentName", type=String.class, parameters={})
     private Output<String> rootFollowupIntentName;
 
     /**
@@ -273,7 +273,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      *   Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
      * 
      */
-    @OutputExport(name="webhookState", type=String.class, parameters={})
+    @Export(name="webhookState", type=String.class, parameters={})
     private Output<String> webhookState;
 
     /**

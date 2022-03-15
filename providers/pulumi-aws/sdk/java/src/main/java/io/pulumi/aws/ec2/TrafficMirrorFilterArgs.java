@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * A description of the filter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
      * 
      */
-    @InputImport(name="networkServices")
+    @Import(name="networkServices")
       private final @Nullable Output<List<String>> networkServices;
 
     public Output<List<String>> getNetworkServices() {
@@ -42,7 +42,7 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

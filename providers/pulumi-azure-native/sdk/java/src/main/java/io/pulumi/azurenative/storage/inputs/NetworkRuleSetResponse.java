@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.IPRuleResponse;
 import io.pulumi.azurenative.storage.inputs.ResourceAccessRuleResponse;
 import io.pulumi.azurenative.storage.inputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
      * 
      */
-    @InputImport(name="bypass")
+    @Import(name="bypass")
       private final @Nullable String bypass;
 
     public Optional<String> getBypass() {
@@ -37,7 +37,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the default action of allow or deny when no other rules match.
      * 
      */
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final String defaultAction;
 
     public String getDefaultAction() {
@@ -48,7 +48,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Sets the IP ACL rules
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable List<IPRuleResponse> ipRules;
 
     public List<IPRuleResponse> getIpRules() {
@@ -59,7 +59,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Sets the resource access rules
      * 
      */
-    @InputImport(name="resourceAccessRules")
+    @Import(name="resourceAccessRules")
       private final @Nullable List<ResourceAccessRuleResponse> resourceAccessRules;
 
     public List<ResourceAccessRuleResponse> getResourceAccessRules() {
@@ -70,7 +70,7 @@ public final class NetworkRuleSetResponse extends io.pulumi.resources.InvokeArgs
      * Sets the virtual network rules
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<VirtualNetworkRuleResponse> getVirtualNetworkRules() {

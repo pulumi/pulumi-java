@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
      * 
      */
-    @InputImport(name="entityType", required=true)
+    @Import(name="entityType", required=true)
       private final Output<String> entityType;
 
     public Output<String> getEntityType() {
@@ -31,7 +31,7 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -42,7 +42,7 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether the parameter represents a list of values.
      * 
      */
-    @InputImport(name="isList")
+    @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
     public Output<Boolean> getIsList() {
@@ -54,7 +54,7 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
      */
-    @InputImport(name="redact")
+    @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {

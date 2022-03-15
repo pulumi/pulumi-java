@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxVersionArgs;
@@ -46,7 +46,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -61,7 +61,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -75,7 +75,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * The human-readable name of the version. Limit of 64 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -90,7 +90,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * upon version creation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * The NLU settings of the flow at version creation.
      * 
      */
-    @OutputExport(name="nluSettings", type=List.class, parameters={CxVersionNluSetting.class})
+    @Export(name="nluSettings", type=List.class, parameters={CxVersionNluSetting.class})
     private Output<List<CxVersionNluSetting>> nluSettings;
 
     /**
@@ -120,7 +120,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
     /**
@@ -136,7 +136,7 @@ public class CxVersion extends io.pulumi.resources.CustomResource {
      * has succeeded and this version is ready to serve. * FAILED: Version training failed.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

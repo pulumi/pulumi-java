@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LaunchConfigurationMetadataOptionsGetArgs extends io.pulumi.r
      * The state of the metadata service: `enabled`, `disabled`.
      * 
      */
-    @InputImport(name="httpEndpoint")
+    @Import(name="httpEndpoint")
       private final @Nullable Output<String> httpEndpoint;
 
     public Output<String> getHttpEndpoint() {
@@ -30,7 +30,7 @@ public final class LaunchConfigurationMetadataOptionsGetArgs extends io.pulumi.r
      * The desired HTTP PUT response hop limit for instance metadata requests.
      * 
      */
-    @InputImport(name="httpPutResponseHopLimit")
+    @Import(name="httpPutResponseHopLimit")
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
     public Output<Integer> getHttpPutResponseHopLimit() {
@@ -41,7 +41,7 @@ public final class LaunchConfigurationMetadataOptionsGetArgs extends io.pulumi.r
      * If session tokens are required: `optional`, `required`.
      * 
      */
-    @InputImport(name="httpTokens")
+    @Import(name="httpTokens")
       private final @Nullable Output<String> httpTokens;
 
     public Output<String> getHttpTokens() {

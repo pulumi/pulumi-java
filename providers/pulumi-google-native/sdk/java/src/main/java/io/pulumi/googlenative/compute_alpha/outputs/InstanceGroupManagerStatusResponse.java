@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusAllInstancesConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusVersionTargetResponse;
@@ -11,7 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusResponse {
     /**
      * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
@@ -39,13 +39,13 @@ public final class InstanceGroupManagerStatusResponse {
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerStatusResponse(
-        @OutputCustomType.Parameter("allInstancesConfig") InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig,
-        @OutputCustomType.Parameter("autoscaler") String autoscaler,
-        @OutputCustomType.Parameter("isStable") Boolean isStable,
-        @OutputCustomType.Parameter("stateful") InstanceGroupManagerStatusStatefulResponse stateful,
-        @OutputCustomType.Parameter("versionTarget") InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
+        @CustomType.Parameter("allInstancesConfig") InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig,
+        @CustomType.Parameter("autoscaler") String autoscaler,
+        @CustomType.Parameter("isStable") Boolean isStable,
+        @CustomType.Parameter("stateful") InstanceGroupManagerStatusStatefulResponse stateful,
+        @CustomType.Parameter("versionTarget") InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
         this.allInstancesConfig = allInstancesConfig;
         this.autoscaler = autoscaler;
         this.isStable = isStable;

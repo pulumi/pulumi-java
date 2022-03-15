@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReservationShareSettingsProjectMap {
     /**
      * The identifier for this object. Format specified above.
@@ -22,10 +22,10 @@ public final class ReservationShareSettingsProjectMap {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationShareSettingsProjectMap(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("projectId") @Nullable String projectId) {
         this.id = id;
         this.projectId = projectId;
     }

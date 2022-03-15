@@ -8,7 +8,7 @@ import io.pulumi.azurenative.notificationhubs.NotificationHubAuthorizationRuleAr
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * A string that describes the claim type
      * 
      */
-    @OutputExport(name="claimType", type=String.class, parameters={})
+    @Export(name="claimType", type=String.class, parameters={})
     private Output<String> claimType;
 
     /**
@@ -51,7 +51,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * A string that describes the claim value
      * 
      */
-    @OutputExport(name="claimValue", type=String.class, parameters={})
+    @Export(name="claimValue", type=String.class, parameters={})
     private Output<String> claimValue;
 
     /**
@@ -65,7 +65,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * The created time for this rule
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -79,7 +79,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * A string that describes the authorization rule.
      * 
      */
-    @OutputExport(name="keyName", type=String.class, parameters={})
+    @Export(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
     /**
@@ -93,7 +93,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -107,7 +107,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * The last modified time for this rule
      * 
      */
-    @OutputExport(name="modifiedTime", type=String.class, parameters={})
+    @Export(name="modifiedTime", type=String.class, parameters={})
     private Output<String> modifiedTime;
 
     /**
@@ -121,7 +121,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
-    @OutputExport(name="primaryKey", type=String.class, parameters={})
+    @Export(name="primaryKey", type=String.class, parameters={})
     private Output<String> primaryKey;
 
     /**
@@ -149,7 +149,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * The revision number for the rule
      * 
      */
-    @OutputExport(name="revision", type=Integer.class, parameters={})
+    @Export(name="revision", type=Integer.class, parameters={})
     private Output<Integer> revision;
 
     /**
@@ -163,7 +163,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * The rights associated with the rule.
      * 
      */
-    @OutputExport(name="rights", type=List.class, parameters={String.class})
+    @Export(name="rights", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> rights;
 
     /**
@@ -177,7 +177,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
-    @OutputExport(name="secondaryKey", type=String.class, parameters={})
+    @Export(name="secondaryKey", type=String.class, parameters={})
     private Output<String> secondaryKey;
 
     /**
@@ -191,7 +191,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * The sku of the created namespace
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -205,7 +205,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -219,7 +219,7 @@ public class NotificationHubAuthorizationRule extends io.pulumi.resources.Custom
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

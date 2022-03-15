@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RampUpRuleResponse {
     /**
      * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
@@ -57,16 +57,16 @@ public final class RampUpRuleResponse {
      */
     private final @Nullable Double reroutePercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RampUpRuleResponse(
-        @OutputCustomType.Parameter("actionHostName") @Nullable String actionHostName,
-        @OutputCustomType.Parameter("changeDecisionCallbackUrl") @Nullable String changeDecisionCallbackUrl,
-        @OutputCustomType.Parameter("changeIntervalInMinutes") @Nullable Integer changeIntervalInMinutes,
-        @OutputCustomType.Parameter("changeStep") @Nullable Double changeStep,
-        @OutputCustomType.Parameter("maxReroutePercentage") @Nullable Double maxReroutePercentage,
-        @OutputCustomType.Parameter("minReroutePercentage") @Nullable Double minReroutePercentage,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("reroutePercentage") @Nullable Double reroutePercentage) {
+        @CustomType.Parameter("actionHostName") @Nullable String actionHostName,
+        @CustomType.Parameter("changeDecisionCallbackUrl") @Nullable String changeDecisionCallbackUrl,
+        @CustomType.Parameter("changeIntervalInMinutes") @Nullable Integer changeIntervalInMinutes,
+        @CustomType.Parameter("changeStep") @Nullable Double changeStep,
+        @CustomType.Parameter("maxReroutePercentage") @Nullable Double maxReroutePercentage,
+        @CustomType.Parameter("minReroutePercentage") @Nullable Double minReroutePercentage,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("reroutePercentage") @Nullable Double reroutePercentage) {
         this.actionHostName = actionHostName;
         this.changeDecisionCallbackUrl = changeDecisionCallbackUrl;
         this.changeIntervalInMinutes = changeIntervalInMinutes;

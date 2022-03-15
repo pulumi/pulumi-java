@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.enums.ManagedZoneDnsSecConfigNonExistence;
 import io.pulumi.googlenative.dns_v1beta2.enums.ManagedZoneDnsSecConfigState;
 import io.pulumi.googlenative.dns_v1beta2.inputs.DnsKeySpecArgs;
@@ -22,14 +22,14 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
      * 
      */
-    @InputImport(name="defaultKeySpecs")
+    @Import(name="defaultKeySpecs")
       private final @Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs;
 
     public Output<List<DnsKeySpecArgs>> getDefaultKeySpecs() {
         return this.defaultKeySpecs == null ? Output.empty() : this.defaultKeySpecs;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -40,7 +40,7 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
      * Specifies the mechanism for authenticated denial-of-existence responses. Can only be changed while the state is OFF.
      * 
      */
-    @InputImport(name="nonExistence")
+    @Import(name="nonExistence")
       private final @Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence;
 
     public Output<ManagedZoneDnsSecConfigNonExistence> getNonExistence() {
@@ -51,7 +51,7 @@ public final class ManagedZoneDnsSecConfigArgs extends io.pulumi.resources.Resou
      * Specifies whether DNSSEC is enabled, and what mode it is in.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<ManagedZoneDnsSecConfigState> state;
 
     public Output<ManagedZoneDnsSecConfigState> getState() {

@@ -4,14 +4,14 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.aws.outputs.GetPrefixListFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrefixListResult {
     /**
      * The list of CIDR blocks for the AWS service associated with the prefix list.
@@ -31,13 +31,13 @@ public final class GetPrefixListResult {
     private final String name;
     private final @Nullable String prefixListId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrefixListResult(
-        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetPrefixListFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("prefixListId") @Nullable String prefixListId) {
+        @CustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @CustomType.Parameter("filters") @Nullable List<GetPrefixListFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("prefixListId") @Nullable String prefixListId) {
         this.cidrBlocks = cidrBlocks;
         this.filters = filters;
         this.id = id;

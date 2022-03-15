@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
      * Specifying this limits the results to only those partner event sources with names that start with the specified prefix
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable String namePrefix;
 
     public Optional<String> getNamePrefix() {

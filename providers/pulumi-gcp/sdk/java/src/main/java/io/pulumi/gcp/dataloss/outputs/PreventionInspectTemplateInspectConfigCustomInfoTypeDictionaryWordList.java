@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList {
     /**
      * Words or phrases defining the dictionary. The dictionary must contain at least one
@@ -17,8 +17,8 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      */
     private final List<String> words;
 
-    @OutputCustomType.Constructor
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(@OutputCustomType.Parameter("words") List<String> words) {
+    @CustomType.Constructor
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(@CustomType.Parameter("words") List<String> words) {
         this.words = words;
     }
 

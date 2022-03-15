@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
      * The path to the file holding the client or server TLS certificate to use.
      * 
      */
-    @InputImport(name="certificatePath")
+    @Import(name="certificatePath")
       private final @Nullable Output<String> certificatePath;
 
     public Output<String> getCertificatePath() {
@@ -33,7 +33,7 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
      * The path to the file holding the client or server private key.
      * 
      */
-    @InputImport(name="privateKeyPath")
+    @Import(name="privateKeyPath")
       private final @Nullable Output<String> privateKeyPath;
 
     public Output<String> getPrivateKeyPath() {

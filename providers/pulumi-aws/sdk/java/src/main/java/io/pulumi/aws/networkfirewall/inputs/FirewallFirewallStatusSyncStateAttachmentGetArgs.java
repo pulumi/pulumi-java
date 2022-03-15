@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
      * The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
      * 
      */
-    @InputImport(name="endpointId")
+    @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
     public Output<String> getEndpointId() {
@@ -29,7 +29,7 @@ public final class FirewallFirewallStatusSyncStateAttachmentGetArgs extends io.p
      * The unique identifier for the subnet.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

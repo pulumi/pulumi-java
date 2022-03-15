@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbi.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * SKU name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class AzureSkuResponse extends io.pulumi.resources.InvokeArgs {
      * SKU tier
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {

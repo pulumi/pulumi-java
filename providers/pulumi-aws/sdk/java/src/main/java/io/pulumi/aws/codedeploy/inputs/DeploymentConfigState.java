@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
      * 
      */
-    @InputImport(name="computePlatform")
+    @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
     public Output<String> getComputePlatform() {
@@ -31,7 +31,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * The AWS Assigned deployment config id
      * 
      */
-    @InputImport(name="deploymentConfigId")
+    @Import(name="deploymentConfigId")
       private final @Nullable Output<String> deploymentConfigId;
 
     public Output<String> getDeploymentConfigId() {
@@ -42,7 +42,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * The name of the deployment config.
      * 
      */
-    @InputImport(name="deploymentConfigName")
+    @Import(name="deploymentConfigName")
       private final @Nullable Output<String> deploymentConfigName;
 
     public Output<String> getDeploymentConfigName() {
@@ -53,7 +53,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
      * 
      */
-    @InputImport(name="minimumHealthyHosts")
+    @Import(name="minimumHealthyHosts")
       private final @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
 
     public Output<DeploymentConfigMinimumHealthyHostsGetArgs> getMinimumHealthyHosts() {
@@ -64,7 +64,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
      * A traffic_routing_config block. Traffic Routing Config is documented below.
      * 
      */
-    @InputImport(name="trafficRoutingConfig")
+    @Import(name="trafficRoutingConfig")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
     public Output<DeploymentConfigTrafficRoutingConfigGetArgs> getTrafficRoutingConfig() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetRouterBgp;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouterResult {
     private final List<GetRouterBgp> bgps;
     private final String creationTimestamp;
@@ -29,18 +29,18 @@ public final class GetRouterResult {
     private final @Nullable String region;
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouterResult(
-        @OutputCustomType.Parameter("bgps") List<GetRouterBgp> bgps,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("bgps") List<GetRouterBgp> bgps,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.bgps = bgps;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

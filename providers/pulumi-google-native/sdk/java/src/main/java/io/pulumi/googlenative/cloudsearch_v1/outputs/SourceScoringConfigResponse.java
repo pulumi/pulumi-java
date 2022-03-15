@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceScoringConfigResponse {
     /**
      * Importance of the source.
@@ -15,8 +15,8 @@ public final class SourceScoringConfigResponse {
      */
     private final String sourceImportance;
 
-    @OutputCustomType.Constructor
-    private SourceScoringConfigResponse(@OutputCustomType.Parameter("sourceImportance") String sourceImportance) {
+    @CustomType.Constructor
+    private SourceScoringConfigResponse(@CustomType.Parameter("sourceImportance") String sourceImportance) {
         this.sourceImportance = sourceImportance;
     }
 

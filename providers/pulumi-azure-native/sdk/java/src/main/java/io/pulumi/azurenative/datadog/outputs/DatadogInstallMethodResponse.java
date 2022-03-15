@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatadogInstallMethodResponse {
     /**
      * The installer version.
@@ -27,11 +27,11 @@ public final class DatadogInstallMethodResponse {
      */
     private final @Nullable String toolVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatadogInstallMethodResponse(
-        @OutputCustomType.Parameter("installerVersion") @Nullable String installerVersion,
-        @OutputCustomType.Parameter("tool") @Nullable String tool,
-        @OutputCustomType.Parameter("toolVersion") @Nullable String toolVersion) {
+        @CustomType.Parameter("installerVersion") @Nullable String installerVersion,
+        @CustomType.Parameter("tool") @Nullable String tool,
+        @CustomType.Parameter("toolVersion") @Nullable String toolVersion) {
         this.installerVersion = installerVersion;
         this.tool = tool;
         this.toolVersion = toolVersion;

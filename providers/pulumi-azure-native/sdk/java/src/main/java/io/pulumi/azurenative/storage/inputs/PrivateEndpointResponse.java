@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PrivateEndpointResponse extends io.pulumi.resources.InvokeArg
      * The ARM identifier for Private Endpoint
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

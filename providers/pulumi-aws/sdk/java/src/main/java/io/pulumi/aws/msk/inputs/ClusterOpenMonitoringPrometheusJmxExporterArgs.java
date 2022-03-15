@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterOpenMonitoringPrometheusJmxExporterArgs extends io.pul
      * Indicates whether you want to enable or disable the JMX Exporter.
      * 
      */
-    @InputImport(name="enabledInBroker", required=true)
+    @Import(name="enabledInBroker", required=true)
       private final Output<Boolean> enabledInBroker;
 
     public Output<Boolean> getEnabledInBroker() {

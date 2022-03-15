@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.ChannelHlsIngest;
 import io.pulumi.awsnative.mediapackage.outputs.ChannelLogConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelResult {
     /**
      * The Amazon Resource Name (ARN) assigned to the Channel.
@@ -39,13 +39,13 @@ public final class GetChannelResult {
      */
     private final @Nullable ChannelLogConfiguration ingressAccessLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("egressAccessLogs") @Nullable ChannelLogConfiguration egressAccessLogs,
-        @OutputCustomType.Parameter("hlsIngest") @Nullable ChannelHlsIngest hlsIngest,
-        @OutputCustomType.Parameter("ingressAccessLogs") @Nullable ChannelLogConfiguration ingressAccessLogs) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("egressAccessLogs") @Nullable ChannelLogConfiguration egressAccessLogs,
+        @CustomType.Parameter("hlsIngest") @Nullable ChannelHlsIngest hlsIngest,
+        @CustomType.Parameter("ingressAccessLogs") @Nullable ChannelLogConfiguration ingressAccessLogs) {
         this.arn = arn;
         this.description = description;
         this.egressAccessLogs = egressAccessLogs;

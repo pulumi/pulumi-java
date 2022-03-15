@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeScriptActionResponse {
     /**
      * The application name of the script action, if any.
@@ -38,13 +38,13 @@ public final class RuntimeScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeScriptActionResponse(
-        @OutputCustomType.Parameter("applicationName") String applicationName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
-        @OutputCustomType.Parameter("roles") List<String> roles,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("applicationName") String applicationName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable String parameters,
+        @CustomType.Parameter("roles") List<String> roles,
+        @CustomType.Parameter("uri") String uri) {
         this.applicationName = applicationName;
         this.name = name;
         this.parameters = parameters;

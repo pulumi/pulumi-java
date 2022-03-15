@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * The service principal client ID
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {
@@ -31,7 +31,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * The service principal secret. This is not returned in response of GET/PUT on the resource. To see this please call listKeys.
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final String secret;
 
     public String getSecret() {

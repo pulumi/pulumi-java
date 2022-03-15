@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagedInstancePecPropertyResponse extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -32,7 +32,7 @@ public final class ManagedInstancePecPropertyResponse extends io.pulumi.resource
      * Private endpoint connection properties
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final ManagedInstancePrivateEndpointConnectionPropertiesResponse properties;
 
     public ManagedInstancePrivateEndpointConnectionPropertiesResponse getProperties() {

@@ -5,12 +5,12 @@ package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.DistributionOriginGroupFailoverCriteria;
 import io.pulumi.aws.cloudfront.outputs.DistributionOriginGroupMember;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroup {
     /**
      * The failover criteria for when to failover to the secondary origin
@@ -28,11 +28,11 @@ public final class DistributionOriginGroup {
      */
     private final String originId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOriginGroup(
-        @OutputCustomType.Parameter("failoverCriteria") DistributionOriginGroupFailoverCriteria failoverCriteria,
-        @OutputCustomType.Parameter("members") List<DistributionOriginGroupMember> members,
-        @OutputCustomType.Parameter("originId") String originId) {
+        @CustomType.Parameter("failoverCriteria") DistributionOriginGroupFailoverCriteria failoverCriteria,
+        @CustomType.Parameter("members") List<DistributionOriginGroupMember> members,
+        @CustomType.Parameter("originId") String originId) {
         this.failoverCriteria = failoverCriteria;
         this.members = members;
         this.originId = originId;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.ExpressionArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Condition to be used for filtering the input.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final Output<ExpressionArgs> condition;
 
     public Output<ExpressionArgs> getCondition() {
@@ -37,7 +37,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -48,7 +48,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Input array on which filter should be applied.
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final Output<ExpressionArgs> items;
 
     public Output<ExpressionArgs> getItems() {
@@ -70,7 +70,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Filter'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -93,7 +93,7 @@ public final class FilterActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

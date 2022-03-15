@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {

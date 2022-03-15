@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyDocumentationArgs;
@@ -25,7 +25,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="alertStrategy")
+    @Import(name="alertStrategy")
       private final @Nullable Output<AlertPolicyAlertStrategyArgs> alertStrategy;
 
     public Output<AlertPolicyAlertStrategyArgs> getAlertStrategy() {
@@ -38,7 +38,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
      * 
      */
-    @InputImport(name="combiner", required=true)
+    @Import(name="combiner", required=true)
       private final Output<String> combiner;
 
     public Output<String> getCombiner() {
@@ -53,7 +53,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<AlertPolicyConditionArgs>> conditions;
 
     public Output<List<AlertPolicyConditionArgs>> getConditions() {
@@ -68,7 +68,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * policy.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -84,7 +84,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="documentation")
+    @Import(name="documentation")
       private final @Nullable Output<AlertPolicyDocumentationArgs> documentation;
 
     public Output<AlertPolicyDocumentationArgs> getDocumentation() {
@@ -95,7 +95,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the policy is enabled. The default is true.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -112,7 +112,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
      * 
      */
-    @InputImport(name="notificationChannels")
+    @Import(name="notificationChannels")
       private final @Nullable Output<List<String>> notificationChannels;
 
     public Output<List<String>> getNotificationChannels() {
@@ -124,7 +124,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -139,7 +139,7 @@ public final class AlertPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * must begin with a letter.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse {
     /**
      * Conditional cases for this fulfillment.
@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentResponse {
      */
     private final String webhook;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1FulfillmentResponse(
-        @OutputCustomType.Parameter("conditionalCases") List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases,
-        @OutputCustomType.Parameter("messages") List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages,
-        @OutputCustomType.Parameter("returnPartialResponses") Boolean returnPartialResponses,
-        @OutputCustomType.Parameter("setParameterActions") List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions,
-        @OutputCustomType.Parameter("tag") String tag,
-        @OutputCustomType.Parameter("webhook") String webhook) {
+        @CustomType.Parameter("conditionalCases") List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse> conditionalCases,
+        @CustomType.Parameter("messages") List<GoogleCloudDialogflowCxV3beta1ResponseMessageResponse> messages,
+        @CustomType.Parameter("returnPartialResponses") Boolean returnPartialResponses,
+        @CustomType.Parameter("setParameterActions") List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionResponse> setParameterActions,
+        @CustomType.Parameter("tag") String tag,
+        @CustomType.Parameter("webhook") String webhook) {
         this.conditionalCases = conditionalCases;
         this.messages = messages;
         this.returnPartialResponses = returnPartialResponses;

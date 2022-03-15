@@ -4,12 +4,12 @@
 package io.pulumi.aws.macie.outputs;
 
 import io.pulumi.aws.macie.outputs.FindingsFilterFindingCriteriaCriterion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FindingsFilterFindingCriteria {
     /**
      * A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
@@ -17,8 +17,8 @@ public final class FindingsFilterFindingCriteria {
      */
     private final @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions;
 
-    @OutputCustomType.Constructor
-    private FindingsFilterFindingCriteria(@OutputCustomType.Parameter("criterions") @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
+    @CustomType.Constructor
+    private FindingsFilterFindingCriteria(@CustomType.Parameter("criterions") @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
         this.criterions = criterions;
     }
 

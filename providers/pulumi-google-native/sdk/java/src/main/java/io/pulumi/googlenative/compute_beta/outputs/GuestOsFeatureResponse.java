@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GuestOsFeatureResponse {
     /**
      * The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - SECURE_BOOT - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE For more information, see Enabling guest operating system features.
@@ -15,8 +15,8 @@ public final class GuestOsFeatureResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private GuestOsFeatureResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private GuestOsFeatureResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

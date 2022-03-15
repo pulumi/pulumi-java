@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.AuthInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourcePropertiesResponse {
     /**
      * The branch name of the source code.
@@ -34,12 +34,12 @@ public final class SourcePropertiesResponse {
      */
     private final String sourceControlType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourcePropertiesResponse(
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
-        @OutputCustomType.Parameter("sourceControlAuthProperties") @Nullable AuthInfoResponse sourceControlAuthProperties,
-        @OutputCustomType.Parameter("sourceControlType") String sourceControlType) {
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @CustomType.Parameter("sourceControlAuthProperties") @Nullable AuthInfoResponse sourceControlAuthProperties,
+        @CustomType.Parameter("sourceControlType") String sourceControlType) {
         this.branch = branch;
         this.repositoryUrl = repositoryUrl;
         this.sourceControlAuthProperties = sourceControlAuthProperties;

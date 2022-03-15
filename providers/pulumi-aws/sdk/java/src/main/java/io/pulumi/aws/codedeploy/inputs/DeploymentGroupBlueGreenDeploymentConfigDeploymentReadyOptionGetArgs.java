@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      * * `STOP_DEPLOYMENT`: Do not register new instances with load balancer unless traffic is rerouted manually. If traffic is not rerouted manually before the end of the specified wait period, the deployment status is changed to Stopped.
      * 
      */
-    @InputImport(name="actionOnTimeout")
+    @Import(name="actionOnTimeout")
       private final @Nullable Output<String> actionOnTimeout;
 
     public Output<String> getActionOnTimeout() {
@@ -32,7 +32,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      * The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
      * 
      */
-    @InputImport(name="waitTimeInMinutes")
+    @Import(name="waitTimeInMinutes")
       private final @Nullable Output<Integer> waitTimeInMinutes;
 
     public Output<Integer> getWaitTimeInMinutes() {

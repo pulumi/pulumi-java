@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
      * BackupType ; Full/Incremental etc
      * 
      */
-    @InputImport(name="backupType", required=true)
+    @Import(name="backupType", required=true)
       private final String backupType;
 
     public String getBackupType() {
@@ -32,7 +32,7 @@ public final class AzureBackupParamsResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'AzureBackupParams'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {

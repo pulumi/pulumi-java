@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexKeyLocation;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,49 +15,49 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
 
     public static final IndexJwtTokenTypeConfigurationArgs Empty = new IndexJwtTokenTypeConfigurationArgs();
 
-    @InputImport(name="claimRegex")
+    @Import(name="claimRegex")
       private final @Nullable Output<String> claimRegex;
 
     public Output<String> getClaimRegex() {
         return this.claimRegex == null ? Output.empty() : this.claimRegex;
     }
 
-    @InputImport(name="groupAttributeField")
+    @Import(name="groupAttributeField")
       private final @Nullable Output<String> groupAttributeField;
 
     public Output<String> getGroupAttributeField() {
         return this.groupAttributeField == null ? Output.empty() : this.groupAttributeField;
     }
 
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
         return this.issuer == null ? Output.empty() : this.issuer;
     }
 
-    @InputImport(name="keyLocation", required=true)
+    @Import(name="keyLocation", required=true)
       private final Output<IndexKeyLocation> keyLocation;
 
     public Output<IndexKeyLocation> getKeyLocation() {
         return this.keyLocation;
     }
 
-    @InputImport(name="secretManagerArn")
+    @Import(name="secretManagerArn")
       private final @Nullable Output<String> secretManagerArn;
 
     public Output<String> getSecretManagerArn() {
         return this.secretManagerArn == null ? Output.empty() : this.secretManagerArn;
     }
 
-    @InputImport(name="uRL")
+    @Import(name="uRL")
       private final @Nullable Output<String> uRL;
 
     public Output<String> getURL() {
         return this.uRL == null ? Output.empty() : this.uRL;
     }
 
-    @InputImport(name="userNameAttributeField")
+    @Import(name="userNameAttributeField")
       private final @Nullable Output<String> userNameAttributeField;
 
     public Output<String> getUserNameAttributeField() {

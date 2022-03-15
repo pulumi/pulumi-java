@@ -13,7 +13,7 @@ import io.pulumi.aws.glue.inputs.CrawlerRecrawlPolicyArgs;
 import io.pulumi.aws.glue.inputs.CrawlerS3TargetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerSchemaChangePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CrawlerArgs Empty = new CrawlerArgs();
 
-    @InputImport(name="catalogTargets")
+    @Import(name="catalogTargets")
       private final @Nullable Output<List<CrawlerCatalogTargetArgs>> catalogTargets;
 
     public Output<List<CrawlerCatalogTargetArgs>> getCatalogTargets() {
@@ -36,7 +36,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
      * 
      */
-    @InputImport(name="classifiers")
+    @Import(name="classifiers")
       private final @Nullable Output<List<String>> classifiers;
 
     public Output<List<String>> getClassifiers() {
@@ -47,7 +47,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
     public Output<String> getConfiguration() {
@@ -58,14 +58,14 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Glue database to be synchronized.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="deltaTargets")
+    @Import(name="deltaTargets")
       private final @Nullable Output<List<CrawlerDeltaTargetArgs>> deltaTargets;
 
     public Output<List<CrawlerDeltaTargetArgs>> getDeltaTargets() {
@@ -76,7 +76,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the crawler.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -87,7 +87,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * List of nested DynamoDB target arguments. See Dynamodb Target below.
      * 
      */
-    @InputImport(name="dynamodbTargets")
+    @Import(name="dynamodbTargets")
       private final @Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets;
 
     public Output<List<CrawlerDynamodbTargetArgs>> getDynamodbTargets() {
@@ -98,7 +98,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * List of nested JBDC target arguments. See JDBC Target below.
      * 
      */
-    @InputImport(name="jdbcTargets")
+    @Import(name="jdbcTargets")
       private final @Nullable Output<List<CrawlerJdbcTargetArgs>> jdbcTargets;
 
     public Output<List<CrawlerJdbcTargetArgs>> getJdbcTargets() {
@@ -109,7 +109,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
      * 
      */
-    @InputImport(name="lineageConfiguration")
+    @Import(name="lineageConfiguration")
       private final @Nullable Output<CrawlerLineageConfigurationArgs> lineageConfiguration;
 
     public Output<CrawlerLineageConfigurationArgs> getLineageConfiguration() {
@@ -120,7 +120,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * List nested MongoDB target arguments. See MongoDB Target below.
      * 
      */
-    @InputImport(name="mongodbTargets")
+    @Import(name="mongodbTargets")
       private final @Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets;
 
     public Output<List<CrawlerMongodbTargetArgs>> getMongodbTargets() {
@@ -131,7 +131,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the crawler.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -142,7 +142,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
      * 
      */
-    @InputImport(name="recrawlPolicy")
+    @Import(name="recrawlPolicy")
       private final @Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy;
 
     public Output<CrawlerRecrawlPolicyArgs> getRecrawlPolicy() {
@@ -153,7 +153,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -164,7 +164,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * List nested Amazon S3 target arguments. See S3 Target below.
      * 
      */
-    @InputImport(name="s3Targets")
+    @Import(name="s3Targets")
       private final @Nullable Output<List<CrawlerS3TargetArgs>> s3Targets;
 
     public Output<List<CrawlerS3TargetArgs>> getS3Targets() {
@@ -175,7 +175,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -186,7 +186,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
      * 
      */
-    @InputImport(name="schemaChangePolicy")
+    @Import(name="schemaChangePolicy")
       private final @Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy;
 
     public Output<CrawlerSchemaChangePolicyArgs> getSchemaChangePolicy() {
@@ -197,7 +197,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of Security Configuration to be used by the crawler
      * 
      */
-    @InputImport(name="securityConfiguration")
+    @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
@@ -208,7 +208,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * The table prefix used for catalog tables that are created.
      * 
      */
-    @InputImport(name="tablePrefix")
+    @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
     public Output<String> getTablePrefix() {
@@ -219,7 +219,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

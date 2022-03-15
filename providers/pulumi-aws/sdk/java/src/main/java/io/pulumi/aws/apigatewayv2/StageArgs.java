@@ -7,7 +7,7 @@ import io.pulumi.aws.apigatewayv2.inputs.StageAccessLogSettingsArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageRouteSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
      * 
      */
-    @InputImport(name="accessLogSettings")
+    @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
     public Output<StageAccessLogSettingsArgs> getAccessLogSettings() {
@@ -36,7 +36,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -47,7 +47,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
      * 
      */
-    @InputImport(name="autoDeploy")
+    @Import(name="autoDeploy")
       private final @Nullable Output<Boolean> autoDeploy;
 
     public Output<Boolean> getAutoDeploy() {
@@ -59,7 +59,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Supported only for WebSocket APIs.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -70,7 +70,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The default route settings for the stage.
      * 
      */
-    @InputImport(name="defaultRouteSettings")
+    @Import(name="defaultRouteSettings")
       private final @Nullable Output<StageDefaultRouteSettingsArgs> defaultRouteSettings;
 
     public Output<StageDefaultRouteSettingsArgs> getDefaultRouteSettings() {
@@ -81,7 +81,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
      * 
      */
-    @InputImport(name="deploymentId")
+    @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -92,7 +92,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The description for the stage. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -103,7 +103,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the stage. Must be between 1 and 128 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -114,7 +114,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Route settings for the stage.
      * 
      */
-    @InputImport(name="routeSettings")
+    @Import(name="routeSettings")
       private final @Nullable Output<List<StageRouteSettingArgs>> routeSettings;
 
     public Output<List<StageRouteSettingArgs>> getRouteSettings() {
@@ -125,7 +125,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * A map that defines the stage variables for the stage.
      * 
      */
-    @InputImport(name="stageVariables")
+    @Import(name="stageVariables")
       private final @Nullable Output<Map<String,String>> stageVariables;
 
     public Output<Map<String,String>> getStageVariables() {
@@ -136,7 +136,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

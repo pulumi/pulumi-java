@@ -4,7 +4,7 @@
 package io.pulumi.aws.dax;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the subnet group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the subnet group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class SubnetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of VPC subnet IDs for the subnet group.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {

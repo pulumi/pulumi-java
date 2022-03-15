@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobOutputLocation {
     private final String bucket;
     private final @Nullable String bucketOwner;
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobOutputLocation(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("bucketOwner") @Nullable String bucketOwner,
-        @OutputCustomType.Parameter("key") @Nullable String key) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("bucketOwner") @Nullable String bucketOwner,
+        @CustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.bucketOwner = bucketOwner;
         this.key = key;

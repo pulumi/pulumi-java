@@ -8,7 +8,7 @@ import io.pulumi.aws.ssm.ResourceDataSyncArgs;
 import io.pulumi.aws.ssm.inputs.ResourceDataSyncState;
 import io.pulumi.aws.ssm.outputs.ResourceDataSyncS3Destination;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
      * Name for the configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -47,7 +47,7 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
      * Amazon S3 configuration details for the sync.
      * 
      */
-    @OutputExport(name="s3Destination", type=ResourceDataSyncS3Destination.class, parameters={})
+    @Export(name="s3Destination", type=ResourceDataSyncS3Destination.class, parameters={})
     private Output<ResourceDataSyncS3Destination> s3Destination;
 
     /**

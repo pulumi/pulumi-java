@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
      * Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
      * 
      */
-    @InputImport(name="synonyms")
+    @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
     public Output<List<String>> getSynonyms() {
@@ -30,7 +30,7 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
      * The value of the slot type. Must be less than or equal to 140 characters in length.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

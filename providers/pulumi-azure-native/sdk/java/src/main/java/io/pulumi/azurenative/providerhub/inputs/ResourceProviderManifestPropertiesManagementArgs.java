@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ServiceTreeInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,56 +17,56 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
 
     public static final ResourceProviderManifestPropertiesManagementArgs Empty = new ResourceProviderManifestPropertiesManagementArgs();
 
-    @InputImport(name="incidentContactEmail")
+    @Import(name="incidentContactEmail")
       private final @Nullable Output<String> incidentContactEmail;
 
     public Output<String> getIncidentContactEmail() {
         return this.incidentContactEmail == null ? Output.empty() : this.incidentContactEmail;
     }
 
-    @InputImport(name="incidentRoutingService")
+    @Import(name="incidentRoutingService")
       private final @Nullable Output<String> incidentRoutingService;
 
     public Output<String> getIncidentRoutingService() {
         return this.incidentRoutingService == null ? Output.empty() : this.incidentRoutingService;
     }
 
-    @InputImport(name="incidentRoutingTeam")
+    @Import(name="incidentRoutingTeam")
       private final @Nullable Output<String> incidentRoutingTeam;
 
     public Output<String> getIncidentRoutingTeam() {
         return this.incidentRoutingTeam == null ? Output.empty() : this.incidentRoutingTeam;
     }
 
-    @InputImport(name="manifestOwners")
+    @Import(name="manifestOwners")
       private final @Nullable Output<List<String>> manifestOwners;
 
     public Output<List<String>> getManifestOwners() {
         return this.manifestOwners == null ? Output.empty() : this.manifestOwners;
     }
 
-    @InputImport(name="resourceAccessPolicy")
+    @Import(name="resourceAccessPolicy")
       private final @Nullable Output<String> resourceAccessPolicy;
 
     public Output<String> getResourceAccessPolicy() {
         return this.resourceAccessPolicy == null ? Output.empty() : this.resourceAccessPolicy;
     }
 
-    @InputImport(name="resourceAccessRoles")
+    @Import(name="resourceAccessRoles")
       private final @Nullable Output<List<Object>> resourceAccessRoles;
 
     public Output<List<Object>> getResourceAccessRoles() {
         return this.resourceAccessRoles == null ? Output.empty() : this.resourceAccessRoles;
     }
 
-    @InputImport(name="schemaOwners")
+    @Import(name="schemaOwners")
       private final @Nullable Output<List<String>> schemaOwners;
 
     public Output<List<String>> getSchemaOwners() {
         return this.schemaOwners == null ? Output.empty() : this.schemaOwners;
     }
 
-    @InputImport(name="serviceTreeInfos")
+    @Import(name="serviceTreeInfos")
       private final @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
     public Output<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {

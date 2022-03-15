@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryPlanA2ADetailsResponse {
     /**
      * Gets the Instance type.
@@ -28,11 +28,11 @@ public final class RecoveryPlanA2ADetailsResponse {
      */
     private final @Nullable String recoveryZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryPlanA2ADetailsResponse(
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("primaryZone") @Nullable String primaryZone,
-        @OutputCustomType.Parameter("recoveryZone") @Nullable String recoveryZone) {
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("primaryZone") @Nullable String primaryZone,
+        @CustomType.Parameter("recoveryZone") @Nullable String recoveryZone) {
         this.instanceType = instanceType;
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;

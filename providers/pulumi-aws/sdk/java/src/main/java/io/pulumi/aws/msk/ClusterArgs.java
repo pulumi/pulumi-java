@@ -10,7 +10,7 @@ import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the broker nodes of the Kafka cluster.
      * 
      */
-    @InputImport(name="brokerNodeGroupInfo", required=true)
+    @Import(name="brokerNodeGroupInfo", required=true)
       private final Output<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo;
 
     public Output<ClusterBrokerNodeGroupInfoArgs> getBrokerNodeGroupInfo() {
@@ -37,7 +37,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for specifying a client authentication. See below.
      * 
      */
-    @InputImport(name="clientAuthentication")
+    @Import(name="clientAuthentication")
       private final @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
 
     public Output<ClusterClientAuthenticationArgs> getClientAuthentication() {
@@ -48,7 +48,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the MSK cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -59,7 +59,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
      * 
      */
-    @InputImport(name="configurationInfo")
+    @Import(name="configurationInfo")
       private final @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
 
     public Output<ClusterConfigurationInfoArgs> getConfigurationInfo() {
@@ -70,7 +70,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for specifying encryption. See below.
      * 
      */
-    @InputImport(name="encryptionInfo")
+    @Import(name="encryptionInfo")
       private final @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
 
     public Output<ClusterEncryptionInfoArgs> getEncryptionInfo() {
@@ -81,7 +81,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
      * 
      */
-    @InputImport(name="enhancedMonitoring")
+    @Import(name="enhancedMonitoring")
       private final @Nullable Output<String> enhancedMonitoring;
 
     public Output<String> getEnhancedMonitoring() {
@@ -92,7 +92,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Specify the desired Kafka software version.
      * 
      */
-    @InputImport(name="kafkaVersion", required=true)
+    @Import(name="kafkaVersion", required=true)
       private final Output<String> kafkaVersion;
 
     public Output<String> getKafkaVersion() {
@@ -103,7 +103,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
      * 
      */
-    @InputImport(name="loggingInfo")
+    @Import(name="loggingInfo")
       private final @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
 
     public Output<ClusterLoggingInfoArgs> getLoggingInfo() {
@@ -114,7 +114,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
      * 
      */
-    @InputImport(name="numberOfBrokerNodes", required=true)
+    @Import(name="numberOfBrokerNodes", required=true)
       private final Output<Integer> numberOfBrokerNodes;
 
     public Output<Integer> getNumberOfBrokerNodes() {
@@ -125,7 +125,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for JMX and Node monitoring for the MSK cluster. See below.
      * 
      */
-    @InputImport(name="openMonitoring")
+    @Import(name="openMonitoring")
       private final @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
 
     public Output<ClusterOpenMonitoringArgs> getOpenMonitoring() {
@@ -136,7 +136,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

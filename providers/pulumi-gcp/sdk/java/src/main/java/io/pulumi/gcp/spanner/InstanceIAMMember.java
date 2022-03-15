@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceIAMMemberArgs;
@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:spanner/instanceIAMMember:InstanceIAMMember")
 public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=InstanceIAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=InstanceIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIAMMemberCondition> condition;
 
     public Output</* @Nullable */ InstanceIAMMemberCondition> getCondition() {
@@ -70,7 +70,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the instance's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -84,7 +84,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * The name of the instance.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -94,7 +94,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getInstance() {
         return this.instance;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -105,7 +105,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -122,7 +122,7 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

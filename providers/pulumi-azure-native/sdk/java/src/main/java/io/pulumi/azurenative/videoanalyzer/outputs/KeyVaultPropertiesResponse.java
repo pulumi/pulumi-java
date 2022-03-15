@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * The current key used to encrypt Video Analyzer account, including the key version.
@@ -20,10 +20,10 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String keyIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("currentKeyIdentifier") String currentKeyIdentifier,
-        @OutputCustomType.Parameter("keyIdentifier") String keyIdentifier) {
+        @CustomType.Parameter("currentKeyIdentifier") String currentKeyIdentifier,
+        @CustomType.Parameter("keyIdentifier") String keyIdentifier) {
         this.currentKeyIdentifier = currentKeyIdentifier;
         this.keyIdentifier = keyIdentifier;
     }

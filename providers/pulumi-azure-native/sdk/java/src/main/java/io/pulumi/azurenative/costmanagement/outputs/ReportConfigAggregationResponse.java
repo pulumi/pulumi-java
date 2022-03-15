@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReportConfigAggregationResponse {
     /**
      * The name of the aggregation function to use.
@@ -20,10 +20,10 @@ public final class ReportConfigAggregationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportConfigAggregationResponse(
-        @OutputCustomType.Parameter("function") String function,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("function") String function,
+        @CustomType.Parameter("name") String name) {
         this.function = function;
         this.name = name;
     }

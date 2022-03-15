@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetResourceTagsArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the resource with the tags to list. See details below.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -30,7 +30,7 @@ public final class GetResourceTagsArgs extends io.pulumi.resources.InvokeArgs {
      * Map of key=value pairs for each tag set on the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

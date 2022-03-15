@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1.inputs.DaemonSetUpdateStrategyArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -25,7 +25,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of seconds for which a newly created DaemonSet pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready).
      * 
      */
-    @InputImport(name="minReadySeconds")
+    @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
     public Output<Integer> getMinReadySeconds() {
@@ -36,7 +36,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The number of old history to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 10.
      * 
      */
-    @InputImport(name="revisionHistoryLimit")
+    @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
     public Output<Integer> getRevisionHistoryLimit() {
@@ -47,7 +47,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A label query over pods that are managed by the daemon set. Must match in order to be controlled. It must match the pod template's labels. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
@@ -58,7 +58,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * An object that describes the pod that will be created. The DaemonSet will create exactly one copy of this pod on every node that matches the template's node selector (or on every node if no node selector is specified). More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
     public Output<PodTemplateSpecArgs> getTemplate() {
@@ -69,7 +69,7 @@ public final class DaemonSetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * An update strategy to replace existing DaemonSet pods with new pods.
      * 
      */
-    @InputImport(name="updateStrategy")
+    @Import(name="updateStrategy")
       private final @Nullable Output<DaemonSetUpdateStrategyArgs> updateStrategy;
 
     public Output<DaemonSetUpdateStrategyArgs> getUpdateStrategy() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1EntityTypeEntityResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEntityTypeResult {
     /**
      * Optional. Indicates whether the entity type can be automatically expanded.
@@ -43,14 +43,14 @@ public final class GetEntityTypeResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntityTypeResult(
-        @OutputCustomType.Parameter("autoExpansionMode") String autoExpansionMode,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableFuzzyExtraction") Boolean enableFuzzyExtraction,
-        @OutputCustomType.Parameter("entities") List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("autoExpansionMode") String autoExpansionMode,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableFuzzyExtraction") Boolean enableFuzzyExtraction,
+        @CustomType.Parameter("entities") List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name) {
         this.autoExpansionMode = autoExpansionMode;
         this.displayName = displayName;
         this.enableFuzzyExtraction = enableFuzzyExtraction;

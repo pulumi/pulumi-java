@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
     /**
      * Specifies the value of the fixed delay interval.
@@ -25,10 +25,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelay {
      */
     private final @Nullable Double percentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapDefaultRouteActionFaultInjectionPolicyDelay(
-        @OutputCustomType.Parameter("fixedDelay") @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay,
-        @OutputCustomType.Parameter("percentage") @Nullable Double percentage) {
+        @CustomType.Parameter("fixedDelay") @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay,
+        @CustomType.Parameter("percentage") @Nullable Double percentage) {
         this.fixedDelay = fixedDelay;
         this.percentage = percentage;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTimeArgs
      * Time in minutes. Valid values: `15`.
      * 
      */
-    @InputImport(name="minutes", required=true)
+    @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {

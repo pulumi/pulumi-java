@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTransferProjectServieAccountResult {
     /**
      * Email address of the default service account used by Storage Transfer Jobs running in this project
@@ -21,11 +21,11 @@ public final class GetTransferProjectServieAccountResult {
     private final String id;
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransferProjectServieAccountResult(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("project") String project) {
         this.email = email;
         this.id = id;
         this.project = project;

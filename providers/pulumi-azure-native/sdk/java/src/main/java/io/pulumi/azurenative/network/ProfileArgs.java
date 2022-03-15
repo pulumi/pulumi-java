@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.inputs.EndpointArgs;
 import io.pulumi.azurenative.network.inputs.MonitorConfigArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The list of allowed endpoint record types.
      * 
      */
-    @InputImport(name="allowedEndpointRecordTypes")
+    @Import(name="allowedEndpointRecordTypes")
       private final @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
     public Output<List<Either<String,AllowedEndpointRecordType>>> getAllowedEndpointRecordTypes() {
@@ -40,7 +40,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The DNS settings of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="dnsConfig")
+    @Import(name="dnsConfig")
       private final @Nullable Output<DnsConfigArgs> dnsConfig;
 
     public Output<DnsConfigArgs> getDnsConfig() {
@@ -51,7 +51,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The list of endpoints in the Traffic Manager profile.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<EndpointArgs>> endpoints;
 
     public Output<List<EndpointArgs>> getEndpoints() {
@@ -62,7 +62,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -73,7 +73,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure Region where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -84,7 +84,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum number of endpoints to be returned for MultiValue routing type.
      * 
      */
-    @InputImport(name="maxReturn")
+    @Import(name="maxReturn")
       private final @Nullable Output<Double> maxReturn;
 
     public Output<Double> getMaxReturn() {
@@ -95,7 +95,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoint monitoring settings of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="monitorConfig")
+    @Import(name="monitorConfig")
       private final @Nullable Output<MonitorConfigArgs> monitorConfig;
 
     public Output<MonitorConfigArgs> getMonitorConfig() {
@@ -106,7 +106,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -117,7 +117,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="profileName")
+    @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -128,7 +128,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="profileStatus")
+    @Import(name="profileStatus")
       private final @Nullable Output<Either<String,ProfileStatus>> profileStatus;
 
     public Output<Either<String,ProfileStatus>> getProfileStatus() {
@@ -139,7 +139,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group containing the Traffic Manager profile.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -150,7 +150,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -161,7 +161,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The traffic routing method of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="trafficRoutingMethod")
+    @Import(name="trafficRoutingMethod")
       private final @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
     public Output<Either<String,TrafficRoutingMethod>> getTrafficRoutingMethod() {
@@ -172,7 +172,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
-    @InputImport(name="trafficViewEnrollmentStatus")
+    @Import(name="trafficViewEnrollmentStatus")
       private final @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
     public Output<Either<String,TrafficViewEnrollmentStatus>> getTrafficViewEnrollmentStatus() {
@@ -183,7 +183,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

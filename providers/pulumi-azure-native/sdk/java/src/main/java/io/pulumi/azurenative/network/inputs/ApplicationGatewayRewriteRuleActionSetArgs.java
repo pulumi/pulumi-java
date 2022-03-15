@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayHeaderConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * Request Header Actions in the Action Set.
      * 
      */
-    @InputImport(name="requestHeaderConfigurations")
+    @Import(name="requestHeaderConfigurations")
       private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> requestHeaderConfigurations;
 
     public Output<List<ApplicationGatewayHeaderConfigurationArgs>> getRequestHeaderConfigurations() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * Response Header Actions in the Action Set.
      * 
      */
-    @InputImport(name="responseHeaderConfigurations")
+    @Import(name="responseHeaderConfigurations")
       private final @Nullable Output<List<ApplicationGatewayHeaderConfigurationArgs>> responseHeaderConfigurations;
 
     public Output<List<ApplicationGatewayHeaderConfigurationArgs>> getResponseHeaderConfigurations() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayRewriteRuleActionSetArgs extends io.pulumi.
      * Url Configuration Action in the Action Set.
      * 
      */
-    @InputImport(name="urlConfiguration")
+    @Import(name="urlConfiguration")
       private final @Nullable Output<ApplicationGatewayUrlConfigurationArgs> urlConfiguration;
 
     public Output<ApplicationGatewayUrlConfigurationArgs> getUrlConfiguration() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBackendConfigResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApigatewayGatewayConfigResponse extends io.pulumi.resources.I
      * Backend settings that are applied to all backends of the Gateway.
      * 
      */
-    @InputImport(name="backendConfig", required=true)
+    @Import(name="backendConfig", required=true)
       private final ApigatewayBackendConfigResponse backendConfig;
 
     public ApigatewayBackendConfigResponse getBackendConfig() {

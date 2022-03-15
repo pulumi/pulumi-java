@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobInventoryPolicyFilterResponse {
     /**
      * An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
@@ -34,12 +34,12 @@ public final class BlobInventoryPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobInventoryPolicyFilterResponse(
-        @OutputCustomType.Parameter("blobTypes") List<String> blobTypes,
-        @OutputCustomType.Parameter("includeBlobVersions") @Nullable Boolean includeBlobVersions,
-        @OutputCustomType.Parameter("includeSnapshots") @Nullable Boolean includeSnapshots,
-        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
+        @CustomType.Parameter("blobTypes") List<String> blobTypes,
+        @CustomType.Parameter("includeBlobVersions") @Nullable Boolean includeBlobVersions,
+        @CustomType.Parameter("includeSnapshots") @Nullable Boolean includeSnapshots,
+        @CustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.blobTypes = blobTypes;
         this.includeBlobVersions = includeBlobVersions;
         this.includeSnapshots = includeSnapshots;

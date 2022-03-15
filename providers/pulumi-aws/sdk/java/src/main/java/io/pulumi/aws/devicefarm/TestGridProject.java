@@ -8,7 +8,7 @@ import io.pulumi.aws.devicefarm.TestGridProjectArgs;
 import io.pulumi.aws.devicefarm.inputs.TestGridProjectState;
 import io.pulumi.aws.devicefarm.outputs.TestGridProjectVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name of this Test Grid Project.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * Human-readable description of the project.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * The name of the Selenium testing project.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -90,7 +90,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -104,7 +104,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * The VPC security groups and subnets that are attached to a project. See VPC Config below.
      * 
      */
-    @OutputExport(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
     private Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig;
 
     /**

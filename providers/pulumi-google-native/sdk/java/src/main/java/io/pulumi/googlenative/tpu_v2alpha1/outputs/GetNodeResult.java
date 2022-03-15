@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.AttachedDiskResponse;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.NetworkEndpointResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeResult {
     /**
      * The type of hardware accelerators associated with this node.
@@ -113,27 +113,27 @@ public final class GetNodeResult {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeResult(
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dataDisks") List<AttachedDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthDescription") String healthDescription,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
-        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
-        @OutputCustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
-        @OutputCustomType.Parameter("serviceAccount") ServiceAccountResponse serviceAccount,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("symptoms") List<SymptomResponse> symptoms,
-        @OutputCustomType.Parameter("tags") List<String> tags) {
+        @CustomType.Parameter("acceleratorType") String acceleratorType,
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dataDisks") List<AttachedDiskResponse> dataDisks,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthDescription") String healthDescription,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @CustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
+        @CustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @CustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
+        @CustomType.Parameter("serviceAccount") ServiceAccountResponse serviceAccount,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("symptoms") List<SymptomResponse> symptoms,
+        @CustomType.Parameter("tags") List<String> tags) {
         this.acceleratorType = acceleratorType;
         this.apiVersion = apiVersion;
         this.cidrBlock = cidrBlock;

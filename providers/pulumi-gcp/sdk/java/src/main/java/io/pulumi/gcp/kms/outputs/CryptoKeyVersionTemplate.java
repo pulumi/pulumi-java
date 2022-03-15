@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CryptoKeyVersionTemplate {
     /**
      * The algorithm to use when creating a version based on this template.
@@ -23,10 +23,10 @@ public final class CryptoKeyVersionTemplate {
      */
     private final @Nullable String protectionLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CryptoKeyVersionTemplate(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("protectionLevel") @Nullable String protectionLevel) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("protectionLevel") @Nullable String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
      * Error information.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<String> errors;
 
     public List<String> getErrors() {
@@ -33,7 +33,7 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
      * Indicates whether the package passed the validation.
      * 
      */
-    @InputImport(name="isValid", required=true)
+    @Import(name="isValid", required=true)
       private final Boolean isValid;
 
     public Boolean getIsValid() {
@@ -44,7 +44,7 @@ public final class PackageValidationResultResponse extends io.pulumi.resources.I
      * Validation name.
      * 
      */
-    @InputImport(name="validationName", required=true)
+    @Import(name="validationName", required=true)
       private final String validationName;
 
     public String getValidationName() {

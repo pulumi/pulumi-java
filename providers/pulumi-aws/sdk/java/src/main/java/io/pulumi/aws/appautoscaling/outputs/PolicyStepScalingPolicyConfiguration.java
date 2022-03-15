@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling.outputs;
 
 import io.pulumi.aws.appautoscaling.outputs.PolicyStepScalingPolicyConfigurationStepAdjustment;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyStepScalingPolicyConfiguration {
     /**
      * Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
@@ -40,13 +40,13 @@ public final class PolicyStepScalingPolicyConfiguration {
      */
     private final @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyStepScalingPolicyConfiguration(
-        @OutputCustomType.Parameter("adjustmentType") @Nullable String adjustmentType,
-        @OutputCustomType.Parameter("cooldown") @Nullable Integer cooldown,
-        @OutputCustomType.Parameter("metricAggregationType") @Nullable String metricAggregationType,
-        @OutputCustomType.Parameter("minAdjustmentMagnitude") @Nullable Integer minAdjustmentMagnitude,
-        @OutputCustomType.Parameter("stepAdjustments") @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
+        @CustomType.Parameter("adjustmentType") @Nullable String adjustmentType,
+        @CustomType.Parameter("cooldown") @Nullable Integer cooldown,
+        @CustomType.Parameter("metricAggregationType") @Nullable String metricAggregationType,
+        @CustomType.Parameter("minAdjustmentMagnitude") @Nullable Integer minAdjustmentMagnitude,
+        @CustomType.Parameter("stepAdjustments") @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
         this.adjustmentType = adjustmentType;
         this.cooldown = cooldown;
         this.metricAggregationType = metricAggregationType;

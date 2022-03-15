@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HybridRunbookWorkerLegacyResponse {
     /**
      * Gets or sets the assigned machine IP address.
@@ -32,12 +32,12 @@ public final class HybridRunbookWorkerLegacyResponse {
      */
     private final @Nullable String registrationTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HybridRunbookWorkerLegacyResponse(
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("lastSeenDateTime") @Nullable String lastSeenDateTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("registrationTime") @Nullable String registrationTime) {
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("lastSeenDateTime") @Nullable String lastSeenDateTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("registrationTime") @Nullable String registrationTime) {
         this.ip = ip;
         this.lastSeenDateTime = lastSeenDateTime;
         this.name = name;

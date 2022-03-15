@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecHttp2RouteActionTarget;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpecHttp2RouteAction {
     /**
      * The target that traffic is routed to when a request matches the gateway route.
@@ -15,8 +15,8 @@ public final class GatewayRouteSpecHttp2RouteAction {
      */
     private final GatewayRouteSpecHttp2RouteActionTarget target;
 
-    @OutputCustomType.Constructor
-    private GatewayRouteSpecHttp2RouteAction(@OutputCustomType.Parameter("target") GatewayRouteSpecHttp2RouteActionTarget target) {
+    @CustomType.Constructor
+    private GatewayRouteSpecHttp2RouteAction(@CustomType.Parameter("target") GatewayRouteSpecHttp2RouteActionTarget target) {
         this.target = target;
     }
 

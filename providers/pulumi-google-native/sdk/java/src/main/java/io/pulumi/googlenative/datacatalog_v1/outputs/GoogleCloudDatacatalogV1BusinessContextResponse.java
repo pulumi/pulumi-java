@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1ContactsResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1EntryOverviewResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1BusinessContextResponse {
     /**
      * Contact people for the entry.
@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
      */
     private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1BusinessContextResponse(
-        @OutputCustomType.Parameter("contacts") GoogleCloudDatacatalogV1ContactsResponse contacts,
-        @OutputCustomType.Parameter("entryOverview") GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
+        @CustomType.Parameter("contacts") GoogleCloudDatacatalogV1ContactsResponse contacts,
+        @CustomType.Parameter("entryOverview") GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
         this.contacts = contacts;
         this.entryOverview = entryOverview;
     }

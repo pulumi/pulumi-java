@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.xray.SamplingRuleArgs;
 import io.pulumi.aws.xray.inputs.SamplingRuleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -35,7 +35,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * The ARN of the sampling rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches attributes derived from the request.
      * 
      */
-    @OutputExport(name="attributes", type=Map.class, parameters={String.class, String.class})
+    @Export(name="attributes", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> attributes;
 
     /**
@@ -63,7 +63,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
      */
-    @OutputExport(name="fixedRate", type=Double.class, parameters={})
+    @Export(name="fixedRate", type=Double.class, parameters={})
     private Output<Double> fixedRate;
 
     /**
@@ -77,7 +77,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches the hostname from a request URL.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -91,7 +91,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches the HTTP method of a request.
      * 
      */
-    @OutputExport(name="httpMethod", type=String.class, parameters={})
+    @Export(name="httpMethod", type=String.class, parameters={})
     private Output<String> httpMethod;
 
     /**
@@ -105,7 +105,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * The priority of the sampling rule.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -119,7 +119,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
      */
-    @OutputExport(name="reservoirSize", type=Integer.class, parameters={})
+    @Export(name="reservoirSize", type=Integer.class, parameters={})
     private Output<Integer> reservoirSize;
 
     /**
@@ -133,7 +133,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches the ARN of the AWS resource on which the service runs.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**
@@ -147,7 +147,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * The name of the sampling rule.
      * 
      */
-    @OutputExport(name="ruleName", type=String.class, parameters={})
+    @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
     /**
@@ -161,7 +161,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches the `name` that the service uses to identify itself in segments.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
@@ -175,7 +175,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches the `origin` that the service uses to identify its type in segments.
      * 
      */
-    @OutputExport(name="serviceType", type=String.class, parameters={})
+    @Export(name="serviceType", type=String.class, parameters={})
     private Output<String> serviceType;
 
     /**
@@ -189,7 +189,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -203,7 +203,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -217,7 +217,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * Matches the path from a request URL.
      * 
      */
-    @OutputExport(name="urlPath", type=String.class, parameters={})
+    @Export(name="urlPath", type=String.class, parameters={})
     private Output<String> urlPath;
 
     /**
@@ -231,7 +231,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * The version of the sampling rule format (`1` )
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

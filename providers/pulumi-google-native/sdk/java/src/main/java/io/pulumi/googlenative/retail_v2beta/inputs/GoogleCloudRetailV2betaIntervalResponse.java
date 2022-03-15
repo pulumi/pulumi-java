@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends io.pulumi.res
      * Exclusive upper bound.
      * 
      */
-    @InputImport(name="exclusiveMaximum", required=true)
+    @Import(name="exclusiveMaximum", required=true)
       private final Double exclusiveMaximum;
 
     public Double getExclusiveMaximum() {
@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends io.pulumi.res
      * Exclusive lower bound.
      * 
      */
-    @InputImport(name="exclusiveMinimum", required=true)
+    @Import(name="exclusiveMinimum", required=true)
       private final Double exclusiveMinimum;
 
     public Double getExclusiveMinimum() {
@@ -42,7 +42,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends io.pulumi.res
      * Inclusive upper bound.
      * 
      */
-    @InputImport(name="maximum", required=true)
+    @Import(name="maximum", required=true)
       private final Double maximum;
 
     public Double getMaximum() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRetailV2betaIntervalResponse extends io.pulumi.res
      * Inclusive lower bound.
      * 
      */
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final Double minimum;
 
     public Double getMinimum() {

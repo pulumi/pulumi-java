@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPolicyIamRole {
     /**
      * The ARN of the IAM role.
@@ -17,8 +17,8 @@ public final class AccessPolicyIamRole {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private AccessPolicyIamRole(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private AccessPolicyIamRole(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

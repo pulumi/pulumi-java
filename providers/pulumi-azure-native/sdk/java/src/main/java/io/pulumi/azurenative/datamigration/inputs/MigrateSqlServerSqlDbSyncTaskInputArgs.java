@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatab
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
     public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * Information for connecting to source
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * Information for connecting to target
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
      * Validation options
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
     public Output<MigrationValidationOptionsArgs> getValidationOptions() {

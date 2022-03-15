@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * List of agent jobs on the target server.
      * 
      */
-    @InputImport(name="agentJobs", required=true)
+    @Import(name="agentJobs", required=true)
       private final List<String> agentJobs;
 
     public List<String> getAgentJobs() {
@@ -33,7 +33,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -44,7 +44,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * List of logins on the target server.
      * 
      */
-    @InputImport(name="logins", required=true)
+    @Import(name="logins", required=true)
       private final List<String> logins;
 
     public List<String> getLogins() {
@@ -55,7 +55,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * Target server brand version
      * 
      */
-    @InputImport(name="targetServerBrandVersion", required=true)
+    @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
@@ -66,7 +66,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * Target server version
      * 
      */
-    @InputImport(name="targetServerVersion", required=true)
+    @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
     public String getTargetServerVersion() {
@@ -77,7 +77,7 @@ public final class ConnectToTargetSqlMITaskOutputResponse extends io.pulumi.reso
      * Validation errors
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

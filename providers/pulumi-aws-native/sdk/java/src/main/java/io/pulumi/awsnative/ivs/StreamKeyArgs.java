@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs;
 
 import io.pulumi.awsnative.ivs.inputs.StreamKeyTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Channel ARN for the stream.
      * 
      */
-    @InputImport(name="channelArn", required=true)
+    @Import(name="channelArn", required=true)
       private final Output<String> channelArn;
 
     public Output<String> getChannelArn() {
@@ -31,7 +31,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StreamKeyTagArgs>> tags;
 
     public Output<List<StreamKeyTagArgs>> getTags() {

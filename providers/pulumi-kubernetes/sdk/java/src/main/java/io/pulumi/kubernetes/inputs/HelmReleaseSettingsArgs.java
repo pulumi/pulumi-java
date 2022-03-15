@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.Utilities;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
      * 
      */
-    @InputImport(name="driver")
+    @Import(name="driver")
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
@@ -34,7 +34,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * The path to the helm plugins directory.
      * 
      */
-    @InputImport(name="pluginsPath")
+    @Import(name="pluginsPath")
       private final @Nullable Output<String> pluginsPath;
 
     public Output<String> getPluginsPath() {
@@ -45,7 +45,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * The path to the registry config file.
      * 
      */
-    @InputImport(name="registryConfigPath")
+    @Import(name="registryConfigPath")
       private final @Nullable Output<String> registryConfigPath;
 
     public Output<String> getRegistryConfigPath() {
@@ -56,7 +56,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * The path to the file containing cached repository indexes.
      * 
      */
-    @InputImport(name="repositoryCache")
+    @Import(name="repositoryCache")
       private final @Nullable Output<String> repositoryCache;
 
     public Output<String> getRepositoryCache() {
@@ -67,7 +67,7 @@ public final class HelmReleaseSettingsArgs extends io.pulumi.resources.ResourceA
      * The path to the file containing repository names and URLs.
      * 
      */
-    @InputImport(name="repositoryConfigPath")
+    @Import(name="repositoryConfigPath")
       private final @Nullable Output<String> repositoryConfigPath;
 
     public Output<String> getRepositoryConfigPath() {

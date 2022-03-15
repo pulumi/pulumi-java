@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformysql.inputs;
 
 import io.pulumi.azurenative.dbformysql.inputs.ServerPrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
      * Resource Id of the private endpoint connection.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -32,7 +32,7 @@ public final class ServerPrivateEndpointConnectionResponse extends io.pulumi.res
      * Private endpoint connection properties
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final ServerPrivateEndpointConnectionPropertiesResponse properties;
 
     public ServerPrivateEndpointConnectionPropertiesResponse getProperties() {

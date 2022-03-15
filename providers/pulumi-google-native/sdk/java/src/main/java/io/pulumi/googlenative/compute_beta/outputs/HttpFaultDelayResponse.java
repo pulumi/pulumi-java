@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.DurationResponse;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpFaultDelayResponse {
     /**
      * Specifies the value of the fixed delay interval.
@@ -21,10 +21,10 @@ public final class HttpFaultDelayResponse {
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpFaultDelayResponse(
-        @OutputCustomType.Parameter("fixedDelay") DurationResponse fixedDelay,
-        @OutputCustomType.Parameter("percentage") Double percentage) {
+        @CustomType.Parameter("fixedDelay") DurationResponse fixedDelay,
+        @CustomType.Parameter("percentage") Double percentage) {
         this.fixedDelay = fixedDelay;
         this.percentage = percentage;
     }

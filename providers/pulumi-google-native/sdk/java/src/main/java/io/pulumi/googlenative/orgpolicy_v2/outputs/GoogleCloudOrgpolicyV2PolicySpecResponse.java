@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudOrgpolicyV2PolicySpecResponse {
     /**
      * An opaque tag indicating the current version of the `Policy`, used for concurrency control. This field is ignored if used in a `CreatePolicy` request. When the `Policy` is returned from either a `GetPolicy` or a `ListPolicies` request, this `etag` indicates the version of the current `Policy` to use when executing a read-modify-write loop. When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
@@ -38,13 +38,13 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudOrgpolicyV2PolicySpecResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("inheritFromParent") Boolean inheritFromParent,
-        @OutputCustomType.Parameter("reset") Boolean reset,
-        @OutputCustomType.Parameter("rules") List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("inheritFromParent") Boolean inheritFromParent,
+        @CustomType.Parameter("reset") Boolean reset,
+        @CustomType.Parameter("rules") List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.etag = etag;
         this.inheritFromParent = inheritFromParent;
         this.reset = reset;

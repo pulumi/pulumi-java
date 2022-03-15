@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromMachineImageScheduling {
     private final @Nullable Boolean automaticRestart;
     private final @Nullable Integer minNodeCpus;
@@ -21,13 +21,13 @@ public final class InstanceFromMachineImageScheduling {
     private final @Nullable String onHostMaintenance;
     private final @Nullable Boolean preemptible;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFromMachineImageScheduling(
-        @OutputCustomType.Parameter("automaticRestart") @Nullable Boolean automaticRestart,
-        @OutputCustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
-        @OutputCustomType.Parameter("nodeAffinities") @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities,
-        @OutputCustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
-        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
+        @CustomType.Parameter("automaticRestart") @Nullable Boolean automaticRestart,
+        @CustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
+        @CustomType.Parameter("nodeAffinities") @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities,
+        @CustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
+        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;

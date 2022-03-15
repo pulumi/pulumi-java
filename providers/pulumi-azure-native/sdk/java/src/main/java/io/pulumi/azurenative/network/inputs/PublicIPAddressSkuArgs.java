@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.PublicIPAddressSkuName;
 import io.pulumi.azurenative.network.enums.PublicIPAddressSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
      * Name of a public IP address SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
 
     public Output<Either<String,PublicIPAddressSkuName>> getName() {
@@ -36,7 +36,7 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
      * Tier of a public IP address SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
 
     public Output<Either<String,PublicIPAddressSkuTier>> getTier() {

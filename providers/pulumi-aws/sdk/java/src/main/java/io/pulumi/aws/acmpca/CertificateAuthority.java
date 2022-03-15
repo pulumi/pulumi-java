@@ -9,7 +9,7 @@ import io.pulumi.aws.acmpca.inputs.CertificateAuthorityState;
 import io.pulumi.aws.acmpca.outputs.CertificateAuthorityCertificateAuthorityConfiguration;
 import io.pulumi.aws.acmpca.outputs.CertificateAuthorityRevocationConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
      * 
      */
-    @OutputExport(name="certificate", type=String.class, parameters={})
+    @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
@@ -67,7 +67,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Nested argument containing algorithms and certificate subject information. Defined below.
      * 
      */
-    @OutputExport(name="certificateAuthorityConfiguration", type=CertificateAuthorityCertificateAuthorityConfiguration.class, parameters={})
+    @Export(name="certificateAuthorityConfiguration", type=CertificateAuthorityCertificateAuthorityConfiguration.class, parameters={})
     private Output<CertificateAuthorityCertificateAuthorityConfiguration> certificateAuthorityConfiguration;
 
     /**
@@ -81,7 +81,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
      * 
      */
-    @OutputExport(name="certificateChain", type=String.class, parameters={})
+    @Export(name="certificateChain", type=String.class, parameters={})
     private Output<String> certificateChain;
 
     /**
@@ -95,7 +95,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
      * 
      */
-    @OutputExport(name="certificateSigningRequest", type=String.class, parameters={})
+    @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output<String> certificateSigningRequest;
 
     /**
@@ -109,7 +109,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -123,7 +123,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
      */
-    @OutputExport(name="notAfter", type=String.class, parameters={})
+    @Export(name="notAfter", type=String.class, parameters={})
     private Output<String> notAfter;
 
     /**
@@ -137,7 +137,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
      * 
      */
-    @OutputExport(name="notBefore", type=String.class, parameters={})
+    @Export(name="notBefore", type=String.class, parameters={})
     private Output<String> notBefore;
 
     /**
@@ -151,7 +151,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
      * 
      */
-    @OutputExport(name="permanentDeletionTimeInDays", type=Integer.class, parameters={})
+    @Export(name="permanentDeletionTimeInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> permanentDeletionTimeInDays;
 
     /**
@@ -165,7 +165,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Nested argument containing revocation configuration. Defined below.
      * 
      */
-    @OutputExport(name="revocationConfiguration", type=CertificateAuthorityRevocationConfiguration.class, parameters={})
+    @Export(name="revocationConfiguration", type=CertificateAuthorityRevocationConfiguration.class, parameters={})
     private Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration;
 
     /**
@@ -179,7 +179,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
      * 
      */
-    @OutputExport(name="serial", type=String.class, parameters={})
+    @Export(name="serial", type=String.class, parameters={})
     private Output<String> serial;
 
     /**
@@ -193,7 +193,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Status of the certificate authority.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -207,7 +207,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -221,7 +221,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -235,7 +235,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

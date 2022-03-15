@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity {
     /**
      * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
@@ -15,8 +15,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final String nodeGroup;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity(@OutputCustomType.Parameter("nodeGroup") String nodeGroup) {
+    @CustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity(@CustomType.Parameter("nodeGroup") String nodeGroup) {
         this.nodeGroup = nodeGroup;
     }
 

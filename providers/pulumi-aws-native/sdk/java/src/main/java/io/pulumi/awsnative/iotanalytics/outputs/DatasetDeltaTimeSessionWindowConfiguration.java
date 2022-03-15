@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetDeltaTimeSessionWindowConfiguration {
     private final Integer timeoutInMinutes;
 
-    @OutputCustomType.Constructor
-    private DatasetDeltaTimeSessionWindowConfiguration(@OutputCustomType.Parameter("timeoutInMinutes") Integer timeoutInMinutes) {
+    @CustomType.Constructor
+    private DatasetDeltaTimeSessionWindowConfiguration(@CustomType.Parameter("timeoutInMinutes") Integer timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
     }
 

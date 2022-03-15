@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * The code of the status.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * The correlation ID of the status.
      * 
      */
-    @InputImport(name="correlationId", required=true)
+    @Import(name="correlationId", required=true)
       private final String correlationId;
 
     public String getCorrelationId() {
@@ -42,7 +42,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * The description of the status.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -53,7 +53,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * The timestamp of the status.
      * 
      */
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final String timestamp;
 
     public String getTimestamp() {
@@ -64,7 +64,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * The component of the connected registry corresponding to the status.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

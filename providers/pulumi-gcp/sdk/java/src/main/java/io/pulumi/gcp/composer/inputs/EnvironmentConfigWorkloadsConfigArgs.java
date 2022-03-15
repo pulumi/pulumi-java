@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerArgs;
@@ -16,21 +16,21 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends io.pulumi.resour
 
     public static final EnvironmentConfigWorkloadsConfigArgs Empty = new EnvironmentConfigWorkloadsConfigArgs();
 
-    @InputImport(name="scheduler")
+    @Import(name="scheduler")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
 
     public Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> getScheduler() {
         return this.scheduler == null ? Output.empty() : this.scheduler;
     }
 
-    @InputImport(name="webServer")
+    @Import(name="webServer")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
 
     public Output<EnvironmentConfigWorkloadsConfigWebServerArgs> getWebServer() {
         return this.webServer == null ? Output.empty() : this.webServer;
     }
 
-    @InputImport(name="worker")
+    @Import(name="worker")
       private final @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
 
     public Output<EnvironmentConfigWorkloadsConfigWorkerArgs> getWorker() {

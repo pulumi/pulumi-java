@@ -8,7 +8,7 @@ import io.pulumi.azurenative.documentdb.SqlResourceSqlRoleDefinitionArgs;
 import io.pulumi.azurenative.documentdb.outputs.PermissionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
      * 
      */
-    @OutputExport(name="assignableScopes", type=List.class, parameters={String.class})
+    @Export(name="assignableScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assignableScopes;
 
     /**
@@ -49,7 +49,7 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
      * The name of the database account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
      * The set of operations allowed through this Role Definition.
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={PermissionResponse.class})
+    @Export(name="permissions", type=List.class, parameters={PermissionResponse.class})
     private Output</* @Nullable */ List<PermissionResponse>> permissions;
 
     /**
@@ -77,7 +77,7 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
      * A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    @OutputExport(name="roleName", type=String.class, parameters={})
+    @Export(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
     /**
@@ -91,7 +91,7 @@ public class SqlResourceSqlRoleDefinition extends io.pulumi.resources.CustomReso
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineStatus;
 import io.pulumi.awsnative.imagebuilder.inputs.ImagePipelineImageTestsConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImagePipelineScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    @InputImport(name="containerRecipeArn")
+    @Import(name="containerRecipeArn")
       private final @Nullable Output<String> containerRecipeArn;
 
     public Output<String> getContainerRecipeArn() {
@@ -34,7 +34,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the image pipeline.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the distribution configuration associated with this image pipeline.
      * 
      */
-    @InputImport(name="distributionConfigurationArn")
+    @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
     public Output<String> getDistributionConfigurationArn() {
@@ -56,7 +56,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    @InputImport(name="enhancedImageMetadataEnabled")
+    @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
     public Output<Boolean> getEnhancedImageMetadataEnabled() {
@@ -67,7 +67,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    @InputImport(name="imageRecipeArn")
+    @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
 
     public Output<String> getImageRecipeArn() {
@@ -78,7 +78,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The image tests configuration of the image pipeline.
      * 
      */
-    @InputImport(name="imageTestsConfiguration")
+    @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
 
     public Output<ImagePipelineImageTestsConfigurationArgs> getImageTestsConfiguration() {
@@ -89,7 +89,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the infrastructure configuration associated with this image pipeline.
      * 
      */
-    @InputImport(name="infrastructureConfigurationArn")
+    @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
 
     public Output<String> getInfrastructureConfigurationArn() {
@@ -100,7 +100,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the image pipeline.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The schedule of the image pipeline.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<ImagePipelineScheduleArgs> schedule;
 
     public Output<ImagePipelineScheduleArgs> getSchedule() {
@@ -122,7 +122,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the image pipeline.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<ImagePipelineStatus> status;
 
     public Output<ImagePipelineStatus> getStatus() {
@@ -133,7 +133,7 @@ public final class ImagePipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of this image pipeline.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {

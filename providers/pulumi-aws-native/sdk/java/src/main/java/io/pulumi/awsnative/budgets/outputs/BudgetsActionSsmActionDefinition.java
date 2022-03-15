@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.budgets.outputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSsmActionDefinitionSubtype;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetsActionSsmActionDefinition {
     private final List<String> instanceIds;
     private final String region;
     private final BudgetsActionSsmActionDefinitionSubtype subtype;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetsActionSsmActionDefinition(
-        @OutputCustomType.Parameter("instanceIds") List<String> instanceIds,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("subtype") BudgetsActionSsmActionDefinitionSubtype subtype) {
+        @CustomType.Parameter("instanceIds") List<String> instanceIds,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("subtype") BudgetsActionSsmActionDefinitionSubtype subtype) {
         this.instanceIds = instanceIds;
         this.region = region;
         this.subtype = subtype;

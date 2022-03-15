@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleAutoResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AccountResponse extends io.pulumi.resources.InvokeArgs {
      * An automatic google login account.
      * 
      */
-    @InputImport(name="googleAuto", required=true)
+    @Import(name="googleAuto", required=true)
       private final GoogleAutoResponse googleAuto;
 
     public GoogleAutoResponse getGoogleAuto() {

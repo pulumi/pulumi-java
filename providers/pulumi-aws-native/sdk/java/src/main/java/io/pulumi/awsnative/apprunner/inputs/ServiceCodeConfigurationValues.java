@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationValuesRuntime;
 import io.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePair;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * Build Command
      * 
      */
-    @InputImport(name="buildCommand")
+    @Import(name="buildCommand")
       private final @Nullable String buildCommand;
 
     public Optional<String> getBuildCommand() {
@@ -36,7 +36,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * Port
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable String port;
 
     public Optional<String> getPort() {
@@ -47,14 +47,14 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * Runtime
      * 
      */
-    @InputImport(name="runtime", required=true)
+    @Import(name="runtime", required=true)
       private final ServiceCodeConfigurationValuesRuntime runtime;
 
     public ServiceCodeConfigurationValuesRuntime getRuntime() {
         return this.runtime;
     }
 
-    @InputImport(name="runtimeEnvironmentVariables")
+    @Import(name="runtimeEnvironmentVariables")
       private final @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables;
 
     public List<ServiceKeyValuePair> getRuntimeEnvironmentVariables() {
@@ -65,7 +65,7 @@ public final class ServiceCodeConfigurationValues extends io.pulumi.resources.In
      * Start Command
      * 
      */
-    @InputImport(name="startCommand")
+    @Import(name="startCommand")
       private final @Nullable String startCommand;
 
     public Optional<String> getStartCommand() {

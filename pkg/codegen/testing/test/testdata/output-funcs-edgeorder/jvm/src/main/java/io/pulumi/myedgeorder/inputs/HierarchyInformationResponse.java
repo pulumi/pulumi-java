@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * Represents configuration name that uniquely identifies configuration
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable String configurationName;
 
     public Optional<String> getConfigurationName() {
@@ -33,7 +33,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * Represents product family name that uniquely identifies product family
      * 
      */
-    @InputImport(name="productFamilyName")
+    @Import(name="productFamilyName")
       private final @Nullable String productFamilyName;
 
     public Optional<String> getProductFamilyName() {
@@ -44,7 +44,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * Represents product line name that uniquely identifies product line
      * 
      */
-    @InputImport(name="productLineName")
+    @Import(name="productLineName")
       private final @Nullable String productLineName;
 
     public Optional<String> getProductLineName() {
@@ -55,7 +55,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * Represents product name that uniquely identifies product
      * 
      */
-    @InputImport(name="productName")
+    @Import(name="productName")
       private final @Nullable String productName;
 
     public Optional<String> getProductName() {

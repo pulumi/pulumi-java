@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.LogProfileArgs;
 import io.pulumi.azurenative.insights.outputs.RetentionPolicyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
      * 
      */
-    @OutputExport(name="categories", type=List.class, parameters={String.class})
+    @Export(name="categories", type=List.class, parameters={String.class})
     private Output<List<String>> categories;
 
     /**
@@ -50,7 +50,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -64,7 +64,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={String.class})
+    @Export(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
     /**
@@ -78,7 +78,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * the retention policy for the events in the log.
      * 
      */
-    @OutputExport(name="retentionPolicy", type=RetentionPolicyResponse.class, parameters={})
+    @Export(name="retentionPolicy", type=RetentionPolicyResponse.class, parameters={})
     private Output<RetentionPolicyResponse> retentionPolicy;
 
     /**
@@ -106,7 +106,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
      * 
      */
-    @OutputExport(name="serviceBusRuleId", type=String.class, parameters={})
+    @Export(name="serviceBusRuleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusRuleId;
 
     /**
@@ -120,7 +120,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * the resource id of the storage account to which you would like to send the Activity Log.
      * 
      */
-    @OutputExport(name="storageAccountId", type=String.class, parameters={})
+    @Export(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
     /**
@@ -134,7 +134,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class LogProfile extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

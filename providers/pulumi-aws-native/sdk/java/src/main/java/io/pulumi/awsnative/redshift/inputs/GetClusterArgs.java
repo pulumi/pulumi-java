@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * A unique identifier for the cluster. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying. All alphabetical characters must be lower case, no hypens at the end, no two consecutive hyphens. Cluster name should be unique for all clusters within an AWS account
      * 
      */
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
     public String getClusterIdentifier() {

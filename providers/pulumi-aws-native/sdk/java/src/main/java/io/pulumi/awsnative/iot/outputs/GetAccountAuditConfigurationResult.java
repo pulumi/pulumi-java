@@ -5,13 +5,13 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditCheckConfigurations;
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditNotificationTargetConfigurations;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountAuditConfigurationResult {
     private final @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations;
     private final @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations;
@@ -21,11 +21,11 @@ public final class GetAccountAuditConfigurationResult {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountAuditConfigurationResult(
-        @OutputCustomType.Parameter("auditCheckConfigurations") @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations,
-        @OutputCustomType.Parameter("auditNotificationTargetConfigurations") @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("auditCheckConfigurations") @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations,
+        @CustomType.Parameter("auditNotificationTargetConfigurations") @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.auditCheckConfigurations = auditCheckConfigurations;
         this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
         this.roleArn = roleArn;

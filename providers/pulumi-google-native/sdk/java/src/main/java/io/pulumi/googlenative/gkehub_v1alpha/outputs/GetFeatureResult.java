@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.CommonFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.CommonFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.FeatureResourceStateResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFeatureResult {
     /**
      * When the Feature resource was created.
@@ -64,18 +64,18 @@ public final class GetFeatureResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFeatureResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("membershipSpecs") Map<String,String> membershipSpecs,
-        @OutputCustomType.Parameter("membershipStates") Map<String,String> membershipStates,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceState") FeatureResourceStateResponse resourceState,
-        @OutputCustomType.Parameter("spec") CommonFeatureSpecResponse spec,
-        @OutputCustomType.Parameter("state") CommonFeatureStateResponse state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("membershipSpecs") Map<String,String> membershipSpecs,
+        @CustomType.Parameter("membershipStates") Map<String,String> membershipStates,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceState") FeatureResourceStateResponse resourceState,
+        @CustomType.Parameter("spec") CommonFeatureSpecResponse spec,
+        @CustomType.Parameter("state") CommonFeatureStateResponse state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.labels = labels;

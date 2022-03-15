@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.resourcegroupstaggingapi.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcesResourceTagMappingListComplianceDetail {
     /**
      * Whether the resource is compliant.
@@ -21,11 +21,11 @@ public final class GetResourcesResourceTagMappingListComplianceDetail {
     private final List<String> keysWithNoncompliantValues;
     private final List<String> nonCompliantKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcesResourceTagMappingListComplianceDetail(
-        @OutputCustomType.Parameter("complianceStatus") Boolean complianceStatus,
-        @OutputCustomType.Parameter("keysWithNoncompliantValues") List<String> keysWithNoncompliantValues,
-        @OutputCustomType.Parameter("nonCompliantKeys") List<String> nonCompliantKeys) {
+        @CustomType.Parameter("complianceStatus") Boolean complianceStatus,
+        @CustomType.Parameter("keysWithNoncompliantValues") List<String> keysWithNoncompliantValues,
+        @CustomType.Parameter("nonCompliantKeys") List<String> nonCompliantKeys) {
         this.complianceStatus = complianceStatus;
         this.keysWithNoncompliantValues = keysWithNoncompliantValues;
         this.nonCompliantKeys = nonCompliantKeys;

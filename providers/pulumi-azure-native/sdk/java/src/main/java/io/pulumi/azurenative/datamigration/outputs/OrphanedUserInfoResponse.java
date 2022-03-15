@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrphanedUserInfoResponse {
     /**
      * Parent database of the user
@@ -22,10 +22,10 @@ public final class OrphanedUserInfoResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrphanedUserInfoResponse(
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.databaseName = databaseName;
         this.name = name;
     }

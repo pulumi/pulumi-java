@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpecHttp2RouteActionTargetVirtualService {
     /**
      * The name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.
@@ -15,8 +15,8 @@ public final class GatewayRouteSpecHttp2RouteActionTargetVirtualService {
      */
     private final String virtualServiceName;
 
-    @OutputCustomType.Constructor
-    private GatewayRouteSpecHttp2RouteActionTargetVirtualService(@OutputCustomType.Parameter("virtualServiceName") String virtualServiceName) {
+    @CustomType.Constructor
+    private GatewayRouteSpecHttp2RouteActionTargetVirtualService(@CustomType.Parameter("virtualServiceName") String virtualServiceName) {
         this.virtualServiceName = virtualServiceName;
     }
 

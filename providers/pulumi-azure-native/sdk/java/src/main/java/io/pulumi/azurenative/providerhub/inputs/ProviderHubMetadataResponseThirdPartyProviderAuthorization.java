@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.LightHouseAuthorizationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization ex
 
     public static final ProviderHubMetadataResponseThirdPartyProviderAuthorization Empty = new ProviderHubMetadataResponseThirdPartyProviderAuthorization();
 
-    @InputImport(name="authorizations")
+    @Import(name="authorizations")
       private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
 
     public List<LightHouseAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
 
-    @InputImport(name="managedByTenantId")
+    @Import(name="managedByTenantId")
       private final @Nullable String managedByTenantId;
 
     public Optional<String> getManagedByTenantId() {

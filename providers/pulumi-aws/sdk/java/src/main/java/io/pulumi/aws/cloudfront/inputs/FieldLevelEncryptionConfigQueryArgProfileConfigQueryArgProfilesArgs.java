@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
 
     public static final FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs Empty = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs();
 
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items;
 
     public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> getItems() {

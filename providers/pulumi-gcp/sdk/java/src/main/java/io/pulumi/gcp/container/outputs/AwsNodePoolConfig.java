@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.AwsNodePoolConfigConfigEncryption;
 import io.pulumi.gcp.container.outputs.AwsNodePoolConfigRootVolume;
 import io.pulumi.gcp.container.outputs.AwsNodePoolConfigSshConfig;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AwsNodePoolConfig {
     /**
      * Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
@@ -63,17 +63,17 @@ public final class AwsNodePoolConfig {
      */
     private final @Nullable List<AwsNodePoolConfigTaint> taints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsNodePoolConfig(
-        @OutputCustomType.Parameter("configEncryption") AwsNodePoolConfigConfigEncryption configEncryption,
-        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("rootVolume") @Nullable AwsNodePoolConfigRootVolume rootVolume,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("sshConfig") @Nullable AwsNodePoolConfigSshConfig sshConfig,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("taints") @Nullable List<AwsNodePoolConfigTaint> taints) {
+        @CustomType.Parameter("configEncryption") AwsNodePoolConfigConfigEncryption configEncryption,
+        @CustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("rootVolume") @Nullable AwsNodePoolConfigRootVolume rootVolume,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("sshConfig") @Nullable AwsNodePoolConfigSshConfig sshConfig,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("taints") @Nullable List<AwsNodePoolConfigTaint> taints) {
         this.configEncryption = configEncryption;
         this.iamInstanceProfile = iamInstanceProfile;
         this.instanceType = instanceType;

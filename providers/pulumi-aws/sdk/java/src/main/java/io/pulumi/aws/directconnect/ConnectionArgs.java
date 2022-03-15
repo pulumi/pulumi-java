@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
      * 
      */
-    @InputImport(name="bandwidth", required=true)
+    @Import(name="bandwidth", required=true)
       private final Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
@@ -30,7 +30,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service provider associated with the connection.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -63,7 +63,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

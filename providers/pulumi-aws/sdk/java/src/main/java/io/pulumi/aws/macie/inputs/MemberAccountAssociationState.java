@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class MemberAccountAssociationState extends io.pulumi.resources.Res
      * The ID of the AWS account that you want to associate with Amazon Macie as a member account.
      * 
      */
-    @InputImport(name="memberAccountId")
+    @Import(name="memberAccountId")
       private final @Nullable Output<String> memberAccountId;
 
     public Output<String> getMemberAccountId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExportResult {
     /**
      * Time the export job was created.
@@ -55,17 +55,17 @@ public final class GetExportResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExportResult(
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("datastoreName") String datastoreName,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("error") String error,
-        @OutputCustomType.Parameter("executionTime") String executionTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("self") String self,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updated") String updated) {
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("datastoreName") String datastoreName,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("error") String error,
+        @CustomType.Parameter("executionTime") String executionTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("self") String self,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updated") String updated) {
         this.created = created;
         this.datastoreName = datastoreName;
         this.description = description;

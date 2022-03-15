@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyRuleRedirectOptionsType;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
      * Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
      * Type of the redirect action.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
     public Output<SecurityPolicyRuleRedirectOptionsType> getType() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.ResourceGuardOperationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceGuardResponse {
     /**
      * This flag indicates whether auto approval is allowed or not.
@@ -38,13 +38,13 @@ public final class ResourceGuardResponse {
      */
     private final List<String> vaultCriticalOperationExclusionList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceGuardResponse(
-        @OutputCustomType.Parameter("allowAutoApprovals") Boolean allowAutoApprovals,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuardOperations") List<ResourceGuardOperationResponse> resourceGuardOperations,
-        @OutputCustomType.Parameter("vaultCriticalOperationExclusionList") List<String> vaultCriticalOperationExclusionList) {
+        @CustomType.Parameter("allowAutoApprovals") Boolean allowAutoApprovals,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuardOperations") List<ResourceGuardOperationResponse> resourceGuardOperations,
+        @CustomType.Parameter("vaultCriticalOperationExclusionList") List<String> vaultCriticalOperationExclusionList) {
         this.allowAutoApprovals = allowAutoApprovals;
         this.description = description;
         this.provisioningState = provisioningState;

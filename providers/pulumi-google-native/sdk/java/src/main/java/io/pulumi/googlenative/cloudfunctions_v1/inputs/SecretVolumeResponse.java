@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.SecretVersionResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
      * 
      */
-    @InputImport(name="mountPath", required=true)
+    @Import(name="mountPath", required=true)
       private final String mountPath;
 
     public String getMountPath() {
@@ -33,7 +33,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function's project assuming that the secret exists in the same project as of the function.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -44,7 +44,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the secret in secret manager (not the full resource name).
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final String secret;
 
     public String getSecret() {
@@ -55,7 +55,7 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
      * List of secret versions to mount for this secret. If empty, the `latest` version of the secret will be made available in a file named after the secret under the mount point.
      * 
      */
-    @InputImport(name="versions", required=true)
+    @Import(name="versions", required=true)
       private final List<SecretVersionResponse> versions;
 
     public List<SecretVersionResponse> getVersions() {

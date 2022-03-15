@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEncryptionInfoEncryptionInTransit {
     /**
      * Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
@@ -23,10 +23,10 @@ public final class ClusterEncryptionInfoEncryptionInTransit {
      */
     private final @Nullable Boolean inCluster;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEncryptionInfoEncryptionInTransit(
-        @OutputCustomType.Parameter("clientBroker") @Nullable String clientBroker,
-        @OutputCustomType.Parameter("inCluster") @Nullable Boolean inCluster) {
+        @CustomType.Parameter("clientBroker") @Nullable String clientBroker,
+        @CustomType.Parameter("inCluster") @Nullable Boolean inCluster) {
         this.clientBroker = clientBroker;
         this.inCluster = inCluster;
     }

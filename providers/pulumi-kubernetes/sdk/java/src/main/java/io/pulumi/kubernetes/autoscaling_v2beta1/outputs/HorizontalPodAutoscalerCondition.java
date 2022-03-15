@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalerCondition {
     /**
      * lastTransitionTime is the last time the condition transitioned from one status to another
@@ -37,13 +37,13 @@ public final class HorizontalPodAutoscalerCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HorizontalPodAutoscalerCondition(
-        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;

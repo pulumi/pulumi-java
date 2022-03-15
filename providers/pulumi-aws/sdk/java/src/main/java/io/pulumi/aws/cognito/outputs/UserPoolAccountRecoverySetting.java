@@ -4,11 +4,11 @@
 package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.UserPoolAccountRecoverySettingRecoveryMechanism;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolAccountRecoverySetting {
     /**
      * List of Account Recovery Options of the following structure:
@@ -16,8 +16,8 @@ public final class UserPoolAccountRecoverySetting {
      */
     private final List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms;
 
-    @OutputCustomType.Constructor
-    private UserPoolAccountRecoverySetting(@OutputCustomType.Parameter("recoveryMechanisms") List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
+    @CustomType.Constructor
+    private UserPoolAccountRecoverySetting(@CustomType.Parameter("recoveryMechanisms") List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
         this.recoveryMechanisms = recoveryMechanisms;
     }
 

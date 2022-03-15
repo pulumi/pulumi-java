@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * Structure is documented below.
      * 
      */
-    @InputImport(name="methodSelectors")
+    @Import(name="methodSelectors")
       private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs>> methodSelectors;
 
     public Output<List<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorGetArgs>> getMethodSelectors() {
@@ -37,7 +37,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * field set to `*` will allow all methods AND permissions for all services.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {

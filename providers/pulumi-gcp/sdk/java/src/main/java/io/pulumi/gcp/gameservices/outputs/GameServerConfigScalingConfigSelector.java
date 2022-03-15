@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerConfigScalingConfigSelector {
     /**
      * Set of labels to group by.
@@ -17,8 +17,8 @@ public final class GameServerConfigScalingConfigSelector {
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private GameServerConfigScalingConfigSelector(@OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
+    @CustomType.Constructor
+    private GameServerConfigScalingConfigSelector(@CustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.labels = labels;
     }
 

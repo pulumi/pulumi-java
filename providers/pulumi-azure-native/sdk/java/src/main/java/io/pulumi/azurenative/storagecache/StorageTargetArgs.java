@@ -12,7 +12,7 @@ import io.pulumi.azurenative.storagecache.inputs.Nfs3TargetArgs;
 import io.pulumi.azurenative.storagecache.inputs.UnknownTargetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Properties when targetType is blobNfs.
      * 
      */
-    @InputImport(name="blobNfs")
+    @Import(name="blobNfs")
       private final @Nullable Output<BlobNfsTargetArgs> blobNfs;
 
     public Output<BlobNfsTargetArgs> getBlobNfs() {
@@ -38,7 +38,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
      * 
      */
-    @InputImport(name="cacheName", required=true)
+    @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
 
     public Output<String> getCacheName() {
@@ -49,7 +49,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Properties when targetType is clfs.
      * 
      */
-    @InputImport(name="clfs")
+    @Import(name="clfs")
       private final @Nullable Output<ClfsTargetArgs> clfs;
 
     public Output<ClfsTargetArgs> getClfs() {
@@ -60,7 +60,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * List of Cache namespace junctions to target for namespace associations.
      * 
      */
-    @InputImport(name="junctions")
+    @Import(name="junctions")
       private final @Nullable Output<List<NamespaceJunctionArgs>> junctions;
 
     public Output<List<NamespaceJunctionArgs>> getJunctions() {
@@ -71,7 +71,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Properties when targetType is nfs3.
      * 
      */
-    @InputImport(name="nfs3")
+    @Import(name="nfs3")
       private final @Nullable Output<Nfs3TargetArgs> nfs3;
 
     public Output<Nfs3TargetArgs> getNfs3() {
@@ -82,7 +82,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
     public Output<Either<String,ProvisioningStateType>> getProvisioningState() {
@@ -93,7 +93,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Target resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -104,7 +104,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Storage Target.
      * 
      */
-    @InputImport(name="storageTargetName")
+    @Import(name="storageTargetName")
       private final @Nullable Output<String> storageTargetName;
 
     public Output<String> getStorageTargetName() {
@@ -115,7 +115,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the Storage Target.
      * 
      */
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final Output<Either<String,StorageTargetType>> targetType;
 
     public Output<Either<String,StorageTargetType>> getTargetType() {
@@ -126,7 +126,7 @@ public final class StorageTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Properties when targetType is unknown.
      * 
      */
-    @InputImport(name="unknown")
+    @Import(name="unknown")
       private final @Nullable Output<UnknownTargetArgs> unknown;
 
     public Output<UnknownTargetArgs> getUnknown() {

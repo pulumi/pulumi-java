@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetImageRecipeBlockDeviceMappingEb;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -29,7 +29,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * Single list of object with Elastic Block Storage (EBS) block device mapping settings.
      * 
      */
-    @InputImport(name="ebs", required=true)
+    @Import(name="ebs", required=true)
       private final List<GetImageRecipeBlockDeviceMappingEb> ebs;
 
     public List<GetImageRecipeBlockDeviceMappingEb> getEbs() {
@@ -40,7 +40,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * Whether to remove a mapping from the parent image.
      * 
      */
-    @InputImport(name="noDevice", required=true)
+    @Import(name="noDevice", required=true)
       private final String noDevice;
 
     public String getNoDevice() {
@@ -51,7 +51,7 @@ public final class GetImageRecipeBlockDeviceMapping extends io.pulumi.resources.
      * Virtual device name. For example, `ephemeral0`. Instance store volumes are numbered starting from 0.
      * 
      */
-    @InputImport(name="virtualName", required=true)
+    @Import(name="virtualName", required=true)
       private final String virtualName;
 
     public String getVirtualName() {

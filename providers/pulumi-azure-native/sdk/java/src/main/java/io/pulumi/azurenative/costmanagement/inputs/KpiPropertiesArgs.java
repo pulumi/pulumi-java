@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.KpiTypeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * show the KPI in the UI?
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -36,7 +36,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * ID of resource related to metric (budget).
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * KPI type (Forecast, Budget).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,KpiTypeType>> type;
 
     public Output<Either<String,KpiTypeType>> getType() {

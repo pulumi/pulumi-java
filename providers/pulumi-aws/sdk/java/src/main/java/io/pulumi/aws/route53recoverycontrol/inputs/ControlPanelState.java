@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * ARN of the control panel.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * ARN of the cluster in which this control panel will reside.
      * 
      */
-    @InputImport(name="clusterArn")
+    @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
     public Output<String> getClusterArn() {
@@ -42,7 +42,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * Whether a control panel is default.
      * 
      */
-    @InputImport(name="defaultControlPanel")
+    @Import(name="defaultControlPanel")
       private final @Nullable Output<Boolean> defaultControlPanel;
 
     public Output<Boolean> getDefaultControlPanel() {
@@ -53,7 +53,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * Name describing the control panel.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * Number routing controls in a control panel.
      * 
      */
-    @InputImport(name="routingControlCount")
+    @Import(name="routingControlCount")
       private final @Nullable Output<Integer> routingControlCount;
 
     public Output<Integer> getRoutingControlCount() {
@@ -75,7 +75,7 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
      * Status of control panel: `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

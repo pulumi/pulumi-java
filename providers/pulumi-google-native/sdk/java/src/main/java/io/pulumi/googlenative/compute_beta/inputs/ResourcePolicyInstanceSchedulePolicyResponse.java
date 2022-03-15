@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicyInstanceSchedulePolicyScheduleResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
     public String getExpirationTime() {
@@ -32,7 +32,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -43,7 +43,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final String timeZone;
 
     public String getTimeZone() {
@@ -54,7 +54,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * Specifies the schedule for starting instances.
      * 
      */
-    @InputImport(name="vmStartSchedule", required=true)
+    @Import(name="vmStartSchedule", required=true)
       private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
 
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStartSchedule() {
@@ -65,7 +65,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * Specifies the schedule for stopping instances.
      * 
      */
-    @InputImport(name="vmStopSchedule", required=true)
+    @Import(name="vmStopSchedule", required=true)
       private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
 
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStopSchedule() {

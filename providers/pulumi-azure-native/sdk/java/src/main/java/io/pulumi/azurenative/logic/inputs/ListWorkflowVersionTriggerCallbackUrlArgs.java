@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.KeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * The key type.
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
@@ -31,7 +31,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * The expiry time.
      * 
      */
-    @InputImport(name="notAfter")
+    @Import(name="notAfter")
       private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
@@ -42,7 +42,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * The workflow trigger name.
      * 
      */
-    @InputImport(name="triggerName", required=true)
+    @Import(name="triggerName", required=true)
       private final String triggerName;
 
     public String getTriggerName() {
@@ -64,7 +64,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * The workflow versionId.
      * 
      */
-    @InputImport(name="versionId", required=true)
+    @Import(name="versionId", required=true)
       private final String versionId;
 
     public String getVersionId() {
@@ -75,7 +75,7 @@ public final class ListWorkflowVersionTriggerCallbackUrlArgs extends io.pulumi.r
      * The workflow name.
      * 
      */
-    @InputImport(name="workflowName", required=true)
+    @Import(name="workflowName", required=true)
       private final String workflowName;
 
     public String getWorkflowName() {

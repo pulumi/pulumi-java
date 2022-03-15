@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
      * Indicates whether or not to export logs.
      * 
      */
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -30,7 +30,7 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
      * Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {

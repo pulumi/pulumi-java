@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 import io.pulumi.azurenative.servicebus.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
      * The IP Filter Action
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
     public Output<Either<String,NetworkRuleIPAction>> getAction() {
@@ -35,7 +35,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
      * IP Mask
      * 
      */
-    @InputImport(name="ipMask")
+    @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
 
     public Output<String> getIpMask() {

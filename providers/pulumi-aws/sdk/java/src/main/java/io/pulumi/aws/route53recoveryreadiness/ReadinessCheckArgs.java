@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name describing the readiness check.
      * 
      */
-    @InputImport(name="readinessCheckName", required=true)
+    @Import(name="readinessCheckName", required=true)
       private final Output<String> readinessCheckName;
 
     public Output<String> getReadinessCheckName() {
@@ -30,7 +30,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Name describing the resource set that will be monitored for readiness.
      * 
      */
-    @InputImport(name="resourceSetName", required=true)
+    @Import(name="resourceSetName", required=true)
       private final Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
@@ -41,7 +41,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

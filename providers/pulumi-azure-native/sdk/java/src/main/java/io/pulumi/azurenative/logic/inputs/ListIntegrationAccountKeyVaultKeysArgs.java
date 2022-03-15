@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultReference;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
@@ -30,7 +30,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * The key vault reference.
      * 
      */
-    @InputImport(name="keyVault", required=true)
+    @Import(name="keyVault", required=true)
       private final KeyVaultReference keyVault;
 
     public KeyVaultReference getKeyVault() {
@@ -41,7 +41,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * The skip token.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfig
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRedshiftRetryOptionsArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,77 +20,77 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
 
     public static final DeliveryStreamRedshiftDestinationConfigurationArgs Empty = new DeliveryStreamRedshiftDestinationConfigurationArgs();
 
-    @InputImport(name="cloudWatchLoggingOptions")
+    @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
         return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
     }
 
-    @InputImport(name="clusterJDBCURL", required=true)
+    @Import(name="clusterJDBCURL", required=true)
       private final Output<String> clusterJDBCURL;
 
     public Output<String> getClusterJDBCURL() {
         return this.clusterJDBCURL;
     }
 
-    @InputImport(name="copyCommand", required=true)
+    @Import(name="copyCommand", required=true)
       private final Output<DeliveryStreamCopyCommandArgs> copyCommand;
 
     public Output<DeliveryStreamCopyCommandArgs> getCopyCommand() {
         return this.copyCommand;
     }
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
         return this.password;
     }
 
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
         return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
     }
 
-    @InputImport(name="retryOptions")
+    @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
 
     public Output<DeliveryStreamRedshiftRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Output.empty() : this.retryOptions;
     }
 
-    @InputImport(name="roleARN", required=true)
+    @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
     public Output<String> getRoleARN() {
         return this.roleARN;
     }
 
-    @InputImport(name="s3BackupConfiguration")
+    @Import(name="s3BackupConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
         return this.s3BackupConfiguration == null ? Output.empty() : this.s3BackupConfiguration;
     }
 
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
         return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
     }
 
-    @InputImport(name="s3Configuration", required=true)
+    @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
         return this.s3Configuration;
     }
 
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

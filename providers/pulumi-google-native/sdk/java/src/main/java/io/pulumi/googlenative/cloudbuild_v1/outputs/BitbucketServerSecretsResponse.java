@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BitbucketServerSecretsResponse {
     /**
      * The resource name for the admin access token's secret version.
@@ -25,11 +25,11 @@ public final class BitbucketServerSecretsResponse {
      */
     private final String webhookSecretVersionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BitbucketServerSecretsResponse(
-        @OutputCustomType.Parameter("adminAccessTokenVersionName") String adminAccessTokenVersionName,
-        @OutputCustomType.Parameter("readAccessTokenVersionName") String readAccessTokenVersionName,
-        @OutputCustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
+        @CustomType.Parameter("adminAccessTokenVersionName") String adminAccessTokenVersionName,
+        @CustomType.Parameter("readAccessTokenVersionName") String readAccessTokenVersionName,
+        @CustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
         this.adminAccessTokenVersionName = adminAccessTokenVersionName;
         this.readAccessTokenVersionName = readAccessTokenVersionName;
         this.webhookSecretVersionName = webhookSecretVersionName;

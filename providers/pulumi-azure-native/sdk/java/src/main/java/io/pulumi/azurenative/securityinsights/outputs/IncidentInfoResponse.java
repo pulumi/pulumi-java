@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IncidentInfoResponse {
     /**
      * Incident Id
@@ -32,12 +32,12 @@ public final class IncidentInfoResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IncidentInfoResponse(
-        @OutputCustomType.Parameter("incidentId") @Nullable String incidentId,
-        @OutputCustomType.Parameter("relationName") @Nullable String relationName,
-        @OutputCustomType.Parameter("severity") @Nullable String severity,
-        @OutputCustomType.Parameter("title") @Nullable String title) {
+        @CustomType.Parameter("incidentId") @Nullable String incidentId,
+        @CustomType.Parameter("relationName") @Nullable String relationName,
+        @CustomType.Parameter("severity") @Nullable String severity,
+        @CustomType.Parameter("title") @Nullable String title) {
         this.incidentId = incidentId;
         this.relationName = relationName;
         this.severity = severity;

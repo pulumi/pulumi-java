@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * The name of the app or site this chip is linking to.
      * 
      */
-    @InputImport(name="destinationName", required=true)
+    @Import(name="destinationName", required=true)
       private final String destinationName;
 
     public String getDestinationName() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * The URI of the app or site to open when the user taps the suggestion chip.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

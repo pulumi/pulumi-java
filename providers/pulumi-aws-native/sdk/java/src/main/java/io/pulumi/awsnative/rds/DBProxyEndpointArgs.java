@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rds;
 import io.pulumi.awsnative.rds.enums.DBProxyEndpointTargetRole;
 import io.pulumi.awsnative.rds.inputs.DBProxyEndpointTagFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
      * 
      */
-    @InputImport(name="dBProxyEndpointName")
+    @Import(name="dBProxyEndpointName")
       private final @Nullable Output<String> dBProxyEndpointName;
 
     public Output<String> getDBProxyEndpointName() {
@@ -32,7 +32,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
      * 
      */
-    @InputImport(name="dBProxyName", required=true)
+    @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
 
     public Output<String> getDBProxyName() {
@@ -43,7 +43,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
 
     public Output<List<DBProxyEndpointTagFormatArgs>> getTags() {
@@ -54,7 +54,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
      * 
      */
-    @InputImport(name="targetRole")
+    @Import(name="targetRole")
       private final @Nullable Output<DBProxyEndpointTargetRole> targetRole;
 
     public Output<DBProxyEndpointTargetRole> getTargetRole() {
@@ -65,7 +65,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * VPC security group IDs to associate with the new DB proxy endpoint.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
@@ -76,7 +76,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * VPC subnet IDs to associate with the new DB proxy endpoint.
      * 
      */
-    @InputImport(name="vpcSubnetIds", required=true)
+    @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> getVpcSubnetIds() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketAccessControlArgs;
@@ -53,7 +53,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * The name of the bucket.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -67,7 +67,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * The domain associated with the entity.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -81,7 +81,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * The email address associated with the entity.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -109,7 +109,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * example.com, the entity would be domain-example.com.
      * 
      */
-    @OutputExport(name="entity", type=String.class, parameters={})
+    @Export(name="entity", type=String.class, parameters={})
     private Output<String> entity;
 
     /**
@@ -138,7 +138,7 @@ public class BucketAccessControl extends io.pulumi.resources.CustomResource {
      * Possible values are `OWNER`, `READER`, and `WRITER`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
     /**

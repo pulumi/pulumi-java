@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TimeZoneArgs extends io.pulumi.resources.ResourceArgs {
      * IANA Time Zone Database time zone, e.g. "America/New_York".
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class TimeZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. IANA Time Zone Database version number, e.g. "2019a".
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

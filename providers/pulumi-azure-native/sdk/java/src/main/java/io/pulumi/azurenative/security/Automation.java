@@ -12,7 +12,7 @@ import io.pulumi.azurenative.security.outputs.AutomationScopeResponse;
 import io.pulumi.azurenative.security.outputs.AutomationSourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -42,7 +42,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={Object.class})
+    @Export(name="actions", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> actions;
 
     /**
@@ -56,7 +56,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * The security automation description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -70,7 +70,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -84,7 +84,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * Indicates whether the security automation is enabled.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
@@ -98,7 +98,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * Kind of the resource
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -112,7 +112,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * Location where the resource is stored
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -126,7 +126,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -140,7 +140,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={AutomationScopeResponse.class})
+    @Export(name="scopes", type=List.class, parameters={AutomationScopeResponse.class})
     private Output</* @Nullable */ List<AutomationScopeResponse>> scopes;
 
     /**
@@ -154,7 +154,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * A collection of the source event types which evaluate the security automation set of rules.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={AutomationSourceResponse.class})
+    @Export(name="sources", type=List.class, parameters={AutomationSourceResponse.class})
     private Output</* @Nullable */ List<AutomationSourceResponse>> sources;
 
     /**
@@ -168,7 +168,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -182,7 +182,7 @@ public class Automation extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

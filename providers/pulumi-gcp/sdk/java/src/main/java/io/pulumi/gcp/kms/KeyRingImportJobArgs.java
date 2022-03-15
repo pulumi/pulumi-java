@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
      * 
      */
-    @InputImport(name="importJobId", required=true)
+    @Import(name="importJobId", required=true)
       private final Output<String> importJobId;
 
     public Output<String> getImportJobId() {
@@ -29,7 +29,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
      * 
      */
-    @InputImport(name="importMethod", required=true)
+    @Import(name="importMethod", required=true)
       private final Output<String> importMethod;
 
     public Output<String> getImportMethod() {
@@ -41,7 +41,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
      * 
      */
-    @InputImport(name="keyRing", required=true)
+    @Import(name="keyRing", required=true)
       private final Output<String> keyRing;
 
     public Output<String> getKeyRing() {
@@ -54,7 +54,7 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
      * 
      */
-    @InputImport(name="protectionLevel", required=true)
+    @Import(name="protectionLevel", required=true)
       private final Output<String> protectionLevel;
 
     public Output<String> getProtectionLevel() {

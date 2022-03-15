@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanChatChannel;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanIncidentTemplate;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * The list of actions.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={ResponsePlanAction.class})
+    @Export(name="actions", type=List.class, parameters={ResponsePlanAction.class})
     private Output</* @Nullable */ List<ResponsePlanAction>> actions;
 
     /**
@@ -40,7 +40,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * The ARN of the response plan.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="chatChannel", type=ResponsePlanChatChannel.class, parameters={})
+    @Export(name="chatChannel", type=ResponsePlanChatChannel.class, parameters={})
     private Output</* @Nullable */ ResponsePlanChatChannel> chatChannel;
 
     public Output</* @Nullable */ ResponsePlanChatChannel> getChatChannel() {
@@ -60,7 +60,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * The display name of the response plan.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -74,7 +74,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * The list of engagements to use.
      * 
      */
-    @OutputExport(name="engagements", type=List.class, parameters={String.class})
+    @Export(name="engagements", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> engagements;
 
     /**
@@ -84,7 +84,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<String>> getEngagements() {
         return this.engagements;
     }
-    @OutputExport(name="incidentTemplate", type=ResponsePlanIncidentTemplate.class, parameters={})
+    @Export(name="incidentTemplate", type=ResponsePlanIncidentTemplate.class, parameters={})
     private Output<ResponsePlanIncidentTemplate> incidentTemplate;
 
     public Output<ResponsePlanIncidentTemplate> getIncidentTemplate() {
@@ -94,7 +94,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * The name of the response plan.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * The tags to apply to the response plan.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ResponsePlanTag.class})
+    @Export(name="tags", type=List.class, parameters={ResponsePlanTag.class})
     private Output</* @Nullable */ List<ResponsePlanTag>> tags;
 
     /**

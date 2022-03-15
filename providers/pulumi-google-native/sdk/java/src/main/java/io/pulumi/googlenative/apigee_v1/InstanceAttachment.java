@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.InstanceAttachmentArgs;
@@ -22,7 +22,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * Time the attachment was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -36,7 +36,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * ID of the attached environment.
      * 
      */
-    @OutputExport(name="environment", type=String.class, parameters={})
+    @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
@@ -50,7 +50,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * ID of the attachment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

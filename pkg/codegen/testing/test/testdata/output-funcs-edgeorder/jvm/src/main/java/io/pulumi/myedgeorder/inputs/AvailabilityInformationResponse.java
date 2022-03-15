@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
      * Current availability stage of the product. Availability stage
      * 
      */
-    @InputImport(name="availabilityStage", required=true)
+    @Import(name="availabilityStage", required=true)
       private final String availabilityStage;
 
     public String getAvailabilityStage() {
@@ -31,7 +31,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
      * Reason why the product is disabled.
      * 
      */
-    @InputImport(name="disabledReason", required=true)
+    @Import(name="disabledReason", required=true)
       private final String disabledReason;
 
     public String getDisabledReason() {
@@ -42,7 +42,7 @@ public final class AvailabilityInformationResponse extends io.pulumi.resources.I
      * Message for why the product is disabled.
      * 
      */
-    @InputImport(name="disabledReasonMessage", required=true)
+    @Import(name="disabledReasonMessage", required=true)
       private final String disabledReasonMessage;
 
     public String getDisabledReasonMessage() {

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketDataExport;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketStorageClassAnalysis {
     private final @Nullable BucketDataExport dataExport;
 
-    @OutputCustomType.Constructor
-    private BucketStorageClassAnalysis(@OutputCustomType.Parameter("dataExport") @Nullable BucketDataExport dataExport) {
+    @CustomType.Constructor
+    private BucketStorageClassAnalysis(@CustomType.Parameter("dataExport") @Nullable BucketDataExport dataExport) {
         this.dataExport = dataExport;
     }
 

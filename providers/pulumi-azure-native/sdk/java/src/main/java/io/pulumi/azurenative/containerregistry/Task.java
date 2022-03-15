@@ -16,7 +16,7 @@ import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TriggerPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -48,7 +48,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The machine configuration of the run agent.
      * 
      */
-    @OutputExport(name="agentConfiguration", type=AgentPropertiesResponse.class, parameters={})
+    @Export(name="agentConfiguration", type=AgentPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AgentPropertiesResponse> agentConfiguration;
 
     /**
@@ -62,7 +62,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The dedicated agent pool for the task.
      * 
      */
-    @OutputExport(name="agentPoolName", type=String.class, parameters={})
+    @Export(name="agentPoolName", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentPoolName;
 
     /**
@@ -76,7 +76,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The creation date of task.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -90,7 +90,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    @OutputExport(name="credentials", type=CredentialsResponse.class, parameters={})
+    @Export(name="credentials", type=CredentialsResponse.class, parameters={})
     private Output</* @Nullable */ CredentialsResponse> credentials;
 
     /**
@@ -104,7 +104,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityPropertiesResponse.class, parameters={})
+    @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
@@ -118,7 +118,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The value of this property indicates whether the task resource is system task or not.
      * 
      */
-    @OutputExport(name="isSystemTask", type=Boolean.class, parameters={})
+    @Export(name="isSystemTask", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSystemTask;
 
     /**
@@ -132,7 +132,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -146,7 +146,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The template that describes the repository and tag information for run log artifact.
      * 
      */
-    @OutputExport(name="logTemplate", type=String.class, parameters={})
+    @Export(name="logTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> logTemplate;
 
     /**
@@ -160,7 +160,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -174,7 +174,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The platform properties against which the run has to happen.
      * 
      */
-    @OutputExport(name="platform", type=PlatformPropertiesResponse.class, parameters={})
+    @Export(name="platform", type=PlatformPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ PlatformPropertiesResponse> platform;
 
     /**
@@ -188,7 +188,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The provisioning state of the task.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -202,7 +202,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The current status of task.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -216,7 +216,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The properties of a task step.
      * 
      */
-    @OutputExport(name="step", type=Object.class, parameters={})
+    @Export(name="step", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> step;
 
     /**
@@ -230,7 +230,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -244,7 +244,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -258,7 +258,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Run timeout in seconds.
      * 
      */
-    @OutputExport(name="timeout", type=Integer.class, parameters={})
+    @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
@@ -272,7 +272,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The properties that describe all triggers for the task.
      * 
      */
-    @OutputExport(name="trigger", type=TriggerPropertiesResponse.class, parameters={})
+    @Export(name="trigger", type=TriggerPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ TriggerPropertiesResponse> trigger;
 
     /**
@@ -286,7 +286,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

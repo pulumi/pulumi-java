@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
     /**
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb(
-        @OutputCustomType.Parameter("pullDeps") @Nullable Boolean pullDeps,
-        @OutputCustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
+        @CustomType.Parameter("pullDeps") @Nullable Boolean pullDeps,
+        @CustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
         this.pullDeps = pullDeps;
         this.source = source;
     }

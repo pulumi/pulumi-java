@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * A description of the scope connection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * The management group Id which uniquely identify the Microsoft Azure management group.
      * 
      */
-    @InputImport(name="managementGroupId", required=true)
+    @Import(name="managementGroupId", required=true)
       private final Output<String> managementGroupId;
 
     public Output<String> getManagementGroupId() {
@@ -40,7 +40,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * Name for the network manager connection.
      * 
      */
-    @InputImport(name="networkManagerConnectionName")
+    @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
 
     public Output<String> getNetworkManagerConnectionName() {
@@ -51,7 +51,7 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
      * Network Manager Id.
      * 
      */
-    @InputImport(name="networkManagerId")
+    @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;
 
     public Output<String> getNetworkManagerId() {

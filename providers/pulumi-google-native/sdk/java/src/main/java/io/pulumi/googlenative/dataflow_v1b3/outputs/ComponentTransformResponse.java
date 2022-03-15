@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComponentTransformResponse {
     /**
      * Dataflow service generated name for this source.
@@ -25,11 +25,11 @@ public final class ComponentTransformResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentTransformResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("originalTransform") String originalTransform,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("originalTransform") String originalTransform,
+        @CustomType.Parameter("userName") String userName) {
         this.name = name;
         this.originalTransform = originalTransform;
         this.userName = userName;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.RequestContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.ResponseContractArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -33,7 +33,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the operation. May include HTML formatting tags.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Operation Name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
      * 
      */
-    @InputImport(name="method", required=true)
+    @Import(name="method", required=true)
       private final Output<String> method;
 
     public Output<String> getMethod() {
@@ -66,7 +66,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Operation identifier within an API. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="operationId")
+    @Import(name="operationId")
       private final @Nullable Output<String> operationId;
 
     public Output<String> getOperationId() {
@@ -77,7 +77,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Operation Policies
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<String> policies;
 
     public Output<String> getPolicies() {
@@ -88,7 +88,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * An entity containing request details.
      * 
      */
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable Output<RequestContractArgs> request;
 
     public Output<RequestContractArgs> getRequest() {
@@ -99,7 +99,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Array of Operation responses.
      * 
      */
-    @InputImport(name="responses")
+    @Import(name="responses")
       private final @Nullable Output<List<ResponseContractArgs>> responses;
 
     public Output<List<ResponseContractArgs>> getResponses() {
@@ -121,7 +121,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -132,7 +132,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of URL template parameters.
      * 
      */
-    @InputImport(name="templateParameters")
+    @Import(name="templateParameters")
       private final @Nullable Output<List<ParameterContractArgs>> templateParameters;
 
     public Output<List<ParameterContractArgs>> getTemplateParameters() {
@@ -143,7 +143,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
      * 
      */
-    @InputImport(name="urlTemplate", required=true)
+    @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
     public Output<String> getUrlTemplate() {

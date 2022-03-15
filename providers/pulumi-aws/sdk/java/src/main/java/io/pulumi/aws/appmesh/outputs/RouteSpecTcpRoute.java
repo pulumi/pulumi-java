@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecTcpRouteAction;
 import io.pulumi.aws.appmesh.outputs.RouteSpecTcpRouteTimeout;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecTcpRoute {
     /**
      * The action to take if a match is determined.
@@ -23,10 +23,10 @@ public final class RouteSpecTcpRoute {
      */
     private final @Nullable RouteSpecTcpRouteTimeout timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecTcpRoute(
-        @OutputCustomType.Parameter("action") RouteSpecTcpRouteAction action,
-        @OutputCustomType.Parameter("timeout") @Nullable RouteSpecTcpRouteTimeout timeout) {
+        @CustomType.Parameter("action") RouteSpecTcpRouteAction action,
+        @CustomType.Parameter("timeout") @Nullable RouteSpecTcpRouteTimeout timeout) {
         this.action = action;
         this.timeout = timeout;
     }

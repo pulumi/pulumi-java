@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
     /**
      * Whether to consider case sensitivity when performing an exact match.
@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
      */
     private final Boolean caseSensitive;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(@OutputCustomType.Parameter("caseSensitive") Boolean caseSensitive) {
+    @CustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(@CustomType.Parameter("caseSensitive") Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
     }
 

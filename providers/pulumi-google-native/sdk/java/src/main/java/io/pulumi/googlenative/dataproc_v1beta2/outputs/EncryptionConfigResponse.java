@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionConfigResponse {
     /**
      * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String gcePdKmsKeyName;
 
-    @OutputCustomType.Constructor
-    private EncryptionConfigResponse(@OutputCustomType.Parameter("gcePdKmsKeyName") String gcePdKmsKeyName) {
+    @CustomType.Constructor
+    private EncryptionConfigResponse(@CustomType.Parameter("gcePdKmsKeyName") String gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The value that indicates whether the policy is enabled or not.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -33,7 +33,7 @@ public final class TrustPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The type of trust policy.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

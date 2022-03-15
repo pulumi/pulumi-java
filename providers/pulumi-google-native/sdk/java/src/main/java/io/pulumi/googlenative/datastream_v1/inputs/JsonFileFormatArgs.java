@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatCompression;
 import io.pulumi.googlenative.datastream_v1.enums.JsonFileFormatSchemaFileFormat;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Compression of the loaded JSON file.
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<JsonFileFormatCompression> compression;
 
     public Output<JsonFileFormatCompression> getCompression() {
@@ -34,7 +34,7 @@ public final class JsonFileFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The schema file format along JSON data files.
      * 
      */
-    @InputImport(name="schemaFileFormat")
+    @Import(name="schemaFileFormat")
       private final @Nullable Output<JsonFileFormatSchemaFileFormat> schemaFileFormat;
 
     public Output<JsonFileFormatSchemaFileFormat> getSchemaFileFormat() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
      * The flag indicates whether enable compute isolation or not.
      * 
      */
-    @InputImport(name="enableComputeIsolation")
+    @Import(name="enableComputeIsolation")
       private final @Nullable Output<Boolean> enableComputeIsolation;
 
     public Output<Boolean> getEnableComputeIsolation() {
@@ -34,7 +34,7 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
      * The host sku.
      * 
      */
-    @InputImport(name="hostSku")
+    @Import(name="hostSku")
       private final @Nullable Output<String> hostSku;
 
     public Output<String> getHostSku() {

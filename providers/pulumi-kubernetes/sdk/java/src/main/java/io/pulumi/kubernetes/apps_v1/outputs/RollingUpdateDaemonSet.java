@@ -4,14 +4,14 @@
 package io.pulumi.kubernetes.apps_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RollingUpdateDaemonSet {
     /**
      * The maximum number of nodes with an existing available DaemonSet pod that can have an updated DaemonSet pod during during an update. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up to a minimum of 1. Default value is 0. Example: when this is set to 30%, at most 30% of the total number of nodes that should be running the daemon pod (i.e. status.desiredNumberScheduled) can have their a new pod created before the old pod is marked as deleted. The update starts by launching new pods on 30% of nodes. Once an updated pod is available (Ready for at least minReadySeconds) the old DaemonSet pod on that node is marked deleted. If the old pod becomes unavailable for any reason (Ready transitions to false, is evicted, or is drained) an updated pod is immediatedly created on that node without considering surge limits. Allowing surge implies the possibility that the resources consumed by the daemonset on any given node can double if the readiness check fails, and so resource intensive daemonsets should take into account that they may cause evictions during disruption. This is beta field and enabled/disabled by DaemonSetUpdateSurge feature gate.
@@ -24,10 +24,10 @@ public final class RollingUpdateDaemonSet {
      */
     private final @Nullable Either<Integer,String> maxUnavailable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RollingUpdateDaemonSet(
-        @OutputCustomType.Parameter("maxSurge") @Nullable Either<Integer,String> maxSurge,
-        @OutputCustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable) {
+        @CustomType.Parameter("maxSurge") @Nullable Either<Integer,String> maxSurge,
+        @CustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }

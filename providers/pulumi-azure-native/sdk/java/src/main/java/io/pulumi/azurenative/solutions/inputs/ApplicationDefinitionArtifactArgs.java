@@ -7,7 +7,7 @@ import io.pulumi.azurenative.solutions.enums.ApplicationArtifactType;
 import io.pulumi.azurenative.solutions.enums.ApplicationDefinitionArtifactName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * The managed application definition artifact name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,ApplicationDefinitionArtifactName>> name;
 
     public Output<Either<String,ApplicationDefinitionArtifactName>> getName() {
@@ -35,7 +35,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * The managed application definition artifact type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<ApplicationArtifactType> type;
 
     public Output<ApplicationArtifactType> getType() {
@@ -46,7 +46,7 @@ public final class ApplicationDefinitionArtifactArgs extends io.pulumi.resources
      * The managed application definition artifact blob uri.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

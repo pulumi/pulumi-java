@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.ConnectionArgs;
 import io.pulumi.aws.glue.inputs.ConnectionState;
 import io.pulumi.aws.glue.outputs.ConnectionPhysicalConnectionRequirements;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The ARN of the Glue Connection.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output<String> catalogId;
 
     /**
@@ -63,7 +63,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of key-value pairs used as parameters for this connection.
      * 
      */
-    @OutputExport(name="connectionProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="connectionProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> connectionProperties;
 
     /**
@@ -77,7 +77,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
      * 
      */
-    @OutputExport(name="connectionType", type=String.class, parameters={})
+    @Export(name="connectionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionType;
 
     /**
@@ -91,7 +91,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Description of the connection.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -105,7 +105,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A list of criteria that can be used in selecting this connection.
      * 
      */
-    @OutputExport(name="matchCriterias", type=List.class, parameters={String.class})
+    @Export(name="matchCriterias", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> matchCriterias;
 
     /**
@@ -119,7 +119,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
      * 
      */
-    @OutputExport(name="physicalConnectionRequirements", type=ConnectionPhysicalConnectionRequirements.class, parameters={})
+    @Export(name="physicalConnectionRequirements", type=ConnectionPhysicalConnectionRequirements.class, parameters={})
     private Output</* @Nullable */ ConnectionPhysicalConnectionRequirements> physicalConnectionRequirements;
 
     /**
@@ -147,7 +147,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -161,7 +161,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

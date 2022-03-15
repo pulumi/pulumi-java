@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.enums.Operator;
 import io.pulumi.azurenative.cdn.enums.TransformType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * List of possible match values.
      * 
      */
-    @InputImport(name="matchValue", required=true)
+    @Import(name="matchValue", required=true)
       private final Output<List<String>> matchValue;
 
     public Output<List<String>> getMatchValue() {
@@ -39,7 +39,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Match variable to compare against.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final Output<Either<String,MatchVariable>> matchVariable;
 
     public Output<Either<String,MatchVariable>> getMatchVariable() {
@@ -50,7 +50,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Describes if the result of this condition should be negated.
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
     public Output<Boolean> getNegateCondition() {
@@ -61,7 +61,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Describes operator to be matched
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
@@ -72,7 +72,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
@@ -83,7 +83,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * List of transforms.
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable Output<List<Either<String,TransformType>>> transforms;
 
     public Output<List<Either<String,TransformType>>> getTransforms() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceSpaceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluenceSpaceConfiguration {
     private final @Nullable Boolean crawlArchivedSpaces;
     private final @Nullable Boolean crawlPersonalSpaces;
@@ -20,13 +20,13 @@ public final class DataSourceConfluenceSpaceConfiguration {
     private final @Nullable List<String> includeSpaces;
     private final @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfluenceSpaceConfiguration(
-        @OutputCustomType.Parameter("crawlArchivedSpaces") @Nullable Boolean crawlArchivedSpaces,
-        @OutputCustomType.Parameter("crawlPersonalSpaces") @Nullable Boolean crawlPersonalSpaces,
-        @OutputCustomType.Parameter("excludeSpaces") @Nullable List<String> excludeSpaces,
-        @OutputCustomType.Parameter("includeSpaces") @Nullable List<String> includeSpaces,
-        @OutputCustomType.Parameter("spaceFieldMappings") @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
+        @CustomType.Parameter("crawlArchivedSpaces") @Nullable Boolean crawlArchivedSpaces,
+        @CustomType.Parameter("crawlPersonalSpaces") @Nullable Boolean crawlPersonalSpaces,
+        @CustomType.Parameter("excludeSpaces") @Nullable List<String> excludeSpaces,
+        @CustomType.Parameter("includeSpaces") @Nullable List<String> includeSpaces,
+        @CustomType.Parameter("spaceFieldMappings") @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
         this.crawlArchivedSpaces = crawlArchivedSpaces;
         this.crawlPersonalSpaces = crawlPersonalSpaces;
         this.excludeSpaces = excludeSpaces;

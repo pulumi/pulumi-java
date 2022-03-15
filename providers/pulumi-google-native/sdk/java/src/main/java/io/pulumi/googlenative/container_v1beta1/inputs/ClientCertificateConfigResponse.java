@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ClientCertificateConfigResponse extends io.pulumi.resources.I
      * Issue a client certificate.
      * 
      */
-    @InputImport(name="issueClientCertificate", required=true)
+    @Import(name="issueClientCertificate", required=true)
       private final Boolean issueClientCertificate;
 
     public Boolean getIssueClientCertificate() {

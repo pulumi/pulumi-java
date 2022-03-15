@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.WorkloadGroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * The workload group importance level.
      * 
      */
-    @OutputExport(name="importance", type=String.class, parameters={})
+    @Export(name="importance", type=String.class, parameters={})
     private Output</* @Nullable */ String> importance;
 
     /**
@@ -50,7 +50,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * The workload group cap percentage resource.
      * 
      */
-    @OutputExport(name="maxResourcePercent", type=Integer.class, parameters={})
+    @Export(name="maxResourcePercent", type=Integer.class, parameters={})
     private Output<Integer> maxResourcePercent;
 
     /**
@@ -64,7 +64,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * The workload group request maximum grant percentage.
      * 
      */
-    @OutputExport(name="maxResourcePercentPerRequest", type=Double.class, parameters={})
+    @Export(name="maxResourcePercentPerRequest", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxResourcePercentPerRequest;
 
     /**
@@ -78,7 +78,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * The workload group minimum percentage resource.
      * 
      */
-    @OutputExport(name="minResourcePercent", type=Integer.class, parameters={})
+    @Export(name="minResourcePercent", type=Integer.class, parameters={})
     private Output<Integer> minResourcePercent;
 
     /**
@@ -92,7 +92,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * The workload group request minimum grant percentage.
      * 
      */
-    @OutputExport(name="minResourcePercentPerRequest", type=Double.class, parameters={})
+    @Export(name="minResourcePercentPerRequest", type=Double.class, parameters={})
     private Output<Double> minResourcePercentPerRequest;
 
     /**
@@ -106,7 +106,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * The workload group query execution timeout.
      * 
      */
-    @OutputExport(name="queryExecutionTimeout", type=Integer.class, parameters={})
+    @Export(name="queryExecutionTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queryExecutionTimeout;
 
     /**
@@ -134,7 +134,7 @@ public class WorkloadGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

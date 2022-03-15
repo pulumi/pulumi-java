@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
      * A human-readable description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class EdgeCacheServiceRoutingPathMatcherArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeRules", required=true)
+    @Import(name="routeRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> routeRules;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleArgs>> getRouteRules() {

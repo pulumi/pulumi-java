@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * Content for embedded child package. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packageContent", required=true)
+    @Import(name="packageContent", required=true)
       private final Object packageContent;
 
     public Object getPackageContent() {
@@ -34,7 +34,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * Last modified date for embedded child package.
      * 
      */
-    @InputImport(name="packageLastModifiedDate")
+    @Import(name="packageLastModifiedDate")
       private final @Nullable String packageLastModifiedDate;
 
     public Optional<String> getPackageLastModifiedDate() {
@@ -45,7 +45,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * Name for embedded child package.
      * 
      */
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable String packageName;
 
     public Optional<String> getPackageName() {
@@ -56,7 +56,7 @@ public final class SSISChildPackageResponse extends io.pulumi.resources.InvokeAr
      * Path for embedded child package. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packagePath", required=true)
+    @Import(name="packagePath", required=true)
       private final Object packagePath;
 
     public Object getPackagePath() {

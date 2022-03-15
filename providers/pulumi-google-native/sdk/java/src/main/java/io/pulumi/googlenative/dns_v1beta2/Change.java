@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ChangeArgs;
@@ -27,7 +27,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * Which ResourceRecordSets to add?
      * 
      */
-    @OutputExport(name="additions", type=List.class, parameters={ResourceRecordSetResponse.class})
+    @Export(name="additions", type=List.class, parameters={ResourceRecordSetResponse.class})
     private Output<List<ResourceRecordSetResponse>> additions;
 
     /**
@@ -41,7 +41,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * Which ResourceRecordSets to remove? Must match existing data exactly.
      * 
      */
-    @OutputExport(name="deletions", type=List.class, parameters={ResourceRecordSetResponse.class})
+    @Export(name="deletions", type=List.class, parameters={ResourceRecordSetResponse.class})
     private Output<List<ResourceRecordSetResponse>> deletions;
 
     /**
@@ -55,7 +55,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * If the DNS queries for the zone will be served.
      * 
      */
-    @OutputExport(name="isServing", type=Boolean.class, parameters={})
+    @Export(name="isServing", type=Boolean.class, parameters={})
     private Output<Boolean> isServing;
 
     /**
@@ -65,7 +65,7 @@ public class Change extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getIsServing() {
         return this.isServing;
     }
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
@@ -75,7 +75,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * The time that this operation was started by the server (output only). This is in RFC3339 text format.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -89,7 +89,7 @@ public class Change extends io.pulumi.resources.CustomResource {
      * Status of the operation (output only). A status of "done" means that the request to update the authoritative servers has been sent, but the servers might not be updated yet.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

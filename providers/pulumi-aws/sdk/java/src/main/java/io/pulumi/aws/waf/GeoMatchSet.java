@@ -8,7 +8,7 @@ import io.pulumi.aws.waf.GeoMatchSetArgs;
 import io.pulumi.aws.waf.inputs.GeoMatchSetState;
 import io.pulumi.aws.waf.outputs.GeoMatchSetGeoMatchConstraint;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class GeoMatchSet extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class GeoMatchSet extends io.pulumi.resources.CustomResource {
      * The GeoMatchConstraint objects which contain the country that you want AWS WAF to search for.
      * 
      */
-    @OutputExport(name="geoMatchConstraints", type=List.class, parameters={GeoMatchSetGeoMatchConstraint.class})
+    @Export(name="geoMatchConstraints", type=List.class, parameters={GeoMatchSetGeoMatchConstraint.class})
     private Output</* @Nullable */ List<GeoMatchSetGeoMatchConstraint>> geoMatchConstraints;
 
     /**
@@ -62,7 +62,7 @@ public class GeoMatchSet extends io.pulumi.resources.CustomResource {
      * The name or description of the GeoMatchSet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.OptionGroupOptionOptionSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
      * A list of DB Security Groups for which the option is enabled.
      * 
      */
-    @InputImport(name="dbSecurityGroupMemberships")
+    @Import(name="dbSecurityGroupMemberships")
       private final @Nullable Output<List<String>> dbSecurityGroupMemberships;
 
     public Output<List<String>> getDbSecurityGroupMemberships() {
@@ -32,7 +32,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
      * The Name of the Option (e.g., MEMCACHED).
      * 
      */
-    @InputImport(name="optionName", required=true)
+    @Import(name="optionName", required=true)
       private final Output<String> optionName;
 
     public Output<String> getOptionName() {
@@ -43,7 +43,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
      * A list of option settings to apply.
      * 
      */
-    @InputImport(name="optionSettings")
+    @Import(name="optionSettings")
       private final @Nullable Output<List<OptionGroupOptionOptionSettingArgs>> optionSettings;
 
     public Output<List<OptionGroupOptionOptionSettingArgs>> getOptionSettings() {
@@ -54,7 +54,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
      * The Port number when connecting to the Option (e.g., 11211).
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -65,7 +65,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
      * The version of the option (e.g., 13.1.0.0).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -76,7 +76,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
      * A list of VPC Security Groups for which the option is enabled.
      * 
      */
-    @InputImport(name="vpcSecurityGroupMemberships")
+    @Import(name="vpcSecurityGroupMemberships")
       private final @Nullable Output<List<String>> vpcSecurityGroupMemberships;
 
     public Output<List<String>> getVpcSecurityGroupMemberships() {

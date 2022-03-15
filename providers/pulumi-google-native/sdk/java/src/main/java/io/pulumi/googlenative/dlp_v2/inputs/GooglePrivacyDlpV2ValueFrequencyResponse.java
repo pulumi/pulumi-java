@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
      * How many times the value is contained in the field.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final String count;
 
     public String getCount() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
      * A value contained in the field in question.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final GooglePrivacyDlpV2ValueResponse value;
 
     public GooglePrivacyDlpV2ValueResponse getValue() {

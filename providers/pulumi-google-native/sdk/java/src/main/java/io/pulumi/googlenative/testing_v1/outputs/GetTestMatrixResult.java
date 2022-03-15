@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoResponse;
 import io.pulumi.googlenative.testing_v1.outputs.EnvironmentMatrixResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ResultStorageResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTestMatrixResult {
     /**
      * Information about the client which invoked the test.
@@ -83,21 +83,21 @@ public final class GetTestMatrixResult {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestMatrixResult(
-        @OutputCustomType.Parameter("clientInfo") ClientInfoResponse clientInfo,
-        @OutputCustomType.Parameter("environmentMatrix") EnvironmentMatrixResponse environmentMatrix,
-        @OutputCustomType.Parameter("failFast") Boolean failFast,
-        @OutputCustomType.Parameter("flakyTestAttempts") Integer flakyTestAttempts,
-        @OutputCustomType.Parameter("invalidMatrixDetails") String invalidMatrixDetails,
-        @OutputCustomType.Parameter("outcomeSummary") String outcomeSummary,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("resultStorage") ResultStorageResponse resultStorage,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("testExecutions") List<TestExecutionResponse> testExecutions,
-        @OutputCustomType.Parameter("testMatrixId") String testMatrixId,
-        @OutputCustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
-        @OutputCustomType.Parameter("timestamp") String timestamp) {
+        @CustomType.Parameter("clientInfo") ClientInfoResponse clientInfo,
+        @CustomType.Parameter("environmentMatrix") EnvironmentMatrixResponse environmentMatrix,
+        @CustomType.Parameter("failFast") Boolean failFast,
+        @CustomType.Parameter("flakyTestAttempts") Integer flakyTestAttempts,
+        @CustomType.Parameter("invalidMatrixDetails") String invalidMatrixDetails,
+        @CustomType.Parameter("outcomeSummary") String outcomeSummary,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("resultStorage") ResultStorageResponse resultStorage,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("testExecutions") List<TestExecutionResponse> testExecutions,
+        @CustomType.Parameter("testMatrixId") String testMatrixId,
+        @CustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
+        @CustomType.Parameter("timestamp") String timestamp) {
         this.clientInfo = clientInfo;
         this.environmentMatrix = environmentMatrix;
         this.failFast = failFast;

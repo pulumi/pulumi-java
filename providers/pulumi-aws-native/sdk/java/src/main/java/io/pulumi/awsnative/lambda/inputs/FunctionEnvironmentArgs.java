@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
      * Environment variable key-value pairs.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Object> variables;
 
     public Output<Object> getVariables() {

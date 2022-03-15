@@ -4,21 +4,21 @@
 package io.pulumi.gcp.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderBatchingArgs {
     private final @Nullable Output<Boolean> enableBatching;
     private final @Nullable Output<String> sendAfter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderBatchingArgs(
-        @OutputCustomType.Parameter("enableBatching") @Nullable Output<Boolean> enableBatching,
-        @OutputCustomType.Parameter("sendAfter") @Nullable Output<String> sendAfter) {
+        @CustomType.Parameter("enableBatching") @Nullable Output<Boolean> enableBatching,
+        @CustomType.Parameter("sendAfter") @Nullable Output<String> sendAfter) {
         this.enableBatching = enableBatching;
         this.sendAfter = sendAfter;
     }

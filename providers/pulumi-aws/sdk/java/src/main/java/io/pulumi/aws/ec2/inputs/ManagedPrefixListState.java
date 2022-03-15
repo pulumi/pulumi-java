@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * Address family (`IPv4` or `IPv6`) of this prefix list.
      * 
      */
-    @InputImport(name="addressFamily")
+    @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -33,7 +33,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * ARN of the prefix list.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
      * 
      */
-    @InputImport(name="entries")
+    @Import(name="entries")
       private final @Nullable Output<List<ManagedPrefixListEntryGetArgs>> entries;
 
     public Output<List<ManagedPrefixListEntryGetArgs>> getEntries() {
@@ -55,7 +55,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * Maximum number of entries that this prefix list can contain.
      * 
      */
-    @InputImport(name="maxEntries")
+    @Import(name="maxEntries")
       private final @Nullable Output<Integer> maxEntries;
 
     public Output<Integer> getMaxEntries() {
@@ -66,7 +66,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * Name of this resource. The name must not start with `com.amazonaws`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * ID of the AWS account that owns this prefix list.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -88,14 +88,14 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -106,7 +106,7 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
      * Latest version of this prefix list.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

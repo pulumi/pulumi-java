@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.DashboardTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDashboardResult {
     /**
      * The ARN of the dashboard.
@@ -44,14 +44,14 @@ public final class GetDashboardResult {
      */
     private final @Nullable List<DashboardTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDashboardResult(
-        @OutputCustomType.Parameter("dashboardArn") @Nullable String dashboardArn,
-        @OutputCustomType.Parameter("dashboardDefinition") @Nullable String dashboardDefinition,
-        @OutputCustomType.Parameter("dashboardDescription") @Nullable String dashboardDescription,
-        @OutputCustomType.Parameter("dashboardId") @Nullable String dashboardId,
-        @OutputCustomType.Parameter("dashboardName") @Nullable String dashboardName,
-        @OutputCustomType.Parameter("tags") @Nullable List<DashboardTag> tags) {
+        @CustomType.Parameter("dashboardArn") @Nullable String dashboardArn,
+        @CustomType.Parameter("dashboardDefinition") @Nullable String dashboardDefinition,
+        @CustomType.Parameter("dashboardDescription") @Nullable String dashboardDescription,
+        @CustomType.Parameter("dashboardId") @Nullable String dashboardId,
+        @CustomType.Parameter("dashboardName") @Nullable String dashboardName,
+        @CustomType.Parameter("tags") @Nullable List<DashboardTag> tags) {
         this.dashboardArn = dashboardArn;
         this.dashboardDefinition = dashboardDefinition;
         this.dashboardDescription = dashboardDescription;

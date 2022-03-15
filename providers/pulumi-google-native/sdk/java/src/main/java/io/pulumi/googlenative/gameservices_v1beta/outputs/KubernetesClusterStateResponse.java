@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesClusterStateResponse {
     /**
      * The version of Agones currently installed in the registered Kubernetes cluster.
@@ -40,14 +40,14 @@ public final class KubernetesClusterStateResponse {
      */
     private final String versionInstalledErrorMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesClusterStateResponse(
-        @OutputCustomType.Parameter("agonesVersionInstalled") String agonesVersionInstalled,
-        @OutputCustomType.Parameter("agonesVersionTargeted") String agonesVersionTargeted,
-        @OutputCustomType.Parameter("installationState") String installationState,
-        @OutputCustomType.Parameter("kubernetesVersionInstalled") String kubernetesVersionInstalled,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("versionInstalledErrorMessage") String versionInstalledErrorMessage) {
+        @CustomType.Parameter("agonesVersionInstalled") String agonesVersionInstalled,
+        @CustomType.Parameter("agonesVersionTargeted") String agonesVersionTargeted,
+        @CustomType.Parameter("installationState") String installationState,
+        @CustomType.Parameter("kubernetesVersionInstalled") String kubernetesVersionInstalled,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("versionInstalledErrorMessage") String versionInstalledErrorMessage) {
         this.agonesVersionInstalled = agonesVersionInstalled;
         this.agonesVersionTargeted = agonesVersionTargeted;
         this.installationState = installationState;

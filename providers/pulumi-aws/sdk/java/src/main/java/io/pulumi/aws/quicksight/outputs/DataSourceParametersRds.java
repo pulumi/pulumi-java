@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersRds {
     /**
      * The database to which to connect.
@@ -20,10 +20,10 @@ public final class DataSourceParametersRds {
      */
     private final String instanceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParametersRds(
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("instanceId") String instanceId) {
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("instanceId") String instanceId) {
         this.database = database;
         this.instanceId = instanceId;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BackendServiceSecuritySettingsArgs extends io.pulumi.resource
      * configuration unless it is attached to a backend service resource.
      * 
      */
-    @InputImport(name="clientTlsPolicy", required=true)
+    @Import(name="clientTlsPolicy", required=true)
       private final Output<String> clientTlsPolicy;
 
     public Output<String> getClientTlsPolicy() {
@@ -33,7 +33,7 @@ public final class BackendServiceSecuritySettingsArgs extends io.pulumi.resource
      * alt name matches one of the specified values.
      * 
      */
-    @InputImport(name="subjectAltNames", required=true)
+    @Import(name="subjectAltNames", required=true)
       private final Output<List<String>> subjectAltNames;
 
     public Output<List<String>> getSubjectAltNames() {

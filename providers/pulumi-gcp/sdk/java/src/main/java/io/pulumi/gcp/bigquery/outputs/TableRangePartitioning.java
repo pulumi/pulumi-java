@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.TableRangePartitioningRange;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableRangePartitioning {
     /**
      * The field used to determine how to create a range-based
@@ -23,10 +23,10 @@ public final class TableRangePartitioning {
      */
     private final TableRangePartitioningRange range;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableRangePartitioning(
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("range") TableRangePartitioningRange range) {
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("range") TableRangePartitioningRange range) {
         this.field = field;
         this.range = range;
     }

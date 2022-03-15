@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManifestResponse {
     /**
      * The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
@@ -26,11 +26,11 @@ public final class ManifestResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManifestResponse(
-        @OutputCustomType.Parameter("fileName") String fileName,
-        @OutputCustomType.Parameter("muxStreams") List<String> muxStreams,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fileName") String fileName,
+        @CustomType.Parameter("muxStreams") List<String> muxStreams,
+        @CustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.muxStreams = muxStreams;
         this.type = type;

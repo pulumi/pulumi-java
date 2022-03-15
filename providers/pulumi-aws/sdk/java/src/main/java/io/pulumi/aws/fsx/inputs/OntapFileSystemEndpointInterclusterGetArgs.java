@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends io.pulumi.
      * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -30,7 +30,7 @@ public final class OntapFileSystemEndpointInterclusterGetArgs extends io.pulumi.
      * IP addresses of the file system endpoint.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {

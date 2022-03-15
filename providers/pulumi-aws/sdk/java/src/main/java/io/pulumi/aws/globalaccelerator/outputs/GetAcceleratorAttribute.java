@@ -3,22 +3,22 @@
 
 package io.pulumi.aws.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAcceleratorAttribute {
     private final Boolean flowLogsEnabled;
     private final String flowLogsS3Bucket;
     private final String flowLogsS3Prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAcceleratorAttribute(
-        @OutputCustomType.Parameter("flowLogsEnabled") Boolean flowLogsEnabled,
-        @OutputCustomType.Parameter("flowLogsS3Bucket") String flowLogsS3Bucket,
-        @OutputCustomType.Parameter("flowLogsS3Prefix") String flowLogsS3Prefix) {
+        @CustomType.Parameter("flowLogsEnabled") Boolean flowLogsEnabled,
+        @CustomType.Parameter("flowLogsS3Bucket") String flowLogsS3Bucket,
+        @CustomType.Parameter("flowLogsS3Prefix") String flowLogsS3Prefix) {
         this.flowLogsEnabled = flowLogsEnabled;
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         this.flowLogsS3Prefix = flowLogsS3Prefix;

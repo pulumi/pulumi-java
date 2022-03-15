@@ -10,7 +10,7 @@ import io.pulumi.aws.apigateway.outputs.UsagePlanApiStage;
 import io.pulumi.aws.apigateway.outputs.UsagePlanQuotaSettings;
 import io.pulumi.aws.apigateway.outputs.UsagePlanThrottleSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The associated API stages of the usage plan.
      * 
      */
-    @OutputExport(name="apiStages", type=List.class, parameters={UsagePlanApiStage.class})
+    @Export(name="apiStages", type=List.class, parameters={UsagePlanApiStage.class})
     private Output</* @Nullable */ List<UsagePlanApiStage>> apiStages;
 
     /**
@@ -51,7 +51,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -65,7 +65,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The description of a usage plan.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The name of the usage plan.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
      * 
      */
-    @OutputExport(name="productCode", type=String.class, parameters={})
+    @Export(name="productCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> productCode;
 
     /**
@@ -107,7 +107,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The quota settings of the usage plan.
      * 
      */
-    @OutputExport(name="quotaSettings", type=UsagePlanQuotaSettings.class, parameters={})
+    @Export(name="quotaSettings", type=UsagePlanQuotaSettings.class, parameters={})
     private Output</* @Nullable */ UsagePlanQuotaSettings> quotaSettings;
 
     /**
@@ -121,7 +121,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -149,7 +149,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The throttling limits of the usage plan.
      * 
      */
-    @OutputExport(name="throttleSettings", type=UsagePlanThrottleSettings.class, parameters={})
+    @Export(name="throttleSettings", type=UsagePlanThrottleSettings.class, parameters={})
     private Output</* @Nullable */ UsagePlanThrottleSettings> throttleSettings;
 
     /**

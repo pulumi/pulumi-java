@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadIdentityPoolProviderOidc {
     private final List<String> allowedAudiences;
     private final String issuerUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadIdentityPoolProviderOidc(
-        @OutputCustomType.Parameter("allowedAudiences") List<String> allowedAudiences,
-        @OutputCustomType.Parameter("issuerUri") String issuerUri) {
+        @CustomType.Parameter("allowedAudiences") List<String> allowedAudiences,
+        @CustomType.Parameter("issuerUri") String issuerUri) {
         this.allowedAudiences = allowedAudiences;
         this.issuerUri = issuerUri;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.VolumeAttachmentSpec;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.VolumeAttachmentStatus;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeAttachment {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -40,13 +40,13 @@ public final class VolumeAttachment {
      */
     private final @Nullable VolumeAttachmentStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeAttachment(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") VolumeAttachmentSpec spec,
-        @OutputCustomType.Parameter("status") @Nullable VolumeAttachmentStatus status) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") VolumeAttachmentSpec spec,
+        @CustomType.Parameter("status") @Nullable VolumeAttachmentStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

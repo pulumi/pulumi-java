@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * Value for `method` should be a valid method name for the corresponding `service_name` in ApiOperation. If `*` used as value for `method`, then ALL methods and permissions are allowed.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
@@ -33,7 +33,7 @@ public final class MethodSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * Value for `permission` should be a valid Cloud IAM permission for the corresponding `service_name` in ApiOperation.
      * 
      */
-    @InputImport(name="permission")
+    @Import(name="permission")
       private final @Nullable Output<String> permission;
 
     public Output<String> getPermission() {

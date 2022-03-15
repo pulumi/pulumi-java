@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
      * The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
      * 
      */
-    @InputImport(name="destinationArn")
+    @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -29,7 +29,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
      * Currently there is only "S3" available as destination type which is also the default value
      * 
      */
-    @InputImport(name="destinationType")
+    @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
     public Output<String> getDestinationType() {
@@ -40,7 +40,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
      * The detector ID of the GuardDuty.
      * 
      */
-    @InputImport(name="detectorId")
+    @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
     public Output<String> getDetectorId() {
@@ -51,7 +51,7 @@ public final class PublishingDestinationState extends io.pulumi.resources.Resour
      * The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces this to be encrypted.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {

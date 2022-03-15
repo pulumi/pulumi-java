@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesEncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * Customer Managed Key details of the resource.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<VaultPropertiesEncryptionArgs> encryption;
 
     public Output<VaultPropertiesEncryptionArgs> getEncryption() {

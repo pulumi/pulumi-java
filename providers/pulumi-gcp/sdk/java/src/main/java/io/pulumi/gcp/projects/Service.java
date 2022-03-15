@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.ServiceArgs;
@@ -50,7 +50,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * services depend on this service when destroying it.
      * 
      */
-    @OutputExport(name="disableDependentServices", type=Boolean.class, parameters={})
+    @Export(name="disableDependentServices", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableDependentServices;
 
     /**
@@ -67,7 +67,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
      * 
      */
-    @OutputExport(name="disableOnDestroy", type=Boolean.class, parameters={})
+    @Export(name="disableOnDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableOnDestroy;
 
     /**
@@ -82,7 +82,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -97,7 +97,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The service to enable.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**

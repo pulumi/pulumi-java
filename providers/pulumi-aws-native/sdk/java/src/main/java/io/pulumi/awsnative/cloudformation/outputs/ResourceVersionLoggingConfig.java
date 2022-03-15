@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceVersionLoggingConfig {
     /**
      * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
@@ -22,10 +22,10 @@ public final class ResourceVersionLoggingConfig {
      */
     private final @Nullable String logRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceVersionLoggingConfig(
-        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
-        @OutputCustomType.Parameter("logRoleArn") @Nullable String logRoleArn) {
+        @CustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @CustomType.Parameter("logRoleArn") @Nullable String logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }

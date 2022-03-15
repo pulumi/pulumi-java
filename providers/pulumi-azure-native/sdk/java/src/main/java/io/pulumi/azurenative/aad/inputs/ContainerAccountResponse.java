@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
      * The account name
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
      * The account password
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -44,7 +44,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
      * The account spn
      * 
      */
-    @InputImport(name="spn")
+    @Import(name="spn")
       private final @Nullable String spn;
 
     public Optional<String> getSpn() {

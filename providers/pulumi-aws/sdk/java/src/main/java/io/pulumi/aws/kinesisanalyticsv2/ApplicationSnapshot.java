@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kinesisanalyticsv2.ApplicationSnapshotArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationSnapshotState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
      * 
      */
-    @OutputExport(name="applicationName", type=String.class, parameters={})
+    @Export(name="applicationName", type=String.class, parameters={})
     private Output<String> applicationName;
 
     /**
@@ -48,7 +48,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * The current application version ID when the snapshot was created.
      * 
      */
-    @OutputExport(name="applicationVersionId", type=Integer.class, parameters={})
+    @Export(name="applicationVersionId", type=Integer.class, parameters={})
     private Output<Integer> applicationVersionId;
 
     /**
@@ -62,7 +62,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * The timestamp of the application snapshot.
      * 
      */
-    @OutputExport(name="snapshotCreationTimestamp", type=String.class, parameters={})
+    @Export(name="snapshotCreationTimestamp", type=String.class, parameters={})
     private Output<String> snapshotCreationTimestamp;
 
     /**
@@ -76,7 +76,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * The name of the application snapshot.
      * 
      */
-    @OutputExport(name="snapshotName", type=String.class, parameters={})
+    @Export(name="snapshotName", type=String.class, parameters={})
     private Output<String> snapshotName;
 
     /**

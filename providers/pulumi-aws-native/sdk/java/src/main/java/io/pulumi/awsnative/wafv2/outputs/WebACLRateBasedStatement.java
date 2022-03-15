@@ -6,25 +6,25 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.outputs.WebACLForwardedIPConfiguration;
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLRateBasedStatement {
     private final WebACLRateBasedStatementAggregateKeyType aggregateKeyType;
     private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
     private final Integer limit;
     private final @Nullable WebACLStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLRateBasedStatement(
-        @OutputCustomType.Parameter("aggregateKeyType") WebACLRateBasedStatementAggregateKeyType aggregateKeyType,
-        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
-        @OutputCustomType.Parameter("limit") Integer limit,
-        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement) {
+        @CustomType.Parameter("aggregateKeyType") WebACLRateBasedStatementAggregateKeyType aggregateKeyType,
+        @CustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
+        @CustomType.Parameter("limit") Integer limit,
+        @CustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = limit;

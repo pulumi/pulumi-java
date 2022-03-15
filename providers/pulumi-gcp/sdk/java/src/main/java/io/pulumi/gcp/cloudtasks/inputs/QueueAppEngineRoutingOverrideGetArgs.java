@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * The host that the task is sent to.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -31,7 +31,7 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * By default, the task is sent to an instance which is available when the task is attempted.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -43,7 +43,7 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * By default, the task is sent to the service which is the default service when the task is attempted.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -55,7 +55,7 @@ public final class QueueAppEngineRoutingOverrideGetArgs extends io.pulumi.resour
      * By default, the task is sent to the version which is the default version when the task is attempted.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

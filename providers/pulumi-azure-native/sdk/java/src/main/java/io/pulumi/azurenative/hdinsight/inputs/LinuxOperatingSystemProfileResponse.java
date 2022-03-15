@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.SshProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
      * The password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -34,7 +34,7 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
      * The SSH profile.
      * 
      */
-    @InputImport(name="sshProfile")
+    @Import(name="sshProfile")
       private final @Nullable SshProfileResponse sshProfile;
 
     public Optional<SshProfileResponse> getSshProfile() {
@@ -45,7 +45,7 @@ public final class LinuxOperatingSystemProfileResponse extends io.pulumi.resourc
      * The username.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

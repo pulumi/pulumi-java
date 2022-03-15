@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
      * A list of URLs of the IP resources used for this NAT rule. These IP addresses must be valid static external IP addresses assigned to the project. This field is used for public NAT.
      * 
      */
-    @InputImport(name="sourceNatActiveIps")
+    @Import(name="sourceNatActiveIps")
       private final @Nullable Output<List<String>> sourceNatActiveIps;
 
     public Output<List<String>> getSourceNatActiveIps() {
@@ -30,7 +30,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
      * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.
      * 
      */
-    @InputImport(name="sourceNatDrainIps")
+    @Import(name="sourceNatDrainIps")
       private final @Nullable Output<List<String>> sourceNatDrainIps;
 
     public Output<List<String>> getSourceNatDrainIps() {

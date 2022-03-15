@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.MHSMIPRuleResponse;
 import io.pulumi.azurenative.keyvault.inputs.MHSMVirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
      * 
      */
-    @InputImport(name="bypass")
+    @Import(name="bypass")
       private final @Nullable String bypass;
 
     public Optional<String> getBypass() {
@@ -36,7 +36,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
@@ -47,7 +47,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * The list of IP address rules.
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable List<MHSMIPRuleResponse> ipRules;
 
     public List<MHSMIPRuleResponse> getIpRules() {
@@ -58,7 +58,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
      * The list of virtual network rules.
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
     public List<MHSMVirtualNetworkRuleResponse> getVirtualNetworkRules() {

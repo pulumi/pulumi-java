@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
      * If true, the builder claims that recipe.arguments is complete, meaning that all external inputs are properly captured in the recipe.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<Boolean> arguments;
 
     public Output<Boolean> getArguments() {
@@ -33,7 +33,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
      * If true, the builder claims that recipe.environment is claimed to be complete.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<Boolean> environment;
 
     public Output<Boolean> getEnvironment() {
@@ -44,7 +44,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
      * If true, the builder claims that materials are complete, usually through some controls to prevent network access. Sometimes called "hermetic".
      * 
      */
-    @InputImport(name="materials")
+    @Import(name="materials")
       private final @Nullable Output<Boolean> materials;
 
     public Output<Boolean> getMaterials() {

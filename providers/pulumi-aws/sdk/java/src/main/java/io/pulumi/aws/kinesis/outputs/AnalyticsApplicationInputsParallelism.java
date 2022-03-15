@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputsParallelism {
     /**
      * The Count of streams.
@@ -17,8 +17,8 @@ public final class AnalyticsApplicationInputsParallelism {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor
-    private AnalyticsApplicationInputsParallelism(@OutputCustomType.Parameter("count") @Nullable Integer count) {
+    @CustomType.Constructor
+    private AnalyticsApplicationInputsParallelism(@CustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

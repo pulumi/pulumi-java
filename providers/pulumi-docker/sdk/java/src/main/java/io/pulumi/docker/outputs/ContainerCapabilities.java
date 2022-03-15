@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerCapabilities {
     private final @Nullable List<String> adds;
     private final @Nullable List<String> drops;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerCapabilities(
-        @OutputCustomType.Parameter("adds") @Nullable List<String> adds,
-        @OutputCustomType.Parameter("drops") @Nullable List<String> drops) {
+        @CustomType.Parameter("adds") @Nullable List<String> adds,
+        @CustomType.Parameter("drops") @Nullable List<String> drops) {
         this.adds = adds;
         this.drops = drops;
     }

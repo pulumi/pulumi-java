@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig {
     /**
      * Common alphabets.
@@ -62,14 +62,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig(
-        @OutputCustomType.Parameter("commonAlphabet") @Nullable String commonAlphabet,
-        @OutputCustomType.Parameter("context") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext context,
-        @OutputCustomType.Parameter("cryptoKey") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey cryptoKey,
-        @OutputCustomType.Parameter("customAlphabet") @Nullable String customAlphabet,
-        @OutputCustomType.Parameter("radix") @Nullable Integer radix,
-        @OutputCustomType.Parameter("surrogateInfoType") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType) {
+        @CustomType.Parameter("commonAlphabet") @Nullable String commonAlphabet,
+        @CustomType.Parameter("context") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext context,
+        @CustomType.Parameter("cryptoKey") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey cryptoKey,
+        @CustomType.Parameter("customAlphabet") @Nullable String customAlphabet,
+        @CustomType.Parameter("radix") @Nullable Integer radix,
+        @CustomType.Parameter("surrogateInfoType") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType) {
         this.commonAlphabet = commonAlphabet;
         this.context = context;
         this.cryptoKey = cryptoKey;

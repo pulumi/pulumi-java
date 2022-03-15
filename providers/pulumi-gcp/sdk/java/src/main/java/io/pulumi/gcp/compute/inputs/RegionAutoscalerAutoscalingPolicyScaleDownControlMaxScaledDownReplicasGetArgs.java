@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDow
      * integer.
      * 
      */
-    @InputImport(name="fixed")
+    @Import(name="fixed")
       private final @Nullable Output<Integer> fixed;
 
     public Output<Integer> getFixed() {
@@ -31,7 +31,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDow
      * For example, specify 80 for 80%.
      * 
      */
-    @InputImport(name="percent")
+    @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
     public Output<Integer> getPercent() {

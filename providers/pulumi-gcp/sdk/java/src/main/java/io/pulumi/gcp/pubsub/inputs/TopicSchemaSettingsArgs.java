@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
      * Possible values are `ENCODING_UNSPECIFIED`, `JSON`, and `BINARY`.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -34,7 +34,7 @@ public final class TopicSchemaSettingsArgs extends io.pulumi.resources.ResourceA
      * if the schema has been deleted.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<String> schema;
 
     public Output<String> getSchema() {

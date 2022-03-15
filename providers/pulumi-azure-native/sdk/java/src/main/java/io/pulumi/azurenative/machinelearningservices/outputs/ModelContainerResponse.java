@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelContainerResponse {
     /**
      * The asset description text.
@@ -28,11 +28,11 @@ public final class ModelContainerResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelContainerResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.description = description;
         this.properties = properties;
         this.tags = tags;

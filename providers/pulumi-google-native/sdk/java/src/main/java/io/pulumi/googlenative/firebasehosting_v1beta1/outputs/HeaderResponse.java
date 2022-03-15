@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HeaderResponse {
     /**
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
@@ -26,11 +26,11 @@ public final class HeaderResponse {
      */
     private final String regex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HeaderResponse(
-        @OutputCustomType.Parameter("glob") String glob,
-        @OutputCustomType.Parameter("headers") Map<String,String> headers,
-        @OutputCustomType.Parameter("regex") String regex) {
+        @CustomType.Parameter("glob") String glob,
+        @CustomType.Parameter("headers") Map<String,String> headers,
+        @CustomType.Parameter("regex") String regex) {
         this.glob = glob;
         this.headers = headers;
         this.regex = regex;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.QueryListArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
@@ -37,7 +37,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The runtime log config for job execution.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
     public Output<LoggingConfigArgs> getLoggingConfig() {
@@ -48,7 +48,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Dataproc API may be overwritten.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -59,7 +59,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
      * The HCFS URI of the script that contains SQL queries.
      * 
      */
-    @InputImport(name="queryFileUri")
+    @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
@@ -70,7 +70,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
      * A list of queries.
      * 
      */
-    @InputImport(name="queryList")
+    @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
 
     public Output<QueryListArgs> getQueryList() {
@@ -81,7 +81,7 @@ public final class SparkSqlJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
      * 
      */
-    @InputImport(name="scriptVariables")
+    @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
     public Output<Map<String,String>> getScriptVariables() {

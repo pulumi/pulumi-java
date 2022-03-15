@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.DatacenterConnectorArgs;
@@ -23,7 +23,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The communication channel between the datacenter connector and GCP.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -37,7 +37,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The time the connector was created (as an API call, not when it was actually installed).
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -51,7 +51,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * Provides details on the state of the Datacenter Connector in case of an error.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -65,7 +65,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The connector's name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
      * 
      */
-    @OutputExport(name="registrationId", type=String.class, parameters={})
+    @Export(name="registrationId", type=String.class, parameters={})
     private Output<String> registrationId;
 
     /**
@@ -93,7 +93,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The service account to use in the connector when communicating with the cloud.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -107,7 +107,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * State of the DatacenterConnector, as determined by the health checks.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -121,7 +121,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The time the state was last set.
      * 
      */
-    @OutputExport(name="stateTime", type=String.class, parameters={})
+    @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
@@ -135,7 +135,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The last time the connector was updated with an API call.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -149,7 +149,7 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
      * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

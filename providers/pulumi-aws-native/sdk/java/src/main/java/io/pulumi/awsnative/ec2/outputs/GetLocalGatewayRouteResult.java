@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalGatewayRouteResult {
     /**
      * The state of the route.
@@ -22,10 +22,10 @@ public final class GetLocalGatewayRouteResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalGatewayRouteResult(
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.state = state;
         this.type = type;
     }

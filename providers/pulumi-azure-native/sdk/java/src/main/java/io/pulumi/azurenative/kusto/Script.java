@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kusto.ScriptArgs;
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * Flag that indicates whether to continue if one of the command fails.
      * 
      */
-    @OutputExport(name="continueOnErrors", type=Boolean.class, parameters={})
+    @Export(name="continueOnErrors", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> continueOnErrors;
 
     /**
@@ -50,7 +50,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * A unique string. If changed the script will be applied again.
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -64,7 +64,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * The url to the KQL script blob file.
      * 
      */
-    @OutputExport(name="scriptUrl", type=String.class, parameters={})
+    @Export(name="scriptUrl", type=String.class, parameters={})
     private Output<String> scriptUrl;
 
     /**
@@ -106,7 +106,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -120,7 +120,7 @@ public class Script extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

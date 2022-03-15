@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KnowledgeBaseResponse {
     /**
      * The KB name (generally of the form KB[0-9]+ i.e. KB123456).
@@ -20,10 +20,10 @@ public final class KnowledgeBaseResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KnowledgeBaseResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }

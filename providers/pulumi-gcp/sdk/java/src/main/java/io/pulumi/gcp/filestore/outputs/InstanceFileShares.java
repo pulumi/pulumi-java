@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.filestore.outputs.InstanceFileSharesNfsExportOption;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFileShares {
     /**
      * File share capacity in GiB. This must be at least 1024 GiB
@@ -31,11 +31,11 @@ public final class InstanceFileShares {
      */
     private final @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFileShares(
-        @OutputCustomType.Parameter("capacityGb") Integer capacityGb,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nfsExportOptions") @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
+        @CustomType.Parameter("capacityGb") Integer capacityGb,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nfsExportOptions") @Nullable List<InstanceFileSharesNfsExportOption> nfsExportOptions) {
         this.capacityGb = capacityGb;
         this.name = name;
         this.nfsExportOptions = nfsExportOptions;

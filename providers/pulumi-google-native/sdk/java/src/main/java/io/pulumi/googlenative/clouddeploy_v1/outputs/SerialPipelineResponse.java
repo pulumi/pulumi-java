@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.StageResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SerialPipelineResponse {
     /**
      * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
@@ -16,8 +16,8 @@ public final class SerialPipelineResponse {
      */
     private final List<StageResponse> stages;
 
-    @OutputCustomType.Constructor
-    private SerialPipelineResponse(@OutputCustomType.Parameter("stages") List<StageResponse> stages) {
+    @CustomType.Constructor
+    private SerialPipelineResponse(@CustomType.Parameter("stages") List<StageResponse> stages) {
         this.stages = stages;
     }
 

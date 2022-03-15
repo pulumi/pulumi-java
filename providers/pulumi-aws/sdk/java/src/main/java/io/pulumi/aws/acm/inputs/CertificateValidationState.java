@@ -4,7 +4,7 @@
 package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
      * The ARN of the certificate that is being validated.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -30,7 +30,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
      * List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
      * 
      */
-    @InputImport(name="validationRecordFqdns")
+    @Import(name="validationRecordFqdns")
       private final @Nullable Output<List<String>> validationRecordFqdns;
 
     public Output<List<String>> getValidationRecordFqdns() {

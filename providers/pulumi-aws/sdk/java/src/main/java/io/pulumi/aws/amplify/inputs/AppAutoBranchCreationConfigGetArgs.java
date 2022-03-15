@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * The basic authorization credentials for the autocreated branch.
      * 
      */
-    @InputImport(name="basicAuthCredentials")
+    @Import(name="basicAuthCredentials")
       private final @Nullable Output<String> basicAuthCredentials;
 
     public Output<String> getBasicAuthCredentials() {
@@ -31,7 +31,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * The build specification (build spec) for the autocreated branch.
      * 
      */
-    @InputImport(name="buildSpec")
+    @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
@@ -42,7 +42,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * Enables auto building for the autocreated branch.
      * 
      */
-    @InputImport(name="enableAutoBuild")
+    @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
     public Output<Boolean> getEnableAutoBuild() {
@@ -53,7 +53,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * Enables basic authorization for the autocreated branch.
      * 
      */
-    @InputImport(name="enableBasicAuth")
+    @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
     public Output<Boolean> getEnableBasicAuth() {
@@ -64,7 +64,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * Enables performance mode for the branch.
      * 
      */
-    @InputImport(name="enablePerformanceMode")
+    @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
     public Output<Boolean> getEnablePerformanceMode() {
@@ -75,7 +75,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * Enables pull request previews for the autocreated branch.
      * 
      */
-    @InputImport(name="enablePullRequestPreview")
+    @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
     public Output<Boolean> getEnablePullRequestPreview() {
@@ -86,7 +86,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * The environment variables for the autocreated branch.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -97,7 +97,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * The framework for the autocreated branch.
      * 
      */
-    @InputImport(name="framework")
+    @Import(name="framework")
       private final @Nullable Output<String> framework;
 
     public Output<String> getFramework() {
@@ -108,7 +108,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * The Amplify environment name for the pull request.
      * 
      */
-    @InputImport(name="pullRequestEnvironmentName")
+    @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
     public Output<String> getPullRequestEnvironmentName() {
@@ -119,7 +119,7 @@ public final class AppAutoBranchCreationConfigGetArgs extends io.pulumi.resource
      * Describes the current stage for the autocreated branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {

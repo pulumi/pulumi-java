@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleSettingsResponse {
     /**
      * Represents maximum throughput, the resource can scale up to.
@@ -17,8 +17,8 @@ public final class AutoscaleSettingsResponse {
      */
     private final @Nullable Integer maxThroughput;
 
-    @OutputCustomType.Constructor
-    private AutoscaleSettingsResponse(@OutputCustomType.Parameter("maxThroughput") @Nullable Integer maxThroughput) {
+    @CustomType.Constructor
+    private AutoscaleSettingsResponse(@CustomType.Parameter("maxThroughput") @Nullable Integer maxThroughput) {
         this.maxThroughput = maxThroughput;
     }
 

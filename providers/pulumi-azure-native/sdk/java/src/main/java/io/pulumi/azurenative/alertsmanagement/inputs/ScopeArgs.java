@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 import io.pulumi.azurenative.alertsmanagement.enums.ScopeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * type of target scope
      * 
      */
-    @InputImport(name="scopeType")
+    @Import(name="scopeType")
       private final @Nullable Output<Either<String,ScopeType>> scopeType;
 
     public Output<Either<String,ScopeType>> getScopeType() {
@@ -36,7 +36,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * list of ARM IDs of the given scope type which will be the target of the given action rule.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * The Azure Resource Manager ID of the storage account resource.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * The storage account key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {

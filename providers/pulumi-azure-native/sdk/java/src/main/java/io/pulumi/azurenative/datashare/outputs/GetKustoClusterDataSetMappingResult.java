@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKustoClusterDataSetMappingResult {
     /**
      * The id of the source data set.
@@ -62,18 +62,18 @@ public final class GetKustoClusterDataSetMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKustoClusterDataSetMappingResult(
-        @OutputCustomType.Parameter("dataSetId") String dataSetId,
-        @OutputCustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("kustoClusterResourceId") String kustoClusterResourceId,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataSetId") String dataSetId,
+        @CustomType.Parameter("dataSetMappingStatus") String dataSetMappingStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("kustoClusterResourceId") String kustoClusterResourceId,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataSetMappingStatus = dataSetMappingStatus;
         this.id = id;

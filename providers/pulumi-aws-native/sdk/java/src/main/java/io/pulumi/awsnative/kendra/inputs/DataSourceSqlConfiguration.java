@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceQueryIdentifiersEnclosingOption;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DataSourceSqlConfiguration extends io.pulumi.resources.Invoke
 
     public static final DataSourceSqlConfiguration Empty = new DataSourceSqlConfiguration();
 
-    @InputImport(name="queryIdentifiersEnclosingOption")
+    @Import(name="queryIdentifiersEnclosingOption")
       private final @Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption;
 
     public Optional<DataSourceQueryIdentifiersEnclosingOption> getQueryIdentifiersEnclosingOption() {

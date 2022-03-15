@@ -5,7 +5,7 @@ package io.pulumi.awsnative.efs.inputs;
 
 import io.pulumi.awsnative.efs.inputs.AccessPointCreationInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
      * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's RootDirectory. If the RootDirectory>Path specified does not exist, EFS creates the root directory using the CreationInfo settings when a client connects to an access point. When specifying the CreationInfo, you must provide values for all properties.   If you do not provide CreationInfo and the specified RootDirectory>Path does not exist, attempts to mount the file system using the access point will fail.
      * 
      */
-    @InputImport(name="creationInfo")
+    @Import(name="creationInfo")
       private final @Nullable Output<AccessPointCreationInfoArgs> creationInfo;
 
     public Output<AccessPointCreationInfoArgs> getCreationInfo() {
@@ -30,7 +30,7 @@ public final class AccessPointRootDirectoryArgs extends io.pulumi.resources.Reso
      * Specifies the path on the EFS file system to expose as the root directory to NFS clients using the access point to access the EFS file system. A path can have up to four subdirectories. If the specified path does not exist, you are required to provide the CreationInfo.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

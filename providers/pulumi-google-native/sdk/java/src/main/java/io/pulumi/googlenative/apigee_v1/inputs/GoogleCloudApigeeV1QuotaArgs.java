@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * Time interval over which the number of request messages is calculated.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<String> interval;
 
     public Output<String> getInterval() {
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * Upper limit allowed for the time interval and time unit specified. Requests exceeding this limit will be rejected.
      * 
      */
-    @InputImport(name="limit", required=true)
+    @Import(name="limit", required=true)
       private final Output<String> limit;
 
     public Output<String> getLimit() {
@@ -44,7 +44,7 @@ public final class GoogleCloudApigeeV1QuotaArgs extends io.pulumi.resources.Reso
      * Time unit defined for the `interval`. Valid values include `minute`, `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default value is `hour`; otherwise, the default is null.
      * 
      */
-    @InputImport(name="timeUnit")
+    @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
     public Output<String> getTimeUnit() {

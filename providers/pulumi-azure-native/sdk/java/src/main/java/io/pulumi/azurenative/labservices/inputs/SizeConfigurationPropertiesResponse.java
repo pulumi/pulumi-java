@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.EnvironmentSizeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SizeConfigurationPropertiesResponse extends io.pulumi.resourc
      * Represents a list of size categories supported by this Lab Account (Small, Medium, Large)
      * 
      */
-    @InputImport(name="environmentSizes")
+    @Import(name="environmentSizes")
       private final @Nullable List<EnvironmentSizeResponse> environmentSizes;
 
     public List<EnvironmentSizeResponse> getEnvironmentSizes() {

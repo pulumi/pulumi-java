@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * The cidr block of the desired VPC.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable String cidrBlock;
 
     public Optional<String> getCidrBlock() {
@@ -34,7 +34,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * the default VPC for the region.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Boolean $default;
 
     public Optional<Boolean> get$default() {
@@ -45,7 +45,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * The DHCP options id of the desired VPC.
      * 
      */
-    @InputImport(name="dhcpOptionsId")
+    @Import(name="dhcpOptionsId")
       private final @Nullable String dhcpOptionsId;
 
     public Optional<String> getDhcpOptionsId() {
@@ -56,7 +56,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpcFilter> filters;
 
     public List<GetVpcFilter> getFilters() {
@@ -67,7 +67,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * The id of the specific VPC to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -79,7 +79,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * Can be either `"pending"` or `"available"`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -91,7 +91,7 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired VPC.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

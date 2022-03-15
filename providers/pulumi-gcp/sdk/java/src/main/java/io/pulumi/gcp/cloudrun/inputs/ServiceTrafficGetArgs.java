@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
      * false when RevisionName is non-empty.
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Output<Boolean> latestRevision;
 
     public Output<Boolean> getLatestRevision() {
@@ -34,7 +34,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
      * Percent specifies percent of the traffic to this Revision or Configuration.
      * 
      */
-    @InputImport(name="percent", required=true)
+    @Import(name="percent", required=true)
       private final Output<Integer> percent;
 
     public Output<Integer> getPercent() {
@@ -45,7 +45,7 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
      * RevisionName of a specific revision to which to send this portion of traffic.
      * 
      */
-    @InputImport(name="revisionName")
+    @Import(name="revisionName")
       private final @Nullable Output<String> revisionName;
 
     public Output<String> getRevisionName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StaticWebLayerEbsVolume {
     private final @Nullable Boolean encrypted;
     /**
@@ -45,15 +45,15 @@ public final class StaticWebLayerEbsVolume {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticWebLayerEbsVolume(
-        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("mountPoint") String mountPoint,
-        @OutputCustomType.Parameter("numberOfDisks") Integer numberOfDisks,
-        @OutputCustomType.Parameter("raidLevel") @Nullable String raidLevel,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("mountPoint") String mountPoint,
+        @CustomType.Parameter("numberOfDisks") Integer numberOfDisks,
+        @CustomType.Parameter("raidLevel") @Nullable String raidLevel,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.encrypted = encrypted;
         this.iops = iops;
         this.mountPoint = mountPoint;

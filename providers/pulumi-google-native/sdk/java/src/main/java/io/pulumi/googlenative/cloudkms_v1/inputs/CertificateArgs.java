@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The raw certificate bytes in DER format.
      * 
      */
-    @InputImport(name="rawDer", required=true)
+    @Import(name="rawDer", required=true)
       private final Output<String> rawDer;
 
     public Output<String> getRawDer() {

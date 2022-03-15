@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata property name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Container App secret from which to pull the metadata property value.
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<String> secretRef;
 
     public Output<String> getSecretRef() {
@@ -44,7 +44,7 @@ public final class DaprMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata property value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

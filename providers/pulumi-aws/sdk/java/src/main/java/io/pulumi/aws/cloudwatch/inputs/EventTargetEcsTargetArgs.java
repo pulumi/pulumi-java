@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetNetworkConfigurationArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetEcsTargetPlacementConstraintArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Specifies whether to enable Amazon ECS managed tags for the task.
      * 
      */
-    @InputImport(name="enableEcsManagedTags")
+    @Import(name="enableEcsManagedTags")
       private final @Nullable Output<Boolean> enableEcsManagedTags;
 
     public Output<Boolean> getEnableEcsManagedTags() {
@@ -35,7 +35,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Whether or not to enable the execute command functionality for the containers in this task. If true, this enables execute command functionality on all containers in the task.
      * 
      */
-    @InputImport(name="enableExecuteCommand")
+    @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
     public Output<Boolean> getEnableExecuteCommand() {
@@ -46,7 +46,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Specifies an ECS task group for the task. The maximum length is 255 characters.
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -57,7 +57,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values include: an empty string `""` (to specify no launch type), `EC2`, or `FARGATE`.
      * 
      */
-    @InputImport(name="launchType")
+    @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
     public Output<String> getLaunchType() {
@@ -68,7 +68,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Use this if the ECS task uses the awsvpc network mode. This specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. Required if launch_type is FARGATE because the awsvpc mode is required for Fargate tasks.
      * 
      */
-    @InputImport(name="networkConfiguration")
+    @Import(name="networkConfiguration")
       private final @Nullable Output<EventTargetEcsTargetNetworkConfigurationArgs> networkConfiguration;
 
     public Output<EventTargetEcsTargetNetworkConfigurationArgs> getNetworkConfiguration() {
@@ -79,7 +79,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * An array of placement constraint objects to use for the task. You can specify up to 10 constraints per task (including constraints in the task definition and those specified at runtime). See Below.
      * 
      */
-    @InputImport(name="placementConstraints")
+    @Import(name="placementConstraints")
       private final @Nullable Output<List<EventTargetEcsTargetPlacementConstraintArgs>> placementConstraints;
 
     public Output<List<EventTargetEcsTargetPlacementConstraintArgs>> getPlacementConstraints() {
@@ -90,7 +90,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
      * 
      */
-    @InputImport(name="platformVersion")
+    @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
     public Output<String> getPlatformVersion() {
@@ -101,7 +101,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * Specifies whether to propagate the tags from the task definition to the task. If no value is specified, the tags are not propagated. Tags can only be propagated to the task during task creation.
      * 
      */
-    @InputImport(name="propagateTags")
+    @Import(name="propagateTags")
       private final @Nullable Output<String> propagateTags;
 
     public Output<String> getPropagateTags() {
@@ -112,7 +112,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * A map of tags to assign to ecs resources.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -123,7 +123,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * The number of tasks to create based on the TaskDefinition. The default is 1.
      * 
      */
-    @InputImport(name="taskCount")
+    @Import(name="taskCount")
       private final @Nullable Output<Integer> taskCount;
 
     public Output<Integer> getTaskCount() {
@@ -134,7 +134,7 @@ public final class EventTargetEcsTargetArgs extends io.pulumi.resources.Resource
      * The ARN of the task definition to use if the event target is an Amazon ECS cluster.
      * 
      */
-    @InputImport(name="taskDefinitionArn", required=true)
+    @Import(name="taskDefinitionArn", required=true)
       private final Output<String> taskDefinitionArn;
 
     public Output<String> getTaskDefinitionArn() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * GUID that represents the principal ID of this resource identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -31,7 +31,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * GUID that represents the tenant ID of this resource identity.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -42,7 +42,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * String of the resource identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

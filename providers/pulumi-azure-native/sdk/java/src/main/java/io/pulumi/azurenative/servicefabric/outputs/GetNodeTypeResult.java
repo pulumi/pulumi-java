@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.outputs;
 import io.pulumi.azurenative.servicefabric.outputs.EndpointRangeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VMSSExtensionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VaultSecretGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeTypeResult {
     /**
      * The range of ports from which cluster assigned port to Service Fabric applications.
@@ -114,27 +114,27 @@ public final class GetNodeTypeResult {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeTypeResult(
-        @OutputCustomType.Parameter("applicationPorts") @Nullable EndpointRangeDescriptionResponse applicationPorts,
-        @OutputCustomType.Parameter("capacities") @Nullable Map<String,String> capacities,
-        @OutputCustomType.Parameter("dataDiskSizeGB") Integer dataDiskSizeGB,
-        @OutputCustomType.Parameter("ephemeralPorts") @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isPrimary") Boolean isPrimary,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("placementProperties") @Nullable Map<String,String> placementProperties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmExtensions") @Nullable List<VMSSExtensionResponse> vmExtensions,
-        @OutputCustomType.Parameter("vmImageOffer") @Nullable String vmImageOffer,
-        @OutputCustomType.Parameter("vmImagePublisher") @Nullable String vmImagePublisher,
-        @OutputCustomType.Parameter("vmImageSku") @Nullable String vmImageSku,
-        @OutputCustomType.Parameter("vmImageVersion") @Nullable String vmImageVersion,
-        @OutputCustomType.Parameter("vmInstanceCount") Integer vmInstanceCount,
-        @OutputCustomType.Parameter("vmSecrets") @Nullable List<VaultSecretGroupResponse> vmSecrets,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("applicationPorts") @Nullable EndpointRangeDescriptionResponse applicationPorts,
+        @CustomType.Parameter("capacities") @Nullable Map<String,String> capacities,
+        @CustomType.Parameter("dataDiskSizeGB") Integer dataDiskSizeGB,
+        @CustomType.Parameter("ephemeralPorts") @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isPrimary") Boolean isPrimary,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("placementProperties") @Nullable Map<String,String> placementProperties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmExtensions") @Nullable List<VMSSExtensionResponse> vmExtensions,
+        @CustomType.Parameter("vmImageOffer") @Nullable String vmImageOffer,
+        @CustomType.Parameter("vmImagePublisher") @Nullable String vmImagePublisher,
+        @CustomType.Parameter("vmImageSku") @Nullable String vmImageSku,
+        @CustomType.Parameter("vmImageVersion") @Nullable String vmImageVersion,
+        @CustomType.Parameter("vmInstanceCount") Integer vmInstanceCount,
+        @CustomType.Parameter("vmSecrets") @Nullable List<VaultSecretGroupResponse> vmSecrets,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
         this.dataDiskSizeGB = dataDiskSizeGB;

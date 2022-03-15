@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiskAutoSnapshotAddOnArgs extends io.pulumi.resources.Resourc
      * The daily time when an automatic snapshot will be created.
      * 
      */
-    @InputImport(name="snapshotTimeOfDay")
+    @Import(name="snapshotTimeOfDay")
       private final @Nullable Output<String> snapshotTimeOfDay;
 
     public Output<String> getSnapshotTimeOfDay() {

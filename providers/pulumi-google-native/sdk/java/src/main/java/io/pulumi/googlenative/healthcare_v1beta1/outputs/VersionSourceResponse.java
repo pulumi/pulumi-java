@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VersionSourceResponse {
     /**
      * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
@@ -20,10 +20,10 @@ public final class VersionSourceResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VersionSourceResponse(
-        @OutputCustomType.Parameter("mshField") String mshField,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("mshField") String mshField,
+        @CustomType.Parameter("value") String value) {
         this.mshField = mshField;
         this.value = value;
     }

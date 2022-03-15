@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
      * The Asset Id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -34,7 +34,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
      * The mime type.
      * 
      */
-    @InputImport(name="mimeType")
+    @Import(name="mimeType")
       private final @Nullable String mimeType;
 
     public Optional<String> getMimeType() {
@@ -45,7 +45,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
      * Whether the Asset is unpacked.
      * 
      */
-    @InputImport(name="unpack")
+    @Import(name="unpack")
       private final @Nullable Boolean unpack;
 
     public Optional<Boolean> getUnpack() {
@@ -56,7 +56,7 @@ public final class ImageAssetResponse extends io.pulumi.resources.InvokeArgs {
      * The Url of the Asset.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

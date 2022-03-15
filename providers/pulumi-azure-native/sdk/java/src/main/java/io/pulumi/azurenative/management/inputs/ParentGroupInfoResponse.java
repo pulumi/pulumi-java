@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * The friendly name of the parent management group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -44,7 +44,7 @@ public final class ParentGroupInfoResponse extends io.pulumi.resources.InvokeArg
      * The name of the parent management group
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable String caching;
 
     public Optional<String> getCaching() {
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * The create option.
      * 
      */
-    @InputImport(name="createOption", required=true)
+    @Import(name="createOption", required=true)
       private final String createOption;
 
     public String getCreateOption() {
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
      * 
      */
-    @InputImport(name="diskIOPSReadWrite")
+    @Import(name="diskIOPSReadWrite")
       private final @Nullable Double diskIOPSReadWrite;
 
     public Optional<Double> getDiskIOPSReadWrite() {
@@ -59,7 +59,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
      * 
      */
-    @InputImport(name="diskMBpsReadWrite")
+    @Import(name="diskMBpsReadWrite")
       private final @Nullable Double diskMBpsReadWrite;
 
     public Optional<Double> getDiskMBpsReadWrite() {
@@ -70,7 +70,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -81,7 +81,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Integer lun;
 
     public Integer getLun() {
@@ -92,7 +92,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * The managed disk parameters.
      * 
      */
-    @InputImport(name="managedDisk")
+    @Import(name="managedDisk")
       private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> getManagedDisk() {
@@ -103,7 +103,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -114,7 +114,7 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
      */
-    @InputImport(name="writeAcceleratorEnabled")
+    @Import(name="writeAcceleratorEnabled")
       private final @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> getWriteAcceleratorEnabled() {

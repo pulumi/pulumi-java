@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleFirehoseAction {
     private final @Nullable Boolean batchMode;
     private final String deliveryStreamName;
     private final String roleArn;
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleFirehoseAction(
-        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
-        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("separator") @Nullable String separator) {
+        @CustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @CustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("separator") @Nullable String separator) {
         this.batchMode = batchMode;
         this.deliveryStreamName = deliveryStreamName;
         this.roleArn = roleArn;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleStopAction {
     /**
      * The position of the action in the receipt rule
@@ -28,11 +28,11 @@ public final class ReceiptRuleStopAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleStopAction(
-        @OutputCustomType.Parameter("position") Integer position,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
+        @CustomType.Parameter("position") Integer position,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.position = position;
         this.scope = scope;
         this.topicArn = topicArn;

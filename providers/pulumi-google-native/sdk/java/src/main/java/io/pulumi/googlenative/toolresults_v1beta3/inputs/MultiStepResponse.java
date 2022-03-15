@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.PrimaryStepResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
      * 
      */
-    @InputImport(name="multistepNumber", required=true)
+    @Import(name="multistepNumber", required=true)
       private final Integer multistepNumber;
 
     public Integer getMultistepNumber() {
@@ -33,7 +33,7 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
      * Present if it is a primary (original) step.
      * 
      */
-    @InputImport(name="primaryStep", required=true)
+    @Import(name="primaryStep", required=true)
       private final PrimaryStepResponse primaryStep;
 
     public PrimaryStepResponse getPrimaryStep() {
@@ -44,7 +44,7 @@ public final class MultiStepResponse extends io.pulumi.resources.InvokeArgs {
      * Step Id of the primary (original) step, which might be this step.
      * 
      */
-    @InputImport(name="primaryStepId", required=true)
+    @Import(name="primaryStepId", required=true)
       private final String primaryStepId;
 
     public String getPrimaryStepId() {

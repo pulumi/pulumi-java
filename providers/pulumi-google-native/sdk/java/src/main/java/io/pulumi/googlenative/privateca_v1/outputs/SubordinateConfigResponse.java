@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.SubordinateConfigChainResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubordinateConfigResponse {
     /**
      * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
@@ -21,10 +21,10 @@ public final class SubordinateConfigResponse {
      */
     private final SubordinateConfigChainResponse pemIssuerChain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubordinateConfigResponse(
-        @OutputCustomType.Parameter("certificateAuthority") String certificateAuthority,
-        @OutputCustomType.Parameter("pemIssuerChain") SubordinateConfigChainResponse pemIssuerChain) {
+        @CustomType.Parameter("certificateAuthority") String certificateAuthority,
+        @CustomType.Parameter("pemIssuerChain") SubordinateConfigChainResponse pemIssuerChain) {
         this.certificateAuthority = certificateAuthority;
         this.pemIssuerChain = pemIssuerChain;
     }

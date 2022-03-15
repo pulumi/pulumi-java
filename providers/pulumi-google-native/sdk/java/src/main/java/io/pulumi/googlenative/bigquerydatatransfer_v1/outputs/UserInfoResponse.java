@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserInfoResponse {
     /**
      * E-mail address of the user.
@@ -15,8 +15,8 @@ public final class UserInfoResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor
-    private UserInfoResponse(@OutputCustomType.Parameter("email") String email) {
+    @CustomType.Constructor
+    private UserInfoResponse(@CustomType.Parameter("email") String email) {
         this.email = email;
     }
 

@@ -6,13 +6,13 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupJsonBody;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupFieldToMatch {
     /**
      * All query arguments of a web request.
@@ -47,16 +47,16 @@ public final class RuleGroupFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupFieldToMatch(
-        @OutputCustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
-        @OutputCustomType.Parameter("body") @Nullable Object body,
-        @OutputCustomType.Parameter("jsonBody") @Nullable RuleGroupJsonBody jsonBody,
-        @OutputCustomType.Parameter("method") @Nullable Object method,
-        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
-        @OutputCustomType.Parameter("singleHeader") @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader,
-        @OutputCustomType.Parameter("singleQueryArgument") @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
-        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
+        @CustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
+        @CustomType.Parameter("body") @Nullable Object body,
+        @CustomType.Parameter("jsonBody") @Nullable RuleGroupJsonBody jsonBody,
+        @CustomType.Parameter("method") @Nullable Object method,
+        @CustomType.Parameter("queryString") @Nullable Object queryString,
+        @CustomType.Parameter("singleHeader") @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader,
+        @CustomType.Parameter("singleQueryArgument") @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
+        @CustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.jsonBody = jsonBody;

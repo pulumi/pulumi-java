@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
      */
-    @InputImport(name="critical", required=true)
+    @Import(name="critical", required=true)
       private final Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
@@ -34,7 +34,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The OID for this X.509 extension.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<ObjectIdArgs> objectId;
 
     public Output<ObjectIdArgs> getObjectId() {
@@ -45,7 +45,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The value of this X.509 extension.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

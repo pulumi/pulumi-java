@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentOneTimeSchedule {
     /**
      * The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
@@ -16,8 +16,8 @@ public final class PatchDeploymentOneTimeSchedule {
      */
     private final String executeTime;
 
-    @OutputCustomType.Constructor
-    private PatchDeploymentOneTimeSchedule(@OutputCustomType.Parameter("executeTime") String executeTime) {
+    @CustomType.Constructor
+    private PatchDeploymentOneTimeSchedule(@CustomType.Parameter("executeTime") String executeTime) {
         this.executeTime = executeTime;
     }
 

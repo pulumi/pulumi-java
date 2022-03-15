@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandInstanceVie
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandScriptSourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -40,7 +40,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
      */
-    @OutputExport(name="asyncExecution", type=Boolean.class, parameters={})
+    @Export(name="asyncExecution", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> asyncExecution;
 
     /**
@@ -54,7 +54,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Specifies the Azure storage blob where script error stream will be uploaded.
      * 
      */
-    @OutputExport(name="errorBlobUri", type=String.class, parameters={})
+    @Export(name="errorBlobUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> errorBlobUri;
 
     /**
@@ -68,7 +68,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * The virtual machine run command instance view.
      * 
      */
-    @OutputExport(name="instanceView", type=VirtualMachineRunCommandInstanceViewResponse.class, parameters={})
+    @Export(name="instanceView", type=VirtualMachineRunCommandInstanceViewResponse.class, parameters={})
     private Output<VirtualMachineRunCommandInstanceViewResponse> instanceView;
 
     /**
@@ -82,7 +82,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Specifies the Azure storage blob where script output stream will be uploaded.
      * 
      */
-    @OutputExport(name="outputBlobUri", type=String.class, parameters={})
+    @Export(name="outputBlobUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputBlobUri;
 
     /**
@@ -124,7 +124,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * The parameters used by the script.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={RunCommandInputParameterResponse.class})
+    @Export(name="parameters", type=List.class, parameters={RunCommandInputParameterResponse.class})
     private Output</* @Nullable */ List<RunCommandInputParameterResponse>> parameters;
 
     /**
@@ -138,7 +138,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * The parameters used by the script.
      * 
      */
-    @OutputExport(name="protectedParameters", type=List.class, parameters={RunCommandInputParameterResponse.class})
+    @Export(name="protectedParameters", type=List.class, parameters={RunCommandInputParameterResponse.class})
     private Output</* @Nullable */ List<RunCommandInputParameterResponse>> protectedParameters;
 
     /**
@@ -152,7 +152,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -166,7 +166,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Specifies the user account password on the VM when executing the run command.
      * 
      */
-    @OutputExport(name="runAsPassword", type=String.class, parameters={})
+    @Export(name="runAsPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> runAsPassword;
 
     /**
@@ -180,7 +180,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Specifies the user account on the VM when executing the run command.
      * 
      */
-    @OutputExport(name="runAsUser", type=String.class, parameters={})
+    @Export(name="runAsUser", type=String.class, parameters={})
     private Output</* @Nullable */ String> runAsUser;
 
     /**
@@ -194,7 +194,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * The source of the run command script.
      * 
      */
-    @OutputExport(name="source", type=VirtualMachineRunCommandScriptSourceResponse.class, parameters={})
+    @Export(name="source", type=VirtualMachineRunCommandScriptSourceResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineRunCommandScriptSourceResponse> source;
 
     /**
@@ -208,7 +208,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -222,7 +222,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * The timeout in seconds to execute the run command.
      * 
      */
-    @OutputExport(name="timeoutInSeconds", type=Integer.class, parameters={})
+    @Export(name="timeoutInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeoutInSeconds;
 
     /**
@@ -236,7 +236,7 @@ public class VirtualMachineScaleSetVMRunCommand extends io.pulumi.resources.Cust
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

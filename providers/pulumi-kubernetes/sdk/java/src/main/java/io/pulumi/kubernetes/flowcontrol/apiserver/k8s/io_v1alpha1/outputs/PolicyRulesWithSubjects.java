@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.NonResourcePolicyRule;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.ResourcePolicyRule;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.Subject;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyRulesWithSubjects {
     /**
      * `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
@@ -29,11 +29,11 @@ public final class PolicyRulesWithSubjects {
      */
     private final List<Subject> subjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyRulesWithSubjects(
-        @OutputCustomType.Parameter("nonResourceRules") @Nullable List<NonResourcePolicyRule> nonResourceRules,
-        @OutputCustomType.Parameter("resourceRules") @Nullable List<ResourcePolicyRule> resourceRules,
-        @OutputCustomType.Parameter("subjects") List<Subject> subjects) {
+        @CustomType.Parameter("nonResourceRules") @Nullable List<NonResourcePolicyRule> nonResourceRules,
+        @CustomType.Parameter("resourceRules") @Nullable List<ResourcePolicyRule> resourceRules,
+        @CustomType.Parameter("subjects") List<Subject> subjects) {
         this.nonResourceRules = nonResourceRules;
         this.resourceRules = resourceRules;
         this.subjects = subjects;

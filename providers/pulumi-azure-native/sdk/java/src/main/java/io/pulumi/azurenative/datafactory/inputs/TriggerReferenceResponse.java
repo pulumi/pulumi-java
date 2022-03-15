@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TriggerReferenceResponse extends io.pulumi.resources.InvokeAr
      * Reference trigger name.
      * 
      */
-    @InputImport(name="referenceName", required=true)
+    @Import(name="referenceName", required=true)
       private final String referenceName;
 
     public String getReferenceName() {
@@ -31,7 +31,7 @@ public final class TriggerReferenceResponse extends io.pulumi.resources.InvokeAr
      * Trigger reference type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

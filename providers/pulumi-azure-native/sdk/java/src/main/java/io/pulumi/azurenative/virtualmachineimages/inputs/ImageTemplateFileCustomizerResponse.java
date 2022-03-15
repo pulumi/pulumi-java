@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable String destination;
 
     public Optional<String> getDestination() {
@@ -33,7 +33,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -44,7 +44,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * SHA256 checksum of the file provided in the sourceUri field above
      * 
      */
-    @InputImport(name="sha256Checksum")
+    @Import(name="sha256Checksum")
       private final @Nullable String sha256Checksum;
 
     public Optional<String> getSha256Checksum() {
@@ -55,7 +55,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc
      * 
      */
-    @InputImport(name="sourceUri")
+    @Import(name="sourceUri")
       private final @Nullable String sourceUri;
 
     public Optional<String> getSourceUri() {
@@ -67,7 +67,7 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
      * Expected value is 'File'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

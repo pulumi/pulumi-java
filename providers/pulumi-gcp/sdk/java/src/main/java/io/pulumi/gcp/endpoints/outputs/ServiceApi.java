@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.endpoints.outputs.ServiceApiMethod;
 import java.lang.String;
 import java.util.List;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceApi {
     private final @Nullable List<ServiceApiMethod> methods;
     private final @Nullable String name;
     private final @Nullable String syntax;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceApi(
-        @OutputCustomType.Parameter("methods") @Nullable List<ServiceApiMethod> methods,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("syntax") @Nullable String syntax,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("methods") @Nullable List<ServiceApiMethod> methods,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("syntax") @Nullable String syntax,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.methods = methods;
         this.name = name;
         this.syntax = syntax;

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EndpointAddress;
 import io.pulumi.kubernetes.core_v1.outputs.EndpointPort;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointSubset {
     /**
      * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
@@ -28,11 +28,11 @@ public final class EndpointSubset {
      */
     private final @Nullable List<EndpointPort> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointSubset(
-        @OutputCustomType.Parameter("addresses") @Nullable List<EndpointAddress> addresses,
-        @OutputCustomType.Parameter("notReadyAddresses") @Nullable List<EndpointAddress> notReadyAddresses,
-        @OutputCustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
+        @CustomType.Parameter("addresses") @Nullable List<EndpointAddress> addresses,
+        @CustomType.Parameter("notReadyAddresses") @Nullable List<EndpointAddress> notReadyAddresses,
+        @CustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
         this.addresses = addresses;
         this.notReadyAddresses = notReadyAddresses;
         this.ports = ports;

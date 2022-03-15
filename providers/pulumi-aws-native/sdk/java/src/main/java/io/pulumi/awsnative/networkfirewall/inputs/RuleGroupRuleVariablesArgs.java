@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
 
     public static final RuleGroupRuleVariablesArgs Empty = new RuleGroupRuleVariablesArgs();
 
-    @InputImport(name="iPSets")
+    @Import(name="iPSets")
       private final @Nullable Output<Object> iPSets;
 
     public Output<Object> getIPSets() {
         return this.iPSets == null ? Output.empty() : this.iPSets;
     }
 
-    @InputImport(name="portSets")
+    @Import(name="portSets")
       private final @Nullable Output<Object> portSets;
 
     public Output<Object> getPortSets() {

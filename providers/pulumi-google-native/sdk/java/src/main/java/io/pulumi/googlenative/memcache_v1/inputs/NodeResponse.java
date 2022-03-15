@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.memcache_v1.inputs.MemcacheParametersResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
@@ -29,7 +29,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
      * 
      */
-    @InputImport(name="nodeId", required=true)
+    @Import(name="nodeId", required=true)
       private final String nodeId;
 
     public String getNodeId() {
@@ -40,7 +40,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * User defined parameters currently applied to the node.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final MemcacheParametersResponse parameters;
 
     public MemcacheParametersResponse getParameters() {
@@ -51,7 +51,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * The port number of the Memcached server on this node.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -62,7 +62,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * Current state of the Memcached node.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -73,7 +73,7 @@ public final class NodeResponse extends io.pulumi.resources.InvokeArgs {
      * Location (GCP Zone) for the Memcached node.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

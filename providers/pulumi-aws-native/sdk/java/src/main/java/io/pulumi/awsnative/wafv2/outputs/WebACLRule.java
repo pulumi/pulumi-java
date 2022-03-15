@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLOverrideAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLRuleAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLStatement;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLRule {
     private final @Nullable WebACLRuleAction action;
     private final @Nullable WebACLCaptchaConfig captchaConfig;
@@ -32,16 +32,16 @@ public final class WebACLRule {
     private final WebACLStatement statement;
     private final WebACLVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLRule(
-        @OutputCustomType.Parameter("action") @Nullable WebACLRuleAction action,
-        @OutputCustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("overrideAction") @Nullable WebACLOverrideAction overrideAction,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleLabels") @Nullable List<WebACLLabel> ruleLabels,
-        @OutputCustomType.Parameter("statement") WebACLStatement statement,
-        @OutputCustomType.Parameter("visibilityConfig") WebACLVisibilityConfig visibilityConfig) {
+        @CustomType.Parameter("action") @Nullable WebACLRuleAction action,
+        @CustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("overrideAction") @Nullable WebACLOverrideAction overrideAction,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleLabels") @Nullable List<WebACLLabel> ruleLabels,
+        @CustomType.Parameter("statement") WebACLStatement statement,
+        @CustomType.Parameter("visibilityConfig") WebACLVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
         this.name = name;

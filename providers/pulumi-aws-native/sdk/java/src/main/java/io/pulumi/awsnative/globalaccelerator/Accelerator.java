@@ -8,7 +8,7 @@ import io.pulumi.awsnative.globalaccelerator.AcceleratorArgs;
 import io.pulumi.awsnative.globalaccelerator.enums.AcceleratorIpAddressType;
 import io.pulumi.awsnative.globalaccelerator.outputs.AcceleratorTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the accelerator.
      * 
      */
-    @OutputExport(name="acceleratorArn", type=String.class, parameters={})
+    @Export(name="acceleratorArn", type=String.class, parameters={})
     private Output<String> acceleratorArn;
 
     /**
@@ -39,7 +39,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * The Domain Name System (DNS) name that Global Accelerator creates that points to your accelerator's static IP addresses.
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -53,7 +53,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * Indicates whether an accelerator is enabled. The value is true or false.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -67,7 +67,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * IP Address type.
      * 
      */
-    @OutputExport(name="ipAddressType", type=AcceleratorIpAddressType.class, parameters={})
+    @Export(name="ipAddressType", type=AcceleratorIpAddressType.class, parameters={})
     private Output</* @Nullable */ AcceleratorIpAddressType> ipAddressType;
 
     /**
@@ -81,7 +81,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * The IP addresses from BYOIP Prefix pool.
      * 
      */
-    @OutputExport(name="ipAddresses", type=List.class, parameters={String.class})
+    @Export(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
     /**
@@ -95,7 +95,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * Name of accelerator.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={AcceleratorTag.class})
+    @Export(name="tags", type=List.class, parameters={AcceleratorTag.class})
     private Output</* @Nullable */ List<AcceleratorTag>> tags;
 
     public Output</* @Nullable */ List<AcceleratorTag>> getTags() {

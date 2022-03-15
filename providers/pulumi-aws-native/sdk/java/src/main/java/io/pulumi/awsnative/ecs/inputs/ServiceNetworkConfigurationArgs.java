@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.ServiceAwsVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
 
     public static final ServiceNetworkConfigurationArgs Empty = new ServiceNetworkConfigurationArgs();
 
-    @InputImport(name="awsvpcConfiguration")
+    @Import(name="awsvpcConfiguration")
       private final @Nullable Output<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration;
 
     public Output<ServiceAwsVpcConfigurationArgs> getAwsvpcConfiguration() {

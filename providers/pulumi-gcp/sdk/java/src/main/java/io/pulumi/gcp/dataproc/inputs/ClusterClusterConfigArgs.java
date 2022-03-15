@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigAutoscalingConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigEncryptionConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigEndpointConfigArgs;
@@ -34,14 +34,14 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Structure defined below.
      * 
      */
-    @InputImport(name="autoscalingConfig")
+    @Import(name="autoscalingConfig")
       private final @Nullable Output<ClusterClusterConfigAutoscalingConfigArgs> autoscalingConfig;
 
     public Output<ClusterClusterConfigAutoscalingConfigArgs> getAutoscalingConfig() {
         return this.autoscalingConfig == null ? Output.empty() : this.autoscalingConfig;
     }
 
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -53,7 +53,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Structure defined below.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterClusterConfigEncryptionConfigArgs> encryptionConfig;
 
     public Output<ClusterClusterConfigEncryptionConfigArgs> getEncryptionConfig() {
@@ -65,7 +65,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Structure defined below.
      * 
      */
-    @InputImport(name="endpointConfig")
+    @Import(name="endpointConfig")
       private final @Nullable Output<ClusterClusterConfigEndpointConfigArgs> endpointConfig;
 
     public Output<ClusterClusterConfigEndpointConfigArgs> getEndpointConfig() {
@@ -77,7 +77,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * instances, applicable to all instances in the cluster. Structure defined below.
      * 
      */
-    @InputImport(name="gceClusterConfig")
+    @Import(name="gceClusterConfig")
       private final @Nullable Output<ClusterClusterConfigGceClusterConfigArgs> gceClusterConfig;
 
     public Output<ClusterClusterConfigGceClusterConfigArgs> getGceClusterConfig() {
@@ -89,7 +89,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * You can specify multiple versions of these. Structure defined below.
      * 
      */
-    @InputImport(name="initializationActions")
+    @Import(name="initializationActions")
       private final @Nullable Output<List<ClusterClusterConfigInitializationActionArgs>> initializationActions;
 
     public Output<List<ClusterClusterConfigInitializationActionArgs>> getInitializationActions() {
@@ -101,7 +101,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Structure defined below.
      * 
      */
-    @InputImport(name="lifecycleConfig")
+    @Import(name="lifecycleConfig")
       private final @Nullable Output<ClusterClusterConfigLifecycleConfigArgs> lifecycleConfig;
 
     public Output<ClusterClusterConfigLifecycleConfigArgs> getLifecycleConfig() {
@@ -113,7 +113,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * in a cluster. Structure defined below.
      * 
      */
-    @InputImport(name="masterConfig")
+    @Import(name="masterConfig")
       private final @Nullable Output<ClusterClusterConfigMasterConfigArgs> masterConfig;
 
     public Output<ClusterClusterConfigMasterConfigArgs> getMasterConfig() {
@@ -126,7 +126,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * ***
      * 
      */
-    @InputImport(name="metastoreConfig")
+    @Import(name="metastoreConfig")
       private final @Nullable Output<ClusterClusterConfigMetastoreConfigArgs> metastoreConfig;
 
     public Output<ClusterClusterConfigMetastoreConfigArgs> getMetastoreConfig() {
@@ -141,7 +141,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      *   such for legacy/compatibility reasons.
      * 
      */
-    @InputImport(name="preemptibleWorkerConfig")
+    @Import(name="preemptibleWorkerConfig")
       private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigArgs> preemptibleWorkerConfig;
 
     public Output<ClusterClusterConfigPreemptibleWorkerConfigArgs> getPreemptibleWorkerConfig() {
@@ -152,7 +152,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Security related configuration. Structure defined below.
      * 
      */
-    @InputImport(name="securityConfig")
+    @Import(name="securityConfig")
       private final @Nullable Output<ClusterClusterConfigSecurityConfigArgs> securityConfig;
 
     public Output<ClusterClusterConfigSecurityConfigArgs> getSecurityConfig() {
@@ -164,7 +164,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Structure defined below.
      * 
      */
-    @InputImport(name="softwareConfig")
+    @Import(name="softwareConfig")
       private final @Nullable Output<ClusterClusterConfigSoftwareConfigArgs> softwareConfig;
 
     public Output<ClusterClusterConfigSoftwareConfigArgs> getSoftwareConfig() {
@@ -181,7 +181,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * option.
      * 
      */
-    @InputImport(name="stagingBucket")
+    @Import(name="stagingBucket")
       private final @Nullable Output<String> stagingBucket;
 
     public Output<String> getStagingBucket() {
@@ -194,7 +194,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
      * 
      */
-    @InputImport(name="tempBucket")
+    @Import(name="tempBucket")
       private final @Nullable Output<String> tempBucket;
 
     public Output<String> getTempBucket() {
@@ -206,7 +206,7 @@ public final class ClusterClusterConfigArgs extends io.pulumi.resources.Resource
      * in a cluster. Structure defined below.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<ClusterClusterConfigWorkerConfigArgs> workerConfig;
 
     public Output<ClusterClusterConfigWorkerConfigArgs> getWorkerConfig() {

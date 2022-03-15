@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Compression settings.
      * 
      */
-    @InputImport(name="compressionProperties")
+    @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
     public Output<Object> getCompressionProperties() {
@@ -37,7 +37,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates whether type detection is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="detectDataType")
+    @Import(name="detectDataType")
       private final @Nullable Output<Object> detectDataType;
 
     public Output<Object> getDetectDataType() {
@@ -48,7 +48,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Namespace uri to prefix mappings to override the prefixes in column names when namespace is enabled, if no prefix is defined for a namespace uri, the prefix of xml element/attribute name in the xml data file will be used. Example: "{"http://www.example.com/xml":"prefix"}" Type: object (or Expression with resultType object).
      * 
      */
-    @InputImport(name="namespacePrefixes")
+    @Import(name="namespacePrefixes")
       private final @Nullable Output<Object> namespacePrefixes;
 
     public Output<Object> getNamespacePrefixes() {
@@ -59,7 +59,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates whether namespace is enabled when reading the xml files. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="namespaces")
+    @Import(name="namespaces")
       private final @Nullable Output<Object> namespaces;
 
     public Output<Object> getNamespaces() {
@@ -71,7 +71,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'XmlReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -82,7 +82,7 @@ public final class XmlReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates what validation method is used when reading the xml files. Allowed values: 'none', 'xsd', or 'dtd'. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="validationMode")
+    @Import(name="validationMode")
       private final @Nullable Output<Object> validationMode;
 
     public Output<Object> getValidationMode() {

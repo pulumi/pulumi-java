@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * Optional. CPU request and limit for a single Airflow worker replica.
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final Double cpu;
 
     public Double getCpu() {
@@ -32,7 +32,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * Optional. Maximum number of workers for autoscaling.
      * 
      */
-    @InputImport(name="maxCount", required=true)
+    @Import(name="maxCount", required=true)
       private final Integer maxCount;
 
     public Integer getMaxCount() {
@@ -43,7 +43,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * Optional. Memory (GB) request and limit for a single Airflow worker replica.
      * 
      */
-    @InputImport(name="memoryGb", required=true)
+    @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
     public Double getMemoryGb() {
@@ -54,7 +54,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * Optional. Minimum number of workers for autoscaling.
      * 
      */
-    @InputImport(name="minCount", required=true)
+    @Import(name="minCount", required=true)
       private final Integer minCount;
 
     public Integer getMinCount() {
@@ -65,7 +65,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * Optional. Storage (GB) request and limit for a single Airflow worker replica.
      * 
      */
-    @InputImport(name="storageGb", required=true)
+    @Import(name="storageGb", required=true)
       private final Double storageGb;
 
     public Double getStorageGb() {

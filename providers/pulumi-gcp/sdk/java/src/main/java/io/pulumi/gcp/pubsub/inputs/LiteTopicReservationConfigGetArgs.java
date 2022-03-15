@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LiteTopicReservationConfigGetArgs extends io.pulumi.resources
      * The Reservation to use for this topic's throughput capacity.
      * 
      */
-    @InputImport(name="throughputReservation")
+    @Import(name="throughputReservation")
       private final @Nullable Output<String> throughputReservation;
 
     public Output<String> getThroughputReservation() {

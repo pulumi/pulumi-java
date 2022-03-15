@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * Dataset accessed in the connection.
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
@@ -33,7 +33,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * Project accessed in the connection.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * Query used to access data in the connection.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -55,7 +55,7 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
      * Table accessed in the connection.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {

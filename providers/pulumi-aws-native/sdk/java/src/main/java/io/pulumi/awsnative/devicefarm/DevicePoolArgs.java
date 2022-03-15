@@ -6,7 +6,7 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.devicefarm.inputs.DevicePoolRuleArgs;
 import io.pulumi.awsnative.devicefarm.inputs.DevicePoolTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class DevicePoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DevicePoolArgs Empty = new DevicePoolArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="maxDevices")
+    @Import(name="maxDevices")
       private final @Nullable Output<Integer> maxDevices;
 
     public Output<Integer> getMaxDevices() {
         return this.maxDevices == null ? Output.empty() : this.maxDevices;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="projectArn", required=true)
+    @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
     public Output<String> getProjectArn() {
         return this.projectArn;
     }
 
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<List<DevicePoolRuleArgs>> rules;
 
     public Output<List<DevicePoolRuleArgs>> getRules() {
         return this.rules;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DevicePoolTagArgs>> tags;
 
     public Output<List<DevicePoolTagArgs>> getTags() {

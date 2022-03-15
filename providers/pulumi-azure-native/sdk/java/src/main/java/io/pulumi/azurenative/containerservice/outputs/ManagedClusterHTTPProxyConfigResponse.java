@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterHTTPProxyConfigResponse {
     /**
      * HTTP proxy server endpoint to use.
@@ -33,12 +33,12 @@ public final class ManagedClusterHTTPProxyConfigResponse {
      */
     private final @Nullable String trustedCa;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterHTTPProxyConfigResponse(
-        @OutputCustomType.Parameter("httpProxy") @Nullable String httpProxy,
-        @OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
-        @OutputCustomType.Parameter("noProxy") @Nullable List<String> noProxy,
-        @OutputCustomType.Parameter("trustedCa") @Nullable String trustedCa) {
+        @CustomType.Parameter("httpProxy") @Nullable String httpProxy,
+        @CustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
+        @CustomType.Parameter("noProxy") @Nullable List<String> noProxy,
+        @CustomType.Parameter("trustedCa") @Nullable String trustedCa) {
         this.httpProxy = httpProxy;
         this.httpsProxy = httpsProxy;
         this.noProxy = noProxy;

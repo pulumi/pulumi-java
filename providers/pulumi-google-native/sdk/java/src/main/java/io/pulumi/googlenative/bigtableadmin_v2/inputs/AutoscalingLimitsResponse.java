@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AutoscalingLimitsResponse extends io.pulumi.resources.InvokeA
      * Maximum number of nodes to scale up to.
      * 
      */
-    @InputImport(name="maxServeNodes", required=true)
+    @Import(name="maxServeNodes", required=true)
       private final Integer maxServeNodes;
 
     public Integer getMaxServeNodes() {
@@ -31,7 +31,7 @@ public final class AutoscalingLimitsResponse extends io.pulumi.resources.InvokeA
      * Minimum number of nodes to scale down to.
      * 
      */
-    @InputImport(name="minServeNodes", required=true)
+    @Import(name="minServeNodes", required=true)
       private final Integer minServeNodes;
 
     public Integer getMinServeNodes() {

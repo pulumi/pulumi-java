@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.RouteTableArgs;
 import io.pulumi.awsnative.ec2.outputs.RouteTableTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The route table ID.
      * 
      */
-    @OutputExport(name="routeTableId", type=String.class, parameters={})
+    @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
@@ -37,7 +37,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Any tags assigned to the route table.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RouteTableTag.class})
+    @Export(name="tags", type=List.class, parameters={RouteTableTag.class})
     private Output</* @Nullable */ List<RouteTableTag>> tags;
 
     /**
@@ -51,7 +51,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The ID of the VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

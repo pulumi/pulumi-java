@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
 
     public static final FeatureGroupDataCatalogConfigArgs Empty = new FeatureGroupDataCatalogConfigArgs();
 
-    @InputImport(name="catalog", required=true)
+    @Import(name="catalog", required=true)
       private final Output<String> catalog;
 
     public Output<String> getCatalog() {
         return this.catalog;
     }
 
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<String> database;
 
     public Output<String> getDatabase() {
         return this.database;
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

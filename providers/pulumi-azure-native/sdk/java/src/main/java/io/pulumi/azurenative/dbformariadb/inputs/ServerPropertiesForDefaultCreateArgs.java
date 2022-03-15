@@ -10,7 +10,7 @@ import io.pulumi.azurenative.dbformariadb.enums.SslEnforcementEnum;
 import io.pulumi.azurenative.dbformariadb.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
-    @InputImport(name="administratorLogin", required=true)
+    @Import(name="administratorLogin", required=true)
       private final Output<String> administratorLogin;
 
     public Output<String> getAdministratorLogin() {
@@ -39,7 +39,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * The password of the administrator login.
      * 
      */
-    @InputImport(name="administratorLoginPassword", required=true)
+    @Import(name="administratorLoginPassword", required=true)
       private final Output<String> administratorLoginPassword;
 
     public Output<String> getAdministratorLoginPassword() {
@@ -51,7 +51,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * Expected value is 'Default'.
      * 
      */
-    @InputImport(name="createMode", required=true)
+    @Import(name="createMode", required=true)
       private final Output<String> createMode;
 
     public Output<String> getCreateMode() {
@@ -62,7 +62,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * Enforce a minimal Tls version for the server.
      * 
      */
-    @InputImport(name="minimalTlsVersion")
+    @Import(name="minimalTlsVersion")
       private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
     public Output<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
@@ -73,7 +73,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
@@ -84,7 +84,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * Enable ssl enforcement or not when connect to server.
      * 
      */
-    @InputImport(name="sslEnforcement")
+    @Import(name="sslEnforcement")
       private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
     public Output<SslEnforcementEnum> getSslEnforcement() {
@@ -95,7 +95,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * Storage profile of a server.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> getStorageProfile() {
@@ -106,7 +106,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * Server version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Either<String,ServerVersion>> version;
 
     public Output<Either<String,ServerVersion>> getVersion() {

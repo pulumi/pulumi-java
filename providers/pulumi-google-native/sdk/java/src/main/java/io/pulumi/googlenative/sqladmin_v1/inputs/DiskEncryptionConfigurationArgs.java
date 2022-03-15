@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * This is always `sql#diskEncryptionConfiguration`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -33,7 +33,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * Resource name of KMS key for disk encryption
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ExportExecutionListResultResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * Has the definition for the export.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final ExportDefinitionResponse definition;
 
     public ExportDefinitionResponse getDefinition() {
@@ -36,7 +36,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * Has delivery information for the export.
      * 
      */
-    @InputImport(name="deliveryInfo", required=true)
+    @Import(name="deliveryInfo", required=true)
       private final ExportDeliveryInfoResponse deliveryInfo;
 
     public ExportDeliveryInfoResponse getDeliveryInfo() {
@@ -47,7 +47,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * The format of the export being delivered. Currently only 'Csv' is supported.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable String format;
 
     public Optional<String> getFormat() {
@@ -58,7 +58,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * If the export has an active schedule, provides an estimate of the next execution time.
      * 
      */
-    @InputImport(name="nextRunTimeEstimate", required=true)
+    @Import(name="nextRunTimeEstimate", required=true)
       private final String nextRunTimeEstimate;
 
     public String getNextRunTimeEstimate() {
@@ -69,7 +69,7 @@ public final class CommonExportPropertiesResponse extends io.pulumi.resources.In
      * If requested, has the most recent execution history for the export.
      * 
      */
-    @InputImport(name="runHistory")
+    @Import(name="runHistory")
       private final @Nullable ExportExecutionListResultResponse runHistory;
 
     public Optional<ExportExecutionListResultResponse> getRunHistory() {

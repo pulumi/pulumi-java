@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInstancesFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
      * [describe-instances in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetInstancesFilter> filters;
 
     public List<GetInstancesFilter> getFilters() {
@@ -34,7 +34,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
      * A list of instance states that should be applicable to the desired instances. The permitted values are: `pending, running, shutting-down, stopped, stopping, terminated`. The default value is `running`.
      * 
      */
-    @InputImport(name="instanceStateNames")
+    @Import(name="instanceStateNames")
       private final @Nullable List<String> instanceStateNames;
 
     public List<String> getInstanceStateNames() {
@@ -46,7 +46,7 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
      * exactly match a pair on desired instances.
      * 
      */
-    @InputImport(name="instanceTags")
+    @Import(name="instanceTags")
       private final @Nullable Map<String,String> instanceTags;
 
     public Map<String,String> getInstanceTags() {

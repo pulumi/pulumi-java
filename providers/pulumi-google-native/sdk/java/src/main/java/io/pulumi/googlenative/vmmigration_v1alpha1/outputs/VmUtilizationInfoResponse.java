@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmUtilizationMetricsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmwareVmDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmUtilizationInfoResponse {
     /**
      * Utilization metrics for this VM.
@@ -27,11 +27,11 @@ public final class VmUtilizationInfoResponse {
      */
     private final VmwareVmDetailsResponse vmwareVmDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmUtilizationInfoResponse(
-        @OutputCustomType.Parameter("utilization") VmUtilizationMetricsResponse utilization,
-        @OutputCustomType.Parameter("vmId") String vmId,
-        @OutputCustomType.Parameter("vmwareVmDetails") VmwareVmDetailsResponse vmwareVmDetails) {
+        @CustomType.Parameter("utilization") VmUtilizationMetricsResponse utilization,
+        @CustomType.Parameter("vmId") String vmId,
+        @CustomType.Parameter("vmwareVmDetails") VmwareVmDetailsResponse vmwareVmDetails) {
         this.utilization = utilization;
         this.vmId = vmId;
         this.vmwareVmDetails = vmwareVmDetails;

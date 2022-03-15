@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesAssignmentGroupLabel {
     /**
      * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
@@ -16,8 +16,8 @@ public final class GuestPoliciesAssignmentGroupLabel {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private GuestPoliciesAssignmentGroupLabel(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
+    @CustomType.Constructor
+    private GuestPoliciesAssignmentGroupLabel(@CustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

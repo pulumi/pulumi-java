@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectorProfileDatadogConnectorProfilePropertiesArgs extends
      * The location of the Datadog resource
      * 
      */
-    @InputImport(name="instanceUrl", required=true)
+    @Import(name="instanceUrl", required=true)
       private final Output<String> instanceUrl;
 
     public Output<String> getInstanceUrl() {

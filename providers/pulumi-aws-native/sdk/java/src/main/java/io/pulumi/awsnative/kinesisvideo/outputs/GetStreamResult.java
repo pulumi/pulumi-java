@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisvideo.outputs;
 
 import io.pulumi.awsnative.kinesisvideo.outputs.StreamTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamResult {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Video stream.
@@ -45,14 +45,14 @@ public final class GetStreamResult {
      */
     private final @Nullable List<StreamTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("dataRetentionInHours") @Nullable Integer dataRetentionInHours,
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
-        @OutputCustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("dataRetentionInHours") @Nullable Integer dataRetentionInHours,
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("mediaType") @Nullable String mediaType,
+        @CustomType.Parameter("tags") @Nullable List<StreamTag> tags) {
         this.arn = arn;
         this.dataRetentionInHours = dataRetentionInHours;
         this.deviceName = deviceName;

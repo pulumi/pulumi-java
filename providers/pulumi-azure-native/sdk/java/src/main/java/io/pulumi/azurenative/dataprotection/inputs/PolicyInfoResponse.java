@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.PolicyParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyInfoResponse Empty = new PolicyInfoResponse();
 
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final String policyId;
 
     public String getPolicyId() {
@@ -30,14 +30,14 @@ public final class PolicyInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Policy parameters for the backup instance
      * 
      */
-    @InputImport(name="policyParameters")
+    @Import(name="policyParameters")
       private final @Nullable PolicyParametersResponse policyParameters;
 
     public Optional<PolicyParametersResponse> getPolicyParameters() {
         return this.policyParameters == null ? Optional.empty() : Optional.ofNullable(this.policyParameters);
     }
 
-    @InputImport(name="policyVersion", required=true)
+    @Import(name="policyVersion", required=true)
       private final String policyVersion;
 
     public String getPolicyVersion() {

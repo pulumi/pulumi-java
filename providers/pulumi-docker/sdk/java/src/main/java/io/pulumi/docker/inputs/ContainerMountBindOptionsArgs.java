@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ContainerMountBindOptionsArgs extends io.pulumi.resources.Res
 
     public static final ContainerMountBindOptionsArgs Empty = new ContainerMountBindOptionsArgs();
 
-    @InputImport(name="propagation")
+    @Import(name="propagation")
       private final @Nullable Output<String> propagation;
 
     public Output<String> getPropagation() {

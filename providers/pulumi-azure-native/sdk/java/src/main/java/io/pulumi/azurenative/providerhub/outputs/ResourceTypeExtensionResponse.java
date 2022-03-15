@@ -3,24 +3,24 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeExtensionResponse {
     private final @Nullable String endpointUri;
     private final @Nullable List<String> extensionCategories;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeExtensionResponse(
-        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
-        @OutputCustomType.Parameter("extensionCategories") @Nullable List<String> extensionCategories,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @CustomType.Parameter("extensionCategories") @Nullable List<String> extensionCategories,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.endpointUri = endpointUri;
         this.extensionCategories = extensionCategories;
         this.timeout = timeout;

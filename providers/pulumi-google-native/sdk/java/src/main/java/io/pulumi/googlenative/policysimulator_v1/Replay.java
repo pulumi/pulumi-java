@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.policysimulator_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.policysimulator_v1.ReplayArgs;
@@ -26,7 +26,7 @@ public class Replay extends io.pulumi.resources.CustomResource {
      * The configuration used for the `Replay`.
      * 
      */
-    @OutputExport(name="config", type=GoogleCloudPolicysimulatorV1ReplayConfigResponse.class, parameters={})
+    @Export(name="config", type=GoogleCloudPolicysimulatorV1ReplayConfigResponse.class, parameters={})
     private Output<GoogleCloudPolicysimulatorV1ReplayConfigResponse> config;
 
     /**
@@ -40,7 +40,7 @@ public class Replay extends io.pulumi.resources.CustomResource {
      * The resource name of the `Replay`, which has the following format: `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where `{resource-id}` is the ID of the project, folder, or organization that owns the Replay. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -54,7 +54,7 @@ public class Replay extends io.pulumi.resources.CustomResource {
      * Summary statistics about the replayed log entries.
      * 
      */
-    @OutputExport(name="resultsSummary", type=GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse.class, parameters={})
+    @Export(name="resultsSummary", type=GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse.class, parameters={})
     private Output<GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse> resultsSummary;
 
     /**
@@ -68,7 +68,7 @@ public class Replay extends io.pulumi.resources.CustomResource {
      * The current state of the `Replay`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceSharePointConfigurationSharePo
 import io.pulumi.awsnative.kendra.outputs.DataSourceS3Path;
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
 import io.pulumi.awsnative.kendra.outputs.DataSourceVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSharePointConfiguration {
     private final @Nullable Boolean crawlAttachments;
     private final @Nullable Boolean disableLocalGroups;
@@ -30,20 +30,20 @@ public final class DataSourceSharePointConfiguration {
     private final @Nullable Boolean useChangeLog;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceSharePointConfiguration(
-        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
-        @OutputCustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
-        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
-        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
-        @OutputCustomType.Parameter("secretArn") String secretArn,
-        @OutputCustomType.Parameter("sharePointVersion") DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
-        @OutputCustomType.Parameter("sslCertificateS3Path") @Nullable DataSourceS3Path sslCertificateS3Path,
-        @OutputCustomType.Parameter("urls") List<String> urls,
-        @OutputCustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog,
-        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @CustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @CustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
+        @CustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @CustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @CustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("sharePointVersion") DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
+        @CustomType.Parameter("sslCertificateS3Path") @Nullable DataSourceS3Path sslCertificateS3Path,
+        @CustomType.Parameter("urls") List<String> urls,
+        @CustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog,
+        @CustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.crawlAttachments = crawlAttachments;
         this.disableLocalGroups = disableLocalGroups;
         this.documentTitleFieldName = documentTitleFieldName;

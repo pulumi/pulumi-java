@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
      * Cosmos DB graph resource name.
      * 
      */
-    @InputImport(name="graphName", required=true)
+    @Import(name="graphName", required=true)
       private final String graphName;
 
     public String getGraphName() {
@@ -38,7 +38,7 @@ public final class GetGraphResourceGraphArgs extends io.pulumi.resources.InvokeA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

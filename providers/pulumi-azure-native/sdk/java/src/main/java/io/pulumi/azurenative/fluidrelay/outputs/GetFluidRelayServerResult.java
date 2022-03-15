@@ -5,14 +5,14 @@ package io.pulumi.azurenative.fluidrelay.outputs;
 
 import io.pulumi.azurenative.fluidrelay.outputs.FluidRelayEndpointsResponse;
 import io.pulumi.azurenative.fluidrelay.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFluidRelayServerResult {
     /**
      * The Fluid Relay Service endpoints for this server.
@@ -60,17 +60,17 @@ public final class GetFluidRelayServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFluidRelayServerResult(
-        @OutputCustomType.Parameter("fluidRelayEndpoints") FluidRelayEndpointsResponse fluidRelayEndpoints,
-        @OutputCustomType.Parameter("frsTenantId") String frsTenantId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fluidRelayEndpoints") FluidRelayEndpointsResponse fluidRelayEndpoints,
+        @CustomType.Parameter("frsTenantId") String frsTenantId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.fluidRelayEndpoints = fluidRelayEndpoints;
         this.frsTenantId = frsTenantId;
         this.id = id;

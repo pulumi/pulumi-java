@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.scheduling.k8s.io_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -32,7 +32,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * description is an arbitrary string that usually provides guidelines on when this priority class should be used.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
      * 
      */
-    @InputImport(name="globalDefault")
+    @Import(name="globalDefault")
       private final @Nullable Output<Boolean> globalDefault;
 
     public Output<Boolean> getGlobalDefault() {
@@ -54,7 +54,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -65,7 +65,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -76,7 +76,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.
      * 
      */
-    @InputImport(name="preemptionPolicy")
+    @Import(name="preemptionPolicy")
       private final @Nullable Output<String> preemptionPolicy;
 
     public Output<String> getPreemptionPolicy() {
@@ -87,7 +87,7 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
      * The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Integer> value;
 
     public Output<Integer> getValue() {

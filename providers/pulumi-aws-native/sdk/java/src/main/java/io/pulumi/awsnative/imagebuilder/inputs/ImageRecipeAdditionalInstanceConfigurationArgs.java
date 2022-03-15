@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeSystemsManagerAgentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * Contains settings for the SSM agent on your build instance.
      * 
      */
-    @InputImport(name="systemsManagerAgent")
+    @Import(name="systemsManagerAgent")
       private final @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
     public Output<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
@@ -34,7 +34,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * Use this property to provide commands or a command script to run when you launch your build instance.
      * 
      */
-    @InputImport(name="userDataOverride")
+    @Import(name="userDataOverride")
       private final @Nullable Output<String> userDataOverride;
 
     public Output<String> getUserDataOverride() {

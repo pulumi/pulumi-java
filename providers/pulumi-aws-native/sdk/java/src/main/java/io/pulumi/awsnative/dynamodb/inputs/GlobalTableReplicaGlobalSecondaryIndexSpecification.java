@@ -5,7 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableContributorInsightsSpecification;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReadProvisionedThroughputSettings;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification extends i
 
     public static final GlobalTableReplicaGlobalSecondaryIndexSpecification Empty = new GlobalTableReplicaGlobalSecondaryIndexSpecification();
 
-    @InputImport(name="contributorInsightsSpecification")
+    @Import(name="contributorInsightsSpecification")
       private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
 
     public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Optional.empty() : Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final String indexName;
 
     public String getIndexName() {
         return this.indexName;
     }
 
-    @InputImport(name="readProvisionedThroughputSettings")
+    @Import(name="readProvisionedThroughputSettings")
       private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
     public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {

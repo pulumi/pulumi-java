@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorIcmpConfigurationResponse {
     /**
      * Value indicating whether path evaluation with trace route should be disabled.
@@ -17,8 +17,8 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
      */
     private final @Nullable Boolean disableTraceRoute;
 
-    @OutputCustomType.Constructor
-    private ConnectionMonitorIcmpConfigurationResponse(@OutputCustomType.Parameter("disableTraceRoute") @Nullable Boolean disableTraceRoute) {
+    @CustomType.Constructor
+    private ConnectionMonitorIcmpConfigurationResponse(@CustomType.Parameter("disableTraceRoute") @Nullable Boolean disableTraceRoute) {
         this.disableTraceRoute = disableTraceRoute;
     }
 

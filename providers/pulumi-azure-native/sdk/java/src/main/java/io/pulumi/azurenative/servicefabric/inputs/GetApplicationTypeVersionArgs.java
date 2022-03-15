@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
      * The name of the application type name resource.
      * 
      */
-    @InputImport(name="applicationTypeName", required=true)
+    @Import(name="applicationTypeName", required=true)
       private final String applicationTypeName;
 
     public String getApplicationTypeName() {
@@ -27,7 +27,7 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
      * The name of the cluster resource.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -38,7 +38,7 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetApplicationTypeVersionArgs extends io.pulumi.resources.Inv
      * The application type version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

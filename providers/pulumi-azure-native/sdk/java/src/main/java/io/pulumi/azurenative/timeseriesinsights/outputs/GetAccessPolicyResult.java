@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPolicyResult {
     /**
      * An description of the access policy.
@@ -43,14 +43,14 @@ public final class GetAccessPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPolicyResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalObjectId") @Nullable String principalObjectId,
-        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalObjectId") @Nullable String principalObjectId,
+        @CustomType.Parameter("roles") @Nullable List<String> roles,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.name = name;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
      * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
      * 
      */
-    @InputImport(name="tagKey")
+    @Import(name="tagKey")
       private final @Nullable Output<String> tagKey;
 
     public Output<String> getTagKey() {
@@ -29,7 +29,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
      * [Required] Friendly short name of the tag value, e.g. "production".
      * 
      */
-    @InputImport(name="tagValue")
+    @Import(name="tagValue")
       private final @Nullable Output<String> tagValue;
 
     public Output<String> getTagValue() {

@@ -6,13 +6,13 @@ package io.pulumi.awsnative.sagemaker.outputs;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringType;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringJobDefinition;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleScheduleConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition;
     /**
@@ -23,12 +23,12 @@ public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringType monitoringType;
     private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringScheduleConfig(
-        @OutputCustomType.Parameter("monitoringJobDefinition") @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
-        @OutputCustomType.Parameter("monitoringJobDefinitionName") @Nullable String monitoringJobDefinitionName,
-        @OutputCustomType.Parameter("monitoringType") @Nullable MonitoringScheduleMonitoringType monitoringType,
-        @OutputCustomType.Parameter("scheduleConfig") @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
+        @CustomType.Parameter("monitoringJobDefinition") @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
+        @CustomType.Parameter("monitoringJobDefinitionName") @Nullable String monitoringJobDefinitionName,
+        @CustomType.Parameter("monitoringType") @Nullable MonitoringScheduleMonitoringType monitoringType,
+        @CustomType.Parameter("scheduleConfig") @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
         this.monitoringJobDefinition = monitoringJobDefinition;
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         this.monitoringType = monitoringType;

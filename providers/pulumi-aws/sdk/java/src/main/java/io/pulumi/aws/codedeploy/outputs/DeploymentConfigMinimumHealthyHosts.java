@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentConfigMinimumHealthyHosts {
     /**
      * The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
@@ -26,10 +26,10 @@ public final class DeploymentConfigMinimumHealthyHosts {
      */
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentConfigMinimumHealthyHosts(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable Integer value) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable Integer value) {
         this.type = type;
         this.value = value;
     }

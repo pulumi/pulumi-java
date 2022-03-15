@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileSystemSizeInByte {
     /**
      * The latest known metered size (in bytes) of data stored in the file system.
@@ -27,11 +27,11 @@ public final class FileSystemSizeInByte {
      */
     private final @Nullable Integer valueInStandard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileSystemSizeInByte(
-        @OutputCustomType.Parameter("value") @Nullable Integer value,
-        @OutputCustomType.Parameter("valueInIa") @Nullable Integer valueInIa,
-        @OutputCustomType.Parameter("valueInStandard") @Nullable Integer valueInStandard) {
+        @CustomType.Parameter("value") @Nullable Integer value,
+        @CustomType.Parameter("valueInIa") @Nullable Integer valueInIa,
+        @CustomType.Parameter("valueInStandard") @Nullable Integer valueInStandard) {
         this.value = value;
         this.valueInIa = valueInIa;
         this.valueInStandard = valueInStandard;

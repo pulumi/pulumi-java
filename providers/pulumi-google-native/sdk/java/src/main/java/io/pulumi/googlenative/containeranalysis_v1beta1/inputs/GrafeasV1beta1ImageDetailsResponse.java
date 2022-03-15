@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GrafeasV1beta1ImageDetailsResponse extends io.pulumi.resource
      * Immutable. The child image derived from the base image.
      * 
      */
-    @InputImport(name="derivedImage", required=true)
+    @Import(name="derivedImage", required=true)
       private final DerivedResponse derivedImage;
 
     public DerivedResponse getDerivedImage() {

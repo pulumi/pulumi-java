@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.macie.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class FindingsFilterListItem extends io.pulumi.resources.InvokeArgs
 
     public static final FindingsFilterListItem Empty = new FindingsFilterListItem();
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

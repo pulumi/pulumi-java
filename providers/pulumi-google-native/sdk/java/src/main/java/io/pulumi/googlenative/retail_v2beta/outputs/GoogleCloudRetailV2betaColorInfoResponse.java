@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaColorInfoResponse {
     /**
      * The standard color families. Strongly recommended to use the following standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple", "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed". Normally it is expected to have only 1 color family. May consider using single "Mixed" instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2betaColorInfoResponse {
      */
     private final List<String> colors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaColorInfoResponse(
-        @OutputCustomType.Parameter("colorFamilies") List<String> colorFamilies,
-        @OutputCustomType.Parameter("colors") List<String> colors) {
+        @CustomType.Parameter("colorFamilies") List<String> colorFamilies,
+        @CustomType.Parameter("colors") List<String> colors) {
         this.colorFamilies = colorFamilies;
         this.colors = colors;
     }

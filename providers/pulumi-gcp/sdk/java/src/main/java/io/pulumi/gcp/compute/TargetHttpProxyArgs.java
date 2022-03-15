@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -60,7 +60,7 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @InputImport(name="proxyBind")
+    @Import(name="proxyBind")
       private final @Nullable Output<Boolean> proxyBind;
 
     public Output<Boolean> getProxyBind() {
@@ -72,7 +72,7 @@ public final class TargetHttpProxyArgs extends io.pulumi.resources.ResourceArgs 
      * to the BackendService.
      * 
      */
-    @InputImport(name="urlMap", required=true)
+    @Import(name="urlMap", required=true)
       private final Output<String> urlMap;
 
     public Output<String> getUrlMap() {

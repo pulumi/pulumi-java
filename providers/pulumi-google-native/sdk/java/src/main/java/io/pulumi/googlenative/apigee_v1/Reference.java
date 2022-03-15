@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ReferenceArgs;
@@ -21,7 +21,7 @@ public class Reference extends io.pulumi.resources.CustomResource {
      * Optional. A human-readable description of this reference.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -35,7 +35,7 @@ public class Reference extends io.pulumi.resources.CustomResource {
      * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Reference extends io.pulumi.resources.CustomResource {
      * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
      * 
      */
-    @OutputExport(name="refers", type=String.class, parameters={})
+    @Export(name="refers", type=String.class, parameters={})
     private Output<String> refers;
 
     /**
@@ -63,7 +63,7 @@ public class Reference extends io.pulumi.resources.CustomResource {
      * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**

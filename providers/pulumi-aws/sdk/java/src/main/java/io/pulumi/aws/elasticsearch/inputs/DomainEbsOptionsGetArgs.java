@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class DomainEbsOptionsGetArgs extends io.pulumi.resources.ResourceA
      * Whether EBS volumes are attached to data nodes in the domain.
      * 
      */
-    @InputImport(name="ebsEnabled", required=true)
+    @Import(name="ebsEnabled", required=true)
       private final Output<Boolean> ebsEnabled;
 
     public Output<Boolean> getEbsEnabled() {
@@ -31,7 +31,7 @@ public final class DomainEbsOptionsGetArgs extends io.pulumi.resources.ResourceA
      * Baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -42,7 +42,7 @@ public final class DomainEbsOptionsGetArgs extends io.pulumi.resources.ResourceA
      * Size of EBS volumes attached to data nodes (in GiB).
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
@@ -53,7 +53,7 @@ public final class DomainEbsOptionsGetArgs extends io.pulumi.resources.ResourceA
      * Type of EBS volumes attached to data nodes.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

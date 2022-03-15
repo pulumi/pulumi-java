@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.outputs.OrderItemDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * Represents shipping and return address for order item
      * 
      */
-    @OutputExport(name="addressDetails", type=AddressDetailsResponse.class, parameters={})
+    @Export(name="addressDetails", type=AddressDetailsResponse.class, parameters={})
     private Output<AddressDetailsResponse> addressDetails;
 
     /**
@@ -52,7 +52,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -66,7 +66,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * Id of the order to which order item belongs to
      * 
      */
-    @OutputExport(name="orderId", type=String.class, parameters={})
+    @Export(name="orderId", type=String.class, parameters={})
     private Output<String> orderId;
 
     /**
@@ -94,7 +94,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * Represents order item details.
      * 
      */
-    @OutputExport(name="orderItemDetails", type=OrderItemDetailsResponse.class, parameters={})
+    @Export(name="orderItemDetails", type=OrderItemDetailsResponse.class, parameters={})
     private Output<OrderItemDetailsResponse> orderItemDetails;
 
     /**
@@ -108,7 +108,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * Start time of order item
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -122,7 +122,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * Represents resource creation and update time
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -136,7 +136,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class OrderItemByName extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

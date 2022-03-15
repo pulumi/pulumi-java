@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListConnectionKeysResult {
     /**
      * Connection Key
@@ -24,10 +24,10 @@ public final class ListConnectionKeysResult {
      */
     private final @Nullable Map<String,Object> parameterValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListConnectionKeysResult(
-        @OutputCustomType.Parameter("connectionKey") @Nullable String connectionKey,
-        @OutputCustomType.Parameter("parameterValues") @Nullable Map<String,Object> parameterValues) {
+        @CustomType.Parameter("connectionKey") @Nullable String connectionKey,
+        @CustomType.Parameter("parameterValues") @Nullable Map<String,Object> parameterValues) {
         this.connectionKey = connectionKey;
         this.parameterValues = parameterValues;
     }

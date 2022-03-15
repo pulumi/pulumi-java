@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.awsnative.s3outposts.enums.EndpointAccessType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The type of access for the on-premise network connectivity for the Outpost endpoint. To access endpoint from an on-premises network, you must specify the access type and provide the customer owned Ipv4 pool.
      * 
      */
-    @InputImport(name="accessType")
+    @Import(name="accessType")
       private final @Nullable Output<EndpointAccessType> accessType;
 
     public Output<EndpointAccessType> getAccessType() {
@@ -30,7 +30,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the customer-owned IPv4 pool for the Endpoint. IP addresses will be allocated from this pool for the endpoint.
      * 
      */
-    @InputImport(name="customerOwnedIpv4Pool")
+    @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
     public Output<String> getCustomerOwnedIpv4Pool() {
@@ -41,7 +41,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the customer outpost on which the bucket resides.
      * 
      */
-    @InputImport(name="outpostId", required=true)
+    @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -52,7 +52,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the security group to use with the endpoint.
      * 
      */
-    @InputImport(name="securityGroupId", required=true)
+    @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
@@ -63,7 +63,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the subnet in the selected VPC. The subnet must belong to the Outpost.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

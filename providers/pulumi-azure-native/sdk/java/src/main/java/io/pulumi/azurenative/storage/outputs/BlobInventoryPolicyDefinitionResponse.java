@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicyFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BlobInventoryPolicyDefinitionResponse {
     /**
      * An object that defines the filter set.
@@ -15,8 +15,8 @@ public final class BlobInventoryPolicyDefinitionResponse {
      */
     private final BlobInventoryPolicyFilterResponse filters;
 
-    @OutputCustomType.Constructor
-    private BlobInventoryPolicyDefinitionResponse(@OutputCustomType.Parameter("filters") BlobInventoryPolicyFilterResponse filters) {
+    @CustomType.Constructor
+    private BlobInventoryPolicyDefinitionResponse(@CustomType.Parameter("filters") BlobInventoryPolicyFilterResponse filters) {
         this.filters = filters;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -30,7 +30,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * Flag that indicates whether to continue if one of the command fails.
      * 
      */
-    @InputImport(name="continueOnErrors")
+    @Import(name="continueOnErrors")
       private final @Nullable Output<Boolean> continueOnErrors;
 
     public Output<Boolean> getContinueOnErrors() {
@@ -41,7 +41,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database in the Kusto cluster.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -52,7 +52,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * A unique string. If changed the script will be applied again.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -63,7 +63,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kusto database script.
      * 
      */
-    @InputImport(name="scriptName")
+    @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
     public Output<String> getScriptName() {
@@ -85,7 +85,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The url to the KQL script blob file.
      * 
      */
-    @InputImport(name="scriptUrl", required=true)
+    @Import(name="scriptUrl", required=true)
       private final Output<String> scriptUrl;
 
     public Output<String> getScriptUrl() {
@@ -96,7 +96,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * The SaS token.
      * 
      */
-    @InputImport(name="scriptUrlSasToken", required=true)
+    @Import(name="scriptUrlSasToken", required=true)
       private final Output<String> scriptUrlSasToken;
 
     public Output<String> getScriptUrlSasToken() {

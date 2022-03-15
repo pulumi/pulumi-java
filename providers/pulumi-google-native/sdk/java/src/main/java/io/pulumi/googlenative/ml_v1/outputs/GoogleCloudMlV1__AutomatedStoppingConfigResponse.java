@@ -3,20 +3,20 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse {
     private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
     private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__AutomatedStoppingConfigResponse(
-        @OutputCustomType.Parameter("decayCurveStoppingConfig") GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig,
-        @OutputCustomType.Parameter("medianAutomatedStoppingConfig") GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
+        @CustomType.Parameter("decayCurveStoppingConfig") GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig,
+        @CustomType.Parameter("medianAutomatedStoppingConfig") GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
         this.decayCurveStoppingConfig = decayCurveStoppingConfig;
         this.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 import io.pulumi.azurenative.devtestlab.outputs.ExternalSubnetResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetOverrideResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkResult {
     /**
      * The allowed subnets of the virtual network.
@@ -82,21 +82,21 @@ public final class GetVirtualNetworkResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkResult(
-        @OutputCustomType.Parameter("allowedSubnets") @Nullable List<SubnetResponse> allowedSubnets,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("externalProviderResourceId") @Nullable String externalProviderResourceId,
-        @OutputCustomType.Parameter("externalSubnets") List<ExternalSubnetResponse> externalSubnets,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("subnetOverrides") @Nullable List<SubnetOverrideResponse> subnetOverrides,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
+        @CustomType.Parameter("allowedSubnets") @Nullable List<SubnetResponse> allowedSubnets,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("externalProviderResourceId") @Nullable String externalProviderResourceId,
+        @CustomType.Parameter("externalSubnets") List<ExternalSubnetResponse> externalSubnets,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("subnetOverrides") @Nullable List<SubnetOverrideResponse> subnetOverrides,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.allowedSubnets = allowedSubnets;
         this.createdDate = createdDate;
         this.description = description;

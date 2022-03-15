@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataStoreResponse {
     /**
      * The capacity of data store in GBs.
@@ -37,13 +37,13 @@ public final class DataStoreResponse {
      */
     private final @Nullable String uuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataStoreResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
-        @OutputCustomType.Parameter("freeSpace") @Nullable String freeSpace,
-        @OutputCustomType.Parameter("symbolicName") @Nullable String symbolicName,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("uuid") @Nullable String uuid) {
+        @CustomType.Parameter("capacity") @Nullable String capacity,
+        @CustomType.Parameter("freeSpace") @Nullable String freeSpace,
+        @CustomType.Parameter("symbolicName") @Nullable String symbolicName,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("uuid") @Nullable String uuid) {
         this.capacity = capacity;
         this.freeSpace = freeSpace;
         this.symbolicName = symbolicName;

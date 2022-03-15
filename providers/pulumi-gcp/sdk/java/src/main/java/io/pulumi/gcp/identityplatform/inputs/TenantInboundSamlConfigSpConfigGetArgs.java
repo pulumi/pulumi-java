@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigSpCertificateGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
      * Callback URI where responses from IDP are handled. Must start with `https://`.
      * 
      */
-    @InputImport(name="callbackUri", required=true)
+    @Import(name="callbackUri", required=true)
       private final Output<String> callbackUri;
 
     public Output<String> getCallbackUri() {
@@ -33,7 +33,7 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spCertificates")
+    @Import(name="spCertificates")
       private final @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
 
     public Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> getSpCertificates() {
@@ -44,7 +44,7 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
      * Unique identifier for all SAML entities.
      * 
      */
-    @InputImport(name="spEntityId", required=true)
+    @Import(name="spEntityId", required=true)
       private final Output<String> spEntityId;
 
     public Output<String> getSpEntityId() {

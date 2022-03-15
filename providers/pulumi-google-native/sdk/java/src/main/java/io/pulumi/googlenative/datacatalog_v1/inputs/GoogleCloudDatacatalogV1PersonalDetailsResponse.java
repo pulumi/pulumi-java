@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
      * Set if the entry is starred; unset otherwise.
      * 
      */
-    @InputImport(name="starTime", required=true)
+    @Import(name="starTime", required=true)
       private final String starTime;
 
     public String getStarTime() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
      * True if the entry is starred by the user; false otherwise.
      * 
      */
-    @InputImport(name="starred", required=true)
+    @Import(name="starred", required=true)
       private final Boolean starred;
 
     public Boolean getStarred() {

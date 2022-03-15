@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * Incident ID
      * 
      */
-    @InputImport(name="incidentId", required=true)
+    @Import(name="incidentId", required=true)
       private final Output<String> incidentId;
 
     public Output<String> getIncidentId() {
@@ -29,7 +29,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -40,7 +40,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * The resource ID of the related resource
      * 
      */
-    @InputImport(name="relatedResourceId", required=true)
+    @Import(name="relatedResourceId", required=true)
       private final Output<String> relatedResourceId;
 
     public Output<String> getRelatedResourceId() {
@@ -51,7 +51,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * Relation Name
      * 
      */
-    @InputImport(name="relationName")
+    @Import(name="relationName")
       private final @Nullable Output<String> relationName;
 
     public Output<String> getRelationName() {
@@ -62,7 +62,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class IncidentRelationArgs extends io.pulumi.resources.ResourceArgs
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

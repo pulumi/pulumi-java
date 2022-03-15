@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpVersionMatchConditionParametersResponse {
     /**
      * The match value for the condition of the delivery rule
@@ -30,12 +30,12 @@ public final class HttpVersionMatchConditionParametersResponse {
      */
     private final String operator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpVersionMatchConditionParametersResponse(
-        @OutputCustomType.Parameter("matchValues") @Nullable List<String> matchValues,
-        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("operator") String operator) {
+        @CustomType.Parameter("matchValues") @Nullable List<String> matchValues,
+        @CustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("operator") String operator) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = odataType;

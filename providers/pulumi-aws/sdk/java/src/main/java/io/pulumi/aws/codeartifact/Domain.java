@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codeartifact.DomainArgs;
 import io.pulumi.aws.codeartifact.inputs.DomainState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ARN of the Domain.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The total size of all assets in the domain.
      * 
      */
-    @OutputExport(name="assetSizeBytes", type=Integer.class, parameters={})
+    @Export(name="assetSizeBytes", type=Integer.class, parameters={})
     private Output<Integer> assetSizeBytes;
 
     /**
@@ -62,7 +62,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A timestamp that represents the date and time the domain was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -76,7 +76,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -90,7 +90,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
      * 
      */
-    @OutputExport(name="encryptionKey", type=String.class, parameters={})
+    @Export(name="encryptionKey", type=String.class, parameters={})
     private Output<String> encryptionKey;
 
     /**
@@ -104,7 +104,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The AWS account ID that owns the domain.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -118,7 +118,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The number of repositories in the domain.
      * 
      */
-    @OutputExport(name="repositoryCount", type=Integer.class, parameters={})
+    @Export(name="repositoryCount", type=Integer.class, parameters={})
     private Output<Integer> repositoryCount;
 
     /**
@@ -132,7 +132,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -146,7 +146,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

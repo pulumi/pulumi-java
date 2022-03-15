@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CurrentScenarioDetailsResponse {
     /**
      * ARM Id of the job being executed.
@@ -27,11 +27,11 @@ public final class CurrentScenarioDetailsResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CurrentScenarioDetailsResponse(
-        @OutputCustomType.Parameter("jobId") @Nullable String jobId,
-        @OutputCustomType.Parameter("scenarioName") @Nullable String scenarioName,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("jobId") @Nullable String jobId,
+        @CustomType.Parameter("scenarioName") @Nullable String scenarioName,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.jobId = jobId;
         this.scenarioName = scenarioName;
         this.startTime = startTime;

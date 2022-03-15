@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalysisDecimalParameter {
     /**
      * <p>A display name for the decimal parameter.</p>
@@ -22,10 +22,10 @@ public final class AnalysisDecimalParameter {
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalysisDecimalParameter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("values") List<Double> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("values") List<Double> values) {
         this.name = name;
         this.values = values;
     }

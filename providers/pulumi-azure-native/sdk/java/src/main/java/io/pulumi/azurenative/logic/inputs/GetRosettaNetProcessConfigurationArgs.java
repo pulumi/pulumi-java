@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
@@ -27,7 +27,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
      * The integration account RosettaNetProcessConfiguration name.
      * 
      */
-    @InputImport(name="rosettaNetProcessConfigurationName", required=true)
+    @Import(name="rosettaNetProcessConfigurationName", required=true)
       private final String rosettaNetProcessConfigurationName;
 
     public String getRosettaNetProcessConfigurationName() {

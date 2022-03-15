@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -29,7 +29,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * Specifies the name of the AWS Glue database that contains the schema for the output data.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -40,7 +40,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * If you don't specify an AWS Region, the default is the current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -51,7 +51,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -62,7 +62,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -73,7 +73,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * Specifies the table version for the output data schema. Defaults to `LATEST`.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {

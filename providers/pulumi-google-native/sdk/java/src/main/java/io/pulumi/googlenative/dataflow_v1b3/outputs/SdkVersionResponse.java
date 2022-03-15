@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SdkVersionResponse {
     /**
      * The support status for this SDK version.
@@ -25,11 +25,11 @@ public final class SdkVersionResponse {
      */
     private final String versionDisplayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SdkVersionResponse(
-        @OutputCustomType.Parameter("sdkSupportStatus") String sdkSupportStatus,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("versionDisplayName") String versionDisplayName) {
+        @CustomType.Parameter("sdkSupportStatus") String sdkSupportStatus,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("versionDisplayName") String versionDisplayName) {
         this.sdkSupportStatus = sdkSupportStatus;
         this.version = version;
         this.versionDisplayName = versionDisplayName;

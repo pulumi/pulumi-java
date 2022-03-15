@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.enums.StreamState;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillAllStrategyArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillNoneStrategyArgs;
@@ -24,7 +24,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
      * 
      */
-    @InputImport(name="backfillAll")
+    @Import(name="backfillAll")
       private final @Nullable Output<BackfillAllStrategyArgs> backfillAll;
 
     public Output<BackfillAllStrategyArgs> getBackfillAll() {
@@ -35,7 +35,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Do not automatically backfill any objects.
      * 
      */
-    @InputImport(name="backfillNone")
+    @Import(name="backfillNone")
       private final @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
 
     public Output<BackfillNoneStrategyArgs> getBackfillNone() {
@@ -46,7 +46,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
      * 
      */
-    @InputImport(name="customerManagedEncryptionKey")
+    @Import(name="customerManagedEncryptionKey")
       private final @Nullable Output<String> customerManagedEncryptionKey;
 
     public Output<String> getCustomerManagedEncryptionKey() {
@@ -57,7 +57,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Destination connection profile configuration.
      * 
      */
-    @InputImport(name="destinationConfig", required=true)
+    @Import(name="destinationConfig", required=true)
       private final Output<DestinationConfigArgs> destinationConfig;
 
     public Output<DestinationConfigArgs> getDestinationConfig() {
@@ -68,14 +68,14 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="force")
+    @Import(name="force")
       private final @Nullable Output<String> force;
 
     public Output<String> getForce() {
@@ -86,28 +86,28 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -118,7 +118,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * Source connection profile configuration.
      * 
      */
-    @InputImport(name="sourceConfig", required=true)
+    @Import(name="sourceConfig", required=true)
       private final Output<SourceConfigArgs> sourceConfig;
 
     public Output<SourceConfigArgs> getSourceConfig() {
@@ -129,21 +129,21 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the stream.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<StreamState> state;
 
     public Output<StreamState> getState() {
         return this.state == null ? Output.empty() : this.state;
     }
 
-    @InputImport(name="streamId", required=true)
+    @Import(name="streamId", required=true)
       private final Output<String> streamId;
 
     public Output<String> getStreamId() {
         return this.streamId;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

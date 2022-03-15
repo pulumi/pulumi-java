@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
     /**
      * The resource name of the KMS CryptoKey to use for unwrapping.
@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
      */
     private final String wrappedKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(
-        @OutputCustomType.Parameter("cryptoKeyName") String cryptoKeyName,
-        @OutputCustomType.Parameter("wrappedKey") String wrappedKey) {
+        @CustomType.Parameter("cryptoKeyName") String cryptoKeyName,
+        @CustomType.Parameter("wrappedKey") String wrappedKey) {
         this.cryptoKeyName = cryptoKeyName;
         this.wrappedKey = wrappedKey;
     }

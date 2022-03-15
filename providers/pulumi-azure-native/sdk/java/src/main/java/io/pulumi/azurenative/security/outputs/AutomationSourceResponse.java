@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.AutomationRuleSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationSourceResponse {
     /**
      * A valid event source type.
@@ -24,10 +24,10 @@ public final class AutomationSourceResponse {
      */
     private final @Nullable List<AutomationRuleSetResponse> ruleSets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationSourceResponse(
-        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
-        @OutputCustomType.Parameter("ruleSets") @Nullable List<AutomationRuleSetResponse> ruleSets) {
+        @CustomType.Parameter("eventSource") @Nullable String eventSource,
+        @CustomType.Parameter("ruleSets") @Nullable List<AutomationRuleSetResponse> ruleSets) {
         this.eventSource = eventSource;
         this.ruleSets = ruleSets;
     }

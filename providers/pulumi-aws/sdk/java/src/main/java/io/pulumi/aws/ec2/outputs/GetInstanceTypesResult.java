@@ -4,13 +4,13 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetInstanceTypesFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTypesResult {
     private final @Nullable List<GetInstanceTypesFilter> filters;
     /**
@@ -24,11 +24,11 @@ public final class GetInstanceTypesResult {
      */
     private final List<String> instanceTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTypesResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypesFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes) {
+        @CustomType.Parameter("filters") @Nullable List<GetInstanceTypesFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceTypes") List<String> instanceTypes) {
         this.filters = filters;
         this.id = id;
         this.instanceTypes = instanceTypes;

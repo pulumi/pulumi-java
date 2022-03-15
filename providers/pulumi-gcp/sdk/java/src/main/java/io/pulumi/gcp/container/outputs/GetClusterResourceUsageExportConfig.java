@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterResourceUsageExportConfigBigqueryDestination;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResourceUsageExportConfig {
     private final List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations;
     private final Boolean enableNetworkEgressMetering;
     private final Boolean enableResourceConsumptionMetering;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResourceUsageExportConfig(
-        @OutputCustomType.Parameter("bigqueryDestinations") List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
-        @OutputCustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering,
-        @OutputCustomType.Parameter("enableResourceConsumptionMetering") Boolean enableResourceConsumptionMetering) {
+        @CustomType.Parameter("bigqueryDestinations") List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
+        @CustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering,
+        @CustomType.Parameter("enableResourceConsumptionMetering") Boolean enableResourceConsumptionMetering) {
         this.bigqueryDestinations = bigqueryDestinations;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;

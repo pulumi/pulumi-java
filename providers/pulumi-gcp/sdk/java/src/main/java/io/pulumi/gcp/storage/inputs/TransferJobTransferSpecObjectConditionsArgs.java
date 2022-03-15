@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends io.pulumi
      * `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
      * 
      */
-    @InputImport(name="excludePrefixes")
+    @Import(name="excludePrefixes")
       private final @Nullable Output<List<String>> excludePrefixes;
 
     public Output<List<String>> getExcludePrefixes() {
@@ -30,7 +30,7 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends io.pulumi
      * If `include_prefixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
      * 
      */
-    @InputImport(name="includePrefixes")
+    @Import(name="includePrefixes")
       private final @Nullable Output<List<String>> includePrefixes;
 
     public Output<List<String>> getIncludePrefixes() {
@@ -41,7 +41,7 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends io.pulumi
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="maxTimeElapsedSinceLastModification")
+    @Import(name="maxTimeElapsedSinceLastModification")
       private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
     public Output<String> getMaxTimeElapsedSinceLastModification() {
@@ -52,7 +52,7 @@ public final class TransferJobTransferSpecObjectConditionsArgs extends io.pulumi
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="minTimeElapsedSinceLastModification")
+    @Import(name="minTimeElapsedSinceLastModification")
       private final @Nullable Output<String> minTimeElapsedSinceLastModification;
 
     public Output<String> getMinTimeElapsedSinceLastModification() {

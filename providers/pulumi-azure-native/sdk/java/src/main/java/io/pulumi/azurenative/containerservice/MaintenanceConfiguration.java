@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerservice.outputs.TimeInWeekResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeSpanResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Time slots on which upgrade is not allowed.
      * 
      */
-    @OutputExport(name="notAllowedTime", type=List.class, parameters={TimeSpanResponse.class})
+    @Export(name="notAllowedTime", type=List.class, parameters={TimeSpanResponse.class})
     private Output</* @Nullable */ List<TimeSpanResponse>> notAllowedTime;
 
     /**
@@ -65,7 +65,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -79,7 +79,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Weekday time slots allowed to upgrade.
      * 
      */
-    @OutputExport(name="timeInWeek", type=List.class, parameters={TimeInWeekResponse.class})
+    @Export(name="timeInWeek", type=List.class, parameters={TimeInWeekResponse.class})
     private Output</* @Nullable */ List<TimeInWeekResponse>> timeInWeek;
 
     /**
@@ -93,7 +93,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

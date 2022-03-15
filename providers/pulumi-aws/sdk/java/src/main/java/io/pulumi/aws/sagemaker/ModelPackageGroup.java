@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.ModelPackageGroupArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPackageGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Model Package Group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * A description for the model group.
      * 
      */
-    @OutputExport(name="modelPackageGroupDescription", type=String.class, parameters={})
+    @Export(name="modelPackageGroupDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> modelPackageGroupDescription;
 
     /**
@@ -61,7 +61,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * The name of the model group.
      * 
      */
-    @OutputExport(name="modelPackageGroupName", type=String.class, parameters={})
+    @Export(name="modelPackageGroupName", type=String.class, parameters={})
     private Output<String> modelPackageGroupName;
 
     /**
@@ -75,7 +75,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -89,7 +89,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

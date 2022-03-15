@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.DeploymentAccessLogSetting;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentCanarySetting;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentMethodSetting;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentStageDescription {
     /**
      * Specifies settings for logging access in this stage.
@@ -116,27 +116,27 @@ public final class DeploymentStageDescription {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentStageDescription(
-        @OutputCustomType.Parameter("accessLogSetting") @Nullable DeploymentAccessLogSetting accessLogSetting,
-        @OutputCustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
-        @OutputCustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
-        @OutputCustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
-        @OutputCustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
-        @OutputCustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
-        @OutputCustomType.Parameter("canarySetting") @Nullable DeploymentCanarySetting canarySetting,
-        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
-        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
-        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
-        @OutputCustomType.Parameter("methodSettings") @Nullable List<DeploymentMethodSetting> methodSettings,
-        @OutputCustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
-        @OutputCustomType.Parameter("tags") @Nullable List<DeploymentTag> tags,
-        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
-        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit,
-        @OutputCustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
-        @OutputCustomType.Parameter("variables") @Nullable Object variables) {
+        @CustomType.Parameter("accessLogSetting") @Nullable DeploymentAccessLogSetting accessLogSetting,
+        @CustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
+        @CustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
+        @CustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
+        @CustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
+        @CustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
+        @CustomType.Parameter("canarySetting") @Nullable DeploymentCanarySetting canarySetting,
+        @CustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @CustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
+        @CustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @CustomType.Parameter("methodSettings") @Nullable List<DeploymentMethodSetting> methodSettings,
+        @CustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
+        @CustomType.Parameter("tags") @Nullable List<DeploymentTag> tags,
+        @CustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @CustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit,
+        @CustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
+        @CustomType.Parameter("variables") @Nullable Object variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;

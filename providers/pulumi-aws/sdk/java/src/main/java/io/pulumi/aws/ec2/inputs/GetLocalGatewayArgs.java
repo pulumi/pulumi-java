@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLocalGatewayFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetLocalGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetLocalGatewayFilter> filters;
 
     public List<GetLocalGatewayFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetLocalGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The id of the specific Local Gateway to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -44,7 +44,7 @@ public final class GetLocalGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * Can be either `"pending"` or `"available"`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -56,7 +56,7 @@ public final class GetLocalGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired Local Gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

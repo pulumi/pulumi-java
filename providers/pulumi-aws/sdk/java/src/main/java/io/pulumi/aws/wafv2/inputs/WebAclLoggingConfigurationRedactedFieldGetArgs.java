@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleH
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldUriPathGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +28,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @Deprecated /* Not supported by WAFv2 API */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments;
 
     @Deprecated /* Not supported by WAFv2 API */
@@ -44,7 +44,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @Deprecated /* Not supported by WAFv2 API */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body;
 
     @Deprecated /* Not supported by WAFv2 API */
@@ -56,7 +56,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * Redact the HTTP method. Must be specified as an empty configuration block `{}`. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method;
 
     public Output<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> getMethod() {
@@ -67,7 +67,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * Redact the query string. Must be specified as an empty configuration block `{}`. This is the part of a URL that appears after a `?` character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString;
 
     public Output<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> getQueryString() {
@@ -78,7 +78,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * Redact a single header. See Single Header below for details.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader;
 
     public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> getSingleHeader() {
@@ -93,7 +93,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * 
      */
     @Deprecated /* Not supported by WAFv2 API */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument;
 
     @Deprecated /* Not supported by WAFv2 API */
@@ -105,7 +105,7 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
      * Redact the request URI path. Must be specified as an empty configuration block `{}`. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath;
 
     public Output<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> getUriPath() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.RouteTableAssociationArgs;
 import io.pulumi.aws.ec2.inputs.RouteTableAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -39,7 +39,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * The gateway ID to create an association. Conflicts with `subnet_id`.
      * 
      */
-    @OutputExport(name="gatewayId", type=String.class, parameters={})
+    @Export(name="gatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayId;
 
     /**
@@ -53,7 +53,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the routing table to associate with.
      * 
      */
-    @OutputExport(name="routeTableId", type=String.class, parameters={})
+    @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
@@ -67,7 +67,7 @@ public class RouteTableAssociation extends io.pulumi.resources.CustomResource {
      * The subnet ID to create an association. Conflicts with `gateway_id`.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**

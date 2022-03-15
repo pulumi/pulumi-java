@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rum.outputs;
 
 import io.pulumi.awsnative.rum.outputs.AppMonitorConfiguration;
 import io.pulumi.awsnative.rum.outputs.AppMonitorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppMonitorResult {
     private final @Nullable AppMonitorConfiguration appMonitorConfiguration;
     /**
@@ -28,12 +28,12 @@ public final class GetAppMonitorResult {
     private final @Nullable String domain;
     private final @Nullable List<AppMonitorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppMonitorResult(
-        @OutputCustomType.Parameter("appMonitorConfiguration") @Nullable AppMonitorConfiguration appMonitorConfiguration,
-        @OutputCustomType.Parameter("cwLogEnabled") @Nullable Boolean cwLogEnabled,
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("tags") @Nullable List<AppMonitorTag> tags) {
+        @CustomType.Parameter("appMonitorConfiguration") @Nullable AppMonitorConfiguration appMonitorConfiguration,
+        @CustomType.Parameter("cwLogEnabled") @Nullable Boolean cwLogEnabled,
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("tags") @Nullable List<AppMonitorTag> tags) {
         this.appMonitorConfiguration = appMonitorConfiguration;
         this.cwLogEnabled = cwLogEnabled;
         this.domain = domain;

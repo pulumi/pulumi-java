@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnSiteLinkResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The AddressSpace that contains an array of IP address ranges.
      * 
      */
-    @OutputExport(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> addressSpace;
 
     /**
@@ -56,7 +56,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The set of bgp properties.
      * 
      */
-    @OutputExport(name="bgpProperties", type=BgpSettingsResponse.class, parameters={})
+    @Export(name="bgpProperties", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpProperties;
 
     /**
@@ -70,7 +70,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The device properties.
      * 
      */
-    @OutputExport(name="deviceProperties", type=DevicePropertiesResponse.class, parameters={})
+    @Export(name="deviceProperties", type=DevicePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ DevicePropertiesResponse> deviceProperties;
 
     /**
@@ -84,7 +84,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -98,7 +98,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The ip-address for the vpn-site.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
     /**
@@ -112,7 +112,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * IsSecuritySite flag.
      * 
      */
-    @OutputExport(name="isSecuritySite", type=Boolean.class, parameters={})
+    @Export(name="isSecuritySite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSecuritySite;
 
     /**
@@ -126,7 +126,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -140,7 +140,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * Office365 Policy.
      * 
      */
-    @OutputExport(name="o365Policy", type=O365PolicyPropertiesResponse.class, parameters={})
+    @Export(name="o365Policy", type=O365PolicyPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ O365PolicyPropertiesResponse> o365Policy;
 
     /**
@@ -168,7 +168,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The provisioning state of the VPN site resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -182,7 +182,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The key for vpn-site that can be used for connections.
      * 
      */
-    @OutputExport(name="siteKey", type=String.class, parameters={})
+    @Export(name="siteKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteKey;
 
     /**
@@ -196,7 +196,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -210,7 +210,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -224,7 +224,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * The VirtualWAN to which the vpnSite belongs.
      * 
      */
-    @OutputExport(name="virtualWan", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualWan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualWan;
 
     /**
@@ -238,7 +238,7 @@ public class VpnSite extends io.pulumi.resources.CustomResource {
      * List of all vpn site links.
      * 
      */
-    @OutputExport(name="vpnSiteLinks", type=List.class, parameters={VpnSiteLinkResponse.class})
+    @Export(name="vpnSiteLinks", type=List.class, parameters={VpnSiteLinkResponse.class})
     private Output</* @Nullable */ List<VpnSiteLinkResponse>> vpnSiteLinks;
 
     /**

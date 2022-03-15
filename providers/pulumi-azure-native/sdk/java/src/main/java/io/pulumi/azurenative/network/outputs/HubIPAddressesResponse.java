@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HubPublicIPAddressesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HubIPAddressesResponse {
     /**
      * Private IP Address associated with azure firewall.
@@ -23,10 +23,10 @@ public final class HubIPAddressesResponse {
      */
     private final @Nullable HubPublicIPAddressesResponse publicIPs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HubIPAddressesResponse(
-        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
-        @OutputCustomType.Parameter("publicIPs") @Nullable HubPublicIPAddressesResponse publicIPs) {
+        @CustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @CustomType.Parameter("publicIPs") @Nullable HubPublicIPAddressesResponse publicIPs) {
         this.privateIPAddress = privateIPAddress;
         this.publicIPs = publicIPs;
     }

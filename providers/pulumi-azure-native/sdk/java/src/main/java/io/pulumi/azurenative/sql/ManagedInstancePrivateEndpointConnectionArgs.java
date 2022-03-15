@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateEndpointPropertyArgs;
 import io.pulumi.azurenative.sql.inputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
     public Output<String> getManagedInstanceName() {
@@ -31,14 +31,14 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * Private endpoint which the connection belongs to.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<ManagedInstancePrivateEndpointPropertyArgs> privateEndpoint;
 
     public Output<ManagedInstancePrivateEndpointPropertyArgs> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
     }
 
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -49,7 +49,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * Connection State of the Private Endpoint Connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
     public Output<ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
@@ -60,7 +60,7 @@ public final class ManagedInstancePrivateEndpointConnectionArgs extends io.pulum
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSlackConnectorProfileCredentials {
     /**
      * The credentials used to access protected resources.
@@ -33,12 +33,12 @@ public final class ConnectorProfileSlackConnectorProfileCredentials {
      */
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSlackConnectorProfileCredentials(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret,
-        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret,
+        @CustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

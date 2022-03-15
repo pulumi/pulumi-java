@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.LicenseResourceRequirementsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,28 +31,28 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="resourceRequirements")
+    @Import(name="resourceRequirements")
       private final @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
 
     public Output<LicenseResourceRequirementsArgs> getResourceRequirements() {
@@ -63,7 +63,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
      * 
      */
-    @InputImport(name="transferable")
+    @Import(name="transferable")
       private final @Nullable Output<Boolean> transferable;
 
     public Output<Boolean> getTransferable() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeFieldMap;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeKeyMap;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetObjectTypeResult {
     /**
      * Indicates whether a profile should be created when data is received.
@@ -68,18 +68,18 @@ public final class GetObjectTypeResult {
      */
     private final @Nullable String templateId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetObjectTypeResult(
-        @OutputCustomType.Parameter("allowProfileCreation") @Nullable Boolean allowProfileCreation,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
-        @OutputCustomType.Parameter("expirationDays") @Nullable Integer expirationDays,
-        @OutputCustomType.Parameter("fields") @Nullable List<ObjectTypeFieldMap> fields,
-        @OutputCustomType.Parameter("keys") @Nullable List<ObjectTypeKeyMap> keys,
-        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
-        @OutputCustomType.Parameter("tags") @Nullable List<ObjectTypeTag> tags,
-        @OutputCustomType.Parameter("templateId") @Nullable String templateId) {
+        @CustomType.Parameter("allowProfileCreation") @Nullable Boolean allowProfileCreation,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @CustomType.Parameter("expirationDays") @Nullable Integer expirationDays,
+        @CustomType.Parameter("fields") @Nullable List<ObjectTypeFieldMap> fields,
+        @CustomType.Parameter("keys") @Nullable List<ObjectTypeKeyMap> keys,
+        @CustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @CustomType.Parameter("tags") @Nullable List<ObjectTypeTag> tags,
+        @CustomType.Parameter("templateId") @Nullable String templateId) {
         this.allowProfileCreation = allowProfileCreation;
         this.createdAt = createdAt;
         this.description = description;

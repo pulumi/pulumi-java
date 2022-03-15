@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm.inputs;
 
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleAttribute;
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleOperator;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
      * The rule's stringified attribute.
      * 
      */
-    @InputImport(name="attribute")
+    @Import(name="attribute")
       private final @Nullable DevicePoolRuleAttribute attribute;
 
     public Optional<DevicePoolRuleAttribute> getAttribute() {
@@ -35,7 +35,7 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
      * Specifies how Device Farm compares the rule's attribute to the value.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable DevicePoolRuleOperator operator;
 
     public Optional<DevicePoolRuleOperator> getOperator() {
@@ -46,7 +46,7 @@ public final class DevicePoolRule extends io.pulumi.resources.InvokeArgs {
      * The rule's value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

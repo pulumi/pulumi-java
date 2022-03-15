@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * Is the lab support banner active/enabled at this time?
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
     public Output<Either<String,EnableStatus>> getEnabled() {
@@ -35,7 +35,7 @@ public final class LabSupportPropertiesArgs extends io.pulumi.resources.Resource
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
      */
-    @InputImport(name="markdown")
+    @Import(name="markdown")
       private final @Nullable Output<String> markdown;
 
     public Output<String> getMarkdown() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OSProfileResponse {
     /**
      * Specifies the host OS name of the HANA instance.
@@ -32,12 +32,12 @@ public final class OSProfileResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSProfileResponse(
-        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("sshPublicKey") @Nullable String sshPublicKey,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("computerName") @Nullable String computerName,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("sshPublicKey") @Nullable String sshPublicKey,
+        @CustomType.Parameter("version") String version) {
         this.computerName = computerName;
         this.osType = osType;
         this.sshPublicKey = sshPublicKey;

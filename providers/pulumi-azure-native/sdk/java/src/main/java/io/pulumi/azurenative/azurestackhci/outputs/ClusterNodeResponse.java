@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.azurestackhci.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodeResponse {
     /**
      * Number of physical cores on the cluster node.
@@ -56,17 +56,17 @@ public final class ClusterNodeResponse {
      */
     private final String serialNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodeResponse(
-        @OutputCustomType.Parameter("coreCount") Double coreCount,
-        @OutputCustomType.Parameter("id") Double id,
-        @OutputCustomType.Parameter("manufacturer") String manufacturer,
-        @OutputCustomType.Parameter("memoryInGiB") Double memoryInGiB,
-        @OutputCustomType.Parameter("model") String model,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osName") String osName,
-        @OutputCustomType.Parameter("osVersion") String osVersion,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber) {
+        @CustomType.Parameter("coreCount") Double coreCount,
+        @CustomType.Parameter("id") Double id,
+        @CustomType.Parameter("manufacturer") String manufacturer,
+        @CustomType.Parameter("memoryInGiB") Double memoryInGiB,
+        @CustomType.Parameter("model") String model,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osName") String osName,
+        @CustomType.Parameter("osVersion") String osVersion,
+        @CustomType.Parameter("serialNumber") String serialNumber) {
         this.coreCount = coreCount;
         this.id = id;
         this.manufacturer = manufacturer;

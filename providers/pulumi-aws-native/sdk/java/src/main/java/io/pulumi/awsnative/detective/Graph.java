@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.detective.GraphArgs;
 import io.pulumi.awsnative.detective.outputs.GraphTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * The Detective graph ARN
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -33,7 +33,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="tags", type=List.class, parameters={GraphTag.class})
+    @Export(name="tags", type=List.class, parameters={GraphTag.class})
     private Output</* @Nullable */ List<GraphTag>> tags;
 
     public Output</* @Nullable */ List<GraphTag>> getTags() {

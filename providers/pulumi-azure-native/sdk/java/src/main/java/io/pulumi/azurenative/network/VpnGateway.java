@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.VpnGatewayIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayNatRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * Local network gateway's BGP speaker settings.
      * 
      */
-    @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
+    @Export(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
     /**
@@ -56,7 +56,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * List of all vpn connections to the gateway.
      * 
      */
-    @OutputExport(name="connections", type=List.class, parameters={VpnConnectionResponse.class})
+    @Export(name="connections", type=List.class, parameters={VpnConnectionResponse.class})
     private Output</* @Nullable */ List<VpnConnectionResponse>> connections;
 
     /**
@@ -70,7 +70,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -84,7 +84,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * List of all IPs configured on the gateway.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={VpnGatewayIpConfigurationResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={VpnGatewayIpConfigurationResponse.class})
     private Output<List<VpnGatewayIpConfigurationResponse>> ipConfigurations;
 
     /**
@@ -98,7 +98,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * Enable Routing Preference property for the Public IP Interface of the VpnGateway.
      * 
      */
-    @OutputExport(name="isRoutingPreferenceInternet", type=Boolean.class, parameters={})
+    @Export(name="isRoutingPreferenceInternet", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRoutingPreferenceInternet;
 
     /**
@@ -112,7 +112,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -126,7 +126,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -140,7 +140,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * List of all the nat Rules associated with the gateway.
      * 
      */
-    @OutputExport(name="natRules", type=List.class, parameters={VpnGatewayNatRuleResponse.class})
+    @Export(name="natRules", type=List.class, parameters={VpnGatewayNatRuleResponse.class})
     private Output</* @Nullable */ List<VpnGatewayNatRuleResponse>> natRules;
 
     /**
@@ -154,7 +154,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * The provisioning state of the VPN gateway resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -168,7 +168,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -182,7 +182,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -196,7 +196,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * The VirtualHub to which the gateway belongs.
      * 
      */
-    @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
     /**
@@ -210,7 +210,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * The scale unit for this vpn gateway.
      * 
      */
-    @OutputExport(name="vpnGatewayScaleUnit", type=Integer.class, parameters={})
+    @Export(name="vpnGatewayScaleUnit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vpnGatewayScaleUnit;
 
     /**

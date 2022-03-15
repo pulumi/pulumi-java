@@ -10,14 +10,14 @@ import io.pulumi.azurenative.streamanalytics.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.EventHubStreamInputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.IoTHubStreamInputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JsonSerializationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamInputPropertiesResponse {
     /**
      * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
@@ -46,13 +46,13 @@ public final class StreamInputPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamInputPropertiesResponse(
-        @OutputCustomType.Parameter("datasource") @Nullable Object datasource,
-        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("datasource") @Nullable Object datasource,
+        @CustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("serialization") @Nullable Object serialization,
+        @CustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;

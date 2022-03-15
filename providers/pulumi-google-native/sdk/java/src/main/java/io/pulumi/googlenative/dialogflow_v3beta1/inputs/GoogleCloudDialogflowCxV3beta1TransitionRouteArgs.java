@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
      */
-    @InputImport(name="intent")
+    @Import(name="intent")
       private final @Nullable Output<String> intent;
 
     public Output<String> getIntent() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @InputImport(name="targetFlow")
+    @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
     public Output<String> getTargetFlow() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
      */
-    @InputImport(name="targetPage")
+    @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
     public Output<String> getTargetPage() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteArgs extends io.
      * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
      * 
      */
-    @InputImport(name="triggerFulfillment")
+    @Import(name="triggerFulfillment")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
     public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> getTriggerFulfillment() {

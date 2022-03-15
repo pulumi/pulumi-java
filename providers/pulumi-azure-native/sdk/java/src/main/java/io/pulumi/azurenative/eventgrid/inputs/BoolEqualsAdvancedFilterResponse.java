@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.
      * The field/property in the event based on which you want to filter.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable String key;
 
     public Optional<String> getKey() {
@@ -35,7 +35,7 @@ public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.
      * Expected value is 'BoolEquals'.
      * 
      */
-    @InputImport(name="operatorType", required=true)
+    @Import(name="operatorType", required=true)
       private final String operatorType;
 
     public String getOperatorType() {
@@ -46,7 +46,7 @@ public final class BoolEqualsAdvancedFilterResponse extends io.pulumi.resources.
      * The boolean filter value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Boolean value;
 
     public Optional<Boolean> getValue() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
     /**
      * Name of the column.
@@ -36,13 +36,13 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(
-        @OutputCustomType.Parameter("column") String column,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("subcolumns") List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("column") String column,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("subcolumns") List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns,
+        @CustomType.Parameter("type") String type) {
         this.column = column;
         this.description = description;
         this.mode = mode;

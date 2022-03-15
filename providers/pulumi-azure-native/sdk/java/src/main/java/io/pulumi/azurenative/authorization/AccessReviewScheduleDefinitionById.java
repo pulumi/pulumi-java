@@ -9,7 +9,7 @@ import io.pulumi.azurenative.authorization.outputs.AccessReviewInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The role assignment state eligible/active to review
      * 
      */
-    @OutputExport(name="assignmentState", type=String.class, parameters={})
+    @Export(name="assignmentState", type=String.class, parameters={})
     private Output<String> assignmentState;
 
     /**
@@ -52,7 +52,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
      * 
      */
-    @OutputExport(name="autoApplyDecisionsEnabled", type=Boolean.class, parameters={})
+    @Export(name="autoApplyDecisionsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoApplyDecisionsEnabled;
 
     /**
@@ -66,7 +66,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This is the collection of backup reviewers.
      * 
      */
-    @OutputExport(name="backupReviewers", type=List.class, parameters={AccessReviewReviewerResponse.class})
+    @Export(name="backupReviewers", type=List.class, parameters={AccessReviewReviewerResponse.class})
     private Output</* @Nullable */ List<AccessReviewReviewerResponse>> backupReviewers;
 
     /**
@@ -80,7 +80,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This specifies the behavior for the autoReview feature when an access review completes.
      * 
      */
-    @OutputExport(name="defaultDecision", type=String.class, parameters={})
+    @Export(name="defaultDecision", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultDecision;
 
     /**
@@ -94,7 +94,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Flag to indicate whether reviewers are required to provide a justification when reviewing access.
      * 
      */
-    @OutputExport(name="defaultDecisionEnabled", type=Boolean.class, parameters={})
+    @Export(name="defaultDecisionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> defaultDecisionEnabled;
 
     /**
@@ -108,7 +108,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The description provided by the access review creator and visible to admins.
      * 
      */
-    @OutputExport(name="descriptionForAdmins", type=String.class, parameters={})
+    @Export(name="descriptionForAdmins", type=String.class, parameters={})
     private Output</* @Nullable */ String> descriptionForAdmins;
 
     /**
@@ -122,7 +122,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The description provided by the access review creator to be shown to reviewers.
      * 
      */
-    @OutputExport(name="descriptionForReviewers", type=String.class, parameters={})
+    @Export(name="descriptionForReviewers", type=String.class, parameters={})
     private Output</* @Nullable */ String> descriptionForReviewers;
 
     /**
@@ -136,7 +136,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The display name for the schedule definition.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -150,7 +150,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The DateTime when the review is scheduled to end. Required if type is endDate
      * 
      */
-    @OutputExport(name="endDate", type=String.class, parameters={})
+    @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
     /**
@@ -164,7 +164,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
      */
-    @OutputExport(name="inactiveDuration", type=String.class, parameters={})
+    @Export(name="inactiveDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> inactiveDuration;
 
     /**
@@ -178,7 +178,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The duration in days for an instance.
      * 
      */
-    @OutputExport(name="instanceDurationInDays", type=Integer.class, parameters={})
+    @Export(name="instanceDurationInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> instanceDurationInDays;
 
     /**
@@ -192,7 +192,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This is the collection of instances returned when one does an expand on it.
      * 
      */
-    @OutputExport(name="instances", type=List.class, parameters={AccessReviewInstanceResponse.class})
+    @Export(name="instances", type=List.class, parameters={AccessReviewInstanceResponse.class})
     private Output</* @Nullable */ List<AccessReviewInstanceResponse>> instances;
 
     /**
@@ -206,7 +206,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
      * 
      */
-    @OutputExport(name="interval", type=Integer.class, parameters={})
+    @Export(name="interval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> interval;
 
     /**
@@ -220,7 +220,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Flag to indicate whether the reviewer is required to pass justification when recording a decision.
      * 
      */
-    @OutputExport(name="justificationRequiredOnApproval", type=Boolean.class, parameters={})
+    @Export(name="justificationRequiredOnApproval", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> justificationRequiredOnApproval;
 
     /**
@@ -234,7 +234,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Flag to indicate whether sending mails to reviewers and the review creator is enabled.
      * 
      */
-    @OutputExport(name="mailNotificationsEnabled", type=Boolean.class, parameters={})
+    @Export(name="mailNotificationsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mailNotificationsEnabled;
 
     /**
@@ -248,7 +248,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The access review schedule definition unique id.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -262,7 +262,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The number of times to repeat the access review. Required and must be positive if type is numbered.
      * 
      */
-    @OutputExport(name="numberOfOccurrences", type=Integer.class, parameters={})
+    @Export(name="numberOfOccurrences", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfOccurrences;
 
     /**
@@ -276,7 +276,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The identity id
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -290,7 +290,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The identity display name
      * 
      */
-    @OutputExport(name="principalName", type=String.class, parameters={})
+    @Export(name="principalName", type=String.class, parameters={})
     private Output<String> principalName;
 
     /**
@@ -304,7 +304,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The identity type user/servicePrincipal to review
      * 
      */
-    @OutputExport(name="principalType", type=String.class, parameters={})
+    @Export(name="principalType", type=String.class, parameters={})
     private Output<String> principalType;
 
     /**
@@ -318,7 +318,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Flag to indicate whether showing recommendations to reviewers is enabled.
      * 
      */
-    @OutputExport(name="recommendationsEnabled", type=Boolean.class, parameters={})
+    @Export(name="recommendationsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recommendationsEnabled;
 
     /**
@@ -332,7 +332,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * Flag to indicate whether sending reminder emails to reviewers are enabled.
      * 
      */
-    @OutputExport(name="reminderNotificationsEnabled", type=Boolean.class, parameters={})
+    @Export(name="reminderNotificationsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reminderNotificationsEnabled;
 
     /**
@@ -346,7 +346,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * ResourceId in which this review is getting created
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -360,7 +360,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This is the collection of reviewers.
      * 
      */
-    @OutputExport(name="reviewers", type=List.class, parameters={AccessReviewReviewerResponse.class})
+    @Export(name="reviewers", type=List.class, parameters={AccessReviewReviewerResponse.class})
     private Output</* @Nullable */ List<AccessReviewReviewerResponse>> reviewers;
 
     /**
@@ -374,7 +374,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This field specifies the type of reviewers for a review. Usually for a review, reviewers are explicitly assigned. However, in some cases, the reviewers may not be assigned and instead be chosen dynamically. For example managers review or self review.
      * 
      */
-    @OutputExport(name="reviewersType", type=String.class, parameters={})
+    @Export(name="reviewersType", type=String.class, parameters={})
     private Output<String> reviewersType;
 
     /**
@@ -388,7 +388,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This is used to indicate the role being reviewed
      * 
      */
-    @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
+    @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
     /**
@@ -402,7 +402,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
      * 
      */
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> startDate;
 
     /**
@@ -416,7 +416,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * This read-only field specifies the status of an accessReview.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -430,7 +430,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -444,7 +444,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * The user principal name(if valid)
      * 
      */
-    @OutputExport(name="userPrincipalName", type=String.class, parameters={})
+    @Export(name="userPrincipalName", type=String.class, parameters={})
     private Output<String> userPrincipalName;
 
     /**

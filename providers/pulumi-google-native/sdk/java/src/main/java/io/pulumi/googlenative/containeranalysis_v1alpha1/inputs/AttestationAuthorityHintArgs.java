@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
      * The human readable name of this Attestation Authority, for example "qa".
      * 
      */
-    @InputImport(name="humanReadableName")
+    @Import(name="humanReadableName")
       private final @Nullable Output<String> humanReadableName;
 
     public Output<String> getHumanReadableName() {

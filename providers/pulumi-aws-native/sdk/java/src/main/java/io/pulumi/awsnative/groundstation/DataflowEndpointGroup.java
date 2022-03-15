@@ -8,7 +8,7 @@ import io.pulumi.awsnative.groundstation.DataflowEndpointGroupArgs;
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupEndpointDetails;
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,19 +22,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:groundstation:DataflowEndpointGroup")
 public class DataflowEndpointGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="endpointDetails", type=List.class, parameters={DataflowEndpointGroupEndpointDetails.class})
+    @Export(name="endpointDetails", type=List.class, parameters={DataflowEndpointGroupEndpointDetails.class})
     private Output<List<DataflowEndpointGroupEndpointDetails>> endpointDetails;
 
     public Output<List<DataflowEndpointGroupEndpointDetails>> getEndpointDetails() {
         return this.endpointDetails;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DataflowEndpointGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={DataflowEndpointGroupTag.class})
     private Output</* @Nullable */ List<DataflowEndpointGroupTag>> tags;
 
     public Output</* @Nullable */ List<DataflowEndpointGroupTag>> getTags() {

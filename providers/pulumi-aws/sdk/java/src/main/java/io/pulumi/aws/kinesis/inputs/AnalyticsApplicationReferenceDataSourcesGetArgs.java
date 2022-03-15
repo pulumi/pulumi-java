@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesS3GetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends io.pu
      * The ARN of the Kinesis Analytics Application.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -31,7 +31,7 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends io.pu
      * The S3 configuration for the reference data source. See S3 Reference below for more details.
      * 
      */
-    @InputImport(name="s3", required=true)
+    @Import(name="s3", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> s3;
 
     public Output<AnalyticsApplicationReferenceDataSourcesS3GetArgs> getS3() {
@@ -42,7 +42,7 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends io.pu
      * The Schema format of the data in the streaming source. See Source Schema below for more details.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> schema;
 
     public Output<AnalyticsApplicationReferenceDataSourcesSchemaGetArgs> getSchema() {
@@ -53,7 +53,7 @@ public final class AnalyticsApplicationReferenceDataSourcesGetArgs extends io.pu
      * The in-application Table Name.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

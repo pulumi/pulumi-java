@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CommandJobArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SweepJobArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The name and identifier for the Job.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -32,7 +32,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Additional attributes of the entity.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Either<CommandJobArgs,SweepJobArgs>> properties;
 
     public Output<Either<CommandJobArgs,SweepJobArgs>> getProperties() {
@@ -43,7 +43,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

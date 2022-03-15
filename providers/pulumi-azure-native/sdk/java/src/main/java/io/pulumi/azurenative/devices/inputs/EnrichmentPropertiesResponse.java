@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
      * The list of endpoints for which the enrichment is applied to the message.
      * 
      */
-    @InputImport(name="endpointNames", required=true)
+    @Import(name="endpointNames", required=true)
       private final List<String> endpointNames;
 
     public List<String> getEndpointNames() {
@@ -32,7 +32,7 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
      * The key or name for the enrichment property.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -43,7 +43,7 @@ public final class EnrichmentPropertiesResponse extends io.pulumi.resources.Invo
      * The value for the enrichment property.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

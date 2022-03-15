@@ -4,14 +4,14 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.FirewallFirewallStatusSyncStateAttachment;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallFirewallStatusSyncState {
     /**
      * Nested list describing the attachment status of the firewall's association with a single VPC subnet.
@@ -24,10 +24,10 @@ public final class FirewallFirewallStatusSyncState {
      */
     private final @Nullable String availabilityZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallFirewallStatusSyncState(
-        @OutputCustomType.Parameter("attachments") @Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments,
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone) {
+        @CustomType.Parameter("attachments") @Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments,
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone) {
         this.attachments = attachments;
         this.availabilityZone = availabilityZone;
     }

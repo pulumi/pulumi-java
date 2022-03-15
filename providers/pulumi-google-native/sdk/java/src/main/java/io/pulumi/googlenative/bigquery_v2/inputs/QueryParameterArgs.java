@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterValueArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] If unset, this is a positional parameter. Otherwise, should be unique within a query.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The type of this parameter.
      * 
      */
-    @InputImport(name="parameterType")
+    @Import(name="parameterType")
       private final @Nullable Output<QueryParameterTypeArgs> parameterType;
 
     public Output<QueryParameterTypeArgs> getParameterType() {
@@ -42,7 +42,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The value of this parameter.
      * 
      */
-    @InputImport(name="parameterValue")
+    @Import(name="parameterValue")
       private final @Nullable Output<QueryParameterValueArgs> parameterValue;
 
     public Output<QueryParameterValueArgs> getParameterValue() {

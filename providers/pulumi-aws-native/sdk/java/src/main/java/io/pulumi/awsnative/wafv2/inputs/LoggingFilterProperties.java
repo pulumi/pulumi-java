@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterPropertiesDefaultBehavior;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LoggingFilterProperties extends io.pulumi.resources.InvokeArg
      * Default handling for logs that don't match any of the specified filtering conditions.
      * 
      */
-    @InputImport(name="defaultBehavior", required=true)
+    @Import(name="defaultBehavior", required=true)
       private final LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior;
 
     public LoggingConfigurationLoggingFilterPropertiesDefaultBehavior getDefaultBehavior() {
@@ -33,7 +33,7 @@ public final class LoggingFilterProperties extends io.pulumi.resources.InvokeArg
      * The filters that you want to apply to the logs.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final List<LoggingConfigurationFilter> filters;
 
     public List<LoggingConfigurationFilter> getFilters() {

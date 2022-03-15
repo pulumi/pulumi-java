@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexValueImportanceItem {
     private final @Nullable String key;
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexValueImportanceItem(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("value") @Nullable Integer value) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("value") @Nullable Integer value) {
         this.key = key;
         this.value = value;
     }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53resolver.ResolverQueryLoggingConfigAssociation
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationError;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * Rfc3339TimeString
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -37,7 +37,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * ResolverQueryLogConfigAssociationError
      * 
      */
-    @OutputExport(name="error", type=ResolverQueryLoggingConfigAssociationError.class, parameters={})
+    @Export(name="error", type=ResolverQueryLoggingConfigAssociationError.class, parameters={})
     private Output<ResolverQueryLoggingConfigAssociationError> error;
 
     /**
@@ -51,7 +51,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * ResolverQueryLogConfigAssociationErrorMessage
      * 
      */
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
@@ -65,7 +65,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * ResolverQueryLogConfigId
      * 
      */
-    @OutputExport(name="resolverQueryLogConfigId", type=String.class, parameters={})
+    @Export(name="resolverQueryLogConfigId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resolverQueryLogConfigId;
 
     /**
@@ -79,7 +79,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * ResourceId
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -93,7 +93,7 @@ public class ResolverQueryLoggingConfigAssociation extends io.pulumi.resources.C
      * ResolverQueryLogConfigAssociationStatus
      * 
      */
-    @OutputExport(name="status", type=ResolverQueryLoggingConfigAssociationStatus.class, parameters={})
+    @Export(name="status", type=ResolverQueryLoggingConfigAssociationStatus.class, parameters={})
     private Output<ResolverQueryLoggingConfigAssociationStatus> status;
 
     /**

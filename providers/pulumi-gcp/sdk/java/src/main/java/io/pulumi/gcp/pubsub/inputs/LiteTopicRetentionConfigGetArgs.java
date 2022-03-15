@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
      * dropped to make room for newer ones, regardless of the value of period.
      * 
      */
-    @InputImport(name="perPartitionBytes", required=true)
+    @Import(name="perPartitionBytes", required=true)
       private final Output<String> perPartitionBytes;
 
     public Output<String> getPerPartitionBytes() {
@@ -34,7 +34,7 @@ public final class LiteTopicRetentionConfigGetArgs extends io.pulumi.resources.R
      * Example: "3.5s".
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {

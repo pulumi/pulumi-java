@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleSetResponse;
 import io.pulumi.azurenative.network.inputs.OwaspCrsExclusionEntryResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
      * The Exclusions that are applied on the policy.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
 
     public List<OwaspCrsExclusionEntryResponse> getExclusions() {
@@ -35,7 +35,7 @@ public final class ManagedRulesDefinitionResponse extends io.pulumi.resources.In
      * The managed rule sets that are associated with the policy.
      * 
      */
-    @InputImport(name="managedRuleSets", required=true)
+    @Import(name="managedRuleSets", required=true)
       private final List<ManagedRuleSetResponse> managedRuleSets;
 
     public List<ManagedRuleSetResponse> getManagedRuleSets() {

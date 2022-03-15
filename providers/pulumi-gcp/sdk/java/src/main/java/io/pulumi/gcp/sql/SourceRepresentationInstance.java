@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sql.SourceRepresentationInstanceArgs;
@@ -46,7 +46,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
      * 
      */
-    @OutputExport(name="databaseVersion", type=String.class, parameters={})
+    @Export(name="databaseVersion", type=String.class, parameters={})
     private Output<String> databaseVersion;
 
     /**
@@ -61,7 +61,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * The externally accessible IPv4 address for the source database server.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -75,7 +75,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * The name of the source representation instance. Use any valid Cloud SQL instance name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * Defaults to 3306.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -106,7 +106,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -122,7 +122,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**

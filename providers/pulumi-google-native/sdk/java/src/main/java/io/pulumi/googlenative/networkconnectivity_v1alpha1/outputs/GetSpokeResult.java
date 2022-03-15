@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.RouterApplianceInstanceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSpokeResult {
     /**
      * The time when the Spoke was created.
@@ -68,19 +68,19 @@ public final class GetSpokeResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSpokeResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("hub") String hub,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("linkedInterconnectAttachments") List<String> linkedInterconnectAttachments,
-        @OutputCustomType.Parameter("linkedRouterApplianceInstances") List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances,
-        @OutputCustomType.Parameter("linkedVpnTunnels") List<String> linkedVpnTunnels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("hub") String hub,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("linkedInterconnectAttachments") List<String> linkedInterconnectAttachments,
+        @CustomType.Parameter("linkedRouterApplianceInstances") List<RouterApplianceInstanceResponse> linkedRouterApplianceInstances,
+        @CustomType.Parameter("linkedVpnTunnels") List<String> linkedVpnTunnels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("uniqueId") String uniqueId,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.hub = hub;

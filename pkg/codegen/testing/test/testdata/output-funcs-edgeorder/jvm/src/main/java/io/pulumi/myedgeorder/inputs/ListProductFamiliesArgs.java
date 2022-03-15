@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.myedgeorder.inputs.CustomerSubscriptionDetails;
 import io.pulumi.myedgeorder.inputs.FilterableProperty;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    @InputImport(name="customerSubscriptionDetails")
+    @Import(name="customerSubscriptionDetails")
       private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     public Optional<CustomerSubscriptionDetails> getCustomerSubscriptionDetails() {
@@ -33,7 +33,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * $expand is supported on configurations parameter for product, which provides details on the configurations for the product.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -44,7 +44,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * Dictionary of filterable properties on product family.
      * 
      */
-    @InputImport(name="filterableProperties", required=true)
+    @Import(name="filterableProperties", required=true)
       private final Map<String,List<FilterableProperty>> filterableProperties;
 
     public Map<String,List<FilterableProperty>> getFilterableProperties() {
@@ -55,7 +55,7 @@ public final class ListProductFamiliesArgs extends io.pulumi.resources.InvokeArg
      * $skipToken is supported on list of product families, which provides the next page in the list of product families.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

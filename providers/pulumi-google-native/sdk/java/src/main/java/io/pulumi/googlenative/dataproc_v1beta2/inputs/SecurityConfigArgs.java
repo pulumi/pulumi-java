@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.KerberosConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Kerberos related configuration.
      * 
      */
-    @InputImport(name="kerberosConfig")
+    @Import(name="kerberosConfig")
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
     public Output<KerberosConfigArgs> getKerberosConfig() {

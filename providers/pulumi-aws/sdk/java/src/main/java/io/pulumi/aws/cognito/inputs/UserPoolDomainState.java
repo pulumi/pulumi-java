@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The AWS account ID for the user pool owner.
      * 
      */
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -29,7 +29,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -40,7 +40,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
      * 
      */
-    @InputImport(name="cloudfrontDistributionArn")
+    @Import(name="cloudfrontDistributionArn")
       private final @Nullable Output<String> cloudfrontDistributionArn;
 
     public Output<String> getCloudfrontDistributionArn() {
@@ -51,7 +51,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The domain string.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -62,7 +62,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The S3 bucket where the static files for this domain are stored.
      * 
      */
-    @InputImport(name="s3Bucket")
+    @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
@@ -73,7 +73,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The user pool ID.
      * 
      */
-    @InputImport(name="userPoolId")
+    @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {
@@ -84,7 +84,7 @@ public final class UserPoolDomainState extends io.pulumi.resources.ResourceArgs 
      * The app version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStudioSessionMappingResult {
     /**
      * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
@@ -17,8 +17,8 @@ public final class GetStudioSessionMappingResult {
      */
     private final @Nullable String sessionPolicyArn;
 
-    @OutputCustomType.Constructor
-    private GetStudioSessionMappingResult(@OutputCustomType.Parameter("sessionPolicyArn") @Nullable String sessionPolicyArn) {
+    @CustomType.Constructor
+    private GetStudioSessionMappingResult(@CustomType.Parameter("sessionPolicyArn") @Nullable String sessionPolicyArn) {
         this.sessionPolicyArn = sessionPolicyArn;
     }
 

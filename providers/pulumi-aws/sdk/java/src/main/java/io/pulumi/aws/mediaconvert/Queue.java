@@ -8,7 +8,7 @@ import io.pulumi.aws.mediaconvert.QueueArgs;
 import io.pulumi.aws.mediaconvert.inputs.QueueState;
 import io.pulumi.aws.mediaconvert.outputs.QueueReservationPlanSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The Arn of the queue
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A description of the queue
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A unique identifier describing the queue
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
      * 
      */
-    @OutputExport(name="pricingPlan", type=String.class, parameters={})
+    @Export(name="pricingPlan", type=String.class, parameters={})
     private Output</* @Nullable */ String> pricingPlan;
 
     /**
@@ -90,7 +90,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A detail pricing plan of the  reserved queue. See below.
      * 
      */
-    @OutputExport(name="reservationPlanSettings", type=QueueReservationPlanSettings.class, parameters={})
+    @Export(name="reservationPlanSettings", type=QueueReservationPlanSettings.class, parameters={})
     private Output<QueueReservationPlanSettings> reservationPlanSettings;
 
     /**
@@ -104,7 +104,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -118,7 +118,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -132,7 +132,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

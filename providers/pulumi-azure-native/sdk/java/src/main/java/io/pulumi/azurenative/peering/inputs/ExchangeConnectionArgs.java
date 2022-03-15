@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * The BGP session associated with the connection.
      * 
      */
-    @InputImport(name="bgpSession")
+    @Import(name="bgpSession")
       private final @Nullable Output<BgpSessionArgs> bgpSession;
 
     public Output<BgpSessionArgs> getBgpSession() {
@@ -35,7 +35,7 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * The unique identifier (GUID) for the connection.
      * 
      */
-    @InputImport(name="connectionIdentifier")
+    @Import(name="connectionIdentifier")
       private final @Nullable Output<String> connectionIdentifier;
 
     public Output<String> getConnectionIdentifier() {
@@ -46,7 +46,7 @@ public final class ExchangeConnectionArgs extends io.pulumi.resources.ResourceAr
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
      */
-    @InputImport(name="peeringDBFacilityId")
+    @Import(name="peeringDBFacilityId")
       private final @Nullable Output<Integer> peeringDBFacilityId;
 
     public Output<Integer> getPeeringDBFacilityId() {

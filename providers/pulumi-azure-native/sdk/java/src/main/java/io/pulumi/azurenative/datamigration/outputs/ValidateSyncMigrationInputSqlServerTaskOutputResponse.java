@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
     /**
      * Database identifier
@@ -27,11 +27,11 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidateSyncMigrationInputSqlServerTaskOutputResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.id = id;
         this.name = name;
         this.validationErrors = validationErrors;

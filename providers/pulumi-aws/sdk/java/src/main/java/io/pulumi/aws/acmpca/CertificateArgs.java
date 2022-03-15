@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca;
 
 import io.pulumi.aws.acmpca.inputs.CertificateValidityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -30,7 +30,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Certificate Signing Request in PEM format.
      * 
      */
-    @InputImport(name="certificateSigningRequest", required=true)
+    @Import(name="certificateSigningRequest", required=true)
       private final Output<String> certificateSigningRequest;
 
     public Output<String> getCertificateSigningRequest() {
@@ -41,7 +41,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Algorithm to use to sign certificate requests. Valid values: `SHA256WITHRSA`, `SHA256WITHECDSA`, `SHA384WITHRSA`, `SHA384WITHECDSA`, `SHA512WITHRSA`, `SHA512WITHECDSA`
      * 
      */
-    @InputImport(name="signingAlgorithm", required=true)
+    @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
     public Output<String> getSigningAlgorithm() {
@@ -52,7 +52,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
      * 
      */
-    @InputImport(name="templateArn")
+    @Import(name="templateArn")
       private final @Nullable Output<String> templateArn;
 
     public Output<String> getTemplateArn() {
@@ -63,7 +63,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Configures end of the validity period for the certificate. See validity block below.
      * 
      */
-    @InputImport(name="validity", required=true)
+    @Import(name="validity", required=true)
       private final Output<CertificateValidityArgs> validity;
 
     public Output<CertificateValidityArgs> getValidity() {

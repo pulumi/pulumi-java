@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.ServicePerimeterResourceArgs;
@@ -51,7 +51,7 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * The name of the Service Perimeter to add this resource to.
      * 
      */
-    @OutputExport(name="perimeterName", type=String.class, parameters={})
+    @Export(name="perimeterName", type=String.class, parameters={})
     private Output<String> perimeterName;
 
     /**
@@ -67,7 +67,7 @@ public class ServicePerimeterResource extends io.pulumi.resources.CustomResource
      * Format: projects/{project_number}
      * 
      */
-    @OutputExport(name="resource", type=String.class, parameters={})
+    @Export(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
     /**

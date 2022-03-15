@@ -8,7 +8,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ConditionsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.ScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Action group to trigger if action rule matches
      * 
      */
-    @InputImport(name="actionGroupId", required=true)
+    @Import(name="actionGroupId", required=true)
       private final Output<String> actionGroupId;
 
     public Output<String> getActionGroupId() {
@@ -37,7 +37,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * conditions on which alerts will be filtered
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<ConditionsArgs> conditions;
 
     public Output<ConditionsArgs> getConditions() {
@@ -48,7 +48,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Description of action rule
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * scope on which action rule will apply
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
     public Output<ScopeArgs> getScope() {
@@ -70,7 +70,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if the given action rule is enabled or disabled
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,ActionRuleStatus>> status;
 
     public Output<Either<String,ActionRuleStatus>> getStatus() {
@@ -82,7 +82,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'ActionGroup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

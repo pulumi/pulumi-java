@@ -8,7 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NetworkInterfaceResp
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VirtualDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineTemplateResult {
     /**
      * Gets the name of the corresponding resource in Kubernetes.
@@ -157,35 +157,35 @@ public final class GetVirtualMachineTemplateResult {
      */
     private final @Nullable String vCenterId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineTemplateResult(
-        @OutputCustomType.Parameter("customResourceName") String customResourceName,
-        @OutputCustomType.Parameter("disks") List<VirtualDiskResponse> disks,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("firmwareType") String firmwareType,
-        @OutputCustomType.Parameter("folderPath") String folderPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("memorySizeMB") Integer memorySizeMB,
-        @OutputCustomType.Parameter("moName") String moName,
-        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("numCPUs") Integer numCPUs,
-        @OutputCustomType.Parameter("numCoresPerSocket") Integer numCoresPerSocket,
-        @OutputCustomType.Parameter("osName") String osName,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("toolsVersion") String toolsVersion,
-        @OutputCustomType.Parameter("toolsVersionStatus") String toolsVersionStatus,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uuid") String uuid,
-        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId) {
+        @CustomType.Parameter("customResourceName") String customResourceName,
+        @CustomType.Parameter("disks") List<VirtualDiskResponse> disks,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("firmwareType") String firmwareType,
+        @CustomType.Parameter("folderPath") String folderPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("memorySizeMB") Integer memorySizeMB,
+        @CustomType.Parameter("moName") String moName,
+        @CustomType.Parameter("moRefId") @Nullable String moRefId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("numCPUs") Integer numCPUs,
+        @CustomType.Parameter("numCoresPerSocket") Integer numCoresPerSocket,
+        @CustomType.Parameter("osName") String osName,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("toolsVersion") String toolsVersion,
+        @CustomType.Parameter("toolsVersionStatus") String toolsVersionStatus,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uuid") String uuid,
+        @CustomType.Parameter("vCenterId") @Nullable String vCenterId) {
         this.customResourceName = customResourceName;
         this.disks = disks;
         this.extendedLocation = extendedLocation;

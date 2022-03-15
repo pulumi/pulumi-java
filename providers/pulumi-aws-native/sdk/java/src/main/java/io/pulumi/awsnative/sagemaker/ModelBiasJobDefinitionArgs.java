@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionNetworkConfigA
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,49 +23,49 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
 
     public static final ModelBiasJobDefinitionArgs Empty = new ModelBiasJobDefinitionArgs();
 
-    @InputImport(name="jobDefinitionName")
+    @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
     }
 
-    @InputImport(name="jobResources", required=true)
+    @Import(name="jobResources", required=true)
       private final Output<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Output<ModelBiasJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
-    @InputImport(name="modelBiasAppSpecification", required=true)
+    @Import(name="modelBiasAppSpecification", required=true)
       private final Output<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification;
 
     public Output<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> getModelBiasAppSpecification() {
         return this.modelBiasAppSpecification;
     }
 
-    @InputImport(name="modelBiasBaselineConfig")
+    @Import(name="modelBiasBaselineConfig")
       private final @Nullable Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig;
 
     public Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> getModelBiasBaselineConfig() {
         return this.modelBiasBaselineConfig == null ? Output.empty() : this.modelBiasBaselineConfig;
     }
 
-    @InputImport(name="modelBiasJobInput", required=true)
+    @Import(name="modelBiasJobInput", required=true)
       private final Output<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput;
 
     public Output<ModelBiasJobDefinitionModelBiasJobInputArgs> getModelBiasJobInput() {
         return this.modelBiasJobInput;
     }
 
-    @InputImport(name="modelBiasJobOutputConfig", required=true)
+    @Import(name="modelBiasJobOutputConfig", required=true)
       private final Output<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig;
 
     public Output<ModelBiasJobDefinitionMonitoringOutputConfigArgs> getModelBiasJobOutputConfig() {
         return this.modelBiasJobOutputConfig;
     }
 
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Output<ModelBiasJobDefinitionNetworkConfigArgs> getNetworkConfig() {
@@ -76,14 +76,14 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stoppingCondition")
+    @Import(name="stoppingCondition")
       private final @Nullable Output<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Output<ModelBiasJobDefinitionStoppingConditionArgs> getStoppingCondition() {
@@ -94,7 +94,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ModelBiasJobDefinitionTagArgs>> tags;
 
     public Output<List<ModelBiasJobDefinitionTagArgs>> getTags() {

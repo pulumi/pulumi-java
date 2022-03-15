@@ -5,13 +5,13 @@ package io.pulumi.aws.signer.outputs;
 
 import io.pulumi.aws.signer.outputs.GetSigningProfileRevocationRecord;
 import io.pulumi.aws.signer.outputs.GetSigningProfileSignatureValidityPeriod;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningProfileResult {
     /**
      * The Amazon Resource Name (ARN) for the signing profile.
@@ -65,19 +65,19 @@ public final class GetSigningProfileResult {
      */
     private final String versionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSigningProfileResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platformDisplayName") String platformDisplayName,
-        @OutputCustomType.Parameter("platformId") String platformId,
-        @OutputCustomType.Parameter("revocationRecords") List<GetSigningProfileRevocationRecord> revocationRecords,
-        @OutputCustomType.Parameter("signatureValidityPeriods") List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("versionArn") String versionArn) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platformDisplayName") String platformDisplayName,
+        @CustomType.Parameter("platformId") String platformId,
+        @CustomType.Parameter("revocationRecords") List<GetSigningProfileRevocationRecord> revocationRecords,
+        @CustomType.Parameter("signatureValidityPeriods") List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("versionArn") String versionArn) {
         this.arn = arn;
         this.id = id;
         this.name = name;

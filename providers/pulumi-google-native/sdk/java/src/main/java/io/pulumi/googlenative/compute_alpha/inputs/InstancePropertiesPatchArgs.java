@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
      * The label key-value pairs that you want to patch onto the instance.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -34,7 +34,7 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
      * The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {

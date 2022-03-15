@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__StudyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StudyArgs Empty = new StudyArgs();
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -33,14 +33,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration of the study.
      * 
      */
-    @InputImport(name="studyConfig", required=true)
+    @Import(name="studyConfig", required=true)
       private final Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
     public Output<GoogleCloudMlV1__StudyConfigArgs> getStudyConfig() {
         return this.studyConfig;
     }
 
-    @InputImport(name="studyId", required=true)
+    @Import(name="studyId", required=true)
       private final Output<String> studyId;
 
     public Output<String> getStudyId() {

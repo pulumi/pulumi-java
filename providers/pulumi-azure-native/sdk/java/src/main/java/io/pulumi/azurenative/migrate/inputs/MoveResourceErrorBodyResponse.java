@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -32,7 +32,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
      * A list of additional details about the error.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<MoveResourceErrorBodyResponse> details;
 
     public List<MoveResourceErrorBodyResponse> getDetails() {
@@ -43,7 +43,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -54,7 +54,7 @@ public final class MoveResourceErrorBodyResponse extends io.pulumi.resources.Inv
      * The target of the particular error. For example, the name of the property in error.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final String target;
 
     public String getTarget() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource {
     /**
      * An IP address or a block of IP addresses in CIDR notation. AWS Network Firewall supports all address ranges for IPv4.
@@ -15,8 +15,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final String addressDefinition;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource(@OutputCustomType.Parameter("addressDefinition") String addressDefinition) {
+    @CustomType.Constructor
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSource(@CustomType.Parameter("addressDefinition") String addressDefinition) {
         this.addressDefinition = addressDefinition;
     }
 

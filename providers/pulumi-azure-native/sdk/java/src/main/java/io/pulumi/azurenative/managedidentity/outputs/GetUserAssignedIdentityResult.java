@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.managedidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserAssignedIdentityResult {
     /**
      * The id of the app associated with the identity. This is a random generated UUID by MSI.
@@ -52,16 +52,16 @@ public final class GetUserAssignedIdentityResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserAssignedIdentityResult(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.clientId = clientId;
         this.id = id;
         this.location = location;

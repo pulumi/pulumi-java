@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X12ValidationSettingsResponse {
     /**
      * The value indicating whether to allow leading and trailing spaces and zeroes.
@@ -62,18 +62,18 @@ public final class X12ValidationSettingsResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12ValidationSettingsResponse(
-        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        @OutputCustomType.Parameter("checkDuplicateGroupControlNumber") Boolean checkDuplicateGroupControlNumber,
-        @OutputCustomType.Parameter("checkDuplicateInterchangeControlNumber") Boolean checkDuplicateInterchangeControlNumber,
-        @OutputCustomType.Parameter("checkDuplicateTransactionSetControlNumber") Boolean checkDuplicateTransactionSetControlNumber,
-        @OutputCustomType.Parameter("interchangeControlNumberValidityDays") Integer interchangeControlNumberValidityDays,
-        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
-        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        @OutputCustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
-        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
-        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
+        @CustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @CustomType.Parameter("checkDuplicateGroupControlNumber") Boolean checkDuplicateGroupControlNumber,
+        @CustomType.Parameter("checkDuplicateInterchangeControlNumber") Boolean checkDuplicateInterchangeControlNumber,
+        @CustomType.Parameter("checkDuplicateTransactionSetControlNumber") Boolean checkDuplicateTransactionSetControlNumber,
+        @CustomType.Parameter("interchangeControlNumberValidityDays") Integer interchangeControlNumberValidityDays,
+        @CustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @CustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @CustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
+        @CustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @CustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
         this.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;

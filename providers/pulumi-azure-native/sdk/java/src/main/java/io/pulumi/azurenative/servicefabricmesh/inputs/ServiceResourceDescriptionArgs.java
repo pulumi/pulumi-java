@@ -10,7 +10,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsRefArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * Auto scaling policies
      * 
      */
-    @InputImport(name="autoScalingPolicies")
+    @Import(name="autoScalingPolicies")
       private final @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
     public Output<List<AutoScalingPolicyArgs>> getAutoScalingPolicies() {
@@ -41,7 +41,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * Describes the set of code packages that forms the service. A code package describes the container and the properties for running it. All the code packages are started together on the same host and share the same context (network, process etc.).
      * 
      */
-    @InputImport(name="codePackages", required=true)
+    @Import(name="codePackages", required=true)
       private final Output<List<ContainerCodePackagePropertiesArgs>> codePackages;
 
     public Output<List<ContainerCodePackagePropertiesArgs>> getCodePackages() {
@@ -52,7 +52,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * User readable description of the service.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * Reference to sinks in DiagnosticsDescription.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
     public Output<DiagnosticsRefArgs> getDiagnostics() {
@@ -74,7 +74,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * The name of the resource
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * The names of the private networks that this service needs to be part of.
      * 
      */
-    @InputImport(name="networkRefs")
+    @Import(name="networkRefs")
       private final @Nullable Output<List<NetworkRefArgs>> networkRefs;
 
     public Output<List<NetworkRefArgs>> getNetworkRefs() {
@@ -96,7 +96,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * The operation system required by the code in service.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final Output<Either<String,OperatingSystemType>> osType;
 
     public Output<Either<String,OperatingSystemType>> getOsType() {
@@ -107,7 +107,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
      * The number of replicas of the service to create. Defaults to 1 if not specified.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {

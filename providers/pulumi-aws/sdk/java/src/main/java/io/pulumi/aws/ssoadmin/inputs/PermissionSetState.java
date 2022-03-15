@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The date the Permission Set was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -41,7 +41,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The description of the Permission Set.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    @InputImport(name="instanceArn")
+    @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -63,7 +63,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The name of the Permission Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The relay state URL used to redirect users within the application during the federation authentication process.
      * 
      */
-    @InputImport(name="relayState")
+    @Import(name="relayState")
       private final @Nullable Output<String> relayState;
 
     public Output<String> getRelayState() {
@@ -85,7 +85,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * The length of time that the application user sessions are valid in the ISO-8601 standard. Default: `PT1H`.
      * 
      */
-    @InputImport(name="sessionDuration")
+    @Import(name="sessionDuration")
       private final @Nullable Output<String> sessionDuration;
 
     public Output<String> getSessionDuration() {
@@ -96,7 +96,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class PermissionSetState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

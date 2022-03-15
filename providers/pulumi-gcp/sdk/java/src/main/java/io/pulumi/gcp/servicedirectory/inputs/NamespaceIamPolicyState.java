@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -29,7 +29,7 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

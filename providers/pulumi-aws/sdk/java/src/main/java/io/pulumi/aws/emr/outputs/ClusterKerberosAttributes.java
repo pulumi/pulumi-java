@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterKerberosAttributes {
     /**
      * Active Directory password for `ad_domain_join_user`. This provider cannot perform drift detection of this configuration.
@@ -37,13 +37,13 @@ public final class ClusterKerberosAttributes {
      */
     private final String realm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterKerberosAttributes(
-        @OutputCustomType.Parameter("adDomainJoinPassword") @Nullable String adDomainJoinPassword,
-        @OutputCustomType.Parameter("adDomainJoinUser") @Nullable String adDomainJoinUser,
-        @OutputCustomType.Parameter("crossRealmTrustPrincipalPassword") @Nullable String crossRealmTrustPrincipalPassword,
-        @OutputCustomType.Parameter("kdcAdminPassword") String kdcAdminPassword,
-        @OutputCustomType.Parameter("realm") String realm) {
+        @CustomType.Parameter("adDomainJoinPassword") @Nullable String adDomainJoinPassword,
+        @CustomType.Parameter("adDomainJoinUser") @Nullable String adDomainJoinUser,
+        @CustomType.Parameter("crossRealmTrustPrincipalPassword") @Nullable String crossRealmTrustPrincipalPassword,
+        @CustomType.Parameter("kdcAdminPassword") String kdcAdminPassword,
+        @CustomType.Parameter("realm") String realm) {
         this.adDomainJoinPassword = adDomainJoinPassword;
         this.adDomainJoinUser = adDomainJoinUser;
         this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;

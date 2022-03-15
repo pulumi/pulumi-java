@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
      */
-    @InputImport(name="addressFamily")
+    @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -31,7 +31,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * Required for IPv4 BGP peers on public virtual interfaces.
      * 
      */
-    @InputImport(name="amazonAddress")
+    @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
     public Output<String> getAmazonAddress() {
@@ -42,7 +42,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The Direct Connect endpoint on which the BGP peer terminates.
      * 
      */
-    @InputImport(name="awsDevice")
+    @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
@@ -53,7 +53,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
      * 
      */
-    @InputImport(name="bgpAsn")
+    @Import(name="bgpAsn")
       private final @Nullable Output<Integer> bgpAsn;
 
     public Output<Integer> getBgpAsn() {
@@ -64,7 +64,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The authentication key for BGP configuration.
      * 
      */
-    @InputImport(name="bgpAuthKey")
+    @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
     public Output<String> getBgpAuthKey() {
@@ -75,7 +75,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The ID of the BGP peer.
      * 
      */
-    @InputImport(name="bgpPeerId")
+    @Import(name="bgpPeerId")
       private final @Nullable Output<String> bgpPeerId;
 
     public Output<String> getBgpPeerId() {
@@ -86,7 +86,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The Up/Down state of the BGP peer.
      * 
      */
-    @InputImport(name="bgpStatus")
+    @Import(name="bgpStatus")
       private final @Nullable Output<String> bgpStatus;
 
     public Output<String> getBgpStatus() {
@@ -98,7 +98,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * Required for IPv4 BGP peers on public virtual interfaces.
      * 
      */
-    @InputImport(name="customerAddress")
+    @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
     public Output<String> getCustomerAddress() {
@@ -109,7 +109,7 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Direct Connect virtual interface on which to create the BGP peer.
      * 
      */
-    @InputImport(name="virtualInterfaceId")
+    @Import(name="virtualInterfaceId")
       private final @Nullable Output<String> virtualInterfaceId;
 
     public Output<String> getVirtualInterfaceId() {

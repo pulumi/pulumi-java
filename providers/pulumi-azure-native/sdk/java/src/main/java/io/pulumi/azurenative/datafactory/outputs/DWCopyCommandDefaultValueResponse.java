@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DWCopyCommandDefaultValueResponse {
     /**
      * Column name. Type: object (or Expression with resultType string).
@@ -22,10 +22,10 @@ public final class DWCopyCommandDefaultValueResponse {
      */
     private final @Nullable Object defaultValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DWCopyCommandDefaultValueResponse(
-        @OutputCustomType.Parameter("columnName") @Nullable Object columnName,
-        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue) {
+        @CustomType.Parameter("columnName") @Nullable Object columnName,
+        @CustomType.Parameter("defaultValue") @Nullable Object defaultValue) {
         this.columnName = columnName;
         this.defaultValue = defaultValue;
     }

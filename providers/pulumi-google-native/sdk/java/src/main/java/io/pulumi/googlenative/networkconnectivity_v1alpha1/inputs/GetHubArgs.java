@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetHubArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHubArgs Empty = new GetHubArgs();
 
-    @InputImport(name="hubId", required=true)
+    @Import(name="hubId", required=true)
       private final String hubId;
 
     public String getHubId() {
         return this.hubId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

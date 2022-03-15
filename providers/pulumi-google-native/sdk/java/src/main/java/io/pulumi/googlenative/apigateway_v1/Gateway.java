@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigateway_v1.GatewayArgs;
@@ -23,7 +23,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
      * 
      */
-    @OutputExport(name="apiConfig", type=String.class, parameters={})
+    @Export(name="apiConfig", type=String.class, parameters={})
     private Output<String> apiConfig;
 
     /**
@@ -37,7 +37,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Created time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -51,7 +51,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
      * 
      */
-    @OutputExport(name="defaultHostname", type=String.class, parameters={})
+    @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
@@ -65,7 +65,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Optional. Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -79,7 +79,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -93,7 +93,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The current state of the Gateway.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -121,7 +121,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Updated time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

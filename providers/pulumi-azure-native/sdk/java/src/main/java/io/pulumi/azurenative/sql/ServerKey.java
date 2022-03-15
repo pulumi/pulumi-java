@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ServerKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    @OutputExport(name="autoRotationEnabled", type=Boolean.class, parameters={})
+    @Export(name="autoRotationEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> autoRotationEnabled;
 
     /**
@@ -49,7 +49,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * The server key creation date.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -63,7 +63,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -77,7 +77,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -91,7 +91,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Subregion of the server key.
      * 
      */
-    @OutputExport(name="subregion", type=String.class, parameters={})
+    @Export(name="subregion", type=String.class, parameters={})
     private Output<String> subregion;
 
     /**
@@ -119,7 +119,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Thumbprint of the server key.
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -133,7 +133,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

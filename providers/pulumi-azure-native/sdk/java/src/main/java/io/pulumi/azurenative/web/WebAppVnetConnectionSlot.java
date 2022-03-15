@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.WebAppVnetConnectionSlotArgs;
 import io.pulumi.azurenative.web.outputs.VnetRouteResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * Point-To-Site VPN connection.
      * 
      */
-    @OutputExport(name="certBlob", type=String.class, parameters={})
+    @Export(name="certBlob", type=String.class, parameters={})
     private Output</* @Nullable */ String> certBlob;
 
     /**
@@ -49,7 +49,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * The client certificate thumbprint.
      * 
      */
-    @OutputExport(name="certThumbprint", type=String.class, parameters={})
+    @Export(name="certThumbprint", type=String.class, parameters={})
     private Output<String> certThumbprint;
 
     /**
@@ -63,7 +63,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
      */
-    @OutputExport(name="dnsServers", type=String.class, parameters={})
+    @Export(name="dnsServers", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsServers;
 
     /**
@@ -77,7 +77,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * Flag that is used to denote if this is VNET injection
      * 
      */
-    @OutputExport(name="isSwift", type=Boolean.class, parameters={})
+    @Export(name="isSwift", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isSwift;
 
     /**
@@ -91,7 +91,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -105,7 +105,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * <code>true</code> if a resync is required; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="resyncRequired", type=Boolean.class, parameters={})
+    @Export(name="resyncRequired", type=Boolean.class, parameters={})
     private Output<Boolean> resyncRequired;
 
     /**
@@ -133,7 +133,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * The routes that this Virtual Network connection uses.
      * 
      */
-    @OutputExport(name="routes", type=List.class, parameters={VnetRouteResponse.class})
+    @Export(name="routes", type=List.class, parameters={VnetRouteResponse.class})
     private Output<List<VnetRouteResponse>> routes;
 
     /**
@@ -147,7 +147,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class WebAppVnetConnectionSlot extends io.pulumi.resources.CustomResource
      * The Virtual Network's resource ID.
      * 
      */
-    @OutputExport(name="vnetResourceId", type=String.class, parameters={})
+    @Export(name="vnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vnetResourceId;
 
     /**

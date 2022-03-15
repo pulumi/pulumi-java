@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * [Event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final Output<List<String>> events;
 
     public Output<List<String>> getEvents() {
@@ -30,7 +30,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * Object key name prefix.
      * 
      */
-    @InputImport(name="filterPrefix")
+    @Import(name="filterPrefix")
       private final @Nullable Output<String> filterPrefix;
 
     public Output<String> getFilterPrefix() {
@@ -41,7 +41,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * Object key name suffix.
      * 
      */
-    @InputImport(name="filterSuffix")
+    @Import(name="filterSuffix")
       private final @Nullable Output<String> filterSuffix;
 
     public Output<String> getFilterSuffix() {
@@ -52,7 +52,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * Unique identifier for each of the notification configurations.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -63,7 +63,7 @@ public final class BucketNotificationQueueGetArgs extends io.pulumi.resources.Re
      * SQS queue ARN.
      * 
      */
-    @InputImport(name="queueArn", required=true)
+    @Import(name="queueArn", required=true)
       private final Output<String> queueArn;
 
     public Output<String> getQueueArn() {

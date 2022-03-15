@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
      * The number of failures to allow before returning an unhealthy status.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Integer failureThreshold;
 
     public Optional<Integer> getFailureThreshold() {
@@ -33,7 +33,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
      * The delay before the first probe in seconds.
      * 
      */
-    @InputImport(name="initialDelaySeconds")
+    @Import(name="initialDelaySeconds")
       private final @Nullable Integer initialDelaySeconds;
 
     public Optional<Integer> getInitialDelaySeconds() {
@@ -44,7 +44,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
      * The length of time between probes in seconds.
      * 
      */
-    @InputImport(name="periodSeconds")
+    @Import(name="periodSeconds")
       private final @Nullable Integer periodSeconds;
 
     public Optional<Integer> getPeriodSeconds() {
@@ -55,7 +55,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
      * The number of successful probes before returning a healthy status.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Integer successThreshold;
 
     public Optional<Integer> getSuccessThreshold() {
@@ -66,7 +66,7 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements extends i
      * The probe timeout in seconds.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> getTimeoutSeconds() {

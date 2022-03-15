@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreSchemaDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreParquetConfiguration {
     private final @Nullable DatastoreSchemaDefinition schemaDefinition;
 
-    @OutputCustomType.Constructor
-    private DatastoreParquetConfiguration(@OutputCustomType.Parameter("schemaDefinition") @Nullable DatastoreSchemaDefinition schemaDefinition) {
+    @CustomType.Constructor
+    private DatastoreParquetConfiguration(@CustomType.Parameter("schemaDefinition") @Nullable DatastoreSchemaDefinition schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
     }
 

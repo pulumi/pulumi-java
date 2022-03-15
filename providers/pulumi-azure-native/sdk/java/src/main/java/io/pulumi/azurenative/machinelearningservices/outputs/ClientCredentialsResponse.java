@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientCredentialsResponse {
     /**
      * The authority URL used for authentication.
@@ -68,19 +68,19 @@ public final class ClientCredentialsResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientCredentialsResponse(
-        @OutputCustomType.Parameter("authorityUrl") @Nullable String authorityUrl,
-        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("isCertAuth") @Nullable Boolean isCertAuth,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
-        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("authorityUrl") @Nullable String authorityUrl,
+        @CustomType.Parameter("certificate") @Nullable String certificate,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("isCertAuth") @Nullable Boolean isCertAuth,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @CustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.authorityUrl = authorityUrl;
         this.certificate = certificate;
         this.clientId = clientId;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `TAR`.
      * 
      */
-    @InputImport(name="containerType")
+    @Import(name="containerType")
       private final @Nullable Output<String> containerType;
 
     public Output<String> getContainerType() {
@@ -35,7 +35,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * This is provided by the client when the disk image is created.
      * 
      */
-    @InputImport(name="sha1")
+    @Import(name="sha1")
       private final @Nullable Output<String> sha1;
 
     public Output<String> getSha1() {
@@ -48,7 +48,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
      * but not both.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {

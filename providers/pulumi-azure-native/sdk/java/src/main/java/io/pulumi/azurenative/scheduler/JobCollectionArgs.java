@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler;
 
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * The job collection name.
      * 
      */
-    @InputImport(name="jobCollectionName")
+    @Import(name="jobCollectionName")
       private final @Nullable Output<String> jobCollectionName;
 
     public Output<String> getJobCollectionName() {
@@ -31,7 +31,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the storage account location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job collection resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job collection properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<JobCollectionPropertiesArgs> properties;
 
     public Output<JobCollectionPropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

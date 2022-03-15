@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemoteAddressMatchConditionParametersResponse {
     /**
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
@@ -35,13 +35,13 @@ public final class RemoteAddressMatchConditionParametersResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemoteAddressMatchConditionParametersResponse(
-        @OutputCustomType.Parameter("matchValues") @Nullable List<String> matchValues,
-        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
+        @CustomType.Parameter("matchValues") @Nullable List<String> matchValues,
+        @CustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = odataType;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataTransferRegionalServiceResourceResponse {
     /**
      * The location name.
@@ -25,11 +25,11 @@ public final class DataTransferRegionalServiceResourceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataTransferRegionalServiceResourceResponse(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status) {
         this.location = location;
         this.name = name;
         this.status = status;

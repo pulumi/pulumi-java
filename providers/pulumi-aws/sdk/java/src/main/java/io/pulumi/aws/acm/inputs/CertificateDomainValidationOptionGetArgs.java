@@ -4,7 +4,7 @@
 package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CertificateDomainValidationOptionGetArgs extends io.pulumi.re
      * A domain name for which the certificate should be issued
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -29,7 +29,7 @@ public final class CertificateDomainValidationOptionGetArgs extends io.pulumi.re
      * The name of the DNS record to create to validate the certificate
      * 
      */
-    @InputImport(name="resourceRecordName")
+    @Import(name="resourceRecordName")
       private final @Nullable Output<String> resourceRecordName;
 
     public Output<String> getResourceRecordName() {
@@ -40,7 +40,7 @@ public final class CertificateDomainValidationOptionGetArgs extends io.pulumi.re
      * The type of DNS record to create
      * 
      */
-    @InputImport(name="resourceRecordType")
+    @Import(name="resourceRecordType")
       private final @Nullable Output<String> resourceRecordType;
 
     public Output<String> getResourceRecordType() {
@@ -51,7 +51,7 @@ public final class CertificateDomainValidationOptionGetArgs extends io.pulumi.re
      * The value the DNS record needs to have
      * 
      */
-    @InputImport(name="resourceRecordValue")
+    @Import(name="resourceRecordValue")
       private final @Nullable Output<String> resourceRecordValue;
 
     public Output<String> getResourceRecordValue() {

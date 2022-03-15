@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BoolEqualsAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
@@ -29,11 +29,11 @@ public final class BoolEqualsAdvancedFilterResponse {
      */
     private final @Nullable Boolean value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BoolEqualsAdvancedFilterResponse(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("operatorType") String operatorType,
-        @OutputCustomType.Parameter("value") @Nullable Boolean value) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("operatorType") String operatorType,
+        @CustomType.Parameter("value") @Nullable Boolean value) {
         this.key = key;
         this.operatorType = operatorType;
         this.value = value;

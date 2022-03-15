@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
      * 
      */
-    @InputImport(name="driverLogLevels", required=true)
+    @Import(name="driverLogLevels", required=true)
       private final Map<String,String> driverLogLevels;
 
     public Map<String,String> getDriverLogLevels() {

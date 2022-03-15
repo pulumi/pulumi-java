@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,42 +15,42 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final ContainerUploadGetArgs Empty = new ContainerUploadGetArgs();
 
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
         return this.content == null ? Output.empty() : this.content;
     }
 
-    @InputImport(name="contentBase64")
+    @Import(name="contentBase64")
       private final @Nullable Output<String> contentBase64;
 
     public Output<String> getContentBase64() {
         return this.contentBase64 == null ? Output.empty() : this.contentBase64;
     }
 
-    @InputImport(name="executable")
+    @Import(name="executable")
       private final @Nullable Output<Boolean> executable;
 
     public Output<Boolean> getExecutable() {
         return this.executable == null ? Output.empty() : this.executable;
     }
 
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final Output<String> file;
 
     public Output<String> getFile() {
         return this.file;
     }
 
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
         return this.source == null ? Output.empty() : this.source;
     }
 
-    @InputImport(name="sourceHash")
+    @Import(name="sourceHash")
       private final @Nullable Output<String> sourceHash;
 
     public Output<String> getSourceHash() {

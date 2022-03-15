@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleProtobufEmptyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2TaggedFieldResponse {
     /**
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2TaggedFieldResponse(
-        @OutputCustomType.Parameter("customTag") String customTag,
-        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
-        @OutputCustomType.Parameter("inferred") GoogleProtobufEmptyResponse inferred,
-        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        @CustomType.Parameter("customTag") String customTag,
+        @CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @CustomType.Parameter("inferred") GoogleProtobufEmptyResponse inferred,
+        @CustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
         this.customTag = customTag;
         this.field = field;
         this.inferred = inferred;

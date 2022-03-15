@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The workload group importance level.
      * 
      */
-    @InputImport(name="importance")
+    @Import(name="importance")
       private final @Nullable Output<String> importance;
 
     public Output<String> getImportance() {
@@ -31,7 +31,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The workload group cap percentage resource.
      * 
      */
-    @InputImport(name="maxResourcePercent", required=true)
+    @Import(name="maxResourcePercent", required=true)
       private final Output<Integer> maxResourcePercent;
 
     public Output<Integer> getMaxResourcePercent() {
@@ -42,7 +42,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The workload group request maximum grant percentage.
      * 
      */
-    @InputImport(name="maxResourcePercentPerRequest")
+    @Import(name="maxResourcePercentPerRequest")
       private final @Nullable Output<Double> maxResourcePercentPerRequest;
 
     public Output<Double> getMaxResourcePercentPerRequest() {
@@ -53,7 +53,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The workload group minimum percentage resource.
      * 
      */
-    @InputImport(name="minResourcePercent", required=true)
+    @Import(name="minResourcePercent", required=true)
       private final Output<Integer> minResourcePercent;
 
     public Output<Integer> getMinResourcePercent() {
@@ -64,7 +64,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The workload group request minimum grant percentage.
      * 
      */
-    @InputImport(name="minResourcePercentPerRequest", required=true)
+    @Import(name="minResourcePercentPerRequest", required=true)
       private final Output<Double> minResourcePercentPerRequest;
 
     public Output<Double> getMinResourcePercentPerRequest() {
@@ -75,7 +75,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The workload group query execution timeout.
      * 
      */
-    @InputImport(name="queryExecutionTimeout")
+    @Import(name="queryExecutionTimeout")
       private final @Nullable Output<Integer> queryExecutionTimeout;
 
     public Output<Integer> getQueryExecutionTimeout() {
@@ -86,7 +86,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * SQL pool name
      * 
      */
-    @InputImport(name="sqlPoolName", required=true)
+    @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
 
     public Output<String> getSqlPoolName() {
@@ -108,7 +108,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The name of the workload group.
      * 
      */
-    @InputImport(name="workloadGroupName")
+    @Import(name="workloadGroupName")
       private final @Nullable Output<String> workloadGroupName;
 
     public Output<String> getWorkloadGroupName() {
@@ -119,7 +119,7 @@ public final class SqlPoolWorkloadGroupArgs extends io.pulumi.resources.Resource
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

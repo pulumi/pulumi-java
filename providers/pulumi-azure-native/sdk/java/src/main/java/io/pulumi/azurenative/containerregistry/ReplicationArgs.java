@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -41,7 +41,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the replication.
      * 
      */
-    @InputImport(name="replicationName")
+    @Import(name="replicationName")
       private final @Nullable Output<String> replicationName;
 
     public Output<String> getReplicationName() {
@@ -52,7 +52,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ReplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

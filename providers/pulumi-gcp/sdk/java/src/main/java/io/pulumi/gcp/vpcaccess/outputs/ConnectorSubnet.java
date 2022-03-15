@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.vpcaccess.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorSubnet {
     /**
      * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
@@ -23,10 +23,10 @@ public final class ConnectorSubnet {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorSubnet(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("projectId") @Nullable String projectId) {
         this.name = name;
         this.projectId = projectId;
     }

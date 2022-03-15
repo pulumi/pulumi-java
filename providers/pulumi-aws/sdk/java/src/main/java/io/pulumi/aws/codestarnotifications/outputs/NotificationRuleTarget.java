@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codestarnotifications.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationRuleTarget {
     /**
      * The ARN of notification rule target. For example, a SNS Topic ARN.
@@ -27,11 +27,11 @@ public final class NotificationRuleTarget {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationRuleTarget(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.status = status;
         this.type = type;

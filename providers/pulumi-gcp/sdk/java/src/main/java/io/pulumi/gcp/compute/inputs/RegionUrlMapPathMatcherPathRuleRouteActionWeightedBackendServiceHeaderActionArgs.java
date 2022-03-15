@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestHeadersToAdds")
+    @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
     public Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
@@ -35,7 +35,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * prior to forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToRemoves")
+    @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
     public Output<List<String>> getRequestHeadersToRemoves() {
@@ -47,7 +47,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * Structure is documented below.
      * 
      */
-    @InputImport(name="responseHeadersToAdds")
+    @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
     public Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
@@ -59,7 +59,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServ
      * prior to sending the response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToRemoves")
+    @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
     public Output<List<String>> getResponseHeadersToRemoves() {

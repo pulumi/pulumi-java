@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the availability set.
      * 
      */
-    @InputImport(name="availabilitySetName")
+    @Import(name="availabilitySetName")
       private final @Nullable Output<String> availabilitySetName;
 
     public Output<String> getAvailabilitySetName() {
@@ -34,7 +34,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * Fault Domain count.
      * 
      */
-    @InputImport(name="platformFaultDomainCount")
+    @Import(name="platformFaultDomainCount")
       private final @Nullable Output<Integer> platformFaultDomainCount;
 
     public Output<Integer> getPlatformFaultDomainCount() {
@@ -56,7 +56,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * Update Domain count.
      * 
      */
-    @InputImport(name="platformUpdateDomainCount")
+    @Import(name="platformUpdateDomainCount")
       private final @Nullable Output<Integer> platformUpdateDomainCount;
 
     public Output<Integer> getPlatformUpdateDomainCount() {
@@ -67,7 +67,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
      * 
      */
-    @InputImport(name="proximityPlacementGroup")
+    @Import(name="proximityPlacementGroup")
       private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
     public Output<SubResourceArgs> getProximityPlacementGroup() {
@@ -78,7 +78,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -100,7 +100,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
      * A list of references to all virtual machines in the availability set.
      * 
      */
-    @InputImport(name="virtualMachines")
+    @Import(name="virtualMachines")
       private final @Nullable Output<List<SubResourceArgs>> virtualMachines;
 
     public Output<List<SubResourceArgs>> getVirtualMachines() {

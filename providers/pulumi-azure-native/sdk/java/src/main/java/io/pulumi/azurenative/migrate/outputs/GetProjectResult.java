@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.ProjectPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * For optimistic concurrency control.
@@ -49,15 +49,15 @@ public final class GetProjectResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ProjectPropertiesResponse properties,
-        @OutputCustomType.Parameter("tags") @Nullable Object tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ProjectPropertiesResponse properties,
+        @CustomType.Parameter("tags") @Nullable Object tags,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.location = location;

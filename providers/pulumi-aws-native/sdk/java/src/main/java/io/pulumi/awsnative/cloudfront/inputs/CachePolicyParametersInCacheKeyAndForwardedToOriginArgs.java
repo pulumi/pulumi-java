@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.CachePolicyCookiesConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyHeadersConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyQueryStringsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,35 +17,35 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
 
     public static final CachePolicyParametersInCacheKeyAndForwardedToOriginArgs Empty = new CachePolicyParametersInCacheKeyAndForwardedToOriginArgs();
 
-    @InputImport(name="cookiesConfig", required=true)
+    @Import(name="cookiesConfig", required=true)
       private final Output<CachePolicyCookiesConfigArgs> cookiesConfig;
 
     public Output<CachePolicyCookiesConfigArgs> getCookiesConfig() {
         return this.cookiesConfig;
     }
 
-    @InputImport(name="enableAcceptEncodingBrotli")
+    @Import(name="enableAcceptEncodingBrotli")
       private final @Nullable Output<Boolean> enableAcceptEncodingBrotli;
 
     public Output<Boolean> getEnableAcceptEncodingBrotli() {
         return this.enableAcceptEncodingBrotli == null ? Output.empty() : this.enableAcceptEncodingBrotli;
     }
 
-    @InputImport(name="enableAcceptEncodingGzip", required=true)
+    @Import(name="enableAcceptEncodingGzip", required=true)
       private final Output<Boolean> enableAcceptEncodingGzip;
 
     public Output<Boolean> getEnableAcceptEncodingGzip() {
         return this.enableAcceptEncodingGzip;
     }
 
-    @InputImport(name="headersConfig", required=true)
+    @Import(name="headersConfig", required=true)
       private final Output<CachePolicyHeadersConfigArgs> headersConfig;
 
     public Output<CachePolicyHeadersConfigArgs> getHeadersConfig() {
         return this.headersConfig;
     }
 
-    @InputImport(name="queryStringsConfig", required=true)
+    @Import(name="queryStringsConfig", required=true)
       private final Output<CachePolicyQueryStringsConfigArgs> queryStringsConfig;
 
     public Output<CachePolicyQueryStringsConfigArgs> getQueryStringsConfig() {

@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.FlowUpsolverS3OutputFormatConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowUpsolverDestinationProperties {
     private final String bucketName;
     private final @Nullable String bucketPrefix;
     private final FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowUpsolverDestinationProperties(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("s3OutputFormatConfig") FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("s3OutputFormatConfig") FlowUpsolverS3OutputFormatConfig s3OutputFormatConfig) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.s3OutputFormatConfig = s3OutputFormatConfig;

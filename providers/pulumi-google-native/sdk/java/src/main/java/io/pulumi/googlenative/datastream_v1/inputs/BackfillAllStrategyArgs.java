@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsArgs;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
      * MySQL data source objects to avoid backfilling.
      * 
      */
-    @InputImport(name="mysqlExcludedObjects")
+    @Import(name="mysqlExcludedObjects")
       private final @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
 
     public Output<MysqlRdbmsArgs> getMysqlExcludedObjects() {
@@ -34,7 +34,7 @@ public final class BackfillAllStrategyArgs extends io.pulumi.resources.ResourceA
      * Oracle data source objects to avoid backfilling.
      * 
      */
-    @InputImport(name="oracleExcludedObjects")
+    @Import(name="oracleExcludedObjects")
       private final @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
     public Output<OracleRdbmsArgs> getOracleExcludedObjects() {

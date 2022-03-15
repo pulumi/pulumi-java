@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     private final String arn;
     private final List<String> availabilityZones;
@@ -47,37 +47,37 @@ public final class GetClusterResult {
     private final Map<String,String> tags;
     private final List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("backtrackWindow") Integer backtrackWindow,
-        @OutputCustomType.Parameter("backupRetentionPeriod") Integer backupRetentionPeriod,
-        @OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier,
-        @OutputCustomType.Parameter("clusterMembers") List<String> clusterMembers,
-        @OutputCustomType.Parameter("clusterResourceId") String clusterResourceId,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("dbClusterParameterGroupName") String dbClusterParameterGroupName,
-        @OutputCustomType.Parameter("dbSubnetGroupName") String dbSubnetGroupName,
-        @OutputCustomType.Parameter("enabledCloudwatchLogsExports") List<String> enabledCloudwatchLogsExports,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("engine") String engine,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("finalSnapshotIdentifier") String finalSnapshotIdentifier,
-        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
-        @OutputCustomType.Parameter("iamDatabaseAuthenticationEnabled") Boolean iamDatabaseAuthenticationEnabled,
-        @OutputCustomType.Parameter("iamRoles") List<String> iamRoles,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("masterUsername") String masterUsername,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("preferredBackupWindow") String preferredBackupWindow,
-        @OutputCustomType.Parameter("preferredMaintenanceWindow") String preferredMaintenanceWindow,
-        @OutputCustomType.Parameter("readerEndpoint") String readerEndpoint,
-        @OutputCustomType.Parameter("replicationSourceIdentifier") String replicationSourceIdentifier,
-        @OutputCustomType.Parameter("storageEncrypted") Boolean storageEncrypted,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("backtrackWindow") Integer backtrackWindow,
+        @CustomType.Parameter("backupRetentionPeriod") Integer backupRetentionPeriod,
+        @CustomType.Parameter("clusterIdentifier") String clusterIdentifier,
+        @CustomType.Parameter("clusterMembers") List<String> clusterMembers,
+        @CustomType.Parameter("clusterResourceId") String clusterResourceId,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("dbClusterParameterGroupName") String dbClusterParameterGroupName,
+        @CustomType.Parameter("dbSubnetGroupName") String dbSubnetGroupName,
+        @CustomType.Parameter("enabledCloudwatchLogsExports") List<String> enabledCloudwatchLogsExports,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("engine") String engine,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("finalSnapshotIdentifier") String finalSnapshotIdentifier,
+        @CustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @CustomType.Parameter("iamDatabaseAuthenticationEnabled") Boolean iamDatabaseAuthenticationEnabled,
+        @CustomType.Parameter("iamRoles") List<String> iamRoles,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("masterUsername") String masterUsername,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("preferredBackupWindow") String preferredBackupWindow,
+        @CustomType.Parameter("preferredMaintenanceWindow") String preferredMaintenanceWindow,
+        @CustomType.Parameter("readerEndpoint") String readerEndpoint,
+        @CustomType.Parameter("replicationSourceIdentifier") String replicationSourceIdentifier,
+        @CustomType.Parameter("storageEncrypted") Boolean storageEncrypted,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
         this.arn = arn;
         this.availabilityZones = availabilityZones;
         this.backtrackWindow = backtrackWindow;

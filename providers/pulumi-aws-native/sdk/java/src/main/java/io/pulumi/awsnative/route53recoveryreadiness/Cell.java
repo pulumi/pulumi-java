@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.CellArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.CellTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the cell.
      * 
      */
-    @OutputExport(name="cellArn", type=String.class, parameters={})
+    @Export(name="cellArn", type=String.class, parameters={})
     private Output<String> cellArn;
 
     /**
@@ -37,7 +37,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * The name of the cell to create.
      * 
      */
-    @OutputExport(name="cellName", type=String.class, parameters={})
+    @Export(name="cellName", type=String.class, parameters={})
     private Output<String> cellName;
 
     /**
@@ -51,7 +51,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
      * 
      */
-    @OutputExport(name="cells", type=List.class, parameters={String.class})
+    @Export(name="cells", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cells;
 
     /**
@@ -65,7 +65,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * The readiness scope for the cell, which can be a cell Amazon Resource Name (ARN) or a recovery group ARN. This is a list but currently can have only one element.
      * 
      */
-    @OutputExport(name="parentReadinessScopes", type=List.class, parameters={String.class})
+    @Export(name="parentReadinessScopes", type=List.class, parameters={String.class})
     private Output<List<String>> parentReadinessScopes;
 
     /**
@@ -79,7 +79,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={CellTag.class})
+    @Export(name="tags", type=List.class, parameters={CellTag.class})
     private Output</* @Nullable */ List<CellTag>> tags;
 
     /**

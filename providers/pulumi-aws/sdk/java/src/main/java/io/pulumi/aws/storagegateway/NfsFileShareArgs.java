@@ -6,7 +6,7 @@ package io.pulumi.aws.storagegateway;
 import io.pulumi.aws.storagegateway.inputs.NfsFileShareCacheAttributesArgs;
 import io.pulumi.aws.storagegateway.inputs.NfsFileShareNfsFileShareDefaultsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the storage used for audit logs.
      * 
      */
-    @InputImport(name="auditDestinationArn")
+    @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
     public Output<String> getAuditDestinationArn() {
@@ -34,7 +34,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    @InputImport(name="cacheAttributes")
+    @Import(name="cacheAttributes")
       private final @Nullable Output<NfsFileShareCacheAttributesArgs> cacheAttributes;
 
     public Output<NfsFileShareCacheAttributesArgs> getCacheAttributes() {
@@ -45,7 +45,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
      * 
      */
-    @InputImport(name="clientLists", required=true)
+    @Import(name="clientLists", required=true)
       private final Output<List<String>> clientLists;
 
     public Output<List<String>> getClientLists() {
@@ -56,7 +56,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The default [storage class](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-DefaultStorageClass) for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`.
      * 
      */
-    @InputImport(name="defaultStorageClass")
+    @Import(name="defaultStorageClass")
       private final @Nullable Output<String> defaultStorageClass;
 
     public Output<String> getDefaultStorageClass() {
@@ -67,7 +67,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
      * 
      */
-    @InputImport(name="fileShareName")
+    @Import(name="fileShareName")
       private final @Nullable Output<String> fileShareName;
 
     public Output<String> getFileShareName() {
@@ -78,7 +78,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the file gateway.
      * 
      */
-    @InputImport(name="gatewayArn", required=true)
+    @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
     public Output<String> getGatewayArn() {
@@ -89,7 +89,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
      * 
      */
-    @InputImport(name="guessMimeTypeEnabled")
+    @Import(name="guessMimeTypeEnabled")
       private final @Nullable Output<Boolean> guessMimeTypeEnabled;
 
     public Output<Boolean> getGuessMimeTypeEnabled() {
@@ -100,7 +100,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
      * 
      */
-    @InputImport(name="kmsEncrypted")
+    @Import(name="kmsEncrypted")
       private final @Nullable Output<Boolean> kmsEncrypted;
 
     public Output<Boolean> getKmsEncrypted() {
@@ -111,7 +111,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -122,7 +122,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the backed storage used for storing file data.
      * 
      */
-    @InputImport(name="locationArn", required=true)
+    @Import(name="locationArn", required=true)
       private final Output<String> locationArn;
 
     public Output<String> getLocationArn() {
@@ -133,7 +133,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
      * 
      */
-    @InputImport(name="nfsFileShareDefaults")
+    @Import(name="nfsFileShareDefaults")
       private final @Nullable Output<NfsFileShareNfsFileShareDefaultsArgs> nfsFileShareDefaults;
 
     public Output<NfsFileShareNfsFileShareDefaultsArgs> getNfsFileShareDefaults() {
@@ -144,7 +144,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
      * 
      */
-    @InputImport(name="notificationPolicy")
+    @Import(name="notificationPolicy")
       private final @Nullable Output<String> notificationPolicy;
 
     public Output<String> getNotificationPolicy() {
@@ -155,7 +155,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Access Control List permission for S3 bucket objects. Defaults to `private`.
      * 
      */
-    @InputImport(name="objectAcl")
+    @Import(name="objectAcl")
       private final @Nullable Output<String> objectAcl;
 
     public Output<String> getObjectAcl() {
@@ -166,7 +166,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -177,7 +177,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
      * 
      */
-    @InputImport(name="requesterPays")
+    @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;
 
     public Output<Boolean> getRequesterPays() {
@@ -188,7 +188,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -199,7 +199,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
      * 
      */
-    @InputImport(name="squash")
+    @Import(name="squash")
       private final @Nullable Output<String> squash;
 
     public Output<String> getSquash() {
@@ -210,7 +210,7 @@ public final class NfsFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

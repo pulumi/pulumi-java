@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpAddressResponse {
     /**
      * Specifies the IP address of the network interface.
@@ -17,8 +17,8 @@ public final class IpAddressResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor
-    private IpAddressResponse(@OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
+    @CustomType.Constructor
+    private IpAddressResponse(@CustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.ipAddress = ipAddress;
     }
 

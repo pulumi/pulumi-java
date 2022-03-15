@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicas;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalarAutoscalingPolicyScaleDownControl {
     /**
      * A nested object resource
@@ -25,10 +25,10 @@ public final class AutoscalarAutoscalingPolicyScaleDownControl {
      */
     private final @Nullable Integer timeWindowSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalarAutoscalingPolicyScaleDownControl(
-        @OutputCustomType.Parameter("maxScaledDownReplicas") @Nullable AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicas maxScaledDownReplicas,
-        @OutputCustomType.Parameter("timeWindowSec") @Nullable Integer timeWindowSec) {
+        @CustomType.Parameter("maxScaledDownReplicas") @Nullable AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicas maxScaledDownReplicas,
+        @CustomType.Parameter("timeWindowSec") @Nullable Integer timeWindowSec) {
         this.maxScaledDownReplicas = maxScaledDownReplicas;
         this.timeWindowSec = timeWindowSec;
     }

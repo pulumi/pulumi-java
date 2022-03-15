@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd {
     /**
      * The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
@@ -27,11 +27,11 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      */
     private final @Nullable Integer tenthFractionsOfACent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd(
-        @OutputCustomType.Parameter("cents") @Nullable Integer cents,
-        @OutputCustomType.Parameter("dollars") @Nullable Integer dollars,
-        @OutputCustomType.Parameter("tenthFractionsOfACent") @Nullable Integer tenthFractionsOfACent) {
+        @CustomType.Parameter("cents") @Nullable Integer cents,
+        @CustomType.Parameter("dollars") @Nullable Integer dollars,
+        @CustomType.Parameter("tenthFractionsOfACent") @Nullable Integer tenthFractionsOfACent) {
         this.cents = cents;
         this.dollars = dollars;
         this.tenthFractionsOfACent = tenthFractionsOfACent;

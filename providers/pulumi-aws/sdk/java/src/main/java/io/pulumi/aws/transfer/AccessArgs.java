@@ -6,7 +6,7 @@ package io.pulumi.aws.transfer;
 import io.pulumi.aws.transfer.inputs.AccessHomeDirectoryMappingArgs;
 import io.pulumi.aws.transfer.inputs.AccessPosixProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
      * 
      */
-    @InputImport(name="externalId", required=true)
+    @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -32,7 +32,7 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
      * 
      */
-    @InputImport(name="homeDirectory")
+    @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
     public Output<String> getHomeDirectory() {
@@ -43,7 +43,7 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
      * 
      */
-    @InputImport(name="homeDirectoryMappings")
+    @Import(name="homeDirectoryMappings")
       private final @Nullable Output<List<AccessHomeDirectoryMappingArgs>> homeDirectoryMappings;
 
     public Output<List<AccessHomeDirectoryMappingArgs>> getHomeDirectoryMappings() {
@@ -54,14 +54,14 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
      * 
      */
-    @InputImport(name="homeDirectoryType")
+    @Import(name="homeDirectoryType")
       private final @Nullable Output<String> homeDirectoryType;
 
     public Output<String> getHomeDirectoryType() {
         return this.homeDirectoryType == null ? Output.empty() : this.homeDirectoryType;
     }
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -72,7 +72,7 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
-    @InputImport(name="posixProfile")
+    @Import(name="posixProfile")
       private final @Nullable Output<AccessPosixProfileArgs> posixProfile;
 
     public Output<AccessPosixProfileArgs> getPosixProfile() {
@@ -83,7 +83,7 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -94,7 +94,7 @@ public final class AccessArgs extends io.pulumi.resources.ResourceArgs {
      * The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    @InputImport(name="serverId", required=true)
+    @Import(name="serverId", required=true)
       private final Output<String> serverId;
 
     public Output<String> getServerId() {

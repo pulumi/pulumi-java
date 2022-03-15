@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatusDetailPropertiesResponse {
     /**
      * The code of the status.
@@ -35,13 +35,13 @@ public final class StatusDetailPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusDetailPropertiesResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("correlationId") String correlationId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("timestamp") String timestamp,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("correlationId") String correlationId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("timestamp") String timestamp,
+        @CustomType.Parameter("type") String type) {
         this.code = code;
         this.correlationId = correlationId;
         this.description = description;

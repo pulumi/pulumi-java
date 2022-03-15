@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.Kind;
 import io.pulumi.azurenative.securityinsights.enums.Operator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * Id of the content item we depend on
      * 
      */
-    @InputImport(name="contentId")
+    @Import(name="contentId")
       private final @Nullable Output<String> contentId;
 
     public Output<String> getContentId() {
@@ -37,7 +37,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * This is the list of dependencies we must fulfill, according to the AND/OR operator
      * 
      */
-    @InputImport(name="criteria")
+    @Import(name="criteria")
       private final @Nullable Output<List<MetadataDependenciesArgs>> criteria;
 
     public Output<List<MetadataDependenciesArgs>> getCriteria() {
@@ -48,7 +48,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * Type of the content item we depend on
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -59,7 +59,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * Name of the content item
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * Operator used for list of dependencies in criteria array.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
@@ -81,7 +81,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

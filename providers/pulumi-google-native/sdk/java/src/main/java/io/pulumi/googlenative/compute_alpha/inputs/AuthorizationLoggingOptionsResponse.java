@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AuthorizationLoggingOptionsResponse extends io.pulumi.resourc
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="permissionType", required=true)
+    @Import(name="permissionType", required=true)
       private final String permissionType;
 
     public String getPermissionType() {

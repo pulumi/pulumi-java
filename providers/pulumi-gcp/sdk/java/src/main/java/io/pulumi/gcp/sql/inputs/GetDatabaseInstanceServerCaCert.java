@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,35 +12,35 @@ public final class GetDatabaseInstanceServerCaCert extends io.pulumi.resources.I
 
     public static final GetDatabaseInstanceServerCaCert Empty = new GetDatabaseInstanceServerCaCert();
 
-    @InputImport(name="cert", required=true)
+    @Import(name="cert", required=true)
       private final String cert;
 
     public String getCert() {
         return this.cert;
     }
 
-    @InputImport(name="commonName", required=true)
+    @Import(name="commonName", required=true)
       private final String commonName;
 
     public String getCommonName() {
         return this.commonName;
     }
 
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
     }
 
-    @InputImport(name="sha1Fingerprint", required=true)
+    @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {

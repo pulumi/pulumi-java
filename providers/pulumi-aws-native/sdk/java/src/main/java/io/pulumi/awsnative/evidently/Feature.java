@@ -10,7 +10,7 @@ import io.pulumi.awsnative.evidently.outputs.FeatureEntityOverride;
 import io.pulumi.awsnative.evidently.outputs.FeatureTag;
 import io.pulumi.awsnative.evidently.outputs.FeatureVariationObject;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,43 +22,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:evidently:Feature")
 public class Feature extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="defaultVariation", type=String.class, parameters={})
+    @Export(name="defaultVariation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultVariation;
 
     public Output</* @Nullable */ String> getDefaultVariation() {
         return this.defaultVariation;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="entityOverrides", type=List.class, parameters={FeatureEntityOverride.class})
+    @Export(name="entityOverrides", type=List.class, parameters={FeatureEntityOverride.class})
     private Output</* @Nullable */ List<FeatureEntityOverride>> entityOverrides;
 
     public Output</* @Nullable */ List<FeatureEntityOverride>> getEntityOverrides() {
         return this.entityOverrides;
     }
-    @OutputExport(name="evaluationStrategy", type=FeatureEvaluationStrategy.class, parameters={})
+    @Export(name="evaluationStrategy", type=FeatureEvaluationStrategy.class, parameters={})
     private Output</* @Nullable */ FeatureEvaluationStrategy> evaluationStrategy;
 
     public Output</* @Nullable */ FeatureEvaluationStrategy> getEvaluationStrategy() {
         return this.evaluationStrategy;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FeatureTag.class})
+    @Export(name="tags", type=List.class, parameters={FeatureTag.class})
     private Output</* @Nullable */ List<FeatureTag>> tags;
 
     /**
@@ -78,7 +78,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<FeatureTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="variations", type=List.class, parameters={FeatureVariationObject.class})
+    @Export(name="variations", type=List.class, parameters={FeatureVariationObject.class})
     private Output<List<FeatureVariationObject>> variations;
 
     public Output<List<FeatureVariationObject>> getVariations() {

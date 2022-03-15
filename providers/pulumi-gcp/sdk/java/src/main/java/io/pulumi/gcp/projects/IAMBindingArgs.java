@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.projects.inputs.IAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMBindingConditionArgs> condition;
 
     public Output<IAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -40,7 +40,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * inferred from the provider.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {
@@ -53,7 +53,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

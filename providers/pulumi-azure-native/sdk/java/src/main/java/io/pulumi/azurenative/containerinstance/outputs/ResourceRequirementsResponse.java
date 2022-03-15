@@ -5,12 +5,12 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.ResourceLimitsResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ResourceRequestsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceRequirementsResponse {
     /**
      * The resource limits of this container instance.
@@ -23,10 +23,10 @@ public final class ResourceRequirementsResponse {
      */
     private final ResourceRequestsResponse requests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceRequirementsResponse(
-        @OutputCustomType.Parameter("limits") @Nullable ResourceLimitsResponse limits,
-        @OutputCustomType.Parameter("requests") ResourceRequestsResponse requests) {
+        @CustomType.Parameter("limits") @Nullable ResourceLimitsResponse limits,
+        @CustomType.Parameter("requests") ResourceRequestsResponse requests) {
         this.limits = limits;
         this.requests = requests;
     }

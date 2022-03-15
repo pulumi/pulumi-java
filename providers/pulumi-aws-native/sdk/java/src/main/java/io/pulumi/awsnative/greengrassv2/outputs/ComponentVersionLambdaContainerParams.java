@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaDeviceMount;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaVolumeMount;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -13,19 +13,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVersionLambdaContainerParams {
     private final @Nullable List<ComponentVersionLambdaDeviceMount> devices;
     private final @Nullable Integer memorySizeInKB;
     private final @Nullable Boolean mountROSysfs;
     private final @Nullable List<ComponentVersionLambdaVolumeMount> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVersionLambdaContainerParams(
-        @OutputCustomType.Parameter("devices") @Nullable List<ComponentVersionLambdaDeviceMount> devices,
-        @OutputCustomType.Parameter("memorySizeInKB") @Nullable Integer memorySizeInKB,
-        @OutputCustomType.Parameter("mountROSysfs") @Nullable Boolean mountROSysfs,
-        @OutputCustomType.Parameter("volumes") @Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
+        @CustomType.Parameter("devices") @Nullable List<ComponentVersionLambdaDeviceMount> devices,
+        @CustomType.Parameter("memorySizeInKB") @Nullable Integer memorySizeInKB,
+        @CustomType.Parameter("mountROSysfs") @Nullable Boolean mountROSysfs,
+        @CustomType.Parameter("volumes") @Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
         this.devices = devices;
         this.memorySizeInKB = memorySizeInKB;
         this.mountROSysfs = mountROSysfs;

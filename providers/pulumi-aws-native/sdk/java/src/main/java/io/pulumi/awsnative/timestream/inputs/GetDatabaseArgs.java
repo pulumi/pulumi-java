@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
      * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {

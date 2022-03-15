@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class InstanceShieldedInstanceConfigGetArgs extends io.pulumi.resou
      * Enabled by default.
      * 
      */
-    @InputImport(name="enableIntegrityMonitoring")
+    @Import(name="enableIntegrityMonitoring")
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
     public Output<Boolean> getEnableIntegrityMonitoring() {
@@ -35,7 +35,7 @@ public final class InstanceShieldedInstanceConfigGetArgs extends io.pulumi.resou
      * Disabled by default.
      * 
      */
-    @InputImport(name="enableSecureBoot")
+    @Import(name="enableSecureBoot")
       private final @Nullable Output<Boolean> enableSecureBoot;
 
     public Output<Boolean> getEnableSecureBoot() {
@@ -47,7 +47,7 @@ public final class InstanceShieldedInstanceConfigGetArgs extends io.pulumi.resou
      * Enabled by default.
      * 
      */
-    @InputImport(name="enableVtpm")
+    @Import(name="enableVtpm")
       private final @Nullable Output<Boolean> enableVtpm;
 
     public Output<Boolean> getEnableVtpm() {

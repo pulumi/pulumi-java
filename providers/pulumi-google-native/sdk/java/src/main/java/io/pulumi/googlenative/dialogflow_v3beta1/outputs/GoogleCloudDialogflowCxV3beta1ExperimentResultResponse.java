@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse {
     /**
      * The last time the experiment's stats data was updated. Will have default value if stats have never been computed for this experiment.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(
-        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
-        @OutputCustomType.Parameter("versionMetrics") List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
+        @CustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @CustomType.Parameter("versionMetrics") List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
         this.lastUpdateTime = lastUpdateTime;
         this.versionMetrics = versionMetrics;
     }

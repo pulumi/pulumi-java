@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.robomaker.FleetArgs;
 import io.pulumi.awsnative.robomaker.outputs.FleetTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:robomaker:Fleet")
 public class Fleet extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * The name of the fleet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -40,7 +40,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=FleetTags.class, parameters={})
+    @Export(name="tags", type=FleetTags.class, parameters={})
     private Output</* @Nullable */ FleetTags> tags;
 
     public Output</* @Nullable */ FleetTags> getTags() {

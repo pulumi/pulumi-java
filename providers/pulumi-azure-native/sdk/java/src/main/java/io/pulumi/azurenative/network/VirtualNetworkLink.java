@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.VirtualNetworkLinkArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The ETag of the virtual network link.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
      * 
      */
-    @OutputExport(name="registrationEnabled", type=Boolean.class, parameters={})
+    @Export(name="registrationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> registrationEnabled;
 
     /**
@@ -107,7 +107,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -135,7 +135,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The reference of the virtual network.
      * 
      */
-    @OutputExport(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualNetwork;
 
     /**
@@ -149,7 +149,7 @@ public class VirtualNetworkLink extends io.pulumi.resources.CustomResource {
      * The status of the virtual network link to the Private DNS zone. Possible values are 'InProgress' and 'Done'. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="virtualNetworkLinkState", type=String.class, parameters={})
+    @Export(name="virtualNetworkLinkState", type=String.class, parameters={})
     private Output<String> virtualNetworkLinkState;
 
     /**

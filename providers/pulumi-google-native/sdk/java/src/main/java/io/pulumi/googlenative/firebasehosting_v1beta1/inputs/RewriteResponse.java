@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.CloudRunRewriteResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * The request will be forwarded to Firebase Dynamic Links.
      * 
      */
-    @InputImport(name="dynamicLinks", required=true)
+    @Import(name="dynamicLinks", required=true)
       private final Boolean dynamicLinks;
 
     public Boolean getDynamicLinks() {
@@ -33,7 +33,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * The function to proxy requests to. Must match the exported function name exactly.
      * 
      */
-    @InputImport(name="function", required=true)
+    @Import(name="function", required=true)
       private final String function;
 
     public String getFunction() {
@@ -44,7 +44,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
      * 
      */
-    @InputImport(name="glob", required=true)
+    @Import(name="glob", required=true)
       private final String glob;
 
     public String getGlob() {
@@ -55,7 +55,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * The URL path to rewrite the request to.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -66,7 +66,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * The user-supplied RE2 regular expression to match against the request URL path.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final String regex;
 
     public String getRegex() {
@@ -77,7 +77,7 @@ public final class RewriteResponse extends io.pulumi.resources.InvokeArgs {
      * The request will be forwarded to Cloud Run.
      * 
      */
-    @InputImport(name="run", required=true)
+    @Import(name="run", required=true)
       private final CloudRunRewriteResponse run;
 
     public CloudRunRewriteResponse getRun() {

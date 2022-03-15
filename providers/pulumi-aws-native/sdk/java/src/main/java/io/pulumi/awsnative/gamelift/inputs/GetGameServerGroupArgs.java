@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGameServerGroupArgs extends io.pulumi.resources.InvokeArgs
      * A generated unique ID for the game server group.
      * 
      */
-    @InputImport(name="gameServerGroupArn", required=true)
+    @Import(name="gameServerGroupArn", required=true)
       private final String gameServerGroupArn;
 
     public String getGameServerGroupArn() {

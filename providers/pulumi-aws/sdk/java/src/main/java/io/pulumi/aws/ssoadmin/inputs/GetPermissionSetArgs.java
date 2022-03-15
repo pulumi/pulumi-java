@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssoadmin.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the permission set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -30,7 +30,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the SSO Instance associated with the permission set.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
     public String getInstanceArn() {
@@ -41,7 +41,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the SSO Permission Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -52,7 +52,7 @@ public final class GetPermissionSetArgs extends io.pulumi.resources.InvokeArgs {
      * Key-value map of resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
      * The location of the Salesforce resource
      * 
      */
-    @InputImport(name="instanceUrl")
+    @Import(name="instanceUrl")
       private final @Nullable Output<String> instanceUrl;
 
     public Output<String> getInstanceUrl() {
         return this.instanceUrl == null ? Output.empty() : this.instanceUrl;
     }
 
-    @InputImport(name="isSandboxEnvironment")
+    @Import(name="isSandboxEnvironment")
       private final @Nullable Output<Boolean> isSandboxEnvironment;
 
     public Output<Boolean> getIsSandboxEnvironment() {

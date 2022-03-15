@@ -7,7 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoElbInfoArg
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
      * The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
      * 
      */
-    @InputImport(name="elbInfos")
+    @Import(name="elbInfos")
       private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> elbInfos;
 
     public Output<List<DeploymentGroupLoadBalancerInfoElbInfoArgs>> getElbInfos() {
@@ -32,7 +32,7 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
      * The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
      * 
      */
-    @InputImport(name="targetGroupInfos")
+    @Import(name="targetGroupInfos")
       private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> targetGroupInfos;
 
     public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs>> getTargetGroupInfos() {
@@ -43,7 +43,7 @@ public final class DeploymentGroupLoadBalancerInfoArgs extends io.pulumi.resourc
      * The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
      * 
      */
-    @InputImport(name="targetGroupPairInfo")
+    @Import(name="targetGroupPairInfo")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> targetGroupPairInfo;
 
     public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs> getTargetGroupPairInfo() {

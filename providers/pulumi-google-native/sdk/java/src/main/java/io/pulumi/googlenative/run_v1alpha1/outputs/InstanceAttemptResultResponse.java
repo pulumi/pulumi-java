@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.GoogleRpcStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceAttemptResultResponse {
     /**
      * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
@@ -21,10 +21,10 @@ public final class InstanceAttemptResultResponse {
      */
     private final GoogleRpcStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceAttemptResultResponse(
-        @OutputCustomType.Parameter("exitCode") Integer exitCode,
-        @OutputCustomType.Parameter("status") GoogleRpcStatusResponse status) {
+        @CustomType.Parameter("exitCode") Integer exitCode,
+        @CustomType.Parameter("status") GoogleRpcStatusResponse status) {
         this.exitCode = exitCode;
         this.status = status;
     }

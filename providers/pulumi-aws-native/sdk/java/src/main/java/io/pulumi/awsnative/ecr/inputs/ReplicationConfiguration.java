@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationRule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ReplicationConfiguration extends io.pulumi.resources.InvokeAr
      * An array of objects representing the replication rules for a replication configuration. A replication configuration may contain a maximum of 10 rules.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<ReplicationConfigurationReplicationRule> rules;
 
     public List<ReplicationConfigurationReplicationRule> getRules() {

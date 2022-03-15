@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceViewStatusResponse {
     /**
      * The status code.
@@ -37,13 +37,13 @@ public final class InstanceViewStatusResponse {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceViewStatusResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("displayStatus") @Nullable String displayStatus,
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("time") @Nullable String time) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("displayStatus") @Nullable String displayStatus,
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("time") @Nullable String time) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.level = level;

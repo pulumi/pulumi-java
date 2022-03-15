@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.autoscalingplans.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecification {
     /**
      * The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
@@ -22,10 +22,10 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingPlanScalingInstructionPredefinedLoadMetricSpecification(
-        @OutputCustomType.Parameter("predefinedLoadMetricType") String predefinedLoadMetricType,
-        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
+        @CustomType.Parameter("predefinedLoadMetricType") String predefinedLoadMetricType,
+        @CustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedLoadMetricType = predefinedLoadMetricType;
         this.resourceLabel = resourceLabel;
     }

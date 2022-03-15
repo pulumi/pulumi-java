@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tpu;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tpu.NodeArgs;
@@ -55,7 +55,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The type of hardware accelerators associated with this node.
      * 
      */
-    @OutputExport(name="acceleratorType", type=String.class, parameters={})
+    @Export(name="acceleratorType", type=String.class, parameters={})
     private Output<String> acceleratorType;
 
     /**
@@ -76,7 +76,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * is peered with another network that is using that CIDR block.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -97,7 +97,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The user-supplied description of the TPU. Maximum of 512 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -111,7 +111,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -125,7 +125,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The immutable name of the TPU.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -142,7 +142,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * used.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -160,7 +160,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * node first reach out to the first (index 0) entry.
      * 
      */
-    @OutputExport(name="networkEndpoints", type=List.class, parameters={NodeNetworkEndpoint.class})
+    @Export(name="networkEndpoints", type=List.class, parameters={NodeNetworkEndpoint.class})
     private Output<List<NodeNetworkEndpoint>> networkEndpoints;
 
     /**
@@ -176,7 +176,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -192,7 +192,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="schedulingConfig", type=NodeSchedulingConfig.class, parameters={})
+    @Export(name="schedulingConfig", type=NodeSchedulingConfig.class, parameters={})
     private Output</* @Nullable */ NodeSchedulingConfig> schedulingConfig;
 
     /**
@@ -208,7 +208,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -223,7 +223,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The version of Tensorflow running in the Node.
      * 
      */
-    @OutputExport(name="tensorflowVersion", type=String.class, parameters={})
+    @Export(name="tensorflowVersion", type=String.class, parameters={})
     private Output<String> tensorflowVersion;
 
     /**
@@ -240,7 +240,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
      * 
      */
-    @OutputExport(name="useServiceNetworking", type=Boolean.class, parameters={})
+    @Export(name="useServiceNetworking", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useServiceNetworking;
 
     /**
@@ -257,7 +257,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The GCP location for the TPU. If it is not provided, the provider zone is used.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

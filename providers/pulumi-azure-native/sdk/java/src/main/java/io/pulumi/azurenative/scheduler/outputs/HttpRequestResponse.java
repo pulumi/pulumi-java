@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.outputs;
 import io.pulumi.azurenative.scheduler.outputs.BasicAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.outputs.ClientCertAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.outputs.OAuthAuthenticationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpRequestResponse {
     /**
      * Gets or sets the authentication method of the request.
@@ -42,13 +42,13 @@ public final class HttpRequestResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRequestResponse(
-        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
-        @OutputCustomType.Parameter("body") @Nullable String body,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("authentication") @Nullable Object authentication,
+        @CustomType.Parameter("body") @Nullable String body,
+        @CustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.authentication = authentication;
         this.body = body;
         this.headers = headers;

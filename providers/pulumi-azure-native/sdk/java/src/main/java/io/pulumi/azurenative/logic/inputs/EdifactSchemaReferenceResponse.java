@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The association assigned code.
      * 
      */
-    @InputImport(name="associationAssignedCode")
+    @Import(name="associationAssignedCode")
       private final @Nullable String associationAssignedCode;
 
     public Optional<String> getAssociationAssignedCode() {
@@ -33,7 +33,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The message id.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final String messageId;
 
     public String getMessageId() {
@@ -44,7 +44,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The message release version.
      * 
      */
-    @InputImport(name="messageRelease", required=true)
+    @Import(name="messageRelease", required=true)
       private final String messageRelease;
 
     public String getMessageRelease() {
@@ -55,7 +55,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The message version.
      * 
      */
-    @InputImport(name="messageVersion", required=true)
+    @Import(name="messageVersion", required=true)
       private final String messageVersion;
 
     public String getMessageVersion() {
@@ -66,7 +66,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The schema name.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final String schemaName;
 
     public String getSchemaName() {
@@ -77,7 +77,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The sender application id.
      * 
      */
-    @InputImport(name="senderApplicationId")
+    @Import(name="senderApplicationId")
       private final @Nullable String senderApplicationId;
 
     public Optional<String> getSenderApplicationId() {
@@ -88,7 +88,7 @@ public final class EdifactSchemaReferenceResponse extends io.pulumi.resources.In
      * The sender application qualifier.
      * 
      */
-    @InputImport(name="senderApplicationQualifier")
+    @Import(name="senderApplicationQualifier")
       private final @Nullable String senderApplicationQualifier;
 
     public Optional<String> getSenderApplicationQualifier() {

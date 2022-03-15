@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureMembershipConfigmanagementHierarchyController {
     /**
      * Whether hierarchical resource quota is enabled in this cluster.
@@ -27,11 +27,11 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureMembershipConfigmanagementHierarchyController(
-        @OutputCustomType.Parameter("enableHierarchicalResourceQuota") @Nullable Boolean enableHierarchicalResourceQuota,
-        @OutputCustomType.Parameter("enablePodTreeLabels") @Nullable Boolean enablePodTreeLabels,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("enableHierarchicalResourceQuota") @Nullable Boolean enableHierarchicalResourceQuota,
+        @CustomType.Parameter("enablePodTreeLabels") @Nullable Boolean enablePodTreeLabels,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
         this.enablePodTreeLabels = enablePodTreeLabels;
         this.enabled = enabled;

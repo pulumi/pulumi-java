@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ExecAction;
 import io.pulumi.kubernetes.core_v1.outputs.GRPCAction;
 import io.pulumi.kubernetes.core_v1.outputs.HTTPGetAction;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Probe {
     /**
      * Exec specifies the action to take.
@@ -66,18 +66,18 @@ public final class Probe {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Probe(
-        @OutputCustomType.Parameter("exec") @Nullable ExecAction exec,
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
-        @OutputCustomType.Parameter("grpc") @Nullable GRPCAction grpc,
-        @OutputCustomType.Parameter("httpGet") @Nullable HTTPGetAction httpGet,
-        @OutputCustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
-        @OutputCustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
-        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
-        @OutputCustomType.Parameter("tcpSocket") @Nullable TCPSocketAction tcpSocket,
-        @OutputCustomType.Parameter("terminationGracePeriodSeconds") @Nullable Integer terminationGracePeriodSeconds,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("exec") @Nullable ExecAction exec,
+        @CustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @CustomType.Parameter("grpc") @Nullable GRPCAction grpc,
+        @CustomType.Parameter("httpGet") @Nullable HTTPGetAction httpGet,
+        @CustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
+        @CustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
+        @CustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @CustomType.Parameter("tcpSocket") @Nullable TCPSocketAction tcpSocket,
+        @CustomType.Parameter("terminationGracePeriodSeconds") @Nullable Integer terminationGracePeriodSeconds,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.grpc = grpc;

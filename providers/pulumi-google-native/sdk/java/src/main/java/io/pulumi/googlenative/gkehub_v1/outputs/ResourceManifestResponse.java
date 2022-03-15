@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceManifestResponse {
     /**
      * Whether the resource provided in the manifest is `cluster_scoped`. If unset, the manifest is assumed to be namespace scoped. This field is used for REST mapping when applying the resource in a cluster.
@@ -21,10 +21,10 @@ public final class ResourceManifestResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceManifestResponse(
-        @OutputCustomType.Parameter("clusterScoped") Boolean clusterScoped,
-        @OutputCustomType.Parameter("manifest") String manifest) {
+        @CustomType.Parameter("clusterScoped") Boolean clusterScoped,
+        @CustomType.Parameter("manifest") String manifest) {
         this.clusterScoped = clusterScoped;
         this.manifest = manifest;
     }

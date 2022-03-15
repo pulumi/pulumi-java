@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsArgs extends 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="outputConfig", required=true)
+    @Import(name="outputConfig", required=true)
       private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> outputConfig;
 
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs> getOutputConfig() {

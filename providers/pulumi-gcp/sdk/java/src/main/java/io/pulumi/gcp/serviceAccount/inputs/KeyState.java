@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger a new key to be generated.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -34,7 +34,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * (only used on create)
      * 
      */
-    @InputImport(name="keyAlgorithm")
+    @Import(name="keyAlgorithm")
       private final @Nullable Output<String> keyAlgorithm;
 
     public Output<String> getKeyAlgorithm() {
@@ -45,7 +45,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * The name used for this key pair
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * service account keys through the CLI or web console. This is only populated when creating a new key.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -68,7 +68,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * The output format of the private key. TYPE_GOOGLE_CREDENTIALS_FILE is the default output format.
      * 
      */
-    @InputImport(name="privateKeyType")
+    @Import(name="privateKeyType")
       private final @Nullable Output<String> privateKeyType;
 
     public Output<String> getPrivateKeyType() {
@@ -79,7 +79,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * The public key, base64 encoded
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -90,7 +90,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * Public key data to create a service account key for given service account. The expected format for this field is a base64 encoded X509_PEM and it conflicts with `public_key_type` and `private_key_type`.
      * 
      */
-    @InputImport(name="publicKeyData")
+    @Import(name="publicKeyData")
       private final @Nullable Output<String> publicKeyData;
 
     public Output<String> getPublicKeyData() {
@@ -101,7 +101,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
      * 
      */
-    @InputImport(name="publicKeyType")
+    @Import(name="publicKeyType")
       private final @Nullable Output<String> publicKeyType;
 
     public Output<String> getPublicKeyType() {
@@ -114,7 +114,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * unique id of the service account. If the `{ACCOUNT}` syntax is used, the project will be inferred from the account.
      * 
      */
-    @InputImport(name="serviceAccountId")
+    @Import(name="serviceAccountId")
       private final @Nullable Output<String> serviceAccountId;
 
     public Output<String> getServiceAccountId() {
@@ -125,7 +125,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * The key can be used after this timestamp. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="validAfter")
+    @Import(name="validAfter")
       private final @Nullable Output<String> validAfter;
 
     public Output<String> getValidAfter() {
@@ -137,7 +137,7 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="validBefore")
+    @Import(name="validBefore")
       private final @Nullable Output<String> validBefore;
 
     public Output<String> getValidBefore() {

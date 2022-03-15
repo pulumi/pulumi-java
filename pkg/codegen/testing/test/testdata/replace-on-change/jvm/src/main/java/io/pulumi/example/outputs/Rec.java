@@ -3,17 +3,17 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Rec {
     private final @Nullable Rec rec1;
 
-    @OutputCustomType.Constructor
-    private Rec(@OutputCustomType.Parameter("rec1") @Nullable Rec rec1) {
+    @CustomType.Constructor
+    private Rec(@CustomType.Parameter("rec1") @Nullable Rec rec1) {
         this.rec1 = rec1;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
      * Histogram of value frequencies in the column.
      * 
      */
-    @InputImport(name="valueFrequencyHistogramBuckets", required=true)
+    @Import(name="valueFrequencyHistogramBuckets", required=true)
       private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {

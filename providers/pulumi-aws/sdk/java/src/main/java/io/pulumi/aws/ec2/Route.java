@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.RouteArgs;
 import io.pulumi.aws.ec2.inputs.RouteState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +40,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
      * 
      */
-    @OutputExport(name="carrierGatewayId", type=String.class, parameters={})
+    @Export(name="carrierGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> carrierGatewayId;
 
     /**
@@ -54,7 +54,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The destination CIDR block.
      * 
      */
-    @OutputExport(name="destinationCidrBlock", type=String.class, parameters={})
+    @Export(name="destinationCidrBlock", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationCidrBlock;
 
     /**
@@ -68,7 +68,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The destination IPv6 CIDR block.
      * 
      */
-    @OutputExport(name="destinationIpv6CidrBlock", type=String.class, parameters={})
+    @Export(name="destinationIpv6CidrBlock", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationIpv6CidrBlock;
 
     /**
@@ -82,7 +82,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The ID of a managed prefix list destination.
      * 
      */
-    @OutputExport(name="destinationPrefixListId", type=String.class, parameters={})
+    @Export(name="destinationPrefixListId", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationPrefixListId;
 
     /**
@@ -96,7 +96,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a VPC Egress Only Internet Gateway.
      * 
      */
-    @OutputExport(name="egressOnlyGatewayId", type=String.class, parameters={})
+    @Export(name="egressOnlyGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> egressOnlyGatewayId;
 
     /**
@@ -110,7 +110,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a VPC internet gateway or a virtual private gateway.
      * 
      */
-    @OutputExport(name="gatewayId", type=String.class, parameters={})
+    @Export(name="gatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayId;
 
     /**
@@ -124,7 +124,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of an EC2 instance.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -138,7 +138,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the owner of the EC2 instance.
      * 
      */
-    @OutputExport(name="instanceOwnerId", type=String.class, parameters={})
+    @Export(name="instanceOwnerId", type=String.class, parameters={})
     private Output<String> instanceOwnerId;
 
     /**
@@ -152,7 +152,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a Outpost local gateway.
      * 
      */
-    @OutputExport(name="localGatewayId", type=String.class, parameters={})
+    @Export(name="localGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> localGatewayId;
 
     /**
@@ -166,7 +166,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a VPC NAT gateway.
      * 
      */
-    @OutputExport(name="natGatewayId", type=String.class, parameters={})
+    @Export(name="natGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> natGatewayId;
 
     /**
@@ -180,7 +180,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of an EC2 network interface.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -194,7 +194,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * How the route was created - `CreateRouteTable`, `CreateRoute` or `EnableVgwRoutePropagation`.
      * 
      */
-    @OutputExport(name="origin", type=String.class, parameters={})
+    @Export(name="origin", type=String.class, parameters={})
     private Output<String> origin;
 
     /**
@@ -208,7 +208,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The ID of the routing table.
      * 
      */
-    @OutputExport(name="routeTableId", type=String.class, parameters={})
+    @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
@@ -222,7 +222,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The state of the route - `active` or `blackhole`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -236,7 +236,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of an EC2 Transit Gateway.
      * 
      */
-    @OutputExport(name="transitGatewayId", type=String.class, parameters={})
+    @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitGatewayId;
 
     /**
@@ -250,7 +250,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a VPC Endpoint.
      * 
      */
-    @OutputExport(name="vpcEndpointId", type=String.class, parameters={})
+    @Export(name="vpcEndpointId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcEndpointId;
 
     /**
@@ -264,7 +264,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of a VPC peering connection.
      * 
      */
-    @OutputExport(name="vpcPeeringConnectionId", type=String.class, parameters={})
+    @Export(name="vpcPeeringConnectionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcPeeringConnectionId;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatadogLogsAgentResponse {
     /**
      * The transport.
@@ -17,8 +17,8 @@ public final class DatadogLogsAgentResponse {
      */
     private final @Nullable String transport;
 
-    @OutputCustomType.Constructor
-    private DatadogLogsAgentResponse(@OutputCustomType.Parameter("transport") @Nullable String transport) {
+    @CustomType.Constructor
+    private DatadogLogsAgentResponse(@CustomType.Parameter("transport") @Nullable String transport) {
         this.transport = transport;
     }
 

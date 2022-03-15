@@ -14,7 +14,7 @@ import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TriggerPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -32,7 +32,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The machine configuration of the run agent.
      * 
      */
-    @InputImport(name="agentConfiguration")
+    @Import(name="agentConfiguration")
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
     public Output<AgentPropertiesArgs> getAgentConfiguration() {
@@ -43,7 +43,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The dedicated agent pool for the task.
      * 
      */
-    @InputImport(name="agentPoolName")
+    @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
     public Output<String> getAgentPoolName() {
@@ -54,7 +54,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<CredentialsArgs> credentials;
 
     public Output<CredentialsArgs> getCredentials() {
@@ -65,7 +65,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Identity for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
@@ -76,7 +76,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The value of this property indicates whether the task resource is system task or not.
      * 
      */
-    @InputImport(name="isSystemTask")
+    @Import(name="isSystemTask")
       private final @Nullable Output<Boolean> isSystemTask;
 
     public Output<Boolean> getIsSystemTask() {
@@ -87,7 +87,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -98,7 +98,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The template that describes the repository and tag information for run log artifact.
      * 
      */
-    @InputImport(name="logTemplate")
+    @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
     public Output<String> getLogTemplate() {
@@ -109,7 +109,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The platform properties against which the run has to happen.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<PlatformPropertiesArgs> platform;
 
     public Output<PlatformPropertiesArgs> getPlatform() {
@@ -120,7 +120,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -131,7 +131,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -142,7 +142,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The current status of task.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TaskStatus>> status;
 
     public Output<Either<String,TaskStatus>> getStatus() {
@@ -153,7 +153,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of a task step.
      * 
      */
-    @InputImport(name="step")
+    @Import(name="step")
       private final @Nullable Output<Object> step;
 
     public Output<Object> getStep() {
@@ -164,7 +164,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -175,7 +175,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry task.
      * 
      */
-    @InputImport(name="taskName")
+    @Import(name="taskName")
       private final @Nullable Output<String> taskName;
 
     public Output<String> getTaskName() {
@@ -186,7 +186,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Run timeout in seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -197,7 +197,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that describe all triggers for the task.
      * 
      */
-    @InputImport(name="trigger")
+    @Import(name="trigger")
       private final @Nullable Output<TriggerPropertiesArgs> trigger;
 
     public Output<TriggerPropertiesArgs> getTrigger() {

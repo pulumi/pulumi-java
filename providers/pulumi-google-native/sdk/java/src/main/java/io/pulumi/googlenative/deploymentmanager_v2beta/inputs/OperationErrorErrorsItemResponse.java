@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
      * The error type identifier for this error.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -27,7 +27,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
      * Indicates the field in the request that caused the error. This property is optional.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -38,7 +38,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
      * An optional, human-readable error message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

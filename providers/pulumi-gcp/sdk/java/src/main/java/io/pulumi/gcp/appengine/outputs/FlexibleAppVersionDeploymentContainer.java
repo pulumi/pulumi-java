@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionDeploymentContainer {
     /**
      * URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
@@ -16,8 +16,8 @@ public final class FlexibleAppVersionDeploymentContainer {
      */
     private final String image;
 
-    @OutputCustomType.Constructor
-    private FlexibleAppVersionDeploymentContainer(@OutputCustomType.Parameter("image") String image) {
+    @CustomType.Constructor
+    private FlexibleAppVersionDeploymentContainer(@CustomType.Parameter("image") String image) {
         this.image = image;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MongoIndexOptionsResponse {
     /**
      * Expire after seconds
@@ -23,10 +23,10 @@ public final class MongoIndexOptionsResponse {
      */
     private final @Nullable Boolean unique;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MongoIndexOptionsResponse(
-        @OutputCustomType.Parameter("expireAfterSeconds") @Nullable Integer expireAfterSeconds,
-        @OutputCustomType.Parameter("unique") @Nullable Boolean unique) {
+        @CustomType.Parameter("expireAfterSeconds") @Nullable Integer expireAfterSeconds,
+        @CustomType.Parameter("unique") @Nullable Boolean unique) {
         this.expireAfterSeconds = expireAfterSeconds;
         this.unique = unique;
     }

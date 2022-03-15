@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.SizeConstraintSetSizeConstraintGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * The name or description of the Size Constraint Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class SizeConstraintSetState extends io.pulumi.resources.ResourceAr
      * Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    @InputImport(name="sizeConstraints")
+    @Import(name="sizeConstraints")
       private final @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
 
     public Output<List<SizeConstraintSetSizeConstraintGetArgs>> getSizeConstraints() {

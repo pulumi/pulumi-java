@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SyncPropertiesResponse {
     /**
      * The gateway endpoint used by the connected registry to communicate with its parent.
@@ -42,14 +42,14 @@ public final class SyncPropertiesResponse {
      */
     private final String tokenId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SyncPropertiesResponse(
-        @OutputCustomType.Parameter("gatewayEndpoint") String gatewayEndpoint,
-        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
-        @OutputCustomType.Parameter("messageTtl") String messageTtl,
-        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
-        @OutputCustomType.Parameter("syncWindow") @Nullable String syncWindow,
-        @OutputCustomType.Parameter("tokenId") String tokenId) {
+        @CustomType.Parameter("gatewayEndpoint") String gatewayEndpoint,
+        @CustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @CustomType.Parameter("messageTtl") String messageTtl,
+        @CustomType.Parameter("schedule") @Nullable String schedule,
+        @CustomType.Parameter("syncWindow") @Nullable String syncWindow,
+        @CustomType.Parameter("tokenId") String tokenId) {
         this.gatewayEndpoint = gatewayEndpoint;
         this.lastSyncTime = lastSyncTime;
         this.messageTtl = messageTtl;

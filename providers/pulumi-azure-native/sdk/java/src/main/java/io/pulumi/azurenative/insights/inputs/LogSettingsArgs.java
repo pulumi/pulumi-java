@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
@@ -35,7 +35,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * a value indicating whether this log is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -46,7 +46,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * the retention policy for this log.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
     public Output<RetentionPolicyArgs> getRetentionPolicy() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
      * What is measured by the behavior.
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final Output<String> metric;
 
     public Output<String> getMetric() {
         return this.metric;
     }
 
-    @InputImport(name="metricDimension")
+    @Import(name="metricDimension")
       private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
     public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {

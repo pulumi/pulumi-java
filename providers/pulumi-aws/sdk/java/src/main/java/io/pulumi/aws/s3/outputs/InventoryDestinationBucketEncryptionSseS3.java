@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InventoryDestinationBucketEncryptionSseS3 {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InventoryDestinationBucketEncryptionSseS3() {
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultKeyReferenceResponseSourceVault {
     /**
      * Resource Id.
@@ -17,8 +17,8 @@ public final class KeyVaultKeyReferenceResponseSourceVault {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private KeyVaultKeyReferenceResponseSourceVault(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private KeyVaultKeyReferenceResponseSourceVault(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

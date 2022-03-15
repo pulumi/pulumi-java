@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -29,7 +29,7 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * The registry ID where the repository was created.
      * 
      */
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {
@@ -40,7 +40,7 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
      * Name of the repository to apply the policy.
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {

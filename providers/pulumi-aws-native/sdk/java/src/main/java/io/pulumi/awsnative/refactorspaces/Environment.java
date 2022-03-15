@@ -8,7 +8,7 @@ import io.pulumi.awsnative.refactorspaces.EnvironmentArgs;
 import io.pulumi.awsnative.refactorspaces.enums.EnvironmentNetworkFabricType;
 import io.pulumi.awsnative.refactorspaces.outputs.EnvironmentTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,31 +20,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:refactorspaces:Environment")
 public class Environment extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="environmentIdentifier", type=String.class, parameters={})
+    @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="networkFabricType", type=EnvironmentNetworkFabricType.class, parameters={})
+    @Export(name="networkFabricType", type=EnvironmentNetworkFabricType.class, parameters={})
     private Output</* @Nullable */ EnvironmentNetworkFabricType> networkFabricType;
 
     public Output</* @Nullable */ EnvironmentNetworkFabricType> getNetworkFabricType() {
@@ -54,7 +54,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={EnvironmentTag.class})
+    @Export(name="tags", type=List.class, parameters={EnvironmentTag.class})
     private Output</* @Nullable */ List<EnvironmentTag>> tags;
 
     /**
@@ -64,7 +64,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<EnvironmentTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="transitGatewayId", type=String.class, parameters={})
+    @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {

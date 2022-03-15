@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.xray.outputs;
 
 import io.pulumi.awsnative.xray.outputs.SamplingRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SamplingRuleRecord {
     /**
      * When the rule was created, in Unix time seconds.
@@ -24,11 +24,11 @@ public final class SamplingRuleRecord {
     private final @Nullable String modifiedAt;
     private final @Nullable SamplingRule samplingRule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SamplingRuleRecord(
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
-        @OutputCustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule) {
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @CustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule) {
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
         this.samplingRule = samplingRule;

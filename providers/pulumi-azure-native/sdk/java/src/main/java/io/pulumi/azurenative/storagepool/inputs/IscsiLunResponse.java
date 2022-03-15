@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IscsiLunResponse extends io.pulumi.resources.InvokeArgs {
      * Azure Resource ID of the Managed Disk.
      * 
      */
-    @InputImport(name="managedDiskAzureResourceId", required=true)
+    @Import(name="managedDiskAzureResourceId", required=true)
       private final String managedDiskAzureResourceId;
 
     public String getManagedDiskAzureResourceId() {
@@ -31,7 +31,7 @@ public final class IscsiLunResponse extends io.pulumi.resources.InvokeArgs {
      * User defined name for iSCSI LUN; example: "lun0"
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

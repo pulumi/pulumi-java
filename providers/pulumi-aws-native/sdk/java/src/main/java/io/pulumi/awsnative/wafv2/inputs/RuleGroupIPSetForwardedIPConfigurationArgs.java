@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupIPSetForwardedIPConfigurationPosition;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,21 +15,21 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
 
     public static final RuleGroupIPSetForwardedIPConfigurationArgs Empty = new RuleGroupIPSetForwardedIPConfigurationArgs();
 
-    @InputImport(name="fallbackBehavior", required=true)
+    @Import(name="fallbackBehavior", required=true)
       private final Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
     public Output<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
         return this.headerName;
     }
 
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<RuleGroupIPSetForwardedIPConfigurationPosition> position;
 
     public Output<RuleGroupIPSetForwardedIPConfigurationPosition> getPosition() {

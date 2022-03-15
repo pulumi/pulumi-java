@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * The principal id of the identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -35,7 +35,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * The client tenant id of the identity.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -46,7 +46,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * The identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -57,7 +57,7 @@ public final class FactoryIdentityResponse extends io.pulumi.resources.InvokeArg
      * List of user assigned identities for the factory.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,Object> userAssignedIdentities;
 
     public Map<String,Object> getUserAssignedIdentities() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
      * Compression settings.
      * 
      */
-    @InputImport(name="compressionProperties")
+    @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
     public Output<Object> getCompressionProperties() {
@@ -37,7 +37,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
      * Indicates the number of non-empty rows to skip when reading data from input files. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="skipLineCount")
+    @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
 
     public Output<Object> getSkipLineCount() {
@@ -49,7 +49,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
      * Expected value is 'DelimitedTextReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

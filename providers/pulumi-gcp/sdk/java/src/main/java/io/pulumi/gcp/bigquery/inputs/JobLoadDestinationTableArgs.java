@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * The ID of the dataset containing this model.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -29,7 +29,7 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * The ID of the project containing this model.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -41,7 +41,7 @@ public final class JobLoadDestinationTableArgs extends io.pulumi.resources.Resou
      * or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
      * 
      */
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
     public Output<String> getTableId() {

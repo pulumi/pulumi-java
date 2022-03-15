@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse {
     /**
      * Specifies the size of the disk in base-2 GB.
@@ -20,10 +20,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      */
     private final String $interface;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("interface") String $interface) {
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("interface") String $interface) {
         this.diskSizeGb = diskSizeGb;
         this.$interface = $interface;
     }

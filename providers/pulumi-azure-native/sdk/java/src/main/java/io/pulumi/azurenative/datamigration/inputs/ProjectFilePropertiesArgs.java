@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
      * 
      */
-    @InputImport(name="extension")
+    @Import(name="extension")
       private final @Nullable Output<String> extension;
 
     public Output<String> getExtension() {
@@ -33,7 +33,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * Relative path of this file resource. This property can be set when creating or updating the file resource.
      * 
      */
-    @InputImport(name="filePath")
+    @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
     public Output<String> getFilePath() {
@@ -44,7 +44,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * File content type. This property can be modified to reflect the file content type.
      * 
      */
-    @InputImport(name="mediaType")
+    @Import(name="mediaType")
       private final @Nullable Output<String> mediaType;
 
     public Output<String> getMediaType() {

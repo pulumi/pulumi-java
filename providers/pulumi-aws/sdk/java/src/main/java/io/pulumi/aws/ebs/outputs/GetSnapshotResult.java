@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.outputs;
 
 import io.pulumi.aws.ebs.outputs.GetSnapshotFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotResult {
     /**
      * Amazon Resource Name (ARN) of the EBS Snapshot.
@@ -97,28 +97,28 @@ public final class GetSnapshotResult {
      */
     private final Integer volumeSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("dataEncryptionKeyId") String dataEncryptionKeyId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetSnapshotFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("outpostArn") String outpostArn,
-        @OutputCustomType.Parameter("ownerAlias") String ownerAlias,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("owners") @Nullable List<String> owners,
-        @OutputCustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds,
-        @OutputCustomType.Parameter("snapshotId") String snapshotId,
-        @OutputCustomType.Parameter("snapshotIds") @Nullable List<String> snapshotIds,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageTier") String storageTier,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("volumeId") String volumeId,
-        @OutputCustomType.Parameter("volumeSize") Integer volumeSize) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("dataEncryptionKeyId") String dataEncryptionKeyId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("filters") @Nullable List<GetSnapshotFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("outpostArn") String outpostArn,
+        @CustomType.Parameter("ownerAlias") String ownerAlias,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("owners") @Nullable List<String> owners,
+        @CustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds,
+        @CustomType.Parameter("snapshotId") String snapshotId,
+        @CustomType.Parameter("snapshotIds") @Nullable List<String> snapshotIds,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageTier") String storageTier,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("volumeId") String volumeId,
+        @CustomType.Parameter("volumeSize") Integer volumeSize) {
         this.arn = arn;
         this.dataEncryptionKeyId = dataEncryptionKeyId;
         this.description = description;

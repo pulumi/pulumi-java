@@ -4,10 +4,10 @@
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration {
     /**
      * Describes the Lambda function that is used to preprocess the records in the stream before being processed by your application code.
@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration(@OutputCustomType.Parameter("inputLambdaProcessor") ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration(@CustomType.Parameter("inputLambdaProcessor") ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor) {
         this.inputLambdaProcessor = inputLambdaProcessor;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.ClusterConfigResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionConfigResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * Configuration for this cluster.
@@ -48,15 +48,15 @@ public final class GetClusterResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("clusterConfig") ClusterConfigResponse clusterConfig,
-        @OutputCustomType.Parameter("defaultStorageType") String defaultStorageType,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serveNodes") Integer serveNodes,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("clusterConfig") ClusterConfigResponse clusterConfig,
+        @CustomType.Parameter("defaultStorageType") String defaultStorageType,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serveNodes") Integer serveNodes,
+        @CustomType.Parameter("state") String state) {
         this.clusterConfig = clusterConfig;
         this.defaultStorageType = defaultStorageType;
         this.encryptionConfig = encryptionConfig;

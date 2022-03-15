@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of archives to be extracted in the working directory of Hadoop drivers and tasks. Supported file types: .jar, .tar, .tar.gz, .tgz, or .zip.
      * 
      */
-    @InputImport(name="archiveUris")
+    @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
     public Output<List<String>> getArchiveUris() {
@@ -36,7 +36,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -47,7 +47,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS (Hadoop Compatible Filesystem) URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
      * 
      */
-    @InputImport(name="fileUris")
+    @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
     public Output<List<String>> getFileUris() {
@@ -58,7 +58,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Jar file URIs to add to the CLASSPATHs of the Hadoop driver and tasks.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
@@ -69,7 +69,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The runtime log config for job execution.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<LoggingConfigArgs> loggingConfig;
 
     public Output<LoggingConfigArgs> getLoggingConfig() {
@@ -80,7 +80,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in jar_file_uris.
      * 
      */
-    @InputImport(name="mainClass")
+    @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
 
     public Output<String> getMainClass() {
@@ -91,7 +91,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'
      * 
      */
-    @InputImport(name="mainJarFileUri")
+    @Import(name="mainJarFileUri")
       private final @Nullable Output<String> mainJarFileUri;
 
     public Output<String> getMainJarFileUri() {
@@ -102,7 +102,7 @@ public final class HadoopJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A mapping of property names to values, used to configure Hadoop. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site and classes in user code.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

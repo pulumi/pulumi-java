@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -30,7 +30,7 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The email address of the key's associated service account.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -43,7 +43,7 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ACTIVE` and `INACTIVE`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

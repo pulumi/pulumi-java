@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,14 +24,14 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
      * The primary geo routing configuration. If there are multiple items with the same location, an error is returned instead.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 
     public Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> getItems() {
         return this.items == null ? Output.empty() : this.items;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

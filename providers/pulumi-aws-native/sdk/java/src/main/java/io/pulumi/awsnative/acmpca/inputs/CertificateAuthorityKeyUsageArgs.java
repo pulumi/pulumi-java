@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,63 +18,63 @@ public final class CertificateAuthorityKeyUsageArgs extends io.pulumi.resources.
 
     public static final CertificateAuthorityKeyUsageArgs Empty = new CertificateAuthorityKeyUsageArgs();
 
-    @InputImport(name="cRLSign")
+    @Import(name="cRLSign")
       private final @Nullable Output<Boolean> cRLSign;
 
     public Output<Boolean> getCRLSign() {
         return this.cRLSign == null ? Output.empty() : this.cRLSign;
     }
 
-    @InputImport(name="dataEncipherment")
+    @Import(name="dataEncipherment")
       private final @Nullable Output<Boolean> dataEncipherment;
 
     public Output<Boolean> getDataEncipherment() {
         return this.dataEncipherment == null ? Output.empty() : this.dataEncipherment;
     }
 
-    @InputImport(name="decipherOnly")
+    @Import(name="decipherOnly")
       private final @Nullable Output<Boolean> decipherOnly;
 
     public Output<Boolean> getDecipherOnly() {
         return this.decipherOnly == null ? Output.empty() : this.decipherOnly;
     }
 
-    @InputImport(name="digitalSignature")
+    @Import(name="digitalSignature")
       private final @Nullable Output<Boolean> digitalSignature;
 
     public Output<Boolean> getDigitalSignature() {
         return this.digitalSignature == null ? Output.empty() : this.digitalSignature;
     }
 
-    @InputImport(name="encipherOnly")
+    @Import(name="encipherOnly")
       private final @Nullable Output<Boolean> encipherOnly;
 
     public Output<Boolean> getEncipherOnly() {
         return this.encipherOnly == null ? Output.empty() : this.encipherOnly;
     }
 
-    @InputImport(name="keyAgreement")
+    @Import(name="keyAgreement")
       private final @Nullable Output<Boolean> keyAgreement;
 
     public Output<Boolean> getKeyAgreement() {
         return this.keyAgreement == null ? Output.empty() : this.keyAgreement;
     }
 
-    @InputImport(name="keyCertSign")
+    @Import(name="keyCertSign")
       private final @Nullable Output<Boolean> keyCertSign;
 
     public Output<Boolean> getKeyCertSign() {
         return this.keyCertSign == null ? Output.empty() : this.keyCertSign;
     }
 
-    @InputImport(name="keyEncipherment")
+    @Import(name="keyEncipherment")
       private final @Nullable Output<Boolean> keyEncipherment;
 
     public Output<Boolean> getKeyEncipherment() {
         return this.keyEncipherment == null ? Output.empty() : this.keyEncipherment;
     }
 
-    @InputImport(name="nonRepudiation")
+    @Import(name="nonRepudiation")
       private final @Nullable Output<Boolean> nonRepudiation;
 
     public Output<Boolean> getNonRepudiation() {

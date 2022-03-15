@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TagTemplateField {
     /**
      * A description for this field.
@@ -54,15 +54,15 @@ public final class TagTemplateField {
      */
     private final TagTemplateFieldType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagTemplateField(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("fieldId") String fieldId,
-        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("type") TagTemplateFieldType type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("fieldId") String fieldId,
+        @CustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("type") TagTemplateFieldType type) {
         this.description = description;
         this.displayName = displayName;
         this.fieldId = fieldId;

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayConnectResult {
     /**
      * The creation time.
@@ -39,13 +39,13 @@ public final class GetTransitGatewayConnectResult {
      */
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayConnectResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayConnectTag> tags,
-        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId,
-        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tags") @Nullable List<TransitGatewayConnectTag> tags,
+        @CustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId,
+        @CustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.creationTime = creationTime;
         this.state = state;
         this.tags = tags;

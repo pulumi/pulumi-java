@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.logs.outputs;
 
 import io.pulumi.awsnative.logs.outputs.LogGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLogGroupResult {
     /**
      * The CloudWatch log group ARN.
@@ -35,12 +35,12 @@ public final class GetLogGroupResult {
      */
     private final @Nullable List<LogGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLogGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
-        @OutputCustomType.Parameter("tags") @Nullable List<LogGroupTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @CustomType.Parameter("tags") @Nullable List<LogGroupTag> tags) {
         this.arn = arn;
         this.kmsKeyId = kmsKeyId;
         this.retentionInDays = retentionInDays;

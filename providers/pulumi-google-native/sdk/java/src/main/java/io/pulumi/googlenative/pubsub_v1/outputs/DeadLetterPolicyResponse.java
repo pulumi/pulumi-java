@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeadLetterPolicyResponse {
     /**
      * The name of the topic to which dead letter messages should be published. Format is `projects/{project}/topics/{topic}`.The Cloud Pub/Sub service account associated with the enclosing subscription's parent project (i.e., service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have permission to Publish() to this topic. The operation will fail if the topic does not exist. Users should ensure that there is a subscription attached to this topic since messages published to a topic with no subscriptions are lost.
@@ -21,10 +21,10 @@ public final class DeadLetterPolicyResponse {
      */
     private final Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeadLetterPolicyResponse(
-        @OutputCustomType.Parameter("deadLetterTopic") String deadLetterTopic,
-        @OutputCustomType.Parameter("maxDeliveryAttempts") Integer maxDeliveryAttempts) {
+        @CustomType.Parameter("deadLetterTopic") String deadLetterTopic,
+        @CustomType.Parameter("maxDeliveryAttempts") Integer maxDeliveryAttempts) {
         this.deadLetterTopic = deadLetterTopic;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }

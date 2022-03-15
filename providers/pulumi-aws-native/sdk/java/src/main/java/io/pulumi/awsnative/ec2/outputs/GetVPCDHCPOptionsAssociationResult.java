@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVPCDHCPOptionsAssociationResult {
     /**
      * The ID of the VPC DHCPOptions Association.
@@ -17,8 +17,8 @@ public final class GetVPCDHCPOptionsAssociationResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private GetVPCDHCPOptionsAssociationResult(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private GetVPCDHCPOptionsAssociationResult(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

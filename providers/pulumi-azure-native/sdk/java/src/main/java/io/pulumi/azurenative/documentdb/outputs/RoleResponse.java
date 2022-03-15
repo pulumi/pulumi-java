@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoleResponse {
     /**
      * The database name the role is applied.
@@ -22,10 +22,10 @@ public final class RoleResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoleResponse(
-        @OutputCustomType.Parameter("db") @Nullable String db,
-        @OutputCustomType.Parameter("role") @Nullable String role) {
+        @CustomType.Parameter("db") @Nullable String db,
+        @CustomType.Parameter("role") @Nullable String role) {
         this.db = db;
         this.role = role;
     }

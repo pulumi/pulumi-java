@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HealthCheckGrpcHealthCheckGetArgs extends io.pulumi.resources
      *   The grpcServiceName can only be ASCII.
      * 
      */
-    @InputImport(name="grpcServiceName")
+    @Import(name="grpcServiceName")
       private final @Nullable Output<String> grpcServiceName;
 
     public Output<String> getGrpcServiceName() {
@@ -36,7 +36,7 @@ public final class HealthCheckGrpcHealthCheckGetArgs extends io.pulumi.resources
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -48,7 +48,7 @@ public final class HealthCheckGrpcHealthCheckGetArgs extends io.pulumi.resources
      * port_name are defined, port takes precedence.
      * 
      */
-    @InputImport(name="portName")
+    @Import(name="portName")
       private final @Nullable Output<String> portName;
 
     public Output<String> getPortName() {
@@ -69,7 +69,7 @@ public final class HealthCheckGrpcHealthCheckGetArgs extends io.pulumi.resources
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
      */
-    @InputImport(name="portSpecification")
+    @Import(name="portSpecification")
       private final @Nullable Output<String> portSpecification;
 
     public Output<String> getPortSpecification() {

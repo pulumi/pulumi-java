@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,42 +14,42 @@ public final class GetObjectAccessControlArgs extends io.pulumi.resources.Invoke
 
     public static final GetObjectAccessControlArgs Empty = new GetObjectAccessControlArgs();
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
-    @InputImport(name="entity", required=true)
+    @Import(name="entity", required=true)
       private final String entity;
 
     public String getEntity() {
         return this.entity;
     }
 
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable String generation;
 
     public Optional<String> getGeneration() {
         return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
     }
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final String object;
 
     public String getObject() {
         return this.object;
     }
 
-    @InputImport(name="provisionalUserProject")
+    @Import(name="provisionalUserProject")
       private final @Nullable String provisionalUserProject;
 
     public Optional<String> getProvisionalUserProject() {
         return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {

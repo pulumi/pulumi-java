@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationDatabaseSummaryResultResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * Migration Identifier
      * 
      */
-    @InputImport(name="migrationId", required=true)
+    @Import(name="migrationId", required=true)
       private final String migrationId;
 
     public String getMigrationId() {
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * Expected value is 'MigrationValidationOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -69,7 +69,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * Validation summary results for each database
      * 
      */
-    @InputImport(name="summaryResults")
+    @Import(name="summaryResults")
       private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
     public Map<String,MigrationValidationDatabaseSummaryResultResponse> getSummaryResults() {

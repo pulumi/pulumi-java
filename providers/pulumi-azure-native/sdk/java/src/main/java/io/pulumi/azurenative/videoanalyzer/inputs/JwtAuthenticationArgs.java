@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.RsaTokenKeyArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.TokenClaimArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
      * 
      */
-    @InputImport(name="audiences")
+    @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
     public Output<List<String>> getAudiences() {
@@ -38,7 +38,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
      * 
      */
-    @InputImport(name="claims")
+    @Import(name="claims")
       private final @Nullable Output<List<TokenClaimArgs>> claims;
 
     public Output<List<TokenClaimArgs>> getClaims() {
@@ -49,7 +49,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
      * 
      */
-    @InputImport(name="issuers")
+    @Import(name="issuers")
       private final @Nullable Output<List<String>> issuers;
 
     public Output<List<String>> getIssuers() {
@@ -60,7 +60,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys;
 
     public Output<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> getKeys() {
@@ -72,7 +72,7 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
      * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

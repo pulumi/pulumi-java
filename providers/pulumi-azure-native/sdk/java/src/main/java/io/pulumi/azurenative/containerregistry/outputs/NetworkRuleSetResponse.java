@@ -5,13 +5,13 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.IPRuleResponse;
 import io.pulumi.azurenative.containerregistry.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleSetResponse {
     /**
      * The default action of allow or deny when no other rules match.
@@ -29,11 +29,11 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRuleSetResponse(
-        @OutputCustomType.Parameter("defaultAction") String defaultAction,
-        @OutputCustomType.Parameter("ipRules") @Nullable List<IPRuleResponse> ipRules,
-        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @CustomType.Parameter("defaultAction") String defaultAction,
+        @CustomType.Parameter("ipRules") @Nullable List<IPRuleResponse> ipRules,
+        @CustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
         this.virtualNetworkRules = virtualNetworkRules;

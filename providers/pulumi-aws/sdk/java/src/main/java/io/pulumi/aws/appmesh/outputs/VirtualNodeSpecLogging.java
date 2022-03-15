@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecLoggingAccessLog;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecLogging {
     /**
      * The access log configuration for a virtual node.
@@ -17,8 +17,8 @@ public final class VirtualNodeSpecLogging {
      */
     private final @Nullable VirtualNodeSpecLoggingAccessLog accessLog;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecLogging(@OutputCustomType.Parameter("accessLog") @Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
+    @CustomType.Constructor
+    private VirtualNodeSpecLogging(@CustomType.Parameter("accessLog") @Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
         this.accessLog = accessLog;
     }
 

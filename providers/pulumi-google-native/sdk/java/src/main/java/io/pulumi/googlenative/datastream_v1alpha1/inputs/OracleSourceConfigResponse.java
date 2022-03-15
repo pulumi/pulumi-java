@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
      * Oracle objects to include in the stream.
      * 
      */
-    @InputImport(name="allowlist", required=true)
+    @Import(name="allowlist", required=true)
       private final OracleRdbmsResponse allowlist;
 
     public OracleRdbmsResponse getAllowlist() {
@@ -31,7 +31,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
      * Oracle objects to exclude from the stream.
      * 
      */
-    @InputImport(name="rejectlist", required=true)
+    @Import(name="rejectlist", required=true)
       private final OracleRdbmsResponse rejectlist;
 
     public OracleRdbmsResponse getRejectlist() {

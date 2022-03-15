@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlRewriteResponse {
     /**
      * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
@@ -20,10 +20,10 @@ public final class UrlRewriteResponse {
      */
     private final String pathPrefixRewrite;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlRewriteResponse(
-        @OutputCustomType.Parameter("hostRewrite") String hostRewrite,
-        @OutputCustomType.Parameter("pathPrefixRewrite") String pathPrefixRewrite) {
+        @CustomType.Parameter("hostRewrite") String hostRewrite,
+        @CustomType.Parameter("pathPrefixRewrite") String pathPrefixRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
     }

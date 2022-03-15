@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsPersonArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
      * The list of contact people for the entry.
      * 
      */
-    @InputImport(name="people")
+    @Import(name="people")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people;
 
     public Output<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> getPeople() {

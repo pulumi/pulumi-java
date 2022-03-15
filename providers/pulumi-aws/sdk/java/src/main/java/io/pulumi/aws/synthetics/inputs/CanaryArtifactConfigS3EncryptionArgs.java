@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CanaryArtifactConfigS3EncryptionArgs extends io.pulumi.resour
      * The encryption method to use for artifacts created by this canary. Valid values are: `SSE-S3` and `SSE-KMS`.
      * 
      */
-    @InputImport(name="encryptionMode")
+    @Import(name="encryptionMode")
       private final @Nullable Output<String> encryptionMode;
 
     public Output<String> getEncryptionMode() {
@@ -29,7 +29,7 @@ public final class CanaryArtifactConfigS3EncryptionArgs extends io.pulumi.resour
      * The ARN of the customer-managed KMS key to use, if you specify `SSE-KMS` for `encryption_mode`.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {

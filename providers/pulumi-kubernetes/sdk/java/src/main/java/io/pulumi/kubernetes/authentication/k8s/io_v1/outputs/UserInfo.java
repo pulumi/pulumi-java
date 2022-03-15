@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserInfo {
     /**
      * Any additional information provided by the authenticator.
@@ -34,12 +34,12 @@ public final class UserInfo {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserInfo(
-        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
-        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
-        @OutputCustomType.Parameter("uid") @Nullable String uid,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @CustomType.Parameter("groups") @Nullable List<String> groups,
+        @CustomType.Parameter("uid") @Nullable String uid,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
         this.uid = uid;

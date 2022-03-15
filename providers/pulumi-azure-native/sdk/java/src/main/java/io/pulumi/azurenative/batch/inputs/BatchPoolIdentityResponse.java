@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.BatchPoolIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
      * The type of identity used for the Batch Pool.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -35,7 +35,7 @@ public final class BatchPoolIdentityResponse extends io.pulumi.resources.InvokeA
      * The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,BatchPoolIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {

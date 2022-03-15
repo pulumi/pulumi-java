@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.GuestPoliciesArgs;
@@ -60,7 +60,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="assignment", type=GuestPoliciesAssignment.class, parameters={})
+    @Export(name="assignment", type=GuestPoliciesAssignment.class, parameters={})
     private Output<GuestPoliciesAssignment> assignment;
 
     /**
@@ -82,7 +82,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -97,7 +97,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -111,7 +111,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -130,7 +130,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * * Must be unique within the project.
      * 
      */
-    @OutputExport(name="guestPolicyId", type=String.class, parameters={})
+    @Export(name="guestPolicyId", type=String.class, parameters={})
     private Output<String> guestPolicyId;
 
     /**
@@ -152,7 +152,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * could potentially have conflicting assignments.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -172,7 +172,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="packageRepositories", type=List.class, parameters={GuestPoliciesPackageRepository.class})
+    @Export(name="packageRepositories", type=List.class, parameters={GuestPoliciesPackageRepository.class})
     private Output</* @Nullable */ List<GuestPoliciesPackageRepository>> packageRepositories;
 
     /**
@@ -190,7 +190,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="packages", type=List.class, parameters={GuestPoliciesPackage.class})
+    @Export(name="packages", type=List.class, parameters={GuestPoliciesPackage.class})
     private Output</* @Nullable */ List<GuestPoliciesPackage>> packages;
 
     /**
@@ -206,7 +206,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -222,7 +222,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="recipes", type=List.class, parameters={GuestPoliciesRecipe.class})
+    @Export(name="recipes", type=List.class, parameters={GuestPoliciesRecipe.class})
     private Output</* @Nullable */ List<GuestPoliciesRecipe>> recipes;
 
     /**
@@ -238,7 +238,7 @@ public class GuestPolicies extends io.pulumi.resources.CustomResource {
      * "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

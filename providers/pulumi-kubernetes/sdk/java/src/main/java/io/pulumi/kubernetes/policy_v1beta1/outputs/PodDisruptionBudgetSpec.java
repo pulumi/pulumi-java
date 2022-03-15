@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodDisruptionBudgetSpec {
     /**
      * An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting with "minAvailable".
@@ -30,11 +30,11 @@ public final class PodDisruptionBudgetSpec {
      */
     private final @Nullable LabelSelector selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodDisruptionBudgetSpec(
-        @OutputCustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable,
-        @OutputCustomType.Parameter("minAvailable") @Nullable Either<Integer,String> minAvailable,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector) {
+        @CustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable,
+        @CustomType.Parameter("minAvailable") @Nullable Either<Integer,String> minAvailable,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector) {
         this.maxUnavailable = maxUnavailable;
         this.minAvailable = minAvailable;
         this.selector = selector;

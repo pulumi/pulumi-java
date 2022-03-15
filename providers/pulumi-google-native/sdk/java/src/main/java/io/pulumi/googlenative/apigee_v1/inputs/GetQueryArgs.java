@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetQueryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetQueryArgs Empty = new GetQueryArgs();
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="queryId", required=true)
+    @Import(name="queryId", required=true)
       private final String queryId;
 
     public String getQueryId() {

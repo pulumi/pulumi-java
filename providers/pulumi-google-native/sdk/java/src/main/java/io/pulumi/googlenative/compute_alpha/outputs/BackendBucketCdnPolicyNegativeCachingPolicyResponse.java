@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse {
     /**
      * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 are can be specified as values, and you cannot specify a status code more than once.
@@ -20,10 +20,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse {
      */
     private final Integer ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendBucketCdnPolicyNegativeCachingPolicyResponse(
-        @OutputCustomType.Parameter("code") Integer code,
-        @OutputCustomType.Parameter("ttl") Integer ttl) {
+        @CustomType.Parameter("code") Integer code,
+        @CustomType.Parameter("ttl") Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }

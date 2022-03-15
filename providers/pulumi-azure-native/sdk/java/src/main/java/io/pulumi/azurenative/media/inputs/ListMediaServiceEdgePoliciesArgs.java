@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -29,7 +29,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
      * Unique identifier of the edge device.
      * 
      */
-    @InputImport(name="deviceId")
+    @Import(name="deviceId")
       private final @Nullable String deviceId;
 
     public Optional<String> getDeviceId() {
@@ -40,7 +40,7 @@ public final class ListMediaServiceEdgePoliciesArgs extends io.pulumi.resources.
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

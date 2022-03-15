@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayConnectionDrainingResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Cookie name to use for the affinity cookie.
      * 
      */
-    @InputImport(name="affinityCookieName")
+    @Import(name="affinityCookieName")
       private final @Nullable String affinityCookieName;
 
     public Optional<String> getAffinityCookieName() {
@@ -38,7 +38,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Array of references to application gateway authentication certificates.
      * 
      */
-    @InputImport(name="authenticationCertificates")
+    @Import(name="authenticationCertificates")
       private final @Nullable List<SubResourceResponse> authenticationCertificates;
 
     public List<SubResourceResponse> getAuthenticationCertificates() {
@@ -49,7 +49,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Connection draining of the backend http settings resource.
      * 
      */
-    @InputImport(name="connectionDraining")
+    @Import(name="connectionDraining")
       private final @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
 
     public Optional<ApplicationGatewayConnectionDrainingResponse> getConnectionDraining() {
@@ -60,7 +60,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Cookie based affinity.
      * 
      */
-    @InputImport(name="cookieBasedAffinity")
+    @Import(name="cookieBasedAffinity")
       private final @Nullable String cookieBasedAffinity;
 
     public Optional<String> getCookieBasedAffinity() {
@@ -71,7 +71,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -82,7 +82,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Host header to be sent to the backend servers.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -93,7 +93,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -104,7 +104,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Name of the backend http settings that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -115,7 +115,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Path which should be used as a prefix for all HTTP requests. Null means no path will be prefixed. Default value is null.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -126,7 +126,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Whether to pick host header should be picked from the host name of the backend server. Default value is false.
      * 
      */
-    @InputImport(name="pickHostNameFromBackendAddress")
+    @Import(name="pickHostNameFromBackendAddress")
       private final @Nullable Boolean pickHostNameFromBackendAddress;
 
     public Optional<Boolean> getPickHostNameFromBackendAddress() {
@@ -137,7 +137,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * The destination port on the backend.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -148,7 +148,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Probe resource of an application gateway.
      * 
      */
-    @InputImport(name="probe")
+    @Import(name="probe")
       private final @Nullable SubResourceResponse probe;
 
     public Optional<SubResourceResponse> getProbe() {
@@ -159,7 +159,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Whether the probe is enabled. Default value is false.
      * 
      */
-    @InputImport(name="probeEnabled")
+    @Import(name="probeEnabled")
       private final @Nullable Boolean probeEnabled;
 
     public Optional<Boolean> getProbeEnabled() {
@@ -170,7 +170,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * The protocol used to communicate with the backend.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -181,7 +181,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * The provisioning state of the backend HTTP settings resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -192,7 +192,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds.
      * 
      */
-    @InputImport(name="requestTimeout")
+    @Import(name="requestTimeout")
       private final @Nullable Integer requestTimeout;
 
     public Optional<Integer> getRequestTimeout() {
@@ -203,7 +203,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Array of references to application gateway trusted root certificates.
      * 
      */
-    @InputImport(name="trustedRootCertificates")
+    @Import(name="trustedRootCertificates")
       private final @Nullable List<SubResourceResponse> trustedRootCertificates;
 
     public List<SubResourceResponse> getTrustedRootCertificates() {
@@ -214,7 +214,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends io.pulu
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

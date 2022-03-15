@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.PersistentDiskResponse;
 import io.pulumi.azurenative.appplatform.inputs.TemporaryDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Name of the active deployment of the App
      * 
      */
-    @InputImport(name="activeDeploymentName")
+    @Import(name="activeDeploymentName")
       private final @Nullable String activeDeploymentName;
 
     public Optional<String> getActiveDeploymentName() {
@@ -36,7 +36,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Date time when the resource is created
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -47,7 +47,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Fully qualified dns Name.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
@@ -58,7 +58,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Indicate if only https is allowed.
      * 
      */
-    @InputImport(name="httpsOnly")
+    @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
 
     public Optional<Boolean> getHttpsOnly() {
@@ -69,7 +69,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Persistent disk settings
      * 
      */
-    @InputImport(name="persistentDisk")
+    @Import(name="persistentDisk")
       private final @Nullable PersistentDiskResponse persistentDisk;
 
     public Optional<PersistentDiskResponse> getPersistentDisk() {
@@ -80,7 +80,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Provisioning state of the App
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -91,7 +91,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Indicates whether the App exposes public endpoint
      * 
      */
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Boolean $public;
 
     public Optional<Boolean> get$public() {
@@ -102,7 +102,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * Temporary disk settings
      * 
      */
-    @InputImport(name="temporaryDisk")
+    @Import(name="temporaryDisk")
       private final @Nullable TemporaryDiskResponse temporaryDisk;
 
     public Optional<TemporaryDiskResponse> getTemporaryDisk() {
@@ -113,7 +113,7 @@ public final class AppResourcePropertiesResponse extends io.pulumi.resources.Inv
      * URL of the App
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

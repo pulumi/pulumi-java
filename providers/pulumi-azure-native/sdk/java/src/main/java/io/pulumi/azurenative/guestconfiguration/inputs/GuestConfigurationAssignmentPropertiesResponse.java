@@ -6,7 +6,7 @@ package io.pulumi.azurenative.guestconfiguration.inputs;
 import io.pulumi.azurenative.guestconfiguration.inputs.AssignmentReportResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.VMSSVMInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * Combined hash of the configuration package and parameters.
      * 
      */
-    @InputImport(name="assignmentHash", required=true)
+    @Import(name="assignmentHash", required=true)
       private final String assignmentHash;
 
     public String getAssignmentHash() {
@@ -37,7 +37,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * A value indicating compliance status of the machine for the assigned guest configuration.
      * 
      */
-    @InputImport(name="complianceStatus", required=true)
+    @Import(name="complianceStatus", required=true)
       private final String complianceStatus;
 
     public String getComplianceStatus() {
@@ -48,7 +48,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * The source which initiated the guest configuration assignment. Ex: Azure Policy
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable String context;
 
     public Optional<String> getContext() {
@@ -59,7 +59,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * The guest configuration to assign.
      * 
      */
-    @InputImport(name="guestConfiguration")
+    @Import(name="guestConfiguration")
       private final @Nullable GuestConfigurationNavigationResponse guestConfiguration;
 
     public Optional<GuestConfigurationNavigationResponse> getGuestConfiguration() {
@@ -70,7 +70,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * Date and time when last compliance status was checked.
      * 
      */
-    @InputImport(name="lastComplianceStatusChecked", required=true)
+    @Import(name="lastComplianceStatusChecked", required=true)
       private final String lastComplianceStatusChecked;
 
     public String getLastComplianceStatusChecked() {
@@ -81,7 +81,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * Last reported guest configuration assignment report.
      * 
      */
-    @InputImport(name="latestAssignmentReport")
+    @Import(name="latestAssignmentReport")
       private final @Nullable AssignmentReportResponse latestAssignmentReport;
 
     public Optional<AssignmentReportResponse> getLatestAssignmentReport() {
@@ -92,7 +92,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * Id of the latest report for the guest configuration assignment.
      * 
      */
-    @InputImport(name="latestReportId", required=true)
+    @Import(name="latestReportId", required=true)
       private final String latestReportId;
 
     public String getLatestReportId() {
@@ -103,7 +103,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * parameter hash for the guest configuration assignment.
      * 
      */
-    @InputImport(name="parameterHash", required=true)
+    @Import(name="parameterHash", required=true)
       private final String parameterHash;
 
     public String getParameterHash() {
@@ -114,7 +114,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * The provisioning state, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -125,7 +125,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * Type of the resource - VMSS / VM
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {
@@ -136,7 +136,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * VM resource Id.
      * 
      */
-    @InputImport(name="targetResourceId", required=true)
+    @Import(name="targetResourceId", required=true)
       private final String targetResourceId;
 
     public String getTargetResourceId() {
@@ -147,7 +147,7 @@ public final class GuestConfigurationAssignmentPropertiesResponse extends io.pul
      * The list of VM Compliance data for VMSS
      * 
      */
-    @InputImport(name="vmssVMList")
+    @Import(name="vmssVMList")
       private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
     public List<VMSSVMInfoResponse> getVmssVMList() {

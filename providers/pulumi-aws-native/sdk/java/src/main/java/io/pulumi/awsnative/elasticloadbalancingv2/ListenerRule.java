@@ -8,7 +8,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.ListenerRuleArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRuleCondition;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,37 +22,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:elasticloadbalancingv2:ListenerRule")
 public class ListenerRule extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="actions", type=List.class, parameters={ListenerRuleAction.class})
+    @Export(name="actions", type=List.class, parameters={ListenerRuleAction.class})
     private Output<List<ListenerRuleAction>> actions;
 
     public Output<List<ListenerRuleAction>> getActions() {
         return this.actions;
     }
-    @OutputExport(name="conditions", type=List.class, parameters={ListenerRuleRuleCondition.class})
+    @Export(name="conditions", type=List.class, parameters={ListenerRuleRuleCondition.class})
     private Output<List<ListenerRuleRuleCondition>> conditions;
 
     public Output<List<ListenerRuleRuleCondition>> getConditions() {
         return this.conditions;
     }
-    @OutputExport(name="isDefault", type=Boolean.class, parameters={})
+    @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
         return this.isDefault;
     }
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
         return this.listenerArn;
     }
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     public Output<Integer> getPriority() {
         return this.priority;
     }
-    @OutputExport(name="ruleArn", type=String.class, parameters={})
+    @Export(name="ruleArn", type=String.class, parameters={})
     private Output<String> ruleArn;
 
     public Output<String> getRuleArn() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.blockchain.inputs.FirewallRuleArgs;
 import io.pulumi.azurenative.blockchain.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Blockchain member name.
      * 
      */
-    @InputImport(name="blockchainMemberName")
+    @Import(name="blockchainMemberName")
       private final @Nullable Output<String> blockchainMemberName;
 
     public Output<String> getBlockchainMemberName() {
@@ -36,7 +36,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the consortium for the blockchain member.
      * 
      */
-    @InputImport(name="consortium")
+    @Import(name="consortium")
       private final @Nullable Output<String> consortium;
 
     public Output<String> getConsortium() {
@@ -47,7 +47,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Sets the managed consortium management account password.
      * 
      */
-    @InputImport(name="consortiumManagementAccountPassword")
+    @Import(name="consortiumManagementAccountPassword")
       private final @Nullable Output<String> consortiumManagementAccountPassword;
 
     public Output<String> getConsortiumManagementAccountPassword() {
@@ -58,7 +58,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets the display name of the member in the consortium.
      * 
      */
-    @InputImport(name="consortiumMemberDisplayName")
+    @Import(name="consortiumMemberDisplayName")
       private final @Nullable Output<String> consortiumMemberDisplayName;
 
     public Output<String> getConsortiumMemberDisplayName() {
@@ -69,7 +69,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets the role of the member in the consortium.
      * 
      */
-    @InputImport(name="consortiumRole")
+    @Import(name="consortiumRole")
       private final @Nullable Output<String> consortiumRole;
 
     public Output<String> getConsortiumRole() {
@@ -80,7 +80,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets firewall rules
      * 
      */
-    @InputImport(name="firewallRules")
+    @Import(name="firewallRules")
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
     public Output<List<FirewallRuleArgs>> getFirewallRules() {
@@ -91,7 +91,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * The GEO location of the blockchain service.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -102,7 +102,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Sets the basic auth password of the blockchain member.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -113,7 +113,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the blockchain protocol.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,BlockchainProtocol>> protocol;
 
     public Output<Either<String,BlockchainProtocol>> getProtocol() {
@@ -124,7 +124,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -135,7 +135,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the blockchain member Sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -146,7 +146,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Tags of the service which is a list of key value pairs that describes the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -157,7 +157,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the blockchain validator nodes Sku.
      * 
      */
-    @InputImport(name="validatorNodesSku")
+    @Import(name="validatorNodesSku")
       private final @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
 
     public Output<BlockchainMemberNodesSkuArgs> getValidatorNodesSku() {

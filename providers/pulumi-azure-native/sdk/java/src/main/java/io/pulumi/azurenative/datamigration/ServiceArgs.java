@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.datamigration.inputs.ServiceSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -31,7 +31,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource kind. Only 'vm' (the default) is supported.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -42,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The public key of the service, used to encrypt secrets sent to the service
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -64,7 +64,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the service
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -75,7 +75,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Service SKU
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ServiceSkuArgs> sku;
 
     public Output<ServiceSkuArgs> getSku() {
@@ -86,7 +86,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
      * 
      */
-    @InputImport(name="virtualSubnetId", required=true)
+    @Import(name="virtualSubnetId", required=true)
       private final Output<String> virtualSubnetId;
 
     public Output<String> getVirtualSubnetId() {

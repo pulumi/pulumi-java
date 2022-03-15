@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.DomainIdentityVerificationArgs;
 import io.pulumi.aws.ses.inputs.DomainIdentityVerificationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public class DomainIdentityVerification extends io.pulumi.resources.CustomResour
      * The ARN of the domain identity.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class DomainIdentityVerification extends io.pulumi.resources.CustomResour
      * The domain name of the SES domain identity to verify.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**

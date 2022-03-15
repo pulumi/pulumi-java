@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.GalleryArtifactVersionSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GalleryDataDiskImageResponse {
     /**
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
@@ -34,12 +34,12 @@ public final class GalleryDataDiskImageResponse {
      */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GalleryDataDiskImageResponse(
-        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching,
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("sizeInGB") Integer sizeInGB,
-        @OutputCustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
+        @CustomType.Parameter("hostCaching") @Nullable String hostCaching,
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("sizeInGB") Integer sizeInGB,
+        @CustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
         this.hostCaching = hostCaching;
         this.lun = lun;
         this.sizeInGB = sizeInGB;

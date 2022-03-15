@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Calling web hook for Skype channel
      * 
      */
-    @InputImport(name="callingWebHook")
+    @Import(name="callingWebHook")
       private final @Nullable Output<String> callingWebHook;
 
     public Output<String> getCallingWebHook() {
@@ -34,7 +34,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Enable calling for Skype channel
      * 
      */
-    @InputImport(name="enableCalling")
+    @Import(name="enableCalling")
       private final @Nullable Output<Boolean> enableCalling;
 
     public Output<Boolean> getEnableCalling() {
@@ -45,7 +45,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Enable groups for Skype channel
      * 
      */
-    @InputImport(name="enableGroups")
+    @Import(name="enableGroups")
       private final @Nullable Output<Boolean> enableGroups;
 
     public Output<Boolean> getEnableGroups() {
@@ -56,7 +56,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Enable media cards for Skype channel
      * 
      */
-    @InputImport(name="enableMediaCards")
+    @Import(name="enableMediaCards")
       private final @Nullable Output<Boolean> enableMediaCards;
 
     public Output<Boolean> getEnableMediaCards() {
@@ -67,7 +67,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Enable messaging for Skype channel
      * 
      */
-    @InputImport(name="enableMessaging")
+    @Import(name="enableMessaging")
       private final @Nullable Output<Boolean> enableMessaging;
 
     public Output<Boolean> getEnableMessaging() {
@@ -78,7 +78,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Enable screen sharing for Skype channel
      * 
      */
-    @InputImport(name="enableScreenSharing")
+    @Import(name="enableScreenSharing")
       private final @Nullable Output<Boolean> enableScreenSharing;
 
     public Output<Boolean> getEnableScreenSharing() {
@@ -89,7 +89,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Enable video for Skype channel
      * 
      */
-    @InputImport(name="enableVideo")
+    @Import(name="enableVideo")
       private final @Nullable Output<Boolean> enableVideo;
 
     public Output<Boolean> getEnableVideo() {
@@ -100,7 +100,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Group mode for Skype channel
      * 
      */
-    @InputImport(name="groupsMode")
+    @Import(name="groupsMode")
       private final @Nullable Output<String> groupsMode;
 
     public Output<String> getGroupsMode() {
@@ -111,7 +111,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Incoming call route for Skype channel
      * 
      */
-    @InputImport(name="incomingCallRoute")
+    @Import(name="incomingCallRoute")
       private final @Nullable Output<String> incomingCallRoute;
 
     public Output<String> getIncomingCallRoute() {
@@ -122,7 +122,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {

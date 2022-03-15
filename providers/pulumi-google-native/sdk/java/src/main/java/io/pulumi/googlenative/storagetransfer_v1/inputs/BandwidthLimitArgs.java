@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
      * Bandwidth rate in megabytes per second, distributed across all the agents in the pool.
      * 
      */
-    @InputImport(name="limitMbps")
+    @Import(name="limitMbps")
       private final @Nullable Output<String> limitMbps;
 
     public Output<String> getLimitMbps() {

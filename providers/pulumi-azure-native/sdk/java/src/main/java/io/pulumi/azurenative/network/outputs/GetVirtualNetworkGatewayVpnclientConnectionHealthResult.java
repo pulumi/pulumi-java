@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
     /**
      * List of vpn client connection health.
@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
      */
     private final @Nullable List<VpnClientConnectionHealthDetailResponse> value;
 
-    @OutputCustomType.Constructor
-    private GetVirtualNetworkGatewayVpnclientConnectionHealthResult(@OutputCustomType.Parameter("value") @Nullable List<VpnClientConnectionHealthDetailResponse> value) {
+    @CustomType.Constructor
+    private GetVirtualNetworkGatewayVpnclientConnectionHealthResult(@CustomType.Parameter("value") @Nullable List<VpnClientConnectionHealthDetailResponse> value) {
         this.value = value;
     }
 

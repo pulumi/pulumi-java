@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelector;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeNodeAffinity {
     /**
      * Required specifies hard node constraints that must be met.
@@ -17,8 +17,8 @@ public final class VolumeNodeAffinity {
      */
     private final @Nullable NodeSelector required;
 
-    @OutputCustomType.Constructor
-    private VolumeNodeAffinity(@OutputCustomType.Parameter("required") @Nullable NodeSelector required) {
+    @CustomType.Constructor
+    private VolumeNodeAffinity(@CustomType.Parameter("required") @Nullable NodeSelector required) {
         this.required = required;
     }
 

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.EC2FleetCapacityRebalance;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetMaintenanceStrategies {
     private final @Nullable EC2FleetCapacityRebalance capacityRebalance;
 
-    @OutputCustomType.Constructor
-    private EC2FleetMaintenanceStrategies(@OutputCustomType.Parameter("capacityRebalance") @Nullable EC2FleetCapacityRebalance capacityRebalance) {
+    @CustomType.Constructor
+    private EC2FleetMaintenanceStrategies(@CustomType.Parameter("capacityRebalance") @Nullable EC2FleetCapacityRebalance capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 

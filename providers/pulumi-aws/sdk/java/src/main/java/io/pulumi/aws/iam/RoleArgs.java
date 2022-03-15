@@ -5,7 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.aws.iam.inputs.RoleInlinePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Policy that grants an entity permission to assume the role.
      * 
      */
-    @InputImport(name="assumeRolePolicy", required=true)
+    @Import(name="assumeRolePolicy", required=true)
       private final Output<String> assumeRolePolicy;
 
     public Output<String> getAssumeRolePolicy() {
@@ -34,7 +34,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the role.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
      * 
      */
-    @InputImport(name="forceDetachPolicies")
+    @Import(name="forceDetachPolicies")
       private final @Nullable Output<Boolean> forceDetachPolicies;
 
     public Output<Boolean> getForceDetachPolicies() {
@@ -56,7 +56,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
      * 
      */
-    @InputImport(name="inlinePolicies")
+    @Import(name="inlinePolicies")
       private final @Nullable Output<List<RoleInlinePolicyArgs>> inlinePolicies;
 
     public Output<List<RoleInlinePolicyArgs>> getInlinePolicies() {
@@ -67,7 +67,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
      * 
      */
-    @InputImport(name="managedPolicyArns")
+    @Import(name="managedPolicyArns")
       private final @Nullable Output<List<String>> managedPolicyArns;
 
     public Output<List<String>> getManagedPolicyArns() {
@@ -78,7 +78,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    @InputImport(name="maxSessionDuration")
+    @Import(name="maxSessionDuration")
       private final @Nullable Output<Integer> maxSessionDuration;
 
     public Output<Integer> getMaxSessionDuration() {
@@ -89,7 +89,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the role policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -111,7 +111,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -122,7 +122,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the policy that is used to set the permissions boundary for the role.
      * 
      */
-    @InputImport(name="permissionsBoundary")
+    @Import(name="permissionsBoundary")
       private final @Nullable Output<String> permissionsBoundary;
 
     public Output<String> getPermissionsBoundary() {
@@ -133,7 +133,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

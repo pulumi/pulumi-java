@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     /**
      * The discriminator for derived types.
@@ -21,10 +21,10 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
      */
     private final String rawBody;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyX509CertificateTokenKeyResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("rawBody") String rawBody) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("rawBody") String rawBody) {
         this.odataType = odataType;
         this.rawBody = rawBody;
     }

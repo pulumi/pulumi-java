@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAppSlotArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the deployment slot. By default, this API returns the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final String slot;
 
     public String getSlot() {

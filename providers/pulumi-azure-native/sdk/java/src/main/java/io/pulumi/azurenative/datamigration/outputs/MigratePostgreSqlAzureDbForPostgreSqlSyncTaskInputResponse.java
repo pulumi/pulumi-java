@@ -5,11 +5,11 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
     /**
      * Databases to migrate
@@ -27,11 +27,11 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse {
      */
     private final PostgreSqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse(
-        @OutputCustomType.Parameter("selectedDatabases") List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases,
-        @OutputCustomType.Parameter("sourceConnectionInfo") PostgreSqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") PostgreSqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("selectedDatabases") List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases,
+        @CustomType.Parameter("sourceConnectionInfo") PostgreSqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") PostgreSqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

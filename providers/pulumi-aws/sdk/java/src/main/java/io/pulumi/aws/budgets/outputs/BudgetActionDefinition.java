@@ -6,12 +6,12 @@ package io.pulumi.aws.budgets.outputs;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinitionIamActionDefinition;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinitionScpActionDefinition;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinitionSsmActionDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetActionDefinition {
     /**
      * The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
@@ -29,11 +29,11 @@ public final class BudgetActionDefinition {
      */
     private final @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetActionDefinition(
-        @OutputCustomType.Parameter("iamActionDefinition") @Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition,
-        @OutputCustomType.Parameter("scpActionDefinition") @Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition,
-        @OutputCustomType.Parameter("ssmActionDefinition") @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
+        @CustomType.Parameter("iamActionDefinition") @Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition,
+        @CustomType.Parameter("scpActionDefinition") @Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition,
+        @CustomType.Parameter("ssmActionDefinition") @Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
         this.iamActionDefinition = iamActionDefinition;
         this.scpActionDefinition = scpActionDefinition;
         this.ssmActionDefinition = ssmActionDefinition;

@@ -4,13 +4,13 @@
 package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.PolicyPredictiveScalingConfigurationMetricSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyPredictiveScalingConfiguration {
     /**
      * Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
@@ -38,13 +38,13 @@ public final class PolicyPredictiveScalingConfiguration {
      */
     private final @Nullable String schedulingBufferTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyPredictiveScalingConfiguration(
-        @OutputCustomType.Parameter("maxCapacityBreachBehavior") @Nullable String maxCapacityBreachBehavior,
-        @OutputCustomType.Parameter("maxCapacityBuffer") @Nullable String maxCapacityBuffer,
-        @OutputCustomType.Parameter("metricSpecification") PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("schedulingBufferTime") @Nullable String schedulingBufferTime) {
+        @CustomType.Parameter("maxCapacityBreachBehavior") @Nullable String maxCapacityBreachBehavior,
+        @CustomType.Parameter("maxCapacityBuffer") @Nullable String maxCapacityBuffer,
+        @CustomType.Parameter("metricSpecification") PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("schedulingBufferTime") @Nullable String schedulingBufferTime) {
         this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
         this.maxCapacityBuffer = maxCapacityBuffer;
         this.metricSpecification = metricSpecification;

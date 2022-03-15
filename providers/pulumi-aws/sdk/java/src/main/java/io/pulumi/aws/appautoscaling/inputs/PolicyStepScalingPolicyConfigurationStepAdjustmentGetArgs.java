@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
      * The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
      * 
      */
-    @InputImport(name="metricIntervalLowerBound")
+    @Import(name="metricIntervalLowerBound")
       private final @Nullable Output<String> metricIntervalLowerBound;
 
     public Output<String> getMetricIntervalLowerBound() {
@@ -30,7 +30,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
      * The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
      * 
      */
-    @InputImport(name="metricIntervalUpperBound")
+    @Import(name="metricIntervalUpperBound")
       private final @Nullable Output<String> metricIntervalUpperBound;
 
     public Output<String> getMetricIntervalUpperBound() {
@@ -41,7 +41,7 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustmentGetArgs ext
      * The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
      * 
      */
-    @InputImport(name="scalingAdjustment", required=true)
+    @Import(name="scalingAdjustment", required=true)
       private final Output<Integer> scalingAdjustment;
 
     public Output<Integer> getScalingAdjustment() {

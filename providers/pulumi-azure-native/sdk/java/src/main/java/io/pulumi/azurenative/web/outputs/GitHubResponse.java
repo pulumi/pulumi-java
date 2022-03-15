@@ -5,13 +5,13 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ClientRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitHubResponse {
     /**
      * <code>false</code> if the GitHub provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -29,11 +29,11 @@ public final class GitHubResponse {
      */
     private final @Nullable ClientRegistrationResponse registration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
-        @OutputCustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @CustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

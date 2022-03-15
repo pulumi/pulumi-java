@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="childItems")
+    @Import(name="childItems")
       private final @Nullable Output<Object> childItems;
 
     public Output<Object> getChildItems() {
@@ -38,7 +38,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Validation activity dataset reference.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
@@ -49,7 +49,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -60,7 +60,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -71,7 +71,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Can be used if dataset points to a file. The file must be greater than or equal in size to the value specified. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="minimumSize")
+    @Import(name="minimumSize")
       private final @Nullable Output<Object> minimumSize;
 
     public Output<Object> getMinimumSize() {
@@ -82,7 +82,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -93,7 +93,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * A delay in seconds between validation attempts. If no value is specified, 10 seconds will be used as the default. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sleep")
+    @Import(name="sleep")
       private final @Nullable Output<Object> sleep;
 
     public Output<Object> getSleep() {
@@ -104,7 +104,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Specifies the timeout for the activity to run. If there is no value specified, it takes the value of TimeSpan.FromDays(7) which is 1 week as default. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Object> timeout;
 
     public Output<Object> getTimeout() {
@@ -116,7 +116,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'Validation'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -127,7 +127,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

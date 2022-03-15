@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.athena.outputs;
 
 import io.pulumi.awsnative.athena.outputs.WorkGroupEncryptionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkGroupResultConfiguration {
     private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
     private final @Nullable String outputLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkGroupResultConfiguration(
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
-        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation) {
+        @CustomType.Parameter("encryptionConfiguration") @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
+        @CustomType.Parameter("outputLocation") @Nullable String outputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
     }

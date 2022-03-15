@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the scopes that should be requested while authenticating.
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {

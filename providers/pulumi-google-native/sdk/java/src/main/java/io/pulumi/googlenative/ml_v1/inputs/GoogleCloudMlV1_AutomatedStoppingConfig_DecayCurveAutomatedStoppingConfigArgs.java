@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
      * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
      * 
      */
-    @InputImport(name="useElapsedTime")
+    @Import(name="useElapsedTime")
       private final @Nullable Output<Boolean> useElapsedTime;
 
     public Output<Boolean> getUseElapsedTime() {

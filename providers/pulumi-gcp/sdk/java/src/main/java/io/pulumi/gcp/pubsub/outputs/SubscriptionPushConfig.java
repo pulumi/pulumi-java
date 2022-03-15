@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.pubsub.outputs.SubscriptionPushConfigOidcToken;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionPushConfig {
     /**
      * Endpoint configuration attributes.
@@ -50,11 +50,11 @@ public final class SubscriptionPushConfig {
      */
     private final String pushEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionPushConfig(
-        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
-        @OutputCustomType.Parameter("oidcToken") @Nullable SubscriptionPushConfigOidcToken oidcToken,
-        @OutputCustomType.Parameter("pushEndpoint") String pushEndpoint) {
+        @CustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @CustomType.Parameter("oidcToken") @Nullable SubscriptionPushConfigOidcToken oidcToken,
+        @CustomType.Parameter("pushEndpoint") String pushEndpoint) {
         this.attributes = attributes;
         this.oidcToken = oidcToken;
         this.pushEndpoint = pushEndpoint;

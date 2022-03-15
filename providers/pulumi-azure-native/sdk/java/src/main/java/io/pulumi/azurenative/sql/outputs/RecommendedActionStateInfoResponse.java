@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedActionStateInfoResponse {
     /**
      * Gets who initiated the execution of this recommended action. Possible Value are: User    -> When user explicity notified system to apply the recommended action. System  -> When auto-execute status of this advisor was set to 'Enabled', in which case the system applied it.
@@ -25,11 +25,11 @@ public final class RecommendedActionStateInfoResponse {
      */
     private final String lastModified;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedActionStateInfoResponse(
-        @OutputCustomType.Parameter("actionInitiatedBy") String actionInitiatedBy,
-        @OutputCustomType.Parameter("currentValue") String currentValue,
-        @OutputCustomType.Parameter("lastModified") String lastModified) {
+        @CustomType.Parameter("actionInitiatedBy") String actionInitiatedBy,
+        @CustomType.Parameter("currentValue") String currentValue,
+        @CustomType.Parameter("lastModified") String lastModified) {
         this.actionInitiatedBy = actionInitiatedBy;
         this.currentValue = currentValue;
         this.lastModified = lastModified;

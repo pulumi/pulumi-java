@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketAutoclassArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketBillingArgs;
@@ -35,7 +35,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Access controls on the bucket.
      * 
      */
-    @InputImport(name="acl")
+    @Import(name="acl")
       private final @Nullable Output<List<BucketAccessControlArgs>> acl;
 
     public Output<List<BucketAccessControlArgs>> getAcl() {
@@ -46,7 +46,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's Autoclass configuration.
      * 
      */
-    @InputImport(name="autoclass")
+    @Import(name="autoclass")
       private final @Nullable Output<BucketAutoclassArgs> autoclass;
 
     public Output<BucketAutoclassArgs> getAutoclass() {
@@ -57,7 +57,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's billing configuration.
      * 
      */
-    @InputImport(name="billing")
+    @Import(name="billing")
       private final @Nullable Output<BucketBillingArgs> billing;
 
     public Output<BucketBillingArgs> getBilling() {
@@ -68,7 +68,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's Cross-Origin Resource Sharing (CORS) configuration.
      * 
      */
-    @InputImport(name="cors")
+    @Import(name="cors")
       private final @Nullable Output<List<BucketCorsItemArgs>> cors;
 
     public Output<List<BucketCorsItemArgs>> getCors() {
@@ -79,7 +79,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's custom placement configuration for Custom Dual Regions.
      * 
      */
-    @InputImport(name="customPlacementConfig")
+    @Import(name="customPlacementConfig")
       private final @Nullable Output<BucketCustomPlacementConfigArgs> customPlacementConfig;
 
     public Output<BucketCustomPlacementConfigArgs> getCustomPlacementConfig() {
@@ -90,7 +90,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The default value for event-based hold on newly created objects in this bucket. Event-based hold is a way to retain objects indefinitely until an event occurs, signified by the hold's release. After being released, such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false. Objects under event-based hold cannot be deleted, overwritten or archived until the hold is removed.
      * 
      */
-    @InputImport(name="defaultEventBasedHold")
+    @Import(name="defaultEventBasedHold")
       private final @Nullable Output<Boolean> defaultEventBasedHold;
 
     public Output<Boolean> getDefaultEventBasedHold() {
@@ -101,7 +101,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Default access controls to apply to new objects when no ACL is provided.
      * 
      */
-    @InputImport(name="defaultObjectAcl")
+    @Import(name="defaultObjectAcl")
       private final @Nullable Output<List<ObjectAccessControlArgs>> defaultObjectAcl;
 
     public Output<List<ObjectAccessControlArgs>> getDefaultObjectAcl() {
@@ -112,7 +112,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption configuration for a bucket.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<BucketEncryptionArgs> encryption;
 
     public Output<BucketEncryptionArgs> getEncryption() {
@@ -123,7 +123,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP 1.1 Entity tag for the bucket.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -134,7 +134,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's IAM configuration.
      * 
      */
-    @InputImport(name="iamConfiguration")
+    @Import(name="iamConfiguration")
       private final @Nullable Output<BucketIamConfigurationArgs> iamConfiguration;
 
     public Output<BucketIamConfigurationArgs> getIamConfiguration() {
@@ -145,7 +145,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the bucket. For buckets, the id and name properties are the same.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -156,7 +156,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of item this is. For buckets, this is always storage#bucket.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -167,7 +167,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided labels, in key/value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -178,7 +178,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's lifecycle configuration. See lifecycle management for more information.
      * 
      */
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable Output<BucketLifecycleArgs> lifecycle;
 
     public Output<BucketLifecycleArgs> getLifecycle() {
@@ -189,7 +189,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's guide for the authoritative list.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -200,7 +200,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the bucket location.
      * 
      */
-    @InputImport(name="locationType")
+    @Import(name="locationType")
       private final @Nullable Output<String> locationType;
 
     public Output<String> getLocationType() {
@@ -211,7 +211,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<BucketLoggingArgs> logging;
 
     public Output<BucketLoggingArgs> getLogging() {
@@ -222,7 +222,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The metadata generation of this bucket.
      * 
      */
-    @InputImport(name="metageneration")
+    @Import(name="metageneration")
       private final @Nullable Output<String> metageneration;
 
     public Output<String> getMetageneration() {
@@ -233,7 +233,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -244,28 +244,28 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The owner of the bucket. This is always the project team's owner group.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<BucketOwnerArgs> owner;
 
     public Output<BucketOwnerArgs> getOwner() {
         return this.owner == null ? Output.empty() : this.owner;
     }
 
-    @InputImport(name="predefinedAcl")
+    @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
     public Output<String> getPredefinedAcl() {
         return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
     }
 
-    @InputImport(name="predefinedDefaultObjectAcl")
+    @Import(name="predefinedDefaultObjectAcl")
       private final @Nullable Output<String> predefinedDefaultObjectAcl;
 
     public Output<String> getPredefinedDefaultObjectAcl() {
         return this.predefinedDefaultObjectAcl == null ? Output.empty() : this.predefinedDefaultObjectAcl;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -276,21 +276,21 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The project number of the project the bucket belongs to.
      * 
      */
-    @InputImport(name="projectNumber")
+    @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
         return this.projectNumber == null ? Output.empty() : this.projectNumber;
     }
 
-    @InputImport(name="projection")
+    @Import(name="projection")
       private final @Nullable Output<String> projection;
 
     public Output<String> getProjection() {
         return this.projection == null ? Output.empty() : this.projection;
     }
 
-    @InputImport(name="provisionalUserProject")
+    @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
     public Output<String> getProvisionalUserProject() {
@@ -301,7 +301,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's retention policy. The retention policy enforces a minimum retention time for all objects contained in the bucket, based on their creation time. Any attempt to overwrite or delete objects younger than the retention period will result in a PERMISSION_DENIED error. An unlocked retention policy can be modified or removed from the bucket via a storage.buckets.update operation. A locked retention policy cannot be removed or shortened in duration for the lifetime of the bucket. Attempting to remove or decrease period of a locked retention policy will result in a PERMISSION_DENIED error.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<BucketRetentionPolicyArgs> retentionPolicy;
 
     public Output<BucketRetentionPolicyArgs> getRetentionPolicy() {
@@ -312,7 +312,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The Recovery Point Objective (RPO) of this bucket. Set to ASYNC_TURBO to turn on Turbo Replication on a bucket.
      * 
      */
-    @InputImport(name="rpo")
+    @Import(name="rpo")
       private final @Nullable Output<String> rpo;
 
     public Output<String> getRpo() {
@@ -323,7 +323,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Reserved for future use.
      * 
      */
-    @InputImport(name="satisfiesPZS")
+    @Import(name="satisfiesPZS")
       private final @Nullable Output<Boolean> satisfiesPZS;
 
     public Output<Boolean> getSatisfiesPZS() {
@@ -334,7 +334,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of this bucket.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -345,7 +345,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's default storage class, used whenever no storageClass is specified for a newly-created object. This defines how objects in the bucket are stored and determines the SLA and the cost of storage. Values include MULTI_REGIONAL, REGIONAL, STANDARD, NEARLINE, COLDLINE, ARCHIVE, and DURABLE_REDUCED_AVAILABILITY. If this value is not specified when the bucket is created, it will default to STANDARD. For more information, see storage classes.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -356,7 +356,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The creation time of the bucket in RFC 3339 format.
      * 
      */
-    @InputImport(name="timeCreated")
+    @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
     public Output<String> getTimeCreated() {
@@ -367,14 +367,14 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The modification time of the bucket in RFC 3339 format.
      * 
      */
-    @InputImport(name="updated")
+    @Import(name="updated")
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
         return this.updated == null ? Output.empty() : this.updated;
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {
@@ -385,7 +385,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's versioning configuration.
      * 
      */
-    @InputImport(name="versioning")
+    @Import(name="versioning")
       private final @Nullable Output<BucketVersioningArgs> versioning;
 
     public Output<BucketVersioningArgs> getVersioning() {
@@ -396,7 +396,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples for more information.
      * 
      */
-    @InputImport(name="website")
+    @Import(name="website")
       private final @Nullable Output<BucketWebsiteArgs> website;
 
     public Output<BucketWebsiteArgs> getWebsite() {

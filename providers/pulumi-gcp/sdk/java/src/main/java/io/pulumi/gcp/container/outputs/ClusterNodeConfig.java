@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterNodeConfigEphemeralStorageConfig;
 import io.pulumi.gcp.container.outputs.ClusterNodeConfigGcfsConfig;
 import io.pulumi.gcp.container.outputs.ClusterNodeConfigGuestAccelerator;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodeConfig {
     /**
      * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <https://cloud.google.com/compute/docs/disks/customer-managed-encryption>
@@ -185,32 +185,32 @@ public final class ClusterNodeConfig {
      */
     private final @Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodeConfig(
-        @OutputCustomType.Parameter("bootDiskKmsKey") @Nullable String bootDiskKmsKey,
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("ephemeralStorageConfig") @Nullable ClusterNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
-        @OutputCustomType.Parameter("gcfsConfig") @Nullable ClusterNodeConfigGcfsConfig gcfsConfig,
-        @OutputCustomType.Parameter("guestAccelerators") @Nullable List<ClusterNodeConfigGuestAccelerator> guestAccelerators,
-        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
-        @OutputCustomType.Parameter("kubeletConfig") @Nullable ClusterNodeConfigKubeletConfig kubeletConfig,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("linuxNodeConfig") @Nullable ClusterNodeConfigLinuxNodeConfig linuxNodeConfig,
-        @OutputCustomType.Parameter("localSsdCount") @Nullable Integer localSsdCount,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
-        @OutputCustomType.Parameter("nodeGroup") @Nullable String nodeGroup,
-        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
-        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible,
-        @OutputCustomType.Parameter("sandboxConfig") @Nullable ClusterNodeConfigSandboxConfig sandboxConfig,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable ClusterNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @OutputCustomType.Parameter("spot") @Nullable Boolean spot,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("taints") @Nullable List<ClusterNodeConfigTaint> taints,
-        @OutputCustomType.Parameter("workloadMetadataConfig") @Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
+        @CustomType.Parameter("bootDiskKmsKey") @Nullable String bootDiskKmsKey,
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("ephemeralStorageConfig") @Nullable ClusterNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
+        @CustomType.Parameter("gcfsConfig") @Nullable ClusterNodeConfigGcfsConfig gcfsConfig,
+        @CustomType.Parameter("guestAccelerators") @Nullable List<ClusterNodeConfigGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("imageType") @Nullable String imageType,
+        @CustomType.Parameter("kubeletConfig") @Nullable ClusterNodeConfigKubeletConfig kubeletConfig,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("linuxNodeConfig") @Nullable ClusterNodeConfigLinuxNodeConfig linuxNodeConfig,
+        @CustomType.Parameter("localSsdCount") @Nullable Integer localSsdCount,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @CustomType.Parameter("nodeGroup") @Nullable String nodeGroup,
+        @CustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible,
+        @CustomType.Parameter("sandboxConfig") @Nullable ClusterNodeConfigSandboxConfig sandboxConfig,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @CustomType.Parameter("shieldedInstanceConfig") @Nullable ClusterNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @CustomType.Parameter("spot") @Nullable Boolean spot,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("taints") @Nullable List<ClusterNodeConfigTaint> taints,
+        @CustomType.Parameter("workloadMetadataConfig") @Nullable ClusterNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

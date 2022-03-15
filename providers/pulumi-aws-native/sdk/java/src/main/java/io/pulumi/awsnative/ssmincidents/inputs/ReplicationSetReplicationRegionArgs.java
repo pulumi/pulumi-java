@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ReplicationSetRegionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
 
     public static final ReplicationSetReplicationRegionArgs Empty = new ReplicationSetReplicationRegionArgs();
 
-    @InputImport(name="regionConfiguration")
+    @Import(name="regionConfiguration")
       private final @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
 
     public Output<ReplicationSetRegionConfigurationArgs> getRegionConfiguration() {
         return this.regionConfiguration == null ? Output.empty() : this.regionConfiguration;
     }
 
-    @InputImport(name="regionName")
+    @Import(name="regionName")
       private final @Nullable Output<String> regionName;
 
     public Output<String> getRegionName() {

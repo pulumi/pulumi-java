@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType;
 import io.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,35 +16,35 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
 
     public static final EC2FleetTargetCapacitySpecificationRequestArgs Empty = new EC2FleetTargetCapacitySpecificationRequestArgs();
 
-    @InputImport(name="defaultTargetCapacityType")
+    @Import(name="defaultTargetCapacityType")
       private final @Nullable Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType;
 
     public Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {
         return this.defaultTargetCapacityType == null ? Output.empty() : this.defaultTargetCapacityType;
     }
 
-    @InputImport(name="onDemandTargetCapacity")
+    @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
     public Output<Integer> getOnDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Output.empty() : this.onDemandTargetCapacity;
     }
 
-    @InputImport(name="spotTargetCapacity")
+    @Import(name="spotTargetCapacity")
       private final @Nullable Output<Integer> spotTargetCapacity;
 
     public Output<Integer> getSpotTargetCapacity() {
         return this.spotTargetCapacity == null ? Output.empty() : this.spotTargetCapacity;
     }
 
-    @InputImport(name="targetCapacityUnitType")
+    @Import(name="targetCapacityUnitType")
       private final @Nullable Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType;
 
     public Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> getTargetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Output.empty() : this.targetCapacityUnitType;
     }
 
-    @InputImport(name="totalTargetCapacity", required=true)
+    @Import(name="totalTargetCapacity", required=true)
       private final Output<Integer> totalTargetCapacity;
 
     public Output<Integer> getTotalTargetCapacity() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskSetNetworkConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskSetScaleArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskSetServiceRegistryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    @InputImport(name="cluster", required=true)
+    @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -35,7 +35,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -46,21 +46,21 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
      * 
      */
-    @InputImport(name="launchType")
+    @Import(name="launchType")
       private final @Nullable Output<TaskSetLaunchType> launchType;
 
     public Output<TaskSetLaunchType> getLaunchType() {
         return this.launchType == null ? Output.empty() : this.launchType;
     }
 
-    @InputImport(name="loadBalancers")
+    @Import(name="loadBalancers")
       private final @Nullable Output<List<TaskSetLoadBalancerArgs>> loadBalancers;
 
     public Output<List<TaskSetLoadBalancerArgs>> getLoadBalancers() {
         return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
     }
 
-    @InputImport(name="networkConfiguration")
+    @Import(name="networkConfiguration")
       private final @Nullable Output<TaskSetNetworkConfigurationArgs> networkConfiguration;
 
     public Output<TaskSetNetworkConfigurationArgs> getNetworkConfiguration() {
@@ -71,7 +71,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
      * 
      */
-    @InputImport(name="platformVersion")
+    @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
     public Output<String> getPlatformVersion() {
@@ -82,7 +82,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<TaskSetScaleArgs> scale;
 
     public Output<TaskSetScaleArgs> getScale() {
@@ -93,7 +93,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {
@@ -104,7 +104,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
      * 
      */
-    @InputImport(name="serviceRegistries")
+    @Import(name="serviceRegistries")
       private final @Nullable Output<List<TaskSetServiceRegistryArgs>> serviceRegistries;
 
     public Output<List<TaskSetServiceRegistryArgs>> getServiceRegistries() {
@@ -115,7 +115,7 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
      * The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.
      * 
      */
-    @InputImport(name="taskDefinition", required=true)
+    @Import(name="taskDefinition", required=true)
       private final Output<String> taskDefinition;
 
     public Output<String> getTaskDefinition() {

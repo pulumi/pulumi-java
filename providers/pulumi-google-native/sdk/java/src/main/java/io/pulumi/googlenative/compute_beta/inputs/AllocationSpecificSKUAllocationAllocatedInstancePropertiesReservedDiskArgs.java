@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * Specifies the size of the disk in base-2 GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
@@ -30,7 +30,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
      * 
      */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
 
     public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> get$interface() {

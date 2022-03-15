@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.AbortInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.CloudSQLInstanceInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.DeliverInfoResponse;
@@ -23,7 +23,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StepResponse {
     /**
      * Display information of the final state "abort" and reason.
@@ -121,27 +121,27 @@ public final class StepResponse {
      */
     private final VpnTunnelInfoResponse vpnTunnel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StepResponse(
-        @OutputCustomType.Parameter("abort") AbortInfoResponse abort,
-        @OutputCustomType.Parameter("causesDrop") Boolean causesDrop,
-        @OutputCustomType.Parameter("cloudSqlInstance") CloudSQLInstanceInfoResponse cloudSqlInstance,
-        @OutputCustomType.Parameter("deliver") DeliverInfoResponse deliver,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("drop") DropInfoResponse drop,
-        @OutputCustomType.Parameter("endpoint") EndpointInfoResponse endpoint,
-        @OutputCustomType.Parameter("firewall") FirewallInfoResponse firewall,
-        @OutputCustomType.Parameter("forward") ForwardInfoResponse forward,
-        @OutputCustomType.Parameter("forwardingRule") ForwardingRuleInfoResponse forwardingRule,
-        @OutputCustomType.Parameter("gkeMaster") GKEMasterInfoResponse gkeMaster,
-        @OutputCustomType.Parameter("instance") InstanceInfoResponse instance,
-        @OutputCustomType.Parameter("loadBalancer") LoadBalancerInfoResponse loadBalancer,
-        @OutputCustomType.Parameter("network") NetworkInfoResponse network,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("route") RouteInfoResponse route,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("vpnGateway") VpnGatewayInfoResponse vpnGateway,
-        @OutputCustomType.Parameter("vpnTunnel") VpnTunnelInfoResponse vpnTunnel) {
+        @CustomType.Parameter("abort") AbortInfoResponse abort,
+        @CustomType.Parameter("causesDrop") Boolean causesDrop,
+        @CustomType.Parameter("cloudSqlInstance") CloudSQLInstanceInfoResponse cloudSqlInstance,
+        @CustomType.Parameter("deliver") DeliverInfoResponse deliver,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("drop") DropInfoResponse drop,
+        @CustomType.Parameter("endpoint") EndpointInfoResponse endpoint,
+        @CustomType.Parameter("firewall") FirewallInfoResponse firewall,
+        @CustomType.Parameter("forward") ForwardInfoResponse forward,
+        @CustomType.Parameter("forwardingRule") ForwardingRuleInfoResponse forwardingRule,
+        @CustomType.Parameter("gkeMaster") GKEMasterInfoResponse gkeMaster,
+        @CustomType.Parameter("instance") InstanceInfoResponse instance,
+        @CustomType.Parameter("loadBalancer") LoadBalancerInfoResponse loadBalancer,
+        @CustomType.Parameter("network") NetworkInfoResponse network,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("route") RouteInfoResponse route,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("vpnGateway") VpnGatewayInfoResponse vpnGateway,
+        @CustomType.Parameter("vpnTunnel") VpnTunnelInfoResponse vpnTunnel) {
         this.abort = abort;
         this.causesDrop = causesDrop;
         this.cloudSqlInstance = cloudSqlInstance;

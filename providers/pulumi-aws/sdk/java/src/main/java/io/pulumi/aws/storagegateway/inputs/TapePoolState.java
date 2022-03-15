@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * Volume Amazon Resource Name (ARN), e.g. `aws_storagegateway_tape_pool.example arn:aws:storagegateway:us-east-1:123456789012:tapepool/pool-12345678`.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * The name of the new custom tape pool.
      * 
      */
-    @InputImport(name="poolName")
+    @Import(name="poolName")
       private final @Nullable Output<String> poolName;
 
     public Output<String> getPoolName() {
@@ -42,7 +42,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * Tape retention lock time is set in days. Tape retention lock can be enabled for up to 100 years (36,500 days). Default value is 0.
      * 
      */
-    @InputImport(name="retentionLockTimeInDays")
+    @Import(name="retentionLockTimeInDays")
       private final @Nullable Output<Integer> retentionLockTimeInDays;
 
     public Output<Integer> getRetentionLockTimeInDays() {
@@ -53,7 +53,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * Tape retention lock can be configured in two modes. When configured in governance mode, AWS accounts with specific IAM permissions are authorized to remove the tape retention lock from archived virtual tapes. When configured in compliance mode, the tape retention lock cannot be removed by any user, including the root AWS account. Possible values are `COMPLIANCE`, `GOVERNANCE`, and `NONE`. Default value is `NONE`.
      * 
      */
-    @InputImport(name="retentionLockType")
+    @Import(name="retentionLockType")
       private final @Nullable Output<String> retentionLockType;
 
     public Output<String> getRetentionLockType() {
@@ -64,7 +64,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * The storage class that is associated with the new custom pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class that corresponds to the pool. Possible values are `DEEP_ARCHIVE` or `GLACIER`.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -75,7 +75,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

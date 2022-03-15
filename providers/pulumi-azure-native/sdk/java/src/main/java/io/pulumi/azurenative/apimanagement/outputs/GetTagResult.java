@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTagResult {
     /**
      * Tag name.
@@ -30,12 +30,12 @@ public final class GetTagResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTagResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

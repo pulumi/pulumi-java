@@ -4,14 +4,14 @@
 package io.pulumi.aws.mwaa.outputs;
 
 import io.pulumi.aws.mwaa.outputs.EnvironmentLastUpdatedError;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentLastUpdated {
     /**
      * The Created At date of the MWAA Environment
@@ -26,11 +26,11 @@ public final class EnvironmentLastUpdated {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentLastUpdated(
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("errors") @Nullable List<EnvironmentLastUpdatedError> errors,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("errors") @Nullable List<EnvironmentLastUpdatedError> errors,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.createdAt = createdAt;
         this.errors = errors;
         this.status = status;

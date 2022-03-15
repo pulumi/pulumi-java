@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.JobLoadDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobLoadDestinationTable;
 import io.pulumi.gcp.bigquery.outputs.JobLoadTimePartitioning;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobLoad {
     /**
      * Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
@@ -168,27 +168,27 @@ public final class JobLoad {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobLoad(
-        @OutputCustomType.Parameter("allowJaggedRows") @Nullable Boolean allowJaggedRows,
-        @OutputCustomType.Parameter("allowQuotedNewlines") @Nullable Boolean allowQuotedNewlines,
-        @OutputCustomType.Parameter("autodetect") @Nullable Boolean autodetect,
-        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
-        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobLoadDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        @OutputCustomType.Parameter("destinationTable") JobLoadDestinationTable destinationTable,
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
-        @OutputCustomType.Parameter("ignoreUnknownValues") @Nullable Boolean ignoreUnknownValues,
-        @OutputCustomType.Parameter("maxBadRecords") @Nullable Integer maxBadRecords,
-        @OutputCustomType.Parameter("nullMarker") @Nullable String nullMarker,
-        @OutputCustomType.Parameter("projectionFields") @Nullable List<String> projectionFields,
-        @OutputCustomType.Parameter("quote") @Nullable String quote,
-        @OutputCustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
-        @OutputCustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows,
-        @OutputCustomType.Parameter("sourceFormat") @Nullable String sourceFormat,
-        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris,
-        @OutputCustomType.Parameter("timePartitioning") @Nullable JobLoadTimePartitioning timePartitioning,
-        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
+        @CustomType.Parameter("allowJaggedRows") @Nullable Boolean allowJaggedRows,
+        @CustomType.Parameter("allowQuotedNewlines") @Nullable Boolean allowQuotedNewlines,
+        @CustomType.Parameter("autodetect") @Nullable Boolean autodetect,
+        @CustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @CustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobLoadDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @CustomType.Parameter("destinationTable") JobLoadDestinationTable destinationTable,
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @CustomType.Parameter("ignoreUnknownValues") @Nullable Boolean ignoreUnknownValues,
+        @CustomType.Parameter("maxBadRecords") @Nullable Integer maxBadRecords,
+        @CustomType.Parameter("nullMarker") @Nullable String nullMarker,
+        @CustomType.Parameter("projectionFields") @Nullable List<String> projectionFields,
+        @CustomType.Parameter("quote") @Nullable String quote,
+        @CustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
+        @CustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows,
+        @CustomType.Parameter("sourceFormat") @Nullable String sourceFormat,
+        @CustomType.Parameter("sourceUris") List<String> sourceUris,
+        @CustomType.Parameter("timePartitioning") @Nullable JobLoadTimePartitioning timePartitioning,
+        @CustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.autodetect = autodetect;

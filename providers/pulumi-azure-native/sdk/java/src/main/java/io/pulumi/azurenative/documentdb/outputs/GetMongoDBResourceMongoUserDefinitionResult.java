@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMongoDBResourceMongoUserDefinitionResult {
     /**
      * A custom definition for the USer Definition.
@@ -59,17 +59,17 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMongoDBResourceMongoUserDefinitionResult(
-        @OutputCustomType.Parameter("customData") @Nullable String customData,
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("mechanisms") @Nullable String mechanisms,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("customData") @Nullable String customData,
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("mechanisms") @Nullable String mechanisms,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.customData = customData;
         this.databaseName = databaseName;
         this.id = id;

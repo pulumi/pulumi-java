@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.OrganizationSecurityPolicyArgs;
@@ -42,7 +42,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * A textual description for the organization security policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -56,7 +56,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * A textual name of the security policy.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -70,7 +70,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -85,7 +85,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Format: organizations/{organization_id} or folders/{folder_id}
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -100,7 +100,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**
@@ -118,7 +118,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Possible values are `FIREWALL`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

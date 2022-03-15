@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi
      * The ID of the management group.
      * 
      */
-    @InputImport(name="managementGroupId", required=true)
+    @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
 
     public String getManagementGroupId() {
@@ -27,7 +27,7 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends io.pulumi
      * The name of the policy set definition to get.
      * 
      */
-    @InputImport(name="policySetDefinitionName", required=true)
+    @Import(name="policySetDefinitionName", required=true)
       private final String policySetDefinitionName;
 
     public String getPolicySetDefinitionName() {

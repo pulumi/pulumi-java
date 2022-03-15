@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduleResult {
     /**
      * Schedule cron
@@ -19,10 +19,10 @@ public final class GetScheduleResult {
     private final @Nullable String cronExpression;
     private final @Nullable List<String> jobNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduleResult(
-        @OutputCustomType.Parameter("cronExpression") @Nullable String cronExpression,
-        @OutputCustomType.Parameter("jobNames") @Nullable List<String> jobNames) {
+        @CustomType.Parameter("cronExpression") @Nullable String cronExpression,
+        @CustomType.Parameter("jobNames") @Nullable List<String> jobNames) {
         this.cronExpression = cronExpression;
         this.jobNames = jobNames;
     }

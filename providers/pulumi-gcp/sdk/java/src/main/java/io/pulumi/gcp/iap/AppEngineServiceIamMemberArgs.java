@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -31,14 +31,14 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<AppEngineServiceIamMemberConditionArgs> condition;
 
     public Output<AppEngineServiceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -50,7 +50,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -63,7 +63,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -74,7 +74,7 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

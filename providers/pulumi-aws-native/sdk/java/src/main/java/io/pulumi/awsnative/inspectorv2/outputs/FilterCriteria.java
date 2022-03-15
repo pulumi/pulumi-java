@@ -9,12 +9,12 @@ import io.pulumi.awsnative.inspectorv2.outputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterPackageFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterPortRangeFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterStringFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterCriteria {
     private final @Nullable List<FilterStringFilter> awsAccountId;
     private final @Nullable List<FilterStringFilter> componentId;
@@ -48,39 +48,39 @@ public final class FilterCriteria {
     private final @Nullable List<FilterStringFilter> vulnerabilitySource;
     private final @Nullable List<FilterPackageFilter> vulnerablePackages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterCriteria(
-        @OutputCustomType.Parameter("awsAccountId") @Nullable List<FilterStringFilter> awsAccountId,
-        @OutputCustomType.Parameter("componentId") @Nullable List<FilterStringFilter> componentId,
-        @OutputCustomType.Parameter("componentType") @Nullable List<FilterStringFilter> componentType,
-        @OutputCustomType.Parameter("ec2InstanceImageId") @Nullable List<FilterStringFilter> ec2InstanceImageId,
-        @OutputCustomType.Parameter("ec2InstanceSubnetId") @Nullable List<FilterStringFilter> ec2InstanceSubnetId,
-        @OutputCustomType.Parameter("ec2InstanceVpcId") @Nullable List<FilterStringFilter> ec2InstanceVpcId,
-        @OutputCustomType.Parameter("ecrImageArchitecture") @Nullable List<FilterStringFilter> ecrImageArchitecture,
-        @OutputCustomType.Parameter("ecrImageHash") @Nullable List<FilterStringFilter> ecrImageHash,
-        @OutputCustomType.Parameter("ecrImagePushedAt") @Nullable List<FilterDateFilter> ecrImagePushedAt,
-        @OutputCustomType.Parameter("ecrImageRegistry") @Nullable List<FilterStringFilter> ecrImageRegistry,
-        @OutputCustomType.Parameter("ecrImageRepositoryName") @Nullable List<FilterStringFilter> ecrImageRepositoryName,
-        @OutputCustomType.Parameter("ecrImageTags") @Nullable List<FilterStringFilter> ecrImageTags,
-        @OutputCustomType.Parameter("findingArn") @Nullable List<FilterStringFilter> findingArn,
-        @OutputCustomType.Parameter("findingStatus") @Nullable List<FilterStringFilter> findingStatus,
-        @OutputCustomType.Parameter("findingType") @Nullable List<FilterStringFilter> findingType,
-        @OutputCustomType.Parameter("firstObservedAt") @Nullable List<FilterDateFilter> firstObservedAt,
-        @OutputCustomType.Parameter("inspectorScore") @Nullable List<FilterNumberFilter> inspectorScore,
-        @OutputCustomType.Parameter("lastObservedAt") @Nullable List<FilterDateFilter> lastObservedAt,
-        @OutputCustomType.Parameter("networkProtocol") @Nullable List<FilterStringFilter> networkProtocol,
-        @OutputCustomType.Parameter("portRange") @Nullable List<FilterPortRangeFilter> portRange,
-        @OutputCustomType.Parameter("relatedVulnerabilities") @Nullable List<FilterStringFilter> relatedVulnerabilities,
-        @OutputCustomType.Parameter("resourceId") @Nullable List<FilterStringFilter> resourceId,
-        @OutputCustomType.Parameter("resourceTags") @Nullable List<FilterMapFilter> resourceTags,
-        @OutputCustomType.Parameter("resourceType") @Nullable List<FilterStringFilter> resourceType,
-        @OutputCustomType.Parameter("severity") @Nullable List<FilterStringFilter> severity,
-        @OutputCustomType.Parameter("title") @Nullable List<FilterStringFilter> title,
-        @OutputCustomType.Parameter("updatedAt") @Nullable List<FilterDateFilter> updatedAt,
-        @OutputCustomType.Parameter("vendorSeverity") @Nullable List<FilterStringFilter> vendorSeverity,
-        @OutputCustomType.Parameter("vulnerabilityId") @Nullable List<FilterStringFilter> vulnerabilityId,
-        @OutputCustomType.Parameter("vulnerabilitySource") @Nullable List<FilterStringFilter> vulnerabilitySource,
-        @OutputCustomType.Parameter("vulnerablePackages") @Nullable List<FilterPackageFilter> vulnerablePackages) {
+        @CustomType.Parameter("awsAccountId") @Nullable List<FilterStringFilter> awsAccountId,
+        @CustomType.Parameter("componentId") @Nullable List<FilterStringFilter> componentId,
+        @CustomType.Parameter("componentType") @Nullable List<FilterStringFilter> componentType,
+        @CustomType.Parameter("ec2InstanceImageId") @Nullable List<FilterStringFilter> ec2InstanceImageId,
+        @CustomType.Parameter("ec2InstanceSubnetId") @Nullable List<FilterStringFilter> ec2InstanceSubnetId,
+        @CustomType.Parameter("ec2InstanceVpcId") @Nullable List<FilterStringFilter> ec2InstanceVpcId,
+        @CustomType.Parameter("ecrImageArchitecture") @Nullable List<FilterStringFilter> ecrImageArchitecture,
+        @CustomType.Parameter("ecrImageHash") @Nullable List<FilterStringFilter> ecrImageHash,
+        @CustomType.Parameter("ecrImagePushedAt") @Nullable List<FilterDateFilter> ecrImagePushedAt,
+        @CustomType.Parameter("ecrImageRegistry") @Nullable List<FilterStringFilter> ecrImageRegistry,
+        @CustomType.Parameter("ecrImageRepositoryName") @Nullable List<FilterStringFilter> ecrImageRepositoryName,
+        @CustomType.Parameter("ecrImageTags") @Nullable List<FilterStringFilter> ecrImageTags,
+        @CustomType.Parameter("findingArn") @Nullable List<FilterStringFilter> findingArn,
+        @CustomType.Parameter("findingStatus") @Nullable List<FilterStringFilter> findingStatus,
+        @CustomType.Parameter("findingType") @Nullable List<FilterStringFilter> findingType,
+        @CustomType.Parameter("firstObservedAt") @Nullable List<FilterDateFilter> firstObservedAt,
+        @CustomType.Parameter("inspectorScore") @Nullable List<FilterNumberFilter> inspectorScore,
+        @CustomType.Parameter("lastObservedAt") @Nullable List<FilterDateFilter> lastObservedAt,
+        @CustomType.Parameter("networkProtocol") @Nullable List<FilterStringFilter> networkProtocol,
+        @CustomType.Parameter("portRange") @Nullable List<FilterPortRangeFilter> portRange,
+        @CustomType.Parameter("relatedVulnerabilities") @Nullable List<FilterStringFilter> relatedVulnerabilities,
+        @CustomType.Parameter("resourceId") @Nullable List<FilterStringFilter> resourceId,
+        @CustomType.Parameter("resourceTags") @Nullable List<FilterMapFilter> resourceTags,
+        @CustomType.Parameter("resourceType") @Nullable List<FilterStringFilter> resourceType,
+        @CustomType.Parameter("severity") @Nullable List<FilterStringFilter> severity,
+        @CustomType.Parameter("title") @Nullable List<FilterStringFilter> title,
+        @CustomType.Parameter("updatedAt") @Nullable List<FilterDateFilter> updatedAt,
+        @CustomType.Parameter("vendorSeverity") @Nullable List<FilterStringFilter> vendorSeverity,
+        @CustomType.Parameter("vulnerabilityId") @Nullable List<FilterStringFilter> vulnerabilityId,
+        @CustomType.Parameter("vulnerabilitySource") @Nullable List<FilterStringFilter> vulnerabilitySource,
+        @CustomType.Parameter("vulnerablePackages") @Nullable List<FilterPackageFilter> vulnerablePackages) {
         this.awsAccountId = awsAccountId;
         this.componentId = componentId;
         this.componentType = componentType;

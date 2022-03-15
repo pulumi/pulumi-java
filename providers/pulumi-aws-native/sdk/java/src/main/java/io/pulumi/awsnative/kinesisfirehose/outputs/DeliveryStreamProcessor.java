@@ -5,20 +5,20 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamProcessorType;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessorParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamProcessor {
     private final @Nullable List<DeliveryStreamProcessorParameter> parameters;
     private final DeliveryStreamProcessorType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamProcessor(
-        @OutputCustomType.Parameter("parameters") @Nullable List<DeliveryStreamProcessorParameter> parameters,
-        @OutputCustomType.Parameter("type") DeliveryStreamProcessorType type) {
+        @CustomType.Parameter("parameters") @Nullable List<DeliveryStreamProcessorParameter> parameters,
+        @CustomType.Parameter("type") DeliveryStreamProcessorType type) {
         this.parameters = parameters;
         this.type = type;
     }

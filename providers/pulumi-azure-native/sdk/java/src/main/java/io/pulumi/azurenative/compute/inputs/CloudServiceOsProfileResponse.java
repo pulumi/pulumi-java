@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultSecretGroupResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CloudServiceOsProfileResponse extends io.pulumi.resources.Inv
      * Specifies set of certificates that should be installed onto the role instances.
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
     public List<CloudServiceVaultSecretGroupResponse> getSecrets() {

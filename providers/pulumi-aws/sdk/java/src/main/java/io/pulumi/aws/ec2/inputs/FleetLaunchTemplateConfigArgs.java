@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigLaunchTemplateSpecificationArgs;
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigOverrideArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FleetLaunchTemplateConfigArgs extends io.pulumi.resources.Res
      * Nested argument containing EC2 Launch Template to use. Defined below.
      * 
      */
-    @InputImport(name="launchTemplateSpecification", required=true)
+    @Import(name="launchTemplateSpecification", required=true)
       private final Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
     public Output<FleetLaunchTemplateConfigLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
@@ -31,7 +31,7 @@ public final class FleetLaunchTemplateConfigArgs extends io.pulumi.resources.Res
      * Nested argument(s) containing parameters to override the same parameters in the Launch Template. Defined below.
      * 
      */
-    @InputImport(name="overrides")
+    @Import(name="overrides")
       private final @Nullable Output<List<FleetLaunchTemplateConfigOverrideArgs>> overrides;
 
     public Output<List<FleetLaunchTemplateConfigOverrideArgs>> getOverrides() {

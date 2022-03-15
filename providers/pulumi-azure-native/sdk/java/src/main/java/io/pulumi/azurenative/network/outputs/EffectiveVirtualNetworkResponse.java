@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EffectiveVirtualNetworkResponse {
     /**
      * Effective vnet Id.
@@ -27,11 +27,11 @@ public final class EffectiveVirtualNetworkResponse {
      */
     private final @Nullable String membershipType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EffectiveVirtualNetworkResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("membershipType") @Nullable String membershipType) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("membershipType") @Nullable String membershipType) {
         this.id = id;
         this.location = location;
         this.membershipType = membershipType;

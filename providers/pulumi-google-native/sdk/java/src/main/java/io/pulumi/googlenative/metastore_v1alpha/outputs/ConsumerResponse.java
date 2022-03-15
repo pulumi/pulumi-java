@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConsumerResponse {
     /**
      * The URI of the endpoint used to access the metastore service.
@@ -20,10 +20,10 @@ public final class ConsumerResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsumerResponse(
-        @OutputCustomType.Parameter("endpointUri") String endpointUri,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("endpointUri") String endpointUri,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.endpointUri = endpointUri;
         this.subnetwork = subnetwork;
     }

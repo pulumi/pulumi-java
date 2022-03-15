@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
      * Specifies whether AWS Config records configuration changes for every supported type of regional resource (which includes any new type that will become supported in the future). Conflicts with `resource_types`. Defaults to `true`.
      * 
      */
-    @InputImport(name="allSupported")
+    @Import(name="allSupported")
       private final @Nullable Output<Boolean> allSupported;
 
     public Output<Boolean> getAllSupported() {
@@ -31,7 +31,7 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
      * Specifies whether AWS Config includes all supported types of *global resources* with the resources that it records. Requires `all_supported = true`. Conflicts with `resource_types`.
      * 
      */
-    @InputImport(name="includeGlobalResourceTypes")
+    @Import(name="includeGlobalResourceTypes")
       private final @Nullable Output<Boolean> includeGlobalResourceTypes;
 
     public Output<Boolean> getIncludeGlobalResourceTypes() {
@@ -42,7 +42,7 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
      * A list that specifies the types of AWS resources for which AWS Config records configuration changes (for example, `AWS::EC2::Instance` or `AWS::CloudTrail::Trail`). See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types. In order to use this attribute, `all_supported` must be set to false.
      * 
      */
-    @InputImport(name="resourceTypes")
+    @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {

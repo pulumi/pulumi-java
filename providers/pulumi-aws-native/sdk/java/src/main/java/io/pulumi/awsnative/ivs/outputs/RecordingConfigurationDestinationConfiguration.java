@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationS3DestinationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecordingConfigurationDestinationConfiguration {
     private final RecordingConfigurationS3DestinationConfiguration s3;
 
-    @OutputCustomType.Constructor
-    private RecordingConfigurationDestinationConfiguration(@OutputCustomType.Parameter("s3") RecordingConfigurationS3DestinationConfiguration s3) {
+    @CustomType.Constructor
+    private RecordingConfigurationDestinationConfiguration(@CustomType.Parameter("s3") RecordingConfigurationS3DestinationConfiguration s3) {
         this.s3 = s3;
     }
 

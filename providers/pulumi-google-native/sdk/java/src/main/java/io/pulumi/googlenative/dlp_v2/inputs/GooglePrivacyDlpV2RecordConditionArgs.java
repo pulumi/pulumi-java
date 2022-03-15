@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
      * An expression.
      * 
      */
-    @InputImport(name="expressions")
+    @Import(name="expressions")
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
     public Output<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {

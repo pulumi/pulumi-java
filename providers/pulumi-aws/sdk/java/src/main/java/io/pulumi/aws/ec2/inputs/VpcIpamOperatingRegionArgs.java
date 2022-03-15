@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VpcIpamOperatingRegionArgs extends io.pulumi.resources.Resour
      * The name of the Region you want to add to the IPAM.
      * 
      */
-    @InputImport(name="regionName", required=true)
+    @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
     public Output<String> getRegionName() {

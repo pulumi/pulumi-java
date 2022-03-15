@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
 
     public static final JobTemplateRateIncreaseCriteriaArgs Empty = new JobTemplateRateIncreaseCriteriaArgs();
 
-    @InputImport(name="numberOfNotifiedThings")
+    @Import(name="numberOfNotifiedThings")
       private final @Nullable Output<Integer> numberOfNotifiedThings;
 
     public Output<Integer> getNumberOfNotifiedThings() {
         return this.numberOfNotifiedThings == null ? Output.empty() : this.numberOfNotifiedThings;
     }
 
-    @InputImport(name="numberOfSucceededThings")
+    @Import(name="numberOfSucceededThings")
       private final @Nullable Output<Integer> numberOfSucceededThings;
 
     public Output<Integer> getNumberOfSucceededThings() {

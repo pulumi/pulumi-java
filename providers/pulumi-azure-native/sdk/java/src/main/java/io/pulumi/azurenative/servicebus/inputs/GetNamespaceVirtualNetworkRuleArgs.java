@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -27,7 +27,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends io.pulumi.resource
      * The Virtual Network Rule name.
      * 
      */
-    @InputImport(name="virtualNetworkRuleName", required=true)
+    @Import(name="virtualNetworkRuleName", required=true)
       private final String virtualNetworkRuleName;
 
     public String getVirtualNetworkRuleName() {

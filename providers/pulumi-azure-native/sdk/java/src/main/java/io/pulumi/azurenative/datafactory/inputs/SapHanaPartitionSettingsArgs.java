@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionColumnName")
+    @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
 
     public Output<Object> getPartitionColumnName() {

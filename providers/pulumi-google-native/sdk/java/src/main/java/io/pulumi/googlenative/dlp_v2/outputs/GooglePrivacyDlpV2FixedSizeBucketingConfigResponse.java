@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
     /**
      * Size of each bucket (except for minimum and maximum buckets). So if `lower_bound` = 10, `upper_bound` = 89, and `bucket_size` = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89+. Precision up to 2 decimals works.
@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse upperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(
-        @OutputCustomType.Parameter("bucketSize") Double bucketSize,
-        @OutputCustomType.Parameter("lowerBound") GooglePrivacyDlpV2ValueResponse lowerBound,
-        @OutputCustomType.Parameter("upperBound") GooglePrivacyDlpV2ValueResponse upperBound) {
+        @CustomType.Parameter("bucketSize") Double bucketSize,
+        @CustomType.Parameter("lowerBound") GooglePrivacyDlpV2ValueResponse lowerBound,
+        @CustomType.Parameter("upperBound") GooglePrivacyDlpV2ValueResponse upperBound) {
         this.bucketSize = bucketSize;
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;

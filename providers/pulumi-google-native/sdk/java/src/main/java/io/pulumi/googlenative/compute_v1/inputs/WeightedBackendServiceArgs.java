@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.HttpHeaderActionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * The full or partial URL to the default BackendService resource. Before forwarding the request to backendService, the load balancer applies any relevant headerActions specified as part of this backendServiceWeight.
      * 
      */
-    @InputImport(name="backendService")
+    @Import(name="backendService")
       private final @Nullable Output<String> backendService;
 
     public Output<String> getBackendService() {
@@ -35,7 +35,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. headerAction is not supported for load balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
     public Output<HttpHeaderActionArgs> getHeaderAction() {
@@ -46,7 +46,7 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
      * Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all weightedBackendService weights in routeAction) . The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backend service, subsequent requests are sent to the same backend service as determined by the backend service's session affinity policy. The value must be from 0 to 1000.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

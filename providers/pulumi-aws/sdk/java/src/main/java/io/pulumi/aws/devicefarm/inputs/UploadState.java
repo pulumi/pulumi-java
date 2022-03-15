@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name of this upload.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The upload's category.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
@@ -40,7 +40,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The upload's content type (for example, application/octet-stream).
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -51,7 +51,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The upload's metadata. For example, for Android, this contains information that is parsed from the manifest and is displayed in the AWS Device Farm console after the associated app is uploaded.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<String> metadata;
 
     public Output<String> getMetadata() {
@@ -62,7 +62,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -73,7 +73,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the project for the upload.
      * 
      */
-    @InputImport(name="projectArn")
+    @Import(name="projectArn")
       private final @Nullable Output<String> projectArn;
 
     public Output<String> getProjectArn() {
@@ -84,7 +84,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -95,7 +95,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
      * The presigned Amazon S3 URL that was used to store a file using a PUT request.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

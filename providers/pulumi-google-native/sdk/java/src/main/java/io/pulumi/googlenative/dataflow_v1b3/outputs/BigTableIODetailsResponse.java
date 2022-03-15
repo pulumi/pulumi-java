@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigTableIODetailsResponse {
     /**
      * InstanceId accessed in the connection.
@@ -25,11 +25,11 @@ public final class BigTableIODetailsResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BigTableIODetailsResponse(
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("tableId") String tableId) {
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("tableId") String tableId) {
         this.instanceId = instanceId;
         this.project = project;
         this.tableId = tableId;

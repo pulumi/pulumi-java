@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      * Actions required for a private endpoint connection.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
@@ -29,7 +29,7 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      * The description for the current state of a private endpoint connection.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -40,7 +40,7 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      * The status of a private endpoint connection.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

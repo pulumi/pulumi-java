@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
      * Specify the $expand query. Example: 'properties($select=maxUsersInLab)'
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the lab Account.
      * 
      */
-    @InputImport(name="labAccountName", required=true)
+    @Import(name="labAccountName", required=true)
       private final String labAccountName;
 
     public String getLabAccountName() {
@@ -40,7 +40,7 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final String labName;
 
     public String getLabName() {
@@ -51,7 +51,7 @@ public final class GetLabArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

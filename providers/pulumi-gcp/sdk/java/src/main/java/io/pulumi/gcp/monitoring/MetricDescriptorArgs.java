@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.MetricDescriptorLabelArgs;
 import io.pulumi.gcp.monitoring.inputs.MetricDescriptorMetadataArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * A human-readable description for the label.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * A concise name for the metric, which can be displayed in user interfaces. Use sentence case without an ending period, for example "Request count".
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<MetricDescriptorLabelArgs>> labels;
 
     public Output<List<MetricDescriptorLabelArgs>> getLabels() {
@@ -56,7 +56,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `LAUNCH_STAGE_UNSPECIFIED`, `UNIMPLEMENTED`, `PRELAUNCH`, `EARLY_ACCESS`, `ALPHA`, `BETA`, `GA`, and `DEPRECATED`.
      * 
      */
-    @InputImport(name="launchStage")
+    @Import(name="launchStage")
       private final @Nullable Output<String> launchStage;
 
     public Output<String> getLaunchStage() {
@@ -68,7 +68,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<MetricDescriptorMetadataArgs> metadata;
 
     public Output<MetricDescriptorMetadataArgs> getMetadata() {
@@ -80,7 +80,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `METRIC_KIND_UNSPECIFIED`, `GAUGE`, `DELTA`, and `CUMULATIVE`.
      * 
      */
-    @InputImport(name="metricKind", required=true)
+    @Import(name="metricKind", required=true)
       private final Output<String> metricKind;
 
     public Output<String> getMetricKind() {
@@ -92,7 +92,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -103,7 +103,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * The metric type, including its DNS name prefix. The type is not URL-encoded. All service defined metrics must be prefixed with the service name, in the format of {service name}/{relative metric name}, such as cloudsql.googleapis.com/database/cpu/utilization. The relative metric name must have only upper and lower-case letters, digits, '/' and underscores '_' are allowed. Additionally, the maximum number of characters allowed for the relative_metric_name is 100. All user-defined metric types have the DNS name custom.googleapis.com, external.googleapis.com, or logging.googleapis.com/user/.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -130,7 +130,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors).
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
@@ -143,7 +143,7 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `STRING`, `BOOL`, and `INT64`.
      * 
      */
-    @InputImport(name="valueType", required=true)
+    @Import(name="valueType", required=true)
       private final Output<String> valueType;
 
     public Output<String> getValueType() {

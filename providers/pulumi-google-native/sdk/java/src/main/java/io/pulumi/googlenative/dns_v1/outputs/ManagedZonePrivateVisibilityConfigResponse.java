@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZonePrivateVisibilityConfigNetworkResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZonePrivateVisibilityConfigResponse {
     private final String kind;
     /**
@@ -18,10 +18,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
      */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZonePrivateVisibilityConfigResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
         this.kind = kind;
         this.networks = networks;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResolverPipelineConfigGetArgs extends io.pulumi.resources.Res
      * The list of Function ID.
      * 
      */
-    @InputImport(name="functions")
+    @Import(name="functions")
       private final @Nullable Output<List<String>> functions;
 
     public Output<List<String>> getFunctions() {

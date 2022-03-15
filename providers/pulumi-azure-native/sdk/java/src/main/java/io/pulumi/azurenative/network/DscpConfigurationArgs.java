@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.QosIpRangeArgs;
 import io.pulumi.azurenative.network.inputs.QosPortRangeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Destination IP ranges.
      * 
      */
-    @InputImport(name="destinationIpRanges")
+    @Import(name="destinationIpRanges")
       private final @Nullable Output<List<QosIpRangeArgs>> destinationIpRanges;
 
     public Output<List<QosIpRangeArgs>> getDestinationIpRanges() {
@@ -36,7 +36,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Destination port ranges.
      * 
      */
-    @InputImport(name="destinationPortRanges")
+    @Import(name="destinationPortRanges")
       private final @Nullable Output<List<QosPortRangeArgs>> destinationPortRanges;
 
     public Output<List<QosPortRangeArgs>> getDestinationPortRanges() {
@@ -47,7 +47,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource.
      * 
      */
-    @InputImport(name="dscpConfigurationName")
+    @Import(name="dscpConfigurationName")
       private final @Nullable Output<String> dscpConfigurationName;
 
     public Output<String> getDscpConfigurationName() {
@@ -58,7 +58,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -69,7 +69,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -80,7 +80,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * List of markings to be used in the configuration.
      * 
      */
-    @InputImport(name="markings")
+    @Import(name="markings")
       private final @Nullable Output<List<Integer>> markings;
 
     public Output<List<Integer>> getMarkings() {
@@ -91,7 +91,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * RNM supported protocol types.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,ProtocolType>> protocol;
 
     public Output<Either<String,ProtocolType>> getProtocol() {
@@ -102,7 +102,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -113,7 +113,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Source IP ranges.
      * 
      */
-    @InputImport(name="sourceIpRanges")
+    @Import(name="sourceIpRanges")
       private final @Nullable Output<List<QosIpRangeArgs>> sourceIpRanges;
 
     public Output<List<QosIpRangeArgs>> getSourceIpRanges() {
@@ -124,7 +124,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Sources port ranges.
      * 
      */
-    @InputImport(name="sourcePortRanges")
+    @Import(name="sourcePortRanges")
       private final @Nullable Output<List<QosPortRangeArgs>> sourcePortRanges;
 
     public Output<List<QosPortRangeArgs>> getSourcePortRanges() {
@@ -135,7 +135,7 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

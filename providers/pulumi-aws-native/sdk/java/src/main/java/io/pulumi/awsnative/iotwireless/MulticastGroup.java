@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.MulticastGroupArgs;
 import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupLoRaWAN;
 import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Multicast group arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Wireless device to associate. Only for update request.
      * 
      */
-    @OutputExport(name="associateWirelessDevice", type=String.class, parameters={})
+    @Export(name="associateWirelessDevice", type=String.class, parameters={})
     private Output</* @Nullable */ String> associateWirelessDevice;
 
     /**
@@ -52,7 +52,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Multicast group description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -66,7 +66,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Wireless device to disassociate. Only for update request.
      * 
      */
-    @OutputExport(name="disassociateWirelessDevice", type=String.class, parameters={})
+    @Export(name="disassociateWirelessDevice", type=String.class, parameters={})
     private Output</* @Nullable */ String> disassociateWirelessDevice;
 
     /**
@@ -80,7 +80,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Multicast group LoRaWAN
      * 
      */
-    @OutputExport(name="loRaWAN", type=MulticastGroupLoRaWAN.class, parameters={})
+    @Export(name="loRaWAN", type=MulticastGroupLoRaWAN.class, parameters={})
     private Output<MulticastGroupLoRaWAN> loRaWAN;
 
     /**
@@ -94,7 +94,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Name of Multicast group
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -108,7 +108,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * Multicast group status. Returned after successful read.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -122,7 +122,7 @@ public class MulticastGroup extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the Multicast group.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={MulticastGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={MulticastGroupTag.class})
     private Output</* @Nullable */ List<MulticastGroupTag>> tags;
 
     /**

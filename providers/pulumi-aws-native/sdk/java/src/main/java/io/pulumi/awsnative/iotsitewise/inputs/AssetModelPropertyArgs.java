@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * The data type of the asset model property.
      * 
      */
-    @InputImport(name="dataType", required=true)
+    @Import(name="dataType", required=true)
       private final Output<AssetModelDataType> dataType;
 
     public Output<AssetModelDataType> getDataType() {
@@ -36,7 +36,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * The data type of the structure for this property.
      * 
      */
-    @InputImport(name="dataTypeSpec")
+    @Import(name="dataTypeSpec")
       private final @Nullable Output<AssetModelDataTypeSpec> dataTypeSpec;
 
     public Output<AssetModelDataTypeSpec> getDataTypeSpec() {
@@ -47,7 +47,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * Customer provided ID for property.
      * 
      */
-    @InputImport(name="logicalId", required=true)
+    @Import(name="logicalId", required=true)
       private final Output<String> logicalId;
 
     public Output<String> getLogicalId() {
@@ -58,7 +58,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * The name of the asset model property.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * The property type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<AssetModelPropertyTypeArgs> type;
 
     public Output<AssetModelPropertyTypeArgs> getType() {
@@ -80,7 +80,7 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
      * The unit of the asset model property, such as Newtons or RPM.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

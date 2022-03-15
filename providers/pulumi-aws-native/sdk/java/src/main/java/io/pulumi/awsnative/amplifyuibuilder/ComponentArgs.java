@@ -11,7 +11,7 @@ import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,70 +22,70 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ComponentArgs Empty = new ComponentArgs();
 
-    @InputImport(name="bindingProperties")
+    @Import(name="bindingProperties")
       private final @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties;
 
     public Output<ComponentBindingPropertiesArgs> getBindingProperties() {
         return this.bindingProperties == null ? Output.empty() : this.bindingProperties;
     }
 
-    @InputImport(name="children")
+    @Import(name="children")
       private final @Nullable Output<List<ComponentChildArgs>> children;
 
     public Output<List<ComponentChildArgs>> getChildren() {
         return this.children == null ? Output.empty() : this.children;
     }
 
-    @InputImport(name="collectionProperties")
+    @Import(name="collectionProperties")
       private final @Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties;
 
     public Output<ComponentCollectionPropertiesArgs> getCollectionProperties() {
         return this.collectionProperties == null ? Output.empty() : this.collectionProperties;
     }
 
-    @InputImport(name="componentType")
+    @Import(name="componentType")
       private final @Nullable Output<String> componentType;
 
     public Output<String> getComponentType() {
         return this.componentType == null ? Output.empty() : this.componentType;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="overrides")
+    @Import(name="overrides")
       private final @Nullable Output<ComponentOverridesArgs> overrides;
 
     public Output<ComponentOverridesArgs> getOverrides() {
         return this.overrides == null ? Output.empty() : this.overrides;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ComponentPropertiesArgs> properties;
 
     public Output<ComponentPropertiesArgs> getProperties() {
         return this.properties == null ? Output.empty() : this.properties;
     }
 
-    @InputImport(name="sourceId")
+    @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
     public Output<String> getSourceId() {
         return this.sourceId == null ? Output.empty() : this.sourceId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<ComponentTagsArgs> tags;
 
     public Output<ComponentTagsArgs> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="variants")
+    @Import(name="variants")
       private final @Nullable Output<List<ComponentVariantArgs>> variants;
 
     public Output<List<ComponentVariantArgs>> getVariants() {

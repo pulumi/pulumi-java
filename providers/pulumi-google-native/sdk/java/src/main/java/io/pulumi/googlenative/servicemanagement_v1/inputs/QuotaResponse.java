@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MetricRuleResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.QuotaLimitResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class QuotaResponse extends io.pulumi.resources.InvokeArgs {
      * List of `QuotaLimit` definitions for the service.
      * 
      */
-    @InputImport(name="limits", required=true)
+    @Import(name="limits", required=true)
       private final List<QuotaLimitResponse> limits;
 
     public List<QuotaLimitResponse> getLimits() {
@@ -33,7 +33,7 @@ public final class QuotaResponse extends io.pulumi.resources.InvokeArgs {
      * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
      * 
      */
-    @InputImport(name="metricRules", required=true)
+    @Import(name="metricRules", required=true)
       private final List<MetricRuleResponse> metricRules;
 
     public List<MetricRuleResponse> getMetricRules() {

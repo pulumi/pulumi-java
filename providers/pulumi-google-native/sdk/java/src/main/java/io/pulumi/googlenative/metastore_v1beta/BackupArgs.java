@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
     public Output<String> getBackupId() {
@@ -25,14 +25,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the backup.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,28 +43,28 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
     public Output<String> getServiceId() {

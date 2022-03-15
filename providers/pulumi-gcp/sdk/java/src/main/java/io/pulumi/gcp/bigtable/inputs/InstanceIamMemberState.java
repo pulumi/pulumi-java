@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigtable.inputs.InstanceIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
 
     public static final InstanceIamMemberState Empty = new InstanceIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<InstanceIamMemberConditionGetArgs> condition;
 
     public Output<InstanceIamMemberConditionGetArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * (Computed) The etag of the instances's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -37,14 +37,14 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * The name or relative resource id of the instance to manage IAM policies for.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance == null ? Output.empty() : this.instance;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -56,7 +56,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * is not provided, a default will be supplied.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

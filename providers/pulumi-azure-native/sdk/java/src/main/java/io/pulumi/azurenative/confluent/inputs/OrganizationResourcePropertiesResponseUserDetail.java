@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confluent.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
      * Email address
      * 
      */
-    @InputImport(name="emailAddress")
+    @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
@@ -33,7 +33,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
      * First name
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable String firstName;
 
     public Optional<String> getFirstName() {
@@ -44,7 +44,7 @@ public final class OrganizationResourcePropertiesResponseUserDetail extends io.p
      * Last name
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable String lastName;
 
     public Optional<String> getLastName() {

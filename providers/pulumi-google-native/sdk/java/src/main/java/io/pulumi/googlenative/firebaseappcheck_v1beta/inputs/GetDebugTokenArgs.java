@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseappcheck_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetDebugTokenArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDebugTokenArgs Empty = new GetDebugTokenArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
-    @InputImport(name="debugTokenId", required=true)
+    @Import(name="debugTokenId", required=true)
       private final String debugTokenId;
 
     public String getDebugTokenId() {
         return this.debugTokenId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
      * a property bag of settings. This value can be empty.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -34,7 +34,7 @@ public final class WebhookNotificationArgs extends io.pulumi.resources.ResourceA
      * the service address to receive the notification.
      * 
      */
-    @InputImport(name="serviceUri")
+    @Import(name="serviceUri")
       private final @Nullable Output<String> serviceUri;
 
     public Output<String> getServiceUri() {

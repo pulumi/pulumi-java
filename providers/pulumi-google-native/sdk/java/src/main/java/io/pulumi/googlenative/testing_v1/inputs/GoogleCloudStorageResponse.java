@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudStorageResponse extends io.pulumi.resources.Invoke
      * The path to a directory in GCS that will eventually contain the results for this test. The requesting user must have write access on the bucket in the supplied path.
      * 
      */
-    @InputImport(name="gcsPath", required=true)
+    @Import(name="gcsPath", required=true)
       private final String gcsPath;
 
     public String getGcsPath() {

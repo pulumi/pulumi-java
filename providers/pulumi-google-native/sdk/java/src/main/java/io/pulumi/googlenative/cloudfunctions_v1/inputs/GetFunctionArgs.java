@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
-    @InputImport(name="functionId", required=true)
+    @Import(name="functionId", required=true)
       private final String functionId;
 
     public String getFunctionId() {
         return this.functionId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

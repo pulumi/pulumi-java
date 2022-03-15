@@ -8,7 +8,7 @@ import io.pulumi.azurenative.certificateregistration.AppServiceCertificateOrderC
 import io.pulumi.azurenative.certificateregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Key Vault resource Id.
      * 
      */
-    @OutputExport(name="keyVaultId", type=String.class, parameters={})
+    @Export(name="keyVaultId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultId;
 
     /**
@@ -47,7 +47,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Key Vault secret name.
      * 
      */
-    @OutputExport(name="keyVaultSecretName", type=String.class, parameters={})
+    @Export(name="keyVaultSecretName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultSecretName;
 
     /**
@@ -61,7 +61,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -75,7 +75,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -89,7 +89,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -103,7 +103,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Status of the Key Vault secret.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -117,7 +117,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -131,7 +131,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -145,7 +145,7 @@ public class AppServiceCertificateOrderCertificate extends io.pulumi.resources.C
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

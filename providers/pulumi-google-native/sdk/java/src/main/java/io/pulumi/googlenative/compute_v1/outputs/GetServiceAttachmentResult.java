@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ServiceAttachmentConnectedEndpointResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ServiceAttachmentConsumerProjectLimitResponse;
 import io.pulumi.googlenative.compute_v1.outputs.Uint128Response;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceAttachmentResult {
     /**
      * An array of connections for all the consumers connected to this service attachment.
@@ -100,25 +100,25 @@ public final class GetServiceAttachmentResult {
      */
     private final String targetService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceAttachmentResult(
-        @OutputCustomType.Parameter("connectedEndpoints") List<ServiceAttachmentConnectedEndpointResponse> connectedEndpoints,
-        @OutputCustomType.Parameter("connectionPreference") String connectionPreference,
-        @OutputCustomType.Parameter("consumerAcceptLists") List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists,
-        @OutputCustomType.Parameter("consumerRejectLists") List<String> consumerRejectLists,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("domainNames") List<String> domainNames,
-        @OutputCustomType.Parameter("enableProxyProtocol") Boolean enableProxyProtocol,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("natSubnets") List<String> natSubnets,
-        @OutputCustomType.Parameter("producerForwardingRule") String producerForwardingRule,
-        @OutputCustomType.Parameter("pscServiceAttachmentId") Uint128Response pscServiceAttachmentId,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("targetService") String targetService) {
+        @CustomType.Parameter("connectedEndpoints") List<ServiceAttachmentConnectedEndpointResponse> connectedEndpoints,
+        @CustomType.Parameter("connectionPreference") String connectionPreference,
+        @CustomType.Parameter("consumerAcceptLists") List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists,
+        @CustomType.Parameter("consumerRejectLists") List<String> consumerRejectLists,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("domainNames") List<String> domainNames,
+        @CustomType.Parameter("enableProxyProtocol") Boolean enableProxyProtocol,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("natSubnets") List<String> natSubnets,
+        @CustomType.Parameter("producerForwardingRule") String producerForwardingRule,
+        @CustomType.Parameter("pscServiceAttachmentId") Uint128Response pscServiceAttachmentId,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("targetService") String targetService) {
         this.connectedEndpoints = connectedEndpoints;
         this.connectionPreference = connectionPreference;
         this.consumerAcceptLists = consumerAcceptLists;

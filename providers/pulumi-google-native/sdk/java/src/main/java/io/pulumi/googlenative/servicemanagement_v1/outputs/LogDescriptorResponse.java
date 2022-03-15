@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.LabelDescriptorResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogDescriptorResponse {
     /**
      * A human-readable description of this log. This information appears in the documentation and can contain details.
@@ -32,12 +32,12 @@ public final class LogDescriptorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogDescriptorResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
+        @CustomType.Parameter("name") String name) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;

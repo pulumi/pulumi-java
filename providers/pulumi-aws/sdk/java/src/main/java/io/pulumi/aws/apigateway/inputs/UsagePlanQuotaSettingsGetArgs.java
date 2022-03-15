@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
      * The maximum number of requests that can be made in a given time period.
      * 
      */
-    @InputImport(name="limit", required=true)
+    @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
     public Output<Integer> getLimit() {
@@ -30,7 +30,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
      * The number of requests subtracted from the given limit in the initial time period.
      * 
      */
-    @InputImport(name="offset")
+    @Import(name="offset")
       private final @Nullable Output<Integer> offset;
 
     public Output<Integer> getOffset() {
@@ -41,7 +41,7 @@ public final class UsagePlanQuotaSettingsGetArgs extends io.pulumi.resources.Res
      * The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
      * 
      */
-    @InputImport(name="period", required=true)
+    @Import(name="period", required=true)
       private final Output<String> period;
 
     public Output<String> getPeriod() {

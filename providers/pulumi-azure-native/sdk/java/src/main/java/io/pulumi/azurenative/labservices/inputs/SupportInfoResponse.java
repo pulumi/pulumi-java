@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Support contact email address.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -33,7 +33,7 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Support instructions.
      * 
      */
-    @InputImport(name="instructions")
+    @Import(name="instructions")
       private final @Nullable String instructions;
 
     public Optional<String> getInstructions() {
@@ -44,7 +44,7 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Support contact phone number.
      * 
      */
-    @InputImport(name="phone")
+    @Import(name="phone")
       private final @Nullable String phone;
 
     public Optional<String> getPhone() {
@@ -55,7 +55,7 @@ public final class SupportInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Support web address.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

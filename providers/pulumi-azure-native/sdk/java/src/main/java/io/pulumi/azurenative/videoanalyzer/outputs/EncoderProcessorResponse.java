@@ -7,12 +7,12 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EncoderCustomPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.EncoderSystemPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.NodeInputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncoderProcessorResponse {
     /**
      * An array of upstream node references within the topology to be used as inputs for this node.
@@ -36,12 +36,12 @@ public final class EncoderProcessorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncoderProcessorResponse(
-        @OutputCustomType.Parameter("inputs") List<NodeInputResponse> inputs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("preset") Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("inputs") List<NodeInputResponse> inputs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("preset") Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
+        @CustomType.Parameter("type") String type) {
         this.inputs = inputs;
         this.name = name;
         this.preset = preset;

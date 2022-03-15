@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.OsConstraintResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DevicePolicyResponse {
     /**
      * Allowed device management levels, an empty list allows all management levels.
@@ -43,14 +43,14 @@ public final class DevicePolicyResponse {
      */
     private final Boolean requireScreenlock;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DevicePolicyResponse(
-        @OutputCustomType.Parameter("allowedDeviceManagementLevels") List<String> allowedDeviceManagementLevels,
-        @OutputCustomType.Parameter("allowedEncryptionStatuses") List<String> allowedEncryptionStatuses,
-        @OutputCustomType.Parameter("osConstraints") List<OsConstraintResponse> osConstraints,
-        @OutputCustomType.Parameter("requireAdminApproval") Boolean requireAdminApproval,
-        @OutputCustomType.Parameter("requireCorpOwned") Boolean requireCorpOwned,
-        @OutputCustomType.Parameter("requireScreenlock") Boolean requireScreenlock) {
+        @CustomType.Parameter("allowedDeviceManagementLevels") List<String> allowedDeviceManagementLevels,
+        @CustomType.Parameter("allowedEncryptionStatuses") List<String> allowedEncryptionStatuses,
+        @CustomType.Parameter("osConstraints") List<OsConstraintResponse> osConstraints,
+        @CustomType.Parameter("requireAdminApproval") Boolean requireAdminApproval,
+        @CustomType.Parameter("requireCorpOwned") Boolean requireCorpOwned,
+        @CustomType.Parameter("requireScreenlock") Boolean requireScreenlock) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         this.osConstraints = osConstraints;

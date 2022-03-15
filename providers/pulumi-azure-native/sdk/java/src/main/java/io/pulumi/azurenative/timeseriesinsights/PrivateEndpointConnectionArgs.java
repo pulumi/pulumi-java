@@ -5,7 +5,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 
 import io.pulumi.azurenative.timeseriesinsights.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The provisioning state of the private endpoint connection resource.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
     public Output<List<String>> getGroupIds() {
@@ -42,7 +42,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the private endpoint connection associated with the Azure resource
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -53,7 +53,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState", required=true)
+    @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -64,7 +64,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

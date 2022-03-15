@@ -7,7 +7,7 @@ import io.pulumi.aws.datasync.inputs.TaskExcludesArgs;
 import io.pulumi.aws.datasync.inputs.TaskOptionsArgs;
 import io.pulumi.aws.datasync.inputs.TaskScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
      * 
      */
-    @InputImport(name="cloudwatchLogGroupArn")
+    @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
     public Output<String> getCloudwatchLogGroupArn() {
@@ -33,7 +33,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of destination DataSync Location.
      * 
      */
-    @InputImport(name="destinationLocationArn", required=true)
+    @Import(name="destinationLocationArn", required=true)
       private final Output<String> destinationLocationArn;
 
     public Output<String> getDestinationLocationArn() {
@@ -44,7 +44,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Filter rules that determines which files to exclude from a task.
      * 
      */
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<TaskExcludesArgs> excludes;
 
     public Output<TaskExcludesArgs> getExcludes() {
@@ -55,7 +55,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the DataSync Task.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<TaskOptionsArgs> options;
 
     public Output<TaskOptionsArgs> getOptions() {
@@ -77,7 +77,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a schedule used to periodically transfer files from a source to a destination location.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<TaskScheduleArgs> schedule;
 
     public Output<TaskScheduleArgs> getSchedule() {
@@ -88,7 +88,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of source DataSync Location.
      * 
      */
-    @InputImport(name="sourceLocationArn", required=true)
+    @Import(name="sourceLocationArn", required=true)
       private final Output<String> sourceLocationArn;
 
     public Output<String> getSourceLocationArn() {
@@ -99,7 +99,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

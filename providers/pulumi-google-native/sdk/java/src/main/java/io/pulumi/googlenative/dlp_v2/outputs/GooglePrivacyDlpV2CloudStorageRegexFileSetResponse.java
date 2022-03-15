@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
     /**
      * The name of a Cloud Storage bucket. Required.
@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
      */
     private final List<String> includeRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("excludeRegex") List<String> excludeRegex,
-        @OutputCustomType.Parameter("includeRegex") List<String> includeRegex) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("excludeRegex") List<String> excludeRegex,
+        @CustomType.Parameter("includeRegex") List<String> includeRegex) {
         this.bucketName = bucketName;
         this.excludeRegex = excludeRegex;
         this.includeRegex = includeRegex;

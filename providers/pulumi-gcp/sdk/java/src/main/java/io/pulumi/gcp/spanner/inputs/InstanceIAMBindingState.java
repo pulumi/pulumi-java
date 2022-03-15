@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.spanner.inputs.InstanceIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
 
     public static final InstanceIAMBindingState Empty = new InstanceIAMBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<InstanceIAMBindingConditionGetArgs> condition;
 
     public Output<InstanceIAMBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the instance's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -38,14 +38,14 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * The name of the instance.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance == null ? Output.empty() : this.instance;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -57,7 +57,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

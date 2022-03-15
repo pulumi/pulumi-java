@@ -10,7 +10,7 @@ import io.pulumi.azurenative.deviceupdate.outputs.IotHubSettingsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Parent Device Update Account name which Instance belongs to.
      * 
      */
-    @OutputExport(name="accountName", type=String.class, parameters={})
+    @Export(name="accountName", type=String.class, parameters={})
     private Output<String> accountName;
 
     /**
@@ -53,7 +53,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Customer-initiated diagnostic log collection storage properties
      * 
      */
-    @OutputExport(name="diagnosticStorageProperties", type=DiagnosticStoragePropertiesResponse.class, parameters={})
+    @Export(name="diagnosticStorageProperties", type=DiagnosticStoragePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ DiagnosticStoragePropertiesResponse> diagnosticStorageProperties;
 
     /**
@@ -67,7 +67,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Enables or Disables the diagnostic logs collection
      * 
      */
-    @OutputExport(name="enableDiagnostics", type=Boolean.class, parameters={})
+    @Export(name="enableDiagnostics", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDiagnostics;
 
     /**
@@ -81,7 +81,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * List of IoT Hubs associated with the account.
      * 
      */
-    @OutputExport(name="iotHubs", type=List.class, parameters={IotHubSettingsResponse.class})
+    @Export(name="iotHubs", type=List.class, parameters={IotHubSettingsResponse.class})
     private Output</* @Nullable */ List<IotHubSettingsResponse>> iotHubs;
 
     /**
@@ -95,7 +95,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -109,7 +109,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -137,7 +137,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -151,7 +151,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -165,7 +165,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

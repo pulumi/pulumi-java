@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.powerbi.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionStateResponse {
     /**
      * Actions required (if any).
@@ -27,11 +27,11 @@ public final class ConnectionStateResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionStateResponse(
-        @OutputCustomType.Parameter("actionsRequired") @Nullable String actionsRequired,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("actionsRequired") @Nullable String actionsRequired,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

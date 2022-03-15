@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicySymmetricTokenKeyResponse {
     /**
      * The key value of the key
@@ -21,10 +21,10 @@ public final class ContentKeyPolicySymmetricTokenKeyResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicySymmetricTokenKeyResponse(
-        @OutputCustomType.Parameter("keyValue") String keyValue,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("keyValue") String keyValue,
+        @CustomType.Parameter("odataType") String odataType) {
         this.keyValue = keyValue;
         this.odataType = odataType;
     }

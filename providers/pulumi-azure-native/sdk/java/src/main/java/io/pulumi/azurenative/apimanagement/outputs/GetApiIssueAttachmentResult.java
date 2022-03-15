@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApiIssueAttachmentResult {
     /**
      * An HTTP link or Base64-encoded binary data.
@@ -40,14 +40,14 @@ public final class GetApiIssueAttachmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiIssueAttachmentResult(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("contentFormat") String contentFormat,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("contentFormat") String contentFormat,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("type") String type) {
         this.content = content;
         this.contentFormat = contentFormat;
         this.id = id;

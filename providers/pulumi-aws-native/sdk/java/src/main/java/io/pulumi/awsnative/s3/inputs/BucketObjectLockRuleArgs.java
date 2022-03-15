@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDefaultRetentionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
 
     public static final BucketObjectLockRuleArgs Empty = new BucketObjectLockRuleArgs();
 
-    @InputImport(name="defaultRetention")
+    @Import(name="defaultRetention")
       private final @Nullable Output<BucketDefaultRetentionArgs> defaultRetention;
 
     public Output<BucketDefaultRetentionArgs> getDefaultRetention() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
      * The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.
      * 
      */
-    @InputImport(name="available", required=true)
+    @Import(name="available", required=true)
       private final Boolean available;
 
     public Boolean getAvailable() {
@@ -32,7 +32,7 @@ public final class InstanceFailoverReplicaResponse extends io.pulumi.resources.I
      * The name of the failover replica. If specified at instance creation, a failover replica is created for the instance. The name doesn't include the project ID.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

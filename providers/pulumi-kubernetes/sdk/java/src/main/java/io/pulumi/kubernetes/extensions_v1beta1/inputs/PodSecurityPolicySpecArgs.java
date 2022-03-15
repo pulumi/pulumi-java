@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.AllowedCSIDriverArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.AllowedFlexVolumeArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.AllowedHostPathArgs;
@@ -34,7 +34,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.
      * 
      */
-    @InputImport(name="allowPrivilegeEscalation")
+    @Import(name="allowPrivilegeEscalation")
       private final @Nullable Output<Boolean> allowPrivilegeEscalation;
 
     public Output<Boolean> getAllowPrivilegeEscalation() {
@@ -45,7 +45,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * AllowedCSIDrivers is a whitelist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes.
      * 
      */
-    @InputImport(name="allowedCSIDrivers")
+    @Import(name="allowedCSIDrivers")
       private final @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
 
     public Output<List<AllowedCSIDriverArgs>> getAllowedCSIDrivers() {
@@ -56,7 +56,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.
      * 
      */
-    @InputImport(name="allowedCapabilities")
+    @Import(name="allowedCapabilities")
       private final @Nullable Output<List<String>> allowedCapabilities;
 
     public Output<List<String>> getAllowedCapabilities() {
@@ -67,7 +67,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
      * 
      */
-    @InputImport(name="allowedFlexVolumes")
+    @Import(name="allowedFlexVolumes")
       private final @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
 
     public Output<List<AllowedFlexVolumeArgs>> getAllowedFlexVolumes() {
@@ -78,7 +78,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * allowedHostPaths is a white list of allowed host paths. Empty indicates that all host paths may be used.
      * 
      */
-    @InputImport(name="allowedHostPaths")
+    @Import(name="allowedHostPaths")
       private final @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths;
 
     public Output<List<AllowedHostPathArgs>> getAllowedHostPaths() {
@@ -89,7 +89,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * AllowedProcMountTypes is a whitelist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
      * 
      */
-    @InputImport(name="allowedProcMountTypes")
+    @Import(name="allowedProcMountTypes")
       private final @Nullable Output<List<String>> allowedProcMountTypes;
 
     public Output<List<String>> getAllowedProcMountTypes() {
@@ -102,7 +102,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar", "foo.baz", etc.
      * 
      */
-    @InputImport(name="allowedUnsafeSysctls")
+    @Import(name="allowedUnsafeSysctls")
       private final @Nullable Output<List<String>> allowedUnsafeSysctls;
 
     public Output<List<String>> getAllowedUnsafeSysctls() {
@@ -113,7 +113,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * defaultAddCapabilities is the default set of capabilities that will be added to the container unless the pod spec specifically drops the capability.  You may not list a capability in both defaultAddCapabilities and requiredDropCapabilities. Capabilities added here are implicitly allowed, and need not be included in the allowedCapabilities list.
      * 
      */
-    @InputImport(name="defaultAddCapabilities")
+    @Import(name="defaultAddCapabilities")
       private final @Nullable Output<List<String>> defaultAddCapabilities;
 
     public Output<List<String>> getDefaultAddCapabilities() {
@@ -124,7 +124,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * defaultAllowPrivilegeEscalation controls the default setting for whether a process can gain more privileges than its parent process.
      * 
      */
-    @InputImport(name="defaultAllowPrivilegeEscalation")
+    @Import(name="defaultAllowPrivilegeEscalation")
       private final @Nullable Output<Boolean> defaultAllowPrivilegeEscalation;
 
     public Output<Boolean> getDefaultAllowPrivilegeEscalation() {
@@ -137,7 +137,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "foo.bar", "foo.baz", etc.
      * 
      */
-    @InputImport(name="forbiddenSysctls")
+    @Import(name="forbiddenSysctls")
       private final @Nullable Output<List<String>> forbiddenSysctls;
 
     public Output<List<String>> getForbiddenSysctls() {
@@ -148,7 +148,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * fsGroup is the strategy that will dictate what fs group is used by the SecurityContext.
      * 
      */
-    @InputImport(name="fsGroup", required=true)
+    @Import(name="fsGroup", required=true)
       private final Output<FSGroupStrategyOptionsArgs> fsGroup;
 
     public Output<FSGroupStrategyOptionsArgs> getFsGroup() {
@@ -159,7 +159,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * hostIPC determines if the policy allows the use of HostIPC in the pod spec.
      * 
      */
-    @InputImport(name="hostIPC")
+    @Import(name="hostIPC")
       private final @Nullable Output<Boolean> hostIPC;
 
     public Output<Boolean> getHostIPC() {
@@ -170,7 +170,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * hostNetwork determines if the policy allows the use of HostNetwork in the pod spec.
      * 
      */
-    @InputImport(name="hostNetwork")
+    @Import(name="hostNetwork")
       private final @Nullable Output<Boolean> hostNetwork;
 
     public Output<Boolean> getHostNetwork() {
@@ -181,7 +181,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * hostPID determines if the policy allows the use of HostPID in the pod spec.
      * 
      */
-    @InputImport(name="hostPID")
+    @Import(name="hostPID")
       private final @Nullable Output<Boolean> hostPID;
 
     public Output<Boolean> getHostPID() {
@@ -192,7 +192,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * hostPorts determines which host port ranges are allowed to be exposed.
      * 
      */
-    @InputImport(name="hostPorts")
+    @Import(name="hostPorts")
       private final @Nullable Output<List<HostPortRangeArgs>> hostPorts;
 
     public Output<List<HostPortRangeArgs>> getHostPorts() {
@@ -203,7 +203,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * privileged determines if a pod can request to be run as privileged.
      * 
      */
-    @InputImport(name="privileged")
+    @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
     public Output<Boolean> getPrivileged() {
@@ -214,7 +214,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * readOnlyRootFilesystem when set to true will force containers to run with a read only root file system.  If the container specifically requests to run with a non-read only root file system the PSP should deny the pod. If set to false the container may run with a read only root file system if it wishes but it will not be forced to.
      * 
      */
-    @InputImport(name="readOnlyRootFilesystem")
+    @Import(name="readOnlyRootFilesystem")
       private final @Nullable Output<Boolean> readOnlyRootFilesystem;
 
     public Output<Boolean> getReadOnlyRootFilesystem() {
@@ -225,7 +225,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * requiredDropCapabilities are the capabilities that will be dropped from the container.  These are required to be dropped and cannot be added.
      * 
      */
-    @InputImport(name="requiredDropCapabilities")
+    @Import(name="requiredDropCapabilities")
       private final @Nullable Output<List<String>> requiredDropCapabilities;
 
     public Output<List<String>> getRequiredDropCapabilities() {
@@ -236,7 +236,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * RunAsGroup is the strategy that will dictate the allowable RunAsGroup values that may be set. If this field is omitted, the pod's RunAsGroup can take any value. This field requires the RunAsGroup feature gate to be enabled.
      * 
      */
-    @InputImport(name="runAsGroup")
+    @Import(name="runAsGroup")
       private final @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup;
 
     public Output<RunAsGroupStrategyOptionsArgs> getRunAsGroup() {
@@ -247,7 +247,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * runAsUser is the strategy that will dictate the allowable RunAsUser values that may be set.
      * 
      */
-    @InputImport(name="runAsUser", required=true)
+    @Import(name="runAsUser", required=true)
       private final Output<RunAsUserStrategyOptionsArgs> runAsUser;
 
     public Output<RunAsUserStrategyOptionsArgs> getRunAsUser() {
@@ -258,7 +258,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * runtimeClass is the strategy that will dictate the allowable RuntimeClasses for a pod. If this field is omitted, the pod's runtimeClassName field is unrestricted. Enforcement of this field depends on the RuntimeClass feature gate being enabled.
      * 
      */
-    @InputImport(name="runtimeClass")
+    @Import(name="runtimeClass")
       private final @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass;
 
     public Output<RuntimeClassStrategyOptionsArgs> getRuntimeClass() {
@@ -269,7 +269,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * seLinux is the strategy that will dictate the allowable labels that may be set.
      * 
      */
-    @InputImport(name="seLinux", required=true)
+    @Import(name="seLinux", required=true)
       private final Output<SELinuxStrategyOptionsArgs> seLinux;
 
     public Output<SELinuxStrategyOptionsArgs> getSeLinux() {
@@ -280,7 +280,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * supplementalGroups is the strategy that will dictate what supplemental groups are used by the SecurityContext.
      * 
      */
-    @InputImport(name="supplementalGroups", required=true)
+    @Import(name="supplementalGroups", required=true)
       private final Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
 
     public Output<SupplementalGroupsStrategyOptionsArgs> getSupplementalGroups() {
@@ -291,7 +291,7 @@ public final class PodSecurityPolicySpecArgs extends io.pulumi.resources.Resourc
      * volumes is a white list of allowed volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<String>> volumes;
 
     public Output<List<String>> getVolumes() {

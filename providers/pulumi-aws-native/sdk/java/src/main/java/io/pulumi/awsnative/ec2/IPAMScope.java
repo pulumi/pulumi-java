@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.IPAMScopeArgs;
 import io.pulumi.awsnative.ec2.enums.IPAMScopeIpamScopeType;
 import io.pulumi.awsnative.ec2.outputs.IPAMScopeTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IPAM scope.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -36,7 +36,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
@@ -46,7 +46,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IPAM this scope is a part of.
      * 
      */
-    @OutputExport(name="ipamArn", type=String.class, parameters={})
+    @Export(name="ipamArn", type=String.class, parameters={})
     private Output<String> ipamArn;
 
     /**
@@ -60,7 +60,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * The Id of the IPAM this scope is a part of.
      * 
      */
-    @OutputExport(name="ipamId", type=String.class, parameters={})
+    @Export(name="ipamId", type=String.class, parameters={})
     private Output<String> ipamId;
 
     /**
@@ -74,7 +74,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * Id of the IPAM scope.
      * 
      */
-    @OutputExport(name="ipamScopeId", type=String.class, parameters={})
+    @Export(name="ipamScopeId", type=String.class, parameters={})
     private Output<String> ipamScopeId;
 
     /**
@@ -88,7 +88,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * Determines whether this scope contains publicly routable space or space for a private network
      * 
      */
-    @OutputExport(name="ipamScopeType", type=IPAMScopeIpamScopeType.class, parameters={})
+    @Export(name="ipamScopeType", type=IPAMScopeIpamScopeType.class, parameters={})
     private Output<IPAMScopeIpamScopeType> ipamScopeType;
 
     /**
@@ -102,7 +102,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * Is this one of the default scopes created with the IPAM.
      * 
      */
-    @OutputExport(name="isDefault", type=Boolean.class, parameters={})
+    @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
     /**
@@ -116,7 +116,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * The number of pools that currently exist in this scope.
      * 
      */
-    @OutputExport(name="poolCount", type=Integer.class, parameters={})
+    @Export(name="poolCount", type=Integer.class, parameters={})
     private Output<Integer> poolCount;
 
     /**
@@ -130,7 +130,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={IPAMScopeTag.class})
+    @Export(name="tags", type=List.class, parameters={IPAMScopeTag.class})
     private Output</* @Nullable */ List<IPAMScopeTag>> tags;
 
     /**

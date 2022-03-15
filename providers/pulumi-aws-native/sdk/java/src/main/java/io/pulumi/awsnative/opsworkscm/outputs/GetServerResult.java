@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opsworkscm.outputs;
 
 import io.pulumi.awsnative.opsworkscm.outputs.ServerTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerResult {
     private final @Nullable String arn;
     private final @Nullable Integer backupRetentionCount;
@@ -24,16 +24,16 @@ public final class GetServerResult {
     private final @Nullable String preferredMaintenanceWindow;
     private final @Nullable List<ServerTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("backupRetentionCount") @Nullable Integer backupRetentionCount,
-        @OutputCustomType.Parameter("disableAutomatedBackup") @Nullable Boolean disableAutomatedBackup,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
-        @OutputCustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
-        @OutputCustomType.Parameter("tags") @Nullable List<ServerTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("backupRetentionCount") @Nullable Integer backupRetentionCount,
+        @CustomType.Parameter("disableAutomatedBackup") @Nullable Boolean disableAutomatedBackup,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
+        @CustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
+        @CustomType.Parameter("tags") @Nullable List<ServerTag> tags) {
         this.arn = arn;
         this.backupRetentionCount = backupRetentionCount;
         this.disableAutomatedBackup = disableAutomatedBackup;

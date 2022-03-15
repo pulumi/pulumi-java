@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of analysis that is handled by this discovery.
      * 
      */
-    @InputImport(name="analysisKind")
+    @Import(name="analysisKind")
       private final @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
     public Output<DiscoveryAnalysisKind> getAnalysisKind() {

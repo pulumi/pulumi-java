@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IscsiLunResponse {
     /**
      * Azure Resource ID of the Managed Disk.
@@ -20,10 +20,10 @@ public final class IscsiLunResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IscsiLunResponse(
-        @OutputCustomType.Parameter("managedDiskAzureResourceId") String managedDiskAzureResourceId,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("managedDiskAzureResourceId") String managedDiskAzureResourceId,
+        @CustomType.Parameter("name") String name) {
         this.managedDiskAzureResourceId = managedDiskAzureResourceId;
         this.name = name;
     }

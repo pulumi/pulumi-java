@@ -20,7 +20,7 @@ import io.pulumi.aws.iot.inputs.TopicRuleSnsGetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleSqsGetArgs;
 import io.pulumi.aws.iot.inputs.TopicRuleStepFunctionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -37,21 +37,21 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the topic rule
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn == null ? Output.empty() : this.arn;
     }
 
-    @InputImport(name="cloudwatchAlarm")
+    @Import(name="cloudwatchAlarm")
       private final @Nullable Output<TopicRuleCloudwatchAlarmGetArgs> cloudwatchAlarm;
 
     public Output<TopicRuleCloudwatchAlarmGetArgs> getCloudwatchAlarm() {
         return this.cloudwatchAlarm == null ? Output.empty() : this.cloudwatchAlarm;
     }
 
-    @InputImport(name="cloudwatchMetric")
+    @Import(name="cloudwatchMetric")
       private final @Nullable Output<TopicRuleCloudwatchMetricGetArgs> cloudwatchMetric;
 
     public Output<TopicRuleCloudwatchMetricGetArgs> getCloudwatchMetric() {
@@ -62,28 +62,28 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * The description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="dynamodb")
+    @Import(name="dynamodb")
       private final @Nullable Output<TopicRuleDynamodbGetArgs> dynamodb;
 
     public Output<TopicRuleDynamodbGetArgs> getDynamodb() {
         return this.dynamodb == null ? Output.empty() : this.dynamodb;
     }
 
-    @InputImport(name="dynamodbv2s")
+    @Import(name="dynamodbv2s")
       private final @Nullable Output<List<TopicRuleDynamodbv2GetArgs>> dynamodbv2s;
 
     public Output<List<TopicRuleDynamodbv2GetArgs>> getDynamodbv2s() {
         return this.dynamodbv2s == null ? Output.empty() : this.dynamodbv2s;
     }
 
-    @InputImport(name="elasticsearch")
+    @Import(name="elasticsearch")
       private final @Nullable Output<TopicRuleElasticsearchGetArgs> elasticsearch;
 
     public Output<TopicRuleElasticsearchGetArgs> getElasticsearch() {
@@ -94,7 +94,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the rule is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -105,42 +105,42 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with error action to be associated with the rule. See the documentation for `cloudwatch_alarm`, `cloudwatch_metric`, `dynamodb`, `dynamodbv2`, `elasticsearch`, `firehose`, `iot_analytics`, `iot_events`, `kinesis`, `lambda`, `republish`, `s3`, `step_functions`, `sns`, `sqs` configuration blocks for further configuration details.
      * 
      */
-    @InputImport(name="errorAction")
+    @Import(name="errorAction")
       private final @Nullable Output<TopicRuleErrorActionGetArgs> errorAction;
 
     public Output<TopicRuleErrorActionGetArgs> getErrorAction() {
         return this.errorAction == null ? Output.empty() : this.errorAction;
     }
 
-    @InputImport(name="firehose")
+    @Import(name="firehose")
       private final @Nullable Output<TopicRuleFirehoseGetArgs> firehose;
 
     public Output<TopicRuleFirehoseGetArgs> getFirehose() {
         return this.firehose == null ? Output.empty() : this.firehose;
     }
 
-    @InputImport(name="iotAnalytics")
+    @Import(name="iotAnalytics")
       private final @Nullable Output<List<TopicRuleIotAnalyticGetArgs>> iotAnalytics;
 
     public Output<List<TopicRuleIotAnalyticGetArgs>> getIotAnalytics() {
         return this.iotAnalytics == null ? Output.empty() : this.iotAnalytics;
     }
 
-    @InputImport(name="iotEvents")
+    @Import(name="iotEvents")
       private final @Nullable Output<List<TopicRuleIotEventGetArgs>> iotEvents;
 
     public Output<List<TopicRuleIotEventGetArgs>> getIotEvents() {
         return this.iotEvents == null ? Output.empty() : this.iotEvents;
     }
 
-    @InputImport(name="kinesis")
+    @Import(name="kinesis")
       private final @Nullable Output<TopicRuleKinesisGetArgs> kinesis;
 
     public Output<TopicRuleKinesisGetArgs> getKinesis() {
         return this.kinesis == null ? Output.empty() : this.kinesis;
     }
 
-    @InputImport(name="lambda")
+    @Import(name="lambda")
       private final @Nullable Output<TopicRuleLambdaGetArgs> lambda;
 
     public Output<TopicRuleLambdaGetArgs> getLambda() {
@@ -151,28 +151,28 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="republish")
+    @Import(name="republish")
       private final @Nullable Output<TopicRuleRepublishGetArgs> republish;
 
     public Output<TopicRuleRepublishGetArgs> getRepublish() {
         return this.republish == null ? Output.empty() : this.republish;
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<TopicRuleS3GetArgs> s3;
 
     public Output<TopicRuleS3GetArgs> getS3() {
         return this.s3 == null ? Output.empty() : this.s3;
     }
 
-    @InputImport(name="sns")
+    @Import(name="sns")
       private final @Nullable Output<TopicRuleSnsGetArgs> sns;
 
     public Output<TopicRuleSnsGetArgs> getSns() {
@@ -183,7 +183,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * The SQL statement used to query the topic. For more information, see AWS IoT SQL Reference (http://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the AWS IoT Developer Guide.
      * 
      */
-    @InputImport(name="sql")
+    @Import(name="sql")
       private final @Nullable Output<String> sql;
 
     public Output<String> getSql() {
@@ -194,21 +194,21 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * The version of the SQL rules engine to use when evaluating the rule.
      * 
      */
-    @InputImport(name="sqlVersion")
+    @Import(name="sqlVersion")
       private final @Nullable Output<String> sqlVersion;
 
     public Output<String> getSqlVersion() {
         return this.sqlVersion == null ? Output.empty() : this.sqlVersion;
     }
 
-    @InputImport(name="sqs")
+    @Import(name="sqs")
       private final @Nullable Output<TopicRuleSqsGetArgs> sqs;
 
     public Output<TopicRuleSqsGetArgs> getSqs() {
         return this.sqs == null ? Output.empty() : this.sqs;
     }
 
-    @InputImport(name="stepFunctions")
+    @Import(name="stepFunctions")
       private final @Nullable Output<List<TopicRuleStepFunctionGetArgs>> stepFunctions;
 
     public Output<List<TopicRuleStepFunctionGetArgs>> getStepFunctions() {
@@ -219,7 +219,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -230,7 +230,7 @@ public final class TopicRuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

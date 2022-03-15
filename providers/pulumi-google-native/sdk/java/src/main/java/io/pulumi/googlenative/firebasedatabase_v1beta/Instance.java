@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasedatabase_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebasedatabase_v1beta.InstanceArgs;
@@ -21,7 +21,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Immutable. The globally unique hostname of the database.
      * 
      */
-    @OutputExport(name="databaseUrl", type=String.class, parameters={})
+    @Export(name="databaseUrl", type=String.class, parameters={})
     private Output<String> databaseUrl;
 
     /**
@@ -35,7 +35,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -63,7 +63,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The database's lifecycle state. Read-only.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -77,7 +77,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

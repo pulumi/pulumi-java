@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3objectlambda;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3objectlambda.AccessPointPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
      * The name of the Amazon S3 ObjectLambdaAccessPoint to which the policy applies.
      * 
      */
-    @OutputExport(name="objectLambdaAccessPoint", type=String.class, parameters={})
+    @Export(name="objectLambdaAccessPoint", type=String.class, parameters={})
     private Output<String> objectLambdaAccessPoint;
 
     /**
@@ -36,7 +36,7 @@ public class AccessPointPolicy extends io.pulumi.resources.CustomResource {
      * A policy document containing permissions to add to the specified ObjectLambdaAccessPoint. For more information, see Access Policy Language Overview (https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    @OutputExport(name="policyDocument", type=Object.class, parameters={})
+    @Export(name="policyDocument", type=Object.class, parameters={})
     private Output<Object> policyDocument;
 
     /**

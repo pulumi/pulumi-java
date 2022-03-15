@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerAuthFailAction;
 import io.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerLogin;
 import io.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerSecurityLevel;
@@ -25,7 +25,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * Action to take when users access resources that require authentication. Defaults to redirect.
      * 
      */
-    @InputImport(name="authFailAction")
+    @Import(name="authFailAction")
       private final @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
 
     public Output<ApiConfigHandlerAuthFailAction> getAuthFailAction() {
@@ -36,7 +36,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * Level of login required to access this resource. Defaults to optional.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<ApiConfigHandlerLogin> login;
 
     public Output<ApiConfigHandlerLogin> getLogin() {
@@ -47,7 +47,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * Path to the script from the application root directory.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
@@ -58,7 +58,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * Security (HTTPS) enforcement for this URL.
      * 
      */
-    @InputImport(name="securityLevel")
+    @Import(name="securityLevel")
       private final @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
 
     public Output<ApiConfigHandlerSecurityLevel> getSecurityLevel() {
@@ -69,7 +69,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * URL to serve the endpoint at.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

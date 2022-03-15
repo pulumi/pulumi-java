@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.VmStateDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * The password of the virtual machine. This will be set to null in GET resource API
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -34,7 +34,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * The username of the virtual machine
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {
@@ -45,7 +45,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * VM resource Id for the environment
      * 
      */
-    @InputImport(name="vmResourceId", required=true)
+    @Import(name="vmResourceId", required=true)
       private final String vmResourceId;
 
     public String getVmResourceId() {
@@ -56,7 +56,7 @@ public final class ReferenceVmResponse extends io.pulumi.resources.InvokeArgs {
      * The state details for the reference virtual machine.
      * 
      */
-    @InputImport(name="vmStateDetails", required=true)
+    @Import(name="vmStateDetails", required=true)
       private final VmStateDetailsResponse vmStateDetails;
 
     public VmStateDetailsResponse getVmStateDetails() {

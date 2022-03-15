@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceExternalIPsConfigResponse {
     /**
      * Whether Services with ExternalIPs field are allowed or not.
@@ -15,8 +15,8 @@ public final class ServiceExternalIPsConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ServiceExternalIPsConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private ServiceExternalIPsConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

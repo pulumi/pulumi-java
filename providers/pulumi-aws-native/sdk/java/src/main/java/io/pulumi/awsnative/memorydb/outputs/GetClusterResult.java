@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.memorydb.outputs.ClusterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The name of the Access Control List to associate with the cluster.
@@ -124,29 +124,29 @@ public final class GetClusterResult {
      */
     private final @Nullable List<ClusterTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("aCLName") @Nullable String aCLName,
-        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
-        @OutputCustomType.Parameter("autoMinorVersionUpgrade") @Nullable Boolean autoMinorVersionUpgrade,
-        @OutputCustomType.Parameter("clusterEndpoint") @Nullable ClusterEndpoint clusterEndpoint,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("engineVersion") @Nullable String engineVersion,
-        @OutputCustomType.Parameter("finalSnapshotName") @Nullable String finalSnapshotName,
-        @OutputCustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
-        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
-        @OutputCustomType.Parameter("numReplicasPerShard") @Nullable Integer numReplicasPerShard,
-        @OutputCustomType.Parameter("numShards") @Nullable Integer numShards,
-        @OutputCustomType.Parameter("parameterGroupName") @Nullable String parameterGroupName,
-        @OutputCustomType.Parameter("parameterGroupStatus") @Nullable String parameterGroupStatus,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("snapshotRetentionLimit") @Nullable Integer snapshotRetentionLimit,
-        @OutputCustomType.Parameter("snapshotWindow") @Nullable String snapshotWindow,
-        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
-        @OutputCustomType.Parameter("snsTopicStatus") @Nullable String snsTopicStatus,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("subnetGroupName") @Nullable String subnetGroupName,
-        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags) {
+        @CustomType.Parameter("aCLName") @Nullable String aCLName,
+        @CustomType.Parameter("aRN") @Nullable String aRN,
+        @CustomType.Parameter("autoMinorVersionUpgrade") @Nullable Boolean autoMinorVersionUpgrade,
+        @CustomType.Parameter("clusterEndpoint") @Nullable ClusterEndpoint clusterEndpoint,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("engineVersion") @Nullable String engineVersion,
+        @CustomType.Parameter("finalSnapshotName") @Nullable String finalSnapshotName,
+        @CustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
+        @CustomType.Parameter("nodeType") @Nullable String nodeType,
+        @CustomType.Parameter("numReplicasPerShard") @Nullable Integer numReplicasPerShard,
+        @CustomType.Parameter("numShards") @Nullable Integer numShards,
+        @CustomType.Parameter("parameterGroupName") @Nullable String parameterGroupName,
+        @CustomType.Parameter("parameterGroupStatus") @Nullable String parameterGroupStatus,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("snapshotRetentionLimit") @Nullable Integer snapshotRetentionLimit,
+        @CustomType.Parameter("snapshotWindow") @Nullable String snapshotWindow,
+        @CustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @CustomType.Parameter("snsTopicStatus") @Nullable String snsTopicStatus,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("subnetGroupName") @Nullable String subnetGroupName,
+        @CustomType.Parameter("tags") @Nullable List<ClusterTag> tags) {
         this.aCLName = aCLName;
         this.aRN = aRN;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;

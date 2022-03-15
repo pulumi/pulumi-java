@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
      * The name of the header.
      * 
      */
-    @InputImport(name="headerName")
+    @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -34,7 +34,7 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
      * The value of the header to add.
      * 
      */
-    @InputImport(name="headerValue")
+    @Import(name="headerValue")
       private final @Nullable Output<String> headerValue;
 
     public Output<String> getHeaderValue() {
@@ -45,7 +45,7 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
      * If false, headerValue is appended to any values that already exist for the header. If true, headerValue is set for the header, discarding any values that were set for that header. The default value is false.
      * 
      */
-    @InputImport(name="replace")
+    @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
     public Output<Boolean> getReplace() {

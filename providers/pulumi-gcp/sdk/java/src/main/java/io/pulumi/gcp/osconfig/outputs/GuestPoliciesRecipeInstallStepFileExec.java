@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeInstallStepFileExec {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
@@ -33,12 +33,12 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
      */
     private final @Nullable String localPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeInstallStepFileExec(
-        @OutputCustomType.Parameter("allowedExitCodes") @Nullable String allowedExitCodes,
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("artifactId") @Nullable String artifactId,
-        @OutputCustomType.Parameter("localPath") @Nullable String localPath) {
+        @CustomType.Parameter("allowedExitCodes") @Nullable String allowedExitCodes,
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("artifactId") @Nullable String artifactId,
+        @CustomType.Parameter("localPath") @Nullable String localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;

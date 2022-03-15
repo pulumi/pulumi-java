@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QuarantinePolicyResponse {
     /**
      * The value that indicates whether the policy is enabled or not.
@@ -17,8 +17,8 @@ public final class QuarantinePolicyResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
-    private QuarantinePolicyResponse(@OutputCustomType.Parameter("status") @Nullable String status) {
+    @CustomType.Constructor
+    private QuarantinePolicyResponse(@CustomType.Parameter("status") @Nullable String status) {
         this.status = status;
     }
 

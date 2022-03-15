@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1DialogflowSourceResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1GcsSourceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse {
     /**
      * The source when the conversation comes from Dialogflow.
@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      */
     private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(
-        @OutputCustomType.Parameter("dialogflowSource") GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
-        @OutputCustomType.Parameter("gcsSource") GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
+        @CustomType.Parameter("dialogflowSource") GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
+        @CustomType.Parameter("gcsSource") GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
         this.dialogflowSource = dialogflowSource;
         this.gcsSource = gcsSource;
     }

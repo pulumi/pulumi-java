@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDocumentArgs Empty = new GetDocumentArgs();
 
-    @InputImport(name="documentId", required=true)
+    @Import(name="documentId", required=true)
       private final String documentId;
 
     public String getDocumentId() {
         return this.documentId;
     }
 
-    @InputImport(name="knowledgeBaseId", required=true)
+    @Import(name="knowledgeBaseId", required=true)
       private final String knowledgeBaseId;
 
     public String getKnowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

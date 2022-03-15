@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceConfigurationResponse {
     /**
      * Possible values are: 2 - OS Family 2, equivalent to Windows Server 2008 R2 SP1. 3 - OS Family 3, equivalent to Windows Server 2012. 4 - OS Family 4, equivalent to Windows Server 2012 R2. 5 - OS Family 5, equivalent to Windows Server 2016. 6 - OS Family 6, equivalent to Windows Server 2019. For more information, see Azure Guest OS Releases (https://azure.microsoft.com/documentation/articles/cloud-services-guestos-update-matrix/#releases).
@@ -22,10 +22,10 @@ public final class CloudServiceConfigurationResponse {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceConfigurationResponse(
-        @OutputCustomType.Parameter("osFamily") String osFamily,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
+        @CustomType.Parameter("osFamily") String osFamily,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osFamily = osFamily;
         this.osVersion = osVersion;
     }

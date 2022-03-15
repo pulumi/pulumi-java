@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.Ipv6CircuitConnectionConfigResponse
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * /29 IP address space to carve out Customer addresses for tunnels.
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
@@ -50,7 +50,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * The authorization key.
      * 
      */
-    @OutputExport(name="authorizationKey", type=String.class, parameters={})
+    @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
@@ -64,7 +64,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * Express Route Circuit connection state.
      * 
      */
-    @OutputExport(name="circuitConnectionStatus", type=String.class, parameters={})
+    @Export(name="circuitConnectionStatus", type=String.class, parameters={})
     private Output<String> circuitConnectionStatus;
 
     /**
@@ -78,7 +78,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -92,7 +92,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
      */
-    @OutputExport(name="expressRouteCircuitPeering", type=SubResourceResponse.class, parameters={})
+    @Export(name="expressRouteCircuitPeering", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRouteCircuitPeering;
 
     /**
@@ -106,7 +106,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * IPv6 Address PrefixProperties of the express route circuit connection.
      * 
      */
-    @OutputExport(name="ipv6CircuitConnectionConfig", type=Ipv6CircuitConnectionConfigResponse.class, parameters={})
+    @Export(name="ipv6CircuitConnectionConfig", type=Ipv6CircuitConnectionConfigResponse.class, parameters={})
     private Output</* @Nullable */ Ipv6CircuitConnectionConfigResponse> ipv6CircuitConnectionConfig;
 
     /**
@@ -120,7 +120,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -134,7 +134,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
      */
-    @OutputExport(name="peerExpressRouteCircuitPeering", type=SubResourceResponse.class, parameters={})
+    @Export(name="peerExpressRouteCircuitPeering", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> peerExpressRouteCircuitPeering;
 
     /**
@@ -148,7 +148,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * The provisioning state of the express route circuit connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -162,7 +162,7 @@ public class ExpressRouteCircuitConnection extends io.pulumi.resources.CustomRes
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

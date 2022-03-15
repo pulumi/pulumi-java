@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.LinkResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * Attributes for the product system.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final List<String> attributes;
 
     public List<String> getAttributes() {
@@ -33,7 +33,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * Type of description.
      * 
      */
-    @InputImport(name="descriptionType", required=true)
+    @Import(name="descriptionType", required=true)
       private final String descriptionType;
 
     public String getDescriptionType() {
@@ -44,7 +44,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * Keywords for the product system.
      * 
      */
-    @InputImport(name="keywords", required=true)
+    @Import(name="keywords", required=true)
       private final List<String> keywords;
 
     public List<String> getKeywords() {
@@ -55,7 +55,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * Links for the product system.
      * 
      */
-    @InputImport(name="links", required=true)
+    @Import(name="links", required=true)
       private final List<LinkResponse> links;
 
     public List<LinkResponse> getLinks() {
@@ -66,7 +66,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * Long description of the product system.
      * 
      */
-    @InputImport(name="longDescription", required=true)
+    @Import(name="longDescription", required=true)
       private final String longDescription;
 
     public String getLongDescription() {
@@ -77,7 +77,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * Short description of the product system.
      * 
      */
-    @InputImport(name="shortDescription", required=true)
+    @Import(name="shortDescription", required=true)
       private final String shortDescription;
 
     public String getShortDescription() {

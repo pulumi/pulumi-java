@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogAnalyticsResponse {
     /**
      * The log type to be used.
@@ -38,13 +38,13 @@ public final class LogAnalyticsResponse {
      */
     private final @Nullable Map<String,String> workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogAnalyticsResponse(
-        @OutputCustomType.Parameter("logType") @Nullable String logType,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceKey") String workspaceKey,
-        @OutputCustomType.Parameter("workspaceResourceId") @Nullable Map<String,String> workspaceResourceId) {
+        @CustomType.Parameter("logType") @Nullable String logType,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceKey") String workspaceKey,
+        @CustomType.Parameter("workspaceResourceId") @Nullable Map<String,String> workspaceResourceId) {
         this.logType = logType;
         this.metadata = metadata;
         this.workspaceId = workspaceId;

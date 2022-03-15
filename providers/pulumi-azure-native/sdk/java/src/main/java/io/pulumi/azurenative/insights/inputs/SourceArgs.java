@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.QueryType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * List of  Resource referred into query
      * 
      */
-    @InputImport(name="authorizedResources")
+    @Import(name="authorizedResources")
       private final @Nullable Output<List<String>> authorizedResources;
 
     public Output<List<String>> getAuthorizedResources() {
@@ -36,7 +36,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource uri over which log search query is to be run.
      * 
      */
-    @InputImport(name="dataSourceId", required=true)
+    @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
     public Output<String> getDataSourceId() {
@@ -47,7 +47,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * Log search query. Required for action type - AlertingAction
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -58,7 +58,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * Set value to 'ResultCount' .
      * 
      */
-    @InputImport(name="queryType")
+    @Import(name="queryType")
       private final @Nullable Output<Either<String,QueryType>> queryType;
 
     public Output<Either<String,QueryType>> getQueryType() {

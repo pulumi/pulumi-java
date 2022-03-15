@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetServiceLevelObjectiveArgs extends io.pulumi.resources.Invo
 
     public static final GetServiceLevelObjectiveArgs Empty = new GetServiceLevelObjectiveArgs();
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
     }
 
-    @InputImport(name="serviceLevelObjectiveId", required=true)
+    @Import(name="serviceLevelObjectiveId", required=true)
       private final String serviceLevelObjectiveId;
 
     public String getServiceLevelObjectiveId() {
         return this.serviceLevelObjectiveId;
     }
 
-    @InputImport(name="v3Id", required=true)
+    @Import(name="v3Id", required=true)
       private final String v3Id;
 
     public String getV3Id() {
         return this.v3Id;
     }
 
-    @InputImport(name="v3Id1", required=true)
+    @Import(name="v3Id1", required=true)
       private final String v3Id1;
 
     public String getV3Id1() {
         return this.v3Id1;
     }
 
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable String view;
 
     public Optional<String> getView() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * If the assessments are in running state.
      * 
      */
-    @InputImport(name="areAssessmentsRunning", required=true)
+    @Import(name="areAssessmentsRunning", required=true)
       private final Boolean areAssessmentsRunning;
 
     public Boolean getAreAssessmentsRunning() {
@@ -36,7 +36,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * List of References to Assessments created on this group.
      * 
      */
-    @InputImport(name="assessments", required=true)
+    @Import(name="assessments", required=true)
       private final List<String> assessments;
 
     public List<String> getAssessments() {
@@ -47,7 +47,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Time when this group was created. Date-Time represented in ISO-8601 format.
      * 
      */
-    @InputImport(name="createdTimestamp", required=true)
+    @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
@@ -58,7 +58,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Whether the group has been created and is valid.
      * 
      */
-    @InputImport(name="groupStatus", required=true)
+    @Import(name="groupStatus", required=true)
       private final String groupStatus;
 
     public String getGroupStatus() {
@@ -69,7 +69,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * The type of group.
      * 
      */
-    @InputImport(name="groupType")
+    @Import(name="groupType")
       private final @Nullable String groupType;
 
     public Optional<String> getGroupType() {
@@ -80,7 +80,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Number of machines part of this group.
      * 
      */
-    @InputImport(name="machineCount", required=true)
+    @Import(name="machineCount", required=true)
       private final Integer machineCount;
 
     public Integer getMachineCount() {
@@ -91,7 +91,7 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Time when this group was last updated. Date-Time represented in ISO-8601 format.
      * 
      */
-    @InputImport(name="updatedTimestamp", required=true)
+    @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {

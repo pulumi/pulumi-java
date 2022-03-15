@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.BastionActiveSessionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetActiveSessionsResult {
     /**
      * The URL to get the next set of results.
@@ -24,10 +24,10 @@ public final class GetActiveSessionsResult {
      */
     private final @Nullable List<BastionActiveSessionResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetActiveSessionsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<BastionActiveSessionResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<BastionActiveSessionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

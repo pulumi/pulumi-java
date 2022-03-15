@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyAdaptiveProtectionConfig {
     /**
      * Configuration for [Google Cloud Armor Adaptive Protection Layer 7 DDoS Defense](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
@@ -17,8 +17,8 @@ public final class SecurityPolicyAdaptiveProtectionConfig {
      */
     private final @Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyAdaptiveProtectionConfig(@OutputCustomType.Parameter("layer7DdosDefenseConfig") @Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
+    @CustomType.Constructor
+    private SecurityPolicyAdaptiveProtectionConfig(@CustomType.Parameter("layer7DdosDefenseConfig") @Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
         this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
     }
 

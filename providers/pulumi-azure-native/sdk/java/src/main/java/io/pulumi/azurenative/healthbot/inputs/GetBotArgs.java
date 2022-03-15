@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthbot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Bot resource.
      * 
      */
-    @InputImport(name="botName", required=true)
+    @Import(name="botName", required=true)
       private final String botName;
 
     public String getBotName() {
@@ -27,7 +27,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Bot resource group in the user subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SecurityPolicyWebApplicationFirewallAssociationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyWebApplicationFirewallParametersResponse {
     /**
      * Waf associations
@@ -31,11 +31,11 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
      */
     private final @Nullable ResourceReferenceResponse wafPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyWebApplicationFirewallParametersResponse(
-        @OutputCustomType.Parameter("associations") @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("wafPolicy") @Nullable ResourceReferenceResponse wafPolicy) {
+        @CustomType.Parameter("associations") @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("wafPolicy") @Nullable ResourceReferenceResponse wafPolicy) {
         this.associations = associations;
         this.type = type;
         this.wafPolicy = wafPolicy;

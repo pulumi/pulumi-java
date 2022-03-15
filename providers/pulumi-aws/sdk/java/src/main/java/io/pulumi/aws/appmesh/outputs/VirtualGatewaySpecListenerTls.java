@@ -5,13 +5,13 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerTlsCertificate;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerTlsValidation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListenerTls {
     /**
      * The listener's TLS certificate.
@@ -29,11 +29,11 @@ public final class VirtualGatewaySpecListenerTls {
      */
     private final @Nullable VirtualGatewaySpecListenerTlsValidation validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecListenerTls(
-        @OutputCustomType.Parameter("certificate") VirtualGatewaySpecListenerTlsCertificate certificate,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("validation") @Nullable VirtualGatewaySpecListenerTlsValidation validation) {
+        @CustomType.Parameter("certificate") VirtualGatewaySpecListenerTlsCertificate certificate,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("validation") @Nullable VirtualGatewaySpecListenerTlsValidation validation) {
         this.certificate = certificate;
         this.mode = mode;
         this.validation = validation;

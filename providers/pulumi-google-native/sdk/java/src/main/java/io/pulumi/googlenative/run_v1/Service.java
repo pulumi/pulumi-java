@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.run_v1.ServiceArgs;
@@ -25,7 +25,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The API version for this call such as "serving.knative.dev/v1".
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
@@ -39,7 +39,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The kind of resource, in this case "Service".
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -53,7 +53,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMetaResponse.class, parameters={})
+    @Export(name="metadata", type=ObjectMetaResponse.class, parameters={})
     private Output<ObjectMetaResponse> metadata;
 
     /**
@@ -67,7 +67,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Spec holds the desired state of the Service (from the client).
      * 
      */
-    @OutputExport(name="spec", type=ServiceSpecResponse.class, parameters={})
+    @Export(name="spec", type=ServiceSpecResponse.class, parameters={})
     private Output<ServiceSpecResponse> spec;
 
     /**
@@ -81,7 +81,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Status communicates the observed state of the Service (from the controller).
      * 
      */
-    @OutputExport(name="status", type=ServiceStatusResponse.class, parameters={})
+    @Export(name="status", type=ServiceStatusResponse.class, parameters={})
     private Output<ServiceStatusResponse> status;
 
     /**

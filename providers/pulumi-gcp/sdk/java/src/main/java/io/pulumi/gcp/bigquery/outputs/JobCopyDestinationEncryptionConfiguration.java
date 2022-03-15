@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobCopyDestinationEncryptionConfiguration {
     /**
      * Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
@@ -24,10 +24,10 @@ public final class JobCopyDestinationEncryptionConfiguration {
      */
     private final @Nullable String kmsKeyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobCopyDestinationEncryptionConfiguration(
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DurationResponse {
     /**
      * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 `seconds` field and a positive `nanos` field. Must be from 0 to 999,999,999 inclusive.
@@ -21,10 +21,10 @@ public final class DurationResponse {
      */
     private final String seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DurationResponse(
-        @OutputCustomType.Parameter("nanos") Integer nanos,
-        @OutputCustomType.Parameter("seconds") String seconds) {
+        @CustomType.Parameter("nanos") Integer nanos,
+        @CustomType.Parameter("seconds") String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

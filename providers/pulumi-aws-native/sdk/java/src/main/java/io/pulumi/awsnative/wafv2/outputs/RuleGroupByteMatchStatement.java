@@ -6,14 +6,14 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupPositionalConstraint;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupByteMatchStatement {
     private final RuleGroupFieldToMatch fieldToMatch;
     private final RuleGroupPositionalConstraint positionalConstraint;
@@ -21,13 +21,13 @@ public final class RuleGroupByteMatchStatement {
     private final @Nullable String searchStringBase64;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupByteMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("positionalConstraint") RuleGroupPositionalConstraint positionalConstraint,
-        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
-        @OutputCustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
-        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @CustomType.Parameter("positionalConstraint") RuleGroupPositionalConstraint positionalConstraint,
+        @CustomType.Parameter("searchString") @Nullable String searchString,
+        @CustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
+        @CustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

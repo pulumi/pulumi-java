@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to enable NRR for inbound decoded messages.
      * 
      */
-    @InputImport(name="enableNRRForInboundDecodedMessages", required=true)
+    @Import(name="enableNRRForInboundDecodedMessages", required=true)
       private final Output<Boolean> enableNRRForInboundDecodedMessages;
 
     public Output<Boolean> getEnableNRRForInboundDecodedMessages() {
@@ -34,7 +34,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to enable NRR for inbound encoded messages.
      * 
      */
-    @InputImport(name="enableNRRForInboundEncodedMessages", required=true)
+    @Import(name="enableNRRForInboundEncodedMessages", required=true)
       private final Output<Boolean> enableNRRForInboundEncodedMessages;
 
     public Output<Boolean> getEnableNRRForInboundEncodedMessages() {
@@ -45,7 +45,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to enable NRR for inbound MDN.
      * 
      */
-    @InputImport(name="enableNRRForInboundMDN", required=true)
+    @Import(name="enableNRRForInboundMDN", required=true)
       private final Output<Boolean> enableNRRForInboundMDN;
 
     public Output<Boolean> getEnableNRRForInboundMDN() {
@@ -56,7 +56,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to enable NRR for outbound decoded messages.
      * 
      */
-    @InputImport(name="enableNRRForOutboundDecodedMessages", required=true)
+    @Import(name="enableNRRForOutboundDecodedMessages", required=true)
       private final Output<Boolean> enableNRRForOutboundDecodedMessages;
 
     public Output<Boolean> getEnableNRRForOutboundDecodedMessages() {
@@ -67,7 +67,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to enable NRR for outbound encoded messages.
      * 
      */
-    @InputImport(name="enableNRRForOutboundEncodedMessages", required=true)
+    @Import(name="enableNRRForOutboundEncodedMessages", required=true)
       private final Output<Boolean> enableNRRForOutboundEncodedMessages;
 
     public Output<Boolean> getEnableNRRForOutboundEncodedMessages() {
@@ -78,7 +78,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to enable NRR for outbound MDN.
      * 
      */
-    @InputImport(name="enableNRRForOutboundMDN", required=true)
+    @Import(name="enableNRRForOutboundMDN", required=true)
       private final Output<Boolean> enableNRRForOutboundMDN;
 
     public Output<Boolean> getEnableNRRForOutboundMDN() {
@@ -89,7 +89,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The name of the encryption certificate.
      * 
      */
-    @InputImport(name="encryptionCertificateName")
+    @Import(name="encryptionCertificateName")
       private final @Nullable Output<String> encryptionCertificateName;
 
     public Output<String> getEncryptionCertificateName() {
@@ -100,7 +100,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to send or request a MDN.
      * 
      */
-    @InputImport(name="overrideGroupSigningCertificate", required=true)
+    @Import(name="overrideGroupSigningCertificate", required=true)
       private final Output<Boolean> overrideGroupSigningCertificate;
 
     public Output<Boolean> getOverrideGroupSigningCertificate() {
@@ -111,7 +111,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The Sha2 algorithm format. Valid values are Sha2, ShaHashSize, ShaHyphenHashSize, Sha2UnderscoreHashSize.
      * 
      */
-    @InputImport(name="sha2AlgorithmFormat")
+    @Import(name="sha2AlgorithmFormat")
       private final @Nullable Output<String> sha2AlgorithmFormat;
 
     public Output<String> getSha2AlgorithmFormat() {
@@ -122,7 +122,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The name of the signing certificate.
      * 
      */
-    @InputImport(name="signingCertificateName")
+    @Import(name="signingCertificateName")
       private final @Nullable Output<String> signingCertificateName;
 
     public Output<String> getSigningCertificateName() {

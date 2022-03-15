@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
      * Format of message.
      * 
      */
-    @InputImport(name="messageFormat")
+    @Import(name="messageFormat")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
 
     public Output<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> getMessageFormat() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
      * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as serialized ConversationEvent protos. Notification works for phone calls, if this topic either is in the same project as the conversation or you grant `service-@gcp-sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic project. Format: `projects//locations//topics/`.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {

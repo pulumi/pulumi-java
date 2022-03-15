@@ -12,7 +12,7 @@ import io.pulumi.azurenative.kusto.inputs.TrustedExternalTenantArgs;
 import io.pulumi.azurenative.kusto.inputs.VirtualNetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -40,7 +40,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean value that indicates if the cluster's disks are encrypted.
      * 
      */
-    @InputImport(name="enableDiskEncryption")
+    @Import(name="enableDiskEncryption")
       private final @Nullable Output<Boolean> enableDiskEncryption;
 
     public Output<Boolean> getEnableDiskEncryption() {
@@ -51,7 +51,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean value that indicates if double encryption is enabled.
      * 
      */
-    @InputImport(name="enableDoubleEncryption")
+    @Import(name="enableDoubleEncryption")
       private final @Nullable Output<Boolean> enableDoubleEncryption;
 
     public Output<Boolean> getEnableDoubleEncryption() {
@@ -62,7 +62,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean value that indicates if the purge operations are enabled.
      * 
      */
-    @InputImport(name="enablePurge")
+    @Import(name="enablePurge")
       private final @Nullable Output<Boolean> enablePurge;
 
     public Output<Boolean> getEnablePurge() {
@@ -73,7 +73,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean value that indicates if the streaming ingest is enabled.
      * 
      */
-    @InputImport(name="enableStreamingIngest")
+    @Import(name="enableStreamingIngest")
       private final @Nullable Output<Boolean> enableStreamingIngest;
 
     public Output<Boolean> getEnableStreamingIngest() {
@@ -84,7 +84,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The engine type
      * 
      */
-    @InputImport(name="engineType")
+    @Import(name="engineType")
       private final @Nullable Output<Either<String,EngineType>> engineType;
 
     public Output<Either<String,EngineType>> getEngineType() {
@@ -95,7 +95,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the cluster, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -106,7 +106,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * KeyVault properties for the cluster encryption.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
@@ -117,7 +117,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -128,7 +128,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optimized auto scale definition.
      * 
      */
-    @InputImport(name="optimizedAutoscale")
+    @Import(name="optimizedAutoscale")
       private final @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
 
     public Output<OptimizedAutoscaleArgs> getOptimizedAutoscale() {
@@ -139,7 +139,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -150,7 +150,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the cluster.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<AzureSkuArgs> sku;
 
     public Output<AzureSkuArgs> getSku() {
@@ -161,7 +161,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -172,7 +172,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The cluster's external tenants.
      * 
      */
-    @InputImport(name="trustedExternalTenants")
+    @Import(name="trustedExternalTenants")
       private final @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
 
     public Output<List<TrustedExternalTenantArgs>> getTrustedExternalTenants() {
@@ -183,7 +183,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual network definition.
      * 
      */
-    @InputImport(name="virtualNetworkConfiguration")
+    @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
@@ -194,7 +194,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The availability zones of the cluster.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

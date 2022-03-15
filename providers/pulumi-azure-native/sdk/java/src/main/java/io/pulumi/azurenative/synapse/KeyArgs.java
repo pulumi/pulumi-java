@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Used to activate the workspace after a customer managed key is provided.
      * 
      */
-    @InputImport(name="isActiveCMK")
+    @Import(name="isActiveCMK")
       private final @Nullable Output<Boolean> isActiveCMK;
 
     public Output<Boolean> getIsActiveCMK() {
@@ -30,7 +30,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace key
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -41,7 +41,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The Key Vault Url of the workspace key.
      * 
      */
-    @InputImport(name="keyVaultUrl")
+    @Import(name="keyVaultUrl")
       private final @Nullable Output<String> keyVaultUrl;
 
     public Output<String> getKeyVaultUrl() {
@@ -52,7 +52,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

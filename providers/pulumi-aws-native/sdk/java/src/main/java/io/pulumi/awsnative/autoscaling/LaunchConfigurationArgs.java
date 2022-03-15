@@ -6,7 +6,7 @@ package io.pulumi.awsnative.autoscaling;
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceMappingArgs;
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationMetadataOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances.
      * 
      */
-    @InputImport(name="associatePublicIpAddress")
+    @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
     public Output<Boolean> getAssociatePublicIpAddress() {
@@ -33,7 +33,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes.
      * 
      */
-    @InputImport(name="blockDeviceMappings")
+    @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Output<List<LaunchConfigurationBlockDeviceMappingArgs>> getBlockDeviceMappings() {
@@ -44,7 +44,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.
      * 
      */
-    @InputImport(name="classicLinkVPCId")
+    @Import(name="classicLinkVPCId")
       private final @Nullable Output<String> classicLinkVPCId;
 
     public Output<String> getClassicLinkVPCId() {
@@ -55,7 +55,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.
      * 
      */
-    @InputImport(name="classicLinkVPCSecurityGroups")
+    @Import(name="classicLinkVPCSecurityGroups")
       private final @Nullable Output<List<String>> classicLinkVPCSecurityGroups;
 
     public Output<List<String>> getClassicLinkVPCSecurityGroups() {
@@ -66,7 +66,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Specifies whether the launch configuration is optimized for EBS I/O (true) or not (false).
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
@@ -77,7 +77,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Provides the name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role.
      * 
      */
-    @InputImport(name="iamInstanceProfile")
+    @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
     public Output<String> getIamInstanceProfile() {
@@ -88,7 +88,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Provides the unique ID of the Amazon Machine Image (AMI) that was assigned during registration.
      * 
      */
-    @InputImport(name="imageId", required=true)
+    @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
     public Output<String> getImageId() {
@@ -99,7 +99,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The ID of the Amazon EC2 instance you want to use to create the launch configuration.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -110,7 +110,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Controls whether instances in this group are launched with detailed (true) or basic (false) monitoring.
      * 
      */
-    @InputImport(name="instanceMonitoring")
+    @Import(name="instanceMonitoring")
       private final @Nullable Output<Boolean> instanceMonitoring;
 
     public Output<Boolean> getInstanceMonitoring() {
@@ -121,7 +121,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Specifies the instance type of the EC2 instance.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -132,7 +132,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Provides the ID of the kernel associated with the EC2 AMI.
      * 
      */
-    @InputImport(name="kernelId")
+    @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
@@ -143,7 +143,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * Provides the name of the EC2 key pair.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -154,7 +154,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The name of the launch configuration. This name must be unique per Region per account.
      * 
      */
-    @InputImport(name="launchConfigurationName")
+    @Import(name="launchConfigurationName")
       private final @Nullable Output<String> launchConfigurationName;
 
     public Output<String> getLaunchConfigurationName() {
@@ -165,7 +165,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The metadata options for the instances.
      * 
      */
-    @InputImport(name="metadataOptions")
+    @Import(name="metadataOptions")
       private final @Nullable Output<LaunchConfigurationMetadataOptionsArgs> metadataOptions;
 
     public Output<LaunchConfigurationMetadataOptionsArgs> getMetadataOptions() {
@@ -176,7 +176,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The tenancy of the instance, either default or dedicated.
      * 
      */
-    @InputImport(name="placementTenancy")
+    @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
 
     public Output<String> getPlacementTenancy() {
@@ -187,7 +187,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The ID of the RAM disk to select.
      * 
      */
-    @InputImport(name="ramDiskId")
+    @Import(name="ramDiskId")
       private final @Nullable Output<String> ramDiskId;
 
     public Output<String> getRamDiskId() {
@@ -198,7 +198,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * A list that contains the security groups to assign to the instances in the Auto Scaling group.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -209,7 +209,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request.
      * 
      */
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
@@ -220,7 +220,7 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
      * The Base64-encoded user data to make available to the launched EC2 instances.
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {

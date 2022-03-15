@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.ObjectReplicationPolicyArgs;
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * Required. Destination account name.
      * 
      */
-    @OutputExport(name="destinationAccount", type=String.class, parameters={})
+    @Export(name="destinationAccount", type=String.class, parameters={})
     private Output<String> destinationAccount;
 
     /**
@@ -49,7 +49,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * Indicates when the policy is enabled on the source account.
      * 
      */
-    @OutputExport(name="enabledTime", type=String.class, parameters={})
+    @Export(name="enabledTime", type=String.class, parameters={})
     private Output<String> enabledTime;
 
     /**
@@ -63,7 +63,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * A unique id for object replication policy.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**
@@ -91,7 +91,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * The storage account object replication rules.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={ObjectReplicationPolicyRuleResponse.class})
+    @Export(name="rules", type=List.class, parameters={ObjectReplicationPolicyRuleResponse.class})
     private Output</* @Nullable */ List<ObjectReplicationPolicyRuleResponse>> rules;
 
     /**
@@ -105,7 +105,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * Required. Source account name.
      * 
      */
-    @OutputExport(name="sourceAccount", type=String.class, parameters={})
+    @Export(name="sourceAccount", type=String.class, parameters={})
     private Output<String> sourceAccount;
 
     /**
@@ -119,7 +119,7 @@ public class ObjectReplicationPolicy extends io.pulumi.resources.CustomResource 
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

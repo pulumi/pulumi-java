@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable Output<String> keySource;
 
     public Output<String> getKeySource() {

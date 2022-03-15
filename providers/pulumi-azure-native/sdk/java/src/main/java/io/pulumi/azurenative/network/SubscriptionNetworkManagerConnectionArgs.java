@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
      * A description of the scope connection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
      * Name for the network manager connection.
      * 
      */
-    @InputImport(name="networkManagerConnectionName")
+    @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
 
     public Output<String> getNetworkManagerConnectionName() {
@@ -40,7 +40,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
      * Network Manager Id.
      * 
      */
-    @InputImport(name="networkManagerId")
+    @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;
 
     public Output<String> getNetworkManagerId() {

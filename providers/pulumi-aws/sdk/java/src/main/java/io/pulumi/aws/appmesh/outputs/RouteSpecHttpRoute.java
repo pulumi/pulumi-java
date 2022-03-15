@@ -7,12 +7,12 @@ import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteAction;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteMatch;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteRetryPolicy;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteTimeout;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttpRoute {
     /**
      * The action to take if a match is determined.
@@ -35,12 +35,12 @@ public final class RouteSpecHttpRoute {
      */
     private final @Nullable RouteSpecHttpRouteTimeout timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttpRoute(
-        @OutputCustomType.Parameter("action") RouteSpecHttpRouteAction action,
-        @OutputCustomType.Parameter("match") RouteSpecHttpRouteMatch match,
-        @OutputCustomType.Parameter("retryPolicy") @Nullable RouteSpecHttpRouteRetryPolicy retryPolicy,
-        @OutputCustomType.Parameter("timeout") @Nullable RouteSpecHttpRouteTimeout timeout) {
+        @CustomType.Parameter("action") RouteSpecHttpRouteAction action,
+        @CustomType.Parameter("match") RouteSpecHttpRouteMatch match,
+        @CustomType.Parameter("retryPolicy") @Nullable RouteSpecHttpRouteRetryPolicy retryPolicy,
+        @CustomType.Parameter("timeout") @Nullable RouteSpecHttpRouteTimeout timeout) {
         this.action = action;
         this.match = match;
         this.retryPolicy = retryPolicy;

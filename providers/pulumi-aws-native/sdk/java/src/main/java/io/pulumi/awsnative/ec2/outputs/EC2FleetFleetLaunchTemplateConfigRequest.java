@@ -5,21 +5,21 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.EC2FleetFleetLaunchTemplateOverridesRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetFleetLaunchTemplateSpecificationRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetFleetLaunchTemplateConfigRequest {
     private final @Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification;
     private final @Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetFleetLaunchTemplateConfigRequest(
-        @OutputCustomType.Parameter("launchTemplateSpecification") @Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification,
-        @OutputCustomType.Parameter("overrides") @Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides) {
+        @CustomType.Parameter("launchTemplateSpecification") @Nullable EC2FleetFleetLaunchTemplateSpecificationRequest launchTemplateSpecification,
+        @CustomType.Parameter("overrides") @Nullable List<EC2FleetFleetLaunchTemplateOverridesRequest> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

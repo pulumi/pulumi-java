@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.RevocationDetailsResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * A structured description of the issued X.509 certificate.
@@ -85,22 +85,22 @@ public final class GetCertificateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("certificateDescription") CertificateDescriptionResponse certificateDescription,
-        @OutputCustomType.Parameter("certificateTemplate") String certificateTemplate,
-        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("issuerCertificateAuthority") String issuerCertificateAuthority,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lifetime") String lifetime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pemCertificate") String pemCertificate,
-        @OutputCustomType.Parameter("pemCertificateChain") List<String> pemCertificateChain,
-        @OutputCustomType.Parameter("pemCsr") String pemCsr,
-        @OutputCustomType.Parameter("revocationDetails") RevocationDetailsResponse revocationDetails,
-        @OutputCustomType.Parameter("subjectMode") String subjectMode,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("certificateDescription") CertificateDescriptionResponse certificateDescription,
+        @CustomType.Parameter("certificateTemplate") String certificateTemplate,
+        @CustomType.Parameter("config") CertificateConfigResponse config,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("issuerCertificateAuthority") String issuerCertificateAuthority,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lifetime") String lifetime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pemCertificate") String pemCertificate,
+        @CustomType.Parameter("pemCertificateChain") List<String> pemCertificateChain,
+        @CustomType.Parameter("pemCsr") String pemCsr,
+        @CustomType.Parameter("revocationDetails") RevocationDetailsResponse revocationDetails,
+        @CustomType.Parameter("subjectMode") String subjectMode,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.certificateDescription = certificateDescription;
         this.certificateTemplate = certificateTemplate;
         this.config = config;

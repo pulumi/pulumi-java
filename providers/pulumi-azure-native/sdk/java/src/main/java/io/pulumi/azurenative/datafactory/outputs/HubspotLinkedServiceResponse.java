@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HubspotLinkedServiceResponse {
     /**
      * The access token obtained when initially authenticating your OAuth integration.
@@ -86,21 +86,21 @@ public final class HubspotLinkedServiceResponse {
      */
     private final @Nullable Object usePeerVerification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HubspotLinkedServiceResponse(
-        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("clientId") Object clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
-        @OutputCustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
-        @OutputCustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
+        @CustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("clientId") Object clientId,
+        @CustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints,
+        @CustomType.Parameter("useHostVerification") @Nullable Object useHostVerification,
+        @CustomType.Parameter("usePeerVerification") @Nullable Object usePeerVerification) {
         this.accessToken = accessToken;
         this.annotations = annotations;
         this.clientId = clientId;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firebase;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.ProjectLocationArgs;
@@ -52,7 +52,7 @@ public class ProjectLocation extends io.pulumi.resources.CustomResource {
      * resource locations.
      * 
      */
-    @OutputExport(name="locationId", type=String.class, parameters={})
+    @Export(name="locationId", type=String.class, parameters={})
     private Output<String> locationId;
 
     /**
@@ -68,7 +68,7 @@ public class ProjectLocation extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

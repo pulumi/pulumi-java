@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabric.outputs.DiagnosticsStorageAccountConf
 import io.pulumi.azurenative.servicefabric.outputs.NodeTypeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ServerCertificateCommonNamesResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The list of add-on features to enable in the cluster.
@@ -196,38 +196,38 @@ public final class GetClusterResult {
      */
     private final @Nullable String vmImage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("addOnFeatures") @Nullable List<String> addOnFeatures,
-        @OutputCustomType.Parameter("applicationTypeVersionsCleanupPolicy") @Nullable ApplicationTypeVersionsCleanupPolicyResponse applicationTypeVersionsCleanupPolicy,
-        @OutputCustomType.Parameter("availableClusterVersions") List<ClusterVersionDetailsResponse> availableClusterVersions,
-        @OutputCustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
-        @OutputCustomType.Parameter("certificate") @Nullable CertificateDescriptionResponse certificate,
-        @OutputCustomType.Parameter("certificateCommonNames") @Nullable ServerCertificateCommonNamesResponse certificateCommonNames,
-        @OutputCustomType.Parameter("clientCertificateCommonNames") @Nullable List<ClientCertificateCommonNameResponse> clientCertificateCommonNames,
-        @OutputCustomType.Parameter("clientCertificateThumbprints") @Nullable List<ClientCertificateThumbprintResponse> clientCertificateThumbprints,
-        @OutputCustomType.Parameter("clusterCodeVersion") @Nullable String clusterCodeVersion,
-        @OutputCustomType.Parameter("clusterEndpoint") String clusterEndpoint,
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("clusterState") String clusterState,
-        @OutputCustomType.Parameter("diagnosticsStorageAccountConfig") @Nullable DiagnosticsStorageAccountConfigResponse diagnosticsStorageAccountConfig,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("eventStoreServiceEnabled") @Nullable Boolean eventStoreServiceEnabled,
-        @OutputCustomType.Parameter("fabricSettings") @Nullable List<SettingsSectionDescriptionResponse> fabricSettings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managementEndpoint") String managementEndpoint,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeTypes") List<NodeTypeDescriptionResponse> nodeTypes,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("reliabilityLevel") @Nullable String reliabilityLevel,
-        @OutputCustomType.Parameter("reverseProxyCertificate") @Nullable CertificateDescriptionResponse reverseProxyCertificate,
-        @OutputCustomType.Parameter("reverseProxyCertificateCommonNames") @Nullable ServerCertificateCommonNamesResponse reverseProxyCertificateCommonNames,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("upgradeDescription") @Nullable ClusterUpgradePolicyResponse upgradeDescription,
-        @OutputCustomType.Parameter("upgradeMode") @Nullable String upgradeMode,
-        @OutputCustomType.Parameter("vmImage") @Nullable String vmImage) {
+        @CustomType.Parameter("addOnFeatures") @Nullable List<String> addOnFeatures,
+        @CustomType.Parameter("applicationTypeVersionsCleanupPolicy") @Nullable ApplicationTypeVersionsCleanupPolicyResponse applicationTypeVersionsCleanupPolicy,
+        @CustomType.Parameter("availableClusterVersions") List<ClusterVersionDetailsResponse> availableClusterVersions,
+        @CustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
+        @CustomType.Parameter("certificate") @Nullable CertificateDescriptionResponse certificate,
+        @CustomType.Parameter("certificateCommonNames") @Nullable ServerCertificateCommonNamesResponse certificateCommonNames,
+        @CustomType.Parameter("clientCertificateCommonNames") @Nullable List<ClientCertificateCommonNameResponse> clientCertificateCommonNames,
+        @CustomType.Parameter("clientCertificateThumbprints") @Nullable List<ClientCertificateThumbprintResponse> clientCertificateThumbprints,
+        @CustomType.Parameter("clusterCodeVersion") @Nullable String clusterCodeVersion,
+        @CustomType.Parameter("clusterEndpoint") String clusterEndpoint,
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("clusterState") String clusterState,
+        @CustomType.Parameter("diagnosticsStorageAccountConfig") @Nullable DiagnosticsStorageAccountConfigResponse diagnosticsStorageAccountConfig,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("eventStoreServiceEnabled") @Nullable Boolean eventStoreServiceEnabled,
+        @CustomType.Parameter("fabricSettings") @Nullable List<SettingsSectionDescriptionResponse> fabricSettings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managementEndpoint") String managementEndpoint,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeTypes") List<NodeTypeDescriptionResponse> nodeTypes,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("reliabilityLevel") @Nullable String reliabilityLevel,
+        @CustomType.Parameter("reverseProxyCertificate") @Nullable CertificateDescriptionResponse reverseProxyCertificate,
+        @CustomType.Parameter("reverseProxyCertificateCommonNames") @Nullable ServerCertificateCommonNamesResponse reverseProxyCertificateCommonNames,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("upgradeDescription") @Nullable ClusterUpgradePolicyResponse upgradeDescription,
+        @CustomType.Parameter("upgradeMode") @Nullable String upgradeMode,
+        @CustomType.Parameter("vmImage") @Nullable String vmImage) {
         this.addOnFeatures = addOnFeatures;
         this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
         this.availableClusterVersions = availableClusterVersions;

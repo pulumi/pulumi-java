@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearning.WebServiceArgs;
 import io.pulumi.azurenative.machinelearning.outputs.WebServicePropertiesForGraphResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class WebService extends io.pulumi.resources.CustomResource {
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class WebService extends io.pulumi.resources.CustomResource {
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class WebService extends io.pulumi.resources.CustomResource {
      * Contains the property payload that describes the web service.
      * 
      */
-    @OutputExport(name="properties", type=WebServicePropertiesForGraphResponse.class, parameters={})
+    @Export(name="properties", type=WebServicePropertiesForGraphResponse.class, parameters={})
     private Output<WebServicePropertiesForGraphResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class WebService extends io.pulumi.resources.CustomResource {
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -92,7 +92,7 @@ public class WebService extends io.pulumi.resources.CustomResource {
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

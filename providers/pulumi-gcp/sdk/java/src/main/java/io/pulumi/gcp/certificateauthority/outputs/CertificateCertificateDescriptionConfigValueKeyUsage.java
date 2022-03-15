@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionConfigValueKeyUsage {
     /**
      * Describes high-level ways in which a key may be used.
@@ -32,11 +32,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
      */
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescriptionConfigValueKeyUsage(
-        @OutputCustomType.Parameter("baseKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages,
-        @OutputCustomType.Parameter("extendedKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages,
-        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @CustomType.Parameter("baseKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages,
+        @CustomType.Parameter("extendedKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages,
+        @CustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsages = baseKeyUsages;
         this.extendedKeyUsages = extendedKeyUsages;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

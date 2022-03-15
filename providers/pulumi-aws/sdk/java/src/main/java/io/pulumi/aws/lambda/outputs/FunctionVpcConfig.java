@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionVpcConfig {
     /**
      * List of security group IDs associated with the Lambda function.
@@ -24,11 +24,11 @@ public final class FunctionVpcConfig {
     private final List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionVpcConfig(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

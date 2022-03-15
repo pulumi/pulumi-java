@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.BasicPerfSampleSeriesResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPerfSampleSeriesResult {
     /**
      * Basic series represented by a line chart
@@ -41,14 +41,14 @@ public final class GetPerfSampleSeriesResult {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPerfSampleSeriesResult(
-        @OutputCustomType.Parameter("basicPerfSampleSeries") BasicPerfSampleSeriesResponse basicPerfSampleSeries,
-        @OutputCustomType.Parameter("executionId") String executionId,
-        @OutputCustomType.Parameter("historyId") String historyId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("sampleSeriesId") String sampleSeriesId,
-        @OutputCustomType.Parameter("stepId") String stepId) {
+        @CustomType.Parameter("basicPerfSampleSeries") BasicPerfSampleSeriesResponse basicPerfSampleSeries,
+        @CustomType.Parameter("executionId") String executionId,
+        @CustomType.Parameter("historyId") String historyId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("sampleSeriesId") String sampleSeriesId,
+        @CustomType.Parameter("stepId") String stepId) {
         this.basicPerfSampleSeries = basicPerfSampleSeries;
         this.executionId = executionId;
         this.historyId = historyId;

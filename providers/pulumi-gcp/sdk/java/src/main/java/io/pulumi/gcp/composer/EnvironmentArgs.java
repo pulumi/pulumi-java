@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration parameters for this environment.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<EnvironmentConfigArgs> config;
 
     public Output<EnvironmentConfigArgs> getConfig() {
@@ -35,7 +35,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * associated with a given environment. Both keys and values must be <= 128 bytes in size.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -46,7 +46,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The location or Compute Engine region for the environment.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

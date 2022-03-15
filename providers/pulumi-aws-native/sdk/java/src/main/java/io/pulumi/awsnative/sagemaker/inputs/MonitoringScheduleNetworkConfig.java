@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleVpcConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MonitoringScheduleNetworkConfig extends io.pulumi.resources.I
      * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
      * 
      */
-    @InputImport(name="enableInterContainerTrafficEncryption")
+    @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Boolean enableInterContainerTrafficEncryption;
 
     public Optional<Boolean> getEnableInterContainerTrafficEncryption() {
@@ -34,14 +34,14 @@ public final class MonitoringScheduleNetworkConfig extends io.pulumi.resources.I
      * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
      * 
      */
-    @InputImport(name="enableNetworkIsolation")
+    @Import(name="enableNetworkIsolation")
       private final @Nullable Boolean enableNetworkIsolation;
 
     public Optional<Boolean> getEnableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Optional.empty() : Optional.ofNullable(this.enableNetworkIsolation);
     }
 
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable MonitoringScheduleVpcConfig vpcConfig;
 
     public Optional<MonitoringScheduleVpcConfig> getVpcConfig() {

@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceSessionKeysAbpV11;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WirelessDeviceAbpV11 {
     private final String devAddr;
     private final WirelessDeviceSessionKeysAbpV11 sessionKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WirelessDeviceAbpV11(
-        @OutputCustomType.Parameter("devAddr") String devAddr,
-        @OutputCustomType.Parameter("sessionKeys") WirelessDeviceSessionKeysAbpV11 sessionKeys) {
+        @CustomType.Parameter("devAddr") String devAddr,
+        @CustomType.Parameter("sessionKeys") WirelessDeviceSessionKeysAbpV11 sessionKeys) {
         this.devAddr = devAddr;
         this.sessionKeys = sessionKeys;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
      * The IP address of the peer to retrieve the status of.
      * 
      */
-    @InputImport(name="peer")
+    @Import(name="peer")
       private final @Nullable String peer;
 
     public Optional<String> getPeer() {
@@ -29,7 +29,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusArgs extends io.pulumi.r
      * The name of the virtual network gateway.
      * 
      */
-    @InputImport(name="virtualNetworkGatewayName", required=true)
+    @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
     public String getVirtualNetworkGatewayName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
      * Migration validation result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class MigrationReportResultResponse extends io.pulumi.resources.Inv
      * The url of the report.
      * 
      */
-    @InputImport(name="reportUrl", required=true)
+    @Import(name="reportUrl", required=true)
       private final String reportUrl;
 
     public String getReportUrl() {

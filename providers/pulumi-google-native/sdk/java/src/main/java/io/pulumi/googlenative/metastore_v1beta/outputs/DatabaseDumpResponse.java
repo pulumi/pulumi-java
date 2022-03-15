@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseDumpResponse {
     /**
      * The type of the database.
@@ -30,12 +30,12 @@ public final class DatabaseDumpResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseDumpResponse(
-        @OutputCustomType.Parameter("databaseType") String databaseType,
-        @OutputCustomType.Parameter("gcsUri") String gcsUri,
-        @OutputCustomType.Parameter("sourceDatabase") String sourceDatabase,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("databaseType") String databaseType,
+        @CustomType.Parameter("gcsUri") String gcsUri,
+        @CustomType.Parameter("sourceDatabase") String sourceDatabase,
+        @CustomType.Parameter("type") String type) {
         this.databaseType = databaseType;
         this.gcsUri = gcsUri;
         this.sourceDatabase = sourceDatabase;

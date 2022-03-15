@@ -7,7 +7,7 @@ import io.pulumi.azurenative.elastic.enums.ProvisioningState;
 import io.pulumi.azurenative.elastic.inputs.LogRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * Rules for sending logs.
      * 
      */
-    @InputImport(name="logRules")
+    @Import(name="logRules")
       private final @Nullable Output<LogRulesArgs> logRules;
 
     public Output<LogRulesArgs> getLogRules() {
@@ -36,7 +36,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * Provisioning state of the monitoring tag rules.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {

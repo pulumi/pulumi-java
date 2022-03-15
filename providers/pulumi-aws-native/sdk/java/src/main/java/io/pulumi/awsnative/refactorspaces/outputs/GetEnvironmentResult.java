@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.outputs.EnvironmentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     private final @Nullable String arn;
     private final @Nullable String environmentIdentifier;
@@ -22,12 +22,12 @@ public final class GetEnvironmentResult {
     private final @Nullable List<EnvironmentTag> tags;
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("environmentIdentifier") @Nullable String environmentIdentifier,
-        @OutputCustomType.Parameter("tags") @Nullable List<EnvironmentTag> tags,
-        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("environmentIdentifier") @Nullable String environmentIdentifier,
+        @CustomType.Parameter("tags") @Nullable List<EnvironmentTag> tags,
+        @CustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.arn = arn;
         this.environmentIdentifier = environmentIdentifier;
         this.tags = tags;

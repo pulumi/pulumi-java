@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.codestarconnections.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     private final String arn;
     /**
@@ -42,15 +42,15 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
-        @OutputCustomType.Parameter("hostArn") String hostArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("providerType") String providerType,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("connectionStatus") String connectionStatus,
+        @CustomType.Parameter("hostArn") String hostArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("providerType") String providerType,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.connectionStatus = connectionStatus;
         this.hostArn = hostArn;

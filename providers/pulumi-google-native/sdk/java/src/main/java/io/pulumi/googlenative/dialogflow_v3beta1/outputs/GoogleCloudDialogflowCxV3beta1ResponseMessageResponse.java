@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse;
@@ -16,7 +16,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse {
     /**
      * Indicates that the conversation succeeded.
@@ -64,17 +64,17 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ResponseMessageResponse(
-        @OutputCustomType.Parameter("conversationSuccess") GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess,
-        @OutputCustomType.Parameter("endInteraction") GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction,
-        @OutputCustomType.Parameter("liveAgentHandoff") GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff,
-        @OutputCustomType.Parameter("mixedAudio") GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio,
-        @OutputCustomType.Parameter("outputAudioText") GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText,
-        @OutputCustomType.Parameter("payload") Map<String,String> payload,
-        @OutputCustomType.Parameter("playAudio") GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio,
-        @OutputCustomType.Parameter("telephonyTransferCall") GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall,
-        @OutputCustomType.Parameter("text") GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text) {
+        @CustomType.Parameter("conversationSuccess") GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess,
+        @CustomType.Parameter("endInteraction") GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction,
+        @CustomType.Parameter("liveAgentHandoff") GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff,
+        @CustomType.Parameter("mixedAudio") GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio,
+        @CustomType.Parameter("outputAudioText") GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText,
+        @CustomType.Parameter("payload") Map<String,String> payload,
+        @CustomType.Parameter("playAudio") GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio,
+        @CustomType.Parameter("telephonyTransferCall") GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall,
+        @CustomType.Parameter("text") GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text) {
         this.conversationSuccess = conversationSuccess;
         this.endInteraction = endInteraction;
         this.liveAgentHandoff = liveAgentHandoff;

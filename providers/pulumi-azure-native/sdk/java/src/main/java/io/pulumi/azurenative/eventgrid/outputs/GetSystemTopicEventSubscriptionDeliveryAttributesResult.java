@@ -6,12 +6,12 @@ package io.pulumi.azurenative.eventgrid.outputs;
 import io.pulumi.azurenative.eventgrid.outputs.DynamicDeliveryAttributeMappingResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StaticDeliveryAttributeMappingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
     /**
      * A collection of DeliveryAttributeMapping
@@ -19,8 +19,8 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
      */
     private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value;
 
-    @OutputCustomType.Constructor
-    private GetSystemTopicEventSubscriptionDeliveryAttributesResult(@OutputCustomType.Parameter("value") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
+    @CustomType.Constructor
+    private GetSystemTopicEventSubscriptionDeliveryAttributesResult(@CustomType.Parameter("value") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
         this.value = value;
     }
 

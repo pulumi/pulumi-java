@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
      * The password for the private registry. The password is required for create or update operations, however it is not returned in the get or list operations.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -33,7 +33,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
      * Docker image registry server, without protocol such as `http` and `https`.
      * 
      */
-    @InputImport(name="server", required=true)
+    @Import(name="server", required=true)
       private final Output<String> server;
 
     public Output<String> getServer() {
@@ -44,7 +44,7 @@ public final class ImageRegistryCredentialArgs extends io.pulumi.resources.Resou
      * The username for the private registry.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * The database to which the query belongs.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -29,7 +29,7 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * A brief explanation of the query. Maximum length of 1024.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * The plain language name for the query. Maximum length of 128.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * The text of the query itself. In other words, all query statements. Maximum length of 262144.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -62,7 +62,7 @@ public final class NamedQueryState extends io.pulumi.resources.ResourceArgs {
      * The workgroup to which the query belongs. Defaults to `primary`
      * 
      */
-    @InputImport(name="workgroup")
+    @Import(name="workgroup")
       private final @Nullable Output<String> workgroup;
 
     public Output<String> getWorkgroup() {

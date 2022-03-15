@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLCustomRequestHandling;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLAllowAction {
     private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor
-    private WebACLAllowAction(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebACLCustomRequestHandling customRequestHandling) {
+    @CustomType.Constructor
+    private WebACLAllowAction(@CustomType.Parameter("customRequestHandling") @Nullable WebACLCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

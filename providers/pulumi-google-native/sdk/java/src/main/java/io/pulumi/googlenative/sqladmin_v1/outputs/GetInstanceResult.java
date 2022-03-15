@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DiskEncryptionConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DiskEncryptionStatusResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.InstanceFailoverReplicaResponse;
@@ -19,7 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
@@ -182,40 +182,40 @@ public final class GetInstanceResult {
      */
     private final List<String> suspensionReason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("backendType") String backendType,
-        @OutputCustomType.Parameter("connectionName") String connectionName,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("currentDiskSize") String currentDiskSize,
-        @OutputCustomType.Parameter("databaseInstalledVersion") String databaseInstalledVersion,
-        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
-        @OutputCustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        @OutputCustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
-        @OutputCustomType.Parameter("failoverReplica") InstanceFailoverReplicaResponse failoverReplica,
-        @OutputCustomType.Parameter("gceZone") String gceZone,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ipAddresses") List<IpMappingResponse> ipAddresses,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("masterInstanceName") String masterInstanceName,
-        @OutputCustomType.Parameter("maxDiskSize") String maxDiskSize,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("onPremisesConfiguration") OnPremisesConfigurationResponse onPremisesConfiguration,
-        @OutputCustomType.Parameter("outOfDiskReport") SqlOutOfDiskReportResponse outOfDiskReport,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("replicaConfiguration") ReplicaConfigurationResponse replicaConfiguration,
-        @OutputCustomType.Parameter("replicaNames") List<String> replicaNames,
-        @OutputCustomType.Parameter("rootPassword") String rootPassword,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("scheduledMaintenance") SqlScheduledMaintenanceResponse scheduledMaintenance,
-        @OutputCustomType.Parameter("secondaryGceZone") String secondaryGceZone,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serverCaCert") SslCertResponse serverCaCert,
-        @OutputCustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
-        @OutputCustomType.Parameter("settings") SettingsResponse settings,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("suspensionReason") List<String> suspensionReason) {
+        @CustomType.Parameter("backendType") String backendType,
+        @CustomType.Parameter("connectionName") String connectionName,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("currentDiskSize") String currentDiskSize,
+        @CustomType.Parameter("databaseInstalledVersion") String databaseInstalledVersion,
+        @CustomType.Parameter("databaseVersion") String databaseVersion,
+        @CustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @CustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
+        @CustomType.Parameter("failoverReplica") InstanceFailoverReplicaResponse failoverReplica,
+        @CustomType.Parameter("gceZone") String gceZone,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ipAddresses") List<IpMappingResponse> ipAddresses,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("masterInstanceName") String masterInstanceName,
+        @CustomType.Parameter("maxDiskSize") String maxDiskSize,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("onPremisesConfiguration") OnPremisesConfigurationResponse onPremisesConfiguration,
+        @CustomType.Parameter("outOfDiskReport") SqlOutOfDiskReportResponse outOfDiskReport,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("replicaConfiguration") ReplicaConfigurationResponse replicaConfiguration,
+        @CustomType.Parameter("replicaNames") List<String> replicaNames,
+        @CustomType.Parameter("rootPassword") String rootPassword,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("scheduledMaintenance") SqlScheduledMaintenanceResponse scheduledMaintenance,
+        @CustomType.Parameter("secondaryGceZone") String secondaryGceZone,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serverCaCert") SslCertResponse serverCaCert,
+        @CustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
+        @CustomType.Parameter("settings") SettingsResponse settings,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("suspensionReason") List<String> suspensionReason) {
         this.backendType = backendType;
         this.connectionName = connectionName;
         this.createTime = createTime;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleAccountResponse {
     /**
      * Input only. The password of the Google account. The credential is stored encrypted and not returned in any response nor included in audit logs.
@@ -20,10 +20,10 @@ public final class GoogleAccountResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleAccountResponse(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }

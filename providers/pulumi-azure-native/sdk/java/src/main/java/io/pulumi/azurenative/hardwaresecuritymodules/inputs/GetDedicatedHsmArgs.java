@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the dedicated HSM.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetDedicatedHsmArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Resource Group to which the dedicated hsm belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

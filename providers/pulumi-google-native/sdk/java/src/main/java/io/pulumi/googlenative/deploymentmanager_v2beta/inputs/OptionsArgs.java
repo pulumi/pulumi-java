@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.AsyncOptionsArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.InputMappingArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ValidationOptionsArgs;
@@ -26,7 +26,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Options regarding how to thread async requests.
      * 
      */
-    @InputImport(name="asyncOptions")
+    @Import(name="asyncOptions")
       private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
     public Output<List<AsyncOptionsArgs>> getAsyncOptions() {
@@ -37,7 +37,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The mappings that apply for requests.
      * 
      */
-    @InputImport(name="inputMappings")
+    @Import(name="inputMappings")
       private final @Nullable Output<List<InputMappingArgs>> inputMappings;
 
     public Output<List<InputMappingArgs>> getInputMappings() {
@@ -48,7 +48,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Options for how to validate and process properties on a resource.
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable Output<ValidationOptionsArgs> validationOptions;
 
     public Output<ValidationOptionsArgs> getValidationOptions() {
@@ -59,7 +59,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Additional properties block described as a jsonSchema, these properties will never be part of the json payload, but they can be consumed by InputMappings, this must be a valid json schema draft-04. The properties specified here will be decouple in a different section. This schema will be merged to the schema validation, and properties here will be extracted From the payload and consumed explicitly by InputMappings. ex: field1: type: string field2: type: number
      * 
      */
-    @InputImport(name="virtualProperties")
+    @Import(name="virtualProperties")
       private final @Nullable Output<String> virtualProperties;
 
     public Output<String> getVirtualProperties() {

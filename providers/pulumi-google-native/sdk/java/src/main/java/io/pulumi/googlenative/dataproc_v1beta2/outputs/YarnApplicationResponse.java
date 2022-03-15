@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class YarnApplicationResponse {
     /**
      * The application name.
@@ -31,12 +31,12 @@ public final class YarnApplicationResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private YarnApplicationResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("progress") Double progress,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("progress") Double progress,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trackingUrl") String trackingUrl) {
         this.name = name;
         this.progress = progress;
         this.state = state;

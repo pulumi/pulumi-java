@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.file_v1.enums.InstanceTier;
 import io.pulumi.googlenative.file_v1.inputs.FileShareConfigArgs;
 import io.pulumi.googlenative.file_v1.inputs.NetworkConfigArgs;
@@ -23,7 +23,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the instance (2048 characters or less).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -45,14 +45,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * File system shares on the instance. For this version, only a single file share is supported.
      * 
      */
-    @InputImport(name="fileShares")
+    @Import(name="fileShares")
       private final @Nullable Output<List<FileShareConfigArgs>> fileShares;
 
     public Output<List<FileShareConfigArgs>> getFileShares() {
         return this.fileShares == null ? Output.empty() : this.fileShares;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -63,7 +63,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * KMS key name used for data encryption.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -74,14 +74,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -92,14 +92,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * VPC networks to which the instance is connected. For this version, only a single network is supported.
      * 
      */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<NetworkConfigArgs>> networks;
 
     public Output<List<NetworkConfigArgs>> getNetworks() {
         return this.networks == null ? Output.empty() : this.networks;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -110,7 +110,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The service tier of the instance.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<InstanceTier> tier;
 
     public Output<InstanceTier> getTier() {

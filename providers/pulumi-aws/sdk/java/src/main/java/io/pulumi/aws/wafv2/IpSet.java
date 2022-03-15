@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.wafv2.IpSetArgs;
 import io.pulumi.aws.wafv2.inputs.IpSetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
      * 
      */
-    @OutputExport(name="addresses", type=List.class, parameters={String.class})
+    @Export(name="addresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addresses;
 
     /**
@@ -48,7 +48,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) that identifies the cluster.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * A friendly description of the IP set.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -76,7 +76,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * Specify IPV4 or IPV6. Valid values are `IPV4` or `IPV6`.
      * 
      */
-    @OutputExport(name="ipAddressVersion", type=String.class, parameters={})
+    @Export(name="ipAddressVersion", type=String.class, parameters={})
     private Output<String> ipAddressVersion;
 
     /**
@@ -86,7 +86,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
     public Output<String> getIpAddressVersion() {
         return this.ipAddressVersion;
     }
-    @OutputExport(name="lockToken", type=String.class, parameters={})
+    @Export(name="lockToken", type=String.class, parameters={})
     private Output<String> lockToken;
 
     public Output<String> getLockToken() {
@@ -96,7 +96,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * A friendly name of the IP set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the Region US East (N. Virginia).
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
@@ -124,7 +124,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -138,7 +138,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

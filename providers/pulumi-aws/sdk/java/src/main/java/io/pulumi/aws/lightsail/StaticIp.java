@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lightsail.StaticIpArgs;
 import io.pulumi.aws.lightsail.inputs.StaticIpState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The ARN of the Lightsail static IP
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The allocated static IP address
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -54,7 +54,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The name for the allocated static IP
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -68,7 +68,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The support code.
      * 
      */
-    @OutputExport(name="supportCode", type=String.class, parameters={})
+    @Export(name="supportCode", type=String.class, parameters={})
     private Output<String> supportCode;
 
     /**

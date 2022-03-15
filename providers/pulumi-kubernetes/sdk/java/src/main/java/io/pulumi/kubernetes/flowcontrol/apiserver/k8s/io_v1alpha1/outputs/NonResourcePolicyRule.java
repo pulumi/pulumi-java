@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NonResourcePolicyRule {
     /**
      * `nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
@@ -27,10 +27,10 @@ public final class NonResourcePolicyRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonResourcePolicyRule(
-        @OutputCustomType.Parameter("nonResourceURLs") List<String> nonResourceURLs,
-        @OutputCustomType.Parameter("verbs") List<String> verbs) {
+        @CustomType.Parameter("nonResourceURLs") List<String> nonResourceURLs,
+        @CustomType.Parameter("verbs") List<String> verbs) {
         this.nonResourceURLs = nonResourceURLs;
         this.verbs = verbs;
     }

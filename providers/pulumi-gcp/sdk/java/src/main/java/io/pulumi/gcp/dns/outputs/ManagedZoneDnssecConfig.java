@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZoneDnssecConfigDefaultKeySpec;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneDnssecConfig {
     /**
      * Specifies parameters that will be used for generating initial DnsKeys
@@ -41,12 +41,12 @@ public final class ManagedZoneDnssecConfig {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneDnssecConfig(
-        @OutputCustomType.Parameter("defaultKeySpecs") @Nullable List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("nonExistence") @Nullable String nonExistence,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("defaultKeySpecs") @Nullable List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("nonExistence") @Nullable String nonExistence,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.defaultKeySpecs = defaultKeySpecs;
         this.kind = kind;
         this.nonExistence = nonExistence;

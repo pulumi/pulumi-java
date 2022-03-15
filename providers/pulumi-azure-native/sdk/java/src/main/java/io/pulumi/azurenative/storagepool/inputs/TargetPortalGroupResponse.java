@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagepool.inputs;
 import io.pulumi.azurenative.storagepool.inputs.AclResponse;
 import io.pulumi.azurenative.storagepool.inputs.AttributesResponse;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * Access Control List (ACL) for an iSCSI target portal group.
      * 
      */
-    @InputImport(name="acls", required=true)
+    @Import(name="acls", required=true)
       private final List<AclResponse> acls;
 
     public List<AclResponse> getAcls() {
@@ -36,7 +36,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * Attributes of an iSCSI target portal group.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final AttributesResponse attributes;
 
     public AttributesResponse getAttributes() {
@@ -47,7 +47,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * List of private IPv4 addresses to connect to the iSCSI target.
      * 
      */
-    @InputImport(name="endpoints", required=true)
+    @Import(name="endpoints", required=true)
       private final List<String> endpoints;
 
     public List<String> getEndpoints() {
@@ -58,7 +58,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * List of LUNs to be exposed through iSCSI target portal group.
      * 
      */
-    @InputImport(name="luns", required=true)
+    @Import(name="luns", required=true)
       private final List<IscsiLunResponse> luns;
 
     public List<IscsiLunResponse> getLuns() {
@@ -69,7 +69,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * The port used by iSCSI target portal group.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -80,7 +80,7 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
      * The tag associated with the iSCSI target portal group.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final Integer tag;
 
     public Integer getTag() {

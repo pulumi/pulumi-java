@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="accountEndpoint")
+    @Import(name="accountEndpoint")
       private final @Nullable Output<Object> accountEndpoint;
 
     public Output<Object> getAccountEndpoint() {
@@ -44,7 +44,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The account key of the Azure CosmosDB account. Type: SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccountKey() {
@@ -55,7 +55,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -66,7 +66,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="azureCloudType")
+    @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
     public Output<Object> getAzureCloudType() {
@@ -77,7 +77,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -88,7 +88,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The connection mode used to access CosmosDB account. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="connectionMode")
+    @Import(name="connectionMode")
       private final @Nullable Output<Either<String,CosmosDbConnectionMode>> connectionMode;
 
     public Output<Either<String,CosmosDbConnectionMode>> getConnectionMode() {
@@ -99,7 +99,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -110,7 +110,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -121,7 +121,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The name of the database. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<Object> database;
 
     public Output<Object> getDatabase() {
@@ -132,7 +132,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -143,7 +143,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -154,7 +154,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -165,7 +165,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="servicePrincipalCredential")
+    @Import(name="servicePrincipalCredential")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
@@ -176,7 +176,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalCredentialType")
+    @Import(name="servicePrincipalCredentialType")
       private final @Nullable Output<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType;
 
     public Output<Either<String,CosmosDbServicePrincipalCredentialType>> getServicePrincipalCredentialType() {
@@ -187,7 +187,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -198,7 +198,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
     public Output<Object> getTenant() {
@@ -210,7 +210,7 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Expected value is 'CosmosDb'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

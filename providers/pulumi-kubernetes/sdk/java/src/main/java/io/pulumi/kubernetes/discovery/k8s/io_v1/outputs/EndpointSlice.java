@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.outputs.Endpoint;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.outputs.EndpointPort;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointSlice {
     /**
      * addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.
@@ -51,14 +51,14 @@ public final class EndpointSlice {
      */
     private final @Nullable List<EndpointPort> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointSlice(
-        @OutputCustomType.Parameter("addressType") String addressType,
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("endpoints") List<Endpoint> endpoints,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
+        @CustomType.Parameter("addressType") String addressType,
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("endpoints") List<Endpoint> endpoints,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
         this.addressType = addressType;
         this.apiVersion = apiVersion;
         this.endpoints = endpoints;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3InputMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
 
     public static final ModelExplainabilityJobDefinitionEndpointInputArgs Empty = new ModelExplainabilityJobDefinitionEndpointInputArgs();
 
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -31,7 +31,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * JSONpath to locate features in JSONlines dataset
      * 
      */
-    @InputImport(name="featuresAttribute")
+    @Import(name="featuresAttribute")
       private final @Nullable Output<String> featuresAttribute;
 
     public Output<String> getFeaturesAttribute() {
@@ -42,7 +42,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * Index or JSONpath to locate predicted label(s)
      * 
      */
-    @InputImport(name="inferenceAttribute")
+    @Import(name="inferenceAttribute")
       private final @Nullable Output<String> inferenceAttribute;
 
     public Output<String> getInferenceAttribute() {
@@ -53,7 +53,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * Path to the filesystem where the endpoint data is available to the container.
      * 
      */
-    @InputImport(name="localPath", required=true)
+    @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
     public Output<String> getLocalPath() {
@@ -64,7 +64,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * Index or JSONpath to locate probabilities
      * 
      */
-    @InputImport(name="probabilityAttribute")
+    @Import(name="probabilityAttribute")
       private final @Nullable Output<String> probabilityAttribute;
 
     public Output<String> getProbabilityAttribute() {
@@ -75,7 +75,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key. Defauts to FullyReplicated
      * 
      */
-    @InputImport(name="s3DataDistributionType")
+    @Import(name="s3DataDistributionType")
       private final @Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Output<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
@@ -86,7 +86,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * Whether the Pipe or File is used as the input mode for transfering data for the monitoring job. Pipe mode is recommended for large datasets. File mode is useful for small files that fit in memory. Defaults to File.
      * 
      */
-    @InputImport(name="s3InputMode")
+    @Import(name="s3InputMode")
       private final @Nullable Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
     public Output<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {

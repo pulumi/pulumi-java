@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.NotificationRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * The notification registration.
      * 
      */
-    @InputImport(name="notificationRegistrationName")
+    @Import(name="notificationRegistrationName")
       private final @Nullable Output<String> notificationRegistrationName;
 
     public Output<String> getNotificationRegistrationName() {
         return this.notificationRegistrationName == null ? Output.empty() : this.notificationRegistrationName;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<NotificationRegistrationPropertiesArgs> properties;
 
     public Output<NotificationRegistrationPropertiesArgs> getProperties() {
@@ -37,7 +37,7 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
      * The name of the resource provider hosted within ProviderHub.
      * 
      */
-    @InputImport(name="providerNamespace", required=true)
+    @Import(name="providerNamespace", required=true)
       private final Output<String> providerNamespace;
 
     public Output<String> getProviderNamespace() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.StorageAccountType;
 import io.pulumi.azurenative.compute.inputs.TargetRegionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    @InputImport(name="endOfLifeDate")
+    @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
     public Output<String> getEndOfLifeDate() {
@@ -39,7 +39,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
      * 
      */
-    @InputImport(name="excludeFromLatest")
+    @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
     public Output<Boolean> getExcludeFromLatest() {
@@ -50,7 +50,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
@@ -61,7 +61,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
     public Output<Either<String,StorageAccountType>> getStorageAccountType() {
@@ -72,7 +72,7 @@ public final class GalleryImageVersionPublishingProfileArgs extends io.pulumi.re
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
      */
-    @InputImport(name="targetRegions")
+    @Import(name="targetRegions")
       private final @Nullable Output<List<TargetRegionArgs>> targetRegions;
 
     public Output<List<TargetRegionArgs>> getTargetRegions() {

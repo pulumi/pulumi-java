@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
      * Indicates which weekdays snapshot should be taken, accepts a comma separated list of week day names in english
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable String day;
 
     public Optional<String> getDay() {
@@ -35,7 +35,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
      * Indicates which hour in UTC timezone a snapshot should be taken
      * 
      */
-    @InputImport(name="hour")
+    @Import(name="hour")
       private final @Nullable Integer hour;
 
     public Optional<Integer> getHour() {
@@ -46,7 +46,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
      * Indicates which minute snapshot should be taken
      * 
      */
-    @InputImport(name="minute")
+    @Import(name="minute")
       private final @Nullable Integer minute;
 
     public Optional<Integer> getMinute() {
@@ -57,7 +57,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
      * Weekly snapshot count to keep
      * 
      */
-    @InputImport(name="snapshotsToKeep")
+    @Import(name="snapshotsToKeep")
       private final @Nullable Integer snapshotsToKeep;
 
     public Optional<Integer> getSnapshotsToKeep() {
@@ -68,7 +68,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
      */
-    @InputImport(name="usedBytes")
+    @Import(name="usedBytes")
       private final @Nullable Double usedBytes;
 
     public Optional<Double> getUsedBytes() {

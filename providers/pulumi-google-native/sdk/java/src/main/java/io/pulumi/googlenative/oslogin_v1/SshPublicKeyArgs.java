@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.oslogin_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * An expiration time in microseconds since epoch.
      * 
      */
-    @InputImport(name="expirationTimeUsec")
+    @Import(name="expirationTimeUsec")
       private final @Nullable Output<String> expirationTimeUsec;
 
     public Output<String> getExpirationTimeUsec() {
@@ -29,14 +29,14 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
         return this.key == null ? Output.empty() : this.key;
     }
 
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

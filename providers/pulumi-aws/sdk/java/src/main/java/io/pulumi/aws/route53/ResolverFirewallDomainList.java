@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallDomainListArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallDomainListState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ResolverFirewallDomainList extends io.pulumi.resources.CustomResour
      * The ARN (Amazon Resource Name) of the domain list.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class ResolverFirewallDomainList extends io.pulumi.resources.CustomResour
      * A array of domains for the firewall domain list.
      * 
      */
-    @OutputExport(name="domains", type=List.class, parameters={String.class})
+    @Export(name="domains", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domains;
 
     /**
@@ -62,7 +62,7 @@ public class ResolverFirewallDomainList extends io.pulumi.resources.CustomResour
      * A name that lets you identify the domain list, to manage and use it.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ResolverFirewallDomainList extends io.pulumi.resources.CustomResour
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -90,7 +90,7 @@ public class ResolverFirewallDomainList extends io.pulumi.resources.CustomResour
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

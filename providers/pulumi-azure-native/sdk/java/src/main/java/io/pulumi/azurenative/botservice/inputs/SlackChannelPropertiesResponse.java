@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Slack client id
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -34,7 +34,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
@@ -45,7 +45,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -56,7 +56,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * Whether this channel is validated for the bot
      * 
      */
-    @InputImport(name="isValidated", required=true)
+    @Import(name="isValidated", required=true)
       private final Boolean isValidated;
 
     public Boolean getIsValidated() {
@@ -67,7 +67,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Slack landing page Url
      * 
      */
-    @InputImport(name="landingPageUrl")
+    @Import(name="landingPageUrl")
       private final @Nullable String landingPageUrl;
 
     public Optional<String> getLandingPageUrl() {
@@ -78,7 +78,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Sms auth token
      * 
      */
-    @InputImport(name="lastSubmissionId", required=true)
+    @Import(name="lastSubmissionId", required=true)
       private final String lastSubmissionId;
 
     public String getLastSubmissionId() {
@@ -89,7 +89,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Slack redirect action
      * 
      */
-    @InputImport(name="redirectAction", required=true)
+    @Import(name="redirectAction", required=true)
       private final String redirectAction;
 
     public String getRedirectAction() {
@@ -100,7 +100,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * Whether to register the settings before OAuth validation is performed. Recommended to True.
      * 
      */
-    @InputImport(name="registerBeforeOAuthFlow", required=true)
+    @Import(name="registerBeforeOAuthFlow", required=true)
       private final Boolean registerBeforeOAuthFlow;
 
     public Boolean getRegisterBeforeOAuthFlow() {
@@ -111,7 +111,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Slack signing secret.
      * 
      */
-    @InputImport(name="signingSecret")
+    @Import(name="signingSecret")
       private final @Nullable String signingSecret;
 
     public Optional<String> getSigningSecret() {
@@ -122,7 +122,7 @@ public final class SlackChannelPropertiesResponse extends io.pulumi.resources.In
      * The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="verificationToken")
+    @Import(name="verificationToken")
       private final @Nullable String verificationToken;
 
     public Optional<String> getVerificationToken() {

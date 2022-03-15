@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AddressArgs;
@@ -69,7 +69,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * if any.
      * 
      */
-    @OutputExport(name="address", type=String.class, parameters={})
+    @Export(name="address", type=String.class, parameters={})
     private Output<String> address;
 
     /**
@@ -88,7 +88,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * Possible values are `INTERNAL` and `EXTERNAL`.
      * 
      */
-    @OutputExport(name="addressType", type=String.class, parameters={})
+    @Export(name="addressType", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressType;
 
     /**
@@ -104,7 +104,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -118,7 +118,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -132,7 +132,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -146,7 +146,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * Labels to apply to this address.  A list of key->value pairs.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -165,7 +165,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -186,7 +186,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * IPSEC_INTERCONNECT purposes.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output</* @Nullable */ String> network;
 
     /**
@@ -204,7 +204,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * Possible values are `PREMIUM` and `STANDARD`.
      * 
      */
-    @OutputExport(name="networkTier", type=String.class, parameters={})
+    @Export(name="networkTier", type=String.class, parameters={})
     private Output<String> networkTier;
 
     /**
@@ -220,7 +220,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * The prefix length if the resource represents an IP range.
      * 
      */
-    @OutputExport(name="prefixLength", type=Integer.class, parameters={})
+    @Export(name="prefixLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> prefixLength;
 
     /**
@@ -235,7 +235,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -262,7 +262,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      *   This should only be set when using an Internal address.
      * 
      */
-    @OutputExport(name="purpose", type=String.class, parameters={})
+    @Export(name="purpose", type=String.class, parameters={})
     private Output<String> purpose;
 
     /**
@@ -289,7 +289,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -304,7 +304,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -321,7 +321,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * GCE_ENDPOINT/DNS_RESOLVER purposes.
      * 
      */
-    @OutputExport(name="subnetwork", type=String.class, parameters={})
+    @Export(name="subnetwork", type=String.class, parameters={})
     private Output<String> subnetwork;
 
     /**
@@ -338,7 +338,7 @@ public class Address extends io.pulumi.resources.CustomResource {
      * The URLs of the resources that are using this address.
      * 
      */
-    @OutputExport(name="users", type=List.class, parameters={String.class})
+    @Export(name="users", type=List.class, parameters={String.class})
     private Output<List<String>> users;
 
     /**

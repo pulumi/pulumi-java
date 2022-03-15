@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.IndividualOutcomeOutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.lang.Integer;
@@ -25,14 +25,14 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
      * Unique int given to each step. Ranges from 0(inclusive) to total number of steps(exclusive). The primary step is 0.
      * 
      */
-    @InputImport(name="multistepNumber")
+    @Import(name="multistepNumber")
       private final @Nullable Output<Integer> multistepNumber;
 
     public Output<Integer> getMultistepNumber() {
         return this.multistepNumber == null ? Output.empty() : this.multistepNumber;
     }
 
-    @InputImport(name="outcomeSummary")
+    @Import(name="outcomeSummary")
       private final @Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary;
 
     public Output<IndividualOutcomeOutcomeSummary> getOutcomeSummary() {
@@ -43,14 +43,14 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
      * How long it took for this step to run.
      * 
      */
-    @InputImport(name="runDuration")
+    @Import(name="runDuration")
       private final @Nullable Output<DurationArgs> runDuration;
 
     public Output<DurationArgs> getRunDuration() {
         return this.runDuration == null ? Output.empty() : this.runDuration;
     }
 
-    @InputImport(name="stepId")
+    @Import(name="stepId")
       private final @Nullable Output<String> stepId;
 
     public Output<String> getStepId() {

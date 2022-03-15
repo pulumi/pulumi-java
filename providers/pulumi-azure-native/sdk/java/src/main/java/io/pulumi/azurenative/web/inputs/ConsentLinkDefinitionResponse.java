@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * Display name of the parameter in the connection provider's OAuth settings
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * URI for first party login
      * 
      */
-    @InputImport(name="firstPartyLoginUri")
+    @Import(name="firstPartyLoginUri")
       private final @Nullable String firstPartyLoginUri;
 
     public Optional<String> getFirstPartyLoginUri() {
@@ -44,7 +44,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * URI for the consent link
      * 
      */
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable String link;
 
     public Optional<String> getLink() {
@@ -55,7 +55,7 @@ public final class ConsentLinkDefinitionResponse extends io.pulumi.resources.Inv
      * Status of the link
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

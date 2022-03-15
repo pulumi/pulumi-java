@@ -4,7 +4,7 @@
 package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyExcludeMapArgs extends io.pulumi.resources.ResourceArgs
      * A list of AWS Organization member Accounts that you want to include for this AWS FMS Policy.
      * 
      */
-    @InputImport(name="accounts")
+    @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
     public Output<List<String>> getAccounts() {
@@ -30,7 +30,7 @@ public final class PolicyExcludeMapArgs extends io.pulumi.resources.ResourceArgs
      * A list of AWS Organizational Units that you want to include for this AWS FMS Policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time.
      * 
      */
-    @InputImport(name="orgunits")
+    @Import(name="orgunits")
       private final @Nullable Output<List<String>> orgunits;
 
     public Output<List<String>> getOrgunits() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) for the FSx for Lustre file system.
      * 
      */
-    @InputImport(name="fsxFilesystemArn", required=true)
+    @Import(name="fsxFilesystemArn", required=true)
       private final Output<String> fsxFilesystemArn;
 
     public Output<String> getFsxFilesystemArn() {
@@ -31,7 +31,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
      * 
      */
-    @InputImport(name="securityGroupArns", required=true)
+    @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
@@ -42,7 +42,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * Subdirectory to perform actions as source or destination.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -53,7 +53,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

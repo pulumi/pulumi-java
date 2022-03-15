@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * Oracle objects to include in the stream.
      * 
      */
-    @InputImport(name="allowlist")
+    @Import(name="allowlist")
       private final @Nullable Output<OracleRdbmsArgs> allowlist;
 
     public Output<OracleRdbmsArgs> getAllowlist() {
@@ -33,7 +33,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * Oracle objects to exclude from the stream.
      * 
      */
-    @InputImport(name="rejectlist")
+    @Import(name="rejectlist")
       private final @Nullable Output<OracleRdbmsArgs> rejectlist;
 
     public Output<OracleRdbmsArgs> getRejectlist() {

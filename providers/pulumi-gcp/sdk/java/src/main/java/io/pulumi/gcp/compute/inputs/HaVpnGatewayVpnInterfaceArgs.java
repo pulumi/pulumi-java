@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
      * The numeric ID of this VPN gateway interface.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<Integer> id;
 
     public Output<Integer> getId() {
@@ -35,7 +35,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
      * Not currently available publicly.
      * 
      */
-    @InputImport(name="interconnectAttachment")
+    @Import(name="interconnectAttachment")
       private final @Nullable Output<String> interconnectAttachment;
 
     public Output<String> getInterconnectAttachment() {
@@ -47,7 +47,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
      * The external IP address for this VPN gateway interface.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {

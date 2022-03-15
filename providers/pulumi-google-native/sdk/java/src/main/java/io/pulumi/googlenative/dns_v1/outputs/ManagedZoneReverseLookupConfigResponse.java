@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneReverseLookupConfigResponse {
     private final String kind;
 
-    @OutputCustomType.Constructor
-    private ManagedZoneReverseLookupConfigResponse(@OutputCustomType.Parameter("kind") String kind) {
+    @CustomType.Constructor
+    private ManagedZoneReverseLookupConfigResponse(@CustomType.Parameter("kind") String kind) {
         this.kind = kind;
     }
 

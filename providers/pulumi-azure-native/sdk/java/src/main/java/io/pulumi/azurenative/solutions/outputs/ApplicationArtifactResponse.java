@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationArtifactResponse {
     /**
      * The managed application artifact name.
@@ -25,11 +25,11 @@ public final class ApplicationArtifactResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationArtifactResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") String uri) {
         this.name = name;
         this.type = type;
         this.uri = uri;

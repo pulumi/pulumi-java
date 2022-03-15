@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class TopicRuleKafkaActionArgs extends io.pulumi.resources.Resource
 
     public static final TopicRuleKafkaActionArgs Empty = new TopicRuleKafkaActionArgs();
 
-    @InputImport(name="clientProperties", required=true)
+    @Import(name="clientProperties", required=true)
       private final Output<Object> clientProperties;
 
     public Output<Object> getClientProperties() {
         return this.clientProperties;
     }
 
-    @InputImport(name="destinationArn", required=true)
+    @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
         return this.destinationArn;
     }
 
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
         return this.key == null ? Output.empty() : this.key;
     }
 
-    @InputImport(name="partition")
+    @Import(name="partition")
       private final @Nullable Output<String> partition;
 
     public Output<String> getPartition() {
         return this.partition == null ? Output.empty() : this.partition;
     }
 
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

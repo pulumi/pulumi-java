@@ -10,7 +10,7 @@ import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProdu
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningPreferences;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -23,19 +23,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:servicecatalog:CloudFormationProvisionedProduct")
 public class CloudFormationProvisionedProduct extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="acceptLanguage", type=CloudFormationProvisionedProductAcceptLanguage.class, parameters={})
+    @Export(name="acceptLanguage", type=CloudFormationProvisionedProductAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
     public Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
         return this.acceptLanguage;
     }
-    @OutputExport(name="cloudformationStackArn", type=String.class, parameters={})
+    @Export(name="cloudformationStackArn", type=String.class, parameters={})
     private Output<String> cloudformationStackArn;
 
     public Output<String> getCloudformationStackArn() {
         return this.cloudformationStackArn;
     }
-    @OutputExport(name="notificationArns", type=List.class, parameters={String.class})
+    @Export(name="notificationArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationArns;
 
     public Output</* @Nullable */ List<String>> getNotificationArns() {
@@ -45,7 +45,7 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
      * List of key-value pair outputs.
      * 
      */
-    @OutputExport(name="outputs", type=Object.class, parameters={})
+    @Export(name="outputs", type=Object.class, parameters={})
     private Output<Object> outputs;
 
     /**
@@ -55,73 +55,73 @@ public class CloudFormationProvisionedProduct extends io.pulumi.resources.Custom
     public Output<Object> getOutputs() {
         return this.outputs;
     }
-    @OutputExport(name="pathId", type=String.class, parameters={})
+    @Export(name="pathId", type=String.class, parameters={})
     private Output</* @Nullable */ String> pathId;
 
     public Output</* @Nullable */ String> getPathId() {
         return this.pathId;
     }
-    @OutputExport(name="pathName", type=String.class, parameters={})
+    @Export(name="pathName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pathName;
 
     public Output</* @Nullable */ String> getPathName() {
         return this.pathName;
     }
-    @OutputExport(name="productId", type=String.class, parameters={})
+    @Export(name="productId", type=String.class, parameters={})
     private Output</* @Nullable */ String> productId;
 
     public Output</* @Nullable */ String> getProductId() {
         return this.productId;
     }
-    @OutputExport(name="productName", type=String.class, parameters={})
+    @Export(name="productName", type=String.class, parameters={})
     private Output</* @Nullable */ String> productName;
 
     public Output</* @Nullable */ String> getProductName() {
         return this.productName;
     }
-    @OutputExport(name="provisionedProductId", type=String.class, parameters={})
+    @Export(name="provisionedProductId", type=String.class, parameters={})
     private Output<String> provisionedProductId;
 
     public Output<String> getProvisionedProductId() {
         return this.provisionedProductId;
     }
-    @OutputExport(name="provisionedProductName", type=String.class, parameters={})
+    @Export(name="provisionedProductName", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisionedProductName;
 
     public Output</* @Nullable */ String> getProvisionedProductName() {
         return this.provisionedProductName;
     }
-    @OutputExport(name="provisioningArtifactId", type=String.class, parameters={})
+    @Export(name="provisioningArtifactId", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningArtifactId;
 
     public Output</* @Nullable */ String> getProvisioningArtifactId() {
         return this.provisioningArtifactId;
     }
-    @OutputExport(name="provisioningArtifactName", type=String.class, parameters={})
+    @Export(name="provisioningArtifactName", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningArtifactName;
 
     public Output</* @Nullable */ String> getProvisioningArtifactName() {
         return this.provisioningArtifactName;
     }
-    @OutputExport(name="provisioningParameters", type=List.class, parameters={CloudFormationProvisionedProductProvisioningParameter.class})
+    @Export(name="provisioningParameters", type=List.class, parameters={CloudFormationProvisionedProductProvisioningParameter.class})
     private Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> provisioningParameters;
 
     public Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> getProvisioningParameters() {
         return this.provisioningParameters;
     }
-    @OutputExport(name="provisioningPreferences", type=CloudFormationProvisionedProductProvisioningPreferences.class, parameters={})
+    @Export(name="provisioningPreferences", type=CloudFormationProvisionedProductProvisioningPreferences.class, parameters={})
     private Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> provisioningPreferences;
 
     public Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> getProvisioningPreferences() {
         return this.provisioningPreferences;
     }
-    @OutputExport(name="recordId", type=String.class, parameters={})
+    @Export(name="recordId", type=String.class, parameters={})
     private Output<String> recordId;
 
     public Output<String> getRecordId() {
         return this.recordId;
     }
-    @OutputExport(name="tags", type=List.class, parameters={CloudFormationProvisionedProductTag.class})
+    @Export(name="tags", type=List.class, parameters={CloudFormationProvisionedProductTag.class})
     private Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> tags;
 
     public Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> getTags() {

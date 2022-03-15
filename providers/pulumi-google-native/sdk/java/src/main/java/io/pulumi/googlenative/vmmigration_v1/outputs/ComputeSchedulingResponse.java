@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.SchedulingNodeAffinityResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComputeSchedulingResponse {
     /**
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node. Ignored if no node_affinites are configured.
@@ -33,12 +33,12 @@ public final class ComputeSchedulingResponse {
      */
     private final String restartType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeSchedulingResponse(
-        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
-        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
-        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
-        @OutputCustomType.Parameter("restartType") String restartType) {
+        @CustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @CustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @CustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @CustomType.Parameter("restartType") String restartType) {
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;

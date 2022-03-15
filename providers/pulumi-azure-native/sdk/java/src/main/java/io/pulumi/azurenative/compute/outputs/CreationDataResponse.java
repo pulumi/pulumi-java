@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ImageDiskReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CreationDataResponse {
     /**
      * This enumerates the possible sources of a disk's creation.
@@ -60,17 +60,17 @@ public final class CreationDataResponse {
      */
     private final @Nullable Double uploadSizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CreationDataResponse(
-        @OutputCustomType.Parameter("createOption") String createOption,
-        @OutputCustomType.Parameter("galleryImageReference") @Nullable ImageDiskReferenceResponse galleryImageReference,
-        @OutputCustomType.Parameter("imageReference") @Nullable ImageDiskReferenceResponse imageReference,
-        @OutputCustomType.Parameter("logicalSectorSize") @Nullable Integer logicalSectorSize,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
-        @OutputCustomType.Parameter("sourceUniqueId") String sourceUniqueId,
-        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri,
-        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
-        @OutputCustomType.Parameter("uploadSizeBytes") @Nullable Double uploadSizeBytes) {
+        @CustomType.Parameter("createOption") String createOption,
+        @CustomType.Parameter("galleryImageReference") @Nullable ImageDiskReferenceResponse galleryImageReference,
+        @CustomType.Parameter("imageReference") @Nullable ImageDiskReferenceResponse imageReference,
+        @CustomType.Parameter("logicalSectorSize") @Nullable Integer logicalSectorSize,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @CustomType.Parameter("sourceUniqueId") String sourceUniqueId,
+        @CustomType.Parameter("sourceUri") @Nullable String sourceUri,
+        @CustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @CustomType.Parameter("uploadSizeBytes") @Nullable Double uploadSizeBytes) {
         this.createOption = createOption;
         this.galleryImageReference = galleryImageReference;
         this.imageReference = imageReference;

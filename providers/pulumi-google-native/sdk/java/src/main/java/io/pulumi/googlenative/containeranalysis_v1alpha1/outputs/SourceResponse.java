@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.RepoSourceResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.StorageSourceResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
@@ -45,14 +45,14 @@ public final class SourceResponse {
      */
     private final StorageSourceResponse storageSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("additionalContexts") List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
-        @OutputCustomType.Parameter("artifactStorageSource") StorageSourceResponse artifactStorageSource,
-        @OutputCustomType.Parameter("context") GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
-        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes,
-        @OutputCustomType.Parameter("repoSource") RepoSourceResponse repoSource,
-        @OutputCustomType.Parameter("storageSource") StorageSourceResponse storageSource) {
+        @CustomType.Parameter("additionalContexts") List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
+        @CustomType.Parameter("artifactStorageSource") StorageSourceResponse artifactStorageSource,
+        @CustomType.Parameter("context") GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
+        @CustomType.Parameter("fileHashes") Map<String,String> fileHashes,
+        @CustomType.Parameter("repoSource") RepoSourceResponse repoSource,
+        @CustomType.Parameter("storageSource") StorageSourceResponse storageSource) {
         this.additionalContexts = additionalContexts;
         this.artifactStorageSource = artifactStorageSource;
         this.context = context;

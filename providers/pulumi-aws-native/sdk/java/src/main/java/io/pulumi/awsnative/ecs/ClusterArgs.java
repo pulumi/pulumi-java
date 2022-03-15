@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ecs.inputs.ClusterConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.ClusterSettingsArgs;
 import io.pulumi.awsnative.ecs.inputs.ClusterTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
-    @InputImport(name="capacityProviders")
+    @Import(name="capacityProviders")
       private final @Nullable Output<List<String>> capacityProviders;
 
     public Output<List<String>> getCapacityProviders() {
@@ -30,35 +30,35 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A user-generated string that you use to identify your cluster. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
         return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
-    @InputImport(name="clusterSettings")
+    @Import(name="clusterSettings")
       private final @Nullable Output<List<ClusterSettingsArgs>> clusterSettings;
 
     public Output<List<ClusterSettingsArgs>> getClusterSettings() {
         return this.clusterSettings == null ? Output.empty() : this.clusterSettings;
     }
 
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ClusterConfigurationArgs> configuration;
 
     public Output<ClusterConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Output.empty() : this.configuration;
     }
 
-    @InputImport(name="defaultCapacityProviderStrategy")
+    @Import(name="defaultCapacityProviderStrategy")
       private final @Nullable Output<List<ClusterCapacityProviderStrategyItemArgs>> defaultCapacityProviderStrategy;
 
     public Output<List<ClusterCapacityProviderStrategyItemArgs>> getDefaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy == null ? Output.empty() : this.defaultCapacityProviderStrategy;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;
 
     public Output<List<ClusterTagArgs>> getTags() {

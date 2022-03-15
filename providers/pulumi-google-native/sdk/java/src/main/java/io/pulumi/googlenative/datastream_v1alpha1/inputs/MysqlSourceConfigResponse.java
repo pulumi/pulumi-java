@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
      * MySQL objects to retrieve from the source.
      * 
      */
-    @InputImport(name="allowlist", required=true)
+    @Import(name="allowlist", required=true)
       private final MysqlRdbmsResponse allowlist;
 
     public MysqlRdbmsResponse getAllowlist() {
@@ -31,7 +31,7 @@ public final class MysqlSourceConfigResponse extends io.pulumi.resources.InvokeA
      * MySQL objects to exclude from the stream.
      * 
      */
-    @InputImport(name="rejectlist", required=true)
+    @Import(name="rejectlist", required=true)
       private final MysqlRdbmsResponse rejectlist;
 
     public MysqlRdbmsResponse getRejectlist() {

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringContainsAdvancedFilterRespon
 import io.pulumi.azurenative.eventgrid.inputs.StringEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringInAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * An array of advanced filters that are used for filtering event subscriptions.
      * 
      */
-    @InputImport(name="advancedFilters")
+    @Import(name="advancedFilters")
       private final @Nullable List<Object> advancedFilters;
 
     public List<Object> getAdvancedFilters() {
@@ -48,7 +48,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * A list of applicable event types that need to be part of the event subscription. If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
      * 
      */
-    @InputImport(name="includedEventTypes")
+    @Import(name="includedEventTypes")
       private final @Nullable List<String> includedEventTypes;
 
     public List<String> getIncludedEventTypes() {
@@ -60,7 +60,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * should be compared in a case sensitive manner.
      * 
      */
-    @InputImport(name="isSubjectCaseSensitive")
+    @Import(name="isSubjectCaseSensitive")
       private final @Nullable Boolean isSubjectCaseSensitive;
 
     public Optional<Boolean> getIsSubjectCaseSensitive() {
@@ -73,7 +73,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * Wildcard characters are not supported in this path.
      * 
      */
-    @InputImport(name="subjectBeginsWith")
+    @Import(name="subjectBeginsWith")
       private final @Nullable String subjectBeginsWith;
 
     public Optional<String> getSubjectBeginsWith() {
@@ -85,7 +85,7 @@ public final class EventSubscriptionFilterResponse extends io.pulumi.resources.I
      * Wildcard characters are not supported in this path.
      * 
      */
-    @InputImport(name="subjectEndsWith")
+    @Import(name="subjectEndsWith")
       private final @Nullable String subjectEndsWith;
 
     public Optional<String> getSubjectEndsWith() {

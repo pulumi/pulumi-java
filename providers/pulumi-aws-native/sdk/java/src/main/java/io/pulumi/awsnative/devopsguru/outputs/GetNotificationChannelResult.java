@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.devopsguru.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationChannelResult {
     /**
      * The ID of a notification channel.
@@ -17,8 +17,8 @@ public final class GetNotificationChannelResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private GetNotificationChannelResult(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private GetNotificationChannelResult(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

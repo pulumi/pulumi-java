@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadResult {
     /**
      * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
@@ -87,22 +87,22 @@ public final class GetWorkloadResult {
      */
     private final GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadResult(
-        @OutputCustomType.Parameter("billingAccount") String billingAccount,
-        @OutputCustomType.Parameter("complianceRegime") String complianceRegime,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableSovereignControls") Boolean enableSovereignControls,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("kajEnrollmentState") String kajEnrollmentState,
-        @OutputCustomType.Parameter("kmsSettings") GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisionedResourcesParent") String provisionedResourcesParent,
-        @OutputCustomType.Parameter("resourceSettings") List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings,
-        @OutputCustomType.Parameter("resources") List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources,
-        @OutputCustomType.Parameter("saaEnrollmentResponse") GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
+        @CustomType.Parameter("billingAccount") String billingAccount,
+        @CustomType.Parameter("complianceRegime") String complianceRegime,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableSovereignControls") Boolean enableSovereignControls,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("kajEnrollmentState") String kajEnrollmentState,
+        @CustomType.Parameter("kmsSettings") GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisionedResourcesParent") String provisionedResourcesParent,
+        @CustomType.Parameter("resourceSettings") List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings,
+        @CustomType.Parameter("resources") List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources,
+        @CustomType.Parameter("saaEnrollmentResponse") GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
         this.billingAccount = billingAccount;
         this.complianceRegime = complianceRegime;
         this.createTime = createTime;

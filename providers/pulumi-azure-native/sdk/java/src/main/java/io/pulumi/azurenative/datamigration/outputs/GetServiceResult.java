@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ServiceSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * HTTP strong entity tag value. Ignored if submitted
@@ -69,19 +69,19 @@ public final class GetServiceResult {
      */
     private final String virtualSubnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
-        @OutputCustomType.Parameter("sku") @Nullable ServiceSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualSubnetId") String virtualSubnetId) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicKey") @Nullable String publicKey,
+        @CustomType.Parameter("sku") @Nullable ServiceSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualSubnetId") String virtualSubnetId) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentityConfigResponse {
     /**
      * Map of user to service account.
@@ -16,8 +16,8 @@ public final class IdentityConfigResponse {
      */
     private final Map<String,String> userServiceAccountMapping;
 
-    @OutputCustomType.Constructor
-    private IdentityConfigResponse(@OutputCustomType.Parameter("userServiceAccountMapping") Map<String,String> userServiceAccountMapping) {
+    @CustomType.Constructor
+    private IdentityConfigResponse(@CustomType.Parameter("userServiceAccountMapping") Map<String,String> userServiceAccountMapping) {
         this.userServiceAccountMapping = userServiceAccountMapping;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
      * Name of the partition index.
      * 
      */
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
     public Output<String> getIndexName() {
         return this.indexName;
     }
 
-    @InputImport(name="indexStatus")
+    @Import(name="indexStatus")
       private final @Nullable Output<String> indexStatus;
 
     public Output<String> getIndexStatus() {
@@ -37,7 +37,7 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
      * Keys for the partition index.
      * 
      */
-    @InputImport(name="keys", required=true)
+    @Import(name="keys", required=true)
       private final Output<List<String>> keys;
 
     public Output<List<String>> getKeys() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.DaemonEndpoint;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeDaemonEndpoints {
     /**
      * Endpoint on which Kubelet is listening.
@@ -17,8 +17,8 @@ public final class NodeDaemonEndpoints {
      */
     private final @Nullable DaemonEndpoint kubeletEndpoint;
 
-    @OutputCustomType.Constructor
-    private NodeDaemonEndpoints(@OutputCustomType.Parameter("kubeletEndpoint") @Nullable DaemonEndpoint kubeletEndpoint) {
+    @CustomType.Constructor
+    private NodeDaemonEndpoints(@CustomType.Parameter("kubeletEndpoint") @Nullable DaemonEndpoint kubeletEndpoint) {
         this.kubeletEndpoint = kubeletEndpoint;
     }
 

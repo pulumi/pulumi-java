@@ -6,7 +6,7 @@ package io.pulumi.awsnative.fms;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.fms.NotificationChannelArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:fms:NotificationChannel")
 public class NotificationChannel extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="snsRoleName", type=String.class, parameters={})
+    @Export(name="snsRoleName", type=String.class, parameters={})
     private Output<String> snsRoleName;
 
     public Output<String> getSnsRoleName() {
         return this.snsRoleName;
     }
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {

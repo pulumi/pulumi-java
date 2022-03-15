@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.IpAllocationArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * IpAllocation tags.
      * 
      */
-    @OutputExport(name="allocationTags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="allocationTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> allocationTags;
 
     /**
@@ -51,7 +51,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -65,7 +65,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * The IPAM allocation ID.
      * 
      */
-    @OutputExport(name="ipamAllocationId", type=String.class, parameters={})
+    @Export(name="ipamAllocationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipamAllocationId;
 
     /**
@@ -79,7 +79,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -93,7 +93,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * The address prefix for the IpAllocation.
      * 
      */
-    @OutputExport(name="prefix", type=String.class, parameters={})
+    @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
@@ -121,7 +121,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * The address prefix length for the IpAllocation.
      * 
      */
-    @OutputExport(name="prefixLength", type=Integer.class, parameters={})
+    @Export(name="prefixLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> prefixLength;
 
     /**
@@ -135,7 +135,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * The address prefix Type for the IpAllocation.
      * 
      */
-    @OutputExport(name="prefixType", type=String.class, parameters={})
+    @Export(name="prefixType", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefixType;
 
     /**
@@ -149,7 +149,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * The Subnet that using the prefix of this IpAllocation resource.
      * 
      */
-    @OutputExport(name="subnet", type=SubResourceResponse.class, parameters={})
+    @Export(name="subnet", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> subnet;
 
     /**
@@ -163,7 +163,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -191,7 +191,7 @@ public class IpAllocation extends io.pulumi.resources.CustomResource {
      * The VirtualNetwork that using the prefix of this IpAllocation resource.
      * 
      */
-    @OutputExport(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> virtualNetwork;
 
     /**

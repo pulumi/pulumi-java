@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.IpAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the network interfaces for the HANA instance.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<IpAddressArgs>> networkInterfaces;
 
     public Output<List<IpAddressArgs>> getNetworkInterfaces() {

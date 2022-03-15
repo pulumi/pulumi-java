@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.JobTriggerArgs;
@@ -25,7 +25,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * The creation timestamp of a triggeredJob.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -39,7 +39,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * User provided description (max 256 chars)
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -53,7 +53,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * Display name (max 100 chars)
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * A stream of errors encountered when the trigger was activated. Repeated errors may result in the JobTrigger automatically being paused. Will return the last 100 errors. Whenever the JobTrigger is modified this list will be cleared.
      * 
      */
-    @OutputExport(name="errors", type=List.class, parameters={GooglePrivacyDlpV2ErrorResponse.class})
+    @Export(name="errors", type=List.class, parameters={GooglePrivacyDlpV2ErrorResponse.class})
     private Output<List<GooglePrivacyDlpV2ErrorResponse>> errors;
 
     /**
@@ -81,7 +81,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * For inspect jobs, a snapshot of the configuration.
      * 
      */
-    @OutputExport(name="inspectJob", type=GooglePrivacyDlpV2InspectJobConfigResponse.class, parameters={})
+    @Export(name="inspectJob", type=GooglePrivacyDlpV2InspectJobConfigResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2InspectJobConfigResponse> inspectJob;
 
     /**
@@ -95,7 +95,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * The timestamp of the last time this trigger executed.
      * 
      */
-    @OutputExport(name="lastRunTime", type=String.class, parameters={})
+    @Export(name="lastRunTime", type=String.class, parameters={})
     private Output<String> lastRunTime;
 
     /**
@@ -109,7 +109,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * A status for this trigger.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -137,7 +137,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
      */
-    @OutputExport(name="triggers", type=List.class, parameters={GooglePrivacyDlpV2TriggerResponse.class})
+    @Export(name="triggers", type=List.class, parameters={GooglePrivacyDlpV2TriggerResponse.class})
     private Output<List<GooglePrivacyDlpV2TriggerResponse>> triggers;
 
     /**
@@ -151,7 +151,7 @@ public class JobTrigger extends io.pulumi.resources.CustomResource {
      * The last update timestamp of a triggeredJob.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

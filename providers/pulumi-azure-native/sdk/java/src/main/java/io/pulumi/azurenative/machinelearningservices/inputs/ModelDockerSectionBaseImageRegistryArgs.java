@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class ModelDockerSectionBaseImageRegistryArgs extends io.pulumi.res
 
     public static final ModelDockerSectionBaseImageRegistryArgs Empty = new ModelDockerSectionBaseImageRegistryArgs();
 
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
         return this.address == null ? Output.empty() : this.address;
     }
 
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
         return this.password == null ? Output.empty() : this.password;
     }
 
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

@@ -7,12 +7,12 @@ import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointIscse;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointManagement;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointNf;
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineEndpointSmb;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OntapStorageVirtualMachineEndpoint {
     /**
      * An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.
@@ -35,12 +35,12 @@ public final class OntapStorageVirtualMachineEndpoint {
      */
     private final @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OntapStorageVirtualMachineEndpoint(
-        @OutputCustomType.Parameter("iscses") @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses,
-        @OutputCustomType.Parameter("managements") @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements,
-        @OutputCustomType.Parameter("nfs") @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs,
-        @OutputCustomType.Parameter("smbs") @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
+        @CustomType.Parameter("iscses") @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses,
+        @CustomType.Parameter("managements") @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements,
+        @CustomType.Parameter("nfs") @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs,
+        @CustomType.Parameter("smbs") @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
         this.iscses = iscses;
         this.managements = managements;
         this.nfs = nfs;

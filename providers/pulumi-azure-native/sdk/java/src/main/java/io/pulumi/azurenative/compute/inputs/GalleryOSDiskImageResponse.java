@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable String hostCaching;
 
     public Optional<String> getHostCaching() {
@@ -35,7 +35,7 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
      * This property indicates the size of the VHD to be created.
      * 
      */
-    @InputImport(name="sizeInGB", required=true)
+    @Import(name="sizeInGB", required=true)
       private final Integer sizeInGB;
 
     public Integer getSizeInGB() {
@@ -46,7 +46,7 @@ public final class GalleryOSDiskImageResponse extends io.pulumi.resources.Invoke
      * The gallery artifact version source.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {

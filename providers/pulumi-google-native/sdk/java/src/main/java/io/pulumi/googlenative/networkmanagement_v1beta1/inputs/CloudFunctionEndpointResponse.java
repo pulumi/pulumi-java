@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CloudFunctionEndpointResponse extends io.pulumi.resources.Inv
      * A [Cloud function](https://cloud.google.com/functions) name.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

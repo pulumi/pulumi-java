@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenU
      * The HTTP or HTTPS scheme URI.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

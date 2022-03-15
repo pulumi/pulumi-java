@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * The email address of this receiver.
      * 
      */
-    @InputImport(name="emailAddress", required=true)
+    @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
     public String getEmailAddress() {
@@ -34,7 +34,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the email receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * The receiver status of the e-mail.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -56,7 +56,7 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {

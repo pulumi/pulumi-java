@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The hostname of the endpoint.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -30,7 +30,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -41,7 +41,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The name of the web app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The namespace for this hybrid connection.
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -63,7 +63,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The port of the endpoint.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -74,7 +74,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The ARM URI to the Service Bus relay.
      * 
      */
-    @InputImport(name="relayArmUri")
+    @Import(name="relayArmUri")
       private final @Nullable Output<String> relayArmUri;
 
     public Output<String> getRelayArmUri() {
@@ -85,7 +85,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The name of the Service Bus relay.
      * 
      */
-    @InputImport(name="relayName")
+    @Import(name="relayName")
       private final @Nullable Output<String> relayName;
 
     public Output<String> getRelayName() {
@@ -96,7 +96,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -107,7 +107,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
      */
-    @InputImport(name="sendKeyName")
+    @Import(name="sendKeyName")
       private final @Nullable Output<String> sendKeyName;
 
     public Output<String> getSendKeyName() {
@@ -119,7 +119,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * normally, use the POST /listKeys API instead.
      * 
      */
-    @InputImport(name="sendKeyValue")
+    @Import(name="sendKeyValue")
       private final @Nullable Output<String> sendKeyValue;
 
     public Output<String> getSendKeyValue() {
@@ -130,7 +130,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The name of the Service Bus namespace.
      * 
      */
-    @InputImport(name="serviceBusNamespace")
+    @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
     public Output<String> getServiceBusNamespace() {
@@ -141,7 +141,7 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
      * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
      */
-    @InputImport(name="serviceBusSuffix")
+    @Import(name="serviceBusSuffix")
       private final @Nullable Output<String> serviceBusSuffix;
 
     public Output<String> getServiceBusSuffix() {

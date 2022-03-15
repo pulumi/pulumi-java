@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Entity Tag
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The location of the private endpoint connection
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The name of the resource
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Resource properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable PrivateEndpointConnectionPropertiesResponse properties;
 
     public Optional<PrivateEndpointConnectionPropertiesResponse> getProperties() {
@@ -78,7 +78,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

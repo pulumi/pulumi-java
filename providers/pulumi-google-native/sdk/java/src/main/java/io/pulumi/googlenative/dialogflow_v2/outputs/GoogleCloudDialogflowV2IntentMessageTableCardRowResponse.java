@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageTableCardCellResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
     /**
      * Optional. List of cells that make up this row.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
      */
     private final Boolean dividerAfter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(
-        @OutputCustomType.Parameter("cells") List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells,
-        @OutputCustomType.Parameter("dividerAfter") Boolean dividerAfter) {
+        @CustomType.Parameter("cells") List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells,
+        @CustomType.Parameter("dividerAfter") Boolean dividerAfter) {
         this.cells = cells;
         this.dividerAfter = dividerAfter;
     }

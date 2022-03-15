@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.StatusCause;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatusDetails {
     /**
      * The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
@@ -45,14 +45,14 @@ public final class StatusDetails {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusDetails(
-        @OutputCustomType.Parameter("causes") @Nullable List<StatusCause> causes,
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("retryAfterSeconds") @Nullable Integer retryAfterSeconds,
-        @OutputCustomType.Parameter("uid") @Nullable String uid) {
+        @CustomType.Parameter("causes") @Nullable List<StatusCause> causes,
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("retryAfterSeconds") @Nullable Integer retryAfterSeconds,
+        @CustomType.Parameter("uid") @Nullable String uid) {
         this.causes = causes;
         this.group = group;
         this.kind = kind;

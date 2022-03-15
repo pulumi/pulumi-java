@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * The data source reference id.
      * 
      */
-    @InputImport(name="dataSourceReferenceId", required=true)
+    @Import(name="dataSourceReferenceId", required=true)
       private final String dataSourceReferenceId;
 
     public String getDataSourceReferenceId() {
@@ -34,7 +34,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * The data source type.
      * 
      */
-    @InputImport(name="dataSourceType", required=true)
+    @Import(name="dataSourceType", required=true)
       private final String dataSourceType;
 
     public String getDataSourceType() {
@@ -45,7 +45,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * The data source ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Integer id;
 
     public Integer getId() {
@@ -56,7 +56,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * The data source name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -67,7 +67,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * the precedence value.
      * 
      */
-    @InputImport(name="precedence")
+    @Import(name="precedence")
       private final @Nullable Integer precedence;
 
     public Optional<Integer> getPrecedence() {
@@ -78,7 +78,7 @@ public final class DataSourcePrecedenceResponse extends io.pulumi.resources.Invo
      * The data source status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

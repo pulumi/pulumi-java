@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.elasticache.outputs;
 
 import io.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalReplicationGroupMember {
     /**
      * Regionally unique identifier for the member i.e. ReplicationGroupId.
@@ -28,11 +28,11 @@ public final class GlobalReplicationGroupMember {
      */
     private final @Nullable GlobalReplicationGroupMemberRole role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalReplicationGroupMember(
-        @OutputCustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
-        @OutputCustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
-        @OutputCustomType.Parameter("role") @Nullable GlobalReplicationGroupMemberRole role) {
+        @CustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
+        @CustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
+        @CustomType.Parameter("role") @Nullable GlobalReplicationGroupMemberRole role) {
         this.replicationGroupId = replicationGroupId;
         this.replicationGroupRegion = replicationGroupRegion;
         this.role = role;

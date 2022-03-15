@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ActiveDirectoryPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFilesIdentityBasedAuthenticationResponse {
     /**
      * Required if choose AD.
@@ -23,10 +23,10 @@ public final class AzureFilesIdentityBasedAuthenticationResponse {
      */
     private final String directoryServiceOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFilesIdentityBasedAuthenticationResponse(
-        @OutputCustomType.Parameter("activeDirectoryProperties") @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties,
-        @OutputCustomType.Parameter("directoryServiceOptions") String directoryServiceOptions) {
+        @CustomType.Parameter("activeDirectoryProperties") @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties,
+        @CustomType.Parameter("directoryServiceOptions") String directoryServiceOptions) {
         this.activeDirectoryProperties = activeDirectoryProperties;
         this.directoryServiceOptions = directoryServiceOptions;
     }

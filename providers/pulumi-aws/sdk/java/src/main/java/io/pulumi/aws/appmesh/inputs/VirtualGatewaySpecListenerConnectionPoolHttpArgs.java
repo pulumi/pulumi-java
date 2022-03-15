@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttpArgs extends io.p
      * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
      * 
      */
-    @InputImport(name="maxConnections", required=true)
+    @Import(name="maxConnections", required=true)
       private final Output<Integer> maxConnections;
 
     public Output<Integer> getMaxConnections() {
@@ -29,7 +29,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolHttpArgs extends io.p
      * Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
      * 
      */
-    @InputImport(name="maxPendingRequests")
+    @Import(name="maxPendingRequests")
       private final @Nullable Output<Integer> maxPendingRequests;
 
     public Output<Integer> getMaxPendingRequests() {

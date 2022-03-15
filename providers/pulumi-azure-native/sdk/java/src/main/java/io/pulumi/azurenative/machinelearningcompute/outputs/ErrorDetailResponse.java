@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorDetailResponse {
     /**
      * Error code.
@@ -20,10 +20,10 @@ public final class ErrorDetailResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorDetailResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.message = message;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetRegionInstanceGroupInstance;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionInstanceGroupResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -36,15 +36,15 @@ public final class GetRegionInstanceGroupResult {
      */
     private final Integer size;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionInstanceGroupResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instances") List<GetRegionInstanceGroupInstance> instances,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("size") Integer size) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instances") List<GetRegionInstanceGroupInstance> instances,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("size") Integer size) {
         this.id = id;
         this.instances = instances;
         this.name = name;

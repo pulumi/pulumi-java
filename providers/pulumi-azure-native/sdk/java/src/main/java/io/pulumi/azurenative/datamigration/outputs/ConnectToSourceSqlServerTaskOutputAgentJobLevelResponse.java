@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrationEligibilityInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
     /**
      * Result identifier
@@ -53,16 +53,16 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("jobCategory") String jobCategory,
-        @OutputCustomType.Parameter("jobOwner") String jobOwner,
-        @OutputCustomType.Parameter("lastExecutedOn") String lastExecutedOn,
-        @OutputCustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resultType") String resultType) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("jobCategory") String jobCategory,
+        @CustomType.Parameter("jobOwner") String jobOwner,
+        @CustomType.Parameter("lastExecutedOn") String lastExecutedOn,
+        @CustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resultType") String resultType) {
         this.id = id;
         this.isEnabled = isEnabled;
         this.jobCategory = jobCategory;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionHealthCheckLogConfig {
     /**
      * Indicates whether or not to export logs. This is false by default,
@@ -18,8 +18,8 @@ public final class RegionHealthCheckLogConfig {
      */
     private final @Nullable Boolean enable;
 
-    @OutputCustomType.Constructor
-    private RegionHealthCheckLogConfig(@OutputCustomType.Parameter("enable") @Nullable Boolean enable) {
+    @CustomType.Constructor
+    private RegionHealthCheckLogConfig(@CustomType.Parameter("enable") @Nullable Boolean enable) {
         this.enable = enable;
     }
 

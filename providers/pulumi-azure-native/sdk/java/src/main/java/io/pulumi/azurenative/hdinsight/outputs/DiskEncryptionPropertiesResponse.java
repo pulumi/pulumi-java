@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskEncryptionPropertiesResponse {
     /**
      * Algorithm identifier for encryption, default RSA-OAEP.
@@ -43,14 +43,14 @@ public final class DiskEncryptionPropertiesResponse {
      */
     private final @Nullable String vaultUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskEncryptionPropertiesResponse(
-        @OutputCustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
-        @OutputCustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
-        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
-        @OutputCustomType.Parameter("vaultUri") @Nullable String vaultUri) {
+        @CustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
+        @CustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @CustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @CustomType.Parameter("vaultUri") @Nullable String vaultUri) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionAtHost = encryptionAtHost;
         this.keyName = keyName;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
@@ -34,7 +34,7 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
      * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
      * 
      */
-    @InputImport(name="internalDnsNameLabel")
+    @Import(name="internalDnsNameLabel")
       private final @Nullable Output<String> internalDnsNameLabel;
 
     public Output<String> getInternalDnsNameLabel() {

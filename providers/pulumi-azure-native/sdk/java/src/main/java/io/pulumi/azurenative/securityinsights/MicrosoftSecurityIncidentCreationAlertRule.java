@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.MicrosoftSecurityIncidentCreationAlertRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * The Name of the alert rule template used to create this rule.
      * 
      */
-    @OutputExport(name="alertRuleTemplateName", type=String.class, parameters={})
+    @Export(name="alertRuleTemplateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertRuleTemplateName;
 
     /**
@@ -49,7 +49,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * The description of the alert rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * The display name for alerts created by this alert rule.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * the alerts' displayNames on which the cases will not be generated
      * 
      */
-    @OutputExport(name="displayNamesExcludeFilter", type=List.class, parameters={String.class})
+    @Export(name="displayNamesExcludeFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> displayNamesExcludeFilter;
 
     /**
@@ -91,7 +91,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * the alerts' displayNames on which the cases will be generated
      * 
      */
-    @OutputExport(name="displayNamesFilter", type=List.class, parameters={String.class})
+    @Export(name="displayNamesFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> displayNamesFilter;
 
     /**
@@ -105,7 +105,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * Determines whether this alert rule is enabled or disabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
@@ -119,7 +119,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -134,7 +134,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * Expected value is 'MicrosoftSecurityIncidentCreation'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -149,7 +149,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * The last time that this alert has been modified.
      * 
      */
-    @OutputExport(name="lastModifiedUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
@@ -163,7 +163,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -177,7 +177,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * The alerts' productName on which the cases will be generated
      * 
      */
-    @OutputExport(name="productFilter", type=String.class, parameters={})
+    @Export(name="productFilter", type=String.class, parameters={})
     private Output<String> productFilter;
 
     /**
@@ -191,7 +191,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * the alerts' severities on which the cases will be generated
      * 
      */
-    @OutputExport(name="severitiesFilter", type=List.class, parameters={String.class})
+    @Export(name="severitiesFilter", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> severitiesFilter;
 
     /**
@@ -205,7 +205,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

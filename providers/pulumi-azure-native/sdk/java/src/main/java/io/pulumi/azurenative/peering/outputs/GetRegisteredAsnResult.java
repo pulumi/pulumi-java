@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegisteredAsnResult {
     /**
      * The customer's ASN from which traffic originates.
@@ -43,14 +43,14 @@ public final class GetRegisteredAsnResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegisteredAsnResult(
-        @OutputCustomType.Parameter("asn") @Nullable Integer asn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("asn") @Nullable Integer asn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.asn = asn;
         this.id = id;
         this.name = name;

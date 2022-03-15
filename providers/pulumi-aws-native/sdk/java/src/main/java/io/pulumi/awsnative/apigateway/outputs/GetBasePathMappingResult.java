@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBasePathMappingResult {
     private final @Nullable String id;
     /**
@@ -23,11 +23,11 @@ public final class GetBasePathMappingResult {
      */
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBasePathMappingResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("restApiId") @Nullable String restApiId,
-        @OutputCustomType.Parameter("stage") @Nullable String stage) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("restApiId") @Nullable String restApiId,
+        @CustomType.Parameter("stage") @Nullable String stage) {
         this.id = id;
         this.restApiId = restApiId;
         this.stage = stage;

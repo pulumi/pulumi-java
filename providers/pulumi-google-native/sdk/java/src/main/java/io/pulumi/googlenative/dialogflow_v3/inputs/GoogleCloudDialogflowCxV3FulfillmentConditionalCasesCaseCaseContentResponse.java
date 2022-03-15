@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * Additional cases to be evaluated.
      * 
      */
-    @InputImport(name="additionalCases", required=true)
+    @Import(name="additionalCases", required=true)
       private final GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases;
 
     public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse getAdditionalCases() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * Returned message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final GoogleCloudDialogflowCxV3ResponseMessageResponse message;
 
     public GoogleCloudDialogflowCxV3ResponseMessageResponse getMessage() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudhsmv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class ClusterClusterCertificateArgs extends io.pulumi.resources.Res
 
     public static final ClusterClusterCertificateArgs Empty = new ClusterClusterCertificateArgs();
 
-    @InputImport(name="awsHardwareCertificate")
+    @Import(name="awsHardwareCertificate")
       private final @Nullable Output<String> awsHardwareCertificate;
 
     public Output<String> getAwsHardwareCertificate() {
         return this.awsHardwareCertificate == null ? Output.empty() : this.awsHardwareCertificate;
     }
 
-    @InputImport(name="clusterCertificate")
+    @Import(name="clusterCertificate")
       private final @Nullable Output<String> clusterCertificate;
 
     public Output<String> getClusterCertificate() {
         return this.clusterCertificate == null ? Output.empty() : this.clusterCertificate;
     }
 
-    @InputImport(name="clusterCsr")
+    @Import(name="clusterCsr")
       private final @Nullable Output<String> clusterCsr;
 
     public Output<String> getClusterCsr() {
         return this.clusterCsr == null ? Output.empty() : this.clusterCsr;
     }
 
-    @InputImport(name="hsmCertificate")
+    @Import(name="hsmCertificate")
       private final @Nullable Output<String> hsmCertificate;
 
     public Output<String> getHsmCertificate() {
         return this.hsmCertificate == null ? Output.empty() : this.hsmCertificate;
     }
 
-    @InputImport(name="manufacturerHardwareCertificate")
+    @Import(name="manufacturerHardwareCertificate")
       private final @Nullable Output<String> manufacturerHardwareCertificate;
 
     public Output<String> getManufacturerHardwareCertificate() {

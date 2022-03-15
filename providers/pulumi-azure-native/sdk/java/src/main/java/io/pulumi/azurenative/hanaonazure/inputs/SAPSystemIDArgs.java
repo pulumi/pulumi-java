@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * Group ID of the HANA database user.
      * 
      */
-    @InputImport(name="gid")
+    @Import(name="gid")
       private final @Nullable Output<String> gid;
 
     public Output<String> getGid() {
@@ -33,7 +33,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * SAP system ID as database identifier.
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable Output<String> sid;
 
     public Output<String> getSid() {
@@ -44,7 +44,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * User ID of the HANA database user.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -55,7 +55,7 @@ public final class SAPSystemIDArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the HANA database user.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

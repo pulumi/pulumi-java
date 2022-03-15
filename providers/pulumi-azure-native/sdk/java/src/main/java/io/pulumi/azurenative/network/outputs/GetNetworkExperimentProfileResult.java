@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkExperimentProfileResult {
     /**
      * The state of the Experiment
@@ -53,16 +53,16 @@ public final class GetNetworkExperimentProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkExperimentProfileResult(
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.enabledState = enabledState;
         this.etag = etag;
         this.id = id;

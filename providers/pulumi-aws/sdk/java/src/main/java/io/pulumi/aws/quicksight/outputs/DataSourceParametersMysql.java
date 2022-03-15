@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersMysql {
     /**
      * The database to which to connect.
@@ -26,11 +26,11 @@ public final class DataSourceParametersMysql {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParametersMysql(
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port) {
         this.database = database;
         this.host = host;
         this.port = port;

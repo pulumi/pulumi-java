@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.CustomRegistryCredentialsResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SourceRegistryCredentialsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CredentialsResponse extends io.pulumi.resources.InvokeArgs {
      * the value of the item will be the registry credentials for accessing the registry.
      * 
      */
-    @InputImport(name="customRegistries")
+    @Import(name="customRegistries")
       private final @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries;
 
     public Map<String,CustomRegistryCredentialsResponse> getCustomRegistries() {
@@ -38,7 +38,7 @@ public final class CredentialsResponse extends io.pulumi.resources.InvokeArgs {
      * Describes the credential parameters for accessing the source registry.
      * 
      */
-    @InputImport(name="sourceRegistry")
+    @Import(name="sourceRegistry")
       private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
     public Optional<SourceRegistryCredentialsResponse> getSourceRegistry() {

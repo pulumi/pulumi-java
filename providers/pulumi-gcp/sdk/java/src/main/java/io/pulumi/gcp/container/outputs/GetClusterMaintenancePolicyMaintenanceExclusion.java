@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterMaintenancePolicyMaintenanceExclusion {
     private final String endTime;
     private final String exclusionName;
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterMaintenancePolicyMaintenanceExclusion(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("exclusionName") String exclusionName,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("exclusionName") String exclusionName,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.exclusionName = exclusionName;
         this.startTime = startTime;

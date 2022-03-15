@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The content type for the model.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -30,7 +30,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * A description that identifies this model.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of a REST API with which to associate this model.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -63,7 +63,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Boolean flag to indicate if the certificate should be active
      * 
      */
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
@@ -30,7 +30,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the created certificate.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -41,7 +41,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The certificate data, in PEM format.
      * 
      */
-    @InputImport(name="certificatePem")
+    @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
     public Output<String> getCertificatePem() {
@@ -56,7 +56,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * for more information on generating keys and a certificate.
      * 
      */
-    @InputImport(name="csr")
+    @Import(name="csr")
       private final @Nullable Output<String> csr;
 
     public Output<String> getCsr() {
@@ -67,7 +67,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * When no CSR is provided, the private key.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -78,7 +78,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * When no CSR is provided, the public key.
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {

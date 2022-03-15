@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.outputs.WorkerConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkerPoolResult {
     /**
      * Time at which the request to create the `WorkerPool` was received.
@@ -52,16 +52,16 @@ public final class GetWorkerPoolResult {
      */
     private final WorkerConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkerPoolResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.name = name;

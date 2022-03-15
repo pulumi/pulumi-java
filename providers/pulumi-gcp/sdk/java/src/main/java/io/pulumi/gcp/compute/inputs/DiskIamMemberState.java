@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.DiskIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
 
     public static final DiskIamMemberState Empty = new DiskIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DiskIamMemberConditionGetArgs> condition;
 
     public Output<DiskIamMemberConditionGetArgs> getCondition() {
@@ -26,14 +26,14 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -44,7 +44,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -82,7 +82,7 @@ public final class DiskIamMemberState extends io.pulumi.resources.ResourceArgs {
      * zone is specified, it is taken from the provider configuration.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * Name of the container to associate with the load balancer (as it appears in a container definition).
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -30,7 +30,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * Port on the container to associate with the load balancer.
      * 
      */
-    @InputImport(name="containerPort", required=true)
+    @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -41,7 +41,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * Name of the ELB (Classic) to associate with the service.
      * 
      */
-    @InputImport(name="elbName")
+    @Import(name="elbName")
       private final @Nullable Output<String> elbName;
 
     public Output<String> getElbName() {
@@ -52,7 +52,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
      * ARN of the Load Balancer target group to associate with the service.
      * 
      */
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.apigateway.outputs.DomainNameEndpointConfiguration;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameMutualTlsAuthentication;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,73 +23,73 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:apigateway:DomainName")
 public class DomainName extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
     public Output</* @Nullable */ String> getCertificateArn() {
         return this.certificateArn;
     }
-    @OutputExport(name="distributionDomainName", type=String.class, parameters={})
+    @Export(name="distributionDomainName", type=String.class, parameters={})
     private Output<String> distributionDomainName;
 
     public Output<String> getDistributionDomainName() {
         return this.distributionDomainName;
     }
-    @OutputExport(name="distributionHostedZoneId", type=String.class, parameters={})
+    @Export(name="distributionHostedZoneId", type=String.class, parameters={})
     private Output<String> distributionHostedZoneId;
 
     public Output<String> getDistributionHostedZoneId() {
         return this.distributionHostedZoneId;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     public Output</* @Nullable */ String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
+    @Export(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
     private Output</* @Nullable */ DomainNameEndpointConfiguration> endpointConfiguration;
 
     public Output</* @Nullable */ DomainNameEndpointConfiguration> getEndpointConfiguration() {
         return this.endpointConfiguration;
     }
-    @OutputExport(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
+    @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
     public Output</* @Nullable */ DomainNameMutualTlsAuthentication> getMutualTlsAuthentication() {
         return this.mutualTlsAuthentication;
     }
-    @OutputExport(name="ownershipVerificationCertificateArn", type=String.class, parameters={})
+    @Export(name="ownershipVerificationCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownershipVerificationCertificateArn;
 
     public Output</* @Nullable */ String> getOwnershipVerificationCertificateArn() {
         return this.ownershipVerificationCertificateArn;
     }
-    @OutputExport(name="regionalCertificateArn", type=String.class, parameters={})
+    @Export(name="regionalCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateArn;
 
     public Output</* @Nullable */ String> getRegionalCertificateArn() {
         return this.regionalCertificateArn;
     }
-    @OutputExport(name="regionalDomainName", type=String.class, parameters={})
+    @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
     public Output<String> getRegionalDomainName() {
         return this.regionalDomainName;
     }
-    @OutputExport(name="regionalHostedZoneId", type=String.class, parameters={})
+    @Export(name="regionalHostedZoneId", type=String.class, parameters={})
     private Output<String> regionalHostedZoneId;
 
     public Output<String> getRegionalHostedZoneId() {
         return this.regionalHostedZoneId;
     }
-    @OutputExport(name="securityPolicy", type=String.class, parameters={})
+    @Export(name="securityPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityPolicy;
 
     public Output</* @Nullable */ String> getSecurityPolicy() {
         return this.securityPolicy;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DomainNameTag.class})
+    @Export(name="tags", type=List.class, parameters={DomainNameTag.class})
     private Output</* @Nullable */ List<DomainNameTag>> tags;
 
     public Output</* @Nullable */ List<DomainNameTag>> getTags() {

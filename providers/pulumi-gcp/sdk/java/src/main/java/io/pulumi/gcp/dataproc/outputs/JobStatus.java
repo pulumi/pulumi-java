@@ -3,25 +3,25 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStatus {
     private final @Nullable String details;
     private final @Nullable String state;
     private final @Nullable String stateStartTime;
     private final @Nullable String substate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatus(
-        @OutputCustomType.Parameter("details") @Nullable String details,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("stateStartTime") @Nullable String stateStartTime,
-        @OutputCustomType.Parameter("substate") @Nullable String substate) {
+        @CustomType.Parameter("details") @Nullable String details,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("stateStartTime") @Nullable String stateStartTime,
+        @CustomType.Parameter("substate") @Nullable String substate) {
         this.details = details;
         this.state = state;
         this.stateStartTime = stateStartTime;

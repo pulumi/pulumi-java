@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigS3RecordingConfig {
     private final @Nullable String bucketArn;
     private final @Nullable String prefix;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigS3RecordingConfig(
-        @OutputCustomType.Parameter("bucketArn") @Nullable String bucketArn,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("bucketArn") @Nullable String bucketArn,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.bucketArn = bucketArn;
         this.prefix = prefix;
         this.roleArn = roleArn;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationApplicationSnapshotConfiguration {
     /**
      * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      */
     private final Boolean snapshotsEnabled;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(@OutputCustomType.Parameter("snapshotsEnabled") Boolean snapshotsEnabled) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(@CustomType.Parameter("snapshotsEnabled") Boolean snapshotsEnabled) {
         this.snapshotsEnabled = snapshotsEnabled;
     }
 

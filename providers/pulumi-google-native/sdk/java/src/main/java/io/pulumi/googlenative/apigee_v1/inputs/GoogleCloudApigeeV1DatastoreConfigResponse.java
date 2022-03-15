@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * Name of the Cloud Storage bucket. Required for `gcs` target_type.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final String bucketName;
 
     public String getBucketName() {
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * BigQuery dataset name Required for `bigquery` target_type.
      * 
      */
-    @InputImport(name="datasetName", required=true)
+    @Import(name="datasetName", required=true)
       private final String datasetName;
 
     public String getDatasetName() {
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * Path of Cloud Storage bucket Required for `gcs` target_type.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -53,7 +53,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * GCP project in which the datastore exists
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -64,7 +64,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * Prefix of BigQuery table Required for `bigquery` target_type.
      * 
      */
-    @InputImport(name="tablePrefix", required=true)
+    @Import(name="tablePrefix", required=true)
       private final String tablePrefix;
 
     public String getTablePrefix() {

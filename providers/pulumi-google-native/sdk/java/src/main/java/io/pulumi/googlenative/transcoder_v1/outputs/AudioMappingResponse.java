@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AudioMappingResponse {
     /**
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
@@ -42,14 +42,14 @@ public final class AudioMappingResponse {
      */
     private final Integer outputChannel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioMappingResponse(
-        @OutputCustomType.Parameter("atomKey") String atomKey,
-        @OutputCustomType.Parameter("gainDb") Double gainDb,
-        @OutputCustomType.Parameter("inputChannel") Integer inputChannel,
-        @OutputCustomType.Parameter("inputKey") String inputKey,
-        @OutputCustomType.Parameter("inputTrack") Integer inputTrack,
-        @OutputCustomType.Parameter("outputChannel") Integer outputChannel) {
+        @CustomType.Parameter("atomKey") String atomKey,
+        @CustomType.Parameter("gainDb") Double gainDb,
+        @CustomType.Parameter("inputChannel") Integer inputChannel,
+        @CustomType.Parameter("inputKey") String inputKey,
+        @CustomType.Parameter("inputTrack") Integer inputTrack,
+        @CustomType.Parameter("outputChannel") Integer outputChannel) {
         this.atomKey = atomKey;
         this.gainDb = gainDb;
         this.inputChannel = inputChannel;

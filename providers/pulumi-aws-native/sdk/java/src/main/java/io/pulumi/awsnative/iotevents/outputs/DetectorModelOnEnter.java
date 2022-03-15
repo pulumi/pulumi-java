@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelEvent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelOnEnter {
     /**
      * Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
@@ -17,8 +17,8 @@ public final class DetectorModelOnEnter {
      */
     private final @Nullable List<DetectorModelEvent> events;
 
-    @OutputCustomType.Constructor
-    private DetectorModelOnEnter(@OutputCustomType.Parameter("events") @Nullable List<DetectorModelEvent> events) {
+    @CustomType.Constructor
+    private DetectorModelOnEnter(@CustomType.Parameter("events") @Nullable List<DetectorModelEvent> events) {
         this.events = events;
     }
 

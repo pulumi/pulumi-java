@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.OverrideArgs;
@@ -22,7 +22,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * ID of the API proxy that will have its trace configuration overridden.
      * 
      */
-    @OutputExport(name="apiProxy", type=String.class, parameters={})
+    @Export(name="apiProxy", type=String.class, parameters={})
     private Output<String> apiProxy;
 
     /**
@@ -36,7 +36,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * ID of the trace configuration override specified as a system-generated UUID.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Override extends io.pulumi.resources.CustomResource {
      * Trace configuration to override.
      * 
      */
-    @OutputExport(name="samplingConfig", type=GoogleCloudApigeeV1TraceSamplingConfigResponse.class, parameters={})
+    @Export(name="samplingConfig", type=GoogleCloudApigeeV1TraceSamplingConfigResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1TraceSamplingConfigResponse> samplingConfig;
 
     /**

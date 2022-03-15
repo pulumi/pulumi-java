@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LoggingConfigurationLoggingConfigurationArgs extends io.pulum
      * Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
      * 
      */
-    @InputImport(name="logDestinationConfigs", required=true)
+    @Import(name="logDestinationConfigs", required=true)
       private final Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> logDestinationConfigs;
 
     public Output<List<LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs>> getLogDestinationConfigs() {

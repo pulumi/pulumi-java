@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelLambda {
     /**
      * The ARN of the Lambda function that is executed.
@@ -19,10 +19,10 @@ public final class DetectorModelLambda {
     private final String functionArn;
     private final @Nullable DetectorModelPayload payload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelLambda(
-        @OutputCustomType.Parameter("functionArn") String functionArn,
-        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
+        @CustomType.Parameter("functionArn") String functionArn,
+        @CustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
         this.functionArn = functionArn;
         this.payload = payload;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Group is the API Group of the Resource.  "*" means all.
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -33,7 +33,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Name is the name of the resource being requested for a "get" or deleted for a "delete". "" (empty) means all.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces "" (empty) is defaulted for LocalSubjectAccessReviews "" (empty) is empty for cluster-scoped resources "" (empty) means "all" for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -55,7 +55,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Resource is one of the existing resource types.  "*" means all.
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Output<String> resource;
 
     public Output<String> getResource() {
@@ -66,7 +66,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Subresource is one of the existing resource types.  "" means none.
      * 
      */
-    @InputImport(name="subresource")
+    @Import(name="subresource")
       private final @Nullable Output<String> subresource;
 
     public Output<String> getSubresource() {
@@ -77,7 +77,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.
      * 
      */
-    @InputImport(name="verb")
+    @Import(name="verb")
       private final @Nullable Output<String> verb;
 
     public Output<String> getVerb() {
@@ -88,7 +88,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * Version is the API Version of the Resource.  "*" means all.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

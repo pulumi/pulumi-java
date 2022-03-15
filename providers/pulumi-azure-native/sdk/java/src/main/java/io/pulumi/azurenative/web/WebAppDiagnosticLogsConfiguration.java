@@ -10,7 +10,7 @@ import io.pulumi.azurenative.web.outputs.EnabledConfigResponse;
 import io.pulumi.azurenative.web.outputs.HttpLogsConfigResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * Application logs configuration.
      * 
      */
-    @OutputExport(name="applicationLogs", type=ApplicationLogsConfigResponse.class, parameters={})
+    @Export(name="applicationLogs", type=ApplicationLogsConfigResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationLogsConfigResponse> applicationLogs;
 
     /**
@@ -48,7 +48,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * Detailed error messages configuration.
      * 
      */
-    @OutputExport(name="detailedErrorMessages", type=EnabledConfigResponse.class, parameters={})
+    @Export(name="detailedErrorMessages", type=EnabledConfigResponse.class, parameters={})
     private Output</* @Nullable */ EnabledConfigResponse> detailedErrorMessages;
 
     /**
@@ -62,7 +62,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * Failed requests tracing configuration.
      * 
      */
-    @OutputExport(name="failedRequestsTracing", type=EnabledConfigResponse.class, parameters={})
+    @Export(name="failedRequestsTracing", type=EnabledConfigResponse.class, parameters={})
     private Output</* @Nullable */ EnabledConfigResponse> failedRequestsTracing;
 
     /**
@@ -76,7 +76,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * HTTP logs configuration.
      * 
      */
-    @OutputExport(name="httpLogs", type=HttpLogsConfigResponse.class, parameters={})
+    @Export(name="httpLogs", type=HttpLogsConfigResponse.class, parameters={})
     private Output</* @Nullable */ HttpLogsConfigResponse> httpLogs;
 
     /**
@@ -90,7 +90,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -104,7 +104,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

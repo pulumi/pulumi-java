@@ -3,22 +3,22 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotebookPreparationErrorResponse {
     private final @Nullable String errorMessage;
     private final @Nullable Integer statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotebookPreparationErrorResponse(
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
-        @OutputCustomType.Parameter("statusCode") @Nullable Integer statusCode) {
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @CustomType.Parameter("statusCode") @Nullable Integer statusCode) {
         this.errorMessage = errorMessage;
         this.statusCode = statusCode;
     }

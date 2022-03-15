@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
      * 
      */
-    @InputImport(name="elevationLevel")
+    @Import(name="elevationLevel")
       private final @Nullable String elevationLevel;
 
     public Optional<String> getElevationLevel() {
@@ -31,21 +31,21 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
      * This property is ignored if specified on a Windows pool. If not specified, the user is created with the default options.
      * 
      */
-    @InputImport(name="linuxUserConfiguration")
+    @Import(name="linuxUserConfiguration")
       private final @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
 
     public Optional<LinuxUserConfigurationResponse> getLinuxUserConfiguration() {
         return this.linuxUserConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxUserConfiguration);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -56,7 +56,7 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
      * This property can only be specified if the user is on a Windows pool. If not specified and on a Windows pool, the user is created with the default options.
      * 
      */
-    @InputImport(name="windowsUserConfiguration")
+    @Import(name="windowsUserConfiguration")
       private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
     public Optional<WindowsUserConfigurationResponse> getWindowsUserConfiguration() {

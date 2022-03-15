@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelTumblingWindow;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelMetricWindow {
     private final @Nullable AssetModelTumblingWindow tumbling;
 
-    @OutputCustomType.Constructor
-    private AssetModelMetricWindow(@OutputCustomType.Parameter("tumbling") @Nullable AssetModelTumblingWindow tumbling) {
+    @CustomType.Constructor
+    private AssetModelMetricWindow(@CustomType.Parameter("tumbling") @Nullable AssetModelTumblingWindow tumbling) {
         this.tumbling = tumbling;
     }
 

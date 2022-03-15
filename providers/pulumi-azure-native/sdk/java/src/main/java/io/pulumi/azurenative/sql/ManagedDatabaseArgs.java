@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.CatalogCollationType;
 import io.pulumi.azurenative.sql.enums.ManagedDatabaseCreateMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Whether to auto complete restore of this managed database.
      * 
      */
-    @InputImport(name="autoCompleteRestore")
+    @Import(name="autoCompleteRestore")
       private final @Nullable Output<Boolean> autoCompleteRestore;
 
     public Output<Boolean> getAutoCompleteRestore() {
@@ -34,7 +34,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Collation of the metadata catalog.
      * 
      */
-    @InputImport(name="catalogCollation")
+    @Import(name="catalogCollation")
       private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
     public Output<Either<String,CatalogCollationType>> getCatalogCollation() {
@@ -45,7 +45,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Collation of the managed database.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -56,7 +56,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Managed database create mode. PointInTimeRestore: Create a database by restoring a point in time backup of an existing database. SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified. RestoreExternalBackup: Create a database by restoring from external backup files. Collation, StorageContainerUri and StorageContainerSasToken must be specified. Recovery: Creates a database by restoring a geo-replicated backup. RecoverableDatabaseId must be specified as the recoverable database resource ID to restore. RestoreLongTermRetentionBackup: Create a database by restoring from a long term retention backup (longTermRetentionBackupResourceId required).
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<Either<String,ManagedDatabaseCreateMode>> createMode;
 
     public Output<Either<String,ManagedDatabaseCreateMode>> getCreateMode() {
@@ -67,7 +67,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -78,7 +78,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Last backup file name for restore of this managed database.
      * 
      */
-    @InputImport(name="lastBackupName")
+    @Import(name="lastBackupName")
       private final @Nullable Output<String> lastBackupName;
 
     public Output<String> getLastBackupName() {
@@ -89,7 +89,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -100,7 +100,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Long Term Retention backup to be used for restore of this managed database.
      * 
      */
-    @InputImport(name="longTermRetentionBackupResourceId")
+    @Import(name="longTermRetentionBackupResourceId")
       private final @Nullable Output<String> longTermRetentionBackupResourceId;
 
     public Output<String> getLongTermRetentionBackupResourceId() {
@@ -111,7 +111,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
     public Output<String> getManagedInstanceName() {
@@ -122,7 +122,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The resource identifier of the recoverable database associated with create operation of this database.
      * 
      */
-    @InputImport(name="recoverableDatabaseId")
+    @Import(name="recoverableDatabaseId")
       private final @Nullable Output<String> recoverableDatabaseId;
 
     public Output<String> getRecoverableDatabaseId() {
@@ -133,7 +133,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -144,7 +144,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The restorable dropped database resource id to restore when creating this database.
      * 
      */
-    @InputImport(name="restorableDroppedDatabaseId")
+    @Import(name="restorableDroppedDatabaseId")
       private final @Nullable Output<String> restorableDroppedDatabaseId;
 
     public Output<String> getRestorableDroppedDatabaseId() {
@@ -155,7 +155,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Conditional. If createMode is PointInTimeRestore, this value is required. Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
      * 
      */
-    @InputImport(name="restorePointInTime")
+    @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
     public Output<String> getRestorePointInTime() {
@@ -166,7 +166,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * The resource identifier of the source database associated with create operation of this database.
      * 
      */
-    @InputImport(name="sourceDatabaseId")
+    @Import(name="sourceDatabaseId")
       private final @Nullable Output<String> sourceDatabaseId;
 
     public Output<String> getSourceDatabaseId() {
@@ -177,7 +177,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the storage container sas token.
      * 
      */
-    @InputImport(name="storageContainerSasToken")
+    @Import(name="storageContainerSasToken")
       private final @Nullable Output<String> storageContainerSasToken;
 
     public Output<String> getStorageContainerSasToken() {
@@ -188,7 +188,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Conditional. If createMode is RestoreExternalBackup, this value is required. Specifies the uri of the storage container where backups for this restore are stored.
      * 
      */
-    @InputImport(name="storageContainerUri")
+    @Import(name="storageContainerUri")
       private final @Nullable Output<String> storageContainerUri;
 
     public Output<String> getStorageContainerUri() {
@@ -199,7 +199,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

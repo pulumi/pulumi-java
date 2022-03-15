@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.inputs.HealthProbeParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    @InputImport(name="healthProbeSettings")
+    @Import(name="healthProbeSettings")
       private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
     public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
@@ -38,7 +38,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
      * Origin group name which must be unique within the endpoint.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
      * The source of the content being delivered via CDN within given origin group.
      * 
      */
-    @InputImport(name="origins", required=true)
+    @Import(name="origins", required=true)
       private final Output<List<ResourceReferenceArgs>> origins;
 
     public Output<List<ResourceReferenceArgs>> getOrigins() {
@@ -60,7 +60,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
      * The JSON object that contains the properties to determine origin health using real requests/responses.This property is currently not supported.
      * 
      */
-    @InputImport(name="responseBasedOriginErrorDetectionSettings")
+    @Import(name="responseBasedOriginErrorDetectionSettings")
       private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings;
 
     public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedOriginErrorDetectionSettings() {
@@ -71,7 +71,7 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
+    @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {

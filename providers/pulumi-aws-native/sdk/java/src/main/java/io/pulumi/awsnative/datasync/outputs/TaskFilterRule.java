@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.TaskFilterRuleFilterType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskFilterRule {
     /**
      * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
@@ -23,10 +23,10 @@ public final class TaskFilterRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskFilterRule(
-        @OutputCustomType.Parameter("filterType") @Nullable TaskFilterRuleFilterType filterType,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("filterType") @Nullable TaskFilterRuleFilterType filterType,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.filterType = filterType;
         this.value = value;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -27,7 +27,7 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
      * The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
      * 
      */
-    @InputImport(name="pem", required=true)
+    @Import(name="pem", required=true)
       private final String pem;
 
     public String getPem() {

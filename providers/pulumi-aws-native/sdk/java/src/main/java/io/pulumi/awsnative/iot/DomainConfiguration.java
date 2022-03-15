@@ -12,7 +12,7 @@ import io.pulumi.awsnative.iot.outputs.DomainConfigurationAuthorizerConfig;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationServerCertificateSummary;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,67 +24,67 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iot:DomainConfiguration")
 public class DomainConfiguration extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="authorizerConfig", type=DomainConfigurationAuthorizerConfig.class, parameters={})
+    @Export(name="authorizerConfig", type=DomainConfigurationAuthorizerConfig.class, parameters={})
     private Output</* @Nullable */ DomainConfigurationAuthorizerConfig> authorizerConfig;
 
     public Output</* @Nullable */ DomainConfigurationAuthorizerConfig> getAuthorizerConfig() {
         return this.authorizerConfig;
     }
-    @OutputExport(name="domainConfigurationName", type=String.class, parameters={})
+    @Export(name="domainConfigurationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainConfigurationName;
 
     public Output</* @Nullable */ String> getDomainConfigurationName() {
         return this.domainConfigurationName;
     }
-    @OutputExport(name="domainConfigurationStatus", type=DomainConfigurationStatus.class, parameters={})
+    @Export(name="domainConfigurationStatus", type=DomainConfigurationStatus.class, parameters={})
     private Output</* @Nullable */ DomainConfigurationStatus> domainConfigurationStatus;
 
     public Output</* @Nullable */ DomainConfigurationStatus> getDomainConfigurationStatus() {
         return this.domainConfigurationStatus;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     public Output</* @Nullable */ String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="domainType", type=DomainConfigurationDomainType.class, parameters={})
+    @Export(name="domainType", type=DomainConfigurationDomainType.class, parameters={})
     private Output<DomainConfigurationDomainType> domainType;
 
     public Output<DomainConfigurationDomainType> getDomainType() {
         return this.domainType;
     }
-    @OutputExport(name="serverCertificateArns", type=List.class, parameters={String.class})
+    @Export(name="serverCertificateArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> serverCertificateArns;
 
     public Output</* @Nullable */ List<String>> getServerCertificateArns() {
         return this.serverCertificateArns;
     }
-    @OutputExport(name="serverCertificates", type=List.class, parameters={DomainConfigurationServerCertificateSummary.class})
+    @Export(name="serverCertificates", type=List.class, parameters={DomainConfigurationServerCertificateSummary.class})
     private Output<List<DomainConfigurationServerCertificateSummary>> serverCertificates;
 
     public Output<List<DomainConfigurationServerCertificateSummary>> getServerCertificates() {
         return this.serverCertificates;
     }
-    @OutputExport(name="serviceType", type=DomainConfigurationServiceType.class, parameters={})
+    @Export(name="serviceType", type=DomainConfigurationServiceType.class, parameters={})
     private Output</* @Nullable */ DomainConfigurationServiceType> serviceType;
 
     public Output</* @Nullable */ DomainConfigurationServiceType> getServiceType() {
         return this.serviceType;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DomainConfigurationTag.class})
+    @Export(name="tags", type=List.class, parameters={DomainConfigurationTag.class})
     private Output</* @Nullable */ List<DomainConfigurationTag>> tags;
 
     public Output</* @Nullable */ List<DomainConfigurationTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="validationCertificateArn", type=String.class, parameters={})
+    @Export(name="validationCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationCertificateArn;
 
     public Output</* @Nullable */ String> getValidationCertificateArn() {

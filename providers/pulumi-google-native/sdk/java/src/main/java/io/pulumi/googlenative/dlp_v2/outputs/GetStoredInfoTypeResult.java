@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeVersionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStoredInfoTypeResult {
     /**
      * Current version of the stored info type.
@@ -27,11 +27,11 @@ public final class GetStoredInfoTypeResult {
      */
     private final List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStoredInfoTypeResult(
-        @OutputCustomType.Parameter("currentVersion") GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pendingVersions") List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
+        @CustomType.Parameter("currentVersion") GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pendingVersions") List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
         this.currentVersion = currentVersion;
         this.name = name;
         this.pendingVersions = pendingVersions;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ISCSIVolumeSource {
     /**
      * whether support iSCSI Discovery CHAP authentication
@@ -71,19 +71,19 @@ public final class ISCSIVolumeSource {
      */
     private final String targetPortal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ISCSIVolumeSource(
-        @OutputCustomType.Parameter("chapAuthDiscovery") @Nullable Boolean chapAuthDiscovery,
-        @OutputCustomType.Parameter("chapAuthSession") @Nullable Boolean chapAuthSession,
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("initiatorName") @Nullable String initiatorName,
-        @OutputCustomType.Parameter("iqn") String iqn,
-        @OutputCustomType.Parameter("iscsiInterface") @Nullable String iscsiInterface,
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("portals") @Nullable List<String> portals,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
-        @OutputCustomType.Parameter("targetPortal") String targetPortal) {
+        @CustomType.Parameter("chapAuthDiscovery") @Nullable Boolean chapAuthDiscovery,
+        @CustomType.Parameter("chapAuthSession") @Nullable Boolean chapAuthSession,
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("initiatorName") @Nullable String initiatorName,
+        @CustomType.Parameter("iqn") String iqn,
+        @CustomType.Parameter("iscsiInterface") @Nullable String iscsiInterface,
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("portals") @Nullable List<String> portals,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
+        @CustomType.Parameter("targetPortal") String targetPortal) {
         this.chapAuthDiscovery = chapAuthDiscovery;
         this.chapAuthSession = chapAuthSession;
         this.fsType = fsType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -30,7 +30,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the user in the user pool is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -41,7 +41,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * First name, or given name, of the user.
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -52,7 +52,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Last name, or surname, of the user.
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
     public Output<String> getLastName() {
@@ -63,7 +63,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Send an email notification.
      * 
      */
-    @InputImport(name="sendEmailNotification")
+    @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
     public Output<Boolean> getSendEmailNotification() {
@@ -74,7 +74,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Email address of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

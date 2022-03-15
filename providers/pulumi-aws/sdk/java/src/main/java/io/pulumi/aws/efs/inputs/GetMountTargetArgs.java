@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
      * ID or ARN of the access point whose mount target that you want to find. It must be included if a `file_system_id` and `mount_target_id` are not included.
      * 
      */
-    @InputImport(name="accessPointId")
+    @Import(name="accessPointId")
       private final @Nullable String accessPointId;
 
     public Optional<String> getAccessPointId() {
@@ -29,7 +29,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
      * ID or ARN of the file system whose mount target that you want to find. It must be included if an `access_point_id` and `mount_target_id` are not included.
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable String fileSystemId;
 
     public Optional<String> getFileSystemId() {
@@ -40,7 +40,7 @@ public final class GetMountTargetArgs extends io.pulumi.resources.InvokeArgs {
      * ID or ARN of the mount target that you want to find. It must be included in your request if an `access_point_id` and `file_system_id` are not included.
      * 
      */
-    @InputImport(name="mountTargetId")
+    @Import(name="mountTargetId")
       private final @Nullable String mountTargetId;
 
     public Optional<String> getMountTargetId() {

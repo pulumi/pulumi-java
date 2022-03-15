@@ -14,7 +14,7 @@ import io.pulumi.azurenative.containerinstance.outputs.ImageRegistryCredentialRe
 import io.pulumi.azurenative.containerinstance.outputs.InitContainerDefinitionResponse;
 import io.pulumi.azurenative.containerinstance.outputs.IpAddressResponse;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContainerGroupResult {
     /**
      * The containers within the container group.
@@ -128,28 +128,28 @@ public final class GetContainerGroupResult {
      */
     private final @Nullable List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContainerGroupResult(
-        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
-        @OutputCustomType.Parameter("diagnostics") @Nullable ContainerGroupDiagnosticsResponse diagnostics,
-        @OutputCustomType.Parameter("dnsConfig") @Nullable DnsConfigurationResponse dnsConfig,
-        @OutputCustomType.Parameter("encryptionProperties") @Nullable EncryptionPropertiesResponse encryptionProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ContainerGroupIdentityResponse identity,
-        @OutputCustomType.Parameter("imageRegistryCredentials") @Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials,
-        @OutputCustomType.Parameter("initContainers") @Nullable List<InitContainerDefinitionResponse> initContainers,
-        @OutputCustomType.Parameter("instanceView") ContainerGroupResponseInstanceView instanceView,
-        @OutputCustomType.Parameter("ipAddress") @Nullable IpAddressResponse ipAddress,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable ContainerGroupNetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("restartPolicy") @Nullable String restartPolicy,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumes") @Nullable List<VolumeResponse> volumes) {
+        @CustomType.Parameter("containers") List<ContainerResponse> containers,
+        @CustomType.Parameter("diagnostics") @Nullable ContainerGroupDiagnosticsResponse diagnostics,
+        @CustomType.Parameter("dnsConfig") @Nullable DnsConfigurationResponse dnsConfig,
+        @CustomType.Parameter("encryptionProperties") @Nullable EncryptionPropertiesResponse encryptionProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ContainerGroupIdentityResponse identity,
+        @CustomType.Parameter("imageRegistryCredentials") @Nullable List<ImageRegistryCredentialResponse> imageRegistryCredentials,
+        @CustomType.Parameter("initContainers") @Nullable List<InitContainerDefinitionResponse> initContainers,
+        @CustomType.Parameter("instanceView") ContainerGroupResponseInstanceView instanceView,
+        @CustomType.Parameter("ipAddress") @Nullable IpAddressResponse ipAddress,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable ContainerGroupNetworkProfileResponse networkProfile,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("restartPolicy") @Nullable String restartPolicy,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumes") @Nullable List<VolumeResponse> volumes) {
         this.containers = containers;
         this.diagnostics = diagnostics;
         this.dnsConfig = dnsConfig;

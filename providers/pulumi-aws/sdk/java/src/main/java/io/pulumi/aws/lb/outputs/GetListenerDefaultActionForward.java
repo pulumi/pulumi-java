@@ -5,19 +5,19 @@ package io.pulumi.aws.lb.outputs;
 
 import io.pulumi.aws.lb.outputs.GetListenerDefaultActionForwardStickiness;
 import io.pulumi.aws.lb.outputs.GetListenerDefaultActionForwardTargetGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionForward {
     private final List<GetListenerDefaultActionForwardStickiness> stickinesses;
     private final List<GetListenerDefaultActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionForward(
-        @OutputCustomType.Parameter("stickinesses") List<GetListenerDefaultActionForwardStickiness> stickinesses,
-        @OutputCustomType.Parameter("targetGroups") List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
+        @CustomType.Parameter("stickinesses") List<GetListenerDefaultActionForwardStickiness> stickinesses,
+        @CustomType.Parameter("targetGroups") List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
         this.stickinesses = stickinesses;
         this.targetGroups = targetGroups;
     }

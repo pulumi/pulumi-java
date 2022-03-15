@@ -8,7 +8,7 @@ import io.pulumi.aws.ecr.ReplicationConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationState;
 import io.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * The account ID of the destination registry to replicate to.
      * 
      */
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**
@@ -50,7 +50,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * Replication configuration for a registry. See Replication Configuration.
      * 
      */
-    @OutputExport(name="replicationConfiguration", type=ReplicationConfigurationReplicationConfiguration.class, parameters={})
+    @Export(name="replicationConfiguration", type=ReplicationConfigurationReplicationConfiguration.class, parameters={})
     private Output</* @Nullable */ ReplicationConfigurationReplicationConfiguration> replicationConfiguration;
 
     /**

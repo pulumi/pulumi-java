@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ThrottlingMetricResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class ThrottlingRuleResponse extends io.pulumi.resources.InvokeArgs
 
     public static final ThrottlingRuleResponse Empty = new ThrottlingRuleResponse();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
         return this.action;
     }
 
-    @InputImport(name="metrics", required=true)
+    @Import(name="metrics", required=true)
       private final List<ThrottlingMetricResponse> metrics;
 
     public List<ThrottlingMetricResponse> getMetrics() {
         return this.metrics;
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable List<String> requiredFeatures;
 
     public List<String> getRequiredFeatures() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionDockerVolumeConfigurationArg
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionEFSVolumeConfigurationArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionHostVolumePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
 
     public static final TaskDefinitionVolumeArgs Empty = new TaskDefinitionVolumeArgs();
 
-    @InputImport(name="dockerVolumeConfiguration")
+    @Import(name="dockerVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
 
     public Output<TaskDefinitionDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
         return this.dockerVolumeConfiguration == null ? Output.empty() : this.dockerVolumeConfiguration;
     }
 
-    @InputImport(name="eFSVolumeConfiguration")
+    @Import(name="eFSVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionEFSVolumeConfigurationArgs> eFSVolumeConfiguration;
 
     public Output<TaskDefinitionEFSVolumeConfigurationArgs> getEFSVolumeConfiguration() {
         return this.eFSVolumeConfiguration == null ? Output.empty() : this.eFSVolumeConfiguration;
     }
 
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<TaskDefinitionHostVolumePropertiesArgs> host;
 
     public Output<TaskDefinitionHostVolumePropertiesArgs> getHost() {
         return this.host == null ? Output.empty() : this.host;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.macie.inputs;
 
 import io.pulumi.awsnative.macie.inputs.FindingsFilterCriterionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class FindingsFilterFindingCriteriaArgs extends io.pulumi.resources
 
     public static final FindingsFilterFindingCriteriaArgs Empty = new FindingsFilterFindingCriteriaArgs();
 
-    @InputImport(name="criterion")
+    @Import(name="criterion")
       private final @Nullable Output<FindingsFilterCriterionArgs> criterion;
 
     public Output<FindingsFilterCriterionArgs> getCriterion() {

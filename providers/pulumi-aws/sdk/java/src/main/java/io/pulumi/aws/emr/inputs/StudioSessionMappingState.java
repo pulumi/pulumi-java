@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    @InputImport(name="identityId")
+    @Import(name="identityId")
       private final @Nullable Output<String> identityId;
 
     public Output<String> getIdentityId() {
@@ -29,7 +29,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * The name of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    @InputImport(name="identityName")
+    @Import(name="identityName")
       private final @Nullable Output<String> identityName;
 
     public Output<String> getIdentityName() {
@@ -40,7 +40,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
      * 
      */
-    @InputImport(name="identityType")
+    @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
     public Output<String> getIdentityType() {
@@ -51,7 +51,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
      * 
      */
-    @InputImport(name="sessionPolicyArn")
+    @Import(name="sessionPolicyArn")
       private final @Nullable Output<String> sessionPolicyArn;
 
     public Output<String> getSessionPolicyArn() {
@@ -62,7 +62,7 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
      * The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    @InputImport(name="studioId")
+    @Import(name="studioId")
       private final @Nullable Output<String> studioId;
 
     public Output<String> getStudioId() {

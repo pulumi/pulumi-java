@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertDnsChallengeResponse {
     /**
      * The domain name upon which the DNS challenge must be satisfied.
@@ -20,10 +20,10 @@ public final class CertDnsChallengeResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertDnsChallengeResponse(
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("token") String token) {
         this.domainName = domainName;
         this.token = token;
     }

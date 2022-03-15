@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.FulfillmentFeatureGetArgs;
 import io.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the fulfillment, unique within the agent.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
      * Whether fulfillment is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -45,7 +45,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="features")
+    @Import(name="features")
       private final @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
 
     public Output<List<FulfillmentFeatureGetArgs>> getFeatures() {
@@ -57,7 +57,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="genericWebService")
+    @Import(name="genericWebService")
       private final @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
 
     public Output<FulfillmentGenericWebServiceGetArgs> getGenericWebService() {
@@ -69,7 +69,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
      * ID>/locations/<Location ID>/agent/fulfillment
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

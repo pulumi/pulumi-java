@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Script end time.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -36,7 +36,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Script error stream.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable String error;
 
     public Optional<String> getError() {
@@ -47,7 +47,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Communicate script configuration errors or execution messages.
      * 
      */
-    @InputImport(name="executionMessage")
+    @Import(name="executionMessage")
       private final @Nullable String executionMessage;
 
     public Optional<String> getExecutionMessage() {
@@ -58,7 +58,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Script execution status.
      * 
      */
-    @InputImport(name="executionState")
+    @Import(name="executionState")
       private final @Nullable String executionState;
 
     public Optional<String> getExecutionState() {
@@ -69,7 +69,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Exit code returned from script execution.
      * 
      */
-    @InputImport(name="exitCode")
+    @Import(name="exitCode")
       private final @Nullable Integer exitCode;
 
     public Optional<Integer> getExitCode() {
@@ -80,7 +80,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Script output stream.
      * 
      */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable String output;
 
     public Optional<String> getOutput() {
@@ -91,7 +91,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * Script start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -102,7 +102,7 @@ public final class VirtualMachineRunCommandInstanceViewResponse extends io.pulum
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {

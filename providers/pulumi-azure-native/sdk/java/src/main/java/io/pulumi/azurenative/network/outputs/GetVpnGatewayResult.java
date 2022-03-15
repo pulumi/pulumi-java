@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnConnectionResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayNatRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpnGatewayResult {
     /**
      * Local network gateway's BGP speaker settings.
@@ -91,22 +91,22 @@ public final class GetVpnGatewayResult {
      */
     private final @Nullable Integer vpnGatewayScaleUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpnGatewayResult(
-        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
-        @OutputCustomType.Parameter("connections") @Nullable List<VpnConnectionResponse> connections,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipConfigurations") List<VpnGatewayIpConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("natRules") @Nullable List<VpnGatewayNatRuleResponse> natRules,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
-        @OutputCustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit) {
+        @CustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @CustomType.Parameter("connections") @Nullable List<VpnConnectionResponse> connections,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipConfigurations") List<VpnGatewayIpConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("natRules") @Nullable List<VpnGatewayNatRuleResponse> natRules,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @CustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit) {
         this.bgpSettings = bgpSettings;
         this.connections = connections;
         this.etag = etag;

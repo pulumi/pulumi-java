@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.MonitorConfigCustomHeadersArgs;
 import io.pulumi.azurenative.network.inputs.MonitorConfigExpectedStatusCodeRangesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * List of custom headers.
      * 
      */
-    @InputImport(name="customHeaders")
+    @Import(name="customHeaders")
       private final @Nullable Output<List<MonitorConfigCustomHeadersArgs>> customHeaders;
 
     public Output<List<MonitorConfigCustomHeadersArgs>> getCustomHeaders() {
@@ -40,7 +40,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * List of expected status code ranges.
      * 
      */
-    @InputImport(name="expectedStatusCodeRanges")
+    @Import(name="expectedStatusCodeRanges")
       private final @Nullable Output<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges;
 
     public Output<List<MonitorConfigExpectedStatusCodeRangesArgs>> getExpectedStatusCodeRanges() {
@@ -51,7 +51,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
      * 
      */
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Output<Double> intervalInSeconds;
 
     public Output<Double> getIntervalInSeconds() {
@@ -62,7 +62,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The path relative to the endpoint domain name used to probe for endpoint health.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -73,7 +73,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The TCP port used to probe for endpoint health.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Double> port;
 
     public Output<Double> getPort() {
@@ -84,7 +84,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The profile-level monitoring status of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="profileMonitorStatus")
+    @Import(name="profileMonitorStatus")
       private final @Nullable Output<Either<String,ProfileMonitorStatus>> profileMonitorStatus;
 
     public Output<Either<String,ProfileMonitorStatus>> getProfileMonitorStatus() {
@@ -95,7 +95,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,MonitorProtocol>> protocol;
 
     public Output<Either<String,MonitorProtocol>> getProtocol() {
@@ -106,7 +106,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Double> timeoutInSeconds;
 
     public Output<Double> getTimeoutInSeconds() {
@@ -117,7 +117,7 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
      * 
      */
-    @InputImport(name="toleratedNumberOfFailures")
+    @Import(name="toleratedNumberOfFailures")
       private final @Nullable Output<Double> toleratedNumberOfFailures;
 
     public Output<Double> getToleratedNumberOfFailures() {

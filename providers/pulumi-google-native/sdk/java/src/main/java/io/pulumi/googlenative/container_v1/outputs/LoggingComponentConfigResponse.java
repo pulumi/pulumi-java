@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingComponentConfigResponse {
     /**
      * Select components to collect logs. An empty set would disable all logging.
@@ -16,8 +16,8 @@ public final class LoggingComponentConfigResponse {
      */
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor
-    private LoggingComponentConfigResponse(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
+    @CustomType.Constructor
+    private LoggingComponentConfigResponse(@CustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 

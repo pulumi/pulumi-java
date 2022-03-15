@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecutionResponse {
     /**
      * Time the Execution was instantiated.
@@ -56,17 +56,17 @@ public final class ExecutionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutionResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
-        @OutputCustomType.Parameter("jobUri") String jobUri,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputNotebookFile") String outputNotebookFile,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
+        @CustomType.Parameter("jobUri") String jobUri,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputNotebookFile") String outputNotebookFile,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

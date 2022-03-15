@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetArchiveDeploymentResult {
     /**
      * The time at which the Archive Deployment was created in milliseconds since the epoch.
@@ -41,14 +41,14 @@ public final class GetArchiveDeploymentResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetArchiveDeploymentResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("gcsUri") String gcsUri,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("gcsUri") String gcsUri,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.createdAt = createdAt;
         this.gcsUri = gcsUri;
         this.labels = labels;

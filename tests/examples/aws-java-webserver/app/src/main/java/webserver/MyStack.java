@@ -2,7 +2,7 @@ package webserver;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.resources.CustomResourceOptions;
 import io.pulumi.aws.ec2.GetAmi;
@@ -15,10 +15,10 @@ import java.util.concurrent.ExecutionException;
 
 
 public final class MyStack extends Stack {
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> publicIp;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> publicHostName;
 
     public MyStack() throws InterruptedException, ExecutionException {

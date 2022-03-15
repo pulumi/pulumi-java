@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DataSourceRdsParameters extends io.pulumi.resources.InvokeArg
      * <p>Database.</p>
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
@@ -31,7 +31,7 @@ public final class DataSourceRdsParameters extends io.pulumi.resources.InvokeArg
      * <p>Instance ID.</p>
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {

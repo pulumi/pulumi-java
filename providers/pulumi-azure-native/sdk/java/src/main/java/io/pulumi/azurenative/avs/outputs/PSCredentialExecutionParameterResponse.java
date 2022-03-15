@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PSCredentialExecutionParameterResponse {
     /**
      * The parameter name
@@ -33,12 +33,12 @@ public final class PSCredentialExecutionParameterResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PSCredentialExecutionParameterResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.name = name;
         this.password = password;
         this.type = type;

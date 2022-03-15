@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FlowLogFormatType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
      * The file type of flow log.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,FlowLogFormatType>> type;
 
     public Output<Either<String,FlowLogFormatType>> getType() {
@@ -36,7 +36,7 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
      * The version (revision) of the flow log.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

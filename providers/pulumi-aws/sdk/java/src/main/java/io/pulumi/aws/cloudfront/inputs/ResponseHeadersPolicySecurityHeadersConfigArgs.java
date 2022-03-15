@@ -10,7 +10,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfi
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
      * 
      */
-    @InputImport(name="contentSecurityPolicy")
+    @Import(name="contentSecurityPolicy")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs> contentSecurityPolicy;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicyArgs> getContentSecurityPolicy() {
@@ -34,7 +34,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * Determines whether CloudFront includes the `X-Content-Type-Options` HTTP response header with its value set to `nosniff`. See Content Type Options for more information.
      * 
      */
-    @InputImport(name="contentTypeOptions")
+    @Import(name="contentTypeOptions")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs> contentTypeOptions;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigContentTypeOptionsArgs> getContentTypeOptions() {
@@ -45,7 +45,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the header’s value. See Frame Options for more information.
      * 
      */
-    @InputImport(name="frameOptions")
+    @Import(name="frameOptions")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs> frameOptions;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigFrameOptionsArgs> getFrameOptions() {
@@ -56,7 +56,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
      * 
      */
-    @InputImport(name="referrerPolicy")
+    @Import(name="referrerPolicy")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs> referrerPolicy;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs> getReferrerPolicy() {
@@ -67,7 +67,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and the header’s value. See Strict Transport Security for more information.
      * 
      */
-    @InputImport(name="strictTransportSecurity")
+    @Import(name="strictTransportSecurity")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs> strictTransportSecurity;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurityArgs> getStrictTransportSecurity() {
@@ -78,7 +78,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
      * Determine whether CloudFront includes the `X-XSS-Protection` HTTP response header and the header’s value. See XSS Protection for more information.
      * 
      */
-    @InputImport(name="xssProtection")
+    @Import(name="xssProtection")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs> xssProtection;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigXssProtectionArgs> getXssProtection() {

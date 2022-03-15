@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
      * The end of the range (exclusive).
      * 
      */
-    @InputImport(name="rangeEnd", required=true)
+    @Import(name="rangeEnd", required=true)
       private final Output<Integer> rangeEnd;
 
     public Output<Integer> getRangeEnd() {
@@ -28,7 +28,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
      * The start of the range (inclusive).
      * 
      */
-    @InputImport(name="rangeStart", required=true)
+    @Import(name="rangeStart", required=true)
       private final Output<Integer> rangeStart;
 
     public Output<Integer> getRangeStart() {

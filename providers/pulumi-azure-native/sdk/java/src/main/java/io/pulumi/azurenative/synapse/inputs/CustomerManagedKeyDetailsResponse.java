@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.WorkspaceKeyDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
      * The key object of the workspace
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable WorkspaceKeyDetailsResponse key;
 
     public Optional<WorkspaceKeyDetailsResponse> getKey() {
@@ -34,7 +34,7 @@ public final class CustomerManagedKeyDetailsResponse extends io.pulumi.resources
      * The customer managed key status on the workspace
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

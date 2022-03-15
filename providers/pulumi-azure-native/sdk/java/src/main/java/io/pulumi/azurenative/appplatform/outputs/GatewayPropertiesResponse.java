@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appplatform.outputs.GatewayInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.GatewayOperatorPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.GatewayResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.outputs.SsoPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayPropertiesResponse {
     /**
      * API metadata property for Spring Cloud Gateway
@@ -70,18 +70,18 @@ public final class GatewayPropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayPropertiesResponse(
-        @OutputCustomType.Parameter("apiMetadataProperties") @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties,
-        @OutputCustomType.Parameter("corsProperties") @Nullable GatewayCorsPropertiesResponse corsProperties,
-        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
-        @OutputCustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
-        @OutputCustomType.Parameter("operatorProperties") GatewayOperatorPropertiesResponse operatorProperties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
-        @OutputCustomType.Parameter("resourceRequests") @Nullable GatewayResourceRequestsResponse resourceRequests,
-        @OutputCustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("apiMetadataProperties") @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties,
+        @CustomType.Parameter("corsProperties") @Nullable GatewayCorsPropertiesResponse corsProperties,
+        @CustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @CustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
+        @CustomType.Parameter("operatorProperties") GatewayOperatorPropertiesResponse operatorProperties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("public") @Nullable Boolean $public,
+        @CustomType.Parameter("resourceRequests") @Nullable GatewayResourceRequestsResponse resourceRequests,
+        @CustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
+        @CustomType.Parameter("url") String url) {
         this.apiMetadataProperties = apiMetadataProperties;
         this.corsProperties = corsProperties;
         this.httpsOnly = httpsOnly;

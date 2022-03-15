@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.ssm.outputs;
 
 import io.pulumi.awsnative.ssm.outputs.DocumentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDocumentResult {
     /**
      * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment.
@@ -17,8 +17,8 @@ public final class GetDocumentResult {
      */
     private final @Nullable List<DocumentTag> tags;
 
-    @OutputCustomType.Constructor
-    private GetDocumentResult(@OutputCustomType.Parameter("tags") @Nullable List<DocumentTag> tags) {
+    @CustomType.Constructor
+    private GetDocumentResult(@CustomType.Parameter("tags") @Nullable List<DocumentTag> tags) {
         this.tags = tags;
     }
 

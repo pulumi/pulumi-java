@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmincidents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ResponsePlanNotificationTargetItem extends io.pulumi.resource
 
     public static final ResponsePlanNotificationTargetItem Empty = new ResponsePlanNotificationTargetItem();
 
-    @InputImport(name="snsTopicArn")
+    @Import(name="snsTopicArn")
       private final @Nullable String snsTopicArn;
 
     public Optional<String> getSnsTopicArn() {

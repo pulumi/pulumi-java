@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptions {
     /**
      * The value of the `X-Frame-Options` HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptions {
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigFrameOptions(
-        @OutputCustomType.Parameter("frameOption") String frameOption,
-        @OutputCustomType.Parameter("override") Boolean override) {
+        @CustomType.Parameter("frameOption") String frameOption,
+        @CustomType.Parameter("override") Boolean override) {
         this.frameOption = frameOption;
         this.override = override;
     }

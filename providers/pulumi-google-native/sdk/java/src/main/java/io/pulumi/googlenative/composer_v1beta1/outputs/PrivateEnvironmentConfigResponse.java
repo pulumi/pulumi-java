@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.composer_v1beta1.outputs.PrivateClusterConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEnvironmentConfigResponse {
     /**
      * Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
@@ -57,17 +57,17 @@ public final class PrivateEnvironmentConfigResponse {
      */
     private final String webServerIpv4ReservedRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEnvironmentConfigResponse(
-        @OutputCustomType.Parameter("cloudComposerConnectionSubnetwork") String cloudComposerConnectionSubnetwork,
-        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
-        @OutputCustomType.Parameter("cloudComposerNetworkIpv4ReservedRange") String cloudComposerNetworkIpv4ReservedRange,
-        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
-        @OutputCustomType.Parameter("enablePrivateEnvironment") Boolean enablePrivateEnvironment,
-        @OutputCustomType.Parameter("enablePrivatelyUsedPublicIps") Boolean enablePrivatelyUsedPublicIps,
-        @OutputCustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
-        @OutputCustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock,
-        @OutputCustomType.Parameter("webServerIpv4ReservedRange") String webServerIpv4ReservedRange) {
+        @CustomType.Parameter("cloudComposerConnectionSubnetwork") String cloudComposerConnectionSubnetwork,
+        @CustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
+        @CustomType.Parameter("cloudComposerNetworkIpv4ReservedRange") String cloudComposerNetworkIpv4ReservedRange,
+        @CustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
+        @CustomType.Parameter("enablePrivateEnvironment") Boolean enablePrivateEnvironment,
+        @CustomType.Parameter("enablePrivatelyUsedPublicIps") Boolean enablePrivatelyUsedPublicIps,
+        @CustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
+        @CustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock,
+        @CustomType.Parameter("webServerIpv4ReservedRange") String webServerIpv4ReservedRange) {
         this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;

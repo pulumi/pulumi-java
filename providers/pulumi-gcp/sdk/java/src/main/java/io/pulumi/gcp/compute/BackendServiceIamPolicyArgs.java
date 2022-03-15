@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class BackendServiceIamPolicyArgs extends io.pulumi.resources.Resou
 
     public static final BackendServiceIamPolicyArgs Empty = new BackendServiceIamPolicyArgs();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
         return this.policyData;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

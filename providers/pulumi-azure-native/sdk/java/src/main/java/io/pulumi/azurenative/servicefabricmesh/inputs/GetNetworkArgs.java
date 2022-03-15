@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
      * The identity of the network.
      * 
      */
-    @InputImport(name="networkResourceName", required=true)
+    @Import(name="networkResourceName", required=true)
       private final String networkResourceName;
 
     public String getNetworkResourceName() {
@@ -27,7 +27,7 @@ public final class GetNetworkArgs extends io.pulumi.resources.InvokeArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
      * 
      */
-    @InputImport(name="headerBehavior")
+    @Import(name="headerBehavior")
       private final @Nullable Output<String> headerBehavior;
 
     public Output<String> getHeaderBehavior() {
@@ -30,7 +30,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      * Object that contains a list of header names. See Items for more information.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> getHeaders() {

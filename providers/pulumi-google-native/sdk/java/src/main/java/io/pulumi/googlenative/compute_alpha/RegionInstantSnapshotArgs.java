@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * Whether to attempt an application consistent instant snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    @InputImport(name="guestFlush")
+    @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
     public Output<Boolean> getGuestFlush() {
@@ -42,7 +42,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * Labels to apply to this InstantSnapshot. These can be later modified by the setLabels method. Label values may be empty.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -53,28 +53,28 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -85,7 +85,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * URL of the source disk used to create this instant snapshot. Note that the source disk must be in the same zone/region as the instant snapshot to be created. This can be a full or valid partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk
      * 
      */
-    @InputImport(name="sourceDisk")
+    @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {

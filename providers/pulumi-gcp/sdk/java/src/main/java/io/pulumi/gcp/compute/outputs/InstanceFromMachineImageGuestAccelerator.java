@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromMachineImageGuestAccelerator {
     private final Integer count;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFromMachineImageGuestAccelerator(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("type") String type) {
         this.count = count;
         this.type = type;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.CronJobSpec;
 import io.pulumi.kubernetes.batch_v1.outputs.CronJobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CronJob {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -40,13 +40,13 @@ public final class CronJob {
      */
     private final @Nullable CronJobStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CronJob(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable CronJobSpec spec,
-        @OutputCustomType.Parameter("status") @Nullable CronJobStatus status) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable CronJobSpec spec,
+        @CustomType.Parameter("status") @Nullable CronJobStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

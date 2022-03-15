@@ -5,7 +5,7 @@ package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedErrorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class EnvironmentLastUpdatedArgs extends io.pulumi.resources.Resour
      * * `logging_configuration[0].<LOG_CONFIGURATION_TYPE>[0].cloud_watch_log_group_arn` - Provides the ARN for the CloudWatch group where the logs will be published
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
         return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable Output<List<EnvironmentLastUpdatedErrorArgs>> errors;
 
     public Output<List<EnvironmentLastUpdatedErrorArgs>> getErrors() {
@@ -39,7 +39,7 @@ public final class EnvironmentLastUpdatedArgs extends io.pulumi.resources.Resour
      * The status of the Amazon MWAA Environment
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

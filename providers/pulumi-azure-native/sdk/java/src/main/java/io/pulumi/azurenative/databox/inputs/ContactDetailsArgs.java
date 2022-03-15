@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.NotificationPreferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Contact name of the person.
      * 
      */
-    @InputImport(name="contactName", required=true)
+    @Import(name="contactName", required=true)
       private final Output<String> contactName;
 
     public Output<String> getContactName() {
@@ -35,7 +35,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * List of Email-ids to be notified about job progress.
      * 
      */
-    @InputImport(name="emailList", required=true)
+    @Import(name="emailList", required=true)
       private final Output<List<String>> emailList;
 
     public Output<List<String>> getEmailList() {
@@ -46,7 +46,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Mobile number of the contact person.
      * 
      */
-    @InputImport(name="mobile")
+    @Import(name="mobile")
       private final @Nullable Output<String> mobile;
 
     public Output<String> getMobile() {
@@ -57,7 +57,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Notification preference for a job stage.
      * 
      */
-    @InputImport(name="notificationPreference")
+    @Import(name="notificationPreference")
       private final @Nullable Output<List<NotificationPreferenceArgs>> notificationPreference;
 
     public Output<List<NotificationPreferenceArgs>> getNotificationPreference() {
@@ -68,7 +68,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Phone number of the contact person.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final Output<String> phone;
 
     public Output<String> getPhone() {
@@ -79,7 +79,7 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Phone extension number of the contact person.
      * 
      */
-    @InputImport(name="phoneExtension")
+    @Import(name="phoneExtension")
       private final @Nullable Output<String> phoneExtension;
 
     public Output<String> getPhoneExtension() {

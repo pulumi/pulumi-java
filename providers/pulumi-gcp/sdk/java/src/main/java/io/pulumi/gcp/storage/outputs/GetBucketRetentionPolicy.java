@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketRetentionPolicy {
     private final Boolean isLocked;
     private final Integer retentionPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketRetentionPolicy(
-        @OutputCustomType.Parameter("isLocked") Boolean isLocked,
-        @OutputCustomType.Parameter("retentionPeriod") Integer retentionPeriod) {
+        @CustomType.Parameter("isLocked") Boolean isLocked,
+        @CustomType.Parameter("retentionPeriod") Integer retentionPeriod) {
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;
     }

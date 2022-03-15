@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse {
     /**
      * If set to true, the last message from virtual agent (hand off message) and the message before it (trigger message of hand off) are dropped.
@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      */
     private final Boolean dropVirtualAgentMessages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(
-        @OutputCustomType.Parameter("dropHandoffMessages") Boolean dropHandoffMessages,
-        @OutputCustomType.Parameter("dropIvrMessages") Boolean dropIvrMessages,
-        @OutputCustomType.Parameter("dropVirtualAgentMessages") Boolean dropVirtualAgentMessages) {
+        @CustomType.Parameter("dropHandoffMessages") Boolean dropHandoffMessages,
+        @CustomType.Parameter("dropIvrMessages") Boolean dropIvrMessages,
+        @CustomType.Parameter("dropVirtualAgentMessages") Boolean dropVirtualAgentMessages) {
         this.dropHandoffMessages = dropHandoffMessages;
         this.dropIvrMessages = dropIvrMessages;
         this.dropVirtualAgentMessages = dropVirtualAgentMessages;

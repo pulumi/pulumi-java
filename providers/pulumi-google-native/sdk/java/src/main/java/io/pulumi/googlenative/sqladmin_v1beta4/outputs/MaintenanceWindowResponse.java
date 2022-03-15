@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowResponse {
     /**
      * day of week (1-7), starting on Monday.
@@ -31,12 +31,12 @@ public final class MaintenanceWindowResponse {
      */
     private final String updateTrack;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowResponse(
-        @OutputCustomType.Parameter("day") Integer day,
-        @OutputCustomType.Parameter("hour") Integer hour,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("updateTrack") String updateTrack) {
+        @CustomType.Parameter("day") Integer day,
+        @CustomType.Parameter("hour") Integer hour,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("updateTrack") String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.kind = kind;

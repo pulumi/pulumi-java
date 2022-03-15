@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UniformInt64RangePartitionSchemeDescriptionResponse {
     /**
      * The number of partitions.
@@ -34,12 +34,12 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UniformInt64RangePartitionSchemeDescriptionResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("highKey") String highKey,
-        @OutputCustomType.Parameter("lowKey") String lowKey,
-        @OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("highKey") String highKey,
+        @CustomType.Parameter("lowKey") String lowKey,
+        @CustomType.Parameter("partitionScheme") String partitionScheme) {
         this.count = count;
         this.highKey = highKey;
         this.lowKey = lowKey;

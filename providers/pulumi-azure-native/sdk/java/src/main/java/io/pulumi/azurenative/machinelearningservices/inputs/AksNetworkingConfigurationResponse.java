@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AksNetworkingConfigurationResponse extends io.pulumi.resource
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
      */
-    @InputImport(name="dnsServiceIP")
+    @Import(name="dnsServiceIP")
       private final @Nullable String dnsServiceIP;
 
     public Optional<String> getDnsServiceIP() {
@@ -33,7 +33,7 @@ public final class AksNetworkingConfigurationResponse extends io.pulumi.resource
      * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
      */
-    @InputImport(name="dockerBridgeCidr")
+    @Import(name="dockerBridgeCidr")
       private final @Nullable String dockerBridgeCidr;
 
     public Optional<String> getDockerBridgeCidr() {
@@ -44,7 +44,7 @@ public final class AksNetworkingConfigurationResponse extends io.pulumi.resource
      * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
      */
-    @InputImport(name="serviceCidr")
+    @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
     public Optional<String> getServiceCidr() {
@@ -55,7 +55,7 @@ public final class AksNetworkingConfigurationResponse extends io.pulumi.resource
      * Virtual network subnet resource ID the compute nodes belong to
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {

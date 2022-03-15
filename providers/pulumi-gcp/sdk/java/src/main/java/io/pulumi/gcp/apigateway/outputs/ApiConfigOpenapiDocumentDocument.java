@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiConfigOpenapiDocumentDocument {
     /**
      * Base64 encoded content of the file.
@@ -20,10 +20,10 @@ public final class ApiConfigOpenapiDocumentDocument {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiConfigOpenapiDocumentDocument(
-        @OutputCustomType.Parameter("contents") String contents,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("contents") String contents,
+        @CustomType.Parameter("path") String path) {
         this.contents = contents;
         this.path = path;
     }

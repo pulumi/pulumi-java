@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty {
     private final Boolean guestFlush;
     private final Map<String,String> labels;
     private final List<String> storageLocations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicySnapshotProperty(
-        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations) {
+        @CustomType.Parameter("guestFlush") Boolean guestFlush,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("storageLocations") List<String> storageLocations) {
         this.guestFlush = guestFlush;
         this.labels = labels;
         this.storageLocations = storageLocations;

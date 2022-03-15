@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileShareResponse {
     /**
      * Password credential used to connect to the share location.
@@ -27,11 +27,11 @@ public final class FileShareResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileShareResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.password = password;
         this.path = path;
         this.userName = userName;

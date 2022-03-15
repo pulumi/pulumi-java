@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TokenType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Time in seconds that the token remains valid
      * 
      */
-    @InputImport(name="expiresIn")
+    @Import(name="expiresIn")
       private final @Nullable Output<Integer> expiresIn;
 
     public Output<Integer> getExpiresIn() {
@@ -36,7 +36,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The refresh token used to refresh the access token.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {
@@ -47,7 +47,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of the access token.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -58,7 +58,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The access token used to access the source control provider.
      * 
      */
-    @InputImport(name="token", required=true)
+    @Import(name="token", required=true)
       private final Output<String> token;
 
     public Output<String> getToken() {
@@ -69,7 +69,7 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The type of Auth token.
      * 
      */
-    @InputImport(name="tokenType", required=true)
+    @Import(name="tokenType", required=true)
       private final Output<Either<String,TokenType>> tokenType;
 
     public Output<Either<String,TokenType>> getTokenType() {

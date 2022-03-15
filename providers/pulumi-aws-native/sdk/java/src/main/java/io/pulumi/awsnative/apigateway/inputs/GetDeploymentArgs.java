@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * Primary Id for this resource
      * 
      */
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
     public String getDeploymentId() {
@@ -27,7 +27,7 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the RestApi resource to deploy.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

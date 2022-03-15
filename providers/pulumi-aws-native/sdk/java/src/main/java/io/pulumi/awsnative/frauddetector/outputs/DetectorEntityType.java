@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.frauddetector.outputs;
 
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorEntityType {
     private final @Nullable String arn;
     /**
@@ -38,15 +38,15 @@ public final class DetectorEntityType {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorEntityType(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("inline") @Nullable Boolean inline,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

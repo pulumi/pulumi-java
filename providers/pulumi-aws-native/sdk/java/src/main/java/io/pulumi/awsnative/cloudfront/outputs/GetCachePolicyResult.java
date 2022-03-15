@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyResult {
     private final @Nullable CachePolicyConfig cachePolicyConfig;
     private final @Nullable String id;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCachePolicyResult(
-        @OutputCustomType.Parameter("cachePolicyConfig") @Nullable CachePolicyConfig cachePolicyConfig,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
+        @CustomType.Parameter("cachePolicyConfig") @Nullable CachePolicyConfig cachePolicyConfig,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.cachePolicyConfig = cachePolicyConfig;
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;

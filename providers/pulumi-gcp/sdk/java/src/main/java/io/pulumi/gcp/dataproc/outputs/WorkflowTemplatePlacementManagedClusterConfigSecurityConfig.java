@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
     /**
      * Kerberos related configuration.
@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
      */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfig(@OutputCustomType.Parameter("kerberosConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+    @CustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfig(@CustomType.Parameter("kerberosConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 

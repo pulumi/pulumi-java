@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final Output<String> category;
 
     public Output<String> getCategory() {
@@ -32,7 +32,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<Map<String,String>> configuration;
 
     public Output<Map<String,String>> getConfiguration() {
@@ -43,7 +43,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * A list of artifact names to be worked on.
      * 
      */
-    @InputImport(name="inputArtifacts")
+    @Import(name="inputArtifacts")
       private final @Nullable Output<List<String>> inputArtifacts;
 
     public Output<List<String>> getInputArtifacts() {
@@ -54,7 +54,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The action declaration's name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The namespace all output variables will be accessed from.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -76,7 +76,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * A list of artifact names to output. Output artifact names must be unique within a pipeline.
      * 
      */
-    @InputImport(name="outputArtifacts")
+    @Import(name="outputArtifacts")
       private final @Nullable Output<List<String>> outputArtifacts;
 
     public Output<List<String>> getOutputArtifacts() {
@@ -87,7 +87,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The creator of the action being called. Possible values are `AWS`, `Custom` and `ThirdParty`.
      * 
      */
-    @InputImport(name="owner", required=true)
+    @Import(name="owner", required=true)
       private final Output<String> owner;
 
     public Output<String> getOwner() {
@@ -98,7 +98,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The provider of the service being called by the action. Valid providers are determined by the action category. Provider names are listed in the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
      * 
      */
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final Output<String> provider;
 
     public Output<String> getProvider() {
@@ -109,7 +109,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The region in which to run the action.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -120,7 +120,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -131,7 +131,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * The order in which actions are run.
      * 
      */
-    @InputImport(name="runOrder")
+    @Import(name="runOrder")
       private final @Nullable Output<Integer> runOrder;
 
     public Output<Integer> getRunOrder() {
@@ -142,7 +142,7 @@ public final class PipelineStageActionGetArgs extends io.pulumi.resources.Resour
      * A string that identifies the action type.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HeaderActionParametersResponse {
     /**
      * Action to perform
@@ -28,12 +28,12 @@ public final class HeaderActionParametersResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HeaderActionParametersResponse(
-        @OutputCustomType.Parameter("headerAction") String headerAction,
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("headerAction") String headerAction,
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.headerAction = headerAction;
         this.headerName = headerName;
         this.odataType = odataType;

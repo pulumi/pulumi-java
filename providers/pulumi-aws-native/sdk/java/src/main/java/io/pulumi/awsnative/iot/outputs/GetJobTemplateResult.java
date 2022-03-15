@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.JobExecutionsRetryConfigProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobTemplateResult {
     private final @Nullable String arn;
     private final @Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobTemplateResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("jobExecutionsRetryConfig") @Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("jobExecutionsRetryConfig") @Nullable JobExecutionsRetryConfigProperties jobExecutionsRetryConfig) {
         this.arn = arn;
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
     }

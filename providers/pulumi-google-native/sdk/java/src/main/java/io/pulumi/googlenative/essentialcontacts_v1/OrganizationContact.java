@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.essentialcontacts_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.essentialcontacts_v1.OrganizationContactArgs;
@@ -23,7 +23,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * The email address to send notifications to. This does not need to be a Google account.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -37,7 +37,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * The preferred language for notifications, as a ISO 639-1 language code. See [Supported languages](https://cloud.google.com/resource-manager/docs/managing-notification-contacts#supported-languages) for a list of supported languages.
      * 
      */
-    @OutputExport(name="languageTag", type=String.class, parameters={})
+    @Export(name="languageTag", type=String.class, parameters={})
     private Output<String> languageTag;
 
     /**
@@ -51,7 +51,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * The identifier for the contact. Format: {resource_type}/{resource_id}/contacts/{contact_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * The categories of notifications that the contact will receive communications for.
      * 
      */
-    @OutputExport(name="notificationCategorySubscriptions", type=List.class, parameters={String.class})
+    @Export(name="notificationCategorySubscriptions", type=List.class, parameters={String.class})
     private Output<List<String>> notificationCategorySubscriptions;
 
     /**
@@ -79,7 +79,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * The last time the validation_state was updated, either manually or automatically. A contact is considered stale if its validation state was updated more than 1 year ago.
      * 
      */
-    @OutputExport(name="validateTime", type=String.class, parameters={})
+    @Export(name="validateTime", type=String.class, parameters={})
     private Output<String> validateTime;
 
     /**
@@ -93,7 +93,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * The validity of the contact. A contact is considered valid if it is the correct recipient for notifications for a particular resource.
      * 
      */
-    @OutputExport(name="validationState", type=String.class, parameters={})
+    @Export(name="validationState", type=String.class, parameters={})
     private Output<String> validationState;
 
     /**

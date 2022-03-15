@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetImageVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImageVersionArgs Empty = new GetImageVersionArgs();
 
-    @InputImport(name="imageVersionArn", required=true)
+    @Import(name="imageVersionArn", required=true)
       private final String imageVersionArn;
 
     public String getImageVersionArn() {

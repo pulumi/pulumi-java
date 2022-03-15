@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.AggregationAuthorizationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAggregationAuthorizationResult {
     /**
      * The ARN of the AggregationAuthorization.
@@ -24,10 +24,10 @@ public final class GetAggregationAuthorizationResult {
      */
     private final @Nullable List<AggregationAuthorizationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAggregationAuthorizationResult(
-        @OutputCustomType.Parameter("aggregationAuthorizationArn") @Nullable String aggregationAuthorizationArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<AggregationAuthorizationTag> tags) {
+        @CustomType.Parameter("aggregationAuthorizationArn") @Nullable String aggregationAuthorizationArn,
+        @CustomType.Parameter("tags") @Nullable List<AggregationAuthorizationTag> tags) {
         this.aggregationAuthorizationArn = aggregationAuthorizationArn;
         this.tags = tags;
     }

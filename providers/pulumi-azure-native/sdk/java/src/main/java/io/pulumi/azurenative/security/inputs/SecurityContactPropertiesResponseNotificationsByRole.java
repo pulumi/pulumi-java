@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
      * Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable List<String> roles;
 
     public List<String> getRoles() {
@@ -34,7 +34,7 @@ public final class SecurityContactPropertiesResponseNotificationsByRole extends 
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

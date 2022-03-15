@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MountTargetPropertiesResponse {
     /**
      * UUID v4 used to identify the MountTarget
@@ -32,12 +32,12 @@ public final class MountTargetPropertiesResponse {
      */
     private final @Nullable String smbServerFqdn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MountTargetPropertiesResponse(
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("mountTargetId") String mountTargetId,
-        @OutputCustomType.Parameter("smbServerFqdn") @Nullable String smbServerFqdn) {
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("mountTargetId") String mountTargetId,
+        @CustomType.Parameter("smbServerFqdn") @Nullable String smbServerFqdn) {
         this.fileSystemId = fileSystemId;
         this.ipAddress = ipAddress;
         this.mountTargetId = mountTargetId;

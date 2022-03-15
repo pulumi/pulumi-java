@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportGroupExportConfigS3Destination {
     /**
      * The name of the S3 bucket where the raw data of a report are exported.
@@ -39,13 +39,13 @@ public final class ReportGroupExportConfigS3Destination {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportGroupExportConfigS3Destination(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
-        @OutputCustomType.Parameter("encryptionKey") String encryptionKey,
-        @OutputCustomType.Parameter("packaging") @Nullable String packaging,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @CustomType.Parameter("encryptionKey") String encryptionKey,
+        @CustomType.Parameter("packaging") @Nullable String packaging,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.bucket = bucket;
         this.encryptionDisabled = encryptionDisabled;
         this.encryptionKey = encryptionKey;

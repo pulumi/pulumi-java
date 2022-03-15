@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayGreengrass {
     /**
      * The ARN of the Greengrass group.
@@ -15,8 +15,8 @@ public final class GatewayGreengrass {
      */
     private final String groupArn;
 
-    @OutputCustomType.Constructor
-    private GatewayGreengrass(@OutputCustomType.Parameter("groupArn") String groupArn) {
+    @CustomType.Constructor
+    private GatewayGreengrass(@CustomType.Parameter("groupArn") String groupArn) {
         this.groupArn = groupArn;
     }
 

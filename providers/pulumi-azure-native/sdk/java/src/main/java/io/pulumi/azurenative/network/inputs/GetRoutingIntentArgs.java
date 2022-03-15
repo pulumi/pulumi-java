@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
      * The resource group name of the RoutingIntent.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the RoutingIntent.
      * 
      */
-    @InputImport(name="routingIntentName", required=true)
+    @Import(name="routingIntentName", required=true)
       private final String routingIntentName;
 
     public String getRoutingIntentName() {
@@ -38,7 +38,7 @@ public final class GetRoutingIntentArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName", required=true)
+    @Import(name="virtualHubName", required=true)
       private final String virtualHubName;
 
     public String getVirtualHubName() {

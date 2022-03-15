@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -32,7 +32,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
      * 
      */
-    @InputImport(name="corsConfig")
+    @Import(name="corsConfig")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigGetArgs> corsConfig;
 
     public Output<ResponseHeadersPolicyCorsConfigGetArgs> getCorsConfig() {
@@ -43,7 +43,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
      * 
      */
-    @InputImport(name="customHeadersConfig")
+    @Import(name="customHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> customHeadersConfig;
 
     public Output<ResponseHeadersPolicyCustomHeadersConfigGetArgs> getCustomHeadersConfig() {
@@ -54,7 +54,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * The current version of the response headers policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -65,7 +65,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * A unique name to identify the response headers policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class ResponseHeadersPolicyState extends io.pulumi.resources.Resour
      * A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
      * 
      */
-    @InputImport(name="securityHeadersConfig")
+    @Import(name="securityHeadersConfig")
       private final @Nullable Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> securityHeadersConfig;
 
     public Output<ResponseHeadersPolicySecurityHeadersConfigGetArgs> getSecurityHeadersConfig() {

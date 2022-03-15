@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.ReservationArgs;
@@ -50,7 +50,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * capacity specified above at most.
      * 
      */
-    @OutputExport(name="ignoreIdleSlots", type=Boolean.class, parameters={})
+    @Export(name="ignoreIdleSlots", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreIdleSlots;
 
     /**
@@ -67,7 +67,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1. The default value is US.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -82,7 +82,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * The name of the reservation. This field must only contain alphanumeric characters or dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -113,7 +113,7 @@ public class Reservation extends io.pulumi.resources.CustomResource {
      * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
      * 
      */
-    @OutputExport(name="slotCapacity", type=Integer.class, parameters={})
+    @Export(name="slotCapacity", type=Integer.class, parameters={})
     private Output<Integer> slotCapacity;
 
     /**

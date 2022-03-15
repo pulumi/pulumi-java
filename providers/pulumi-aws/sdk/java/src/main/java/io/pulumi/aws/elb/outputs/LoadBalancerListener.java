@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerListener {
     /**
      * The port on the instance to route to
@@ -41,13 +41,13 @@ public final class LoadBalancerListener {
      */
     private final @Nullable String sslCertificateId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerListener(
-        @OutputCustomType.Parameter("instancePort") Integer instancePort,
-        @OutputCustomType.Parameter("instanceProtocol") String instanceProtocol,
-        @OutputCustomType.Parameter("lbPort") Integer lbPort,
-        @OutputCustomType.Parameter("lbProtocol") String lbProtocol,
-        @OutputCustomType.Parameter("sslCertificateId") @Nullable String sslCertificateId) {
+        @CustomType.Parameter("instancePort") Integer instancePort,
+        @CustomType.Parameter("instanceProtocol") String instanceProtocol,
+        @CustomType.Parameter("lbPort") Integer lbPort,
+        @CustomType.Parameter("lbProtocol") String lbProtocol,
+        @CustomType.Parameter("sslCertificateId") @Nullable String sslCertificateId) {
         this.instancePort = instancePort;
         this.instanceProtocol = instanceProtocol;
         this.lbPort = lbPort;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
 
     public static final GetManagedInstanceAdministratorArgs Empty = new GetManagedInstanceAdministratorArgs();
 
-    @InputImport(name="administratorName", required=true)
+    @Import(name="administratorName", required=true)
       private final String administratorName;
 
     public String getAdministratorName() {
@@ -23,7 +23,7 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
     public String getManagedInstanceName() {
@@ -34,7 +34,7 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

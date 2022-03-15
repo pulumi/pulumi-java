@@ -5,7 +5,7 @@ package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * Name of the blueprint artifact.
      * 
      */
-    @InputImport(name="artifactName")
+    @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
     public Output<String> getArtifactName() {
@@ -33,7 +33,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * Name of the blueprint definition.
      * 
      */
-    @InputImport(name="blueprintName", required=true)
+    @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
     public Output<String> getBlueprintName() {
@@ -44,7 +44,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
 
     public Output<List<String>> getDependsOn() {
@@ -55,7 +55,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * Multi-line explain this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -66,7 +66,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * One-liner string explain this resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -78,7 +78,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'template'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -89,7 +89,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * Resource Manager template blueprint artifact parameter values.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
 
     public Output<Map<String,ParameterValueArgs>> getParameters() {
@@ -100,7 +100,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -111,7 +111,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
     public Output<String> getResourceScope() {
@@ -122,7 +122,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
      * The Resource Manager template blueprint artifact body.
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<Object> template;
 
     public Output<Object> getTemplate() {

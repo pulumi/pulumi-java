@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectMetricSource {
     /**
      * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
@@ -39,13 +39,13 @@ public final class ObjectMetricSource {
      */
     private final String targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectMetricSource(
-        @OutputCustomType.Parameter("averageValue") @Nullable String averageValue,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("target") CrossVersionObjectReference target,
-        @OutputCustomType.Parameter("targetValue") String targetValue) {
+        @CustomType.Parameter("averageValue") @Nullable String averageValue,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("target") CrossVersionObjectReference target,
+        @CustomType.Parameter("targetValue") String targetValue) {
         this.averageValue = averageValue;
         this.metricName = metricName;
         this.selector = selector;

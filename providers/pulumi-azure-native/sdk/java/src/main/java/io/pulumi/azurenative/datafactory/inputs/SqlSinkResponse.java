@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SqlUpsertSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -37,7 +37,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -48,7 +48,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="preCopyScript")
+    @Import(name="preCopyScript")
       private final @Nullable Object preCopyScript;
 
     public Optional<Object> getPreCopyScript() {
@@ -59,7 +59,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sinkRetryCount")
+    @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
@@ -70,7 +70,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sinkRetryWait")
+    @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
@@ -81,7 +81,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * SQL writer stored procedure name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sqlWriterStoredProcedureName")
+    @Import(name="sqlWriterStoredProcedureName")
       private final @Nullable Object sqlWriterStoredProcedureName;
 
     public Optional<Object> getSqlWriterStoredProcedureName() {
@@ -92,7 +92,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * SQL writer table type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sqlWriterTableType")
+    @Import(name="sqlWriterTableType")
       private final @Nullable Object sqlWriterTableType;
 
     public Optional<Object> getSqlWriterTableType() {
@@ -103,7 +103,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to use table lock during bulk copy. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="sqlWriterUseTableLock")
+    @Import(name="sqlWriterUseTableLock")
       private final @Nullable Object sqlWriterUseTableLock;
 
     public Optional<Object> getSqlWriterUseTableLock() {
@@ -114,7 +114,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * SQL stored procedure parameters.
      * 
      */
-    @InputImport(name="storedProcedureParameters")
+    @Import(name="storedProcedureParameters")
       private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
@@ -125,7 +125,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * The stored procedure parameter name of the table type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="storedProcedureTableTypeParameterName")
+    @Import(name="storedProcedureTableTypeParameterName")
       private final @Nullable Object storedProcedureTableTypeParameterName;
 
     public Optional<Object> getStoredProcedureTableTypeParameterName() {
@@ -136,7 +136,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * The option to handle sink table, such as autoCreate. For now only 'autoCreate' value is supported. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tableOption")
+    @Import(name="tableOption")
       private final @Nullable Object tableOption;
 
     public Optional<Object> getTableOption() {
@@ -148,7 +148,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'SqlSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -159,7 +159,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * SQL upsert settings.
      * 
      */
-    @InputImport(name="upsertSettings")
+    @Import(name="upsertSettings")
       private final @Nullable SqlUpsertSettingsResponse upsertSettings;
 
     public Optional<SqlUpsertSettingsResponse> getUpsertSettings() {
@@ -170,7 +170,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="writeBatchSize")
+    @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
@@ -181,7 +181,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="writeBatchTimeout")
+    @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
@@ -192,7 +192,7 @@ public final class SqlSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Write behavior when copying data into sql. Type: SqlWriteBehaviorEnum (or Expression with resultType SqlWriteBehaviorEnum)
      * 
      */
-    @InputImport(name="writeBehavior")
+    @Import(name="writeBehavior")
       private final @Nullable Object writeBehavior;
 
     public Optional<Object> getWriteBehavior() {

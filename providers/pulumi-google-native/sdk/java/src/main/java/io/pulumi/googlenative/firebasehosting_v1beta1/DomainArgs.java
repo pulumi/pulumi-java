@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.DomainRedirectArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name of the association.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -30,14 +30,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * If set, the domain should redirect with the provided parameters.
      * 
      */
-    @InputImport(name="domainRedirect")
+    @Import(name="domainRedirect")
       private final @Nullable Output<DomainRedirectArgs> domainRedirect;
 
     public Output<DomainRedirectArgs> getDomainRedirect() {
         return this.domainRedirect == null ? Output.empty() : this.domainRedirect;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -48,14 +48,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The site name of the association.
      * 
      */
-    @InputImport(name="site", required=true)
+    @Import(name="site", required=true)
       private final Output<String> site;
 
     public Output<String> getSite() {
         return this.site;
     }
 
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final Output<String> siteId;
 
     public Output<String> getSiteId() {

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ContainerMountTmpfsOptionsGetArgs extends io.pulumi.resources
 
     public static final ContainerMountTmpfsOptionsGetArgs Empty = new ContainerMountTmpfsOptionsGetArgs();
 
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
     public Output<Integer> getMode() {
         return this.mode == null ? Output.empty() : this.mode;
     }
 
-    @InputImport(name="sizeBytes")
+    @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
     public Output<Integer> getSizeBytes() {

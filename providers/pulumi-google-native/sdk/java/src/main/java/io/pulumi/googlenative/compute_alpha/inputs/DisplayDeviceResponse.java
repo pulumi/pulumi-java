@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs 
      * Defines whether the instance has Display enabled.
      * 
      */
-    @InputImport(name="enableDisplay", required=true)
+    @Import(name="enableDisplay", required=true)
       private final Boolean enableDisplay;
 
     public Boolean getEnableDisplay() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * different naming pattern.
      * 
      */
-    @InputImport(name="delegationServiceAccountEmail")
+    @Import(name="delegationServiceAccountEmail")
       private final @Nullable Output<String> delegationServiceAccountEmail;
 
     public Output<String> getDelegationServiceAccountEmail() {
@@ -46,7 +46,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * and that links to this Note.
      * 
      */
-    @InputImport(name="noteReference", required=true)
+    @Import(name="noteReference", required=true)
       private final Output<String> noteReference;
 
     public Output<String> getNoteReference() {
@@ -64,7 +64,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="publicKeys")
+    @Import(name="publicKeys")
       private final @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
 
     public Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> getPublicKeys() {

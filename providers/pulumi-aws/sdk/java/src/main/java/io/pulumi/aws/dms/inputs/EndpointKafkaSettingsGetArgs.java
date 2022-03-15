@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Kafka broker location. Specify in the form broker-hostname-or-ip:port.
      * 
      */
-    @InputImport(name="broker", required=true)
+    @Import(name="broker", required=true)
       private final Output<String> broker;
 
     public Output<String> getBroker() {
@@ -31,7 +31,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is `false`.
      * 
      */
-    @InputImport(name="includeControlDetails")
+    @Import(name="includeControlDetails")
       private final @Nullable Output<Boolean> includeControlDetails;
 
     public Output<Boolean> getIncludeControlDetails() {
@@ -42,7 +42,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Include NULL and empty columns for records migrated to the endpoint. The default is `false`.
      * 
      */
-    @InputImport(name="includeNullAndEmpty")
+    @Import(name="includeNullAndEmpty")
       private final @Nullable Output<Boolean> includeNullAndEmpty;
 
     public Output<Boolean> getIncludeNullAndEmpty() {
@@ -53,7 +53,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`. The default is `false`.
      * 
      */
-    @InputImport(name="includePartitionValue")
+    @Import(name="includePartitionValue")
       private final @Nullable Output<Boolean> includePartitionValue;
 
     public Output<Boolean> getIncludePartitionValue() {
@@ -64,7 +64,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Includes any data definition language (DDL) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`. The default is `false`.
      * 
      */
-    @InputImport(name="includeTableAlterOperations")
+    @Import(name="includeTableAlterOperations")
       private final @Nullable Output<Boolean> includeTableAlterOperations;
 
     public Output<Boolean> getIncludeTableAlterOperations() {
@@ -75,7 +75,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` (the record offset within a transaction). The default is `false`.
      * 
      */
-    @InputImport(name="includeTransactionDetails")
+    @Import(name="includeTransactionDetails")
       private final @Nullable Output<Boolean> includeTransactionDetails;
 
     public Output<Boolean> getIncludeTransactionDetails() {
@@ -86,7 +86,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The output format for the records created on the endpoint. The message format is `JSON` (default) or `JSON_UNFORMATTED` (a single line with no tab).
      * 
      */
-    @InputImport(name="messageFormat")
+    @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
     public Output<String> getMessageFormat() {
@@ -97,7 +97,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The maximum size in bytes for records created on the endpoint The default is `1,000,000`.
      * 
      */
-    @InputImport(name="messageMaxBytes")
+    @Import(name="messageMaxBytes")
       private final @Nullable Output<Integer> messageMaxBytes;
 
     public Output<Integer> getMessageMaxBytes() {
@@ -108,7 +108,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Set this optional parameter to true to avoid adding a '0x' prefix to raw data in hexadecimal format. For example, by default, AWS DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an Oracle source to a Kafka target. Use the `no_hex_prefix` endpoint setting to enable migration of RAW data type columns without adding the `'0x'` prefix.
      * 
      */
-    @InputImport(name="noHexPrefix")
+    @Import(name="noHexPrefix")
       private final @Nullable Output<Boolean> noHexPrefix;
 
     public Output<Boolean> getNoHexPrefix() {
@@ -119,7 +119,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Prefixes schema and table names to partition values, when the partition type is `primary-key-type`. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is `false`.
      * 
      */
-    @InputImport(name="partitionIncludeSchemaTable")
+    @Import(name="partitionIncludeSchemaTable")
       private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
     public Output<Boolean> getPartitionIncludeSchemaTable() {
@@ -130,7 +130,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
-    @InputImport(name="saslPassword")
+    @Import(name="saslPassword")
       private final @Nullable Output<String> saslPassword;
 
     public Output<String> getSaslPassword() {
@@ -141,7 +141,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.
      * 
      */
-    @InputImport(name="saslUsername")
+    @Import(name="saslUsername")
       private final @Nullable Output<String> saslUsername;
 
     public Output<String> getSaslUsername() {
@@ -152,7 +152,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Set secure connection to a Kafka target endpoint using Transport Layer Security (TLS). Options include `ssl-encryption`, `ssl-authentication`, and `sasl-ssl`. `sasl-ssl` requires `sasl_username` and `sasl_password`.
      * 
      */
-    @InputImport(name="securityProtocol")
+    @Import(name="securityProtocol")
       private final @Nullable Output<String> securityProtocol;
 
     public Output<String> getSecurityProtocol() {
@@ -163,7 +163,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that AWS DMS uses to securely connect to your Kafka target endpoint.
      * 
      */
-    @InputImport(name="sslCaCertificateArn")
+    @Import(name="sslCaCertificateArn")
       private final @Nullable Output<String> sslCaCertificateArn;
 
     public Output<String> getSslCaCertificateArn() {
@@ -174,7 +174,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of the client certificate used to securely connect to a Kafka target endpoint.
      * 
      */
-    @InputImport(name="sslClientCertificateArn")
+    @Import(name="sslClientCertificateArn")
       private final @Nullable Output<String> sslClientCertificateArn;
 
     public Output<String> getSslClientCertificateArn() {
@@ -185,7 +185,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
-    @InputImport(name="sslClientKeyArn")
+    @Import(name="sslClientKeyArn")
       private final @Nullable Output<String> sslClientKeyArn;
 
     public Output<String> getSslClientKeyArn() {
@@ -196,7 +196,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * The password for the client private key used to securely connect to a Kafka target endpoint.
      * 
      */
-    @InputImport(name="sslClientKeyPassword")
+    @Import(name="sslClientKeyPassword")
       private final @Nullable Output<String> sslClientKeyPassword;
 
     public Output<String> getSslClientKeyPassword() {
@@ -207,7 +207,7 @@ public final class EndpointKafkaSettingsGetArgs extends io.pulumi.resources.Reso
      * Kafka topic for migration. Defaults to `kafka-default-topic`.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {

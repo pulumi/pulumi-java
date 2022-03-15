@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.GaugeViewResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.SparkChartViewResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.ThresholdResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesQueryResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScorecardResponse {
     /**
      * Will cause the scorecard to show a gauge chart.
@@ -34,12 +34,12 @@ public final class ScorecardResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScorecardResponse(
-        @OutputCustomType.Parameter("gaugeView") GaugeViewResponse gaugeView,
-        @OutputCustomType.Parameter("sparkChartView") SparkChartViewResponse sparkChartView,
-        @OutputCustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
-        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
+        @CustomType.Parameter("gaugeView") GaugeViewResponse gaugeView,
+        @CustomType.Parameter("sparkChartView") SparkChartViewResponse sparkChartView,
+        @CustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
+        @CustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.gaugeView = gaugeView;
         this.sparkChartView = sparkChartView;
         this.thresholds = thresholds;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CapacityReservationPropertiesResponse {
     /**
      * The last time Sku was updated.
@@ -21,10 +21,10 @@ public final class CapacityReservationPropertiesResponse {
      */
     private final Double minCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityReservationPropertiesResponse(
-        @OutputCustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
-        @OutputCustomType.Parameter("minCapacity") Double minCapacity) {
+        @CustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
+        @CustomType.Parameter("minCapacity") Double minCapacity) {
         this.lastSkuUpdate = lastSkuUpdate;
         this.minCapacity = minCapacity;
     }

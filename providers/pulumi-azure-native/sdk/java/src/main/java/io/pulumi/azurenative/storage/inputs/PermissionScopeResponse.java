@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
      * The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final String permissions;
 
     public String getPermissions() {
@@ -27,7 +27,7 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
      * The name of resource, normally the container name or the file share name, used by the local user.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {
@@ -38,7 +38,7 @@ public final class PermissionScopeResponse extends io.pulumi.resources.InvokeArg
      * The service used by the local user, e.g. blob, file.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

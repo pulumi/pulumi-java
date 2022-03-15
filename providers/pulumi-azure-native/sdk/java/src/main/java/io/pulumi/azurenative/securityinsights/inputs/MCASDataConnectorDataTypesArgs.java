@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.DataConnectorDataTypeCommonArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * Alerts data type connection.
      * 
      */
-    @InputImport(name="alerts")
+    @Import(name="alerts")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> alerts;
 
     public Output<DataConnectorDataTypeCommonArgs> getAlerts() {
@@ -33,7 +33,7 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
      * Discovery log data type connection.
      * 
      */
-    @InputImport(name="discoveryLogs")
+    @Import(name="discoveryLogs")
       private final @Nullable Output<DataConnectorDataTypeCommonArgs> discoveryLogs;
 
     public Output<DataConnectorDataTypeCommonArgs> getDiscoveryLogs() {

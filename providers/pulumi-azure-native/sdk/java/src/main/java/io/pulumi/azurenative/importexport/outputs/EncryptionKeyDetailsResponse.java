@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionKeyDetailsResponse {
     /**
      * The type of kek encryption key
@@ -27,11 +27,11 @@ public final class EncryptionKeyDetailsResponse {
      */
     private final @Nullable String kekVaultResourceID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionKeyDetailsResponse(
-        @OutputCustomType.Parameter("kekType") @Nullable String kekType,
-        @OutputCustomType.Parameter("kekUrl") @Nullable String kekUrl,
-        @OutputCustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
+        @CustomType.Parameter("kekType") @Nullable String kekType,
+        @CustomType.Parameter("kekUrl") @Nullable String kekUrl,
+        @CustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
         this.kekType = kekType;
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;

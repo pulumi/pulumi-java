@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.CisBenchmarkArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ComplianceVersionArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Right now we only have one compliance type, but we may add additional types in the future.
      * 
      */
-    @InputImport(name="cisBenchmark")
+    @Import(name="cisBenchmark")
       private final @Nullable Output<CisBenchmarkArgs> cisBenchmark;
 
     public Output<CisBenchmarkArgs> getCisBenchmark() {
@@ -36,7 +36,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * A description about this compliance check.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * A rationale for the existence of this compliance check.
      * 
      */
-    @InputImport(name="rationale")
+    @Import(name="rationale")
       private final @Nullable Output<String> rationale;
 
     public Output<String> getRationale() {
@@ -58,7 +58,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * A description of remediation steps if the compliance check fails.
      * 
      */
-    @InputImport(name="remediation")
+    @Import(name="remediation")
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
@@ -69,7 +69,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Serialized scan instructions with a predefined format.
      * 
      */
-    @InputImport(name="scanInstructions")
+    @Import(name="scanInstructions")
       private final @Nullable Output<String> scanInstructions;
 
     public Output<String> getScanInstructions() {
@@ -80,7 +80,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * The title that identifies this compliance check.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -91,7 +91,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
      * The OS and config versions the benchmark applies to.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<List<ComplianceVersionArgs>> version;
 
     public Output<List<ComplianceVersionArgs>> getVersion() {

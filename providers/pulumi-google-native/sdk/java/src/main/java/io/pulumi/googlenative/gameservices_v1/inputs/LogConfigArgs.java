@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1.inputs.CloudAuditOptionsArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.CounterOptionsArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.DataAccessOptionsArgs;
@@ -24,7 +24,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud audit options.
      * 
      */
-    @InputImport(name="cloudAudit")
+    @Import(name="cloudAudit")
       private final @Nullable Output<CloudAuditOptionsArgs> cloudAudit;
 
     public Output<CloudAuditOptionsArgs> getCloudAudit() {
@@ -35,7 +35,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Counter options.
      * 
      */
-    @InputImport(name="counter")
+    @Import(name="counter")
       private final @Nullable Output<CounterOptionsArgs> counter;
 
     public Output<CounterOptionsArgs> getCounter() {
@@ -46,7 +46,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Data access options.
      * 
      */
-    @InputImport(name="dataAccess")
+    @Import(name="dataAccess")
       private final @Nullable Output<DataAccessOptionsArgs> dataAccess;
 
     public Output<DataAccessOptionsArgs> getDataAccess() {

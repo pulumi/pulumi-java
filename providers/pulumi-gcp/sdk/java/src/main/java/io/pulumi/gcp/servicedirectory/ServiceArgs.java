@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -33,7 +33,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the namespace this service will belong to.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -45,7 +45,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * lowercase letters or the hyphen character.
      * 
      */
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
     public Output<String> getServiceId() {

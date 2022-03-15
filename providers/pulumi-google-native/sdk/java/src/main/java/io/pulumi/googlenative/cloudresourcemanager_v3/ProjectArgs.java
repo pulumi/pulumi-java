@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A user-assigned display name of the project. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My Project`
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The labels associated with this project. Label keys must be between 1 and 63 characters long and must conform to the following regular expression: \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and must conform to the regular expression (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?. No more than 256 labels can be associated with a given resource. Clients should store labels in a representation such as JSON that does not depend on specific characters being disallowed. Example: `"myBusinessDimension" : "businessValue"`
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -41,7 +41,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A reference to a parent Resource. eg., `organizations/123` or `folders/876`.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -52,7 +52,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The unique, user-assigned id of the project. It must be 6 to 30 lowercase ASCII letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited. Example: `tokyo-rain-123`
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {

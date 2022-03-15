@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
      * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of a REST API with which to associate this model.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

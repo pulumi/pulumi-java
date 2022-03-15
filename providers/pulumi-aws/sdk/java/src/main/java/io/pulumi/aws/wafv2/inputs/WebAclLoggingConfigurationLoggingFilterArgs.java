@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebAclLoggingConfigurationLoggingFilterArgs extends io.pulumi
      * Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
      * 
      */
-    @InputImport(name="defaultBehavior", required=true)
+    @Import(name="defaultBehavior", required=true)
       private final Output<String> defaultBehavior;
 
     public Output<String> getDefaultBehavior() {
@@ -30,7 +30,7 @@ public final class WebAclLoggingConfigurationLoggingFilterArgs extends io.pulumi
      * Filter(s) that you want to apply to the logs. See Filter below for more details.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> filters;
 
     public Output<List<WebAclLoggingConfigurationLoggingFilterFilterArgs>> getFilters() {

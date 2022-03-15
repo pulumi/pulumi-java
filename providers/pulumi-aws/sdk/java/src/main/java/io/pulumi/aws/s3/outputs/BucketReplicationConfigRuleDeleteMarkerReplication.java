@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDeleteMarkerReplication {
     /**
      * Whether delete markers should be replicated. Either `"Enabled"` or `"Disabled"`.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDeleteMarkerReplication {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigRuleDeleteMarkerReplication(@OutputCustomType.Parameter("status") String status) {
+    @CustomType.Constructor
+    private BucketReplicationConfigRuleDeleteMarkerReplication(@CustomType.Parameter("status") String status) {
         this.status = status;
     }
 

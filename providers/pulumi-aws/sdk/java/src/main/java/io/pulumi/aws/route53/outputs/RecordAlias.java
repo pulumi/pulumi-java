@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecordAlias {
     /**
      * Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
@@ -26,11 +26,11 @@ public final class RecordAlias {
      */
     private final String zoneId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecordAlias(
-        @OutputCustomType.Parameter("evaluateTargetHealth") Boolean evaluateTargetHealth,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("zoneId") String zoneId) {
+        @CustomType.Parameter("evaluateTargetHealth") Boolean evaluateTargetHealth,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("zoneId") String zoneId) {
         this.evaluateTargetHealth = evaluateTargetHealth;
         this.name = name;
         this.zoneId = zoneId;

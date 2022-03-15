@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends io.pulumi.r
      * The key for the node affinity label.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -29,14 +29,14 @@ public final class GetInstanceTemplateSchedulingNodeAffinity extends io.pulumi.r
      * or `NOT_IN` for anti-affinities.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
         return this.operator;
     }
 
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

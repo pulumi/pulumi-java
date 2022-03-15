@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeTypesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -23,12 +23,12 @@ public final class GetNodeTypesResult {
     private final String project;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeTypesResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("zone") String zone) {
         this.id = id;
         this.names = names;
         this.project = project;

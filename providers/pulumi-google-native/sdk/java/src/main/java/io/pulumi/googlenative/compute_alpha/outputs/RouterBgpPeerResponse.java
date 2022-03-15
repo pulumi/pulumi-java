@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterAdvertisedIpRangeResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterBgpPeerBfdResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterBgpPeerResponse {
     /**
      * User-specified flag to indicate which mode to use for advertisement.
@@ -100,25 +100,25 @@ public final class RouterBgpPeerResponse {
      */
     private final String routerApplianceInstance;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterBgpPeerResponse(
-        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
-        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
-        @OutputCustomType.Parameter("advertisedIpRanges") List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
-        @OutputCustomType.Parameter("advertisedRoutePriority") Integer advertisedRoutePriority,
-        @OutputCustomType.Parameter("bfd") RouterBgpPeerBfdResponse bfd,
-        @OutputCustomType.Parameter("enable") String enable,
-        @OutputCustomType.Parameter("enableIpv6") Boolean enableIpv6,
-        @OutputCustomType.Parameter("interfaceName") String interfaceName,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("ipv6NexthopAddress") String ipv6NexthopAddress,
-        @OutputCustomType.Parameter("managementType") String managementType,
-        @OutputCustomType.Parameter("md5AuthenticationKeyName") String md5AuthenticationKeyName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerAsn") Integer peerAsn,
-        @OutputCustomType.Parameter("peerIpAddress") String peerIpAddress,
-        @OutputCustomType.Parameter("peerIpv6NexthopAddress") String peerIpv6NexthopAddress,
-        @OutputCustomType.Parameter("routerApplianceInstance") String routerApplianceInstance) {
+        @CustomType.Parameter("advertiseMode") String advertiseMode,
+        @CustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @CustomType.Parameter("advertisedIpRanges") List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
+        @CustomType.Parameter("advertisedRoutePriority") Integer advertisedRoutePriority,
+        @CustomType.Parameter("bfd") RouterBgpPeerBfdResponse bfd,
+        @CustomType.Parameter("enable") String enable,
+        @CustomType.Parameter("enableIpv6") Boolean enableIpv6,
+        @CustomType.Parameter("interfaceName") String interfaceName,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("ipv6NexthopAddress") String ipv6NexthopAddress,
+        @CustomType.Parameter("managementType") String managementType,
+        @CustomType.Parameter("md5AuthenticationKeyName") String md5AuthenticationKeyName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerAsn") Integer peerAsn,
+        @CustomType.Parameter("peerIpAddress") String peerIpAddress,
+        @CustomType.Parameter("peerIpv6NexthopAddress") String peerIpv6NexthopAddress,
+        @CustomType.Parameter("routerApplianceInstance") String routerApplianceInstance) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

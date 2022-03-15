@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.GuestOSNICCustomizationResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualNetworkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNicResponse {
     /**
      * guest OS customization for nic
@@ -56,16 +56,16 @@ public final class VirtualNicResponse {
      */
     private final String virtualNicName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNicResponse(
-        @OutputCustomType.Parameter("customization") @Nullable GuestOSNICCustomizationResponse customization,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("macAddress") @Nullable String macAddress,
-        @OutputCustomType.Parameter("network") VirtualNetworkResponse network,
-        @OutputCustomType.Parameter("nicType") String nicType,
-        @OutputCustomType.Parameter("powerOnBoot") @Nullable Boolean powerOnBoot,
-        @OutputCustomType.Parameter("virtualNicId") @Nullable String virtualNicId,
-        @OutputCustomType.Parameter("virtualNicName") String virtualNicName) {
+        @CustomType.Parameter("customization") @Nullable GuestOSNICCustomizationResponse customization,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("macAddress") @Nullable String macAddress,
+        @CustomType.Parameter("network") VirtualNetworkResponse network,
+        @CustomType.Parameter("nicType") String nicType,
+        @CustomType.Parameter("powerOnBoot") @Nullable Boolean powerOnBoot,
+        @CustomType.Parameter("virtualNicId") @Nullable String virtualNicId,
+        @CustomType.Parameter("virtualNicName") String virtualNicName) {
         this.customization = customization;
         this.ipAddresses = ipAddresses;
         this.macAddress = macAddress;

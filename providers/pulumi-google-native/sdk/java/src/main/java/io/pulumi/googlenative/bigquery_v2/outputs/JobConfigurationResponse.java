@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationExtractResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationLoadResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationQueryResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConfigurationResponse {
     /**
      * [Pick one] Copies a table.
@@ -56,16 +56,16 @@ public final class JobConfigurationResponse {
      */
     private final JobConfigurationQueryResponse query;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConfigurationResponse(
-        @OutputCustomType.Parameter("copy") JobConfigurationTableCopyResponse copy,
-        @OutputCustomType.Parameter("dryRun") Boolean dryRun,
-        @OutputCustomType.Parameter("extract") JobConfigurationExtractResponse extract,
-        @OutputCustomType.Parameter("jobTimeoutMs") String jobTimeoutMs,
-        @OutputCustomType.Parameter("jobType") String jobType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("load") JobConfigurationLoadResponse load,
-        @OutputCustomType.Parameter("query") JobConfigurationQueryResponse query) {
+        @CustomType.Parameter("copy") JobConfigurationTableCopyResponse copy,
+        @CustomType.Parameter("dryRun") Boolean dryRun,
+        @CustomType.Parameter("extract") JobConfigurationExtractResponse extract,
+        @CustomType.Parameter("jobTimeoutMs") String jobTimeoutMs,
+        @CustomType.Parameter("jobType") String jobType,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("load") JobConfigurationLoadResponse load,
+        @CustomType.Parameter("query") JobConfigurationQueryResponse query) {
         this.copy = copy;
         this.dryRun = dryRun;
         this.extract = extract;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class X12EnvelopeOverrideResponse {
     /**
      * The date format.
@@ -62,18 +62,18 @@ public final class X12EnvelopeOverrideResponse {
      */
     private final String timeFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12EnvelopeOverrideResponse(
-        @OutputCustomType.Parameter("dateFormat") String dateFormat,
-        @OutputCustomType.Parameter("functionalIdentifierCode") @Nullable String functionalIdentifierCode,
-        @OutputCustomType.Parameter("headerVersion") String headerVersion,
-        @OutputCustomType.Parameter("messageId") String messageId,
-        @OutputCustomType.Parameter("protocolVersion") String protocolVersion,
-        @OutputCustomType.Parameter("receiverApplicationId") String receiverApplicationId,
-        @OutputCustomType.Parameter("responsibleAgencyCode") String responsibleAgencyCode,
-        @OutputCustomType.Parameter("senderApplicationId") String senderApplicationId,
-        @OutputCustomType.Parameter("targetNamespace") String targetNamespace,
-        @OutputCustomType.Parameter("timeFormat") String timeFormat) {
+        @CustomType.Parameter("dateFormat") String dateFormat,
+        @CustomType.Parameter("functionalIdentifierCode") @Nullable String functionalIdentifierCode,
+        @CustomType.Parameter("headerVersion") String headerVersion,
+        @CustomType.Parameter("messageId") String messageId,
+        @CustomType.Parameter("protocolVersion") String protocolVersion,
+        @CustomType.Parameter("receiverApplicationId") String receiverApplicationId,
+        @CustomType.Parameter("responsibleAgencyCode") String responsibleAgencyCode,
+        @CustomType.Parameter("senderApplicationId") String senderApplicationId,
+        @CustomType.Parameter("targetNamespace") String targetNamespace,
+        @CustomType.Parameter("timeFormat") String timeFormat) {
         this.dateFormat = dateFormat;
         this.functionalIdentifierCode = functionalIdentifierCode;
         this.headerVersion = headerVersion;

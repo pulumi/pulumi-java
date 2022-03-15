@@ -6,12 +6,12 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AzureBlobStorageApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.AzureTableStorageApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.FileSystemApplicationLogsConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationLogsConfigResponse {
     /**
      * Application logs to blob storage configuration.
@@ -29,11 +29,11 @@ public final class ApplicationLogsConfigResponse {
      */
     private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationLogsConfigResponse(
-        @OutputCustomType.Parameter("azureBlobStorage") @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage,
-        @OutputCustomType.Parameter("azureTableStorage") @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage,
-        @OutputCustomType.Parameter("fileSystem") @Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
+        @CustomType.Parameter("azureBlobStorage") @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage,
+        @CustomType.Parameter("azureTableStorage") @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage,
+        @CustomType.Parameter("fileSystem") @Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
         this.azureBlobStorage = azureBlobStorage;
         this.azureTableStorage = azureTableStorage;
         this.fileSystem = fileSystem;

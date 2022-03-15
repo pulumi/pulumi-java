@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipBusinessDocumentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RosettaNetPipRoleSettingsResponse {
     /**
      * The action name.
@@ -48,15 +48,15 @@ public final class RosettaNetPipRoleSettingsResponse {
      */
     private final String serviceClassification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RosettaNetPipRoleSettingsResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("businessDocument") RosettaNetPipBusinessDocumentResponse businessDocument,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("roleType") String roleType,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("serviceClassification") String serviceClassification) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("businessDocument") RosettaNetPipBusinessDocumentResponse businessDocument,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("roleType") String roleType,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("serviceClassification") String serviceClassification) {
         this.action = action;
         this.businessDocument = businessDocument;
         this.description = description;

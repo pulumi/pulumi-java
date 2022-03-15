@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.IAMMemberArgs;
@@ -15,19 +15,19 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:organizations/iAMMember:IAMMember")
 public class IAMMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=IAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=IAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ IAMMemberCondition> condition;
 
     public Output</* @Nullable */ IAMMemberCondition> getCondition() {
         return this.condition;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -37,7 +37,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
      * The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**
@@ -47,7 +47,7 @@ public class IAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getOrgId() {
         return this.orgId;
     }
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     public Output<String> getRole() {

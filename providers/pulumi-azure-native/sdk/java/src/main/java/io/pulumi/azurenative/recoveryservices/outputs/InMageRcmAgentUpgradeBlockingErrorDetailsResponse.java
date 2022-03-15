@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse {
     /**
      * The error code.
@@ -41,14 +41,14 @@ public final class InMageRcmAgentUpgradeBlockingErrorDetailsResponse {
      */
     private final String recommendedAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmAgentUpgradeBlockingErrorDetailsResponse(
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("errorMessageParameters") Map<String,String> errorMessageParameters,
-        @OutputCustomType.Parameter("errorTags") Map<String,String> errorTags,
-        @OutputCustomType.Parameter("possibleCauses") String possibleCauses,
-        @OutputCustomType.Parameter("recommendedAction") String recommendedAction) {
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("errorMessageParameters") Map<String,String> errorMessageParameters,
+        @CustomType.Parameter("errorTags") Map<String,String> errorTags,
+        @CustomType.Parameter("possibleCauses") String possibleCauses,
+        @CustomType.Parameter("recommendedAction") String recommendedAction) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         this.errorMessageParameters = errorMessageParameters;

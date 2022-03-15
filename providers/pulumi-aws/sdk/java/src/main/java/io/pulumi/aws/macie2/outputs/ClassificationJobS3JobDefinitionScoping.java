@@ -5,12 +5,12 @@ package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingExcludes;
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingIncludes;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionScoping {
     /**
      * The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
@@ -23,10 +23,10 @@ public final class ClassificationJobS3JobDefinitionScoping {
      */
     private final @Nullable ClassificationJobS3JobDefinitionScopingIncludes includes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinitionScoping(
-        @OutputCustomType.Parameter("excludes") @Nullable ClassificationJobS3JobDefinitionScopingExcludes excludes,
-        @OutputCustomType.Parameter("includes") @Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
+        @CustomType.Parameter("excludes") @Nullable ClassificationJobS3JobDefinitionScopingExcludes excludes,
+        @CustomType.Parameter("includes") @Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
         this.excludes = excludes;
         this.includes = includes;
     }

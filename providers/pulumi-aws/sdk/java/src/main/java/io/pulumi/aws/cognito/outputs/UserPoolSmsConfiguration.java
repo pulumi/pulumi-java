@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolSmsConfiguration {
     /**
      * External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
@@ -20,10 +20,10 @@ public final class UserPoolSmsConfiguration {
      */
     private final String snsCallerArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolSmsConfiguration(
-        @OutputCustomType.Parameter("externalId") String externalId,
-        @OutputCustomType.Parameter("snsCallerArn") String snsCallerArn) {
+        @CustomType.Parameter("externalId") String externalId,
+        @CustomType.Parameter("snsCallerArn") String snsCallerArn) {
         this.externalId = externalId;
         this.snsCallerArn = snsCallerArn;
     }

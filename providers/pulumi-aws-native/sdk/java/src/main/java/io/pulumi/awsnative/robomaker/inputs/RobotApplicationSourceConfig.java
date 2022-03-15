@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationSourceConfigArchitecture;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RobotApplicationSourceConfig extends io.pulumi.resources.Invo
      * The architecture of robot application.
      * 
      */
-    @InputImport(name="architecture", required=true)
+    @Import(name="architecture", required=true)
       private final RobotApplicationSourceConfigArchitecture architecture;
 
     public RobotApplicationSourceConfigArchitecture getArchitecture() {
@@ -28,7 +28,7 @@ public final class RobotApplicationSourceConfig extends io.pulumi.resources.Invo
      * The Arn of the S3Bucket that stores the robot application source.
      * 
      */
-    @InputImport(name="s3Bucket", required=true)
+    @Import(name="s3Bucket", required=true)
       private final String s3Bucket;
 
     public String getS3Bucket() {
@@ -39,7 +39,7 @@ public final class RobotApplicationSourceConfig extends io.pulumi.resources.Invo
      * The s3 key of robot application source.
      * 
      */
-    @InputImport(name="s3Key", required=true)
+    @Import(name="s3Key", required=true)
       private final String s3Key;
 
     public String getS3Key() {

@@ -5,12 +5,12 @@ package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleSourceSelectionCriteria {
     /**
      * A configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when `filter` is specified), you can specify this element and set the status to `Enabled` to replicate modifications on replicas.
@@ -23,10 +23,10 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteria {
      */
     private final @Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigRuleSourceSelectionCriteria(
-        @OutputCustomType.Parameter("replicaModifications") @Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications replicaModifications,
-        @OutputCustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+        @CustomType.Parameter("replicaModifications") @Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications replicaModifications,
+        @CustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects) {
         this.replicaModifications = replicaModifications;
         this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
     }

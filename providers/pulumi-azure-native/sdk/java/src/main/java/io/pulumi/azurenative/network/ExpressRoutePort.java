@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -40,7 +40,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Date of the physical port allocation to be used in Letter of Authorization.
      * 
      */
-    @OutputExport(name="allocationDate", type=String.class, parameters={})
+    @Export(name="allocationDate", type=String.class, parameters={})
     private Output<String> allocationDate;
 
     /**
@@ -54,7 +54,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Bandwidth of procured ports in Gbps.
      * 
      */
-    @OutputExport(name="bandwidthInGbps", type=Integer.class, parameters={})
+    @Export(name="bandwidthInGbps", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> bandwidthInGbps;
 
     /**
@@ -68,7 +68,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
      * 
      */
-    @OutputExport(name="circuits", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="circuits", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> circuits;
 
     /**
@@ -82,7 +82,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Encapsulation method on physical ports.
      * 
      */
-    @OutputExport(name="encapsulation", type=String.class, parameters={})
+    @Export(name="encapsulation", type=String.class, parameters={})
     private Output</* @Nullable */ String> encapsulation;
 
     /**
@@ -96,7 +96,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Ether type of the physical port.
      * 
      */
-    @OutputExport(name="etherType", type=String.class, parameters={})
+    @Export(name="etherType", type=String.class, parameters={})
     private Output<String> etherType;
 
     /**
@@ -124,7 +124,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * The identity of ExpressRoutePort, if configured.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -138,7 +138,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * The set of physical links of the ExpressRoutePort resource.
      * 
      */
-    @OutputExport(name="links", type=List.class, parameters={ExpressRouteLinkResponse.class})
+    @Export(name="links", type=List.class, parameters={ExpressRouteLinkResponse.class})
     private Output</* @Nullable */ List<ExpressRouteLinkResponse>> links;
 
     /**
@@ -152,7 +152,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -166,7 +166,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Maximum transmission unit of the physical port pair(s).
      * 
      */
-    @OutputExport(name="mtu", type=String.class, parameters={})
+    @Export(name="mtu", type=String.class, parameters={})
     private Output<String> mtu;
 
     /**
@@ -180,7 +180,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -194,7 +194,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * The name of the peering location that the ExpressRoutePort is mapped to physically.
      * 
      */
-    @OutputExport(name="peeringLocation", type=String.class, parameters={})
+    @Export(name="peeringLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringLocation;
 
     /**
@@ -208,7 +208,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Aggregate Gbps of associated circuit bandwidths.
      * 
      */
-    @OutputExport(name="provisionedBandwidthInGbps", type=Double.class, parameters={})
+    @Export(name="provisionedBandwidthInGbps", type=Double.class, parameters={})
     private Output<Double> provisionedBandwidthInGbps;
 
     /**
@@ -222,7 +222,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * The provisioning state of the express route port resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -236,7 +236,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the express route port resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -250,7 +250,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -264,7 +264,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

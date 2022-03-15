@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
      * The unique identifier for the AWS account that owns the buckets.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -29,7 +29,7 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
      * An array that lists the names of the buckets.
      * 
      */
-    @InputImport(name="buckets", required=true)
+    @Import(name="buckets", required=true)
       private final Output<List<String>> buckets;
 
     public Output<List<String>> getBuckets() {

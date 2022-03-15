@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.enums.WeeklyScheduleDayOfWeek;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Day of the week.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<WeeklyScheduleDayOfWeek> dayOfWeek;
 
     public Output<WeeklyScheduleDayOfWeek> getDayOfWeek() {

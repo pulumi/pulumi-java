@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkConnectionStateResponse {
     /**
      * A message indicating if changes on the service provider require any updates on the consumer.
@@ -25,11 +25,11 @@ public final class PrivateLinkConnectionStateResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkConnectionStateResponse(
-        @OutputCustomType.Parameter("actionsRequired") String actionsRequired,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("actionsRequired") String actionsRequired,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

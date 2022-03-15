@@ -14,7 +14,7 @@ import io.pulumi.awsnative.lambda.inputs.FunctionTagArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionTracingConfigArgs;
 import io.pulumi.awsnative.lambda.inputs.FunctionVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 
-    @InputImport(name="architectures")
+    @Import(name="architectures")
       private final @Nullable Output<List<FunctionArchitecturesItem>> architectures;
 
     public Output<List<FunctionArchitecturesItem>> getArchitectures() {
@@ -37,7 +37,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The code for the function.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final Output<FunctionCodeArgs> code;
 
     public Output<FunctionCodeArgs> getCode() {
@@ -48,7 +48,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A unique Arn for CodeSigningConfig resource
      * 
      */
-    @InputImport(name="codeSigningConfigArn")
+    @Import(name="codeSigningConfigArn")
       private final @Nullable Output<String> codeSigningConfigArn;
 
     public Output<String> getCodeSigningConfigArn() {
@@ -59,7 +59,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
      * 
      */
-    @InputImport(name="deadLetterConfig")
+    @Import(name="deadLetterConfig")
       private final @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
     public Output<FunctionDeadLetterConfigArgs> getDeadLetterConfig() {
@@ -70,7 +70,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the function.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -81,7 +81,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Environment variables that are accessible from function code during execution.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<FunctionEnvironmentArgs> environment;
 
     public Output<FunctionEnvironmentArgs> getEnvironment() {
@@ -92,7 +92,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
      * 
      */
-    @InputImport(name="fileSystemConfigs")
+    @Import(name="fileSystemConfigs")
       private final @Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
 
     public Output<List<FunctionFileSystemConfigArgs>> getFileSystemConfigs() {
@@ -103,7 +103,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Lambda function, up to 64 characters in length. If you don't specify a name, AWS CloudFormation generates one.
      * 
      */
-    @InputImport(name="functionName")
+    @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -114,7 +114,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
      * 
      */
-    @InputImport(name="handler")
+    @Import(name="handler")
       private final @Nullable Output<String> handler;
 
     public Output<String> getHandler() {
@@ -125,7 +125,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * ImageConfig
      * 
      */
-    @InputImport(name="imageConfig")
+    @Import(name="imageConfig")
       private final @Nullable Output<FunctionImageConfigArgs> imageConfig;
 
     public Output<FunctionImageConfigArgs> getImageConfig() {
@@ -136,7 +136,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -147,7 +147,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A list of function layers to add to the function's execution environment. Specify each layer by its ARN, including the version.
      * 
      */
-    @InputImport(name="layers")
+    @Import(name="layers")
       private final @Nullable Output<List<String>> layers;
 
     public Output<List<String>> getLayers() {
@@ -158,7 +158,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of memory that your function has access to. Increasing the function's memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
      * 
      */
-    @InputImport(name="memorySize")
+    @Import(name="memorySize")
       private final @Nullable Output<Integer> memorySize;
 
     public Output<Integer> getMemorySize() {
@@ -169,7 +169,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * PackageType.
      * 
      */
-    @InputImport(name="packageType")
+    @Import(name="packageType")
       private final @Nullable Output<FunctionPackageType> packageType;
 
     public Output<FunctionPackageType> getPackageType() {
@@ -180,7 +180,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The number of simultaneous executions to reserve for the function.
      * 
      */
-    @InputImport(name="reservedConcurrentExecutions")
+    @Import(name="reservedConcurrentExecutions")
       private final @Nullable Output<Integer> reservedConcurrentExecutions;
 
     public Output<Integer> getReservedConcurrentExecutions() {
@@ -191,7 +191,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the function's execution role.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -202,7 +202,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the function's runtime.
      * 
      */
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -213,7 +213,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to apply to the function.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FunctionTagArgs>> tags;
 
     public Output<List<FunctionTagArgs>> getTags() {
@@ -224,7 +224,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -235,7 +235,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
      * 
      */
-    @InputImport(name="tracingConfig")
+    @Import(name="tracingConfig")
       private final @Nullable Output<FunctionTracingConfigArgs> tracingConfig;
 
     public Output<FunctionTracingConfigArgs> getTracingConfig() {
@@ -246,7 +246,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<FunctionVpcConfigArgs> vpcConfig;
 
     public Output<FunctionVpcConfigArgs> getVpcConfig() {

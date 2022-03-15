@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the group that was generated on creation.
      * 
      */
-    @InputImport(name="groupARN", required=true)
+    @Import(name="groupARN", required=true)
       private final String groupARN;
 
     public String getGroupARN() {

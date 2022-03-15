@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSharedKeysResult {
     /**
      * The primary shared key of a workspace.
@@ -22,10 +22,10 @@ public final class GetSharedKeysResult {
      */
     private final @Nullable String secondarySharedKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSharedKeysResult(
-        @OutputCustomType.Parameter("primarySharedKey") @Nullable String primarySharedKey,
-        @OutputCustomType.Parameter("secondarySharedKey") @Nullable String secondarySharedKey) {
+        @CustomType.Parameter("primarySharedKey") @Nullable String primarySharedKey,
+        @CustomType.Parameter("secondarySharedKey") @Nullable String secondarySharedKey) {
         this.primarySharedKey = primarySharedKey;
         this.secondarySharedKey = secondarySharedKey;
     }

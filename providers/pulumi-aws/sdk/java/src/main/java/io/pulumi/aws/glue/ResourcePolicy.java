@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glue.ResourcePolicyArgs;
 import io.pulumi.aws.glue.inputs.ResourcePolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:glue/resourcePolicy:ResourcePolicy")
 public class ResourcePolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="enableHybrid", type=String.class, parameters={})
+    @Export(name="enableHybrid", type=String.class, parameters={})
     private Output</* @Nullable */ String> enableHybrid;
 
     public Output</* @Nullable */ String> getEnableHybrid() {
@@ -38,7 +38,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The policy to be applied to the aws glue data catalog.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.ResponseArgs;
 import io.pulumi.aws.apigateway.inputs.ResponseState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Response extends io.pulumi.resources.CustomResource {
      * A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
      * 
      */
-    @OutputExport(name="responseParameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="responseParameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> responseParameters;
 
     /**
@@ -47,7 +47,7 @@ public class Response extends io.pulumi.resources.CustomResource {
      * A map specifying the templates used to transform the response body.
      * 
      */
-    @OutputExport(name="responseTemplates", type=Map.class, parameters={String.class, String.class})
+    @Export(name="responseTemplates", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> responseTemplates;
 
     /**
@@ -61,7 +61,7 @@ public class Response extends io.pulumi.resources.CustomResource {
      * The response type of the associated GatewayResponse.
      * 
      */
-    @OutputExport(name="responseType", type=String.class, parameters={})
+    @Export(name="responseType", type=String.class, parameters={})
     private Output<String> responseType;
 
     /**
@@ -75,7 +75,7 @@ public class Response extends io.pulumi.resources.CustomResource {
      * The string identifier of the associated REST API.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -89,7 +89,7 @@ public class Response extends io.pulumi.resources.CustomResource {
      * The HTTP status code of the Gateway Response.
      * 
      */
-    @OutputExport(name="statusCode", type=String.class, parameters={})
+    @Export(name="statusCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> statusCode;
 
     /**

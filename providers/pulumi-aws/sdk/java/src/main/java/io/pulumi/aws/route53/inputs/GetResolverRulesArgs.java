@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * When the desired resolver rules are shared with another AWS account, the account ID of the account that the rules are shared with.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {
@@ -29,7 +29,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the outbound resolver endpoint for the desired resolver rules.
      * 
      */
-    @InputImport(name="resolverEndpointId")
+    @Import(name="resolverEndpointId")
       private final @Nullable String resolverEndpointId;
 
     public Optional<String> getResolverEndpointId() {
@@ -40,7 +40,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * The rule type of the desired resolver rules. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
      * 
      */
-    @InputImport(name="ruleType")
+    @Import(name="ruleType")
       private final @Nullable String ruleType;
 
     public Optional<String> getRuleType() {
@@ -51,7 +51,7 @@ public final class GetResolverRulesArgs extends io.pulumi.resources.InvokeArgs {
      * Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    @InputImport(name="shareStatus")
+    @Import(name="shareStatus")
       private final @Nullable String shareStatus;
 
     public Optional<String> getShareStatus() {

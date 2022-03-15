@@ -3,16 +3,16 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateHibernationOption {
     private final Boolean configured;
 
-    @OutputCustomType.Constructor
-    private GetLaunchTemplateHibernationOption(@OutputCustomType.Parameter("configured") Boolean configured) {
+    @CustomType.Constructor
+    private GetLaunchTemplateHibernationOption(@CustomType.Parameter("configured") Boolean configured) {
         this.configured = configured;
     }
 

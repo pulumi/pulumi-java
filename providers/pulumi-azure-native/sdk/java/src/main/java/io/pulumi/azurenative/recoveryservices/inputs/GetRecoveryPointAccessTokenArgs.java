@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AADProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Name of the container.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -31,7 +31,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Optional ETag.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable String eTag;
 
     public Optional<String> getETag() {
@@ -42,7 +42,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Fabric name associated with the container.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final String fabricName;
 
     public String getFabricName() {
@@ -53,7 +53,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -64,7 +64,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * AADPropertiesResource properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable AADProperties properties;
 
     public Optional<AADProperties> getProperties() {
@@ -75,7 +75,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Name of the Protected Item.
      * 
      */
-    @InputImport(name="protectedItemName", required=true)
+    @Import(name="protectedItemName", required=true)
       private final String protectedItemName;
 
     public String getProtectedItemName() {
@@ -86,7 +86,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Recovery Point Id
      * 
      */
-    @InputImport(name="recoveryPointId", required=true)
+    @Import(name="recoveryPointId", required=true)
       private final String recoveryPointId;
 
     public String getRecoveryPointId() {
@@ -97,7 +97,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -108,7 +108,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -119,7 +119,7 @@ public final class GetRecoveryPointAccessTokenArgs extends io.pulumi.resources.I
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final String vaultName;
 
     public String getVaultName() {

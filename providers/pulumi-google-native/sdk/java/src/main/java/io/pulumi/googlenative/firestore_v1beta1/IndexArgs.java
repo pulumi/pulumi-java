@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firestore_v1beta1.enums.IndexState;
 import io.pulumi.googlenative.firestore_v1beta1.inputs.GoogleFirestoreAdminV1beta1IndexFieldArgs;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The collection ID to which this index applies. Required.
      * 
      */
-    @InputImport(name="collectionId")
+    @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
 
     public Output<String> getCollectionId() {
         return this.collectionId == null ? Output.empty() : this.collectionId;
     }
 
-    @InputImport(name="databaseId", required=true)
+    @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
     public Output<String> getDatabaseId() {
@@ -39,7 +39,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The fields to index.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
     public Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> getFields() {
@@ -50,14 +50,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the index. Output only.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the index. Output only.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<IndexState> state;
 
     public Output<IndexState> getState() {

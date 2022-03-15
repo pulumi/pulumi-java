@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse {
     /**
      * Catalog item categories. Each category should be a UTF-8 encoded string with a length limit of 2 KiB. Note that the order in the list denotes the specificity (from least to most specific).
@@ -16,8 +16,8 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
      */
     private final List<String> categories;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(@OutputCustomType.Parameter("categories") List<String> categories) {
+    @CustomType.Constructor
+    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(@CustomType.Parameter("categories") List<String> categories) {
         this.categories = categories;
     }
 

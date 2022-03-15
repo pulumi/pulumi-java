@@ -6,13 +6,13 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.BaseImageTriggerResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SourceTriggerResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TimerTriggerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerPropertiesResponse {
     /**
      * The trigger based on base image dependencies.
@@ -30,11 +30,11 @@ public final class TriggerPropertiesResponse {
      */
     private final @Nullable List<TimerTriggerResponse> timerTriggers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerPropertiesResponse(
-        @OutputCustomType.Parameter("baseImageTrigger") @Nullable BaseImageTriggerResponse baseImageTrigger,
-        @OutputCustomType.Parameter("sourceTriggers") @Nullable List<SourceTriggerResponse> sourceTriggers,
-        @OutputCustomType.Parameter("timerTriggers") @Nullable List<TimerTriggerResponse> timerTriggers) {
+        @CustomType.Parameter("baseImageTrigger") @Nullable BaseImageTriggerResponse baseImageTrigger,
+        @CustomType.Parameter("sourceTriggers") @Nullable List<SourceTriggerResponse> sourceTriggers,
+        @CustomType.Parameter("timerTriggers") @Nullable List<TimerTriggerResponse> timerTriggers) {
         this.baseImageTrigger = baseImageTrigger;
         this.sourceTriggers = sourceTriggers;
         this.timerTriggers = timerTriggers;

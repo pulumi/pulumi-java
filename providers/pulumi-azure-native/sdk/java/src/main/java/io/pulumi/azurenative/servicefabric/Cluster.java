@@ -18,7 +18,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ServerCertificateCommonNamesR
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -48,7 +48,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of add-on features to enable in the cluster.
      * 
      */
-    @OutputExport(name="addOnFeatures", type=List.class, parameters={String.class})
+    @Export(name="addOnFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addOnFeatures;
 
     /**
@@ -62,7 +62,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The policy used to clean up unused versions.
      * 
      */
-    @OutputExport(name="applicationTypeVersionsCleanupPolicy", type=ApplicationTypeVersionsCleanupPolicyResponse.class, parameters={})
+    @Export(name="applicationTypeVersionsCleanupPolicy", type=ApplicationTypeVersionsCleanupPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationTypeVersionsCleanupPolicyResponse> applicationTypeVersionsCleanupPolicy;
 
     /**
@@ -76,7 +76,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Service Fabric runtime versions available for this cluster.
      * 
      */
-    @OutputExport(name="availableClusterVersions", type=List.class, parameters={ClusterVersionDetailsResponse.class})
+    @Export(name="availableClusterVersions", type=List.class, parameters={ClusterVersionDetailsResponse.class})
     private Output<List<ClusterVersionDetailsResponse>> availableClusterVersions;
 
     /**
@@ -90,7 +90,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The AAD authentication settings of the cluster.
      * 
      */
-    @OutputExport(name="azureActiveDirectory", type=AzureActiveDirectoryResponse.class, parameters={})
+    @Export(name="azureActiveDirectory", type=AzureActiveDirectoryResponse.class, parameters={})
     private Output</* @Nullable */ AzureActiveDirectoryResponse> azureActiveDirectory;
 
     /**
@@ -104,7 +104,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
      * 
      */
-    @OutputExport(name="certificate", type=CertificateDescriptionResponse.class, parameters={})
+    @Export(name="certificate", type=CertificateDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ CertificateDescriptionResponse> certificate;
 
     /**
@@ -118,7 +118,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    @OutputExport(name="certificateCommonNames", type=ServerCertificateCommonNamesResponse.class, parameters={})
+    @Export(name="certificateCommonNames", type=ServerCertificateCommonNamesResponse.class, parameters={})
     private Output</* @Nullable */ ServerCertificateCommonNamesResponse> certificateCommonNames;
 
     /**
@@ -132,7 +132,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of client certificates referenced by common name that are allowed to manage the cluster.
      * 
      */
-    @OutputExport(name="clientCertificateCommonNames", type=List.class, parameters={ClientCertificateCommonNameResponse.class})
+    @Export(name="clientCertificateCommonNames", type=List.class, parameters={ClientCertificateCommonNameResponse.class})
     private Output</* @Nullable */ List<ClientCertificateCommonNameResponse>> clientCertificateCommonNames;
 
     /**
@@ -146,7 +146,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
      * 
      */
-    @OutputExport(name="clientCertificateThumbprints", type=List.class, parameters={ClientCertificateThumbprintResponse.class})
+    @Export(name="clientCertificateThumbprints", type=List.class, parameters={ClientCertificateThumbprintResponse.class})
     private Output</* @Nullable */ List<ClientCertificateThumbprintResponse>> clientCertificateThumbprints;
 
     /**
@@ -160,7 +160,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
      */
-    @OutputExport(name="clusterCodeVersion", type=String.class, parameters={})
+    @Export(name="clusterCodeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterCodeVersion;
 
     /**
@@ -174,7 +174,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Azure Resource Provider endpoint. A system service in the cluster connects to this  endpoint.
      * 
      */
-    @OutputExport(name="clusterEndpoint", type=String.class, parameters={})
+    @Export(name="clusterEndpoint", type=String.class, parameters={})
     private Output<String> clusterEndpoint;
 
     /**
@@ -188,7 +188,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A service generated unique identifier for the cluster resource.
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -213,7 +213,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      *   - Ready - Indicates that the cluster is in a stable state.
      * 
      */
-    @OutputExport(name="clusterState", type=String.class, parameters={})
+    @Export(name="clusterState", type=String.class, parameters={})
     private Output<String> clusterState;
 
     /**
@@ -238,7 +238,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The storage account information for storing Service Fabric diagnostic logs.
      * 
      */
-    @OutputExport(name="diagnosticsStorageAccountConfig", type=DiagnosticsStorageAccountConfigResponse.class, parameters={})
+    @Export(name="diagnosticsStorageAccountConfig", type=DiagnosticsStorageAccountConfigResponse.class, parameters={})
     private Output</* @Nullable */ DiagnosticsStorageAccountConfigResponse> diagnosticsStorageAccountConfig;
 
     /**
@@ -252,7 +252,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Azure resource etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -266,7 +266,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Indicates if the event store service is enabled.
      * 
      */
-    @OutputExport(name="eventStoreServiceEnabled", type=Boolean.class, parameters={})
+    @Export(name="eventStoreServiceEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> eventStoreServiceEnabled;
 
     /**
@@ -280,7 +280,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of custom fabric settings to configure the cluster.
      * 
      */
-    @OutputExport(name="fabricSettings", type=List.class, parameters={SettingsSectionDescriptionResponse.class})
+    @Export(name="fabricSettings", type=List.class, parameters={SettingsSectionDescriptionResponse.class})
     private Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> fabricSettings;
 
     /**
@@ -294,7 +294,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Azure resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -308,7 +308,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The http management endpoint of the cluster.
      * 
      */
-    @OutputExport(name="managementEndpoint", type=String.class, parameters={})
+    @Export(name="managementEndpoint", type=String.class, parameters={})
     private Output<String> managementEndpoint;
 
     /**
@@ -322,7 +322,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -336,7 +336,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of node types in the cluster.
      * 
      */
-    @OutputExport(name="nodeTypes", type=List.class, parameters={NodeTypeDescriptionResponse.class})
+    @Export(name="nodeTypes", type=List.class, parameters={NodeTypeDescriptionResponse.class})
     private Output<List<NodeTypeDescriptionResponse>> nodeTypes;
 
     /**
@@ -350,7 +350,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The provisioning state of the cluster resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -370,7 +370,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      *   - Platinum - Run the System services with a target replica set count of 9.
      * 
      */
-    @OutputExport(name="reliabilityLevel", type=String.class, parameters={})
+    @Export(name="reliabilityLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> reliabilityLevel;
 
     /**
@@ -390,7 +390,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The server certificate used by reverse proxy.
      * 
      */
-    @OutputExport(name="reverseProxyCertificate", type=CertificateDescriptionResponse.class, parameters={})
+    @Export(name="reverseProxyCertificate", type=CertificateDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ CertificateDescriptionResponse> reverseProxyCertificate;
 
     /**
@@ -404,7 +404,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    @OutputExport(name="reverseProxyCertificateCommonNames", type=ServerCertificateCommonNamesResponse.class, parameters={})
+    @Export(name="reverseProxyCertificateCommonNames", type=ServerCertificateCommonNamesResponse.class, parameters={})
     private Output</* @Nullable */ ServerCertificateCommonNamesResponse> reverseProxyCertificateCommonNames;
 
     /**
@@ -418,7 +418,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Azure resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -432,7 +432,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -446,7 +446,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The policy to use when upgrading the cluster.
      * 
      */
-    @OutputExport(name="upgradeDescription", type=ClusterUpgradePolicyResponse.class, parameters={})
+    @Export(name="upgradeDescription", type=ClusterUpgradePolicyResponse.class, parameters={})
     private Output</* @Nullable */ ClusterUpgradePolicyResponse> upgradeDescription;
 
     /**
@@ -463,7 +463,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
      * 
      */
-    @OutputExport(name="upgradeMode", type=String.class, parameters={})
+    @Export(name="upgradeMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> upgradeMode;
 
     /**
@@ -480,7 +480,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
      * 
      */
-    @OutputExport(name="vmImage", type=String.class, parameters={})
+    @Export(name="vmImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmImage;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * Amazon Resource Name (ARN) of cluster
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
      * 
      */
-    @InputImport(name="clusterEndpointIdentifier")
+    @Import(name="clusterEndpointIdentifier")
       private final @Nullable Output<String> clusterEndpointIdentifier;
 
     public Output<String> getClusterEndpointIdentifier() {
@@ -42,7 +42,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The cluster identifier.
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -53,7 +53,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The type of the endpoint. One of: READER , ANY .
      * 
      */
-    @InputImport(name="customEndpointType")
+    @Import(name="customEndpointType")
       private final @Nullable Output<String> customEndpointType;
 
     public Output<String> getCustomEndpointType() {
@@ -64,7 +64,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * A custom endpoint for the Aurora cluster
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -75,7 +75,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
      * 
      */
-    @InputImport(name="excludedMembers")
+    @Import(name="excludedMembers")
       private final @Nullable Output<List<String>> excludedMembers;
 
     public Output<List<String>> getExcludedMembers() {
@@ -86,7 +86,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
      * 
      */
-    @InputImport(name="staticMembers")
+    @Import(name="staticMembers")
       private final @Nullable Output<List<String>> staticMembers;
 
     public Output<List<String>> getStaticMembers() {
@@ -97,7 +97,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lambda.inputs.EventSourceMappingSelfManagedEventSourc
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingSourceAccessConfigurationArgs;
 import io.pulumi.awsnative.lambda.inputs.FilterCriteriaPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * The maximum number of items to retrieve in a single batch.
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
     public Output<Integer> getBatchSize() {
@@ -38,7 +38,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) If the function returns an error, split the batch in two and retry.
      * 
      */
-    @InputImport(name="bisectBatchOnFunctionError")
+    @Import(name="bisectBatchOnFunctionError")
       private final @Nullable Output<Boolean> bisectBatchOnFunctionError;
 
     public Output<Boolean> getBisectBatchOnFunctionError() {
@@ -49,7 +49,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
      */
-    @InputImport(name="destinationConfig")
+    @Import(name="destinationConfig")
       private final @Nullable Output<EventSourceMappingDestinationConfigArgs> destinationConfig;
 
     public Output<EventSourceMappingDestinationConfigArgs> getDestinationConfig() {
@@ -60,7 +60,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * Disables the event source mapping to pause polling and invocation.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -71,7 +71,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the event source.
      * 
      */
-    @InputImport(name="eventSourceArn")
+    @Import(name="eventSourceArn")
       private final @Nullable Output<String> eventSourceArn;
 
     public Output<String> getEventSourceArn() {
@@ -82,7 +82,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * The filter criteria to control event filtering.
      * 
      */
-    @InputImport(name="filterCriteria")
+    @Import(name="filterCriteria")
       private final @Nullable Output<FilterCriteriaPropertiesArgs> filterCriteria;
 
     public Output<FilterCriteriaPropertiesArgs> getFilterCriteria() {
@@ -93,7 +93,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * The name of the Lambda function.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -104,7 +104,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) A list of response types supported by the function.
      * 
      */
-    @InputImport(name="functionResponseTypes")
+    @Import(name="functionResponseTypes")
       private final @Nullable Output<List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes;
 
     public Output<List<EventSourceMappingFunctionResponseTypesItem>> getFunctionResponseTypes() {
@@ -115,7 +115,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
      */
-    @InputImport(name="maximumBatchingWindowInSeconds")
+    @Import(name="maximumBatchingWindowInSeconds")
       private final @Nullable Output<Integer> maximumBatchingWindowInSeconds;
 
     public Output<Integer> getMaximumBatchingWindowInSeconds() {
@@ -126,7 +126,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
      */
-    @InputImport(name="maximumRecordAgeInSeconds")
+    @Import(name="maximumRecordAgeInSeconds")
       private final @Nullable Output<Integer> maximumRecordAgeInSeconds;
 
     public Output<Integer> getMaximumRecordAgeInSeconds() {
@@ -137,7 +137,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) The maximum number of times to retry when the function returns an error.
      * 
      */
-    @InputImport(name="maximumRetryAttempts")
+    @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
     public Output<Integer> getMaximumRetryAttempts() {
@@ -148,7 +148,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) The number of batches to process from each shard concurrently.
      * 
      */
-    @InputImport(name="parallelizationFactor")
+    @Import(name="parallelizationFactor")
       private final @Nullable Output<Integer> parallelizationFactor;
 
     public Output<Integer> getParallelizationFactor() {
@@ -159,7 +159,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (ActiveMQ) A list of ActiveMQ queues.
      * 
      */
-    @InputImport(name="queues")
+    @Import(name="queues")
       private final @Nullable Output<List<String>> queues;
 
     public Output<List<String>> getQueues() {
@@ -170,7 +170,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * Self-managed event source endpoints.
      * 
      */
-    @InputImport(name="selfManagedEventSource")
+    @Import(name="selfManagedEventSource")
       private final @Nullable Output<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource;
 
     public Output<EventSourceMappingSelfManagedEventSourceArgs> getSelfManagedEventSource() {
@@ -181,7 +181,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * A list of SourceAccessConfiguration.
      * 
      */
-    @InputImport(name="sourceAccessConfigurations")
+    @Import(name="sourceAccessConfigurations")
       private final @Nullable Output<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations;
 
     public Output<List<EventSourceMappingSourceAccessConfigurationArgs>> getSourceAccessConfigurations() {
@@ -192,7 +192,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
      * 
      */
-    @InputImport(name="startingPosition")
+    @Import(name="startingPosition")
       private final @Nullable Output<String> startingPosition;
 
     public Output<String> getStartingPosition() {
@@ -203,7 +203,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
      */
-    @InputImport(name="startingPositionTimestamp")
+    @Import(name="startingPositionTimestamp")
       private final @Nullable Output<Double> startingPositionTimestamp;
 
     public Output<Double> getStartingPositionTimestamp() {
@@ -214,7 +214,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Kafka) A list of Kafka topics.
      * 
      */
-    @InputImport(name="topics")
+    @Import(name="topics")
       private final @Nullable Output<List<String>> topics;
 
     public Output<List<String>> getTopics() {
@@ -225,7 +225,7 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
      * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
      */
-    @InputImport(name="tumblingWindowInSeconds")
+    @Import(name="tumblingWindowInSeconds")
       private final @Nullable Output<Integer> tumblingWindowInSeconds;
 
     public Output<Integer> getTumblingWindowInSeconds() {

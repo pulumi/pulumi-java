@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
 
     public static final GlobalTableSSESpecificationArgs Empty = new GlobalTableSSESpecificationArgs();
 
-    @InputImport(name="sSEEnabled", required=true)
+    @Import(name="sSEEnabled", required=true)
       private final Output<Boolean> sSEEnabled;
 
     public Output<Boolean> getSSEEnabled() {
         return this.sSEEnabled;
     }
 
-    @InputImport(name="sSEType")
+    @Import(name="sSEType")
       private final @Nullable Output<String> sSEType;
 
     public Output<String> getSSEType() {

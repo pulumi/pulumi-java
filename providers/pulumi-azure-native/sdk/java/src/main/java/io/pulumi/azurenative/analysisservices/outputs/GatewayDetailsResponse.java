@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayDetailsResponse {
     /**
      * Uri of the DMTS cluster.
@@ -27,11 +27,11 @@ public final class GatewayDetailsResponse {
      */
     private final @Nullable String gatewayResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayDetailsResponse(
-        @OutputCustomType.Parameter("dmtsClusterUri") String dmtsClusterUri,
-        @OutputCustomType.Parameter("gatewayObjectId") String gatewayObjectId,
-        @OutputCustomType.Parameter("gatewayResourceId") @Nullable String gatewayResourceId) {
+        @CustomType.Parameter("dmtsClusterUri") String dmtsClusterUri,
+        @CustomType.Parameter("gatewayObjectId") String gatewayObjectId,
+        @CustomType.Parameter("gatewayResourceId") @Nullable String gatewayResourceId) {
         this.dmtsClusterUri = dmtsClusterUri;
         this.gatewayObjectId = gatewayObjectId;
         this.gatewayResourceId = gatewayResourceId;

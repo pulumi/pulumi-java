@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs;
@@ -27,7 +27,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="corsPolicy")
+    @Import(name="corsPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs> getCorsPolicy() {
@@ -45,7 +45,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="faultInjectionPolicy")
+    @Import(name="faultInjectionPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs> getFaultInjectionPolicy() {
@@ -60,7 +60,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestMirrorPolicy")
+    @Import(name="requestMirrorPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs> getRequestMirrorPolicy() {
@@ -72,7 +72,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs> retryPolicy;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs> getRetryPolicy() {
@@ -87,7 +87,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs> timeout;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs> getTimeout() {
@@ -100,7 +100,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRewrite")
+    @Import(name="urlRewrite")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs> getUrlRewrite() {
@@ -119,7 +119,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="weightedBackendServices")
+    @Import(name="weightedBackendServices")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>> getWeightedBackendServices() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * The branch name setting for the subdomain.
      * 
      */
-    @InputImport(name="branchName", required=true)
+    @Import(name="branchName", required=true)
       private final Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -30,7 +30,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * The DNS record for the subdomain.
      * 
      */
-    @InputImport(name="dnsRecord")
+    @Import(name="dnsRecord")
       private final @Nullable Output<String> dnsRecord;
 
     public Output<String> getDnsRecord() {
@@ -41,7 +41,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * The prefix setting for the subdomain.
      * 
      */
-    @InputImport(name="prefix", required=true)
+    @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -52,7 +52,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
      * The verified status of the subdomain.
      * 
      */
-    @InputImport(name="verified")
+    @Import(name="verified")
       private final @Nullable Output<Boolean> verified;
 
     public Output<Boolean> getVerified() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.CustomImageOsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * The image name.
      * 
      */
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -36,7 +36,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * The OS type of the custom image (i.e. Windows, Linux)
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final Output<Either<String,CustomImageOsType>> osType;
 
     public Output<Either<String,CustomImageOsType>> getOsType() {
@@ -47,7 +47,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * Indicates whether sysprep has been run on the VHD.
      * 
      */
-    @InputImport(name="sysPrep")
+    @Import(name="sysPrep")
       private final @Nullable Output<Boolean> sysPrep;
 
     public Output<Boolean> getSysPrep() {

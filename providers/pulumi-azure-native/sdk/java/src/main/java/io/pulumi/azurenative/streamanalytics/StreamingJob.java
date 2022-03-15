@@ -12,7 +12,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.SkuResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.TransformationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Controls certain runtime behaviors of the streaming job.
      * 
      */
-    @OutputExport(name="compatibilityLevel", type=String.class, parameters={})
+    @Export(name="compatibilityLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> compatibilityLevel;
 
     /**
@@ -55,7 +55,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Value is an ISO-8601 formatted UTC timestamp indicating when the streaming job was created.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -69,7 +69,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The data locale of the stream analytics job. Value should be the name of a supported .NET Culture from the set https://msdn.microsoft.com/en-us/library/system.globalization.culturetypes(v=vs.110).aspx. Defaults to 'en-US' if none specified.
      * 
      */
-    @OutputExport(name="dataLocale", type=String.class, parameters={})
+    @Export(name="dataLocale", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataLocale;
 
     /**
@@ -83,7 +83,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The current entity tag for the streaming job. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -97,7 +97,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The maximum tolerable delay in seconds where events arriving late could be included.  Supported range is -1 to 1814399 (20.23:59:59 days) and -1 is used to specify wait indefinitely. If the property is absent, it is interpreted to have a value of -1.
      * 
      */
-    @OutputExport(name="eventsLateArrivalMaxDelayInSeconds", type=Integer.class, parameters={})
+    @Export(name="eventsLateArrivalMaxDelayInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> eventsLateArrivalMaxDelayInSeconds;
 
     /**
@@ -111,7 +111,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The maximum tolerable delay in seconds where out-of-order events can be adjusted to be back in order.
      * 
      */
-    @OutputExport(name="eventsOutOfOrderMaxDelayInSeconds", type=Integer.class, parameters={})
+    @Export(name="eventsOutOfOrderMaxDelayInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> eventsOutOfOrderMaxDelayInSeconds;
 
     /**
@@ -125,7 +125,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Indicates the policy to apply to events that arrive out of order in the input event stream.
      * 
      */
-    @OutputExport(name="eventsOutOfOrderPolicy", type=String.class, parameters={})
+    @Export(name="eventsOutOfOrderPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventsOutOfOrderPolicy;
 
     /**
@@ -139,7 +139,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * A list of one or more functions for the streaming job. The name property for each function is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
      * 
      */
-    @OutputExport(name="functions", type=List.class, parameters={FunctionResponse.class})
+    @Export(name="functions", type=List.class, parameters={FunctionResponse.class})
     private Output</* @Nullable */ List<FunctionResponse>> functions;
 
     /**
@@ -153,7 +153,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * A list of one or more inputs to the streaming job. The name property for each input is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual input.
      * 
      */
-    @OutputExport(name="inputs", type=List.class, parameters={InputResponse.class})
+    @Export(name="inputs", type=List.class, parameters={InputResponse.class})
     private Output</* @Nullable */ List<InputResponse>> inputs;
 
     /**
@@ -167,7 +167,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * A GUID uniquely identifying the streaming job. This GUID is generated upon creation of the streaming job.
      * 
      */
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     /**
@@ -181,7 +181,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Describes the state of the streaming job.
      * 
      */
-    @OutputExport(name="jobState", type=String.class, parameters={})
+    @Export(name="jobState", type=String.class, parameters={})
     private Output<String> jobState;
 
     /**
@@ -195,7 +195,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Value is either an ISO-8601 formatted timestamp indicating the last output event time of the streaming job or null indicating that output has not yet been produced. In case of multiple outputs or multiple streams, this shows the latest value in that set.
      * 
      */
-    @OutputExport(name="lastOutputEventTime", type=String.class, parameters={})
+    @Export(name="lastOutputEventTime", type=String.class, parameters={})
     private Output<String> lastOutputEventTime;
 
     /**
@@ -209,7 +209,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -223,7 +223,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -237,7 +237,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Indicates the policy to apply to events that arrive at the output and cannot be written to the external storage due to being malformed (missing column values, column values of wrong type or size).
      * 
      */
-    @OutputExport(name="outputErrorPolicy", type=String.class, parameters={})
+    @Export(name="outputErrorPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputErrorPolicy;
 
     /**
@@ -251,7 +251,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * This property should only be utilized when it is desired that the job be started immediately upon creation. Value may be JobStartTime, CustomTime, or LastOutputEventTime to indicate whether the starting point of the output event stream should start whenever the job is started, start at a custom user time stamp specified via the outputStartTime property, or start from the last event output time.
      * 
      */
-    @OutputExport(name="outputStartMode", type=String.class, parameters={})
+    @Export(name="outputStartMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputStartMode;
 
     /**
@@ -265,7 +265,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Value is either an ISO-8601 formatted time stamp that indicates the starting point of the output event stream, or null to indicate that the output event stream will start whenever the streaming job is started. This property must have a value if outputStartMode is set to CustomTime.
      * 
      */
-    @OutputExport(name="outputStartTime", type=String.class, parameters={})
+    @Export(name="outputStartTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputStartTime;
 
     /**
@@ -279,7 +279,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * A list of one or more outputs for the streaming job. The name property for each output is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual output.
      * 
      */
-    @OutputExport(name="outputs", type=List.class, parameters={OutputResponse.class})
+    @Export(name="outputs", type=List.class, parameters={OutputResponse.class})
     private Output</* @Nullable */ List<OutputResponse>> outputs;
 
     /**
@@ -293,7 +293,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Describes the provisioning status of the streaming job.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -307,7 +307,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Describes the SKU of the streaming job. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -321,7 +321,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -335,7 +335,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * Indicates the query and the number of streaming units to use for the streaming job. The name property of the transformation is required when specifying this property in a PUT request. This property cannot be modify via a PATCH operation. You must use the PATCH API available for the individual transformation.
      * 
      */
-    @OutputExport(name="transformation", type=TransformationResponse.class, parameters={})
+    @Export(name="transformation", type=TransformationResponse.class, parameters={})
     private Output</* @Nullable */ TransformationResponse> transformation;
 
     /**
@@ -349,7 +349,7 @@ public class StreamingJob extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentEndpointResponse {
     /**
      * The endpoint URL
@@ -22,10 +22,10 @@ public final class ExperimentEndpointResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentEndpointResponse(
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.endpoint = endpoint;
         this.name = name;
     }

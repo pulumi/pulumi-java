@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * If included, must match the ContentVersion in the template.
      * 
      */
-    @InputImport(name="contentVersion")
+    @Import(name="contentVersion")
       private final @Nullable Output<String> contentVersion;
 
     public Output<String> getContentVersion() {
@@ -33,7 +33,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The resource id of a Template Spec. Use either the id or uri property, but not both.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -44,7 +44,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The query string (for example, a SAS token) to be used with the templateLink URI.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
     public Output<String> getQueryString() {
@@ -55,7 +55,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs
      * 
      */
-    @InputImport(name="relativePath")
+    @Import(name="relativePath")
       private final @Nullable Output<String> relativePath;
 
     public Output<String> getRelativePath() {
@@ -66,7 +66,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the template to deploy. Use either the uri or id property, but not both.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

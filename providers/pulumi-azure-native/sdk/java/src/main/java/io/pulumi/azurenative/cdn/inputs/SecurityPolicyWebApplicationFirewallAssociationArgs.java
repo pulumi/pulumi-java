@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
      * List of domains.
      * 
      */
-    @InputImport(name="domains")
+    @Import(name="domains")
       private final @Nullable Output<List<ResourceReferenceArgs>> domains;
 
     public Output<List<ResourceReferenceArgs>> getDomains() {
@@ -35,7 +35,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationArgs extends i
      * List of paths
      * 
      */
-    @InputImport(name="patternsToMatch")
+    @Import(name="patternsToMatch")
       private final @Nullable Output<List<String>> patternsToMatch;
 
     public Output<List<String>> getPatternsToMatch() {

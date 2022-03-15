@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalerAutoscalingPolicyMetric {
     /**
      * A filter string to be used as the filter string for
@@ -81,13 +81,13 @@ public final class AutoscalerAutoscalingPolicyMetric {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalerAutoscalingPolicyMetric(
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("singleInstanceAssignment") @Nullable Double singleInstanceAssignment,
-        @OutputCustomType.Parameter("target") @Nullable Double target,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("singleInstanceAssignment") @Nullable Double singleInstanceAssignment,
+        @CustomType.Parameter("target") @Nullable Double target,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.filter = filter;
         this.name = name;
         this.singleInstanceAssignment = singleInstanceAssignment;

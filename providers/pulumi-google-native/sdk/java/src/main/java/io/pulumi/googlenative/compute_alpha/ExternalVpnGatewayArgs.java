@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.ExternalVpnGatewayRedundancyType;
 import io.pulumi.googlenative.compute_alpha.inputs.ExternalVpnGatewayInterfaceArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * A list of interfaces for this external VPN gateway. If your peer-side gateway is an on-premises gateway and non-AWS cloud providers' gateway, at most two interfaces can be provided for an external VPN gateway. If your peer side is an AWS virtual private gateway, four interfaces should be provided for an external VPN gateway.
      * 
      */
-    @InputImport(name="interfaces")
+    @Import(name="interfaces")
       private final @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
     public Output<List<ExternalVpnGatewayInterfaceArgs>> getInterfaces() {
@@ -44,7 +44,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -55,14 +55,14 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -73,14 +73,14 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * Indicates the user-supplied redundancy type of this external VPN gateway.
      * 
      */
-    @InputImport(name="redundancyType")
+    @Import(name="redundancyType")
       private final @Nullable Output<ExternalVpnGatewayRedundancyType> redundancyType;
 
     public Output<ExternalVpnGatewayRedundancyType> getRedundancyType() {
         return this.redundancyType == null ? Output.empty() : this.redundancyType;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

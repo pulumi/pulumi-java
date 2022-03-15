@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseFileInfoResponse {
     /**
      * Name of the database
@@ -48,15 +48,15 @@ public final class DatabaseFileInfoResponse {
      */
     private final @Nullable Double sizeMB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseFileInfoResponse(
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("fileType") @Nullable String fileType,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("logicalName") @Nullable String logicalName,
-        @OutputCustomType.Parameter("physicalFullName") @Nullable String physicalFullName,
-        @OutputCustomType.Parameter("restoreFullName") @Nullable String restoreFullName,
-        @OutputCustomType.Parameter("sizeMB") @Nullable Double sizeMB) {
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("fileType") @Nullable String fileType,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("logicalName") @Nullable String logicalName,
+        @CustomType.Parameter("physicalFullName") @Nullable String physicalFullName,
+        @CustomType.Parameter("restoreFullName") @Nullable String restoreFullName,
+        @CustomType.Parameter("sizeMB") @Nullable Double sizeMB) {
         this.databaseName = databaseName;
         this.fileType = fileType;
         this.id = id;

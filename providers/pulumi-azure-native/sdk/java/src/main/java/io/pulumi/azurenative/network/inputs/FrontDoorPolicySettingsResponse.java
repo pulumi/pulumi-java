@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
      * 
      */
-    @InputImport(name="customBlockResponseBody")
+    @Import(name="customBlockResponseBody")
       private final @Nullable String customBlockResponseBody;
 
     public Optional<String> getCustomBlockResponseBody() {
@@ -34,7 +34,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * If the action type is block, customer can override the response status code.
      * 
      */
-    @InputImport(name="customBlockResponseStatusCode")
+    @Import(name="customBlockResponseStatusCode")
       private final @Nullable Integer customBlockResponseStatusCode;
 
     public Optional<Integer> getCustomBlockResponseStatusCode() {
@@ -45,7 +45,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -56,7 +56,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * Describes if it is in detection mode or prevention mode at policy level.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -67,7 +67,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * If action type is redirect, this field represents redirect URL for the client.
      * 
      */
-    @InputImport(name="redirectUrl")
+    @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
 
     public Optional<String> getRedirectUrl() {
@@ -78,7 +78,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * Describes if policy managed rules will inspect the request body content.
      * 
      */
-    @InputImport(name="requestBodyCheck")
+    @Import(name="requestBodyCheck")
       private final @Nullable String requestBodyCheck;
 
     public Optional<String> getRequestBodyCheck() {

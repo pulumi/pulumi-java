@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The data encryption key identifier for the snapshot.
      * 
      */
-    @InputImport(name="dataEncryptionKeyId")
+    @Import(name="dataEncryptionKeyId")
       private final @Nullable Output<String> dataEncryptionKeyId;
 
     public Output<String> getDataEncryptionKeyId() {
@@ -43,7 +43,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * A description of what the snapshot is.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * Whether the snapshot is encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -65,14 +65,14 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
@@ -83,7 +83,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
      */
-    @InputImport(name="ownerAlias")
+    @Import(name="ownerAlias")
       private final @Nullable Output<String> ownerAlias;
 
     public Output<String> getOwnerAlias() {
@@ -94,7 +94,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the snapshot owner.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -105,7 +105,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    @InputImport(name="permanentRestore")
+    @Import(name="permanentRestore")
       private final @Nullable Output<Boolean> permanentRestore;
 
     public Output<Boolean> getPermanentRestore() {
@@ -116,7 +116,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The region of the source snapshot.
      * 
      */
-    @InputImport(name="sourceRegion")
+    @Import(name="sourceRegion")
       private final @Nullable Output<String> sourceRegion;
 
     public Output<String> getSourceRegion() {
@@ -127,7 +127,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The ARN for the snapshot to be copied.
      * 
      */
-    @InputImport(name="sourceSnapshotId")
+    @Import(name="sourceSnapshotId")
       private final @Nullable Output<String> sourceSnapshotId;
 
     public Output<String> getSourceSnapshotId() {
@@ -138,14 +138,14 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
      * 
      */
-    @InputImport(name="storageTier")
+    @Import(name="storageTier")
       private final @Nullable Output<String> storageTier;
 
     public Output<String> getStorageTier() {
         return this.storageTier == null ? Output.empty() : this.storageTier;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -156,7 +156,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -167,14 +167,14 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    @InputImport(name="temporaryRestoreDays")
+    @Import(name="temporaryRestoreDays")
       private final @Nullable Output<Integer> temporaryRestoreDays;
 
     public Output<Integer> getTemporaryRestoreDays() {
         return this.temporaryRestoreDays == null ? Output.empty() : this.temporaryRestoreDays;
     }
 
-    @InputImport(name="volumeId")
+    @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
     public Output<String> getVolumeId() {
@@ -185,7 +185,7 @@ public final class SnapshotCopyState extends io.pulumi.resources.ResourceArgs {
      * The size of the drive in GiBs.
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {

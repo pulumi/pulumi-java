@@ -9,7 +9,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentConfigState;
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigMinimumHealthyHosts;
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigTrafficRoutingConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
      * 
      */
-    @OutputExport(name="computePlatform", type=String.class, parameters={})
+    @Export(name="computePlatform", type=String.class, parameters={})
     private Output</* @Nullable */ String> computePlatform;
 
     /**
@@ -48,7 +48,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * The AWS Assigned deployment config id
      * 
      */
-    @OutputExport(name="deploymentConfigId", type=String.class, parameters={})
+    @Export(name="deploymentConfigId", type=String.class, parameters={})
     private Output<String> deploymentConfigId;
 
     /**
@@ -62,7 +62,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * The name of the deployment config.
      * 
      */
-    @OutputExport(name="deploymentConfigName", type=String.class, parameters={})
+    @Export(name="deploymentConfigName", type=String.class, parameters={})
     private Output<String> deploymentConfigName;
 
     /**
@@ -76,7 +76,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
      * 
      */
-    @OutputExport(name="minimumHealthyHosts", type=DeploymentConfigMinimumHealthyHosts.class, parameters={})
+    @Export(name="minimumHealthyHosts", type=DeploymentConfigMinimumHealthyHosts.class, parameters={})
     private Output</* @Nullable */ DeploymentConfigMinimumHealthyHosts> minimumHealthyHosts;
 
     /**
@@ -90,7 +90,7 @@ public class DeploymentConfig extends io.pulumi.resources.CustomResource {
      * A traffic_routing_config block. Traffic Routing Config is documented below.
      * 
      */
-    @OutputExport(name="trafficRoutingConfig", type=DeploymentConfigTrafficRoutingConfig.class, parameters={})
+    @Export(name="trafficRoutingConfig", type=DeploymentConfigTrafficRoutingConfig.class, parameters={})
     private Output</* @Nullable */ DeploymentConfigTrafficRoutingConfig> trafficRoutingConfig;
 
     /**

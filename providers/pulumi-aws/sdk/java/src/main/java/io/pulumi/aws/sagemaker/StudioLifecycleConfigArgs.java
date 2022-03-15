@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
      * 
      */
-    @InputImport(name="studioLifecycleConfigAppType", required=true)
+    @Import(name="studioLifecycleConfigAppType", required=true)
       private final Output<String> studioLifecycleConfigAppType;
 
     public Output<String> getStudioLifecycleConfigAppType() {
@@ -30,7 +30,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
      * 
      */
-    @InputImport(name="studioLifecycleConfigContent", required=true)
+    @Import(name="studioLifecycleConfigContent", required=true)
       private final Output<String> studioLifecycleConfigContent;
 
     public Output<String> getStudioLifecycleConfigContent() {
@@ -41,7 +41,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * The name of the Studio Lifecycle Configuration to create.
      * 
      */
-    @InputImport(name="studioLifecycleConfigName", required=true)
+    @Import(name="studioLifecycleConfigName", required=true)
       private final Output<String> studioLifecycleConfigName;
 
     public Output<String> getStudioLifecycleConfigName() {
@@ -52,7 +52,7 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

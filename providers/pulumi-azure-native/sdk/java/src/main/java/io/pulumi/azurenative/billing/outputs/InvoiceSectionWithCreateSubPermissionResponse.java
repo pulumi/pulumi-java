@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.billing.outputs;
 
 import io.pulumi.azurenative.billing.outputs.AzurePlanResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InvoiceSectionWithCreateSubPermissionResponse {
     /**
      * The name of the billing profile for the invoice section.
@@ -63,18 +63,18 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
      */
     private final String invoiceSectionSystemId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InvoiceSectionWithCreateSubPermissionResponse(
-        @OutputCustomType.Parameter("billingProfileDisplayName") String billingProfileDisplayName,
-        @OutputCustomType.Parameter("billingProfileId") String billingProfileId,
-        @OutputCustomType.Parameter("billingProfileSpendingLimit") String billingProfileSpendingLimit,
-        @OutputCustomType.Parameter("billingProfileStatus") String billingProfileStatus,
-        @OutputCustomType.Parameter("billingProfileStatusReasonCode") String billingProfileStatusReasonCode,
-        @OutputCustomType.Parameter("billingProfileSystemId") String billingProfileSystemId,
-        @OutputCustomType.Parameter("enabledAzurePlans") @Nullable List<AzurePlanResponse> enabledAzurePlans,
-        @OutputCustomType.Parameter("invoiceSectionDisplayName") String invoiceSectionDisplayName,
-        @OutputCustomType.Parameter("invoiceSectionId") String invoiceSectionId,
-        @OutputCustomType.Parameter("invoiceSectionSystemId") String invoiceSectionSystemId) {
+        @CustomType.Parameter("billingProfileDisplayName") String billingProfileDisplayName,
+        @CustomType.Parameter("billingProfileId") String billingProfileId,
+        @CustomType.Parameter("billingProfileSpendingLimit") String billingProfileSpendingLimit,
+        @CustomType.Parameter("billingProfileStatus") String billingProfileStatus,
+        @CustomType.Parameter("billingProfileStatusReasonCode") String billingProfileStatusReasonCode,
+        @CustomType.Parameter("billingProfileSystemId") String billingProfileSystemId,
+        @CustomType.Parameter("enabledAzurePlans") @Nullable List<AzurePlanResponse> enabledAzurePlans,
+        @CustomType.Parameter("invoiceSectionDisplayName") String invoiceSectionDisplayName,
+        @CustomType.Parameter("invoiceSectionId") String invoiceSectionId,
+        @CustomType.Parameter("invoiceSectionSystemId") String invoiceSectionSystemId) {
         this.billingProfileDisplayName = billingProfileDisplayName;
         this.billingProfileId = billingProfileId;
         this.billingProfileSpendingLimit = billingProfileSpendingLimit;

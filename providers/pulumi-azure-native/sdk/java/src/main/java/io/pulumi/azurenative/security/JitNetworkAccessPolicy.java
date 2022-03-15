@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.outputs.JitNetworkAccessPolicyVirtualMachi
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * Kind of the resource
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -49,7 +49,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * Location where the resource is stored
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -63,7 +63,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * Gets the provisioning state of the Just-in-Time policy.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -87,7 +87,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    @OutputExport(name="requests", type=List.class, parameters={JitNetworkAccessRequestResponse.class})
+    @Export(name="requests", type=List.class, parameters={JitNetworkAccessRequestResponse.class})
     private Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests;
 
     public Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> getRequests() {
@@ -97,7 +97,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -111,7 +111,7 @@ public class JitNetworkAccessPolicy extends io.pulumi.resources.CustomResource {
      * Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
      */
-    @OutputExport(name="virtualMachines", type=List.class, parameters={JitNetworkAccessPolicyVirtualMachineResponse.class})
+    @Export(name="virtualMachines", type=List.class, parameters={JitNetworkAccessPolicyVirtualMachineResponse.class})
     private Output<List<JitNetworkAccessPolicyVirtualMachineResponse>> virtualMachines;
 
     /**

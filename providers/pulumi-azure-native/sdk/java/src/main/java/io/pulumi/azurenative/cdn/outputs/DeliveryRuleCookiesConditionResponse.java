@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.CookiesMatchConditionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryRuleCookiesConditionResponse {
     /**
      * The name of the condition for the delivery rule.
@@ -22,10 +22,10 @@ public final class DeliveryRuleCookiesConditionResponse {
      */
     private final CookiesMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryRuleCookiesConditionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") CookiesMatchConditionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") CookiesMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

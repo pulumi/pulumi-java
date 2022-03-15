@@ -6,13 +6,13 @@ package io.pulumi.awsnative.s3.outputs;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationFormat;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVersion;
 import io.pulumi.awsnative.s3.outputs.StorageLensEncryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensS3BucketDestination {
     /**
      * The AWS account ID that owns the destination S3 bucket.
@@ -41,14 +41,14 @@ public final class StorageLensS3BucketDestination {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageLensS3BucketDestination(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("encryption") @Nullable StorageLensEncryption encryption,
-        @OutputCustomType.Parameter("format") StorageLensS3BucketDestinationFormat format,
-        @OutputCustomType.Parameter("outputSchemaVersion") StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("encryption") @Nullable StorageLensEncryption encryption,
+        @CustomType.Parameter("format") StorageLensS3BucketDestinationFormat format,
+        @CustomType.Parameter("outputSchemaVersion") StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.accountId = accountId;
         this.arn = arn;
         this.encryption = encryption;

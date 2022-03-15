@@ -4,21 +4,21 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderIgnoreTagsArgs {
     private final @Nullable Output<List<String>> keyPrefixes;
     private final @Nullable Output<List<String>> keys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderIgnoreTagsArgs(
-        @OutputCustomType.Parameter("keyPrefixes") @Nullable Output<List<String>> keyPrefixes,
-        @OutputCustomType.Parameter("keys") @Nullable Output<List<String>> keys) {
+        @CustomType.Parameter("keyPrefixes") @Nullable Output<List<String>> keyPrefixes,
+        @CustomType.Parameter("keys") @Nullable Output<List<String>> keys) {
         this.keyPrefixes = keyPrefixes;
         this.keys = keys;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -30,7 +30,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The monthly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    @InputImport(name="monthlyRetention")
+    @Import(name="monthlyRetention")
       private final @Nullable Output<String> monthlyRetention;
 
     public Output<String> getMonthlyRetention() {
@@ -41,7 +41,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The policy name. Should always be Default.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -52,7 +52,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -74,7 +74,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The week of year to take the yearly backup in an ISO 8601 format.
      * 
      */
-    @InputImport(name="weekOfYear")
+    @Import(name="weekOfYear")
       private final @Nullable Output<Integer> weekOfYear;
 
     public Output<Integer> getWeekOfYear() {
@@ -85,7 +85,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The weekly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    @InputImport(name="weeklyRetention")
+    @Import(name="weeklyRetention")
       private final @Nullable Output<String> weeklyRetention;
 
     public Output<String> getWeeklyRetention() {
@@ -96,7 +96,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * The yearly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    @InputImport(name="yearlyRetention")
+    @Import(name="yearlyRetention")
       private final @Nullable Output<String> yearlyRetention;
 
     public Output<String> getYearlyRetention() {

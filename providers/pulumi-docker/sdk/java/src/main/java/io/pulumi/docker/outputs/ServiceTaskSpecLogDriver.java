@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecLogDriver {
     private final String name;
     private final @Nullable Map<String,String> options;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecLogDriver(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") @Nullable Map<String,String> options) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") @Nullable Map<String,String> options) {
         this.name = name;
         this.options = options;
     }

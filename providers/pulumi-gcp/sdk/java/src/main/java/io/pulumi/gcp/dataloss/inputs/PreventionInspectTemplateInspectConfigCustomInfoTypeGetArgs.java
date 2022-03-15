@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs;
@@ -23,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dictionary")
+    @Import(name="dictionary")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs> dictionary;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryGetArgs> getDictionary() {
@@ -35,7 +35,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
      * Possible values are `EXCLUSION_TYPE_EXCLUDE`.
      * 
      */
-    @InputImport(name="exclusionType")
+    @Import(name="exclusionType")
       private final @Nullable Output<String> exclusionType;
 
     public Output<String> getExclusionType() {
@@ -50,7 +50,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="infoType", required=true)
+    @Import(name="infoType", required=true)
       private final Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs> infoType;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeGetArgs> getInfoType() {
@@ -64,7 +64,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
      */
-    @InputImport(name="likelihood")
+    @Import(name="likelihood")
       private final @Nullable Output<String> likelihood;
 
     public Output<String> getLikelihood() {
@@ -76,7 +76,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs> regex;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexGetArgs> getRegex() {
@@ -88,7 +88,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="storedType")
+    @Import(name="storedType")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs> storedType;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeGetArgs> getStoredType() {

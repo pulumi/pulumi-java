@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1.inputs.RollingUpdateDaemonSetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * Rolling update config params. Present only if type = "RollingUpdate".
      * 
      */
-    @InputImport(name="rollingUpdate")
+    @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
 
     public Output<RollingUpdateDaemonSetArgs> getRollingUpdate() {
@@ -38,7 +38,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      *  - `"RollingUpdate"` Replace the old daemons by new ones using rolling update i.e replace them on each node one after the other.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

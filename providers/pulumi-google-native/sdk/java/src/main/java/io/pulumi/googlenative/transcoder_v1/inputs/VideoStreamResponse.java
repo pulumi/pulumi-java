@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.H264CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.H265CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.Vp9CodecSettingsResponse;
@@ -22,7 +22,7 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
      * H264 codec settings.
      * 
      */
-    @InputImport(name="h264", required=true)
+    @Import(name="h264", required=true)
       private final H264CodecSettingsResponse h264;
 
     public H264CodecSettingsResponse getH264() {
@@ -33,7 +33,7 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
      * H265 codec settings.
      * 
      */
-    @InputImport(name="h265", required=true)
+    @Import(name="h265", required=true)
       private final H265CodecSettingsResponse h265;
 
     public H265CodecSettingsResponse getH265() {
@@ -44,7 +44,7 @@ public final class VideoStreamResponse extends io.pulumi.resources.InvokeArgs {
      * VP9 codec settings.
      * 
      */
-    @InputImport(name="vp9", required=true)
+    @Import(name="vp9", required=true)
       private final Vp9CodecSettingsResponse vp9;
 
     public Vp9CodecSettingsResponse getVp9() {

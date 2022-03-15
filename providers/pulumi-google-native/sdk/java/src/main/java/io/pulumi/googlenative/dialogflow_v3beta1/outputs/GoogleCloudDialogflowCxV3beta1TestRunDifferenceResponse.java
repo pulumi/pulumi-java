@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
     /**
      * A description of the diff, showing the actual output vs expected output.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.type = type;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
      * The KB name (generally of the form KB[0-9]+ (e.g., KB123456)).
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
      * A link to the KB in the [Windows update catalog] (https://www.catalog.update.microsoft.com/).
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

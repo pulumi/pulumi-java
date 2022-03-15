@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.managednetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScopeAssignmentResult {
     /**
      * The managed network ID with scope will be assigned to.
@@ -47,15 +47,15 @@ public final class GetScopeAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScopeAssignmentResult(
-        @OutputCustomType.Parameter("assignedManagedNetwork") @Nullable String assignedManagedNetwork,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("assignedManagedNetwork") @Nullable String assignedManagedNetwork,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.assignedManagedNetwork = assignedManagedNetwork;
         this.etag = etag;
         this.id = id;

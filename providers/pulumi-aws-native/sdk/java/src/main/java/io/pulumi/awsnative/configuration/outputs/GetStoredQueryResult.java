@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.StoredQueryTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStoredQueryResult {
     private final @Nullable String queryArn;
     private final @Nullable String queryDescription;
@@ -23,13 +23,13 @@ public final class GetStoredQueryResult {
      */
     private final @Nullable List<StoredQueryTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStoredQueryResult(
-        @OutputCustomType.Parameter("queryArn") @Nullable String queryArn,
-        @OutputCustomType.Parameter("queryDescription") @Nullable String queryDescription,
-        @OutputCustomType.Parameter("queryExpression") @Nullable String queryExpression,
-        @OutputCustomType.Parameter("queryId") @Nullable String queryId,
-        @OutputCustomType.Parameter("tags") @Nullable List<StoredQueryTag> tags) {
+        @CustomType.Parameter("queryArn") @Nullable String queryArn,
+        @CustomType.Parameter("queryDescription") @Nullable String queryDescription,
+        @CustomType.Parameter("queryExpression") @Nullable String queryExpression,
+        @CustomType.Parameter("queryId") @Nullable String queryId,
+        @CustomType.Parameter("tags") @Nullable List<StoredQueryTag> tags) {
         this.queryArn = queryArn;
         this.queryDescription = queryDescription;
         this.queryExpression = queryExpression;

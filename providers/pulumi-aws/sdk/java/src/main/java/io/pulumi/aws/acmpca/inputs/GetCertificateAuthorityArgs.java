@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
      * Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -38,7 +38,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
      * * `revocation_configuration.0.crl_configuration.0.s3_object_acl` - Whether the CRL is publicly readable or privately held in the CRL Amazon S3 bucket.
      * 
      */
-    @InputImport(name="revocationConfigurations")
+    @Import(name="revocationConfigurations")
       private final @Nullable List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations;
 
     public List<GetCertificateAuthorityRevocationConfiguration> getRevocationConfigurations() {
@@ -49,7 +49,7 @@ public final class GetCertificateAuthorityArgs extends io.pulumi.resources.Invok
      * Specifies a key-value map of user-defined tags that are attached to the certificate authority.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

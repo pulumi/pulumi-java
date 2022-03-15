@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1.RouteArgs;
@@ -24,7 +24,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The create time of the resource.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Destination address for connection
      * 
      */
-    @OutputExport(name="destinationAddress", type=String.class, parameters={})
+    @Export(name="destinationAddress", type=String.class, parameters={})
     private Output<String> destinationAddress;
 
     /**
@@ -52,7 +52,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Destination port for connection
      * 
      */
-    @OutputExport(name="destinationPort", type=Integer.class, parameters={})
+    @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output<Integer> destinationPort;
 
     /**
@@ -66,7 +66,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -94,7 +94,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The resource's name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The update time of the resource.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

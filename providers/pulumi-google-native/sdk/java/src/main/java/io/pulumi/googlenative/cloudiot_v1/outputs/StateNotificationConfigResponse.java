@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StateNotificationConfigResponse {
     /**
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
@@ -15,8 +15,8 @@ public final class StateNotificationConfigResponse {
      */
     private final String pubsubTopicName;
 
-    @OutputCustomType.Constructor
-    private StateNotificationConfigResponse(@OutputCustomType.Parameter("pubsubTopicName") String pubsubTopicName) {
+    @CustomType.Constructor
+    private StateNotificationConfigResponse(@CustomType.Parameter("pubsubTopicName") String pubsubTopicName) {
         this.pubsubTopicName = pubsubTopicName;
     }
 

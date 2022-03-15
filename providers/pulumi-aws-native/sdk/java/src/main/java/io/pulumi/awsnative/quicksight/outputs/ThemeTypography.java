@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.ThemeFont;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeTypography {
     private final @Nullable List<ThemeFont> fontFamilies;
 
-    @OutputCustomType.Constructor
-    private ThemeTypography(@OutputCustomType.Parameter("fontFamilies") @Nullable List<ThemeFont> fontFamilies) {
+    @CustomType.Constructor
+    private ThemeTypography(@CustomType.Parameter("fontFamilies") @Nullable List<ThemeFont> fontFamilies) {
         this.fontFamilies = fontFamilies;
     }
 

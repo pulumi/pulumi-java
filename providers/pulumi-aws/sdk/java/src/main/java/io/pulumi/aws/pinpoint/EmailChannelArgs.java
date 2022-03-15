@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -30,7 +30,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
      * 
      */
-    @InputImport(name="configurationSet")
+    @Import(name="configurationSet")
       private final @Nullable Output<String> configurationSet;
 
     public Output<String> getConfigurationSet() {
@@ -41,7 +41,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -52,7 +52,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
      * 
      */
-    @InputImport(name="fromAddress", required=true)
+    @Import(name="fromAddress", required=true)
       private final Output<String> fromAddress;
 
     public Output<String> getFromAddress() {
@@ -63,7 +63,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an identity verified with SES.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<String> identity;
 
     public Output<String> getIdentity() {
@@ -74,7 +74,7 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

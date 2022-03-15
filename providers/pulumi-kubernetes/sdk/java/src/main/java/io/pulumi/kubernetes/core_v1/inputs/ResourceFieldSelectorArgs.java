@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * Container name: required for volumes, optional for env vars
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -33,7 +33,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * Specifies the output format of the exposed resources, defaults to "1"
      * 
      */
-    @InputImport(name="divisor")
+    @Import(name="divisor")
       private final @Nullable Output<String> divisor;
 
     public Output<String> getDivisor() {
@@ -44,7 +44,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * Required: resource to select
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<String> resource;
 
     public Output<String> getResource() {

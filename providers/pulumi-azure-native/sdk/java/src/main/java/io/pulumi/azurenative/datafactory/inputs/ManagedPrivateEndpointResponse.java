@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ConnectionStatePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * The managed private endpoint connection state
      * 
      */
-    @InputImport(name="connectionState")
+    @Import(name="connectionState")
       private final @Nullable ConnectionStatePropertiesResponse connectionState;
 
     public Optional<ConnectionStatePropertiesResponse> getConnectionState() {
@@ -36,7 +36,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * Fully qualified domain names
      * 
      */
-    @InputImport(name="fqdns")
+    @Import(name="fqdns")
       private final @Nullable List<String> fqdns;
 
     public List<String> getFqdns() {
@@ -47,7 +47,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * The groupId to which the managed private endpoint is created
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
@@ -58,7 +58,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * Denotes whether the managed private endpoint is reserved
      * 
      */
-    @InputImport(name="isReserved", required=true)
+    @Import(name="isReserved", required=true)
       private final Boolean isReserved;
 
     public Boolean getIsReserved() {
@@ -69,7 +69,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * The ARM resource ID of the resource to which the managed private endpoint is created
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
 
     public Optional<String> getPrivateLinkResourceId() {
@@ -80,7 +80,7 @@ public final class ManagedPrivateEndpointResponse extends io.pulumi.resources.In
      * The managed private endpoint provisioning state
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

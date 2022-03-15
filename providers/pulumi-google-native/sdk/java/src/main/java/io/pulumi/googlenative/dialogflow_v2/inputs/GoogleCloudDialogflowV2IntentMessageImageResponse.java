@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
      * Optional. A text description of the image to be used for accessibility, e.g., screen readers.
      * 
      */
-    @InputImport(name="accessibilityText", required=true)
+    @Import(name="accessibilityText", required=true)
       private final String accessibilityText;
 
     public String getAccessibilityText() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
      * Optional. The public URI to an image file.
      * 
      */
-    @InputImport(name="imageUri", required=true)
+    @Import(name="imageUri", required=true)
       private final String imageUri;
 
     public String getImageUri() {

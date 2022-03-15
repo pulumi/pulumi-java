@@ -9,7 +9,7 @@ import io.pulumi.awsnative.resourcegroups.outputs.GroupConfigurationItem;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupResourceQuery;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The Resource Group ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -35,7 +35,7 @@ public class Group extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="configuration", type=List.class, parameters={GroupConfigurationItem.class})
+    @Export(name="configuration", type=List.class, parameters={GroupConfigurationItem.class})
     private Output</* @Nullable */ List<GroupConfigurationItem>> configuration;
 
     public Output</* @Nullable */ List<GroupConfigurationItem>> getConfiguration() {
@@ -45,7 +45,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The description of the resource group
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -59,7 +59,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The name of the resource group
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -69,19 +69,19 @@ public class Group extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="resourceQuery", type=GroupResourceQuery.class, parameters={})
+    @Export(name="resourceQuery", type=GroupResourceQuery.class, parameters={})
     private Output</* @Nullable */ GroupResourceQuery> resourceQuery;
 
     public Output</* @Nullable */ GroupResourceQuery> getResourceQuery() {
         return this.resourceQuery;
     }
-    @OutputExport(name="resources", type=List.class, parameters={String.class})
+    @Export(name="resources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resources;
 
     public Output</* @Nullable */ List<String>> getResources() {
         return this.resources;
     }
-    @OutputExport(name="tags", type=List.class, parameters={GroupTag.class})
+    @Export(name="tags", type=List.class, parameters={GroupTag.class})
     private Output</* @Nullable */ List<GroupTag>> tags;
 
     public Output</* @Nullable */ List<GroupTag>> getTags() {

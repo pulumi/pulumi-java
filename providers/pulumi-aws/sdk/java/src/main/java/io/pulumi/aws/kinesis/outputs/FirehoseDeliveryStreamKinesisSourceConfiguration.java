@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
     /**
      * The kinesis stream used as the source of the firehose delivery stream.
@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamKinesisSourceConfiguration(
-        @OutputCustomType.Parameter("kinesisStreamArn") String kinesisStreamArn,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("kinesisStreamArn") String kinesisStreamArn,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         this.roleArn = roleArn;
     }

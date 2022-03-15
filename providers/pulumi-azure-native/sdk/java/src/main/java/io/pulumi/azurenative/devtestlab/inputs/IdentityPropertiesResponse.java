@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * The client secret URL of the identity.
      * 
      */
-    @InputImport(name="clientSecretUrl")
+    @Import(name="clientSecretUrl")
       private final @Nullable String clientSecretUrl;
 
     public Optional<String> getClientSecretUrl() {
@@ -33,7 +33,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * The principal id of resource identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
@@ -44,7 +44,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * The tenant identifier of resource.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -55,7 +55,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * Managed identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

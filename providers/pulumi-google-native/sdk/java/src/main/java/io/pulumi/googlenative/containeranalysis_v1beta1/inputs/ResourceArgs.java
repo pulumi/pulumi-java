@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

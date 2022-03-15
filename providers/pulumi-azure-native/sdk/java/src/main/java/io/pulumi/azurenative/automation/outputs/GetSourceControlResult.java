@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSourceControlResult {
     /**
      * The auto sync of the source control. Default is false.
@@ -73,20 +73,20 @@ public final class GetSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSourceControlResult(
-        @OutputCustomType.Parameter("autoSync") @Nullable Boolean autoSync,
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publishRunbook") @Nullable Boolean publishRunbook,
-        @OutputCustomType.Parameter("repoUrl") @Nullable String repoUrl,
-        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoSync") @Nullable Boolean autoSync,
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folderPath") @Nullable String folderPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publishRunbook") @Nullable Boolean publishRunbook,
+        @CustomType.Parameter("repoUrl") @Nullable String repoUrl,
+        @CustomType.Parameter("sourceType") @Nullable String sourceType,
+        @CustomType.Parameter("type") String type) {
         this.autoSync = autoSync;
         this.branch = branch;
         this.creationTime = creationTime;

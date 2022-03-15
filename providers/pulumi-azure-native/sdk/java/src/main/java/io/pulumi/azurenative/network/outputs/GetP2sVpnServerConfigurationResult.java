@@ -9,14 +9,14 @@ import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigRadiusServerRootC
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRootCertificateResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetP2sVpnServerConfigurationResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -84,21 +84,21 @@ public final class GetP2sVpnServerConfigurationResult {
      */
     private final @Nullable List<String> vpnProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetP2sVpnServerConfigurationResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("p2SVpnGateways") List<SubResourceResponse> p2SVpnGateways,
-        @OutputCustomType.Parameter("p2SVpnServerConfigRadiusClientRootCertificates") @Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates,
-        @OutputCustomType.Parameter("p2SVpnServerConfigRadiusServerRootCertificates") @Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates,
-        @OutputCustomType.Parameter("p2SVpnServerConfigVpnClientRevokedCertificates") @Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates,
-        @OutputCustomType.Parameter("p2SVpnServerConfigVpnClientRootCertificates") @Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
-        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
-        @OutputCustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
-        @OutputCustomType.Parameter("vpnProtocols") @Nullable List<String> vpnProtocols) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("p2SVpnGateways") List<SubResourceResponse> p2SVpnGateways,
+        @CustomType.Parameter("p2SVpnServerConfigRadiusClientRootCertificates") @Nullable List<P2SVpnServerConfigRadiusClientRootCertificateResponse> p2SVpnServerConfigRadiusClientRootCertificates,
+        @CustomType.Parameter("p2SVpnServerConfigRadiusServerRootCertificates") @Nullable List<P2SVpnServerConfigRadiusServerRootCertificateResponse> p2SVpnServerConfigRadiusServerRootCertificates,
+        @CustomType.Parameter("p2SVpnServerConfigVpnClientRevokedCertificates") @Nullable List<P2SVpnServerConfigVpnClientRevokedCertificateResponse> p2SVpnServerConfigVpnClientRevokedCertificates,
+        @CustomType.Parameter("p2SVpnServerConfigVpnClientRootCertificates") @Nullable List<P2SVpnServerConfigVpnClientRootCertificateResponse> p2SVpnServerConfigVpnClientRootCertificates,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
+        @CustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
+        @CustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
+        @CustomType.Parameter("vpnProtocols") @Nullable List<String> vpnProtocols) {
         this.etag = etag;
         this.id = id;
         this.name = name;

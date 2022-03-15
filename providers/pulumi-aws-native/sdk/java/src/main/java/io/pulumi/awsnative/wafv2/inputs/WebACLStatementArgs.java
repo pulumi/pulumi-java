@@ -19,7 +19,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLSizeConstraintStatementArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLSqliMatchStatementArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLXssMatchStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -32,105 +32,105 @@ public final class WebACLStatementArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final WebACLStatementArgs Empty = new WebACLStatementArgs();
 
-    @InputImport(name="andStatement")
+    @Import(name="andStatement")
       private final @Nullable Output<WebACLAndStatementArgs> andStatement;
 
     public Output<WebACLAndStatementArgs> getAndStatement() {
         return this.andStatement == null ? Output.empty() : this.andStatement;
     }
 
-    @InputImport(name="byteMatchStatement")
+    @Import(name="byteMatchStatement")
       private final @Nullable Output<WebACLByteMatchStatementArgs> byteMatchStatement;
 
     public Output<WebACLByteMatchStatementArgs> getByteMatchStatement() {
         return this.byteMatchStatement == null ? Output.empty() : this.byteMatchStatement;
     }
 
-    @InputImport(name="geoMatchStatement")
+    @Import(name="geoMatchStatement")
       private final @Nullable Output<WebACLGeoMatchStatementArgs> geoMatchStatement;
 
     public Output<WebACLGeoMatchStatementArgs> getGeoMatchStatement() {
         return this.geoMatchStatement == null ? Output.empty() : this.geoMatchStatement;
     }
 
-    @InputImport(name="iPSetReferenceStatement")
+    @Import(name="iPSetReferenceStatement")
       private final @Nullable Output<WebACLIPSetReferenceStatementArgs> iPSetReferenceStatement;
 
     public Output<WebACLIPSetReferenceStatementArgs> getIPSetReferenceStatement() {
         return this.iPSetReferenceStatement == null ? Output.empty() : this.iPSetReferenceStatement;
     }
 
-    @InputImport(name="labelMatchStatement")
+    @Import(name="labelMatchStatement")
       private final @Nullable Output<WebACLLabelMatchStatementArgs> labelMatchStatement;
 
     public Output<WebACLLabelMatchStatementArgs> getLabelMatchStatement() {
         return this.labelMatchStatement == null ? Output.empty() : this.labelMatchStatement;
     }
 
-    @InputImport(name="managedRuleGroupStatement")
+    @Import(name="managedRuleGroupStatement")
       private final @Nullable Output<WebACLManagedRuleGroupStatementArgs> managedRuleGroupStatement;
 
     public Output<WebACLManagedRuleGroupStatementArgs> getManagedRuleGroupStatement() {
         return this.managedRuleGroupStatement == null ? Output.empty() : this.managedRuleGroupStatement;
     }
 
-    @InputImport(name="notStatement")
+    @Import(name="notStatement")
       private final @Nullable Output<WebACLNotStatementArgs> notStatement;
 
     public Output<WebACLNotStatementArgs> getNotStatement() {
         return this.notStatement == null ? Output.empty() : this.notStatement;
     }
 
-    @InputImport(name="orStatement")
+    @Import(name="orStatement")
       private final @Nullable Output<WebACLOrStatementArgs> orStatement;
 
     public Output<WebACLOrStatementArgs> getOrStatement() {
         return this.orStatement == null ? Output.empty() : this.orStatement;
     }
 
-    @InputImport(name="rateBasedStatement")
+    @Import(name="rateBasedStatement")
       private final @Nullable Output<WebACLRateBasedStatementArgs> rateBasedStatement;
 
     public Output<WebACLRateBasedStatementArgs> getRateBasedStatement() {
         return this.rateBasedStatement == null ? Output.empty() : this.rateBasedStatement;
     }
 
-    @InputImport(name="regexMatchStatement")
+    @Import(name="regexMatchStatement")
       private final @Nullable Output<WebACLRegexMatchStatementArgs> regexMatchStatement;
 
     public Output<WebACLRegexMatchStatementArgs> getRegexMatchStatement() {
         return this.regexMatchStatement == null ? Output.empty() : this.regexMatchStatement;
     }
 
-    @InputImport(name="regexPatternSetReferenceStatement")
+    @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<WebACLRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     public Output<WebACLRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Output.empty() : this.regexPatternSetReferenceStatement;
     }
 
-    @InputImport(name="ruleGroupReferenceStatement")
+    @Import(name="ruleGroupReferenceStatement")
       private final @Nullable Output<WebACLRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement;
 
     public Output<WebACLRuleGroupReferenceStatementArgs> getRuleGroupReferenceStatement() {
         return this.ruleGroupReferenceStatement == null ? Output.empty() : this.ruleGroupReferenceStatement;
     }
 
-    @InputImport(name="sizeConstraintStatement")
+    @Import(name="sizeConstraintStatement")
       private final @Nullable Output<WebACLSizeConstraintStatementArgs> sizeConstraintStatement;
 
     public Output<WebACLSizeConstraintStatementArgs> getSizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Output.empty() : this.sizeConstraintStatement;
     }
 
-    @InputImport(name="sqliMatchStatement")
+    @Import(name="sqliMatchStatement")
       private final @Nullable Output<WebACLSqliMatchStatementArgs> sqliMatchStatement;
 
     public Output<WebACLSqliMatchStatementArgs> getSqliMatchStatement() {
         return this.sqliMatchStatement == null ? Output.empty() : this.sqliMatchStatement;
     }
 
-    @InputImport(name="xssMatchStatement")
+    @Import(name="xssMatchStatement")
       private final @Nullable Output<WebACLXssMatchStatementArgs> xssMatchStatement;
 
     public Output<WebACLXssMatchStatementArgs> getXssMatchStatement() {

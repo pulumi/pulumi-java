@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerRegistryPro
 import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorResponseWrapperResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.GlobalServiceConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOperationalizationClusterResult {
     /**
      * AppInsights configuration.
@@ -100,24 +100,24 @@ public final class GetOperationalizationClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOperationalizationClusterResult(
-        @OutputCustomType.Parameter("appInsights") @Nullable AppInsightsPropertiesResponse appInsights,
-        @OutputCustomType.Parameter("clusterType") String clusterType,
-        @OutputCustomType.Parameter("containerRegistry") @Nullable ContainerRegistryPropertiesResponse containerRegistry,
-        @OutputCustomType.Parameter("containerService") @Nullable AcsClusterPropertiesResponse containerService,
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("globalServiceConfiguration") @Nullable GlobalServiceConfigurationResponse globalServiceConfiguration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningErrors") List<ErrorResponseWrapperResponse> provisioningErrors,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appInsights") @Nullable AppInsightsPropertiesResponse appInsights,
+        @CustomType.Parameter("clusterType") String clusterType,
+        @CustomType.Parameter("containerRegistry") @Nullable ContainerRegistryPropertiesResponse containerRegistry,
+        @CustomType.Parameter("containerService") @Nullable AcsClusterPropertiesResponse containerService,
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("globalServiceConfiguration") @Nullable GlobalServiceConfigurationResponse globalServiceConfiguration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("modifiedOn") String modifiedOn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningErrors") List<ErrorResponseWrapperResponse> provisioningErrors,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.appInsights = appInsights;
         this.clusterType = clusterType;
         this.containerRegistry = containerRegistry;

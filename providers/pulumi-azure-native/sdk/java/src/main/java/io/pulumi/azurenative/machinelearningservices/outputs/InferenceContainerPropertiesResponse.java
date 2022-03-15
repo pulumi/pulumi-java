@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.RouteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InferenceContainerPropertiesResponse {
     /**
      * The route to check the liveness of the inference server container.
@@ -27,11 +27,11 @@ public final class InferenceContainerPropertiesResponse {
      */
     private final @Nullable RouteResponse scoringRoute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InferenceContainerPropertiesResponse(
-        @OutputCustomType.Parameter("livenessRoute") @Nullable RouteResponse livenessRoute,
-        @OutputCustomType.Parameter("readinessRoute") @Nullable RouteResponse readinessRoute,
-        @OutputCustomType.Parameter("scoringRoute") @Nullable RouteResponse scoringRoute) {
+        @CustomType.Parameter("livenessRoute") @Nullable RouteResponse livenessRoute,
+        @CustomType.Parameter("readinessRoute") @Nullable RouteResponse readinessRoute,
+        @CustomType.Parameter("scoringRoute") @Nullable RouteResponse scoringRoute) {
         this.livenessRoute = livenessRoute;
         this.readinessRoute = readinessRoute;
         this.scoringRoute = scoringRoute;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RouterPeerAdvertisedIpRangeGetArgs;
 import io.pulumi.gcp.compute.inputs.RouterPeerBfdGetArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
      */
-    @InputImport(name="advertiseMode")
+    @Import(name="advertiseMode")
       private final @Nullable Output<String> advertiseMode;
 
     public Output<String> getAdvertiseMode() {
@@ -41,7 +41,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
      * 
      */
-    @InputImport(name="advertisedGroups")
+    @Import(name="advertisedGroups")
       private final @Nullable Output<List<String>> advertisedGroups;
 
     public Output<List<String>> getAdvertisedGroups() {
@@ -57,7 +57,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="advertisedIpRanges")
+    @Import(name="advertisedIpRanges")
       private final @Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
     public Output<List<RouterPeerAdvertisedIpRangeGetArgs>> getAdvertisedIpRanges() {
@@ -70,7 +70,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * length, the routes with the lowest priority value win.
      * 
      */
-    @InputImport(name="advertisedRoutePriority")
+    @Import(name="advertisedRoutePriority")
       private final @Nullable Output<Integer> advertisedRoutePriority;
 
     public Output<Integer> getAdvertisedRoutePriority() {
@@ -82,7 +82,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bfd")
+    @Import(name="bfd")
       private final @Nullable Output<RouterPeerBfdGetArgs> bfd;
 
     public Output<RouterPeerBfdGetArgs> getBfd() {
@@ -96,7 +96,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * The default is true.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -107,7 +107,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Name of the interface the BGP peer is associated with.
      * 
      */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<String> $interface;
 
     public Output<String> get$interface() {
@@ -119,7 +119,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Only IPv4 is supported.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -133,7 +133,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
      * 
      */
-    @InputImport(name="managementType")
+    @Import(name="managementType")
       private final @Nullable Output<String> managementType;
 
     public Output<String> getManagementType() {
@@ -149,7 +149,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -161,7 +161,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Each BGP interface may use a different value.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable Output<Integer> peerAsn;
 
     public Output<Integer> getPeerAsn() {
@@ -173,7 +173,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * Only IPv4 is supported.
      * 
      */
-    @InputImport(name="peerIpAddress")
+    @Import(name="peerIpAddress")
       private final @Nullable Output<String> peerIpAddress;
 
     public Output<String> getPeerIpAddress() {
@@ -185,7 +185,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -197,7 +197,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -208,7 +208,7 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
      * The name of the Cloud Router in which this BgpPeer will be configured.
      * 
      */
-    @InputImport(name="router")
+    @Import(name="router")
       private final @Nullable Output<String> router;
 
     public Output<String> getRouter() {

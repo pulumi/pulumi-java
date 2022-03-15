@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FingerprintArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
      * The fingerprint of the base image.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<FingerprintArgs> fingerprint;
 
     public Output<FingerprintArgs> getFingerprint() {
@@ -34,7 +34,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
      * The resource_url for the resource representing the basis of associated occurrence images.
      * 
      */
-    @InputImport(name="resourceUrl")
+    @Import(name="resourceUrl")
       private final @Nullable Output<String> resourceUrl;
 
     public Output<String> getResourceUrl() {

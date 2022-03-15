@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
      * The natural language speech audio to be processed. A single request can contain up to 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio detect intent, `config` must be provided in the first request and `audio` must be provided in all following requests.
      * 
      */
-    @InputImport(name="audio", required=true)
+    @Import(name="audio", required=true)
       private final String audio;
 
     public String getAudio() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse extends io.p
      * Instructs the speech recognizer how to process the speech audio.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config;
 
     public GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse getConfig() {

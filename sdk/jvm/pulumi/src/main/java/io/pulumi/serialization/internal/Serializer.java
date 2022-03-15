@@ -10,13 +10,13 @@ import io.pulumi.core.Archive.InvalidArchive;
 import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
-import io.pulumi.core.InputOutput;
+import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.CustomResource;
@@ -149,13 +149,13 @@ public class Serializer {
             return CompletableFuture.completedFuture(serializeJson(ctx, element));
         }
 
-        if (prop instanceof InputOutput) {
+        if (prop instanceof Output) {
             //noinspection unchecked
-            var inputOutput = (InputOutput<Object, ?>) prop;
+            var output = (Output<Object>) prop;
             log.excessive(String.format("Serialize property[%s]: Recursion into InputOutput", ctx));
 
-            return Internal.of(inputOutput).getDataAsync().thenCompose(
-                    (InputOutputData<Object> data) -> {
+            return Internal.of(output).getDataAsync().thenCompose(
+                    (OutputData<Object> data) -> {
                         this.dependentResources.addAll(data.getResources());
 
                         // When serializing an InputOutput, we will either serialize it as its resolved value

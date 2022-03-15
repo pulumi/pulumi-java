@@ -5,14 +5,14 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.ConnectionStateResponse;
 import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionResponse {
     /**
      * GroupIds from the private link service resource.
@@ -50,15 +50,15 @@ public final class PrivateEndpointConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionResponse(
-        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.groupIds = groupIds;
         this.id = id;
         this.name = name;

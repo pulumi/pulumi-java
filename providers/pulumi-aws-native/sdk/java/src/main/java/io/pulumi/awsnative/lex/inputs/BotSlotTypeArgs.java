@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotExternalSourceSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotTypeValueArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueSelectionSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,42 +22,42 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotTypeArgs Empty = new BotSlotTypeArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="externalSourceSetting")
+    @Import(name="externalSourceSetting")
       private final @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
 
     public Output<BotExternalSourceSettingArgs> getExternalSourceSetting() {
         return this.externalSourceSetting == null ? Output.empty() : this.externalSourceSetting;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="parentSlotTypeSignature")
+    @Import(name="parentSlotTypeSignature")
       private final @Nullable Output<String> parentSlotTypeSignature;
 
     public Output<String> getParentSlotTypeSignature() {
         return this.parentSlotTypeSignature == null ? Output.empty() : this.parentSlotTypeSignature;
     }
 
-    @InputImport(name="slotTypeValues")
+    @Import(name="slotTypeValues")
       private final @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
 
     public Output<List<BotSlotTypeValueArgs>> getSlotTypeValues() {
         return this.slotTypeValues == null ? Output.empty() : this.slotTypeValues;
     }
 
-    @InputImport(name="valueSelectionSetting")
+    @Import(name="valueSelectionSetting")
       private final @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
 
     public Output<BotSlotValueSelectionSettingArgs> getValueSelectionSetting() {

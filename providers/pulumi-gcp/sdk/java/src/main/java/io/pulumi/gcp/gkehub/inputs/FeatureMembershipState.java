@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * Config Management-specific spec. Structure is documented below.
      * 
      */
-    @InputImport(name="configmanagement")
+    @Import(name="configmanagement")
       private final @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
 
     public Output<FeatureMembershipConfigmanagementGetArgs> getConfigmanagement() {
@@ -30,7 +30,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * The name of the feature
      * 
      */
-    @InputImport(name="feature")
+    @Import(name="feature")
       private final @Nullable Output<String> feature;
 
     public Output<String> getFeature() {
@@ -41,7 +41,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * The location of the feature
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * The name of the membership
      * 
      */
-    @InputImport(name="membership")
+    @Import(name="membership")
       private final @Nullable Output<String> membership;
 
     public Output<String> getMembership() {
@@ -63,7 +63,7 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
      * The project of the feature
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

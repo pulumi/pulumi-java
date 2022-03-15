@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * access again.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -43,7 +43,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    @InputImport(name="workloadIdentityPoolId", required=true)
+    @Import(name="workloadIdentityPoolId", required=true)
       private final Output<String> workloadIdentityPoolId;
 
     public Output<String> getWorkloadIdentityPoolId() {

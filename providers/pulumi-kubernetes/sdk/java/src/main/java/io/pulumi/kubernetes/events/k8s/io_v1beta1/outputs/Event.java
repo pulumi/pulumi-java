@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EventSource;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import io.pulumi.kubernetes.events.k8s.io_v1beta1.outputs.EventSeries;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Event {
     /**
      * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.
@@ -102,25 +102,25 @@ public final class Event {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Event(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("deprecatedCount") @Nullable Integer deprecatedCount,
-        @OutputCustomType.Parameter("deprecatedFirstTimestamp") @Nullable String deprecatedFirstTimestamp,
-        @OutputCustomType.Parameter("deprecatedLastTimestamp") @Nullable String deprecatedLastTimestamp,
-        @OutputCustomType.Parameter("deprecatedSource") @Nullable EventSource deprecatedSource,
-        @OutputCustomType.Parameter("eventTime") String eventTime,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("note") @Nullable String note,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("regarding") @Nullable ObjectReference regarding,
-        @OutputCustomType.Parameter("related") @Nullable ObjectReference related,
-        @OutputCustomType.Parameter("reportingController") @Nullable String reportingController,
-        @OutputCustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
-        @OutputCustomType.Parameter("series") @Nullable EventSeries series,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("deprecatedCount") @Nullable Integer deprecatedCount,
+        @CustomType.Parameter("deprecatedFirstTimestamp") @Nullable String deprecatedFirstTimestamp,
+        @CustomType.Parameter("deprecatedLastTimestamp") @Nullable String deprecatedLastTimestamp,
+        @CustomType.Parameter("deprecatedSource") @Nullable EventSource deprecatedSource,
+        @CustomType.Parameter("eventTime") String eventTime,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("note") @Nullable String note,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("regarding") @Nullable ObjectReference regarding,
+        @CustomType.Parameter("related") @Nullable ObjectReference related,
+        @CustomType.Parameter("reportingController") @Nullable String reportingController,
+        @CustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
+        @CustomType.Parameter("series") @Nullable EventSeries series,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.apiVersion = apiVersion;
         this.deprecatedCount = deprecatedCount;

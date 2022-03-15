@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.B2BPartnerContentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PartnerContentResponse {
     /**
      * The B2B partner content.
@@ -17,8 +17,8 @@ public final class PartnerContentResponse {
      */
     private final @Nullable B2BPartnerContentResponse b2b;
 
-    @OutputCustomType.Constructor
-    private PartnerContentResponse(@OutputCustomType.Parameter("b2b") @Nullable B2BPartnerContentResponse b2b) {
+    @CustomType.Constructor
+    private PartnerContentResponse(@CustomType.Parameter("b2b") @Nullable B2BPartnerContentResponse b2b) {
         this.b2b = b2b;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
      * The description of the EnterpriseKnowledgeGraph
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
      * Specifies the metadata  of the resource.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Object metadata;
 
     public Optional<Object> getMetadata() {
@@ -45,7 +45,7 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends io.pulumi.
      * The state of EnterpriseKnowledgeGraph provisioning
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {

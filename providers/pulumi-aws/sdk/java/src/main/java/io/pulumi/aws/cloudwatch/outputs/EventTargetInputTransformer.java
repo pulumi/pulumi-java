@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetInputTransformer {
     /**
      * Key value pairs specified in the form of JSONPath (for example, time = $.time)
@@ -25,10 +25,10 @@ public final class EventTargetInputTransformer {
      */
     private final String inputTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTargetInputTransformer(
-        @OutputCustomType.Parameter("inputPaths") @Nullable Map<String,String> inputPaths,
-        @OutputCustomType.Parameter("inputTemplate") String inputTemplate) {
+        @CustomType.Parameter("inputPaths") @Nullable Map<String,String> inputPaths,
+        @CustomType.Parameter("inputTemplate") String inputTemplate) {
         this.inputPaths = inputPaths;
         this.inputTemplate = inputTemplate;
     }

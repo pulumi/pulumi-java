@@ -7,12 +7,12 @@ import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersAu
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersLambdaParameters;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTaskTaskInvocationParameters {
     /**
      * The parameters for an AUTOMATION task type. Documented below.
@@ -35,12 +35,12 @@ public final class MaintenanceWindowTaskTaskInvocationParameters {
      */
     private final @Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParameters(
-        @OutputCustomType.Parameter("automationParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersAutomationParameters automationParameters,
-        @OutputCustomType.Parameter("lambdaParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParameters lambdaParameters,
-        @OutputCustomType.Parameter("runCommandParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters runCommandParameters,
-        @OutputCustomType.Parameter("stepFunctionsParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters) {
+        @CustomType.Parameter("automationParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersAutomationParameters automationParameters,
+        @CustomType.Parameter("lambdaParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersLambdaParameters lambdaParameters,
+        @CustomType.Parameter("runCommandParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters runCommandParameters,
+        @CustomType.Parameter("stepFunctionsParameters") @Nullable MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters stepFunctionsParameters) {
         this.automationParameters = automationParameters;
         this.lambdaParameters = lambdaParameters;
         this.runCommandParameters = runCommandParameters;

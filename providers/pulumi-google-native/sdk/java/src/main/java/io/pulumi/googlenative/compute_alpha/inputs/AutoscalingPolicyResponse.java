@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyCpuUtilizationResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyCustomMetricUtilizationResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.AutoscalingPolicyLoadBalancingUtilizationResponse;
@@ -28,7 +28,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * The number of seconds that the autoscaler waits before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds. Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.
      * 
      */
-    @InputImport(name="coolDownPeriodSec", required=true)
+    @Import(name="coolDownPeriodSec", required=true)
       private final Integer coolDownPeriodSec;
 
     public Integer getCoolDownPeriodSec() {
@@ -39,7 +39,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
      * 
      */
-    @InputImport(name="cpuUtilization", required=true)
+    @Import(name="cpuUtilization", required=true)
       private final AutoscalingPolicyCpuUtilizationResponse cpuUtilization;
 
     public AutoscalingPolicyCpuUtilizationResponse getCpuUtilization() {
@@ -50,7 +50,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * Configuration parameters of autoscaling based on a custom metric.
      * 
      */
-    @InputImport(name="customMetricUtilizations", required=true)
+    @Import(name="customMetricUtilizations", required=true)
       private final List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations;
 
     public List<AutoscalingPolicyCustomMetricUtilizationResponse> getCustomMetricUtilizations() {
@@ -61,7 +61,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * Configuration parameters of autoscaling based on load balancer.
      * 
      */
-    @InputImport(name="loadBalancingUtilization", required=true)
+    @Import(name="loadBalancingUtilization", required=true)
       private final AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization;
 
     public AutoscalingPolicyLoadBalancingUtilizationResponse getLoadBalancingUtilization() {
@@ -72,7 +72,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
      * 
      */
-    @InputImport(name="maxNumReplicas", required=true)
+    @Import(name="maxNumReplicas", required=true)
       private final Integer maxNumReplicas;
 
     public Integer getMaxNumReplicas() {
@@ -83,7 +83,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
      * 
      */
-    @InputImport(name="minNumReplicas", required=true)
+    @Import(name="minNumReplicas", required=true)
       private final Integer minNumReplicas;
 
     public Integer getMinNumReplicas() {
@@ -94,21 +94,21 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * Defines operating mode for this policy.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
         return this.mode;
     }
 
-    @InputImport(name="scaleDownControl", required=true)
+    @Import(name="scaleDownControl", required=true)
       private final AutoscalingPolicyScaleDownControlResponse scaleDownControl;
 
     public AutoscalingPolicyScaleDownControlResponse getScaleDownControl() {
         return this.scaleDownControl;
     }
 
-    @InputImport(name="scaleInControl", required=true)
+    @Import(name="scaleInControl", required=true)
       private final AutoscalingPolicyScaleInControlResponse scaleInControl;
 
     public AutoscalingPolicyScaleInControlResponse getScaleInControl() {
@@ -119,7 +119,7 @@ public final class AutoscalingPolicyResponse extends io.pulumi.resources.InvokeA
      * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
      * 
      */
-    @InputImport(name="scalingSchedules", required=true)
+    @Import(name="scalingSchedules", required=true)
       private final Map<String,String> scalingSchedules;
 
     public Map<String,String> getScalingSchedules() {

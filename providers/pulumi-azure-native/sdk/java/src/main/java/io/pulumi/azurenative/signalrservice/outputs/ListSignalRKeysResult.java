@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.signalrservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListSignalRKeysResult {
     /**
      * SignalR connection string constructed via the primaryKey
@@ -32,12 +32,12 @@ public final class ListSignalRKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSignalRKeysResult(
-        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
+        @CustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryConnectionString = primaryConnectionString;
         this.primaryKey = primaryKey;
         this.secondaryConnectionString = secondaryConnectionString;

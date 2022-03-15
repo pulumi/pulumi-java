@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.eventarc_v1beta1.TriggerArgs;
@@ -26,7 +26,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Destination specifies where the events should be sent to.
      * 
      */
-    @OutputExport(name="destination", type=DestinationResponse.class, parameters={})
+    @Export(name="destination", type=DestinationResponse.class, parameters={})
     private Output<DestinationResponse> destination;
 
     /**
@@ -54,7 +54,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * This checksum is computed by the server based on the value of other fields, and may be sent only on create requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -68,7 +68,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Optional. User labels attached to the triggers that can be used to group resources.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -82,7 +82,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * null The criteria by which events are filtered. Only events that match with this criteria will be sent to the destination.
      * 
      */
-    @OutputExport(name="matchingCriteria", type=List.class, parameters={MatchingCriteriaResponse.class})
+    @Export(name="matchingCriteria", type=List.class, parameters={MatchingCriteriaResponse.class})
     private Output<List<MatchingCriteriaResponse>> matchingCriteria;
 
     /**
@@ -96,7 +96,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The resource name of the trigger. Must be unique within the location on the project and must in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have 'eventarc.events.receiveAuditLogV1Written' permission.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -124,7 +124,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * In order to deliver messages, Eventarc may use other GCP products as transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
      */
-    @OutputExport(name="transport", type=TransportResponse.class, parameters={})
+    @Export(name="transport", type=TransportResponse.class, parameters={})
     private Output<TransportResponse> transport;
 
     /**
@@ -138,7 +138,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The last-modified time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

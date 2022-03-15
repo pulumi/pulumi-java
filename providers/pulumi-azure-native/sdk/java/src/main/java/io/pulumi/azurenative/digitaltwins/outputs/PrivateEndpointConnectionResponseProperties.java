@@ -5,14 +5,14 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.ConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.digitaltwins.outputs.ConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionResponseProperties {
     /**
      * The list of group ids for the private endpoint connection.
@@ -27,12 +27,12 @@ public final class PrivateEndpointConnectionResponseProperties {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionResponseProperties(
-        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @CustomType.Parameter("privateEndpoint") @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.groupIds = groupIds;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;

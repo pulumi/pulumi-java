@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudStorageLinkedServiceResponse {
     /**
      * The access key identifier of the Google Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
@@ -66,17 +66,17 @@ public final class GoogleCloudStorageLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudStorageLinkedServiceResponse(
-        @OutputCustomType.Parameter("accessKeyId") @Nullable Object accessKeyId,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("secretAccessKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey,
-        @OutputCustomType.Parameter("serviceUrl") @Nullable Object serviceUrl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessKeyId") @Nullable Object accessKeyId,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("secretAccessKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey,
+        @CustomType.Parameter("serviceUrl") @Nullable Object serviceUrl,
+        @CustomType.Parameter("type") String type) {
         this.accessKeyId = accessKeyId;
         this.annotations = annotations;
         this.connectVia = connectVia;

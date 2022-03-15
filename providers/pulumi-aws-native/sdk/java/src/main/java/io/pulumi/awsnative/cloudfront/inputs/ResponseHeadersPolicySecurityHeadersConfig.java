@@ -9,7 +9,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyFrameOptions;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyReferrerPolicy;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyStrictTransportSecurity;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyXSSProtection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,42 +19,42 @@ public final class ResponseHeadersPolicySecurityHeadersConfig extends io.pulumi.
 
     public static final ResponseHeadersPolicySecurityHeadersConfig Empty = new ResponseHeadersPolicySecurityHeadersConfig();
 
-    @InputImport(name="contentSecurityPolicy")
+    @Import(name="contentSecurityPolicy")
       private final @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy;
 
     public Optional<ResponseHeadersPolicyContentSecurityPolicy> getContentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Optional.empty() : Optional.ofNullable(this.contentSecurityPolicy);
     }
 
-    @InputImport(name="contentTypeOptions")
+    @Import(name="contentTypeOptions")
       private final @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions;
 
     public Optional<ResponseHeadersPolicyContentTypeOptions> getContentTypeOptions() {
         return this.contentTypeOptions == null ? Optional.empty() : Optional.ofNullable(this.contentTypeOptions);
     }
 
-    @InputImport(name="frameOptions")
+    @Import(name="frameOptions")
       private final @Nullable ResponseHeadersPolicyFrameOptions frameOptions;
 
     public Optional<ResponseHeadersPolicyFrameOptions> getFrameOptions() {
         return this.frameOptions == null ? Optional.empty() : Optional.ofNullable(this.frameOptions);
     }
 
-    @InputImport(name="referrerPolicy")
+    @Import(name="referrerPolicy")
       private final @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy;
 
     public Optional<ResponseHeadersPolicyReferrerPolicy> getReferrerPolicy() {
         return this.referrerPolicy == null ? Optional.empty() : Optional.ofNullable(this.referrerPolicy);
     }
 
-    @InputImport(name="strictTransportSecurity")
+    @Import(name="strictTransportSecurity")
       private final @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
 
     public Optional<ResponseHeadersPolicyStrictTransportSecurity> getStrictTransportSecurity() {
         return this.strictTransportSecurity == null ? Optional.empty() : Optional.ofNullable(this.strictTransportSecurity);
     }
 
-    @InputImport(name="xSSProtection")
+    @Import(name="xSSProtection")
       private final @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
 
     public Optional<ResponseHeadersPolicyXSSProtection> getXSSProtection() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.LimitResponse;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LimitedPriorityLevelConfiguration {
     /**
      * `assuredConcurrencyShares` (ACS) configures the execution limit, which is a limit on the number of requests of this priority level that may be exeucting at a given time.  ACS must be a positive number. The server's concurrency limit (SCL) is divided among the concurrency-controlled priority levels in proportion to their assured concurrency shares. This produces the assured concurrency value (ACV) --- the number of requests that may be executing at a time --- for each such priority level:
@@ -27,10 +27,10 @@ public final class LimitedPriorityLevelConfiguration {
      */
     private final @Nullable LimitResponse limitResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LimitedPriorityLevelConfiguration(
-        @OutputCustomType.Parameter("assuredConcurrencyShares") @Nullable Integer assuredConcurrencyShares,
-        @OutputCustomType.Parameter("limitResponse") @Nullable LimitResponse limitResponse) {
+        @CustomType.Parameter("assuredConcurrencyShares") @Nullable Integer assuredConcurrencyShares,
+        @CustomType.Parameter("limitResponse") @Nullable LimitResponse limitResponse) {
         this.assuredConcurrencyShares = assuredConcurrencyShares;
         this.limitResponse = limitResponse;
     }

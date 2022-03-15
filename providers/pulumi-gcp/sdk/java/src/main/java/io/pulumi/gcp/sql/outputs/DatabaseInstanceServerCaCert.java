@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceServerCaCert {
     private final @Nullable String cert;
     private final @Nullable String commonName;
@@ -22,13 +22,13 @@ public final class DatabaseInstanceServerCaCert {
     private final @Nullable String expirationTime;
     private final @Nullable String sha1Fingerprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceServerCaCert(
-        @OutputCustomType.Parameter("cert") @Nullable String cert,
-        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
-        @OutputCustomType.Parameter("sha1Fingerprint") @Nullable String sha1Fingerprint) {
+        @CustomType.Parameter("cert") @Nullable String cert,
+        @CustomType.Parameter("commonName") @Nullable String commonName,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @CustomType.Parameter("sha1Fingerprint") @Nullable String sha1Fingerprint) {
         this.cert = cert;
         this.commonName = commonName;
         this.createTime = createTime;

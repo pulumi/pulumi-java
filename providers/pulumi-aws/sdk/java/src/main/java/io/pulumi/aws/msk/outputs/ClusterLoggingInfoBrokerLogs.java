@@ -6,22 +6,22 @@ package io.pulumi.aws.msk.outputs;
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogsCloudwatchLogs;
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogsFirehose;
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogsS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLoggingInfoBrokerLogs {
     private final @Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs;
     private final @Nullable ClusterLoggingInfoBrokerLogsFirehose firehose;
     private final @Nullable ClusterLoggingInfoBrokerLogsS3 s3;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterLoggingInfoBrokerLogs(
-        @OutputCustomType.Parameter("cloudwatchLogs") @Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs,
-        @OutputCustomType.Parameter("firehose") @Nullable ClusterLoggingInfoBrokerLogsFirehose firehose,
-        @OutputCustomType.Parameter("s3") @Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
+        @CustomType.Parameter("cloudwatchLogs") @Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs,
+        @CustomType.Parameter("firehose") @Nullable ClusterLoggingInfoBrokerLogsFirehose firehose,
+        @CustomType.Parameter("s3") @Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
         this.cloudwatchLogs = cloudwatchLogs;
         this.firehose = firehose;
         this.s3 = s3;

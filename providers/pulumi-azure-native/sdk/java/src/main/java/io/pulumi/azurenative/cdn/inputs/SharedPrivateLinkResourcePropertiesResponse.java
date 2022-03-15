@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * The group id from the provider of resource the shared private link resource is for.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
@@ -34,7 +34,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * The resource id of the resource the shared private link resource is for.
      * 
      */
-    @InputImport(name="privateLink")
+    @Import(name="privateLink")
       private final @Nullable ResourceReferenceResponse privateLink;
 
     public Optional<ResourceReferenceResponse> getPrivateLink() {
@@ -45,7 +45,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * The location of the shared private link resource
      * 
      */
-    @InputImport(name="privateLinkLocation")
+    @Import(name="privateLinkLocation")
       private final @Nullable String privateLinkLocation;
 
     public Optional<String> getPrivateLinkLocation() {
@@ -56,7 +56,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * The request message for requesting approval of the shared private link resource.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {
@@ -67,7 +67,7 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends io.pulumi
      * Status of the shared private link resource. Can be Pending, Approved, Rejected, Disconnected, or Timeout.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.sagemaker.enums.AppType;
 import io.pulumi.awsnative.sagemaker.outputs.AppResourceSpec;
 import io.pulumi.awsnative.sagemaker.outputs.AppTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the app.
      * 
      */
-    @OutputExport(name="appArn", type=String.class, parameters={})
+    @Export(name="appArn", type=String.class, parameters={})
     private Output<String> appArn;
 
     /**
@@ -39,7 +39,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The name of the app.
      * 
      */
-    @OutputExport(name="appName", type=String.class, parameters={})
+    @Export(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
     /**
@@ -53,7 +53,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The type of app.
      * 
      */
-    @OutputExport(name="appType", type=AppType.class, parameters={})
+    @Export(name="appType", type=AppType.class, parameters={})
     private Output<AppType> appType;
 
     /**
@@ -67,7 +67,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The domain ID.
      * 
      */
-    @OutputExport(name="domainId", type=String.class, parameters={})
+    @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
@@ -81,7 +81,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
      */
-    @OutputExport(name="resourceSpec", type=AppResourceSpec.class, parameters={})
+    @Export(name="resourceSpec", type=AppResourceSpec.class, parameters={})
     private Output</* @Nullable */ AppResourceSpec> resourceSpec;
 
     /**
@@ -95,7 +95,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * A list of tags to apply to the app.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AppTag.class})
+    @Export(name="tags", type=List.class, parameters={AppTag.class})
     private Output</* @Nullable */ List<AppTag>> tags;
 
     /**
@@ -109,7 +109,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The user profile name.
      * 
      */
-    @OutputExport(name="userProfileName", type=String.class, parameters={})
+    @Export(name="userProfileName", type=String.class, parameters={})
     private Output<String> userProfileName;
 
     /**

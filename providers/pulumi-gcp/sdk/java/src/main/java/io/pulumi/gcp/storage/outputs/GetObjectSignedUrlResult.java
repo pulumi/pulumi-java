@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetObjectSignedUrlResult {
     private final String bucket;
     private final @Nullable String contentMd5;
@@ -31,18 +31,18 @@ public final class GetObjectSignedUrlResult {
      */
     private final String signedUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetObjectSignedUrlResult(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("contentMd5") @Nullable String contentMd5,
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
-        @OutputCustomType.Parameter("duration") @Nullable String duration,
-        @OutputCustomType.Parameter("extensionHeaders") @Nullable Map<String,String> extensionHeaders,
-        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("signedUrl") String signedUrl) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("contentMd5") @Nullable String contentMd5,
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("credentials") @Nullable String credentials,
+        @CustomType.Parameter("duration") @Nullable String duration,
+        @CustomType.Parameter("extensionHeaders") @Nullable Map<String,String> extensionHeaders,
+        @CustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("signedUrl") String signedUrl) {
         this.bucket = bucket;
         this.contentMd5 = contentMd5;
         this.contentType = contentType;

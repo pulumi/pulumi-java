@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ContainerMountVolumeOptionsLabel;
 import java.lang.Boolean;
 import java.lang.String;
@@ -13,19 +13,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerMountVolumeOptions {
     private final @Nullable String driverName;
     private final @Nullable Map<String,String> driverOptions;
     private final @Nullable List<ContainerMountVolumeOptionsLabel> labels;
     private final @Nullable Boolean noCopy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerMountVolumeOptions(
-        @OutputCustomType.Parameter("driverName") @Nullable String driverName,
-        @OutputCustomType.Parameter("driverOptions") @Nullable Map<String,String> driverOptions,
-        @OutputCustomType.Parameter("labels") @Nullable List<ContainerMountVolumeOptionsLabel> labels,
-        @OutputCustomType.Parameter("noCopy") @Nullable Boolean noCopy) {
+        @CustomType.Parameter("driverName") @Nullable String driverName,
+        @CustomType.Parameter("driverOptions") @Nullable Map<String,String> driverOptions,
+        @CustomType.Parameter("labels") @Nullable List<ContainerMountVolumeOptionsLabel> labels,
+        @CustomType.Parameter("noCopy") @Nullable Boolean noCopy) {
         this.driverName = driverName;
         this.driverOptions = driverOptions;
         this.labels = labels;

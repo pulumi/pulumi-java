@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetBackendServiceIap extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackendServiceIap Empty = new GetBackendServiceIap();
 
-    @InputImport(name="oauth2ClientId", required=true)
+    @Import(name="oauth2ClientId", required=true)
       private final String oauth2ClientId;
 
     public String getOauth2ClientId() {
         return this.oauth2ClientId;
     }
 
-    @InputImport(name="oauth2ClientSecret", required=true)
+    @Import(name="oauth2ClientSecret", required=true)
       private final String oauth2ClientSecret;
 
     public String getOauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
-    @InputImport(name="oauth2ClientSecretSha256", required=true)
+    @Import(name="oauth2ClientSecretSha256", required=true)
       private final String oauth2ClientSecretSha256;
 
     public String getOauth2ClientSecretSha256() {

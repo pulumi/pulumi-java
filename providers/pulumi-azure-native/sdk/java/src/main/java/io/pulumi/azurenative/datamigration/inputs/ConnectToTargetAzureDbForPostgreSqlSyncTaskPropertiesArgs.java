@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
      * Task input
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> input;
 
     public Output<ConnectToTargetAzureDbForPostgreSqlSyncTaskInputArgs> getInput() {
@@ -35,7 +35,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskPropertiesArgs ext
      * Expected value is 'ConnectToTarget.AzureDbForPostgreSql.Sync'.
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
     public Output<String> getTaskType() {

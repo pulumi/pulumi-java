@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataCredentialsFromPluginResponse {
     /**
      * Plugin name.
@@ -20,10 +20,10 @@ public final class MetadataCredentialsFromPluginResponse {
      */
     private final String structConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataCredentialsFromPluginResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("structConfig") String structConfig) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("structConfig") String structConfig) {
         this.name = name;
         this.structConfig = structConfig;
     }

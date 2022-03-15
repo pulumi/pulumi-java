@@ -5,21 +5,21 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetTagSpecification {
     private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
     private final @Nullable List<SpotFleetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetTagSpecification(
-        @OutputCustomType.Parameter("resourceType") @Nullable SpotFleetTagSpecificationResourceType resourceType,
-        @OutputCustomType.Parameter("tags") @Nullable List<SpotFleetTag> tags) {
+        @CustomType.Parameter("resourceType") @Nullable SpotFleetTagSpecificationResourceType resourceType,
+        @CustomType.Parameter("tags") @Nullable List<SpotFleetTag> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

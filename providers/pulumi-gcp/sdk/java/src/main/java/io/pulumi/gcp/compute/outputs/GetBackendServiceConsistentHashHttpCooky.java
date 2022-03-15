@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceConsistentHashHttpCookyTtl;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceConsistentHashHttpCooky {
     /**
      * The name of the Backend Service.
@@ -19,11 +19,11 @@ public final class GetBackendServiceConsistentHashHttpCooky {
     private final String path;
     private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceConsistentHashHttpCooky(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("ttls") List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("ttls") List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
         this.name = name;
         this.path = path;
         this.ttls = ttls;

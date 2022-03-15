@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class JsonFieldResponse extends io.pulumi.resources.InvokeArgs {
      * Name of a field in the input event schema that's to be used as the source of a mapping.
      * 
      */
-    @InputImport(name="sourceField")
+    @Import(name="sourceField")
       private final @Nullable String sourceField;
 
     public Optional<String> getSourceField() {

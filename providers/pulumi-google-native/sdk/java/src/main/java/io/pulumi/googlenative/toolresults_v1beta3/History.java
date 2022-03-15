@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.HistoryArgs;
@@ -23,7 +23,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -37,7 +37,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
      * 
      */
-    @OutputExport(name="historyId", type=String.class, parameters={})
+    @Export(name="historyId", type=String.class, parameters={})
     private Output<String> historyId;
 
     /**
@@ -51,7 +51,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
      * 
      */
-    @OutputExport(name="testPlatform", type=String.class, parameters={})
+    @Export(name="testPlatform", type=String.class, parameters={})
     private Output<String> testPlatform;
 
     /**

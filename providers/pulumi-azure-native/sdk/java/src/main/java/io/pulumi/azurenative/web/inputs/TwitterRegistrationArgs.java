@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    @InputImport(name="consumerKey")
+    @Import(name="consumerKey")
       private final @Nullable Output<String> consumerKey;
 
     public Output<String> getConsumerKey() {
@@ -36,7 +36,7 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * application used for sign-in.
      * 
      */
-    @InputImport(name="consumerSecretSettingName")
+    @Import(name="consumerSecretSettingName")
       private final @Nullable Output<String> consumerSecretSettingName;
 
     public Output<String> getConsumerSecretSettingName() {

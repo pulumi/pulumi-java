@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
      * A lower-bound estimate of the number of bytes currently in the streaming buffer.
      * 
      */
-    @InputImport(name="estimatedBytes", required=true)
+    @Import(name="estimatedBytes", required=true)
       private final String estimatedBytes;
 
     public String getEstimatedBytes() {
@@ -27,7 +27,7 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
      * A lower-bound estimate of the number of rows currently in the streaming buffer.
      * 
      */
-    @InputImport(name="estimatedRows", required=true)
+    @Import(name="estimatedRows", required=true)
       private final String estimatedRows;
 
     public String getEstimatedRows() {
@@ -38,7 +38,7 @@ public final class StreamingbufferResponse extends io.pulumi.resources.InvokeArg
      * Contains the timestamp of the oldest entry in the streaming buffer, in milliseconds since the epoch, if the streaming buffer is available.
      * 
      */
-    @InputImport(name="oldestEntryTime", required=true)
+    @Import(name="oldestEntryTime", required=true)
       private final String oldestEntryTime;
 
     public String getOldestEntryTime() {

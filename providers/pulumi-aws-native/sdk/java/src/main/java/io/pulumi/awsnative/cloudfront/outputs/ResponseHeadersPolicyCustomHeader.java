@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyCustomHeader {
     private final String header;
     private final Boolean override;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyCustomHeader(
-        @OutputCustomType.Parameter("header") String header,
-        @OutputCustomType.Parameter("override") Boolean override,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("header") String header,
+        @CustomType.Parameter("override") Boolean override,
+        @CustomType.Parameter("value") String value) {
         this.header = header;
         this.override = override;
         this.value = value;

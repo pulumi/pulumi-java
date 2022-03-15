@@ -15,7 +15,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementSiz
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementXssMatchStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +28,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
      * 
      */
-    @InputImport(name="andStatement")
+    @Import(name="andStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementAndStatementArgs> andStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementAndStatementArgs> getAndStatement() {
@@ -39,7 +39,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
      * 
      */
-    @InputImport(name="byteMatchStatement")
+    @Import(name="byteMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs> byteMatchStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementByteMatchStatementArgs> getByteMatchStatement() {
@@ -50,7 +50,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
      * 
      */
-    @InputImport(name="geoMatchStatement")
+    @Import(name="geoMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementGeoMatchStatementArgs> geoMatchStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementGeoMatchStatementArgs> getGeoMatchStatement() {
@@ -61,7 +61,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
      * 
      */
-    @InputImport(name="ipSetReferenceStatement")
+    @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementIpSetReferenceStatementArgs> getIpSetReferenceStatement() {
@@ -72,7 +72,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
      * 
      */
-    @InputImport(name="labelMatchStatement")
+    @Import(name="labelMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementLabelMatchStatementArgs> labelMatchStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementLabelMatchStatementArgs> getLabelMatchStatement() {
@@ -83,7 +83,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A logical rule statement used to negate the results of another rule statement. See NOT Statement below for details.
      * 
      */
-    @InputImport(name="notStatement")
+    @Import(name="notStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementNotStatementArgs> notStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementNotStatementArgs> getNotStatement() {
@@ -94,7 +94,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A logical rule statement used to combine other rule statements with OR logic. See OR Statement below for details.
      * 
      */
-    @InputImport(name="orStatement")
+    @Import(name="orStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementOrStatementArgs> orStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementOrStatementArgs> getOrStatement() {
@@ -105,7 +105,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
      * 
      */
-    @InputImport(name="regexPatternSetReferenceStatement")
+    @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
@@ -116,7 +116,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
      * 
      */
-    @InputImport(name="sizeConstraintStatement")
+    @Import(name="sizeConstraintStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementSizeConstraintStatementArgs> getSizeConstraintStatement() {
@@ -127,7 +127,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
      * 
      */
-    @InputImport(name="sqliMatchStatement")
+    @Import(name="sqliMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs> sqliMatchStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs> getSqliMatchStatement() {
@@ -138,7 +138,7 @@ public final class RuleGroupRuleStatementAndStatementStatementArgs extends io.pu
      * A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
      * 
      */
-    @InputImport(name="xssMatchStatement")
+    @Import(name="xssMatchStatement")
       private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementArgs> xssMatchStatement;
 
     public Output<RuleGroupRuleStatementAndStatementStatementXssMatchStatementArgs> getXssMatchStatement() {

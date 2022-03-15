@@ -15,12 +15,12 @@ import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSlackConnectorProfile
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSnowflakeConnectorProfileProperties;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileVeevaConnectorProfileProperties;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileZendeskConnectorProfileProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileProperties {
     private final @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog;
     private final @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace;
@@ -35,20 +35,20 @@ public final class ConnectorProfileProperties {
     private final @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva;
     private final @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileProperties(
-        @OutputCustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog,
-        @OutputCustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace,
-        @OutputCustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus,
-        @OutputCustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileProperties marketo,
-        @OutputCustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift,
-        @OutputCustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData,
-        @OutputCustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce,
-        @OutputCustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow,
-        @OutputCustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileProperties slack,
-        @OutputCustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake,
-        @OutputCustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva,
-        @OutputCustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
+        @CustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog,
+        @CustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace,
+        @CustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus,
+        @CustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileProperties marketo,
+        @CustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift,
+        @CustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData,
+        @CustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce,
+        @CustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow,
+        @CustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileProperties slack,
+        @CustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake,
+        @CustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva,
+        @CustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
         this.datadog = datadog;
         this.dynatrace = dynatrace;
         this.inforNexus = inforNexus;

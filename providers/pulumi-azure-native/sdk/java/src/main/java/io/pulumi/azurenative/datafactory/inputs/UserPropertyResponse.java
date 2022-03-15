@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * User property name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class UserPropertyResponse extends io.pulumi.resources.InvokeArgs {
      * User property value. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Object value;
 
     public Object getValue() {

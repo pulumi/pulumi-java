@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse;
@@ -27,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * The unique identifier of the annotation. Format: projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
      * 
      */
-    @InputImport(name="annotationId", required=true)
+    @Import(name="annotationId", required=true)
       private final String annotationId;
 
     public String getAnnotationId() {
@@ -38,7 +38,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * The feedback that the customer has about the answer in `data`.
      * 
      */
-    @InputImport(name="answerFeedback", required=true)
+    @Import(name="answerFeedback", required=true)
       private final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
 
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse getAnswerFeedback() {
@@ -49,7 +49,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * Agent Assist Article Suggestion data.
      * 
      */
-    @InputImport(name="articleSuggestion", required=true)
+    @Import(name="articleSuggestion", required=true)
       private final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
 
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse getArticleSuggestion() {
@@ -60,7 +60,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * The time at which this annotation was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -71,7 +71,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * Dialogflow interaction data.
      * 
      */
-    @InputImport(name="dialogflowInteraction", required=true)
+    @Import(name="dialogflowInteraction", required=true)
       private final GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
 
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse getDialogflowInteraction() {
@@ -82,7 +82,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * The boundary in the conversation where the annotation ends, inclusive.
      * 
      */
-    @InputImport(name="endBoundary", required=true)
+    @Import(name="endBoundary", required=true)
       private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getEndBoundary() {
@@ -93,7 +93,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * Agent Assist FAQ answer data.
      * 
      */
-    @InputImport(name="faqAnswer", required=true)
+    @Import(name="faqAnswer", required=true)
       private final GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
 
     public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse getFaqAnswer() {
@@ -104,7 +104,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * Agent Assist Smart Compose suggestion data.
      * 
      */
-    @InputImport(name="smartComposeSuggestion", required=true)
+    @Import(name="smartComposeSuggestion", required=true)
       private final GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
 
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse getSmartComposeSuggestion() {
@@ -115,7 +115,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * Agent Assist Smart Reply data.
      * 
      */
-    @InputImport(name="smartReply", required=true)
+    @Import(name="smartReply", required=true)
       private final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
 
     public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse getSmartReply() {
@@ -126,7 +126,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * The boundary in the conversation where the annotation starts, inclusive.
      * 
      */
-    @InputImport(name="startBoundary", required=true)
+    @Import(name="startBoundary", required=true)
       private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getStartBoundary() {

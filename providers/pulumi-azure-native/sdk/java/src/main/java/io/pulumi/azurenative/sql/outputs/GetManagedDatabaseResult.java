@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedDatabaseResult {
     /**
      * Collation of the metadata catalog.
@@ -73,20 +73,20 @@ public final class GetManagedDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedDatabaseResult(
-        @OutputCustomType.Parameter("catalogCollation") @Nullable String catalogCollation,
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("defaultSecondaryLocation") String defaultSecondaryLocation,
-        @OutputCustomType.Parameter("earliestRestorePoint") String earliestRestorePoint,
-        @OutputCustomType.Parameter("failoverGroupId") String failoverGroupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("catalogCollation") @Nullable String catalogCollation,
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("defaultSecondaryLocation") String defaultSecondaryLocation,
+        @CustomType.Parameter("earliestRestorePoint") String earliestRestorePoint,
+        @CustomType.Parameter("failoverGroupId") String failoverGroupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.catalogCollation = catalogCollation;
         this.collation = collation;
         this.creationDate = creationDate;

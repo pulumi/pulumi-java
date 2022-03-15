@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.enums.WorkGroupEncryptionOption;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class WorkGroupEncryptionConfiguration extends io.pulumi.resources.
 
     public static final WorkGroupEncryptionConfiguration Empty = new WorkGroupEncryptionConfiguration();
 
-    @InputImport(name="encryptionOption", required=true)
+    @Import(name="encryptionOption", required=true)
       private final WorkGroupEncryptionOption encryptionOption;
 
     public WorkGroupEncryptionOption getEncryptionOption() {
         return this.encryptionOption;
     }
 
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable String kmsKey;
 
     public Optional<String> getKmsKey() {

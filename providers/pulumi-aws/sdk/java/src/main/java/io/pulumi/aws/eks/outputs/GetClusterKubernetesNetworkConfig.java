@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterKubernetesNetworkConfig {
     private final String ipFamily;
     /**
@@ -16,10 +16,10 @@ public final class GetClusterKubernetesNetworkConfig {
      */
     private final String serviceIpv4Cidr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterKubernetesNetworkConfig(
-        @OutputCustomType.Parameter("ipFamily") String ipFamily,
-        @OutputCustomType.Parameter("serviceIpv4Cidr") String serviceIpv4Cidr) {
+        @CustomType.Parameter("ipFamily") String ipFamily,
+        @CustomType.Parameter("serviceIpv4Cidr") String serviceIpv4Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }

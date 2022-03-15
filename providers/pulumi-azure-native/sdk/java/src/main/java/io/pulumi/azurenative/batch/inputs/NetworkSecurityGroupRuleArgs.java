@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.NetworkSecurityGroupRuleAccess;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
 
     public static final NetworkSecurityGroupRuleArgs Empty = new NetworkSecurityGroupRuleArgs();
 
-    @InputImport(name="access", required=true)
+    @Import(name="access", required=true)
       private final Output<NetworkSecurityGroupRuleAccess> access;
 
     public Output<NetworkSecurityGroupRuleAccess> getAccess() {
@@ -28,7 +28,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * Priorities within a pool must be unique and are evaluated in order of priority. The lower the number the higher the priority. For example, rules could be specified with order numbers of 150, 250, and 350. The rule with the order number of 150 takes precedence over the rule that has an order of 250. Allowed priorities are 150 to 4096. If any reserved or duplicate values are provided the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -39,7 +39,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * Valid values are a single IP address (i.e. 10.10.10.10), IP subnet (i.e. 192.168.1.0/24), default tag, or * (for all addresses).  If any other values are provided the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="sourceAddressPrefix", required=true)
+    @Import(name="sourceAddressPrefix", required=true)
       private final Output<String> sourceAddressPrefix;
 
     public Output<String> getSourceAddressPrefix() {
@@ -50,7 +50,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
      * Valid values are '*' (for all ports 0 - 65535) or arrays of ports or port ranges (i.e. 100-200). The ports should in the range of 0 to 65535 and the port ranges or ports can't overlap. If any other values are provided the request fails with HTTP status code 400. Default value will be *.
      * 
      */
-    @InputImport(name="sourcePortRanges")
+    @Import(name="sourcePortRanges")
       private final @Nullable Output<List<String>> sourcePortRanges;
 
     public Output<List<String>> getSourcePortRanges() {

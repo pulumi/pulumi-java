@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * Specification for the BigQuery connection to a Cloud SQL instance.
      * 
      */
-    @InputImport(name="cloudSql", required=true)
+    @Import(name="cloudSql", required=true)
       private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
 
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse getCloudSql() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * The type of the BigQuery connection.
      * 
      */
-    @InputImport(name="connectionType", required=true)
+    @Import(name="connectionType", required=true)
       private final String connectionType;
 
     public String getConnectionType() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * True if there are credentials attached to the BigQuery connection; false otherwise.
      * 
      */
-    @InputImport(name="hasCredential", required=true)
+    @Import(name="hasCredential", required=true)
       private final Boolean hasCredential;
 
     public Boolean getHasCredential() {

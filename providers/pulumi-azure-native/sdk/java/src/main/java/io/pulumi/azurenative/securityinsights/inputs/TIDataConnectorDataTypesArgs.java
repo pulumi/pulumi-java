@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.TIDataConnectorDataTypesIndicatorsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class TIDataConnectorDataTypesArgs extends io.pulumi.resources.Reso
      * Data type for indicators connection.
      * 
      */
-    @InputImport(name="indicators")
+    @Import(name="indicators")
       private final @Nullable Output<TIDataConnectorDataTypesIndicatorsArgs> indicators;
 
     public Output<TIDataConnectorDataTypesIndicatorsArgs> getIndicators() {

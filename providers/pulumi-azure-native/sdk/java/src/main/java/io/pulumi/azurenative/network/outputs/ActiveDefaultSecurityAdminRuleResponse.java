@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.outputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.outputs.NetworkManagerSecurityGroupItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActiveDefaultSecurityAdminRuleResponse {
     /**
      * Indicates the access allowed for this particular rule
@@ -128,30 +128,30 @@ public final class ActiveDefaultSecurityAdminRuleResponse {
      */
     private final List<AddressPrefixItemResponse> sources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActiveDefaultSecurityAdminRuleResponse(
-        @OutputCustomType.Parameter("access") String access,
-        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
-        @OutputCustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
-        @OutputCustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
-        @OutputCustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("flag") @Nullable String flag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @OutputCustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
-        @OutputCustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
-        @OutputCustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        @OutputCustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
-        @OutputCustomType.Parameter("sources") List<AddressPrefixItemResponse> sources) {
+        @CustomType.Parameter("access") String access,
+        @CustomType.Parameter("commitTime") @Nullable String commitTime,
+        @CustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
+        @CustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
+        @CustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("flag") @Nullable String flag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
+        @CustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
+        @CustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
+        @CustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
+        @CustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
+        @CustomType.Parameter("sources") List<AddressPrefixItemResponse> sources) {
         this.access = access;
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;

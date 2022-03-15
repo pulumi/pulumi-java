@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firestore_v1beta2.IndexArgs;
@@ -24,7 +24,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={GoogleFirestoreAdminV1beta2IndexFieldResponse.class})
+    @Export(name="fields", type=List.class, parameters={GoogleFirestoreAdminV1beta2IndexFieldResponse.class})
     private Output<List<GoogleFirestoreAdminV1beta2IndexFieldResponse>> fields;
 
     /**
@@ -38,7 +38,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * A server defined name for this index. The form of this name for composite indexes will be: `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexes/{composite_index_id}` For single field indexes, this field will be empty.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -52,7 +52,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.
      * 
      */
-    @OutputExport(name="queryScope", type=String.class, parameters={})
+    @Export(name="queryScope", type=String.class, parameters={})
     private Output<String> queryScope;
 
     /**
@@ -66,7 +66,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The serving state of the index.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

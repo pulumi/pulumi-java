@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmProtectedDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
@@ -56,17 +56,17 @@ public final class InMageRcmProtectedDiskDetailsResponse {
      */
     private final String targetManagedDiskId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmProtectedDiskDetailsResponse(
-        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
-        @OutputCustomType.Parameter("diskEncryptionSetId") String diskEncryptionSetId,
-        @OutputCustomType.Parameter("diskId") String diskId,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
-        @OutputCustomType.Parameter("logStorageAccountId") String logStorageAccountId,
-        @OutputCustomType.Parameter("seedManagedDiskId") String seedManagedDiskId,
-        @OutputCustomType.Parameter("targetManagedDiskId") String targetManagedDiskId) {
+        @CustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @CustomType.Parameter("diskEncryptionSetId") String diskEncryptionSetId,
+        @CustomType.Parameter("diskId") String diskId,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("isOSDisk") String isOSDisk,
+        @CustomType.Parameter("logStorageAccountId") String logStorageAccountId,
+        @CustomType.Parameter("seedManagedDiskId") String seedManagedDiskId,
+        @CustomType.Parameter("targetManagedDiskId") String targetManagedDiskId) {
         this.capacityInBytes = capacityInBytes;
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.diskId = diskId;

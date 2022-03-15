@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShareSubscriptionSynchronizationResponse {
     /**
      * Synchronization duration
@@ -46,15 +46,15 @@ public final class ShareSubscriptionSynchronizationResponse {
      */
     private final String synchronizationMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShareSubscriptionSynchronizationResponse(
-        @OutputCustomType.Parameter("durationMs") Integer durationMs,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("synchronizationId") String synchronizationId,
-        @OutputCustomType.Parameter("synchronizationMode") String synchronizationMode) {
+        @CustomType.Parameter("durationMs") Integer durationMs,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("synchronizationId") String synchronizationId,
+        @CustomType.Parameter("synchronizationMode") String synchronizationMode) {
         this.durationMs = durationMs;
         this.endTime = endTime;
         this.message = message;

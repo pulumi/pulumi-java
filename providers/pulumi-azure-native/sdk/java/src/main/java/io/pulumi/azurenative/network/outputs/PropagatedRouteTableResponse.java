@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PropagatedRouteTableResponse {
     /**
      * The list of resource ids of all the RouteTables.
@@ -23,10 +23,10 @@ public final class PropagatedRouteTableResponse {
      */
     private final @Nullable List<String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PropagatedRouteTableResponse(
-        @OutputCustomType.Parameter("ids") @Nullable List<SubResourceResponse> ids,
-        @OutputCustomType.Parameter("labels") @Nullable List<String> labels) {
+        @CustomType.Parameter("ids") @Nullable List<SubResourceResponse> ids,
+        @CustomType.Parameter("labels") @Nullable List<String> labels) {
         this.ids = ids;
         this.labels = labels;
     }

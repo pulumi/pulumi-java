@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SavedDiskArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SourceDiskEncryptionKeyArgs;
@@ -23,7 +23,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    @InputImport(name="guestFlush")
+    @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
     public Output<Boolean> getGuestFlush() {
@@ -45,7 +45,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
      * 
      */
-    @InputImport(name="machineImageEncryptionKey")
+    @Import(name="machineImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> machineImageEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getMachineImageEncryptionKey() {
@@ -56,21 +56,21 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -81,7 +81,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * An array of Machine Image specific properties for disks attached to the source instance
      * 
      */
-    @InputImport(name="savedDisks")
+    @Import(name="savedDisks")
       private final @Nullable Output<List<SavedDiskArgs>> savedDisks;
 
     public Output<List<SavedDiskArgs>> getSavedDisks() {
@@ -92,7 +92,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
      * 
      */
-    @InputImport(name="sourceDiskEncryptionKeys")
+    @Import(name="sourceDiskEncryptionKeys")
       private final @Nullable Output<List<SourceDiskEncryptionKeyArgs>> sourceDiskEncryptionKeys;
 
     public Output<List<SourceDiskEncryptionKeyArgs>> getSourceDiskEncryptionKeys() {
@@ -103,7 +103,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
      * 
      */
-    @InputImport(name="sourceInstance", required=true)
+    @Import(name="sourceInstance", required=true)
       private final Output<String> sourceInstance;
 
     public Output<String> getSourceInstance() {
@@ -114,7 +114,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
      * 
      */
-    @InputImport(name="storageLocations")
+    @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
     public Output<List<String>> getStorageLocations() {

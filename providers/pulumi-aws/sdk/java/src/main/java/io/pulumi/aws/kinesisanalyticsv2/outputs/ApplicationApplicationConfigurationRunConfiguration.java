@@ -5,12 +5,12 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationRunConfiguration {
     /**
      * The restore behavior of a restarting application.
@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
      */
     private final @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationRunConfiguration(
-        @OutputCustomType.Parameter("applicationRestoreConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration,
-        @OutputCustomType.Parameter("flinkRunConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
+        @CustomType.Parameter("applicationRestoreConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration,
+        @CustomType.Parameter("flinkRunConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
         this.applicationRestoreConfiguration = applicationRestoreConfiguration;
         this.flinkRunConfiguration = flinkRunConfiguration;
     }

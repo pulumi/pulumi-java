@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.outputs.LabAnnouncementPropertiesRespons
 import io.pulumi.azurenative.devtestlab.outputs.LabSupportPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The properties of any lab announcement associated with this lab
      * 
      */
-    @OutputExport(name="announcement", type=LabAnnouncementPropertiesResponse.class, parameters={})
+    @Export(name="announcement", type=LabAnnouncementPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LabAnnouncementPropertiesResponse> announcement;
 
     /**
@@ -51,7 +51,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The lab's artifact storage account.
      * 
      */
-    @OutputExport(name="artifactsStorageAccount", type=String.class, parameters={})
+    @Export(name="artifactsStorageAccount", type=String.class, parameters={})
     private Output<String> artifactsStorageAccount;
 
     /**
@@ -65,7 +65,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The creation date of the lab.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -79,7 +79,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The lab's default premium storage account.
      * 
      */
-    @OutputExport(name="defaultPremiumStorageAccount", type=String.class, parameters={})
+    @Export(name="defaultPremiumStorageAccount", type=String.class, parameters={})
     private Output<String> defaultPremiumStorageAccount;
 
     /**
@@ -93,7 +93,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The lab's default storage account.
      * 
      */
-    @OutputExport(name="defaultStorageAccount", type=String.class, parameters={})
+    @Export(name="defaultStorageAccount", type=String.class, parameters={})
     private Output<String> defaultStorageAccount;
 
     /**
@@ -107,7 +107,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The access rights to be granted to the user when provisioning an environment
      * 
      */
-    @OutputExport(name="environmentPermission", type=String.class, parameters={})
+    @Export(name="environmentPermission", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentPermission;
 
     /**
@@ -121,7 +121,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Extended properties of the lab used for experimental features
      * 
      */
-    @OutputExport(name="extendedProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="extendedProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> extendedProperties;
 
     /**
@@ -135,7 +135,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
      */
-    @OutputExport(name="labStorageType", type=String.class, parameters={})
+    @Export(name="labStorageType", type=String.class, parameters={})
     private Output</* @Nullable */ String> labStorageType;
 
     /**
@@ -149,7 +149,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The load balancer used to for lab VMs that use shared IP address.
      * 
      */
-    @OutputExport(name="loadBalancerId", type=String.class, parameters={})
+    @Export(name="loadBalancerId", type=String.class, parameters={})
     private Output<String> loadBalancerId;
 
     /**
@@ -163,7 +163,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -177,7 +177,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    @OutputExport(name="mandatoryArtifactsResourceIdsLinux", type=List.class, parameters={String.class})
+    @Export(name="mandatoryArtifactsResourceIdsLinux", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsLinux;
 
     /**
@@ -191,7 +191,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    @OutputExport(name="mandatoryArtifactsResourceIdsWindows", type=List.class, parameters={String.class})
+    @Export(name="mandatoryArtifactsResourceIdsWindows", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> mandatoryArtifactsResourceIdsWindows;
 
     /**
@@ -205,7 +205,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -219,7 +219,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.
      * 
      */
-    @OutputExport(name="networkSecurityGroupId", type=String.class, parameters={})
+    @Export(name="networkSecurityGroupId", type=String.class, parameters={})
     private Output<String> networkSecurityGroupId;
 
     /**
@@ -233,7 +233,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The lab's premium data disk storage account.
      * 
      */
-    @OutputExport(name="premiumDataDiskStorageAccount", type=String.class, parameters={})
+    @Export(name="premiumDataDiskStorageAccount", type=String.class, parameters={})
     private Output<String> premiumDataDiskStorageAccount;
 
     /**
@@ -249,7 +249,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * When its value is 'Disabled', only creation of standard data disks is allowed.
      * 
      */
-    @OutputExport(name="premiumDataDisks", type=String.class, parameters={})
+    @Export(name="premiumDataDisks", type=String.class, parameters={})
     private Output</* @Nullable */ String> premiumDataDisks;
 
     /**
@@ -265,7 +265,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -279,7 +279,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The public IP address for the lab's load balancer.
      * 
      */
-    @OutputExport(name="publicIpId", type=String.class, parameters={})
+    @Export(name="publicIpId", type=String.class, parameters={})
     private Output<String> publicIpId;
 
     /**
@@ -293,7 +293,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The properties of any lab support message associated with this lab
      * 
      */
-    @OutputExport(name="support", type=LabSupportPropertiesResponse.class, parameters={})
+    @Export(name="support", type=LabSupportPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LabSupportPropertiesResponse> support;
 
     /**
@@ -307,7 +307,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -321,7 +321,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -335,7 +335,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
@@ -349,7 +349,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The lab's Key vault.
      * 
      */
-    @OutputExport(name="vaultName", type=String.class, parameters={})
+    @Export(name="vaultName", type=String.class, parameters={})
     private Output<String> vaultName;
 
     /**
@@ -363,7 +363,7 @@ public class Lab extends io.pulumi.resources.CustomResource {
      * The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.
      * 
      */
-    @OutputExport(name="vmCreationResourceGroup", type=String.class, parameters={})
+    @Export(name="vmCreationResourceGroup", type=String.class, parameters={})
     private Output<String> vmCreationResourceGroup;
 
     /**

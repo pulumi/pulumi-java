@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelingJobInstructionsResponse {
     /**
      * The link to a page with detailed labeling instructions for labelers.
@@ -17,8 +17,8 @@ public final class LabelingJobInstructionsResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
-    private LabelingJobInstructionsResponse(@OutputCustomType.Parameter("uri") @Nullable String uri) {
+    @CustomType.Constructor
+    private LabelingJobInstructionsResponse(@CustomType.Parameter("uri") @Nullable String uri) {
         this.uri = uri;
     }
 

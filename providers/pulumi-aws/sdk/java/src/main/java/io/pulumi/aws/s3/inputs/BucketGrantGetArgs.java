@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
      * Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -30,7 +30,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
      * List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
@@ -41,7 +41,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
      * - Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -52,7 +52,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
      * Uri address to grant for. Used only when `type` is `Group`.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

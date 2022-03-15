@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogDestinationType;
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -18,21 +18,21 @@ public final class LoggingConfigurationLogDestinationConfig extends io.pulumi.re
      * A key-value pair to configure the logDestinations.
      * 
      */
-    @InputImport(name="logDestination", required=true)
+    @Import(name="logDestination", required=true)
       private final Object logDestination;
 
     public Object getLogDestination() {
         return this.logDestination;
     }
 
-    @InputImport(name="logDestinationType", required=true)
+    @Import(name="logDestinationType", required=true)
       private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
 
     public LoggingConfigurationLogDestinationConfigLogDestinationType getLogDestinationType() {
         return this.logDestinationType;
     }
 
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final LoggingConfigurationLogDestinationConfigLogType logType;
 
     public LoggingConfigurationLogDestinationConfigLogType getLogType() {

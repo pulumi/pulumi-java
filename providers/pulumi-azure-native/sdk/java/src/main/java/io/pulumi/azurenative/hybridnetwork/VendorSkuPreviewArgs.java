@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * Preview subscription ID.
      * 
      */
-    @InputImport(name="previewSubscription")
+    @Import(name="previewSubscription")
       private final @Nullable Output<String> previewSubscription;
 
     public Output<String> getPreviewSubscription() {
@@ -29,7 +29,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * The name of the vendor sku.
      * 
      */
-    @InputImport(name="skuName", required=true)
+    @Import(name="skuName", required=true)
       private final Output<String> skuName;
 
     public Output<String> getSkuName() {
@@ -40,7 +40,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
      * The name of the vendor.
      * 
      */
-    @InputImport(name="vendorName", required=true)
+    @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
     public Output<String> getVendorName() {

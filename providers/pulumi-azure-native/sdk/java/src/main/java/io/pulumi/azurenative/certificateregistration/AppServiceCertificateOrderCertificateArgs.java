@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.certificateregistration;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Name of the certificate order.
      * 
      */
-    @InputImport(name="certificateOrderName", required=true)
+    @Import(name="certificateOrderName", required=true)
       private final Output<String> certificateOrderName;
 
     public Output<String> getCertificateOrderName() {
@@ -30,7 +30,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Key Vault resource Id.
      * 
      */
-    @InputImport(name="keyVaultId")
+    @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
     public Output<String> getKeyVaultId() {
@@ -41,7 +41,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Key Vault secret name.
      * 
      */
-    @InputImport(name="keyVaultSecretName")
+    @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
     public Output<String> getKeyVaultSecretName() {
@@ -52,7 +52,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -63,7 +63,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -74,7 +74,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Name of the certificate.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

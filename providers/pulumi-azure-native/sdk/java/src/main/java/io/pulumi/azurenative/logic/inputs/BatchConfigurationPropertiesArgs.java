@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.BatchReleaseCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * The name of the batch group.
      * 
      */
-    @InputImport(name="batchGroupName", required=true)
+    @Import(name="batchGroupName", required=true)
       private final Output<String> batchGroupName;
 
     public Output<String> getBatchGroupName() {
@@ -35,7 +35,7 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * The artifact changed time.
      * 
      */
-    @InputImport(name="changedTime")
+    @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
     public Output<String> getChangedTime() {
@@ -46,14 +46,14 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * The artifact creation time.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
         return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -64,7 +64,7 @@ public final class BatchConfigurationPropertiesArgs extends io.pulumi.resources.
      * The batch release criteria.
      * 
      */
-    @InputImport(name="releaseCriteria", required=true)
+    @Import(name="releaseCriteria", required=true)
       private final Output<BatchReleaseCriteriaArgs> releaseCriteria;
 
     public Output<BatchReleaseCriteriaArgs> getReleaseCriteria() {

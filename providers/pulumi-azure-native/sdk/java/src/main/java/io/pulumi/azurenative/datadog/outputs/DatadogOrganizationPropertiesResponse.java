@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatadogOrganizationPropertiesResponse {
     /**
      * Id of the Datadog organization.
@@ -20,10 +20,10 @@ public final class DatadogOrganizationPropertiesResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatadogOrganizationPropertiesResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.id = id;
         this.name = name;
     }

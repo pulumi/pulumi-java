@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleExistingObjectReplicationArgs exte
      * Whether the existing objects should be replicated. Either `"Enabled"` or `"Disabled"`.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {

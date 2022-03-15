@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.ForwardSshTunnelConnectivityResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.GcsProfileResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlProfileResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionProfileResult {
     /**
      * The create time of the resource.
@@ -72,19 +72,19 @@ public final class GetConnectionProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionProfileResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("forwardSshConnectivity") ForwardSshTunnelConnectivityResponse forwardSshConnectivity,
-        @OutputCustomType.Parameter("gcsProfile") GcsProfileResponse gcsProfile,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mysqlProfile") MysqlProfileResponse mysqlProfile,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("oracleProfile") OracleProfileResponse oracleProfile,
-        @OutputCustomType.Parameter("privateConnectivity") PrivateConnectivityResponse privateConnectivity,
-        @OutputCustomType.Parameter("staticServiceIpConnectivity") StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("forwardSshConnectivity") ForwardSshTunnelConnectivityResponse forwardSshConnectivity,
+        @CustomType.Parameter("gcsProfile") GcsProfileResponse gcsProfile,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mysqlProfile") MysqlProfileResponse mysqlProfile,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("oracleProfile") OracleProfileResponse oracleProfile,
+        @CustomType.Parameter("privateConnectivity") PrivateConnectivityResponse privateConnectivity,
+        @CustomType.Parameter("staticServiceIpConnectivity") StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.forwardSshConnectivity = forwardSshConnectivity;

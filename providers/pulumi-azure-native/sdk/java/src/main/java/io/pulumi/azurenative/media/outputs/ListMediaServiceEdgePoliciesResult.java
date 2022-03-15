@@ -4,17 +4,17 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.EdgeUsageDataCollectionPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListMediaServiceEdgePoliciesResult {
     private final @Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy;
 
-    @OutputCustomType.Constructor
-    private ListMediaServiceEdgePoliciesResult(@OutputCustomType.Parameter("usageDataCollectionPolicy") @Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
+    @CustomType.Constructor
+    private ListMediaServiceEdgePoliciesResult(@CustomType.Parameter("usageDataCollectionPolicy") @Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
         this.usageDataCollectionPolicy = usageDataCollectionPolicy;
     }
 

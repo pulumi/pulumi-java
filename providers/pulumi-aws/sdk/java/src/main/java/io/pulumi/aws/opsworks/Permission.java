@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.opsworks.PermissionArgs;
 import io.pulumi.aws.opsworks.inputs.PermissionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * Whether the user is allowed to use SSH to communicate with the instance
      * 
      */
-    @OutputExport(name="allowSsh", type=Boolean.class, parameters={})
+    @Export(name="allowSsh", type=Boolean.class, parameters={})
     private Output<Boolean> allowSsh;
 
     /**
@@ -39,7 +39,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * Whether the user is allowed to use sudo to elevate privileges
      * 
      */
-    @OutputExport(name="allowSudo", type=Boolean.class, parameters={})
+    @Export(name="allowSudo", type=Boolean.class, parameters={})
     private Output<Boolean> allowSudo;
 
     /**
@@ -53,7 +53,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
      * 
      */
-    @OutputExport(name="level", type=String.class, parameters={})
+    @Export(name="level", type=String.class, parameters={})
     private Output<String> level;
 
     /**
@@ -67,7 +67,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * The stack to set the permissions for
      * 
      */
-    @OutputExport(name="stackId", type=String.class, parameters={})
+    @Export(name="stackId", type=String.class, parameters={})
     private Output<String> stackId;
 
     /**
@@ -81,7 +81,7 @@ public class Permission extends io.pulumi.resources.CustomResource {
      * The user's IAM ARN to set permissions for
      * 
      */
-    @OutputExport(name="userArn", type=String.class, parameters={})
+    @Export(name="userArn", type=String.class, parameters={})
     private Output<String> userArn;
 
     /**

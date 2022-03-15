@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetListenerDefaultActionFixedResponse extends io.pulumi.resou
 
     public static final GetListenerDefaultActionFixedResponse Empty = new GetListenerDefaultActionFixedResponse();
 
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final String contentType;
 
     public String getContentType() {
         return this.contentType;
     }
 
-    @InputImport(name="messageBody", required=true)
+    @Import(name="messageBody", required=true)
       private final String messageBody;
 
     public String getMessageBody() {
         return this.messageBody;
     }
 
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final String statusCode;
 
     public String getStatusCode() {

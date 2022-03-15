@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantOauthIdpConfigArgs;
@@ -45,7 +45,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * The client id of an OAuth client.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -59,7 +59,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * The client secret of the OAuth client, to enable OIDC code flow.
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
     /**
@@ -73,7 +73,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * Human friendly display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -87,7 +87,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * If this config allows users to sign in with the provider.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -101,7 +101,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * For OIDC Idps, the issuer identifier.
      * 
      */
-    @OutputExport(name="issuer", type=String.class, parameters={})
+    @Export(name="issuer", type=String.class, parameters={})
     private Output<String> issuer;
 
     /**
@@ -115,7 +115,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * The name of the OauthIdpConfig. Must start with `oidc.`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -130,7 +130,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -145,7 +145,7 @@ public class TenantOauthIdpConfig extends io.pulumi.resources.CustomResource {
      * The name of the tenant where this OIDC IDP configuration resource exists
      * 
      */
-    @OutputExport(name="tenant", type=String.class, parameters={})
+    @Export(name="tenant", type=String.class, parameters={})
     private Output<String> tenant;
 
     /**

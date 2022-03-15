@@ -6,7 +6,7 @@ package io.pulumi.aws.datasync;
 import io.pulumi.aws.datasync.inputs.NfsLocationMountOptionsArgs;
 import io.pulumi.aws.datasync.inputs.NfsLocationOnPremConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing mount options used by DataSync to access the NFS Server.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<NfsLocationMountOptionsArgs> mountOptions;
 
     public Output<NfsLocationMountOptionsArgs> getMountOptions() {
@@ -32,7 +32,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing information for connecting to the NFS File System.
      * 
      */
-    @InputImport(name="onPremConfig", required=true)
+    @Import(name="onPremConfig", required=true)
       private final Output<NfsLocationOnPremConfigArgs> onPremConfig;
 
     public Output<NfsLocationOnPremConfigArgs> getOnPremConfig() {
@@ -43,7 +43,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the IP address or DNS name of the NFS server. The DataSync Agent(s) use this to mount the NFS server.
      * 
      */
-    @InputImport(name="serverHostname", required=true)
+    @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
     public Output<String> getServerHostname() {
@@ -54,7 +54,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
      * 
      */
-    @InputImport(name="subdirectory", required=true)
+    @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -65,7 +65,7 @@ public final class NfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

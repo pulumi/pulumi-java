@@ -6,14 +6,14 @@ package io.pulumi.azurenative.mixedreality.outputs;
 import io.pulumi.azurenative.mixedreality.outputs.IdentityResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSpatialAnchorsAccountResult {
     /**
      * Correspond domain name of certain Spatial Anchors Account
@@ -81,21 +81,21 @@ public final class GetSpatialAnchorsAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSpatialAnchorsAccountResult(
-        @OutputCustomType.Parameter("accountDomain") String accountDomain,
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("kind") @Nullable SkuResponse kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") @Nullable IdentityResponse plan,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountDomain") String accountDomain,
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("kind") @Nullable SkuResponse kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") @Nullable IdentityResponse plan,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accountDomain = accountDomain;
         this.accountId = accountId;
         this.id = id;

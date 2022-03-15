@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinkedWorkspacePropsResponse {
     /**
      * ResourceId of the link target of the linked workspace.
@@ -22,10 +22,10 @@ public final class LinkedWorkspacePropsResponse {
      */
     private final @Nullable String userAssignedIdentityResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedWorkspacePropsResponse(
-        @OutputCustomType.Parameter("linkedWorkspaceResourceId") @Nullable String linkedWorkspaceResourceId,
-        @OutputCustomType.Parameter("userAssignedIdentityResourceId") @Nullable String userAssignedIdentityResourceId) {
+        @CustomType.Parameter("linkedWorkspaceResourceId") @Nullable String linkedWorkspaceResourceId,
+        @CustomType.Parameter("userAssignedIdentityResourceId") @Nullable String userAssignedIdentityResourceId) {
         this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
         this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
     }

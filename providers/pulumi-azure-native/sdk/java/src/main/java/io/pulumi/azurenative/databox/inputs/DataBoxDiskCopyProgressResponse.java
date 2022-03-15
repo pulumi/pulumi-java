@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * Bytes copied during the copy of disk.
      * 
      */
-    @InputImport(name="bytesCopied", required=true)
+    @Import(name="bytesCopied", required=true)
       private final Double bytesCopied;
 
     public Double getBytesCopied() {
@@ -33,7 +33,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * Indicates the percentage completed for the copy of the disk.
      * 
      */
-    @InputImport(name="percentComplete", required=true)
+    @Import(name="percentComplete", required=true)
       private final Integer percentComplete;
 
     public Integer getPercentComplete() {
@@ -44,7 +44,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * The serial number of the disk
      * 
      */
-    @InputImport(name="serialNumber", required=true)
+    @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
     public String getSerialNumber() {
@@ -55,7 +55,7 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
      * The Status of the copy
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

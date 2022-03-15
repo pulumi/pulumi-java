@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.greengrassv2.ComponentVersionArgs;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaFunctionRecipeSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -19,37 +19,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:greengrassv2:ComponentVersion")
 public class ComponentVersion extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="componentName", type=String.class, parameters={})
+    @Export(name="componentName", type=String.class, parameters={})
     private Output<String> componentName;
 
     public Output<String> getComponentName() {
         return this.componentName;
     }
-    @OutputExport(name="componentVersion", type=String.class, parameters={})
+    @Export(name="componentVersion", type=String.class, parameters={})
     private Output<String> componentVersion;
 
     public Output<String> getComponentVersion() {
         return this.componentVersion;
     }
-    @OutputExport(name="inlineRecipe", type=String.class, parameters={})
+    @Export(name="inlineRecipe", type=String.class, parameters={})
     private Output</* @Nullable */ String> inlineRecipe;
 
     public Output</* @Nullable */ String> getInlineRecipe() {
         return this.inlineRecipe;
     }
-    @OutputExport(name="lambdaFunction", type=ComponentVersionLambdaFunctionRecipeSource.class, parameters={})
+    @Export(name="lambdaFunction", type=ComponentVersionLambdaFunctionRecipeSource.class, parameters={})
     private Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> lambdaFunction;
 
     public Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> getLambdaFunction() {
         return this.lambdaFunction;
     }
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     public Output</* @Nullable */ Object> getTags() {

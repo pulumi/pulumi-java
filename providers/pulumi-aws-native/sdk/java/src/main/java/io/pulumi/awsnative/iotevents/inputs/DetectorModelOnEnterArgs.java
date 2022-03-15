@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DetectorModelOnEnterArgs extends io.pulumi.resources.Resource
      * Specifies the `actions` that are performed when the state is entered and the `condition` is `TRUE`.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
     public Output<List<DetectorModelEventArgs>> getEvents() {

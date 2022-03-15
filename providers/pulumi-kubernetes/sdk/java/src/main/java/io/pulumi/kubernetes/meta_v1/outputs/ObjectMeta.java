@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ManagedFieldsEntry;
 import io.pulumi.kubernetes.meta_v1.outputs.OwnerReference;
 import java.lang.Integer;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectMeta {
     /**
      * Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
@@ -113,24 +113,24 @@ public final class ObjectMeta {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectMeta(
-        @OutputCustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
-        @OutputCustomType.Parameter("clusterName") @Nullable String clusterName,
-        @OutputCustomType.Parameter("creationTimestamp") @Nullable String creationTimestamp,
-        @OutputCustomType.Parameter("deletionGracePeriodSeconds") @Nullable Integer deletionGracePeriodSeconds,
-        @OutputCustomType.Parameter("deletionTimestamp") @Nullable String deletionTimestamp,
-        @OutputCustomType.Parameter("finalizers") @Nullable List<String> finalizers,
-        @OutputCustomType.Parameter("generateName") @Nullable String generateName,
-        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("managedFields") @Nullable List<ManagedFieldsEntry> managedFields,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("ownerReferences") @Nullable List<OwnerReference> ownerReferences,
-        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
-        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
-        @OutputCustomType.Parameter("uid") @Nullable String uid) {
+        @CustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
+        @CustomType.Parameter("clusterName") @Nullable String clusterName,
+        @CustomType.Parameter("creationTimestamp") @Nullable String creationTimestamp,
+        @CustomType.Parameter("deletionGracePeriodSeconds") @Nullable Integer deletionGracePeriodSeconds,
+        @CustomType.Parameter("deletionTimestamp") @Nullable String deletionTimestamp,
+        @CustomType.Parameter("finalizers") @Nullable List<String> finalizers,
+        @CustomType.Parameter("generateName") @Nullable String generateName,
+        @CustomType.Parameter("generation") @Nullable Integer generation,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("managedFields") @Nullable List<ManagedFieldsEntry> managedFields,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("ownerReferences") @Nullable List<OwnerReference> ownerReferences,
+        @CustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @CustomType.Parameter("selfLink") @Nullable String selfLink,
+        @CustomType.Parameter("uid") @Nullable String uid) {
         this.annotations = annotations;
         this.clusterName = clusterName;
         this.creationTimestamp = creationTimestamp;

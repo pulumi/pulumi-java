@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.timeseriesinsights.enums.AccessPolicyRole;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the access policy.
      * 
      */
-    @InputImport(name="accessPolicyName")
+    @Import(name="accessPolicyName")
       private final @Nullable Output<String> accessPolicyName;
 
     public Output<String> getAccessPolicyName() {
@@ -32,7 +32,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * An description of the access policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -54,7 +54,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The objectId of the principal in Azure Active Directory.
      * 
      */
-    @InputImport(name="principalObjectId")
+    @Import(name="principalObjectId")
       private final @Nullable Output<String> principalObjectId;
 
     public Output<String> getPrincipalObjectId() {
@@ -65,7 +65,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The list of roles the principal is assigned on the environment.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<Either<String,AccessPolicyRole>>> roles;
 
     public Output<List<Either<String,AccessPolicyRole>>> getRoles() {

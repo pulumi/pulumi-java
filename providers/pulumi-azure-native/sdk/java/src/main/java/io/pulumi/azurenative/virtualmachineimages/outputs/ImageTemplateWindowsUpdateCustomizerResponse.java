@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateWindowsUpdateCustomizerResponse {
     /**
      * Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.
@@ -40,13 +40,13 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
      */
     private final @Nullable Integer updateLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateWindowsUpdateCustomizerResponse(
-        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("searchCriteria") @Nullable String searchCriteria,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateLimit") @Nullable Integer updateLimit) {
+        @CustomType.Parameter("filters") @Nullable List<String> filters,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("searchCriteria") @Nullable String searchCriteria,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateLimit") @Nullable Integer updateLimit) {
         this.filters = filters;
         this.name = name;
         this.searchCriteria = searchCriteria;

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashPackageS
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashManifestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -28,14 +28,14 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * A list of DASH manifest configurations.
      * 
      */
-    @InputImport(name="dashManifests", required=true)
+    @Import(name="dashManifests", required=true)
       private final Output<List<PackagingConfigurationDashManifestArgs>> dashManifests;
 
     public Output<List<PackagingConfigurationDashManifestArgs>> getDashManifests() {
         return this.dashManifests;
     }
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationDashEncryptionArgs> encryption;
 
     public Output<PackagingConfigurationDashEncryptionArgs> getEncryption() {
@@ -46,7 +46,7 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
      */
-    @InputImport(name="includeEncoderConfigurationInSegments")
+    @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Output<Boolean> includeEncoderConfigurationInSegments;
 
     public Output<Boolean> getIncludeEncoderConfigurationInSegments() {
@@ -57,14 +57,14 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP (DASH) Media Presentation Description (MPD) will be partitioned into multiple periods. If empty, the content will not be partitioned into more than one period. If the list contains "ADS", new periods will be created where the Asset contains SCTE-35 ad markers.
      * 
      */
-    @InputImport(name="periodTriggers")
+    @Import(name="periodTriggers")
       private final @Nullable Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers;
 
     public Output<List<PackagingConfigurationDashPackagePeriodTriggersItem>> getPeriodTriggers() {
         return this.periodTriggers == null ? Output.empty() : this.periodTriggers;
     }
 
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
     public Output<Integer> getSegmentDurationSeconds() {
@@ -75,7 +75,7 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
      * Determines the type of SegmentTemplate included in the Media Presentation Description (MPD). When set to NUMBER_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs. When set to TIME_WITH_TIMELINE, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs. When set to NUMBER_WITH_DURATION, only a duration is included in each SegmentTemplate, with $Number$ media URLs.
      * 
      */
-    @InputImport(name="segmentTemplateFormat")
+    @Import(name="segmentTemplateFormat")
       private final @Nullable Output<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
     public Output<PackagingConfigurationDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {

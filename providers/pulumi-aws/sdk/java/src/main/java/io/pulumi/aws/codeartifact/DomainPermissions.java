@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codeartifact.DomainPermissionsArgs;
 import io.pulumi.aws.codeartifact.inputs.DomainPermissionsState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class DomainPermissions extends io.pulumi.resources.CustomResource {
      * The name of the domain on which to set the resource policy.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -46,7 +46,7 @@ public class DomainPermissions extends io.pulumi.resources.CustomResource {
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @OutputExport(name="domainOwner", type=String.class, parameters={})
+    @Export(name="domainOwner", type=String.class, parameters={})
     private Output<String> domainOwner;
 
     /**
@@ -60,7 +60,7 @@ public class DomainPermissions extends io.pulumi.resources.CustomResource {
      * A JSON policy string to be set as the access control resource policy on the provided domain.
      * 
      */
-    @OutputExport(name="policyDocument", type=String.class, parameters={})
+    @Export(name="policyDocument", type=String.class, parameters={})
     private Output<String> policyDocument;
 
     /**
@@ -74,7 +74,7 @@ public class DomainPermissions extends io.pulumi.resources.CustomResource {
      * The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
      * 
      */
-    @OutputExport(name="policyRevision", type=String.class, parameters={})
+    @Export(name="policyRevision", type=String.class, parameters={})
     private Output<String> policyRevision;
 
     /**
@@ -88,7 +88,7 @@ public class DomainPermissions extends io.pulumi.resources.CustomResource {
      * The ARN of the resource associated with the resource policy.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**

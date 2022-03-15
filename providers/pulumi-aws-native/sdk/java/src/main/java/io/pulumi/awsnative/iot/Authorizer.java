@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.AuthorizerArgs;
 import io.pulumi.awsnative.iot.enums.AuthorizerStatus;
 import io.pulumi.awsnative.iot.outputs.AuthorizerTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -22,49 +22,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iot:Authorizer")
 public class Authorizer extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="authorizerFunctionArn", type=String.class, parameters={})
+    @Export(name="authorizerFunctionArn", type=String.class, parameters={})
     private Output<String> authorizerFunctionArn;
 
     public Output<String> getAuthorizerFunctionArn() {
         return this.authorizerFunctionArn;
     }
-    @OutputExport(name="authorizerName", type=String.class, parameters={})
+    @Export(name="authorizerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerName;
 
     public Output</* @Nullable */ String> getAuthorizerName() {
         return this.authorizerName;
     }
-    @OutputExport(name="signingDisabled", type=Boolean.class, parameters={})
+    @Export(name="signingDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> signingDisabled;
 
     public Output</* @Nullable */ Boolean> getSigningDisabled() {
         return this.signingDisabled;
     }
-    @OutputExport(name="status", type=AuthorizerStatus.class, parameters={})
+    @Export(name="status", type=AuthorizerStatus.class, parameters={})
     private Output</* @Nullable */ AuthorizerStatus> status;
 
     public Output</* @Nullable */ AuthorizerStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="tags", type=List.class, parameters={AuthorizerTag.class})
+    @Export(name="tags", type=List.class, parameters={AuthorizerTag.class})
     private Output</* @Nullable */ List<AuthorizerTag>> tags;
 
     public Output</* @Nullable */ List<AuthorizerTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tokenKeyName", type=String.class, parameters={})
+    @Export(name="tokenKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKeyName;
 
     public Output</* @Nullable */ String> getTokenKeyName() {
         return this.tokenKeyName;
     }
-    @OutputExport(name="tokenSigningPublicKeys", type=Object.class, parameters={})
+    @Export(name="tokenSigningPublicKeys", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tokenSigningPublicKeys;
 
     public Output</* @Nullable */ Object> getTokenSigningPublicKeys() {

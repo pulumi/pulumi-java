@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
      * The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
      * 
      */
-    @InputImport(name="lockDurationAsIso8601")
+    @Import(name="lockDurationAsIso8601")
       private final @Nullable String lockDurationAsIso8601;
 
     public Optional<String> getLockDurationAsIso8601() {
@@ -34,7 +34,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
      * The number of times the IoT hub attempts to deliver a message. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
      * 
      */
-    @InputImport(name="maxDeliveryCount")
+    @Import(name="maxDeliveryCount")
       private final @Nullable Integer maxDeliveryCount;
 
     public Optional<Integer> getMaxDeliveryCount() {
@@ -45,7 +45,7 @@ public final class MessagingEndpointPropertiesResponse extends io.pulumi.resourc
      * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
      * 
      */
-    @InputImport(name="ttlAsIso8601")
+    @Import(name="ttlAsIso8601")
       private final @Nullable String ttlAsIso8601;
 
     public Optional<String> getTtlAsIso8601() {

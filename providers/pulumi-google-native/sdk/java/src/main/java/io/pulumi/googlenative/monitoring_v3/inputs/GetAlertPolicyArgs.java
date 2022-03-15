@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetAlertPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAlertPolicyArgs Empty = new GetAlertPolicyArgs();
 
-    @InputImport(name="alertPolicyId", required=true)
+    @Import(name="alertPolicyId", required=true)
       private final String alertPolicyId;
 
     public String getAlertPolicyId() {
         return this.alertPolicyId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageApplicatio
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageDependenciesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * User friendly Name to be displayed in the portal.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -51,7 +51,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * VHD/CIM image path on Network Share.
      * 
      */
-    @OutputExport(name="imagePath", type=String.class, parameters={})
+    @Export(name="imagePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> imagePath;
 
     /**
@@ -65,7 +65,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Make this version of the package the active one across the hostpool.
      * 
      */
-    @OutputExport(name="isActive", type=Boolean.class, parameters={})
+    @Export(name="isActive", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isActive;
 
     /**
@@ -79,7 +79,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Specifies how to register Package in feed.
      * 
      */
-    @OutputExport(name="isRegularRegistration", type=Boolean.class, parameters={})
+    @Export(name="isRegularRegistration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRegularRegistration;
 
     /**
@@ -93,7 +93,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Date Package was last updated, found in the appxmanifest.xml.
      * 
      */
-    @OutputExport(name="lastUpdated", type=String.class, parameters={})
+    @Export(name="lastUpdated", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUpdated;
 
     /**
@@ -107,7 +107,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * List of package applications.
      * 
      */
-    @OutputExport(name="packageApplications", type=List.class, parameters={MsixPackageApplicationsResponse.class})
+    @Export(name="packageApplications", type=List.class, parameters={MsixPackageApplicationsResponse.class})
     private Output</* @Nullable */ List<MsixPackageApplicationsResponse>> packageApplications;
 
     /**
@@ -135,7 +135,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * List of package dependencies.
      * 
      */
-    @OutputExport(name="packageDependencies", type=List.class, parameters={MsixPackageDependenciesResponse.class})
+    @Export(name="packageDependencies", type=List.class, parameters={MsixPackageDependenciesResponse.class})
     private Output</* @Nullable */ List<MsixPackageDependenciesResponse>> packageDependencies;
 
     /**
@@ -149,7 +149,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
      * 
      */
-    @OutputExport(name="packageFamilyName", type=String.class, parameters={})
+    @Export(name="packageFamilyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageFamilyName;
 
     /**
@@ -163,7 +163,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Package Name from appxmanifest.xml.
      * 
      */
-    @OutputExport(name="packageName", type=String.class, parameters={})
+    @Export(name="packageName", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageName;
 
     /**
@@ -177,7 +177,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Relative Path to the package inside the image.
      * 
      */
-    @OutputExport(name="packageRelativePath", type=String.class, parameters={})
+    @Export(name="packageRelativePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageRelativePath;
 
     /**
@@ -191,7 +191,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -205,7 +205,7 @@ public class MSIXPackage extends io.pulumi.resources.CustomResource {
      * Package Version found in the appxmanifest.xml.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.OrchestratorIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    @OutputExport(name="apiServerEndpoint", type=String.class, parameters={})
+    @Export(name="apiServerEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiServerEndpoint;
 
     /**
@@ -51,7 +51,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * RootCA certificate of kubernetes cluster base64 encoded
      * 
      */
-    @OutputExport(name="clusterRootCA", type=String.class, parameters={})
+    @Export(name="clusterRootCA", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterRootCA;
 
     /**
@@ -65,7 +65,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * Properties of the controller.
      * 
      */
-    @OutputExport(name="controllerDetails", type=ControllerDetailsResponse.class, parameters={})
+    @Export(name="controllerDetails", type=ControllerDetailsResponse.class, parameters={})
     private Output<ControllerDetailsResponse> controllerDetails;
 
     /**
@@ -79,7 +79,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * The identity of the orchestrator
      * 
      */
-    @OutputExport(name="identity", type=OrchestratorIdentityResponse.class, parameters={})
+    @Export(name="identity", type=OrchestratorIdentityResponse.class, parameters={})
     private Output</* @Nullable */ OrchestratorIdentityResponse> identity;
 
     /**
@@ -93,7 +93,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * The kind of workbook. Choices are user and shared.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -107,7 +107,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -121,7 +121,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * AAD ID used with apiserver
      * 
      */
-    @OutputExport(name="orchestratorAppId", type=String.class, parameters={})
+    @Export(name="orchestratorAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestratorAppId;
 
     /**
@@ -149,7 +149,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * TenantID of server App ID
      * 
      */
-    @OutputExport(name="orchestratorTenantId", type=String.class, parameters={})
+    @Export(name="orchestratorTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> orchestratorTenantId;
 
     /**
@@ -163,7 +163,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
+    @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkResourceId;
 
     /**
@@ -177,7 +177,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * The current state of orchestratorInstance resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -191,7 +191,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * Resource guid.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -205,7 +205,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -219,7 +219,7 @@ public class OrchestratorInstanceServiceDetails extends io.pulumi.resources.Cust
      * The type of resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

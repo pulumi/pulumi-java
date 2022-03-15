@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrefixListEntry {
     private final String cidr;
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrefixListEntry(
-        @OutputCustomType.Parameter("cidr") String cidr,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("cidr") String cidr,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.cidr = cidr;
         this.description = description;
     }

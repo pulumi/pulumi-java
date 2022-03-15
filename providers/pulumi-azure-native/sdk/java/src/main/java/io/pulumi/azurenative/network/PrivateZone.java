@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.PrivateZoneArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The ETag of the zone.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * Private zone internal Id
      * 
      */
-    @OutputExport(name="internalId", type=String.class, parameters={})
+    @Export(name="internalId", type=String.class, parameters={})
     private Output<String> internalId;
 
     /**
@@ -64,7 +64,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -78,7 +78,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="maxNumberOfRecordSets", type=Double.class, parameters={})
+    @Export(name="maxNumberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> maxNumberOfRecordSets;
 
     /**
@@ -92,7 +92,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="maxNumberOfVirtualNetworkLinks", type=Double.class, parameters={})
+    @Export(name="maxNumberOfVirtualNetworkLinks", type=Double.class, parameters={})
     private Output<Double> maxNumberOfVirtualNetworkLinks;
 
     /**
@@ -106,7 +106,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="maxNumberOfVirtualNetworkLinksWithRegistration", type=Double.class, parameters={})
+    @Export(name="maxNumberOfVirtualNetworkLinksWithRegistration", type=Double.class, parameters={})
     private Output<Double> maxNumberOfVirtualNetworkLinksWithRegistration;
 
     /**
@@ -120,7 +120,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -134,7 +134,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="numberOfRecordSets", type=Double.class, parameters={})
+    @Export(name="numberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> numberOfRecordSets;
 
     /**
@@ -148,7 +148,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="numberOfVirtualNetworkLinks", type=Double.class, parameters={})
+    @Export(name="numberOfVirtualNetworkLinks", type=Double.class, parameters={})
     private Output<Double> numberOfVirtualNetworkLinks;
 
     /**
@@ -162,7 +162,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="numberOfVirtualNetworkLinksWithRegistration", type=Double.class, parameters={})
+    @Export(name="numberOfVirtualNetworkLinksWithRegistration", type=Double.class, parameters={})
     private Output<Double> numberOfVirtualNetworkLinksWithRegistration;
 
     /**
@@ -176,7 +176,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -190,7 +190,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -204,7 +204,7 @@ public class PrivateZone extends io.pulumi.resources.CustomResource {
      * The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

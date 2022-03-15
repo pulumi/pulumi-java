@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * The name of the application gateway.
      * 
      */
-    @InputImport(name="applicationGatewayName", required=true)
+    @Import(name="applicationGatewayName", required=true)
       private final Output<String> applicationGatewayName;
 
     public Output<String> getApplicationGatewayName() {
@@ -30,7 +30,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * The name of the application gateway private endpoint connection.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -41,7 +41,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -52,7 +52,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * Name of the private endpoint connection on an application gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -74,7 +74,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

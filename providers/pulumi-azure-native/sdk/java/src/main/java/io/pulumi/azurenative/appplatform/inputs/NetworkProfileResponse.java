@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.NetworkProfileResponseOutboundIPs;
 import io.pulumi.azurenative.appplatform.inputs.RequiredTrafficResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Name of the resource group containing network resources of Azure Spring Cloud Apps
      * 
      */
-    @InputImport(name="appNetworkResourceGroup")
+    @Import(name="appNetworkResourceGroup")
       private final @Nullable String appNetworkResourceGroup;
 
     public Optional<String> getAppNetworkResourceGroup() {
@@ -36,7 +36,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Apps
      * 
      */
-    @InputImport(name="appSubnetId")
+    @Import(name="appSubnetId")
       private final @Nullable String appSubnetId;
 
     public Optional<String> getAppSubnetId() {
@@ -47,7 +47,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Desired outbound IP resources for Azure Spring Cloud instance.
      * 
      */
-    @InputImport(name="outboundIPs", required=true)
+    @Import(name="outboundIPs", required=true)
       private final NetworkProfileResponseOutboundIPs outboundIPs;
 
     public NetworkProfileResponseOutboundIPs getOutboundIPs() {
@@ -58,7 +58,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Required inbound or outbound traffics for Azure Spring Cloud instance.
      * 
      */
-    @InputImport(name="requiredTraffics", required=true)
+    @Import(name="requiredTraffics", required=true)
       private final List<RequiredTrafficResponse> requiredTraffics;
 
     public List<RequiredTrafficResponse> getRequiredTraffics() {
@@ -69,7 +69,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Azure Spring Cloud service reserved CIDR
      * 
      */
-    @InputImport(name="serviceCidr")
+    @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
     public Optional<String> getServiceCidr() {
@@ -80,7 +80,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Name of the resource group containing network resources of Azure Spring Cloud Service Runtime
      * 
      */
-    @InputImport(name="serviceRuntimeNetworkResourceGroup")
+    @Import(name="serviceRuntimeNetworkResourceGroup")
       private final @Nullable String serviceRuntimeNetworkResourceGroup;
 
     public Optional<String> getServiceRuntimeNetworkResourceGroup() {
@@ -91,7 +91,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Fully qualified resource Id of the subnet to host Azure Spring Cloud Service Runtime
      * 
      */
-    @InputImport(name="serviceRuntimeSubnetId")
+    @Import(name="serviceRuntimeSubnetId")
       private final @Nullable String serviceRuntimeSubnetId;
 
     public Optional<String> getServiceRuntimeSubnetId() {

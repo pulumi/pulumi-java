@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SharedPrivateLinkResourceResponse {
     /**
      * The private link resource group id.
@@ -37,13 +37,13 @@ public final class SharedPrivateLinkResourceResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SharedPrivateLinkResourceResponse(
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.groupId = groupId;
         this.name = name;
         this.privateLinkResourceId = privateLinkResourceId;

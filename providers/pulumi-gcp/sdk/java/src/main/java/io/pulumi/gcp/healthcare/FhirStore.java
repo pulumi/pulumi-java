@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.FhirStoreArgs;
@@ -49,7 +49,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @OutputExport(name="dataset", type=String.class, parameters={})
+    @Export(name="dataset", type=String.class, parameters={})
     private Output<String> dataset;
 
     /**
@@ -69,7 +69,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    @OutputExport(name="disableReferentialIntegrity", type=Boolean.class, parameters={})
+    @Export(name="disableReferentialIntegrity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableReferentialIntegrity;
 
     /**
@@ -93,7 +93,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    @OutputExport(name="disableResourceVersioning", type=Boolean.class, parameters={})
+    @Export(name="disableResourceVersioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableResourceVersioning;
 
     /**
@@ -117,7 +117,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
      * 
      */
-    @OutputExport(name="enableHistoryImport", type=Boolean.class, parameters={})
+    @Export(name="enableHistoryImport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHistoryImport;
 
     /**
@@ -141,7 +141,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * notifications.
      * 
      */
-    @OutputExport(name="enableUpdateCreate", type=Boolean.class, parameters={})
+    @Export(name="enableUpdateCreate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableUpdateCreate;
 
     /**
@@ -167,7 +167,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -189,7 +189,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -205,7 +205,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="notificationConfig", type=FhirStoreNotificationConfig.class, parameters={})
+    @Export(name="notificationConfig", type=FhirStoreNotificationConfig.class, parameters={})
     private Output</* @Nullable */ FhirStoreNotificationConfig> notificationConfig;
 
     /**
@@ -220,7 +220,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * The fully qualified name of this dataset
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -240,7 +240,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="streamConfigs", type=List.class, parameters={FhirStoreStreamConfig.class})
+    @Export(name="streamConfigs", type=List.class, parameters={FhirStoreStreamConfig.class})
     private Output</* @Nullable */ List<FhirStoreStreamConfig>> streamConfigs;
 
     /**
@@ -262,7 +262,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Possible values are `DSTU2`, `STU3`, and `R4`.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

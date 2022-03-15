@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
      * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
@@ -32,7 +32,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
      * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
      * 
      */
-    @InputImport(name="maintenanceDuration", required=true)
+    @Import(name="maintenanceDuration", required=true)
       private final DurationResponse maintenanceDuration;
 
     public DurationResponse getMaintenanceDuration() {
@@ -43,7 +43,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
      * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

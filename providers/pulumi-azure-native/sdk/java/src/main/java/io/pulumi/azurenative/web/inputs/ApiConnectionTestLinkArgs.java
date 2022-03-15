@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
      * HTTP Method
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
@@ -33,7 +33,7 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
      * Test link request URI
      * 
      */
-    @InputImport(name="requestUri")
+    @Import(name="requestUri")
       private final @Nullable Output<String> requestUri;
 
     public Output<String> getRequestUri() {

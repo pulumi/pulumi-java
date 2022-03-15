@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class IamBindingConditionGetArgs extends io.pulumi.resources.Resour
 
     public static final IamBindingConditionGetArgs Empty = new IamBindingConditionGetArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final Output<String> expression;
 
     public Output<String> getExpression() {
         return this.expression;
     }
 
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

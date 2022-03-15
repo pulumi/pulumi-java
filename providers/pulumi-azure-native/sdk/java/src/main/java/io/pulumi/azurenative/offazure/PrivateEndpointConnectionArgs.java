@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.offazure;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Private link resource name.
      * 
      */
-    @InputImport(name="peConnectionName")
+    @Import(name="peConnectionName")
       private final @Nullable Output<String> peConnectionName;
 
     public Output<String> getPeConnectionName() {
@@ -29,7 +29,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Site name.
      * 
      */
-    @InputImport(name="siteName", required=true)
+    @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
     public Output<String> getSiteName() {

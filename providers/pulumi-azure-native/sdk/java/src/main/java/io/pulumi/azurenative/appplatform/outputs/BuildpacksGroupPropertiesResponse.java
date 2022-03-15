@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.BuildpackPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BuildpacksGroupPropertiesResponse {
     /**
      * Buildpacks in the buildpack group
@@ -24,10 +24,10 @@ public final class BuildpacksGroupPropertiesResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildpacksGroupPropertiesResponse(
-        @OutputCustomType.Parameter("buildpacks") @Nullable List<BuildpackPropertiesResponse> buildpacks,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("buildpacks") @Nullable List<BuildpackPropertiesResponse> buildpacks,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.buildpacks = buildpacks;
         this.name = name;
     }

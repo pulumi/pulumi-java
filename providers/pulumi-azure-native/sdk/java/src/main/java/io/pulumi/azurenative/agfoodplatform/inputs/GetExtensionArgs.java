@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.agfoodplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * Id of extension resource.
      * 
      */
-    @InputImport(name="extensionId", required=true)
+    @Import(name="extensionId", required=true)
       private final String extensionId;
 
     public String getExtensionId() {
@@ -27,7 +27,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * FarmBeats resource name.
      * 
      */
-    @InputImport(name="farmBeatsResourceName", required=true)
+    @Import(name="farmBeatsResourceName", required=true)
       private final String farmBeatsResourceName;
 
     public String getFarmBeatsResourceName() {
@@ -38,7 +38,7 @@ public final class GetExtensionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

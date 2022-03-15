@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBackendPort {
     /**
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
@@ -23,10 +23,10 @@ public final class ServiceBackendPort {
      */
     private final @Nullable Integer number;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBackendPort(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("number") @Nullable Integer number) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("number") @Nullable Integer number) {
         this.name = name;
         this.number = number;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ContainerArgs;
 import io.pulumi.azurenative.web.inputs.DaprArgs;
 import io.pulumi.azurenative.web.inputs.ScaleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * List of container definitions for the Container App.
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
@@ -39,7 +39,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Dapr configuration for the Container App.
      * 
      */
-    @InputImport(name="dapr")
+    @Import(name="dapr")
       private final @Nullable Output<DaprArgs> dapr;
 
     public Output<DaprArgs> getDapr() {
@@ -50,7 +50,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * User friendly suffix that is appended to the revision name
      * 
      */
-    @InputImport(name="revisionSuffix")
+    @Import(name="revisionSuffix")
       private final @Nullable Output<String> revisionSuffix;
 
     public Output<String> getRevisionSuffix() {
@@ -61,7 +61,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Scaling properties for the Container App.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<ScaleArgs> scale;
 
     public Output<ScaleArgs> getScale() {

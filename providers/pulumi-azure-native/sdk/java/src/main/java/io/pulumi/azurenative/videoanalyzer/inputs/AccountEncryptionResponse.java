@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.KeyVaultPropertiesResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * The Key Vault identity.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable ResourceIdentityResponse identity;
 
     public Optional<ResourceIdentityResponse> getIdentity() {
@@ -35,7 +35,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * The properties of the key used to encrypt the account.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
@@ -46,7 +46,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * The current status of the Key Vault mapping.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -57,7 +57,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * The type of key used to encrypt the Account Key.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

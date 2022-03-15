@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationHAClusterPrometheusExporter {
     /**
      * Prometheus exporter port.
@@ -17,8 +17,8 @@ public final class ApplicationHAClusterPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor
-    private ApplicationHAClusterPrometheusExporter(@OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
+    @CustomType.Constructor
+    private ApplicationHAClusterPrometheusExporter(@CustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.prometheusPort = prometheusPort;
     }
 

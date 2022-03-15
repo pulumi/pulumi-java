@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2PartitionIdResponse {
     /**
      * If not empty, the ID of the namespace to which the entities belong.
@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2PartitionIdResponse(
-        @OutputCustomType.Parameter("namespaceId") String namespaceId,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("namespaceId") String namespaceId,
+        @CustomType.Parameter("project") String project) {
         this.namespaceId = namespaceId;
         this.project = project;
     }

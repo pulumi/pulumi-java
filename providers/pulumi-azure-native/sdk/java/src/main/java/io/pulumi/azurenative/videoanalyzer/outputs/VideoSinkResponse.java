@@ -6,14 +6,14 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.NodeInputResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoCreationPropertiesResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoPublishingOptionsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoSinkResponse {
     /**
      * An array of upstream node references within the topology to be used as inputs for this node.
@@ -47,14 +47,14 @@ public final class VideoSinkResponse {
      */
     private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoSinkResponse(
-        @OutputCustomType.Parameter("inputs") List<NodeInputResponse> inputs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("videoCreationProperties") @Nullable VideoCreationPropertiesResponse videoCreationProperties,
-        @OutputCustomType.Parameter("videoName") String videoName,
-        @OutputCustomType.Parameter("videoPublishingOptions") @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
+        @CustomType.Parameter("inputs") List<NodeInputResponse> inputs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("videoCreationProperties") @Nullable VideoCreationPropertiesResponse videoCreationProperties,
+        @CustomType.Parameter("videoName") String videoName,
+        @CustomType.Parameter("videoPublishingOptions") @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
         this.inputs = inputs;
         this.name = name;
         this.type = type;

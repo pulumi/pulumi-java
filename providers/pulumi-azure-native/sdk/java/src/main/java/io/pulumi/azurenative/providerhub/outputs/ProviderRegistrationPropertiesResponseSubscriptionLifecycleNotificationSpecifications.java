@@ -4,22 +4,22 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.SubscriptionStateOverrideActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications {
     private final @Nullable String softDeleteTTL;
     private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(
-        @OutputCustomType.Parameter("softDeleteTTL") @Nullable String softDeleteTTL,
-        @OutputCustomType.Parameter("subscriptionStateOverrideActions") @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
+        @CustomType.Parameter("softDeleteTTL") @Nullable String softDeleteTTL,
+        @CustomType.Parameter("subscriptionStateOverrideActions") @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
         this.softDeleteTTL = softDeleteTTL;
         this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
     }

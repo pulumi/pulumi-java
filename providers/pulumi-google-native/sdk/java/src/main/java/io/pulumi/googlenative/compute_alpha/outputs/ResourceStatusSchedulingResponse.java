@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceStatusSchedulingResponse {
     /**
      * Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
@@ -15,8 +15,8 @@ public final class ResourceStatusSchedulingResponse {
      */
     private final Integer availabilityDomain;
 
-    @OutputCustomType.Constructor
-    private ResourceStatusSchedulingResponse(@OutputCustomType.Parameter("availabilityDomain") Integer availabilityDomain) {
+    @CustomType.Constructor
+    private ResourceStatusSchedulingResponse(@CustomType.Parameter("availabilityDomain") Integer availabilityDomain) {
         this.availabilityDomain = availabilityDomain;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
      * A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
      * 
      */
-    @InputImport(name="realtimeMetricsSubscriptionStatus", required=true)
+    @Import(name="realtimeMetricsSubscriptionStatus", required=true)
       private final Output<String> realtimeMetricsSubscriptionStatus;
 
     public Output<String> getRealtimeMetricsSubscriptionStatus() {

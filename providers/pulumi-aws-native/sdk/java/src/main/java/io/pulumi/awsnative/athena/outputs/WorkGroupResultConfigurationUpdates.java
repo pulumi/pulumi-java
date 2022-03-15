@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.athena.outputs;
 
 import io.pulumi.awsnative.athena.outputs.WorkGroupEncryptionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkGroupResultConfigurationUpdates {
     private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
     private final @Nullable String outputLocation;
     private final @Nullable Boolean removeEncryptionConfiguration;
     private final @Nullable Boolean removeOutputLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkGroupResultConfigurationUpdates(
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
-        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation,
-        @OutputCustomType.Parameter("removeEncryptionConfiguration") @Nullable Boolean removeEncryptionConfiguration,
-        @OutputCustomType.Parameter("removeOutputLocation") @Nullable Boolean removeOutputLocation) {
+        @CustomType.Parameter("encryptionConfiguration") @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
+        @CustomType.Parameter("outputLocation") @Nullable String outputLocation,
+        @CustomType.Parameter("removeEncryptionConfiguration") @Nullable Boolean removeEncryptionConfiguration,
+        @CustomType.Parameter("removeOutputLocation") @Nullable Boolean removeOutputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
         this.removeEncryptionConfiguration = removeEncryptionConfiguration;

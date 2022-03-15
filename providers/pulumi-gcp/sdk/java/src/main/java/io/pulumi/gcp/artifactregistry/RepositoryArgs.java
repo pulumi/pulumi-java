@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The user-provided description of the repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -38,7 +38,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * - HELM ([alpha](https://cloud.google.com/products#product-launch-stages))
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
@@ -52,7 +52,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * This value may not be changed after the Repository has been created.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -67,7 +67,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * and dashes.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -78,7 +78,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the location this repository is located in.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -90,7 +90,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -102,7 +102,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * "repo1"
      * 
      */
-    @InputImport(name="repositoryId", required=true)
+    @Import(name="repositoryId", required=true)
       private final Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.InnerHealthErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthErrorResponse {
     /**
      * Error creation time (UTC)
@@ -89,23 +89,23 @@ public final class HealthErrorResponse {
      */
     private final @Nullable String summaryMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthErrorResponse(
-        @OutputCustomType.Parameter("creationTimeUtc") @Nullable String creationTimeUtc,
-        @OutputCustomType.Parameter("customerResolvability") @Nullable String customerResolvability,
-        @OutputCustomType.Parameter("entityId") @Nullable String entityId,
-        @OutputCustomType.Parameter("errorCategory") @Nullable String errorCategory,
-        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
-        @OutputCustomType.Parameter("errorId") @Nullable String errorId,
-        @OutputCustomType.Parameter("errorLevel") @Nullable String errorLevel,
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
-        @OutputCustomType.Parameter("errorSource") @Nullable String errorSource,
-        @OutputCustomType.Parameter("errorType") @Nullable String errorType,
-        @OutputCustomType.Parameter("innerHealthErrors") @Nullable List<InnerHealthErrorResponse> innerHealthErrors,
-        @OutputCustomType.Parameter("possibleCauses") @Nullable String possibleCauses,
-        @OutputCustomType.Parameter("recommendedAction") @Nullable String recommendedAction,
-        @OutputCustomType.Parameter("recoveryProviderErrorMessage") @Nullable String recoveryProviderErrorMessage,
-        @OutputCustomType.Parameter("summaryMessage") @Nullable String summaryMessage) {
+        @CustomType.Parameter("creationTimeUtc") @Nullable String creationTimeUtc,
+        @CustomType.Parameter("customerResolvability") @Nullable String customerResolvability,
+        @CustomType.Parameter("entityId") @Nullable String entityId,
+        @CustomType.Parameter("errorCategory") @Nullable String errorCategory,
+        @CustomType.Parameter("errorCode") @Nullable String errorCode,
+        @CustomType.Parameter("errorId") @Nullable String errorId,
+        @CustomType.Parameter("errorLevel") @Nullable String errorLevel,
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @CustomType.Parameter("errorSource") @Nullable String errorSource,
+        @CustomType.Parameter("errorType") @Nullable String errorType,
+        @CustomType.Parameter("innerHealthErrors") @Nullable List<InnerHealthErrorResponse> innerHealthErrors,
+        @CustomType.Parameter("possibleCauses") @Nullable String possibleCauses,
+        @CustomType.Parameter("recommendedAction") @Nullable String recommendedAction,
+        @CustomType.Parameter("recoveryProviderErrorMessage") @Nullable String recoveryProviderErrorMessage,
+        @CustomType.Parameter("summaryMessage") @Nullable String summaryMessage) {
         this.creationTimeUtc = creationTimeUtc;
         this.customerResolvability = customerResolvability;
         this.entityId = entityId;

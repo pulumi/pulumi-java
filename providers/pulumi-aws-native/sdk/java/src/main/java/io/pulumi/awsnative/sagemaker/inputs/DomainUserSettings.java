@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainJupyterServerAppSettings;
 import io.pulumi.awsnative.sagemaker.inputs.DomainKernelGatewayAppSettings;
 import io.pulumi.awsnative.sagemaker.inputs.DomainSharingSettings;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * The user profile Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="executionRole")
+    @Import(name="executionRole")
       private final @Nullable String executionRole;
 
     public Optional<String> getExecutionRole() {
@@ -37,7 +37,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * The Jupyter server's app settings.
      * 
      */
-    @InputImport(name="jupyterServerAppSettings")
+    @Import(name="jupyterServerAppSettings")
       private final @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings;
 
     public Optional<DomainJupyterServerAppSettings> getJupyterServerAppSettings() {
@@ -48,7 +48,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * The kernel gateway app settings.
      * 
      */
-    @InputImport(name="kernelGatewayAppSettings")
+    @Import(name="kernelGatewayAppSettings")
       private final @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings;
 
     public Optional<DomainKernelGatewayAppSettings> getKernelGatewayAppSettings() {
@@ -59,7 +59,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable List<String> securityGroups;
 
     public List<String> getSecurityGroups() {
@@ -70,7 +70,7 @@ public final class DomainUserSettings extends io.pulumi.resources.InvokeArgs {
      * The sharing settings.
      * 
      */
-    @InputImport(name="sharingSettings")
+    @Import(name="sharingSettings")
       private final @Nullable DomainSharingSettings sharingSettings;
 
     public Optional<DomainSharingSettings> getSharingSettings() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse extends io.pu
      * Flag that specifies whether the Advanced API Ops add-on is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {

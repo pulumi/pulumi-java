@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyUsageOptionsResponse {
     /**
      * The key may be used to sign certificates.
@@ -55,17 +55,17 @@ public final class KeyUsageOptionsResponse {
      */
     private final Boolean keyEncipherment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyUsageOptionsResponse(
-        @OutputCustomType.Parameter("certSign") Boolean certSign,
-        @OutputCustomType.Parameter("contentCommitment") Boolean contentCommitment,
-        @OutputCustomType.Parameter("crlSign") Boolean crlSign,
-        @OutputCustomType.Parameter("dataEncipherment") Boolean dataEncipherment,
-        @OutputCustomType.Parameter("decipherOnly") Boolean decipherOnly,
-        @OutputCustomType.Parameter("digitalSignature") Boolean digitalSignature,
-        @OutputCustomType.Parameter("encipherOnly") Boolean encipherOnly,
-        @OutputCustomType.Parameter("keyAgreement") Boolean keyAgreement,
-        @OutputCustomType.Parameter("keyEncipherment") Boolean keyEncipherment) {
+        @CustomType.Parameter("certSign") Boolean certSign,
+        @CustomType.Parameter("contentCommitment") Boolean contentCommitment,
+        @CustomType.Parameter("crlSign") Boolean crlSign,
+        @CustomType.Parameter("dataEncipherment") Boolean dataEncipherment,
+        @CustomType.Parameter("decipherOnly") Boolean decipherOnly,
+        @CustomType.Parameter("digitalSignature") Boolean digitalSignature,
+        @CustomType.Parameter("encipherOnly") Boolean encipherOnly,
+        @CustomType.Parameter("keyAgreement") Boolean keyAgreement,
+        @CustomType.Parameter("keyEncipherment") Boolean keyEncipherment) {
         this.certSign = certSign;
         this.contentCommitment = contentCommitment;
         this.crlSign = crlSign;

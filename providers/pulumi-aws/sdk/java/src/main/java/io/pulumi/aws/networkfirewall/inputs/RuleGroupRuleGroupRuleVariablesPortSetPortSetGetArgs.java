@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs extends 
      * Set of port ranges.
      * 
      */
-    @InputImport(name="definitions", required=true)
+    @Import(name="definitions", required=true)
       private final Output<List<String>> definitions;
 
     public Output<List<String>> getDefinitions() {

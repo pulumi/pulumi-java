@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name of the mail host for this MX record.
      * 
      */
-    @InputImport(name="exchange")
+    @Import(name="exchange")
       private final @Nullable Output<String> exchange;
 
     public Output<String> getExchange() {
@@ -34,7 +34,7 @@ public final class MxRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The preference value for this MX record.
      * 
      */
-    @InputImport(name="preference")
+    @Import(name="preference")
       private final @Nullable Output<Integer> preference;
 
     public Output<Integer> getPreference() {

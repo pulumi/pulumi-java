@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseArcAutoProvisioning;
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseDefenderForServers;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * The ARC autoprovisioning configuration
      * 
      */
-    @InputImport(name="arcAutoProvisioning")
+    @Import(name="arcAutoProvisioning")
       private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
 
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> getArcAutoProvisioning() {
@@ -35,7 +35,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * The Defender for servers connection configuration
      * 
      */
-    @InputImport(name="defenderForServers")
+    @Import(name="defenderForServers")
       private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
 
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> getDefenderForServers() {
@@ -46,7 +46,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * The offering description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -58,7 +58,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * Expected value is 'DefenderForServersAWS'.
      * 
      */
-    @InputImport(name="offeringType", required=true)
+    @Import(name="offeringType", required=true)
       private final String offeringType;
 
     public String getOfferingType() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.inputs.ResourcePoolArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualDiskArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNicArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of memory
      * 
      */
-    @InputImport(name="amountOfRam", required=true)
+    @Import(name="amountOfRam", required=true)
       private final Output<Integer> amountOfRam;
 
     public Output<Integer> getAmountOfRam() {
@@ -37,7 +37,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual machine properties
      * 
      */
-    @InputImport(name="customization")
+    @Import(name="customization")
       private final @Nullable Output<GuestOSCustomizationArgs> customization;
 
     public Output<GuestOSCustomizationArgs> getCustomization() {
@@ -48,7 +48,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The list of Virtual Disks
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
     public Output<List<VirtualDiskArgs>> getDisks() {
@@ -59,7 +59,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Expose Guest OS or not
      * 
      */
-    @InputImport(name="exposeToGuestVM")
+    @Import(name="exposeToGuestVM")
       private final @Nullable Output<Boolean> exposeToGuestVM;
 
     public Output<Boolean> getExposeToGuestVM() {
@@ -70,7 +70,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Azure region
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -81,7 +81,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The list of Virtual NICs
      * 
      */
-    @InputImport(name="nics")
+    @Import(name="nics")
       private final @Nullable Output<List<VirtualNicArgs>> nics;
 
     public Output<List<VirtualNicArgs>> getNics() {
@@ -92,7 +92,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The number of CPU cores
      * 
      */
-    @InputImport(name="numberOfCores", required=true)
+    @Import(name="numberOfCores", required=true)
       private final Output<Integer> numberOfCores;
 
     public Output<Integer> getNumberOfCores() {
@@ -103,7 +103,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Password for login. Deprecated - use customization property
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -114,7 +114,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Private Cloud Id
      * 
      */
-    @InputImport(name="privateCloudId", required=true)
+    @Import(name="privateCloudId", required=true)
       private final Output<String> privateCloudId;
 
     public Output<String> getPrivateCloudId() {
@@ -125,7 +125,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -136,7 +136,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Machines Resource Pool
      * 
      */
-    @InputImport(name="resourcePool")
+    @Import(name="resourcePool")
       private final @Nullable Output<ResourcePoolArgs> resourcePool;
 
     public Output<ResourcePoolArgs> getResourcePool() {
@@ -147,7 +147,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The list of tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -158,7 +158,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Machine Template Id
      * 
      */
-    @InputImport(name="templateId")
+    @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
     public Output<String> getTemplateId() {
@@ -169,7 +169,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Username for login. Deprecated - use customization property
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
@@ -180,7 +180,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The list of Virtual VSphere Networks
      * 
      */
-    @InputImport(name="vSphereNetworks")
+    @Import(name="vSphereNetworks")
       private final @Nullable Output<List<String>> vSphereNetworks;
 
     public Output<List<String>> getVSphereNetworks() {
@@ -191,7 +191,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * virtual machine name
      * 
      */
-    @InputImport(name="virtualMachineName")
+    @Import(name="virtualMachineName")
       private final @Nullable Output<String> virtualMachineName;
 
     public Output<String> getVirtualMachineName() {

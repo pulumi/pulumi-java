@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final String managerName;
 
     public String getManagerName() {
@@ -30,7 +30,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * The source device name on which failover is performed.
      * 
      */
-    @InputImport(name="sourceDeviceName", required=true)
+    @Import(name="sourceDeviceName", required=true)
       private final String sourceDeviceName;
 
     public String getSourceDeviceName() {
@@ -52,7 +52,7 @@ public final class ListDeviceFailoverTarsArgs extends io.pulumi.resources.Invoke
      * The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.
      * 
      */
-    @InputImport(name="volumeContainers")
+    @Import(name="volumeContainers")
       private final @Nullable List<String> volumeContainers;
 
     public List<String> getVolumeContainers() {

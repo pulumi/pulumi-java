@@ -4,12 +4,12 @@
 package io.pulumi.docker.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderRegistryAuthArgs {
     private final Output<String> address;
     private final @Nullable Output<String> configFile;
@@ -17,13 +17,13 @@ public final class ProviderRegistryAuthArgs {
     private final @Nullable Output<String> password;
     private final @Nullable Output<String> username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderRegistryAuthArgs(
-        @OutputCustomType.Parameter("address") Output<String> address,
-        @OutputCustomType.Parameter("configFile") @Nullable Output<String> configFile,
-        @OutputCustomType.Parameter("configFileContent") @Nullable Output<String> configFileContent,
-        @OutputCustomType.Parameter("password") @Nullable Output<String> password,
-        @OutputCustomType.Parameter("username") @Nullable Output<String> username) {
+        @CustomType.Parameter("address") Output<String> address,
+        @CustomType.Parameter("configFile") @Nullable Output<String> configFile,
+        @CustomType.Parameter("configFileContent") @Nullable Output<String> configFileContent,
+        @CustomType.Parameter("password") @Nullable Output<String> password,
+        @CustomType.Parameter("username") @Nullable Output<String> username) {
         this.address = address;
         this.configFile = configFile;
         this.configFileContent = configFileContent;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WorkspaceCustomBooleanParameterArgs extends io.pulumi.resourc
      * The value which should be used for this field.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Boolean> value;
 
     public Output<Boolean> getValue() {

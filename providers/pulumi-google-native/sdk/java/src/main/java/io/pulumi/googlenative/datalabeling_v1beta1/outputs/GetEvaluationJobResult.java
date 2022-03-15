@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1AttemptResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEvaluationJobResult {
     /**
      * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
@@ -64,18 +64,18 @@ public final class GetEvaluationJobResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEvaluationJobResult(
-        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
-        @OutputCustomType.Parameter("attempts") List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("evaluationJobConfig") GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig,
-        @OutputCustomType.Parameter("labelMissingGroundTruth") Boolean labelMissingGroundTruth,
-        @OutputCustomType.Parameter("modelVersion") String modelVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @CustomType.Parameter("attempts") List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("evaluationJobConfig") GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig,
+        @CustomType.Parameter("labelMissingGroundTruth") Boolean labelMissingGroundTruth,
+        @CustomType.Parameter("modelVersion") String modelVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("state") String state) {
         this.annotationSpecSet = annotationSpecSet;
         this.attempts = attempts;
         this.createTime = createTime;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network group.
      * 
      */
-    @InputImport(name="networkGroupName", required=true)
+    @Import(name="networkGroupName", required=true)
       private final Output<String> networkGroupName;
 
     public Output<String> getNetworkGroupName() {
@@ -29,7 +29,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
     public Output<String> getNetworkManagerName() {
@@ -40,7 +40,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Id.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -62,7 +62,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the static member.
      * 
      */
-    @InputImport(name="staticMemberName")
+    @Import(name="staticMemberName")
       private final @Nullable Output<String> staticMemberName;
 
     public Output<String> getStaticMemberName() {

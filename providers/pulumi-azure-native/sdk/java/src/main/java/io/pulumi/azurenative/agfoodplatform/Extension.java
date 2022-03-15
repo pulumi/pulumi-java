@@ -8,7 +8,7 @@ import io.pulumi.azurenative.agfoodplatform.ExtensionArgs;
 import io.pulumi.azurenative.agfoodplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The ETag value to implement optimistic concurrency.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
@@ -49,7 +49,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Extension api docs link.
      * 
      */
-    @OutputExport(name="extensionApiDocsLink", type=String.class, parameters={})
+    @Export(name="extensionApiDocsLink", type=String.class, parameters={})
     private Output<String> extensionApiDocsLink;
 
     /**
@@ -63,7 +63,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Extension auth link.
      * 
      */
-    @OutputExport(name="extensionAuthLink", type=String.class, parameters={})
+    @Export(name="extensionAuthLink", type=String.class, parameters={})
     private Output<String> extensionAuthLink;
 
     /**
@@ -77,7 +77,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Extension category. e.g. weather/sensor/satellite.
      * 
      */
-    @OutputExport(name="extensionCategory", type=String.class, parameters={})
+    @Export(name="extensionCategory", type=String.class, parameters={})
     private Output<String> extensionCategory;
 
     /**
@@ -91,7 +91,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Extension Id.
      * 
      */
-    @OutputExport(name="extensionId", type=String.class, parameters={})
+    @Export(name="extensionId", type=String.class, parameters={})
     private Output<String> extensionId;
 
     /**
@@ -105,7 +105,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Installed extension version.
      * 
      */
-    @OutputExport(name="installedExtensionVersion", type=String.class, parameters={})
+    @Export(name="installedExtensionVersion", type=String.class, parameters={})
     private Output<String> installedExtensionVersion;
 
     /**
@@ -119,7 +119,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -147,7 +147,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

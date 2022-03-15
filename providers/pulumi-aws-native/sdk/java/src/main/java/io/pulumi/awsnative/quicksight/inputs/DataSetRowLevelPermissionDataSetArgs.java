@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVersion;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
      * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
 
-    @InputImport(name="formatVersion")
+    @Import(name="formatVersion")
       private final @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion;
 
     public Output<DataSetRowLevelPermissionFormatVersion> getFormatVersion() {
@@ -42,14 +42,14 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
      * <p>The namespace associated with the row-level permissions dataset.</p>
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
         return this.namespace == null ? Output.empty() : this.namespace;
     }
 
-    @InputImport(name="permissionPolicy", required=true)
+    @Import(name="permissionPolicy", required=true)
       private final Output<DataSetRowLevelPermissionPolicy> permissionPolicy;
 
     public Output<DataSetRowLevelPermissionPolicy> getPermissionPolicy() {

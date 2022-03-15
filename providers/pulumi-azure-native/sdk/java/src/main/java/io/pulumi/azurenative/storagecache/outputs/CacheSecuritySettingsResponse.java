@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.NfsAccessPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheSecuritySettingsResponse {
     /**
      * NFS access policies defined for this cache.
@@ -17,8 +17,8 @@ public final class CacheSecuritySettingsResponse {
      */
     private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
-    @OutputCustomType.Constructor
-    private CacheSecuritySettingsResponse(@OutputCustomType.Parameter("accessPolicies") @Nullable List<NfsAccessPolicyResponse> accessPolicies) {
+    @CustomType.Constructor
+    private CacheSecuritySettingsResponse(@CustomType.Parameter("accessPolicies") @Nullable List<NfsAccessPolicyResponse> accessPolicies) {
         this.accessPolicies = accessPolicies;
     }
 

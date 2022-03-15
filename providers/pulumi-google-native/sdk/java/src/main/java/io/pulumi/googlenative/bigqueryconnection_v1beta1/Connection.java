@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryconnection_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.ConnectionArgs;
@@ -23,7 +23,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Cloud SQL properties.
      * 
      */
-    @OutputExport(name="cloudSql", type=CloudSqlPropertiesResponse.class, parameters={})
+    @Export(name="cloudSql", type=CloudSqlPropertiesResponse.class, parameters={})
     private Output<CloudSqlPropertiesResponse> cloudSql;
 
     /**
@@ -37,7 +37,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The creation timestamp of the connection.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -51,7 +51,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * User provided description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * User provided display name for the connection.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
@@ -79,7 +79,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * True, if credential is configured for this connection.
      * 
      */
-    @OutputExport(name="hasCredential", type=Boolean.class, parameters={})
+    @Export(name="hasCredential", type=Boolean.class, parameters={})
     private Output<Boolean> hasCredential;
 
     /**
@@ -93,7 +93,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The last update timestamp of the connection.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -107,7 +107,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

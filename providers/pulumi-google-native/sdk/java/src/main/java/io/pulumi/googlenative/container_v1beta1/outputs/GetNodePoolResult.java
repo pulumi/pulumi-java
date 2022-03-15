@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.MaxPodsConstraintResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeManagementResponse;
@@ -17,7 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodePoolResult {
     /**
      * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
@@ -100,24 +100,24 @@ public final class GetNodePoolResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodePoolResult(
-        @OutputCustomType.Parameter("autoscaling") NodePoolAutoscalingResponse autoscaling,
-        @OutputCustomType.Parameter("conditions") List<StatusConditionResponse> conditions,
-        @OutputCustomType.Parameter("config") NodeConfigResponse config,
-        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
-        @OutputCustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
-        @OutputCustomType.Parameter("locations") List<String> locations,
-        @OutputCustomType.Parameter("management") NodeManagementResponse management,
-        @OutputCustomType.Parameter("maxPodsConstraint") MaxPodsConstraintResponse maxPodsConstraint,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkConfig") NodeNetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("placementPolicy") PlacementPolicyResponse placementPolicy,
-        @OutputCustomType.Parameter("podIpv4CidrSize") Integer podIpv4CidrSize,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("autoscaling") NodePoolAutoscalingResponse autoscaling,
+        @CustomType.Parameter("conditions") List<StatusConditionResponse> conditions,
+        @CustomType.Parameter("config") NodeConfigResponse config,
+        @CustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @CustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
+        @CustomType.Parameter("locations") List<String> locations,
+        @CustomType.Parameter("management") NodeManagementResponse management,
+        @CustomType.Parameter("maxPodsConstraint") MaxPodsConstraintResponse maxPodsConstraint,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkConfig") NodeNetworkConfigResponse networkConfig,
+        @CustomType.Parameter("placementPolicy") PlacementPolicyResponse placementPolicy,
+        @CustomType.Parameter("podIpv4CidrSize") Integer podIpv4CidrSize,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings,
+        @CustomType.Parameter("version") String version) {
         this.autoscaling = autoscaling;
         this.conditions = conditions;
         this.config = config;

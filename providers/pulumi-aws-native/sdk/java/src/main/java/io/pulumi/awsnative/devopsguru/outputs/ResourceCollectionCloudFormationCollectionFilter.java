@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.devopsguru.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceCollectionCloudFormationCollectionFilter {
     /**
      * An array of CloudFormation stack names.
@@ -17,8 +17,8 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
      */
     private final @Nullable List<String> stackNames;
 
-    @OutputCustomType.Constructor
-    private ResourceCollectionCloudFormationCollectionFilter(@OutputCustomType.Parameter("stackNames") @Nullable List<String> stackNames) {
+    @CustomType.Constructor
+    private ResourceCollectionCloudFormationCollectionFilter(@CustomType.Parameter("stackNames") @Nullable List<String> stackNames) {
         this.stackNames = stackNames;
     }
 

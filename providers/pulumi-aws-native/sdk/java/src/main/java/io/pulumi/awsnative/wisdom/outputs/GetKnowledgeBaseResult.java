@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.wisdom.outputs;
 
 import io.pulumi.awsnative.wisdom.outputs.KnowledgeBaseRenderingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKnowledgeBaseResult {
     private final @Nullable String knowledgeBaseArn;
     private final @Nullable String knowledgeBaseId;
     private final @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKnowledgeBaseResult(
-        @OutputCustomType.Parameter("knowledgeBaseArn") @Nullable String knowledgeBaseArn,
-        @OutputCustomType.Parameter("knowledgeBaseId") @Nullable String knowledgeBaseId,
-        @OutputCustomType.Parameter("renderingConfiguration") @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
+        @CustomType.Parameter("knowledgeBaseArn") @Nullable String knowledgeBaseArn,
+        @CustomType.Parameter("knowledgeBaseId") @Nullable String knowledgeBaseId,
+        @CustomType.Parameter("renderingConfiguration") @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         this.knowledgeBaseId = knowledgeBaseId;
         this.renderingConfiguration = renderingConfiguration;

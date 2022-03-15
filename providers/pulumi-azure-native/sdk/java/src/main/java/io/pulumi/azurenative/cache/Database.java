@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cache.outputs.ModuleResponse;
 import io.pulumi.azurenative.cache.outputs.PersistenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols. Default is TLS-encrypted.
      * 
      */
-    @OutputExport(name="clientProtocol", type=String.class, parameters={})
+    @Export(name="clientProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientProtocol;
 
     /**
@@ -51,7 +51,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Clustering policy - default is OSSCluster. Specified at create time.
      * 
      */
-    @OutputExport(name="clusteringPolicy", type=String.class, parameters={})
+    @Export(name="clusteringPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusteringPolicy;
 
     /**
@@ -65,7 +65,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Redis eviction policy - default is VolatileLRU
      * 
      */
-    @OutputExport(name="evictionPolicy", type=String.class, parameters={})
+    @Export(name="evictionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> evictionPolicy;
 
     /**
@@ -79,7 +79,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Optional set of redis modules to enable in this database - modules can only be added at creation time.
      * 
      */
-    @OutputExport(name="modules", type=List.class, parameters={ModuleResponse.class})
+    @Export(name="modules", type=List.class, parameters={ModuleResponse.class})
     private Output</* @Nullable */ List<ModuleResponse>> modules;
 
     /**
@@ -93,7 +93,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Persistence settings
      * 
      */
-    @OutputExport(name="persistence", type=PersistenceResponse.class, parameters={})
+    @Export(name="persistence", type=PersistenceResponse.class, parameters={})
     private Output</* @Nullable */ PersistenceResponse> persistence;
 
     /**
@@ -121,7 +121,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * TCP port of the database endpoint. Specified at create time. Defaults to an available port.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -135,7 +135,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Current provisioning status of the database
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Current resource status of the database
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -163,7 +163,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

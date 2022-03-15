@@ -5,14 +5,14 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SetValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OverrideTaskStepPropertiesResponse {
     /**
      * Gets or sets the collection of override arguments to be used when
@@ -46,14 +46,14 @@ public final class OverrideTaskStepPropertiesResponse {
      */
     private final @Nullable List<SetValueResponse> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OverrideTaskStepPropertiesResponse(
-        @OutputCustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
-        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
-        @OutputCustomType.Parameter("file") @Nullable String file,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken,
-        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values) {
+        @CustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
+        @CustomType.Parameter("contextPath") @Nullable String contextPath,
+        @CustomType.Parameter("file") @Nullable String file,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken,
+        @CustomType.Parameter("values") @Nullable List<SetValueResponse> values) {
         this.arguments = arguments;
         this.contextPath = contextPath;
         this.file = file;

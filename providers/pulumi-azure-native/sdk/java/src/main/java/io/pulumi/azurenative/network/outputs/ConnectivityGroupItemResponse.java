@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectivityGroupItemResponse {
     /**
      * Group connectivity type.
@@ -32,12 +32,12 @@ public final class ConnectivityGroupItemResponse {
      */
     private final @Nullable String useHubGateway;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectivityGroupItemResponse(
-        @OutputCustomType.Parameter("groupConnectivity") @Nullable String groupConnectivity,
-        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
-        @OutputCustomType.Parameter("networkGroupId") @Nullable String networkGroupId,
-        @OutputCustomType.Parameter("useHubGateway") @Nullable String useHubGateway) {
+        @CustomType.Parameter("groupConnectivity") @Nullable String groupConnectivity,
+        @CustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @CustomType.Parameter("networkGroupId") @Nullable String networkGroupId,
+        @CustomType.Parameter("useHubGateway") @Nullable String useHubGateway) {
         this.groupConnectivity = groupConnectivity;
         this.isGlobal = isGlobal;
         this.networkGroupId = networkGroupId;

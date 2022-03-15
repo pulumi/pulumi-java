@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.myedgeorder.inputs.CustomerSubscriptionRegisteredFeatures;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
      * Location placement Id of a subscription
      * 
      */
-    @InputImport(name="locationPlacementId")
+    @Import(name="locationPlacementId")
       private final @Nullable String locationPlacementId;
 
     public Optional<String> getLocationPlacementId() {
@@ -35,7 +35,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
      * Quota ID of a subscription
      * 
      */
-    @InputImport(name="quotaId", required=true)
+    @Import(name="quotaId", required=true)
       private final String quotaId;
 
     public String getQuotaId() {
@@ -46,7 +46,7 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
      * List of registered feature flags for subscription
      * 
      */
-    @InputImport(name="registeredFeatures")
+    @Import(name="registeredFeatures")
       private final @Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures;
 
     public List<CustomerSubscriptionRegisteredFeatures> getRegisteredFeatures() {

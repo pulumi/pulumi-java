@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.KubeEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppServicePlanResult {
     /**
      * The time when the server farm free offer expires.
@@ -154,35 +154,35 @@ public final class GetAppServicePlanResult {
      */
     private final @Nullable String workerTierName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppServicePlanResult(
-        @OutputCustomType.Parameter("freeOfferExpirationTime") @Nullable String freeOfferExpirationTime,
-        @OutputCustomType.Parameter("geoRegion") String geoRegion,
-        @OutputCustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        @OutputCustomType.Parameter("hyperV") @Nullable Boolean hyperV,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isSpot") @Nullable Boolean isSpot,
-        @OutputCustomType.Parameter("isXenon") @Nullable Boolean isXenon,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("kubeEnvironmentProfile") @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maximumElasticWorkerCount") @Nullable Integer maximumElasticWorkerCount,
-        @OutputCustomType.Parameter("maximumNumberOfWorkers") Integer maximumNumberOfWorkers,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfSites") Integer numberOfSites,
-        @OutputCustomType.Parameter("perSiteScaling") @Nullable Boolean perSiteScaling,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("reserved") @Nullable Boolean reserved,
-        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
-        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
-        @OutputCustomType.Parameter("spotExpirationTime") @Nullable String spotExpirationTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subscription") String subscription,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetWorkerCount") @Nullable Integer targetWorkerCount,
-        @OutputCustomType.Parameter("targetWorkerSizeId") @Nullable Integer targetWorkerSizeId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workerTierName") @Nullable String workerTierName) {
+        @CustomType.Parameter("freeOfferExpirationTime") @Nullable String freeOfferExpirationTime,
+        @CustomType.Parameter("geoRegion") String geoRegion,
+        @CustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @CustomType.Parameter("hyperV") @Nullable Boolean hyperV,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isSpot") @Nullable Boolean isSpot,
+        @CustomType.Parameter("isXenon") @Nullable Boolean isXenon,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("kubeEnvironmentProfile") @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maximumElasticWorkerCount") @Nullable Integer maximumElasticWorkerCount,
+        @CustomType.Parameter("maximumNumberOfWorkers") Integer maximumNumberOfWorkers,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfSites") Integer numberOfSites,
+        @CustomType.Parameter("perSiteScaling") @Nullable Boolean perSiteScaling,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("reserved") @Nullable Boolean reserved,
+        @CustomType.Parameter("resourceGroup") String resourceGroup,
+        @CustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @CustomType.Parameter("spotExpirationTime") @Nullable String spotExpirationTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subscription") String subscription,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetWorkerCount") @Nullable Integer targetWorkerCount,
+        @CustomType.Parameter("targetWorkerSizeId") @Nullable Integer targetWorkerSizeId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workerTierName") @Nullable String workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
         this.geoRegion = geoRegion;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;

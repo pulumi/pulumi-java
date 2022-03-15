@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ServiceCorrelationDescriptionResponse extends io.pulumi.resou
      * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
      * 
      */
-    @InputImport(name="scheme", required=true)
+    @Import(name="scheme", required=true)
       private final String scheme;
 
     public String getScheme() {
@@ -31,7 +31,7 @@ public final class ServiceCorrelationDescriptionResponse extends io.pulumi.resou
      * The name of the service that the correlation relationship is established with.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

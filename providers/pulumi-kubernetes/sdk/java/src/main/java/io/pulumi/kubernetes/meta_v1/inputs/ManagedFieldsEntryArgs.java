@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -34,7 +34,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"
      * 
      */
-    @InputImport(name="fieldsType")
+    @Import(name="fieldsType")
       private final @Nullable Output<String> fieldsType;
 
     public Output<String> getFieldsType() {
@@ -45,7 +45,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.
      * 
      */
-    @InputImport(name="fieldsV1")
+    @Import(name="fieldsV1")
       private final @Nullable Output<JsonElement> fieldsV1;
 
     public Output<JsonElement> getFieldsV1() {
@@ -56,7 +56,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * Manager is an identifier of the workflow managing these fields.
      * 
      */
-    @InputImport(name="manager")
+    @Import(name="manager")
       private final @Nullable Output<String> manager;
 
     public Output<String> getManager() {
@@ -67,7 +67,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.
      * 
      */
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable Output<String> operation;
 
     public Output<String> getOperation() {
@@ -78,7 +78,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * Subresource is the name of the subresource used to update that object, or empty string if the object was updated through the main resource. The value of this field is used to distinguish between managers, even if they share the same name. For example, a status update will be distinct from a regular update using the same manager name. Note that the APIVersion field is not related to the Subresource field and it always corresponds to the version of the main resource.
      * 
      */
-    @InputImport(name="subresource")
+    @Import(name="subresource")
       private final @Nullable Output<String> subresource;
 
     public Output<String> getSubresource() {
@@ -89,7 +89,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
      * Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {

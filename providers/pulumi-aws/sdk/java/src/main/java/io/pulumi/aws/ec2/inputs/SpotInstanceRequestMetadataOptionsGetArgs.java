@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
      * Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
      * 
      */
-    @InputImport(name="httpEndpoint")
+    @Import(name="httpEndpoint")
       private final @Nullable Output<String> httpEndpoint;
 
     public Output<String> getHttpEndpoint() {
@@ -30,7 +30,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
      * Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
      * 
      */
-    @InputImport(name="httpPutResponseHopLimit")
+    @Import(name="httpPutResponseHopLimit")
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
     public Output<Integer> getHttpPutResponseHopLimit() {
@@ -41,7 +41,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
      * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
      * 
      */
-    @InputImport(name="httpTokens")
+    @Import(name="httpTokens")
       private final @Nullable Output<String> httpTokens;
 
     public Output<String> getHttpTokens() {
@@ -52,7 +52,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
      * Enables or disables access to instance tags from the instance metadata service. Valid values include `enabled` or `disabled`. Defaults to `disabled`.
      * 
      */
-    @InputImport(name="instanceMetadataTags")
+    @Import(name="instanceMetadataTags")
       private final @Nullable Output<String> instanceMetadataTags;
 
     public Output<String> getInstanceMetadataTags() {

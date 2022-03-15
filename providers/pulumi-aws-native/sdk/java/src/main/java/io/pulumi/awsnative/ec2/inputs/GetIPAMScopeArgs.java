@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetIPAMScopeArgs extends io.pulumi.resources.InvokeArgs {
      * Id of the IPAM scope.
      * 
      */
-    @InputImport(name="ipamScopeId", required=true)
+    @Import(name="ipamScopeId", required=true)
       private final String ipamScopeId;
 
     public String getIpamScopeId() {

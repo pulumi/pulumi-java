@@ -11,7 +11,7 @@ import io.pulumi.awsnative.gamelift.inputs.GameServerGroupInstanceDefinitionArgs
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupLaunchTemplateArgs;
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
      * 
      */
-    @InputImport(name="autoScalingPolicy")
+    @Import(name="autoScalingPolicy")
       private final @Nullable Output<GameServerGroupAutoScalingPolicyArgs> autoScalingPolicy;
 
     public Output<GameServerGroupAutoScalingPolicyArgs> getAutoScalingPolicy() {
@@ -38,7 +38,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
      * 
      */
-    @InputImport(name="balancingStrategy")
+    @Import(name="balancingStrategy")
       private final @Nullable Output<GameServerGroupBalancingStrategy> balancingStrategy;
 
     public Output<GameServerGroupBalancingStrategy> getBalancingStrategy() {
@@ -49,7 +49,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The type of delete to perform.
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable Output<GameServerGroupDeleteOption> deleteOption;
 
     public Output<GameServerGroupDeleteOption> getDeleteOption() {
@@ -60,7 +60,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * An identifier for the new game server group.
      * 
      */
-    @InputImport(name="gameServerGroupName")
+    @Import(name="gameServerGroupName")
       private final @Nullable Output<String> gameServerGroupName;
 
     public Output<String> getGameServerGroupName() {
@@ -71,7 +71,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * A flag that indicates whether instances in the game server group are protected from early termination.
      * 
      */
-    @InputImport(name="gameServerProtectionPolicy")
+    @Import(name="gameServerProtectionPolicy")
       private final @Nullable Output<GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy;
 
     public Output<GameServerGroupGameServerProtectionPolicy> getGameServerProtectionPolicy() {
@@ -82,7 +82,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * A set of EC2 instance types to use when creating instances in the group.
      * 
      */
-    @InputImport(name="instanceDefinitions", required=true)
+    @Import(name="instanceDefinitions", required=true)
       private final Output<List<GameServerGroupInstanceDefinitionArgs>> instanceDefinitions;
 
     public Output<List<GameServerGroupInstanceDefinitionArgs>> getInstanceDefinitions() {
@@ -93,7 +93,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group.
      * 
      */
-    @InputImport(name="launchTemplate", required=true)
+    @Import(name="launchTemplate", required=true)
       private final Output<GameServerGroupLaunchTemplateArgs> launchTemplate;
 
     public Output<GameServerGroupLaunchTemplateArgs> getLaunchTemplate() {
@@ -104,7 +104,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The maximum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    @InputImport(name="maxSize")
+    @Import(name="maxSize")
       private final @Nullable Output<Double> maxSize;
 
     public Output<Double> getMaxSize() {
@@ -115,7 +115,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The minimum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Double> minSize;
 
     public Output<Double> getMinSize() {
@@ -126,7 +126,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -137,7 +137,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * A list of labels to assign to the new game server group resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<GameServerGroupTagArgs>> tags;
 
     public Output<List<GameServerGroupTagArgs>> getTags() {
@@ -148,7 +148,7 @@ public final class GameServerGroupArgs extends io.pulumi.resources.ResourceArgs 
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
      * 
      */
-    @InputImport(name="vpcSubnets")
+    @Import(name="vpcSubnets")
       private final @Nullable Output<List<String>> vpcSubnets;
 
     public Output<List<String>> getVpcSubnets() {

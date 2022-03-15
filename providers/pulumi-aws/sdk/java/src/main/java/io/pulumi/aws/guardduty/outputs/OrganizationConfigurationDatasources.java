@@ -4,12 +4,12 @@
 package io.pulumi.aws.guardduty.outputs;
 
 import io.pulumi.aws.guardduty.outputs.OrganizationConfigurationDatasourcesS3Logs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationConfigurationDatasources {
     /**
      * Configuration for the builds to store logs to S3.
@@ -17,8 +17,8 @@ public final class OrganizationConfigurationDatasources {
      */
     private final @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs;
 
-    @OutputCustomType.Constructor
-    private OrganizationConfigurationDatasources(@OutputCustomType.Parameter("s3Logs") @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
+    @CustomType.Constructor
+    private OrganizationConfigurationDatasources(@CustomType.Parameter("s3Logs") @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 

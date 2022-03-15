@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataflowEndpointGroupSocketAddress {
     private final @Nullable String name;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataflowEndpointGroupSocketAddress(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.port = port;
     }

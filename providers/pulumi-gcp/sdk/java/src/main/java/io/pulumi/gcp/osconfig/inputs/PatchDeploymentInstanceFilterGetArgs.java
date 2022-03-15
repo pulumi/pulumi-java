@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterGroupLabelGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * Target all VM instances in the project. If true, no other criteria is permitted.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
     public Output<Boolean> getAll() {
@@ -33,7 +33,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="groupLabels")
+    @Import(name="groupLabels")
       private final @Nullable Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> groupLabels;
 
     public Output<List<PatchDeploymentInstanceFilterGroupLabelGetArgs>> getGroupLabels() {
@@ -45,7 +45,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * VMs when targeting configs, for example prefix="prod-".
      * 
      */
-    @InputImport(name="instanceNamePrefixes")
+    @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
 
     public Output<List<String>> getInstanceNamePrefixes() {
@@ -58,7 +58,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -69,7 +69,7 @@ public final class PatchDeploymentInstanceFilterGetArgs extends io.pulumi.resour
      * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

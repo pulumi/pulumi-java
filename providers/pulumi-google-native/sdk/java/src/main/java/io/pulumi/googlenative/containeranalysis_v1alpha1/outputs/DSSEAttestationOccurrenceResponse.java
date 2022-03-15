@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.EnvelopeResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.InTotoStatementResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DSSEAttestationOccurrenceResponse {
     /**
      * If doing something security critical, make sure to verify the signatures in this metadata.
@@ -17,10 +17,10 @@ public final class DSSEAttestationOccurrenceResponse {
     private final EnvelopeResponse envelope;
     private final InTotoStatementResponse statement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DSSEAttestationOccurrenceResponse(
-        @OutputCustomType.Parameter("envelope") EnvelopeResponse envelope,
-        @OutputCustomType.Parameter("statement") InTotoStatementResponse statement) {
+        @CustomType.Parameter("envelope") EnvelopeResponse envelope,
+        @CustomType.Parameter("statement") InTotoStatementResponse statement) {
         this.envelope = envelope;
         this.statement = statement;
     }

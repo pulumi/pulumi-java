@@ -8,7 +8,7 @@ import io.pulumi.awsnative.amplifyuibuilder.ThemeArgs;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ThemeTags;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ThemeValues;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,49 +20,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:amplifyuibuilder:Theme")
 public class Theme extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
-    @OutputExport(name="environmentName", type=String.class, parameters={})
+    @Export(name="environmentName", type=String.class, parameters={})
     private Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
         return this.environmentName;
     }
-    @OutputExport(name="modifiedAt", type=String.class, parameters={})
+    @Export(name="modifiedAt", type=String.class, parameters={})
     private Output<String> modifiedAt;
 
     public Output<String> getModifiedAt() {
         return this.modifiedAt;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="overrides", type=List.class, parameters={ThemeValues.class})
+    @Export(name="overrides", type=List.class, parameters={ThemeValues.class})
     private Output</* @Nullable */ List<ThemeValues>> overrides;
 
     public Output</* @Nullable */ List<ThemeValues>> getOverrides() {
         return this.overrides;
     }
-    @OutputExport(name="tags", type=ThemeTags.class, parameters={})
+    @Export(name="tags", type=ThemeTags.class, parameters={})
     private Output</* @Nullable */ ThemeTags> tags;
 
     public Output</* @Nullable */ ThemeTags> getTags() {
         return this.tags;
     }
-    @OutputExport(name="values", type=List.class, parameters={ThemeValues.class})
+    @Export(name="values", type=List.class, parameters={ThemeValues.class})
     private Output<List<ThemeValues>> values;
 
     public Output<List<ThemeValues>> getValues() {

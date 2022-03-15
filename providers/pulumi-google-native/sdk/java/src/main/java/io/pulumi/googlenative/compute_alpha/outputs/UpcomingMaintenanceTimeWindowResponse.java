@@ -3,19 +3,19 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpcomingMaintenanceTimeWindowResponse {
     private final String earliest;
     private final String latest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpcomingMaintenanceTimeWindowResponse(
-        @OutputCustomType.Parameter("earliest") String earliest,
-        @OutputCustomType.Parameter("latest") String latest) {
+        @CustomType.Parameter("earliest") String earliest,
+        @CustomType.Parameter("latest") String latest) {
         this.earliest = earliest;
         this.latest = latest;
     }

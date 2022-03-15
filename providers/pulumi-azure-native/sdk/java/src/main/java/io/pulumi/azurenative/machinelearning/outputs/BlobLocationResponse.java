@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobLocationResponse {
     /**
      * Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
@@ -22,10 +22,10 @@ public final class BlobLocationResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobLocationResponse(
-        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("credentials") @Nullable String credentials,
+        @CustomType.Parameter("uri") String uri) {
         this.credentials = credentials;
         this.uri = uri;
     }

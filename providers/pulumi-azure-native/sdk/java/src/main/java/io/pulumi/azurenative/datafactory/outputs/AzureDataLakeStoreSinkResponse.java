@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDataLakeStoreSinkResponse {
     /**
      * The type of copy behavior for copy sink.
@@ -59,17 +59,17 @@ public final class AzureDataLakeStoreSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDataLakeStoreSinkResponse(
-        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("enableAdlsSingleFileParallel") @Nullable Object enableAdlsSingleFileParallel,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
+        @CustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("enableAdlsSingleFileParallel") @Nullable Object enableAdlsSingleFileParallel,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.enableAdlsSingleFileParallel = enableAdlsSingleFileParallel;

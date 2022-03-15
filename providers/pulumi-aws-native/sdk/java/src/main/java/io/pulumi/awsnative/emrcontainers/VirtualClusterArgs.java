@@ -6,7 +6,7 @@ package io.pulumi.awsnative.emrcontainers;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerProviderArgs;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Container provider of the virtual cluster.
      * 
      */
-    @InputImport(name="containerProvider", required=true)
+    @Import(name="containerProvider", required=true)
       private final Output<VirtualClusterContainerProviderArgs> containerProvider;
 
     public Output<VirtualClusterContainerProviderArgs> getContainerProvider() {
@@ -32,7 +32,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the virtual cluster.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this virtual cluster.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
     public Output<List<VirtualClusterTagArgs>> getTags() {

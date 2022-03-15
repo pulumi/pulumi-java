@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedVirtualNetworkSettingsResponse {
     /**
      * Allowed Aad Tenant Ids For Linking
@@ -29,11 +29,11 @@ public final class ManagedVirtualNetworkSettingsResponse {
      */
     private final @Nullable Boolean preventDataExfiltration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedVirtualNetworkSettingsResponse(
-        @OutputCustomType.Parameter("allowedAadTenantIdsForLinking") @Nullable List<String> allowedAadTenantIdsForLinking,
-        @OutputCustomType.Parameter("linkedAccessCheckOnTargetResource") @Nullable Boolean linkedAccessCheckOnTargetResource,
-        @OutputCustomType.Parameter("preventDataExfiltration") @Nullable Boolean preventDataExfiltration) {
+        @CustomType.Parameter("allowedAadTenantIdsForLinking") @Nullable List<String> allowedAadTenantIdsForLinking,
+        @CustomType.Parameter("linkedAccessCheckOnTargetResource") @Nullable Boolean linkedAccessCheckOnTargetResource,
+        @CustomType.Parameter("preventDataExfiltration") @Nullable Boolean preventDataExfiltration) {
         this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
         this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
         this.preventDataExfiltration = preventDataExfiltration;

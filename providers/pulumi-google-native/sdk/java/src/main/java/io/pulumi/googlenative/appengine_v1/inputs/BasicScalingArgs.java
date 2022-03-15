@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
      * Duration of time after the last request that an instance must wait before the instance is shut down.
      * 
      */
-    @InputImport(name="idleTimeout")
+    @Import(name="idleTimeout")
       private final @Nullable Output<String> idleTimeout;
 
     public Output<String> getIdleTimeout() {
@@ -34,7 +34,7 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum number of instances to create for this version.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {

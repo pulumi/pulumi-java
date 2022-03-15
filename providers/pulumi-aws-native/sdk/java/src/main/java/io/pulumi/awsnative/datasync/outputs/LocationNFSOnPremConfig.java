@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocationNFSOnPremConfig {
     /**
      * ARN(s) of the agent(s) to use for an NFS location.
@@ -16,8 +16,8 @@ public final class LocationNFSOnPremConfig {
      */
     private final List<String> agentArns;
 
-    @OutputCustomType.Constructor
-    private LocationNFSOnPremConfig(@OutputCustomType.Parameter("agentArns") List<String> agentArns) {
+    @CustomType.Constructor
+    private LocationNFSOnPremConfig(@CustomType.Parameter("agentArns") List<String> agentArns) {
         this.agentArns = agentArns;
     }
 

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingsArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentStageDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies settings for the canary deployment.
      * 
      */
-    @InputImport(name="deploymentCanarySettings")
+    @Import(name="deploymentCanarySettings")
       private final @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
     public Output<DeploymentCanarySettingsArgs> getDeploymentCanarySettings() {
@@ -31,7 +31,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the purpose of the API Gateway deployment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the RestApi resource to deploy.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -53,7 +53,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Configures the stage that API Gateway creates with this deployment.
      * 
      */
-    @InputImport(name="stageDescription")
+    @Import(name="stageDescription")
       private final @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
 
     public Output<DeploymentStageDescriptionArgs> getStageDescription() {
@@ -64,7 +64,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {

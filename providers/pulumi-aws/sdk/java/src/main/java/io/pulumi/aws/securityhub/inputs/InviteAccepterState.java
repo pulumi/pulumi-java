@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * The ID of the invitation.
      * 
      */
-    @InputImport(name="invitationId")
+    @Import(name="invitationId")
       private final @Nullable Output<String> invitationId;
 
     public Output<String> getInvitationId() {
@@ -29,7 +29,7 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * The account ID of the master Security Hub account whose invitation you're accepting.
      * 
      */
-    @InputImport(name="masterId")
+    @Import(name="masterId")
       private final @Nullable Output<String> masterId;
 
     public Output<String> getMasterId() {

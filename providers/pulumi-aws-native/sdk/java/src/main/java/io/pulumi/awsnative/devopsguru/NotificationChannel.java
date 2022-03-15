@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devopsguru.NotificationChannelArgs;
 import io.pulumi.awsnative.devopsguru.outputs.NotificationChannelConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devopsguru:NotificationChannel")
 public class NotificationChannel extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="config", type=NotificationChannelConfig.class, parameters={})
+    @Export(name="config", type=NotificationChannelConfig.class, parameters={})
     private Output<NotificationChannelConfig> config;
 
     public Output<NotificationChannelConfig> getConfig() {

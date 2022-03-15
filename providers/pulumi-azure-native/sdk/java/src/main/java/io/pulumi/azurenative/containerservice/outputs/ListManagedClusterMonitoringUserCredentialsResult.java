@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.CredentialResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListManagedClusterMonitoringUserCredentialsResult {
     /**
      * Base64-encoded Kubernetes configuration file.
@@ -16,8 +16,8 @@ public final class ListManagedClusterMonitoringUserCredentialsResult {
      */
     private final List<CredentialResultResponse> kubeconfigs;
 
-    @OutputCustomType.Constructor
-    private ListManagedClusterMonitoringUserCredentialsResult(@OutputCustomType.Parameter("kubeconfigs") List<CredentialResultResponse> kubeconfigs) {
+    @CustomType.Constructor
+    private ListManagedClusterMonitoringUserCredentialsResult(@CustomType.Parameter("kubeconfigs") List<CredentialResultResponse> kubeconfigs) {
         this.kubeconfigs = kubeconfigs;
     }
 

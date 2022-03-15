@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ConnectionErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
      * Connection error
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable ConnectionErrorResponse error;
 
     public Optional<ConnectionErrorResponse> getError() {
@@ -34,7 +34,7 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
      * The gateway status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -45,7 +45,7 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
      * Target of the error
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOnlineEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * Online Endpoint name.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -27,7 +27,7 @@ public final class GetOnlineEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetOnlineEndpointArgs extends io.pulumi.resources.InvokeArgs 
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

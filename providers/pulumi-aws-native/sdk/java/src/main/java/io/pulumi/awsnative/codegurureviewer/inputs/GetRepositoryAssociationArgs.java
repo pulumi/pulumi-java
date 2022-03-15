@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codegurureviewer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRepositoryAssociationArgs extends io.pulumi.resources.Invo
      * The Amazon Resource Name (ARN) of the repository association.
      * 
      */
-    @InputImport(name="associationArn", required=true)
+    @Import(name="associationArn", required=true)
       private final String associationArn;
 
     public String getAssociationArn() {

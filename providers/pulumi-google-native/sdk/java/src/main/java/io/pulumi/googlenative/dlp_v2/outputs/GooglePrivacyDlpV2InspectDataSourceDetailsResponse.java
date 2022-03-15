@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RequestedOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ResultResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
     /**
      * The configuration used for this job.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
      */
     private final GooglePrivacyDlpV2ResultResponse result;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InspectDataSourceDetailsResponse(
-        @OutputCustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
-        @OutputCustomType.Parameter("result") GooglePrivacyDlpV2ResultResponse result) {
+        @CustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
+        @CustomType.Parameter("result") GooglePrivacyDlpV2ResultResponse result) {
         this.requestedOptions = requestedOptions;
         this.result = result;
     }

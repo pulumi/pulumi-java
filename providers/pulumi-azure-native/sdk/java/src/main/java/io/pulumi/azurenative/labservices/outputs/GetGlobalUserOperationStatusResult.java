@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalUserOperationStatusResult {
     /**
      * status of the long running operation for an environment
@@ -15,8 +15,8 @@ public final class GetGlobalUserOperationStatusResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
-    private GetGlobalUserOperationStatusResult(@OutputCustomType.Parameter("status") String status) {
+    @CustomType.Constructor
+    private GetGlobalUserOperationStatusResult(@CustomType.Parameter("status") String status) {
         this.status = status;
     }
 

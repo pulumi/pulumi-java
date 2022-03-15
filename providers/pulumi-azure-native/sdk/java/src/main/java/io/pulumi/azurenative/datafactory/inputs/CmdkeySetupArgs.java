@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * The password of data source access.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -36,7 +36,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * The server name of data source access.
      * 
      */
-    @InputImport(name="targetName", required=true)
+    @Import(name="targetName", required=true)
       private final Output<Object> targetName;
 
     public Output<Object> getTargetName() {
@@ -48,7 +48,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'CmdkeySetup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -59,7 +59,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * The user name of data source access.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<Object> userName;
 
     public Output<Object> getUserName() {

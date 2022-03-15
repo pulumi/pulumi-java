@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdType;
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdUnit;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class RulesetThresholdArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RulesetThresholdArgs Empty = new RulesetThresholdArgs();
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<RulesetThresholdType> type;
 
     public Output<RulesetThresholdType> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<RulesetThresholdUnit> unit;
 
     public Output<RulesetThresholdUnit> getUnit() {
         return this.unit == null ? Output.empty() : this.unit;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Double> value;
 
     public Output<Double> getValue() {

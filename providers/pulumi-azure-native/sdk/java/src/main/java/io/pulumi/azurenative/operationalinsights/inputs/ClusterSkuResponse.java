@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The capacity value
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Double capacity;
 
     public Optional<Double> getCapacity() {
@@ -34,7 +34,7 @@ public final class ClusterSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

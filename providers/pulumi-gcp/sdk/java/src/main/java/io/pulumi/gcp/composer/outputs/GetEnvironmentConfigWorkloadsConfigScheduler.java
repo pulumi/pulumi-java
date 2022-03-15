@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigWorkloadsConfigScheduler {
     private final Integer count;
     private final Double cpu;
     private final Double memoryGb;
     private final Double storageGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfigScheduler(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
-        @OutputCustomType.Parameter("storageGb") Double storageGb) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("memoryGb") Double memoryGb,
+        @CustomType.Parameter("storageGb") Double storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPublicDomainName {
     private final @Nullable String certificateName;
     /**
@@ -19,10 +19,10 @@ public final class ContainerPublicDomainName {
      */
     private final @Nullable List<String> domainNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPublicDomainName(
-        @OutputCustomType.Parameter("certificateName") @Nullable String certificateName,
-        @OutputCustomType.Parameter("domainNames") @Nullable List<String> domainNames) {
+        @CustomType.Parameter("certificateName") @Nullable String certificateName,
+        @CustomType.Parameter("domainNames") @Nullable List<String> domainNames) {
         this.certificateName = certificateName;
         this.domainNames = domainNames;
     }

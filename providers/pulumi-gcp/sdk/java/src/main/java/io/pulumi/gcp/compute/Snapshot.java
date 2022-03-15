@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SnapshotArgs;
@@ -65,7 +65,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -79,7 +79,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -93,7 +93,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Size of the snapshot, specified in GB.
      * 
      */
-    @OutputExport(name="diskSizeGb", type=Integer.class, parameters={})
+    @Export(name="diskSizeGb", type=Integer.class, parameters={})
     private Output<Integer> diskSizeGb;
 
     /**
@@ -107,7 +107,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -121,7 +121,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Labels to apply to this Snapshot.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -137,7 +137,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * encryption key.
      * 
      */
-    @OutputExport(name="licenses", type=List.class, parameters={String.class})
+    @Export(name="licenses", type=List.class, parameters={String.class})
     private Output<List<String>> licenses;
 
     /**
@@ -159,7 +159,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -180,7 +180,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -195,7 +195,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -211,7 +211,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="snapshotEncryptionKey", type=SnapshotSnapshotEncryptionKey.class, parameters={})
+    @Export(name="snapshotEncryptionKey", type=SnapshotSnapshotEncryptionKey.class, parameters={})
     private Output</* @Nullable */ SnapshotSnapshotEncryptionKey> snapshotEncryptionKey;
 
     /**
@@ -227,7 +227,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The unique identifier for the resource.
      * 
      */
-    @OutputExport(name="snapshotId", type=Integer.class, parameters={})
+    @Export(name="snapshotId", type=Integer.class, parameters={})
     private Output<Integer> snapshotId;
 
     /**
@@ -241,7 +241,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A reference to the disk used to create this snapshot.
      * 
      */
-    @OutputExport(name="sourceDisk", type=String.class, parameters={})
+    @Export(name="sourceDisk", type=String.class, parameters={})
     private Output<String> sourceDisk;
 
     /**
@@ -258,7 +258,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="sourceDiskEncryptionKey", type=SnapshotSourceDiskEncryptionKey.class, parameters={})
+    @Export(name="sourceDiskEncryptionKey", type=SnapshotSourceDiskEncryptionKey.class, parameters={})
     private Output</* @Nullable */ SnapshotSourceDiskEncryptionKey> sourceDiskEncryptionKey;
 
     /**
@@ -276,7 +276,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * creation/deletion.
      * 
      */
-    @OutputExport(name="storageBytes", type=Integer.class, parameters={})
+    @Export(name="storageBytes", type=Integer.class, parameters={})
     private Output<Integer> storageBytes;
 
     /**
@@ -291,7 +291,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
      * 
      */
-    @OutputExport(name="storageLocations", type=List.class, parameters={String.class})
+    @Export(name="storageLocations", type=List.class, parameters={String.class})
     private Output<List<String>> storageLocations;
 
     /**
@@ -305,7 +305,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A reference to the zone where the disk is hosted.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

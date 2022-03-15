@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfigXssProtection {
     /**
      * A Boolean value that determines whether CloudFront includes the `mode=block` directive in the `X-XSS-Protection` header.
@@ -33,12 +33,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtection {
      */
     private final @Nullable String reportUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigXssProtection(
-        @OutputCustomType.Parameter("modeBlock") @Nullable Boolean modeBlock,
-        @OutputCustomType.Parameter("override") Boolean override,
-        @OutputCustomType.Parameter("protection") Boolean protection,
-        @OutputCustomType.Parameter("reportUri") @Nullable String reportUri) {
+        @CustomType.Parameter("modeBlock") @Nullable Boolean modeBlock,
+        @CustomType.Parameter("override") Boolean override,
+        @CustomType.Parameter("protection") Boolean protection,
+        @CustomType.Parameter("reportUri") @Nullable String reportUri) {
         this.modeBlock = modeBlock;
         this.override = override;
         this.protection = protection;

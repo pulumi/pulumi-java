@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebTestGeolocationResponse {
     /**
      * Location ID for the webtest to run from.
@@ -17,8 +17,8 @@ public final class WebTestGeolocationResponse {
      */
     private final @Nullable String location;
 
-    @OutputCustomType.Constructor
-    private WebTestGeolocationResponse(@OutputCustomType.Parameter("location") @Nullable String location) {
+    @CustomType.Constructor
+    private WebTestGeolocationResponse(@CustomType.Parameter("location") @Nullable String location) {
         this.location = location;
     }
 

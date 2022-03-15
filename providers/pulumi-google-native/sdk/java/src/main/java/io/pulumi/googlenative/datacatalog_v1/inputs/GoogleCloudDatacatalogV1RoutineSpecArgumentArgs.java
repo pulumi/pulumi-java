@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1RoutineSpecArgumentMode;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * Specifies whether the argument is input or output.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> mode;
 
     public Output<GoogleCloudDatacatalogV1RoutineSpecArgumentMode> getMode() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * The name of the argument. A return argument of a function might not have a name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentArgs extends io.pu
      * Type of the argument. The exact value depends on the source system and the language.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

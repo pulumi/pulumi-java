@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeReferenceResponse {
     /**
      * Arguments for integration runtime.
@@ -28,11 +28,11 @@ public final class IntegrationRuntimeReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeReferenceResponse(
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
-        @OutputCustomType.Parameter("referenceName") String referenceName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @CustomType.Parameter("referenceName") String referenceName,
+        @CustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.referenceName = referenceName;
         this.type = type;

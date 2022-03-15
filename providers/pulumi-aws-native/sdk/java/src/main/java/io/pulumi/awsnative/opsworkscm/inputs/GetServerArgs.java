@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opsworkscm.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetServerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServerArgs Empty = new GetServerArgs();
 
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {

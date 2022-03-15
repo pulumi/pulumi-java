@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetDataDiskResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks;
 
     public List<VirtualMachineScaleSetDataDiskResponse> getDataDisks() {
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
      * 
      */
-    @InputImport(name="imageReference")
+    @Import(name="imageReference")
       private final @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> getImageReference() {
@@ -47,7 +47,7 @@ public final class VirtualMachineScaleSetStorageProfileResponse extends io.pulum
      * Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
-    @InputImport(name="osDisk")
+    @Import(name="osDisk")
       private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
     public Optional<VirtualMachineScaleSetOSDiskResponse> getOsDisk() {

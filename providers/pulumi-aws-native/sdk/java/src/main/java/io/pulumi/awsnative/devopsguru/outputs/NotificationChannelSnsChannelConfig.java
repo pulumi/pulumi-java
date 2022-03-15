@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.devopsguru.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationChannelSnsChannelConfig {
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor
-    private NotificationChannelSnsChannelConfig(@OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
+    @CustomType.Constructor
+    private NotificationChannelSnsChannelConfig(@CustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.topicArn = topicArn;
     }
 

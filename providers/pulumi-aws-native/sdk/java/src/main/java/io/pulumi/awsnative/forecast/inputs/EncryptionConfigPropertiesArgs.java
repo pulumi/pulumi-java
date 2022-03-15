@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class EncryptionConfigPropertiesArgs extends io.pulumi.resources.Re
 
     public static final EncryptionConfigPropertiesArgs Empty = new EncryptionConfigPropertiesArgs();
 
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

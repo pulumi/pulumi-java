@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRecurringScheduleTimeZone {
     /**
      * IANA Time Zone Database time zone, e.g. "America/New_York".
@@ -22,10 +22,10 @@ public final class PatchDeploymentRecurringScheduleTimeZone {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRecurringScheduleTimeZone(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.version = version;
     }

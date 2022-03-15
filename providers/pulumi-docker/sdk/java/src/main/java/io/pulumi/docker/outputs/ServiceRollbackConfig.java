@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceRollbackConfig {
     private final @Nullable String delay;
     private final @Nullable String failureAction;
@@ -19,14 +19,14 @@ public final class ServiceRollbackConfig {
     private final @Nullable String order;
     private final @Nullable Integer parallelism;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceRollbackConfig(
-        @OutputCustomType.Parameter("delay") @Nullable String delay,
-        @OutputCustomType.Parameter("failureAction") @Nullable String failureAction,
-        @OutputCustomType.Parameter("maxFailureRatio") @Nullable String maxFailureRatio,
-        @OutputCustomType.Parameter("monitor") @Nullable String monitor,
-        @OutputCustomType.Parameter("order") @Nullable String order,
-        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism) {
+        @CustomType.Parameter("delay") @Nullable String delay,
+        @CustomType.Parameter("failureAction") @Nullable String failureAction,
+        @CustomType.Parameter("maxFailureRatio") @Nullable String maxFailureRatio,
+        @CustomType.Parameter("monitor") @Nullable String monitor,
+        @CustomType.Parameter("order") @Nullable String order,
+        @CustomType.Parameter("parallelism") @Nullable Integer parallelism) {
         this.delay = delay;
         this.failureAction = failureAction;
         this.maxFailureRatio = maxFailureRatio;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceContainerImage {
     /**
      * The path to the container image repository.
@@ -23,10 +23,10 @@ public final class InstanceContainerImage {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceContainerImage(
-        @OutputCustomType.Parameter("repository") String repository,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("repository") String repository,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.repository = repository;
         this.tag = tag;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
      * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable String accessToken;
 
     public Optional<String> getAccessToken() {
@@ -33,7 +33,7 @@ public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
      * Page id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

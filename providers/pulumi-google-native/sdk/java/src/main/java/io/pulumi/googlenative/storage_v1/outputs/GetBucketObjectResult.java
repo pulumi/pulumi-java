@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectCustomerEncryptionResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectOwnerResponse;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketObjectResult {
     /**
      * Access controls on the object.
@@ -172,39 +172,39 @@ public final class GetBucketObjectResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketObjectResult(
-        @OutputCustomType.Parameter("acl") List<ObjectAccessControlResponse> acl,
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("cacheControl") String cacheControl,
-        @OutputCustomType.Parameter("componentCount") Integer componentCount,
-        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
-        @OutputCustomType.Parameter("contentEncoding") String contentEncoding,
-        @OutputCustomType.Parameter("contentLanguage") String contentLanguage,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("crc32c") String crc32c,
-        @OutputCustomType.Parameter("customTime") String customTime,
-        @OutputCustomType.Parameter("customerEncryption") BucketObjectCustomerEncryptionResponse customerEncryption,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("eventBasedHold") Boolean eventBasedHold,
-        @OutputCustomType.Parameter("generation") String generation,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("md5Hash") String md5Hash,
-        @OutputCustomType.Parameter("mediaLink") String mediaLink,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("metageneration") String metageneration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") BucketObjectOwnerResponse owner,
-        @OutputCustomType.Parameter("retentionExpirationTime") String retentionExpirationTime,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("size") String size,
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("temporaryHold") Boolean temporaryHold,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("timeDeleted") String timeDeleted,
-        @OutputCustomType.Parameter("timeStorageClassUpdated") String timeStorageClassUpdated,
-        @OutputCustomType.Parameter("updated") String updated) {
+        @CustomType.Parameter("acl") List<ObjectAccessControlResponse> acl,
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("cacheControl") String cacheControl,
+        @CustomType.Parameter("componentCount") Integer componentCount,
+        @CustomType.Parameter("contentDisposition") String contentDisposition,
+        @CustomType.Parameter("contentEncoding") String contentEncoding,
+        @CustomType.Parameter("contentLanguage") String contentLanguage,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("crc32c") String crc32c,
+        @CustomType.Parameter("customTime") String customTime,
+        @CustomType.Parameter("customerEncryption") BucketObjectCustomerEncryptionResponse customerEncryption,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("eventBasedHold") Boolean eventBasedHold,
+        @CustomType.Parameter("generation") String generation,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("md5Hash") String md5Hash,
+        @CustomType.Parameter("mediaLink") String mediaLink,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("metageneration") String metageneration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") BucketObjectOwnerResponse owner,
+        @CustomType.Parameter("retentionExpirationTime") String retentionExpirationTime,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("size") String size,
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("temporaryHold") Boolean temporaryHold,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("timeDeleted") String timeDeleted,
+        @CustomType.Parameter("timeStorageClassUpdated") String timeStorageClassUpdated,
+        @CustomType.Parameter("updated") String updated) {
         this.acl = acl;
         this.bucket = bucket;
         this.cacheControl = cacheControl;

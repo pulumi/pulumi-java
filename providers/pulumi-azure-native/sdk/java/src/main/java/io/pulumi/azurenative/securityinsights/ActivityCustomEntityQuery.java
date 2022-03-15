@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.ActivityEntityQueriesPrope
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The entity query content to display in timeline
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
@@ -52,7 +52,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The time the activity was created
      * 
      */
-    @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
+    @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
@@ -66,7 +66,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The entity query description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Determines whether this activity is enabled or disabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -94,7 +94,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The query applied only to entities matching to all filters
      * 
      */
-    @OutputExport(name="entitiesFilter", type=Map.class, parameters={String.class, List.class})
+    @Export(name="entitiesFilter", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> entitiesFilter;
 
     /**
@@ -108,7 +108,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -122,7 +122,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The type of the query's source entity
      * 
      */
-    @OutputExport(name="inputEntityType", type=String.class, parameters={})
+    @Export(name="inputEntityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputEntityType;
 
     /**
@@ -137,7 +137,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Expected value is 'Activity'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -152,7 +152,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The last time the activity was updated
      * 
      */
-    @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
@@ -166,7 +166,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -180,7 +180,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The Activity query definitions
      * 
      */
-    @OutputExport(name="queryDefinitions", type=ActivityEntityQueriesPropertiesResponseQueryDefinitions.class, parameters={})
+    @Export(name="queryDefinitions", type=ActivityEntityQueriesPropertiesResponseQueryDefinitions.class, parameters={})
     private Output</* @Nullable */ ActivityEntityQueriesPropertiesResponseQueryDefinitions> queryDefinitions;
 
     /**
@@ -194,7 +194,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * List of the fields of the source entity that are required to run the query
      * 
      */
-    @OutputExport(name="requiredInputFieldsSets", type=List.class, parameters={List.class})
+    @Export(name="requiredInputFieldsSets", type=List.class, parameters={List.class})
     private Output</* @Nullable */ List<List<String>>> requiredInputFieldsSets;
 
     /**
@@ -208,7 +208,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -222,7 +222,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The template id this activity was created from
      * 
      */
-    @OutputExport(name="templateName", type=String.class, parameters={})
+    @Export(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
     /**
@@ -236,7 +236,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * The entity query title
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
@@ -250,7 +250,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

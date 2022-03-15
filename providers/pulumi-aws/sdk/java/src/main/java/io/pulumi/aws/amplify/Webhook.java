@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amplify.WebhookArgs;
 import io.pulumi.aws.amplify.inputs.WebhookState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The unique ID for an Amplify app.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -46,7 +46,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the webhook.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The name for a branch that is part of the Amplify app.
      * 
      */
-    @OutputExport(name="branchName", type=String.class, parameters={})
+    @Export(name="branchName", type=String.class, parameters={})
     private Output<String> branchName;
 
     /**
@@ -74,7 +74,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The description for a webhook.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -88,7 +88,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The URL of the webhook.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyAssignmentInstanceFilterInventoryResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyAssignmentLabelSetResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyAssignmentInstanceFilterResponse {
     /**
      * Target all VMs in the project. If true, no other criteria is permitted.
@@ -33,12 +33,12 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
      */
     private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyAssignmentInstanceFilterResponse(
-        @OutputCustomType.Parameter("all") Boolean all,
-        @OutputCustomType.Parameter("exclusionLabels") List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
-        @OutputCustomType.Parameter("inclusionLabels") List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
-        @OutputCustomType.Parameter("inventories") List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
+        @CustomType.Parameter("all") Boolean all,
+        @CustomType.Parameter("exclusionLabels") List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
+        @CustomType.Parameter("inclusionLabels") List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
+        @CustomType.Parameter("inventories") List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;

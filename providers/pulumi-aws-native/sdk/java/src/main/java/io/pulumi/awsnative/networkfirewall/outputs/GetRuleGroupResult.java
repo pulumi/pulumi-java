@@ -5,14 +5,14 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroup;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleGroupResult {
     private final @Nullable String description;
     private final @Nullable RuleGroup ruleGroup;
@@ -20,13 +20,13 @@ public final class GetRuleGroupResult {
     private final @Nullable String ruleGroupId;
     private final @Nullable List<RuleGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleGroupResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("ruleGroup") @Nullable RuleGroup ruleGroup,
-        @OutputCustomType.Parameter("ruleGroupArn") @Nullable String ruleGroupArn,
-        @OutputCustomType.Parameter("ruleGroupId") @Nullable String ruleGroupId,
-        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("ruleGroup") @Nullable RuleGroup ruleGroup,
+        @CustomType.Parameter("ruleGroupArn") @Nullable String ruleGroupArn,
+        @CustomType.Parameter("ruleGroupId") @Nullable String ruleGroupId,
+        @CustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags) {
         this.description = description;
         this.ruleGroup = ruleGroup;
         this.ruleGroupArn = ruleGroupArn;

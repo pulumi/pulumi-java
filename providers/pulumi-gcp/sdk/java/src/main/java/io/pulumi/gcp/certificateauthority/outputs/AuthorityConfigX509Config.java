@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsage;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityConfigX509Config {
     /**
      * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
@@ -46,13 +46,13 @@ public final class AuthorityConfigX509Config {
      */
     private final @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityConfigX509Config(
-        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions,
-        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
-        @OutputCustomType.Parameter("caOptions") AuthorityConfigX509ConfigCaOptions caOptions,
-        @OutputCustomType.Parameter("keyUsage") AuthorityConfigX509ConfigKeyUsage keyUsage,
-        @OutputCustomType.Parameter("policyIds") @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
+        @CustomType.Parameter("additionalExtensions") @Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions,
+        @CustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @CustomType.Parameter("caOptions") AuthorityConfigX509ConfigCaOptions caOptions,
+        @CustomType.Parameter("keyUsage") AuthorityConfigX509ConfigKeyUsage keyUsage,
+        @CustomType.Parameter("policyIds") @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

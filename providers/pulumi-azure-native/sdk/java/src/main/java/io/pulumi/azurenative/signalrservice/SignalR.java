@@ -13,7 +13,7 @@ import io.pulumi.azurenative.signalrservice.outputs.SignalRFeatureResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRNetworkACLsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Cross-Origin Resource Sharing (CORS) settings.
      * 
      */
-    @OutputExport(name="cors", type=SignalRCorsSettingsResponse.class, parameters={})
+    @Export(name="cors", type=SignalRCorsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ SignalRCorsSettingsResponse> cors;
 
     /**
@@ -56,7 +56,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The publicly accessible IP of the SignalR service.
      * 
      */
-    @OutputExport(name="externalIP", type=String.class, parameters={})
+    @Export(name="externalIP", type=String.class, parameters={})
     private Output<String> externalIP;
 
     /**
@@ -75,7 +75,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
      */
-    @OutputExport(name="features", type=List.class, parameters={SignalRFeatureResponse.class})
+    @Export(name="features", type=List.class, parameters={SignalRFeatureResponse.class})
     private Output</* @Nullable */ List<SignalRFeatureResponse>> features;
 
     /**
@@ -94,7 +94,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * FQDN of the SignalR service instance. Format: xxx.service.signalr.net
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -109,7 +109,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.
      * 
      */
-    @OutputExport(name="hostNamePrefix", type=String.class, parameters={})
+    @Export(name="hostNamePrefix", type=String.class, parameters={})
     private Output<String> hostNamePrefix;
 
     /**
@@ -124,7 +124,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -138,7 +138,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -152,7 +152,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Network ACLs
      * 
      */
-    @OutputExport(name="networkACLs", type=SignalRNetworkACLsResponse.class, parameters={})
+    @Export(name="networkACLs", type=SignalRNetworkACLsResponse.class, parameters={})
     private Output</* @Nullable */ SignalRNetworkACLsResponse> networkACLs;
 
     /**
@@ -180,7 +180,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Private endpoint connections to the SignalR resource.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -194,7 +194,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -208,7 +208,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The publicly accessible port of the SignalR service which is designed for browser/client side usage.
      * 
      */
-    @OutputExport(name="publicPort", type=Integer.class, parameters={})
+    @Export(name="publicPort", type=Integer.class, parameters={})
     private Output<Integer> publicPort;
 
     /**
@@ -222,7 +222,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The publicly accessible port of the SignalR service which is designed for customer server side usage.
      * 
      */
-    @OutputExport(name="serverPort", type=Integer.class, parameters={})
+    @Export(name="serverPort", type=Integer.class, parameters={})
     private Output<Integer> serverPort;
 
     /**
@@ -236,7 +236,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
+    @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
@@ -250,7 +250,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -264,7 +264,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -278,7 +278,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Upstream settings when the Azure SignalR is in server-less mode.
      * 
      */
-    @OutputExport(name="upstream", type=ServerlessUpstreamSettingsResponse.class, parameters={})
+    @Export(name="upstream", type=ServerlessUpstreamSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServerlessUpstreamSettingsResponse> upstream;
 
     /**
@@ -292,7 +292,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * Version of the SignalR resource. Probably you need the same or higher version of client SDKs.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

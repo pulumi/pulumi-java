@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * A unique identifier for the AWS Glue Data Catalog.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -29,7 +29,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * The name of the connection to the AWS Glue Data Catalog.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -40,7 +40,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * A database name in the AWS Glue Data Catalog.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -51,7 +51,7 @@ public final class MLTransformInputRecordTableGetArgs extends io.pulumi.resource
      * A table name in the AWS Glue Data Catalog.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

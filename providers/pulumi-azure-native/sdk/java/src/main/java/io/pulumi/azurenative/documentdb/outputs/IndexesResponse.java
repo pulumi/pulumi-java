@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexesResponse {
     /**
      * The datatype for which the indexing behavior is applied to.
@@ -28,11 +28,11 @@ public final class IndexesResponse {
      */
     private final @Nullable Integer precision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexesResponse(
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("precision") @Nullable Integer precision) {
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("precision") @Nullable Integer precision) {
         this.dataType = dataType;
         this.kind = kind;
         this.precision = precision;

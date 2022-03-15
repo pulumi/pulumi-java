@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * Name of the administrator user account which can be used to SSH to nodes.
      * 
      */
-    @InputImport(name="adminUserName", required=true)
+    @Import(name="adminUserName", required=true)
       private final Output<String> adminUserName;
 
     public Output<String> getAdminUserName() {
@@ -33,7 +33,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * Password of the administrator user account.
      * 
      */
-    @InputImport(name="adminUserPassword")
+    @Import(name="adminUserPassword")
       private final @Nullable Output<String> adminUserPassword;
 
     public Output<String> getAdminUserPassword() {
@@ -44,7 +44,7 @@ public final class UserAccountCredentialsArgs extends io.pulumi.resources.Resour
      * SSH public key of the administrator user account.
      * 
      */
-    @InputImport(name="adminUserSshPublicKey")
+    @Import(name="adminUserSshPublicKey")
       private final @Nullable Output<String> adminUserSshPublicKey;
 
     public Output<String> getAdminUserSshPublicKey() {

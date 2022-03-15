@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The key vault identifier used for encrypted workspaces.
      * 
      */
-    @InputImport(name="keyVaultIdentifierId")
+    @Import(name="keyVaultIdentifierId")
       private final @Nullable Output<String> keyVaultIdentifierId;
 
     public Output<String> getKeyVaultIdentifierId() {
@@ -30,7 +30,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The email id of the owner for this workspace.
      * 
      */
-    @InputImport(name="ownerEmail", required=true)
+    @Import(name="ownerEmail", required=true)
       private final Output<String> ownerEmail;
 
     public Output<String> getOwnerEmail() {
@@ -52,7 +52,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the machine learning workspace belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified arm id of the storage account associated with this workspace.
      * 
      */
-    @InputImport(name="userStorageAccountId", required=true)
+    @Import(name="userStorageAccountId", required=true)
       private final Output<String> userStorageAccountId;
 
     public Output<String> getUserStorageAccountId() {
@@ -85,7 +85,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the machine learning workspace.
      * 
      */
-    @InputImport(name="workspaceName")
+    @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

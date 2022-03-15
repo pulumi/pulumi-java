@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseArgs;
@@ -58,7 +58,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * error in any statement, the database is not created.
      * 
      */
-    @OutputExport(name="ddls", type=List.class, parameters={String.class})
+    @Export(name="ddls", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ddls;
 
     /**
@@ -76,7 +76,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * in state, a `destroy` or `update` that would delete the instance will fail.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -92,7 +92,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="encryptionConfig", type=DatabaseEncryptionConfig.class, parameters={})
+    @Export(name="encryptionConfig", type=DatabaseEncryptionConfig.class, parameters={})
     private Output</* @Nullable */ DatabaseEncryptionConfig> encryptionConfig;
 
     /**
@@ -107,7 +107,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The instance to create the database on.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -122,7 +122,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -153,7 +153,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * An explanation of the status of the database.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

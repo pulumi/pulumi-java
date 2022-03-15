@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PortResponse {
     /**
      * The port number.
@@ -23,10 +23,10 @@ public final class PortResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PortResponse(
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

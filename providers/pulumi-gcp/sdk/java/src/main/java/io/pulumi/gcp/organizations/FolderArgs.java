@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
      * A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
      * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

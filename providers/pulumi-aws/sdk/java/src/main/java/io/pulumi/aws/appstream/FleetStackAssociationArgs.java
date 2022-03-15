@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
      * Name of the fleet.
      * 
      */
-    @InputImport(name="fleetName", required=true)
+    @Import(name="fleetName", required=true)
       private final Output<String> fleetName;
 
     public Output<String> getFleetName() {
@@ -28,7 +28,7 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
      * Name of the stack.
      * 
      */
-    @InputImport(name="stackName", required=true)
+    @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
     public Output<String> getStackName() {

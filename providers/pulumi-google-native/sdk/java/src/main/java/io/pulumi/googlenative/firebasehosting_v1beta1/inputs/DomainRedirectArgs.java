@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.enums.DomainRedirectType;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name to redirect to.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -33,7 +33,7 @@ public final class DomainRedirectArgs extends io.pulumi.resources.ResourceArgs {
      * The redirect status code.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<DomainRedirectType> type;
 
     public Output<DomainRedirectType> getType() {

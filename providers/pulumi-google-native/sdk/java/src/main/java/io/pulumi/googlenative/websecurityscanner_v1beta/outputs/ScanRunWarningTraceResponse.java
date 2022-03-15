@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScanRunWarningTraceResponse {
     /**
      * Indicates the warning code.
@@ -15,8 +15,8 @@ public final class ScanRunWarningTraceResponse {
      */
     private final String code;
 
-    @OutputCustomType.Constructor
-    private ScanRunWarningTraceResponse(@OutputCustomType.Parameter("code") String code) {
+    @CustomType.Constructor
+    private ScanRunWarningTraceResponse(@CustomType.Parameter("code") String code) {
         this.code = code;
     }
 

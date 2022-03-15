@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
      * Memory in bytes
      * 
      */
-    @InputImport(name="memoryInBytes", required=true)
+    @Import(name="memoryInBytes", required=true)
       private final Double memoryInBytes;
 
     public Double getMemoryInBytes() {
@@ -33,7 +33,7 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
      * Processor count
      * 
      */
-    @InputImport(name="processorCount", required=true)
+    @Import(name="processorCount", required=true)
       private final Integer processorCount;
 
     public Integer getProcessorCount() {
@@ -44,7 +44,7 @@ public final class KubernetesRoleComputeResponse extends io.pulumi.resources.Inv
      * VM profile
      * 
      */
-    @InputImport(name="vmProfile", required=true)
+    @Import(name="vmProfile", required=true)
       private final String vmProfile;
 
     public String getVmProfile() {

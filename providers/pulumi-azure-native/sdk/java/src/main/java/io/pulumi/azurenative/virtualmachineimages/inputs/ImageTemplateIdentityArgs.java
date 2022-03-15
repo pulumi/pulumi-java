@@ -5,7 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ImageTemplateIdentityArgs extends io.pulumi.resources.Resourc
      * The type of identity used for the image template. The type 'None' will remove any identities from the image template.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> getType() {
@@ -36,7 +36,7 @@ public final class ImageTemplateIdentityArgs extends io.pulumi.resources.Resourc
      * The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

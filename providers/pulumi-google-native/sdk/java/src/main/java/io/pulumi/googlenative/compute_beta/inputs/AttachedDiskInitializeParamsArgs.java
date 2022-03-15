@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.AttachedDiskInitializeParamsOnUpdateAction;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyArgs;
 import io.pulumi.googlenative.compute_beta.inputs.GuestOsFeatureArgs;
@@ -28,7 +28,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * An optional description. Provide this property when creating the disk.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,7 +39,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
@@ -50,7 +50,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
@@ -61,7 +61,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Specifies the disk type to use to create the instance. If not specified, the default is pd-standard, specified using the full URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/pd-standard For a full list of acceptable values, see Persistent disk types. If you define this field, you can provide either the full or partial URL. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType - projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType Note that for InstanceTemplate, this is the name of the disk type, not URL.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
@@ -72,7 +72,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options. Guest OS features are applied by merging initializeParams.guestOsFeatures and disks.guestOsFeatures
      * 
      */
-    @InputImport(name="guestOsFeatures")
+    @Import(name="guestOsFeatures")
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
     public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
@@ -83,7 +83,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -94,7 +94,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * A list of publicly visible licenses. Reserved for Google's use.
      * 
      */
-    @InputImport(name="licenses")
+    @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
     public Output<List<String>> getLicenses() {
@@ -105,7 +105,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Indicates whether or not the disk can be read/write attached to more than one instance.
      * 
      */
-    @InputImport(name="multiWriter")
+    @Import(name="multiWriter")
       private final @Nullable Output<Boolean> multiWriter;
 
     public Output<Boolean> getMultiWriter() {
@@ -116,7 +116,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Specifies which action to take on instance update with this disk. Default is to use the existing disk.
      * 
      */
-    @InputImport(name="onUpdateAction")
+    @Import(name="onUpdateAction")
       private final @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
     public Output<AttachedDiskInitializeParamsOnUpdateAction> getOnUpdateAction() {
@@ -127,7 +127,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
      * 
      */
-    @InputImport(name="provisionedIops")
+    @Import(name="provisionedIops")
       private final @Nullable Output<String> provisionedIops;
 
     public Output<String> getProvisionedIops() {
@@ -138,7 +138,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.
      * 
      */
-    @InputImport(name="resourcePolicies")
+    @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
     public Output<List<String>> getResourcePolicies() {
@@ -149,7 +149,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * The source image to create this disk. When creating a new instance, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required except for local SSD. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family If the source image is deleted later, this field will not be set.
      * 
      */
-    @InputImport(name="sourceImage")
+    @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
     public Output<String> getSourceImage() {
@@ -160,7 +160,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Instance templates do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.
      * 
      */
-    @InputImport(name="sourceImageEncryptionKey")
+    @Import(name="sourceImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
@@ -171,7 +171,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * The source snapshot to create this disk. When creating a new instance, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required except for local SSD. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not be set.
      * 
      */
-    @InputImport(name="sourceSnapshot")
+    @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
     public Output<String> getSourceSnapshot() {
@@ -182,7 +182,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
      * The customer-supplied encryption key of the source snapshot.
      * 
      */
-    @InputImport(name="sourceSnapshotEncryptionKey")
+    @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {

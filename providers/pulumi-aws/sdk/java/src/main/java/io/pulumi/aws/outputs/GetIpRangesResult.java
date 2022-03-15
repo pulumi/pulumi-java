@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIpRangesResult {
     /**
      * The lexically ordered list of CIDR blocks.
@@ -43,16 +43,16 @@ public final class GetIpRangesResult {
     private final Integer syncToken;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIpRangesResult(
-        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
-        @OutputCustomType.Parameter("createDate") String createDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipv6CidrBlocks") List<String> ipv6CidrBlocks,
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
-        @OutputCustomType.Parameter("services") List<String> services,
-        @OutputCustomType.Parameter("syncToken") Integer syncToken,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @CustomType.Parameter("createDate") String createDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipv6CidrBlocks") List<String> ipv6CidrBlocks,
+        @CustomType.Parameter("regions") @Nullable List<String> regions,
+        @CustomType.Parameter("services") List<String> services,
+        @CustomType.Parameter("syncToken") Integer syncToken,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.cidrBlocks = cidrBlocks;
         this.createDate = createDate;
         this.id = id;

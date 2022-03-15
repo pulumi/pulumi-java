@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRule;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicySpec {
     /**
      * - 
@@ -42,13 +42,13 @@ public final class PolicySpec {
      */
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicySpec(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
-        @OutputCustomType.Parameter("reset") @Nullable Boolean reset,
-        @OutputCustomType.Parameter("rules") @Nullable List<PolicySpecRule> rules,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
+        @CustomType.Parameter("reset") @Nullable Boolean reset,
+        @CustomType.Parameter("rules") @Nullable List<PolicySpecRule> rules,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.etag = etag;
         this.inheritFromParent = inheritFromParent;
         this.reset = reset;

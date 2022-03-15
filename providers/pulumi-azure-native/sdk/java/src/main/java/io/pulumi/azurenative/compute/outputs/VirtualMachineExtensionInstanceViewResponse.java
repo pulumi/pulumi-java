@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineExtensionInstanceViewResponse {
     /**
      * The virtual machine extension name.
@@ -39,13 +39,13 @@ public final class VirtualMachineExtensionInstanceViewResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineExtensionInstanceViewResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("substatuses") @Nullable List<InstanceViewStatusResponse> substatuses,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("substatuses") @Nullable List<InstanceViewStatusResponse> substatuses,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.name = name;
         this.statuses = statuses;
         this.substatuses = substatuses;

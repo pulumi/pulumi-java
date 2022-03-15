@@ -13,7 +13,7 @@ import io.pulumi.aws.ec2.inputs.SpotInstanceRequestMetadataOptionsGetArgs;
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestNetworkInterfaceGetArgs;
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestRootBlockDeviceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,14 +31,14 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * AMI to use for the instance. Required unless `launch_template` is specified and the Launch Template specifes an AMI. If an AMI is specified in the Launch Template, setting `ami` will override the AMI specified in the Launch Template.
      * 
      */
-    @InputImport(name="ami")
+    @Import(name="ami")
       private final @Nullable Output<String> ami;
 
     public Output<String> getAmi() {
         return this.ami == null ? Output.empty() : this.ami;
     }
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -49,7 +49,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Whether to associate a public IP address with an instance in a VPC.
      * 
      */
-    @InputImport(name="associatePublicIpAddress")
+    @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
     public Output<Boolean> getAssociatePublicIpAddress() {
@@ -60,7 +60,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * AZ to start the instance in.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -73,7 +73,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
      * 
      */
-    @InputImport(name="blockDurationMinutes")
+    @Import(name="blockDurationMinutes")
       private final @Nullable Output<Integer> blockDurationMinutes;
 
     public Output<Integer> getBlockDurationMinutes() {
@@ -84,7 +84,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Describes an instance's Capacity Reservation targeting option. See Capacity Reservation Specification below for more details.
      * 
      */
-    @InputImport(name="capacityReservationSpecification")
+    @Import(name="capacityReservationSpecification")
       private final @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
     public Output<SpotInstanceRequestCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
@@ -95,7 +95,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
      * 
      */
-    @InputImport(name="cpuCoreCount")
+    @Import(name="cpuCoreCount")
       private final @Nullable Output<Integer> cpuCoreCount;
 
     public Output<Integer> getCpuCoreCount() {
@@ -106,7 +106,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
      * 
      */
-    @InputImport(name="cpuThreadsPerCore")
+    @Import(name="cpuThreadsPerCore")
       private final @Nullable Output<Integer> cpuThreadsPerCore;
 
     public Output<Integer> getCpuThreadsPerCore() {
@@ -117,7 +117,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
      * 
      */
-    @InputImport(name="creditSpecification")
+    @Import(name="creditSpecification")
       private final @Nullable Output<SpotInstanceRequestCreditSpecificationGetArgs> creditSpecification;
 
     public Output<SpotInstanceRequestCreditSpecificationGetArgs> getCreditSpecification() {
@@ -128,7 +128,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
      * 
      */
-    @InputImport(name="disableApiTermination")
+    @Import(name="disableApiTermination")
       private final @Nullable Output<Boolean> disableApiTermination;
 
     public Output<Boolean> getDisableApiTermination() {
@@ -139,7 +139,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Output<List<SpotInstanceRequestEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
@@ -150,7 +150,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
@@ -161,7 +161,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    @InputImport(name="enclaveOptions")
+    @Import(name="enclaveOptions")
       private final @Nullable Output<SpotInstanceRequestEnclaveOptionsGetArgs> enclaveOptions;
 
     public Output<SpotInstanceRequestEnclaveOptionsGetArgs> getEnclaveOptions() {
@@ -172,7 +172,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Output<List<SpotInstanceRequestEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
@@ -183,7 +183,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
      * 
      */
-    @InputImport(name="getPasswordData")
+    @Import(name="getPasswordData")
       private final @Nullable Output<Boolean> getPasswordData;
 
     public Output<Boolean> getGetPasswordData() {
@@ -194,7 +194,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If true, the launched EC2 instance will support hibernation.
      * 
      */
-    @InputImport(name="hibernation")
+    @Import(name="hibernation")
       private final @Nullable Output<Boolean> hibernation;
 
     public Output<Boolean> getHibernation() {
@@ -205,7 +205,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
      * 
      */
-    @InputImport(name="hostId")
+    @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
@@ -216,7 +216,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
      * 
      */
-    @InputImport(name="iamInstanceProfile")
+    @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
     public Output<String> getIamInstanceProfile() {
@@ -227,7 +227,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
      * 
      */
-    @InputImport(name="instanceInitiatedShutdownBehavior")
+    @Import(name="instanceInitiatedShutdownBehavior")
       private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
     public Output<String> getInstanceInitiatedShutdownBehavior() {
@@ -238,7 +238,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Indicates Spot instance behavior when it is interrupted. Valid values are `terminate`, `stop`, or `hibernate`. Default value is `terminate`.
      * 
      */
-    @InputImport(name="instanceInterruptionBehavior")
+    @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
     public Output<String> getInstanceInterruptionBehavior() {
@@ -253,7 +253,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * 
      */
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
-    @InputImport(name="instanceInterruptionBehaviour")
+    @Import(name="instanceInterruptionBehaviour")
       private final @Nullable Output<String> instanceInterruptionBehaviour;
 
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
@@ -261,7 +261,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
         return this.instanceInterruptionBehaviour == null ? Output.empty() : this.instanceInterruptionBehaviour;
     }
 
-    @InputImport(name="instanceState")
+    @Import(name="instanceState")
       private final @Nullable Output<String> instanceState;
 
     public Output<String> getInstanceState() {
@@ -272,7 +272,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * The instance type to use for the instance. Updates to this field will trigger a stop/start of the EC2 instance.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -283,7 +283,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
      * 
      */
-    @InputImport(name="ipv6AddressCount")
+    @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
     public Output<Integer> getIpv6AddressCount() {
@@ -294,7 +294,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
      * 
      */
-    @InputImport(name="ipv6Addresses")
+    @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
@@ -305,7 +305,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -317,7 +317,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If left empty instances are launched and terminated individually.
      * 
      */
-    @InputImport(name="launchGroup")
+    @Import(name="launchGroup")
       private final @Nullable Output<String> launchGroup;
 
     public Output<String> getLaunchGroup() {
@@ -329,7 +329,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * See Launch Template Specification below for more details.
      * 
      */
-    @InputImport(name="launchTemplate")
+    @Import(name="launchTemplate")
       private final @Nullable Output<SpotInstanceRequestLaunchTemplateGetArgs> launchTemplate;
 
     public Output<SpotInstanceRequestLaunchTemplateGetArgs> getLaunchTemplate() {
@@ -340,7 +340,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Customize the metadata options of the instance. See Metadata Options below for more details.
      * 
      */
-    @InputImport(name="metadataOptions")
+    @Import(name="metadataOptions")
       private final @Nullable Output<SpotInstanceRequestMetadataOptionsGetArgs> metadataOptions;
 
     public Output<SpotInstanceRequestMetadataOptionsGetArgs> getMetadataOptions() {
@@ -351,7 +351,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
      * 
      */
-    @InputImport(name="monitoring")
+    @Import(name="monitoring")
       private final @Nullable Output<Boolean> monitoring;
 
     public Output<Boolean> getMonitoring() {
@@ -362,21 +362,21 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<SpotInstanceRequestNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Output<List<SpotInstanceRequestNetworkInterfaceGetArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
         return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
-    @InputImport(name="passwordData")
+    @Import(name="passwordData")
       private final @Nullable Output<String> passwordData;
 
     public Output<String> getPasswordData() {
@@ -387,7 +387,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Placement Group to start the instance in.
      * 
      */
-    @InputImport(name="placementGroup")
+    @Import(name="placementGroup")
       private final @Nullable Output<String> placementGroup;
 
     public Output<String> getPlacementGroup() {
@@ -398,14 +398,14 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * The number of the partition the instance is in. Valid only if the `aws.ec2.PlacementGroup` resource's `strategy` argument is set to `"partition"`.
      * 
      */
-    @InputImport(name="placementPartitionNumber")
+    @Import(name="placementPartitionNumber")
       private final @Nullable Output<Integer> placementPartitionNumber;
 
     public Output<Integer> getPlacementPartitionNumber() {
         return this.placementPartitionNumber == null ? Output.empty() : this.placementPartitionNumber;
     }
 
-    @InputImport(name="primaryNetworkInterfaceId")
+    @Import(name="primaryNetworkInterfaceId")
       private final @Nullable Output<String> primaryNetworkInterfaceId;
 
     public Output<String> getPrimaryNetworkInterfaceId() {
@@ -418,7 +418,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * for your VPC
      * 
      */
-    @InputImport(name="privateDns")
+    @Import(name="privateDns")
       private final @Nullable Output<String> privateDns;
 
     public Output<String> getPrivateDns() {
@@ -429,7 +429,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Private IP address to associate with the instance in a VPC.
      * 
      */
-    @InputImport(name="privateIp")
+    @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
@@ -441,7 +441,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * is only available if you've enabled DNS hostnames for your VPC
      * 
      */
-    @InputImport(name="publicDns")
+    @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
     public Output<String> getPublicDns() {
@@ -452,7 +452,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * The public IP address assigned to the instance, if applicable.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
     public Output<String> getPublicIp() {
@@ -463,7 +463,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
      * 
      */
-    @InputImport(name="rootBlockDevice")
+    @Import(name="rootBlockDevice")
       private final @Nullable Output<SpotInstanceRequestRootBlockDeviceGetArgs> rootBlockDevice;
 
     public Output<SpotInstanceRequestRootBlockDeviceGetArgs> getRootBlockDevice() {
@@ -474,7 +474,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e., referenced in a `network_interface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
      * 
      */
-    @InputImport(name="secondaryPrivateIps")
+    @Import(name="secondaryPrivateIps")
       private final @Nullable Output<List<String>> secondaryPrivateIps;
 
     public Output<List<String>> getSecondaryPrivateIps() {
@@ -485,7 +485,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A list of security group names to associate with.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -496,7 +496,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
      * 
      */
-    @InputImport(name="sourceDestCheck")
+    @Import(name="sourceDestCheck")
       private final @Nullable Output<Boolean> sourceDestCheck;
 
     public Output<Boolean> getSourceDestCheck() {
@@ -512,7 +512,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      *   of the Spot Instance Request.
      * 
      */
-    @InputImport(name="spotBidStatus")
+    @Import(name="spotBidStatus")
       private final @Nullable Output<String> spotBidStatus;
 
     public Output<String> getSpotBidStatus() {
@@ -524,7 +524,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * the Spot Instance request.
      * 
      */
-    @InputImport(name="spotInstanceId")
+    @Import(name="spotInstanceId")
       private final @Nullable Output<String> spotInstanceId;
 
     public Output<String> getSpotInstanceId() {
@@ -535,14 +535,14 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * The maximum price to request on the spot market.
      * 
      */
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
         return this.spotPrice == null ? Output.empty() : this.spotPrice;
     }
 
-    @InputImport(name="spotRequestState")
+    @Import(name="spotRequestState")
       private final @Nullable Output<String> spotRequestState;
 
     public Output<String> getSpotRequestState() {
@@ -554,7 +554,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * the instance is terminated, the spot request will be closed.
      * 
      */
-    @InputImport(name="spotType")
+    @Import(name="spotType")
       private final @Nullable Output<String> spotType;
 
     public Output<String> getSpotType() {
@@ -565,7 +565,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * VPC Subnet ID to launch in.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -576,7 +576,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -587,7 +587,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -598,7 +598,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
      * 
      */
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable Output<String> tenancy;
 
     public Output<String> getTenancy() {
@@ -609,7 +609,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
@@ -620,7 +620,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
      * 
      */
-    @InputImport(name="userDataBase64")
+    @Import(name="userDataBase64")
       private final @Nullable Output<String> userDataBase64;
 
     public Output<String> getUserDataBase64() {
@@ -631,7 +631,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
      * 
      */
-    @InputImport(name="validFrom")
+    @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
     public Output<String> getValidFrom() {
@@ -642,7 +642,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
      * 
      */
-    @InputImport(name="validUntil")
+    @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {
@@ -653,7 +653,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A map of tags to assign, at instance-creation time, to root and EBS volumes.
      * 
      */
-    @InputImport(name="volumeTags")
+    @Import(name="volumeTags")
       private final @Nullable Output<Map<String,String>> volumeTags;
 
     public Output<Map<String,String>> getVolumeTags() {
@@ -664,7 +664,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * A list of security group IDs to associate with.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
@@ -677,7 +677,7 @@ public final class SpotInstanceRequestState extends io.pulumi.resources.Resource
      * timeout of 10m is reached.
      * 
      */
-    @InputImport(name="waitForFulfillment")
+    @Import(name="waitForFulfillment")
       private final @Nullable Output<Boolean> waitForFulfillment;
 
     public Output<Boolean> getWaitForFulfillment() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionCustomErrorResponse {
     private final @Nullable Double errorCachingMinTTL;
     private final Integer errorCode;
     private final @Nullable Integer responseCode;
     private final @Nullable String responsePagePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionCustomErrorResponse(
-        @OutputCustomType.Parameter("errorCachingMinTTL") @Nullable Double errorCachingMinTTL,
-        @OutputCustomType.Parameter("errorCode") Integer errorCode,
-        @OutputCustomType.Parameter("responseCode") @Nullable Integer responseCode,
-        @OutputCustomType.Parameter("responsePagePath") @Nullable String responsePagePath) {
+        @CustomType.Parameter("errorCachingMinTTL") @Nullable Double errorCachingMinTTL,
+        @CustomType.Parameter("errorCode") Integer errorCode,
+        @CustomType.Parameter("responseCode") @Nullable Integer responseCode,
+        @CustomType.Parameter("responsePagePath") @Nullable String responsePagePath) {
         this.errorCachingMinTTL = errorCachingMinTTL;
         this.errorCode = errorCode;
         this.responseCode = responseCode;

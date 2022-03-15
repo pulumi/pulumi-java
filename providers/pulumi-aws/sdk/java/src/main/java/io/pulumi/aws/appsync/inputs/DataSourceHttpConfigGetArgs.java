@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
      * The authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.
      * 
      */
-    @InputImport(name="authorizationConfig")
+    @Import(name="authorizationConfig")
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
 
     public Output<DataSourceHttpConfigAuthorizationConfigGetArgs> getAuthorizationConfig() {
@@ -30,7 +30,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
      * HTTP URL.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
     public Output<String> getEndpoint() {

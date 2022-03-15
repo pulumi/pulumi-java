@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepRunScriptInterpreter;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
      */
-    @InputImport(name="allowedExitCodes")
+    @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
     public Output<List<Integer>> getAllowedExitCodes() {
@@ -36,7 +36,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
      * The script interpreter to use to run the script. If no interpreter is specified the script is executed directly, which likely only succeed for scripts with [shebang lines](<https://en.wikipedia.org/wiki/Shebang_\(Unix\)>).
      * 
      */
-    @InputImport(name="interpreter")
+    @Import(name="interpreter")
       private final @Nullable Output<SoftwareRecipeStepRunScriptInterpreter> interpreter;
 
     public Output<SoftwareRecipeStepRunScriptInterpreter> getInterpreter() {
@@ -47,7 +47,7 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
      * The shell script to be executed.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final Output<String> script;
 
     public Output<String> getScript() {

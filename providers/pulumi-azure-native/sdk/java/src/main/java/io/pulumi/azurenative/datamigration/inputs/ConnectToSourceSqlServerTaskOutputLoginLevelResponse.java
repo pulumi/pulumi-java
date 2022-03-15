@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrationEligibilityInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * The default database for the login.
      * 
      */
-    @InputImport(name="defaultDatabase", required=true)
+    @Import(name="defaultDatabase", required=true)
       private final String defaultDatabase;
 
     public String getDefaultDatabase() {
@@ -33,7 +33,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -44,7 +44,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * The state of the login.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -55,7 +55,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * The type of login.
      * 
      */
-    @InputImport(name="loginType", required=true)
+    @Import(name="loginType", required=true)
       private final String loginType;
 
     public String getLoginType() {
@@ -66,7 +66,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * Information about eligibility of login for migration.
      * 
      */
-    @InputImport(name="migrationEligibility", required=true)
+    @Import(name="migrationEligibility", required=true)
       private final MigrationEligibilityInfoResponse migrationEligibility;
 
     public MigrationEligibilityInfoResponse getMigrationEligibility() {
@@ -77,7 +77,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * Login name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -89,7 +89,7 @@ public final class ConnectToSourceSqlServerTaskOutputLoginLevelResponse extends 
      * Expected value is 'LoginLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {

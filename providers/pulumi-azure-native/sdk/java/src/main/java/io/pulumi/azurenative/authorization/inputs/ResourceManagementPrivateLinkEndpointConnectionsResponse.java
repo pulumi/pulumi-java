@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse exte
      * The private endpoint connections.
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable List<String> privateEndpointConnections;
 
     public List<String> getPrivateEndpointConnections() {

@@ -5,12 +5,12 @@ package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelEvent;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelTransitionEvent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelOnInput {
     /**
      * Specifies the `actions` performed when the `condition` evaluates to `TRUE`.
@@ -23,10 +23,10 @@ public final class DetectorModelOnInput {
      */
     private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelOnInput(
-        @OutputCustomType.Parameter("events") @Nullable List<DetectorModelEvent> events,
-        @OutputCustomType.Parameter("transitionEvents") @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
+        @CustomType.Parameter("events") @Nullable List<DetectorModelEvent> events,
+        @CustomType.Parameter("transitionEvents") @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
         this.events = events;
         this.transitionEvents = transitionEvents;
     }

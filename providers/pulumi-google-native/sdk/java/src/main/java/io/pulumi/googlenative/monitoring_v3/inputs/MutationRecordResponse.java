@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
      * When the change occurred.
      * 
      */
-    @InputImport(name="mutateTime", required=true)
+    @Import(name="mutateTime", required=true)
       private final String mutateTime;
 
     public String getMutateTime() {
@@ -31,7 +31,7 @@ public final class MutationRecordResponse extends io.pulumi.resources.InvokeArgs
      * The email address of the user making the change.
      * 
      */
-    @InputImport(name="mutatedBy", required=true)
+    @Import(name="mutatedBy", required=true)
       private final String mutatedBy;
 
     public String getMutatedBy() {

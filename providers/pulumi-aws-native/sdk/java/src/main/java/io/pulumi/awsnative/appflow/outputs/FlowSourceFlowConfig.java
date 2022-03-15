@@ -6,13 +6,13 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.outputs.FlowIncrementalPullConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowSourceConnectorProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSourceFlowConfig {
     /**
      * Name of source connector profile
@@ -35,12 +35,12 @@ public final class FlowSourceFlowConfig {
      */
     private final FlowSourceConnectorProperties sourceConnectorProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowSourceFlowConfig(
-        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
-        @OutputCustomType.Parameter("connectorType") FlowConnectorType connectorType,
-        @OutputCustomType.Parameter("incrementalPullConfig") @Nullable FlowIncrementalPullConfig incrementalPullConfig,
-        @OutputCustomType.Parameter("sourceConnectorProperties") FlowSourceConnectorProperties sourceConnectorProperties) {
+        @CustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @CustomType.Parameter("connectorType") FlowConnectorType connectorType,
+        @CustomType.Parameter("incrementalPullConfig") @Nullable FlowIncrementalPullConfig incrementalPullConfig,
+        @CustomType.Parameter("sourceConnectorProperties") FlowSourceConnectorProperties sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.incrementalPullConfig = incrementalPullConfig;

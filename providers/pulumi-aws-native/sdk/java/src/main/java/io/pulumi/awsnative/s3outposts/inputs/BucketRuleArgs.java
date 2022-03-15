@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3outposts.enums.BucketRuleStatus;
 import io.pulumi.awsnative.s3outposts.inputs.BucketAbortIncompleteMultipartUploadArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketRuleFilterPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
      * 
      */
-    @InputImport(name="abortIncompleteMultipartUpload")
+    @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
     public Output<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
@@ -37,7 +37,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates when objects are deleted from Amazon S3Outposts. The date value must be in ISO 8601 format. The time is always midnight UTC.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -48,7 +48,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the number of days after creation when objects are deleted from Amazon S3Outposts.
      * 
      */
-    @InputImport(name="expirationInDays")
+    @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
     public Output<Integer> getExpirationInDays() {
@@ -59,7 +59,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The container for the filter of the lifecycle rule.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketRuleFilterPropertiesArgs> filter;
 
     public Output<BucketRuleFilterPropertiesArgs> getFilter() {
@@ -70,14 +70,14 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier for the lifecycle rule. The value can't be longer than 255 characters.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<BucketRuleStatus> status;
 
     public Output<BucketRuleStatus> getStatus() {

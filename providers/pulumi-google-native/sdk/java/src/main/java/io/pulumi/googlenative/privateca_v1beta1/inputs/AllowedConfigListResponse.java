@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperResponse;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class AllowedConfigListResponse extends io.pulumi.resources.InvokeA
      * All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper. If a ReusableConfigWrapper has an empty field, any value will be allowed for that field.
      * 
      */
-    @InputImport(name="allowedConfigValues", required=true)
+    @Import(name="allowedConfigValues", required=true)
       private final List<ReusableConfigWrapperResponse> allowedConfigValues;
 
     public List<ReusableConfigWrapperResponse> getAllowedConfigValues() {

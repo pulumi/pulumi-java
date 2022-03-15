@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateSharedImageVersionSourceResponse {
     /**
      * ARM resource id of the image version in the shared image gallery
@@ -21,10 +21,10 @@ public final class ImageTemplateSharedImageVersionSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateSharedImageVersionSourceResponse(
-        @OutputCustomType.Parameter("imageVersionId") String imageVersionId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("imageVersionId") String imageVersionId,
+        @CustomType.Parameter("type") String type) {
         this.imageVersionId = imageVersionId;
         this.type = type;
     }

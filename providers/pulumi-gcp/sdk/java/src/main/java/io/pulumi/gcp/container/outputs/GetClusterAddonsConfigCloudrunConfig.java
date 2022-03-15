@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterAddonsConfigCloudrunConfig {
     private final Boolean disabled;
     private final String loadBalancerType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterAddonsConfigCloudrunConfig(
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType) {
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("loadBalancerType") String loadBalancerType) {
         this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }

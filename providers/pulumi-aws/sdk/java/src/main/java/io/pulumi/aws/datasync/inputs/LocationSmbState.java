@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.aws.datasync.inputs.LocationSmbMountOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @InputImport(name="agentArns")
+    @Import(name="agentArns")
       private final @Nullable Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -32,7 +32,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * The name of the Windows domain the SMB server belongs to.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -54,7 +54,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<LocationSmbMountOptionsGetArgs> mountOptions;
 
     public Output<LocationSmbMountOptionsGetArgs> getMountOptions() {
@@ -65,7 +65,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * The password of the user who can mount the share and has file permissions in the SMB.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -76,7 +76,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
      * 
      */
-    @InputImport(name="serverHostname")
+    @Import(name="serverHostname")
       private final @Nullable Output<String> serverHostname;
 
     public Output<String> getServerHostname() {
@@ -87,7 +87,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -98,7 +98,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,14 +109,14 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
@@ -127,7 +127,7 @@ public final class LocationSmbState extends io.pulumi.resources.ResourceArgs {
      * The user who can mount the share and has file and folder permissions in the SMB share.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

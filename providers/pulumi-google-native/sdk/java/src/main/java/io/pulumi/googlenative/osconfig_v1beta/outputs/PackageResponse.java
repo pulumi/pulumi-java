@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageResponse {
     /**
      * The desired_state the agent should maintain for this package. The default is to ensure the package is installed.
@@ -25,11 +25,11 @@ public final class PackageResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageResponse(
-        @OutputCustomType.Parameter("desiredState") String desiredState,
-        @OutputCustomType.Parameter("manager") String manager,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("desiredState") String desiredState,
+        @CustomType.Parameter("manager") String manager,
+        @CustomType.Parameter("name") String name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = name;

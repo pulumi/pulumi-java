@@ -9,7 +9,7 @@ import io.pulumi.awsnative.connect.enums.ContactFlowModuleState;
 import io.pulumi.awsnative.connect.enums.ContactFlowModuleStatus;
 import io.pulumi.awsnative.connect.outputs.ContactFlowModuleTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The identifier of the contact flow module (ARN).
      * 
      */
-    @OutputExport(name="contactFlowModuleArn", type=String.class, parameters={})
+    @Export(name="contactFlowModuleArn", type=String.class, parameters={})
     private Output<String> contactFlowModuleArn;
 
     /**
@@ -41,7 +41,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The content of the contact flow module in JSON format.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output<String> content;
 
     /**
@@ -55,7 +55,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The description of the contact flow module.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -69,7 +69,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The identifier of the Amazon Connect instance (ARN).
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -83,7 +83,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The name of the contact flow module.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The state of the contact flow module.
      * 
      */
-    @OutputExport(name="state", type=ContactFlowModuleState.class, parameters={})
+    @Export(name="state", type=ContactFlowModuleState.class, parameters={})
     private Output</* @Nullable */ ContactFlowModuleState> state;
 
     /**
@@ -111,7 +111,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * The status of the contact flow module.
      * 
      */
-    @OutputExport(name="status", type=ContactFlowModuleStatus.class, parameters={})
+    @Export(name="status", type=ContactFlowModuleStatus.class, parameters={})
     private Output<ContactFlowModuleStatus> status;
 
     /**
@@ -125,7 +125,7 @@ public class ContactFlowModule extends io.pulumi.resources.CustomResource {
      * One or more tags.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ContactFlowModuleTag.class})
+    @Export(name="tags", type=List.class, parameters={ContactFlowModuleTag.class})
     private Output</* @Nullable */ List<ContactFlowModuleTag>> tags;
 
     /**

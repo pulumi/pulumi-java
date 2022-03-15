@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1DatabaseTableSpecType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
      * Type of this table.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
     public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> getType() {

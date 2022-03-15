@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.RevisionTemplateArgs;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Template holds the latest specification for the Revision to be stamped out.
      * 
      */
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<RevisionTemplateArgs> template;
 
     public Output<RevisionTemplateArgs> getTemplate() {
@@ -35,7 +35,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations.
      * 
      */
-    @InputImport(name="traffic")
+    @Import(name="traffic")
       private final @Nullable Output<List<TrafficTargetArgs>> traffic;
 
     public Output<List<TrafficTargetArgs>> getTraffic() {

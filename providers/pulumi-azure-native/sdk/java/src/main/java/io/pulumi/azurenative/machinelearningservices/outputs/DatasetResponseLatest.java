@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseDataPath;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.UserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetResponseLatest {
     /**
      * User who created.
@@ -108,26 +108,26 @@ public final class DatasetResponseLatest {
      */
     private final String versionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetResponseLatest(
-        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("dataPath") @Nullable DatasetResponseDataPath dataPath,
-        @OutputCustomType.Parameter("dataflow") String dataflow,
-        @OutputCustomType.Parameter("datasetDefinitionState") @Nullable DatasetStateResponse datasetDefinitionState,
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("fileType") String fileType,
-        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
-        @OutputCustomType.Parameter("notes") String notes,
-        @OutputCustomType.Parameter("partitionFormatInPath") Boolean partitionFormatInPath,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties,
-        @OutputCustomType.Parameter("savedDatasetId") String savedDatasetId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("telemetryInfo") Map<String,String> telemetryInfo,
-        @OutputCustomType.Parameter("useDescriptionTagsFromDefinition") Boolean useDescriptionTagsFromDefinition,
-        @OutputCustomType.Parameter("versionId") String versionId) {
+        @CustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("dataPath") @Nullable DatasetResponseDataPath dataPath,
+        @CustomType.Parameter("dataflow") String dataflow,
+        @CustomType.Parameter("datasetDefinitionState") @Nullable DatasetStateResponse datasetDefinitionState,
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("fileType") String fileType,
+        @CustomType.Parameter("modifiedTime") String modifiedTime,
+        @CustomType.Parameter("notes") String notes,
+        @CustomType.Parameter("partitionFormatInPath") Boolean partitionFormatInPath,
+        @CustomType.Parameter("properties") @Nullable Map<String,Object> properties,
+        @CustomType.Parameter("savedDatasetId") String savedDatasetId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("telemetryInfo") Map<String,String> telemetryInfo,
+        @CustomType.Parameter("useDescriptionTagsFromDefinition") Boolean useDescriptionTagsFromDefinition,
+        @CustomType.Parameter("versionId") String versionId) {
         this.createdBy = createdBy;
         this.createdTime = createdTime;
         this.dataPath = dataPath;

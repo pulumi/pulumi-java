@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeConfigSource;
 import io.pulumi.kubernetes.core_v1.outputs.Taint;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeSpec {
     /**
      * Deprecated. If specified, the source of the node's configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
@@ -51,15 +51,15 @@ public final class NodeSpec {
      */
     private final @Nullable Boolean unschedulable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeSpec(
-        @OutputCustomType.Parameter("configSource") @Nullable NodeConfigSource configSource,
-        @OutputCustomType.Parameter("externalID") @Nullable String externalID,
-        @OutputCustomType.Parameter("podCIDR") @Nullable String podCIDR,
-        @OutputCustomType.Parameter("podCIDRs") @Nullable List<String> podCIDRs,
-        @OutputCustomType.Parameter("providerID") @Nullable String providerID,
-        @OutputCustomType.Parameter("taints") @Nullable List<Taint> taints,
-        @OutputCustomType.Parameter("unschedulable") @Nullable Boolean unschedulable) {
+        @CustomType.Parameter("configSource") @Nullable NodeConfigSource configSource,
+        @CustomType.Parameter("externalID") @Nullable String externalID,
+        @CustomType.Parameter("podCIDR") @Nullable String podCIDR,
+        @CustomType.Parameter("podCIDRs") @Nullable List<String> podCIDRs,
+        @CustomType.Parameter("providerID") @Nullable String providerID,
+        @CustomType.Parameter("taints") @Nullable List<Taint> taints,
+        @CustomType.Parameter("unschedulable") @Nullable Boolean unschedulable) {
         this.configSource = configSource;
         this.externalID = externalID;
         this.podCIDR = podCIDR;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.azurenative.resources.outputs.TemplateSpecVersionInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * Template Spec description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * Template Spec display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * The location of the Template Spec. It cannot be changed after Template Spec creation. It must be one of the supported Azure locations.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * The Template Spec metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -94,7 +94,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -150,7 +150,7 @@ public class TemplateSpec extends io.pulumi.resources.CustomResource {
      * High-level information about the versions within this Template Spec. The keys are the version names. Only populated if the $expand query parameter is set to 'versions'.
      * 
      */
-    @OutputExport(name="versions", type=Map.class, parameters={String.class, TemplateSpecVersionInfoResponse.class})
+    @Export(name="versions", type=Map.class, parameters={String.class, TemplateSpecVersionInfoResponse.class})
     private Output<Map<String,TemplateSpecVersionInfoResponse>> versions;
 
     /**

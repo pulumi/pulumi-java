@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityGroupIngress {
     /**
      * List of CIDR blocks.
@@ -60,17 +60,17 @@ public final class SecurityGroupIngress {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityGroupIngress(
-        @OutputCustomType.Parameter("cidrBlocks") @Nullable List<String> cidrBlocks,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
-        @OutputCustomType.Parameter("prefixListIds") @Nullable List<String> prefixListIds,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("self") @Nullable Boolean self,
-        @OutputCustomType.Parameter("toPort") Integer toPort) {
+        @CustomType.Parameter("cidrBlocks") @Nullable List<String> cidrBlocks,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @CustomType.Parameter("prefixListIds") @Nullable List<String> prefixListIds,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("self") @Nullable Boolean self,
+        @CustomType.Parameter("toPort") Integer toPort) {
         this.cidrBlocks = cidrBlocks;
         this.description = description;
         this.fromPort = fromPort;

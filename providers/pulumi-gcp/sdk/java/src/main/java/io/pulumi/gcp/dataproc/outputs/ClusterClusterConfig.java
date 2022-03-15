@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigAutoscalingConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEncryptionConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEndpointConfig;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfig {
     /**
      * The autoscaling policy config associated with the cluster.
@@ -121,23 +121,23 @@ public final class ClusterClusterConfig {
      */
     private final @Nullable ClusterClusterConfigWorkerConfig workerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfig(
-        @OutputCustomType.Parameter("autoscalingConfig") @Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig,
-        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
-        @OutputCustomType.Parameter("encryptionConfig") @Nullable ClusterClusterConfigEncryptionConfig encryptionConfig,
-        @OutputCustomType.Parameter("endpointConfig") @Nullable ClusterClusterConfigEndpointConfig endpointConfig,
-        @OutputCustomType.Parameter("gceClusterConfig") @Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig,
-        @OutputCustomType.Parameter("initializationActions") @Nullable List<ClusterClusterConfigInitializationAction> initializationActions,
-        @OutputCustomType.Parameter("lifecycleConfig") @Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig,
-        @OutputCustomType.Parameter("masterConfig") @Nullable ClusterClusterConfigMasterConfig masterConfig,
-        @OutputCustomType.Parameter("metastoreConfig") @Nullable ClusterClusterConfigMetastoreConfig metastoreConfig,
-        @OutputCustomType.Parameter("preemptibleWorkerConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig,
-        @OutputCustomType.Parameter("securityConfig") @Nullable ClusterClusterConfigSecurityConfig securityConfig,
-        @OutputCustomType.Parameter("softwareConfig") @Nullable ClusterClusterConfigSoftwareConfig softwareConfig,
-        @OutputCustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
-        @OutputCustomType.Parameter("tempBucket") @Nullable String tempBucket,
-        @OutputCustomType.Parameter("workerConfig") @Nullable ClusterClusterConfigWorkerConfig workerConfig) {
+        @CustomType.Parameter("autoscalingConfig") @Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig,
+        @CustomType.Parameter("bucket") @Nullable String bucket,
+        @CustomType.Parameter("encryptionConfig") @Nullable ClusterClusterConfigEncryptionConfig encryptionConfig,
+        @CustomType.Parameter("endpointConfig") @Nullable ClusterClusterConfigEndpointConfig endpointConfig,
+        @CustomType.Parameter("gceClusterConfig") @Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig,
+        @CustomType.Parameter("initializationActions") @Nullable List<ClusterClusterConfigInitializationAction> initializationActions,
+        @CustomType.Parameter("lifecycleConfig") @Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig,
+        @CustomType.Parameter("masterConfig") @Nullable ClusterClusterConfigMasterConfig masterConfig,
+        @CustomType.Parameter("metastoreConfig") @Nullable ClusterClusterConfigMetastoreConfig metastoreConfig,
+        @CustomType.Parameter("preemptibleWorkerConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig,
+        @CustomType.Parameter("securityConfig") @Nullable ClusterClusterConfigSecurityConfig securityConfig,
+        @CustomType.Parameter("softwareConfig") @Nullable ClusterClusterConfigSoftwareConfig softwareConfig,
+        @CustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
+        @CustomType.Parameter("tempBucket") @Nullable String tempBucket,
+        @CustomType.Parameter("workerConfig") @Nullable ClusterClusterConfigWorkerConfig workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.bucket = bucket;
         this.encryptionConfig = encryptionConfig;

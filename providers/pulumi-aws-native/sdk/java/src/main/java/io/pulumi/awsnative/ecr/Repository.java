@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ecr.outputs.RepositoryImageScanningConfiguration;
 import io.pulumi.awsnative.ecr.outputs.RepositoryLifecyclePolicy;
 import io.pulumi.awsnative.ecr.outputs.RepositoryTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -26,19 +26,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ecr:Repository")
 public class Repository extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="encryptionConfiguration", type=RepositoryEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=RepositoryEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ RepositoryEncryptionConfiguration> encryptionConfiguration;
 
     public Output</* @Nullable */ RepositoryEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration;
     }
-    @OutputExport(name="imageScanningConfiguration", type=RepositoryImageScanningConfiguration.class, parameters={})
+    @Export(name="imageScanningConfiguration", type=RepositoryImageScanningConfiguration.class, parameters={})
     private Output</* @Nullable */ RepositoryImageScanningConfiguration> imageScanningConfiguration;
 
     public Output</* @Nullable */ RepositoryImageScanningConfiguration> getImageScanningConfiguration() {
@@ -48,7 +48,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The image tag mutability setting for the repository.
      * 
      */
-    @OutputExport(name="imageTagMutability", type=RepositoryImageTagMutability.class, parameters={})
+    @Export(name="imageTagMutability", type=RepositoryImageTagMutability.class, parameters={})
     private Output</* @Nullable */ RepositoryImageTagMutability> imageTagMutability;
 
     /**
@@ -58,7 +58,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ RepositoryImageTagMutability> getImageTagMutability() {
         return this.imageTagMutability;
     }
-    @OutputExport(name="lifecyclePolicy", type=RepositoryLifecyclePolicy.class, parameters={})
+    @Export(name="lifecyclePolicy", type=RepositoryLifecyclePolicy.class, parameters={})
     private Output</* @Nullable */ RepositoryLifecyclePolicy> lifecyclePolicy;
 
     public Output</* @Nullable */ RepositoryLifecyclePolicy> getLifecyclePolicy() {
@@ -68,7 +68,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name to use for the repository. The repository name may be specified on its own (such as nginx-web-app) or it can be prepended with a namespace to group the repository into a category (such as project-a/nginx-web-app). If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the repository name. For more information, see https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html.
      * 
      */
-    @OutputExport(name="repositoryName", type=String.class, parameters={})
+    @Export(name="repositoryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> repositoryName;
 
     /**
@@ -82,7 +82,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The JSON repository policy text to apply to the repository. For more information, see https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html in the Amazon Elastic Container Registry User Guide.
      * 
      */
-    @OutputExport(name="repositoryPolicyText", type=Object.class, parameters={})
+    @Export(name="repositoryPolicyText", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> repositoryPolicyText;
 
     /**
@@ -92,7 +92,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Object> getRepositoryPolicyText() {
         return this.repositoryPolicyText;
     }
-    @OutputExport(name="repositoryUri", type=String.class, parameters={})
+    @Export(name="repositoryUri", type=String.class, parameters={})
     private Output<String> repositoryUri;
 
     public Output<String> getRepositoryUri() {
@@ -102,7 +102,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RepositoryTag.class})
+    @Export(name="tags", type=List.class, parameters={RepositoryTag.class})
     private Output</* @Nullable */ List<RepositoryTag>> tags;
 
     /**

@@ -5,24 +5,24 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineActivity;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     private final @Nullable String id;
     private final @Nullable List<PipelineActivity> pipelineActivities;
     private final @Nullable List<PipelineTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("pipelineActivities") @Nullable List<PipelineActivity> pipelineActivities,
-        @OutputCustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("pipelineActivities") @Nullable List<PipelineActivity> pipelineActivities,
+        @CustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
         this.id = id;
         this.pipelineActivities = pipelineActivities;
         this.tags = tags;

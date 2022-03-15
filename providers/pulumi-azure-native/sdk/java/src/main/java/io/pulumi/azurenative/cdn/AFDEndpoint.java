@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.AFDEndpointArgs;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:cdn:AFDEndpoint")
 public class AFDEndpoint extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -43,7 +43,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @OutputExport(name="enabledState", type=String.class, parameters={})
+    @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
@@ -57,7 +57,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * The host name of the endpoint structured as {endpointName}.{DNSZone}, e.g. contoso.azureedge.net
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -71,7 +71,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -85,7 +85,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -99,7 +99,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Send and receive timeout on forwarding request to the origin. When timeout is reached, the request fails and returns.
      * 
      */
-    @OutputExport(name="originResponseTimeoutSeconds", type=Integer.class, parameters={})
+    @Export(name="originResponseTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> originResponseTimeoutSeconds;
 
     /**
@@ -113,7 +113,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -127,7 +127,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -141,7 +141,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -155,7 +155,7 @@ public class AFDEndpoint extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

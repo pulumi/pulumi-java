@@ -5,7 +5,7 @@ package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * A description of any extra actions that may be required.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
     public Output<String> getActionsRequired() {
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * The description for the private link service connection state.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * Status of the the private link service connection. Can be Pending, Approved, Rejected, or Disconnected.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<PrivateLinkServiceConnectionStatus> status;
 
     public Output<PrivateLinkServiceConnectionStatus> getStatus() {

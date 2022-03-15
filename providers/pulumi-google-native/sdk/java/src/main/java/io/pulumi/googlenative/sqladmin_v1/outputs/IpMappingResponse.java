@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IpMappingResponse {
     /**
      * The IP address assigned.
@@ -25,11 +25,11 @@ public final class IpMappingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpMappingResponse(
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("timeToRetire") String timeToRetire,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("timeToRetire") String timeToRetire,
+        @CustomType.Parameter("type") String type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;

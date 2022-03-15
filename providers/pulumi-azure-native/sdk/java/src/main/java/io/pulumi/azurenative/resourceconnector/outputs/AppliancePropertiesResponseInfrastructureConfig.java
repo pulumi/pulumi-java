@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resourceconnector.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppliancePropertiesResponseInfrastructureConfig {
     /**
      * Information about the connected appliance.
@@ -17,8 +17,8 @@ public final class AppliancePropertiesResponseInfrastructureConfig {
      */
     private final @Nullable String provider;
 
-    @OutputCustomType.Constructor
-    private AppliancePropertiesResponseInfrastructureConfig(@OutputCustomType.Parameter("provider") @Nullable String provider) {
+    @CustomType.Constructor
+    private AppliancePropertiesResponseInfrastructureConfig(@CustomType.Parameter("provider") @Nullable String provider) {
         this.provider = provider;
     }
 

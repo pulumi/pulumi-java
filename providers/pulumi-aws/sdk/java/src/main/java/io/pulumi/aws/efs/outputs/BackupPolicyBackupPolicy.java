@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupPolicyBackupPolicy {
     /**
      * A status of the backup policy. Valid values: `ENABLED`, `DISABLED`.
@@ -15,8 +15,8 @@ public final class BackupPolicyBackupPolicy {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
-    private BackupPolicyBackupPolicy(@OutputCustomType.Parameter("status") String status) {
+    @CustomType.Constructor
+    private BackupPolicyBackupPolicy(@CustomType.Parameter("status") String status) {
         this.status = status;
     }
 

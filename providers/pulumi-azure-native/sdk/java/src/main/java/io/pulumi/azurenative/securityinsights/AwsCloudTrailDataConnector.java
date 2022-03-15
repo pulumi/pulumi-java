@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.AwsCloudTrailDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.AwsCloudTrailDataConnectorDataTypesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
      * 
      */
-    @OutputExport(name="awsRoleArn", type=String.class, parameters={})
+    @Export(name="awsRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> awsRoleArn;
 
     /**
@@ -49,7 +49,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * The available data types for the connector.
      * 
      */
-    @OutputExport(name="dataTypes", type=AwsCloudTrailDataConnectorDataTypesResponse.class, parameters={})
+    @Export(name="dataTypes", type=AwsCloudTrailDataConnectorDataTypesResponse.class, parameters={})
     private Output</* @Nullable */ AwsCloudTrailDataConnectorDataTypesResponse> dataTypes;
 
     /**
@@ -63,7 +63,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * Expected value is 'AmazonWebServicesCloudTrail'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

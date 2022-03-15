@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.machinelearningservices.enums.ValueFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Authorization type of the workspace connection.
      * 
      */
-    @InputImport(name="authType")
+    @Import(name="authType")
       private final @Nullable Output<String> authType;
 
     public Output<String> getAuthType() {
@@ -31,7 +31,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Category of the workspace connection.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
@@ -42,7 +42,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Friendly name of the workspace connection
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -53,7 +53,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Friendly name of the workspace connection
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Target of the workspace connection.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -86,7 +86,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Value details of the workspace connection.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -97,7 +97,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * format for the workspace connection value
      * 
      */
-    @InputImport(name="valueFormat")
+    @Import(name="valueFormat")
       private final @Nullable Output<Either<String,ValueFormat>> valueFormat;
 
     public Output<Either<String,ValueFormat>> getValueFormat() {
@@ -108,7 +108,7 @@ public final class WorkspaceConnectionArgs extends io.pulumi.resources.ResourceA
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

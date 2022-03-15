@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ContainerRecipeTargetContainerRepositoryService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerRecipeTargetContainerRepository {
     /**
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
@@ -23,10 +23,10 @@ public final class ContainerRecipeTargetContainerRepository {
      */
     private final @Nullable ContainerRecipeTargetContainerRepositoryService service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerRecipeTargetContainerRepository(
-        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
-        @OutputCustomType.Parameter("service") @Nullable ContainerRecipeTargetContainerRepositoryService service) {
+        @CustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @CustomType.Parameter("service") @Nullable ContainerRecipeTargetContainerRepositoryService service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReceiptRuleS3ActionGetArgs extends io.pulumi.resources.Resour
      * The name of the S3 bucket
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -30,7 +30,7 @@ public final class ReceiptRuleS3ActionGetArgs extends io.pulumi.resources.Resour
      * The ARN of the KMS key
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -41,7 +41,7 @@ public final class ReceiptRuleS3ActionGetArgs extends io.pulumi.resources.Resour
      * The key prefix of the S3 bucket
      * 
      */
-    @InputImport(name="objectKeyPrefix")
+    @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
     public Output<String> getObjectKeyPrefix() {
@@ -52,7 +52,7 @@ public final class ReceiptRuleS3ActionGetArgs extends io.pulumi.resources.Resour
      * The position of the action in the receipt rule
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<Integer> position;
 
     public Output<Integer> getPosition() {
@@ -63,7 +63,7 @@ public final class ReceiptRuleS3ActionGetArgs extends io.pulumi.resources.Resour
      * The ARN of an SNS topic to notify
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

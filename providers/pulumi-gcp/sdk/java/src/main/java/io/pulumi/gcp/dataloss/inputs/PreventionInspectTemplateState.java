@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * A description of the inspect template.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * User set display name of the inspect template.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="inspectConfig")
+    @Import(name="inspectConfig")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig;
 
     public Output<PreventionInspectTemplateInspectConfigGetArgs> getInspectConfig() {
@@ -54,7 +54,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {

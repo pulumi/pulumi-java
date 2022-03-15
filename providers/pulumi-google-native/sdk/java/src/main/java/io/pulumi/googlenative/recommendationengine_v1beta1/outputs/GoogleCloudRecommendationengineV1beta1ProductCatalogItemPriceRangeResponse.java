@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse {
     /**
      * The maximum product price.
@@ -20,10 +20,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      */
     private final Double min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(
-        @OutputCustomType.Parameter("max") Double max,
-        @OutputCustomType.Parameter("min") Double min) {
+        @CustomType.Parameter("max") Double max,
+        @CustomType.Parameter("min") Double min) {
         this.max = max;
         this.min = min;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.inputs.ApplicationNotificationEndpointArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ApplicationNotificationPolicyArgs extends io.pulumi.resources
      * The managed application notification endpoint.
      * 
      */
-    @InputImport(name="notificationEndpoints", required=true)
+    @Import(name="notificationEndpoints", required=true)
       private final Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
     public Output<List<ApplicationNotificationEndpointArgs>> getNotificationEndpoints() {

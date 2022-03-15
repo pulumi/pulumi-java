@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resou
      * Maximum number of serving instances that this resource should have.
      * 
      */
-    @InputImport(name="maxInstanceCount")
+    @Import(name="maxInstanceCount")
       private final @Nullable Output<Integer> maxInstanceCount;
 
     public Output<Integer> getMaxInstanceCount() {
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2RevisionScalingArgs extends io.pulumi.resou
      * Minimum number of serving instances that this resource should have.
      * 
      */
-    @InputImport(name="minInstanceCount")
+    @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
 
     public Output<Integer> getMinInstanceCount() {

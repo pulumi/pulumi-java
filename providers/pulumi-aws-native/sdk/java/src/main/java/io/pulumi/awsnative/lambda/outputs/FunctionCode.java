@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionCode {
     /**
      * ImageUri.
@@ -37,13 +37,13 @@ public final class FunctionCode {
      */
     private final @Nullable String zipFile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionCode(
-        @OutputCustomType.Parameter("imageUri") @Nullable String imageUri,
-        @OutputCustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
-        @OutputCustomType.Parameter("s3Key") @Nullable String s3Key,
-        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
-        @OutputCustomType.Parameter("zipFile") @Nullable String zipFile) {
+        @CustomType.Parameter("imageUri") @Nullable String imageUri,
+        @CustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
+        @CustomType.Parameter("s3Key") @Nullable String s3Key,
+        @CustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
+        @CustomType.Parameter("zipFile") @Nullable String zipFile) {
         this.imageUri = imageUri;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

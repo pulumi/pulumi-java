@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SystemParameterRuleResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SystemParametersResponse {
     /**
      * Define system parameters. The parameters defined here will override the default parameters implemented by the system. If this field is missing from the service config, default system parameters will be used. Default system parameters and names is implementation-dependent. Example: define api key for all methods system_parameters rules: - selector: "*" parameters: - name: api_key url_query_parameter: api_key Example: define 2 api key names for a specific method. system_parameters rules: - selector: "/ListShelves" parameters: - name: api_key http_header: Api-Key1 - name: api_key http_header: Api-Key2 **NOTE:** All service configuration rules follow "last one wins" order.
@@ -16,8 +16,8 @@ public final class SystemParametersResponse {
      */
     private final List<SystemParameterRuleResponse> rules;
 
-    @OutputCustomType.Constructor
-    private SystemParametersResponse(@OutputCustomType.Parameter("rules") List<SystemParameterRuleResponse> rules) {
+    @CustomType.Constructor
+    private SystemParametersResponse(@CustomType.Parameter("rules") List<SystemParameterRuleResponse> rules) {
         this.rules = rules;
     }
 

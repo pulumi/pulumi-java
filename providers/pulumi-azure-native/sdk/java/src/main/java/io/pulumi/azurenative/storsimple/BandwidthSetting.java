@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.BandwidthSettingArgs;
 import io.pulumi.azurenative.storsimple.outputs.BandwidthScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -50,7 +50,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * The schedules.
      * 
      */
-    @OutputExport(name="schedules", type=List.class, parameters={BandwidthScheduleResponse.class})
+    @Export(name="schedules", type=List.class, parameters={BandwidthScheduleResponse.class})
     private Output<List<BandwidthScheduleResponse>> schedules;
 
     /**
@@ -78,7 +78,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -92,7 +92,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * The number of volumes that uses the bandwidth setting.
      * 
      */
-    @OutputExport(name="volumeCount", type=Integer.class, parameters={})
+    @Export(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
     /**

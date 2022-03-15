@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.CisBenchmarkSeverity;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The profile level of this CIS benchmark check.
      * 
      */
-    @InputImport(name="profileLevel")
+    @Import(name="profileLevel")
       private final @Nullable Output<Integer> profileLevel;
 
     public Output<Integer> getProfileLevel() {
@@ -34,7 +34,7 @@ public final class CisBenchmarkArgs extends io.pulumi.resources.ResourceArgs {
      * The severity level of this CIS benchmark check.
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<CisBenchmarkSeverity> severity;
 
     public Output<CisBenchmarkSeverity> getSeverity() {

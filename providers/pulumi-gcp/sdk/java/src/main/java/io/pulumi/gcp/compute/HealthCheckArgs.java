@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.HealthCheckGrpcHealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckHttp2HealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckHttpHealthCheckArgs;
@@ -27,7 +27,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * seconds.
      * 
      */
-    @InputImport(name="checkIntervalSec")
+    @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
 
     public Output<Integer> getCheckIntervalSec() {
@@ -39,7 +39,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="grpcHealthCheck")
+    @Import(name="grpcHealthCheck")
       private final @Nullable Output<HealthCheckGrpcHealthCheckArgs> grpcHealthCheck;
 
     public Output<HealthCheckGrpcHealthCheckArgs> getGrpcHealthCheck() {
@@ -63,7 +63,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * consecutive successes. The default value is 2.
      * 
      */
-    @InputImport(name="healthyThreshold")
+    @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -75,7 +75,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="http2HealthCheck")
+    @Import(name="http2HealthCheck")
       private final @Nullable Output<HealthCheckHttp2HealthCheckArgs> http2HealthCheck;
 
     public Output<HealthCheckHttp2HealthCheckArgs> getHttp2HealthCheck() {
@@ -87,7 +87,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="httpHealthCheck")
+    @Import(name="httpHealthCheck")
       private final @Nullable Output<HealthCheckHttpHealthCheckArgs> httpHealthCheck;
 
     public Output<HealthCheckHttpHealthCheckArgs> getHttpHealthCheck() {
@@ -99,7 +99,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="httpsHealthCheck")
+    @Import(name="httpsHealthCheck")
       private final @Nullable Output<HealthCheckHttpsHealthCheckArgs> httpsHealthCheck;
 
     public Output<HealthCheckHttpsHealthCheckArgs> getHttpsHealthCheck() {
@@ -111,7 +111,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<HealthCheckLogConfigArgs> logConfig;
 
     public Output<HealthCheckLogConfigArgs> getLogConfig() {
@@ -128,7 +128,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -140,7 +140,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -152,7 +152,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sslHealthCheck")
+    @Import(name="sslHealthCheck")
       private final @Nullable Output<HealthCheckSslHealthCheckArgs> sslHealthCheck;
 
     public Output<HealthCheckSslHealthCheckArgs> getSslHealthCheck() {
@@ -164,7 +164,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="tcpHealthCheck")
+    @Import(name="tcpHealthCheck")
       private final @Nullable Output<HealthCheckTcpHealthCheckArgs> tcpHealthCheck;
 
     public Output<HealthCheckTcpHealthCheckArgs> getTcpHealthCheck() {
@@ -177,7 +177,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * greater value than checkIntervalSec.
      * 
      */
-    @InputImport(name="timeoutSec")
+    @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {
@@ -189,7 +189,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * consecutive failures. The default value is 2.
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

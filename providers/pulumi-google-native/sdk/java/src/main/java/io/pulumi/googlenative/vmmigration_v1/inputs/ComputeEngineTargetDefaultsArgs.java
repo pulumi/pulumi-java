@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1.enums.ComputeEngineTargetDefaultsDiskType;
 import io.pulumi.googlenative.vmmigration_v1.enums.ComputeEngineTargetDefaultsLicenseType;
 import io.pulumi.googlenative.vmmigration_v1.inputs.ComputeSchedulingArgs;
@@ -29,7 +29,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * Additional licenses to assign to the VM.
      * 
      */
-    @InputImport(name="additionalLicenses")
+    @Import(name="additionalLicenses")
       private final @Nullable Output<List<String>> additionalLicenses;
 
     public Output<List<String>> getAdditionalLicenses() {
@@ -40,7 +40,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * Compute instance scheduling information (if empty default is used).
      * 
      */
-    @InputImport(name="computeScheduling")
+    @Import(name="computeScheduling")
       private final @Nullable Output<ComputeSchedulingArgs> computeScheduling;
 
     public Output<ComputeSchedulingArgs> getComputeScheduling() {
@@ -51,7 +51,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The disk type to use in the VM.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
 
     public Output<ComputeEngineTargetDefaultsDiskType> getDiskType() {
@@ -62,7 +62,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * A map of labels to associate with the VM.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -73,7 +73,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The license type to use in OS adaptation.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
 
     public Output<ComputeEngineTargetDefaultsLicenseType> getLicenseType() {
@@ -84,7 +84,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The machine type to create the VM with.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -95,7 +95,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The machine type series to create the VM with.
      * 
      */
-    @InputImport(name="machineTypeSeries")
+    @Import(name="machineTypeSeries")
       private final @Nullable Output<String> machineTypeSeries;
 
     public Output<String> getMachineTypeSeries() {
@@ -106,7 +106,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The metadata key/value pairs to assign to the VM.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -117,7 +117,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * List of NICs connected to this VM.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -128,7 +128,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * A map of network tags to associate with the VM.
      * 
      */
-    @InputImport(name="networkTags")
+    @Import(name="networkTags")
       private final @Nullable Output<List<String>> networkTags;
 
     public Output<List<String>> getNetworkTags() {
@@ -139,7 +139,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
      * 
      */
-    @InputImport(name="secureBoot")
+    @Import(name="secureBoot")
       private final @Nullable Output<Boolean> secureBoot;
 
     public Output<Boolean> getSecureBoot() {
@@ -150,7 +150,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The service account to associate the VM with.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -161,7 +161,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The full path of the resource of type TargetProject which represents the Compute Engine project in which to create this VM.
      * 
      */
-    @InputImport(name="targetProject")
+    @Import(name="targetProject")
       private final @Nullable Output<String> targetProject;
 
     public Output<String> getTargetProject() {
@@ -172,7 +172,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The name of the VM to create.
      * 
      */
-    @InputImport(name="vmName")
+    @Import(name="vmName")
       private final @Nullable Output<String> vmName;
 
     public Output<String> getVmName() {
@@ -183,7 +183,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * The zone in which to create the VM.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

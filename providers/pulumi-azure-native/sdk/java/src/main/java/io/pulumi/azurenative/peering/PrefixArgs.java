@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the peering service.
      * 
      */
-    @InputImport(name="peeringServiceName", required=true)
+    @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
 
     public Output<String> getPeeringServiceName() {
@@ -29,7 +29,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The peering service prefix key
      * 
      */
-    @InputImport(name="peeringServicePrefixKey")
+    @Import(name="peeringServicePrefixKey")
       private final @Nullable Output<String> peeringServicePrefixKey;
 
     public Output<String> getPeeringServicePrefixKey() {
@@ -40,7 +40,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The prefix from which your traffic originates.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -51,7 +51,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the prefix.
      * 
      */
-    @InputImport(name="prefixName")
+    @Import(name="prefixName")
       private final @Nullable Output<String> prefixName;
 
     public Output<String> getPrefixName() {
@@ -62,7 +62,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

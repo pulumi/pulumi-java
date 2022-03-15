@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse {
     /**
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
@@ -34,12 +34,12 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(
-        @OutputCustomType.Parameter("cloudRepo") GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo,
-        @OutputCustomType.Parameter("gerrit") GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit,
-        @OutputCustomType.Parameter("git") GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
+        @CustomType.Parameter("cloudRepo") GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo,
+        @CustomType.Parameter("gerrit") GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit,
+        @CustomType.Parameter("git") GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git,
+        @CustomType.Parameter("labels") Map<String,String> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEventConnectionResult {
     /**
      * The ARN (Amazon Resource Name) for the connection.
@@ -35,13 +35,13 @@ public final class GetEventConnectionResult {
      */
     private final String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventConnectionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("authorizationType") String authorizationType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secretArn") String secretArn) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("authorizationType") String authorizationType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secretArn") String secretArn) {
         this.arn = arn;
         this.authorizationType = authorizationType;
         this.id = id;

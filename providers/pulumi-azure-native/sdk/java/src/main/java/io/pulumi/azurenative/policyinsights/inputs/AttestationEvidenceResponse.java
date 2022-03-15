@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AttestationEvidenceResponse extends io.pulumi.resources.Invok
      * The description for this piece of evidence.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -33,7 +33,7 @@ public final class AttestationEvidenceResponse extends io.pulumi.resources.Invok
      * The URI location of the evidence.
      * 
      */
-    @InputImport(name="sourceUri")
+    @Import(name="sourceUri")
       private final @Nullable String sourceUri;
 
     public Optional<String> getSourceUri() {

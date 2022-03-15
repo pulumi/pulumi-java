@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionsTableWithColumns {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
@@ -44,14 +44,14 @@ public final class GetPermissionsTableWithColumns {
      */
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionsTableWithColumns(
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("columnNames") @Nullable List<String> columnNames,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("excludedColumnNames") @Nullable List<String> excludedColumnNames,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("columnNames") @Nullable List<String> columnNames,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("excludedColumnNames") @Nullable List<String> excludedColumnNames,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.columnNames = columnNames;
         this.databaseName = databaseName;

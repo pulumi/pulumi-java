@@ -6,7 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptPromptGetArgs;
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
      * Prompts for information from the user. Attributes are documented under prompt.
      * 
      */
-    @InputImport(name="prompt", required=true)
+    @Import(name="prompt", required=true)
       private final Output<IntentFollowUpPromptPromptGetArgs> prompt;
 
     public Output<IntentFollowUpPromptPromptGetArgs> getPrompt() {
@@ -31,7 +31,7 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
      * documented below under statement.
      * 
      */
-    @InputImport(name="rejectionStatement", required=true)
+    @Import(name="rejectionStatement", required=true)
       private final Output<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement;
 
     public Output<IntentFollowUpPromptRejectionStatementGetArgs> getRejectionStatement() {

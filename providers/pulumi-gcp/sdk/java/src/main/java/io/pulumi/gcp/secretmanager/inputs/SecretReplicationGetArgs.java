@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
      * The Secret will automatically be replicated without any restrictions.
      * 
      */
-    @InputImport(name="automatic")
+    @Import(name="automatic")
       private final @Nullable Output<Boolean> automatic;
 
     public Output<Boolean> getAutomatic() {
@@ -31,7 +31,7 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="userManaged")
+    @Import(name="userManaged")
       private final @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
 
     public Output<SecretReplicationUserManagedGetArgs> getUserManaged() {

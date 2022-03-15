@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.analysisservices.outputs;
 
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPv4FirewallSettingsResponse {
     /**
      * The indicator of enabling PBI service.
@@ -24,10 +24,10 @@ public final class IPv4FirewallSettingsResponse {
      */
     private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPv4FirewallSettingsResponse(
-        @OutputCustomType.Parameter("enablePowerBIService") @Nullable Boolean enablePowerBIService,
-        @OutputCustomType.Parameter("firewallRules") @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
+        @CustomType.Parameter("enablePowerBIService") @Nullable Boolean enablePowerBIService,
+        @CustomType.Parameter("firewallRules") @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
         this.enablePowerBIService = enablePowerBIService;
         this.firewallRules = firewallRules;
     }

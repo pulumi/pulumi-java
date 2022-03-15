@@ -9,7 +9,7 @@ import io.pulumi.awsnative.cloudformation.enums.TypeActivationType;
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationVersionBump;
 import io.pulumi.awsnative.cloudformation.outputs.TypeActivationLoggingConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the extension.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
      * 
      */
-    @OutputExport(name="autoUpdate", type=Boolean.class, parameters={})
+    @Export(name="autoUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpdate;
 
     /**
@@ -53,7 +53,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
     /**
@@ -67,7 +67,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * Specifies logging configuration information for a type.
      * 
      */
-    @OutputExport(name="loggingConfig", type=TypeActivationLoggingConfig.class, parameters={})
+    @Export(name="loggingConfig", type=TypeActivationLoggingConfig.class, parameters={})
     private Output</* @Nullable */ TypeActivationLoggingConfig> loggingConfig;
 
     /**
@@ -81,7 +81,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The Major Version of the type you want to enable
      * 
      */
-    @OutputExport(name="majorVersion", type=String.class, parameters={})
+    @Export(name="majorVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> majorVersion;
 
     /**
@@ -95,7 +95,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    @OutputExport(name="publicTypeArn", type=String.class, parameters={})
+    @Export(name="publicTypeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicTypeArn;
 
     /**
@@ -109,7 +109,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    @OutputExport(name="publisherId", type=String.class, parameters={})
+    @Export(name="publisherId", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisherId;
 
     /**
@@ -123,7 +123,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * The kind of extension
      * 
      */
-    @OutputExport(name="type", type=TypeActivationType.class, parameters={})
+    @Export(name="type", type=TypeActivationType.class, parameters={})
     private Output</* @Nullable */ TypeActivationType> type;
 
     /**
@@ -139,7 +139,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**
@@ -155,7 +155,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * An alias to assign to the public extension in this account and region. If you specify an alias for the extension, you must then use the alias to refer to the extension in your templates.
      * 
      */
-    @OutputExport(name="typeNameAlias", type=String.class, parameters={})
+    @Export(name="typeNameAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeNameAlias;
 
     /**
@@ -169,7 +169,7 @@ public class TypeActivation extends io.pulumi.resources.CustomResource {
      * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
      * 
      */
-    @OutputExport(name="versionBump", type=TypeActivationVersionBump.class, parameters={})
+    @Export(name="versionBump", type=TypeActivationVersionBump.class, parameters={})
     private Output</* @Nullable */ TypeActivationVersionBump> versionBump;
 
     /**

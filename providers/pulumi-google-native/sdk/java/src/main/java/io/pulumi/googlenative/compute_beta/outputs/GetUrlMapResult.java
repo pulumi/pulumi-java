@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.HostRuleResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpRedirectActionResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUrlMapResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -87,22 +87,22 @@ public final class GetUrlMapResult {
      */
     private final List<UrlMapTestResponse> tests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUrlMapResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
-        @OutputCustomType.Parameter("defaultService") String defaultService,
-        @OutputCustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
-        @OutputCustomType.Parameter("hostRules") List<HostRuleResponse> hostRules,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathMatchers") List<PathMatcherResponse> pathMatchers,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("tests") List<UrlMapTestResponse> tests) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
+        @CustomType.Parameter("defaultService") String defaultService,
+        @CustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @CustomType.Parameter("hostRules") List<HostRuleResponse> hostRules,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathMatchers") List<PathMatcherResponse> pathMatchers,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("tests") List<UrlMapTestResponse> tests) {
         this.creationTimestamp = creationTimestamp;
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;

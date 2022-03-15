@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateDefaultButtonConfiguration;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateOverrideButtonConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class InAppTemplateButtonConfig extends io.pulumi.resources.InvokeA
 
     public static final InAppTemplateButtonConfig Empty = new InAppTemplateButtonConfig();
 
-    @InputImport(name="android")
+    @Import(name="android")
       private final @Nullable InAppTemplateOverrideButtonConfiguration android;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> getAndroid() {
         return this.android == null ? Optional.empty() : Optional.ofNullable(this.android);
     }
 
-    @InputImport(name="defaultConfig")
+    @Import(name="defaultConfig")
       private final @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
 
     public Optional<InAppTemplateDefaultButtonConfiguration> getDefaultConfig() {
         return this.defaultConfig == null ? Optional.empty() : Optional.ofNullable(this.defaultConfig);
     }
 
-    @InputImport(name="iOS")
+    @Import(name="iOS")
       private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> getIOS() {
         return this.iOS == null ? Optional.empty() : Optional.ofNullable(this.iOS);
     }
 
-    @InputImport(name="web")
+    @Import(name="web")
       private final @Nullable InAppTemplateOverrideButtonConfiguration web;
 
     public Optional<InAppTemplateOverrideButtonConfiguration> getWeb() {

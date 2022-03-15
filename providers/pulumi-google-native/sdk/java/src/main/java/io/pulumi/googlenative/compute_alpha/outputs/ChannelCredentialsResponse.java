@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsCertificatePathsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ChannelCredentialsResponse {
     /**
      * The call credentials to access the SDS server.
@@ -21,10 +21,10 @@ public final class ChannelCredentialsResponse {
      */
     private final String channelCredentialType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelCredentialsResponse(
-        @OutputCustomType.Parameter("certificates") TlsCertificatePathsResponse certificates,
-        @OutputCustomType.Parameter("channelCredentialType") String channelCredentialType) {
+        @CustomType.Parameter("certificates") TlsCertificatePathsResponse certificates,
+        @CustomType.Parameter("channelCredentialType") String channelCredentialType) {
         this.certificates = certificates;
         this.channelCredentialType = channelCredentialType;
     }

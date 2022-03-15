@@ -6,7 +6,7 @@ package io.pulumi.azurenative.certificateregistration;
 import io.pulumi.azurenative.certificateregistration.enums.CertificateProductType;
 import io.pulumi.azurenative.certificateregistration.inputs.AppServiceCertificateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
@@ -34,7 +34,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Name of the certificate order.
      * 
      */
-    @InputImport(name="certificateOrderName")
+    @Import(name="certificateOrderName")
       private final @Nullable Output<String> certificateOrderName;
 
     public Output<String> getCertificateOrderName() {
@@ -45,7 +45,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * State of the Key Vault secret.
      * 
      */
-    @InputImport(name="certificates")
+    @Import(name="certificates")
       private final @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
 
     public Output<Map<String,AppServiceCertificateArgs>> getCertificates() {
@@ -56,7 +56,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Last CSR that was created for this order.
      * 
      */
-    @InputImport(name="csr")
+    @Import(name="csr")
       private final @Nullable Output<String> csr;
 
     public Output<String> getCsr() {
@@ -67,7 +67,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Certificate distinguished name.
      * 
      */
-    @InputImport(name="distinguishedName")
+    @Import(name="distinguishedName")
       private final @Nullable Output<String> distinguishedName;
 
     public Output<String> getDistinguishedName() {
@@ -78,7 +78,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Certificate key size.
      * 
      */
-    @InputImport(name="keySize")
+    @Import(name="keySize")
       private final @Nullable Output<Integer> keySize;
 
     public Output<Integer> getKeySize() {
@@ -89,7 +89,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -100,7 +100,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -111,7 +111,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Certificate product type.
      * 
      */
-    @InputImport(name="productType", required=true)
+    @Import(name="productType", required=true)
       private final Output<CertificateProductType> productType;
 
     public Output<CertificateProductType> getProductType() {
@@ -122,7 +122,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -133,7 +133,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -144,7 +144,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
      * Duration in years (must be between 1 and 3).
      * 
      */
-    @InputImport(name="validityInYears")
+    @Import(name="validityInYears")
       private final @Nullable Output<Integer> validityInYears;
 
     public Output<Integer> getValidityInYears() {

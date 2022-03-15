@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.IterationResultResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MlStatisticsResponse {
     /**
      * Results for all completed iterations.
@@ -22,10 +22,10 @@ public final class MlStatisticsResponse {
      */
     private final String maxIterations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MlStatisticsResponse(
-        @OutputCustomType.Parameter("iterationResults") List<IterationResultResponse> iterationResults,
-        @OutputCustomType.Parameter("maxIterations") String maxIterations) {
+        @CustomType.Parameter("iterationResults") List<IterationResultResponse> iterationResults,
+        @CustomType.Parameter("maxIterations") String maxIterations) {
         this.iterationResults = iterationResults;
         this.maxIterations = maxIterations;
     }

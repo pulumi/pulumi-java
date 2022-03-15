@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner;
 
 import io.pulumi.awsnative.apprunner.inputs.VpcConnectorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -31,7 +31,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
      * 
      */
-    @InputImport(name="subnets", required=true)
+    @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {
@@ -42,7 +42,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<VpcConnectorTagArgs>> tags;
 
     public Output<List<VpcConnectorTagArgs>> getTags() {
@@ -53,7 +53,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the VPC connector. If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
      * 
      */
-    @InputImport(name="vpcConnectorName")
+    @Import(name="vpcConnectorName")
       private final @Nullable Output<String> vpcConnectorName;
 
     public Output<String> getVpcConnectorName() {

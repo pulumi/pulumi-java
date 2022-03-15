@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
      * Object that contains an attribute `items` that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.
      * 
      */
-    @InputImport(name="contentTypeProfiles", required=true)
+    @Import(name="contentTypeProfiles", required=true)
       private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> contentTypeProfiles;
 
     public Output<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs> getContentTypeProfiles() {
@@ -29,7 +29,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs ext
      * specifies what to do when an unknown content type is provided for the profile. If true, content is forwarded without being encrypted when the content type is unknown. If false (the default), an error is returned when the content type is unknown.
      * 
      */
-    @InputImport(name="forwardWhenContentTypeIsUnknown", required=true)
+    @Import(name="forwardWhenContentTypeIsUnknown", required=true)
       private final Output<Boolean> forwardWhenContentTypeIsUnknown;
 
     public Output<Boolean> getForwardWhenContentTypeIsUnknown() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2DocumentReloadStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDocumentResult {
     /**
      * The URI where the file content is located. For documents stored in Google Cloud Storage, these URIs must have the form `gs:///`. NOTE: External URLs must correspond to public webpages, i.e., they must be indexed by Google Search. In particular, URLs for showing documents in Google Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format URI described above.
@@ -59,17 +59,17 @@ public final class GetDocumentResult {
      */
     private final String rawContent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDocumentResult(
-        @OutputCustomType.Parameter("contentUri") String contentUri,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableAutoReload") Boolean enableAutoReload,
-        @OutputCustomType.Parameter("knowledgeTypes") List<String> knowledgeTypes,
-        @OutputCustomType.Parameter("latestReloadStatus") GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("mimeType") String mimeType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rawContent") String rawContent) {
+        @CustomType.Parameter("contentUri") String contentUri,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableAutoReload") Boolean enableAutoReload,
+        @CustomType.Parameter("knowledgeTypes") List<String> knowledgeTypes,
+        @CustomType.Parameter("latestReloadStatus") GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("mimeType") String mimeType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rawContent") String rawContent) {
         this.contentUri = contentUri;
         this.displayName = displayName;
         this.enableAutoReload = enableAutoReload;

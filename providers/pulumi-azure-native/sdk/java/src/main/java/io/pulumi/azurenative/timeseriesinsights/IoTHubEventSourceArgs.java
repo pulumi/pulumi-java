@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.IngressStartAtType;
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The name of the iot hub's consumer group that holds the partitions from which events will be read.
      * 
      */
-    @InputImport(name="consumerGroupName", required=true)
+    @Import(name="consumerGroupName", required=true)
       private final Output<String> consumerGroupName;
 
     public Output<String> getConsumerGroupName() {
@@ -33,7 +33,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -44,7 +44,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * Name of the event source.
      * 
      */
-    @InputImport(name="eventSourceName")
+    @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
 
     public Output<String> getEventSourceName() {
@@ -55,7 +55,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The resource id of the event source in Azure Resource Manager.
      * 
      */
-    @InputImport(name="eventSourceResourceId", required=true)
+    @Import(name="eventSourceResourceId", required=true)
       private final Output<String> eventSourceResourceId;
 
     public Output<String> getEventSourceResourceId() {
@@ -66,7 +66,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The name of the iot hub.
      * 
      */
-    @InputImport(name="iotHubName", required=true)
+    @Import(name="iotHubName", required=true)
       private final Output<String> iotHubName;
 
     public Output<String> getIotHubName() {
@@ -77,7 +77,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -89,7 +89,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Microsoft.IoTHub'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -100,7 +100,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
-    @InputImport(name="localTimestamp")
+    @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
     public Output<LocalTimestampArgs> getLocalTimestamp() {
@@ -111,7 +111,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -122,7 +122,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -133,7 +133,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The value of the Shared Access Policy key that grants the Time Series Insights service read access to the iot hub. This property is not shown in event source responses.
      * 
      */
-    @InputImport(name="sharedAccessKey", required=true)
+    @Import(name="sharedAccessKey", required=true)
       private final Output<String> sharedAccessKey;
 
     public Output<String> getSharedAccessKey() {
@@ -144,7 +144,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * Key-value pairs of additional properties for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -155,7 +155,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {
@@ -166,7 +166,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
-    @InputImport(name="timestampPropertyName")
+    @Import(name="timestampPropertyName")
       private final @Nullable Output<String> timestampPropertyName;
 
     public Output<String> getTimestampPropertyName() {
@@ -177,7 +177,7 @@ public final class IoTHubEventSourceArgs extends io.pulumi.resources.ResourceArg
      * The type of the ingressStartAt, It can be "EarliestAvailable", "EventSourceCreationTime", "CustomEnqueuedTime".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,IngressStartAtType>> type;
 
     public Output<Either<String,IngressStartAtType>> getType() {

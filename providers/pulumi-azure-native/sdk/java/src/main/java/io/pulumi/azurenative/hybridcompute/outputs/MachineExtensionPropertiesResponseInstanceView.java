@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.hybridcompute.outputs;
 
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponseStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MachineExtensionPropertiesResponseInstanceView {
     /**
      * The machine extension name.
@@ -33,12 +33,12 @@ public final class MachineExtensionPropertiesResponseInstanceView {
      */
     private final String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MachineExtensionPropertiesResponseInstanceView(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") @Nullable MachineExtensionInstanceViewResponseStatus status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") String typeHandlerVersion) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") @Nullable MachineExtensionInstanceViewResponseStatus status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeHandlerVersion") String typeHandlerVersion) {
         this.name = name;
         this.status = status;
         this.type = type;

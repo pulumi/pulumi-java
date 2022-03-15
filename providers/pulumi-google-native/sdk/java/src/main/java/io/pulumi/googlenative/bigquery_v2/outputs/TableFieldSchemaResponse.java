@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableFieldSchemaCategoriesResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableFieldSchemaPolicyTagsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableFieldSchemaResponse {
     /**
      * [Optional] The categories attached to this field, used for field-level access control.
@@ -64,19 +64,19 @@ public final class TableFieldSchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableFieldSchemaResponse(
-        @OutputCustomType.Parameter("categories") TableFieldSchemaCategoriesResponse categories,
-        @OutputCustomType.Parameter("collationSpec") String collationSpec,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fields") List<TableFieldSchemaResponse> fields,
-        @OutputCustomType.Parameter("maxLength") String maxLength,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyTags") TableFieldSchemaPolicyTagsResponse policyTags,
-        @OutputCustomType.Parameter("precision") String precision,
-        @OutputCustomType.Parameter("scale") String scale,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("categories") TableFieldSchemaCategoriesResponse categories,
+        @CustomType.Parameter("collationSpec") String collationSpec,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fields") List<TableFieldSchemaResponse> fields,
+        @CustomType.Parameter("maxLength") String maxLength,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyTags") TableFieldSchemaPolicyTagsResponse policyTags,
+        @CustomType.Parameter("precision") String precision,
+        @CustomType.Parameter("scale") String scale,
+        @CustomType.Parameter("type") String type) {
         this.categories = categories;
         this.collationSpec = collationSpec;
         this.description = description;

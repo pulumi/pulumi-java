@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutineArgument {
     /**
      * Defaults to FIXED_TYPE.
@@ -41,12 +41,12 @@ public final class RoutineArgument {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutineArgument(
-        @OutputCustomType.Parameter("argumentKind") @Nullable String argumentKind,
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("argumentKind") @Nullable String argumentKind,
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;

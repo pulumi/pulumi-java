@@ -6,7 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.DomainNameEndpointConfigurationGetArgs;
 import io.pulumi.aws.apigateway.inputs.DomainNameMutualTlsAuthenticationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -45,7 +45,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * `regional_certificate_name`.
      * 
      */
-    @InputImport(name="certificateBody")
+    @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
     public Output<String> getCertificateBody() {
@@ -59,7 +59,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
@@ -72,7 +72,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -84,7 +84,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    @InputImport(name="certificatePrivateKey")
+    @Import(name="certificatePrivateKey")
       private final @Nullable Output<String> certificatePrivateKey;
 
     public Output<String> getCertificatePrivateKey() {
@@ -95,7 +95,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The upload date associated with the domain certificate.
      * 
      */
-    @InputImport(name="certificateUploadDate")
+    @Import(name="certificateUploadDate")
       private final @Nullable Output<String> certificateUploadDate;
 
     public Output<String> getCertificateUploadDate() {
@@ -107,7 +107,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * the distribution that implements this domain name mapping.
      * 
      */
-    @InputImport(name="cloudfrontDomainName")
+    @Import(name="cloudfrontDomainName")
       private final @Nullable Output<String> cloudfrontDomainName;
 
     public Output<String> getCloudfrontDomainName() {
@@ -119,7 +119,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * that can be used to create a Route53 alias record for the distribution.
      * 
      */
-    @InputImport(name="cloudfrontZoneId")
+    @Import(name="cloudfrontZoneId")
       private final @Nullable Output<String> cloudfrontZoneId;
 
     public Output<String> getCloudfrontZoneId() {
@@ -130,7 +130,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The fully-qualified domain name to register
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -141,7 +141,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * Configuration block defining API endpoint information including type. Defined below.
      * 
      */
-    @InputImport(name="endpointConfiguration")
+    @Import(name="endpointConfiguration")
       private final @Nullable Output<DomainNameEndpointConfigurationGetArgs> endpointConfiguration;
 
     public Output<DomainNameEndpointConfigurationGetArgs> getEndpointConfiguration() {
@@ -152,7 +152,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The mutual TLS authentication configuration for the domain name. Defined below.
      * 
      */
-    @InputImport(name="mutualTlsAuthentication")
+    @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
     public Output<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
@@ -163,7 +163,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
-    @InputImport(name="regionalCertificateArn")
+    @Import(name="regionalCertificateArn")
       private final @Nullable Output<String> regionalCertificateArn;
 
     public Output<String> getRegionalCertificateArn() {
@@ -175,7 +175,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * `certificate_private_key`.
      * 
      */
-    @InputImport(name="regionalCertificateName")
+    @Import(name="regionalCertificateName")
       private final @Nullable Output<String> regionalCertificateName;
 
     public Output<String> getRegionalCertificateName() {
@@ -186,7 +186,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The hostname for the custom domain's regional endpoint.
      * 
      */
-    @InputImport(name="regionalDomainName")
+    @Import(name="regionalDomainName")
       private final @Nullable Output<String> regionalDomainName;
 
     public Output<String> getRegionalDomainName() {
@@ -197,7 +197,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
-    @InputImport(name="regionalZoneId")
+    @Import(name="regionalZoneId")
       private final @Nullable Output<String> regionalZoneId;
 
     public Output<String> getRegionalZoneId() {
@@ -208,7 +208,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
      * 
      */
-    @InputImport(name="securityPolicy")
+    @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
     public Output<String> getSecurityPolicy() {
@@ -219,7 +219,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -230,7 +230,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

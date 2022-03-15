@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearningexperimentation.outputs;
 
 import io.pulumi.azurenative.machinelearningexperimentation.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountResult {
     /**
      * The immutable id associated with this team account.
@@ -89,23 +89,23 @@ public final class GetAccountResult {
      */
     private final String vsoAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("discoveryUri") String discoveryUri,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVaultId") String keyVaultId,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("seats") @Nullable String seats,
-        @OutputCustomType.Parameter("storageAccount") StorageAccountPropertiesResponse storageAccount,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vsoAccountId") String vsoAccountId) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("discoveryUri") String discoveryUri,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVaultId") String keyVaultId,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("seats") @Nullable String seats,
+        @CustomType.Parameter("storageAccount") StorageAccountPropertiesResponse storageAccount,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vsoAccountId") String vsoAccountId) {
         this.accountId = accountId;
         this.creationDate = creationDate;
         this.description = description;

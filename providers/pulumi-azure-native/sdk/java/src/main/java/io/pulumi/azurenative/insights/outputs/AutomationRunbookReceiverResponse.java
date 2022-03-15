@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRunbookReceiverResponse {
     /**
      * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
@@ -48,15 +48,15 @@ public final class AutomationRunbookReceiverResponse {
      */
     private final String webhookResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRunbookReceiverResponse(
-        @OutputCustomType.Parameter("automationAccountId") String automationAccountId,
-        @OutputCustomType.Parameter("isGlobalRunbook") Boolean isGlobalRunbook,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("runbookName") String runbookName,
-        @OutputCustomType.Parameter("serviceUri") @Nullable String serviceUri,
-        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema,
-        @OutputCustomType.Parameter("webhookResourceId") String webhookResourceId) {
+        @CustomType.Parameter("automationAccountId") String automationAccountId,
+        @CustomType.Parameter("isGlobalRunbook") Boolean isGlobalRunbook,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("runbookName") String runbookName,
+        @CustomType.Parameter("serviceUri") @Nullable String serviceUri,
+        @CustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema,
+        @CustomType.Parameter("webhookResourceId") String webhookResourceId) {
         this.automationAccountId = automationAccountId;
         this.isGlobalRunbook = isGlobalRunbook;
         this.name = name;

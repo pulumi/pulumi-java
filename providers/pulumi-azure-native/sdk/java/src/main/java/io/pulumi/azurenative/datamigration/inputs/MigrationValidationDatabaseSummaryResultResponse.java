@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Validation end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -31,7 +31,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Migration Identifier
      * 
      */
-    @InputImport(name="migrationId", required=true)
+    @Import(name="migrationId", required=true)
       private final String migrationId;
 
     public String getMigrationId() {
@@ -53,7 +53,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Name of the source database
      * 
      */
-    @InputImport(name="sourceDatabaseName", required=true)
+    @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
 
     public String getSourceDatabaseName() {
@@ -64,7 +64,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Validation start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -75,7 +75,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Current status of validation at the database level
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -86,7 +86,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * Name of the target database
      * 
      */
-    @InputImport(name="targetDatabaseName", required=true)
+    @Import(name="targetDatabaseName", required=true)
       private final String targetDatabaseName;
 
     public String getTargetDatabaseName() {

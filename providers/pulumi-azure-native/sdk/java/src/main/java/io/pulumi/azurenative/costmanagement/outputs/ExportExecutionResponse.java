@@ -5,13 +5,13 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.CommonExportPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ErrorDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportExecutionResponse {
     /**
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
@@ -79,21 +79,21 @@ public final class ExportExecutionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportExecutionResponse(
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("error") @Nullable ErrorDetailsResponse error,
-        @OutputCustomType.Parameter("executionType") @Nullable String executionType,
-        @OutputCustomType.Parameter("fileName") @Nullable String fileName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("processingEndTime") @Nullable String processingEndTime,
-        @OutputCustomType.Parameter("processingStartTime") @Nullable String processingStartTime,
-        @OutputCustomType.Parameter("runSettings") @Nullable CommonExportPropertiesResponse runSettings,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("submittedBy") @Nullable String submittedBy,
-        @OutputCustomType.Parameter("submittedTime") @Nullable String submittedTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("error") @Nullable ErrorDetailsResponse error,
+        @CustomType.Parameter("executionType") @Nullable String executionType,
+        @CustomType.Parameter("fileName") @Nullable String fileName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("processingEndTime") @Nullable String processingEndTime,
+        @CustomType.Parameter("processingStartTime") @Nullable String processingStartTime,
+        @CustomType.Parameter("runSettings") @Nullable CommonExportPropertiesResponse runSettings,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("submittedBy") @Nullable String submittedBy,
+        @CustomType.Parameter("submittedTime") @Nullable String submittedTime,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.error = error;
         this.executionType = executionType;

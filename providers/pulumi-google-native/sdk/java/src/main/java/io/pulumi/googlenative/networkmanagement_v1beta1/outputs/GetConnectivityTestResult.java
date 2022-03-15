@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.EndpointResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.ProbingDetailsResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.ReachabilityDetailsResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectivityTestResult {
     /**
      * The time the test was created.
@@ -75,20 +75,20 @@ public final class GetConnectivityTestResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectivityTestResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destination") EndpointResponse destination,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("probingDetails") ProbingDetailsResponse probingDetails,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("reachabilityDetails") ReachabilityDetailsResponse reachabilityDetails,
-        @OutputCustomType.Parameter("relatedProjects") List<String> relatedProjects,
-        @OutputCustomType.Parameter("source") EndpointResponse source,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destination") EndpointResponse destination,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("probingDetails") ProbingDetailsResponse probingDetails,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("reachabilityDetails") ReachabilityDetailsResponse reachabilityDetails,
+        @CustomType.Parameter("relatedProjects") List<String> relatedProjects,
+        @CustomType.Parameter("source") EndpointResponse source,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.destination = destination;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunGetArgs;
@@ -23,7 +23,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="appEngine")
+    @Import(name="appEngine")
       private final @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
 
     public Output<RegionNetworkEndpointGroupAppEngineGetArgs> getAppEngine() {
@@ -36,7 +36,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudFunction")
+    @Import(name="cloudFunction")
       private final @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
 
     public Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> getCloudFunction() {
@@ -49,7 +49,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudRun")
+    @Import(name="cloudRun")
       private final @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
 
     public Output<RegionNetworkEndpointGroupCloudRunGetArgs> getCloudRun() {
@@ -61,7 +61,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -91,7 +91,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * Possible values are `SERVERLESS`.
      * 
      */
-    @InputImport(name="networkEndpointType")
+    @Import(name="networkEndpointType")
       private final @Nullable Output<String> networkEndpointType;
 
     public Output<String> getNetworkEndpointType() {
@@ -103,7 +103,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -114,7 +114,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * A reference to the region where the Serverless NEGs Reside.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -125,7 +125,7 @@ public final class RegionNetworkEndpointGroupState extends io.pulumi.resources.R
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {

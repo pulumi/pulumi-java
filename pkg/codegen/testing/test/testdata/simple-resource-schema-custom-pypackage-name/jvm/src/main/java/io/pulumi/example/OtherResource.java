@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.OtherResourceArgs;
 import io.pulumi.example.Resource;
@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::OtherResource")
 public class OtherResource extends io.pulumi.resources.ComponentResource {
-    @OutputExport(name="foo", type=Resource.class, parameters={})
+    @Export(name="foo", type=Resource.class, parameters={})
     private Output</* @Nullable */ Resource> foo;
 
     public Output</* @Nullable */ Resource> getFoo() {

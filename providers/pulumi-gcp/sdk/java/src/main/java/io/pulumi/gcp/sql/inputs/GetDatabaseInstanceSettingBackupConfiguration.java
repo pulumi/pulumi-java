@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -16,49 +16,49 @@ public final class GetDatabaseInstanceSettingBackupConfiguration extends io.pulu
 
     public static final GetDatabaseInstanceSettingBackupConfiguration Empty = new GetDatabaseInstanceSettingBackupConfiguration();
 
-    @InputImport(name="backupRetentionSettings", required=true)
+    @Import(name="backupRetentionSettings", required=true)
       private final List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
 
     public List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> getBackupRetentionSettings() {
         return this.backupRetentionSettings;
     }
 
-    @InputImport(name="binaryLogEnabled", required=true)
+    @Import(name="binaryLogEnabled", required=true)
       private final Boolean binaryLogEnabled;
 
     public Boolean getBinaryLogEnabled() {
         return this.binaryLogEnabled;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="pointInTimeRecoveryEnabled", required=true)
+    @Import(name="pointInTimeRecoveryEnabled", required=true)
       private final Boolean pointInTimeRecoveryEnabled;
 
     public Boolean getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
     }
 
-    @InputImport(name="transactionLogRetentionDays", required=true)
+    @Import(name="transactionLogRetentionDays", required=true)
       private final Integer transactionLogRetentionDays;
 
     public Integer getTransactionLogRetentionDays() {

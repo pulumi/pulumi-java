@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupScheduleResponse {
     /**
      * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
@@ -44,14 +44,14 @@ public final class BackupScheduleResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupScheduleResponse(
-        @OutputCustomType.Parameter("frequencyInterval") Integer frequencyInterval,
-        @OutputCustomType.Parameter("frequencyUnit") String frequencyUnit,
-        @OutputCustomType.Parameter("keepAtLeastOneBackup") Boolean keepAtLeastOneBackup,
-        @OutputCustomType.Parameter("lastExecutionTime") String lastExecutionTime,
-        @OutputCustomType.Parameter("retentionPeriodInDays") Integer retentionPeriodInDays,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("frequencyInterval") Integer frequencyInterval,
+        @CustomType.Parameter("frequencyUnit") String frequencyUnit,
+        @CustomType.Parameter("keepAtLeastOneBackup") Boolean keepAtLeastOneBackup,
+        @CustomType.Parameter("lastExecutionTime") String lastExecutionTime,
+        @CustomType.Parameter("retentionPeriodInDays") Integer retentionPeriodInDays,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.frequencyInterval = frequencyInterval;
         this.frequencyUnit = frequencyUnit;
         this.keepAtLeastOneBackup = keepAtLeastOneBackup;

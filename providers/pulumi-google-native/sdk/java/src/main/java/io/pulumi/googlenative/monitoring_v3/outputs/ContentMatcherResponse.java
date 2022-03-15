@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentMatcherResponse {
     /**
      * String or regex content to match. Maximum 1024 bytes. An empty content string indicates no content matching is to be performed.
@@ -20,10 +20,10 @@ public final class ContentMatcherResponse {
      */
     private final String matcher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentMatcherResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("matcher") String matcher) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("matcher") String matcher) {
         this.content = content;
         this.matcher = matcher;
     }

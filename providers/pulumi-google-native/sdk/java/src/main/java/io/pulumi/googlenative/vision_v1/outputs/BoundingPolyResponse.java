@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vision_v1.outputs.NormalizedVertexResponse;
 import io.pulumi.googlenative.vision_v1.outputs.VertexResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BoundingPolyResponse {
     /**
      * The bounding polygon normalized vertices.
@@ -22,10 +22,10 @@ public final class BoundingPolyResponse {
      */
     private final List<VertexResponse> vertices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BoundingPolyResponse(
-        @OutputCustomType.Parameter("normalizedVertices") List<NormalizedVertexResponse> normalizedVertices,
-        @OutputCustomType.Parameter("vertices") List<VertexResponse> vertices) {
+        @CustomType.Parameter("normalizedVertices") List<NormalizedVertexResponse> normalizedVertices,
+        @CustomType.Parameter("vertices") List<VertexResponse> vertices) {
         this.normalizedVertices = normalizedVertices;
         this.vertices = vertices;
     }

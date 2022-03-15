@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
      * The DNS target domain name.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable String domainName;
 
     public Optional<String> getDomainName() {
@@ -33,7 +33,7 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
      * The Resource Record set id.
      * 
      */
-    @InputImport(name="recordSetId")
+    @Import(name="recordSetId")
       private final @Nullable String recordSetId;
 
     public Optional<String> getRecordSetId() {

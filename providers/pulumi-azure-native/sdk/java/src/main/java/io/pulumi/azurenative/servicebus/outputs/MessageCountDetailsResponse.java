@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MessageCountDetailsResponse {
     /**
      * Number of active messages in the queue, topic, or subscription.
@@ -35,13 +35,13 @@ public final class MessageCountDetailsResponse {
      */
     private final Double transferMessageCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MessageCountDetailsResponse(
-        @OutputCustomType.Parameter("activeMessageCount") Double activeMessageCount,
-        @OutputCustomType.Parameter("deadLetterMessageCount") Double deadLetterMessageCount,
-        @OutputCustomType.Parameter("scheduledMessageCount") Double scheduledMessageCount,
-        @OutputCustomType.Parameter("transferDeadLetterMessageCount") Double transferDeadLetterMessageCount,
-        @OutputCustomType.Parameter("transferMessageCount") Double transferMessageCount) {
+        @CustomType.Parameter("activeMessageCount") Double activeMessageCount,
+        @CustomType.Parameter("deadLetterMessageCount") Double deadLetterMessageCount,
+        @CustomType.Parameter("scheduledMessageCount") Double scheduledMessageCount,
+        @CustomType.Parameter("transferDeadLetterMessageCount") Double transferDeadLetterMessageCount,
+        @CustomType.Parameter("transferMessageCount") Double transferMessageCount) {
         this.activeMessageCount = activeMessageCount;
         this.deadLetterMessageCount = deadLetterMessageCount;
         this.scheduledMessageCount = scheduledMessageCount;

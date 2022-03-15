@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfigAuditLogConfig;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
      * A nested block that defines the operations you'd like to log.
      * 
      */
-    @InputImport(name="auditLogConfigs", required=true)
+    @Import(name="auditLogConfigs", required=true)
       private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
 
     public List<GetIAMPolicyAuditConfigAuditLogConfig> getAuditLogConfigs() {
@@ -29,7 +29,7 @@ public final class GetIAMPolicyAuditConfig extends io.pulumi.resources.InvokeArg
      * Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

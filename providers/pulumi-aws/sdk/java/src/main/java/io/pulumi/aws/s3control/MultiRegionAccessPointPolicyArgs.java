@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
 
     public static final MultiRegionAccessPointPolicyArgs Empty = new MultiRegionAccessPointPolicyArgs();
 
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -26,7 +26,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
      * A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
     public Output<MultiRegionAccessPointPolicyDetailsArgs> getDetails() {

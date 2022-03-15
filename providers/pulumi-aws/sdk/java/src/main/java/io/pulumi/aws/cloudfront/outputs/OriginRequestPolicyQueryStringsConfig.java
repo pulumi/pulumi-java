@@ -4,21 +4,21 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.OriginRequestPolicyQueryStringsConfigQueryStrings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginRequestPolicyQueryStringsConfig {
     private final String queryStringBehavior;
     private final @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginRequestPolicyQueryStringsConfig(
-        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior,
-        @OutputCustomType.Parameter("queryStrings") @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
+        @CustomType.Parameter("queryStringBehavior") String queryStringBehavior,
+        @CustomType.Parameter("queryStrings") @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
         this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
     /**
      * List of domains.
@@ -23,10 +23,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
      */
     private final @Nullable List<String> patternsToMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyWebApplicationFirewallAssociationResponse(
-        @OutputCustomType.Parameter("domains") @Nullable List<ResourceReferenceResponse> domains,
-        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch) {
+        @CustomType.Parameter("domains") @Nullable List<ResourceReferenceResponse> domains,
+        @CustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch) {
         this.domains = domains;
         this.patternsToMatch = patternsToMatch;
     }

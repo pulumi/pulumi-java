@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessCont
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * A Boolean value that CloudFront uses as the value for the `Access-Control-Allow-Credentials` HTTP response header.
      * 
      */
-    @InputImport(name="accessControlAllowCredentials", required=true)
+    @Import(name="accessControlAllowCredentials", required=true)
       private final Output<Boolean> accessControlAllowCredentials;
 
     public Output<Boolean> getAccessControlAllowCredentials() {
@@ -34,7 +34,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * Object that contains an attribute `items` that contains a list of HTTP header names that CloudFront includes as values for the `Access-Control-Allow-Headers` HTTP response header.
      * 
      */
-    @InputImport(name="accessControlAllowHeaders", required=true)
+    @Import(name="accessControlAllowHeaders", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersGetArgs> accessControlAllowHeaders;
 
     public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersGetArgs> getAccessControlAllowHeaders() {
@@ -45,7 +45,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * Object that contains an attribute `items` that contains a list of HTTP methods that CloudFront includes as values for the `Access-Control-Allow-Methods` HTTP response header. Valid values: `GET` | `POST` | `OPTIONS` | `PUT` | `DELETE` | `HEAD` | `ALL`
      * 
      */
-    @InputImport(name="accessControlAllowMethods", required=true)
+    @Import(name="accessControlAllowMethods", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsGetArgs> accessControlAllowMethods;
 
     public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowMethodsGetArgs> getAccessControlAllowMethods() {
@@ -56,7 +56,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * Object that contains an attribute `items` that contains a list of origins that CloudFront can use as the value for the `Access-Control-Allow-Origin` HTTP response header.
      * 
      */
-    @InputImport(name="accessControlAllowOrigins", required=true)
+    @Import(name="accessControlAllowOrigins", required=true)
       private final Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs> accessControlAllowOrigins;
 
     public Output<ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs> getAccessControlAllowOrigins() {
@@ -67,7 +67,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * Object that contains an attribute `items` that contains a list of HTTP headers that CloudFront includes as values for the `Access-Control-Expose-Headers` HTTP response header.
      * 
      */
-    @InputImport(name="accessControlExposeHeaders")
+    @Import(name="accessControlExposeHeaders")
       private final @Nullable Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs> accessControlExposeHeaders;
 
     public Output<ResponseHeadersPolicyCorsConfigAccessControlExposeHeadersGetArgs> getAccessControlExposeHeaders() {
@@ -78,7 +78,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * A number that CloudFront uses as the value for the `max-age` directive in the `Strict-Transport-Security` HTTP response header.
      * 
      */
-    @InputImport(name="accessControlMaxAgeSec")
+    @Import(name="accessControlMaxAgeSec")
       private final @Nullable Output<Integer> accessControlMaxAgeSec;
 
     public Output<Integer> getAccessControlMaxAgeSec() {
@@ -89,7 +89,7 @@ public final class ResponseHeadersPolicyCorsConfigGetArgs extends io.pulumi.reso
      * A Boolean value that determines how CloudFront behaves for the HTTP response header.
      * 
      */
-    @InputImport(name="originOverride", required=true)
+    @Import(name="originOverride", required=true)
       private final Output<Boolean> originOverride;
 
     public Output<Boolean> getOriginOverride() {

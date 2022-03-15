@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainAdvancedSecurityOption {
     /**
      * Whether node to node encryption is enabled.
@@ -20,10 +20,10 @@ public final class GetDomainAdvancedSecurityOption {
      */
     private final Boolean internalUserDatabaseEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainAdvancedSecurityOption(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("internalUserDatabaseEnabled") Boolean internalUserDatabaseEnabled) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("internalUserDatabaseEnabled") Boolean internalUserDatabaseEnabled) {
         this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
     }

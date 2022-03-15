@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -32,7 +32,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * BinaryData contains the binary data. Each key must consist of alphanumeric characters, '-', '_' or '.'. BinaryData can contain byte sequences that are not in the UTF-8 range. The keys stored in BinaryData must not overlap with the ones in the Data field, this is enforced during validation process. Using this field will require 1.10+ apiserver and kubelet.
      * 
      */
-    @InputImport(name="binaryData")
+    @Import(name="binaryData")
       private final @Nullable Output<Map<String,String>> binaryData;
 
     public Output<Map<String,String>> getBinaryData() {
@@ -43,7 +43,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * Data contains the configuration data. Each key must consist of alphanumeric characters, '-', '_' or '.'. Values with non-UTF-8 byte sequences must use the BinaryData field. The keys stored in Data must not overlap with the keys in the BinaryData field, this is enforced during validation process.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;
 
     public Output<Map<String,String>> getData() {
@@ -54,7 +54,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
      * 
      */
-    @InputImport(name="immutable")
+    @Import(name="immutable")
       private final @Nullable Output<Boolean> immutable;
 
     public Output<Boolean> getImmutable() {
@@ -65,7 +65,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -76,7 +76,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {

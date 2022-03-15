@@ -9,7 +9,7 @@ import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointObjectLambdaConfigu
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointPublicAccessBlockConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.PolicyStatusProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:s3objectlambda:AccessPoint")
 public class AccessPoint extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The date and time when the Object lambda Access Point was created.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -44,7 +44,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The name you want to assign to this Object lambda Access Point.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -58,7 +58,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The Object lambda Access Point Configuration that configures transformations to be applied on the objects on specified S3 Actions
      * 
      */
-    @OutputExport(name="objectLambdaConfiguration", type=AccessPointObjectLambdaConfiguration.class, parameters={})
+    @Export(name="objectLambdaConfiguration", type=AccessPointObjectLambdaConfiguration.class, parameters={})
     private Output<AccessPointObjectLambdaConfiguration> objectLambdaConfiguration;
 
     /**
@@ -68,7 +68,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
     public Output<AccessPointObjectLambdaConfiguration> getObjectLambdaConfiguration() {
         return this.objectLambdaConfiguration;
     }
-    @OutputExport(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
+    @Export(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
     private Output<PolicyStatusProperties> policyStatus;
 
     public Output<PolicyStatusProperties> getPolicyStatus() {
@@ -78,7 +78,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    @OutputExport(name="publicAccessBlockConfiguration", type=AccessPointPublicAccessBlockConfiguration.class, parameters={})
+    @Export(name="publicAccessBlockConfiguration", type=AccessPointPublicAccessBlockConfiguration.class, parameters={})
     private Output<AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
     /**

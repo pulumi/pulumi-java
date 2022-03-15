@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.LiveOutputArgs;
 import io.pulumi.azurenative.media.outputs.HlsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
      * 
      */
-    @OutputExport(name="archiveWindowLength", type=String.class, parameters={})
+    @Export(name="archiveWindowLength", type=String.class, parameters={})
     private Output<String> archiveWindowLength;
 
     /**
@@ -50,7 +50,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The asset that the live output will write to.
      * 
      */
-    @OutputExport(name="assetName", type=String.class, parameters={})
+    @Export(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
     /**
@@ -64,7 +64,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The creation time the live output.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -78,7 +78,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The description of the live output.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * HTTP Live Streaming (HLS) packing setting for the live output.
      * 
      */
-    @OutputExport(name="hls", type=HlsResponse.class, parameters={})
+    @Export(name="hls", type=HlsResponse.class, parameters={})
     private Output</* @Nullable */ HlsResponse> hls;
 
     /**
@@ -106,7 +106,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The time the live output was last modified.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -120,7 +120,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The manifest file name. If not provided, the service will generate one automatically.
      * 
      */
-    @OutputExport(name="manifestName", type=String.class, parameters={})
+    @Export(name="manifestName", type=String.class, parameters={})
     private Output</* @Nullable */ String> manifestName;
 
     /**
@@ -134,7 +134,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The initial timestamp that the live output will start at, any content before this value will not be archived.
      * 
      */
-    @OutputExport(name="outputSnapTime", type=Double.class, parameters={})
+    @Export(name="outputSnapTime", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> outputSnapTime;
 
     /**
@@ -162,7 +162,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The provisioning state of the live output.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -176,7 +176,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The resource state of the live output.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -190,7 +190,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

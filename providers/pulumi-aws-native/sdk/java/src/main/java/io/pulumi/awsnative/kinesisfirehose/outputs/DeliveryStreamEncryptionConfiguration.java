@@ -5,20 +5,20 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationNoEncryptionConfig;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamKMSEncryptionConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamEncryptionConfiguration {
     private final @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
     private final @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamEncryptionConfiguration(
-        @OutputCustomType.Parameter("kMSEncryptionConfig") @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
-        @OutputCustomType.Parameter("noEncryptionConfig") @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
+        @CustomType.Parameter("kMSEncryptionConfig") @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
+        @CustomType.Parameter("noEncryptionConfig") @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
         this.kMSEncryptionConfig = kMSEncryptionConfig;
         this.noEncryptionConfig = noEncryptionConfig;
     }

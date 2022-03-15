@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterPropertiesResponseIdentityProfile {
     /**
      * The client id of the user assigned identity.
@@ -27,11 +27,11 @@ public final class ManagedClusterPropertiesResponseIdentityProfile {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterPropertiesResponseIdentityProfile(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.clientId = clientId;
         this.objectId = objectId;
         this.resourceId = resourceId;

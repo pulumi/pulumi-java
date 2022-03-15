@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
      * The workspace daily quota for ingestion.
      * 
      */
-    @InputImport(name="dailyQuotaGb")
+    @Import(name="dailyQuotaGb")
       private final @Nullable Output<Double> dailyQuotaGb;
 
     public Output<Double> getDailyQuotaGb() {

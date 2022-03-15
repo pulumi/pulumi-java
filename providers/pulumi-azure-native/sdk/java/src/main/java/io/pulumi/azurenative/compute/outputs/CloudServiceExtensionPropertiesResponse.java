@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceVaultAndSecretReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceExtensionPropertiesResponse {
     /**
      * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
@@ -65,18 +65,18 @@ public final class CloudServiceExtensionPropertiesResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceExtensionPropertiesResponse(
-        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("protectedSettings") @Nullable String protectedSettings,
-        @OutputCustomType.Parameter("protectedSettingsFromKeyVault") @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("rolesAppliedTo") @Nullable List<String> rolesAppliedTo,
-        @OutputCustomType.Parameter("settings") @Nullable String settings,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
+        @CustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("protectedSettings") @Nullable String protectedSettings,
+        @CustomType.Parameter("protectedSettingsFromKeyVault") @Nullable CloudServiceVaultAndSecretReferenceResponse protectedSettingsFromKeyVault,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("rolesAppliedTo") @Nullable List<String> rolesAppliedTo,
+        @CustomType.Parameter("settings") @Nullable String settings,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.forceUpdateTag = forceUpdateTag;
         this.protectedSettings = protectedSettings;

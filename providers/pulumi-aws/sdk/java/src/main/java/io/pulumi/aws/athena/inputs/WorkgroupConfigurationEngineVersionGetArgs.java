@@ -4,7 +4,7 @@
 package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
      * The engine version on which the query runs. If `selected_engine_version` is set to `AUTO`, the effective engine version is chosen by Athena.
      * 
      */
-    @InputImport(name="effectiveEngineVersion")
+    @Import(name="effectiveEngineVersion")
       private final @Nullable Output<String> effectiveEngineVersion;
 
     public Output<String> getEffectiveEngineVersion() {
@@ -29,7 +29,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
      * The requested engine version. Defaults to `AUTO`.
      * 
      */
-    @InputImport(name="selectedEngineVersion")
+    @Import(name="selectedEngineVersion")
       private final @Nullable Output<String> selectedEngineVersion;
 
     public Output<String> getSelectedEngineVersion() {

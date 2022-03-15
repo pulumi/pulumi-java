@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * User specified arguments to HDInsightActivity.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable List<Object> arguments;
 
     public List<Object> getArguments() {
@@ -40,7 +40,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Class name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="className", required=true)
+    @Import(name="className", required=true)
       private final Object className;
 
     public Object getClassName() {
@@ -51,7 +51,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Allows user to specify defines for the MapReduce job request.
      * 
      */
-    @InputImport(name="defines")
+    @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
 
     public Map<String,Object> getDefines() {
@@ -62,7 +62,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -73,7 +73,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -84,7 +84,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Debug info option.
      * 
      */
-    @InputImport(name="getDebugInfo")
+    @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
 
     public Optional<String> getGetDebugInfo() {
@@ -95,7 +95,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Jar path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="jarFilePath", required=true)
+    @Import(name="jarFilePath", required=true)
       private final Object jarFilePath;
 
     public Object getJarFilePath() {
@@ -106,7 +106,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Jar libs.
      * 
      */
-    @InputImport(name="jarLibs")
+    @Import(name="jarLibs")
       private final @Nullable List<Object> jarLibs;
 
     public List<Object> getJarLibs() {
@@ -117,7 +117,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Jar linked service reference.
      * 
      */
-    @InputImport(name="jarLinkedService")
+    @Import(name="jarLinkedService")
       private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> getJarLinkedService() {
@@ -128,7 +128,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -139,7 +139,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -150,7 +150,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -161,7 +161,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Storage linked service references.
      * 
      */
-    @InputImport(name="storageLinkedServices")
+    @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
@@ -173,7 +173,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Expected value is 'HDInsightMapReduce'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -184,7 +184,7 @@ public final class HDInsightMapReduceActivityResponse extends io.pulumi.resource
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorGetArgs extends io
      * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
      * 
      */
-    @InputImport(name="acceleratorCount", required=true)
+    @Import(name="acceleratorCount", required=true)
       private final Output<Integer> acceleratorCount;
 
     public Output<Integer> getAcceleratorCount() {
@@ -29,7 +29,7 @@ public final class ClusterClusterConfigWorkerConfigAcceleratorGetArgs extends io
      * The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="acceleratorType", required=true)
+    @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {

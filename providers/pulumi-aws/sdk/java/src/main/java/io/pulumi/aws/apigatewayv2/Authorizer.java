@@ -8,7 +8,7 @@ import io.pulumi.aws.apigatewayv2.AuthorizerArgs;
 import io.pulumi.aws.apigatewayv2.inputs.AuthorizerState;
 import io.pulumi.aws.apigatewayv2.outputs.AuthorizerJwtConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The API identifier.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -52,7 +52,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for `REQUEST` authorizers.
      * 
      */
-    @OutputExport(name="authorizerCredentialsArn", type=String.class, parameters={})
+    @Export(name="authorizerCredentialsArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerCredentialsArn;
 
     /**
@@ -68,7 +68,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Valid values: `1.0`, `2.0`.
      * 
      */
-    @OutputExport(name="authorizerPayloadFormatVersion", type=String.class, parameters={})
+    @Export(name="authorizerPayloadFormatVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerPayloadFormatVersion;
 
     /**
@@ -85,7 +85,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for HTTP API Lambda authorizers.
      * 
      */
-    @OutputExport(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
+    @Export(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
     private Output<Integer> authorizerResultTtlInSeconds;
 
     /**
@@ -103,7 +103,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
      * 
      */
-    @OutputExport(name="authorizerType", type=String.class, parameters={})
+    @Export(name="authorizerType", type=String.class, parameters={})
     private Output<String> authorizerType;
 
     /**
@@ -121,7 +121,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
      * 
      */
-    @OutputExport(name="authorizerUri", type=String.class, parameters={})
+    @Export(name="authorizerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerUri;
 
     /**
@@ -138,7 +138,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for HTTP APIs.
      * 
      */
-    @OutputExport(name="enableSimpleResponses", type=Boolean.class, parameters={})
+    @Export(name="enableSimpleResponses", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableSimpleResponses;
 
     /**
@@ -155,7 +155,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
      * 
      */
-    @OutputExport(name="identitySources", type=List.class, parameters={String.class})
+    @Export(name="identitySources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> identitySources;
 
     /**
@@ -172,7 +172,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Supported only for HTTP APIs.
      * 
      */
-    @OutputExport(name="jwtConfiguration", type=AuthorizerJwtConfiguration.class, parameters={})
+    @Export(name="jwtConfiguration", type=AuthorizerJwtConfiguration.class, parameters={})
     private Output</* @Nullable */ AuthorizerJwtConfiguration> jwtConfiguration;
 
     /**
@@ -187,7 +187,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The name of the authorizer. Must be between 1 and 128 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

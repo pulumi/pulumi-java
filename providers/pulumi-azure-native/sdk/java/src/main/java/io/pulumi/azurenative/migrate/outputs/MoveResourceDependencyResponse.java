@@ -5,13 +5,13 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.AutomaticResolutionPropertiesResponse;
 import io.pulumi.azurenative.migrate.outputs.ManualResolutionPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MoveResourceDependencyResponse {
     /**
      * Defines the properties for automatic resolution.
@@ -49,15 +49,15 @@ public final class MoveResourceDependencyResponse {
      */
     private final @Nullable String resolutionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoveResourceDependencyResponse(
-        @OutputCustomType.Parameter("automaticResolution") @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
-        @OutputCustomType.Parameter("dependencyType") @Nullable String dependencyType,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("isOptional") @Nullable String isOptional,
-        @OutputCustomType.Parameter("manualResolution") @Nullable ManualResolutionPropertiesResponse manualResolution,
-        @OutputCustomType.Parameter("resolutionStatus") @Nullable String resolutionStatus,
-        @OutputCustomType.Parameter("resolutionType") @Nullable String resolutionType) {
+        @CustomType.Parameter("automaticResolution") @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
+        @CustomType.Parameter("dependencyType") @Nullable String dependencyType,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("isOptional") @Nullable String isOptional,
+        @CustomType.Parameter("manualResolution") @Nullable ManualResolutionPropertiesResponse manualResolution,
+        @CustomType.Parameter("resolutionStatus") @Nullable String resolutionStatus,
+        @CustomType.Parameter("resolutionType") @Nullable String resolutionType) {
         this.automaticResolution = automaticResolution;
         this.dependencyType = dependencyType;
         this.id = id;

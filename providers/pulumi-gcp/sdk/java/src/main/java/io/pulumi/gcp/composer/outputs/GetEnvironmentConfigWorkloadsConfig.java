@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigWorkloadsConfigScheduler;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigWorkloadsConfigWebServer;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigWorkloadsConfigWorker;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigWorkloadsConfig {
     private final List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
     private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
     private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfig(
-        @OutputCustomType.Parameter("schedulers") List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
-        @OutputCustomType.Parameter("webServers") List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
-        @OutputCustomType.Parameter("workers") List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
+        @CustomType.Parameter("schedulers") List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
+        @CustomType.Parameter("webServers") List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
+        @CustomType.Parameter("workers") List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
         this.schedulers = schedulers;
         this.webServers = webServers;
         this.workers = workers;

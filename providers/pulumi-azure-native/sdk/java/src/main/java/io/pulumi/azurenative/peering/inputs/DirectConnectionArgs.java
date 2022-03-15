@@ -7,7 +7,7 @@ import io.pulumi.azurenative.peering.enums.SessionAddressProvider;
 import io.pulumi.azurenative.peering.inputs.BgpSessionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The bandwidth of the connection.
      * 
      */
-    @InputImport(name="bandwidthInMbps")
+    @Import(name="bandwidthInMbps")
       private final @Nullable Output<Integer> bandwidthInMbps;
 
     public Output<Integer> getBandwidthInMbps() {
@@ -38,7 +38,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The BGP session associated with the connection.
      * 
      */
-    @InputImport(name="bgpSession")
+    @Import(name="bgpSession")
       private final @Nullable Output<BgpSessionArgs> bgpSession;
 
     public Output<BgpSessionArgs> getBgpSession() {
@@ -49,7 +49,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The unique identifier (GUID) for the connection.
      * 
      */
-    @InputImport(name="connectionIdentifier")
+    @Import(name="connectionIdentifier")
       private final @Nullable Output<String> connectionIdentifier;
 
     public Output<String> getConnectionIdentifier() {
@@ -60,7 +60,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
      */
-    @InputImport(name="peeringDBFacilityId")
+    @Import(name="peeringDBFacilityId")
       private final @Nullable Output<Integer> peeringDBFacilityId;
 
     public Output<Integer> getPeeringDBFacilityId() {
@@ -71,7 +71,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The field indicating if Microsoft provides session ip addresses.
      * 
      */
-    @InputImport(name="sessionAddressProvider")
+    @Import(name="sessionAddressProvider")
       private final @Nullable Output<Either<String,SessionAddressProvider>> sessionAddressProvider;
 
     public Output<Either<String,SessionAddressProvider>> getSessionAddressProvider() {
@@ -82,7 +82,7 @@ public final class DirectConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The flag that indicates whether or not the connection is used for peering service.
      * 
      */
-    @InputImport(name="useForPeeringService")
+    @Import(name="useForPeeringService")
       private final @Nullable Output<Boolean> useForPeeringService;
 
     public Output<Boolean> getUseForPeeringService() {

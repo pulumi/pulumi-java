@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.HeaderResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.I18nConfigResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.RedirectResponse;
@@ -26,7 +26,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * How to handle well known App Association files.
      * 
      */
-    @InputImport(name="appAssociation", required=true)
+    @Import(name="appAssociation", required=true)
       private final String appAssociation;
 
     public String getAppAssociation() {
@@ -37,7 +37,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Defines whether to drop the file extension from uploaded files.
      * 
      */
-    @InputImport(name="cleanUrls", required=true)
+    @Import(name="cleanUrls", required=true)
       private final Boolean cleanUrls;
 
     public Boolean getCleanUrls() {
@@ -48,7 +48,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * An array of objects, where each object specifies a URL pattern that, if matched to the request URL path, triggers Hosting to apply the specified custom response headers.
      * 
      */
-    @InputImport(name="headers", required=true)
+    @Import(name="headers", required=true)
       private final List<HeaderResponse> headers;
 
     public List<HeaderResponse> getHeaders() {
@@ -59,7 +59,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Defines i18n rewrite behavior.
      * 
      */
-    @InputImport(name="i18n", required=true)
+    @Import(name="i18n", required=true)
       private final I18nConfigResponse i18n;
 
     public I18nConfigResponse getI18n() {
@@ -70,7 +70,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * An array of objects (called redirect rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond with a redirect to the specified destination path.
      * 
      */
-    @InputImport(name="redirects", required=true)
+    @Import(name="redirects", required=true)
       private final List<RedirectResponse> redirects;
 
     public List<RedirectResponse> getRedirects() {
@@ -81,7 +81,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * An array of objects (called rewrite rules), where each rule specifies a URL pattern that, if matched to the request URL path, triggers Hosting to respond as if the service were given the specified destination URL.
      * 
      */
-    @InputImport(name="rewrites", required=true)
+    @Import(name="rewrites", required=true)
       private final List<RewriteResponse> rewrites;
 
     public List<RewriteResponse> getRewrites() {
@@ -92,7 +92,7 @@ public final class ServingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Defines how to handle a trailing slash in the URL path.
      * 
      */
-    @InputImport(name="trailingSlashBehavior", required=true)
+    @Import(name="trailingSlashBehavior", required=true)
       private final String trailingSlashBehavior;
 
     public String getTrailingSlashBehavior() {

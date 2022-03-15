@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterpriseKeyTestingOptions {
     /**
      * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
@@ -23,10 +23,10 @@ public final class EnterpriseKeyTestingOptions {
      */
     private final @Nullable Double testingScore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterpriseKeyTestingOptions(
-        @OutputCustomType.Parameter("testingChallenge") @Nullable String testingChallenge,
-        @OutputCustomType.Parameter("testingScore") @Nullable Double testingScore) {
+        @CustomType.Parameter("testingChallenge") @Nullable String testingChallenge,
+        @CustomType.Parameter("testingScore") @Nullable Double testingScore) {
         this.testingChallenge = testingChallenge;
         this.testingScore = testingScore;
     }

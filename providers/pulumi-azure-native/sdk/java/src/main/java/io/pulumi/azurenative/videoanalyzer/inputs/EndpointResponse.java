@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The URL of the endpoint.
      * 
      */
-    @InputImport(name="endpointUrl")
+    @Import(name="endpointUrl")
       private final @Nullable String endpointUrl;
 
     public Optional<String> getEndpointUrl() {
@@ -33,7 +33,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the endpoint.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

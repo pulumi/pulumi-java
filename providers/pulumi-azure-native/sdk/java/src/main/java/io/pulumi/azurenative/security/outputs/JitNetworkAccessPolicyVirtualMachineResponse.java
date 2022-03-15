@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessPortRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JitNetworkAccessPolicyVirtualMachineResponse {
     /**
      * Resource ID of the virtual machine that is linked to this policy
@@ -29,11 +29,11 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse {
      */
     private final @Nullable String publicIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JitNetworkAccessPolicyVirtualMachineResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ports") List<JitNetworkAccessPortRuleResponse> ports,
-        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ports") List<JitNetworkAccessPortRuleResponse> ports,
+        @CustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
         this.id = id;
         this.ports = ports;
         this.publicIpAddress = publicIpAddress;

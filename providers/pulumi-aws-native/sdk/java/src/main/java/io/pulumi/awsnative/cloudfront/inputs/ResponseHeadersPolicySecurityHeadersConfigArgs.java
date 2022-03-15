@@ -10,7 +10,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyReferrerPolicy
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyStrictTransportSecurityArgs;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyXSSProtectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,42 +19,42 @@ public final class ResponseHeadersPolicySecurityHeadersConfigArgs extends io.pul
 
     public static final ResponseHeadersPolicySecurityHeadersConfigArgs Empty = new ResponseHeadersPolicySecurityHeadersConfigArgs();
 
-    @InputImport(name="contentSecurityPolicy")
+    @Import(name="contentSecurityPolicy")
       private final @Nullable Output<ResponseHeadersPolicyContentSecurityPolicyArgs> contentSecurityPolicy;
 
     public Output<ResponseHeadersPolicyContentSecurityPolicyArgs> getContentSecurityPolicy() {
         return this.contentSecurityPolicy == null ? Output.empty() : this.contentSecurityPolicy;
     }
 
-    @InputImport(name="contentTypeOptions")
+    @Import(name="contentTypeOptions")
       private final @Nullable Output<ResponseHeadersPolicyContentTypeOptionsArgs> contentTypeOptions;
 
     public Output<ResponseHeadersPolicyContentTypeOptionsArgs> getContentTypeOptions() {
         return this.contentTypeOptions == null ? Output.empty() : this.contentTypeOptions;
     }
 
-    @InputImport(name="frameOptions")
+    @Import(name="frameOptions")
       private final @Nullable Output<ResponseHeadersPolicyFrameOptionsArgs> frameOptions;
 
     public Output<ResponseHeadersPolicyFrameOptionsArgs> getFrameOptions() {
         return this.frameOptions == null ? Output.empty() : this.frameOptions;
     }
 
-    @InputImport(name="referrerPolicy")
+    @Import(name="referrerPolicy")
       private final @Nullable Output<ResponseHeadersPolicyReferrerPolicyArgs> referrerPolicy;
 
     public Output<ResponseHeadersPolicyReferrerPolicyArgs> getReferrerPolicy() {
         return this.referrerPolicy == null ? Output.empty() : this.referrerPolicy;
     }
 
-    @InputImport(name="strictTransportSecurity")
+    @Import(name="strictTransportSecurity")
       private final @Nullable Output<ResponseHeadersPolicyStrictTransportSecurityArgs> strictTransportSecurity;
 
     public Output<ResponseHeadersPolicyStrictTransportSecurityArgs> getStrictTransportSecurity() {
         return this.strictTransportSecurity == null ? Output.empty() : this.strictTransportSecurity;
     }
 
-    @InputImport(name="xSSProtection")
+    @Import(name="xSSProtection")
       private final @Nullable Output<ResponseHeadersPolicyXSSProtectionArgs> xSSProtection;
 
     public Output<ResponseHeadersPolicyXSSProtectionArgs> getXSSProtection() {

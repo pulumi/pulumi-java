@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @InputImport(name="endIpAddress", required=true)
+    @Import(name="endIpAddress", required=true)
       private final String endIpAddress;
 
     public String getEndIpAddress() {
@@ -31,7 +31,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The resource identifier.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -53,7 +53,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @InputImport(name="startIpAddress", required=true)
+    @Import(name="startIpAddress", required=true)
       private final String startIpAddress;
 
     public String getStartIpAddress() {
@@ -64,7 +64,7 @@ public final class FirewallRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

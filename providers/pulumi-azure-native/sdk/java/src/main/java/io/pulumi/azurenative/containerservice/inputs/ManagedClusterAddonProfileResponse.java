@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterAddonProfileResponseIdentity;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ManagedClusterAddonProfileResponse extends io.pulumi.resource
      * Key-value pairs for configuring an add-on.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Map<String,String> config;
 
     public Map<String,String> getConfig() {
@@ -36,7 +36,7 @@ public final class ManagedClusterAddonProfileResponse extends io.pulumi.resource
      * Whether the add-on is enabled or not.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -47,7 +47,7 @@ public final class ManagedClusterAddonProfileResponse extends io.pulumi.resource
      * Information of user assigned identity used by this add-on.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final ManagedClusterAddonProfileResponseIdentity identity;
 
     public ManagedClusterAddonProfileResponseIdentity getIdentity() {

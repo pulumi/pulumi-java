@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkedIntegrationRuntimeResponse {
     /**
      * The creating time of the linked integration runtime.
@@ -35,13 +35,13 @@ public final class LinkedIntegrationRuntimeResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedIntegrationRuntimeResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dataFactoryLocation") String dataFactoryLocation,
-        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dataFactoryLocation") String dataFactoryLocation,
+        @CustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("subscriptionId") String subscriptionId) {
         this.createTime = createTime;
         this.dataFactoryLocation = dataFactoryLocation;
         this.dataFactoryName = dataFactoryName;

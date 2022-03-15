@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointResult {
     /**
      * The endpoint based on `endpoint_type`:
@@ -28,11 +28,11 @@ public final class GetEndpointResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointResult(
-        @OutputCustomType.Parameter("endpointAddress") String endpointAddress,
-        @OutputCustomType.Parameter("endpointType") @Nullable String endpointType,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("endpointAddress") String endpointAddress,
+        @CustomType.Parameter("endpointType") @Nullable String endpointType,
+        @CustomType.Parameter("id") String id) {
         this.endpointAddress = endpointAddress;
         this.endpointType = endpointType;
         this.id = id;

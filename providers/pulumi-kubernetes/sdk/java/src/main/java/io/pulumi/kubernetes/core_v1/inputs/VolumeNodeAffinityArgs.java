@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VolumeNodeAffinityArgs extends io.pulumi.resources.ResourceAr
      * Required specifies hard node constraints that must be met.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Output<NodeSelectorArgs> required;
 
     public Output<NodeSelectorArgs> getRequired() {

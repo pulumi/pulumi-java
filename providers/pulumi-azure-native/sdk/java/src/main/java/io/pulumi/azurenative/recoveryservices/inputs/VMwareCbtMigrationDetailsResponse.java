@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtProtectedDiskDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The data mover RunAs account Id.
      * 
      */
-    @InputImport(name="dataMoverRunAsAccountId", required=true)
+    @Import(name="dataMoverRunAsAccountId", required=true)
       private final String dataMoverRunAsAccountId;
 
     public String getDataMoverRunAsAccountId() {
@@ -37,7 +37,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * Expected value is 'VMwareCbt'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -48,7 +48,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The last recovery point received time.
      * 
      */
-    @InputImport(name="lastRecoveryPointReceived", required=true)
+    @Import(name="lastRecoveryPointReceived", required=true)
       private final String lastRecoveryPointReceived;
 
     public String getLastRecoveryPointReceived() {
@@ -59,7 +59,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * License Type of the VM to be used.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
@@ -70,7 +70,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The recovery point Id to which the VM was migrated.
      * 
      */
-    @InputImport(name="migrationRecoveryPointId", required=true)
+    @Import(name="migrationRecoveryPointId", required=true)
       private final String migrationRecoveryPointId;
 
     public String getMigrationRecoveryPointId() {
@@ -81,7 +81,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The type of the OS on the VM.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final String osType;
 
     public String getOsType() {
@@ -92,7 +92,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The list of protected disks.
      * 
      */
-    @InputImport(name="protectedDisks")
+    @Import(name="protectedDisks")
       private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
 
     public List<VMwareCbtProtectedDiskDetailsResponse> getProtectedDisks() {
@@ -103,7 +103,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The snapshot RunAs account Id.
      * 
      */
-    @InputImport(name="snapshotRunAsAccountId", required=true)
+    @Import(name="snapshotRunAsAccountId", required=true)
       private final String snapshotRunAsAccountId;
 
     public String getSnapshotRunAsAccountId() {
@@ -114,7 +114,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The target availability set Id.
      * 
      */
-    @InputImport(name="targetAvailabilitySetId")
+    @Import(name="targetAvailabilitySetId")
       private final @Nullable String targetAvailabilitySetId;
 
     public Optional<String> getTargetAvailabilitySetId() {
@@ -125,7 +125,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The target boot diagnostics storage account ARM Id.
      * 
      */
-    @InputImport(name="targetBootDiagnosticsStorageAccountId")
+    @Import(name="targetBootDiagnosticsStorageAccountId")
       private final @Nullable String targetBootDiagnosticsStorageAccountId;
 
     public Optional<String> getTargetBootDiagnosticsStorageAccountId() {
@@ -136,7 +136,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The target location.
      * 
      */
-    @InputImport(name="targetLocation", required=true)
+    @Import(name="targetLocation", required=true)
       private final String targetLocation;
 
     public String getTargetLocation() {
@@ -147,7 +147,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The target network Id.
      * 
      */
-    @InputImport(name="targetNetworkId")
+    @Import(name="targetNetworkId")
       private final @Nullable String targetNetworkId;
 
     public Optional<String> getTargetNetworkId() {
@@ -158,7 +158,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The target resource group Id.
      * 
      */
-    @InputImport(name="targetResourceGroupId")
+    @Import(name="targetResourceGroupId")
       private final @Nullable String targetResourceGroupId;
 
     public Optional<String> getTargetResourceGroupId() {
@@ -169,7 +169,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * Target VM name.
      * 
      */
-    @InputImport(name="targetVmName")
+    @Import(name="targetVmName")
       private final @Nullable String targetVmName;
 
     public Optional<String> getTargetVmName() {
@@ -180,7 +180,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The target VM size.
      * 
      */
-    @InputImport(name="targetVmSize")
+    @Import(name="targetVmSize")
       private final @Nullable String targetVmSize;
 
     public Optional<String> getTargetVmSize() {
@@ -191,7 +191,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The network details.
      * 
      */
-    @InputImport(name="vmNics")
+    @Import(name="vmNics")
       private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
 
     public List<VMwareCbtNicDetailsResponse> getVmNics() {
@@ -202,7 +202,7 @@ public final class VMwareCbtMigrationDetailsResponse extends io.pulumi.resources
      * The ARM Id of the VM discovered in VMware.
      * 
      */
-    @InputImport(name="vmwareMachineId", required=true)
+    @Import(name="vmwareMachineId", required=true)
       private final String vmwareMachineId;
 
     public String getVmwareMachineId() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseTableResponse {
     /**
      * Indicates whether table is empty or not
@@ -21,10 +21,10 @@ public final class DatabaseTableResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseTableResponse(
-        @OutputCustomType.Parameter("hasRows") Boolean hasRows,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("hasRows") Boolean hasRows,
+        @CustomType.Parameter("name") String name) {
         this.hasRows = hasRows;
         this.name = name;
     }

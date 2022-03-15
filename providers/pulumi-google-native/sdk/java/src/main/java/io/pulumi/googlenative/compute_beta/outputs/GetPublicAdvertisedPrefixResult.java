@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.PublicAdvertisedPrefixPublicDelegatedPrefixResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPublicAdvertisedPrefixResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -67,19 +67,19 @@ public final class GetPublicAdvertisedPrefixResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPublicAdvertisedPrefixResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dnsVerificationIp") String dnsVerificationIp,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicDelegatedPrefixs") List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sharedSecret") String sharedSecret,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dnsVerificationIp") String dnsVerificationIp,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicDelegatedPrefixs") List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sharedSecret") String sharedSecret,
+        @CustomType.Parameter("status") String status) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.dnsVerificationIp = dnsVerificationIp;

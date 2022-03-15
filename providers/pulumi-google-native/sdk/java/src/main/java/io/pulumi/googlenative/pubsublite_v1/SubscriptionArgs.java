@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.pubsublite_v1.inputs.DeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The settings for this subscription's message delivery.
      * 
      */
-    @InputImport(name="deliveryConfig")
+    @Import(name="deliveryConfig")
       private final @Nullable Output<DeliveryConfigArgs> deliveryConfig;
 
     public Output<DeliveryConfigArgs> getDeliveryConfig() {
         return this.deliveryConfig == null ? Output.empty() : this.deliveryConfig;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -37,28 +37,28 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="skipBacklog")
+    @Import(name="skipBacklog")
       private final @Nullable Output<String> skipBacklog;
 
     public Output<String> getSkipBacklog() {
         return this.skipBacklog == null ? Output.empty() : this.skipBacklog;
     }
 
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -69,7 +69,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {

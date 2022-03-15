@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="linuxExecStepConfig")
+    @Import(name="linuxExecStepConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> linuxExecStepConfig;
 
     public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> getLinuxExecStepConfig() {
@@ -32,7 +32,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="windowsExecStepConfig")
+    @Import(name="windowsExecStepConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> windowsExecStepConfig;
 
     public Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> getWindowsExecStepConfig() {

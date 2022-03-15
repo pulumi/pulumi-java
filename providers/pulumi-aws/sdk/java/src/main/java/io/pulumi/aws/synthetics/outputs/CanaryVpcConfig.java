@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryVpcConfig {
     /**
      * IDs of the security groups for this canary.
@@ -28,11 +28,11 @@ public final class CanaryVpcConfig {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryVpcConfig(
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

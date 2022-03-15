@@ -5,13 +5,13 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
 import io.pulumi.awsnative.lex.outputs.BotStillWaitingResponseSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotWaitAndContinueSpecification {
     /**
      * The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation.
@@ -34,12 +34,12 @@ public final class BotWaitAndContinueSpecification {
      */
     private final BotResponseSpecification waitingResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotWaitAndContinueSpecification(
-        @OutputCustomType.Parameter("continueResponse") BotResponseSpecification continueResponse,
-        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
-        @OutputCustomType.Parameter("stillWaitingResponse") @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
-        @OutputCustomType.Parameter("waitingResponse") BotResponseSpecification waitingResponse) {
+        @CustomType.Parameter("continueResponse") BotResponseSpecification continueResponse,
+        @CustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @CustomType.Parameter("stillWaitingResponse") @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
+        @CustomType.Parameter("waitingResponse") BotResponseSpecification waitingResponse) {
         this.continueResponse = continueResponse;
         this.isActive = isActive;
         this.stillWaitingResponse = stillWaitingResponse;

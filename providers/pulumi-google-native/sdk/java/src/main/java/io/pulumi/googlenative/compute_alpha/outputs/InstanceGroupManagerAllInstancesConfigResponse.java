@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstancePropertiesPatchResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerAllInstancesConfigResponse {
     /**
      * Properties for instances that are created using this instances config. You can add or modify properties using the instanceGroupManagers.patch or regionInstanceGroupManagers.patch. After setting instances_config, you must update your instances to use it; for example, you can use the applyUpdatesToInstances method.
@@ -15,8 +15,8 @@ public final class InstanceGroupManagerAllInstancesConfigResponse {
      */
     private final InstancePropertiesPatchResponse properties;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerAllInstancesConfigResponse(@OutputCustomType.Parameter("properties") InstancePropertiesPatchResponse properties) {
+    @CustomType.Constructor
+    private InstanceGroupManagerAllInstancesConfigResponse(@CustomType.Parameter("properties") InstancePropertiesPatchResponse properties) {
         this.properties = properties;
     }
 

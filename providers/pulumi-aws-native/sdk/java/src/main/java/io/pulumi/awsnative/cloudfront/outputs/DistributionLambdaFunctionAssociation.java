@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionLambdaFunctionAssociation {
     private final @Nullable String eventType;
     private final @Nullable Boolean includeBody;
     private final @Nullable String lambdaFunctionARN;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionLambdaFunctionAssociation(
-        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
-        @OutputCustomType.Parameter("includeBody") @Nullable Boolean includeBody,
-        @OutputCustomType.Parameter("lambdaFunctionARN") @Nullable String lambdaFunctionARN) {
+        @CustomType.Parameter("eventType") @Nullable String eventType,
+        @CustomType.Parameter("includeBody") @Nullable Boolean includeBody,
+        @CustomType.Parameter("lambdaFunctionARN") @Nullable String lambdaFunctionARN) {
         this.eventType = eventType;
         this.includeBody = includeBody;
         this.lambdaFunctionARN = lambdaFunctionARN;

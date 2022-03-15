@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NonComplianceMessageResponse extends io.pulumi.resources.Invo
      * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -33,7 +33,7 @@ public final class NonComplianceMessageResponse extends io.pulumi.resources.Invo
      * The policy definition reference ID within a policy set definition the message is intended for. This is only applicable if the policy assignment assigns a policy set definition. If this is not provided the message applies to all policies assigned by this policy assignment.
      * 
      */
-    @InputImport(name="policyDefinitionReferenceId")
+    @Import(name="policyDefinitionReferenceId")
       private final @Nullable String policyDefinitionReferenceId;
 
     public Optional<String> getPolicyDefinitionReferenceId() {

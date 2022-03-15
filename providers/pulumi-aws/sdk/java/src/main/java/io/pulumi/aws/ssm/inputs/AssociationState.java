@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.AssociationOutputLocationGetArgs;
 import io.pulumi.aws.ssm.inputs.AssociationTargetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * By default, when you create a new or update associations, the system runs it immediately and then according to the schedule you specified. Enable this option if you do not want an association to run immediately after you create or update it. This parameter is not supported for rate expressions. Default: `false`.
      * 
      */
-    @InputImport(name="applyOnlyAtCronInterval")
+    @Import(name="applyOnlyAtCronInterval")
       private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
     public Output<Boolean> getApplyOnlyAtCronInterval() {
@@ -34,7 +34,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The ID of the SSM association.
      * 
      */
-    @InputImport(name="associationId")
+    @Import(name="associationId")
       private final @Nullable Output<String> associationId;
 
     public Output<String> getAssociationId() {
@@ -45,7 +45,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The descriptive name for the association.
      * 
      */
-    @InputImport(name="associationName")
+    @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
@@ -56,7 +56,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * Specify the target for the association. This target is required for associations that use an `Automation` document and target resources by using rate controls. This should be set to the SSM document `parameter` that will define how your automation will branch out.
      * 
      */
-    @InputImport(name="automationTargetParameterName")
+    @Import(name="automationTargetParameterName")
       private final @Nullable Output<String> automationTargetParameterName;
 
     public Output<String> getAutomationTargetParameterName() {
@@ -67,7 +67,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The compliance severity for the association. Can be one of the following: `UNSPECIFIED`, `LOW`, `MEDIUM`, `HIGH` or `CRITICAL`
      * 
      */
-    @InputImport(name="complianceSeverity")
+    @Import(name="complianceSeverity")
       private final @Nullable Output<String> complianceSeverity;
 
     public Output<String> getComplianceSeverity() {
@@ -78,7 +78,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The document version you want to associate with the target(s). Can be a specific version or the default version.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
@@ -89,7 +89,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The instance ID to apply an SSM document to. Use `targets` with key `InstanceIds` for document schema versions 2.0 and above.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -100,7 +100,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
      * 
      */
-    @InputImport(name="maxConcurrency")
+    @Import(name="maxConcurrency")
       private final @Nullable Output<String> maxConcurrency;
 
     public Output<String> getMaxConcurrency() {
@@ -111,7 +111,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The number of errors that are allowed before the system stops sending requests to run the association on additional targets. You can specify a number, for example 10, or a percentage of the target set, for example 10%.
      * 
      */
-    @InputImport(name="maxErrors")
+    @Import(name="maxErrors")
       private final @Nullable Output<String> maxErrors;
 
     public Output<String> getMaxErrors() {
@@ -122,7 +122,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * The name of the SSM document to apply.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -133,7 +133,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * An output location block. Output Location is documented below.
      * 
      */
-    @InputImport(name="outputLocation")
+    @Import(name="outputLocation")
       private final @Nullable Output<AssociationOutputLocationGetArgs> outputLocation;
 
     public Output<AssociationOutputLocationGetArgs> getOutputLocation() {
@@ -144,7 +144,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * A block of arbitrary string parameters to pass to the SSM document.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -155,7 +155,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * A cron expression when the association will be applied to the target(s).
      * 
      */
-    @InputImport(name="scheduleExpression")
+    @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
@@ -166,7 +166,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * A block containing the targets of the SSM association. Targets are documented below. AWS currently supports a maximum of 5 targets.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<List<AssociationTargetGetArgs>> targets;
 
     public Output<List<AssociationTargetGetArgs>> getTargets() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SsisEnvironmentReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SsisParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsisProjectResponse {
     /**
      * Metadata description.
@@ -57,16 +57,16 @@ public final class SsisProjectResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsisProjectResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("environmentRefs") @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
-        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
-        @OutputCustomType.Parameter("id") @Nullable Double id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable Double version) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("environmentRefs") @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
+        @CustomType.Parameter("folderId") @Nullable Double folderId,
+        @CustomType.Parameter("id") @Nullable Double id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable Double version) {
         this.description = description;
         this.environmentRefs = environmentRefs;
         this.folderId = folderId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
      * The label of the axis.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -31,7 +31,7 @@ public final class AxisResponse extends io.pulumi.resources.InvokeArgs {
      * The axis scale. By default, a linear scale is used.
      * 
      */
-    @InputImport(name="scale", required=true)
+    @Import(name="scale", required=true)
       private final String scale;
 
     public String getScale() {

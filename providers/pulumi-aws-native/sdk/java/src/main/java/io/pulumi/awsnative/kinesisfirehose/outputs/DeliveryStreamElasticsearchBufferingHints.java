@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamElasticsearchBufferingHints {
     private final @Nullable Integer intervalInSeconds;
     private final @Nullable Integer sizeInMBs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamElasticsearchBufferingHints(
-        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
-        @OutputCustomType.Parameter("sizeInMBs") @Nullable Integer sizeInMBs) {
+        @CustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @CustomType.Parameter("sizeInMBs") @Nullable Integer sizeInMBs) {
         this.intervalInSeconds = intervalInSeconds;
         this.sizeInMBs = sizeInMBs;
     }

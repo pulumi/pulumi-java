@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WeekDetailsResponse {
     /**
      * The time of the day the schedule will occur.
@@ -23,10 +23,10 @@ public final class WeekDetailsResponse {
      */
     private final @Nullable List<String> weekdays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeekDetailsResponse(
-        @OutputCustomType.Parameter("time") @Nullable String time,
-        @OutputCustomType.Parameter("weekdays") @Nullable List<String> weekdays) {
+        @CustomType.Parameter("time") @Nullable String time,
+        @CustomType.Parameter("weekdays") @Nullable List<String> weekdays) {
         this.time = time;
         this.weekdays = weekdays;
     }

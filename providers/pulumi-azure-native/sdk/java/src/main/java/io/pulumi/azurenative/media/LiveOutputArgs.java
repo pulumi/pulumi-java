@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.HlsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
      * 
      */
-    @InputImport(name="archiveWindowLength", required=true)
+    @Import(name="archiveWindowLength", required=true)
       private final Output<String> archiveWindowLength;
 
     public Output<String> getArchiveWindowLength() {
@@ -42,7 +42,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The asset that the live output will write to.
      * 
      */
-    @InputImport(name="assetName", required=true)
+    @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
     public Output<String> getAssetName() {
@@ -53,7 +53,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the live output.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP Live Streaming (HLS) packing setting for the live output.
      * 
      */
-    @InputImport(name="hls")
+    @Import(name="hls")
       private final @Nullable Output<HlsArgs> hls;
 
     public Output<HlsArgs> getHls() {
@@ -75,7 +75,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the live event, maximum length is 32.
      * 
      */
-    @InputImport(name="liveEventName", required=true)
+    @Import(name="liveEventName", required=true)
       private final Output<String> liveEventName;
 
     public Output<String> getLiveEventName() {
@@ -86,7 +86,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the live output.
      * 
      */
-    @InputImport(name="liveOutputName")
+    @Import(name="liveOutputName")
       private final @Nullable Output<String> liveOutputName;
 
     public Output<String> getLiveOutputName() {
@@ -97,7 +97,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The manifest file name. If not provided, the service will generate one automatically.
      * 
      */
-    @InputImport(name="manifestName")
+    @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
     public Output<String> getManifestName() {
@@ -108,7 +108,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The initial timestamp that the live output will start at, any content before this value will not be archived.
      * 
      */
-    @InputImport(name="outputSnapTime")
+    @Import(name="outputSnapTime")
       private final @Nullable Output<Double> outputSnapTime;
 
     public Output<Double> getOutputSnapTime() {
@@ -119,7 +119,7 @@ public final class LiveOutputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

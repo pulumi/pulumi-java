@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeUsageDataEventHubResponse {
     /**
      * Name of the Event Hub where usage will be reported.
@@ -27,11 +27,11 @@ public final class EdgeUsageDataEventHubResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeUsageDataEventHubResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("token") @Nullable String token) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("token") @Nullable String token) {
         this.name = name;
         this.namespace = namespace;
         this.token = token;

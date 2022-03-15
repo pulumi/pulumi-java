@@ -5,7 +5,7 @@ package io.pulumi.azurenative.serialconsole;
 
 import io.pulumi.azurenative.serialconsole.enums.SerialPortState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name, or subordinate path, for the parent of the serial port. For example: the name of the virtual machine.
      * 
      */
-    @InputImport(name="parentResource", required=true)
+    @Import(name="parentResource", required=true)
       private final Output<String> parentResource;
 
     public Output<String> getParentResource() {
@@ -30,7 +30,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * The resource type of the parent resource.  For example: 'virtualMachines' or 'virtualMachineScaleSets'
      * 
      */
-    @InputImport(name="parentResourceType", required=true)
+    @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
     public Output<String> getParentResourceType() {
@@ -41,7 +41,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of the resource provider.
      * 
      */
-    @InputImport(name="resourceProviderNamespace", required=true)
+    @Import(name="resourceProviderNamespace", required=true)
       private final Output<String> resourceProviderNamespace;
 
     public Output<String> getResourceProviderNamespace() {
@@ -63,7 +63,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the serial port to create.
      * 
      */
-    @InputImport(name="serialPort")
+    @Import(name="serialPort")
       private final @Nullable Output<String> serialPort;
 
     public Output<String> getSerialPort() {
@@ -74,7 +74,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the port is enabled for a serial console connection.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<SerialPortState> state;
 
     public Output<SerialPortState> getState() {

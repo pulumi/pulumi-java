@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
      * The name of the Pub/Sub topic to publish to. Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {

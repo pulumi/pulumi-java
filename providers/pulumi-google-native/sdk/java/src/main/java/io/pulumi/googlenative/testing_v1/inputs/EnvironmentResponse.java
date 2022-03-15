@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceResponse;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
      * An Android device which must be used with an Android test.
      * 
      */
-    @InputImport(name="androidDevice", required=true)
+    @Import(name="androidDevice", required=true)
       private final AndroidDeviceResponse androidDevice;
 
     public AndroidDeviceResponse getAndroidDevice() {
@@ -32,7 +32,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
      * An iOS device which must be used with an iOS test.
      * 
      */
-    @InputImport(name="iosDevice", required=true)
+    @Import(name="iosDevice", required=true)
       private final IosDeviceResponse iosDevice;
 
     public IosDeviceResponse getIosDevice() {

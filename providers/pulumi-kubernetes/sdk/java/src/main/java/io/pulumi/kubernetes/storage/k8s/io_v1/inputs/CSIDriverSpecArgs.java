@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.TokenRequestArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field is immutable.
      * 
      */
-    @InputImport(name="attachRequired")
+    @Import(name="attachRequired")
       private final @Nullable Output<Boolean> attachRequired;
 
     public Output<Boolean> getAttachRequired() {
@@ -42,7 +42,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to ReadWriteOnceWithFSType, which will examine each volume to determine if Kubernetes should modify ownership and permissions of the volume. With the default policy the defined fsGroup will only be applied if a fstype is defined and the volume's access mode contains ReadWriteOnce.
      * 
      */
-    @InputImport(name="fsGroupPolicy")
+    @Import(name="fsGroupPolicy")
       private final @Nullable Output<String> fsGroupPolicy;
 
     public Output<String> getFsGroupPolicy() {
@@ -58,7 +58,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field is immutable.
      * 
      */
-    @InputImport(name="podInfoOnMount")
+    @Import(name="podInfoOnMount")
       private final @Nullable Output<Boolean> podInfoOnMount;
 
     public Output<Boolean> getPodInfoOnMount() {
@@ -71,7 +71,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Note: After a successful initial NodePublishVolume call, subsequent calls to NodePublishVolume should only update the contents of the volume. New mount points will not be seen by a running container.
      * 
      */
-    @InputImport(name="requiresRepublish")
+    @Import(name="requiresRepublish")
       private final @Nullable Output<Boolean> requiresRepublish;
 
     public Output<Boolean> getRequiresRepublish() {
@@ -90,7 +90,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This is a beta field and only available when the CSIStorageCapacity feature is enabled. The default is false.
      * 
      */
-    @InputImport(name="storageCapacity")
+    @Import(name="storageCapacity")
       private final @Nullable Output<Boolean> storageCapacity;
 
     public Output<Boolean> getStorageCapacity() {
@@ -109,7 +109,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Note: Audience in each TokenRequest should be different and at most one token is empty string. To receive a new token after expiry, RequiresRepublish can be used to trigger NodePublishVolume periodically.
      * 
      */
-    @InputImport(name="tokenRequests")
+    @Import(name="tokenRequests")
       private final @Nullable Output<List<TokenRequestArgs>> tokenRequests;
 
     public Output<List<TokenRequestArgs>> getTokenRequests() {
@@ -122,7 +122,7 @@ public final class CSIDriverSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field is immutable.
      * 
      */
-    @InputImport(name="volumeLifecycleModes")
+    @Import(name="volumeLifecycleModes")
       private final @Nullable Output<List<String>> volumeLifecycleModes;
 
     public Output<List<String>> getVolumeLifecycleModes() {

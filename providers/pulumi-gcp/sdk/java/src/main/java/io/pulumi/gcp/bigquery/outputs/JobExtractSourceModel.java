@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobExtractSourceModel {
     /**
      * The ID of the dataset containing this model.
@@ -25,11 +25,11 @@ public final class JobExtractSourceModel {
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobExtractSourceModel(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("modelId") String modelId,
-        @OutputCustomType.Parameter("projectId") String projectId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("modelId") String modelId,
+        @CustomType.Parameter("projectId") String projectId) {
         this.datasetId = datasetId;
         this.modelId = modelId;
         this.projectId = projectId;

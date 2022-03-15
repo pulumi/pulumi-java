@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiFeatureStoreArgs;
@@ -44,7 +44,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * nine fractional digits.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -59,7 +59,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * Used to perform consistent read-modify-write updates.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -73,7 +73,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * If set to true, any EntityTypes and Features for this Featurestore will also be deleted
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -87,7 +87,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * A set of key/value label pairs to assign to this Featurestore.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -101,7 +101,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -116,7 +116,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="onlineServingConfig", type=AiFeatureStoreOnlineServingConfig.class, parameters={})
+    @Export(name="onlineServingConfig", type=AiFeatureStoreOnlineServingConfig.class, parameters={})
     private Output</* @Nullable */ AiFeatureStoreOnlineServingConfig> onlineServingConfig;
 
     /**
@@ -132,7 +132,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -147,7 +147,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * The region of the dataset. eg us-central1
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -162,7 +162,7 @@ public class AiFeatureStore extends io.pulumi.resources.CustomResource {
      * to nine fractional digits.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

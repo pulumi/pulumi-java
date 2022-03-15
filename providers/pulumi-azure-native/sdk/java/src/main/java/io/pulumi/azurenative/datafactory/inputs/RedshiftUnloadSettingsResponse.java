@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RedshiftUnloadSettingsResponse extends io.pulumi.resources.In
      * The bucket of the interim Amazon S3 which will be used to store the unloaded data from Amazon Redshift source. The bucket must be in the same region as the Amazon Redshift source. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Object bucketName;
 
     public Object getBucketName() {
@@ -32,7 +32,7 @@ public final class RedshiftUnloadSettingsResponse extends io.pulumi.resources.In
      * The name of the Amazon S3 linked service which will be used for the unload operation when copying from the Amazon Redshift source.
      * 
      */
-    @InputImport(name="s3LinkedServiceName", required=true)
+    @Import(name="s3LinkedServiceName", required=true)
       private final LinkedServiceReferenceResponse s3LinkedServiceName;
 
     public LinkedServiceReferenceResponse getS3LinkedServiceName() {

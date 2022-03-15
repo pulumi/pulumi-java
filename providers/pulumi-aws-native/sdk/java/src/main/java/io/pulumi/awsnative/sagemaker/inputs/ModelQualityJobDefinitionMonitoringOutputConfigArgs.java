@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionMonitoringOutputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -35,7 +35,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfigArgs extends i
      * Monitoring outputs for monitoring jobs. This is where the output of the periodic monitoring jobs is uploaded.
      * 
      */
-    @InputImport(name="monitoringOutputs", required=true)
+    @Import(name="monitoringOutputs", required=true)
       private final Output<List<ModelQualityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
     public Output<List<ModelQualityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {

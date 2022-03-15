@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.RatePlanArgs;
@@ -27,7 +27,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Name of the API product that the rate plan is associated with.
      * 
      */
-    @OutputExport(name="apiproduct", type=String.class, parameters={})
+    @Export(name="apiproduct", type=String.class, parameters={})
     private Output<String> apiproduct;
 
     /**
@@ -41,7 +41,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Frequency at which the customer will be billed.
      * 
      */
-    @OutputExport(name="billingPeriod", type=String.class, parameters={})
+    @Export(name="billingPeriod", type=String.class, parameters={})
     private Output<String> billingPeriod;
 
     /**
@@ -55,7 +55,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * API call volume ranges and the fees charged when the total number of API calls is within a given range. The method used to calculate the final fee depends on the selected pricing model. For example, if the pricing model is `STAIRSTEP` and the ranges are defined as follows: ```{ "start": 1, "end": 100, "fee": 75 }, { "start": 101, "end": 200, "fee": 100 }, }``` Then the following fees would be charged based on the total number of API calls (assuming the currency selected is `USD`): * 1 call costs $75 * 50 calls cost $75 * 150 calls cost $100 The number of API calls cannot exceed 200.
      * 
      */
-    @OutputExport(name="consumptionPricingRates", type=List.class, parameters={GoogleCloudApigeeV1RateRangeResponse.class})
+    @Export(name="consumptionPricingRates", type=List.class, parameters={GoogleCloudApigeeV1RateRangeResponse.class})
     private Output<List<GoogleCloudApigeeV1RateRangeResponse>> consumptionPricingRates;
 
     /**
@@ -69,7 +69,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Pricing model used for consumption-based charges.
      * 
      */
-    @OutputExport(name="consumptionPricingType", type=String.class, parameters={})
+    @Export(name="consumptionPricingType", type=String.class, parameters={})
     private Output<String> consumptionPricingType;
 
     /**
@@ -83,7 +83,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Time that the rate plan was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -97,7 +97,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Currency to be used for billing. Consists of a three-letter code as defined by the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) standard.
      * 
      */
-    @OutputExport(name="currencyCode", type=String.class, parameters={})
+    @Export(name="currencyCode", type=String.class, parameters={})
     private Output<String> currencyCode;
 
     /**
@@ -111,7 +111,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Description of the rate plan.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -125,7 +125,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Display name of the rate plan.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -139,7 +139,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Time when the rate plan will expire in milliseconds since epoch. Set to 0 or `null` to indicate that the rate plan should never expire.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -153,7 +153,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Frequency at which the fixed fee is charged.
      * 
      */
-    @OutputExport(name="fixedFeeFrequency", type=Integer.class, parameters={})
+    @Export(name="fixedFeeFrequency", type=Integer.class, parameters={})
     private Output<Integer> fixedFeeFrequency;
 
     /**
@@ -167,7 +167,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Fixed amount that is charged at a defined interval and billed in advance of use of the API product. The fee will be prorated for the first billing period.
      * 
      */
-    @OutputExport(name="fixedRecurringFee", type=GoogleTypeMoneyResponse.class, parameters={})
+    @Export(name="fixedRecurringFee", type=GoogleTypeMoneyResponse.class, parameters={})
     private Output<GoogleTypeMoneyResponse> fixedRecurringFee;
 
     /**
@@ -181,7 +181,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Time the rate plan was last modified in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -195,7 +195,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Name of the rate plan.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -209,7 +209,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Details of the revenue sharing model.
      * 
      */
-    @OutputExport(name="revenueShareRates", type=List.class, parameters={GoogleCloudApigeeV1RevenueShareRangeResponse.class})
+    @Export(name="revenueShareRates", type=List.class, parameters={GoogleCloudApigeeV1RevenueShareRangeResponse.class})
     private Output<List<GoogleCloudApigeeV1RevenueShareRangeResponse>> revenueShareRates;
 
     /**
@@ -223,7 +223,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Method used to calculate the revenue that is shared with developers.
      * 
      */
-    @OutputExport(name="revenueShareType", type=String.class, parameters={})
+    @Export(name="revenueShareType", type=String.class, parameters={})
     private Output<String> revenueShareType;
 
     /**
@@ -237,7 +237,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Initial, one-time fee paid when purchasing the API product.
      * 
      */
-    @OutputExport(name="setupFee", type=GoogleTypeMoneyResponse.class, parameters={})
+    @Export(name="setupFee", type=GoogleTypeMoneyResponse.class, parameters={})
     private Output<GoogleTypeMoneyResponse> setupFee;
 
     /**
@@ -251,7 +251,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Time when the rate plan becomes active in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -265,7 +265,7 @@ public class RatePlan extends io.pulumi.resources.CustomResource {
      * Current state of the rate plan (draft or published).
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

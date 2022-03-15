@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyResourceStatusResponse {
     /**
      * Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
@@ -15,8 +15,8 @@ public final class ResourcePolicyResourceStatusResponse {
      */
     private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
-    @OutputCustomType.Constructor
-    private ResourcePolicyResourceStatusResponse(@OutputCustomType.Parameter("instanceSchedulePolicy") ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
+    @CustomType.Constructor
+    private ResourcePolicyResourceStatusResponse(@CustomType.Parameter("instanceSchedulePolicy") ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
         this.instanceSchedulePolicy = instanceSchedulePolicy;
     }
 

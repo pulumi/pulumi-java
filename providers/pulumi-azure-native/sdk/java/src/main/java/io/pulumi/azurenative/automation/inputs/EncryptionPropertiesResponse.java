@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesResponseIdentity;
 import io.pulumi.azurenative.automation.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * User identity used for CMK.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable EncryptionPropertiesResponseIdentity identity;
 
     public Optional<EncryptionPropertiesResponseIdentity> getIdentity() {
@@ -35,7 +35,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * Encryption Key Source
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable String keySource;
 
     public Optional<String> getKeySource() {
@@ -46,7 +46,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * Key vault properties.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AzureStorageInfoValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppAzureStorageAccountsResult {
     /**
      * Resource Id.
@@ -39,13 +39,13 @@ public final class ListWebAppAzureStorageAccountsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppAzureStorageAccountsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Map<String,AzureStorageInfoValueResponse> properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Map<String,AzureStorageInfoValueResponse> properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;

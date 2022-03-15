@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.FrequencyTypes;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
      * The frequency to update.
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable Output<FrequencyTypes> frequency;
 
     public Output<FrequencyTypes> getFrequency() {
@@ -34,7 +34,7 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
      * The interval of the given frequency to use.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
     public Output<Integer> getInterval() {

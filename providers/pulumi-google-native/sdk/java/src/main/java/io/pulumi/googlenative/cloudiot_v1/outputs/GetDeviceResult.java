@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceCredentialResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceStateResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceResult {
     /**
      * If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.
@@ -98,24 +98,24 @@ public final class GetDeviceResult {
      */
     private final DeviceStateResponse state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceResult(
-        @OutputCustomType.Parameter("blocked") Boolean blocked,
-        @OutputCustomType.Parameter("config") DeviceConfigResponse config,
-        @OutputCustomType.Parameter("credentials") List<DeviceCredentialResponse> credentials,
-        @OutputCustomType.Parameter("gatewayConfig") GatewayConfigResponse gatewayConfig,
-        @OutputCustomType.Parameter("lastConfigAckTime") String lastConfigAckTime,
-        @OutputCustomType.Parameter("lastConfigSendTime") String lastConfigSendTime,
-        @OutputCustomType.Parameter("lastErrorStatus") StatusResponse lastErrorStatus,
-        @OutputCustomType.Parameter("lastErrorTime") String lastErrorTime,
-        @OutputCustomType.Parameter("lastEventTime") String lastEventTime,
-        @OutputCustomType.Parameter("lastHeartbeatTime") String lastHeartbeatTime,
-        @OutputCustomType.Parameter("lastStateTime") String lastStateTime,
-        @OutputCustomType.Parameter("logLevel") String logLevel,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numId") String numId,
-        @OutputCustomType.Parameter("state") DeviceStateResponse state) {
+        @CustomType.Parameter("blocked") Boolean blocked,
+        @CustomType.Parameter("config") DeviceConfigResponse config,
+        @CustomType.Parameter("credentials") List<DeviceCredentialResponse> credentials,
+        @CustomType.Parameter("gatewayConfig") GatewayConfigResponse gatewayConfig,
+        @CustomType.Parameter("lastConfigAckTime") String lastConfigAckTime,
+        @CustomType.Parameter("lastConfigSendTime") String lastConfigSendTime,
+        @CustomType.Parameter("lastErrorStatus") StatusResponse lastErrorStatus,
+        @CustomType.Parameter("lastErrorTime") String lastErrorTime,
+        @CustomType.Parameter("lastEventTime") String lastEventTime,
+        @CustomType.Parameter("lastHeartbeatTime") String lastHeartbeatTime,
+        @CustomType.Parameter("lastStateTime") String lastStateTime,
+        @CustomType.Parameter("logLevel") String logLevel,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numId") String numId,
+        @CustomType.Parameter("state") DeviceStateResponse state) {
         this.blocked = blocked;
         this.config = config;
         this.credentials = credentials;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.NotificationArgs;
@@ -24,7 +24,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
      */
-    @OutputExport(name="customAttributes", type=Map.class, parameters={String.class, String.class})
+    @Export(name="customAttributes", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> customAttributes;
 
     /**
@@ -38,7 +38,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * HTTP 1.1 Entity tag for this subscription notification.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -52,7 +52,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
      */
-    @OutputExport(name="eventTypes", type=List.class, parameters={String.class})
+    @Export(name="eventTypes", type=List.class, parameters={String.class})
     private Output<List<String>> eventTypes;
 
     /**
@@ -66,7 +66,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The kind of item this is. For notifications, this is always storage#notification.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * If present, only apply this notification configuration to object names that begin with this prefix.
      * 
      */
-    @OutputExport(name="objectNamePrefix", type=String.class, parameters={})
+    @Export(name="objectNamePrefix", type=String.class, parameters={})
     private Output<String> objectNamePrefix;
 
     /**
@@ -94,7 +94,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The desired content of the Payload.
      * 
      */
-    @OutputExport(name="payloadFormat", type=String.class, parameters={})
+    @Export(name="payloadFormat", type=String.class, parameters={})
     private Output<String> payloadFormat;
 
     /**
@@ -108,7 +108,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The canonical URL of this notification.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -122,7 +122,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**

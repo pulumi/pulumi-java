@@ -8,7 +8,7 @@ import io.pulumi.azurenative.netapp.inputs.HourlyScheduleArgs;
 import io.pulumi.azurenative.netapp.inputs.MonthlyScheduleArgs;
 import io.pulumi.azurenative.netapp.inputs.WeeklyScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the NetApp account
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -35,7 +35,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule for daily snapshots
      * 
      */
-    @InputImport(name="dailySchedule")
+    @Import(name="dailySchedule")
       private final @Nullable Output<DailyScheduleArgs> dailySchedule;
 
     public Output<DailyScheduleArgs> getDailySchedule() {
@@ -46,7 +46,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The property to decide policy is enabled or not
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -57,7 +57,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule for hourly snapshots
      * 
      */
-    @InputImport(name="hourlySchedule")
+    @Import(name="hourlySchedule")
       private final @Nullable Output<HourlyScheduleArgs> hourlySchedule;
 
     public Output<HourlyScheduleArgs> getHourlySchedule() {
@@ -68,7 +68,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -79,7 +79,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule for monthly snapshots
      * 
      */
-    @InputImport(name="monthlySchedule")
+    @Import(name="monthlySchedule")
       private final @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
 
     public Output<MonthlyScheduleArgs> getMonthlySchedule() {
@@ -90,7 +90,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the snapshot policy
      * 
      */
-    @InputImport(name="snapshotPolicyName")
+    @Import(name="snapshotPolicyName")
       private final @Nullable Output<String> snapshotPolicyName;
 
     public Output<String> getSnapshotPolicyName() {
@@ -112,7 +112,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -123,7 +123,7 @@ public final class SnapshotPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule for weekly snapshots
      * 
      */
-    @InputImport(name="weeklySchedule")
+    @Import(name="weeklySchedule")
       private final @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
 
     public Output<WeeklyScheduleArgs> getWeeklySchedule() {

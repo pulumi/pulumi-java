@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediaconnect.FlowEntitlementArgs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEntitlementEncryption;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * Percentage from 0-100 of the data transfer cost to be billed to the subscriber.
      * 
      */
-    @OutputExport(name="dataTransferSubscriberFeePercent", type=Integer.class, parameters={})
+    @Export(name="dataTransferSubscriberFeePercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dataTransferSubscriberFeePercent;
 
     /**
@@ -39,7 +39,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * A description of the entitlement.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -53,7 +53,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * The type of encryption that will be used on the output that is associated with this entitlement.
      * 
      */
-    @OutputExport(name="encryption", type=FlowEntitlementEncryption.class, parameters={})
+    @Export(name="encryption", type=FlowEntitlementEncryption.class, parameters={})
     private Output</* @Nullable */ FlowEntitlementEncryption> encryption;
 
     /**
@@ -67,7 +67,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * The ARN of the entitlement.
      * 
      */
-    @OutputExport(name="entitlementArn", type=String.class, parameters={})
+    @Export(name="entitlementArn", type=String.class, parameters={})
     private Output<String> entitlementArn;
 
     /**
@@ -81,7 +81,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      *  An indication of whether the entitlement is enabled.
      * 
      */
-    @OutputExport(name="entitlementStatus", type=FlowEntitlementEntitlementStatus.class, parameters={})
+    @Export(name="entitlementStatus", type=FlowEntitlementEntitlementStatus.class, parameters={})
     private Output</* @Nullable */ FlowEntitlementEntitlementStatus> entitlementStatus;
 
     /**
@@ -95,7 +95,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * The ARN of the flow.
      * 
      */
-    @OutputExport(name="flowArn", type=String.class, parameters={})
+    @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
@@ -109,7 +109,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * The name of the entitlement.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class FlowEntitlement extends io.pulumi.resources.CustomResource {
      * The AWS account IDs that you want to share your content with. The receiving accounts (subscribers) will be allowed to create their own flow using your content as the source.
      * 
      */
-    @OutputExport(name="subscribers", type=List.class, parameters={String.class})
+    @Export(name="subscribers", type=List.class, parameters={String.class})
     private Output<List<String>> subscribers;
 
     /**

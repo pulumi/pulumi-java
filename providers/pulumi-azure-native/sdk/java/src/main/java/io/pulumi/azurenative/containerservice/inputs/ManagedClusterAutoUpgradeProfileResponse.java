@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse extends io.pulumi.re
      * upgrade channel for auto upgrade.
      * 
      */
-    @InputImport(name="upgradeChannel")
+    @Import(name="upgradeChannel")
       private final @Nullable String upgradeChannel;
 
     public Optional<String> getUpgradeChannel() {

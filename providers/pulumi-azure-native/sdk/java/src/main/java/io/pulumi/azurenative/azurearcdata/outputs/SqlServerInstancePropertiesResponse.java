@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlServerInstancePropertiesResponse {
     /**
      * SQL Server collation.
@@ -83,23 +83,23 @@ public final class SqlServerInstancePropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlServerInstancePropertiesResponse(
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("containerResourceId") String containerResourceId,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
-        @OutputCustomType.Parameter("edition") @Nullable String edition,
-        @OutputCustomType.Parameter("instanceName") @Nullable String instanceName,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("patchLevel") @Nullable String patchLevel,
-        @OutputCustomType.Parameter("productId") @Nullable String productId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tcpDynamicPorts") @Nullable String tcpDynamicPorts,
-        @OutputCustomType.Parameter("tcpStaticPorts") @Nullable String tcpStaticPorts,
-        @OutputCustomType.Parameter("vCore") @Nullable String vCore,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("containerResourceId") String containerResourceId,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @CustomType.Parameter("edition") @Nullable String edition,
+        @CustomType.Parameter("instanceName") @Nullable String instanceName,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("patchLevel") @Nullable String patchLevel,
+        @CustomType.Parameter("productId") @Nullable String productId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tcpDynamicPorts") @Nullable String tcpDynamicPorts,
+        @CustomType.Parameter("tcpStaticPorts") @Nullable String tcpStaticPorts,
+        @CustomType.Parameter("vCore") @Nullable String vCore,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.collation = collation;
         this.containerResourceId = containerResourceId;
         this.createTime = createTime;

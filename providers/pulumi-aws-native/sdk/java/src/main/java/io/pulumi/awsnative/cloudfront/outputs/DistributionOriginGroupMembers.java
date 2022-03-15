@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroupMember;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroupMembers {
     private final List<DistributionOriginGroupMember> items;
     private final Integer quantity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOriginGroupMembers(
-        @OutputCustomType.Parameter("items") List<DistributionOriginGroupMember> items,
-        @OutputCustomType.Parameter("quantity") Integer quantity) {
+        @CustomType.Parameter("items") List<DistributionOriginGroupMember> items,
+        @CustomType.Parameter("quantity") Integer quantity) {
         this.items = items;
         this.quantity = quantity;
     }

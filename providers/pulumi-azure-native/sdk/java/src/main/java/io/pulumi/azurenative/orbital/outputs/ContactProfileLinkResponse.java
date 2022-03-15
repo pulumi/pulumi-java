@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ContactProfileLinkChannelResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactProfileLinkResponse {
     /**
      * Contact Profile Link Channel
@@ -40,13 +40,13 @@ public final class ContactProfileLinkResponse {
      */
     private final String polarization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactProfileLinkResponse(
-        @OutputCustomType.Parameter("channels") List<ContactProfileLinkChannelResponse> channels,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("eirpdBW") @Nullable Double eirpdBW,
-        @OutputCustomType.Parameter("gainOverTemperature") @Nullable Double gainOverTemperature,
-        @OutputCustomType.Parameter("polarization") String polarization) {
+        @CustomType.Parameter("channels") List<ContactProfileLinkChannelResponse> channels,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("eirpdBW") @Nullable Double eirpdBW,
+        @CustomType.Parameter("gainOverTemperature") @Nullable Double gainOverTemperature,
+        @CustomType.Parameter("polarization") String polarization) {
         this.channels = channels;
         this.direction = direction;
         this.eirpdBW = eirpdBW;

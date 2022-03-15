@@ -5,7 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
      * Tag filters associated with the deployment group. See the AWS docs for details.
      * 
      */
-    @InputImport(name="ec2TagFilters")
+    @Import(name="ec2TagFilters")
       private final @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
 
     public Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> getEc2TagFilters() {

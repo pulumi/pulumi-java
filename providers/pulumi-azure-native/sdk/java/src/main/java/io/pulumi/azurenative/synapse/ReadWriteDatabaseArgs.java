@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * The name of the database in the Kusto pool.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -29,7 +29,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    @InputImport(name="hotCachePeriod")
+    @Import(name="hotCachePeriod")
       private final @Nullable Output<String> hotCachePeriod;
 
     public Output<String> getHotCachePeriod() {
@@ -41,7 +41,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'ReadWrite'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -52,7 +52,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName", required=true)
+    @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -63,7 +63,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -74,7 +74,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * The time the data should be kept before it stops being accessible to queries in TimeSpan.
      * 
      */
-    @InputImport(name="softDeletePeriod")
+    @Import(name="softDeletePeriod")
       private final @Nullable Output<String> softDeletePeriod;
 
     public Output<String> getSoftDeletePeriod() {
@@ -96,7 +96,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

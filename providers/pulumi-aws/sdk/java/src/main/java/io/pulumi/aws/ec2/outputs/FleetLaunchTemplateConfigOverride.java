@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetLaunchTemplateConfigOverride {
     /**
      * Availability Zone in which to launch the instances.
@@ -43,14 +43,14 @@ public final class FleetLaunchTemplateConfigOverride {
      */
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetLaunchTemplateConfigOverride(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
-        @OutputCustomType.Parameter("priority") @Nullable Double priority,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @CustomType.Parameter("priority") @Nullable Double priority,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceType = instanceType;
         this.maxPrice = maxPrice;

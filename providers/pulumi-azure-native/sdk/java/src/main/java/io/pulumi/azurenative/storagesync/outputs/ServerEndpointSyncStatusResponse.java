@@ -5,12 +5,12 @@ package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncActivityStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncSessionStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointSyncStatusResponse {
     /**
      * Combined Health Status.
@@ -68,19 +68,19 @@ public final class ServerEndpointSyncStatusResponse {
      */
     private final ServerEndpointSyncSessionStatusResponse uploadStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointSyncStatusResponse(
-        @OutputCustomType.Parameter("combinedHealth") String combinedHealth,
-        @OutputCustomType.Parameter("downloadActivity") ServerEndpointSyncActivityStatusResponse downloadActivity,
-        @OutputCustomType.Parameter("downloadHealth") String downloadHealth,
-        @OutputCustomType.Parameter("downloadStatus") ServerEndpointSyncSessionStatusResponse downloadStatus,
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
-        @OutputCustomType.Parameter("offlineDataTransferStatus") String offlineDataTransferStatus,
-        @OutputCustomType.Parameter("syncActivity") String syncActivity,
-        @OutputCustomType.Parameter("totalPersistentFilesNotSyncingCount") Double totalPersistentFilesNotSyncingCount,
-        @OutputCustomType.Parameter("uploadActivity") ServerEndpointSyncActivityStatusResponse uploadActivity,
-        @OutputCustomType.Parameter("uploadHealth") String uploadHealth,
-        @OutputCustomType.Parameter("uploadStatus") ServerEndpointSyncSessionStatusResponse uploadStatus) {
+        @CustomType.Parameter("combinedHealth") String combinedHealth,
+        @CustomType.Parameter("downloadActivity") ServerEndpointSyncActivityStatusResponse downloadActivity,
+        @CustomType.Parameter("downloadHealth") String downloadHealth,
+        @CustomType.Parameter("downloadStatus") ServerEndpointSyncSessionStatusResponse downloadStatus,
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @CustomType.Parameter("offlineDataTransferStatus") String offlineDataTransferStatus,
+        @CustomType.Parameter("syncActivity") String syncActivity,
+        @CustomType.Parameter("totalPersistentFilesNotSyncingCount") Double totalPersistentFilesNotSyncingCount,
+        @CustomType.Parameter("uploadActivity") ServerEndpointSyncActivityStatusResponse uploadActivity,
+        @CustomType.Parameter("uploadHealth") String uploadHealth,
+        @CustomType.Parameter("uploadStatus") ServerEndpointSyncSessionStatusResponse uploadStatus) {
         this.combinedHealth = combinedHealth;
         this.downloadActivity = downloadActivity;
         this.downloadHealth = downloadHealth;

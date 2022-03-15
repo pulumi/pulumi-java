@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlActiveDirectoryConfigResponse {
     /**
      * The name of the domain (e.g., mydomain.com).
@@ -20,10 +20,10 @@ public final class SqlActiveDirectoryConfigResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlActiveDirectoryConfigResponse(
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("kind") String kind) {
         this.domain = domain;
         this.kind = kind;
     }

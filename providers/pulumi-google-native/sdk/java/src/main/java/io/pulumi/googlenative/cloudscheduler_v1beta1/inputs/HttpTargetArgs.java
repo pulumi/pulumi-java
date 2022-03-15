@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.enums.HttpTargetHttpMethod;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.OAuthTokenArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.OidcTokenArgs;
@@ -26,7 +26,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -37,7 +37,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The user can specify HTTP request headers to send with the job's HTTP request. This map contains the header field names and values. Repeated headers are not supported, but a header value can contain commas. These headers represent a subset of the headers that will accompany the job's HTTP request. Some HTTP request headers will be ignored or replaced. A partial list of headers that will be ignored or replaced is below: - Host: This will be computed by Cloud Scheduler and derived from uri. * `Content-Length`: This will be computed by Cloud Scheduler. * `User-Agent`: This will be set to `"Google-Cloud-Scheduler"`. * `X-Google-*`: Google internal use only. * `X-AppEngine-*`: Google internal use only. * `X-CloudScheduler`: This header will be set to true. * `X-CloudScheduler-JobName`: This header will contain the job name. * `X-CloudScheduler-ScheduleTime`: For Cloud Scheduler jobs specified in the unix-cron format, this header will contain the job schedule time in RFC3339 UTC "Zulu" format. The total size of headers must be less than 80KB.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
@@ -48,7 +48,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Which HTTP method to use for the request.
      * 
      */
-    @InputImport(name="httpMethod")
+    @Import(name="httpMethod")
       private final @Nullable Output<HttpTargetHttpMethod> httpMethod;
 
     public Output<HttpTargetHttpMethod> getHttpMethod() {
@@ -59,7 +59,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
      * 
      */
-    @InputImport(name="oauthToken")
+    @Import(name="oauthToken")
       private final @Nullable Output<OAuthTokenArgs> oauthToken;
 
     public Output<OAuthTokenArgs> getOauthToken() {
@@ -70,7 +70,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
      * 
      */
-    @InputImport(name="oidcToken")
+    @Import(name="oidcToken")
       private final @Nullable Output<OidcTokenArgs> oidcToken;
 
     public Output<OidcTokenArgs> getOidcToken() {
@@ -81,7 +81,7 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The full URI path that the request will be sent to. This string must begin with either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

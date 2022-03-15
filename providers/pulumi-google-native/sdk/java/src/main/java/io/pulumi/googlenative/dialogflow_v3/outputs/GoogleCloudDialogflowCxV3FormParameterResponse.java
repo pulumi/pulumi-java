@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3FormParameterResponse {
     /**
      * The default value of an optional parameter. If the parameter is required, the default value will be ignored.
@@ -48,15 +48,15 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse {
      */
     private final Boolean required;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3FormParameterResponse(
-        @OutputCustomType.Parameter("defaultValue") Object defaultValue,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("entityType") String entityType,
-        @OutputCustomType.Parameter("fillBehavior") GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior,
-        @OutputCustomType.Parameter("isList") Boolean isList,
-        @OutputCustomType.Parameter("redact") Boolean redact,
-        @OutputCustomType.Parameter("required") Boolean required) {
+        @CustomType.Parameter("defaultValue") Object defaultValue,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("entityType") String entityType,
+        @CustomType.Parameter("fillBehavior") GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior,
+        @CustomType.Parameter("isList") Boolean isList,
+        @CustomType.Parameter("redact") Boolean redact,
+        @CustomType.Parameter("required") Boolean required) {
         this.defaultValue = defaultValue;
         this.displayName = displayName;
         this.entityType = entityType;

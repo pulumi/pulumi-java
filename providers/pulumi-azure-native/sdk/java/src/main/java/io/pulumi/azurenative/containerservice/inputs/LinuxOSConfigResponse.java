@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.SysctlConfigResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LinuxOSConfigResponse extends io.pulumi.resources.InvokeArgs 
      * SwapFileSizeMB specifies size in MB of a swap file will be created on each node.
      * 
      */
-    @InputImport(name="swapFileSizeMB")
+    @Import(name="swapFileSizeMB")
       private final @Nullable Integer swapFileSizeMB;
 
     public Optional<Integer> getSwapFileSizeMB() {
@@ -35,7 +35,7 @@ public final class LinuxOSConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Sysctl settings for Linux agent nodes.
      * 
      */
-    @InputImport(name="sysctls")
+    @Import(name="sysctls")
       private final @Nullable SysctlConfigResponse sysctls;
 
     public Optional<SysctlConfigResponse> getSysctls() {
@@ -46,7 +46,7 @@ public final class LinuxOSConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Transparent Huge Page defrag configuration.
      * 
      */
-    @InputImport(name="transparentHugePageDefrag")
+    @Import(name="transparentHugePageDefrag")
       private final @Nullable String transparentHugePageDefrag;
 
     public Optional<String> getTransparentHugePageDefrag() {
@@ -57,7 +57,7 @@ public final class LinuxOSConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Transparent Huge Page enabled configuration.
      * 
      */
-    @InputImport(name="transparentHugePageEnabled")
+    @Import(name="transparentHugePageEnabled")
       private final @Nullable String transparentHugePageEnabled;
 
     public Optional<String> getTransparentHugePageEnabled() {

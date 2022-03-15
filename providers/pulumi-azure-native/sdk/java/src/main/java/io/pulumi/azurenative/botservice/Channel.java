@@ -21,7 +21,7 @@ import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -50,7 +50,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Entity Tag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Required. Gets or sets the Kind of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -78,7 +78,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -92,7 +92,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The set of properties specific to bot channel resource
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -120,7 +120,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Gets or sets the SKU of the resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -134,7 +134,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -162,7 +162,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Entity zones
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
     /**

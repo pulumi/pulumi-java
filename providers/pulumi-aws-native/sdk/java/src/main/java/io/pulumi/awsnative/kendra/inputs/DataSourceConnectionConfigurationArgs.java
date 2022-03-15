@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,35 +14,35 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
 
     public static final DataSourceConnectionConfigurationArgs Empty = new DataSourceConnectionConfigurationArgs();
 
-    @InputImport(name="databaseHost", required=true)
+    @Import(name="databaseHost", required=true)
       private final Output<String> databaseHost;
 
     public Output<String> getDatabaseHost() {
         return this.databaseHost;
     }
 
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="databasePort", required=true)
+    @Import(name="databasePort", required=true)
       private final Output<Integer> databasePort;
 
     public Output<Integer> getDatabasePort() {
         return this.databasePort;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

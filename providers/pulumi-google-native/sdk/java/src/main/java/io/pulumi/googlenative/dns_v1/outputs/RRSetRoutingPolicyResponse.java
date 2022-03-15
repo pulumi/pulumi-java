@@ -3,23 +3,23 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.RRSetRoutingPolicyGeoPolicyResponse;
 import io.pulumi.googlenative.dns_v1.outputs.RRSetRoutingPolicyWrrPolicyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RRSetRoutingPolicyResponse {
     private final RRSetRoutingPolicyGeoPolicyResponse geo;
     private final String kind;
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RRSetRoutingPolicyResponse(
-        @OutputCustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr) {
+        @CustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr) {
         this.geo = geo;
         this.kind = kind;
         this.wrr = wrr;

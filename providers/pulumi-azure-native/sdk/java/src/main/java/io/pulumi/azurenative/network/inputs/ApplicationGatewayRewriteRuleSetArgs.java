@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * Name of the rewrite rule set that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * Rewrite rules in the rewrite rule set.
      * 
      */
-    @InputImport(name="rewriteRules")
+    @Import(name="rewriteRules")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
     public Output<List<ApplicationGatewayRewriteRuleArgs>> getRewriteRules() {

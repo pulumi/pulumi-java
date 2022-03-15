@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * Database identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -33,7 +33,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * Name of database
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskOutputResponse ex
      * Errors associated with a selected database object
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

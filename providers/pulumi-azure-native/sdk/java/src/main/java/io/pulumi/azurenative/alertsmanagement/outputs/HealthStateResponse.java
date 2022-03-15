@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HealthStateResponse {
     /**
      * Health state name
@@ -21,10 +21,10 @@ public final class HealthStateResponse {
      */
     private final Double severity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthStateResponse(
-        @OutputCustomType.Parameter("healthStateName") String healthStateName,
-        @OutputCustomType.Parameter("severity") Double severity) {
+        @CustomType.Parameter("healthStateName") String healthStateName,
+        @CustomType.Parameter("severity") Double severity) {
         this.healthStateName = healthStateName;
         this.severity = severity;
     }

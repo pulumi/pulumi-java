@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelCustomerManagedS3Args;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelServiceManagedS3Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class ChannelStorageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelStorageArgs Empty = new ChannelStorageArgs();
 
-    @InputImport(name="customerManagedS3")
+    @Import(name="customerManagedS3")
       private final @Nullable Output<ChannelCustomerManagedS3Args> customerManagedS3;
 
     public Output<ChannelCustomerManagedS3Args> getCustomerManagedS3() {
         return this.customerManagedS3 == null ? Output.empty() : this.customerManagedS3;
     }
 
-    @InputImport(name="serviceManagedS3")
+    @Import(name="serviceManagedS3")
       private final @Nullable Output<ChannelServiceManagedS3Args> serviceManagedS3;
 
     public Output<ChannelServiceManagedS3Args> getServiceManagedS3() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SshPublicKeyResponse {
     /**
      * SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
@@ -22,10 +22,10 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SshPublicKeyResponse(
-        @OutputCustomType.Parameter("keyData") @Nullable String keyData,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("keyData") @Nullable String keyData,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.keyData = keyData;
         this.path = path;
     }

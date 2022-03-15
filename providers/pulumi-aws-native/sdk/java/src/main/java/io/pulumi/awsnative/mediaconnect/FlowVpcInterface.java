@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.mediaconnect.FlowVpcInterfaceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    @OutputExport(name="flowArn", type=String.class, parameters={})
+    @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
@@ -36,7 +36,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * IDs of the network interfaces created in customer's account by MediaConnect.
      * 
      */
-    @OutputExport(name="networkInterfaceIds", type=List.class, parameters={String.class})
+    @Export(name="networkInterfaceIds", type=List.class, parameters={String.class})
     private Output<List<String>> networkInterfaceIds;
 
     /**
@@ -64,7 +64,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * Role Arn MediaConnect can assumes to create ENIs in customer's account.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -78,7 +78,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * Security Group IDs to be used on ENI.
      * 
      */
-    @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupIds;
 
     /**
@@ -92,7 +92,7 @@ public class FlowVpcInterface extends io.pulumi.resources.CustomResource {
      * Subnet must be in the AZ of the Flow
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**

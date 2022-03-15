@@ -10,7 +10,7 @@ import io.pulumi.azurenative.authorization.outputs.NonComplianceMessageResponse;
 import io.pulumi.azurenative.authorization.outputs.ParameterValuesValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * This message will be part of response in case of policy violation.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -53,7 +53,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The display name of the policy assignment.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
      * 
      */
-    @OutputExport(name="enforcementMode", type=String.class, parameters={})
+    @Export(name="enforcementMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> enforcementMode;
 
     /**
@@ -81,7 +81,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The managed identity associated with the policy assignment.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -95,7 +95,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The location of the policy assignment. Only required when utilizing managed identity.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -109,7 +109,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -123,7 +123,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The name of the policy assignment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The messages that describe why a resource is non-compliant with the policy.
      * 
      */
-    @OutputExport(name="nonComplianceMessages", type=List.class, parameters={NonComplianceMessageResponse.class})
+    @Export(name="nonComplianceMessages", type=List.class, parameters={NonComplianceMessageResponse.class})
     private Output</* @Nullable */ List<NonComplianceMessageResponse>> nonComplianceMessages;
 
     /**
@@ -151,7 +151,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The policy's excluded scopes.
      * 
      */
-    @OutputExport(name="notScopes", type=List.class, parameters={String.class})
+    @Export(name="notScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notScopes;
 
     /**
@@ -165,7 +165,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The parameter values for the assigned policy rule. The keys are the parameter names.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterValuesValueResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterValuesValueResponse.class})
     private Output</* @Nullable */ Map<String,ParameterValuesValueResponse>> parameters;
 
     /**
@@ -179,7 +179,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The ID of the policy definition or policy set definition being assigned.
      * 
      */
-    @OutputExport(name="policyDefinitionId", type=String.class, parameters={})
+    @Export(name="policyDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionId;
 
     /**
@@ -193,7 +193,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The scope for the policy assignment.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
@@ -207,7 +207,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * The type of the policy assignment.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @InputImport(name="endIpAddress", required=true)
+    @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
 
     public Output<String> getEndIpAddress() {
@@ -32,7 +32,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
      * The unique name of the firewall rule to create.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @InputImport(name="startIpAddress", required=true)
+    @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;
 
     public Output<String> getStartIpAddress() {

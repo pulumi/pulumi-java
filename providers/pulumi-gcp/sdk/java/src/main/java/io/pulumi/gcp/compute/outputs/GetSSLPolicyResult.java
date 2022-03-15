@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSSLPolicyResult {
     private final String creationTimestamp;
     /**
@@ -58,19 +58,19 @@ public final class GetSSLPolicyResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSSLPolicyResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("profile") String profile,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customFeatures") List<String> customFeatures,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("profile") String profile,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;

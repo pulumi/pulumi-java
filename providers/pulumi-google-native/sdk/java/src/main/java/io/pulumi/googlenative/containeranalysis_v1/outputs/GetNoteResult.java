@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.AttestationNoteResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuildNoteResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ComplianceNoteResponse;
@@ -19,7 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNoteResult {
     /**
      * A note describing an attestation role.
@@ -117,27 +117,27 @@ public final class GetNoteResult {
      */
     private final VulnerabilityNoteResponse vulnerability;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNoteResult(
-        @OutputCustomType.Parameter("attestation") AttestationNoteResponse attestation,
-        @OutputCustomType.Parameter("build") BuildNoteResponse build,
-        @OutputCustomType.Parameter("compliance") ComplianceNoteResponse compliance,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deployment") DeploymentNoteResponse deployment,
-        @OutputCustomType.Parameter("discovery") DiscoveryNoteResponse discovery,
-        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("image") ImageNoteResponse image,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("longDescription") String longDescription,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("package") PackageNoteResponse $package,
-        @OutputCustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
-        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
-        @OutputCustomType.Parameter("shortDescription") String shortDescription,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
-        @OutputCustomType.Parameter("vulnerability") VulnerabilityNoteResponse vulnerability) {
+        @CustomType.Parameter("attestation") AttestationNoteResponse attestation,
+        @CustomType.Parameter("build") BuildNoteResponse build,
+        @CustomType.Parameter("compliance") ComplianceNoteResponse compliance,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deployment") DeploymentNoteResponse deployment,
+        @CustomType.Parameter("discovery") DiscoveryNoteResponse discovery,
+        @CustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("image") ImageNoteResponse image,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("longDescription") String longDescription,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("package") PackageNoteResponse $package,
+        @CustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
+        @CustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @CustomType.Parameter("shortDescription") String shortDescription,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
+        @CustomType.Parameter("vulnerability") VulnerabilityNoteResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.compliance = compliance;

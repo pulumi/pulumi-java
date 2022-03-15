@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.aws.ec2transitgateway.inputs.GetTransitGatewayFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
      * One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetTransitGatewayFilter> filters;
 
     public List<GetTransitGatewayFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
      * Identifier of the EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetTransitGatewayArgs extends io.pulumi.resources.InvokeArgs 
      * Key-value tags for the EC2 Transit Gateway
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

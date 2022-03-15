@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventClaimsDataSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the claims.
      * 
      */
-    @InputImport(name="claims")
+    @Import(name="claims")
       private final @Nullable RuleManagementEventClaimsDataSourceResponse claims;
 
     public Optional<RuleManagementEventClaimsDataSourceResponse> getClaims() {
@@ -34,7 +34,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the event name.
      * 
      */
-    @InputImport(name="eventName")
+    @Import(name="eventName")
       private final @Nullable String eventName;
 
     public Optional<String> getEventName() {
@@ -45,7 +45,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the event source.
      * 
      */
-    @InputImport(name="eventSource")
+    @Import(name="eventSource")
       private final @Nullable String eventSource;
 
     public Optional<String> getEventSource() {
@@ -56,7 +56,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
      */
-    @InputImport(name="legacyResourceId")
+    @Import(name="legacyResourceId")
       private final @Nullable String legacyResourceId;
 
     public Optional<String> getLegacyResourceId() {
@@ -67,7 +67,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the level.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable String level;
 
     public Optional<String> getLevel() {
@@ -78,7 +78,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the namespace of the metric.
      * 
      */
-    @InputImport(name="metricNamespace")
+    @Import(name="metricNamespace")
       private final @Nullable String metricNamespace;
 
     public Optional<String> getMetricNamespace() {
@@ -90,7 +90,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -101,7 +101,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * The name of the operation that should be checked for. If no name is provided, any operation will match.
      * 
      */
-    @InputImport(name="operationName")
+    @Import(name="operationName")
       private final @Nullable String operationName;
 
     public Optional<String> getOperationName() {
@@ -112,7 +112,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName")
+    @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
@@ -123,7 +123,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the location of the resource.
      * 
      */
-    @InputImport(name="resourceLocation")
+    @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
 
     public Optional<String> getResourceLocation() {
@@ -134,7 +134,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the resource provider name.
      * 
      */
-    @InputImport(name="resourceProviderName")
+    @Import(name="resourceProviderName")
       private final @Nullable String resourceProviderName;
 
     public Optional<String> getResourceProviderName() {
@@ -145,7 +145,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
      * 
      */
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
@@ -156,7 +156,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * The status of the operation that should be checked for. If no status is provided, any status will match.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -167,7 +167,7 @@ public final class RuleManagementEventDataSourceResponse extends io.pulumi.resou
      * the substatus.
      * 
      */
-    @InputImport(name="subStatus")
+    @Import(name="subStatus")
       private final @Nullable String subStatus;
 
     public Optional<String> getSubStatus() {

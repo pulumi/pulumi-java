@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The access token for OAuth 1.0 authentication.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
@@ -41,7 +41,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The access token secret for OAuth 1.0 authentication.
      * 
      */
-    @InputImport(name="accessTokenSecret")
+    @Import(name="accessTokenSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessTokenSecret() {
@@ -52,7 +52,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -63,7 +63,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The company ID of the QuickBooks company to authorize.
      * 
      */
-    @InputImport(name="companyId")
+    @Import(name="companyId")
       private final @Nullable Output<Object> companyId;
 
     public Output<Object> getCompanyId() {
@@ -74,7 +74,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -85,7 +85,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * Properties used to connect to QuickBooks. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
      */
-    @InputImport(name="connectionProperties")
+    @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
     public Output<Object> getConnectionProperties() {
@@ -96,7 +96,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The consumer key for OAuth 1.0 authentication.
      * 
      */
-    @InputImport(name="consumerKey")
+    @Import(name="consumerKey")
       private final @Nullable Output<Object> consumerKey;
 
     public Output<Object> getConsumerKey() {
@@ -107,7 +107,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The consumer secret for OAuth 1.0 authentication.
      * 
      */
-    @InputImport(name="consumerSecret")
+    @Import(name="consumerSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerSecret() {
@@ -118,7 +118,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -129,7 +129,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -140,7 +140,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * The endpoint of the QuickBooks server. (i.e. quickbooks.api.intuit.com)
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<Object> endpoint;
 
     public Output<Object> getEndpoint() {
@@ -151,7 +151,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -163,7 +163,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * Expected value is 'QuickBooks'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -174,7 +174,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
      */
-    @InputImport(name="useEncryptedEndpoints")
+    @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
     public Output<Object> getUseEncryptedEndpoints() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.TopicRulePayloadArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopicRuleArgs Empty = new TopicRuleArgs();
 
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
         return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TopicRuleTagArgs>> tags;
 
     public Output<List<TopicRuleTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="topicRulePayload", required=true)
+    @Import(name="topicRulePayload", required=true)
       private final Output<TopicRulePayloadArgs> topicRulePayload;
 
     public Output<TopicRulePayloadArgs> getTopicRulePayload() {

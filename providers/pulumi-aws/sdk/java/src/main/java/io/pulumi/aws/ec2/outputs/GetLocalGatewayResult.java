@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetLocalGatewayFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalGatewayResult {
     private final @Nullable List<GetLocalGatewayFilter> filters;
     private final String id;
@@ -32,14 +32,14 @@ public final class GetLocalGatewayResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalGatewayResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("outpostArn") String outpostArn,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("filters") @Nullable List<GetLocalGatewayFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("outpostArn") String outpostArn,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.outpostArn = outpostArn;

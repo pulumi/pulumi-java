@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse {
     /**
      * Whether the variant is for the control group.
@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse(
-        @OutputCustomType.Parameter("isControlGroup") Boolean isControlGroup,
-        @OutputCustomType.Parameter("trafficAllocation") Double trafficAllocation,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("isControlGroup") Boolean isControlGroup,
+        @CustomType.Parameter("trafficAllocation") Double trafficAllocation,
+        @CustomType.Parameter("version") String version) {
         this.isControlGroup = isControlGroup;
         this.trafficAllocation = trafficAllocation;
         this.version = version;

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.confidentialledger.outputs;
 
 import io.pulumi.azurenative.confidentialledger.outputs.AADBasedSecurityPrincipalResponse;
 import io.pulumi.azurenative.confidentialledger.outputs.CertBasedSecurityPrincipalResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LedgerPropertiesResponse {
     /**
      * Array of all AAD based Security Principals.
@@ -60,17 +60,17 @@ public final class LedgerPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LedgerPropertiesResponse(
-        @OutputCustomType.Parameter("aadBasedSecurityPrincipals") @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals,
-        @OutputCustomType.Parameter("certBasedSecurityPrincipals") @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals,
-        @OutputCustomType.Parameter("identityServiceUri") String identityServiceUri,
-        @OutputCustomType.Parameter("ledgerInternalNamespace") String ledgerInternalNamespace,
-        @OutputCustomType.Parameter("ledgerName") String ledgerName,
-        @OutputCustomType.Parameter("ledgerStorageAccount") @Nullable String ledgerStorageAccount,
-        @OutputCustomType.Parameter("ledgerType") @Nullable String ledgerType,
-        @OutputCustomType.Parameter("ledgerUri") String ledgerUri,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("aadBasedSecurityPrincipals") @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals,
+        @CustomType.Parameter("certBasedSecurityPrincipals") @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals,
+        @CustomType.Parameter("identityServiceUri") String identityServiceUri,
+        @CustomType.Parameter("ledgerInternalNamespace") String ledgerInternalNamespace,
+        @CustomType.Parameter("ledgerName") String ledgerName,
+        @CustomType.Parameter("ledgerStorageAccount") @Nullable String ledgerStorageAccount,
+        @CustomType.Parameter("ledgerType") @Nullable String ledgerType,
+        @CustomType.Parameter("ledgerUri") String ledgerUri,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
         this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
         this.identityServiceUri = identityServiceUri;

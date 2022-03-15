@@ -6,12 +6,12 @@ package io.pulumi.azurenative.authorization.outputs;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponsePolicy;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponseRoleDefinition;
 import io.pulumi.azurenative.authorization.outputs.PolicyAssignmentPropertiesResponseScope;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAssignmentPropertiesResponse {
     /**
      * Details of the policy
@@ -29,11 +29,11 @@ public final class PolicyAssignmentPropertiesResponse {
      */
     private final @Nullable PolicyAssignmentPropertiesResponseScope scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyAssignmentPropertiesResponse(
-        @OutputCustomType.Parameter("policy") @Nullable PolicyAssignmentPropertiesResponsePolicy policy,
-        @OutputCustomType.Parameter("roleDefinition") @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition,
-        @OutputCustomType.Parameter("scope") @Nullable PolicyAssignmentPropertiesResponseScope scope) {
+        @CustomType.Parameter("policy") @Nullable PolicyAssignmentPropertiesResponsePolicy policy,
+        @CustomType.Parameter("roleDefinition") @Nullable PolicyAssignmentPropertiesResponseRoleDefinition roleDefinition,
+        @CustomType.Parameter("scope") @Nullable PolicyAssignmentPropertiesResponseScope scope) {
         this.policy = policy;
         this.roleDefinition = roleDefinition;
         this.scope = scope;

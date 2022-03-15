@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class BackupVaultLockConfigurationTypeArgs extends io.pulumi.resour
 
     public static final BackupVaultLockConfigurationTypeArgs Empty = new BackupVaultLockConfigurationTypeArgs();
 
-    @InputImport(name="changeableForDays")
+    @Import(name="changeableForDays")
       private final @Nullable Output<Double> changeableForDays;
 
     public Output<Double> getChangeableForDays() {
         return this.changeableForDays == null ? Output.empty() : this.changeableForDays;
     }
 
-    @InputImport(name="maxRetentionDays")
+    @Import(name="maxRetentionDays")
       private final @Nullable Output<Double> maxRetentionDays;
 
     public Output<Double> getMaxRetentionDays() {
         return this.maxRetentionDays == null ? Output.empty() : this.maxRetentionDays;
     }
 
-    @InputImport(name="minRetentionDays", required=true)
+    @Import(name="minRetentionDays", required=true)
       private final Output<Double> minRetentionDays;
 
     public Output<Double> getMinRetentionDays() {

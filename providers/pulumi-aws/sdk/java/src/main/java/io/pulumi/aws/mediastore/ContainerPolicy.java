@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.mediastore.ContainerPolicyArgs;
 import io.pulumi.aws.mediastore.inputs.ContainerPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ContainerPolicy extends io.pulumi.resources.CustomResource {
      * The name of the container.
      * 
      */
-    @OutputExport(name="containerName", type=String.class, parameters={})
+    @Export(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
     /**
@@ -46,7 +46,7 @@ public class ContainerPolicy extends io.pulumi.resources.CustomResource {
      * The contents of the policy.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

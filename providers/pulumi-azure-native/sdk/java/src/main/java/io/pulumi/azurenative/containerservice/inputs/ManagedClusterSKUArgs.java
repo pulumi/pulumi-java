@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.ManagedClusterSKUName;
 import io.pulumi.azurenative.containerservice.enums.ManagedClusterSKUTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
      * Name of a managed cluster SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,ManagedClusterSKUName>> name;
 
     public Output<Either<String,ManagedClusterSKUName>> getName() {
@@ -32,7 +32,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
      * Tier of a managed cluster SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
 
     public Output<Either<String,ManagedClusterSKUTier>> getTier() {

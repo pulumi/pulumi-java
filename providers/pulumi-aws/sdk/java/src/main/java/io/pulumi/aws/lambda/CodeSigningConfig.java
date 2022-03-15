@@ -9,7 +9,7 @@ import io.pulumi.aws.lambda.inputs.CodeSigningConfigState;
 import io.pulumi.aws.lambda.outputs.CodeSigningConfigAllowedPublishers;
 import io.pulumi.aws.lambda.outputs.CodeSigningConfigPolicies;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
      * 
      */
-    @OutputExport(name="allowedPublishers", type=CodeSigningConfigAllowedPublishers.class, parameters={})
+    @Export(name="allowedPublishers", type=CodeSigningConfigAllowedPublishers.class, parameters={})
     private Output<CodeSigningConfigAllowedPublishers> allowedPublishers;
 
     /**
@@ -50,7 +50,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the code signing configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * Unique identifier for the code signing configuration.
      * 
      */
-    @OutputExport(name="configId", type=String.class, parameters={})
+    @Export(name="configId", type=String.class, parameters={})
     private Output<String> configId;
 
     /**
@@ -78,7 +78,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * Descriptive name for this code signing configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * The date and time that the code signing configuration was last modified.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -106,7 +106,7 @@ public class CodeSigningConfig extends io.pulumi.resources.CustomResource {
      * A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
      * 
      */
-    @OutputExport(name="policies", type=CodeSigningConfigPolicies.class, parameters={})
+    @Export(name="policies", type=CodeSigningConfigPolicies.class, parameters={})
     private Output<CodeSigningConfigPolicies> policies;
 
     /**

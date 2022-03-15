@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesResponseLogs;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AwsCloudTrailDataConnectorDataTypesResponse extends io.pulumi
      * Logs data type.
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable AwsCloudTrailDataConnectorDataTypesResponseLogs logs;
 
     public Optional<AwsCloudTrailDataConnectorDataTypesResponseLogs> getLogs() {

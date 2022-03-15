@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRetentionPolicy {
     /**
      * If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
@@ -23,10 +23,10 @@ public final class BucketRetentionPolicy {
      */
     private final Integer retentionPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRetentionPolicy(
-        @OutputCustomType.Parameter("isLocked") @Nullable Boolean isLocked,
-        @OutputCustomType.Parameter("retentionPeriod") Integer retentionPeriod) {
+        @CustomType.Parameter("isLocked") @Nullable Boolean isLocked,
+        @CustomType.Parameter("retentionPeriod") Integer retentionPeriod) {
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;
     }

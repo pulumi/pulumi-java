@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DependsOnDefinitionResponse extends io.pulumi.resources.Invok
      * Name of the kustomization to claim dependency on
      * 
      */
-    @InputImport(name="kustomizationName")
+    @Import(name="kustomizationName")
       private final @Nullable String kustomizationName;
 
     public Optional<String> getKustomizationName() {

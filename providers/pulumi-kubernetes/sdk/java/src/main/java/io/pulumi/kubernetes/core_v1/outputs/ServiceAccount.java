@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAccount {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -47,14 +47,14 @@ public final class ServiceAccount {
      */
     private final @Nullable List<ObjectReference> secrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAccount(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
-        @OutputCustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("secrets") @Nullable List<ObjectReference> secrets) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
+        @CustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("secrets") @Nullable List<ObjectReference> secrets) {
         this.apiVersion = apiVersion;
         this.automountServiceAccountToken = automountServiceAccountToken;
         this.imagePullSecrets = imagePullSecrets;

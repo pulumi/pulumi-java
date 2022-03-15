@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretVersionArgs Empty = new GetSecretVersionArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final String secret;
 
     public String getSecret() {
         return this.secret;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

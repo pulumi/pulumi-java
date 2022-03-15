@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse {
     /**
      * URL
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      */
     private final String urlTypeHint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("urlTypeHint") String urlTypeHint) {
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("urlTypeHint") String urlTypeHint) {
         this.url = url;
         this.urlTypeHint = urlTypeHint;
     }

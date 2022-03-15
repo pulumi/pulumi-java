@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.enums.EndpointType;
 import io.pulumi.azurenative.netapp.enums.ReplicationSchedule;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether the local volume is the source or destination for the Volume Replication
      * 
      */
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable Output<Either<String,EndpointType>> endpointType;
 
     public Output<Either<String,EndpointType>> getEndpointType() {
@@ -36,7 +36,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * The remote region for the other end of the Volume Replication.
      * 
      */
-    @InputImport(name="remoteVolumeRegion")
+    @Import(name="remoteVolumeRegion")
       private final @Nullable Output<String> remoteVolumeRegion;
 
     public Output<String> getRemoteVolumeRegion() {
@@ -47,7 +47,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * The resource ID of the remote volume.
      * 
      */
-    @InputImport(name="remoteVolumeResourceId", required=true)
+    @Import(name="remoteVolumeResourceId", required=true)
       private final Output<String> remoteVolumeResourceId;
 
     public Output<String> getRemoteVolumeResourceId() {
@@ -58,7 +58,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * Id
      * 
      */
-    @InputImport(name="replicationId")
+    @Import(name="replicationId")
       private final @Nullable Output<String> replicationId;
 
     public Output<String> getReplicationId() {
@@ -69,7 +69,7 @@ public final class ReplicationObjectArgs extends io.pulumi.resources.ResourceArg
      * Schedule
      * 
      */
-    @InputImport(name="replicationSchedule", required=true)
+    @Import(name="replicationSchedule", required=true)
       private final Output<Either<String,ReplicationSchedule>> replicationSchedule;
 
     public Output<Either<String,ReplicationSchedule>> getReplicationSchedule() {

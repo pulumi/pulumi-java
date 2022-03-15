@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.JobConfigResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.StatusResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * The configuration for this job.
@@ -68,19 +68,19 @@ public final class GetJobResult {
      */
     private final Integer ttlAfterCompletionDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("config") JobConfigResponse config,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("inputUri") String inputUri,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputUri") String outputUri,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("templateId") String templateId,
-        @OutputCustomType.Parameter("ttlAfterCompletionDays") Integer ttlAfterCompletionDays) {
+        @CustomType.Parameter("config") JobConfigResponse config,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("inputUri") String inputUri,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputUri") String outputUri,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("templateId") String templateId,
+        @CustomType.Parameter("ttlAfterCompletionDays") Integer ttlAfterCompletionDays) {
         this.config = config;
         this.createTime = createTime;
         this.endTime = endTime;

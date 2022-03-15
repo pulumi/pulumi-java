@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Hl7StoreNotificationConfig {
     /**
      * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
@@ -20,8 +20,8 @@ public final class Hl7StoreNotificationConfig {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor
-    private Hl7StoreNotificationConfig(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
+    @CustomType.Constructor
+    private Hl7StoreNotificationConfig(@CustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 

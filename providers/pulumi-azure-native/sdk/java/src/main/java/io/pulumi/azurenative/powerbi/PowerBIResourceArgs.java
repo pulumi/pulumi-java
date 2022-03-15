@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.powerbi.inputs.PrivateEndpointConnectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Azure resource.
      * 
      */
-    @InputImport(name="azureResourceName")
+    @Import(name="azureResourceName")
       private final @Nullable Output<String> azureResourceName;
 
     public Output<String> getAzureResourceName() {
@@ -32,7 +32,7 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the private endpoint connections of the resource.
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
@@ -54,7 +54,7 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class PowerBIResourceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the tenant id of the resource.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

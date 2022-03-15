@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X12MessageIdentifierResponse {
     /**
      * The message id.
@@ -15,8 +15,8 @@ public final class X12MessageIdentifierResponse {
      */
     private final String messageId;
 
-    @OutputCustomType.Constructor
-    private X12MessageIdentifierResponse(@OutputCustomType.Parameter("messageId") String messageId) {
+    @CustomType.Constructor
+    private X12MessageIdentifierResponse(@CustomType.Parameter("messageId") String messageId) {
         this.messageId = messageId;
     }
 

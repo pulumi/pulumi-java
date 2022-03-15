@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * Indicates whether the cached responses are encrypted
      * 
      */
-    @InputImport(name="cacheDataEncrypted")
+    @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
     public Output<Boolean> getCacheDataEncrypted() {
@@ -32,7 +32,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
      * 
      */
-    @InputImport(name="cacheTtlInSeconds")
+    @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
     public Output<Integer> getCacheTtlInSeconds() {
@@ -43,7 +43,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
      * 
      */
-    @InputImport(name="cachingEnabled")
+    @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
 
     public Output<Boolean> getCachingEnabled() {
@@ -54,7 +54,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
      * 
      */
-    @InputImport(name="dataTraceEnabled")
+    @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
     public Output<Boolean> getDataTraceEnabled() {
@@ -65,7 +65,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * The HTTP method.
      * 
      */
-    @InputImport(name="httpMethod")
+    @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -76,7 +76,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
@@ -87,7 +87,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
      * 
      */
-    @InputImport(name="metricsEnabled")
+    @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
 
     public Output<Boolean> getMetricsEnabled() {
@@ -98,7 +98,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * The resource path for this method. Forward slashes (/) are encoded as ~1 and the initial slash must include a forward slash.
      * 
      */
-    @InputImport(name="resourcePath")
+    @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
     public Output<String> getResourcePath() {
@@ -109,7 +109,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
      * 
      */
-    @InputImport(name="throttlingBurstLimit")
+    @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
     public Output<Integer> getThrottlingBurstLimit() {
@@ -120,7 +120,7 @@ public final class DeploymentMethodSettingArgs extends io.pulumi.resources.Resou
      * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
      * 
      */
-    @InputImport(name="throttlingRateLimit")
+    @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
     public Output<Double> getThrottlingRateLimit() {

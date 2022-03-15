@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateSchedulingNodeAffinityArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -18,35 +18,35 @@ public final class InstanceFromTemplateSchedulingArgs extends io.pulumi.resource
 
     public static final InstanceFromTemplateSchedulingArgs Empty = new InstanceFromTemplateSchedulingArgs();
 
-    @InputImport(name="automaticRestart")
+    @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
     public Output<Boolean> getAutomaticRestart() {
         return this.automaticRestart == null ? Output.empty() : this.automaticRestart;
     }
 
-    @InputImport(name="minNodeCpus")
+    @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
     public Output<Integer> getMinNodeCpus() {
         return this.minNodeCpus == null ? Output.empty() : this.minNodeCpus;
     }
 
-    @InputImport(name="nodeAffinities")
+    @Import(name="nodeAffinities")
       private final @Nullable Output<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Output<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> getNodeAffinities() {
         return this.nodeAffinities == null ? Output.empty() : this.nodeAffinities;
     }
 
-    @InputImport(name="onHostMaintenance")
+    @Import(name="onHostMaintenance")
       private final @Nullable Output<String> onHostMaintenance;
 
     public Output<String> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Output.empty() : this.onHostMaintenance;
     }
 
-    @InputImport(name="preemptible")
+    @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {

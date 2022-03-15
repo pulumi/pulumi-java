@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSourceErrorInfoType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class DataSourceErrorInfoArgs extends io.pulumi.resources.ResourceA
      * <p>Error message.</p>
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
         return this.message == null ? Output.empty() : this.message;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<DataSourceErrorInfoType> type;
 
     public Output<DataSourceErrorInfoType> getType() {

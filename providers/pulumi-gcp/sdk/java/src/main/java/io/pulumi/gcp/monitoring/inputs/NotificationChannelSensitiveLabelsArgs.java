@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="authToken")
+    @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
     public Output<String> getAuthToken() {
@@ -31,7 +31,7 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -43,7 +43,7 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="serviceKey")
+    @Import(name="serviceKey")
       private final @Nullable Output<String> serviceKey;
 
     public Output<String> getServiceKey() {

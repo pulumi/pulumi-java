@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * Analytical TTL.
      * 
      */
-    @InputImport(name="analyticalStorageTtl")
+    @Import(name="analyticalStorageTtl")
       private final @Nullable Integer analyticalStorageTtl;
 
     public Optional<Integer> getAnalyticalStorageTtl() {
@@ -34,7 +34,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -45,7 +45,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * Name of the Cosmos DB MongoDB collection
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -56,7 +56,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * List of index keys
      * 
      */
-    @InputImport(name="indexes")
+    @Import(name="indexes")
       private final @Nullable List<MongoIndexResponse> indexes;
 
     public List<MongoIndexResponse> getIndexes() {
@@ -67,7 +67,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * A system generated property. A unique identifier.
      * 
      */
-    @InputImport(name="rid", required=true)
+    @Import(name="rid", required=true)
       private final String rid;
 
     public String getRid() {
@@ -78,7 +78,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * A key-value pair of shard keys to be applied for the request.
      * 
      */
-    @InputImport(name="shardKey")
+    @Import(name="shardKey")
       private final @Nullable Map<String,String> shardKey;
 
     public Map<String,String> getShardKey() {
@@ -89,7 +89,7 @@ public final class MongoDBCollectionGetPropertiesResponseResource extends io.pul
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
-    @InputImport(name="ts", required=true)
+    @Import(name="ts", required=true)
       private final Double ts;
 
     public Double getTs() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storage.inputs.EncryptionServicesArgs;
 import io.pulumi.azurenative.storage.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The identity to be used with service-side encryption at rest.
      * 
      */
-    @InputImport(name="encryptionIdentity")
+    @Import(name="encryptionIdentity")
       private final @Nullable Output<EncryptionIdentityArgs> encryptionIdentity;
 
     public Output<EncryptionIdentityArgs> getEncryptionIdentity() {
@@ -39,7 +39,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault
      * 
      */
-    @InputImport(name="keySource", required=true)
+    @Import(name="keySource", required=true)
       private final Output<Either<String,KeySource>> keySource;
 
     public Output<Either<String,KeySource>> getKeySource() {
@@ -50,7 +50,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * Properties provided by key vault.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
@@ -61,7 +61,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
      * 
      */
-    @InputImport(name="requireInfrastructureEncryption")
+    @Import(name="requireInfrastructureEncryption")
       private final @Nullable Output<Boolean> requireInfrastructureEncryption;
 
     public Output<Boolean> getRequireInfrastructureEncryption() {
@@ -72,7 +72,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * List of services which support encryption.
      * 
      */
-    @InputImport(name="services")
+    @Import(name="services")
       private final @Nullable Output<EncryptionServicesArgs> services;
 
     public Output<EncryptionServicesArgs> getServices() {

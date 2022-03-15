@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The type of destinations (eg: CIDR, ResourceId, Service).
      * 
      */
-    @InputImport(name="destinationType", required=true)
+    @Import(name="destinationType", required=true)
       private final Output<String> destinationType;
 
     public Output<String> getDestinationType() {
@@ -33,7 +33,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * List of all destinations.
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
 
     public Output<List<String>> getDestinations() {
@@ -44,7 +44,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Route that is unique within a RouteTable. This name can be used to access this route.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * NextHop resource ID.
      * 
      */
-    @InputImport(name="nextHop", required=true)
+    @Import(name="nextHop", required=true)
       private final Output<String> nextHop;
 
     public Output<String> getNextHop() {
@@ -66,7 +66,7 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The type of next hop (eg: ResourceId).
      * 
      */
-    @InputImport(name="nextHopType", required=true)
+    @Import(name="nextHopType", required=true)
       private final Output<String> nextHopType;
 
     public Output<String> getNextHopType() {

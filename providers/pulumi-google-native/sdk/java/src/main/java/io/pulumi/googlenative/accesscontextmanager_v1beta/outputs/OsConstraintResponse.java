@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OsConstraintResponse {
     /**
      * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
@@ -26,11 +26,11 @@ public final class OsConstraintResponse {
      */
     private final Boolean requireVerifiedChromeOs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsConstraintResponse(
-        @OutputCustomType.Parameter("minimumVersion") String minimumVersion,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("requireVerifiedChromeOs") Boolean requireVerifiedChromeOs) {
+        @CustomType.Parameter("minimumVersion") String minimumVersion,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("requireVerifiedChromeOs") Boolean requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;

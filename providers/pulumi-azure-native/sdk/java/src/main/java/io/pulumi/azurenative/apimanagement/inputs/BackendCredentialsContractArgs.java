@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * Authorization header authentication
      * 
      */
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
     public Output<BackendAuthorizationHeaderCredentialsArgs> getAuthorization() {
@@ -36,7 +36,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * List of Client Certificate Thumbprints. Will be ignored if certificatesIds are provided.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<List<String>> certificate;
 
     public Output<List<String>> getCertificate() {
@@ -47,7 +47,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * List of Client Certificate Ids.
      * 
      */
-    @InputImport(name="certificateIds")
+    @Import(name="certificateIds")
       private final @Nullable Output<List<String>> certificateIds;
 
     public Output<List<String>> getCertificateIds() {
@@ -58,7 +58,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * Header Parameter description.
      * 
      */
-    @InputImport(name="header")
+    @Import(name="header")
       private final @Nullable Output<Map<String,List<String>>> header;
 
     public Output<Map<String,List<String>>> getHeader() {
@@ -69,7 +69,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * Query Parameter description.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<Map<String,List<String>>> query;
 
     public Output<Map<String,List<String>>> getQuery() {

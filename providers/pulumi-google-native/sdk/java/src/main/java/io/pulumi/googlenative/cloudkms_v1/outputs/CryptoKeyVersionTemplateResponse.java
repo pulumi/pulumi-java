@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CryptoKeyVersionTemplateResponse {
     /**
      * Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
@@ -20,10 +20,10 @@ public final class CryptoKeyVersionTemplateResponse {
      */
     private final String protectionLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CryptoKeyVersionTemplateResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("protectionLevel") String protectionLevel) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("protectionLevel") String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }

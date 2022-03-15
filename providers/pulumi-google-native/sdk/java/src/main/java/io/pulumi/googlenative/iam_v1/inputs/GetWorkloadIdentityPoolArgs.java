@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
 
     public static final GetWorkloadIdentityPoolArgs Empty = new GetWorkloadIdentityPoolArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="workloadIdentityPoolId", required=true)
+    @Import(name="workloadIdentityPoolId", required=true)
       private final String workloadIdentityPoolId;
 
     public String getWorkloadIdentityPoolId() {

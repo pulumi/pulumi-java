@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of the training phrase.
      * 
      */
-    @InputImport(name="entityType")
+    @Import(name="entityType")
       private final @Nullable Output<String> entityType;
 
     public Output<String> getEntityType() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * The text for this part.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final Output<String> text;
 
     public Output<String> getText() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs exte
      * Optional. Indicates whether the text was manually annotated. This field is set to true when the Dialogflow Console is used to manually annotate the part. When creating an annotated part with the API, you must set this to true.
      * 
      */
-    @InputImport(name="userDefined")
+    @Import(name="userDefined")
       private final @Nullable Output<Boolean> userDefined;
 
     public Output<Boolean> getUserDefined() {

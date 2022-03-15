@@ -4,14 +4,14 @@
 package io.pulumi.aws.ecs.outputs;
 
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolumeEfsVolumeConfiguration {
     /**
      * Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
@@ -39,13 +39,13 @@ public final class TaskDefinitionVolumeEfsVolumeConfiguration {
      */
     private final @Nullable Integer transitEncryptionPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolumeEfsVolumeConfiguration(
-        @OutputCustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
-        @OutputCustomType.Parameter("transitEncryption") @Nullable String transitEncryption,
-        @OutputCustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
+        @CustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
+        @CustomType.Parameter("transitEncryption") @Nullable String transitEncryption,
+        @CustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
         this.fileSystemId = fileSystemId;
         this.rootDirectory = rootDirectory;

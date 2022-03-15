@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionIamBindingArgs;
@@ -16,43 +16,43 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:cloudfunctions/functionIamBinding:FunctionIamBinding")
 public class FunctionIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="cloudFunction", type=String.class, parameters={})
+    @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
         return this.cloudFunction;
     }
-    @OutputExport(name="condition", type=FunctionIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=FunctionIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ FunctionIamBindingCondition> condition;
 
     public Output</* @Nullable */ FunctionIamBindingCondition> getCondition() {
         return this.condition;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     public Output<String> getRole() {

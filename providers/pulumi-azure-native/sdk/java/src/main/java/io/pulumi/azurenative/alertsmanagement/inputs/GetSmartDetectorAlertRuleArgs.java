@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
      * The name of the alert rule.
      * 
      */
-    @InputImport(name="alertRuleName", required=true)
+    @Import(name="alertRuleName", required=true)
       private final String alertRuleName;
 
     public String getAlertRuleName() {
@@ -30,7 +30,7 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
      * Indicates if Smart Detector should be expanded.
      * 
      */
-    @InputImport(name="expandDetector")
+    @Import(name="expandDetector")
       private final @Nullable Boolean expandDetector;
 
     public Optional<Boolean> getExpandDetector() {
@@ -41,7 +41,7 @@ public final class GetSmartDetectorAlertRuleArgs extends io.pulumi.resources.Inv
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

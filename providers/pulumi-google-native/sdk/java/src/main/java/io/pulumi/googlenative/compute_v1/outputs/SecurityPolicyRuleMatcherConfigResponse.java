@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatcherConfigResponse {
     /**
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyRuleMatcherConfigResponse(@OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
+    @CustomType.Constructor
+    private SecurityPolicyRuleMatcherConfigResponse(@CustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
     }
 

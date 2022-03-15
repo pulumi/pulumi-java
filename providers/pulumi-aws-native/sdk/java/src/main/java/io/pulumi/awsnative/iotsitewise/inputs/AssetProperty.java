@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.enums.AssetPropertyNotificationState;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
      * The property alias that identifies the property.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable String alias;
 
     public Optional<String> getAlias() {
@@ -34,7 +34,7 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
      * Customer provided ID for property.
      * 
      */
-    @InputImport(name="logicalId", required=true)
+    @Import(name="logicalId", required=true)
       private final String logicalId;
 
     public String getLogicalId() {
@@ -45,7 +45,7 @@ public final class AssetProperty extends io.pulumi.resources.InvokeArgs {
      * The MQTT notification state (ENABLED or DISABLED) for this asset property.
      * 
      */
-    @InputImport(name="notificationState")
+    @Import(name="notificationState")
       private final @Nullable AssetPropertyNotificationState notificationState;
 
     public Optional<AssetPropertyNotificationState> getNotificationState() {

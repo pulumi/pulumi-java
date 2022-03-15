@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventhub.ClusterArgs;
 import io.pulumi.azurenative.eventhub.outputs.ClusterSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The UTC time when the Event Hubs Cluster was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -50,7 +50,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The metric ID of the cluster resource. Provided by the service and not modifiable by the user.
      * 
      */
-    @OutputExport(name="metricId", type=String.class, parameters={})
+    @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
@@ -78,7 +78,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Properties of the cluster SKU.
      * 
      */
-    @OutputExport(name="sku", type=ClusterSkuResponse.class, parameters={})
+    @Export(name="sku", type=ClusterSkuResponse.class, parameters={})
     private Output</* @Nullable */ ClusterSkuResponse> sku;
 
     /**
@@ -106,7 +106,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Status of the Cluster resource
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -120,7 +120,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -148,7 +148,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The UTC time when the Event Hubs Cluster was last updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

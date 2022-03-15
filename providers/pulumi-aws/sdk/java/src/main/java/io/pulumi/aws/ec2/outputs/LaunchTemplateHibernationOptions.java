@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateHibernationOptions {
     /**
      * If set to `true`, the launched EC2 instance will hibernation enabled.
@@ -15,8 +15,8 @@ public final class LaunchTemplateHibernationOptions {
      */
     private final Boolean configured;
 
-    @OutputCustomType.Constructor
-    private LaunchTemplateHibernationOptions(@OutputCustomType.Parameter("configured") Boolean configured) {
+    @CustomType.Constructor
+    private LaunchTemplateHibernationOptions(@CustomType.Parameter("configured") Boolean configured) {
         this.configured = configured;
     }
 

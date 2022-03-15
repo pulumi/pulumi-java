@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentOptions;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentPeeringAttachmentStatus;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The time the transit gateway peering attachment was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -39,7 +39,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * Options for transit gateway peering attachment
      * 
      */
-    @OutputExport(name="options", type=TransitGatewayPeeringAttachmentOptions.class, parameters={})
+    @Export(name="options", type=TransitGatewayPeeringAttachmentOptions.class, parameters={})
     private Output</* @Nullable */ TransitGatewayPeeringAttachmentOptions> options;
 
     /**
@@ -53,7 +53,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The ID of the peer account
      * 
      */
-    @OutputExport(name="peerAccountId", type=String.class, parameters={})
+    @Export(name="peerAccountId", type=String.class, parameters={})
     private Output<String> peerAccountId;
 
     /**
@@ -67,7 +67,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * Peer Region
      * 
      */
-    @OutputExport(name="peerRegion", type=String.class, parameters={})
+    @Export(name="peerRegion", type=String.class, parameters={})
     private Output<String> peerRegion;
 
     /**
@@ -81,7 +81,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The ID of the peer transit gateway.
      * 
      */
-    @OutputExport(name="peerTransitGatewayId", type=String.class, parameters={})
+    @Export(name="peerTransitGatewayId", type=String.class, parameters={})
     private Output<String> peerTransitGatewayId;
 
     /**
@@ -95,7 +95,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -109,7 +109,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The status of the transit gateway peering attachment.
      * 
      */
-    @OutputExport(name="status", type=TransitGatewayPeeringAttachmentPeeringAttachmentStatus.class, parameters={})
+    @Export(name="status", type=TransitGatewayPeeringAttachmentPeeringAttachmentStatus.class, parameters={})
     private Output<TransitGatewayPeeringAttachmentPeeringAttachmentStatus> status;
 
     /**
@@ -123,7 +123,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The tags for the transit gateway peering attachment.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TransitGatewayPeeringAttachmentTag.class})
+    @Export(name="tags", type=List.class, parameters={TransitGatewayPeeringAttachmentTag.class})
     private Output</* @Nullable */ List<TransitGatewayPeeringAttachmentTag>> tags;
 
     /**
@@ -137,7 +137,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The ID of the transit gateway peering attachment.
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
@@ -151,7 +151,7 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
      * The ID of the transit gateway.
      * 
      */
-    @OutputExport(name="transitGatewayId", type=String.class, parameters={})
+    @Export(name="transitGatewayId", type=String.class, parameters={})
     private Output<String> transitGatewayId;
 
     /**

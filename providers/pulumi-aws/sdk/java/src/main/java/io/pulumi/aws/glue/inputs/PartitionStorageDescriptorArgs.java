@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSerDeInfoArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSkewedInfoArgs;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorSortColumnArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
      * 
      */
-    @InputImport(name="bucketColumns")
+    @Import(name="bucketColumns")
       private final @Nullable Output<List<String>> bucketColumns;
 
     public Output<List<String>> getBucketColumns() {
@@ -37,7 +37,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * A list of the Columns in the table.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
 
     public Output<List<PartitionStorageDescriptorColumnArgs>> getColumns() {
@@ -48,7 +48,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * True if the data in the table is compressed, or False if not.
      * 
      */
-    @InputImport(name="compressed")
+    @Import(name="compressed")
       private final @Nullable Output<Boolean> compressed;
 
     public Output<Boolean> getCompressed() {
@@ -59,7 +59,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
      * 
      */
-    @InputImport(name="inputFormat")
+    @Import(name="inputFormat")
       private final @Nullable Output<String> inputFormat;
 
     public Output<String> getInputFormat() {
@@ -70,7 +70,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -81,7 +81,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * Must be specified if the table contains any dimension columns.
      * 
      */
-    @InputImport(name="numberOfBuckets")
+    @Import(name="numberOfBuckets")
       private final @Nullable Output<Integer> numberOfBuckets;
 
     public Output<Integer> getNumberOfBuckets() {
@@ -92,7 +92,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
      * 
      */
-    @InputImport(name="outputFormat")
+    @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
     public Output<String> getOutputFormat() {
@@ -103,7 +103,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -114,7 +114,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * Serialization/deserialization (SerDe) information.
      * 
      */
-    @InputImport(name="serDeInfo")
+    @Import(name="serDeInfo")
       private final @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
 
     public Output<PartitionStorageDescriptorSerDeInfoArgs> getSerDeInfo() {
@@ -125,7 +125,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * Information about values that appear very frequently in a column (skewed values).
      * 
      */
-    @InputImport(name="skewedInfo")
+    @Import(name="skewedInfo")
       private final @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
 
     public Output<PartitionStorageDescriptorSkewedInfoArgs> getSkewedInfo() {
@@ -136,7 +136,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * A list of Order objects specifying the sort order of each bucket in the table.
      * 
      */
-    @InputImport(name="sortColumns")
+    @Import(name="sortColumns")
       private final @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
 
     public Output<List<PartitionStorageDescriptorSortColumnArgs>> getSortColumns() {
@@ -147,7 +147,7 @@ public final class PartitionStorageDescriptorArgs extends io.pulumi.resources.Re
      * True if the table data is stored in subdirectories, or False if not.
      * 
      */
-    @InputImport(name="storedAsSubDirectories")
+    @Import(name="storedAsSubDirectories")
       private final @Nullable Output<Boolean> storedAsSubDirectories;
 
     public Output<Boolean> getStoredAsSubDirectories() {

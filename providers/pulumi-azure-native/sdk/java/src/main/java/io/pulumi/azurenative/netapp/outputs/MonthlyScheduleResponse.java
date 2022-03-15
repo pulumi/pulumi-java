@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonthlyScheduleResponse {
     /**
      * Indicates which days of the month snapshot should be taken. A comma delimited string.
@@ -39,13 +39,13 @@ public final class MonthlyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonthlyScheduleResponse(
-        @OutputCustomType.Parameter("daysOfMonth") @Nullable String daysOfMonth,
-        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
-        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
-        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
-        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
+        @CustomType.Parameter("daysOfMonth") @Nullable String daysOfMonth,
+        @CustomType.Parameter("hour") @Nullable Integer hour,
+        @CustomType.Parameter("minute") @Nullable Integer minute,
+        @CustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @CustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.daysOfMonth = daysOfMonth;
         this.hour = hour;
         this.minute = minute;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
      * The name of the containing bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -29,7 +29,7 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
      * (Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object content.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -40,7 +40,7 @@ public final class GetBucketObjectContentArgs extends io.pulumi.resources.Invoke
      * The name of the object.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

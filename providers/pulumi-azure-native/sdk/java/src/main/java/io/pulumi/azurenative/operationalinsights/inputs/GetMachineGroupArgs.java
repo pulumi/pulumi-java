@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -29,7 +29,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Machine Group resource name.
      * 
      */
-    @InputImport(name="machineGroupName", required=true)
+    @Import(name="machineGroupName", required=true)
       private final String machineGroupName;
 
     public String getMachineGroupName() {
@@ -40,7 +40,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Resource group name within the specified subscriptionId.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -62,7 +62,7 @@ public final class GetMachineGroupArgs extends io.pulumi.resources.InvokeArgs {
      * OMS workspace containing the resources of interest.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

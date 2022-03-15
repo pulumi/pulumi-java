@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
 
     public static final NodePoolNodeConfigWorkloadMetadataConfigArgs Empty = new NodePoolNodeConfigWorkloadMetadataConfigArgs();
 
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<String> mode;
 
     public Output<String> getMode() {

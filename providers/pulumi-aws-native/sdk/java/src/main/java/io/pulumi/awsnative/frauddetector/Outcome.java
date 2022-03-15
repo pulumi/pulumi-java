@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.frauddetector.OutcomeArgs;
 import io.pulumi.awsnative.frauddetector.outputs.OutcomeTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Outcome extends io.pulumi.resources.CustomResource {
      * The outcome ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class Outcome extends io.pulumi.resources.CustomResource {
      * The timestamp when the outcome was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -51,7 +51,7 @@ public class Outcome extends io.pulumi.resources.CustomResource {
      * The outcome description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Outcome extends io.pulumi.resources.CustomResource {
      * The timestamp when the outcome was last updated.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -79,7 +79,7 @@ public class Outcome extends io.pulumi.resources.CustomResource {
      * The name of the outcome.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Outcome extends io.pulumi.resources.CustomResource {
      * Tags associated with this outcome.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={OutcomeTag.class})
+    @Export(name="tags", type=List.class, parameters={OutcomeTag.class})
     private Output</* @Nullable */ List<OutcomeTag>> tags;
 
     /**

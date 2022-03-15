@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScaleRuleMetricDimensionResponse {
     /**
      * Name of the dimension.
@@ -26,11 +26,11 @@ public final class ScaleRuleMetricDimensionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleRuleMetricDimensionResponse(
-        @OutputCustomType.Parameter("dimensionName") String dimensionName,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("dimensionName") String dimensionName,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("values") List<String> values) {
         this.dimensionName = dimensionName;
         this.operator = operator;
         this.values = values;

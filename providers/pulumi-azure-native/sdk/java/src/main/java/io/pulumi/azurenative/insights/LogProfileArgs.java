@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
      * 
      */
-    @InputImport(name="categories", required=true)
+    @Import(name="categories", required=true)
       private final Output<List<String>> categories;
 
     public Output<List<String>> getCategories() {
@@ -32,7 +32,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location.
      * 
      */
-    @InputImport(name="locations", required=true)
+    @Import(name="locations", required=true)
       private final Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -54,7 +54,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the log profile.
      * 
      */
-    @InputImport(name="logProfileName")
+    @Import(name="logProfileName")
       private final @Nullable Output<String> logProfileName;
 
     public Output<String> getLogProfileName() {
@@ -65,7 +65,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * the retention policy for the events in the log.
      * 
      */
-    @InputImport(name="retentionPolicy", required=true)
+    @Import(name="retentionPolicy", required=true)
       private final Output<RetentionPolicyArgs> retentionPolicy;
 
     public Output<RetentionPolicyArgs> getRetentionPolicy() {
@@ -76,7 +76,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'.
      * 
      */
-    @InputImport(name="serviceBusRuleId")
+    @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
 
     public Output<String> getServiceBusRuleId() {
@@ -87,7 +87,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * the resource id of the storage account to which you would like to send the Activity Log.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {
@@ -98,7 +98,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

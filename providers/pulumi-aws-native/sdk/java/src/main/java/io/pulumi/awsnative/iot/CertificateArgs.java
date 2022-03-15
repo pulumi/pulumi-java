@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.CertificateMode;
 import io.pulumi.awsnative.iot.enums.CertificateStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,35 +16,35 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
-    @InputImport(name="cACertificatePem")
+    @Import(name="cACertificatePem")
       private final @Nullable Output<String> cACertificatePem;
 
     public Output<String> getCACertificatePem() {
         return this.cACertificatePem == null ? Output.empty() : this.cACertificatePem;
     }
 
-    @InputImport(name="certificateMode")
+    @Import(name="certificateMode")
       private final @Nullable Output<CertificateMode> certificateMode;
 
     public Output<CertificateMode> getCertificateMode() {
         return this.certificateMode == null ? Output.empty() : this.certificateMode;
     }
 
-    @InputImport(name="certificatePem")
+    @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
     public Output<String> getCertificatePem() {
         return this.certificatePem == null ? Output.empty() : this.certificatePem;
     }
 
-    @InputImport(name="certificateSigningRequest")
+    @Import(name="certificateSigningRequest")
       private final @Nullable Output<String> certificateSigningRequest;
 
     public Output<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest == null ? Output.empty() : this.certificateSigningRequest;
     }
 
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<CertificateStatus> status;
 
     public Output<CertificateStatus> getStatus() {

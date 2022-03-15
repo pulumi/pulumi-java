@@ -7,14 +7,14 @@ import io.pulumi.azurenative.insights.outputs.RecurrenceResponse;
 import io.pulumi.azurenative.insights.outputs.ScaleCapacityResponse;
 import io.pulumi.azurenative.insights.outputs.ScaleRuleResponse;
 import io.pulumi.azurenative.insights.outputs.TimeWindowResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleProfileResponse {
     /**
      * the number of instances that can be used during this profile.
@@ -42,13 +42,13 @@ public final class AutoscaleProfileResponse {
      */
     private final List<ScaleRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscaleProfileResponse(
-        @OutputCustomType.Parameter("capacity") ScaleCapacityResponse capacity,
-        @OutputCustomType.Parameter("fixedDate") @Nullable TimeWindowResponse fixedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recurrence") @Nullable RecurrenceResponse recurrence,
-        @OutputCustomType.Parameter("rules") List<ScaleRuleResponse> rules) {
+        @CustomType.Parameter("capacity") ScaleCapacityResponse capacity,
+        @CustomType.Parameter("fixedDate") @Nullable TimeWindowResponse fixedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recurrence") @Nullable RecurrenceResponse recurrence,
+        @CustomType.Parameter("rules") List<ScaleRuleResponse> rules) {
         this.capacity = capacity;
         this.fixedDate = fixedDate;
         this.name = name;

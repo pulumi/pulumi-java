@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -30,7 +30,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the correlation ID.
      * 
      */
-    @InputImport(name="correlationId")
+    @Import(name="correlationId")
       private final @Nullable String correlationId;
 
     public Optional<String> getCorrelationId() {
@@ -41,7 +41,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the force persistence.
      * 
      */
-    @InputImport(name="forcePersistence")
+    @Import(name="forcePersistence")
       private final @Nullable Boolean forcePersistence;
 
     public Optional<Boolean> getForcePersistence() {
@@ -52,7 +52,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the label.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -63,7 +63,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the message ID.
      * 
      */
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
@@ -74,7 +74,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the partition key.
      * 
      */
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
@@ -85,7 +85,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the reply to.
      * 
      */
-    @InputImport(name="replyTo")
+    @Import(name="replyTo")
       private final @Nullable String replyTo;
 
     public Optional<String> getReplyTo() {
@@ -96,7 +96,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the reply to session ID.
      * 
      */
-    @InputImport(name="replyToSessionId")
+    @Import(name="replyToSessionId")
       private final @Nullable String replyToSessionId;
 
     public Optional<String> getReplyToSessionId() {
@@ -107,7 +107,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the scheduled enqueue time UTC.
      * 
      */
-    @InputImport(name="scheduledEnqueueTimeUtc")
+    @Import(name="scheduledEnqueueTimeUtc")
       private final @Nullable String scheduledEnqueueTimeUtc;
 
     public Optional<String> getScheduledEnqueueTimeUtc() {
@@ -118,7 +118,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the session ID.
      * 
      */
-    @InputImport(name="sessionId")
+    @Import(name="sessionId")
       private final @Nullable String sessionId;
 
     public Optional<String> getSessionId() {
@@ -129,7 +129,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the time to live.
      * 
      */
-    @InputImport(name="timeToLive")
+    @Import(name="timeToLive")
       private final @Nullable String timeToLive;
 
     public Optional<String> getTimeToLive() {
@@ -140,7 +140,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the to.
      * 
      */
-    @InputImport(name="to")
+    @Import(name="to")
       private final @Nullable String to;
 
     public Optional<String> getTo() {
@@ -151,7 +151,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * Gets or sets the via partition key.
      * 
      */
-    @InputImport(name="viaPartitionKey")
+    @Import(name="viaPartitionKey")
       private final @Nullable String viaPartitionKey;
 
     public Optional<String> getViaPartitionKey() {

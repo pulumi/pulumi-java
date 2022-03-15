@@ -8,7 +8,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateGeneralNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateKeyUsageArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificatePolicyInformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,28 +22,28 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
 
     public static final CertificateExtensionsArgs Empty = new CertificateExtensionsArgs();
 
-    @InputImport(name="certificatePolicies")
+    @Import(name="certificatePolicies")
       private final @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
 
     public Output<List<CertificatePolicyInformationArgs>> getCertificatePolicies() {
         return this.certificatePolicies == null ? Output.empty() : this.certificatePolicies;
     }
 
-    @InputImport(name="extendedKeyUsage")
+    @Import(name="extendedKeyUsage")
       private final @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
     public Output<List<CertificateExtendedKeyUsageArgs>> getExtendedKeyUsage() {
         return this.extendedKeyUsage == null ? Output.empty() : this.extendedKeyUsage;
     }
 
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<CertificateKeyUsageArgs> keyUsage;
 
     public Output<CertificateKeyUsageArgs> getKeyUsage() {
         return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
     public Output<List<CertificateGeneralNameArgs>> getSubjectAlternativeNames() {

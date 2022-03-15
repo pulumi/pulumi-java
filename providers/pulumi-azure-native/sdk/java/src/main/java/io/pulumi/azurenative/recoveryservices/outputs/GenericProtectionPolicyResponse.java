@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.SubProtectionPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GenericProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -41,13 +41,13 @@ public final class GenericProtectionPolicyResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GenericProtectionPolicyResponse(
-        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
-        @OutputCustomType.Parameter("fabricName") @Nullable String fabricName,
-        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
-        @OutputCustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("backupManagementType") String backupManagementType,
+        @CustomType.Parameter("fabricName") @Nullable String fabricName,
+        @CustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @CustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.backupManagementType = backupManagementType;
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;

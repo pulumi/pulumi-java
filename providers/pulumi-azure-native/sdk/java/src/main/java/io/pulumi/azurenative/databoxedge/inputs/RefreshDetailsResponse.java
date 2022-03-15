@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
      * 
      */
-    @InputImport(name="errorManifestFile")
+    @Import(name="errorManifestFile")
       private final @Nullable String errorManifestFile;
 
     public Optional<String> getErrorManifestFile() {
@@ -33,7 +33,7 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
      * If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.
      * 
      */
-    @InputImport(name="inProgressRefreshJobId")
+    @Import(name="inProgressRefreshJobId")
       private final @Nullable String inProgressRefreshJobId;
 
     public Optional<String> getInProgressRefreshJobId() {
@@ -44,7 +44,7 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.
      * 
      */
-    @InputImport(name="lastCompletedRefreshJobTimeInUTC")
+    @Import(name="lastCompletedRefreshJobTimeInUTC")
       private final @Nullable String lastCompletedRefreshJobTimeInUTC;
 
     public Optional<String> getLastCompletedRefreshJobTimeInUTC() {
@@ -55,7 +55,7 @@ public final class RefreshDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.
      * 
      */
-    @InputImport(name="lastJob")
+    @Import(name="lastJob")
       private final @Nullable String lastJob;
 
     public Optional<String> getLastJob() {

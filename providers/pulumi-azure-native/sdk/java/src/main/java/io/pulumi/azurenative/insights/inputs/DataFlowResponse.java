@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
      * List of destinations for this data flow.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable List<String> destinations;
 
     public List<String> getDestinations() {
@@ -34,7 +34,7 @@ public final class DataFlowResponse extends io.pulumi.resources.InvokeArgs {
      * List of streams for this data flow.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable List<String> streams;
 
     public List<String> getStreams() {

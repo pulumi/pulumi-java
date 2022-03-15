@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationScheduledTriggerPropertiesDataPullMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,49 +17,49 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
 
     public static final IntegrationScheduledTriggerPropertiesArgs Empty = new IntegrationScheduledTriggerPropertiesArgs();
 
-    @InputImport(name="dataPullMode")
+    @Import(name="dataPullMode")
       private final @Nullable Output<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode;
 
     public Output<IntegrationScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
         return this.dataPullMode == null ? Output.empty() : this.dataPullMode;
     }
 
-    @InputImport(name="firstExecutionFrom")
+    @Import(name="firstExecutionFrom")
       private final @Nullable Output<Double> firstExecutionFrom;
 
     public Output<Double> getFirstExecutionFrom() {
         return this.firstExecutionFrom == null ? Output.empty() : this.firstExecutionFrom;
     }
 
-    @InputImport(name="scheduleEndTime")
+    @Import(name="scheduleEndTime")
       private final @Nullable Output<Double> scheduleEndTime;
 
     public Output<Double> getScheduleEndTime() {
         return this.scheduleEndTime == null ? Output.empty() : this.scheduleEndTime;
     }
 
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
-    @InputImport(name="scheduleOffset")
+    @Import(name="scheduleOffset")
       private final @Nullable Output<Integer> scheduleOffset;
 
     public Output<Integer> getScheduleOffset() {
         return this.scheduleOffset == null ? Output.empty() : this.scheduleOffset;
     }
 
-    @InputImport(name="scheduleStartTime")
+    @Import(name="scheduleStartTime")
       private final @Nullable Output<Double> scheduleStartTime;
 
     public Output<Double> getScheduleStartTime() {
         return this.scheduleStartTime == null ? Output.empty() : this.scheduleStartTime;
     }
 
-    @InputImport(name="timezone")
+    @Import(name="timezone")
       private final @Nullable Output<String> timezone;
 
     public Output<String> getTimezone() {

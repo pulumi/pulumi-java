@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotVersionLocaleDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class BotVersionLocaleSpecificationArgs extends io.pulumi.resources
 
     public static final BotVersionLocaleSpecificationArgs Empty = new BotVersionLocaleSpecificationArgs();
 
-    @InputImport(name="botVersionLocaleDetails", required=true)
+    @Import(name="botVersionLocaleDetails", required=true)
       private final Output<BotVersionLocaleDetailsArgs> botVersionLocaleDetails;
 
     public Output<BotVersionLocaleDetailsArgs> getBotVersionLocaleDetails() {
         return this.botVersionLocaleDetails;
     }
 
-    @InputImport(name="localeId", required=true)
+    @Import(name="localeId", required=true)
       private final Output<String> localeId;
 
     public Output<String> getLocaleId() {

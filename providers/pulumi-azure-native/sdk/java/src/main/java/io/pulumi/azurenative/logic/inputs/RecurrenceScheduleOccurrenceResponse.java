@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RecurrenceScheduleOccurrenceResponse extends io.pulumi.resour
      * The day of the week.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable String day;
 
     public Optional<String> getDay() {
@@ -34,7 +34,7 @@ public final class RecurrenceScheduleOccurrenceResponse extends io.pulumi.resour
      * The occurrence.
      * 
      */
-    @InputImport(name="occurrence")
+    @Import(name="occurrence")
       private final @Nullable Integer occurrence;
 
     public Optional<Integer> getOccurrence() {

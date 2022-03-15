@@ -5,14 +5,14 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.ConfigData;
 import io.pulumi.awsnative.groundstation.outputs.ConfigTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigResult {
     private final @Nullable String arn;
     private final @Nullable ConfigData configData;
@@ -21,14 +21,14 @@ public final class GetConfigResult {
     private final @Nullable List<ConfigTag> tags;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("configData") @Nullable ConfigData configData,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<ConfigTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("configData") @Nullable ConfigData configData,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<ConfigTag> tags,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.arn = arn;
         this.configData = configData;
         this.id = id;

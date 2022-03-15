@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.SshPublicAccess;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
      * Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
      * 
      */
-    @InputImport(name="adminPublicKey")
+    @Import(name="adminPublicKey")
       private final @Nullable Output<String> adminPublicKey;
 
     public Output<String> getAdminPublicKey() {
@@ -35,7 +35,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
      * 
      */
-    @InputImport(name="sshPublicAccess")
+    @Import(name="sshPublicAccess")
       private final @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
     public Output<Either<String,SshPublicAccess>> getSshPublicAccess() {

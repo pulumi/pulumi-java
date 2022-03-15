@@ -4,12 +4,12 @@
 package io.pulumi.aws.timestreamwrite.outputs;
 
 import io.pulumi.aws.timestreamwrite.outputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation {
     /**
      * Configuration of an S3 location to write error reports for records rejected, asynchronously, during magnetic store writes. See S3 Configuration below for more details.
@@ -17,8 +17,8 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      */
     private final @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration;
 
-    @OutputCustomType.Constructor
-    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation(@OutputCustomType.Parameter("s3Configuration") @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration) {
+    @CustomType.Constructor
+    private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation(@CustomType.Parameter("s3Configuration") @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration s3Configuration) {
         this.s3Configuration = s3Configuration;
     }
 

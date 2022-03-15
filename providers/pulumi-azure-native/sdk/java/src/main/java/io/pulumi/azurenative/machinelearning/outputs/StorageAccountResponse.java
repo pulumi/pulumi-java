@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountResponse {
     /**
      * Specifies the key used to access the storage account.
@@ -22,10 +22,10 @@ public final class StorageAccountResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountResponse(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.key = key;
         this.name = name;
     }

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.CanonicalProfileDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionDistributionDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPredictionTrainingResultsResult {
     /**
      * Canonical profiles.
@@ -39,13 +39,13 @@ public final class GetPredictionTrainingResultsResult {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPredictionTrainingResultsResult(
-        @OutputCustomType.Parameter("canonicalProfiles") List<CanonicalProfileDefinitionResponse> canonicalProfiles,
-        @OutputCustomType.Parameter("predictionDistribution") PredictionDistributionDefinitionResponse predictionDistribution,
-        @OutputCustomType.Parameter("primaryProfileInstanceCount") Double primaryProfileInstanceCount,
-        @OutputCustomType.Parameter("scoreName") String scoreName,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("canonicalProfiles") List<CanonicalProfileDefinitionResponse> canonicalProfiles,
+        @CustomType.Parameter("predictionDistribution") PredictionDistributionDefinitionResponse predictionDistribution,
+        @CustomType.Parameter("primaryProfileInstanceCount") Double primaryProfileInstanceCount,
+        @CustomType.Parameter("scoreName") String scoreName,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.canonicalProfiles = canonicalProfiles;
         this.predictionDistribution = predictionDistribution;
         this.primaryProfileInstanceCount = primaryProfileInstanceCount;

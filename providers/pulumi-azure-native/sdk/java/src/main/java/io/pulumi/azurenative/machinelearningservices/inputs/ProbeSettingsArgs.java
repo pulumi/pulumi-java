@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The number of failures to allow before returning an unhealthy status.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -34,7 +34,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The delay before the first probe in ISO 8601 format.
      * 
      */
-    @InputImport(name="initialDelay")
+    @Import(name="initialDelay")
       private final @Nullable Output<String> initialDelay;
 
     public Output<String> getInitialDelay() {
@@ -45,7 +45,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The length of time between probes in ISO 8601 format.
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {
@@ -56,7 +56,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The number of successful probes before returning a healthy status.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
     public Output<Integer> getSuccessThreshold() {
@@ -67,7 +67,7 @@ public final class ProbeSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The probe timeout in ISO 8601 format.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

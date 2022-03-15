@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
      * An identifier for a source in the build project.
      * 
      */
-    @InputImport(name="sourceIdentifier", required=true)
+    @Import(name="sourceIdentifier", required=true)
       private final Output<String> sourceIdentifier;
 
     public Output<String> getSourceIdentifier() {
@@ -28,7 +28,7 @@ public final class ProjectSecondarySourceVersionArgs extends io.pulumi.resources
      * The source version for the corresponding source identifier. See [AWS docs](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectSourceVersion.html#CodeBuild-Type-ProjectSourceVersion-sourceVersion) for more details.
      * 
      */
-    @InputImport(name="sourceVersion", required=true)
+    @Import(name="sourceVersion", required=true)
       private final Output<String> sourceVersion;
 
     public Output<String> getSourceVersion() {

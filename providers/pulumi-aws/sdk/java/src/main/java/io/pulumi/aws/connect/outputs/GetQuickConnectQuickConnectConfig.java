@@ -6,12 +6,12 @@ package io.pulumi.aws.connect.outputs;
 import io.pulumi.aws.connect.outputs.GetQuickConnectQuickConnectConfigPhoneConfig;
 import io.pulumi.aws.connect.outputs.GetQuickConnectQuickConnectConfigQueueConfig;
 import io.pulumi.aws.connect.outputs.GetQuickConnectQuickConnectConfigUserConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQuickConnectQuickConnectConfig {
     /**
      * Specifies the phone configuration of the Quick Connect. This is returned only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
@@ -34,12 +34,12 @@ public final class GetQuickConnectQuickConnectConfig {
      */
     private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQuickConnectQuickConnectConfig(
-        @OutputCustomType.Parameter("phoneConfigs") List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
-        @OutputCustomType.Parameter("queueConfigs") List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs,
-        @OutputCustomType.Parameter("quickConnectType") String quickConnectType,
-        @OutputCustomType.Parameter("userConfigs") List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
+        @CustomType.Parameter("phoneConfigs") List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
+        @CustomType.Parameter("queueConfigs") List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs,
+        @CustomType.Parameter("quickConnectType") String quickConnectType,
+        @CustomType.Parameter("userConfigs") List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs) {
         this.phoneConfigs = phoneConfigs;
         this.queueConfigs = queueConfigs;
         this.quickConnectType = quickConnectType;

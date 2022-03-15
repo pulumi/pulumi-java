@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the NetApp account
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -40,7 +40,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the capacity pool
      * 
      */
-    @InputImport(name="poolName", required=true)
+    @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
     public Output<String> getPoolName() {
@@ -51,7 +51,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the snapshot
      * 
      */
-    @InputImport(name="snapshotName")
+    @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
@@ -73,7 +73,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the volume
      * 
      */
-    @InputImport(name="volumeName", required=true)
+    @Import(name="volumeName", required=true)
       private final Output<String> volumeName;
 
     public Output<String> getVolumeName() {

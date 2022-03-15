@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
      * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -34,7 +34,7 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
      * Blob restore is enabled if set to true.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

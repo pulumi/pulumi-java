@@ -5,14 +5,14 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.PrivilegeResponse;
 import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMongoDBResourceMongoRoleDefinitionResult {
     /**
      * The database name for which access is being granted for this Role Definition.
@@ -50,15 +50,15 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMongoDBResourceMongoRoleDefinitionResult(
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privileges") @Nullable List<PrivilegeResponse> privileges,
-        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
-        @OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privileges") @Nullable List<PrivilegeResponse> privileges,
+        @CustomType.Parameter("roleName") @Nullable String roleName,
+        @CustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
+        @CustomType.Parameter("type") String type) {
         this.databaseName = databaseName;
         this.id = id;
         this.name = name;

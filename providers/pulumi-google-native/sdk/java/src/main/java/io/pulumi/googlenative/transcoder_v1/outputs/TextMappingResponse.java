@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TextMappingResponse {
     /**
      * The `EditAtom.key` that references atom with text inputs in the `Job.edit_list`.
@@ -26,11 +26,11 @@ public final class TextMappingResponse {
      */
     private final Integer inputTrack;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TextMappingResponse(
-        @OutputCustomType.Parameter("atomKey") String atomKey,
-        @OutputCustomType.Parameter("inputKey") String inputKey,
-        @OutputCustomType.Parameter("inputTrack") Integer inputTrack) {
+        @CustomType.Parameter("atomKey") String atomKey,
+        @CustomType.Parameter("inputKey") String inputKey,
+        @CustomType.Parameter("inputTrack") Integer inputTrack) {
         this.atomKey = atomKey;
         this.inputKey = inputKey;
         this.inputTrack = inputTrack;

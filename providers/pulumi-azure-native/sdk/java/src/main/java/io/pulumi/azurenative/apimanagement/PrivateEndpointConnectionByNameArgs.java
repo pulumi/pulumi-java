@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.PrivateEndpointConnectionRequestPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * Private Endpoint Connection Resource Id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -30,7 +30,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * Name of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -41,7 +41,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * The connection state of the private endpoint connection.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
 
     public Output<PrivateEndpointConnectionRequestPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class PrivateEndpointConnectionByNameArgs extends io.pulumi.resourc
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.JobTemplateAbortCriteria;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AbortConfigProperties {
     private final List<JobTemplateAbortCriteria> criteriaList;
 
-    @OutputCustomType.Constructor
-    private AbortConfigProperties(@OutputCustomType.Parameter("criteriaList") List<JobTemplateAbortCriteria> criteriaList) {
+    @CustomType.Constructor
+    private AbortConfigProperties(@CustomType.Parameter("criteriaList") List<JobTemplateAbortCriteria> criteriaList) {
         this.criteriaList = criteriaList;
     }
 

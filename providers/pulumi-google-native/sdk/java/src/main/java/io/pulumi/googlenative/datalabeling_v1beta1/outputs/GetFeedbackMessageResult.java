@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFeedbackMessageResult {
     /**
      * String content of the feedback. Maximum of 10000 characters.
@@ -34,14 +34,14 @@ public final class GetFeedbackMessageResult {
     private final GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata;
     private final GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFeedbackMessageResult(
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operatorFeedbackMetadata") GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
-        @OutputCustomType.Parameter("requesterFeedbackMetadata") GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operatorFeedbackMetadata") GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
+        @CustomType.Parameter("requesterFeedbackMetadata") GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
         this.body = body;
         this.createTime = createTime;
         this.image = image;

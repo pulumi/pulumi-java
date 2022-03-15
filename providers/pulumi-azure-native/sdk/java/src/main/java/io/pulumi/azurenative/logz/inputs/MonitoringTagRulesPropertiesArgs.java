@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.LogRulesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * Set of rules for sending logs for the Monitor resource.
      * 
      */
-    @InputImport(name="logRules")
+    @Import(name="logRules")
       private final @Nullable Output<LogRulesArgs> logRules;
 
     public Output<LogRulesArgs> getLogRules() {

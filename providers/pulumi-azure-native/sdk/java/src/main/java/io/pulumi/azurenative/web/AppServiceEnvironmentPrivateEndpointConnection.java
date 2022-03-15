@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.outputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.web.outputs.PrivateLinkConnectionStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * Private IPAddresses mapped to the remote private endpoint
      * 
      */
-    @OutputExport(name="ipAddresses", type=List.class, parameters={String.class})
+    @Export(name="ipAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipAddresses;
 
     /**
@@ -47,7 +47,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -61,7 +61,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -75,7 +75,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * PrivateEndpoint of a remote private endpoint connection
      * 
      */
-    @OutputExport(name="privateEndpoint", type=ArmIdWrapperResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=ArmIdWrapperResponse.class, parameters={})
     private Output</* @Nullable */ ArmIdWrapperResponse> privateEndpoint;
 
     /**
@@ -89,7 +89,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * The state of a private link connection
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -99,7 +99,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
     public Output</* @Nullable */ PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -109,7 +109,7 @@ public class AppServiceEnvironmentPrivateEndpointConnection extends io.pulumi.re
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

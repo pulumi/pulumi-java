@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.AzureResourceErrorInfoResponse;
 import io.pulumi.azurenative.logic.outputs.ExpressionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressionRootResponse {
     /**
      * The azure resource error info.
@@ -37,13 +37,13 @@ public final class ExpressionRootResponse {
     private final @Nullable String text;
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressionRootResponse(
-        @OutputCustomType.Parameter("error") @Nullable AzureResourceErrorInfoResponse error,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("subexpressions") @Nullable List<ExpressionResponse> subexpressions,
-        @OutputCustomType.Parameter("text") @Nullable String text,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("error") @Nullable AzureResourceErrorInfoResponse error,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("subexpressions") @Nullable List<ExpressionResponse> subexpressions,
+        @CustomType.Parameter("text") @Nullable String text,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.error = error;
         this.path = path;
         this.subexpressions = subexpressions;

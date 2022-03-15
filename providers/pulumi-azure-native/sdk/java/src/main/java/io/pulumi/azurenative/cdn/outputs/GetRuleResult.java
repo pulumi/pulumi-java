@@ -26,7 +26,7 @@ import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlRedirectActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleResult {
     /**
      * A list of actions that are executed when all the conditions of a rule are satisfied.
@@ -84,18 +84,18 @@ public final class GetRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleResult(
-        @OutputCustomType.Parameter("actions") List<Object> actions,
-        @OutputCustomType.Parameter("conditions") @Nullable List<Object> conditions,
-        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("order") Integer order,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("actions") List<Object> actions,
+        @CustomType.Parameter("conditions") @Nullable List<Object> conditions,
+        @CustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("order") Integer order,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.actions = actions;
         this.conditions = conditions;
         this.deploymentStatus = deploymentStatus;

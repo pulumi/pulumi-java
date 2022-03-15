@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
      * The URI of the customer-managed key for the backing database.
      * 
      */
-    @InputImport(name="keyVaultKeyUri")
+    @Import(name="keyVaultKeyUri")
       private final @Nullable String keyVaultKeyUri;
 
     public Optional<String> getKeyVaultKeyUri() {
@@ -34,7 +34,7 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends io.pulumi.re
      * The provisioned throughput for the backing database.
      * 
      */
-    @InputImport(name="offerThroughput")
+    @Import(name="offerThroughput")
       private final @Nullable Integer offerThroughput;
 
     public Optional<Integer> getOfferThroughput() {

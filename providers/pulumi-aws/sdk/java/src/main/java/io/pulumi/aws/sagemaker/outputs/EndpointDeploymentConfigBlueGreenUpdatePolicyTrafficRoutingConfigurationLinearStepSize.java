@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize {
     /**
      * Specifies the endpoint capacity type. Valid values are: `INSTANCE_COUNT`, or `CAPACITY_PERCENT`.
@@ -21,10 +21,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") Integer value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") Integer value) {
         this.type = type;
         this.value = value;
     }

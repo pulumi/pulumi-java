@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<BucketIAMBindingConditionGetArgs> condition;
 
     public Output<BucketIAMBindingConditionGetArgs> getCondition() {
@@ -43,7 +43,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -64,7 +64,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * * **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -77,7 +77,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

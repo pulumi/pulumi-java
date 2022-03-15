@@ -3,16 +3,16 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointResponse {
     private final String id;
 
-    @OutputCustomType.Constructor
-    private PrivateEndpointResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private PrivateEndpointResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

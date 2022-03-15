@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.enums.GrantType;
 import io.pulumi.azurenative.apimanagement.inputs.TokenBodyParameterContractArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
      * 
      */
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
@@ -37,7 +37,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
      * 
      */
-    @InputImport(name="authorizationMethods")
+    @Import(name="authorizationMethods")
       private final @Nullable Output<List<AuthorizationMethod>> authorizationMethods;
 
     public Output<List<AuthorizationMethod>> getAuthorizationMethods() {
@@ -48,7 +48,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Identifier of the authorization server.
      * 
      */
-    @InputImport(name="authsid")
+    @Import(name="authsid")
       private final @Nullable Output<String> authsid;
 
     public Output<String> getAuthsid() {
@@ -59,7 +59,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Specifies the mechanism by which access token is passed to the API.
      * 
      */
-    @InputImport(name="bearerTokenSendingMethods")
+    @Import(name="bearerTokenSendingMethods")
       private final @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
     public Output<List<Either<String,BearerTokenSendingMethod>>> getBearerTokenSendingMethods() {
@@ -70,7 +70,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
      * 
      */
-    @InputImport(name="clientAuthenticationMethod")
+    @Import(name="clientAuthenticationMethod")
       private final @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
     public Output<List<Either<String,ClientAuthenticationMethod>>> getClientAuthenticationMethod() {
@@ -81,7 +81,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Client or app id registered with this authorization server.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -92,7 +92,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.
      * 
      */
-    @InputImport(name="clientRegistrationEndpoint", required=true)
+    @Import(name="clientRegistrationEndpoint", required=true)
       private final Output<String> clientRegistrationEndpoint;
 
     public Output<String> getClientRegistrationEndpoint() {
@@ -103,7 +103,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -114,7 +114,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
      * 
      */
-    @InputImport(name="defaultScope")
+    @Import(name="defaultScope")
       private final @Nullable Output<String> defaultScope;
 
     public Output<String> getDefaultScope() {
@@ -125,7 +125,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Description of the authorization server. Can contain HTML formatting tags.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -136,7 +136,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * User-friendly authorization server name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -147,7 +147,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Form of an authorization grant, which the client uses to request the access token.
      * 
      */
-    @InputImport(name="grantTypes", required=true)
+    @Import(name="grantTypes", required=true)
       private final Output<List<Either<String,GrantType>>> grantTypes;
 
     public Output<List<Either<String,GrantType>>> getGrantTypes() {
@@ -158,7 +158,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -169,7 +169,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
      * 
      */
-    @InputImport(name="resourceOwnerPassword")
+    @Import(name="resourceOwnerPassword")
       private final @Nullable Output<String> resourceOwnerPassword;
 
     public Output<String> getResourceOwnerPassword() {
@@ -180,7 +180,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
      * 
      */
-    @InputImport(name="resourceOwnerUsername")
+    @Import(name="resourceOwnerUsername")
       private final @Nullable Output<String> resourceOwnerUsername;
 
     public Output<String> getResourceOwnerUsername() {
@@ -191,7 +191,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -202,7 +202,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
      * 
      */
-    @InputImport(name="supportState")
+    @Import(name="supportState")
       private final @Nullable Output<Boolean> supportState;
 
     public Output<Boolean> getSupportState() {
@@ -213,7 +213,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.
      * 
      */
-    @InputImport(name="tokenBodyParameters")
+    @Import(name="tokenBodyParameters")
       private final @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
     public Output<List<TokenBodyParameterContractArgs>> getTokenBodyParameters() {
@@ -224,7 +224,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
      * OAuth token endpoint. Contains absolute URI to entity being referenced.
      * 
      */
-    @InputImport(name="tokenEndpoint")
+    @Import(name="tokenEndpoint")
       private final @Nullable Output<String> tokenEndpoint;
 
     public Output<String> getTokenEndpoint() {

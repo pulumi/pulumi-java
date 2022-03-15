@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.ServiceAwsVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceNetworkConfiguration {
     private final @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
 
-    @OutputCustomType.Constructor
-    private ServiceNetworkConfiguration(@OutputCustomType.Parameter("awsvpcConfiguration") @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
+    @CustomType.Constructor
+    private ServiceNetworkConfiguration(@CustomType.Parameter("awsvpcConfiguration") @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
         this.awsvpcConfiguration = awsvpcConfiguration;
     }
 

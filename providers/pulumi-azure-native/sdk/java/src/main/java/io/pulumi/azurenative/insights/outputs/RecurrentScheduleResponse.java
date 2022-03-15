@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecurrentScheduleResponse {
     /**
      * the collection of days that the profile takes effect on. Possible values are Sunday through Saturday.
@@ -32,12 +32,12 @@ public final class RecurrentScheduleResponse {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecurrentScheduleResponse(
-        @OutputCustomType.Parameter("days") List<String> days,
-        @OutputCustomType.Parameter("hours") List<Integer> hours,
-        @OutputCustomType.Parameter("minutes") List<Integer> minutes,
-        @OutputCustomType.Parameter("timeZone") String timeZone) {
+        @CustomType.Parameter("days") List<String> days,
+        @CustomType.Parameter("hours") List<Integer> hours,
+        @CustomType.Parameter("minutes") List<Integer> minutes,
+        @CustomType.Parameter("timeZone") String timeZone) {
         this.days = days;
         this.hours = hours;
         this.minutes = minutes;

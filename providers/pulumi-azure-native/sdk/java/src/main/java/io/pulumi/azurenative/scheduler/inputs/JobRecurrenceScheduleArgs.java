@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.DayOfWeek;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleMonthlyOccurrenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * Gets or sets the hours of the day that the job should execute at.
      * 
      */
-    @InputImport(name="hours")
+    @Import(name="hours")
       private final @Nullable Output<List<Integer>> hours;
 
     public Output<List<Integer>> getHours() {
@@ -32,7 +32,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * Gets or sets the minutes of the hour that the job should execute at.
      * 
      */
-    @InputImport(name="minutes")
+    @Import(name="minutes")
       private final @Nullable Output<List<Integer>> minutes;
 
     public Output<List<Integer>> getMinutes() {
@@ -43,7 +43,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
      * 
      */
-    @InputImport(name="monthDays")
+    @Import(name="monthDays")
       private final @Nullable Output<List<Integer>> monthDays;
 
     public Output<List<Integer>> getMonthDays() {
@@ -54,7 +54,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * Gets or sets the occurrences of days within a month.
      * 
      */
-    @InputImport(name="monthlyOccurrences")
+    @Import(name="monthlyOccurrences")
       private final @Nullable Output<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
     public Output<List<JobRecurrenceScheduleMonthlyOccurrenceArgs>> getMonthlyOccurrences() {
@@ -65,7 +65,7 @@ public final class JobRecurrenceScheduleArgs extends io.pulumi.resources.Resourc
      * Gets or sets the days of the week that the job should execute on.
      * 
      */
-    @InputImport(name="weekDays")
+    @Import(name="weekDays")
       private final @Nullable Output<List<DayOfWeek>> weekDays;
 
     public Output<List<DayOfWeek>> getWeekDays() {

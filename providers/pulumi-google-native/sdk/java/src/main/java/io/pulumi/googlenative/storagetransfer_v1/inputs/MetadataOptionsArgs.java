@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsAcl;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsGid;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsKmsKey;
@@ -29,7 +29,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
      * 
      */
-    @InputImport(name="acl")
+    @Import(name="acl")
       private final @Nullable Output<MetadataOptionsAcl> acl;
 
     public Output<MetadataOptionsAcl> getAcl() {
@@ -40,7 +40,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how each file's GID attribute should be handled by the transfer. If unspecified, the default behavior is the same as GID_SKIP when the source is a POSIX file system.
      * 
      */
-    @InputImport(name="gid")
+    @Import(name="gid")
       private final @Nullable Output<MetadataOptionsGid> gid;
 
     public Output<MetadataOptionsGid> getGid() {
@@ -51,7 +51,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how each object's Cloud KMS customer-managed encryption key (CMEK) is preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as KMS_KEY_DESTINATION_BUCKET_DEFAULT.
      * 
      */
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable Output<MetadataOptionsKmsKey> kmsKey;
 
     public Output<MetadataOptionsKmsKey> getKmsKey() {
@@ -62,7 +62,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how each file's mode attribute should be handled by the transfer. If unspecified, the default behavior is the same as MODE_SKIP when the source is a POSIX file system.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<MetadataOptionsMode> mode;
 
     public Output<MetadataOptionsMode> getMode() {
@@ -73,7 +73,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the storage class to set on objects being transferred to Google Cloud Storage buckets. If unspecified, the default behavior is the same as STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<MetadataOptionsStorageClass> storageClass;
 
     public Output<MetadataOptionsStorageClass> getStorageClass() {
@@ -84,7 +84,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how symlinks should be handled by the transfer. If unspecified, the default behavior is the same as SYMLINK_SKIP when the source is a POSIX file system.
      * 
      */
-    @InputImport(name="symlink")
+    @Import(name="symlink")
       private final @Nullable Output<MetadataOptionsSymlink> symlink;
 
     public Output<MetadataOptionsSymlink> getSymlink() {
@@ -95,7 +95,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how each object's temporary hold status should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as TEMPORARY_HOLD_PRESERVE.
      * 
      */
-    @InputImport(name="temporaryHold")
+    @Import(name="temporaryHold")
       private final @Nullable Output<MetadataOptionsTemporaryHold> temporaryHold;
 
     public Output<MetadataOptionsTemporaryHold> getTemporaryHold() {
@@ -106,7 +106,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies how each file's UID attribute should be handled by the transfer. If unspecified, the default behavior is the same as UID_SKIP when the source is a POSIX file system.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<MetadataOptionsUid> uid;
 
     public Output<MetadataOptionsUid> getUid() {

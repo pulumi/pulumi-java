@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder;
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the address Resource within the specified resource group. address names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    @InputImport(name="addressName")
+    @Import(name="addressName")
       private final @Nullable Output<String> addressName;
 
     public Output<String> getAddressName() {
@@ -32,7 +32,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * Contact details for the address
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
     public Output<ContactDetailsArgs> getContactDetails() {
@@ -43,7 +43,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * Shipping details for the address
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
     public Output<ShippingAddressArgs> getShippingAddress() {
@@ -76,7 +76,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

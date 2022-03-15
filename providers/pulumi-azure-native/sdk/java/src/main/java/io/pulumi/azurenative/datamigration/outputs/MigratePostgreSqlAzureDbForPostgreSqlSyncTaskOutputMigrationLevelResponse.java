@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse {
     /**
      * Migration end time
@@ -51,16 +51,16 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationLevelResponse(
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sourceServer") String sourceServer,
-        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("targetServer") String targetServer,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sourceServer") String sourceServer,
+        @CustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("targetServer") String targetServer,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.endedOn = endedOn;
         this.id = id;
         this.resultType = resultType;

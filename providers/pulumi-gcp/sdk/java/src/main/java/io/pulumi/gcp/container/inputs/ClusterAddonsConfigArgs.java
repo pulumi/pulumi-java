@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterAddonsConfigCloudrunConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterAddonsConfigConfigConnectorConfigArgs;
 import io.pulumi.gcp.container.inputs.ClusterAddonsConfigDnsCacheConfigArgs;
@@ -27,7 +27,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * . Structure is documented below.
      * 
      */
-    @InputImport(name="cloudrunConfig")
+    @Import(name="cloudrunConfig")
       private final @Nullable Output<ClusterAddonsConfigCloudrunConfigArgs> cloudrunConfig;
 
     public Output<ClusterAddonsConfigCloudrunConfigArgs> getCloudrunConfig() {
@@ -39,7 +39,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
      * 
      */
-    @InputImport(name="configConnectorConfig")
+    @Import(name="configConnectorConfig")
       private final @Nullable Output<ClusterAddonsConfigConfigConnectorConfigArgs> configConnectorConfig;
 
     public Output<ClusterAddonsConfigConfigConnectorConfigArgs> getConfigConnectorConfig() {
@@ -52,7 +52,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * Set `enabled = true` to enable.
      * 
      */
-    @InputImport(name="dnsCacheConfig")
+    @Import(name="dnsCacheConfig")
       private final @Nullable Output<ClusterAddonsConfigDnsCacheConfigArgs> dnsCacheConfig;
 
     public Output<ClusterAddonsConfigDnsCacheConfigArgs> getDnsCacheConfig() {
@@ -64,7 +64,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
      * 
      */
-    @InputImport(name="gcePersistentDiskCsiDriverConfig")
+    @Import(name="gcePersistentDiskCsiDriverConfig")
       private final @Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
     public Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> getGcePersistentDiskCsiDriverConfig() {
@@ -77,7 +77,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * It is disbaled by default; set `enabled = true` to enable.
      * 
      */
-    @InputImport(name="gcpFilestoreCsiDriverConfig")
+    @Import(name="gcpFilestoreCsiDriverConfig")
       private final @Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
     public Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> getGcpFilestoreCsiDriverConfig() {
@@ -92,7 +92,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * set `disabled = true` to disable.
      * 
      */
-    @InputImport(name="horizontalPodAutoscaling")
+    @Import(name="horizontalPodAutoscaling")
       private final @Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
     public Output<ClusterAddonsConfigHorizontalPodAutoscalingArgs> getHorizontalPodAutoscaling() {
@@ -105,7 +105,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * cluster. It is enabled by default; set `disabled = true` to disable.
      * 
      */
-    @InputImport(name="httpLoadBalancing")
+    @Import(name="httpLoadBalancing")
       private final @Nullable Output<ClusterAddonsConfigHttpLoadBalancingArgs> httpLoadBalancing;
 
     public Output<ClusterAddonsConfigHttpLoadBalancingArgs> getHttpLoadBalancing() {
@@ -117,7 +117,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="istioConfig")
+    @Import(name="istioConfig")
       private final @Nullable Output<ClusterAddonsConfigIstioConfigArgs> istioConfig;
 
     public Output<ClusterAddonsConfigIstioConfigArgs> getIstioConfig() {
@@ -129,7 +129,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
      * 
      */
-    @InputImport(name="kalmConfig")
+    @Import(name="kalmConfig")
       private final @Nullable Output<ClusterAddonsConfigKalmConfigArgs> kalmConfig;
 
     public Output<ClusterAddonsConfigKalmConfigArgs> getKalmConfig() {
@@ -145,7 +145,7 @@ public final class ClusterAddonsConfigArgs extends io.pulumi.resources.ResourceA
      * Defaults to disabled; set `disabled = false` to enable.
      * 
      */
-    @InputImport(name="networkPolicyConfig")
+    @Import(name="networkPolicyConfig")
       private final @Nullable Output<ClusterAddonsConfigNetworkPolicyConfigArgs> networkPolicyConfig;
 
     public Output<ClusterAddonsConfigNetworkPolicyConfigArgs> getNetworkPolicyConfig() {

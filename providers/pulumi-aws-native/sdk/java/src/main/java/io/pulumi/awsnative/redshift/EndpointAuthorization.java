@@ -6,7 +6,7 @@ package io.pulumi.awsnative.redshift;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.redshift.EndpointAuthorizationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The target AWS account ID to grant or revoke access for.
      * 
      */
-    @OutputExport(name="account", type=String.class, parameters={})
+    @Export(name="account", type=String.class, parameters={})
     private Output<String> account;
 
     /**
@@ -38,7 +38,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * Indicates whether all VPCs in the grantee account are allowed access to the cluster.
      * 
      */
-    @OutputExport(name="allowedAllVPCs", type=Boolean.class, parameters={})
+    @Export(name="allowedAllVPCs", type=Boolean.class, parameters={})
     private Output<Boolean> allowedAllVPCs;
 
     /**
@@ -52,7 +52,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The VPCs allowed access to the cluster.
      * 
      */
-    @OutputExport(name="allowedVPCs", type=List.class, parameters={String.class})
+    @Export(name="allowedVPCs", type=List.class, parameters={String.class})
     private Output<List<String>> allowedVPCs;
 
     /**
@@ -66,7 +66,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The time (UTC) when the authorization was created.
      * 
      */
-    @OutputExport(name="authorizeTime", type=String.class, parameters={})
+    @Export(name="authorizeTime", type=String.class, parameters={})
     private Output<String> authorizeTime;
 
     /**
@@ -80,7 +80,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The cluster identifier.
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output<String> clusterIdentifier;
 
     /**
@@ -94,7 +94,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The status of the cluster.
      * 
      */
-    @OutputExport(name="clusterStatus", type=String.class, parameters={})
+    @Export(name="clusterStatus", type=String.class, parameters={})
     private Output<String> clusterStatus;
 
     /**
@@ -108,7 +108,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The number of Redshift-managed VPC endpoints created for the authorization.
      * 
      */
-    @OutputExport(name="endpointCount", type=Integer.class, parameters={})
+    @Export(name="endpointCount", type=Integer.class, parameters={})
     private Output<Integer> endpointCount;
 
     /**
@@ -122,7 +122,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      *  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
      * 
      */
-    @OutputExport(name="force", type=Boolean.class, parameters={})
+    @Export(name="force", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> force;
 
     /**
@@ -136,7 +136,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the grantee of the cluster.
      * 
      */
-    @OutputExport(name="grantee", type=String.class, parameters={})
+    @Export(name="grantee", type=String.class, parameters={})
     private Output<String> grantee;
 
     /**
@@ -150,7 +150,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the cluster owner.
      * 
      */
-    @OutputExport(name="grantor", type=String.class, parameters={})
+    @Export(name="grantor", type=String.class, parameters={})
     private Output<String> grantor;
 
     /**
@@ -164,7 +164,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The status of the authorization action.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -178,7 +178,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
      */
-    @OutputExport(name="vpcIds", type=List.class, parameters={String.class})
+    @Export(name="vpcIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcIds;
 
     /**

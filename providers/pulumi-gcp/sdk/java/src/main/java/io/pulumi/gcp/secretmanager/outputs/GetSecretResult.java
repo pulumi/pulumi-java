@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretReplication;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretRotation;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretTopic;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretResult {
     private final String createTime;
     private final String expireTime;
@@ -32,19 +32,19 @@ public final class GetSecretResult {
     private final List<GetSecretTopic> topics;
     private final String ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("replications") List<GetSecretReplication> replications,
-        @OutputCustomType.Parameter("rotations") List<GetSecretRotation> rotations,
-        @OutputCustomType.Parameter("secretId") String secretId,
-        @OutputCustomType.Parameter("topics") List<GetSecretTopic> topics,
-        @OutputCustomType.Parameter("ttl") String ttl) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("replications") List<GetSecretReplication> replications,
+        @CustomType.Parameter("rotations") List<GetSecretRotation> rotations,
+        @CustomType.Parameter("secretId") String secretId,
+        @CustomType.Parameter("topics") List<GetSecretTopic> topics,
+        @CustomType.Parameter("ttl") String ttl) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.id = id;

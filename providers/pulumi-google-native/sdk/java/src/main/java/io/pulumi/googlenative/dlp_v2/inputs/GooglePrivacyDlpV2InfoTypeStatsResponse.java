@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
      * Number of findings for this infoType.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final String count;
 
     public String getCount() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse extends io.pulumi.res
      * The type of finding this stat is for.
      * 
      */
-    @InputImport(name="infoType", required=true)
+    @Import(name="infoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {

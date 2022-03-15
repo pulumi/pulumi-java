@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1OperationResponse {
     /**
      * methods refers to the REST verbs as in https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html. When none specified, all verb types are allowed.
@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1OperationResponse {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1OperationResponse(
-        @OutputCustomType.Parameter("methods") List<String> methods,
-        @OutputCustomType.Parameter("resource") String resource) {
+        @CustomType.Parameter("methods") List<String> methods,
+        @CustomType.Parameter("resource") String resource) {
         this.methods = methods;
         this.resource = resource;
     }

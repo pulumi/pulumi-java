@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingPurgeDataTypesItem;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingRedactionScope;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.SecuritySettingRedactionStrategy;
@@ -24,7 +24,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. The `DLP De-identify Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.
      * 
      */
-    @InputImport(name="deidentifyTemplate")
+    @Import(name="deidentifyTemplate")
       private final @Nullable Output<String> deidentifyTemplate;
 
     public Output<String> getDeidentifyTemplate() {
@@ -35,7 +35,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * The human-readable name of the security settings, unique within the location.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -46,7 +46,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.
      * 
      */
-    @InputImport(name="insightsExportSettings")
+    @Import(name="insightsExportSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings;
 
     public Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs> getInsightsExportSettings() {
@@ -57,14 +57,14 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. The `DLP Inspect Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.
      * 
      */
-    @InputImport(name="inspectTemplate")
+    @Import(name="inspectTemplate")
       private final @Nullable Output<String> inspectTemplate;
 
     public Output<String> getInspectTemplate() {
         return this.inspectTemplate == null ? Output.empty() : this.inspectTemplate;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -75,14 +75,14 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -93,7 +93,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * List of types of data to remove when retention settings triggers purge.
      * 
      */
-    @InputImport(name="purgeDataTypes")
+    @Import(name="purgeDataTypes")
       private final @Nullable Output<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes;
 
     public Output<List<SecuritySettingPurgeDataTypesItem>> getPurgeDataTypes() {
@@ -104,7 +104,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * Defines the data for which Dialogflow applies redaction. Dialogflow does not redact data that it does not have access to – for example, Cloud logging.
      * 
      */
-    @InputImport(name="redactionScope")
+    @Import(name="redactionScope")
       private final @Nullable Output<SecuritySettingRedactionScope> redactionScope;
 
     public Output<SecuritySettingRedactionScope> getRedactionScope() {
@@ -115,7 +115,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * Strategy that defines how we do redaction.
      * 
      */
-    @InputImport(name="redactionStrategy")
+    @Import(name="redactionStrategy")
       private final @Nullable Output<SecuritySettingRedactionStrategy> redactionStrategy;
 
     public Output<SecuritySettingRedactionStrategy> getRedactionStrategy() {
@@ -126,7 +126,7 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
      * Retains data in interaction logging for the specified number of days. This does not apply to Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than Dialogflow's default 365d TTL. Setting a value higher than that has no effect. A missing value or setting to 0 also means we use Dialogflow's default TTL. Note: Interaction logging is a limited access feature. Talk to your Google representative to check availability for you.
      * 
      */
-    @InputImport(name="retentionWindowDays")
+    @Import(name="retentionWindowDays")
       private final @Nullable Output<Integer> retentionWindowDays;
 
     public Output<Integer> getRetentionWindowDays() {

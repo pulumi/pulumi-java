@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMeshIstioServiceTelemetry {
     private final String resourceName;
 
-    @OutputCustomType.Constructor
-    private GetMeshIstioServiceTelemetry(@OutputCustomType.Parameter("resourceName") String resourceName) {
+    @CustomType.Constructor
+    private GetMeshIstioServiceTelemetry(@CustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpnGatewayVpnGatewayInterfaceResponse {
     /**
      * URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface. When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the specified VLAN attachment resource. Not currently available publicly.
@@ -20,10 +20,10 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
      */
     private final String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnGatewayVpnGatewayInterfaceResponse(
-        @OutputCustomType.Parameter("interconnectAttachment") String interconnectAttachment,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
+        @CustomType.Parameter("interconnectAttachment") String interconnectAttachment,
+        @CustomType.Parameter("ipAddress") String ipAddress) {
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;
     }

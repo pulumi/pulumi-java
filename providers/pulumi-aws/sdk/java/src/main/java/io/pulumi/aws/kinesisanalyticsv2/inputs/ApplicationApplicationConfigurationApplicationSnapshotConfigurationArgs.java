@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
      * 
      */
-    @InputImport(name="snapshotsEnabled", required=true)
+    @Import(name="snapshotsEnabled", required=true)
       private final Output<Boolean> snapshotsEnabled;
 
     public Output<Boolean> getSnapshotsEnabled() {

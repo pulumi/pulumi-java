@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,35 +14,35 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy extends io.pulumi.re
 
     public static final GetBackendServiceCdnPolicyCacheKeyPolicy Empty = new GetBackendServiceCdnPolicyCacheKeyPolicy();
 
-    @InputImport(name="includeHost", required=true)
+    @Import(name="includeHost", required=true)
       private final Boolean includeHost;
 
     public Boolean getIncludeHost() {
         return this.includeHost;
     }
 
-    @InputImport(name="includeProtocol", required=true)
+    @Import(name="includeProtocol", required=true)
       private final Boolean includeProtocol;
 
     public Boolean getIncludeProtocol() {
         return this.includeProtocol;
     }
 
-    @InputImport(name="includeQueryString", required=true)
+    @Import(name="includeQueryString", required=true)
       private final Boolean includeQueryString;
 
     public Boolean getIncludeQueryString() {
         return this.includeQueryString;
     }
 
-    @InputImport(name="queryStringBlacklists", required=true)
+    @Import(name="queryStringBlacklists", required=true)
       private final List<String> queryStringBlacklists;
 
     public List<String> getQueryStringBlacklists() {
         return this.queryStringBlacklists;
     }
 
-    @InputImport(name="queryStringWhitelists", required=true)
+    @Import(name="queryStringWhitelists", required=true)
       private final List<String> queryStringWhitelists;
 
     public List<String> getQueryStringWhitelists() {

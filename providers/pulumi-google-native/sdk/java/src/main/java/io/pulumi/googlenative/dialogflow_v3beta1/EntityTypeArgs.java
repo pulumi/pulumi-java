@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.EntityTypeAutoExpansionMode;
 import io.pulumi.googlenative.dialogflow_v3beta1.enums.EntityTypeKind;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs;
@@ -20,7 +20,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntityTypeArgs Empty = new EntityTypeArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -31,7 +31,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the entity type can be automatically expanded.
      * 
      */
-    @InputImport(name="autoExpansionMode")
+    @Import(name="autoExpansionMode")
       private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
 
     public Output<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
@@ -42,7 +42,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the entity type, unique within the agent.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -53,7 +53,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Enables fuzzy entity extraction during classification.
      * 
      */
-    @InputImport(name="enableFuzzyExtraction")
+    @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
@@ -64,7 +64,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of entity entries associated with the entity type.
      * 
      */
-    @InputImport(name="entities")
+    @Import(name="entities")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> entities;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityArgs>> getEntities() {
@@ -75,7 +75,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun) as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by entities and excluded phrases should be mutually exclusive.
      * 
      */
-    @InputImport(name="excludedPhrases")
+    @Import(name="excludedPhrases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> excludedPhrases;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseArgs>> getExcludedPhrases() {
@@ -86,21 +86,21 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the kind of entity type.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<EntityTypeKind> kind;
 
     public Output<EntityTypeKind> getKind() {
         return this.kind;
     }
 
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
         return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -111,14 +111,14 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format: `projects//locations//agents//entityTypes/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -129,7 +129,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name during logging.
      * 
      */
-    @InputImport(name="redact")
+    @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {

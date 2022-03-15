@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * Backup retention settings. The configuration is detailed below.
      * 
      */
-    @InputImport(name="backupRetentionSettings")
+    @Import(name="backupRetentionSettings")
       private final @Nullable Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings;
 
     public Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> getBackupRetentionSettings() {
@@ -33,7 +33,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * Cannot be used with Postgres.
      * 
      */
-    @InputImport(name="binaryLogEnabled")
+    @Import(name="binaryLogEnabled")
       private final @Nullable Output<Boolean> binaryLogEnabled;
 
     public Output<Boolean> getBinaryLogEnabled() {
@@ -44,7 +44,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * True if backup configuration is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -55,7 +55,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * The region where the backup will be stored
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
      * 
      */
-    @InputImport(name="pointInTimeRecoveryEnabled")
+    @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
     public Output<Boolean> getPointInTimeRecoveryEnabled() {
@@ -78,7 +78,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * configuration starts.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -89,7 +89,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
      * The number of days of transaction logs we retain for point in time restore, from 1-7.
      * 
      */
-    @InputImport(name="transactionLogRetentionDays")
+    @Import(name="transactionLogRetentionDays")
       private final @Nullable Output<Integer> transactionLogRetentionDays;
 
     public Output<Integer> getTransactionLogRetentionDays() {

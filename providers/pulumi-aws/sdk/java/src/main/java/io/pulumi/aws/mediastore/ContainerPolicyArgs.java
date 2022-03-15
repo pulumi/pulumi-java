@@ -4,7 +4,7 @@
 package io.pulumi.aws.mediastore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ContainerPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the container.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -28,7 +28,7 @@ public final class ContainerPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The contents of the policy.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

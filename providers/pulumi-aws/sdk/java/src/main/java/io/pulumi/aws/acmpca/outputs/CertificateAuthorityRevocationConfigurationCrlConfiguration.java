@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityRevocationConfigurationCrlConfiguration {
     /**
      * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
@@ -39,13 +39,13 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfiguration {
      */
     private final @Nullable String s3ObjectAcl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityRevocationConfigurationCrlConfiguration(
-        @OutputCustomType.Parameter("customCname") @Nullable String customCname,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("expirationInDays") Integer expirationInDays,
-        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
-        @OutputCustomType.Parameter("s3ObjectAcl") @Nullable String s3ObjectAcl) {
+        @CustomType.Parameter("customCname") @Nullable String customCname,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("expirationInDays") Integer expirationInDays,
+        @CustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @CustomType.Parameter("s3ObjectAcl") @Nullable String s3ObjectAcl) {
         this.customCname = customCname;
         this.enabled = enabled;
         this.expirationInDays = expirationInDays;

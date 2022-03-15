@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.ChannelRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.ChannelTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ChannelArgs Empty = new ChannelArgs();
 
-    @InputImport(name="channelName")
+    @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
     public Output<String> getChannelName() {
         return this.channelName == null ? Output.empty() : this.channelName;
     }
 
-    @InputImport(name="channelStorage")
+    @Import(name="channelStorage")
       private final @Nullable Output<ChannelStorageArgs> channelStorage;
 
     public Output<ChannelStorageArgs> getChannelStorage() {
         return this.channelStorage == null ? Output.empty() : this.channelStorage;
     }
 
-    @InputImport(name="retentionPeriod")
+    @Import(name="retentionPeriod")
       private final @Nullable Output<ChannelRetentionPeriodArgs> retentionPeriod;
 
     public Output<ChannelRetentionPeriodArgs> getRetentionPeriod() {
         return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
     public Output<List<ChannelTagArgs>> getTags() {

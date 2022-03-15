@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.aws.cloudtrail.inputs.TrailAdvancedEventSelectorFieldSelectorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TrailAdvancedEventSelectorArgs extends io.pulumi.resources.Re
      * Specifies the selector statements in an advanced event selector. Fields documented below.
      * 
      */
-    @InputImport(name="fieldSelectors", required=true)
+    @Import(name="fieldSelectors", required=true)
       private final Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> fieldSelectors;
 
     public Output<List<TrailAdvancedEventSelectorFieldSelectorArgs>> getFieldSelectors() {
@@ -31,7 +31,7 @@ public final class TrailAdvancedEventSelectorArgs extends io.pulumi.resources.Re
      * Specifies the name of the advanced event selector.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

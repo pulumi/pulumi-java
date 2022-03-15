@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.GeoMatchSetGeoMatchConstraintArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * The Geo Match Constraint objects which contain the country that you want AWS WAF to search for.
      * 
      */
-    @InputImport(name="geoMatchConstraints")
+    @Import(name="geoMatchConstraints")
       private final @Nullable Output<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints;
 
     public Output<List<GeoMatchSetGeoMatchConstraintArgs>> getGeoMatchConstraints() {
@@ -31,7 +31,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description of the Geo Match Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexKeyLocation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexJwtTokenTypeConfiguration {
     private final @Nullable String claimRegex;
     private final @Nullable String groupAttributeField;
@@ -20,15 +20,15 @@ public final class IndexJwtTokenTypeConfiguration {
     private final @Nullable String uRL;
     private final @Nullable String userNameAttributeField;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexJwtTokenTypeConfiguration(
-        @OutputCustomType.Parameter("claimRegex") @Nullable String claimRegex,
-        @OutputCustomType.Parameter("groupAttributeField") @Nullable String groupAttributeField,
-        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
-        @OutputCustomType.Parameter("keyLocation") IndexKeyLocation keyLocation,
-        @OutputCustomType.Parameter("secretManagerArn") @Nullable String secretManagerArn,
-        @OutputCustomType.Parameter("uRL") @Nullable String uRL,
-        @OutputCustomType.Parameter("userNameAttributeField") @Nullable String userNameAttributeField) {
+        @CustomType.Parameter("claimRegex") @Nullable String claimRegex,
+        @CustomType.Parameter("groupAttributeField") @Nullable String groupAttributeField,
+        @CustomType.Parameter("issuer") @Nullable String issuer,
+        @CustomType.Parameter("keyLocation") IndexKeyLocation keyLocation,
+        @CustomType.Parameter("secretManagerArn") @Nullable String secretManagerArn,
+        @CustomType.Parameter("uRL") @Nullable String uRL,
+        @CustomType.Parameter("userNameAttributeField") @Nullable String userNameAttributeField) {
         this.claimRegex = claimRegex;
         this.groupAttributeField = groupAttributeField;
         this.issuer = issuer;

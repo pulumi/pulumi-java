@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResolverEndpointIpAddress {
     /**
      * The IP address in the subnet that you want to use for DNS queries.
@@ -23,11 +23,11 @@ public final class ResolverEndpointIpAddress {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResolverEndpointIpAddress(
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("ipId") @Nullable String ipId,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("ipId") @Nullable String ipId,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.ip = ip;
         this.ipId = ipId;
         this.subnetId = subnetId;

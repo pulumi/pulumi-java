@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.enums.StandardSqlDataTypeTypeKind;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlStructTypeArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
      * The type of the array's elements, if type_kind = "ARRAY".
      * 
      */
-    @InputImport(name="arrayElementType")
+    @Import(name="arrayElementType")
       private final @Nullable Output<StandardSqlDataTypeArgs> arrayElementType;
 
     public Output<StandardSqlDataTypeArgs> getArrayElementType() {
@@ -34,7 +34,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
      * The fields of this struct, in order, if type_kind = "STRUCT".
      * 
      */
-    @InputImport(name="structType")
+    @Import(name="structType")
       private final @Nullable Output<StandardSqlStructTypeArgs> structType;
 
     public Output<StandardSqlStructTypeArgs> getStructType() {
@@ -45,7 +45,7 @@ public final class StandardSqlDataTypeArgs extends io.pulumi.resources.ResourceA
      * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
      * 
      */
-    @InputImport(name="typeKind", required=true)
+    @Import(name="typeKind", required=true)
       private final Output<StandardSqlDataTypeTypeKind> typeKind;
 
     public Output<StandardSqlDataTypeTypeKind> getTypeKind() {

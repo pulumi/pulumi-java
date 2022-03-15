@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * Extra information about the requesting user. See user.Info interface for details.
      * 
      */
-    @InputImport(name="extra")
+    @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
 
     public Output<Map<String,List<String>>> getExtra() {
@@ -35,7 +35,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * Group information about the requesting user. See user.Info interface for details.
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -46,7 +46,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * Base64-encoded PKCS#10 CSR data
      * 
      */
-    @InputImport(name="request", required=true)
+    @Import(name="request", required=true)
       private final Output<String> request;
 
     public Output<String> getRequest() {
@@ -63,7 +63,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
      * 
      */
-    @InputImport(name="signerName")
+    @Import(name="signerName")
       private final @Nullable Output<String> signerName;
 
     public Output<String> getSignerName() {
@@ -74,7 +74,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * UID information about the requesting user. See user.Info interface for details.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -86,7 +86,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
      * 
      */
-    @InputImport(name="usages")
+    @Import(name="usages")
       private final @Nullable Output<List<String>> usages;
 
     public Output<List<String>> getUsages() {
@@ -97,7 +97,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * Information about the requesting user. See user.Info interface for details.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

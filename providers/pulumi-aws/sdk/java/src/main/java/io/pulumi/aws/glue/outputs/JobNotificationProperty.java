@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobNotificationProperty {
     /**
      * After a job run starts, the number of minutes to wait before sending a job run delay notification.
@@ -17,8 +17,8 @@ public final class JobNotificationProperty {
      */
     private final @Nullable Integer notifyDelayAfter;
 
-    @OutputCustomType.Constructor
-    private JobNotificationProperty(@OutputCustomType.Parameter("notifyDelayAfter") @Nullable Integer notifyDelayAfter) {
+    @CustomType.Constructor
+    private JobNotificationProperty(@CustomType.Parameter("notifyDelayAfter") @Nullable Integer notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
     }
 

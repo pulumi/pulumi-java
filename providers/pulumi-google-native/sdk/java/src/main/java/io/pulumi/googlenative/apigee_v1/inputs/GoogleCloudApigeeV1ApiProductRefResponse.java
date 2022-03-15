@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
      * Name of the API product.
      * 
      */
-    @InputImport(name="apiproduct", required=true)
+    @Import(name="apiproduct", required=true)
       private final String apiproduct;
 
     public String getApiproduct() {
@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse extends io.pulumi.re
      * Status of the API product. Valid values are `approved` or `revoked`.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

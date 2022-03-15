@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.BlobDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Container that has the file path.
      * 
      */
-    @OutputExport(name="containerName", type=String.class, parameters={})
+    @Export(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
     /**
@@ -49,7 +49,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * The id of the source data set.
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -63,7 +63,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Gets the status of the data set mapping.
      * 
      */
-    @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
+    @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
@@ -77,7 +77,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * File path within the source data set
      * 
      */
-    @OutputExport(name="filePath", type=String.class, parameters={})
+    @Export(name="filePath", type=String.class, parameters={})
     private Output<String> filePath;
 
     /**
@@ -92,7 +92,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Expected value is 'Blob'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -107,7 +107,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * File output type
      * 
      */
-    @OutputExport(name="outputType", type=String.class, parameters={})
+    @Export(name="outputType", type=String.class, parameters={})
     private Output</* @Nullable */ String> outputType;
 
     /**
@@ -135,7 +135,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Provisioning state of the data set mapping.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Resource group of storage account.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -163,7 +163,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Storage account name of the source data set.
      * 
      */
-    @OutputExport(name="storageAccountName", type=String.class, parameters={})
+    @Export(name="storageAccountName", type=String.class, parameters={})
     private Output<String> storageAccountName;
 
     /**
@@ -177,7 +177,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Subscription id of storage account.
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
@@ -191,7 +191,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -205,7 +205,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

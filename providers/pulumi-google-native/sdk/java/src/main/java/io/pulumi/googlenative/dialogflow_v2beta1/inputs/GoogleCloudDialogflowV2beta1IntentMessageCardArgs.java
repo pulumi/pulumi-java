@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * Optional. The collection of card buttons.
      * 
      */
-    @InputImport(name="buttons")
+    @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> buttons;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> getButtons() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * Optional. The public URI to an image file for the card.
      * 
      */
-    @InputImport(name="imageUri")
+    @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * Optional. The subtitle of the card.
      * 
      */
-    @InputImport(name="subtitle")
+    @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
      * Optional. The title of the card.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

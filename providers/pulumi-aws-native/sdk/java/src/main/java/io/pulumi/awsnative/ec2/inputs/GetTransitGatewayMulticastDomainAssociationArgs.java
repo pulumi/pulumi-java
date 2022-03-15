@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
      * The IDs of the subnets to associate with the transit gateway multicast domain.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final String subnetId;
 
     public String getSubnetId() {
@@ -27,7 +27,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
      * The ID of the transit gateway attachment.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId", required=true)
+    @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;
 
     public String getTransitGatewayAttachmentId() {
@@ -38,7 +38,7 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
      * The ID of the transit gateway multicast domain.
      * 
      */
-    @InputImport(name="transitGatewayMulticastDomainId", required=true)
+    @Import(name="transitGatewayMulticastDomainId", required=true)
       private final String transitGatewayMulticastDomainId;
 
     public String getTransitGatewayMulticastDomainId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
      * The principal id of EnterprisePolicy identity.
      * 
      */
-    @InputImport(name="systemAssignedIdentityPrincipalId", required=true)
+    @Import(name="systemAssignedIdentityPrincipalId", required=true)
       private final String systemAssignedIdentityPrincipalId;
 
     public String getSystemAssignedIdentityPrincipalId() {
@@ -33,7 +33,7 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
      * The tenant id associated with the EnterprisePolicy.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -44,7 +44,7 @@ public final class EnterprisePolicyIdentityResponse extends io.pulumi.resources.
      * The type of identity used for the EnterprisePolicy. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

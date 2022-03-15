@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPConfigResponse {
     /**
      * The backend address pools associated with the IP configuration.
@@ -28,11 +28,11 @@ public final class IPConfigResponse {
      */
     private final @Nullable String staticIPAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPConfigResponse(
-        @OutputCustomType.Parameter("lBBackendAddressPoolIds") @Nullable List<String> lBBackendAddressPoolIds,
-        @OutputCustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
-        @OutputCustomType.Parameter("staticIPAddress") @Nullable String staticIPAddress) {
+        @CustomType.Parameter("lBBackendAddressPoolIds") @Nullable List<String> lBBackendAddressPoolIds,
+        @CustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
+        @CustomType.Parameter("staticIPAddress") @Nullable String staticIPAddress) {
         this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
         this.publicIpAddressId = publicIpAddressId;
         this.staticIPAddress = staticIPAddress;

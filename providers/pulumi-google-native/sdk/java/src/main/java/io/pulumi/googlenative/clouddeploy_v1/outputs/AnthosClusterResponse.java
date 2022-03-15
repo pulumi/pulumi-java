@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnthosClusterResponse {
     /**
      * Membership of the GKE Hub registered cluster that the Skaffold configuration should be applied to. Format is `projects/{project}/locations/{location}/memberships/{membership_name}`.
@@ -15,8 +15,8 @@ public final class AnthosClusterResponse {
      */
     private final String membership;
 
-    @OutputCustomType.Constructor
-    private AnthosClusterResponse(@OutputCustomType.Parameter("membership") String membership) {
+    @CustomType.Constructor
+    private AnthosClusterResponse(@CustomType.Parameter("membership") String membership) {
         this.membership = membership;
     }
 

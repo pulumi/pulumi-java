@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.inputs;
 
 import io.pulumi.azurenative.storagesync.inputs.ServerEndpointRecallErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
@@ -34,7 +34,7 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
      * Array of recall errors
      * 
      */
-    @InputImport(name="recallErrors", required=true)
+    @Import(name="recallErrors", required=true)
       private final List<ServerEndpointRecallErrorResponse> recallErrors;
 
     public List<ServerEndpointRecallErrorResponse> getRecallErrors() {
@@ -45,7 +45,7 @@ public final class ServerEndpointRecallStatusResponse extends io.pulumi.resource
      * Total count of recall errors.
      * 
      */
-    @InputImport(name="totalRecallErrorsCount", required=true)
+    @Import(name="totalRecallErrorsCount", required=true)
       private final Double totalRecallErrorsCount;
 
     public Double getTotalRecallErrorsCount() {

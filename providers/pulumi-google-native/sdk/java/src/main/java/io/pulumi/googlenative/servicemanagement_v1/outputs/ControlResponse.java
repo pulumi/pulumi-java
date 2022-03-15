@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ControlResponse {
     /**
      * The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
@@ -15,8 +15,8 @@ public final class ControlResponse {
      */
     private final String environment;
 
-    @OutputCustomType.Constructor
-    private ControlResponse(@OutputCustomType.Parameter("environment") String environment) {
+    @CustomType.Constructor
+    private ControlResponse(@CustomType.Parameter("environment") String environment) {
         this.environment = environment;
     }
 

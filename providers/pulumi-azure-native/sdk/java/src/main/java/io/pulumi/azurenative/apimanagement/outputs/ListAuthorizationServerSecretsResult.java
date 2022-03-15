@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListAuthorizationServerSecretsResult {
     /**
      * oAuth Authorization Server Secrets.
@@ -27,11 +27,11 @@ public final class ListAuthorizationServerSecretsResult {
      */
     private final @Nullable String resourceOwnerUsername;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListAuthorizationServerSecretsResult(
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
-        @OutputCustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername) {
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
+        @CustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername) {
         this.clientSecret = clientSecret;
         this.resourceOwnerPassword = resourceOwnerPassword;
         this.resourceOwnerUsername = resourceOwnerUsername;

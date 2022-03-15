@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.ServicePlacementStrategyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePlacementStrategy {
     private final @Nullable String field;
     private final ServicePlacementStrategyType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePlacementStrategy(
-        @OutputCustomType.Parameter("field") @Nullable String field,
-        @OutputCustomType.Parameter("type") ServicePlacementStrategyType type) {
+        @CustomType.Parameter("field") @Nullable String field,
+        @CustomType.Parameter("type") ServicePlacementStrategyType type) {
         this.field = field;
         this.type = type;
     }

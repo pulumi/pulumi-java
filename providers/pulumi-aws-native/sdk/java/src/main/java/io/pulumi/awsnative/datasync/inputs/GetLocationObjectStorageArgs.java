@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLocationObjectStorageArgs extends io.pulumi.resources.Invo
      * The Amazon Resource Name (ARN) of the location that is created.
      * 
      */
-    @InputImport(name="locationArn", required=true)
+    @Import(name="locationArn", required=true)
       private final String locationArn;
 
     public String getLocationArn() {

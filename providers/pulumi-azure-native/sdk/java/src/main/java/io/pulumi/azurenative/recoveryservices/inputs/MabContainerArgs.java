@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.MABContainerHealthDetailsAr
 import io.pulumi.azurenative.recoveryservices.inputs.MabContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Agent version of this container.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
     public Output<String> getAgentVersion() {
@@ -40,7 +40,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -51,7 +51,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Can the container be registered one more time.
      * 
      */
-    @InputImport(name="canReRegister")
+    @Import(name="canReRegister")
       private final @Nullable Output<Boolean> canReRegister;
 
     public Output<Boolean> getCanReRegister() {
@@ -62,7 +62,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Health state of mab container.
      * 
      */
-    @InputImport(name="containerHealthState")
+    @Import(name="containerHealthState")
       private final @Nullable Output<String> containerHealthState;
 
     public Output<String> getContainerHealthState() {
@@ -73,7 +73,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * ContainerID represents the container.
      * 
      */
-    @InputImport(name="containerId")
+    @Import(name="containerId")
       private final @Nullable Output<Double> containerId;
 
     public Output<Double> getContainerId() {
@@ -88,7 +88,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Windows'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
     public Output<String> getContainerType() {
@@ -99,7 +99,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Additional information for this container
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
 
     public Output<MabContainerExtendedInfoArgs> getExtendedInfo() {
@@ -110,7 +110,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -121,7 +121,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
     public Output<String> getHealthStatus() {
@@ -132,7 +132,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Health details on this mab container.
      * 
      */
-    @InputImport(name="mabContainerHealthDetails")
+    @Import(name="mabContainerHealthDetails")
       private final @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
     public Output<List<MABContainerHealthDetailsArgs>> getMabContainerHealthDetails() {
@@ -143,7 +143,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Number of items backed up in this container.
      * 
      */
-    @InputImport(name="protectedItemCount")
+    @Import(name="protectedItemCount")
       private final @Nullable Output<Double> protectedItemCount;
 
     public Output<Double> getProtectedItemCount() {
@@ -154,7 +154,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
     public Output<String> getRegistrationStatus() {

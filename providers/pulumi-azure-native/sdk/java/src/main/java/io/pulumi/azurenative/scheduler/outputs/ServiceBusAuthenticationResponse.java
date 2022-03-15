@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBusAuthenticationResponse {
     /**
      * Gets or sets the SAS key.
@@ -27,11 +27,11 @@ public final class ServiceBusAuthenticationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBusAuthenticationResponse(
-        @OutputCustomType.Parameter("sasKey") @Nullable String sasKey,
-        @OutputCustomType.Parameter("sasKeyName") @Nullable String sasKeyName,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("sasKey") @Nullable String sasKey,
+        @CustomType.Parameter("sasKeyName") @Nullable String sasKeyName,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.sasKey = sasKey;
         this.sasKeyName = sasKeyName;
         this.type = type;

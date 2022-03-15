@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimerTriggerDescriptorResponse {
     /**
      * The occurrence that triggered the run.
@@ -22,10 +22,10 @@ public final class TimerTriggerDescriptorResponse {
      */
     private final @Nullable String timerTriggerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimerTriggerDescriptorResponse(
-        @OutputCustomType.Parameter("scheduleOccurrence") @Nullable String scheduleOccurrence,
-        @OutputCustomType.Parameter("timerTriggerName") @Nullable String timerTriggerName) {
+        @CustomType.Parameter("scheduleOccurrence") @Nullable String scheduleOccurrence,
+        @CustomType.Parameter("timerTriggerName") @Nullable String timerTriggerName) {
         this.scheduleOccurrence = scheduleOccurrence;
         this.timerTriggerName = timerTriggerName;
     }

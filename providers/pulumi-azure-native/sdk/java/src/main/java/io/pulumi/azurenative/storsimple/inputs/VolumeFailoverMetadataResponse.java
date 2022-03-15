@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The date at which the snapshot was taken.
      * 
      */
-    @InputImport(name="backupCreatedDate")
+    @Import(name="backupCreatedDate")
       private final @Nullable String backupCreatedDate;
 
     public Optional<String> getBackupCreatedDate() {
@@ -34,7 +34,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The path ID of the backup-element for this volume, inside the backup set.
      * 
      */
-    @InputImport(name="backupElementId")
+    @Import(name="backupElementId")
       private final @Nullable String backupElementId;
 
     public Optional<String> getBackupElementId() {
@@ -45,7 +45,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The path ID of the backup set.
      * 
      */
-    @InputImport(name="backupId")
+    @Import(name="backupId")
       private final @Nullable String backupId;
 
     public Optional<String> getBackupId() {
@@ -56,7 +56,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The path ID of the backup policy using which the snapshot was taken.
      * 
      */
-    @InputImport(name="backupPolicyId")
+    @Import(name="backupPolicyId")
       private final @Nullable String backupPolicyId;
 
     public Optional<String> getBackupPolicyId() {
@@ -67,7 +67,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The size of the volume in bytes at the time the snapshot was taken.
      * 
      */
-    @InputImport(name="sizeInBytes")
+    @Import(name="sizeInBytes")
       private final @Nullable Double sizeInBytes;
 
     public Optional<Double> getSizeInBytes() {
@@ -78,7 +78,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The path ID of the volume.
      * 
      */
-    @InputImport(name="volumeId")
+    @Import(name="volumeId")
       private final @Nullable String volumeId;
 
     public Optional<String> getVolumeId() {
@@ -89,7 +89,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * The type of the volume.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable String volumeType;
 
     public Optional<String> getVolumeType() {

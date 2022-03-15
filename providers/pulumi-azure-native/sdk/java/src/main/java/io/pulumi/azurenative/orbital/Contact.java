@@ -9,7 +9,7 @@ import io.pulumi.azurenative.orbital.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * The reference to the contact profile resource.
      * 
      */
-    @OutputExport(name="contactProfile", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="contactProfile", type=ResourceReferenceResponse.class, parameters={})
     private Output<ResourceReferenceResponse> contactProfile;
 
     /**
@@ -51,7 +51,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
      */
-    @OutputExport(name="endAzimuthDegrees", type=Double.class, parameters={})
+    @Export(name="endAzimuthDegrees", type=Double.class, parameters={})
     private Output<Double> endAzimuthDegrees;
 
     /**
@@ -65,7 +65,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Spacecraft elevation above the horizon at contact end.
      * 
      */
-    @OutputExport(name="endElevationDegrees", type=Double.class, parameters={})
+    @Export(name="endElevationDegrees", type=Double.class, parameters={})
     private Output<Double> endElevationDegrees;
 
     /**
@@ -79,7 +79,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Any error message while scheduling a contact.
      * 
      */
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
@@ -93,7 +93,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -107,7 +107,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Azure Ground Station name.
      * 
      */
-    @OutputExport(name="groundStationName", type=String.class, parameters={})
+    @Export(name="groundStationName", type=String.class, parameters={})
     private Output<String> groundStationName;
 
     /**
@@ -121,7 +121,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Maximum elevation of the antenna during the contact in decimal degrees.
      * 
      */
-    @OutputExport(name="maximumElevationDegrees", type=Double.class, parameters={})
+    @Export(name="maximumElevationDegrees", type=Double.class, parameters={})
     private Output<Double> maximumElevationDegrees;
 
     /**
@@ -135,7 +135,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Reservation end time of a contact.
      * 
      */
-    @OutputExport(name="reservationEndTime", type=String.class, parameters={})
+    @Export(name="reservationEndTime", type=String.class, parameters={})
     private Output<String> reservationEndTime;
 
     /**
@@ -163,7 +163,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Reservation start time of a contact.
      * 
      */
-    @OutputExport(name="reservationStartTime", type=String.class, parameters={})
+    @Export(name="reservationStartTime", type=String.class, parameters={})
     private Output<String> reservationStartTime;
 
     /**
@@ -177,7 +177,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Receive end time of a contact.
      * 
      */
-    @OutputExport(name="rxEndTime", type=String.class, parameters={})
+    @Export(name="rxEndTime", type=String.class, parameters={})
     private Output<String> rxEndTime;
 
     /**
@@ -191,7 +191,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Receive start time of a contact.
      * 
      */
-    @OutputExport(name="rxStartTime", type=String.class, parameters={})
+    @Export(name="rxStartTime", type=String.class, parameters={})
     private Output<String> rxStartTime;
 
     /**
@@ -205,7 +205,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
      */
-    @OutputExport(name="startAzimuthDegrees", type=Double.class, parameters={})
+    @Export(name="startAzimuthDegrees", type=Double.class, parameters={})
     private Output<Double> startAzimuthDegrees;
 
     /**
@@ -219,7 +219,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Spacecraft elevation above the horizon at contact start.
      * 
      */
-    @OutputExport(name="startElevationDegrees", type=Double.class, parameters={})
+    @Export(name="startElevationDegrees", type=Double.class, parameters={})
     private Output<Double> startElevationDegrees;
 
     /**
@@ -233,7 +233,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Status of a contact.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -247,7 +247,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -261,7 +261,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Transmit end time of a contact.
      * 
      */
-    @OutputExport(name="txEndTime", type=String.class, parameters={})
+    @Export(name="txEndTime", type=String.class, parameters={})
     private Output<String> txEndTime;
 
     /**
@@ -275,7 +275,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * Transmit start time of a contact.
      * 
      */
-    @OutputExport(name="txStartTime", type=String.class, parameters={})
+    @Export(name="txStartTime", type=String.class, parameters={})
     private Output<String> txStartTime;
 
     /**
@@ -289,7 +289,7 @@ public class Contact extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

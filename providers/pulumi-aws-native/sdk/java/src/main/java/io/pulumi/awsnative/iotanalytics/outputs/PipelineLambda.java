@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineLambda {
     private final Integer batchSize;
     private final String lambdaName;
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineLambda(
-        @OutputCustomType.Parameter("batchSize") Integer batchSize,
-        @OutputCustomType.Parameter("lambdaName") String lambdaName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("next") @Nullable String next) {
+        @CustomType.Parameter("batchSize") Integer batchSize,
+        @CustomType.Parameter("lambdaName") String lambdaName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("next") @Nullable String next) {
         this.batchSize = batchSize;
         this.lambdaName = lambdaName;
         this.name = name;

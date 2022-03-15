@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
      * Password to connect to the WebProxy Server
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -33,7 +33,7 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
      * WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {
@@ -44,7 +44,7 @@ public final class BackendProxyContractResponse extends io.pulumi.resources.Invo
      * Username to connect to the WebProxy server
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

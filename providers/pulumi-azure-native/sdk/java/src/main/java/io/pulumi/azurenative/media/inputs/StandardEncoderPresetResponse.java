@@ -20,7 +20,7 @@ import io.pulumi.azurenative.media.inputs.PngFormatResponse;
 import io.pulumi.azurenative.media.inputs.PngImageResponse;
 import io.pulumi.azurenative.media.inputs.TransportStreamFormatResponse;
 import io.pulumi.azurenative.media.inputs.VideoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * The list of codecs to be used when encoding the input video.
      * 
      */
-    @InputImport(name="codecs", required=true)
+    @Import(name="codecs", required=true)
       private final List<Object> codecs;
 
     public List<Object> getCodecs() {
@@ -52,7 +52,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * One or more filtering operations that are applied to the input media before encoding.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable FiltersResponse filters;
 
     public Optional<FiltersResponse> getFilters() {
@@ -63,7 +63,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * The list of outputs to be produced by the encoder.
      * 
      */
-    @InputImport(name="formats", required=true)
+    @Import(name="formats", required=true)
       private final List<Object> formats;
 
     public List<Object> getFormats() {
@@ -75,7 +75,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * Expected value is '#Microsoft.Media.StandardEncoderPreset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

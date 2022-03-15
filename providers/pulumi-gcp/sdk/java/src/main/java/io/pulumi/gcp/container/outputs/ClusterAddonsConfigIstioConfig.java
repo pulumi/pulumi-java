@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAddonsConfigIstioConfig {
     /**
      * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
@@ -24,10 +24,10 @@ public final class ClusterAddonsConfigIstioConfig {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterAddonsConfigIstioConfig(
-        @OutputCustomType.Parameter("auth") @Nullable String auth,
-        @OutputCustomType.Parameter("disabled") Boolean disabled) {
+        @CustomType.Parameter("auth") @Nullable String auth,
+        @CustomType.Parameter("disabled") Boolean disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs>> dimensions;
 
     public Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs>> getDimensions() {
@@ -31,7 +31,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * The name of the metric.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -42,7 +42,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * The namespace of the metric.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -53,7 +53,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
      * 
      */
-    @InputImport(name="statistic", required=true)
+    @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
     public Output<String> getStatistic() {
@@ -64,7 +64,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * The unit of the metric.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

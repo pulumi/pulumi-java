@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServicePropertiesResponseAutoApproval;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServicePropertiesResponseVisibility;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateLinkServiceResult {
     /**
      * The alias of the private link service.
@@ -107,25 +107,25 @@ public final class GetPrivateLinkServiceResult {
      */
     private final @Nullable PrivateLinkServicePropertiesResponseVisibility visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateLinkServiceResult(
-        @OutputCustomType.Parameter("alias") String alias,
-        @OutputCustomType.Parameter("autoApproval") @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval,
-        @OutputCustomType.Parameter("enableProxyProtocol") @Nullable Boolean enableProxyProtocol,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("loadBalancerFrontendIpConfigurations") @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("visibility") @Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
+        @CustomType.Parameter("alias") String alias,
+        @CustomType.Parameter("autoApproval") @Nullable PrivateLinkServicePropertiesResponseAutoApproval autoApproval,
+        @CustomType.Parameter("enableProxyProtocol") @Nullable Boolean enableProxyProtocol,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipConfigurations") @Nullable List<PrivateLinkServiceIpConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("loadBalancerFrontendIpConfigurations") @Nullable List<FrontendIPConfigurationResponse> loadBalancerFrontendIpConfigurations,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("visibility") @Nullable PrivateLinkServicePropertiesResponseVisibility visibility) {
         this.alias = alias;
         this.autoApproval = autoApproval;
         this.enableProxyProtocol = enableProxyProtocol;

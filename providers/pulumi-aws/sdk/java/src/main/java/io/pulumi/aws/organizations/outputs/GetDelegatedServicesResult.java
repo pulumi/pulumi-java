@@ -4,12 +4,12 @@
 package io.pulumi.aws.organizations.outputs;
 
 import io.pulumi.aws.organizations.outputs.GetDelegatedServicesDelegatedService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDelegatedServicesResult {
     private final String accountId;
     /**
@@ -23,11 +23,11 @@ public final class GetDelegatedServicesResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDelegatedServicesResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("delegatedServices") List<GetDelegatedServicesDelegatedService> delegatedServices,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("delegatedServices") List<GetDelegatedServicesDelegatedService> delegatedServices,
+        @CustomType.Parameter("id") String id) {
         this.accountId = accountId;
         this.delegatedServices = delegatedServices;
         this.id = id;

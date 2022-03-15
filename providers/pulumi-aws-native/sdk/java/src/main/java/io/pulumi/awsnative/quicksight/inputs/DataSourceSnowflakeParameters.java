@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DataSourceSnowflakeParameters extends io.pulumi.resources.Inv
      * <p>Database.</p>
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
@@ -31,7 +31,7 @@ public final class DataSourceSnowflakeParameters extends io.pulumi.resources.Inv
      * <p>Host.</p>
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
@@ -42,7 +42,7 @@ public final class DataSourceSnowflakeParameters extends io.pulumi.resources.Inv
      * <p>Warehouse.</p>
      * 
      */
-    @InputImport(name="warehouse", required=true)
+    @Import(name="warehouse", required=true)
       private final String warehouse;
 
     public String getWarehouse() {

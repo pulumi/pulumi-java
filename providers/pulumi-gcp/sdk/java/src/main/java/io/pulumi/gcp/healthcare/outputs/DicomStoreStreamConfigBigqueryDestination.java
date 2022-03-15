@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DicomStoreStreamConfigBigqueryDestination {
     /**
      * a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
@@ -15,8 +15,8 @@ public final class DicomStoreStreamConfigBigqueryDestination {
      */
     private final String tableUri;
 
-    @OutputCustomType.Constructor
-    private DicomStoreStreamConfigBigqueryDestination(@OutputCustomType.Parameter("tableUri") String tableUri) {
+    @CustomType.Constructor
+    private DicomStoreStreamConfigBigqueryDestination(@CustomType.Parameter("tableUri") String tableUri) {
         this.tableUri = tableUri;
     }
 

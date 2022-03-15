@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.RulePredicateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -32,7 +32,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The objects to include in a rule (documented below).
      * 
      */
-    @InputImport(name="predicates")
+    @Import(name="predicates")
       private final @Nullable Output<List<RulePredicateArgs>> predicates;
 
     public Output<List<RulePredicateArgs>> getPredicates() {
@@ -54,7 +54,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

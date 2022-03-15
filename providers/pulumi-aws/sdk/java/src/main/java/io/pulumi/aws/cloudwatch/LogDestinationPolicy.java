@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogDestinationPolicyArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogDestinationPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * The policy document. This is a JSON formatted string.
      * 
      */
-    @OutputExport(name="accessPolicy", type=String.class, parameters={})
+    @Export(name="accessPolicy", type=String.class, parameters={})
     private Output<String> accessPolicy;
 
     /**
@@ -47,7 +47,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * A name for the subscription filter
      * 
      */
-    @OutputExport(name="destinationName", type=String.class, parameters={})
+    @Export(name="destinationName", type=String.class, parameters={})
     private Output<String> destinationName;
 
     /**
@@ -61,7 +61,7 @@ public class LogDestinationPolicy extends io.pulumi.resources.CustomResource {
      * Specify true if you are updating an existing destination policy to grant permission to an organization ID instead of granting permission to individual AWS accounts.
      * 
      */
-    @OutputExport(name="forceUpdate", type=Boolean.class, parameters={})
+    @Export(name="forceUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceUpdate;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.AutoHealActionType;
 import io.pulumi.azurenative.web.inputs.AutoHealCustomActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * Predefined action to be taken.
      * 
      */
-    @InputImport(name="actionType")
+    @Import(name="actionType")
       private final @Nullable Output<AutoHealActionType> actionType;
 
     public Output<AutoHealActionType> getActionType() {
@@ -35,7 +35,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * Custom action to be taken.
      * 
      */
-    @InputImport(name="customAction")
+    @Import(name="customAction")
       private final @Nullable Output<AutoHealCustomActionArgs> customAction;
 
     public Output<AutoHealCustomActionArgs> getCustomAction() {
@@ -47,7 +47,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * before taking the action
      * 
      */
-    @InputImport(name="minProcessExecutionTime")
+    @Import(name="minProcessExecutionTime")
       private final @Nullable Output<String> minProcessExecutionTime;
 
     public Output<String> getMinProcessExecutionTime() {

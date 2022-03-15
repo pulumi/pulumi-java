@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -33,7 +33,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
      * Path globs used to match files in the build's workspace.
      * 
      */
-    @InputImport(name="paths", required=true)
+    @Import(name="paths", required=true)
       private final List<String> paths;
 
     public List<String> getPaths() {
@@ -44,7 +44,7 @@ public final class ArtifactObjectsResponse extends io.pulumi.resources.InvokeArg
      * Stores timing information for pushing all artifact objects.
      * 
      */
-    @InputImport(name="timing", required=true)
+    @Import(name="timing", required=true)
       private final TimeSpanResponse timing;
 
     public TimeSpanResponse getTiming() {

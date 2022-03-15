@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.NetworkProfileArgs;
 import io.pulumi.awsnative.devicefarm.outputs.NetworkProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,79 +20,79 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devicefarm:NetworkProfile")
 public class NetworkProfile extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="downlinkBandwidthBits", type=Integer.class, parameters={})
+    @Export(name="downlinkBandwidthBits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkBandwidthBits;
 
     public Output</* @Nullable */ Integer> getDownlinkBandwidthBits() {
         return this.downlinkBandwidthBits;
     }
-    @OutputExport(name="downlinkDelayMs", type=Integer.class, parameters={})
+    @Export(name="downlinkDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkDelayMs;
 
     public Output</* @Nullable */ Integer> getDownlinkDelayMs() {
         return this.downlinkDelayMs;
     }
-    @OutputExport(name="downlinkJitterMs", type=Integer.class, parameters={})
+    @Export(name="downlinkJitterMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkJitterMs;
 
     public Output</* @Nullable */ Integer> getDownlinkJitterMs() {
         return this.downlinkJitterMs;
     }
-    @OutputExport(name="downlinkLossPercent", type=Integer.class, parameters={})
+    @Export(name="downlinkLossPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downlinkLossPercent;
 
     public Output</* @Nullable */ Integer> getDownlinkLossPercent() {
         return this.downlinkLossPercent;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="projectArn", type=String.class, parameters={})
+    @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
     public Output<String> getProjectArn() {
         return this.projectArn;
     }
-    @OutputExport(name="tags", type=List.class, parameters={NetworkProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={NetworkProfileTag.class})
     private Output</* @Nullable */ List<NetworkProfileTag>> tags;
 
     public Output</* @Nullable */ List<NetworkProfileTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="uplinkBandwidthBits", type=Integer.class, parameters={})
+    @Export(name="uplinkBandwidthBits", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkBandwidthBits;
 
     public Output</* @Nullable */ Integer> getUplinkBandwidthBits() {
         return this.uplinkBandwidthBits;
     }
-    @OutputExport(name="uplinkDelayMs", type=Integer.class, parameters={})
+    @Export(name="uplinkDelayMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkDelayMs;
 
     public Output</* @Nullable */ Integer> getUplinkDelayMs() {
         return this.uplinkDelayMs;
     }
-    @OutputExport(name="uplinkJitterMs", type=Integer.class, parameters={})
+    @Export(name="uplinkJitterMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkJitterMs;
 
     public Output</* @Nullable */ Integer> getUplinkJitterMs() {
         return this.uplinkJitterMs;
     }
-    @OutputExport(name="uplinkLossPercent", type=Integer.class, parameters={})
+    @Export(name="uplinkLossPercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> uplinkLossPercent;
 
     public Output</* @Nullable */ Integer> getUplinkLossPercent() {

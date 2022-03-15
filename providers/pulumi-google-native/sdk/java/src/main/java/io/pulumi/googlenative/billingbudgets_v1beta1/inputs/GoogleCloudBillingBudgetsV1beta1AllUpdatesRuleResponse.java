@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
      * Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.
      * 
      */
-    @InputImport(name="disableDefaultIamRecipients", required=true)
+    @Import(name="disableDefaultIamRecipients", required=true)
       private final Boolean disableDefaultIamRecipients;
 
     public Boolean getDisableDefaultIamRecipients() {
@@ -33,7 +33,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
      * Optional. Targets to send notifications to when a threshold is exceeded. This is in addition to default recipients who have billing account IAM roles. The value is the full REST resource name of a monitoring notification channel with the form `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5 channels are allowed. See https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients for more details.
      * 
      */
-    @InputImport(name="monitoringNotificationChannels", required=true)
+    @Import(name="monitoringNotificationChannels", required=true)
       private final List<String> monitoringNotificationChannels;
 
     public List<String> getMonitoringNotificationChannels() {
@@ -44,7 +44,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
      * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.
      * 
      */
-    @InputImport(name="pubsubTopic", required=true)
+    @Import(name="pubsubTopic", required=true)
       private final String pubsubTopic;
 
     public String getPubsubTopic() {
@@ -55,7 +55,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse extend
      * Optional. Required when AllUpdatesRule.pubsub_topic is set. The schema version of the notification sent to AllUpdatesRule.pubsub_topic. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.
      * 
      */
-    @InputImport(name="schemaVersion", required=true)
+    @Import(name="schemaVersion", required=true)
       private final String schemaVersion;
 
     public String getSchemaVersion() {

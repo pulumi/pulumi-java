@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
      * Target storage class. Required iff the type of the action is SetStorageClass.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -33,7 +33,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
      * Type of the action. Currently, only Delete and SetStorageClass are supported.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

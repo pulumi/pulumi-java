@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class RuleGroupRegexMatchStatementArgs extends io.pulumi.resources.
 
     public static final RuleGroupRegexMatchStatementArgs Empty = new RuleGroupRegexMatchStatementArgs();
 
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
-    @InputImport(name="regexString", required=true)
+    @Import(name="regexString", required=true)
       private final Output<String> regexString;
 
     public Output<String> getRegexString() {
         return this.regexString;
     }
 
-    @InputImport(name="textTransformations", required=true)
+    @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {

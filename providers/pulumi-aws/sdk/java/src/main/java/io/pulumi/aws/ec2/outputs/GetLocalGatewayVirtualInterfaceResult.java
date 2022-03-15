@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetLocalGatewayVirtualInterfaceFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalGatewayVirtualInterfaceResult {
     private final @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters;
     private final String id;
@@ -49,18 +49,18 @@ public final class GetLocalGatewayVirtualInterfaceResult {
      */
     private final Integer vlan;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalGatewayVirtualInterfaceResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("localAddress") String localAddress,
-        @OutputCustomType.Parameter("localBgpAsn") Integer localBgpAsn,
-        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
-        @OutputCustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
-        @OutputCustomType.Parameter("peerAddress") String peerAddress,
-        @OutputCustomType.Parameter("peerBgpAsn") Integer peerBgpAsn,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vlan") Integer vlan) {
+        @CustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("localAddress") String localAddress,
+        @CustomType.Parameter("localBgpAsn") Integer localBgpAsn,
+        @CustomType.Parameter("localGatewayId") String localGatewayId,
+        @CustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
+        @CustomType.Parameter("peerAddress") String peerAddress,
+        @CustomType.Parameter("peerBgpAsn") Integer peerBgpAsn,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vlan") Integer vlan) {
         this.filters = filters;
         this.id = id;
         this.localAddress = localAddress;

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackagingGroupAuthorization {
     /**
      * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN authorization.
@@ -20,10 +20,10 @@ public final class PackagingGroupAuthorization {
      */
     private final String secretsRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingGroupAuthorization(
-        @OutputCustomType.Parameter("cdnIdentifierSecret") String cdnIdentifierSecret,
-        @OutputCustomType.Parameter("secretsRoleArn") String secretsRoleArn) {
+        @CustomType.Parameter("cdnIdentifierSecret") String cdnIdentifierSecret,
+        @CustomType.Parameter("secretsRoleArn") String secretsRoleArn) {
         this.cdnIdentifierSecret = cdnIdentifierSecret;
         this.secretsRoleArn = secretsRoleArn;
     }

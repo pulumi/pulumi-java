@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableTimeToLiveSpecification {
     private final @Nullable String attributeName;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableTimeToLiveSpecification(
-        @OutputCustomType.Parameter("attributeName") @Nullable String attributeName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("attributeName") @Nullable String attributeName,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }

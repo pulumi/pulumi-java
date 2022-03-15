@@ -8,14 +8,14 @@ import io.pulumi.awsnative.iot.enums.DomainConfigurationStatus;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationAuthorizerConfig;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationServerCertificateSummary;
 import io.pulumi.awsnative.iot.outputs.DomainConfigurationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainConfigurationResult {
     private final @Nullable String arn;
     private final @Nullable DomainConfigurationAuthorizerConfig authorizerConfig;
@@ -24,14 +24,14 @@ public final class GetDomainConfigurationResult {
     private final @Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates;
     private final @Nullable List<DomainConfigurationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("authorizerConfig") @Nullable DomainConfigurationAuthorizerConfig authorizerConfig,
-        @OutputCustomType.Parameter("domainConfigurationStatus") @Nullable DomainConfigurationStatus domainConfigurationStatus,
-        @OutputCustomType.Parameter("domainType") @Nullable DomainConfigurationDomainType domainType,
-        @OutputCustomType.Parameter("serverCertificates") @Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates,
-        @OutputCustomType.Parameter("tags") @Nullable List<DomainConfigurationTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("authorizerConfig") @Nullable DomainConfigurationAuthorizerConfig authorizerConfig,
+        @CustomType.Parameter("domainConfigurationStatus") @Nullable DomainConfigurationStatus domainConfigurationStatus,
+        @CustomType.Parameter("domainType") @Nullable DomainConfigurationDomainType domainType,
+        @CustomType.Parameter("serverCertificates") @Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates,
+        @CustomType.Parameter("tags") @Nullable List<DomainConfigurationTag> tags) {
         this.arn = arn;
         this.authorizerConfig = authorizerConfig;
         this.domainConfigurationStatus = domainConfigurationStatus;

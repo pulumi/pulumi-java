@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
-    @InputImport(name="allowForwardedTraffic")
+    @Import(name="allowForwardedTraffic")
       private final @Nullable Output<Boolean> allowForwardedTraffic;
 
     public Output<Boolean> getAllowForwardedTraffic() {
@@ -39,7 +39,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
-    @InputImport(name="allowGatewayTransit")
+    @Import(name="allowGatewayTransit")
       private final @Nullable Output<Boolean> allowGatewayTransit;
 
     public Output<Boolean> getAllowGatewayTransit() {
@@ -50,7 +50,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
-    @InputImport(name="allowVirtualNetworkAccess")
+    @Import(name="allowVirtualNetworkAccess")
       private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
     public Output<Boolean> getAllowVirtualNetworkAccess() {
@@ -61,7 +61,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * If we need to verify the provisioning state of the remote gateway.
      * 
      */
-    @InputImport(name="doNotVerifyRemoteGateways")
+    @Import(name="doNotVerifyRemoteGateways")
       private final @Nullable Output<Boolean> doNotVerifyRemoteGateways;
 
     public Output<Boolean> getDoNotVerifyRemoteGateways() {
@@ -72,7 +72,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -83,7 +83,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -94,7 +94,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * The status of the virtual network peering.
      * 
      */
-    @InputImport(name="peeringState")
+    @Import(name="peeringState")
       private final @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState;
 
     public Output<Either<String,VirtualNetworkPeeringState>> getPeeringState() {
@@ -105,7 +105,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * The reference to the remote virtual network address space.
      * 
      */
-    @InputImport(name="remoteAddressSpace")
+    @Import(name="remoteAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
     public Output<AddressSpaceArgs> getRemoteAddressSpace() {
@@ -116,7 +116,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * The reference to the remote virtual network's Bgp Communities.
      * 
      */
-    @InputImport(name="remoteBgpCommunities")
+    @Import(name="remoteBgpCommunities")
       private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
 
     public Output<VirtualNetworkBgpCommunitiesArgs> getRemoteBgpCommunities() {
@@ -127,7 +127,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
      * 
      */
-    @InputImport(name="remoteVirtualNetwork")
+    @Import(name="remoteVirtualNetwork")
       private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
     public Output<SubResourceArgs> getRemoteVirtualNetwork() {
@@ -138,7 +138,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * Resource type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -149,7 +149,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
-    @InputImport(name="useRemoteGateways")
+    @Import(name="useRemoteGateways")
       private final @Nullable Output<Boolean> useRemoteGateways;
 
     public Output<Boolean> getUseRemoteGateways() {

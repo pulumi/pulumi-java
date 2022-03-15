@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.ContainerNetworkInterfaceConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * List of chid container network interface configurations.
      * 
      */
-    @InputImport(name="containerNetworkInterfaceConfigurations")
+    @Import(name="containerNetworkInterfaceConfigurations")
       private final @Nullable Output<List<ContainerNetworkInterfaceConfigurationArgs>> containerNetworkInterfaceConfigurations;
 
     public Output<List<ContainerNetworkInterfaceConfigurationArgs>> getContainerNetworkInterfaceConfigurations() {
@@ -32,7 +32,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -43,7 +43,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network profile.
      * 
      */
-    @InputImport(name="networkProfileName")
+    @Import(name="networkProfileName")
       private final @Nullable Output<String> networkProfileName;
 
     public Output<String> getNetworkProfileName() {
@@ -65,7 +65,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyEvaluateOnExitGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class JobDefinitionRetryStrategyGetArgs extends io.pulumi.resources
      * The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
      * 
      */
-    @InputImport(name="attempts")
+    @Import(name="attempts")
       private final @Nullable Output<Integer> attempts;
 
     public Output<Integer> getAttempts() {
@@ -31,7 +31,7 @@ public final class JobDefinitionRetryStrategyGetArgs extends io.pulumi.resources
      * The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the `attempts` parameter must also be specified. You may specify up to 5 configuration blocks.
      * 
      */
-    @InputImport(name="evaluateOnExits")
+    @Import(name="evaluateOnExits")
       private final @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitGetArgs>> evaluateOnExits;
 
     public Output<List<JobDefinitionRetryStrategyEvaluateOnExitGetArgs>> getEvaluateOnExits() {

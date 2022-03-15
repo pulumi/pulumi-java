@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbilling_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -29,7 +29,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
      * If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
      * 
      */
-    @InputImport(name="masterBillingAccount")
+    @Import(name="masterBillingAccount")
       private final @Nullable Output<String> masterBillingAccount;
 
     public Output<String> getMasterBillingAccount() {

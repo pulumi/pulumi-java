@@ -8,7 +8,7 @@ import io.pulumi.azurenative.devtestlab.ServiceFabricArgs;
 import io.pulumi.azurenative.devtestlab.outputs.ApplicableScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The applicable schedule for the virtual machine.
      * 
      */
-    @OutputExport(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
+    @Export(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
     private Output<ApplicableScheduleResponse> applicableSchedule;
 
     /**
@@ -50,7 +50,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The resource id of the environment under which the service fabric resource is present
      * 
      */
-    @OutputExport(name="environmentId", type=String.class, parameters={})
+    @Export(name="environmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentId;
 
     /**
@@ -64,7 +64,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The backing service fabric resource's id
      * 
      */
-    @OutputExport(name="externalServiceFabricId", type=String.class, parameters={})
+    @Export(name="externalServiceFabricId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalServiceFabricId;
 
     /**
@@ -78,7 +78,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -92,7 +92,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -120,7 +120,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -148,7 +148,7 @@ public class ServiceFabric extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataLabelsResponse {
     /**
      * Label name presented as key in xDS Node Metadata.
@@ -20,10 +20,10 @@ public final class MetadataLabelsResponse {
      */
     private final String labelValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataLabelsResponse(
-        @OutputCustomType.Parameter("labelName") String labelName,
-        @OutputCustomType.Parameter("labelValue") String labelValue) {
+        @CustomType.Parameter("labelName") String labelName,
+        @CustomType.Parameter("labelValue") String labelValue) {
         this.labelName = labelName;
         this.labelValue = labelValue;
     }

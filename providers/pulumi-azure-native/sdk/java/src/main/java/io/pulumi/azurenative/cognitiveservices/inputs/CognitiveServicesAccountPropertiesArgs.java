@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointConnectionA
 import io.pulumi.azurenative.cognitiveservices.inputs.UserOwnedStorageArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * The api properties for special APIs.
      * 
      */
-    @InputImport(name="apiProperties")
+    @Import(name="apiProperties")
       private final @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
 
     public Output<CognitiveServicesAccountApiPropertiesArgs> getApiProperties() {
@@ -41,7 +41,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * Optional subdomain name used for token-based authentication.
      * 
      */
-    @InputImport(name="customSubDomainName")
+    @Import(name="customSubDomainName")
       private final @Nullable Output<String> customSubDomainName;
 
     public Output<String> getCustomSubDomainName() {
@@ -52,7 +52,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * The encryption properties for this resource.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
 
     public Output<EncryptionArgs> getEncryption() {
@@ -63,7 +63,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * A collection of rules governing the accessibility from specific network locations.
      * 
      */
-    @InputImport(name="networkAcls")
+    @Import(name="networkAcls")
       private final @Nullable Output<NetworkRuleSetArgs> networkAcls;
 
     public Output<NetworkRuleSetArgs> getNetworkAcls() {
@@ -74,7 +74,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * The private endpoint connection associated with the Cognitive Services account.
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
@@ -85,7 +85,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -96,7 +96,7 @@ public final class CognitiveServicesAccountPropertiesArgs extends io.pulumi.reso
      * The storage accounts for this resource.
      * 
      */
-    @InputImport(name="userOwnedStorage")
+    @Import(name="userOwnedStorage")
       private final @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage;
 
     public Output<List<UserOwnedStorageArgs>> getUserOwnedStorage() {

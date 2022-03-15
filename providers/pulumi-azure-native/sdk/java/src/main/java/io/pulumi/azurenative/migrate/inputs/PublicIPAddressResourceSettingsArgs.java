@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets the domain name label.
      * 
      */
-    @InputImport(name="domainNameLabel")
+    @Import(name="domainNameLabel")
       private final @Nullable Output<String> domainNameLabel;
 
     public Output<String> getDomainNameLabel() {
@@ -33,7 +33,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets the fully qualified domain name.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -44,7 +44,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets public IP allocation method.
      * 
      */
-    @InputImport(name="publicIpAllocationMethod")
+    @Import(name="publicIpAllocationMethod")
       private final @Nullable Output<String> publicIpAllocationMethod;
 
     public Output<String> getPublicIpAllocationMethod() {
@@ -56,7 +56,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Expected value is 'Microsoft.Network/publicIPAddresses'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -67,7 +67,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets public IP sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
@@ -78,7 +78,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {
@@ -89,7 +89,7 @@ public final class PublicIPAddressResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets public IP zones.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<String> zones;
 
     public Output<String> getZones() {

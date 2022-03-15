@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
      * SQL Server connectivity option.
      * 
      */
-    @InputImport(name="connectivityType")
+    @Import(name="connectivityType")
       private final @Nullable String connectivityType;
 
     public Optional<String> getConnectivityType() {
@@ -34,7 +34,7 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
      * SQL Server port.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {

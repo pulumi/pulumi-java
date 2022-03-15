@@ -8,7 +8,7 @@ import io.pulumi.aws.datasync.LocationSmbArgs;
 import io.pulumi.aws.datasync.inputs.LocationSmbState;
 import io.pulumi.aws.datasync.outputs.LocationSmbMountOptions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @OutputExport(name="agentArns", type=List.class, parameters={String.class})
+    @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output<List<String>> agentArns;
 
     /**
@@ -51,7 +51,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -65,7 +65,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * The name of the Windows domain the SMB server belongs to.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -79,7 +79,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
      * 
      */
-    @OutputExport(name="mountOptions", type=LocationSmbMountOptions.class, parameters={})
+    @Export(name="mountOptions", type=LocationSmbMountOptions.class, parameters={})
     private Output</* @Nullable */ LocationSmbMountOptions> mountOptions;
 
     /**
@@ -93,7 +93,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * The password of the user who can mount the share and has file permissions in the SMB.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output<String> password;
 
     /**
@@ -107,7 +107,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
      * 
      */
-    @OutputExport(name="serverHostname", type=String.class, parameters={})
+    @Export(name="serverHostname", type=String.class, parameters={})
     private Output<String> serverHostname;
 
     /**
@@ -121,7 +121,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output<String> subdirectory;
 
     /**
@@ -135,7 +135,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -159,7 +159,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     public Output<String> getUri() {
@@ -169,7 +169,7 @@ public class LocationSmb extends io.pulumi.resources.CustomResource {
      * The user who can mount the share and has file and folder permissions in the SMB share.
      * 
      */
-    @OutputExport(name="user", type=String.class, parameters={})
+    @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**

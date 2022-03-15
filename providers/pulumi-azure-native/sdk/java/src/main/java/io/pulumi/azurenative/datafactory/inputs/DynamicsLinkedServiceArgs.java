@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The authentication type to connect to Dynamics server. 'Office365' for online scenario, 'Ifd' for on-premises with Ifd scenario, 'AADServicePrincipal' for Server-To-Server authentication in online scenario. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<Object> authenticationType;
 
     public Output<Object> getAuthenticationType() {
@@ -53,7 +53,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -75,7 +75,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The deployment type of the Dynamics instance. 'Online' for Dynamics Online and 'OnPremisesWithIfd' for Dynamics on-premises with Ifd. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="deploymentType", required=true)
+    @Import(name="deploymentType", required=true)
       private final Output<Object> deploymentType;
 
     public Output<Object> getDeploymentType() {
@@ -86,7 +86,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -97,7 +97,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -108,7 +108,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The host name of the on-premises Dynamics server. The property is required for on-prem and not allowed for online. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Output<Object> hostName;
 
     public Output<Object> getHostName() {
@@ -119,7 +119,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The organization name of the Dynamics instance. The property is required for on-prem and required for online when there are more than one Dynamics instances associated with the user. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="organizationName")
+    @Import(name="organizationName")
       private final @Nullable Output<Object> organizationName;
 
     public Output<Object> getOrganizationName() {
@@ -130,7 +130,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -141,7 +141,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Password to access the Dynamics instance.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -152,7 +152,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The port of on-premises Dynamics server. The property is required for on-prem and not allowed for online. Default is 443. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Object> port;
 
     public Output<Object> getPort() {
@@ -163,7 +163,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The credential of the service principal object in Azure Active Directory. If servicePrincipalCredentialType is 'ServicePrincipalKey', servicePrincipalCredential can be SecureString or AzureKeyVaultSecretReference. If servicePrincipalCredentialType is 'ServicePrincipalCert', servicePrincipalCredential can only be AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="servicePrincipalCredential")
+    @Import(name="servicePrincipalCredential")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
@@ -174,7 +174,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The service principal credential type to use in Server-To-Server authentication. 'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalCredentialType")
+    @Import(name="servicePrincipalCredentialType")
       private final @Nullable Output<Object> servicePrincipalCredentialType;
 
     public Output<Object> getServicePrincipalCredentialType() {
@@ -185,7 +185,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The client ID of the application in Azure Active Directory used for Server-To-Server authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -196,7 +196,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The URL to the Microsoft Dynamics server. The property is required for on-line and not allowed for on-prem. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serviceUri")
+    @Import(name="serviceUri")
       private final @Nullable Output<Object> serviceUri;
 
     public Output<Object> getServiceUri() {
@@ -208,7 +208,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Expected value is 'Dynamics'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -219,7 +219,7 @@ public final class DynamicsLinkedServiceArgs extends io.pulumi.resources.Resourc
      * User name to access the Dynamics instance. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {

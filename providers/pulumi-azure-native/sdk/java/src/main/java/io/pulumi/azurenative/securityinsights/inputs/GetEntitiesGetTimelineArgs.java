@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.enums.EntityTimelineKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * The end timeline date, so the results returned are before this date.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -33,7 +33,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * entity ID
      * 
      */
-    @InputImport(name="entityId", required=true)
+    @Import(name="entityId", required=true)
       private final String entityId;
 
     public String getEntityId() {
@@ -44,7 +44,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * Array of timeline Item kinds.
      * 
      */
-    @InputImport(name="kinds")
+    @Import(name="kinds")
       private final @Nullable List<Either<String,EntityTimelineKind>> kinds;
 
     public List<Either<String,EntityTimelineKind>> getKinds() {
@@ -55,7 +55,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * The number of bucket for timeline queries aggregation.
      * 
      */
-    @InputImport(name="numberOfBucket")
+    @Import(name="numberOfBucket")
       private final @Nullable Integer numberOfBucket;
 
     public Optional<Integer> getNumberOfBucket() {
@@ -66,7 +66,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
@@ -77,7 +77,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * The start timeline date, so the results returned are after this date.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -99,7 +99,7 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

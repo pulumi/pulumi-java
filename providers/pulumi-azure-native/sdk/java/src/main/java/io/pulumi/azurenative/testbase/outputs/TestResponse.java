@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.CommandResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TestResponse {
     /**
      * The commands used in the test.
@@ -35,12 +35,12 @@ public final class TestResponse {
      */
     private final String validationRunStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestResponse(
-        @OutputCustomType.Parameter("commands") List<CommandResponse> commands,
-        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
-        @OutputCustomType.Parameter("testType") String testType,
-        @OutputCustomType.Parameter("validationRunStatus") String validationRunStatus) {
+        @CustomType.Parameter("commands") List<CommandResponse> commands,
+        @CustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @CustomType.Parameter("testType") String testType,
+        @CustomType.Parameter("validationRunStatus") String validationRunStatus) {
         this.commands = commands;
         this.isActive = isActive;
         this.testType = testType;

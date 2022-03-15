@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class DistributionOriginCustomHeaderGetArgs extends io.pulumi.resou
 
     public static final DistributionOriginCustomHeaderGetArgs Empty = new DistributionOriginCustomHeaderGetArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

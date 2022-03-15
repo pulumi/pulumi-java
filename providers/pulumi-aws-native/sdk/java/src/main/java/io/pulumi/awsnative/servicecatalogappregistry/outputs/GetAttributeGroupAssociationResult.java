@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAttributeGroupAssociationResult {
     /**
      * The name or the Id of the Application.
@@ -25,13 +25,13 @@ public final class GetAttributeGroupAssociationResult {
     private final @Nullable String attributeGroupArn;
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttributeGroupAssociationResult(
-        @OutputCustomType.Parameter("application") @Nullable String application,
-        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
-        @OutputCustomType.Parameter("attributeGroup") @Nullable String attributeGroup,
-        @OutputCustomType.Parameter("attributeGroupArn") @Nullable String attributeGroupArn,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("application") @Nullable String application,
+        @CustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @CustomType.Parameter("attributeGroup") @Nullable String attributeGroup,
+        @CustomType.Parameter("attributeGroupArn") @Nullable String attributeGroupArn,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.application = application;
         this.applicationArn = applicationArn;
         this.attributeGroup = attributeGroup;

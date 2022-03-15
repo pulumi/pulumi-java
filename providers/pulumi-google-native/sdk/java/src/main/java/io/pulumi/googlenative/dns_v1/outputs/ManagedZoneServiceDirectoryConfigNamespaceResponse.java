@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
     /**
      * The time that the namespace backing this zone was deleted; an empty string if it still exists. This is in RFC3339 text format. Output only.
@@ -21,11 +21,11 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
      */
     private final String namespaceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneServiceDirectoryConfigNamespaceResponse(
-        @OutputCustomType.Parameter("deletionTime") String deletionTime,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("namespaceUrl") String namespaceUrl) {
+        @CustomType.Parameter("deletionTime") String deletionTime,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("namespaceUrl") String namespaceUrl) {
         this.deletionTime = deletionTime;
         this.kind = kind;
         this.namespaceUrl = namespaceUrl;

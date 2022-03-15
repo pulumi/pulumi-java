@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RangePartitioningRangeResponse {
     /**
      * [TrustedTester] [Required] The end of range partitioning, exclusive.
@@ -25,11 +25,11 @@ public final class RangePartitioningRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RangePartitioningRangeResponse(
-        @OutputCustomType.Parameter("end") String end,
-        @OutputCustomType.Parameter("interval") String interval,
-        @OutputCustomType.Parameter("start") String start) {
+        @CustomType.Parameter("end") String end,
+        @CustomType.Parameter("interval") String interval,
+        @CustomType.Parameter("start") String start) {
         this.end = end;
         this.interval = interval;
         this.start = start;

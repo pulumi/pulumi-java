@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
      * Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
      * 
      */
-    @InputImport(name="appYamlPath")
+    @Import(name="appYamlPath")
       private final @Nullable Output<String> appYamlPath;
 
     public Output<String> getAppYamlPath() {
@@ -33,7 +33,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
      * The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
      * 
      */
-    @InputImport(name="cloudBuildTimeout")
+    @Import(name="cloudBuildTimeout")
       private final @Nullable Output<String> cloudBuildTimeout;
 
     public Output<String> getCloudBuildTimeout() {

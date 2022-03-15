@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
      */
-    @InputImport(name="transformations", required=true)
+    @Import(name="transformations", required=true)
       private final Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations;
 
     public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> getTransformations() {

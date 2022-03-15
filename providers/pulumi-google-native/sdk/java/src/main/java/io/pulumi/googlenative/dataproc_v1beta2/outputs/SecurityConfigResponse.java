@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.KerberosConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConfigResponse {
     /**
      * Optional. Kerberos related configuration.
@@ -15,8 +15,8 @@ public final class SecurityConfigResponse {
      */
     private final KerberosConfigResponse kerberosConfig;
 
-    @OutputCustomType.Constructor
-    private SecurityConfigResponse(@OutputCustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig) {
+    @CustomType.Constructor
+    private SecurityConfigResponse(@CustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 

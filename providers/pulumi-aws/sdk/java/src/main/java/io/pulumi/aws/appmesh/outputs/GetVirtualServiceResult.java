@@ -4,14 +4,14 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GetVirtualServiceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualServiceResult {
     /**
      * The ARN of the virtual service.
@@ -52,18 +52,18 @@ public final class GetVirtualServiceResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualServiceResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
-        @OutputCustomType.Parameter("meshName") String meshName,
-        @OutputCustomType.Parameter("meshOwner") String meshOwner,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
-        @OutputCustomType.Parameter("specs") List<GetVirtualServiceSpec> specs,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @CustomType.Parameter("meshName") String meshName,
+        @CustomType.Parameter("meshOwner") String meshOwner,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceOwner") String resourceOwner,
+        @CustomType.Parameter("specs") List<GetVirtualServiceSpec> specs,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.id = id;

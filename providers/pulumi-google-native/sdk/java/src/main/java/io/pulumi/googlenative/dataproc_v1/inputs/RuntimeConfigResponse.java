@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
      * 
      */
-    @InputImport(name="containerImage", required=true)
+    @Import(name="containerImage", required=true)
       private final String containerImage;
 
     public String getContainerImage() {
@@ -32,7 +32,7 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. A mapping of property names to values, which are used to configure workload execution.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -43,7 +43,7 @@ public final class RuntimeConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Version of the batch runtime.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

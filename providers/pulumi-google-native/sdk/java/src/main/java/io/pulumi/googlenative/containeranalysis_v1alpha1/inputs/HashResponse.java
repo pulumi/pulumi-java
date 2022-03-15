@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HashResponse extends io.pulumi.resources.InvokeArgs {
      * The type of hash that was performed.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -31,7 +31,7 @@ public final class HashResponse extends io.pulumi.resources.InvokeArgs {
      * The hash value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

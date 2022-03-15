@@ -10,7 +10,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorModelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorRuleArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * The models to associate with this detector.
      * 
      */
-    @InputImport(name="associatedModels")
+    @Import(name="associatedModels")
       private final @Nullable Output<List<DetectorModelArgs>> associatedModels;
 
     public Output<List<DetectorModelArgs>> getAssociatedModels() {
@@ -36,7 +36,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the detector.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the detector
      * 
      */
-    @InputImport(name="detectorId", required=true)
+    @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
     public Output<String> getDetectorId() {
@@ -58,7 +58,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * The desired detector version status for the detector
      * 
      */
-    @InputImport(name="detectorVersionStatus")
+    @Import(name="detectorVersionStatus")
       private final @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
 
     public Output<DetectorVersionStatus> getDetectorVersionStatus() {
@@ -69,21 +69,21 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * The event type to associate this detector with.
      * 
      */
-    @InputImport(name="eventType", required=true)
+    @Import(name="eventType", required=true)
       private final Output<DetectorEventTypeArgs> eventType;
 
     public Output<DetectorEventTypeArgs> getEventType() {
         return this.eventType;
     }
 
-    @InputImport(name="ruleExecutionMode")
+    @Import(name="ruleExecutionMode")
       private final @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
 
     public Output<DetectorRuleExecutionMode> getRuleExecutionMode() {
         return this.ruleExecutionMode == null ? Output.empty() : this.ruleExecutionMode;
     }
 
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<List<DetectorRuleArgs>> rules;
 
     public Output<List<DetectorRuleArgs>> getRules() {
@@ -94,7 +94,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with this detector.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
     public Output<List<DetectorTagArgs>> getTags() {

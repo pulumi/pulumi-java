@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetCanaryEvaluationArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetCanaryEvaluationArgs Empty = new GetCanaryEvaluationArgs();
 
-    @InputImport(name="canaryevaluationId", required=true)
+    @Import(name="canaryevaluationId", required=true)
       private final String canaryevaluationId;
 
     public String getCanaryevaluationId() {
         return this.canaryevaluationId;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

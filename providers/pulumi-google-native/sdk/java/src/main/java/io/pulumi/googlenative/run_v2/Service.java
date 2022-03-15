@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.run_v2.ServiceArgs;
@@ -29,7 +29,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
@@ -43,7 +43,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Settings for the Binary Authorization feature.
      * 
      */
-    @OutputExport(name="binaryAuthorization", type=GoogleCloudRunOpV2BinaryAuthorizationResponse.class, parameters={})
+    @Export(name="binaryAuthorization", type=GoogleCloudRunOpV2BinaryAuthorizationResponse.class, parameters={})
     private Output<GoogleCloudRunOpV2BinaryAuthorizationResponse> binaryAuthorization;
 
     /**
@@ -57,7 +57,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Arbitrary identifier for the API client.
      * 
      */
-    @OutputExport(name="client", type=String.class, parameters={})
+    @Export(name="client", type=String.class, parameters={})
     private Output<String> client;
 
     /**
@@ -71,7 +71,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Arbitrary version identifier for the API client.
      * 
      */
-    @OutputExport(name="clientVersion", type=String.class, parameters={})
+    @Export(name="clientVersion", type=String.class, parameters={})
     private Output<String> clientVersion;
 
     /**
@@ -85,7 +85,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @OutputExport(name="conditions", type=List.class, parameters={GoogleCloudRunOpV2ConditionResponse.class})
+    @Export(name="conditions", type=List.class, parameters={GoogleCloudRunOpV2ConditionResponse.class})
     private Output<List<GoogleCloudRunOpV2ConditionResponse>> conditions;
 
     /**
@@ -99,7 +99,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -113,7 +113,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Email address of the authenticated creator.
      * 
      */
-    @OutputExport(name="creator", type=String.class, parameters={})
+    @Export(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
     /**
@@ -127,7 +127,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The deletion time.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -141,7 +141,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * User-provided description of the Service.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -155,7 +155,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A system-generated fingerprint for this version of the resource. May be used to detect modification conflict during updates.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -169,7 +169,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * For a deleted resource, the time after which it will be permamently deleted.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -183,7 +183,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A number that monotonically increases every time the user modifies the desired state.
      * 
      */
-    @OutputExport(name="generation", type=String.class, parameters={})
+    @Export(name="generation", type=String.class, parameters={})
     private Output<String> generation;
 
     /**
@@ -197,7 +197,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
      * 
      */
-    @OutputExport(name="ingress", type=String.class, parameters={})
+    @Export(name="ingress", type=String.class, parameters={})
     private Output<String> ingress;
 
     /**
@@ -211,7 +211,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev' namespaces. Those labels are read-only, and user changes will not be preserved.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -225,7 +225,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Email address of the last authenticated modifier.
      * 
      */
-    @OutputExport(name="lastModifier", type=String.class, parameters={})
+    @Export(name="lastModifier", type=String.class, parameters={})
     private Output<String> lastModifier;
 
     /**
@@ -239,7 +239,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Name of the last created revision. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @OutputExport(name="latestCreatedRevision", type=String.class, parameters={})
+    @Export(name="latestCreatedRevision", type=String.class, parameters={})
     private Output<String> latestCreatedRevision;
 
     /**
@@ -253,7 +253,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Name of the latest revision that is serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @OutputExport(name="latestReadyRevision", type=String.class, parameters={})
+    @Export(name="latestReadyRevision", type=String.class, parameters={})
     private Output<String> latestReadyRevision;
 
     /**
@@ -267,7 +267,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
-    @OutputExport(name="launchStage", type=String.class, parameters={})
+    @Export(name="launchStage", type=String.class, parameters={})
     private Output<String> launchStage;
 
     /**
@@ -281,7 +281,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -295,7 +295,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The generation of this Service currently serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @OutputExport(name="observedGeneration", type=String.class, parameters={})
+    @Export(name="observedGeneration", type=String.class, parameters={})
     private Output<String> observedGeneration;
 
     /**
@@ -309,7 +309,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Returns true if the Service is currently being acted upon by the system to bring it into the desired state. When a new Service is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Service to the desired serving state. This process is called reconciliation. While reconciliation is in process, `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the serving state matches the Service, or there was an error, and reconciliation failed. This state can be found in `terminal_condition.state`. If reconciliation succeeded, the following fields will match: `traffic` and `traffic_statuses`, `observed_generation` and `generation`, `latest_ready_revision` and `latest_created_revision`. If reconciliation failed, `traffic_statuses`, `observed_generation`, and `latest_ready_revision` will have the state of the last serving revision, or empty for newly created Services. Additional information on the failure can be found in `terminal_condition` and `conditions`.
      * 
      */
-    @OutputExport(name="reconciling", type=Boolean.class, parameters={})
+    @Export(name="reconciling", type=Boolean.class, parameters={})
     private Output<Boolean> reconciling;
 
     /**
@@ -323,7 +323,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The template used to create revisions for this Service.
      * 
      */
-    @OutputExport(name="template", type=GoogleCloudRunOpV2RevisionTemplateResponse.class, parameters={})
+    @Export(name="template", type=GoogleCloudRunOpV2RevisionTemplateResponse.class, parameters={})
     private Output<GoogleCloudRunOpV2RevisionTemplateResponse> template;
 
     /**
@@ -337,7 +337,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @OutputExport(name="terminalCondition", type=GoogleCloudRunOpV2ConditionResponse.class, parameters={})
+    @Export(name="terminalCondition", type=GoogleCloudRunOpV2ConditionResponse.class, parameters={})
     private Output<GoogleCloudRunOpV2ConditionResponse> terminalCondition;
 
     /**
@@ -351,7 +351,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    @OutputExport(name="traffic", type=List.class, parameters={GoogleCloudRunOpV2TrafficTargetResponse.class})
+    @Export(name="traffic", type=List.class, parameters={GoogleCloudRunOpV2TrafficTargetResponse.class})
     private Output<List<GoogleCloudRunOpV2TrafficTargetResponse>> traffic;
 
     /**
@@ -365,7 +365,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    @OutputExport(name="trafficStatuses", type=List.class, parameters={GoogleCloudRunOpV2TrafficTargetStatusResponse.class})
+    @Export(name="trafficStatuses", type=List.class, parameters={GoogleCloudRunOpV2TrafficTargetStatusResponse.class})
     private Output<List<GoogleCloudRunOpV2TrafficTargetStatusResponse>> trafficStatuses;
 
     /**
@@ -379,7 +379,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -393,7 +393,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The last-modified time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -407,7 +407,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The main URI in which this Service is serving traffic.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     /**

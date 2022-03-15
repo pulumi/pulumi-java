@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RecipeConditionExpression extends io.pulumi.resources.InvokeA
      * Input condition to be applied to the target column
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final String condition;
 
     public String getCondition() {
@@ -33,7 +33,7 @@ public final class RecipeConditionExpression extends io.pulumi.resources.InvokeA
      * Name of the target column
      * 
      */
-    @InputImport(name="targetColumn", required=true)
+    @Import(name="targetColumn", required=true)
       private final String targetColumn;
 
     public String getTargetColumn() {
@@ -44,7 +44,7 @@ public final class RecipeConditionExpression extends io.pulumi.resources.InvokeA
      * Value of the condition
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

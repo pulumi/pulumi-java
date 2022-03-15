@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlTriggerGetPropertiesResponseResource {
     /**
      * Body of the Trigger
@@ -48,15 +48,15 @@ public final class SqlTriggerGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlTriggerGetPropertiesResponseResource(
-        @OutputCustomType.Parameter("body") @Nullable String body,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("rid") String rid,
-        @OutputCustomType.Parameter("triggerOperation") @Nullable String triggerOperation,
-        @OutputCustomType.Parameter("triggerType") @Nullable String triggerType,
-        @OutputCustomType.Parameter("ts") Double ts) {
+        @CustomType.Parameter("body") @Nullable String body,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("rid") String rid,
+        @CustomType.Parameter("triggerOperation") @Nullable String triggerOperation,
+        @CustomType.Parameter("triggerType") @Nullable String triggerType,
+        @CustomType.Parameter("ts") Double ts) {
         this.body = body;
         this.etag = etag;
         this.id = id;

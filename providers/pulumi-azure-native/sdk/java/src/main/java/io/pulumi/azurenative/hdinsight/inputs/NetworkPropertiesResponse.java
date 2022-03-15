@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
      * Indicates whether or not private link is enabled.
      * 
      */
-    @InputImport(name="privateLink")
+    @Import(name="privateLink")
       private final @Nullable String privateLink;
 
     public Optional<String> getPrivateLink() {
@@ -33,7 +33,7 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
      * The direction for the resource provider connection.
      * 
      */
-    @InputImport(name="resourceProviderConnection")
+    @Import(name="resourceProviderConnection")
       private final @Nullable String resourceProviderConnection;
 
     public Optional<String> getResourceProviderConnection() {

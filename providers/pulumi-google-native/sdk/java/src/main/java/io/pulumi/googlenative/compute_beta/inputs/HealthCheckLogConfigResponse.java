@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HealthCheckLogConfigResponse extends io.pulumi.resources.Invo
      * Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
      * 
      */
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Boolean enable;
 
     public Boolean getEnable() {

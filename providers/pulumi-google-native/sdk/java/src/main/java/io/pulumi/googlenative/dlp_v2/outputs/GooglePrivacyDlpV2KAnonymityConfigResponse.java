@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2EntityIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
     /**
      * Message indicating that multiple rows might be associated to a single individual. If the same entity_id is associated to multiple quasi-identifier tuples over distinct rows, we consider the entire collection of tuples as the composite quasi-identifier. This collection is a multiset: the order in which the different tuples appear in the dataset is ignored, but their frequency is taken into account. Important note: a maximum of 1000 rows can be associated to a single entity ID. If more rows are associated with the same entity ID, some might be ignored.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityConfigResponse(
-        @OutputCustomType.Parameter("entityId") GooglePrivacyDlpV2EntityIdResponse entityId,
-        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
+        @CustomType.Parameter("entityId") GooglePrivacyDlpV2EntityIdResponse entityId,
+        @CustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
         this.entityId = entityId;
         this.quasiIds = quasiIds;
     }

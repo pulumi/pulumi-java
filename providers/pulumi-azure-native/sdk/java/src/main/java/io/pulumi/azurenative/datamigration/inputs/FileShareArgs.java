@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Password credential used to connect to the share location.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -33,7 +33,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The folder path for this share.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -44,7 +44,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * User name credential to connect to the share location
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

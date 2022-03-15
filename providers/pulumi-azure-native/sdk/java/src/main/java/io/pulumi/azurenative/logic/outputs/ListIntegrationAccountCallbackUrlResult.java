@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListIntegrationAccountCallbackUrlResult {
     /**
      * The URL value.
@@ -17,8 +17,8 @@ public final class ListIntegrationAccountCallbackUrlResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
-    private ListIntegrationAccountCallbackUrlResult(@OutputCustomType.Parameter("value") @Nullable String value) {
+    @CustomType.Constructor
+    private ListIntegrationAccountCallbackUrlResult(@CustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

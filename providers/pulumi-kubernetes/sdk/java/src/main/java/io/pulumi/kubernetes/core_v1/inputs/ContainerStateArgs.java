@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateRunningArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateTerminatedArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateWaitingArgs;
@@ -24,7 +24,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * Details about a running container
      * 
      */
-    @InputImport(name="running")
+    @Import(name="running")
       private final @Nullable Output<ContainerStateRunningArgs> running;
 
     public Output<ContainerStateRunningArgs> getRunning() {
@@ -35,7 +35,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * Details about a terminated container
      * 
      */
-    @InputImport(name="terminated")
+    @Import(name="terminated")
       private final @Nullable Output<ContainerStateTerminatedArgs> terminated;
 
     public Output<ContainerStateTerminatedArgs> getTerminated() {
@@ -46,7 +46,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * Details about a waiting container
      * 
      */
-    @InputImport(name="waiting")
+    @Import(name="waiting")
       private final @Nullable Output<ContainerStateWaitingArgs> waiting;
 
     public Output<ContainerStateWaitingArgs> getWaiting() {

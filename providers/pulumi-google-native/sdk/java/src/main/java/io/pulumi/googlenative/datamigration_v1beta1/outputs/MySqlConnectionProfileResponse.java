@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.SslConfigResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MySqlConnectionProfileResponse {
     /**
      * If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source.
@@ -48,15 +48,15 @@ public final class MySqlConnectionProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MySqlConnectionProfileResponse(
-        @OutputCustomType.Parameter("cloudSqlId") String cloudSqlId,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("passwordSet") Boolean passwordSet,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("ssl") SslConfigResponse ssl,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("cloudSqlId") String cloudSqlId,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("passwordSet") Boolean passwordSet,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("ssl") SslConfigResponse ssl,
+        @CustomType.Parameter("username") String username) {
         this.cloudSqlId = cloudSqlId;
         this.host = host;
         this.password = password;

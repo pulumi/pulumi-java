@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
      * Specifies the allowed number retries. This number must be > 0.
      * 
      */
-    @InputImport(name="numRetries")
+    @Import(name="numRetries")
       private final @Nullable Output<Integer> numRetries;
 
     public Output<Integer> getNumRetries() {
@@ -33,7 +33,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="perTryTimeout")
+    @Import(name="perTryTimeout")
       private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
 
     public Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> getPerTryTimeout() {
@@ -64,7 +64,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs 
      *   the gRPC status code in the response header is set to unavailable
      * 
      */
-    @InputImport(name="retryConditions")
+    @Import(name="retryConditions")
       private final @Nullable Output<List<String>> retryConditions;
 
     public Output<List<String>> getRetryConditions() {

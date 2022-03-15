@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -31,7 +31,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -42,7 +42,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
@@ -53,7 +53,7 @@ public final class ClusterIstioResponse extends io.pulumi.resources.InvokeArgs {
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceNamespace", required=true)
+    @Import(name="serviceNamespace", required=true)
       private final String serviceNamespace;
 
     public String getServiceNamespace() {

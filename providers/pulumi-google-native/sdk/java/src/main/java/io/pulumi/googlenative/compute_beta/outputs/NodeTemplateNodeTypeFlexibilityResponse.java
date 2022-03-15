@@ -3,21 +3,21 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeTemplateNodeTypeFlexibilityResponse {
     private final String cpus;
     private final String localSsd;
     private final String memory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeTemplateNodeTypeFlexibilityResponse(
-        @OutputCustomType.Parameter("cpus") String cpus,
-        @OutputCustomType.Parameter("localSsd") String localSsd,
-        @OutputCustomType.Parameter("memory") String memory) {
+        @CustomType.Parameter("cpus") String cpus,
+        @CustomType.Parameter("localSsd") String localSsd,
+        @CustomType.Parameter("memory") String memory) {
         this.cpus = cpus;
         this.localSsd = localSsd;
         this.memory = memory;

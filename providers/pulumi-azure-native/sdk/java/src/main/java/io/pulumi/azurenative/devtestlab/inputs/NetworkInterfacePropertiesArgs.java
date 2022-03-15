@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.SharedPublicIpAddressConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The DNS name.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -34,7 +34,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The private IP address.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -45,7 +45,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The public IP address.
      * 
      */
-    @InputImport(name="publicIpAddress")
+    @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
     public Output<String> getPublicIpAddress() {
@@ -56,7 +56,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The resource ID of the public IP address.
      * 
      */
-    @InputImport(name="publicIpAddressId")
+    @Import(name="publicIpAddressId")
       private final @Nullable Output<String> publicIpAddressId;
 
     public Output<String> getPublicIpAddressId() {
@@ -67,7 +67,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
      */
-    @InputImport(name="rdpAuthority")
+    @Import(name="rdpAuthority")
       private final @Nullable Output<String> rdpAuthority;
 
     public Output<String> getRdpAuthority() {
@@ -78,7 +78,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The configuration for sharing a public IP address across multiple virtual machines.
      * 
      */
-    @InputImport(name="sharedPublicIpAddressConfiguration")
+    @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
     public Output<SharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
@@ -89,7 +89,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
      */
-    @InputImport(name="sshAuthority")
+    @Import(name="sshAuthority")
       private final @Nullable Output<String> sshAuthority;
 
     public Output<String> getSshAuthority() {
@@ -100,7 +100,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The resource ID of the sub net.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -111,7 +111,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
      * The resource ID of the virtual network.
      * 
      */
-    @InputImport(name="virtualNetworkId")
+    @Import(name="virtualNetworkId")
       private final @Nullable Output<String> virtualNetworkId;
 
     public Output<String> getVirtualNetworkId() {

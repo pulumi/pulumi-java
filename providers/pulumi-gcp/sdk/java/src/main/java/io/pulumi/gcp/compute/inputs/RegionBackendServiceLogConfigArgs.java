@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionBackendServiceLogConfigArgs extends io.pulumi.resources
      * Whether to enable logging for the load balancer traffic served by this backend service.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -33,7 +33,7 @@ public final class RegionBackendServiceLogConfigArgs extends io.pulumi.resources
      * The default value is 1.0.
      * 
      */
-    @InputImport(name="sampleRate")
+    @Import(name="sampleRate")
       private final @Nullable Output<Double> sampleRate;
 
     public Output<Double> getSampleRate() {

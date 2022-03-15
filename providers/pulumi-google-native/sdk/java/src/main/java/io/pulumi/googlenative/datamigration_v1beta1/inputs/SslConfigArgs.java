@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.
      * 
      */
-    @InputImport(name="caCertificate", required=true)
+    @Import(name="caCertificate", required=true)
       private final Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
@@ -33,7 +33,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.
      * 
      */
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
@@ -44,7 +44,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.
      * 
      */
-    @InputImport(name="clientKey")
+    @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {

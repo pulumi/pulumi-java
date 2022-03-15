@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterVpcConfig {
     /**
      * Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
@@ -49,15 +49,15 @@ public final class ClusterVpcConfig {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterVpcConfig(
-        @OutputCustomType.Parameter("clusterSecurityGroupId") @Nullable String clusterSecurityGroupId,
-        @OutputCustomType.Parameter("endpointPrivateAccess") @Nullable Boolean endpointPrivateAccess,
-        @OutputCustomType.Parameter("endpointPublicAccess") @Nullable Boolean endpointPublicAccess,
-        @OutputCustomType.Parameter("publicAccessCidrs") @Nullable List<String> publicAccessCidrs,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("clusterSecurityGroupId") @Nullable String clusterSecurityGroupId,
+        @CustomType.Parameter("endpointPrivateAccess") @Nullable Boolean endpointPrivateAccess,
+        @CustomType.Parameter("endpointPublicAccess") @Nullable Boolean endpointPublicAccess,
+        @CustomType.Parameter("publicAccessCidrs") @Nullable List<String> publicAccessCidrs,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.clusterSecurityGroupId = clusterSecurityGroupId;
         this.endpointPrivateAccess = endpointPrivateAccess;
         this.endpointPublicAccess = endpointPublicAccess;

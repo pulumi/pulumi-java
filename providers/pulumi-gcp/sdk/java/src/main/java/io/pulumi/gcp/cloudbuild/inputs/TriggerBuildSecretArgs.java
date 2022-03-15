@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
      * Cloud KMS key name to use to decrypt these envs.
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -32,7 +32,7 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
      * will be available to all build steps in this build.
      * 
      */
-    @InputImport(name="secretEnv")
+    @Import(name="secretEnv")
       private final @Nullable Output<Map<String,String>> secretEnv;
 
     public Output<Map<String,String>> getSecretEnv() {

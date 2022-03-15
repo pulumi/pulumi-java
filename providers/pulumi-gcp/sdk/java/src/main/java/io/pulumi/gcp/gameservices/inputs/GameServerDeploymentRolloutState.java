@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    @InputImport(name="defaultGameServerConfig")
+    @Import(name="defaultGameServerConfig")
       private final @Nullable Output<String> defaultGameServerConfig;
 
     public Output<String> getDefaultGameServerConfig() {
@@ -33,7 +33,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
      * 
      */
-    @InputImport(name="deploymentId")
+    @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -48,7 +48,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gameServerConfigOverrides")
+    @Import(name="gameServerConfigOverrides")
       private final @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> gameServerConfigOverrides;
 
     public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideGetArgs>> getGameServerConfigOverrides() {
@@ -60,7 +60,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class GameServerDeploymentRolloutState extends io.pulumi.resources.
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

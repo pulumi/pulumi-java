@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.pinpoint.EmailChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.EmailChannelState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,7 +34,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * The application ID.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -48,7 +48,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
      * 
      */
-    @OutputExport(name="configurationSet", type=String.class, parameters={})
+    @Export(name="configurationSet", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationSet;
 
     /**
@@ -62,7 +62,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -76,7 +76,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User <user@example.com>`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
      * 
      */
-    @OutputExport(name="fromAddress", type=String.class, parameters={})
+    @Export(name="fromAddress", type=String.class, parameters={})
     private Output<String> fromAddress;
 
     /**
@@ -90,7 +90,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * The ARN of an identity verified with SES.
      * 
      */
-    @OutputExport(name="identity", type=String.class, parameters={})
+    @Export(name="identity", type=String.class, parameters={})
     private Output<String> identity;
 
     /**
@@ -104,7 +104,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * Messages per second that can be sent.
      * 
      */
-    @OutputExport(name="messagesPerSecond", type=Integer.class, parameters={})
+    @Export(name="messagesPerSecond", type=Integer.class, parameters={})
     private Output<Integer> messagesPerSecond;
 
     /**
@@ -118,7 +118,7 @@ public class EmailChannel extends io.pulumi.resources.CustomResource {
      * The ARN of an IAM Role used to submit events to Mobile Analytics' event ingestion service.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**

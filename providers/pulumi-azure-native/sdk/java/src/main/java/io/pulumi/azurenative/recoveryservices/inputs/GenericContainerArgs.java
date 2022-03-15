@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.inputs.GenericContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -40,7 +40,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'GenericContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
     public Output<String> getContainerType() {
@@ -51,7 +51,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Extended information (not returned in List container API calls)
      * 
      */
-    @InputImport(name="extendedInformation")
+    @Import(name="extendedInformation")
       private final @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
 
     public Output<GenericContainerExtendedInfoArgs> getExtendedInformation() {
@@ -62,7 +62,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Name of the container's fabric
      * 
      */
-    @InputImport(name="fabricName")
+    @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -73,7 +73,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -84,7 +84,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
     public Output<String> getHealthStatus() {
@@ -95,7 +95,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
     public Output<String> getRegistrationStatus() {

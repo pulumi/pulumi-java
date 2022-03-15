@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.DdosProtectionPlanArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * The provisioning state of the DDoS protection plan resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the DDoS protection plan resource. It uniquely identifies the resource, even if the user changes its name or migrate the resource across subscriptions or resource groups.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -106,7 +106,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -120,7 +120,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -134,7 +134,7 @@ public class DdosProtectionPlan extends io.pulumi.resources.CustomResource {
      * The list of virtual networks associated with the DDoS protection plan resource. This list is read-only.
      * 
      */
-    @OutputExport(name="virtualNetworks", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="virtualNetworks", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualNetworks;
 
     /**

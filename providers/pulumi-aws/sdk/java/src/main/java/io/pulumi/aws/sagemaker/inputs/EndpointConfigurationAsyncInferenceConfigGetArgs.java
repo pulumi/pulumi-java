@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
      * Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
      * 
      */
-    @InputImport(name="clientConfig")
+    @Import(name="clientConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig;
 
     public Output<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> getClientConfig() {
@@ -30,7 +30,7 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
      * Specifies the configuration for asynchronous inference invocation outputs.
      * 
      */
-    @InputImport(name="outputConfig", required=true)
+    @Import(name="outputConfig", required=true)
       private final Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig;
 
     public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> getOutputConfig() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The resource you are requesting authorization to use.
      * 
      */
-    @InputImport(name="aadResourceId")
+    @Import(name="aadResourceId")
       private final @Nullable Output<Object> aadResourceId;
 
     public Output<Object> getAadResourceId() {
@@ -43,7 +43,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -54,7 +54,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
      * 
      */
-    @InputImport(name="authHeaders")
+    @Import(name="authHeaders")
       private final @Nullable Output<Object> authHeaders;
 
     public Output<Object> getAuthHeaders() {
@@ -65,7 +65,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * Type of authentication used to connect to the REST service.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<Either<String,RestServiceAuthenticationType>> authenticationType;
 
     public Output<Either<String,RestServiceAuthenticationType>> getAuthenticationType() {
@@ -76,7 +76,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="azureCloudType")
+    @Import(name="azureCloudType")
       private final @Nullable Output<Object> azureCloudType;
 
     public Output<Object> getAzureCloudType() {
@@ -87,7 +87,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -98,7 +98,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -109,7 +109,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -120,7 +120,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableServerCertificateValidation")
+    @Import(name="enableServerCertificateValidation")
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
     public Output<Object> getEnableServerCertificateValidation() {
@@ -131,7 +131,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -142,7 +142,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -153,7 +153,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The password used in Basic authentication type.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -164,7 +164,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The application's client ID used in AadServicePrincipal authentication type.
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -175,7 +175,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The application's key used in AadServicePrincipal authentication type.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
@@ -186,7 +186,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<Object> tenant;
 
     public Output<Object> getTenant() {
@@ -198,7 +198,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * Expected value is 'RestService'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -209,7 +209,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The base URL of the REST service.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<Object> url;
 
     public Output<Object> getUrl() {
@@ -220,7 +220,7 @@ public final class RestServiceLinkedServiceArgs extends io.pulumi.resources.Reso
      * The user name used in Basic authentication type.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {

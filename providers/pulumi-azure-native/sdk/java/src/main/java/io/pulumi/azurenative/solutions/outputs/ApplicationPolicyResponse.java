@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationPolicyResponse {
     /**
      * The policy name
@@ -27,11 +27,11 @@ public final class ApplicationPolicyResponse {
      */
     private final @Nullable String policyDefinitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationPolicyResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
-        @OutputCustomType.Parameter("policyDefinitionId") @Nullable String policyDefinitionId) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parameters") @Nullable String parameters,
+        @CustomType.Parameter("policyDefinitionId") @Nullable String policyDefinitionId) {
         this.name = name;
         this.parameters = parameters;
         this.policyDefinitionId = policyDefinitionId;

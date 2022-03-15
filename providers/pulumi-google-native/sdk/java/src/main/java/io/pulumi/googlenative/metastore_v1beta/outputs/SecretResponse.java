@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretResponse {
     /**
      * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
@@ -15,8 +15,8 @@ public final class SecretResponse {
      */
     private final String cloudSecret;
 
-    @OutputCustomType.Constructor
-    private SecretResponse(@OutputCustomType.Parameter("cloudSecret") String cloudSecret) {
+    @CustomType.Constructor
+    private SecretResponse(@CustomType.Parameter("cloudSecret") String cloudSecret) {
         this.cloudSecret = cloudSecret;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag {
     /**
      * Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
@@ -24,10 +24,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final @Nullable List<String> masks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag(
-        @OutputCustomType.Parameter("flags") List<String> flags,
-        @OutputCustomType.Parameter("masks") @Nullable List<String> masks) {
+        @CustomType.Parameter("flags") List<String> flags,
+        @CustomType.Parameter("masks") @Nullable List<String> masks) {
         this.flags = flags;
         this.masks = masks;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v4.inputs.CompensationEntryArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
      * Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as **base compensation entry** for the job.
      * 
      */
-    @InputImport(name="entries")
+    @Import(name="entries")
       private final @Nullable Output<List<CompensationEntryArgs>> entries;
 
     public Output<List<CompensationEntryArgs>> getEntries() {

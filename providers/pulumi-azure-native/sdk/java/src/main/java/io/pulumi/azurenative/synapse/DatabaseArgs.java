@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.synapse.enums.Kind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database in the Kusto pool.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -31,7 +31,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of the database
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -42,7 +42,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName", required=true)
+    @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -53,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

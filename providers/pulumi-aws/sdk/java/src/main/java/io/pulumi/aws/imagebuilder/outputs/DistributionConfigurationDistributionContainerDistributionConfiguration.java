@@ -4,14 +4,14 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistributionContainerDistributionConfiguration {
     /**
      * Set of tags that are attached to the container distribution configuration.
@@ -29,11 +29,11 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      */
     private final DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistributionContainerDistributionConfiguration(
-        @OutputCustomType.Parameter("containerTags") @Nullable List<String> containerTags,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("targetRepository") DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
+        @CustomType.Parameter("containerTags") @Nullable List<String> containerTags,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("targetRepository") DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
         this.containerTags = containerTags;
         this.description = description;
         this.targetRepository = targetRepository;

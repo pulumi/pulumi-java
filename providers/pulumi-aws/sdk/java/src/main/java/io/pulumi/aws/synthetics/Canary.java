@@ -12,7 +12,7 @@ import io.pulumi.aws.synthetics.outputs.CanarySchedule;
 import io.pulumi.aws.synthetics.outputs.CanaryTimeline;
 import io.pulumi.aws.synthetics.outputs.CanaryVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -43,7 +43,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Canary.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -57,7 +57,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * configuration for canary artifacts, including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See Artifact Config.
      * 
      */
-    @OutputExport(name="artifactConfig", type=CanaryArtifactConfig.class, parameters={})
+    @Export(name="artifactConfig", type=CanaryArtifactConfig.class, parameters={})
     private Output</* @Nullable */ CanaryArtifactConfig> artifactConfig;
 
     /**
@@ -71,7 +71,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
      * 
      */
-    @OutputExport(name="artifactS3Location", type=String.class, parameters={})
+    @Export(name="artifactS3Location", type=String.class, parameters={})
     private Output<String> artifactS3Location;
 
     /**
@@ -85,7 +85,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * ARN of the Lambda function that is used as your canary's engine.
      * 
      */
-    @OutputExport(name="engineArn", type=String.class, parameters={})
+    @Export(name="engineArn", type=String.class, parameters={})
     private Output<String> engineArn;
 
     /**
@@ -99,7 +99,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     /**
@@ -113,7 +113,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    @OutputExport(name="failureRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="failureRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> failureRetentionPeriod;
 
     /**
@@ -127,7 +127,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
      * 
      */
-    @OutputExport(name="handler", type=String.class, parameters={})
+    @Export(name="handler", type=String.class, parameters={})
     private Output<String> handler;
 
     /**
@@ -141,7 +141,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Name for this canary. Has a maximum length of 21 characters. Valid characters are lowercase alphanumeric, hyphen, or underscore.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Configuration block for individual canary runs. Detailed below.
      * 
      */
-    @OutputExport(name="runConfig", type=CanaryRunConfig.class, parameters={})
+    @Export(name="runConfig", type=CanaryRunConfig.class, parameters={})
     private Output<CanaryRunConfig> runConfig;
 
     /**
@@ -169,7 +169,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
      * 
      */
-    @OutputExport(name="runtimeVersion", type=String.class, parameters={})
+    @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output<String> runtimeVersion;
 
     /**
@@ -183,7 +183,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
      * 
      */
-    @OutputExport(name="s3Bucket", type=String.class, parameters={})
+    @Export(name="s3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Bucket;
 
     /**
@@ -197,7 +197,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * S3 key of your script. **Conflicts with `zip_file`.**
      * 
      */
-    @OutputExport(name="s3Key", type=String.class, parameters={})
+    @Export(name="s3Key", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Key;
 
     /**
@@ -211,7 +211,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * S3 version ID of your script. **Conflicts with `zip_file`.**
      * 
      */
-    @OutputExport(name="s3Version", type=String.class, parameters={})
+    @Export(name="s3Version", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Version;
 
     /**
@@ -225,7 +225,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
      * 
      */
-    @OutputExport(name="schedule", type=CanarySchedule.class, parameters={})
+    @Export(name="schedule", type=CanarySchedule.class, parameters={})
     private Output<CanarySchedule> schedule;
 
     /**
@@ -239,7 +239,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * ARN of the Lambda layer where Synthetics stores the canary script code.
      * 
      */
-    @OutputExport(name="sourceLocationArn", type=String.class, parameters={})
+    @Export(name="sourceLocationArn", type=String.class, parameters={})
     private Output<String> sourceLocationArn;
 
     /**
@@ -253,7 +253,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Whether to run or stop the canary.
      * 
      */
-    @OutputExport(name="startCanary", type=Boolean.class, parameters={})
+    @Export(name="startCanary", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> startCanary;
 
     /**
@@ -267,7 +267,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Canary status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -281,7 +281,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    @OutputExport(name="successRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="successRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> successRetentionPeriod;
 
     /**
@@ -295,7 +295,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -309,7 +309,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -323,7 +323,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Structure that contains information about when the canary was created, modified, and most recently run. see Timeline.
      * 
      */
-    @OutputExport(name="timelines", type=List.class, parameters={CanaryTimeline.class})
+    @Export(name="timelines", type=List.class, parameters={CanaryTimeline.class})
     private Output<List<CanaryTimeline>> timelines;
 
     /**
@@ -337,7 +337,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * Configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="vpcConfig", type=CanaryVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=CanaryVpcConfig.class, parameters={})
     private Output</* @Nullable */ CanaryVpcConfig> vpcConfig;
 
     /**
@@ -351,7 +351,7 @@ public class Canary extends io.pulumi.resources.CustomResource {
      * ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
      * 
      */
-    @OutputExport(name="zipFile", type=String.class, parameters={})
+    @Export(name="zipFile", type=String.class, parameters={})
     private Output</* @Nullable */ String> zipFile;
 
     /**

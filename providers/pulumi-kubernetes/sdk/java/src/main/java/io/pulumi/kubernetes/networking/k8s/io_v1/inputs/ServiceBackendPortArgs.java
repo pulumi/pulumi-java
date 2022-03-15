@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
      * Name is the name of the port on the Service. This is a mutually exclusive setting with "Number".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class ServiceBackendPortArgs extends io.pulumi.resources.ResourceAr
      * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with "Name".
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {

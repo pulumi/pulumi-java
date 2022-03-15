@@ -9,7 +9,7 @@ import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorAccountA
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorOrganizationAggregationSource;
 import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:configuration:ConfigurationAggregator")
 public class ConfigurationAggregator extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accountAggregationSources", type=List.class, parameters={ConfigurationAggregatorAccountAggregationSource.class})
+    @Export(name="accountAggregationSources", type=List.class, parameters={ConfigurationAggregatorAccountAggregationSource.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources;
 
     public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> getAccountAggregationSources() {
@@ -31,7 +31,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * The Amazon Resource Name (ARN) of the aggregator.
      * 
      */
-    @OutputExport(name="configurationAggregatorArn", type=String.class, parameters={})
+    @Export(name="configurationAggregatorArn", type=String.class, parameters={})
     private Output<String> configurationAggregatorArn;
 
     /**
@@ -45,7 +45,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * The name of the aggregator.
      * 
      */
-    @OutputExport(name="configurationAggregatorName", type=String.class, parameters={})
+    @Export(name="configurationAggregatorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationAggregatorName;
 
     /**
@@ -55,7 +55,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
     public Output</* @Nullable */ String> getConfigurationAggregatorName() {
         return this.configurationAggregatorName;
     }
-    @OutputExport(name="organizationAggregationSource", type=ConfigurationAggregatorOrganizationAggregationSource.class, parameters={})
+    @Export(name="organizationAggregationSource", type=ConfigurationAggregatorOrganizationAggregationSource.class, parameters={})
     private Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource;
 
     public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
@@ -65,7 +65,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * The tags for the configuration aggregator.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ConfigurationAggregatorTag.class})
+    @Export(name="tags", type=List.class, parameters={ConfigurationAggregatorTag.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorTag>> tags;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class IndexCapacityUnitsConfigurationArgs extends io.pulumi.resourc
 
     public static final IndexCapacityUnitsConfigurationArgs Empty = new IndexCapacityUnitsConfigurationArgs();
 
-    @InputImport(name="queryCapacityUnits", required=true)
+    @Import(name="queryCapacityUnits", required=true)
       private final Output<Integer> queryCapacityUnits;
 
     public Output<Integer> getQueryCapacityUnits() {
         return this.queryCapacityUnits;
     }
 
-    @InputImport(name="storageCapacityUnits", required=true)
+    @Import(name="storageCapacityUnits", required=true)
       private final Output<Integer> storageCapacityUnits;
 
     public Output<Integer> getStorageCapacityUnits() {

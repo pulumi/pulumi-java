@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileNoteResponse {
     /**
      * Provide a unique identifier to match analysis information on each specific file in a package
@@ -26,11 +26,11 @@ public final class FileNoteResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileNoteResponse(
-        @OutputCustomType.Parameter("checksum") List<String> checksum,
-        @OutputCustomType.Parameter("fileType") String fileType,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("checksum") List<String> checksum,
+        @CustomType.Parameter("fileType") String fileType,
+        @CustomType.Parameter("title") String title) {
         this.checksum = checksum;
         this.fileType = fileType;
         this.title = title;

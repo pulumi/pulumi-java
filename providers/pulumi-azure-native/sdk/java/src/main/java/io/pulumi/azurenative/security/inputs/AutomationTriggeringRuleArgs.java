@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.Operator;
 import io.pulumi.azurenative.security.enums.PropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * The expected value.
      * 
      */
-    @InputImport(name="expectedValue")
+    @Import(name="expectedValue")
       private final @Nullable Output<String> expectedValue;
 
     public Output<String> getExpectedValue() {
@@ -36,7 +36,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * A valid comparer operator to use. A case-insensitive comparison will be applied for String PropertyType.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
@@ -47,7 +47,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * The JPath of the entity model property that should be checked.
      * 
      */
-    @InputImport(name="propertyJPath")
+    @Import(name="propertyJPath")
       private final @Nullable Output<String> propertyJPath;
 
     public Output<String> getPropertyJPath() {
@@ -58,7 +58,7 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * The data type of the compared operands (string, integer, floating point number or a boolean [true/false]]
      * 
      */
-    @InputImport(name="propertyType")
+    @Import(name="propertyType")
       private final @Nullable Output<Either<String,PropertyType>> propertyType;
 
     public Output<Either<String,PropertyType>> getPropertyType() {

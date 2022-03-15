@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the maximum number of times that the job should run.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -32,7 +32,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the time at which the job will complete.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -43,7 +43,7 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the frequency of recurrence (second, minute, hour, day, week, month).
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable Output<RecurrenceFrequency> frequency;
 
     public Output<RecurrenceFrequency> getFrequency() {
@@ -54,14 +54,14 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the interval between retries.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
         return this.interval == null ? Output.empty() : this.interval;
     }
 
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<JobRecurrenceScheduleArgs> schedule;
 
     public Output<JobRecurrenceScheduleArgs> getSchedule() {

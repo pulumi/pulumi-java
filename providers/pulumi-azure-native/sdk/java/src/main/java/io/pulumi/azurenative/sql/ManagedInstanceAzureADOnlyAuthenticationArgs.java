@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * The name of server azure active directory only authentication.
      * 
      */
-    @InputImport(name="authenticationName")
+    @Import(name="authenticationName")
       private final @Nullable Output<String> authenticationName;
 
     public Output<String> getAuthenticationName() {
@@ -30,7 +30,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * Azure Active Directory only Authentication enabled.
      * 
      */
-    @InputImport(name="azureADOnlyAuthentication", required=true)
+    @Import(name="azureADOnlyAuthentication", required=true)
       private final Output<Boolean> azureADOnlyAuthentication;
 
     public Output<Boolean> getAzureADOnlyAuthentication() {
@@ -41,7 +41,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
     public Output<String> getManagedInstanceName() {
@@ -52,7 +52,7 @@ public final class ManagedInstanceAzureADOnlyAuthenticationArgs extends io.pulum
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

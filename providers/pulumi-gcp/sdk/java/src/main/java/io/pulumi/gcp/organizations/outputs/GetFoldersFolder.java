@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFoldersFolder {
     /**
      * The timestamp of when the folder was created
@@ -50,16 +50,16 @@ public final class GetFoldersFolder {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFoldersFolder(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupLabelSummary {
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private RuleGroupLabelSummary(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private RuleGroupLabelSummary(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

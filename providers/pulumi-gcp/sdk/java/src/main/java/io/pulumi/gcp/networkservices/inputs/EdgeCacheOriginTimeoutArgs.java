@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EdgeCacheOriginTimeoutArgs extends io.pulumi.resources.Resour
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
      * 
      */
-    @InputImport(name="connectTimeout")
+    @Import(name="connectTimeout")
       private final @Nullable Output<String> connectTimeout;
 
     public Output<String> getConnectTimeout() {
@@ -31,7 +31,7 @@ public final class EdgeCacheOriginTimeoutArgs extends io.pulumi.resources.Resour
      * Defaults to 5 seconds. The timeout must be a value between 1s and 15s.
      * 
      */
-    @InputImport(name="maxAttemptsTimeout")
+    @Import(name="maxAttemptsTimeout")
       private final @Nullable Output<String> maxAttemptsTimeout;
 
     public Output<String> getMaxAttemptsTimeout() {
@@ -43,7 +43,7 @@ public final class EdgeCacheOriginTimeoutArgs extends io.pulumi.resources.Resour
      * Defaults to 5 seconds. The timeout must be a value between 1s and 30s.
      * 
      */
-    @InputImport(name="responseTimeout")
+    @Import(name="responseTimeout")
       private final @Nullable Output<String> responseTimeout;
 
     public Output<String> getResponseTimeout() {

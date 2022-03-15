@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateIPAddressResponse {
     /**
      * Private IP address bound to the availability group listener.
@@ -22,10 +22,10 @@ public final class PrivateIPAddressResponse {
      */
     private final @Nullable String subnetResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateIPAddressResponse(
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId) {
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId) {
         this.ipAddress = ipAddress;
         this.subnetResourceId = subnetResourceId;
     }

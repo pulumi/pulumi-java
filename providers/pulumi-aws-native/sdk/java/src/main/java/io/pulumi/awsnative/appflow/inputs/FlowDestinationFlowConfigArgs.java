@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowDestinationConnectorPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
      * Name of destination connector profile
      * 
      */
-    @InputImport(name="connectorProfileName")
+    @Import(name="connectorProfileName")
       private final @Nullable Output<String> connectorProfileName;
 
     public Output<String> getConnectorProfileName() {
@@ -35,7 +35,7 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
      * Destination connector type
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final Output<FlowConnectorType> connectorType;
 
     public Output<FlowConnectorType> getConnectorType() {
@@ -46,7 +46,7 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
      * Destination connector details
      * 
      */
-    @InputImport(name="destinationConnectorProperties", required=true)
+    @Import(name="destinationConnectorProperties", required=true)
       private final Output<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties;
 
     public Output<FlowDestinationConnectorPropertiesArgs> getDestinationConnectorProperties() {

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.FeatureGroupTag;
 import io.pulumi.awsnative.sagemaker.outputs.OfflineStoreConfigProperties;
 import io.pulumi.awsnative.sagemaker.outputs.OnlineStoreConfigProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * Description about the FeatureGroup.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -40,7 +40,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Event Time Feature Name.
      * 
      */
-    @OutputExport(name="eventTimeFeatureName", type=String.class, parameters={})
+    @Export(name="eventTimeFeatureName", type=String.class, parameters={})
     private Output<String> eventTimeFeatureName;
 
     /**
@@ -54,7 +54,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * An Array of Feature Definition
      * 
      */
-    @OutputExport(name="featureDefinitions", type=List.class, parameters={FeatureGroupFeatureDefinition.class})
+    @Export(name="featureDefinitions", type=List.class, parameters={FeatureGroupFeatureDefinition.class})
     private Output<List<FeatureGroupFeatureDefinition>> featureDefinitions;
 
     /**
@@ -68,7 +68,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Name of the FeatureGroup.
      * 
      */
-    @OutputExport(name="featureGroupName", type=String.class, parameters={})
+    @Export(name="featureGroupName", type=String.class, parameters={})
     private Output<String> featureGroupName;
 
     /**
@@ -78,13 +78,13 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getFeatureGroupName() {
         return this.featureGroupName;
     }
-    @OutputExport(name="offlineStoreConfig", type=OfflineStoreConfigProperties.class, parameters={})
+    @Export(name="offlineStoreConfig", type=OfflineStoreConfigProperties.class, parameters={})
     private Output</* @Nullable */ OfflineStoreConfigProperties> offlineStoreConfig;
 
     public Output</* @Nullable */ OfflineStoreConfigProperties> getOfflineStoreConfig() {
         return this.offlineStoreConfig;
     }
-    @OutputExport(name="onlineStoreConfig", type=OnlineStoreConfigProperties.class, parameters={})
+    @Export(name="onlineStoreConfig", type=OnlineStoreConfigProperties.class, parameters={})
     private Output</* @Nullable */ OnlineStoreConfigProperties> onlineStoreConfig;
 
     public Output</* @Nullable */ OnlineStoreConfigProperties> getOnlineStoreConfig() {
@@ -94,7 +94,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Record Identifier Feature Name.
      * 
      */
-    @OutputExport(name="recordIdentifierFeatureName", type=String.class, parameters={})
+    @Export(name="recordIdentifierFeatureName", type=String.class, parameters={})
     private Output<String> recordIdentifierFeatureName;
 
     /**
@@ -108,7 +108,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * Role Arn
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**
@@ -122,7 +122,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * An array of key-value pair to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FeatureGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={FeatureGroupTag.class})
     private Output</* @Nullable */ List<FeatureGroupTag>> tags;
 
     /**

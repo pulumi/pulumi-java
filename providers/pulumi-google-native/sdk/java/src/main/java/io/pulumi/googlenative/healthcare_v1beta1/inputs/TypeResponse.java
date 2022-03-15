@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.FieldResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The (sub) fields this type has (if not primitive).
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final List<FieldResponse> fields;
 
     public List<FieldResponse> getFields() {
@@ -33,7 +33,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The name of this type. This would be the segment or datatype name. For example, "PID" or "XPN".
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * If this is a primitive type then this field is the type of the primitive For example, STRING. Leave unspecified for composite types.
      * 
      */
-    @InputImport(name="primitive", required=true)
+    @Import(name="primitive", required=true)
       private final String primitive;
 
     public String getPrimitive() {

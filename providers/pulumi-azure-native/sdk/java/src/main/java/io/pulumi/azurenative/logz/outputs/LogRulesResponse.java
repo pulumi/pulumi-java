@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.FilteringTagResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogRulesResponse {
     /**
      * List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
@@ -34,12 +34,12 @@ public final class LogRulesResponse {
      */
     private final @Nullable Boolean sendSubscriptionLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogRulesResponse(
-        @OutputCustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
-        @OutputCustomType.Parameter("sendAadLogs") @Nullable Boolean sendAadLogs,
-        @OutputCustomType.Parameter("sendActivityLogs") @Nullable Boolean sendActivityLogs,
-        @OutputCustomType.Parameter("sendSubscriptionLogs") @Nullable Boolean sendSubscriptionLogs) {
+        @CustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
+        @CustomType.Parameter("sendAadLogs") @Nullable Boolean sendAadLogs,
+        @CustomType.Parameter("sendActivityLogs") @Nullable Boolean sendActivityLogs,
+        @CustomType.Parameter("sendSubscriptionLogs") @Nullable Boolean sendSubscriptionLogs) {
         this.filteringTags = filteringTags;
         this.sendAadLogs = sendAadLogs;
         this.sendActivityLogs = sendActivityLogs;

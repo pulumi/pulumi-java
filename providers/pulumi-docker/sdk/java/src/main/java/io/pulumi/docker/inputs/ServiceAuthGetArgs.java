@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ServiceAuthGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceAuthGetArgs Empty = new ServiceAuthGetArgs();
 
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
         return this.password == null ? Output.empty() : this.password;
     }
 
-    @InputImport(name="serverAddress", required=true)
+    @Import(name="serverAddress", required=true)
       private final Output<String> serverAddress;
 
     public Output<String> getServerAddress() {
         return this.serverAddress;
     }
 
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

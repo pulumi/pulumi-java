@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusVersionTargetResponse {
     /**
      * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
@@ -15,8 +15,8 @@ public final class InstanceGroupManagerStatusVersionTargetResponse {
      */
     private final Boolean isReached;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerStatusVersionTargetResponse(@OutputCustomType.Parameter("isReached") Boolean isReached) {
+    @CustomType.Constructor
+    private InstanceGroupManagerStatusVersionTargetResponse(@CustomType.Parameter("isReached") Boolean isReached) {
         this.isReached = isReached;
     }
 

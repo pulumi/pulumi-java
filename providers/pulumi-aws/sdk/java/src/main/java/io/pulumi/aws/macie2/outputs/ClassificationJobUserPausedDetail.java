@@ -3,23 +3,23 @@
 
 package io.pulumi.aws.macie2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobUserPausedDetail {
     private final @Nullable String jobExpiresAt;
     private final @Nullable String jobImminentExpirationHealthEventArn;
     private final @Nullable String jobPausedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobUserPausedDetail(
-        @OutputCustomType.Parameter("jobExpiresAt") @Nullable String jobExpiresAt,
-        @OutputCustomType.Parameter("jobImminentExpirationHealthEventArn") @Nullable String jobImminentExpirationHealthEventArn,
-        @OutputCustomType.Parameter("jobPausedAt") @Nullable String jobPausedAt) {
+        @CustomType.Parameter("jobExpiresAt") @Nullable String jobExpiresAt,
+        @CustomType.Parameter("jobImminentExpirationHealthEventArn") @Nullable String jobImminentExpirationHealthEventArn,
+        @CustomType.Parameter("jobPausedAt") @Nullable String jobPausedAt) {
         this.jobExpiresAt = jobExpiresAt;
         this.jobImminentExpirationHealthEventArn = jobImminentExpirationHealthEventArn;
         this.jobPausedAt = jobPausedAt;

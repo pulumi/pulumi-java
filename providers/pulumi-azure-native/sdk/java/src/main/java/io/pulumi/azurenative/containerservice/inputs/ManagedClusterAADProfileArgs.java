@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * AAD group object IDs that will have admin role of the cluster.
      * 
      */
-    @InputImport(name="adminGroupObjectIDs")
+    @Import(name="adminGroupObjectIDs")
       private final @Nullable Output<List<String>> adminGroupObjectIDs;
 
     public Output<List<String>> getAdminGroupObjectIDs() {
@@ -35,7 +35,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * The client AAD application ID.
      * 
      */
-    @InputImport(name="clientAppID")
+    @Import(name="clientAppID")
       private final @Nullable Output<String> clientAppID;
 
     public Output<String> getClientAppID() {
@@ -46,7 +46,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * Whether to enable Azure RBAC for Kubernetes authorization.
      * 
      */
-    @InputImport(name="enableAzureRBAC")
+    @Import(name="enableAzureRBAC")
       private final @Nullable Output<Boolean> enableAzureRBAC;
 
     public Output<Boolean> getEnableAzureRBAC() {
@@ -57,7 +57,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * Whether to enable managed AAD.
      * 
      */
-    @InputImport(name="managed")
+    @Import(name="managed")
       private final @Nullable Output<Boolean> managed;
 
     public Output<Boolean> getManaged() {
@@ -68,7 +68,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * The server AAD application ID.
      * 
      */
-    @InputImport(name="serverAppID")
+    @Import(name="serverAppID")
       private final @Nullable Output<String> serverAppID;
 
     public Output<String> getServerAppID() {
@@ -79,7 +79,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * The server AAD application secret.
      * 
      */
-    @InputImport(name="serverAppSecret")
+    @Import(name="serverAppSecret")
       private final @Nullable Output<String> serverAppSecret;
 
     public Output<String> getServerAppSecret() {
@@ -90,7 +90,7 @@ public final class ManagedClusterAADProfileArgs extends io.pulumi.resources.Reso
      * The AAD tenant ID to use for authentication. If not specified, will use the tenant of the deployment subscription.
      * 
      */
-    @InputImport(name="tenantID")
+    @Import(name="tenantID")
       private final @Nullable Output<String> tenantID;
 
     public Output<String> getTenantID() {

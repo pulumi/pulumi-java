@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnLinkBgpSettingsResponse {
     /**
      * The BGP speaker's ASN.
@@ -23,10 +23,10 @@ public final class VpnLinkBgpSettingsResponse {
      */
     private final @Nullable String bgpPeeringAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnLinkBgpSettingsResponse(
-        @OutputCustomType.Parameter("asn") @Nullable Double asn,
-        @OutputCustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress) {
+        @CustomType.Parameter("asn") @Nullable Double asn,
+        @CustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
     }

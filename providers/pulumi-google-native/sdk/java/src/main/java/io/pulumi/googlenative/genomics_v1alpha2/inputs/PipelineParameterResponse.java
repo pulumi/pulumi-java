@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.LocalCopyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
      * 
      */
-    @InputImport(name="defaultValue", required=true)
+    @Import(name="defaultValue", required=true)
       private final String defaultValue;
 
     public String getDefaultValue() {
@@ -32,7 +32,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * Human-readable description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * If present, this parameter is marked for copying to and from the VM. `LocalCopy` indicates where on the VM the file should be. The value given to this parameter (either at runtime or using `defaultValue`) must be the remote path where the file should be.
      * 
      */
-    @InputImport(name="localCopy", required=true)
+    @Import(name="localCopy", required=true)
       private final LocalCopyResponse localCopy;
 
     public LocalCopyResponse getLocalCopy() {
@@ -54,7 +54,7 @@ public final class PipelineParameterResponse extends io.pulumi.resources.InvokeA
      * Name of the parameter - the pipeline runner uses this string as the key to the input and output maps in RunPipeline.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

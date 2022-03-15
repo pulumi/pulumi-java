@@ -8,14 +8,14 @@ import io.pulumi.awsnative.kendra.outputs.IndexCapacityUnitsConfiguration;
 import io.pulumi.awsnative.kendra.outputs.IndexDocumentMetadataConfiguration;
 import io.pulumi.awsnative.kendra.outputs.IndexTag;
 import io.pulumi.awsnative.kendra.outputs.IndexUserTokenConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIndexResult {
     private final @Nullable String arn;
     /**
@@ -44,18 +44,18 @@ public final class GetIndexResult {
     private final @Nullable IndexUserContextPolicy userContextPolicy;
     private final @Nullable List<IndexUserTokenConfiguration> userTokenConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIndexResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("capacityUnits") @Nullable IndexCapacityUnitsConfiguration capacityUnits,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("documentMetadataConfigurations") @Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<IndexTag> tags,
-        @OutputCustomType.Parameter("userContextPolicy") @Nullable IndexUserContextPolicy userContextPolicy,
-        @OutputCustomType.Parameter("userTokenConfigurations") @Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("capacityUnits") @Nullable IndexCapacityUnitsConfiguration capacityUnits,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("documentMetadataConfigurations") @Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<IndexTag> tags,
+        @CustomType.Parameter("userContextPolicy") @Nullable IndexUserContextPolicy userContextPolicy,
+        @CustomType.Parameter("userTokenConfigurations") @Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
         this.arn = arn;
         this.capacityUnits = capacityUnits;
         this.description = description;

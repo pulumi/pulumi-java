@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput {
     /**
      * The ARN of the destination delivery stream to write to.
@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String resourceArn;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput(@OutputCustomType.Parameter("resourceArn") String resourceArn) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput(@CustomType.Parameter("resourceArn") String resourceArn) {
         this.resourceArn = resourceArn;
     }
 

@@ -6,13 +6,13 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyCookiesConfig;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyHeadersConfig;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyQueryStringsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
     private final CachePolicyCookiesConfig cookiesConfig;
     private final @Nullable Boolean enableAcceptEncodingBrotli;
@@ -20,13 +20,13 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
     private final CachePolicyHeadersConfig headersConfig;
     private final CachePolicyQueryStringsConfig queryStringsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CachePolicyParametersInCacheKeyAndForwardedToOrigin(
-        @OutputCustomType.Parameter("cookiesConfig") CachePolicyCookiesConfig cookiesConfig,
-        @OutputCustomType.Parameter("enableAcceptEncodingBrotli") @Nullable Boolean enableAcceptEncodingBrotli,
-        @OutputCustomType.Parameter("enableAcceptEncodingGzip") Boolean enableAcceptEncodingGzip,
-        @OutputCustomType.Parameter("headersConfig") CachePolicyHeadersConfig headersConfig,
-        @OutputCustomType.Parameter("queryStringsConfig") CachePolicyQueryStringsConfig queryStringsConfig) {
+        @CustomType.Parameter("cookiesConfig") CachePolicyCookiesConfig cookiesConfig,
+        @CustomType.Parameter("enableAcceptEncodingBrotli") @Nullable Boolean enableAcceptEncodingBrotli,
+        @CustomType.Parameter("enableAcceptEncodingGzip") Boolean enableAcceptEncodingGzip,
+        @CustomType.Parameter("headersConfig") CachePolicyHeadersConfig headersConfig,
+        @CustomType.Parameter("queryStringsConfig") CachePolicyQueryStringsConfig queryStringsConfig) {
         this.cookiesConfig = cookiesConfig;
         this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
         this.enableAcceptEncodingGzip = enableAcceptEncodingGzip;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
     }
 
-    @InputImport(name="dataSourceId", required=true)
+    @Import(name="dataSourceId", required=true)
       private final String dataSourceId;
 
     public String getDataSourceId() {

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowDynatraceSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor
-    private FlowDynatraceSourceProperties(@OutputCustomType.Parameter("object") String object) {
+    @CustomType.Constructor
+    private FlowDynatraceSourceProperties(@CustomType.Parameter("object") String object) {
         this.object = object;
     }
 

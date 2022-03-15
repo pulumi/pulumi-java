@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleRateLimitOptionsThresholdResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleRedirectOptionsResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleRateLimitOptionsResponse {
     /**
      * Can only be specified if the action for the rule is "rate_based_ban". If specified, determines the time (in seconds) the traffic will continue to be banned by the rate limit after the rate falls below the threshold.
@@ -53,16 +53,16 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse {
      */
     private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsResponse(
-        @OutputCustomType.Parameter("banDurationSec") Integer banDurationSec,
-        @OutputCustomType.Parameter("banThreshold") SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold,
-        @OutputCustomType.Parameter("conformAction") String conformAction,
-        @OutputCustomType.Parameter("enforceOnKey") String enforceOnKey,
-        @OutputCustomType.Parameter("enforceOnKeyName") String enforceOnKeyName,
-        @OutputCustomType.Parameter("exceedAction") String exceedAction,
-        @OutputCustomType.Parameter("exceedRedirectOptions") SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions,
-        @OutputCustomType.Parameter("rateLimitThreshold") SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
+        @CustomType.Parameter("banDurationSec") Integer banDurationSec,
+        @CustomType.Parameter("banThreshold") SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold,
+        @CustomType.Parameter("conformAction") String conformAction,
+        @CustomType.Parameter("enforceOnKey") String enforceOnKey,
+        @CustomType.Parameter("enforceOnKeyName") String enforceOnKeyName,
+        @CustomType.Parameter("exceedAction") String exceedAction,
+        @CustomType.Parameter("exceedRedirectOptions") SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions,
+        @CustomType.Parameter("rateLimitThreshold") SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
         this.banDurationSec = banDurationSec;
         this.banThreshold = banThreshold;
         this.conformAction = conformAction;

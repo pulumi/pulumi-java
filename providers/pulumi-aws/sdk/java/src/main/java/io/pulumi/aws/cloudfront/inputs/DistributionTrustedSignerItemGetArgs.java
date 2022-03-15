@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
      * AWS account ID or `self`
      * 
      */
-    @InputImport(name="awsAccountNumber")
+    @Import(name="awsAccountNumber")
       private final @Nullable Output<String> awsAccountNumber;
 
     public Output<String> getAwsAccountNumber() {
@@ -30,7 +30,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
      * Set of active CloudFront key pairs associated with the signer account
      * 
      */
-    @InputImport(name="keyPairIds")
+    @Import(name="keyPairIds")
       private final @Nullable Output<List<String>> keyPairIds;
 
     public Output<List<String>> getKeyPairIds() {

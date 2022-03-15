@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Output.empty() : this.annotations;
     }
 
-    @InputImport(name="deliveryPipelineId", required=true)
+    @Import(name="deliveryPipelineId", required=true)
       private final Output<String> deliveryPipelineId;
 
     public Output<String> getDeliveryPipelineId() {
@@ -37,7 +37,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the `Rollout` for user purposes. Max length is 255 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -59,14 +59,14 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,35 +77,35 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="releaseId", required=true)
+    @Import(name="releaseId", required=true)
       private final Output<String> releaseId;
 
     public Output<String> getReleaseId() {
         return this.releaseId;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="rolloutId", required=true)
+    @Import(name="rolloutId", required=true)
       private final Output<String> rolloutId;
 
     public Output<String> getRolloutId() {
@@ -116,14 +116,14 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of Target to which this `Rollout` is deploying.
      * 
      */
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
     public Output<String> getTargetId() {
         return this.targetId;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

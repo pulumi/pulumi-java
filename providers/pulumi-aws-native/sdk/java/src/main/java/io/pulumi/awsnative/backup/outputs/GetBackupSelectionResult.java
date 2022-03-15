@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupSelectionResult {
     private final @Nullable String id;
     private final @Nullable String selectionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupSelectionResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("selectionId") @Nullable String selectionId) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("selectionId") @Nullable String selectionId) {
         this.id = id;
         this.selectionId = selectionId;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SelectionConditionStringLikeGetArgs extends io.pulumi.resourc
      * The key in a key-value pair.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -28,7 +28,7 @@ public final class SelectionConditionStringLikeGetArgs extends io.pulumi.resourc
      * The value in a key-value pair.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionIamPolicyArgs;
@@ -14,31 +14,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:cloudfunctions/functionIamPolicy:FunctionIamPolicy")
 public class FunctionIamPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="cloudFunction", type=String.class, parameters={})
+    @Export(name="cloudFunction", type=String.class, parameters={})
     private Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
         return this.cloudFunction;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     public Output<String> getPolicyData() {
         return this.policyData;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     public Output<String> getRegion() {

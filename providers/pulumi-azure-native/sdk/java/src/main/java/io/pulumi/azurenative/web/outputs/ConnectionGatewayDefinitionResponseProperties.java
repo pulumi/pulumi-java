@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConnectionGatewayReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionGatewayDefinitionResponseProperties {
     /**
      * The URI of the backend
@@ -50,15 +50,15 @@ public final class ConnectionGatewayDefinitionResponseProperties {
      */
     private final @Nullable Object status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionGatewayDefinitionResponseProperties(
-        @OutputCustomType.Parameter("backendUri") @Nullable String backendUri,
-        @OutputCustomType.Parameter("connectionGatewayInstallation") @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
-        @OutputCustomType.Parameter("contactInformation") @Nullable List<String> contactInformation,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("machineName") @Nullable String machineName,
-        @OutputCustomType.Parameter("status") @Nullable Object status) {
+        @CustomType.Parameter("backendUri") @Nullable String backendUri,
+        @CustomType.Parameter("connectionGatewayInstallation") @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
+        @CustomType.Parameter("contactInformation") @Nullable List<String> contactInformation,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("machineName") @Nullable String machineName,
+        @CustomType.Parameter("status") @Nullable Object status) {
         this.backendUri = backendUri;
         this.connectionGatewayInstallation = connectionGatewayInstallation;
         this.contactInformation = contactInformation;

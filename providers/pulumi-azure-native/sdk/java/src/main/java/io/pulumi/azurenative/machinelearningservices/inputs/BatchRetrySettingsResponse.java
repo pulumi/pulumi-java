@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
      * Maximum retry count for a mini-batch
      * 
      */
-    @InputImport(name="maxRetries")
+    @Import(name="maxRetries")
       private final @Nullable Integer maxRetries;
 
     public Optional<Integer> getMaxRetries() {
@@ -34,7 +34,7 @@ public final class BatchRetrySettingsResponse extends io.pulumi.resources.Invoke
      * Invocation timeout for a mini-batch, in ISO 8601 format.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {

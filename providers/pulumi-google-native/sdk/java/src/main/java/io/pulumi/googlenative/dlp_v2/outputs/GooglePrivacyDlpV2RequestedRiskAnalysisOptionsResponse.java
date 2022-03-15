@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RiskAnalysisJobConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
     /**
      * The job config for the risk job.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
      */
     private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(@OutputCustomType.Parameter("jobConfig") GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(@CustomType.Parameter("jobConfig") GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
         this.jobConfig = jobConfig;
     }
 

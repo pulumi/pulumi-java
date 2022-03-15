@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceAttachmentToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluenceAttachmentConfiguration {
     private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
     private final @Nullable Boolean crawlAttachments;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfluenceAttachmentConfiguration(
-        @OutputCustomType.Parameter("attachmentFieldMappings") @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings,
-        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments) {
+        @CustomType.Parameter("attachmentFieldMappings") @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings,
+        @CustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments) {
         this.attachmentFieldMappings = attachmentFieldMappings;
         this.crawlAttachments = crawlAttachments;
     }

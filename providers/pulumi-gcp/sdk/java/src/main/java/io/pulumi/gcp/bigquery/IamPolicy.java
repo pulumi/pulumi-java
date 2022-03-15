@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.IamPolicyArgs;
@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:bigquery/iamPolicy:IamPolicy")
 public class IamPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -70,7 +70,7 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -85,7 +85,7 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -101,7 +101,7 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -112,7 +112,7 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="tableId", type=String.class, parameters={})
+    @Export(name="tableId", type=String.class, parameters={})
     private Output<String> tableId;
 
     public Output<String> getTableId() {

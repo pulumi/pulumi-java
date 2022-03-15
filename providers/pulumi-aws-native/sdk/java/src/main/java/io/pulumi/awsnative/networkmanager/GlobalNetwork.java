@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkmanager.GlobalNetworkArgs;
 import io.pulumi.awsnative.networkmanager.outputs.GlobalNetworkTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the global network.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * The description of the global network.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -53,7 +53,7 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
      * The tags for the global network.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={GlobalNetworkTag.class})
+    @Export(name="tags", type=List.class, parameters={GlobalNetworkTag.class})
     private Output</* @Nullable */ List<GlobalNetworkTag>> tags;
 
     /**

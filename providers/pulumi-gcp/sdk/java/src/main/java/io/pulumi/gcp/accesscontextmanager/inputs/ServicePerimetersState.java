@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -33,7 +33,7 @@ public final class ServicePerimetersState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="servicePerimeters")
+    @Import(name="servicePerimeters")
       private final @Nullable Output<List<ServicePerimetersServicePerimeterGetArgs>> servicePerimeters;
 
     public Output<List<ServicePerimetersServicePerimeterGetArgs>> getServicePerimeters() {

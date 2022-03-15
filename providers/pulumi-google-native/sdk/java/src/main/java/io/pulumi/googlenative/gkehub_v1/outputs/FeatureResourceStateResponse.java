@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FeatureResourceStateResponse {
     /**
      * The current state of the Feature resource in the Hub API.
@@ -15,8 +15,8 @@ public final class FeatureResourceStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
-    private FeatureResourceStateResponse(@OutputCustomType.Parameter("state") String state) {
+    @CustomType.Constructor
+    private FeatureResourceStateResponse(@CustomType.Parameter("state") String state) {
         this.state = state;
     }
 

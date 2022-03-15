@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends io.pulumi
      * The name of the base entitlement, for which this entitlement is an add-on.
      * 
      */
-    @InputImport(name="baseEntitlement", required=true)
+    @Import(name="baseEntitlement", required=true)
       private final String baseEntitlement;
 
     public String getBaseEntitlement() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InAppTemplateDefaultButtonConfiguration {
     private final @Nullable String backgroundColor;
     private final @Nullable Integer borderRadius;
@@ -20,14 +20,14 @@ public final class InAppTemplateDefaultButtonConfiguration {
     private final @Nullable String text;
     private final @Nullable String textColor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InAppTemplateDefaultButtonConfiguration(
-        @OutputCustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
-        @OutputCustomType.Parameter("borderRadius") @Nullable Integer borderRadius,
-        @OutputCustomType.Parameter("buttonAction") @Nullable InAppTemplateButtonAction buttonAction,
-        @OutputCustomType.Parameter("link") @Nullable String link,
-        @OutputCustomType.Parameter("text") @Nullable String text,
-        @OutputCustomType.Parameter("textColor") @Nullable String textColor) {
+        @CustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
+        @CustomType.Parameter("borderRadius") @Nullable Integer borderRadius,
+        @CustomType.Parameter("buttonAction") @Nullable InAppTemplateButtonAction buttonAction,
+        @CustomType.Parameter("link") @Nullable String link,
+        @CustomType.Parameter("text") @Nullable String text,
+        @CustomType.Parameter("textColor") @Nullable String textColor) {
         this.backgroundColor = backgroundColor;
         this.borderRadius = borderRadius;
         this.buttonAction = buttonAction;

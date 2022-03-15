@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeCustomerVirtua
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeSsisPropertiesArgs;
 import io.pulumi.azurenative.datafactory.inputs.ManagedVirtualNetworkReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * The compute resource for managed integration runtime.
      * 
      */
-    @InputImport(name="computeProperties")
+    @Import(name="computeProperties")
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
     public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
@@ -37,7 +37,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * The name of virtual network to which Azure-SSIS integration runtime will join
      * 
      */
-    @InputImport(name="customerVirtualNetwork")
+    @Import(name="customerVirtualNetwork")
       private final @Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
 
     public Output<IntegrationRuntimeCustomerVirtualNetworkArgs> getCustomerVirtualNetwork() {
@@ -48,7 +48,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * Integration runtime description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * Managed Virtual Network reference.
      * 
      */
-    @InputImport(name="managedVirtualNetwork")
+    @Import(name="managedVirtualNetwork")
       private final @Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
 
     public Output<ManagedVirtualNetworkReferenceArgs> getManagedVirtualNetwork() {
@@ -70,7 +70,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * SSIS properties for managed integration runtime.
      * 
      */
-    @InputImport(name="ssisProperties")
+    @Import(name="ssisProperties")
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
     public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
@@ -82,7 +82,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * Expected value is 'Managed'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

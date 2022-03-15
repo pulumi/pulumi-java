@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkservices_v1beta1.ServiceBindingArgs;
@@ -22,7 +22,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * Optional. A free-text description of the resource. Max length 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * Optional. The endpoint filter associated with the Service Binding. The syntax is described in http://cloud/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#google.cloud.servicedirectory.v1.ResolveServiceRequest
      * 
      */
-    @OutputExport(name="endpointFilter", type=String.class, parameters={})
+    @Export(name="endpointFilter", type=String.class, parameters={})
     private Output<String> endpointFilter;
 
     /**
@@ -64,7 +64,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * Optional. Set of label tags associated with the ServiceBinding resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -78,7 +78,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * Name of the ServiceBinding resource. It matches pattern `projects/*{@literal /}locations/global/serviceBindings/service_binding_name>`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * The full service directory service name of the format /projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -106,7 +106,7 @@ public class ServiceBinding extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

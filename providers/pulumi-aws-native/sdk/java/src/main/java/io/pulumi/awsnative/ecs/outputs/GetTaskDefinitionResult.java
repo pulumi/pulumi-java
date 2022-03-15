@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskDefinitionResult {
     private final @Nullable List<TaskDefinitionTag> tags;
     /**
@@ -20,10 +20,10 @@ public final class GetTaskDefinitionResult {
      */
     private final @Nullable String taskDefinitionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskDefinitionResult(
-        @OutputCustomType.Parameter("tags") @Nullable List<TaskDefinitionTag> tags,
-        @OutputCustomType.Parameter("taskDefinitionArn") @Nullable String taskDefinitionArn) {
+        @CustomType.Parameter("tags") @Nullable List<TaskDefinitionTag> tags,
+        @CustomType.Parameter("taskDefinitionArn") @Nullable String taskDefinitionArn) {
         this.tags = tags;
         this.taskDefinitionArn = taskDefinitionArn;
     }

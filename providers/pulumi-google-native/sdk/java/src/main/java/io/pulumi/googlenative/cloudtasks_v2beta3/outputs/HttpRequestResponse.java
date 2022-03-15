@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.OidcTokenResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRequestResponse {
     /**
      * HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a task with an incompatible HttpMethod.
@@ -43,14 +43,14 @@ public final class HttpRequestResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRequestResponse(
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("headers") Map<String,String> headers,
-        @OutputCustomType.Parameter("httpMethod") String httpMethod,
-        @OutputCustomType.Parameter("oauthToken") OAuthTokenResponse oauthToken,
-        @OutputCustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("headers") Map<String,String> headers,
+        @CustomType.Parameter("httpMethod") String httpMethod,
+        @CustomType.Parameter("oauthToken") OAuthTokenResponse oauthToken,
+        @CustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
+        @CustomType.Parameter("url") String url) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;

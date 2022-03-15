@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VMResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * The unique Bastion Shareable Link to the virtual machine.
      * 
      */
-    @InputImport(name="bsl", required=true)
+    @Import(name="bsl", required=true)
       private final String bsl;
 
     public String getBsl() {
@@ -32,7 +32,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * The time when the link was created.
      * 
      */
-    @InputImport(name="createdAt", required=true)
+    @Import(name="createdAt", required=true)
       private final String createdAt;
 
     public String getCreatedAt() {
@@ -43,7 +43,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * Optional field indicating the warning or error message related to the vm in case of partial failure.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -54,7 +54,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * Reference of the virtual machine resource.
      * 
      */
-    @InputImport(name="vm", required=true)
+    @Import(name="vm", required=true)
       private final VMResponse vm;
 
     public VMResponse getVm() {

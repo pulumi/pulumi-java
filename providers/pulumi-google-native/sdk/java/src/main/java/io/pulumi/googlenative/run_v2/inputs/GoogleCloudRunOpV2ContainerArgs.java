@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerPortArgs;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarArgs;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ResourceRequirementsArgs;
@@ -27,7 +27,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -38,7 +38,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -49,7 +49,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * List of environment variables to set in the container.
      * 
      */
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
 
     public Output<List<GoogleCloudRunOpV2EnvVarArgs>> getEnv() {
@@ -60,7 +60,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * URL of the Container image in Google Container Registry or Docker More info: https://kubernetes.io/docs/concepts/containers/images
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -71,7 +71,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * Name of the container specified as a DNS_LABEL.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
 
     public Output<List<GoogleCloudRunOpV2ContainerPortArgs>> getPorts() {
@@ -93,7 +93,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
 
     public Output<GoogleCloudRunOpV2ResourceRequirementsArgs> getResources() {
@@ -104,7 +104,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends io.pulumi.resources.R
      * Volume to mount into the container's filesystem.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
 
     public Output<List<GoogleCloudRunOpV2VolumeMountArgs>> getVolumeMounts() {

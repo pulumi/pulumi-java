@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<KeyRingIAMBindingConditionGetArgs> condition;
 
     public Output<KeyRingIAMBindingConditionGetArgs> getCondition() {
@@ -32,7 +32,7 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -46,14 +46,14 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="keyRingId")
+    @Import(name="keyRingId")
       private final @Nullable Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
         return this.keyRingId == null ? Output.empty() : this.keyRingId;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -66,7 +66,7 @@ public final class KeyRingIAMBindingState extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

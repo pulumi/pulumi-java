@@ -6,12 +6,12 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebBasicAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
@@ -35,12 +35,12 @@ public final class WebBasicAuthenticationResponse {
      */
     private final Object username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebBasicAuthenticationResponse(
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("url") Object url,
-        @OutputCustomType.Parameter("username") Object username) {
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("url") Object url,
+        @CustomType.Parameter("username") Object username) {
         this.authenticationType = authenticationType;
         this.password = password;
         this.url = url;

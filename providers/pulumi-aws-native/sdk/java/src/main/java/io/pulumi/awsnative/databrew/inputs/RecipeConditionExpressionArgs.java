@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * Input condition to be applied to the target column
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final Output<String> condition;
 
     public Output<String> getCondition() {
@@ -33,7 +33,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * Name of the target column
      * 
      */
-    @InputImport(name="targetColumn", required=true)
+    @Import(name="targetColumn", required=true)
       private final Output<String> targetColumn;
 
     public Output<String> getTargetColumn() {
@@ -44,7 +44,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
      * Value of the condition
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.TriggerResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricAbsenceResponse {
     /**
      * Specifies the alignment of data points in individual time series as well as how to combine the retrieved time series together (such as when aggregating multiple streams on each resource to a single stream for each resource or when aggregating streams across all members of a group of resources). Multiple aggregations are applied in the order specified.This field is similar to the one in the ListTimeSeries request (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.timeSeries/list). It is advisable to use the ListTimeSeries method when debugging this field.
@@ -33,12 +33,12 @@ public final class MetricAbsenceResponse {
      */
     private final TriggerResponse trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricAbsenceResponse(
-        @OutputCustomType.Parameter("aggregations") List<AggregationResponse> aggregations,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("trigger") TriggerResponse trigger) {
+        @CustomType.Parameter("aggregations") List<AggregationResponse> aggregations,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("trigger") TriggerResponse trigger) {
         this.aggregations = aggregations;
         this.duration = duration;
         this.filter = filter;

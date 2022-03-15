@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SmbFileShareCacheAttributesGetArgs extends io.pulumi.resource
      * to first refresh that directory's contents from the Amazon S3 bucket. Valid Values: 300 to 2,592,000 seconds (5 minutes to 30 days)
      * 
      */
-    @InputImport(name="cacheStaleTimeoutInSeconds")
+    @Import(name="cacheStaleTimeoutInSeconds")
       private final @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
     public Output<Integer> getCacheStaleTimeoutInSeconds() {

@@ -14,7 +14,7 @@ import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionNetworkCon
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionStoppingCondition;
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * The time at which the job definition was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -44,7 +44,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    @OutputExport(name="jobDefinitionArn", type=String.class, parameters={})
+    @Export(name="jobDefinitionArn", type=String.class, parameters={})
     private Output<String> jobDefinitionArn;
 
     /**
@@ -54,43 +54,43 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
     public Output<String> getJobDefinitionArn() {
         return this.jobDefinitionArn;
     }
-    @OutputExport(name="jobDefinitionName", type=String.class, parameters={})
+    @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
     public Output</* @Nullable */ String> getJobDefinitionName() {
         return this.jobDefinitionName;
     }
-    @OutputExport(name="jobResources", type=ModelQualityJobDefinitionMonitoringResources.class, parameters={})
+    @Export(name="jobResources", type=ModelQualityJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelQualityJobDefinitionMonitoringResources> jobResources;
 
     public Output<ModelQualityJobDefinitionMonitoringResources> getJobResources() {
         return this.jobResources;
     }
-    @OutputExport(name="modelQualityAppSpecification", type=ModelQualityJobDefinitionModelQualityAppSpecification.class, parameters={})
+    @Export(name="modelQualityAppSpecification", type=ModelQualityJobDefinitionModelQualityAppSpecification.class, parameters={})
     private Output<ModelQualityJobDefinitionModelQualityAppSpecification> modelQualityAppSpecification;
 
     public Output<ModelQualityJobDefinitionModelQualityAppSpecification> getModelQualityAppSpecification() {
         return this.modelQualityAppSpecification;
     }
-    @OutputExport(name="modelQualityBaselineConfig", type=ModelQualityJobDefinitionModelQualityBaselineConfig.class, parameters={})
+    @Export(name="modelQualityBaselineConfig", type=ModelQualityJobDefinitionModelQualityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelQualityJobDefinitionModelQualityBaselineConfig> modelQualityBaselineConfig;
 
     public Output</* @Nullable */ ModelQualityJobDefinitionModelQualityBaselineConfig> getModelQualityBaselineConfig() {
         return this.modelQualityBaselineConfig;
     }
-    @OutputExport(name="modelQualityJobInput", type=ModelQualityJobDefinitionModelQualityJobInput.class, parameters={})
+    @Export(name="modelQualityJobInput", type=ModelQualityJobDefinitionModelQualityJobInput.class, parameters={})
     private Output<ModelQualityJobDefinitionModelQualityJobInput> modelQualityJobInput;
 
     public Output<ModelQualityJobDefinitionModelQualityJobInput> getModelQualityJobInput() {
         return this.modelQualityJobInput;
     }
-    @OutputExport(name="modelQualityJobOutputConfig", type=ModelQualityJobDefinitionMonitoringOutputConfig.class, parameters={})
+    @Export(name="modelQualityJobOutputConfig", type=ModelQualityJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<ModelQualityJobDefinitionMonitoringOutputConfig> modelQualityJobOutputConfig;
 
     public Output<ModelQualityJobDefinitionMonitoringOutputConfig> getModelQualityJobOutputConfig() {
         return this.modelQualityJobOutputConfig;
     }
-    @OutputExport(name="networkConfig", type=ModelQualityJobDefinitionNetworkConfig.class, parameters={})
+    @Export(name="networkConfig", type=ModelQualityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelQualityJobDefinitionNetworkConfig> networkConfig;
 
     public Output</* @Nullable */ ModelQualityJobDefinitionNetworkConfig> getNetworkConfig() {
@@ -100,7 +100,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -110,7 +110,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="stoppingCondition", type=ModelQualityJobDefinitionStoppingCondition.class, parameters={})
+    @Export(name="stoppingCondition", type=ModelQualityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelQualityJobDefinitionStoppingCondition> stoppingCondition;
 
     public Output</* @Nullable */ ModelQualityJobDefinitionStoppingCondition> getStoppingCondition() {
@@ -120,7 +120,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ModelQualityJobDefinitionTag.class})
+    @Export(name="tags", type=List.class, parameters={ModelQualityJobDefinitionTag.class})
     private Output</* @Nullable */ List<ModelQualityJobDefinitionTag>> tags;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,63 +14,63 @@ public final class GetTargetGroupHealthCheck extends io.pulumi.resources.InvokeA
 
     public static final GetTargetGroupHealthCheck Empty = new GetTargetGroupHealthCheck();
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="healthyThreshold", required=true)
+    @Import(name="healthyThreshold", required=true)
       private final Integer healthyThreshold;
 
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
     }
 
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Integer interval;
 
     public Integer getInterval() {
         return this.interval;
     }
 
-    @InputImport(name="matcher", required=true)
+    @Import(name="matcher", required=true)
       private final String matcher;
 
     public String getMatcher() {
         return this.matcher;
     }
 
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
         return this.path;
     }
 
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final String port;
 
     public String getPort() {
         return this.port;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
     }
 
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final Integer timeout;
 
     public Integer getTimeout() {
         return this.timeout;
     }
 
-    @InputImport(name="unhealthyThreshold", required=true)
+    @Import(name="unhealthyThreshold", required=true)
       private final Integer unhealthyThreshold;
 
     public Integer getUnhealthyThreshold() {

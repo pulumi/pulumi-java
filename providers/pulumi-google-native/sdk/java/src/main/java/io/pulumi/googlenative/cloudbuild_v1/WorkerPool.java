@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.WorkerPoolArgs;
@@ -24,7 +24,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
@@ -38,7 +38,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -66,7 +66,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -94,7 +94,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * The resource name of the `WorkerPool`, with format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. The value of `{worker_pool}` is provided by `worker_pool_id` in `CreateWorkerPool` request and the value of `{location}` is determined by the endpoint accessed.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Legacy Private Pool configuration.
      * 
      */
-    @OutputExport(name="privatePoolV1Config", type=PrivatePoolV1ConfigResponse.class, parameters={})
+    @Export(name="privatePoolV1Config", type=PrivatePoolV1ConfigResponse.class, parameters={})
     private Output<PrivatePoolV1ConfigResponse> privatePoolV1Config;
 
     /**
@@ -122,7 +122,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * `WorkerPool` state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -136,7 +136,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * A unique identifier for the `WorkerPool`.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -150,7 +150,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

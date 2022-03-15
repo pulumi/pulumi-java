@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleHttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleRateLimitOptionsResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleResponse {
     /**
      * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
@@ -97,24 +97,24 @@ public final class SecurityPolicyRuleResponse {
      */
     private final List<String> targetServiceAccounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
-        @OutputCustomType.Parameter("headerAction") SecurityPolicyRuleHttpHeaderActionResponse headerAction,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("match") SecurityPolicyRuleMatcherResponse match,
-        @OutputCustomType.Parameter("preview") Boolean preview,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("rateLimitOptions") SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
-        @OutputCustomType.Parameter("redirectOptions") SecurityPolicyRuleRedirectOptionsResponse redirectOptions,
-        @OutputCustomType.Parameter("redirectTarget") String redirectTarget,
-        @OutputCustomType.Parameter("ruleNumber") String ruleNumber,
-        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
-        @OutputCustomType.Parameter("targetResources") List<String> targetResources,
-        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("enableLogging") Boolean enableLogging,
+        @CustomType.Parameter("headerAction") SecurityPolicyRuleHttpHeaderActionResponse headerAction,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("match") SecurityPolicyRuleMatcherResponse match,
+        @CustomType.Parameter("preview") Boolean preview,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("rateLimitOptions") SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
+        @CustomType.Parameter("redirectOptions") SecurityPolicyRuleRedirectOptionsResponse redirectOptions,
+        @CustomType.Parameter("redirectTarget") String redirectTarget,
+        @CustomType.Parameter("ruleNumber") String ruleNumber,
+        @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @CustomType.Parameter("targetResources") List<String> targetResources,
+        @CustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
         this.action = action;
         this.description = description;
         this.direction = direction;

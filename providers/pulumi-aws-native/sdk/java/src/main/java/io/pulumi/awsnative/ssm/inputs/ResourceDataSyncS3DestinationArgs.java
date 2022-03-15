@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
 
     public static final ResourceDataSyncS3DestinationArgs Empty = new ResourceDataSyncS3DestinationArgs();
 
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName;
     }
 
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
-    @InputImport(name="bucketRegion", required=true)
+    @Import(name="bucketRegion", required=true)
       private final Output<String> bucketRegion;
 
     public Output<String> getBucketRegion() {
         return this.bucketRegion;
     }
 
-    @InputImport(name="kMSKeyArn")
+    @Import(name="kMSKeyArn")
       private final @Nullable Output<String> kMSKeyArn;
 
     public Output<String> getKMSKeyArn() {
         return this.kMSKeyArn == null ? Output.empty() : this.kMSKeyArn;
     }
 
-    @InputImport(name="syncFormat", required=true)
+    @Import(name="syncFormat", required=true)
       private final Output<String> syncFormat;
 
     public Output<String> getSyncFormat() {

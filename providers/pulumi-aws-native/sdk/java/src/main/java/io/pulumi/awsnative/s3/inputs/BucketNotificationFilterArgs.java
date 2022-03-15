@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketS3KeyFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class BucketNotificationFilterArgs extends io.pulumi.resources.Reso
 
     public static final BucketNotificationFilterArgs Empty = new BucketNotificationFilterArgs();
 
-    @InputImport(name="s3Key", required=true)
+    @Import(name="s3Key", required=true)
       private final Output<BucketS3KeyFilterArgs> s3Key;
 
     public Output<BucketS3KeyFilterArgs> getS3Key() {

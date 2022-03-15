@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleVariables {
     private final @Nullable Object iPSets;
     private final @Nullable Object portSets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleVariables(
-        @OutputCustomType.Parameter("iPSets") @Nullable Object iPSets,
-        @OutputCustomType.Parameter("portSets") @Nullable Object portSets) {
+        @CustomType.Parameter("iPSets") @Nullable Object iPSets,
+        @CustomType.Parameter("portSets") @Nullable Object portSets) {
         this.iPSets = iPSets;
         this.portSets = portSets;
     }

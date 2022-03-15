@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs
      * Valid values: `viewer-request` or `viewer-response`
      * 
      */
-    @InputImport(name="eventType", required=true)
+    @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
     public Output<String> getEventType() {
@@ -31,7 +31,7 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs
      * When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
      * 
      */
-    @InputImport(name="includeBody")
+    @Import(name="includeBody")
       private final @Nullable Output<Boolean> includeBody;
 
     public Output<Boolean> getIncludeBody() {
@@ -42,7 +42,7 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs
      * ARN of the Lambda function.
      * 
      */
-    @InputImport(name="lambdaArn", required=true)
+    @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
     public Output<String> getLambdaArn() {

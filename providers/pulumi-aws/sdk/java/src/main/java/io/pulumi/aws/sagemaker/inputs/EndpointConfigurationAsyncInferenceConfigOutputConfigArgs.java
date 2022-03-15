@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -30,7 +30,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
      * Specifies the configuration for notifications of inference results for asynchronous inference.
      * 
      */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> notificationConfig;
 
     public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> getNotificationConfig() {
@@ -41,7 +41,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
      * The Amazon S3 location to upload inference responses to.
      * 
      */
-    @InputImport(name="s3OutputPath", required=true)
+    @Import(name="s3OutputPath", required=true)
       private final Output<String> s3OutputPath;
 
     public Output<String> getS3OutputPath() {

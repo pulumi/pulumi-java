@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAwsS3DataSource;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAzureBlobStorageDataSource;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecGcsDataSink;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpec {
     /**
      * An AWS S3 data source. Structure documented below.
@@ -53,15 +53,15 @@ public final class TransferJobTransferSpec {
      */
     private final @Nullable TransferJobTransferSpecTransferOptions transferOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpec(
-        @OutputCustomType.Parameter("awsS3DataSource") @Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource,
-        @OutputCustomType.Parameter("azureBlobStorageDataSource") @Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource,
-        @OutputCustomType.Parameter("gcsDataSink") @Nullable TransferJobTransferSpecGcsDataSink gcsDataSink,
-        @OutputCustomType.Parameter("gcsDataSource") @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource,
-        @OutputCustomType.Parameter("httpDataSource") @Nullable TransferJobTransferSpecHttpDataSource httpDataSource,
-        @OutputCustomType.Parameter("objectConditions") @Nullable TransferJobTransferSpecObjectConditions objectConditions,
-        @OutputCustomType.Parameter("transferOptions") @Nullable TransferJobTransferSpecTransferOptions transferOptions) {
+        @CustomType.Parameter("awsS3DataSource") @Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource,
+        @CustomType.Parameter("azureBlobStorageDataSource") @Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource,
+        @CustomType.Parameter("gcsDataSink") @Nullable TransferJobTransferSpecGcsDataSink gcsDataSink,
+        @CustomType.Parameter("gcsDataSource") @Nullable TransferJobTransferSpecGcsDataSource gcsDataSource,
+        @CustomType.Parameter("httpDataSource") @Nullable TransferJobTransferSpecHttpDataSource httpDataSource,
+        @CustomType.Parameter("objectConditions") @Nullable TransferJobTransferSpecObjectConditions objectConditions,
+        @CustomType.Parameter("transferOptions") @Nullable TransferJobTransferSpecTransferOptions transferOptions) {
         this.awsS3DataSource = awsS3DataSource;
         this.azureBlobStorageDataSource = azureBlobStorageDataSource;
         this.gcsDataSink = gcsDataSink;

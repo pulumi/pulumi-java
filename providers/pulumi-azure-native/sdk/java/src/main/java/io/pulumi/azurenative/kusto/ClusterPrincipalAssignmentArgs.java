@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kusto.enums.ClusterPrincipalRole;
 import io.pulumi.azurenative.kusto.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -32,7 +32,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * The name of the Kusto principalAssignment.
      * 
      */
-    @InputImport(name="principalAssignmentName")
+    @Import(name="principalAssignmentName")
       private final @Nullable Output<String> principalAssignmentName;
 
     public Output<String> getPrincipalAssignmentName() {
@@ -43,7 +43,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * The principal ID assigned to the cluster principal. It can be a user email, application ID, or security group name.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -54,7 +54,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * Principal type.
      * 
      */
-    @InputImport(name="principalType", required=true)
+    @Import(name="principalType", required=true)
       private final Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> getPrincipalType() {
@@ -65,7 +65,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * Cluster principal role.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<Either<String,ClusterPrincipalRole>> role;
 
     public Output<Either<String,ClusterPrincipalRole>> getRole() {
@@ -87,7 +87,7 @@ public final class ClusterPrincipalAssignmentArgs extends io.pulumi.resources.Re
      * The tenant id of the principal
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

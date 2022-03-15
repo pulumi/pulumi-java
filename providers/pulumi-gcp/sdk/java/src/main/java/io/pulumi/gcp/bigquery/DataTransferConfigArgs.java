@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsArgs;
@@ -28,7 +28,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * Set the value to 0 to use the default value.
      * 
      */
-    @InputImport(name="dataRefreshWindowDays")
+    @Import(name="dataRefreshWindowDays")
       private final @Nullable Output<Integer> dataRefreshWindowDays;
 
     public Output<Integer> getDataRefreshWindowDays() {
@@ -39,7 +39,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * The data source id. Cannot be changed once the transfer config is created.
      * 
      */
-    @InputImport(name="dataSourceId", required=true)
+    @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
     public Output<String> getDataSourceId() {
@@ -50,7 +50,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * The BigQuery target dataset id.
      * 
      */
-    @InputImport(name="destinationDatasetId")
+    @Import(name="destinationDatasetId")
       private final @Nullable Output<String> destinationDatasetId;
 
     public Output<String> getDestinationDatasetId() {
@@ -61,7 +61,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * When set to true, no runs are scheduled for a given transfer.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -72,7 +72,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * The user specified display name for the transfer config.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -85,7 +85,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="emailPreferences")
+    @Import(name="emailPreferences")
       private final @Nullable Output<DataTransferConfigEmailPreferencesArgs> emailPreferences;
 
     public Output<DataTransferConfigEmailPreferencesArgs> getEmailPreferences() {
@@ -97,7 +97,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * Examples: US, EU, asia-northeast1. The default value is US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -109,7 +109,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * associated with this transfer config finish.
      * 
      */
-    @InputImport(name="notificationPubsubTopic")
+    @Import(name="notificationPubsubTopic")
       private final @Nullable Output<String> notificationPubsubTopic;
 
     public Output<String> getNotificationPubsubTopic() {
@@ -122,7 +122,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 
      */
-    @InputImport(name="params", required=true)
+    @Import(name="params", required=true)
       private final Output<Map<String,String>> params;
 
     public Output<Map<String,String>> getParams() {
@@ -134,7 +134,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -152,7 +152,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * NOTE: the granularity should be at least 8 hours, or less frequent.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -164,7 +164,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scheduleOptions")
+    @Import(name="scheduleOptions")
       private final @Nullable Output<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
 
     public Output<DataTransferConfigScheduleOptionsArgs> getScheduleOptions() {
@@ -181,7 +181,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sensitiveParams")
+    @Import(name="sensitiveParams")
       private final @Nullable Output<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
 
     public Output<DataTransferConfigSensitiveParamsArgs> getSensitiveParams() {
@@ -194,7 +194,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * requesting user calling this API has permissions to act as this service account.
      * 
      */
-    @InputImport(name="serviceAccountName")
+    @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {

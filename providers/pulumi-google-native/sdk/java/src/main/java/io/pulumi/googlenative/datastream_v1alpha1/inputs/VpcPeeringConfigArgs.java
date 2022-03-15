@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
      * 
      */
-    @InputImport(name="subnet", required=true)
+    @Import(name="subnet", required=true)
       private final Output<String> subnet;
 
     public Output<String> getSubnet() {
@@ -32,7 +32,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * fully qualified name of the VPC Datastream will peer to.
      * 
      */
-    @InputImport(name="vpcName", required=true)
+    @Import(name="vpcName", required=true)
       private final Output<String> vpcName;
 
     public Output<String> getVpcName() {

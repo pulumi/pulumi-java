@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorLabelRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
      * A list of topology selector requirements by labels.
      * 
      */
-    @InputImport(name="matchLabelExpressions")
+    @Import(name="matchLabelExpressions")
       private final @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
     public Output<List<TopologySelectorLabelRequirementArgs>> getMatchLabelExpressions() {

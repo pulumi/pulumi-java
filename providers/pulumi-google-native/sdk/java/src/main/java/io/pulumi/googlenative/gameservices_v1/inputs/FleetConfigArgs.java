@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
      * 
      */
-    @InputImport(name="fleetSpec")
+    @Import(name="fleetSpec")
       private final @Nullable Output<String> fleetSpec;
 
     public Output<String> getFleetSpec() {
@@ -33,7 +33,7 @@ public final class FleetConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the FleetConfig.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

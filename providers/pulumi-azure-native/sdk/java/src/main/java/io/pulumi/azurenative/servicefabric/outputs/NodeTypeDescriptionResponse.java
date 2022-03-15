@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.EndpointRangeDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeTypeDescriptionResponse {
     /**
      * The range of ports from which cluster assigned port to Service Fabric applications.
@@ -75,19 +75,19 @@ public final class NodeTypeDescriptionResponse {
      */
     private final Integer vmInstanceCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeTypeDescriptionResponse(
-        @OutputCustomType.Parameter("applicationPorts") @Nullable EndpointRangeDescriptionResponse applicationPorts,
-        @OutputCustomType.Parameter("capacities") @Nullable Map<String,String> capacities,
-        @OutputCustomType.Parameter("clientConnectionEndpointPort") Integer clientConnectionEndpointPort,
-        @OutputCustomType.Parameter("durabilityLevel") @Nullable String durabilityLevel,
-        @OutputCustomType.Parameter("ephemeralPorts") @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
-        @OutputCustomType.Parameter("httpGatewayEndpointPort") Integer httpGatewayEndpointPort,
-        @OutputCustomType.Parameter("isPrimary") Boolean isPrimary,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("placementProperties") @Nullable Map<String,String> placementProperties,
-        @OutputCustomType.Parameter("reverseProxyEndpointPort") @Nullable Integer reverseProxyEndpointPort,
-        @OutputCustomType.Parameter("vmInstanceCount") Integer vmInstanceCount) {
+        @CustomType.Parameter("applicationPorts") @Nullable EndpointRangeDescriptionResponse applicationPorts,
+        @CustomType.Parameter("capacities") @Nullable Map<String,String> capacities,
+        @CustomType.Parameter("clientConnectionEndpointPort") Integer clientConnectionEndpointPort,
+        @CustomType.Parameter("durabilityLevel") @Nullable String durabilityLevel,
+        @CustomType.Parameter("ephemeralPorts") @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
+        @CustomType.Parameter("httpGatewayEndpointPort") Integer httpGatewayEndpointPort,
+        @CustomType.Parameter("isPrimary") Boolean isPrimary,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("placementProperties") @Nullable Map<String,String> placementProperties,
+        @CustomType.Parameter("reverseProxyEndpointPort") @Nullable Integer reverseProxyEndpointPort,
+        @CustomType.Parameter("vmInstanceCount") Integer vmInstanceCount) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
         this.clientConnectionEndpointPort = clientConnectionEndpointPort;

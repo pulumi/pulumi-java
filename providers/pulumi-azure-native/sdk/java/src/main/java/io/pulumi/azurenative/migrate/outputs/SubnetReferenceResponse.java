@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetReferenceResponse {
     /**
      * Gets the name of the proxy resource on the target side.
@@ -22,10 +22,10 @@ public final class SubnetReferenceResponse {
      */
     private final String sourceArmResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetReferenceResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
         this.name = name;
         this.sourceArmResourceId = sourceArmResourceId;
     }

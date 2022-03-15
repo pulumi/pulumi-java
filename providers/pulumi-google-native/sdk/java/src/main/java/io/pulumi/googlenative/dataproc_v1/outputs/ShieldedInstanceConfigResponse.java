@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShieldedInstanceConfigResponse {
     /**
      * Optional. Defines whether instances have integrity monitoring enabled.
@@ -25,11 +25,11 @@ public final class ShieldedInstanceConfigResponse {
      */
     private final Boolean enableVtpm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShieldedInstanceConfigResponse(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
-        @OutputCustomType.Parameter("enableVtpm") Boolean enableVtpm) {
+        @CustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
+        @CustomType.Parameter("enableVtpm") Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

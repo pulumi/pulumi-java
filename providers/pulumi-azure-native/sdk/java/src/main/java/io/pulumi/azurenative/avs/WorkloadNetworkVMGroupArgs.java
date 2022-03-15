@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * Display name of the VM group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -31,7 +31,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * Virtual machine members of this group.
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -42,7 +42,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -53,7 +53,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * NSX revision number.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {
@@ -75,7 +75,7 @@ public final class WorkloadNetworkVMGroupArgs extends io.pulumi.resources.Resour
      * NSX VM Group identifier. Generally the same as the VM Group's display name
      * 
      */
-    @InputImport(name="vmGroupId")
+    @Import(name="vmGroupId")
       private final @Nullable Output<String> vmGroupId;
 
     public Output<String> getVmGroupId() {

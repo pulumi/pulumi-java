@@ -5,14 +5,14 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize;
 import io.pulumi.aws.sagemaker.outputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration {
     /**
      * Batch size for the first step to turn on traffic on the new endpoint fleet. Value must be less than or equal to 50% of the variant's total instance count. See Canary Size.
@@ -35,12 +35,12 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      */
     private final Integer waitIntervalInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration(
-        @OutputCustomType.Parameter("canarySize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize,
-        @OutputCustomType.Parameter("linearStepSize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("waitIntervalInSeconds") Integer waitIntervalInSeconds) {
+        @CustomType.Parameter("canarySize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize,
+        @CustomType.Parameter("linearStepSize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("waitIntervalInSeconds") Integer waitIntervalInSeconds) {
         this.canarySize = canarySize;
         this.linearStepSize = linearStepSize;
         this.type = type;

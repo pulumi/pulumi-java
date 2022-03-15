@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidTestLoopResponse {
     /**
      * The APK for the application under test.
@@ -39,13 +39,13 @@ public final class AndroidTestLoopResponse {
      */
     private final List<Integer> scenarios;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidTestLoopResponse(
-        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
-        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
-        @OutputCustomType.Parameter("appPackageId") String appPackageId,
-        @OutputCustomType.Parameter("scenarioLabels") List<String> scenarioLabels,
-        @OutputCustomType.Parameter("scenarios") List<Integer> scenarios) {
+        @CustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @CustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @CustomType.Parameter("appPackageId") String appPackageId,
+        @CustomType.Parameter("scenarioLabels") List<String> scenarioLabels,
+        @CustomType.Parameter("scenarios") List<Integer> scenarios) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;

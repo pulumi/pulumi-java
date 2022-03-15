@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.HostType;
 import io.pulumi.azurenative.web.enums.SslState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * Indicates whether the hostname is a standard or repository hostname.
      * 
      */
-    @InputImport(name="hostType")
+    @Import(name="hostType")
       private final @Nullable Output<HostType> hostType;
 
     public Output<HostType> getHostType() {
@@ -36,7 +36,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * Hostname.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * SSL type.
      * 
      */
-    @InputImport(name="sslState")
+    @Import(name="sslState")
       private final @Nullable Output<SslState> sslState;
 
     public Output<SslState> getSslState() {
@@ -58,7 +58,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * SSL certificate thumbprint.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
@@ -69,7 +69,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * Set to <code>true</code> to update existing hostname.
      * 
      */
-    @InputImport(name="toUpdate")
+    @Import(name="toUpdate")
       private final @Nullable Output<Boolean> toUpdate;
 
     public Output<Boolean> getToUpdate() {
@@ -80,7 +80,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
      */
-    @InputImport(name="virtualIP")
+    @Import(name="virtualIP")
       private final @Nullable Output<String> virtualIP;
 
     public Output<String> getVirtualIP() {

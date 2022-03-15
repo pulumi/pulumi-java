@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayBackendHealthServerResponse;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayBackendHttpSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
      * 
      */
-    @InputImport(name="backendHttpSettings")
+    @Import(name="backendHttpSettings")
       private final @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings;
 
     public Optional<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettings() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse extends i
      * List of ApplicationGatewayBackendHealthServer resources.
      * 
      */
-    @InputImport(name="servers")
+    @Import(name="servers")
       private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
     public List<ApplicationGatewayBackendHealthServerResponse> getServers() {

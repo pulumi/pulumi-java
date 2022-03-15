@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.containeranalysis_v1.NoteArgs;
@@ -34,7 +34,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing an attestation role.
      * 
      */
-    @OutputExport(name="attestation", type=AttestationNoteResponse.class, parameters={})
+    @Export(name="attestation", type=AttestationNoteResponse.class, parameters={})
     private Output<AttestationNoteResponse> attestation;
 
     /**
@@ -48,7 +48,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing build provenance for a verifiable build.
      * 
      */
-    @OutputExport(name="build", type=BuildNoteResponse.class, parameters={})
+    @Export(name="build", type=BuildNoteResponse.class, parameters={})
     private Output<BuildNoteResponse> build;
 
     /**
@@ -62,7 +62,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a compliance check.
      * 
      */
-    @OutputExport(name="compliance", type=ComplianceNoteResponse.class, parameters={})
+    @Export(name="compliance", type=ComplianceNoteResponse.class, parameters={})
     private Output<ComplianceNoteResponse> compliance;
 
     /**
@@ -76,7 +76,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The time this note was created. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -90,7 +90,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing something that can be deployed.
      * 
      */
-    @OutputExport(name="deployment", type=DeploymentNoteResponse.class, parameters={})
+    @Export(name="deployment", type=DeploymentNoteResponse.class, parameters={})
     private Output<DeploymentNoteResponse> deployment;
 
     /**
@@ -104,7 +104,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing the initial analysis of a resource.
      * 
      */
-    @OutputExport(name="discovery", type=DiscoveryNoteResponse.class, parameters={})
+    @Export(name="discovery", type=DiscoveryNoteResponse.class, parameters={})
     private Output<DiscoveryNoteResponse> discovery;
 
     /**
@@ -118,7 +118,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a dsse attestation note.
      * 
      */
-    @OutputExport(name="dsseAttestation", type=DSSEAttestationNoteResponse.class, parameters={})
+    @Export(name="dsseAttestation", type=DSSEAttestationNoteResponse.class, parameters={})
     private Output<DSSEAttestationNoteResponse> dsseAttestation;
 
     /**
@@ -132,7 +132,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Time of expiration for this note. Empty if note does not expire.
      * 
      */
-    @OutputExport(name="expirationTime", type=String.class, parameters={})
+    @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
@@ -146,7 +146,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a base image.
      * 
      */
-    @OutputExport(name="image", type=ImageNoteResponse.class, parameters={})
+    @Export(name="image", type=ImageNoteResponse.class, parameters={})
     private Output<ImageNoteResponse> image;
 
     /**
@@ -160,7 +160,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The type of analysis. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -174,7 +174,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A detailed description of this note.
      * 
      */
-    @OutputExport(name="longDescription", type=String.class, parameters={})
+    @Export(name="longDescription", type=String.class, parameters={})
     private Output<String> longDescription;
 
     /**
@@ -188,7 +188,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -202,7 +202,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a package hosted by various package managers.
      * 
      */
-    @OutputExport(name="package", type=PackageNoteResponse.class, parameters={})
+    @Export(name="package", type=PackageNoteResponse.class, parameters={})
     private Output<PackageNoteResponse> $package;
 
     /**
@@ -216,7 +216,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Other notes related to this note.
      * 
      */
-    @OutputExport(name="relatedNoteNames", type=List.class, parameters={String.class})
+    @Export(name="relatedNoteNames", type=List.class, parameters={String.class})
     private Output<List<String>> relatedNoteNames;
 
     /**
@@ -230,7 +230,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * URLs associated with this note.
      * 
      */
-    @OutputExport(name="relatedUrl", type=List.class, parameters={RelatedUrlResponse.class})
+    @Export(name="relatedUrl", type=List.class, parameters={RelatedUrlResponse.class})
     private Output<List<RelatedUrlResponse>> relatedUrl;
 
     /**
@@ -244,7 +244,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A one sentence description of this note.
      * 
      */
-    @OutputExport(name="shortDescription", type=String.class, parameters={})
+    @Export(name="shortDescription", type=String.class, parameters={})
     private Output<String> shortDescription;
 
     /**
@@ -258,7 +258,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The time this note was last updated. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -272,7 +272,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing available package upgrades.
      * 
      */
-    @OutputExport(name="upgrade", type=UpgradeNoteResponse.class, parameters={})
+    @Export(name="upgrade", type=UpgradeNoteResponse.class, parameters={})
     private Output<UpgradeNoteResponse> upgrade;
 
     /**
@@ -286,7 +286,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a package vulnerability.
      * 
      */
-    @OutputExport(name="vulnerability", type=VulnerabilityNoteResponse.class, parameters={})
+    @Export(name="vulnerability", type=VulnerabilityNoteResponse.class, parameters={})
     private Output<VulnerabilityNoteResponse> vulnerability;
 
     /**

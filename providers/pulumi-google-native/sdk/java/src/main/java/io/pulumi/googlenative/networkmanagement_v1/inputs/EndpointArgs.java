@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkmanagement_v1.enums.EndpointNetworkType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A [Cloud SQL](https://cloud.google.com/sql) instance URI.
      * 
      */
-    @InputImport(name="cloudSqlInstance")
+    @Import(name="cloudSqlInstance")
       private final @Nullable Output<String> cloudSqlInstance;
 
     public Output<String> getCloudSqlInstance() {
@@ -35,7 +35,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
      * 
      */
-    @InputImport(name="gkeMasterCluster")
+    @Import(name="gkeMasterCluster")
       private final @Nullable Output<String> gkeMasterCluster;
 
     public Output<String> getGkeMasterCluster() {
@@ -46,7 +46,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A Compute Engine instance URI.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -57,7 +57,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](/load-balancing/docs/load-balancing-overview).
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -68,7 +68,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A Compute Engine network URI.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -79,7 +79,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
      * 
      */
-    @InputImport(name="networkType")
+    @Import(name="networkType")
       private final @Nullable Output<EndpointNetworkType> networkType;
 
     public Output<EndpointNetworkType> getNetworkType() {
@@ -90,7 +90,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -101,7 +101,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

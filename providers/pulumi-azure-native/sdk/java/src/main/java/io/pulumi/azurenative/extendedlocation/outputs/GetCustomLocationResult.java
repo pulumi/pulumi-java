@@ -5,7 +5,7 @@ package io.pulumi.azurenative.extendedlocation.outputs;
 
 import io.pulumi.azurenative.extendedlocation.outputs.CustomLocationPropertiesResponseAuthentication;
 import io.pulumi.azurenative.extendedlocation.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomLocationResult {
     /**
      * This is optional input that contains the authentication that should be used to generate the namespace.
@@ -81,21 +81,21 @@ public final class GetCustomLocationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomLocationResult(
-        @OutputCustomType.Parameter("authentication") @Nullable CustomLocationPropertiesResponseAuthentication authentication,
-        @OutputCustomType.Parameter("clusterExtensionIds") @Nullable List<String> clusterExtensionIds,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("hostResourceId") @Nullable String hostResourceId,
-        @OutputCustomType.Parameter("hostType") @Nullable String hostType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authentication") @Nullable CustomLocationPropertiesResponseAuthentication authentication,
+        @CustomType.Parameter("clusterExtensionIds") @Nullable List<String> clusterExtensionIds,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("hostResourceId") @Nullable String hostResourceId,
+        @CustomType.Parameter("hostType") @Nullable String hostType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.authentication = authentication;
         this.clusterExtensionIds = clusterExtensionIds;
         this.displayName = displayName;

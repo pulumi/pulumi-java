@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="caPool", required=true)
+    @Import(name="caPool", required=true)
       private final Output<String> caPool;
 
     public Output<String> getCaPool() {
         return this.caPool;
     }
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<CaPoolIamMemberConditionArgs> condition;
 
     public Output<CaPoolIamMemberConditionArgs> getCondition() {
@@ -39,14 +39,14 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -58,7 +58,7 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -71,7 +71,7 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

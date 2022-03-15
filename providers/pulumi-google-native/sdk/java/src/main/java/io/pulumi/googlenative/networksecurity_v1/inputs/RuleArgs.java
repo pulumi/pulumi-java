@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networksecurity_v1.inputs.DestinationArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.SourceArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. List of attributes for the traffic destination. All of the destinations must match. A destination is a match if a request matches all the specified hosts, ports, methods and headers. If not set, the action specified in the 'action' field will be applied without any rule checks for the destination.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<DestinationArgs>> destinations;
 
     public Output<List<DestinationArgs>> getDestinations() {
@@ -35,7 +35,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. List of attributes for the traffic source. All of the sources must match. A source is a match if both principals and ip_blocks match. If not set, the action specified in the 'action' field will be applied without any rule checks for the source.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<SourceArgs>> sources;
 
     public Output<List<SourceArgs>> getSources() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SystemMetadataResponse {
     /**
      * The timestamp of resource creation (UTC).
@@ -42,14 +42,14 @@ public final class SystemMetadataResponse {
      */
     private final @Nullable String lastModifiedByType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SystemMetadataResponse(
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
-        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType) {
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("createdByType") @Nullable String createdByType,
+        @CustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
 
     public static final ContactListTopic Empty = new ContactListTopic();
 
-    @InputImport(name="defaultSubscriptionStatus", required=true)
+    @Import(name="defaultSubscriptionStatus", required=true)
       private final String defaultSubscriptionStatus;
 
     public String getDefaultSubscriptionStatus() {
@@ -25,7 +25,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
      * The description of the topic.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -36,7 +36,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
      * The display name of the topic.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -47,7 +47,7 @@ public final class ContactListTopic extends io.pulumi.resources.InvokeArgs {
      * The name of the topic.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final String topicName;
 
     public String getTopicName() {

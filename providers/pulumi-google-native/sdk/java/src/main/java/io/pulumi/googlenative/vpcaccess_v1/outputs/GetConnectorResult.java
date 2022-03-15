@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.vpcaccess_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectorResult {
     /**
      * List of projects using the connector.
@@ -68,19 +68,19 @@ public final class GetConnectorResult {
      */
     private final SubnetResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectorResult(
-        @OutputCustomType.Parameter("connectedProjects") List<String> connectedProjects,
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
-        @OutputCustomType.Parameter("maxThroughput") Integer maxThroughput,
-        @OutputCustomType.Parameter("minInstances") Integer minInstances,
-        @OutputCustomType.Parameter("minThroughput") Integer minThroughput,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subnet") SubnetResponse subnet) {
+        @CustomType.Parameter("connectedProjects") List<String> connectedProjects,
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("maxInstances") Integer maxInstances,
+        @CustomType.Parameter("maxThroughput") Integer maxThroughput,
+        @CustomType.Parameter("minInstances") Integer minInstances,
+        @CustomType.Parameter("minThroughput") Integer minThroughput,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subnet") SubnetResponse subnet) {
         this.connectedProjects = connectedProjects;
         this.ipCidrRange = ipCidrRange;
         this.machineType = machineType;

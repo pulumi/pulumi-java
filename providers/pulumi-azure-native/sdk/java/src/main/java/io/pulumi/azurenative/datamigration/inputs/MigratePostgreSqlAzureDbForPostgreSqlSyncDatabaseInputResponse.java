@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * Migration settings which tune the migration behavior
      * 
      */
-    @InputImport(name="migrationSetting")
+    @Import(name="migrationSetting")
       private final @Nullable Map<String,String> migrationSetting;
 
     public Map<String,String> getMigrationSetting() {
@@ -34,7 +34,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * Name of the database
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * Source settings to tune source endpoint migration behavior
      * 
      */
-    @InputImport(name="sourceSetting")
+    @Import(name="sourceSetting")
       private final @Nullable Map<String,String> sourceSetting;
 
     public Map<String,String> getSourceSetting() {
@@ -56,7 +56,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
      */
-    @InputImport(name="targetDatabaseName")
+    @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
 
     public Optional<String> getTargetDatabaseName() {
@@ -67,7 +67,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      * Target settings to tune target endpoint migration behavior
      * 
      */
-    @InputImport(name="targetSetting")
+    @Import(name="targetSetting")
       private final @Nullable Map<String,String> targetSetting;
 
     public Map<String,String> getTargetSetting() {

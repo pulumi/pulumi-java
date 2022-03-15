@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -30,7 +30,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Premier add on Marketplace offer.
      * 
      */
-    @InputImport(name="marketplaceOffer")
+    @Import(name="marketplaceOffer")
       private final @Nullable Output<String> marketplaceOffer;
 
     public Output<String> getMarketplaceOffer() {
@@ -52,7 +52,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Premier add on Marketplace publisher.
      * 
      */
-    @InputImport(name="marketplacePublisher")
+    @Import(name="marketplacePublisher")
       private final @Nullable Output<String> marketplacePublisher;
 
     public Output<String> getMarketplacePublisher() {
@@ -63,7 +63,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Add-on name.
      * 
      */
-    @InputImport(name="premierAddOnName")
+    @Import(name="premierAddOnName")
       private final @Nullable Output<String> premierAddOnName;
 
     public Output<String> getPremierAddOnName() {
@@ -85,7 +85,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Premier add on Product.
      * 
      */
-    @InputImport(name="product")
+    @Import(name="product")
       private final @Nullable Output<String> product;
 
     public Output<String> getProduct() {
@@ -96,7 +96,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -107,7 +107,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Premier add on SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
@@ -118,7 +118,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -129,7 +129,7 @@ public final class WebAppPremierAddOnArgs extends io.pulumi.resources.ResourceAr
      * Premier add on Vendor.
      * 
      */
-    @InputImport(name="vendor")
+    @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
     public Output<String> getVendor() {

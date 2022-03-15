@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader {
     /**
      * The CSV content type headers to capture.
@@ -22,10 +22,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      */
     private final @Nullable List<String> jsonContentTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader(
-        @OutputCustomType.Parameter("csvContentTypes") @Nullable List<String> csvContentTypes,
-        @OutputCustomType.Parameter("jsonContentTypes") @Nullable List<String> jsonContentTypes) {
+        @CustomType.Parameter("csvContentTypes") @Nullable List<String> csvContentTypes,
+        @CustomType.Parameter("jsonContentTypes") @Nullable List<String> jsonContentTypes) {
         this.csvContentTypes = csvContentTypes;
         this.jsonContentTypes = jsonContentTypes;
     }

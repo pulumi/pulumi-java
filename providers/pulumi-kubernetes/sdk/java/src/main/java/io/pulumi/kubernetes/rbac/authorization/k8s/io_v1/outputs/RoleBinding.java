@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs.RoleRef;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs.Subject;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoleBinding {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -41,13 +41,13 @@ public final class RoleBinding {
      */
     private final @Nullable List<Subject> subjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoleBinding(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("roleRef") RoleRef roleRef,
-        @OutputCustomType.Parameter("subjects") @Nullable List<Subject> subjects) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("roleRef") RoleRef roleRef,
+        @CustomType.Parameter("subjects") @Nullable List<Subject> subjects) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

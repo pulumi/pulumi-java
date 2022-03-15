@@ -8,7 +8,7 @@ import io.pulumi.azurenative.managednetwork.ManagedNetworkGroupArgs;
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * Responsibility role under which this Managed Network Group will be created
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -63,7 +63,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -77,7 +77,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The collection of management groups covered by the Managed Network
      * 
      */
-    @OutputExport(name="managementGroups", type=List.class, parameters={ResourceIdResponse.class})
+    @Export(name="managementGroups", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> managementGroups;
 
     /**
@@ -91,7 +91,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * Provisioning state of the ManagedNetwork resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The collection of  subnets covered by the Managed Network
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={ResourceIdResponse.class})
+    @Export(name="subnets", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> subnets;
 
     /**
@@ -133,7 +133,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The collection of subscriptions covered by the Managed Network
      * 
      */
-    @OutputExport(name="subscriptions", type=List.class, parameters={ResourceIdResponse.class})
+    @Export(name="subscriptions", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> subscriptions;
 
     /**
@@ -147,7 +147,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class ManagedNetworkGroup extends io.pulumi.resources.CustomResource {
      * The collection of virtual nets covered by the Managed Network
      * 
      */
-    @OutputExport(name="virtualNetworks", type=List.class, parameters={ResourceIdResponse.class})
+    @Export(name="virtualNetworks", type=List.class, parameters={ResourceIdResponse.class})
     private Output</* @Nullable */ List<ResourceIdResponse>> virtualNetworks;
 
     /**

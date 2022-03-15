@@ -10,7 +10,7 @@ import io.pulumi.azurenative.powerplatform.inputs.PropertiesLockboxArgs;
 import io.pulumi.azurenative.powerplatform.inputs.PropertiesNetworkInjectionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * The encryption settings for a configuration store.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<PropertiesEncryptionArgs> encryption;
 
     public Output<PropertiesEncryptionArgs> getEncryption() {
@@ -36,7 +36,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * Name of the EnterprisePolicy.
      * 
      */
-    @InputImport(name="enterprisePolicyName")
+    @Import(name="enterprisePolicyName")
       private final @Nullable Output<String> enterprisePolicyName;
 
     public Output<String> getEnterprisePolicyName() {
@@ -47,7 +47,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * The identity of the EnterprisePolicy.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<EnterprisePolicyIdentityArgs> identity;
 
     public Output<EnterprisePolicyIdentityArgs> getIdentity() {
@@ -58,7 +58,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * The kind (type) of Enterprise Policy.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,EnterprisePolicyKind>> kind;
 
     public Output<Either<String,EnterprisePolicyKind>> getKind() {
@@ -69,7 +69,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -80,7 +80,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * Settings concerning lockbox.
      * 
      */
-    @InputImport(name="lockbox")
+    @Import(name="lockbox")
       private final @Nullable Output<PropertiesLockboxArgs> lockbox;
 
     public Output<PropertiesLockboxArgs> getLockbox() {
@@ -91,7 +91,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * Settings concerning network injection.
      * 
      */
-    @InputImport(name="networkInjection")
+    @Import(name="networkInjection")
       private final @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection;
 
     public Output<PropertiesNetworkInjectionArgs> getNetworkInjection() {
@@ -102,7 +102,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -113,7 +113,7 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

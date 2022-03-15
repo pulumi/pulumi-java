@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2TrafficTargetResponse {
     /**
      * Specifies percent of the traffic to this Revision. This defaults to zero if unspecified.
@@ -31,12 +31,12 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2TrafficTargetResponse(
-        @OutputCustomType.Parameter("percent") Integer percent,
-        @OutputCustomType.Parameter("revision") String revision,
-        @OutputCustomType.Parameter("tag") String tag,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("percent") Integer percent,
+        @CustomType.Parameter("revision") String revision,
+        @CustomType.Parameter("tag") String tag,
+        @CustomType.Parameter("type") String type) {
         this.percent = percent;
         this.revision = revision;
         this.tag = tag;

@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FirewallFirewallStatusGetArgs extends io.pulumi.resources.Res
      * Set of subnets configured for use by the firewall.
      * 
      */
-    @InputImport(name="syncStates")
+    @Import(name="syncStates")
       private final @Nullable Output<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates;
 
     public Output<List<FirewallFirewallStatusSyncStateGetArgs>> getSyncStates() {

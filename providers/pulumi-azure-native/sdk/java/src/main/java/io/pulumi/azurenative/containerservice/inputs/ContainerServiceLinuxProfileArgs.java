@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
      * The administrator username to use for Linux VMs.
      * 
      */
-    @InputImport(name="adminUsername", required=true)
+    @Import(name="adminUsername", required=true)
       private final Output<String> adminUsername;
 
     public Output<String> getAdminUsername() {
@@ -33,7 +33,7 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
      * SSH configuration for Linux-based VMs running on Azure.
      * 
      */
-    @InputImport(name="ssh", required=true)
+    @Import(name="ssh", required=true)
       private final Output<ContainerServiceSshConfigurationArgs> ssh;
 
     public Output<ContainerServiceSshConfigurationArgs> getSsh() {

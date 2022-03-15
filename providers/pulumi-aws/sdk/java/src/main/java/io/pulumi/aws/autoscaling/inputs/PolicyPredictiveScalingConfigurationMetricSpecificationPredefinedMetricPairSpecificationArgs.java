@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      * Describes a scaling metric for a predictive scaling policy. Valid values are `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, or `ALBRequestCountPerTarget`.
      * 
      */
-    @InputImport(name="predefinedMetricType", required=true)
+    @Import(name="predefinedMetricType", required=true)
       private final Output<String> predefinedMetricType;
 
     public Output<String> getPredefinedMetricType() {
@@ -28,7 +28,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      * A label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group.
      * 
      */
-    @InputImport(name="resourceLabel", required=true)
+    @Import(name="resourceLabel", required=true)
       private final Output<String> resourceLabel;
 
     public Output<String> getResourceLabel() {

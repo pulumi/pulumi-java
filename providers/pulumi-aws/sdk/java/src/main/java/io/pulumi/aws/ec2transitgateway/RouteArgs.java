@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to drop traffic that matches this route (default to `false`).
      * 
      */
-    @InputImport(name="blackhole")
+    @Import(name="blackhole")
       private final @Nullable Output<Boolean> blackhole;
 
     public Output<Boolean> getBlackhole() {
@@ -30,7 +30,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
      * 
      */
-    @InputImport(name="destinationCidrBlock", required=true)
+    @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -41,7 +41,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId")
+    @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -52,7 +52,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @InputImport(name="transitGatewayRouteTableId", required=true)
+    @Import(name="transitGatewayRouteTableId", required=true)
       private final Output<String> transitGatewayRouteTableId;
 
     public Output<String> getTransitGatewayRouteTableId() {

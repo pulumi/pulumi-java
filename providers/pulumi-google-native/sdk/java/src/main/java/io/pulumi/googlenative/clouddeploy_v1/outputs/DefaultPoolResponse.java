@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DefaultPoolResponse {
     /**
      * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
@@ -20,10 +20,10 @@ public final class DefaultPoolResponse {
      */
     private final String serviceAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultPoolResponse(
-        @OutputCustomType.Parameter("artifactStorage") String artifactStorage,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount) {
+        @CustomType.Parameter("artifactStorage") String artifactStorage,
+        @CustomType.Parameter("serviceAccount") String serviceAccount) {
         this.artifactStorage = artifactStorage;
         this.serviceAccount = serviceAccount;
     }

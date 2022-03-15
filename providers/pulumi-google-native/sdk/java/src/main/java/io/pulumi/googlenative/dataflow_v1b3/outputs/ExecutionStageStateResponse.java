@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecutionStageStateResponse {
     /**
      * The time at which the stage transitioned to this state.
@@ -25,11 +25,11 @@ public final class ExecutionStageStateResponse {
      */
     private final String executionStageState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutionStageStateResponse(
-        @OutputCustomType.Parameter("currentStateTime") String currentStateTime,
-        @OutputCustomType.Parameter("executionStageName") String executionStageName,
-        @OutputCustomType.Parameter("executionStageState") String executionStageState) {
+        @CustomType.Parameter("currentStateTime") String currentStateTime,
+        @CustomType.Parameter("executionStageName") String executionStageName,
+        @CustomType.Parameter("executionStageState") String executionStageState) {
         this.currentStateTime = currentStateTime;
         this.executionStageName = executionStageName;
         this.executionStageState = executionStageState;

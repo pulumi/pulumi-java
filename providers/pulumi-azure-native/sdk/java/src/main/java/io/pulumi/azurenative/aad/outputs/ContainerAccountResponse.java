@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerAccountResponse {
     /**
      * The account name
@@ -27,11 +27,11 @@ public final class ContainerAccountResponse {
      */
     private final @Nullable String spn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerAccountResponse(
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("spn") @Nullable String spn) {
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("spn") @Nullable String spn) {
         this.accountName = accountName;
         this.password = password;
         this.spn = spn;

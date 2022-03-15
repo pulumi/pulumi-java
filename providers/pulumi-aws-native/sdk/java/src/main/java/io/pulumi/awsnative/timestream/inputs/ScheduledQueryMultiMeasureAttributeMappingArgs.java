@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryMultiMeasureAttributeMappingMeasureValueType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
 
     public static final ScheduledQueryMultiMeasureAttributeMappingArgs Empty = new ScheduledQueryMultiMeasureAttributeMappingArgs();
 
-    @InputImport(name="measureValueType", required=true)
+    @Import(name="measureValueType", required=true)
       private final Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType;
 
     public Output<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> getMeasureValueType() {
         return this.measureValueType;
     }
 
-    @InputImport(name="sourceColumn", required=true)
+    @Import(name="sourceColumn", required=true)
       private final Output<String> sourceColumn;
 
     public Output<String> getSourceColumn() {
         return this.sourceColumn;
     }
 
-    @InputImport(name="targetMultiMeasureAttributeName")
+    @Import(name="targetMultiMeasureAttributeName")
       private final @Nullable Output<String> targetMultiMeasureAttributeName;
 
     public Output<String> getTargetMultiMeasureAttributeName() {

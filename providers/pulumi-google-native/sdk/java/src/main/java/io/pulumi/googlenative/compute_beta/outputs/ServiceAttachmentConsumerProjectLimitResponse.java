@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAttachmentConsumerProjectLimitResponse {
     /**
      * The value of the limit to set.
@@ -21,10 +21,10 @@ public final class ServiceAttachmentConsumerProjectLimitResponse {
      */
     private final String projectIdOrNum;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAttachmentConsumerProjectLimitResponse(
-        @OutputCustomType.Parameter("connectionLimit") Integer connectionLimit,
-        @OutputCustomType.Parameter("projectIdOrNum") String projectIdOrNum) {
+        @CustomType.Parameter("connectionLimit") Integer connectionLimit,
+        @CustomType.Parameter("projectIdOrNum") String projectIdOrNum) {
         this.connectionLimit = connectionLimit;
         this.projectIdOrNum = projectIdOrNum;
     }

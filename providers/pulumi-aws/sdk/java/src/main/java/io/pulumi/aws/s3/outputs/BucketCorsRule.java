@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketCorsRule {
     /**
      * Specifies which headers are allowed.
@@ -39,13 +39,13 @@ public final class BucketCorsRule {
      */
     private final @Nullable Integer maxAgeSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketCorsRule(
-        @OutputCustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
-        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
-        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
-        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
-        @OutputCustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds) {
+        @CustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
+        @CustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @CustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @CustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @CustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

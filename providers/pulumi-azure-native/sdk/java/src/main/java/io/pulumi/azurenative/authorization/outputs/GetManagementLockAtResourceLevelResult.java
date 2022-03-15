@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ManagementLockOwnerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagementLockAtResourceLevelResult {
     /**
      * The resource ID of the lock.
@@ -44,14 +44,14 @@ public final class GetManagementLockAtResourceLevelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagementLockAtResourceLevelResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("level") String level,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("owners") @Nullable List<ManagementLockOwnerResponse> owners,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("level") String level,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("owners") @Nullable List<ManagementLockOwnerResponse> owners,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.level = level;
         this.name = name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,35 +13,35 @@ public final class GetLoadBalancerListener extends io.pulumi.resources.InvokeArg
 
     public static final GetLoadBalancerListener Empty = new GetLoadBalancerListener();
 
-    @InputImport(name="instancePort", required=true)
+    @Import(name="instancePort", required=true)
       private final Integer instancePort;
 
     public Integer getInstancePort() {
         return this.instancePort;
     }
 
-    @InputImport(name="instanceProtocol", required=true)
+    @Import(name="instanceProtocol", required=true)
       private final String instanceProtocol;
 
     public String getInstanceProtocol() {
         return this.instanceProtocol;
     }
 
-    @InputImport(name="lbPort", required=true)
+    @Import(name="lbPort", required=true)
       private final Integer lbPort;
 
     public Integer getLbPort() {
         return this.lbPort;
     }
 
-    @InputImport(name="lbProtocol", required=true)
+    @Import(name="lbProtocol", required=true)
       private final String lbProtocol;
 
     public String getLbProtocol() {
         return this.lbProtocol;
     }
 
-    @InputImport(name="sslCertificateId", required=true)
+    @Import(name="sslCertificateId", required=true)
       private final String sslCertificateId;
 
     public String getSslCertificateId() {

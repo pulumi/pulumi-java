@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * State of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {

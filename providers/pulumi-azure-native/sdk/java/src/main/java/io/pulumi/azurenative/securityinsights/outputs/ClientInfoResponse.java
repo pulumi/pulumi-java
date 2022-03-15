@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientInfoResponse {
     /**
      * The email of the client.
@@ -32,12 +32,12 @@ public final class ClientInfoResponse {
      */
     private final @Nullable String userPrincipalName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientInfoResponse(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("userPrincipalName") @Nullable String userPrincipalName) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("userPrincipalName") @Nullable String userPrincipalName) {
         this.email = email;
         this.name = name;
         this.objectId = objectId;

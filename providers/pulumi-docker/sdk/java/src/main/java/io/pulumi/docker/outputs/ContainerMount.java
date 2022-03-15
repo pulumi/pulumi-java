@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ContainerMountBindOptions;
 import io.pulumi.docker.outputs.ContainerMountTmpfsOptions;
 import io.pulumi.docker.outputs.ContainerMountVolumeOptions;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerMount {
     private final @Nullable ContainerMountBindOptions bindOptions;
     private final @Nullable Boolean readOnly;
@@ -23,15 +23,15 @@ public final class ContainerMount {
     private final String type;
     private final @Nullable ContainerMountVolumeOptions volumeOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerMount(
-        @OutputCustomType.Parameter("bindOptions") @Nullable ContainerMountBindOptions bindOptions,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("tmpfsOptions") @Nullable ContainerMountTmpfsOptions tmpfsOptions,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeOptions") @Nullable ContainerMountVolumeOptions volumeOptions) {
+        @CustomType.Parameter("bindOptions") @Nullable ContainerMountBindOptions bindOptions,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("tmpfsOptions") @Nullable ContainerMountTmpfsOptions tmpfsOptions,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeOptions") @Nullable ContainerMountVolumeOptions volumeOptions) {
         this.bindOptions = bindOptions;
         this.readOnly = readOnly;
         this.source = source;

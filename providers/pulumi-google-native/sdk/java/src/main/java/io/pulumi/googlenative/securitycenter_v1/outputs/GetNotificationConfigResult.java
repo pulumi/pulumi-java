@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.securitycenter_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.securitycenter_v1.outputs.StreamingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationConfigResult {
     /**
      * The description of the notification config (max of 1024 characters).
@@ -36,13 +36,13 @@ public final class GetNotificationConfigResult {
      */
     private final StreamingConfigResponse streamingConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationConfigResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("streamingConfig") StreamingConfigResponse streamingConfig) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pubsubTopic") String pubsubTopic,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("streamingConfig") StreamingConfigResponse streamingConfig) {
         this.description = description;
         this.name = name;
         this.pubsubTopic = pubsubTopic;

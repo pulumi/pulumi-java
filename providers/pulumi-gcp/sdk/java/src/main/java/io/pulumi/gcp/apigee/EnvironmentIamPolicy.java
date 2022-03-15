@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentIamPolicyArgs;
@@ -60,7 +60,7 @@ public class EnvironmentIamPolicy extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="envId", type=String.class, parameters={})
+    @Export(name="envId", type=String.class, parameters={})
     private Output<String> envId;
 
     /**
@@ -74,7 +74,7 @@ public class EnvironmentIamPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -84,7 +84,7 @@ public class EnvironmentIamPolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -95,7 +95,7 @@ public class EnvironmentIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * you set `auto_create_network` to `false`, since the network will exist momentarily.
      * 
      */
-    @InputImport(name="autoCreateNetwork")
+    @Import(name="autoCreateNetwork")
       private final @Nullable Output<Boolean> autoCreateNetwork;
 
     public Output<Boolean> getAutoCreateNetwork() {
@@ -38,7 +38,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * for more details.
      * 
      */
-    @InputImport(name="billingAccount")
+    @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
@@ -53,7 +53,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * project to be migrated to the newly specified folder.
      * 
      */
-    @InputImport(name="folderId")
+    @Import(name="folderId")
       private final @Nullable Output<String> folderId;
 
     public Output<String> getFolderId() {
@@ -64,7 +64,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to the project.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -75,7 +75,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The display name of the project.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The numeric identifier of the project.
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<String> number;
 
     public Output<String> getNumber() {
@@ -102,7 +102,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * organization.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -113,7 +113,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The project ID. Changing this forces a new project to be created.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -125,7 +125,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * without deleting the Project via the Google API.
      * 
      */
-    @InputImport(name="skipDelete")
+    @Import(name="skipDelete")
       private final @Nullable Output<Boolean> skipDelete;
 
     public Output<Boolean> getSkipDelete() {

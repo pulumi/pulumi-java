@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudwatch;
 import io.pulumi.awsnative.cloudwatch.inputs.MetricStreamFilterArgs;
 import io.pulumi.awsnative.cloudwatch.inputs.MetricStreamTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    @InputImport(name="excludeFilters")
+    @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> excludeFilters;
 
     public Output<List<MetricStreamFilterArgs>> getExcludeFilters() {
@@ -32,7 +32,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Kinesis Firehose where to stream the data.
      * 
      */
-    @InputImport(name="firehoseArn", required=true)
+    @Import(name="firehoseArn", required=true)
       private final Output<String> firehoseArn;
 
     public Output<String> getFirehoseArn() {
@@ -43,7 +43,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    @InputImport(name="includeFilters")
+    @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamFilterArgs>> includeFilters;
 
     public Output<List<MetricStreamFilterArgs>> getIncludeFilters() {
@@ -54,7 +54,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the metric stream.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * The output format of the data streamed to the Kinesis Firehose.
      * 
      */
-    @InputImport(name="outputFormat", required=true)
+    @Import(name="outputFormat", required=true)
       private final Output<String> outputFormat;
 
     public Output<String> getOutputFormat() {
@@ -76,7 +76,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the role that provides access to the Kinesis Firehose.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -87,7 +87,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * A set of tags to assign to the delivery stream.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<MetricStreamTagArgs>> tags;
 
     public Output<List<MetricStreamTagArgs>> getTags() {

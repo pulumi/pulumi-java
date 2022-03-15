@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.PublicKeyCredentialResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeviceCredentialResponse {
     /**
      * [Optional] The time at which this credential becomes invalid. This credential will be ignored for new client authentication requests after this timestamp; however, it will not be automatically deleted.
@@ -21,10 +21,10 @@ public final class DeviceCredentialResponse {
      */
     private final PublicKeyCredentialResponse publicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceCredentialResponse(
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("publicKey") PublicKeyCredentialResponse publicKey) {
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("publicKey") PublicKeyCredentialResponse publicKey) {
         this.expirationTime = expirationTime;
         this.publicKey = publicKey;
     }

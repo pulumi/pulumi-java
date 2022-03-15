@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'Pav2'.
      * 
      */
-    @InputImport(name="billingType", required=true)
+    @Import(name="billingType", required=true)
       private final String billingType;
 
     public String getBillingType() {
@@ -33,7 +33,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * Charging type.
      * 
      */
-    @InputImport(name="chargingType", required=true)
+    @Import(name="chargingType", required=true)
       private final String chargingType;
 
     public String getChargingType() {
@@ -44,7 +44,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * Validation status of requested data center and transport.
      * 
      */
-    @InputImport(name="meterGuid", required=true)
+    @Import(name="meterGuid", required=true)
       private final String meterGuid;
 
     public String getMeterGuid() {
@@ -55,7 +55,7 @@ public final class Pav2MeterDetailsResponse extends io.pulumi.resources.InvokeAr
      * Billing unit applicable for Pav2 billing
      * 
      */
-    @InputImport(name="multiplier", required=true)
+    @Import(name="multiplier", required=true)
       private final Double multiplier;
 
     public Double getMultiplier() {

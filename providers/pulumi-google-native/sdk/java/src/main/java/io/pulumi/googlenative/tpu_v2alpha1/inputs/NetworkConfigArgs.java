@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
      * 
      */
-    @InputImport(name="canIpForward")
+    @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
@@ -34,7 +34,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates that external IP addresses would be associated with the TPU workers. If set to false, the specified subnetwork or network should have Private Google Access enabled.
      * 
      */
-    @InputImport(name="enableExternalIps")
+    @Import(name="enableExternalIps")
       private final @Nullable Output<Boolean> enableExternalIps;
 
     public Output<Boolean> getEnableExternalIps() {
@@ -45,7 +45,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network for the TPU node. It must be a preexisting Google Compute Engine network. If none is provided, "default" will be used.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -56,7 +56,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the subnetwork for the TPU node. It must be a preexisting Google Compute Engine subnetwork. If none is provided, "default" will be used.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {

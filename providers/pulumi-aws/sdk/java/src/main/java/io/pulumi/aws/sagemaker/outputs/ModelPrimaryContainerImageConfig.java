@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelPrimaryContainerImageConfig {
     /**
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
@@ -15,8 +15,8 @@ public final class ModelPrimaryContainerImageConfig {
      */
     private final String repositoryAccessMode;
 
-    @OutputCustomType.Constructor
-    private ModelPrimaryContainerImageConfig(@OutputCustomType.Parameter("repositoryAccessMode") String repositoryAccessMode) {
+    @CustomType.Constructor
+    private ModelPrimaryContainerImageConfig(@CustomType.Parameter("repositoryAccessMode") String repositoryAccessMode) {
         this.repositoryAccessMode = repositoryAccessMode;
     }
 

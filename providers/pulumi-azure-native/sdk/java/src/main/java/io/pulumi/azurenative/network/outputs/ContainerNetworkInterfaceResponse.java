@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerNetworkInterfaceResponse {
     /**
      * Reference to the container to which this container network interface is attached.
@@ -56,16 +56,16 @@ public final class ContainerNetworkInterfaceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerNetworkInterfaceResponse(
-        @OutputCustomType.Parameter("container") @Nullable ContainerResponse container,
-        @OutputCustomType.Parameter("containerNetworkInterfaceConfiguration") ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipConfigurations") List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("container") @Nullable ContainerResponse container,
+        @CustomType.Parameter("containerNetworkInterfaceConfiguration") ContainerNetworkInterfaceConfigurationResponse containerNetworkInterfaceConfiguration,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipConfigurations") List<ContainerNetworkInterfaceIpConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.container = container;
         this.containerNetworkInterfaceConfiguration = containerNetworkInterfaceConfiguration;
         this.etag = etag;

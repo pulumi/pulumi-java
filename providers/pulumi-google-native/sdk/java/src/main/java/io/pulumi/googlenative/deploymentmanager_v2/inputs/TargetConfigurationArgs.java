@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ConfigFileArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ImportFileArgs;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
      * The configuration to use for this deployment.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<ConfigFileArgs> config;
 
     public Output<ConfigFileArgs> getConfig() {
@@ -31,7 +31,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
      * Specifies any files to import for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.
      * 
      */
-    @InputImport(name="imports")
+    @Import(name="imports")
       private final @Nullable Output<List<ImportFileArgs>> imports;
 
     public Output<List<ImportFileArgs>> getImports() {

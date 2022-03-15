@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEc2Attributes {
     /**
      * String containing a comma separated list of additional Amazon EC2 security group IDs for the master node.
@@ -58,17 +58,17 @@ public final class ClusterEc2Attributes {
      */
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEc2Attributes(
-        @OutputCustomType.Parameter("additionalMasterSecurityGroups") @Nullable String additionalMasterSecurityGroups,
-        @OutputCustomType.Parameter("additionalSlaveSecurityGroups") @Nullable String additionalSlaveSecurityGroups,
-        @OutputCustomType.Parameter("emrManagedMasterSecurityGroup") @Nullable String emrManagedMasterSecurityGroup,
-        @OutputCustomType.Parameter("emrManagedSlaveSecurityGroup") @Nullable String emrManagedSlaveSecurityGroup,
-        @OutputCustomType.Parameter("instanceProfile") String instanceProfile,
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("serviceAccessSecurityGroup") @Nullable String serviceAccessSecurityGroup,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
+        @CustomType.Parameter("additionalMasterSecurityGroups") @Nullable String additionalMasterSecurityGroups,
+        @CustomType.Parameter("additionalSlaveSecurityGroups") @Nullable String additionalSlaveSecurityGroups,
+        @CustomType.Parameter("emrManagedMasterSecurityGroup") @Nullable String emrManagedMasterSecurityGroup,
+        @CustomType.Parameter("emrManagedSlaveSecurityGroup") @Nullable String emrManagedSlaveSecurityGroup,
+        @CustomType.Parameter("instanceProfile") String instanceProfile,
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("serviceAccessSecurityGroup") @Nullable String serviceAccessSecurityGroup,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
         this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
         this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;

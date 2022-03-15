@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codepipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineStageAction {
     /**
      * A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
@@ -75,20 +75,20 @@ public final class PipelineStageAction {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineStageAction(
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("configuration") @Nullable Map<String,String> configuration,
-        @OutputCustomType.Parameter("inputArtifacts") @Nullable List<String> inputArtifacts,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("outputArtifacts") @Nullable List<String> outputArtifacts,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("runOrder") @Nullable Integer runOrder,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("configuration") @Nullable Map<String,String> configuration,
+        @CustomType.Parameter("inputArtifacts") @Nullable List<String> inputArtifacts,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("outputArtifacts") @Nullable List<String> outputArtifacts,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("runOrder") @Nullable Integer runOrder,
+        @CustomType.Parameter("version") String version) {
         this.category = category;
         this.configuration = configuration;
         this.inputArtifacts = inputArtifacts;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataSourceSparkParametersArgs extends io.pulumi.resources.Res
      * <p>Host.</p>
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -33,7 +33,7 @@ public final class DataSourceSparkParametersArgs extends io.pulumi.resources.Res
      * <p>Port.</p>
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Double> port;
 
     public Output<Double> getPort() {

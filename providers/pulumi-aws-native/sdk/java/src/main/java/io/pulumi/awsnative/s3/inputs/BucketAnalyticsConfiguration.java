@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketStorageClassAnalysis;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BucketAnalyticsConfiguration extends io.pulumi.resources.Invo
      * The ID that identifies the analytics configuration.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -36,21 +36,21 @@ public final class BucketAnalyticsConfiguration extends io.pulumi.resources.Invo
      * The prefix that an object must have to be included in the analytics results.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
-    @InputImport(name="storageClassAnalysis", required=true)
+    @Import(name="storageClassAnalysis", required=true)
       private final BucketStorageClassAnalysis storageClassAnalysis;
 
     public BucketStorageClassAnalysis getStorageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
     public List<BucketTagFilter> getTagFilters() {

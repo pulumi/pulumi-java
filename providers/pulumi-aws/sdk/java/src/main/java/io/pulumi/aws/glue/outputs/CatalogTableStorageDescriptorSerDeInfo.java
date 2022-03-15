@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CatalogTableStorageDescriptorSerDeInfo {
     /**
      * Name of the target table.
@@ -28,11 +28,11 @@ public final class CatalogTableStorageDescriptorSerDeInfo {
      */
     private final @Nullable String serializationLibrary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CatalogTableStorageDescriptorSerDeInfo(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("serializationLibrary") @Nullable String serializationLibrary) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("serializationLibrary") @Nullable String serializationLibrary) {
         this.name = name;
         this.parameters = parameters;
         this.serializationLibrary = serializationLibrary;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DcAccessSecurityCodeResponse {
     /**
      * Forward Dc access security code.
@@ -22,10 +22,10 @@ public final class DcAccessSecurityCodeResponse {
      */
     private final @Nullable String reverseDCAccessCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DcAccessSecurityCodeResponse(
-        @OutputCustomType.Parameter("forwardDCAccessCode") @Nullable String forwardDCAccessCode,
-        @OutputCustomType.Parameter("reverseDCAccessCode") @Nullable String reverseDCAccessCode) {
+        @CustomType.Parameter("forwardDCAccessCode") @Nullable String forwardDCAccessCode,
+        @CustomType.Parameter("reverseDCAccessCode") @Nullable String reverseDCAccessCode) {
         this.forwardDCAccessCode = forwardDCAccessCode;
         this.reverseDCAccessCode = reverseDCAccessCode;
     }

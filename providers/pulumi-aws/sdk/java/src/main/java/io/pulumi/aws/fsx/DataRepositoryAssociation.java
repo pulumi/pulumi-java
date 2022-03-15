@@ -8,7 +8,7 @@ import io.pulumi.aws.fsx.DataRepositoryAssociationArgs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationState;
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * Amazon Resource Name of the file system.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="associationId", type=String.class, parameters={})
+    @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     public Output<String> getAssociationId() {
@@ -58,7 +58,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * Set to true to run an import data repository task to import metadata from the data repository to the file system after the data repository association is created. Defaults to `false`.
      * 
      */
-    @OutputExport(name="batchImportMetaDataOnCreate", type=Boolean.class, parameters={})
+    @Export(name="batchImportMetaDataOnCreate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> batchImportMetaDataOnCreate;
 
     /**
@@ -72,7 +72,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * The path to the Amazon S3 data repository that will be linked to the file system. The path must be an S3 bucket s3://myBucket/myPrefix/. This path specifies where in the S3 data repository files will be imported from or exported to. The same S3 bucket cannot be linked more than once to the same file system.
      * 
      */
-    @OutputExport(name="dataRepositoryPath", type=String.class, parameters={})
+    @Export(name="dataRepositoryPath", type=String.class, parameters={})
     private Output<String> dataRepositoryPath;
 
     /**
@@ -86,7 +86,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * Set to true to delete files from the file system upon deleting this data repository association. Defaults to `false`.
      * 
      */
-    @OutputExport(name="deleteDataInFilesystem", type=Boolean.class, parameters={})
+    @Export(name="deleteDataInFilesystem", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteDataInFilesystem;
 
     /**
@@ -100,7 +100,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * The ID of the Amazon FSx file system to on which to create a data repository association.
      * 
      */
-    @OutputExport(name="fileSystemId", type=String.class, parameters={})
+    @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
     /**
@@ -114,7 +114,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * A path on the file system that points to a high-level directory (such as `/ns1/`) or subdirectory (such as `/ns1/subdir/`) that will be mapped 1-1 with `data_repository_path`. The leading forward slash in the name is required. Two data repository associations cannot have overlapping file system paths. For example, if a data repository is associated with file system path `/ns1/`, then you cannot link another data repository with file system path `/ns1/ns2`. This path specifies where in your file system files will be exported from or imported to. This file system directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * 
      */
-    @OutputExport(name="fileSystemPath", type=String.class, parameters={})
+    @Export(name="fileSystemPath", type=String.class, parameters={})
     private Output<String> fileSystemPath;
 
     /**
@@ -128,7 +128,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.
      * 
      */
-    @OutputExport(name="importedFileChunkSize", type=Integer.class, parameters={})
+    @Export(name="importedFileChunkSize", type=Integer.class, parameters={})
     private Output<Integer> importedFileChunkSize;
 
     /**
@@ -143,7 +143,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.
      * 
      */
-    @OutputExport(name="s3", type=DataRepositoryAssociationS3.class, parameters={})
+    @Export(name="s3", type=DataRepositoryAssociationS3.class, parameters={})
     private Output<DataRepositoryAssociationS3> s3;
 
     /**
@@ -158,7 +158,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * A map of tags to assign to the data repository association. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -172,7 +172,7 @@ public class DataRepositoryAssociation extends io.pulumi.resources.CustomResourc
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -5,14 +5,14 @@ package io.pulumi.awsnative.evidently.outputs;
 
 import io.pulumi.awsnative.evidently.outputs.ProjectDataDeliveryObject;
 import io.pulumi.awsnative.evidently.outputs.ProjectTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     private final @Nullable String arn;
     private final @Nullable ProjectDataDeliveryObject dataDelivery;
@@ -23,12 +23,12 @@ public final class GetProjectResult {
      */
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("dataDelivery") @Nullable ProjectDataDeliveryObject dataDelivery,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("dataDelivery") @Nullable ProjectDataDeliveryObject dataDelivery,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.arn = arn;
         this.dataDelivery = dataDelivery;
         this.description = description;

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.GalleryIdentifierResponse;
 import io.pulumi.azurenative.compute.outputs.SharingProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGalleryResult {
     /**
      * The description of this Shared Image Gallery resource. This property is updatable.
@@ -60,17 +60,17 @@ public final class GetGalleryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGalleryResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identifier") @Nullable GalleryIdentifierResponse identifier,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sharingProfile") @Nullable SharingProfileResponse sharingProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identifier") @Nullable GalleryIdentifierResponse identifier,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sharingProfile") @Nullable SharingProfileResponse sharingProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.identifier = identifier;

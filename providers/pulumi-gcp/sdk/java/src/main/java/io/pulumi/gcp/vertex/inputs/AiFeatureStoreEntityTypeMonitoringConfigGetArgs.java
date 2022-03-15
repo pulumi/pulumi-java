@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="snapshotAnalysis")
+    @Import(name="snapshotAnalysis")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
     public Output<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> getSnapshotAnalysis() {

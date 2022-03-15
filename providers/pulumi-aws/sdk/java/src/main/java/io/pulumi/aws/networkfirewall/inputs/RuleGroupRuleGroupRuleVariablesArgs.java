@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
      * Set of configuration blocks that define IP address information. See IP Sets below for details.
      * 
      */
-    @InputImport(name="ipSets")
+    @Import(name="ipSets")
       private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
 
     public Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> getIpSets() {
@@ -31,7 +31,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
      * Set of configuration blocks that define port range information. See Port Sets below for details.
      * 
      */
-    @InputImport(name="portSets")
+    @Import(name="portSets")
       private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
 
     public Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> getPortSets() {

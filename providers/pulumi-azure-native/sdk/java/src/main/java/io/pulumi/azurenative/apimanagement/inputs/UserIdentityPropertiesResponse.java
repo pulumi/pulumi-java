@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
      * The client id of user assigned identity.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -29,7 +29,7 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
      * The principal id of user assigned identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {

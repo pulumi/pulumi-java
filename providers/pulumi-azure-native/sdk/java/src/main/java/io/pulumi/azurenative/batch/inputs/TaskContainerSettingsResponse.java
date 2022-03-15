@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
      * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
      * 
      */
-    @InputImport(name="containerRunOptions")
+    @Import(name="containerRunOptions")
       private final @Nullable String containerRunOptions;
 
     public Optional<String> getContainerRunOptions() {
@@ -30,7 +30,7 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
      * This is the full image reference, as would be specified to "docker pull". If no tag is provided as part of the image name, the tag ":latest" is used as a default.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final String imageName;
 
     public String getImageName() {
@@ -41,14 +41,14 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
      * This setting can be omitted if was already provided at pool creation.
      * 
      */
-    @InputImport(name="registry")
+    @Import(name="registry")
       private final @Nullable ContainerRegistryResponse registry;
 
     public Optional<ContainerRegistryResponse> getRegistry() {
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
     }
 
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable String workingDirectory;
 
     public Optional<String> getWorkingDirectory() {

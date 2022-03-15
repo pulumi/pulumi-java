@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ContainerResourceReq
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestEnvironmentImageRequestArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not Application Insights is enabled.
      * 
      */
-    @InputImport(name="appInsightsEnabled")
+    @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
     public Output<Boolean> getAppInsightsEnabled() {
@@ -37,7 +37,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not authentication is enabled on the service.
      * 
      */
-    @InputImport(name="authEnabled")
+    @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
@@ -48,7 +48,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The CName for the service.
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable Output<String> cname;
 
     public Output<String> getCname() {
@@ -60,7 +60,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'ACI'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
     public Output<String> getComputeType() {
@@ -71,7 +71,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The container resource requirements.
      * 
      */
-    @InputImport(name="containerResourceRequirements")
+    @Import(name="containerResourceRequirements")
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
     public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
@@ -82,7 +82,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Details of the data collection options specified.
      * 
      */
-    @InputImport(name="dataCollection")
+    @Import(name="dataCollection")
       private final @Nullable Output<ACIServiceCreateRequestDataCollectionArgs> dataCollection;
 
     public Output<ACIServiceCreateRequestDataCollectionArgs> getDataCollection() {
@@ -93,7 +93,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the service.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -104,7 +104,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Dns label for the service.
      * 
      */
-    @InputImport(name="dnsNameLabel")
+    @Import(name="dnsNameLabel")
       private final @Nullable Output<String> dnsNameLabel;
 
     public Output<String> getDnsNameLabel() {
@@ -115,7 +115,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption properties.
      * 
      */
-    @InputImport(name="encryptionProperties")
+    @Import(name="encryptionProperties")
       private final @Nullable Output<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties;
 
     public Output<ACIServiceCreateRequestEncryptionPropertiesArgs> getEncryptionProperties() {
@@ -126,7 +126,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Environment, models and assets needed for inferencing.
      * 
      */
-    @InputImport(name="environmentImageRequest")
+    @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
@@ -137,7 +137,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication keys.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
     public Output<CreateServiceRequestKeysArgs> getKeys() {
@@ -148,7 +148,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The service tag dictionary. Tags are mutable.
      * 
      */
-    @InputImport(name="kvTags")
+    @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
     public Output<Map<String,String>> getKvTags() {
@@ -159,7 +159,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure location/region.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -170,7 +170,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The service properties dictionary. Properties are immutable.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -181,7 +181,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -192,7 +192,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Machine Learning service.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -203,7 +203,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The public SSL certificate in PEM format to use if SSL is enabled.
      * 
      */
-    @InputImport(name="sslCertificate")
+    @Import(name="sslCertificate")
       private final @Nullable Output<String> sslCertificate;
 
     public Output<String> getSslCertificate() {
@@ -214,7 +214,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not SSL is enabled.
      * 
      */
-    @InputImport(name="sslEnabled")
+    @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
 
     public Output<Boolean> getSslEnabled() {
@@ -225,7 +225,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The public SSL key in PEM format for the certificate.
      * 
      */
-    @InputImport(name="sslKey")
+    @Import(name="sslKey")
       private final @Nullable Output<String> sslKey;
 
     public Output<String> getSslKey() {
@@ -236,7 +236,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual network configuration.
      * 
      */
-    @InputImport(name="vnetConfiguration")
+    @Import(name="vnetConfiguration")
       private final @Nullable Output<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration;
 
     public Output<ACIServiceCreateRequestVnetConfigurationArgs> getVnetConfiguration() {
@@ -247,7 +247,7 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse exte
      * The header field name to match on when bypassing cache. Values are case-insensitive.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final String headerName;
 
     public String getHeaderName() {

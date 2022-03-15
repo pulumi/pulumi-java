@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties {
     /**
      * The ARN for an Amazon Web Services Organization that you want to share your AMI with.
@@ -32,12 +32,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(
-        @OutputCustomType.Parameter("organizationArns") @Nullable List<String> organizationArns,
-        @OutputCustomType.Parameter("organizationalUnitArns") @Nullable List<String> organizationalUnitArns,
-        @OutputCustomType.Parameter("userGroups") @Nullable List<String> userGroups,
-        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
+        @CustomType.Parameter("organizationArns") @Nullable List<String> organizationArns,
+        @CustomType.Parameter("organizationalUnitArns") @Nullable List<String> organizationalUnitArns,
+        @CustomType.Parameter("userGroups") @Nullable List<String> userGroups,
+        @CustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.organizationArns = organizationArns;
         this.organizationalUnitArns = organizationalUnitArns;
         this.userGroups = userGroups;

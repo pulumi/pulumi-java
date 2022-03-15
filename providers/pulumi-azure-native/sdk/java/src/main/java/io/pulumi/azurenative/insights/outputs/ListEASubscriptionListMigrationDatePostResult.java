@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListEASubscriptionListMigrationDatePostResult {
     /**
      * Is subscription in the grand fatherable subscription list.
@@ -23,10 +23,10 @@ public final class ListEASubscriptionListMigrationDatePostResult {
      */
     private final @Nullable String optedInDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListEASubscriptionListMigrationDatePostResult(
-        @OutputCustomType.Parameter("isGrandFatherableSubscription") @Nullable Boolean isGrandFatherableSubscription,
-        @OutputCustomType.Parameter("optedInDate") @Nullable String optedInDate) {
+        @CustomType.Parameter("isGrandFatherableSubscription") @Nullable Boolean isGrandFatherableSubscription,
+        @CustomType.Parameter("optedInDate") @Nullable String optedInDate) {
         this.isGrandFatherableSubscription = isGrandFatherableSubscription;
         this.optedInDate = optedInDate;
     }

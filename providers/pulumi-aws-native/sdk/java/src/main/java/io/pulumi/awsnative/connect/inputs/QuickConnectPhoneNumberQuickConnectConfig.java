@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class QuickConnectPhoneNumberQuickConnectConfig extends io.pulumi.r
 
     public static final QuickConnectPhoneNumberQuickConnectConfig Empty = new QuickConnectPhoneNumberQuickConnectConfig();
 
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
     public String getPhoneNumber() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointPropertiesResponse {
     /**
      * The name of the endpoint.
@@ -23,10 +23,10 @@ public final class EndpointPropertiesResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointPropertiesResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.port = port;
     }

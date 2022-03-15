@@ -5,7 +5,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.awsnative.resourcegroups.inputs.GroupTagFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupQueryArgs Empty = new GroupQueryArgs();
 
-    @InputImport(name="resourceTypeFilters")
+    @Import(name="resourceTypeFilters")
       private final @Nullable Output<List<String>> resourceTypeFilters;
 
     public Output<List<String>> getResourceTypeFilters() {
         return this.resourceTypeFilters == null ? Output.empty() : this.resourceTypeFilters;
     }
 
-    @InputImport(name="stackIdentifier")
+    @Import(name="stackIdentifier")
       private final @Nullable Output<String> stackIdentifier;
 
     public Output<String> getStackIdentifier() {
         return this.stackIdentifier == null ? Output.empty() : this.stackIdentifier;
     }
 
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable Output<List<GroupTagFilterArgs>> tagFilters;
 
     public Output<List<GroupTagFilterArgs>> getTagFilters() {

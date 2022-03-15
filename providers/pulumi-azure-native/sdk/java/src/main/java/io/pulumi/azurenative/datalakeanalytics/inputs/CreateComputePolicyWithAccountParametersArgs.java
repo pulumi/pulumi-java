@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakeanalytics.inputs;
 import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
      * 
      */
-    @InputImport(name="maxDegreeOfParallelismPerJob")
+    @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
@@ -36,7 +36,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
      * 
      */
-    @InputImport(name="minPriorityPerJob")
+    @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
 
     public Output<Integer> getMinPriorityPerJob() {
@@ -47,7 +47,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * The unique name of the compute policy to create.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * The AAD object identifier for the entity to create a policy for.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -69,7 +69,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * The type of AAD object the object identifier refers to.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<Either<String,AADObjectType>> objectType;
 
     public Output<Either<String,AADObjectType>> getObjectType() {

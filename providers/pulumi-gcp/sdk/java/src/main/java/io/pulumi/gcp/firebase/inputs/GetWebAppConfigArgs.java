@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firebase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetWebAppConfigArgs extends io.pulumi.resources.InvokeArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -30,7 +30,7 @@ public final class GetWebAppConfigArgs extends io.pulumi.resources.InvokeArgs {
      * the id of the firebase web app
      * 
      */
-    @InputImport(name="webAppId", required=true)
+    @Import(name="webAppId", required=true)
       private final String webAppId;
 
     public String getWebAppId() {

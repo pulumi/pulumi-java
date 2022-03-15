@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDataLakeStoreOutputDataSourceResponse {
     /**
      * The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
@@ -58,17 +58,17 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDataLakeStoreOutputDataSourceResponse(
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("dateFormat") @Nullable String dateFormat,
-        @OutputCustomType.Parameter("filePathPrefix") @Nullable String filePathPrefix,
-        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("timeFormat") @Nullable String timeFormat,
-        @OutputCustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
-        @OutputCustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("dateFormat") @Nullable String dateFormat,
+        @CustomType.Parameter("filePathPrefix") @Nullable String filePathPrefix,
+        @CustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("timeFormat") @Nullable String timeFormat,
+        @CustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
+        @CustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
+        @CustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.dateFormat = dateFormat;
         this.filePathPrefix = filePathPrefix;

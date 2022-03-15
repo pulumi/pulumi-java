@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.TextMappingResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TextStreamResponse {
     /**
      * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
@@ -22,10 +22,10 @@ public final class TextStreamResponse {
      */
     private final List<TextMappingResponse> mapping;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TextStreamResponse(
-        @OutputCustomType.Parameter("codec") String codec,
-        @OutputCustomType.Parameter("mapping") List<TextMappingResponse> mapping) {
+        @CustomType.Parameter("codec") String codec,
+        @CustomType.Parameter("mapping") List<TextMappingResponse> mapping) {
         this.codec = codec;
         this.mapping = mapping;
     }

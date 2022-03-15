@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.outputs.GetInstanceNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.outputs.GetInstanceNetworkInterfaceIpv6AccessConfig;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceNetworkInterface {
     /**
      * Access configurations, i.e. IPs via which this
@@ -56,20 +56,20 @@ public final class GetInstanceNetworkInterface {
      */
     private final String subnetworkProject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceNetworkInterface(
-        @OutputCustomType.Parameter("accessConfigs") List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs,
-        @OutputCustomType.Parameter("aliasIpRanges") List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges,
-        @OutputCustomType.Parameter("ipv6AccessConfigs") List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
-        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkIp") String networkIp,
-        @OutputCustomType.Parameter("nicType") String nicType,
-        @OutputCustomType.Parameter("queueCount") Integer queueCount,
-        @OutputCustomType.Parameter("stackType") String stackType,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("subnetworkProject") String subnetworkProject) {
+        @CustomType.Parameter("accessConfigs") List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs,
+        @CustomType.Parameter("aliasIpRanges") List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges,
+        @CustomType.Parameter("ipv6AccessConfigs") List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
+        @CustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkIp") String networkIp,
+        @CustomType.Parameter("nicType") String nicType,
+        @CustomType.Parameter("queueCount") Integer queueCount,
+        @CustomType.Parameter("stackType") String stackType,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("subnetworkProject") String subnetworkProject) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.ipv6AccessConfigs = ipv6AccessConfigs;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResourcePolicyGroupPlacementPolicyGetArgs extends io.pulumi.r
      * availability domain, they will not be put in the same low latency network
      * 
      */
-    @InputImport(name="availabilityDomainCount")
+    @Import(name="availabilityDomainCount")
       private final @Nullable Output<Integer> availabilityDomainCount;
 
     public Output<Integer> getAvailabilityDomainCount() {
@@ -35,7 +35,7 @@ public final class ResourcePolicyGroupPlacementPolicyGetArgs extends io.pulumi.r
      * Possible values are `COLLOCATED`.
      * 
      */
-    @InputImport(name="collocation")
+    @Import(name="collocation")
       private final @Nullable Output<String> collocation;
 
     public Output<String> getCollocation() {
@@ -46,7 +46,7 @@ public final class ResourcePolicyGroupPlacementPolicyGetArgs extends io.pulumi.r
      * Number of vms in this placement group.
      * 
      */
-    @InputImport(name="vmCount")
+    @Import(name="vmCount")
       private final @Nullable Output<Integer> vmCount;
 
     public Output<Integer> getVmCount() {

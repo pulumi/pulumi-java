@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * Indicates whether an answer or item was clicked by the human agent.
      * 
      */
-    @InputImport(name="clicked", required=true)
+    @Import(name="clicked", required=true)
       private final Boolean clicked;
 
     public Boolean getClicked() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * The correctness level of an answer.
      * 
      */
-    @InputImport(name="correctnessLevel", required=true)
+    @Import(name="correctnessLevel", required=true)
       private final String correctnessLevel;
 
     public String getCorrectnessLevel() {
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * Indicates whether an answer or item was displayed to the human agent in the agent desktop UI.
      * 
      */
-    @InputImport(name="displayed", required=true)
+    @Import(name="displayed", required=true)
       private final Boolean displayed;
 
     public Boolean getDisplayed() {

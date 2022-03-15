@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="deidentifyConfig")
+    @Import(name="deidentifyConfig")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> getDeidentifyConfig() {
@@ -31,7 +31,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * A description of the template.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * User set display name of the template.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -53,7 +53,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {

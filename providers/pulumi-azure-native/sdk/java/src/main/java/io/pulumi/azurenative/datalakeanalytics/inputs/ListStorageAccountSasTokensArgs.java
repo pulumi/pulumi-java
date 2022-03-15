@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
      * The name of the Data Lake Analytics account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
      * The name of the Azure storage container for which the SAS token is being requested.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -38,7 +38,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class ListStorageAccountSasTokensArgs extends io.pulumi.resources.I
      * The name of the Azure storage account for which the SAS token is being requested.
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
     public String getStorageAccountName() {

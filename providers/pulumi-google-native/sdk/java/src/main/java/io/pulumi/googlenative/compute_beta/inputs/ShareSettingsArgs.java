@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.ShareSettingsShareType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
      * 
      */
-    @InputImport(name="projectMap")
+    @Import(name="projectMap")
       private final @Nullable Output<Map<String,String>> projectMap;
 
     public Output<Map<String,String>> getProjectMap() {
@@ -36,7 +36,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * A List of Project names to specify consumer projects for this shared-reservation. This is only valid when share_type's value is SPECIFIC_PROJECTS.
      * 
      */
-    @InputImport(name="projects")
+    @Import(name="projects")
       private final @Nullable Output<List<String>> projects;
 
     public Output<List<String>> getProjects() {
@@ -47,7 +47,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Type of sharing for this shared-reservation
      * 
      */
-    @InputImport(name="shareType")
+    @Import(name="shareType")
       private final @Nullable Output<ShareSettingsShareType> shareType;
 
     public Output<ShareSettingsShareType> getShareType() {

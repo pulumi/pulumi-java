@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
      * Location of the resource group.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -33,7 +33,7 @@ public final class ResourceGroupValueResponse extends io.pulumi.resources.Invoke
      * Name of the resource group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

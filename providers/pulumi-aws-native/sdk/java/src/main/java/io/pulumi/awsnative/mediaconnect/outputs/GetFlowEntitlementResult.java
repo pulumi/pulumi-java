@@ -5,14 +5,14 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEntitlementEncryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFlowEntitlementResult {
     /**
      * A description of the entitlement.
@@ -45,14 +45,14 @@ public final class GetFlowEntitlementResult {
      */
     private final @Nullable List<String> subscribers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFlowEntitlementResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryption") @Nullable FlowEntitlementEncryption encryption,
-        @OutputCustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
-        @OutputCustomType.Parameter("entitlementStatus") @Nullable FlowEntitlementEntitlementStatus entitlementStatus,
-        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
-        @OutputCustomType.Parameter("subscribers") @Nullable List<String> subscribers) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryption") @Nullable FlowEntitlementEncryption encryption,
+        @CustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
+        @CustomType.Parameter("entitlementStatus") @Nullable FlowEntitlementEntitlementStatus entitlementStatus,
+        @CustomType.Parameter("flowArn") @Nullable String flowArn,
+        @CustomType.Parameter("subscribers") @Nullable List<String> subscribers) {
         this.description = description;
         this.encryption = encryption;
         this.entitlementArn = entitlementArn;

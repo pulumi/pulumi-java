@@ -5,14 +5,14 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.ScheduleAssociationPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobScheduleResult {
     /**
      * Gets the id of the resource.
@@ -55,16 +55,16 @@ public final class GetJobScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobScheduleResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("jobScheduleId") @Nullable String jobScheduleId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("runOn") @Nullable String runOn,
-        @OutputCustomType.Parameter("runbook") @Nullable RunbookAssociationPropertyResponse runbook,
-        @OutputCustomType.Parameter("schedule") @Nullable ScheduleAssociationPropertyResponse schedule,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("jobScheduleId") @Nullable String jobScheduleId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("runOn") @Nullable String runOn,
+        @CustomType.Parameter("runbook") @Nullable RunbookAssociationPropertyResponse runbook,
+        @CustomType.Parameter("schedule") @Nullable ScheduleAssociationPropertyResponse schedule,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.jobScheduleId = jobScheduleId;
         this.name = name;

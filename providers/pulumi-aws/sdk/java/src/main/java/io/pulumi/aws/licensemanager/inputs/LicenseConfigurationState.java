@@ -4,7 +4,7 @@
 package io.pulumi.aws.licensemanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * The license configuration ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Description of the license configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Number of licenses managed by the license configuration.
      * 
      */
-    @InputImport(name="licenseCount")
+    @Import(name="licenseCount")
       private final @Nullable Output<Integer> licenseCount;
 
     public Output<Integer> getLicenseCount() {
@@ -55,7 +55,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Sets the number of available licenses as a hard limit.
      * 
      */
-    @InputImport(name="licenseCountHardLimit")
+    @Import(name="licenseCountHardLimit")
       private final @Nullable Output<Boolean> licenseCountHardLimit;
 
     public Output<Boolean> getLicenseCountHardLimit() {
@@ -66,7 +66,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
      * 
      */
-    @InputImport(name="licenseCountingType")
+    @Import(name="licenseCountingType")
       private final @Nullable Output<String> licenseCountingType;
 
     public Output<String> getLicenseCountingType() {
@@ -77,7 +77,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Array of configured License Manager rules.
      * 
      */
-    @InputImport(name="licenseRules")
+    @Import(name="licenseRules")
       private final @Nullable Output<List<String>> licenseRules;
 
     public Output<List<String>> getLicenseRules() {
@@ -88,7 +88,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Name of the license configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * Account ID of the owner of the license configuration.
      * 
      */
-    @InputImport(name="ownerAccountId")
+    @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
@@ -110,7 +110,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -121,7 +121,7 @@ public final class LicenseConfigurationState extends io.pulumi.resources.Resourc
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

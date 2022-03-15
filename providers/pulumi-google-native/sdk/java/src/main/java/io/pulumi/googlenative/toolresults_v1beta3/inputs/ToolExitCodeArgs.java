@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ToolExitCodeArgs extends io.pulumi.resources.ResourceArgs {
      * Tool execution exit code. A value of 0 means that the execution was successful. - In response: always set - In create/update request: always set
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {

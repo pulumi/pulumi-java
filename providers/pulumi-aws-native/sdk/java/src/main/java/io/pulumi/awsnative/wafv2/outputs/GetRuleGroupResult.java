@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupLabelSummary;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRule;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTag;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleGroupResult {
     private final @Nullable String arn;
     /**
@@ -42,19 +42,19 @@ public final class GetRuleGroupResult {
     private final @Nullable List<RuleGroupTag> tags;
     private final @Nullable RuleGroupVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("availableLabels") @Nullable List<RuleGroupLabelSummary> availableLabels,
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("consumedLabels") @Nullable List<RuleGroupLabelSummary> consumedLabels,
-        @OutputCustomType.Parameter("customResponseBodies") @Nullable RuleGroupCustomResponseBodies customResponseBodies,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
-        @OutputCustomType.Parameter("rules") @Nullable List<RuleGroupRule> rules,
-        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags,
-        @OutputCustomType.Parameter("visibilityConfig") @Nullable RuleGroupVisibilityConfig visibilityConfig) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("availableLabels") @Nullable List<RuleGroupLabelSummary> availableLabels,
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("consumedLabels") @Nullable List<RuleGroupLabelSummary> consumedLabels,
+        @CustomType.Parameter("customResponseBodies") @Nullable RuleGroupCustomResponseBodies customResponseBodies,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
+        @CustomType.Parameter("rules") @Nullable List<RuleGroupRule> rules,
+        @CustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags,
+        @CustomType.Parameter("visibilityConfig") @Nullable RuleGroupVisibilityConfig visibilityConfig) {
         this.arn = arn;
         this.availableLabels = availableLabels;
         this.capacity = capacity;

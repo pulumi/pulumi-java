@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.outputs;
 
 import io.pulumi.aws.ec2transitgateway.outputs.GetTransitGatewayFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayResult {
     /**
      * Private Autonomous System Number (ASN) for the Amazon side of a BGP session
@@ -81,22 +81,22 @@ public final class GetTransitGatewayResult {
      */
     private final String vpnEcmpSupport;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayResult(
-        @OutputCustomType.Parameter("amazonSideAsn") Integer amazonSideAsn,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("associationDefaultRouteTableId") String associationDefaultRouteTableId,
-        @OutputCustomType.Parameter("autoAcceptSharedAttachments") String autoAcceptSharedAttachments,
-        @OutputCustomType.Parameter("defaultRouteTableAssociation") String defaultRouteTableAssociation,
-        @OutputCustomType.Parameter("defaultRouteTablePropagation") String defaultRouteTablePropagation,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dnsSupport") String dnsSupport,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetTransitGatewayFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("propagationDefaultRouteTableId") String propagationDefaultRouteTableId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpnEcmpSupport") String vpnEcmpSupport) {
+        @CustomType.Parameter("amazonSideAsn") Integer amazonSideAsn,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("associationDefaultRouteTableId") String associationDefaultRouteTableId,
+        @CustomType.Parameter("autoAcceptSharedAttachments") String autoAcceptSharedAttachments,
+        @CustomType.Parameter("defaultRouteTableAssociation") String defaultRouteTableAssociation,
+        @CustomType.Parameter("defaultRouteTablePropagation") String defaultRouteTablePropagation,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dnsSupport") String dnsSupport,
+        @CustomType.Parameter("filters") @Nullable List<GetTransitGatewayFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("propagationDefaultRouteTableId") String propagationDefaultRouteTableId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpnEcmpSupport") String vpnEcmpSupport) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;

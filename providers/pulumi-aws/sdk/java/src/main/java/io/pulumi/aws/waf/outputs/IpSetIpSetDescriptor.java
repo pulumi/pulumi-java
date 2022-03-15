@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.waf.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IpSetIpSetDescriptor {
     /**
      * Type of the IP address - `IPV4` or `IPV6`.
@@ -20,10 +20,10 @@ public final class IpSetIpSetDescriptor {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpSetIpSetDescriptor(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

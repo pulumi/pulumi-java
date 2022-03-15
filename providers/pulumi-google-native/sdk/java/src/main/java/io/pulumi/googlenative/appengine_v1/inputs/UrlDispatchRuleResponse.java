@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
      * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final String domain;
 
     public String getDomain() {
@@ -31,7 +31,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
      * Pathname within the host. Must start with a "/". A single "*" can be included at the end of the path.The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -42,7 +42,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
      * Resource ID of a service in this application that should serve the matched request. The service must already exist. Example: default.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

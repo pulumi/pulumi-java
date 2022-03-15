@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RestResponseResponseRegex;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestResponseResponse {
     /**
      * The regular expressions to match the response content with.
@@ -24,10 +24,10 @@ public final class RestResponseResponse {
      */
     private final @Nullable List<String> successStatusCodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestResponseResponse(
-        @OutputCustomType.Parameter("regex") @Nullable RestResponseResponseRegex regex,
-        @OutputCustomType.Parameter("successStatusCodes") @Nullable List<String> successStatusCodes) {
+        @CustomType.Parameter("regex") @Nullable RestResponseResponseRegex regex,
+        @CustomType.Parameter("successStatusCodes") @Nullable List<String> successStatusCodes) {
         this.regex = regex;
         this.successStatusCodes = successStatusCodes;
     }

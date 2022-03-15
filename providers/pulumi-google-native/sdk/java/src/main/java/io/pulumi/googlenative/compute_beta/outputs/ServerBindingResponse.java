@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerBindingResponse {
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ServerBindingResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ServerBindingResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

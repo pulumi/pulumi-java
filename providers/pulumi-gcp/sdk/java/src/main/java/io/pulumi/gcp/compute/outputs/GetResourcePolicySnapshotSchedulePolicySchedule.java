@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicySnapshotSchedulePolicySchedule {
     private final List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
     private final List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
     private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicySchedule(
-        @OutputCustomType.Parameter("dailySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules,
-        @OutputCustomType.Parameter("hourlySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules,
-        @OutputCustomType.Parameter("weeklySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
+        @CustomType.Parameter("dailySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules,
+        @CustomType.Parameter("hourlySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules,
+        @CustomType.Parameter("weeklySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
         this.dailySchedules = dailySchedules;
         this.hourlySchedules = hourlySchedules;
         this.weeklySchedules = weeklySchedules;

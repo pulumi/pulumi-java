@@ -4,7 +4,7 @@
 package io.pulumi.aws.resourcegroupstaggingapi.inputs;
 
 import io.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesResourceTagMappingListComplianceDetail;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
      * List of objects with information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
      * 
      */
-    @InputImport(name="complianceDetails", required=true)
+    @Import(name="complianceDetails", required=true)
       private final List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails;
 
     public List<GetResourcesResourceTagMappingListComplianceDetail> getComplianceDetails() {
@@ -30,7 +30,7 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
      * ARN of the resource.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
     public String getResourceArn() {
@@ -41,7 +41,7 @@ public final class GetResourcesResourceTagMappingList extends io.pulumi.resource
      * Map of tags assigned to the resource.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
     public Map<String,String> getTags() {

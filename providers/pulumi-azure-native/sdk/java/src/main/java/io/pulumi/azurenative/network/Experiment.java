@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.ExperimentArgs;
 import io.pulumi.azurenative.network.outputs.ExperimentEndpointResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The description of the details or intents of the Experiment
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The state of the Experiment
      * 
      */
-    @OutputExport(name="enabledState", type=String.class, parameters={})
+    @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
@@ -64,7 +64,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The endpoint A of an experiment
      * 
      */
-    @OutputExport(name="endpointA", type=ExperimentEndpointResponse.class, parameters={})
+    @Export(name="endpointA", type=ExperimentEndpointResponse.class, parameters={})
     private Output</* @Nullable */ ExperimentEndpointResponse> endpointA;
 
     /**
@@ -78,7 +78,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The endpoint B of an experiment
      * 
      */
-    @OutputExport(name="endpointB", type=ExperimentEndpointResponse.class, parameters={})
+    @Export(name="endpointB", type=ExperimentEndpointResponse.class, parameters={})
     private Output</* @Nullable */ ExperimentEndpointResponse> endpointB;
 
     /**
@@ -92,7 +92,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -106,7 +106,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Resource status.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -134,7 +134,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The uri to the Script used in the Experiment
      * 
      */
-    @OutputExport(name="scriptFileUri", type=String.class, parameters={})
+    @Export(name="scriptFileUri", type=String.class, parameters={})
     private Output<String> scriptFileUri;
 
     /**
@@ -148,7 +148,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The description of Experiment status from the server side
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -162,7 +162,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -176,7 +176,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

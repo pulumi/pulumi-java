@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationResponseParameter {
     /**
      * A key-value map. The key of ths map identifies the location of the request parameter to change, and how to change it. The corresponding value specifies the new data for the parameter.
@@ -22,10 +22,10 @@ public final class IntegrationResponseParameter {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationResponseParameter(
-        @OutputCustomType.Parameter("mappings") Map<String,String> mappings,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("mappings") Map<String,String> mappings,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.mappings = mappings;
         this.statusCode = statusCode;
     }

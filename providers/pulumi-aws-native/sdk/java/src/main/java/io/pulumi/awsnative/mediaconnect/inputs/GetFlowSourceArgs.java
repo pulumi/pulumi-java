@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFlowSourceArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the source.
      * 
      */
-    @InputImport(name="sourceArn", required=true)
+    @Import(name="sourceArn", required=true)
       private final String sourceArn;
 
     public String getSourceArn() {

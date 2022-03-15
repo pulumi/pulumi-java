@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlatformPropertiesResponse {
     /**
      * The OS architecture.
@@ -27,11 +27,11 @@ public final class PlatformPropertiesResponse {
      */
     private final @Nullable String variant;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlatformPropertiesResponse(
-        @OutputCustomType.Parameter("architecture") @Nullable String architecture,
-        @OutputCustomType.Parameter("os") String os,
-        @OutputCustomType.Parameter("variant") @Nullable String variant) {
+        @CustomType.Parameter("architecture") @Nullable String architecture,
+        @CustomType.Parameter("os") String os,
+        @CustomType.Parameter("variant") @Nullable String variant) {
         this.architecture = architecture;
         this.os = os;
         this.variant = variant;

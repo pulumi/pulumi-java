@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagerExtendedInfoResult {
     /**
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
@@ -67,19 +67,19 @@ public final class GetManagerExtendedInfoResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagerExtendedInfoResult(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
-        @OutputCustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("integrityKey") String integrityKey,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("portalCertificateThumbprint") @Nullable String portalCertificateThumbprint,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @CustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("integrityKey") String integrityKey,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("portalCertificateThumbprint") @Nullable String portalCertificateThumbprint,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.algorithm = algorithm;
         this.encryptionKey = encryptionKey;
         this.encryptionKeyThumbprint = encryptionKeyThumbprint;

@@ -3,12 +3,12 @@
 
 package io.pulumi.mypkg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.mypkg.outputs.StorageAccountKeyResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListStorageAccountKeysResult {
     /**
      * Gets the list of storage account keys and their properties for the specified storage account.
@@ -16,8 +16,8 @@ public final class ListStorageAccountKeysResult {
      */
     private final List<StorageAccountKeyResponse> keys;
 
-    @OutputCustomType.Constructor
-    private ListStorageAccountKeysResult(@OutputCustomType.Parameter("keys") List<StorageAccountKeyResponse> keys) {
+    @CustomType.Constructor
+    private ListStorageAccountKeysResult(@CustomType.Parameter("keys") List<StorageAccountKeyResponse> keys) {
         this.keys = keys;
     }
 

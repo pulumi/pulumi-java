@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
      * Set of configuration blocks containing custom action definitions that are available for use by the set of `stateless rule`. See Custom Action below for details.
      * 
      */
-    @InputImport(name="customActions")
+    @Import(name="customActions")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> getCustomActions() {
@@ -31,7 +31,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
      * Set of configuration blocks containing the stateless rules for use in the stateless rule group. See Stateless Rule below for details.
      * 
      */
-    @InputImport(name="statelessRules", required=true)
+    @Import(name="statelessRules", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> getStatelessRules() {

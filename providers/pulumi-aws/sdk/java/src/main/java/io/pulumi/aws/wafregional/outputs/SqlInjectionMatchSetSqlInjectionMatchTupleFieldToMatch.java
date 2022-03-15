@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.wafregional.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch {
     /**
      * When `type` is `HEADER`, enter the name of the header that you want to search, e.g., `User-Agent` or `Referer`.
@@ -26,10 +26,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch(
-        @OutputCustomType.Parameter("data") @Nullable String data,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("data") @Nullable String data,
+        @CustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }

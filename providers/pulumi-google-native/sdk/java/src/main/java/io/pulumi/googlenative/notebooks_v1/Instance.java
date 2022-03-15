@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.InstanceArgs;
@@ -32,7 +32,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
      * 
      */
-    @OutputExport(name="acceleratorConfig", type=AcceleratorConfigResponse.class, parameters={})
+    @Export(name="acceleratorConfig", type=AcceleratorConfigResponse.class, parameters={})
     private Output<AcceleratorConfigResponse> acceleratorConfig;
 
     /**
@@ -46,7 +46,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. The size of the boot disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB. If not specified, this defaults to 100.
      * 
      */
-    @OutputExport(name="bootDiskSizeGb", type=String.class, parameters={})
+    @Export(name="bootDiskSizeGb", type=String.class, parameters={})
     private Output<String> bootDiskSizeGb;
 
     /**
@@ -60,7 +60,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. The type of the boot disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
      */
-    @OutputExport(name="bootDiskType", type=String.class, parameters={})
+    @Export(name="bootDiskType", type=String.class, parameters={})
     private Output<String> bootDiskType;
 
     /**
@@ -74,7 +74,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Use a container image to start the notebook instance.
      * 
      */
-    @OutputExport(name="containerImage", type=ContainerImageResponse.class, parameters={})
+    @Export(name="containerImage", type=ContainerImageResponse.class, parameters={})
     private Output<ContainerImageResponse> containerImage;
 
     /**
@@ -88,7 +88,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Instance creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -102,7 +102,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
      * 
      */
-    @OutputExport(name="customGpuDriverPath", type=String.class, parameters={})
+    @Export(name="customGpuDriverPath", type=String.class, parameters={})
     private Output<String> customGpuDriverPath;
 
     /**
@@ -116,7 +116,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. The size of the data disk in GB attached to this instance, up to a maximum of 64000 GB (64 TB). You can choose the size of the data disk based on how big your notebooks and data are. If not specified, this defaults to 100.
      * 
      */
-    @OutputExport(name="dataDiskSizeGb", type=String.class, parameters={})
+    @Export(name="dataDiskSizeGb", type=String.class, parameters={})
     private Output<String> dataDiskSizeGb;
 
     /**
@@ -130,7 +130,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. The type of the data disk attached to this instance, defaults to standard persistent disk (`PD_STANDARD`).
      * 
      */
-    @OutputExport(name="dataDiskType", type=String.class, parameters={})
+    @Export(name="dataDiskType", type=String.class, parameters={})
     private Output<String> dataDiskType;
 
     /**
@@ -144,7 +144,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. Disk encryption method used on the boot and data disks, defaults to GMEK.
      * 
      */
-    @OutputExport(name="diskEncryption", type=String.class, parameters={})
+    @Export(name="diskEncryption", type=String.class, parameters={})
     private Output<String> diskEncryption;
 
     /**
@@ -158,7 +158,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Attached disks to notebook instance.
      * 
      */
-    @OutputExport(name="disks", type=List.class, parameters={DiskResponse.class})
+    @Export(name="disks", type=List.class, parameters={DiskResponse.class})
     private Output<List<DiskResponse>> disks;
 
     /**
@@ -172,7 +172,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
      * 
      */
-    @OutputExport(name="installGpuDriver", type=Boolean.class, parameters={})
+    @Export(name="installGpuDriver", type=Boolean.class, parameters={})
     private Output<Boolean> installGpuDriver;
 
     /**
@@ -186,7 +186,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. The owner of this instance after creation. Format: `alias@example.com` Currently supports one owner only. If not specified, all of the service account users of your VM instance's service account can use the instance.
      * 
      */
-    @OutputExport(name="instanceOwners", type=List.class, parameters={String.class})
+    @Export(name="instanceOwners", type=List.class, parameters={String.class})
     private Output<List<String>> instanceOwners;
 
     /**
@@ -200,7 +200,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. The KMS key used to encrypt the disks, only applicable if disk_encryption is CMEK. Format: `projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}` Learn more about [using your own encryption keys](/kms/docs/quickstart).
      * 
      */
-    @OutputExport(name="kmsKey", type=String.class, parameters={})
+    @Export(name="kmsKey", type=String.class, parameters={})
     private Output<String> kmsKey;
 
     /**
@@ -214,7 +214,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Labels to apply to this instance. These can be later modified by the setLabels method.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -228,7 +228,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The [Compute Engine machine type](/compute/docs/machine-types) of this instance.
      * 
      */
-    @OutputExport(name="machineType", type=String.class, parameters={})
+    @Export(name="machineType", type=String.class, parameters={})
     private Output<String> machineType;
 
     /**
@@ -242,7 +242,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Custom metadata to apply to this instance.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
@@ -256,7 +256,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of this notebook instance. Format: `projects/{project_id}/locations/{location}/instances/{instance_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -270,7 +270,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the VPC that this instance is in. Format: `projects/{project_id}/global/networks/{network_id}`
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -284,7 +284,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
      * 
      */
-    @OutputExport(name="nicType", type=String.class, parameters={})
+    @Export(name="nicType", type=String.class, parameters={})
     private Output<String> nicType;
 
     /**
@@ -298,7 +298,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If true, the notebook instance will not register with the proxy.
      * 
      */
-    @OutputExport(name="noProxyAccess", type=Boolean.class, parameters={})
+    @Export(name="noProxyAccess", type=Boolean.class, parameters={})
     private Output<Boolean> noProxyAccess;
 
     /**
@@ -312,7 +312,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If true, no public IP will be assigned to this instance.
      * 
      */
-    @OutputExport(name="noPublicIp", type=Boolean.class, parameters={})
+    @Export(name="noPublicIp", type=Boolean.class, parameters={})
     private Output<Boolean> noPublicIp;
 
     /**
@@ -326,7 +326,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. If true, the data disk will not be auto deleted when deleting the instance.
      * 
      */
-    @OutputExport(name="noRemoveDataDisk", type=Boolean.class, parameters={})
+    @Export(name="noRemoveDataDisk", type=Boolean.class, parameters={})
     private Output<Boolean> noRemoveDataDisk;
 
     /**
@@ -340,7 +340,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
      * 
      */
-    @OutputExport(name="postStartupScript", type=String.class, parameters={})
+    @Export(name="postStartupScript", type=String.class, parameters={})
     private Output<String> postStartupScript;
 
     /**
@@ -354,7 +354,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The proxy endpoint that is used to access the Jupyter notebook.
      * 
      */
-    @OutputExport(name="proxyUri", type=String.class, parameters={})
+    @Export(name="proxyUri", type=String.class, parameters={})
     private Output<String> proxyUri;
 
     /**
@@ -368,7 +368,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. The optional reservation affinity. Setting this field will apply the specified [Zonal Compute Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this notebook instance.
      * 
      */
-    @OutputExport(name="reservationAffinity", type=ReservationAffinityResponse.class, parameters={})
+    @Export(name="reservationAffinity", type=ReservationAffinityResponse.class, parameters={})
     private Output<ReservationAffinityResponse> reservationAffinity;
 
     /**
@@ -382,7 +382,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The service account on this instance, giving access to other Google Cloud services. You can use any service account within the same project, but you must have the service account user permission to use the instance. If not specified, the [Compute Engine default service account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account) is used.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -396,7 +396,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. The URIs of service account scopes to be included in Compute Engine instances. If not specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform - https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least: https://www.googleapis.com/auth/compute
      * 
      */
-    @OutputExport(name="serviceAccountScopes", type=List.class, parameters={String.class})
+    @Export(name="serviceAccountScopes", type=List.class, parameters={String.class})
     private Output<List<String>> serviceAccountScopes;
 
     /**
@@ -410,7 +410,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
      * 
      */
-    @OutputExport(name="shieldedInstanceConfig", type=ShieldedInstanceConfigResponse.class, parameters={})
+    @Export(name="shieldedInstanceConfig", type=ShieldedInstanceConfigResponse.class, parameters={})
     private Output<ShieldedInstanceConfigResponse> shieldedInstanceConfig;
 
     /**
@@ -424,7 +424,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The state of this instance.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -438,7 +438,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the subnet that this instance is in. Format: `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
      * 
      */
-    @OutputExport(name="subnet", type=String.class, parameters={})
+    @Export(name="subnet", type=String.class, parameters={})
     private Output<String> subnet;
 
     /**
@@ -452,7 +452,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Optional. The Compute Engine tags to add to runtime (see [Tagging instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
@@ -466,7 +466,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Instance update time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -480,7 +480,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The upgrade history of this instance.
      * 
      */
-    @OutputExport(name="upgradeHistory", type=List.class, parameters={UpgradeHistoryEntryResponse.class})
+    @Export(name="upgradeHistory", type=List.class, parameters={UpgradeHistoryEntryResponse.class})
     private Output<List<UpgradeHistoryEntryResponse>> upgradeHistory;
 
     /**
@@ -494,7 +494,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Use a Compute Engine VM image to start the notebook instance.
      * 
      */
-    @OutputExport(name="vmImage", type=VmImageResponse.class, parameters={})
+    @Export(name="vmImage", type=VmImageResponse.class, parameters={})
     private Output<VmImageResponse> vmImage;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The SANs for a TLS validation context.
      * 
      */
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesGetArgs> getSubjectAlternativeNames() {
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The TLS validation context trust.
      * 
      */
-    @InputImport(name="trust", required=true)
+    @Import(name="trust", required=true)
       private final Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> trust;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustGetArgs> getTrust() {

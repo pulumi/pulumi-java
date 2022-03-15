@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MangedSslCertificateManaged {
     private final List<String> domains;
 
-    @OutputCustomType.Constructor
-    private MangedSslCertificateManaged(@OutputCustomType.Parameter("domains") List<String> domains) {
+    @CustomType.Constructor
+    private MangedSslCertificateManaged(@CustomType.Parameter("domains") List<String> domains) {
         this.domains = domains;
     }
 

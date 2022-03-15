@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
      * 
      */
-    @InputImport(name="enterpriseConfigResourceName", required=true)
+    @Import(name="enterpriseConfigResourceName", required=true)
       private final String enterpriseConfigResourceName;
 
     public String getEnterpriseConfigResourceName() {
@@ -33,7 +33,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * The installationID that emits the GitHub event.
      * 
      */
-    @InputImport(name="installationId", required=true)
+    @Import(name="installationId", required=true)
       private final String installationId;
 
     public String getInstallationId() {
@@ -44,7 +44,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * Name of the repository. For example: The name for https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * Owner of the repository. For example: The owner for https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
      * 
      */
-    @InputImport(name="owner", required=true)
+    @Import(name="owner", required=true)
       private final String owner;
 
     public String getOwner() {
@@ -66,7 +66,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * filter to match changes in pull requests.
      * 
      */
-    @InputImport(name="pullRequest", required=true)
+    @Import(name="pullRequest", required=true)
       private final PullRequestFilterResponse pullRequest;
 
     public PullRequestFilterResponse getPullRequest() {
@@ -77,7 +77,7 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
      * filter to match changes in refs like branches, tags.
      * 
      */
-    @InputImport(name="push", required=true)
+    @Import(name="push", required=true)
       private final PushFilterResponse push;
 
     public PushFilterResponse getPush() {

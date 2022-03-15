@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.EndpointResponse;
 import io.pulumi.azurenative.network.outputs.MonitorConfigResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The list of allowed endpoint record types.
      * 
      */
-    @OutputExport(name="allowedEndpointRecordTypes", type=List.class, parameters={String.class})
+    @Export(name="allowedEndpointRecordTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedEndpointRecordTypes;
 
     /**
@@ -53,7 +53,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The DNS settings of the Traffic Manager profile.
      * 
      */
-    @OutputExport(name="dnsConfig", type=DnsConfigResponse.class, parameters={})
+    @Export(name="dnsConfig", type=DnsConfigResponse.class, parameters={})
     private Output</* @Nullable */ DnsConfigResponse> dnsConfig;
 
     /**
@@ -67,7 +67,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The list of endpoints in the Traffic Manager profile.
      * 
      */
-    @OutputExport(name="endpoints", type=List.class, parameters={EndpointResponse.class})
+    @Export(name="endpoints", type=List.class, parameters={EndpointResponse.class})
     private Output</* @Nullable */ List<EndpointResponse>> endpoints;
 
     /**
@@ -81,7 +81,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -95,7 +95,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Maximum number of endpoints to be returned for MultiValue routing type.
      * 
      */
-    @OutputExport(name="maxReturn", type=Double.class, parameters={})
+    @Export(name="maxReturn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxReturn;
 
     /**
@@ -109,7 +109,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The endpoint monitoring settings of the Traffic Manager profile.
      * 
      */
-    @OutputExport(name="monitorConfig", type=MonitorConfigResponse.class, parameters={})
+    @Export(name="monitorConfig", type=MonitorConfigResponse.class, parameters={})
     private Output</* @Nullable */ MonitorConfigResponse> monitorConfig;
 
     /**
@@ -123,7 +123,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -137,7 +137,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The status of the Traffic Manager profile.
      * 
      */
-    @OutputExport(name="profileStatus", type=String.class, parameters={})
+    @Export(name="profileStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileStatus;
 
     /**
@@ -151,7 +151,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -165,7 +165,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The traffic routing method of the Traffic Manager profile.
      * 
      */
-    @OutputExport(name="trafficRoutingMethod", type=String.class, parameters={})
+    @Export(name="trafficRoutingMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> trafficRoutingMethod;
 
     /**
@@ -179,7 +179,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Indicates whether Traffic View is 'Enabled' or 'Disabled' for the Traffic Manager profile. Null, indicates 'Disabled'. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
-    @OutputExport(name="trafficViewEnrollmentStatus", type=String.class, parameters={})
+    @Export(name="trafficViewEnrollmentStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> trafficViewEnrollmentStatus;
 
     /**
@@ -193,7 +193,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

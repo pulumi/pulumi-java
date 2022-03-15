@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
      * The CS RunAs account Id.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable String accountId;
 
     public Optional<String> getAccountId() {
@@ -33,7 +33,7 @@ public final class RunAsAccountResponse extends io.pulumi.resources.InvokeArgs {
      * The CS RunAs account name.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {

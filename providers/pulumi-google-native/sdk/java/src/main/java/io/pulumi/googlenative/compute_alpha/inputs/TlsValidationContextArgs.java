@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.TlsValidationContextValidationSource;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
      * The path to the file holding the CA certificate to validate the client or server certificate.
      * 
      */
-    @InputImport(name="certificatePath")
+    @Import(name="certificatePath")
       private final @Nullable Output<String> certificatePath;
 
     public Output<String> getCertificatePath() {
@@ -35,7 +35,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
      * Specifies the config to retrieve certificates through SDS. This field is applicable only if tlsCertificateSource is set to USE_SDS.
      * 
      */
-    @InputImport(name="sdsConfig")
+    @Import(name="sdsConfig")
       private final @Nullable Output<SdsConfigArgs> sdsConfig;
 
     public Output<SdsConfigArgs> getSdsConfig() {
@@ -46,7 +46,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
      * Defines how TLS certificates are obtained.
      * 
      */
-    @InputImport(name="validationSource")
+    @Import(name="validationSource")
       private final @Nullable Output<TlsValidationContextValidationSource> validationSource;
 
     public Output<TlsValidationContextValidationSource> getValidationSource() {

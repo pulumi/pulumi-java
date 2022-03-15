@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.SshKeyArgs;
 import io.pulumi.aws.iam.inputs.SshKeyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
      * 
      */
-    @OutputExport(name="encoding", type=String.class, parameters={})
+    @Export(name="encoding", type=String.class, parameters={})
     private Output<String> encoding;
 
     /**
@@ -46,7 +46,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The MD5 message digest of the SSH public key.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -60,7 +60,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
@@ -74,7 +74,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The unique identifier for the SSH public key.
      * 
      */
-    @OutputExport(name="sshPublicKeyId", type=String.class, parameters={})
+    @Export(name="sshPublicKeyId", type=String.class, parameters={})
     private Output<String> sshPublicKeyId;
 
     /**
@@ -88,7 +88,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -102,7 +102,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The name of the IAM user to associate the SSH public key with.
      * 
      */
-    @OutputExport(name="username", type=String.class, parameters={})
+    @Export(name="username", type=String.class, parameters={})
     private Output<String> username;
 
     /**

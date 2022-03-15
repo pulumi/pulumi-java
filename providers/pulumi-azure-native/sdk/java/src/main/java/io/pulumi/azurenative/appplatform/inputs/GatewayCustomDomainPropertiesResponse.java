@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GatewayCustomDomainPropertiesResponse extends io.pulumi.resou
      * The thumbprint of bound certificate.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

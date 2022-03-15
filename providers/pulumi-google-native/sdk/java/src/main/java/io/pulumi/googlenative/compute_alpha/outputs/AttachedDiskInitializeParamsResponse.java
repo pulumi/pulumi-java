@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttachedDiskInitializeParamsResponse {
     /**
      * The architecture of the attached disk. Valid values are arm64 or x86_64.
@@ -110,27 +110,27 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttachedDiskInitializeParamsResponse(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("multiWriter") Boolean multiWriter,
-        @OutputCustomType.Parameter("onUpdateAction") String onUpdateAction,
-        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
-        @OutputCustomType.Parameter("replicaZones") List<String> replicaZones,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("sourceImage") String sourceImage,
-        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        @OutputCustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
-        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
-        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("multiWriter") Boolean multiWriter,
+        @CustomType.Parameter("onUpdateAction") String onUpdateAction,
+        @CustomType.Parameter("provisionedIops") String provisionedIops,
+        @CustomType.Parameter("replicaZones") List<String> replicaZones,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("sourceImage") String sourceImage,
+        @CustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @CustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
+        @CustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @CustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
         this.architecture = architecture;
         this.description = description;
         this.diskName = diskName;

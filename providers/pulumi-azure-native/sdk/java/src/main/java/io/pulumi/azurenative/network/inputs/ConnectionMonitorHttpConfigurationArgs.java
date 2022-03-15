@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.HTTPConfigurationMethod;
 import io.pulumi.azurenative.network.inputs.HTTPHeaderArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * The HTTP method to use.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<Either<String,HTTPConfigurationMethod>> method;
 
     public Output<Either<String,HTTPConfigurationMethod>> getMethod() {
@@ -39,7 +39,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * The path component of the URI. For instance, "/dir1/dir2".
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -50,7 +50,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * The port to connect to.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -61,7 +61,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
      * 
      */
-    @InputImport(name="preferHTTPS")
+    @Import(name="preferHTTPS")
       private final @Nullable Output<Boolean> preferHTTPS;
 
     public Output<Boolean> getPreferHTTPS() {
@@ -72,7 +72,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * The HTTP headers to transmit with the request.
      * 
      */
-    @InputImport(name="requestHeaders")
+    @Import(name="requestHeaders")
       private final @Nullable Output<List<HTTPHeaderArgs>> requestHeaders;
 
     public Output<List<HTTPHeaderArgs>> getRequestHeaders() {
@@ -83,7 +83,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
      * 
      */
-    @InputImport(name="validStatusCodeRanges")
+    @Import(name="validStatusCodeRanges")
       private final @Nullable Output<List<String>> validStatusCodeRanges;
 
     public Output<List<String>> getValidStatusCodeRanges() {

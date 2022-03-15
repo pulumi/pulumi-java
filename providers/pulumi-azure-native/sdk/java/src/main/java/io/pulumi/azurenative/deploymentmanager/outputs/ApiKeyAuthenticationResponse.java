@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiKeyAuthenticationResponse {
     /**
      * The location of the authentication key/value pair in the request.
@@ -31,12 +31,12 @@ public final class ApiKeyAuthenticationResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiKeyAuthenticationResponse(
-        @OutputCustomType.Parameter("in") String in,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("in") String in,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.in = in;
         this.name = name;
         this.type = type;

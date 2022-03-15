@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.FilterTrackPropertyCompareOperation;
 import io.pulumi.azurenative.media.enums.FilterTrackPropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * The track property condition operation.
      * 
      */
-    @InputImport(name="operation", required=true)
+    @Import(name="operation", required=true)
       private final Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
     public Output<Either<String,FilterTrackPropertyCompareOperation>> getOperation() {
@@ -35,7 +35,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * The track property type.
      * 
      */
-    @InputImport(name="property", required=true)
+    @Import(name="property", required=true)
       private final Output<Either<String,FilterTrackPropertyType>> property;
 
     public Output<Either<String,FilterTrackPropertyType>> getProperty() {
@@ -46,7 +46,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
      * The track property value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

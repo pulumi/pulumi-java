@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitRepoSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The branch or tag to use. Must start with "refs/" (required).
      * 
      */
-    @InputImport(name="ref")
+    @Import(name="ref")
       private final @Nullable Output<String> ref;
 
     public Output<String> getRef() {
@@ -34,7 +34,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * See RepoType below.
      * 
      */
-    @InputImport(name="repoType")
+    @Import(name="repoType")
       private final @Nullable Output<GitRepoSourceRepoType> repoType;
 
     public Output<GitRepoSourceRepoType> getRepoType() {
@@ -45,7 +45,7 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the repo (required).
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

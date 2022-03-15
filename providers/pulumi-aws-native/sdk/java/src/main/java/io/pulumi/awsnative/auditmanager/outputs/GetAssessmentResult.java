@@ -9,7 +9,7 @@ import io.pulumi.awsnative.auditmanager.outputs.AssessmentReportsDestination;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentRole;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentScope;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssessmentResult {
     private final @Nullable String arn;
     private final @Nullable String assessmentId;
@@ -41,17 +41,17 @@ public final class GetAssessmentResult {
      */
     private final @Nullable List<AssessmentTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssessmentResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("assessmentId") @Nullable String assessmentId,
-        @OutputCustomType.Parameter("assessmentReportsDestination") @Nullable AssessmentReportsDestination assessmentReportsDestination,
-        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
-        @OutputCustomType.Parameter("delegations") @Nullable List<AssessmentDelegation> delegations,
-        @OutputCustomType.Parameter("roles") @Nullable List<AssessmentRole> roles,
-        @OutputCustomType.Parameter("scope") @Nullable AssessmentScope scope,
-        @OutputCustomType.Parameter("status") @Nullable AssessmentStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable List<AssessmentTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("assessmentId") @Nullable String assessmentId,
+        @CustomType.Parameter("assessmentReportsDestination") @Nullable AssessmentReportsDestination assessmentReportsDestination,
+        @CustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @CustomType.Parameter("delegations") @Nullable List<AssessmentDelegation> delegations,
+        @CustomType.Parameter("roles") @Nullable List<AssessmentRole> roles,
+        @CustomType.Parameter("scope") @Nullable AssessmentScope scope,
+        @CustomType.Parameter("status") @Nullable AssessmentStatus status,
+        @CustomType.Parameter("tags") @Nullable List<AssessmentTag> tags) {
         this.arn = arn;
         this.assessmentId = assessmentId;
         this.assessmentReportsDestination = assessmentReportsDestination;

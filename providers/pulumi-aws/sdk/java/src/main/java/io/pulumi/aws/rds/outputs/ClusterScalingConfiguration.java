@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterScalingConfiguration {
     /**
      * Whether to enable automatic pause. A DB cluster can be paused only when it's idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to `true`.
@@ -39,13 +39,13 @@ public final class ClusterScalingConfiguration {
      */
     private final @Nullable String timeoutAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterScalingConfiguration(
-        @OutputCustomType.Parameter("autoPause") @Nullable Boolean autoPause,
-        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
-        @OutputCustomType.Parameter("minCapacity") @Nullable Integer minCapacity,
-        @OutputCustomType.Parameter("secondsUntilAutoPause") @Nullable Integer secondsUntilAutoPause,
-        @OutputCustomType.Parameter("timeoutAction") @Nullable String timeoutAction) {
+        @CustomType.Parameter("autoPause") @Nullable Boolean autoPause,
+        @CustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @CustomType.Parameter("minCapacity") @Nullable Integer minCapacity,
+        @CustomType.Parameter("secondsUntilAutoPause") @Nullable Integer secondsUntilAutoPause,
+        @CustomType.Parameter("timeoutAction") @Nullable String timeoutAction) {
         this.autoPause = autoPause;
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;

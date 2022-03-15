@@ -6,7 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs;
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
@@ -34,7 +34,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * Integer of maximum percentage that a Spot Instance price can be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. If you leave this field empty, the default value is 100% of the On-Demand price. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="bidPercentage")
+    @Import(name="bidPercentage")
       private final @Nullable Output<Integer> bidPercentage;
 
     public Output<Integer> getBidPercentage() {
@@ -45,7 +45,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The desired number of EC2 vCPUS in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="desiredVcpus")
+    @Import(name="desiredVcpus")
       private final @Nullable Output<Integer> desiredVcpus;
 
     public Output<Integer> getDesiredVcpus() {
@@ -56,7 +56,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If Ec2Configuration isn't specified, the default is ECS_AL2. This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="ec2Configuration")
+    @Import(name="ec2Configuration")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration;
 
     public Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> getEc2Configuration() {
@@ -67,7 +67,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The EC2 key pair that is used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="ec2KeyPair")
+    @Import(name="ec2KeyPair")
       private final @Nullable Output<String> ec2KeyPair;
 
     public Output<String> getEc2KeyPair() {
@@ -78,7 +78,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The Amazon Machine Image (AMI) ID used for instances launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified. (Deprecated, use `image_id_override` instead)
      * 
      */
-    @InputImport(name="imageId")
+    @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
     public Output<String> getImageId() {
@@ -89,7 +89,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="instanceRole")
+    @Import(name="instanceRole")
       private final @Nullable Output<String> instanceRole;
 
     public Output<String> getInstanceRole() {
@@ -100,7 +100,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * A list of instance types that may be launched. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="instanceTypes")
+    @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
     public Output<List<String>> getInstanceTypes() {
@@ -111,7 +111,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The launch template to use for your compute resources. See details below. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="launchTemplate")
+    @Import(name="launchTemplate")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate;
 
     public Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> getLaunchTemplate() {
@@ -122,7 +122,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The maximum number of EC2 vCPUs that an environment can reach.
      * 
      */
-    @InputImport(name="maxVcpus", required=true)
+    @Import(name="maxVcpus", required=true)
       private final Output<Integer> maxVcpus;
 
     public Output<Integer> getMaxVcpus() {
@@ -133,7 +133,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The minimum number of EC2 vCPUs that an environment should maintain. For `EC2` or `SPOT` compute environments, if the parameter is not explicitly defined, a `0` default value will be set. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="minVcpus")
+    @Import(name="minVcpus")
       private final @Nullable Output<Integer> minVcpus;
 
     public Output<Integer> getMinVcpus() {
@@ -144,7 +144,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * A list of EC2 security group that are associated with instances launched in the compute environment.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -155,7 +155,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="spotIamFleetRole")
+    @Import(name="spotIamFleetRole")
       private final @Nullable Output<String> spotIamFleetRole;
 
     public Output<String> getSpotIamFleetRole() {
@@ -166,7 +166,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * A list of VPC subnets into which the compute resources are launched.
      * 
      */
-    @InputImport(name="subnets", required=true)
+    @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {
@@ -177,7 +177,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -188,7 +188,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
      * The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

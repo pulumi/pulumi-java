@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentNoteResponse {
     /**
      * Resource URI for the artifact being deployed.
@@ -16,8 +16,8 @@ public final class DeploymentNoteResponse {
      */
     private final List<String> resourceUri;
 
-    @OutputCustomType.Constructor
-    private DeploymentNoteResponse(@OutputCustomType.Parameter("resourceUri") List<String> resourceUri) {
+    @CustomType.Constructor
+    private DeploymentNoteResponse(@CustomType.Parameter("resourceUri") List<String> resourceUri) {
         this.resourceUri = resourceUri;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
      * Security group IDs to assign to running builds.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -29,7 +29,7 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
      * Subnet IDs within which to run builds.
      * 
      */
-    @InputImport(name="subnets", required=true)
+    @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {
@@ -40,7 +40,7 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
      * ID of the VPC within which to run builds.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

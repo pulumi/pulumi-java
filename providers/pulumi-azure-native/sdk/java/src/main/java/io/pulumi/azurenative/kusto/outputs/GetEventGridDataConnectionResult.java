@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventGridDataConnectionResult {
     /**
      * The name of blob storage event type to process.
@@ -84,22 +84,22 @@ public final class GetEventGridDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventGridDataConnectionResult(
-        @OutputCustomType.Parameter("blobStorageEventType") @Nullable String blobStorageEventType,
-        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
-        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
-        @OutputCustomType.Parameter("eventHubResourceId") String eventHubResourceId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ignoreFirstRecord") @Nullable Boolean ignoreFirstRecord,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("storageAccountResourceId") String storageAccountResourceId,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("blobStorageEventType") @Nullable String blobStorageEventType,
+        @CustomType.Parameter("consumerGroup") String consumerGroup,
+        @CustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @CustomType.Parameter("eventHubResourceId") String eventHubResourceId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ignoreFirstRecord") @Nullable Boolean ignoreFirstRecord,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("storageAccountResourceId") String storageAccountResourceId,
+        @CustomType.Parameter("tableName") @Nullable String tableName,
+        @CustomType.Parameter("type") String type) {
         this.blobStorageEventType = blobStorageEventType;
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;

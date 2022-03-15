@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.UrlPathMatchConditionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryRuleUrlPathConditionResponse {
     /**
      * The name of the condition for the delivery rule.
@@ -22,10 +22,10 @@ public final class DeliveryRuleUrlPathConditionResponse {
      */
     private final UrlPathMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryRuleUrlPathConditionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") UrlPathMatchConditionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") UrlPathMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

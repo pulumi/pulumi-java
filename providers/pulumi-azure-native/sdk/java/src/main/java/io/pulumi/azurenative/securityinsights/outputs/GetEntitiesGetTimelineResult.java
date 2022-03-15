@@ -7,14 +7,14 @@ import io.pulumi.azurenative.securityinsights.outputs.ActivityTimelineItemRespon
 import io.pulumi.azurenative.securityinsights.outputs.BookmarkTimelineItemResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SecurityAlertTimelineItemResponse;
 import io.pulumi.azurenative.securityinsights.outputs.TimelineResultsMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEntitiesGetTimelineResult {
     /**
      * The metadata from the timeline operation results.
@@ -27,10 +27,10 @@ public final class GetEntitiesGetTimelineResult {
      */
     private final @Nullable List<Object> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntitiesGetTimelineResult(
-        @OutputCustomType.Parameter("metaData") @Nullable TimelineResultsMetadataResponse metaData,
-        @OutputCustomType.Parameter("value") @Nullable List<Object> value) {
+        @CustomType.Parameter("metaData") @Nullable TimelineResultsMetadataResponse metaData,
+        @CustomType.Parameter("value") @Nullable List<Object> value) {
         this.metaData = metaData;
         this.value = value;
     }

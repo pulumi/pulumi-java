@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The affinity setting for an instance on a Dedicated Host.
      * 
      */
-    @InputImport(name="affinity")
+    @Import(name="affinity")
       private final @Nullable Output<String> affinity;
 
     public Output<String> getAffinity() {
@@ -30,7 +30,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The Availability Zone for the instance.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -41,7 +41,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The name of the placement group for the instance.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -52,7 +52,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The ID of the Dedicated Host for the instance.
      * 
      */
-    @InputImport(name="hostId")
+    @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
@@ -63,7 +63,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The ARN of the Host Resource Group in which to launch instances.
      * 
      */
-    @InputImport(name="hostResourceGroupArn")
+    @Import(name="hostResourceGroupArn")
       private final @Nullable Output<String> hostResourceGroupArn;
 
     public Output<String> getHostResourceGroupArn() {
@@ -74,7 +74,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The number of the partition the instance should launch in. Valid only if the placement group strategy is set to partition.
      * 
      */
-    @InputImport(name="partitionNumber")
+    @Import(name="partitionNumber")
       private final @Nullable Output<Integer> partitionNumber;
 
     public Output<Integer> getPartitionNumber() {
@@ -85,7 +85,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * Reserved for future use.
      * 
      */
-    @InputImport(name="spreadDomain")
+    @Import(name="spreadDomain")
       private final @Nullable Output<String> spreadDomain;
 
     public Output<String> getSpreadDomain() {
@@ -96,7 +96,7 @@ public final class LaunchTemplatePlacementGetArgs extends io.pulumi.resources.Re
      * The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
      * 
      */
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable Output<String> tenancy;
 
     public Output<String> getTenancy() {

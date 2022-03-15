@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildSignatureResponse {
     /**
      * An Id for the key used to sign. This could be either an Id for the key stored in `public_key` (such as the Id or fingerprint for a PGP key, or the CN for a cert), or a reference to an external key (such as a reference to a key in Cloud Key Management Service).
@@ -30,12 +30,12 @@ public final class BuildSignatureResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildSignatureResponse(
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("keyType") String keyType,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("signature") String signature) {
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("keyType") String keyType,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("signature") String signature) {
         this.keyId = keyId;
         this.keyType = keyType;
         this.publicKey = publicKey;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringIdResponse;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExpressRouteConnectionResult {
     /**
      * Authorization key to establish the connection.
@@ -61,17 +61,17 @@ public final class GetExpressRouteConnectionResult {
      */
     private final @Nullable Integer routingWeight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExpressRouteConnectionResult(
-        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
-        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
-        @OutputCustomType.Parameter("expressRouteCircuitPeering") ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering,
-        @OutputCustomType.Parameter("expressRouteGatewayBypass") @Nullable Boolean expressRouteGatewayBypass,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
-        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight) {
+        @CustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @CustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @CustomType.Parameter("expressRouteCircuitPeering") ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering,
+        @CustomType.Parameter("expressRouteGatewayBypass") @Nullable Boolean expressRouteGatewayBypass,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @CustomType.Parameter("routingWeight") @Nullable Integer routingWeight) {
         this.authorizationKey = authorizationKey;
         this.enableInternetSecurity = enableInternetSecurity;
         this.expressRouteCircuitPeering = expressRouteCircuitPeering;

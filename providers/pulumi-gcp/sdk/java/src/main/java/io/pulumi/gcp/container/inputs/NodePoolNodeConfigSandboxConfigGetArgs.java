@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class NodePoolNodeConfigSandboxConfigGetArgs extends io.pulumi.reso
 
     public static final NodePoolNodeConfigSandboxConfigGetArgs Empty = new NodePoolNodeConfigSandboxConfigGetArgs();
 
-    @InputImport(name="sandboxType", required=true)
+    @Import(name="sandboxType", required=true)
       private final Output<String> sandboxType;
 
     public Output<String> getSandboxType() {

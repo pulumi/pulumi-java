@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudwatch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCompositeAlarmArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the Composite Alarm
      * 
      */
-    @InputImport(name="alarmName", required=true)
+    @Import(name="alarmName", required=true)
       private final String alarmName;
 
     public String getAlarmName() {

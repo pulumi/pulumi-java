@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProxyServerPropertiesResponse {
     /**
      * Proxy server IP
@@ -22,10 +22,10 @@ public final class ProxyServerPropertiesResponse {
      */
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProxyServerPropertiesResponse(
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("port") @Nullable String port) {
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("port") @Nullable String port) {
         this.ip = ip;
         this.port = port;
     }

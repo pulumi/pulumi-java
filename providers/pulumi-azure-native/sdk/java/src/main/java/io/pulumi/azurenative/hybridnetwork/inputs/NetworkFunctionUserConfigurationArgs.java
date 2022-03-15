@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurationOsProfileArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * The network interface configuration.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -37,7 +37,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * Specifies the operating system settings for the role instance.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
 
     public Output<NetworkFunctionUserConfigurationOsProfileArgs> getOsProfile() {
@@ -48,7 +48,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * The name of the network function role.
      * 
      */
-    @InputImport(name="roleName")
+    @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
@@ -59,7 +59,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
      * The user data parameters from the customer.
      * 
      */
-    @InputImport(name="userDataParameters")
+    @Import(name="userDataParameters")
       private final @Nullable Output<Object> userDataParameters;
 
     public Output<Object> getUserDataParameters() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostPathVolumeSource {
     /**
      * Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath
@@ -22,10 +22,10 @@ public final class HostPathVolumeSource {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostPathVolumeSource(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.path = path;
         this.type = type;
     }

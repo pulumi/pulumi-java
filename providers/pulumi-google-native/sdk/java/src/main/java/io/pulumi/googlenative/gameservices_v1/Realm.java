@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1.RealmArgs;
@@ -22,7 +22,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * Human readable description of the realm.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * ETag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * The labels associated with this realm. Each label is a key-value pair.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -78,7 +78,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
@@ -106,7 +106,7 @@ public class Realm extends io.pulumi.resources.CustomResource {
      * The last-modified time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

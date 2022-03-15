@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class JitAuthorizationPoliciesResponse extends io.pulumi.resources.
      * The the principal id that will be granted JIT access.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -31,7 +31,7 @@ public final class JitAuthorizationPoliciesResponse extends io.pulumi.resources.
      * The role definition id that will be granted to the Principal.
      * 
      */
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {

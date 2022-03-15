@@ -7,7 +7,7 @@ import io.pulumi.azurenative.customerinsights.enums.RoleTypes;
 import io.pulumi.azurenative.customerinsights.inputs.AssignmentPrincipalArgs;
 import io.pulumi.azurenative.customerinsights.inputs.ResourceSetDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The assignment name
      * 
      */
-    @InputImport(name="assignmentName")
+    @Import(name="assignmentName")
       private final @Nullable Output<String> assignmentName;
 
     public Output<String> getAssignmentName() {
@@ -34,7 +34,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Widget types set for the assignment.
      * 
      */
-    @InputImport(name="conflationPolicies")
+    @Import(name="conflationPolicies")
       private final @Nullable Output<ResourceSetDescriptionArgs> conflationPolicies;
 
     public Output<ResourceSetDescriptionArgs> getConflationPolicies() {
@@ -45,7 +45,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Connectors set for the assignment.
      * 
      */
-    @InputImport(name="connectors")
+    @Import(name="connectors")
       private final @Nullable Output<ResourceSetDescriptionArgs> connectors;
 
     public Output<ResourceSetDescriptionArgs> getConnectors() {
@@ -56,7 +56,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Localized description for the metadata.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
@@ -67,7 +67,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Localized display names for the metadata.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
@@ -78,7 +78,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -89,7 +89,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Interactions set for the assignment.
      * 
      */
-    @InputImport(name="interactions")
+    @Import(name="interactions")
       private final @Nullable Output<ResourceSetDescriptionArgs> interactions;
 
     public Output<ResourceSetDescriptionArgs> getInteractions() {
@@ -100,7 +100,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Kpis set for the assignment.
      * 
      */
-    @InputImport(name="kpis")
+    @Import(name="kpis")
       private final @Nullable Output<ResourceSetDescriptionArgs> kpis;
 
     public Output<ResourceSetDescriptionArgs> getKpis() {
@@ -111,7 +111,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Links set for the assignment.
      * 
      */
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable Output<ResourceSetDescriptionArgs> links;
 
     public Output<ResourceSetDescriptionArgs> getLinks() {
@@ -122,7 +122,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The principals being assigned to.
      * 
      */
-    @InputImport(name="principals", required=true)
+    @Import(name="principals", required=true)
       private final Output<List<AssignmentPrincipalArgs>> principals;
 
     public Output<List<AssignmentPrincipalArgs>> getPrincipals() {
@@ -133,7 +133,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Profiles set for the assignment.
      * 
      */
-    @InputImport(name="profiles")
+    @Import(name="profiles")
       private final @Nullable Output<ResourceSetDescriptionArgs> profiles;
 
     public Output<ResourceSetDescriptionArgs> getProfiles() {
@@ -144,7 +144,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Role assignments set for the relationship links.
      * 
      */
-    @InputImport(name="relationshipLinks")
+    @Import(name="relationshipLinks")
       private final @Nullable Output<ResourceSetDescriptionArgs> relationshipLinks;
 
     public Output<ResourceSetDescriptionArgs> getRelationshipLinks() {
@@ -155,7 +155,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Role assignments set for the relationships.
      * 
      */
-    @InputImport(name="relationships")
+    @Import(name="relationships")
       private final @Nullable Output<ResourceSetDescriptionArgs> relationships;
 
     public Output<ResourceSetDescriptionArgs> getRelationships() {
@@ -166,7 +166,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -177,7 +177,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Type of roles.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<RoleTypes> role;
 
     public Output<RoleTypes> getRole() {
@@ -188,7 +188,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Role assignments set for the assignment.
      * 
      */
-    @InputImport(name="roleAssignments")
+    @Import(name="roleAssignments")
       private final @Nullable Output<ResourceSetDescriptionArgs> roleAssignments;
 
     public Output<ResourceSetDescriptionArgs> getRoleAssignments() {
@@ -199,7 +199,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Sas Policies set for the assignment.
      * 
      */
-    @InputImport(name="sasPolicies")
+    @Import(name="sasPolicies")
       private final @Nullable Output<ResourceSetDescriptionArgs> sasPolicies;
 
     public Output<ResourceSetDescriptionArgs> getSasPolicies() {
@@ -210,7 +210,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Role assignments set for the assignment.
      * 
      */
-    @InputImport(name="segments")
+    @Import(name="segments")
       private final @Nullable Output<ResourceSetDescriptionArgs> segments;
 
     public Output<ResourceSetDescriptionArgs> getSegments() {
@@ -221,7 +221,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Views set for the assignment.
      * 
      */
-    @InputImport(name="views")
+    @Import(name="views")
       private final @Nullable Output<ResourceSetDescriptionArgs> views;
 
     public Output<ResourceSetDescriptionArgs> getViews() {
@@ -232,7 +232,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Widget types set for the assignment.
      * 
      */
-    @InputImport(name="widgetTypes")
+    @Import(name="widgetTypes")
       private final @Nullable Output<ResourceSetDescriptionArgs> widgetTypes;
 
     public Output<ResourceSetDescriptionArgs> getWidgetTypes() {

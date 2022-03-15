@@ -17,7 +17,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelSetVariableArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelSnsArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelSqsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -30,91 +30,91 @@ public final class DetectorModelActionArgs extends io.pulumi.resources.ResourceA
 
     public static final DetectorModelActionArgs Empty = new DetectorModelActionArgs();
 
-    @InputImport(name="clearTimer")
+    @Import(name="clearTimer")
       private final @Nullable Output<DetectorModelClearTimerArgs> clearTimer;
 
     public Output<DetectorModelClearTimerArgs> getClearTimer() {
         return this.clearTimer == null ? Output.empty() : this.clearTimer;
     }
 
-    @InputImport(name="dynamoDB")
+    @Import(name="dynamoDB")
       private final @Nullable Output<DetectorModelDynamoDBArgs> dynamoDB;
 
     public Output<DetectorModelDynamoDBArgs> getDynamoDB() {
         return this.dynamoDB == null ? Output.empty() : this.dynamoDB;
     }
 
-    @InputImport(name="dynamoDBv2")
+    @Import(name="dynamoDBv2")
       private final @Nullable Output<DetectorModelDynamoDBv2Args> dynamoDBv2;
 
     public Output<DetectorModelDynamoDBv2Args> getDynamoDBv2() {
         return this.dynamoDBv2 == null ? Output.empty() : this.dynamoDBv2;
     }
 
-    @InputImport(name="firehose")
+    @Import(name="firehose")
       private final @Nullable Output<DetectorModelFirehoseArgs> firehose;
 
     public Output<DetectorModelFirehoseArgs> getFirehose() {
         return this.firehose == null ? Output.empty() : this.firehose;
     }
 
-    @InputImport(name="iotEvents")
+    @Import(name="iotEvents")
       private final @Nullable Output<DetectorModelIotEventsArgs> iotEvents;
 
     public Output<DetectorModelIotEventsArgs> getIotEvents() {
         return this.iotEvents == null ? Output.empty() : this.iotEvents;
     }
 
-    @InputImport(name="iotSiteWise")
+    @Import(name="iotSiteWise")
       private final @Nullable Output<DetectorModelIotSiteWiseArgs> iotSiteWise;
 
     public Output<DetectorModelIotSiteWiseArgs> getIotSiteWise() {
         return this.iotSiteWise == null ? Output.empty() : this.iotSiteWise;
     }
 
-    @InputImport(name="iotTopicPublish")
+    @Import(name="iotTopicPublish")
       private final @Nullable Output<DetectorModelIotTopicPublishArgs> iotTopicPublish;
 
     public Output<DetectorModelIotTopicPublishArgs> getIotTopicPublish() {
         return this.iotTopicPublish == null ? Output.empty() : this.iotTopicPublish;
     }
 
-    @InputImport(name="lambda")
+    @Import(name="lambda")
       private final @Nullable Output<DetectorModelLambdaArgs> lambda;
 
     public Output<DetectorModelLambdaArgs> getLambda() {
         return this.lambda == null ? Output.empty() : this.lambda;
     }
 
-    @InputImport(name="resetTimer")
+    @Import(name="resetTimer")
       private final @Nullable Output<DetectorModelResetTimerArgs> resetTimer;
 
     public Output<DetectorModelResetTimerArgs> getResetTimer() {
         return this.resetTimer == null ? Output.empty() : this.resetTimer;
     }
 
-    @InputImport(name="setTimer")
+    @Import(name="setTimer")
       private final @Nullable Output<DetectorModelSetTimerArgs> setTimer;
 
     public Output<DetectorModelSetTimerArgs> getSetTimer() {
         return this.setTimer == null ? Output.empty() : this.setTimer;
     }
 
-    @InputImport(name="setVariable")
+    @Import(name="setVariable")
       private final @Nullable Output<DetectorModelSetVariableArgs> setVariable;
 
     public Output<DetectorModelSetVariableArgs> getSetVariable() {
         return this.setVariable == null ? Output.empty() : this.setVariable;
     }
 
-    @InputImport(name="sns")
+    @Import(name="sns")
       private final @Nullable Output<DetectorModelSnsArgs> sns;
 
     public Output<DetectorModelSnsArgs> getSns() {
         return this.sns == null ? Output.empty() : this.sns;
     }
 
-    @InputImport(name="sqs")
+    @Import(name="sqs")
       private final @Nullable Output<DetectorModelSqsArgs> sqs;
 
     public Output<DetectorModelSqsArgs> getSqs() {

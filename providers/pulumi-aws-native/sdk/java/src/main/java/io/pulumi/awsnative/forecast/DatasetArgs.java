@@ -9,7 +9,7 @@ import io.pulumi.awsnative.forecast.inputs.EncryptionConfigPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.SchemaPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
      * 
      */
-    @InputImport(name="dataFrequency")
+    @Import(name="dataFrequency")
       private final @Nullable Output<String> dataFrequency;
 
     public Output<String> getDataFrequency() {
@@ -35,7 +35,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the dataset
      * 
      */
-    @InputImport(name="datasetName")
+    @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
@@ -46,7 +46,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The dataset type
      * 
      */
-    @InputImport(name="datasetType", required=true)
+    @Import(name="datasetType", required=true)
       private final Output<DatasetType> datasetType;
 
     public Output<DatasetType> getDatasetType() {
@@ -57,28 +57,28 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The domain associated with the dataset
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<DatasetDomain> domain;
 
     public Output<DatasetDomain> getDomain() {
         return this.domain;
     }
 
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
 
     public Output<EncryptionConfigPropertiesArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<SchemaPropertiesArgs> schema;
 
     public Output<SchemaPropertiesArgs> getSchema() {
         return this.schema;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
     public Output<List<TagsItemPropertiesArgs>> getTags() {

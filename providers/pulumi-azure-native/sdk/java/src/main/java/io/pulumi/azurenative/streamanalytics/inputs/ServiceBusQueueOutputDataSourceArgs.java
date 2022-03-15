@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
      * 
      */
-    @InputImport(name="propertyColumns")
+    @Import(name="propertyColumns")
       private final @Nullable Output<List<String>> propertyColumns;
 
     public Output<List<String>> getPropertyColumns() {
@@ -34,7 +34,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
      * The name of the Service Bus Queue. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="queueName")
+    @Import(name="queueName")
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
@@ -45,7 +45,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
      * The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serviceBusNamespace")
+    @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
     public Output<String> getServiceBusNamespace() {
@@ -56,7 +56,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
      * The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="sharedAccessPolicyKey")
+    @Import(name="sharedAccessPolicyKey")
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
     public Output<String> getSharedAccessPolicyKey() {
@@ -67,7 +67,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
      * The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="sharedAccessPolicyName")
+    @Import(name="sharedAccessPolicyName")
       private final @Nullable Output<String> sharedAccessPolicyName;
 
     public Output<String> getSharedAccessPolicyName() {
@@ -79,7 +79,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
      * Expected value is 'Microsoft.ServiceBus/Queue'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

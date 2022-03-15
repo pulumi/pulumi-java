@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.HardwareProfileResponse;
 import io.pulumi.azurenative.compute.inputs.OSProfileResponse;
 import io.pulumi.azurenative.compute.inputs.RestorePointSourceVMStorageProfileResponse;
 import io.pulumi.azurenative.compute.inputs.SecurityProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the diagnostics profile.
      * 
      */
-    @InputImport(name="diagnosticsProfile")
+    @Import(name="diagnosticsProfile")
       private final @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
     public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
@@ -38,7 +38,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the hardware profile.
      * 
      */
-    @InputImport(name="hardwareProfile")
+    @Import(name="hardwareProfile")
       private final @Nullable HardwareProfileResponse hardwareProfile;
 
     public Optional<HardwareProfileResponse> getHardwareProfile() {
@@ -49,7 +49,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the license type, which is for bring your own license scenario.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
@@ -60,7 +60,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Location of the VM from which the restore point was created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -71,7 +71,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the OS profile.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable OSProfileResponse osProfile;
 
     public Optional<OSProfileResponse> getOsProfile() {
@@ -82,7 +82,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the security profile.
      * 
      */
-    @InputImport(name="securityProfile")
+    @Import(name="securityProfile")
       private final @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> getSecurityProfile() {
@@ -93,7 +93,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the storage profile.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
 
     public Optional<RestorePointSourceVMStorageProfileResponse> getStorageProfile() {
@@ -104,7 +104,7 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
      * Gets the virtual machine unique id.
      * 
      */
-    @InputImport(name="vmId")
+    @Import(name="vmId")
       private final @Nullable String vmId;
 
     public Optional<String> getVmId() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.osconfig_v1.PatchDeploymentArgs;
@@ -26,7 +26,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -54,7 +54,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Optional. Duration of the patch. After the duration ends, the patch times out.
      * 
      */
-    @OutputExport(name="duration", type=String.class, parameters={})
+    @Export(name="duration", type=String.class, parameters={})
     private Output<String> duration;
 
     /**
@@ -68,7 +68,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * VM instances to patch.
      * 
      */
-    @OutputExport(name="instanceFilter", type=PatchInstanceFilterResponse.class, parameters={})
+    @Export(name="instanceFilter", type=PatchInstanceFilterResponse.class, parameters={})
     private Output<PatchInstanceFilterResponse> instanceFilter;
 
     /**
@@ -82,7 +82,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * The last time a patch job was started by this deployment. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
      */
-    @OutputExport(name="lastExecuteTime", type=String.class, parameters={})
+    @Export(name="lastExecuteTime", type=String.class, parameters={})
     private Output<String> lastExecuteTime;
 
     /**
@@ -96,7 +96,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Schedule a one-time execution.
      * 
      */
-    @OutputExport(name="oneTimeSchedule", type=OneTimeScheduleResponse.class, parameters={})
+    @Export(name="oneTimeSchedule", type=OneTimeScheduleResponse.class, parameters={})
     private Output<OneTimeScheduleResponse> oneTimeSchedule;
 
     /**
@@ -124,7 +124,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Optional. Patch configuration that is applied.
      * 
      */
-    @OutputExport(name="patchConfig", type=PatchConfigResponse.class, parameters={})
+    @Export(name="patchConfig", type=PatchConfigResponse.class, parameters={})
     private Output<PatchConfigResponse> patchConfig;
 
     /**
@@ -138,7 +138,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Schedule recurring executions.
      * 
      */
-    @OutputExport(name="recurringSchedule", type=RecurringScheduleResponse.class, parameters={})
+    @Export(name="recurringSchedule", type=RecurringScheduleResponse.class, parameters={})
     private Output<RecurringScheduleResponse> recurringSchedule;
 
     /**
@@ -152,7 +152,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Optional. Rollout strategy of the patch job.
      * 
      */
-    @OutputExport(name="rollout", type=PatchRolloutResponse.class, parameters={})
+    @Export(name="rollout", type=PatchRolloutResponse.class, parameters={})
     private Output<PatchRolloutResponse> rollout;
 
     /**
@@ -166,7 +166,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Current state of the patch deployment.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -180,7 +180,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * Time the patch deployment was last updated. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

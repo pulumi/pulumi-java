@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      * Signature id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      * The signature state.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {

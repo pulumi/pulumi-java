@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DeliveryStreamHiveJsonSerDe extends io.pulumi.resources.Invok
 
     public static final DeliveryStreamHiveJsonSerDe Empty = new DeliveryStreamHiveJsonSerDe();
 
-    @InputImport(name="timestampFormats")
+    @Import(name="timestampFormats")
       private final @Nullable List<String> timestampFormats;
 
     public List<String> getTimestampFormats() {

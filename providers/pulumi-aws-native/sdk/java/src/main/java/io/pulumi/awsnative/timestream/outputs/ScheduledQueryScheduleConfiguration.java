@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.timestream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryScheduleConfiguration {
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
-    private ScheduledQueryScheduleConfiguration(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+    @CustomType.Constructor
+    private ScheduledQueryScheduleConfiguration(@CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * Maximum age of the snapshot that is allowed to be kept.
      * 
      */
-    @InputImport(name="maxRetentionDays", required=true)
+    @Import(name="maxRetentionDays", required=true)
       private final Output<Integer> maxRetentionDays;
 
     public Output<Integer> getMaxRetentionDays() {
@@ -33,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
      * 
      */
-    @InputImport(name="onSourceDiskDelete")
+    @Import(name="onSourceDiskDelete")
       private final @Nullable Output<String> onSourceDiskDelete;
 
     public Output<String> getOnSourceDiskDelete() {

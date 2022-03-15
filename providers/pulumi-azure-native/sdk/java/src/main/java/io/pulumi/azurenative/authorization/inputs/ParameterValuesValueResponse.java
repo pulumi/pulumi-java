@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ParameterValuesValueResponse extends io.pulumi.resources.Invo
      * The value of the parameter.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Object value;
 
     public Optional<Object> getValue() {

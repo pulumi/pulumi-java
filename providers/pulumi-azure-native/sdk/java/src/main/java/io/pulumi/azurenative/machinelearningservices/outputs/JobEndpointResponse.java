@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobEndpointResponse {
     /**
      * Url for endpoint.
@@ -34,12 +34,12 @@ public final class JobEndpointResponse {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobEndpointResponse(
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("jobEndpointType") @Nullable String jobEndpointType,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("jobEndpointType") @Nullable String jobEndpointType,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.endpoint = endpoint;
         this.jobEndpointType = jobEndpointType;
         this.port = port;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppBlockTagArgs Empty = new AppBlockTagArgs();
 
-    @InputImport(name="tagKey", required=true)
+    @Import(name="tagKey", required=true)
       private final Output<String> tagKey;
 
     public Output<String> getTagKey() {
         return this.tagKey;
     }
 
-    @InputImport(name="tagValue", required=true)
+    @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
     public Output<String> getTagValue() {

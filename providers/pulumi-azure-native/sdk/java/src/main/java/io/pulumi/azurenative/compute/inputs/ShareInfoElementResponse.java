@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ShareInfoElementResponse extends io.pulumi.resources.InvokeAr
      * A relative URI containing the ID of the VM that has the disk attached.
      * 
      */
-    @InputImport(name="vmUri", required=true)
+    @Import(name="vmUri", required=true)
       private final String vmUri;
 
     public String getVmUri() {

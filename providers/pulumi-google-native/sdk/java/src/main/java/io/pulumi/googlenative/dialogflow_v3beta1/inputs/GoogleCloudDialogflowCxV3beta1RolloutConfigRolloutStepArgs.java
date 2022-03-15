@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * The name of the rollout step;
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * The minimum time that this step should last. Should be longer than 1 hour. If not set, the default minimum duration for each step will be 1 hour.
      * 
      */
-    @InputImport(name="minDuration")
+    @Import(name="minDuration")
       private final @Nullable Output<String> minDuration;
 
     public Output<String> getMinDuration() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
      * The percentage of traffic allocated to the flow version of this rollout step. (0%, 100%].
      * 
      */
-    @InputImport(name="trafficPercent")
+    @Import(name="trafficPercent")
       private final @Nullable Output<Integer> trafficPercent;
 
     public Output<Integer> getTrafficPercent() {

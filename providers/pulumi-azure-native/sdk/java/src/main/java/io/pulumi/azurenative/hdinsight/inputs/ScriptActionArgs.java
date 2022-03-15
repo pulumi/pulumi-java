@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the script action.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters for the script provided.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<String> parameters;
 
     public Output<String> getParameters() {
@@ -43,7 +43,7 @@ public final class ScriptActionArgs extends io.pulumi.resources.ResourceArgs {
      * The URI to the script.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

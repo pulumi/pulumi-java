@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
      * name is the name of the given metric
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {

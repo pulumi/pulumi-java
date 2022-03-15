@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.FrequencyUnit;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
      * 
      */
-    @InputImport(name="frequencyInterval", required=true)
+    @Import(name="frequencyInterval", required=true)
       private final Output<Integer> frequencyInterval;
 
     public Output<Integer> getFrequencyInterval() {
@@ -36,7 +36,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
      * 
      */
-    @InputImport(name="frequencyUnit", required=true)
+    @Import(name="frequencyUnit", required=true)
       private final Output<FrequencyUnit> frequencyUnit;
 
     public Output<FrequencyUnit> getFrequencyUnit() {
@@ -47,7 +47,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
      * 
      */
-    @InputImport(name="keepAtLeastOneBackup", required=true)
+    @Import(name="keepAtLeastOneBackup", required=true)
       private final Output<Boolean> keepAtLeastOneBackup;
 
     public Output<Boolean> getKeepAtLeastOneBackup() {
@@ -58,7 +58,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * After how many days backups should be deleted.
      * 
      */
-    @InputImport(name="retentionPeriodInDays", required=true)
+    @Import(name="retentionPeriodInDays", required=true)
       private final Output<Integer> retentionPeriodInDays;
 
     public Output<Integer> getRetentionPeriodInDays() {
@@ -69,7 +69,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * When the schedule should start working.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

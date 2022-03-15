@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.CredentialResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.DeploymentUpdateLabelEntryResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentUpdateResponse {
     /**
      * The user-provided default credential to use when deploying this preview.
@@ -33,12 +33,12 @@ public final class DeploymentUpdateResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentUpdateResponse(
-        @OutputCustomType.Parameter("credential") CredentialResponse credential,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
-        @OutputCustomType.Parameter("manifest") String manifest) {
+        @CustomType.Parameter("credential") CredentialResponse credential,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
+        @CustomType.Parameter("manifest") String manifest) {
         this.credential = credential;
         this.description = description;
         this.labels = labels;

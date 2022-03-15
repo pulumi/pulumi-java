@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,56 +15,56 @@ public final class ListenerAuthenticateCognitoConfigArgs extends io.pulumi.resou
 
     public static final ListenerAuthenticateCognitoConfigArgs Empty = new ListenerAuthenticateCognitoConfigArgs();
 
-    @InputImport(name="authenticationRequestExtraParams")
+    @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Object> authenticationRequestExtraParams;
 
     public Output<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Output.empty() : this.authenticationRequestExtraParams;
     }
 
-    @InputImport(name="onUnauthenticatedRequest")
+    @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
     public Output<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Output.empty() : this.onUnauthenticatedRequest;
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
         return this.scope == null ? Output.empty() : this.scope;
     }
 
-    @InputImport(name="sessionCookieName")
+    @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
     public Output<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Output.empty() : this.sessionCookieName;
     }
 
-    @InputImport(name="sessionTimeout")
+    @Import(name="sessionTimeout")
       private final @Nullable Output<String> sessionTimeout;
 
     public Output<String> getSessionTimeout() {
         return this.sessionTimeout == null ? Output.empty() : this.sessionTimeout;
     }
 
-    @InputImport(name="userPoolArn", required=true)
+    @Import(name="userPoolArn", required=true)
       private final Output<String> userPoolArn;
 
     public Output<String> getUserPoolArn() {
         return this.userPoolArn;
     }
 
-    @InputImport(name="userPoolClientId", required=true)
+    @Import(name="userPoolClientId", required=true)
       private final Output<String> userPoolClientId;
 
     public Output<String> getUserPoolClientId() {
         return this.userPoolClientId;
     }
 
-    @InputImport(name="userPoolDomain", required=true)
+    @Import(name="userPoolDomain", required=true)
       private final Output<String> userPoolDomain;
 
     public Output<String> getUserPoolDomain() {

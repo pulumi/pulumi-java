@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.FieldCardinality;
 import io.pulumi.googlenative.servicemanagement_v1.enums.FieldKind;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -28,7 +28,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The field cardinality.
      * 
      */
-    @InputImport(name="cardinality")
+    @Import(name="cardinality")
       private final @Nullable Output<FieldCardinality> cardinality;
 
     public Output<FieldCardinality> getCardinality() {
@@ -39,7 +39,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The string value of the default value of this field. Proto2 syntax only.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -50,7 +50,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The field JSON name.
      * 
      */
-    @InputImport(name="jsonName")
+    @Import(name="jsonName")
       private final @Nullable Output<String> jsonName;
 
     public Output<String> getJsonName() {
@@ -61,7 +61,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The field type.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<FieldKind> kind;
 
     public Output<FieldKind> getKind() {
@@ -72,7 +72,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The field name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -83,7 +83,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The field number.
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {
@@ -94,7 +94,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
      * 
      */
-    @InputImport(name="oneofIndex")
+    @Import(name="oneofIndex")
       private final @Nullable Output<Integer> oneofIndex;
 
     public Output<Integer> getOneofIndex() {
@@ -105,7 +105,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol buffer options.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
@@ -116,7 +116,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to use alternative packed wire representation.
      * 
      */
-    @InputImport(name="packed")
+    @Import(name="packed")
       private final @Nullable Output<Boolean> packed;
 
     public Output<Boolean> getPacked() {
@@ -127,7 +127,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
      * 
      */
-    @InputImport(name="typeUrl")
+    @Import(name="typeUrl")
       private final @Nullable Output<String> typeUrl;
 
     public Output<String> getTypeUrl() {

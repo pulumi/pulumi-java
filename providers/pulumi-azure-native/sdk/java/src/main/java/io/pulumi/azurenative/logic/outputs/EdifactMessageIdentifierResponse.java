@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdifactMessageIdentifierResponse {
     /**
      * The message id on which this envelope settings has to be applied.
@@ -15,8 +15,8 @@ public final class EdifactMessageIdentifierResponse {
      */
     private final String messageId;
 
-    @OutputCustomType.Constructor
-    private EdifactMessageIdentifierResponse(@OutputCustomType.Parameter("messageId") String messageId) {
+    @CustomType.Constructor
+    private EdifactMessageIdentifierResponse(@CustomType.Parameter("messageId") String messageId) {
         this.messageId = messageId;
     }
 

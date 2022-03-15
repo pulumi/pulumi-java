@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions {
     /**
      * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
@@ -54,14 +54,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      */
     private final @Nullable String sampleMethod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions(
-        @OutputCustomType.Parameter("bytesLimitPerFile") @Nullable Integer bytesLimitPerFile,
-        @OutputCustomType.Parameter("bytesLimitPerFilePercent") @Nullable Integer bytesLimitPerFilePercent,
-        @OutputCustomType.Parameter("fileSet") PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet,
-        @OutputCustomType.Parameter("fileTypes") @Nullable List<String> fileTypes,
-        @OutputCustomType.Parameter("filesLimitPercent") @Nullable Integer filesLimitPercent,
-        @OutputCustomType.Parameter("sampleMethod") @Nullable String sampleMethod) {
+        @CustomType.Parameter("bytesLimitPerFile") @Nullable Integer bytesLimitPerFile,
+        @CustomType.Parameter("bytesLimitPerFilePercent") @Nullable Integer bytesLimitPerFilePercent,
+        @CustomType.Parameter("fileSet") PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet,
+        @CustomType.Parameter("fileTypes") @Nullable List<String> fileTypes,
+        @CustomType.Parameter("filesLimitPercent") @Nullable Integer filesLimitPercent,
+        @CustomType.Parameter("sampleMethod") @Nullable String sampleMethod) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
         this.fileSet = fileSet;

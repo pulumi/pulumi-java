@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1SuggestionFeatureType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureArgs extends io.
      * Type of Human Agent Assistant API feature to request.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> type;
 
     public Output<GoogleCloudDialogflowV2beta1SuggestionFeatureType> getType() {

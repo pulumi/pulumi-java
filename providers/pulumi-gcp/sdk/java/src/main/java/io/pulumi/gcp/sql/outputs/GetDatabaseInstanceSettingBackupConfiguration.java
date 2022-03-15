@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSettingBackupConfiguration {
     private final List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings;
     private final Boolean binaryLogEnabled;
@@ -21,15 +21,15 @@ public final class GetDatabaseInstanceSettingBackupConfiguration {
     private final String startTime;
     private final Integer transactionLogRetentionDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSettingBackupConfiguration(
-        @OutputCustomType.Parameter("backupRetentionSettings") List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings,
-        @OutputCustomType.Parameter("binaryLogEnabled") Boolean binaryLogEnabled,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("transactionLogRetentionDays") Integer transactionLogRetentionDays) {
+        @CustomType.Parameter("backupRetentionSettings") List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings,
+        @CustomType.Parameter("binaryLogEnabled") Boolean binaryLogEnabled,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("pointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("transactionLogRetentionDays") Integer transactionLogRetentionDays) {
         this.backupRetentionSettings = backupRetentionSettings;
         this.binaryLogEnabled = binaryLogEnabled;
         this.enabled = enabled;

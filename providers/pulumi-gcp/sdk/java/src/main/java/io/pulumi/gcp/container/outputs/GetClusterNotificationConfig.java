@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterNotificationConfigPubsub;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNotificationConfig {
     private final List<GetClusterNotificationConfigPubsub> pubsubs;
 
-    @OutputCustomType.Constructor
-    private GetClusterNotificationConfig(@OutputCustomType.Parameter("pubsubs") List<GetClusterNotificationConfigPubsub> pubsubs) {
+    @CustomType.Constructor
+    private GetClusterNotificationConfig(@CustomType.Parameter("pubsubs") List<GetClusterNotificationConfigPubsub> pubsubs) {
         this.pubsubs = pubsubs;
     }
 

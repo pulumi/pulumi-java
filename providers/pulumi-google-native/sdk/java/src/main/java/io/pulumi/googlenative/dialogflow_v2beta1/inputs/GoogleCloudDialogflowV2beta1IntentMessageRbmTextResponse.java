@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
      * Optional. One or more suggestions to show to the user.
      * 
      */
-    @InputImport(name="rbmSuggestion", required=true)
+    @Import(name="rbmSuggestion", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getRbmSuggestion() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse exte
      * Text sent and displayed to the user.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final String text;
 
     public String getText() {

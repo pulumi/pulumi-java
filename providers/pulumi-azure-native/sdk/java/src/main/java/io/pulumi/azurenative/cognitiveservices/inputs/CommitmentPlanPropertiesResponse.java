@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPeriodResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * AutoRenew commitment plan.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Boolean autoRenew;
 
     public Optional<Boolean> getAutoRenew() {
@@ -35,7 +35,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Cognitive Services account commitment period.
      * 
      */
-    @InputImport(name="current")
+    @Import(name="current")
       private final @Nullable CommitmentPeriodResponse current;
 
     public Optional<CommitmentPeriodResponse> getCurrent() {
@@ -46,7 +46,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Account hosting model.
      * 
      */
-    @InputImport(name="hostingModel")
+    @Import(name="hostingModel")
       private final @Nullable String hostingModel;
 
     public Optional<String> getHostingModel() {
@@ -57,7 +57,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Cognitive Services account commitment period.
      * 
      */
-    @InputImport(name="last", required=true)
+    @Import(name="last", required=true)
       private final CommitmentPeriodResponse last;
 
     public CommitmentPeriodResponse getLast() {
@@ -68,7 +68,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Cognitive Services account commitment period.
      * 
      */
-    @InputImport(name="next")
+    @Import(name="next")
       private final @Nullable CommitmentPeriodResponse next;
 
     public Optional<CommitmentPeriodResponse> getNext() {
@@ -79,7 +79,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Commitment plan type.
      * 
      */
-    @InputImport(name="planType")
+    @Import(name="planType")
       private final @Nullable String planType;
 
     public Optional<String> getPlanType() {

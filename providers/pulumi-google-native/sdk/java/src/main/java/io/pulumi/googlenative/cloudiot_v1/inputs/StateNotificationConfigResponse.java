@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StateNotificationConfigResponse extends io.pulumi.resources.I
      * A Cloud Pub/Sub topic name. For example, `projects/myProject/topics/deviceEvents`.
      * 
      */
-    @InputImport(name="pubsubTopicName", required=true)
+    @Import(name="pubsubTopicName", required=true)
       private final String pubsubTopicName;
 
     public String getPubsubTopicName() {

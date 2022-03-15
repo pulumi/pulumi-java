@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup {
     /**
      * Name of the target group.
@@ -15,8 +15,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

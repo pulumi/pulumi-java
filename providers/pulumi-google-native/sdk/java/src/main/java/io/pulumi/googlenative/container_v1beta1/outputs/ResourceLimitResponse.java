@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceLimitResponse {
     /**
      * Maximum amount of the resource in the cluster.
@@ -25,11 +25,11 @@ public final class ResourceLimitResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceLimitResponse(
-        @OutputCustomType.Parameter("maximum") String maximum,
-        @OutputCustomType.Parameter("minimum") String minimum,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("maximum") String maximum,
+        @CustomType.Parameter("minimum") String minimum,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = resourceType;

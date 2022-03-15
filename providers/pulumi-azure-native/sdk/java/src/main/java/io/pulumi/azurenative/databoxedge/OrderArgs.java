@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.inputs.AddressArgs;
 import io.pulumi.azurenative.databoxedge.inputs.ContactDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * The contact details.
      * 
      */
-    @InputImport(name="contactInformation", required=true)
+    @Import(name="contactInformation", required=true)
       private final Output<ContactDetailsArgs> contactInformation;
 
     public Output<ContactDetailsArgs> getContactInformation() {
@@ -33,7 +33,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * The order details of a device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -44,7 +44,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * ShipmentType of the order
      * 
      */
-    @InputImport(name="shipmentType")
+    @Import(name="shipmentType")
       private final @Nullable Output<Either<String,ShipmentType>> shipmentType;
 
     public Output<Either<String,ShipmentType>> getShipmentType() {
@@ -66,7 +66,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
      * The shipping address.
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable Output<AddressArgs> shippingAddress;
 
     public Output<AddressArgs> getShippingAddress() {

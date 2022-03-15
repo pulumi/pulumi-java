@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendResponse {
     /**
      * Location of the backend (IP address or FQDN)
@@ -73,20 +73,20 @@ public final class BackendResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendResponse(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("backendHostHeader") @Nullable String backendHostHeader,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
-        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("privateEndpointStatus") String privateEndpointStatus,
-        @OutputCustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
-        @OutputCustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
-        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
-        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("backendHostHeader") @Nullable String backendHostHeader,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @CustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("privateEndpointStatus") String privateEndpointStatus,
+        @CustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
+        @CustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
+        @CustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @CustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.address = address;
         this.backendHostHeader = backendHostHeader;
         this.enabledState = enabledState;

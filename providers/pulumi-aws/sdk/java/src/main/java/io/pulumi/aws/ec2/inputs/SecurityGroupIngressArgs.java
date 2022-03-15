@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * List of CIDR blocks.
      * 
      */
-    @InputImport(name="cidrBlocks")
+    @Import(name="cidrBlocks")
       private final @Nullable Output<List<String>> cidrBlocks;
 
     public Output<List<String>> getCidrBlocks() {
@@ -32,7 +32,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * Description of this egress rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * Start port (or ICMP type number if protocol is `icmp`)
      * 
      */
-    @InputImport(name="fromPort", required=true)
+    @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -54,7 +54,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * List of IPv6 CIDR blocks.
      * 
      */
-    @InputImport(name="ipv6CidrBlocks")
+    @Import(name="ipv6CidrBlocks")
       private final @Nullable Output<List<String>> ipv6CidrBlocks;
 
     public Output<List<String>> getIpv6CidrBlocks() {
@@ -65,7 +65,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * List of Prefix List IDs.
      * 
      */
-    @InputImport(name="prefixListIds")
+    @Import(name="prefixListIds")
       private final @Nullable Output<List<String>> prefixListIds;
 
     public Output<List<String>> getPrefixListIds() {
@@ -76,7 +76,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * Protocol. If you select a protocol of `-1` (semantically equivalent to `all`, which is not a valid value here), you must specify a `from_port` and `to_port` equal to 0.  The supported values are defined in the `IpProtocol` argument in the [IpPermission](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IpPermission.html) API reference. This argument is normalized to a lowercase value.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -87,7 +87,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * List of security group Group Names if using EC2-Classic, or Group IDs if using a VPC.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -98,7 +98,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * Whether the security group itself will be added as a source to this egress rule.
      * 
      */
-    @InputImport(name="self")
+    @Import(name="self")
       private final @Nullable Output<Boolean> self;
 
     public Output<Boolean> getSelf() {
@@ -109,7 +109,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * End range port (or ICMP code if protocol is `icmp`).
      * 
      */
-    @InputImport(name="toPort", required=true)
+    @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

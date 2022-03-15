@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.amplify.DomainArgs;
 import io.pulumi.awsnative.amplify.outputs.DomainSubDomainSetting;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,61 +20,61 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:amplify:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="autoSubDomainCreationPatterns", type=List.class, parameters={String.class})
+    @Export(name="autoSubDomainCreationPatterns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> autoSubDomainCreationPatterns;
 
     public Output</* @Nullable */ List<String>> getAutoSubDomainCreationPatterns() {
         return this.autoSubDomainCreationPatterns;
     }
-    @OutputExport(name="autoSubDomainIAMRole", type=String.class, parameters={})
+    @Export(name="autoSubDomainIAMRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoSubDomainIAMRole;
 
     public Output</* @Nullable */ String> getAutoSubDomainIAMRole() {
         return this.autoSubDomainIAMRole;
     }
-    @OutputExport(name="certificateRecord", type=String.class, parameters={})
+    @Export(name="certificateRecord", type=String.class, parameters={})
     private Output<String> certificateRecord;
 
     public Output<String> getCertificateRecord() {
         return this.certificateRecord;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="domainStatus", type=String.class, parameters={})
+    @Export(name="domainStatus", type=String.class, parameters={})
     private Output<String> domainStatus;
 
     public Output<String> getDomainStatus() {
         return this.domainStatus;
     }
-    @OutputExport(name="enableAutoSubDomain", type=Boolean.class, parameters={})
+    @Export(name="enableAutoSubDomain", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoSubDomain;
 
     public Output</* @Nullable */ Boolean> getEnableAutoSubDomain() {
         return this.enableAutoSubDomain;
     }
-    @OutputExport(name="statusReason", type=String.class, parameters={})
+    @Export(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;
 
     public Output<String> getStatusReason() {
         return this.statusReason;
     }
-    @OutputExport(name="subDomainSettings", type=List.class, parameters={DomainSubDomainSetting.class})
+    @Export(name="subDomainSettings", type=List.class, parameters={DomainSubDomainSetting.class})
     private Output<List<DomainSubDomainSetting>> subDomainSettings;
 
     public Output<List<DomainSubDomainSetting>> getSubDomainSettings() {

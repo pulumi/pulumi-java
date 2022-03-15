@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The actions that the specified AWS service principal can use. Actions IssueCertificate, GetCertificate and ListPermissions must be provided.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
@@ -30,7 +30,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -41,7 +41,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -52,7 +52,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the calling account.
      * 
      */
-    @InputImport(name="sourceAccount")
+    @Import(name="sourceAccount")
       private final @Nullable Output<String> sourceAccount;
 
     public Output<String> getSourceAccount() {

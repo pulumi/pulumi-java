@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
     /**
      * The id of the relevant artifact in the recipe.
@@ -28,11 +28,11 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeInstallStepArchiveExtraction(
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("destination") @Nullable String destination,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("destination") @Nullable String destination,
+        @CustomType.Parameter("type") String type) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.type = type;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDiskAccessArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the disk access resource that is being created. The name can't be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
      * 
      */
-    @InputImport(name="diskAccessName", required=true)
+    @Import(name="diskAccessName", required=true)
       private final String diskAccessName;
 
     public String getDiskAccessName() {
@@ -27,7 +27,7 @@ public final class GetDiskAccessArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

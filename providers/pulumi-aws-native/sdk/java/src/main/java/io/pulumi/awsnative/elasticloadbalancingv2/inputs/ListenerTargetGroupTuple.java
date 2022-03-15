@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ListenerTargetGroupTuple extends io.pulumi.resources.InvokeAr
 
     public static final ListenerTargetGroupTuple Empty = new ListenerTargetGroupTuple();
 
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable String targetGroupArn;
 
     public Optional<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Optional.empty() : Optional.ofNullable(this.targetGroupArn);
     }
 
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {

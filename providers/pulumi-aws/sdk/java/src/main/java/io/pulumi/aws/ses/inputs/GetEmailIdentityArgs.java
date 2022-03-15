@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ses.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEmailIdentityArgs extends io.pulumi.resources.InvokeArgs {
      * The email identity.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {

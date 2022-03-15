@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceStatusCondition;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,35 +15,35 @@ public final class GetServiceStatus extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceStatus Empty = new GetServiceStatus();
 
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<GetServiceStatusCondition> conditions;
 
     public List<GetServiceStatusCondition> getConditions() {
         return this.conditions;
     }
 
-    @InputImport(name="latestCreatedRevisionName", required=true)
+    @Import(name="latestCreatedRevisionName", required=true)
       private final String latestCreatedRevisionName;
 
     public String getLatestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
 
-    @InputImport(name="latestReadyRevisionName", required=true)
+    @Import(name="latestReadyRevisionName", required=true)
       private final String latestReadyRevisionName;
 
     public String getLatestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
 
-    @InputImport(name="observedGeneration", required=true)
+    @Import(name="observedGeneration", required=true)
       private final Integer observedGeneration;
 
     public Integer getObservedGeneration() {
         return this.observedGeneration;
     }
 
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

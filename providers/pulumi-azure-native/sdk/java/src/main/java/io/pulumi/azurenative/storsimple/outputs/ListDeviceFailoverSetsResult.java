@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.FailoverSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListDeviceFailoverSetsResult {
     /**
      * The list of failover sets.
@@ -17,8 +17,8 @@ public final class ListDeviceFailoverSetsResult {
      */
     private final @Nullable List<FailoverSetResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListDeviceFailoverSetsResult(@OutputCustomType.Parameter("value") @Nullable List<FailoverSetResponse> value) {
+    @CustomType.Constructor
+    private ListDeviceFailoverSetsResult(@CustomType.Parameter("value") @Nullable List<FailoverSetResponse> value) {
         this.value = value;
     }
 

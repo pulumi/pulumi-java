@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * Application name displayed on OAuth consent screen.
      * 
      */
-    @InputImport(name="applicationTitle")
+    @Import(name="applicationTitle")
       private final @Nullable Output<String> applicationTitle;
 
     public Output<String> getApplicationTitle() {
@@ -31,7 +31,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * identification corresponds to the project number as only one brand per project can be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * Whether the brand is only intended for usage inside the GSuite organization only.
      * 
      */
-    @InputImport(name="orgInternalOnly")
+    @Import(name="orgInternalOnly")
       private final @Nullable Output<Boolean> orgInternalOnly;
 
     public Output<Boolean> getOrgInternalOnly() {
@@ -54,7 +54,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
      * is an owner of the specified group in Cloud Identity.
      * 
      */
-    @InputImport(name="supportEmail")
+    @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
     public Output<String> getSupportEmail() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ServiceTypeHealthPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationHealthPolicyResponse {
     /**
      * The health policy used by default to evaluate the health of a service type.
@@ -24,10 +24,10 @@ public final class ApplicationHealthPolicyResponse {
      */
     private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationHealthPolicyResponse(
-        @OutputCustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @OutputCustomType.Parameter("serviceTypeHealthPolicies") @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
+        @CustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
+        @CustomType.Parameter("serviceTypeHealthPolicies") @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
         this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
     }

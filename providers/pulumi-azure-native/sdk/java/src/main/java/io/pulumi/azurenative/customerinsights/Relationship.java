@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipTypeMappingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * The Relationship Cardinality.
      * 
      */
-    @OutputExport(name="cardinality", type=String.class, parameters={})
+    @Export(name="cardinality", type=String.class, parameters={})
     private Output</* @Nullable */ String> cardinality;
 
     /**
@@ -51,7 +51,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Localized descriptions for the Relationship.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -65,7 +65,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Localized display name for the Relationship.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -79,7 +79,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * The expiry date time in UTC.
      * 
      */
-    @OutputExport(name="expiryDateTimeUtc", type=String.class, parameters={})
+    @Export(name="expiryDateTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryDateTimeUtc;
 
     /**
@@ -93,7 +93,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * The properties of the Relationship.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
+    @Export(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
     private Output</* @Nullable */ List<PropertyDefinitionResponse>> fields;
 
     /**
@@ -107,7 +107,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Optional property to be used to map fields in profile to their strong ids in related profile.
      * 
      */
-    @OutputExport(name="lookupMappings", type=List.class, parameters={RelationshipTypeMappingResponse.class})
+    @Export(name="lookupMappings", type=List.class, parameters={RelationshipTypeMappingResponse.class})
     private Output</* @Nullable */ List<RelationshipTypeMappingResponse>> lookupMappings;
 
     /**
@@ -121,7 +121,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Profile type.
      * 
      */
-    @OutputExport(name="profileType", type=String.class, parameters={})
+    @Export(name="profileType", type=String.class, parameters={})
     private Output<String> profileType;
 
     /**
@@ -149,7 +149,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -163,7 +163,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Related profile being referenced.
      * 
      */
-    @OutputExport(name="relatedProfileType", type=String.class, parameters={})
+    @Export(name="relatedProfileType", type=String.class, parameters={})
     private Output<String> relatedProfileType;
 
     /**
@@ -177,7 +177,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * The relationship guid id.
      * 
      */
-    @OutputExport(name="relationshipGuidId", type=String.class, parameters={})
+    @Export(name="relationshipGuidId", type=String.class, parameters={})
     private Output<String> relationshipGuidId;
 
     /**
@@ -191,7 +191,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * The Relationship name.
      * 
      */
-    @OutputExport(name="relationshipName", type=String.class, parameters={})
+    @Export(name="relationshipName", type=String.class, parameters={})
     private Output<String> relationshipName;
 
     /**
@@ -205,7 +205,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -219,7 +219,7 @@ public class Relationship extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

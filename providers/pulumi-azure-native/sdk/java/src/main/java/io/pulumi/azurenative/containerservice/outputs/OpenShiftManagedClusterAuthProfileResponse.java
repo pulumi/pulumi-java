@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterIdentityProviderResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenShiftManagedClusterAuthProfileResponse {
     /**
      * Type of authentication profile to use.
@@ -17,8 +17,8 @@ public final class OpenShiftManagedClusterAuthProfileResponse {
      */
     private final @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;
 
-    @OutputCustomType.Constructor
-    private OpenShiftManagedClusterAuthProfileResponse(@OutputCustomType.Parameter("identityProviders") @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
+    @CustomType.Constructor
+    private OpenShiftManagedClusterAuthProfileResponse(@CustomType.Parameter("identityProviders") @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
         this.identityProviders = identityProviders;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
 
     public static final DeliveryStreamHttpEndpointCommonAttributeArgs Empty = new DeliveryStreamHttpEndpointCommonAttributeArgs();
 
-    @InputImport(name="attributeName", required=true)
+    @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
     public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
-    @InputImport(name="attributeValue", required=true)
+    @Import(name="attributeValue", required=true)
       private final Output<String> attributeValue;
 
     public Output<String> getAttributeValue() {

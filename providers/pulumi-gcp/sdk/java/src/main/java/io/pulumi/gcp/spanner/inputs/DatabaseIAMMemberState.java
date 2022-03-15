@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
 
     public static final DatabaseIAMMemberState Empty = new DatabaseIAMMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DatabaseIAMMemberConditionGetArgs> condition;
 
     public Output<DatabaseIAMMemberConditionGetArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * The name of the Spanner database.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -37,7 +37,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * (Computed) The etag of the database's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -48,14 +48,14 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * The name of the Spanner instance the database belongs to.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance == null ? Output.empty() : this.instance;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -67,7 +67,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -80,7 +80,7 @@ public final class DatabaseIAMMemberState extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

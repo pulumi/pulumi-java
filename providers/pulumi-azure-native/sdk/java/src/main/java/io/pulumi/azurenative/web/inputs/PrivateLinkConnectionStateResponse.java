@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * ActionsRequired for a private link connection
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
@@ -33,7 +33,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * Description of a private link connection
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * Status of a private link connection
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

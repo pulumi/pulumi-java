@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.MinimalSeverity;
 import io.pulumi.azurenative.security.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
      * Defines the minimal alert severity which will be sent as email notifications
      * 
      */
-    @InputImport(name="minimalSeverity")
+    @Import(name="minimalSeverity")
       private final @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
 
     public Output<Either<String,MinimalSeverity>> getMinimalSeverity() {
@@ -36,7 +36,7 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends io.pu
      * Defines if email notifications will be sent about new security alerts
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {

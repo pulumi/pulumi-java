@@ -3,18 +3,18 @@
 
 package io.pulumi.aws.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackSetInstanceDeploymentTargets {
     private final @Nullable List<String> organizationalUnitIds;
 
-    @OutputCustomType.Constructor
-    private StackSetInstanceDeploymentTargets(@OutputCustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
+    @CustomType.Constructor
+    private StackSetInstanceDeploymentTargets(@CustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
         this.organizationalUnitIds = organizationalUnitIds;
     }
 

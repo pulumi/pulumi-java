@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1UsageSignalResponse {
     /**
      * The end timestamp of the duration of usage statistics.
@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
      */
     private final Map<String,String> usageWithinTimeRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1UsageSignalResponse(
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("usageWithinTimeRange") Map<String,String> usageWithinTimeRange) {
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("usageWithinTimeRange") Map<String,String> usageWithinTimeRange) {
         this.updateTime = updateTime;
         this.usageWithinTimeRange = usageWithinTimeRange;
     }

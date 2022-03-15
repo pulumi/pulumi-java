@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ServiceTaskSpecContainerSpecPrivilegesArgs extends io.pulumi.
 
     public static final ServiceTaskSpecContainerSpecPrivilegesArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesArgs();
 
-    @InputImport(name="credentialSpec")
+    @Import(name="credentialSpec")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> credentialSpec;
 
     public Output<ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs> getCredentialSpec() {
         return this.credentialSpec == null ? Output.empty() : this.credentialSpec;
     }
 
-    @InputImport(name="seLinuxContext")
+    @Import(name="seLinuxContext")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> seLinuxContext;
 
     public Output<ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs> getSeLinuxContext() {

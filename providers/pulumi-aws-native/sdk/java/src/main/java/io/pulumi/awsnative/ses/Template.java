@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ses;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ses.TemplateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ses:Template")
 public class Template extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="template", type=io.pulumi.awsnative.ses.outputs.Template.class, parameters={})
+    @Export(name="template", type=io.pulumi.awsnative.ses.outputs.Template.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> template;
 
     public Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> getTemplate() {

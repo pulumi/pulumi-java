@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleMonthlyOccurrenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
      * Gets or sets the hours of the day that the job should execute at.
      * 
      */
-    @InputImport(name="hours")
+    @Import(name="hours")
       private final @Nullable List<Integer> hours;
 
     public List<Integer> getHours() {
@@ -32,7 +32,7 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
      * Gets or sets the minutes of the hour that the job should execute at.
      * 
      */
-    @InputImport(name="minutes")
+    @Import(name="minutes")
       private final @Nullable List<Integer> minutes;
 
     public List<Integer> getMinutes() {
@@ -43,7 +43,7 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
      * Gets or sets the days of the month that the job should execute on. Must be between 1 and 31.
      * 
      */
-    @InputImport(name="monthDays")
+    @Import(name="monthDays")
       private final @Nullable List<Integer> monthDays;
 
     public List<Integer> getMonthDays() {
@@ -54,7 +54,7 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
      * Gets or sets the occurrences of days within a month.
      * 
      */
-    @InputImport(name="monthlyOccurrences")
+    @Import(name="monthlyOccurrences")
       private final @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
     public List<JobRecurrenceScheduleMonthlyOccurrenceResponse> getMonthlyOccurrences() {
@@ -65,7 +65,7 @@ public final class JobRecurrenceScheduleResponse extends io.pulumi.resources.Inv
      * Gets or sets the days of the week that the job should execute on.
      * 
      */
-    @InputImport(name="weekDays")
+    @Import(name="weekDays")
       private final @Nullable List<String> weekDays;
 
     public List<String> getWeekDays() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator {
     /**
      * The number of the accelerator cards of this type exposed to this instance.
@@ -23,10 +23,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAcce
      */
     private final @Nullable String acceleratorType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator(
-        @OutputCustomType.Parameter("acceleratorCount") @Nullable Integer acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") @Nullable String acceleratorType) {
+        @CustomType.Parameter("acceleratorCount") @Nullable Integer acceleratorCount,
+        @CustomType.Parameter("acceleratorType") @Nullable String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

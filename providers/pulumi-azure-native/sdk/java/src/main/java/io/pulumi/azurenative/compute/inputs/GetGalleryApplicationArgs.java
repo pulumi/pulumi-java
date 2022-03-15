@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
      * The name of the gallery Application Definition to be retrieved.
      * 
      */
-    @InputImport(name="galleryApplicationName", required=true)
+    @Import(name="galleryApplicationName", required=true)
       private final String galleryApplicationName;
 
     public String getGalleryApplicationName() {
@@ -27,7 +27,7 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
      * The name of the Shared Application Gallery from which the Application Definitions are to be retrieved.
      * 
      */
-    @InputImport(name="galleryName", required=true)
+    @Import(name="galleryName", required=true)
       private final String galleryName;
 
     public String getGalleryName() {
@@ -38,7 +38,7 @@ public final class GetGalleryApplicationArgs extends io.pulumi.resources.InvokeA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

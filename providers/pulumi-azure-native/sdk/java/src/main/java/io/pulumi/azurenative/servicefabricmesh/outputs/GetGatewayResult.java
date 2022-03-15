@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpConfigResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.NetworkRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.TcpConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGatewayResult {
     /**
      * User readable description of the gateway.
@@ -87,22 +87,22 @@ public final class GetGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGatewayResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationNetwork") NetworkRefResponse destinationNetwork,
-        @OutputCustomType.Parameter("http") @Nullable List<HttpConfigResponse> http,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourceNetwork") NetworkRefResponse sourceNetwork,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tcp") @Nullable List<TcpConfigResponse> tcp,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationNetwork") NetworkRefResponse destinationNetwork,
+        @CustomType.Parameter("http") @Nullable List<HttpConfigResponse> http,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourceNetwork") NetworkRefResponse sourceNetwork,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tcp") @Nullable List<TcpConfigResponse> tcp,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.destinationNetwork = destinationNetwork;
         this.http = http;

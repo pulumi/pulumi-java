@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.ApiSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MethodArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MixinArgs;
@@ -28,7 +28,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * The methods of this interface, in unspecified order.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<MethodArgs>> methods;
 
     public Output<List<MethodArgs>> getMethods() {
@@ -39,7 +39,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Included interfaces. See Mixin.
      * 
      */
-    @InputImport(name="mixins")
+    @Import(name="mixins")
       private final @Nullable Output<List<MixinArgs>> mixins;
 
     public Output<List<MixinArgs>> getMixins() {
@@ -50,7 +50,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified name of this interface, including package name followed by the interface's simple name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Any metadata attached to the interface.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
@@ -72,7 +72,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Source context for the protocol buffer service represented by this message.
      * 
      */
-    @InputImport(name="sourceContext")
+    @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
     public Output<SourceContextArgs> getSourceContext() {
@@ -83,7 +83,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * The source syntax of the service.
      * 
      */
-    @InputImport(name="syntax")
+    @Import(name="syntax")
       private final @Nullable Output<ApiSyntax> syntax;
 
     public Output<ApiSyntax> getSyntax() {
@@ -94,7 +94,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * A version string for this interface. If specified, must have the form `major-version.minor-version`, as in `1.10`. If the minor version is omitted, it defaults to zero. If the entire version field is empty, the major version is derived from the package name, as outlined below. If the field is not empty, the version in the package name will be verified to be consistent with what is provided here. The versioning schema uses [semantic versioning](http://semver.org) where the major version number indicates a breaking change and the minor version an additive, non-breaking change. Both version numbers are signals to users what to expect from different versions, and should be carefully chosen based on the product plan. The major version is also reflected in the package name of the interface, which must end in `v`, as in `google.feature.v1`. For major versions 0 and 1, the suffix can be omitted. Zero major versions must only be used for experimental, non-GA interfaces.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

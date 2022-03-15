@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -27,13 +27,13 @@ public final class GetResourceResult {
     private final String pathPart;
     private final String restApiId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parentId") String parentId,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("pathPart") String pathPart,
-        @OutputCustomType.Parameter("restApiId") String restApiId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parentId") String parentId,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("pathPart") String pathPart,
+        @CustomType.Parameter("restApiId") String restApiId) {
         this.id = id;
         this.parentId = parentId;
         this.path = path;

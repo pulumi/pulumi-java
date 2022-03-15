@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.LauncherActivityIntentResponse;
 import io.pulumi.googlenative.testing_v1.outputs.StartActivityIntentResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RoboStartingIntentResponse {
     /**
      * An intent that starts the main launcher activity.
@@ -27,11 +27,11 @@ public final class RoboStartingIntentResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoboStartingIntentResponse(
-        @OutputCustomType.Parameter("launcherActivity") LauncherActivityIntentResponse launcherActivity,
-        @OutputCustomType.Parameter("startActivity") StartActivityIntentResponse startActivity,
-        @OutputCustomType.Parameter("timeout") String timeout) {
+        @CustomType.Parameter("launcherActivity") LauncherActivityIntentResponse launcherActivity,
+        @CustomType.Parameter("startActivity") StartActivityIntentResponse startActivity,
+        @CustomType.Parameter("timeout") String timeout) {
         this.launcherActivity = launcherActivity;
         this.startActivity = startActivity;
         this.timeout = timeout;

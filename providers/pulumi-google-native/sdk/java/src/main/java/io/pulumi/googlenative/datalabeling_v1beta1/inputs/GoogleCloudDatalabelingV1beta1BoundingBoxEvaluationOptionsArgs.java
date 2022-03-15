@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
      * Minimum [intersection-over-union (IOU)](/vision/automl/object-detection/docs/evaluate#intersection-over-union) required for 2 bounding boxes to be considered a match. This must be a number between 0 and 1.
      * 
      */
-    @InputImport(name="iouThreshold")
+    @Import(name="iouThreshold")
       private final @Nullable Output<Double> iouThreshold;
 
     public Output<Double> getIouThreshold() {

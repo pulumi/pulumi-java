@@ -4,11 +4,11 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GetMeshSpecEgressFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMeshSpec {
     /**
      * The egress filter rules for the service mesh.
@@ -16,8 +16,8 @@ public final class GetMeshSpec {
      */
     private final List<GetMeshSpecEgressFilter> egressFilters;
 
-    @OutputCustomType.Constructor
-    private GetMeshSpec(@OutputCustomType.Parameter("egressFilters") List<GetMeshSpecEgressFilter> egressFilters) {
+    @CustomType.Constructor
+    private GetMeshSpec(@CustomType.Parameter("egressFilters") List<GetMeshSpecEgressFilter> egressFilters) {
         this.egressFilters = egressFilters;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
      * The Amazon Resource Name (ARN) of the component.
      * 
      */
-    @InputImport(name="componentArn")
+    @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;
 
     public Output<String> getComponentArn() {

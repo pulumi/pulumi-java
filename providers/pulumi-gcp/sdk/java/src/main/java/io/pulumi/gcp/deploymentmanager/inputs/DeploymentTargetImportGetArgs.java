@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
      * The full contents of the template that you want to import.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -30,7 +30,7 @@ public final class DeploymentTargetImportGetArgs extends io.pulumi.resources.Res
      * configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

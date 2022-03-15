@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
      * Enables you to specify HTTP headers to add to the request.
      * 
      */
-    @InputImport(name="headerParameters")
+    @Import(name="headerParameters")
       private final @Nullable Output<Map<String,String>> headerParameters;
 
     public Output<Map<String,String>> getHeaderParameters() {
@@ -31,7 +31,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
      * The list of values that correspond sequentially to any path variables in your endpoint ARN (for example `arn:aws:execute-api:us-east-1:123456:myapi/*{@literal /}POST/pets/*`).
      * 
      */
-    @InputImport(name="pathParameterValues")
+    @Import(name="pathParameterValues")
       private final @Nullable Output<List<String>> pathParameterValues;
 
     public Output<List<String>> getPathParameterValues() {
@@ -42,7 +42,7 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
      * Represents keys/values of query string parameters that are appended to the invoked endpoint.
      * 
      */
-    @InputImport(name="queryStringParameters")
+    @Import(name="queryStringParameters")
       private final @Nullable Output<Map<String,String>> queryStringParameters;
 
     public Output<Map<String,String>> getQueryStringParameters() {

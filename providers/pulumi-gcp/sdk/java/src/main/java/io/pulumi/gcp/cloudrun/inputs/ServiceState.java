@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceMetadataGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceStatusGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateGetArgs;
@@ -28,7 +28,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * this field is set to false, the revision name will still autogenerate.)
      * 
      */
-    @InputImport(name="autogenerateRevisionName")
+    @Import(name="autogenerateRevisionName")
       private final @Nullable Output<Boolean> autogenerateRevisionName;
 
     public Output<Boolean> getAutogenerateRevisionName() {
@@ -39,7 +39,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The location of the cloud run instance. eg us-central1
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ServiceMetadataGetArgs> metadata;
 
     public Output<ServiceMetadataGetArgs> getMetadata() {
@@ -63,7 +63,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Volume's name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -86,7 +86,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The current status of the Service.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<ServiceStatusGetArgs>> statuses;
 
     public Output<List<ServiceStatusGetArgs>> getStatuses() {
@@ -106,7 +106,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<ServiceTemplateGetArgs> template;
 
     public Output<ServiceTemplateGetArgs> getTemplate() {
@@ -119,7 +119,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="traffics")
+    @Import(name="traffics")
       private final @Nullable Output<List<ServiceTrafficGetArgs>> traffics;
 
     public Output<List<ServiceTrafficGetArgs>> getTraffics() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
      * The mappings override system defaults (some keys cannot be overridden)
      * 
      */
-    @InputImport(name="configOverrides")
+    @Import(name="configOverrides")
       private final @Nullable Output<Map<String,String>> configOverrides;
 
     public Output<Map<String,String>> getConfigOverrides() {
@@ -33,7 +33,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="kerberosConfig")
+    @Import(name="kerberosConfig")
       private final @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
 
     public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> getKerberosConfig() {
@@ -44,7 +44,7 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
      * The Hive metastore schema version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

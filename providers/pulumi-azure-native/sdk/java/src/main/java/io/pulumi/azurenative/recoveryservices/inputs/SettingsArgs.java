@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * will be deprecated once clients upgrade to consider this flag.
      * 
      */
-    @InputImport(name="isCompression")
+    @Import(name="isCompression")
       private final @Nullable Output<Boolean> isCompression;
 
     public Output<Boolean> getIsCompression() {
@@ -35,7 +35,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * SQL compression flag
      * 
      */
-    @InputImport(name="issqlcompression")
+    @Import(name="issqlcompression")
       private final @Nullable Output<Boolean> issqlcompression;
 
     public Output<Boolean> getIssqlcompression() {
@@ -46,7 +46,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

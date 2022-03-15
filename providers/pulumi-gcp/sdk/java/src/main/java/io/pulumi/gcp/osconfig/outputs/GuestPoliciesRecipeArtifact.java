@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifactGcs;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifactRemote;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeArtifact {
     /**
      * Defaults to false. When false, recipes are subject to validations based on the artifact type:
@@ -40,12 +40,12 @@ public final class GuestPoliciesRecipeArtifact {
      */
     private final @Nullable GuestPoliciesRecipeArtifactRemote remote;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeArtifact(
-        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
-        @OutputCustomType.Parameter("gcs") @Nullable GuestPoliciesRecipeArtifactGcs gcs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("remote") @Nullable GuestPoliciesRecipeArtifactRemote remote) {
+        @CustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @CustomType.Parameter("gcs") @Nullable GuestPoliciesRecipeArtifactGcs gcs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("remote") @Nullable GuestPoliciesRecipeArtifactRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.id = id;

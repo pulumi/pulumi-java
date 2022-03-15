@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.AppEngineHttpQueueResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.QueueStatsResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.RateLimitsResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.StackdriverLoggingConfi
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * AppEngineHttpQueue settings apply only to App Engine tasks in this queue. Http tasks are not affected by this proto.
@@ -70,19 +70,19 @@ public final class GetQueueResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("appEngineHttpQueue") AppEngineHttpQueueResponse appEngineHttpQueue,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("purgeTime") String purgeTime,
-        @OutputCustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
-        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
-        @OutputCustomType.Parameter("stackdriverLoggingConfig") StackdriverLoggingConfigResponse stackdriverLoggingConfig,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stats") QueueStatsResponse stats,
-        @OutputCustomType.Parameter("taskTtl") String taskTtl,
-        @OutputCustomType.Parameter("tombstoneTtl") String tombstoneTtl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appEngineHttpQueue") AppEngineHttpQueueResponse appEngineHttpQueue,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("purgeTime") String purgeTime,
+        @CustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
+        @CustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @CustomType.Parameter("stackdriverLoggingConfig") StackdriverLoggingConfigResponse stackdriverLoggingConfig,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stats") QueueStatsResponse stats,
+        @CustomType.Parameter("taskTtl") String taskTtl,
+        @CustomType.Parameter("tombstoneTtl") String tombstoneTtl,
+        @CustomType.Parameter("type") String type) {
         this.appEngineHttpQueue = appEngineHttpQueue;
         this.name = name;
         this.purgeTime = purgeTime;

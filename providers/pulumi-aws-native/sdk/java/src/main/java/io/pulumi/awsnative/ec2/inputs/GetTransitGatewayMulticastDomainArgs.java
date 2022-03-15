@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
      * The ID of the transit gateway multicast domain.
      * 
      */
-    @InputImport(name="transitGatewayMulticastDomainId", required=true)
+    @Import(name="transitGatewayMulticastDomainId", required=true)
       private final String transitGatewayMulticastDomainId;
 
     public String getTransitGatewayMulticastDomainId() {

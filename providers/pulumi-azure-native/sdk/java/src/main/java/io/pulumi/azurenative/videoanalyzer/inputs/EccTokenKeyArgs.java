@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyEccAlgo;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
      * 
      */
-    @InputImport(name="alg", required=true)
+    @Import(name="alg", required=true)
       private final Output<Either<String,AccessPolicyEccAlgo>> alg;
 
     public Output<Either<String,AccessPolicyEccAlgo>> getAlg() {
@@ -34,7 +34,7 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
      */
-    @InputImport(name="kid", required=true)
+    @Import(name="kid", required=true)
       private final Output<String> kid;
 
     public Output<String> getKid() {
@@ -46,7 +46,7 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -57,7 +57,7 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * X coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final Output<String> x;
 
     public Output<String> getX() {
@@ -68,7 +68,7 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final Output<String> y;
 
     public Output<String> getY() {

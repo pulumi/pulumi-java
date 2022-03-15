@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends io.pulumi.r
      * Must be greater than 1.
      * 
      */
-    @InputImport(name="growthFactor")
+    @Import(name="growthFactor")
       private final @Nullable Output<Double> growthFactor;
 
     public Output<Double> getGrowthFactor() {
@@ -30,7 +30,7 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends io.pulumi.r
      * Must be greater than 0.
      * 
      */
-    @InputImport(name="numFiniteBuckets")
+    @Import(name="numFiniteBuckets")
       private final @Nullable Output<Integer> numFiniteBuckets;
 
     public Output<Integer> getNumFiniteBuckets() {
@@ -41,7 +41,7 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends io.pulumi.r
      * Must be greater than 0.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<Double> scale;
 
     public Output<Double> getScale() {

@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationRuleAndOperator {
     private final @Nullable String prefix;
     private final @Nullable List<BucketTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationRuleAndOperator(
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
         this.prefix = prefix;
         this.tagFilters = tagFilters;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse {
     /**
      * Database name.
@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("type") String type) {
         this.database = database;
         this.instanceId = instanceId;
         this.type = type;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
     /**
      * The specific event to trigger this function.
@@ -29,11 +29,11 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
      */
     private final String lambdaArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOrderedCacheBehaviorLambdaFunctionAssociation(
-        @OutputCustomType.Parameter("eventType") String eventType,
-        @OutputCustomType.Parameter("includeBody") @Nullable Boolean includeBody,
-        @OutputCustomType.Parameter("lambdaArn") String lambdaArn) {
+        @CustomType.Parameter("eventType") String eventType,
+        @CustomType.Parameter("includeBody") @Nullable Boolean includeBody,
+        @CustomType.Parameter("lambdaArn") String lambdaArn) {
         this.eventType = eventType;
         this.includeBody = includeBody;
         this.lambdaArn = lambdaArn;

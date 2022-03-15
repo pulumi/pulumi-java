@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CatalogDatabaseTargetDatabase {
     /**
      * ID of the Data Catalog in which the database resides.
@@ -20,10 +20,10 @@ public final class CatalogDatabaseTargetDatabase {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CatalogDatabaseTargetDatabase(
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("databaseName") String databaseName) {
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("databaseName") String databaseName) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
     }

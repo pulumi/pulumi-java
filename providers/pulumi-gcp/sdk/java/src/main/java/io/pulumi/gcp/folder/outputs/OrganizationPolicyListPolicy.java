@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.folder.outputs.OrganizationPolicyListPolicyAllow;
 import io.pulumi.gcp.folder.outputs.OrganizationPolicyListPolicyDeny;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationPolicyListPolicy {
     /**
      * or `deny` - (Optional) One or the other must be set.
@@ -32,12 +32,12 @@ public final class OrganizationPolicyListPolicy {
      */
     private final @Nullable String suggestedValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationPolicyListPolicy(
-        @OutputCustomType.Parameter("allow") @Nullable OrganizationPolicyListPolicyAllow allow,
-        @OutputCustomType.Parameter("deny") @Nullable OrganizationPolicyListPolicyDeny deny,
-        @OutputCustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
-        @OutputCustomType.Parameter("suggestedValue") @Nullable String suggestedValue) {
+        @CustomType.Parameter("allow") @Nullable OrganizationPolicyListPolicyAllow allow,
+        @CustomType.Parameter("deny") @Nullable OrganizationPolicyListPolicyDeny deny,
+        @CustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
+        @CustomType.Parameter("suggestedValue") @Nullable String suggestedValue) {
         this.allow = allow;
         this.deny = deny;
         this.inheritFromParent = inheritFromParent;

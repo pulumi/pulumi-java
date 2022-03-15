@@ -6,14 +6,14 @@ package io.pulumi.awsnative.robomaker.outputs;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationRobotSoftwareSuite;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationSourceConfig;
 import io.pulumi.awsnative.robomaker.outputs.RobotApplicationTags;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRobotApplicationResult {
     private final @Nullable String arn;
     /**
@@ -34,14 +34,14 @@ public final class GetRobotApplicationResult {
     private final @Nullable List<RobotApplicationSourceConfig> sources;
     private final @Nullable RobotApplicationTags tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRobotApplicationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
-        @OutputCustomType.Parameter("environment") @Nullable String environment,
-        @OutputCustomType.Parameter("robotSoftwareSuite") @Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite,
-        @OutputCustomType.Parameter("sources") @Nullable List<RobotApplicationSourceConfig> sources,
-        @OutputCustomType.Parameter("tags") @Nullable RobotApplicationTags tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
+        @CustomType.Parameter("environment") @Nullable String environment,
+        @CustomType.Parameter("robotSoftwareSuite") @Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite,
+        @CustomType.Parameter("sources") @Nullable List<RobotApplicationSourceConfig> sources,
+        @CustomType.Parameter("tags") @Nullable RobotApplicationTags tags) {
         this.arn = arn;
         this.currentRevisionId = currentRevisionId;
         this.environment = environment;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.TestTargetsForShardResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShardResponse {
     /**
      * The total number of shards.
@@ -26,11 +26,11 @@ public final class ShardResponse {
      */
     private final TestTargetsForShardResponse testTargetsForShard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShardResponse(
-        @OutputCustomType.Parameter("numShards") Integer numShards,
-        @OutputCustomType.Parameter("shardIndex") Integer shardIndex,
-        @OutputCustomType.Parameter("testTargetsForShard") TestTargetsForShardResponse testTargetsForShard) {
+        @CustomType.Parameter("numShards") Integer numShards,
+        @CustomType.Parameter("shardIndex") Integer shardIndex,
+        @CustomType.Parameter("testTargetsForShard") TestTargetsForShardResponse testTargetsForShard) {
         this.numShards = numShards;
         this.shardIndex = shardIndex;
         this.testTargetsForShard = testTargetsForShard;

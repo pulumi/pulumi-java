@@ -3,22 +3,22 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegistryImageBuildUlimit {
     private final Integer hard;
     private final String name;
     private final Integer soft;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryImageBuildUlimit(
-        @OutputCustomType.Parameter("hard") Integer hard,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("soft") Integer soft) {
+        @CustomType.Parameter("hard") Integer hard,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("soft") Integer soft) {
         this.hard = hard;
         this.name = name;
         this.soft = soft;

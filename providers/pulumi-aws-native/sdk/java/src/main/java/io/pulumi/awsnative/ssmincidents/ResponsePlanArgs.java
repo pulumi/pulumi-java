@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanChatChannelArgs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanIncidentTemplateArgs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The list of actions.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<ResponsePlanActionArgs>> actions;
 
     public Output<List<ResponsePlanActionArgs>> getActions() {
         return this.actions == null ? Output.empty() : this.actions;
     }
 
-    @InputImport(name="chatChannel")
+    @Import(name="chatChannel")
       private final @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
 
     public Output<ResponsePlanChatChannelArgs> getChatChannel() {
@@ -41,7 +41,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the response plan.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -52,14 +52,14 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The list of engagements to use.
      * 
      */
-    @InputImport(name="engagements")
+    @Import(name="engagements")
       private final @Nullable Output<List<String>> engagements;
 
     public Output<List<String>> getEngagements() {
         return this.engagements == null ? Output.empty() : this.engagements;
     }
 
-    @InputImport(name="incidentTemplate", required=true)
+    @Import(name="incidentTemplate", required=true)
       private final Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
 
     public Output<ResponsePlanIncidentTemplateArgs> getIncidentTemplate() {
@@ -70,7 +70,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the response plan.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The tags to apply to the response plan.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ResponsePlanTagArgs>> tags;
 
     public Output<List<ResponsePlanTagArgs>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.SubscriptionArgs;
@@ -22,7 +22,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The settings for this subscription's message delivery.
      * 
      */
-    @OutputExport(name="deliveryConfig", type=DeliveryConfigResponse.class, parameters={})
+    @Export(name="deliveryConfig", type=DeliveryConfigResponse.class, parameters={})
     private Output<DeliveryConfigResponse> deliveryConfig;
 
     /**
@@ -36,7 +36,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The name of the subscription. Structured like: projects/{project_number}/locations/{location}/subscriptions/{subscription_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The name of the topic this subscription is attached to. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**

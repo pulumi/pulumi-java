@@ -5,14 +5,14 @@ package io.pulumi.azurenative.dynamics365fraudprotection.outputs;
 
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.DFPInstanceAdministratorsResponse;
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceDetailsResult {
     /**
      * A collection of DFP instance administrators
@@ -55,16 +55,16 @@ public final class GetInstanceDetailsResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceDetailsResult(
-        @OutputCustomType.Parameter("administration") @Nullable DFPInstanceAdministratorsResponse administration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("administration") @Nullable DFPInstanceAdministratorsResponse administration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.administration = administration;
         this.id = id;
         this.location = location;

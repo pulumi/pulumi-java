@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.marketplace;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * Indicating whether all subscriptions are selected (=true) or not (=false).
      * 
      */
-    @InputImport(name="allSubscriptions")
+    @Import(name="allSubscriptions")
       private final @Nullable Output<Boolean> allSubscriptions;
 
     public Output<Boolean> getAllSubscriptions() {
@@ -31,7 +31,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * Gets or sets the association with Commercial's Billing Account.
      * 
      */
-    @InputImport(name="claim")
+    @Import(name="claim")
       private final @Nullable Output<String> claim;
 
     public Output<String> getClaim() {
@@ -42,7 +42,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * The collection ID
      * 
      */
-    @InputImport(name="collectionId")
+    @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
 
     public Output<String> getCollectionId() {
@@ -53,7 +53,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * Gets or sets collection name.
      * 
      */
-    @InputImport(name="collectionName")
+    @Import(name="collectionName")
       private final @Nullable Output<String> collectionName;
 
     public Output<String> getCollectionName() {
@@ -64,7 +64,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * Indicating whether the collection is enabled or disabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -75,7 +75,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * The store ID - must use the tenant ID
      * 
      */
-    @InputImport(name="privateStoreId", required=true)
+    @Import(name="privateStoreId", required=true)
       private final Output<String> privateStoreId;
 
     public Output<String> getPrivateStoreId() {
@@ -86,7 +86,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
      * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
      * 
      */
-    @InputImport(name="subscriptionsList")
+    @Import(name="subscriptionsList")
       private final @Nullable Output<List<String>> subscriptionsList;
 
     public Output<List<String>> getSubscriptionsList() {

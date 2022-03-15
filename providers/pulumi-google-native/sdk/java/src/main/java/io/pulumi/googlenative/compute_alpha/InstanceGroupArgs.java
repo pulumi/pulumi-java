@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.NamedPortArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the instance group. The name must be 1-63 characters long, and comply with RFC1035.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,28 +42,28 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      *  Assigns a name to a port number. For example: {name: "http", port: 80} This allows the system to reference ports by the assigned name instead of a port number. Named ports can also contain multiple ports. For example: [{name: "http", port: 80},{name: "http", port: 8080}] Named ports apply to all instances in this instance group.
      * 
      */
-    @InputImport(name="namedPorts")
+    @Import(name="namedPorts")
       private final @Nullable Output<List<NamedPortArgs>> namedPorts;
 
     public Output<List<NamedPortArgs>> getNamedPorts() {
         return this.namedPorts == null ? Output.empty() : this.namedPorts;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.signalrservice.inputs.SignalRFeatureArgs;
 import io.pulumi.azurenative.signalrservice.inputs.SignalRNetworkACLsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * Cross-Origin Resource Sharing (CORS) settings.
      * 
      */
-    @InputImport(name="cors")
+    @Import(name="cors")
       private final @Nullable Output<SignalRCorsSettingsArgs> cors;
 
     public Output<SignalRCorsSettingsArgs> getCors() {
@@ -43,7 +43,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
      * 
      */
-    @InputImport(name="features")
+    @Import(name="features")
       private final @Nullable Output<List<SignalRFeatureArgs>> features;
 
     public Output<List<SignalRFeatureArgs>> getFeatures() {
@@ -54,7 +54,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,ServiceKind>> kind;
 
     public Output<Either<String,ServiceKind>> getKind() {
@@ -65,7 +65,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * Network ACLs
      * 
      */
-    @InputImport(name="networkACLs")
+    @Import(name="networkACLs")
       private final @Nullable Output<SignalRNetworkACLsArgs> networkACLs;
 
     public Output<SignalRNetworkACLsArgs> getNetworkACLs() {
@@ -87,7 +87,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SignalR resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -109,7 +109,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * The billing information of the resource.(e.g. Free, Standard)
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
     public Output<ResourceSkuArgs> getSku() {
@@ -120,7 +120,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -131,7 +131,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * Upstream settings when the Azure SignalR is in server-less mode.
      * 
      */
-    @InputImport(name="upstream")
+    @Import(name="upstream")
       private final @Nullable Output<ServerlessUpstreamSettingsArgs> upstream;
 
     public Output<ServerlessUpstreamSettingsArgs> getUpstream() {

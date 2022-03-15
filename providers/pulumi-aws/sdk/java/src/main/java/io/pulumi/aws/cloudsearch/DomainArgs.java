@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainIndexFieldArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainScalingParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Domain endpoint options. Documented below.
      * 
      */
-    @InputImport(name="endpointOptions")
+    @Import(name="endpointOptions")
       private final @Nullable Output<DomainEndpointOptionsArgs> endpointOptions;
 
     public Output<DomainEndpointOptionsArgs> getEndpointOptions() {
@@ -34,7 +34,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The index fields for documents added to the domain. Documented below.
      * 
      */
-    @InputImport(name="indexFields")
+    @Import(name="indexFields")
       private final @Nullable Output<List<DomainIndexFieldArgs>> indexFields;
 
     public Output<List<DomainIndexFieldArgs>> getIndexFields() {
@@ -45,7 +45,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
      * 
      */
-    @InputImport(name="multiAz")
+    @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
     public Output<Boolean> getMultiAz() {
@@ -56,7 +56,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Domain scaling parameters. Documented below.
      * 
      */
-    @InputImport(name="scalingParameters")
+    @Import(name="scalingParameters")
       private final @Nullable Output<DomainScalingParametersArgs> scalingParameters;
 
     public Output<DomainScalingParametersArgs> getScalingParameters() {

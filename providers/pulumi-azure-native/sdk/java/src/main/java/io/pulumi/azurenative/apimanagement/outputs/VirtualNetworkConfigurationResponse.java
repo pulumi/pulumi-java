@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkConfigurationResponse {
     /**
      * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
@@ -27,11 +27,11 @@ public final class VirtualNetworkConfigurationResponse {
      */
     private final String vnetid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkConfigurationResponse(
-        @OutputCustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId,
-        @OutputCustomType.Parameter("subnetname") String subnetname,
-        @OutputCustomType.Parameter("vnetid") String vnetid) {
+        @CustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId,
+        @CustomType.Parameter("subnetname") String subnetname,
+        @CustomType.Parameter("vnetid") String vnetid) {
         this.subnetResourceId = subnetResourceId;
         this.subnetname = subnetname;
         this.vnetid = vnetid;

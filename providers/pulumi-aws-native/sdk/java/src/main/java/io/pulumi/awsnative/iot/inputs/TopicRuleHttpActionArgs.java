@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpActionHeaderArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpAuthorizationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
 
     public static final TopicRuleHttpActionArgs Empty = new TopicRuleHttpActionArgs();
 
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<TopicRuleHttpAuthorizationArgs> auth;
 
     public Output<TopicRuleHttpAuthorizationArgs> getAuth() {
         return this.auth == null ? Output.empty() : this.auth;
     }
 
-    @InputImport(name="confirmationUrl")
+    @Import(name="confirmationUrl")
       private final @Nullable Output<String> confirmationUrl;
 
     public Output<String> getConfirmationUrl() {
         return this.confirmationUrl == null ? Output.empty() : this.confirmationUrl;
     }
 
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<TopicRuleHttpActionHeaderArgs>> headers;
 
     public Output<List<TopicRuleHttpActionHeaderArgs>> getHeaders() {
         return this.headers == null ? Output.empty() : this.headers;
     }
 
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

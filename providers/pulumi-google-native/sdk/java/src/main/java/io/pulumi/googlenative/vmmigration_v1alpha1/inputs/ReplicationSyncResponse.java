@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ReplicationSyncResponse extends io.pulumi.resources.InvokeArg
      * The most updated snapshot created time in the source that finished replication.
      * 
      */
-    @InputImport(name="lastSyncTime", required=true)
+    @Import(name="lastSyncTime", required=true)
       private final String lastSyncTime;
 
     public String getLastSyncTime() {

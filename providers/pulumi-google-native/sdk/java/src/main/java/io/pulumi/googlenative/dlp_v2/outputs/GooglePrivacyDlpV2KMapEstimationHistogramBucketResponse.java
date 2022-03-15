@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
     /**
      * Number of records within these anonymity bounds.
@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
      */
     private final String minAnonymity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(
-        @OutputCustomType.Parameter("bucketSize") String bucketSize,
-        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
-        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues,
-        @OutputCustomType.Parameter("maxAnonymity") String maxAnonymity,
-        @OutputCustomType.Parameter("minAnonymity") String minAnonymity) {
+        @CustomType.Parameter("bucketSize") String bucketSize,
+        @CustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @CustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues,
+        @CustomType.Parameter("maxAnonymity") String maxAnonymity,
+        @CustomType.Parameter("minAnonymity") String minAnonymity) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

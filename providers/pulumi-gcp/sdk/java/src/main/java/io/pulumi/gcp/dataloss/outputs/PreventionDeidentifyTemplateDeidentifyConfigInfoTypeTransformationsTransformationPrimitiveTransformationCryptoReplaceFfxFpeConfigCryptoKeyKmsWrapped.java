@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped {
     /**
      * The resource name of the KMS CryptoKey to use for unwrapping.
@@ -21,10 +21,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final String wrappedKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrapped(
-        @OutputCustomType.Parameter("cryptoKeyName") String cryptoKeyName,
-        @OutputCustomType.Parameter("wrappedKey") String wrappedKey) {
+        @CustomType.Parameter("cryptoKeyName") String cryptoKeyName,
+        @CustomType.Parameter("wrappedKey") String wrappedKey) {
         this.cryptoKeyName = cryptoKeyName;
         this.wrappedKey = wrappedKey;
     }

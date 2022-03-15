@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.AzureStorageSection
 import io.pulumi.azurenative.machinelearningservices.outputs.GlusterFsSectionResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedInfoResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.UserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreResponse {
     private final @Nullable AzureDataLakeSectionResponse azureDataLakeSection;
     private final @Nullable AzureMySqlSectionResponse azureMySqlSection;
@@ -82,24 +82,24 @@ public final class DatastoreResponse {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreResponse(
-        @OutputCustomType.Parameter("azureDataLakeSection") @Nullable AzureDataLakeSectionResponse azureDataLakeSection,
-        @OutputCustomType.Parameter("azureMySqlSection") @Nullable AzureMySqlSectionResponse azureMySqlSection,
-        @OutputCustomType.Parameter("azurePostgreSqlSection") @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection,
-        @OutputCustomType.Parameter("azureSqlDatabaseSection") @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection,
-        @OutputCustomType.Parameter("azureStorageSection") @Nullable AzureStorageSectionResponse azureStorageSection,
-        @OutputCustomType.Parameter("createdBy") UserInfoResponse createdBy,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("dataStoreType") @Nullable String dataStoreType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("glusterFsSection") @Nullable GlusterFsSectionResponse glusterFsSection,
-        @OutputCustomType.Parameter("hasBeenValidated") @Nullable Boolean hasBeenValidated,
-        @OutputCustomType.Parameter("linkedInfo") @Nullable LinkedInfoResponse linkedInfo,
-        @OutputCustomType.Parameter("modifiedBy") UserInfoResponse modifiedBy,
-        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("azureDataLakeSection") @Nullable AzureDataLakeSectionResponse azureDataLakeSection,
+        @CustomType.Parameter("azureMySqlSection") @Nullable AzureMySqlSectionResponse azureMySqlSection,
+        @CustomType.Parameter("azurePostgreSqlSection") @Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection,
+        @CustomType.Parameter("azureSqlDatabaseSection") @Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection,
+        @CustomType.Parameter("azureStorageSection") @Nullable AzureStorageSectionResponse azureStorageSection,
+        @CustomType.Parameter("createdBy") UserInfoResponse createdBy,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("dataStoreType") @Nullable String dataStoreType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("glusterFsSection") @Nullable GlusterFsSectionResponse glusterFsSection,
+        @CustomType.Parameter("hasBeenValidated") @Nullable Boolean hasBeenValidated,
+        @CustomType.Parameter("linkedInfo") @Nullable LinkedInfoResponse linkedInfo,
+        @CustomType.Parameter("modifiedBy") UserInfoResponse modifiedBy,
+        @CustomType.Parameter("modifiedTime") String modifiedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.azureDataLakeSection = azureDataLakeSection;
         this.azureMySqlSection = azureMySqlSection;
         this.azurePostgreSqlSection = azurePostgreSqlSection;

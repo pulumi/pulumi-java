@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg;
 
 import io.pulumi.aws.cfg.inputs.OrganizationConformancePackInputParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * Amazon S3 bucket where AWS Config stores conformance pack templates. Delivery bucket must begin with `awsconfigconforms` prefix. Maximum length of 63.
      * 
      */
-    @InputImport(name="deliveryS3Bucket")
+    @Import(name="deliveryS3Bucket")
       private final @Nullable Output<String> deliveryS3Bucket;
 
     public Output<String> getDeliveryS3Bucket() {
@@ -31,7 +31,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * The prefix for the Amazon S3 bucket. Maximum length of 1024.
      * 
      */
-    @InputImport(name="deliveryS3KeyPrefix")
+    @Import(name="deliveryS3KeyPrefix")
       private final @Nullable Output<String> deliveryS3KeyPrefix;
 
     public Output<String> getDeliveryS3KeyPrefix() {
@@ -42,7 +42,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * Set of AWS accounts to be excluded from an organization conformance pack while deploying a conformance pack. Maximum of 1000 accounts.
      * 
      */
-    @InputImport(name="excludedAccounts")
+    @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
     public Output<List<String>> getExcludedAccounts() {
@@ -53,7 +53,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the `template_body` or in the template stored in Amazon S3 if using `template_s3_uri`.
      * 
      */
-    @InputImport(name="inputParameters")
+    @Import(name="inputParameters")
       private final @Nullable Output<List<OrganizationConformancePackInputParameterArgs>> inputParameters;
 
     public Output<List<OrganizationConformancePackInputParameterArgs>> getInputParameters() {
@@ -64,7 +64,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * The name of the organization conformance pack. Must begin with a letter and contain from 1 to 128 alphanumeric characters and hyphens.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * A string containing full conformance pack template body. Maximum length of 51200. Drift detection is not possible with this argument.
      * 
      */
-    @InputImport(name="templateBody")
+    @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
@@ -86,7 +86,7 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
      * Location of file, e.g., `s3://bucketname/prefix`, containing the template body. The uri must point to the conformance pack template that is located in an Amazon S3 bucket in the same region as the conformance pack. Maximum length of 1024. Drift detection is not possible with this argument.
      * 
      */
-    @InputImport(name="templateS3Uri")
+    @Import(name="templateS3Uri")
       private final @Nullable Output<String> templateS3Uri;
 
     public Output<String> getTemplateS3Uri() {

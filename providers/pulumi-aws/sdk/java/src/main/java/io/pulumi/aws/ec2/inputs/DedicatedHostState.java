@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Dedicated Host.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID. Valid values: `on`, `off`. Default: `on`.
      * 
      */
-    @InputImport(name="autoPlacement")
+    @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
     public Output<String> getAutoPlacement() {
@@ -41,7 +41,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone in which to allocate the Dedicated Host.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -52,7 +52,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to enable or disable host recovery for the Dedicated Host. Valid values: `on`, `off`. Default: `off`.
      * 
      */
-    @InputImport(name="hostRecovery")
+    @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
     public Output<String> getHostRecovery() {
@@ -63,7 +63,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * Specifies the instance family to be supported by the Dedicated Hosts. If you specify an instance family, the Dedicated Hosts support multiple instance types within that instance family. Exactly one of `instance_family` or `instance_type` must be specified.
      * 
      */
-    @InputImport(name="instanceFamily")
+    @Import(name="instanceFamily")
       private final @Nullable Output<String> instanceFamily;
 
     public Output<String> getInstanceFamily() {
@@ -74,7 +74,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.  Exactly one of `instance_family` or `instance_type` must be specified.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -85,7 +85,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS account that owns the Dedicated Host.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -96,7 +96,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class DedicatedHostState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

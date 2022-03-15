@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudFunctionEndpointResponse {
     /**
      * A [Cloud function](https://cloud.google.com/functions) name.
@@ -15,8 +15,8 @@ public final class CloudFunctionEndpointResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
-    private CloudFunctionEndpointResponse(@OutputCustomType.Parameter("uri") String uri) {
+    @CustomType.Constructor
+    private CloudFunctionEndpointResponse(@CustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 

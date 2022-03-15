@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceWithColocationStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProximityPlacementGroupResult {
     /**
      * A list of references to all availability sets in the proximity placement group.
@@ -66,18 +66,18 @@ public final class GetProximityPlacementGroupResult {
      */
     private final List<SubResourceWithColocationStatusResponse> virtualMachines;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProximityPlacementGroupResult(
-        @OutputCustomType.Parameter("availabilitySets") List<SubResourceWithColocationStatusResponse> availabilitySets,
-        @OutputCustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("proximityPlacementGroupType") @Nullable String proximityPlacementGroupType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualMachineScaleSets") List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
-        @OutputCustomType.Parameter("virtualMachines") List<SubResourceWithColocationStatusResponse> virtualMachines) {
+        @CustomType.Parameter("availabilitySets") List<SubResourceWithColocationStatusResponse> availabilitySets,
+        @CustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("proximityPlacementGroupType") @Nullable String proximityPlacementGroupType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualMachineScaleSets") List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
+        @CustomType.Parameter("virtualMachines") List<SubResourceWithColocationStatusResponse> virtualMachines) {
         this.availabilitySets = availabilitySets;
         this.colocationStatus = colocationStatus;
         this.id = id;

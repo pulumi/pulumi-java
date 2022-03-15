@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.enums.RestAuthLocation;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
      * The location of the authentication key/value pair in the request.
      * 
      */
-    @InputImport(name="in", required=true)
+    @Import(name="in", required=true)
       private final Output<RestAuthLocation> in;
 
     public Output<RestAuthLocation> getIn() {
@@ -33,7 +33,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
      * The key name of the authentication key/value pair.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
      * Expected value is 'ApiKey'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -56,7 +56,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
      * The value of the authentication key/value pair.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

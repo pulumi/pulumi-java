@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyArgs;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenanceScheduleArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * [locationId].
      * 
      */
-    @InputImport(name="alternativeLocationId")
+    @Import(name="alternativeLocationId")
       private final @Nullable Output<String> alternativeLocationId;
 
     public Output<String> getAlternativeLocationId() {
@@ -39,7 +39,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Default value is "false" meaning AUTH is disabled.
      * 
      */
-    @InputImport(name="authEnabled")
+    @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
@@ -52,7 +52,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * will be used.
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -65,7 +65,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
      */
-    @InputImport(name="connectMode")
+    @Import(name="connectMode")
       private final @Nullable Output<String> connectMode;
 
     public Output<String> getConnectMode() {
@@ -76,7 +76,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An arbitrary and optional user-provided name for the instance.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -87,7 +87,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -102,7 +102,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * be different from [locationId].
      * 
      */
-    @InputImport(name="locationId")
+    @Import(name="locationId")
       private final @Nullable Output<String> locationId;
 
     public Output<String> getLocationId() {
@@ -114,7 +114,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="maintenancePolicy")
+    @Import(name="maintenancePolicy")
       private final @Nullable Output<InstanceMaintenancePolicyArgs> maintenancePolicy;
 
     public Output<InstanceMaintenancePolicyArgs> getMaintenancePolicy() {
@@ -126,7 +126,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="maintenanceSchedule")
+    @Import(name="maintenanceSchedule")
       private final @Nullable Output<InstanceMaintenanceScheduleArgs> maintenanceSchedule;
 
     public Output<InstanceMaintenanceScheduleArgs> getMaintenanceSchedule() {
@@ -137,7 +137,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Redis memory size in GiB.
      * 
      */
-    @InputImport(name="memorySizeGb", required=true)
+    @Import(name="memorySizeGb", required=true)
       private final Output<Integer> memorySizeGb;
 
     public Output<Integer> getMemorySizeGb() {
@@ -148,7 +148,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the instance or a fully qualified identifier for the instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -160,7 +160,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -175,7 +175,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * "READ_REPLICAS_DISABLED" Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
      * 
      */
-    @InputImport(name="readReplicasMode")
+    @Import(name="readReplicasMode")
       private final @Nullable Output<String> readReplicasMode;
 
     public Output<String> getReadReplicasMode() {
@@ -188,7 +188,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
      * 
      */
-    @InputImport(name="redisConfigs")
+    @Import(name="redisConfigs")
       private final @Nullable Output<Map<String,String>> redisConfigs;
 
     public Output<Map<String,String>> getRedisConfigs() {
@@ -201,7 +201,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * at the top for the latest valid values.
      * 
      */
-    @InputImport(name="redisVersion")
+    @Import(name="redisVersion")
       private final @Nullable Output<String> redisVersion;
 
     public Output<String> getRedisVersion() {
@@ -212,7 +212,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Redis region of the instance.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -225,7 +225,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * is 1. The valid value for basic tier is 0 and the default is also 0.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
@@ -240,7 +240,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * network.
      * 
      */
-    @InputImport(name="reservedIpRange")
+    @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {
@@ -255,7 +255,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -269,7 +269,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
-    @InputImport(name="transitEncryptionMode")
+    @Import(name="transitEncryptionMode")
       private final @Nullable Output<String> transitEncryptionMode;
 
     public Output<String> getTransitEncryptionMode() {

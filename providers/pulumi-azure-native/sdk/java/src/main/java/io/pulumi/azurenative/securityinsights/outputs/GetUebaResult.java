@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUebaResult {
     /**
      * The relevant data sources that enriched by ueba
@@ -50,15 +50,15 @@ public final class GetUebaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUebaResult(
-        @OutputCustomType.Parameter("dataSources") @Nullable List<String> dataSources,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataSources") @Nullable List<String> dataSources,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.dataSources = dataSources;
         this.etag = etag;
         this.id = id;

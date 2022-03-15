@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceEndpointSpecPort;
 import java.lang.String;
 import java.util.List;
@@ -11,15 +11,15 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceEndpointSpec {
     private final @Nullable String mode;
     private final @Nullable List<ServiceEndpointSpecPort> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceEndpointSpec(
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("ports") @Nullable List<ServiceEndpointSpecPort> ports) {
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("ports") @Nullable List<ServiceEndpointSpecPort> ports) {
         this.mode = mode;
         this.ports = ports;
     }

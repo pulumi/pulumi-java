@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.DigitalTwinsIdentityResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDigitalTwinResult {
     /**
      * Time when DigitalTwinsInstance was created.
@@ -72,20 +72,20 @@ public final class GetDigitalTwinResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDigitalTwinResult(
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable DigitalTwinsIdentityResponse identity,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable DigitalTwinsIdentityResponse identity,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.createdTime = createdTime;
         this.hostName = hostName;
         this.id = id;

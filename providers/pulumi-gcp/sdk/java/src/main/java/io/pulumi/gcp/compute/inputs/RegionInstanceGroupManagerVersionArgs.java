@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerVersionTargetSizeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
      * - The full URL to an instance template from which all new instances of this version will be created.
      * 
      */
-    @InputImport(name="instanceTemplate", required=true)
+    @Import(name="instanceTemplate", required=true)
       private final Output<String> instanceTemplate;
 
     public Output<String> getInstanceTemplate() {
@@ -30,7 +30,7 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
      * - Version name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class RegionInstanceGroupManagerVersionArgs extends io.pulumi.resou
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
      */
-    @InputImport(name="targetSize")
+    @Import(name="targetSize")
       private final @Nullable Output<RegionInstanceGroupManagerVersionTargetSizeArgs> targetSize;
 
     public Output<RegionInstanceGroupManagerVersionTargetSizeArgs> getTargetSize() {

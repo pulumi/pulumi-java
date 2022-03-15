@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class UDPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * The UDP port number for the health check request. Valid values are 1 through 65535.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -28,7 +28,7 @@ public final class UDPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
      * 
      */
-    @InputImport(name="portName", required=true)
+    @Import(name="portName", required=true)
       private final String portName;
 
     public String getPortName() {
@@ -39,7 +39,7 @@ public final class UDPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * Raw data of request to send in payload of UDP packet. It is an error if this is empty. The request data can only be ASCII.
      * 
      */
-    @InputImport(name="request", required=true)
+    @Import(name="request", required=true)
       private final String request;
 
     public String getRequest() {
@@ -50,7 +50,7 @@ public final class UDPHealthCheckResponse extends io.pulumi.resources.InvokeArgs
      * The bytes to match against the beginning of the response data. It is an error if this is empty. The response data can only be ASCII.
      * 
      */
-    @InputImport(name="response", required=true)
+    @Import(name="response", required=true)
       private final String response;
 
     public String getResponse() {

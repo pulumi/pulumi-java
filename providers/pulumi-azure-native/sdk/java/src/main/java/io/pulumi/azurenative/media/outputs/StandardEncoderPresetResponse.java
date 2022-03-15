@@ -20,7 +20,7 @@ import io.pulumi.azurenative.media.outputs.PngFormatResponse;
 import io.pulumi.azurenative.media.outputs.PngImageResponse;
 import io.pulumi.azurenative.media.outputs.TransportStreamFormatResponse;
 import io.pulumi.azurenative.media.outputs.VideoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardEncoderPresetResponse {
     /**
      * The list of codecs to be used when encoding the input video.
@@ -52,12 +52,12 @@ public final class StandardEncoderPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardEncoderPresetResponse(
-        @OutputCustomType.Parameter("codecs") List<Object> codecs,
-        @OutputCustomType.Parameter("filters") @Nullable FiltersResponse filters,
-        @OutputCustomType.Parameter("formats") List<Object> formats,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("codecs") List<Object> codecs,
+        @CustomType.Parameter("filters") @Nullable FiltersResponse filters,
+        @CustomType.Parameter("formats") List<Object> formats,
+        @CustomType.Parameter("odataType") String odataType) {
         this.codecs = codecs;
         this.filters = filters;
         this.formats = formats;

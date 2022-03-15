@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * specified.
      * 
      */
-    @InputImport(name="interconnectAttachment")
+    @Import(name="interconnectAttachment")
       private final @Nullable Output<String> interconnectAttachment;
 
     public Output<String> getInterconnectAttachment() {
@@ -33,7 +33,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
      * 
      */
-    @InputImport(name="ipRange")
+    @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
     public Output<String> getIpRange() {
@@ -45,7 +45,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * this forces a new interface to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * is not provided, the provider project is used. Changing this forces a new interface to be created.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * created.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -82,7 +82,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * Changing this forces a new interface to be created.
      * 
      */
-    @InputImport(name="router", required=true)
+    @Import(name="router", required=true)
       private final Output<String> router;
 
     public Output<String> getRouter() {
@@ -95,7 +95,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
      * 
      */
-    @InputImport(name="vpnTunnel")
+    @Import(name="vpnTunnel")
       private final @Nullable Output<String> vpnTunnel;
 
     public Output<String> getVpnTunnel() {

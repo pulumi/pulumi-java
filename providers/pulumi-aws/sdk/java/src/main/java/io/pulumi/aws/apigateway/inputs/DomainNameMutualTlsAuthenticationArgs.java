@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainNameMutualTlsAuthenticationArgs extends io.pulumi.resou
      * The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
      * 
      */
-    @InputImport(name="truststoreUri", required=true)
+    @Import(name="truststoreUri", required=true)
       private final Output<String> truststoreUri;
 
     public Output<String> getTruststoreUri() {
@@ -30,7 +30,7 @@ public final class DomainNameMutualTlsAuthenticationArgs extends io.pulumi.resou
      * The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
      * 
      */
-    @InputImport(name="truststoreVersion")
+    @Import(name="truststoreVersion")
       private final @Nullable Output<String> truststoreVersion;
 
     public Output<String> getTruststoreVersion() {

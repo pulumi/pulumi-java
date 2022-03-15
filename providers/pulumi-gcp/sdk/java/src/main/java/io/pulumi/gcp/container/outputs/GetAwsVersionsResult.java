@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAwsVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -30,13 +30,13 @@ public final class GetAwsVersionsResult {
      */
     private final List<String> validVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAwsVersionsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("supportedRegions") List<String> supportedRegions,
-        @OutputCustomType.Parameter("validVersions") List<String> validVersions) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("supportedRegions") List<String> supportedRegions,
+        @CustomType.Parameter("validVersions") List<String> validVersions) {
         this.id = id;
         this.location = location;
         this.project = project;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Output<String> metadata;
 
     public Output<String> getMetadata() {

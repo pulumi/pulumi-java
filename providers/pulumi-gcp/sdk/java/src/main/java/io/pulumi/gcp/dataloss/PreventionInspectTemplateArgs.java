@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * A description of the inspect template.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * User set display name of the inspect template.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="inspectConfig")
+    @Import(name="inspectConfig")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
     public Output<PreventionInspectTemplateInspectConfigArgs> getInspectConfig() {
@@ -57,7 +57,7 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

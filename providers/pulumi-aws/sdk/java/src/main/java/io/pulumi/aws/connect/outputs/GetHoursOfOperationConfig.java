@@ -5,12 +5,12 @@ package io.pulumi.aws.connect.outputs;
 
 import io.pulumi.aws.connect.outputs.GetHoursOfOperationConfigEndTime;
 import io.pulumi.aws.connect.outputs.GetHoursOfOperationConfigStartTime;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHoursOfOperationConfig {
     /**
      * Specifies the day that the hours of operation applies to.
@@ -28,11 +28,11 @@ public final class GetHoursOfOperationConfig {
      */
     private final List<GetHoursOfOperationConfigStartTime> startTimes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHoursOfOperationConfig(
-        @OutputCustomType.Parameter("day") String day,
-        @OutputCustomType.Parameter("endTimes") List<GetHoursOfOperationConfigEndTime> endTimes,
-        @OutputCustomType.Parameter("startTimes") List<GetHoursOfOperationConfigStartTime> startTimes) {
+        @CustomType.Parameter("day") String day,
+        @CustomType.Parameter("endTimes") List<GetHoursOfOperationConfigEndTime> endTimes,
+        @CustomType.Parameter("startTimes") List<GetHoursOfOperationConfigStartTime> startTimes) {
         this.day = day;
         this.endTimes = endTimes;
         this.startTimes = startTimes;

@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
      * Configuration block that contains schema identity fields. Either this or the `schema_version_id` has to be provided. See `schema_id` below.
      * 
      */
-    @InputImport(name="schemaId")
+    @Import(name="schemaId")
       private final @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> schemaId;
 
     public Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> getSchemaId() {
@@ -31,7 +31,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
      * Unique ID assigned to a version of the schema. Either this or the `schema_id` has to be provided.
      * 
      */
-    @InputImport(name="schemaVersionId")
+    @Import(name="schemaVersionId")
       private final @Nullable Output<String> schemaVersionId;
 
     public Output<String> getSchemaVersionId() {
@@ -42,7 +42,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
      * Version number of the schema.
      * 
      */
-    @InputImport(name="schemaVersionNumber", required=true)
+    @Import(name="schemaVersionNumber", required=true)
       private final Output<Integer> schemaVersionNumber;
 
     public Output<Integer> getSchemaVersionNumber() {

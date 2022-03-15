@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class TopicRuleKinesisAction extends io.pulumi.resources.InvokeArgs
 
     public static final TopicRuleKinesisAction Empty = new TopicRuleKinesisAction();
 
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="streamName", required=true)
+    @Import(name="streamName", required=true)
       private final String streamName;
 
     public String getStreamName() {

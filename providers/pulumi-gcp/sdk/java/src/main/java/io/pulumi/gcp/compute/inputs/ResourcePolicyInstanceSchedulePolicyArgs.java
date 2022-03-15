@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -31,7 +31,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -43,7 +43,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {
@@ -55,7 +55,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vmStartSchedule")
+    @Import(name="vmStartSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs> vmStartSchedule;
 
     public Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs> getVmStartSchedule() {
@@ -67,7 +67,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vmStopSchedule")
+    @Import(name="vmStopSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs> vmStopSchedule;
 
     public Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs> getVmStopSchedule() {

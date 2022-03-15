@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineRunCommandInstanceViewResponse {
     /**
      * Script end time.
@@ -55,16 +55,16 @@ public final class VirtualMachineRunCommandInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineRunCommandInstanceViewResponse(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("error") @Nullable String error,
-        @OutputCustomType.Parameter("executionMessage") @Nullable String executionMessage,
-        @OutputCustomType.Parameter("executionState") @Nullable String executionState,
-        @OutputCustomType.Parameter("exitCode") @Nullable Integer exitCode,
-        @OutputCustomType.Parameter("output") @Nullable String output,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("error") @Nullable String error,
+        @CustomType.Parameter("executionMessage") @Nullable String executionMessage,
+        @CustomType.Parameter("executionState") @Nullable String executionState,
+        @CustomType.Parameter("exitCode") @Nullable Integer exitCode,
+        @CustomType.Parameter("output") @Nullable String output,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.endTime = endTime;
         this.error = error;
         this.executionMessage = executionMessage;

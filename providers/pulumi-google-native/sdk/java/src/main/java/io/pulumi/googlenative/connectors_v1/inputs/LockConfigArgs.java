@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether or not the connection is locked.
      * 
      */
-    @InputImport(name="locked")
+    @Import(name="locked")
       private final @Nullable Output<Boolean> locked;
 
     public Output<Boolean> getLocked() {
@@ -34,7 +34,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Describes why a connection is locked.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {

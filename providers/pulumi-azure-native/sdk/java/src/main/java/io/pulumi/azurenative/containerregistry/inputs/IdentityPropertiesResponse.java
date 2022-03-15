@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.UserIdentityPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * The principal ID of resource identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
@@ -35,7 +35,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * The tenant ID of resource.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -46,7 +46,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * The identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -60,7 +60,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
     public Map<String,UserIdentityPropertiesResponse> getUserAssignedIdentities() {

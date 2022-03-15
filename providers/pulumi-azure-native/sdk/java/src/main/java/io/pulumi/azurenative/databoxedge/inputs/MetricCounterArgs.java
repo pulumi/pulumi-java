@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricDimensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * The additional dimensions to be added to metric.
      * 
      */
-    @InputImport(name="additionalDimensions")
+    @Import(name="additionalDimensions")
       private final @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
 
     public Output<List<MetricDimensionArgs>> getAdditionalDimensions() {
@@ -35,7 +35,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * The dimension filter.
      * 
      */
-    @InputImport(name="dimensionFilter")
+    @Import(name="dimensionFilter")
       private final @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
 
     public Output<List<MetricDimensionArgs>> getDimensionFilter() {
@@ -46,7 +46,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * The instance from which counter should be collected.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -57,7 +57,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
      * The counter name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

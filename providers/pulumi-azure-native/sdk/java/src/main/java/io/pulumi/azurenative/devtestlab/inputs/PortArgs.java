@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * Backend port of the target virtual machine.
      * 
      */
-    @InputImport(name="backendPort")
+    @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
 
     public Output<Integer> getBackendPort() {
@@ -36,7 +36,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol type of the port.
      * 
      */
-    @InputImport(name="transportProtocol")
+    @Import(name="transportProtocol")
       private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
     public Output<Either<String,TransportProtocol>> getTransportProtocol() {

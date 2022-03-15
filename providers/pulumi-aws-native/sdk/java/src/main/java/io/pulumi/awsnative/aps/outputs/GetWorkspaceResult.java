@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.aps.outputs;
 
 import io.pulumi.awsnative.aps.outputs.WorkspaceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     /**
      * The AMP Workspace alert manager definition data
@@ -44,14 +44,14 @@ public final class GetWorkspaceResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("alertManagerDefinition") @Nullable String alertManagerDefinition,
-        @OutputCustomType.Parameter("alias") @Nullable String alias,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("prometheusEndpoint") @Nullable String prometheusEndpoint,
-        @OutputCustomType.Parameter("tags") @Nullable List<WorkspaceTag> tags,
-        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
+        @CustomType.Parameter("alertManagerDefinition") @Nullable String alertManagerDefinition,
+        @CustomType.Parameter("alias") @Nullable String alias,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("prometheusEndpoint") @Nullable String prometheusEndpoint,
+        @CustomType.Parameter("tags") @Nullable List<WorkspaceTag> tags,
+        @CustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.alertManagerDefinition = alertManagerDefinition;
         this.alias = alias;
         this.arn = arn;

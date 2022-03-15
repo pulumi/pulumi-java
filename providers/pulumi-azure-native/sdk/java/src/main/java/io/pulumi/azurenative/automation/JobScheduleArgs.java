@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.RunbookAssociationPropertyArgs;
 import io.pulumi.azurenative.automation.inputs.ScheduleAssociationPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -32,7 +32,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The job schedule name.
      * 
      */
-    @InputImport(name="jobScheduleId")
+    @Import(name="jobScheduleId")
       private final @Nullable Output<String> jobScheduleId;
 
     public Output<String> getJobScheduleId() {
@@ -43,7 +43,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets a list of job properties.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -54,7 +54,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
      */
-    @InputImport(name="runOn")
+    @Import(name="runOn")
       private final @Nullable Output<String> runOn;
 
     public Output<String> getRunOn() {
@@ -76,7 +76,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the runbook.
      * 
      */
-    @InputImport(name="runbook", required=true)
+    @Import(name="runbook", required=true)
       private final Output<RunbookAssociationPropertyArgs> runbook;
 
     public Output<RunbookAssociationPropertyArgs> getRunbook() {
@@ -87,7 +87,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the schedule.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<ScheduleAssociationPropertyArgs> schedule;
 
     public Output<ScheduleAssociationPropertyArgs> getSchedule() {

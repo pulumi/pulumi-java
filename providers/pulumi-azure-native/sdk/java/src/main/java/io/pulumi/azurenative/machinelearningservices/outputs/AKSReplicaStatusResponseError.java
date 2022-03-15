@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ErrorResponseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AKSReplicaStatusResponseError {
     /**
      * The error response.
@@ -15,8 +15,8 @@ public final class AKSReplicaStatusResponseError {
      */
     private final ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor
-    private AKSReplicaStatusResponseError(@OutputCustomType.Parameter("error") ErrorResponseResponse error) {
+    @CustomType.Constructor
+    private AKSReplicaStatusResponseError(@CustomType.Parameter("error") ErrorResponseResponse error) {
         this.error = error;
     }
 

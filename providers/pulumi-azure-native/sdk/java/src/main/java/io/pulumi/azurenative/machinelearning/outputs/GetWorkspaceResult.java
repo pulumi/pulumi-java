@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     /**
      * The creation time for this workspace resource.
@@ -78,21 +78,21 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVaultIdentifierId") @Nullable String keyVaultIdentifierId,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerEmail") String ownerEmail,
-        @OutputCustomType.Parameter("studioEndpoint") String studioEndpoint,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userStorageAccountId") String userStorageAccountId,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceState") String workspaceState,
-        @OutputCustomType.Parameter("workspaceType") String workspaceType) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVaultIdentifierId") @Nullable String keyVaultIdentifierId,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerEmail") String ownerEmail,
+        @CustomType.Parameter("studioEndpoint") String studioEndpoint,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userStorageAccountId") String userStorageAccountId,
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceState") String workspaceState,
+        @CustomType.Parameter("workspaceType") String workspaceType) {
         this.creationTime = creationTime;
         this.id = id;
         this.keyVaultIdentifierId = keyVaultIdentifierId;

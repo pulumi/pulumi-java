@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.file_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.file_v1beta1.outputs.NfsExportOptionsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileShareConfigResponse {
     /**
      * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
@@ -32,12 +32,12 @@ public final class FileShareConfigResponse {
      */
     private final String sourceBackup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileShareConfigResponse(
-        @OutputCustomType.Parameter("capacityGb") String capacityGb,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nfsExportOptions") List<NfsExportOptionsResponse> nfsExportOptions,
-        @OutputCustomType.Parameter("sourceBackup") String sourceBackup) {
+        @CustomType.Parameter("capacityGb") String capacityGb,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nfsExportOptions") List<NfsExportOptionsResponse> nfsExportOptions,
+        @CustomType.Parameter("sourceBackup") String sourceBackup) {
         this.capacityGb = capacityGb;
         this.name = name;
         this.nfsExportOptions = nfsExportOptions;

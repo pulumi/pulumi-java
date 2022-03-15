@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimTemplateArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -40,7 +40,7 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Required, must not be nil.
      * 
      */
-    @InputImport(name="volumeClaimTemplate")
+    @Import(name="volumeClaimTemplate")
       private final @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
 
     public Output<PersistentVolumeClaimTemplateArgs> getVolumeClaimTemplate() {

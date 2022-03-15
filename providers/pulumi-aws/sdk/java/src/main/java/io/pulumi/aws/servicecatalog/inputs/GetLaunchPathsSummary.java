@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.aws.servicecatalog.inputs.GetLaunchPathsSummaryConstraintSummary;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * Block for constraints on the portfolio-product relationship. See details below.
      * 
      */
-    @InputImport(name="constraintSummaries", required=true)
+    @Import(name="constraintSummaries", required=true)
       private final List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries;
 
     public List<GetLaunchPathsSummaryConstraintSummary> getConstraintSummaries() {
@@ -30,7 +30,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * Name of the portfolio to which the path was assigned.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -41,7 +41,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * Identifier of the product path.
      * 
      */
-    @InputImport(name="pathId", required=true)
+    @Import(name="pathId", required=true)
       private final String pathId;
 
     public String getPathId() {
@@ -52,7 +52,7 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
      * Tags associated with this product path.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
     public Map<String,String> getTags() {

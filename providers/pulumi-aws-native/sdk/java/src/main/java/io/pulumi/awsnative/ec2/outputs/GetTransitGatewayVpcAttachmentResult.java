@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.OptionsProperties;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayVpcAttachmentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayVpcAttachmentResult {
     private final @Nullable List<String> addSubnetIds;
     private final @Nullable String id;
@@ -24,13 +24,13 @@ public final class GetTransitGatewayVpcAttachmentResult {
     private final @Nullable List<String> removeSubnetIds;
     private final @Nullable List<TransitGatewayVpcAttachmentTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayVpcAttachmentResult(
-        @OutputCustomType.Parameter("addSubnetIds") @Nullable List<String> addSubnetIds,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("options") @Nullable OptionsProperties options,
-        @OutputCustomType.Parameter("removeSubnetIds") @Nullable List<String> removeSubnetIds,
-        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayVpcAttachmentTag> tags) {
+        @CustomType.Parameter("addSubnetIds") @Nullable List<String> addSubnetIds,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("options") @Nullable OptionsProperties options,
+        @CustomType.Parameter("removeSubnetIds") @Nullable List<String> removeSubnetIds,
+        @CustomType.Parameter("tags") @Nullable List<TransitGatewayVpcAttachmentTag> tags) {
         this.addSubnetIds = addSubnetIds;
         this.id = id;
         this.options = options;

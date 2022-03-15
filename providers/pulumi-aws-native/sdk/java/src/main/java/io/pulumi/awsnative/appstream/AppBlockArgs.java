@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockScriptDetailsArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,42 +18,42 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppBlockArgs Empty = new AppBlockArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="setupScriptDetails", required=true)
+    @Import(name="setupScriptDetails", required=true)
       private final Output<AppBlockScriptDetailsArgs> setupScriptDetails;
 
     public Output<AppBlockScriptDetailsArgs> getSetupScriptDetails() {
         return this.setupScriptDetails;
     }
 
-    @InputImport(name="sourceS3Location", required=true)
+    @Import(name="sourceS3Location", required=true)
       private final Output<AppBlockS3LocationArgs> sourceS3Location;
 
     public Output<AppBlockS3LocationArgs> getSourceS3Location() {
         return this.sourceS3Location;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AppBlockTagArgs>> tags;
 
     public Output<List<AppBlockTagArgs>> getTags() {

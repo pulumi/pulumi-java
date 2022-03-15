@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayMulticastDomainAssociationResult {
     /**
      * The ID of the resource.
@@ -27,11 +27,11 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayMulticastDomainAssociationResult(
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
         this.state = state;

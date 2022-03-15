@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceFileResourceResponse {
     /**
      * A a file with this content. The size of the content is limited to 1024 characters.
@@ -36,13 +36,13 @@ public final class OSPolicyResourceFileResourceResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceFileResourceResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("file") OSPolicyResourceFileResponse file,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("permissions") String permissions,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("file") OSPolicyResourceFileResponse file,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("permissions") String permissions,
+        @CustomType.Parameter("state") String state) {
         this.content = content;
         this.file = file;
         this.path = path;

@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.StageAccessLogSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Enables access logs for the API stage. Detailed below.
      * 
      */
-    @InputImport(name="accessLogSettings")
+    @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsArgs> accessLogSettings;
 
     public Output<StageAccessLogSettingsArgs> getAccessLogSettings() {
@@ -32,7 +32,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether a cache cluster is enabled for the stage
      * 
      */
-    @InputImport(name="cacheClusterEnabled")
+    @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
     public Output<Boolean> getCacheClusterEnabled() {
@@ -43,7 +43,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
      * 
      */
-    @InputImport(name="cacheClusterSize")
+    @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
     public Output<String> getCacheClusterSize() {
@@ -54,7 +54,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of a client certificate for the stage.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -65,7 +65,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the deployment that the stage points to
      * 
      */
-    @InputImport(name="deployment", required=true)
+    @Import(name="deployment", required=true)
       private final Output<String> deployment;
 
     public Output<String> getDeployment() {
@@ -76,7 +76,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the stage
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -87,7 +87,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the associated API documentation
      * 
      */
-    @InputImport(name="documentationVersion")
+    @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
     public Output<String> getDocumentationVersion() {
@@ -98,7 +98,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -109,7 +109,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the stage
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final Output<String> stageName;
 
     public Output<String> getStageName() {
@@ -120,7 +120,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -131,7 +131,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * A map that defines the stage variables
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {
@@ -142,7 +142,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * Whether active tracing with X-ray is enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="xrayTracingEnabled")
+    @Import(name="xrayTracingEnabled")
       private final @Nullable Output<Boolean> xrayTracingEnabled;
 
     public Output<Boolean> getXrayTracingEnabled() {

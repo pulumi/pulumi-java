@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
 
     public static final FieldLevelEncryptionProfileEncryptionEntitiesGetArgs Empty = new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs();
 
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
 
     public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> getItems() {

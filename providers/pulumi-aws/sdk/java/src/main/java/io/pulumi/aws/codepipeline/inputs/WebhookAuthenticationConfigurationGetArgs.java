@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WebhookAuthenticationConfigurationGetArgs extends io.pulumi.r
      * A valid CIDR block for `IP` filtering. Required for `IP`.
      * 
      */
-    @InputImport(name="allowedIpRange")
+    @Import(name="allowedIpRange")
       private final @Nullable Output<String> allowedIpRange;
 
     public Output<String> getAllowedIpRange() {
@@ -29,7 +29,7 @@ public final class WebhookAuthenticationConfigurationGetArgs extends io.pulumi.r
      * The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
      * 
      */
-    @InputImport(name="secretToken")
+    @Import(name="secretToken")
       private final @Nullable Output<String> secretToken;
 
     public Output<String> getSecretToken() {

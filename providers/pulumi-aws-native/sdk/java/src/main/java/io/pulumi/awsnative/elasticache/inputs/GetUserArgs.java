@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

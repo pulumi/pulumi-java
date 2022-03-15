@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datacatalog.enums.SkuType;
 import io.pulumi.azurenative.datacatalog.inputs.PrincipalsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Azure data catalog admin list.
      * 
      */
-    @InputImport(name="admins")
+    @Import(name="admins")
       private final @Nullable Output<List<PrincipalsArgs>> admins;
 
     public Output<List<PrincipalsArgs>> getAdmins() {
@@ -36,7 +36,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the data catalog in the specified subscription and resource group.
      * 
      */
-    @InputImport(name="catalogName")
+    @Import(name="catalogName")
       private final @Nullable Output<String> catalogName;
 
     public Output<String> getCatalogName() {
@@ -47,7 +47,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Automatic unit adjustment enabled or not.
      * 
      */
-    @InputImport(name="enableAutomaticUnitAdjustment")
+    @Import(name="enableAutomaticUnitAdjustment")
       private final @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
 
     public Output<Boolean> getEnableAutomaticUnitAdjustment() {
@@ -58,7 +58,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,7 +69,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -80,7 +80,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Azure data catalog SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<Either<String,SkuType>> sku;
 
     public Output<Either<String,SkuType>> getSku() {
@@ -91,7 +91,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Azure data catalog provision status.
      * 
      */
-    @InputImport(name="successfullyProvisioned")
+    @Import(name="successfullyProvisioned")
       private final @Nullable Output<Boolean> successfullyProvisioned;
 
     public Output<Boolean> getSuccessfullyProvisioned() {
@@ -102,7 +102,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -113,7 +113,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Azure data catalog units.
      * 
      */
-    @InputImport(name="units")
+    @Import(name="units")
       private final @Nullable Output<Integer> units;
 
     public Output<Integer> getUnits() {
@@ -124,7 +124,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Azure data catalog user list.
      * 
      */
-    @InputImport(name="users")
+    @Import(name="users")
       private final @Nullable Output<List<PrincipalsArgs>> users;
 
     public Output<List<PrincipalsArgs>> getUsers() {

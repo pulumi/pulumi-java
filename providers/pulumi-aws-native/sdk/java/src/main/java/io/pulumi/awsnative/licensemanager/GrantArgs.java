@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.licensemanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GrantArgs Empty = new GrantArgs();
 
-    @InputImport(name="allowedOperations")
+    @Import(name="allowedOperations")
       private final @Nullable Output<List<String>> allowedOperations;
 
     public Output<List<String>> getAllowedOperations() {
@@ -26,7 +26,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * Name for the created Grant.
      * 
      */
-    @InputImport(name="grantName")
+    @Import(name="grantName")
       private final @Nullable Output<String> grantName;
 
     public Output<String> getGrantName() {
@@ -37,7 +37,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * Home region for the created grant.
      * 
      */
-    @InputImport(name="homeRegion")
+    @Import(name="homeRegion")
       private final @Nullable Output<String> homeRegion;
 
     public Output<String> getHomeRegion() {
@@ -48,21 +48,21 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
      * License Arn for the grant.
      * 
      */
-    @InputImport(name="licenseArn")
+    @Import(name="licenseArn")
       private final @Nullable Output<String> licenseArn;
 
     public Output<String> getLicenseArn() {
         return this.licenseArn == null ? Output.empty() : this.licenseArn;
     }
 
-    @InputImport(name="principals")
+    @Import(name="principals")
       private final @Nullable Output<List<String>> principals;
 
     public Output<List<String>> getPrincipals() {
         return this.principals == null ? Output.empty() : this.principals;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

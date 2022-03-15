@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
      * Expands referenced resources.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
      * The name of the network security group.
      * 
      */
-    @InputImport(name="networkSecurityGroupName", required=true)
+    @Import(name="networkSecurityGroupName", required=true)
       private final String networkSecurityGroupName;
 
     public String getNetworkSecurityGroupName() {
@@ -40,7 +40,7 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

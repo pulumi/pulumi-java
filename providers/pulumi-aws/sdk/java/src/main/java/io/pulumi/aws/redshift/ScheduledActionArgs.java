@@ -5,7 +5,7 @@ package io.pulumi.aws.redshift;
 
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * The description of the scheduled action.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * Whether to enable the scheduled action. Default is `true` .
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -42,7 +42,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * The end time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -53,7 +53,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * The IAM role to assume to run the scheduled action.
      * 
      */
-    @InputImport(name="iamRole", required=true)
+    @Import(name="iamRole", required=true)
       private final Output<String> iamRole;
 
     public Output<String> getIamRole() {
@@ -64,7 +64,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * The scheduled action name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * The schedule of action. The schedule is defined format of "at expression" or "cron expression", for example `at(2016-03-04T17:27:00)` or `cron(0 10 ? * MON *)`. See [Scheduled Action](https://docs.aws.amazon.com/redshift/latest/APIReference/API_ScheduledAction.html) for more information.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -86,7 +86,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * The start time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -97,7 +97,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
      * Target action. Documented below.
      * 
      */
-    @InputImport(name="targetAction", required=true)
+    @Import(name="targetAction", required=true)
       private final Output<ScheduledActionTargetActionArgs> targetAction;
 
     public Output<ScheduledActionTargetActionArgs> getTargetAction() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.PreprocessingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * A unique key for this input. Must be specified when using advanced mapping and edit lists.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -34,7 +34,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * Preprocessing configurations.
      * 
      */
-    @InputImport(name="preprocessingConfig")
+    @Import(name="preprocessingConfig")
       private final @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
 
     public Output<PreprocessingConfigArgs> getPreprocessingConfig() {
@@ -45,7 +45,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated from `Job.input_uri`.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

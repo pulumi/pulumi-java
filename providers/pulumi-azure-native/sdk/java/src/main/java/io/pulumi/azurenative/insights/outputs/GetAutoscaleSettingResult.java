@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AutoscaleNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.AutoscaleProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAutoscaleSettingResult {
     /**
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
@@ -67,18 +67,18 @@ public final class GetAutoscaleSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAutoscaleSettingResult(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notifications") @Nullable List<AutoscaleNotificationResponse> notifications,
-        @OutputCustomType.Parameter("profiles") List<AutoscaleProfileResponse> profiles,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetResourceLocation") @Nullable String targetResourceLocation,
-        @OutputCustomType.Parameter("targetResourceUri") @Nullable String targetResourceUri,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notifications") @Nullable List<AutoscaleNotificationResponse> notifications,
+        @CustomType.Parameter("profiles") List<AutoscaleProfileResponse> profiles,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetResourceLocation") @Nullable String targetResourceLocation,
+        @CustomType.Parameter("targetResourceUri") @Nullable String targetResourceUri,
+        @CustomType.Parameter("type") String type) {
         this.enabled = enabled;
         this.id = id;
         this.location = location;

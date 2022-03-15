@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.ResourceReference;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * The reference to the contact profile resource.
      * 
      */
-    @InputImport(name="contactProfile", required=true)
+    @Import(name="contactProfile", required=true)
       private final ResourceReference contactProfile;
 
     public ResourceReference getContactProfile() {
@@ -28,7 +28,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * End time of a contact.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -39,7 +39,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * Name of Azure Ground Station.
      * 
      */
-    @InputImport(name="groundStationName", required=true)
+    @Import(name="groundStationName", required=true)
       private final String groundStationName;
 
     public String getGroundStationName() {
@@ -50,7 +50,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -61,7 +61,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * Spacecraft ID
      * 
      */
-    @InputImport(name="spacecraftName", required=true)
+    @Import(name="spacecraftName", required=true)
       private final String spacecraftName;
 
     public String getSpacecraftName() {
@@ -72,7 +72,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * Start time of a contact.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

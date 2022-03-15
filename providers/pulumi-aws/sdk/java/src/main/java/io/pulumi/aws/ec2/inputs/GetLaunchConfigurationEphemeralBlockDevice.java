@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends io.pulumi.
      * The Name of the device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -27,7 +27,7 @@ public final class GetLaunchConfigurationEphemeralBlockDevice extends io.pulumi.
      * The Virtual Name of the device.
      * 
      */
-    @InputImport(name="virtualName", required=true)
+    @Import(name="virtualName", required=true)
       private final String virtualName;
 
     public String getVirtualName() {

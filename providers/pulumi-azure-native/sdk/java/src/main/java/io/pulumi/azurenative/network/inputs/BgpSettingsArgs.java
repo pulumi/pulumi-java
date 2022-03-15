@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.IPConfigurationBgpPeeringAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The BGP speaker's ASN.
      * 
      */
-    @InputImport(name="asn")
+    @Import(name="asn")
       private final @Nullable Output<Double> asn;
 
     public Output<Double> getAsn() {
@@ -37,7 +37,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The BGP peering address and BGP identifier of this BGP speaker.
      * 
      */
-    @InputImport(name="bgpPeeringAddress")
+    @Import(name="bgpPeeringAddress")
       private final @Nullable Output<String> bgpPeeringAddress;
 
     public Output<String> getBgpPeeringAddress() {
@@ -48,7 +48,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * BGP peering address with IP configuration ID for virtual network gateway.
      * 
      */
-    @InputImport(name="bgpPeeringAddresses")
+    @Import(name="bgpPeeringAddresses")
       private final @Nullable Output<List<IPConfigurationBgpPeeringAddressArgs>> bgpPeeringAddresses;
 
     public Output<List<IPConfigurationBgpPeeringAddressArgs>> getBgpPeeringAddresses() {
@@ -59,7 +59,7 @@ public final class BgpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The weight added to routes learned from this BGP speaker.
      * 
      */
-    @InputImport(name="peerWeight")
+    @Import(name="peerWeight")
       private final @Nullable Output<Integer> peerWeight;
 
     public Output<Integer> getPeerWeight() {

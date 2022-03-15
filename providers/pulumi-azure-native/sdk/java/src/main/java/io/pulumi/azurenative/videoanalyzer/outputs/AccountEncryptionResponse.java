@@ -5,13 +5,13 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.KeyVaultPropertiesResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.ResourceIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountEncryptionResponse {
     /**
      * The Key Vault identity.
@@ -34,12 +34,12 @@ public final class AccountEncryptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountEncryptionResponse(
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
         this.status = status;

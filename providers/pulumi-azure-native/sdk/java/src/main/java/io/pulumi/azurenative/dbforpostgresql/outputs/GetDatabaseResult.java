@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseResult {
     /**
      * The charset of the database.
@@ -37,13 +37,13 @@ public final class GetDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseResult(
-        @OutputCustomType.Parameter("charset") @Nullable String charset,
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("charset") @Nullable String charset,
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.charset = charset;
         this.collation = collation;
         this.id = id;

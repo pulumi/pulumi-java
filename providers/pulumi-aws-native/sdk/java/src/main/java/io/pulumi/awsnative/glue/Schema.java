@@ -11,7 +11,7 @@ import io.pulumi.awsnative.glue.outputs.SchemaRegistry;
 import io.pulumi.awsnative.glue.outputs.SchemaTag;
 import io.pulumi.awsnative.glue.outputs.SchemaVersion;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name for the Schema.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="checkpointVersion", type=SchemaVersion.class, parameters={})
+    @Export(name="checkpointVersion", type=SchemaVersion.class, parameters={})
     private Output</* @Nullable */ SchemaVersion> checkpointVersion;
 
     public Output</* @Nullable */ SchemaVersion> getCheckpointVersion() {
@@ -47,7 +47,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Compatibility setting for the schema.
      * 
      */
-    @OutputExport(name="compatibility", type=SchemaCompatibility.class, parameters={})
+    @Export(name="compatibility", type=SchemaCompatibility.class, parameters={})
     private Output<SchemaCompatibility> compatibility;
 
     /**
@@ -61,7 +61,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
      * 
      */
-    @OutputExport(name="dataFormat", type=SchemaDataFormat.class, parameters={})
+    @Export(name="dataFormat", type=SchemaDataFormat.class, parameters={})
     private Output<SchemaDataFormat> dataFormat;
 
     /**
@@ -75,7 +75,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * A description of the schema. If description is not provided, there will not be any default value for this.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -89,7 +89,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Represents the version ID associated with the initial schema version.
      * 
      */
-    @OutputExport(name="initialSchemaVersionId", type=String.class, parameters={})
+    @Export(name="initialSchemaVersionId", type=String.class, parameters={})
     private Output<String> initialSchemaVersionId;
 
     /**
@@ -103,7 +103,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Name of the schema.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -113,7 +113,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="registry", type=SchemaRegistry.class, parameters={})
+    @Export(name="registry", type=SchemaRegistry.class, parameters={})
     private Output</* @Nullable */ SchemaRegistry> registry;
 
     public Output</* @Nullable */ SchemaRegistry> getRegistry() {
@@ -123,7 +123,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Definition for the initial schema version in plain-text.
      * 
      */
-    @OutputExport(name="schemaDefinition", type=String.class, parameters={})
+    @Export(name="schemaDefinition", type=String.class, parameters={})
     private Output<String> schemaDefinition;
 
     /**
@@ -137,7 +137,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * List of tags to tag the schema
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SchemaTag.class})
+    @Export(name="tags", type=List.class, parameters={SchemaTag.class})
     private Output</* @Nullable */ List<SchemaTag>> tags;
 
     /**

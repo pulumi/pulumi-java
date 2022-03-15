@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * The Autonomous System Number (ASN) for the Amazon side of the gateway. If you don't specify an ASN, the virtual private gateway is created with the default ASN.
      * 
      */
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
     public Output<String> getAmazonSideAsn() {
@@ -30,7 +30,7 @@ public final class VpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the VPN Gateway.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -41,7 +41,7 @@ public final class VpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone for the virtual private gateway.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -52,7 +52,7 @@ public final class VpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class VpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -74,7 +74,7 @@ public final class VpnGatewayState extends io.pulumi.resources.ResourceArgs {
      * The VPC ID to create in.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ConnectionTypeAssociationPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * Gets or sets the connectionType of the connection.
@@ -54,16 +54,16 @@ public final class GetConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("connectionType") @Nullable ConnectionTypeAssociationPropertyResponse connectionType,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fieldDefinitionValues") Map<String,String> fieldDefinitionValues,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("connectionType") @Nullable ConnectionTypeAssociationPropertyResponse connectionType,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fieldDefinitionValues") Map<String,String> fieldDefinitionValues,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.connectionType = connectionType;
         this.creationTime = creationTime;
         this.description = description;

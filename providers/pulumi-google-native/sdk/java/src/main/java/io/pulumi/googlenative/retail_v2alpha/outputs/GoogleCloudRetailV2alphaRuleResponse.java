@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaConditionResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleBoostActionResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse;
@@ -15,7 +15,7 @@ import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRul
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaRuleResponse {
     /**
      * A boost action.
@@ -63,17 +63,17 @@ public final class GoogleCloudRetailV2alphaRuleResponse {
      */
     private final GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2alphaRuleResponse(
-        @OutputCustomType.Parameter("boostAction") GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction,
-        @OutputCustomType.Parameter("condition") GoogleCloudRetailV2alphaConditionResponse condition,
-        @OutputCustomType.Parameter("doNotAssociateAction") GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction,
-        @OutputCustomType.Parameter("filterAction") GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction,
-        @OutputCustomType.Parameter("ignoreAction") GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction,
-        @OutputCustomType.Parameter("onewaySynonymsAction") GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction,
-        @OutputCustomType.Parameter("redirectAction") GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction,
-        @OutputCustomType.Parameter("replacementAction") GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction,
-        @OutputCustomType.Parameter("twowaySynonymsAction") GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
+        @CustomType.Parameter("boostAction") GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction,
+        @CustomType.Parameter("condition") GoogleCloudRetailV2alphaConditionResponse condition,
+        @CustomType.Parameter("doNotAssociateAction") GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction,
+        @CustomType.Parameter("filterAction") GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction,
+        @CustomType.Parameter("ignoreAction") GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction,
+        @CustomType.Parameter("onewaySynonymsAction") GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction,
+        @CustomType.Parameter("redirectAction") GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction,
+        @CustomType.Parameter("replacementAction") GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction,
+        @CustomType.Parameter("twowaySynonymsAction") GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
         this.boostAction = boostAction;
         this.condition = condition;
         this.doNotAssociateAction = doNotAssociateAction;

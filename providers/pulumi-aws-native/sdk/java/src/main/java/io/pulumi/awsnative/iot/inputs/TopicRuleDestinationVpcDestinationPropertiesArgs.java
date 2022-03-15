@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class TopicRuleDestinationVpcDestinationPropertiesArgs extends io.p
 
     public static final TopicRuleDestinationVpcDestinationPropertiesArgs Empty = new TopicRuleDestinationVpcDestinationPropertiesArgs();
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

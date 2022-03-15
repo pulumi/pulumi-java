@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceSubInterfaceResponse {
     /**
      * An IPv4 internal IP address to assign to the instance for this subinterface. If specified, ip_allocation_mode should be set to ALLOCATE_IP.
@@ -27,12 +27,12 @@ public final class NetworkInterfaceSubInterfaceResponse {
      */
     private final Integer vlan;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceSubInterfaceResponse(
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("ipAllocationMode") String ipAllocationMode,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("vlan") Integer vlan) {
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("ipAllocationMode") String ipAllocationMode,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("vlan") Integer vlan) {
         this.ipAddress = ipAddress;
         this.ipAllocationMode = ipAllocationMode;
         this.subnetwork = subnetwork;

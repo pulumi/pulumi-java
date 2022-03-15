@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
      * The name of the streaming endpoint, maximum length is 24.
      * 
      */
-    @InputImport(name="streamingEndpointName", required=true)
+    @Import(name="streamingEndpointName", required=true)
       private final String streamingEndpointName;
 
     public String getStreamingEndpointName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetRegionInstanceGroupInstanceNamedPort;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionInstanceGroupInstance {
     /**
      * URL to the instance.
@@ -27,11 +27,11 @@ public final class GetRegionInstanceGroupInstance {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionInstanceGroupInstance(
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("namedPorts") List<GetRegionInstanceGroupInstanceNamedPort> namedPorts,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("namedPorts") List<GetRegionInstanceGroupInstanceNamedPort> namedPorts,
+        @CustomType.Parameter("status") String status) {
         this.instance = instance;
         this.namedPorts = namedPorts;
         this.status = status;

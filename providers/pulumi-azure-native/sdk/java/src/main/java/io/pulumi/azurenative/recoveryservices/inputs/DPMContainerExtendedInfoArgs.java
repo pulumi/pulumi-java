@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * Last refresh time of the DPMContainer.
      * 
      */
-    @InputImport(name="lastRefreshedAt")
+    @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
     public Output<String> getLastRefreshedAt() {

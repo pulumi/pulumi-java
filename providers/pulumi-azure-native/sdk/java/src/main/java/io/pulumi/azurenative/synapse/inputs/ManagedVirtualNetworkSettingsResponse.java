@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
      * Allowed Aad Tenant Ids For Linking
      * 
      */
-    @InputImport(name="allowedAadTenantIdsForLinking")
+    @Import(name="allowedAadTenantIdsForLinking")
       private final @Nullable List<String> allowedAadTenantIdsForLinking;
 
     public List<String> getAllowedAadTenantIdsForLinking() {
@@ -35,7 +35,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
      * Linked Access Check On Target Resource
      * 
      */
-    @InputImport(name="linkedAccessCheckOnTargetResource")
+    @Import(name="linkedAccessCheckOnTargetResource")
       private final @Nullable Boolean linkedAccessCheckOnTargetResource;
 
     public Optional<Boolean> getLinkedAccessCheckOnTargetResource() {
@@ -46,7 +46,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
      * Prevent Data Exfiltration
      * 
      */
-    @InputImport(name="preventDataExfiltration")
+    @Import(name="preventDataExfiltration")
       private final @Nullable Boolean preventDataExfiltration;
 
     public Optional<Boolean> getPreventDataExfiltration() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceDeploymentController {
     /**
      * Type of deployment controller. Valid values: `CODE_DEPLOY`, `ECS`, `EXTERNAL`. Default: `ECS`.
@@ -17,8 +17,8 @@ public final class ServiceDeploymentController {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
-    private ServiceDeploymentController(@OutputCustomType.Parameter("type") @Nullable String type) {
+    @CustomType.Constructor
+    private ServiceDeploymentController(@CustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

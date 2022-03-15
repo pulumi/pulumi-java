@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DiskExclusionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExtendedPropertiesResponse extends io.pulumi.resources.Invoke
      * Extended Properties for Disk Exclusion.
      * 
      */
-    @InputImport(name="diskExclusionProperties")
+    @Import(name="diskExclusionProperties")
       private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
     public Optional<DiskExclusionPropertiesResponse> getDiskExclusionProperties() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvValueFrom;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerEnv {
     /**
      * Volume's name.
@@ -36,11 +36,11 @@ public final class ServiceTemplateSpecContainerEnv {
      */
     private final @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainerEnv(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("value") @Nullable String value,
-        @OutputCustomType.Parameter("valueFrom") @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("value") @Nullable String value,
+        @CustomType.Parameter("valueFrom") @Nullable ServiceTemplateSpecContainerEnvValueFrom valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;

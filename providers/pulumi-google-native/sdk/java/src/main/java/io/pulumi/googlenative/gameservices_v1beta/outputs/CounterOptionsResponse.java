@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.CustomFieldResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CounterOptionsResponse {
     /**
      * Custom fields.
@@ -27,11 +27,11 @@ public final class CounterOptionsResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CounterOptionsResponse(
-        @OutputCustomType.Parameter("customFields") List<CustomFieldResponse> customFields,
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("metric") String metric) {
+        @CustomType.Parameter("customFields") List<CustomFieldResponse> customFields,
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("metric") String metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;

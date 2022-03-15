@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FeatureStateResponse {
     /**
      * The high-level, machine-readable status of this Feature.
@@ -25,11 +25,11 @@ public final class FeatureStateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureStateResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.code = code;
         this.description = description;
         this.updateTime = updateTime;

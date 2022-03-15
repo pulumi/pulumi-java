@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticbeanstalk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHostedZoneResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -22,10 +22,10 @@ public final class GetHostedZoneResult {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHostedZoneResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.id = id;
         this.region = region;
     }

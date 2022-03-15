@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbidedicated.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeA
      * The capacity of an auto scale v-core resource.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeA
      * Name of the SKU level.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class AutoScaleVCoreSkuResponse extends io.pulumi.resources.InvokeA
      * The name of the Azure pricing tier to which the SKU applies.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

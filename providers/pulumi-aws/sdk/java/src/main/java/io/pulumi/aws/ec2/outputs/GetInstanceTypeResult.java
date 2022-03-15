@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.outputs.GetInstanceTypeFpga;
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeGpus;
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeInferenceAccelerator;
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeInstanceDisk;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTypeResult {
     /**
      * `true` if auto recovery is supported.
@@ -260,55 +260,55 @@ public final class GetInstanceTypeResult {
      */
     private final List<Integer> validThreadsPerCores;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTypeResult(
-        @OutputCustomType.Parameter("autoRecoverySupported") Boolean autoRecoverySupported,
-        @OutputCustomType.Parameter("bareMetal") Boolean bareMetal,
-        @OutputCustomType.Parameter("burstablePerformanceSupported") Boolean burstablePerformanceSupported,
-        @OutputCustomType.Parameter("currentGeneration") Boolean currentGeneration,
-        @OutputCustomType.Parameter("dedicatedHostsSupported") Boolean dedicatedHostsSupported,
-        @OutputCustomType.Parameter("defaultCores") Integer defaultCores,
-        @OutputCustomType.Parameter("defaultThreadsPerCore") Integer defaultThreadsPerCore,
-        @OutputCustomType.Parameter("defaultVcpus") Integer defaultVcpus,
-        @OutputCustomType.Parameter("ebsEncryptionSupport") String ebsEncryptionSupport,
-        @OutputCustomType.Parameter("ebsNvmeSupport") String ebsNvmeSupport,
-        @OutputCustomType.Parameter("ebsOptimizedSupport") String ebsOptimizedSupport,
-        @OutputCustomType.Parameter("ebsPerformanceBaselineBandwidth") Integer ebsPerformanceBaselineBandwidth,
-        @OutputCustomType.Parameter("ebsPerformanceBaselineIops") Integer ebsPerformanceBaselineIops,
-        @OutputCustomType.Parameter("ebsPerformanceBaselineThroughput") Double ebsPerformanceBaselineThroughput,
-        @OutputCustomType.Parameter("ebsPerformanceMaximumBandwidth") Integer ebsPerformanceMaximumBandwidth,
-        @OutputCustomType.Parameter("ebsPerformanceMaximumIops") Integer ebsPerformanceMaximumIops,
-        @OutputCustomType.Parameter("ebsPerformanceMaximumThroughput") Double ebsPerformanceMaximumThroughput,
-        @OutputCustomType.Parameter("efaSupported") Boolean efaSupported,
-        @OutputCustomType.Parameter("enaSupport") String enaSupport,
-        @OutputCustomType.Parameter("encryptionInTransitSupported") Boolean encryptionInTransitSupported,
-        @OutputCustomType.Parameter("fpgas") List<GetInstanceTypeFpga> fpgas,
-        @OutputCustomType.Parameter("freeTierEligible") Boolean freeTierEligible,
-        @OutputCustomType.Parameter("gpuses") List<GetInstanceTypeGpus> gpuses,
-        @OutputCustomType.Parameter("hibernationSupported") Boolean hibernationSupported,
-        @OutputCustomType.Parameter("hypervisor") String hypervisor,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inferenceAccelerators") List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators,
-        @OutputCustomType.Parameter("instanceDisks") List<GetInstanceTypeInstanceDisk> instanceDisks,
-        @OutputCustomType.Parameter("instanceStorageSupported") Boolean instanceStorageSupported,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ipv6Supported") Boolean ipv6Supported,
-        @OutputCustomType.Parameter("maximumIpv4AddressesPerInterface") Integer maximumIpv4AddressesPerInterface,
-        @OutputCustomType.Parameter("maximumIpv6AddressesPerInterface") Integer maximumIpv6AddressesPerInterface,
-        @OutputCustomType.Parameter("maximumNetworkInterfaces") Integer maximumNetworkInterfaces,
-        @OutputCustomType.Parameter("memorySize") Integer memorySize,
-        @OutputCustomType.Parameter("networkPerformance") String networkPerformance,
-        @OutputCustomType.Parameter("supportedArchitectures") List<String> supportedArchitectures,
-        @OutputCustomType.Parameter("supportedPlacementStrategies") List<String> supportedPlacementStrategies,
-        @OutputCustomType.Parameter("supportedRootDeviceTypes") List<String> supportedRootDeviceTypes,
-        @OutputCustomType.Parameter("supportedUsagesClasses") List<String> supportedUsagesClasses,
-        @OutputCustomType.Parameter("supportedVirtualizationTypes") List<String> supportedVirtualizationTypes,
-        @OutputCustomType.Parameter("sustainedClockSpeed") Double sustainedClockSpeed,
-        @OutputCustomType.Parameter("totalFpgaMemory") Integer totalFpgaMemory,
-        @OutputCustomType.Parameter("totalGpuMemory") Integer totalGpuMemory,
-        @OutputCustomType.Parameter("totalInstanceStorage") Integer totalInstanceStorage,
-        @OutputCustomType.Parameter("validCores") List<Integer> validCores,
-        @OutputCustomType.Parameter("validThreadsPerCores") List<Integer> validThreadsPerCores) {
+        @CustomType.Parameter("autoRecoverySupported") Boolean autoRecoverySupported,
+        @CustomType.Parameter("bareMetal") Boolean bareMetal,
+        @CustomType.Parameter("burstablePerformanceSupported") Boolean burstablePerformanceSupported,
+        @CustomType.Parameter("currentGeneration") Boolean currentGeneration,
+        @CustomType.Parameter("dedicatedHostsSupported") Boolean dedicatedHostsSupported,
+        @CustomType.Parameter("defaultCores") Integer defaultCores,
+        @CustomType.Parameter("defaultThreadsPerCore") Integer defaultThreadsPerCore,
+        @CustomType.Parameter("defaultVcpus") Integer defaultVcpus,
+        @CustomType.Parameter("ebsEncryptionSupport") String ebsEncryptionSupport,
+        @CustomType.Parameter("ebsNvmeSupport") String ebsNvmeSupport,
+        @CustomType.Parameter("ebsOptimizedSupport") String ebsOptimizedSupport,
+        @CustomType.Parameter("ebsPerformanceBaselineBandwidth") Integer ebsPerformanceBaselineBandwidth,
+        @CustomType.Parameter("ebsPerformanceBaselineIops") Integer ebsPerformanceBaselineIops,
+        @CustomType.Parameter("ebsPerformanceBaselineThroughput") Double ebsPerformanceBaselineThroughput,
+        @CustomType.Parameter("ebsPerformanceMaximumBandwidth") Integer ebsPerformanceMaximumBandwidth,
+        @CustomType.Parameter("ebsPerformanceMaximumIops") Integer ebsPerformanceMaximumIops,
+        @CustomType.Parameter("ebsPerformanceMaximumThroughput") Double ebsPerformanceMaximumThroughput,
+        @CustomType.Parameter("efaSupported") Boolean efaSupported,
+        @CustomType.Parameter("enaSupport") String enaSupport,
+        @CustomType.Parameter("encryptionInTransitSupported") Boolean encryptionInTransitSupported,
+        @CustomType.Parameter("fpgas") List<GetInstanceTypeFpga> fpgas,
+        @CustomType.Parameter("freeTierEligible") Boolean freeTierEligible,
+        @CustomType.Parameter("gpuses") List<GetInstanceTypeGpus> gpuses,
+        @CustomType.Parameter("hibernationSupported") Boolean hibernationSupported,
+        @CustomType.Parameter("hypervisor") String hypervisor,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inferenceAccelerators") List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators,
+        @CustomType.Parameter("instanceDisks") List<GetInstanceTypeInstanceDisk> instanceDisks,
+        @CustomType.Parameter("instanceStorageSupported") Boolean instanceStorageSupported,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ipv6Supported") Boolean ipv6Supported,
+        @CustomType.Parameter("maximumIpv4AddressesPerInterface") Integer maximumIpv4AddressesPerInterface,
+        @CustomType.Parameter("maximumIpv6AddressesPerInterface") Integer maximumIpv6AddressesPerInterface,
+        @CustomType.Parameter("maximumNetworkInterfaces") Integer maximumNetworkInterfaces,
+        @CustomType.Parameter("memorySize") Integer memorySize,
+        @CustomType.Parameter("networkPerformance") String networkPerformance,
+        @CustomType.Parameter("supportedArchitectures") List<String> supportedArchitectures,
+        @CustomType.Parameter("supportedPlacementStrategies") List<String> supportedPlacementStrategies,
+        @CustomType.Parameter("supportedRootDeviceTypes") List<String> supportedRootDeviceTypes,
+        @CustomType.Parameter("supportedUsagesClasses") List<String> supportedUsagesClasses,
+        @CustomType.Parameter("supportedVirtualizationTypes") List<String> supportedVirtualizationTypes,
+        @CustomType.Parameter("sustainedClockSpeed") Double sustainedClockSpeed,
+        @CustomType.Parameter("totalFpgaMemory") Integer totalFpgaMemory,
+        @CustomType.Parameter("totalGpuMemory") Integer totalGpuMemory,
+        @CustomType.Parameter("totalInstanceStorage") Integer totalInstanceStorage,
+        @CustomType.Parameter("validCores") List<Integer> validCores,
+        @CustomType.Parameter("validThreadsPerCores") List<Integer> validThreadsPerCores) {
         this.autoRecoverySupported = autoRecoverySupported;
         this.bareMetal = bareMetal;
         this.burstablePerformanceSupported = burstablePerformanceSupported;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseSummaryResultResponse {
     /**
      * Migration end time
@@ -61,18 +61,18 @@ public final class DatabaseSummaryResultResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseSummaryResultResponse(
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
-        @OutputCustomType.Parameter("itemsCompletedCount") Double itemsCompletedCount,
-        @OutputCustomType.Parameter("itemsCount") Double itemsCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resultPrefix") String resultPrefix,
-        @OutputCustomType.Parameter("sizeMB") Double sizeMB,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("errorPrefix") String errorPrefix,
+        @CustomType.Parameter("itemsCompletedCount") Double itemsCompletedCount,
+        @CustomType.Parameter("itemsCount") Double itemsCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resultPrefix") String resultPrefix,
+        @CustomType.Parameter("sizeMB") Double sizeMB,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("statusMessage") String statusMessage) {
         this.endedOn = endedOn;
         this.errorPrefix = errorPrefix;
         this.itemsCompletedCount = itemsCompletedCount;

@@ -4,12 +4,12 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig {
     /**
      * Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`.
@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(
-        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
-        @OutputCustomType.Parameter("headers") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
+        @CustomType.Parameter("headerBehavior") String headerBehavior,
+        @CustomType.Parameter("headers") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

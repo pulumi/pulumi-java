@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkipErrorFileResponse {
     /**
      * Skip if source/sink file changed by other concurrent write. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -22,10 +22,10 @@ public final class SkipErrorFileResponse {
      */
     private final @Nullable Object fileMissing;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkipErrorFileResponse(
-        @OutputCustomType.Parameter("dataInconsistency") @Nullable Object dataInconsistency,
-        @OutputCustomType.Parameter("fileMissing") @Nullable Object fileMissing) {
+        @CustomType.Parameter("dataInconsistency") @Nullable Object dataInconsistency,
+        @CustomType.Parameter("fileMissing") @Nullable Object fileMissing) {
         this.dataInconsistency = dataInconsistency;
         this.fileMissing = fileMissing;
     }

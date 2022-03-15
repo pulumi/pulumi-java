@@ -8,7 +8,7 @@ import io.pulumi.aws.ssm.MaintenanceWindowTargetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTargetState;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTargetTarget;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * The description of the maintenance window target.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * The name of the maintenance window target.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
      * 
      */
-    @OutputExport(name="ownerInformation", type=String.class, parameters={})
+    @Export(name="ownerInformation", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerInformation;
 
     /**
@@ -76,7 +76,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
@@ -91,7 +91,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
      * 
      */
-    @OutputExport(name="targets", type=List.class, parameters={MaintenanceWindowTargetTarget.class})
+    @Export(name="targets", type=List.class, parameters={MaintenanceWindowTargetTarget.class})
     private Output<List<MaintenanceWindowTargetTarget>> targets;
 
     /**
@@ -106,7 +106,7 @@ public class MaintenanceWindowTarget extends io.pulumi.resources.CustomResource 
      * The Id of the maintenance window to register the target with.
      * 
      */
-    @OutputExport(name="windowId", type=String.class, parameters={})
+    @Export(name="windowId", type=String.class, parameters={})
     private Output<String> windowId;
 
     /**

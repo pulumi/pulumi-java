@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.GenericSignedAttestationContentType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SignatureArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
      * Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<GenericSignedAttestationContentType> contentType;
 
     public Output<GenericSignedAttestationContentType> getContentType() {
@@ -36,7 +36,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
      * The serialized payload that is verified by one or more `signatures`. The encoding and semantic meaning of this payload must match what is set in `content_type`.
      * 
      */
-    @InputImport(name="serializedPayload")
+    @Import(name="serializedPayload")
       private final @Nullable Output<String> serializedPayload;
 
     public Output<String> getSerializedPayload() {
@@ -47,7 +47,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
      * One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
      * 
      */
-    @InputImport(name="signatures")
+    @Import(name="signatures")
       private final @Nullable Output<List<SignatureArgs>> signatures;
 
     public Output<List<SignatureArgs>> getSignatures() {

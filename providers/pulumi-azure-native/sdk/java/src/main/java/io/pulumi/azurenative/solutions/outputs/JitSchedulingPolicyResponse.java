@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JitSchedulingPolicyResponse {
     private final String duration;
     /**
@@ -21,11 +21,11 @@ public final class JitSchedulingPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JitSchedulingPolicyResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("type") String type) {
         this.duration = duration;
         this.startTime = startTime;
         this.type = type;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ContactProfileLinkResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactProfileResult {
     /**
      * Auto track configuration.
@@ -77,20 +77,20 @@ public final class GetContactProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactProfileResult(
-        @OutputCustomType.Parameter("autoTrackingConfiguration") @Nullable String autoTrackingConfiguration,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("eventHubUri") @Nullable String eventHubUri,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("links") List<ContactProfileLinkResponse> links,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("minimumElevationDegrees") @Nullable Double minimumElevationDegrees,
-        @OutputCustomType.Parameter("minimumViableContactDuration") @Nullable String minimumViableContactDuration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoTrackingConfiguration") @Nullable String autoTrackingConfiguration,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("eventHubUri") @Nullable String eventHubUri,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("links") List<ContactProfileLinkResponse> links,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("minimumElevationDegrees") @Nullable Double minimumElevationDegrees,
+        @CustomType.Parameter("minimumViableContactDuration") @Nullable String minimumViableContactDuration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.autoTrackingConfiguration = autoTrackingConfiguration;
         this.etag = etag;
         this.eventHubUri = eventHubUri;

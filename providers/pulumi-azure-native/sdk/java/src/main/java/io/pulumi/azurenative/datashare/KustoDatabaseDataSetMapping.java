@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.KustoDatabaseDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * The id of the source data set.
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -49,7 +49,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Gets the status of the data set mapping.
      * 
      */
-    @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
+    @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
@@ -64,7 +64,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Expected value is 'KustoDatabase'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Resource id of the sink kusto cluster.
      * 
      */
-    @OutputExport(name="kustoClusterResourceId", type=String.class, parameters={})
+    @Export(name="kustoClusterResourceId", type=String.class, parameters={})
     private Output<String> kustoClusterResourceId;
 
     /**
@@ -93,7 +93,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Location of the sink kusto cluster.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Provisioning state of the data set mapping.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -149,7 +149,7 @@ public class KustoDatabaseDataSetMapping extends io.pulumi.resources.CustomResou
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

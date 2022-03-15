@@ -4,7 +4,7 @@
 package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -29,7 +29,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      * The unit of time for time-based retention. Valid values: `DAYS`, `WEEKS`, `MONTHS`, or `YEARS`.
      * 
      */
-    @InputImport(name="intervalUnit", required=true)
+    @Import(name="intervalUnit", required=true)
       private final Output<String> intervalUnit;
 
     public Output<String> getIntervalUnit() {

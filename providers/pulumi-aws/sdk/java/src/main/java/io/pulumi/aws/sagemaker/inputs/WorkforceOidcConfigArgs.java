@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP authorization endpoint used to configure your private workforce.
      * 
      */
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
@@ -28,7 +28,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP client ID used to configure your private workforce.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -39,7 +39,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP client secret used to configure your private workforce.
      * 
      */
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -50,7 +50,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP issuer used to configure your private workforce.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -61,7 +61,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP JSON Web Key Set (Jwks) URI used to configure your private workforce.
      * 
      */
-    @InputImport(name="jwksUri", required=true)
+    @Import(name="jwksUri", required=true)
       private final Output<String> jwksUri;
 
     public Output<String> getJwksUri() {
@@ -72,7 +72,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP logout endpoint used to configure your private workforce.
      * 
      */
-    @InputImport(name="logoutEndpoint", required=true)
+    @Import(name="logoutEndpoint", required=true)
       private final Output<String> logoutEndpoint;
 
     public Output<String> getLogoutEndpoint() {
@@ -83,7 +83,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP token endpoint used to configure your private workforce.
      * 
      */
-    @InputImport(name="tokenEndpoint", required=true)
+    @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
     public Output<String> getTokenEndpoint() {
@@ -94,7 +94,7 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
      * The OIDC IdP user information endpoint used to configure your private workforce.
      * 
      */
-    @InputImport(name="userInfoEndpoint", required=true)
+    @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
     public Output<String> getUserInfoEndpoint() {

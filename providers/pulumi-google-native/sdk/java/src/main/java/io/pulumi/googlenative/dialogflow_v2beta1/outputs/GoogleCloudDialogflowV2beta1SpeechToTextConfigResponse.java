@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse {
     /**
      * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is specified and an enhanced version of the specified model for the language does not exist, then it would emit an error.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse {
      */
     private final String speechModelVariant;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse(@OutputCustomType.Parameter("speechModelVariant") String speechModelVariant) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse(@CustomType.Parameter("speechModelVariant") String speechModelVariant) {
         this.speechModelVariant = speechModelVariant;
     }
 

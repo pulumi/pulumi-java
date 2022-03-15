@@ -10,7 +10,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.ServiceAuthenticationConfigur
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceCorsConfigurationInfoResponse;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceCosmosDbConfigurationInfoResponse;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceExportConfigurationInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The access policies of the service instance.
      * 
      */
-    @InputImport(name="accessPolicies")
+    @Import(name="accessPolicies")
       private final @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies;
 
     public List<ServiceAccessPolicyEntryResponse> getAccessPolicies() {
@@ -41,7 +41,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The azure container registry settings used for convert data operation of the service instance.
      * 
      */
-    @InputImport(name="acrConfiguration")
+    @Import(name="acrConfiguration")
       private final @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration;
 
     public Optional<ServiceAcrConfigurationInfoResponse> getAcrConfiguration() {
@@ -52,7 +52,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The authentication configuration for the service instance.
      * 
      */
-    @InputImport(name="authenticationConfiguration")
+    @Import(name="authenticationConfiguration")
       private final @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration;
 
     public Optional<ServiceAuthenticationConfigurationInfoResponse> getAuthenticationConfiguration() {
@@ -63,7 +63,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The settings for the CORS configuration of the service instance.
      * 
      */
-    @InputImport(name="corsConfiguration")
+    @Import(name="corsConfiguration")
       private final @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration;
 
     public Optional<ServiceCorsConfigurationInfoResponse> getCorsConfiguration() {
@@ -74,7 +74,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The settings for the Cosmos DB database backing the service.
      * 
      */
-    @InputImport(name="cosmosDbConfiguration")
+    @Import(name="cosmosDbConfiguration")
       private final @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration;
 
     public Optional<ServiceCosmosDbConfigurationInfoResponse> getCosmosDbConfiguration() {
@@ -85,7 +85,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The settings for the export operation of the service instance.
      * 
      */
-    @InputImport(name="exportConfiguration")
+    @Import(name="exportConfiguration")
       private final @Nullable ServiceExportConfigurationInfoResponse exportConfiguration;
 
     public Optional<ServiceExportConfigurationInfoResponse> getExportConfiguration() {
@@ -96,7 +96,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The list of private endpoint connections that are set up for this resource.
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
@@ -107,7 +107,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -118,7 +118,7 @@ public final class ServicesPropertiesResponse extends io.pulumi.resources.Invoke
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {

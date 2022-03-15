@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mwaa.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
      * A list of security groups to use for the environment.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -34,7 +34,7 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
      * A list of subnets to use for the environment. These must be private subnets, in the same VPC, in two different availability zones.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {

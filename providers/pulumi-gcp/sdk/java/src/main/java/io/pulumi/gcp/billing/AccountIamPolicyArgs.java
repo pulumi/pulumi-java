@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class AccountIamPolicyArgs extends io.pulumi.resources.ResourceArgs
 
     public static final AccountIamPolicyArgs Empty = new AccountIamPolicyArgs();
 
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {

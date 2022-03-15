@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMIDatabaseInputResponse {
     /**
      * The list of backup files to be used in case of existing backups.
@@ -34,12 +34,12 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
      */
     private final String restoreDatabaseName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMIDatabaseInputResponse(
-        @OutputCustomType.Parameter("backupFilePaths") @Nullable List<String> backupFilePaths,
-        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restoreDatabaseName") String restoreDatabaseName) {
+        @CustomType.Parameter("backupFilePaths") @Nullable List<String> backupFilePaths,
+        @CustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restoreDatabaseName") String restoreDatabaseName) {
         this.backupFilePaths = backupFilePaths;
         this.backupFileShare = backupFileShare;
         this.name = name;

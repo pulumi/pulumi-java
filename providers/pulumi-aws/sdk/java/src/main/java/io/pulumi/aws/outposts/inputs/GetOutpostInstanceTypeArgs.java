@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outposts.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
      * Outpost Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -30,7 +30,7 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
      * Desired instance type. Conflicts with `preferred_instance_types`.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
@@ -41,7 +41,7 @@ public final class GetOutpostInstanceTypeArgs extends io.pulumi.resources.Invoke
      * Ordered list of preferred instance types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. Conflicts with `instance_type`.
      * 
      */
-    @InputImport(name="preferredInstanceTypes")
+    @Import(name="preferredInstanceTypes")
       private final @Nullable List<String> preferredInstanceTypes;
 
     public List<String> getPreferredInstanceTypes() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateIamInstanceProfile {
     /**
      * The Amazon Resource Name (ARN) of the instance profile.
@@ -22,10 +22,10 @@ public final class LaunchTemplateIamInstanceProfile {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateIamInstanceProfile(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.name = name;
     }

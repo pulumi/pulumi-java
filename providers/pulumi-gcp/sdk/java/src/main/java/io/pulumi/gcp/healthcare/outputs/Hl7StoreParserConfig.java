@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Hl7StoreParserConfig {
     /**
      * Determines whether messages with no header are allowed.
@@ -37,12 +37,12 @@ public final class Hl7StoreParserConfig {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Hl7StoreParserConfig(
-        @OutputCustomType.Parameter("allowNullHeader") @Nullable Boolean allowNullHeader,
-        @OutputCustomType.Parameter("schema") @Nullable String schema,
-        @OutputCustomType.Parameter("segmentTerminator") @Nullable String segmentTerminator,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("allowNullHeader") @Nullable Boolean allowNullHeader,
+        @CustomType.Parameter("schema") @Nullable String schema,
+        @CustomType.Parameter("segmentTerminator") @Nullable String segmentTerminator,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.allowNullHeader = allowNullHeader;
         this.schema = schema;
         this.segmentTerminator = segmentTerminator;

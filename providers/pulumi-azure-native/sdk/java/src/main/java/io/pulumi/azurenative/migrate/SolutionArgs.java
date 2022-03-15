@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.SolutionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="migrateProjectName", required=true)
+    @Import(name="migrateProjectName", required=true)
       private final Output<String> migrateProjectName;
 
     public Output<String> getMigrateProjectName() {
@@ -30,7 +30,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the properties of the solution.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SolutionPropertiesArgs> properties;
 
     public Output<SolutionPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Resource Group that migrate project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of a migration solution within a migrate project.
      * 
      */
-    @InputImport(name="solutionName")
+    @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
 
     public Output<String> getSolutionName() {

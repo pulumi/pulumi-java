@@ -5,14 +5,14 @@ package io.pulumi.awsnative.xray.outputs;
 
 import io.pulumi.awsnative.xray.outputs.GroupInsightsConfiguration;
 import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * The filter expression defining criteria by which to group traces.
@@ -32,13 +32,13 @@ public final class GetGroupResult {
     private final @Nullable GroupInsightsConfiguration insightsConfiguration;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("filterExpression") @Nullable String filterExpression,
-        @OutputCustomType.Parameter("groupARN") @Nullable String groupARN,
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
-        @OutputCustomType.Parameter("insightsConfiguration") @Nullable GroupInsightsConfiguration insightsConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
+        @CustomType.Parameter("filterExpression") @Nullable String filterExpression,
+        @CustomType.Parameter("groupARN") @Nullable String groupARN,
+        @CustomType.Parameter("groupName") @Nullable String groupName,
+        @CustomType.Parameter("insightsConfiguration") @Nullable GroupInsightsConfiguration insightsConfiguration,
+        @CustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.filterExpression = filterExpression;
         this.groupARN = groupARN;
         this.groupName = groupName;

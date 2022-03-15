@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVarSource;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvVar {
     /**
      * Name of the environment variable. Must be a C_IDENTIFIER.
@@ -28,11 +28,11 @@ public final class EnvVar {
      */
     private final @Nullable EnvVarSource valueFrom;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvVar(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") @Nullable String value,
-        @OutputCustomType.Parameter("valueFrom") @Nullable EnvVarSource valueFrom) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") @Nullable String value,
+        @CustomType.Parameter("valueFrom") @Nullable EnvVarSource valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;

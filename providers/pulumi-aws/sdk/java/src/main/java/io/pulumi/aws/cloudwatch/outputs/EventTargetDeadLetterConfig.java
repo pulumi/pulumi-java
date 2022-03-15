@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetDeadLetterConfig {
     /**
      * - ARN of the SQS queue specified as the target for the dead-letter queue.
@@ -17,8 +17,8 @@ public final class EventTargetDeadLetterConfig {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private EventTargetDeadLetterConfig(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private EventTargetDeadLetterConfig(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

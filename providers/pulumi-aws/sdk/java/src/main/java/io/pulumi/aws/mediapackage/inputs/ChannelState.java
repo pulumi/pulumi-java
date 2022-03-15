@@ -5,7 +5,7 @@ package io.pulumi.aws.mediapackage.inputs;
 
 import io.pulumi.aws.mediapackage.inputs.ChannelHlsIngestGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the channel
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
      * A unique identifier describing the channel
      * 
      */
-    @InputImport(name="channelId")
+    @Import(name="channelId")
       private final @Nullable Output<String> channelId;
 
     public Output<String> getChannelId() {
@@ -43,7 +43,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
      * A description of the channel
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
      * A single item list of HLS ingest information
      * 
      */
-    @InputImport(name="hlsIngests")
+    @Import(name="hlsIngests")
       private final @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests;
 
     public Output<List<ChannelHlsIngestGetArgs>> getHlsIngests() {
@@ -65,7 +65,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.enums.ProjectSampleType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSample {
     /**
      * Sample size
@@ -23,10 +23,10 @@ public final class ProjectSample {
      */
     private final ProjectSampleType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSample(
-        @OutputCustomType.Parameter("size") @Nullable Integer size,
-        @OutputCustomType.Parameter("type") ProjectSampleType type) {
+        @CustomType.Parameter("size") @Nullable Integer size,
+        @CustomType.Parameter("type") ProjectSampleType type) {
         this.size = size;
         this.type = type;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PerfCounterDataSourceResponse {
     /**
      * A list of specifier names of the performance counters you want to collect.
@@ -38,12 +38,12 @@ public final class PerfCounterDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PerfCounterDataSourceResponse(
-        @OutputCustomType.Parameter("counterSpecifiers") @Nullable List<String> counterSpecifiers,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("samplingFrequencyInSeconds") @Nullable Integer samplingFrequencyInSeconds,
-        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
+        @CustomType.Parameter("counterSpecifiers") @Nullable List<String> counterSpecifiers,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("samplingFrequencyInSeconds") @Nullable Integer samplingFrequencyInSeconds,
+        @CustomType.Parameter("streams") @Nullable List<String> streams) {
         this.counterSpecifiers = counterSpecifiers;
         this.name = name;
         this.samplingFrequencyInSeconds = samplingFrequencyInSeconds;

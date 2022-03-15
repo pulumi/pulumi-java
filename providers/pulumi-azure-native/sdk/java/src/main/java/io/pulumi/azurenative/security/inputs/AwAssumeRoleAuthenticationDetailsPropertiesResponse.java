@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * The ID of the cloud account
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
@@ -32,7 +32,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * State of the multi-cloud connector
      * 
      */
-    @InputImport(name="authenticationProvisioningState", required=true)
+    @Import(name="authenticationProvisioningState", required=true)
       private final String authenticationProvisioningState;
 
     public String getAuthenticationProvisioningState() {
@@ -44,7 +44,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * Expected value is 'awsAssumeRole'.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
     public String getAuthenticationType() {
@@ -55,7 +55,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * Assumed role ID is an identifier that you can use to create temporary security credentials.
      * 
      */
-    @InputImport(name="awsAssumeRoleArn", required=true)
+    @Import(name="awsAssumeRoleArn", required=true)
       private final String awsAssumeRoleArn;
 
     public String getAwsAssumeRoleArn() {
@@ -66,7 +66,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * A unique identifier that is required when you assume a role in another account.
      * 
      */
-    @InputImport(name="awsExternalId", required=true)
+    @Import(name="awsExternalId", required=true)
       private final String awsExternalId;
 
     public String getAwsExternalId() {
@@ -77,7 +77,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * The permissions detected in the cloud account.
      * 
      */
-    @InputImport(name="grantedPermissions", required=true)
+    @Import(name="grantedPermissions", required=true)
       private final List<String> grantedPermissions;
 
     public List<String> getGrantedPermissions() {

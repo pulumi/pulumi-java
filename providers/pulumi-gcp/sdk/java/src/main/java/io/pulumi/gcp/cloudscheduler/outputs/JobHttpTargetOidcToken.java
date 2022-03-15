@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobHttpTargetOidcToken {
     /**
      * Audience to be used when generating OIDC token. If not specified,
@@ -24,10 +24,10 @@ public final class JobHttpTargetOidcToken {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobHttpTargetOidcToken(
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }

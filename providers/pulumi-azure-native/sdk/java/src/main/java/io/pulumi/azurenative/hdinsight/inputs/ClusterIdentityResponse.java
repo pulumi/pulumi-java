@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.ClusterIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * The principal id of cluster identity. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -35,7 +35,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * The tenant id associated with the cluster. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -46,7 +46,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * The type of identity used for the cluster. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -57,7 +57,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * The list of user identities associated with the cluster. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,ClusterIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {

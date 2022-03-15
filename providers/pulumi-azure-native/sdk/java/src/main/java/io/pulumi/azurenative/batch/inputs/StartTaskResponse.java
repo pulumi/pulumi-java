@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.inputs.EnvironmentSettingResponse;
 import io.pulumi.azurenative.batch.inputs.ResourceFileResponse;
 import io.pulumi.azurenative.batch.inputs.TaskContainerSettingsResponse;
 import io.pulumi.azurenative.batch.inputs.UserIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class StartTaskResponse extends io.pulumi.resources.InvokeArgs {
      * The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. Required if any other properties of the startTask are specified.
      * 
      */
-    @InputImport(name="commandLine")
+    @Import(name="commandLine")
       private final @Nullable String commandLine;
 
     public Optional<String> getCommandLine() {
@@ -40,14 +40,14 @@ public final class StartTaskResponse extends io.pulumi.resources.InvokeArgs {
      * When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.
      * 
      */
-    @InputImport(name="containerSettings")
+    @Import(name="containerSettings")
       private final @Nullable TaskContainerSettingsResponse containerSettings;
 
     public Optional<TaskContainerSettingsResponse> getContainerSettings() {
         return this.containerSettings == null ? Optional.empty() : Optional.ofNullable(this.containerSettings);
     }
 
-    @InputImport(name="environmentSettings")
+    @Import(name="environmentSettings")
       private final @Nullable List<EnvironmentSettingResponse> environmentSettings;
 
     public List<EnvironmentSettingResponse> getEnvironmentSettings() {
@@ -58,14 +58,14 @@ public final class StartTaskResponse extends io.pulumi.resources.InvokeArgs {
      * The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit.
      * 
      */
-    @InputImport(name="maxTaskRetryCount")
+    @Import(name="maxTaskRetryCount")
       private final @Nullable Integer maxTaskRetryCount;
 
     public Optional<Integer> getMaxTaskRetryCount() {
         return this.maxTaskRetryCount == null ? Optional.empty() : Optional.ofNullable(this.maxTaskRetryCount);
     }
 
-    @InputImport(name="resourceFiles")
+    @Import(name="resourceFiles")
       private final @Nullable List<ResourceFileResponse> resourceFiles;
 
     public List<ResourceFileResponse> getResourceFiles() {
@@ -76,7 +76,7 @@ public final class StartTaskResponse extends io.pulumi.resources.InvokeArgs {
      * If omitted, the task runs as a non-administrative user unique to the task.
      * 
      */
-    @InputImport(name="userIdentity")
+    @Import(name="userIdentity")
       private final @Nullable UserIdentityResponse userIdentity;
 
     public Optional<UserIdentityResponse> getUserIdentity() {
@@ -87,7 +87,7 @@ public final class StartTaskResponse extends io.pulumi.resources.InvokeArgs {
      * If true and the start task fails on a compute node, the Batch service retries the start task up to its maximum retry count (maxTaskRetryCount). If the task has still not completed successfully after all retries, then the Batch service marks the compute node unusable, and will not schedule tasks to it. This condition can be detected via the node state and scheduling error detail. If false, the Batch service will not wait for the start task to complete. In this case, other tasks can start executing on the compute node while the start task is still running; and even if the start task fails, new tasks will continue to be scheduled on the node. The default is true.
      * 
      */
-    @InputImport(name="waitForSuccess")
+    @Import(name="waitForSuccess")
       private final @Nullable Boolean waitForSuccess;
 
     public Optional<Boolean> getWaitForSuccess() {

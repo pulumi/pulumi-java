@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteResponse {
     /**
      * The path for the route.
@@ -21,10 +21,10 @@ public final class RouteResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteResponse(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("port") Integer port) {
         this.path = path;
         this.port = port;
     }

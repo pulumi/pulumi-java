@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.neptune.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrderableDbInstanceResult {
     /**
      * Availability zones where the instance is available.
@@ -102,30 +102,30 @@ public final class GetOrderableDbInstanceResult {
     private final Boolean supportsStorageEncryption;
     private final Boolean vpc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrderableDbInstanceResult(
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("engine") @Nullable String engine,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceClass") String instanceClass,
-        @OutputCustomType.Parameter("licenseModel") @Nullable String licenseModel,
-        @OutputCustomType.Parameter("maxIopsPerDbInstance") Integer maxIopsPerDbInstance,
-        @OutputCustomType.Parameter("maxIopsPerGib") Double maxIopsPerGib,
-        @OutputCustomType.Parameter("maxStorageSize") Integer maxStorageSize,
-        @OutputCustomType.Parameter("minIopsPerDbInstance") Integer minIopsPerDbInstance,
-        @OutputCustomType.Parameter("minIopsPerGib") Double minIopsPerGib,
-        @OutputCustomType.Parameter("minStorageSize") Integer minStorageSize,
-        @OutputCustomType.Parameter("multiAzCapable") Boolean multiAzCapable,
-        @OutputCustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
-        @OutputCustomType.Parameter("readReplicaCapable") Boolean readReplicaCapable,
-        @OutputCustomType.Parameter("storageType") String storageType,
-        @OutputCustomType.Parameter("supportsEnhancedMonitoring") Boolean supportsEnhancedMonitoring,
-        @OutputCustomType.Parameter("supportsIamDatabaseAuthentication") Boolean supportsIamDatabaseAuthentication,
-        @OutputCustomType.Parameter("supportsIops") Boolean supportsIops,
-        @OutputCustomType.Parameter("supportsPerformanceInsights") Boolean supportsPerformanceInsights,
-        @OutputCustomType.Parameter("supportsStorageEncryption") Boolean supportsStorageEncryption,
-        @OutputCustomType.Parameter("vpc") Boolean vpc) {
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("engine") @Nullable String engine,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceClass") String instanceClass,
+        @CustomType.Parameter("licenseModel") @Nullable String licenseModel,
+        @CustomType.Parameter("maxIopsPerDbInstance") Integer maxIopsPerDbInstance,
+        @CustomType.Parameter("maxIopsPerGib") Double maxIopsPerGib,
+        @CustomType.Parameter("maxStorageSize") Integer maxStorageSize,
+        @CustomType.Parameter("minIopsPerDbInstance") Integer minIopsPerDbInstance,
+        @CustomType.Parameter("minIopsPerGib") Double minIopsPerGib,
+        @CustomType.Parameter("minStorageSize") Integer minStorageSize,
+        @CustomType.Parameter("multiAzCapable") Boolean multiAzCapable,
+        @CustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
+        @CustomType.Parameter("readReplicaCapable") Boolean readReplicaCapable,
+        @CustomType.Parameter("storageType") String storageType,
+        @CustomType.Parameter("supportsEnhancedMonitoring") Boolean supportsEnhancedMonitoring,
+        @CustomType.Parameter("supportsIamDatabaseAuthentication") Boolean supportsIamDatabaseAuthentication,
+        @CustomType.Parameter("supportsIops") Boolean supportsIops,
+        @CustomType.Parameter("supportsPerformanceInsights") Boolean supportsPerformanceInsights,
+        @CustomType.Parameter("supportsStorageEncryption") Boolean supportsStorageEncryption,
+        @CustomType.Parameter("vpc") Boolean vpc) {
         this.availabilityZones = availabilityZones;
         this.engine = engine;
         this.engineVersion = engineVersion;

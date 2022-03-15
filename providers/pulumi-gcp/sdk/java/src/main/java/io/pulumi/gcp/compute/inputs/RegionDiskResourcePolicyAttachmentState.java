@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
      * The name of the regional disk in which the resource policies are attached to.
      * 
      */
-    @InputImport(name="disk")
+    @Import(name="disk")
       private final @Nullable Output<String> disk;
 
     public Output<String> getDisk() {
@@ -30,7 +30,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
      * creation. Do not specify the self link.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -53,7 +53,7 @@ public final class RegionDiskResourcePolicyAttachmentState extends io.pulumi.res
      * A reference to the region where the disk resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

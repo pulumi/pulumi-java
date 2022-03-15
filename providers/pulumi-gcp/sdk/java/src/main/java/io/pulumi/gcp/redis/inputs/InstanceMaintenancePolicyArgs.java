@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -36,7 +36,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * length is greater than 512.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -64,7 +64,7 @@ public final class InstanceMaintenancePolicyArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="weeklyMaintenanceWindows")
+    @Import(name="weeklyMaintenanceWindows")
       private final @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindows;
 
     public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindows() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
 
     public String getGlobalNetworkId() {
@@ -27,7 +27,7 @@ public final class GetLinkArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the link.
      * 
      */
-    @InputImport(name="linkId", required=true)
+    @Import(name="linkId", required=true)
       private final String linkId;
 
     public String getLinkId() {

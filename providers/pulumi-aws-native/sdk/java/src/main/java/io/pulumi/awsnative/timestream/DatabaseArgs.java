@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream;
 
 import io.pulumi.awsnative.timestream.inputs.DatabaseTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -31,7 +31,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -42,7 +42,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DatabaseTagArgs>> tags;
 
     public Output<List<DatabaseTagArgs>> getTags() {

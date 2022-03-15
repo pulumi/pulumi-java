@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.VirtualMachineSshCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HDInsightResponseProperties {
     /**
      * Public IP address of the master node of the cluster.
@@ -29,11 +29,11 @@ public final class HDInsightResponseProperties {
      */
     private final @Nullable Integer sshPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HDInsightResponseProperties(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @OutputCustomType.Parameter("sshPort") @Nullable Integer sshPort) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
+        @CustomType.Parameter("sshPort") @Nullable Integer sshPort) {
         this.address = address;
         this.administratorAccount = administratorAccount;
         this.sshPort = sshPort;

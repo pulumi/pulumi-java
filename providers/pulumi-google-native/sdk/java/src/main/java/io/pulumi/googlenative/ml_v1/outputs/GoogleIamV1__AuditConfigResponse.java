@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleIamV1__AuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleIamV1__AuditConfigResponse {
     /**
      * The configuration for logging of each type of permission.
@@ -22,10 +22,10 @@ public final class GoogleIamV1__AuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleIamV1__AuditConfigResponse(
-        @OutputCustomType.Parameter("auditLogConfigs") List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("auditLogConfigs") List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs,
+        @CustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

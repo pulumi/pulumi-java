@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.PredictionDistributionDefinitionResponseDistributions;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
      * Distributions of the prediction.
      * 
      */
-    @InputImport(name="distributions")
+    @Import(name="distributions")
       private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
 
     public List<PredictionDistributionDefinitionResponseDistributions> getDistributions() {
@@ -35,7 +35,7 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
      * Total negatives in the distribution.
      * 
      */
-    @InputImport(name="totalNegatives")
+    @Import(name="totalNegatives")
       private final @Nullable Double totalNegatives;
 
     public Optional<Double> getTotalNegatives() {
@@ -46,7 +46,7 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
      * Total positive in the distribution.
      * 
      */
-    @InputImport(name="totalPositives")
+    @Import(name="totalPositives")
       private final @Nullable Double totalPositives;
 
     public Optional<Double> getTotalPositives() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends io.pu
      * The end of the range.
      * 
      */
-    @InputImport(name="end", required=true)
+    @Import(name="end", required=true)
       private final Output<Integer> end;
 
     public Output<Integer> getEnd() {
@@ -28,7 +28,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeGetArgs extends io.pu
      * The start of the range.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final Output<Integer> start;
 
     public Output<Integer> getStart() {

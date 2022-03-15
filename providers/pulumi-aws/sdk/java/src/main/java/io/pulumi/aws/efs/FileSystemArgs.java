@@ -5,7 +5,7 @@ package io.pulumi.aws.efs;
 
 import io.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * the AWS Availability Zone in which to create the file system. Used to create a file system that uses One Zone storage classes. See [user guide](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
      * 
      */
-    @InputImport(name="availabilityZoneName")
+    @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
     public Output<String> getAvailabilityZoneName() {
@@ -36,7 +36,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
      * 
      */
-    @InputImport(name="creationToken")
+    @Import(name="creationToken")
       private final @Nullable Output<String> creationToken;
 
     public Output<String> getCreationToken() {
@@ -47,7 +47,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the disk will be encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -58,7 +58,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -69,7 +69,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    @InputImport(name="lifecyclePolicy")
+    @Import(name="lifecyclePolicy")
       private final @Nullable Output<FileSystemLifecyclePolicyArgs> lifecyclePolicy;
 
     public Output<FileSystemLifecyclePolicyArgs> getLifecyclePolicy() {
@@ -80,7 +80,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
      * 
      */
-    @InputImport(name="performanceMode")
+    @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
     public Output<String> getPerformanceMode() {
@@ -91,7 +91,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
      * 
      */
-    @InputImport(name="provisionedThroughputInMibps")
+    @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
     public Output<Double> getProvisionedThroughputInMibps() {
@@ -102,7 +102,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -113,7 +113,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
      * Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
      * 
      */
-    @InputImport(name="throughputMode")
+    @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
     public Output<String> getThroughputMode() {

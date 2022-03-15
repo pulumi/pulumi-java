@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.PrePostStepResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StepGroupResponse {
     /**
      * The list of step group names on which this step group depends on.
@@ -38,13 +38,13 @@ public final class StepGroupResponse {
      */
     private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StepGroupResponse(
-        @OutputCustomType.Parameter("dependsOnStepGroups") @Nullable List<String> dependsOnStepGroups,
-        @OutputCustomType.Parameter("deploymentTargetId") String deploymentTargetId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("postDeploymentSteps") @Nullable List<PrePostStepResponse> postDeploymentSteps,
-        @OutputCustomType.Parameter("preDeploymentSteps") @Nullable List<PrePostStepResponse> preDeploymentSteps) {
+        @CustomType.Parameter("dependsOnStepGroups") @Nullable List<String> dependsOnStepGroups,
+        @CustomType.Parameter("deploymentTargetId") String deploymentTargetId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("postDeploymentSteps") @Nullable List<PrePostStepResponse> postDeploymentSteps,
+        @CustomType.Parameter("preDeploymentSteps") @Nullable List<PrePostStepResponse> preDeploymentSteps) {
         this.dependsOnStepGroups = dependsOnStepGroups;
         this.deploymentTargetId = deploymentTargetId;
         this.name = name;

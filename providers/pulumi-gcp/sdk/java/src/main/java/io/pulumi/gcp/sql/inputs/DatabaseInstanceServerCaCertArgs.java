@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class DatabaseInstanceServerCaCertArgs extends io.pulumi.resources.
 
     public static final DatabaseInstanceServerCaCertArgs Empty = new DatabaseInstanceServerCaCertArgs();
 
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
         return this.cert == null ? Output.empty() : this.cert;
     }
 
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
         return this.commonName == null ? Output.empty() : this.commonName;
     }
 
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -40,14 +40,14 @@ public final class DatabaseInstanceServerCaCertArgs extends io.pulumi.resources.
      * formatted date time string indicating when this whitelist expires.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
         return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
-    @InputImport(name="sha1Fingerprint")
+    @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
     public Output<String> getSha1Fingerprint() {

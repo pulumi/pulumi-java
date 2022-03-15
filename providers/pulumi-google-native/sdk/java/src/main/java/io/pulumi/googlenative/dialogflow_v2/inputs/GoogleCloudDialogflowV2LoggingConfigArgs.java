@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2LoggingConfigArgs extends io.pulumi.re
      * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation project as JSON format ConversationEvent protos.
      * 
      */
-    @InputImport(name="enableStackdriverLogging")
+    @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
     public Output<Boolean> getEnableStackdriverLogging() {

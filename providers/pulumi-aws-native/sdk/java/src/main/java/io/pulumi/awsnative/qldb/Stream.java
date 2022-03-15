@@ -8,7 +8,7 @@ import io.pulumi.awsnative.qldb.StreamArgs;
 import io.pulumi.awsnative.qldb.outputs.StreamKinesisConfiguration;
 import io.pulumi.awsnative.qldb.outputs.StreamTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,43 +22,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:qldb:Stream")
 public class Stream extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="exclusiveEndTime", type=String.class, parameters={})
+    @Export(name="exclusiveEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> exclusiveEndTime;
 
     public Output</* @Nullable */ String> getExclusiveEndTime() {
         return this.exclusiveEndTime;
     }
-    @OutputExport(name="inclusiveStartTime", type=String.class, parameters={})
+    @Export(name="inclusiveStartTime", type=String.class, parameters={})
     private Output<String> inclusiveStartTime;
 
     public Output<String> getInclusiveStartTime() {
         return this.inclusiveStartTime;
     }
-    @OutputExport(name="kinesisConfiguration", type=StreamKinesisConfiguration.class, parameters={})
+    @Export(name="kinesisConfiguration", type=StreamKinesisConfiguration.class, parameters={})
     private Output<StreamKinesisConfiguration> kinesisConfiguration;
 
     public Output<StreamKinesisConfiguration> getKinesisConfiguration() {
         return this.kinesisConfiguration;
     }
-    @OutputExport(name="ledgerName", type=String.class, parameters={})
+    @Export(name="ledgerName", type=String.class, parameters={})
     private Output<String> ledgerName;
 
     public Output<String> getLedgerName() {
         return this.ledgerName;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="streamName", type=String.class, parameters={})
+    @Export(name="streamName", type=String.class, parameters={})
     private Output<String> streamName;
 
     public Output<String> getStreamName() {
@@ -68,7 +68,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StreamTag.class})
+    @Export(name="tags", type=List.class, parameters={StreamTag.class})
     private Output</* @Nullable */ List<StreamTag>> tags;
 
     /**

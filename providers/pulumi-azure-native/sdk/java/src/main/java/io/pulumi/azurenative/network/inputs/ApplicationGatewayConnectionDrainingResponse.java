@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
      * The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
      * 
      */
-    @InputImport(name="drainTimeoutInSec", required=true)
+    @Import(name="drainTimeoutInSec", required=true)
       private final Integer drainTimeoutInSec;
 
     public Integer getDrainTimeoutInSec() {
@@ -32,7 +32,7 @@ public final class ApplicationGatewayConnectionDrainingResponse extends io.pulum
      * Whether connection draining is enabled or not.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {

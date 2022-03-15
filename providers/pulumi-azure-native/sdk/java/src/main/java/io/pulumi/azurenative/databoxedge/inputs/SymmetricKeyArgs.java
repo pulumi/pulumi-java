@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Connection string based on the symmetric key.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
     public Output<AsymmetricEncryptedSecretArgs> getConnectionString() {

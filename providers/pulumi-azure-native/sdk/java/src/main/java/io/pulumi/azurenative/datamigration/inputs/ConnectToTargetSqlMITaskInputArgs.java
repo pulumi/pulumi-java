@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ConnectToTargetSqlMITaskInputArgs extends io.pulumi.resources
      * Connection information for target SQL Server
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {

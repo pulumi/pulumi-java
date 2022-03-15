@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.budgets.outputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSubscriberType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetsActionSubscriber {
     private final String address;
     private final BudgetsActionSubscriberType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetsActionSubscriber(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("type") BudgetsActionSubscriberType type) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("type") BudgetsActionSubscriberType type) {
         this.address = address;
         this.type = type;
     }

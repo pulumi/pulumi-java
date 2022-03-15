@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
      * API name
      * 
      */
-    @InputImport(name="apiName", required=true)
+    @Import(name="apiName", required=true)
       private final String apiName;
 
     public String getApiName() {
@@ -29,7 +29,7 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
      * The resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
      * Subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {

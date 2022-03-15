@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetCaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCaseArgs Empty = new GetCaseArgs();
 
-    @InputImport(name="caseId", required=true)
+    @Import(name="caseId", required=true)
       private final String caseId;
 
     public String getCaseId() {
         return this.caseId;
     }
 
-    @InputImport(name="v2betaId1", required=true)
+    @Import(name="v2betaId1", required=true)
       private final String v2betaId1;
 
     public String getV2betaId1() {
         return this.v2betaId1;
     }
 
-    @InputImport(name="v2betumId", required=true)
+    @Import(name="v2betumId", required=true)
       private final String v2betumId;
 
     public String getV2betumId() {

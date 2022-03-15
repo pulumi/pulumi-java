@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountPropertiesResponse {
     /**
      * ARM resource ID of the Azure Storage Account to store CLI specific files. If not provided one will be created. This cannot be changed once the cluster is created.
@@ -17,8 +17,8 @@ public final class StorageAccountPropertiesResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
-    private StorageAccountPropertiesResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+    @CustomType.Constructor
+    private StorageAccountPropertiesResponse(@CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.PipelineReadyConditionResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.TargetsPresentConditionResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineConditionResponse {
     /**
      * Details around the Pipeline's overall status.
@@ -21,10 +21,10 @@ public final class PipelineConditionResponse {
      */
     private final TargetsPresentConditionResponse targetsPresentCondition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineConditionResponse(
-        @OutputCustomType.Parameter("pipelineReadyCondition") PipelineReadyConditionResponse pipelineReadyCondition,
-        @OutputCustomType.Parameter("targetsPresentCondition") TargetsPresentConditionResponse targetsPresentCondition) {
+        @CustomType.Parameter("pipelineReadyCondition") PipelineReadyConditionResponse pipelineReadyCondition,
+        @CustomType.Parameter("targetsPresentCondition") TargetsPresentConditionResponse targetsPresentCondition) {
         this.pipelineReadyCondition = pipelineReadyCondition;
         this.targetsPresentCondition = targetsPresentCondition;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.ElasticCloudDeploymentResponse;
 import io.pulumi.azurenative.elastic.inputs.ElasticCloudUserResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeA
      * Details of the elastic cloud deployment.
      * 
      */
-    @InputImport(name="elasticCloudDeployment")
+    @Import(name="elasticCloudDeployment")
       private final @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
 
     public Optional<ElasticCloudDeploymentResponse> getElasticCloudDeployment() {
@@ -34,7 +34,7 @@ public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeA
      * Details of the user's elastic account.
      * 
      */
-    @InputImport(name="elasticCloudUser")
+    @Import(name="elasticCloudUser")
       private final @Nullable ElasticCloudUserResponse elasticCloudUser;
 
     public Optional<ElasticCloudUserResponse> getElasticCloudUser() {

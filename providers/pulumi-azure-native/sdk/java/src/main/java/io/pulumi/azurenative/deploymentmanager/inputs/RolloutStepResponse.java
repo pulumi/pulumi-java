@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.MessageResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.ResourceOperationResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.StepOperationInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
      * Supplementary informative messages during rollout.
      * 
      */
-    @InputImport(name="messages", required=true)
+    @Import(name="messages", required=true)
       private final List<MessageResponse> messages;
 
     public List<MessageResponse> getMessages() {
@@ -37,7 +37,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the step.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -48,7 +48,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
      * Detailed information of specific action execution.
      * 
      */
-    @InputImport(name="operationInfo", required=true)
+    @Import(name="operationInfo", required=true)
       private final StepOperationInfoResponse operationInfo;
 
     public StepOperationInfoResponse getOperationInfo() {
@@ -59,7 +59,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
      * Set of resource operations that were performed, if any, on an Azure resource.
      * 
      */
-    @InputImport(name="resourceOperations", required=true)
+    @Import(name="resourceOperations", required=true)
       private final List<ResourceOperationResponse> resourceOperations;
 
     public List<ResourceOperationResponse> getResourceOperations() {
@@ -70,7 +70,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
      * Current state of the step.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -81,7 +81,7 @@ public final class RolloutStepResponse extends io.pulumi.resources.InvokeArgs {
      * The step group the current step is part of.
      * 
      */
-    @InputImport(name="stepGroup")
+    @Import(name="stepGroup")
       private final @Nullable String stepGroup;
 
     public Optional<String> getStepGroup() {

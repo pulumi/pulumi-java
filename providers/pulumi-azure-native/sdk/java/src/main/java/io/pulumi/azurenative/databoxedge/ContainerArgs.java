@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The container name.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -31,7 +31,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * DataFormat for Container
      * 
      */
-    @InputImport(name="dataFormat", required=true)
+    @Import(name="dataFormat", required=true)
       private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
     public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
@@ -42,7 +42,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -53,7 +53,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The Storage Account Name
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {

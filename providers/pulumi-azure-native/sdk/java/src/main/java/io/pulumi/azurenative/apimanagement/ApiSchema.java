@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiSchemaArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -49,7 +49,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
      * 
      */
-    @OutputExport(name="definitions", type=Object.class, parameters={})
+    @Export(name="definitions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> definitions;
 
     /**
@@ -63,7 +63,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -91,7 +91,7 @@ public class ApiSchema extends io.pulumi.resources.CustomResource {
      * Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**

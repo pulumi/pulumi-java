@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitSkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * Allow classic operations.
      * 
      */
-    @InputImport(name="allowClassicOperations")
+    @Import(name="allowClassicOperations")
       private final @Nullable Output<Boolean> allowClassicOperations;
 
     public Output<Boolean> getAllowClassicOperations() {
@@ -40,7 +40,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The list of authorizations.
      * 
      */
-    @InputImport(name="authorizations")
+    @Import(name="authorizations")
       private final @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
 
     public Output<List<ExpressRouteCircuitAuthorizationArgs>> getAuthorizations() {
@@ -51,7 +51,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    @InputImport(name="bandwidthInGbps")
+    @Import(name="bandwidthInGbps")
       private final @Nullable Output<Double> bandwidthInGbps;
 
     public Output<Double> getBandwidthInGbps() {
@@ -62,7 +62,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The name of the circuit.
      * 
      */
-    @InputImport(name="circuitName")
+    @Import(name="circuitName")
       private final @Nullable Output<String> circuitName;
 
     public Output<String> getCircuitName() {
@@ -73,7 +73,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The CircuitProvisioningState state of the resource.
      * 
      */
-    @InputImport(name="circuitProvisioningState")
+    @Import(name="circuitProvisioningState")
       private final @Nullable Output<String> circuitProvisioningState;
 
     public Output<String> getCircuitProvisioningState() {
@@ -84,7 +84,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    @InputImport(name="expressRoutePort")
+    @Import(name="expressRoutePort")
       private final @Nullable Output<SubResourceArgs> expressRoutePort;
 
     public Output<SubResourceArgs> getExpressRoutePort() {
@@ -95,7 +95,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The GatewayManager Etag.
      * 
      */
-    @InputImport(name="gatewayManagerEtag")
+    @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
 
     public Output<String> getGatewayManagerEtag() {
@@ -106,7 +106,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * Flag denoting global reach status.
      * 
      */
-    @InputImport(name="globalReachEnabled")
+    @Import(name="globalReachEnabled")
       private final @Nullable Output<Boolean> globalReachEnabled;
 
     public Output<Boolean> getGlobalReachEnabled() {
@@ -117,7 +117,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -128,7 +128,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -139,7 +139,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The list of peerings.
      * 
      */
-    @InputImport(name="peerings")
+    @Import(name="peerings")
       private final @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
 
     public Output<List<ExpressRouteCircuitPeeringArgs>> getPeerings() {
@@ -150,7 +150,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -161,7 +161,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The ServiceKey.
      * 
      */
-    @InputImport(name="serviceKey")
+    @Import(name="serviceKey")
       private final @Nullable Output<String> serviceKey;
 
     public Output<String> getServiceKey() {
@@ -172,7 +172,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The ServiceProviderNotes.
      * 
      */
-    @InputImport(name="serviceProviderNotes")
+    @Import(name="serviceProviderNotes")
       private final @Nullable Output<String> serviceProviderNotes;
 
     public Output<String> getServiceProviderNotes() {
@@ -183,7 +183,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The ServiceProviderProperties.
      * 
      */
-    @InputImport(name="serviceProviderProperties")
+    @Import(name="serviceProviderProperties")
       private final @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
 
     public Output<ExpressRouteCircuitServiceProviderPropertiesArgs> getServiceProviderProperties() {
@@ -194,7 +194,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The ServiceProviderProvisioningState state of the resource.
      * 
      */
-    @InputImport(name="serviceProviderProvisioningState")
+    @Import(name="serviceProviderProvisioningState")
       private final @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
 
     public Output<Either<String,ServiceProviderProvisioningState>> getServiceProviderProvisioningState() {
@@ -205,7 +205,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * The SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
 
     public Output<ExpressRouteCircuitSkuArgs> getSku() {
@@ -216,7 +216,7 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

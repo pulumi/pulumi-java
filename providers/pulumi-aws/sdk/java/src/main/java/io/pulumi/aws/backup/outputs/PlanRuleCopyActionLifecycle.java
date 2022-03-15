@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlanRuleCopyActionLifecycle {
     /**
      * Specifies the number of days after creation that a recovery point is moved to cold storage.
@@ -22,10 +22,10 @@ public final class PlanRuleCopyActionLifecycle {
      */
     private final @Nullable Integer deleteAfter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanRuleCopyActionLifecycle(
-        @OutputCustomType.Parameter("coldStorageAfter") @Nullable Integer coldStorageAfter,
-        @OutputCustomType.Parameter("deleteAfter") @Nullable Integer deleteAfter) {
+        @CustomType.Parameter("coldStorageAfter") @Nullable Integer coldStorageAfter,
+        @CustomType.Parameter("deleteAfter") @Nullable Integer deleteAfter) {
         this.coldStorageAfter = coldStorageAfter;
         this.deleteAfter = deleteAfter;
     }

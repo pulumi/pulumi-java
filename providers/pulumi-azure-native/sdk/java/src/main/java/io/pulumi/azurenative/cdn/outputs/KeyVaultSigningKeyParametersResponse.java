@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultSigningKeyParametersResponse {
     private final String odataType;
     /**
@@ -36,14 +36,14 @@ public final class KeyVaultSigningKeyParametersResponse {
      */
     private final String vaultName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultSigningKeyParametersResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
-        @OutputCustomType.Parameter("secretName") String secretName,
-        @OutputCustomType.Parameter("secretVersion") String secretVersion,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("vaultName") String vaultName) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @CustomType.Parameter("secretName") String secretName,
+        @CustomType.Parameter("secretVersion") String secretVersion,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("vaultName") String vaultName) {
         this.odataType = odataType;
         this.resourceGroupName = resourceGroupName;
         this.secretName = secretName;

@@ -5,7 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.aws.iot.inputs.ThingTypePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the thing type is deprecated. If true, no new things could be associated with this type.
      * 
      */
-    @InputImport(name="deprecated")
+    @Import(name="deprecated")
       private final @Nullable Output<Boolean> deprecated;
 
     public Output<Boolean> getDeprecated() {
@@ -32,7 +32,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the thing type.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * , Configuration block that can contain the following properties of the thing type:
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ThingTypePropertiesArgs> properties;
 
     public Output<ThingTypePropertiesArgs> getProperties() {
@@ -54,7 +54,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

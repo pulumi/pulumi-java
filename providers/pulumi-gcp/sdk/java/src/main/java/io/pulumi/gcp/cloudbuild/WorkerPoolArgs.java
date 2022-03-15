@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * limitations.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -33,7 +33,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined name of the `WorkerPool`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Network configuration for the `WorkerPool`. Structure is documented below.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig;
 
     public Output<WorkerPoolNetworkConfigArgs> getNetworkConfig() {
@@ -77,7 +77,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -88,7 +88,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig;
 
     public Output<WorkerPoolWorkerConfigArgs> getWorkerConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.logs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * Optionally define specific log groups as part of your query definition
      * 
      */
-    @InputImport(name="logGroupNames")
+    @Import(name="logGroupNames")
       private final @Nullable Output<List<String>> logGroupNames;
 
     public Output<List<String>> getLogGroupNames() {
@@ -30,7 +30,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * A name for the saved query definition
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * The query string to use for this definition
      * 
      */
-    @InputImport(name="queryString", required=true)
+    @Import(name="queryString", required=true)
       private final Output<String> queryString;
 
     public Output<String> getQueryString() {

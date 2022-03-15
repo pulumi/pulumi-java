@@ -4,7 +4,7 @@
 package io.pulumi.gcp.essentialcontacts;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The email address to send notifications to. This does not need to be a Google account.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {
@@ -29,7 +29,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
      * 
      */
-    @InputImport(name="languageTag", required=true)
+    @Import(name="languageTag", required=true)
       private final Output<String> languageTag;
 
     public Output<String> getLanguageTag() {
@@ -40,7 +40,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The categories of notifications that the contact will receive communications for.
      * 
      */
-    @InputImport(name="notificationCategorySubscriptions", required=true)
+    @Import(name="notificationCategorySubscriptions", required=true)
       private final Output<List<String>> notificationCategorySubscriptions;
 
     public Output<List<String>> getNotificationCategorySubscriptions() {
@@ -51,7 +51,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

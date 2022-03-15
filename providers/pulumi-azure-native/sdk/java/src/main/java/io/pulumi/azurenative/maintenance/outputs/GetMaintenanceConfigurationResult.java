@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.maintenance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMaintenanceConfigurationResult {
     /**
      * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
@@ -53,16 +53,16 @@ public final class GetMaintenanceConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMaintenanceConfigurationResult(
-        @OutputCustomType.Parameter("extensionProperties") @Nullable Map<String,String> extensionProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("maintenanceScope") @Nullable String maintenanceScope,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("extensionProperties") @Nullable Map<String,String> extensionProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("maintenanceScope") @Nullable String maintenanceScope,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.extensionProperties = extensionProperties;
         this.id = id;
         this.location = location;

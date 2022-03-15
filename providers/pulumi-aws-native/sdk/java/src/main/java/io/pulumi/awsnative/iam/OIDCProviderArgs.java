@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.OIDCProviderTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class OIDCProviderArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OIDCProviderArgs Empty = new OIDCProviderArgs();
 
-    @InputImport(name="clientIdList")
+    @Import(name="clientIdList")
       private final @Nullable Output<List<String>> clientIdList;
 
     public Output<List<String>> getClientIdList() {
         return this.clientIdList == null ? Output.empty() : this.clientIdList;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<OIDCProviderTagArgs>> tags;
 
     public Output<List<OIDCProviderTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="thumbprintList", required=true)
+    @Import(name="thumbprintList", required=true)
       private final Output<List<String>> thumbprintList;
 
     public Output<List<String>> getThumbprintList() {
         return this.thumbprintList;
     }
 
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

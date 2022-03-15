@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseProjectSummaryResponse {
     /**
      * Gets or sets the extended summary.
@@ -34,12 +34,12 @@ public final class DatabaseProjectSummaryResponse {
      */
     private final @Nullable String refreshSummaryState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseProjectSummaryResponse(
-        @OutputCustomType.Parameter("extendedSummary") @Nullable Map<String,String> extendedSummary,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("lastSummaryRefreshedTime") @Nullable String lastSummaryRefreshedTime,
-        @OutputCustomType.Parameter("refreshSummaryState") @Nullable String refreshSummaryState) {
+        @CustomType.Parameter("extendedSummary") @Nullable Map<String,String> extendedSummary,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("lastSummaryRefreshedTime") @Nullable String lastSummaryRefreshedTime,
+        @CustomType.Parameter("refreshSummaryState") @Nullable String refreshSummaryState) {
         this.extendedSummary = extendedSummary;
         this.instanceType = instanceType;
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;

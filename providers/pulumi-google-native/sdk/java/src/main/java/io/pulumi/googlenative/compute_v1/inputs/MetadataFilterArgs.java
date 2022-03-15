@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.MetadataFilterFilterMatchCriteria;
 import io.pulumi.googlenative.compute_v1.inputs.MetadataFilterLabelMatchArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria This list must not be empty and can have at the most 64 entries.
      * 
      */
-    @InputImport(name="filterLabels")
+    @Import(name="filterLabels")
       private final @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
     public Output<List<MetadataFilterLabelMatchArgs>> getFilterLabels() {
@@ -35,7 +35,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how individual filter label matches within the list of filterLabels and contributes toward the overall metadataFilter match. Supported values are: - MATCH_ANY: at least one of the filterLabels must have a matching label in the provided metadata. - MATCH_ALL: all filterLabels must have matching labels in the provided metadata.
      * 
      */
-    @InputImport(name="filterMatchCriteria")
+    @Import(name="filterMatchCriteria")
       private final @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
     public Output<MetadataFilterFilterMatchCriteria> getFilterMatchCriteria() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsS3DataArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureBlobStorageDataArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.GcsDataArgs;
@@ -30,7 +30,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * An AWS S3 data source.
      * 
      */
-    @InputImport(name="awsS3DataSource")
+    @Import(name="awsS3DataSource")
       private final @Nullable Output<AwsS3DataArgs> awsS3DataSource;
 
     public Output<AwsS3DataArgs> getAwsS3DataSource() {
@@ -41,7 +41,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * An Azure Blob Storage data source.
      * 
      */
-    @InputImport(name="azureBlobStorageDataSource")
+    @Import(name="azureBlobStorageDataSource")
       private final @Nullable Output<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
 
     public Output<AzureBlobStorageDataArgs> getAzureBlobStorageDataSource() {
@@ -52,7 +52,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A Cloud Storage data sink.
      * 
      */
-    @InputImport(name="gcsDataSink")
+    @Import(name="gcsDataSink")
       private final @Nullable Output<GcsDataArgs> gcsDataSink;
 
     public Output<GcsDataArgs> getGcsDataSink() {
@@ -63,7 +63,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A Cloud Storage data source.
      * 
      */
-    @InputImport(name="gcsDataSource")
+    @Import(name="gcsDataSource")
       private final @Nullable Output<GcsDataArgs> gcsDataSource;
 
     public Output<GcsDataArgs> getGcsDataSource() {
@@ -74,7 +74,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Storage intermediate data location.
      * 
      */
-    @InputImport(name="gcsIntermediateDataLocation")
+    @Import(name="gcsIntermediateDataLocation")
       private final @Nullable Output<GcsDataArgs> gcsIntermediateDataLocation;
 
     public Output<GcsDataArgs> getGcsIntermediateDataLocation() {
@@ -85,7 +85,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * An HTTP URL data source.
      * 
      */
-    @InputImport(name="httpDataSource")
+    @Import(name="httpDataSource")
       private final @Nullable Output<HttpDataArgs> httpDataSource;
 
     public Output<HttpDataArgs> getHttpDataSource() {
@@ -96,7 +96,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' "last modification time" do not exclude objects in a data sink.
      * 
      */
-    @InputImport(name="objectConditions")
+    @Import(name="objectConditions")
       private final @Nullable Output<ObjectConditionsArgs> objectConditions;
 
     public Output<ObjectConditionsArgs> getObjectConditions() {
@@ -107,7 +107,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A POSIX Filesystem data sink.
      * 
      */
-    @InputImport(name="posixDataSink")
+    @Import(name="posixDataSink")
       private final @Nullable Output<PosixFilesystemArgs> posixDataSink;
 
     public Output<PosixFilesystemArgs> getPosixDataSink() {
@@ -118,7 +118,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A POSIX Filesystem data source.
      * 
      */
-    @InputImport(name="posixDataSource")
+    @Import(name="posixDataSource")
       private final @Nullable Output<PosixFilesystemArgs> posixDataSource;
 
     public Output<PosixFilesystemArgs> getPosixDataSource() {
@@ -129,7 +129,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the agent pool name associated with the posix data sink. When unspecified, the default name is used.
      * 
      */
-    @InputImport(name="sinkAgentPoolName")
+    @Import(name="sinkAgentPoolName")
       private final @Nullable Output<String> sinkAgentPoolName;
 
     public Output<String> getSinkAgentPoolName() {
@@ -140,7 +140,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.
      * 
      */
-    @InputImport(name="sourceAgentPoolName")
+    @Import(name="sourceAgentPoolName")
       private final @Nullable Output<String> sourceAgentPoolName;
 
     public Output<String> getSourceAgentPoolName() {
@@ -151,7 +151,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A manifest file provides a list of objects to be transferred from the data source. This field points to the location of the manifest file. Otherwise, the entire source bucket is used. ObjectConditions still apply.
      * 
      */
-    @InputImport(name="transferManifest")
+    @Import(name="transferManifest")
       private final @Nullable Output<TransferManifestArgs> transferManifest;
 
     public Output<TransferManifestArgs> getTransferManifest() {
@@ -162,7 +162,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * If the option delete_objects_unique_in_sink is `true` and time-based object conditions such as 'last modification time' are specified, the request fails with an INVALID_ARGUMENT error.
      * 
      */
-    @InputImport(name="transferOptions")
+    @Import(name="transferOptions")
       private final @Nullable Output<TransferOptionsArgs> transferOptions;
 
     public Output<TransferOptionsArgs> getTransferOptions() {

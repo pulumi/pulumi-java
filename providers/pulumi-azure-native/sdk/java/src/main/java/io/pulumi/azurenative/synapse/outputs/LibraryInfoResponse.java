@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LibraryInfoResponse {
     /**
      * Storage blob container name.
@@ -47,15 +47,15 @@ public final class LibraryInfoResponse {
      */
     private final String uploadedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LibraryInfoResponse(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("creatorId") String creatorId,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("provisioningStatus") String provisioningStatus,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("uploadedTimestamp") String uploadedTimestamp) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("creatorId") String creatorId,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("provisioningStatus") String provisioningStatus,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("uploadedTimestamp") String uploadedTimestamp) {
         this.containerName = containerName;
         this.creatorId = creatorId;
         this.name = name;

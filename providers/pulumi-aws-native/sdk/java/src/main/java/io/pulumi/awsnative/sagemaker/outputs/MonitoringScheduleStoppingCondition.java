@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleStoppingCondition {
     /**
      * The maximum runtime allowed in seconds.
@@ -15,8 +15,8 @@ public final class MonitoringScheduleStoppingCondition {
      */
     private final Integer maxRuntimeInSeconds;
 
-    @OutputCustomType.Constructor
-    private MonitoringScheduleStoppingCondition(@OutputCustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
+    @CustomType.Constructor
+    private MonitoringScheduleStoppingCondition(@CustomType.Parameter("maxRuntimeInSeconds") Integer maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
     }
 

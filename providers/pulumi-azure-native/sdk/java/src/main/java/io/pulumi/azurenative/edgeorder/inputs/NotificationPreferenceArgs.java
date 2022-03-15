@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.enums.NotificationStageName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * Notification is required or not.
      * 
      */
-    @InputImport(name="sendNotification", required=true)
+    @Import(name="sendNotification", required=true)
       private final Output<Boolean> sendNotification;
 
     public Output<Boolean> getSendNotification() {
@@ -35,7 +35,7 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
      * Name of the stage.
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final Output<Either<String,NotificationStageName>> stageName;
 
     public Output<Either<String,NotificationStageName>> getStageName() {

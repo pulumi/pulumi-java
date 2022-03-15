@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeTemplateServerBinding {
     /**
      * Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
@@ -26,8 +26,8 @@ public final class NodeTemplateServerBinding {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private NodeTemplateServerBinding(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private NodeTemplateServerBinding(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

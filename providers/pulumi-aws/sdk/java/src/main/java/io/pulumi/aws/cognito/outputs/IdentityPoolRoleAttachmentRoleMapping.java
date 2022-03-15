@@ -4,14 +4,14 @@
 package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.IdentityPoolRoleAttachmentRoleMappingMappingRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityPoolRoleAttachmentRoleMapping {
     /**
      * Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
@@ -34,12 +34,12 @@ public final class IdentityPoolRoleAttachmentRoleMapping {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityPoolRoleAttachmentRoleMapping(
-        @OutputCustomType.Parameter("ambiguousRoleResolution") @Nullable String ambiguousRoleResolution,
-        @OutputCustomType.Parameter("identityProvider") String identityProvider,
-        @OutputCustomType.Parameter("mappingRules") @Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRule> mappingRules,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("ambiguousRoleResolution") @Nullable String ambiguousRoleResolution,
+        @CustomType.Parameter("identityProvider") String identityProvider,
+        @CustomType.Parameter("mappingRules") @Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRule> mappingRules,
+        @CustomType.Parameter("type") String type) {
         this.ambiguousRoleResolution = ambiguousRoleResolution;
         this.identityProvider = identityProvider;
         this.mappingRules = mappingRules;

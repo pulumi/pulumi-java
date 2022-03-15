@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * The name of the ELB.
      * 
      */
-    @InputImport(name="elb")
+    @Import(name="elb")
       private final @Nullable Output<String> elb;
 
     public Output<String> getElb() {
@@ -29,7 +29,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * Instance ID to place in the ELB pool.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {

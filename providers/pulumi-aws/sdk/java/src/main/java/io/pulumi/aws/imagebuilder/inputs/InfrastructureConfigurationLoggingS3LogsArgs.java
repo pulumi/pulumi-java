@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InfrastructureConfigurationLoggingS3LogsArgs extends io.pulum
      * Name of the S3 Bucket.
      * 
      */
-    @InputImport(name="s3BucketName", required=true)
+    @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
@@ -29,7 +29,7 @@ public final class InfrastructureConfigurationLoggingS3LogsArgs extends io.pulum
      * Prefix to use for S3 logs. Defaults to `/`.
      * 
      */
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {

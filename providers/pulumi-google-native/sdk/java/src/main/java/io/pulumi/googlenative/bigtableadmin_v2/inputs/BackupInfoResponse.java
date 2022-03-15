@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the backup.
      * 
      */
-    @InputImport(name="backup", required=true)
+    @Import(name="backup", required=true)
       private final String backup;
 
     public String getBackup() {
@@ -31,7 +31,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * This time that the backup was finished. Row data in the backup will be no newer than this timestamp.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -42,7 +42,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the table the backup was created from.
      * 
      */
-    @InputImport(name="sourceTable", required=true)
+    @Import(name="sourceTable", required=true)
       private final String sourceTable;
 
     public String getSourceTable() {
@@ -53,7 +53,7 @@ public final class BackupInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The time that the backup was started. Row data in the backup will be no older than this timestamp.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

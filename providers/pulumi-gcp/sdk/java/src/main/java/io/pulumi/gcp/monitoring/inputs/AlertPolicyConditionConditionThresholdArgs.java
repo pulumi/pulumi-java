@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdTriggerArgs;
@@ -36,7 +36,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="aggregations")
+    @Import(name="aggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> aggregations;
 
     public Output<List<AlertPolicyConditionConditionThresholdAggregationArgs>> getAggregations() {
@@ -55,7 +55,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
      * 
      */
-    @InputImport(name="comparison", required=true)
+    @Import(name="comparison", required=true)
       private final Output<String> comparison;
 
     public Output<String> getComparison() {
@@ -82,7 +82,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="denominatorAggregations")
+    @Import(name="denominatorAggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> denominatorAggregations;
 
     public Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationArgs>> getDenominatorAggregations() {
@@ -107,7 +107,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * in length.
      * 
      */
-    @InputImport(name="denominatorFilter")
+    @Import(name="denominatorFilter")
       private final @Nullable Output<String> denominatorFilter;
 
     public Output<String> getDenominatorFilter() {
@@ -132,7 +132,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * alerted on quickly.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final Output<String> duration;
 
     public Output<String> getDuration() {
@@ -143,7 +143,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * A logs-based filter.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -155,7 +155,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * series.
      * 
      */
-    @InputImport(name="thresholdValue")
+    @Import(name="thresholdValue")
       private final @Nullable Output<Double> thresholdValue;
 
     public Output<Double> getThresholdValue() {
@@ -174,7 +174,7 @@ public final class AlertPolicyConditionConditionThresholdArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="trigger")
+    @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionThresholdTriggerArgs> trigger;
 
     public Output<AlertPolicyConditionConditionThresholdTriggerArgs> getTrigger() {

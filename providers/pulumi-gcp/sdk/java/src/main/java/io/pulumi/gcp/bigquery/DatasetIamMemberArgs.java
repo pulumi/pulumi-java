@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.DatasetIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DatasetIamMemberArgs Empty = new DatasetIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DatasetIamMemberConditionArgs> condition;
 
     public Output<DatasetIamMemberConditionArgs> getCondition() {
@@ -26,14 +26,14 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * The dataset ID.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -45,7 +45,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -58,7 +58,7 @@ public final class DatasetIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

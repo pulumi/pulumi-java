@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -34,7 +34,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * Storage format used for the file represented by the share.
      * 
      */
-    @InputImport(name="dataFormat", required=true)
+    @Import(name="dataFormat", required=true)
       private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
     public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
@@ -45,7 +45,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * ID of the storage account credential used to access storage.
      * 
      */
-    @InputImport(name="storageAccountCredentialId", required=true)
+    @Import(name="storageAccountCredentialId", required=true)
       private final Output<String> storageAccountCredentialId;
 
     public Output<String> getStorageAccountCredentialId() {

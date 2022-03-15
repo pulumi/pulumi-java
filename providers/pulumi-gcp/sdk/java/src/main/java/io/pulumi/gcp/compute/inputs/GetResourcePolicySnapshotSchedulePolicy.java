@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicySnapshotSchedulePolicyRetentionPolicy;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicySnapshotSchedulePolicySchedule;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicySnapshotSchedulePolicySnapshotProperty;
@@ -15,21 +15,21 @@ public final class GetResourcePolicySnapshotSchedulePolicy extends io.pulumi.res
 
     public static final GetResourcePolicySnapshotSchedulePolicy Empty = new GetResourcePolicySnapshotSchedulePolicy();
 
-    @InputImport(name="retentionPolicies", required=true)
+    @Import(name="retentionPolicies", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies;
 
     public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> getRetentionPolicies() {
         return this.retentionPolicies;
     }
 
-    @InputImport(name="schedules", required=true)
+    @Import(name="schedules", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicySchedule> getSchedules() {
         return this.schedules;
     }
 
-    @InputImport(name="snapshotProperties", required=true)
+    @Import(name="snapshotProperties", required=true)
       private final List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
 
     public List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> getSnapshotProperties() {

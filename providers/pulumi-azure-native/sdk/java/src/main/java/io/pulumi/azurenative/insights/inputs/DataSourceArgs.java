@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.DataSourceConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.SinkConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Output<DataSourceConfigurationArgs> configuration;
 
     public Output<DataSourceConfigurationArgs> getConfiguration() {
@@ -31,14 +31,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Datasource kind
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind;
     }
 
-    @InputImport(name="sinks", required=true)
+    @Import(name="sinks", required=true)
       private final Output<List<SinkConfigurationArgs>> sinks;
 
     public Output<List<SinkConfigurationArgs>> getSinks() {

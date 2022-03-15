@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
 
     public static final InstanceServerCaCertArgs Empty = new InstanceServerCaCertArgs();
 
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
@@ -28,28 +28,28 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime == null ? Output.empty() : this.createTime;
     }
 
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
         return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
-    @InputImport(name="serialNumber")
+    @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
     public Output<String> getSerialNumber() {
         return this.serialNumber == null ? Output.empty() : this.serialNumber;
     }
 
-    @InputImport(name="sha1Fingerprint")
+    @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
     public Output<String> getSha1Fingerprint() {

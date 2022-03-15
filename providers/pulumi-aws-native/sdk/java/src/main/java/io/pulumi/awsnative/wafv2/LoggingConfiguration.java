@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.LoggingConfigurationArgs;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.LoggingFilterProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * 
      */
-    @OutputExport(name="logDestinationConfigs", type=List.class, parameters={String.class})
+    @Export(name="logDestinationConfigs", type=List.class, parameters={String.class})
     private Output<List<String>> logDestinationConfigs;
 
     /**
@@ -39,7 +39,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * Filtering that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation.
      * 
      */
-    @OutputExport(name="loggingFilter", type=LoggingFilterProperties.class, parameters={})
+    @Export(name="loggingFilter", type=LoggingFilterProperties.class, parameters={})
     private Output</* @Nullable */ LoggingFilterProperties> loggingFilter;
 
     /**
@@ -53,7 +53,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * Indicates whether the logging configuration was created by AWS Firewall Manager, as part of an AWS WAF policy configuration. If true, only Firewall Manager can modify or delete the configuration.
      * 
      */
-    @OutputExport(name="managedByFirewallManager", type=Boolean.class, parameters={})
+    @Export(name="managedByFirewallManager", type=Boolean.class, parameters={})
     private Output<Boolean> managedByFirewallManager;
 
     /**
@@ -67,7 +67,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * The parts of the request that you want to keep out of the logs. For example, if you redact the HEADER field, the HEADER field in the firehose will be xxx.
      * 
      */
-    @OutputExport(name="redactedFields", type=List.class, parameters={LoggingConfigurationFieldToMatch.class})
+    @Export(name="redactedFields", type=List.class, parameters={LoggingConfigurationFieldToMatch.class})
     private Output</* @Nullable */ List<LoggingConfigurationFieldToMatch>> redactedFields;
 
     /**
@@ -81,7 +81,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**

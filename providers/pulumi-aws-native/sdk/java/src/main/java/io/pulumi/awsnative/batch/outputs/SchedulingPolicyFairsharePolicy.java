@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.batch.outputs;
 
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyShareAttributes;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchedulingPolicyFairsharePolicy {
     private final @Nullable Double computeReservation;
     private final @Nullable Double shareDecaySeconds;
@@ -21,11 +21,11 @@ public final class SchedulingPolicyFairsharePolicy {
      */
     private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulingPolicyFairsharePolicy(
-        @OutputCustomType.Parameter("computeReservation") @Nullable Double computeReservation,
-        @OutputCustomType.Parameter("shareDecaySeconds") @Nullable Double shareDecaySeconds,
-        @OutputCustomType.Parameter("shareDistribution") @Nullable List<SchedulingPolicyShareAttributes> shareDistribution) {
+        @CustomType.Parameter("computeReservation") @Nullable Double computeReservation,
+        @CustomType.Parameter("shareDecaySeconds") @Nullable Double shareDecaySeconds,
+        @CustomType.Parameter("shareDistribution") @Nullable List<SchedulingPolicyShareAttributes> shareDistribution) {
         this.computeReservation = computeReservation;
         this.shareDecaySeconds = shareDecaySeconds;
         this.shareDistribution = shareDistribution;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
     /**
      * Uses LivePerson (https://www.liveperson.com).
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse {
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(
-        @OutputCustomType.Parameter("livePersonConfig") GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
-        @OutputCustomType.Parameter("salesforceLiveAgentConfig") GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
+        @CustomType.Parameter("livePersonConfig") GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
+        @CustomType.Parameter("salesforceLiveAgentConfig") GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
         this.livePersonConfig = livePersonConfig;
         this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
     }

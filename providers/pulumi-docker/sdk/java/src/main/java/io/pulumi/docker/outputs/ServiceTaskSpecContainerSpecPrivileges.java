@@ -3,22 +3,22 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceTaskSpecContainerSpecPrivilegesCredentialSpec;
 import io.pulumi.docker.outputs.ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecPrivileges {
     private final @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec;
     private final @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivileges(
-        @OutputCustomType.Parameter("credentialSpec") @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec,
-        @OutputCustomType.Parameter("seLinuxContext") @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
+        @CustomType.Parameter("credentialSpec") @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec,
+        @CustomType.Parameter("seLinuxContext") @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
         this.credentialSpec = credentialSpec;
         this.seLinuxContext = seLinuxContext;
     }

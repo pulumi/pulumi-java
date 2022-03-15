@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGe
      * condition to be triggered.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGe
      * condition to be triggered.
      * 
      */
-    @InputImport(name="percent")
+    @Import(name="percent")
       private final @Nullable Output<Double> percent;
 
     public Output<Double> getPercent() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.AutoScalingPolicyResponse
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerCodePackagePropertiesResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.DiagnosticsRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.NetworkRefResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceResourceDescriptionResponse {
     /**
      * Auto scaling policies
@@ -93,23 +93,23 @@ public final class ServiceResourceDescriptionResponse {
      */
     private final String unhealthyEvaluation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceResourceDescriptionResponse(
-        @OutputCustomType.Parameter("autoScalingPolicies") @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies,
-        @OutputCustomType.Parameter("codePackages") List<ContainerCodePackagePropertiesResponse> codePackages,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
-        @OutputCustomType.Parameter("healthState") String healthState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkRefs") @Nullable List<NetworkRefResponse> networkRefs,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unhealthyEvaluation") String unhealthyEvaluation) {
+        @CustomType.Parameter("autoScalingPolicies") @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies,
+        @CustomType.Parameter("codePackages") List<ContainerCodePackagePropertiesResponse> codePackages,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
+        @CustomType.Parameter("healthState") String healthState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkRefs") @Nullable List<NetworkRefResponse> networkRefs,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unhealthyEvaluation") String unhealthyEvaluation) {
         this.autoScalingPolicies = autoScalingPolicies;
         this.codePackages = codePackages;
         this.description = description;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomaticOSUpgradePolicyResponse {
     /**
      * Whether OS image rollback feature should be disabled. Default value is false.
@@ -22,10 +22,10 @@ public final class AutomaticOSUpgradePolicyResponse {
      */
     private final @Nullable Boolean enableAutomaticOSUpgrade;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomaticOSUpgradePolicyResponse(
-        @OutputCustomType.Parameter("disableAutomaticRollback") @Nullable Boolean disableAutomaticRollback,
-        @OutputCustomType.Parameter("enableAutomaticOSUpgrade") @Nullable Boolean enableAutomaticOSUpgrade) {
+        @CustomType.Parameter("disableAutomaticRollback") @Nullable Boolean disableAutomaticRollback,
+        @CustomType.Parameter("enableAutomaticOSUpgrade") @Nullable Boolean enableAutomaticOSUpgrade) {
         this.disableAutomaticRollback = disableAutomaticRollback;
         this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
     }

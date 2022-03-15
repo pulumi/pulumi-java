@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Certificate Issuer.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -32,7 +32,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Date Certificate is valid to.
      * 
      */
-    @InputImport(name="notAfter", required=true)
+    @Import(name="notAfter", required=true)
       private final String notAfter;
 
     public String getNotAfter() {
@@ -43,7 +43,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Date Certificate is valid from.
      * 
      */
-    @InputImport(name="notBefore", required=true)
+    @Import(name="notBefore", required=true)
       private final String notBefore;
 
     public String getNotBefore() {
@@ -54,7 +54,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Raw certificate data.
      * 
      */
-    @InputImport(name="rawData", required=true)
+    @Import(name="rawData", required=true)
       private final String rawData;
 
     public String getRawData() {
@@ -65,7 +65,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Certificate Serial Number.
      * 
      */
-    @InputImport(name="serialNumber", required=true)
+    @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
     public String getSerialNumber() {
@@ -76,7 +76,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Certificate Signature algorithm.
      * 
      */
-    @InputImport(name="signatureAlgorithm", required=true)
+    @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
     public String getSignatureAlgorithm() {
@@ -87,7 +87,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Certificate Subject.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final String subject;
 
     public String getSubject() {
@@ -98,7 +98,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Certificate Thumbprint.
      * 
      */
-    @InputImport(name="thumbprint", required=true)
+    @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
     public String getThumbprint() {
@@ -109,7 +109,7 @@ public final class CertificateDetailsResponse extends io.pulumi.resources.Invoke
      * Certificate Version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Integer version;
 
     public Integer getVersion() {

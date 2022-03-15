@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetConversationProfileArgs extends io.pulumi.resources.Invoke
 
     public static final GetConversationProfileArgs Empty = new GetConversationProfileArgs();
 
-    @InputImport(name="conversationProfileId", required=true)
+    @Import(name="conversationProfileId", required=true)
       private final String conversationProfileId;
 
     public String getConversationProfileId() {
         return this.conversationProfileId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

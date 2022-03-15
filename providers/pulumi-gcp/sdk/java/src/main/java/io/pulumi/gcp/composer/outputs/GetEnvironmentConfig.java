@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigMaintenanceWindow;
@@ -19,7 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfig {
     private final String airflowUri;
     private final String dagGcsPrefix;
@@ -37,23 +37,23 @@ public final class GetEnvironmentConfig {
     private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
     private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfig(
-        @OutputCustomType.Parameter("airflowUri") String airflowUri,
-        @OutputCustomType.Parameter("dagGcsPrefix") String dagGcsPrefix,
-        @OutputCustomType.Parameter("databaseConfigs") List<GetEnvironmentConfigDatabaseConfig> databaseConfigs,
-        @OutputCustomType.Parameter("encryptionConfigs") List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs,
-        @OutputCustomType.Parameter("environmentSize") String environmentSize,
-        @OutputCustomType.Parameter("gkeCluster") String gkeCluster,
-        @OutputCustomType.Parameter("maintenanceWindows") List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows,
-        @OutputCustomType.Parameter("masterAuthorizedNetworksConfigs") List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
-        @OutputCustomType.Parameter("nodeConfigs") List<GetEnvironmentConfigNodeConfig> nodeConfigs,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("privateEnvironmentConfigs") List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs,
-        @OutputCustomType.Parameter("softwareConfigs") List<GetEnvironmentConfigSoftwareConfig> softwareConfigs,
-        @OutputCustomType.Parameter("webServerConfigs") List<GetEnvironmentConfigWebServerConfig> webServerConfigs,
-        @OutputCustomType.Parameter("webServerNetworkAccessControls") List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls,
-        @OutputCustomType.Parameter("workloadsConfigs") List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
+        @CustomType.Parameter("airflowUri") String airflowUri,
+        @CustomType.Parameter("dagGcsPrefix") String dagGcsPrefix,
+        @CustomType.Parameter("databaseConfigs") List<GetEnvironmentConfigDatabaseConfig> databaseConfigs,
+        @CustomType.Parameter("encryptionConfigs") List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs,
+        @CustomType.Parameter("environmentSize") String environmentSize,
+        @CustomType.Parameter("gkeCluster") String gkeCluster,
+        @CustomType.Parameter("maintenanceWindows") List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows,
+        @CustomType.Parameter("masterAuthorizedNetworksConfigs") List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
+        @CustomType.Parameter("nodeConfigs") List<GetEnvironmentConfigNodeConfig> nodeConfigs,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("privateEnvironmentConfigs") List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs,
+        @CustomType.Parameter("softwareConfigs") List<GetEnvironmentConfigSoftwareConfig> softwareConfigs,
+        @CustomType.Parameter("webServerConfigs") List<GetEnvironmentConfigWebServerConfig> webServerConfigs,
+        @CustomType.Parameter("webServerNetworkAccessControls") List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls,
+        @CustomType.Parameter("workloadsConfigs") List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfigs = databaseConfigs;

@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -32,7 +32,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the filter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * ID of a GuardDuty detector, attached to your account.
      * 
      */
-    @InputImport(name="detectorId", required=true)
+    @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
     public Output<String> getDetectorId() {
@@ -54,7 +54,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
      * 
      */
-    @InputImport(name="findingCriteria", required=true)
+    @Import(name="findingCriteria", required=true)
       private final Output<FilterFindingCriteriaArgs> findingCriteria;
 
     public Output<FilterFindingCriteriaArgs> getFindingCriteria() {
@@ -65,7 +65,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of your filter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
      * 
      */
-    @InputImport(name="rank", required=true)
+    @Import(name="rank", required=true)
       private final Output<Integer> rank;
 
     public Output<Integer> getRank() {
@@ -87,7 +87,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * The tags that you want to add to the Filter resource. A tag consists of a key and a value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

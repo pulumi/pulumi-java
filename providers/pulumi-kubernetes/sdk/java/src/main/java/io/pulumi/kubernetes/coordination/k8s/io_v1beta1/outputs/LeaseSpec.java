@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.coordination.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LeaseSpec {
     /**
      * acquireTime is a time when the current lease was acquired.
@@ -38,13 +38,13 @@ public final class LeaseSpec {
      */
     private final @Nullable String renewTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LeaseSpec(
-        @OutputCustomType.Parameter("acquireTime") @Nullable String acquireTime,
-        @OutputCustomType.Parameter("holderIdentity") @Nullable String holderIdentity,
-        @OutputCustomType.Parameter("leaseDurationSeconds") @Nullable Integer leaseDurationSeconds,
-        @OutputCustomType.Parameter("leaseTransitions") @Nullable Integer leaseTransitions,
-        @OutputCustomType.Parameter("renewTime") @Nullable String renewTime) {
+        @CustomType.Parameter("acquireTime") @Nullable String acquireTime,
+        @CustomType.Parameter("holderIdentity") @Nullable String holderIdentity,
+        @CustomType.Parameter("leaseDurationSeconds") @Nullable Integer leaseDurationSeconds,
+        @CustomType.Parameter("leaseTransitions") @Nullable Integer leaseTransitions,
+        @CustomType.Parameter("renewTime") @Nullable String renewTime) {
         this.acquireTime = acquireTime;
         this.holderIdentity = holderIdentity;
         this.leaseDurationSeconds = leaseDurationSeconds;

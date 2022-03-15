@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServerCollectorArgs Empty = new ServerCollectorArgs();
 
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -26,14 +26,14 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
     public Output<String> getProjectName() {
         return this.projectName;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CollectorPropertiesArgs> properties;
 
     public Output<CollectorPropertiesArgs> getProperties() {
@@ -44,7 +44,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Azure Resource Group that project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * Unique name of a Server collector within a project.
      * 
      */
-    @InputImport(name="serverCollectorName")
+    @Import(name="serverCollectorName")
       private final @Nullable Output<String> serverCollectorName;
 
     public Output<String> getServerCollectorName() {

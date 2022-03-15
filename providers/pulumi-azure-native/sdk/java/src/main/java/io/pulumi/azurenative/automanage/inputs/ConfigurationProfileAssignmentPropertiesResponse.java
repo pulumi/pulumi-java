@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage.inputs;
 
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentComplianceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * The Automanage account ARM Resource URI
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable String accountId;
 
     public Optional<String> getAccountId() {
@@ -34,7 +34,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * The configuration setting for the configuration profile.
      * 
      */
-    @InputImport(name="compliance")
+    @Import(name="compliance")
       private final @Nullable ConfigurationProfileAssignmentComplianceResponse compliance;
 
     public Optional<ConfigurationProfileAssignmentComplianceResponse> getCompliance() {
@@ -45,7 +45,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * A value indicating configuration profile.
      * 
      */
-    @InputImport(name="configurationProfile")
+    @Import(name="configurationProfile")
       private final @Nullable String configurationProfile;
 
     public Optional<String> getConfigurationProfile() {
@@ -56,7 +56,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * The configuration profile custom preferences ARM resource URI
      * 
      */
-    @InputImport(name="configurationProfilePreferenceId")
+    @Import(name="configurationProfilePreferenceId")
       private final @Nullable String configurationProfilePreferenceId;
 
     public Optional<String> getConfigurationProfilePreferenceId() {
@@ -67,7 +67,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * The state of onboarding, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -78,7 +78,7 @@ public final class ConfigurationProfileAssignmentPropertiesResponse extends io.p
      * The target VM resource URI
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable String targetId;
 
     public Optional<String> getTargetId() {

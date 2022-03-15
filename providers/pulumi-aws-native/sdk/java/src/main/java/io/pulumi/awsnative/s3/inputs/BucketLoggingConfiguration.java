@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class BucketLoggingConfiguration extends io.pulumi.resources.Invoke
      * The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
      * 
      */
-    @InputImport(name="destinationBucketName")
+    @Import(name="destinationBucketName")
       private final @Nullable String destinationBucketName;
 
     public Optional<String> getDestinationBucketName() {
         return this.destinationBucketName == null ? Optional.empty() : Optional.ofNullable(this.destinationBucketName);
     }
 
-    @InputImport(name="logFilePrefix")
+    @Import(name="logFilePrefix")
       private final @Nullable String logFilePrefix;
 
     public Optional<String> getLogFilePrefix() {

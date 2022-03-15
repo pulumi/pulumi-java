@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInternetGatewayAttachment {
     /**
      * The current state of the attachment between the gateway and the VPC. Present only if a VPC is attached
@@ -20,10 +20,10 @@ public final class GetInternetGatewayAttachment {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInternetGatewayAttachment(
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.state = state;
         this.vpcId = vpcId;
     }

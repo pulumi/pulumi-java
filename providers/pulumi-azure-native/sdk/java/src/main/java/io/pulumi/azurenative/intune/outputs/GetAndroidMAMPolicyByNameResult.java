@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.intune.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAndroidMAMPolicyByNameResult {
     private final @Nullable String accessRecheckOfflineTimeout;
     private final @Nullable String accessRecheckOnlineTimeout;
@@ -59,33 +59,33 @@ public final class GetAndroidMAMPolicyByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAndroidMAMPolicyByNameResult(
-        @OutputCustomType.Parameter("accessRecheckOfflineTimeout") @Nullable String accessRecheckOfflineTimeout,
-        @OutputCustomType.Parameter("accessRecheckOnlineTimeout") @Nullable String accessRecheckOnlineTimeout,
-        @OutputCustomType.Parameter("appSharingFromLevel") @Nullable String appSharingFromLevel,
-        @OutputCustomType.Parameter("appSharingToLevel") @Nullable String appSharingToLevel,
-        @OutputCustomType.Parameter("authentication") @Nullable String authentication,
-        @OutputCustomType.Parameter("clipboardSharingLevel") @Nullable String clipboardSharingLevel,
-        @OutputCustomType.Parameter("dataBackup") @Nullable String dataBackup,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("deviceCompliance") @Nullable String deviceCompliance,
-        @OutputCustomType.Parameter("fileEncryption") @Nullable String fileEncryption,
-        @OutputCustomType.Parameter("fileSharingSaveAs") @Nullable String fileSharingSaveAs,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("groupStatus") String groupStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBrowser") @Nullable String managedBrowser,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numOfApps") Integer numOfApps,
-        @OutputCustomType.Parameter("offlineWipeTimeout") @Nullable String offlineWipeTimeout,
-        @OutputCustomType.Parameter("pin") @Nullable String pin,
-        @OutputCustomType.Parameter("pinNumRetry") @Nullable Integer pinNumRetry,
-        @OutputCustomType.Parameter("screenCapture") @Nullable String screenCapture,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessRecheckOfflineTimeout") @Nullable String accessRecheckOfflineTimeout,
+        @CustomType.Parameter("accessRecheckOnlineTimeout") @Nullable String accessRecheckOnlineTimeout,
+        @CustomType.Parameter("appSharingFromLevel") @Nullable String appSharingFromLevel,
+        @CustomType.Parameter("appSharingToLevel") @Nullable String appSharingToLevel,
+        @CustomType.Parameter("authentication") @Nullable String authentication,
+        @CustomType.Parameter("clipboardSharingLevel") @Nullable String clipboardSharingLevel,
+        @CustomType.Parameter("dataBackup") @Nullable String dataBackup,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("deviceCompliance") @Nullable String deviceCompliance,
+        @CustomType.Parameter("fileEncryption") @Nullable String fileEncryption,
+        @CustomType.Parameter("fileSharingSaveAs") @Nullable String fileSharingSaveAs,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("groupStatus") String groupStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBrowser") @Nullable String managedBrowser,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numOfApps") Integer numOfApps,
+        @CustomType.Parameter("offlineWipeTimeout") @Nullable String offlineWipeTimeout,
+        @CustomType.Parameter("pin") @Nullable String pin,
+        @CustomType.Parameter("pinNumRetry") @Nullable Integer pinNumRetry,
+        @CustomType.Parameter("screenCapture") @Nullable String screenCapture,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
         this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
         this.appSharingFromLevel = appSharingFromLevel;

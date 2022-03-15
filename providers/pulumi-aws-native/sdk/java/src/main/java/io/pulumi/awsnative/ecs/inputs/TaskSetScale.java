@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskSetScaleUnit;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class TaskSetScale extends io.pulumi.resources.InvokeArgs {
      * The unit of measure for the scale value.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable TaskSetScaleUnit unit;
 
     public Optional<TaskSetScaleUnit> getUnit() {
@@ -30,7 +30,7 @@ public final class TaskSetScale extends io.pulumi.resources.InvokeArgs {
      * The value, specified as a percent total of a service's desiredCount, to scale the task set. Accepted values are numbers between 0 and 100.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Double value;
 
     public Optional<Double> getValue() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.ClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
-    @InputImport(name="actionOnFailedPrimaryWorkers")
+    @Import(name="actionOnFailedPrimaryWorkers")
       private final @Nullable Output<String> actionOnFailedPrimaryWorkers;
 
     public Output<String> getActionOnFailedPrimaryWorkers() {
@@ -27,7 +27,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -38,7 +38,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<ClusterConfigArgs> config;
 
     public Output<ClusterConfigArgs> getConfig() {
@@ -49,7 +49,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -60,21 +60,21 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The Google Cloud Platform project ID that the cluster belongs to.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

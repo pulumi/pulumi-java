@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KerberosConfigResponse {
     /**
      * Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
@@ -87,23 +87,23 @@ public final class KerberosConfigResponse {
      */
     private final String truststoreUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KerberosConfigResponse(
-        @OutputCustomType.Parameter("crossRealmTrustAdminServer") String crossRealmTrustAdminServer,
-        @OutputCustomType.Parameter("crossRealmTrustKdc") String crossRealmTrustKdc,
-        @OutputCustomType.Parameter("crossRealmTrustRealm") String crossRealmTrustRealm,
-        @OutputCustomType.Parameter("crossRealmTrustSharedPasswordUri") String crossRealmTrustSharedPasswordUri,
-        @OutputCustomType.Parameter("enableKerberos") Boolean enableKerberos,
-        @OutputCustomType.Parameter("kdcDbKeyUri") String kdcDbKeyUri,
-        @OutputCustomType.Parameter("keyPasswordUri") String keyPasswordUri,
-        @OutputCustomType.Parameter("keystorePasswordUri") String keystorePasswordUri,
-        @OutputCustomType.Parameter("keystoreUri") String keystoreUri,
-        @OutputCustomType.Parameter("kmsKeyUri") String kmsKeyUri,
-        @OutputCustomType.Parameter("realm") String realm,
-        @OutputCustomType.Parameter("rootPrincipalPasswordUri") String rootPrincipalPasswordUri,
-        @OutputCustomType.Parameter("tgtLifetimeHours") Integer tgtLifetimeHours,
-        @OutputCustomType.Parameter("truststorePasswordUri") String truststorePasswordUri,
-        @OutputCustomType.Parameter("truststoreUri") String truststoreUri) {
+        @CustomType.Parameter("crossRealmTrustAdminServer") String crossRealmTrustAdminServer,
+        @CustomType.Parameter("crossRealmTrustKdc") String crossRealmTrustKdc,
+        @CustomType.Parameter("crossRealmTrustRealm") String crossRealmTrustRealm,
+        @CustomType.Parameter("crossRealmTrustSharedPasswordUri") String crossRealmTrustSharedPasswordUri,
+        @CustomType.Parameter("enableKerberos") Boolean enableKerberos,
+        @CustomType.Parameter("kdcDbKeyUri") String kdcDbKeyUri,
+        @CustomType.Parameter("keyPasswordUri") String keyPasswordUri,
+        @CustomType.Parameter("keystorePasswordUri") String keystorePasswordUri,
+        @CustomType.Parameter("keystoreUri") String keystoreUri,
+        @CustomType.Parameter("kmsKeyUri") String kmsKeyUri,
+        @CustomType.Parameter("realm") String realm,
+        @CustomType.Parameter("rootPrincipalPasswordUri") String rootPrincipalPasswordUri,
+        @CustomType.Parameter("tgtLifetimeHours") Integer tgtLifetimeHours,
+        @CustomType.Parameter("truststorePasswordUri") String truststorePasswordUri,
+        @CustomType.Parameter("truststoreUri") String truststoreUri) {
         this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
         this.crossRealmTrustKdc = crossRealmTrustKdc;
         this.crossRealmTrustRealm = crossRealmTrustRealm;

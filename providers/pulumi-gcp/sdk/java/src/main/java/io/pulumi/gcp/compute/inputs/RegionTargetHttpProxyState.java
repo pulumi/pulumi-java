@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -30,7 +30,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="proxyId")
+    @Import(name="proxyId")
       private final @Nullable Output<Integer> proxyId;
 
     public Output<Integer> getProxyId() {
@@ -82,7 +82,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -93,7 +93,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -105,7 +105,7 @@ public final class RegionTargetHttpProxyState extends io.pulumi.resources.Resour
      * to the BackendService.
      * 
      */
-    @InputImport(name="urlMap")
+    @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
     public Output<String> getUrlMap() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
 
     public static final CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs();
 
-    @InputImport(name="keyUsageOptions")
+    @Import(name="keyUsageOptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> getKeyUsageOptions() {

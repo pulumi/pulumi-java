@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationSpekeKeyProvider;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationHlsEncryption {
     /**
      * An HTTP Live Streaming (HLS) encryption configuration.
@@ -25,11 +25,11 @@ public final class PackagingConfigurationHlsEncryption {
     private final @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationHlsEncryption(
-        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
-        @OutputCustomType.Parameter("encryptionMethod") @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod,
-        @OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        @CustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @CustomType.Parameter("encryptionMethod") @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod,
+        @CustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.spekeKeyProvider = spekeKeyProvider;

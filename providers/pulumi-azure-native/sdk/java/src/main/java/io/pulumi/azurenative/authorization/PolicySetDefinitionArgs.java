@@ -9,7 +9,7 @@ import io.pulumi.azurenative.authorization.inputs.PolicyDefinitionGroupArgs;
 import io.pulumi.azurenative.authorization.inputs.PolicyDefinitionReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The policy set definition description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,7 +37,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The display name of the policy set definition.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -48,7 +48,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -59,7 +59,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The policy set definition parameters that can be used in policy definition references.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
     public Output<Map<String,ParameterDefinitionsValueArgs>> getParameters() {
@@ -70,7 +70,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The metadata describing groups of policy definition references within the policy set definition.
      * 
      */
-    @InputImport(name="policyDefinitionGroups")
+    @Import(name="policyDefinitionGroups")
       private final @Nullable Output<List<PolicyDefinitionGroupArgs>> policyDefinitionGroups;
 
     public Output<List<PolicyDefinitionGroupArgs>> getPolicyDefinitionGroups() {
@@ -81,7 +81,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * An array of policy definition references.
      * 
      */
-    @InputImport(name="policyDefinitions", required=true)
+    @Import(name="policyDefinitions", required=true)
       private final Output<List<PolicyDefinitionReferenceArgs>> policyDefinitions;
 
     public Output<List<PolicyDefinitionReferenceArgs>> getPolicyDefinitions() {
@@ -92,7 +92,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The name of the policy set definition to create.
      * 
      */
-    @InputImport(name="policySetDefinitionName")
+    @Import(name="policySetDefinitionName")
       private final @Nullable Output<String> policySetDefinitionName;
 
     public Output<String> getPolicySetDefinitionName() {
@@ -103,7 +103,7 @@ public final class PolicySetDefinitionArgs extends io.pulumi.resources.ResourceA
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    @InputImport(name="policyType")
+    @Import(name="policyType")
       private final @Nullable Output<Either<String,PolicyType>> policyType;
 
     public Output<Either<String,PolicyType>> getPolicyType() {

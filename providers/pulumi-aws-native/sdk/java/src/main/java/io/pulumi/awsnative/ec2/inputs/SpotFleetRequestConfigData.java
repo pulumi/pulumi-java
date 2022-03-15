@@ -12,7 +12,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetLaunchSpecification;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetLaunchTemplateConfig;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetLoadBalancersConfig;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotMaintenanceStrategies;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,154 +26,154 @@ public final class SpotFleetRequestConfigData extends io.pulumi.resources.Invoke
 
     public static final SpotFleetRequestConfigData Empty = new SpotFleetRequestConfigData();
 
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable SpotFleetRequestConfigDataAllocationStrategy allocationStrategy;
 
     public Optional<SpotFleetRequestConfigDataAllocationStrategy> getAllocationStrategy() {
         return this.allocationStrategy == null ? Optional.empty() : Optional.ofNullable(this.allocationStrategy);
     }
 
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable String context;
 
     public Optional<String> getContext() {
         return this.context == null ? Optional.empty() : Optional.ofNullable(this.context);
     }
 
-    @InputImport(name="excessCapacityTerminationPolicy")
+    @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable SpotFleetRequestConfigDataExcessCapacityTerminationPolicy excessCapacityTerminationPolicy;
 
     public Optional<SpotFleetRequestConfigDataExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Optional.empty() : Optional.ofNullable(this.excessCapacityTerminationPolicy);
     }
 
-    @InputImport(name="iamFleetRole", required=true)
+    @Import(name="iamFleetRole", required=true)
       private final String iamFleetRole;
 
     public String getIamFleetRole() {
         return this.iamFleetRole;
     }
 
-    @InputImport(name="instanceInterruptionBehavior")
+    @Import(name="instanceInterruptionBehavior")
       private final @Nullable SpotFleetRequestConfigDataInstanceInterruptionBehavior instanceInterruptionBehavior;
 
     public Optional<SpotFleetRequestConfigDataInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Optional.empty() : Optional.ofNullable(this.instanceInterruptionBehavior);
     }
 
-    @InputImport(name="instancePoolsToUseCount")
+    @Import(name="instancePoolsToUseCount")
       private final @Nullable Integer instancePoolsToUseCount;
 
     public Optional<Integer> getInstancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Optional.empty() : Optional.ofNullable(this.instancePoolsToUseCount);
     }
 
-    @InputImport(name="launchSpecifications")
+    @Import(name="launchSpecifications")
       private final @Nullable List<SpotFleetLaunchSpecification> launchSpecifications;
 
     public List<SpotFleetLaunchSpecification> getLaunchSpecifications() {
         return this.launchSpecifications == null ? List.of() : this.launchSpecifications;
     }
 
-    @InputImport(name="launchTemplateConfigs")
+    @Import(name="launchTemplateConfigs")
       private final @Nullable List<SpotFleetLaunchTemplateConfig> launchTemplateConfigs;
 
     public List<SpotFleetLaunchTemplateConfig> getLaunchTemplateConfigs() {
         return this.launchTemplateConfigs == null ? List.of() : this.launchTemplateConfigs;
     }
 
-    @InputImport(name="loadBalancersConfig")
+    @Import(name="loadBalancersConfig")
       private final @Nullable SpotFleetLoadBalancersConfig loadBalancersConfig;
 
     public Optional<SpotFleetLoadBalancersConfig> getLoadBalancersConfig() {
         return this.loadBalancersConfig == null ? Optional.empty() : Optional.ofNullable(this.loadBalancersConfig);
     }
 
-    @InputImport(name="onDemandAllocationStrategy")
+    @Import(name="onDemandAllocationStrategy")
       private final @Nullable String onDemandAllocationStrategy;
 
     public Optional<String> getOnDemandAllocationStrategy() {
         return this.onDemandAllocationStrategy == null ? Optional.empty() : Optional.ofNullable(this.onDemandAllocationStrategy);
     }
 
-    @InputImport(name="onDemandMaxTotalPrice")
+    @Import(name="onDemandMaxTotalPrice")
       private final @Nullable String onDemandMaxTotalPrice;
 
     public Optional<String> getOnDemandMaxTotalPrice() {
         return this.onDemandMaxTotalPrice == null ? Optional.empty() : Optional.ofNullable(this.onDemandMaxTotalPrice);
     }
 
-    @InputImport(name="onDemandTargetCapacity")
+    @Import(name="onDemandTargetCapacity")
       private final @Nullable Integer onDemandTargetCapacity;
 
     public Optional<Integer> getOnDemandTargetCapacity() {
         return this.onDemandTargetCapacity == null ? Optional.empty() : Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
-    @InputImport(name="replaceUnhealthyInstances")
+    @Import(name="replaceUnhealthyInstances")
       private final @Nullable Boolean replaceUnhealthyInstances;
 
     public Optional<Boolean> getReplaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Optional.empty() : Optional.ofNullable(this.replaceUnhealthyInstances);
     }
 
-    @InputImport(name="spotMaintenanceStrategies")
+    @Import(name="spotMaintenanceStrategies")
       private final @Nullable SpotFleetSpotMaintenanceStrategies spotMaintenanceStrategies;
 
     public Optional<SpotFleetSpotMaintenanceStrategies> getSpotMaintenanceStrategies() {
         return this.spotMaintenanceStrategies == null ? Optional.empty() : Optional.ofNullable(this.spotMaintenanceStrategies);
     }
 
-    @InputImport(name="spotMaxTotalPrice")
+    @Import(name="spotMaxTotalPrice")
       private final @Nullable String spotMaxTotalPrice;
 
     public Optional<String> getSpotMaxTotalPrice() {
         return this.spotMaxTotalPrice == null ? Optional.empty() : Optional.ofNullable(this.spotMaxTotalPrice);
     }
 
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable String spotPrice;
 
     public Optional<String> getSpotPrice() {
         return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
     }
 
-    @InputImport(name="targetCapacity", required=true)
+    @Import(name="targetCapacity", required=true)
       private final Integer targetCapacity;
 
     public Integer getTargetCapacity() {
         return this.targetCapacity;
     }
 
-    @InputImport(name="targetCapacityUnitType")
+    @Import(name="targetCapacityUnitType")
       private final @Nullable SpotFleetRequestConfigDataTargetCapacityUnitType targetCapacityUnitType;
 
     public Optional<SpotFleetRequestConfigDataTargetCapacityUnitType> getTargetCapacityUnitType() {
         return this.targetCapacityUnitType == null ? Optional.empty() : Optional.ofNullable(this.targetCapacityUnitType);
     }
 
-    @InputImport(name="terminateInstancesWithExpiration")
+    @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Boolean terminateInstancesWithExpiration;
 
     public Optional<Boolean> getTerminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Optional.empty() : Optional.ofNullable(this.terminateInstancesWithExpiration);
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable SpotFleetRequestConfigDataType type;
 
     public Optional<SpotFleetRequestConfigDataType> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    @InputImport(name="validFrom")
+    @Import(name="validFrom")
       private final @Nullable String validFrom;
 
     public Optional<String> getValidFrom() {
         return this.validFrom == null ? Optional.empty() : Optional.ofNullable(this.validFrom);
     }
 
-    @InputImport(name="validUntil")
+    @Import(name="validUntil")
       private final @Nullable String validUntil;
 
     public Optional<String> getValidUntil() {

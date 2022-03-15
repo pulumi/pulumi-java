@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.AdditionalWorkspacesPropertiesResp
 import io.pulumi.azurenative.security.outputs.RecommendationConfigurationPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.azurenative.security.outputs.UserDefinedResourcesPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIotSecuritySolutionResult {
     /**
      * List of additional workspaces
@@ -103,25 +103,25 @@ public final class GetIotSecuritySolutionResult {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIotSecuritySolutionResult(
-        @OutputCustomType.Parameter("additionalWorkspaces") @Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces,
-        @OutputCustomType.Parameter("autoDiscoveredResources") List<String> autoDiscoveredResources,
-        @OutputCustomType.Parameter("disabledDataSources") @Nullable List<String> disabledDataSources,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("export") @Nullable List<String> export,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("iotHubs") List<String> iotHubs,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recommendationsConfiguration") @Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unmaskedIpLoggingStatus") @Nullable String unmaskedIpLoggingStatus,
-        @OutputCustomType.Parameter("userDefinedResources") @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
-        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
+        @CustomType.Parameter("additionalWorkspaces") @Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces,
+        @CustomType.Parameter("autoDiscoveredResources") List<String> autoDiscoveredResources,
+        @CustomType.Parameter("disabledDataSources") @Nullable List<String> disabledDataSources,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("export") @Nullable List<String> export,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("iotHubs") List<String> iotHubs,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recommendationsConfiguration") @Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unmaskedIpLoggingStatus") @Nullable String unmaskedIpLoggingStatus,
+        @CustomType.Parameter("userDefinedResources") @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
+        @CustomType.Parameter("workspace") @Nullable String workspace) {
         this.additionalWorkspaces = additionalWorkspaces;
         this.autoDiscoveredResources = autoDiscoveredResources;
         this.disabledDataSources = disabledDataSources;

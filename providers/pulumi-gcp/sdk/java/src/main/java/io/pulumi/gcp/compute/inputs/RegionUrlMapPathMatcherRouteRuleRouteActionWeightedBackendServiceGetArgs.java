@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * headerActions specified as part of this backendServiceWeight.
      * 
      */
-    @InputImport(name="backendService", required=true)
+    @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
     public Output<String> getBackendService() {
@@ -36,7 +36,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
@@ -52,7 +52,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      * The value must be between 0 and 1000
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

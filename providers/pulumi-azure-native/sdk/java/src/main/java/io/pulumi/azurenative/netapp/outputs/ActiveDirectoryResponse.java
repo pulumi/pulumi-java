@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActiveDirectoryResponse {
     /**
      * Id of the Active Directory
@@ -109,27 +109,27 @@ public final class ActiveDirectoryResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActiveDirectoryResponse(
-        @OutputCustomType.Parameter("activeDirectoryId") @Nullable String activeDirectoryId,
-        @OutputCustomType.Parameter("adName") @Nullable String adName,
-        @OutputCustomType.Parameter("aesEncryption") @Nullable Boolean aesEncryption,
-        @OutputCustomType.Parameter("allowLocalNfsUsersWithLdap") @Nullable Boolean allowLocalNfsUsersWithLdap,
-        @OutputCustomType.Parameter("backupOperators") @Nullable List<String> backupOperators,
-        @OutputCustomType.Parameter("dns") @Nullable String dns,
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("kdcIP") @Nullable String kdcIP,
-        @OutputCustomType.Parameter("ldapOverTLS") @Nullable Boolean ldapOverTLS,
-        @OutputCustomType.Parameter("ldapSigning") @Nullable Boolean ldapSigning,
-        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("securityOperators") @Nullable List<String> securityOperators,
-        @OutputCustomType.Parameter("serverRootCACertificate") @Nullable String serverRootCACertificate,
-        @OutputCustomType.Parameter("site") @Nullable String site,
-        @OutputCustomType.Parameter("smbServerName") @Nullable String smbServerName,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("activeDirectoryId") @Nullable String activeDirectoryId,
+        @CustomType.Parameter("adName") @Nullable String adName,
+        @CustomType.Parameter("aesEncryption") @Nullable Boolean aesEncryption,
+        @CustomType.Parameter("allowLocalNfsUsersWithLdap") @Nullable Boolean allowLocalNfsUsersWithLdap,
+        @CustomType.Parameter("backupOperators") @Nullable List<String> backupOperators,
+        @CustomType.Parameter("dns") @Nullable String dns,
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("kdcIP") @Nullable String kdcIP,
+        @CustomType.Parameter("ldapOverTLS") @Nullable Boolean ldapOverTLS,
+        @CustomType.Parameter("ldapSigning") @Nullable Boolean ldapSigning,
+        @CustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("securityOperators") @Nullable List<String> securityOperators,
+        @CustomType.Parameter("serverRootCACertificate") @Nullable String serverRootCACertificate,
+        @CustomType.Parameter("site") @Nullable String site,
+        @CustomType.Parameter("smbServerName") @Nullable String smbServerName,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.activeDirectoryId = activeDirectoryId;
         this.adName = adName;
         this.aesEncryption = aesEncryption;

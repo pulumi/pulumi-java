@@ -10,7 +10,7 @@ import io.pulumi.azurenative.devtestlab.inputs.LabAnnouncementPropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.LabSupportPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of any lab announcement associated with this lab
      * 
      */
-    @InputImport(name="announcement")
+    @Import(name="announcement")
       private final @Nullable Output<LabAnnouncementPropertiesArgs> announcement;
 
     public Output<LabAnnouncementPropertiesArgs> getAnnouncement() {
@@ -37,7 +37,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The access rights to be granted to the user when provisioning an environment
      * 
      */
-    @InputImport(name="environmentPermission")
+    @Import(name="environmentPermission")
       private final @Nullable Output<Either<String,EnvironmentPermission>> environmentPermission;
 
     public Output<Either<String,EnvironmentPermission>> getEnvironmentPermission() {
@@ -48,7 +48,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * Extended properties of the lab used for experimental features
      * 
      */
-    @InputImport(name="extendedProperties")
+    @Import(name="extendedProperties")
       private final @Nullable Output<Map<String,String>> extendedProperties;
 
     public Output<Map<String,String>> getExtendedProperties() {
@@ -59,7 +59,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.
      * 
      */
-    @InputImport(name="labStorageType")
+    @Import(name="labStorageType")
       private final @Nullable Output<Either<String,StorageType>> labStorageType;
 
     public Output<Either<String,StorageType>> getLabStorageType() {
@@ -70,7 +70,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -81,7 +81,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    @InputImport(name="mandatoryArtifactsResourceIdsLinux")
+    @Import(name="mandatoryArtifactsResourceIdsLinux")
       private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsLinux;
 
     public Output<List<String>> getMandatoryArtifactsResourceIdsLinux() {
@@ -92,7 +92,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.
      * 
      */
-    @InputImport(name="mandatoryArtifactsResourceIdsWindows")
+    @Import(name="mandatoryArtifactsResourceIdsWindows")
       private final @Nullable Output<List<String>> mandatoryArtifactsResourceIdsWindows;
 
     public Output<List<String>> getMandatoryArtifactsResourceIdsWindows() {
@@ -103,7 +103,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -116,7 +116,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * When its value is 'Disabled', only creation of standard data disks is allowed.
      * 
      */
-    @InputImport(name="premiumDataDisks")
+    @Import(name="premiumDataDisks")
       private final @Nullable Output<Either<String,PremiumDataDisk>> premiumDataDisks;
 
     public Output<Either<String,PremiumDataDisk>> getPremiumDataDisks() {
@@ -127,7 +127,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -138,7 +138,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of any lab support message associated with this lab
      * 
      */
-    @InputImport(name="support")
+    @Import(name="support")
       private final @Nullable Output<LabSupportPropertiesArgs> support;
 
     public Output<LabSupportPropertiesArgs> getSupport() {
@@ -149,7 +149,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

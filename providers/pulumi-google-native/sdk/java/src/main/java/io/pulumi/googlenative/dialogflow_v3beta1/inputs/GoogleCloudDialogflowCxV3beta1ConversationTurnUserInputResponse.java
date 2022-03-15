@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1QueryInputResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * Whether sentiment analysis is enabled.
      * 
      */
-    @InputImport(name="enableSentimentAnalysis", required=true)
+    @Import(name="enableSentimentAnalysis", required=true)
       private final Boolean enableSentimentAnalysis;
 
     public Boolean getEnableSentimentAnalysis() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * Parameters that need to be injected into the conversation during intent detection.
      * 
      */
-    @InputImport(name="injectedParameters", required=true)
+    @Import(name="injectedParameters", required=true)
       private final Map<String,String> injectedParameters;
 
     public Map<String,String> getInjectedParameters() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * Supports text input, event input, dtmf input in the test case.
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final GoogleCloudDialogflowCxV3beta1QueryInputResponse input;
 
     public GoogleCloudDialogflowCxV3beta1QueryInputResponse getInput() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
      * 
      */
-    @InputImport(name="isWebhookEnabled", required=true)
+    @Import(name="isWebhookEnabled", required=true)
       private final Boolean isWebhookEnabled;
 
     public Boolean getIsWebhookEnabled() {

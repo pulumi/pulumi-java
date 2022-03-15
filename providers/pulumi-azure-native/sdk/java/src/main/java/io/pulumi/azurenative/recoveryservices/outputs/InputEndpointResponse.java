@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InputEndpointResponse {
     /**
      * The input endpoint name.
@@ -33,12 +33,12 @@ public final class InputEndpointResponse {
      */
     private final @Nullable Integer publicPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InputEndpointResponse(
-        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
-        @OutputCustomType.Parameter("privatePort") @Nullable Integer privatePort,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("publicPort") @Nullable Integer publicPort) {
+        @CustomType.Parameter("endpointName") @Nullable String endpointName,
+        @CustomType.Parameter("privatePort") @Nullable Integer privatePort,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("publicPort") @Nullable Integer publicPort) {
         this.endpointName = endpointName;
         this.privatePort = privatePort;
         this.protocol = protocol;

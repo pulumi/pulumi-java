@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NonResourceAttributes {
     /**
      * Path is the URL path of the request
@@ -22,10 +22,10 @@ public final class NonResourceAttributes {
      */
     private final @Nullable String verb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonResourceAttributes(
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("verb") @Nullable String verb) {
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("verb") @Nullable String verb) {
         this.path = path;
         this.verb = verb;
     }

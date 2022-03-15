@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.MitigationActionActionParamsArgs;
 import io.pulumi.awsnative.iot.inputs.MitigationActionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,21 +21,21 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
      * A unique identifier for the mitigation action.
      * 
      */
-    @InputImport(name="actionName")
+    @Import(name="actionName")
       private final @Nullable Output<String> actionName;
 
     public Output<String> getActionName() {
         return this.actionName == null ? Output.empty() : this.actionName;
     }
 
-    @InputImport(name="actionParams", required=true)
+    @Import(name="actionParams", required=true)
       private final Output<MitigationActionActionParamsArgs> actionParams;
 
     public Output<MitigationActionActionParamsArgs> getActionParams() {
         return this.actionParams;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -46,7 +46,7 @@ public final class MitigationActionArgs extends io.pulumi.resources.ResourceArgs
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<MitigationActionTagArgs>> tags;
 
     public Output<List<MitigationActionTagArgs>> getTags() {

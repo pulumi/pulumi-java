@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventDestinationCloudwatchDestination {
     /**
      * The default value for the event
@@ -25,11 +25,11 @@ public final class EventDestinationCloudwatchDestination {
      */
     private final String valueSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventDestinationCloudwatchDestination(
-        @OutputCustomType.Parameter("defaultValue") String defaultValue,
-        @OutputCustomType.Parameter("dimensionName") String dimensionName,
-        @OutputCustomType.Parameter("valueSource") String valueSource) {
+        @CustomType.Parameter("defaultValue") String defaultValue,
+        @CustomType.Parameter("dimensionName") String dimensionName,
+        @CustomType.Parameter("valueSource") String valueSource) {
         this.defaultValue = defaultValue;
         this.dimensionName = dimensionName;
         this.valueSource = valueSource;

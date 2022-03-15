@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterAuthenticatorGroupsConfig {
     private final String securityGroup;
 
-    @OutputCustomType.Constructor
-    private GetClusterAuthenticatorGroupsConfig(@OutputCustomType.Parameter("securityGroup") String securityGroup) {
+    @CustomType.Constructor
+    private GetClusterAuthenticatorGroupsConfig(@CustomType.Parameter("securityGroup") String securityGroup) {
         this.securityGroup = securityGroup;
     }
 

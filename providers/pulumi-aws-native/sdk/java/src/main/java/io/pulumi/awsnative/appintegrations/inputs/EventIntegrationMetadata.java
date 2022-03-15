@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appintegrations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
      * A key to identify the metadata.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -27,7 +27,7 @@ public final class EventIntegrationMetadata extends io.pulumi.resources.InvokeAr
      * Corresponding metadata value for the key.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

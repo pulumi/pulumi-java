@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.DatabaseSecurityAlertPolicyArgs;
 import io.pulumi.azurenative.sql.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies the UTC creation time of the policy.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -51,7 +51,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
      * 
      */
-    @OutputExport(name="disabledAlerts", type=List.class, parameters={String.class})
+    @Export(name="disabledAlerts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> disabledAlerts;
 
     /**
@@ -65,7 +65,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies that the alert is sent to the account administrators.
      * 
      */
-    @OutputExport(name="emailAccountAdmins", type=Boolean.class, parameters={})
+    @Export(name="emailAccountAdmins", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> emailAccountAdmins;
 
     /**
@@ -79,7 +79,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    @OutputExport(name="emailAddresses", type=List.class, parameters={String.class})
+    @Export(name="emailAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> emailAddresses;
 
     /**
@@ -93,7 +93,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
@@ -121,7 +121,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -135,7 +135,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    @OutputExport(name="storageAccountAccessKey", type=String.class, parameters={})
+    @Export(name="storageAccountAccessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountAccessKey;
 
     /**
@@ -149,7 +149,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    @OutputExport(name="storageEndpoint", type=String.class, parameters={})
+    @Export(name="storageEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageEndpoint;
 
     /**
@@ -163,7 +163,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * SystemData of SecurityAlertPolicyResource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -177,7 +177,7 @@ public class DatabaseSecurityAlertPolicy extends io.pulumi.resources.CustomResou
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

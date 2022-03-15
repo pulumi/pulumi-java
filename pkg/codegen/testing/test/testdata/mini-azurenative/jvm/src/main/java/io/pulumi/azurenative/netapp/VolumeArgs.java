@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
-    @InputImport(name="throughputMibps")
+    @Import(name="throughputMibps")
       private final @Nullable Output<Double> throughputMibps;
 
     public Output<Double> getThroughputMibps() {
@@ -25,7 +25,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
      * 
      */
-    @InputImport(name="usageThreshold", required=true)
+    @Import(name="usageThreshold", required=true)
       private final Output<Double> usageThreshold;
 
     public Output<Double> getUsageThreshold() {

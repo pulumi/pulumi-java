@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIoTHubEventSourceResult {
     /**
      * The name of the iot hub's consumer group that holds the partitions from which events will be read.
@@ -90,23 +90,23 @@ public final class GetIoTHubEventSourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIoTHubEventSourceResult(
-        @OutputCustomType.Parameter("consumerGroupName") String consumerGroupName,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("eventSourceResourceId") String eventSourceResourceId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("iotHubName") String iotHubName,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("localTimestamp") @Nullable LocalTimestampResponse localTimestamp,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("time") @Nullable String time,
-        @OutputCustomType.Parameter("timestampPropertyName") @Nullable String timestampPropertyName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("consumerGroupName") String consumerGroupName,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("eventSourceResourceId") String eventSourceResourceId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("iotHubName") String iotHubName,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("localTimestamp") @Nullable LocalTimestampResponse localTimestamp,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("time") @Nullable String time,
+        @CustomType.Parameter("timestampPropertyName") @Nullable String timestampPropertyName,
+        @CustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.creationTime = creationTime;
         this.eventSourceResourceId = eventSourceResourceId;

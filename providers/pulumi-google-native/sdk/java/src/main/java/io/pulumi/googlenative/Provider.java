@@ -4,7 +4,7 @@
 package io.pulumi.googlenative;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.ProviderArgs;
 import io.pulumi.googlenative.Utilities;
@@ -21,7 +21,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output</* @Nullable */ String> project;
 
     /**
@@ -35,7 +35,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -49,7 +49,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
     /**

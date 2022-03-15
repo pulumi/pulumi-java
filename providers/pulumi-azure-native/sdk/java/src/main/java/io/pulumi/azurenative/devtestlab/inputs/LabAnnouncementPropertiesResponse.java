@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * Is the lab announcement active/enabled at this time?
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable String enabled;
 
     public Optional<String> getEnabled() {
@@ -34,7 +34,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * The time at which the announcement expires (null for never)
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
@@ -45,7 +45,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * Has this announcement expired?
      * 
      */
-    @InputImport(name="expired")
+    @Import(name="expired")
       private final @Nullable Boolean expired;
 
     public Optional<Boolean> getExpired() {
@@ -56,7 +56,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
      */
-    @InputImport(name="markdown")
+    @Import(name="markdown")
       private final @Nullable String markdown;
 
     public Optional<String> getMarkdown() {
@@ -67,7 +67,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * The provisioning status of the resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -78,7 +78,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * The plain text title for the lab announcement
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable String title;
 
     public Optional<String> getTitle() {
@@ -89,7 +89,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @InputImport(name="uniqueIdentifier", required=true)
+    @Import(name="uniqueIdentifier", required=true)
       private final String uniqueIdentifier;
 
     public String getUniqueIdentifier() {

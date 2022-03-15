@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
 
     public static final ContainerPublicDomainNameArgs Empty = new ContainerPublicDomainNameArgs();
 
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -30,7 +30,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
      * An object that describes the configuration for the containers of the deployment.
      * 
      */
-    @InputImport(name="domainNames")
+    @Import(name="domainNames")
       private final @Nullable Output<List<String>> domainNames;
 
     public Output<List<String>> getDomainNames() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountResponse {
     /**
      * The ID of the storage account resource. Media Services relies on tables and queues as well as blobs, so the primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage). Blob only storage accounts can be added as secondary storage accounts.
@@ -22,10 +22,10 @@ public final class StorageAccountResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.type = type;
     }

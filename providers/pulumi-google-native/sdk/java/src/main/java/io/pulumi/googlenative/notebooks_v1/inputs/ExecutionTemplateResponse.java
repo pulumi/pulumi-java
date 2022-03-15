@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.DataprocParametersResponse;
 import io.pulumi.googlenative.notebooks_v1.inputs.SchedulerAcceleratorConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.inputs.VertexAIParametersResponse;
@@ -24,7 +24,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Configuration (count and accelerator type) for hardware running notebook execution.
      * 
      */
-    @InputImport(name="acceleratorConfig", required=true)
+    @Import(name="acceleratorConfig", required=true)
       private final SchedulerAcceleratorConfigResponse acceleratorConfig;
 
     public SchedulerAcceleratorConfigResponse getAcceleratorConfig() {
@@ -35,7 +35,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Container Image URI to a DLVM Example: 'gcr.io/deeplearning-platform-release/base-cu100' More examples can be found at: https://cloud.google.com/ai-platform/deep-learning-containers/docs/choosing-container
      * 
      */
-    @InputImport(name="containerImageUri", required=true)
+    @Import(name="containerImageUri", required=true)
       private final String containerImageUri;
 
     public String getContainerImageUri() {
@@ -46,7 +46,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Parameters used in Dataproc JobType executions.
      * 
      */
-    @InputImport(name="dataprocParameters", required=true)
+    @Import(name="dataprocParameters", required=true)
       private final DataprocParametersResponse dataprocParameters;
 
     public DataprocParametersResponse getDataprocParameters() {
@@ -57,7 +57,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Path to the notebook file to execute. Must be in a Google Cloud Storage bucket. Format: `gs://{bucket_name}/{folder}/{notebook_file_name}` Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook.ipynb`
      * 
      */
-    @InputImport(name="inputNotebookFile", required=true)
+    @Import(name="inputNotebookFile", required=true)
       private final String inputNotebookFile;
 
     public String getInputNotebookFile() {
@@ -68,7 +68,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * The type of Job to be used on this execution.
      * 
      */
-    @InputImport(name="jobType", required=true)
+    @Import(name="jobType", required=true)
       private final String jobType;
 
     public String getJobType() {
@@ -79,7 +79,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Name of the kernel spec to use. This must be specified if the kernel spec name on the execution target does not match the name in the input notebook file.
      * 
      */
-    @InputImport(name="kernelSpec", required=true)
+    @Import(name="kernelSpec", required=true)
       private final String kernelSpec;
 
     public String getKernelSpec() {
@@ -90,7 +90,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Labels for execution. If execution is scheduled, a field included will be 'nbs-scheduled'. Otherwise, it is an immediate execution, and an included field will be 'nbs-immediate'. Use fields to efficiently index between various types of executions.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -101,7 +101,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Specifies the type of virtual machine to use for your training job's master worker. You must specify this field when `scaleTier` is set to `CUSTOM`. You can use certain Compute Engine machine types directly in this field. The following types are supported: - `n1-standard-4` - `n1-standard-8` - `n1-standard-16` - `n1-standard-32` - `n1-standard-64` - `n1-standard-96` - `n1-highmem-2` - `n1-highmem-4` - `n1-highmem-8` - `n1-highmem-16` - `n1-highmem-32` - `n1-highmem-64` - `n1-highmem-96` - `n1-highcpu-16` - `n1-highcpu-32` - `n1-highcpu-64` - `n1-highcpu-96` Alternatively, you can use the following legacy machine types: - `standard` - `large_model` - `complex_model_s` - `complex_model_m` - `complex_model_l` - `standard_gpu` - `complex_model_m_gpu` - `complex_model_l_gpu` - `standard_p100` - `complex_model_m_p100` - `standard_v100` - `large_model_v100` - `complex_model_m_v100` - `complex_model_l_v100` Finally, if you want to use a TPU for training, specify `cloud_tpu` in this field. Learn more about the [special configuration options for training with TPU](https://cloud.google.com/ai-platform/training/docs/using-tpus#configuring_a_custom_tpu_machine).
      * 
      */
-    @InputImport(name="masterType", required=true)
+    @Import(name="masterType", required=true)
       private final String masterType;
 
     public String getMasterType() {
@@ -112,7 +112,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Path to the notebook folder to write to. Must be in a Google Cloud Storage bucket path. Format: `gs://{bucket_name}/{folder}` Ex: `gs://notebook_user/scheduled_notebooks`
      * 
      */
-    @InputImport(name="outputNotebookFolder", required=true)
+    @Import(name="outputNotebookFolder", required=true)
       private final String outputNotebookFolder;
 
     public String getOutputNotebookFolder() {
@@ -123,7 +123,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Parameters used within the 'input_notebook_file' notebook.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final String parameters;
 
     public String getParameters() {
@@ -134,7 +134,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Parameters to be overridden in the notebook during execution. Ref https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying parameters in the input notebook and pass them here in an YAML file. Ex: `gs://notebook_user/scheduled_notebooks/sentiment_notebook_params.yaml`
      * 
      */
-    @InputImport(name="paramsYamlFile", required=true)
+    @Import(name="paramsYamlFile", required=true)
       private final String paramsYamlFile;
 
     public String getParamsYamlFile() {
@@ -145,7 +145,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * The email address of a service account to use when running the execution. You must have the `iam.serviceAccounts.actAs` permission for the specified service account.
      * 
      */
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {
@@ -156,7 +156,7 @@ public final class ExecutionTemplateResponse extends io.pulumi.resources.InvokeA
      * Parameters used in Vertex AI JobType executions.
      * 
      */
-    @InputImport(name="vertexAiParameters", required=true)
+    @Import(name="vertexAiParameters", required=true)
       private final VertexAIParametersResponse vertexAiParameters;
 
     public VertexAIParametersResponse getVertexAiParameters() {

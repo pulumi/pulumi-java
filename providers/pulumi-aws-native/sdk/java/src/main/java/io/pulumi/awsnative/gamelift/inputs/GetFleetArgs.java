@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFleetArgs extends io.pulumi.resources.InvokeArgs {
      * Unique fleet ID
      * 
      */
-    @InputImport(name="fleetId", required=true)
+    @Import(name="fleetId", required=true)
       private final String fleetId;
 
     public String getFleetId() {

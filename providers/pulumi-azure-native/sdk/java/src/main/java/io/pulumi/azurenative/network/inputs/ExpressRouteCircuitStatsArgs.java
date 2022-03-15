@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * The Primary BytesIn of the peering.
      * 
      */
-    @InputImport(name="primarybytesIn")
+    @Import(name="primarybytesIn")
       private final @Nullable Output<Double> primarybytesIn;
 
     public Output<Double> getPrimarybytesIn() {
@@ -33,7 +33,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * The primary BytesOut of the peering.
      * 
      */
-    @InputImport(name="primarybytesOut")
+    @Import(name="primarybytesOut")
       private final @Nullable Output<Double> primarybytesOut;
 
     public Output<Double> getPrimarybytesOut() {
@@ -44,7 +44,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * The secondary BytesIn of the peering.
      * 
      */
-    @InputImport(name="secondarybytesIn")
+    @Import(name="secondarybytesIn")
       private final @Nullable Output<Double> secondarybytesIn;
 
     public Output<Double> getSecondarybytesIn() {
@@ -55,7 +55,7 @@ public final class ExpressRouteCircuitStatsArgs extends io.pulumi.resources.Reso
      * The secondary BytesOut of the peering.
      * 
      */
-    @InputImport(name="secondarybytesOut")
+    @Import(name="secondarybytesOut")
       private final @Nullable Output<Double> secondarybytesOut;
 
     public Output<Double> getSecondarybytesOut() {

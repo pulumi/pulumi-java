@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * The Capacity reservation instance view.
      * 
      */
-    @OutputExport(name="instanceView", type=CapacityReservationInstanceViewResponse.class, parameters={})
+    @Export(name="instanceView", type=CapacityReservationInstanceViewResponse.class, parameters={})
     private Output<CapacityReservationInstanceViewResponse> instanceView;
 
     /**
@@ -52,7 +52,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -66,7 +66,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -94,7 +94,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * The date time when the capacity reservation was last updated.
      * 
      */
-    @OutputExport(name="provisioningTime", type=String.class, parameters={})
+    @Export(name="provisioningTime", type=String.class, parameters={})
     private Output<String> provisioningTime;
 
     /**
@@ -108,7 +108,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * A unique id generated and assigned to the capacity reservation by the platform which does not change throughout the lifetime of the resource.
      * 
      */
-    @OutputExport(name="reservationId", type=String.class, parameters={})
+    @Export(name="reservationId", type=String.class, parameters={})
     private Output<String> reservationId;
 
     /**
@@ -122,7 +122,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -136,7 +136,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -164,7 +164,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * A list of all virtual machine resource ids that are associated with the capacity reservation.
      * 
      */
-    @OutputExport(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
+    @Export(name="virtualMachinesAssociated", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> virtualMachinesAssociated;
 
     /**
@@ -178,7 +178,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

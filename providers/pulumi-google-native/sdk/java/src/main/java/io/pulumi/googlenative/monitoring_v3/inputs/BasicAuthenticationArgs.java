@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * The password to use when authenticating with the HTTP server.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -33,7 +33,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
      * The username to use when authenticating with the HTTP server.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

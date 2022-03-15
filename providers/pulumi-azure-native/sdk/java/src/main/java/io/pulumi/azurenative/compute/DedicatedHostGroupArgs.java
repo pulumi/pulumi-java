@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * The name of the dedicated host group.
      * 
      */
-    @InputImport(name="hostGroupName")
+    @Import(name="hostGroupName")
       private final @Nullable Output<String> hostGroupName;
 
     public Output<String> getHostGroupName() {
@@ -33,7 +33,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * Number of fault domains that the host group can span.
      * 
      */
-    @InputImport(name="platformFaultDomainCount", required=true)
+    @Import(name="platformFaultDomainCount", required=true)
       private final Output<Integer> platformFaultDomainCount;
 
     public Output<Integer> getPlatformFaultDomainCount() {
@@ -55,7 +55,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
      * 
      */
-    @InputImport(name="supportAutomaticPlacement")
+    @Import(name="supportAutomaticPlacement")
       private final @Nullable Output<Boolean> supportAutomaticPlacement;
 
     public Output<Boolean> getSupportAutomaticPlacement() {
@@ -77,7 +77,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
      * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlConnectivityUpdateSettingsResponse {
     /**
      * SQL Server connectivity option.
@@ -23,10 +23,10 @@ public final class SqlConnectivityUpdateSettingsResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlConnectivityUpdateSettingsResponse(
-        @OutputCustomType.Parameter("connectivityType") @Nullable String connectivityType,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("connectivityType") @Nullable String connectivityType,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.connectivityType = connectivityType;
         this.port = port;
     }

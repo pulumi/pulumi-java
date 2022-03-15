@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
      * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
      * 
      */
-    @InputImport(name="certificateThumbprint")
+    @Import(name="certificateThumbprint")
       private final @Nullable Output<String> certificateThumbprint;
 
     public Output<String> getCertificateThumbprint() {
@@ -34,7 +34,7 @@ public final class WebServiceParameterArgs extends io.pulumi.resources.ResourceA
      * The parameter value
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {

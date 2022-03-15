@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * A description for the model group.
      * 
      */
-    @InputImport(name="modelPackageGroupDescription")
+    @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
     public Output<String> getModelPackageGroupDescription() {
@@ -30,7 +30,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * The name of the model group.
      * 
      */
-    @InputImport(name="modelPackageGroupName", required=true)
+    @Import(name="modelPackageGroupName", required=true)
       private final Output<String> modelPackageGroupName;
 
     public Output<String> getModelPackageGroupName() {
@@ -41,7 +41,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

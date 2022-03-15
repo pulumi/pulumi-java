@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
      * If absent, the Compute Engine Service Agent service account is used.
      * 
      */
-    @InputImport(name="kmsKeyServiceAccount")
+    @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
     public Output<String> getKmsKeyServiceAccount() {
@@ -32,7 +32,7 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="rawKey")
+    @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
     public Output<String> getRawKey() {

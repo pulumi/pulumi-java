@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiscoveryOccurrenceResponse {
     /**
      * The status of discovery for the resource.
@@ -36,13 +36,13 @@ public final class DiscoveryOccurrenceResponse {
      */
     private final String lastScanTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiscoveryOccurrenceResponse(
-        @OutputCustomType.Parameter("analysisStatus") String analysisStatus,
-        @OutputCustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
-        @OutputCustomType.Parameter("continuousAnalysis") String continuousAnalysis,
-        @OutputCustomType.Parameter("cpe") String cpe,
-        @OutputCustomType.Parameter("lastScanTime") String lastScanTime) {
+        @CustomType.Parameter("analysisStatus") String analysisStatus,
+        @CustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @CustomType.Parameter("continuousAnalysis") String continuousAnalysis,
+        @CustomType.Parameter("cpe") String cpe,
+        @CustomType.Parameter("lastScanTime") String lastScanTime) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;

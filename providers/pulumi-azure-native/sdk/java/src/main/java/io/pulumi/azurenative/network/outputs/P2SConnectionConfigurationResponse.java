@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class P2SConnectionConfigurationResponse {
     /**
      * Flag indicating whether the enable internet security flag is turned on for the P2S Connections or not.
@@ -50,15 +50,15 @@ public final class P2SConnectionConfigurationResponse {
      */
     private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private P2SConnectionConfigurationResponse(
-        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
-        @OutputCustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool) {
+        @CustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @CustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool) {
         this.enableInternetSecurity = enableInternetSecurity;
         this.etag = etag;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -36,7 +36,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * The rados image name. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -47,7 +47,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="keyring")
+    @Import(name="keyring")
       private final @Nullable Output<String> keyring;
 
     public Output<String> getKeyring() {
@@ -58,7 +58,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="monitors", required=true)
+    @Import(name="monitors", required=true)
       private final Output<List<String>> monitors;
 
     public Output<List<String>> getMonitors() {
@@ -69,7 +69,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * The rados pool name. Default is rbd. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="pool")
+    @Import(name="pool")
       private final @Nullable Output<String> pool;
 
     public Output<String> getPool() {
@@ -80,7 +80,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -91,7 +91,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
     public Output<LocalObjectReferenceArgs> getSecretRef() {
@@ -102,7 +102,7 @@ public final class RBDVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

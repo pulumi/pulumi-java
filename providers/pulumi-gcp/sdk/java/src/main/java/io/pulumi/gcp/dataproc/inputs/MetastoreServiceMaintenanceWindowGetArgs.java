@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
     public Output<String> getDayOfWeek() {
@@ -30,7 +30,7 @@ public final class MetastoreServiceMaintenanceWindowGetArgs extends io.pulumi.re
      * The hour of day (0-23) when the window starts.
      * 
      */
-    @InputImport(name="hourOfDay", required=true)
+    @Import(name="hourOfDay", required=true)
       private final Output<Integer> hourOfDay;
 
     public Output<Integer> getHourOfDay() {

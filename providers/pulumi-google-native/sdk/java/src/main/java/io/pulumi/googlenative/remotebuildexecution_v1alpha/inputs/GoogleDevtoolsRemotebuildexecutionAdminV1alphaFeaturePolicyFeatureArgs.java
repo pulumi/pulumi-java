@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * A list of acceptable values. Only effective when the policy is `RESTRICTED`.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable Output<List<String>> allowedValues;
 
     public Output<List<String>> getAllowedValues() {
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      * The policy of the feature.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> policy;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicy> getPolicy() {

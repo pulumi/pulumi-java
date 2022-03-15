@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentPropertie
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentSkuArgs;
 import io.pulumi.azurenative.logic.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * Managed service identity properties.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -33,7 +33,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * The integration service environment name.
      * 
      */
-    @InputImport(name="integrationServiceEnvironmentName")
+    @Import(name="integrationServiceEnvironmentName")
       private final @Nullable Output<String> integrationServiceEnvironmentName;
 
     public Output<String> getIntegrationServiceEnvironmentName() {
@@ -44,7 +44,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * The integration service environment properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
 
     public Output<IntegrationServiceEnvironmentPropertiesArgs> getProperties() {
@@ -66,7 +66,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * The resource group.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -77,7 +77,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * The sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
 
     public Output<IntegrationServiceEnvironmentSkuArgs> getSku() {
@@ -88,7 +88,7 @@ public final class IntegrationServiceEnvironmentArgs extends io.pulumi.resources
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

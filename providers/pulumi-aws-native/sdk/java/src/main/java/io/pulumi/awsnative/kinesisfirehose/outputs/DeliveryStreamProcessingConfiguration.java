@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessor;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamProcessingConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<DeliveryStreamProcessor> processors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamProcessingConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("processors") @Nullable List<DeliveryStreamProcessor> processors) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("processors") @Nullable List<DeliveryStreamProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

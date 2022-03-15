@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventSourceResult {
     /**
      * The ARN of the partner event source
@@ -38,14 +38,14 @@ public final class GetEventSourceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventSourceResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("createdBy") String createdBy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("createdBy") String createdBy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @CustomType.Parameter("state") String state) {
         this.arn = arn;
         this.createdBy = createdBy;
         this.id = id;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The disk capacity in bytes.
      * 
      */
-    @InputImport(name="diskCapacityInBytes")
+    @Import(name="diskCapacityInBytes")
       private final @Nullable Double diskCapacityInBytes;
 
     public Optional<Double> getDiskCapacityInBytes() {
@@ -35,7 +35,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The disk id.
      * 
      */
-    @InputImport(name="diskId")
+    @Import(name="diskId")
       private final @Nullable String diskId;
 
     public Optional<String> getDiskId() {
@@ -46,7 +46,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The disk name.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable String diskName;
 
     public Optional<String> getDiskName() {
@@ -57,7 +57,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * A value indicating whether disk is resized.
      * 
      */
-    @InputImport(name="diskResized")
+    @Import(name="diskResized")
       private final @Nullable String diskResized;
 
     public Optional<String> getDiskResized() {
@@ -68,7 +68,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The disk file system capacity in bytes.
      * 
      */
-    @InputImport(name="fileSystemCapacityInBytes")
+    @Import(name="fileSystemCapacityInBytes")
       private final @Nullable Double fileSystemCapacityInBytes;
 
     public Optional<Double> getFileSystemCapacityInBytes() {
@@ -79,7 +79,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The health error code for the disk.
      * 
      */
-    @InputImport(name="healthErrorCode")
+    @Import(name="healthErrorCode")
       private final @Nullable String healthErrorCode;
 
     public Optional<String> getHealthErrorCode() {
@@ -90,7 +90,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The last RPO calculated time.
      * 
      */
-    @InputImport(name="lastRpoCalculatedTime")
+    @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> getLastRpoCalculatedTime() {
@@ -101,7 +101,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The protection stage.
      * 
      */
-    @InputImport(name="protectionStage")
+    @Import(name="protectionStage")
       private final @Nullable String protectionStage;
 
     public Optional<String> getProtectionStage() {
@@ -112,7 +112,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The PS data transit in MB.
      * 
      */
-    @InputImport(name="psDataInMegaBytes")
+    @Import(name="psDataInMegaBytes")
       private final @Nullable Double psDataInMegaBytes;
 
     public Optional<Double> getPsDataInMegaBytes() {
@@ -123,7 +123,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The resync duration in seconds.
      * 
      */
-    @InputImport(name="resyncDurationInSeconds")
+    @Import(name="resyncDurationInSeconds")
       private final @Nullable Double resyncDurationInSeconds;
 
     public Optional<Double> getResyncDurationInSeconds() {
@@ -134,7 +134,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The resync progress percentage.
      * 
      */
-    @InputImport(name="resyncProgressPercentage")
+    @Import(name="resyncProgressPercentage")
       private final @Nullable Integer resyncProgressPercentage;
 
     public Optional<Integer> getResyncProgressPercentage() {
@@ -145,7 +145,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * A value indicating whether resync is required for this disk.
      * 
      */
-    @InputImport(name="resyncRequired")
+    @Import(name="resyncRequired")
       private final @Nullable String resyncRequired;
 
     public Optional<String> getResyncRequired() {
@@ -156,7 +156,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The RPO in seconds.
      * 
      */
-    @InputImport(name="rpoInSeconds")
+    @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
 
     public Optional<Double> getRpoInSeconds() {
@@ -167,7 +167,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The source data transit in MB.
      * 
      */
-    @InputImport(name="sourceDataInMegaBytes")
+    @Import(name="sourceDataInMegaBytes")
       private final @Nullable Double sourceDataInMegaBytes;
 
     public Optional<Double> getSourceDataInMegaBytes() {
@@ -178,7 +178,7 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse extends io.pulumi.r
      * The target data transit in MB.
      * 
      */
-    @InputImport(name="targetDataInMegaBytes")
+    @Import(name="targetDataInMegaBytes")
       private final @Nullable Double targetDataInMegaBytes;
 
     public Optional<Double> getTargetDataInMegaBytes() {

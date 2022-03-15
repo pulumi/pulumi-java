@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.PrivateEndpointPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateEndpointResult {
     /**
      * Unique opaque string (generally a GUID) that represents the metadata state of the resource (private endpoint) and changes whenever the resource is updated. Required on PUT (CreateOrUpdate) requests.
@@ -36,13 +36,13 @@ public final class GetPrivateEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateEndpointResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") PrivateEndpointPropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") PrivateEndpointPropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

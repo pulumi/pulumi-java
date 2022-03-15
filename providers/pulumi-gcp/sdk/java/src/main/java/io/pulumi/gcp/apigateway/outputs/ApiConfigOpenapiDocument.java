@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.apigateway.outputs.ApiConfigOpenapiDocumentDocument;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiConfigOpenapiDocument {
     /**
      * The OpenAPI Specification document file.
@@ -16,8 +16,8 @@ public final class ApiConfigOpenapiDocument {
      */
     private final ApiConfigOpenapiDocumentDocument document;
 
-    @OutputCustomType.Constructor
-    private ApiConfigOpenapiDocument(@OutputCustomType.Parameter("document") ApiConfigOpenapiDocumentDocument document) {
+    @CustomType.Constructor
+    private ApiConfigOpenapiDocument(@CustomType.Parameter("document") ApiConfigOpenapiDocumentDocument document) {
         this.document = document;
     }
 

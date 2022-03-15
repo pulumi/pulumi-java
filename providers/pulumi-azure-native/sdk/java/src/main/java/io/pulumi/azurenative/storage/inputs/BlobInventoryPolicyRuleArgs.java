@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * An object that defines the blob inventory policy rule.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<BlobInventoryPolicyDefinitionArgs> definition;
 
     public Output<BlobInventoryPolicyDefinitionArgs> getDefinition() {
@@ -34,7 +34,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * Rule is enabled when set to true.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -45,7 +45,7 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

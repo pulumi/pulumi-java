@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresetThumbnails {
     /**
      * The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
@@ -52,16 +52,16 @@ public final class PresetThumbnails {
      */
     private final @Nullable String sizingPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresetThumbnails(
-        @OutputCustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("interval") @Nullable String interval,
-        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
-        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
-        @OutputCustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
-        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
-        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
+        @CustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("interval") @Nullable String interval,
+        @CustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @CustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @CustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
+        @CustomType.Parameter("resolution") @Nullable String resolution,
+        @CustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.format = format;
         this.interval = interval;

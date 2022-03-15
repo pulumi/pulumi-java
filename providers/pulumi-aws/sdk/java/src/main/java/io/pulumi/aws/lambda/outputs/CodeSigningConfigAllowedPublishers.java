@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CodeSigningConfigAllowedPublishers {
     /**
      * The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.
@@ -16,8 +16,8 @@ public final class CodeSigningConfigAllowedPublishers {
      */
     private final List<String> signingProfileVersionArns;
 
-    @OutputCustomType.Constructor
-    private CodeSigningConfigAllowedPublishers(@OutputCustomType.Parameter("signingProfileVersionArns") List<String> signingProfileVersionArns) {
+    @CustomType.Constructor
+    private CodeSigningConfigAllowedPublishers(@CustomType.Parameter("signingProfileVersionArns") List<String> signingProfileVersionArns) {
         this.signingProfileVersionArns = signingProfileVersionArns;
     }
 

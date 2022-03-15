@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.NotificationPreferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Contact name of the person.
      * 
      */
-    @InputImport(name="contactName", required=true)
+    @Import(name="contactName", required=true)
       private final String contactName;
 
     public String getContactName() {
@@ -35,7 +35,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * List of Email-ids to be notified about job progress.
      * 
      */
-    @InputImport(name="emailList", required=true)
+    @Import(name="emailList", required=true)
       private final List<String> emailList;
 
     public List<String> getEmailList() {
@@ -46,7 +46,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Mobile number of the contact person.
      * 
      */
-    @InputImport(name="mobile")
+    @Import(name="mobile")
       private final @Nullable String mobile;
 
     public Optional<String> getMobile() {
@@ -57,7 +57,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Notification preference for a job stage.
      * 
      */
-    @InputImport(name="notificationPreference")
+    @Import(name="notificationPreference")
       private final @Nullable List<NotificationPreferenceResponse> notificationPreference;
 
     public List<NotificationPreferenceResponse> getNotificationPreference() {
@@ -68,7 +68,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Phone number of the contact person.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final String phone;
 
     public String getPhone() {
@@ -79,7 +79,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Phone extension number of the contact person.
      * 
      */
-    @InputImport(name="phoneExtension")
+    @Import(name="phoneExtension")
       private final @Nullable String phoneExtension;
 
     public Optional<String> getPhoneExtension() {

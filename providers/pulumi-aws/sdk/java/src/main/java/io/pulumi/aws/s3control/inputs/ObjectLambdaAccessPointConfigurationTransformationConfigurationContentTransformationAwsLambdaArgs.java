@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * The Amazon Resource Name (ARN) of the AWS Lambda function.
      * 
      */
-    @InputImport(name="functionArn", required=true)
+    @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
     public Output<String> getFunctionArn() {
@@ -29,7 +29,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * Additional JSON that provides supplemental data to the Lambda function used to transform objects.
      * 
      */
-    @InputImport(name="functionPayload")
+    @Import(name="functionPayload")
       private final @Nullable Output<String> functionPayload;
 
     public Output<String> getFunctionPayload() {

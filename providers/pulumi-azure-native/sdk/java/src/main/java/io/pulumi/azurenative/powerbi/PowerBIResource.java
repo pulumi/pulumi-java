@@ -9,7 +9,7 @@ import io.pulumi.azurenative.powerbi.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.powerbi.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -50,7 +50,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * Specifies the private endpoint connections of the resource.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -78,7 +78,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -92,7 +92,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * Specifies the tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * Specifies the tenant id of the resource.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -120,7 +120,7 @@ public class PowerBIResource extends io.pulumi.resources.CustomResource {
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

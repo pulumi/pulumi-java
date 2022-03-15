@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.GithubEnterpriseConfigArgs;
@@ -22,7 +22,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * The GitHub app id of the Cloud Build app on the GitHub Enterprise server.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -36,7 +36,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * Time when the installation was associated with the project.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -50,7 +50,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * Name to display for this config.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * The URL of the github enterprise host the configuration is for.
      * 
      */
-    @OutputExport(name="hostUrl", type=String.class, parameters={})
+    @Export(name="hostUrl", type=String.class, parameters={})
     private Output<String> hostUrl;
 
     /**
@@ -78,7 +78,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * Optional. The full resource name for the GitHubEnterpriseConfig For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * Optional. The network to be used when reaching out to the GitHub Enterprise server. The VPC network must be enabled for private service connection. This should be set if the GitHub Enterprise server is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the GitHub Enterprise server will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
      * 
      */
-    @OutputExport(name="peeredNetwork", type=String.class, parameters={})
+    @Export(name="peeredNetwork", type=String.class, parameters={})
     private Output<String> peeredNetwork;
 
     /**
@@ -106,7 +106,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * Names of secrets in Secret Manager.
      * 
      */
-    @OutputExport(name="secrets", type=GitHubEnterpriseSecretsResponse.class, parameters={})
+    @Export(name="secrets", type=GitHubEnterpriseSecretsResponse.class, parameters={})
     private Output<GitHubEnterpriseSecretsResponse> secrets;
 
     /**
@@ -120,7 +120,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * Optional. SSL certificate to use for requests to GitHub Enterprise.
      * 
      */
-    @OutputExport(name="sslCa", type=String.class, parameters={})
+    @Export(name="sslCa", type=String.class, parameters={})
     private Output<String> sslCa;
 
     /**
@@ -134,7 +134,7 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
      * The key that should be attached to webhook calls to the ReceiveWebhook endpoint.
      * 
      */
-    @OutputExport(name="webhookKey", type=String.class, parameters={})
+    @Export(name="webhookKey", type=String.class, parameters={})
     private Output<String> webhookKey;
 
     /**

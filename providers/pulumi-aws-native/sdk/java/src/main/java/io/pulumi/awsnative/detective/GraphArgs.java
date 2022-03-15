@@ -5,7 +5,7 @@ package io.pulumi.awsnative.detective;
 
 import io.pulumi.awsnative.detective.inputs.GraphTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GraphArgs Empty = new GraphArgs();
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<GraphTagArgs>> tags;
 
     public Output<List<GraphTagArgs>> getTags() {

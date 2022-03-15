@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * The claim name that must be present in the token, for example, "isAdmin" or "paid".
      * 
      */
-    @InputImport(name="claim", required=true)
+    @Import(name="claim", required=true)
       private final Output<String> claim;
 
     public Output<String> getClaim() {
@@ -28,7 +28,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * The match condition that specifies how closely the claim value in the IdP token must match Value.
      * 
      */
-    @InputImport(name="matchType", required=true)
+    @Import(name="matchType", required=true)
       private final Output<String> matchType;
 
     public Output<String> getMatchType() {
@@ -39,7 +39,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * The role ARN.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -50,7 +50,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
      * A brief string that the claim must match, for example, "paid" or "yes".
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3outposts.BucketArgs;
 import io.pulumi.awsnative.s3outposts.outputs.BucketLifecycleConfiguration;
 import io.pulumi.awsnative.s3outposts.outputs.BucketTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * A name for the bucket.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -52,7 +52,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Rules that define how Amazon S3Outposts manages objects during their lifetime.
      * 
      */
-    @OutputExport(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
+    @Export(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration;
 
     /**
@@ -66,7 +66,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The id of the customer outpost on which the bucket resides.
      * 
      */
-    @OutputExport(name="outpostId", type=String.class, parameters={})
+    @Export(name="outpostId", type=String.class, parameters={})
     private Output<String> outpostId;
 
     /**
@@ -80,7 +80,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={BucketTag.class})
+    @Export(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
     /**

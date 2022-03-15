@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * ID of the project that produces and owns this service.
@@ -20,10 +20,10 @@ public final class GetServiceResult {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("producerProjectId") String producerProjectId,
-        @OutputCustomType.Parameter("serviceName") String serviceName) {
+        @CustomType.Parameter("producerProjectId") String producerProjectId,
+        @CustomType.Parameter("serviceName") String serviceName) {
         this.producerProjectId = producerProjectId;
         this.serviceName = serviceName;
     }

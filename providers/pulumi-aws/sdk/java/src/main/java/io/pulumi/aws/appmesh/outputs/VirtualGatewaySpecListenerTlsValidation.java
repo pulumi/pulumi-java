@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerTlsValidationTrust;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListenerTlsValidation {
     /**
      * The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
@@ -23,10 +23,10 @@ public final class VirtualGatewaySpecListenerTlsValidation {
      */
     private final VirtualGatewaySpecListenerTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecListenerTlsValidation(
-        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        @OutputCustomType.Parameter("trust") VirtualGatewaySpecListenerTlsValidationTrust trust) {
+        @CustomType.Parameter("subjectAlternativeNames") @Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @CustomType.Parameter("trust") VirtualGatewaySpecListenerTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

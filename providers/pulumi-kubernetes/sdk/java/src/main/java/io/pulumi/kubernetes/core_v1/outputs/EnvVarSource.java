@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapKeySelector;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectFieldSelector;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceFieldSelector;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvVarSource {
     /**
      * Selects a key of a ConfigMap.
@@ -35,12 +35,12 @@ public final class EnvVarSource {
      */
     private final @Nullable SecretKeySelector secretKeyRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvVarSource(
-        @OutputCustomType.Parameter("configMapKeyRef") @Nullable ConfigMapKeySelector configMapKeyRef,
-        @OutputCustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
-        @OutputCustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef,
-        @OutputCustomType.Parameter("secretKeyRef") @Nullable SecretKeySelector secretKeyRef) {
+        @CustomType.Parameter("configMapKeyRef") @Nullable ConfigMapKeySelector configMapKeyRef,
+        @CustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
+        @CustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef,
+        @CustomType.Parameter("secretKeyRef") @Nullable SecretKeySelector secretKeyRef) {
         this.configMapKeyRef = configMapKeyRef;
         this.fieldRef = fieldRef;
         this.resourceFieldRef = resourceFieldRef;

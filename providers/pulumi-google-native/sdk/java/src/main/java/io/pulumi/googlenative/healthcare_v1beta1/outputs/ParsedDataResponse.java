@@ -3,17 +3,17 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.SegmentResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParsedDataResponse {
     private final List<SegmentResponse> segments;
 
-    @OutputCustomType.Constructor
-    private ParsedDataResponse(@OutputCustomType.Parameter("segments") List<SegmentResponse> segments) {
+    @CustomType.Constructor
+    private ParsedDataResponse(@CustomType.Parameter("segments") List<SegmentResponse> segments) {
         this.segments = segments;
     }
 

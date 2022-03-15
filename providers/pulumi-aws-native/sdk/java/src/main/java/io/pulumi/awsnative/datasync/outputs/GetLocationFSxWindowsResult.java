@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationFSxWindowsTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationFSxWindowsResult {
     /**
      * The Amazon Resource Name (ARN) of the Amazon FSx for Windows file system location that is created.
@@ -29,11 +29,11 @@ public final class GetLocationFSxWindowsResult {
      */
     private final @Nullable List<LocationFSxWindowsTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationFSxWindowsResult(
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationFSxWindowsTag> tags) {
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("tags") @Nullable List<LocationFSxWindowsTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.tags = tags;

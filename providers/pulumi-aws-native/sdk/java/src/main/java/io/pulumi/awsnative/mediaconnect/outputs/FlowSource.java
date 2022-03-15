@@ -5,14 +5,14 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEncryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSource {
     /**
      * The type of decryption that is used on the content ingested from this source.
@@ -90,23 +90,23 @@ public final class FlowSource {
      */
     private final @Nullable String whitelistCidr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowSource(
-        @OutputCustomType.Parameter("decryption") @Nullable FlowEncryption decryption,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
-        @OutputCustomType.Parameter("ingestIp") @Nullable String ingestIp,
-        @OutputCustomType.Parameter("ingestPort") @Nullable Integer ingestPort,
-        @OutputCustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
-        @OutputCustomType.Parameter("maxLatency") @Nullable Integer maxLatency,
-        @OutputCustomType.Parameter("minLatency") @Nullable Integer minLatency,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") @Nullable FlowSourceProtocol protocol,
-        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn,
-        @OutputCustomType.Parameter("sourceIngestPort") @Nullable String sourceIngestPort,
-        @OutputCustomType.Parameter("streamId") @Nullable String streamId,
-        @OutputCustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName,
-        @OutputCustomType.Parameter("whitelistCidr") @Nullable String whitelistCidr) {
+        @CustomType.Parameter("decryption") @Nullable FlowEncryption decryption,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
+        @CustomType.Parameter("ingestIp") @Nullable String ingestIp,
+        @CustomType.Parameter("ingestPort") @Nullable Integer ingestPort,
+        @CustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
+        @CustomType.Parameter("maxLatency") @Nullable Integer maxLatency,
+        @CustomType.Parameter("minLatency") @Nullable Integer minLatency,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") @Nullable FlowSourceProtocol protocol,
+        @CustomType.Parameter("sourceArn") @Nullable String sourceArn,
+        @CustomType.Parameter("sourceIngestPort") @Nullable String sourceIngestPort,
+        @CustomType.Parameter("streamId") @Nullable String streamId,
+        @CustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName,
+        @CustomType.Parameter("whitelistCidr") @Nullable String whitelistCidr) {
         this.decryption = decryption;
         this.description = description;
         this.entitlementArn = entitlementArn;

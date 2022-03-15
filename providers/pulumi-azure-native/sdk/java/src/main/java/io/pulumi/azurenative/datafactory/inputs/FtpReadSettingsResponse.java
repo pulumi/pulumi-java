@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="deleteFilesAfterCompletion")
+    @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Object deleteFilesAfterCompletion;
 
     public Optional<Object> getDeleteFilesAfterCompletion() {
@@ -35,7 +35,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * If true, disable parallel reading within each file. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableChunking")
+    @Import(name="disableChunking")
       private final @Nullable Object disableChunking;
 
     public Optional<Object> getDisableChunking() {
@@ -46,7 +46,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -57,7 +57,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Indicates whether to enable partition discovery.
      * 
      */
-    @InputImport(name="enablePartitionDiscovery")
+    @Import(name="enablePartitionDiscovery")
       private final @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> getEnablePartitionDiscovery() {
@@ -68,7 +68,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileListPath")
+    @Import(name="fileListPath")
       private final @Nullable Object fileListPath;
 
     public Optional<Object> getFileListPath() {
@@ -79,7 +79,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -90,7 +90,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionRootPath")
+    @Import(name="partitionRootPath")
       private final @Nullable Object partitionRootPath;
 
     public Optional<Object> getPartitionRootPath() {
@@ -101,7 +101,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="recursive")
+    @Import(name="recursive")
       private final @Nullable Object recursive;
 
     public Optional<Object> getRecursive() {
@@ -113,7 +113,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'FtpReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -124,7 +124,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Specify whether to use binary transfer mode for FTP stores.
      * 
      */
-    @InputImport(name="useBinaryTransfer")
+    @Import(name="useBinaryTransfer")
       private final @Nullable Boolean useBinaryTransfer;
 
     public Optional<Boolean> getUseBinaryTransfer() {
@@ -135,7 +135,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Ftp wildcardFileName. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="wildcardFileName")
+    @Import(name="wildcardFileName")
       private final @Nullable Object wildcardFileName;
 
     public Optional<Object> getWildcardFileName() {
@@ -146,7 +146,7 @@ public final class FtpReadSettingsResponse extends io.pulumi.resources.InvokeArg
      * Ftp wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="wildcardFolderPath")
+    @Import(name="wildcardFolderPath")
       private final @Nullable Object wildcardFolderPath;
 
     public Optional<Object> getWildcardFolderPath() {

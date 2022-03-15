@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
      * 
      */
-    @InputImport(name="whenDeleted")
+    @Import(name="whenDeleted")
       private final @Nullable Output<String> whenDeleted;
 
     public Output<String> getWhenDeleted() {
@@ -33,7 +33,7 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends i
      * WhenScaled specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is scaled down. The default policy of `Retain` causes PVCs to not be affected by a scaledown. The `Delete` policy causes the associated PVCs for any excess pods above the replica count to be deleted.
      * 
      */
-    @InputImport(name="whenScaled")
+    @Import(name="whenScaled")
       private final @Nullable Output<String> whenScaled;
 
     public Output<String> getWhenScaled() {

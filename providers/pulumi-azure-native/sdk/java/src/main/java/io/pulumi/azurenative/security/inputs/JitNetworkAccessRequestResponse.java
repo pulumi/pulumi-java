@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestVirtualMachineResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
      * The justification for making the initiate request
      * 
      */
-    @InputImport(name="justification")
+    @Import(name="justification")
       private final @Nullable String justification;
 
     public Optional<String> getJustification() {
@@ -31,7 +31,7 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
      * The identity of the person who made the request
      * 
      */
-    @InputImport(name="requestor", required=true)
+    @Import(name="requestor", required=true)
       private final String requestor;
 
     public String getRequestor() {
@@ -42,14 +42,14 @@ public final class JitNetworkAccessRequestResponse extends io.pulumi.resources.I
      * The start time of the request in UTC
      * 
      */
-    @InputImport(name="startTimeUtc", required=true)
+    @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
 
     public String getStartTimeUtc() {
         return this.startTimeUtc;
     }
 
-    @InputImport(name="virtualMachines", required=true)
+    @Import(name="virtualMachines", required=true)
       private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
     public List<JitNetworkAccessRequestVirtualMachineResponse> getVirtualMachines() {

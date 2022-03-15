@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CallCredentialsResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ChannelCredentialsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrpcServiceConfigResponse {
     /**
      * The call credentials to access the SDS server.
@@ -27,11 +27,11 @@ public final class GrpcServiceConfigResponse {
      */
     private final String targetUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GrpcServiceConfigResponse(
-        @OutputCustomType.Parameter("callCredentials") CallCredentialsResponse callCredentials,
-        @OutputCustomType.Parameter("channelCredentials") ChannelCredentialsResponse channelCredentials,
-        @OutputCustomType.Parameter("targetUri") String targetUri) {
+        @CustomType.Parameter("callCredentials") CallCredentialsResponse callCredentials,
+        @CustomType.Parameter("channelCredentials") ChannelCredentialsResponse channelCredentials,
+        @CustomType.Parameter("targetUri") String targetUri) {
         this.callCredentials = callCredentials;
         this.channelCredentials = channelCredentials;
         this.targetUri = targetUri;

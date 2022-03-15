@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyActionDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyCustomAction {
     private final FirewallPolicyActionDefinition actionDefinition;
     private final String actionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyCustomAction(
-        @OutputCustomType.Parameter("actionDefinition") FirewallPolicyActionDefinition actionDefinition,
-        @OutputCustomType.Parameter("actionName") String actionName) {
+        @CustomType.Parameter("actionDefinition") FirewallPolicyActionDefinition actionDefinition,
+        @CustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

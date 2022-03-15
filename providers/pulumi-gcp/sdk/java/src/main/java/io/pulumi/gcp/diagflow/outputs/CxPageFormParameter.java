@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameterFillBehavior;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageFormParameter {
     /**
      * The human-readable name of the parameter, unique within the form.
@@ -48,14 +48,14 @@ public final class CxPageFormParameter {
      */
     private final @Nullable Boolean required;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxPageFormParameter(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("entityType") @Nullable String entityType,
-        @OutputCustomType.Parameter("fillBehavior") @Nullable CxPageFormParameterFillBehavior fillBehavior,
-        @OutputCustomType.Parameter("isList") @Nullable Boolean isList,
-        @OutputCustomType.Parameter("redact") @Nullable Boolean redact,
-        @OutputCustomType.Parameter("required") @Nullable Boolean required) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("entityType") @Nullable String entityType,
+        @CustomType.Parameter("fillBehavior") @Nullable CxPageFormParameterFillBehavior fillBehavior,
+        @CustomType.Parameter("isList") @Nullable Boolean isList,
+        @CustomType.Parameter("redact") @Nullable Boolean redact,
+        @CustomType.Parameter("required") @Nullable Boolean required) {
         this.displayName = displayName;
         this.entityType = entityType;
         this.fillBehavior = fillBehavior;

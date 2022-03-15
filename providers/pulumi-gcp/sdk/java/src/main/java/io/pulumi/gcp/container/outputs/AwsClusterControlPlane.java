@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.AwsClusterControlPlaneAwsServicesAuthentication;
 import io.pulumi.gcp.container.outputs.AwsClusterControlPlaneConfigEncryption;
 import io.pulumi.gcp.container.outputs.AwsClusterControlPlaneDatabaseEncryption;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AwsClusterControlPlane {
     /**
      * Required. Authentication configuration for management of AWS resources.
@@ -86,21 +86,21 @@ public final class AwsClusterControlPlane {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsClusterControlPlane(
-        @OutputCustomType.Parameter("awsServicesAuthentication") AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication,
-        @OutputCustomType.Parameter("configEncryption") AwsClusterControlPlaneConfigEncryption configEncryption,
-        @OutputCustomType.Parameter("databaseEncryption") AwsClusterControlPlaneDatabaseEncryption databaseEncryption,
-        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("mainVolume") @Nullable AwsClusterControlPlaneMainVolume mainVolume,
-        @OutputCustomType.Parameter("proxyConfig") @Nullable AwsClusterControlPlaneProxyConfig proxyConfig,
-        @OutputCustomType.Parameter("rootVolume") @Nullable AwsClusterControlPlaneRootVolume rootVolume,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("sshConfig") @Nullable AwsClusterControlPlaneSshConfig sshConfig,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("awsServicesAuthentication") AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication,
+        @CustomType.Parameter("configEncryption") AwsClusterControlPlaneConfigEncryption configEncryption,
+        @CustomType.Parameter("databaseEncryption") AwsClusterControlPlaneDatabaseEncryption databaseEncryption,
+        @CustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("mainVolume") @Nullable AwsClusterControlPlaneMainVolume mainVolume,
+        @CustomType.Parameter("proxyConfig") @Nullable AwsClusterControlPlaneProxyConfig proxyConfig,
+        @CustomType.Parameter("rootVolume") @Nullable AwsClusterControlPlaneRootVolume rootVolume,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("sshConfig") @Nullable AwsClusterControlPlaneSshConfig sshConfig,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("version") String version) {
         this.awsServicesAuthentication = awsServicesAuthentication;
         this.configEncryption = configEncryption;
         this.databaseEncryption = databaseEncryption;

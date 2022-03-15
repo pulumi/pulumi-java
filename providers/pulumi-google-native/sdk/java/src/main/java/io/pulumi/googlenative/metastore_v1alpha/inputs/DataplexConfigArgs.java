@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the Lake resources that this metastore service is attached to. The key is the lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
      * 
      */
-    @InputImport(name="lakeResources")
+    @Import(name="lakeResources")
       private final @Nullable Output<Map<String,String>> lakeResources;
 
     public Output<Map<String,String>> getLakeResources() {

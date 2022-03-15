@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
      * The management group Id which uniquely identify the Microsoft Azure management group.
      * 
      */
-    @InputImport(name="managementGroupId", required=true)
+    @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
 
     public String getManagementGroupId() {
@@ -27,7 +27,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends io.pul
      * Name for the network manager connection.
      * 
      */
-    @InputImport(name="networkManagerConnectionName", required=true)
+    @Import(name="networkManagerConnectionName", required=true)
       private final String networkManagerConnectionName;
 
     public String getNetworkManagerConnectionName() {

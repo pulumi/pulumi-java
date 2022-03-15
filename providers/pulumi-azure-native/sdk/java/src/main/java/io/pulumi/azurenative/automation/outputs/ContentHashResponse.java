@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentHashResponse {
     /**
      * Gets or sets the content hash algorithm used to hash the content.
@@ -20,10 +20,10 @@ public final class ContentHashResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentHashResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("value") String value) {
         this.algorithm = algorithm;
         this.value = value;
     }

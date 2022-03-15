@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class QosIpRangeResponse extends io.pulumi.resources.InvokeArgs {
      * End IP Address.
      * 
      */
-    @InputImport(name="endIP")
+    @Import(name="endIP")
       private final @Nullable String endIP;
 
     public Optional<String> getEndIP() {
@@ -33,7 +33,7 @@ public final class QosIpRangeResponse extends io.pulumi.resources.InvokeArgs {
      * Start IP Address.
      * 
      */
-    @InputImport(name="startIP")
+    @Import(name="startIP")
       private final @Nullable String startIP;
 
     public Optional<String> getStartIP() {

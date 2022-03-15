@@ -8,14 +8,14 @@ import io.pulumi.awsnative.iotanalytics.outputs.DatastorePartitions;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreRetentionPeriod;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatastoreResult {
     private final @Nullable DatastorePartitions datastorePartitions;
     private final @Nullable DatastoreStorage datastoreStorage;
@@ -24,14 +24,14 @@ public final class GetDatastoreResult {
     private final @Nullable DatastoreRetentionPeriod retentionPeriod;
     private final @Nullable List<DatastoreTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatastoreResult(
-        @OutputCustomType.Parameter("datastorePartitions") @Nullable DatastorePartitions datastorePartitions,
-        @OutputCustomType.Parameter("datastoreStorage") @Nullable DatastoreStorage datastoreStorage,
-        @OutputCustomType.Parameter("fileFormatConfiguration") @Nullable DatastoreFileFormatConfiguration fileFormatConfiguration,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("retentionPeriod") @Nullable DatastoreRetentionPeriod retentionPeriod,
-        @OutputCustomType.Parameter("tags") @Nullable List<DatastoreTag> tags) {
+        @CustomType.Parameter("datastorePartitions") @Nullable DatastorePartitions datastorePartitions,
+        @CustomType.Parameter("datastoreStorage") @Nullable DatastoreStorage datastoreStorage,
+        @CustomType.Parameter("fileFormatConfiguration") @Nullable DatastoreFileFormatConfiguration fileFormatConfiguration,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("retentionPeriod") @Nullable DatastoreRetentionPeriod retentionPeriod,
+        @CustomType.Parameter("tags") @Nullable List<DatastoreTag> tags) {
         this.datastorePartitions = datastorePartitions;
         this.datastoreStorage = datastoreStorage;
         this.fileFormatConfiguration = fileFormatConfiguration;

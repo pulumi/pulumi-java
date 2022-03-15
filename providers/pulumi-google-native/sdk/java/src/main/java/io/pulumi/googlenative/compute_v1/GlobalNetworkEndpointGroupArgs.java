@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.GlobalNetworkEndpointGroupNetworkEndpointType;
 import io.pulumi.googlenative.compute_v1.inputs.NetworkEndpointGroupAppEngineArgs;
 import io.pulumi.googlenative.compute_v1.inputs.NetworkEndpointGroupCloudFunctionArgs;
@@ -24,7 +24,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Metadata defined as annotations on the network endpoint group.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -35,7 +35,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    @InputImport(name="appEngine")
+    @Import(name="appEngine")
       private final @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine;
 
     public Output<NetworkEndpointGroupAppEngineArgs> getAppEngine() {
@@ -46,7 +46,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    @InputImport(name="cloudFunction")
+    @Import(name="cloudFunction")
       private final @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
     public Output<NetworkEndpointGroupCloudFunctionArgs> getCloudFunction() {
@@ -57,7 +57,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine or cloudFunction may be set.
      * 
      */
-    @InputImport(name="cloudRun")
+    @Import(name="cloudRun")
       private final @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun;
 
     public Output<NetworkEndpointGroupCloudRunArgs> getCloudRun() {
@@ -68,7 +68,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * The default port used if the port number is not specified in the network endpoint.
      * 
      */
-    @InputImport(name="defaultPort")
+    @Import(name="defaultPort")
       private final @Nullable Output<Integer> defaultPort;
 
     public Output<Integer> getDefaultPort() {
@@ -79,7 +79,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -90,7 +90,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -101,7 +101,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * The URL of the network to which all network endpoints in the NEG belong. Uses "default" project network if unspecified.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -112,14 +112,14 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT.
      * 
      */
-    @InputImport(name="networkEndpointType")
+    @Import(name="networkEndpointType")
       private final @Nullable Output<GlobalNetworkEndpointGroupNetworkEndpointType> networkEndpointType;
 
     public Output<GlobalNetworkEndpointGroupNetworkEndpointType> getNetworkEndpointType() {
         return this.networkEndpointType == null ? Output.empty() : this.networkEndpointType;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -130,14 +130,14 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * The target service url used to set up private service connection to a Google API. An example value is: "asia-northeast3-cloudkms.googleapis.com"
      * 
      */
-    @InputImport(name="pscTargetService")
+    @Import(name="pscTargetService")
       private final @Nullable Output<String> pscTargetService;
 
     public Output<String> getPscTargetService() {
         return this.pscTargetService == null ? Output.empty() : this.pscTargetService;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -148,7 +148,7 @@ public final class GlobalNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * Optional URL of the subnetwork to which all network endpoints in the NEG belong.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {

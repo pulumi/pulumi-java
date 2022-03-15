@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentAccessLogSetting {
     /**
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-.
@@ -22,10 +22,10 @@ public final class DeploymentAccessLogSetting {
      */
     private final @Nullable String format;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentAccessLogSetting(
-        @OutputCustomType.Parameter("destinationArn") @Nullable String destinationArn,
-        @OutputCustomType.Parameter("format") @Nullable String format) {
+        @CustomType.Parameter("destinationArn") @Nullable String destinationArn,
+        @CustomType.Parameter("format") @Nullable String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }

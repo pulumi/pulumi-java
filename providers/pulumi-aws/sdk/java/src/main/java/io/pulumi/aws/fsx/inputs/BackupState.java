@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name of the backup.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * The ID of the file system to back up. Required if backing up Lustre or Windows file systems.
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -41,7 +41,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -52,7 +52,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * AWS account identifier that created the file system.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -63,7 +63,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -85,7 +85,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * The type of the file system backup.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -96,7 +96,7 @@ public final class BackupState extends io.pulumi.resources.ResourceArgs {
      * The ID of the volume to back up. Required if backing up a ONTAP Volume.
      * 
      */
-    @InputImport(name="volumeId")
+    @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
     public Output<String> getVolumeId() {

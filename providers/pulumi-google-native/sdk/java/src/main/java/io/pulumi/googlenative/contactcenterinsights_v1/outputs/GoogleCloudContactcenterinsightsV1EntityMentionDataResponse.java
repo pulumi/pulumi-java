@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
     /**
      * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(
-        @OutputCustomType.Parameter("entityUniqueId") String entityUniqueId,
-        @OutputCustomType.Parameter("sentiment") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("entityUniqueId") String entityUniqueId,
+        @CustomType.Parameter("sentiment") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
+        @CustomType.Parameter("type") String type) {
         this.entityUniqueId = entityUniqueId;
         this.sentiment = sentiment;
         this.type = type;

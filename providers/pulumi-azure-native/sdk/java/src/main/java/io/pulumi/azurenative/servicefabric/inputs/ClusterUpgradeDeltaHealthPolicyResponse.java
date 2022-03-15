@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationDeltaHealthPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
      * 
      */
-    @InputImport(name="applicationDeltaHealthPolicies")
+    @Import(name="applicationDeltaHealthPolicies")
       private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
 
     public Map<String,ApplicationDeltaHealthPolicyResponse> getApplicationDeltaHealthPolicies() {
@@ -38,7 +38,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits. System services are not included in this.
      * 
      */
-    @InputImport(name="maxPercentDeltaUnhealthyApplications", required=true)
+    @Import(name="maxPercentDeltaUnhealthyApplications", required=true)
       private final Integer maxPercentDeltaUnhealthyApplications;
 
     public Integer getMaxPercentDeltaUnhealthyApplications() {
@@ -51,7 +51,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
      * 
      */
-    @InputImport(name="maxPercentDeltaUnhealthyNodes", required=true)
+    @Import(name="maxPercentDeltaUnhealthyNodes", required=true)
       private final Integer maxPercentDeltaUnhealthyNodes;
 
     public Integer getMaxPercentDeltaUnhealthyNodes() {
@@ -64,7 +64,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends io.pulumi.res
      * The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits.
      * 
      */
-    @InputImport(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
+    @Import(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
       private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
     public Integer getMaxPercentUpgradeDomainDeltaUnhealthyNodes() {

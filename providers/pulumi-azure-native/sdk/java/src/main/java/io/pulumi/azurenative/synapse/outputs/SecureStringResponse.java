@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecureStringResponse {
     /**
      * Type of the secret.
@@ -21,10 +21,10 @@ public final class SecureStringResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecureStringResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

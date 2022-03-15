@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOriginRequestPolicyResult {
     private final @Nullable String id;
     private final @Nullable String lastModifiedTime;
     private final @Nullable OriginRequestPolicyConfig originRequestPolicyConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOriginRequestPolicyResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("originRequestPolicyConfig") @Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("originRequestPolicyConfig") @Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.originRequestPolicyConfig = originRequestPolicyConfig;

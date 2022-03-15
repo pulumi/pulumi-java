@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.EdgeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.GkeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.KubernetesMetadataResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.gkehub_v1alpha2.outputs.MultiCloudClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.OnPremClusterResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MembershipEndpointResponse {
     /**
      * Optional. Specific information for a Google Edge cluster.
@@ -45,14 +45,14 @@ public final class MembershipEndpointResponse {
      */
     private final OnPremClusterResponse onPremCluster;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MembershipEndpointResponse(
-        @OutputCustomType.Parameter("edgeCluster") EdgeClusterResponse edgeCluster,
-        @OutputCustomType.Parameter("gkeCluster") GkeClusterResponse gkeCluster,
-        @OutputCustomType.Parameter("kubernetesMetadata") KubernetesMetadataResponse kubernetesMetadata,
-        @OutputCustomType.Parameter("kubernetesResource") KubernetesResourceResponse kubernetesResource,
-        @OutputCustomType.Parameter("multiCloudCluster") MultiCloudClusterResponse multiCloudCluster,
-        @OutputCustomType.Parameter("onPremCluster") OnPremClusterResponse onPremCluster) {
+        @CustomType.Parameter("edgeCluster") EdgeClusterResponse edgeCluster,
+        @CustomType.Parameter("gkeCluster") GkeClusterResponse gkeCluster,
+        @CustomType.Parameter("kubernetesMetadata") KubernetesMetadataResponse kubernetesMetadata,
+        @CustomType.Parameter("kubernetesResource") KubernetesResourceResponse kubernetesResource,
+        @CustomType.Parameter("multiCloudCluster") MultiCloudClusterResponse multiCloudCluster,
+        @CustomType.Parameter("onPremCluster") OnPremClusterResponse onPremCluster) {
         this.edgeCluster = edgeCluster;
         this.gkeCluster = gkeCluster;
         this.kubernetesMetadata = kubernetesMetadata;

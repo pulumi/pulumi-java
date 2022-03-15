@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeblockResponse {
     /**
      * Enable deblocker. The default is `false`.
@@ -21,10 +21,10 @@ public final class DeblockResponse {
      */
     private final Double strength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeblockResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("strength") Double strength) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("strength") Double strength) {
         this.enabled = enabled;
         this.strength = strength;
     }

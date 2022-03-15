@@ -7,7 +7,7 @@ import io.pulumi.awsnative.redshift.inputs.ScheduledActionPauseClusterMessageArg
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionResizeClusterMessageArgs;
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionResumeClusterMessageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,21 +16,21 @@ public final class ScheduledActionTypeArgs extends io.pulumi.resources.ResourceA
 
     public static final ScheduledActionTypeArgs Empty = new ScheduledActionTypeArgs();
 
-    @InputImport(name="pauseCluster")
+    @Import(name="pauseCluster")
       private final @Nullable Output<ScheduledActionPauseClusterMessageArgs> pauseCluster;
 
     public Output<ScheduledActionPauseClusterMessageArgs> getPauseCluster() {
         return this.pauseCluster == null ? Output.empty() : this.pauseCluster;
     }
 
-    @InputImport(name="resizeCluster")
+    @Import(name="resizeCluster")
       private final @Nullable Output<ScheduledActionResizeClusterMessageArgs> resizeCluster;
 
     public Output<ScheduledActionResizeClusterMessageArgs> getResizeCluster() {
         return this.resizeCluster == null ? Output.empty() : this.resizeCluster;
     }
 
-    @InputImport(name="resumeCluster")
+    @Import(name="resumeCluster")
       private final @Nullable Output<ScheduledActionResumeClusterMessageArgs> resumeCluster;
 
     public Output<ScheduledActionResumeClusterMessageArgs> getResumeCluster() {

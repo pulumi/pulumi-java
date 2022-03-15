@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceRecordResponse {
     /**
      * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
@@ -25,11 +25,11 @@ public final class ResourceRecordResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceRecordResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rrdata") String rrdata,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rrdata") String rrdata,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.rrdata = rrdata;
         this.type = type;

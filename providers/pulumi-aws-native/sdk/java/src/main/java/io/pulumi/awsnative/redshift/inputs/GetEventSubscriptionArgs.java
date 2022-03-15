@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
      * The name of the Amazon Redshift event notification subscription
      * 
      */
-    @InputImport(name="subscriptionName", required=true)
+    @Import(name="subscriptionName", required=true)
       private final String subscriptionName;
 
     public String getSubscriptionName() {

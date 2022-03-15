@@ -8,7 +8,7 @@ import io.pulumi.aws.elb.AppCookieStickinessPolicyArgs;
 import io.pulumi.aws.elb.inputs.AppCookieStickinessPolicyState;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * The application cookie whose lifetime the ELB's cookie should follow.
      * 
      */
-    @OutputExport(name="cookieName", type=String.class, parameters={})
+    @Export(name="cookieName", type=String.class, parameters={})
     private Output<String> cookieName;
 
     /**
@@ -51,7 +51,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * balancer.
      * 
      */
-    @OutputExport(name="lbPort", type=Integer.class, parameters={})
+    @Export(name="lbPort", type=Integer.class, parameters={})
     private Output<Integer> lbPort;
 
     /**
@@ -68,7 +68,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * should be attached.
      * 
      */
-    @OutputExport(name="loadBalancer", type=String.class, parameters={})
+    @Export(name="loadBalancer", type=String.class, parameters={})
     private Output<String> loadBalancer;
 
     /**
@@ -83,7 +83,7 @@ public class AppCookieStickinessPolicy extends io.pulumi.resources.CustomResourc
      * The name of the stickiness policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

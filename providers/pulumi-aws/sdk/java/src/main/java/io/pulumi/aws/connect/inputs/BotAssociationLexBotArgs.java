@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
      * The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
      * 
      */
-    @InputImport(name="lexRegion")
+    @Import(name="lexRegion")
       private final @Nullable Output<String> lexRegion;
 
     public Output<String> getLexRegion() {
@@ -29,7 +29,7 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
      * The name of the Amazon Lex (V1) bot.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyGKEClusterArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyNetworkArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResponsePolicyArgs Empty = new ResponsePolicyArgs();
 
-    @InputImport(name="clientOperationId")
+    @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
     public Output<String> getClientOperationId() {
@@ -28,7 +28,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided description for this Response Policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,7 +39,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The list of Google Kubernetes Engine clusters to which this response policy is applied.
      * 
      */
-    @InputImport(name="gkeClusters")
+    @Import(name="gkeClusters")
       private final @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
     public Output<List<ResponsePolicyGKEClusterArgs>> getGkeClusters() {
@@ -50,14 +50,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier for the resource; defined by the server (output only).
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -68,14 +68,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * List of network names specifying networks to which this policy is applied.
      * 
      */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
 
     public Output<List<ResponsePolicyNetworkArgs>> getNetworks() {
         return this.networks == null ? Output.empty() : this.networks;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -86,7 +86,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * User assigned name for this Response Policy.
      * 
      */
-    @InputImport(name="responsePolicyName")
+    @Import(name="responsePolicyName")
       private final @Nullable Output<String> responsePolicyName;
 
     public Output<String> getResponsePolicyName() {

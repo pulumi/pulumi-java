@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * Kubernetes API server version string as reported by `/version`.
      * 
      */
-    @InputImport(name="kubernetesApiServerVersion", required=true)
+    @Import(name="kubernetesApiServerVersion", required=true)
       private final String kubernetesApiServerVersion;
 
     public String getKubernetesApiServerVersion() {
@@ -32,7 +32,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * The total memory capacity as reported by the sum of all Kubernetes nodes resources, defined in MB.
      * 
      */
-    @InputImport(name="memoryMb", required=true)
+    @Import(name="memoryMb", required=true)
       private final Integer memoryMb;
 
     public Integer getMemoryMb() {
@@ -43,7 +43,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * Node count as reported by Kubernetes nodes resources.
      * 
      */
-    @InputImport(name="nodeCount", required=true)
+    @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
     public Integer getNodeCount() {
@@ -54,7 +54,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * Node providerID as reported by the first node in the list of nodes on the Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP), the node_count will be zero and the node_provider_id will be empty.
      * 
      */
-    @InputImport(name="nodeProviderId", required=true)
+    @Import(name="nodeProviderId", required=true)
       private final String nodeProviderId;
 
     public String getNodeProviderId() {
@@ -65,7 +65,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * The time at which these details were last updated. This update_time is different from the Membership-level update_time since EndpointDetails are updated internally for API consumers.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {
@@ -76,7 +76,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * vCPU count as reported by Kubernetes nodes resources.
      * 
      */
-    @InputImport(name="vcpuCount", required=true)
+    @Import(name="vcpuCount", required=true)
       private final Integer vcpuCount;
 
     public Integer getVcpuCount() {

@@ -5,12 +5,12 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.EtcdInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.NodeInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesClusterInfoResponse {
     /**
      * Etcd configuration
@@ -28,11 +28,11 @@ public final class KubernetesClusterInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesClusterInfoResponse(
-        @OutputCustomType.Parameter("etcdInfo") EtcdInfoResponse etcdInfo,
-        @OutputCustomType.Parameter("nodes") List<NodeInfoResponse> nodes,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("etcdInfo") EtcdInfoResponse etcdInfo,
+        @CustomType.Parameter("nodes") List<NodeInfoResponse> nodes,
+        @CustomType.Parameter("version") String version) {
         this.etcdInfo = etcdInfo;
         this.nodes = nodes;
         this.version = version;

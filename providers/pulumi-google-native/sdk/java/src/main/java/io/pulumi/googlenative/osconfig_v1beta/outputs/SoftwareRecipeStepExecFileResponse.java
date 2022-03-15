@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepExecFileResponse {
     /**
      * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
@@ -32,12 +32,12 @@ public final class SoftwareRecipeStepExecFileResponse {
      */
     private final String localPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeStepExecFileResponse(
-        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("localPath") String localPath) {
+        @CustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("localPath") String localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;

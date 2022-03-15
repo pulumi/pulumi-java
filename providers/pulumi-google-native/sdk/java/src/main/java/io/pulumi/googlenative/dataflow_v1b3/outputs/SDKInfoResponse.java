@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SDKInfoResponse {
     /**
      * The SDK Language.
@@ -20,10 +20,10 @@ public final class SDKInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SDKInfoResponse(
-        @OutputCustomType.Parameter("language") String language,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("language") String language,
+        @CustomType.Parameter("version") String version) {
         this.language = language;
         this.version = version;
     }

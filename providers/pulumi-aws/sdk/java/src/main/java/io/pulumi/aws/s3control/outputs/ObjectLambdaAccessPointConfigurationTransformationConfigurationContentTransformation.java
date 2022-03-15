@@ -4,10 +4,10 @@
 package io.pulumi.aws.s3control.outputs;
 
 import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation {
     /**
      * Configuration for an AWS Lambda function. See AWS Lambda below for more details.
@@ -15,8 +15,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda;
 
-    @OutputCustomType.Constructor
-    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(@OutputCustomType.Parameter("awsLambda") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
+    @CustomType.Constructor
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(@CustomType.Parameter("awsLambda") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
         this.awsLambda = awsLambda;
     }
 

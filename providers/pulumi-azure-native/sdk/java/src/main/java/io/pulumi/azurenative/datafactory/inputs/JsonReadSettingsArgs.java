@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class JsonReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Compression settings.
      * 
      */
-    @InputImport(name="compressionProperties")
+    @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
     public Output<Object> getCompressionProperties() {
@@ -38,7 +38,7 @@ public final class JsonReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'JsonReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

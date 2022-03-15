@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PacketCaptureFilterResponse {
     /**
      * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
@@ -37,13 +37,13 @@ public final class PacketCaptureFilterResponse {
      */
     private final @Nullable String remotePort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketCaptureFilterResponse(
-        @OutputCustomType.Parameter("localIPAddress") @Nullable String localIPAddress,
-        @OutputCustomType.Parameter("localPort") @Nullable String localPort,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("remoteIPAddress") @Nullable String remoteIPAddress,
-        @OutputCustomType.Parameter("remotePort") @Nullable String remotePort) {
+        @CustomType.Parameter("localIPAddress") @Nullable String localIPAddress,
+        @CustomType.Parameter("localPort") @Nullable String localPort,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("remoteIPAddress") @Nullable String remoteIPAddress,
+        @CustomType.Parameter("remotePort") @Nullable String remotePort) {
         this.localIPAddress = localIPAddress;
         this.localPort = localPort;
         this.protocol = protocol;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.azurenative.offazure.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.offazure.inputs.ResourceIdResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
 
     public static final PrivateEndpointConnectionPropertiesResponse Empty = new PrivateEndpointConnectionPropertiesResponse();
 
-    @InputImport(name="privateEndpoint", required=true)
+    @Import(name="privateEndpoint", required=true)
       private final ResourceIdResponse privateEndpoint;
 
     public ResourceIdResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
 
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

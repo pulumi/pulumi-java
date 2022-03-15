@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementNotStatementStatementOrStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementNotStatementStatementOrStatement {
     /**
      * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class RuleGroupRuleStatementNotStatementStatementOrStatement {
      */
     private final List<RuleGroupRuleStatementNotStatementStatementOrStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleStatementNotStatementStatementOrStatement(@OutputCustomType.Parameter("statements") List<RuleGroupRuleStatementNotStatementStatementOrStatementStatement> statements) {
+    @CustomType.Constructor
+    private RuleGroupRuleStatementNotStatementStatementOrStatement(@CustomType.Parameter("statements") List<RuleGroupRuleStatementNotStatementStatementOrStatementStatement> statements) {
         this.statements = statements;
     }
 

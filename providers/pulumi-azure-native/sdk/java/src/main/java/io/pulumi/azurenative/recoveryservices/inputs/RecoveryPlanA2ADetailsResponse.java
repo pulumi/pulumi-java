@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
      * Expected value is 'A2A'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -34,7 +34,7 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
      * The primary zone.
      * 
      */
-    @InputImport(name="primaryZone")
+    @Import(name="primaryZone")
       private final @Nullable String primaryZone;
 
     public Optional<String> getPrimaryZone() {
@@ -45,7 +45,7 @@ public final class RecoveryPlanA2ADetailsResponse extends io.pulumi.resources.In
      * The recovery zone.
      * 
      */
-    @InputImport(name="recoveryZone")
+    @Import(name="recoveryZone")
       private final @Nullable String recoveryZone;
 
     public Optional<String> getRecoveryZone() {

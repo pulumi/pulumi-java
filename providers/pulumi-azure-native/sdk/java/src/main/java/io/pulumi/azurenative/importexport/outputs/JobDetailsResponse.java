@@ -11,7 +11,7 @@ import io.pulumi.azurenative.importexport.outputs.PackageInformationResponse;
 import io.pulumi.azurenative.importexport.outputs.ReturnAddressResponse;
 import io.pulumi.azurenative.importexport.outputs.ReturnShippingResponse;
 import io.pulumi.azurenative.importexport.outputs.ShippingInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDetailsResponse {
     /**
      * Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
@@ -113,26 +113,26 @@ public final class JobDetailsResponse {
      */
     private final @Nullable String storageAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDetailsResponse(
-        @OutputCustomType.Parameter("backupDriveManifest") @Nullable Boolean backupDriveManifest,
-        @OutputCustomType.Parameter("cancelRequested") @Nullable Boolean cancelRequested,
-        @OutputCustomType.Parameter("deliveryPackage") @Nullable DeliveryPackageInformationResponse deliveryPackage,
-        @OutputCustomType.Parameter("diagnosticsPath") @Nullable String diagnosticsPath,
-        @OutputCustomType.Parameter("driveList") @Nullable List<DriveStatusResponse> driveList,
-        @OutputCustomType.Parameter("encryptionKey") @Nullable EncryptionKeyDetailsResponse encryptionKey,
-        @OutputCustomType.Parameter("export") @Nullable ExportResponse export,
-        @OutputCustomType.Parameter("incompleteBlobListUri") @Nullable String incompleteBlobListUri,
-        @OutputCustomType.Parameter("jobType") @Nullable String jobType,
-        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
-        @OutputCustomType.Parameter("percentComplete") @Nullable Integer percentComplete,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("returnAddress") @Nullable ReturnAddressResponse returnAddress,
-        @OutputCustomType.Parameter("returnPackage") @Nullable PackageInformationResponse returnPackage,
-        @OutputCustomType.Parameter("returnShipping") @Nullable ReturnShippingResponse returnShipping,
-        @OutputCustomType.Parameter("shippingInformation") @Nullable ShippingInformationResponse shippingInformation,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId) {
+        @CustomType.Parameter("backupDriveManifest") @Nullable Boolean backupDriveManifest,
+        @CustomType.Parameter("cancelRequested") @Nullable Boolean cancelRequested,
+        @CustomType.Parameter("deliveryPackage") @Nullable DeliveryPackageInformationResponse deliveryPackage,
+        @CustomType.Parameter("diagnosticsPath") @Nullable String diagnosticsPath,
+        @CustomType.Parameter("driveList") @Nullable List<DriveStatusResponse> driveList,
+        @CustomType.Parameter("encryptionKey") @Nullable EncryptionKeyDetailsResponse encryptionKey,
+        @CustomType.Parameter("export") @Nullable ExportResponse export,
+        @CustomType.Parameter("incompleteBlobListUri") @Nullable String incompleteBlobListUri,
+        @CustomType.Parameter("jobType") @Nullable String jobType,
+        @CustomType.Parameter("logLevel") @Nullable String logLevel,
+        @CustomType.Parameter("percentComplete") @Nullable Integer percentComplete,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("returnAddress") @Nullable ReturnAddressResponse returnAddress,
+        @CustomType.Parameter("returnPackage") @Nullable PackageInformationResponse returnPackage,
+        @CustomType.Parameter("returnShipping") @Nullable ReturnShippingResponse returnShipping,
+        @CustomType.Parameter("shippingInformation") @Nullable ShippingInformationResponse shippingInformation,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("storageAccountId") @Nullable String storageAccountId) {
         this.backupDriveManifest = backupDriveManifest;
         this.cancelRequested = cancelRequested;
         this.deliveryPackage = deliveryPackage;

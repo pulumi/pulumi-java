@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.LogLevel;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
      * Log level.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
     public Output<LogLevel> getLevel() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ses;
 import io.pulumi.awsnative.ses.inputs.ContactListTagArgs;
 import io.pulumi.awsnative.ses.inputs.ContactListTopicArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the contact list.
      * 
      */
-    @InputImport(name="contactListName")
+    @Import(name="contactListName")
       private final @Nullable Output<String> contactListName;
 
     public Output<String> getContactListName() {
@@ -32,7 +32,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the contact list.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * The tags (keys and values) associated with the contact list.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ContactListTagArgs>> tags;
 
     public Output<List<ContactListTagArgs>> getTags() {
@@ -54,7 +54,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
      * The topics associated with the contact list.
      * 
      */
-    @InputImport(name="topics")
+    @Import(name="topics")
       private final @Nullable Output<List<ContactListTopicArgs>> topics;
 
     public Output<List<ContactListTopicArgs>> getTopics() {

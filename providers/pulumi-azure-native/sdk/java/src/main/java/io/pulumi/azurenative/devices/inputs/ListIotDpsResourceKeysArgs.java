@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
      * The provisioning service name to get the shared access keys for.
      * 
      */
-    @InputImport(name="provisioningServiceName", required=true)
+    @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
 
     public String getProvisioningServiceName() {
@@ -27,7 +27,7 @@ public final class ListIotDpsResourceKeysArgs extends io.pulumi.resources.Invoke
      * resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -29,7 +29,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * The MD5 message digest of the SSH public key.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -40,7 +40,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -51,7 +51,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier for the SSH public key.
      * 
      */
-    @InputImport(name="sshPublicKeyId")
+    @Import(name="sshPublicKeyId")
       private final @Nullable Output<String> sshPublicKeyId;
 
     public Output<String> getSshPublicKeyId() {
@@ -62,7 +62,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -73,7 +73,7 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
      * The name of the IAM user to associate the SSH public key with.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

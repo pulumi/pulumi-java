@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.robomaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetRobotApplicationArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetRobotApplicationArgs Empty = new GetRobotApplicationArgs();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

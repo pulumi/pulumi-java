@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeDictionaryCloudStoragePath;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeDictionaryWordList;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionStoredInfoTypeDictionary {
     /**
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
@@ -25,10 +25,10 @@ public final class PreventionStoredInfoTypeDictionary {
      */
     private final @Nullable PreventionStoredInfoTypeDictionaryWordList wordList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionStoredInfoTypeDictionary(
-        @OutputCustomType.Parameter("cloudStoragePath") @Nullable PreventionStoredInfoTypeDictionaryCloudStoragePath cloudStoragePath,
-        @OutputCustomType.Parameter("wordList") @Nullable PreventionStoredInfoTypeDictionaryWordList wordList) {
+        @CustomType.Parameter("cloudStoragePath") @Nullable PreventionStoredInfoTypeDictionaryCloudStoragePath cloudStoragePath,
+        @CustomType.Parameter("wordList") @Nullable PreventionStoredInfoTypeDictionaryWordList wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }

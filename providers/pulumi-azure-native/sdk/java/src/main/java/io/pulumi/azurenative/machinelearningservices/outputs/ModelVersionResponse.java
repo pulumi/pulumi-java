@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.FlavorDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelVersionResponse {
     /**
      * ARM resource ID of the datastore where the asset is located.
@@ -50,15 +50,15 @@ public final class ModelVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelVersionResponse(
-        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("flavors") @Nullable Map<String,FlavorDataResponse> flavors,
-        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("flavors") @Nullable Map<String,FlavorDataResponse> flavors,
+        @CustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.datastoreId = datastoreId;
         this.description = description;
         this.flavors = flavors;

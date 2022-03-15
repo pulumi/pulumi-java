@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualHardDiskResponse {
     /**
      * Specifies the virtual hard disk's uri.
@@ -17,8 +17,8 @@ public final class VirtualHardDiskResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
-    private VirtualHardDiskResponse(@OutputCustomType.Parameter("uri") @Nullable String uri) {
+    @CustomType.Constructor
+    private VirtualHardDiskResponse(@CustomType.Parameter("uri") @Nullable String uri) {
         this.uri = uri;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
      * 
      */
-    @InputImport(name="azureActiveDirectoryApplicationIdOrUri")
+    @Import(name="azureActiveDirectoryApplicationIdOrUri")
       private final @Nullable Output<String> azureActiveDirectoryApplicationIdOrUri;
 
     public Output<String> getAzureActiveDirectoryApplicationIdOrUri() {
@@ -34,7 +34,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
      * 
      */
-    @InputImport(name="azureActiveDirectoryTenantId")
+    @Import(name="azureActiveDirectoryTenantId")
       private final @Nullable Output<String> azureActiveDirectoryTenantId;
 
     public Output<String> getAzureActiveDirectoryTenantId() {
@@ -46,7 +46,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * Expected value is 'WebHook'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -57,7 +57,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * The URL that represents the endpoint of the destination of an event subscription.
      * 
      */
-    @InputImport(name="endpointUrl")
+    @Import(name="endpointUrl")
       private final @Nullable Output<String> endpointUrl;
 
     public Output<String> getEndpointUrl() {
@@ -68,7 +68,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * Maximum number of events per batch.
      * 
      */
-    @InputImport(name="maxEventsPerBatch")
+    @Import(name="maxEventsPerBatch")
       private final @Nullable Output<Integer> maxEventsPerBatch;
 
     public Output<Integer> getMaxEventsPerBatch() {
@@ -79,7 +79,7 @@ public final class WebHookEventSubscriptionDestinationArgs extends io.pulumi.res
      * Preferred batch size in Kilobytes.
      * 
      */
-    @InputImport(name="preferredBatchSizeInKilobytes")
+    @Import(name="preferredBatchSizeInKilobytes")
       private final @Nullable Output<Integer> preferredBatchSizeInKilobytes;
 
     public Output<Integer> getPreferredBatchSizeInKilobytes() {

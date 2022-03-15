@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.EventSourceKind;
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -33,7 +33,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the event source.
      * 
      */
-    @InputImport(name="eventSourceName")
+    @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
 
     public Output<String> getEventSourceName() {
@@ -44,7 +44,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the event source.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,EventSourceKind>> kind;
 
     public Output<Either<String,EventSourceKind>> getKind() {
@@ -55,7 +55,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
-    @InputImport(name="localTimestamp")
+    @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
     public Output<LocalTimestampArgs> getLocalTimestamp() {
@@ -66,7 +66,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of additional properties for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

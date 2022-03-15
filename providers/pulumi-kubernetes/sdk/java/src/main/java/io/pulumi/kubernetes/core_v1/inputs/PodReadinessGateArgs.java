@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ public final class PodReadinessGateArgs extends io.pulumi.resources.ResourceArgs
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
      */
-    @InputImport(name="conditionType", required=true)
+    @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
     public Output<String> getConditionType() {

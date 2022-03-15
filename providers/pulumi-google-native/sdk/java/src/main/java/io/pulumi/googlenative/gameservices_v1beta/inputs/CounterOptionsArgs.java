@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.CustomFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Custom fields.
      * 
      */
-    @InputImport(name="customFields")
+    @Import(name="customFields")
       private final @Nullable Output<List<CustomFieldArgs>> customFields;
 
     public Output<List<CustomFieldArgs>> getCustomFields() {
@@ -35,7 +35,7 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The field value to attribute.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
@@ -46,7 +46,7 @@ public final class CounterOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The metric to update.
      * 
      */
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable Output<String> metric;
 
     public Output<String> getMetric() {

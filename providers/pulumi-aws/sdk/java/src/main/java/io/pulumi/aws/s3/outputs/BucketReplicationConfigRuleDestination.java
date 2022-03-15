@@ -7,13 +7,13 @@ import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationAccessCont
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationEncryptionConfiguration;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationMetrics;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationReplicationTime;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestination {
     /**
      * A configuration block that specifies the overrides to use for object owners on replication documented below. Specify this only in a cross-account scenario (where source and destination bucket owners are not the same), and you want to change replica ownership to the AWS account that owns the destination bucket. If this is not specified in the replication configuration, the replicas are owned by same AWS account that owns the source object. Must be used in conjunction with `account` owner override configuration.
@@ -51,15 +51,15 @@ public final class BucketReplicationConfigRuleDestination {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigRuleDestination(
-        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation,
-        @OutputCustomType.Parameter("account") @Nullable String account,
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration,
-        @OutputCustomType.Parameter("metrics") @Nullable BucketReplicationConfigRuleDestinationMetrics metrics,
-        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime,
-        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
+        @CustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation,
+        @CustomType.Parameter("account") @Nullable String account,
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("encryptionConfiguration") @Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration,
+        @CustomType.Parameter("metrics") @Nullable BucketReplicationConfigRuleDestinationMetrics metrics,
+        @CustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime,
+        @CustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
         this.bucket = bucket;

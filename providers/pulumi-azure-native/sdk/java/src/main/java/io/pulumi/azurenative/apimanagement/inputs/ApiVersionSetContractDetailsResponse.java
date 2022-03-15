@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * Description of API Version Set.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * Identifier for existing API Version Set. Omit this value to create a new Version Set.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -44,7 +44,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * The display Name of the API Version Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
      */
-    @InputImport(name="versionHeaderName")
+    @Import(name="versionHeaderName")
       private final @Nullable String versionHeaderName;
 
     public Optional<String> getVersionHeaderName() {
@@ -66,7 +66,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
      */
-    @InputImport(name="versionQueryName")
+    @Import(name="versionQueryName")
       private final @Nullable String versionQueryName;
 
     public Optional<String> getVersionQueryName() {
@@ -77,7 +77,7 @@ public final class ApiVersionSetContractDetailsResponse extends io.pulumi.resour
      * An value that determines where the API Version identifier will be located in a HTTP request.
      * 
      */
-    @InputImport(name="versioningScheme")
+    @Import(name="versioningScheme")
       private final @Nullable String versioningScheme;
 
     public Optional<String> getVersioningScheme() {

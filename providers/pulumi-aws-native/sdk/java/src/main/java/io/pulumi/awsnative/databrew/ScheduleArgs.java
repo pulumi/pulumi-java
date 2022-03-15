@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew;
 
 import io.pulumi.awsnative.databrew.inputs.ScheduleTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule cron
      * 
      */
-    @InputImport(name="cronExpression", required=true)
+    @Import(name="cronExpression", required=true)
       private final Output<String> cronExpression;
 
     public Output<String> getCronExpression() {
         return this.cronExpression;
     }
 
-    @InputImport(name="jobNames")
+    @Import(name="jobNames")
       private final @Nullable Output<List<String>> jobNames;
 
     public Output<List<String>> getJobNames() {
@@ -38,14 +38,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule Name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ScheduleTagArgs>> tags;
 
     public Output<List<ScheduleTagArgs>> getTags() {

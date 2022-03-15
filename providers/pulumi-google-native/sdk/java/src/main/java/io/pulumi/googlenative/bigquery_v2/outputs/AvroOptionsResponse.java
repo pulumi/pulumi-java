@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AvroOptionsResponse {
     /**
      * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
@@ -15,8 +15,8 @@ public final class AvroOptionsResponse {
      */
     private final Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor
-    private AvroOptionsResponse(@OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
+    @CustomType.Constructor
+    private AvroOptionsResponse(@CustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
     }
 

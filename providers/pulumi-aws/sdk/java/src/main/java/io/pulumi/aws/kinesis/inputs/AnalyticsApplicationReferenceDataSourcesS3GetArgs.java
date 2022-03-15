@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
      * The S3 Bucket ARN.
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -28,7 +28,7 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
      * The File Key name containing reference data.
      * 
      */
-    @InputImport(name="fileKey", required=true)
+    @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
     public Output<String> getFileKey() {
@@ -39,7 +39,7 @@ public final class AnalyticsApplicationReferenceDataSourcesS3GetArgs extends io.
      * The ARN of the IAM Role used to send application messages.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

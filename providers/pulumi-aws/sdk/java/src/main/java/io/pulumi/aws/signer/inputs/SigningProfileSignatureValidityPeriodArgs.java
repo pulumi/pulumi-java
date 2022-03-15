@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
 
     public static final SigningProfileSignatureValidityPeriodArgs Empty = new SigningProfileSignatureValidityPeriodArgs();
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
         return this.type;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Integer> value;
 
     public Output<Integer> getValue() {

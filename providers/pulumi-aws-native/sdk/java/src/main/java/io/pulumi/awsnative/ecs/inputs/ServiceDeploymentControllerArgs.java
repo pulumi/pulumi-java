@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServiceDeploymentControllerType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
 
     public static final ServiceDeploymentControllerArgs Empty = new ServiceDeploymentControllerArgs();
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ServiceDeploymentControllerType> type;
 
     public Output<ServiceDeploymentControllerType> getType() {

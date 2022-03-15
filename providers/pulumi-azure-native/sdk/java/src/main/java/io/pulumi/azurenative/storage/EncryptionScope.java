@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.EncryptionScopeArgs;
 import io.pulumi.azurenative.storage.outputs.EncryptionScopeKeyVaultPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * Gets the creation date and time of the encryption scope in UTC.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -50,7 +50,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * The key vault properties for the encryption scope. This is a required field if encryption scope 'source' attribute is set to 'Microsoft.KeyVault'.
      * 
      */
-    @OutputExport(name="keyVaultProperties", type=EncryptionScopeKeyVaultPropertiesResponse.class, parameters={})
+    @Export(name="keyVaultProperties", type=EncryptionScopeKeyVaultPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionScopeKeyVaultPropertiesResponse> keyVaultProperties;
 
     /**
@@ -64,7 +64,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * Gets the last modification date and time of the encryption scope in UTC.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -78,7 +78,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
      * 
      */
-    @OutputExport(name="requireInfrastructureEncryption", type=Boolean.class, parameters={})
+    @Export(name="requireInfrastructureEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requireInfrastructureEncryption;
 
     /**
@@ -106,7 +106,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
@@ -120,7 +120,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -134,7 +134,7 @@ public class EncryptionScope extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

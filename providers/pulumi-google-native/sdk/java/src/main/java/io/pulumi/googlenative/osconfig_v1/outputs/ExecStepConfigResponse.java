@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.GcsObjectResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecStepConfigResponse {
     /**
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
@@ -33,12 +33,12 @@ public final class ExecStepConfigResponse {
      */
     private final String localPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecStepConfigResponse(
-        @OutputCustomType.Parameter("allowedSuccessCodes") List<Integer> allowedSuccessCodes,
-        @OutputCustomType.Parameter("gcsObject") GcsObjectResponse gcsObject,
-        @OutputCustomType.Parameter("interpreter") String interpreter,
-        @OutputCustomType.Parameter("localPath") String localPath) {
+        @CustomType.Parameter("allowedSuccessCodes") List<Integer> allowedSuccessCodes,
+        @CustomType.Parameter("gcsObject") GcsObjectResponse gcsObject,
+        @CustomType.Parameter("interpreter") String interpreter,
+        @CustomType.Parameter("localPath") String localPath) {
         this.allowedSuccessCodes = allowedSuccessCodes;
         this.gcsObject = gcsObject;
         this.interpreter = interpreter;

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration {
     /**
      * The unit of time specifying the duration of an Auto-Tune maintenance window.
@@ -21,10 +21,10 @@ public final class GetDomainAutoTuneOptionMaintenanceScheduleDuration {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainAutoTuneOptionMaintenanceScheduleDuration(
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("value") Integer value) {
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("value") Integer value) {
         this.unit = unit;
         this.value = value;
     }

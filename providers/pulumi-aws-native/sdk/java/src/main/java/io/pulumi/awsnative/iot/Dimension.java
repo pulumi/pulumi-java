@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.DimensionArgs;
 import io.pulumi.awsnative.iot.enums.DimensionType;
 import io.pulumi.awsnative.iot.outputs.DimensionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon resource name) of the created dimension.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * A unique identifier for the dimension.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -54,7 +54,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * Specifies the value or list of values for the dimension.
      * 
      */
-    @OutputExport(name="stringValues", type=List.class, parameters={String.class})
+    @Export(name="stringValues", type=List.class, parameters={String.class})
     private Output<List<String>> stringValues;
 
     /**
@@ -68,7 +68,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * Metadata that can be used to manage the dimension.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DimensionTag.class})
+    @Export(name="tags", type=List.class, parameters={DimensionTag.class})
     private Output</* @Nullable */ List<DimensionTag>> tags;
 
     /**
@@ -82,7 +82,7 @@ public class Dimension extends io.pulumi.resources.CustomResource {
      * Specifies the type of the dimension.
      * 
      */
-    @OutputExport(name="type", type=DimensionType.class, parameters={})
+    @Export(name="type", type=DimensionType.class, parameters={})
     private Output<DimensionType> type;
 
     /**

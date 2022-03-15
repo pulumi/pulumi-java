@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceGuardOperationResponse {
     /**
      * Type of resource request.
@@ -20,10 +20,10 @@ public final class ResourceGuardOperationResponse {
      */
     private final String vaultCriticalOperation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceGuardOperationResponse(
-        @OutputCustomType.Parameter("requestResourceType") String requestResourceType,
-        @OutputCustomType.Parameter("vaultCriticalOperation") String vaultCriticalOperation) {
+        @CustomType.Parameter("requestResourceType") String requestResourceType,
+        @CustomType.Parameter("vaultCriticalOperation") String vaultCriticalOperation) {
         this.requestResourceType = requestResourceType;
         this.vaultCriticalOperation = vaultCriticalOperation;
     }

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * ARN of the Default Network ACL
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * Network ACL ID to manage. This attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
      * 
      */
-    @InputImport(name="defaultNetworkAclId")
+    @Import(name="defaultNetworkAclId")
       private final @Nullable Output<String> defaultNetworkAclId;
 
     public Output<String> getDefaultNetworkAclId() {
@@ -44,7 +44,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * Configuration block for an egress rule. Detailed below.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<List<DefaultNetworkAclEgressGetArgs>> egress;
 
     public Output<List<DefaultNetworkAclEgressGetArgs>> getEgress() {
@@ -55,7 +55,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * Configuration block for an ingress rule. Detailed below.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<DefaultNetworkAclIngressGetArgs>> ingress;
 
     public Output<List<DefaultNetworkAclIngressGetArgs>> getIngress() {
@@ -66,7 +66,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * ID of the AWS account that owns the Default Network ACL
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -77,7 +77,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * List of Subnet IDs to apply the ACL to. See the notes below on managing Subnets in the Default Network ACL
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -88,7 +88,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -110,7 +110,7 @@ public final class DefaultNetworkAclState extends io.pulumi.resources.ResourceAr
      * ID of the associated VPC
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

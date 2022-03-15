@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricBucketOptionsExplicitBuckets {
     /**
      * The values must be monotonically increasing.
@@ -16,8 +16,8 @@ public final class MetricBucketOptionsExplicitBuckets {
      */
     private final List<Double> bounds;
 
-    @OutputCustomType.Constructor
-    private MetricBucketOptionsExplicitBuckets(@OutputCustomType.Parameter("bounds") List<Double> bounds) {
+    @CustomType.Constructor
+    private MetricBucketOptionsExplicitBuckets(@CustomType.Parameter("bounds") List<Double> bounds) {
         this.bounds = bounds;
     }
 

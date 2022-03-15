@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.FactoryIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * The identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,FactoryIdentityType>> type;
 
     public Output<Either<String,FactoryIdentityType>> getType() {
@@ -37,7 +37,7 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * List of user assigned identities for the factory.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

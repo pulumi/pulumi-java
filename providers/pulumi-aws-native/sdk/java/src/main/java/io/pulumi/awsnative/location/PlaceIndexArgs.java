@@ -6,7 +6,7 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.location.enums.PlaceIndexPricingPlan;
 import io.pulumi.awsnative.location.inputs.PlaceIndexDataSourceConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,35 +16,35 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PlaceIndexArgs Empty = new PlaceIndexArgs();
 
-    @InputImport(name="dataSource", required=true)
+    @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
     public Output<String> getDataSource() {
         return this.dataSource;
     }
 
-    @InputImport(name="dataSourceConfiguration")
+    @Import(name="dataSourceConfiguration")
       private final @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
 
     public Output<PlaceIndexDataSourceConfigurationArgs> getDataSourceConfiguration() {
         return this.dataSourceConfiguration == null ? Output.empty() : this.dataSourceConfiguration;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
     public Output<String> getIndexName() {
         return this.indexName;
     }
 
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
 
     public Output<PlaceIndexPricingPlan> getPricingPlan() {

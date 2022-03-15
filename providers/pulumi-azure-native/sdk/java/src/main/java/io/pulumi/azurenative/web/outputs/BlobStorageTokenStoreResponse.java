@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobStorageTokenStoreResponse {
     /**
      * The name of the app setting containing the SAS URL of the blob storage containing the tokens.
@@ -17,8 +17,8 @@ public final class BlobStorageTokenStoreResponse {
      */
     private final @Nullable String sasUrlSettingName;
 
-    @OutputCustomType.Constructor
-    private BlobStorageTokenStoreResponse(@OutputCustomType.Parameter("sasUrlSettingName") @Nullable String sasUrlSettingName) {
+    @CustomType.Constructor
+    private BlobStorageTokenStoreResponse(@CustomType.Parameter("sasUrlSettingName") @Nullable String sasUrlSettingName) {
         this.sasUrlSettingName = sasUrlSettingName;
     }
 

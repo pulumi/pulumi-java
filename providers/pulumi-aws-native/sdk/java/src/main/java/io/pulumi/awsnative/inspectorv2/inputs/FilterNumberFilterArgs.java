@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
 
     public static final FilterNumberFilterArgs Empty = new FilterNumberFilterArgs();
 
-    @InputImport(name="lowerInclusive")
+    @Import(name="lowerInclusive")
       private final @Nullable Output<Double> lowerInclusive;
 
     public Output<Double> getLowerInclusive() {
         return this.lowerInclusive == null ? Output.empty() : this.lowerInclusive;
     }
 
-    @InputImport(name="upperInclusive")
+    @Import(name="upperInclusive")
       private final @Nullable Output<Double> upperInclusive;
 
     public Output<Double> getUpperInclusive() {

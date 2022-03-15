@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs.outputs;
 
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentPortVifResponse;
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentSubnetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadNetworkSegmentResult {
     /**
      * Gateway which to connect segment to.
@@ -66,18 +66,18 @@ public final class GetWorkloadNetworkSegmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadNetworkSegmentResult(
-        @OutputCustomType.Parameter("connectedGateway") @Nullable String connectedGateway,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("portVif") List<WorkloadNetworkSegmentPortVifResponse> portVif,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("revision") @Nullable Double revision,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subnet") @Nullable WorkloadNetworkSegmentSubnetResponse subnet,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("connectedGateway") @Nullable String connectedGateway,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("portVif") List<WorkloadNetworkSegmentPortVifResponse> portVif,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("revision") @Nullable Double revision,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subnet") @Nullable WorkloadNetworkSegmentSubnetResponse subnet,
+        @CustomType.Parameter("type") String type) {
         this.connectedGateway = connectedGateway;
         this.displayName = displayName;
         this.id = id;

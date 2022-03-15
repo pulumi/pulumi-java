@@ -6,14 +6,14 @@ package io.pulumi.awsnative.backup.outputs;
 import io.pulumi.awsnative.backup.outputs.ReportDeliveryChannelProperties;
 import io.pulumi.awsnative.backup.outputs.ReportPlanTag;
 import io.pulumi.awsnative.backup.outputs.ReportSettingProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReportPlanResult {
     /**
      * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
@@ -41,13 +41,13 @@ public final class GetReportPlanResult {
      */
     private final @Nullable ReportSettingProperties reportSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReportPlanResult(
-        @OutputCustomType.Parameter("reportDeliveryChannel") @Nullable ReportDeliveryChannelProperties reportDeliveryChannel,
-        @OutputCustomType.Parameter("reportPlanArn") @Nullable String reportPlanArn,
-        @OutputCustomType.Parameter("reportPlanDescription") @Nullable String reportPlanDescription,
-        @OutputCustomType.Parameter("reportPlanTags") @Nullable List<ReportPlanTag> reportPlanTags,
-        @OutputCustomType.Parameter("reportSetting") @Nullable ReportSettingProperties reportSetting) {
+        @CustomType.Parameter("reportDeliveryChannel") @Nullable ReportDeliveryChannelProperties reportDeliveryChannel,
+        @CustomType.Parameter("reportPlanArn") @Nullable String reportPlanArn,
+        @CustomType.Parameter("reportPlanDescription") @Nullable String reportPlanDescription,
+        @CustomType.Parameter("reportPlanTags") @Nullable List<ReportPlanTag> reportPlanTags,
+        @CustomType.Parameter("reportSetting") @Nullable ReportSettingProperties reportSetting) {
         this.reportDeliveryChannel = reportDeliveryChannel;
         this.reportPlanArn = reportPlanArn;
         this.reportPlanDescription = reportPlanDescription;

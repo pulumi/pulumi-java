@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobSparkRJobLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJobSparkRJob {
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
@@ -45,14 +45,14 @@ public final class WorkflowTemplateJobSparkRJob {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateJobSparkRJob(
-        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
-        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig,
-        @OutputCustomType.Parameter("mainRFileUri") String mainRFileUri,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
+        @CustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @CustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig,
+        @CustomType.Parameter("mainRFileUri") String mainRFileUri,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

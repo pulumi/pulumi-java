@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CertificateResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceResolverResponse {
     /**
      * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
@@ -32,12 +32,12 @@ public final class ServiceResolverResponse {
      */
     private final String serviceDirectoryService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceResolverResponse(
-        @OutputCustomType.Parameter("endpointFilter") String endpointFilter,
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("serverCertificates") List<CertificateResponse> serverCertificates,
-        @OutputCustomType.Parameter("serviceDirectoryService") String serviceDirectoryService) {
+        @CustomType.Parameter("endpointFilter") String endpointFilter,
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("serverCertificates") List<CertificateResponse> serverCertificates,
+        @CustomType.Parameter("serviceDirectoryService") String serviceDirectoryService) {
         this.endpointFilter = endpointFilter;
         this.hostname = hostname;
         this.serverCertificates = serverCertificates;

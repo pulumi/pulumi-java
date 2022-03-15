@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementClusterSelector {
     /**
      * Required. The cluster labels. Cluster must have all labels to match.
@@ -23,10 +23,10 @@ public final class WorkflowTemplatePlacementClusterSelector {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementClusterSelector(
-        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.clusterLabels = clusterLabels;
         this.zone = zone;
     }

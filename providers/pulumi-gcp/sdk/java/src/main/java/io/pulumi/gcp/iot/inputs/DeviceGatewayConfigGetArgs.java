@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * Possible values are `ASSOCIATION_ONLY`, `DEVICE_AUTH_TOKEN_ONLY`, and `ASSOCIATION_AND_DEVICE_AUTH_TOKEN`.
      * 
      */
-    @InputImport(name="gatewayAuthMethod")
+    @Import(name="gatewayAuthMethod")
       private final @Nullable Output<String> gatewayAuthMethod;
 
     public Output<String> getGatewayAuthMethod() {
@@ -32,7 +32,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * Possible values are `GATEWAY` and `NON_GATEWAY`.
      * 
      */
-    @InputImport(name="gatewayType")
+    @Import(name="gatewayType")
       private final @Nullable Output<String> gatewayType;
 
     public Output<String> getGatewayType() {
@@ -44,7 +44,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * The ID of the gateway the device accessed most recently.
      * 
      */
-    @InputImport(name="lastAccessedGatewayId")
+    @Import(name="lastAccessedGatewayId")
       private final @Nullable Output<String> lastAccessedGatewayId;
 
     public Output<String> getLastAccessedGatewayId() {
@@ -56,7 +56,7 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
      * The most recent time at which the device accessed the gateway specified in last_accessed_gateway.
      * 
      */
-    @InputImport(name="lastAccessedGatewayTime")
+    @Import(name="lastAccessedGatewayTime")
       private final @Nullable Output<String> lastAccessedGatewayTime;
 
     public Output<String> getLastAccessedGatewayTime() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleResponse;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse ex
 
     public static final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse Empty = new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse();
 
-    @InputImport(name="dailyMaintenanceWindow", required=true)
+    @Import(name="dailyMaintenanceWindow", required=true)
       private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
     public ResourcePolicyDailyCycleResponse getDailyMaintenanceWindow() {

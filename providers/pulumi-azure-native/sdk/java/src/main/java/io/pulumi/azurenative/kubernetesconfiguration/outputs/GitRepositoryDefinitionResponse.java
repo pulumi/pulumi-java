@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.RepositoryRefDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitRepositoryDefinitionResponse {
     /**
      * Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
@@ -54,16 +54,16 @@ public final class GitRepositoryDefinitionResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitRepositoryDefinitionResponse(
-        @OutputCustomType.Parameter("httpsCAFile") @Nullable String httpsCAFile,
-        @OutputCustomType.Parameter("httpsUser") @Nullable String httpsUser,
-        @OutputCustomType.Parameter("localAuthRef") @Nullable String localAuthRef,
-        @OutputCustomType.Parameter("repositoryRef") @Nullable RepositoryRefDefinitionResponse repositoryRef,
-        @OutputCustomType.Parameter("sshKnownHosts") @Nullable String sshKnownHosts,
-        @OutputCustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("httpsCAFile") @Nullable String httpsCAFile,
+        @CustomType.Parameter("httpsUser") @Nullable String httpsUser,
+        @CustomType.Parameter("localAuthRef") @Nullable String localAuthRef,
+        @CustomType.Parameter("repositoryRef") @Nullable RepositoryRefDefinitionResponse repositoryRef,
+        @CustomType.Parameter("sshKnownHosts") @Nullable String sshKnownHosts,
+        @CustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.httpsCAFile = httpsCAFile;
         this.httpsUser = httpsUser;
         this.localAuthRef = localAuthRef;

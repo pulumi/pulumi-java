@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CsvOptionsResponse {
     /**
      * [Optional] Indicates if BigQuery should accept rows that are missing trailing optional columns. If true, BigQuery treats missing trailing columns as null values. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.
@@ -46,15 +46,15 @@ public final class CsvOptionsResponse {
      */
     private final String skipLeadingRows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CsvOptionsResponse(
-        @OutputCustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
-        @OutputCustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
-        @OutputCustomType.Parameter("nullMarker") String nullMarker,
-        @OutputCustomType.Parameter("quote") String quote,
-        @OutputCustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
+        @CustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
+        @CustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @CustomType.Parameter("nullMarker") String nullMarker,
+        @CustomType.Parameter("quote") String quote,
+        @CustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;

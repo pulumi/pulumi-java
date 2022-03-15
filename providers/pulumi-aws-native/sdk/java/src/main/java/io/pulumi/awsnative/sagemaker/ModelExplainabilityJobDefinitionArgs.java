@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionNetw
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,49 +23,49 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
 
     public static final ModelExplainabilityJobDefinitionArgs Empty = new ModelExplainabilityJobDefinitionArgs();
 
-    @InputImport(name="jobDefinitionName")
+    @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
     }
 
-    @InputImport(name="jobResources", required=true)
+    @Import(name="jobResources", required=true)
       private final Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
-    @InputImport(name="modelExplainabilityAppSpecification", required=true)
+    @Import(name="modelExplainabilityAppSpecification", required=true)
       private final Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> modelExplainabilityAppSpecification;
 
     public Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> getModelExplainabilityAppSpecification() {
         return this.modelExplainabilityAppSpecification;
     }
 
-    @InputImport(name="modelExplainabilityBaselineConfig")
+    @Import(name="modelExplainabilityBaselineConfig")
       private final @Nullable Output<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> modelExplainabilityBaselineConfig;
 
     public Output<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> getModelExplainabilityBaselineConfig() {
         return this.modelExplainabilityBaselineConfig == null ? Output.empty() : this.modelExplainabilityBaselineConfig;
     }
 
-    @InputImport(name="modelExplainabilityJobInput", required=true)
+    @Import(name="modelExplainabilityJobInput", required=true)
       private final Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput;
 
     public Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> getModelExplainabilityJobInput() {
         return this.modelExplainabilityJobInput;
     }
 
-    @InputImport(name="modelExplainabilityJobOutputConfig", required=true)
+    @Import(name="modelExplainabilityJobOutputConfig", required=true)
       private final Output<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> modelExplainabilityJobOutputConfig;
 
     public Output<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> getModelExplainabilityJobOutputConfig() {
         return this.modelExplainabilityJobOutputConfig;
     }
 
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<ModelExplainabilityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Output<ModelExplainabilityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
@@ -76,14 +76,14 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stoppingCondition")
+    @Import(name="stoppingCondition")
       private final @Nullable Output<ModelExplainabilityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Output<ModelExplainabilityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
@@ -94,7 +94,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ModelExplainabilityJobDefinitionTagArgs>> tags;
 
     public Output<List<ModelExplainabilityJobDefinitionTagArgs>> getTags() {

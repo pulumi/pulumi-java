@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceOneDriveUsers;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class DataSourceOneDriveConfiguration extends io.pulumi.resources.I
 
     public static final DataSourceOneDriveConfiguration Empty = new DataSourceOneDriveConfiguration();
 
-    @InputImport(name="disableLocalGroups")
+    @Import(name="disableLocalGroups")
       private final @Nullable Boolean disableLocalGroups;
 
     public Optional<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Optional.empty() : Optional.ofNullable(this.disableLocalGroups);
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
     public List<String> getExclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
     public List<String> getInclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
-    @InputImport(name="oneDriveUsers", required=true)
+    @Import(name="oneDriveUsers", required=true)
       private final DataSourceOneDriveUsers oneDriveUsers;
 
     public DataSourceOneDriveUsers getOneDriveUsers() {
         return this.oneDriveUsers;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="tenantDomain", required=true)
+    @Import(name="tenantDomain", required=true)
       private final String tenantDomain;
 
     public String getTenantDomain() {

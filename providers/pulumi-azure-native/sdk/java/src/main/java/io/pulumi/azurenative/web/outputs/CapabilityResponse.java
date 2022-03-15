@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapabilityResponse {
     /**
      * Name of the SKU capability.
@@ -27,11 +27,11 @@ public final class CapabilityResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapabilityResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.reason = reason;
         this.value = value;

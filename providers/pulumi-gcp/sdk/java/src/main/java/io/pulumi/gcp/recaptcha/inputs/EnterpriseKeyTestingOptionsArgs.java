@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
      * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
      * 
      */
-    @InputImport(name="testingChallenge")
+    @Import(name="testingChallenge")
       private final @Nullable Output<String> testingChallenge;
 
     public Output<String> getTestingChallenge() {
@@ -30,7 +30,7 @@ public final class EnterpriseKeyTestingOptionsArgs extends io.pulumi.resources.R
      * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
      * 
      */
-    @InputImport(name="testingScore")
+    @Import(name="testingScore")
       private final @Nullable Output<Double> testingScore;
 
     public Output<Double> getTestingScore() {

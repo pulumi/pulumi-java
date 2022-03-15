@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
      * 
      */
-    @InputImport(name="eventDeliveryFailureTopicArn")
+    @Import(name="eventDeliveryFailureTopicArn")
       private final @Nullable Output<String> eventDeliveryFailureTopicArn;
 
     public Output<String> getEventDeliveryFailureTopicArn() {
@@ -29,7 +29,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * SNS Topic triggered when a new platform endpoint is added to your platform application.
      * 
      */
-    @InputImport(name="eventEndpointCreatedTopicArn")
+    @Import(name="eventEndpointCreatedTopicArn")
       private final @Nullable Output<String> eventEndpointCreatedTopicArn;
 
     public Output<String> getEventEndpointCreatedTopicArn() {
@@ -40,7 +40,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
      * 
      */
-    @InputImport(name="eventEndpointDeletedTopicArn")
+    @Import(name="eventEndpointDeletedTopicArn")
       private final @Nullable Output<String> eventEndpointDeletedTopicArn;
 
     public Output<String> getEventEndpointDeletedTopicArn() {
@@ -51,7 +51,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * SNS Topic triggered when an existing platform endpoint is changed from your platform application.
      * 
      */
-    @InputImport(name="eventEndpointUpdatedTopicArn")
+    @Import(name="eventEndpointUpdatedTopicArn")
       private final @Nullable Output<String> eventEndpointUpdatedTopicArn;
 
     public Output<String> getEventEndpointUpdatedTopicArn() {
@@ -62,7 +62,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * The IAM role permitted to receive failure feedback for this application.
      * 
      */
-    @InputImport(name="failureFeedbackRoleArn")
+    @Import(name="failureFeedbackRoleArn")
       private final @Nullable Output<String> failureFeedbackRoleArn;
 
     public Output<String> getFailureFeedbackRoleArn() {
@@ -73,7 +73,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * The friendly name for the SNS platform application
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -84,7 +84,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -95,7 +95,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    @InputImport(name="platformCredential", required=true)
+    @Import(name="platformCredential", required=true)
       private final Output<String> platformCredential;
 
     public Output<String> getPlatformCredential() {
@@ -106,7 +106,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    @InputImport(name="platformPrincipal")
+    @Import(name="platformPrincipal")
       private final @Nullable Output<String> platformPrincipal;
 
     public Output<String> getPlatformPrincipal() {
@@ -117,7 +117,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * The IAM role permitted to receive success feedback for this application.
      * 
      */
-    @InputImport(name="successFeedbackRoleArn")
+    @Import(name="successFeedbackRoleArn")
       private final @Nullable Output<String> successFeedbackRoleArn;
 
     public Output<String> getSuccessFeedbackRoleArn() {
@@ -128,7 +128,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
      * The percentage of success to sample (0-100)
      * 
      */
-    @InputImport(name="successFeedbackSampleRate")
+    @Import(name="successFeedbackSampleRate")
       private final @Nullable Output<String> successFeedbackSampleRate;
 
     public Output<String> getSuccessFeedbackSampleRate() {

@@ -4,10 +4,10 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileUserSettingsTensorBoardAppSettings {
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
@@ -15,8 +15,8 @@ public final class UserProfileUserSettingsTensorBoardAppSettings {
      */
     private final UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor
-    private UserProfileUserSettingsTensorBoardAppSettings(@OutputCustomType.Parameter("defaultResourceSpec") UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
+    @CustomType.Constructor
+    private UserProfileUserSettingsTensorBoardAppSettings(@CustomType.Parameter("defaultResourceSpec") UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 

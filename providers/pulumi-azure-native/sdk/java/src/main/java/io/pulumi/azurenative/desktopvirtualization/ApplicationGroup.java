@@ -11,7 +11,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Resource Type of ApplicationGroup.
      * 
      */
-    @OutputExport(name="applicationGroupType", type=String.class, parameters={})
+    @Export(name="applicationGroupType", type=String.class, parameters={})
     private Output<String> applicationGroupType;
 
     /**
@@ -54,7 +54,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Is cloud pc resource.
      * 
      */
-    @OutputExport(name="cloudPcResource", type=Boolean.class, parameters={})
+    @Export(name="cloudPcResource", type=Boolean.class, parameters={})
     private Output<Boolean> cloudPcResource;
 
     /**
@@ -68,7 +68,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Description of ApplicationGroup.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -82,7 +82,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -96,7 +96,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Friendly name of ApplicationGroup.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -110,7 +110,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * HostPool arm path of ApplicationGroup.
      * 
      */
-    @OutputExport(name="hostPoolArmPath", type=String.class, parameters={})
+    @Export(name="hostPoolArmPath", type=String.class, parameters={})
     private Output<String> hostPoolArmPath;
 
     /**
@@ -120,7 +120,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getHostPoolArmPath() {
         return this.hostPoolArmPath;
     }
-    @OutputExport(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
+    @Export(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> getIdentity() {
@@ -130,7 +130,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -144,7 +144,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -158,7 +158,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
@@ -172,7 +172,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * The registration info of HostPool.
      * 
      */
-    @OutputExport(name="migrationRequest", type=MigrationRequestPropertiesResponse.class, parameters={})
+    @Export(name="migrationRequest", type=MigrationRequestPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ MigrationRequestPropertiesResponse> migrationRequest;
 
     /**
@@ -186,7 +186,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -200,7 +200,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * ObjectId of ApplicationGroup. (internal use)
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
@@ -210,13 +210,13 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getObjectId() {
         return this.objectId;
     }
-    @OutputExport(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
+    @Export(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> getPlan() {
         return this.plan;
     }
-    @OutputExport(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
+    @Export(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> getSku() {
@@ -226,7 +226,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -240,7 +240,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -254,7 +254,7 @@ public class ApplicationGroup extends io.pulumi.resources.CustomResource {
      * Workspace arm path of ApplicationGroup.
      * 
      */
-    @OutputExport(name="workspaceArmPath", type=String.class, parameters={})
+    @Export(name="workspaceArmPath", type=String.class, parameters={})
     private Output<String> workspaceArmPath;
 
     /**

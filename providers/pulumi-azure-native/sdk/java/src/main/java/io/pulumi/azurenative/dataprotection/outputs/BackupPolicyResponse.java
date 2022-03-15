@@ -6,12 +6,12 @@ package io.pulumi.azurenative.dataprotection.outputs;
 import io.pulumi.azurenative.dataprotection.outputs.AzureBackupRuleResponse;
 import io.pulumi.azurenative.dataprotection.outputs.AzureRetentionRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupPolicyResponse {
     /**
      * Type of datasource for the backup management
@@ -29,11 +29,11 @@ public final class BackupPolicyResponse {
      */
     private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupPolicyResponse(
-        @OutputCustomType.Parameter("datasourceTypes") List<String> datasourceTypes,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("policyRules") List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
+        @CustomType.Parameter("datasourceTypes") List<String> datasourceTypes,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("policyRules") List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
         this.datasourceTypes = datasourceTypes;
         this.objectType = objectType;
         this.policyRules = policyRules;

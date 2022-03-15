@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheKeyQueryStringActionParametersResponse {
     private final String odataType;
     /**
@@ -23,11 +23,11 @@ public final class CacheKeyQueryStringActionParametersResponse {
      */
     private final String queryStringBehavior;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheKeyQueryStringActionParametersResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("queryParameters") @Nullable String queryParameters,
-        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("queryParameters") @Nullable String queryParameters,
+        @CustomType.Parameter("queryStringBehavior") String queryStringBehavior) {
         this.odataType = odataType;
         this.queryParameters = queryParameters;
         this.queryStringBehavior = queryStringBehavior;

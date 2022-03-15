@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.redis.inputs.GetInstanceMaintenancePolicyWeeklyMaintenanceWindow;
 import java.lang.String;
 import java.util.List;
@@ -14,28 +14,28 @@ public final class GetInstanceMaintenancePolicy extends io.pulumi.resources.Invo
 
     public static final GetInstanceMaintenancePolicy Empty = new GetInstanceMaintenancePolicy();
 
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
     }
 
-    @InputImport(name="weeklyMaintenanceWindows", required=true)
+    @Import(name="weeklyMaintenanceWindows", required=true)
       private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
 
     public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> getWeeklyMaintenanceWindows() {

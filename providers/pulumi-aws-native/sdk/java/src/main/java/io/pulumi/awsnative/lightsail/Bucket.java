@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lightsail.BucketArgs;
 import io.pulumi.awsnative.lightsail.outputs.BucketAccessRules;
 import io.pulumi.awsnative.lightsail.outputs.BucketTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * 
      */
-    @OutputExport(name="ableToUpdateBundle", type=Boolean.class, parameters={})
+    @Export(name="ableToUpdateBundle", type=Boolean.class, parameters={})
     private Output<Boolean> ableToUpdateBundle;
 
     /**
@@ -35,13 +35,13 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getAbleToUpdateBundle() {
         return this.ableToUpdateBundle;
     }
-    @OutputExport(name="accessRules", type=BucketAccessRules.class, parameters={})
+    @Export(name="accessRules", type=BucketAccessRules.class, parameters={})
     private Output</* @Nullable */ BucketAccessRules> accessRules;
 
     public Output</* @Nullable */ BucketAccessRules> getAccessRules() {
         return this.accessRules;
     }
-    @OutputExport(name="bucketArn", type=String.class, parameters={})
+    @Export(name="bucketArn", type=String.class, parameters={})
     private Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -51,7 +51,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The name for the bucket.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -65,7 +65,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The ID of the bundle to use for the bucket.
      * 
      */
-    @OutputExport(name="bundleId", type=String.class, parameters={})
+    @Export(name="bundleId", type=String.class, parameters={})
     private Output<String> bundleId;
 
     /**
@@ -79,7 +79,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Specifies whether to enable or disable versioning of objects in the bucket.
      * 
      */
-    @OutputExport(name="objectVersioning", type=Boolean.class, parameters={})
+    @Export(name="objectVersioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> objectVersioning;
 
     /**
@@ -93,7 +93,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * An array of strings to specify the AWS account IDs that can access the bucket.
      * 
      */
-    @OutputExport(name="readOnlyAccessAccounts", type=List.class, parameters={String.class})
+    @Export(name="readOnlyAccessAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> readOnlyAccessAccounts;
 
     /**
@@ -107,7 +107,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The names of the Lightsail resources for which to set bucket access.
      * 
      */
-    @OutputExport(name="resourcesReceivingAccess", type=List.class, parameters={String.class})
+    @Export(name="resourcesReceivingAccess", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resourcesReceivingAccess;
 
     /**
@@ -121,7 +121,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={BucketTag.class})
+    @Export(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The URL of the bucket.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

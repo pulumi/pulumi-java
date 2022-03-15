@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Associated Azure subscription Id for the elastic deployment.
      * 
      */
-    @InputImport(name="azureSubscriptionId", required=true)
+    @Import(name="azureSubscriptionId", required=true)
       private final String azureSubscriptionId;
 
     public String getAzureSubscriptionId() {
@@ -31,7 +31,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Elastic deployment Id
      * 
      */
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
     public String getDeploymentId() {
@@ -42,7 +42,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Region where Deployment at Elastic side took place.
      * 
      */
-    @InputImport(name="elasticsearchRegion", required=true)
+    @Import(name="elasticsearchRegion", required=true)
       private final String elasticsearchRegion;
 
     public String getElasticsearchRegion() {
@@ -53,7 +53,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Elasticsearch ingestion endpoint of the Elastic deployment.
      * 
      */
-    @InputImport(name="elasticsearchServiceUrl", required=true)
+    @Import(name="elasticsearchServiceUrl", required=true)
       private final String elasticsearchServiceUrl;
 
     public String getElasticsearchServiceUrl() {
@@ -64,7 +64,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Kibana endpoint of the Elastic deployment.
      * 
      */
-    @InputImport(name="kibanaServiceUrl", required=true)
+    @Import(name="kibanaServiceUrl", required=true)
       private final String kibanaServiceUrl;
 
     public String getKibanaServiceUrl() {
@@ -75,7 +75,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Kibana dashboard sso URL of the Elastic deployment.
      * 
      */
-    @InputImport(name="kibanaSsoUrl", required=true)
+    @Import(name="kibanaSsoUrl", required=true)
       private final String kibanaSsoUrl;
 
     public String getKibanaSsoUrl() {
@@ -86,7 +86,7 @@ public final class ElasticCloudDeploymentResponse extends io.pulumi.resources.In
      * Elastic deployment name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

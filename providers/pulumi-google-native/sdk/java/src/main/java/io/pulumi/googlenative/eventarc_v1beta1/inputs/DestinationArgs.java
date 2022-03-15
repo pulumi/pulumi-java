@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.CloudRunServiceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project as the trigger.
      * 
      */
-    @InputImport(name="cloudRunService")
+    @Import(name="cloudRunService")
       private final @Nullable Output<CloudRunServiceArgs> cloudRunService;
 
     public Output<CloudRunServiceArgs> getCloudRunService() {

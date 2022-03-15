@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Taint {
     /**
      * Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.
@@ -37,12 +37,12 @@ public final class Taint {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Taint(
-        @OutputCustomType.Parameter("effect") String effect,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("timeAdded") @Nullable String timeAdded,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("effect") String effect,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("timeAdded") @Nullable String timeAdded,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.timeAdded = timeAdded;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codepipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineArtifactStoreEncryptionKey {
     /**
      * The KMS key ARN or ID
@@ -20,10 +20,10 @@ public final class PipelineArtifactStoreEncryptionKey {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineArtifactStoreEncryptionKey(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.type = type;
     }

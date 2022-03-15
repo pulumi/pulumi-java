@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1.enums.InstanceBackendType;
 import io.pulumi.googlenative.sqladmin_v1.enums.InstanceDatabaseVersion;
 import io.pulumi.googlenative.sqladmin_v1.enums.InstanceInstanceType;
@@ -35,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
-    @InputImport(name="backendType")
+    @Import(name="backendType")
       private final @Nullable Output<InstanceBackendType> backendType;
 
     public Output<InstanceBackendType> getBackendType() {
@@ -46,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Connection name of the Cloud SQL instance used in connection strings.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -57,7 +57,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
      * 
      */
-    @InputImport(name="currentDiskSize")
+    @Import(name="currentDiskSize")
       private final @Nullable Output<String> currentDiskSize;
 
     public Output<String> getCurrentDiskSize() {
@@ -68,7 +68,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
      * 
      */
-    @InputImport(name="databaseVersion")
+    @Import(name="databaseVersion")
       private final @Nullable Output<InstanceDatabaseVersion> databaseVersion;
 
     public Output<InstanceDatabaseVersion> getDatabaseVersion() {
@@ -79,7 +79,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Disk encryption configuration specific to an instance.
      * 
      */
-    @InputImport(name="diskEncryptionConfiguration")
+    @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
     public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
@@ -90,7 +90,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Disk encryption status specific to an instance.
      * 
      */
-    @InputImport(name="diskEncryptionStatus")
+    @Import(name="diskEncryptionStatus")
       private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
     public Output<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
@@ -101,7 +101,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name and status of the failover replica.
      * 
      */
-    @InputImport(name="failoverReplica")
+    @Import(name="failoverReplica")
       private final @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
 
     public Output<InstanceFailoverReplicaArgs> getFailoverReplica() {
@@ -112,7 +112,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
      * 
      */
-    @InputImport(name="gceZone")
+    @Import(name="gceZone")
       private final @Nullable Output<String> gceZone;
 
     public Output<String> getGceZone() {
@@ -123,7 +123,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The instance type.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<InstanceInstanceType> instanceType;
 
     public Output<InstanceInstanceType> getInstanceType() {
@@ -134,7 +134,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The assigned IP addresses for the instance.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<IpMappingArgs>> ipAddresses;
 
     public Output<List<IpMappingArgs>> getIpAddresses() {
@@ -145,7 +145,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * This is always `sql#instance`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -156,7 +156,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the instance which will act as primary in the replication setup.
      * 
      */
-    @InputImport(name="masterInstanceName")
+    @Import(name="masterInstanceName")
       private final @Nullable Output<String> masterInstanceName;
 
     public Output<String> getMasterInstanceName() {
@@ -167,7 +167,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum disk size of the instance in bytes.
      * 
      */
-    @InputImport(name="maxDiskSize")
+    @Import(name="maxDiskSize")
       private final @Nullable Output<String> maxDiskSize;
 
     public Output<String> getMaxDiskSize() {
@@ -178,7 +178,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -189,7 +189,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration specific to on-premises instances.
      * 
      */
-    @InputImport(name="onPremisesConfiguration")
+    @Import(name="onPremisesConfiguration")
       private final @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
 
     public Output<OnPremisesConfigurationArgs> getOnPremisesConfiguration() {
@@ -200,7 +200,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
      * 
      */
-    @InputImport(name="outOfDiskReport")
+    @Import(name="outOfDiskReport")
       private final @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
 
     public Output<SqlOutOfDiskReportArgs> getOutOfDiskReport() {
@@ -211,7 +211,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -222,7 +222,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -233,7 +233,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration specific to failover replicas and read replicas.
      * 
      */
-    @InputImport(name="replicaConfiguration")
+    @Import(name="replicaConfiguration")
       private final @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
 
     public Output<ReplicaConfigurationArgs> getReplicaConfiguration() {
@@ -244,7 +244,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The replicas of the instance.
      * 
      */
-    @InputImport(name="replicaNames")
+    @Import(name="replicaNames")
       private final @Nullable Output<List<String>> replicaNames;
 
     public Output<List<String>> getReplicaNames() {
@@ -255,7 +255,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Initial root password. Use only on creation.
      * 
      */
-    @InputImport(name="rootPassword")
+    @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
     public Output<String> getRootPassword() {
@@ -266,7 +266,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The status indicating if instance satisfiesPzs. Reserved for future use.
      * 
      */
-    @InputImport(name="satisfiesPzs")
+    @Import(name="satisfiesPzs")
       private final @Nullable Output<Boolean> satisfiesPzs;
 
     public Output<Boolean> getSatisfiesPzs() {
@@ -277,7 +277,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
      */
-    @InputImport(name="scheduledMaintenance")
+    @Import(name="scheduledMaintenance")
       private final @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
 
     public Output<SqlScheduledMaintenanceArgs> getScheduledMaintenance() {
@@ -288,7 +288,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
      * 
      */
-    @InputImport(name="secondaryGceZone")
+    @Import(name="secondaryGceZone")
       private final @Nullable Output<String> secondaryGceZone;
 
     public Output<String> getSecondaryGceZone() {
@@ -299,7 +299,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of this resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -310,7 +310,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * SSL configuration.
      * 
      */
-    @InputImport(name="serverCaCert")
+    @Import(name="serverCaCert")
       private final @Nullable Output<SslCertArgs> serverCaCert;
 
     public Output<SslCertArgs> getServerCaCert() {
@@ -321,7 +321,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The service account email address assigned to the instance.\This property is read-only.
      * 
      */
-    @InputImport(name="serviceAccountEmailAddress")
+    @Import(name="serviceAccountEmailAddress")
       private final @Nullable Output<String> serviceAccountEmailAddress;
 
     public Output<String> getServiceAccountEmailAddress() {
@@ -332,7 +332,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The user settings.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<SettingsArgs> settings;
 
     public Output<SettingsArgs> getSettings() {
@@ -343,7 +343,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The current serving state of the Cloud SQL instance.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<InstanceState> state;
 
     public Output<InstanceState> getState() {
@@ -354,7 +354,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If the instance state is SUSPENDED, the reason for the suspension.
      * 
      */
-    @InputImport(name="suspensionReason")
+    @Import(name="suspensionReason")
       private final @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
 
     public Output<List<InstanceSuspensionReasonItem>> getSuspensionReason() {

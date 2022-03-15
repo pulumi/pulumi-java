@@ -11,7 +11,6 @@ import io.pulumi.azurenative.costmanagement.outputs.ExportExecutionListResultRes
 import io.pulumi.azurenative.costmanagement.outputs.ExportScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +37,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Has the definition for the export.
      * 
      */
-    @OutputExport(name="definition", type=ExportDefinitionResponse.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="definition", type=ExportDefinitionResponse.class, parameters={})
     private Output<ExportDefinitionResponse> definition;
 
     /**
@@ -52,7 +51,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Has delivery information for the export.
      * 
      */
-    @OutputExport(name="deliveryInfo", type=ExportDeliveryInfoResponse.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="deliveryInfo", type=ExportDeliveryInfoResponse.class, parameters={})
     private Output<ExportDeliveryInfoResponse> deliveryInfo;
 
     /**
@@ -66,7 +65,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -80,7 +79,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * The format of the export being delivered. Currently only 'Csv' is supported.
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
@@ -94,7 +93,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +107,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * If the export has an active schedule, provides an estimate of the next execution time.
      * 
      */
-    @OutputExport(name="nextRunTimeEstimate", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="nextRunTimeEstimate", type=String.class, parameters={})
     private Output<String> nextRunTimeEstimate;
 
     /**
@@ -122,7 +121,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * If requested, has the most recent execution history for the export.
      * 
      */
-    @OutputExport(name="runHistory", type=ExportExecutionListResultResponse.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="runHistory", type=ExportExecutionListResultResponse.class, parameters={})
     private Output</* @Nullable */ ExportExecutionListResultResponse> runHistory;
 
     /**
@@ -136,7 +135,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Has schedule information for the export.
      * 
      */
-    @OutputExport(name="schedule", type=ExportScheduleResponse.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="schedule", type=ExportScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ExportScheduleResponse> schedule;
 
     /**
@@ -150,7 +149,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileMetricToRetain {
     /**
      * What is measured by the behavior.
@@ -19,10 +19,10 @@ public final class SecurityProfileMetricToRetain {
     private final String metric;
     private final @Nullable SecurityProfileMetricDimension metricDimension;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileMetricToRetain(
-        @OutputCustomType.Parameter("metric") String metric,
-        @OutputCustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension) {
+        @CustomType.Parameter("metric") String metric,
+        @CustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension) {
         this.metric = metric;
         this.metricDimension = metricDimension;
     }

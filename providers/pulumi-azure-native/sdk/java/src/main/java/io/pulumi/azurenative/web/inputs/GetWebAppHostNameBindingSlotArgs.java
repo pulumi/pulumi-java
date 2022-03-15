@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * Hostname in the hostname binding.
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final String hostName;
 
     public String getHostName() {
@@ -27,7 +27,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetWebAppHostNameBindingSlotArgs extends io.pulumi.resources.
      * Name of the deployment slot. If a slot is not specified, the API the named binding for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final String slot;
 
     public String getSlot() {

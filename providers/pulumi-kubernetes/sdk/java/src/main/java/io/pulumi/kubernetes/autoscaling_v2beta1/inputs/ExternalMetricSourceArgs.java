@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * metricName is the name of the metric in question.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -34,7 +34,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * metricSelector is used to identify a specific time series within a given metric.
      * 
      */
-    @InputImport(name="metricSelector")
+    @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
     public Output<LabelSelectorArgs> getMetricSelector() {
@@ -45,7 +45,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * targetAverageValue is the target per-pod value of global metric (as a quantity). Mutually exclusive with TargetValue.
      * 
      */
-    @InputImport(name="targetAverageValue")
+    @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
 
     public Output<String> getTargetAverageValue() {
@@ -56,7 +56,7 @@ public final class ExternalMetricSourceArgs extends io.pulumi.resources.Resource
      * targetValue is the target value of the metric (as a quantity). Mutually exclusive with TargetAverageValue.
      * 
      */
-    @InputImport(name="targetValue")
+    @Import(name="targetValue")
       private final @Nullable Output<String> targetValue;
 
     public Output<String> getTargetValue() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appconfiguration.KeyValueArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -52,7 +52,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * An ETag indicating the state of a key-value within a configuration store.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
@@ -67,7 +67,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The key is used in unison with the label to uniquely identify a key-value.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -83,7 +83,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The label is used in unison with the key to uniquely identify a key-value.
      * 
      */
-    @OutputExport(name="label", type=String.class, parameters={})
+    @Export(name="label", type=String.class, parameters={})
     private Output<String> label;
 
     /**
@@ -98,7 +98,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The last time a modifying operation was performed on the given key-value.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -113,7 +113,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * A locked key-value may not be modified until it is unlocked.
      * 
      */
-    @OutputExport(name="locked", type=Boolean.class, parameters={})
+    @Export(name="locked", type=Boolean.class, parameters={})
     private Output<Boolean> locked;
 
     /**
@@ -128,7 +128,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -142,7 +142,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -156,7 +156,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -170,7 +170,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The value of the key-value.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BlobStorageTokenStoreArgs extends io.pulumi.resources.Resourc
      * The name of the app setting containing the SAS URL of the blob storage containing the tokens.
      * 
      */
-    @InputImport(name="sasUrlSettingName")
+    @Import(name="sasUrlSettingName")
       private final @Nullable Output<String> sasUrlSettingName;
 
     public Output<String> getSasUrlSettingName() {

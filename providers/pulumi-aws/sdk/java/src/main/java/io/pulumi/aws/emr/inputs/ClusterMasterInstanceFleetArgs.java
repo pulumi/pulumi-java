@@ -6,7 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetInstanceTypeConfigArgs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetLaunchSpecificationsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ClusterMasterInstanceFleetArgs extends io.pulumi.resources.Re
      * ID of the cluster.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class ClusterMasterInstanceFleetArgs extends io.pulumi.resources.Re
      * Configuration block for instance fleet.
      * 
      */
-    @InputImport(name="instanceTypeConfigs")
+    @Import(name="instanceTypeConfigs")
       private final @Nullable Output<List<ClusterMasterInstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
     public Output<List<ClusterMasterInstanceFleetInstanceTypeConfigArgs>> getInstanceTypeConfigs() {
@@ -44,7 +44,7 @@ public final class ClusterMasterInstanceFleetArgs extends io.pulumi.resources.Re
      * Configuration block for launch specification.
      * 
      */
-    @InputImport(name="launchSpecifications")
+    @Import(name="launchSpecifications")
       private final @Nullable Output<ClusterMasterInstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
     public Output<ClusterMasterInstanceFleetLaunchSpecificationsArgs> getLaunchSpecifications() {
@@ -55,21 +55,21 @@ public final class ClusterMasterInstanceFleetArgs extends io.pulumi.resources.Re
      * Name of the step.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="provisionedOnDemandCapacity")
+    @Import(name="provisionedOnDemandCapacity")
       private final @Nullable Output<Integer> provisionedOnDemandCapacity;
 
     public Output<Integer> getProvisionedOnDemandCapacity() {
         return this.provisionedOnDemandCapacity == null ? Output.empty() : this.provisionedOnDemandCapacity;
     }
 
-    @InputImport(name="provisionedSpotCapacity")
+    @Import(name="provisionedSpotCapacity")
       private final @Nullable Output<Integer> provisionedSpotCapacity;
 
     public Output<Integer> getProvisionedSpotCapacity() {
@@ -80,7 +80,7 @@ public final class ClusterMasterInstanceFleetArgs extends io.pulumi.resources.Re
      * Target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
      */
-    @InputImport(name="targetOnDemandCapacity")
+    @Import(name="targetOnDemandCapacity")
       private final @Nullable Output<Integer> targetOnDemandCapacity;
 
     public Output<Integer> getTargetOnDemandCapacity() {
@@ -91,7 +91,7 @@ public final class ClusterMasterInstanceFleetArgs extends io.pulumi.resources.Re
      * Target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
      */
-    @InputImport(name="targetSpotCapacity")
+    @Import(name="targetSpotCapacity")
       private final @Nullable Output<Integer> targetSpotCapacity;
 
     public Output<Integer> getTargetSpotCapacity() {

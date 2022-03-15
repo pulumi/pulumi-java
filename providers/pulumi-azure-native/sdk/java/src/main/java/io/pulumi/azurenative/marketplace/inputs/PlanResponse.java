@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.marketplace.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * Plan accessibility
      * 
      */
-    @InputImport(name="accessibility")
+    @Import(name="accessibility")
       private final @Nullable String accessibility;
 
     public Optional<String> getAccessibility() {
@@ -29,7 +29,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * Alternative stack type
      * 
      */
-    @InputImport(name="altStackReference", required=true)
+    @Import(name="altStackReference", required=true)
       private final String altStackReference;
 
     public String getAltStackReference() {
@@ -40,7 +40,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * Friendly name for the plan for display in the marketplace
      * 
      */
-    @InputImport(name="planDisplayName", required=true)
+    @Import(name="planDisplayName", required=true)
       private final String planDisplayName;
 
     public String getPlanDisplayName() {
@@ -51,7 +51,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * Text identifier for this plan
      * 
      */
-    @InputImport(name="planId", required=true)
+    @Import(name="planId", required=true)
       private final String planId;
 
     public String getPlanId() {
@@ -62,7 +62,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * Identifier for this plan
      * 
      */
-    @InputImport(name="skuId", required=true)
+    @Import(name="skuId", required=true)
       private final String skuId;
 
     public String getSkuId() {
@@ -73,7 +73,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * Stack type (classic or arm)
      * 
      */
-    @InputImport(name="stackType", required=true)
+    @Import(name="stackType", required=true)
       private final String stackType;
 
     public String getStackType() {

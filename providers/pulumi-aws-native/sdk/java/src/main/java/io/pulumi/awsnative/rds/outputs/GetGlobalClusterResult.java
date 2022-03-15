@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalClusterResult {
     /**
      * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
@@ -17,8 +17,8 @@ public final class GetGlobalClusterResult {
      */
     private final @Nullable Boolean deletionProtection;
 
-    @OutputCustomType.Constructor
-    private GetGlobalClusterResult(@OutputCustomType.Parameter("deletionProtection") @Nullable Boolean deletionProtection) {
+    @CustomType.Constructor
+    private GetGlobalClusterResult(@CustomType.Parameter("deletionProtection") @Nullable Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
     }
 

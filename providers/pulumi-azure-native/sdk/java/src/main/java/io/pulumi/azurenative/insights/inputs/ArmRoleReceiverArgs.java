@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * The arm role id.
      * 
      */
-    @InputImport(name="roleId", required=true)
+    @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
     public Output<String> getRoleId() {
@@ -45,7 +45,7 @@ public final class ArmRoleReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
     public Output<Boolean> getUseCommonAlertSchema() {

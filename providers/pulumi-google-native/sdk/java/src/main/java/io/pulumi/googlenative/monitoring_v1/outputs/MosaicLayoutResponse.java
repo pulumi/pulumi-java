@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TileResponse;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MosaicLayoutResponse {
     /**
      * The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
@@ -22,10 +22,10 @@ public final class MosaicLayoutResponse {
      */
     private final List<TileResponse> tiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MosaicLayoutResponse(
-        @OutputCustomType.Parameter("columns") Integer columns,
-        @OutputCustomType.Parameter("tiles") List<TileResponse> tiles) {
+        @CustomType.Parameter("columns") Integer columns,
+        @CustomType.Parameter("tiles") List<TileResponse> tiles) {
         this.columns = columns;
         this.tiles = tiles;
     }

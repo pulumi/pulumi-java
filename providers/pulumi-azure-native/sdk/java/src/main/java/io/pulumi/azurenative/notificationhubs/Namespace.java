@@ -8,7 +8,7 @@ import io.pulumi.azurenative.notificationhubs.NamespaceArgs;
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The time the namespace was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
@@ -51,7 +51,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Whether or not the namespace is set as Critical.
      * 
      */
-    @OutputExport(name="critical", type=Boolean.class, parameters={})
+    @Export(name="critical", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> critical;
 
     /**
@@ -65,7 +65,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Data center for the namespace
      * 
      */
-    @OutputExport(name="dataCenter", type=String.class, parameters={})
+    @Export(name="dataCenter", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataCenter;
 
     /**
@@ -79,7 +79,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Whether or not the namespace is currently enabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -93,7 +93,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -107,7 +107,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Identifier for Azure Insights metrics
      * 
      */
-    @OutputExport(name="metricId", type=String.class, parameters={})
+    @Export(name="metricId", type=String.class, parameters={})
     private Output<String> metricId;
 
     /**
@@ -121,7 +121,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The namespace type.
      * 
      */
-    @OutputExport(name="namespaceType", type=String.class, parameters={})
+    @Export(name="namespaceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespaceType;
 
     /**
@@ -149,7 +149,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Namespace.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -163,7 +163,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -177,7 +177,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * ScaleUnit where the namespace gets created
      * 
      */
-    @OutputExport(name="scaleUnit", type=String.class, parameters={})
+    @Export(name="scaleUnit", type=String.class, parameters={})
     private Output</* @Nullable */ String> scaleUnit;
 
     /**
@@ -191,7 +191,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Endpoint you can use to perform NotificationHub operations.
      * 
      */
-    @OutputExport(name="serviceBusEndpoint", type=String.class, parameters={})
+    @Export(name="serviceBusEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusEndpoint;
 
     /**
@@ -205,7 +205,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The sku of the created namespace
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -219,7 +219,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -233,7 +233,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The Id of the Azure subscription associated with the namespace.
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
@@ -247,7 +247,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -261,7 +261,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -275,7 +275,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * The time the namespace was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> updatedAt;
 
     /**

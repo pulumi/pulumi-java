@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.ApiKeyAuthenticationResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthenticationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
      * The authentication information required in the request to the health provider.
      * 
      */
-    @InputImport(name="authentication", required=true)
+    @Import(name="authentication", required=true)
       private final Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication;
 
     public Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> getAuthentication() {
@@ -34,7 +34,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
      * The HTTP method to use for the request.
      * 
      */
-    @InputImport(name="method", required=true)
+    @Import(name="method", required=true)
       private final String method;
 
     public String getMethod() {
@@ -45,7 +45,7 @@ public final class RestRequestResponse extends io.pulumi.resources.InvokeArgs {
      * The HTTP URI to use for the request.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * The Azure automation account Id which holds this runbook and authenticate to Azure resource.
      * 
      */
-    @InputImport(name="automationAccountId", required=true)
+    @Import(name="automationAccountId", required=true)
       private final String automationAccountId;
 
     public String getAutomationAccountId() {
@@ -34,7 +34,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * Indicates whether this instance is global runbook.
      * 
      */
-    @InputImport(name="isGlobalRunbook", required=true)
+    @Import(name="isGlobalRunbook", required=true)
       private final Boolean isGlobalRunbook;
 
     public Boolean getIsGlobalRunbook() {
@@ -45,7 +45,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * Indicates name of the webhook.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * The name for this runbook.
      * 
      */
-    @InputImport(name="runbookName", required=true)
+    @Import(name="runbookName", required=true)
       private final String runbookName;
 
     public String getRunbookName() {
@@ -67,7 +67,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * The URI where webhooks should be sent.
      * 
      */
-    @InputImport(name="serviceUri")
+    @Import(name="serviceUri")
       private final @Nullable String serviceUri;
 
     public Optional<String> getServiceUri() {
@@ -78,7 +78,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
@@ -89,7 +89,7 @@ public final class AutomationRunbookReceiverResponse extends io.pulumi.resources
      * The resource id for webhook linked to this runbook.
      * 
      */
-    @InputImport(name="webhookResourceId", required=true)
+    @Import(name="webhookResourceId", required=true)
       private final String webhookResourceId;
 
     public String getWebhookResourceId() {

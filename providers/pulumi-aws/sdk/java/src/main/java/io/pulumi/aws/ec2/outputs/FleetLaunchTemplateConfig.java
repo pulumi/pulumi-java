@@ -5,12 +5,12 @@ package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.FleetLaunchTemplateConfigLaunchTemplateSpecification;
 import io.pulumi.aws.ec2.outputs.FleetLaunchTemplateConfigOverride;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetLaunchTemplateConfig {
     /**
      * Nested argument containing EC2 Launch Template to use. Defined below.
@@ -23,10 +23,10 @@ public final class FleetLaunchTemplateConfig {
      */
     private final @Nullable List<FleetLaunchTemplateConfigOverride> overrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetLaunchTemplateConfig(
-        @OutputCustomType.Parameter("launchTemplateSpecification") FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
-        @OutputCustomType.Parameter("overrides") @Nullable List<FleetLaunchTemplateConfigOverride> overrides) {
+        @CustomType.Parameter("launchTemplateSpecification") FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
+        @CustomType.Parameter("overrides") @Nullable List<FleetLaunchTemplateConfigOverride> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldTypeEnumType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TagTemplateFieldType {
     /**
      * Represents an enum type.
@@ -27,10 +27,10 @@ public final class TagTemplateFieldType {
      */
     private final @Nullable String primitiveType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagTemplateFieldType(
-        @OutputCustomType.Parameter("enumType") @Nullable TagTemplateFieldTypeEnumType enumType,
-        @OutputCustomType.Parameter("primitiveType") @Nullable String primitiveType) {
+        @CustomType.Parameter("enumType") @Nullable TagTemplateFieldTypeEnumType enumType,
+        @CustomType.Parameter("primitiveType") @Nullable String primitiveType) {
         this.enumType = enumType;
         this.primitiveType = primitiveType;
     }

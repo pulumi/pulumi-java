@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * Application name displayed on OAuth consent screen.
      * 
      */
-    @InputImport(name="applicationTitle", required=true)
+    @Import(name="applicationTitle", required=true)
       private final Output<String> applicationTitle;
 
     public Output<String> getApplicationTitle() {
@@ -30,7 +30,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -45,7 +45,7 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * is an owner of the specified group in Cloud Identity.
      * 
      */
-    @InputImport(name="supportEmail", required=true)
+    @Import(name="supportEmail", required=true)
       private final Output<String> supportEmail;
 
     public Output<String> getSupportEmail() {

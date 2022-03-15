@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.enums.ThemeResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.ThemeConfiguration;
 import io.pulumi.awsnative.quicksight.outputs.ThemeError;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeVersion {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -50,16 +50,16 @@ public final class ThemeVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeVersion(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("baseThemeId") @Nullable String baseThemeId,
-        @OutputCustomType.Parameter("configuration") @Nullable ThemeConfiguration configuration,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("errors") @Nullable List<ThemeError> errors,
-        @OutputCustomType.Parameter("status") @Nullable ThemeResourceStatus status,
-        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("baseThemeId") @Nullable String baseThemeId,
+        @CustomType.Parameter("configuration") @Nullable ThemeConfiguration configuration,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("errors") @Nullable List<ThemeError> errors,
+        @CustomType.Parameter("status") @Nullable ThemeResourceStatus status,
+        @CustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.arn = arn;
         this.baseThemeId = baseThemeId;
         this.configuration = configuration;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * If the TestState is ERROR, then this string will contain human-readable details about the error.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -32,7 +32,7 @@ public final class TestDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Human-readable, detailed descriptions of the test's progress. For example: "Provisioning a device", "Starting Test". During the course of execution new data may be appended to the end of progress_messages.
      * 
      */
-    @InputImport(name="progressMessages", required=true)
+    @Import(name="progressMessages", required=true)
       private final List<String> progressMessages;
 
     public List<String> getProgressMessages() {

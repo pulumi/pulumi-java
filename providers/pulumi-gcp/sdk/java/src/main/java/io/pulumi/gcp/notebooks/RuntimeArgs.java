@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;
@@ -22,7 +22,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="accessConfig")
+    @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
     public Output<RuntimeAccessConfigArgs> getAccessConfig() {
@@ -33,7 +33,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the machine resides.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * The name specified for the Notebook instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="softwareConfig")
+    @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
     public Output<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
@@ -80,7 +80,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="virtualMachine")
+    @Import(name="virtualMachine")
       private final @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
 
     public Output<RuntimeVirtualMachineArgs> getVirtualMachine() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
      * 
      */
-    @InputImport(name="addr")
+    @Import(name="addr")
       private final @Nullable String addr;
 
     public Optional<String> getAddr() {
@@ -33,7 +33,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * The running instance of an application. Changes after each restart.
      * 
      */
-    @InputImport(name="instanceID")
+    @Import(name="instanceID")
       private final @Nullable String instanceID;
 
     public Optional<String> getInstanceID() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusDefinit
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
      * 
      */
-    @OutputExport(name="complianceState", type=String.class, parameters={})
+    @Export(name="complianceState", type=String.class, parameters={})
     private Output<String> complianceState;
 
     /**
@@ -54,7 +54,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Key-value pairs of protected configuration settings for the configuration
      * 
      */
-    @OutputExport(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
+    @Export(name="configurationProtectedSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> configurationProtectedSettings;
 
     /**
@@ -68,7 +68,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Error message returned to the user in the case of provisioning failure.
      * 
      */
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
@@ -82,7 +82,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Parameters to reconcile to the GitRepository source kind type.
      * 
      */
-    @OutputExport(name="gitRepository", type=GitRepositoryDefinitionResponse.class, parameters={})
+    @Export(name="gitRepository", type=GitRepositoryDefinitionResponse.class, parameters={})
     private Output</* @Nullable */ GitRepositoryDefinitionResponse> gitRepository;
 
     /**
@@ -96,7 +96,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
      */
-    @OutputExport(name="kustomizations", type=Map.class, parameters={String.class, KustomizationDefinitionResponse.class})
+    @Export(name="kustomizations", type=Map.class, parameters={String.class, KustomizationDefinitionResponse.class})
     private Output</* @Nullable */ Map<String,KustomizationDefinitionResponse>> kustomizations;
 
     /**
@@ -110,7 +110,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Datetime the fluxConfiguration last synced its source on the cluster.
      * 
      */
-    @OutputExport(name="lastSourceSyncedAt", type=String.class, parameters={})
+    @Export(name="lastSourceSyncedAt", type=String.class, parameters={})
     private Output<String> lastSourceSyncedAt;
 
     /**
@@ -124,7 +124,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Branch and SHA of the last source commit synced with the cluster.
      * 
      */
-    @OutputExport(name="lastSourceSyncedCommitId", type=String.class, parameters={})
+    @Export(name="lastSourceSyncedCommitId", type=String.class, parameters={})
     private Output<String> lastSourceSyncedCommitId;
 
     /**
@@ -138,7 +138,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -152,7 +152,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
@@ -166,7 +166,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Status of the creation of the fluxConfiguration.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -180,7 +180,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Public Key associated with this fluxConfiguration (either generated within the cluster or provided by the user).
      * 
      */
-    @OutputExport(name="repositoryPublicKey", type=String.class, parameters={})
+    @Export(name="repositoryPublicKey", type=String.class, parameters={})
     private Output<String> repositoryPublicKey;
 
     /**
@@ -194,7 +194,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Scope at which the operator will be installed.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -208,7 +208,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Source Kind to pull the configuration data from.
      * 
      */
-    @OutputExport(name="sourceKind", type=String.class, parameters={})
+    @Export(name="sourceKind", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceKind;
 
     /**
@@ -222,7 +222,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ObjectStatusDefinitionResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ObjectStatusDefinitionResponse.class})
     private Output<List<ObjectStatusDefinitionResponse>> statuses;
 
     /**
@@ -236,7 +236,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
      */
-    @OutputExport(name="suspend", type=Boolean.class, parameters={})
+    @Export(name="suspend", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> suspend;
 
     /**
@@ -250,7 +250,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -264,7 +264,7 @@ public class FluxConfiguration extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

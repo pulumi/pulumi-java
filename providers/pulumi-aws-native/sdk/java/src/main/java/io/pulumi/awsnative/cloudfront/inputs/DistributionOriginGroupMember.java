@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class DistributionOriginGroupMember extends io.pulumi.resources.Inv
 
     public static final DistributionOriginGroupMember Empty = new DistributionOriginGroupMember();
 
-    @InputImport(name="originId", required=true)
+    @Import(name="originId", required=true)
       private final String originId;
 
     public String getOriginId() {

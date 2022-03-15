@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkservices.EdgeCacheServiceArgs;
@@ -47,7 +47,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * A human-readable description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * HTTP/3 (IETF QUIC) and Google QUIC are enabled by default.
      * 
      */
-    @OutputExport(name="disableQuic", type=Boolean.class, parameters={})
+    @Export(name="disableQuic", type=Boolean.class, parameters={})
     private Output<Boolean> disableQuic;
 
     /**
@@ -75,7 +75,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
      * 
      */
-    @OutputExport(name="edgeSecurityPolicy", type=String.class, parameters={})
+    @Export(name="edgeSecurityPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> edgeSecurityPolicy;
 
     /**
@@ -90,7 +90,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
      * 
      */
-    @OutputExport(name="edgeSslCertificates", type=List.class, parameters={String.class})
+    @Export(name="edgeSslCertificates", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> edgeSslCertificates;
 
     /**
@@ -105,7 +105,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.
      * 
      */
-    @OutputExport(name="ipv4Addresses", type=List.class, parameters={String.class})
+    @Export(name="ipv4Addresses", type=List.class, parameters={String.class})
     private Output<List<String>> ipv4Addresses;
 
     /**
@@ -119,7 +119,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * The IPv6 addresses associated with this service. Addresses are static for the lifetime of the service.
      * 
      */
-    @OutputExport(name="ipv6Addresses", type=List.class, parameters={String.class})
+    @Export(name="ipv6Addresses", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6Addresses;
 
     /**
@@ -133,7 +133,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Set of label tags associated with the EdgeCache resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -148,7 +148,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="logConfig", type=EdgeCacheServiceLogConfig.class, parameters={})
+    @Export(name="logConfig", type=EdgeCacheServiceLogConfig.class, parameters={})
     private Output</* @Nullable */ EdgeCacheServiceLogConfig> logConfig;
 
     /**
@@ -163,7 +163,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -195,7 +195,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * You must have at least one (1) edgeSslCertificate specified to enable this.
      * 
      */
-    @OutputExport(name="requireTls", type=Boolean.class, parameters={})
+    @Export(name="requireTls", type=Boolean.class, parameters={})
     private Output<Boolean> requireTls;
 
     /**
@@ -212,7 +212,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="routing", type=EdgeCacheServiceRouting.class, parameters={})
+    @Export(name="routing", type=EdgeCacheServiceRouting.class, parameters={})
     private Output<EdgeCacheServiceRouting> routing;
 
     /**
@@ -228,7 +228,7 @@ public class EdgeCacheService extends io.pulumi.resources.CustomResource {
      * If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
      * 
      */
-    @OutputExport(name="sslPolicy", type=String.class, parameters={})
+    @Export(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
     /**

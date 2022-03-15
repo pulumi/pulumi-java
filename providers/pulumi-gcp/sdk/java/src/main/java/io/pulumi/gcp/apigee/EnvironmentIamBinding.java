@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentIamBindingArgs;
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:apigee/environmentIamBinding:EnvironmentIamBinding")
 public class EnvironmentIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=EnvironmentIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=EnvironmentIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ EnvironmentIamBindingCondition> condition;
 
     public Output</* @Nullable */ EnvironmentIamBindingCondition> getCondition() {
@@ -68,7 +68,7 @@ public class EnvironmentIamBinding extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="envId", type=String.class, parameters={})
+    @Export(name="envId", type=String.class, parameters={})
     private Output<String> envId;
 
     /**
@@ -82,7 +82,7 @@ public class EnvironmentIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -92,13 +92,13 @@ public class EnvironmentIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -110,7 +110,7 @@ public class EnvironmentIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleTypeDateResponse extends io.pulumi.resources.InvokeArgs
      * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final Integer day;
 
     public Integer getDay() {
@@ -31,7 +31,7 @@ public final class GoogleTypeDateResponse extends io.pulumi.resources.InvokeArgs
      * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
      * 
      */
-    @InputImport(name="month", required=true)
+    @Import(name="month", required=true)
       private final Integer month;
 
     public Integer getMonth() {
@@ -42,7 +42,7 @@ public final class GoogleTypeDateResponse extends io.pulumi.resources.InvokeArgs
      * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
      * 
      */
-    @InputImport(name="year", required=true)
+    @Import(name="year", required=true)
       private final Integer year;
 
     public Integer getYear() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class NotificationEndpointResponse extends io.pulumi.resources.Invo
 
     public static final NotificationEndpointResponse Empty = new NotificationEndpointResponse();
 
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
     }
 
-    @InputImport(name="notificationDestination")
+    @Import(name="notificationDestination")
       private final @Nullable String notificationDestination;
 
     public Optional<String> getNotificationDestination() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateDiskArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
 
     public Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> getDisks() {
@@ -33,7 +33,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
      * Preserved metadata defined for this instance. This is a list of key->value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {

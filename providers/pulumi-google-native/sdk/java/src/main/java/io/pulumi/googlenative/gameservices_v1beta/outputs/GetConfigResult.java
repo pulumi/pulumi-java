@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.FleetConfigResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.ScalingConfigResponse;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigResult {
     /**
      * The creation time.
@@ -49,15 +49,15 @@ public final class GetConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fleetConfigs") List<FleetConfigResponse> fleetConfigs,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scalingConfigs") List<ScalingConfigResponse> scalingConfigs,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fleetConfigs") List<FleetConfigResponse> fleetConfigs,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scalingConfigs") List<ScalingConfigResponse> scalingConfigs,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.fleetConfigs = fleetConfigs;

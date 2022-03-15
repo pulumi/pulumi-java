@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.workflowexecutions_v1beta.outputs.StackTraceElementResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StackTraceResponse {
     /**
      * An array of stack elements.
@@ -16,8 +16,8 @@ public final class StackTraceResponse {
      */
     private final List<StackTraceElementResponse> elements;
 
-    @OutputCustomType.Constructor
-    private StackTraceResponse(@OutputCustomType.Parameter("elements") List<StackTraceElementResponse> elements) {
+    @CustomType.Constructor
+    private StackTraceResponse(@CustomType.Parameter("elements") List<StackTraceElementResponse> elements) {
         this.elements = elements;
     }
 

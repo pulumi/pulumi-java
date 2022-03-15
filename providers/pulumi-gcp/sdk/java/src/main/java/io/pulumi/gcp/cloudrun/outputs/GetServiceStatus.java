@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceStatusCondition;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceStatus {
     private final List<GetServiceStatusCondition> conditions;
     private final String latestCreatedRevisionName;
@@ -18,13 +18,13 @@ public final class GetServiceStatus {
     private final Integer observedGeneration;
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceStatus(
-        @OutputCustomType.Parameter("conditions") List<GetServiceStatusCondition> conditions,
-        @OutputCustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
-        @OutputCustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
-        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("conditions") List<GetServiceStatusCondition> conditions,
+        @CustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
+        @CustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
+        @CustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @CustomType.Parameter("url") String url) {
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         this.latestReadyRevisionName = latestReadyRevisionName;

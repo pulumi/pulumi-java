@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CommandResponse {
     /**
      * Command-line arguments used when executing this command.
@@ -36,13 +36,13 @@ public final class CommandResponse {
      */
     private final List<String> waitFor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommandResponse(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("dir") String dir,
-        @OutputCustomType.Parameter("env") List<String> env,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("waitFor") List<String> waitFor) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("dir") String dir,
+        @CustomType.Parameter("env") List<String> env,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("waitFor") List<String> waitFor) {
         this.args = args;
         this.dir = dir;
         this.env = env;

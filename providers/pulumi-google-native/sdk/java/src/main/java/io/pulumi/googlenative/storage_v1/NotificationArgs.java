@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NotificationArgs Empty = new NotificationArgs();
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -27,7 +27,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
      */
-    @InputImport(name="customAttributes")
+    @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
     public Output<Map<String,String>> getCustomAttributes() {
@@ -38,7 +38,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP 1.1 Entity tag for this subscription notification.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -49,7 +49,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
      */
-    @InputImport(name="eventTypes")
+    @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
 
     public Output<List<String>> getEventTypes() {
@@ -60,7 +60,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the notification.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -71,7 +71,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of item this is. For notifications, this is always storage#notification.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -82,7 +82,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * If present, only apply this notification configuration to object names that begin with this prefix.
      * 
      */
-    @InputImport(name="objectNamePrefix")
+    @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
 
     public Output<String> getObjectNamePrefix() {
@@ -93,14 +93,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The desired content of the Payload.
      * 
      */
-    @InputImport(name="payloadFormat")
+    @Import(name="payloadFormat")
       private final @Nullable Output<String> payloadFormat;
 
     public Output<String> getPayloadFormat() {
         return this.payloadFormat == null ? Output.empty() : this.payloadFormat;
     }
 
-    @InputImport(name="provisionalUserProject")
+    @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
     public Output<String> getProvisionalUserProject() {
@@ -111,7 +111,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The canonical URL of this notification.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -122,14 +122,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
         return this.topic == null ? Output.empty() : this.topic;
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {

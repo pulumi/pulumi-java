@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.mwaa.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentLoggingConfigurationDagProcessingLogs {
     private final @Nullable String cloudWatchLogGroupArn;
     /**
@@ -24,11 +24,11 @@ public final class EnvironmentLoggingConfigurationDagProcessingLogs {
      */
     private final @Nullable String logLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentLoggingConfigurationDagProcessingLogs(
-        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel) {
+        @CustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logLevel") @Nullable String logLevel) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.enabled = enabled;
         this.logLevel = logLevel;

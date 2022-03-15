@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudtrail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TrailInsightSelector extends io.pulumi.resources.InvokeArgs {
      * The type of insight to log on a trail.
      * 
      */
-    @InputImport(name="insightType")
+    @Import(name="insightType")
       private final @Nullable String insightType;
 
     public Optional<String> getInsightType() {

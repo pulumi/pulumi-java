@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server collation.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -33,7 +33,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * ARM Resource id of the container resource (Azure Arc for Servers).
      * 
      */
-    @InputImport(name="containerResourceId", required=true)
+    @Import(name="containerResourceId", required=true)
       private final Output<String> containerResourceId;
 
     public Output<String> getContainerResourceId() {
@@ -44,7 +44,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server current version.
      * 
      */
-    @InputImport(name="currentVersion")
+    @Import(name="currentVersion")
       private final @Nullable Output<String> currentVersion;
 
     public Output<String> getCurrentVersion() {
@@ -55,7 +55,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server edition.
      * 
      */
-    @InputImport(name="edition")
+    @Import(name="edition")
       private final @Nullable Output<String> edition;
 
     public Output<String> getEdition() {
@@ -66,7 +66,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server instance name.
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -77,7 +77,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server license type.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
     public Output<String> getLicenseType() {
@@ -88,7 +88,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server update level.
      * 
      */
-    @InputImport(name="patchLevel")
+    @Import(name="patchLevel")
       private final @Nullable Output<String> patchLevel;
 
     public Output<String> getPatchLevel() {
@@ -99,7 +99,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server product ID.
      * 
      */
-    @InputImport(name="productId")
+    @Import(name="productId")
       private final @Nullable Output<String> productId;
 
     public Output<String> getProductId() {
@@ -110,7 +110,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * The cloud connectivity status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {
@@ -121,7 +121,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * Dynamic TCP ports used by SQL Server.
      * 
      */
-    @InputImport(name="tcpDynamicPorts")
+    @Import(name="tcpDynamicPorts")
       private final @Nullable Output<String> tcpDynamicPorts;
 
     public Output<String> getTcpDynamicPorts() {
@@ -132,7 +132,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * Static TCP ports used by SQL Server.
      * 
      */
-    @InputImport(name="tcpStaticPorts")
+    @Import(name="tcpStaticPorts")
       private final @Nullable Output<String> tcpStaticPorts;
 
     public Output<String> getTcpStaticPorts() {
@@ -143,7 +143,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * The number of logical processors used by the SQL Server instance.
      * 
      */
-    @InputImport(name="vCore")
+    @Import(name="vCore")
       private final @Nullable Output<String> vCore;
 
     public Output<String> getVCore() {
@@ -154,7 +154,7 @@ public final class SqlServerInstancePropertiesArgs extends io.pulumi.resources.R
      * SQL Server version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

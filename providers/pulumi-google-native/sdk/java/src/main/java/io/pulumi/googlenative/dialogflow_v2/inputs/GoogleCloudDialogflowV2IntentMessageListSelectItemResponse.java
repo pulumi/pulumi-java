@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * Optional. The main text describing the item.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * Optional. The image to display.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * Additional information about this option.
      * 
      */
-    @InputImport(name="info", required=true)
+    @Import(name="info", required=true)
       private final GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info;
 
     public GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse getInfo() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItemResponse ex
      * The title of the list item.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.iap.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClientResult {
     private final String brand;
     private final String clientId;
@@ -19,13 +19,13 @@ public final class GetClientResult {
     private final String id;
     private final String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClientResult(
-        @OutputCustomType.Parameter("brand") String brand,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("secret") String secret) {
+        @CustomType.Parameter("brand") String brand,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("secret") String secret) {
         this.brand = brand;
         this.clientId = clientId;
         this.displayName = displayName;

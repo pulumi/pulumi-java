@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.AutoUserSpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserIdentityResponse {
     /**
      * The userName and autoUser properties are mutually exclusive; you must specify one but not both.
@@ -23,10 +23,10 @@ public final class UserIdentityResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserIdentityResponse(
-        @OutputCustomType.Parameter("autoUser") @Nullable AutoUserSpecificationResponse autoUser,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("autoUser") @Nullable AutoUserSpecificationResponse autoUser,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.autoUser = autoUser;
         this.userName = userName;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sfn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
      * Determines whether execution data is included in your log. When set to `false`, data is excluded.
      * 
      */
-    @InputImport(name="includeExecutionData")
+    @Import(name="includeExecutionData")
       private final @Nullable Output<Boolean> includeExecutionData;
 
     public Output<Boolean> getIncludeExecutionData() {
@@ -30,7 +30,7 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
      * Defines which category of execution history events are logged. Valid values: `ALL`, `ERROR`, `FATAL`, `OFF`
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<String> level;
 
     public Output<String> getLevel() {
@@ -41,7 +41,7 @@ public final class StateMachineLoggingConfigurationGetArgs extends io.pulumi.res
      * Amazon Resource Name (ARN) of a CloudWatch log group. Make sure the State Machine has the correct IAM policies for logging. The ARN must end with `:*`
      * 
      */
-    @InputImport(name="logDestination")
+    @Import(name="logDestination")
       private final @Nullable Output<String> logDestination;
 
     public Output<String> getLogDestination() {

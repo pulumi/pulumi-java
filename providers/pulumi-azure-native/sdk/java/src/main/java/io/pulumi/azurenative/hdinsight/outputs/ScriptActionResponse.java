@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScriptActionResponse {
     /**
      * The name of the script action.
@@ -25,11 +25,11 @@ public final class ScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") String parameters,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") String parameters,
+        @CustomType.Parameter("uri") String uri) {
         this.name = name;
         this.parameters = parameters;
         this.uri = uri;

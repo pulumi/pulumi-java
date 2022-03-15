@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldTypeEnumTypeAllowedValue;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TagTemplateFieldTypeEnumType {
     /**
      * The set of allowed values for this enum. The display names of the
@@ -21,8 +21,8 @@ public final class TagTemplateFieldTypeEnumType {
      */
     private final List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues;
 
-    @OutputCustomType.Constructor
-    private TagTemplateFieldTypeEnumType(@OutputCustomType.Parameter("allowedValues") List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues) {
+    @CustomType.Constructor
+    private TagTemplateFieldTypeEnumType(@CustomType.Parameter("allowedValues") List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues) {
         this.allowedValues = allowedValues;
     }
 

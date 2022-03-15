@@ -5,14 +5,14 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityRevocationConfiguration;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateAuthorityResult {
     /**
      * The Amazon Resource Name (ARN) of the certificate authority.
@@ -31,12 +31,12 @@ public final class GetCertificateAuthorityResult {
     private final @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration;
     private final @Nullable List<CertificateAuthorityTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateAuthorityResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("certificateSigningRequest") @Nullable String certificateSigningRequest,
-        @OutputCustomType.Parameter("revocationConfiguration") @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable List<CertificateAuthorityTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("certificateSigningRequest") @Nullable String certificateSigningRequest,
+        @CustomType.Parameter("revocationConfiguration") @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration,
+        @CustomType.Parameter("tags") @Nullable List<CertificateAuthorityTag> tags) {
         this.arn = arn;
         this.certificateSigningRequest = certificateSigningRequest;
         this.revocationConfiguration = revocationConfiguration;

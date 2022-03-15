@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosAppInfoArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosRoboTestArgs;
@@ -26,7 +26,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the application under test.
      * 
      */
-    @InputImport(name="iosAppInfo")
+    @Import(name="iosAppInfo")
       private final @Nullable Output<IosAppInfoArgs> iosAppInfo;
 
     public Output<IosAppInfoArgs> getIosAppInfo() {
@@ -37,7 +37,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * An iOS Robo test.
      * 
      */
-    @InputImport(name="iosRoboTest")
+    @Import(name="iosRoboTest")
       private final @Nullable Output<IosRoboTestArgs> iosRoboTest;
 
     public Output<IosRoboTestArgs> getIosRoboTest() {
@@ -48,7 +48,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * An iOS test loop.
      * 
      */
-    @InputImport(name="iosTestLoop")
+    @Import(name="iosTestLoop")
       private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
     public Output<IosTestLoopArgs> getIosTestLoop() {
@@ -59,7 +59,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * An iOS XCTest.
      * 
      */
-    @InputImport(name="iosXcTest")
+    @Import(name="iosXcTest")
       private final @Nullable Output<IosXcTestArgs> iosXcTest;
 
     public Output<IosXcTestArgs> getIosXcTest() {
@@ -70,7 +70,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
      */
-    @InputImport(name="testTimeout")
+    @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;
 
     public Output<DurationArgs> getTestTimeout() {

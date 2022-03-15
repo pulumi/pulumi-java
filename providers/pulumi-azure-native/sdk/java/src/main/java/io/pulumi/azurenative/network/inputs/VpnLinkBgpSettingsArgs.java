@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
      * The BGP speaker's ASN.
      * 
      */
-    @InputImport(name="asn")
+    @Import(name="asn")
       private final @Nullable Output<Double> asn;
 
     public Output<Double> getAsn() {
@@ -34,7 +34,7 @@ public final class VpnLinkBgpSettingsArgs extends io.pulumi.resources.ResourceAr
      * The BGP peering address and BGP identifier of this BGP speaker.
      * 
      */
-    @InputImport(name="bgpPeeringAddress")
+    @Import(name="bgpPeeringAddress")
       private final @Nullable Output<String> bgpPeeringAddress;
 
     public Output<String> getBgpPeeringAddress() {

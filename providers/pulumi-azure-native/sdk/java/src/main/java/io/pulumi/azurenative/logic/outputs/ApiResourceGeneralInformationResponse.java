@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiResourceGeneralInformationResponse {
     /**
      * The description.
@@ -42,14 +42,14 @@ public final class ApiResourceGeneralInformationResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiResourceGeneralInformationResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("iconUrl") @Nullable String iconUrl,
-        @OutputCustomType.Parameter("releaseTag") @Nullable String releaseTag,
-        @OutputCustomType.Parameter("termsOfUseUrl") @Nullable String termsOfUseUrl,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("iconUrl") @Nullable String iconUrl,
+        @CustomType.Parameter("releaseTag") @Nullable String releaseTag,
+        @CustomType.Parameter("termsOfUseUrl") @Nullable String termsOfUseUrl,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.description = description;
         this.displayName = displayName;
         this.iconUrl = iconUrl;

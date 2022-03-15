@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration extends io.pulumi.r
 
     public static final DataSourceWebCrawlerSiteMapsConfiguration Empty = new DataSourceWebCrawlerSiteMapsConfiguration();
 
-    @InputImport(name="siteMaps", required=true)
+    @Import(name="siteMaps", required=true)
       private final List<String> siteMaps;
 
     public List<String> getSiteMaps() {

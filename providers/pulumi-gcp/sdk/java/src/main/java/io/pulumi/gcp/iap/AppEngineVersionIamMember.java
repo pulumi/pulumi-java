@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs;
@@ -65,7 +65,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -80,7 +80,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=AppEngineVersionIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=AppEngineVersionIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ AppEngineVersionIamMemberCondition> condition;
 
     /**
@@ -95,7 +95,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -105,7 +105,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -116,7 +116,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -133,7 +133,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -149,7 +149,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -163,7 +163,7 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
      * Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**

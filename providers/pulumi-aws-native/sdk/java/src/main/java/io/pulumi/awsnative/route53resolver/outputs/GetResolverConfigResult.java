@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverConfigResult {
     /**
      * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
@@ -28,11 +28,11 @@ public final class GetResolverConfigResult {
      */
     private final @Nullable String ownerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverConfigResult(
-        @OutputCustomType.Parameter("autodefinedReverse") @Nullable ResolverConfigAutodefinedReverse autodefinedReverse,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId) {
+        @CustomType.Parameter("autodefinedReverse") @Nullable ResolverConfigAutodefinedReverse autodefinedReverse,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId) {
         this.autodefinedReverse = autodefinedReverse;
         this.id = id;
         this.ownerId = ownerId;

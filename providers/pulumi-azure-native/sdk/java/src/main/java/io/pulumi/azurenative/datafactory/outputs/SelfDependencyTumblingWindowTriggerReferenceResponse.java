@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
     /**
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
@@ -28,11 +28,11 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelfDependencyTumblingWindowTriggerReferenceResponse(
-        @OutputCustomType.Parameter("offset") String offset,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("offset") String offset,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("type") String type) {
         this.offset = offset;
         this.size = size;
         this.type = type;

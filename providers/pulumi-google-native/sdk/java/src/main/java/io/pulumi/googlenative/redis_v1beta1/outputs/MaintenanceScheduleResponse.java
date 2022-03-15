@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.redis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceScheduleResponse {
     /**
      * If the scheduled maintenance can be rescheduled, default is true.
@@ -31,12 +31,12 @@ public final class MaintenanceScheduleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceScheduleResponse(
-        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("canReschedule") Boolean canReschedule,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.canReschedule = canReschedule;
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;

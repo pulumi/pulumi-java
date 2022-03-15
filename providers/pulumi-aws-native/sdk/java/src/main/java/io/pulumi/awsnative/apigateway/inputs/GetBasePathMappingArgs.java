@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
      * The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    @InputImport(name="basePath", required=true)
+    @Import(name="basePath", required=true)
       private final String basePath;
 
     public String getBasePath() {
@@ -27,7 +27,7 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
      * The DomainName of an AWS::ApiGateway::DomainName resource.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {

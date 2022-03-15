@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.GallerySharingPermissionTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
      * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
     public Output<Either<String,GallerySharingPermissionTypes>> getPermissions() {

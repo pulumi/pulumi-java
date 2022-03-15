@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azureactivedirectory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class B2CResourceSKUResponse extends io.pulumi.resources.InvokeArgs
      * The name of the SKU for the tenant.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class B2CResourceSKUResponse extends io.pulumi.resources.InvokeArgs
      * The tier of the tenant.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.LogAnalyticsWorkspaceConfigResp
 import io.pulumi.azurenative.azurearcdata.inputs.OnPremisePropertyResponse;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalResponse;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * Username and password for basic login authentication.
      * 
      */
-    @InputImport(name="basicLoginInformation")
+    @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
@@ -39,7 +39,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * The raw kubernetes information
      * 
      */
-    @InputImport(name="k8sRaw")
+    @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
 
     public Optional<Object> getK8sRaw() {
@@ -50,7 +50,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
      */
-    @InputImport(name="lastUploadedDate")
+    @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;
 
     public Optional<String> getLastUploadedDate() {
@@ -61,7 +61,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * Log analytics workspace id and primary key
      * 
      */
-    @InputImport(name="logAnalyticsWorkspaceConfig")
+    @Import(name="logAnalyticsWorkspaceConfig")
       private final @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig;
 
     public Optional<LogAnalyticsWorkspaceConfigResponse> getLogAnalyticsWorkspaceConfig() {
@@ -72,14 +72,14 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * Properties from the Kubernetes data controller
      * 
      */
-    @InputImport(name="onPremiseProperty")
+    @Import(name="onPremiseProperty")
       private final @Nullable OnPremisePropertyResponse onPremiseProperty;
 
     public Optional<OnPremisePropertyResponse> getOnPremiseProperty() {
         return this.onPremiseProperty == null ? Optional.empty() : Optional.ofNullable(this.onPremiseProperty);
     }
 
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -90,7 +90,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * Service principal for uploading billing, metrics and logs.
      * 
      */
-    @InputImport(name="uploadServicePrincipal")
+    @Import(name="uploadServicePrincipal")
       private final @Nullable UploadServicePrincipalResponse uploadServicePrincipal;
 
     public Optional<UploadServicePrincipalResponse> getUploadServicePrincipal() {
@@ -101,7 +101,7 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
      * Properties on upload watermark.  Mostly timestamp for each upload data type
      * 
      */
-    @InputImport(name="uploadWatermark")
+    @Import(name="uploadWatermark")
       private final @Nullable UploadWatermarkResponse uploadWatermark;
 
     public Optional<UploadWatermarkResponse> getUploadWatermark() {

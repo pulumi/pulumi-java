@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DistributionGroupListReceiverValueResponse extends io.pulumi.
      * The list of distribution groups.
      * 
      */
-    @InputImport(name="distributionGroups")
+    @Import(name="distributionGroups")
       private final @Nullable List<String> distributionGroups;
 
     public List<String> getDistributionGroups() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.elasticache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the user account.
@@ -28,11 +28,11 @@ public final class GetUserGroupResult {
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.arn = arn;
         this.status = status;
         this.userIds = userIds;

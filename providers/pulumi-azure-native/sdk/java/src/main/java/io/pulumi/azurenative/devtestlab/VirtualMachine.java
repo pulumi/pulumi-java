@@ -15,7 +15,7 @@ import io.pulumi.azurenative.devtestlab.outputs.NetworkInterfacePropertiesRespon
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleCreationParameterResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -44,7 +44,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Indicates whether another user can take ownership of the virtual machine
      * 
      */
-    @OutputExport(name="allowClaim", type=Boolean.class, parameters={})
+    @Export(name="allowClaim", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowClaim;
 
     /**
@@ -58,7 +58,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The applicable schedule for the virtual machine.
      * 
      */
-    @OutputExport(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
+    @Export(name="applicableSchedule", type=ApplicableScheduleResponse.class, parameters={})
     private Output<ApplicableScheduleResponse> applicableSchedule;
 
     /**
@@ -72,7 +72,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The artifact deployment status for the virtual machine.
      * 
      */
-    @OutputExport(name="artifactDeploymentStatus", type=ArtifactDeploymentStatusPropertiesResponse.class, parameters={})
+    @Export(name="artifactDeploymentStatus", type=ArtifactDeploymentStatusPropertiesResponse.class, parameters={})
     private Output<ArtifactDeploymentStatusPropertiesResponse> artifactDeploymentStatus;
 
     /**
@@ -86,7 +86,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The artifacts to be installed on the virtual machine.
      * 
      */
-    @OutputExport(name="artifacts", type=List.class, parameters={ArtifactInstallPropertiesResponse.class})
+    @Export(name="artifacts", type=List.class, parameters={ArtifactInstallPropertiesResponse.class})
     private Output</* @Nullable */ List<ArtifactInstallPropertiesResponse>> artifacts;
 
     /**
@@ -100,7 +100,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The resource identifier (Microsoft.Compute) of the virtual machine.
      * 
      */
-    @OutputExport(name="computeId", type=String.class, parameters={})
+    @Export(name="computeId", type=String.class, parameters={})
     private Output<String> computeId;
 
     /**
@@ -114,7 +114,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The compute virtual machine properties.
      * 
      */
-    @OutputExport(name="computeVm", type=ComputeVmPropertiesResponse.class, parameters={})
+    @Export(name="computeVm", type=ComputeVmPropertiesResponse.class, parameters={})
     private Output<ComputeVmPropertiesResponse> computeVm;
 
     /**
@@ -128,7 +128,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The email address of creator of the virtual machine.
      * 
      */
-    @OutputExport(name="createdByUser", type=String.class, parameters={})
+    @Export(name="createdByUser", type=String.class, parameters={})
     private Output<String> createdByUser;
 
     /**
@@ -142,7 +142,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The object identifier of the creator of the virtual machine.
      * 
      */
-    @OutputExport(name="createdByUserId", type=String.class, parameters={})
+    @Export(name="createdByUserId", type=String.class, parameters={})
     private Output<String> createdByUserId;
 
     /**
@@ -156,7 +156,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The creation date of the virtual machine.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
     /**
@@ -170,7 +170,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The custom image identifier of the virtual machine.
      * 
      */
-    @OutputExport(name="customImageId", type=String.class, parameters={})
+    @Export(name="customImageId", type=String.class, parameters={})
     private Output</* @Nullable */ String> customImageId;
 
     /**
@@ -184,7 +184,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * New or existing data disks to attach to the virtual machine after creation
      * 
      */
-    @OutputExport(name="dataDiskParameters", type=List.class, parameters={DataDiskPropertiesResponse.class})
+    @Export(name="dataDiskParameters", type=List.class, parameters={DataDiskPropertiesResponse.class})
     private Output</* @Nullable */ List<DataDiskPropertiesResponse>> dataDiskParameters;
 
     /**
@@ -198,7 +198,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Indicates whether the virtual machine is to be created without a public IP address.
      * 
      */
-    @OutputExport(name="disallowPublicIpAddress", type=Boolean.class, parameters={})
+    @Export(name="disallowPublicIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disallowPublicIpAddress;
 
     /**
@@ -212,7 +212,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The resource ID of the environment that contains this virtual machine, if any.
      * 
      */
-    @OutputExport(name="environmentId", type=String.class, parameters={})
+    @Export(name="environmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentId;
 
     /**
@@ -226,7 +226,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The expiration date for VM.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
     /**
@@ -240,7 +240,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The fully-qualified domain name of the virtual machine.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -254,7 +254,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The Microsoft Azure Marketplace image reference of the virtual machine.
      * 
      */
-    @OutputExport(name="galleryImageReference", type=GalleryImageReferenceResponse.class, parameters={})
+    @Export(name="galleryImageReference", type=GalleryImageReferenceResponse.class, parameters={})
     private Output</* @Nullable */ GalleryImageReferenceResponse> galleryImageReference;
 
     /**
@@ -268,7 +268,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Indicates whether this virtual machine uses an SSH key for authentication.
      * 
      */
-    @OutputExport(name="isAuthenticationWithSshKey", type=Boolean.class, parameters={})
+    @Export(name="isAuthenticationWithSshKey", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAuthenticationWithSshKey;
 
     /**
@@ -282,7 +282,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The lab subnet name of the virtual machine.
      * 
      */
-    @OutputExport(name="labSubnetName", type=String.class, parameters={})
+    @Export(name="labSubnetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> labSubnetName;
 
     /**
@@ -296,7 +296,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The lab virtual network identifier of the virtual machine.
      * 
      */
-    @OutputExport(name="labVirtualNetworkId", type=String.class, parameters={})
+    @Export(name="labVirtualNetworkId", type=String.class, parameters={})
     private Output</* @Nullable */ String> labVirtualNetworkId;
 
     /**
@@ -310,7 +310,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Last known compute power state captured in DTL
      * 
      */
-    @OutputExport(name="lastKnownPowerState", type=String.class, parameters={})
+    @Export(name="lastKnownPowerState", type=String.class, parameters={})
     private Output<String> lastKnownPowerState;
 
     /**
@@ -324,7 +324,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -338,7 +338,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -352,7 +352,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The network interface properties.
      * 
      */
-    @OutputExport(name="networkInterface", type=NetworkInterfacePropertiesResponse.class, parameters={})
+    @Export(name="networkInterface", type=NetworkInterfacePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ NetworkInterfacePropertiesResponse> networkInterface;
 
     /**
@@ -366,7 +366,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The notes of the virtual machine.
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -380,7 +380,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The OS type of the virtual machine.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
     /**
@@ -394,7 +394,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The object identifier of the owner of the virtual machine.
      * 
      */
-    @OutputExport(name="ownerObjectId", type=String.class, parameters={})
+    @Export(name="ownerObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerObjectId;
 
     /**
@@ -408,7 +408,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The user principal name of the virtual machine owner.
      * 
      */
-    @OutputExport(name="ownerUserPrincipalName", type=String.class, parameters={})
+    @Export(name="ownerUserPrincipalName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerUserPrincipalName;
 
     /**
@@ -422,7 +422,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The password of the virtual machine administrator.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -436,7 +436,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The id of the plan associated with the virtual machine image
      * 
      */
-    @OutputExport(name="planId", type=String.class, parameters={})
+    @Export(name="planId", type=String.class, parameters={})
     private Output</* @Nullable */ String> planId;
 
     /**
@@ -450,7 +450,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -464,7 +464,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Virtual Machine schedules to be created
      * 
      */
-    @OutputExport(name="scheduleParameters", type=List.class, parameters={ScheduleCreationParameterResponse.class})
+    @Export(name="scheduleParameters", type=List.class, parameters={ScheduleCreationParameterResponse.class})
     private Output</* @Nullable */ List<ScheduleCreationParameterResponse>> scheduleParameters;
 
     /**
@@ -478,7 +478,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The size of the virtual machine.
      * 
      */
-    @OutputExport(name="size", type=String.class, parameters={})
+    @Export(name="size", type=String.class, parameters={})
     private Output</* @Nullable */ String> size;
 
     /**
@@ -492,7 +492,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The SSH key of the virtual machine administrator.
      * 
      */
-    @OutputExport(name="sshKey", type=String.class, parameters={})
+    @Export(name="sshKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sshKey;
 
     /**
@@ -506,7 +506,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Storage type to use for virtual machine (i.e. Standard, Premium).
      * 
      */
-    @OutputExport(name="storageType", type=String.class, parameters={})
+    @Export(name="storageType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageType;
 
     /**
@@ -520,7 +520,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -534,7 +534,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -548,7 +548,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
@@ -562,7 +562,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * The user name of the virtual machine.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
     /**
@@ -576,7 +576,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * Tells source of creation of lab virtual machine. Output property only.
      * 
      */
-    @OutputExport(name="virtualMachineCreationSource", type=String.class, parameters={})
+    @Export(name="virtualMachineCreationSource", type=String.class, parameters={})
     private Output<String> virtualMachineCreationSource;
 
     /**

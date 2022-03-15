@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.IntentArgs;
@@ -30,7 +30,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The name of the action associated with the intent. Note: The action name must not contain whitespaces.
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -44,7 +44,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
      * 
      */
-    @OutputExport(name="defaultResponsePlatforms", type=List.class, parameters={String.class})
+    @Export(name="defaultResponsePlatforms", type=List.class, parameters={String.class})
     private Output<List<String>> defaultResponsePlatforms;
 
     /**
@@ -58,7 +58,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The name of this intent.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -72,7 +72,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on Google or Dialogflow phone gateway) use this information to close interaction with an end user. Default is false.
      * 
      */
-    @OutputExport(name="endInteraction", type=Boolean.class, parameters={})
+    @Export(name="endInteraction", type=Boolean.class, parameters={})
     private Output<Boolean> endInteraction;
 
     /**
@@ -86,7 +86,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of the contexts must be present in the active user session for an event to trigger this intent. Event names are limited to 150 characters.
      * 
      */
-    @OutputExport(name="events", type=List.class, parameters={String.class})
+    @Export(name="events", type=List.class, parameters={String.class})
     private Output<List<String>> events;
 
     /**
@@ -100,7 +100,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Read-only. Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only in the output.
      * 
      */
-    @OutputExport(name="followupIntentInfo", type=List.class, parameters={GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse.class})
+    @Export(name="followupIntentInfo", type=List.class, parameters={GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse.class})
     private Output<List<GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse>> followupIntentInfo;
 
     /**
@@ -114,7 +114,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The list of context names required for this intent to be triggered. Format: `projects//agent/sessions/-/contexts/`.
      * 
      */
-    @OutputExport(name="inputContextNames", type=List.class, parameters={String.class})
+    @Export(name="inputContextNames", type=List.class, parameters={String.class})
     private Output<List<String>> inputContextNames;
 
     /**
@@ -128,7 +128,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. Indicates whether this is a fallback intent.
      * 
      */
-    @OutputExport(name="isFallback", type=Boolean.class, parameters={})
+    @Export(name="isFallback", type=Boolean.class, parameters={})
     private Output<Boolean> isFallback;
 
     /**
@@ -142,7 +142,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. Indicates that a live agent should be brought in to handle the interaction with the user. In most cases, when you set this flag to true, you would also want to set end_interaction to true as well. Default is false.
      * 
      */
-    @OutputExport(name="liveAgentHandoff", type=Boolean.class, parameters={})
+    @Export(name="liveAgentHandoff", type=Boolean.class, parameters={})
     private Output<Boolean> liveAgentHandoff;
 
     /**
@@ -156,7 +156,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The collection of rich messages corresponding to the `Response` field in the Dialogflow console.
      * 
      */
-    @OutputExport(name="messages", type=List.class, parameters={GoogleCloudDialogflowV2IntentMessageResponse.class})
+    @Export(name="messages", type=List.class, parameters={GoogleCloudDialogflowV2IntentMessageResponse.class})
     private Output<List<GoogleCloudDialogflowV2IntentMessageResponse>> messages;
 
     /**
@@ -170,7 +170,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled` setting is set to true, then this intent is not taken into account during inference in `ML ONLY` match mode. Also, auto-markup in the UI is turned off.
      * 
      */
-    @OutputExport(name="mlDisabled", type=Boolean.class, parameters={})
+    @Export(name="mlDisabled", type=Boolean.class, parameters={})
     private Output<Boolean> mlDisabled;
 
     /**
@@ -184,7 +184,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format: `projects//agent/intents/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -198,7 +198,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The collection of contexts that are activated when the intent is matched. Context messages in this collection should not set the parameters field. Setting the `lifespan_count` to 0 will reset the context when the intent is matched. Format: `projects//agent/sessions/-/contexts/`.
      * 
      */
-    @OutputExport(name="outputContexts", type=List.class, parameters={GoogleCloudDialogflowV2ContextResponse.class})
+    @Export(name="outputContexts", type=List.class, parameters={GoogleCloudDialogflowV2ContextResponse.class})
     private Output<List<GoogleCloudDialogflowV2ContextResponse>> outputContexts;
 
     /**
@@ -212,7 +212,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The collection of parameters associated with the intent.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={GoogleCloudDialogflowV2IntentParameterResponse.class})
+    @Export(name="parameters", type=List.class, parameters={GoogleCloudDialogflowV2IntentParameterResponse.class})
     private Output<List<GoogleCloudDialogflowV2IntentParameterResponse>> parameters;
 
     /**
@@ -226,7 +226,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Read-only after creation. The unique identifier of the parent intent in the chain of followup intents. You can set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in order to make this intent a followup intent. It identifies the parent followup intent. Format: `projects//agent/intents/`.
      * 
      */
-    @OutputExport(name="parentFollowupIntentName", type=String.class, parameters={})
+    @Export(name="parentFollowupIntentName", type=String.class, parameters={})
     private Output<String> parentFollowupIntentName;
 
     /**
@@ -240,7 +240,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The priority of this intent. Higher numbers represent higher priorities. - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the `Normal` priority in the console. - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -254,7 +254,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. Indicates whether to delete all contexts in the current session when this intent is matched.
      * 
      */
-    @OutputExport(name="resetContexts", type=Boolean.class, parameters={})
+    @Export(name="resetContexts", type=Boolean.class, parameters={})
     private Output<Boolean> resetContexts;
 
     /**
@@ -268,7 +268,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Read-only. The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents chain for this intent. We populate this field only in the output. Format: `projects//agent/intents/`.
      * 
      */
-    @OutputExport(name="rootFollowupIntentName", type=String.class, parameters={})
+    @Export(name="rootFollowupIntentName", type=String.class, parameters={})
     private Output<String> rootFollowupIntentName;
 
     /**
@@ -282,7 +282,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. The collection of examples that the agent is trained on.
      * 
      */
-    @OutputExport(name="trainingPhrases", type=List.class, parameters={GoogleCloudDialogflowV2IntentTrainingPhraseResponse.class})
+    @Export(name="trainingPhrases", type=List.class, parameters={GoogleCloudDialogflowV2IntentTrainingPhraseResponse.class})
     private Output<List<GoogleCloudDialogflowV2IntentTrainingPhraseResponse>> trainingPhrases;
 
     /**
@@ -296,7 +296,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * Optional. Indicates whether webhooks are enabled for the intent.
      * 
      */
-    @OutputExport(name="webhookState", type=String.class, parameters={})
+    @Export(name="webhookState", type=String.class, parameters={})
     private Output<String> webhookState;
 
     /**

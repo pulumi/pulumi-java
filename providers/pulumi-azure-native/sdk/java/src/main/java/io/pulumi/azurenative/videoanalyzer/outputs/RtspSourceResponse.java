@@ -6,13 +6,13 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.TlsEndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.UnsecuredEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RtspSourceResponse {
     /**
      * RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
@@ -36,12 +36,12 @@ public final class RtspSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RtspSourceResponse(
-        @OutputCustomType.Parameter("endpoint") Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("transport") @Nullable String transport,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endpoint") Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("transport") @Nullable String transport,
+        @CustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.name = name;
         this.transport = transport;

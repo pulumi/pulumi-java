@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertRuleLeafConditionResponse {
     /**
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
@@ -29,11 +29,11 @@ public final class AlertRuleLeafConditionResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertRuleLeafConditionResponse(
-        @OutputCustomType.Parameter("containsAny") @Nullable List<String> containsAny,
-        @OutputCustomType.Parameter("equals") @Nullable String equals,
-        @OutputCustomType.Parameter("field") @Nullable String field) {
+        @CustomType.Parameter("containsAny") @Nullable List<String> containsAny,
+        @CustomType.Parameter("equals") @Nullable String equals,
+        @CustomType.Parameter("field") @Nullable String field) {
         this.containsAny = containsAny;
         this.equals = equals;
         this.field = field;

@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusSyncStateAttachmentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
      * Nested list describing the attachment status of the firewall's association with a single VPC subnet.
      * 
      */
-    @InputImport(name="attachments")
+    @Import(name="attachments")
       private final @Nullable Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments;
 
     public Output<List<FirewallFirewallStatusSyncStateAttachmentArgs>> getAttachments() {
@@ -31,7 +31,7 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
      * The Availability Zone where the subnet is configured.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {

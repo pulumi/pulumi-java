@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProcessingOptionsResponse {
     /**
      * Optional. If set to `true`, the service does not attempt to resolve a more precise address for the job.
@@ -21,10 +21,10 @@ public final class ProcessingOptionsResponse {
      */
     private final String htmlSanitization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProcessingOptionsResponse(
-        @OutputCustomType.Parameter("disableStreetAddressResolution") Boolean disableStreetAddressResolution,
-        @OutputCustomType.Parameter("htmlSanitization") String htmlSanitization) {
+        @CustomType.Parameter("disableStreetAddressResolution") Boolean disableStreetAddressResolution,
+        @CustomType.Parameter("htmlSanitization") String htmlSanitization) {
         this.disableStreetAddressResolution = disableStreetAddressResolution;
         this.htmlSanitization = htmlSanitization;
     }

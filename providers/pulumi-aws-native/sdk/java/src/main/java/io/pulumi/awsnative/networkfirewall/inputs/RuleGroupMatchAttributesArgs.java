@@ -7,7 +7,7 @@ import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupAddressArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupPortRangeArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupTCPFlagFieldArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,42 +18,42 @@ public final class RuleGroupMatchAttributesArgs extends io.pulumi.resources.Reso
 
     public static final RuleGroupMatchAttributesArgs Empty = new RuleGroupMatchAttributesArgs();
 
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable Output<List<RuleGroupPortRangeArgs>> destinationPorts;
 
     public Output<List<RuleGroupPortRangeArgs>> getDestinationPorts() {
         return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
     }
 
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<RuleGroupAddressArgs>> destinations;
 
     public Output<List<RuleGroupAddressArgs>> getDestinations() {
         return this.destinations == null ? Output.empty() : this.destinations;
     }
 
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable Output<List<Integer>> protocols;
 
     public Output<List<Integer>> getProtocols() {
         return this.protocols == null ? Output.empty() : this.protocols;
     }
 
-    @InputImport(name="sourcePorts")
+    @Import(name="sourcePorts")
       private final @Nullable Output<List<RuleGroupPortRangeArgs>> sourcePorts;
 
     public Output<List<RuleGroupPortRangeArgs>> getSourcePorts() {
         return this.sourcePorts == null ? Output.empty() : this.sourcePorts;
     }
 
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<RuleGroupAddressArgs>> sources;
 
     public Output<List<RuleGroupAddressArgs>> getSources() {
         return this.sources == null ? Output.empty() : this.sources;
     }
 
-    @InputImport(name="tCPFlags")
+    @Import(name="tCPFlags")
       private final @Nullable Output<List<RuleGroupTCPFlagFieldArgs>> tCPFlags;
 
     public Output<List<RuleGroupTCPFlagFieldArgs>> getTCPFlags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.kms.outputs.GetKMSCryptoKeyVersionPublicKey;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSCryptoKeyVersionResult {
     /**
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
@@ -47,16 +47,16 @@ public final class GetKMSCryptoKeyVersionResult {
     private final String state;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSCryptoKeyVersionResult(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
-        @OutputCustomType.Parameter("publicKeys") List<GetKMSCryptoKeyVersionPublicKey> publicKeys,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("cryptoKey") String cryptoKey,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protectionLevel") String protectionLevel,
+        @CustomType.Parameter("publicKeys") List<GetKMSCryptoKeyVersionPublicKey> publicKeys,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.algorithm = algorithm;
         this.cryptoKey = cryptoKey;
         this.id = id;

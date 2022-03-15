@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGetEndpointResponse {
     /**
      * The destination port to connect to.
@@ -33,12 +33,12 @@ public final class ApplicationGetEndpointResponse {
      */
     private final @Nullable Integer publicPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGetEndpointResponse(
-        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
-        @OutputCustomType.Parameter("publicPort") @Nullable Integer publicPort) {
+        @CustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @CustomType.Parameter("publicPort") @Nullable Integer publicPort) {
         this.destinationPort = destinationPort;
         this.location = location;
         this.privateIPAddress = privateIPAddress;

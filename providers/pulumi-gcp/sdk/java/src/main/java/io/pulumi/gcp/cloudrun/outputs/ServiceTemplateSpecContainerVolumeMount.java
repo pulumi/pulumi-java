@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerVolumeMount {
     /**
      * Path within the container at which the volume should be mounted.  Must
@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerVolumeMount {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainerVolumeMount(
-        @OutputCustomType.Parameter("mountPath") String mountPath,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("mountPath") String mountPath,
+        @CustomType.Parameter("name") String name) {
         this.mountPath = mountPath;
         this.name = name;
     }

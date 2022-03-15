@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class GrafeasV1beta1IntotoSignatureResponse extends io.pulumi.resou
 
     public static final GrafeasV1beta1IntotoSignatureResponse Empty = new GrafeasV1beta1IntotoSignatureResponse();
 
-    @InputImport(name="keyid", required=true)
+    @Import(name="keyid", required=true)
       private final String keyid;
 
     public String getKeyid() {
         return this.keyid;
     }
 
-    @InputImport(name="sig", required=true)
+    @Import(name="sig", required=true)
       private final String sig;
 
     public String getSig() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * Name of the frontend IP configuration that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * PrivateIPAddress of the network interface IP Configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -67,7 +67,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
@@ -78,7 +78,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * Reference to the application gateway private link configuration.
      * 
      */
-    @InputImport(name="privateLinkConfiguration")
+    @Import(name="privateLinkConfiguration")
       private final @Nullable SubResourceResponse privateLinkConfiguration;
 
     public Optional<SubResourceResponse> getPrivateLinkConfiguration() {
@@ -89,7 +89,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * The provisioning state of the frontend IP configuration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -100,7 +100,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * Reference to the PublicIP resource.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> getPublicIPAddress() {
@@ -111,7 +111,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * Reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
@@ -122,7 +122,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends io.
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

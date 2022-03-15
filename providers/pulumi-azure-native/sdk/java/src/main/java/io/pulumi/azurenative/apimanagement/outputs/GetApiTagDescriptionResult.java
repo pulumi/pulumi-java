@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiTagDescriptionResult {
     /**
      * Description of the Tag.
@@ -52,16 +52,16 @@ public final class GetApiTagDescriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiTagDescriptionResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("externalDocsDescription") @Nullable String externalDocsDescription,
-        @OutputCustomType.Parameter("externalDocsUrl") @Nullable String externalDocsUrl,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tagId") @Nullable String tagId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("externalDocsDescription") @Nullable String externalDocsDescription,
+        @CustomType.Parameter("externalDocsUrl") @Nullable String externalDocsUrl,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tagId") @Nullable String tagId,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.externalDocsDescription = externalDocsDescription;

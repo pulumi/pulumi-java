@@ -9,14 +9,14 @@ import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsParallelism;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsProcessingConfiguration;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchema;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsStartingPositionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputs {
     /**
      * The ARN of the Kinesis Analytics Application.
@@ -65,17 +65,17 @@ public final class AnalyticsApplicationInputs {
     private final @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations;
     private final @Nullable List<String> streamNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationInputs(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose,
-        @OutputCustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream,
-        @OutputCustomType.Parameter("namePrefix") String namePrefix,
-        @OutputCustomType.Parameter("parallelism") @Nullable AnalyticsApplicationInputsParallelism parallelism,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("schema") AnalyticsApplicationInputsSchema schema,
-        @OutputCustomType.Parameter("startingPositionConfigurations") @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations,
-        @OutputCustomType.Parameter("streamNames") @Nullable List<String> streamNames) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose,
+        @CustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream,
+        @CustomType.Parameter("namePrefix") String namePrefix,
+        @CustomType.Parameter("parallelism") @Nullable AnalyticsApplicationInputsParallelism parallelism,
+        @CustomType.Parameter("processingConfiguration") @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("schema") AnalyticsApplicationInputsSchema schema,
+        @CustomType.Parameter("startingPositionConfigurations") @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations,
+        @CustomType.Parameter("streamNames") @Nullable List<String> streamNames) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;

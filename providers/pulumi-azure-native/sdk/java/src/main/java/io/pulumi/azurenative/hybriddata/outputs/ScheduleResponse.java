@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hybriddata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleResponse {
     /**
      * Name of the schedule.
@@ -23,10 +23,10 @@ public final class ScheduleResponse {
      */
     private final @Nullable List<String> policyList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("policyList") @Nullable List<String> policyList) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("policyList") @Nullable List<String> policyList) {
         this.name = name;
         this.policyList = policyList;
     }

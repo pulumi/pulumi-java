@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmUtilizationMetricsResponse {
     /**
      * Average CPU usage, percent.
@@ -91,24 +91,24 @@ public final class VmUtilizationMetricsResponse {
      */
     private final String networkThroughputMaxKbps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmUtilizationMetricsResponse(
-        @OutputCustomType.Parameter("cpuAverage") Integer cpuAverage,
-        @OutputCustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
-        @OutputCustomType.Parameter("cpuMax") Integer cpuMax,
-        @OutputCustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
-        @OutputCustomType.Parameter("diskIoRateAverage") String diskIoRateAverage,
-        @OutputCustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
-        @OutputCustomType.Parameter("diskIoRateMax") String diskIoRateMax,
-        @OutputCustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
-        @OutputCustomType.Parameter("memoryAverage") Integer memoryAverage,
-        @OutputCustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
-        @OutputCustomType.Parameter("memoryMax") Integer memoryMax,
-        @OutputCustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
-        @OutputCustomType.Parameter("networkThroughputAverage") String networkThroughputAverage,
-        @OutputCustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
-        @OutputCustomType.Parameter("networkThroughputMax") String networkThroughputMax,
-        @OutputCustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
+        @CustomType.Parameter("cpuAverage") Integer cpuAverage,
+        @CustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
+        @CustomType.Parameter("cpuMax") Integer cpuMax,
+        @CustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
+        @CustomType.Parameter("diskIoRateAverage") String diskIoRateAverage,
+        @CustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
+        @CustomType.Parameter("diskIoRateMax") String diskIoRateMax,
+        @CustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
+        @CustomType.Parameter("memoryAverage") Integer memoryAverage,
+        @CustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
+        @CustomType.Parameter("memoryMax") Integer memoryMax,
+        @CustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
+        @CustomType.Parameter("networkThroughputAverage") String networkThroughputAverage,
+        @CustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
+        @CustomType.Parameter("networkThroughputMax") String networkThroughputMax,
+        @CustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
         this.cpuAverage = cpuAverage;
         this.cpuAveragePercent = cpuAveragePercent;
         this.cpuMax = cpuMax;

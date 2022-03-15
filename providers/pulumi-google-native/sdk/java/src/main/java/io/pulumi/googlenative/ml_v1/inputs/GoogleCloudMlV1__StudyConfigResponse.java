@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_MetricSpecResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_ParameterSpecResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AutomatedStoppingConfigResponse;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * The search algorithm specified for the study.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * Configuration for automated stopping of unpromising Trials.
      * 
      */
-    @InputImport(name="automatedStoppingConfig", required=true)
+    @Import(name="automatedStoppingConfig", required=true)
       private final GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig;
 
     public GoogleCloudMlV1__AutomatedStoppingConfigResponse getAutomatedStoppingConfig() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * Metric specs for the study.
      * 
      */
-    @InputImport(name="metrics", required=true)
+    @Import(name="metrics", required=true)
       private final List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics;
 
     public List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> getMetrics() {
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1__StudyConfigResponse extends io.pulumi.resour
      * The set of parameters to tune.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getParameters() {

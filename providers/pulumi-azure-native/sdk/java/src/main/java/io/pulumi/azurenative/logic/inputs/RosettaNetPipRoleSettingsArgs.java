@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.RosettaNetPipRoleType;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The action name.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -35,7 +35,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The RosettaNet ProcessConfiguration business document.
      * 
      */
-    @InputImport(name="businessDocument", required=true)
+    @Import(name="businessDocument", required=true)
       private final Output<RosettaNetPipBusinessDocumentArgs> businessDocument;
 
     public Output<RosettaNetPipBusinessDocumentArgs> getBusinessDocument() {
@@ -46,7 +46,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The role name.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -68,7 +68,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The RosettaNet ProcessConfiguration role type.
      * 
      */
-    @InputImport(name="roleType", required=true)
+    @Import(name="roleType", required=true)
       private final Output<RosettaNetPipRoleType> roleType;
 
     public Output<RosettaNetPipRoleType> getRoleType() {
@@ -79,7 +79,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The service name.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {
@@ -90,7 +90,7 @@ public final class RosettaNetPipRoleSettingsArgs extends io.pulumi.resources.Res
      * The service classification name.
      * 
      */
-    @InputImport(name="serviceClassification", required=true)
+    @Import(name="serviceClassification", required=true)
       private final Output<String> serviceClassification;
 
     public Output<String> getServiceClassification() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * List of FQDNs for current private link connection.
      * 
      */
-    @InputImport(name="fqdns", required=true)
+    @Import(name="fqdns", required=true)
       private final List<String> fqdns;
 
     public List<String> getFqdns() {
@@ -32,7 +32,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * The group ID for current private link connection.
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final String groupId;
 
     public String getGroupId() {
@@ -43,7 +43,7 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      * The required member name for current private link connection.
      * 
      */
-    @InputImport(name="requiredMemberName", required=true)
+    @Import(name="requiredMemberName", required=true)
       private final String requiredMemberName;
 
     public String getRequiredMemberName() {

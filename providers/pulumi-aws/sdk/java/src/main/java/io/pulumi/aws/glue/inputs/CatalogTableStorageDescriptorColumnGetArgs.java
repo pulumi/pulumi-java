@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * Free-form text comment.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -30,7 +30,7 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * Name of the target table.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -52,7 +52,7 @@ public final class CatalogTableStorageDescriptorColumnGetArgs extends io.pulumi.
      * Datatype of data in the Column.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

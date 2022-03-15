@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionS3OutputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class DataQualityJobDefinitionMonitoringOutputArgs extends io.pulum
 
     public static final DataQualityJobDefinitionMonitoringOutputArgs Empty = new DataQualityJobDefinitionMonitoringOutputArgs();
 
-    @InputImport(name="s3Output", required=true)
+    @Import(name="s3Output", required=true)
       private final Output<DataQualityJobDefinitionS3OutputArgs> s3Output;
 
     public Output<DataQualityJobDefinitionS3OutputArgs> getS3Output() {

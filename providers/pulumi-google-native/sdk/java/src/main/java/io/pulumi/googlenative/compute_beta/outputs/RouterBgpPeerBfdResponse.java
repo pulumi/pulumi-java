@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterBgpPeerBfdResponse {
     /**
      * The minimum interval, in milliseconds, between BFD control packets received from the peer router. The actual value is negotiated between the two routers and is equal to the greater of this value and the transmit interval of the other router. If set, this value must be between 1000 and 30000. The default is 1000.
@@ -31,12 +31,12 @@ public final class RouterBgpPeerBfdResponse {
      */
     private final String sessionInitializationMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterBgpPeerBfdResponse(
-        @OutputCustomType.Parameter("minReceiveInterval") Integer minReceiveInterval,
-        @OutputCustomType.Parameter("minTransmitInterval") Integer minTransmitInterval,
-        @OutputCustomType.Parameter("multiplier") Integer multiplier,
-        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
+        @CustomType.Parameter("minReceiveInterval") Integer minReceiveInterval,
+        @CustomType.Parameter("minTransmitInterval") Integer minTransmitInterval,
+        @CustomType.Parameter("multiplier") Integer multiplier,
+        @CustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.multiplier = multiplier;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAliasResult {
     /**
      * The Amazon Resource Name(ARN) of the key alias.
@@ -31,13 +31,13 @@ public final class GetAliasResult {
      */
     private final String targetKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAliasResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("targetKeyArn") String targetKeyArn,
-        @OutputCustomType.Parameter("targetKeyId") String targetKeyId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("targetKeyArn") String targetKeyArn,
+        @CustomType.Parameter("targetKeyId") String targetKeyId) {
         this.arn = arn;
         this.id = id;
         this.name = name;

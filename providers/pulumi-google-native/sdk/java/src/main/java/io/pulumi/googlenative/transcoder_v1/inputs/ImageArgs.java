@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
      * 
      */
-    @InputImport(name="alpha")
+    @Import(name="alpha")
       private final @Nullable Output<Double> alpha;
 
     public Output<Double> getAlpha() {
@@ -35,7 +35,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Normalized image resolution, based on output video resolution. Valid values: `0.0`–`1.0`. To respect the original image aspect ratio, set either `x` or `y` to `0.0`. To use the original image resolution, set both `x` and `y` to `0.0`.
      * 
      */
-    @InputImport(name="resolution")
+    @Import(name="resolution")
       private final @Nullable Output<NormalizedCoordinateArgs> resolution;
 
     public Output<NormalizedCoordinateArgs> getResolution() {
@@ -46,7 +46,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

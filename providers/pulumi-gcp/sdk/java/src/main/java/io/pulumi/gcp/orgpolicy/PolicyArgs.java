@@ -4,7 +4,7 @@
 package io.pulumi.gcp.orgpolicy;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The parent of the resource.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -41,7 +41,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Basic information about the Organization Policy.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<PolicySpecArgs> spec;
 
     public Output<PolicySpecArgs> getSpec() {

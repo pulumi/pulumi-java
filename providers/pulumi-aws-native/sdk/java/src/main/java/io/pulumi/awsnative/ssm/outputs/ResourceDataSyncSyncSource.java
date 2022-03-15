@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.outputs;
 
 import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncAwsOrganizationsSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,19 +12,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceDataSyncSyncSource {
     private final @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
     private final @Nullable Boolean includeFutureRegions;
     private final List<String> sourceRegions;
     private final String sourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceDataSyncSyncSource(
-        @OutputCustomType.Parameter("awsOrganizationsSource") @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
-        @OutputCustomType.Parameter("includeFutureRegions") @Nullable Boolean includeFutureRegions,
-        @OutputCustomType.Parameter("sourceRegions") List<String> sourceRegions,
-        @OutputCustomType.Parameter("sourceType") String sourceType) {
+        @CustomType.Parameter("awsOrganizationsSource") @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
+        @CustomType.Parameter("includeFutureRegions") @Nullable Boolean includeFutureRegions,
+        @CustomType.Parameter("sourceRegions") List<String> sourceRegions,
+        @CustomType.Parameter("sourceType") String sourceType) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         this.includeFutureRegions = includeFutureRegions;
         this.sourceRegions = sourceRegions;

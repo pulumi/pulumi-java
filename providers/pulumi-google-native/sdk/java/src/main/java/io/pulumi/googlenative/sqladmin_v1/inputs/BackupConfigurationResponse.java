@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1.inputs.BackupRetentionSettingsResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * Backup retention settings.
      * 
      */
-    @InputImport(name="backupRetentionSettings", required=true)
+    @Import(name="backupRetentionSettings", required=true)
       private final BackupRetentionSettingsResponse backupRetentionSettings;
 
     public BackupRetentionSettingsResponse getBackupRetentionSettings() {
@@ -34,7 +34,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must be disabled as well.
      * 
      */
-    @InputImport(name="binaryLogEnabled", required=true)
+    @Import(name="binaryLogEnabled", required=true)
       private final Boolean binaryLogEnabled;
 
     public Boolean getBinaryLogEnabled() {
@@ -45,7 +45,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * Whether this configuration is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -56,7 +56,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * This is always `sql#backupConfiguration`.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -67,7 +67,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * Location of the backup
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -78,7 +78,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * (Postgres only) Whether point in time recovery is enabled.
      * 
      */
-    @InputImport(name="pointInTimeRecoveryEnabled", required=true)
+    @Import(name="pointInTimeRecoveryEnabled", required=true)
       private final Boolean pointInTimeRecoveryEnabled;
 
     public Boolean getPointInTimeRecoveryEnabled() {
@@ -89,7 +89,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * Reserved for future use.
      * 
      */
-    @InputImport(name="replicationLogArchivingEnabled", required=true)
+    @Import(name="replicationLogArchivingEnabled", required=true)
       private final Boolean replicationLogArchivingEnabled;
 
     public Boolean getReplicationLogArchivingEnabled() {
@@ -100,7 +100,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * Start time for the daily backup configuration in UTC timezone in the 24 hour format - `HH:MM`.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -111,7 +111,7 @@ public final class BackupConfigurationResponse extends io.pulumi.resources.Invok
      * The number of days of transaction logs we retain for point in time restore, from 1-7.
      * 
      */
-    @InputImport(name="transactionLogRetentionDays", required=true)
+    @Import(name="transactionLogRetentionDays", required=true)
       private final Integer transactionLogRetentionDays;
 
     public Integer getTransactionLogRetentionDays() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SelectedCertificateInputResponse {
     /**
      * Name of certificate to be exported.
@@ -20,10 +20,10 @@ public final class SelectedCertificateInputResponse {
      */
     private final String password;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelectedCertificateInputResponse(
-        @OutputCustomType.Parameter("certificateName") String certificateName,
-        @OutputCustomType.Parameter("password") String password) {
+        @CustomType.Parameter("certificateName") String certificateName,
+        @CustomType.Parameter("password") String password) {
         this.certificateName = certificateName;
         this.password = password;
     }

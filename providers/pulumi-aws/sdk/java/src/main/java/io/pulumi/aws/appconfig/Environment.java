@@ -8,7 +8,7 @@ import io.pulumi.aws.appconfig.EnvironmentArgs;
 import io.pulumi.aws.appconfig.inputs.EnvironmentState;
 import io.pulumi.aws.appconfig.outputs.EnvironmentMonitor;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The AppConfig application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -49,7 +49,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the AppConfig Environment.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The description of the environment. Can be at most 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The AppConfig environment ID.
      * 
      */
-    @OutputExport(name="environmentId", type=String.class, parameters={})
+    @Export(name="environmentId", type=String.class, parameters={})
     private Output<String> environmentId;
 
     /**
@@ -91,7 +91,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
      * 
      */
-    @OutputExport(name="monitors", type=List.class, parameters={EnvironmentMonitor.class})
+    @Export(name="monitors", type=List.class, parameters={EnvironmentMonitor.class})
     private Output</* @Nullable */ List<EnvironmentMonitor>> monitors;
 
     /**
@@ -105,7 +105,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The name for the environment. Must be between 1 and 64 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -115,7 +115,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     public Output<String> getState() {
@@ -125,7 +125,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -139,7 +139,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

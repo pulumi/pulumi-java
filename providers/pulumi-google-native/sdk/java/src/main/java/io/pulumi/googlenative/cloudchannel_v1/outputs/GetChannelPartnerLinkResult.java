@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelPartnerLinkResult {
     /**
      * Cloud Identity info of the channel partner (IR).
@@ -51,16 +51,16 @@ public final class GetChannelPartnerLinkResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelPartnerLinkResult(
-        @OutputCustomType.Parameter("channelPartnerCloudIdentityInfo") GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("inviteLinkUri") String inviteLinkUri,
-        @OutputCustomType.Parameter("linkState") String linkState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicId") String publicId,
-        @OutputCustomType.Parameter("resellerCloudIdentityId") String resellerCloudIdentityId,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("channelPartnerCloudIdentityInfo") GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("inviteLinkUri") String inviteLinkUri,
+        @CustomType.Parameter("linkState") String linkState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicId") String publicId,
+        @CustomType.Parameter("resellerCloudIdentityId") String resellerCloudIdentityId,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.channelPartnerCloudIdentityInfo = channelPartnerCloudIdentityInfo;
         this.createTime = createTime;
         this.inviteLinkUri = inviteLinkUri;

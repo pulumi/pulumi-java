@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.stepfunctions.ActivityArgs;
 import io.pulumi.awsnative.stepfunctions.outputs.ActivityTagsEntry;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,19 +21,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:stepfunctions:Activity")
 public class Activity extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ActivityTagsEntry.class})
+    @Export(name="tags", type=List.class, parameters={ActivityTagsEntry.class})
     private Output</* @Nullable */ List<ActivityTagsEntry>> tags;
 
     public Output</* @Nullable */ List<ActivityTagsEntry>> getTags() {

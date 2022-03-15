@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLoggingProperties {
     private final String bucketName;
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterLoggingProperties(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }

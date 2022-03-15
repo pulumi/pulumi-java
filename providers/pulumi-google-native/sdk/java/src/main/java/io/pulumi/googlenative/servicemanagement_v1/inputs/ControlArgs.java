@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * The service controller environment to use. If empty, no control plane feature (like quota and billing) will be enabled. The recommended value for most services is servicecontrol.googleapis.com
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {

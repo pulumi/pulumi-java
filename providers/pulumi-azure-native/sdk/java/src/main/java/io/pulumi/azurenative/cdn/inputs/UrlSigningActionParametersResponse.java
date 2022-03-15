@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.UrlSigningParamIdentifierResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class UrlSigningActionParametersResponse extends io.pulumi.resource
      * Algorithm to use for URL signing
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable String algorithm;
 
     public Optional<String> getAlgorithm() {
         return this.algorithm == null ? Optional.empty() : Optional.ofNullable(this.algorithm);
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -42,7 +42,7 @@ public final class UrlSigningActionParametersResponse extends io.pulumi.resource
      * Defines which query string parameters in the url to be considered for expires, key id etc.
      * 
      */
-    @InputImport(name="parameterNameOverride")
+    @Import(name="parameterNameOverride")
       private final @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 
     public List<UrlSigningParamIdentifierResponse> getParameterNameOverride() {

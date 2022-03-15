@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ContainerCapabilitiesGetArgs extends io.pulumi.resources.Reso
 
     public static final ContainerCapabilitiesGetArgs Empty = new ContainerCapabilitiesGetArgs();
 
-    @InputImport(name="adds")
+    @Import(name="adds")
       private final @Nullable Output<List<String>> adds;
 
     public Output<List<String>> getAdds() {
         return this.adds == null ? Output.empty() : this.adds;
     }
 
-    @InputImport(name="drops")
+    @Import(name="drops")
       private final @Nullable Output<List<String>> drops;
 
     public Output<List<String>> getDrops() {

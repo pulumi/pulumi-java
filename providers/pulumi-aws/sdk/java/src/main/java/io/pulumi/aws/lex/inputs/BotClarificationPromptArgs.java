@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotClarificationPromptMessageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
      * The number of times to prompt the user for information.
      * 
      */
-    @InputImport(name="maxAttempts", required=true)
+    @Import(name="maxAttempts", required=true)
       private final Output<Integer> maxAttempts;
 
     public Output<Integer> getMaxAttempts() {
@@ -34,7 +34,7 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
      * are documented under message.
      * 
      */
-    @InputImport(name="messages", required=true)
+    @Import(name="messages", required=true)
       private final Output<List<BotClarificationPromptMessageArgs>> messages;
 
     public Output<List<BotClarificationPromptMessageArgs>> getMessages() {
@@ -47,7 +47,7 @@ public final class BotClarificationPromptArgs extends io.pulumi.resources.Resour
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html).
      * 
      */
-    @InputImport(name="responseCard")
+    @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
     public Output<String> getResponseCard() {

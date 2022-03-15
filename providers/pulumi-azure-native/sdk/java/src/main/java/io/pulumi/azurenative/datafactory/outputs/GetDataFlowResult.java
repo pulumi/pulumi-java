@@ -6,12 +6,12 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.FlowletResponse;
 import io.pulumi.azurenative.datafactory.outputs.MappingDataFlowResponse;
 import io.pulumi.azurenative.datafactory.outputs.WranglingDataFlowResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataFlowResult {
     /**
      * Etag identifies change in the resource.
@@ -39,13 +39,13 @@ public final class GetDataFlowResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataFlowResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CdnCertificateSourceParametersResponse {
     /**
      * Type of certificate used
@@ -16,10 +16,10 @@ public final class CdnCertificateSourceParametersResponse {
     private final String certificateType;
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CdnCertificateSourceParametersResponse(
-        @OutputCustomType.Parameter("certificateType") String certificateType,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("certificateType") String certificateType,
+        @CustomType.Parameter("odataType") String odataType) {
         this.certificateType = certificateType;
         this.odataType = odataType;
     }

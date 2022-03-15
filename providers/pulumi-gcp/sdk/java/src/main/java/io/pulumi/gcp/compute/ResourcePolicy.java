@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ResourcePolicyArgs;
@@ -47,7 +47,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="groupPlacementPolicy", type=ResourcePolicyGroupPlacementPolicy.class, parameters={})
+    @Export(name="groupPlacementPolicy", type=ResourcePolicyGroupPlacementPolicy.class, parameters={})
     private Output</* @Nullable */ ResourcePolicyGroupPlacementPolicy> groupPlacementPolicy;
 
     /**
@@ -78,7 +78,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="instanceSchedulePolicy", type=ResourcePolicyInstanceSchedulePolicy.class, parameters={})
+    @Export(name="instanceSchedulePolicy", type=ResourcePolicyInstanceSchedulePolicy.class, parameters={})
     private Output</* @Nullable */ ResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicy;
 
     /**
@@ -99,7 +99,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -135,7 +135,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Region where resource policy resides.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -149,7 +149,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -164,7 +164,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="snapshotSchedulePolicy", type=ResourcePolicySnapshotSchedulePolicy.class, parameters={})
+    @Export(name="snapshotSchedulePolicy", type=ResourcePolicySnapshotSchedulePolicy.class, parameters={})
     private Output</* @Nullable */ ResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicy;
 
     /**

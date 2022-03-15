@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Container name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Version identifier.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {
@@ -49,7 +49,7 @@ public final class GetDataVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

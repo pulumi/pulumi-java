@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this site is enabled for DirectLine channel
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -32,7 +32,7 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this site is enabled for preview versions of Webchat
      * 
      */
-    @InputImport(name="isWebchatPreviewEnabled", required=true)
+    @Import(name="isWebchatPreviewEnabled", required=true)
       private final Boolean isWebchatPreviewEnabled;
 
     public Boolean getIsWebchatPreviewEnabled() {
@@ -43,7 +43,7 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
      * Primary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -54,7 +54,7 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
      * Secondary key. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="key2", required=true)
+    @Import(name="key2", required=true)
       private final String key2;
 
     public String getKey2() {
@@ -65,7 +65,7 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
      * Site Id
      * 
      */
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final String siteId;
 
     public String getSiteId() {
@@ -76,7 +76,7 @@ public final class WebChatSiteResponse extends io.pulumi.resources.InvokeArgs {
      * Site name
      * 
      */
-    @InputImport(name="siteName", required=true)
+    @Import(name="siteName", required=true)
       private final String siteName;
 
     public String getSiteName() {

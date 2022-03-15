@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
      * The ID of the node at which the edge starts.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -29,7 +29,7 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
      * The ID of the node at which the edge ends.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final String target;
 
     public String getTarget() {
@@ -40,7 +40,7 @@ public final class GetScriptDagEdge extends io.pulumi.resources.InvokeArgs {
      * The target of the edge.
      * 
      */
-    @InputImport(name="targetParameter")
+    @Import(name="targetParameter")
       private final @Nullable String targetParameter;
 
     public Optional<String> getTargetParameter() {

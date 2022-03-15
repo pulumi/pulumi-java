@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
 
     public static final DatacenterConnectorArgs Empty = new DatacenterConnectorArgs();
 
-    @InputImport(name="datacenterConnectorId", required=true)
+    @Import(name="datacenterConnectorId", required=true)
       private final Output<String> datacenterConnectorId;
 
     public Output<String> getDatacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -39,14 +39,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * Immutable. A unique key for this connector. This key is internal to the OVA connector and is supplied with its creation during the registration process and can not be modified.
      * 
      */
-    @InputImport(name="registrationId")
+    @Import(name="registrationId")
       private final @Nullable Output<String> registrationId;
 
     public Output<String> getRegistrationId() {
         return this.registrationId == null ? Output.empty() : this.registrationId;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -57,14 +57,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * The service account to use in the connector when communicating with the cloud.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
         return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
     public Output<String> getSourceId() {
@@ -75,7 +75,7 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * The version running in the DatacenterConnector. This is supplied by the OVA connector during the registration process and can not be modified.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

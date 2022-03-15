@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.TopicMessageStoragePolicyArgs;
 import io.pulumi.gcp.pubsub.inputs.TopicSchemaSettingsArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -36,7 +36,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to this Topic.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -53,7 +53,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Cannot be more than 7 days or less than 10 minutes.
      * 
      */
-    @InputImport(name="messageRetentionDuration")
+    @Import(name="messageRetentionDuration")
       private final @Nullable Output<String> messageRetentionDuration;
 
     public Output<String> getMessageRetentionDuration() {
@@ -67,7 +67,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="messageStoragePolicy")
+    @Import(name="messageStoragePolicy")
       private final @Nullable Output<TopicMessageStoragePolicyArgs> messageStoragePolicy;
 
     public Output<TopicMessageStoragePolicyArgs> getMessageStoragePolicy() {
@@ -78,7 +78,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the topic.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -102,7 +102,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schemaSettings")
+    @Import(name="schemaSettings")
       private final @Nullable Output<TopicSchemaSettingsArgs> schemaSettings;
 
     public Output<TopicSchemaSettingsArgs> getSchemaSettings() {

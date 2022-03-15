@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestOSNICCustomizationResponse {
     /**
      * IP address allocation method
@@ -48,15 +48,15 @@ public final class GuestOSNICCustomizationResponse {
      */
     private final @Nullable String secondaryWinsServer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestOSNICCustomizationResponse(
-        @OutputCustomType.Parameter("allocation") @Nullable String allocation,
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("gateway") @Nullable List<String> gateway,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("mask") @Nullable String mask,
-        @OutputCustomType.Parameter("primaryWinsServer") @Nullable String primaryWinsServer,
-        @OutputCustomType.Parameter("secondaryWinsServer") @Nullable String secondaryWinsServer) {
+        @CustomType.Parameter("allocation") @Nullable String allocation,
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("gateway") @Nullable List<String> gateway,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("mask") @Nullable String mask,
+        @CustomType.Parameter("primaryWinsServer") @Nullable String primaryWinsServer,
+        @CustomType.Parameter("secondaryWinsServer") @Nullable String secondaryWinsServer) {
         this.allocation = allocation;
         this.dnsServers = dnsServers;
         this.gateway = gateway;

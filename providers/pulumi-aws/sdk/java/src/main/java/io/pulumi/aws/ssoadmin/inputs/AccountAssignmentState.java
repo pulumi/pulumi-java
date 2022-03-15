@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the SSO Instance.
      * 
      */
-    @InputImport(name="instanceArn")
+    @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -29,7 +29,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the Permission Set that the admin wants to grant the principal access to.
      * 
      */
-    @InputImport(name="permissionSetArn")
+    @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
     public Output<String> getPermissionSetArn() {
@@ -40,7 +40,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * An identifier for an object in SSO, such as a user or group. PrincipalIds are GUIDs (For example, `f81d4fae-7dec-11d0-a765-00a0c91e6bf6`).
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -51,7 +51,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * The entity type for which the assignment will be created. Valid values: `USER`, `GROUP`.
      * 
      */
-    @InputImport(name="principalType")
+    @Import(name="principalType")
       private final @Nullable Output<String> principalType;
 
     public Output<String> getPrincipalType() {
@@ -62,7 +62,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * An AWS account identifier, typically a 10-12 digit string.
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {
@@ -73,7 +73,7 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
      * The entity type for which the assignment will be created. Valid values: `AWS_ACCOUNT`.
      * 
      */
-    @InputImport(name="targetType")
+    @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleColumnResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
      * Oracle columns in the schema. When unspecified as part of inclue/exclude lists, includes/excludes everything.
      * 
      */
-    @InputImport(name="oracleColumns", required=true)
+    @Import(name="oracleColumns", required=true)
       private final List<OracleColumnResponse> oracleColumns;
 
     public List<OracleColumnResponse> getOracleColumns() {
@@ -33,7 +33,7 @@ public final class OracleTableResponse extends io.pulumi.resources.InvokeArgs {
      * Table name.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final String table;
 
     public String getTable() {

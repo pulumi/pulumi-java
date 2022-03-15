@@ -4,7 +4,7 @@
 package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * The root certificate of the Certificate Authority.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -29,7 +29,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * The certificate name to display.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -40,7 +40,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * The ARN of the fleet.
      * 
      */
-    @InputImport(name="fleetArn")
+    @Import(name="fleetArn")
       private final @Nullable Output<String> fleetArn;
 
     public Output<String> getFleetArn() {
@@ -51,7 +51,7 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
      * A unique identifier for the Certificate Authority.
      * 
      */
-    @InputImport(name="websiteCaId")
+    @Import(name="websiteCaId")
       private final @Nullable Output<String> websiteCaId;
 
     public Output<String> getWebsiteCaId() {

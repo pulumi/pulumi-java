@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The workload classifier context.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -29,7 +29,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The workload classifier end time for classification.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -40,7 +40,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The workload classifier importance.
      * 
      */
-    @InputImport(name="importance")
+    @Import(name="importance")
       private final @Nullable Output<String> importance;
 
     public Output<String> getImportance() {
@@ -51,7 +51,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The workload classifier label.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -62,7 +62,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The workload classifier member name.
      * 
      */
-    @InputImport(name="memberName", required=true)
+    @Import(name="memberName", required=true)
       private final Output<String> memberName;
 
     public Output<String> getMemberName() {
@@ -73,7 +73,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -84,7 +84,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * SQL pool name
      * 
      */
-    @InputImport(name="sqlPoolName", required=true)
+    @Import(name="sqlPoolName", required=true)
       private final Output<String> sqlPoolName;
 
     public Output<String> getSqlPoolName() {
@@ -95,7 +95,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The workload classifier start time for classification.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -106,7 +106,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The name of the workload classifier.
      * 
      */
-    @InputImport(name="workloadClassifierName")
+    @Import(name="workloadClassifierName")
       private final @Nullable Output<String> workloadClassifierName;
 
     public Output<String> getWorkloadClassifierName() {
@@ -117,7 +117,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The name of the workload group.
      * 
      */
-    @InputImport(name="workloadGroupName", required=true)
+    @Import(name="workloadGroupName", required=true)
       private final Output<String> workloadGroupName;
 
     public Output<String> getWorkloadGroupName() {
@@ -128,7 +128,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

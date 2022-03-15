@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
 
     public static final EventLogConfigurationArgs Empty = new EventLogConfigurationArgs();
 
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
         return this.filter == null ? Output.empty() : this.filter;
     }
 
-    @InputImport(name="logName", required=true)
+    @Import(name="logName", required=true)
       private final Output<String> logName;
 
     public Output<String> getLogName() {

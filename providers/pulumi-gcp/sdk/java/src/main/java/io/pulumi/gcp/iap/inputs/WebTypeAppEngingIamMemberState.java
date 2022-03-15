@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebTypeAppEngingIamMemberState extends io.pulumi.resources.Re
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -31,7 +31,7 @@ public final class WebTypeAppEngingIamMemberState extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<WebTypeAppEngingIamMemberConditionGetArgs> condition;
 
     public Output<WebTypeAppEngingIamMemberConditionGetArgs> getCondition() {
@@ -42,14 +42,14 @@ public final class WebTypeAppEngingIamMemberState extends io.pulumi.resources.Re
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -61,7 +61,7 @@ public final class WebTypeAppEngingIamMemberState extends io.pulumi.resources.Re
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -74,7 +74,7 @@ public final class WebTypeAppEngingIamMemberState extends io.pulumi.resources.Re
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

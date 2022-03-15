@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.BackendResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * The set of backends for this pool
      * 
      */
-    @InputImport(name="backends")
+    @Import(name="backends")
       private final @Nullable List<BackendResponse> backends;
 
     public List<BackendResponse> getBackends() {
@@ -36,7 +36,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * L7 health probe settings for a backend pool
      * 
      */
-    @InputImport(name="healthProbeSettings")
+    @Import(name="healthProbeSettings")
       private final @Nullable SubResourceResponse healthProbeSettings;
 
     public Optional<SubResourceResponse> getHealthProbeSettings() {
@@ -47,7 +47,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -58,7 +58,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Load balancing settings for a backend pool
      * 
      */
-    @InputImport(name="loadBalancingSettings")
+    @Import(name="loadBalancingSettings")
       private final @Nullable SubResourceResponse loadBalancingSettings;
 
     public Optional<SubResourceResponse> getLoadBalancingSettings() {
@@ -69,7 +69,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Resource status.
      * 
      */
-    @InputImport(name="resourceState", required=true)
+    @Import(name="resourceState", required=true)
       private final String resourceState;
 
     public String getResourceState() {
@@ -91,7 +91,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

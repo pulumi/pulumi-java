@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherPathRuleRouteActionUrlRewrite {
     /**
      * Prior to forwarding the request to the selected service, the request's host header is replaced
@@ -26,10 +26,10 @@ public final class URLMapPathMatcherPathRuleRouteActionUrlRewrite {
      */
     private final @Nullable String pathPrefixRewrite;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionUrlRewrite(
-        @OutputCustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
-        @OutputCustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite) {
+        @CustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
+        @CustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
     }

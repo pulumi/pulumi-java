@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.redis.outputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
     /**
      * Required. The day of week that maintenance updates occur.
@@ -44,11 +44,11 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      */
     private final InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMaintenancePolicyWeeklyMaintenanceWindow(
-        @OutputCustomType.Parameter("day") String day,
-        @OutputCustomType.Parameter("duration") @Nullable String duration,
-        @OutputCustomType.Parameter("startTime") InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
+        @CustomType.Parameter("day") String day,
+        @CustomType.Parameter("duration") @Nullable String duration,
+        @CustomType.Parameter("startTime") InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;

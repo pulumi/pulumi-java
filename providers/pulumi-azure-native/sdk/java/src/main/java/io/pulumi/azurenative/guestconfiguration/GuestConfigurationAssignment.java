@@ -8,7 +8,7 @@ import io.pulumi.azurenative.guestconfiguration.GuestConfigurationAssignmentArgs
 import io.pulumi.azurenative.guestconfiguration.outputs.GuestConfigurationAssignmentPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class GuestConfigurationAssignment extends io.pulumi.resources.CustomReso
      * Region where the VM is located.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -49,7 +49,7 @@ public class GuestConfigurationAssignment extends io.pulumi.resources.CustomReso
      * Name of the guest configuration assignment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -63,7 +63,7 @@ public class GuestConfigurationAssignment extends io.pulumi.resources.CustomReso
      * Properties of the Guest configuration assignment.
      * 
      */
-    @OutputExport(name="properties", type=GuestConfigurationAssignmentPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=GuestConfigurationAssignmentPropertiesResponse.class, parameters={})
     private Output<GuestConfigurationAssignmentPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class GuestConfigurationAssignment extends io.pulumi.resources.CustomReso
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

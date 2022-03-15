@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsActivationPolicy;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsAvailabilityType;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsDataDiskType;
@@ -39,7 +39,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even in the absence of connection requests. * `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
      */
-    @InputImport(name="activationPolicy")
+    @Import(name="activationPolicy")
       private final @Nullable Output<SettingsActivationPolicy> activationPolicy;
 
     public Output<SettingsActivationPolicy> getActivationPolicy() {
@@ -50,7 +50,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Active Directory configuration, relevant only for Cloud SQL for SQL Server.
      * 
      */
-    @InputImport(name="activeDirectoryConfig")
+    @Import(name="activeDirectoryConfig")
       private final @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
 
     public Output<SqlActiveDirectoryConfigArgs> getActiveDirectoryConfig() {
@@ -61,7 +61,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone. Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).
      * 
      */
-    @InputImport(name="availabilityType")
+    @Import(name="availabilityType")
       private final @Nullable Output<SettingsAvailabilityType> availabilityType;
 
     public Output<SettingsAvailabilityType> getAvailabilityType() {
@@ -72,7 +72,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The daily backup configuration for the instance.
      * 
      */
-    @InputImport(name="backupConfiguration")
+    @Import(name="backupConfiguration")
       private final @Nullable Output<BackupConfigurationArgs> backupConfiguration;
 
     public Output<BackupConfigurationArgs> getBackupConfiguration() {
@@ -83,7 +83,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The name of server Instance collation.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -94,7 +94,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration specific to read replica instances. Indicates whether database flags for crash-safe replication are enabled. This property was only applicable to First Generation instances.
      * 
      */
-    @InputImport(name="crashSafeReplicationEnabled")
+    @Import(name="crashSafeReplicationEnabled")
       private final @Nullable Output<Boolean> crashSafeReplicationEnabled;
 
     public Output<Boolean> getCrashSafeReplicationEnabled() {
@@ -105,7 +105,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The size of data disk, in GB. The data disk size minimum is 10GB.
      * 
      */
-    @InputImport(name="dataDiskSizeGb")
+    @Import(name="dataDiskSizeGb")
       private final @Nullable Output<String> dataDiskSizeGb;
 
     public Output<String> getDataDiskSizeGb() {
@@ -116,7 +116,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The type of data disk: `PD_SSD` (default) or `PD_HDD`. Not used for First Generation instances.
      * 
      */
-    @InputImport(name="dataDiskType")
+    @Import(name="dataDiskType")
       private final @Nullable Output<SettingsDataDiskType> dataDiskType;
 
     public Output<SettingsDataDiskType> getDataDiskType() {
@@ -127,7 +127,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The database flags passed to the instance at startup.
      * 
      */
-    @InputImport(name="databaseFlags")
+    @Import(name="databaseFlags")
       private final @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
 
     public Output<List<DatabaseFlagsArgs>> getDatabaseFlags() {
@@ -138,7 +138,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration specific to read replica instances. Indicates whether replication is enabled or not. WARNING: Changing this restarts the instance.
      * 
      */
-    @InputImport(name="databaseReplicationEnabled")
+    @Import(name="databaseReplicationEnabled")
       private final @Nullable Output<Boolean> databaseReplicationEnabled;
 
     public Output<Boolean> getDatabaseReplicationEnabled() {
@@ -149,7 +149,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Deny maintenance periods
      * 
      */
-    @InputImport(name="denyMaintenancePeriods")
+    @Import(name="denyMaintenancePeriods")
       private final @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
 
     public Output<List<DenyMaintenancePeriodArgs>> getDenyMaintenancePeriods() {
@@ -160,7 +160,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Insights configuration, for now relevant only for Postgres.
      * 
      */
-    @InputImport(name="insightsConfig")
+    @Import(name="insightsConfig")
       private final @Nullable Output<InsightsConfigArgs> insightsConfig;
 
     public Output<InsightsConfigArgs> getInsightsConfig() {
@@ -171,7 +171,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation instances.
      * 
      */
-    @InputImport(name="ipConfiguration")
+    @Import(name="ipConfiguration")
       private final @Nullable Output<IpConfigurationArgs> ipConfiguration;
 
     public Output<IpConfigurationArgs> getIpConfiguration() {
@@ -182,7 +182,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * This is always `sql#settings`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -193,7 +193,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The location preference settings. This allows the instance to be located as near as possible to either an App Engine app or Compute Engine zone for better performance. App Engine co-location was only applicable to First Generation instances.
      * 
      */
-    @InputImport(name="locationPreference")
+    @Import(name="locationPreference")
       private final @Nullable Output<LocationPreferenceArgs> locationPreference;
 
     public Output<LocationPreferenceArgs> getLocationPreference() {
@@ -204,7 +204,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The maintenance window for this instance. This specifies when the instance can be restarted for maintenance purposes.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
     public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
@@ -215,7 +215,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The local user password validation policy of the instance.
      * 
      */
-    @InputImport(name="passwordValidationPolicy")
+    @Import(name="passwordValidationPolicy")
       private final @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
 
     public Output<PasswordValidationPolicyArgs> getPasswordValidationPolicy() {
@@ -226,7 +226,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The pricing plan for this instance. This can be either `PER_USE` or `PACKAGE`. Only `PER_USE` is supported for Second Generation instances.
      * 
      */
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<SettingsPricingPlan> pricingPlan;
 
     public Output<SettingsPricingPlan> getPricingPlan() {
@@ -237,7 +237,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The version of instance settings. This is a required field for update method to make sure concurrent updates are handled properly. During update, use the most recent settingsVersion value for this instance and do not try to update this value.
      * 
      */
-    @InputImport(name="settingsVersion")
+    @Import(name="settingsVersion")
       private final @Nullable Output<String> settingsVersion;
 
     public Output<String> getSettingsVersion() {
@@ -248,7 +248,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * SQL Server specific audit configuration.
      * 
      */
-    @InputImport(name="sqlServerAuditConfig")
+    @Import(name="sqlServerAuditConfig")
       private final @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
 
     public Output<SqlServerAuditConfigArgs> getSqlServerAuditConfig() {
@@ -259,7 +259,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration to increase storage size automatically. The default value is true.
      * 
      */
-    @InputImport(name="storageAutoResize")
+    @Import(name="storageAutoResize")
       private final @Nullable Output<Boolean> storageAutoResize;
 
     public Output<Boolean> getStorageAutoResize() {
@@ -270,7 +270,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
      * 
      */
-    @InputImport(name="storageAutoResizeLimit")
+    @Import(name="storageAutoResizeLimit")
       private final @Nullable Output<String> storageAutoResizeLimit;
 
     public Output<String> getStorageAutoResizeLimit() {
@@ -281,7 +281,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The tier (or machine type) for this instance, for example `db-custom-1-3840`. WARNING: Changing this restarts the instance.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -292,7 +292,7 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided labels, represented as a dictionary where each label is a single key value pair.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPolicyResult {
     /**
      * An opaque identifier for the current version of the `AccessPolicy`. This will always be a strongly validated etag, meaning that two Access Polices will be identical if and only if their etags are identical. Clients should not expect this to be in any specific format.
@@ -36,13 +36,13 @@ public final class GetAccessPolicyResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPolicyResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("title") String title) {
         this.etag = etag;
         this.name = name;
         this.parent = parent;

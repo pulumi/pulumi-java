@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.PublicIPAddressArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The name of the ipconfig.
      * 
      */
-    @InputImport(name="ipConfigName")
+    @Import(name="ipConfigName")
       private final @Nullable Output<String> ipConfigName;
 
     public Output<String> getIpConfigName() {
@@ -44,7 +44,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * Name of the Ip Configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
@@ -66,7 +66,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
@@ -77,7 +77,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The reference to the public IP resource.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
     public Output<PublicIPAddressArgs> getPublicIPAddress() {
@@ -88,7 +88,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The resource group name of the VirtualHub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
     public Output<SubnetArgs> getSubnet() {
@@ -110,7 +110,7 @@ public final class VirtualHubIpConfigurationArgs extends io.pulumi.resources.Res
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName", required=true)
+    @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
     public Output<String> getVirtualHubName() {

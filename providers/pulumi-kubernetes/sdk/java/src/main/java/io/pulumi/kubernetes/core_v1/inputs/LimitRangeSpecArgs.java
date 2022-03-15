@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LimitRangeItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Limits is the list of LimitRangeItem objects that are enforced.
      * 
      */
-    @InputImport(name="limits", required=true)
+    @Import(name="limits", required=true)
       private final Output<List<LimitRangeItemArgs>> limits;
 
     public Output<List<LimitRangeItemArgs>> getLimits() {

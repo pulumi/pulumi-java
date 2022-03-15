@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcEndpointFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpcEndpointFilter> filters;
 
     public List<GetVpcEndpointFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the specific VPC Endpoint to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The service name of the specific VPC Endpoint to retrieve. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable String serviceName;
 
     public Optional<String> getServiceName() {
@@ -54,7 +54,7 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The state of the specific VPC Endpoint to retrieve.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -66,7 +66,7 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the specific VPC Endpoint to retrieve.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -77,7 +77,7 @@ public final class GetVpcEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the VPC in which the specific VPC Endpoint is used.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {

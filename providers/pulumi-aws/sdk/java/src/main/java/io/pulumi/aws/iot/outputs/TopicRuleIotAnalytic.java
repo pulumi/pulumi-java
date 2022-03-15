@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleIotAnalytic {
     /**
      * Name of AWS IOT Analytics channel.
@@ -20,10 +20,10 @@ public final class TopicRuleIotAnalytic {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleIotAnalytic(
-        @OutputCustomType.Parameter("channelName") String channelName,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("channelName") String channelName,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.channelName = channelName;
         this.roleArn = roleArn;
     }

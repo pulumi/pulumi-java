@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetBrokerArgs extends io.pulumi.resources.InvokeArgs {
      * The unique id of the mq broker.
      * 
      */
-    @InputImport(name="brokerId")
+    @Import(name="brokerId")
       private final @Nullable String brokerId;
 
     public Optional<String> getBrokerId() {
@@ -30,14 +30,14 @@ public final class GetBrokerArgs extends io.pulumi.resources.InvokeArgs {
      * The unique name of the mq broker.
      * 
      */
-    @InputImport(name="brokerName")
+    @Import(name="brokerName")
       private final @Nullable String brokerName;
 
     public Optional<String> getBrokerName() {
         return this.brokerName == null ? Optional.empty() : Optional.ofNullable(this.brokerName);
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

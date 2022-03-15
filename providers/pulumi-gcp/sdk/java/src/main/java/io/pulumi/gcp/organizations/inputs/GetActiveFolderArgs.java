@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
      * The folder's display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -27,7 +27,7 @@ public final class GetActiveFolderArgs extends io.pulumi.resources.InvokeArgs {
      * The resource name of the parent Folder or Organization.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final String parent;
 
     public String getParent() {

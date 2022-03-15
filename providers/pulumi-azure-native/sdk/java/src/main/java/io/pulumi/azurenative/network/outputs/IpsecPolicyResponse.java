@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IpsecPolicyResponse {
     /**
      * The DH Group used in IKE Phase 1 for initial SA.
@@ -51,16 +51,16 @@ public final class IpsecPolicyResponse {
      */
     private final Integer saLifeTimeSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpsecPolicyResponse(
-        @OutputCustomType.Parameter("dhGroup") String dhGroup,
-        @OutputCustomType.Parameter("ikeEncryption") String ikeEncryption,
-        @OutputCustomType.Parameter("ikeIntegrity") String ikeIntegrity,
-        @OutputCustomType.Parameter("ipsecEncryption") String ipsecEncryption,
-        @OutputCustomType.Parameter("ipsecIntegrity") String ipsecIntegrity,
-        @OutputCustomType.Parameter("pfsGroup") String pfsGroup,
-        @OutputCustomType.Parameter("saDataSizeKilobytes") Integer saDataSizeKilobytes,
-        @OutputCustomType.Parameter("saLifeTimeSeconds") Integer saLifeTimeSeconds) {
+        @CustomType.Parameter("dhGroup") String dhGroup,
+        @CustomType.Parameter("ikeEncryption") String ikeEncryption,
+        @CustomType.Parameter("ikeIntegrity") String ikeIntegrity,
+        @CustomType.Parameter("ipsecEncryption") String ipsecEncryption,
+        @CustomType.Parameter("ipsecIntegrity") String ipsecIntegrity,
+        @CustomType.Parameter("pfsGroup") String pfsGroup,
+        @CustomType.Parameter("saDataSizeKilobytes") Integer saDataSizeKilobytes,
+        @CustomType.Parameter("saLifeTimeSeconds") Integer saLifeTimeSeconds) {
         this.dhGroup = dhGroup;
         this.ikeEncryption = ikeEncryption;
         this.ikeIntegrity = ikeIntegrity;

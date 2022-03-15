@@ -103,7 +103,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -124,7 +124,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Lookup activity dataset reference.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
@@ -135,7 +135,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -146,7 +146,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -157,7 +157,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="firstRowOnly")
+    @Import(name="firstRowOnly")
       private final @Nullable Object firstRowOnly;
 
     public Optional<Object> getFirstRowOnly() {
@@ -168,7 +168,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -179,7 +179,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -190,7 +190,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -201,7 +201,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Dataset-specific source properties, same as copy activity source.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Object source;
 
     public Object getSource() {
@@ -213,7 +213,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is 'Lookup'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -224,7 +224,7 @@ public final class LookupActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

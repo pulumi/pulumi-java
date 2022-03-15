@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudwatch.EventPermissionArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventPermissionState;
 import io.pulumi.aws.cloudwatch.outputs.EventPermissionCondition;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -37,7 +37,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
     /**
@@ -51,7 +51,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
      * 
      */
-    @OutputExport(name="condition", type=EventPermissionCondition.class, parameters={})
+    @Export(name="condition", type=EventPermissionCondition.class, parameters={})
     private Output</* @Nullable */ EventPermissionCondition> condition;
 
     /**
@@ -65,7 +65,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    @OutputExport(name="eventBusName", type=String.class, parameters={})
+    @Export(name="eventBusName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventBusName;
 
     /**
@@ -79,7 +79,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
      * 
      */
-    @OutputExport(name="principal", type=String.class, parameters={})
+    @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
     /**
@@ -93,7 +93,7 @@ public class EventPermission extends io.pulumi.resources.CustomResource {
      * An identifier string for the external account that you are granting permissions to.
      * 
      */
-    @OutputExport(name="statementId", type=String.class, parameters={})
+    @Export(name="statementId", type=String.class, parameters={})
     private Output<String> statementId;
 
     /**

@@ -5,14 +5,14 @@ package io.pulumi.awsnative.resiliencehub.outputs;
 
 import io.pulumi.awsnative.resiliencehub.outputs.AppResourceMapping;
 import io.pulumi.awsnative.resiliencehub.outputs.AppTagMap;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     /**
      * Amazon Resource Name (ARN) of the App.
@@ -41,14 +41,14 @@ public final class GetAppResult {
     private final @Nullable List<AppResourceMapping> resourceMappings;
     private final @Nullable AppTagMap tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("appArn") @Nullable String appArn,
-        @OutputCustomType.Parameter("appTemplateBody") @Nullable String appTemplateBody,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("resiliencyPolicyArn") @Nullable String resiliencyPolicyArn,
-        @OutputCustomType.Parameter("resourceMappings") @Nullable List<AppResourceMapping> resourceMappings,
-        @OutputCustomType.Parameter("tags") @Nullable AppTagMap tags) {
+        @CustomType.Parameter("appArn") @Nullable String appArn,
+        @CustomType.Parameter("appTemplateBody") @Nullable String appTemplateBody,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("resiliencyPolicyArn") @Nullable String resiliencyPolicyArn,
+        @CustomType.Parameter("resourceMappings") @Nullable List<AppResourceMapping> resourceMappings,
+        @CustomType.Parameter("tags") @Nullable AppTagMap tags) {
         this.appArn = appArn;
         this.appTemplateBody = appTemplateBody;
         this.description = description;

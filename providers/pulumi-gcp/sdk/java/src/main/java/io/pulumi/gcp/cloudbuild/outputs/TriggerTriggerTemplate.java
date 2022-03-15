@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerTriggerTemplate {
     /**
      * Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
@@ -61,15 +61,15 @@ public final class TriggerTriggerTemplate {
      */
     private final @Nullable String tagName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerTriggerTemplate(
-        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
-        @OutputCustomType.Parameter("commitSha") @Nullable String commitSha,
-        @OutputCustomType.Parameter("dir") @Nullable String dir,
-        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
-        @OutputCustomType.Parameter("repoName") @Nullable String repoName,
-        @OutputCustomType.Parameter("tagName") @Nullable String tagName) {
+        @CustomType.Parameter("branchName") @Nullable String branchName,
+        @CustomType.Parameter("commitSha") @Nullable String commitSha,
+        @CustomType.Parameter("dir") @Nullable String dir,
+        @CustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
+        @CustomType.Parameter("projectId") @Nullable String projectId,
+        @CustomType.Parameter("repoName") @Nullable String repoName,
+        @CustomType.Parameter("tagName") @Nullable String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.dir = dir;

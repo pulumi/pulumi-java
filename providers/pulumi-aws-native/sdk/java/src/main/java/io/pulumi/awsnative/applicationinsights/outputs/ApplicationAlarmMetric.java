@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationAlarmMetric {
     /**
      * The name of the metric to be monitored for the component.
@@ -15,8 +15,8 @@ public final class ApplicationAlarmMetric {
      */
     private final String alarmMetricName;
 
-    @OutputCustomType.Constructor
-    private ApplicationAlarmMetric(@OutputCustomType.Parameter("alarmMetricName") String alarmMetricName) {
+    @CustomType.Constructor
+    private ApplicationAlarmMetric(@CustomType.Parameter("alarmMetricName") String alarmMetricName) {
         this.alarmMetricName = alarmMetricName;
     }
 

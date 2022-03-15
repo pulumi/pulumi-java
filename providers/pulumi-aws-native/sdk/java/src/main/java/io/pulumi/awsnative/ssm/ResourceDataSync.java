@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ssm.ResourceDataSyncArgs;
 import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncS3Destination;
 import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncSyncSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,55 +19,55 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ssm:ResourceDataSync")
 public class ResourceDataSync extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
     public Output</* @Nullable */ String> getBucketName() {
         return this.bucketName;
     }
-    @OutputExport(name="bucketPrefix", type=String.class, parameters={})
+    @Export(name="bucketPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketPrefix;
 
     public Output</* @Nullable */ String> getBucketPrefix() {
         return this.bucketPrefix;
     }
-    @OutputExport(name="bucketRegion", type=String.class, parameters={})
+    @Export(name="bucketRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketRegion;
 
     public Output</* @Nullable */ String> getBucketRegion() {
         return this.bucketRegion;
     }
-    @OutputExport(name="kMSKeyArn", type=String.class, parameters={})
+    @Export(name="kMSKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSKeyArn;
 
     public Output</* @Nullable */ String> getKMSKeyArn() {
         return this.kMSKeyArn;
     }
-    @OutputExport(name="s3Destination", type=ResourceDataSyncS3Destination.class, parameters={})
+    @Export(name="s3Destination", type=ResourceDataSyncS3Destination.class, parameters={})
     private Output</* @Nullable */ ResourceDataSyncS3Destination> s3Destination;
 
     public Output</* @Nullable */ ResourceDataSyncS3Destination> getS3Destination() {
         return this.s3Destination;
     }
-    @OutputExport(name="syncFormat", type=String.class, parameters={})
+    @Export(name="syncFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncFormat;
 
     public Output</* @Nullable */ String> getSyncFormat() {
         return this.syncFormat;
     }
-    @OutputExport(name="syncName", type=String.class, parameters={})
+    @Export(name="syncName", type=String.class, parameters={})
     private Output<String> syncName;
 
     public Output<String> getSyncName() {
         return this.syncName;
     }
-    @OutputExport(name="syncSource", type=ResourceDataSyncSyncSource.class, parameters={})
+    @Export(name="syncSource", type=ResourceDataSyncSyncSource.class, parameters={})
     private Output</* @Nullable */ ResourceDataSyncSyncSource> syncSource;
 
     public Output</* @Nullable */ ResourceDataSyncSyncSource> getSyncSource() {
         return this.syncSource;
     }
-    @OutputExport(name="syncType", type=String.class, parameters={})
+    @Export(name="syncType", type=String.class, parameters={})
     private Output</* @Nullable */ String> syncType;
 
     public Output</* @Nullable */ String> getSyncType() {

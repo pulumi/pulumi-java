@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * rule is the strategy that will dictate the allowable labels that may be set.
      * 
      */
-    @InputImport(name="rule", required=true)
+    @Import(name="rule", required=true)
       private final Output<String> rule;
 
     public Output<String> getRule() {
@@ -34,7 +34,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
      * seLinuxOptions required to run as; required for MustRunAs More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
      * 
      */
-    @InputImport(name="seLinuxOptions")
+    @Import(name="seLinuxOptions")
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
     public Output<SELinuxOptionsArgs> getSeLinuxOptions() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Container name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Additional attributes of the entity.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
 
     public Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> getProperties() {
@@ -40,7 +40,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Version identifier.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -62,7 +62,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedPrefixListFilter {
     /**
      * The name of the filter field. Valid values can be found in the EC2 [DescribeManagedPrefixLists](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeManagedPrefixLists.html) API Reference.
@@ -21,10 +21,10 @@ public final class GetManagedPrefixListFilter {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedPrefixListFilter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.values = values;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.delegatednetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ControllerDetailsResponse extends io.pulumi.resources.InvokeA
      * controller arm resource id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {

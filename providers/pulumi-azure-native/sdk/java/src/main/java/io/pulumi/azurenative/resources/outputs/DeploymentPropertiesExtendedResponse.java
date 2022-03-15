@@ -11,13 +11,13 @@ import io.pulumi.azurenative.resources.outputs.ParametersLinkResponse;
 import io.pulumi.azurenative.resources.outputs.ProviderResponse;
 import io.pulumi.azurenative.resources.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.resources.outputs.TemplateLinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentPropertiesExtendedResponse {
     /**
      * The correlation ID of the deployment.
@@ -105,25 +105,25 @@ public final class DeploymentPropertiesExtendedResponse {
      */
     private final List<ResourceReferenceResponse> validatedResources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentPropertiesExtendedResponse(
-        @OutputCustomType.Parameter("correlationId") String correlationId,
-        @OutputCustomType.Parameter("debugSetting") DebugSettingResponse debugSetting,
-        @OutputCustomType.Parameter("dependencies") List<DependencyResponse> dependencies,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("error") ErrorResponseResponse error,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("onErrorDeployment") OnErrorDeploymentExtendedResponse onErrorDeployment,
-        @OutputCustomType.Parameter("outputResources") List<ResourceReferenceResponse> outputResources,
-        @OutputCustomType.Parameter("outputs") Object outputs,
-        @OutputCustomType.Parameter("parameters") Object parameters,
-        @OutputCustomType.Parameter("parametersLink") ParametersLinkResponse parametersLink,
-        @OutputCustomType.Parameter("providers") List<ProviderResponse> providers,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("templateHash") String templateHash,
-        @OutputCustomType.Parameter("templateLink") TemplateLinkResponse templateLink,
-        @OutputCustomType.Parameter("timestamp") String timestamp,
-        @OutputCustomType.Parameter("validatedResources") List<ResourceReferenceResponse> validatedResources) {
+        @CustomType.Parameter("correlationId") String correlationId,
+        @CustomType.Parameter("debugSetting") DebugSettingResponse debugSetting,
+        @CustomType.Parameter("dependencies") List<DependencyResponse> dependencies,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("error") ErrorResponseResponse error,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("onErrorDeployment") OnErrorDeploymentExtendedResponse onErrorDeployment,
+        @CustomType.Parameter("outputResources") List<ResourceReferenceResponse> outputResources,
+        @CustomType.Parameter("outputs") Object outputs,
+        @CustomType.Parameter("parameters") Object parameters,
+        @CustomType.Parameter("parametersLink") ParametersLinkResponse parametersLink,
+        @CustomType.Parameter("providers") List<ProviderResponse> providers,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("templateHash") String templateHash,
+        @CustomType.Parameter("templateLink") TemplateLinkResponse templateLink,
+        @CustomType.Parameter("timestamp") String timestamp,
+        @CustomType.Parameter("validatedResources") List<ResourceReferenceResponse> validatedResources) {
         this.correlationId = correlationId;
         this.debugSetting = debugSetting;
         this.dependencies = dependencies;

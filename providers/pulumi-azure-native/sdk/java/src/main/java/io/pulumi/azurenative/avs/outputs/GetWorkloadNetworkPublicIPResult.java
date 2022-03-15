@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadNetworkPublicIPResult {
     /**
      * Display name of the Public IP Block.
@@ -48,15 +48,15 @@ public final class GetWorkloadNetworkPublicIPResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadNetworkPublicIPResult(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfPublicIPs") @Nullable Double numberOfPublicIPs,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIPBlock") String publicIPBlock,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfPublicIPs") @Nullable Double numberOfPublicIPs,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIPBlock") String publicIPBlock,
+        @CustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

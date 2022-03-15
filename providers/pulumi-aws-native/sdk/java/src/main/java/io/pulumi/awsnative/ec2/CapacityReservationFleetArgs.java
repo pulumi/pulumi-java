@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.enums.CapacityReservationFleetTenancy;
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetInstanceTypeSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,63 +21,63 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
 
     public static final CapacityReservationFleetArgs Empty = new CapacityReservationFleetArgs();
 
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
         return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
         return this.endDate == null ? Output.empty() : this.endDate;
     }
 
-    @InputImport(name="instanceMatchCriteria")
+    @Import(name="instanceMatchCriteria")
       private final @Nullable Output<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria;
 
     public Output<CapacityReservationFleetInstanceMatchCriteria> getInstanceMatchCriteria() {
         return this.instanceMatchCriteria == null ? Output.empty() : this.instanceMatchCriteria;
     }
 
-    @InputImport(name="instanceTypeSpecifications")
+    @Import(name="instanceTypeSpecifications")
       private final @Nullable Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications;
 
     public Output<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> getInstanceTypeSpecifications() {
         return this.instanceTypeSpecifications == null ? Output.empty() : this.instanceTypeSpecifications;
     }
 
-    @InputImport(name="noRemoveEndDate")
+    @Import(name="noRemoveEndDate")
       private final @Nullable Output<Boolean> noRemoveEndDate;
 
     public Output<Boolean> getNoRemoveEndDate() {
         return this.noRemoveEndDate == null ? Output.empty() : this.noRemoveEndDate;
     }
 
-    @InputImport(name="removeEndDate")
+    @Import(name="removeEndDate")
       private final @Nullable Output<Boolean> removeEndDate;
 
     public Output<Boolean> getRemoveEndDate() {
         return this.removeEndDate == null ? Output.empty() : this.removeEndDate;
     }
 
-    @InputImport(name="tagSpecifications")
+    @Import(name="tagSpecifications")
       private final @Nullable Output<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications;
 
     public Output<List<CapacityReservationFleetTagSpecificationArgs>> getTagSpecifications() {
         return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
     }
 
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable Output<CapacityReservationFleetTenancy> tenancy;
 
     public Output<CapacityReservationFleetTenancy> getTenancy() {
         return this.tenancy == null ? Output.empty() : this.tenancy;
     }
 
-    @InputImport(name="totalTargetCapacity")
+    @Import(name="totalTargetCapacity")
       private final @Nullable Output<Integer> totalTargetCapacity;
 
     public Output<Integer> getTotalTargetCapacity() {

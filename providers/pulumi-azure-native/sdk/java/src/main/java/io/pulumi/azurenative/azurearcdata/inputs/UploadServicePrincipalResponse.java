@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
      * Authority for the service principal. Example: https://login.microsoftonline.com/
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
@@ -33,7 +33,7 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
      * Client ID of the service principal for uploading data.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -44,7 +44,7 @@ public final class UploadServicePrincipalResponse extends io.pulumi.resources.In
      * Tenant ID of the service principal.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

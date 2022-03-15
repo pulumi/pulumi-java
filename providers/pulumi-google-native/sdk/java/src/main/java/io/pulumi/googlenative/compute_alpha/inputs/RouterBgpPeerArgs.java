@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerAdvertiseMode;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerAdvertisedGroupsItem;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpPeerEnable;
@@ -26,7 +26,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * User-specified flag to indicate which mode to use for advertisement.
      * 
      */
-    @InputImport(name="advertiseMode")
+    @Import(name="advertiseMode")
       private final @Nullable Output<RouterBgpPeerAdvertiseMode> advertiseMode;
 
     public Output<RouterBgpPeerAdvertiseMode> getAdvertiseMode() {
@@ -37,7 +37,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
      * 
      */
-    @InputImport(name="advertisedGroups")
+    @Import(name="advertisedGroups")
       private final @Nullable Output<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
 
     public Output<List<RouterBgpPeerAdvertisedGroupsItem>> getAdvertisedGroups() {
@@ -48,7 +48,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
      * 
      */
-    @InputImport(name="advertisedIpRanges")
+    @Import(name="advertisedIpRanges")
       private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     public Output<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
@@ -59,7 +59,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
      * 
      */
-    @InputImport(name="advertisedRoutePriority")
+    @Import(name="advertisedRoutePriority")
       private final @Nullable Output<Integer> advertisedRoutePriority;
 
     public Output<Integer> getAdvertisedRoutePriority() {
@@ -70,7 +70,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * BFD configuration for the BGP peering.
      * 
      */
-    @InputImport(name="bfd")
+    @Import(name="bfd")
       private final @Nullable Output<RouterBgpPeerBfdArgs> bfd;
 
     public Output<RouterBgpPeerBfdArgs> getBfd() {
@@ -81,7 +81,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<RouterBgpPeerEnable> enable;
 
     public Output<RouterBgpPeerEnable> getEnable() {
@@ -92,7 +92,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default.
      * 
      */
-    @InputImport(name="enableIpv6")
+    @Import(name="enableIpv6")
       private final @Nullable Output<Boolean> enableIpv6;
 
     public Output<Boolean> getEnableIpv6() {
@@ -103,7 +103,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the interface the BGP peer is associated with.
      * 
      */
-    @InputImport(name="interfaceName")
+    @Import(name="interfaceName")
       private final @Nullable Output<String> interfaceName;
 
     public Output<String> getInterfaceName() {
@@ -114,7 +114,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -125,7 +125,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * IPv6 address of the interface inside Google Cloud Platform.
      * 
      */
-    @InputImport(name="ipv6NexthopAddress")
+    @Import(name="ipv6NexthopAddress")
       private final @Nullable Output<String> ipv6NexthopAddress;
 
     public Output<String> getIpv6NexthopAddress() {
@@ -136,7 +136,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * Present if MD5 authentication is enabled for the peering. Must be the name of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
      * 
      */
-    @InputImport(name="md5AuthenticationKeyName")
+    @Import(name="md5AuthenticationKeyName")
       private final @Nullable Output<String> md5AuthenticationKeyName;
 
     public Output<String> getMd5AuthenticationKeyName() {
@@ -147,7 +147,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -158,7 +158,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable Output<Integer> peerAsn;
 
     public Output<Integer> getPeerAsn() {
@@ -169,7 +169,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="peerIpAddress")
+    @Import(name="peerIpAddress")
       private final @Nullable Output<String> peerIpAddress;
 
     public Output<String> getPeerIpAddress() {
@@ -180,7 +180,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * IPv6 address of the BGP interface outside Google Cloud Platform.
      * 
      */
-    @InputImport(name="peerIpv6NexthopAddress")
+    @Import(name="peerIpv6NexthopAddress")
       private final @Nullable Output<String> peerIpv6NexthopAddress;
 
     public Output<String> getPeerIpv6NexthopAddress() {
@@ -191,7 +191,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
      * 
      */
-    @InputImport(name="routerApplianceInstance")
+    @Import(name="routerApplianceInstance")
       private final @Nullable Output<String> routerApplianceInstance;
 
     public Output<String> getRouterApplianceInstance() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class ResponseHeadersPolicyCustomHeader extends io.pulumi.resources
 
     public static final ResponseHeadersPolicyCustomHeader Empty = new ResponseHeadersPolicyCustomHeader();
 
-    @InputImport(name="header", required=true)
+    @Import(name="header", required=true)
       private final String header;
 
     public String getHeader() {
         return this.header;
     }
 
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

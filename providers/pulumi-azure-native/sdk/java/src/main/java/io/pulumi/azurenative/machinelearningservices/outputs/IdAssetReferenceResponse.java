@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdAssetReferenceResponse {
     /**
      * ARM resource ID of the asset.
@@ -21,10 +21,10 @@ public final class IdAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdAssetReferenceResponse(
-        @OutputCustomType.Parameter("assetId") String assetId,
-        @OutputCustomType.Parameter("referenceType") String referenceType) {
+        @CustomType.Parameter("assetId") String assetId,
+        @CustomType.Parameter("referenceType") String referenceType) {
         this.assetId = assetId;
         this.referenceType = referenceType;
     }

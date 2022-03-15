@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.SegmentSettingsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MuxStreamResponse {
     /**
      * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the corresponding file extension is `.m4s` - `mp4` - `vtt`
@@ -37,13 +37,13 @@ public final class MuxStreamResponse {
      */
     private final SegmentSettingsResponse segmentSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MuxStreamResponse(
-        @OutputCustomType.Parameter("container") String container,
-        @OutputCustomType.Parameter("elementaryStreams") List<String> elementaryStreams,
-        @OutputCustomType.Parameter("fileName") String fileName,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("segmentSettings") SegmentSettingsResponse segmentSettings) {
+        @CustomType.Parameter("container") String container,
+        @CustomType.Parameter("elementaryStreams") List<String> elementaryStreams,
+        @CustomType.Parameter("fileName") String fileName,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("segmentSettings") SegmentSettingsResponse segmentSettings) {
         this.container = container;
         this.elementaryStreams = elementaryStreams;
         this.fileName = fileName;

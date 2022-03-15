@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleRecurrenceResponse {
     /**
      * The recurrence type.
@@ -28,11 +28,11 @@ public final class ScheduleRecurrenceResponse {
      */
     private final @Nullable List<String> weeklyDaysList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleRecurrenceResponse(
-        @OutputCustomType.Parameter("recurrenceType") String recurrenceType,
-        @OutputCustomType.Parameter("recurrenceValue") Integer recurrenceValue,
-        @OutputCustomType.Parameter("weeklyDaysList") @Nullable List<String> weeklyDaysList) {
+        @CustomType.Parameter("recurrenceType") String recurrenceType,
+        @CustomType.Parameter("recurrenceValue") Integer recurrenceValue,
+        @CustomType.Parameter("weeklyDaysList") @Nullable List<String> weeklyDaysList) {
         this.recurrenceType = recurrenceType;
         this.recurrenceValue = recurrenceValue;
         this.weeklyDaysList = weeklyDaysList;

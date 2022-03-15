@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterAddonProfileResponseIdentity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterAddonProfileResponse {
     /**
      * Key-value pairs for configuring an add-on.
@@ -29,11 +29,11 @@ public final class ManagedClusterAddonProfileResponse {
      */
     private final ManagedClusterAddonProfileResponseIdentity identity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterAddonProfileResponse(
-        @OutputCustomType.Parameter("config") @Nullable Map<String,String> config,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("identity") ManagedClusterAddonProfileResponseIdentity identity) {
+        @CustomType.Parameter("config") @Nullable Map<String,String> config,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("identity") ManagedClusterAddonProfileResponseIdentity identity) {
         this.config = config;
         this.enabled = enabled;
         this.identity = identity;

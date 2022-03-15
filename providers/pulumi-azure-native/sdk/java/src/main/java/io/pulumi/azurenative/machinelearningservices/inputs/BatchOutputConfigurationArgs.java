@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.BatchOutputAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
      * Customized output file name for append_row output action.
      * 
      */
-    @InputImport(name="appendRowFileName")
+    @Import(name="appendRowFileName")
       private final @Nullable Output<String> appendRowFileName;
 
     public Output<String> getAppendRowFileName() {
@@ -35,7 +35,7 @@ public final class BatchOutputConfigurationArgs extends io.pulumi.resources.Reso
      * Indicates how the output will be organized.
      * 
      */
-    @InputImport(name="outputAction")
+    @Import(name="outputAction")
       private final @Nullable Output<Either<String,BatchOutputAction>> outputAction;
 
     public Output<Either<String,BatchOutputAction>> getOutputAction() {

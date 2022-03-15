@@ -5,13 +5,13 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointMssEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointMssPackage {
     private final @Nullable OriginEndpointMssEncryption encryption;
     /**
@@ -26,12 +26,12 @@ public final class OriginEndpointMssPackage {
     private final @Nullable Integer segmentDurationSeconds;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointMssPackage(
-        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointMssEncryption encryption,
-        @OutputCustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
-        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
+        @CustomType.Parameter("encryption") @Nullable OriginEndpointMssEncryption encryption,
+        @CustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @CustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
         this.encryption = encryption;
         this.manifestWindowSeconds = manifestWindowSeconds;
         this.segmentDurationSeconds = segmentDurationSeconds;

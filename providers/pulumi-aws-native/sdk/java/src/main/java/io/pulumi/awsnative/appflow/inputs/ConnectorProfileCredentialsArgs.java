@@ -20,7 +20,7 @@ import io.pulumi.awsnative.appflow.inputs.ConnectorProfileTrendmicroConnectorPro
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfileCredentialsArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfileCredentialsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -33,112 +33,112 @@ public final class ConnectorProfileCredentialsArgs extends io.pulumi.resources.R
 
     public static final ConnectorProfileCredentialsArgs Empty = new ConnectorProfileCredentialsArgs();
 
-    @InputImport(name="amplitude")
+    @Import(name="amplitude")
       private final @Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude;
 
     public Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> getAmplitude() {
         return this.amplitude == null ? Output.empty() : this.amplitude;
     }
 
-    @InputImport(name="datadog")
+    @Import(name="datadog")
       private final @Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog;
 
     public Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> getDatadog() {
         return this.datadog == null ? Output.empty() : this.datadog;
     }
 
-    @InputImport(name="dynatrace")
+    @Import(name="dynatrace")
       private final @Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace;
 
     public Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> getDynatrace() {
         return this.dynatrace == null ? Output.empty() : this.dynatrace;
     }
 
-    @InputImport(name="googleAnalytics")
+    @Import(name="googleAnalytics")
       private final @Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics;
 
     public Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> getGoogleAnalytics() {
         return this.googleAnalytics == null ? Output.empty() : this.googleAnalytics;
     }
 
-    @InputImport(name="inforNexus")
+    @Import(name="inforNexus")
       private final @Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus;
 
     public Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> getInforNexus() {
         return this.inforNexus == null ? Output.empty() : this.inforNexus;
     }
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo;
 
     public Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> getMarketo() {
         return this.marketo == null ? Output.empty() : this.marketo;
     }
 
-    @InputImport(name="redshift")
+    @Import(name="redshift")
       private final @Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift;
 
     public Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> getRedshift() {
         return this.redshift == null ? Output.empty() : this.redshift;
     }
 
-    @InputImport(name="sAPOData")
+    @Import(name="sAPOData")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData;
 
     public Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> getSAPOData() {
         return this.sAPOData == null ? Output.empty() : this.sAPOData;
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce;
 
     public Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> getSalesforce() {
         return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow;
 
     public Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> getServiceNow() {
         return this.serviceNow == null ? Output.empty() : this.serviceNow;
     }
 
-    @InputImport(name="singular")
+    @Import(name="singular")
       private final @Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular;
 
     public Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> getSingular() {
         return this.singular == null ? Output.empty() : this.singular;
     }
 
-    @InputImport(name="slack")
+    @Import(name="slack")
       private final @Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack;
 
     public Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> getSlack() {
         return this.slack == null ? Output.empty() : this.slack;
     }
 
-    @InputImport(name="snowflake")
+    @Import(name="snowflake")
       private final @Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake;
 
     public Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> getSnowflake() {
         return this.snowflake == null ? Output.empty() : this.snowflake;
     }
 
-    @InputImport(name="trendmicro")
+    @Import(name="trendmicro")
       private final @Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro;
 
     public Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> getTrendmicro() {
         return this.trendmicro == null ? Output.empty() : this.trendmicro;
     }
 
-    @InputImport(name="veeva")
+    @Import(name="veeva")
       private final @Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva;
 
     public Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> getVeeva() {
         return this.veeva == null ? Output.empty() : this.veeva;
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk;
 
     public Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> getZendesk() {

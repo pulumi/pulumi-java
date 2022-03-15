@@ -5,14 +5,14 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerEventResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerInstanceViewResponse {
     /**
      * Current container instance state.
@@ -35,12 +35,12 @@ public final class ContainerInstanceViewResponse {
      */
     private final @Nullable Integer restartCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerInstanceViewResponse(
-        @OutputCustomType.Parameter("currentState") @Nullable ContainerStateResponse currentState,
-        @OutputCustomType.Parameter("events") @Nullable List<ContainerEventResponse> events,
-        @OutputCustomType.Parameter("previousState") @Nullable ContainerStateResponse previousState,
-        @OutputCustomType.Parameter("restartCount") @Nullable Integer restartCount) {
+        @CustomType.Parameter("currentState") @Nullable ContainerStateResponse currentState,
+        @CustomType.Parameter("events") @Nullable List<ContainerEventResponse> events,
+        @CustomType.Parameter("previousState") @Nullable ContainerStateResponse previousState,
+        @CustomType.Parameter("restartCount") @Nullable Integer restartCount) {
         this.currentState = currentState;
         this.events = events;
         this.previousState = previousState;

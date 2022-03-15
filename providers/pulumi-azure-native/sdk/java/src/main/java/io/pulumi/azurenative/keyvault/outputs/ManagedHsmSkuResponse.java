@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedHsmSkuResponse {
     /**
      * SKU Family of the managed HSM Pool
@@ -20,10 +20,10 @@ public final class ManagedHsmSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedHsmSkuResponse(
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("name") String name) {
         this.family = family;
         this.name = name;
     }

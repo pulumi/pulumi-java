@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the VPC link.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name used to label and identify the VPC link.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -52,7 +52,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target.
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

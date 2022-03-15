@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.managednetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceIdResponse {
     /**
      * Resource Id
@@ -17,8 +17,8 @@ public final class ResourceIdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private ResourceIdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private ResourceIdResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

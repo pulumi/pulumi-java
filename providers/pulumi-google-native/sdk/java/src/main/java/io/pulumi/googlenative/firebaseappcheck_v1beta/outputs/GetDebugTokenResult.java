@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebaseappcheck_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDebugTokenResult {
     /**
      * A human readable display name used to identify this debug token.
@@ -25,11 +25,11 @@ public final class GetDebugTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDebugTokenResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("token") String token) {
         this.displayName = displayName;
         this.name = name;
         this.token = token;

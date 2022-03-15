@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.Oauth2ClientCredentialsResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.Oauth2JwtBearerResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthConfigResponse {
     /**
      * List containing additional auth configs.
@@ -40,13 +40,13 @@ public final class AuthConfigResponse {
      */
     private final UserPasswordResponse userPassword;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthConfigResponse(
-        @OutputCustomType.Parameter("additionalVariables") List<ConfigVariableResponse> additionalVariables,
-        @OutputCustomType.Parameter("authType") String authType,
-        @OutputCustomType.Parameter("oauth2ClientCredentials") Oauth2ClientCredentialsResponse oauth2ClientCredentials,
-        @OutputCustomType.Parameter("oauth2JwtBearer") Oauth2JwtBearerResponse oauth2JwtBearer,
-        @OutputCustomType.Parameter("userPassword") UserPasswordResponse userPassword) {
+        @CustomType.Parameter("additionalVariables") List<ConfigVariableResponse> additionalVariables,
+        @CustomType.Parameter("authType") String authType,
+        @CustomType.Parameter("oauth2ClientCredentials") Oauth2ClientCredentialsResponse oauth2ClientCredentials,
+        @CustomType.Parameter("oauth2JwtBearer") Oauth2JwtBearerResponse oauth2JwtBearer,
+        @CustomType.Parameter("userPassword") UserPasswordResponse userPassword) {
         this.additionalVariables = additionalVariables;
         this.authType = authType;
         this.oauth2ClientCredentials = oauth2ClientCredentials;

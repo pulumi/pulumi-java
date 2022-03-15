@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DataStoreResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionVolumeResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Agent expiry date.
      * 
      */
-    @InputImport(name="agentExpiryDate")
+    @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
 
     public Optional<String> getAgentExpiryDate() {
@@ -39,7 +39,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The version of the scout component on the server.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
@@ -50,7 +50,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Agent version details.
      * 
      */
-    @InputImport(name="agentVersionDetails")
+    @Import(name="agentVersionDetails")
       private final @Nullable VersionDetailsResponse agentVersionDetails;
 
     public Optional<VersionDetailsResponse> getAgentVersionDetails() {
@@ -61,7 +61,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The list of data stores in the fabric.
      * 
      */
-    @InputImport(name="dataStores")
+    @Import(name="dataStores")
       private final @Nullable List<DataStoreResponse> dataStores;
 
     public List<DataStoreResponse> getDataStores() {
@@ -72,7 +72,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Disk count of the master target.
      * 
      */
-    @InputImport(name="diskCount")
+    @Import(name="diskCount")
       private final @Nullable Integer diskCount;
 
     public Optional<Integer> getDiskCount() {
@@ -83,7 +83,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Health errors.
      * 
      */
-    @InputImport(name="healthErrors")
+    @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
@@ -94,7 +94,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The server Id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -105,7 +105,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The IP address of the server.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -116,7 +116,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The last heartbeat received from the server.
      * 
      */
-    @InputImport(name="lastHeartbeat")
+    @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
     public Optional<String> getLastHeartbeat() {
@@ -127,7 +127,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * MARS agent expiry date.
      * 
      */
-    @InputImport(name="marsAgentExpiryDate")
+    @Import(name="marsAgentExpiryDate")
       private final @Nullable String marsAgentExpiryDate;
 
     public Optional<String> getMarsAgentExpiryDate() {
@@ -138,7 +138,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * MARS agent version.
      * 
      */
-    @InputImport(name="marsAgentVersion")
+    @Import(name="marsAgentVersion")
       private final @Nullable String marsAgentVersion;
 
     public Optional<String> getMarsAgentVersion() {
@@ -149,7 +149,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Mars agent version details.
      * 
      */
-    @InputImport(name="marsAgentVersionDetails")
+    @Import(name="marsAgentVersionDetails")
       private final @Nullable VersionDetailsResponse marsAgentVersionDetails;
 
     public Optional<VersionDetailsResponse> getMarsAgentVersionDetails() {
@@ -160,7 +160,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The server name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -171,7 +171,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The OS type of the server.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -182,7 +182,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * OS Version of the master target.
      * 
      */
-    @InputImport(name="osVersion")
+    @Import(name="osVersion")
       private final @Nullable String osVersion;
 
     public Optional<String> getOsVersion() {
@@ -193,7 +193,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * The retention volumes of Master target Server.
      * 
      */
-    @InputImport(name="retentionVolumes")
+    @Import(name="retentionVolumes")
       private final @Nullable List<RetentionVolumeResponse> retentionVolumes;
 
     public List<RetentionVolumeResponse> getRetentionVolumes() {
@@ -204,7 +204,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Validation errors.
      * 
      */
-    @InputImport(name="validationErrors")
+    @Import(name="validationErrors")
       private final @Nullable List<HealthErrorResponse> validationErrors;
 
     public List<HealthErrorResponse> getValidationErrors() {
@@ -215,7 +215,7 @@ public final class MasterTargetServerResponse extends io.pulumi.resources.Invoke
      * Version status
      * 
      */
-    @InputImport(name="versionStatus")
+    @Import(name="versionStatus")
       private final @Nullable String versionStatus;
 
     public Optional<String> getVersionStatus() {

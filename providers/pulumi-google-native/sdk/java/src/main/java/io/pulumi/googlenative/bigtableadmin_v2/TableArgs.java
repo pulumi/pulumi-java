@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.TableGranularity;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SplitArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
      * 
      */
-    @InputImport(name="columnFamilies")
+    @Import(name="columnFamilies")
       private final @Nullable Output<Map<String,String>> columnFamilies;
 
     public Output<Map<String,String>> getColumnFamilies() {
@@ -33,7 +33,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
      * 
      */
-    @InputImport(name="granularity")
+    @Import(name="granularity")
       private final @Nullable Output<TableGranularity> granularity;
 
     public Output<TableGranularity> getGranularity() {
@@ -44,14 +44,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The optional list of row keys that will be used to initially split the table into several tablets (tablets are similar to HBase regions). Given two split keys, `s1` and `s2`, three tablets will be created, spanning the key ranges: `[, s1), [s1, s2), [s2, )`. Example: * Row keys := `["a", "apple", "custom", "customer_1", "customer_2",` `"other", "zz"]` * initial_split_keys := `["apple", "customer_1", "customer_2", "other"]` * Key assignment: - Tablet 1 `[, apple) => {"a"}.` - Tablet 2 `[apple, customer_1) => {"apple", "custom"}.` - Tablet 3 `[customer_1, customer_2) => {"customer_1"}.` - Tablet 4 `[customer_2, other) => {"customer_2"}.` - Tablet 5 `[other, ) => {"other", "zz"}.`
      * 
      */
-    @InputImport(name="initialSplits")
+    @Import(name="initialSplits")
       private final @Nullable Output<List<SplitArgs>> initialSplits;
 
     public Output<List<SplitArgs>> getInitialSplits() {
         return this.initialSplits == null ? Output.empty() : this.initialSplits;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -62,14 +62,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -80,7 +80,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name by which the new table should be referred to within the parent instance, e.g., `foobar` rather than `{parent}/tables/foobar`. Maximum 50 characters.
      * 
      */
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
     public Output<String> getTableId() {

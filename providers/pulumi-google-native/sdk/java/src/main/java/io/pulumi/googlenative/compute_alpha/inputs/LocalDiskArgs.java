@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of such disks.
      * 
      */
-    @InputImport(name="diskCount")
+    @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
 
     public Output<Integer> getDiskCount() {
@@ -30,7 +30,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the size of the disk in base-2 GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -41,7 +41,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {

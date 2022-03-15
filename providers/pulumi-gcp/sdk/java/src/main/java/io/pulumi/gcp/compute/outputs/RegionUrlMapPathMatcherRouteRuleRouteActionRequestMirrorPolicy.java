@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy {
     /**
      * The default RegionBackendService resource. Before
@@ -17,8 +17,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
      */
     private final String backendService;
 
-    @OutputCustomType.Constructor
-    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy(@OutputCustomType.Parameter("backendService") String backendService) {
+    @CustomType.Constructor
+    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy(@CustomType.Parameter("backendService") String backendService) {
         this.backendService = backendService;
     }
 

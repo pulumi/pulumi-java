@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.GameServerClusterConnectionInfoArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * The game server cluster connection information. This information is used to manage game server clusters.
      * 
      */
-    @InputImport(name="connectionInfo")
+    @Import(name="connectionInfo")
       private final @Nullable Output<GameServerClusterConnectionInfoArgs> connectionInfo;
 
     public Output<GameServerClusterConnectionInfoArgs> getConnectionInfo() {
@@ -31,7 +31,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * Human readable description of the cluster.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,14 +42,14 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * ETag of the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="gameServerClusterId", required=true)
+    @Import(name="gameServerClusterId", required=true)
       private final Output<String> gameServerClusterId;
 
     public Output<String> getGameServerClusterId() {
@@ -60,14 +60,14 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * The labels associated with this game server cluster. Each label is a key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,21 +78,21 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * The resource name of the game server cluster, in the following form: `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`. For example, `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="realmId", required=true)
+    @Import(name="realmId", required=true)
       private final Output<String> realmId;
 
     public Output<String> getRealmId() {

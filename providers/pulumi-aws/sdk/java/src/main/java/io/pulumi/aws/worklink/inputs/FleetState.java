@@ -6,7 +6,7 @@ package io.pulumi.aws.worklink.inputs;
 import io.pulumi.aws.worklink.inputs.FleetIdentityProviderGetArgs;
 import io.pulumi.aws.worklink.inputs.FleetNetworkGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the created WorkLink Fleet.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
      * 
      */
-    @InputImport(name="auditStreamArn")
+    @Import(name="auditStreamArn")
       private final @Nullable Output<String> auditStreamArn;
 
     public Output<String> getAuditStreamArn() {
@@ -43,7 +43,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The identifier used by users to sign in to the Amazon WorkLink app.
      * 
      */
-    @InputImport(name="companyCode")
+    @Import(name="companyCode")
       private final @Nullable Output<String> companyCode;
 
     public Output<String> getCompanyCode() {
@@ -54,7 +54,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The time that the fleet was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -65,7 +65,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
      * 
      */
-    @InputImport(name="deviceCaCertificate")
+    @Import(name="deviceCaCertificate")
       private final @Nullable Output<String> deviceCaCertificate;
 
     public Output<String> getDeviceCaCertificate() {
@@ -76,7 +76,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The name of the fleet.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -87,7 +87,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
      * 
      */
-    @InputImport(name="identityProvider")
+    @Import(name="identityProvider")
       private final @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
 
     public Output<FleetIdentityProviderGetArgs> getIdentityProvider() {
@@ -98,7 +98,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The time that the fleet was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
@@ -109,7 +109,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -120,7 +120,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * Provide this to allow manage the company network configuration for the fleet. Fields documented below.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<FleetNetworkGetArgs> network;
 
     public Output<FleetNetworkGetArgs> getNetwork() {
@@ -131,7 +131,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
      * The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
      * 
      */
-    @InputImport(name="optimizeForEndUserLocation")
+    @Import(name="optimizeForEndUserLocation")
       private final @Nullable Output<Boolean> optimizeForEndUserLocation;
 
     public Output<Boolean> getOptimizeForEndUserLocation() {

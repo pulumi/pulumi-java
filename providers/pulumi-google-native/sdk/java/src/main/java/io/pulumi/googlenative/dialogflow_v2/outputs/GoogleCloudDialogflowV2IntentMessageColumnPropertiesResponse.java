@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse {
     /**
      * Column heading.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      */
     private final String horizontalAlignment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(
-        @OutputCustomType.Parameter("header") String header,
-        @OutputCustomType.Parameter("horizontalAlignment") String horizontalAlignment) {
+        @CustomType.Parameter("header") String header,
+        @CustomType.Parameter("horizontalAlignment") String horizontalAlignment) {
         this.header = header;
         this.horizontalAlignment = horizontalAlignment;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsupport_v2beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsupport_v2beta.CaseArgs;
@@ -27,7 +27,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The issue classification applicable to this case.
      * 
      */
-    @OutputExport(name="classification", type=CaseClassificationResponse.class, parameters={})
+    @Export(name="classification", type=CaseClassificationResponse.class, parameters={})
     private Output<CaseClassificationResponse> classification;
 
     /**
@@ -41,7 +41,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The time this case was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The user who created the case. Note: The name and email will be obfuscated if the case was created by Google Support.
      * 
      */
-    @OutputExport(name="creator", type=ActorResponse.class, parameters={})
+    @Export(name="creator", type=ActorResponse.class, parameters={})
     private Output<ActorResponse> creator;
 
     /**
@@ -69,7 +69,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * A broad description of the issue.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -83,7 +83,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The short summary of the issue reported in this case.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -97,7 +97,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * Whether the case is currently escalated.
      * 
      */
-    @OutputExport(name="escalated", type=Boolean.class, parameters={})
+    @Export(name="escalated", type=Boolean.class, parameters={})
     private Output<Boolean> escalated;
 
     /**
@@ -111,7 +111,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The resource name for the case.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -125,7 +125,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The priority of this case. If this is set, do not set severity.
      * 
      */
-    @OutputExport(name="priority", type=String.class, parameters={})
+    @Export(name="priority", type=String.class, parameters={})
     private Output<String> priority;
 
     /**
@@ -139,7 +139,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The current status of the support case.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -153,7 +153,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The email addresses to receive updates on this case.
      * 
      */
-    @OutputExport(name="subscriberEmailAddresses", type=List.class, parameters={String.class})
+    @Export(name="subscriberEmailAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> subscriberEmailAddresses;
 
     /**
@@ -167,7 +167,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * Whether this case was created for internal API testing and should not be acted on by the support team.
      * 
      */
-    @OutputExport(name="testCase", type=Boolean.class, parameters={})
+    @Export(name="testCase", type=Boolean.class, parameters={})
     private Output<Boolean> testCase;
 
     /**
@@ -181,7 +181,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
@@ -195,7 +195,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * The time this case was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

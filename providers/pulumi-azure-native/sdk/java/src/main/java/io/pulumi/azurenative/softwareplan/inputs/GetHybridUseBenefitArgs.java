@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.softwareplan.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
      * This is a unique identifier for a plan. Should be a guid.
      * 
      */
-    @InputImport(name="planId", required=true)
+    @Import(name="planId", required=true)
       private final String planId;
 
     public String getPlanId() {
@@ -27,7 +27,7 @@ public final class GetHybridUseBenefitArgs extends io.pulumi.resources.InvokeArg
      * The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

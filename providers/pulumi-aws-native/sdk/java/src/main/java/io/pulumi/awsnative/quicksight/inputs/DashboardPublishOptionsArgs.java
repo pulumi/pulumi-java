@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardAdHocFilteringOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardExportToCSVOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSheetControlsOptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,21 +20,21 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
 
     public static final DashboardPublishOptionsArgs Empty = new DashboardPublishOptionsArgs();
 
-    @InputImport(name="adHocFilteringOption")
+    @Import(name="adHocFilteringOption")
       private final @Nullable Output<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
 
     public Output<DashboardAdHocFilteringOptionArgs> getAdHocFilteringOption() {
         return this.adHocFilteringOption == null ? Output.empty() : this.adHocFilteringOption;
     }
 
-    @InputImport(name="exportToCSVOption")
+    @Import(name="exportToCSVOption")
       private final @Nullable Output<DashboardExportToCSVOptionArgs> exportToCSVOption;
 
     public Output<DashboardExportToCSVOptionArgs> getExportToCSVOption() {
         return this.exportToCSVOption == null ? Output.empty() : this.exportToCSVOption;
     }
 
-    @InputImport(name="sheetControlsOption")
+    @Import(name="sheetControlsOption")
       private final @Nullable Output<DashboardSheetControlsOptionArgs> sheetControlsOption;
 
     public Output<DashboardSheetControlsOptionArgs> getSheetControlsOption() {

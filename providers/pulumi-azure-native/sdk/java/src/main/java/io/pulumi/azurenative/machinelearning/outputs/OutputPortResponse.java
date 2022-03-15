@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OutputPortResponse {
     /**
      * Port data type.
@@ -17,8 +17,8 @@ public final class OutputPortResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
-    private OutputPortResponse(@OutputCustomType.Parameter("type") @Nullable String type) {
+    @CustomType.Constructor
+    private OutputPortResponse(@CustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

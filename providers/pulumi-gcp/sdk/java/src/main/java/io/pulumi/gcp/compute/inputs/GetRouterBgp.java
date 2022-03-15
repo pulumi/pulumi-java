@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetRouterBgpAdvertisedIpRange;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,28 +15,28 @@ public final class GetRouterBgp extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRouterBgp Empty = new GetRouterBgp();
 
-    @InputImport(name="advertiseMode", required=true)
+    @Import(name="advertiseMode", required=true)
       private final String advertiseMode;
 
     public String getAdvertiseMode() {
         return this.advertiseMode;
     }
 
-    @InputImport(name="advertisedGroups", required=true)
+    @Import(name="advertisedGroups", required=true)
       private final List<String> advertisedGroups;
 
     public List<String> getAdvertisedGroups() {
         return this.advertisedGroups;
     }
 
-    @InputImport(name="advertisedIpRanges", required=true)
+    @Import(name="advertisedIpRanges", required=true)
       private final List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
 
     public List<GetRouterBgpAdvertisedIpRange> getAdvertisedIpRanges() {
         return this.advertisedIpRanges;
     }
 
-    @InputImport(name="asn", required=true)
+    @Import(name="asn", required=true)
       private final Integer asn;
 
     public Integer getAsn() {

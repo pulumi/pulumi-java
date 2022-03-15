@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cassandra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class TableColumn extends io.pulumi.resources.InvokeArgs {
 
     public static final TableColumn Empty = new TableColumn();
 
-    @InputImport(name="columnName", required=true)
+    @Import(name="columnName", required=true)
       private final String columnName;
 
     public String getColumnName() {
         return this.columnName;
     }
 
-    @InputImport(name="columnType", required=true)
+    @Import(name="columnType", required=true)
       private final String columnType;
 
     public String getColumnType() {

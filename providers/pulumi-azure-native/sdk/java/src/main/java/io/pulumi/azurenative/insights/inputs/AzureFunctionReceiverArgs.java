@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
      * The azure resource id of the function app.
      * 
      */
-    @InputImport(name="functionAppResourceId", required=true)
+    @Import(name="functionAppResourceId", required=true)
       private final Output<String> functionAppResourceId;
 
     public Output<String> getFunctionAppResourceId() {
@@ -34,7 +34,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
      * The function name in the function app.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -45,7 +45,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
      * The http trigger url where http request sent to.
      * 
      */
-    @InputImport(name="httpTriggerUrl", required=true)
+    @Import(name="httpTriggerUrl", required=true)
       private final Output<String> httpTriggerUrl;
 
     public Output<String> getHttpTriggerUrl() {
@@ -56,7 +56,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
      * The name of the azure function receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
     public Output<Boolean> getUseCommonAlertSchema() {

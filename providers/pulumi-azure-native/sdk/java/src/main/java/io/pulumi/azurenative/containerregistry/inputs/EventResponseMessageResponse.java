@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
      * The content of the event response message.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -34,7 +34,7 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
      * The headers of the event response message.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
@@ -45,7 +45,7 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
      * The reason phrase of the event response message.
      * 
      */
-    @InputImport(name="reasonPhrase")
+    @Import(name="reasonPhrase")
       private final @Nullable String reasonPhrase;
 
     public Optional<String> getReasonPhrase() {
@@ -56,7 +56,7 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
      * The status code of the event response message.
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable String statusCode;
 
     public Optional<String> getStatusCode() {
@@ -67,7 +67,7 @@ public final class EventResponseMessageResponse extends io.pulumi.resources.Invo
      * The HTTP message version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

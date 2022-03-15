@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
-    @InputImport(name="statements", required=true)
+    @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGetArgs>> statements;
 
     public Output<List<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGetArgs>> getStatements() {

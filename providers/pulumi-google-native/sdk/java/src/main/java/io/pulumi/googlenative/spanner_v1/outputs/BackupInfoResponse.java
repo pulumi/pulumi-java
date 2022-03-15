@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupInfoResponse {
     /**
      * Name of the backup.
@@ -30,12 +30,12 @@ public final class BackupInfoResponse {
      */
     private final String versionTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupInfoResponse(
-        @OutputCustomType.Parameter("backup") String backup,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("sourceDatabase") String sourceDatabase,
-        @OutputCustomType.Parameter("versionTime") String versionTime) {
+        @CustomType.Parameter("backup") String backup,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("sourceDatabase") String sourceDatabase,
+        @CustomType.Parameter("versionTime") String versionTime) {
         this.backup = backup;
         this.createTime = createTime;
         this.sourceDatabase = sourceDatabase;

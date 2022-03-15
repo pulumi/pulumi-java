@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.PartitionArgs;
 import io.pulumi.aws.glue.inputs.PartitionState;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptor;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output<String> catalogId;
 
     /**
@@ -49,7 +49,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * The time at which the partition was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -63,7 +63,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -77,7 +77,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * The last time at which the partition was accessed.
      * 
      */
-    @OutputExport(name="lastAccessedTime", type=String.class, parameters={})
+    @Export(name="lastAccessedTime", type=String.class, parameters={})
     private Output<String> lastAccessedTime;
 
     /**
@@ -91,7 +91,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * The last time at which column statistics were computed for this partition.
      * 
      */
-    @OutputExport(name="lastAnalyzedTime", type=String.class, parameters={})
+    @Export(name="lastAnalyzedTime", type=String.class, parameters={})
     private Output<String> lastAnalyzedTime;
 
     /**
@@ -105,7 +105,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -119,7 +119,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * The values that define the partition.
      * 
      */
-    @OutputExport(name="partitionValues", type=List.class, parameters={String.class})
+    @Export(name="partitionValues", type=List.class, parameters={String.class})
     private Output<List<String>> partitionValues;
 
     /**
@@ -133,7 +133,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
      * 
      */
-    @OutputExport(name="storageDescriptor", type=PartitionStorageDescriptor.class, parameters={})
+    @Export(name="storageDescriptor", type=PartitionStorageDescriptor.class, parameters={})
     private Output</* @Nullable */ PartitionStorageDescriptor> storageDescriptor;
 
     /**
@@ -143,7 +143,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ PartitionStorageDescriptor> getStorageDescriptor() {
         return this.storageDescriptor;
     }
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     public Output<String> getTableName() {

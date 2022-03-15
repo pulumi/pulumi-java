@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowFailoverConfig {
     /**
      * Search window time to look for dash-7 packets
@@ -19,10 +19,10 @@ public final class FlowFailoverConfig {
     private final @Nullable Integer recoveryWindow;
     private final @Nullable FlowFailoverConfigState state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowFailoverConfig(
-        @OutputCustomType.Parameter("recoveryWindow") @Nullable Integer recoveryWindow,
-        @OutputCustomType.Parameter("state") @Nullable FlowFailoverConfigState state) {
+        @CustomType.Parameter("recoveryWindow") @Nullable Integer recoveryWindow,
+        @CustomType.Parameter("state") @Nullable FlowFailoverConfigState state) {
         this.recoveryWindow = recoveryWindow;
         this.state = state;
     }

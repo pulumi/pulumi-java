@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkSecurityGroupRuleResponse {
     private final String access;
     /**
@@ -29,12 +29,12 @@ public final class NetworkSecurityGroupRuleResponse {
      */
     private final @Nullable List<String> sourcePortRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkSecurityGroupRuleResponse(
-        @OutputCustomType.Parameter("access") String access,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("sourceAddressPrefix") String sourceAddressPrefix,
-        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges) {
+        @CustomType.Parameter("access") String access,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("sourceAddressPrefix") String sourceAddressPrefix,
+        @CustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges) {
         this.access = access;
         this.priority = priority;
         this.sourceAddressPrefix = sourceAddressPrefix;

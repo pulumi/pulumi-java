@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * Maximum file upload size in Mb for WAF.
      * 
      */
-    @InputImport(name="fileUploadLimitInMb")
+    @Import(name="fileUploadLimitInMb")
       private final @Nullable Integer fileUploadLimitInMb;
 
     public Optional<Integer> getFileUploadLimitInMb() {
@@ -35,7 +35,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * Maximum request body size in Kb for WAF.
      * 
      */
-    @InputImport(name="maxRequestBodySizeInKb")
+    @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Integer maxRequestBodySizeInKb;
 
     public Optional<Integer> getMaxRequestBodySizeInKb() {
@@ -46,7 +46,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * The mode of the policy.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -57,7 +57,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * Whether to allow WAF to check request Body.
      * 
      */
-    @InputImport(name="requestBodyCheck")
+    @Import(name="requestBodyCheck")
       private final @Nullable Boolean requestBodyCheck;
 
     public Optional<Boolean> getRequestBodyCheck() {
@@ -68,7 +68,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * The state of the policy.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

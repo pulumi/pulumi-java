@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.SqlPartitionSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
     public Output<Object> getAdditionalColumns() {
@@ -37,7 +37,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -48,7 +48,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the transaction locking behavior for the SQL source. Allowed values: ReadCommitted/ReadUncommitted/RepeatableRead/Serializable/Snapshot. The default value is ReadCommitted. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="isolationLevel")
+    @Import(name="isolationLevel")
       private final @Nullable Output<Object> isolationLevel;
 
     public Output<Object> getIsolationLevel() {
@@ -59,7 +59,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -70,7 +70,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
      * 
      */
-    @InputImport(name="partitionOption")
+    @Import(name="partitionOption")
       private final @Nullable Output<Object> partitionOption;
 
     public Output<Object> getPartitionOption() {
@@ -81,7 +81,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The settings that will be leveraged for Sql source partitioning.
      * 
      */
-    @InputImport(name="partitionSettings")
+    @Import(name="partitionSettings")
       private final @Nullable Output<SqlPartitionSettingsArgs> partitionSettings;
 
     public Output<SqlPartitionSettingsArgs> getPartitionSettings() {
@@ -92,7 +92,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
     public Output<Object> getQueryTimeout() {
@@ -103,7 +103,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
@@ -114,7 +114,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
@@ -125,7 +125,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * SQL reader query. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sqlReaderQuery")
+    @Import(name="sqlReaderQuery")
       private final @Nullable Output<Object> sqlReaderQuery;
 
     public Output<Object> getSqlReaderQuery() {
@@ -136,7 +136,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the stored procedure for a SQL Database source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sqlReaderStoredProcedureName")
+    @Import(name="sqlReaderStoredProcedureName")
       private final @Nullable Output<Object> sqlReaderStoredProcedureName;
 
     public Output<Object> getSqlReaderStoredProcedureName() {
@@ -147,7 +147,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
      * 
      */
-    @InputImport(name="storedProcedureParameters")
+    @Import(name="storedProcedureParameters")
       private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
     public Output<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
@@ -159,7 +159,7 @@ public final class SqlSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'SqlSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

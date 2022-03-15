@@ -8,7 +8,7 @@ import io.pulumi.awsnative.devicefarm.DevicePoolArgs;
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolRule;
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,43 +21,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devicefarm:DevicePool")
 public class DevicePool extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="maxDevices", type=Integer.class, parameters={})
+    @Export(name="maxDevices", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDevices;
 
     public Output</* @Nullable */ Integer> getMaxDevices() {
         return this.maxDevices;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="projectArn", type=String.class, parameters={})
+    @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
     public Output<String> getProjectArn() {
         return this.projectArn;
     }
-    @OutputExport(name="rules", type=List.class, parameters={DevicePoolRule.class})
+    @Export(name="rules", type=List.class, parameters={DevicePoolRule.class})
     private Output<List<DevicePoolRule>> rules;
 
     public Output<List<DevicePoolRule>> getRules() {
         return this.rules;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DevicePoolTag.class})
+    @Export(name="tags", type=List.class, parameters={DevicePoolTag.class})
     private Output</* @Nullable */ List<DevicePoolTag>> tags;
 
     public Output</* @Nullable */ List<DevicePoolTag>> getTags() {

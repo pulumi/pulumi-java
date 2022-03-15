@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimCondition;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeClaimStatus {
     /**
      * AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
@@ -50,14 +50,14 @@ public final class PersistentVolumeClaimStatus {
      */
     private final @Nullable String resizeStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeClaimStatus(
-        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
-        @OutputCustomType.Parameter("allocatedResources") @Nullable Map<String,String> allocatedResources,
-        @OutputCustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
-        @OutputCustomType.Parameter("conditions") @Nullable List<PersistentVolumeClaimCondition> conditions,
-        @OutputCustomType.Parameter("phase") @Nullable String phase,
-        @OutputCustomType.Parameter("resizeStatus") @Nullable String resizeStatus) {
+        @CustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @CustomType.Parameter("allocatedResources") @Nullable Map<String,String> allocatedResources,
+        @CustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
+        @CustomType.Parameter("conditions") @Nullable List<PersistentVolumeClaimCondition> conditions,
+        @CustomType.Parameter("phase") @Nullable String phase,
+        @CustomType.Parameter("resizeStatus") @Nullable String resizeStatus) {
         this.accessModes = accessModes;
         this.allocatedResources = allocatedResources;
         this.capacity = capacity;

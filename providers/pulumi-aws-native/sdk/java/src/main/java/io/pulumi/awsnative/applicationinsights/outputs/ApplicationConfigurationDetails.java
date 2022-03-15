@@ -10,13 +10,13 @@ import io.pulumi.awsnative.applicationinsights.outputs.ApplicationHANAPrometheus
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationJMXPrometheusExporter;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationWindowsEvent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationConfigurationDetails {
     /**
      * A list of metrics to monitor for the component.
@@ -54,15 +54,15 @@ public final class ApplicationConfigurationDetails {
      */
     private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationConfigurationDetails(
-        @OutputCustomType.Parameter("alarmMetrics") @Nullable List<ApplicationAlarmMetric> alarmMetrics,
-        @OutputCustomType.Parameter("alarms") @Nullable List<ApplicationAlarm> alarms,
-        @OutputCustomType.Parameter("hAClusterPrometheusExporter") @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter,
-        @OutputCustomType.Parameter("hANAPrometheusExporter") @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter,
-        @OutputCustomType.Parameter("jMXPrometheusExporter") @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter,
-        @OutputCustomType.Parameter("logs") @Nullable List<ApplicationLog> logs,
-        @OutputCustomType.Parameter("windowsEvents") @Nullable List<ApplicationWindowsEvent> windowsEvents) {
+        @CustomType.Parameter("alarmMetrics") @Nullable List<ApplicationAlarmMetric> alarmMetrics,
+        @CustomType.Parameter("alarms") @Nullable List<ApplicationAlarm> alarms,
+        @CustomType.Parameter("hAClusterPrometheusExporter") @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter,
+        @CustomType.Parameter("hANAPrometheusExporter") @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter,
+        @CustomType.Parameter("jMXPrometheusExporter") @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter,
+        @CustomType.Parameter("logs") @Nullable List<ApplicationLog> logs,
+        @CustomType.Parameter("windowsEvents") @Nullable List<ApplicationWindowsEvent> windowsEvents) {
         this.alarmMetrics = alarmMetrics;
         this.alarms = alarms;
         this.hAClusterPrometheusExporter = hAClusterPrometheusExporter;

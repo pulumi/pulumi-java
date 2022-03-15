@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
      * The account ID number of the member account in the organization to register as a delegated administrator.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -28,7 +28,7 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
      * The service principal of the AWS service for which you want to make the member account a delegated administrator.
      * 
      */
-    @InputImport(name="servicePrincipal", required=true)
+    @Import(name="servicePrincipal", required=true)
       private final Output<String> servicePrincipal;
 
     public Output<String> getServicePrincipal() {

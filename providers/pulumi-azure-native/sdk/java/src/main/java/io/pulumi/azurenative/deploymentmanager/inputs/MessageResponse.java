@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
      * The actual message text.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -31,7 +31,7 @@ public final class MessageResponse extends io.pulumi.resources.InvokeArgs {
      * Time in UTC this message was provided.
      * 
      */
-    @InputImport(name="timeStamp", required=true)
+    @Import(name="timeStamp", required=true)
       private final String timeStamp;
 
     public String getTimeStamp() {

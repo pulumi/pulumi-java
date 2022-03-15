@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lakeformation.ResourceArgs;
 import io.pulumi.aws.lakeformation.inputs.ResourceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the resource, an S3 path.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -54,7 +54,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.OrganizationSecurityPolicyRuleMatchConfigLayer4Config;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationSecurityPolicyRuleMatchConfig {
     /**
      * Destination IP address range in CIDR format. Required for
@@ -31,11 +31,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      */
     private final @Nullable List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationSecurityPolicyRuleMatchConfig(
-        @OutputCustomType.Parameter("destIpRanges") @Nullable List<String> destIpRanges,
-        @OutputCustomType.Parameter("layer4Configs") List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs,
-        @OutputCustomType.Parameter("srcIpRanges") @Nullable List<String> srcIpRanges) {
+        @CustomType.Parameter("destIpRanges") @Nullable List<String> destIpRanges,
+        @CustomType.Parameter("layer4Configs") List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs,
+        @CustomType.Parameter("srcIpRanges") @Nullable List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;

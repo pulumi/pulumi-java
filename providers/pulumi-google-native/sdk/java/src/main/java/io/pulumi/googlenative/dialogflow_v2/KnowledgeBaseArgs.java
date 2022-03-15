@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -29,14 +29,14 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
         return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -47,14 +47,14 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

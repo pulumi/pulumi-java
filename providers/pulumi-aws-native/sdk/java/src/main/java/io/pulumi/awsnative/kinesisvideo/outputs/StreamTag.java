@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.kinesisvideo.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StreamTag {
     /**
      * The key name of the tag. Specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. The following characters can be used: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
@@ -20,10 +20,10 @@ public final class StreamTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
     /**
      * Migration end time
@@ -59,17 +59,17 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("state") String state) {
         this.endedOn = endedOn;
         this.exceptionsAndWarnings = exceptionsAndWarnings;
         this.id = id;

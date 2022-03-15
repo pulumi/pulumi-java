@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.AzureClusterControlPlaneDatabaseEncryption;
 import io.pulumi.gcp.container.outputs.AzureClusterControlPlaneMainVolume;
 import io.pulumi.gcp.container.outputs.AzureClusterControlPlaneProxyConfig;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterControlPlane {
     /**
      * Optional. Configuration related to application-layer secrets encryption.
@@ -70,18 +70,18 @@ public final class AzureClusterControlPlane {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureClusterControlPlane(
-        @OutputCustomType.Parameter("databaseEncryption") @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption,
-        @OutputCustomType.Parameter("mainVolume") @Nullable AzureClusterControlPlaneMainVolume mainVolume,
-        @OutputCustomType.Parameter("proxyConfig") @Nullable AzureClusterControlPlaneProxyConfig proxyConfig,
-        @OutputCustomType.Parameter("replicaPlacements") @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements,
-        @OutputCustomType.Parameter("rootVolume") @Nullable AzureClusterControlPlaneRootVolume rootVolume,
-        @OutputCustomType.Parameter("sshConfig") AzureClusterControlPlaneSshConfig sshConfig,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("databaseEncryption") @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption,
+        @CustomType.Parameter("mainVolume") @Nullable AzureClusterControlPlaneMainVolume mainVolume,
+        @CustomType.Parameter("proxyConfig") @Nullable AzureClusterControlPlaneProxyConfig proxyConfig,
+        @CustomType.Parameter("replicaPlacements") @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements,
+        @CustomType.Parameter("rootVolume") @Nullable AzureClusterControlPlaneRootVolume rootVolume,
+        @CustomType.Parameter("sshConfig") AzureClusterControlPlaneSshConfig sshConfig,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.databaseEncryption = databaseEncryption;
         this.mainVolume = mainVolume;
         this.proxyConfig = proxyConfig;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
      * The identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ManagedIdentityType>> type;
 
     public Output<Either<String,ManagedIdentityType>> getType() {

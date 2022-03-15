@@ -7,7 +7,7 @@ import io.pulumi.azurenative.desktopvirtualization.enums.CommandLineSetting;
 import io.pulumi.azurenative.desktopvirtualization.enums.RemoteApplicationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the application group
      * 
      */
-    @InputImport(name="applicationGroupName", required=true)
+    @Import(name="applicationGroupName", required=true)
       private final Output<String> applicationGroupName;
 
     public Output<String> getApplicationGroupName() {
@@ -34,7 +34,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the application within the specified application group
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -45,7 +45,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Type of Application.
      * 
      */
-    @InputImport(name="applicationType")
+    @Import(name="applicationType")
       private final @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
 
     public Output<Either<String,RemoteApplicationType>> getApplicationType() {
@@ -56,7 +56,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Command Line Arguments for Application.
      * 
      */
-    @InputImport(name="commandLineArguments")
+    @Import(name="commandLineArguments")
       private final @Nullable Output<String> commandLineArguments;
 
     public Output<String> getCommandLineArguments() {
@@ -67,7 +67,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
      * 
      */
-    @InputImport(name="commandLineSetting", required=true)
+    @Import(name="commandLineSetting", required=true)
       private final Output<Either<String,CommandLineSetting>> commandLineSetting;
 
     public Output<Either<String,CommandLineSetting>> getCommandLineSetting() {
@@ -78,7 +78,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Description of Application.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a path for the executable file for the application.
      * 
      */
-    @InputImport(name="filePath")
+    @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
     public Output<String> getFilePath() {
@@ -100,7 +100,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly name of Application.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -111,7 +111,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Index of the icon.
      * 
      */
-    @InputImport(name="iconIndex")
+    @Import(name="iconIndex")
       private final @Nullable Output<Integer> iconIndex;
 
     public Output<Integer> getIconIndex() {
@@ -122,7 +122,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Path to icon.
      * 
      */
-    @InputImport(name="iconPath")
+    @Import(name="iconPath")
       private final @Nullable Output<String> iconPath;
 
     public Output<String> getIconPath() {
@@ -133,7 +133,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the package application Id for MSIX applications
      * 
      */
-    @InputImport(name="msixPackageApplicationId")
+    @Import(name="msixPackageApplicationId")
       private final @Nullable Output<String> msixPackageApplicationId;
 
     public Output<String> getMsixPackageApplicationId() {
@@ -144,7 +144,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the package family name for MSIX applications
      * 
      */
-    @InputImport(name="msixPackageFamilyName")
+    @Import(name="msixPackageFamilyName")
       private final @Nullable Output<String> msixPackageFamilyName;
 
     public Output<String> getMsixPackageFamilyName() {
@@ -155,7 +155,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -166,7 +166,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
      */
-    @InputImport(name="showInPortal")
+    @Import(name="showInPortal")
       private final @Nullable Output<Boolean> showInPortal;
 
     public Output<Boolean> getShowInPortal() {

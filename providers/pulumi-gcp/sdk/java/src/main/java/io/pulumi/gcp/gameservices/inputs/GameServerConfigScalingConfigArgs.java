@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigScheduleArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigSelectorArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
      */
-    @InputImport(name="fleetAutoscalerSpec", required=true)
+    @Import(name="fleetAutoscalerSpec", required=true)
       private final Output<String> fleetAutoscalerSpec;
 
     public Output<String> getFleetAutoscalerSpec() {
@@ -34,7 +34,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * The name of the ScalingConfig
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schedules")
+    @Import(name="schedules")
       private final @Nullable Output<List<GameServerConfigScalingConfigScheduleArgs>> schedules;
 
     public Output<List<GameServerConfigScalingConfigScheduleArgs>> getSchedules() {
@@ -60,7 +60,7 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="selectors")
+    @Import(name="selectors")
       private final @Nullable Output<List<GameServerConfigScalingConfigSelectorArgs>> selectors;
 
     public Output<List<GameServerConfigScalingConfigSelectorArgs>> getSelectors() {

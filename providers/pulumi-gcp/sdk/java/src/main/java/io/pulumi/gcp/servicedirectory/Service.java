@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.ServiceArgs;
@@ -50,7 +50,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -67,7 +67,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The resource name of the namespace this service will belong to.
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output<String> namespace;
 
     /**
@@ -96,7 +96,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * lowercase letters or the hyphen character.
      * 
      */
-    @OutputExport(name="serviceId", type=String.class, parameters={})
+    @Export(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
     /**

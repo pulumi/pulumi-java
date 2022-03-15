@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleGatingRuleArg
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import io.pulumi.awsnative.route53recoverycontrol.inputs.SafetyRuleTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SafetyRuleArgs Empty = new SafetyRuleArgs();
 
-    @InputImport(name="assertionRule")
+    @Import(name="assertionRule")
       private final @Nullable Output<SafetyRuleAssertionRuleArgs> assertionRule;
 
     public Output<SafetyRuleAssertionRuleArgs> getAssertionRule() {
@@ -30,28 +30,28 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    @InputImport(name="controlPanelArn")
+    @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
     public Output<String> getControlPanelArn() {
         return this.controlPanelArn == null ? Output.empty() : this.controlPanelArn;
     }
 
-    @InputImport(name="gatingRule")
+    @Import(name="gatingRule")
       private final @Nullable Output<SafetyRuleGatingRuleArgs> gatingRule;
 
     public Output<SafetyRuleGatingRuleArgs> getGatingRule() {
         return this.gatingRule == null ? Output.empty() : this.gatingRule;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="ruleConfig")
+    @Import(name="ruleConfig")
       private final @Nullable Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
     public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
@@ -62,7 +62,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SafetyRuleTagArgs>> tags;
 
     public Output<List<SafetyRuleTagArgs>> getTags() {

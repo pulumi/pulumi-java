@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices;
 
 import io.pulumi.azurenative.devices.inputs.CertificatePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the certificate
      * 
      */
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -30,7 +30,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The description of an X509 CA Certificate.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CertificatePropertiesArgs> properties;
 
     public Output<CertificatePropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the IoT hub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the IoT hub.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

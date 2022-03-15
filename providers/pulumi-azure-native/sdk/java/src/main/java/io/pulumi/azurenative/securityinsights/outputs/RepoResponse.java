@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepoResponse {
     /**
      * Array of branches.
@@ -28,11 +28,11 @@ public final class RepoResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepoResponse(
-        @OutputCustomType.Parameter("branches") @Nullable List<String> branches,
-        @OutputCustomType.Parameter("fullName") @Nullable String fullName,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("branches") @Nullable List<String> branches,
+        @CustomType.Parameter("fullName") @Nullable String fullName,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.branches = branches;
         this.fullName = fullName;
         this.url = url;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.PrimaryStepRollUp;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IndividualOutcomeArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
      * Step Id and outcome of each individual step.
      * 
      */
-    @InputImport(name="individualOutcome")
+    @Import(name="individualOutcome")
       private final @Nullable Output<List<IndividualOutcomeArgs>> individualOutcome;
 
     public Output<List<IndividualOutcomeArgs>> getIndividualOutcome() {
@@ -35,7 +35,7 @@ public final class PrimaryStepArgs extends io.pulumi.resources.ResourceArgs {
      * Rollup test status of multiple steps that were run with the same configuration as a group.
      * 
      */
-    @InputImport(name="rollUp")
+    @Import(name="rollUp")
       private final @Nullable Output<PrimaryStepRollUp> rollUp;
 
     public Output<PrimaryStepRollUp> getRollUp() {

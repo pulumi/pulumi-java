@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the ACL.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,14 +31,14 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
      * The minimum engine version supported by the ACL.
      * 
      */
-    @InputImport(name="minimumEngineVersion")
+    @Import(name="minimumEngineVersion")
       private final @Nullable Output<String> minimumEngineVersion;
 
     public Output<String> getMinimumEngineVersion() {
         return this.minimumEngineVersion == null ? Output.empty() : this.minimumEngineVersion;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -60,7 +60,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -71,7 +71,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -82,7 +82,7 @@ public final class AclState extends io.pulumi.resources.ResourceArgs {
      * Set of MemoryDB user names to be included in this ACL.
      * 
      */
-    @InputImport(name="userNames")
+    @Import(name="userNames")
       private final @Nullable Output<List<String>> userNames;
 
     public Output<List<String>> getUserNames() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2QuasiIdFieldResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2AuxiliaryTableResponse {
     /**
      * Quasi-identifier columns.
@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2AuxiliaryTableResponse(
-        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds,
-        @OutputCustomType.Parameter("relativeFrequency") GooglePrivacyDlpV2FieldIdResponse relativeFrequency,
-        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @CustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds,
+        @CustomType.Parameter("relativeFrequency") GooglePrivacyDlpV2FieldIdResponse relativeFrequency,
+        @CustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.quasiIds = quasiIds;
         this.relativeFrequency = relativeFrequency;
         this.table = table;

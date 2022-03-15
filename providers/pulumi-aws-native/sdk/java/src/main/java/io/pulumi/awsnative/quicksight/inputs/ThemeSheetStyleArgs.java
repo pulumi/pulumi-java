@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTileLayoutStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTileStyleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ThemeSheetStyleArgs Empty = new ThemeSheetStyleArgs();
 
-    @InputImport(name="tile")
+    @Import(name="tile")
       private final @Nullable Output<ThemeTileStyleArgs> tile;
 
     public Output<ThemeTileStyleArgs> getTile() {
         return this.tile == null ? Output.empty() : this.tile;
     }
 
-    @InputImport(name="tileLayout")
+    @Import(name="tileLayout")
       private final @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
 
     public Output<ThemeTileLayoutStyleArgs> getTileLayout() {

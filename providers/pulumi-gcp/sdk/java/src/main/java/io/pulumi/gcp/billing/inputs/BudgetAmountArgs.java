@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.billing.inputs.BudgetAmountSpecifiedAmountArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
      * use the `specified_amount` block.
      * 
      */
-    @InputImport(name="lastPeriodAmount")
+    @Import(name="lastPeriodAmount")
       private final @Nullable Output<Boolean> lastPeriodAmount;
 
     public Output<Boolean> getLastPeriodAmount() {
@@ -36,7 +36,7 @@ public final class BudgetAmountArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="specifiedAmount")
+    @Import(name="specifiedAmount")
       private final @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 
     public Output<BudgetAmountSpecifiedAmountArgs> getSpecifiedAmount() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationC
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Output<FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
@@ -33,7 +33,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The jdbcurl of the redshift cluster.
      * 
      */
-    @InputImport(name="clusterJdbcurl", required=true)
+    @Import(name="clusterJdbcurl", required=true)
       private final Output<String> clusterJdbcurl;
 
     public Output<String> getClusterJdbcurl() {
@@ -44,7 +44,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
      * 
      */
-    @InputImport(name="copyOptions")
+    @Import(name="copyOptions")
       private final @Nullable Output<String> copyOptions;
 
     public Output<String> getCopyOptions() {
@@ -55,7 +55,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The data table columns that will be targeted by the copy command.
      * 
      */
-    @InputImport(name="dataTableColumns")
+    @Import(name="dataTableColumns")
       private final @Nullable Output<String> dataTableColumns;
 
     public Output<String> getDataTableColumns() {
@@ -66,7 +66,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The name of the table in the redshift cluster that the s3 bucket will copy to.
      * 
      */
-    @InputImport(name="dataTableName", required=true)
+    @Import(name="dataTableName", required=true)
       private final Output<String> dataTableName;
 
     public Output<String> getDataTableName() {
@@ -77,7 +77,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The password for the username above.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -88,7 +88,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The data processing configuration.  More details are given below.
      * 
      */
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> processingConfiguration;
 
     public Output<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
@@ -99,7 +99,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
      * 
      */
-    @InputImport(name="retryDuration")
+    @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
     public Output<Integer> getRetryDuration() {
@@ -110,7 +110,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The arn of the role the stream assumes.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -121,7 +121,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
      * 
      */
-    @InputImport(name="s3BackupConfiguration")
+    @Import(name="s3BackupConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> s3BackupConfiguration;
 
     public Output<FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationArgs> getS3BackupConfiguration() {
@@ -132,7 +132,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
      * 
      */
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
     public Output<String> getS3BackupMode() {
@@ -143,7 +143,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationArgs extends io.pu
      * The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

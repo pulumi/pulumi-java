@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileCustomImage {
     /**
      * The Name of the AppImageConfig.
@@ -28,11 +28,11 @@ public final class UserProfileCustomImage {
      */
     private final @Nullable Integer imageVersionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserProfileCustomImage(
-        @OutputCustomType.Parameter("appImageConfigName") String appImageConfigName,
-        @OutputCustomType.Parameter("imageName") String imageName,
-        @OutputCustomType.Parameter("imageVersionNumber") @Nullable Integer imageVersionNumber) {
+        @CustomType.Parameter("appImageConfigName") String appImageConfigName,
+        @CustomType.Parameter("imageName") String imageName,
+        @CustomType.Parameter("imageVersionNumber") @Nullable Integer imageVersionNumber) {
         this.appImageConfigName = appImageConfigName;
         this.imageName = imageName;
         this.imageVersionNumber = imageVersionNumber;

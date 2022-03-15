@@ -44,7 +44,7 @@ import io.pulumi.azurenative.datafactory.outputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -52,7 +52,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SwitchActivityResponse {
     /**
      * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
@@ -96,16 +96,16 @@ public final class SwitchActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SwitchActivityResponse(
-        @OutputCustomType.Parameter("cases") @Nullable List<SwitchCaseResponse> cases,
-        @OutputCustomType.Parameter("defaultActivities") @Nullable List<Object> defaultActivities,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("on") ExpressionResponse on,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("cases") @Nullable List<SwitchCaseResponse> cases,
+        @CustomType.Parameter("defaultActivities") @Nullable List<Object> defaultActivities,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("on") ExpressionResponse on,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.cases = cases;
         this.defaultActivities = defaultActivities;
         this.dependsOn = dependsOn;

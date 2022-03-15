@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.Invok
      * The additional info.
      * 
      */
-    @InputImport(name="info", required=true)
+    @Import(name="info", required=true)
       private final Object info;
 
     public Object getInfo() {
@@ -32,7 +32,7 @@ public final class ErrorAdditionalInfoResponse extends io.pulumi.resources.Invok
      * The additional info type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

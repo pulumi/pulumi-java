@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionExpirationPolicy {
     /**
      * Specifies the "time-to-live" duration for an associated resource. The
@@ -19,8 +19,8 @@ public final class SubscriptionExpirationPolicy {
      */
     private final String ttl;
 
-    @OutputCustomType.Constructor
-    private SubscriptionExpirationPolicy(@OutputCustomType.Parameter("ttl") String ttl) {
+    @CustomType.Constructor
+    private SubscriptionExpirationPolicy(@CustomType.Parameter("ttl") String ttl) {
         this.ttl = ttl;
     }
 

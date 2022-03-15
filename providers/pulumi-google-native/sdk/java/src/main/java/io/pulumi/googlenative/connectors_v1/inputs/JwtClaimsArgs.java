@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * Value for the "aud" claim.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -33,7 +33,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * Value for the "iss" claim.
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -44,7 +44,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
      * Value for the "sub" claim.
      * 
      */
-    @InputImport(name="subject")
+    @Import(name="subject")
       private final @Nullable Output<String> subject;
 
     public Output<String> getSubject() {

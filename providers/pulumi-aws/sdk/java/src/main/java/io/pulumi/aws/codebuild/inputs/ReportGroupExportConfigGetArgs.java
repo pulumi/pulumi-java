@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigS3DestinationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
      * contains information about the S3 bucket where the run of a report is exported. see S3 Destination documented below.
      * 
      */
-    @InputImport(name="s3Destination")
+    @Import(name="s3Destination")
       private final @Nullable Output<ReportGroupExportConfigS3DestinationGetArgs> s3Destination;
 
     public Output<ReportGroupExportConfigS3DestinationGetArgs> getS3Destination() {
@@ -30,7 +30,7 @@ public final class ReportGroupExportConfigGetArgs extends io.pulumi.resources.Re
      * The export configuration type. Valid values are `S3` and `NO_EXPORT`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

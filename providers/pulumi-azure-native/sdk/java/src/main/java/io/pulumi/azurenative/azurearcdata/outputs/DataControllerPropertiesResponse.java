@@ -8,14 +8,14 @@ import io.pulumi.azurenative.azurearcdata.outputs.LogAnalyticsWorkspaceConfigRes
 import io.pulumi.azurenative.azurearcdata.outputs.OnPremisePropertyResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.UploadServicePrincipalResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.UploadWatermarkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataControllerPropertiesResponse {
     /**
      * Username and password for basic login authentication.
@@ -54,16 +54,16 @@ public final class DataControllerPropertiesResponse {
      */
     private final @Nullable UploadWatermarkResponse uploadWatermark;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataControllerPropertiesResponse(
-        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
-        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
-        @OutputCustomType.Parameter("logAnalyticsWorkspaceConfig") @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
-        @OutputCustomType.Parameter("onPremiseProperty") @Nullable OnPremisePropertyResponse onPremiseProperty,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("uploadServicePrincipal") @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
-        @OutputCustomType.Parameter("uploadWatermark") @Nullable UploadWatermarkResponse uploadWatermark) {
+        @CustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @CustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @CustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @CustomType.Parameter("logAnalyticsWorkspaceConfig") @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
+        @CustomType.Parameter("onPremiseProperty") @Nullable OnPremisePropertyResponse onPremiseProperty,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("uploadServicePrincipal") @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
+        @CustomType.Parameter("uploadWatermark") @Nullable UploadWatermarkResponse uploadWatermark) {
         this.basicLoginInformation = basicLoginInformation;
         this.k8sRaw = k8sRaw;
         this.lastUploadedDate = lastUploadedDate;

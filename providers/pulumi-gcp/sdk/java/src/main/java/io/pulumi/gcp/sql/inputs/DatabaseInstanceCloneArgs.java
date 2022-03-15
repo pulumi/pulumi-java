@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
      * The timestamp of the point in time that should be restored.
      * 
      */
-    @InputImport(name="pointInTime")
+    @Import(name="pointInTime")
       private final @Nullable Output<String> pointInTime;
 
     public Output<String> getPointInTime() {
@@ -29,7 +29,7 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
      * Name of the source instance which will be cloned.
      * 
      */
-    @InputImport(name="sourceInstanceName", required=true)
+    @Import(name="sourceInstanceName", required=true)
       private final Output<String> sourceInstanceName;
 
     public Output<String> getSourceInstanceName() {

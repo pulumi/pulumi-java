@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * The dashboard's part column span.
      * 
      */
-    @InputImport(name="colSpan", required=true)
+    @Import(name="colSpan", required=true)
       private final Integer colSpan;
 
     public Integer getColSpan() {
@@ -36,7 +36,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * The dashboard part's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Map<String,Object> metadata;
 
     public Map<String,Object> getMetadata() {
@@ -47,7 +47,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * The dashboard's part row span.
      * 
      */
-    @InputImport(name="rowSpan", required=true)
+    @Import(name="rowSpan", required=true)
       private final Integer rowSpan;
 
     public Integer getRowSpan() {
@@ -58,7 +58,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * The dashboard's part x coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final Integer x;
 
     public Integer getX() {
@@ -69,7 +69,7 @@ public final class DashboardPartsResponsePosition extends io.pulumi.resources.In
      * The dashboard's part y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final Integer y;
 
     public Integer getY() {

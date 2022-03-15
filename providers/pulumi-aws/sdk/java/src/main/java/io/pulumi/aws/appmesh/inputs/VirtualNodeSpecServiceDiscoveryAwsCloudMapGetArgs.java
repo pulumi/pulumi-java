@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
      * A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
      * Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
      * The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

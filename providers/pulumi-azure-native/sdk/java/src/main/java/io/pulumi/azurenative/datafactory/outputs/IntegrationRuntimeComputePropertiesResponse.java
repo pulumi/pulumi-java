@@ -5,14 +5,14 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeDataFlowPropertiesResponse;
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeVNetPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeComputePropertiesResponse {
     /**
      * Data flow properties for managed integration runtime.
@@ -45,14 +45,14 @@ public final class IntegrationRuntimeComputePropertiesResponse {
      */
     private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeComputePropertiesResponse(
-        @OutputCustomType.Parameter("dataFlowProperties") @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("maxParallelExecutionsPerNode") @Nullable Integer maxParallelExecutionsPerNode,
-        @OutputCustomType.Parameter("nodeSize") @Nullable String nodeSize,
-        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes,
-        @OutputCustomType.Parameter("vNetProperties") @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
+        @CustomType.Parameter("dataFlowProperties") @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("maxParallelExecutionsPerNode") @Nullable Integer maxParallelExecutionsPerNode,
+        @CustomType.Parameter("nodeSize") @Nullable String nodeSize,
+        @CustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes,
+        @CustomType.Parameter("vNetProperties") @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
         this.dataFlowProperties = dataFlowProperties;
         this.location = location;
         this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;

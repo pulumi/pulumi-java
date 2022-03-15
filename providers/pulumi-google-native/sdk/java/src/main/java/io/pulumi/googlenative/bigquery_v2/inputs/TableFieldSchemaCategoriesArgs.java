@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
      * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
      * 
      */
-    @InputImport(name="names")
+    @Import(name="names")
       private final @Nullable Output<List<String>> names;
 
     public Output<List<String>> getNames() {

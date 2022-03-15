@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentPeeringAttachmentStatus;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayPeeringAttachmentResult {
     /**
      * The time the transit gateway peering attachment was created.
@@ -40,13 +40,13 @@ public final class GetTransitGatewayPeeringAttachmentResult {
      */
     private final @Nullable String transitGatewayAttachmentId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayPeeringAttachmentResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("status") @Nullable TransitGatewayPeeringAttachmentPeeringAttachmentStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayPeeringAttachmentTag> tags,
-        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("status") @Nullable TransitGatewayPeeringAttachmentPeeringAttachmentStatus status,
+        @CustomType.Parameter("tags") @Nullable List<TransitGatewayPeeringAttachmentTag> tags,
+        @CustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId) {
         this.creationTime = creationTime;
         this.state = state;
         this.status = status;

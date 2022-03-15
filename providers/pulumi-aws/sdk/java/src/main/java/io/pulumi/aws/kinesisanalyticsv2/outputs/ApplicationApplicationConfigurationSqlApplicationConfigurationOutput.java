@@ -7,13 +7,13 @@ import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurat
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutput {
     /**
      * Describes the data format when records are written to the destination.
@@ -42,14 +42,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     private final String name;
     private final @Nullable String outputId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationOutput(
-        @OutputCustomType.Parameter("destinationSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema,
-        @OutputCustomType.Parameter("kinesisFirehoseOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput,
-        @OutputCustomType.Parameter("kinesisStreamsOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput,
-        @OutputCustomType.Parameter("lambdaOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputId") @Nullable String outputId) {
+        @CustomType.Parameter("destinationSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema,
+        @CustomType.Parameter("kinesisFirehoseOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput,
+        @CustomType.Parameter("kinesisStreamsOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput,
+        @CustomType.Parameter("lambdaOutput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputId") @Nullable String outputId) {
         this.destinationSchema = destinationSchema;
         this.kinesisFirehoseOutput = kinesisFirehoseOutput;
         this.kinesisStreamsOutput = kinesisStreamsOutput;

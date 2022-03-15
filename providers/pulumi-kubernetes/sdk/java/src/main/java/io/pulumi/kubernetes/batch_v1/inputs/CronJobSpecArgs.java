@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.batch_v1.inputs.JobTemplateSpecArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,7 +30,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Replace"` cancels currently running job and replaces it with a new one.
      * 
      */
-    @InputImport(name="concurrencyPolicy")
+    @Import(name="concurrencyPolicy")
       private final @Nullable Output<String> concurrencyPolicy;
 
     public Output<String> getConcurrencyPolicy() {
@@ -41,7 +41,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.
      * 
      */
-    @InputImport(name="failedJobsHistoryLimit")
+    @Import(name="failedJobsHistoryLimit")
       private final @Nullable Output<Integer> failedJobsHistoryLimit;
 
     public Output<Integer> getFailedJobsHistoryLimit() {
@@ -52,7 +52,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the job that will be created when executing a CronJob.
      * 
      */
-    @InputImport(name="jobTemplate", required=true)
+    @Import(name="jobTemplate", required=true)
       private final Output<JobTemplateSpecArgs> jobTemplate;
 
     public Output<JobTemplateSpecArgs> getJobTemplate() {
@@ -63,7 +63,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -74,7 +74,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional deadline in seconds for starting the job if it misses scheduled time for any reason.  Missed jobs executions will be counted as failed ones.
      * 
      */
-    @InputImport(name="startingDeadlineSeconds")
+    @Import(name="startingDeadlineSeconds")
       private final @Nullable Output<Integer> startingDeadlineSeconds;
 
     public Output<Integer> getStartingDeadlineSeconds() {
@@ -85,7 +85,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.
      * 
      */
-    @InputImport(name="successfulJobsHistoryLimit")
+    @Import(name="successfulJobsHistoryLimit")
       private final @Nullable Output<Integer> successfulJobsHistoryLimit;
 
     public Output<Integer> getSuccessfulJobsHistoryLimit() {
@@ -96,7 +96,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This flag tells the controller to suspend subsequent executions, it does not apply to already started executions.  Defaults to false.
      * 
      */
-    @InputImport(name="suspend")
+    @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
     public Output<Boolean> getSuspend() {

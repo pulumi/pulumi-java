@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleErrorActionStepFunctions {
     /**
      * The prefix used to generate, along with a UUID, the unique state machine execution name.
@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionStepFunctions {
      */
     private final String stateMachineName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleErrorActionStepFunctions(
-        @OutputCustomType.Parameter("executionNamePrefix") @Nullable String executionNamePrefix,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("stateMachineName") String stateMachineName) {
+        @CustomType.Parameter("executionNamePrefix") @Nullable String executionNamePrefix,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("stateMachineName") String stateMachineName) {
         this.executionNamePrefix = executionNamePrefix;
         this.roleArn = roleArn;
         this.stateMachineName = stateMachineName;

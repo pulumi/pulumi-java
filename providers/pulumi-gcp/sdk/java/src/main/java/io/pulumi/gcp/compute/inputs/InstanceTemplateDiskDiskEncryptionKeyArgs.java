@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
      * The self link of the encryption key that is stored in Google Cloud KMS
      * 
      */
-    @InputImport(name="kmsKeySelfLink", required=true)
+    @Import(name="kmsKeySelfLink", required=true)
       private final Output<String> kmsKeySelfLink;
 
     public Output<String> getKmsKeySelfLink() {

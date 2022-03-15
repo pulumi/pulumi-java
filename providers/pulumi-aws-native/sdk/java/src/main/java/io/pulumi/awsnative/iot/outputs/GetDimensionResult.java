@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.DimensionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDimensionResult {
     /**
      * The ARN (Amazon resource name) of the created dimension.
@@ -29,11 +29,11 @@ public final class GetDimensionResult {
      */
     private final @Nullable List<DimensionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDimensionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("stringValues") @Nullable List<String> stringValues,
-        @OutputCustomType.Parameter("tags") @Nullable List<DimensionTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("stringValues") @Nullable List<String> stringValues,
+        @CustomType.Parameter("tags") @Nullable List<DimensionTag> tags) {
         this.arn = arn;
         this.stringValues = stringValues;
         this.tags = tags;

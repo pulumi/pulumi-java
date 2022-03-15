@@ -10,7 +10,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusRespon
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    @OutputExport(name="customResourceName", type=String.class, parameters={})
+    @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
@@ -52,7 +52,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the extended location.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -66,7 +66,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the inventory Item ID for the datastore.
      * 
      */
-    @OutputExport(name="inventoryItemId", type=String.class, parameters={})
+    @Export(name="inventoryItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> inventoryItemId;
 
     /**
@@ -80,7 +80,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -94,7 +94,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -108,7 +108,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the vCenter Managed Object name for the datastore.
      * 
      */
-    @OutputExport(name="moName", type=String.class, parameters={})
+    @Export(name="moName", type=String.class, parameters={})
     private Output<String> moName;
 
     /**
@@ -122,7 +122,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the datastore.
      * 
      */
-    @OutputExport(name="moRefId", type=String.class, parameters={})
+    @Export(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
     /**
@@ -136,7 +136,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -164,7 +164,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * The resource status information.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
@@ -178,7 +178,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -192,7 +192,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -206,7 +206,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -220,7 +220,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets a unique identifier for this resource.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
@@ -234,7 +234,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Gets or sets the ARM Id of the vCenter resource in which this datastore resides.
      * 
      */
-    @OutputExport(name="vCenterId", type=String.class, parameters={})
+    @Export(name="vCenterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vCenterId;
 
     /**

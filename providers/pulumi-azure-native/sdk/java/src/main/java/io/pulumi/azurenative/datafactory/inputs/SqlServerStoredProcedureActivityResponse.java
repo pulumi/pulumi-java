@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -41,7 +41,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -52,7 +52,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -63,7 +63,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -74,7 +74,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -85,7 +85,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Stored procedure name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="storedProcedureName", required=true)
+    @Import(name="storedProcedureName", required=true)
       private final Object storedProcedureName;
 
     public Object getStoredProcedureName() {
@@ -96,7 +96,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}".
      * 
      */
-    @InputImport(name="storedProcedureParameters")
+    @Import(name="storedProcedureParameters")
       private final @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters;
 
     public Map<String,StoredProcedureParameterResponse> getStoredProcedureParameters() {
@@ -108,7 +108,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Expected value is 'SqlServerStoredProcedure'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -119,7 +119,7 @@ public final class SqlServerStoredProcedureActivityResponse extends io.pulumi.re
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedServiceIdentityResponseUserAssignedIdentities {
     /**
      * Client Id of user assigned identity
@@ -20,10 +20,10 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedServiceIdentityResponseUserAssignedIdentities(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("principalId") String principalId) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("principalId") String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }

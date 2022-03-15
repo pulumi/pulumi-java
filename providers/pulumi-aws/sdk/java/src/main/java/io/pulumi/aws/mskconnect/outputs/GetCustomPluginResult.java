@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.mskconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomPluginResult {
     /**
      * the Amazon Resource Name (ARN) of the custom plugin.
@@ -37,14 +37,14 @@ public final class GetCustomPluginResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomPluginResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestRevision") Integer latestRevision,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.arn = arn;
         this.description = description;
         this.id = id;

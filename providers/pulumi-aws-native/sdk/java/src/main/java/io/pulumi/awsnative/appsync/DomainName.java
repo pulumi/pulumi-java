@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appsync;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appsync.DomainNameArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,31 +17,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:appsync:DomainName")
 public class DomainName extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appSyncDomainName", type=String.class, parameters={})
+    @Export(name="appSyncDomainName", type=String.class, parameters={})
     private Output<String> appSyncDomainName;
 
     public Output<String> getAppSyncDomainName() {
         return this.appSyncDomainName;
     }
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
         return this.certificateArn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {

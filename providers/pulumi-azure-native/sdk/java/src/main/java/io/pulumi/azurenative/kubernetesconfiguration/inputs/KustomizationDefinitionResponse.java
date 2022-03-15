@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<DependsOnDefinitionResponse> dependsOn;
 
     public List<DependsOnDefinitionResponse> getDependsOn() {
@@ -37,7 +37,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field change.
      * 
      */
-    @InputImport(name="force")
+    @Import(name="force")
       private final @Nullable Boolean force;
 
     public Optional<Boolean> getForce() {
@@ -48,7 +48,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * The path in the source reference to reconcile on the cluster.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -59,7 +59,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * Enable/disable garbage collections of Kubernetes objects created by this Kustomization.
      * 
      */
-    @InputImport(name="prune")
+    @Import(name="prune")
       private final @Nullable Boolean prune;
 
     public Optional<Boolean> getPrune() {
@@ -70,7 +70,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * The interval at which to re-reconcile the Kustomization on the cluster in the event of failure on reconciliation.
      * 
      */
-    @InputImport(name="retryIntervalInSeconds")
+    @Import(name="retryIntervalInSeconds")
       private final @Nullable Double retryIntervalInSeconds;
 
     public Optional<Double> getRetryIntervalInSeconds() {
@@ -81,7 +81,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * The interval at which to re-reconcile the Kustomization on the cluster.
      * 
      */
-    @InputImport(name="syncIntervalInSeconds")
+    @Import(name="syncIntervalInSeconds")
       private final @Nullable Double syncIntervalInSeconds;
 
     public Optional<Double> getSyncIntervalInSeconds() {
@@ -92,7 +92,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * The maximum time to attempt to reconcile the Kustomization on the cluster.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Double timeoutInSeconds;
 
     public Optional<Double> getTimeoutInSeconds() {
@@ -103,7 +103,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * Specify whether to validate the Kubernetes objects referenced in the Kustomization before applying them to the cluster.
      * 
      */
-    @InputImport(name="validation")
+    @Import(name="validation")
       private final @Nullable String validation;
 
     public Optional<String> getValidation() {

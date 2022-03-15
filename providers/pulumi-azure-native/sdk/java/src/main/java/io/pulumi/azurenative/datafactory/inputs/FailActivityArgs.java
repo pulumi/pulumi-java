@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -37,7 +37,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * The error code that categorizes the error type of the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Output<Object> errorCode;
 
     public Output<Object> getErrorCode() {
@@ -59,7 +59,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * The error message that surfaced in the Fail activity. It can be dynamic content that's evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final Output<Object> message;
 
     public Output<Object> getMessage() {
@@ -70,7 +70,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Fail'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -93,7 +93,7 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

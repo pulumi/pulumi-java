@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseBackupSettingResponse {
     /**
      * Contains a connection string to a database which is being backed up or restored. If the restore should happen to a new database, the database name inside is the new one.
@@ -29,12 +29,12 @@ public final class DatabaseBackupSettingResponse {
     private final String databaseType;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseBackupSettingResponse(
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("connectionStringName") @Nullable String connectionStringName,
-        @OutputCustomType.Parameter("databaseType") String databaseType,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("connectionStringName") @Nullable String connectionStringName,
+        @CustomType.Parameter("databaseType") String databaseType,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.connectionString = connectionString;
         this.connectionStringName = connectionStringName;
         this.databaseType = databaseType;

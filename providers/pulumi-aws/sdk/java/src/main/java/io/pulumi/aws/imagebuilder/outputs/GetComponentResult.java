@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentResult {
     private final String arn;
     /**
@@ -84,23 +84,23 @@ public final class GetComponentResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("changeDescription") String changeDescription,
-        @OutputCustomType.Parameter("data") String data,
-        @OutputCustomType.Parameter("dateCreated") String dateCreated,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("supportedOsVersions") List<String> supportedOsVersions,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("changeDescription") String changeDescription,
+        @CustomType.Parameter("data") String data,
+        @CustomType.Parameter("dateCreated") String dateCreated,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("supportedOsVersions") List<String> supportedOsVersions,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.arn = arn;
         this.changeDescription = changeDescription;
         this.data = data;

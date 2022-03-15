@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkmanager.TransitGatewayRegistrationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class TransitGatewayRegistration extends io.pulumi.resources.CustomResour
      * The ID of the global network.
      * 
      */
-    @OutputExport(name="globalNetworkId", type=String.class, parameters={})
+    @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
@@ -35,7 +35,7 @@ public class TransitGatewayRegistration extends io.pulumi.resources.CustomResour
      * The Amazon Resource Name (ARN) of the transit gateway.
      * 
      */
-    @OutputExport(name="transitGatewayArn", type=String.class, parameters={})
+    @Export(name="transitGatewayArn", type=String.class, parameters={})
     private Output<String> transitGatewayArn;
 
     /**

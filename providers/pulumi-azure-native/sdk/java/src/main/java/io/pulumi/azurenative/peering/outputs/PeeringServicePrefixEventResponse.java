@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PeeringServicePrefixEventResponse {
     /**
      * The description of the event associated with a prefix.
@@ -35,13 +35,13 @@ public final class PeeringServicePrefixEventResponse {
      */
     private final String eventType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeeringServicePrefixEventResponse(
-        @OutputCustomType.Parameter("eventDescription") String eventDescription,
-        @OutputCustomType.Parameter("eventLevel") String eventLevel,
-        @OutputCustomType.Parameter("eventSummary") String eventSummary,
-        @OutputCustomType.Parameter("eventTimestamp") String eventTimestamp,
-        @OutputCustomType.Parameter("eventType") String eventType) {
+        @CustomType.Parameter("eventDescription") String eventDescription,
+        @CustomType.Parameter("eventLevel") String eventLevel,
+        @CustomType.Parameter("eventSummary") String eventSummary,
+        @CustomType.Parameter("eventTimestamp") String eventTimestamp,
+        @CustomType.Parameter("eventType") String eventType) {
         this.eventDescription = eventDescription;
         this.eventLevel = eventLevel;
         this.eventSummary = eventSummary;

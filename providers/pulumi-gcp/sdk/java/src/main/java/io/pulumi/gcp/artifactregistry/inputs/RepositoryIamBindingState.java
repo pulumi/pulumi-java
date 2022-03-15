@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
 
     public static final RepositoryIamBindingState Empty = new RepositoryIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<RepositoryIamBindingConditionGetArgs> condition;
 
     public Output<RepositoryIamBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -39,14 +39,14 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -58,7 +58,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
@@ -82,7 +82,7 @@ public final class RepositoryIamBindingState extends io.pulumi.resources.Resourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LicenseResourceCommitmentResponse {
     /**
      * The number of licenses purchased.
@@ -25,11 +25,11 @@ public final class LicenseResourceCommitmentResponse {
      */
     private final String license;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseResourceCommitmentResponse(
-        @OutputCustomType.Parameter("amount") String amount,
-        @OutputCustomType.Parameter("coresPerLicense") String coresPerLicense,
-        @OutputCustomType.Parameter("license") String license) {
+        @CustomType.Parameter("amount") String amount,
+        @CustomType.Parameter("coresPerLicense") String coresPerLicense,
+        @CustomType.Parameter("license") String license) {
         this.amount = amount;
         this.coresPerLicense = coresPerLicense;
         this.license = license;

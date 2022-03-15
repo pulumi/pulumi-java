@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionDiskDiskEncryptionKeyArgs;
 import io.pulumi.gcp.compute.inputs.RegionDiskSourceSnapshotEncryptionKeyArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="diskEncryptionKey")
+    @Import(name="diskEncryptionKey")
       private final @Nullable Output<RegionDiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
     public Output<RegionDiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
@@ -59,7 +59,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<String> $interface;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
@@ -71,7 +71,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this disk.  A list of key->value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -88,7 +88,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * the supported values for the caller's project.
      * 
      */
-    @InputImport(name="physicalBlockSizeBytes")
+    @Import(name="physicalBlockSizeBytes")
       private final @Nullable Output<Integer> physicalBlockSizeBytes;
 
     public Output<Integer> getPhysicalBlockSizeBytes() {
@@ -115,7 +115,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -126,7 +126,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the region where the disk resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -137,7 +137,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * URLs of the zones where the disk should be replicated to.
      * 
      */
-    @InputImport(name="replicaZones", required=true)
+    @Import(name="replicaZones", required=true)
       private final Output<List<String>> replicaZones;
 
     public Output<List<String>> getReplicaZones() {
@@ -154,7 +154,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * or the size of the snapshot.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -171,7 +171,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * * `snapshot`
      * 
      */
-    @InputImport(name="snapshot")
+    @Import(name="snapshot")
       private final @Nullable Output<String> snapshot;
 
     public Output<String> getSnapshot() {
@@ -185,7 +185,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceSnapshotEncryptionKey")
+    @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     public Output<RegionDiskSourceSnapshotEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
@@ -197,7 +197,7 @@ public final class RegionDiskArgs extends io.pulumi.resources.ResourceArgs {
      * create the disk. Provide this when creating the disk.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

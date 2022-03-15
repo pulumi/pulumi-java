@@ -5,24 +5,24 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRulePayload;
 import io.pulumi.awsnative.iot.outputs.TopicRuleTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicRuleResult {
     private final @Nullable String arn;
     private final @Nullable List<TopicRuleTag> tags;
     private final @Nullable TopicRulePayload topicRulePayload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicRuleResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<TopicRuleTag> tags,
-        @OutputCustomType.Parameter("topicRulePayload") @Nullable TopicRulePayload topicRulePayload) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<TopicRuleTag> tags,
+        @CustomType.Parameter("topicRulePayload") @Nullable TopicRulePayload topicRulePayload) {
         this.arn = arn;
         this.tags = tags;
         this.topicRulePayload = topicRulePayload;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rds;
 import io.pulumi.awsnative.rds.enums.DBProxyTargetGroupTargetGroupName;
 import io.pulumi.awsnative.rds.inputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
 
     public static final DBProxyTargetGroupArgs Empty = new DBProxyTargetGroupArgs();
 
-    @InputImport(name="connectionPoolConfigurationInfo")
+    @Import(name="connectionPoolConfigurationInfo")
       private final @Nullable Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
 
     public Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> getConnectionPoolConfigurationInfo() {
         return this.connectionPoolConfigurationInfo == null ? Output.empty() : this.connectionPoolConfigurationInfo;
     }
 
-    @InputImport(name="dBClusterIdentifiers")
+    @Import(name="dBClusterIdentifiers")
       private final @Nullable Output<List<String>> dBClusterIdentifiers;
 
     public Output<List<String>> getDBClusterIdentifiers() {
         return this.dBClusterIdentifiers == null ? Output.empty() : this.dBClusterIdentifiers;
     }
 
-    @InputImport(name="dBInstanceIdentifiers")
+    @Import(name="dBInstanceIdentifiers")
       private final @Nullable Output<List<String>> dBInstanceIdentifiers;
 
     public Output<List<String>> getDBInstanceIdentifiers() {
@@ -42,7 +42,7 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
      * The identifier for the proxy.
      * 
      */
-    @InputImport(name="dBProxyName", required=true)
+    @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
 
     public Output<String> getDBProxyName() {
@@ -53,7 +53,7 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
      * The identifier for the DBProxyTargetGroup
      * 
      */
-    @InputImport(name="targetGroupName", required=true)
+    @Import(name="targetGroupName", required=true)
       private final Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
     public Output<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {

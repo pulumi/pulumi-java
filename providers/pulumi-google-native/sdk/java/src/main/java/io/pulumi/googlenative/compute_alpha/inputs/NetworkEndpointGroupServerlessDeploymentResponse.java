@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * The platform of the backend target(s) of this NEG. Possible values include: 1. API Gateway: apigateway.googleapis.com 2. App Engine: appengine.googleapis.com 3. Cloud Functions: cloudfunctions.googleapis.com 4. Cloud Run: run.googleapis.com
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final String platform;
 
     public String getPlatform() {
@@ -31,7 +31,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * The user-defined name of the workload/instance. This value must be provided explicitly or in the urlMask. The resource identified by this value is platform-specific and is as follows: 1. API Gateway: The gateway ID 2. App Engine: The service name 3. Cloud Functions: The function name 4. Cloud Run: The service name
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final String resource;
 
     public String getResource() {
@@ -42,7 +42,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * A template to parse platform-specific fields from a request URL. URL mask allows for routing to multiple resources on the same serverless platform without having to create multiple Network Endpoint Groups and backend resources. The fields parsed by this template are platform-specific and are as follows: 1. API Gateway: The gateway ID 2. App Engine: The service and version 3. Cloud Functions: The function name 4. Cloud Run: The service and tag
      * 
      */
-    @InputImport(name="urlMask", required=true)
+    @Import(name="urlMask", required=true)
       private final String urlMask;
 
     public String getUrlMask() {
@@ -53,7 +53,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
      * The optional resource version. The version identified by this value is platform-specific and is follows: 1. API Gateway: Unused 2. App Engine: The service version 3. Cloud Functions: Unused 4. Cloud Run: The service tag
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

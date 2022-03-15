@@ -5,14 +5,14 @@ package io.pulumi.azurenative.healthcareapis.outputs;
 
 import io.pulumi.azurenative.healthcareapis.outputs.DicomServiceAuthenticationConfigurationResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDicomServiceResult {
     /**
      * Dicom Service authentication configuration.
@@ -65,18 +65,18 @@ public final class GetDicomServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDicomServiceResult(
-        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable DicomServiceAuthenticationConfigurationResponse authenticationConfiguration,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceUrl") String serviceUrl,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authenticationConfiguration") @Nullable DicomServiceAuthenticationConfigurationResponse authenticationConfiguration,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceUrl") String serviceUrl,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.etag = etag;
         this.id = id;

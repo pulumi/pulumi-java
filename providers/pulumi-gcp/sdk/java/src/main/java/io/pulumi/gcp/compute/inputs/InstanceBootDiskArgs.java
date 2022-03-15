@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceBootDiskInitializeParamsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * is deleted. Defaults to true.
      * 
      */
-    @InputImport(name="autoDelete")
+    @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
     public Output<Boolean> getAutoDelete() {
@@ -33,7 +33,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * under `/dev/disk/by-id/google-*`
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -47,14 +47,14 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
      * 
      */
-    @InputImport(name="diskEncryptionKeyRaw")
+    @Import(name="diskEncryptionKeyRaw")
       private final @Nullable Output<String> diskEncryptionKeyRaw;
 
     public Output<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Output.empty() : this.diskEncryptionKeyRaw;
     }
 
-    @InputImport(name="diskEncryptionKeySha256")
+    @Import(name="diskEncryptionKeySha256")
       private final @Nullable Output<String> diskEncryptionKeySha256;
 
     public Output<String> getDiskEncryptionKeySha256() {
@@ -67,7 +67,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="initializeParams")
+    @Import(name="initializeParams")
       private final @Nullable Output<InstanceBootDiskInitializeParamsArgs> initializeParams;
 
     public Output<InstanceBootDiskInitializeParamsArgs> getInitializeParams() {
@@ -80,7 +80,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * and `disk_encryption_key_raw` may be set.
      * 
      */
-    @InputImport(name="kmsKeySelfLink")
+    @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
     public Output<String> getKmsKeySelfLink() {
@@ -94,7 +94,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * attach it to one or more instances in read-only mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -105,7 +105,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
      * The name or self_link of the disk to attach to this instance.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {

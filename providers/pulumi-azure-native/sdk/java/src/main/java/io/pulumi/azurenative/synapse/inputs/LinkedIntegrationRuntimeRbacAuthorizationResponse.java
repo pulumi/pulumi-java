@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * Expected value is 'RBAC'.
      * 
      */
-    @InputImport(name="authorizationType", required=true)
+    @Import(name="authorizationType", required=true)
       private final String authorizationType;
 
     public String getAuthorizationType() {
@@ -32,7 +32,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends io.
      * The resource identifier of the integration runtime to be shared.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

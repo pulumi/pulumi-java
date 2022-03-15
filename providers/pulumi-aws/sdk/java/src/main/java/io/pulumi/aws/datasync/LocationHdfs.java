@@ -9,7 +9,7 @@ import io.pulumi.aws.datasync.inputs.LocationHdfsState;
 import io.pulumi.aws.datasync.outputs.LocationHdfsNameNode;
 import io.pulumi.aws.datasync.outputs.LocationHdfsQopConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @OutputExport(name="agentArns", type=List.class, parameters={String.class})
+    @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output<List<String>> agentArns;
 
     /**
@@ -53,7 +53,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The type of authentication used to determine the identity of the user. Valid values are `SIMPLE` and `KERBEROS`.
      * 
      */
-    @OutputExport(name="authenticationType", type=String.class, parameters={})
+    @Export(name="authenticationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authenticationType;
 
     /**
@@ -81,7 +81,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
      * 
      */
-    @OutputExport(name="blockSize", type=Integer.class, parameters={})
+    @Export(name="blockSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> blockSize;
 
     /**
@@ -95,7 +95,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @OutputExport(name="kerberosKeytab", type=String.class, parameters={})
+    @Export(name="kerberosKeytab", type=String.class, parameters={})
     private Output</* @Nullable */ String> kerberosKeytab;
 
     /**
@@ -109,7 +109,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @OutputExport(name="kerberosKrb5Conf", type=String.class, parameters={})
+    @Export(name="kerberosKrb5Conf", type=String.class, parameters={})
     private Output</* @Nullable */ String> kerberosKrb5Conf;
 
     /**
@@ -123,7 +123,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @OutputExport(name="kerberosPrincipal", type=String.class, parameters={})
+    @Export(name="kerberosPrincipal", type=String.class, parameters={})
     private Output</* @Nullable */ String> kerberosPrincipal;
 
     /**
@@ -137,7 +137,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The URI of the HDFS cluster's Key Management Server (KMS).
      * 
      */
-    @OutputExport(name="kmsKeyProviderUri", type=String.class, parameters={})
+    @Export(name="kmsKeyProviderUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyProviderUri;
 
     /**
@@ -151,7 +151,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
      * 
      */
-    @OutputExport(name="nameNodes", type=List.class, parameters={LocationHdfsNameNode.class})
+    @Export(name="nameNodes", type=List.class, parameters={LocationHdfsNameNode.class})
     private Output<List<LocationHdfsNameNode>> nameNodes;
 
     /**
@@ -165,7 +165,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn't specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
-    @OutputExport(name="qopConfiguration", type=LocationHdfsQopConfiguration.class, parameters={})
+    @Export(name="qopConfiguration", type=LocationHdfsQopConfiguration.class, parameters={})
     private Output</* @Nullable */ LocationHdfsQopConfiguration> qopConfiguration;
 
     /**
@@ -179,7 +179,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
      * 
      */
-    @OutputExport(name="replicationFactor", type=Integer.class, parameters={})
+    @Export(name="replicationFactor", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> replicationFactor;
 
     /**
@@ -193,7 +193,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @OutputExport(name="simpleUser", type=String.class, parameters={})
+    @Export(name="simpleUser", type=String.class, parameters={})
     private Output</* @Nullable */ String> simpleUser;
 
     /**
@@ -207,7 +207,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn't specified, it will default to /.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
@@ -221,7 +221,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -235,7 +235,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -245,7 +245,7 @@ public class LocationHdfs extends io.pulumi.resources.CustomResource {
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     public Output<String> getUri() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.enums.ScheduleStatus;
 import io.pulumi.azurenative.storsimple.inputs.ScheduleRecurrenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The backup policy name.
      * 
      */
-    @InputImport(name="backupPolicyName", required=true)
+    @Import(name="backupPolicyName", required=true)
       private final Output<String> backupPolicyName;
 
     public Output<String> getBackupPolicyName() {
@@ -34,7 +34,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The backup schedule name.
      * 
      */
-    @InputImport(name="backupScheduleName")
+    @Import(name="backupScheduleName")
       private final @Nullable Output<String> backupScheduleName;
 
     public Output<String> getBackupScheduleName() {
@@ -45,7 +45,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The type of backup which needs to be taken.
      * 
      */
-    @InputImport(name="backupType", required=true)
+    @Import(name="backupType", required=true)
       private final Output<BackupType> backupType;
 
     public Output<BackupType> getBackupType() {
@@ -56,7 +56,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The device name
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -67,7 +67,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -78,7 +78,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -89,7 +89,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The number of backups to be retained.
      * 
      */
-    @InputImport(name="retentionCount", required=true)
+    @Import(name="retentionCount", required=true)
       private final Output<Double> retentionCount;
 
     public Output<Double> getRetentionCount() {
@@ -111,7 +111,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The schedule recurrence.
      * 
      */
-    @InputImport(name="scheduleRecurrence", required=true)
+    @Import(name="scheduleRecurrence", required=true)
       private final Output<ScheduleRecurrenceArgs> scheduleRecurrence;
 
     public Output<ScheduleRecurrenceArgs> getScheduleRecurrence() {
@@ -122,7 +122,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The schedule status.
      * 
      */
-    @InputImport(name="scheduleStatus", required=true)
+    @Import(name="scheduleStatus", required=true)
       private final Output<ScheduleStatus> scheduleStatus;
 
     public Output<ScheduleStatus> getScheduleStatus() {
@@ -133,7 +133,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The start time of the schedule.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesRoleStorageClassInfoResponse {
     /**
      * Storage class name.
@@ -25,11 +25,11 @@ public final class KubernetesRoleStorageClassInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesRoleStorageClassInfoResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("posixCompliant") String posixCompliant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("posixCompliant") String posixCompliant,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.posixCompliant = posixCompliant;
         this.type = type;

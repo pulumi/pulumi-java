@@ -10,14 +10,14 @@ import io.pulumi.azurenative.healthcareapis.outputs.ServiceAuthenticationConfigu
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceCorsConfigurationInfoResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceCosmosDbConfigurationInfoResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceExportConfigurationInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicesPropertiesResponse {
     /**
      * The access policies of the service instance.
@@ -65,17 +65,17 @@ public final class ServicesPropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicesPropertiesResponse(
-        @OutputCustomType.Parameter("accessPolicies") @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
-        @OutputCustomType.Parameter("acrConfiguration") @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration,
-        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
-        @OutputCustomType.Parameter("corsConfiguration") @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
-        @OutputCustomType.Parameter("cosmosDbConfiguration") @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
-        @OutputCustomType.Parameter("exportConfiguration") @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
-        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
+        @CustomType.Parameter("accessPolicies") @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
+        @CustomType.Parameter("acrConfiguration") @Nullable ServiceAcrConfigurationInfoResponse acrConfiguration,
+        @CustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
+        @CustomType.Parameter("corsConfiguration") @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
+        @CustomType.Parameter("cosmosDbConfiguration") @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
+        @CustomType.Parameter("exportConfiguration") @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
+        @CustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.accessPolicies = accessPolicies;
         this.acrConfiguration = acrConfiguration;
         this.authenticationConfiguration = authenticationConfiguration;

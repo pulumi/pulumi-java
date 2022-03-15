@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.example.Resource;
 import io.pulumi.example.outputs.ConfigMap;
 import io.pulumi.example.outputs.SomeOtherObject;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Object {
     private final @Nullable String bar;
     private final @Nullable List<ConfigMap> configs;
@@ -30,13 +30,13 @@ public final class Object {
      */
     private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Object(
-        @OutputCustomType.Parameter("bar") @Nullable String bar,
-        @OutputCustomType.Parameter("configs") @Nullable List<ConfigMap> configs,
-        @OutputCustomType.Parameter("foo") @Nullable Resource foo,
-        @OutputCustomType.Parameter("others") @Nullable List<List<SomeOtherObject>> others,
-        @OutputCustomType.Parameter("stillOthers") @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
+        @CustomType.Parameter("bar") @Nullable String bar,
+        @CustomType.Parameter("configs") @Nullable List<ConfigMap> configs,
+        @CustomType.Parameter("foo") @Nullable Resource foo,
+        @CustomType.Parameter("others") @Nullable List<List<SomeOtherObject>> others,
+        @CustomType.Parameter("stillOthers") @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
         this.bar = bar;
         this.configs = configs;
         this.foo = foo;

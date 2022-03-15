@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
      * A list of IP addresses in the IP address set.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
@@ -30,7 +30,7 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
      * The type of IP addresses included in this IP set.
      * 
      */
-    @InputImport(name="ipFamily")
+    @Import(name="ipFamily")
       private final @Nullable Output<String> ipFamily;
 
     public Output<String> getIpFamily() {

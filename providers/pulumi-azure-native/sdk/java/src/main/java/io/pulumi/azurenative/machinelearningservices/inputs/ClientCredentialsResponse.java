@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The authority URL used for authentication.
      * 
      */
-    @InputImport(name="authorityUrl")
+    @Import(name="authorityUrl")
       private final @Nullable String authorityUrl;
 
     public Optional<String> getAuthorityUrl() {
@@ -30,7 +30,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The content of the certificate used for authentication.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable String certificate;
 
     public Optional<String> getCertificate() {
@@ -41,7 +41,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The Client ID/Application ID
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -52,7 +52,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The client secret.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
@@ -63,7 +63,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      *  Is it using certificate to authenticate. If false then use client secret.
      * 
      */
-    @InputImport(name="isCertAuth")
+    @Import(name="isCertAuth")
       private final @Nullable Boolean isCertAuth;
 
     public Optional<Boolean> getIsCertAuth() {
@@ -74,7 +74,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * Resource Group.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
@@ -85,7 +85,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The resource the service principal/app has access to.
      * 
      */
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
@@ -96,7 +96,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * Indicates which identity to use to authenticate service data access to customer's storage.
      * 
      */
-    @InputImport(name="serviceDataAccessAuthIdentity")
+    @Import(name="serviceDataAccessAuthIdentity")
       private final @Nullable String serviceDataAccessAuthIdentity;
 
     public Optional<String> getServiceDataAccessAuthIdentity() {
@@ -107,7 +107,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * Subscription ID.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
@@ -118,7 +118,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The ID of the tenant the service principal/app belongs to.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -129,7 +129,7 @@ public final class ClientCredentialsResponse extends io.pulumi.resources.InvokeA
      * The thumbprint of the certificate above.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

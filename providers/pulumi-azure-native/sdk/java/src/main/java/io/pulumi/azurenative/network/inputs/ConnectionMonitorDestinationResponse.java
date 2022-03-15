@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
      * Address of the connection monitor destination (IP or domain name).
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -34,7 +34,7 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
      * The destination port used by connection monitor.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -45,7 +45,7 @@ public final class ConnectionMonitorDestinationResponse extends io.pulumi.resour
      * The ID of the resource used as the destination by connection monitor.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

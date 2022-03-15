@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CopyOnExpiryOptionResponse {
     /**
      * Type of the specific object - used for deserializing
@@ -16,8 +16,8 @@ public final class CopyOnExpiryOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
-    private CopyOnExpiryOptionResponse(@OutputCustomType.Parameter("objectType") String objectType) {
+    @CustomType.Constructor
+    private CopyOnExpiryOptionResponse(@CustomType.Parameter("objectType") String objectType) {
         this.objectType = objectType;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.BackendResponse;
 import io.pulumi.googlenative.compute_v1.outputs.BackendServiceCdnPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.BackendServiceConnectionTrackingPolicyResponse;
@@ -23,7 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceResult {
     /**
      * Lifetime of cookies in seconds. This setting is applicable to external and internal HTTP(S) load balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is one day (86,400). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
@@ -184,42 +184,42 @@ public final class GetBackendServiceResult {
      */
     private final Integer timeoutSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceResult(
-        @OutputCustomType.Parameter("affinityCookieTtlSec") Integer affinityCookieTtlSec,
-        @OutputCustomType.Parameter("backends") List<BackendResponse> backends,
-        @OutputCustomType.Parameter("cdnPolicy") BackendServiceCdnPolicyResponse cdnPolicy,
-        @OutputCustomType.Parameter("circuitBreakers") CircuitBreakersResponse circuitBreakers,
-        @OutputCustomType.Parameter("connectionDraining") ConnectionDrainingResponse connectionDraining,
-        @OutputCustomType.Parameter("connectionTrackingPolicy") BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy,
-        @OutputCustomType.Parameter("consistentHash") ConsistentHashLoadBalancerSettingsResponse consistentHash,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customRequestHeaders") List<String> customRequestHeaders,
-        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
-        @OutputCustomType.Parameter("enableCDN") Boolean enableCDN,
-        @OutputCustomType.Parameter("failoverPolicy") BackendServiceFailoverPolicyResponse failoverPolicy,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
-        @OutputCustomType.Parameter("iap") BackendServiceIAPResponse iap,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
-        @OutputCustomType.Parameter("localityLbPolicy") String localityLbPolicy,
-        @OutputCustomType.Parameter("logConfig") BackendServiceLogConfigResponse logConfig,
-        @OutputCustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("outlierDetection") OutlierDetectionResponse outlierDetection,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
-        @OutputCustomType.Parameter("securitySettings") SecuritySettingsResponse securitySettings,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sessionAffinity") String sessionAffinity,
-        @OutputCustomType.Parameter("subsetting") SubsettingResponse subsetting,
-        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec) {
+        @CustomType.Parameter("affinityCookieTtlSec") Integer affinityCookieTtlSec,
+        @CustomType.Parameter("backends") List<BackendResponse> backends,
+        @CustomType.Parameter("cdnPolicy") BackendServiceCdnPolicyResponse cdnPolicy,
+        @CustomType.Parameter("circuitBreakers") CircuitBreakersResponse circuitBreakers,
+        @CustomType.Parameter("connectionDraining") ConnectionDrainingResponse connectionDraining,
+        @CustomType.Parameter("connectionTrackingPolicy") BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy,
+        @CustomType.Parameter("consistentHash") ConsistentHashLoadBalancerSettingsResponse consistentHash,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customRequestHeaders") List<String> customRequestHeaders,
+        @CustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
+        @CustomType.Parameter("enableCDN") Boolean enableCDN,
+        @CustomType.Parameter("failoverPolicy") BackendServiceFailoverPolicyResponse failoverPolicy,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("healthChecks") List<String> healthChecks,
+        @CustomType.Parameter("iap") BackendServiceIAPResponse iap,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @CustomType.Parameter("localityLbPolicy") String localityLbPolicy,
+        @CustomType.Parameter("logConfig") BackendServiceLogConfigResponse logConfig,
+        @CustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("outlierDetection") OutlierDetectionResponse outlierDetection,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("securityPolicy") String securityPolicy,
+        @CustomType.Parameter("securitySettings") SecuritySettingsResponse securitySettings,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sessionAffinity") String sessionAffinity,
+        @CustomType.Parameter("subsetting") SubsettingResponse subsetting,
+        @CustomType.Parameter("timeoutSec") Integer timeoutSec) {
         this.affinityCookieTtlSec = affinityCookieTtlSec;
         this.backends = backends;
         this.cdnPolicy = cdnPolicy;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.ConnectionArgs;
 import io.pulumi.azurenative.automation.outputs.ConnectionTypeAssociationPropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Gets or sets the connectionType of the connection.
      * 
      */
-    @OutputExport(name="connectionType", type=ConnectionTypeAssociationPropertyResponse.class, parameters={})
+    @Export(name="connectionType", type=ConnectionTypeAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionTypeAssociationPropertyResponse> connectionType;
 
     /**
@@ -50,7 +50,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Gets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -64,7 +64,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -78,7 +78,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Gets the field definition values of the connection.
      * 
      */
-    @OutputExport(name="fieldDefinitionValues", type=Map.class, parameters={String.class, String.class})
+    @Export(name="fieldDefinitionValues", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> fieldDefinitionValues;
 
     /**
@@ -92,7 +92,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Gets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -106,7 +106,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

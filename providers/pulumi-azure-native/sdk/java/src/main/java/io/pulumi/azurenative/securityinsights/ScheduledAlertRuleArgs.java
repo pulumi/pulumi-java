@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.AttackTactic;
 import io.pulumi.azurenative.securityinsights.enums.TriggerOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The Name of the alert rule template used to create this rule.
      * 
      */
-    @InputImport(name="alertRuleTemplateName")
+    @Import(name="alertRuleTemplateName")
       private final @Nullable Output<String> alertRuleTemplateName;
 
     public Output<String> getAlertRuleTemplateName() {
@@ -36,7 +36,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The description of the alert rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The display name for alerts created by this alert rule.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -58,7 +58,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * Determines whether this alert rule is enabled or disabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -70,7 +70,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'Scheduled'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -81,7 +81,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The query that creates alerts for this rule.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -92,7 +92,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The frequency (in ISO 8601 duration format) for this alert rule to run.
      * 
      */
-    @InputImport(name="queryFrequency", required=true)
+    @Import(name="queryFrequency", required=true)
       private final Output<String> queryFrequency;
 
     public Output<String> getQueryFrequency() {
@@ -103,7 +103,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The period (in ISO 8601 duration format) that this alert rule looks at.
      * 
      */
-    @InputImport(name="queryPeriod", required=true)
+    @Import(name="queryPeriod", required=true)
       private final Output<String> queryPeriod;
 
     public Output<String> getQueryPeriod() {
@@ -114,7 +114,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -125,7 +125,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * Alert rule ID
      * 
      */
-    @InputImport(name="ruleId")
+    @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -136,7 +136,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The severity for alerts created by this alert rule.
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final Output<Either<String,AlertSeverity>> severity;
 
     public Output<Either<String,AlertSeverity>> getSeverity() {
@@ -147,7 +147,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
      * 
      */
-    @InputImport(name="suppressionDuration", required=true)
+    @Import(name="suppressionDuration", required=true)
       private final Output<String> suppressionDuration;
 
     public Output<String> getSuppressionDuration() {
@@ -158,7 +158,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * Determines whether the suppression for this alert rule is enabled or disabled.
      * 
      */
-    @InputImport(name="suppressionEnabled", required=true)
+    @Import(name="suppressionEnabled", required=true)
       private final Output<Boolean> suppressionEnabled;
 
     public Output<Boolean> getSuppressionEnabled() {
@@ -169,7 +169,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The tactics of the alert rule
      * 
      */
-    @InputImport(name="tactics")
+    @Import(name="tactics")
       private final @Nullable Output<List<Either<String,AttackTactic>>> tactics;
 
     public Output<List<Either<String,AttackTactic>>> getTactics() {
@@ -180,7 +180,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The operation against the threshold that triggers alert rule.
      * 
      */
-    @InputImport(name="triggerOperator", required=true)
+    @Import(name="triggerOperator", required=true)
       private final Output<TriggerOperator> triggerOperator;
 
     public Output<TriggerOperator> getTriggerOperator() {
@@ -191,7 +191,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The threshold triggers this alert rule.
      * 
      */
-    @InputImport(name="triggerThreshold", required=true)
+    @Import(name="triggerThreshold", required=true)
       private final Output<Integer> triggerThreshold;
 
     public Output<Integer> getTriggerThreshold() {
@@ -202,7 +202,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

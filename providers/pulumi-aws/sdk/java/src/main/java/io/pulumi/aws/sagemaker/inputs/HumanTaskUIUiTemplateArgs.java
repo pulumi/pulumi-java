@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
      * The content of the Liquid template for the worker user interface.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -29,7 +29,7 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
      * The SHA-256 digest of the contents of the template.
      * 
      */
-    @InputImport(name="contentSha256")
+    @Import(name="contentSha256")
       private final @Nullable Output<String> contentSha256;
 
     public Output<String> getContentSha256() {
@@ -40,7 +40,7 @@ public final class HumanTaskUIUiTemplateArgs extends io.pulumi.resources.Resourc
      * The URL for the user interface template.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

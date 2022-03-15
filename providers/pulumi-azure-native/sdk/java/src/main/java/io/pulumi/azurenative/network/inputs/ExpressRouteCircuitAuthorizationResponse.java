@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * The authorization key.
      * 
      */
-    @InputImport(name="authorizationKey")
+    @Import(name="authorizationKey")
       private final @Nullable String authorizationKey;
 
     public Optional<String> getAuthorizationKey() {
@@ -33,7 +33,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * The authorization use status.
      * 
      */
-    @InputImport(name="authorizationUseStatus")
+    @Import(name="authorizationUseStatus")
       private final @Nullable String authorizationUseStatus;
 
     public Optional<String> getAuthorizationUseStatus() {
@@ -44,7 +44,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -55,7 +55,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -66,7 +66,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -77,7 +77,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * The provisioning state of the authorization resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -88,7 +88,7 @@ public final class ExpressRouteCircuitAuthorizationResponse extends io.pulumi.re
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

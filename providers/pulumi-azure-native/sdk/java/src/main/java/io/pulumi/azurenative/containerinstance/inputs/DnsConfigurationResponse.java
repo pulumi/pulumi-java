@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The DNS servers for the container group.
      * 
      */
-    @InputImport(name="nameServers", required=true)
+    @Import(name="nameServers", required=true)
       private final List<String> nameServers;
 
     public List<String> getNameServers() {
@@ -34,7 +34,7 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The DNS options for the container group.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable String options;
 
     public Optional<String> getOptions() {
@@ -45,7 +45,7 @@ public final class DnsConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The DNS search domains for hostname lookup in the container group.
      * 
      */
-    @InputImport(name="searchDomains")
+    @Import(name="searchDomains")
       private final @Nullable String searchDomains;
 
     public Optional<String> getSearchDomains() {

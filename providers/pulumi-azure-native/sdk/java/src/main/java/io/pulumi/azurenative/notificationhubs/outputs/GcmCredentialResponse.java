@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GcmCredentialResponse {
     /**
      * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
@@ -22,10 +22,10 @@ public final class GcmCredentialResponse {
      */
     private final @Nullable String googleApiKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GcmCredentialResponse(
-        @OutputCustomType.Parameter("gcmEndpoint") @Nullable String gcmEndpoint,
-        @OutputCustomType.Parameter("googleApiKey") @Nullable String googleApiKey) {
+        @CustomType.Parameter("gcmEndpoint") @Nullable String gcmEndpoint,
+        @CustomType.Parameter("googleApiKey") @Nullable String googleApiKey) {
         this.gcmEndpoint = gcmEndpoint;
         this.googleApiKey = googleApiKey;
     }

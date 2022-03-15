@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TrustedExternalTenantResponse extends io.pulumi.resources.Inv
      * GUID representing an external tenant.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

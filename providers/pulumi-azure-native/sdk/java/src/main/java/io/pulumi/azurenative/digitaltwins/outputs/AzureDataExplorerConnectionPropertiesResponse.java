@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDataExplorerConnectionPropertiesResponse {
     /**
      * The name of the Azure Data Explorer database.
@@ -63,18 +63,18 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDataExplorerConnectionPropertiesResponse(
-        @OutputCustomType.Parameter("adxDatabaseName") String adxDatabaseName,
-        @OutputCustomType.Parameter("adxEndpointUri") String adxEndpointUri,
-        @OutputCustomType.Parameter("adxResourceId") String adxResourceId,
-        @OutputCustomType.Parameter("adxTableName") @Nullable String adxTableName,
-        @OutputCustomType.Parameter("connectionType") String connectionType,
-        @OutputCustomType.Parameter("eventHubConsumerGroup") @Nullable String eventHubConsumerGroup,
-        @OutputCustomType.Parameter("eventHubEndpointUri") String eventHubEndpointUri,
-        @OutputCustomType.Parameter("eventHubEntityPath") String eventHubEntityPath,
-        @OutputCustomType.Parameter("eventHubNamespaceResourceId") String eventHubNamespaceResourceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("adxDatabaseName") String adxDatabaseName,
+        @CustomType.Parameter("adxEndpointUri") String adxEndpointUri,
+        @CustomType.Parameter("adxResourceId") String adxResourceId,
+        @CustomType.Parameter("adxTableName") @Nullable String adxTableName,
+        @CustomType.Parameter("connectionType") String connectionType,
+        @CustomType.Parameter("eventHubConsumerGroup") @Nullable String eventHubConsumerGroup,
+        @CustomType.Parameter("eventHubEndpointUri") String eventHubEndpointUri,
+        @CustomType.Parameter("eventHubEntityPath") String eventHubEntityPath,
+        @CustomType.Parameter("eventHubNamespaceResourceId") String eventHubNamespaceResourceId,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.adxDatabaseName = adxDatabaseName;
         this.adxEndpointUri = adxEndpointUri;
         this.adxResourceId = adxResourceId;

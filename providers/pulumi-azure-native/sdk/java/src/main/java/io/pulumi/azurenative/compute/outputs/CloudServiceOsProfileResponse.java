@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceVaultSecretGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceOsProfileResponse {
     /**
      * Specifies set of certificates that should be installed onto the role instances.
@@ -17,8 +17,8 @@ public final class CloudServiceOsProfileResponse {
      */
     private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
-    @OutputCustomType.Constructor
-    private CloudServiceOsProfileResponse(@OutputCustomType.Parameter("secrets") @Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
+    @CustomType.Constructor
+    private CloudServiceOsProfileResponse(@CustomType.Parameter("secrets") @Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
         this.secrets = secrets;
     }
 

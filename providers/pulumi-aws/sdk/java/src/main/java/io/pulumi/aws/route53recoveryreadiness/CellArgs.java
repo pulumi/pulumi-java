@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name describing the cell.
      * 
      */
-    @InputImport(name="cellName", required=true)
+    @Import(name="cellName", required=true)
       private final Output<String> cellName;
 
     public Output<String> getCellName() {
@@ -31,7 +31,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * List of cell arns to add as nested fault domains within this cell.
      * 
      */
-    @InputImport(name="cells")
+    @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
     public Output<List<String>> getCells() {
@@ -42,7 +42,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

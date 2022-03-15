@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectionConfirmationArgs extends io.pulumi.resources.Resour
      * The ID of the hosted connection.
      * 
      */
-    @InputImport(name="connectionId", required=true)
+    @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
     public Output<String> getConnectionId() {

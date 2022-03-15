@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionSourceRepository {
     private final @Nullable String deployedUrl;
     /**
@@ -18,10 +18,10 @@ public final class FunctionSourceRepository {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionSourceRepository(
-        @OutputCustomType.Parameter("deployedUrl") @Nullable String deployedUrl,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("deployedUrl") @Nullable String deployedUrl,
+        @CustomType.Parameter("url") String url) {
         this.deployedUrl = deployedUrl;
         this.url = url;
     }

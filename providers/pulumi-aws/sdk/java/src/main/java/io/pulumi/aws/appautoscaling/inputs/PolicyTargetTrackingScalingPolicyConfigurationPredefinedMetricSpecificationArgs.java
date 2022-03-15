@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
      * The metric type.
      * 
      */
-    @InputImport(name="predefinedMetricType", required=true)
+    @Import(name="predefinedMetricType", required=true)
       private final Output<String> predefinedMetricType;
 
     public Output<String> getPredefinedMetricType() {
@@ -29,7 +29,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
      * Reserved for future use. Must be less than or equal to 1023 characters in length.
      * 
      */
-    @InputImport(name="resourceLabel")
+    @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
     public Output<String> getResourceLabel() {

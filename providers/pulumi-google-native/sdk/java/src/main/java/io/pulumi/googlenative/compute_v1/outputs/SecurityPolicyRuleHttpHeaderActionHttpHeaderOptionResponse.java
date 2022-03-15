@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
     /**
      * The name of the header to set.
@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
      */
     private final String headerValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("headerValue") String headerValue) {
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("headerValue") String headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }

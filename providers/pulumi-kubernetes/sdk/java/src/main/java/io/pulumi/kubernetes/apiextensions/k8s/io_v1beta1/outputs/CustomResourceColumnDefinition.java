@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceColumnDefinition {
     /**
      * JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.
@@ -43,14 +43,14 @@ public final class CustomResourceColumnDefinition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceColumnDefinition(
-        @OutputCustomType.Parameter("JSONPath") String JSONPath,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("JSONPath") String JSONPath,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("type") String type) {
         this.JSONPath = JSONPath;
         this.description = description;
         this.format = format;

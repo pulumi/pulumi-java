@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterAddonsConfigHttpLoadBalancing {
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor
-    private GetClusterAddonsConfigHttpLoadBalancing(@OutputCustomType.Parameter("disabled") Boolean disabled) {
+    @CustomType.Constructor
+    private GetClusterAddonsConfigHttpLoadBalancing(@CustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

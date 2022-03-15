@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.LineRegistrationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LineChannelPropertiesResponse {
     /**
      * Callback Url to enter in line registration.
@@ -28,11 +28,11 @@ public final class LineChannelPropertiesResponse {
      */
     private final List<LineRegistrationResponse> lineRegistrations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LineChannelPropertiesResponse(
-        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
-        @OutputCustomType.Parameter("isValidated") Boolean isValidated,
-        @OutputCustomType.Parameter("lineRegistrations") List<LineRegistrationResponse> lineRegistrations) {
+        @CustomType.Parameter("callbackUrl") String callbackUrl,
+        @CustomType.Parameter("isValidated") Boolean isValidated,
+        @CustomType.Parameter("lineRegistrations") List<LineRegistrationResponse> lineRegistrations) {
         this.callbackUrl = callbackUrl;
         this.isValidated = isValidated;
         this.lineRegistrations = lineRegistrations;

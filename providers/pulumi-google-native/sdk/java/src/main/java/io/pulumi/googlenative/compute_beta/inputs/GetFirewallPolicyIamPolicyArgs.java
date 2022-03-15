@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetFirewallPolicyIamPolicyArgs extends io.pulumi.resources.In
 
     public static final GetFirewallPolicyIamPolicyArgs Empty = new GetFirewallPolicyIamPolicyArgs();
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final String resource;
 
     public String getResource() {

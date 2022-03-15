@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the SES template
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * The HTML body of the email. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    @InputImport(name="html")
+    @Import(name="html")
       private final @Nullable Output<String> html;
 
     public Output<String> getHtml() {
@@ -40,7 +40,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * The name of the template. Cannot exceed 64 characters. You will refer to this name when you send email.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * The subject line of the email.
      * 
      */
-    @InputImport(name="subject")
+    @Import(name="subject")
       private final @Nullable Output<String> subject;
 
     public Output<String> getSubject() {
@@ -62,7 +62,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
      * The email body that will be visible to recipients whose email clients do not display HTML. Must be less than 500KB in size, including both the text and HTML parts.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {

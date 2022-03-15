@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class SkuSettingResponseCapacity extends io.pulumi.resources.Invoke
 
     public static final SkuSettingResponseCapacity Empty = new SkuSettingResponseCapacity();
 
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Integer $default;
 
     public Optional<Integer> get$default() {
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
     }
 
-    @InputImport(name="maximum")
+    @Import(name="maximum")
       private final @Nullable Integer maximum;
 
     public Optional<Integer> getMaximum() {
         return this.maximum == null ? Optional.empty() : Optional.ofNullable(this.maximum);
     }
 
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final Integer minimum;
 
     public Integer getMinimum() {
         return this.minimum;
     }
 
-    @InputImport(name="scaleType")
+    @Import(name="scaleType")
       private final @Nullable String scaleType;
 
     public Optional<String> getScaleType() {

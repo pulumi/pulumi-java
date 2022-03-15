@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * The short label for the status.
      * 
      */
-    @InputImport(name="displayStatus", required=true)
+    @Import(name="displayStatus", required=true)
       private final String displayStatus;
 
     public String getDisplayStatus() {
@@ -31,7 +31,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * The detailed message for the status, including alerts and error messages.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -42,7 +42,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp when the status was changed to the current value.
      * 
      */
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final String timestamp;
 
     public String getTimestamp() {

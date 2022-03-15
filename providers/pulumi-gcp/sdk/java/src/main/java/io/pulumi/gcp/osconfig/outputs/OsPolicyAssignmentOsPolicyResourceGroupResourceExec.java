@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
     /**
      * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExec(
-        @OutputCustomType.Parameter("enforce") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
-        @OutputCustomType.Parameter("validate") OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
+        @CustomType.Parameter("enforce") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
+        @CustomType.Parameter("validate") OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
         this.enforce = enforce;
         this.validate = validate;
     }

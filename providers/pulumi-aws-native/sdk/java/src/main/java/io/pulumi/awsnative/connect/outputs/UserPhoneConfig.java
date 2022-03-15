@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,19 +12,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPhoneConfig {
     private final @Nullable Integer afterContactWorkTimeLimit;
     private final @Nullable Boolean autoAccept;
     private final @Nullable String deskPhoneNumber;
     private final UserPhoneType phoneType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPhoneConfig(
-        @OutputCustomType.Parameter("afterContactWorkTimeLimit") @Nullable Integer afterContactWorkTimeLimit,
-        @OutputCustomType.Parameter("autoAccept") @Nullable Boolean autoAccept,
-        @OutputCustomType.Parameter("deskPhoneNumber") @Nullable String deskPhoneNumber,
-        @OutputCustomType.Parameter("phoneType") UserPhoneType phoneType) {
+        @CustomType.Parameter("afterContactWorkTimeLimit") @Nullable Integer afterContactWorkTimeLimit,
+        @CustomType.Parameter("autoAccept") @Nullable Boolean autoAccept,
+        @CustomType.Parameter("deskPhoneNumber") @Nullable String deskPhoneNumber,
+        @CustomType.Parameter("phoneType") UserPhoneType phoneType) {
         this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
         this.autoAccept = autoAccept;
         this.deskPhoneNumber = deskPhoneNumber;

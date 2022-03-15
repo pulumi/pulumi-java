@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PartnerRegionInfoResponse {
     /**
      * Geo location of the partner managed instances.
@@ -22,10 +22,10 @@ public final class PartnerRegionInfoResponse {
      */
     private final String replicationRole;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartnerRegionInfoResponse(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("replicationRole") String replicationRole) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("replicationRole") String replicationRole) {
         this.location = location;
         this.replicationRole = replicationRole;
     }

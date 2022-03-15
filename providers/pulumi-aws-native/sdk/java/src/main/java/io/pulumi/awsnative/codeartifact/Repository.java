@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.codeartifact.RepositoryArgs;
 import io.pulumi.awsnative.codeartifact.outputs.RepositoryTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The ARN of the repository.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * A text description of the repository.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the domain that contains the repository.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -66,7 +66,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The 12-digit account ID of the AWS account that owns the domain.
      * 
      */
-    @OutputExport(name="domainOwner", type=String.class, parameters={})
+    @Export(name="domainOwner", type=String.class, parameters={})
     private Output<String> domainOwner;
 
     /**
@@ -80,7 +80,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * A list of external connections associated with the repository.
      * 
      */
-    @OutputExport(name="externalConnections", type=List.class, parameters={String.class})
+    @Export(name="externalConnections", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> externalConnections;
 
     /**
@@ -94,7 +94,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the repository. This is used for GetAtt
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The access control resource policy on the provided repository.
      * 
      */
-    @OutputExport(name="permissionsPolicyDocument", type=Object.class, parameters={})
+    @Export(name="permissionsPolicyDocument", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> permissionsPolicyDocument;
 
     /**
@@ -122,7 +122,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the repository.
      * 
      */
-    @OutputExport(name="repositoryName", type=String.class, parameters={})
+    @Export(name="repositoryName", type=String.class, parameters={})
     private Output<String> repositoryName;
 
     /**
@@ -136,7 +136,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RepositoryTag.class})
+    @Export(name="tags", type=List.class, parameters={RepositoryTag.class})
     private Output</* @Nullable */ List<RepositoryTag>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * A list of upstream repositories associated with the repository.
      * 
      */
-    @OutputExport(name="upstreams", type=List.class, parameters={String.class})
+    @Export(name="upstreams", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> upstreams;
 
     /**

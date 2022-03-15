@@ -5,13 +5,13 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.BackupSetInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
     /**
      * Backup sets that are currently active (Either being uploaded or getting restored)
@@ -80,21 +80,21 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
      */
     private final String startedOn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(
-        @OutputCustomType.Parameter("activeBackupSets") List<BackupSetInfoResponse> activeBackupSets,
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
-        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
-        @OutputCustomType.Parameter("fullBackupSetInfo") BackupSetInfoResponse fullBackupSetInfo,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isFullBackupRestored") Boolean isFullBackupRestored,
-        @OutputCustomType.Parameter("lastRestoredBackupSetInfo") BackupSetInfoResponse lastRestoredBackupSetInfo,
-        @OutputCustomType.Parameter("migrationState") String migrationState,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
-        @OutputCustomType.Parameter("startedOn") String startedOn) {
+        @CustomType.Parameter("activeBackupSets") List<BackupSetInfoResponse> activeBackupSets,
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("errorPrefix") String errorPrefix,
+        @CustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @CustomType.Parameter("fullBackupSetInfo") BackupSetInfoResponse fullBackupSetInfo,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isFullBackupRestored") Boolean isFullBackupRestored,
+        @CustomType.Parameter("lastRestoredBackupSetInfo") BackupSetInfoResponse lastRestoredBackupSetInfo,
+        @CustomType.Parameter("migrationState") String migrationState,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @CustomType.Parameter("startedOn") String startedOn) {
         this.activeBackupSets = activeBackupSets;
         this.containerName = containerName;
         this.endedOn = endedOn;

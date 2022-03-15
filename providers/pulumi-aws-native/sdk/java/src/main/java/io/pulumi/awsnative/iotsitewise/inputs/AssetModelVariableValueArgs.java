@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class AssetModelVariableValueArgs extends io.pulumi.resources.Resou
 
     public static final AssetModelVariableValueArgs Empty = new AssetModelVariableValueArgs();
 
-    @InputImport(name="hierarchyLogicalId")
+    @Import(name="hierarchyLogicalId")
       private final @Nullable Output<String> hierarchyLogicalId;
 
     public Output<String> getHierarchyLogicalId() {
         return this.hierarchyLogicalId == null ? Output.empty() : this.hierarchyLogicalId;
     }
 
-    @InputImport(name="propertyLogicalId", required=true)
+    @Import(name="propertyLogicalId", required=true)
       private final Output<String> propertyLogicalId;
 
     public Output<String> getPropertyLogicalId() {

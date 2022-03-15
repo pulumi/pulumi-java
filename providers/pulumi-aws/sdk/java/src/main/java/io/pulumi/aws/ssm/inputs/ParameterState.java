@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * A regular expression used to validate the parameter value.
      * 
      */
-    @InputImport(name="allowedPattern")
+    @Import(name="allowedPattern")
       private final @Nullable Output<String> allowedPattern;
 
     public Output<String> getAllowedPattern() {
@@ -34,7 +34,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the parameter.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -46,7 +46,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
@@ -57,7 +57,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The description of the parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -68,7 +68,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The KMS key id or arn for encrypting a SecureString.
      * 
      */
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -79,7 +79,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The name of the parameter. If the name contains a path (e.g., any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
      * 
      */
-    @InputImport(name="overwrite")
+    @Import(name="overwrite")
       private final @Nullable Output<Boolean> overwrite;
 
     public Output<Boolean> getOverwrite() {
@@ -101,7 +101,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -112,7 +112,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -123,7 +123,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard`, `Advanced`, and `Intelligent-Tiering`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -134,7 +134,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> getType() {
@@ -145,7 +145,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The value of the parameter.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -156,7 +156,7 @@ public final class ParameterState extends io.pulumi.resources.ResourceArgs {
      * The version of the parameter.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

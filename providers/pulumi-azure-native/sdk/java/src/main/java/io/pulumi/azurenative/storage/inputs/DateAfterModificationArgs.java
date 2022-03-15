@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
      * Value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy
      * 
      */
-    @InputImport(name="daysAfterLastAccessTimeGreaterThan")
+    @Import(name="daysAfterLastAccessTimeGreaterThan")
       private final @Nullable Output<Double> daysAfterLastAccessTimeGreaterThan;
 
     public Output<Double> getDaysAfterLastAccessTimeGreaterThan() {
@@ -33,7 +33,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
      * Value indicating the age in days after last modification
      * 
      */
-    @InputImport(name="daysAfterModificationGreaterThan")
+    @Import(name="daysAfterModificationGreaterThan")
       private final @Nullable Output<Double> daysAfterModificationGreaterThan;
 
     public Output<Double> getDaysAfterModificationGreaterThan() {

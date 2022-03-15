@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
     /**
      * The criteria for determining a SAN's match.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
      */
     private final VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames(@OutputCustomType.Parameter("match") VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
+    @CustomType.Constructor
+    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames(@CustomType.Parameter("match") VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
         this.match = match;
     }
 

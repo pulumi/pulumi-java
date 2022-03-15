@@ -11,7 +11,7 @@ import io.pulumi.awsnative.kendra.inputs.IndexServerSideEncryptionConfigurationA
 import io.pulumi.awsnative.kendra.inputs.IndexTagArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexUserTokenConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Capacity units
      * 
      */
-    @InputImport(name="capacityUnits")
+    @Import(name="capacityUnits")
       private final @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
     public Output<IndexCapacityUnitsConfigurationArgs> getCapacityUnits() {
@@ -37,7 +37,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the index
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,28 +48,28 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Document metadata configurations
      * 
      */
-    @InputImport(name="documentMetadataConfigurations")
+    @Import(name="documentMetadataConfigurations")
       private final @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
     public Output<List<IndexDocumentMetadataConfigurationArgs>> getDocumentMetadataConfigurations() {
         return this.documentMetadataConfigurations == null ? Output.empty() : this.documentMetadataConfigurations;
     }
 
-    @InputImport(name="edition", required=true)
+    @Import(name="edition", required=true)
       private final Output<IndexEdition> edition;
 
     public Output<IndexEdition> getEdition() {
         return this.edition;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -80,7 +80,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Server side encryption configuration
      * 
      */
-    @InputImport(name="serverSideEncryptionConfiguration")
+    @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     public Output<IndexServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
@@ -91,21 +91,21 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Tags for labeling the index
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<IndexTagArgs>> tags;
 
     public Output<List<IndexTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="userContextPolicy")
+    @Import(name="userContextPolicy")
       private final @Nullable Output<IndexUserContextPolicy> userContextPolicy;
 
     public Output<IndexUserContextPolicy> getUserContextPolicy() {
         return this.userContextPolicy == null ? Output.empty() : this.userContextPolicy;
     }
 
-    @InputImport(name="userTokenConfigurations")
+    @Import(name="userTokenConfigurations")
       private final @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
 
     public Output<List<IndexUserTokenConfigurationArgs>> getUserTokenConfigurations() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMemcacheNode {
     private final @Nullable String host;
     private final @Nullable String nodeId;
@@ -18,13 +18,13 @@ public final class InstanceMemcacheNode {
     private final @Nullable String state;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMemcacheNode(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("nodeId") @Nullable String nodeId,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("nodeId") @Nullable String nodeId,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.host = host;
         this.nodeId = nodeId;
         this.port = port;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanonicalProfileDefinitionResponseProperties {
     /**
      * Profile name.
@@ -38,13 +38,13 @@ public final class CanonicalProfileDefinitionResponseProperties {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanonicalProfileDefinitionResponseProperties(
-        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
-        @OutputCustomType.Parameter("profilePropertyName") @Nullable String profilePropertyName,
-        @OutputCustomType.Parameter("rank") @Nullable Integer rank,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("profileName") @Nullable String profileName,
+        @CustomType.Parameter("profilePropertyName") @Nullable String profilePropertyName,
+        @CustomType.Parameter("rank") @Nullable Integer rank,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.profileName = profileName;
         this.profilePropertyName = profilePropertyName;
         this.rank = rank;

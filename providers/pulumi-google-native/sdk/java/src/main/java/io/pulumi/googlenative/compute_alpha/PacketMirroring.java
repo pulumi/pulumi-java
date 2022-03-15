@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.PacketMirroringArgs;
@@ -26,7 +26,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
      * 
      */
-    @OutputExport(name="collectorIlb", type=PacketMirroringForwardingRuleInfoResponse.class, parameters={})
+    @Export(name="collectorIlb", type=PacketMirroringForwardingRuleInfoResponse.class, parameters={})
     private Output<PacketMirroringForwardingRuleInfoResponse> collectorIlb;
 
     /**
@@ -40,7 +40,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -54,7 +54,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -68,7 +68,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
      * 
      */
-    @OutputExport(name="enable", type=String.class, parameters={})
+    @Export(name="enable", type=String.class, parameters={})
     private Output<String> enable;
 
     /**
@@ -82,7 +82,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Filter for mirrored traffic. If unspecified, all traffic is mirrored.
      * 
      */
-    @OutputExport(name="filter", type=PacketMirroringFilterResponse.class, parameters={})
+    @Export(name="filter", type=PacketMirroringFilterResponse.class, parameters={})
     private Output<PacketMirroringFilterResponse> filter;
 
     /**
@@ -96,7 +96,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#packetMirroring for packet mirrorings.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -110,7 +110,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
      * 
      */
-    @OutputExport(name="mirroredResources", type=PacketMirroringMirroredResourceInfoResponse.class, parameters={})
+    @Export(name="mirroredResources", type=PacketMirroringMirroredResourceInfoResponse.class, parameters={})
     private Output<PacketMirroringMirroredResourceInfoResponse> mirroredResources;
 
     /**
@@ -124,7 +124,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
      * 
      */
-    @OutputExport(name="network", type=PacketMirroringNetworkInfoResponse.class, parameters={})
+    @Export(name="network", type=PacketMirroringNetworkInfoResponse.class, parameters={})
     private Output<PacketMirroringNetworkInfoResponse> network;
 
     /**
@@ -152,7 +152,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -166,7 +166,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * URI of the region where the packetMirroring resides.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -180,7 +180,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -194,7 +194,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**

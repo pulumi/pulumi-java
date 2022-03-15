@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
      * The list of custom BGP peering addresses which belong to IP configuration.
      * 
      */
-    @InputImport(name="customBgpIpAddresses")
+    @Import(name="customBgpIpAddresses")
       private final @Nullable Output<List<String>> customBgpIpAddresses;
 
     public Output<List<String>> getCustomBgpIpAddresses() {
@@ -34,7 +34,7 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
      * The ID of IP configuration which belongs to gateway.
      * 
      */
-    @InputImport(name="ipconfigurationId")
+    @Import(name="ipconfigurationId")
       private final @Nullable Output<String> ipconfigurationId;
 
     public Output<String> getIpconfigurationId() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
      * 
      */
-    @InputImport(name="endsWiths")
+    @Import(name="endsWiths")
       private final @Nullable Output<List<String>> endsWiths;
 
     public Output<List<String>> getEndsWiths() {
@@ -30,7 +30,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * A list of values that includes events that match the exact value of the event record field specified as the value of `field`. This is the only valid operator that you can use with the `readOnly`, `eventCategory`, and `resources.type` fields.
      * 
      */
-    @InputImport(name="equals")
+    @Import(name="equals")
       private final @Nullable Output<List<String>> equals;
 
     public Output<List<String>> getEquals() {
@@ -41,7 +41,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * Specifies a field in an event record on which to filter events to be logged. You can specify only the following values: `readOnly`, `eventSource`, `eventName`, `eventCategory`, `resources.type`, `resources.ARN`.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final Output<String> field;
 
     public Output<String> getField() {
@@ -52,7 +52,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * A list of values that excludes events that match the last few characters of the event record field specified as the value of `field`.
      * 
      */
-    @InputImport(name="notEndsWiths")
+    @Import(name="notEndsWiths")
       private final @Nullable Output<List<String>> notEndsWiths;
 
     public Output<List<String>> getNotEndsWiths() {
@@ -63,7 +63,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * A list of values that excludes events that match the exact value of the event record field specified as the value of `field`.
      * 
      */
-    @InputImport(name="notEquals")
+    @Import(name="notEquals")
       private final @Nullable Output<List<String>> notEquals;
 
     public Output<List<String>> getNotEquals() {
@@ -74,7 +74,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * A list of values that excludes events that match the first few characters of the event record field specified as the value of `field`.
      * 
      */
-    @InputImport(name="notStartsWiths")
+    @Import(name="notStartsWiths")
       private final @Nullable Output<List<String>> notStartsWiths;
 
     public Output<List<String>> getNotStartsWiths() {
@@ -85,7 +85,7 @@ public final class TrailAdvancedEventSelectorFieldSelectorGetArgs extends io.pul
      * A list of values that includes events that match the first few characters of the event record field specified as the value of `field`.
      * 
      */
-    @InputImport(name="startsWiths")
+    @Import(name="startsWiths")
       private final @Nullable Output<List<String>> startsWiths;
 
     public Output<List<String>> getStartsWiths() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ViolationResponse {
     /**
      * Error message.
@@ -25,11 +25,11 @@ public final class ViolationResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ViolationResponse(
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("userId") String userId) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.userId = userId;

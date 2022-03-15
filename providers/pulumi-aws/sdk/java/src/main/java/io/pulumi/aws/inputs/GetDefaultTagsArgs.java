@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetDefaultTagsArgs extends io.pulumi.resources.InvokeArgs {
      * Blocks of default tags set on the provider. See details below.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

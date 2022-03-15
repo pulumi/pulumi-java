@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Optional ETag.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -30,7 +30,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -52,7 +52,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * PrivateEndpointConnectionResource properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> properties;
 
     public Output<io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointConnectionArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -85,7 +85,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
     public Output<String> getVaultName() {

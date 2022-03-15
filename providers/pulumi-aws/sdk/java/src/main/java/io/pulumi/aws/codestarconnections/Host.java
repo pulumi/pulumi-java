@@ -8,7 +8,7 @@ import io.pulumi.aws.codestarconnections.HostArgs;
 import io.pulumi.aws.codestarconnections.inputs.HostState;
 import io.pulumi.aws.codestarconnections.outputs.HostVpcConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -35,7 +35,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The CodeStar Host ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The name of the host to be created. The name must be unique in the calling AWS account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The endpoint of the infrastructure to be represented by the host after it is created.
      * 
      */
-    @OutputExport(name="providerEndpoint", type=String.class, parameters={})
+    @Export(name="providerEndpoint", type=String.class, parameters={})
     private Output<String> providerEndpoint;
 
     /**
@@ -77,7 +77,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The name of the external provider where your third-party code repository is configured.
      * 
      */
-    @OutputExport(name="providerType", type=String.class, parameters={})
+    @Export(name="providerType", type=String.class, parameters={})
     private Output<String> providerType;
 
     /**
@@ -91,7 +91,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The CodeStar Host status. Possible values are `PENDING`, `AVAILABLE`, `VPC_CONFIG_DELETING`, `VPC_CONFIG_INITIALIZING`, and `VPC_CONFIG_FAILED_INITIALIZATION`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -105,7 +105,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
      * 
      */
-    @OutputExport(name="vpcConfiguration", type=HostVpcConfiguration.class, parameters={})
+    @Export(name="vpcConfiguration", type=HostVpcConfiguration.class, parameters={})
     private Output</* @Nullable */ HostVpcConfiguration> vpcConfiguration;
 
     /**

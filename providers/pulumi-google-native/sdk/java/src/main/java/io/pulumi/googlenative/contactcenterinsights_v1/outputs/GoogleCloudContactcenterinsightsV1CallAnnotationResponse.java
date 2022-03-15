@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1EntityMentionDataResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1HoldDataResponse;
@@ -15,7 +15,7 @@ import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContac
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
     /**
      * The boundary in the conversation where the annotation ends, inclusive.
@@ -68,18 +68,18 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
      */
     private final GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1CallAnnotationResponse(
-        @OutputCustomType.Parameter("annotationEndBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary,
-        @OutputCustomType.Parameter("annotationStartBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary,
-        @OutputCustomType.Parameter("channelTag") Integer channelTag,
-        @OutputCustomType.Parameter("entityMentionData") GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData,
-        @OutputCustomType.Parameter("holdData") GoogleCloudContactcenterinsightsV1HoldDataResponse holdData,
-        @OutputCustomType.Parameter("intentMatchData") GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData,
-        @OutputCustomType.Parameter("interruptionData") GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData,
-        @OutputCustomType.Parameter("phraseMatchData") GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData,
-        @OutputCustomType.Parameter("sentimentData") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData,
-        @OutputCustomType.Parameter("silenceData") GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
+        @CustomType.Parameter("annotationEndBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary,
+        @CustomType.Parameter("annotationStartBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary,
+        @CustomType.Parameter("channelTag") Integer channelTag,
+        @CustomType.Parameter("entityMentionData") GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData,
+        @CustomType.Parameter("holdData") GoogleCloudContactcenterinsightsV1HoldDataResponse holdData,
+        @CustomType.Parameter("intentMatchData") GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData,
+        @CustomType.Parameter("interruptionData") GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData,
+        @CustomType.Parameter("phraseMatchData") GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData,
+        @CustomType.Parameter("sentimentData") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData,
+        @CustomType.Parameter("silenceData") GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
         this.annotationEndBoundary = annotationEndBoundary;
         this.annotationStartBoundary = annotationStartBoundary;
         this.channelTag = channelTag;

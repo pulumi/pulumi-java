@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.kusto.inputs.PrivateLinkServiceConnectionStatePropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -30,7 +30,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -41,7 +41,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Connection State of the Private Endpoint Connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState", required=true)
+    @Import(name="privateLinkServiceConnectionState", required=true)
       private final Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
@@ -52,7 +52,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

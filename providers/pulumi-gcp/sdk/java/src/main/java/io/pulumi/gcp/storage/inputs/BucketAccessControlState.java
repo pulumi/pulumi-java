@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -29,7 +29,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
      * The domain associated with the entity.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -40,7 +40,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
      * The email address associated with the entity.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -65,7 +65,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
      * example.com, the entity would be domain-example.com.
      * 
      */
-    @InputImport(name="entity")
+    @Import(name="entity")
       private final @Nullable Output<String> entity;
 
     public Output<String> getEntity() {
@@ -77,7 +77,7 @@ public final class BucketAccessControlState extends io.pulumi.resources.Resource
      * Possible values are `OWNER`, `READER`, and `WRITER`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

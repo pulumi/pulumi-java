@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class DeliveryStreamRetryOptions extends io.pulumi.resources.Invoke
 
     public static final DeliveryStreamRetryOptions Empty = new DeliveryStreamRetryOptions();
 
-    @InputImport(name="durationInSeconds")
+    @Import(name="durationInSeconds")
       private final @Nullable Integer durationInSeconds;
 
     public Optional<Integer> getDurationInSeconds() {

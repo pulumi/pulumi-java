@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.GalleryImageVersionPublishingProfileArgs;
 import io.pulumi.azurenative.compute.inputs.GalleryImageVersionStorageProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * The name of the gallery image definition in which the Image Version is to be created.
      * 
      */
-    @InputImport(name="galleryImageName", required=true)
+    @Import(name="galleryImageName", required=true)
       private final Output<String> galleryImageName;
 
     public Output<String> getGalleryImageName() {
@@ -32,7 +32,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * The name of the gallery image version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: <MajorVersion>.<MinorVersion>.<Patch>
      * 
      */
-    @InputImport(name="galleryImageVersionName")
+    @Import(name="galleryImageVersionName")
       private final @Nullable Output<String> galleryImageVersionName;
 
     public Output<String> getGalleryImageVersionName() {
@@ -43,7 +43,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * The name of the Shared Image Gallery in which the Image Definition resides.
      * 
      */
-    @InputImport(name="galleryName", required=true)
+    @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
     public Output<String> getGalleryName() {
@@ -54,7 +54,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * The publishing profile of a gallery image Version.
      * 
      */
-    @InputImport(name="publishingProfile")
+    @Import(name="publishingProfile")
       private final @Nullable Output<GalleryImageVersionPublishingProfileArgs> publishingProfile;
 
     public Output<GalleryImageVersionPublishingProfileArgs> getPublishingProfile() {
@@ -76,7 +76,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * This is the storage profile of a Gallery Image Version.
      * 
      */
-    @InputImport(name="storageProfile", required=true)
+    @Import(name="storageProfile", required=true)
       private final Output<GalleryImageVersionStorageProfileArgs> storageProfile;
 
     public Output<GalleryImageVersionStorageProfileArgs> getStorageProfile() {
@@ -98,7 +98,7 @@ public final class GalleryImageVersionArgs extends io.pulumi.resources.ResourceA
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

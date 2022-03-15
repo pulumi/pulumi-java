@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InsightFiltersNetworkSourceIpv6GetArgs extends io.pulumi.reso
      * A finding's CIDR value.
      * 
      */
-    @InputImport(name="cidr", required=true)
+    @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
     public Output<String> getCidr() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.GitHubActionConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppSourceControlResult {
     /**
      * Name of branch to use for deployment.
@@ -69,19 +69,19 @@ public final class GetWebAppSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppSourceControlResult(
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("deploymentRollbackEnabled") @Nullable Boolean deploymentRollbackEnabled,
-        @OutputCustomType.Parameter("gitHubActionConfiguration") @Nullable GitHubActionConfigurationResponse gitHubActionConfiguration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isGitHubAction") @Nullable Boolean isGitHubAction,
-        @OutputCustomType.Parameter("isManualIntegration") @Nullable Boolean isManualIntegration,
-        @OutputCustomType.Parameter("isMercurial") @Nullable Boolean isMercurial,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("repoUrl") @Nullable String repoUrl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("deploymentRollbackEnabled") @Nullable Boolean deploymentRollbackEnabled,
+        @CustomType.Parameter("gitHubActionConfiguration") @Nullable GitHubActionConfigurationResponse gitHubActionConfiguration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isGitHubAction") @Nullable Boolean isGitHubAction,
+        @CustomType.Parameter("isManualIntegration") @Nullable Boolean isManualIntegration,
+        @CustomType.Parameter("isMercurial") @Nullable Boolean isMercurial,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("repoUrl") @Nullable String repoUrl,
+        @CustomType.Parameter("type") String type) {
         this.branch = branch;
         this.deploymentRollbackEnabled = deploymentRollbackEnabled;
         this.gitHubActionConfiguration = gitHubActionConfiguration;

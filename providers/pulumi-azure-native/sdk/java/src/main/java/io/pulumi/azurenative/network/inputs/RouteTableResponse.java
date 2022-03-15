@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.RouteResponse;
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to disable the routes learned by BGP on that route table. True means disable.
      * 
      */
-    @InputImport(name="disableBgpRoutePropagation")
+    @Import(name="disableBgpRoutePropagation")
       private final @Nullable Boolean disableBgpRoutePropagation;
 
     public Optional<Boolean> getDisableBgpRoutePropagation() {
@@ -38,7 +38,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -49,7 +49,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -60,7 +60,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -71,7 +71,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -82,7 +82,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the route table resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -93,7 +93,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * The resource GUID property of the route table.
      * 
      */
-    @InputImport(name="resourceGuid", required=true)
+    @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
     public String getResourceGuid() {
@@ -104,7 +104,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Collection of routes contained within a route table.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable List<RouteResponse> routes;
 
     public List<RouteResponse> getRoutes() {
@@ -115,7 +115,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * A collection of references to subnets.
      * 
      */
-    @InputImport(name="subnets", required=true)
+    @Import(name="subnets", required=true)
       private final List<SubnetResponse> subnets;
 
     public List<SubnetResponse> getSubnets() {
@@ -126,7 +126,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -137,7 +137,7 @@ public final class RouteTableResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

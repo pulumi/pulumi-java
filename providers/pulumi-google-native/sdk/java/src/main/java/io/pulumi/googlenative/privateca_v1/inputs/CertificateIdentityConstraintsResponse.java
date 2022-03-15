@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.inputs.ExprResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
      * If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
      * 
      */
-    @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
+    @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Boolean allowSubjectAltNamesPassthrough;
 
     public Boolean getAllowSubjectAltNamesPassthrough() {
@@ -32,7 +32,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
      * If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
      * 
      */
-    @InputImport(name="allowSubjectPassthrough", required=true)
+    @Import(name="allowSubjectPassthrough", required=true)
       private final Boolean allowSubjectPassthrough;
 
     public Boolean getAllowSubjectPassthrough() {
@@ -43,7 +43,7 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
      * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
      * 
      */
-    @InputImport(name="celExpression", required=true)
+    @Import(name="celExpression", required=true)
       private final ExprResponse celExpression;
 
     public ExprResponse getCelExpression() {

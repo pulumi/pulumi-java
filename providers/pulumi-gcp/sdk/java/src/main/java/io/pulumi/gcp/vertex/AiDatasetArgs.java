@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionSpec")
+    @Import(name="encryptionSpec")
       private final @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
     public Output<AiDatasetEncryptionSpecArgs> getEncryptionSpec() {
@@ -43,7 +43,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to this Workflow.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -54,7 +54,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
      * 
      */
-    @InputImport(name="metadataSchemaUri", required=true)
+    @Import(name="metadataSchemaUri", required=true)
       private final Output<String> metadataSchemaUri;
 
     public Output<String> getMetadataSchemaUri() {
@@ -66,7 +66,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -77,7 +77,7 @@ public final class AiDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The region of the dataset. eg us-central1
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.outputs.AliasPatternResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AliasPathResponse {
     /**
      * The API versions.
@@ -35,12 +35,12 @@ public final class AliasPathResponse {
      */
     private final @Nullable AliasPatternResponse pattern;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasPathResponse(
-        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
-        @OutputCustomType.Parameter("metadata") AliasPathMetadataResponse metadata,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("pattern") @Nullable AliasPatternResponse pattern) {
+        @CustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @CustomType.Parameter("metadata") AliasPathMetadataResponse metadata,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("pattern") @Nullable AliasPatternResponse pattern) {
         this.apiVersions = apiVersions;
         this.metadata = metadata;
         this.path = path;

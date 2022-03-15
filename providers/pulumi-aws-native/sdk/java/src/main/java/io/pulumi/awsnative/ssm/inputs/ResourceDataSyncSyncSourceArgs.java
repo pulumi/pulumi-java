@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncAwsOrganizationsSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,28 +17,28 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
 
     public static final ResourceDataSyncSyncSourceArgs Empty = new ResourceDataSyncSyncSourceArgs();
 
-    @InputImport(name="awsOrganizationsSource")
+    @Import(name="awsOrganizationsSource")
       private final @Nullable Output<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource;
 
     public Output<ResourceDataSyncAwsOrganizationsSourceArgs> getAwsOrganizationsSource() {
         return this.awsOrganizationsSource == null ? Output.empty() : this.awsOrganizationsSource;
     }
 
-    @InputImport(name="includeFutureRegions")
+    @Import(name="includeFutureRegions")
       private final @Nullable Output<Boolean> includeFutureRegions;
 
     public Output<Boolean> getIncludeFutureRegions() {
         return this.includeFutureRegions == null ? Output.empty() : this.includeFutureRegions;
     }
 
-    @InputImport(name="sourceRegions", required=true)
+    @Import(name="sourceRegions", required=true)
       private final Output<List<String>> sourceRegions;
 
     public Output<List<String>> getSourceRegions() {
         return this.sourceRegions;
     }
 
-    @InputImport(name="sourceType", required=true)
+    @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
 
     public Output<String> getSourceType() {

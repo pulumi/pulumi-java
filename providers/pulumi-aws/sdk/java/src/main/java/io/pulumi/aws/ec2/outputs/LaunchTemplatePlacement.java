@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplatePlacement {
     /**
      * The affinity setting for an instance on a Dedicated Host.
@@ -53,16 +53,16 @@ public final class LaunchTemplatePlacement {
      */
     private final @Nullable String tenancy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplatePlacement(
-        @OutputCustomType.Parameter("affinity") @Nullable String affinity,
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
-        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
-        @OutputCustomType.Parameter("hostResourceGroupArn") @Nullable String hostResourceGroupArn,
-        @OutputCustomType.Parameter("partitionNumber") @Nullable Integer partitionNumber,
-        @OutputCustomType.Parameter("spreadDomain") @Nullable String spreadDomain,
-        @OutputCustomType.Parameter("tenancy") @Nullable String tenancy) {
+        @CustomType.Parameter("affinity") @Nullable String affinity,
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("groupName") @Nullable String groupName,
+        @CustomType.Parameter("hostId") @Nullable String hostId,
+        @CustomType.Parameter("hostResourceGroupArn") @Nullable String hostResourceGroupArn,
+        @CustomType.Parameter("partitionNumber") @Nullable Integer partitionNumber,
+        @CustomType.Parameter("spreadDomain") @Nullable String spreadDomain,
+        @CustomType.Parameter("tenancy") @Nullable String tenancy) {
         this.affinity = affinity;
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.purview.inputs;
 import io.pulumi.azurenative.purview.enums.Status;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The required actions.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
     public Output<String> getActionsRequired() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,Status>> status;
 
     public Output<Either<String,Status>> getStatus() {

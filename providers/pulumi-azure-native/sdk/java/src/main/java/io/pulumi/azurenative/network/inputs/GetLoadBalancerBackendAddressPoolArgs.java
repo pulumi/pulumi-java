@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
      * The name of the backend address pool.
      * 
      */
-    @InputImport(name="backendAddressPoolName", required=true)
+    @Import(name="backendAddressPoolName", required=true)
       private final String backendAddressPoolName;
 
     public String getBackendAddressPoolName() {
@@ -27,7 +27,7 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
      * The name of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerName", required=true)
+    @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
 
     public String getLoadBalancerName() {
@@ -38,7 +38,7 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

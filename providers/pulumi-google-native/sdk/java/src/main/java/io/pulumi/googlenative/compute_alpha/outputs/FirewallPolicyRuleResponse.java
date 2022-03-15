@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyRuleResponse {
     /**
      * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
@@ -75,20 +75,20 @@ public final class FirewallPolicyRuleResponse {
      */
     private final List<String> targetServiceAccounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("match") FirewallPolicyRuleMatcherResponse match,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
-        @OutputCustomType.Parameter("targetResources") List<String> targetResources,
-        @OutputCustomType.Parameter("targetSecureTags") List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
-        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("enableLogging") Boolean enableLogging,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("match") FirewallPolicyRuleMatcherResponse match,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @CustomType.Parameter("targetResources") List<String> targetResources,
+        @CustomType.Parameter("targetSecureTags") List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
+        @CustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
         this.action = action;
         this.description = description;
         this.direction = direction;

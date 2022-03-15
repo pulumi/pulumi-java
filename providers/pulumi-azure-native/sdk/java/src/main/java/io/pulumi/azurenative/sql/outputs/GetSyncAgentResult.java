@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSyncAgentResult {
     /**
      * Expiration time of the sync agent version.
@@ -58,17 +58,17 @@ public final class GetSyncAgentResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSyncAgentResult(
-        @OutputCustomType.Parameter("expiryTime") String expiryTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isUpToDate") Boolean isUpToDate,
-        @OutputCustomType.Parameter("lastAliveTime") String lastAliveTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("expiryTime") String expiryTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isUpToDate") Boolean isUpToDate,
+        @CustomType.Parameter("lastAliveTime") String lastAliveTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.expiryTime = expiryTime;
         this.id = id;
         this.isUpToDate = isUpToDate;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.EventTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.HttpsTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretEnvVarResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionResult {
     /**
      * The amount of memory in MB available for a function. Defaults to 256MB.
@@ -178,40 +178,40 @@ public final class GetFunctionResult {
      */
     private final String vpcConnectorEgressSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionResult(
-        @OutputCustomType.Parameter("availableMemoryMb") Integer availableMemoryMb,
-        @OutputCustomType.Parameter("buildEnvironmentVariables") Map<String,String> buildEnvironmentVariables,
-        @OutputCustomType.Parameter("buildId") String buildId,
-        @OutputCustomType.Parameter("buildName") String buildName,
-        @OutputCustomType.Parameter("buildWorkerPool") String buildWorkerPool,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dockerRepository") String dockerRepository,
-        @OutputCustomType.Parameter("entryPoint") String entryPoint,
-        @OutputCustomType.Parameter("environmentVariables") Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("eventTrigger") EventTriggerResponse eventTrigger,
-        @OutputCustomType.Parameter("httpsTrigger") HttpsTriggerResponse httpsTrigger,
-        @OutputCustomType.Parameter("ingressSettings") String ingressSettings,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") Integer minInstances,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("runtime") String runtime,
-        @OutputCustomType.Parameter("secretEnvironmentVariables") List<SecretEnvVarResponse> secretEnvironmentVariables,
-        @OutputCustomType.Parameter("secretVolumes") List<SecretVolumeResponse> secretVolumes,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("sourceArchiveUrl") String sourceArchiveUrl,
-        @OutputCustomType.Parameter("sourceRepository") SourceRepositoryResponse sourceRepository,
-        @OutputCustomType.Parameter("sourceToken") String sourceToken,
-        @OutputCustomType.Parameter("sourceUploadUrl") String sourceUploadUrl,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("timeout") String timeout,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("versionId") String versionId,
-        @OutputCustomType.Parameter("vpcConnector") String vpcConnector,
-        @OutputCustomType.Parameter("vpcConnectorEgressSettings") String vpcConnectorEgressSettings) {
+        @CustomType.Parameter("availableMemoryMb") Integer availableMemoryMb,
+        @CustomType.Parameter("buildEnvironmentVariables") Map<String,String> buildEnvironmentVariables,
+        @CustomType.Parameter("buildId") String buildId,
+        @CustomType.Parameter("buildName") String buildName,
+        @CustomType.Parameter("buildWorkerPool") String buildWorkerPool,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dockerRepository") String dockerRepository,
+        @CustomType.Parameter("entryPoint") String entryPoint,
+        @CustomType.Parameter("environmentVariables") Map<String,String> environmentVariables,
+        @CustomType.Parameter("eventTrigger") EventTriggerResponse eventTrigger,
+        @CustomType.Parameter("httpsTrigger") HttpsTriggerResponse httpsTrigger,
+        @CustomType.Parameter("ingressSettings") String ingressSettings,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("maxInstances") Integer maxInstances,
+        @CustomType.Parameter("minInstances") Integer minInstances,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("secretEnvironmentVariables") List<SecretEnvVarResponse> secretEnvironmentVariables,
+        @CustomType.Parameter("secretVolumes") List<SecretVolumeResponse> secretVolumes,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("sourceArchiveUrl") String sourceArchiveUrl,
+        @CustomType.Parameter("sourceRepository") SourceRepositoryResponse sourceRepository,
+        @CustomType.Parameter("sourceToken") String sourceToken,
+        @CustomType.Parameter("sourceUploadUrl") String sourceUploadUrl,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("timeout") String timeout,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("versionId") String versionId,
+        @CustomType.Parameter("vpcConnector") String vpcConnector,
+        @CustomType.Parameter("vpcConnectorEgressSettings") String vpcConnectorEgressSettings) {
         this.availableMemoryMb = availableMemoryMb;
         this.buildEnvironmentVariables = buildEnvironmentVariables;
         this.buildId = buildId;

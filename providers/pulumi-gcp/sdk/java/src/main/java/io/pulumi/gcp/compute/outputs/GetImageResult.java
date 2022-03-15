@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageResult {
     /**
      * The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
@@ -111,28 +111,28 @@ public final class GetImageResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageResult(
-        @OutputCustomType.Parameter("archiveSizeBytes") Integer archiveSizeBytes,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageEncryptionKeySha256") String imageEncryptionKeySha256,
-        @OutputCustomType.Parameter("imageId") String imageId,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
-        @OutputCustomType.Parameter("sourceDiskEncryptionKeySha256") String sourceDiskEncryptionKeySha256,
-        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
-        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("archiveSizeBytes") Integer archiveSizeBytes,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageEncryptionKeySha256") String imageEncryptionKeySha256,
+        @CustomType.Parameter("imageId") String imageId,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sourceDisk") String sourceDisk,
+        @CustomType.Parameter("sourceDiskEncryptionKeySha256") String sourceDiskEncryptionKeySha256,
+        @CustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @CustomType.Parameter("sourceImageId") String sourceImageId,
+        @CustomType.Parameter("status") String status) {
         this.archiveSizeBytes = archiveSizeBytes;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
     /**
      * Maximum value appearing in the column.
@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2NumericalStatsResultResponse(
-        @OutputCustomType.Parameter("maxValue") GooglePrivacyDlpV2ValueResponse maxValue,
-        @OutputCustomType.Parameter("minValue") GooglePrivacyDlpV2ValueResponse minValue,
-        @OutputCustomType.Parameter("quantileValues") List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
+        @CustomType.Parameter("maxValue") GooglePrivacyDlpV2ValueResponse maxValue,
+        @CustomType.Parameter("minValue") GooglePrivacyDlpV2ValueResponse minValue,
+        @CustomType.Parameter("quantileValues") List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
         this.maxValue = maxValue;
         this.minValue = minValue;
         this.quantileValues = quantileValues;

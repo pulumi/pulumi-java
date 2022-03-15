@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs;
@@ -22,7 +22,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dictionary")
+    @Import(name="dictionary")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> dictionary;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryGetArgs> getDictionary() {
@@ -34,7 +34,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
      */
-    @InputImport(name="excludeInfoTypes")
+    @Import(name="excludeInfoTypes")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> excludeInfoTypes;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesGetArgs> getExcludeInfoTypes() {
@@ -46,7 +46,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
      * 
      */
-    @InputImport(name="matchingType", required=true)
+    @Import(name="matchingType", required=true)
       private final Output<String> matchingType;
 
     public Output<String> getMatchingType() {
@@ -58,7 +58,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      * Structure is documented below.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> regex;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexGetArgs> getRegex() {

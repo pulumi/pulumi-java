@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ComputeBindingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * The compute designated for inferencing.
      * 
      */
-    @InputImport(name="inferencingComputeBinding", required=true)
+    @Import(name="inferencingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> inferencingComputeBinding;
 
     public Output<ComputeBindingArgs> getInferencingComputeBinding() {
@@ -36,7 +36,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * Indicates whether MLAssist feature is enabled.
      * 
      */
-    @InputImport(name="mlAssistEnabled")
+    @Import(name="mlAssistEnabled")
       private final @Nullable Output<Boolean> mlAssistEnabled;
 
     public Output<Boolean> getMlAssistEnabled() {
@@ -47,7 +47,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * Name prefix to use for machine learning model. For each iteration modelName will be appended with iteration e.g.{modelName}_{i}.
      * 
      */
-    @InputImport(name="modelNamePrefix", required=true)
+    @Import(name="modelNamePrefix", required=true)
       private final Output<String> modelNamePrefix;
 
     public Output<String> getModelNamePrefix() {
@@ -58,7 +58,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * Prelabel accuracy threshold used in MLAssist feature.
      * 
      */
-    @InputImport(name="prelabelAccuracyThreshold")
+    @Import(name="prelabelAccuracyThreshold")
       private final @Nullable Output<Double> prelabelAccuracyThreshold;
 
     public Output<Double> getPrelabelAccuracyThreshold() {
@@ -69,7 +69,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * The compute designated for training.
      * 
      */
-    @InputImport(name="trainingComputeBinding", required=true)
+    @Import(name="trainingComputeBinding", required=true)
       private final Output<ComputeBindingArgs> trainingComputeBinding;
 
     public Output<ComputeBindingArgs> getTrainingComputeBinding() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="commonName", required=true)
+    @Import(name="commonName", required=true)
       private final Output<String> commonName;
 
     public Output<String> getCommonName() {
@@ -31,7 +31,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * forces a new resource to be created.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -43,7 +43,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

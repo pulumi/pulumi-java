@@ -5,11 +5,11 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlDbSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
     /**
      * Databases to migrate
@@ -27,11 +27,11 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidateSyncMigrationInputSqlServerTaskInputResponse(
-        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
-        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases,
+        @CustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

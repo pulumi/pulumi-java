@@ -16,7 +16,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DPMProtectedItemArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.GenericProtectedItemArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.MabFileFolderProtectedItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -32,7 +32,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * Container name associated with the backup item.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -43,7 +43,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * Optional ETag.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -54,7 +54,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * Fabric name associated with the backup item.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -65,7 +65,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * ProtectedItemResource properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -87,7 +87,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * Item name to be backed up.
      * 
      */
-    @InputImport(name="protectedItemName")
+    @Import(name="protectedItemName")
       private final @Nullable Output<String> protectedItemName;
 
     public Output<String> getProtectedItemName() {
@@ -98,7 +98,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -109,7 +109,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class ProtectedItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
     public Output<String> getVaultName() {

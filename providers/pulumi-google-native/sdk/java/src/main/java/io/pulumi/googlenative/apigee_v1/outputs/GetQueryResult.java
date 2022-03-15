@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AsyncQueryResultResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1QueryMetadataResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQueryResult {
     /**
      * Creation time of the query.
@@ -77,21 +77,21 @@ public final class GetQueryResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueryResult(
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("envgroupHostname") String envgroupHostname,
-        @OutputCustomType.Parameter("error") String error,
-        @OutputCustomType.Parameter("executionTime") String executionTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("queryParams") GoogleCloudApigeeV1QueryMetadataResponse queryParams,
-        @OutputCustomType.Parameter("reportDefinitionId") String reportDefinitionId,
-        @OutputCustomType.Parameter("result") GoogleCloudApigeeV1AsyncQueryResultResponse result,
-        @OutputCustomType.Parameter("resultFileSize") String resultFileSize,
-        @OutputCustomType.Parameter("resultRows") String resultRows,
-        @OutputCustomType.Parameter("self") String self,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updated") String updated) {
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("envgroupHostname") String envgroupHostname,
+        @CustomType.Parameter("error") String error,
+        @CustomType.Parameter("executionTime") String executionTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("queryParams") GoogleCloudApigeeV1QueryMetadataResponse queryParams,
+        @CustomType.Parameter("reportDefinitionId") String reportDefinitionId,
+        @CustomType.Parameter("result") GoogleCloudApigeeV1AsyncQueryResultResponse result,
+        @CustomType.Parameter("resultFileSize") String resultFileSize,
+        @CustomType.Parameter("resultRows") String resultRows,
+        @CustomType.Parameter("self") String self,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updated") String updated) {
         this.created = created;
         this.envgroupHostname = envgroupHostname;
         this.error = error;

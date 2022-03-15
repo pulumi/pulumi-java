@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.CapacityResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PartitionConfigResponse {
     /**
      * The capacity configuration.
@@ -21,10 +21,10 @@ public final class PartitionConfigResponse {
      */
     private final String count;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartitionConfigResponse(
-        @OutputCustomType.Parameter("capacity") CapacityResponse capacity,
-        @OutputCustomType.Parameter("count") String count) {
+        @CustomType.Parameter("capacity") CapacityResponse capacity,
+        @CustomType.Parameter("count") String count) {
         this.capacity = capacity;
         this.count = count;
     }

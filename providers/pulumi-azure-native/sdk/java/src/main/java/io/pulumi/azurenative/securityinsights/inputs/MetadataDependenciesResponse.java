@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * Id of the content item we depend on
      * 
      */
-    @InputImport(name="contentId")
+    @Import(name="contentId")
       private final @Nullable String contentId;
 
     public Optional<String> getContentId() {
@@ -34,7 +34,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * This is the list of dependencies we must fulfill, according to the AND/OR operator
      * 
      */
-    @InputImport(name="criteria")
+    @Import(name="criteria")
       private final @Nullable List<MetadataDependenciesResponse> criteria;
 
     public List<MetadataDependenciesResponse> getCriteria() {
@@ -45,7 +45,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * Type of the content item we depend on
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -56,7 +56,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * Name of the content item
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -67,7 +67,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * Operator used for list of dependencies in criteria array.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable String operator;
 
     public Optional<String> getOperator() {
@@ -78,7 +78,7 @@ public final class MetadataDependenciesResponse extends io.pulumi.resources.Invo
      * Version of the the content item we depend on.  Can be blank, * or missing to indicate any version fulfills the dependency.  If version does not match our defined numeric format then an exact match is required.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

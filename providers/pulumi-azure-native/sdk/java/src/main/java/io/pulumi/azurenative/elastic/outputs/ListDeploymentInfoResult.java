@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListDeploymentInfoResult {
     /**
      * Disk capacity of the elasticsearch in Elastic cloud deployment.
@@ -30,12 +30,12 @@ public final class ListDeploymentInfoResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListDeploymentInfoResult(
-        @OutputCustomType.Parameter("diskCapacity") String diskCapacity,
-        @OutputCustomType.Parameter("memoryCapacity") String memoryCapacity,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("diskCapacity") String diskCapacity,
+        @CustomType.Parameter("memoryCapacity") String memoryCapacity,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("version") String version) {
         this.diskCapacity = diskCapacity;
         this.memoryCapacity = memoryCapacity;
         this.status = status;

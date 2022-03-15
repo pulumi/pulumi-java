@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.RulesEngineOperator;
 import io.pulumi.azurenative.network.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * Describes if this is negate condition or not
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
     public Output<Boolean> getNegateCondition() {
@@ -39,7 +39,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
      * 
      */
-    @InputImport(name="rulesEngineMatchValue", required=true)
+    @Import(name="rulesEngineMatchValue", required=true)
       private final Output<List<String>> rulesEngineMatchValue;
 
     public Output<List<String>> getRulesEngineMatchValue() {
@@ -50,7 +50,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * Match Variable
      * 
      */
-    @InputImport(name="rulesEngineMatchVariable", required=true)
+    @Import(name="rulesEngineMatchVariable", required=true)
       private final Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
     public Output<Either<String,RulesEngineMatchVariable>> getRulesEngineMatchVariable() {
@@ -61,7 +61,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * Describes operator to apply to the match condition.
      * 
      */
-    @InputImport(name="rulesEngineOperator", required=true)
+    @Import(name="rulesEngineOperator", required=true)
       private final Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
     public Output<Either<String,RulesEngineOperator>> getRulesEngineOperator() {
@@ -72,7 +72,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * Name of selector in RequestHeader or RequestBody to be matched
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
@@ -83,7 +83,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
      * List of transforms
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
     public Output<List<Either<String,Transform>>> getTransforms() {

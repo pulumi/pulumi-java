@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerServiceNetworkProfileResponse {
     /**
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
@@ -63,18 +63,18 @@ public final class ContainerServiceNetworkProfileResponse {
      */
     private final @Nullable String serviceCidr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerServiceNetworkProfileResponse(
-        @OutputCustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
-        @OutputCustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
-        @OutputCustomType.Parameter("loadBalancerProfile") @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile,
-        @OutputCustomType.Parameter("loadBalancerSku") @Nullable String loadBalancerSku,
-        @OutputCustomType.Parameter("networkMode") @Nullable String networkMode,
-        @OutputCustomType.Parameter("networkPlugin") @Nullable String networkPlugin,
-        @OutputCustomType.Parameter("networkPolicy") @Nullable String networkPolicy,
-        @OutputCustomType.Parameter("outboundType") @Nullable String outboundType,
-        @OutputCustomType.Parameter("podCidr") @Nullable String podCidr,
-        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr) {
+        @CustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
+        @CustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
+        @CustomType.Parameter("loadBalancerProfile") @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile,
+        @CustomType.Parameter("loadBalancerSku") @Nullable String loadBalancerSku,
+        @CustomType.Parameter("networkMode") @Nullable String networkMode,
+        @CustomType.Parameter("networkPlugin") @Nullable String networkPlugin,
+        @CustomType.Parameter("networkPolicy") @Nullable String networkPolicy,
+        @CustomType.Parameter("outboundType") @Nullable String outboundType,
+        @CustomType.Parameter("podCidr") @Nullable String podCidr,
+        @CustomType.Parameter("serviceCidr") @Nullable String serviceCidr) {
         this.dnsServiceIP = dnsServiceIP;
         this.dockerBridgeCidr = dockerBridgeCidr;
         this.loadBalancerProfile = loadBalancerProfile;

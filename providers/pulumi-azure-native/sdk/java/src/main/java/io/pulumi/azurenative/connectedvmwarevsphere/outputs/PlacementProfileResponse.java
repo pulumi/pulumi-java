@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlacementProfileResponse {
     /**
      * Gets or sets the ARM Id of the cluster resource on which this virtual machine will deploy.
@@ -32,12 +32,12 @@ public final class PlacementProfileResponse {
      */
     private final @Nullable String resourcePoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlacementProfileResponse(
-        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
-        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
-        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
-        @OutputCustomType.Parameter("resourcePoolId") @Nullable String resourcePoolId) {
+        @CustomType.Parameter("clusterId") @Nullable String clusterId,
+        @CustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @CustomType.Parameter("hostId") @Nullable String hostId,
+        @CustomType.Parameter("resourcePoolId") @Nullable String resourcePoolId) {
         this.clusterId = clusterId;
         this.datastoreId = datastoreId;
         this.hostId = hostId;

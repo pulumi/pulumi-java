@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllowedFlexVolume {
     /**
      * driver is the name of the Flexvolume driver.
@@ -15,8 +15,8 @@ public final class AllowedFlexVolume {
      */
     private final String driver;
 
-    @OutputCustomType.Constructor
-    private AllowedFlexVolume(@OutputCustomType.Parameter("driver") String driver) {
+    @CustomType.Constructor
+    private AllowedFlexVolume(@CustomType.Parameter("driver") String driver) {
         this.driver = driver;
     }
 

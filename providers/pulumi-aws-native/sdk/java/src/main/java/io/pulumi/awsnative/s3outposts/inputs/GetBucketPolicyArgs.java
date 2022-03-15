@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3outposts.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBucketPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {

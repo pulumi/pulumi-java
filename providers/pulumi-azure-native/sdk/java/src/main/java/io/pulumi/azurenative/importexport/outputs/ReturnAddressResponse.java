@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReturnAddressResponse {
     /**
      * The city name to use when returning the drives.
@@ -57,17 +57,17 @@ public final class ReturnAddressResponse {
      */
     private final @Nullable String streetAddress2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReturnAddressResponse(
-        @OutputCustomType.Parameter("city") String city,
-        @OutputCustomType.Parameter("countryOrRegion") String countryOrRegion,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("phone") String phone,
-        @OutputCustomType.Parameter("postalCode") String postalCode,
-        @OutputCustomType.Parameter("recipientName") String recipientName,
-        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
-        @OutputCustomType.Parameter("streetAddress1") String streetAddress1,
-        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
+        @CustomType.Parameter("city") String city,
+        @CustomType.Parameter("countryOrRegion") String countryOrRegion,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("phone") String phone,
+        @CustomType.Parameter("postalCode") String postalCode,
+        @CustomType.Parameter("recipientName") String recipientName,
+        @CustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @CustomType.Parameter("streetAddress1") String streetAddress1,
+        @CustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.email = email;

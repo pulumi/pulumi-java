@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.accessanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,35 +16,35 @@ public final class AnalyzerFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final AnalyzerFilter Empty = new AnalyzerFilter();
 
-    @InputImport(name="contains")
+    @Import(name="contains")
       private final @Nullable List<String> contains;
 
     public List<String> getContains() {
         return this.contains == null ? List.of() : this.contains;
     }
 
-    @InputImport(name="eq")
+    @Import(name="eq")
       private final @Nullable List<String> eq;
 
     public List<String> getEq() {
         return this.eq == null ? List.of() : this.eq;
     }
 
-    @InputImport(name="exists")
+    @Import(name="exists")
       private final @Nullable Boolean exists;
 
     public Optional<Boolean> getExists() {
         return this.exists == null ? Optional.empty() : Optional.ofNullable(this.exists);
     }
 
-    @InputImport(name="neq")
+    @Import(name="neq")
       private final @Nullable List<String> neq;
 
     public List<String> getNeq() {
         return this.neq == null ? List.of() : this.neq;
     }
 
-    @InputImport(name="property", required=true)
+    @Import(name="property", required=true)
       private final String property;
 
     public String getProperty() {

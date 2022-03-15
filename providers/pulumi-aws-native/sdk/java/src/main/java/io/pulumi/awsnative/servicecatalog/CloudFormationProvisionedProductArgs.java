@@ -8,7 +8,7 @@ import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProduc
 import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProductProvisioningPreferencesArgs;
 import io.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProductTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,84 +19,84 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
 
     public static final CloudFormationProvisionedProductArgs Empty = new CloudFormationProvisionedProductArgs();
 
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
     public Output<CloudFormationProvisionedProductAcceptLanguage> getAcceptLanguage() {
         return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
-    @InputImport(name="notificationArns")
+    @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
     public Output<List<String>> getNotificationArns() {
         return this.notificationArns == null ? Output.empty() : this.notificationArns;
     }
 
-    @InputImport(name="pathId")
+    @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
     public Output<String> getPathId() {
         return this.pathId == null ? Output.empty() : this.pathId;
     }
 
-    @InputImport(name="pathName")
+    @Import(name="pathName")
       private final @Nullable Output<String> pathName;
 
     public Output<String> getPathName() {
         return this.pathName == null ? Output.empty() : this.pathName;
     }
 
-    @InputImport(name="productId")
+    @Import(name="productId")
       private final @Nullable Output<String> productId;
 
     public Output<String> getProductId() {
         return this.productId == null ? Output.empty() : this.productId;
     }
 
-    @InputImport(name="productName")
+    @Import(name="productName")
       private final @Nullable Output<String> productName;
 
     public Output<String> getProductName() {
         return this.productName == null ? Output.empty() : this.productName;
     }
 
-    @InputImport(name="provisionedProductName")
+    @Import(name="provisionedProductName")
       private final @Nullable Output<String> provisionedProductName;
 
     public Output<String> getProvisionedProductName() {
         return this.provisionedProductName == null ? Output.empty() : this.provisionedProductName;
     }
 
-    @InputImport(name="provisioningArtifactId")
+    @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
     public Output<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId == null ? Output.empty() : this.provisioningArtifactId;
     }
 
-    @InputImport(name="provisioningArtifactName")
+    @Import(name="provisioningArtifactName")
       private final @Nullable Output<String> provisioningArtifactName;
 
     public Output<String> getProvisioningArtifactName() {
         return this.provisioningArtifactName == null ? Output.empty() : this.provisioningArtifactName;
     }
 
-    @InputImport(name="provisioningParameters")
+    @Import(name="provisioningParameters")
       private final @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
     public Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> getProvisioningParameters() {
         return this.provisioningParameters == null ? Output.empty() : this.provisioningParameters;
     }
 
-    @InputImport(name="provisioningPreferences")
+    @Import(name="provisioningPreferences")
       private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
 
     public Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> getProvisioningPreferences() {
         return this.provisioningPreferences == null ? Output.empty() : this.provisioningPreferences;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags;
 
     public Output<List<CloudFormationProvisionedProductTagArgs>> getTags() {

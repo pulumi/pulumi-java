@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DataSourceParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceCredentialPair {
     /**
      * <p>A set of alternate data source parameters that you want to share for these
@@ -36,11 +36,11 @@ public final class DataSourceCredentialPair {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceCredentialPair(
-        @OutputCustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
         this.password = password;
         this.username = username;

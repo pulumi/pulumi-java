@@ -8,14 +8,14 @@ import io.pulumi.azurenative.network.outputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.outputs.RadiusServerResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientRootCertificateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnClientConfigurationResponse {
     /**
      * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
@@ -78,20 +78,20 @@ public final class VpnClientConfigurationResponse {
      */
     private final @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnClientConfigurationResponse(
-        @OutputCustomType.Parameter("aadAudience") @Nullable String aadAudience,
-        @OutputCustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
-        @OutputCustomType.Parameter("aadTenant") @Nullable String aadTenant,
-        @OutputCustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
-        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
-        @OutputCustomType.Parameter("radiusServers") @Nullable List<RadiusServerResponse> radiusServers,
-        @OutputCustomType.Parameter("vpnAuthenticationTypes") @Nullable List<String> vpnAuthenticationTypes,
-        @OutputCustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool,
-        @OutputCustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
-        @OutputCustomType.Parameter("vpnClientProtocols") @Nullable List<String> vpnClientProtocols,
-        @OutputCustomType.Parameter("vpnClientRevokedCertificates") @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates,
-        @OutputCustomType.Parameter("vpnClientRootCertificates") @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates) {
+        @CustomType.Parameter("aadAudience") @Nullable String aadAudience,
+        @CustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
+        @CustomType.Parameter("aadTenant") @Nullable String aadTenant,
+        @CustomType.Parameter("radiusServerAddress") @Nullable String radiusServerAddress,
+        @CustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret,
+        @CustomType.Parameter("radiusServers") @Nullable List<RadiusServerResponse> radiusServers,
+        @CustomType.Parameter("vpnAuthenticationTypes") @Nullable List<String> vpnAuthenticationTypes,
+        @CustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool,
+        @CustomType.Parameter("vpnClientIpsecPolicies") @Nullable List<IpsecPolicyResponse> vpnClientIpsecPolicies,
+        @CustomType.Parameter("vpnClientProtocols") @Nullable List<String> vpnClientProtocols,
+        @CustomType.Parameter("vpnClientRevokedCertificates") @Nullable List<VpnClientRevokedCertificateResponse> vpnClientRevokedCertificates,
+        @CustomType.Parameter("vpnClientRootCertificates") @Nullable List<VpnClientRootCertificateResponse> vpnClientRootCertificates) {
         this.aadAudience = aadAudience;
         this.aadIssuer = aadIssuer;
         this.aadTenant = aadTenant;

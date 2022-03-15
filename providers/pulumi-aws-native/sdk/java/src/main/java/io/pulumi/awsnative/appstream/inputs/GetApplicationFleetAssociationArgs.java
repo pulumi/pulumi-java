@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetApplicationFleetAssociationArgs extends io.pulumi.resource
 
     public static final GetApplicationFleetAssociationArgs Empty = new GetApplicationFleetAssociationArgs();
 
-    @InputImport(name="applicationArn", required=true)
+    @Import(name="applicationArn", required=true)
       private final String applicationArn;
 
     public String getApplicationArn() {
         return this.applicationArn;
     }
 
-    @InputImport(name="fleetName", required=true)
+    @Import(name="fleetName", required=true)
       private final String fleetName;
 
     public String getFleetName() {

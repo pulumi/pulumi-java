@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -29,7 +29,7 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
@@ -40,7 +40,7 @@ public final class ListEffectiveConnectivityConfigurationArgs extends io.pulumi.
      * The name of the virtual network.
      * 
      */
-    @InputImport(name="virtualNetworkName", required=true)
+    @Import(name="virtualNetworkName", required=true)
       private final String virtualNetworkName;
 
     public String getVirtualNetworkName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class IntentDialogCodeHookArgs extends io.pulumi.resources.Resource
      * [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html). Must be less than or equal to 5 characters in length.
      * 
      */
-    @InputImport(name="messageVersion", required=true)
+    @Import(name="messageVersion", required=true)
       private final Output<String> messageVersion;
 
     public Output<String> getMessageVersion() {
@@ -30,7 +30,7 @@ public final class IntentDialogCodeHookArgs extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) of the Lambda function.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

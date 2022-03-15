@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPropertiesResponse {
     /**
      * Indicates whether or not private link is enabled.
@@ -22,10 +22,10 @@ public final class NetworkPropertiesResponse {
      */
     private final @Nullable String resourceProviderConnection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPropertiesResponse(
-        @OutputCustomType.Parameter("privateLink") @Nullable String privateLink,
-        @OutputCustomType.Parameter("resourceProviderConnection") @Nullable String resourceProviderConnection) {
+        @CustomType.Parameter("privateLink") @Nullable String privateLink,
+        @CustomType.Parameter("resourceProviderConnection") @Nullable String resourceProviderConnection) {
         this.privateLink = privateLink;
         this.resourceProviderConnection = resourceProviderConnection;
     }

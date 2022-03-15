@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      *     Standard: 1,2,5,10,20,50,100
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -38,7 +38,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * Not used. Retained for future use.
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final String family;
 
     public String getFamily() {
@@ -51,7 +51,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * Allowed values: Standard_S1, Free_F1
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -62,7 +62,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * Not used. Retained for future use.
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final String size;
 
     public String getSize() {
@@ -75,7 +75,7 @@ public final class ResourceSkuResponse extends io.pulumi.resources.InvokeArgs {
      * `Basic` is deprecated, use `Standard` instead.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

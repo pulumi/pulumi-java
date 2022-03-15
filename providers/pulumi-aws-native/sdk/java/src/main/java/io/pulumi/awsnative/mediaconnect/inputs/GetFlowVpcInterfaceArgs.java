@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
      * 
      */
-    @InputImport(name="flowArn", required=true)
+    @Import(name="flowArn", required=true)
       private final String flowArn;
 
     public String getFlowArn() {
@@ -27,7 +27,7 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
      * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

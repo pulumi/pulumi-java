@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.OutputType;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorWorkspaceSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,OutputType>> type;
 
     public Output<Either<String,OutputType>> getType() {
@@ -36,7 +36,7 @@ public final class ConnectionMonitorOutputArgs extends io.pulumi.resources.Resou
      * Describes the settings for producing output into a log analytics workspace.
      * 
      */
-    @InputImport(name="workspaceSettings")
+    @Import(name="workspaceSettings")
       private final @Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings;
 
     public Output<ConnectionMonitorWorkspaceSettingsArgs> getWorkspaceSettings() {

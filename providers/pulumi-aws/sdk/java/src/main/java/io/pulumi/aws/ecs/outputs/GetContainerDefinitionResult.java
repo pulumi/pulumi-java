@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetContainerDefinitionResult {
     private final String containerName;
     /**
@@ -60,19 +60,19 @@ public final class GetContainerDefinitionResult {
     private final Integer memoryReservation;
     private final String taskDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContainerDefinitionResult(
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("cpu") Integer cpu,
-        @OutputCustomType.Parameter("disableNetworking") Boolean disableNetworking,
-        @OutputCustomType.Parameter("dockerLabels") Map<String,String> dockerLabels,
-        @OutputCustomType.Parameter("environment") Map<String,String> environment,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("imageDigest") String imageDigest,
-        @OutputCustomType.Parameter("memory") Integer memory,
-        @OutputCustomType.Parameter("memoryReservation") Integer memoryReservation,
-        @OutputCustomType.Parameter("taskDefinition") String taskDefinition) {
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("cpu") Integer cpu,
+        @CustomType.Parameter("disableNetworking") Boolean disableNetworking,
+        @CustomType.Parameter("dockerLabels") Map<String,String> dockerLabels,
+        @CustomType.Parameter("environment") Map<String,String> environment,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("imageDigest") String imageDigest,
+        @CustomType.Parameter("memory") Integer memory,
+        @CustomType.Parameter("memoryReservation") Integer memoryReservation,
+        @CustomType.Parameter("taskDefinition") String taskDefinition) {
         this.containerName = containerName;
         this.cpu = cpu;
         this.disableNetworking = disableNetworking;

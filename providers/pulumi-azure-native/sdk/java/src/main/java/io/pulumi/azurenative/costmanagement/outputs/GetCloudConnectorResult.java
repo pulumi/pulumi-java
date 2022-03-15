@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ConnectorCollectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudConnectorResult {
     /**
      * Connector billing model
@@ -104,26 +104,26 @@ public final class GetCloudConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudConnectorResult(
-        @OutputCustomType.Parameter("billingModel") @Nullable String billingModel,
-        @OutputCustomType.Parameter("collectionInfo") ConnectorCollectionInfoResponse collectionInfo,
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("credentialsKey") @Nullable String credentialsKey,
-        @OutputCustomType.Parameter("daysTrialRemaining") Integer daysTrialRemaining,
-        @OutputCustomType.Parameter("defaultManagementGroupId") @Nullable String defaultManagementGroupId,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("externalBillingAccountId") String externalBillingAccountId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("providerBillingAccountDisplayName") String providerBillingAccountDisplayName,
-        @OutputCustomType.Parameter("providerBillingAccountId") String providerBillingAccountId,
-        @OutputCustomType.Parameter("reportId") @Nullable String reportId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("billingModel") @Nullable String billingModel,
+        @CustomType.Parameter("collectionInfo") ConnectorCollectionInfoResponse collectionInfo,
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("credentialsKey") @Nullable String credentialsKey,
+        @CustomType.Parameter("daysTrialRemaining") Integer daysTrialRemaining,
+        @CustomType.Parameter("defaultManagementGroupId") @Nullable String defaultManagementGroupId,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("externalBillingAccountId") String externalBillingAccountId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("modifiedOn") String modifiedOn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("providerBillingAccountDisplayName") String providerBillingAccountDisplayName,
+        @CustomType.Parameter("providerBillingAccountId") String providerBillingAccountId,
+        @CustomType.Parameter("reportId") @Nullable String reportId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("type") String type) {
         this.billingModel = billingModel;
         this.collectionInfo = collectionInfo;
         this.createdOn = createdOn;

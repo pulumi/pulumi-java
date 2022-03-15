@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesResponseProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * Fully qualified path of the registration definition.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -35,7 +35,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * Name of the registration definition.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -46,7 +46,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * Plan details for the managed services.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable PlanResponse plan;
 
     public Optional<PlanResponse> getPlan() {
@@ -57,7 +57,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * Properties of registration definition inside registration assignment.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
 
     public Optional<RegistrationAssignmentPropertiesResponseProperties> getProperties() {
@@ -68,7 +68,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * Type of the resource (Microsoft.ManagedServices/registrationDefinitions).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

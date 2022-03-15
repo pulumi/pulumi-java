@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserAssignedIdentityAuthInfoResponse {
     /**
      * The authentication type.
@@ -26,11 +26,11 @@ public final class UserAssignedIdentityAuthInfoResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAssignedIdentityAuthInfoResponse(
-        @OutputCustomType.Parameter("authType") String authType,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
+        @CustomType.Parameter("authType") String authType,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("subscriptionId") String subscriptionId) {
         this.authType = authType;
         this.clientId = clientId;
         this.subscriptionId = subscriptionId;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.EdifactOneWayAgreementResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
      * The EDIFACT one-way receive agreement.
      * 
      */
-    @InputImport(name="receiveAgreement", required=true)
+    @Import(name="receiveAgreement", required=true)
       private final EdifactOneWayAgreementResponse receiveAgreement;
 
     public EdifactOneWayAgreementResponse getReceiveAgreement() {
@@ -31,7 +31,7 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
      * The EDIFACT one-way send agreement.
      * 
      */
-    @InputImport(name="sendAgreement", required=true)
+    @Import(name="sendAgreement", required=true)
       private final EdifactOneWayAgreementResponse sendAgreement;
 
     public EdifactOneWayAgreementResponse getSendAgreement() {

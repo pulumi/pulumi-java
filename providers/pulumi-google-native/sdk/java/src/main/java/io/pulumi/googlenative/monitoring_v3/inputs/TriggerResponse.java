@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The absolute number of time series that must fail the predicate for the condition to be triggered.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -32,7 +32,7 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The percentage of time series that must fail the predicate for the condition to be triggered.
      * 
      */
-    @InputImport(name="percent", required=true)
+    @Import(name="percent", required=true)
       private final Double percent;
 
     public Double getPercent() {

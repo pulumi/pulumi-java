@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
      * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
      * 
      */
-    @InputImport(name="auditIntervalSeconds")
+    @Import(name="auditIntervalSeconds")
       private final @Nullable Output<String> auditIntervalSeconds;
 
     public Output<String> getAuditIntervalSeconds() {
@@ -31,7 +31,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -42,7 +42,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
      * The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
      * 
      */
-    @InputImport(name="exemptableNamespaces")
+    @Import(name="exemptableNamespaces")
       private final @Nullable Output<List<String>> exemptableNamespaces;
 
     public Output<List<String>> getExemptableNamespaces() {
@@ -53,7 +53,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
      * Logs all denies and dry run failures.
      * 
      */
-    @InputImport(name="logDeniesEnabled")
+    @Import(name="logDeniesEnabled")
       private final @Nullable Output<Boolean> logDeniesEnabled;
 
     public Output<Boolean> getLogDeniesEnabled() {
@@ -64,7 +64,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
      * Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated.
      * 
      */
-    @InputImport(name="referentialRulesEnabled")
+    @Import(name="referentialRulesEnabled")
       private final @Nullable Output<Boolean> referentialRulesEnabled;
 
     public Output<Boolean> getReferentialRulesEnabled() {
@@ -75,7 +75,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerGetArgs exte
      * Installs the default template library along with Policy Controller.
      * 
      */
-    @InputImport(name="templateLibraryInstalled")
+    @Import(name="templateLibraryInstalled")
       private final @Nullable Output<Boolean> templateLibraryInstalled;
 
     public Output<Boolean> getTemplateLibraryInstalled() {

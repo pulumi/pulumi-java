@@ -6,13 +6,13 @@ package io.pulumi.awsnative.pinpoint.outputs;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateBodyConfig;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateButtonConfig;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateHeaderConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InAppTemplateInAppMessageContent {
     private final @Nullable String backgroundColor;
     private final @Nullable InAppTemplateBodyConfig bodyConfig;
@@ -21,14 +21,14 @@ public final class InAppTemplateInAppMessageContent {
     private final @Nullable InAppTemplateButtonConfig primaryBtn;
     private final @Nullable InAppTemplateButtonConfig secondaryBtn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InAppTemplateInAppMessageContent(
-        @OutputCustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
-        @OutputCustomType.Parameter("bodyConfig") @Nullable InAppTemplateBodyConfig bodyConfig,
-        @OutputCustomType.Parameter("headerConfig") @Nullable InAppTemplateHeaderConfig headerConfig,
-        @OutputCustomType.Parameter("imageUrl") @Nullable String imageUrl,
-        @OutputCustomType.Parameter("primaryBtn") @Nullable InAppTemplateButtonConfig primaryBtn,
-        @OutputCustomType.Parameter("secondaryBtn") @Nullable InAppTemplateButtonConfig secondaryBtn) {
+        @CustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
+        @CustomType.Parameter("bodyConfig") @Nullable InAppTemplateBodyConfig bodyConfig,
+        @CustomType.Parameter("headerConfig") @Nullable InAppTemplateHeaderConfig headerConfig,
+        @CustomType.Parameter("imageUrl") @Nullable String imageUrl,
+        @CustomType.Parameter("primaryBtn") @Nullable InAppTemplateButtonConfig primaryBtn,
+        @CustomType.Parameter("secondaryBtn") @Nullable InAppTemplateButtonConfig secondaryBtn) {
         this.backgroundColor = backgroundColor;
         this.bodyConfig = bodyConfig;
         this.headerConfig = headerConfig;

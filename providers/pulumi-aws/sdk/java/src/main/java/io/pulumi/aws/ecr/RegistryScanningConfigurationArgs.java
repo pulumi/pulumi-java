@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
      * One or multiple blocks specifying scanning rules to determine which repository filters are used and at what frequency scanning will occur. See below for schema.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<RegistryScanningConfigurationRuleArgs>> rules;
 
     public Output<List<RegistryScanningConfigurationRuleArgs>> getRules() {
@@ -31,7 +31,7 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
      * the scanning type to set for the registry. Can be either `ENHANCED` or `BASIC`.
      * 
      */
-    @InputImport(name="scanType", required=true)
+    @Import(name="scanType", required=true)
       private final Output<String> scanType;
 
     public Output<String> getScanType() {

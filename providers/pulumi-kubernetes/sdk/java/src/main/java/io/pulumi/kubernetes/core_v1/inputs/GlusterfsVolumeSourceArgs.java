@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
-    @InputImport(name="endpoints", required=true)
+    @Import(name="endpoints", required=true)
       private final Output<String> endpoints;
 
     public Output<String> getEndpoints() {
@@ -34,7 +34,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -45,7 +45,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
      * ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {

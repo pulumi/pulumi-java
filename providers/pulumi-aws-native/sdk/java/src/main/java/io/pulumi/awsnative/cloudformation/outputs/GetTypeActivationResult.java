@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationVersionBump;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTypeActivationResult {
     /**
      * The Amazon Resource Name (ARN) of the extension.
@@ -34,12 +34,12 @@ public final class GetTypeActivationResult {
      */
     private final @Nullable TypeActivationVersionBump versionBump;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTypeActivationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("autoUpdate") @Nullable Boolean autoUpdate,
-        @OutputCustomType.Parameter("majorVersion") @Nullable String majorVersion,
-        @OutputCustomType.Parameter("versionBump") @Nullable TypeActivationVersionBump versionBump) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("autoUpdate") @Nullable Boolean autoUpdate,
+        @CustomType.Parameter("majorVersion") @Nullable String majorVersion,
+        @CustomType.Parameter("versionBump") @Nullable TypeActivationVersionBump versionBump) {
         this.arn = arn;
         this.autoUpdate = autoUpdate;
         this.majorVersion = majorVersion;

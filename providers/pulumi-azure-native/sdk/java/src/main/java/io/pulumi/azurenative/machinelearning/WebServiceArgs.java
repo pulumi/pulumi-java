@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServicePropertiesForGraphArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Contains the property payload that describes the web service.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<WebServicePropertiesForGraphArgs> properties;
 
     public Output<WebServicePropertiesForGraphArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group in which the web service is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the web service.
      * 
      */
-    @InputImport(name="webServiceName")
+    @Import(name="webServiceName")
       private final @Nullable Output<String> webServiceName;
 
     public Output<String> getWebServiceName() {

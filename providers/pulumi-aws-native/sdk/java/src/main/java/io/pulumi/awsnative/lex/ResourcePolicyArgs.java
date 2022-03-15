@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex;
 
 import io.pulumi.awsnative.lex.inputs.ResourcePolicyPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<ResourcePolicyPolicyArgs> policy;
 
     public Output<ResourcePolicyPolicyArgs> getPolicy() {
         return this.policy;
     }
 
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

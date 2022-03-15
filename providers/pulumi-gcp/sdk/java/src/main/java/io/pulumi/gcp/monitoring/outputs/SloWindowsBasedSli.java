@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThreshold;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricMeanInRange;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricSumInRange;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSli {
     /**
      * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -64,13 +64,13 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable String windowPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSli(
-        @OutputCustomType.Parameter("goodBadMetricFilter") @Nullable String goodBadMetricFilter,
-        @OutputCustomType.Parameter("goodTotalRatioThreshold") @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold,
-        @OutputCustomType.Parameter("metricMeanInRange") @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange,
-        @OutputCustomType.Parameter("metricSumInRange") @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange,
-        @OutputCustomType.Parameter("windowPeriod") @Nullable String windowPeriod) {
+        @CustomType.Parameter("goodBadMetricFilter") @Nullable String goodBadMetricFilter,
+        @CustomType.Parameter("goodTotalRatioThreshold") @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold,
+        @CustomType.Parameter("metricMeanInRange") @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange,
+        @CustomType.Parameter("metricSumInRange") @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange,
+        @CustomType.Parameter("windowPeriod") @Nullable String windowPeriod) {
         this.goodBadMetricFilter = goodBadMetricFilter;
         this.goodTotalRatioThreshold = goodTotalRatioThreshold;
         this.metricMeanInRange = metricMeanInRange;

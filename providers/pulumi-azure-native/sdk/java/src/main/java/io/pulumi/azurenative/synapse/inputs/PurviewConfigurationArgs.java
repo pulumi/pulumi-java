@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PurviewConfigurationArgs extends io.pulumi.resources.Resource
      * Purview Resource ID
      * 
      */
-    @InputImport(name="purviewResourceId")
+    @Import(name="purviewResourceId")
       private final @Nullable Output<String> purviewResourceId;
 
     public Output<String> getPurviewResourceId() {

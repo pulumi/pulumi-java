@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -39,7 +39,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -61,7 +61,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -83,7 +83,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="trainedModelFilePath", required=true)
+    @Import(name="trainedModelFilePath", required=true)
       private final Output<Object> trainedModelFilePath;
 
     public Output<Object> getTrainedModelFilePath() {
@@ -94,7 +94,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
      * 
      */
-    @InputImport(name="trainedModelLinkedServiceName", required=true)
+    @Import(name="trainedModelLinkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> trainedModelLinkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getTrainedModelLinkedServiceName() {
@@ -105,7 +105,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="trainedModelName", required=true)
+    @Import(name="trainedModelName", required=true)
       private final Output<Object> trainedModelName;
 
     public Output<Object> getTrainedModelName() {
@@ -117,7 +117,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Expected value is 'AzureMLUpdateResource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -128,7 +128,7 @@ public final class AzureMLUpdateResourceActivityArgs extends io.pulumi.resources
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
      * 
      */
-    @InputImport(name="computePlatform")
+    @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
     public Output<String> getComputePlatform() {
@@ -31,7 +31,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * The name of the deployment config.
      * 
      */
-    @InputImport(name="deploymentConfigName", required=true)
+    @Import(name="deploymentConfigName", required=true)
       private final Output<String> deploymentConfigName;
 
     public Output<String> getDeploymentConfigName() {
@@ -42,7 +42,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
      * 
      */
-    @InputImport(name="minimumHealthyHosts")
+    @Import(name="minimumHealthyHosts")
       private final @Nullable Output<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts;
 
     public Output<DeploymentConfigMinimumHealthyHostsArgs> getMinimumHealthyHosts() {
@@ -53,7 +53,7 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
      * A traffic_routing_config block. Traffic Routing Config is documented below.
      * 
      */
-    @InputImport(name="trafficRoutingConfig")
+    @Import(name="trafficRoutingConfig")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig;
 
     public Output<DeploymentConfigTrafficRoutingConfigArgs> getTrafficRoutingConfig() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RollbackConfig {
     /**
      * The revision to rollback to. If set to 0, rollback to the last revision.
@@ -17,8 +17,8 @@ public final class RollbackConfig {
      */
     private final @Nullable Integer revision;
 
-    @OutputCustomType.Constructor
-    private RollbackConfig(@OutputCustomType.Parameter("revision") @Nullable Integer revision) {
+    @CustomType.Constructor
+    private RollbackConfig(@CustomType.Parameter("revision") @Nullable Integer revision) {
         this.revision = revision;
     }
 

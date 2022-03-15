@@ -5,7 +5,7 @@ package io.pulumi.aws.s3;
 
 import io.pulumi.aws.s3.inputs.BucketMetricFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket to put metric configuration.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -30,7 +30,7 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
      * [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketMetricFilterArgs> filter;
 
     public Output<BucketMetricFilterArgs> getFilter() {
@@ -41,7 +41,7 @@ public final class BucketMetricArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier of the metrics configuration for the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestackhci.outputs;
 
 import io.pulumi.azurenative.azurestackhci.outputs.ClusterReportedPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * App id of cluster AAD identity.
@@ -125,30 +125,30 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("aadClientId") String aadClientId,
-        @OutputCustomType.Parameter("aadTenantId") String aadTenantId,
-        @OutputCustomType.Parameter("billingModel") String billingModel,
-        @OutputCustomType.Parameter("cloudId") String cloudId,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastBillingTimestamp") String lastBillingTimestamp,
-        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
-        @OutputCustomType.Parameter("lastSyncTimestamp") String lastSyncTimestamp,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("registrationTimestamp") String registrationTimestamp,
-        @OutputCustomType.Parameter("reportedProperties") @Nullable ClusterReportedPropertiesResponse reportedProperties,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("trialDaysRemaining") Double trialDaysRemaining,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("aadClientId") String aadClientId,
+        @CustomType.Parameter("aadTenantId") String aadTenantId,
+        @CustomType.Parameter("billingModel") String billingModel,
+        @CustomType.Parameter("cloudId") String cloudId,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("createdByType") @Nullable String createdByType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastBillingTimestamp") String lastBillingTimestamp,
+        @CustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @CustomType.Parameter("lastSyncTimestamp") String lastSyncTimestamp,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("registrationTimestamp") String registrationTimestamp,
+        @CustomType.Parameter("reportedProperties") @Nullable ClusterReportedPropertiesResponse reportedProperties,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("trialDaysRemaining") Double trialDaysRemaining,
+        @CustomType.Parameter("type") String type) {
         this.aadClientId = aadClientId;
         this.aadTenantId = aadTenantId;
         this.billingModel = billingModel;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
      * alerted on quickly.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final Output<String> duration;
 
     public Output<String> getDuration() {
@@ -44,7 +44,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
      * Monitoring Query Language query that outputs a boolean stream.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -63,7 +63,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="trigger")
+    @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
 
     public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> getTrigger() {

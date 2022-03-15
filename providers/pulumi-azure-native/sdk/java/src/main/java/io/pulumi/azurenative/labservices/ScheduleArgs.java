@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.labservices.inputs.RecurrencePatternArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab that uniquely identifies it within containing lab account. Used in resource URIs.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -30,7 +30,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Notes for this schedule.
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -41,7 +41,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The recurrence pattern of the scheduled actions.
      * 
      */
-    @InputImport(name="recurrencePattern")
+    @Import(name="recurrencePattern")
       private final @Nullable Output<RecurrencePatternArgs> recurrencePattern;
 
     public Output<RecurrencePatternArgs> getRecurrencePattern() {
@@ -52,7 +52,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the schedule that uniquely identifies it within containing lab. Used in resource URIs.
      * 
      */
-    @InputImport(name="scheduleName")
+    @Import(name="scheduleName")
       private final @Nullable Output<String> scheduleName;
 
     public Output<String> getScheduleName() {
@@ -74,7 +74,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    @InputImport(name="startAt")
+    @Import(name="startAt")
       private final @Nullable Output<String> startAt;
 
     public Output<String> getStartAt() {
@@ -85,7 +85,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    @InputImport(name="stopAt", required=true)
+    @Import(name="stopAt", required=true)
       private final Output<String> stopAt;
 
     public Output<String> getStopAt() {
@@ -96,7 +96,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The IANA timezone id for the schedule.
      * 
      */
-    @InputImport(name="timeZoneId", required=true)
+    @Import(name="timeZoneId", required=true)
       private final Output<String> timeZoneId;
 
     public Output<String> getTimeZoneId() {

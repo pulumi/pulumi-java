@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.BlobEventTypes;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -39,7 +39,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
      */
-    @InputImport(name="blobPathBeginsWith")
+    @Import(name="blobPathBeginsWith")
       private final @Nullable Output<String> blobPathBeginsWith;
 
     public Output<String> getBlobPathBeginsWith() {
@@ -50,7 +50,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
      */
-    @InputImport(name="blobPathEndsWith")
+    @Import(name="blobPathEndsWith")
       private final @Nullable Output<String> blobPathEndsWith;
 
     public Output<String> getBlobPathEndsWith() {
@@ -61,7 +61,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -72,7 +72,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * The type of events that cause this trigger to fire.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final Output<List<Either<String,BlobEventTypes>>> events;
 
     public Output<List<Either<String,BlobEventTypes>>> getEvents() {
@@ -83,7 +83,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * If set to true, blobs with zero bytes will be ignored.
      * 
      */
-    @InputImport(name="ignoreEmptyBlobs")
+    @Import(name="ignoreEmptyBlobs")
       private final @Nullable Output<Boolean> ignoreEmptyBlobs;
 
     public Output<Boolean> getIgnoreEmptyBlobs() {
@@ -94,7 +94,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
@@ -105,7 +105,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * The ARM resource ID of the Storage Account.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -117,7 +117,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'BlobEventsTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

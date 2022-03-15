@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the SAS key.
      * 
      */
-    @InputImport(name="sasKey")
+    @Import(name="sasKey")
       private final @Nullable String sasKey;
 
     public Optional<String> getSasKey() {
@@ -29,7 +29,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the SAS key name.
      * 
      */
-    @InputImport(name="sasKeyName")
+    @Import(name="sasKeyName")
       private final @Nullable String sasKeyName;
 
     public Optional<String> getSasKeyName() {
@@ -40,7 +40,7 @@ public final class ServiceBusAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the authentication type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

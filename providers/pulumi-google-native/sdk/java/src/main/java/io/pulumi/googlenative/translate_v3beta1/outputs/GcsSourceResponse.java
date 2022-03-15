@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.translate_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GcsSourceResponse {
     /**
      * Source data URI. For example, `gs://my_bucket/my_object`.
@@ -15,8 +15,8 @@ public final class GcsSourceResponse {
      */
     private final String inputUri;
 
-    @OutputCustomType.Constructor
-    private GcsSourceResponse(@OutputCustomType.Parameter("inputUri") String inputUri) {
+    @CustomType.Constructor
+    private GcsSourceResponse(@CustomType.Parameter("inputUri") String inputUri) {
         this.inputUri = inputUri;
     }
 

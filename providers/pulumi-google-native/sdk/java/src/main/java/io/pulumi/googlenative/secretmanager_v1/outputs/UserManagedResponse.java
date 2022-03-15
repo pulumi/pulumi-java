@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.ReplicaResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserManagedResponse {
     /**
      * The list of Replicas for this Secret. Cannot be empty.
@@ -16,8 +16,8 @@ public final class UserManagedResponse {
      */
     private final List<ReplicaResponse> replicas;
 
-    @OutputCustomType.Constructor
-    private UserManagedResponse(@OutputCustomType.Parameter("replicas") List<ReplicaResponse> replicas) {
+    @CustomType.Constructor
+    private UserManagedResponse(@CustomType.Parameter("replicas") List<ReplicaResponse> replicas) {
         this.replicas = replicas;
     }
 

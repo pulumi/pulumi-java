@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -52,7 +52,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -63,7 +63,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -96,7 +96,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * The Azure key vault secret reference of password in connection string.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -108,7 +108,7 @@ public final class AmazonRdsForOracleLinkedServiceArgs extends io.pulumi.resourc
      * Expected value is 'AmazonRdsForOracle'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

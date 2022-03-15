@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceParamsResponse {
     /**
      * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
@@ -16,8 +16,8 @@ public final class InstanceParamsResponse {
      */
     private final Map<String,String> resourceManagerTags;
 
-    @OutputCustomType.Constructor
-    private InstanceParamsResponse(@OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags) {
+    @CustomType.Constructor
+    private InstanceParamsResponse(@CustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
     }
 

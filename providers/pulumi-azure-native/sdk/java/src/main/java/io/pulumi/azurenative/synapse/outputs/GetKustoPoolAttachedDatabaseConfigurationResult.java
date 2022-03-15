@@ -5,14 +5,14 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.azurenative.synapse.outputs.TableLevelSharingPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKustoPoolAttachedDatabaseConfigurationResult {
     /**
      * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
@@ -70,19 +70,19 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKustoPoolAttachedDatabaseConfigurationResult(
-        @OutputCustomType.Parameter("attachedDatabaseNames") List<String> attachedDatabaseNames,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("defaultPrincipalsModificationKind") String defaultPrincipalsModificationKind,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tableLevelSharingProperties") @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("attachedDatabaseNames") List<String> attachedDatabaseNames,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("defaultPrincipalsModificationKind") String defaultPrincipalsModificationKind,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tableLevelSharingProperties") @Nullable TableLevelSharingPropertiesResponse tableLevelSharingProperties,
+        @CustomType.Parameter("type") String type) {
         this.attachedDatabaseNames = attachedDatabaseNames;
         this.databaseName = databaseName;
         this.defaultPrincipalsModificationKind = defaultPrincipalsModificationKind;

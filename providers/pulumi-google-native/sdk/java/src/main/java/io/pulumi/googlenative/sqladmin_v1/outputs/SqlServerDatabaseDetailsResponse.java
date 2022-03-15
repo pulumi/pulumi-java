@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlServerDatabaseDetailsResponse {
     /**
      * The version of SQL Server with which the database is to be made compatible
@@ -21,10 +21,10 @@ public final class SqlServerDatabaseDetailsResponse {
      */
     private final String recoveryModel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlServerDatabaseDetailsResponse(
-        @OutputCustomType.Parameter("compatibilityLevel") Integer compatibilityLevel,
-        @OutputCustomType.Parameter("recoveryModel") String recoveryModel) {
+        @CustomType.Parameter("compatibilityLevel") Integer compatibilityLevel,
+        @CustomType.Parameter("recoveryModel") String recoveryModel) {
         this.compatibilityLevel = compatibilityLevel;
         this.recoveryModel = recoveryModel;
     }

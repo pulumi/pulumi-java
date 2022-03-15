@@ -12,7 +12,7 @@ import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StorageAccountPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The value that indicates whether the admin user is enabled.
      * 
      */
-    @OutputExport(name="adminUserEnabled", type=Boolean.class, parameters={})
+    @Export(name="adminUserEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> adminUserEnabled;
 
     /**
@@ -55,7 +55,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The creation date of the container registry in ISO8601 format.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -69,7 +69,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -83,7 +83,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The URL that can be used to log into the container registry.
      * 
      */
-    @OutputExport(name="loginServer", type=String.class, parameters={})
+    @Export(name="loginServer", type=String.class, parameters={})
     private Output<String> loginServer;
 
     /**
@@ -97,7 +97,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The network rule set for a container registry.
      * 
      */
-    @OutputExport(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
+    @Export(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
     private Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet;
 
     /**
@@ -125,7 +125,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The policies for a container registry.
      * 
      */
-    @OutputExport(name="policies", type=PoliciesResponse.class, parameters={})
+    @Export(name="policies", type=PoliciesResponse.class, parameters={})
     private Output</* @Nullable */ PoliciesResponse> policies;
 
     /**
@@ -139,7 +139,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The provisioning state of the container registry at the time the operation was called.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -153,7 +153,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The SKU of the container registry.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -167,7 +167,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The status of the container registry at the time the operation was called.
      * 
      */
-    @OutputExport(name="status", type=StatusResponse.class, parameters={})
+    @Export(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
     /**
@@ -181,7 +181,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The properties of the storage account for the container registry. Only applicable to Classic SKU.
      * 
      */
-    @OutputExport(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
+    @Export(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount;
 
     /**
@@ -195,7 +195,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -209,7 +209,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

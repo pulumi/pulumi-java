@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationGroupClusterMode {
     /**
      * Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
@@ -22,10 +22,10 @@ public final class ReplicationGroupClusterMode {
      */
     private final Integer replicasPerNodeGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationGroupClusterMode(
-        @OutputCustomType.Parameter("numNodeGroups") @Nullable Integer numNodeGroups,
-        @OutputCustomType.Parameter("replicasPerNodeGroup") Integer replicasPerNodeGroup) {
+        @CustomType.Parameter("numNodeGroups") @Nullable Integer numNodeGroups,
+        @CustomType.Parameter("replicasPerNodeGroup") Integer replicasPerNodeGroup) {
         this.numNodeGroups = numNodeGroups;
         this.replicasPerNodeGroup = replicasPerNodeGroup;
     }

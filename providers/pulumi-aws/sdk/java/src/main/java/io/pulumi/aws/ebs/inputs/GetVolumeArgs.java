@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.GetVolumeFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * [describe-volumes in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVolumeFilter> filters;
 
     public List<GetVolumeFilter> getFilters() {
@@ -36,7 +36,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * recent Volume.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -47,7 +47,7 @@ public final class GetVolumeArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

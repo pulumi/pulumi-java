@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.
      * Algorithm to use when creating a CryptoKeyVersion based on this template. For backwards compatibility, GOOGLE_SYMMETRIC_ENCRYPTION is implied if both this field is omitted and CryptoKey.purpose is ENCRYPT_DECRYPT.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -31,7 +31,7 @@ public final class CryptoKeyVersionTemplateResponse extends io.pulumi.resources.
      * ProtectionLevel to use when creating a CryptoKeyVersion based on this template. Immutable. Defaults to SOFTWARE.
      * 
      */
-    @InputImport(name="protectionLevel", required=true)
+    @Import(name="protectionLevel", required=true)
       private final String protectionLevel;
 
     public String getProtectionLevel() {

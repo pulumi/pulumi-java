@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterArgs;
 import io.pulumi.azurenative.machinelearning.inputs.OutputPortArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * Asset's Id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -41,7 +41,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the asset's input ports.
      * 
      */
-    @InputImport(name="inputPorts")
+    @Import(name="inputPorts")
       private final @Nullable Output<Map<String,InputPortArgs>> inputPorts;
 
     public Output<Map<String,InputPortArgs>> getInputPorts() {
@@ -52,7 +52,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * Access information for the asset.
      * 
      */
-    @InputImport(name="locationInfo", required=true)
+    @Import(name="locationInfo", required=true)
       private final Output<BlobLocationArgs> locationInfo;
 
     public Output<BlobLocationArgs> getLocationInfo() {
@@ -63,7 +63,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * If the asset is a custom module, this holds the module's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -74,7 +74,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * Asset's friendly name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the asset's output ports.
      * 
      */
-    @InputImport(name="outputPorts")
+    @Import(name="outputPorts")
       private final @Nullable Output<Map<String,OutputPortArgs>> outputPorts;
 
     public Output<Map<String,OutputPortArgs>> getOutputPorts() {
@@ -96,7 +96,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * If the asset is a custom module, this holds the module's parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
     public Output<List<ModuleAssetParameterArgs>> getParameters() {
@@ -107,7 +107,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * Asset's type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,AssetType>> type;
 
     public Output<Either<String,AssetType>> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
      * IP address of the Kubernetes node.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -33,7 +33,7 @@ public final class KubernetesIPConfigurationResponse extends io.pulumi.resources
      * Port of the Kubernetes node.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final String port;
 
     public String getPort() {

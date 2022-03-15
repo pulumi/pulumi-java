@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmAutomationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
 
     public static final ResponsePlanActionArgs Empty = new ResponsePlanActionArgs();
 
-    @InputImport(name="ssmAutomation")
+    @Import(name="ssmAutomation")
       private final @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
     public Output<ResponsePlanSsmAutomationArgs> getSsmAutomation() {

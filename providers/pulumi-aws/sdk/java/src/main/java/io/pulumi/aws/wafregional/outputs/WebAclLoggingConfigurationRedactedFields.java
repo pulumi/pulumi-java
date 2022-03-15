@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafregional.outputs;
 
 import io.pulumi.aws.wafregional.outputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclLoggingConfigurationRedactedFields {
     /**
      * Set of configuration blocks for fields to redact. Detailed below.
@@ -16,8 +16,8 @@ public final class WebAclLoggingConfigurationRedactedFields {
      */
     private final List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches;
 
-    @OutputCustomType.Constructor
-    private WebAclLoggingConfigurationRedactedFields(@OutputCustomType.Parameter("fieldToMatches") List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
+    @CustomType.Constructor
+    private WebAclLoggingConfigurationRedactedFields(@CustomType.Parameter("fieldToMatches") List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
         this.fieldToMatches = fieldToMatches;
     }
 

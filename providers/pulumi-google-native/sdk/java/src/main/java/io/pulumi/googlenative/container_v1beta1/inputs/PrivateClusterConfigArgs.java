@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.PrivateClusterMasterGlobalAccessConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * Whether the master's internal IP address is used as the cluster endpoint.
      * 
      */
-    @InputImport(name="enablePrivateEndpoint")
+    @Import(name="enablePrivateEndpoint")
       private final @Nullable Output<Boolean> enablePrivateEndpoint;
 
     public Output<Boolean> getEnablePrivateEndpoint() {
@@ -35,7 +35,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * Whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking.
      * 
      */
-    @InputImport(name="enablePrivateNodes")
+    @Import(name="enablePrivateNodes")
       private final @Nullable Output<Boolean> enablePrivateNodes;
 
     public Output<Boolean> getEnablePrivateNodes() {
@@ -46,7 +46,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * Controls master global access settings.
      * 
      */
-    @InputImport(name="masterGlobalAccessConfig")
+    @Import(name="masterGlobalAccessConfig")
       private final @Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
 
     public Output<PrivateClusterMasterGlobalAccessConfigArgs> getMasterGlobalAccessConfig() {
@@ -57,7 +57,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning internal IP addresses to the master or set of masters, as well as the ILB VIP. This range must not overlap with any other ranges in use within the cluster's network.
      * 
      */
-    @InputImport(name="masterIpv4CidrBlock")
+    @Import(name="masterIpv4CidrBlock")
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
     public Output<String> getMasterIpv4CidrBlock() {

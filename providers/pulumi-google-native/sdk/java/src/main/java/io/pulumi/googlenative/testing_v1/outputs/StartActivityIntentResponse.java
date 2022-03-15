@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StartActivityIntentResponse {
     /**
      * Action name. Required for START_ACTIVITY.
@@ -26,11 +26,11 @@ public final class StartActivityIntentResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StartActivityIntentResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("categories") List<String> categories,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("categories") List<String> categories,
+        @CustomType.Parameter("uri") String uri) {
         this.action = action;
         this.categories = categories;
         this.uri = uri;

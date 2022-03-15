@@ -6,13 +6,13 @@ package io.pulumi.aws.connect.outputs;
 import io.pulumi.aws.connect.outputs.QuickConnectQuickConnectConfigPhoneConfig;
 import io.pulumi.aws.connect.outputs.QuickConnectQuickConnectConfigQueueConfig;
 import io.pulumi.aws.connect.outputs.QuickConnectQuickConnectConfigUserConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QuickConnectQuickConnectConfig {
     /**
      * Specifies the phone configuration of the Quick Connect. This is required only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
@@ -35,12 +35,12 @@ public final class QuickConnectQuickConnectConfig {
      */
     private final @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuickConnectQuickConnectConfig(
-        @OutputCustomType.Parameter("phoneConfigs") @Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
-        @OutputCustomType.Parameter("queueConfigs") @Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs,
-        @OutputCustomType.Parameter("quickConnectType") String quickConnectType,
-        @OutputCustomType.Parameter("userConfigs") @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
+        @CustomType.Parameter("phoneConfigs") @Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
+        @CustomType.Parameter("queueConfigs") @Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs,
+        @CustomType.Parameter("quickConnectType") String quickConnectType,
+        @CustomType.Parameter("userConfigs") @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
         this.phoneConfigs = phoneConfigs;
         this.queueConfigs = queueConfigs;
         this.quickConnectType = quickConnectType;

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -48,15 +48,15 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type) {
         this.expirationDate = expirationDate;
         this.id = id;
         this.keyVault = keyVault;

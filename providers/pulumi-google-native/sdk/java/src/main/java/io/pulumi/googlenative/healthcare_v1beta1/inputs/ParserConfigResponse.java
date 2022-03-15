@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SchemaPackageResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Determines whether messages with no header are allowed.
      * 
      */
-    @InputImport(name="allowNullHeader", required=true)
+    @Import(name="allowNullHeader", required=true)
       private final Boolean allowNullHeader;
 
     public Boolean getAllowNullHeader() {
@@ -33,7 +33,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Schemas used to parse messages in this store, if schematized parsing is desired.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final SchemaPackageResponse schema;
 
     public SchemaPackageResponse getSchema() {
@@ -44,7 +44,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
      * 
      */
-    @InputImport(name="segmentTerminator", required=true)
+    @Import(name="segmentTerminator", required=true)
       private final String segmentTerminator;
 
     public String getSegmentTerminator() {
@@ -55,7 +55,7 @@ public final class ParserConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

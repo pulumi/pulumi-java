@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
      * Error code (HResult)
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Integer errorCode;
 
     public Integer getErrorCode() {
@@ -32,7 +32,7 @@ public final class FilesNotTieringErrorResponse extends io.pulumi.resources.Invo
      * Count of files with this error
      * 
      */
-    @InputImport(name="fileCount", required=true)
+    @Import(name="fileCount", required=true)
       private final Double fileCount;
 
     public Double getFileCount() {

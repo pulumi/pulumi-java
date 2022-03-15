@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMMemberArgs;
@@ -53,7 +53,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:pubsub/subscriptionIAMMember:SubscriptionIAMMember")
 public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=SubscriptionIAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=SubscriptionIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ SubscriptionIAMMemberCondition> condition;
 
     public Output</* @Nullable */ SubscriptionIAMMemberCondition> getCondition() {
@@ -63,7 +63,7 @@ public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the subscription's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -73,7 +73,7 @@ public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -84,7 +84,7 @@ public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -101,7 +101,7 @@ public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -117,7 +117,7 @@ public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
      * The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    @OutputExport(name="subscription", type=String.class, parameters={})
+    @Export(name="subscription", type=String.class, parameters={})
     private Output<String> subscription;
 
     /**

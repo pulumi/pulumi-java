@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.VirtualMachineIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineIdentityResponse {
     /**
      * The principal id of virtual machine identity. This property will only be provided for a system assigned identity.
@@ -34,12 +34,12 @@ public final class VirtualMachineIdentityResponse {
      */
     private final @Nullable Map<String,VirtualMachineIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,VirtualMachineIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,VirtualMachineIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

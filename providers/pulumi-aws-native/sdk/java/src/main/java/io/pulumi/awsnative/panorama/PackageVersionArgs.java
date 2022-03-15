@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.panorama;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,42 +15,42 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageVersionArgs Empty = new PackageVersionArgs();
 
-    @InputImport(name="markLatest")
+    @Import(name="markLatest")
       private final @Nullable Output<Boolean> markLatest;
 
     public Output<Boolean> getMarkLatest() {
         return this.markLatest == null ? Output.empty() : this.markLatest;
     }
 
-    @InputImport(name="ownerAccount")
+    @Import(name="ownerAccount")
       private final @Nullable Output<String> ownerAccount;
 
     public Output<String> getOwnerAccount() {
         return this.ownerAccount == null ? Output.empty() : this.ownerAccount;
     }
 
-    @InputImport(name="packageId", required=true)
+    @Import(name="packageId", required=true)
       private final Output<String> packageId;
 
     public Output<String> getPackageId() {
         return this.packageId;
     }
 
-    @InputImport(name="packageVersion", required=true)
+    @Import(name="packageVersion", required=true)
       private final Output<String> packageVersion;
 
     public Output<String> getPackageVersion() {
         return this.packageVersion;
     }
 
-    @InputImport(name="patchVersion", required=true)
+    @Import(name="patchVersion", required=true)
       private final Output<String> patchVersion;
 
     public Output<String> getPatchVersion() {
         return this.patchVersion;
     }
 
-    @InputImport(name="updatedLatestPatchVersion")
+    @Import(name="updatedLatestPatchVersion")
       private final @Nullable Output<String> updatedLatestPatchVersion;
 
     public Output<String> getUpdatedLatestPatchVersion() {

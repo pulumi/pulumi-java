@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * The session content.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<Object> content;
 
     public Output<Object> getContent() {
@@ -31,7 +31,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -42,7 +42,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * The integration account session name.
      * 
      */
-    @InputImport(name="sessionName")
+    @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
 
     public Output<String> getSessionName() {
@@ -75,7 +75,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

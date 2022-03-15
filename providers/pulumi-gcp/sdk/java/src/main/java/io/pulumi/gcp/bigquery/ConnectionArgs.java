@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudSql", required=true)
+    @Import(name="cloudSql", required=true)
       private final Output<ConnectionCloudSqlArgs> cloudSql;
 
     public Output<ConnectionCloudSqlArgs> getCloudSql() {
@@ -31,7 +31,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional connection id that should be assigned to the created connection.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -42,7 +42,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * A descriptive description for the connection
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the connection
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -67,7 +67,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -79,7 +79,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

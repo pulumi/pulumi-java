@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSalesforceConnectorProfileCredentials {
     /**
      * The credentials used to access protected resources.
@@ -33,12 +33,12 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSalesforceConnectorProfileCredentials(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("clientCredentialsArn") @Nullable String clientCredentialsArn,
-        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
-        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("clientCredentialsArn") @Nullable String clientCredentialsArn,
+        @CustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
+        @CustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.clientCredentialsArn = clientCredentialsArn;
         this.connectorOAuthRequest = connectorOAuthRequest;

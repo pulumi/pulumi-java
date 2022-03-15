@@ -4,12 +4,12 @@
 package io.pulumi.aws.guardduty.outputs;
 
 import io.pulumi.aws.guardduty.outputs.DetectorDatasourcesS3Logs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorDatasources {
     /**
      * Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
@@ -17,8 +17,8 @@ public final class DetectorDatasources {
      */
     private final @Nullable DetectorDatasourcesS3Logs s3Logs;
 
-    @OutputCustomType.Constructor
-    private DetectorDatasources(@OutputCustomType.Parameter("s3Logs") @Nullable DetectorDatasourcesS3Logs s3Logs) {
+    @CustomType.Constructor
+    private DetectorDatasources(@CustomType.Parameter("s3Logs") @Nullable DetectorDatasourcesS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 

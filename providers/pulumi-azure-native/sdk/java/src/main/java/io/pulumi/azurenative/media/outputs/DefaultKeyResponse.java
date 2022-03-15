@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultKeyResponse {
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
@@ -22,10 +22,10 @@ public final class DefaultKeyResponse {
      */
     private final @Nullable String policyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultKeyResponse(
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName) {
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("policyName") @Nullable String policyName) {
         this.label = label;
         this.policyName = policyName;
     }

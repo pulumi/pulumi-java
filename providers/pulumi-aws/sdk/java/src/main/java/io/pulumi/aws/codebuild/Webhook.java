@@ -8,7 +8,7 @@ import io.pulumi.aws.codebuild.WebhookArgs;
 import io.pulumi.aws.codebuild.inputs.WebhookState;
 import io.pulumi.aws.codebuild.outputs.WebhookFilterGroup;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
      * 
      */
-    @OutputExport(name="branchFilter", type=String.class, parameters={})
+    @Export(name="branchFilter", type=String.class, parameters={})
     private Output</* @Nullable */ String> branchFilter;
 
     /**
@@ -48,7 +48,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
      * 
      */
-    @OutputExport(name="buildType", type=String.class, parameters={})
+    @Export(name="buildType", type=String.class, parameters={})
     private Output</* @Nullable */ String> buildType;
 
     /**
@@ -62,7 +62,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Information about the webhook's trigger. Filter group blocks are documented below.
      * 
      */
-    @OutputExport(name="filterGroups", type=List.class, parameters={WebhookFilterGroup.class})
+    @Export(name="filterGroups", type=List.class, parameters={WebhookFilterGroup.class})
     private Output</* @Nullable */ List<WebhookFilterGroup>> filterGroups;
 
     /**
@@ -76,7 +76,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The CodeBuild endpoint where webhook events are sent.
      * 
      */
-    @OutputExport(name="payloadUrl", type=String.class, parameters={})
+    @Export(name="payloadUrl", type=String.class, parameters={})
     private Output<String> payloadUrl;
 
     /**
@@ -90,7 +90,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The name of the build project.
      * 
      */
-    @OutputExport(name="projectName", type=String.class, parameters={})
+    @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
     /**
@@ -104,7 +104,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
      * 
      */
-    @OutputExport(name="secret", type=String.class, parameters={})
+    @Export(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
     /**
@@ -118,7 +118,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The URL to the webhook.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

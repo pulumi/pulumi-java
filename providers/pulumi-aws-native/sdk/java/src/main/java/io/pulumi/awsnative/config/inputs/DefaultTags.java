@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.config.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DefaultTags extends io.pulumi.resources.InvokeArgs {
      * A group of tags to set across all resources.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.SecuritySettingArgs;
@@ -24,7 +24,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. The `DLP De-identify Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.
      * 
      */
-    @OutputExport(name="deidentifyTemplate", type=String.class, parameters={})
+    @Export(name="deidentifyTemplate", type=String.class, parameters={})
     private Output<String> deidentifyTemplate;
 
     /**
@@ -38,7 +38,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * The human-readable name of the security settings, unique within the location.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -52,7 +52,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.
      * 
      */
-    @OutputExport(name="insightsExportSettings", type=GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse.class, parameters={})
+    @Export(name="insightsExportSettings", type=GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse> insightsExportSettings;
 
     /**
@@ -66,7 +66,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. The `DLP Inspect Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.
      * 
      */
-    @OutputExport(name="inspectTemplate", type=String.class, parameters={})
+    @Export(name="inspectTemplate", type=String.class, parameters={})
     private Output<String> inspectTemplate;
 
     /**
@@ -80,7 +80,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * List of types of data to remove when retention settings triggers purge.
      * 
      */
-    @OutputExport(name="purgeDataTypes", type=List.class, parameters={String.class})
+    @Export(name="purgeDataTypes", type=List.class, parameters={String.class})
     private Output<List<String>> purgeDataTypes;
 
     /**
@@ -108,7 +108,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * Defines the data for which Dialogflow applies redaction. Dialogflow does not redact data that it does not have access to – for example, Cloud logging.
      * 
      */
-    @OutputExport(name="redactionScope", type=String.class, parameters={})
+    @Export(name="redactionScope", type=String.class, parameters={})
     private Output<String> redactionScope;
 
     /**
@@ -122,7 +122,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * Strategy that defines how we do redaction.
      * 
      */
-    @OutputExport(name="redactionStrategy", type=String.class, parameters={})
+    @Export(name="redactionStrategy", type=String.class, parameters={})
     private Output<String> redactionStrategy;
 
     /**
@@ -136,7 +136,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * Retains data in interaction logging for the specified number of days. This does not apply to Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than Dialogflow's default 365d TTL. Setting a value higher than that has no effect. A missing value or setting to 0 also means we use Dialogflow's default TTL. Note: Interaction logging is a limited access feature. Talk to your Google representative to check availability for you.
      * 
      */
-    @OutputExport(name="retentionWindowDays", type=Integer.class, parameters={})
+    @Export(name="retentionWindowDays", type=Integer.class, parameters={})
     private Output<Integer> retentionWindowDays;
 
     /**

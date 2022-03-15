@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class CertificateOtherNameArgs extends io.pulumi.resources.Resource
 
     public static final CertificateOtherNameArgs Empty = new CertificateOtherNameArgs();
 
-    @InputImport(name="typeId", required=true)
+    @Import(name="typeId", required=true)
       private final Output<String> typeId;
 
     public Output<String> getTypeId() {
         return this.typeId;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

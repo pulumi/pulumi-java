@@ -9,7 +9,7 @@ import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceLambdaConfigArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The API ID for the GraphQL API for the DataSource.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -34,7 +34,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the DataSource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * DynamoDB settings. See below
      * 
      */
-    @InputImport(name="dynamodbConfig")
+    @Import(name="dynamodbConfig")
       private final @Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig;
 
     public Output<DataSourceDynamodbConfigArgs> getDynamodbConfig() {
@@ -56,7 +56,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Elasticsearch settings. See below
      * 
      */
-    @InputImport(name="elasticsearchConfig")
+    @Import(name="elasticsearchConfig")
       private final @Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig;
 
     public Output<DataSourceElasticsearchConfigArgs> getElasticsearchConfig() {
@@ -67,7 +67,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP settings. See below
      * 
      */
-    @InputImport(name="httpConfig")
+    @Import(name="httpConfig")
       private final @Nullable Output<DataSourceHttpConfigArgs> httpConfig;
 
     public Output<DataSourceHttpConfigArgs> getHttpConfig() {
@@ -78,7 +78,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * AWS Lambda settings. See below
      * 
      */
-    @InputImport(name="lambdaConfig")
+    @Import(name="lambdaConfig")
       private final @Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig;
 
     public Output<DataSourceLambdaConfigArgs> getLambdaConfig() {
@@ -89,7 +89,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * A user-supplied name for the DataSource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * AWS RDS settings. See Relational Database Config
      * 
      */
-    @InputImport(name="relationalDatabaseConfig")
+    @Import(name="relationalDatabaseConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig;
 
     public Output<DataSourceRelationalDatabaseConfigArgs> getRelationalDatabaseConfig() {
@@ -111,7 +111,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM service role ARN for the data source.
      * 
      */
-    @InputImport(name="serviceRoleArn")
+    @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
@@ -122,7 +122,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

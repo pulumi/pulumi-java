@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * This translates to the Access-Control-Allow-Credentials response header.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
     public Output<Boolean> getAllowCredentials() {
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * Specifies the content for the Access-Control-Allow-Headers response header.
      * 
      */
-    @InputImport(name="allowHeaders")
+    @Import(name="allowHeaders")
       private final @Nullable Output<List<String>> allowHeaders;
 
     public Output<List<String>> getAllowHeaders() {
@@ -43,7 +43,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * Specifies the content for the Access-Control-Allow-Methods response header.
      * 
      */
-    @InputImport(name="allowMethods")
+    @Import(name="allowMethods")
       private final @Nullable Output<List<String>> allowMethods;
 
     public Output<List<String>> getAllowMethods() {
@@ -55,7 +55,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * This translates to the Access-Control-Allow-Origin response header.
      * 
      */
-    @InputImport(name="allowOrigins")
+    @Import(name="allowOrigins")
       private final @Nullable Output<List<String>> allowOrigins;
 
     public Output<List<String>> getAllowOrigins() {
@@ -66,7 +66,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -77,7 +77,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * Specifies the content for the Access-Control-Allow-Headers response header.
      * 
      */
-    @InputImport(name="exposeHeaders")
+    @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
     public Output<List<String>> getExposeHeaders() {
@@ -92,7 +92,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="maxAge", required=true)
+    @Import(name="maxAge", required=true)
       private final Output<String> maxAge;
 
     public Output<String> getMaxAge() {

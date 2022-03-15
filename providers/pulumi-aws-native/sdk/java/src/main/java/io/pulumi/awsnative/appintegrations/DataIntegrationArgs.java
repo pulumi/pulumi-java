@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appintegrations;
 import io.pulumi.awsnative.appintegrations.inputs.DataIntegrationScheduleConfigArgs;
 import io.pulumi.awsnative.appintegrations.inputs.DataIntegrationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * The data integration description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * The KMS key of the data integration.
      * 
      */
-    @InputImport(name="kmsKey", required=true)
+    @Import(name="kmsKey", required=true)
       private final Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
@@ -43,7 +43,7 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the data integration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the data and how often it should be pulled from the source.
      * 
      */
-    @InputImport(name="scheduleConfig", required=true)
+    @Import(name="scheduleConfig", required=true)
       private final Output<DataIntegrationScheduleConfigArgs> scheduleConfig;
 
     public Output<DataIntegrationScheduleConfigArgs> getScheduleConfig() {
@@ -65,7 +65,7 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * The URI of the data source.
      * 
      */
-    @InputImport(name="sourceURI", required=true)
+    @Import(name="sourceURI", required=true)
       private final Output<String> sourceURI;
 
     public Output<String> getSourceURI() {
@@ -76,7 +76,7 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
      * The tags (keys and values) associated with the data integration.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DataIntegrationTagArgs>> tags;
 
     public Output<List<DataIntegrationTagArgs>> getTags() {

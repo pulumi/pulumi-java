@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkRJobLoggingConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
      */
-    @InputImport(name="archiveUris")
+    @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
     public Output<List<String>> getArchiveUris() {
@@ -32,7 +32,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * Optional. The arguments to pass to the driver. Do not include arguments, such as `--conf`, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -43,7 +43,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
      * 
      */
-    @InputImport(name="fileUris")
+    @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
     public Output<List<String>> getFileUris() {
@@ -54,7 +54,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * Optional. The runtime log config for job execution.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<WorkflowTemplateJobSparkRJobLoggingConfigGetArgs> loggingConfig;
 
     public Output<WorkflowTemplateJobSparkRJobLoggingConfigGetArgs> getLoggingConfig() {
@@ -65,7 +65,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * Required. The HCFS URI of the main R file to use as the driver. Must be a .R file.
      * 
      */
-    @InputImport(name="mainRFileUri", required=true)
+    @Import(name="mainRFileUri", required=true)
       private final Output<String> mainRFileUri;
 
     public Output<String> getMainRFileUri() {
@@ -76,7 +76,7 @@ public final class WorkflowTemplateJobSparkRJobGetArgs extends io.pulumi.resourc
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

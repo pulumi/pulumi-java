@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DsRecordResponse {
     /**
      * The algorithm used to generate the referenced DNSKEY.
@@ -31,12 +31,12 @@ public final class DsRecordResponse {
      */
     private final Integer keyTag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DsRecordResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("digest") String digest,
-        @OutputCustomType.Parameter("digestType") String digestType,
-        @OutputCustomType.Parameter("keyTag") Integer keyTag) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("digest") String digest,
+        @CustomType.Parameter("digestType") String digestType,
+        @CustomType.Parameter("keyTag") Integer keyTag) {
         this.algorithm = algorithm;
         this.digest = digest;
         this.digestType = digestType;

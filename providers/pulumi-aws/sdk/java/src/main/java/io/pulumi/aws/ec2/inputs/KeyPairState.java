@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * The key pair ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * The MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -41,7 +41,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * The name for the key pair.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -52,7 +52,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
      * 
      */
-    @InputImport(name="keyNamePrefix")
+    @Import(name="keyNamePrefix")
       private final @Nullable Output<String> keyNamePrefix;
 
     public Output<String> getKeyNamePrefix() {
@@ -63,7 +63,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * The key pair ID.
      * 
      */
-    @InputImport(name="keyPairId")
+    @Import(name="keyPairId")
       private final @Nullable Output<String> keyPairId;
 
     public Output<String> getKeyPairId() {
@@ -74,7 +74,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * The public key material.
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -85,7 +85,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -96,7 +96,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

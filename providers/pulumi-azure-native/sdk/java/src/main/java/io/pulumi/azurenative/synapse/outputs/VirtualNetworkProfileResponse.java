@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkProfileResponse {
     /**
      * Subnet ID used for computes in workspace
@@ -17,8 +17,8 @@ public final class VirtualNetworkProfileResponse {
      */
     private final @Nullable String computeSubnetId;
 
-    @OutputCustomType.Constructor
-    private VirtualNetworkProfileResponse(@OutputCustomType.Parameter("computeSubnetId") @Nullable String computeSubnetId) {
+    @CustomType.Constructor
+    private VirtualNetworkProfileResponse(@CustomType.Parameter("computeSubnetId") @Nullable String computeSubnetId) {
         this.computeSubnetId = computeSubnetId;
     }
 

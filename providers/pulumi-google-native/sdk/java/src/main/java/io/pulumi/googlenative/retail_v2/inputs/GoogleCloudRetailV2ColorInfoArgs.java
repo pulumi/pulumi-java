@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2ColorInfoArgs extends io.pulumi.resources.
      * The standard color families. Strongly recommended to use the following standard color groups: "Red", "Pink", "Orange", "Yellow", "Purple", "Green", "Cyan", "Blue", "Brown", "White", "Gray", "Black" and "Mixed". Normally it is expected to have only 1 color family. May consider using single "Mixed" instead of multiple values. A maximum of 5 values are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
      * 
      */
-    @InputImport(name="colorFamilies")
+    @Import(name="colorFamilies")
       private final @Nullable Output<List<String>> colorFamilies;
 
     public Output<List<String>> getColorFamilies() {
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2ColorInfoArgs extends io.pulumi.resources.
      * The color display names, which may be different from standard color family names, such as the color aliases used in the website frontend. Normally it is expected to have only 1 color. May consider using single "Mixed" instead of multiple values. A maximum of 25 colors are allowed. Each value must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [color](https://support.google.com/merchants/answer/6324487). Schema.org property [Product.color](https://schema.org/color).
      * 
      */
-    @InputImport(name="colors")
+    @Import(name="colors")
       private final @Nullable Output<List<String>> colors;
 
     public Output<List<String>> getColors() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.outputs.CookieExpirationResponse;
 import io.pulumi.azurenative.web.outputs.LoginRoutesResponse;
 import io.pulumi.azurenative.web.outputs.NonceResponse;
 import io.pulumi.azurenative.web.outputs.TokenStoreResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoginResponse {
     /**
      * External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
@@ -50,14 +50,14 @@ public final class LoginResponse {
      */
     private final @Nullable TokenStoreResponse tokenStore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoginResponse(
-        @OutputCustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
-        @OutputCustomType.Parameter("cookieExpiration") @Nullable CookieExpirationResponse cookieExpiration,
-        @OutputCustomType.Parameter("nonce") @Nullable NonceResponse nonce,
-        @OutputCustomType.Parameter("preserveUrlFragmentsForLogins") @Nullable Boolean preserveUrlFragmentsForLogins,
-        @OutputCustomType.Parameter("routes") @Nullable LoginRoutesResponse routes,
-        @OutputCustomType.Parameter("tokenStore") @Nullable TokenStoreResponse tokenStore) {
+        @CustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
+        @CustomType.Parameter("cookieExpiration") @Nullable CookieExpirationResponse cookieExpiration,
+        @CustomType.Parameter("nonce") @Nullable NonceResponse nonce,
+        @CustomType.Parameter("preserveUrlFragmentsForLogins") @Nullable Boolean preserveUrlFragmentsForLogins,
+        @CustomType.Parameter("routes") @Nullable LoginRoutesResponse routes,
+        @CustomType.Parameter("tokenStore") @Nullable TokenStoreResponse tokenStore) {
         this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
         this.cookieExpiration = cookieExpiration;
         this.nonce = nonce;

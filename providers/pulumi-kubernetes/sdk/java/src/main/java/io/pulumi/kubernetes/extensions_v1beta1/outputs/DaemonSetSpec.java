@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DaemonSetUpdateStrategy;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DaemonSetSpec {
     /**
      * The minimum number of seconds for which a newly created DaemonSet pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready).
@@ -45,14 +45,14 @@ public final class DaemonSetSpec {
      */
     private final @Nullable DaemonSetUpdateStrategy updateStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DaemonSetSpec(
-        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
-        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("template") PodTemplateSpec template,
-        @OutputCustomType.Parameter("templateGeneration") @Nullable Integer templateGeneration,
-        @OutputCustomType.Parameter("updateStrategy") @Nullable DaemonSetUpdateStrategy updateStrategy) {
+        @CustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @CustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("template") PodTemplateSpec template,
+        @CustomType.Parameter("templateGeneration") @Nullable Integer templateGeneration,
+        @CustomType.Parameter("updateStrategy") @Nullable DaemonSetUpdateStrategy updateStrategy) {
         this.minReadySeconds = minReadySeconds;
         this.revisionHistoryLimit = revisionHistoryLimit;
         this.selector = selector;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * Container name where blob inventory files are stored. Must be pre-created.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final String destination;
 
     public String getDestination() {
@@ -34,7 +34,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * Policy is enabled if set to true.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -45,7 +45,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * The storage account blob inventory policy rules. The rule is applied when it is enabled.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<BlobInventoryPolicyRuleResponse> rules;
 
     public List<BlobInventoryPolicyRuleResponse> getRules() {
@@ -56,7 +56,7 @@ public final class BlobInventoryPolicySchemaResponse extends io.pulumi.resources
      * The valid value is Inventory
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

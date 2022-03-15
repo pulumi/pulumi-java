@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GkeClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Information specifying a GKE Cluster. Format is `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}.
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {

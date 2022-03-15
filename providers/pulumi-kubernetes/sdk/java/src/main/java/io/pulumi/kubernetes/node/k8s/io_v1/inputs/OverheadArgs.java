@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
      * PodFixed represents the fixed resource overhead associated with running a pod.
      * 
      */
-    @InputImport(name="podFixed")
+    @Import(name="podFixed")
       private final @Nullable Output<Map<String,String>> podFixed;
 
     public Output<Map<String,String>> getPodFixed() {

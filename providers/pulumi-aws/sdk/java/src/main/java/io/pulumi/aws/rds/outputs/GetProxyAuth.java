@@ -3,23 +3,23 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProxyAuth {
     private final String authScheme;
     private final String description;
     private final String iamAuth;
     private final String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProxyAuth(
-        @OutputCustomType.Parameter("authScheme") String authScheme,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("iamAuth") String iamAuth,
-        @OutputCustomType.Parameter("secretArn") String secretArn) {
+        @CustomType.Parameter("authScheme") String authScheme,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("iamAuth") String iamAuth,
+        @CustomType.Parameter("secretArn") String secretArn) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;

@@ -5,12 +5,12 @@ package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterOpenMonitoringPrometheusJmxExporter;
 import io.pulumi.aws.msk.outputs.ClusterOpenMonitoringPrometheusNodeExporter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterOpenMonitoringPrometheus {
     /**
      * Configuration block for JMX Exporter. See below.
@@ -23,10 +23,10 @@ public final class ClusterOpenMonitoringPrometheus {
      */
     private final @Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterOpenMonitoringPrometheus(
-        @OutputCustomType.Parameter("jmxExporter") @Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter,
-        @OutputCustomType.Parameter("nodeExporter") @Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
+        @CustomType.Parameter("jmxExporter") @Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter,
+        @CustomType.Parameter("nodeExporter") @Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
         this.jmxExporter = jmxExporter;
         this.nodeExporter = nodeExporter;
     }

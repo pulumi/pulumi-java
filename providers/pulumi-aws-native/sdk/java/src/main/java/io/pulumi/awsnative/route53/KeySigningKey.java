@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53.KeySigningKeyArgs;
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * The unique string (ID) used to identify a hosted zone.
      * 
      */
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**
@@ -36,7 +36,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
      * 
      */
-    @OutputExport(name="keyManagementServiceArn", type=String.class, parameters={})
+    @Export(name="keyManagementServiceArn", type=String.class, parameters={})
     private Output<String> keyManagementServiceArn;
 
     /**
@@ -50,7 +50,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
      * A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
      * 
      */
-    @OutputExport(name="status", type=KeySigningKeyStatus.class, parameters={})
+    @Export(name="status", type=KeySigningKeyStatus.class, parameters={})
     private Output<KeySigningKeyStatus> status;
 
     /**

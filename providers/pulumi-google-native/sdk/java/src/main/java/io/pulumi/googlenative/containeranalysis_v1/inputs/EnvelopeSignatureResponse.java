@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
 
     public static final EnvelopeSignatureResponse Empty = new EnvelopeSignatureResponse();
 
-    @InputImport(name="keyid", required=true)
+    @Import(name="keyid", required=true)
       private final String keyid;
 
     public String getKeyid() {
         return this.keyid;
     }
 
-    @InputImport(name="sig", required=true)
+    @Import(name="sig", required=true)
       private final String sig;
 
     public String getSig() {

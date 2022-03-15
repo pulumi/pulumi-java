@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.PolicyArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookArgs;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Policy defines the policy for selecting which events should be sent to the webhook required
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<PolicyArgs> policy;
 
     public Output<PolicyArgs> getPolicy() {
@@ -33,7 +33,7 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Webhook to send events required
      * 
      */
-    @InputImport(name="webhook", required=true)
+    @Import(name="webhook", required=true)
       private final Output<WebhookArgs> webhook;
 
     public Output<WebhookArgs> getWebhook() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SourceRegistryCredentialsResponse extends io.pulumi.resources
      * the source registry during the run.
      * 
      */
-    @InputImport(name="loginMode")
+    @Import(name="loginMode")
       private final @Nullable String loginMode;
 
     public Optional<String> getLoginMode() {

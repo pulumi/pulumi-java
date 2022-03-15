@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
      * ARN of the behavior graph that the member account is accepting the invitation for.
      * 
      */
-    @InputImport(name="graphArn", required=true)
+    @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
 
     public Output<String> getGraphArn() {

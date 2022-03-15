@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
     /**
      * The queryParameterMatch matches if the value of the parameter exactly matches
@@ -76,16 +76,16 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
      */
     private final @Nullable String suffixMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch(
-        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("invertMatch") @Nullable Boolean invertMatch,
-        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
-        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
-        @OutputCustomType.Parameter("rangeMatch") @Nullable RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch rangeMatch,
-        @OutputCustomType.Parameter("regexMatch") @Nullable String regexMatch,
-        @OutputCustomType.Parameter("suffixMatch") @Nullable String suffixMatch) {
+        @CustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("invertMatch") @Nullable Boolean invertMatch,
+        @CustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @CustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
+        @CustomType.Parameter("rangeMatch") @Nullable RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch rangeMatch,
+        @CustomType.Parameter("regexMatch") @Nullable String regexMatch,
+        @CustomType.Parameter("suffixMatch") @Nullable String suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;

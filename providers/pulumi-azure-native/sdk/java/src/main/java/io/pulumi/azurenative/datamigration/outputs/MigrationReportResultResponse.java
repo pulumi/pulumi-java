@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrationReportResultResponse {
     /**
      * Migration validation result identifier
@@ -20,10 +20,10 @@ public final class MigrationReportResultResponse {
      */
     private final String reportUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationReportResultResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("reportUrl") String reportUrl) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("reportUrl") String reportUrl) {
         this.id = id;
         this.reportUrl = reportUrl;
     }

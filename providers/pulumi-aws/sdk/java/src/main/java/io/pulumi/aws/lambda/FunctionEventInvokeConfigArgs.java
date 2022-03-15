@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * Configuration block with destination configuration. See below for details.
      * 
      */
-    @InputImport(name="destinationConfig")
+    @Import(name="destinationConfig")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigArgs> destinationConfig;
 
     public Output<FunctionEventInvokeConfigDestinationConfigArgs> getDestinationConfig() {
@@ -31,7 +31,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -42,7 +42,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
      * 
      */
-    @InputImport(name="maximumEventAgeInSeconds")
+    @Import(name="maximumEventAgeInSeconds")
       private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
     public Output<Integer> getMaximumEventAgeInSeconds() {
@@ -53,7 +53,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
      * 
      */
-    @InputImport(name="maximumRetryAttempts")
+    @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
     public Output<Integer> getMaximumRetryAttempts() {
@@ -64,7 +64,7 @@ public final class FunctionEventInvokeConfigArgs extends io.pulumi.resources.Res
      * Lambda Function published version, `$LATEST`, or Lambda Alias name.
      * 
      */
-    @InputImport(name="qualifier")
+    @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
     public Output<String> getQualifier() {

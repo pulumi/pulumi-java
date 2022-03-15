@@ -5,7 +5,7 @@ package io.pulumi.aws.devicefarm.inputs;
 
 import io.pulumi.aws.devicefarm.inputs.DevicePoolRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name of this Device Pool
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * The device pool's description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * The number of devices that Device Farm can add to your device pool.
      * 
      */
-    @InputImport(name="maxDevices")
+    @Import(name="maxDevices")
       private final @Nullable Output<Integer> maxDevices;
 
     public Output<Integer> getMaxDevices() {
@@ -55,7 +55,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * The name of the Device Pool
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the project for the device pool.
      * 
      */
-    @InputImport(name="projectArn")
+    @Import(name="projectArn")
       private final @Nullable Output<String> projectArn;
 
     public Output<String> getProjectArn() {
@@ -77,7 +77,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * The device pool's rules. See Rule.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<DevicePoolRuleGetArgs>> rules;
 
     public Output<List<DevicePoolRuleGetArgs>> getRules() {
@@ -88,7 +88,7 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,14 +99,14 @@ public final class DevicePoolState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

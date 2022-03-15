@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobRestoreRangeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BlobRestoreParametersResponse {
     /**
      * Blob ranges to restore.
@@ -22,10 +22,10 @@ public final class BlobRestoreParametersResponse {
      */
     private final String timeToRestore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobRestoreParametersResponse(
-        @OutputCustomType.Parameter("blobRanges") List<BlobRestoreRangeResponse> blobRanges,
-        @OutputCustomType.Parameter("timeToRestore") String timeToRestore) {
+        @CustomType.Parameter("blobRanges") List<BlobRestoreRangeResponse> blobRanges,
+        @CustomType.Parameter("timeToRestore") String timeToRestore) {
         this.blobRanges = blobRanges;
         this.timeToRestore = timeToRestore;
     }

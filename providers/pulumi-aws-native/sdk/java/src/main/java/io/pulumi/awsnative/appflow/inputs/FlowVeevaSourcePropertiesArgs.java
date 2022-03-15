@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
 
     public static final FlowVeevaSourcePropertiesArgs Empty = new FlowVeevaSourcePropertiesArgs();
 
-    @InputImport(name="documentType")
+    @Import(name="documentType")
       private final @Nullable Output<String> documentType;
 
     public Output<String> getDocumentType() {
         return this.documentType == null ? Output.empty() : this.documentType;
     }
 
-    @InputImport(name="includeAllVersions")
+    @Import(name="includeAllVersions")
       private final @Nullable Output<Boolean> includeAllVersions;
 
     public Output<Boolean> getIncludeAllVersions() {
         return this.includeAllVersions == null ? Output.empty() : this.includeAllVersions;
     }
 
-    @InputImport(name="includeRenditions")
+    @Import(name="includeRenditions")
       private final @Nullable Output<Boolean> includeRenditions;
 
     public Output<Boolean> getIncludeRenditions() {
         return this.includeRenditions == null ? Output.empty() : this.includeRenditions;
     }
 
-    @InputImport(name="includeSourceFiles")
+    @Import(name="includeSourceFiles")
       private final @Nullable Output<Boolean> includeSourceFiles;
 
     public Output<Boolean> getIncludeSourceFiles() {
         return this.includeSourceFiles == null ? Output.empty() : this.includeSourceFiles;
     }
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {

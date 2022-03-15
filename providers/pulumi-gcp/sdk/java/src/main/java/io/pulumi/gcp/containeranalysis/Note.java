@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.containeranalysis.NoteArgs;
@@ -60,7 +60,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="attestationAuthority", type=NoteAttestationAuthority.class, parameters={})
+    @Export(name="attestationAuthority", type=NoteAttestationAuthority.class, parameters={})
     private Output<NoteAttestationAuthority> attestationAuthority;
 
     /**
@@ -83,7 +83,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The time this note was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -97,7 +97,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Time of expiration for this note. Leave empty if note does not expire.
      * 
      */
-    @OutputExport(name="expirationTime", type=String.class, parameters={})
+    @Export(name="expirationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationTime;
 
     /**
@@ -111,7 +111,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The type of analysis this note describes
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -125,7 +125,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A detailed description of the note
      * 
      */
-    @OutputExport(name="longDescription", type=String.class, parameters={})
+    @Export(name="longDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> longDescription;
 
     /**
@@ -139,7 +139,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The name of the note.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -169,7 +169,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Names of other notes related to this note.
      * 
      */
-    @OutputExport(name="relatedNoteNames", type=List.class, parameters={String.class})
+    @Export(name="relatedNoteNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> relatedNoteNames;
 
     /**
@@ -184,7 +184,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="relatedUrls", type=List.class, parameters={NoteRelatedUrl.class})
+    @Export(name="relatedUrls", type=List.class, parameters={NoteRelatedUrl.class})
     private Output</* @Nullable */ List<NoteRelatedUrl>> relatedUrls;
 
     /**
@@ -199,7 +199,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A one sentence description of the note.
      * 
      */
-    @OutputExport(name="shortDescription", type=String.class, parameters={})
+    @Export(name="shortDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> shortDescription;
 
     /**
@@ -213,7 +213,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The time this note was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.ResourceRecordResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.SslSettingsResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainMappingResult {
     /**
      * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
@@ -28,11 +28,11 @@ public final class GetDomainMappingResult {
      */
     private final SslSettingsResponse sslSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainMappingResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
-        @OutputCustomType.Parameter("sslSettings") SslSettingsResponse sslSettings) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
+        @CustomType.Parameter("sslSettings") SslSettingsResponse sslSettings) {
         this.name = name;
         this.resourceRecords = resourceRecords;
         this.sslSettings = sslSettings;

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteRequestParameter {
     /**
      * Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
@@ -21,10 +21,10 @@ public final class RouteRequestParameter {
      */
     private final Boolean required;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteRequestParameter(
-        @OutputCustomType.Parameter("requestParameterKey") String requestParameterKey,
-        @OutputCustomType.Parameter("required") Boolean required) {
+        @CustomType.Parameter("requestParameterKey") String requestParameterKey,
+        @CustomType.Parameter("required") Boolean required) {
         this.requestParameterKey = requestParameterKey;
         this.required = required;
     }

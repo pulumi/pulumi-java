@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.WidgetResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TileResponse {
     /**
      * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
@@ -36,13 +36,13 @@ public final class TileResponse {
      */
     private final Integer yPos;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TileResponse(
-        @OutputCustomType.Parameter("height") Integer height,
-        @OutputCustomType.Parameter("widget") WidgetResponse widget,
-        @OutputCustomType.Parameter("width") Integer width,
-        @OutputCustomType.Parameter("xPos") Integer xPos,
-        @OutputCustomType.Parameter("yPos") Integer yPos) {
+        @CustomType.Parameter("height") Integer height,
+        @CustomType.Parameter("widget") WidgetResponse widget,
+        @CustomType.Parameter("width") Integer width,
+        @CustomType.Parameter("xPos") Integer xPos,
+        @CustomType.Parameter("yPos") Integer yPos) {
         this.height = height;
         this.widget = widget;
         this.width = width;

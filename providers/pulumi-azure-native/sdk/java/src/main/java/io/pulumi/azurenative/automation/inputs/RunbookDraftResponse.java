@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.inputs.RunbookParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the creation time of the runbook draft.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable String creationTime;
 
     public Optional<String> getCreationTime() {
@@ -34,7 +34,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the draft runbook content link.
      * 
      */
-    @InputImport(name="draftContentLink")
+    @Import(name="draftContentLink")
       private final @Nullable ContentLinkResponse draftContentLink;
 
     public Optional<ContentLinkResponse> getDraftContentLink() {
@@ -45,7 +45,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets whether runbook is in edit mode.
      * 
      */
-    @InputImport(name="inEdit")
+    @Import(name="inEdit")
       private final @Nullable Boolean inEdit;
 
     public Optional<Boolean> getInEdit() {
@@ -56,7 +56,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the last modified time of the runbook draft.
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable String lastModifiedTime;
 
     public Optional<String> getLastModifiedTime() {
@@ -67,7 +67,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the runbook output types.
      * 
      */
-    @InputImport(name="outputTypes")
+    @Import(name="outputTypes")
       private final @Nullable List<String> outputTypes;
 
     public List<String> getOutputTypes() {
@@ -78,7 +78,7 @@ public final class RunbookDraftResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the runbook draft parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,RunbookParameterResponse> parameters;
 
     public Map<String,RunbookParameterResponse> getParameters() {

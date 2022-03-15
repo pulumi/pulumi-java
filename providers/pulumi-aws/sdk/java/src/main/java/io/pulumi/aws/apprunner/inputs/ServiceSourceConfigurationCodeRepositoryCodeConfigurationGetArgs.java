@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetA
      * Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
      * 
      */
-    @InputImport(name="codeConfigurationValues")
+    @Import(name="codeConfigurationValues")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> codeConfigurationValues;
 
     public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValuesGetArgs> getCodeConfigurationValues() {
@@ -30,7 +30,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetA
      * The source of the App Runner configuration. Valid values: `REPOSITORY`, `API`. Values are interpreted as follows:
      * 
      */
-    @InputImport(name="configurationSource", required=true)
+    @Import(name="configurationSource", required=true)
       private final Output<String> configurationSource;
 
     public Output<String> getConfigurationSource() {

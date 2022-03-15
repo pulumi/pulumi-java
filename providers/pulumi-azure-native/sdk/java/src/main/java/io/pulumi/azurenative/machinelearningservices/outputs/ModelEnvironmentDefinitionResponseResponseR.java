@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.RCranPackageResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.RGitHubPackageResponseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelEnvironmentDefinitionResponseResponseR {
     /**
      * The packages from Bioconductor.
@@ -57,16 +57,16 @@ public final class ModelEnvironmentDefinitionResponseResponseR {
      */
     private final @Nullable Boolean userManaged;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponseR(
-        @OutputCustomType.Parameter("bioConductorPackages") @Nullable List<String> bioConductorPackages,
-        @OutputCustomType.Parameter("cranPackages") @Nullable List<RCranPackageResponse> cranPackages,
-        @OutputCustomType.Parameter("customUrlPackages") @Nullable List<String> customUrlPackages,
-        @OutputCustomType.Parameter("gitHubPackages") @Nullable List<RGitHubPackageResponseResponse> gitHubPackages,
-        @OutputCustomType.Parameter("rVersion") @Nullable String rVersion,
-        @OutputCustomType.Parameter("rscriptPath") @Nullable String rscriptPath,
-        @OutputCustomType.Parameter("snapshotDate") @Nullable String snapshotDate,
-        @OutputCustomType.Parameter("userManaged") @Nullable Boolean userManaged) {
+        @CustomType.Parameter("bioConductorPackages") @Nullable List<String> bioConductorPackages,
+        @CustomType.Parameter("cranPackages") @Nullable List<RCranPackageResponse> cranPackages,
+        @CustomType.Parameter("customUrlPackages") @Nullable List<String> customUrlPackages,
+        @CustomType.Parameter("gitHubPackages") @Nullable List<RGitHubPackageResponseResponse> gitHubPackages,
+        @CustomType.Parameter("rVersion") @Nullable String rVersion,
+        @CustomType.Parameter("rscriptPath") @Nullable String rscriptPath,
+        @CustomType.Parameter("snapshotDate") @Nullable String snapshotDate,
+        @CustomType.Parameter("userManaged") @Nullable Boolean userManaged) {
         this.bioConductorPackages = bioConductorPackages;
         this.cranPackages = cranPackages;
         this.customUrlPackages = customUrlPackages;

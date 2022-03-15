@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
      * Name of this SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class SBSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The billing tier of this particular SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

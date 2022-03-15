@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Name of the blueprint artifact.
      * 
      */
-    @InputImport(name="artifactName")
+    @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
     public Output<String> getArtifactName() {
@@ -31,7 +31,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Name of the blueprint definition.
      * 
      */
-    @InputImport(name="blueprintName", required=true)
+    @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
     public Output<String> getBlueprintName() {
@@ -42,7 +42,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<String>> dependsOn;
 
     public Output<List<String>> getDependsOn() {
@@ -53,7 +53,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Multi-line explain this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * One-liner string explain this resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -76,7 +76,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Expected value is 'roleAssignment'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -87,7 +87,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
      * 
      */
-    @InputImport(name="principalIds", required=true)
+    @Import(name="principalIds", required=true)
       private final Output<Object> principalIds;
 
     public Output<Object> getPrincipalIds() {
@@ -98,7 +98,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -109,7 +109,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
     public Output<String> getResourceScope() {
@@ -120,7 +120,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * Azure resource ID of the RoleDefinition.
      * 
      */
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {

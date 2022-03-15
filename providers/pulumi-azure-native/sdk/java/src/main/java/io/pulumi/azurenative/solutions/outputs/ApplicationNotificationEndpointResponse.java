@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationNotificationEndpointResponse {
     /**
      * The managed application notification endpoint uri.
@@ -15,8 +15,8 @@ public final class ApplicationNotificationEndpointResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
-    private ApplicationNotificationEndpointResponse(@OutputCustomType.Parameter("uri") String uri) {
+    @CustomType.Constructor
+    private ApplicationNotificationEndpointResponse(@CustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AzureClusterAuthorizationArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterFleetArgs;
@@ -23,7 +23,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -34,7 +34,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    @InputImport(name="authorization", required=true)
+    @Import(name="authorization", required=true)
       private final Output<AzureClusterAuthorizationArgs> authorization;
 
     public Output<AzureClusterAuthorizationArgs> getAuthorization() {
@@ -45,7 +45,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
      * 
      */
-    @InputImport(name="azureRegion", required=true)
+    @Import(name="azureRegion", required=true)
       private final Output<String> azureRegion;
 
     public Output<String> getAzureRegion() {
@@ -56,7 +56,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/<project-number>/locations/<region>/azureClients/<client-id>`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
      * 
      */
-    @InputImport(name="client", required=true)
+    @Import(name="client", required=true)
       private final Output<String> client;
 
     public Output<String> getClient() {
@@ -67,7 +67,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Configuration related to the cluster control plane.
      * 
      */
-    @InputImport(name="controlPlane", required=true)
+    @Import(name="controlPlane", required=true)
       private final Output<AzureClusterControlPlaneArgs> controlPlane;
 
     public Output<AzureClusterControlPlaneArgs> getControlPlane() {
@@ -78,7 +78,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Fleet configuration.
      * 
      */
-    @InputImport(name="fleet", required=true)
+    @Import(name="fleet", required=true)
       private final Output<AzureClusterFleetArgs> fleet;
 
     public Output<AzureClusterFleetArgs> getFleet() {
@@ -100,7 +100,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -111,7 +111,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of this resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -122,7 +122,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Cluster-wide networking configuration.
      * 
      */
-    @InputImport(name="networking", required=true)
+    @Import(name="networking", required=true)
       private final Output<AzureClusterNetworkingArgs> networking;
 
     public Output<AzureClusterNetworkingArgs> getNetworking() {
@@ -133,7 +133,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
      * 
      */
-    @InputImport(name="resourceGroupId", required=true)
+    @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
     public Output<String> getResourceGroupId() {

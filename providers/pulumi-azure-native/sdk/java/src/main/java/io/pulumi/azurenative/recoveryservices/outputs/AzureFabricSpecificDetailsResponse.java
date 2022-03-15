@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFabricSpecificDetailsResponse {
     /**
      * The container Ids for the Azure fabric.
@@ -29,11 +29,11 @@ public final class AzureFabricSpecificDetailsResponse {
      */
     private final @Nullable String location;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFabricSpecificDetailsResponse(
-        @OutputCustomType.Parameter("containerIds") @Nullable List<String> containerIds,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("location") @Nullable String location) {
+        @CustomType.Parameter("containerIds") @Nullable List<String> containerIds,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("location") @Nullable String location) {
         this.containerIds = containerIds;
         this.instanceType = instanceType;
         this.location = location;

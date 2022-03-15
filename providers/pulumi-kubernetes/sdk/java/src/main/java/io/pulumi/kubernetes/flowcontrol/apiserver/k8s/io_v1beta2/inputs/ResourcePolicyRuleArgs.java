@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * `apiGroups` is a list of matching API groups and may not be empty. "*" matches all API groups and, if present, must be the only entry. Required.
      * 
      */
-    @InputImport(name="apiGroups", required=true)
+    @Import(name="apiGroups", required=true)
       private final Output<List<String>> apiGroups;
 
     public Output<List<String>> getApiGroups() {
@@ -35,7 +35,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * `clusterScope` indicates whether to match requests that do not specify a namespace (which happens either because the resource is not namespaced or the request targets all namespaces). If this field is omitted or false then the `namespaces` field must contain a non-empty list.
      * 
      */
-    @InputImport(name="clusterScope")
+    @Import(name="clusterScope")
       private final @Nullable Output<Boolean> clusterScope;
 
     public Output<Boolean> getClusterScope() {
@@ -46,7 +46,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * `namespaces` is a list of target namespaces that restricts matches.  A request that specifies a target namespace matches only if either (a) this list contains that target namespace or (b) this list contains "*".  Note that "*" matches any specified namespace but does not match a request that _does not specify_ a namespace (see the `clusterScope` field for that). This list may be empty, but only if `clusterScope` is true.
      * 
      */
-    @InputImport(name="namespaces")
+    @Import(name="namespaces")
       private final @Nullable Output<List<String>> namespaces;
 
     public Output<List<String>> getNamespaces() {
@@ -57,7 +57,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * `resources` is a list of matching resources (i.e., lowercase and plural) with, if desired, subresource.  For example, [ "services", "nodes/status" ].  This list may not be empty. "*" matches all resources and, if present, must be the only entry. Required.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
@@ -68,7 +68,7 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs and, if present, must be the only entry. Required.
      * 
      */
-    @InputImport(name="verbs", required=true)
+    @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
     public Output<List<String>> getVerbs() {

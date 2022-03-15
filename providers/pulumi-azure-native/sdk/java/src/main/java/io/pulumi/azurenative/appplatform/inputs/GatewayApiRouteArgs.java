@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * A description, will be applied to methods in the generated OpenAPI documentation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * To modify the request before sending it to the target endpoint, or the received response.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable Output<List<String>> filters;
 
     public Output<List<String>> getFilters() {
@@ -47,7 +47,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * Route processing order.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -58,7 +58,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * A number of conditions to evaluate a route for each request. Each predicate may be evaluated against request headers and parameter values. All of the predicates associated with a route must evaluate to true for the route to be matched to the request.
      * 
      */
-    @InputImport(name="predicates")
+    @Import(name="predicates")
       private final @Nullable Output<List<String>> predicates;
 
     public Output<List<String>> getPredicates() {
@@ -69,7 +69,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * Enable sso validation.
      * 
      */
-    @InputImport(name="ssoEnabled")
+    @Import(name="ssoEnabled")
       private final @Nullable Output<Boolean> ssoEnabled;
 
     public Output<Boolean> getSsoEnabled() {
@@ -80,7 +80,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * Classification tags, will be applied to methods in the generated OpenAPI documentation.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -91,7 +91,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * A title, will be applied to methods in the generated OpenAPI documentation.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -102,7 +102,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * Pass currently-authenticated user's identity token to application service, default is 'false'
      * 
      */
-    @InputImport(name="tokenRelay")
+    @Import(name="tokenRelay")
       private final @Nullable Output<Boolean> tokenRelay;
 
     public Output<Boolean> getTokenRelay() {
@@ -113,7 +113,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * Full uri, will override `appName`.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

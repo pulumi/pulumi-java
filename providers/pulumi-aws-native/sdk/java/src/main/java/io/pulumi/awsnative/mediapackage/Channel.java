@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediapackage.outputs.ChannelHlsIngest;
 import io.pulumi.awsnative.mediapackage.outputs.ChannelLogConfiguration;
 import io.pulumi.awsnative.mediapackage.outputs.ChannelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned to the Channel.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A short text description of the Channel.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -53,7 +53,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The configuration parameters for egress access logging.
      * 
      */
-    @OutputExport(name="egressAccessLogs", type=ChannelLogConfiguration.class, parameters={})
+    @Export(name="egressAccessLogs", type=ChannelLogConfiguration.class, parameters={})
     private Output</* @Nullable */ ChannelLogConfiguration> egressAccessLogs;
 
     /**
@@ -67,7 +67,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A short text description of the Channel.
      * 
      */
-    @OutputExport(name="hlsIngest", type=ChannelHlsIngest.class, parameters={})
+    @Export(name="hlsIngest", type=ChannelHlsIngest.class, parameters={})
     private Output<ChannelHlsIngest> hlsIngest;
 
     /**
@@ -81,7 +81,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The configuration parameters for egress access logging.
      * 
      */
-    @OutputExport(name="ingressAccessLogs", type=ChannelLogConfiguration.class, parameters={})
+    @Export(name="ingressAccessLogs", type=ChannelLogConfiguration.class, parameters={})
     private Output</* @Nullable */ ChannelLogConfiguration> ingressAccessLogs;
 
     /**
@@ -95,7 +95,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ChannelTag.class})
+    @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
     /**

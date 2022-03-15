@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2transitgateway.RouteTablePropagationArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.RouteTablePropagationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class RouteTablePropagation extends io.pulumi.resources.CustomResource {
      * Identifier of the resource
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -46,7 +46,7 @@ public class RouteTablePropagation extends io.pulumi.resources.CustomResource {
      * Type of the resource
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
@@ -60,7 +60,7 @@ public class RouteTablePropagation extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
@@ -74,7 +74,7 @@ public class RouteTablePropagation extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @OutputExport(name="transitGatewayRouteTableId", type=String.class, parameters={})
+    @Export(name="transitGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> transitGatewayRouteTableId;
 
     /**

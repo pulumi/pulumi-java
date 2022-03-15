@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricStreamTag {
     /**
      * A unique identifier for the tag.
@@ -22,10 +22,10 @@ public final class MetricStreamTag {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricStreamTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

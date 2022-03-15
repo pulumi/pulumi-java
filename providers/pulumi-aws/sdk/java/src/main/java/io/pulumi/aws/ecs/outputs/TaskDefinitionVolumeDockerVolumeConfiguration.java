@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolumeDockerVolumeConfiguration {
     /**
      * If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
@@ -39,13 +39,13 @@ public final class TaskDefinitionVolumeDockerVolumeConfiguration {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolumeDockerVolumeConfiguration(
-        @OutputCustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
-        @OutputCustomType.Parameter("driver") @Nullable String driver,
-        @OutputCustomType.Parameter("driverOpts") @Nullable Map<String,String> driverOpts,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("scope") @Nullable String scope) {
+        @CustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
+        @CustomType.Parameter("driver") @Nullable String driver,
+        @CustomType.Parameter("driverOpts") @Nullable Map<String,String> driverOpts,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("scope") @Nullable String scope) {
         this.autoprovision = autoprovision;
         this.driver = driver;
         this.driverOpts = driverOpts;

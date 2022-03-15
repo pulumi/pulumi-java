@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * The unique identifier of this training phrase.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that you want to annotate, and the `entity_type`, `alias`, and `user_defined` fields are all set.
      * 
      */
-    @InputImport(name="parts", required=true)
+    @Import(name="parts", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> getParts() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * Optional. Indicates how many times this example was added to the intent. Each time a developer adds an existing sample by editing an intent or training, this counter is increased.
      * 
      */
-    @InputImport(name="timesAddedCount", required=true)
+    @Import(name="timesAddedCount", required=true)
       private final Integer timesAddedCount;
 
     public Integer getTimesAddedCount() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse exte
      * The type of the training phrase.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

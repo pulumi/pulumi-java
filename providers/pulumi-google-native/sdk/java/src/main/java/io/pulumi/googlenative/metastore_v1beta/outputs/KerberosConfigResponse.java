@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KerberosConfigResponse {
     /**
      * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
@@ -26,11 +26,11 @@ public final class KerberosConfigResponse {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KerberosConfigResponse(
-        @OutputCustomType.Parameter("keytab") SecretResponse keytab,
-        @OutputCustomType.Parameter("krb5ConfigGcsUri") String krb5ConfigGcsUri,
-        @OutputCustomType.Parameter("principal") String principal) {
+        @CustomType.Parameter("keytab") SecretResponse keytab,
+        @CustomType.Parameter("krb5ConfigGcsUri") String krb5ConfigGcsUri,
+        @CustomType.Parameter("principal") String principal) {
         this.keytab = keytab;
         this.krb5ConfigGcsUri = krb5ConfigGcsUri;
         this.principal = principal;

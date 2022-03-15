@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
      * Number of CPUs per node.
      * 
      */
-    @InputImport(name="cpuCount", required=true)
+    @Import(name="cpuCount", required=true)
       private final Output<Integer> cpuCount;
 
     public Output<Integer> getCpuCount() {
@@ -28,7 +28,7 @@ public final class InstanceNodeConfigGetArgs extends io.pulumi.resources.Resourc
      * Memory size in Mebibytes for each memcache node.
      * 
      */
-    @InputImport(name="memorySizeMb", required=true)
+    @Import(name="memorySizeMb", required=true)
       private final Output<Integer> memorySizeMb;
 
     public Output<Integer> getMemorySizeMb() {

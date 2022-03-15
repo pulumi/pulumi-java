@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing EC2 configurations for connecting to the EFS File System.
      * 
      */
-    @InputImport(name="ec2Config")
+    @Import(name="ec2Config")
       private final @Nullable Output<EfsLocationEc2ConfigGetArgs> ec2Config;
 
     public Output<EfsLocationEc2ConfigGetArgs> getEc2Config() {
@@ -42,7 +42,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of EFS File System.
      * 
      */
-    @InputImport(name="efsFileSystemArn")
+    @Import(name="efsFileSystemArn")
       private final @Nullable Output<String> efsFileSystemArn;
 
     public Output<String> getEfsFileSystemArn() {
@@ -53,7 +53,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * Subdirectory to perform actions as source or destination. Default `/`.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -64,7 +64,7 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,14 +75,14 @@ public final class EfsLocationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

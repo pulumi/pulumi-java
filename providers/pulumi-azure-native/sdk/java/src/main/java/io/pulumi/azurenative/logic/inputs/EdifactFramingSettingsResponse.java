@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The character encoding.
      * 
      */
-    @InputImport(name="characterEncoding")
+    @Import(name="characterEncoding")
       private final @Nullable String characterEncoding;
 
     public Optional<String> getCharacterEncoding() {
@@ -34,7 +34,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The EDIFACT frame setting characterSet.
      * 
      */
-    @InputImport(name="characterSet", required=true)
+    @Import(name="characterSet", required=true)
       private final String characterSet;
 
     public String getCharacterSet() {
@@ -45,7 +45,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The component separator.
      * 
      */
-    @InputImport(name="componentSeparator", required=true)
+    @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
 
     public Integer getComponentSeparator() {
@@ -56,7 +56,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The data element separator.
      * 
      */
-    @InputImport(name="dataElementSeparator", required=true)
+    @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
 
     public Integer getDataElementSeparator() {
@@ -67,7 +67,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The EDIFACT frame setting decimal indicator.
      * 
      */
-    @InputImport(name="decimalPointIndicator", required=true)
+    @Import(name="decimalPointIndicator", required=true)
       private final String decimalPointIndicator;
 
     public String getDecimalPointIndicator() {
@@ -78,7 +78,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The protocol version.
      * 
      */
-    @InputImport(name="protocolVersion", required=true)
+    @Import(name="protocolVersion", required=true)
       private final Integer protocolVersion;
 
     public Integer getProtocolVersion() {
@@ -89,7 +89,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The release indicator.
      * 
      */
-    @InputImport(name="releaseIndicator", required=true)
+    @Import(name="releaseIndicator", required=true)
       private final Integer releaseIndicator;
 
     public Integer getReleaseIndicator() {
@@ -100,7 +100,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The repetition separator.
      * 
      */
-    @InputImport(name="repetitionSeparator", required=true)
+    @Import(name="repetitionSeparator", required=true)
       private final Integer repetitionSeparator;
 
     public Integer getRepetitionSeparator() {
@@ -111,7 +111,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The segment terminator.
      * 
      */
-    @InputImport(name="segmentTerminator", required=true)
+    @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
 
     public Integer getSegmentTerminator() {
@@ -122,7 +122,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The EDIFACT frame setting segment terminator suffix.
      * 
      */
-    @InputImport(name="segmentTerminatorSuffix", required=true)
+    @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
 
     public String getSegmentTerminatorSuffix() {
@@ -133,7 +133,7 @@ public final class EdifactFramingSettingsResponse extends io.pulumi.resources.In
      * The service code list directory version.
      * 
      */
-    @InputImport(name="serviceCodeListDirectoryVersion")
+    @Import(name="serviceCodeListDirectoryVersion")
       private final @Nullable String serviceCodeListDirectoryVersion;
 
     public Optional<String> getServiceCodeListDirectoryVersion() {

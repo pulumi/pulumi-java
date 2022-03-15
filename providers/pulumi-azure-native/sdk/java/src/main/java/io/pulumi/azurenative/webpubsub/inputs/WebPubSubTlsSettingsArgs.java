@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
      * Request client certificate during TLS handshake if enabled
      * 
      */
-    @InputImport(name="clientCertEnabled")
+    @Import(name="clientCertEnabled")
       private final @Nullable Output<Boolean> clientCertEnabled;
 
     public Output<Boolean> getClientCertEnabled() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.worklink.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FleetNetwork {
     /**
      * A list of security group IDs associated with access to the provided subnets.
@@ -26,11 +26,11 @@ public final class FleetNetwork {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetNetwork(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Condition {
     /**
      * lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
@@ -43,14 +43,14 @@ public final class Condition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Condition(
-        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.observedGeneration = observedGeneration;

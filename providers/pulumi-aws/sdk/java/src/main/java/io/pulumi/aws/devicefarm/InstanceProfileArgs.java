@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * The description of the instance profile.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * An array of strings that specifies the list of app packages that should not be cleaned up from the device after a test run.
      * 
      */
-    @InputImport(name="excludeAppPackagesFromCleanups")
+    @Import(name="excludeAppPackagesFromCleanups")
       private final @Nullable Output<List<String>> excludeAppPackagesFromCleanups;
 
     public Output<List<String>> getExcludeAppPackagesFromCleanups() {
@@ -43,7 +43,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * The name for the instance profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * When set to `true`, Device Farm removes app packages after a test run. The default value is `false` for private devices.
      * 
      */
-    @InputImport(name="packageCleanup")
+    @Import(name="packageCleanup")
       private final @Nullable Output<Boolean> packageCleanup;
 
     public Output<Boolean> getPackageCleanup() {
@@ -65,7 +65,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * When set to `true`, Device Farm reboots the instance after a test run. The default value is `true`.
      * 
      */
-    @InputImport(name="rebootAfterUse")
+    @Import(name="rebootAfterUse")
       private final @Nullable Output<Boolean> rebootAfterUse;
 
     public Output<Boolean> getRebootAfterUse() {
@@ -76,7 +76,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

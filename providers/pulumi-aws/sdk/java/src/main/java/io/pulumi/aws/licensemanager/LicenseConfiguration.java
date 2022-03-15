@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.licensemanager.LicenseConfigurationArgs;
 import io.pulumi.aws.licensemanager.inputs.LicenseConfigurationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -49,7 +49,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * The license configuration ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Description of the license configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Number of licenses managed by the license configuration.
      * 
      */
-    @OutputExport(name="licenseCount", type=Integer.class, parameters={})
+    @Export(name="licenseCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> licenseCount;
 
     /**
@@ -91,7 +91,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Sets the number of available licenses as a hard limit.
      * 
      */
-    @OutputExport(name="licenseCountHardLimit", type=Boolean.class, parameters={})
+    @Export(name="licenseCountHardLimit", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> licenseCountHardLimit;
 
     /**
@@ -105,7 +105,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
      * 
      */
-    @OutputExport(name="licenseCountingType", type=String.class, parameters={})
+    @Export(name="licenseCountingType", type=String.class, parameters={})
     private Output<String> licenseCountingType;
 
     /**
@@ -119,7 +119,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Array of configured License Manager rules.
      * 
      */
-    @OutputExport(name="licenseRules", type=List.class, parameters={String.class})
+    @Export(name="licenseRules", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> licenseRules;
 
     /**
@@ -133,7 +133,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Name of the license configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -147,7 +147,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * Account ID of the owner of the license configuration.
      * 
      */
-    @OutputExport(name="ownerAccountId", type=String.class, parameters={})
+    @Export(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
     /**
@@ -161,7 +161,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -175,7 +175,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.GalleryImageVersionStorageProfileRe
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -52,7 +52,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -80,7 +80,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * The publishing profile of a gallery image Version.
      * 
      */
-    @OutputExport(name="publishingProfile", type=GalleryImageVersionPublishingProfileResponse.class, parameters={})
+    @Export(name="publishingProfile", type=GalleryImageVersionPublishingProfileResponse.class, parameters={})
     private Output</* @Nullable */ GalleryImageVersionPublishingProfileResponse> publishingProfile;
 
     /**
@@ -94,7 +94,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * This is the replication status of the gallery image version.
      * 
      */
-    @OutputExport(name="replicationStatus", type=ReplicationStatusResponse.class, parameters={})
+    @Export(name="replicationStatus", type=ReplicationStatusResponse.class, parameters={})
     private Output<ReplicationStatusResponse> replicationStatus;
 
     /**
@@ -108,7 +108,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * This is the storage profile of a Gallery Image Version.
      * 
      */
-    @OutputExport(name="storageProfile", type=GalleryImageVersionStorageProfileResponse.class, parameters={})
+    @Export(name="storageProfile", type=GalleryImageVersionStorageProfileResponse.class, parameters={})
     private Output<GalleryImageVersionStorageProfileResponse> storageProfile;
 
     /**
@@ -122,7 +122,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class GalleryImageVersion extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * Exec resource
      * 
      */
-    @InputImport(name="exec")
+    @Import(name="exec")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> getExec() {
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * A remote or local source.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> getFile() {
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * Package resource
      * 
      */
-    @InputImport(name="pkg")
+    @Import(name="pkg")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> getPkg() {
@@ -66,7 +66,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * Package repository resource
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> getRepository() {

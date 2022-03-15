@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * The cluster control plane logging configuration for your cluster.
      * 
      */
-    @InputImport(name="clusterLogging")
+    @Import(name="clusterLogging")
       private final @Nullable Output<ClusterLoggingArgs> clusterLogging;
 
     public Output<ClusterLoggingArgs> getClusterLogging() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
      * Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -29,7 +29,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
      * Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
      * 
      */
-    @InputImport(name="mfaDelete")
+    @Import(name="mfaDelete")
       private final @Nullable Output<Boolean> mfaDelete;
 
     public Output<Boolean> getMfaDelete() {

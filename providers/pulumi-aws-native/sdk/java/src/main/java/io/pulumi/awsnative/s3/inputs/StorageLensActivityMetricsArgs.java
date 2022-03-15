@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
      * Specifies whether activity metrics are enabled or disabled.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
      * Error condition this handler applies to.
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final String errorCode;
 
     public String getErrorCode() {
@@ -31,7 +31,7 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
      * MIME type of file. Defaults to text/html.
      * 
      */
-    @InputImport(name="mimeType", required=true)
+    @Import(name="mimeType", required=true)
       private final String mimeType;
 
     public String getMimeType() {
@@ -42,7 +42,7 @@ public final class ErrorHandlerResponse extends io.pulumi.resources.InvokeArgs {
      * Static file content to be served for this error.
      * 
      */
-    @InputImport(name="staticFile", required=true)
+    @Import(name="staticFile", required=true)
       private final String staticFile;
 
     public String getStaticFile() {

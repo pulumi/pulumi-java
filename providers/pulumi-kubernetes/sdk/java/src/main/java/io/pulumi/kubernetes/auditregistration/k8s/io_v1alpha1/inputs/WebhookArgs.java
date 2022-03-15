@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookThrottleConfigArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * ClientConfig holds the connection parameters for the webhook required
      * 
      */
-    @InputImport(name="clientConfig", required=true)
+    @Import(name="clientConfig", required=true)
       private final Output<WebhookClientConfigArgs> clientConfig;
 
     public Output<WebhookClientConfigArgs> getClientConfig() {
@@ -34,7 +34,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Throttle holds the options for throttling the webhook
      * 
      */
-    @InputImport(name="throttle")
+    @Import(name="throttle")
       private final @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
     public Output<WebhookThrottleConfigArgs> getThrottle() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.FuotaTaskArgs;
 import io.pulumi.awsnative.iotwireless.outputs.FuotaTaskLoRaWAN;
 import io.pulumi.awsnative.iotwireless.outputs.FuotaTaskTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * FUOTA task arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * Multicast group to associate. Only for update request.
      * 
      */
-    @OutputExport(name="associateMulticastGroup", type=String.class, parameters={})
+    @Export(name="associateMulticastGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> associateMulticastGroup;
 
     /**
@@ -52,7 +52,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * Wireless device to associate. Only for update request.
      * 
      */
-    @OutputExport(name="associateWirelessDevice", type=String.class, parameters={})
+    @Export(name="associateWirelessDevice", type=String.class, parameters={})
     private Output</* @Nullable */ String> associateWirelessDevice;
 
     /**
@@ -66,7 +66,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * FUOTA task description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * Multicast group to disassociate. Only for update request.
      * 
      */
-    @OutputExport(name="disassociateMulticastGroup", type=String.class, parameters={})
+    @Export(name="disassociateMulticastGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> disassociateMulticastGroup;
 
     /**
@@ -94,7 +94,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * Wireless device to disassociate. Only for update request.
      * 
      */
-    @OutputExport(name="disassociateWirelessDevice", type=String.class, parameters={})
+    @Export(name="disassociateWirelessDevice", type=String.class, parameters={})
     private Output</* @Nullable */ String> disassociateWirelessDevice;
 
     /**
@@ -108,7 +108,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * FUOTA task firmware update image binary S3 link
      * 
      */
-    @OutputExport(name="firmwareUpdateImage", type=String.class, parameters={})
+    @Export(name="firmwareUpdateImage", type=String.class, parameters={})
     private Output<String> firmwareUpdateImage;
 
     /**
@@ -122,7 +122,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * FUOTA task firmware IAM role for reading S3
      * 
      */
-    @OutputExport(name="firmwareUpdateRole", type=String.class, parameters={})
+    @Export(name="firmwareUpdateRole", type=String.class, parameters={})
     private Output<String> firmwareUpdateRole;
 
     /**
@@ -136,7 +136,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * FUOTA task status. Returned after successful read.
      * 
      */
-    @OutputExport(name="fuotaTaskStatus", type=String.class, parameters={})
+    @Export(name="fuotaTaskStatus", type=String.class, parameters={})
     private Output<String> fuotaTaskStatus;
 
     /**
@@ -150,7 +150,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * FUOTA task LoRaWAN
      * 
      */
-    @OutputExport(name="loRaWAN", type=FuotaTaskLoRaWAN.class, parameters={})
+    @Export(name="loRaWAN", type=FuotaTaskLoRaWAN.class, parameters={})
     private Output<FuotaTaskLoRaWAN> loRaWAN;
 
     /**
@@ -164,7 +164,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * Name of FUOTA task
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -178,7 +178,7 @@ public class FuotaTask extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the FUOTA task.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FuotaTaskTag.class})
+    @Export(name="tags", type=List.class, parameters={FuotaTaskTag.class})
     private Output</* @Nullable */ List<FuotaTaskTag>> tags;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.ContainerType;
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
      * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
      * 
      */
-    @InputImport(name="containerImageNames")
+    @Import(name="containerImageNames")
       private final @Nullable Output<List<String>> containerImageNames;
 
     public Output<List<String>> getContainerImageNames() {
@@ -32,14 +32,14 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
      * If any images must be downloaded from a private registry which requires credentials, then those credentials must be provided here.
      * 
      */
-    @InputImport(name="containerRegistries")
+    @Import(name="containerRegistries")
       private final @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
 
     public Output<List<ContainerRegistryArgs>> getContainerRegistries() {
         return this.containerRegistries == null ? Output.empty() : this.containerRegistries;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<ContainerType> type;
 
     public Output<ContainerType> getType() {

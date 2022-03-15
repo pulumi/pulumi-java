@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sourcerepo.RepositoryArgs;
@@ -46,7 +46,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The repo name may contain slashes. eg, `name/with/slash`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -79,7 +79,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="pubsubConfigs", type=List.class, parameters={RepositoryPubsubConfig.class})
+    @Export(name="pubsubConfigs", type=List.class, parameters={RepositoryPubsubConfig.class})
     private Output</* @Nullable */ List<RepositoryPubsubConfig>> pubsubConfigs;
 
     /**
@@ -95,7 +95,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The disk usage of the repo, in bytes.
      * 
      */
-    @OutputExport(name="size", type=Integer.class, parameters={})
+    @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
@@ -109,7 +109,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * URL to clone the repository from Google Cloud Source Repositories.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.WsdlServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WsdlDefinitionResponse {
     /**
      * The WSDL content
@@ -33,12 +33,12 @@ public final class WsdlDefinitionResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WsdlDefinitionResponse(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("importMethod") @Nullable String importMethod,
-        @OutputCustomType.Parameter("service") @Nullable WsdlServiceResponse service,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("importMethod") @Nullable String importMethod,
+        @CustomType.Parameter("service") @Nullable WsdlServiceResponse service,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.content = content;
         this.importMethod = importMethod;
         this.service = service;

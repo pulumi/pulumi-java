@@ -9,7 +9,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DashboardArgs Empty = new DashboardArgs();
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
         return this.awsAccountId;
     }
 
-    @InputImport(name="dashboardId", required=true)
+    @Import(name="dashboardId", required=true)
       private final Output<String> dashboardId;
 
     public Output<String> getDashboardId() {
         return this.dashboardId;
     }
 
-    @InputImport(name="dashboardPublishOptions")
+    @Import(name="dashboardPublishOptions")
       private final @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
 
     public Output<DashboardPublishOptionsArgs> getDashboardPublishOptions() {
@@ -45,14 +45,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The display name of the dashboard.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<DashboardParametersArgs> parameters;
 
     public Output<DashboardParametersArgs> getParameters() {
@@ -67,14 +67,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      *         <p>To specify no permissions, omit the permissions list.</p>
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
 
     public Output<List<DashboardResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Output.empty() : this.permissions;
     }
 
-    @InputImport(name="sourceEntity", required=true)
+    @Import(name="sourceEntity", required=true)
       private final Output<DashboardSourceEntityArgs> sourceEntity;
 
     public Output<DashboardSourceEntityArgs> getSourceEntity() {
@@ -86,7 +86,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      *             dashboard.</p>
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DashboardTagArgs>> tags;
 
     public Output<List<DashboardTagArgs>> getTags() {
@@ -100,7 +100,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      *             dashboard.</p>
      * 
      */
-    @InputImport(name="themeArn")
+    @Import(name="themeArn")
       private final @Nullable Output<String> themeArn;
 
     public Output<String> getThemeArn() {
@@ -111,7 +111,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A description for the first version of the dashboard being created.</p>
      * 
      */
-    @InputImport(name="versionDescription")
+    @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
     public Output<String> getVersionDescription() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.outputs.FargateProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFargateProfileResult {
     private final @Nullable String arn;
     /**
@@ -20,10 +20,10 @@ public final class GetFargateProfileResult {
      */
     private final @Nullable List<FargateProfileTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFargateProfileResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<FargateProfileTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<FargateProfileTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }

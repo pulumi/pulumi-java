@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
      * The source file.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<FileReferenceArgs> content;
 
     public Output<FileReferenceArgs> getContent() {
@@ -33,7 +33,7 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
      * Where to put the content on the device. Must be an absolute, allowlisted path. If the file exists, it will be replaced. The following device-side directories and any of their subdirectories are allowlisted: ${EXTERNAL_STORAGE}, /sdcard, or /storage ${ANDROID_DATA}/local/tmp, or /data/local/tmp Specifying a path outside of these directory trees is invalid. The paths /sdcard and /data will be made available and treated as implicit path substitutions. E.g. if /sdcard on a particular device does not map to external storage, the system will replace it with the external storage path prefix for that device and copy the file there. It is strongly advised to use the Environment API in app and test code to access files on the device in a portable way.
      * 
      */
-    @InputImport(name="devicePath", required=true)
+    @Import(name="devicePath", required=true)
       private final Output<String> devicePath;
 
     public Output<String> getDevicePath() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * Represent the identity type: systemAssigned, userAssigned, None
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
 
     public Output<Either<String,ManagedIdentityType>> getType() {
@@ -37,7 +37,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * Get or set the user assigned identities
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

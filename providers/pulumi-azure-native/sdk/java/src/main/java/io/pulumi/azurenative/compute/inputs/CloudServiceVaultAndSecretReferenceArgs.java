@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
 
     public static final CloudServiceVaultAndSecretReferenceArgs Empty = new CloudServiceVaultAndSecretReferenceArgs();
 
-    @InputImport(name="secretUrl")
+    @Import(name="secretUrl")
       private final @Nullable Output<String> secretUrl;
 
     public Output<String> getSecretUrl() {
         return this.secretUrl == null ? Output.empty() : this.secretUrl;
     }
 
-    @InputImport(name="sourceVault")
+    @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
 
     public Output<SubResourceArgs> getSourceVault() {

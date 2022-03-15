@@ -9,14 +9,14 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceBlogConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluencePageConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceSpaceConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluenceConfiguration {
     private final @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration;
     private final @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration;
@@ -29,18 +29,18 @@ public final class DataSourceConfluenceConfiguration {
     private final DataSourceConfluenceVersion version;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfluenceConfiguration(
-        @OutputCustomType.Parameter("attachmentConfiguration") @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration,
-        @OutputCustomType.Parameter("blogConfiguration") @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration,
-        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
-        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
-        @OutputCustomType.Parameter("pageConfiguration") @Nullable DataSourceConfluencePageConfiguration pageConfiguration,
-        @OutputCustomType.Parameter("secretArn") String secretArn,
-        @OutputCustomType.Parameter("serverUrl") String serverUrl,
-        @OutputCustomType.Parameter("spaceConfiguration") @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration,
-        @OutputCustomType.Parameter("version") DataSourceConfluenceVersion version,
-        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @CustomType.Parameter("attachmentConfiguration") @Nullable DataSourceConfluenceAttachmentConfiguration attachmentConfiguration,
+        @CustomType.Parameter("blogConfiguration") @Nullable DataSourceConfluenceBlogConfiguration blogConfiguration,
+        @CustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @CustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @CustomType.Parameter("pageConfiguration") @Nullable DataSourceConfluencePageConfiguration pageConfiguration,
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("serverUrl") String serverUrl,
+        @CustomType.Parameter("spaceConfiguration") @Nullable DataSourceConfluenceSpaceConfiguration spaceConfiguration,
+        @CustomType.Parameter("version") DataSourceConfluenceVersion version,
+        @CustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.attachmentConfiguration = attachmentConfiguration;
         this.blogConfiguration = blogConfiguration;
         this.exclusionPatterns = exclusionPatterns;

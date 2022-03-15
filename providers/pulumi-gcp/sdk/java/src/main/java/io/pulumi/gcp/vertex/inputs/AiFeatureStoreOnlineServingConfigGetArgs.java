@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AiFeatureStoreOnlineServingConfigGetArgs extends io.pulumi.re
      * The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
      * 
      */
-    @InputImport(name="fixedNodeCount", required=true)
+    @Import(name="fixedNodeCount", required=true)
       private final Output<Integer> fixedNodeCount;
 
     public Output<Integer> getFixedNodeCount() {

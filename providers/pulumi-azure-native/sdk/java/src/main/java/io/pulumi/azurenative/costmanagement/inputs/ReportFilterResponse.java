@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportComparisonExpressionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * The logical "AND" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="and")
+    @Import(name="and")
       private final @Nullable List<ReportFilterResponse> and;
 
     public List<ReportFilterResponse> getAnd() {
@@ -34,7 +34,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * Has comparison expression for a dimension
      * 
      */
-    @InputImport(name="dimension")
+    @Import(name="dimension")
       private final @Nullable ReportComparisonExpressionResponse dimension;
 
     public Optional<ReportComparisonExpressionResponse> getDimension() {
@@ -45,7 +45,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * The logical "NOT" expression.
      * 
      */
-    @InputImport(name="not")
+    @Import(name="not")
       private final @Nullable ReportFilterResponse not;
 
     public Optional<ReportFilterResponse> getNot() {
@@ -56,7 +56,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * The logical "OR" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="or")
+    @Import(name="or")
       private final @Nullable List<ReportFilterResponse> or;
 
     public List<ReportFilterResponse> getOr() {
@@ -67,7 +67,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * Has comparison expression for a tag
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable ReportComparisonExpressionResponse tag;
 
     public Optional<ReportComparisonExpressionResponse> getTag() {

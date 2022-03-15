@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatchExpr {
     /**
      * Textual representation of an expression in Common Expression Language syntax.
@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleMatchExpr {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyRuleMatchExpr(@OutputCustomType.Parameter("expression") String expression) {
+    @CustomType.Constructor
+    private SecurityPolicyRuleMatchExpr(@CustomType.Parameter("expression") String expression) {
         this.expression = expression;
     }
 

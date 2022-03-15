@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.GetReleaseLabelsFilters;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GetReleaseLabelsArgs extends io.pulumi.resources.InvokeArgs {
      * Filters the results of the request. Prefix specifies the prefix of release labels to return. Application specifies the application (with/without version) of release labels to return. See Filters.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable GetReleaseLabelsFilters filters;
 
     public Optional<GetReleaseLabelsFilters> getFilters() {

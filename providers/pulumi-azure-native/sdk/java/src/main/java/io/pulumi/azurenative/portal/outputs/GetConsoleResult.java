@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.ConsolePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConsoleResult {
     /**
      * Cloud shell console properties.
@@ -15,8 +15,8 @@ public final class GetConsoleResult {
      */
     private final ConsolePropertiesResponse properties;
 
-    @OutputCustomType.Constructor
-    private GetConsoleResult(@OutputCustomType.Parameter("properties") ConsolePropertiesResponse properties) {
+    @CustomType.Constructor
+    private GetConsoleResult(@CustomType.Parameter("properties") ConsolePropertiesResponse properties) {
         this.properties = properties;
     }
 

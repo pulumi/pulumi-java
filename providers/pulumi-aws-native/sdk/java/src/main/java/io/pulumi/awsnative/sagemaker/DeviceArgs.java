@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.DeviceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The Edge Device you want to register against a device fleet
      * 
      */
-    @InputImport(name="device")
+    @Import(name="device")
       private final @Nullable Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
     public Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> getDevice() {
@@ -31,7 +31,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the edge device fleet
      * 
      */
-    @InputImport(name="deviceFleetName", required=true)
+    @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
 
     public Output<String> getDeviceFleetName() {
@@ -42,7 +42,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Associate tags with the resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DeviceTagArgs>> tags;
 
     public Output<List<DeviceTagArgs>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobHttpTargetOidcTokenArgs extends io.pulumi.resources.Resour
      * the URI specified in target will be used.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -31,7 +31,7 @@ public final class JobHttpTargetOidcTokenArgs extends io.pulumi.resources.Resour
      * The service account must be within the same project as the job.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {

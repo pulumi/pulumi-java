@@ -5,14 +5,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtProtectedDiskDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMwareCbtMigrationDetailsResponse {
     /**
      * The data mover RunAs account Id.
@@ -101,25 +101,25 @@ public final class VMwareCbtMigrationDetailsResponse {
      */
     private final String vmwareMachineId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMwareCbtMigrationDetailsResponse(
-        @OutputCustomType.Parameter("dataMoverRunAsAccountId") String dataMoverRunAsAccountId,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("lastRecoveryPointReceived") String lastRecoveryPointReceived,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("migrationRecoveryPointId") String migrationRecoveryPointId,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("protectedDisks") @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
-        @OutputCustomType.Parameter("snapshotRunAsAccountId") String snapshotRunAsAccountId,
-        @OutputCustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
-        @OutputCustomType.Parameter("targetBootDiagnosticsStorageAccountId") @Nullable String targetBootDiagnosticsStorageAccountId,
-        @OutputCustomType.Parameter("targetLocation") String targetLocation,
-        @OutputCustomType.Parameter("targetNetworkId") @Nullable String targetNetworkId,
-        @OutputCustomType.Parameter("targetResourceGroupId") @Nullable String targetResourceGroupId,
-        @OutputCustomType.Parameter("targetVmName") @Nullable String targetVmName,
-        @OutputCustomType.Parameter("targetVmSize") @Nullable String targetVmSize,
-        @OutputCustomType.Parameter("vmNics") @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
-        @OutputCustomType.Parameter("vmwareMachineId") String vmwareMachineId) {
+        @CustomType.Parameter("dataMoverRunAsAccountId") String dataMoverRunAsAccountId,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("lastRecoveryPointReceived") String lastRecoveryPointReceived,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("migrationRecoveryPointId") String migrationRecoveryPointId,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("protectedDisks") @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
+        @CustomType.Parameter("snapshotRunAsAccountId") String snapshotRunAsAccountId,
+        @CustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
+        @CustomType.Parameter("targetBootDiagnosticsStorageAccountId") @Nullable String targetBootDiagnosticsStorageAccountId,
+        @CustomType.Parameter("targetLocation") String targetLocation,
+        @CustomType.Parameter("targetNetworkId") @Nullable String targetNetworkId,
+        @CustomType.Parameter("targetResourceGroupId") @Nullable String targetResourceGroupId,
+        @CustomType.Parameter("targetVmName") @Nullable String targetVmName,
+        @CustomType.Parameter("targetVmSize") @Nullable String targetVmSize,
+        @CustomType.Parameter("vmNics") @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
+        @CustomType.Parameter("vmwareMachineId") String vmwareMachineId) {
         this.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
         this.instanceType = instanceType;
         this.lastRecoveryPointReceived = lastRecoveryPointReceived;

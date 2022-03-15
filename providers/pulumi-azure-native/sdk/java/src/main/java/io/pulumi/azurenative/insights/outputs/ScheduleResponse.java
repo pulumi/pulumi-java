@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleResponse {
     /**
      * frequency (in minutes) at which rule condition should be evaluated.
@@ -20,10 +20,10 @@ public final class ScheduleResponse {
      */
     private final Integer timeWindowInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleResponse(
-        @OutputCustomType.Parameter("frequencyInMinutes") Integer frequencyInMinutes,
-        @OutputCustomType.Parameter("timeWindowInMinutes") Integer timeWindowInMinutes) {
+        @CustomType.Parameter("frequencyInMinutes") Integer frequencyInMinutes,
+        @CustomType.Parameter("timeWindowInMinutes") Integer timeWindowInMinutes) {
         this.frequencyInMinutes = frequencyInMinutes;
         this.timeWindowInMinutes = timeWindowInMinutes;
     }

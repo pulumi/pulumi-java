@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicenetworking;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of VPC network connected with service producers using VPC peering.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -31,7 +31,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * is already established will not reallocate already provisioned service producer subnetworks.
      * 
      */
-    @InputImport(name="reservedPeeringRanges", required=true)
+    @Import(name="reservedPeeringRanges", required=true)
       private final Output<List<String>> reservedPeeringRanges;
 
     public Output<List<String>> getReservedPeeringRanges() {
@@ -44,7 +44,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 'servicenetworking.googleapis.com'.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

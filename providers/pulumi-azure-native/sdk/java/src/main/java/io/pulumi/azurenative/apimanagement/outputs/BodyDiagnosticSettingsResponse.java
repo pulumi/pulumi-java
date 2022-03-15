@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BodyDiagnosticSettingsResponse {
     /**
      * Number of request body bytes to log.
@@ -17,8 +17,8 @@ public final class BodyDiagnosticSettingsResponse {
      */
     private final @Nullable Integer bytes;
 
-    @OutputCustomType.Constructor
-    private BodyDiagnosticSettingsResponse(@OutputCustomType.Parameter("bytes") @Nullable Integer bytes) {
+    @CustomType.Constructor
+    private BodyDiagnosticSettingsResponse(@CustomType.Parameter("bytes") @Nullable Integer bytes) {
         this.bytes = bytes;
     }
 

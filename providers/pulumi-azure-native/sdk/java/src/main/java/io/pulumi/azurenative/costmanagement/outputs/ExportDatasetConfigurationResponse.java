@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportDatasetConfigurationResponse {
     /**
      * Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
@@ -17,8 +17,8 @@ public final class ExportDatasetConfigurationResponse {
      */
     private final @Nullable List<String> columns;
 
-    @OutputCustomType.Constructor
-    private ExportDatasetConfigurationResponse(@OutputCustomType.Parameter("columns") @Nullable List<String> columns) {
+    @CustomType.Constructor
+    private ExportDatasetConfigurationResponse(@CustomType.Parameter("columns") @Nullable List<String> columns) {
         this.columns = columns;
     }
 

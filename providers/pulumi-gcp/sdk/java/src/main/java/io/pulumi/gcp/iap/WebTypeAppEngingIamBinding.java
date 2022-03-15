@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamBindingArgs;
@@ -66,7 +66,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -81,7 +81,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=WebTypeAppEngingIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=WebTypeAppEngingIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ WebTypeAppEngingIamBindingCondition> condition;
 
     /**
@@ -96,7 +96,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -106,7 +106,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -117,7 +117,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -134,7 +134,7 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

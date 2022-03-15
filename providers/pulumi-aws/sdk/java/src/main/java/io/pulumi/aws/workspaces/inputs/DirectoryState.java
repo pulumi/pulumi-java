@@ -7,7 +7,7 @@ import io.pulumi.aws.workspaces.inputs.DirectorySelfServicePermissionsGetArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesGetArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The directory alias.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -34,7 +34,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The user name for the service account.
      * 
      */
-    @InputImport(name="customerUserName")
+    @Import(name="customerUserName")
       private final @Nullable Output<String> customerUserName;
 
     public Output<String> getCustomerUserName() {
@@ -45,7 +45,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The directory identifier for registration in WorkSpaces service.
      * 
      */
-    @InputImport(name="directoryId")
+    @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
@@ -56,7 +56,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The name of the directory.
      * 
      */
-    @InputImport(name="directoryName")
+    @Import(name="directoryName")
       private final @Nullable Output<String> directoryName;
 
     public Output<String> getDirectoryName() {
@@ -67,7 +67,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The directory type.
      * 
      */
-    @InputImport(name="directoryType")
+    @Import(name="directoryType")
       private final @Nullable Output<String> directoryType;
 
     public Output<String> getDirectoryType() {
@@ -78,7 +78,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The IP addresses of the DNS servers for the directory.
      * 
      */
-    @InputImport(name="dnsIpAddresses")
+    @Import(name="dnsIpAddresses")
       private final @Nullable Output<List<String>> dnsIpAddresses;
 
     public Output<List<String>> getDnsIpAddresses() {
@@ -89,7 +89,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
      * 
      */
-    @InputImport(name="iamRoleId")
+    @Import(name="iamRoleId")
       private final @Nullable Output<String> iamRoleId;
 
     public Output<String> getIamRoleId() {
@@ -100,7 +100,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The identifiers of the IP access control groups associated with the directory.
      * 
      */
-    @InputImport(name="ipGroupIds")
+    @Import(name="ipGroupIds")
       private final @Nullable Output<List<String>> ipGroupIds;
 
     public Output<List<String>> getIpGroupIds() {
@@ -111,7 +111,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
      * 
      */
-    @InputImport(name="registrationCode")
+    @Import(name="registrationCode")
       private final @Nullable Output<String> registrationCode;
 
     public Output<String> getRegistrationCode() {
@@ -122,7 +122,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * Permissions to enable or disable self-service capabilities. Defined below.
      * 
      */
-    @InputImport(name="selfServicePermissions")
+    @Import(name="selfServicePermissions")
       private final @Nullable Output<DirectorySelfServicePermissionsGetArgs> selfServicePermissions;
 
     public Output<DirectorySelfServicePermissionsGetArgs> getSelfServicePermissions() {
@@ -133,7 +133,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The identifiers of the subnets where the directory resides.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -144,7 +144,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -155,7 +155,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -166,7 +166,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
      * 
      */
-    @InputImport(name="workspaceAccessProperties")
+    @Import(name="workspaceAccessProperties")
       private final @Nullable Output<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties;
 
     public Output<DirectoryWorkspaceAccessPropertiesGetArgs> getWorkspaceAccessProperties() {
@@ -177,7 +177,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * Default properties that are used for creating WorkSpaces. Defined below.
      * 
      */
-    @InputImport(name="workspaceCreationProperties")
+    @Import(name="workspaceCreationProperties")
       private final @Nullable Output<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties;
 
     public Output<DirectoryWorkspaceCreationPropertiesGetArgs> getWorkspaceCreationProperties() {
@@ -188,7 +188,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The identifier of the security group that is assigned to new WorkSpaces.
      * 
      */
-    @InputImport(name="workspaceSecurityGroupId")
+    @Import(name="workspaceSecurityGroupId")
       private final @Nullable Output<String> workspaceSecurityGroupId;
 
     public Output<String> getWorkspaceSecurityGroupId() {

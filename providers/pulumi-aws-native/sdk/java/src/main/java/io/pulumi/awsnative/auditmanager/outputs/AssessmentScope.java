@@ -5,12 +5,12 @@ package io.pulumi.awsnative.auditmanager.outputs;
 
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentAWSAccount;
 import io.pulumi.awsnative.auditmanager.outputs.AssessmentAWSService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentScope {
     /**
      * The AWS accounts included in scope.
@@ -23,10 +23,10 @@ public final class AssessmentScope {
      */
     private final @Nullable List<AssessmentAWSService> awsServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentScope(
-        @OutputCustomType.Parameter("awsAccounts") @Nullable List<AssessmentAWSAccount> awsAccounts,
-        @OutputCustomType.Parameter("awsServices") @Nullable List<AssessmentAWSService> awsServices) {
+        @CustomType.Parameter("awsAccounts") @Nullable List<AssessmentAWSAccount> awsAccounts,
+        @CustomType.Parameter("awsServices") @Nullable List<AssessmentAWSService> awsServices) {
         this.awsAccounts = awsAccounts;
         this.awsServices = awsServices;
     }

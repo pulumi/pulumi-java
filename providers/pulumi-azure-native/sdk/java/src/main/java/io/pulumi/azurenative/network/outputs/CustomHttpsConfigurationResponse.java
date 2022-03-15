@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.KeyVaultCertificateSourceParametersResponseVault;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomHttpsConfigurationResponse {
     /**
      * Defines the source of the SSL certificate
@@ -48,15 +48,15 @@ public final class CustomHttpsConfigurationResponse {
      */
     private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomHttpsConfigurationResponse(
-        @OutputCustomType.Parameter("certificateSource") String certificateSource,
-        @OutputCustomType.Parameter("certificateType") @Nullable String certificateType,
-        @OutputCustomType.Parameter("minimumTlsVersion") String minimumTlsVersion,
-        @OutputCustomType.Parameter("protocolType") String protocolType,
-        @OutputCustomType.Parameter("secretName") @Nullable String secretName,
-        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
-        @OutputCustomType.Parameter("vault") @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
+        @CustomType.Parameter("certificateSource") String certificateSource,
+        @CustomType.Parameter("certificateType") @Nullable String certificateType,
+        @CustomType.Parameter("minimumTlsVersion") String minimumTlsVersion,
+        @CustomType.Parameter("protocolType") String protocolType,
+        @CustomType.Parameter("secretName") @Nullable String secretName,
+        @CustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @CustomType.Parameter("vault") @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
         this.certificateSource = certificateSource;
         this.certificateType = certificateType;
         this.minimumTlsVersion = minimumTlsVersion;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * The reason the incident was closed
      * 
      */
-    @InputImport(name="classification")
+    @Import(name="classification")
       private final @Nullable String classification;
 
     public Optional<String> getClassification() {
@@ -36,7 +36,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * Describes the reason the incident was closed
      * 
      */
-    @InputImport(name="classificationComment")
+    @Import(name="classificationComment")
       private final @Nullable String classificationComment;
 
     public Optional<String> getClassificationComment() {
@@ -47,7 +47,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * The classification reason to close the incident with
      * 
      */
-    @InputImport(name="classificationReason")
+    @Import(name="classificationReason")
       private final @Nullable String classificationReason;
 
     public Optional<String> getClassificationReason() {
@@ -58,7 +58,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * List of labels to add to the incident
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable List<IncidentLabelResponse> labels;
 
     public List<IncidentLabelResponse> getLabels() {
@@ -69,7 +69,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * Describes a user that the incident is assigned to
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable IncidentOwnerInfoResponse owner;
 
     public Optional<IncidentOwnerInfoResponse> getOwner() {
@@ -80,7 +80,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * The severity of the incident
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable String severity;
 
     public Optional<String> getSeverity() {
@@ -91,7 +91,7 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      * The status of the incident
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

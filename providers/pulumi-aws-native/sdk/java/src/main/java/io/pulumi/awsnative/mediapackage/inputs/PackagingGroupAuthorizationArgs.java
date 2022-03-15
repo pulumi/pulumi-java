@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * The Amazon Resource Name (ARN) for the secret in AWS Secrets Manager that is used for CDN authorization.
      * 
      */
-    @InputImport(name="cdnIdentifierSecret", required=true)
+    @Import(name="cdnIdentifierSecret", required=true)
       private final Output<String> cdnIdentifierSecret;
 
     public Output<String> getCdnIdentifierSecret() {
@@ -28,7 +28,7 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
      * 
      */
-    @InputImport(name="secretsRoleArn", required=true)
+    @Import(name="secretsRoleArn", required=true)
       private final Output<String> secretsRoleArn;
 
     public Output<String> getSecretsRoleArn() {

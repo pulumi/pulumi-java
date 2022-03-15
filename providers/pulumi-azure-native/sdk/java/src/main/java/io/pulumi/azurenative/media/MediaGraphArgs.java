@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.MediaGraphAssetSinkArgs;
 import io.pulumi.azurenative.media.inputs.MediaGraphRtspSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * Media Graph description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Graph name.
      * 
      */
-    @InputImport(name="mediaGraphName")
+    @Import(name="mediaGraphName")
       private final @Nullable Output<String> mediaGraphName;
 
     public Output<String> getMediaGraphName() {
@@ -54,7 +54,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * Media Graph sinks.
      * 
      */
-    @InputImport(name="sinks", required=true)
+    @Import(name="sinks", required=true)
       private final Output<List<MediaGraphAssetSinkArgs>> sinks;
 
     public Output<List<MediaGraphAssetSinkArgs>> getSinks() {
@@ -76,7 +76,7 @@ public final class MediaGraphArgs extends io.pulumi.resources.ResourceArgs {
      * Media Graph sources.
      * 
      */
-    @InputImport(name="sources", required=true)
+    @Import(name="sources", required=true)
       private final Output<List<MediaGraphRtspSourceArgs>> sources;
 
     public Output<List<MediaGraphRtspSourceArgs>> getSources() {

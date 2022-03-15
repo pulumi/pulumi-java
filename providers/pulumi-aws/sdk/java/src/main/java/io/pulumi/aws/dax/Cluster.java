@@ -9,7 +9,7 @@ import io.pulumi.aws.dax.inputs.ClusterState;
 import io.pulumi.aws.dax.outputs.ClusterNode;
 import io.pulumi.aws.dax.outputs.ClusterServerSideEncryption;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The ARN of the DAX cluster
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -54,7 +54,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * nodes will be created
      * 
      */
-    @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
+    @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> availabilityZones;
 
     /**
@@ -69,7 +69,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The DNS name of the DAX cluster without the port appended
      * 
      */
-    @OutputExport(name="clusterAddress", type=String.class, parameters={})
+    @Export(name="clusterAddress", type=String.class, parameters={})
     private Output<String> clusterAddress;
 
     /**
@@ -85,7 +85,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Default value is `NONE`.
      * 
      */
-    @OutputExport(name="clusterEndpointEncryptionType", type=String.class, parameters={})
+    @Export(name="clusterEndpointEncryptionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterEndpointEncryptionType;
 
     /**
@@ -102,7 +102,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * lowercase
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
@@ -118,7 +118,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * consisting of a DNS name and a port number
      * 
      */
-    @OutputExport(name="configurationEndpoint", type=String.class, parameters={})
+    @Export(name="configurationEndpoint", type=String.class, parameters={})
     private Output<String> configurationEndpoint;
 
     /**
@@ -133,7 +133,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Description for the cluster
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -149,7 +149,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * permissions to access DynamoDB on your behalf
      * 
      */
-    @OutputExport(name="iamRoleArn", type=String.class, parameters={})
+    @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output<String> iamRoleArn;
 
     /**
@@ -168,7 +168,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `sun:05:00-sun:09:00`
      * 
      */
-    @OutputExport(name="maintenanceWindow", type=String.class, parameters={})
+    @Export(name="maintenanceWindow", type=String.class, parameters={})
     private Output<String> maintenanceWindow;
 
     /**
@@ -186,7 +186,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
      * 
      */
-    @OutputExport(name="nodeType", type=String.class, parameters={})
+    @Export(name="nodeType", type=String.class, parameters={})
     private Output<String> nodeType;
 
     /**
@@ -203,7 +203,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `${aws_dax_cluster.test.nodes.0.address}`
      * 
      */
-    @OutputExport(name="nodes", type=List.class, parameters={ClusterNode.class})
+    @Export(name="nodes", type=List.class, parameters={ClusterNode.class})
     private Output<List<ClusterNode>> nodes;
 
     /**
@@ -221,7 +221,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
      * 
      */
-    @OutputExport(name="notificationTopicArn", type=String.class, parameters={})
+    @Export(name="notificationTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationTopicArn;
 
     /**
@@ -238,7 +238,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * with this DAX cluster
      * 
      */
-    @OutputExport(name="parameterGroupName", type=String.class, parameters={})
+    @Export(name="parameterGroupName", type=String.class, parameters={})
     private Output<String> parameterGroupName;
 
     /**
@@ -253,7 +253,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The port used by the configuration endpoint
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -269,7 +269,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * replicas
      * 
      */
-    @OutputExport(name="replicationFactor", type=Integer.class, parameters={})
+    @Export(name="replicationFactor", type=Integer.class, parameters={})
     private Output<Integer> replicationFactor;
 
     /**
@@ -286,7 +286,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * with the cluster
      * 
      */
-    @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupIds;
 
     /**
@@ -301,7 +301,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Encrypt at rest options
      * 
      */
-    @OutputExport(name="serverSideEncryption", type=ClusterServerSideEncryption.class, parameters={})
+    @Export(name="serverSideEncryption", type=ClusterServerSideEncryption.class, parameters={})
     private Output</* @Nullable */ ClusterServerSideEncryption> serverSideEncryption;
 
     /**
@@ -316,7 +316,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * cluster
      * 
      */
-    @OutputExport(name="subnetGroupName", type=String.class, parameters={})
+    @Export(name="subnetGroupName", type=String.class, parameters={})
     private Output<String> subnetGroupName;
 
     /**
@@ -331,7 +331,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -345,7 +345,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

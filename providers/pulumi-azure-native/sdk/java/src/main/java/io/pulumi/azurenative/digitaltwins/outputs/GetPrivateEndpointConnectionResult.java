@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponseProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
      * The resource identifier.
@@ -27,12 +27,12 @@ public final class GetPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateEndpointConnectionResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") PrivateEndpointConnectionResponseProperties properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") PrivateEndpointConnectionResponseProperties properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

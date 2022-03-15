@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IncidentAdditionalDataResponse {
     /**
      * List of product names of alerts in the incident
@@ -37,13 +37,13 @@ public final class IncidentAdditionalDataResponse {
      */
     private final List<String> tactics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IncidentAdditionalDataResponse(
-        @OutputCustomType.Parameter("alertProductNames") List<String> alertProductNames,
-        @OutputCustomType.Parameter("alertsCount") Integer alertsCount,
-        @OutputCustomType.Parameter("bookmarksCount") Integer bookmarksCount,
-        @OutputCustomType.Parameter("commentsCount") Integer commentsCount,
-        @OutputCustomType.Parameter("tactics") List<String> tactics) {
+        @CustomType.Parameter("alertProductNames") List<String> alertProductNames,
+        @CustomType.Parameter("alertsCount") Integer alertsCount,
+        @CustomType.Parameter("bookmarksCount") Integer bookmarksCount,
+        @CustomType.Parameter("commentsCount") Integer commentsCount,
+        @CustomType.Parameter("tactics") List<String> tactics) {
         this.alertProductNames = alertProductNames;
         this.alertsCount = alertsCount;
         this.bookmarksCount = bookmarksCount;

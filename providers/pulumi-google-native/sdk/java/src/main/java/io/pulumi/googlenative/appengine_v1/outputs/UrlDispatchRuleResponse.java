@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlDispatchRuleResponse {
     /**
      * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".Defaults to matching all domains: "*".
@@ -25,11 +25,11 @@ public final class UrlDispatchRuleResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlDispatchRuleResponse(
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("service") String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;

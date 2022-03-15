@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
      * Defines the source of the SSL certificate.
      * 
      */
-    @InputImport(name="certificateType", required=true)
+    @Import(name="certificateType", required=true)
       private final String certificateType;
 
     public String getCertificateType() {
@@ -34,7 +34,7 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
      * TLS protocol version that will be used for Https
      * 
      */
-    @InputImport(name="minimumTlsVersion")
+    @Import(name="minimumTlsVersion")
       private final @Nullable String minimumTlsVersion;
 
     public Optional<String> getMinimumTlsVersion() {
@@ -45,7 +45,7 @@ public final class AFDDomainHttpsParametersResponse extends io.pulumi.resources.
      * Resource reference to the secret. ie. subs/rg/profile/secret
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable ResourceReferenceResponse secret;
 
     public Optional<ResourceReferenceResponse> getSecret() {

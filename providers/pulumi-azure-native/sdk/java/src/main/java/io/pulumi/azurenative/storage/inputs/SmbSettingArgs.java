@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.MultichannelArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * SMB authentication methods supported by server. Valid values are NTLMv2, Kerberos. Should be passed as a string with delimiter ';'.
      * 
      */
-    @InputImport(name="authenticationMethods")
+    @Import(name="authenticationMethods")
       private final @Nullable Output<String> authenticationMethods;
 
     public Output<String> getAuthenticationMethods() {
@@ -34,7 +34,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * SMB channel encryption supported by server. Valid values are AES-128-CCM, AES-128-GCM, AES-256-GCM. Should be passed as a string with delimiter ';'.
      * 
      */
-    @InputImport(name="channelEncryption")
+    @Import(name="channelEncryption")
       private final @Nullable Output<String> channelEncryption;
 
     public Output<String> getChannelEncryption() {
@@ -45,7 +45,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * Kerberos ticket encryption supported by server. Valid values are RC4-HMAC, AES-256. Should be passed as a string with delimiter ';'
      * 
      */
-    @InputImport(name="kerberosTicketEncryption")
+    @Import(name="kerberosTicketEncryption")
       private final @Nullable Output<String> kerberosTicketEncryption;
 
     public Output<String> getKerberosTicketEncryption() {
@@ -56,7 +56,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * Multichannel setting. Applies to Premium FileStorage only.
      * 
      */
-    @InputImport(name="multichannel")
+    @Import(name="multichannel")
       private final @Nullable Output<MultichannelArgs> multichannel;
 
     public Output<MultichannelArgs> getMultichannel() {
@@ -67,7 +67,7 @@ public final class SmbSettingArgs extends io.pulumi.resources.ResourceArgs {
      * SMB protocol versions supported by server. Valid values are SMB2.1, SMB3.0, SMB3.1.1. Should be passed as a string with delimiter ';'.
      * 
      */
-    @InputImport(name="versions")
+    @Import(name="versions")
       private final @Nullable Output<String> versions;
 
     public Output<String> getVersions() {

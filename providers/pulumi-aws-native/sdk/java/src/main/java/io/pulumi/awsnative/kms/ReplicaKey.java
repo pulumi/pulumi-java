@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.kms.ReplicaKeyArgs;
 import io.pulumi.awsnative.kms.outputs.ReplicaKeyTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:kms:ReplicaKey")
 public class ReplicaKey extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -46,7 +46,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -56,7 +56,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
-    @OutputExport(name="keyId", type=String.class, parameters={})
+    @Export(name="keyId", type=String.class, parameters={})
     private Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -66,7 +66,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * The key policy that authorizes use of the CMK. The key policy must observe the following rules.
      * 
      */
-    @OutputExport(name="keyPolicy", type=Object.class, parameters={})
+    @Export(name="keyPolicy", type=Object.class, parameters={})
     private Output<Object> keyPolicy;
 
     /**
@@ -80,7 +80,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
-    @OutputExport(name="pendingWindowInDays", type=Integer.class, parameters={})
+    @Export(name="pendingWindowInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> pendingWindowInDays;
 
     /**
@@ -94,7 +94,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * Identifies the primary CMK to create a replica of. Specify the Amazon Resource Name (ARN) of the CMK. You cannot specify an alias or key ID. For help finding the ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
      * 
      */
-    @OutputExport(name="primaryKeyArn", type=String.class, parameters={})
+    @Export(name="primaryKeyArn", type=String.class, parameters={})
     private Output<String> primaryKeyArn;
 
     /**
@@ -108,7 +108,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ReplicaKeyTag.class})
+    @Export(name="tags", type=List.class, parameters={ReplicaKeyTag.class})
     private Output</* @Nullable */ List<ReplicaKeyTag>> tags;
 
     /**

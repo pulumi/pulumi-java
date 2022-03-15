@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AwsS3DataResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AzureBlobStorageDataResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.GcsDataResponse;
@@ -15,7 +15,7 @@ import io.pulumi.googlenative.storagetransfer_v1.outputs.TransferOptionsResponse
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransferSpecResponse {
     /**
      * An AWS S3 data source.
@@ -83,21 +83,21 @@ public final class TransferSpecResponse {
      */
     private final TransferOptionsResponse transferOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferSpecResponse(
-        @OutputCustomType.Parameter("awsS3DataSource") AwsS3DataResponse awsS3DataSource,
-        @OutputCustomType.Parameter("azureBlobStorageDataSource") AzureBlobStorageDataResponse azureBlobStorageDataSource,
-        @OutputCustomType.Parameter("gcsDataSink") GcsDataResponse gcsDataSink,
-        @OutputCustomType.Parameter("gcsDataSource") GcsDataResponse gcsDataSource,
-        @OutputCustomType.Parameter("gcsIntermediateDataLocation") GcsDataResponse gcsIntermediateDataLocation,
-        @OutputCustomType.Parameter("httpDataSource") HttpDataResponse httpDataSource,
-        @OutputCustomType.Parameter("objectConditions") ObjectConditionsResponse objectConditions,
-        @OutputCustomType.Parameter("posixDataSink") PosixFilesystemResponse posixDataSink,
-        @OutputCustomType.Parameter("posixDataSource") PosixFilesystemResponse posixDataSource,
-        @OutputCustomType.Parameter("sinkAgentPoolName") String sinkAgentPoolName,
-        @OutputCustomType.Parameter("sourceAgentPoolName") String sourceAgentPoolName,
-        @OutputCustomType.Parameter("transferManifest") TransferManifestResponse transferManifest,
-        @OutputCustomType.Parameter("transferOptions") TransferOptionsResponse transferOptions) {
+        @CustomType.Parameter("awsS3DataSource") AwsS3DataResponse awsS3DataSource,
+        @CustomType.Parameter("azureBlobStorageDataSource") AzureBlobStorageDataResponse azureBlobStorageDataSource,
+        @CustomType.Parameter("gcsDataSink") GcsDataResponse gcsDataSink,
+        @CustomType.Parameter("gcsDataSource") GcsDataResponse gcsDataSource,
+        @CustomType.Parameter("gcsIntermediateDataLocation") GcsDataResponse gcsIntermediateDataLocation,
+        @CustomType.Parameter("httpDataSource") HttpDataResponse httpDataSource,
+        @CustomType.Parameter("objectConditions") ObjectConditionsResponse objectConditions,
+        @CustomType.Parameter("posixDataSink") PosixFilesystemResponse posixDataSink,
+        @CustomType.Parameter("posixDataSource") PosixFilesystemResponse posixDataSource,
+        @CustomType.Parameter("sinkAgentPoolName") String sinkAgentPoolName,
+        @CustomType.Parameter("sourceAgentPoolName") String sourceAgentPoolName,
+        @CustomType.Parameter("transferManifest") TransferManifestResponse transferManifest,
+        @CustomType.Parameter("transferOptions") TransferOptionsResponse transferOptions) {
         this.awsS3DataSource = awsS3DataSource;
         this.azureBlobStorageDataSource = azureBlobStorageDataSource;
         this.gcsDataSink = gcsDataSink;

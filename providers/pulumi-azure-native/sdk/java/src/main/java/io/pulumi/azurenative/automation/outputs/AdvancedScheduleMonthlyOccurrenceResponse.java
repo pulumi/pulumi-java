@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdvancedScheduleMonthlyOccurrenceResponse {
     /**
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
@@ -23,10 +23,10 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse {
      */
     private final @Nullable Integer occurrence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdvancedScheduleMonthlyOccurrenceResponse(
-        @OutputCustomType.Parameter("day") @Nullable String day,
-        @OutputCustomType.Parameter("occurrence") @Nullable Integer occurrence) {
+        @CustomType.Parameter("day") @Nullable String day,
+        @CustomType.Parameter("occurrence") @Nullable Integer occurrence) {
         this.day = day;
         this.occurrence = occurrence;
     }

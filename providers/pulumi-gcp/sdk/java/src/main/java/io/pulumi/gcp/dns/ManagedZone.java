@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.ManagedZoneArgs;
@@ -56,7 +56,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * A textual description field. Defaults to 'Managed by Pulumi'.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -70,7 +70,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The DNS name of this managed zone, for instance "example.com.".
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -85,7 +85,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="dnssecConfig", type=ManagedZoneDnssecConfig.class, parameters={})
+    @Export(name="dnssecConfig", type=ManagedZoneDnssecConfig.class, parameters={})
     private Output</* @Nullable */ ManagedZoneDnssecConfig> dnssecConfig;
 
     /**
@@ -100,7 +100,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Set this true to delete all records in the zone.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -117,7 +117,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="forwardingConfig", type=ManagedZoneForwardingConfig.class, parameters={})
+    @Export(name="forwardingConfig", type=ManagedZoneForwardingConfig.class, parameters={})
     private Output</* @Nullable */ ManagedZoneForwardingConfig> forwardingConfig;
 
     /**
@@ -134,7 +134,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * A set of key/value label pairs to assign to this ManagedZone.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -149,7 +149,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Must be unique within the project.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -164,7 +164,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Delegate your managed_zone to these virtual name servers; defined by the server
      * 
      */
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
@@ -180,7 +180,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="peeringConfig", type=ManagedZonePeeringConfig.class, parameters={})
+    @Export(name="peeringConfig", type=ManagedZonePeeringConfig.class, parameters={})
     private Output</* @Nullable */ ManagedZonePeeringConfig> peeringConfig;
 
     /**
@@ -198,7 +198,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="privateVisibilityConfig", type=ManagedZonePrivateVisibilityConfig.class, parameters={})
+    @Export(name="privateVisibilityConfig", type=ManagedZonePrivateVisibilityConfig.class, parameters={})
     private Output</* @Nullable */ ManagedZonePrivateVisibilityConfig> privateVisibilityConfig;
 
     /**
@@ -215,7 +215,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -232,7 +232,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * to networks listed under `private_visibility_config`.
      * 
      */
-    @OutputExport(name="reverseLookup", type=Boolean.class, parameters={})
+    @Export(name="reverseLookup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reverseLookup;
 
     /**
@@ -249,7 +249,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="serviceDirectoryConfig", type=ManagedZoneServiceDirectoryConfig.class, parameters={})
+    @Export(name="serviceDirectoryConfig", type=ManagedZoneServiceDirectoryConfig.class, parameters={})
     private Output</* @Nullable */ ManagedZoneServiceDirectoryConfig> serviceDirectoryConfig;
 
     /**
@@ -267,7 +267,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Possible values are `private` and `public`.
      * 
      */
-    @OutputExport(name="visibility", type=String.class, parameters={})
+    @Export(name="visibility", type=String.class, parameters={})
     private Output</* @Nullable */ String> visibility;
 
     /**

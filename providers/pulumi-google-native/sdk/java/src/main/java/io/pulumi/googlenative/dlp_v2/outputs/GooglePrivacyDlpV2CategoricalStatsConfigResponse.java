@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
     /**
      * Field to compute categorical stats on. All column types are supported except for arrays and structs. However, it may be more informative to use NumericalStats when the field type is supported, depending on the data.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2CategoricalStatsConfigResponse(@OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2CategoricalStatsConfigResponse(@CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.field = field;
     }
 

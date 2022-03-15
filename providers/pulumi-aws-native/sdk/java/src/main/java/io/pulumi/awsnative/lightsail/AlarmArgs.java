@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the alarm. Specify the name of an existing alarm to update, and overwrite the previous configuration of the alarm.
      * 
      */
-    @InputImport(name="alarmName")
+    @Import(name="alarmName")
       private final @Nullable Output<String> alarmName;
 
     public Output<String> getAlarmName() {
@@ -33,7 +33,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The arithmetic operation to use when comparing the specified statistic to the threshold. The specified statistic value is used as the first operand.
      * 
      */
-    @InputImport(name="comparisonOperator", required=true)
+    @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
     public Output<String> getComparisonOperator() {
@@ -44,7 +44,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The contact protocols to use for the alarm, such as Email, SMS (text messaging), or both.
      * 
      */
-    @InputImport(name="contactProtocols")
+    @Import(name="contactProtocols")
       private final @Nullable Output<List<String>> contactProtocols;
 
     public Output<List<String>> getContactProtocols() {
@@ -55,7 +55,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The number of data points that must be not within the specified threshold to trigger the alarm. If you are setting an "M out of N" alarm, this value (datapointsToAlarm) is the M.
      * 
      */
-    @InputImport(name="datapointsToAlarm")
+    @Import(name="datapointsToAlarm")
       private final @Nullable Output<Integer> datapointsToAlarm;
 
     public Output<Integer> getDatapointsToAlarm() {
@@ -66,7 +66,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The number of most recent periods over which data is compared to the specified threshold. If you are setting an "M out of N" alarm, this value (evaluationPeriods) is the N.
      * 
      */
-    @InputImport(name="evaluationPeriods", required=true)
+    @Import(name="evaluationPeriods", required=true)
       private final Output<Integer> evaluationPeriods;
 
     public Output<Integer> getEvaluationPeriods() {
@@ -77,7 +77,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the metric to associate with the alarm.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -88,7 +88,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The validation status of the SSL/TLS certificate.
      * 
      */
-    @InputImport(name="monitoredResourceName", required=true)
+    @Import(name="monitoredResourceName", required=true)
       private final Output<String> monitoredResourceName;
 
     public Output<String> getMonitoredResourceName() {
@@ -99,7 +99,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the alarm is enabled. Notifications are enabled by default if you don't specify this parameter.
      * 
      */
-    @InputImport(name="notificationEnabled")
+    @Import(name="notificationEnabled")
       private final @Nullable Output<Boolean> notificationEnabled;
 
     public Output<Boolean> getNotificationEnabled() {
@@ -110,7 +110,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The alarm states that trigger a notification.
      * 
      */
-    @InputImport(name="notificationTriggers")
+    @Import(name="notificationTriggers")
       private final @Nullable Output<List<String>> notificationTriggers;
 
     public Output<List<String>> getNotificationTriggers() {
@@ -121,7 +121,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The value against which the specified statistic is compared.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -132,7 +132,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Sets how this alarm will handle missing data points.
      * 
      */
-    @InputImport(name="treatMissingData")
+    @Import(name="treatMissingData")
       private final @Nullable Output<String> treatMissingData;
 
     public Output<String> getTreatMissingData() {

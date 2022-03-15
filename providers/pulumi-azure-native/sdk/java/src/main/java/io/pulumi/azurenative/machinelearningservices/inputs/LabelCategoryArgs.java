@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelClassArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether it is allowed to select multiple classes in this category.
      * 
      */
-    @InputImport(name="allowMultiSelect")
+    @Import(name="allowMultiSelect")
       private final @Nullable Output<Boolean> allowMultiSelect;
 
     public Output<Boolean> getAllowMultiSelect() {
@@ -36,7 +36,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * Dictionary of label classes in this category.
      * 
      */
-    @InputImport(name="classes", required=true)
+    @Import(name="classes", required=true)
       private final Output<Map<String,LabelClassArgs>> classes;
 
     public Output<Map<String,LabelClassArgs>> getClasses() {
@@ -47,7 +47,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the label category.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {

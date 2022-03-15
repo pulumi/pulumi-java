@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMHealthDetailsRe
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMProtectedItemExtendedInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ExtendedPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.KPIResourceHealthDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureIaaSComputeVMProtectedItemResponse {
     /**
      * Type of backup management for the backed up item.
@@ -150,34 +150,34 @@ public final class AzureIaaSComputeVMProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureIaaSComputeVMProtectedItemResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
-        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
-        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
-        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo,
-        @OutputCustomType.Parameter("extendedProperties") @Nullable ExtendedPropertiesResponse extendedProperties,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthDetails") @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails,
-        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
-        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
-        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
-        @OutputCustomType.Parameter("kpisHealths") @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
-        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
-        @OutputCustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
-        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("protectedItemDataId") @Nullable String protectedItemDataId,
-        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
-        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
-        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
-        @OutputCustomType.Parameter("virtualMachineId") @Nullable String virtualMachineId,
-        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("createMode") @Nullable String createMode,
+        @CustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @CustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @CustomType.Parameter("extendedInfo") @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo,
+        @CustomType.Parameter("extendedProperties") @Nullable ExtendedPropertiesResponse extendedProperties,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthDetails") @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails,
+        @CustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @CustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @CustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @CustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @CustomType.Parameter("kpisHealths") @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
+        @CustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @CustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
+        @CustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("protectedItemDataId") @Nullable String protectedItemDataId,
+        @CustomType.Parameter("protectedItemType") String protectedItemType,
+        @CustomType.Parameter("protectionState") @Nullable String protectionState,
+        @CustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @CustomType.Parameter("virtualMachineId") @Nullable String virtualMachineId,
+        @CustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;

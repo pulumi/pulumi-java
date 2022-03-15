@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNetworkInterfaceAccessConfig {
     /**
      * The IP address that will be 1:1 mapped to the instance's
@@ -30,11 +30,11 @@ public final class InstanceNetworkInterfaceAccessConfig {
      */
     private final @Nullable String publicPtrDomainName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNetworkInterfaceAccessConfig(
-        @OutputCustomType.Parameter("natIp") @Nullable String natIp,
-        @OutputCustomType.Parameter("networkTier") @Nullable String networkTier,
-        @OutputCustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
+        @CustomType.Parameter("natIp") @Nullable String natIp,
+        @CustomType.Parameter("networkTier") @Nullable String networkTier,
+        @CustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
         this.natIp = natIp;
         this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;

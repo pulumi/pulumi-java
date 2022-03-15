@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.NicIPSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the device key value.
      * 
      */
-    @InputImport(name="deviceKey")
+    @Import(name="deviceKey")
       private final @Nullable Integer deviceKey;
 
     public Optional<Integer> getDeviceKey() {
@@ -36,7 +36,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the nic ip addresses.
      * 
      */
-    @InputImport(name="ipAddresses", required=true)
+    @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
@@ -47,7 +47,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the ipsettings.
      * 
      */
-    @InputImport(name="ipSettings")
+    @Import(name="ipSettings")
       private final @Nullable NicIPSettingsResponse ipSettings;
 
     public Optional<NicIPSettingsResponse> getIpSettings() {
@@ -58,7 +58,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the label of the virtual network in vCenter that the nic is connected to.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -69,7 +69,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the NIC MAC address.
      * 
      */
-    @InputImport(name="macAddress", required=true)
+    @Import(name="macAddress", required=true)
       private final String macAddress;
 
     public String getMacAddress() {
@@ -80,7 +80,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the name of the network interface.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -91,7 +91,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the ARM Id of the network resource to connect the virtual machine.
      * 
      */
-    @InputImport(name="networkId")
+    @Import(name="networkId")
       private final @Nullable String networkId;
 
     public Optional<String> getNetworkId() {
@@ -102,7 +102,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the name of the virtual network in vCenter that the nic is connected to.
      * 
      */
-    @InputImport(name="networkMoName", required=true)
+    @Import(name="networkMoName", required=true)
       private final String networkMoName;
 
     public String getNetworkMoName() {
@@ -114,7 +114,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * that the nic is connected to.
      * 
      */
-    @InputImport(name="networkMoRefId", required=true)
+    @Import(name="networkMoRefId", required=true)
       private final String networkMoRefId;
 
     public String getNetworkMoRefId() {
@@ -125,7 +125,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * NIC type
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable String nicType;
 
     public Optional<String> getNicType() {
@@ -136,7 +136,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Gets or sets the power on boot.
      * 
      */
-    @InputImport(name="powerOnBoot")
+    @Import(name="powerOnBoot")
       private final @Nullable String powerOnBoot;
 
     public Optional<String> getPowerOnBoot() {

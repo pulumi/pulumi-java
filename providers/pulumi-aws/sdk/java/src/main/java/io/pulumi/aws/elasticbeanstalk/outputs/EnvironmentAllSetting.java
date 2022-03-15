@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticbeanstalk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentAllSetting {
     /**
      * A unique name for this Environment. This name is used
@@ -21,12 +21,12 @@ public final class EnvironmentAllSetting {
     private final @Nullable String resource;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentAllSetting(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("resource") @Nullable String resource,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("resource") @Nullable String resource,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.namespace = namespace;
         this.resource = resource;

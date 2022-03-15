@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * Maximum number of instances for this deployment.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
@@ -30,7 +30,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * Minimum number of instances for this deployment.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
@@ -41,7 +41,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * The polling interval in ISO 8691 format. Only supports duration with precision as low as Seconds.
      * 
      */
-    @InputImport(name="pollingInterval")
+    @Import(name="pollingInterval")
       private final @Nullable Output<String> pollingInterval;
 
     public Output<String> getPollingInterval() {
@@ -52,7 +52,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Auto'.
      * 
      */
-    @InputImport(name="scaleType", required=true)
+    @Import(name="scaleType", required=true)
       private final Output<String> scaleType;
 
     public Output<String> getScaleType() {
@@ -63,7 +63,7 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
      * Target CPU usage for the autoscaler.
      * 
      */
-    @InputImport(name="targetUtilizationPercentage")
+    @Import(name="targetUtilizationPercentage")
       private final @Nullable Output<Integer> targetUtilizationPercentage;
 
     public Output<Integer> getTargetUtilizationPercentage() {

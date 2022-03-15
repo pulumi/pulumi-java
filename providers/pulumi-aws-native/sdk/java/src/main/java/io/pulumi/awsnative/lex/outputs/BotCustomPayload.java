@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotCustomPayload {
     /**
      * The string that is sent to your application.
@@ -15,8 +15,8 @@ public final class BotCustomPayload {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private BotCustomPayload(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private BotCustomPayload(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

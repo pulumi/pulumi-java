@@ -7,13 +7,13 @@ import io.pulumi.azurenative.costmanagement.outputs.ExportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportExecutionListResultResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExportResult {
     /**
      * Has the definition for the export.
@@ -66,18 +66,18 @@ public final class GetExportResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExportResult(
-        @OutputCustomType.Parameter("definition") ExportDefinitionResponse definition,
-        @OutputCustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
-        @OutputCustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory,
-        @OutputCustomType.Parameter("schedule") @Nullable ExportScheduleResponse schedule,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("definition") ExportDefinitionResponse definition,
+        @CustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
+        @CustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory,
+        @CustomType.Parameter("schedule") @Nullable ExportScheduleResponse schedule,
+        @CustomType.Parameter("type") String type) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.eTag = eTag;

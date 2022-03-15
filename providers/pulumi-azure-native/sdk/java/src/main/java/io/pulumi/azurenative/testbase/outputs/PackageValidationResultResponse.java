@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageValidationResultResponse {
     /**
      * Error information.
@@ -27,11 +27,11 @@ public final class PackageValidationResultResponse {
      */
     private final String validationName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageValidationResultResponse(
-        @OutputCustomType.Parameter("errors") List<String> errors,
-        @OutputCustomType.Parameter("isValid") Boolean isValid,
-        @OutputCustomType.Parameter("validationName") String validationName) {
+        @CustomType.Parameter("errors") List<String> errors,
+        @CustomType.Parameter("isValid") Boolean isValid,
+        @CustomType.Parameter("validationName") String validationName) {
         this.errors = errors;
         this.isValid = isValid;
         this.validationName = validationName;

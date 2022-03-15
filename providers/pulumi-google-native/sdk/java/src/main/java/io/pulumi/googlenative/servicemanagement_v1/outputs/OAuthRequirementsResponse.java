@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OAuthRequirementsResponse {
     /**
      * The list of publicly documented OAuth scopes that are allowed access. An OAuth token containing any of these scopes will be accepted. Example: canonical_scopes: https://www.googleapis.com/auth/calendar, https://www.googleapis.com/auth/calendar.read
@@ -15,8 +15,8 @@ public final class OAuthRequirementsResponse {
      */
     private final String canonicalScopes;
 
-    @OutputCustomType.Constructor
-    private OAuthRequirementsResponse(@OutputCustomType.Parameter("canonicalScopes") String canonicalScopes) {
+    @CustomType.Constructor
+    private OAuthRequirementsResponse(@CustomType.Parameter("canonicalScopes") String canonicalScopes) {
         this.canonicalScopes = canonicalScopes;
     }
 

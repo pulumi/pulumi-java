@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * The display name of the AnnotationSpec. Maximum of 64 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse extends 
      * This is the integer index of the AnnotationSpec. The index for the whole AnnotationSpecSet is sequential starting from 0. For example, an AnnotationSpecSet with classes `dog` and `cat`, might contain one AnnotationSpec with `{ display_name: "dog", index: 0 }` and one AnnotationSpec with `{ display_name: "cat", index: 1 }`. This is especially useful for model training as it encodes the string labels into numeric values.
      * 
      */
-    @InputImport(name="index", required=true)
+    @Import(name="index", required=true)
       private final Integer index;
 
     public Integer getIndex() {

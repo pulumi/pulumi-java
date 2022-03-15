@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
      * create.
      * 
      */
-    @InputImport(name="connectionLimit", required=true)
+    @Import(name="connectionLimit", required=true)
       private final Output<Integer> connectionLimit;
 
     public Output<Integer> getConnectionLimit() {
@@ -30,7 +30,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
      * A project that is allowed to connect to this service attachment.
      * 
      */
-    @InputImport(name="projectIdOrNum", required=true)
+    @Import(name="projectIdOrNum", required=true)
       private final Output<String> projectIdOrNum;
 
     public Output<String> getProjectIdOrNum() {

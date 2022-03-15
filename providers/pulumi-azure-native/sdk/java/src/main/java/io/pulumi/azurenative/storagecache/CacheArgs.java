@@ -12,7 +12,7 @@ import io.pulumi.azurenative.storagecache.inputs.CacheSecuritySettingsArgs;
 import io.pulumi.azurenative.storagecache.inputs.CacheSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.
      * 
      */
-    @InputImport(name="cacheName")
+    @Import(name="cacheName")
       private final @Nullable Output<String> cacheName;
 
     public Output<String> getCacheName() {
@@ -39,7 +39,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * The size of this Cache, in GB.
      * 
      */
-    @InputImport(name="cacheSizeGB")
+    @Import(name="cacheSizeGB")
       private final @Nullable Output<Integer> cacheSizeGB;
 
     public Output<Integer> getCacheSizeGB() {
@@ -50,7 +50,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies Directory Services settings of the cache.
      * 
      */
-    @InputImport(name="directoryServicesSettings")
+    @Import(name="directoryServicesSettings")
       private final @Nullable Output<CacheDirectorySettingsArgs> directoryServicesSettings;
 
     public Output<CacheDirectorySettingsArgs> getDirectoryServicesSettings() {
@@ -61,7 +61,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies encryption settings of the cache.
      * 
      */
-    @InputImport(name="encryptionSettings")
+    @Import(name="encryptionSettings")
       private final @Nullable Output<CacheEncryptionSettingsArgs> encryptionSettings;
 
     public Output<CacheEncryptionSettingsArgs> getEncryptionSettings() {
@@ -72,7 +72,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the cache, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<CacheIdentityArgs> identity;
 
     public Output<CacheIdentityArgs> getIdentity() {
@@ -83,7 +83,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Region name string.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -94,7 +94,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies network settings of the cache.
      * 
      */
-    @InputImport(name="networkSettings")
+    @Import(name="networkSettings")
       private final @Nullable Output<CacheNetworkSettingsArgs> networkSettings;
 
     public Output<CacheNetworkSettingsArgs> getNetworkSettings() {
@@ -105,7 +105,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningStateType>> provisioningState;
 
     public Output<Either<String,ProvisioningStateType>> getProvisioningState() {
@@ -116,7 +116,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Target resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -127,7 +127,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies security settings of the cache.
      * 
      */
-    @InputImport(name="securitySettings")
+    @Import(name="securitySettings")
       private final @Nullable Output<CacheSecuritySettingsArgs> securitySettings;
 
     public Output<CacheSecuritySettingsArgs> getSecuritySettings() {
@@ -138,7 +138,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * SKU for the Cache.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<CacheSkuArgs> sku;
 
     public Output<CacheSkuArgs> getSku() {
@@ -149,7 +149,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Subnet used for the Cache.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {
@@ -160,7 +160,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

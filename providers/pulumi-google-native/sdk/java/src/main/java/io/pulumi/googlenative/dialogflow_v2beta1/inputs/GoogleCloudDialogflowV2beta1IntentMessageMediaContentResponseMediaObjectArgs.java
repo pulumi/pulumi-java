@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * Url where the media is stored.
      * 
      */
-    @InputImport(name="contentUrl", required=true)
+    @Import(name="contentUrl", required=true)
       private final Output<String> contentUrl;
 
     public Output<String> getContentUrl() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * Optional. Description of media card.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * Optional. Icon to display above media content.
      * 
      */
-    @InputImport(name="icon")
+    @Import(name="icon")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getIcon() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * Optional. Image to display above media content.
      * 
      */
-    @InputImport(name="largeImage")
+    @Import(name="largeImage")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getLargeImage() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * Name of media card.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
 
     public static final BucketDataExportArgs Empty = new BucketDataExportArgs();
 
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<BucketDestinationArgs> destination;
 
     public Output<BucketDestinationArgs> getDestination() {
@@ -29,7 +29,7 @@ public final class BucketDataExportArgs extends io.pulumi.resources.ResourceArgs
      * The version of the output schema to use when exporting data.
      * 
      */
-    @InputImport(name="outputSchemaVersion", required=true)
+    @Import(name="outputSchemaVersion", required=true)
       private final Output<String> outputSchemaVersion;
 
     public Output<String> getOutputSchemaVersion() {

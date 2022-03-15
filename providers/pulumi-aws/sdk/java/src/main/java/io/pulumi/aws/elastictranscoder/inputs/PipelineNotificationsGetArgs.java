@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
      * 
      */
-    @InputImport(name="completed")
+    @Import(name="completed")
       private final @Nullable Output<String> completed;
 
     public Output<String> getCompleted() {
@@ -29,7 +29,7 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters an error condition while processing a job in this pipeline.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable Output<String> error;
 
     public Output<String> getError() {
@@ -40,7 +40,7 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * The topic ARN for the Amazon Simple Notification Service (Amazon SNS) topic that you want to notify when Elastic Transcoder has started to process a job in this pipeline.
      * 
      */
-    @InputImport(name="progressing")
+    @Import(name="progressing")
       private final @Nullable Output<String> progressing;
 
     public Output<String> getProgressing() {
@@ -51,7 +51,7 @@ public final class PipelineNotificationsGetArgs extends io.pulumi.resources.Reso
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder encounters a warning condition while processing a job in this pipeline.
      * 
      */
-    @InputImport(name="warning")
+    @Import(name="warning")
       private final @Nullable Output<String> warning;
 
     public Output<String> getWarning() {

@@ -15,7 +15,7 @@ import io.pulumi.aws.elasticsearch.inputs.DomainNodeToNodeEncryptionArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainSnapshotOptionsArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainVpcOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,14 +31,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * IAM policy document specifying the access policies for the domain.
      * 
      */
-    @InputImport(name="accessPolicies")
+    @Import(name="accessPolicies")
       private final @Nullable Output<String> accessPolicies;
 
     public Output<String> getAccessPolicies() {
         return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
     }
 
-    @InputImport(name="advancedOptions")
+    @Import(name="advancedOptions")
       private final @Nullable Output<Map<String,String>> advancedOptions;
 
     public Output<Map<String,String>> getAdvancedOptions() {
@@ -49,7 +49,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for [fine-grained access control](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/fgac.html). Detailed below.
      * 
      */
-    @InputImport(name="advancedSecurityOptions")
+    @Import(name="advancedSecurityOptions")
       private final @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
 
     public Output<DomainAdvancedSecurityOptionsArgs> getAdvancedSecurityOptions() {
@@ -60,7 +60,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the Auto-Tune options of the domain. Detailed below.
      * 
      */
-    @InputImport(name="autoTuneOptions")
+    @Import(name="autoTuneOptions")
       private final @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
 
     public Output<DomainAutoTuneOptionsArgs> getAutoTuneOptions() {
@@ -71,7 +71,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the cluster of the domain. Detailed below.
      * 
      */
-    @InputImport(name="clusterConfig")
+    @Import(name="clusterConfig")
       private final @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
     public Output<DomainClusterConfigArgs> getClusterConfig() {
@@ -82,7 +82,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for authenticating Kibana with Cognito. Detailed below.
      * 
      */
-    @InputImport(name="cognitoOptions")
+    @Import(name="cognitoOptions")
       private final @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
     public Output<DomainCognitoOptionsArgs> getCognitoOptions() {
@@ -93,7 +93,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for domain endpoint HTTP(S) related options. Detailed below.
      * 
      */
-    @InputImport(name="domainEndpointOptions")
+    @Import(name="domainEndpointOptions")
       private final @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
 
     public Output<DomainDomainEndpointOptionsArgs> getDomainEndpointOptions() {
@@ -104,7 +104,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the domain.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -115,7 +115,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for EBS related options, may be required based on chosen [instance size](https://aws.amazon.com/elasticsearch-service/pricing/). Detailed below.
      * 
      */
-    @InputImport(name="ebsOptions")
+    @Import(name="ebsOptions")
       private final @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
 
     public Output<DomainEbsOptionsArgs> getEbsOptions() {
@@ -126,7 +126,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Version of Elasticsearch to deploy. Defaults to `1.5`.
      * 
      */
-    @InputImport(name="elasticsearchVersion")
+    @Import(name="elasticsearchVersion")
       private final @Nullable Output<String> elasticsearchVersion;
 
     public Output<String> getElasticsearchVersion() {
@@ -137,7 +137,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for encrypt at rest options. Only available for [certain instance types](http://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html). Detailed below.
      * 
      */
-    @InputImport(name="encryptAtRest")
+    @Import(name="encryptAtRest")
       private final @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
 
     public Output<DomainEncryptAtRestArgs> getEncryptAtRest() {
@@ -148,7 +148,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.
      * 
      */
-    @InputImport(name="logPublishingOptions")
+    @Import(name="logPublishingOptions")
       private final @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
 
     public Output<List<DomainLogPublishingOptionArgs>> getLogPublishingOptions() {
@@ -159,7 +159,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for node-to-node encryption options. Detailed below.
      * 
      */
-    @InputImport(name="nodeToNodeEncryption")
+    @Import(name="nodeToNodeEncryption")
       private final @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
 
     public Output<DomainNodeToNodeEncryptionArgs> getNodeToNodeEncryption() {
@@ -170,7 +170,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
      * 
      */
-    @InputImport(name="snapshotOptions")
+    @Import(name="snapshotOptions")
       private final @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
     public Output<DomainSnapshotOptionsArgs> getSnapshotOptions() {
@@ -181,7 +181,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -192,7 +192,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for VPC related options. Adding or removing this configuration forces a new resource ([documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html#es-vpc-limitations)). Detailed below.
      * 
      */
-    @InputImport(name="vpcOptions")
+    @Import(name="vpcOptions")
       private final @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
 
     public Output<DomainVpcOptionsArgs> getVpcOptions() {

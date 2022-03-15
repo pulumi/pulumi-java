@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLogPattern;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationLogPatternSet {
     /**
      * The log patterns of a set.
@@ -22,10 +22,10 @@ public final class ApplicationLogPatternSet {
      */
     private final String patternSetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationLogPatternSet(
-        @OutputCustomType.Parameter("logPatterns") List<ApplicationLogPattern> logPatterns,
-        @OutputCustomType.Parameter("patternSetName") String patternSetName) {
+        @CustomType.Parameter("logPatterns") List<ApplicationLogPattern> logPatterns,
+        @CustomType.Parameter("patternSetName") String patternSetName) {
         this.logPatterns = logPatterns;
         this.patternSetName = patternSetName;
     }

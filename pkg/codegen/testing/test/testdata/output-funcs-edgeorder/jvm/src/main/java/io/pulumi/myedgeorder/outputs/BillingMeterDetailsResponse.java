@@ -4,13 +4,13 @@
 package io.pulumi.myedgeorder.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.myedgeorder.outputs.Pav2MeterDetailsResponse;
 import io.pulumi.myedgeorder.outputs.PurchaseMeterDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BillingMeterDetailsResponse {
     /**
      * Frequency of recurrence
@@ -33,12 +33,12 @@ public final class BillingMeterDetailsResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BillingMeterDetailsResponse(
-        @OutputCustomType.Parameter("frequency") String frequency,
-        @OutputCustomType.Parameter("meterDetails") Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
-        @OutputCustomType.Parameter("meteringType") String meteringType,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("frequency") String frequency,
+        @CustomType.Parameter("meterDetails") Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
+        @CustomType.Parameter("meteringType") String meteringType,
+        @CustomType.Parameter("name") String name) {
         this.frequency = frequency;
         this.meterDetails = meterDetails;
         this.meteringType = meteringType;

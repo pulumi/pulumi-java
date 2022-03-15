@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesRespons
 import io.pulumi.azurenative.network.outputs.VirtualNetworkPeeringResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
      */
-    @OutputExport(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="addressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> addressSpace;
 
     /**
@@ -57,7 +57,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
      */
-    @OutputExport(name="bgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
+    @Export(name="bgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> bgpCommunities;
 
     /**
@@ -71,7 +71,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The DDoS protection plan associated with the virtual network.
      * 
      */
-    @OutputExport(name="ddosProtectionPlan", type=SubResourceResponse.class, parameters={})
+    @Export(name="ddosProtectionPlan", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> ddosProtectionPlan;
 
     /**
@@ -85,7 +85,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
      */
-    @OutputExport(name="dhcpOptions", type=DhcpOptionsResponse.class, parameters={})
+    @Export(name="dhcpOptions", type=DhcpOptionsResponse.class, parameters={})
     private Output</* @Nullable */ DhcpOptionsResponse> dhcpOptions;
 
     /**
@@ -99,7 +99,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
      */
-    @OutputExport(name="enableDdosProtection", type=Boolean.class, parameters={})
+    @Export(name="enableDdosProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDdosProtection;
 
     /**
@@ -113,7 +113,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
      */
-    @OutputExport(name="enableVmProtection", type=Boolean.class, parameters={})
+    @Export(name="enableVmProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableVmProtection;
 
     /**
@@ -127,7 +127,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -141,7 +141,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The extended location of the virtual network.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -155,7 +155,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Array of IpAllocation which reference this VNET.
      * 
      */
-    @OutputExport(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> ipAllocations;
 
     /**
@@ -169,7 +169,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -183,7 +183,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -197,7 +197,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual network resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -211,7 +211,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * The resourceGuid property of the Virtual Network resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -225,7 +225,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * A list of subnets in a Virtual Network.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
+    @Export(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output</* @Nullable */ List<SubnetResponse>> subnets;
 
     /**
@@ -239,7 +239,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -253,7 +253,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -267,7 +267,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * A list of peerings in a Virtual Network.
      * 
      */
-    @OutputExport(name="virtualNetworkPeerings", type=List.class, parameters={VirtualNetworkPeeringResponse.class})
+    @Export(name="virtualNetworkPeerings", type=List.class, parameters={VirtualNetworkPeeringResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> virtualNetworkPeerings;
 
     /**

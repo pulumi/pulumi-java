@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReservationResult {
     /**
      * The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
@@ -20,10 +20,10 @@ public final class GetReservationResult {
      */
     private final String throughputCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReservationResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("throughputCapacity") String throughputCapacity) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("throughputCapacity") String throughputCapacity) {
         this.name = name;
         this.throughputCapacity = throughputCapacity;
     }

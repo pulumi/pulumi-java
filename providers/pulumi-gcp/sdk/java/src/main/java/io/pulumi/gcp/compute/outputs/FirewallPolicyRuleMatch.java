@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.FirewallPolicyRuleMatchLayer4Config;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyRuleMatch {
     /**
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
@@ -28,11 +28,11 @@ public final class FirewallPolicyRuleMatch {
      */
     private final @Nullable List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyRuleMatch(
-        @OutputCustomType.Parameter("destIpRanges") @Nullable List<String> destIpRanges,
-        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatchLayer4Config> layer4Configs,
-        @OutputCustomType.Parameter("srcIpRanges") @Nullable List<String> srcIpRanges) {
+        @CustomType.Parameter("destIpRanges") @Nullable List<String> destIpRanges,
+        @CustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatchLayer4Config> layer4Configs,
+        @CustomType.Parameter("srcIpRanges") @Nullable List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;

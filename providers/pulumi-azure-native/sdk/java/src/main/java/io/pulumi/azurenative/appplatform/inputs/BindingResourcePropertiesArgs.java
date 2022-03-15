@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * Binding parameters of the Binding resource
      * 
      */
-    @InputImport(name="bindingParameters")
+    @Import(name="bindingParameters")
       private final @Nullable Output<Map<String,Object>> bindingParameters;
 
     public Output<Map<String,Object>> getBindingParameters() {
@@ -35,7 +35,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * The key of the bound resource
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -46,7 +46,7 @@ public final class BindingResourcePropertiesArgs extends io.pulumi.resources.Res
      * The Azure resource id of the bound resource
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

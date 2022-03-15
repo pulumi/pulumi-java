@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
      * 
      */
-    @InputImport(name="allowedSourceAddressPrefix")
+    @Import(name="allowedSourceAddressPrefix")
       private final @Nullable String allowedSourceAddressPrefix;
 
     public Optional<String> getAllowedSourceAddressPrefix() {
@@ -31,7 +31,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
      * 
      */
-    @InputImport(name="allowedSourceAddressPrefixes")
+    @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable List<String> allowedSourceAddressPrefixes;
 
     public List<String> getAllowedSourceAddressPrefixes() {
@@ -42,7 +42,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * The date & time at which the request ends in UTC
      * 
      */
-    @InputImport(name="endTimeUtc", required=true)
+    @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
 
     public String getEndTimeUtc() {
@@ -53,14 +53,14 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * The port which is mapped to this port's `number` in the Azure Firewall, if applicable
      * 
      */
-    @InputImport(name="mappedPort")
+    @Import(name="mappedPort")
       private final @Nullable Integer mappedPort;
 
     public Optional<Integer> getMappedPort() {
         return this.mappedPort == null ? Optional.empty() : Optional.ofNullable(this.mappedPort);
     }
 
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final Integer number;
 
     public Integer getNumber() {
@@ -71,7 +71,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * The status of the port
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -82,7 +82,7 @@ public final class JitNetworkAccessRequestPortResponse extends io.pulumi.resourc
      * A description of why the `status` has its value
      * 
      */
-    @InputImport(name="statusReason", required=true)
+    @Import(name="statusReason", required=true)
       private final String statusReason;
 
     public String getStatusReason() {

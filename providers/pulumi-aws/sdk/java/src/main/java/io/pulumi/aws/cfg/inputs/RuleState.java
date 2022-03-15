@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.RuleScopeGetArgs;
 import io.pulumi.aws.cfg.inputs.RuleSourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the config rule
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * Description of the rule
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * A string in JSON format that is passed to the AWS Config rule Lambda function.
      * 
      */
-    @InputImport(name="inputParameters")
+    @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
     public Output<String> getInputParameters() {
@@ -54,7 +54,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
-    @InputImport(name="maximumExecutionFrequency")
+    @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
     public Output<String> getMaximumExecutionFrequency() {
@@ -65,7 +65,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The ID of the config rule
      * 
      */
-    @InputImport(name="ruleId")
+    @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -87,7 +87,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * Scope defines which resources can trigger an evaluation for the rule as documented below.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<RuleScopeGetArgs> scope;
 
     public Output<RuleScopeGetArgs> getScope() {
@@ -98,7 +98,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<RuleSourceGetArgs> source;
 
     public Output<RuleSourceGetArgs> getSource() {
@@ -109,7 +109,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

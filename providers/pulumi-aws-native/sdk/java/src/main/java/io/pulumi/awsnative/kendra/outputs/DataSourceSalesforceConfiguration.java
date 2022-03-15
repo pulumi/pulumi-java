@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceChatterFeedConfigu
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceStandardObjectAttachmentConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSalesforceStandardObjectConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSalesforceConfiguration {
     private final @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration;
     private final @Nullable Boolean crawlAttachments;
@@ -27,17 +27,17 @@ public final class DataSourceSalesforceConfiguration {
     private final @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
     private final @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceSalesforceConfiguration(
-        @OutputCustomType.Parameter("chatterFeedConfiguration") @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
-        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
-        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
-        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns,
-        @OutputCustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        @OutputCustomType.Parameter("secretArn") String secretArn,
-        @OutputCustomType.Parameter("serverUrl") String serverUrl,
-        @OutputCustomType.Parameter("standardObjectAttachmentConfiguration") @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
-        @OutputCustomType.Parameter("standardObjectConfigurations") @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
+        @CustomType.Parameter("chatterFeedConfiguration") @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
+        @CustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @CustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @CustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns,
+        @CustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("serverUrl") String serverUrl,
+        @CustomType.Parameter("standardObjectAttachmentConfiguration") @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
+        @CustomType.Parameter("standardObjectConfigurations") @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
         this.chatterFeedConfiguration = chatterFeedConfiguration;
         this.crawlAttachments = crawlAttachments;
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;

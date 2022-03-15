@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
      * Subscription used in the connection.
      * 
      */
-    @InputImport(name="subscription", required=true)
+    @Import(name="subscription", required=true)
       private final String subscription;
 
     public String getSubscription() {
@@ -31,7 +31,7 @@ public final class PubSubIODetailsResponse extends io.pulumi.resources.InvokeArg
      * Topic accessed in the connection.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final String topic;
 
     public String getTopic() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.JwtAuthenticationResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPolicyResult {
     /**
      * Authentication method to be used when validating client API access.
@@ -44,14 +44,14 @@ public final class GetAccessPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPolicyResult(
-        @OutputCustomType.Parameter("authentication") @Nullable JwtAuthenticationResponse authentication,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("role") @Nullable String role,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authentication") @Nullable JwtAuthenticationResponse authentication,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("role") @Nullable String role,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.authentication = authentication;
         this.id = id;
         this.name = name;

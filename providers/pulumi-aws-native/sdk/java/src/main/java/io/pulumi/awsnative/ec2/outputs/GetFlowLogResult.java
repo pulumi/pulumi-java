@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.FlowLogTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFlowLogResult {
     /**
      * The Flow Log ID
@@ -24,10 +24,10 @@ public final class GetFlowLogResult {
      */
     private final @Nullable List<FlowLogTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFlowLogResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("tags") @Nullable List<FlowLogTag> tags) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("tags") @Nullable List<FlowLogTag> tags) {
         this.id = id;
         this.tags = tags;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresetVideoWatermark {
     /**
      * The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
@@ -62,18 +62,18 @@ public final class PresetVideoWatermark {
      */
     private final @Nullable String verticalOffset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresetVideoWatermark(
-        @OutputCustomType.Parameter("horizontalAlign") @Nullable String horizontalAlign,
-        @OutputCustomType.Parameter("horizontalOffset") @Nullable String horizontalOffset,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
-        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
-        @OutputCustomType.Parameter("opacity") @Nullable String opacity,
-        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("verticalAlign") @Nullable String verticalAlign,
-        @OutputCustomType.Parameter("verticalOffset") @Nullable String verticalOffset) {
+        @CustomType.Parameter("horizontalAlign") @Nullable String horizontalAlign,
+        @CustomType.Parameter("horizontalOffset") @Nullable String horizontalOffset,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @CustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @CustomType.Parameter("opacity") @Nullable String opacity,
+        @CustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("verticalAlign") @Nullable String verticalAlign,
+        @CustomType.Parameter("verticalOffset") @Nullable String verticalOffset) {
         this.horizontalAlign = horizontalAlign;
         this.horizontalOffset = horizontalOffset;
         this.id = id;

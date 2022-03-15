@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.directconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * The ARN of the connection.
@@ -52,17 +52,17 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("awsDevice") String awsDevice,
-        @OutputCustomType.Parameter("bandwidth") String bandwidth,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerAccountId") String ownerAccountId,
-        @OutputCustomType.Parameter("providerName") String providerName,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("awsDevice") String awsDevice,
+        @CustomType.Parameter("bandwidth") String bandwidth,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerAccountId") String ownerAccountId,
+        @CustomType.Parameter("providerName") String providerName,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.awsDevice = awsDevice;
         this.bandwidth = bandwidth;

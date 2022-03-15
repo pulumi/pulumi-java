@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
      * The address of this radius server.
      * 
      */
-    @InputImport(name="radiusServerAddress", required=true)
+    @Import(name="radiusServerAddress", required=true)
       private final String radiusServerAddress;
 
     public String getRadiusServerAddress() {
@@ -34,7 +34,7 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
      * The initial score assigned to this radius server.
      * 
      */
-    @InputImport(name="radiusServerScore")
+    @Import(name="radiusServerScore")
       private final @Nullable Double radiusServerScore;
 
     public Optional<Double> getRadiusServerScore() {
@@ -45,7 +45,7 @@ public final class RadiusServerResponse extends io.pulumi.resources.InvokeArgs {
      * The secret used for this radius server.
      * 
      */
-    @InputImport(name="radiusServerSecret")
+    @Import(name="radiusServerSecret")
       private final @Nullable String radiusServerSecret;
 
     public Optional<String> getRadiusServerSecret() {

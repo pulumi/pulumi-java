@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentInstanceFilterArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentRolloutArgs;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -44,14 +44,14 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Filter to select VMs.
      * 
      */
-    @InputImport(name="instanceFilter", required=true)
+    @Import(name="instanceFilter", required=true)
       private final Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
     public Output<OSPolicyAssignmentInstanceFilterArgs> getInstanceFilter() {
         return this.instanceFilter;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -62,7 +62,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -73,21 +73,21 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * List of OS policies to be applied to the VMs.
      * 
      */
-    @InputImport(name="osPolicies", required=true)
+    @Import(name="osPolicies", required=true)
       private final Output<List<OSPolicyArgs>> osPolicies;
 
     public Output<List<OSPolicyArgs>> getOsPolicies() {
         return this.osPolicies;
     }
 
-    @InputImport(name="osPolicyAssignmentId", required=true)
+    @Import(name="osPolicyAssignmentId", required=true)
       private final Output<String> osPolicyAssignmentId;
 
     public Output<String> getOsPolicyAssignmentId() {
         return this.osPolicyAssignmentId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -98,7 +98,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    @InputImport(name="rollout", required=true)
+    @Import(name="rollout", required=true)
       private final Output<OSPolicyAssignmentRolloutArgs> rollout;
 
     public Output<OSPolicyAssignmentRolloutArgs> getRollout() {

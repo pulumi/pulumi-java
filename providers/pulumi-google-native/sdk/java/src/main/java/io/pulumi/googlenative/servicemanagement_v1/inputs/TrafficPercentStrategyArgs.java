@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TrafficPercentStrategyArgs extends io.pulumi.resources.Resour
      * Maps service configuration IDs to their corresponding traffic percentage. Key is the service configuration ID, Value is the traffic percentage which must be greater than 0.0 and the sum must equal to 100.0.
      * 
      */
-    @InputImport(name="percentages")
+    @Import(name="percentages")
       private final @Nullable Output<Map<String,String>> percentages;
 
     public Output<Map<String,String>> getPercentages() {

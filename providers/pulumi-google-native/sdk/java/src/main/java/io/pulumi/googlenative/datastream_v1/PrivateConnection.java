@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1.PrivateConnectionArgs;
@@ -25,7 +25,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * The create time of the resource.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -39,7 +39,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -53,7 +53,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * In case of error, the details of the error in a user-friendly format.
      * 
      */
-    @OutputExport(name="error", type=ErrorResponse.class, parameters={})
+    @Export(name="error", type=ErrorResponse.class, parameters={})
     private Output<ErrorResponse> error;
 
     /**
@@ -67,7 +67,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * Labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -81,7 +81,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * The resource's name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * The state of the Private Connection.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -109,7 +109,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * The update time of the resource.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -123,7 +123,7 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
      * VPC Peering Config.
      * 
      */
-    @OutputExport(name="vpcPeeringConfig", type=VpcPeeringConfigResponse.class, parameters={})
+    @Export(name="vpcPeeringConfig", type=VpcPeeringConfigResponse.class, parameters={})
     private Output<VpcPeeringConfigResponse> vpcPeeringConfig;
 
     /**

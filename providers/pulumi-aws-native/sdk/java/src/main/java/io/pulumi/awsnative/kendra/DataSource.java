@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceType;
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,43 +21,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:kendra:DataSource")
 public class DataSource extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="dataSourceConfiguration", type=DataSourceConfiguration.class, parameters={})
+    @Export(name="dataSourceConfiguration", type=DataSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ DataSourceConfiguration> dataSourceConfiguration;
 
     public Output</* @Nullable */ DataSourceConfiguration> getDataSourceConfiguration() {
         return this.dataSourceConfiguration;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="indexId", type=String.class, parameters={})
+    @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
     public Output<String> getIndexId() {
         return this.indexId;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     public Output</* @Nullable */ String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
     public Output</* @Nullable */ String> getSchedule() {
@@ -67,7 +67,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * Tags for labeling the data source
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DataSourceTag.class})
+    @Export(name="tags", type=List.class, parameters={DataSourceTag.class})
     private Output</* @Nullable */ List<DataSourceTag>> tags;
 
     /**
@@ -77,7 +77,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DataSourceTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=DataSourceType.class, parameters={})
+    @Export(name="type", type=DataSourceType.class, parameters={})
     private Output<DataSourceType> type;
 
     public Output<DataSourceType> getType() {

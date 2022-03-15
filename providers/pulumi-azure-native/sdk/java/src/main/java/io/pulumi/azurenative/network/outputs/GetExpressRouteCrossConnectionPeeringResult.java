@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.outputs.Ipv6ExpressRouteCircuitPeeringConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExpressRouteCrossConnectionPeeringResult {
     /**
      * The Azure ASN.
@@ -106,26 +106,26 @@ public final class GetExpressRouteCrossConnectionPeeringResult {
      */
     private final @Nullable Integer vlanId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExpressRouteCrossConnectionPeeringResult(
-        @OutputCustomType.Parameter("azureASN") Integer azureASN,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("gatewayManagerEtag") @Nullable String gatewayManagerEtag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipv6PeeringConfig") @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
-        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
-        @OutputCustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("peerASN") @Nullable Double peerASN,
-        @OutputCustomType.Parameter("peeringType") @Nullable String peeringType,
-        @OutputCustomType.Parameter("primaryAzurePort") String primaryAzurePort,
-        @OutputCustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("secondaryAzurePort") String secondaryAzurePort,
-        @OutputCustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
-        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("vlanId") @Nullable Integer vlanId) {
+        @CustomType.Parameter("azureASN") Integer azureASN,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("gatewayManagerEtag") @Nullable String gatewayManagerEtag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipv6PeeringConfig") @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
+        @CustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @CustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("peerASN") @Nullable Double peerASN,
+        @CustomType.Parameter("peeringType") @Nullable String peeringType,
+        @CustomType.Parameter("primaryAzurePort") String primaryAzurePort,
+        @CustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("secondaryAzurePort") String secondaryAzurePort,
+        @CustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
+        @CustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("vlanId") @Nullable Integer vlanId) {
         this.azureASN = azureASN;
         this.etag = etag;
         this.gatewayManagerEtag = gatewayManagerEtag;

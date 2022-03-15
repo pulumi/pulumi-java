@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectClientCredentialArgs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
      * The authentication credentials of the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="clientCredential")
+    @Import(name="clientCredential")
       private final @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
 
     public Output<OpenIdConnectClientCredentialArgs> getClientCredential() {
@@ -35,7 +35,7 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
      * The client id of the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -46,7 +46,7 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
      * The configuration settings of the endpoints used for the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="openIdConnectConfiguration")
+    @Import(name="openIdConnectConfiguration")
       private final @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
 
     public Output<OpenIdConnectConfigArgs> getOpenIdConnectConfiguration() {

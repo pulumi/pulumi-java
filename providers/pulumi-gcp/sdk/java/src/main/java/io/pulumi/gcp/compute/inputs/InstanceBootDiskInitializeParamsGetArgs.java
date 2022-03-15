@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
      * These images can be referred by family name here.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -40,7 +40,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
      * A map of key/value label pairs to assign to the instance.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
     public Output<Map<String,Object>> getLabels() {
@@ -52,7 +52,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
      * will inherit the size of its base image.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -63,7 +63,7 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
      * The type of reservation from which this instance can consume resources.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

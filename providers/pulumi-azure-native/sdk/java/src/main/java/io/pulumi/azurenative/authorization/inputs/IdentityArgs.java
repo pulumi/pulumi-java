@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.azurenative.authorization.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The identity type. This is the only required field when adding a system assigned identity to a resource.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ByProductsResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.EnvironmentResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoArtifactResponse;
@@ -24,7 +24,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
      * 
      */
-    @InputImport(name="byproducts", required=true)
+    @Import(name="byproducts", required=true)
       private final ByProductsResponse byproducts;
 
     public ByProductsResponse getByproducts() {
@@ -35,7 +35,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * This field contains the full command executed for the step. This can also be empty if links are generated for operations that aren't directly mapped to a specific command. Each term in the command is an independent string in the list. An example of a command in the in-toto metadata field is: "command": ["git", "clone", "https://github.com/in-toto/demo-project.git"]
      * 
      */
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final List<String> command;
 
     public List<String> getCommand() {
@@ -46,7 +46,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * This is a field that can be used to capture information about the environment. It is suggested for this field to contain information that details environment variables, filesystem information, and the present working directory. The recommended structure of this field is: "environment": { "custom_values": { "variables": "", "filesystem": "", "workdir": "", "": "..." } }
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final EnvironmentResponse environment;
 
     public EnvironmentResponse getEnvironment() {
@@ -57,7 +57,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * Materials are the supply chain artifacts that go into the step and are used for the operation performed. The key of the map is the path of the artifact and the structure contains the recorded hash information. An example is: "materials": [ { "resource_uri": "foo/bar", "hashes": { "sha256": "ebebf...", : } } ]
      * 
      */
-    @InputImport(name="materials", required=true)
+    @Import(name="materials", required=true)
       private final List<GrafeasV1beta1IntotoArtifactResponse> materials;
 
     public List<GrafeasV1beta1IntotoArtifactResponse> getMaterials() {
@@ -68,7 +68,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * Products are the supply chain artifacts generated as a result of the step. The structure is identical to that of materials.
      * 
      */
-    @InputImport(name="products", required=true)
+    @Import(name="products", required=true)
       private final List<GrafeasV1beta1IntotoArtifactResponse> products;
 
     public List<GrafeasV1beta1IntotoArtifactResponse> getProducts() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to 3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard, but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12 replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity'). 'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per partition, up to 12 partitions.'
@@ -17,8 +17,8 @@ public final class SkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private SkuResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private SkuResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

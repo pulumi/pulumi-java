@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.enums.TransportShipmentTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
      * Indicates Shipment Logistics type that the customer preferred.
      * 
      */
-    @InputImport(name="preferredShipmentType", required=true)
+    @Import(name="preferredShipmentType", required=true)
       private final Output<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
     public Output<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {

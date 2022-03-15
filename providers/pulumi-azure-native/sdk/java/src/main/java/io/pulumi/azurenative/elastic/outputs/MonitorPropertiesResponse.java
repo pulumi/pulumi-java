@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.ElasticPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitorPropertiesResponse {
     /**
      * Elastic cloud properties.
@@ -35,13 +35,13 @@ public final class MonitorPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitorPropertiesResponse(
-        @OutputCustomType.Parameter("elasticProperties") @Nullable ElasticPropertiesResponse elasticProperties,
-        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
-        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
-        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
+        @CustomType.Parameter("elasticProperties") @Nullable ElasticPropertiesResponse elasticProperties,
+        @CustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @CustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @CustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.elasticProperties = elasticProperties;
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;

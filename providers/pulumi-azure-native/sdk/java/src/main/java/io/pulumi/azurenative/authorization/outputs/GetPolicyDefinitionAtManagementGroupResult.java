@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyDefinitionAtManagementGroupResult {
     /**
      * The policy definition description.
@@ -65,18 +65,18 @@ public final class GetPolicyDefinitionAtManagementGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyDefinitionAtManagementGroupResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionsValueResponse> parameters,
-        @OutputCustomType.Parameter("policyRule") @Nullable Object policyRule,
-        @OutputCustomType.Parameter("policyType") @Nullable String policyType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionsValueResponse> parameters,
+        @CustomType.Parameter("policyRule") @Nullable Object policyRule,
+        @CustomType.Parameter("policyType") @Nullable String policyType,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

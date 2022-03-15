@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DayResponse {
     /**
      * Date of the month
@@ -23,10 +23,10 @@ public final class DayResponse {
      */
     private final @Nullable Boolean isLast;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DayResponse(
-        @OutputCustomType.Parameter("date") @Nullable Integer date,
-        @OutputCustomType.Parameter("isLast") @Nullable Boolean isLast) {
+        @CustomType.Parameter("date") @Nullable Integer date,
+        @CustomType.Parameter("isLast") @Nullable Boolean isLast) {
         this.date = date;
         this.isLast = isLast;
     }

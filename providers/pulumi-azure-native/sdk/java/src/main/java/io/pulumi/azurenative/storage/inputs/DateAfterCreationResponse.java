@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DateAfterCreationResponse extends io.pulumi.resources.InvokeA
      * Value indicating the age in days after creation
      * 
      */
-    @InputImport(name="daysAfterCreationGreaterThan", required=true)
+    @Import(name="daysAfterCreationGreaterThan", required=true)
       private final Double daysAfterCreationGreaterThan;
 
     public Double getDaysAfterCreationGreaterThan() {

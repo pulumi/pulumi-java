@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Auto Scaling group for the lifecycle hook.
      * 
      */
-    @InputImport(name="autoScalingGroupName", required=true)
+    @Import(name="autoScalingGroupName", required=true)
       private final Output<String> autoScalingGroupName;
 
     public Output<String> getAutoScalingGroupName() {
@@ -30,7 +30,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are CONTINUE and ABANDON (default).
      * 
      */
-    @InputImport(name="defaultResult")
+    @Import(name="defaultResult")
       private final @Nullable Output<String> defaultResult;
 
     public Output<String> getDefaultResult() {
@@ -41,7 +41,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from 30 to 7200 seconds. The default value is 3600 seconds (1 hour). If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the DefaultResult property.
      * 
      */
-    @InputImport(name="heartbeatTimeout")
+    @Import(name="heartbeatTimeout")
       private final @Nullable Output<Integer> heartbeatTimeout;
 
     public Output<Integer> getHeartbeatTimeout() {
@@ -52,7 +52,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lifecycle hook.
      * 
      */
-    @InputImport(name="lifecycleHookName")
+    @Import(name="lifecycleHookName")
       private final @Nullable Output<String> lifecycleHookName;
 
     public Output<String> getLifecycleHookName() {
@@ -63,7 +63,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The instance state to which you want to attach the lifecycle hook.
      * 
      */
-    @InputImport(name="lifecycleTransition", required=true)
+    @Import(name="lifecycleTransition", required=true)
       private final Output<String> lifecycleTransition;
 
     public Output<String> getLifecycleTransition() {
@@ -74,7 +74,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * Additional information that is included any time Amazon EC2 Auto Scaling sends a message to the notification target.
      * 
      */
-    @InputImport(name="notificationMetadata")
+    @Import(name="notificationMetadata")
       private final @Nullable Output<String> notificationMetadata;
 
     public Output<String> getNotificationMetadata() {
@@ -85,7 +85,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook. You can specify an Amazon SQS queue or an Amazon SNS topic. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata.
      * 
      */
-    @InputImport(name="notificationTargetARN")
+    @Import(name="notificationTargetARN")
       private final @Nullable Output<String> notificationTargetARN;
 
     public Output<String> getNotificationTargetARN() {
@@ -96,7 +96,7 @@ public final class LifecycleHookArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for example, an Amazon SNS topic or an Amazon SQS queue.
      * 
      */
-    @InputImport(name="roleARN")
+    @Import(name="roleARN")
       private final @Nullable Output<String> roleARN;
 
     public Output<String> getRoleARN() {

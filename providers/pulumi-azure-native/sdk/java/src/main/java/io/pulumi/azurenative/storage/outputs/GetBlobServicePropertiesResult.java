@@ -9,14 +9,14 @@ import io.pulumi.azurenative.storage.outputs.DeleteRetentionPolicyResponse;
 import io.pulumi.azurenative.storage.outputs.LastAccessTimeTrackingPolicyResponse;
 import io.pulumi.azurenative.storage.outputs.RestorePolicyPropertiesResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBlobServicePropertiesResult {
     /**
      * Deprecated in favor of isVersioningEnabled property.
@@ -84,21 +84,21 @@ public final class GetBlobServicePropertiesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBlobServicePropertiesResult(
-        @OutputCustomType.Parameter("automaticSnapshotPolicyEnabled") @Nullable Boolean automaticSnapshotPolicyEnabled,
-        @OutputCustomType.Parameter("changeFeed") @Nullable ChangeFeedResponse changeFeed,
-        @OutputCustomType.Parameter("containerDeleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy,
-        @OutputCustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
-        @OutputCustomType.Parameter("defaultServiceVersion") @Nullable String defaultServiceVersion,
-        @OutputCustomType.Parameter("deleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isVersioningEnabled") @Nullable Boolean isVersioningEnabled,
-        @OutputCustomType.Parameter("lastAccessTimeTrackingPolicy") @Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restorePolicy") @Nullable RestorePolicyPropertiesResponse restorePolicy,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("automaticSnapshotPolicyEnabled") @Nullable Boolean automaticSnapshotPolicyEnabled,
+        @CustomType.Parameter("changeFeed") @Nullable ChangeFeedResponse changeFeed,
+        @CustomType.Parameter("containerDeleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse containerDeleteRetentionPolicy,
+        @CustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
+        @CustomType.Parameter("defaultServiceVersion") @Nullable String defaultServiceVersion,
+        @CustomType.Parameter("deleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse deleteRetentionPolicy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isVersioningEnabled") @Nullable Boolean isVersioningEnabled,
+        @CustomType.Parameter("lastAccessTimeTrackingPolicy") @Nullable LastAccessTimeTrackingPolicyResponse lastAccessTimeTrackingPolicy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restorePolicy") @Nullable RestorePolicyPropertiesResponse restorePolicy,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("type") String type) {
         this.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
         this.changeFeed = changeFeed;
         this.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;

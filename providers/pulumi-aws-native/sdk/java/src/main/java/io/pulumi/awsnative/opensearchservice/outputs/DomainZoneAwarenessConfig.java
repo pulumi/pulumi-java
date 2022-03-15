@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainZoneAwarenessConfig {
     private final @Nullable Integer availabilityZoneCount;
 
-    @OutputCustomType.Constructor
-    private DomainZoneAwarenessConfig(@OutputCustomType.Parameter("availabilityZoneCount") @Nullable Integer availabilityZoneCount) {
+    @CustomType.Constructor
+    private DomainZoneAwarenessConfig(@CustomType.Parameter("availabilityZoneCount") @Nullable Integer availabilityZoneCount) {
         this.availabilityZoneCount = availabilityZoneCount;
     }
 

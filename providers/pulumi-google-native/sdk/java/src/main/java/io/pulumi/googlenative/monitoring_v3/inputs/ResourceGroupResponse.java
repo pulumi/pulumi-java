@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
      * The group of resources being monitored. Should be only the [GROUP_ID], and not the full-path projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID].
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final String groupId;
 
     public String getGroupId() {
@@ -31,7 +31,7 @@ public final class ResourceGroupResponse extends io.pulumi.resources.InvokeArgs 
      * The resource type of the group members.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {

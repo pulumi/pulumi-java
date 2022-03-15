@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.mskconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomPluginLocationS3 {
     /**
      * The Amazon Resource Name (ARN) of an S3 bucket.
@@ -27,11 +27,11 @@ public final class CustomPluginLocationS3 {
      */
     private final @Nullable String objectVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomPluginLocationS3(
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("fileKey") String fileKey,
-        @OutputCustomType.Parameter("objectVersion") @Nullable String objectVersion) {
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("fileKey") String fileKey,
+        @CustomType.Parameter("objectVersion") @Nullable String objectVersion) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.objectVersion = objectVersion;

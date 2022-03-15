@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.relay.HybridConnectionAuthorizationRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * The rights associated with the rule.
      * 
      */
-    @OutputExport(name="rights", type=List.class, parameters={String.class})
+    @Export(name="rights", type=List.class, parameters={String.class})
     private Output<List<String>> rights;
 
     /**
@@ -62,7 +62,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

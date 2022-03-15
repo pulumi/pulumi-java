@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.AzureFileVolumeResponse;
 import io.pulumi.azurenative.containerinstance.outputs.GitRepoVolumeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeResponse {
     /**
      * The Azure File volume.
@@ -41,13 +41,13 @@ public final class VolumeResponse {
      */
     private final @Nullable Map<String,String> secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeResponse(
-        @OutputCustomType.Parameter("azureFile") @Nullable AzureFileVolumeResponse azureFile,
-        @OutputCustomType.Parameter("emptyDir") @Nullable Object emptyDir,
-        @OutputCustomType.Parameter("gitRepo") @Nullable GitRepoVolumeResponse gitRepo,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secret") @Nullable Map<String,String> secret) {
+        @CustomType.Parameter("azureFile") @Nullable AzureFileVolumeResponse azureFile,
+        @CustomType.Parameter("emptyDir") @Nullable Object emptyDir,
+        @CustomType.Parameter("gitRepo") @Nullable GitRepoVolumeResponse gitRepo,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secret") @Nullable Map<String,String> secret) {
         this.azureFile = azureFile;
         this.emptyDir = emptyDir;
         this.gitRepo = gitRepo;

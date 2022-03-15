@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppAuthSettingsResult {
     /**
      * Gets a JSON string containing the Azure AD Acl settings.
@@ -277,50 +277,50 @@ public final class ListWebAppAuthSettingsResult {
      */
     private final @Nullable Boolean validateIssuer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppAuthSettingsResult(
-        @OutputCustomType.Parameter("aadClaimsAuthorization") @Nullable String aadClaimsAuthorization,
-        @OutputCustomType.Parameter("additionalLoginParams") @Nullable List<String> additionalLoginParams,
-        @OutputCustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
-        @OutputCustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
-        @OutputCustomType.Parameter("authFilePath") @Nullable String authFilePath,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
-        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
-        @OutputCustomType.Parameter("configVersion") @Nullable String configVersion,
-        @OutputCustomType.Parameter("defaultProvider") @Nullable String defaultProvider,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("facebookAppId") @Nullable String facebookAppId,
-        @OutputCustomType.Parameter("facebookAppSecret") @Nullable String facebookAppSecret,
-        @OutputCustomType.Parameter("facebookAppSecretSettingName") @Nullable String facebookAppSecretSettingName,
-        @OutputCustomType.Parameter("facebookOAuthScopes") @Nullable List<String> facebookOAuthScopes,
-        @OutputCustomType.Parameter("gitHubClientId") @Nullable String gitHubClientId,
-        @OutputCustomType.Parameter("gitHubClientSecret") @Nullable String gitHubClientSecret,
-        @OutputCustomType.Parameter("gitHubClientSecretSettingName") @Nullable String gitHubClientSecretSettingName,
-        @OutputCustomType.Parameter("gitHubOAuthScopes") @Nullable List<String> gitHubOAuthScopes,
-        @OutputCustomType.Parameter("googleClientId") @Nullable String googleClientId,
-        @OutputCustomType.Parameter("googleClientSecret") @Nullable String googleClientSecret,
-        @OutputCustomType.Parameter("googleClientSecretSettingName") @Nullable String googleClientSecretSettingName,
-        @OutputCustomType.Parameter("googleOAuthScopes") @Nullable List<String> googleOAuthScopes,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isAuthFromFile") @Nullable String isAuthFromFile,
-        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("microsoftAccountClientId") @Nullable String microsoftAccountClientId,
-        @OutputCustomType.Parameter("microsoftAccountClientSecret") @Nullable String microsoftAccountClientSecret,
-        @OutputCustomType.Parameter("microsoftAccountClientSecretSettingName") @Nullable String microsoftAccountClientSecretSettingName,
-        @OutputCustomType.Parameter("microsoftAccountOAuthScopes") @Nullable List<String> microsoftAccountOAuthScopes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion,
-        @OutputCustomType.Parameter("tokenRefreshExtensionHours") @Nullable Double tokenRefreshExtensionHours,
-        @OutputCustomType.Parameter("tokenStoreEnabled") @Nullable Boolean tokenStoreEnabled,
-        @OutputCustomType.Parameter("twitterConsumerKey") @Nullable String twitterConsumerKey,
-        @OutputCustomType.Parameter("twitterConsumerSecret") @Nullable String twitterConsumerSecret,
-        @OutputCustomType.Parameter("twitterConsumerSecretSettingName") @Nullable String twitterConsumerSecretSettingName,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unauthenticatedClientAction") @Nullable String unauthenticatedClientAction,
-        @OutputCustomType.Parameter("validateIssuer") @Nullable Boolean validateIssuer) {
+        @CustomType.Parameter("aadClaimsAuthorization") @Nullable String aadClaimsAuthorization,
+        @CustomType.Parameter("additionalLoginParams") @Nullable List<String> additionalLoginParams,
+        @CustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
+        @CustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
+        @CustomType.Parameter("authFilePath") @Nullable String authFilePath,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
+        @CustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
+        @CustomType.Parameter("configVersion") @Nullable String configVersion,
+        @CustomType.Parameter("defaultProvider") @Nullable String defaultProvider,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("facebookAppId") @Nullable String facebookAppId,
+        @CustomType.Parameter("facebookAppSecret") @Nullable String facebookAppSecret,
+        @CustomType.Parameter("facebookAppSecretSettingName") @Nullable String facebookAppSecretSettingName,
+        @CustomType.Parameter("facebookOAuthScopes") @Nullable List<String> facebookOAuthScopes,
+        @CustomType.Parameter("gitHubClientId") @Nullable String gitHubClientId,
+        @CustomType.Parameter("gitHubClientSecret") @Nullable String gitHubClientSecret,
+        @CustomType.Parameter("gitHubClientSecretSettingName") @Nullable String gitHubClientSecretSettingName,
+        @CustomType.Parameter("gitHubOAuthScopes") @Nullable List<String> gitHubOAuthScopes,
+        @CustomType.Parameter("googleClientId") @Nullable String googleClientId,
+        @CustomType.Parameter("googleClientSecret") @Nullable String googleClientSecret,
+        @CustomType.Parameter("googleClientSecretSettingName") @Nullable String googleClientSecretSettingName,
+        @CustomType.Parameter("googleOAuthScopes") @Nullable List<String> googleOAuthScopes,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isAuthFromFile") @Nullable String isAuthFromFile,
+        @CustomType.Parameter("issuer") @Nullable String issuer,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("microsoftAccountClientId") @Nullable String microsoftAccountClientId,
+        @CustomType.Parameter("microsoftAccountClientSecret") @Nullable String microsoftAccountClientSecret,
+        @CustomType.Parameter("microsoftAccountClientSecretSettingName") @Nullable String microsoftAccountClientSecretSettingName,
+        @CustomType.Parameter("microsoftAccountOAuthScopes") @Nullable List<String> microsoftAccountOAuthScopes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion,
+        @CustomType.Parameter("tokenRefreshExtensionHours") @Nullable Double tokenRefreshExtensionHours,
+        @CustomType.Parameter("tokenStoreEnabled") @Nullable Boolean tokenStoreEnabled,
+        @CustomType.Parameter("twitterConsumerKey") @Nullable String twitterConsumerKey,
+        @CustomType.Parameter("twitterConsumerSecret") @Nullable String twitterConsumerSecret,
+        @CustomType.Parameter("twitterConsumerSecretSettingName") @Nullable String twitterConsumerSecretSettingName,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unauthenticatedClientAction") @Nullable String unauthenticatedClientAction,
+        @CustomType.Parameter("validateIssuer") @Nullable Boolean validateIssuer) {
         this.aadClaimsAuthorization = aadClaimsAuthorization;
         this.additionalLoginParams = additionalLoginParams;
         this.allowedAudiences = allowedAudiences;

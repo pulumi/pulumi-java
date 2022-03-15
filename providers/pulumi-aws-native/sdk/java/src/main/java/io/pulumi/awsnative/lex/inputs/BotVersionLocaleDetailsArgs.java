@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
 
     public static final BotVersionLocaleDetailsArgs Empty = new BotVersionLocaleDetailsArgs();
 
-    @InputImport(name="sourceBotVersion", required=true)
+    @Import(name="sourceBotVersion", required=true)
       private final Output<String> sourceBotVersion;
 
     public Output<String> getSourceBotVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigSecurityConfigKerberosConfigArgs;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterClusterConfigSecurityConfigArgs extends io.pulumi.reso
      * Kerberos Configuration
      * 
      */
-    @InputImport(name="kerberosConfig", required=true)
+    @Import(name="kerberosConfig", required=true)
       private final Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> kerberosConfig;
 
     public Output<ClusterClusterConfigSecurityConfigKerberosConfigArgs> getKerberosConfig() {

@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigWorkloadsConfigWebServer {
     private final Double cpu;
     private final Double memoryGb;
     private final Double storageGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfigWebServer(
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
-        @OutputCustomType.Parameter("storageGb") Double storageGb) {
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("memoryGb") Double memoryGb,
+        @CustomType.Parameter("storageGb") Double storageGb) {
         this.cpu = cpu;
         this.memoryGb = memoryGb;
         this.storageGb = storageGb;

@@ -10,7 +10,7 @@ import io.pulumi.aws.ec2.outputs.GetInstanceEphemeralBlockDevice;
 import io.pulumi.aws.ec2.outputs.GetInstanceFilter;
 import io.pulumi.aws.ec2.outputs.GetInstanceMetadataOption;
 import io.pulumi.aws.ec2.outputs.GetInstanceRootBlockDevice;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The ID of the AMI used to launch the instance.
@@ -220,51 +220,51 @@ public final class GetInstanceResult {
      */
     private final List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("ami") String ami,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("associatePublicIpAddress") Boolean associatePublicIpAddress,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("creditSpecifications") List<GetInstanceCreditSpecification> creditSpecifications,
-        @OutputCustomType.Parameter("disableApiTermination") Boolean disableApiTermination,
-        @OutputCustomType.Parameter("ebsBlockDevices") List<GetInstanceEbsBlockDevice> ebsBlockDevices,
-        @OutputCustomType.Parameter("ebsOptimized") Boolean ebsOptimized,
-        @OutputCustomType.Parameter("enclaveOptions") List<GetInstanceEnclaveOption> enclaveOptions,
-        @OutputCustomType.Parameter("ephemeralBlockDevices") List<GetInstanceEphemeralBlockDevice> ephemeralBlockDevices,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceFilter> filters,
-        @OutputCustomType.Parameter("getPasswordData") @Nullable Boolean getPasswordData,
-        @OutputCustomType.Parameter("getUserData") @Nullable Boolean getUserData,
-        @OutputCustomType.Parameter("hostId") String hostId,
-        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("instanceState") String instanceState,
-        @OutputCustomType.Parameter("instanceTags") Map<String,String> instanceTags,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("metadataOptions") List<GetInstanceMetadataOption> metadataOptions,
-        @OutputCustomType.Parameter("monitoring") Boolean monitoring,
-        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
-        @OutputCustomType.Parameter("outpostArn") String outpostArn,
-        @OutputCustomType.Parameter("passwordData") String passwordData,
-        @OutputCustomType.Parameter("placementGroup") String placementGroup,
-        @OutputCustomType.Parameter("placementPartitionNumber") Integer placementPartitionNumber,
-        @OutputCustomType.Parameter("privateDns") String privateDns,
-        @OutputCustomType.Parameter("privateIp") String privateIp,
-        @OutputCustomType.Parameter("publicDns") String publicDns,
-        @OutputCustomType.Parameter("publicIp") String publicIp,
-        @OutputCustomType.Parameter("rootBlockDevices") List<GetInstanceRootBlockDevice> rootBlockDevices,
-        @OutputCustomType.Parameter("secondaryPrivateIps") List<String> secondaryPrivateIps,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("sourceDestCheck") Boolean sourceDestCheck,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("tenancy") String tenancy,
-        @OutputCustomType.Parameter("userData") String userData,
-        @OutputCustomType.Parameter("userDataBase64") String userDataBase64,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("ami") String ami,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("associatePublicIpAddress") Boolean associatePublicIpAddress,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("creditSpecifications") List<GetInstanceCreditSpecification> creditSpecifications,
+        @CustomType.Parameter("disableApiTermination") Boolean disableApiTermination,
+        @CustomType.Parameter("ebsBlockDevices") List<GetInstanceEbsBlockDevice> ebsBlockDevices,
+        @CustomType.Parameter("ebsOptimized") Boolean ebsOptimized,
+        @CustomType.Parameter("enclaveOptions") List<GetInstanceEnclaveOption> enclaveOptions,
+        @CustomType.Parameter("ephemeralBlockDevices") List<GetInstanceEphemeralBlockDevice> ephemeralBlockDevices,
+        @CustomType.Parameter("filters") @Nullable List<GetInstanceFilter> filters,
+        @CustomType.Parameter("getPasswordData") @Nullable Boolean getPasswordData,
+        @CustomType.Parameter("getUserData") @Nullable Boolean getUserData,
+        @CustomType.Parameter("hostId") String hostId,
+        @CustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("instanceState") String instanceState,
+        @CustomType.Parameter("instanceTags") Map<String,String> instanceTags,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("metadataOptions") List<GetInstanceMetadataOption> metadataOptions,
+        @CustomType.Parameter("monitoring") Boolean monitoring,
+        @CustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @CustomType.Parameter("outpostArn") String outpostArn,
+        @CustomType.Parameter("passwordData") String passwordData,
+        @CustomType.Parameter("placementGroup") String placementGroup,
+        @CustomType.Parameter("placementPartitionNumber") Integer placementPartitionNumber,
+        @CustomType.Parameter("privateDns") String privateDns,
+        @CustomType.Parameter("privateIp") String privateIp,
+        @CustomType.Parameter("publicDns") String publicDns,
+        @CustomType.Parameter("publicIp") String publicIp,
+        @CustomType.Parameter("rootBlockDevices") List<GetInstanceRootBlockDevice> rootBlockDevices,
+        @CustomType.Parameter("secondaryPrivateIps") List<String> secondaryPrivateIps,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("sourceDestCheck") Boolean sourceDestCheck,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("tenancy") String tenancy,
+        @CustomType.Parameter("userData") String userData,
+        @CustomType.Parameter("userDataBase64") String userDataBase64,
+        @CustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
         this.ami = ami;
         this.arn = arn;
         this.associatePublicIpAddress = associatePublicIpAddress;

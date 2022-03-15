@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OneTimeScheduleResponse {
     /**
      * The desired patch job execution time.
@@ -15,8 +15,8 @@ public final class OneTimeScheduleResponse {
      */
     private final String executeTime;
 
-    @OutputCustomType.Constructor
-    private OneTimeScheduleResponse(@OutputCustomType.Parameter("executeTime") String executeTime) {
+    @CustomType.Constructor
+    private OneTimeScheduleResponse(@CustomType.Parameter("executeTime") String executeTime) {
         this.executeTime = executeTime;
     }
 

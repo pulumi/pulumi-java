@@ -14,7 +14,7 @@ import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataProperti
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentPartnerDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Additional data regarding the assessment
      * 
      */
-    @OutputExport(name="additionalData", type=Map.class, parameters={String.class, String.class})
+    @Export(name="additionalData", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> additionalData;
 
     /**
@@ -57,7 +57,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * User friendly display name of the assessment
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -71,7 +71,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Links relevant to the assessment
      * 
      */
-    @OutputExport(name="links", type=AssessmentLinksResponse.class, parameters={})
+    @Export(name="links", type=AssessmentLinksResponse.class, parameters={})
     private Output<AssessmentLinksResponse> links;
 
     /**
@@ -85,7 +85,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Describes properties of an assessment metadata.
      * 
      */
-    @OutputExport(name="metadata", type=SecurityAssessmentMetadataPropertiesResponse.class, parameters={})
+    @Export(name="metadata", type=SecurityAssessmentMetadataPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentMetadataPropertiesResponse> metadata;
 
     /**
@@ -99,7 +99,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -113,7 +113,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Data regarding 3rd party partner integration
      * 
      */
-    @OutputExport(name="partnersData", type=SecurityAssessmentPartnerDataResponse.class, parameters={})
+    @Export(name="partnersData", type=SecurityAssessmentPartnerDataResponse.class, parameters={})
     private Output</* @Nullable */ SecurityAssessmentPartnerDataResponse> partnersData;
 
     /**
@@ -127,7 +127,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Details of the resource that was assessed
      * 
      */
-    @OutputExport(name="resourceDetails", type=Object.class, parameters={})
+    @Export(name="resourceDetails", type=Object.class, parameters={})
     private Output<Object> resourceDetails;
 
     /**
@@ -141,7 +141,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * The result of the assessment
      * 
      */
-    @OutputExport(name="status", type=AssessmentStatusResponse.class, parameters={})
+    @Export(name="status", type=AssessmentStatusResponse.class, parameters={})
     private Output<AssessmentStatusResponse> status;
 
     /**
@@ -155,7 +155,7 @@ public class Assessment extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

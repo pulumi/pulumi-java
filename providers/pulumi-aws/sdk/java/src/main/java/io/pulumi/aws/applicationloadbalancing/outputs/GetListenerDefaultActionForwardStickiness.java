@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionForwardStickiness {
     private final Integer duration;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionForwardStickiness(
-        @OutputCustomType.Parameter("duration") Integer duration,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("duration") Integer duration,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.duration = duration;
         this.enabled = enabled;
     }

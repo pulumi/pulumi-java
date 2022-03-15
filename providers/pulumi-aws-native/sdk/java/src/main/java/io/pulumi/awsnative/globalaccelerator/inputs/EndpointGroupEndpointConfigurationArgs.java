@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
      * true if client ip should be preserved
      * 
      */
-    @InputImport(name="clientIPPreservationEnabled")
+    @Import(name="clientIPPreservationEnabled")
       private final @Nullable Output<Boolean> clientIPPreservationEnabled;
 
     public Output<Boolean> getClientIPPreservationEnabled() {
@@ -35,7 +35,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
      * Id of the endpoint. For Network/Application Load Balancer this value is the ARN.  For EIP, this value is the allocation ID.  For EC2 instances, this is the EC2 instance ID
      * 
      */
-    @InputImport(name="endpointId", required=true)
+    @Import(name="endpointId", required=true)
       private final Output<String> endpointId;
 
     public Output<String> getEndpointId() {
@@ -46,7 +46,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
      * The weight for the endpoint.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DelegationResponse {
     /**
      * The actions permitted to the service upon delegation.
@@ -48,15 +48,15 @@ public final class DelegationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DelegationResponse(
-        @OutputCustomType.Parameter("actions") List<String> actions,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("actions") List<String> actions,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceName") @Nullable String serviceName,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.actions = actions;
         this.etag = etag;
         this.id = id;

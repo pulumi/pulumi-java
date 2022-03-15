@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -29,7 +29,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * Filters the results using OData syntax.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable String filter;
 
     public Optional<String> getFilter() {
@@ -40,7 +40,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * Sorts the results using OData syntax.
      * 
      */
-    @InputImport(name="orderby")
+    @Import(name="orderby")
       private final @Nullable String orderby;
 
     public Optional<String> getOrderby() {
@@ -51,7 +51,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * The name of the share subscription.
      * 
      */
-    @InputImport(name="shareSubscriptionName", required=true)
+    @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
@@ -73,7 +73,7 @@ public final class ListShareSubscriptionSynchronizationsArgs extends io.pulumi.r
      * Continuation token
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiErrorBaseResponse;
 import io.pulumi.azurenative.compute.inputs.InnerErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The error code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -36,7 +36,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The Api error details
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<ApiErrorBaseResponse> details;
 
     public List<ApiErrorBaseResponse> getDetails() {
@@ -47,7 +47,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The Api inner error
      * 
      */
-    @InputImport(name="innererror")
+    @Import(name="innererror")
       private final @Nullable InnerErrorResponse innererror;
 
     public Optional<InnerErrorResponse> getInnererror() {
@@ -58,7 +58,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The error message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -69,7 +69,7 @@ public final class ApiErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The target of the particular error.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

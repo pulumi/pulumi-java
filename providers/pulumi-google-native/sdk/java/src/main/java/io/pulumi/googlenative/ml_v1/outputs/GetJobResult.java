@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__PredictionInputResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__PredictionOutputResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__TrainingInputResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * When the job was created.
@@ -80,21 +80,21 @@ public final class GetJobResult {
      */
     private final GoogleCloudMlV1__TrainingOutputResponse trainingOutput;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("jobId") String jobId,
-        @OutputCustomType.Parameter("jobPosition") String jobPosition,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("predictionInput") GoogleCloudMlV1__PredictionInputResponse predictionInput,
-        @OutputCustomType.Parameter("predictionOutput") GoogleCloudMlV1__PredictionOutputResponse predictionOutput,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trainingInput") GoogleCloudMlV1__TrainingInputResponse trainingInput,
-        @OutputCustomType.Parameter("trainingOutput") GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("jobId") String jobId,
+        @CustomType.Parameter("jobPosition") String jobPosition,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("predictionInput") GoogleCloudMlV1__PredictionInputResponse predictionInput,
+        @CustomType.Parameter("predictionOutput") GoogleCloudMlV1__PredictionOutputResponse predictionOutput,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trainingInput") GoogleCloudMlV1__TrainingInputResponse trainingInput,
+        @CustomType.Parameter("trainingOutput") GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
         this.createTime = createTime;
         this.endTime = endTime;
         this.errorMessage = errorMessage;

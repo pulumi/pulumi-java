@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * The name of the encryption key that is stored in Google Cloud KMS. For example: "kmsKeyName": "projects/kms_project_id/locations/region/keyRings/ key_region/cryptoKeys/key
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -29,7 +29,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used. For example: "kmsKeyServiceAccount": "name@project_id.iam.gserviceaccount.com/
      * 
      */
-    @InputImport(name="kmsKeyServiceAccount")
+    @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
     public Output<String> getKmsKeyServiceAccount() {
@@ -40,7 +40,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rawKey": "SGVsbG8gZnJvbSBHb29nbGUgQ2xvdWQgUGxhdGZvcm0="
      * 
      */
-    @InputImport(name="rawKey")
+    @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
     public Output<String> getRawKey() {
@@ -51,7 +51,7 @@ public final class CustomerEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. For example: "rsaEncryptedKey": "ieCx/NcW06PcT7Ep1X6LUTc/hLvUDYyzSZPPVCVPTVEohpeHASqC8uw5TzyO9U+Fka9JFH z0mBibXUInrC/jEk014kCK/NPjYgEMOyssZ4ZINPKxlUh2zn1bV+MCaTICrdmuSBTWlUUiFoD D6PYznLwh8ZNdaheCeZ8ewEXgFQ8V+sDroLaN3Xs3MDTXQEMMoNUXMCZEIpg9Vtp9x2oe==" The key must meet the following requirements before you can provide it to Compute Engine: 1. The key is wrapped using a RSA public key certificate provided by Google. 2. After being wrapped, the key must be encoded in RFC 4648 base64 encoding. Gets the RSA public key certificate provided by Google at: https://cloud-certs.storage.googleapis.com/google-cloud-csek-ingress.pem
      * 
      */
-    @InputImport(name="rsaEncryptedKey")
+    @Import(name="rsaEncryptedKey")
       private final @Nullable Output<String> rsaEncryptedKey;
 
     public Output<String> getRsaEncryptedKey() {

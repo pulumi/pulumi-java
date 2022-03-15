@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
      * 
      */
-    @InputImport(name="healthProbe")
+    @Import(name="healthProbe")
       private final @Nullable Output<ApiEntityReferenceArgs> healthProbe;
 
     public Output<ApiEntityReferenceArgs> getHealthProbe() {
@@ -38,7 +38,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations for Virtual Machine Scale Set with orchestration mode 'Flexible'
      * 
      */
-    @InputImport(name="networkApiVersion")
+    @Import(name="networkApiVersion")
       private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
     public Output<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
@@ -49,7 +49,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * The list of network configurations.
      * 
      */
-    @InputImport(name="networkInterfaceConfigurations")
+    @Import(name="networkInterfaceConfigurations")
       private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
     public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisAnalysisAclRule {
     private final @Nullable String cidr;
     private final @Nullable Boolean egress;
@@ -21,14 +21,14 @@ public final class NetworkInsightsAnalysisAnalysisAclRule {
     private final @Nullable String ruleAction;
     private final @Nullable Integer ruleNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisAnalysisAclRule(
-        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
-        @OutputCustomType.Parameter("egress") @Nullable Boolean egress,
-        @OutputCustomType.Parameter("portRange") @Nullable NetworkInsightsAnalysisPortRange portRange,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("ruleAction") @Nullable String ruleAction,
-        @OutputCustomType.Parameter("ruleNumber") @Nullable Integer ruleNumber) {
+        @CustomType.Parameter("cidr") @Nullable String cidr,
+        @CustomType.Parameter("egress") @Nullable Boolean egress,
+        @CustomType.Parameter("portRange") @Nullable NetworkInsightsAnalysisPortRange portRange,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("ruleAction") @Nullable String ruleAction,
+        @CustomType.Parameter("ruleNumber") @Nullable Integer ruleNumber) {
         this.cidr = cidr;
         this.egress = egress;
         this.portRange = portRange;

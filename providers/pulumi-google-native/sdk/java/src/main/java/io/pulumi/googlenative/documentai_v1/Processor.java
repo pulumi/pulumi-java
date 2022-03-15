@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.documentai_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.documentai_v1.ProcessorArgs;
@@ -22,7 +22,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * The time the processor was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * The default processor version.
      * 
      */
-    @OutputExport(name="defaultProcessorVersion", type=String.class, parameters={})
+    @Export(name="defaultProcessorVersion", type=String.class, parameters={})
     private Output<String> defaultProcessorVersion;
 
     /**
@@ -50,7 +50,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * The display name of the processor.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
@@ -78,7 +78,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * Immutable. The http endpoint that can be called to invoke processing.
      * 
      */
-    @OutputExport(name="processEndpoint", type=String.class, parameters={})
+    @Export(name="processEndpoint", type=String.class, parameters={})
     private Output<String> processEndpoint;
 
     /**
@@ -106,7 +106,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * The state of the processor.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -120,7 +120,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

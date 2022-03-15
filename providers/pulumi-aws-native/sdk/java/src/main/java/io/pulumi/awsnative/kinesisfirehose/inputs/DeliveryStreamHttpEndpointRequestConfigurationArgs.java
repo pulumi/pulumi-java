@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamHttpEndpointRequestConfigurationContentEncoding;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHttpEndpointCommonAttributeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
 
     public static final DeliveryStreamHttpEndpointRequestConfigurationArgs Empty = new DeliveryStreamHttpEndpointRequestConfigurationArgs();
 
-    @InputImport(name="commonAttributes")
+    @Import(name="commonAttributes")
       private final @Nullable Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes;
 
     public Output<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> getCommonAttributes() {
         return this.commonAttributes == null ? Output.empty() : this.commonAttributes;
     }
 
-    @InputImport(name="contentEncoding")
+    @Import(name="contentEncoding")
       private final @Nullable Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding;
 
     public Output<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {

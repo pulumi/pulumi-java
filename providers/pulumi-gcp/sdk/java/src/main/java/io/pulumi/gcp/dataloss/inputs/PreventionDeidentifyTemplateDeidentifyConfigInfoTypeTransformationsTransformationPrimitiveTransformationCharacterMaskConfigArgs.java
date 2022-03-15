@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
      */
-    @InputImport(name="charactersToIgnores")
+    @Import(name="charactersToIgnores")
       private final @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores;
 
     public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> getCharactersToIgnores() {
@@ -36,7 +36,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * strings, and 0 for digits.
      * 
      */
-    @InputImport(name="maskingCharacter")
+    @Import(name="maskingCharacter")
       private final @Nullable Output<String> maskingCharacter;
 
     public Output<String> getMaskingCharacter() {
@@ -47,7 +47,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
      * 
      */
-    @InputImport(name="numberToMask")
+    @Import(name="numberToMask")
       private final @Nullable Output<Integer> numberToMask;
 
     public Output<Integer> getNumberToMask() {
@@ -59,7 +59,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * input string `1234-5678-9012-3456` is masked as `00000000000000-3456`.
      * 
      */
-    @InputImport(name="reverseOrder")
+    @Import(name="reverseOrder")
       private final @Nullable Output<Boolean> reverseOrder;
 
     public Output<Boolean> getReverseOrder() {

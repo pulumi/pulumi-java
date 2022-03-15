@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAccessScopeResourceStatementRequest {
     private final @Nullable List<String> resourceTypes;
     private final @Nullable List<String> resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAccessScopeResourceStatementRequest(
-        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources) {
+        @CustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
+        @CustomType.Parameter("resources") @Nullable List<String> resources) {
         this.resourceTypes = resourceTypes;
         this.resources = resources;
     }

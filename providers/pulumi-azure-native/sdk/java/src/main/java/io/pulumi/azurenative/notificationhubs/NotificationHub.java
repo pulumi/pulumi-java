@@ -15,7 +15,7 @@ import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.WnsCredentialResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The AdmCredential of the created NotificationHub
      * 
      */
-    @OutputExport(name="admCredential", type=AdmCredentialResponse.class, parameters={})
+    @Export(name="admCredential", type=AdmCredentialResponse.class, parameters={})
     private Output</* @Nullable */ AdmCredentialResponse> admCredential;
 
     /**
@@ -57,7 +57,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The ApnsCredential of the created NotificationHub
      * 
      */
-    @OutputExport(name="apnsCredential", type=ApnsCredentialResponse.class, parameters={})
+    @Export(name="apnsCredential", type=ApnsCredentialResponse.class, parameters={})
     private Output</* @Nullable */ ApnsCredentialResponse> apnsCredential;
 
     /**
@@ -71,7 +71,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The AuthorizationRules of the created NotificationHub
      * 
      */
-    @OutputExport(name="authorizationRules", type=List.class, parameters={SharedAccessAuthorizationRulePropertiesResponse.class})
+    @Export(name="authorizationRules", type=List.class, parameters={SharedAccessAuthorizationRulePropertiesResponse.class})
     private Output</* @Nullable */ List<SharedAccessAuthorizationRulePropertiesResponse>> authorizationRules;
 
     /**
@@ -85,7 +85,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The BaiduCredential of the created NotificationHub
      * 
      */
-    @OutputExport(name="baiduCredential", type=BaiduCredentialResponse.class, parameters={})
+    @Export(name="baiduCredential", type=BaiduCredentialResponse.class, parameters={})
     private Output</* @Nullable */ BaiduCredentialResponse> baiduCredential;
 
     /**
@@ -99,7 +99,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The GcmCredential of the created NotificationHub
      * 
      */
-    @OutputExport(name="gcmCredential", type=GcmCredentialResponse.class, parameters={})
+    @Export(name="gcmCredential", type=GcmCredentialResponse.class, parameters={})
     private Output</* @Nullable */ GcmCredentialResponse> gcmCredential;
 
     /**
@@ -113,7 +113,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -127,7 +127,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The MpnsCredential of the created NotificationHub
      * 
      */
-    @OutputExport(name="mpnsCredential", type=MpnsCredentialResponse.class, parameters={})
+    @Export(name="mpnsCredential", type=MpnsCredentialResponse.class, parameters={})
     private Output</* @Nullable */ MpnsCredentialResponse> mpnsCredential;
 
     /**
@@ -141,7 +141,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The RegistrationTtl of the created NotificationHub
      * 
      */
-    @OutputExport(name="registrationTtl", type=String.class, parameters={})
+    @Export(name="registrationTtl", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationTtl;
 
     /**
@@ -169,7 +169,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The sku of the created namespace
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -183,7 +183,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -197,7 +197,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -211,7 +211,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * The WnsCredential of the created NotificationHub
      * 
      */
-    @OutputExport(name="wnsCredential", type=WnsCredentialResponse.class, parameters={})
+    @Export(name="wnsCredential", type=WnsCredentialResponse.class, parameters={})
     private Output</* @Nullable */ WnsCredentialResponse> wnsCredential;
 
     /**

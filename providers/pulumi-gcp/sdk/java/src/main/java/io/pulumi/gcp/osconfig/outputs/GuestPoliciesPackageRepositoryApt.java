@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesPackageRepositoryApt {
     /**
      * Type of archive files in this repository. The default behavior is DEB.
@@ -41,13 +41,13 @@ public final class GuestPoliciesPackageRepositoryApt {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesPackageRepositoryApt(
-        @OutputCustomType.Parameter("archiveType") @Nullable String archiveType,
-        @OutputCustomType.Parameter("components") List<String> components,
-        @OutputCustomType.Parameter("distribution") String distribution,
-        @OutputCustomType.Parameter("gpgKey") @Nullable String gpgKey,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("archiveType") @Nullable String archiveType,
+        @CustomType.Parameter("components") List<String> components,
+        @CustomType.Parameter("distribution") String distribution,
+        @CustomType.Parameter("gpgKey") @Nullable String gpgKey,
+        @CustomType.Parameter("uri") String uri) {
         this.archiveType = archiveType;
         this.components = components;
         this.distribution = distribution;

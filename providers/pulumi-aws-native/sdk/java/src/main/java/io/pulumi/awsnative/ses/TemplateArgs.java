@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ses;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -13,7 +13,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateArgs Empty = new TemplateArgs();
 
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
 
     public Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> getTemplate() {

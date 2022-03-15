@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.InstanceProfileArgs;
 import io.pulumi.aws.iam.inputs.InstanceProfileState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * ARN assigned by AWS to the instance profile.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Creation timestamp of the instance profile.
      * 
      */
-    @OutputExport(name="createDate", type=String.class, parameters={})
+    @Export(name="createDate", type=String.class, parameters={})
     private Output<String> createDate;
 
     /**
@@ -61,7 +61,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -75,7 +75,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -89,7 +89,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     /**
@@ -103,7 +103,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Name of the role to add to the profile.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
     /**
@@ -117,7 +117,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Map of resource tags for the IAM Instance Profile. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -131,7 +131,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -145,7 +145,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * [Unique ID][1] assigned by AWS.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**

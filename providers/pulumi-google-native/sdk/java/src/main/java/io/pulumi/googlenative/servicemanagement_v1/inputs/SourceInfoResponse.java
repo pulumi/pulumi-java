@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class SourceInfoResponse extends io.pulumi.resources.InvokeArgs {
      * All files used during config generation.
      * 
      */
-    @InputImport(name="sourceFiles", required=true)
+    @Import(name="sourceFiles", required=true)
       private final List<Map<String,String>> sourceFiles;
 
     public List<Map<String,String>> getSourceFiles() {

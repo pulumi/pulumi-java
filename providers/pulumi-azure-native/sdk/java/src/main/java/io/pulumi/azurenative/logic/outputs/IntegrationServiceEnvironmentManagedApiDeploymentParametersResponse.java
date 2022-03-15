@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse {
     /**
      * The integration service environment managed api content link for deployment.
@@ -17,8 +17,8 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersRe
      */
     private final @Nullable ContentLinkResponse contentLinkDefinition;
 
-    @OutputCustomType.Constructor
-    private IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(@OutputCustomType.Parameter("contentLinkDefinition") @Nullable ContentLinkResponse contentLinkDefinition) {
+    @CustomType.Constructor
+    private IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse(@CustomType.Parameter("contentLinkDefinition") @Nullable ContentLinkResponse contentLinkDefinition) {
         this.contentLinkDefinition = contentLinkDefinition;
     }
 

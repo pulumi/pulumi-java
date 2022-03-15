@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NodePlacementConfigurationResponse extends io.pulumi.resource
      * Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable String policy;
 
     public Optional<String> getPolicy() {

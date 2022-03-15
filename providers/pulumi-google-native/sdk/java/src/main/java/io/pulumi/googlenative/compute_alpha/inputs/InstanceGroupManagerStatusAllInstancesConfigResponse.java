@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
      * Current instances' config revision. This value is in RFC3339 text format.
      * 
      */
-    @InputImport(name="currentRevision", required=true)
+    @Import(name="currentRevision", required=true)
       private final String currentRevision;
 
     public String getCurrentRevision() {
@@ -28,7 +28,7 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
      * A bit indicating whether instances' config has been applied to all managed instances in managed instance group.
      * 
      */
-    @InputImport(name="effective", required=true)
+    @Import(name="effective", required=true)
       private final Boolean effective;
 
     public Boolean getEffective() {

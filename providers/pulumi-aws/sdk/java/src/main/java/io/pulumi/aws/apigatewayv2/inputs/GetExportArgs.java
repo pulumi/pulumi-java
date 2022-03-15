@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final String apiId;
 
     public String getApiId() {
@@ -30,7 +30,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The version of the API Gateway export algorithm. API Gateway uses the latest version by default. Currently, the only supported version is `1.0`.
      * 
      */
-    @InputImport(name="exportVersion")
+    @Import(name="exportVersion")
       private final @Nullable String exportVersion;
 
     public Optional<String> getExportVersion() {
@@ -41,7 +41,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies whether to include API Gateway extensions in the exported API definition. API Gateway extensions are included by default.
      * 
      */
-    @InputImport(name="includeExtensions")
+    @Import(name="includeExtensions")
       private final @Nullable Boolean includeExtensions;
 
     public Optional<Boolean> getIncludeExtensions() {
@@ -52,7 +52,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The output type of the exported definition file. Valid values are `JSON` and `YAML`.
      * 
      */
-    @InputImport(name="outputType", required=true)
+    @Import(name="outputType", required=true)
       private final String outputType;
 
     public String getOutputType() {
@@ -63,7 +63,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The version of the API specification to use. `OAS30`, for OpenAPI 3.0, is the only supported value.
      * 
      */
-    @InputImport(name="specification", required=true)
+    @Import(name="specification", required=true)
       private final String specification;
 
     public String getSpecification() {
@@ -74,7 +74,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the API stage to export. If you don't specify this property, a representation of the latest API configuration is exported.
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable String stageName;
 
     public Optional<String> getStageName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
      * The custom domain name.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -27,7 +27,7 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
      * Name of the static site resource to search in.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class GetStaticSiteCustomDomainArgs extends io.pulumi.resources.Inv
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

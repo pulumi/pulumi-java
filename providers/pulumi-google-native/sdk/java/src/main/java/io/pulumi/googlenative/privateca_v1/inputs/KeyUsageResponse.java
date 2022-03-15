@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.inputs.ExtendedKeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdResponse;
@@ -23,7 +23,7 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
      * Describes high-level ways in which a key may be used.
      * 
      */
-    @InputImport(name="baseKeyUsage", required=true)
+    @Import(name="baseKeyUsage", required=true)
       private final KeyUsageOptionsResponse baseKeyUsage;
 
     public KeyUsageOptionsResponse getBaseKeyUsage() {
@@ -34,7 +34,7 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
      * Detailed scenarios in which a key may be used.
      * 
      */
-    @InputImport(name="extendedKeyUsage", required=true)
+    @Import(name="extendedKeyUsage", required=true)
       private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
 
     public ExtendedKeyUsageOptionsResponse getExtendedKeyUsage() {
@@ -45,7 +45,7 @@ public final class KeyUsageResponse extends io.pulumi.resources.InvokeArgs {
      * Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
      * 
      */
-    @InputImport(name="unknownExtendedKeyUsages", required=true)
+    @Import(name="unknownExtendedKeyUsages", required=true)
       private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 
     public List<ObjectIdResponse> getUnknownExtendedKeyUsages() {

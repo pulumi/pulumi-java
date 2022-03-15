@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.LinkedTemplateArtifactArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * Template Spec version description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * An array of linked template artifacts.
      * 
      */
-    @InputImport(name="linkedTemplates")
+    @Import(name="linkedTemplates")
       private final @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
 
     public Output<List<LinkedTemplateArtifactArgs>> getLinkedTemplates() {
@@ -44,7 +44,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * The location of the Template Spec Version. It must match the location of the parent Template Spec.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * The main Azure Resource Manager template content.
      * 
      */
-    @InputImport(name="mainTemplate")
+    @Import(name="mainTemplate")
       private final @Nullable Output<Object> mainTemplate;
 
     public Output<Object> getMainTemplate() {
@@ -66,7 +66,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -77,7 +77,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * Name of the Template Spec.
      * 
      */
-    @InputImport(name="templateSpecName", required=true)
+    @Import(name="templateSpecName", required=true)
       private final Output<String> templateSpecName;
 
     public Output<String> getTemplateSpecName() {
@@ -110,7 +110,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * The version of the Template Spec.
      * 
      */
-    @InputImport(name="templateSpecVersion")
+    @Import(name="templateSpecVersion")
       private final @Nullable Output<String> templateSpecVersion;
 
     public Output<String> getTemplateSpecVersion() {
@@ -121,7 +121,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
      * The Azure Resource Manager template UI definition content.
      * 
      */
-    @InputImport(name="uiFormDefinition")
+    @Import(name="uiFormDefinition")
       private final @Nullable Output<Object> uiFormDefinition;
 
     public Output<Object> getUiFormDefinition() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceSettingsIpConfiguration {
     /**
      * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
@@ -42,13 +42,13 @@ public final class DatabaseInstanceSettingsIpConfiguration {
      */
     private final @Nullable Boolean requireSsl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceSettingsIpConfiguration(
-        @OutputCustomType.Parameter("allocatedIpRange") @Nullable String allocatedIpRange,
-        @OutputCustomType.Parameter("authorizedNetworks") @Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks,
-        @OutputCustomType.Parameter("ipv4Enabled") @Nullable Boolean ipv4Enabled,
-        @OutputCustomType.Parameter("privateNetwork") @Nullable String privateNetwork,
-        @OutputCustomType.Parameter("requireSsl") @Nullable Boolean requireSsl) {
+        @CustomType.Parameter("allocatedIpRange") @Nullable String allocatedIpRange,
+        @CustomType.Parameter("authorizedNetworks") @Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks,
+        @CustomType.Parameter("ipv4Enabled") @Nullable Boolean ipv4Enabled,
+        @CustomType.Parameter("privateNetwork") @Nullable String privateNetwork,
+        @CustomType.Parameter("requireSsl") @Nullable Boolean requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;

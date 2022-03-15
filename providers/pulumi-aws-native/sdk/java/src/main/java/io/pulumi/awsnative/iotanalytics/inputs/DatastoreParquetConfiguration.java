@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreSchemaDefinition;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DatastoreParquetConfiguration extends io.pulumi.resources.Inv
 
     public static final DatastoreParquetConfiguration Empty = new DatastoreParquetConfiguration();
 
-    @InputImport(name="schemaDefinition")
+    @Import(name="schemaDefinition")
       private final @Nullable DatastoreSchemaDefinition schemaDefinition;
 
     public Optional<DatastoreSchemaDefinition> getSchemaDefinition() {

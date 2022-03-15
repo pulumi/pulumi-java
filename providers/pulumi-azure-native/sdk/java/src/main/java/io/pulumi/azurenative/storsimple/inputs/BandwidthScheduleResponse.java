@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.TimeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * The days of the week when this schedule is applicable.
      * 
      */
-    @InputImport(name="days", required=true)
+    @Import(name="days", required=true)
       private final List<String> days;
 
     public List<String> getDays() {
@@ -34,7 +34,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * The rate in Mbps.
      * 
      */
-    @InputImport(name="rateInMbps", required=true)
+    @Import(name="rateInMbps", required=true)
       private final Integer rateInMbps;
 
     public Integer getRateInMbps() {
@@ -45,7 +45,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * The start time of the schedule.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final TimeResponse start;
 
     public TimeResponse getStart() {
@@ -56,7 +56,7 @@ public final class BandwidthScheduleResponse extends io.pulumi.resources.InvokeA
      * The stop time of the schedule.
      * 
      */
-    @InputImport(name="stop", required=true)
+    @Import(name="stop", required=true)
       private final TimeResponse stop;
 
     public TimeResponse getStop() {

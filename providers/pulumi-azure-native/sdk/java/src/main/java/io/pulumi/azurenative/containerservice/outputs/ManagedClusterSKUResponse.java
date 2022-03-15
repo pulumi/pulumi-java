@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterSKUResponse {
     /**
      * Name of a managed cluster SKU.
@@ -22,10 +22,10 @@ public final class ManagedClusterSKUResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterSKUResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.name = name;
         this.tier = tier;
     }

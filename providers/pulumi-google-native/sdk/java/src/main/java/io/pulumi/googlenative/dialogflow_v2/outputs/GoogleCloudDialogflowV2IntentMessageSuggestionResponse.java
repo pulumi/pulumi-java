@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
     /**
      * The text shown the in the suggestion chip.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse(@OutputCustomType.Parameter("title") String title) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse(@CustomType.Parameter("title") String title) {
         this.title = title;
     }
 

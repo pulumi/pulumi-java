@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.athena.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetNamedQueryArgs extends io.pulumi.resources.InvokeArgs {
      * The unique ID of the query.
      * 
      */
-    @InputImport(name="namedQueryId", required=true)
+    @Import(name="namedQueryId", required=true)
       private final String namedQueryId;
 
     public String getNamedQueryId() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAvailabilitySetResult {
     /**
      * Resource Id
@@ -73,19 +73,19 @@ public final class GetAvailabilitySetResult {
      */
     private final @Nullable List<SubResourceResponse> virtualMachines;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAvailabilitySetResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
-        @OutputCustomType.Parameter("platformUpdateDomainCount") @Nullable Integer platformUpdateDomainCount,
-        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("statuses") List<InstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualMachines") @Nullable List<SubResourceResponse> virtualMachines) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
+        @CustomType.Parameter("platformUpdateDomainCount") @Nullable Integer platformUpdateDomainCount,
+        @CustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("statuses") List<InstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualMachines") @Nullable List<SubResourceResponse> virtualMachines) {
         this.id = id;
         this.location = location;
         this.name = name;

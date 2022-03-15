@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.ActorResponse;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.CaseClassificationResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCaseResult {
     /**
      * The issue classification applicable to this case.
@@ -79,21 +79,21 @@ public final class GetCaseResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCaseResult(
-        @OutputCustomType.Parameter("classification") CaseClassificationResponse classification,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("creator") ActorResponse creator,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("escalated") Boolean escalated,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") String priority,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subscriberEmailAddresses") List<String> subscriberEmailAddresses,
-        @OutputCustomType.Parameter("testCase") Boolean testCase,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("classification") CaseClassificationResponse classification,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creator") ActorResponse creator,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("escalated") Boolean escalated,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") String priority,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subscriberEmailAddresses") List<String> subscriberEmailAddresses,
+        @CustomType.Parameter("testCase") Boolean testCase,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.classification = classification;
         this.createTime = createTime;
         this.creator = creator;

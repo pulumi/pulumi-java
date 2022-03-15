@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener extends i
 
     public static final NetworkInsightsAnalysisAnalysisLoadBalancerListener Empty = new NetworkInsightsAnalysisAnalysisLoadBalancerListener();
 
-    @InputImport(name="instancePort")
+    @Import(name="instancePort")
       private final @Nullable Integer instancePort;
 
     public Optional<Integer> getInstancePort() {
         return this.instancePort == null ? Optional.empty() : Optional.ofNullable(this.instancePort);
     }
 
-    @InputImport(name="loadBalancerPort")
+    @Import(name="loadBalancerPort")
       private final @Nullable Integer loadBalancerPort;
 
     public Optional<Integer> getLoadBalancerPort() {

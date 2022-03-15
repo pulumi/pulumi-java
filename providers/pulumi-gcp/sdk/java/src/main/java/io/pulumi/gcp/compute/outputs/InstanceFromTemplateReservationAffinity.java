@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.InstanceFromTemplateReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromTemplateReservationAffinity {
     private final @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFromTemplateReservationAffinity(
-        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("specificReservation") @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation,
+        @CustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }

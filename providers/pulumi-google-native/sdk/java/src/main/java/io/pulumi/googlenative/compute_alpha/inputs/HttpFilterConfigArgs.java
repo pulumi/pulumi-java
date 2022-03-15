@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
      * The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {
@@ -33,7 +33,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
      * The fully qualified versioned proto3 type url of the protobuf that the filter expects for its contextual settings, for example: type.googleapis.com/google.protobuf.Struct
      * 
      */
-    @InputImport(name="configTypeUrl")
+    @Import(name="configTypeUrl")
       private final @Nullable Output<String> configTypeUrl;
 
     public Output<String> getConfigTypeUrl() {
@@ -44,7 +44,7 @@ public final class HttpFilterConfigArgs extends io.pulumi.resources.ResourceArgs
      * Name of the networkservices.HttpFilter resource this configuration belongs to. This name must be known to the xDS client. Example: envoy.wasm
      * 
      */
-    @InputImport(name="filterName")
+    @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
     public Output<String> getFilterName() {

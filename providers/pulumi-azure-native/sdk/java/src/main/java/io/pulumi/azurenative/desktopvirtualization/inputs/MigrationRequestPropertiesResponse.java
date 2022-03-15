@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
      * The path to the legacy object to migrate.
      * 
      */
-    @InputImport(name="migrationPath")
+    @Import(name="migrationPath")
       private final @Nullable String migrationPath;
 
     public Optional<String> getMigrationPath() {
@@ -33,7 +33,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
      * The type of operation for migration.
      * 
      */
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable String operation;
 
     public Optional<String> getOperation() {

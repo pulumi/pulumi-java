@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
      * If set, access is controlled only by bucket-level or above IAM policies.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -32,7 +32,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
      * The deadline for changing iamConfiguration.bucketPolicyOnly.enabled from true to false in RFC 3339 format. iamConfiguration.bucketPolicyOnly.enabled may be changed from true to false until the locked time, after which the field is immutable.
      * 
      */
-    @InputImport(name="lockedTime", required=true)
+    @Import(name="lockedTime", required=true)
       private final String lockedTime;
 
     public String getLockedTime() {

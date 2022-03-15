@@ -9,7 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.DomainState;
 import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettings;
 import io.pulumi.aws.sagemaker.outputs.DomainRetentionPolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly`. Valid values are `PublicInternetOnly` and `VpcOnly`.
      * 
      */
-    @OutputExport(name="appNetworkAccessType", type=String.class, parameters={})
+    @Export(name="appNetworkAccessType", type=String.class, parameters={})
     private Output</* @Nullable */ String> appNetworkAccessType;
 
     /**
@@ -50,7 +50,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Domain.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The mode of authentication that members use to access the domain. Valid values are `IAM` and `SSO`.
      * 
      */
-    @OutputExport(name="authMode", type=String.class, parameters={})
+    @Export(name="authMode", type=String.class, parameters={})
     private Output<String> authMode;
 
     /**
@@ -78,7 +78,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The default user settings. See Default User Settings below.
      * 
      */
-    @OutputExport(name="defaultUserSettings", type=DomainDefaultUserSettings.class, parameters={})
+    @Export(name="defaultUserSettings", type=DomainDefaultUserSettings.class, parameters={})
     private Output<DomainDefaultUserSettings> defaultUserSettings;
 
     /**
@@ -92,7 +92,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The domain name.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -106,7 +106,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
-    @OutputExport(name="homeEfsFileSystemId", type=String.class, parameters={})
+    @Export(name="homeEfsFileSystemId", type=String.class, parameters={})
     private Output<String> homeEfsFileSystemId;
 
     /**
@@ -120,7 +120,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -134,7 +134,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
      * 
      */
-    @OutputExport(name="retentionPolicy", type=DomainRetentionPolicy.class, parameters={})
+    @Export(name="retentionPolicy", type=DomainRetentionPolicy.class, parameters={})
     private Output</* @Nullable */ DomainRetentionPolicy> retentionPolicy;
 
     /**
@@ -148,7 +148,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The SSO managed application instance ID.
      * 
      */
-    @OutputExport(name="singleSignOnManagedApplicationInstanceId", type=String.class, parameters={})
+    @Export(name="singleSignOnManagedApplicationInstanceId", type=String.class, parameters={})
     private Output<String> singleSignOnManagedApplicationInstanceId;
 
     /**
@@ -162,7 +162,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The VPC subnets that Studio uses for communication.
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -176,7 +176,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -190,7 +190,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -204,7 +204,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The domain's URL.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
@@ -218,7 +218,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

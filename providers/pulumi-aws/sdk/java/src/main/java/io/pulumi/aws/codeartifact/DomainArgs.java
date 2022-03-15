@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {
@@ -30,7 +30,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -41,7 +41,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

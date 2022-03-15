@@ -5,7 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.aws.organizations.inputs.OrganizationalUnitAccountGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
      * 
      */
-    @InputImport(name="accounts")
+    @Import(name="accounts")
       private final @Nullable Output<List<OrganizationalUnitAccountGetArgs>> accounts;
 
     public Output<List<OrganizationalUnitAccountGetArgs>> getAccounts() {
@@ -32,7 +32,7 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * ARN of the organizational unit
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * The name for the organizational unit
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * ID of the parent organizational unit, which may be the root
      * 
      */
-    @InputImport(name="parentId")
+    @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -65,7 +65,7 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class OrganizationalUnitState extends io.pulumi.resources.ResourceA
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

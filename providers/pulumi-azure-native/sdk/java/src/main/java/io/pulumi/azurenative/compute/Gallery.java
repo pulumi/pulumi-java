@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.GalleryIdentifierResponse;
 import io.pulumi.azurenative.compute.outputs.SharingProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * The description of this Shared Image Gallery resource. This property is updatable.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * Describes the gallery unique name.
      * 
      */
-    @OutputExport(name="identifier", type=GalleryIdentifierResponse.class, parameters={})
+    @Export(name="identifier", type=GalleryIdentifierResponse.class, parameters={})
     private Output</* @Nullable */ GalleryIdentifierResponse> identifier;
 
     /**
@@ -65,7 +65,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * Profile for gallery sharing to subscription or tenant
      * 
      */
-    @OutputExport(name="sharingProfile", type=SharingProfileResponse.class, parameters={})
+    @Export(name="sharingProfile", type=SharingProfileResponse.class, parameters={})
     private Output</* @Nullable */ SharingProfileResponse> sharingProfile;
 
     /**
@@ -121,7 +121,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.databrew.inputs.ProjectSampleArgs;
 import io.pulumi.awsnative.databrew.inputs.ProjectTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Dataset name
      * 
      */
-    @InputImport(name="datasetName", required=true)
+    @Import(name="datasetName", required=true)
       private final Output<String> datasetName;
 
     public Output<String> getDatasetName() {
@@ -32,7 +32,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Project name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Recipe name
      * 
      */
-    @InputImport(name="recipeName", required=true)
+    @Import(name="recipeName", required=true)
       private final Output<String> recipeName;
 
     public Output<String> getRecipeName() {
@@ -54,7 +54,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Role arn
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -65,14 +65,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Sample
      * 
      */
-    @InputImport(name="sample")
+    @Import(name="sample")
       private final @Nullable Output<ProjectSampleArgs> sample;
 
     public Output<ProjectSampleArgs> getSample() {
         return this.sample == null ? Output.empty() : this.sample;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
     public Output<List<ProjectTagArgs>> getTags() {

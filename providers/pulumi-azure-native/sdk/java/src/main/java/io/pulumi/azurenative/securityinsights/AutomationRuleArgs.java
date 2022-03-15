@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleRunPlaybookAc
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleTriggeringLogicArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The actions to execute when the automation rule is triggered
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> actions;
 
     public Output<List<Either<AutomationRuleModifyPropertiesActionArgs,AutomationRuleRunPlaybookActionArgs>>> getActions() {
@@ -35,7 +35,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Automation rule ID
      * 
      */
-    @InputImport(name="automationRuleId")
+    @Import(name="automationRuleId")
       private final @Nullable Output<String> automationRuleId;
 
     public Output<String> getAutomationRuleId() {
@@ -46,7 +46,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the automation  rule
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -68,7 +68,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The order of execution of the automation rule
      * 
      */
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -79,7 +79,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The triggering logic of the automation rule
      * 
      */
-    @InputImport(name="triggeringLogic", required=true)
+    @Import(name="triggeringLogic", required=true)
       private final Output<AutomationRuleTriggeringLogicArgs> triggeringLogic;
 
     public Output<AutomationRuleTriggeringLogicArgs> getTriggeringLogic() {
@@ -101,7 +101,7 @@ public final class AutomationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

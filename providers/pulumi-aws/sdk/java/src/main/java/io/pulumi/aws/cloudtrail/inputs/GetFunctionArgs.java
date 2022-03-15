@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudtrail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the CloudFront function.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * The function’s stage, either `DEVELOPMENT` or `LIVE`.
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final String stage;
 
     public String getStage() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetWorkloadArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWorkloadArgs Empty = new GetWorkloadArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="workloadId", required=true)
+    @Import(name="workloadId", required=true)
       private final String workloadId;
 
     public String getWorkloadId() {

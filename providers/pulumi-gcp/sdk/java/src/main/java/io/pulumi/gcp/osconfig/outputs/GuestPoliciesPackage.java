@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesPackage {
     /**
      * Default is INSTALLED. The desired state the agent should maintain for this recipe.
@@ -42,11 +42,11 @@ public final class GuestPoliciesPackage {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesPackage(
-        @OutputCustomType.Parameter("desiredState") @Nullable String desiredState,
-        @OutputCustomType.Parameter("manager") @Nullable String manager,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("desiredState") @Nullable String desiredState,
+        @CustomType.Parameter("manager") @Nullable String manager,
+        @CustomType.Parameter("name") String name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = name;

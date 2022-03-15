@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.inputs.DistributionGroupListReceiverValueResponse;
 import io.pulumi.azurenative.testbase.inputs.SubscriptionReceiverValueResponse;
 import io.pulumi.azurenative.testbase.inputs.UserObjectReceiverValueResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * The user object receiver value.
      * 
      */
-    @InputImport(name="distributionGroupListReceiverValue")
+    @Import(name="distributionGroupListReceiverValue")
       private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
 
     public Optional<DistributionGroupListReceiverValueResponse> getDistributionGroupListReceiverValue() {
@@ -35,7 +35,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * The user object receiver value.
      * 
      */
-    @InputImport(name="subscriptionReceiverValue")
+    @Import(name="subscriptionReceiverValue")
       private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
 
     public Optional<SubscriptionReceiverValueResponse> getSubscriptionReceiverValue() {
@@ -46,7 +46,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * The user object receiver value.
      * 
      */
-    @InputImport(name="userObjectReceiverValue")
+    @Import(name="userObjectReceiverValue")
       private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
     public Optional<UserObjectReceiverValueResponse> getUserObjectReceiverValue() {

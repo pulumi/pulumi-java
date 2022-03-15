@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamPolicyArgs;
@@ -64,7 +64,7 @@ public class WebTypeAppEngingIamPolicy extends io.pulumi.resources.CustomResourc
      * Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -78,7 +78,7 @@ public class WebTypeAppEngingIamPolicy extends io.pulumi.resources.CustomResourc
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -93,7 +93,7 @@ public class WebTypeAppEngingIamPolicy extends io.pulumi.resources.CustomResourc
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -109,7 +109,7 @@ public class WebTypeAppEngingIamPolicy extends io.pulumi.resources.CustomResourc
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

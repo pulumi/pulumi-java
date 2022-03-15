@@ -10,14 +10,14 @@ import io.pulumi.azurenative.edgeorder.outputs.ProductDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ResourceProviderDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ReverseShippingDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.StageDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrderItemDetailsResponse {
     /**
      * Cancellation reason.
@@ -100,24 +100,24 @@ public final class OrderItemDetailsResponse {
      */
     private final ReverseShippingDetailsResponse reverseShippingDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrderItemDetailsResponse(
-        @OutputCustomType.Parameter("cancellationReason") String cancellationReason,
-        @OutputCustomType.Parameter("cancellationStatus") String cancellationStatus,
-        @OutputCustomType.Parameter("currentStage") StageDetailsResponse currentStage,
-        @OutputCustomType.Parameter("deletionStatus") String deletionStatus,
-        @OutputCustomType.Parameter("error") ErrorDetailResponse error,
-        @OutputCustomType.Parameter("forwardShippingDetails") ForwardShippingDetailsResponse forwardShippingDetails,
-        @OutputCustomType.Parameter("managementRpDetails") ResourceProviderDetailsResponse managementRpDetails,
-        @OutputCustomType.Parameter("managementRpDetailsList") List<ResourceProviderDetailsResponse> managementRpDetailsList,
-        @OutputCustomType.Parameter("notificationEmailList") @Nullable List<String> notificationEmailList,
-        @OutputCustomType.Parameter("orderItemStageHistory") List<StageDetailsResponse> orderItemStageHistory,
-        @OutputCustomType.Parameter("orderItemType") String orderItemType,
-        @OutputCustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
-        @OutputCustomType.Parameter("productDetails") ProductDetailsResponse productDetails,
-        @OutputCustomType.Parameter("returnReason") String returnReason,
-        @OutputCustomType.Parameter("returnStatus") String returnStatus,
-        @OutputCustomType.Parameter("reverseShippingDetails") ReverseShippingDetailsResponse reverseShippingDetails) {
+        @CustomType.Parameter("cancellationReason") String cancellationReason,
+        @CustomType.Parameter("cancellationStatus") String cancellationStatus,
+        @CustomType.Parameter("currentStage") StageDetailsResponse currentStage,
+        @CustomType.Parameter("deletionStatus") String deletionStatus,
+        @CustomType.Parameter("error") ErrorDetailResponse error,
+        @CustomType.Parameter("forwardShippingDetails") ForwardShippingDetailsResponse forwardShippingDetails,
+        @CustomType.Parameter("managementRpDetails") ResourceProviderDetailsResponse managementRpDetails,
+        @CustomType.Parameter("managementRpDetailsList") List<ResourceProviderDetailsResponse> managementRpDetailsList,
+        @CustomType.Parameter("notificationEmailList") @Nullable List<String> notificationEmailList,
+        @CustomType.Parameter("orderItemStageHistory") List<StageDetailsResponse> orderItemStageHistory,
+        @CustomType.Parameter("orderItemType") String orderItemType,
+        @CustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
+        @CustomType.Parameter("productDetails") ProductDetailsResponse productDetails,
+        @CustomType.Parameter("returnReason") String returnReason,
+        @CustomType.Parameter("returnStatus") String returnStatus,
+        @CustomType.Parameter("reverseShippingDetails") ReverseShippingDetailsResponse reverseShippingDetails) {
         this.cancellationReason = cancellationReason;
         this.cancellationStatus = cancellationStatus;
         this.currentStage = currentStage;

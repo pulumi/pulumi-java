@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
     /**
      * A day of the week.
@@ -22,10 +22,10 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
      */
     private final Integer weekOrdinal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth(
-        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
-        @OutputCustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
+        @CustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @CustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
         this.dayOfWeek = dayOfWeek;
         this.weekOrdinal = weekOrdinal;
     }

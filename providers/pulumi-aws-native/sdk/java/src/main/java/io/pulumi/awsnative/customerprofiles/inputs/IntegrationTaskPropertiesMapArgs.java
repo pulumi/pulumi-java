@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationOperatorPropertiesKeys;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
 
     public static final IntegrationTaskPropertiesMapArgs Empty = new IntegrationTaskPropertiesMapArgs();
 
-    @InputImport(name="operatorPropertyKey", required=true)
+    @Import(name="operatorPropertyKey", required=true)
       private final Output<IntegrationOperatorPropertiesKeys> operatorPropertyKey;
 
     public Output<IntegrationOperatorPropertiesKeys> getOperatorPropertyKey() {
         return this.operatorPropertyKey;
     }
 
-    @InputImport(name="property", required=true)
+    @Import(name="property", required=true)
       private final Output<String> property;
 
     public Output<String> getProperty() {

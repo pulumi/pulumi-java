@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.TypedErrorInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
 
     public static final ExtendedErrorInfoArgs Empty = new ExtendedErrorInfoArgs();
 
-    @InputImport(name="additionalInfo")
+    @Import(name="additionalInfo")
       private final @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
 
     public Output<List<TypedErrorInfoArgs>> getAdditionalInfo() {
         return this.additionalInfo == null ? Output.empty() : this.additionalInfo;
     }
 
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
         return this.code == null ? Output.empty() : this.code;
     }
 
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<List<ExtendedErrorInfoArgs>> details;
 
     public Output<List<ExtendedErrorInfoArgs>> getDetails() {
         return this.details == null ? Output.empty() : this.details;
     }
 
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
         return this.message == null ? Output.empty() : this.message;
     }
 
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {

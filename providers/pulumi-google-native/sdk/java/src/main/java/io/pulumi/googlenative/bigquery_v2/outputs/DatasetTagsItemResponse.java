@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetTagsItemResponse {
     /**
      * [Required] The namespaced friendly name of the tag key, e.g. "12345/environment" where 12345 is org id.
@@ -20,10 +20,10 @@ public final class DatasetTagsItemResponse {
      */
     private final String tagValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetTagsItemResponse(
-        @OutputCustomType.Parameter("tagKey") String tagKey,
-        @OutputCustomType.Parameter("tagValue") String tagValue) {
+        @CustomType.Parameter("tagKey") String tagKey,
+        @CustomType.Parameter("tagValue") String tagValue) {
         this.tagKey = tagKey;
         this.tagValue = tagValue;
     }

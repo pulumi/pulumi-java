@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomErrorRuleResponse {
     /**
      * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
@@ -21,10 +21,10 @@ public final class CustomErrorRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomErrorRuleResponse(
-        @OutputCustomType.Parameter("isErrorType") Boolean isErrorType,
-        @OutputCustomType.Parameter("selector") String selector) {
+        @CustomType.Parameter("isErrorType") Boolean isErrorType,
+        @CustomType.Parameter("selector") String selector) {
         this.isErrorType = isErrorType;
         this.selector = selector;
     }

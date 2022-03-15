@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.EventHandlerTemplateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventHandlerSettingsResponse {
     /**
      * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
@@ -19,8 +19,8 @@ public final class EventHandlerSettingsResponse {
      */
     private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
-    @OutputCustomType.Constructor
-    private EventHandlerSettingsResponse(@OutputCustomType.Parameter("items") @Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
+    @CustomType.Constructor
+    private EventHandlerSettingsResponse(@CustomType.Parameter("items") @Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
         this.items = items;
     }
 

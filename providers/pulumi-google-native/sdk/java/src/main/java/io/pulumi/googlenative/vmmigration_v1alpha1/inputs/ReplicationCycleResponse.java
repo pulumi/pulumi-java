@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.CycleStepResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The time the replication cycle has ended.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -34,7 +34,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The current progress in percentage of this cycle.
      * 
      */
-    @InputImport(name="progress", required=true)
+    @Import(name="progress", required=true)
       private final Integer progress;
 
     public Integer getProgress() {
@@ -45,7 +45,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The current progress in percentage of this cycle.
      * 
      */
-    @InputImport(name="progressPercent", required=true)
+    @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
 
     public Integer getProgressPercent() {
@@ -56,7 +56,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The time the replication cycle has started.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -67,7 +67,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The cycle's steps list reflecting its progress.
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final List<CycleStepResponse> steps;
 
     public List<CycleStepResponse> getSteps() {
@@ -78,7 +78,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The accumulated duration the replication cycle was paused.
      * 
      */
-    @InputImport(name="totalPauseDuration", required=true)
+    @Import(name="totalPauseDuration", required=true)
       private final String totalPauseDuration;
 
     public String getTotalPauseDuration() {

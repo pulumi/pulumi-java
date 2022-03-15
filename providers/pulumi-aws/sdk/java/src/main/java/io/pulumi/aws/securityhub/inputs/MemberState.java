@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The ID of the member AWS account.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -30,7 +30,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The email of the member AWS account.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -41,7 +41,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
      * 
      */
-    @InputImport(name="invite")
+    @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
@@ -52,7 +52,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The ID of the master Security Hub AWS account.
      * 
      */
-    @InputImport(name="masterId")
+    @Import(name="masterId")
       private final @Nullable Output<String> masterId;
 
     public Output<String> getMasterId() {
@@ -63,7 +63,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The status of the member account relationship.
      * 
      */
-    @InputImport(name="memberStatus")
+    @Import(name="memberStatus")
       private final @Nullable Output<String> memberStatus;
 
     public Output<String> getMemberStatus() {

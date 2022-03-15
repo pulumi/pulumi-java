@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetAttestorIamPolicyArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetAttestorIamPolicyArgs Empty = new GetAttestorIamPolicyArgs();
 
-    @InputImport(name="attestorId", required=true)
+    @Import(name="attestorId", required=true)
       private final String attestorId;
 
     public String getAttestorId() {
         return this.attestorId;
     }
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

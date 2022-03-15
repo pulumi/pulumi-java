@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedidentity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
      * The name of the Resource Group to which the identity belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetUserAssignedIdentityArgs extends io.pulumi.resources.Invok
      * The name of the identity resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {

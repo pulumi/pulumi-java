@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FeatureSpecMulticlusteringressArgs extends io.pulumi.resource
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
      * 
      */
-    @InputImport(name="configMembership", required=true)
+    @Import(name="configMembership", required=true)
       private final Output<String> configMembership;
 
     public Output<String> getConfigMembership() {

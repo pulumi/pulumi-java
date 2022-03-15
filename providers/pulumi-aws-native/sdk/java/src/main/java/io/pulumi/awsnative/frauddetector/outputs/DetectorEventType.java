@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.outputs.DetectorEntityType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorEventVariable;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorLabel;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorEventType {
     /**
      * The ARN of the event type.
@@ -52,18 +52,18 @@ public final class DetectorEventType {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorEventType(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("entityTypes") @Nullable List<DetectorEntityType> entityTypes,
-        @OutputCustomType.Parameter("eventVariables") @Nullable List<DetectorEventVariable> eventVariables,
-        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
-        @OutputCustomType.Parameter("labels") @Nullable List<DetectorLabel> labels,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("entityTypes") @Nullable List<DetectorEntityType> entityTypes,
+        @CustomType.Parameter("eventVariables") @Nullable List<DetectorEventVariable> eventVariables,
+        @CustomType.Parameter("inline") @Nullable Boolean inline,
+        @CustomType.Parameter("labels") @Nullable List<DetectorLabel> labels,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

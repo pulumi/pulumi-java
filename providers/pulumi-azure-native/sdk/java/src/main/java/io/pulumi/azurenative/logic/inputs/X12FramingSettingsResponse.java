@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The X12 character set.
      * 
      */
-    @InputImport(name="characterSet", required=true)
+    @Import(name="characterSet", required=true)
       private final String characterSet;
 
     public String getCharacterSet() {
@@ -33,7 +33,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The component separator.
      * 
      */
-    @InputImport(name="componentSeparator", required=true)
+    @Import(name="componentSeparator", required=true)
       private final Integer componentSeparator;
 
     public Integer getComponentSeparator() {
@@ -44,7 +44,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The data element separator.
      * 
      */
-    @InputImport(name="dataElementSeparator", required=true)
+    @Import(name="dataElementSeparator", required=true)
       private final Integer dataElementSeparator;
 
     public Integer getDataElementSeparator() {
@@ -55,7 +55,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The replacement character.
      * 
      */
-    @InputImport(name="replaceCharacter", required=true)
+    @Import(name="replaceCharacter", required=true)
       private final Integer replaceCharacter;
 
     public Integer getReplaceCharacter() {
@@ -66,7 +66,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The value indicating whether to replace separators in payload.
      * 
      */
-    @InputImport(name="replaceSeparatorsInPayload", required=true)
+    @Import(name="replaceSeparatorsInPayload", required=true)
       private final Boolean replaceSeparatorsInPayload;
 
     public Boolean getReplaceSeparatorsInPayload() {
@@ -77,7 +77,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The segment terminator.
      * 
      */
-    @InputImport(name="segmentTerminator", required=true)
+    @Import(name="segmentTerminator", required=true)
       private final Integer segmentTerminator;
 
     public Integer getSegmentTerminator() {
@@ -88,7 +88,7 @@ public final class X12FramingSettingsResponse extends io.pulumi.resources.Invoke
      * The segment terminator suffix.
      * 
      */
-    @InputImport(name="segmentTerminatorSuffix", required=true)
+    @Import(name="segmentTerminatorSuffix", required=true)
       private final String segmentTerminatorSuffix;
 
     public String getSegmentTerminatorSuffix() {

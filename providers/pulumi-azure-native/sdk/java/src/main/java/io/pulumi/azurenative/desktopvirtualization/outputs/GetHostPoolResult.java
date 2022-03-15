@@ -8,7 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.RegistrationInfoRespo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHostPoolResult {
     /**
      * List of applicationGroup links.
@@ -169,40 +169,40 @@ public final class GetHostPoolResult {
      */
     private final @Nullable String vmTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHostPoolResult(
-        @OutputCustomType.Parameter("applicationGroupReferences") List<String> applicationGroupReferences,
-        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
-        @OutputCustomType.Parameter("customRdpProperty") @Nullable String customRdpProperty,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("hostPoolType") String hostPoolType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("maxSessionLimit") @Nullable Integer maxSessionLimit,
-        @OutputCustomType.Parameter("migrationRequest") @Nullable MigrationRequestPropertiesResponse migrationRequest,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("personalDesktopAssignmentType") @Nullable String personalDesktopAssignmentType,
-        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @OutputCustomType.Parameter("preferredAppGroupType") String preferredAppGroupType,
-        @OutputCustomType.Parameter("registrationInfo") @Nullable RegistrationInfoResponse registrationInfo,
-        @OutputCustomType.Parameter("ring") @Nullable Integer ring,
-        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
-        @OutputCustomType.Parameter("ssoClientSecretKeyVaultPath") @Nullable String ssoClientSecretKeyVaultPath,
-        @OutputCustomType.Parameter("ssoSecretType") @Nullable String ssoSecretType,
-        @OutputCustomType.Parameter("ssoadfsAuthority") @Nullable String ssoadfsAuthority,
-        @OutputCustomType.Parameter("startVMOnConnect") @Nullable Boolean startVMOnConnect,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationEnvironment") @Nullable Boolean validationEnvironment,
-        @OutputCustomType.Parameter("vmTemplate") @Nullable String vmTemplate) {
+        @CustomType.Parameter("applicationGroupReferences") List<String> applicationGroupReferences,
+        @CustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @CustomType.Parameter("customRdpProperty") @Nullable String customRdpProperty,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("hostPoolType") String hostPoolType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("loadBalancerType") String loadBalancerType,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("maxSessionLimit") @Nullable Integer maxSessionLimit,
+        @CustomType.Parameter("migrationRequest") @Nullable MigrationRequestPropertiesResponse migrationRequest,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("personalDesktopAssignmentType") @Nullable String personalDesktopAssignmentType,
+        @CustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @CustomType.Parameter("preferredAppGroupType") String preferredAppGroupType,
+        @CustomType.Parameter("registrationInfo") @Nullable RegistrationInfoResponse registrationInfo,
+        @CustomType.Parameter("ring") @Nullable Integer ring,
+        @CustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @CustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @CustomType.Parameter("ssoClientSecretKeyVaultPath") @Nullable String ssoClientSecretKeyVaultPath,
+        @CustomType.Parameter("ssoSecretType") @Nullable String ssoSecretType,
+        @CustomType.Parameter("ssoadfsAuthority") @Nullable String ssoadfsAuthority,
+        @CustomType.Parameter("startVMOnConnect") @Nullable Boolean startVMOnConnect,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationEnvironment") @Nullable Boolean validationEnvironment,
+        @CustomType.Parameter("vmTemplate") @Nullable String vmTemplate) {
         this.applicationGroupReferences = applicationGroupReferences;
         this.cloudPcResource = cloudPcResource;
         this.customRdpProperty = customRdpProperty;

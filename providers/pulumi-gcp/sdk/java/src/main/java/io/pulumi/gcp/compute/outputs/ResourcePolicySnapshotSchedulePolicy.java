@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicy;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicySchedule;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicySnapshotProperties;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicy {
     /**
      * Retention policy applied to snapshots created by this resource policy.
@@ -31,11 +31,11 @@ public final class ResourcePolicySnapshotSchedulePolicy {
      */
     private final @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicy(
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy,
-        @OutputCustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicySchedule schedule,
-        @OutputCustomType.Parameter("snapshotProperties") @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
+        @CustomType.Parameter("retentionPolicy") @Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy,
+        @CustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicySchedule schedule,
+        @CustomType.Parameter("snapshotProperties") @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
         this.retentionPolicy = retentionPolicy;
         this.schedule = schedule;
         this.snapshotProperties = snapshotProperties;

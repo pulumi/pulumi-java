@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends io.pulumi.
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

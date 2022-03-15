@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
      * The id of the `aws.ec2.RouteTable` to propagate routes into.
      * 
      */
-    @InputImport(name="routeTableId", required=true)
+    @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
     public Output<String> getRouteTableId() {
@@ -28,7 +28,7 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
      * The id of the `aws.ec2.VpnGateway` to propagate routes from.
      * 
      */
-    @InputImport(name="vpnGatewayId", required=true)
+    @Import(name="vpnGatewayId", required=true)
       private final Output<String> vpnGatewayId;
 
     public Output<String> getVpnGatewayId() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.SupportTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * Email of support contact
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -35,7 +35,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * Link for support help, like to support page to open a ticket etc.
      * 
      */
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable Output<String> link;
 
     public Output<String> getLink() {
@@ -46,7 +46,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the support contact. Company or person.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class MetadataSupportArgs extends io.pulumi.resources.ResourceArgs 
      * Type of support for content item
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<Either<String,SupportTier>> tier;
 
     public Output<Either<String,SupportTier>> getTier() {

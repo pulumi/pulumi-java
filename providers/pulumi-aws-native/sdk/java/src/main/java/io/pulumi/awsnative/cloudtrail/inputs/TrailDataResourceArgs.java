@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
      * The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -34,7 +34,7 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
      * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

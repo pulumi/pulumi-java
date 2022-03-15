@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.LinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DescriptionResponse {
     /**
      * Attributes for the product system.
@@ -42,14 +42,14 @@ public final class DescriptionResponse {
      */
     private final String shortDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DescriptionResponse(
-        @OutputCustomType.Parameter("attributes") List<String> attributes,
-        @OutputCustomType.Parameter("descriptionType") String descriptionType,
-        @OutputCustomType.Parameter("keywords") List<String> keywords,
-        @OutputCustomType.Parameter("links") List<LinkResponse> links,
-        @OutputCustomType.Parameter("longDescription") String longDescription,
-        @OutputCustomType.Parameter("shortDescription") String shortDescription) {
+        @CustomType.Parameter("attributes") List<String> attributes,
+        @CustomType.Parameter("descriptionType") String descriptionType,
+        @CustomType.Parameter("keywords") List<String> keywords,
+        @CustomType.Parameter("links") List<LinkResponse> links,
+        @CustomType.Parameter("longDescription") String longDescription,
+        @CustomType.Parameter("shortDescription") String shortDescription) {
         this.attributes = attributes;
         this.descriptionType = descriptionType;
         this.keywords = keywords;

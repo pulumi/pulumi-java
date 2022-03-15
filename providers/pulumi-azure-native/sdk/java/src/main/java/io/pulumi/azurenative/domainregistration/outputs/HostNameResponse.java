@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.domainregistration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostNameResponse {
     /**
      * Name of the Azure resource the hostname is assigned to. If it is assigned to a Traffic Manager then it will be the Traffic Manager name otherwise it will be the app name.
@@ -43,14 +43,14 @@ public final class HostNameResponse {
      */
     private final @Nullable List<String> siteNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostNameResponse(
-        @OutputCustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
-        @OutputCustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
-        @OutputCustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
-        @OutputCustomType.Parameter("hostNameType") @Nullable String hostNameType,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("siteNames") @Nullable List<String> siteNames) {
+        @CustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
+        @CustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
+        @CustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
+        @CustomType.Parameter("hostNameType") @Nullable String hostNameType,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("siteNames") @Nullable List<String> siteNames) {
         this.azureResourceName = azureResourceName;
         this.azureResourceType = azureResourceType;
         this.customHostNameDnsRecordType = customHostNameDnsRecordType;

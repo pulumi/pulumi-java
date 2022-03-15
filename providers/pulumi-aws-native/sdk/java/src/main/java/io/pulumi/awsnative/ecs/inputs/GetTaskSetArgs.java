@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    @InputImport(name="cluster", required=true)
+    @Import(name="cluster", required=true)
       private final String cluster;
 
     public String getCluster() {
@@ -27,7 +27,7 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the task set.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -38,7 +38,7 @@ public final class GetTaskSetArgs extends io.pulumi.resources.InvokeArgs {
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

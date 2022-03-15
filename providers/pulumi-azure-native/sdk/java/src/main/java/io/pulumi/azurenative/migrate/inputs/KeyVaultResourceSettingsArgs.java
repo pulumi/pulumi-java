@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class KeyVaultResourceSettingsArgs extends io.pulumi.resources.Reso
      * Expected value is 'Microsoft.KeyVault/vaults'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -33,7 +33,7 @@ public final class KeyVaultResourceSettingsArgs extends io.pulumi.resources.Reso
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
      * The encryption key reference.
      * 
      */
-    @InputImport(name="encryptionKeyReference")
+    @Import(name="encryptionKeyReference")
       private final @Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
     public Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> getEncryptionKeyReference() {

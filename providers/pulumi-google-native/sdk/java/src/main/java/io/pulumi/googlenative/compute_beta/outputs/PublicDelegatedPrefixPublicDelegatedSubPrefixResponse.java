@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
     /**
      * Name of the project scoping this PublicDelegatedSubPrefix.
@@ -46,15 +46,15 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(
-        @OutputCustomType.Parameter("delegateeProject") String delegateeProject,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("isAddress") Boolean isAddress,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("delegateeProject") String delegateeProject,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("isAddress") Boolean isAddress,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("status") String status) {
         this.delegateeProject = delegateeProject;
         this.description = description;
         this.ipCidrRange = ipCidrRange;

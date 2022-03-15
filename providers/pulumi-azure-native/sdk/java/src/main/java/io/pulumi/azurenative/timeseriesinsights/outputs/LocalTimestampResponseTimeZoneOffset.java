@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocalTimestampResponseTimeZoneOffset {
     /**
      * The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00)
@@ -17,8 +17,8 @@ public final class LocalTimestampResponseTimeZoneOffset {
      */
     private final @Nullable String propertyName;
 
-    @OutputCustomType.Constructor
-    private LocalTimestampResponseTimeZoneOffset(@OutputCustomType.Parameter("propertyName") @Nullable String propertyName) {
+    @CustomType.Constructor
+    private LocalTimestampResponseTimeZoneOffset(@CustomType.Parameter("propertyName") @Nullable String propertyName) {
         this.propertyName = propertyName;
     }
 

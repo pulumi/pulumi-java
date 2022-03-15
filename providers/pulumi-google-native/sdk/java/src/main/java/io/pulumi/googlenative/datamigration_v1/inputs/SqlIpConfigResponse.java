@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1.inputs.SqlAclEntryResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
      * 
      */
-    @InputImport(name="authorizedNetworks", required=true)
+    @Import(name="authorizedNetworks", required=true)
       private final List<SqlAclEntryResponse> authorizedNetworks;
 
     public List<SqlAclEntryResponse> getAuthorizedNetworks() {
@@ -34,7 +34,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Whether the instance should be assigned an IPv4 address or not.
      * 
      */
-    @InputImport(name="enableIpv4", required=true)
+    @Import(name="enableIpv4", required=true)
       private final Boolean enableIpv4;
 
     public Boolean getEnableIpv4() {
@@ -45,7 +45,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The resource link for the VPC network from which the Cloud SQL instance is accessible for private IP. For example, `projects/myProject/global/networks/default`. This setting can be updated, but it cannot be removed after it is set.
      * 
      */
-    @InputImport(name="privateNetwork", required=true)
+    @Import(name="privateNetwork", required=true)
       private final String privateNetwork;
 
     public String getPrivateNetwork() {
@@ -56,7 +56,7 @@ public final class SqlIpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Whether SSL connections over IP should be enforced or not.
      * 
      */
-    @InputImport(name="requireSsl", required=true)
+    @Import(name="requireSsl", required=true)
       private final Boolean requireSsl;
 
     public Boolean getRequireSsl() {

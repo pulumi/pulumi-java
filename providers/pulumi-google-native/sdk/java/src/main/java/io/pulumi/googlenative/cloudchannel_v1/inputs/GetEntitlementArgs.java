@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEntitlementArgs Empty = new GetEntitlementArgs();
 
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
     }
 
-    @InputImport(name="customerId", required=true)
+    @Import(name="customerId", required=true)
       private final String customerId;
 
     public String getCustomerId() {
         return this.customerId;
     }
 
-    @InputImport(name="entitlementId", required=true)
+    @Import(name="entitlementId", required=true)
       private final String entitlementId;
 
     public String getEntitlementId() {

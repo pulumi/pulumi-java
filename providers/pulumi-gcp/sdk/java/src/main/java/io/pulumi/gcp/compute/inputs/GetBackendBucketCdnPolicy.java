@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetBackendBucketCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -16,56 +16,56 @@ public final class GetBackendBucketCdnPolicy extends io.pulumi.resources.InvokeA
 
     public static final GetBackendBucketCdnPolicy Empty = new GetBackendBucketCdnPolicy();
 
-    @InputImport(name="cacheMode", required=true)
+    @Import(name="cacheMode", required=true)
       private final String cacheMode;
 
     public String getCacheMode() {
         return this.cacheMode;
     }
 
-    @InputImport(name="clientTtl", required=true)
+    @Import(name="clientTtl", required=true)
       private final Integer clientTtl;
 
     public Integer getClientTtl() {
         return this.clientTtl;
     }
 
-    @InputImport(name="defaultTtl", required=true)
+    @Import(name="defaultTtl", required=true)
       private final Integer defaultTtl;
 
     public Integer getDefaultTtl() {
         return this.defaultTtl;
     }
 
-    @InputImport(name="maxTtl", required=true)
+    @Import(name="maxTtl", required=true)
       private final Integer maxTtl;
 
     public Integer getMaxTtl() {
         return this.maxTtl;
     }
 
-    @InputImport(name="negativeCaching", required=true)
+    @Import(name="negativeCaching", required=true)
       private final Boolean negativeCaching;
 
     public Boolean getNegativeCaching() {
         return this.negativeCaching;
     }
 
-    @InputImport(name="negativeCachingPolicies", required=true)
+    @Import(name="negativeCachingPolicies", required=true)
       private final List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies;
 
     public List<GetBackendBucketCdnPolicyNegativeCachingPolicy> getNegativeCachingPolicies() {
         return this.negativeCachingPolicies;
     }
 
-    @InputImport(name="serveWhileStale", required=true)
+    @Import(name="serveWhileStale", required=true)
       private final Integer serveWhileStale;
 
     public Integer getServeWhileStale() {
         return this.serveWhileStale;
     }
 
-    @InputImport(name="signedUrlCacheMaxAgeSec", required=true)
+    @Import(name="signedUrlCacheMaxAgeSec", required=true)
       private final Integer signedUrlCacheMaxAgeSec;
 
     public Integer getSignedUrlCacheMaxAgeSec() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * error in any statement, the database is not created.
      * 
      */
-    @InputImport(name="ddls")
+    @Import(name="ddls")
       private final @Nullable Output<List<String>> ddls;
 
     public Output<List<String>> getDdls() {
@@ -36,7 +36,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * in state, a `destroy` or `update` that would delete the instance will fail.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -48,7 +48,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig;
 
     public Output<DatabaseEncryptionConfigArgs> getEncryptionConfig() {
@@ -59,7 +59,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The instance to create the database on.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -71,7 +71,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -83,7 +83,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

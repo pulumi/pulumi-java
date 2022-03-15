@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FlowDefinitionOutputConfigGetArgs extends io.pulumi.resources
      * The Amazon Key Management Service (KMS) key ARN for server-side encryption.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -29,7 +29,7 @@ public final class FlowDefinitionOutputConfigGetArgs extends io.pulumi.resources
      * The Amazon S3 path where the object containing human output will be made available.
      * 
      */
-    @InputImport(name="s3OutputPath", required=true)
+    @Import(name="s3OutputPath", required=true)
       private final Output<String> s3OutputPath;
 
     public Output<String> getS3OutputPath() {

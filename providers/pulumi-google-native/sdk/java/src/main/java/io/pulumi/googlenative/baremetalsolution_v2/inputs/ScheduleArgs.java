@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.baremetalsolution_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * A crontab-like specification that the schedule uses to take snapshots.
      * 
      */
-    @InputImport(name="crontabSpec")
+    @Import(name="crontabSpec")
       private final @Nullable Output<String> crontabSpec;
 
     public Output<String> getCrontabSpec() {
@@ -34,7 +34,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of snapshot names created in this schedule.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -45,7 +45,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of snapshots to retain in this schedule.
      * 
      */
-    @InputImport(name="retentionCount")
+    @Import(name="retentionCount")
       private final @Nullable Output<Integer> retentionCount;
 
     public Output<Integer> getRetentionCount() {

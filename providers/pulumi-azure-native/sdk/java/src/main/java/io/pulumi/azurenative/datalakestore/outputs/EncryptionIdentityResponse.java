@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionIdentityResponse {
     /**
      * The principal identifier associated with the encryption.
@@ -25,11 +25,11 @@ public final class EncryptionIdentityResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

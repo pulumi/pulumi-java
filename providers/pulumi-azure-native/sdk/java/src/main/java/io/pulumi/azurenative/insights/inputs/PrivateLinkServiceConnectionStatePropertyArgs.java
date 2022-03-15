@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * The private link service connection description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * The private link service connection status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {

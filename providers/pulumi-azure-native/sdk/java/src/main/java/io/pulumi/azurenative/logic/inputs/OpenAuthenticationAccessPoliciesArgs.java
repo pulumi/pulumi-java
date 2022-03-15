@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OpenAuthenticationAccessPoliciesArgs extends io.pulumi.resour
      * Open authentication policies.
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
     public Output<Map<String,OpenAuthenticationAccessPolicyArgs>> getPolicies() {

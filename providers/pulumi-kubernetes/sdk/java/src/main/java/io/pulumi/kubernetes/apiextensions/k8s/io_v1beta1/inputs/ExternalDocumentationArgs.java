@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class ExternalDocumentationArgs extends io.pulumi.resources.Resourc
 
     public static final ExternalDocumentationArgs Empty = new ExternalDocumentationArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

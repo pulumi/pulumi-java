@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.IpFirewallRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
      * 
      */
-    @OutputExport(name="endIpAddress", type=String.class, parameters={})
+    @Export(name="endIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endIpAddress;
 
     /**
@@ -48,7 +48,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * Resource provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -76,7 +76,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * The start IP address of the firewall rule. Must be IPv4 format
      * 
      */
-    @OutputExport(name="startIpAddress", type=String.class, parameters={})
+    @Export(name="startIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startIpAddress;
 
     /**
@@ -90,7 +90,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

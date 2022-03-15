@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotAliasLocaleSettingsItemArgs;
 import io.pulumi.awsnative.lex.inputs.BotAliasTagArgs;
 import io.pulumi.awsnative.lex.inputs.SentimentAnalysisSettingsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotAliasArgs Empty = new BotAliasArgs();
 
-    @InputImport(name="botAliasLocaleSettings")
+    @Import(name="botAliasLocaleSettings")
       private final @Nullable Output<List<BotAliasLocaleSettingsItemArgs>> botAliasLocaleSettings;
 
     public Output<List<BotAliasLocaleSettingsItemArgs>> getBotAliasLocaleSettings() {
         return this.botAliasLocaleSettings == null ? Output.empty() : this.botAliasLocaleSettings;
     }
 
-    @InputImport(name="botAliasName")
+    @Import(name="botAliasName")
       private final @Nullable Output<String> botAliasName;
 
     public Output<String> getBotAliasName() {
@@ -37,35 +37,35 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to add to the bot alias.
      * 
      */
-    @InputImport(name="botAliasTags")
+    @Import(name="botAliasTags")
       private final @Nullable Output<List<BotAliasTagArgs>> botAliasTags;
 
     public Output<List<BotAliasTagArgs>> getBotAliasTags() {
         return this.botAliasTags == null ? Output.empty() : this.botAliasTags;
     }
 
-    @InputImport(name="botId", required=true)
+    @Import(name="botId", required=true)
       private final Output<String> botId;
 
     public Output<String> getBotId() {
         return this.botId;
     }
 
-    @InputImport(name="botVersion")
+    @Import(name="botVersion")
       private final @Nullable Output<String> botVersion;
 
     public Output<String> getBotVersion() {
         return this.botVersion == null ? Output.empty() : this.botVersion;
     }
 
-    @InputImport(name="conversationLogSettings")
+    @Import(name="conversationLogSettings")
       private final @Nullable Output<BotAliasConversationLogSettingsArgs> conversationLogSettings;
 
     public Output<BotAliasConversationLogSettingsArgs> getConversationLogSettings() {
         return this.conversationLogSettings == null ? Output.empty() : this.conversationLogSettings;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -76,7 +76,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
      * 
      */
-    @InputImport(name="sentimentAnalysisSettings")
+    @Import(name="sentimentAnalysisSettings")
       private final @Nullable Output<SentimentAnalysisSettingsPropertiesArgs> sentimentAnalysisSettings;
 
     public Output<SentimentAnalysisSettingsPropertiesArgs> getSentimentAnalysisSettings() {

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingHostPoolRefere
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * Description of scaling plan.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -55,7 +55,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -69,7 +69,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * Exclusion tag for scaling plan.
      * 
      */
-    @OutputExport(name="exclusionTag", type=String.class, parameters={})
+    @Export(name="exclusionTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> exclusionTag;
 
     /**
@@ -83,7 +83,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * User friendly name of scaling plan.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -97,7 +97,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * List of ScalingHostPoolReference definitions.
      * 
      */
-    @OutputExport(name="hostPoolReferences", type=List.class, parameters={ScalingHostPoolReferenceResponse.class})
+    @Export(name="hostPoolReferences", type=List.class, parameters={ScalingHostPoolReferenceResponse.class})
     private Output</* @Nullable */ List<ScalingHostPoolReferenceResponse>> hostPoolReferences;
 
     /**
@@ -111,7 +111,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * HostPool type for desktop.
      * 
      */
-    @OutputExport(name="hostPoolType", type=String.class, parameters={})
+    @Export(name="hostPoolType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostPoolType;
 
     /**
@@ -121,7 +121,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getHostPoolType() {
         return this.hostPoolType;
     }
-    @OutputExport(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
+    @Export(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> getIdentity() {
@@ -131,7 +131,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -145,7 +145,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -159,7 +159,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
@@ -173,7 +173,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -187,7 +187,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * ObjectId of scaling plan. (internal use)
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
@@ -197,7 +197,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
     public Output<String> getObjectId() {
         return this.objectId;
     }
-    @OutputExport(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
+    @Export(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> getPlan() {
@@ -207,7 +207,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * The ring number of scaling plan.
      * 
      */
-    @OutputExport(name="ring", type=Integer.class, parameters={})
+    @Export(name="ring", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ring;
 
     /**
@@ -221,7 +221,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * List of ScalingSchedule definitions.
      * 
      */
-    @OutputExport(name="schedules", type=List.class, parameters={ScalingScheduleResponse.class})
+    @Export(name="schedules", type=List.class, parameters={ScalingScheduleResponse.class})
     private Output</* @Nullable */ List<ScalingScheduleResponse>> schedules;
 
     /**
@@ -231,7 +231,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<ScalingScheduleResponse>> getSchedules() {
         return this.schedules;
     }
-    @OutputExport(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
+    @Export(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> getSku() {
@@ -241,7 +241,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -255,7 +255,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * Timezone of the scaling plan.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZone;
 
     /**
@@ -269,7 +269,7 @@ public class ScalingPlan extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

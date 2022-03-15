@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
      * GID of the POSIX group.
      * 
      */
-    @InputImport(name="gid", required=true)
+    @Import(name="gid", required=true)
       private final String gid;
 
     public String getGid() {
@@ -31,7 +31,7 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the POSIX group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class PosixGroupResponse extends io.pulumi.resources.InvokeArgs {
      * System identifier for which group name and gid apply to. If not specified it will default to empty value.
      * 
      */
-    @InputImport(name="systemId", required=true)
+    @Import(name="systemId", required=true)
       private final String systemId;
 
     public String getSystemId() {

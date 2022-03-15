@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ClientCertificateResponse;
 import io.pulumi.azurenative.servicefabric.outputs.LoadBalancingRuleResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedClusterResult {
     /**
      * client certificates for the cluster.
@@ -135,31 +135,31 @@ public final class GetManagedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedClusterResult(
-        @OutputCustomType.Parameter("addonFeatures") @Nullable List<String> addonFeatures,
-        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
-        @OutputCustomType.Parameter("adminUserName") String adminUserName,
-        @OutputCustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
-        @OutputCustomType.Parameter("clientConnectionPort") @Nullable Integer clientConnectionPort,
-        @OutputCustomType.Parameter("clients") @Nullable List<ClientCertificateResponse> clients,
-        @OutputCustomType.Parameter("clusterCertificateThumbprint") String clusterCertificateThumbprint,
-        @OutputCustomType.Parameter("clusterCodeVersion") @Nullable String clusterCodeVersion,
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("clusterState") String clusterState,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("fabricSettings") @Nullable List<SettingsSectionDescriptionResponse> fabricSettings,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("httpGatewayConnectionPort") @Nullable Integer httpGatewayConnectionPort,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("loadBalancingRules") @Nullable List<LoadBalancingRuleResponse> loadBalancingRules,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addonFeatures") @Nullable List<String> addonFeatures,
+        @CustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @CustomType.Parameter("adminUserName") String adminUserName,
+        @CustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
+        @CustomType.Parameter("clientConnectionPort") @Nullable Integer clientConnectionPort,
+        @CustomType.Parameter("clients") @Nullable List<ClientCertificateResponse> clients,
+        @CustomType.Parameter("clusterCertificateThumbprint") String clusterCertificateThumbprint,
+        @CustomType.Parameter("clusterCodeVersion") @Nullable String clusterCodeVersion,
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("clusterState") String clusterState,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("fabricSettings") @Nullable List<SettingsSectionDescriptionResponse> fabricSettings,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("httpGatewayConnectionPort") @Nullable Integer httpGatewayConnectionPort,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("loadBalancingRules") @Nullable List<LoadBalancingRuleResponse> loadBalancingRules,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.addonFeatures = addonFeatures;
         this.adminPassword = adminPassword;
         this.adminUserName = adminUserName;

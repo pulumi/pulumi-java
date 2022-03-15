@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomaticRepairsPolicyResponse {
     /**
      * Specifies whether automatic repairs should be enabled on the virtual machine scale set. The default value is false.
@@ -23,10 +23,10 @@ public final class AutomaticRepairsPolicyResponse {
      */
     private final @Nullable String gracePeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomaticRepairsPolicyResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("gracePeriod") @Nullable String gracePeriod) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("gracePeriod") @Nullable String gracePeriod) {
         this.enabled = enabled;
         this.gracePeriod = gracePeriod;
     }

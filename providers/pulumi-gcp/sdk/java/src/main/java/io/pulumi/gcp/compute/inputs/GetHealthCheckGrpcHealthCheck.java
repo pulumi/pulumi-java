@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,28 +13,28 @@ public final class GetHealthCheckGrpcHealthCheck extends io.pulumi.resources.Inv
 
     public static final GetHealthCheckGrpcHealthCheck Empty = new GetHealthCheckGrpcHealthCheck();
 
-    @InputImport(name="grpcServiceName", required=true)
+    @Import(name="grpcServiceName", required=true)
       private final String grpcServiceName;
 
     public String getGrpcServiceName() {
         return this.grpcServiceName;
     }
 
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
         return this.port;
     }
 
-    @InputImport(name="portName", required=true)
+    @Import(name="portName", required=true)
       private final String portName;
 
     public String getPortName() {
         return this.portName;
     }
 
-    @InputImport(name="portSpecification", required=true)
+    @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
     public String getPortSpecification() {

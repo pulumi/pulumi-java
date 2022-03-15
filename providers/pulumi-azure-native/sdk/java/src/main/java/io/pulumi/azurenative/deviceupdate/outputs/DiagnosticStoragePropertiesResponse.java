@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticStoragePropertiesResponse {
     /**
      * Authentication Type
@@ -27,11 +27,11 @@ public final class DiagnosticStoragePropertiesResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticStoragePropertiesResponse(
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("resourceId") String resourceId) {
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("resourceId") String resourceId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.resourceId = resourceId;

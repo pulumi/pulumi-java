@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldTransformationArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordSuppressionArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
      * Transform the record by applying various field transformations.
      * 
      */
-    @InputImport(name="fieldTransformations")
+    @Import(name="fieldTransformations")
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
 
     public Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> getFieldTransformations() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends io.pulumi
      * Configuration defining which records get suppressed entirely. Records that match any suppression rule are omitted from the output.
      * 
      */
-    @InputImport(name="recordSuppressions")
+    @Import(name="recordSuppressions")
       private final @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
 
     public Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> getRecordSuppressions() {

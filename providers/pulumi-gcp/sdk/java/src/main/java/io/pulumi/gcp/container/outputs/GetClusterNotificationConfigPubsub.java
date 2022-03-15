@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNotificationConfigPubsub {
     private final Boolean enabled;
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNotificationConfigPubsub(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("topic") String topic) {
         this.enabled = enabled;
         this.topic = topic;
     }

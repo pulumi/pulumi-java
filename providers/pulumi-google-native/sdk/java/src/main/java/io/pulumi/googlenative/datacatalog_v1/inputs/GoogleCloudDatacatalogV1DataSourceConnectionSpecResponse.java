@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse exte
      * Fields specific to BigQuery connections.
      * 
      */
-    @InputImport(name="bigqueryConnectionSpec", required=true)
+    @Import(name="bigqueryConnectionSpec", required=true)
       private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse getBigqueryConnectionSpec() {

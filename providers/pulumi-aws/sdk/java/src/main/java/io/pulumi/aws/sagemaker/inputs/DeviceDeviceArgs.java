@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DeviceDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the device.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class DeviceDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -40,7 +40,7 @@ public final class DeviceDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Web Services Internet of Things (IoT) object name.
      * 
      */
-    @InputImport(name="iotThingName")
+    @Import(name="iotThingName")
       private final @Nullable Output<String> iotThingName;
 
     public Output<String> getIotThingName() {

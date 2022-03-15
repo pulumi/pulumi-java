@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> getSelectedDatabases() {
@@ -33,7 +33,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
      * Connection information for source MySQL
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
@@ -44,7 +44,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends io.p
      * Connection information for target Azure Database for MySQL
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse targetConnectionInfo;
 
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {

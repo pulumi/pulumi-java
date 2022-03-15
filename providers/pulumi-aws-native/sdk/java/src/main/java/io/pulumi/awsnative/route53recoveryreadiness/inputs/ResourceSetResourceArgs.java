@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetDNSTargetResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * The component identifier of the resource, generated when DNS target resource is used.
      * 
      */
-    @InputImport(name="componentId")
+    @Import(name="componentId")
       private final @Nullable Output<String> componentId;
 
     public Output<String> getComponentId() {
         return this.componentId == null ? Output.empty() : this.componentId;
     }
 
-    @InputImport(name="dnsTargetResource")
+    @Import(name="dnsTargetResource")
       private final @Nullable Output<ResourceSetDNSTargetResourceArgs> dnsTargetResource;
 
     public Output<ResourceSetDNSTargetResourceArgs> getDnsTargetResource() {
@@ -42,7 +42,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
      * 
      */
-    @InputImport(name="readinessScopes")
+    @Import(name="readinessScopes")
       private final @Nullable Output<List<String>> readinessScopes;
 
     public Output<List<String>> getReadinessScopes() {
@@ -53,7 +53,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * The Amazon Resource Name (ARN) of the AWS resource.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

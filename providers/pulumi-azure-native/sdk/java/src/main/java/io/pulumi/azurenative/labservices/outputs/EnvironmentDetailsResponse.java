@@ -5,11 +5,11 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.VirtualMachineDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentDetailsResponse {
     /**
      * Description of the Environment
@@ -57,17 +57,17 @@ public final class EnvironmentDetailsResponse {
      */
     private final VirtualMachineDetailsResponse virtualMachineDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentDetailsResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("environmentState") String environmentState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("passwordLastReset") String passwordLastReset,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("totalUsage") String totalUsage,
-        @OutputCustomType.Parameter("virtualMachineDetails") VirtualMachineDetailsResponse virtualMachineDetails) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("environmentState") String environmentState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("passwordLastReset") String passwordLastReset,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("totalUsage") String totalUsage,
+        @CustomType.Parameter("virtualMachineDetails") VirtualMachineDetailsResponse virtualMachineDetails) {
         this.description = description;
         this.environmentState = environmentState;
         this.id = id;

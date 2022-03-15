@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.enums.ProtocolType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * List of CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
      * 
      */
-    @InputImport(name="cidrBlocks")
+    @Import(name="cidrBlocks")
       private final @Nullable Output<List<String>> cidrBlocks;
 
     public Output<List<String>> getCidrBlocks() {
@@ -34,7 +34,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * Description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * Start port (or ICMP type number if protocol is "icmp" or "icmpv6").
      * 
      */
-    @InputImport(name="fromPort")
+    @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -56,7 +56,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * List of IPv6 CIDR blocks. Cannot be specified with `source_security_group_id` or `self`.
      * 
      */
-    @InputImport(name="ipv6CidrBlocks")
+    @Import(name="ipv6CidrBlocks")
       private final @Nullable Output<List<String>> ipv6CidrBlocks;
 
     public Output<List<String>> getIpv6CidrBlocks() {
@@ -67,7 +67,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * List of Prefix List IDs.
      * 
      */
-    @InputImport(name="prefixListIds")
+    @Import(name="prefixListIds")
       private final @Nullable Output<List<String>> prefixListIds;
 
     public Output<List<String>> getPrefixListIds() {
@@ -78,7 +78,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * Protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,ProtocolType>> protocol;
 
     public Output<Either<String,ProtocolType>> getProtocol() {
@@ -89,7 +89,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * Security group to apply this rule to.
      * 
      */
-    @InputImport(name="securityGroupId")
+    @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
@@ -100,7 +100,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * Whether the security group itself will be added as a source to this ingress rule. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `source_security_group_id`.
      * 
      */
-    @InputImport(name="self")
+    @Import(name="self")
       private final @Nullable Output<Boolean> self;
 
     public Output<Boolean> getSelf() {
@@ -111,7 +111,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * Security group id to allow access to/from, depending on the `type`. Cannot be specified with `cidr_blocks`, `ipv6_cidr_blocks`, or `self`.
      * 
      */
-    @InputImport(name="sourceSecurityGroupId")
+    @Import(name="sourceSecurityGroupId")
       private final @Nullable Output<String> sourceSecurityGroupId;
 
     public Output<String> getSourceSecurityGroupId() {
@@ -122,7 +122,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * End port (or ICMP code if protocol is "icmp").
      * 
      */
-    @InputImport(name="toPort")
+    @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {
@@ -134,7 +134,7 @@ public final class SecurityGroupRuleState extends io.pulumi.resources.ResourceAr
      * or `egress` (outbound).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

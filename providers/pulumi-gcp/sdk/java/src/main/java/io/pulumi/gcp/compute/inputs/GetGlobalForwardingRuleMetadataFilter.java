@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetGlobalForwardingRuleMetadataFilterFilterLabel;
 import java.lang.String;
 import java.util.List;
@@ -14,14 +14,14 @@ public final class GetGlobalForwardingRuleMetadataFilter extends io.pulumi.resou
 
     public static final GetGlobalForwardingRuleMetadataFilter Empty = new GetGlobalForwardingRuleMetadataFilter();
 
-    @InputImport(name="filterLabels", required=true)
+    @Import(name="filterLabels", required=true)
       private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
 
     public List<GetGlobalForwardingRuleMetadataFilterFilterLabel> getFilterLabels() {
         return this.filterLabels;
     }
 
-    @InputImport(name="filterMatchCriteria", required=true)
+    @Import(name="filterMatchCriteria", required=true)
       private final String filterMatchCriteria;
 
     public String getFilterMatchCriteria() {

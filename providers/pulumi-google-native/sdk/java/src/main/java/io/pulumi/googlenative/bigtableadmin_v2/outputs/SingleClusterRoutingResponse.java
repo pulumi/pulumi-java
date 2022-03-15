@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SingleClusterRoutingResponse {
     /**
      * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
@@ -21,10 +21,10 @@ public final class SingleClusterRoutingResponse {
      */
     private final String clusterId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SingleClusterRoutingResponse(
-        @OutputCustomType.Parameter("allowTransactionalWrites") Boolean allowTransactionalWrites,
-        @OutputCustomType.Parameter("clusterId") String clusterId) {
+        @CustomType.Parameter("allowTransactionalWrites") Boolean allowTransactionalWrites,
+        @CustomType.Parameter("clusterId") String clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         this.clusterId = clusterId;
     }

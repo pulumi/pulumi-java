@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionRegisteredFeaturesResponse {
     private final @Nullable String name;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionRegisteredFeaturesResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.name = name;
         this.state = state;
     }

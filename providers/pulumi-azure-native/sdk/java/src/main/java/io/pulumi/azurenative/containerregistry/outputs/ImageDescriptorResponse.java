@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageDescriptorResponse {
     /**
      * The sha256-based digest of the image manifest.
@@ -32,12 +32,12 @@ public final class ImageDescriptorResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageDescriptorResponse(
-        @OutputCustomType.Parameter("digest") @Nullable String digest,
-        @OutputCustomType.Parameter("registry") @Nullable String registry,
-        @OutputCustomType.Parameter("repository") @Nullable String repository,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("digest") @Nullable String digest,
+        @CustomType.Parameter("registry") @Nullable String registry,
+        @CustomType.Parameter("repository") @Nullable String repository,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.digest = digest;
         this.registry = registry;
         this.repository = repository;

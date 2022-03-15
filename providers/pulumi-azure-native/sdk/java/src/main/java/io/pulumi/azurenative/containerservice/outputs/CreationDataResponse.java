@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CreationDataResponse {
     /**
      * This is the ARM ID of the source object to be used to create the target object.
@@ -17,8 +17,8 @@ public final class CreationDataResponse {
      */
     private final @Nullable String sourceResourceId;
 
-    @OutputCustomType.Constructor
-    private CreationDataResponse(@OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
+    @CustomType.Constructor
+    private CreationDataResponse(@CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
         this.sourceResourceId = sourceResourceId;
     }
 

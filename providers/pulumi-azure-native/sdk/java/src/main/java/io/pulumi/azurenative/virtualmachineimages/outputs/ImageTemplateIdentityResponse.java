@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateIdentityResponse {
     /**
      * The type of identity used for the image template. The type 'None' will remove any identities from the image template.
@@ -24,10 +24,10 @@ public final class ImageTemplateIdentityResponse {
      */
     private final @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateIdentityResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,ImageTemplateIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -30,7 +30,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
      * 
      */
-    @InputImport(name="contentHandlingStrategy")
+    @Import(name="contentHandlingStrategy")
       private final @Nullable Output<String> contentHandlingStrategy;
 
     public Output<String> getContentHandlingStrategy() {
@@ -41,7 +41,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The identifier of the `aws.apigatewayv2.Integration`.
      * 
      */
-    @InputImport(name="integrationId", required=true)
+    @Import(name="integrationId", required=true)
       private final Output<String> integrationId;
 
     public Output<String> getIntegrationId() {
@@ -52,7 +52,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The integration response key.
      * 
      */
-    @InputImport(name="integrationResponseKey", required=true)
+    @Import(name="integrationResponseKey", required=true)
       private final Output<String> integrationResponseKey;
 
     public Output<String> getIntegrationResponseKey() {
@@ -63,7 +63,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
      * 
      */
-    @InputImport(name="responseTemplates")
+    @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
     public Output<Map<String,String>> getResponseTemplates() {
@@ -74,7 +74,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
      * 
      */
-    @InputImport(name="templateSelectionExpression")
+    @Import(name="templateSelectionExpression")
       private final @Nullable Output<String> templateSelectionExpression;
 
     public Output<String> getTemplateSelectionExpression() {

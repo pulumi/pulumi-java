@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.outputs.DistributionOriginCustomHeader;
 import io.pulumi.aws.cloudfront.outputs.DistributionOriginCustomOriginConfig;
 import io.pulumi.aws.cloudfront.outputs.DistributionOriginOriginShield;
 import io.pulumi.aws.cloudfront.outputs.DistributionOriginS3OriginConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOrigin {
     /**
      * The number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.
@@ -73,17 +73,17 @@ public final class DistributionOrigin {
      */
     private final @Nullable DistributionOriginS3OriginConfig s3OriginConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOrigin(
-        @OutputCustomType.Parameter("connectionAttempts") @Nullable Integer connectionAttempts,
-        @OutputCustomType.Parameter("connectionTimeout") @Nullable Integer connectionTimeout,
-        @OutputCustomType.Parameter("customHeaders") @Nullable List<DistributionOriginCustomHeader> customHeaders,
-        @OutputCustomType.Parameter("customOriginConfig") @Nullable DistributionOriginCustomOriginConfig customOriginConfig,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("originId") String originId,
-        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
-        @OutputCustomType.Parameter("originShield") @Nullable DistributionOriginOriginShield originShield,
-        @OutputCustomType.Parameter("s3OriginConfig") @Nullable DistributionOriginS3OriginConfig s3OriginConfig) {
+        @CustomType.Parameter("connectionAttempts") @Nullable Integer connectionAttempts,
+        @CustomType.Parameter("connectionTimeout") @Nullable Integer connectionTimeout,
+        @CustomType.Parameter("customHeaders") @Nullable List<DistributionOriginCustomHeader> customHeaders,
+        @CustomType.Parameter("customOriginConfig") @Nullable DistributionOriginCustomOriginConfig customOriginConfig,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("originId") String originId,
+        @CustomType.Parameter("originPath") @Nullable String originPath,
+        @CustomType.Parameter("originShield") @Nullable DistributionOriginOriginShield originShield,
+        @CustomType.Parameter("s3OriginConfig") @Nullable DistributionOriginS3OriginConfig s3OriginConfig) {
         this.connectionAttempts = connectionAttempts;
         this.connectionTimeout = connectionTimeout;
         this.customHeaders = customHeaders;

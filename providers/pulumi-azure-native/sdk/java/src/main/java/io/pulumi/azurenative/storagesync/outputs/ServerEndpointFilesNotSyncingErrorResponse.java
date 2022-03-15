@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointFilesNotSyncingErrorResponse {
     /**
      * Error code (HResult)
@@ -26,11 +26,11 @@ public final class ServerEndpointFilesNotSyncingErrorResponse {
      */
     private final Double transientCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointFilesNotSyncingErrorResponse(
-        @OutputCustomType.Parameter("errorCode") Integer errorCode,
-        @OutputCustomType.Parameter("persistentCount") Double persistentCount,
-        @OutputCustomType.Parameter("transientCount") Double transientCount) {
+        @CustomType.Parameter("errorCode") Integer errorCode,
+        @CustomType.Parameter("persistentCount") Double persistentCount,
+        @CustomType.Parameter("transientCount") Double transientCount) {
         this.errorCode = errorCode;
         this.persistentCount = persistentCount;
         this.transientCount = transientCount;

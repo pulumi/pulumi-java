@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the `image_id` argument in the `compute_resources` block.
      * 
      */
-    @InputImport(name="imageIdOverride")
+    @Import(name="imageIdOverride")
       private final @Nullable Output<String> imageIdOverride;
 
     public Output<String> getImageIdOverride() {
@@ -29,7 +29,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * The image type to match with the instance type to select an AMI. If the `image_id_override` parameter isn't specified, then a recent [Amazon ECS-optimized Amazon Linux 2 AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) (`ECS_AL2`) is used.
      * 
      */
-    @InputImport(name="imageType")
+    @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
     public Output<String> getImageType() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
      * 
      */
-    @InputImport(name="customEmails")
+    @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
 
     public Output<List<String>> getCustomEmails() {
@@ -35,7 +35,7 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * a value indicating whether to send email to subscription administrator.
      * 
      */
-    @InputImport(name="sendToSubscriptionAdministrator")
+    @Import(name="sendToSubscriptionAdministrator")
       private final @Nullable Output<Boolean> sendToSubscriptionAdministrator;
 
     public Output<Boolean> getSendToSubscriptionAdministrator() {
@@ -46,7 +46,7 @@ public final class EmailNotificationArgs extends io.pulumi.resources.ResourceArg
      * a value indicating whether to send email to subscription co-administrators.
      * 
      */
-    @InputImport(name="sendToSubscriptionCoAdministrators")
+    @Import(name="sendToSubscriptionCoAdministrators")
       private final @Nullable Output<Boolean> sendToSubscriptionCoAdministrators;
 
     public Output<Boolean> getSendToSubscriptionCoAdministrators() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryTableSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BusinessContextResponse;
@@ -20,7 +20,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEntryResult {
     /**
      * Specification for a group of BigQuery tables with the `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding).
@@ -133,30 +133,30 @@ public final class GetEntryResult {
      */
     private final String userSpecifiedType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntryResult(
-        @OutputCustomType.Parameter("bigqueryDateShardedSpec") GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec,
-        @OutputCustomType.Parameter("bigqueryTableSpec") GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec,
-        @OutputCustomType.Parameter("businessContext") GoogleCloudDatacatalogV1BusinessContextResponse businessContext,
-        @OutputCustomType.Parameter("dataSource") GoogleCloudDatacatalogV1DataSourceResponse dataSource,
-        @OutputCustomType.Parameter("dataSourceConnectionSpec") GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse dataSourceConnectionSpec,
-        @OutputCustomType.Parameter("databaseTableSpec") GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("fullyQualifiedName") String fullyQualifiedName,
-        @OutputCustomType.Parameter("gcsFilesetSpec") GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec,
-        @OutputCustomType.Parameter("integratedSystem") String integratedSystem,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("linkedResource") String linkedResource,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("personalDetails") GoogleCloudDatacatalogV1PersonalDetailsResponse personalDetails,
-        @OutputCustomType.Parameter("routineSpec") GoogleCloudDatacatalogV1RoutineSpecResponse routineSpec,
-        @OutputCustomType.Parameter("schema") GoogleCloudDatacatalogV1SchemaResponse schema,
-        @OutputCustomType.Parameter("sourceSystemTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse sourceSystemTimestamps,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("usageSignal") GoogleCloudDatacatalogV1UsageSignalResponse usageSignal,
-        @OutputCustomType.Parameter("userSpecifiedSystem") String userSpecifiedSystem,
-        @OutputCustomType.Parameter("userSpecifiedType") String userSpecifiedType) {
+        @CustomType.Parameter("bigqueryDateShardedSpec") GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec,
+        @CustomType.Parameter("bigqueryTableSpec") GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec,
+        @CustomType.Parameter("businessContext") GoogleCloudDatacatalogV1BusinessContextResponse businessContext,
+        @CustomType.Parameter("dataSource") GoogleCloudDatacatalogV1DataSourceResponse dataSource,
+        @CustomType.Parameter("dataSourceConnectionSpec") GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse dataSourceConnectionSpec,
+        @CustomType.Parameter("databaseTableSpec") GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("fullyQualifiedName") String fullyQualifiedName,
+        @CustomType.Parameter("gcsFilesetSpec") GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec,
+        @CustomType.Parameter("integratedSystem") String integratedSystem,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("linkedResource") String linkedResource,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("personalDetails") GoogleCloudDatacatalogV1PersonalDetailsResponse personalDetails,
+        @CustomType.Parameter("routineSpec") GoogleCloudDatacatalogV1RoutineSpecResponse routineSpec,
+        @CustomType.Parameter("schema") GoogleCloudDatacatalogV1SchemaResponse schema,
+        @CustomType.Parameter("sourceSystemTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse sourceSystemTimestamps,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("usageSignal") GoogleCloudDatacatalogV1UsageSignalResponse usageSignal,
+        @CustomType.Parameter("userSpecifiedSystem") String userSpecifiedSystem,
+        @CustomType.Parameter("userSpecifiedType") String userSpecifiedType) {
         this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
         this.bigqueryTableSpec = bigqueryTableSpec;
         this.businessContext = businessContext;

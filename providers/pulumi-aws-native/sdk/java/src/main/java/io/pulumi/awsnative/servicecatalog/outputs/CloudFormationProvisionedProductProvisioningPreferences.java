@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalog.outputs;
 
 import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudFormationProvisionedProductProvisioningPreferences {
     private final @Nullable List<String> stackSetAccounts;
     private final @Nullable Integer stackSetFailureToleranceCount;
@@ -22,15 +22,15 @@ public final class CloudFormationProvisionedProductProvisioningPreferences {
     private final @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType;
     private final @Nullable List<String> stackSetRegions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudFormationProvisionedProductProvisioningPreferences(
-        @OutputCustomType.Parameter("stackSetAccounts") @Nullable List<String> stackSetAccounts,
-        @OutputCustomType.Parameter("stackSetFailureToleranceCount") @Nullable Integer stackSetFailureToleranceCount,
-        @OutputCustomType.Parameter("stackSetFailureTolerancePercentage") @Nullable Integer stackSetFailureTolerancePercentage,
-        @OutputCustomType.Parameter("stackSetMaxConcurrencyCount") @Nullable Integer stackSetMaxConcurrencyCount,
-        @OutputCustomType.Parameter("stackSetMaxConcurrencyPercentage") @Nullable Integer stackSetMaxConcurrencyPercentage,
-        @OutputCustomType.Parameter("stackSetOperationType") @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType,
-        @OutputCustomType.Parameter("stackSetRegions") @Nullable List<String> stackSetRegions) {
+        @CustomType.Parameter("stackSetAccounts") @Nullable List<String> stackSetAccounts,
+        @CustomType.Parameter("stackSetFailureToleranceCount") @Nullable Integer stackSetFailureToleranceCount,
+        @CustomType.Parameter("stackSetFailureTolerancePercentage") @Nullable Integer stackSetFailureTolerancePercentage,
+        @CustomType.Parameter("stackSetMaxConcurrencyCount") @Nullable Integer stackSetMaxConcurrencyCount,
+        @CustomType.Parameter("stackSetMaxConcurrencyPercentage") @Nullable Integer stackSetMaxConcurrencyPercentage,
+        @CustomType.Parameter("stackSetOperationType") @Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType,
+        @CustomType.Parameter("stackSetRegions") @Nullable List<String> stackSetRegions) {
         this.stackSetAccounts = stackSetAccounts;
         this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
         this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;

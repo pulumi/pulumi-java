@@ -4,21 +4,21 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.SkuCapabilityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuZoneDetailResponse {
     private final @Nullable List<SkuCapabilityResponse> capabilities;
     private final @Nullable List<String> name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuZoneDetailResponse(
-        @OutputCustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
-        @OutputCustomType.Parameter("name") @Nullable List<String> name) {
+        @CustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
+        @CustomType.Parameter("name") @Nullable List<String> name) {
         this.capabilities = capabilities;
         this.name = name;
     }

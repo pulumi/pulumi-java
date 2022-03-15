@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerAccessLogsGetArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.LoadBalancerSubnetMappingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * An Access Logs block. Access Logs documented below.
      * 
      */
-    @InputImport(name="accessLogs")
+    @Import(name="accessLogs")
       private final @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
 
     public Output<LoadBalancerAccessLogsGetArgs> getAccessLogs() {
@@ -35,7 +35,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the load balancer (matches `id`).
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -46,7 +46,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The ARN suffix for use with CloudWatch Metrics.
      * 
      */
-    @InputImport(name="arnSuffix")
+    @Import(name="arnSuffix")
       private final @Nullable Output<String> arnSuffix;
 
     public Output<String> getArnSuffix() {
@@ -57,7 +57,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The ID of the customer owned ipv4 pool to use for this load balancer.
      * 
      */
-    @InputImport(name="customerOwnedIpv4Pool")
+    @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
     public Output<String> getCustomerOwnedIpv4Pool() {
@@ -68,7 +68,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    @InputImport(name="desyncMitigationMode")
+    @Import(name="desyncMitigationMode")
       private final @Nullable Output<String> desyncMitigationMode;
 
     public Output<String> getDesyncMitigationMode() {
@@ -79,7 +79,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The DNS name of the load balancer.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -90,7 +90,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
      * 
      */
-    @InputImport(name="dropInvalidHeaderFields")
+    @Import(name="dropInvalidHeaderFields")
       private final @Nullable Output<Boolean> dropInvalidHeaderFields;
 
     public Output<Boolean> getDropInvalidHeaderFields() {
@@ -102,7 +102,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * This is a `network` load balancer feature. Defaults to `false`.
      * 
      */
-    @InputImport(name="enableCrossZoneLoadBalancing")
+    @Import(name="enableCrossZoneLoadBalancing")
       private final @Nullable Output<Boolean> enableCrossZoneLoadBalancing;
 
     public Output<Boolean> getEnableCrossZoneLoadBalancing() {
@@ -114,7 +114,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
      * 
      */
-    @InputImport(name="enableDeletionProtection")
+    @Import(name="enableDeletionProtection")
       private final @Nullable Output<Boolean> enableDeletionProtection;
 
     public Output<Boolean> getEnableDeletionProtection() {
@@ -125,7 +125,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
      * 
      */
-    @InputImport(name="enableHttp2")
+    @Import(name="enableHttp2")
       private final @Nullable Output<Boolean> enableHttp2;
 
     public Output<Boolean> getEnableHttp2() {
@@ -136,7 +136,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
      * 
      */
-    @InputImport(name="enableWafFailOpen")
+    @Import(name="enableWafFailOpen")
       private final @Nullable Output<Boolean> enableWafFailOpen;
 
     public Output<Boolean> getEnableWafFailOpen() {
@@ -147,7 +147,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
      * 
      */
-    @InputImport(name="idleTimeout")
+    @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
     public Output<Integer> getIdleTimeout() {
@@ -158,7 +158,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * If true, the LB will be internal.
      * 
      */
-    @InputImport(name="internal")
+    @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
     public Output<Boolean> getInternal() {
@@ -169,7 +169,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
      * 
      */
-    @InputImport(name="ipAddressType")
+    @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
     public Output<String> getIpAddressType() {
@@ -180,7 +180,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
      * 
      */
-    @InputImport(name="loadBalancerType")
+    @Import(name="loadBalancerType")
       private final @Nullable Output<String> loadBalancerType;
 
     public Output<String> getLoadBalancerType() {
@@ -193,7 +193,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * this provider will autogenerate a name beginning with `tf-lb`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -204,7 +204,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -215,7 +215,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -226,7 +226,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A subnet mapping block as documented below.
      * 
      */
-    @InputImport(name="subnetMappings")
+    @Import(name="subnetMappings")
       private final @Nullable Output<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings;
 
     public Output<List<LoadBalancerSubnetMappingGetArgs>> getSubnetMappings() {
@@ -239,7 +239,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * for load balancers of type `network` will force a recreation of the resource.
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {
@@ -250,7 +250,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -261,14 +261,14 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -280,7 +280,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
      * 
      */
-    @InputImport(name="zoneId")
+    @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
     public Output<String> getZoneId() {

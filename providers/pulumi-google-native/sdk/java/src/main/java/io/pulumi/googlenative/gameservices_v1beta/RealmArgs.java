@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
      * Human readable description of the realm.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
      * ETag of the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -41,14 +41,14 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this realm. Each label is a key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -59,21 +59,21 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the realm, in the following form: `projects/{project}/locations/{location}/realms/{realm}`. For example, `projects/my-project/locations/{location}/realms/my-realm`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="realmId", required=true)
+    @Import(name="realmId", required=true)
       private final Output<String> realmId;
 
     public Output<String> getRealmId() {
@@ -84,7 +84,7 @@ public final class RealmArgs extends io.pulumi.resources.ResourceArgs {
      * Time zone where all policies targeting this realm are evaluated. The value of this field must be from the IANA time zone database: https://www.iana.org/time-zones.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {

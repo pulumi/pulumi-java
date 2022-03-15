@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * The type of copy behavior for copy sink.
      * 
      */
-    @InputImport(name="copyBehavior")
+    @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
     public Optional<Object> getCopyBehavior() {
@@ -34,7 +34,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -45,7 +45,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -56,7 +56,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * Specifies the timeout for writing each chunk to SFTP server. Default value: 01:00:00 (one hour). Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="operationTimeout")
+    @Import(name="operationTimeout")
       private final @Nullable Object operationTimeout;
 
     public Optional<Object> getOperationTimeout() {
@@ -68,7 +68,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'SftpWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -79,7 +79,7 @@ public final class SftpWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * Upload to temporary file(s) and rename. Disable this option if your SFTP server doesn't support rename operation. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="useTempFileRename")
+    @Import(name="useTempFileRename")
       private final @Nullable Object useTempFileRename;
 
     public Optional<Object> getUseTempFileRename() {

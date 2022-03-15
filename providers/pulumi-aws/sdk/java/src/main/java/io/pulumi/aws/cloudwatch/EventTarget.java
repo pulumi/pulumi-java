@@ -17,7 +17,7 @@ import io.pulumi.aws.cloudwatch.outputs.EventTargetRetryPolicy;
 import io.pulumi.aws.cloudwatch.outputs.EventTargetRunCommandTarget;
 import io.pulumi.aws.cloudwatch.outputs.EventTargetSqsTarget;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -56,7 +56,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * - ARN of the SQS queue specified as the target for the dead-letter queue.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -70,7 +70,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="batchTarget", type=EventTargetBatchTarget.class, parameters={})
+    @Export(name="batchTarget", type=EventTargetBatchTarget.class, parameters={})
     private Output</* @Nullable */ EventTargetBatchTarget> batchTarget;
 
     /**
@@ -84,7 +84,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="deadLetterConfig", type=EventTargetDeadLetterConfig.class, parameters={})
+    @Export(name="deadLetterConfig", type=EventTargetDeadLetterConfig.class, parameters={})
     private Output</* @Nullable */ EventTargetDeadLetterConfig> deadLetterConfig;
 
     /**
@@ -98,7 +98,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="ecsTarget", type=EventTargetEcsTarget.class, parameters={})
+    @Export(name="ecsTarget", type=EventTargetEcsTarget.class, parameters={})
     private Output</* @Nullable */ EventTargetEcsTarget> ecsTarget;
 
     /**
@@ -112,7 +112,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * The event bus to associate with the rule. If you omit this, the `default` event bus is used.
      * 
      */
-    @OutputExport(name="eventBusName", type=String.class, parameters={})
+    @Export(name="eventBusName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventBusName;
 
     /**
@@ -126,7 +126,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
      * 
      */
-    @OutputExport(name="httpTarget", type=EventTargetHttpTarget.class, parameters={})
+    @Export(name="httpTarget", type=EventTargetHttpTarget.class, parameters={})
     private Output</* @Nullable */ EventTargetHttpTarget> httpTarget;
 
     /**
@@ -140,7 +140,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
      * 
      */
-    @OutputExport(name="input", type=String.class, parameters={})
+    @Export(name="input", type=String.class, parameters={})
     private Output</* @Nullable */ String> input;
 
     /**
@@ -154,7 +154,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
      * 
      */
-    @OutputExport(name="inputPath", type=String.class, parameters={})
+    @Export(name="inputPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputPath;
 
     /**
@@ -168,7 +168,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
      * 
      */
-    @OutputExport(name="inputTransformer", type=EventTargetInputTransformer.class, parameters={})
+    @Export(name="inputTransformer", type=EventTargetInputTransformer.class, parameters={})
     private Output</* @Nullable */ EventTargetInputTransformer> inputTransformer;
 
     /**
@@ -182,7 +182,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="kinesisTarget", type=EventTargetKinesisTarget.class, parameters={})
+    @Export(name="kinesisTarget", type=EventTargetKinesisTarget.class, parameters={})
     private Output</* @Nullable */ EventTargetKinesisTarget> kinesisTarget;
 
     /**
@@ -196,7 +196,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="redshiftTarget", type=EventTargetRedshiftTarget.class, parameters={})
+    @Export(name="redshiftTarget", type=EventTargetRedshiftTarget.class, parameters={})
     private Output</* @Nullable */ EventTargetRedshiftTarget> redshiftTarget;
 
     /**
@@ -210,7 +210,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="retryPolicy", type=EventTargetRetryPolicy.class, parameters={})
+    @Export(name="retryPolicy", type=EventTargetRetryPolicy.class, parameters={})
     private Output</* @Nullable */ EventTargetRetryPolicy> retryPolicy;
 
     /**
@@ -224,7 +224,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used or target in `arn` is EC2 instance, Kinesis data stream, Step Functions state machine, or Event Bus in different account or region.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**
@@ -238,7 +238,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * The name of the rule you want to add targets to.
      * 
      */
-    @OutputExport(name="rule", type=String.class, parameters={})
+    @Export(name="rule", type=String.class, parameters={})
     private Output<String> rule;
 
     /**
@@ -252,7 +252,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
      * 
      */
-    @OutputExport(name="runCommandTargets", type=List.class, parameters={EventTargetRunCommandTarget.class})
+    @Export(name="runCommandTargets", type=List.class, parameters={EventTargetRunCommandTarget.class})
     private Output</* @Nullable */ List<EventTargetRunCommandTarget>> runCommandTargets;
 
     /**
@@ -266,7 +266,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @OutputExport(name="sqsTarget", type=EventTargetSqsTarget.class, parameters={})
+    @Export(name="sqsTarget", type=EventTargetSqsTarget.class, parameters={})
     private Output</* @Nullable */ EventTargetSqsTarget> sqsTarget;
 
     /**
@@ -280,7 +280,7 @@ public class EventTarget extends io.pulumi.resources.CustomResource {
      * The unique target assignment ID.  If missing, will generate a random, unique id.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
     public Output<ResourceIdentityType> getType() {
@@ -36,7 +36,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

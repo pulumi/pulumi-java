@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookReceiverResponse {
     /**
      * Indicates the identifier uri for aad auth.
@@ -48,15 +48,15 @@ public final class WebhookReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookReceiverResponse(
-        @OutputCustomType.Parameter("identifierUri") @Nullable String identifierUri,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("serviceUri") String serviceUri,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("useAadAuth") @Nullable Boolean useAadAuth,
-        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
+        @CustomType.Parameter("identifierUri") @Nullable String identifierUri,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("serviceUri") String serviceUri,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("useAadAuth") @Nullable Boolean useAadAuth,
+        @CustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.identifierUri = identifierUri;
         this.name = name;
         this.objectId = objectId;

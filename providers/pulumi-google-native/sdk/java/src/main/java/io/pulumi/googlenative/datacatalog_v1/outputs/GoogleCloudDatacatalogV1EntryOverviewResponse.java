@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
     /**
      * Entry overview with support for rich text. The overview must only contain Unicode characters, and should be formatted using HTML. The maximum length is 10 MiB as this value holds HTML descriptions including encoded images. The maximum length of the text without images is 100 KiB.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
      */
     private final String overview;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatacatalogV1EntryOverviewResponse(@OutputCustomType.Parameter("overview") String overview) {
+    @CustomType.Constructor
+    private GoogleCloudDatacatalogV1EntryOverviewResponse(@CustomType.Parameter("overview") String overview) {
         this.overview = overview;
     }
 

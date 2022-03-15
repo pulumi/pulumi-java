@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DropInfoResponse {
     /**
      * Cause that the packet is dropped.
@@ -20,10 +20,10 @@ public final class DropInfoResponse {
      */
     private final String resourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DropInfoResponse(
-        @OutputCustomType.Parameter("cause") String cause,
-        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
+        @CustomType.Parameter("cause") String cause,
+        @CustomType.Parameter("resourceUri") String resourceUri) {
         this.cause = cause;
         this.resourceUri = resourceUri;
     }

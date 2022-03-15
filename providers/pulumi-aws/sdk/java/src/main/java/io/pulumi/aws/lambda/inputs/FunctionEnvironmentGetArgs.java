@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FunctionEnvironmentGetArgs extends io.pulumi.resources.Resour
      * Map of environment variables that are accessible from the function code during execution.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupPlanLifecycleResourceType {
     private final @Nullable Double deleteAfterDays;
     private final @Nullable Double moveToColdStorageAfterDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupPlanLifecycleResourceType(
-        @OutputCustomType.Parameter("deleteAfterDays") @Nullable Double deleteAfterDays,
-        @OutputCustomType.Parameter("moveToColdStorageAfterDays") @Nullable Double moveToColdStorageAfterDays) {
+        @CustomType.Parameter("deleteAfterDays") @Nullable Double deleteAfterDays,
+        @CustomType.Parameter("moveToColdStorageAfterDays") @Nullable Double moveToColdStorageAfterDays) {
         this.deleteAfterDays = deleteAfterDays;
         this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
     }

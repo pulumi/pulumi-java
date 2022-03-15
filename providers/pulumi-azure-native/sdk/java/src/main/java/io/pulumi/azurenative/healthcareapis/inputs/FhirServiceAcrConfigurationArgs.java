@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FhirServiceAcrConfigurationArgs extends io.pulumi.resources.R
      * The list of the Azure container registry login servers.
      * 
      */
-    @InputImport(name="loginServers")
+    @Import(name="loginServers")
       private final @Nullable Output<List<String>> loginServers;
 
     public Output<List<String>> getLoginServers() {

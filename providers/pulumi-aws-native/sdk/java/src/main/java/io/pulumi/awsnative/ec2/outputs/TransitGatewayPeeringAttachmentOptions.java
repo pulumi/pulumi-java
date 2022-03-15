@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransitGatewayPeeringAttachmentOptions {
     /**
      * Whether to enable dynamic routing. (enable/disable)
@@ -17,8 +17,8 @@ public final class TransitGatewayPeeringAttachmentOptions {
      */
     private final @Nullable String dynamicRouting;
 
-    @OutputCustomType.Constructor
-    private TransitGatewayPeeringAttachmentOptions(@OutputCustomType.Parameter("dynamicRouting") @Nullable String dynamicRouting) {
+    @CustomType.Constructor
+    private TransitGatewayPeeringAttachmentOptions(@CustomType.Parameter("dynamicRouting") @Nullable String dynamicRouting) {
         this.dynamicRouting = dynamicRouting;
     }
 

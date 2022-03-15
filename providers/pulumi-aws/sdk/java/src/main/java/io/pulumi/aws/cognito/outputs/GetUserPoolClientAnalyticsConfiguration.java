@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserPoolClientAnalyticsConfiguration {
     /**
      * (Optional) Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
@@ -33,13 +33,13 @@ public final class GetUserPoolClientAnalyticsConfiguration {
     private final String roleArn;
     private final Boolean userDataShared;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserPoolClientAnalyticsConfiguration(
-        @OutputCustomType.Parameter("applicationArn") String applicationArn,
-        @OutputCustomType.Parameter("applicationId") String applicationId,
-        @OutputCustomType.Parameter("externalId") String externalId,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("userDataShared") Boolean userDataShared) {
+        @CustomType.Parameter("applicationArn") String applicationArn,
+        @CustomType.Parameter("applicationId") String applicationId,
+        @CustomType.Parameter("externalId") String externalId,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("userDataShared") Boolean userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;

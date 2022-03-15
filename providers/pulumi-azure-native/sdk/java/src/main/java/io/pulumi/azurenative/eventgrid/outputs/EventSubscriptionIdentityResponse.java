@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSubscriptionIdentityResponse {
     /**
      * The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identity.
@@ -22,10 +22,10 @@ public final class EventSubscriptionIdentityResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventSubscriptionIdentityResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.type = type;
         this.userAssignedIdentity = userAssignedIdentity;
     }

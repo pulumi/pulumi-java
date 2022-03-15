@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_Trial_ParameterResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__MeasurementResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTrialResult {
     /**
      * The identifier of the client that originally requested this trial.
@@ -64,18 +64,18 @@ public final class GetTrialResult {
      */
     private final Boolean trialInfeasible;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTrialResult(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("finalMeasurement") GoogleCloudMlV1__MeasurementResponse finalMeasurement,
-        @OutputCustomType.Parameter("infeasibleReason") String infeasibleReason,
-        @OutputCustomType.Parameter("measurements") List<GoogleCloudMlV1__MeasurementResponse> measurements,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") List<GoogleCloudMlV1_Trial_ParameterResponse> parameters,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trialInfeasible") Boolean trialInfeasible) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("finalMeasurement") GoogleCloudMlV1__MeasurementResponse finalMeasurement,
+        @CustomType.Parameter("infeasibleReason") String infeasibleReason,
+        @CustomType.Parameter("measurements") List<GoogleCloudMlV1__MeasurementResponse> measurements,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") List<GoogleCloudMlV1_Trial_ParameterResponse> parameters,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trialInfeasible") Boolean trialInfeasible) {
         this.clientId = clientId;
         this.endTime = endTime;
         this.finalMeasurement = finalMeasurement;

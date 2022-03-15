@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.inputs.CatalogTablePartitionKeyArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableTargetTableArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the Data Catalog in which the table resides.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -36,7 +36,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the catalog database that contains the target table.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -47,7 +47,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the table.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the target table.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Owner of the table.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -80,7 +80,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -91,7 +91,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
      * 
      */
-    @InputImport(name="partitionIndices")
+    @Import(name="partitionIndices")
       private final @Nullable Output<List<CatalogTablePartitionIndexArgs>> partitionIndices;
 
     public Output<List<CatalogTablePartitionIndexArgs>> getPartitionIndices() {
@@ -102,7 +102,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
      * 
      */
-    @InputImport(name="partitionKeys")
+    @Import(name="partitionKeys")
       private final @Nullable Output<List<CatalogTablePartitionKeyArgs>> partitionKeys;
 
     public Output<List<CatalogTablePartitionKeyArgs>> getPartitionKeys() {
@@ -113,7 +113,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Retention time for this table.
      * 
      */
-    @InputImport(name="retention")
+    @Import(name="retention")
       private final @Nullable Output<Integer> retention;
 
     public Output<Integer> getRetention() {
@@ -124,7 +124,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
      * 
      */
-    @InputImport(name="storageDescriptor")
+    @Import(name="storageDescriptor")
       private final @Nullable Output<CatalogTableStorageDescriptorArgs> storageDescriptor;
 
     public Output<CatalogTableStorageDescriptorArgs> getStorageDescriptor() {
@@ -135,7 +135,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
      * 
      */
-    @InputImport(name="tableType")
+    @Import(name="tableType")
       private final @Nullable Output<String> tableType;
 
     public Output<String> getTableType() {
@@ -146,7 +146,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block of a target table for resource linking. See `target_table` below.
      * 
      */
-    @InputImport(name="targetTable")
+    @Import(name="targetTable")
       private final @Nullable Output<CatalogTableTargetTableArgs> targetTable;
 
     public Output<CatalogTableTargetTableArgs> getTargetTable() {
@@ -157,7 +157,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * If the table is a view, the expanded text of the view; otherwise null.
      * 
      */
-    @InputImport(name="viewExpandedText")
+    @Import(name="viewExpandedText")
       private final @Nullable Output<String> viewExpandedText;
 
     public Output<String> getViewExpandedText() {
@@ -168,7 +168,7 @@ public final class CatalogTableArgs extends io.pulumi.resources.ResourceArgs {
      * If the table is a view, the original text of the view; otherwise null.
      * 
      */
-    @InputImport(name="viewOriginalText")
+    @Import(name="viewOriginalText")
       private final @Nullable Output<String> viewOriginalText;
 
     public Output<String> getViewOriginalText() {

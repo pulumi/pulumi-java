@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDeleteMarkerReplicationStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class BucketDeleteMarkerReplication extends io.pulumi.resources.Inv
 
     public static final BucketDeleteMarkerReplication Empty = new BucketDeleteMarkerReplication();
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable BucketDeleteMarkerReplicationStatus status;
 
     public Optional<BucketDeleteMarkerReplicationStatus> getStatus() {

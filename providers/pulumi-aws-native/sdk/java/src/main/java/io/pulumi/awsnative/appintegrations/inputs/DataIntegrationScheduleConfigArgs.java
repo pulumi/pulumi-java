@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
      * 
      */
-    @InputImport(name="firstExecutionFrom", required=true)
+    @Import(name="firstExecutionFrom", required=true)
       private final Output<String> firstExecutionFrom;
 
     public Output<String> getFirstExecutionFrom() {
@@ -28,7 +28,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * The name of the object to pull from the data source.
      * 
      */
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {
@@ -39,7 +39,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * How often the data should be pulled from data source.
      * 
      */
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {

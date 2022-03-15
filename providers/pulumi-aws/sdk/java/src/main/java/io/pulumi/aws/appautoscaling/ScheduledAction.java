@@ -8,7 +8,7 @@ import io.pulumi.aws.appautoscaling.ScheduledActionArgs;
 import io.pulumi.aws.appautoscaling.inputs.ScheduledActionState;
 import io.pulumi.aws.appautoscaling.outputs.ScheduledActionScalableTargetAction;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the scheduled action.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The date and time for the scheduled action to end in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
@@ -53,7 +53,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The name of the scheduled action.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The identifier of the resource associated with the scheduled action. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ResourceId)
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -81,7 +81,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The scalable dimension. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ScalableDimension) Example: ecs:service:DesiredCount
      * 
      */
-    @OutputExport(name="scalableDimension", type=String.class, parameters={})
+    @Export(name="scalableDimension", type=String.class, parameters={})
     private Output<String> scalableDimension;
 
     /**
@@ -95,7 +95,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The new minimum and maximum capacity. You can set both values or just one. See below
      * 
      */
-    @OutputExport(name="scalableTargetAction", type=ScheduledActionScalableTargetAction.class, parameters={})
+    @Export(name="scalableTargetAction", type=ScheduledActionScalableTargetAction.class, parameters={})
     private Output<ScheduledActionScalableTargetAction> scalableTargetAction;
 
     /**
@@ -109,7 +109,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The schedule for this action. The following formats are supported: At expressions - at(yyyy-mm-ddThh:mm:ss), Rate expressions - rate(valueunit), Cron expressions - cron(fields). Times for at expressions and cron expressions are evaluated using the time zone configured in `timezone`. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-Schedule)
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
     /**
@@ -123,7 +123,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The namespace of the AWS service. Documentation can be found in the parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_PutScheduledAction.html#ApplicationAutoScaling-PutScheduledAction-request-ServiceNamespace) Example: ecs
      * 
      */
-    @OutputExport(name="serviceNamespace", type=String.class, parameters={})
+    @Export(name="serviceNamespace", type=String.class, parameters={})
     private Output<String> serviceNamespace;
 
     /**
@@ -137,7 +137,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The date and time for the scheduled action to start in RFC 3339 format. The timezone is not affected by the setting of `timezone`.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
@@ -151,7 +151,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The time zone used when setting a scheduled action by using an at or cron expression. Does not affect timezone for `start_time` and `end_time`. Valid values are the [canonical names of the IANA time zones supported by Joda-Time](https://www.joda.org/joda-time/timezones.html), such as `Etc/GMT+9` or `Pacific/Tahiti`. Default is `UTC`.
      * 
      */
-    @OutputExport(name="timezone", type=String.class, parameters={})
+    @Export(name="timezone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timezone;
 
     /**

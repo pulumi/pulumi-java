@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RecurrenceScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTriggerRecurrenceResponse {
     /**
      * The end time.
@@ -44,14 +44,14 @@ public final class WorkflowTriggerRecurrenceResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTriggerRecurrenceResponse(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("schedule") @Nullable RecurrenceScheduleResponse schedule,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("frequency") @Nullable String frequency,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("schedule") @Nullable RecurrenceScheduleResponse schedule,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.endTime = endTime;
         this.frequency = frequency;
         this.interval = interval;

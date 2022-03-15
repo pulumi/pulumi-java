@@ -8,7 +8,7 @@ import io.pulumi.awsnative.athena.DataCatalogArgs;
 import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.outputs.DataCatalogTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -27,7 +27,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * A description of the data catalog to be created.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -41,7 +41,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -55,7 +55,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
      * 
      */
-    @OutputExport(name="parameters", type=Object.class, parameters={})
+    @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
@@ -69,7 +69,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * A list of comma separated tags to add to the data catalog that is created.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DataCatalogTag.class})
+    @Export(name="tags", type=List.class, parameters={DataCatalogTag.class})
     private Output</* @Nullable */ List<DataCatalogTag>> tags;
 
     /**
@@ -83,7 +83,7 @@ public class DataCatalog extends io.pulumi.resources.CustomResource {
      * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
      * 
      */
-    @OutputExport(name="type", type=DataCatalogType.class, parameters={})
+    @Export(name="type", type=DataCatalogType.class, parameters={})
     private Output<DataCatalogType> type;
 
     /**

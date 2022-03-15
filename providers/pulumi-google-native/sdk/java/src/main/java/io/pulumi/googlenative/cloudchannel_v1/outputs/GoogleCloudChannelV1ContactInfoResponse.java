@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1ContactInfoResponse {
     /**
      * The customer account contact's display name, formatted as a combination of the customer's first and last name.
@@ -40,14 +40,14 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1ContactInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("firstName") String firstName,
-        @OutputCustomType.Parameter("lastName") String lastName,
-        @OutputCustomType.Parameter("phone") String phone,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("firstName") String firstName,
+        @CustomType.Parameter("lastName") String lastName,
+        @CustomType.Parameter("phone") String phone,
+        @CustomType.Parameter("title") String title) {
         this.displayName = displayName;
         this.email = email;
         this.firstName = firstName;

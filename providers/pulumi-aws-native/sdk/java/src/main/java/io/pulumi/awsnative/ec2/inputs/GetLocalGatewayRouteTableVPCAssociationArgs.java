@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends io.pulumi
      * The ID of the association.
      * 
      */
-    @InputImport(name="localGatewayRouteTableVpcAssociationId", required=true)
+    @Import(name="localGatewayRouteTableVpcAssociationId", required=true)
       private final String localGatewayRouteTableVpcAssociationId;
 
     public String getLocalGatewayRouteTableVpcAssociationId() {

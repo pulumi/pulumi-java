@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WirelessDeviceOtaaV11 {
     private final String appKey;
     private final String joinEui;
     private final String nwkKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WirelessDeviceOtaaV11(
-        @OutputCustomType.Parameter("appKey") String appKey,
-        @OutputCustomType.Parameter("joinEui") String joinEui,
-        @OutputCustomType.Parameter("nwkKey") String nwkKey) {
+        @CustomType.Parameter("appKey") String appKey,
+        @CustomType.Parameter("joinEui") String joinEui,
+        @CustomType.Parameter("nwkKey") String nwkKey) {
         this.appKey = appKey;
         this.joinEui = joinEui;
         this.nwkKey = nwkKey;

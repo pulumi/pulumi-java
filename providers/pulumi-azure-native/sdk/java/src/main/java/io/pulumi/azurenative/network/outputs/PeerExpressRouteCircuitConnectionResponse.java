@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeerExpressRouteCircuitConnectionResponse {
     /**
      * /29 IP address space to carve out Customer addresses for tunnels.
@@ -68,19 +68,19 @@ public final class PeerExpressRouteCircuitConnectionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeerExpressRouteCircuitConnectionResponse(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("authResourceGuid") @Nullable String authResourceGuid,
-        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
-        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expressRouteCircuitPeering") @Nullable SubResourceResponse expressRouteCircuitPeering,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("peerExpressRouteCircuitPeering") @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("authResourceGuid") @Nullable String authResourceGuid,
+        @CustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
+        @CustomType.Parameter("connectionName") @Nullable String connectionName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expressRouteCircuitPeering") @Nullable SubResourceResponse expressRouteCircuitPeering,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("peerExpressRouteCircuitPeering") @Nullable SubResourceResponse peerExpressRouteCircuitPeering,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.authResourceGuid = authResourceGuid;
         this.circuitConnectionStatus = circuitConnectionStatus;

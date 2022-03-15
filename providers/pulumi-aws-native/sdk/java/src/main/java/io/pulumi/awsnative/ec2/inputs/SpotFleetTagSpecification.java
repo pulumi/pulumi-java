@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTag;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +16,14 @@ public final class SpotFleetTagSpecification extends io.pulumi.resources.InvokeA
 
     public static final SpotFleetTagSpecification Empty = new SpotFleetTagSpecification();
 
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
 
     public Optional<SpotFleetTagSpecificationResourceType> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable List<SpotFleetTag> tags;
 
     public List<SpotFleetTag> getTags() {

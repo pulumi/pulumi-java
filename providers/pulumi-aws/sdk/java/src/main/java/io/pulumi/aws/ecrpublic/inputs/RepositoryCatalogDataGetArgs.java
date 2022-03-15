@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * A detailed description of the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The text must be in markdown format.
      * 
      */
-    @InputImport(name="aboutText")
+    @Import(name="aboutText")
       private final @Nullable Output<String> aboutText;
 
     public Output<String> getAboutText() {
@@ -30,7 +30,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * The system architecture that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported architectures will appear as badges on the repository and are used as search filters: `ARM`, `ARM 64`, `x86`, `x86-64`
      * 
      */
-    @InputImport(name="architectures")
+    @Import(name="architectures")
       private final @Nullable Output<List<String>> architectures;
 
     public Output<List<String>> getArchitectures() {
@@ -41,7 +41,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * A short description of the contents of the repository. This text appears in both the image details and also when searching for repositories on the Amazon ECR Public Gallery.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * The base64-encoded repository logo payload. (Only visible for verified accounts) Note that drift detection is disabled for this attribute.
      * 
      */
-    @InputImport(name="logoImageBlob")
+    @Import(name="logoImageBlob")
       private final @Nullable Output<String> logoImageBlob;
 
     public Output<String> getLogoImageBlob() {
@@ -63,7 +63,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * The operating systems that the images in the repository are compatible with. On the Amazon ECR Public Gallery, the following supported operating systems will appear as badges on the repository and are used as search filters: `Linux`, `Windows`
      * 
      */
-    @InputImport(name="operatingSystems")
+    @Import(name="operatingSystems")
       private final @Nullable Output<List<String>> operatingSystems;
 
     public Output<List<String>> getOperatingSystems() {
@@ -74,7 +74,7 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
      * Detailed information on how to use the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The usage text provides context, support information, and additional usage details for users of the repository. The text must be in markdown format.
      * 
      */
-    @InputImport(name="usageText")
+    @Import(name="usageText")
       private final @Nullable Output<String> usageText;
 
     public Output<String> getUsageText() {

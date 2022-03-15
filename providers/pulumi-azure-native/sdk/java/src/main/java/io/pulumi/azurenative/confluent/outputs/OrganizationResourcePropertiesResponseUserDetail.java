@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.confluent.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationResourcePropertiesResponseUserDetail {
     /**
      * Email address
@@ -27,11 +27,11 @@ public final class OrganizationResourcePropertiesResponseUserDetail {
      */
     private final @Nullable String lastName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationResourcePropertiesResponseUserDetail(
-        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
-        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
-        @OutputCustomType.Parameter("lastName") @Nullable String lastName) {
+        @CustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @CustomType.Parameter("firstName") @Nullable String firstName,
+        @CustomType.Parameter("lastName") @Nullable String lastName) {
         this.emailAddress = emailAddress;
         this.firstName = firstName;
         this.lastName = lastName;

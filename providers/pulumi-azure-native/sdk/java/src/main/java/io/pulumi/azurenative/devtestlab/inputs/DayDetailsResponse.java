@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The time of day the schedule will occur.
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable String time;
 
     public Optional<String> getTime() {

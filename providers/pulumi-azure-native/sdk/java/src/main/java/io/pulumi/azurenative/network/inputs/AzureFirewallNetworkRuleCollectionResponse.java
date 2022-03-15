@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AzureFirewallNetworkRuleResponse;
 import io.pulumi.azurenative.network.inputs.AzureFirewallRCActionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * The action type of a rule collection.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable AzureFirewallRCActionResponse action;
 
     public Optional<AzureFirewallRCActionResponse> getAction() {
@@ -37,7 +37,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -48,7 +48,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -59,7 +59,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -70,7 +70,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * Priority of the network rule collection resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -81,7 +81,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * The provisioning state of the network rule collection resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -92,7 +92,7 @@ public final class AzureFirewallNetworkRuleCollectionResponse extends io.pulumi.
      * Collection of rules used by a network rule collection.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable List<AzureFirewallNetworkRuleResponse> rules;
 
     public List<AzureFirewallNetworkRuleResponse> getRules() {

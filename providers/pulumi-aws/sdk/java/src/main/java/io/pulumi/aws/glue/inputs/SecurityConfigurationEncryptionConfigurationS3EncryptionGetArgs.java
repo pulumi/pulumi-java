@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
      * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -29,7 +29,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
      * Encryption mode to use for S3 data. Valid values: `DISABLED`, `SSE-KMS`, `SSE-S3`. Default value: `DISABLED`.
      * 
      */
-    @InputImport(name="s3EncryptionMode")
+    @Import(name="s3EncryptionMode")
       private final @Nullable Output<String> s3EncryptionMode;
 
     public Output<String> getS3EncryptionMode() {

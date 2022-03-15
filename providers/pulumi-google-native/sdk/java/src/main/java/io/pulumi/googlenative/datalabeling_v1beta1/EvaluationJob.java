@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.EvaluationJobArgs;
@@ -26,7 +26,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Name of the AnnotationSpecSet describing all the labels that your machine learning model outputs. You must create this resource before you create an evaluation job and provide its name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
      * 
      */
-    @OutputExport(name="annotationSpecSet", type=String.class, parameters={})
+    @Export(name="annotationSpecSet", type=String.class, parameters={})
     private Output<String> annotationSpecSet;
 
     /**
@@ -40,7 +40,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Every time the evaluation job runs and an error occurs, the failed attempt is appended to this array.
      * 
      */
-    @OutputExport(name="attempts", type=List.class, parameters={GoogleCloudDatalabelingV1beta1AttemptResponse.class})
+    @Export(name="attempts", type=List.class, parameters={GoogleCloudDatalabelingV1beta1AttemptResponse.class})
     private Output<List<GoogleCloudDatalabelingV1beta1AttemptResponse>> attempts;
 
     /**
@@ -54,7 +54,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Timestamp of when this evaluation job was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -68,7 +68,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Description of the job. The description can be up to 25,000 characters long.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -82,7 +82,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Configuration details for the evaluation job.
      * 
      */
-    @OutputExport(name="evaluationJobConfig", type=GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse.class, parameters={})
+    @Export(name="evaluationJobConfig", type=GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse.class, parameters={})
     private Output<GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse> evaluationJobConfig;
 
     /**
@@ -96,7 +96,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Whether you want Data Labeling Service to provide ground truth labels for prediction input. If you want the service to assign human labelers to annotate your data, set this to `true`. If you want to provide your own ground truth labels in the evaluation job's BigQuery table, set this to `false`.
      * 
      */
-    @OutputExport(name="labelMissingGroundTruth", type=Boolean.class, parameters={})
+    @Export(name="labelMissingGroundTruth", type=Boolean.class, parameters={})
     private Output<Boolean> labelMissingGroundTruth;
 
     /**
@@ -110,7 +110,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * The [AI Platform Prediction model version](/ml-engine/docs/prediction-overview) to be evaluated. Prediction input and output is sampled from this model version. When creating an evaluation job, specify the model version in the following format: "projects/{project_id}/models/{model_name}/versions/{version_name}" There can only be one evaluation job per model version.
      * 
      */
-    @OutputExport(name="modelVersion", type=String.class, parameters={})
+    @Export(name="modelVersion", type=String.class, parameters={})
     private Output<String> modelVersion;
 
     /**
@@ -124,7 +124,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * After you create a job, Data Labeling Service assigns a name to the job with the following format: "projects/{project_id}/evaluationJobs/ {evaluation_job_id}"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Describes the interval at which the job runs. This interval must be at least 1 day, and it is rounded to the nearest day. For example, if you specify a 50-hour interval, the job runs every 2 days. You can provide the schedule in [crontab format](/scheduler/docs/configuring/cron-job-schedules) or in an [English-like format](/appengine/docs/standard/python/config/cronref#schedule_format). Regardless of what you specify, the job will run at 10:00 AM UTC. Only the interval from this schedule is used, not the specific time of day.
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
     /**
@@ -152,7 +152,7 @@ public class EvaluationJob extends io.pulumi.resources.CustomResource {
      * Describes the current state of the job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

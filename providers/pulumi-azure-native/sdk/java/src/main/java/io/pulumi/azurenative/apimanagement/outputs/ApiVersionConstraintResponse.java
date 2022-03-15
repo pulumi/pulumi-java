@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiVersionConstraintResponse {
     /**
      * Limit control plane API calls to API Management service with version equal to or newer than this value.
@@ -17,8 +17,8 @@ public final class ApiVersionConstraintResponse {
      */
     private final @Nullable String minApiVersion;
 
-    @OutputCustomType.Constructor
-    private ApiVersionConstraintResponse(@OutputCustomType.Parameter("minApiVersion") @Nullable String minApiVersion) {
+    @CustomType.Constructor
+    private ApiVersionConstraintResponse(@CustomType.Parameter("minApiVersion") @Nullable String minApiVersion) {
         this.minApiVersion = minApiVersion;
     }
 

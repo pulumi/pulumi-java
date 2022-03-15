@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +19,14 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for logging of each type of permission. This can be specified multiple times.
      * 
      */
-    @InputImport(name="auditLogConfigs", required=true)
+    @Import(name="auditLogConfigs", required=true)
       private final Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     public Output<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
 
-    @InputImport(name="folder", required=true)
+    @Import(name="folder", required=true)
       private final Output<String> folder;
 
     public Output<String> getFolder() {
@@ -37,7 +37,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Service which will be enabled for audit logging. The special value allServices covers all services.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

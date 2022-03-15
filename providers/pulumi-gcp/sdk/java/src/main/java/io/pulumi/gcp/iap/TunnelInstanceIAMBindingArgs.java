@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
 
     public Output<TunnelInstanceIAMBindingConditionArgs> getCondition() {
@@ -32,14 +32,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -51,7 +51,7 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -64,14 +64,14 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
         return this.role;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

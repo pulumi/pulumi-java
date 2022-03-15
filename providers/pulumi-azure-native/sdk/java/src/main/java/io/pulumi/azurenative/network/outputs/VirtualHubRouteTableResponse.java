@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualHubRouteTableResponse {
     /**
      * List of all routes.
@@ -17,8 +17,8 @@ public final class VirtualHubRouteTableResponse {
      */
     private final @Nullable List<VirtualHubRouteResponse> routes;
 
-    @OutputCustomType.Constructor
-    private VirtualHubRouteTableResponse(@OutputCustomType.Parameter("routes") @Nullable List<VirtualHubRouteResponse> routes) {
+    @CustomType.Constructor
+    private VirtualHubRouteTableResponse(@CustomType.Parameter("routes") @Nullable List<VirtualHubRouteResponse> routes) {
         this.routes = routes;
     }
 

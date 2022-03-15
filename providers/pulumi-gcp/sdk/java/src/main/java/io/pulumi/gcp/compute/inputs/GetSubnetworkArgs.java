@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
      * must be specified.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -31,7 +31,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -43,7 +43,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
      * unspecified, this defaults to the region configured in the provider.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -55,7 +55,7 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
      * specified, `name`, `project`, and `region` are ignored.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable String selfLink;
 
     public Optional<String> getSelfLink() {

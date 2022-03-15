@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The target database name.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
@@ -33,7 +33,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The target elastic pool name.
      * 
      */
-    @InputImport(name="elasticPoolName")
+    @Import(name="elasticPoolName")
       private final @Nullable String elasticPoolName;
 
     public Optional<String> getElasticPoolName() {
@@ -44,7 +44,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * Whether the target is included or excluded from the group.
      * 
      */
-    @InputImport(name="membershipType")
+    @Import(name="membershipType")
       private final @Nullable String membershipType;
 
     public Optional<String> getMembershipType() {
@@ -55,7 +55,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
      * 
      */
-    @InputImport(name="refreshCredential")
+    @Import(name="refreshCredential")
       private final @Nullable String refreshCredential;
 
     public Optional<String> getRefreshCredential() {
@@ -66,7 +66,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The target server name.
      * 
      */
-    @InputImport(name="serverName")
+    @Import(name="serverName")
       private final @Nullable String serverName;
 
     public Optional<String> getServerName() {
@@ -77,7 +77,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The target shard map.
      * 
      */
-    @InputImport(name="shardMapName")
+    @Import(name="shardMapName")
       private final @Nullable String shardMapName;
 
     public Optional<String> getShardMapName() {
@@ -88,7 +88,7 @@ public final class JobTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The target type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

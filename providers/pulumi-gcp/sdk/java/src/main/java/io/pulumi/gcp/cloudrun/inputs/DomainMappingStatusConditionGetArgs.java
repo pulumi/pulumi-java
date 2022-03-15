@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class DomainMappingStatusConditionGetArgs extends io.pulumi.resourc
 
     public static final DomainMappingStatusConditionGetArgs Empty = new DomainMappingStatusConditionGetArgs();
 
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
         return this.message == null ? Output.empty() : this.message;
     }
 
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
         return this.reason == null ? Output.empty() : this.reason;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

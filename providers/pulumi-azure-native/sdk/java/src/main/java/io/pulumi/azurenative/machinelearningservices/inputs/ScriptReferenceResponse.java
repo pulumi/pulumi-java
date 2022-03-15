@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * Optional command line arguments passed to the script to run.
      * 
      */
-    @InputImport(name="scriptArguments")
+    @Import(name="scriptArguments")
       private final @Nullable String scriptArguments;
 
     public Optional<String> getScriptArguments() {
@@ -33,7 +33,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * The location of scripts in the mounted volume.
      * 
      */
-    @InputImport(name="scriptData")
+    @Import(name="scriptData")
       private final @Nullable String scriptData;
 
     public Optional<String> getScriptData() {
@@ -44,7 +44,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * The storage source of the script: inline, workspace.
      * 
      */
-    @InputImport(name="scriptSource")
+    @Import(name="scriptSource")
       private final @Nullable String scriptSource;
 
     public Optional<String> getScriptSource() {
@@ -55,7 +55,7 @@ public final class ScriptReferenceResponse extends io.pulumi.resources.InvokeArg
      * Optional time period passed to timeout command.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {

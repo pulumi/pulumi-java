@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubscriptionResult {
     /**
      * Last time there was a receive request to this subscription.
@@ -116,28 +116,28 @@ public final class GetSubscriptionResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubscriptionResult(
-        @OutputCustomType.Parameter("accessedAt") String accessedAt,
-        @OutputCustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
-        @OutputCustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("deadLetteringOnFilterEvaluationExceptions") @Nullable Boolean deadLetteringOnFilterEvaluationExceptions,
-        @OutputCustomType.Parameter("deadLetteringOnMessageExpiration") @Nullable Boolean deadLetteringOnMessageExpiration,
-        @OutputCustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
-        @OutputCustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
-        @OutputCustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
-        @OutputCustomType.Parameter("forwardDeadLetteredMessagesTo") @Nullable String forwardDeadLetteredMessagesTo,
-        @OutputCustomType.Parameter("forwardTo") @Nullable String forwardTo,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lockDuration") @Nullable String lockDuration,
-        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
-        @OutputCustomType.Parameter("messageCount") Double messageCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requiresSession") @Nullable Boolean requiresSession,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("accessedAt") String accessedAt,
+        @CustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
+        @CustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("deadLetteringOnFilterEvaluationExceptions") @Nullable Boolean deadLetteringOnFilterEvaluationExceptions,
+        @CustomType.Parameter("deadLetteringOnMessageExpiration") @Nullable Boolean deadLetteringOnMessageExpiration,
+        @CustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
+        @CustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
+        @CustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
+        @CustomType.Parameter("forwardDeadLetteredMessagesTo") @Nullable String forwardDeadLetteredMessagesTo,
+        @CustomType.Parameter("forwardTo") @Nullable String forwardTo,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lockDuration") @Nullable String lockDuration,
+        @CustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
+        @CustomType.Parameter("messageCount") Double messageCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requiresSession") @Nullable Boolean requiresSession,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
         this.countDetails = countDetails;

@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorFileFormatDescriptor;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorS3SourceConfig {
     private final AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
     private final @Nullable List<String> historicalDataPathList;
     private final String roleArn;
     private final @Nullable List<String> templatedPathList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorS3SourceConfig(
-        @OutputCustomType.Parameter("fileFormatDescriptor") AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
-        @OutputCustomType.Parameter("historicalDataPathList") @Nullable List<String> historicalDataPathList,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("templatedPathList") @Nullable List<String> templatedPathList) {
+        @CustomType.Parameter("fileFormatDescriptor") AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
+        @CustomType.Parameter("historicalDataPathList") @Nullable List<String> historicalDataPathList,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("templatedPathList") @Nullable List<String> templatedPathList) {
         this.fileFormatDescriptor = fileFormatDescriptor;
         this.historicalDataPathList = historicalDataPathList;
         this.roleArn = roleArn;

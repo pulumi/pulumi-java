@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterIdentityServiceConfig {
     /**
      * Enable the PodSecurityPolicy controller for this cluster.
@@ -18,8 +18,8 @@ public final class ClusterIdentityServiceConfig {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ClusterIdentityServiceConfig(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private ClusterIdentityServiceConfig(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

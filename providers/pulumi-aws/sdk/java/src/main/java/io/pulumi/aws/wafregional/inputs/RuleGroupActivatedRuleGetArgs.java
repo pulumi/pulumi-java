@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RuleGroupActivatedRuleActionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
      * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RuleGroupActivatedRuleActionGetArgs> action;
 
     public Output<RuleGroupActivatedRuleActionGetArgs> getAction() {
@@ -31,7 +31,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
      * Specifies the order in which the rules are evaluated. Rules with a lower value are evaluated before rules with a higher value.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -42,7 +42,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
      * The ID of a `waf_regional_rule`
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -53,7 +53,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
      * The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.InternetGatewayTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
      * Any tags to assign to the internet gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<InternetGatewayTagArgs>> tags;
 
     public Output<List<InternetGatewayTagArgs>> getTags() {

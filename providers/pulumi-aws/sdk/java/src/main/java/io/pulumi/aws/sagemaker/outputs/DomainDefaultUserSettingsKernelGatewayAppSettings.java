@@ -5,14 +5,14 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage;
 import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
     /**
      * A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
@@ -30,11 +30,11 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
      */
     private final @Nullable List<String> lifecycleConfigArns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainDefaultUserSettingsKernelGatewayAppSettings(
-        @OutputCustomType.Parameter("customImages") @Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages,
-        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
-        @OutputCustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
+        @CustomType.Parameter("customImages") @Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages,
+        @CustomType.Parameter("defaultResourceSpec") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
+        @CustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;

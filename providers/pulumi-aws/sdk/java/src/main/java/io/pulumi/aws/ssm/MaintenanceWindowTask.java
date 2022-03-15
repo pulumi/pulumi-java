@@ -9,7 +9,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskState;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTarget;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParameters;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The description of the maintenance window task.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -50,7 +50,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The maximum number of targets this task can be run for in parallel.
      * 
      */
-    @OutputExport(name="maxConcurrency", type=String.class, parameters={})
+    @Export(name="maxConcurrency", type=String.class, parameters={})
     private Output<String> maxConcurrency;
 
     /**
@@ -64,7 +64,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The maximum number of errors allowed before this task stops being scheduled.
      * 
      */
-    @OutputExport(name="maxErrors", type=String.class, parameters={})
+    @Export(name="maxErrors", type=String.class, parameters={})
     private Output<String> maxErrors;
 
     /**
@@ -78,7 +78,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The name of the maintenance window task.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -106,7 +106,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account's service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
      * 
      */
-    @OutputExport(name="serviceRoleArn", type=String.class, parameters={})
+    @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output<String> serviceRoleArn;
 
     /**
@@ -120,7 +120,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
      * 
      */
-    @OutputExport(name="targets", type=List.class, parameters={MaintenanceWindowTaskTarget.class})
+    @Export(name="targets", type=List.class, parameters={MaintenanceWindowTaskTarget.class})
     private Output</* @Nullable */ List<MaintenanceWindowTaskTarget>> targets;
 
     /**
@@ -134,7 +134,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The ARN of the task to execute.
      * 
      */
-    @OutputExport(name="taskArn", type=String.class, parameters={})
+    @Export(name="taskArn", type=String.class, parameters={})
     private Output<String> taskArn;
 
     /**
@@ -148,7 +148,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * Configuration block with parameters for task execution.
      * 
      */
-    @OutputExport(name="taskInvocationParameters", type=MaintenanceWindowTaskTaskInvocationParameters.class, parameters={})
+    @Export(name="taskInvocationParameters", type=MaintenanceWindowTaskTaskInvocationParameters.class, parameters={})
     private Output</* @Nullable */ MaintenanceWindowTaskTaskInvocationParameters> taskInvocationParameters;
 
     /**
@@ -162,7 +162,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
      * 
      */
-    @OutputExport(name="taskType", type=String.class, parameters={})
+    @Export(name="taskType", type=String.class, parameters={})
     private Output<String> taskType;
 
     /**
@@ -176,7 +176,7 @@ public class MaintenanceWindowTask extends io.pulumi.resources.CustomResource {
      * The Id of the maintenance window to register the task with.
      * 
      */
-    @OutputExport(name="windowId", type=String.class, parameters={})
+    @Export(name="windowId", type=String.class, parameters={})
     private Output<String> windowId;
 
     /**

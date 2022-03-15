@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.EntityParentGroupInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntityInfoResponse {
     /**
      * The friendly name of the management group.
@@ -76,21 +76,21 @@ public final class EntityInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntityInfoResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inheritedPermissions") @Nullable String inheritedPermissions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfChildGroups") @Nullable Integer numberOfChildGroups,
-        @OutputCustomType.Parameter("numberOfChildren") @Nullable Integer numberOfChildren,
-        @OutputCustomType.Parameter("numberOfDescendants") @Nullable Integer numberOfDescendants,
-        @OutputCustomType.Parameter("parent") @Nullable EntityParentGroupInfoResponse parent,
-        @OutputCustomType.Parameter("parentDisplayNameChain") @Nullable List<String> parentDisplayNameChain,
-        @OutputCustomType.Parameter("parentNameChain") @Nullable List<String> parentNameChain,
-        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inheritedPermissions") @Nullable String inheritedPermissions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfChildGroups") @Nullable Integer numberOfChildGroups,
+        @CustomType.Parameter("numberOfChildren") @Nullable Integer numberOfChildren,
+        @CustomType.Parameter("numberOfDescendants") @Nullable Integer numberOfDescendants,
+        @CustomType.Parameter("parent") @Nullable EntityParentGroupInfoResponse parent,
+        @CustomType.Parameter("parentDisplayNameChain") @Nullable List<String> parentDisplayNameChain,
+        @CustomType.Parameter("parentNameChain") @Nullable List<String> parentNameChain,
+        @CustomType.Parameter("permissions") @Nullable String permissions,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.inheritedPermissions = inheritedPermissions;

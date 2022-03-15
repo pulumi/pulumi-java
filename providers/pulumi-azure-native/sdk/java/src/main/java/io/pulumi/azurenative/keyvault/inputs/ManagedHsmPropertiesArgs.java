@@ -8,7 +8,7 @@ import io.pulumi.azurenative.keyvault.enums.PublicNetworkAccess;
 import io.pulumi.azurenative.keyvault.inputs.MHSMNetworkRuleSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<CreateMode> createMode;
 
     public Output<CreateMode> getCreateMode() {
@@ -40,7 +40,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * Property specifying whether protection against purge is enabled for this managed HSM pool. Setting this property to true activates protection against purge for this managed HSM pool and its content - only the Managed HSM service may initiate a hard, irrecoverable deletion. The setting is effective only if soft delete is also enabled. Enabling this functionality is irreversible.
      * 
      */
-    @InputImport(name="enablePurgeProtection")
+    @Import(name="enablePurgeProtection")
       private final @Nullable Output<Boolean> enablePurgeProtection;
 
     public Output<Boolean> getEnablePurgeProtection() {
@@ -51,7 +51,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.
      * 
      */
-    @InputImport(name="enableSoftDelete")
+    @Import(name="enableSoftDelete")
       private final @Nullable Output<Boolean> enableSoftDelete;
 
     public Output<Boolean> getEnableSoftDelete() {
@@ -62,7 +62,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * Array of initial administrators object ids for this managed hsm pool.
      * 
      */
-    @InputImport(name="initialAdminObjectIds")
+    @Import(name="initialAdminObjectIds")
       private final @Nullable Output<List<String>> initialAdminObjectIds;
 
     public Output<List<String>> getInitialAdminObjectIds() {
@@ -73,7 +73,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * Rules governing the accessibility of the key vault from specific network locations.
      * 
      */
-    @InputImport(name="networkAcls")
+    @Import(name="networkAcls")
       private final @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
 
     public Output<MHSMNetworkRuleSetArgs> getNetworkAcls() {
@@ -84,7 +84,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -95,7 +95,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * softDelete data retention days. It accepts >=7 and <=90.
      * 
      */
-    @InputImport(name="softDeleteRetentionInDays")
+    @Import(name="softDeleteRetentionInDays")
       private final @Nullable Output<Integer> softDeleteRetentionInDays;
 
     public Output<Integer> getSoftDeleteRetentionInDays() {
@@ -106,7 +106,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the managed HSM pool.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

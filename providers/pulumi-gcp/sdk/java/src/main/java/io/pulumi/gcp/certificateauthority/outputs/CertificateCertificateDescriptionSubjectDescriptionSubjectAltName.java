@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltName {
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans;
     /**
@@ -34,13 +34,13 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      */
     private final @Nullable List<String> uris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltName(
-        @OutputCustomType.Parameter("customSans") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans,
-        @OutputCustomType.Parameter("dnsNames") @Nullable List<String> dnsNames,
-        @OutputCustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("uris") @Nullable List<String> uris) {
+        @CustomType.Parameter("customSans") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan> customSans,
+        @CustomType.Parameter("dnsNames") @Nullable List<String> dnsNames,
+        @CustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("uris") @Nullable List<String> uris) {
         this.customSans = customSans;
         this.dnsNames = dnsNames;
         this.emailAddresses = emailAddresses;

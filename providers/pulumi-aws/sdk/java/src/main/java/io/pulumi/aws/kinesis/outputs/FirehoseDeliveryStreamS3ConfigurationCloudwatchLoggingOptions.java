@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions {
     /**
      * Enables or disables the logging. Defaults to `false`.
@@ -28,11 +28,11 @@ public final class FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions
      */
     private final @Nullable String logStreamName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
-        @OutputCustomType.Parameter("logStreamName") @Nullable String logStreamName) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @CustomType.Parameter("logStreamName") @Nullable String logStreamName) {
         this.enabled = enabled;
         this.logGroupName = logGroupName;
         this.logStreamName = logStreamName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
      * Source databases as a map from database name to database id
      * 
      */
-    @InputImport(name="databases", required=true)
+    @Import(name="databases", required=true)
       private final Map<String,String> databases;
 
     public Map<String,String> getDatabases() {
@@ -32,7 +32,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -43,7 +43,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
      * Target server brand version
      * 
      */
-    @InputImport(name="targetServerBrandVersion", required=true)
+    @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
@@ -54,7 +54,7 @@ public final class ConnectToTargetSqlDbTaskOutputResponse extends io.pulumi.reso
      * Version of the target server
      * 
      */
-    @InputImport(name="targetServerVersion", required=true)
+    @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
     public String getTargetServerVersion() {

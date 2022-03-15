@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends io.pulumi.res
      * The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -28,7 +28,7 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends io.pulumi.res
      * Integer port number
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

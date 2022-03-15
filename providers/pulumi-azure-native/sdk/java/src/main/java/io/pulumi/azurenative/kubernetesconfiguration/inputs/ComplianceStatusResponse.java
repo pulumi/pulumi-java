@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * The compliance state of the configuration.
      * 
      */
-    @InputImport(name="complianceState", required=true)
+    @Import(name="complianceState", required=true)
       private final String complianceState;
 
     public String getComplianceState() {
@@ -33,7 +33,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * Datetime the configuration was last applied.
      * 
      */
-    @InputImport(name="lastConfigApplied")
+    @Import(name="lastConfigApplied")
       private final @Nullable String lastConfigApplied;
 
     public Optional<String> getLastConfigApplied() {
@@ -44,7 +44,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * Message from when the configuration was applied.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -55,7 +55,7 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
      * Level of the message.
      * 
      */
-    @InputImport(name="messageLevel")
+    @Import(name="messageLevel")
       private final @Nullable String messageLevel;
 
     public Optional<String> getMessageLevel() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SrvRecordResponse {
     /**
      * The port value for this SRV record.
@@ -33,12 +33,12 @@ public final class SrvRecordResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SrvRecordResponse(
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.port = port;
         this.priority = priority;
         this.target = target;

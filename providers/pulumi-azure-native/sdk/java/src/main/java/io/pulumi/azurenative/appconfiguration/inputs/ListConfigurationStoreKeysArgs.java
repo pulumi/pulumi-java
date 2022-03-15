@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
      * The name of the configuration store.
      * 
      */
-    @InputImport(name="configStoreName", required=true)
+    @Import(name="configStoreName", required=true)
       private final String configStoreName;
 
     public String getConfigStoreName() {
@@ -29,7 +29,7 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class ListConfigurationStoreKeysArgs extends io.pulumi.resources.In
      * A skip token is used to continue retrieving items after an operation returns a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

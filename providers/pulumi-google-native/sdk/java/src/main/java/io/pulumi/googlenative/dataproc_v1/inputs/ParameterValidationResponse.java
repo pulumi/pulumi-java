@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.RegexValidationResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.ValueValidationResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
      * Validation based on regular expressions.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final RegexValidationResponse regex;
 
     public RegexValidationResponse getRegex() {
@@ -32,7 +32,7 @@ public final class ParameterValidationResponse extends io.pulumi.resources.Invok
      * Validation based on a list of allowed values.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final ValueValidationResponse values;
 
     public ValueValidationResponse getValues() {

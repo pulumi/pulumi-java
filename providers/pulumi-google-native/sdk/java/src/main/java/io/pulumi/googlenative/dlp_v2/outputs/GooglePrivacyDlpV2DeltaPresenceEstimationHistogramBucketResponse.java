@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse {
     /**
      * Number of records within these probability bounds.
@@ -38,13 +38,13 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      */
     private final Double minProbability;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(
-        @OutputCustomType.Parameter("bucketSize") String bucketSize,
-        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
-        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues,
-        @OutputCustomType.Parameter("maxProbability") Double maxProbability,
-        @OutputCustomType.Parameter("minProbability") Double minProbability) {
+        @CustomType.Parameter("bucketSize") String bucketSize,
+        @CustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @CustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues,
+        @CustomType.Parameter("maxProbability") Double maxProbability,
+        @CustomType.Parameter("minProbability") Double minProbability) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

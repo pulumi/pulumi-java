@@ -10,7 +10,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentInitializationScri
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentScriptParameterKeyValueArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final StudioComponentArgs Empty = new StudioComponentArgs();
 
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<StudioComponentConfigurationArgs> configuration;
 
     public Output<StudioComponentConfigurationArgs> getConfiguration() {
@@ -32,7 +32,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * <p>The description.</p>
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * <p>The EC2 security groups that control access to the studio component.</p>
      * 
      */
-    @InputImport(name="ec2SecurityGroupIds")
+    @Import(name="ec2SecurityGroupIds")
       private final @Nullable Output<List<String>> ec2SecurityGroupIds;
 
     public Output<List<String>> getEc2SecurityGroupIds() {
@@ -54,7 +54,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * <p>Initialization scripts for studio components.</p>
      * 
      */
-    @InputImport(name="initializationScripts")
+    @Import(name="initializationScripts")
       private final @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
     public Output<List<StudioComponentInitializationScriptArgs>> getInitializationScripts() {
@@ -65,7 +65,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * <p>The name for the studio component.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * <p>Parameters for the studio component scripts.</p>
      * 
      */
-    @InputImport(name="scriptParameters")
+    @Import(name="scriptParameters")
       private final @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
     public Output<List<StudioComponentScriptParameterKeyValueArgs>> getScriptParameters() {
@@ -87,28 +87,28 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
      * <p>The studioId. </p>
      * 
      */
-    @InputImport(name="studioId", required=true)
+    @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
     public Output<String> getStudioId() {
         return this.studioId;
     }
 
-    @InputImport(name="subtype")
+    @Import(name="subtype")
       private final @Nullable Output<StudioComponentSubtype> subtype;
 
     public Output<StudioComponentSubtype> getSubtype() {
         return this.subtype == null ? Output.empty() : this.subtype;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<StudioComponentTagsArgs> tags;
 
     public Output<StudioComponentTagsArgs> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<StudioComponentType> type;
 
     public Output<StudioComponentType> getType() {

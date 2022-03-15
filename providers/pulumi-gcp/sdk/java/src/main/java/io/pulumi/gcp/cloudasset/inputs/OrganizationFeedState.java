@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedConditionGetArgs;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigGetArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    @InputImport(name="assetNames")
+    @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
     public Output<List<String>> getAssetNames() {
@@ -39,7 +39,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * supported asset types.
      * 
      */
-    @InputImport(name="assetTypes")
+    @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
     public Output<List<String>> getAssetTypes() {
@@ -52,7 +52,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * enablement check, quota, and billing.
      * 
      */
-    @InputImport(name="billingProject")
+    @Import(name="billingProject")
       private final @Nullable Output<String> billingProject;
 
     public Output<String> getBillingProject() {
@@ -68,7 +68,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<OrganizationFeedConditionGetArgs> condition;
 
     public Output<OrganizationFeedConditionGetArgs> getCondition() {
@@ -80,7 +80,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -91,7 +91,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    @InputImport(name="feedId")
+    @Import(name="feedId")
       private final @Nullable Output<String> feedId;
 
     public Output<String> getFeedId() {
@@ -103,7 +103,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="feedOutputConfig")
+    @Import(name="feedOutputConfig")
       private final @Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
 
     public Output<OrganizationFeedFeedOutputConfigGetArgs> getFeedOutputConfig() {
@@ -114,7 +114,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * The format will be organizations/{organization_number}/feeds/{client-assigned_feed_identifier}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -125,7 +125,7 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
      * The organization this feed should be created in.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {

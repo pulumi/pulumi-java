@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FleetOnDemandOptionsGetArgs extends io.pulumi.resources.Resou
      * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
      * 
      */
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {

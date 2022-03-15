@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AnalysisStringParameterArgs extends io.pulumi.resources.Resou
      * <p>A display name for a string parameter.</p>
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class AnalysisStringParameterArgs extends io.pulumi.resources.Resou
      * <p>The values of a string parameter.</p>
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

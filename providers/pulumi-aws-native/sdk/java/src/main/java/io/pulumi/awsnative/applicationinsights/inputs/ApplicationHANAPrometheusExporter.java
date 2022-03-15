@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * A flag which indicates agreeing to install SAP HANA DB client.
      * 
      */
-    @InputImport(name="agreeToInstallHANADBClient", required=true)
+    @Import(name="agreeToInstallHANADBClient", required=true)
       private final Boolean agreeToInstallHANADBClient;
 
     public Boolean getAgreeToInstallHANADBClient() {
@@ -34,7 +34,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * The HANA DB port.
      * 
      */
-    @InputImport(name="hANAPort", required=true)
+    @Import(name="hANAPort", required=true)
       private final String hANAPort;
 
     public String getHANAPort() {
@@ -45,7 +45,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * HANA DB SID.
      * 
      */
-    @InputImport(name="hANASID", required=true)
+    @Import(name="hANASID", required=true)
       private final String hANASID;
 
     public String getHANASID() {
@@ -59,7 +59,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * }.
      * 
      */
-    @InputImport(name="hANASecretName", required=true)
+    @Import(name="hANASecretName", required=true)
       private final String hANASecretName;
 
     public String getHANASecretName() {
@@ -70,7 +70,7 @@ public final class ApplicationHANAPrometheusExporter extends io.pulumi.resources
      * Prometheus exporter port.
      * 
      */
-    @InputImport(name="prometheusPort")
+    @Import(name="prometheusPort")
       private final @Nullable String prometheusPort;
 
     public Optional<String> getPrometheusPort() {

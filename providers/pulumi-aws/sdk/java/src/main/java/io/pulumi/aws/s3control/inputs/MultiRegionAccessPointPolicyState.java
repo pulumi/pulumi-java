@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
 
     public static final MultiRegionAccessPointPolicyState Empty = new MultiRegionAccessPointPolicyState();
 
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -26,7 +26,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<MultiRegionAccessPointPolicyDetailsGetArgs> details;
 
     public Output<MultiRegionAccessPointPolicyDetailsGetArgs> getDetails() {
@@ -37,7 +37,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * The last established policy for the Multi-Region Access Point.
      * 
      */
-    @InputImport(name="established")
+    @Import(name="established")
       private final @Nullable Output<String> established;
 
     public Output<String> getEstablished() {
@@ -48,7 +48,7 @@ public final class MultiRegionAccessPointPolicyState extends io.pulumi.resources
      * The proposed policy for the Multi-Region Access Point.
      * 
      */
-    @InputImport(name="proposed")
+    @Import(name="proposed")
       private final @Nullable Output<String> proposed;
 
     public Output<String> getProposed() {

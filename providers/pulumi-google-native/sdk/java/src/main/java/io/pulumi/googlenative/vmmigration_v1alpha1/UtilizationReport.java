@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.UtilizationReportArgs;
@@ -26,7 +26,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * The time the report was created (this refers to the time of the request, not the time the report creation completed).
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * The report display name, as assigned by the user.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -54,7 +54,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * Provides details on the state of the report in case of an error.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -68,7 +68,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * The point in time when the time frame ends. Notice that the time frame is counted backwards. For instance if the "frame_end_time" value is 2021/01/20 and the time frame is WEEK then the report covers the week between 2021/01/20 and 2021/01/14.
      * 
      */
-    @OutputExport(name="frameEndTime", type=String.class, parameters={})
+    @Export(name="frameEndTime", type=String.class, parameters={})
     private Output<String> frameEndTime;
 
     /**
@@ -82,7 +82,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * The report unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * Current state of the report.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -110,7 +110,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * The time the state was last set.
      * 
      */
-    @OutputExport(name="stateTime", type=String.class, parameters={})
+    @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**
@@ -124,7 +124,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * Time frame of the report.
      * 
      */
-    @OutputExport(name="timeFrame", type=String.class, parameters={})
+    @Export(name="timeFrame", type=String.class, parameters={})
     private Output<String> timeFrame;
 
     /**
@@ -138,7 +138,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * Total number of VMs included in the report.
      * 
      */
-    @OutputExport(name="vmCount", type=Integer.class, parameters={})
+    @Export(name="vmCount", type=Integer.class, parameters={})
     private Output<Integer> vmCount;
 
     /**
@@ -152,7 +152,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
-    @OutputExport(name="vms", type=List.class, parameters={VmUtilizationInfoResponse.class})
+    @Export(name="vms", type=List.class, parameters={VmUtilizationInfoResponse.class})
     private Output<List<VmUtilizationInfoResponse>> vms;
 
     /**
@@ -166,7 +166,7 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
      * Total number of VMs included in the report.
      * 
      */
-    @OutputExport(name="vmsCount", type=Integer.class, parameters={})
+    @Export(name="vmsCount", type=Integer.class, parameters={})
     private Output<Integer> vmsCount;
 
     /**

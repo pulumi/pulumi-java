@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.TypeArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.VersionSourceArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The HL7v2 type definitions.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<List<TypeArgs>> type;
 
     public Output<List<TypeArgs>> getType() {
@@ -35,7 +35,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The version selectors that this config applies to. A message must match ALL version sources to apply.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<List<VersionSourceArgs>> version;
 
     public Output<List<VersionSourceArgs>> getVersion() {

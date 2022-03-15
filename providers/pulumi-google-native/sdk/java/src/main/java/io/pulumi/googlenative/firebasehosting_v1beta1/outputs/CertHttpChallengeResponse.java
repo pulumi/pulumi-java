@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertHttpChallengeResponse {
     /**
      * The URL path on which to serve the specified token to satisfy the certificate challenge.
@@ -20,10 +20,10 @@ public final class CertHttpChallengeResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertHttpChallengeResponse(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("token") String token) {
         this.path = path;
         this.token = token;
     }

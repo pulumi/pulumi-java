@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.ProjectServiceCatalogProvisioningDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the project.
      * 
      */
-    @InputImport(name="projectDescription")
+    @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
     public Output<String> getProjectDescription() {
@@ -31,7 +31,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Project.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -42,7 +42,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
      * 
      */
-    @InputImport(name="serviceCatalogProvisioningDetails", required=true)
+    @Import(name="serviceCatalogProvisioningDetails", required=true)
       private final Output<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails;
 
     public Output<ProjectServiceCatalogProvisioningDetailsArgs> getServiceCatalogProvisioningDetails() {
@@ -53,7 +53,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

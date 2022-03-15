@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * The number of data instances which resulted in errors.
      * 
      */
-    @InputImport(name="errorCount")
+    @Import(name="errorCount")
       private final @Nullable Output<String> errorCount;
 
     public Output<String> getErrorCount() {
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * Node hours used by the batch prediction job.
      * 
      */
-    @InputImport(name="nodeHours")
+    @Import(name="nodeHours")
       private final @Nullable Output<Double> nodeHours;
 
     public Output<Double> getNodeHours() {
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * The output Google Cloud Storage location provided at the job creation time.
      * 
      */
-    @InputImport(name="outputPath")
+    @Import(name="outputPath")
       private final @Nullable Output<String> outputPath;
 
     public Output<String> getOutputPath() {
@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
      * The number of generated predictions.
      * 
      */
-    @InputImport(name="predictionCount")
+    @Import(name="predictionCount")
       private final @Nullable Output<String> predictionCount;
 
     public Output<String> getPredictionCount() {

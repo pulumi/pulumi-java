@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
     /**
      * Unique id for identifying a data set resource
@@ -47,15 +47,15 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSynapseWorkspaceSqlPoolTableDataSetResult(
-        @OutputCustomType.Parameter("dataSetId") String dataSetId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("synapseWorkspaceSqlPoolTableResourceId") String synapseWorkspaceSqlPoolTableResourceId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataSetId") String dataSetId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("synapseWorkspaceSqlPoolTableResourceId") String synapseWorkspaceSqlPoolTableResourceId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.id = id;
         this.kind = kind;

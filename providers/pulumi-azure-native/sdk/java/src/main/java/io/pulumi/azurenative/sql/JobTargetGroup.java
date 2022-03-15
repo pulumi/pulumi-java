@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.JobTargetGroupArgs;
 import io.pulumi.azurenative.sql.outputs.JobTargetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
      * Members of the target group.
      * 
      */
-    @OutputExport(name="members", type=List.class, parameters={JobTargetResponse.class})
+    @Export(name="members", type=List.class, parameters={JobTargetResponse.class})
     private Output<List<JobTargetResponse>> members;
 
     /**
@@ -49,7 +49,7 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class JobTargetGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

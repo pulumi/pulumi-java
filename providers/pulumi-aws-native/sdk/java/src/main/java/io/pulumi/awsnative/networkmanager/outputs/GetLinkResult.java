@@ -5,14 +5,14 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.LinkBandwidth;
 import io.pulumi.awsnative.networkmanager.outputs.LinkTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkResult {
     /**
      * The Bandwidth for the link.
@@ -50,15 +50,15 @@ public final class GetLinkResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkResult(
-        @OutputCustomType.Parameter("bandwidth") @Nullable LinkBandwidth bandwidth,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("linkArn") @Nullable String linkArn,
-        @OutputCustomType.Parameter("linkId") @Nullable String linkId,
-        @OutputCustomType.Parameter("provider") @Nullable String provider,
-        @OutputCustomType.Parameter("tags") @Nullable List<LinkTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("bandwidth") @Nullable LinkBandwidth bandwidth,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("linkArn") @Nullable String linkArn,
+        @CustomType.Parameter("linkId") @Nullable String linkId,
+        @CustomType.Parameter("provider") @Nullable String provider,
+        @CustomType.Parameter("tags") @Nullable List<LinkTag> tags,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.bandwidth = bandwidth;
         this.description = description;
         this.linkArn = linkArn;

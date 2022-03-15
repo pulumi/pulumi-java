@@ -4,11 +4,11 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetImageOutputResourceAmi;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageOutputResource {
     /**
      * Set of objects with each Amazon Machine Image (AMI) created.
@@ -16,8 +16,8 @@ public final class GetImageOutputResource {
      */
     private final List<GetImageOutputResourceAmi> amis;
 
-    @OutputCustomType.Constructor
-    private GetImageOutputResource(@OutputCustomType.Parameter("amis") List<GetImageOutputResourceAmi> amis) {
+    @CustomType.Constructor
+    private GetImageOutputResource(@CustomType.Parameter("amis") List<GetImageOutputResourceAmi> amis) {
         this.amis = amis;
     }
 

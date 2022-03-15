@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceServerScope {
     /**
      * The scope description.
@@ -20,10 +20,10 @@ public final class ResourceServerScope {
      */
     private final String scopeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceServerScope(
-        @OutputCustomType.Parameter("scopeDescription") String scopeDescription,
-        @OutputCustomType.Parameter("scopeName") String scopeName) {
+        @CustomType.Parameter("scopeDescription") String scopeDescription,
+        @CustomType.Parameter("scopeName") String scopeName) {
         this.scopeDescription = scopeDescription;
         this.scopeName = scopeName;
     }

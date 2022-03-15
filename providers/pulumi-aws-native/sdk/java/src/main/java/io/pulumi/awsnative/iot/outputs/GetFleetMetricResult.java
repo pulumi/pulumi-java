@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.FleetMetricAggregationType;
 import io.pulumi.awsnative.iot.outputs.FleetMetricTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFleetMetricResult {
     /**
      * The aggregation field to perform aggregation and metric emission
@@ -78,21 +78,21 @@ public final class GetFleetMetricResult {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFleetMetricResult(
-        @OutputCustomType.Parameter("aggregationField") @Nullable String aggregationField,
-        @OutputCustomType.Parameter("aggregationType") @Nullable FleetMetricAggregationType aggregationType,
-        @OutputCustomType.Parameter("creationDate") @Nullable Double creationDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("indexName") @Nullable String indexName,
-        @OutputCustomType.Parameter("lastModifiedDate") @Nullable Double lastModifiedDate,
-        @OutputCustomType.Parameter("metricArn") @Nullable String metricArn,
-        @OutputCustomType.Parameter("period") @Nullable Integer period,
-        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
-        @OutputCustomType.Parameter("queryVersion") @Nullable String queryVersion,
-        @OutputCustomType.Parameter("tags") @Nullable List<FleetMetricTag> tags,
-        @OutputCustomType.Parameter("unit") @Nullable String unit,
-        @OutputCustomType.Parameter("version") @Nullable Double version) {
+        @CustomType.Parameter("aggregationField") @Nullable String aggregationField,
+        @CustomType.Parameter("aggregationType") @Nullable FleetMetricAggregationType aggregationType,
+        @CustomType.Parameter("creationDate") @Nullable Double creationDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("indexName") @Nullable String indexName,
+        @CustomType.Parameter("lastModifiedDate") @Nullable Double lastModifiedDate,
+        @CustomType.Parameter("metricArn") @Nullable String metricArn,
+        @CustomType.Parameter("period") @Nullable Integer period,
+        @CustomType.Parameter("queryString") @Nullable String queryString,
+        @CustomType.Parameter("queryVersion") @Nullable String queryVersion,
+        @CustomType.Parameter("tags") @Nullable List<FleetMetricTag> tags,
+        @CustomType.Parameter("unit") @Nullable String unit,
+        @CustomType.Parameter("version") @Nullable Double version) {
         this.aggregationField = aggregationField;
         this.aggregationType = aggregationType;
         this.creationDate = creationDate;

@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
@@ -30,7 +30,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * The content transformation of an Object Lambda Access Point configuration. See Content Transformation below for more details.
      * 
      */
-    @InputImport(name="contentTransformation", required=true)
+    @Import(name="contentTransformation", required=true)
       private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> contentTransformation;
 
     public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs> getContentTransformation() {

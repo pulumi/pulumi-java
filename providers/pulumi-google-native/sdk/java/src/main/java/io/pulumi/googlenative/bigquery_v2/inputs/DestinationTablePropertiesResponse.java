@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * [Optional] The description for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current description is provided, the job will fail.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -28,7 +28,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * [Internal] This field is for Google internal use only.
      * 
      */
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
     public String getExpirationTime() {
@@ -39,7 +39,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * [Optional] The friendly name for the destination table. This will only be used if the destination table is newly created. If the table already exists and a value different than the current friendly name is provided, the job will fail.
      * 
      */
-    @InputImport(name="friendlyName", required=true)
+    @Import(name="friendlyName", required=true)
       private final String friendlyName;
 
     public String getFriendlyName() {
@@ -50,7 +50,7 @@ public final class DestinationTablePropertiesResponse extends io.pulumi.resource
      * [Optional] The labels associated with this table. You can use these to organize and group your tables. This will only be used if the destination table is newly created. If the table already exists and labels are different than the current labels are provided, the job will fail.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
      * The indexed property's direction. Must not be DIRECTION_UNSPECIFIED.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -31,7 +31,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse extends io.pulu
      * The property name to index.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs;
@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * A human-readable description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
@@ -48,7 +48,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="matchRules", required=true)
+    @Import(name="matchRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
@@ -60,7 +60,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * Only one of origin or urlRedirect can be set.
      * 
      */
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
@@ -74,7 +74,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<String> priority;
 
     public Output<String> getPriority() {
@@ -86,7 +86,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeAction")
+    @Import(name="routeAction")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
@@ -98,7 +98,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRedirect")
+    @Import(name="urlRedirect")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {

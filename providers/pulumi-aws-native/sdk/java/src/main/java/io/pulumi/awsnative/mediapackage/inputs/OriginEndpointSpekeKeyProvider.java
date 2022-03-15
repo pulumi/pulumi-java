@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate that MediaPackage will use for enforcing secure end-to-end data transfer with the key provider service.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable String certificateArn;
 
     public Optional<String> getCertificateArn() {
@@ -34,7 +34,7 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
      * The resource ID to include in key requests.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -45,7 +45,7 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental MediaPackage will assume when accessing the key provider service.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
@@ -56,7 +56,7 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
      * The system IDs to include in key requests.
      * 
      */
-    @InputImport(name="systemIds", required=true)
+    @Import(name="systemIds", required=true)
       private final List<String> systemIds;
 
     public List<String> getSystemIds() {
@@ -67,7 +67,7 @@ public final class OriginEndpointSpekeKeyProvider extends io.pulumi.resources.In
      * The URL of the external key provider service.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.attestation.outputs;
 
 import io.pulumi.azurenative.attestation.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.attestation.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAttestationProviderResult {
     /**
      * Gets the uri of attestation service
@@ -66,18 +66,18 @@ public final class GetAttestationProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttestationProviderResult(
-        @OutputCustomType.Parameter("attestUri") @Nullable String attestUri,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("trustModel") @Nullable String trustModel,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("attestUri") @Nullable String attestUri,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("trustModel") @Nullable String trustModel,
+        @CustomType.Parameter("type") String type) {
         this.attestUri = attestUri;
         this.id = id;
         this.location = location;

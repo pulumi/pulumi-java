@@ -6,14 +6,14 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfigurationProperties;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfigurationProperties;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationLaunchTemplateConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistribution {
     /**
      * The specific AMI settings (for example, launch permissions, AMI tags).
@@ -41,13 +41,13 @@ public final class DistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistribution(
-        @OutputCustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration,
-        @OutputCustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration,
-        @OutputCustomType.Parameter("launchTemplateConfigurations") @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations,
-        @OutputCustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration,
+        @CustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration,
+        @CustomType.Parameter("launchTemplateConfigurations") @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations,
+        @CustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
+        @CustomType.Parameter("region") String region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.launchTemplateConfigurations = launchTemplateConfigurations;

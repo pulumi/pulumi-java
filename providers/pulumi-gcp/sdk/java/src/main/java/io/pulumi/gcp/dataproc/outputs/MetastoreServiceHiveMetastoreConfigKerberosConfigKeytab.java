@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
     /**
      * The relative resource name of a Secret Manager secret version, in the following form:
@@ -16,8 +16,8 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab {
      */
     private final String cloudSecret;
 
-    @OutputCustomType.Constructor
-    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab(@OutputCustomType.Parameter("cloudSecret") String cloudSecret) {
+    @CustomType.Constructor
+    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab(@CustomType.Parameter("cloudSecret") String cloudSecret) {
         this.cloudSecret = cloudSecret;
     }
 

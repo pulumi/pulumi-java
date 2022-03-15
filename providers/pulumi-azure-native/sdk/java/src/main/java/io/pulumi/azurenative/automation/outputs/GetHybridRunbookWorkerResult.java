@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHybridRunbookWorkerResult {
     /**
      * Fully qualified resource Id for the resource
@@ -63,18 +63,18 @@ public final class GetHybridRunbookWorkerResult {
      */
     private final @Nullable String workerType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHybridRunbookWorkerResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("lastSeenDateTime") @Nullable String lastSeenDateTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("registeredDateTime") @Nullable String registeredDateTime,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmResourceId") @Nullable String vmResourceId,
-        @OutputCustomType.Parameter("workerName") @Nullable String workerName,
-        @OutputCustomType.Parameter("workerType") @Nullable String workerType) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("lastSeenDateTime") @Nullable String lastSeenDateTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("registeredDateTime") @Nullable String registeredDateTime,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmResourceId") @Nullable String vmResourceId,
+        @CustomType.Parameter("workerName") @Nullable String workerName,
+        @CustomType.Parameter("workerType") @Nullable String workerType) {
         this.id = id;
         this.ip = ip;
         this.lastSeenDateTime = lastSeenDateTime;

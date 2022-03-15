@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.GetUptimeCheckIPsUptimeCheckIp;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUptimeCheckIPsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -22,10 +22,10 @@ public final class GetUptimeCheckIPsResult {
      */
     private final List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUptimeCheckIPsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("uptimeCheckIps") List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("uptimeCheckIps") List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps) {
         this.id = id;
         this.uptimeCheckIps = uptimeCheckIps;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceExecResourceExecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
      * What to run to bring this resource into the desired state. An exit code of 100 indicates "success", any other exit code indicates a failure running enforce.
      * 
      */
-    @InputImport(name="enforce")
+    @Import(name="enforce")
       private final @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
 
     public Output<OSPolicyResourceExecResourceExecArgs> getEnforce() {
@@ -33,7 +33,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
      * What to run to validate this resource is in the desired state. An exit code of 100 indicates "in desired state", and exit code of 101 indicates "not in desired state". Any other exit code indicates a failure running validate.
      * 
      */
-    @InputImport(name="validate", required=true)
+    @Import(name="validate", required=true)
       private final Output<OSPolicyResourceExecResourceExecArgs> validate;
 
     public Output<OSPolicyResourceExecResourceExecArgs> getValidate() {

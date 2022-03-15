@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.RulesEngineArgs;
 import io.pulumi.azurenative.network.outputs.RulesEngineRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class RulesEngine extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class RulesEngine extends io.pulumi.resources.CustomResource {
      * Resource status.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -63,7 +63,7 @@ public class RulesEngine extends io.pulumi.resources.CustomResource {
      * A list of rules that define a particular Rules Engine Configuration.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={RulesEngineRuleResponse.class})
+    @Export(name="rules", type=List.class, parameters={RulesEngineRuleResponse.class})
     private Output</* @Nullable */ List<RulesEngineRuleResponse>> rules;
 
     /**
@@ -77,7 +77,7 @@ public class RulesEngine extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

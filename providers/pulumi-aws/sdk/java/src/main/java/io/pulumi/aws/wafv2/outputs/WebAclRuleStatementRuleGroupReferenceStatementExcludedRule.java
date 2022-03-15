@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementRuleGroupReferenceStatementExcludedRule {
     /**
      * The name of the rule to exclude. If the rule group is managed by AWS, see the [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html) for a list of names in the appropriate rule group in use.
@@ -15,8 +15,8 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementExcludedRule {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleStatementRuleGroupReferenceStatementExcludedRule(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private WebAclRuleStatementRuleGroupReferenceStatementExcludedRule(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

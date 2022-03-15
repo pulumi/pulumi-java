@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContactListTag {
     private final String key;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactListTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.PipelineJobErrorResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * An optional description for the pipeline.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * Details about the error, in case the pipeline job fails.
      * 
      */
-    @OutputExport(name="error", type=PipelineJobErrorResponse.class, parameters={})
+    @Export(name="error", type=PipelineJobErrorResponse.class, parameters={})
     private Output<PipelineJobErrorResponse> error;
 
     /**
@@ -65,7 +65,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * The date-time by when this pipeline job will be automatically deleted from your account.
      * 
      */
-    @OutputExport(name="expiration", type=String.class, parameters={})
+    @Export(name="expiration", type=String.class, parameters={})
     private Output<String> expiration;
 
     /**
@@ -79,7 +79,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ParameterDefinitionResponse.class})
+    @Export(name="parameters", type=List.class, parameters={ParameterDefinitionResponse.class})
     private Output</* @Nullable */ List<ParameterDefinitionResponse>> parameters;
 
     /**
@@ -107,7 +107,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * Current state of the pipeline (read-only).
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -121,7 +121,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -135,7 +135,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
      * 
      */
-    @OutputExport(name="topologyName", type=String.class, parameters={})
+    @Export(name="topologyName", type=String.class, parameters={})
     private Output<String> topologyName;
 
     /**
@@ -149,7 +149,7 @@ public class PipelineJob extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

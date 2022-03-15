@@ -8,7 +8,7 @@ import io.pulumi.azurenative.iotsecurity.SensorArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Last connectivity time of the IoT sensor
      * 
      */
-    @OutputExport(name="connectivityTime", type=String.class, parameters={})
+    @Export(name="connectivityTime", type=String.class, parameters={})
     private Output<String> connectivityTime;
 
     /**
@@ -50,7 +50,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Dynamic mode status of the IoT sensor
      * 
      */
-    @OutputExport(name="dynamicLearning", type=Boolean.class, parameters={})
+    @Export(name="dynamicLearning", type=Boolean.class, parameters={})
     private Output<Boolean> dynamicLearning;
 
     /**
@@ -64,7 +64,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Learning mode status of the IoT sensor
      * 
      */
-    @OutputExport(name="learningMode", type=Boolean.class, parameters={})
+    @Export(name="learningMode", type=Boolean.class, parameters={})
     private Output<Boolean> learningMode;
 
     /**
@@ -78,7 +78,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Status of the IoT sensor
      * 
      */
-    @OutputExport(name="sensorStatus", type=String.class, parameters={})
+    @Export(name="sensorStatus", type=String.class, parameters={})
     private Output<String> sensorStatus;
 
     /**
@@ -106,7 +106,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Type of sensor
      * 
      */
-    @OutputExport(name="sensorType", type=String.class, parameters={})
+    @Export(name="sensorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sensorType;
 
     /**
@@ -120,7 +120,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Version of the IoT sensor
      * 
      */
-    @OutputExport(name="sensorVersion", type=String.class, parameters={})
+    @Export(name="sensorVersion", type=String.class, parameters={})
     private Output<String> sensorVersion;
 
     /**
@@ -134,7 +134,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -148,7 +148,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * TI Automatic mode status of the IoT sensor
      * 
      */
-    @OutputExport(name="tiAutomaticUpdates", type=Boolean.class, parameters={})
+    @Export(name="tiAutomaticUpdates", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tiAutomaticUpdates;
 
     /**
@@ -162,7 +162,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * TI Status of the IoT sensor
      * 
      */
-    @OutputExport(name="tiStatus", type=String.class, parameters={})
+    @Export(name="tiStatus", type=String.class, parameters={})
     private Output<String> tiStatus;
 
     /**
@@ -176,7 +176,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * TI Version of the IoT sensor
      * 
      */
-    @OutputExport(name="tiVersion", type=String.class, parameters={})
+    @Export(name="tiVersion", type=String.class, parameters={})
     private Output<String> tiVersion;
 
     /**
@@ -190,7 +190,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -204,7 +204,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * Zone of the IoT sensor
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
     /**

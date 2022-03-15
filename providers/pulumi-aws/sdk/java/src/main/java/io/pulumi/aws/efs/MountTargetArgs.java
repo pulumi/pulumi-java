@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the file system for which the mount target is intended.
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -31,7 +31,7 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
      * which the file system may be mounted via the mount target.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -43,7 +43,7 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
      * be for the same VPC as subnet specified) in effect for the mount target.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -54,7 +54,7 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the subnet to add the mount target in.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

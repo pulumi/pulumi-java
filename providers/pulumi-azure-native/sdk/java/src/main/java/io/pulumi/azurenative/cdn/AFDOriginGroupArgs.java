@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cdn.inputs.LoadBalancingSettingsParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    @InputImport(name="healthProbeSettings")
+    @Import(name="healthProbeSettings")
       private final @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
     public Output<HealthProbeParametersArgs> getHealthProbeSettings() {
@@ -35,7 +35,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Load balancing settings for a backend pool
      * 
      */
-    @InputImport(name="loadBalancingSettings")
+    @Import(name="loadBalancingSettings")
       private final @Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
 
     public Output<LoadBalancingSettingsParametersArgs> getLoadBalancingSettings() {
@@ -46,7 +46,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the origin group which is unique within the endpoint.
      * 
      */
-    @InputImport(name="originGroupName")
+    @Import(name="originGroupName")
       private final @Nullable Output<String> originGroupName;
 
     public Output<String> getOriginGroupName() {
@@ -57,7 +57,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -68,7 +68,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -79,7 +79,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    @InputImport(name="responseBasedAfdOriginErrorDetectionSettings")
+    @Import(name="responseBasedAfdOriginErrorDetectionSettings")
       private final @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
 
     public Output<ResponseBasedOriginErrorDetectionParametersArgs> getResponseBasedAfdOriginErrorDetectionSettings() {
@@ -90,7 +90,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="sessionAffinityState")
+    @Import(name="sessionAffinityState")
       private final @Nullable Output<Either<String,EnabledState>> sessionAffinityState;
 
     public Output<Either<String,EnabledState>> getSessionAffinityState() {
@@ -101,7 +101,7 @@ public final class AFDOriginGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
+    @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
       private final @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Output<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {

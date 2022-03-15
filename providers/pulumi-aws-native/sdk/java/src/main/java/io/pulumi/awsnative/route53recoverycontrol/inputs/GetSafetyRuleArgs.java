@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSafetyRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the safety rule.
      * 
      */
-    @InputImport(name="safetyRuleArn", required=true)
+    @Import(name="safetyRuleArn", required=true)
       private final String safetyRuleArn;
 
     public String getSafetyRuleArn() {

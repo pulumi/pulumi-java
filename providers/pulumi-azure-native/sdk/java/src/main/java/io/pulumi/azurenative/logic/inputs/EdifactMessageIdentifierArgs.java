@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EdifactMessageIdentifierArgs extends io.pulumi.resources.Reso
      * The message id on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
     public Output<String> getMessageId() {

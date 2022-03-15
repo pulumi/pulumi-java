@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.FhirStoreIamBindingArgs;
@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:healthcare/fhirStoreIamBinding:FhirStoreIamBinding")
 public class FhirStoreIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=FhirStoreIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=FhirStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ FhirStoreIamBindingCondition> condition;
 
     public Output</* @Nullable */ FhirStoreIamBindingCondition> getCondition() {
@@ -70,7 +70,7 @@ public class FhirStoreIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the FHIR store's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -87,7 +87,7 @@ public class FhirStoreIamBinding extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="fhirStoreId", type=String.class, parameters={})
+    @Export(name="fhirStoreId", type=String.class, parameters={})
     private Output<String> fhirStoreId;
 
     /**
@@ -100,7 +100,7 @@ public class FhirStoreIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -112,7 +112,7 @@ public class FhirStoreIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

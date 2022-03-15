@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupUser {
     /**
      * The Amazon Resource Name (ARN) specifying the iam user.
@@ -30,12 +30,12 @@ public final class GetGroupUser {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupUser(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("userName") String userName) {
         this.arn = arn;
         this.path = path;
         this.userId = userId;

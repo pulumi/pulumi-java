@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetPrivateIpAddressSpecification {
     private final @Nullable Boolean primary;
     private final String privateIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetPrivateIpAddressSpecification(
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress) {
+        @CustomType.Parameter("primary") @Nullable Boolean primary,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress) {
         this.primary = primary;
         this.privateIpAddress = privateIpAddress;
     }

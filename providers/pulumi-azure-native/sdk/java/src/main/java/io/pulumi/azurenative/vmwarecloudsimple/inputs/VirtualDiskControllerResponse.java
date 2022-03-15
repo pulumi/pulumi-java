@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
      * Controller's id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
      * The display name of Controller
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
      * dik controller subtype (VMWARE_PARAVIRTUAL, BUS_PARALLEL, LSI_PARALLEL, LSI_SAS)
      * 
      */
-    @InputImport(name="subType", required=true)
+    @Import(name="subType", required=true)
       private final String subType;
 
     public String getSubType() {
@@ -53,7 +53,7 @@ public final class VirtualDiskControllerResponse extends io.pulumi.resources.Inv
      * disk controller type (SCSI)
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

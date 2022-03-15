@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final Output<List<SecretReplicationUserManagedReplicaArgs>> replicas;
 
     public Output<List<SecretReplicationUserManagedReplicaArgs>> getReplicas() {

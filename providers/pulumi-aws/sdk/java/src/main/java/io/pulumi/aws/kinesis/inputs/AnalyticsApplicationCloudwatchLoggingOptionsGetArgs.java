@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends i
      * The ARN of the Kinesis Analytics Application.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -29,7 +29,7 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends i
      * The ARN of the CloudWatch Log Stream.
      * 
      */
-    @InputImport(name="logStreamArn", required=true)
+    @Import(name="logStreamArn", required=true)
       private final Output<String> logStreamArn;
 
     public Output<String> getLogStreamArn() {
@@ -40,7 +40,7 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsGetArgs extends i
      * The ARN of the IAM Role used to send application messages.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

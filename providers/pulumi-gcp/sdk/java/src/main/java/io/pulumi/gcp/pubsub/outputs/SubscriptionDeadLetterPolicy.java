@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionDeadLetterPolicy {
     /**
      * The name of the topic to which dead letter messages should be published.
@@ -38,10 +38,10 @@ public final class SubscriptionDeadLetterPolicy {
      */
     private final @Nullable Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionDeadLetterPolicy(
-        @OutputCustomType.Parameter("deadLetterTopic") @Nullable String deadLetterTopic,
-        @OutputCustomType.Parameter("maxDeliveryAttempts") @Nullable Integer maxDeliveryAttempts) {
+        @CustomType.Parameter("deadLetterTopic") @Nullable String deadLetterTopic,
+        @CustomType.Parameter("maxDeliveryAttempts") @Nullable Integer maxDeliveryAttempts) {
         this.deadLetterTopic = deadLetterTopic;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }

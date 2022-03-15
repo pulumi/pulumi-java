@@ -6,7 +6,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchema;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjection;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableWriteProvisionedThroughputSettings;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class GlobalTableGlobalSecondaryIndex extends io.pulumi.resources.I
 
     public static final GlobalTableGlobalSecondaryIndex Empty = new GlobalTableGlobalSecondaryIndex();
 
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final String indexName;
 
     public String getIndexName() {
         return this.indexName;
     }
 
-    @InputImport(name="keySchema", required=true)
+    @Import(name="keySchema", required=true)
       private final List<GlobalTableKeySchema> keySchema;
 
     public List<GlobalTableKeySchema> getKeySchema() {
         return this.keySchema;
     }
 
-    @InputImport(name="projection", required=true)
+    @Import(name="projection", required=true)
       private final GlobalTableProjection projection;
 
     public GlobalTableProjection getProjection() {
         return this.projection;
     }
 
-    @InputImport(name="writeProvisionedThroughputSettings")
+    @Import(name="writeProvisionedThroughputSettings")
       private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
     public Optional<GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {

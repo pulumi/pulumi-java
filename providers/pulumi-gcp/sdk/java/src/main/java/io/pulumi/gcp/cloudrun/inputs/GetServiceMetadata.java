@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -14,49 +14,49 @@ public final class GetServiceMetadata extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceMetadata Empty = new GetServiceMetadata();
 
-    @InputImport(name="annotations", required=true)
+    @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
 
-    @InputImport(name="generation", required=true)
+    @Import(name="generation", required=true)
       private final Integer generation;
 
     public Integer getGeneration() {
         return this.generation;
     }
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
     }
 
-    @InputImport(name="resourceVersion", required=true)
+    @Import(name="resourceVersion", required=true)
       private final String resourceVersion;
 
     public String getResourceVersion() {
         return this.resourceVersion;
     }
 
-    @InputImport(name="selfLink", required=true)
+    @Import(name="selfLink", required=true)
       private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
     }
 
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final String uid;
 
     public String getUid() {

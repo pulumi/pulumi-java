@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.ExprArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
      * The request conditions to meet to grant access. In addition to any supported comparison operators, authorization rules may have `IN` operator as well as at most 10 logical operators that are limited to `AND` (`&&`), `OR` (`||`).
      * 
      */
-    @InputImport(name="authorizationRule", required=true)
+    @Import(name="authorizationRule", required=true)
       private final Output<ExprArgs> authorizationRule;
 
     public Output<ExprArgs> getAuthorizationRule() {
@@ -35,7 +35,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
      * The resources that this policy applies to. A resource is a match if it matches all the attributes listed here. If empty, this policy applies to all User data mappings for the given user.
      * 
      */
-    @InputImport(name="resourceAttributes")
+    @Import(name="resourceAttributes")
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
     public Output<List<AttributeArgs>> getResourceAttributes() {

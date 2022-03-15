@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3IntentParameterResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3IntentResponse {
     /**
      * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
@@ -56,16 +56,16 @@ public final class GoogleCloudDialogflowCxV3IntentResponse {
      */
     private final List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3IntentResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("isFallback") Boolean isFallback,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("trainingPhrases") List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("isFallback") Boolean isFallback,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("trainingPhrases") List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
         this.description = description;
         this.displayName = displayName;
         this.isFallback = isFallback;

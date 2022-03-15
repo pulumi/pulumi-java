@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceIamPolicyArgs;
@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:compute/backendServiceIamPolicy:BackendServiceIamPolicy")
 public class BackendServiceIamPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     public Output<String> getPolicyData() {
         return this.policyData;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {

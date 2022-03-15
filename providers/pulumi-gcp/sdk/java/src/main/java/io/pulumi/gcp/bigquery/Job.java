@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.JobArgs;
@@ -67,7 +67,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="copy", type=JobCopy.class, parameters={})
+    @Export(name="copy", type=JobCopy.class, parameters={})
     private Output</* @Nullable */ JobCopy> copy;
 
     /**
@@ -83,7 +83,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="extract", type=JobExtract.class, parameters={})
+    @Export(name="extract", type=JobExtract.class, parameters={})
     private Output</* @Nullable */ JobExtract> extract;
 
     /**
@@ -98,7 +98,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
      */
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     /**
@@ -112,7 +112,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
      */
-    @OutputExport(name="jobTimeoutMs", type=String.class, parameters={})
+    @Export(name="jobTimeoutMs", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobTimeoutMs;
 
     /**
@@ -126,7 +126,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The type of the job.
      * 
      */
-    @OutputExport(name="jobType", type=String.class, parameters={})
+    @Export(name="jobType", type=String.class, parameters={})
     private Output<String> jobType;
 
     /**
@@ -140,7 +140,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The labels associated with this job. You can use these to organize and group your jobs.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -155,7 +155,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="load", type=JobLoad.class, parameters={})
+    @Export(name="load", type=JobLoad.class, parameters={})
     private Output</* @Nullable */ JobLoad> load;
 
     /**
@@ -170,7 +170,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The geographic location of the job. The default value is US.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -185,7 +185,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -201,7 +201,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="query", type=JobQuery.class, parameters={})
+    @Export(name="query", type=JobQuery.class, parameters={})
     private Output</* @Nullable */ JobQuery> query;
 
     /**
@@ -216,7 +216,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={JobStatus.class})
+    @Export(name="statuses", type=List.class, parameters={JobStatus.class})
     private Output<List<JobStatus>> statuses;
 
     /**
@@ -230,7 +230,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Email address of the user who ran the job.
      * 
      */
-    @OutputExport(name="userEmail", type=String.class, parameters={})
+    @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to auto generate file name.
      * 
      */
-    @InputImport(name="autogenerateFileName", required=true)
+    @Import(name="autogenerateFileName", required=true)
       private final Output<Boolean> autogenerateFileName;
 
     public Output<Boolean> getAutogenerateFileName() {
@@ -33,7 +33,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * The template for file name.
      * 
      */
-    @InputImport(name="fileNameTemplate", required=true)
+    @Import(name="fileNameTemplate", required=true)
       private final Output<String> fileNameTemplate;
 
     public Output<String> getFileNameTemplate() {
@@ -44,7 +44,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * The message content type.
      * 
      */
-    @InputImport(name="messageContentType", required=true)
+    @Import(name="messageContentType", required=true)
       private final Output<String> messageContentType;
 
     public Output<String> getMessageContentType() {
@@ -55,7 +55,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to suspend message on file name generation error.
      * 
      */
-    @InputImport(name="suspendMessageOnFileNameGenerationError", required=true)
+    @Import(name="suspendMessageOnFileNameGenerationError", required=true)
       private final Output<Boolean> suspendMessageOnFileNameGenerationError;
 
     public Output<Boolean> getSuspendMessageOnFileNameGenerationError() {
@@ -66,7 +66,7 @@ public final class AS2EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * The value indicating whether to transmit file name in mime header.
      * 
      */
-    @InputImport(name="transmitFileNameInMimeHeader", required=true)
+    @Import(name="transmitFileNameInMimeHeader", required=true)
       private final Output<Boolean> transmitFileNameInMimeHeader;
 
     public Output<Boolean> getTransmitFileNameInMimeHeader() {

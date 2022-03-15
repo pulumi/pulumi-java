@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleOption {
     private final String keyword;
     private final @Nullable List<String> settings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleOption(
-        @OutputCustomType.Parameter("keyword") String keyword,
-        @OutputCustomType.Parameter("settings") @Nullable List<String> settings) {
+        @CustomType.Parameter("keyword") String keyword,
+        @CustomType.Parameter("settings") @Nullable List<String> settings) {
         this.keyword = keyword;
         this.settings = settings;
     }

@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolNodeConfigLinuxNodeConfig {
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor
-    private GetClusterNodePoolNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
+    @CustomType.Constructor
+    private GetClusterNodePoolNodeConfigLinuxNodeConfig(@CustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 

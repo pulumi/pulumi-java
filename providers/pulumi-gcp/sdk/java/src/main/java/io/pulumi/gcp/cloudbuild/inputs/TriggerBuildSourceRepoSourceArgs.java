@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -33,7 +33,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided.
      * 
      */
-    @InputImport(name="commitSha")
+    @Import(name="commitSha")
       private final @Nullable Output<String> commitSha;
 
     public Output<String> getCommitSha() {
@@ -52,7 +52,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * for the step's execution.
      * 
      */
-    @InputImport(name="dir")
+    @Import(name="dir")
       private final @Nullable Output<String> dir;
 
     public Output<String> getDir() {
@@ -63,7 +63,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
-    @InputImport(name="invertRegex")
+    @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {
@@ -75,7 +75,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * If omitted, the project ID requesting the build is assumed.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -86,7 +86,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * Name of the Cloud Source Repository.
      * 
      */
-    @InputImport(name="repoName", required=true)
+    @Import(name="repoName", required=true)
       private final Output<String> repoName;
 
     public Output<String> getRepoName() {
@@ -97,7 +97,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
-    @InputImport(name="substitutions")
+    @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
     public Output<Map<String,String>> getSubstitutions() {
@@ -110,7 +110,7 @@ public final class TriggerBuildSourceRepoSourceArgs extends io.pulumi.resources.
      * described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="tagName")
+    @Import(name="tagName")
       private final @Nullable Output<String> tagName;
 
     public Output<String> getTagName() {

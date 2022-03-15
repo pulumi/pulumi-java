@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
 
     public static final ResourcePolicyVmMaintenancePolicyResponse Empty = new ResourcePolicyVmMaintenancePolicyResponse();
 
-    @InputImport(name="concurrencyControlGroup", required=true)
+    @Import(name="concurrencyControlGroup", required=true)
       private final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup;
 
     public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse getConcurrencyControlGroup() {
@@ -24,7 +24,7 @@ public final class ResourcePolicyVmMaintenancePolicyResponse extends io.pulumi.r
      * Maintenance windows that are applied to VMs covered by this policy.
      * 
      */
-    @InputImport(name="maintenanceWindow", required=true)
+    @Import(name="maintenanceWindow", required=true)
       private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
     public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse getMaintenanceWindow() {

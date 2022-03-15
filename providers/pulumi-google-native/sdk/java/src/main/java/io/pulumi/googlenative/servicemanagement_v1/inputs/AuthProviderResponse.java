@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences will be accepted. When this setting is absent, JWTs with audiences: - "https://[service.name]/[google.protobuf.Api.name]" - "https://[service.name]/" will be accepted. For example, if no audiences are in the setting, LibraryService API will accept JWTs with the following audiences: - https://library-example.googleapis.com/google.example.library.v1.LibraryService - https://library-example.googleapis.com/ Example: audiences: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
      * 
      */
-    @InputImport(name="audiences", required=true)
+    @Import(name="audiences", required=true)
       private final String audiences;
 
     public String getAudiences() {
@@ -33,7 +33,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * Redirect URL if JWT token is required but not present or is expired. Implement authorizationUrl of securityDefinitions in OpenAPI spec.
      * 
      */
-    @InputImport(name="authorizationUrl", required=true)
+    @Import(name="authorizationUrl", required=true)
       private final String authorizationUrl;
 
     public String getAuthorizationUrl() {
@@ -44,7 +44,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the principal that issued the JWT. See https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1 Usually a URL or an email address. Example: https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -55,7 +55,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * URL of the provider's public key set to validate signature of the JWT. See [OpenID Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata). Optional if the key set document: - can be retrieved from [OpenID Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) of the issuer. - can be inferred from the email domain of the issuer (e.g. a Google service account). Example: https://www.googleapis.com/oauth2/v1/certs
      * 
      */
-    @InputImport(name="jwksUri", required=true)
+    @Import(name="jwksUri", required=true)
       private final String jwksUri;
 
     public String getJwksUri() {
@@ -66,7 +66,7 @@ public final class AuthProviderResponse extends io.pulumi.resources.InvokeArgs {
      * Defines the locations to extract the JWT. JWT locations can be either from HTTP headers or URL query parameters. The rule is that the first match wins. The checking order is: checking all headers first, then URL query parameters. If not specified, default to use following 3 locations: 1) Authorization: Bearer 2) x-goog-iap-jwt-assertion 3) access_token query parameter Default locations can be specified as followings: jwt_locations: - header: Authorization value_prefix: "Bearer " - header: x-goog-iap-jwt-assertion - query: access_token
      * 
      */
-    @InputImport(name="jwtLocations", required=true)
+    @Import(name="jwtLocations", required=true)
       private final List<JwtLocationResponse> jwtLocations;
 
     public List<JwtLocationResponse> getJwtLocations() {

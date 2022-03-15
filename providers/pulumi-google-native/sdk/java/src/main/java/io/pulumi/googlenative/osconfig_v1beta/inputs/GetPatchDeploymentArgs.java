@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetPatchDeploymentArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetPatchDeploymentArgs Empty = new GetPatchDeploymentArgs();
 
-    @InputImport(name="patchDeploymentId", required=true)
+    @Import(name="patchDeploymentId", required=true)
       private final String patchDeploymentId;
 
     public String getPatchDeploymentId() {
         return this.patchDeploymentId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

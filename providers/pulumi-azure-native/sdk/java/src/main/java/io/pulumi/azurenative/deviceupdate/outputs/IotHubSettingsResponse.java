@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotHubSettingsResponse {
     /**
      * EventHub connection string.
@@ -27,11 +27,11 @@ public final class IotHubSettingsResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotHubSettingsResponse(
-        @OutputCustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
-        @OutputCustomType.Parameter("ioTHubConnectionString") @Nullable String ioTHubConnectionString,
-        @OutputCustomType.Parameter("resourceId") String resourceId) {
+        @CustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
+        @CustomType.Parameter("ioTHubConnectionString") @Nullable String ioTHubConnectionString,
+        @CustomType.Parameter("resourceId") String resourceId) {
         this.eventHubConnectionString = eventHubConnectionString;
         this.ioTHubConnectionString = ioTHubConnectionString;
         this.resourceId = resourceId;

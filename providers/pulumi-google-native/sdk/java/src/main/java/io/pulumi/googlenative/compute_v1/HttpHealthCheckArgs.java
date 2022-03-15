@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
      */
-    @InputImport(name="checkIntervalSec")
+    @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
 
     public Output<Integer> getCheckIntervalSec() {
@@ -30,7 +30,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
      */
-    @InputImport(name="healthyThreshold")
+    @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -52,7 +52,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -63,7 +63,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,21 +74,21 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * The TCP port number for the HTTP health check request. The default value is 80.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -99,7 +99,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * The request path of the HTTP health check request. The default value is /. This field does not support query parameters.
      * 
      */
-    @InputImport(name="requestPath")
+    @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
     public Output<String> getRequestPath() {
@@ -110,7 +110,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
      * 
      */
-    @InputImport(name="timeoutSec")
+    @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {
@@ -121,7 +121,7 @@ public final class HttpHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

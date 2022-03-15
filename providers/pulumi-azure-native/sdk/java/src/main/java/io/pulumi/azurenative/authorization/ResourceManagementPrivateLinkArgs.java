@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * the region to create private link association.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -29,7 +29,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * The name of the resource group the template will be deployed to. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class ResourceManagementPrivateLinkArgs extends io.pulumi.resources
      * The name of the resource management private link.
      * 
      */
-    @InputImport(name="rmplName")
+    @Import(name="rmplName")
       private final @Nullable Output<String> rmplName;
 
     public Output<String> getRmplName() {

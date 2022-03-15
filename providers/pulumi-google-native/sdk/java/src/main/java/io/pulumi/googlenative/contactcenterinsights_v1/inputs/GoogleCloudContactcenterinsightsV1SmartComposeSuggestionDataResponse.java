@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * The system's confidence score that this suggestion is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
-    @InputImport(name="confidenceScore", required=true)
+    @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
 
     public Double getConfidenceScore() {
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * Map that contains metadata about the Smart Compose suggestion and the document from which it originates.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
      */
-    @InputImport(name="queryRecord", required=true)
+    @Import(name="queryRecord", required=true)
       private final String queryRecord;
 
     public String getQueryRecord() {
@@ -55,7 +55,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      * The content of the suggestion.
      * 
      */
-    @InputImport(name="suggestion", required=true)
+    @Import(name="suggestion", required=true)
       private final String suggestion;
 
     public String getSuggestion() {

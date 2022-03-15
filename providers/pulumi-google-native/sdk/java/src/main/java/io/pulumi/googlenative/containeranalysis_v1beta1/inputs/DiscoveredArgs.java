@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveredAnalysisStatus;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveredContinuousAnalysis;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.StatusArgs;
@@ -24,7 +24,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * The status of discovery for the resource.
      * 
      */
-    @InputImport(name="analysisStatus")
+    @Import(name="analysisStatus")
       private final @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
 
     public Output<DiscoveredAnalysisStatus> getAnalysisStatus() {
@@ -35,7 +35,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
      * 
      */
-    @InputImport(name="analysisStatusError")
+    @Import(name="analysisStatusError")
       private final @Nullable Output<StatusArgs> analysisStatusError;
 
     public Output<StatusArgs> getAnalysisStatusError() {
@@ -46,7 +46,7 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the resource is continuously analyzed.
      * 
      */
-    @InputImport(name="continuousAnalysis")
+    @Import(name="continuousAnalysis")
       private final @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
 
     public Output<DiscoveredContinuousAnalysis> getContinuousAnalysis() {

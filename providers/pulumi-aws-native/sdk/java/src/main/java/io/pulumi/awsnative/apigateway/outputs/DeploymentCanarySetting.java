@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentCanarySetting {
     /**
      * The percent (0-100) of traffic diverted to a canary deployment.
@@ -29,11 +29,11 @@ public final class DeploymentCanarySetting {
      */
     private final @Nullable Boolean useStageCache;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentCanarySetting(
-        @OutputCustomType.Parameter("percentTraffic") @Nullable Double percentTraffic,
-        @OutputCustomType.Parameter("stageVariableOverrides") @Nullable Object stageVariableOverrides,
-        @OutputCustomType.Parameter("useStageCache") @Nullable Boolean useStageCache) {
+        @CustomType.Parameter("percentTraffic") @Nullable Double percentTraffic,
+        @CustomType.Parameter("stageVariableOverrides") @Nullable Object stageVariableOverrides,
+        @CustomType.Parameter("useStageCache") @Nullable Boolean useStageCache) {
         this.percentTraffic = percentTraffic;
         this.stageVariableOverrides = stageVariableOverrides;
         this.useStageCache = useStageCache;

@@ -3,25 +3,25 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetGroupStickiness {
     private final Integer cookieDuration;
     private final String cookieName;
     private final Boolean enabled;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetGroupStickiness(
-        @OutputCustomType.Parameter("cookieDuration") Integer cookieDuration,
-        @OutputCustomType.Parameter("cookieName") String cookieName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cookieDuration") Integer cookieDuration,
+        @CustomType.Parameter("cookieName") String cookieName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("type") String type) {
         this.cookieDuration = cookieDuration;
         this.cookieName = cookieName;
         this.enabled = enabled;

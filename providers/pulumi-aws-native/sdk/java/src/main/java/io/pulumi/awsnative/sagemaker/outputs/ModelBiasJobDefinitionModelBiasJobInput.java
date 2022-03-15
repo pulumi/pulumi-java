@@ -5,18 +5,18 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionEndpointInput;
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionMonitoringGroundTruthS3Input;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionModelBiasJobInput {
     private final ModelBiasJobDefinitionEndpointInput endpointInput;
     private final ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelBiasJobDefinitionModelBiasJobInput(
-        @OutputCustomType.Parameter("endpointInput") ModelBiasJobDefinitionEndpointInput endpointInput,
-        @OutputCustomType.Parameter("groundTruthS3Input") ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
+        @CustomType.Parameter("endpointInput") ModelBiasJobDefinitionEndpointInput endpointInput,
+        @CustomType.Parameter("groundTruthS3Input") ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
         this.endpointInput = endpointInput;
         this.groundTruthS3Input = groundTruthS3Input;
     }

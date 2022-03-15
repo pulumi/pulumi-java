@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
      * The repository name prefix to use when caching images from the source registry.
      * 
      */
-    @InputImport(name="ecrRepositoryPrefix", required=true)
+    @Import(name="ecrRepositoryPrefix", required=true)
       private final Output<String> ecrRepositoryPrefix;
 
     public Output<String> getEcrRepositoryPrefix() {
@@ -28,7 +28,7 @@ public final class PullThroughCacheRuleArgs extends io.pulumi.resources.Resource
      * The registry URL of the upstream public registry to use as the source.
      * 
      */
-    @InputImport(name="upstreamRegistryUrl", required=true)
+    @Import(name="upstreamRegistryUrl", required=true)
       private final Output<String> upstreamRegistryUrl;
 
     public Output<String> getUpstreamRegistryUrl() {

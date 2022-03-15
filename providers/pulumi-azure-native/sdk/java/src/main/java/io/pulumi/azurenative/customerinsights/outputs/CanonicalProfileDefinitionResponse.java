@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.CanonicalProfileDefinitionResponseProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanonicalProfileDefinitionResponse {
     /**
      * Canonical profile ID.
@@ -24,10 +24,10 @@ public final class CanonicalProfileDefinitionResponse {
      */
     private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanonicalProfileDefinitionResponse(
-        @OutputCustomType.Parameter("canonicalProfileId") @Nullable Integer canonicalProfileId,
-        @OutputCustomType.Parameter("properties") @Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
+        @CustomType.Parameter("canonicalProfileId") @Nullable Integer canonicalProfileId,
+        @CustomType.Parameter("properties") @Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
         this.canonicalProfileId = canonicalProfileId;
         this.properties = properties;
     }

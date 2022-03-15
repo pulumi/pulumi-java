@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.BandwidthScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBandwidthSettingResult {
     /**
      * The path ID that uniquely identifies the object.
@@ -45,14 +45,14 @@ public final class GetBandwidthSettingResult {
      */
     private final Integer volumeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBandwidthSettingResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedules") List<BandwidthScheduleResponse> schedules,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeCount") Integer volumeCount) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedules") List<BandwidthScheduleResponse> schedules,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeCount") Integer volumeCount) {
         this.id = id;
         this.kind = kind;
         this.name = name;

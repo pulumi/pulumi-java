@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.managedidentities_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupResult {
     /**
      * The time the backups was created.
@@ -46,15 +46,15 @@ public final class GetBackupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.labels = labels;
         this.name = name;

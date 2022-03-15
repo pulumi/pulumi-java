@@ -5,7 +5,7 @@ package io.pulumi.awsnative.servicecatalog.inputs;
 
 import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,49 +17,49 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
 
     public static final CloudFormationProvisionedProductProvisioningPreferencesArgs Empty = new CloudFormationProvisionedProductProvisioningPreferencesArgs();
 
-    @InputImport(name="stackSetAccounts")
+    @Import(name="stackSetAccounts")
       private final @Nullable Output<List<String>> stackSetAccounts;
 
     public Output<List<String>> getStackSetAccounts() {
         return this.stackSetAccounts == null ? Output.empty() : this.stackSetAccounts;
     }
 
-    @InputImport(name="stackSetFailureToleranceCount")
+    @Import(name="stackSetFailureToleranceCount")
       private final @Nullable Output<Integer> stackSetFailureToleranceCount;
 
     public Output<Integer> getStackSetFailureToleranceCount() {
         return this.stackSetFailureToleranceCount == null ? Output.empty() : this.stackSetFailureToleranceCount;
     }
 
-    @InputImport(name="stackSetFailureTolerancePercentage")
+    @Import(name="stackSetFailureTolerancePercentage")
       private final @Nullable Output<Integer> stackSetFailureTolerancePercentage;
 
     public Output<Integer> getStackSetFailureTolerancePercentage() {
         return this.stackSetFailureTolerancePercentage == null ? Output.empty() : this.stackSetFailureTolerancePercentage;
     }
 
-    @InputImport(name="stackSetMaxConcurrencyCount")
+    @Import(name="stackSetMaxConcurrencyCount")
       private final @Nullable Output<Integer> stackSetMaxConcurrencyCount;
 
     public Output<Integer> getStackSetMaxConcurrencyCount() {
         return this.stackSetMaxConcurrencyCount == null ? Output.empty() : this.stackSetMaxConcurrencyCount;
     }
 
-    @InputImport(name="stackSetMaxConcurrencyPercentage")
+    @Import(name="stackSetMaxConcurrencyPercentage")
       private final @Nullable Output<Integer> stackSetMaxConcurrencyPercentage;
 
     public Output<Integer> getStackSetMaxConcurrencyPercentage() {
         return this.stackSetMaxConcurrencyPercentage == null ? Output.empty() : this.stackSetMaxConcurrencyPercentage;
     }
 
-    @InputImport(name="stackSetOperationType")
+    @Import(name="stackSetOperationType")
       private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
 
     public Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
         return this.stackSetOperationType == null ? Output.empty() : this.stackSetOperationType;
     }
 
-    @InputImport(name="stackSetRegions")
+    @Import(name="stackSetRegions")
       private final @Nullable Output<List<String>> stackSetRegions;
 
     public Output<List<String>> getStackSetRegions() {

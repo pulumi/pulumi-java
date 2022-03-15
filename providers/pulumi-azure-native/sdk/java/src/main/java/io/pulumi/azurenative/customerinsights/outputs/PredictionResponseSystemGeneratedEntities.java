@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PredictionResponseSystemGeneratedEntities {
     /**
      * Generated interaction types.
@@ -28,11 +28,11 @@ public final class PredictionResponseSystemGeneratedEntities {
      */
     private final @Nullable List<String> generatedLinks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PredictionResponseSystemGeneratedEntities(
-        @OutputCustomType.Parameter("generatedInteractionTypes") @Nullable List<String> generatedInteractionTypes,
-        @OutputCustomType.Parameter("generatedKpis") @Nullable Map<String,String> generatedKpis,
-        @OutputCustomType.Parameter("generatedLinks") @Nullable List<String> generatedLinks) {
+        @CustomType.Parameter("generatedInteractionTypes") @Nullable List<String> generatedInteractionTypes,
+        @CustomType.Parameter("generatedKpis") @Nullable Map<String,String> generatedKpis,
+        @CustomType.Parameter("generatedLinks") @Nullable List<String> generatedLinks) {
         this.generatedInteractionTypes = generatedInteractionTypes;
         this.generatedKpis = generatedKpis;
         this.generatedLinks = generatedLinks;

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.outputs.StackSetDeploymentTargets;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackSetStackInstances {
     private final StackSetDeploymentTargets deploymentTargets;
     /**
@@ -25,11 +25,11 @@ public final class StackSetStackInstances {
      */
     private final List<String> regions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackSetStackInstances(
-        @OutputCustomType.Parameter("deploymentTargets") StackSetDeploymentTargets deploymentTargets,
-        @OutputCustomType.Parameter("parameterOverrides") @Nullable List<StackSetParameter> parameterOverrides,
-        @OutputCustomType.Parameter("regions") List<String> regions) {
+        @CustomType.Parameter("deploymentTargets") StackSetDeploymentTargets deploymentTargets,
+        @CustomType.Parameter("parameterOverrides") @Nullable List<StackSetParameter> parameterOverrides,
+        @CustomType.Parameter("regions") List<String> regions) {
         this.deploymentTargets = deploymentTargets;
         this.parameterOverrides = parameterOverrides;
         this.regions = regions;

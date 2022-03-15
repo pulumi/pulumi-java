@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import io.pulumi.awsnative.connect.inputs.HoursOfOperationTimeSlice;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
      * The day that the hours of operation applies to.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final HoursOfOperationConfigDay day;
 
     public HoursOfOperationConfigDay getDay() {
@@ -32,7 +32,7 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
      * The end time that your contact center closes.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final HoursOfOperationTimeSlice endTime;
 
     public HoursOfOperationTimeSlice getEndTime() {
@@ -43,7 +43,7 @@ public final class HoursOfOperationConfig extends io.pulumi.resources.InvokeArgs
      * The start time that your contact center opens.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final HoursOfOperationTimeSlice startTime;
 
     public HoursOfOperationTimeSlice getStartTime() {

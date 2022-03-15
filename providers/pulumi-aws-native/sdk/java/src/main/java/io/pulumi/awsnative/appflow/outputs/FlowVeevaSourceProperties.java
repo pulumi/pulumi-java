@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowVeevaSourceProperties {
     private final @Nullable String documentType;
     private final @Nullable Boolean includeAllVersions;
@@ -18,13 +18,13 @@ public final class FlowVeevaSourceProperties {
     private final @Nullable Boolean includeSourceFiles;
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowVeevaSourceProperties(
-        @OutputCustomType.Parameter("documentType") @Nullable String documentType,
-        @OutputCustomType.Parameter("includeAllVersions") @Nullable Boolean includeAllVersions,
-        @OutputCustomType.Parameter("includeRenditions") @Nullable Boolean includeRenditions,
-        @OutputCustomType.Parameter("includeSourceFiles") @Nullable Boolean includeSourceFiles,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("documentType") @Nullable String documentType,
+        @CustomType.Parameter("includeAllVersions") @Nullable Boolean includeAllVersions,
+        @CustomType.Parameter("includeRenditions") @Nullable Boolean includeRenditions,
+        @CustomType.Parameter("includeSourceFiles") @Nullable Boolean includeSourceFiles,
+        @CustomType.Parameter("object") String object) {
         this.documentType = documentType;
         this.includeAllVersions = includeAllVersions;
         this.includeRenditions = includeRenditions;

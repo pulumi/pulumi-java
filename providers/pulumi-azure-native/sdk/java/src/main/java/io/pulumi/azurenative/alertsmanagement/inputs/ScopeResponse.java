@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * type of target scope
      * 
      */
-    @InputImport(name="scopeType")
+    @Import(name="scopeType")
       private final @Nullable String scopeType;
 
     public Optional<String> getScopeType() {
@@ -34,7 +34,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * list of ARM IDs of the given scope type which will be the target of the given action rule.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<String> values;
 
     public List<String> getValues() {

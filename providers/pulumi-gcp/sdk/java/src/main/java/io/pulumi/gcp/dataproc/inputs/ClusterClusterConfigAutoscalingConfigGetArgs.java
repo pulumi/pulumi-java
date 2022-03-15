@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends io.pulum
      * The autoscaling policy used by the cluster.
      * 
      */
-    @InputImport(name="policyUri", required=true)
+    @Import(name="policyUri", required=true)
       private final Output<String> policyUri;
 
     public Output<String> getPolicyUri() {

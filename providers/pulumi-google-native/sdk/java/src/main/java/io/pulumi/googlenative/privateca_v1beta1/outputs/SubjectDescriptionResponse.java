@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.SubjectResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubjectDescriptionResponse {
     /**
      * The "common name" of the distinguished name.
@@ -47,15 +47,15 @@ public final class SubjectDescriptionResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectDescriptionResponse(
-        @OutputCustomType.Parameter("commonName") String commonName,
-        @OutputCustomType.Parameter("hexSerialNumber") String hexSerialNumber,
-        @OutputCustomType.Parameter("lifetime") String lifetime,
-        @OutputCustomType.Parameter("notAfterTime") String notAfterTime,
-        @OutputCustomType.Parameter("notBeforeTime") String notBeforeTime,
-        @OutputCustomType.Parameter("subject") SubjectResponse subject,
-        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
+        @CustomType.Parameter("commonName") String commonName,
+        @CustomType.Parameter("hexSerialNumber") String hexSerialNumber,
+        @CustomType.Parameter("lifetime") String lifetime,
+        @CustomType.Parameter("notAfterTime") String notAfterTime,
+        @CustomType.Parameter("notBeforeTime") String notBeforeTime,
+        @CustomType.Parameter("subject") SubjectResponse subject,
+        @CustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.commonName = commonName;
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;

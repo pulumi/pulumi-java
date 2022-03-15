@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseEncryptionResponse {
     /**
      * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
@@ -20,10 +20,10 @@ public final class DatabaseEncryptionResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseEncryptionResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("state") String state) {
         this.keyName = keyName;
         this.state = state;
     }

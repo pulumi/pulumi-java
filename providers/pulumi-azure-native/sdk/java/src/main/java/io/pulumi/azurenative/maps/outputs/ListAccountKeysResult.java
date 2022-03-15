@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListAccountKeysResult {
     /**
      * The full Azure resource identifier of the Maps Account.
@@ -25,11 +25,11 @@ public final class ListAccountKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListAccountKeysResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("primaryKey") String primaryKey,
-        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("primaryKey") String primaryKey,
+        @CustomType.Parameter("secondaryKey") String secondaryKey) {
         this.id = id;
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;

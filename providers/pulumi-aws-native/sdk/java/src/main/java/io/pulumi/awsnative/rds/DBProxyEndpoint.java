@@ -8,7 +8,7 @@ import io.pulumi.awsnative.rds.DBProxyEndpointArgs;
 import io.pulumi.awsnative.rds.enums.DBProxyEndpointTargetRole;
 import io.pulumi.awsnative.rds.outputs.DBProxyEndpointTagFormat;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the DB proxy endpoint.
      * 
      */
-    @OutputExport(name="dBProxyEndpointArn", type=String.class, parameters={})
+    @Export(name="dBProxyEndpointArn", type=String.class, parameters={})
     private Output<String> dBProxyEndpointArn;
 
     /**
@@ -39,7 +39,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * The identifier for the DB proxy endpoint. This name must be unique for all DB proxy endpoints owned by your AWS account in the specified AWS Region.
      * 
      */
-    @OutputExport(name="dBProxyEndpointName", type=String.class, parameters={})
+    @Export(name="dBProxyEndpointName", type=String.class, parameters={})
     private Output<String> dBProxyEndpointName;
 
     /**
@@ -53,7 +53,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
      * 
      */
-    @OutputExport(name="dBProxyName", type=String.class, parameters={})
+    @Export(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
     /**
@@ -67,7 +67,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * The endpoint that you can use to connect to the DB proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -81,7 +81,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * A value that indicates whether this endpoint is the default endpoint for the associated DB proxy. Default DB proxy endpoints always have read/write capability. Other endpoints that you associate with the DB proxy can be either read/write or read-only.
      * 
      */
-    @OutputExport(name="isDefault", type=Boolean.class, parameters={})
+    @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
     /**
@@ -95,7 +95,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DBProxyEndpointTagFormat.class})
+    @Export(name="tags", type=List.class, parameters={DBProxyEndpointTagFormat.class})
     private Output</* @Nullable */ List<DBProxyEndpointTagFormat>> tags;
 
     /**
@@ -109,7 +109,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
      * 
      */
-    @OutputExport(name="targetRole", type=DBProxyEndpointTargetRole.class, parameters={})
+    @Export(name="targetRole", type=DBProxyEndpointTargetRole.class, parameters={})
     private Output</* @Nullable */ DBProxyEndpointTargetRole> targetRole;
 
     /**
@@ -123,7 +123,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * VPC ID to associate with the new DB proxy endpoint.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
@@ -137,7 +137,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * VPC security group IDs to associate with the new DB proxy endpoint.
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
     /**
@@ -151,7 +151,7 @@ public class DBProxyEndpoint extends io.pulumi.resources.CustomResource {
      * VPC subnet IDs to associate with the new DB proxy endpoint.
      * 
      */
-    @OutputExport(name="vpcSubnetIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSubnetIds;
 
     /**

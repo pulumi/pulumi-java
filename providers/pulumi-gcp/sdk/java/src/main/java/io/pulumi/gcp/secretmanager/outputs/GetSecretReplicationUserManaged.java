@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretReplicationUserManagedReplica;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretReplicationUserManaged {
     private final List<GetSecretReplicationUserManagedReplica> replicas;
 
-    @OutputCustomType.Constructor
-    private GetSecretReplicationUserManaged(@OutputCustomType.Parameter("replicas") List<GetSecretReplicationUserManagedReplica> replicas) {
+    @CustomType.Constructor
+    private GetSecretReplicationUserManaged(@CustomType.Parameter("replicas") List<GetSecretReplicationUserManagedReplica> replicas) {
         this.replicas = replicas;
     }
 

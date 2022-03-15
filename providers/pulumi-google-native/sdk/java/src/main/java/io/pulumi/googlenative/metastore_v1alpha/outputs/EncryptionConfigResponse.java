@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionConfigResponse {
     /**
      * The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String kmsKey;
 
-    @OutputCustomType.Constructor
-    private EncryptionConfigResponse(@OutputCustomType.Parameter("kmsKey") String kmsKey) {
+    @CustomType.Constructor
+    private EncryptionConfigResponse(@CustomType.Parameter("kmsKey") String kmsKey) {
         this.kmsKey = kmsKey;
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallTransform;
 import io.pulumi.azurenative.network.inputs.MatchVariableArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Match value.
      * 
      */
-    @InputImport(name="matchValues", required=true)
+    @Import(name="matchValues", required=true)
       private final Output<List<String>> matchValues;
 
     public Output<List<String>> getMatchValues() {
@@ -39,7 +39,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * List of match variables.
      * 
      */
-    @InputImport(name="matchVariables", required=true)
+    @Import(name="matchVariables", required=true)
       private final Output<List<MatchVariableArgs>> matchVariables;
 
     public Output<List<MatchVariableArgs>> getMatchVariables() {
@@ -50,7 +50,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this is negate condition or not.
      * 
      */
-    @InputImport(name="negationConditon")
+    @Import(name="negationConditon")
       private final @Nullable Output<Boolean> negationConditon;
 
     public Output<Boolean> getNegationConditon() {
@@ -61,7 +61,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * The operator to be matched.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,WebApplicationFirewallOperator>> operator;
 
     public Output<Either<String,WebApplicationFirewallOperator>> getOperator() {
@@ -72,7 +72,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
      * List of transforms.
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
     public Output<List<Either<String,WebApplicationFirewallTransform>>> getTransforms() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * A table name must be unique within a storage account and must be between 3 and 63 characters.The name must comprise of only alphanumeric characters and it cannot begin with a numeric character.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.UserDefinedFunctionResourceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] A query that BigQuery executes when the view is referenced.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -32,7 +32,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1, c2) AS ...' syntax. Can only be set using BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/
      * 
      */
-    @InputImport(name="useExplicitColumnNames")
+    @Import(name="useExplicitColumnNames")
       private final @Nullable Output<Boolean> useExplicitColumnNames;
 
     public Output<Boolean> getUseExplicitColumnNames() {
@@ -43,7 +43,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
      * 
      */
-    @InputImport(name="useLegacySql")
+    @Import(name="useLegacySql")
       private final @Nullable Output<Boolean> useLegacySql;
 
     public Output<Boolean> getUseLegacySql() {
@@ -54,7 +54,7 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Describes user-defined function resources used in the query.
      * 
      */
-    @InputImport(name="userDefinedFunctionResources")
+    @Import(name="userDefinedFunctionResources")
       private final @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
     public Output<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {

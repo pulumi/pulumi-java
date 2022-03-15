@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.RoleStatus;
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Activation key of the MEC.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
     public Output<AsymmetricEncryptedSecretArgs> getConnectionString() {
@@ -32,7 +32,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -44,7 +44,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'MEC'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -55,7 +55,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The role name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class MECRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Role status.
      * 
      */
-    @InputImport(name="roleStatus", required=true)
+    @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;
 
     public Output<Either<String,RoleStatus>> getRoleStatus() {

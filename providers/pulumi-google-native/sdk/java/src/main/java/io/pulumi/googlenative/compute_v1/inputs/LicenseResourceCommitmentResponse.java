@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
      * The number of licenses purchased.
      * 
      */
-    @InputImport(name="amount", required=true)
+    @Import(name="amount", required=true)
       private final String amount;
 
     public String getAmount() {
@@ -31,7 +31,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
      * Specifies the core range of the instance for which this license applies.
      * 
      */
-    @InputImport(name="coresPerLicense", required=true)
+    @Import(name="coresPerLicense", required=true)
       private final String coresPerLicense;
 
     public String getCoresPerLicense() {
@@ -42,7 +42,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
      * Any applicable license URI.
      * 
      */
-    @InputImport(name="license", required=true)
+    @Import(name="license", required=true)
       private final String license;
 
     public String getLicense() {

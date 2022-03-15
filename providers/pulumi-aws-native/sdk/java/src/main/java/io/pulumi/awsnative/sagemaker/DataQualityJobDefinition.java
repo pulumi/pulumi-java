@@ -14,7 +14,7 @@ import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionNetworkConf
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionStoppingCondition;
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
      * The time at which the job definition was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -40,25 +40,25 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    @OutputExport(name="dataQualityAppSpecification", type=DataQualityJobDefinitionDataQualityAppSpecification.class, parameters={})
+    @Export(name="dataQualityAppSpecification", type=DataQualityJobDefinitionDataQualityAppSpecification.class, parameters={})
     private Output<DataQualityJobDefinitionDataQualityAppSpecification> dataQualityAppSpecification;
 
     public Output<DataQualityJobDefinitionDataQualityAppSpecification> getDataQualityAppSpecification() {
         return this.dataQualityAppSpecification;
     }
-    @OutputExport(name="dataQualityBaselineConfig", type=DataQualityJobDefinitionDataQualityBaselineConfig.class, parameters={})
+    @Export(name="dataQualityBaselineConfig", type=DataQualityJobDefinitionDataQualityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> dataQualityBaselineConfig;
 
     public Output</* @Nullable */ DataQualityJobDefinitionDataQualityBaselineConfig> getDataQualityBaselineConfig() {
         return this.dataQualityBaselineConfig;
     }
-    @OutputExport(name="dataQualityJobInput", type=DataQualityJobDefinitionDataQualityJobInput.class, parameters={})
+    @Export(name="dataQualityJobInput", type=DataQualityJobDefinitionDataQualityJobInput.class, parameters={})
     private Output<DataQualityJobDefinitionDataQualityJobInput> dataQualityJobInput;
 
     public Output<DataQualityJobDefinitionDataQualityJobInput> getDataQualityJobInput() {
         return this.dataQualityJobInput;
     }
-    @OutputExport(name="dataQualityJobOutputConfig", type=DataQualityJobDefinitionMonitoringOutputConfig.class, parameters={})
+    @Export(name="dataQualityJobOutputConfig", type=DataQualityJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<DataQualityJobDefinitionMonitoringOutputConfig> dataQualityJobOutputConfig;
 
     public Output<DataQualityJobDefinitionMonitoringOutputConfig> getDataQualityJobOutputConfig() {
@@ -68,7 +68,7 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
      * The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    @OutputExport(name="jobDefinitionArn", type=String.class, parameters={})
+    @Export(name="jobDefinitionArn", type=String.class, parameters={})
     private Output<String> jobDefinitionArn;
 
     /**
@@ -78,19 +78,19 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     public Output<String> getJobDefinitionArn() {
         return this.jobDefinitionArn;
     }
-    @OutputExport(name="jobDefinitionName", type=String.class, parameters={})
+    @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
     public Output</* @Nullable */ String> getJobDefinitionName() {
         return this.jobDefinitionName;
     }
-    @OutputExport(name="jobResources", type=DataQualityJobDefinitionMonitoringResources.class, parameters={})
+    @Export(name="jobResources", type=DataQualityJobDefinitionMonitoringResources.class, parameters={})
     private Output<DataQualityJobDefinitionMonitoringResources> jobResources;
 
     public Output<DataQualityJobDefinitionMonitoringResources> getJobResources() {
         return this.jobResources;
     }
-    @OutputExport(name="networkConfig", type=DataQualityJobDefinitionNetworkConfig.class, parameters={})
+    @Export(name="networkConfig", type=DataQualityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> networkConfig;
 
     public Output</* @Nullable */ DataQualityJobDefinitionNetworkConfig> getNetworkConfig() {
@@ -100,7 +100,7 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -110,7 +110,7 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="stoppingCondition", type=DataQualityJobDefinitionStoppingCondition.class, parameters={})
+    @Export(name="stoppingCondition", type=DataQualityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> stoppingCondition;
 
     public Output</* @Nullable */ DataQualityJobDefinitionStoppingCondition> getStoppingCondition() {
@@ -120,7 +120,7 @@ public class DataQualityJobDefinition extends io.pulumi.resources.CustomResource
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DataQualityJobDefinitionTag.class})
+    @Export(name="tags", type=List.class, parameters={DataQualityJobDefinitionTag.class})
     private Output</* @Nullable */ List<DataQualityJobDefinitionTag>> tags;
 
     /**

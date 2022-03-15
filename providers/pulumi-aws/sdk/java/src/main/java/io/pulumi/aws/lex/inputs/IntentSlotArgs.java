@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * values is arbitrary. Must be between 1 and 100.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -59,7 +59,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
      */
-    @InputImport(name="responseCard")
+    @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
     public Output<String> getResponseCard() {
@@ -72,7 +72,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="sampleUtterances")
+    @Import(name="sampleUtterances")
       private final @Nullable Output<List<String>> sampleUtterances;
 
     public Output<List<String>> getSampleUtterances() {
@@ -83,7 +83,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the slot is required or optional.
      * 
      */
-    @InputImport(name="slotConstraint", required=true)
+    @Import(name="slotConstraint", required=true)
       private final Output<String> slotConstraint;
 
     public Output<String> getSlotConstraint() {
@@ -95,7 +95,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * the built-in slot types. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="slotType", required=true)
+    @Import(name="slotType", required=true)
       private final Output<String> slotType;
 
     public Output<String> getSlotType() {
@@ -106,7 +106,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the slot type. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="slotTypeVersion")
+    @Import(name="slotTypeVersion")
       private final @Nullable Output<String> slotTypeVersion;
 
     public Output<String> getSlotTypeVersion() {
@@ -118,7 +118,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
      * from the user. Attributes are documented under prompt.
      * 
      */
-    @InputImport(name="valueElicitationPrompt")
+    @Import(name="valueElicitationPrompt")
       private final @Nullable Output<IntentSlotValueElicitationPromptArgs> valueElicitationPrompt;
 
     public Output<IntentSlotValueElicitationPromptArgs> getValueElicitationPrompt() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.EntityInsightItemResponseQueryTimeInterval;
 import io.pulumi.azurenative.securityinsights.outputs.InsightsTableResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntityInsightItemResponse {
     /**
      * Query results for table insights query.
@@ -35,12 +35,12 @@ public final class EntityInsightItemResponse {
      */
     private final @Nullable InsightsTableResultResponse tableQueryResults;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntityInsightItemResponse(
-        @OutputCustomType.Parameter("chartQueryResults") @Nullable List<InsightsTableResultResponse> chartQueryResults,
-        @OutputCustomType.Parameter("queryId") @Nullable String queryId,
-        @OutputCustomType.Parameter("queryTimeInterval") @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
-        @OutputCustomType.Parameter("tableQueryResults") @Nullable InsightsTableResultResponse tableQueryResults) {
+        @CustomType.Parameter("chartQueryResults") @Nullable List<InsightsTableResultResponse> chartQueryResults,
+        @CustomType.Parameter("queryId") @Nullable String queryId,
+        @CustomType.Parameter("queryTimeInterval") @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
+        @CustomType.Parameter("tableQueryResults") @Nullable InsightsTableResultResponse tableQueryResults) {
         this.chartQueryResults = chartQueryResults;
         this.queryId = queryId;
         this.queryTimeInterval = queryTimeInterval;

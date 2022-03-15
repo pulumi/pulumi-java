@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
      * The Alexa skill Id
      * 
      */
-    @InputImport(name="alexaSkillId", required=true)
+    @Import(name="alexaSkillId", required=true)
       private final String alexaSkillId;
 
     public String getAlexaSkillId() {
@@ -32,7 +32,7 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -43,7 +43,7 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
      * Full Uri used to configured the skill in Alexa
      * 
      */
-    @InputImport(name="serviceEndpointUri", required=true)
+    @Import(name="serviceEndpointUri", required=true)
       private final String serviceEndpointUri;
 
     public String getServiceEndpointUri() {
@@ -54,7 +54,7 @@ public final class AlexaChannelPropertiesResponse extends io.pulumi.resources.In
      * Url fragment used in part of the Uri configured in Alexa
      * 
      */
-    @InputImport(name="urlFragment", required=true)
+    @Import(name="urlFragment", required=true)
       private final String urlFragment;
 
     public String getUrlFragment() {

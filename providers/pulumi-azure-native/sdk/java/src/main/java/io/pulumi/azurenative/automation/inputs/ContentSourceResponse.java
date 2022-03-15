@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the hash.
      * 
      */
-    @InputImport(name="hash")
+    @Import(name="hash")
       private final @Nullable ContentHashResponse hash;
 
     public Optional<ContentHashResponse> getHash() {
@@ -34,7 +34,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the content source type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -45,7 +45,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the value of the content. This is based on the content source type.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {
@@ -56,7 +56,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * Gets or sets the version of the content.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

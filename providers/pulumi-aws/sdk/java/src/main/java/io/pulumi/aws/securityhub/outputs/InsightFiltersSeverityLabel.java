@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.securityhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersSeverityLabel {
     /**
      * The condition to apply to a string value when querying for findings. Valid values include: `EQUALS` and `NOT_EQUALS`.
@@ -20,10 +20,10 @@ public final class InsightFiltersSeverityLabel {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InsightFiltersSeverityLabel(
-        @OutputCustomType.Parameter("comparison") String comparison,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("comparison") String comparison,
+        @CustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.value = value;
     }

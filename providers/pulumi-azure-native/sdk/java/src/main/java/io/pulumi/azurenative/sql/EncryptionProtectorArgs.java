@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.ServerKeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    @InputImport(name="autoRotationEnabled")
+    @Import(name="autoRotationEnabled")
       private final @Nullable Output<Boolean> autoRotationEnabled;
 
     public Output<Boolean> getAutoRotationEnabled() {
@@ -32,7 +32,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * The name of the encryption protector to be updated.
      * 
      */
-    @InputImport(name="encryptionProtectorName")
+    @Import(name="encryptionProtectorName")
       private final @Nullable Output<String> encryptionProtectorName;
 
     public Output<String> getEncryptionProtectorName() {
@@ -43,7 +43,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * The name of the server key.
      * 
      */
-    @InputImport(name="serverKeyName")
+    @Import(name="serverKeyName")
       private final @Nullable Output<String> serverKeyName;
 
     public Output<String> getServerKeyName() {
@@ -65,7 +65,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
      * 
      */
-    @InputImport(name="serverKeyType", required=true)
+    @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
 
     public Output<Either<String,ServerKeyType>> getServerKeyType() {
@@ -76,7 +76,7 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {

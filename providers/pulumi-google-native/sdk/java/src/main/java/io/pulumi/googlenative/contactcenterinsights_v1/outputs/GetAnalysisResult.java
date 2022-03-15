@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResultResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAnalysisResult {
     /**
      * The result of the analysis, which is populated when the analysis finishes.
@@ -31,12 +31,12 @@ public final class GetAnalysisResult {
      */
     private final String requestTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnalysisResult(
-        @OutputCustomType.Parameter("analysisResult") GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requestTime") String requestTime) {
+        @CustomType.Parameter("analysisResult") GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requestTime") String requestTime) {
         this.analysisResult = analysisResult;
         this.createTime = createTime;
         this.name = name;

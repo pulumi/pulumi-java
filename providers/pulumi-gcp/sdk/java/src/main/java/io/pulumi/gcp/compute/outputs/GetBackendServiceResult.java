@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceBackend;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceCdnPolicy;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceCircuitBreaker;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceResult {
     private final Integer affinityCookieTtlSec;
     /**
@@ -99,36 +99,36 @@ public final class GetBackendServiceResult {
      */
     private final Integer timeoutSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceResult(
-        @OutputCustomType.Parameter("affinityCookieTtlSec") Integer affinityCookieTtlSec,
-        @OutputCustomType.Parameter("backends") List<GetBackendServiceBackend> backends,
-        @OutputCustomType.Parameter("cdnPolicies") List<GetBackendServiceCdnPolicy> cdnPolicies,
-        @OutputCustomType.Parameter("circuitBreakers") List<GetBackendServiceCircuitBreaker> circuitBreakers,
-        @OutputCustomType.Parameter("connectionDrainingTimeoutSec") Integer connectionDrainingTimeoutSec,
-        @OutputCustomType.Parameter("consistentHash") List<GetBackendServiceConsistentHash> consistentHash,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customRequestHeaders") List<String> customRequestHeaders,
-        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
-        @OutputCustomType.Parameter("iaps") List<GetBackendServiceIap> iaps,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
-        @OutputCustomType.Parameter("localityLbPolicy") String localityLbPolicy,
-        @OutputCustomType.Parameter("logConfigs") List<GetBackendServiceLogConfig> logConfigs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outlierDetections") List<GetBackendServiceOutlierDetection> outlierDetections,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
-        @OutputCustomType.Parameter("securitySettings") List<GetBackendServiceSecuritySetting> securitySettings,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sessionAffinity") String sessionAffinity,
-        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec) {
+        @CustomType.Parameter("affinityCookieTtlSec") Integer affinityCookieTtlSec,
+        @CustomType.Parameter("backends") List<GetBackendServiceBackend> backends,
+        @CustomType.Parameter("cdnPolicies") List<GetBackendServiceCdnPolicy> cdnPolicies,
+        @CustomType.Parameter("circuitBreakers") List<GetBackendServiceCircuitBreaker> circuitBreakers,
+        @CustomType.Parameter("connectionDrainingTimeoutSec") Integer connectionDrainingTimeoutSec,
+        @CustomType.Parameter("consistentHash") List<GetBackendServiceConsistentHash> consistentHash,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customRequestHeaders") List<String> customRequestHeaders,
+        @CustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableCdn") Boolean enableCdn,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("healthChecks") List<String> healthChecks,
+        @CustomType.Parameter("iaps") List<GetBackendServiceIap> iaps,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @CustomType.Parameter("localityLbPolicy") String localityLbPolicy,
+        @CustomType.Parameter("logConfigs") List<GetBackendServiceLogConfig> logConfigs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outlierDetections") List<GetBackendServiceOutlierDetection> outlierDetections,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("securityPolicy") String securityPolicy,
+        @CustomType.Parameter("securitySettings") List<GetBackendServiceSecuritySetting> securitySettings,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sessionAffinity") String sessionAffinity,
+        @CustomType.Parameter("timeoutSec") Integer timeoutSec) {
         this.affinityCookieTtlSec = affinityCookieTtlSec;
         this.backends = backends;
         this.cdnPolicies = cdnPolicies;

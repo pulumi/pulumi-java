@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkerPoolResult {
     /**
      * The autoscale policy to apply on a pool.
@@ -42,14 +42,14 @@ public final class GetWorkerPoolResult {
      */
     private final String workerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkerPoolResult(
-        @OutputCustomType.Parameter("autoscale") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale,
-        @OutputCustomType.Parameter("channel") String channel,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("workerConfig") GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
-        @OutputCustomType.Parameter("workerCount") String workerCount) {
+        @CustomType.Parameter("autoscale") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale,
+        @CustomType.Parameter("channel") String channel,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("workerConfig") GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
+        @CustomType.Parameter("workerCount") String workerCount) {
         this.autoscale = autoscale;
         this.channel = channel;
         this.name = name;

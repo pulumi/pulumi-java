@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.WorkerPoolArgs;
@@ -24,7 +24,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -52,7 +52,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * The resource name of the `WorkerPool`. Format of the name is `projects/{project_id}/workerPools/{worker_pool_id}`, where the value of {worker_pool_id} is provided in the CreateWorkerPool request.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Network configuration for the `WorkerPool`.
      * 
      */
-    @OutputExport(name="networkConfig", type=NetworkConfigResponse.class, parameters={})
+    @Export(name="networkConfig", type=NetworkConfigResponse.class, parameters={})
     private Output<NetworkConfigResponse> networkConfig;
 
     /**
@@ -80,7 +80,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Immutable. The region where the `WorkerPool` runs. Only "us-central1" is currently supported. Note that `region` cannot be changed once the `WorkerPool` is created.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -94,7 +94,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * WorkerPool state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -108,7 +108,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -122,7 +122,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Worker configuration for the `WorkerPool`.
      * 
      */
-    @OutputExport(name="workerConfig", type=WorkerConfigResponse.class, parameters={})
+    @Export(name="workerConfig", type=WorkerConfigResponse.class, parameters={})
     private Output<WorkerConfigResponse> workerConfig;
 
     /**

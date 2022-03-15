@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.SubnetworkLogConfigAggregationInterval;
 import io.pulumi.googlenative.compute_beta.enums.SubnetworkLogConfigMetadata;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
      * 
      */
-    @InputImport(name="aggregationInterval")
+    @Import(name="aggregationInterval")
       private final @Nullable Output<SubnetworkLogConfigAggregationInterval> aggregationInterval;
 
     public Output<SubnetworkLogConfigAggregationInterval> getAggregationInterval() {
@@ -38,7 +38,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -49,7 +49,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Can only be specified if VPC flow logs for this subnetwork is enabled. Export filter used to define which VPC flow logs should be logged.
      * 
      */
-    @InputImport(name="filterExpr")
+    @Import(name="filterExpr")
       private final @Nullable Output<String> filterExpr;
 
     public Output<String> getFilterExpr() {
@@ -60,7 +60,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
      * 
      */
-    @InputImport(name="flowSampling")
+    @Import(name="flowSampling")
       private final @Nullable Output<Double> flowSampling;
 
     public Output<Double> getFlowSampling() {
@@ -71,7 +71,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<SubnetworkLogConfigMetadata> metadata;
 
     public Output<SubnetworkLogConfigMetadata> getMetadata() {
@@ -82,7 +82,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.
      * 
      */
-    @InputImport(name="metadataFields")
+    @Import(name="metadataFields")
       private final @Nullable Output<List<String>> metadataFields;
 
     public Output<List<String>> getMetadataFields() {

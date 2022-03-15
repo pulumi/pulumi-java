@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkEndpointGroupAppEngineResponse {
     /**
      * Optional serving service. The service name is case-sensitive and must be 1-63 characters long. Example value: "default", "my-service".
@@ -25,11 +25,11 @@ public final class NetworkEndpointGroupAppEngineResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkEndpointGroupAppEngineResponse(
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("urlMask") String urlMask,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("urlMask") String urlMask,
+        @CustomType.Parameter("version") String version) {
         this.service = service;
         this.urlMask = urlMask;
         this.version = version;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2NotificationConfigResponse;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
      * 
      */
-    @InputImport(name="endUserSuggestionConfig", required=true)
+    @Import(name="endUserSuggestionConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getEndUserSuggestionConfig() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * Configuration for agent assistance of human agent participant.
      * 
      */
-    @InputImport(name="humanAgentSuggestionConfig", required=true)
+    @Import(name="humanAgentSuggestionConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse getHumanAgentSuggestionConfig() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * Configuration for message analysis.
      * 
      */
-    @InputImport(name="messageAnalysisConfig", required=true)
+    @Import(name="messageAnalysisConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse getMessageAnalysisConfig() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse exte
      * Pub/Sub topic on which to publish new agent assistant events.
      * 
      */
-    @InputImport(name="notificationConfig", required=true)
+    @Import(name="notificationConfig", required=true)
       private final GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig;
 
     public GoogleCloudDialogflowV2NotificationConfigResponse getNotificationConfig() {

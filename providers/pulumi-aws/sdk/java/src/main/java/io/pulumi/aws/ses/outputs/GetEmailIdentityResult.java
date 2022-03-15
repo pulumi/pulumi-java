@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEmailIdentityResult {
     /**
      * The ARN of the email identity.
@@ -25,11 +25,11 @@ public final class GetEmailIdentityResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEmailIdentityResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id) {
         this.arn = arn;
         this.email = email;
         this.id = id;

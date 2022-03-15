@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafregional.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAclArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the WAF Regional Web ACL.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

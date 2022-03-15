@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -30,7 +30,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * The policy name. Should always be "default".
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -41,7 +41,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
@@ -63,7 +63,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {

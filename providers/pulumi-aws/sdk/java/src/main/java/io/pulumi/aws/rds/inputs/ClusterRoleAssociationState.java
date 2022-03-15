@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
      * DB Cluster Identifier to associate with the IAM Role.
      * 
      */
-    @InputImport(name="dbClusterIdentifier")
+    @Import(name="dbClusterIdentifier")
       private final @Nullable Output<String> dbClusterIdentifier;
 
     public Output<String> getDbClusterIdentifier() {
@@ -29,7 +29,7 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
      * Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
      * 
      */
-    @InputImport(name="featureName")
+    @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
     public Output<String> getFeatureName() {
@@ -40,7 +40,7 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the IAM Role to associate with the DB Cluster.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

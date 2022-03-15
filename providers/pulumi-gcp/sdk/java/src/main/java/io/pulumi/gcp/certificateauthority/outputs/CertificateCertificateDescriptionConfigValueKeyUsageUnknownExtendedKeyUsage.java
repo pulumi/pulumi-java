@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage {
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds;
 
-    @OutputCustomType.Constructor
-    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage(@OutputCustomType.Parameter("obectIds") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
+    @CustomType.Constructor
+    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage(@CustomType.Parameter("obectIds") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
         this.obectIds = obectIds;
     }
 

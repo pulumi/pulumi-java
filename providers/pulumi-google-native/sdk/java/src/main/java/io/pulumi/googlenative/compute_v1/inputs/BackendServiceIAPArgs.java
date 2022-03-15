@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * OAuth2 client ID to use for the authentication flow.
      * 
      */
-    @InputImport(name="oauth2ClientId")
+    @Import(name="oauth2ClientId")
       private final @Nullable Output<String> oauth2ClientId;
 
     public Output<String> getOauth2ClientId() {
@@ -45,7 +45,7 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
      * OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
      * 
      */
-    @InputImport(name="oauth2ClientSecret")
+    @Import(name="oauth2ClientSecret")
       private final @Nullable Output<String> oauth2ClientSecret;
 
     public Output<String> getOauth2ClientSecret() {

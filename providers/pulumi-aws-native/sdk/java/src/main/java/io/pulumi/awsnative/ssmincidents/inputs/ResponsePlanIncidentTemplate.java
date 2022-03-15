@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItem;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * The deduplication string.
      * 
      */
-    @InputImport(name="dedupeString")
+    @Import(name="dedupeString")
       private final @Nullable String dedupeString;
 
     public Optional<String> getDedupeString() {
@@ -36,7 +36,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * The impact value.
      * 
      */
-    @InputImport(name="impact", required=true)
+    @Import(name="impact", required=true)
       private final Integer impact;
 
     public Integer getImpact() {
@@ -47,7 +47,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * The list of notification targets.
      * 
      */
-    @InputImport(name="notificationTargets")
+    @Import(name="notificationTargets")
       private final @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets;
 
     public List<ResponsePlanNotificationTargetItem> getNotificationTargets() {
@@ -58,7 +58,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * The summary string.
      * 
      */
-    @InputImport(name="summary")
+    @Import(name="summary")
       private final @Nullable String summary;
 
     public Optional<String> getSummary() {
@@ -69,7 +69,7 @@ public final class ResponsePlanIncidentTemplate extends io.pulumi.resources.Invo
      * The title string.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

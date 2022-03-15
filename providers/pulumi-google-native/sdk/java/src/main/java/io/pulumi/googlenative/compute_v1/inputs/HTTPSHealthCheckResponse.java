@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * The value of the host header in the HTTPS health check request. If left empty (default value), the IP on behalf of which this health check is performed will be used.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
@@ -28,7 +28,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * The TCP port number for the health check request. The default value is 443. Valid values are 1 through 65535.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -39,7 +39,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * Port name as defined in InstanceGroup#NamedPort#name. If both port and port_name are defined, port takes precedence.
      * 
      */
-    @InputImport(name="portName", required=true)
+    @Import(name="portName", required=true)
       private final String portName;
 
     public String getPortName() {
@@ -50,7 +50,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * Specifies how port is selected for health checking, can be one of following values: USE_FIXED_PORT: The port number in port is used for health checking. USE_NAMED_PORT: The portName is used for health checking. USE_SERVING_PORT: For NetworkEndpointGroup, the port specified for each network endpoint is used for health checking. For other backends, the port or named port specified in the Backend Service is used for health checking. If not specified, HTTPS health check follows behavior specified in port and portName fields.
      * 
      */
-    @InputImport(name="portSpecification", required=true)
+    @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
     public String getPortSpecification() {
@@ -61,7 +61,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
      * 
      */
-    @InputImport(name="proxyHeader", required=true)
+    @Import(name="proxyHeader", required=true)
       private final String proxyHeader;
 
     public String getProxyHeader() {
@@ -72,7 +72,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * The request path of the HTTPS health check request. The default value is /.
      * 
      */
-    @InputImport(name="requestPath", required=true)
+    @Import(name="requestPath", required=true)
       private final String requestPath;
 
     public String getRequestPath() {
@@ -83,7 +83,7 @@ public final class HTTPSHealthCheckResponse extends io.pulumi.resources.InvokeAr
      * The string to match anywhere in the first 1024 bytes of the response body. If left empty (the default value), the status code determines health. The response data can only be ASCII.
      * 
      */
-    @InputImport(name="response", required=true)
+    @Import(name="response", required=true)
       private final String response;
 
     public String getResponse() {

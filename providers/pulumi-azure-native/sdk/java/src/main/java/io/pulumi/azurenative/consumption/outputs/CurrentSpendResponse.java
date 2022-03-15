@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CurrentSpendResponse {
     /**
      * The total amount of cost which is being tracked by the budget.
@@ -21,10 +21,10 @@ public final class CurrentSpendResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CurrentSpendResponse(
-        @OutputCustomType.Parameter("amount") Double amount,
-        @OutputCustomType.Parameter("unit") String unit) {
+        @CustomType.Parameter("amount") Double amount,
+        @CustomType.Parameter("unit") String unit) {
         this.amount = amount;
         this.unit = unit;
     }

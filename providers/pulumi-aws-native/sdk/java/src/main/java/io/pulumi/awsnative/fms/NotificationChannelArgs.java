@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.fms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
 
     public static final NotificationChannelArgs Empty = new NotificationChannelArgs();
 
-    @InputImport(name="snsRoleName", required=true)
+    @Import(name="snsRoleName", required=true)
       private final Output<String> snsRoleName;
 
     public Output<String> getSnsRoleName() {
         return this.snsRoleName;
     }
 
-    @InputImport(name="snsTopicArn", required=true)
+    @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {

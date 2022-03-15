@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapVolumeSourceArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.SecretVolumeSourceArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final VolumeArgs Empty = new VolumeArgs();
 
-    @InputImport(name="configMap")
+    @Import(name="configMap")
       private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
     public Output<ConfigMapVolumeSourceArgs> getConfigMap() {
@@ -31,14 +31,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<SecretVolumeSourceArgs> secret;
 
     public Output<SecretVolumeSourceArgs> getSecret() {

@@ -10,7 +10,7 @@ import io.pulumi.aws.ssm.outputs.PatchBaselineApprovalRule;
 import io.pulumi.aws.ssm.outputs.PatchBaselineGlobalFilter;
 import io.pulumi.aws.ssm.outputs.PatchBaselineSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
      * 
      */
-    @OutputExport(name="approvalRules", type=List.class, parameters={PatchBaselineApprovalRule.class})
+    @Export(name="approvalRules", type=List.class, parameters={PatchBaselineApprovalRule.class})
     private Output</* @Nullable */ List<PatchBaselineApprovalRule>> approvalRules;
 
     /**
@@ -56,7 +56,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * A list of explicitly approved patches for the baseline.
      * 
      */
-    @OutputExport(name="approvedPatches", type=List.class, parameters={String.class})
+    @Export(name="approvedPatches", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> approvedPatches;
 
     /**
@@ -70,7 +70,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
      * 
      */
-    @OutputExport(name="approvedPatchesComplianceLevel", type=String.class, parameters={})
+    @Export(name="approvedPatchesComplianceLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> approvedPatchesComplianceLevel;
 
     /**
@@ -84,7 +84,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
      * 
      */
-    @OutputExport(name="approvedPatchesEnableNonSecurity", type=Boolean.class, parameters={})
+    @Export(name="approvedPatchesEnableNonSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> approvedPatchesEnableNonSecurity;
 
     /**
@@ -98,7 +98,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * The ARN of the patch baseline.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -112,7 +112,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * The description of the patch baseline.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -126,7 +126,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
      * 
      */
-    @OutputExport(name="globalFilters", type=List.class, parameters={PatchBaselineGlobalFilter.class})
+    @Export(name="globalFilters", type=List.class, parameters={PatchBaselineGlobalFilter.class})
     private Output</* @Nullable */ List<PatchBaselineGlobalFilter>> globalFilters;
 
     /**
@@ -140,7 +140,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * The name specified to identify the patch source.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
      * 
      */
-    @OutputExport(name="operatingSystem", type=String.class, parameters={})
+    @Export(name="operatingSystem", type=String.class, parameters={})
     private Output</* @Nullable */ String> operatingSystem;
 
     /**
@@ -168,7 +168,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * A list of rejected patches.
      * 
      */
-    @OutputExport(name="rejectedPatches", type=List.class, parameters={String.class})
+    @Export(name="rejectedPatches", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> rejectedPatches;
 
     /**
@@ -182,7 +182,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
      * 
      */
-    @OutputExport(name="rejectedPatchesAction", type=String.class, parameters={})
+    @Export(name="rejectedPatchesAction", type=String.class, parameters={})
     private Output<String> rejectedPatchesAction;
 
     /**
@@ -196,7 +196,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={PatchBaselineSource.class})
+    @Export(name="sources", type=List.class, parameters={PatchBaselineSource.class})
     private Output</* @Nullable */ List<PatchBaselineSource>> sources;
 
     /**
@@ -210,7 +210,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -224,7 +224,7 @@ public class PatchBaseline extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

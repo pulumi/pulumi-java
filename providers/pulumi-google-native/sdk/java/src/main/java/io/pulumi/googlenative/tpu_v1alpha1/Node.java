@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.tpu_v1alpha1.NodeArgs;
@@ -28,7 +28,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The type of hardware accelerators associated with this node.
      * 
      */
-    @OutputExport(name="acceleratorType", type=String.class, parameters={})
+    @Export(name="acceleratorType", type=String.class, parameters={})
     private Output<String> acceleratorType;
 
     /**
@@ -42,7 +42,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The API version that created this Node.
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
@@ -56,7 +56,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network that is using that CIDR block.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -70,7 +70,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The time when the node was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -84,7 +84,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The user-supplied description of the TPU. Maximum of 512 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -98,7 +98,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The health status of the TPU node.
      * 
      */
-    @OutputExport(name="health", type=String.class, parameters={})
+    @Export(name="health", type=String.class, parameters={})
     private Output<String> health;
 
     /**
@@ -112,7 +112,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * If this field is populated, it contains a description of why the TPU Node is unhealthy.
      * 
      */
-    @OutputExport(name="healthDescription", type=String.class, parameters={})
+    @Export(name="healthDescription", type=String.class, parameters={})
     private Output<String> healthDescription;
 
     /**
@@ -126,7 +126,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -140,7 +140,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Immutable. The name of the TPU
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The name of a network they wish to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on which this API has been activated. If none is provided, "default" will be used.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -168,7 +168,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the node reach out to the 0th entry in this map first.
      * 
      */
-    @OutputExport(name="networkEndpoints", type=List.class, parameters={NetworkEndpointResponse.class})
+    @Export(name="networkEndpoints", type=List.class, parameters={NetworkEndpointResponse.class})
     private Output<List<NetworkEndpointResponse>> networkEndpoints;
 
     /**
@@ -182,7 +182,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The scheduling options for this node.
      * 
      */
-    @OutputExport(name="schedulingConfig", type=SchedulingConfigResponse.class, parameters={})
+    @Export(name="schedulingConfig", type=SchedulingConfigResponse.class, parameters={})
     private Output<SchedulingConfigResponse> schedulingConfig;
 
     /**
@@ -196,7 +196,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The service account used to run the tensor flow services within the node. To share resources, including Google Cloud Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -210,7 +210,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The current state for the TPU Node.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -224,7 +224,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The Symptoms that have occurred to the TPU Node.
      * 
      */
-    @OutputExport(name="symptoms", type=List.class, parameters={SymptomResponse.class})
+    @Export(name="symptoms", type=List.class, parameters={SymptomResponse.class})
     private Output<List<SymptomResponse>> symptoms;
 
     /**
@@ -238,7 +238,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * The version of Tensorflow running in the Node.
      * 
      */
-    @OutputExport(name="tensorflowVersion", type=String.class, parameters={})
+    @Export(name="tensorflowVersion", type=String.class, parameters={})
     private Output<String> tensorflowVersion;
 
     /**
@@ -252,7 +252,7 @@ public class Node extends io.pulumi.resources.CustomResource {
      * Whether the VPC peering for the node is set up through Service Networking API. The VPC Peering should be set up before provisioning the node. If this field is set, cidr_block field should not be specified. If the network, that you want to peer the TPU Node to, is Shared VPC networks, the node must be created with this this field enabled.
      * 
      */
-    @OutputExport(name="useServiceNetworking", type=Boolean.class, parameters={})
+    @Export(name="useServiceNetworking", type=Boolean.class, parameters={})
     private Output<Boolean> useServiceNetworking;
 
     /**

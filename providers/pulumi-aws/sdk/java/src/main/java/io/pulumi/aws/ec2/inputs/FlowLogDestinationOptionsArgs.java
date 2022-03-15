@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
      * The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
      * 
      */
-    @InputImport(name="fileFormat")
+    @Import(name="fileFormat")
       private final @Nullable Output<String> fileFormat;
 
     public Output<String> getFileFormat() {
@@ -30,7 +30,7 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
      * Indicates whether to use Hive-compatible prefixes for flow logs stored in Amazon S3. Default value: `false`.
      * 
      */
-    @InputImport(name="hiveCompatiblePartitions")
+    @Import(name="hiveCompatiblePartitions")
       private final @Nullable Output<Boolean> hiveCompatiblePartitions;
 
     public Output<Boolean> getHiveCompatiblePartitions() {
@@ -41,7 +41,7 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
      * Indicates whether to partition the flow log per hour. This reduces the cost and response time for queries. Default value: `false`.
      * 
      */
-    @InputImport(name="perHourPartition")
+    @Import(name="perHourPartition")
       private final @Nullable Output<Boolean> perHourPartition;
 
     public Output<Boolean> getPerHourPartition() {

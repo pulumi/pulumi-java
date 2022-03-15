@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.tpu.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeNetworkEndpoint {
     private final @Nullable String ipAddress;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeNetworkEndpoint(
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }

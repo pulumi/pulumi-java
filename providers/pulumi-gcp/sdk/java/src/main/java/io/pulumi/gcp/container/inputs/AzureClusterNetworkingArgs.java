@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
      * Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
-    @InputImport(name="podAddressCidrBlocks", required=true)
+    @Import(name="podAddressCidrBlocks", required=true)
       private final Output<List<String>> podAddressCidrBlocks;
 
     public Output<List<String>> getPodAddressCidrBlocks() {
@@ -29,7 +29,7 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
      * Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
      * 
      */
-    @InputImport(name="serviceAddressCidrBlocks", required=true)
+    @Import(name="serviceAddressCidrBlocks", required=true)
       private final Output<List<String>> serviceAddressCidrBlocks;
 
     public Output<List<String>> getServiceAddressCidrBlocks() {
@@ -40,7 +40,7 @@ public final class AzureClusterNetworkingArgs extends io.pulumi.resources.Resour
      * Required. The Azure Resource Manager (ARM) ID of the VNet associated with your cluster. All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*{@literal /}resourceGroups/*{@literal /}providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
      * 
      */
-    @InputImport(name="virtualNetworkId", required=true)
+    @Import(name="virtualNetworkId", required=true)
       private final Output<String> virtualNetworkId;
 
     public Output<String> getVirtualNetworkId() {

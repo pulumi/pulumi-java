@@ -14,7 +14,7 @@ import io.pulumi.azurenative.purview.outputs.IdentityResponse;
 import io.pulumi.azurenative.purview.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * External cloud identifier used as part of scanning configuration.
      * 
      */
-    @OutputExport(name="cloudConnectors", type=CloudConnectorsResponse.class, parameters={})
+    @Export(name="cloudConnectors", type=CloudConnectorsResponse.class, parameters={})
     private Output</* @Nullable */ CloudConnectorsResponse> cloudConnectors;
 
     /**
@@ -58,7 +58,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets the time at which the entity was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -72,7 +72,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets the creator of the entity.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
     /**
@@ -86,7 +86,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets the creators of the entity's object id.
      * 
      */
-    @OutputExport(name="createdByObjectId", type=String.class, parameters={})
+    @Export(name="createdByObjectId", type=String.class, parameters={})
     private Output<String> createdByObjectId;
 
     /**
@@ -100,7 +100,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The URIs that are the public endpoints of the account.
      * 
      */
-    @OutputExport(name="endpoints", type=AccountPropertiesResponseEndpoints.class, parameters={})
+    @Export(name="endpoints", type=AccountPropertiesResponseEndpoints.class, parameters={})
     private Output<AccountPropertiesResponseEndpoints> endpoints;
 
     /**
@@ -114,7 +114,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the friendly name.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
@@ -128,7 +128,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Identity Info on the tracked resource
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -142,7 +142,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -156,7 +156,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the managed resource group name
      * 
      */
-    @OutputExport(name="managedResourceGroupName", type=String.class, parameters={})
+    @Export(name="managedResourceGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupName;
 
     /**
@@ -170,7 +170,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets the resource identifiers of the managed resources.
      * 
      */
-    @OutputExport(name="managedResources", type=AccountPropertiesResponseManagedResources.class, parameters={})
+    @Export(name="managedResources", type=AccountPropertiesResponseManagedResources.class, parameters={})
     private Output<AccountPropertiesResponseManagedResources> managedResources;
 
     /**
@@ -184,7 +184,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -198,7 +198,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets the private endpoint connections information.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -212,7 +212,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the state of the provisioning.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -226,7 +226,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the public network access.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -240,7 +240,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the Sku.
      * 
      */
-    @OutputExport(name="sku", type=AccountResponseSku.class, parameters={})
+    @Export(name="sku", type=AccountResponseSku.class, parameters={})
     private Output<AccountResponseSku> sku;
 
     /**
@@ -254,7 +254,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=AccountPropertiesResponseSystemData.class, parameters={})
+    @Export(name="systemData", type=AccountPropertiesResponseSystemData.class, parameters={})
     private Output<AccountPropertiesResponseSystemData> systemData;
 
     /**
@@ -268,7 +268,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Tags on the azure resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -282,7 +282,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets or sets the type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

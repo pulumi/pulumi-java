@@ -3,21 +3,21 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RRSetRoutingPolicyWrrPolicyResponse {
     private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RRSetRoutingPolicyWrrPolicyResponse(
-        @OutputCustomType.Parameter("items") List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("items") List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
+        @CustomType.Parameter("kind") String kind) {
         this.items = items;
         this.kind = kind;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.enums.ClientPermissionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
      * Type of access to be allowed for the client.
      * 
      */
-    @InputImport(name="accessPermission", required=true)
+    @Import(name="accessPermission", required=true)
       private final Output<Either<String,ClientPermissionType>> accessPermission;
 
     public Output<Either<String,ClientPermissionType>> getAccessPermission() {
@@ -34,7 +34,7 @@ public final class ClientAccessRightArgs extends io.pulumi.resources.ResourceArg
      * IP of the client.
      * 
      */
-    @InputImport(name="client", required=true)
+    @Import(name="client", required=true)
       private final Output<String> client;
 
     public Output<String> getClient() {

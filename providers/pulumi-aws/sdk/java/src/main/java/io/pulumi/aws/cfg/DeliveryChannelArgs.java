@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg;
 
 import io.pulumi.aws.cfg.inputs.DeliveryChannelSnapshotDeliveryPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the S3 bucket used to store the configuration history.
      * 
      */
-    @InputImport(name="s3BucketName", required=true)
+    @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
@@ -41,7 +41,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The prefix for the specified S3 bucket.
      * 
      */
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {
@@ -52,7 +52,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
      * 
      */
-    @InputImport(name="s3KmsKeyArn")
+    @Import(name="s3KmsKeyArn")
       private final @Nullable Output<String> s3KmsKeyArn;
 
     public Output<String> getS3KmsKeyArn() {
@@ -63,7 +63,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * Options for how AWS Config delivers configuration snapshots. See below
      * 
      */
-    @InputImport(name="snapshotDeliveryProperties")
+    @Import(name="snapshotDeliveryProperties")
       private final @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
 
     public Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> getSnapshotDeliveryProperties() {
@@ -74,7 +74,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of the SNS topic that AWS Config delivers notifications to.
      * 
      */
-    @InputImport(name="snsTopicArn")
+    @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {

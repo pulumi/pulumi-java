@@ -8,7 +8,7 @@ import io.pulumi.awsnative.amplify.inputs.BranchBasicAuthConfigArgs;
 import io.pulumi.awsnative.amplify.inputs.BranchEnvironmentVariableArgs;
 import io.pulumi.awsnative.amplify.inputs.BranchTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,84 +20,84 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BranchArgs Empty = new BranchArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
 
-    @InputImport(name="basicAuthConfig")
+    @Import(name="basicAuthConfig")
       private final @Nullable Output<BranchBasicAuthConfigArgs> basicAuthConfig;
 
     public Output<BranchBasicAuthConfigArgs> getBasicAuthConfig() {
         return this.basicAuthConfig == null ? Output.empty() : this.basicAuthConfig;
     }
 
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
         return this.branchName == null ? Output.empty() : this.branchName;
     }
 
-    @InputImport(name="buildSpec")
+    @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
         return this.buildSpec == null ? Output.empty() : this.buildSpec;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="enableAutoBuild")
+    @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
     public Output<Boolean> getEnableAutoBuild() {
         return this.enableAutoBuild == null ? Output.empty() : this.enableAutoBuild;
     }
 
-    @InputImport(name="enablePerformanceMode")
+    @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
     public Output<Boolean> getEnablePerformanceMode() {
         return this.enablePerformanceMode == null ? Output.empty() : this.enablePerformanceMode;
     }
 
-    @InputImport(name="enablePullRequestPreview")
+    @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
     public Output<Boolean> getEnablePullRequestPreview() {
         return this.enablePullRequestPreview == null ? Output.empty() : this.enablePullRequestPreview;
     }
 
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<BranchEnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<BranchEnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
     }
 
-    @InputImport(name="pullRequestEnvironmentName")
+    @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
     public Output<String> getPullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName == null ? Output.empty() : this.pullRequestEnvironmentName;
     }
 
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<BranchStage> stage;
 
     public Output<BranchStage> getStage() {
         return this.stage == null ? Output.empty() : this.stage;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<BranchTagArgs>> tags;
 
     public Output<List<BranchTagArgs>> getTags() {

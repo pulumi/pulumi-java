@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetDeltaTime;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DatasetFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetFilter Empty = new DatasetFilter();
 
-    @InputImport(name="deltaTime")
+    @Import(name="deltaTime")
       private final @Nullable DatasetDeltaTime deltaTime;
 
     public Optional<DatasetDeltaTime> getDeltaTime() {

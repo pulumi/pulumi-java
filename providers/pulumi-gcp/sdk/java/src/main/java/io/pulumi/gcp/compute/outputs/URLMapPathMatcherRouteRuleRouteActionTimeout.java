@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherRouteRuleRouteActionTimeout {
     /**
      * Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
@@ -25,10 +25,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeout {
      */
     private final String seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteActionTimeout(
-        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
-        @OutputCustomType.Parameter("seconds") String seconds) {
+        @CustomType.Parameter("nanos") @Nullable Integer nanos,
+        @CustomType.Parameter("seconds") String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

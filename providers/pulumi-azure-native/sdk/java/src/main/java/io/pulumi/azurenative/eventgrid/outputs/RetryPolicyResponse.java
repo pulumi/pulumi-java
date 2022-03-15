@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetryPolicyResponse {
     /**
      * Time To Live (in minutes) for events.
@@ -22,10 +22,10 @@ public final class RetryPolicyResponse {
      */
     private final @Nullable Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryPolicyResponse(
-        @OutputCustomType.Parameter("eventTimeToLiveInMinutes") @Nullable Integer eventTimeToLiveInMinutes,
-        @OutputCustomType.Parameter("maxDeliveryAttempts") @Nullable Integer maxDeliveryAttempts) {
+        @CustomType.Parameter("eventTimeToLiveInMinutes") @Nullable Integer eventTimeToLiveInMinutes,
+        @CustomType.Parameter("maxDeliveryAttempts") @Nullable Integer maxDeliveryAttempts) {
         this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }

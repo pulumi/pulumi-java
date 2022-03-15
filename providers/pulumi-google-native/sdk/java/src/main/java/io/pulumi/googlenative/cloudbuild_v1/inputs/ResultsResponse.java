@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuiltImageResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.TimeSpanResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * Path to the artifact manifest. Only populated when artifacts are uploaded.
      * 
      */
-    @InputImport(name="artifactManifest", required=true)
+    @Import(name="artifactManifest", required=true)
       private final String artifactManifest;
 
     public String getArtifactManifest() {
@@ -34,7 +34,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * Time to push all non-container artifacts.
      * 
      */
-    @InputImport(name="artifactTiming", required=true)
+    @Import(name="artifactTiming", required=true)
       private final TimeSpanResponse artifactTiming;
 
     public TimeSpanResponse getArtifactTiming() {
@@ -45,7 +45,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * List of build step digests, in the order corresponding to build step indices.
      * 
      */
-    @InputImport(name="buildStepImages", required=true)
+    @Import(name="buildStepImages", required=true)
       private final List<String> buildStepImages;
 
     public List<String> getBuildStepImages() {
@@ -56,7 +56,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * List of build step outputs, produced by builder images, in the order corresponding to build step indices. [Cloud Builders](https://cloud.google.com/cloud-build/docs/cloud-builders) can produce this output by writing to `$BUILDER_OUTPUT/output`. Only the first 4KB of data is stored.
      * 
      */
-    @InputImport(name="buildStepOutputs", required=true)
+    @Import(name="buildStepOutputs", required=true)
       private final List<String> buildStepOutputs;
 
     public List<String> getBuildStepOutputs() {
@@ -67,7 +67,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * Container images that were built as a part of the build.
      * 
      */
-    @InputImport(name="images", required=true)
+    @Import(name="images", required=true)
       private final List<BuiltImageResponse> images;
 
     public List<BuiltImageResponse> getImages() {
@@ -78,7 +78,7 @@ public final class ResultsResponse extends io.pulumi.resources.InvokeArgs {
      * Number of artifacts uploaded. Only populated when artifacts are uploaded.
      * 
      */
-    @InputImport(name="numArtifacts", required=true)
+    @Import(name="numArtifacts", required=true)
       private final String numArtifacts;
 
     public String getNumArtifacts() {

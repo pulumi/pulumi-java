@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoindexer;
 import io.pulumi.azurenative.videoindexer.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.videoindexer.inputs.MediaServicesForPutRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The account's data-plane ID
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -32,7 +32,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure Video Analyzer for Media account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -43,7 +43,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Managed service identity (system assigned and/or user assigned identities)
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -54,7 +54,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The media services details
      * 
      */
-    @InputImport(name="mediaServices")
+    @Import(name="mediaServices")
       private final @Nullable Output<MediaServicesForPutRequestArgs> mediaServices;
 
     public Output<MediaServicesForPutRequestArgs> getMediaServices() {
@@ -76,7 +76,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.greengrassv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentVersionResult {
     private final @Nullable String arn;
     private final @Nullable String componentName;
     private final @Nullable String componentVersion;
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentVersionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
-        @OutputCustomType.Parameter("componentVersion") @Nullable String componentVersion,
-        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("componentName") @Nullable String componentName,
+        @CustomType.Parameter("componentVersion") @Nullable String componentVersion,
+        @CustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.componentName = componentName;
         this.componentVersion = componentVersion;

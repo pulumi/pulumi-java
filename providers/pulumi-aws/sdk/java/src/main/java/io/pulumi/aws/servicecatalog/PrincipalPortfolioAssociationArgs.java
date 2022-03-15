@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -29,7 +29,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * Portfolio identifier.
      * 
      */
-    @InputImport(name="portfolioId", required=true)
+    @Import(name="portfolioId", required=true)
       private final Output<String> portfolioId;
 
     public Output<String> getPortfolioId() {
@@ -40,7 +40,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * Principal ARN.
      * 
      */
-    @InputImport(name="principalArn", required=true)
+    @Import(name="principalArn", required=true)
       private final Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
@@ -51,7 +51,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
      * Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
-    @InputImport(name="principalType")
+    @Import(name="principalType")
       private final @Nullable Output<String> principalType;
 
     public Output<String> getPrincipalType() {

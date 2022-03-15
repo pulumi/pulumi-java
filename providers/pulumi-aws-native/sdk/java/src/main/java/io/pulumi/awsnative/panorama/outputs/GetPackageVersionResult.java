@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.panorama.outputs;
 
 import io.pulumi.awsnative.panorama.enums.PackageVersionStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPackageVersionResult {
     private final @Nullable Boolean isLatestPatch;
     private final @Nullable Boolean markLatest;
@@ -23,16 +23,16 @@ public final class GetPackageVersionResult {
     private final @Nullable String statusDescription;
     private final @Nullable String updatedLatestPatchVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPackageVersionResult(
-        @OutputCustomType.Parameter("isLatestPatch") @Nullable Boolean isLatestPatch,
-        @OutputCustomType.Parameter("markLatest") @Nullable Boolean markLatest,
-        @OutputCustomType.Parameter("packageArn") @Nullable String packageArn,
-        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
-        @OutputCustomType.Parameter("registeredTime") @Nullable Integer registeredTime,
-        @OutputCustomType.Parameter("status") @Nullable PackageVersionStatus status,
-        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription,
-        @OutputCustomType.Parameter("updatedLatestPatchVersion") @Nullable String updatedLatestPatchVersion) {
+        @CustomType.Parameter("isLatestPatch") @Nullable Boolean isLatestPatch,
+        @CustomType.Parameter("markLatest") @Nullable Boolean markLatest,
+        @CustomType.Parameter("packageArn") @Nullable String packageArn,
+        @CustomType.Parameter("packageName") @Nullable String packageName,
+        @CustomType.Parameter("registeredTime") @Nullable Integer registeredTime,
+        @CustomType.Parameter("status") @Nullable PackageVersionStatus status,
+        @CustomType.Parameter("statusDescription") @Nullable String statusDescription,
+        @CustomType.Parameter("updatedLatestPatchVersion") @Nullable String updatedLatestPatchVersion) {
         this.isLatestPatch = isLatestPatch;
         this.markLatest = markLatest;
         this.packageArn = packageArn;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VMwareV2FabricSpecificDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
@@ -36,13 +36,13 @@ public final class VMwareV2FabricSpecificDetailsResponse {
      */
     private final String vmwareSiteId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMwareV2FabricSpecificDetailsResponse(
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("migrationSolutionId") String migrationSolutionId,
-        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
-        @OutputCustomType.Parameter("serviceResourceId") String serviceResourceId,
-        @OutputCustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("migrationSolutionId") String migrationSolutionId,
+        @CustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @CustomType.Parameter("serviceResourceId") String serviceResourceId,
+        @CustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
         this.instanceType = instanceType;
         this.migrationSolutionId = migrationSolutionId;
         this.serviceEndpoint = serviceEndpoint;

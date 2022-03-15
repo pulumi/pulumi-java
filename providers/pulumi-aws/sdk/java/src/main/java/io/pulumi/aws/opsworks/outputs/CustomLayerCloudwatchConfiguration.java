@@ -4,14 +4,14 @@
 package io.pulumi.aws.opsworks.outputs;
 
 import io.pulumi.aws.opsworks.outputs.CustomLayerCloudwatchConfigurationLogStream;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     /**
@@ -20,10 +20,10 @@ public final class CustomLayerCloudwatchConfiguration {
      */
     private final @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomLayerCloudwatchConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logStreams") @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logStreams") @Nullable List<CustomLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

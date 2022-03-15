@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class FirewallPolicyCertificateAuthorityResponse extends io.pulumi.
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
      * 
      */
-    @InputImport(name="keyVaultSecretId")
+    @Import(name="keyVaultSecretId")
       private final @Nullable String keyVaultSecretId;
 
     public Optional<String> getKeyVaultSecretId() {
@@ -33,7 +33,7 @@ public final class FirewallPolicyCertificateAuthorityResponse extends io.pulumi.
      * Name of the CA certificate.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

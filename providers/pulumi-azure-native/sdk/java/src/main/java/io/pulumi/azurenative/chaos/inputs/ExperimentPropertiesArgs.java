@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.inputs.SelectorArgs;
 import io.pulumi.azurenative.chaos.inputs.StepArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * List of selectors.
      * 
      */
-    @InputImport(name="selectors", required=true)
+    @Import(name="selectors", required=true)
       private final Output<List<SelectorArgs>> selectors;
 
     public Output<List<SelectorArgs>> getSelectors() {
@@ -36,7 +36,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * A boolean value that indicates if experiment should be started on creation or not.
      * 
      */
-    @InputImport(name="startOnCreation")
+    @Import(name="startOnCreation")
       private final @Nullable Output<Boolean> startOnCreation;
 
     public Output<Boolean> getStartOnCreation() {
@@ -47,7 +47,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
      * List of steps.
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final Output<List<StepArgs>> steps;
 
     public Output<List<StepArgs>> getSteps() {

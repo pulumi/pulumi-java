@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
     public Output<Either<String,AuthenticationType>> getAuthenticationType() {
@@ -35,7 +35,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="deadLetterSecret")
+    @Import(name="deadLetterSecret")
       private final @Nullable Output<String> deadLetterSecret;
 
     public Output<String> getDeadLetterSecret() {
@@ -46,7 +46,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * Dead letter storage URL for identity-based authentication.
      * 
      */
-    @InputImport(name="deadLetterUri")
+    @Import(name="deadLetterUri")
       private final @Nullable Output<String> deadLetterUri;
 
     public Output<String> getDeadLetterUri() {
@@ -58,7 +58,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'ServiceBus'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -69,7 +69,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
      * 
      */
-    @InputImport(name="endpointUri")
+    @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
     public Output<String> getEndpointUri() {
@@ -80,7 +80,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * The ServiceBus Topic name for identity-based authentication
      * 
      */
-    @InputImport(name="entityPath")
+    @Import(name="entityPath")
       private final @Nullable Output<String> entityPath;
 
     public Output<String> getEntityPath() {
@@ -91,7 +91,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="primaryConnectionString")
+    @Import(name="primaryConnectionString")
       private final @Nullable Output<String> primaryConnectionString;
 
     public Output<String> getPrimaryConnectionString() {
@@ -102,7 +102,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="secondaryConnectionString")
+    @Import(name="secondaryConnectionString")
       private final @Nullable Output<String> secondaryConnectionString;
 
     public Output<String> getSecondaryConnectionString() {

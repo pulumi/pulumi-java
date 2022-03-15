@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataCatalogConfigResponse {
     /**
      * Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
@@ -15,8 +15,8 @@ public final class DataCatalogConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private DataCatalogConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private DataCatalogConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

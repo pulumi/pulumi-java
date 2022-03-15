@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentGroupLabelResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentOsTypeResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".
      * 
      */
-    @InputImport(name="groupLabels", required=true)
+    @Import(name="groupLabels", required=true)
       private final List<AssignmentGroupLabelResponse> groupLabels;
 
     public List<AssignmentGroupLabelResponse> getGroupLabels() {
@@ -34,7 +34,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.
      * 
      */
-    @InputImport(name="instanceNamePrefixes", required=true)
+    @Import(name="instanceNamePrefixes", required=true)
       private final List<String> instanceNamePrefixes;
 
     public List<String> getInstanceNamePrefixes() {
@@ -45,7 +45,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * Targets any of the instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`. Instance targeting is uncommon and is supported to facilitate the management of changes by the instance or to target specific VM instances for development and testing. Only supported for project-level policies and must reference instances within this project.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<String> instances;
 
     public List<String> getInstances() {
@@ -56,7 +56,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.
      * 
      */
-    @InputImport(name="osTypes", required=true)
+    @Import(name="osTypes", required=true)
       private final List<AssignmentOsTypeResponse> osTypes;
 
     public List<AssignmentOsTypeResponse> getOsTypes() {
@@ -67,7 +67,7 @@ public final class AssignmentResponse extends io.pulumi.resources.InvokeArgs {
      * Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
      * 
      */
-    @InputImport(name="zones", required=true)
+    @Import(name="zones", required=true)
       private final List<String> zones;
 
     public List<String> getZones() {

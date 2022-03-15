@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse extends io
      * Whether this is supposed to be a full or partial match.
      * 
      */
-    @InputImport(name="fullMatch", required=true)
+    @Import(name="fullMatch", required=true)
       private final Boolean fullMatch;
 
     public Boolean getFullMatch() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse extends io
      * The value of the term to match on. Value cannot be empty. Value can have at most 3 terms if specified as a partial match. Each space separated string is considered as one term. Example) "a b c" is 3 terms and allowed, " a b c d" is 4 terms and not allowed for partial match.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

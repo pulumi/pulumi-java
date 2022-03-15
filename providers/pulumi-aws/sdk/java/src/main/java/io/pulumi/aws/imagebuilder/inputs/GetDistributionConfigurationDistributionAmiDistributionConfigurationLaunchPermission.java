@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Set of EC2 launch permission user groups.
      * 
      */
-    @InputImport(name="userGroups", required=true)
+    @Import(name="userGroups", required=true)
       private final List<String> userGroups;
 
     public List<String> getUserGroups() {
@@ -28,7 +28,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Set of AWS Account identifiers.
      * 
      */
-    @InputImport(name="userIds", required=true)
+    @Import(name="userIds", required=true)
       private final List<String> userIds;
 
     public List<String> getUserIds() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SynchronizationDetailsResponse {
     /**
      * Id of data set
@@ -87,23 +87,23 @@ public final class SynchronizationDetailsResponse {
      */
     private final Double vCore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SynchronizationDetailsResponse(
-        @OutputCustomType.Parameter("dataSetId") String dataSetId,
-        @OutputCustomType.Parameter("dataSetType") String dataSetType,
-        @OutputCustomType.Parameter("durationMs") Integer durationMs,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("filesRead") Double filesRead,
-        @OutputCustomType.Parameter("filesWritten") Double filesWritten,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rowsCopied") Double rowsCopied,
-        @OutputCustomType.Parameter("rowsRead") Double rowsRead,
-        @OutputCustomType.Parameter("sizeRead") Double sizeRead,
-        @OutputCustomType.Parameter("sizeWritten") Double sizeWritten,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("vCore") Double vCore) {
+        @CustomType.Parameter("dataSetId") String dataSetId,
+        @CustomType.Parameter("dataSetType") String dataSetType,
+        @CustomType.Parameter("durationMs") Integer durationMs,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("filesRead") Double filesRead,
+        @CustomType.Parameter("filesWritten") Double filesWritten,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rowsCopied") Double rowsCopied,
+        @CustomType.Parameter("rowsRead") Double rowsRead,
+        @CustomType.Parameter("sizeRead") Double sizeRead,
+        @CustomType.Parameter("sizeWritten") Double sizeWritten,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("vCore") Double vCore) {
         this.dataSetId = dataSetId;
         this.dataSetType = dataSetType;
         this.durationMs = durationMs;

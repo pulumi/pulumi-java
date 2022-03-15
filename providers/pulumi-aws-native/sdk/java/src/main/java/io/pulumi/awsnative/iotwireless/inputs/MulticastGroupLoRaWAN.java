@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * Multicast group LoRaWAN DL Class
      * 
      */
-    @InputImport(name="dlClass", required=true)
+    @Import(name="dlClass", required=true)
       private final String dlClass;
 
     public String getDlClass() {
@@ -30,7 +30,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * Multicast group number of devices in group. Returned after successful read.
      * 
      */
-    @InputImport(name="numberOfDevicesInGroup")
+    @Import(name="numberOfDevicesInGroup")
       private final @Nullable Integer numberOfDevicesInGroup;
 
     public Optional<Integer> getNumberOfDevicesInGroup() {
@@ -41,7 +41,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * Multicast group number of devices requested. Returned after successful read.
      * 
      */
-    @InputImport(name="numberOfDevicesRequested")
+    @Import(name="numberOfDevicesRequested")
       private final @Nullable Integer numberOfDevicesRequested;
 
     public Optional<Integer> getNumberOfDevicesRequested() {
@@ -52,7 +52,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * Multicast group LoRaWAN RF region
      * 
      */
-    @InputImport(name="rfRegion", required=true)
+    @Import(name="rfRegion", required=true)
       private final String rfRegion;
 
     public String getRfRegion() {

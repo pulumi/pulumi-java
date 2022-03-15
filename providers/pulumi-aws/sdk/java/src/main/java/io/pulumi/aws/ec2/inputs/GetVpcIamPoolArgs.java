@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcIamPoolFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * Tags that are required to create resources in using this pool.
      * 
      */
-    @InputImport(name="allocationResourceTags")
+    @Import(name="allocationResourceTags")
       private final @Nullable Map<String,String> allocationResourceTags;
 
     public Map<String,String> getAllocationResourceTags() {
@@ -32,7 +32,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpcIamPoolFilter> filters;
 
     public List<GetVpcIamPoolFilter> getFilters() {
@@ -43,14 +43,14 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * - 
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
-    @InputImport(name="ipamPoolId")
+    @Import(name="ipamPoolId")
       private final @Nullable String ipamPoolId;
 
     public Optional<String> getIpamPoolId() {
@@ -61,7 +61,7 @@ public final class GetVpcIamPoolArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags to assigned to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

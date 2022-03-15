@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.DatasetAccessView;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetAccess {
     /**
      * A domain to grant access to. Any users signed in with the
@@ -54,14 +54,14 @@ public final class DatasetAccess {
      */
     private final @Nullable DatasetAccessView view;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetAccess(
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("groupByEmail") @Nullable String groupByEmail,
-        @OutputCustomType.Parameter("role") @Nullable String role,
-        @OutputCustomType.Parameter("specialGroup") @Nullable String specialGroup,
-        @OutputCustomType.Parameter("userByEmail") @Nullable String userByEmail,
-        @OutputCustomType.Parameter("view") @Nullable DatasetAccessView view) {
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("groupByEmail") @Nullable String groupByEmail,
+        @CustomType.Parameter("role") @Nullable String role,
+        @CustomType.Parameter("specialGroup") @Nullable String specialGroup,
+        @CustomType.Parameter("userByEmail") @Nullable String userByEmail,
+        @CustomType.Parameter("view") @Nullable DatasetAccessView view) {
         this.domain = domain;
         this.groupByEmail = groupByEmail;
         this.role = role;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.HashResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
      * The hash of the resource content. E.g., the Docker digest.
      * 
      */
-    @InputImport(name="contentHash", required=true)
+    @Import(name="contentHash", required=true)
       private final HashResponse contentHash;
 
     public HashResponse getContentHash() {
@@ -32,7 +32,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the resource. E.g., the name of a Docker image - "Debian".
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class ResourceResponse extends io.pulumi.resources.InvokeArgs {
      * The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

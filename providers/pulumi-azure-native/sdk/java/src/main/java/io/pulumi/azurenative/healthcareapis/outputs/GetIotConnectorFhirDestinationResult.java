@@ -5,13 +5,13 @@ package io.pulumi.azurenative.healthcareapis.outputs;
 
 import io.pulumi.azurenative.healthcareapis.outputs.IotMappingPropertiesResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIotConnectorFhirDestinationResult {
     /**
      * An etag associated with the resource, used for optimistic concurrency when editing it.
@@ -59,17 +59,17 @@ public final class GetIotConnectorFhirDestinationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIotConnectorFhirDestinationResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("fhirMapping") IotMappingPropertiesResponse fhirMapping,
-        @OutputCustomType.Parameter("fhirServiceResourceId") String fhirServiceResourceId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceIdentityResolutionType") String resourceIdentityResolutionType,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("fhirMapping") IotMappingPropertiesResponse fhirMapping,
+        @CustomType.Parameter("fhirServiceResourceId") String fhirServiceResourceId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceIdentityResolutionType") String resourceIdentityResolutionType,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.fhirMapping = fhirMapping;
         this.fhirServiceResourceId = fhirServiceResourceId;

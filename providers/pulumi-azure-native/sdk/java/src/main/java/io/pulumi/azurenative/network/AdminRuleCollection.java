@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.NetworkManagerSecurityGroupItemResp
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * Groups for configuration
      * 
      */
-    @OutputExport(name="appliesToGroups", type=List.class, parameters={NetworkManagerSecurityGroupItemResponse.class})
+    @Export(name="appliesToGroups", type=List.class, parameters={NetworkManagerSecurityGroupItemResponse.class})
     private Output</* @Nullable */ List<NetworkManagerSecurityGroupItemResponse>> appliesToGroups;
 
     /**
@@ -50,7 +50,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * A description of the rule collection.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * A display name of the rule collection.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -78,7 +78,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -92,7 +92,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -120,7 +120,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * The system metadata related to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -134,7 +134,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

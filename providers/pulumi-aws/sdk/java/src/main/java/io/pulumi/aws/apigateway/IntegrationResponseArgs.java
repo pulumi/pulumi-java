@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
      * 
      */
-    @InputImport(name="contentHandling")
+    @Import(name="contentHandling")
       private final @Nullable Output<String> contentHandling;
 
     public Output<String> getContentHandling() {
@@ -30,7 +30,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -41,7 +41,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The API resource ID
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -53,7 +53,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
      * 
      */
-    @InputImport(name="responseParameters")
+    @Import(name="responseParameters")
       private final @Nullable Output<Map<String,String>> responseParameters;
 
     public Output<Map<String,String>> getResponseParameters() {
@@ -64,7 +64,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * A map specifying the templates used to transform the integration response body
      * 
      */
-    @InputImport(name="responseTemplates")
+    @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
     public Output<Map<String,String>> getResponseTemplates() {
@@ -75,7 +75,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -89,7 +89,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
      * 
      */
-    @InputImport(name="selectionPattern")
+    @Import(name="selectionPattern")
       private final @Nullable Output<String> selectionPattern;
 
     public Output<String> getSelectionPattern() {
@@ -100,7 +100,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
      * The HTTP status code
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
     public Output<String> getStatusCode() {

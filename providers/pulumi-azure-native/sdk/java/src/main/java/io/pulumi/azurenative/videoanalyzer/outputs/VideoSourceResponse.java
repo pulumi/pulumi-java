@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoSequenceAbsoluteTimeMarkersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VideoSourceResponse {
     /**
      * Node name. Must be unique within the topology.
@@ -32,12 +32,12 @@ public final class VideoSourceResponse {
      */
     private final String videoName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoSourceResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("timeSequences") VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("videoName") String videoName) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("timeSequences") VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("videoName") String videoName) {
         this.name = name;
         this.timeSequences = timeSequences;
         this.type = type;

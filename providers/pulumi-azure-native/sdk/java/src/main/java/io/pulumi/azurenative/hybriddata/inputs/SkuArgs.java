@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybriddata.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The sku name. Required for data manager creation, optional for update.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The sku tier. This is based on the SKU name.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

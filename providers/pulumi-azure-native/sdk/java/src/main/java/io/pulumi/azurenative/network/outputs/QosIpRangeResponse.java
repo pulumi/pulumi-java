@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QosIpRangeResponse {
     /**
      * End IP Address.
@@ -22,10 +22,10 @@ public final class QosIpRangeResponse {
      */
     private final @Nullable String startIP;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QosIpRangeResponse(
-        @OutputCustomType.Parameter("endIP") @Nullable String endIP,
-        @OutputCustomType.Parameter("startIP") @Nullable String startIP) {
+        @CustomType.Parameter("endIP") @Nullable String endIP,
+        @CustomType.Parameter("startIP") @Nullable String startIP) {
         this.endIP = endIP;
         this.startIP = startIP;
     }

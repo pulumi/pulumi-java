@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbforpostgresql.ServerSecurityAlertPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
      * 
      */
-    @OutputExport(name="disabledAlerts", type=List.class, parameters={String.class})
+    @Export(name="disabledAlerts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> disabledAlerts;
 
     /**
@@ -50,7 +50,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies that the alert is sent to the account administrators.
      * 
      */
-    @OutputExport(name="emailAccountAdmins", type=Boolean.class, parameters={})
+    @Export(name="emailAccountAdmins", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> emailAccountAdmins;
 
     /**
@@ -64,7 +64,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    @OutputExport(name="emailAddresses", type=List.class, parameters={String.class})
+    @Export(name="emailAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> emailAddresses;
 
     /**
@@ -78,7 +78,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
@@ -106,7 +106,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies the state of the policy, whether it is enabled or disabled.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -120,7 +120,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    @OutputExport(name="storageAccountAccessKey", type=String.class, parameters={})
+    @Export(name="storageAccountAccessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountAccessKey;
 
     /**
@@ -134,7 +134,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    @OutputExport(name="storageEndpoint", type=String.class, parameters={})
+    @Export(name="storageEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageEndpoint;
 
     /**
@@ -148,7 +148,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

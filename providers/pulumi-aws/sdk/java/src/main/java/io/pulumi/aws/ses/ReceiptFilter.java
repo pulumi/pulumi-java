@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.ReceiptFilterArgs;
 import io.pulumi.aws.ses.inputs.ReceiptFilterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * The SES receipt filter ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * The IP address or address range to filter, in CIDR notation
      * 
      */
-    @OutputExport(name="cidr", type=String.class, parameters={})
+    @Export(name="cidr", type=String.class, parameters={})
     private Output<String> cidr;
 
     /**
@@ -60,7 +60,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * The name of the filter
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -74,7 +74,7 @@ public class ReceiptFilter extends io.pulumi.resources.CustomResource {
      * Block or Allow
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

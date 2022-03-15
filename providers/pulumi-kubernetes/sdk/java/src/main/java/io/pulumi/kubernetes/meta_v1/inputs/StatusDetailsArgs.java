@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.StatusCauseArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.
      * 
      */
-    @InputImport(name="causes")
+    @Import(name="causes")
       private final @Nullable Output<List<StatusCauseArgs>> causes;
 
     public Output<List<StatusCauseArgs>> getCauses() {
@@ -36,7 +36,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * The group attribute of the resource associated with the status StatusReason.
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -47,7 +47,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -58,7 +58,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.
      * 
      */
-    @InputImport(name="retryAfterSeconds")
+    @Import(name="retryAfterSeconds")
       private final @Nullable Output<Integer> retryAfterSeconds;
 
     public Output<Integer> getRetryAfterSeconds() {
@@ -80,7 +80,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.SecretLabelGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * Base64-url-safe-encoded secret data
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -31,7 +31,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * User-defined key/value metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<SecretLabelGetArgs>> labels;
 
     public Output<List<SecretLabelGetArgs>> getLabels() {
@@ -42,7 +42,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * User-defined name of the secret
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

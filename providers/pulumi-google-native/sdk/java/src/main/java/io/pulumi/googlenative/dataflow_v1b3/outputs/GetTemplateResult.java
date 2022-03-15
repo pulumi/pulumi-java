@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.RuntimeMetadataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.StatusResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.TemplateMetadataResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTemplateResult {
     /**
      * The template metadata describing the template name, available parameters, etc.
@@ -33,12 +33,12 @@ public final class GetTemplateResult {
      */
     private final String templateType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTemplateResult(
-        @OutputCustomType.Parameter("metadata") TemplateMetadataResponse metadata,
-        @OutputCustomType.Parameter("runtimeMetadata") RuntimeMetadataResponse runtimeMetadata,
-        @OutputCustomType.Parameter("status") StatusResponse status,
-        @OutputCustomType.Parameter("templateType") String templateType) {
+        @CustomType.Parameter("metadata") TemplateMetadataResponse metadata,
+        @CustomType.Parameter("runtimeMetadata") RuntimeMetadataResponse runtimeMetadata,
+        @CustomType.Parameter("status") StatusResponse status,
+        @CustomType.Parameter("templateType") String templateType) {
         this.metadata = metadata;
         this.runtimeMetadata = runtimeMetadata;
         this.status = status;

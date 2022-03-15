@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationSettingResponse {
     /**
      * Specifies what happens after a reboot during the application of a configuration. The possible values are ContinueConfiguration and StopConfiguration
@@ -44,14 +44,14 @@ public final class ConfigurationSettingResponse {
      */
     private final @Nullable Double refreshFrequencyMins;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationSettingResponse(
-        @OutputCustomType.Parameter("actionAfterReboot") @Nullable String actionAfterReboot,
-        @OutputCustomType.Parameter("allowModuleOverwrite") @Nullable Boolean allowModuleOverwrite,
-        @OutputCustomType.Parameter("configurationMode") @Nullable String configurationMode,
-        @OutputCustomType.Parameter("configurationModeFrequencyMins") @Nullable Double configurationModeFrequencyMins,
-        @OutputCustomType.Parameter("rebootIfNeeded") @Nullable Boolean rebootIfNeeded,
-        @OutputCustomType.Parameter("refreshFrequencyMins") @Nullable Double refreshFrequencyMins) {
+        @CustomType.Parameter("actionAfterReboot") @Nullable String actionAfterReboot,
+        @CustomType.Parameter("allowModuleOverwrite") @Nullable Boolean allowModuleOverwrite,
+        @CustomType.Parameter("configurationMode") @Nullable String configurationMode,
+        @CustomType.Parameter("configurationModeFrequencyMins") @Nullable Double configurationModeFrequencyMins,
+        @CustomType.Parameter("rebootIfNeeded") @Nullable Boolean rebootIfNeeded,
+        @CustomType.Parameter("refreshFrequencyMins") @Nullable Double refreshFrequencyMins) {
         this.actionAfterReboot = actionAfterReboot;
         this.allowModuleOverwrite = allowModuleOverwrite;
         this.configurationMode = configurationMode;

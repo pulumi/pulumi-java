@@ -6,13 +6,13 @@ package io.pulumi.azurenative.hybridnetwork.outputs;
 import io.pulumi.azurenative.hybridnetwork.outputs.DataDiskResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.OsDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine.
@@ -30,11 +30,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable OsDiskResponse osDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageProfileResponse(
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
-        @OutputCustomType.Parameter("osDisk") @Nullable OsDiskResponse osDisk) {
+        @CustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
+        @CustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
+        @CustomType.Parameter("osDisk") @Nullable OsDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;

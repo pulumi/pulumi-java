@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceNicPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualApplianceSkuPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkVirtualApplianceResult {
     /**
      * Address Prefix.
@@ -109,26 +109,26 @@ public final class GetNetworkVirtualApplianceResult {
      */
     private final @Nullable SubResourceResponse virtualHub;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkVirtualApplianceResult(
-        @OutputCustomType.Parameter("addressPrefix") String addressPrefix,
-        @OutputCustomType.Parameter("bootStrapConfigurationBlobs") @Nullable List<String> bootStrapConfigurationBlobs,
-        @OutputCustomType.Parameter("cloudInitConfiguration") @Nullable String cloudInitConfiguration,
-        @OutputCustomType.Parameter("cloudInitConfigurationBlobs") @Nullable List<String> cloudInitConfigurationBlobs,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("inboundSecurityRules") List<SubResourceResponse> inboundSecurityRules,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nvaSku") @Nullable VirtualApplianceSkuPropertiesResponse nvaSku,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualApplianceAsn") @Nullable Double virtualApplianceAsn,
-        @OutputCustomType.Parameter("virtualApplianceNics") List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
-        @OutputCustomType.Parameter("virtualApplianceSites") List<SubResourceResponse> virtualApplianceSites,
-        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub) {
+        @CustomType.Parameter("addressPrefix") String addressPrefix,
+        @CustomType.Parameter("bootStrapConfigurationBlobs") @Nullable List<String> bootStrapConfigurationBlobs,
+        @CustomType.Parameter("cloudInitConfiguration") @Nullable String cloudInitConfiguration,
+        @CustomType.Parameter("cloudInitConfigurationBlobs") @Nullable List<String> cloudInitConfigurationBlobs,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("inboundSecurityRules") List<SubResourceResponse> inboundSecurityRules,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nvaSku") @Nullable VirtualApplianceSkuPropertiesResponse nvaSku,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualApplianceAsn") @Nullable Double virtualApplianceAsn,
+        @CustomType.Parameter("virtualApplianceNics") List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
+        @CustomType.Parameter("virtualApplianceSites") List<SubResourceResponse> virtualApplianceSites,
+        @CustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub) {
         this.addressPrefix = addressPrefix;
         this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
         this.cloudInitConfiguration = cloudInitConfiguration;

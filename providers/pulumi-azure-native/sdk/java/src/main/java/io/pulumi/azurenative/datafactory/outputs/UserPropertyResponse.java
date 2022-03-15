@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPropertyResponse {
     /**
      * User property name.
@@ -21,10 +21,10 @@ public final class UserPropertyResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPropertyResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") Object value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") Object value) {
         this.name = name;
         this.value = value;
     }

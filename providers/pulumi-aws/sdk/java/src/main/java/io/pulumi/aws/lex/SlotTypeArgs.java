@@ -5,7 +5,7 @@ package io.pulumi.aws.lex;
 
 import io.pulumi.aws.lex.inputs.SlotTypeEnumerationValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * update. Defaults to `false`.
      * 
      */
-    @InputImport(name="createVersion")
+    @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
     public Output<Boolean> getCreateVersion() {
@@ -33,7 +33,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the slot type. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * documented under enumeration_value.
      * 
      */
-    @InputImport(name="enumerationValues", required=true)
+    @Import(name="enumerationValues", required=true)
       private final Output<List<SlotTypeEnumerationValueArgs>> enumerationValues;
 
     public Output<List<SlotTypeEnumerationValueArgs>> getEnumerationValues() {
@@ -58,7 +58,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
      * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
      * 
      */
-    @InputImport(name="valueSelectionStrategy")
+    @Import(name="valueSelectionStrategy")
       private final @Nullable Output<String> valueSelectionStrategy;
 
     public Output<String> getValueSelectionStrategy() {

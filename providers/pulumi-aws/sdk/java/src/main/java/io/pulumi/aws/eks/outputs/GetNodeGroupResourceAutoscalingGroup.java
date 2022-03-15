@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeGroupResourceAutoscalingGroup {
     /**
      * Name of the AutoScaling Group.
@@ -15,8 +15,8 @@ public final class GetNodeGroupResourceAutoscalingGroup {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GetNodeGroupResourceAutoscalingGroup(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GetNodeGroupResourceAutoscalingGroup(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

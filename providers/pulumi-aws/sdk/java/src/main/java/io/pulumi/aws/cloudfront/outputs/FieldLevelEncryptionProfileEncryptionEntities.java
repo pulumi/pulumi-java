@@ -4,17 +4,17 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionProfileEncryptionEntitiesItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionProfileEncryptionEntities {
     private final @Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items;
 
-    @OutputCustomType.Constructor
-    private FieldLevelEncryptionProfileEncryptionEntities(@OutputCustomType.Parameter("items") @Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
+    @CustomType.Constructor
+    private FieldLevelEncryptionProfileEncryptionEntities(@CustomType.Parameter("items") @Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
         this.items = items;
     }
 

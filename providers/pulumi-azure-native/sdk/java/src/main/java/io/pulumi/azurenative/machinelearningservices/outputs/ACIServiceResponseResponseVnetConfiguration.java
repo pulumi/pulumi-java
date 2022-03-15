@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ACIServiceResponseResponseVnetConfiguration {
     /**
      * The name of the virtual network subnet.
@@ -22,10 +22,10 @@ public final class ACIServiceResponseResponseVnetConfiguration {
      */
     private final @Nullable String vnetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ACIServiceResponseResponseVnetConfiguration(
-        @OutputCustomType.Parameter("subnetName") @Nullable String subnetName,
-        @OutputCustomType.Parameter("vnetName") @Nullable String vnetName) {
+        @CustomType.Parameter("subnetName") @Nullable String subnetName,
+        @CustomType.Parameter("vnetName") @Nullable String vnetName) {
         this.subnetName = subnetName;
         this.vnetName = vnetName;
     }

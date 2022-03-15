@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetNodeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetNodeArgs Empty = new GetNodeArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="nodeId", required=true)
+    @Import(name="nodeId", required=true)
       private final String nodeId;
 
     public String getNodeId() {
         return this.nodeId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

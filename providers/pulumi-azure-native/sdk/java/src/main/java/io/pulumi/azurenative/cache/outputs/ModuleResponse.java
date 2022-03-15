@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModuleResponse {
     /**
      * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
@@ -27,11 +27,11 @@ public final class ModuleResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModuleResponse(
-        @OutputCustomType.Parameter("args") @Nullable String args,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("args") @Nullable String args,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("version") String version) {
         this.args = args;
         this.name = name;
         this.version = version;

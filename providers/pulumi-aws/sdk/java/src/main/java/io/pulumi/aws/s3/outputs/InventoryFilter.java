@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InventoryFilter {
     /**
      * The prefix that an object must have to be included in the inventory results.
@@ -17,8 +17,8 @@ public final class InventoryFilter {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
-    private InventoryFilter(@OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+    @CustomType.Constructor
+    private InventoryFilter(@CustomType.Parameter("prefix") @Nullable String prefix) {
         this.prefix = prefix;
     }
 

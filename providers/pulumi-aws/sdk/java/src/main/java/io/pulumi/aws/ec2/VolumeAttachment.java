@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VolumeAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.VolumeAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/device_naming.html#available-ec2-device-names) and [Device Naming on Windows Instances](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/device_naming.html#available-ec2-device-names) for more information.
      * 
      */
-    @OutputExport(name="deviceName", type=String.class, parameters={})
+    @Export(name="deviceName", type=String.class, parameters={})
     private Output<String> deviceName;
 
     /**
@@ -57,7 +57,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
      * 
      */
-    @OutputExport(name="forceDetach", type=Boolean.class, parameters={})
+    @Export(name="forceDetach", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDetach;
 
     /**
@@ -74,7 +74,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * ID of the Instance to attach to
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -92,7 +92,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * means attached.
      * 
      */
-    @OutputExport(name="skipDestroy", type=Boolean.class, parameters={})
+    @Export(name="skipDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipDestroy;
 
     /**
@@ -111,7 +111,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * before trying to detach the volume. Stops the instance, if it is not already stopped.
      * 
      */
-    @OutputExport(name="stopInstanceBeforeDetaching", type=Boolean.class, parameters={})
+    @Export(name="stopInstanceBeforeDetaching", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> stopInstanceBeforeDetaching;
 
     /**
@@ -126,7 +126,7 @@ public class VolumeAttachment extends io.pulumi.resources.CustomResource {
      * ID of the Volume to be attached
      * 
      */
-    @OutputExport(name="volumeId", type=String.class, parameters={})
+    @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;
 
     /**

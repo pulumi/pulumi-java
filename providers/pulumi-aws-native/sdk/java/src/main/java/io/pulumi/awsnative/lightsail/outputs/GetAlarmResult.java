@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAlarmResult {
     private final @Nullable String alarmArn;
     /**
@@ -62,18 +62,18 @@ public final class GetAlarmResult {
      */
     private final @Nullable String treatMissingData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAlarmResult(
-        @OutputCustomType.Parameter("alarmArn") @Nullable String alarmArn,
-        @OutputCustomType.Parameter("comparisonOperator") @Nullable String comparisonOperator,
-        @OutputCustomType.Parameter("contactProtocols") @Nullable List<String> contactProtocols,
-        @OutputCustomType.Parameter("datapointsToAlarm") @Nullable Integer datapointsToAlarm,
-        @OutputCustomType.Parameter("evaluationPeriods") @Nullable Integer evaluationPeriods,
-        @OutputCustomType.Parameter("notificationEnabled") @Nullable Boolean notificationEnabled,
-        @OutputCustomType.Parameter("notificationTriggers") @Nullable List<String> notificationTriggers,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
-        @OutputCustomType.Parameter("treatMissingData") @Nullable String treatMissingData) {
+        @CustomType.Parameter("alarmArn") @Nullable String alarmArn,
+        @CustomType.Parameter("comparisonOperator") @Nullable String comparisonOperator,
+        @CustomType.Parameter("contactProtocols") @Nullable List<String> contactProtocols,
+        @CustomType.Parameter("datapointsToAlarm") @Nullable Integer datapointsToAlarm,
+        @CustomType.Parameter("evaluationPeriods") @Nullable Integer evaluationPeriods,
+        @CustomType.Parameter("notificationEnabled") @Nullable Boolean notificationEnabled,
+        @CustomType.Parameter("notificationTriggers") @Nullable List<String> notificationTriggers,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("threshold") @Nullable Double threshold,
+        @CustomType.Parameter("treatMissingData") @Nullable String treatMissingData) {
         this.alarmArn = alarmArn;
         this.comparisonOperator = comparisonOperator;
         this.contactProtocols = contactProtocols;

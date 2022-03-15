@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.FileContentBufferArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * The Key Database (db).
      * 
      */
-    @InputImport(name="dbs")
+    @Import(name="dbs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbs;
 
     public Output<List<FileContentBufferArgs>> getDbs() {
@@ -34,7 +34,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * The forbidden key database (dbx).
      * 
      */
-    @InputImport(name="dbxs")
+    @Import(name="dbxs")
       private final @Nullable Output<List<FileContentBufferArgs>> dbxs;
 
     public Output<List<FileContentBufferArgs>> getDbxs() {
@@ -45,7 +45,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * The Key Exchange Key (KEK).
      * 
      */
-    @InputImport(name="keks")
+    @Import(name="keks")
       private final @Nullable Output<List<FileContentBufferArgs>> keks;
 
     public Output<List<FileContentBufferArgs>> getKeks() {
@@ -56,7 +56,7 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
      * The Platform Key (PK).
      * 
      */
-    @InputImport(name="pk")
+    @Import(name="pk")
       private final @Nullable Output<FileContentBufferArgs> pk;
 
     public Output<FileContentBufferArgs> getPk() {

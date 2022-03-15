@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WarmStoreConfigurationPropertiesArgs extends io.pulumi.resour
      * ISO8601 timespan specifying the number of days the environment's events will be available for query from the warm store.
      * 
      */
-    @InputImport(name="dataRetention", required=true)
+    @Import(name="dataRetention", required=true)
       private final Output<String> dataRetention;
 
     public Output<String> getDataRetention() {

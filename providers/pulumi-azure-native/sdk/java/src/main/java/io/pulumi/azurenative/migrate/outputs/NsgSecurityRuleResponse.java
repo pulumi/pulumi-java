@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NsgSecurityRuleResponse {
     /**
      * Gets or sets whether network traffic is allowed or denied.
@@ -74,18 +74,18 @@ public final class NsgSecurityRuleResponse {
      */
     private final @Nullable String sourcePortRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NsgSecurityRuleResponse(
-        @OutputCustomType.Parameter("access") @Nullable String access,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
-        @OutputCustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
-        @OutputCustomType.Parameter("direction") @Nullable String direction,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
-        @OutputCustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange) {
+        @CustomType.Parameter("access") @Nullable String access,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
+        @CustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
+        @CustomType.Parameter("direction") @Nullable String direction,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
+        @CustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;

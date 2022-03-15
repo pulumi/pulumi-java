@@ -7,7 +7,7 @@ import io.pulumi.awsnative.fms.outputs.PolicyIEMap;
 import io.pulumi.awsnative.fms.outputs.PolicyResourceTag;
 import io.pulumi.awsnative.fms.outputs.PolicyTag;
 import io.pulumi.awsnative.fms.outputs.SecurityServicePolicyDataProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyResult {
     private final @Nullable String arn;
     private final @Nullable PolicyIEMap excludeMap;
@@ -31,21 +31,21 @@ public final class GetPolicyResult {
     private final @Nullable SecurityServicePolicyDataProperties securityServicePolicyData;
     private final @Nullable List<PolicyTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("excludeMap") @Nullable PolicyIEMap excludeMap,
-        @OutputCustomType.Parameter("excludeResourceTags") @Nullable Boolean excludeResourceTags,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("includeMap") @Nullable PolicyIEMap includeMap,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
-        @OutputCustomType.Parameter("remediationEnabled") @Nullable Boolean remediationEnabled,
-        @OutputCustomType.Parameter("resourceTags") @Nullable List<PolicyResourceTag> resourceTags,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("resourceTypeList") @Nullable List<String> resourceTypeList,
-        @OutputCustomType.Parameter("resourcesCleanUp") @Nullable Boolean resourcesCleanUp,
-        @OutputCustomType.Parameter("securityServicePolicyData") @Nullable SecurityServicePolicyDataProperties securityServicePolicyData,
-        @OutputCustomType.Parameter("tags") @Nullable List<PolicyTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("excludeMap") @Nullable PolicyIEMap excludeMap,
+        @CustomType.Parameter("excludeResourceTags") @Nullable Boolean excludeResourceTags,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("includeMap") @Nullable PolicyIEMap includeMap,
+        @CustomType.Parameter("policyName") @Nullable String policyName,
+        @CustomType.Parameter("remediationEnabled") @Nullable Boolean remediationEnabled,
+        @CustomType.Parameter("resourceTags") @Nullable List<PolicyResourceTag> resourceTags,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("resourceTypeList") @Nullable List<String> resourceTypeList,
+        @CustomType.Parameter("resourcesCleanUp") @Nullable Boolean resourcesCleanUp,
+        @CustomType.Parameter("securityServicePolicyData") @Nullable SecurityServicePolicyDataProperties securityServicePolicyData,
+        @CustomType.Parameter("tags") @Nullable List<PolicyTag> tags) {
         this.arn = arn;
         this.excludeMap = excludeMap;
         this.excludeResourceTags = excludeResourceTags;

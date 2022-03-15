@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetA
      * An API may choose to allow the value "24:00:00" for scenarios like business closing time.
      * 
      */
-    @InputImport(name="hours")
+    @Import(name="hours")
       private final @Nullable Output<Integer> hours;
 
     public Output<Integer> getHours() {
@@ -30,7 +30,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetA
      * Minutes of hour of day. Must be from 0 to 59.
      * 
      */
-    @InputImport(name="minutes")
+    @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {
@@ -41,7 +41,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetA
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
      */
-    @InputImport(name="nanos")
+    @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -53,7 +53,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeGetA
      * An API may allow the value 60 if it allows leap-seconds.
      * 
      */
-    @InputImport(name="seconds")
+    @Import(name="seconds")
       private final @Nullable Output<Integer> seconds;
 
     public Output<Integer> getSeconds() {

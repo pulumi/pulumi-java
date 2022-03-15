@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryption
 import io.pulumi.azurenative.logic.inputs.NetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * The encryption configuration.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> getEncryptionConfiguration() {
@@ -39,7 +39,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * The endpoints configuration.
      * 
      */
-    @InputImport(name="endpointsConfiguration")
+    @Import(name="endpointsConfiguration")
       private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
     public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
@@ -50,7 +50,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * Gets the tracking id.
      * 
      */
-    @InputImport(name="integrationServiceEnvironmentId")
+    @Import(name="integrationServiceEnvironmentId")
       private final @Nullable Output<String> integrationServiceEnvironmentId;
 
     public Output<String> getIntegrationServiceEnvironmentId() {
@@ -61,7 +61,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * The network configuration.
      * 
      */
-    @InputImport(name="networkConfiguration")
+    @Import(name="networkConfiguration")
       private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
     public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
@@ -72,7 +72,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
 
     public Output<Either<String,WorkflowProvisioningState>> getProvisioningState() {
@@ -83,7 +83,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
      * The integration service environment state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
     public Output<Either<String,WorkflowState>> getState() {

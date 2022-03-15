@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
 
     public static final PackagingConfigurationHlsPackageArgs Empty = new PackagingConfigurationHlsPackageArgs();
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<PackagingConfigurationHlsEncryptionArgs> encryption;
 
     public Output<PackagingConfigurationHlsEncryptionArgs> getEncryption() {
@@ -33,14 +33,14 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
      * A list of HLS manifest configurations.
      * 
      */
-    @InputImport(name="hlsManifests", required=true)
+    @Import(name="hlsManifests", required=true)
       private final Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
     public Output<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
         return this.hlsManifests;
     }
 
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
     public Output<Integer> getSegmentDurationSeconds() {
@@ -51,7 +51,7 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
      * When enabled, audio streams will be placed in rendition groups in the output.
      * 
      */
-    @InputImport(name="useAudioRenditionGroup")
+    @Import(name="useAudioRenditionGroup")
       private final @Nullable Output<Boolean> useAudioRenditionGroup;
 
     public Output<Boolean> getUseAudioRenditionGroup() {

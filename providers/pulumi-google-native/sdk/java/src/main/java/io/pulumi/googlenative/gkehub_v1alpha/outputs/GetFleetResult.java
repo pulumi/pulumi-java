@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFleetResult {
     /**
      * When the Fleet was created.
@@ -45,15 +45,15 @@ public final class GetFleetResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFleetResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("fleetName") String fleetName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("uid") String uid,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("fleetName") String fleetName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("uid") String uid,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

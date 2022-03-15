@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.WorkerConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivatePoolV1ConfigResponse {
     /**
      * Network configuration for the pool.
@@ -21,10 +21,10 @@ public final class PrivatePoolV1ConfigResponse {
      */
     private final WorkerConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivatePoolV1ConfigResponse(
-        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
+        @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @CustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
         this.networkConfig = networkConfig;
         this.workerConfig = workerConfig;
     }

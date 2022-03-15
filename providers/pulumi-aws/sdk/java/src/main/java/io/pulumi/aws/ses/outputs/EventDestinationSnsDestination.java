@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventDestinationSnsDestination {
     /**
      * The ARN of the SNS topic
@@ -15,8 +15,8 @@ public final class EventDestinationSnsDestination {
      */
     private final String topicArn;
 
-    @OutputCustomType.Constructor
-    private EventDestinationSnsDestination(@OutputCustomType.Parameter("topicArn") String topicArn) {
+    @CustomType.Constructor
+    private EventDestinationSnsDestination(@CustomType.Parameter("topicArn") String topicArn) {
         this.topicArn = topicArn;
     }
 

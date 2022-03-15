@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
 
     public static final AADProperties Empty = new AADProperties();
 
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
-    @InputImport(name="servicePrincipalClientId")
+    @Import(name="servicePrincipalClientId")
       private final @Nullable String servicePrincipalClientId;
 
     public Optional<String> getServicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
     }
 
-    @InputImport(name="servicePrincipalObjectId")
+    @Import(name="servicePrincipalObjectId")
       private final @Nullable String servicePrincipalObjectId;
 
     public Optional<String> getServicePrincipalObjectId() {
         return this.servicePrincipalObjectId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalObjectId);
     }
 
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

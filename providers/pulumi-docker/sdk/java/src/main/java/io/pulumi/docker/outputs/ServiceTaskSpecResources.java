@@ -3,22 +3,22 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceTaskSpecResourcesLimits;
 import io.pulumi.docker.outputs.ServiceTaskSpecResourcesReservation;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecResources {
     private final @Nullable ServiceTaskSpecResourcesLimits limits;
     private final @Nullable ServiceTaskSpecResourcesReservation reservation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecResources(
-        @OutputCustomType.Parameter("limits") @Nullable ServiceTaskSpecResourcesLimits limits,
-        @OutputCustomType.Parameter("reservation") @Nullable ServiceTaskSpecResourcesReservation reservation) {
+        @CustomType.Parameter("limits") @Nullable ServiceTaskSpecResourcesLimits limits,
+        @CustomType.Parameter("reservation") @Nullable ServiceTaskSpecResourcesReservation reservation) {
         this.limits = limits;
         this.reservation = reservation;
     }

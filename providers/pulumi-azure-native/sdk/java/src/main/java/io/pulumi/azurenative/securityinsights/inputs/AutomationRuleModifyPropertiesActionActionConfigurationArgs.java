@@ -11,7 +11,7 @@ import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelArgs;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * The reason the incident was closed
      * 
      */
-    @InputImport(name="classification")
+    @Import(name="classification")
       private final @Nullable Output<Either<String,IncidentClassification>> classification;
 
     public Output<Either<String,IncidentClassification>> getClassification() {
@@ -41,7 +41,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * Describes the reason the incident was closed
      * 
      */
-    @InputImport(name="classificationComment")
+    @Import(name="classificationComment")
       private final @Nullable Output<String> classificationComment;
 
     public Output<String> getClassificationComment() {
@@ -52,7 +52,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * The classification reason to close the incident with
      * 
      */
-    @InputImport(name="classificationReason")
+    @Import(name="classificationReason")
       private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
     public Output<Either<String,IncidentClassificationReason>> getClassificationReason() {
@@ -63,7 +63,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * List of labels to add to the incident
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<IncidentLabelArgs>> labels;
 
     public Output<List<IncidentLabelArgs>> getLabels() {
@@ -74,7 +74,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * Describes a user that the incident is assigned to
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<IncidentOwnerInfoArgs> owner;
 
     public Output<IncidentOwnerInfoArgs> getOwner() {
@@ -85,7 +85,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * The severity of the incident
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
     public Output<Either<String,IncidentSeverity>> getSeverity() {
@@ -96,7 +96,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * The status of the incident
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,IncidentStatus>> status;
 
     public Output<Either<String,IncidentStatus>> getStatus() {

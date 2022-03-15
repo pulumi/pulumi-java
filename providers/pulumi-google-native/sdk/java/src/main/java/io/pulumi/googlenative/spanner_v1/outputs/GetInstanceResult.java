@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The name of the instance's configuration. Values are of the form `projects//instanceConfigs/`. See also InstanceConfig and ListInstanceConfigs.
@@ -47,15 +47,15 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("config") String config,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("processingUnits") Integer processingUnits,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("config") String config,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("processingUnits") Integer processingUnits,
+        @CustomType.Parameter("state") String state) {
         this.config = config;
         this.displayName = displayName;
         this.labels = labels;

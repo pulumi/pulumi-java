@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigSecurityConfigKerberosConfig;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigSecurityConfig {
     /**
      * Kerberos Configuration
@@ -15,8 +15,8 @@ public final class ClusterClusterConfigSecurityConfig {
      */
     private final ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig;
 
-    @OutputCustomType.Constructor
-    private ClusterClusterConfigSecurityConfig(@OutputCustomType.Parameter("kerberosConfig") ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+    @CustomType.Constructor
+    private ClusterClusterConfigSecurityConfig(@CustomType.Parameter("kerberosConfig") ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 

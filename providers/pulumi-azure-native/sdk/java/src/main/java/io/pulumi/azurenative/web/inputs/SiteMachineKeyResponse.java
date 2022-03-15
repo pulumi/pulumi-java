@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * Algorithm used for decryption.
      * 
      */
-    @InputImport(name="decryption")
+    @Import(name="decryption")
       private final @Nullable String decryption;
 
     public Optional<String> getDecryption() {
@@ -33,7 +33,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * Decryption key.
      * 
      */
-    @InputImport(name="decryptionKey")
+    @Import(name="decryptionKey")
       private final @Nullable String decryptionKey;
 
     public Optional<String> getDecryptionKey() {
@@ -44,7 +44,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * MachineKey validation.
      * 
      */
-    @InputImport(name="validation")
+    @Import(name="validation")
       private final @Nullable String validation;
 
     public Optional<String> getValidation() {
@@ -55,7 +55,7 @@ public final class SiteMachineKeyResponse extends io.pulumi.resources.InvokeArgs
      * Validation key.
      * 
      */
-    @InputImport(name="validationKey")
+    @Import(name="validationKey")
       private final @Nullable String validationKey;
 
     public Optional<String> getValidationKey() {

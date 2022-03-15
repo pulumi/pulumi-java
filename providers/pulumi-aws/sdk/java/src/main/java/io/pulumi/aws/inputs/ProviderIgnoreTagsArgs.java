@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
 
     public static final ProviderIgnoreTagsArgs Empty = new ProviderIgnoreTagsArgs();
 
-    @InputImport(name="keyPrefixes")
+    @Import(name="keyPrefixes")
       private final @Nullable Output<List<String>> keyPrefixes;
 
     public Output<List<String>> getKeyPrefixes() {
         return this.keyPrefixes == null ? Output.empty() : this.keyPrefixes;
     }
 
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
     public Output<List<String>> getKeys() {

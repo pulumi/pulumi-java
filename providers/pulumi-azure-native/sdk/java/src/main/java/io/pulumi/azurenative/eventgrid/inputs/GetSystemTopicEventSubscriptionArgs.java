@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
      * Name of the event subscription to be created. Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
      * 
      */
-    @InputImport(name="eventSubscriptionName", required=true)
+    @Import(name="eventSubscriptionName", required=true)
       private final String eventSubscriptionName;
 
     public String getEventSubscriptionName() {
@@ -27,7 +27,7 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetSystemTopicEventSubscriptionArgs extends io.pulumi.resourc
      * Name of the system topic.
      * 
      */
-    @InputImport(name="systemTopicName", required=true)
+    @Import(name="systemTopicName", required=true)
       private final String systemTopicName;
 
     public String getSystemTopicName() {

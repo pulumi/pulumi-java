@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallRuleGroupAssociationArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * The ARN (Amazon Resource Name) of the firewall rule group association.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * The unique identifier of the firewall rule group.
      * 
      */
-    @OutputExport(name="firewallRuleGroupId", type=String.class, parameters={})
+    @Export(name="firewallRuleGroupId", type=String.class, parameters={})
     private Output<String> firewallRuleGroupId;
 
     /**
@@ -62,7 +62,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * If enabled, this setting disallows modification or removal of the association, to help prevent against accidentally altering DNS firewall protections. Valid values: `ENABLED`, `DISABLED`.
      * 
      */
-    @OutputExport(name="mutationProtection", type=String.class, parameters={})
+    @Export(name="mutationProtection", type=String.class, parameters={})
     private Output<String> mutationProtection;
 
     /**
@@ -76,7 +76,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * A name that lets you identify the rule group association, to manage and use it.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * The setting that determines the processing order of the rule group among the rule groups that you associate with the specified VPC. DNS Firewall filters VPC traffic starting from the rule group with the lowest numeric priority setting.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -104,7 +104,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -118,7 +118,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -132,7 +132,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * The unique identifier of the VPC that you want to associate with the rule group.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

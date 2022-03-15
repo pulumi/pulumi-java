@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExportDatasetConfigurationResponse extends io.pulumi.resource
      * Array of column names to be included in the export. If not provided then the export will include all available columns. The available columns can vary by customer channel (see examples).
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable List<String> columns;
 
     public List<String> getColumns() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ram.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetResourceShareFilter extends io.pulumi.resources.InvokeArgs
      * The name of the tag key to filter on.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -28,7 +28,7 @@ public final class GetResourceShareFilter extends io.pulumi.resources.InvokeArgs
      * The value of the tag key.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioEncryptionConfiguration {
     /**
      * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
@@ -19,10 +19,10 @@ public final class StudioEncryptionConfiguration {
     private final @Nullable String keyArn;
     private final StudioEncryptionConfigurationKeyType keyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioEncryptionConfiguration(
-        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
-        @OutputCustomType.Parameter("keyType") StudioEncryptionConfigurationKeyType keyType) {
+        @CustomType.Parameter("keyArn") @Nullable String keyArn,
+        @CustomType.Parameter("keyType") StudioEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
         this.keyType = keyType;
     }

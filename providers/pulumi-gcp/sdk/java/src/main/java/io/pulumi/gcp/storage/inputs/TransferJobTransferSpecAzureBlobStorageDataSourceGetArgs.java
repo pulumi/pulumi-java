@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * Credentials used to authenticate API requests to Azure block.
      * 
      */
-    @InputImport(name="azureCredentials", required=true)
+    @Import(name="azureCredentials", required=true)
       private final Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
 
     public Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> getAzureCredentials() {
@@ -30,7 +30,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * The container to transfer from the Azure Storage account.`
      * 
      */
-    @InputImport(name="container", required=true)
+    @Import(name="container", required=true)
       private final Output<String> container;
 
     public Output<String> getContainer() {
@@ -41,7 +41,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'. This field is treated as an object prefix. As such, it should generally not begin with a '/'.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -52,7 +52,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * The name of the Azure Storage account.
      * 
      */
-    @InputImport(name="storageAccount", required=true)
+    @Import(name="storageAccount", required=true)
       private final Output<String> storageAccount;
 
     public Output<String> getStorageAccount() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DatabaseDumpArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. A database dump from a pre-existing metastore's database.
      * 
      */
-    @InputImport(name="databaseDump")
+    @Import(name="databaseDump")
       private final @Nullable Output<DatabaseDumpArgs> databaseDump;
 
     public Output<DatabaseDumpArgs> getDatabaseDump() {
@@ -30,21 +30,21 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the metadata import.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="metadataImportId", required=true)
+    @Import(name="metadataImportId", required=true)
       private final Output<String> metadataImportId;
 
     public Output<String> getMetadataImportId() {
@@ -55,28 +55,28 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
     public Output<String> getServiceId() {

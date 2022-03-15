@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.inputs.DiskPoolVolumeArgs;
 import io.pulumi.azurenative.avs.inputs.NetAppVolumeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the cluster in the private cloud
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -31,7 +31,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the datastore in the private cloud cluster
      * 
      */
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
@@ -42,7 +42,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * An iSCSI volume
      * 
      */
-    @InputImport(name="diskPoolVolume")
+    @Import(name="diskPoolVolume")
       private final @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
 
     public Output<DiskPoolVolumeArgs> getDiskPoolVolume() {
@@ -53,7 +53,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * An Azure NetApp Files volume
      * 
      */
-    @InputImport(name="netAppVolume")
+    @Import(name="netAppVolume")
       private final @Nullable Output<NetAppVolumeArgs> netAppVolume;
 
     public Output<NetAppVolumeArgs> getNetAppVolume() {
@@ -64,7 +64,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -75,7 +75,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

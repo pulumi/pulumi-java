@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.ConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheHealthResponse {
     /**
      * Outstanding conditions that need to be investigated and resolved.
@@ -29,11 +29,11 @@ public final class CacheHealthResponse {
      */
     private final @Nullable String statusDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheHealthResponse(
-        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription) {
+        @CustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("statusDescription") @Nullable String statusDescription) {
         this.conditions = conditions;
         this.state = state;
         this.statusDescription = statusDescription;

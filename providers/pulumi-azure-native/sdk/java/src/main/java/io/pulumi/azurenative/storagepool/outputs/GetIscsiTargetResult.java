@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storagepool.outputs;
 
 import io.pulumi.azurenative.storagepool.outputs.TargetPortalGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIscsiTargetResult {
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -47,15 +47,15 @@ public final class GetIscsiTargetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIscsiTargetResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("targetIqn") String targetIqn,
-        @OutputCustomType.Parameter("tpgs") List<TargetPortalGroupResponse> tpgs,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("targetIqn") String targetIqn,
+        @CustomType.Parameter("tpgs") List<TargetPortalGroupResponse> tpgs,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

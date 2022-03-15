@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleOverrideResponse {
     /**
      * Identifier for the managed rule.
@@ -22,10 +22,10 @@ public final class ManagedRuleOverrideResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRuleOverrideResponse(
-        @OutputCustomType.Parameter("ruleId") String ruleId,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("ruleId") String ruleId,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.ruleId = ruleId;
         this.state = state;
     }

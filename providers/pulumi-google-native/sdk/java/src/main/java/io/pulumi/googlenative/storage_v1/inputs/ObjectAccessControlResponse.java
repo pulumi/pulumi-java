@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlProjectTeamResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -32,7 +32,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The domain associated with the entity, if any.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final String domain;
 
     public String getDomain() {
@@ -43,7 +43,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The email address associated with the entity, if any.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -65,7 +65,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * - To refer to all members of the Google Apps for Business domain example.com, the entity would be domain-example.com.
      * 
      */
-    @InputImport(name="entity", required=true)
+    @Import(name="entity", required=true)
       private final String entity;
 
     public String getEntity() {
@@ -76,7 +76,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The ID for the entity, if any.
      * 
      */
-    @InputImport(name="entityId", required=true)
+    @Import(name="entityId", required=true)
       private final String entityId;
 
     public String getEntityId() {
@@ -87,7 +87,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * HTTP 1.1 Entity tag for the access-control entry.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -98,7 +98,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The content generation of the object, if applied to an object.
      * 
      */
-    @InputImport(name="generation", required=true)
+    @Import(name="generation", required=true)
       private final String generation;
 
     public String getGeneration() {
@@ -109,7 +109,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The kind of item this is. For object access control entries, this is always storage#objectAccessControl.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -120,7 +120,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The name of the object, if applied to an object.
      * 
      */
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final String object;
 
     public String getObject() {
@@ -131,7 +131,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The project team associated with the entity, if any.
      * 
      */
-    @InputImport(name="projectTeam", required=true)
+    @Import(name="projectTeam", required=true)
       private final ObjectAccessControlProjectTeamResponse projectTeam;
 
     public ObjectAccessControlProjectTeamResponse getProjectTeam() {
@@ -142,7 +142,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The access permission for the entity.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final String role;
 
     public String getRole() {
@@ -153,7 +153,7 @@ public final class ObjectAccessControlResponse extends io.pulumi.resources.Invok
      * The link to this access-control entry.
      * 
      */
-    @InputImport(name="selfLink", required=true)
+    @Import(name="selfLink", required=true)
       private final String selfLink;
 
     public String getSelfLink() {

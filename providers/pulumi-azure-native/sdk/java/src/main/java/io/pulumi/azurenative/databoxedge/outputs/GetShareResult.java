@@ -9,14 +9,14 @@ import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
 import io.pulumi.azurenative.databoxedge.outputs.RefreshDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.azurenative.databoxedge.outputs.UserAccessRightResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetShareResult {
     /**
      * Access protocol to be used by the share.
@@ -89,22 +89,22 @@ public final class GetShareResult {
      */
     private final @Nullable List<UserAccessRightResponse> userAccessRights;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetShareResult(
-        @OutputCustomType.Parameter("accessProtocol") String accessProtocol,
-        @OutputCustomType.Parameter("azureContainerInfo") @Nullable AzureContainerInfoResponse azureContainerInfo,
-        @OutputCustomType.Parameter("clientAccessRights") @Nullable List<ClientAccessRightResponse> clientAccessRights,
-        @OutputCustomType.Parameter("dataPolicy") @Nullable String dataPolicy,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("monitoringStatus") String monitoringStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("refreshDetails") @Nullable RefreshDetailsResponse refreshDetails,
-        @OutputCustomType.Parameter("shareMappings") List<MountPointMapResponse> shareMappings,
-        @OutputCustomType.Parameter("shareStatus") String shareStatus,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userAccessRights") @Nullable List<UserAccessRightResponse> userAccessRights) {
+        @CustomType.Parameter("accessProtocol") String accessProtocol,
+        @CustomType.Parameter("azureContainerInfo") @Nullable AzureContainerInfoResponse azureContainerInfo,
+        @CustomType.Parameter("clientAccessRights") @Nullable List<ClientAccessRightResponse> clientAccessRights,
+        @CustomType.Parameter("dataPolicy") @Nullable String dataPolicy,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("monitoringStatus") String monitoringStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("refreshDetails") @Nullable RefreshDetailsResponse refreshDetails,
+        @CustomType.Parameter("shareMappings") List<MountPointMapResponse> shareMappings,
+        @CustomType.Parameter("shareStatus") String shareStatus,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userAccessRights") @Nullable List<UserAccessRightResponse> userAccessRights) {
         this.accessProtocol = accessProtocol;
         this.azureContainerInfo = azureContainerInfo;
         this.clientAccessRights = clientAccessRights;

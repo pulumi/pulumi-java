@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
      * Designated field in the BigQuery table.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse extends io.pulumi.res
      * Source table of the field.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse getTable() {

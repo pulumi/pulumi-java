@@ -9,7 +9,7 @@ import io.pulumi.aws.elb.inputs.SslNegotiationPolicyState;
 import io.pulumi.aws.elb.outputs.SslNegotiationPolicyAttribute;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * An SSL Negotiation policy attribute. Each has two properties:
      * 
      */
-    @OutputExport(name="attributes", type=List.class, parameters={SslNegotiationPolicyAttribute.class})
+    @Export(name="attributes", type=List.class, parameters={SslNegotiationPolicyAttribute.class})
     private Output</* @Nullable */ List<SslNegotiationPolicyAttribute>> attributes;
 
     /**
@@ -44,7 +44,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * balancer.
      * 
      */
-    @OutputExport(name="lbPort", type=Integer.class, parameters={})
+    @Export(name="lbPort", type=Integer.class, parameters={})
     private Output<Integer> lbPort;
 
     /**
@@ -61,7 +61,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * should be attached.
      * 
      */
-    @OutputExport(name="loadBalancer", type=String.class, parameters={})
+    @Export(name="loadBalancer", type=String.class, parameters={})
     private Output<String> loadBalancer;
 
     /**
@@ -76,7 +76,7 @@ public class SslNegotiationPolicy extends io.pulumi.resources.CustomResource {
      * The name of the attribute
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

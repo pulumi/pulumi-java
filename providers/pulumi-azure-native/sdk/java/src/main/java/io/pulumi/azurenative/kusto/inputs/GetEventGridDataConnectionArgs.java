@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventGridDataConnectionArgs extends io.pulumi.resources.In
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -27,7 +27,7 @@ public final class GetEventGridDataConnectionArgs extends io.pulumi.resources.In
      * The name of the data connection.
      * 
      */
-    @InputImport(name="dataConnectionName", required=true)
+    @Import(name="dataConnectionName", required=true)
       private final String dataConnectionName;
 
     public String getDataConnectionName() {
@@ -38,7 +38,7 @@ public final class GetEventGridDataConnectionArgs extends io.pulumi.resources.In
      * The name of the database in the Kusto cluster.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -49,7 +49,7 @@ public final class GetEventGridDataConnectionArgs extends io.pulumi.resources.In
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateSharedImageDistributorResponse {
     /**
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
@@ -51,15 +51,15 @@ public final class ImageTemplateSharedImageDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateSharedImageDistributorResponse(
-        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
-        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
-        @OutputCustomType.Parameter("galleryImageId") String galleryImageId,
-        @OutputCustomType.Parameter("replicationRegions") List<String> replicationRegions,
-        @OutputCustomType.Parameter("runOutputName") String runOutputName,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @CustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @CustomType.Parameter("galleryImageId") String galleryImageId,
+        @CustomType.Parameter("replicationRegions") List<String> replicationRegions,
+        @CustomType.Parameter("runOutputName") String runOutputName,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @CustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.excludeFromLatest = excludeFromLatest;
         this.galleryImageId = galleryImageId;

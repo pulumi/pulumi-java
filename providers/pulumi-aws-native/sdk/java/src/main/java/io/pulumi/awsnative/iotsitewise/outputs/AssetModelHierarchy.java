@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelHierarchy {
     /**
      * The ID of the asset model. All assets in this hierarchy must be instances of the child AssetModelId asset model.
@@ -25,11 +25,11 @@ public final class AssetModelHierarchy {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelHierarchy(
-        @OutputCustomType.Parameter("childAssetModelId") String childAssetModelId,
-        @OutputCustomType.Parameter("logicalId") String logicalId,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("childAssetModelId") String childAssetModelId,
+        @CustomType.Parameter("logicalId") String logicalId,
+        @CustomType.Parameter("name") String name) {
         this.childAssetModelId = childAssetModelId;
         this.logicalId = logicalId;
         this.name = name;

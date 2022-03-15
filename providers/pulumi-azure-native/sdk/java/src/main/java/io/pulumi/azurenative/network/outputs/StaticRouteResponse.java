@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StaticRouteResponse {
     /**
      * List of all address prefixes.
@@ -28,11 +28,11 @@ public final class StaticRouteResponse {
      */
     private final @Nullable String nextHopIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticRouteResponse(
-        @OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress) {
+        @CustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress) {
         this.addressPrefixes = addressPrefixes;
         this.name = name;
         this.nextHopIpAddress = nextHopIpAddress;

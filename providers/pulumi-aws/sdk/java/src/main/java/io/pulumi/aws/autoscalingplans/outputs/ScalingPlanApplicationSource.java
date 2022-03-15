@@ -4,14 +4,14 @@
 package io.pulumi.aws.autoscalingplans.outputs;
 
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanApplicationSourceTagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingPlanApplicationSource {
     /**
      * The Amazon Resource Name (ARN) of a AWS CloudFormation stack.
@@ -24,10 +24,10 @@ public final class ScalingPlanApplicationSource {
      */
     private final @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingPlanApplicationSource(
-        @OutputCustomType.Parameter("cloudformationStackArn") @Nullable String cloudformationStackArn,
-        @OutputCustomType.Parameter("tagFilters") @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
+        @CustomType.Parameter("cloudformationStackArn") @Nullable String cloudformationStackArn,
+        @CustomType.Parameter("tagFilters") @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
         this.cloudformationStackArn = cloudformationStackArn;
         this.tagFilters = tagFilters;
     }

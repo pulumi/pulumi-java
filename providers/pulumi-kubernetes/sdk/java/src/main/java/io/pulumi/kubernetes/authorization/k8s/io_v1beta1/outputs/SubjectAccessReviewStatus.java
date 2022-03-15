@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubjectAccessReviewStatus {
     /**
      * Allowed is required. True if the action would be allowed, false otherwise.
@@ -33,12 +33,12 @@ public final class SubjectAccessReviewStatus {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectAccessReviewStatus(
-        @OutputCustomType.Parameter("allowed") Boolean allowed,
-        @OutputCustomType.Parameter("denied") @Nullable Boolean denied,
-        @OutputCustomType.Parameter("evaluationError") @Nullable String evaluationError,
-        @OutputCustomType.Parameter("reason") @Nullable String reason) {
+        @CustomType.Parameter("allowed") Boolean allowed,
+        @CustomType.Parameter("denied") @Nullable Boolean denied,
+        @CustomType.Parameter("evaluationError") @Nullable String evaluationError,
+        @CustomType.Parameter("reason") @Nullable String reason) {
         this.allowed = allowed;
         this.denied = denied;
         this.evaluationError = evaluationError;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CopyVideoResponse {
     /**
      * An optional label for the codec. The label can be used to control muxing behavior.
@@ -23,10 +23,10 @@ public final class CopyVideoResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CopyVideoResponse(
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType) {
         this.label = label;
         this.odataType = odataType;
     }

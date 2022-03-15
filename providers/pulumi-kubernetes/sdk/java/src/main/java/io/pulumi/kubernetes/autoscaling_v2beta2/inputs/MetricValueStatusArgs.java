@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
      * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
      */
-    @InputImport(name="averageUtilization")
+    @Import(name="averageUtilization")
       private final @Nullable Output<Integer> averageUtilization;
 
     public Output<Integer> getAverageUtilization() {
@@ -34,7 +34,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
      * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
      * 
      */
-    @InputImport(name="averageValue")
+    @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
 
     public Output<String> getAverageValue() {
@@ -45,7 +45,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
      * value is the current value of the metric (as a quantity).
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

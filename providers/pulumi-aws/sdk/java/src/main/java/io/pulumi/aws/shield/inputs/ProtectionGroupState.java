@@ -4,7 +4,7 @@
 package io.pulumi.aws.shield.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and report events.
      * 
      */
-    @InputImport(name="aggregation")
+    @Import(name="aggregation")
       private final @Nullable Output<String> aggregation;
 
     public Output<String> getAggregation() {
@@ -31,7 +31,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -42,7 +42,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * The criteria to use to choose the protected resources for inclusion in the group.
      * 
      */
-    @InputImport(name="pattern")
+    @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
@@ -53,7 +53,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * The ARN (Amazon Resource Name) of the protection group.
      * 
      */
-    @InputImport(name="protectionGroupArn")
+    @Import(name="protectionGroupArn")
       private final @Nullable Output<String> protectionGroupArn;
 
     public Output<String> getProtectionGroupArn() {
@@ -64,7 +64,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * The name of the protection group.
      * 
      */
-    @InputImport(name="protectionGroupId")
+    @Import(name="protectionGroupId")
       private final @Nullable Output<String> protectionGroupId;
 
     public Output<String> getProtectionGroupId() {
@@ -75,7 +75,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * The resource type to include in the protection group. You must set this when you set `pattern` to BY_RESOURCE_TYPE and you must not set it for any other `pattern` setting.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -86,7 +86,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

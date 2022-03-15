@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
      * The configuration settings of the allowed list of audiences from which to validate the JWT token.
      * 
      */
-    @InputImport(name="allowedAudiences")
+    @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {

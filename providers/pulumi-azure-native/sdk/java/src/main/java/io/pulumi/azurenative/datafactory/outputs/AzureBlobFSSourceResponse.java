@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobFSSourceResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -54,16 +54,16 @@ public final class AzureBlobFSSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobFSSourceResponse(
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
-        @OutputCustomType.Parameter("skipHeaderLineCount") @Nullable Object skipHeaderLineCount,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("treatEmptyAsNull") @Nullable Object treatEmptyAsNull,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("recursive") @Nullable Object recursive,
+        @CustomType.Parameter("skipHeaderLineCount") @Nullable Object skipHeaderLineCount,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("treatEmptyAsNull") @Nullable Object treatEmptyAsNull,
+        @CustomType.Parameter("type") String type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.recursive = recursive;

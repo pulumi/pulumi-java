@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoverycontrol.RoutingControlArgs;
 import io.pulumi.aws.route53recoverycontrol.inputs.RoutingControlState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * ARN of the routing control.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * ARN of the cluster in which this routing control will reside.
      * 
      */
-    @OutputExport(name="clusterArn", type=String.class, parameters={})
+    @Export(name="clusterArn", type=String.class, parameters={})
     private Output<String> clusterArn;
 
     /**
@@ -60,7 +60,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * ARN of the control panel in which this routing control will reside.
      * 
      */
-    @OutputExport(name="controlPanelArn", type=String.class, parameters={})
+    @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output<String> controlPanelArn;
 
     /**
@@ -74,7 +74,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * The name describing the routing control.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -88,7 +88,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * Status of routing control. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

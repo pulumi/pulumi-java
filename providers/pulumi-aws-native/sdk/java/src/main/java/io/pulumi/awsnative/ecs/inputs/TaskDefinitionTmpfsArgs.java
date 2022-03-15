@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,21 +16,21 @@ public final class TaskDefinitionTmpfsArgs extends io.pulumi.resources.ResourceA
 
     public static final TaskDefinitionTmpfsArgs Empty = new TaskDefinitionTmpfsArgs();
 
-    @InputImport(name="containerPath")
+    @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
     public Output<String> getContainerPath() {
         return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
 
     public Output<List<String>> getMountOptions() {
         return this.mountOptions == null ? Output.empty() : this.mountOptions;
     }
 
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<Integer> size;
 
     public Output<Integer> getSize() {

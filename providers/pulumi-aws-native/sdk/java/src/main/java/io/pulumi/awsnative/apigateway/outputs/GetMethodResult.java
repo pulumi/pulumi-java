@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway.outputs;
 import io.pulumi.awsnative.apigateway.enums.MethodAuthorizationType;
 import io.pulumi.awsnative.apigateway.outputs.MethodIntegration;
 import io.pulumi.awsnative.apigateway.outputs.MethodResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMethodResult {
     /**
      * Indicates whether the method requires clients to submit a valid API key.
@@ -68,18 +68,18 @@ public final class GetMethodResult {
      */
     private final @Nullable String requestValidatorId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMethodResult(
-        @OutputCustomType.Parameter("apiKeyRequired") @Nullable Boolean apiKeyRequired,
-        @OutputCustomType.Parameter("authorizationScopes") @Nullable List<String> authorizationScopes,
-        @OutputCustomType.Parameter("authorizationType") @Nullable MethodAuthorizationType authorizationType,
-        @OutputCustomType.Parameter("authorizerId") @Nullable String authorizerId,
-        @OutputCustomType.Parameter("integration") @Nullable MethodIntegration integration,
-        @OutputCustomType.Parameter("methodResponses") @Nullable List<MethodResponse> methodResponses,
-        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
-        @OutputCustomType.Parameter("requestModels") @Nullable Object requestModels,
-        @OutputCustomType.Parameter("requestParameters") @Nullable Object requestParameters,
-        @OutputCustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId) {
+        @CustomType.Parameter("apiKeyRequired") @Nullable Boolean apiKeyRequired,
+        @CustomType.Parameter("authorizationScopes") @Nullable List<String> authorizationScopes,
+        @CustomType.Parameter("authorizationType") @Nullable MethodAuthorizationType authorizationType,
+        @CustomType.Parameter("authorizerId") @Nullable String authorizerId,
+        @CustomType.Parameter("integration") @Nullable MethodIntegration integration,
+        @CustomType.Parameter("methodResponses") @Nullable List<MethodResponse> methodResponses,
+        @CustomType.Parameter("operationName") @Nullable String operationName,
+        @CustomType.Parameter("requestModels") @Nullable Object requestModels,
+        @CustomType.Parameter("requestParameters") @Nullable Object requestParameters,
+        @CustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId) {
         this.apiKeyRequired = apiKeyRequired;
         this.authorizationScopes = authorizationScopes;
         this.authorizationType = authorizationType;

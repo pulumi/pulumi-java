@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
 
     public static final PackagingConfigurationSpekeKeyProviderArgs Empty = new PackagingConfigurationSpekeKeyProviderArgs();
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -29,7 +29,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
      * The system IDs to include in key requests.
      * 
      */
-    @InputImport(name="systemIds", required=true)
+    @Import(name="systemIds", required=true)
       private final Output<List<String>> systemIds;
 
     public Output<List<String>> getSystemIds() {
@@ -40,7 +40,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
      * The URL of the external key provider service.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

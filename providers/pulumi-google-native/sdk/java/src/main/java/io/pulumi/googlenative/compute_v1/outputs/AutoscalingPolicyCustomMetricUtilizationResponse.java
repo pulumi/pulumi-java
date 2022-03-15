@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyCustomMetricUtilizationResponse {
     /**
      * A filter string, compatible with a Stackdriver Monitoring filter string for TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data. For the filter to be valid for autoscaling purposes, the following rules apply: - You can only use the AND operator for joining selectors. - You can only use direct equality comparison operator (=) without any functions for each selector. - You can specify the metric in both the filter string and in the metric field. However, if specified in both places, the metric must be identical. - The monitored resource type determines what kind of values are expected for the metric. If it is a gce_instance, the autoscaler expects the metric to include a separate TimeSeries for each instance in a group. In such a case, you cannot filter on resource labels. If the resource type is any other value, the autoscaler expects this metric to contain values that apply to the entire autoscaled instance group and resource label filtering can be performed to point autoscaler at the correct TimeSeries to scale upon. This is called a *per-group metric* for the purpose of autoscaling. If not specified, the type defaults to gce_instance. Try to provide a filter that is selective enough to pick just one TimeSeries for the autoscaled group or for each of the instances (if you are using gce_instance resource type). If multiple TimeSeries are returned upon the query execution, the autoscaler will sum their respective values to obtain its scaling value.
@@ -36,13 +36,13 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse {
      */
     private final String utilizationTargetType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyCustomMetricUtilizationResponse(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("metric") String metric,
-        @OutputCustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
-        @OutputCustomType.Parameter("utilizationTarget") Double utilizationTarget,
-        @OutputCustomType.Parameter("utilizationTargetType") String utilizationTargetType) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("metric") String metric,
+        @CustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
+        @CustomType.Parameter("utilizationTarget") Double utilizationTarget,
+        @CustomType.Parameter("utilizationTargetType") String utilizationTargetType) {
         this.filter = filter;
         this.metric = metric;
         this.singleInstanceAssignment = singleInstanceAssignment;

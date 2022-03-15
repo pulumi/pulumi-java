@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * name is the name of the service. Required
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * namespace is the namespace of the service. Required
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -45,7 +45,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * path is an optional URL path at which the webhook will be contacted.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -56,7 +56,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
      * port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

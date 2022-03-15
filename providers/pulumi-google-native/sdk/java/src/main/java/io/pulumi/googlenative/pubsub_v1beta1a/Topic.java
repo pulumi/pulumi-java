@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1beta1a;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1beta1a.TopicArgs;
@@ -21,7 +21,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Name of the topic.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

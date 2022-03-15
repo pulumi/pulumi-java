@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.codeguruprofiler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProfilingGroupChannel {
     private final @Nullable String channelId;
     private final String channelUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProfilingGroupChannel(
-        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
-        @OutputCustomType.Parameter("channelUri") String channelUri) {
+        @CustomType.Parameter("channelId") @Nullable String channelId,
+        @CustomType.Parameter("channelUri") String channelUri) {
         this.channelId = channelId;
         this.channelUri = channelUri;
     }

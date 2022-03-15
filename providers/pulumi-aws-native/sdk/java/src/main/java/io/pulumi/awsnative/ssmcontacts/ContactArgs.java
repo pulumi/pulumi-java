@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmcontacts;
 import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Alias of the contact. String value with 20 to 256 characters. Only alphabetical, numeric characters, dash, or underscore allowed.
      * 
      */
-    @InputImport(name="alias", required=true)
+    @Import(name="alias", required=true)
       private final Output<String> alias;
 
     public Output<String> getAlias() {
@@ -31,7 +31,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the contact. String value with 3 to 256 characters. Only alphabetical, space, numeric characters, dash, or underscore allowed.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The stages that an escalation plan or engagement plan engages contacts and contact methods in.
      * 
      */
-    @InputImport(name="plan", required=true)
+    @Import(name="plan", required=true)
       private final Output<List<ContactStageArgs>> plan;
 
     public Output<List<ContactStageArgs>> getPlan() {
@@ -53,7 +53,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Contact type, which specify type of contact. Currently supported values: “PERSONAL”, “SHARED”, “OTHER“.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<ContactType> type;
 
     public Output<ContactType> getType() {

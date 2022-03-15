@@ -6,7 +6,7 @@ package io.pulumi.awsnative.athena.inputs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupEngineVersionArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupResultConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class WorkGroupConfigurationArgs extends io.pulumi.resources.Resour
 
     public static final WorkGroupConfigurationArgs Empty = new WorkGroupConfigurationArgs();
 
-    @InputImport(name="bytesScannedCutoffPerQuery")
+    @Import(name="bytesScannedCutoffPerQuery")
       private final @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
     public Output<Integer> getBytesScannedCutoffPerQuery() {
         return this.bytesScannedCutoffPerQuery == null ? Output.empty() : this.bytesScannedCutoffPerQuery;
     }
 
-    @InputImport(name="enforceWorkGroupConfiguration")
+    @Import(name="enforceWorkGroupConfiguration")
       private final @Nullable Output<Boolean> enforceWorkGroupConfiguration;
 
     public Output<Boolean> getEnforceWorkGroupConfiguration() {
         return this.enforceWorkGroupConfiguration == null ? Output.empty() : this.enforceWorkGroupConfiguration;
     }
 
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<WorkGroupEngineVersionArgs> engineVersion;
 
     public Output<WorkGroupEngineVersionArgs> getEngineVersion() {
         return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
-    @InputImport(name="publishCloudWatchMetricsEnabled")
+    @Import(name="publishCloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> publishCloudWatchMetricsEnabled;
 
     public Output<Boolean> getPublishCloudWatchMetricsEnabled() {
         return this.publishCloudWatchMetricsEnabled == null ? Output.empty() : this.publishCloudWatchMetricsEnabled;
     }
 
-    @InputImport(name="requesterPaysEnabled")
+    @Import(name="requesterPaysEnabled")
       private final @Nullable Output<Boolean> requesterPaysEnabled;
 
     public Output<Boolean> getRequesterPaysEnabled() {
         return this.requesterPaysEnabled == null ? Output.empty() : this.requesterPaysEnabled;
     }
 
-    @InputImport(name="resultConfiguration")
+    @Import(name="resultConfiguration")
       private final @Nullable Output<WorkGroupResultConfigurationArgs> resultConfiguration;
 
     public Output<WorkGroupResultConfigurationArgs> getResultConfiguration() {

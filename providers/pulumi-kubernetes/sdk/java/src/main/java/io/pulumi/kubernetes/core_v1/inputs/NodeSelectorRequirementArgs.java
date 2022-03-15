@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
      * The label key that the selector applies to.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -42,7 +42,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
      *  - `"NotIn"`
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<String> operator;
 
     public Output<String> getOperator() {
@@ -53,7 +53,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
      * An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

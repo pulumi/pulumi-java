@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetRoutineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRoutineArgs Empty = new GetRoutineArgs();
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="readMask")
+    @Import(name="readMask")
       private final @Nullable String readMask;
 
     public Optional<String> getReadMask() {
         return this.readMask == null ? Optional.empty() : Optional.ofNullable(this.readMask);
     }
 
-    @InputImport(name="routineId", required=true)
+    @Import(name="routineId", required=true)
       private final String routineId;
 
     public String getRoutineId() {

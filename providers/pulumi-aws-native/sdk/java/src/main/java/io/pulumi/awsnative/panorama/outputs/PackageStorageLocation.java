@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.panorama.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackageStorageLocation {
     private final @Nullable String binaryPrefixLocation;
     private final @Nullable String bucket;
@@ -17,13 +17,13 @@ public final class PackageStorageLocation {
     private final @Nullable String manifestPrefixLocation;
     private final @Nullable String repoPrefixLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageStorageLocation(
-        @OutputCustomType.Parameter("binaryPrefixLocation") @Nullable String binaryPrefixLocation,
-        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
-        @OutputCustomType.Parameter("generatedPrefixLocation") @Nullable String generatedPrefixLocation,
-        @OutputCustomType.Parameter("manifestPrefixLocation") @Nullable String manifestPrefixLocation,
-        @OutputCustomType.Parameter("repoPrefixLocation") @Nullable String repoPrefixLocation) {
+        @CustomType.Parameter("binaryPrefixLocation") @Nullable String binaryPrefixLocation,
+        @CustomType.Parameter("bucket") @Nullable String bucket,
+        @CustomType.Parameter("generatedPrefixLocation") @Nullable String generatedPrefixLocation,
+        @CustomType.Parameter("manifestPrefixLocation") @Nullable String manifestPrefixLocation,
+        @CustomType.Parameter("repoPrefixLocation") @Nullable String repoPrefixLocation) {
         this.binaryPrefixLocation = binaryPrefixLocation;
         this.bucket = bucket;
         this.generatedPrefixLocation = generatedPrefixLocation;

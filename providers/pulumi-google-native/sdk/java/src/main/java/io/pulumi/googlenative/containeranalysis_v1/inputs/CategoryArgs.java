@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the category.
      * 
      */
-    @InputImport(name="categoryId")
+    @Import(name="categoryId")
       private final @Nullable Output<String> categoryId;
 
     public Output<String> getCategoryId() {
@@ -33,7 +33,7 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
      * The localized name of the category.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

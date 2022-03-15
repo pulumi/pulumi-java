@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.CloudFrontOriginAccessIdentityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudFrontOriginAccessIdentityResult {
     private final @Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig;
     private final @Nullable String id;
     private final @Nullable String s3CanonicalUserId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudFrontOriginAccessIdentityResult(
-        @OutputCustomType.Parameter("cloudFrontOriginAccessIdentityConfig") @Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("s3CanonicalUserId") @Nullable String s3CanonicalUserId) {
+        @CustomType.Parameter("cloudFrontOriginAccessIdentityConfig") @Nullable CloudFrontOriginAccessIdentityConfig cloudFrontOriginAccessIdentityConfig,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("s3CanonicalUserId") @Nullable String s3CanonicalUserId) {
         this.cloudFrontOriginAccessIdentityConfig = cloudFrontOriginAccessIdentityConfig;
         this.id = id;
         this.s3CanonicalUserId = s3CanonicalUserId;

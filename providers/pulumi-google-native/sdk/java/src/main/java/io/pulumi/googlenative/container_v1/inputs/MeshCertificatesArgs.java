@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MeshCertificatesArgs extends io.pulumi.resources.ResourceArgs
      * enable_certificates controls issuance of workload mTLS certificates. If set, the GKE Workload Identity Certificates controller and node agent will be deployed in the cluster, which can then be configured by creating a WorkloadCertificateConfig Custom Resource. Requires Workload Identity (workload_pool must be non-empty).
      * 
      */
-    @InputImport(name="enableCertificates")
+    @Import(name="enableCertificates")
       private final @Nullable Output<Boolean> enableCertificates;
 
     public Output<Boolean> getEnableCertificates() {

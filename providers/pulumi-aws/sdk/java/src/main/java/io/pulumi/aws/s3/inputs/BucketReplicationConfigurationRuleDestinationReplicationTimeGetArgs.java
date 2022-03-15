@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeG
      * Threshold within which objects are to be replicated. The only valid value is `15`.
      * 
      */
-    @InputImport(name="minutes")
+    @Import(name="minutes")
       private final @Nullable Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {
@@ -30,7 +30,7 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTimeG
      * The status of RTC. Either `Enabled` or `Disabled`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

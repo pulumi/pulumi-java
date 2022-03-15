@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeLimitResponse;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2FindingLimitsResponse {
     /**
      * Configuration of findings limit given for specified infoTypes.
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse {
      */
     private final Integer maxFindingsPerRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2FindingLimitsResponse(
-        @OutputCustomType.Parameter("maxFindingsPerInfoType") List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType,
-        @OutputCustomType.Parameter("maxFindingsPerItem") Integer maxFindingsPerItem,
-        @OutputCustomType.Parameter("maxFindingsPerRequest") Integer maxFindingsPerRequest) {
+        @CustomType.Parameter("maxFindingsPerInfoType") List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType,
+        @CustomType.Parameter("maxFindingsPerItem") Integer maxFindingsPerItem,
+        @CustomType.Parameter("maxFindingsPerRequest") Integer maxFindingsPerRequest) {
         this.maxFindingsPerInfoType = maxFindingsPerInfoType;
         this.maxFindingsPerItem = maxFindingsPerItem;
         this.maxFindingsPerRequest = maxFindingsPerRequest;

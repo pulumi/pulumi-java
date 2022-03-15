@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.eventarc_v1.inputs.CloudRunArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.GKEArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
      * 
      */
-    @InputImport(name="cloudFunction")
+    @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
@@ -35,7 +35,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
      * 
      */
-    @InputImport(name="cloudRun")
+    @Import(name="cloudRun")
       private final @Nullable Output<CloudRunArgs> cloudRun;
 
     public Output<CloudRunArgs> getCloudRun() {
@@ -46,7 +46,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * A GKE service capable of receiving events. The service should be running in the same project as the trigger.
      * 
      */
-    @InputImport(name="gke")
+    @Import(name="gke")
       private final @Nullable Output<GKEArgs> gke;
 
     public Output<GKEArgs> getGke() {

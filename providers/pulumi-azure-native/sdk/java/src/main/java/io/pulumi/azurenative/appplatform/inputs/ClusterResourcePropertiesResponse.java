@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.NetworkProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * Network profile of the Service
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable NetworkProfileResponse networkProfile;
 
     public Optional<NetworkProfileResponse> getNetworkProfile() {
@@ -35,7 +35,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * Provisioning state of the Service
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -46,7 +46,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * ServiceInstanceEntity GUID which uniquely identifies a created resource
      * 
      */
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final String serviceId;
 
     public String getServiceId() {
@@ -57,7 +57,7 @@ public final class ClusterResourcePropertiesResponse extends io.pulumi.resources
      * Version of the Service
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Integer version;
 
     public Integer getVersion() {

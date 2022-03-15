@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lakeformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionsTable {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
@@ -33,12 +33,12 @@ public final class GetPermissionsTable {
      */
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionsTable(
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;

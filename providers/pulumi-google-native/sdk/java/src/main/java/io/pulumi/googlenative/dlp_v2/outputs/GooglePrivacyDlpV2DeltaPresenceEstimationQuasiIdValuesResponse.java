@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse {
     /**
      * The estimated probability that a given individual sharing these quasi-identifier values is in the dataset. This value, typically called δ, is the ratio between the number of records in the dataset with these quasi-identifier values, and the total number of individuals (inside *and* outside the dataset) with these quasi-identifier values. For example, if there are 15 individuals in the dataset who share the same quasi-identifier values, and an estimated 100 people in the entire population with these values, then δ is 0.15.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(
-        @OutputCustomType.Parameter("estimatedProbability") Double estimatedProbability,
-        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @CustomType.Parameter("estimatedProbability") Double estimatedProbability,
+        @CustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.estimatedProbability = estimatedProbability;
         this.quasiIdsValues = quasiIdsValues;
     }

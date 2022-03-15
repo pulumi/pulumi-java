@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
      * (Required) The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    @InputImport(name="constraint", required=true)
+    @Import(name="constraint", required=true)
       private final String constraint;
 
     public String getConstraint() {
@@ -27,7 +27,7 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
      * The project ID.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * The consumer link id.
      * 
      */
-    @InputImport(name="linkIdentifier", required=true)
+    @Import(name="linkIdentifier", required=true)
       private final String linkIdentifier;
 
     public String getLinkIdentifier() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * Name of the private endpoint connection on an application gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * The resource of private end point.
      * 
      */
-    @InputImport(name="privateEndpoint", required=true)
+    @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse getPrivateEndpoint() {
@@ -79,7 +79,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
@@ -90,7 +90,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * The provisioning state of the application gateway private endpoint connection resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -101,7 +101,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionResponse extends i
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

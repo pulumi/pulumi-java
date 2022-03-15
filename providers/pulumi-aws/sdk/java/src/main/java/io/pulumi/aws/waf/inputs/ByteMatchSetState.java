@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ByteMatchSetState extends io.pulumi.resources.ResourceArgs {
      * the location in requests that you want to search, and other settings.
      * 
      */
-    @InputImport(name="byteMatchTuples")
+    @Import(name="byteMatchTuples")
       private final @Nullable Output<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples;
 
     public Output<List<ByteMatchSetByteMatchTupleGetArgs>> getByteMatchTuples() {
@@ -33,7 +33,7 @@ public final class ByteMatchSetState extends io.pulumi.resources.ResourceArgs {
      * The name or description of the Byte Match Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

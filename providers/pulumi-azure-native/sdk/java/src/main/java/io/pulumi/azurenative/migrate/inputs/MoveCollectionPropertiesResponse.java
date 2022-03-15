@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesResponseErrors;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * Defines the move collection errors.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final MoveCollectionPropertiesResponseErrors errors;
 
     public MoveCollectionPropertiesResponseErrors getErrors() {
@@ -32,7 +32,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * Defines the provisioning states.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -43,7 +43,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * Gets or sets the source region.
      * 
      */
-    @InputImport(name="sourceRegion", required=true)
+    @Import(name="sourceRegion", required=true)
       private final String sourceRegion;
 
     public String getSourceRegion() {
@@ -54,7 +54,7 @@ public final class MoveCollectionPropertiesResponse extends io.pulumi.resources.
      * Gets or sets the target region.
      * 
      */
-    @InputImport(name="targetRegion", required=true)
+    @Import(name="targetRegion", required=true)
       private final String targetRegion;
 
     public String getTargetRegion() {

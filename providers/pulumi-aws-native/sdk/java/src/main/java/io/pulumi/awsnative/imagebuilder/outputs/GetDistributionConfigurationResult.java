@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistribution;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionConfigurationResult {
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration.
@@ -35,12 +35,12 @@ public final class GetDistributionConfigurationResult {
      */
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("distributions") @Nullable List<DistributionConfigurationDistribution> distributions,
-        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("distributions") @Nullable List<DistributionConfigurationDistribution> distributions,
+        @CustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.description = description;
         this.distributions = distributions;

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainDefaultUserSettingsSharingSettings {
     /**
      * Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
@@ -27,11 +27,11 @@ public final class DomainDefaultUserSettingsSharingSettings {
      */
     private final @Nullable String s3OutputPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainDefaultUserSettingsSharingSettings(
-        @OutputCustomType.Parameter("notebookOutputOption") @Nullable String notebookOutputOption,
-        @OutputCustomType.Parameter("s3KmsKeyId") @Nullable String s3KmsKeyId,
-        @OutputCustomType.Parameter("s3OutputPath") @Nullable String s3OutputPath) {
+        @CustomType.Parameter("notebookOutputOption") @Nullable String notebookOutputOption,
+        @CustomType.Parameter("s3KmsKeyId") @Nullable String s3KmsKeyId,
+        @CustomType.Parameter("s3OutputPath") @Nullable String s3OutputPath) {
         this.notebookOutputOption = notebookOutputOption;
         this.s3KmsKeyId = s3KmsKeyId;
         this.s3OutputPath = s3OutputPath;

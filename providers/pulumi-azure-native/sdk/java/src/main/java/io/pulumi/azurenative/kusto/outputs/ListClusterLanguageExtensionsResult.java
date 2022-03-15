@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.LanguageExtensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListClusterLanguageExtensionsResult {
     /**
      * The list of language extensions.
@@ -17,8 +17,8 @@ public final class ListClusterLanguageExtensionsResult {
      */
     private final @Nullable List<LanguageExtensionResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListClusterLanguageExtensionsResult(@OutputCustomType.Parameter("value") @Nullable List<LanguageExtensionResponse> value) {
+    @CustomType.Constructor
+    private ListClusterLanguageExtensionsResult(@CustomType.Parameter("value") @Nullable List<LanguageExtensionResponse> value) {
         this.value = value;
     }
 

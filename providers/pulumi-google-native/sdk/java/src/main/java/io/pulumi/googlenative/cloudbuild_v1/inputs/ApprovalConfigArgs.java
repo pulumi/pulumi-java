@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
      * 
      */
-    @InputImport(name="approvalRequired")
+    @Import(name="approvalRequired")
       private final @Nullable Output<Boolean> approvalRequired;
 
     public Output<Boolean> getApprovalRequired() {

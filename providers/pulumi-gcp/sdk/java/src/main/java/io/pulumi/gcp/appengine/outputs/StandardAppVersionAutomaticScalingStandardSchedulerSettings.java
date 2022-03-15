@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
     /**
      * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
@@ -33,12 +33,12 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
      */
     private final @Nullable Double targetThroughputUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardAppVersionAutomaticScalingStandardSchedulerSettings(
-        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
-        @OutputCustomType.Parameter("targetCpuUtilization") @Nullable Double targetCpuUtilization,
-        @OutputCustomType.Parameter("targetThroughputUtilization") @Nullable Double targetThroughputUtilization) {
+        @CustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @CustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @CustomType.Parameter("targetCpuUtilization") @Nullable Double targetCpuUtilization,
+        @CustomType.Parameter("targetThroughputUtilization") @Nullable Double targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;

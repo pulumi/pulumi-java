@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class CrawlerDynamodbTargetGetArgs extends io.pulumi.resources.Reso
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -31,7 +31,7 @@ public final class CrawlerDynamodbTargetGetArgs extends io.pulumi.resources.Reso
      * Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
      * 
      */
-    @InputImport(name="scanAll")
+    @Import(name="scanAll")
       private final @Nullable Output<Boolean> scanAll;
 
     public Output<Boolean> getScanAll() {
@@ -42,7 +42,7 @@ public final class CrawlerDynamodbTargetGetArgs extends io.pulumi.resources.Reso
      * The percentage of the configured read capacity units to use by the AWS Glue crawler. The valid values are null or a value between 0.1 to 1.5.
      * 
      */
-    @InputImport(name="scanRate")
+    @Import(name="scanRate")
       private final @Nullable Output<Double> scanRate;
 
     public Output<Double> getScanRate() {

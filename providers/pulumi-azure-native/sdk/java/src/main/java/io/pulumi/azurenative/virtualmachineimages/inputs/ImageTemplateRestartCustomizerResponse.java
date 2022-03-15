@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
      * Command to check if restart succeeded [Default: '']
      * 
      */
-    @InputImport(name="restartCheckCommand")
+    @Import(name="restartCheckCommand")
       private final @Nullable String restartCheckCommand;
 
     public Optional<String> getRestartCheckCommand() {
@@ -44,7 +44,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
      * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
      * 
      */
-    @InputImport(name="restartCommand")
+    @Import(name="restartCommand")
       private final @Nullable String restartCommand;
 
     public Optional<String> getRestartCommand() {
@@ -55,7 +55,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
      * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
      * 
      */
-    @InputImport(name="restartTimeout")
+    @Import(name="restartTimeout")
       private final @Nullable String restartTimeout;
 
     public Optional<String> getRestartTimeout() {
@@ -67,7 +67,7 @@ public final class ImageTemplateRestartCustomizerResponse extends io.pulumi.reso
      * Expected value is 'WindowsRestart'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

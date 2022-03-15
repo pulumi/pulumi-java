@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.IPAMScopeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPAMScopeArgs Empty = new IPAMScopeArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -27,7 +27,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The Id of the IPAM this scope is a part of.
      * 
      */
-    @InputImport(name="ipamId", required=true)
+    @Import(name="ipamId", required=true)
       private final Output<String> ipamId;
 
     public Output<String> getIpamId() {
@@ -38,7 +38,7 @@ public final class IPAMScopeArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<IPAMScopeTagArgs>> tags;
 
     public Output<List<IPAMScopeTagArgs>> getTags() {

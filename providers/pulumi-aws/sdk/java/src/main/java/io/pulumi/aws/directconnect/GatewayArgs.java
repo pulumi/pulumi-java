@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
      * 
      */
-    @InputImport(name="amazonSideAsn", required=true)
+    @Import(name="amazonSideAsn", required=true)
       private final Output<String> amazonSideAsn;
 
     public Output<String> getAmazonSideAsn() {
@@ -29,7 +29,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

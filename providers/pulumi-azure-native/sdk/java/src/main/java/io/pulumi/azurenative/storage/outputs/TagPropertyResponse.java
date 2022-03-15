@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TagPropertyResponse {
     /**
      * Returns the Object ID of the user who added the tag.
@@ -35,13 +35,13 @@ public final class TagPropertyResponse {
      */
     private final String upn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagPropertyResponse(
-        @OutputCustomType.Parameter("objectIdentifier") String objectIdentifier,
-        @OutputCustomType.Parameter("tag") String tag,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("timestamp") String timestamp,
-        @OutputCustomType.Parameter("upn") String upn) {
+        @CustomType.Parameter("objectIdentifier") String objectIdentifier,
+        @CustomType.Parameter("tag") String tag,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("timestamp") String timestamp,
+        @CustomType.Parameter("upn") String upn) {
         this.objectIdentifier = objectIdentifier;
         this.tag = tag;
         this.tenantId = tenantId;

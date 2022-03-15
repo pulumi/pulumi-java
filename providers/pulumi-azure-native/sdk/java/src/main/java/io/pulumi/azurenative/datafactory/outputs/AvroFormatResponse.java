@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AvroFormatResponse {
     /**
      * Deserializer. Type: string (or Expression with resultType string).
@@ -29,11 +29,11 @@ public final class AvroFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AvroFormatResponse(
-        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
-        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @CustomType.Parameter("serializer") @Nullable Object serializer,
+        @CustomType.Parameter("type") String type) {
         this.deserializer = deserializer;
         this.serializer = serializer;
         this.type = type;

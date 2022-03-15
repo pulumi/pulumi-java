@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting fs.aio-max-nr.
      * 
      */
-    @InputImport(name="fsAioMaxNr")
+    @Import(name="fsAioMaxNr")
       private final @Nullable Integer fsAioMaxNr;
 
     public Optional<Integer> getFsAioMaxNr() {
@@ -35,7 +35,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting fs.file-max.
      * 
      */
-    @InputImport(name="fsFileMax")
+    @Import(name="fsFileMax")
       private final @Nullable Integer fsFileMax;
 
     public Optional<Integer> getFsFileMax() {
@@ -46,7 +46,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting fs.inotify.max_user_watches.
      * 
      */
-    @InputImport(name="fsInotifyMaxUserWatches")
+    @Import(name="fsInotifyMaxUserWatches")
       private final @Nullable Integer fsInotifyMaxUserWatches;
 
     public Optional<Integer> getFsInotifyMaxUserWatches() {
@@ -57,7 +57,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting fs.nr_open.
      * 
      */
-    @InputImport(name="fsNrOpen")
+    @Import(name="fsNrOpen")
       private final @Nullable Integer fsNrOpen;
 
     public Optional<Integer> getFsNrOpen() {
@@ -68,7 +68,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting kernel.threads-max.
      * 
      */
-    @InputImport(name="kernelThreadsMax")
+    @Import(name="kernelThreadsMax")
       private final @Nullable Integer kernelThreadsMax;
 
     public Optional<Integer> getKernelThreadsMax() {
@@ -79,7 +79,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.netdev_max_backlog.
      * 
      */
-    @InputImport(name="netCoreNetdevMaxBacklog")
+    @Import(name="netCoreNetdevMaxBacklog")
       private final @Nullable Integer netCoreNetdevMaxBacklog;
 
     public Optional<Integer> getNetCoreNetdevMaxBacklog() {
@@ -90,7 +90,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.optmem_max.
      * 
      */
-    @InputImport(name="netCoreOptmemMax")
+    @Import(name="netCoreOptmemMax")
       private final @Nullable Integer netCoreOptmemMax;
 
     public Optional<Integer> getNetCoreOptmemMax() {
@@ -101,7 +101,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.rmem_default.
      * 
      */
-    @InputImport(name="netCoreRmemDefault")
+    @Import(name="netCoreRmemDefault")
       private final @Nullable Integer netCoreRmemDefault;
 
     public Optional<Integer> getNetCoreRmemDefault() {
@@ -112,7 +112,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.rmem_max.
      * 
      */
-    @InputImport(name="netCoreRmemMax")
+    @Import(name="netCoreRmemMax")
       private final @Nullable Integer netCoreRmemMax;
 
     public Optional<Integer> getNetCoreRmemMax() {
@@ -123,7 +123,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.somaxconn.
      * 
      */
-    @InputImport(name="netCoreSomaxconn")
+    @Import(name="netCoreSomaxconn")
       private final @Nullable Integer netCoreSomaxconn;
 
     public Optional<Integer> getNetCoreSomaxconn() {
@@ -134,7 +134,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.wmem_default.
      * 
      */
-    @InputImport(name="netCoreWmemDefault")
+    @Import(name="netCoreWmemDefault")
       private final @Nullable Integer netCoreWmemDefault;
 
     public Optional<Integer> getNetCoreWmemDefault() {
@@ -145,7 +145,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.core.wmem_max.
      * 
      */
-    @InputImport(name="netCoreWmemMax")
+    @Import(name="netCoreWmemMax")
       private final @Nullable Integer netCoreWmemMax;
 
     public Optional<Integer> getNetCoreWmemMax() {
@@ -156,7 +156,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.ip_local_port_range.
      * 
      */
-    @InputImport(name="netIpv4IpLocalPortRange")
+    @Import(name="netIpv4IpLocalPortRange")
       private final @Nullable String netIpv4IpLocalPortRange;
 
     public Optional<String> getNetIpv4IpLocalPortRange() {
@@ -167,7 +167,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.neigh.default.gc_thresh1.
      * 
      */
-    @InputImport(name="netIpv4NeighDefaultGcThresh1")
+    @Import(name="netIpv4NeighDefaultGcThresh1")
       private final @Nullable Integer netIpv4NeighDefaultGcThresh1;
 
     public Optional<Integer> getNetIpv4NeighDefaultGcThresh1() {
@@ -178,7 +178,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.neigh.default.gc_thresh2.
      * 
      */
-    @InputImport(name="netIpv4NeighDefaultGcThresh2")
+    @Import(name="netIpv4NeighDefaultGcThresh2")
       private final @Nullable Integer netIpv4NeighDefaultGcThresh2;
 
     public Optional<Integer> getNetIpv4NeighDefaultGcThresh2() {
@@ -189,7 +189,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.neigh.default.gc_thresh3.
      * 
      */
-    @InputImport(name="netIpv4NeighDefaultGcThresh3")
+    @Import(name="netIpv4NeighDefaultGcThresh3")
       private final @Nullable Integer netIpv4NeighDefaultGcThresh3;
 
     public Optional<Integer> getNetIpv4NeighDefaultGcThresh3() {
@@ -200,7 +200,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_fin_timeout.
      * 
      */
-    @InputImport(name="netIpv4TcpFinTimeout")
+    @Import(name="netIpv4TcpFinTimeout")
       private final @Nullable Integer netIpv4TcpFinTimeout;
 
     public Optional<Integer> getNetIpv4TcpFinTimeout() {
@@ -211,7 +211,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_keepalive_probes.
      * 
      */
-    @InputImport(name="netIpv4TcpKeepaliveProbes")
+    @Import(name="netIpv4TcpKeepaliveProbes")
       private final @Nullable Integer netIpv4TcpKeepaliveProbes;
 
     public Optional<Integer> getNetIpv4TcpKeepaliveProbes() {
@@ -222,7 +222,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_keepalive_time.
      * 
      */
-    @InputImport(name="netIpv4TcpKeepaliveTime")
+    @Import(name="netIpv4TcpKeepaliveTime")
       private final @Nullable Integer netIpv4TcpKeepaliveTime;
 
     public Optional<Integer> getNetIpv4TcpKeepaliveTime() {
@@ -233,7 +233,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_max_syn_backlog.
      * 
      */
-    @InputImport(name="netIpv4TcpMaxSynBacklog")
+    @Import(name="netIpv4TcpMaxSynBacklog")
       private final @Nullable Integer netIpv4TcpMaxSynBacklog;
 
     public Optional<Integer> getNetIpv4TcpMaxSynBacklog() {
@@ -244,7 +244,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_max_tw_buckets.
      * 
      */
-    @InputImport(name="netIpv4TcpMaxTwBuckets")
+    @Import(name="netIpv4TcpMaxTwBuckets")
       private final @Nullable Integer netIpv4TcpMaxTwBuckets;
 
     public Optional<Integer> getNetIpv4TcpMaxTwBuckets() {
@@ -255,7 +255,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_tw_reuse.
      * 
      */
-    @InputImport(name="netIpv4TcpTwReuse")
+    @Import(name="netIpv4TcpTwReuse")
       private final @Nullable Boolean netIpv4TcpTwReuse;
 
     public Optional<Boolean> getNetIpv4TcpTwReuse() {
@@ -266,7 +266,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.ipv4.tcp_keepalive_intvl.
      * 
      */
-    @InputImport(name="netIpv4TcpkeepaliveIntvl")
+    @Import(name="netIpv4TcpkeepaliveIntvl")
       private final @Nullable Integer netIpv4TcpkeepaliveIntvl;
 
     public Optional<Integer> getNetIpv4TcpkeepaliveIntvl() {
@@ -277,7 +277,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.netfilter.nf_conntrack_buckets.
      * 
      */
-    @InputImport(name="netNetfilterNfConntrackBuckets")
+    @Import(name="netNetfilterNfConntrackBuckets")
       private final @Nullable Integer netNetfilterNfConntrackBuckets;
 
     public Optional<Integer> getNetNetfilterNfConntrackBuckets() {
@@ -288,7 +288,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting net.netfilter.nf_conntrack_max.
      * 
      */
-    @InputImport(name="netNetfilterNfConntrackMax")
+    @Import(name="netNetfilterNfConntrackMax")
       private final @Nullable Integer netNetfilterNfConntrackMax;
 
     public Optional<Integer> getNetNetfilterNfConntrackMax() {
@@ -299,7 +299,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting vm.max_map_count.
      * 
      */
-    @InputImport(name="vmMaxMapCount")
+    @Import(name="vmMaxMapCount")
       private final @Nullable Integer vmMaxMapCount;
 
     public Optional<Integer> getVmMaxMapCount() {
@@ -310,7 +310,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting vm.swappiness.
      * 
      */
-    @InputImport(name="vmSwappiness")
+    @Import(name="vmSwappiness")
       private final @Nullable Integer vmSwappiness;
 
     public Optional<Integer> getVmSwappiness() {
@@ -321,7 +321,7 @@ public final class SysctlConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Sysctl setting vm.vfs_cache_pressure.
      * 
      */
-    @InputImport(name="vmVfsCachePressure")
+    @Import(name="vmVfsCachePressure")
       private final @Nullable Integer vmVfsCachePressure;
 
     public Optional<Integer> getVmVfsCachePressure() {

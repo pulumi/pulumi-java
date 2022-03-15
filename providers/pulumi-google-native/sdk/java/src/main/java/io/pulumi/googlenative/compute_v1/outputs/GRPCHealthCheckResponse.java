@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GRPCHealthCheckResponse {
     /**
      * The gRPC service name for the health check. This field is optional. The value of grpc_service_name has the following meanings by convention: - Empty service_name means the overall status of all services at the backend. - Non-empty service_name means the health of that gRPC service, as defined by the owner of the service. The grpc_service_name can only be ASCII.
@@ -31,12 +31,12 @@ public final class GRPCHealthCheckResponse {
      */
     private final String portSpecification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GRPCHealthCheckResponse(
-        @OutputCustomType.Parameter("grpcServiceName") String grpcServiceName,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("portSpecification") String portSpecification) {
+        @CustomType.Parameter("grpcServiceName") String grpcServiceName,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("portSpecification") String portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;

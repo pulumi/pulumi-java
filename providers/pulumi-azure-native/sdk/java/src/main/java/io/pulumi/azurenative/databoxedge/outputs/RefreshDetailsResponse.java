@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RefreshDetailsResponse {
     /**
      * Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.
@@ -32,12 +32,12 @@ public final class RefreshDetailsResponse {
      */
     private final @Nullable String lastJob;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RefreshDetailsResponse(
-        @OutputCustomType.Parameter("errorManifestFile") @Nullable String errorManifestFile,
-        @OutputCustomType.Parameter("inProgressRefreshJobId") @Nullable String inProgressRefreshJobId,
-        @OutputCustomType.Parameter("lastCompletedRefreshJobTimeInUTC") @Nullable String lastCompletedRefreshJobTimeInUTC,
-        @OutputCustomType.Parameter("lastJob") @Nullable String lastJob) {
+        @CustomType.Parameter("errorManifestFile") @Nullable String errorManifestFile,
+        @CustomType.Parameter("inProgressRefreshJobId") @Nullable String inProgressRefreshJobId,
+        @CustomType.Parameter("lastCompletedRefreshJobTimeInUTC") @Nullable String lastCompletedRefreshJobTimeInUTC,
+        @CustomType.Parameter("lastJob") @Nullable String lastJob) {
         this.errorManifestFile = errorManifestFile;
         this.inProgressRefreshJobId = inProgressRefreshJobId;
         this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;

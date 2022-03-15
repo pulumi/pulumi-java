@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SdsConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsCertificatePathsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TlsCertificateContextResponse {
     /**
      * Specifies the certificate and private key paths. This field is applicable only if tlsCertificateSource is set to USE_PATH.
@@ -27,11 +27,11 @@ public final class TlsCertificateContextResponse {
      */
     private final SdsConfigResponse sdsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsCertificateContextResponse(
-        @OutputCustomType.Parameter("certificatePaths") TlsCertificatePathsResponse certificatePaths,
-        @OutputCustomType.Parameter("certificateSource") String certificateSource,
-        @OutputCustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig) {
+        @CustomType.Parameter("certificatePaths") TlsCertificatePathsResponse certificatePaths,
+        @CustomType.Parameter("certificateSource") String certificateSource,
+        @CustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig) {
         this.certificatePaths = certificatePaths;
         this.certificateSource = certificateSource;
         this.sdsConfig = sdsConfig;

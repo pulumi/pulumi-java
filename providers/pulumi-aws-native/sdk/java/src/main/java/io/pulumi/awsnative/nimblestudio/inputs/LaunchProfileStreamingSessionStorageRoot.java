@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
      * <p>The folder path in Linux workstations where files are uploaded.</p>
      * 
      */
-    @InputImport(name="linux")
+    @Import(name="linux")
       private final @Nullable String linux;
 
     public Optional<String> getLinux() {
@@ -34,7 +34,7 @@ public final class LaunchProfileStreamingSessionStorageRoot extends io.pulumi.re
      * <p>The folder path in Windows workstations where files are uploaded.</p>
      * 
      */
-    @InputImport(name="windows")
+    @Import(name="windows")
       private final @Nullable String windows;
 
     public Optional<String> getWindows() {

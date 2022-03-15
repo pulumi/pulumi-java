@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.FirewallRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * highest IP address included in the range
      * 
      */
-    @OutputExport(name="endIP", type=String.class, parameters={})
+    @Export(name="endIP", type=String.class, parameters={})
     private Output<String> endIP;
 
     /**
@@ -48,7 +48,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * lowest IP address included in the range
      * 
      */
-    @OutputExport(name="startIP", type=String.class, parameters={})
+    @Export(name="startIP", type=String.class, parameters={})
     private Output<String> startIP;
 
     /**
@@ -76,7 +76,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

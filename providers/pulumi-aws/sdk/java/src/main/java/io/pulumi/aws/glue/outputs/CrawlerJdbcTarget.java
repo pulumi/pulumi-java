@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerJdbcTarget {
     /**
      * The name of the connection to use to connect to the Delta table target.
@@ -27,11 +27,11 @@ public final class CrawlerJdbcTarget {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerJdbcTarget(
-        @OutputCustomType.Parameter("connectionName") String connectionName,
-        @OutputCustomType.Parameter("exclusions") @Nullable List<String> exclusions,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("connectionName") String connectionName,
+        @CustomType.Parameter("exclusions") @Nullable List<String> exclusions,
+        @CustomType.Parameter("path") String path) {
         this.connectionName = connectionName;
         this.exclusions = exclusions;
         this.path = path;

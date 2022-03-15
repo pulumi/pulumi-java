@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
      * 
      */
-    @InputImport(name="idleTimeout")
+    @Import(name="idleTimeout")
       private final @Nullable Output<String> idleTimeout;
 
     public Output<String> getIdleTimeout() {
@@ -31,7 +31,7 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
      * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
      */
-    @InputImport(name="maxInstances", required=true)
+    @Import(name="maxInstances", required=true)
       private final Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {

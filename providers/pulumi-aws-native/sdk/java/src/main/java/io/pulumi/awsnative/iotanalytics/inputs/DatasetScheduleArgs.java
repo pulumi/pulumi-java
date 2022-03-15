@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class DatasetScheduleArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final DatasetScheduleArgs Empty = new DatasetScheduleArgs();
 
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicySettingsResponse {
     /**
      * Maximum file upload size in Mb for WAF.
@@ -39,13 +39,13 @@ public final class PolicySettingsResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicySettingsResponse(
-        @OutputCustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
-        @OutputCustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
+        @CustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.fileUploadLimitInMb = fileUploadLimitInMb;
         this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
         this.mode = mode;

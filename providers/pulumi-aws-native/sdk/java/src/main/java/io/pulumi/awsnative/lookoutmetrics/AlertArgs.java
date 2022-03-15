@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * The action to be taken by the alert when an anomaly is detected.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<AlertActionArgs> action;
 
     public Output<AlertActionArgs> getAction() {
@@ -31,7 +31,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the alert.
      * 
      */
-    @InputImport(name="alertDescription")
+    @Import(name="alertDescription")
       private final @Nullable Output<String> alertDescription;
 
     public Output<String> getAlertDescription() {
@@ -42,7 +42,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the alert. If not provided, a name is generated automatically.
      * 
      */
-    @InputImport(name="alertName")
+    @Import(name="alertName")
       private final @Nullable Output<String> alertName;
 
     public Output<String> getAlertName() {
@@ -53,7 +53,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
      * 
      */
-    @InputImport(name="alertSensitivityThreshold", required=true)
+    @Import(name="alertSensitivityThreshold", required=true)
       private final Output<Integer> alertSensitivityThreshold;
 
     public Output<Integer> getAlertSensitivityThreshold() {
@@ -64,7 +64,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon resource name (ARN) of the Anomaly Detector to alert.
      * 
      */
-    @InputImport(name="anomalyDetectorArn", required=true)
+    @Import(name="anomalyDetectorArn", required=true)
       private final Output<String> anomalyDetectorArn;
 
     public Output<String> getAnomalyDetectorArn() {

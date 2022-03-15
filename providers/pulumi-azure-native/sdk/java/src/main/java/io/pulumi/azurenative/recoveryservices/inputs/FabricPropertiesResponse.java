@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricSpecificDeta
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricSpecificDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * BCDR state of the fabric.
      * 
      */
-    @InputImport(name="bcdrState")
+    @Import(name="bcdrState")
       private final @Nullable String bcdrState;
 
     public Optional<String> getBcdrState() {
@@ -43,7 +43,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Fabric specific settings.
      * 
      */
-    @InputImport(name="customDetails")
+    @Import(name="customDetails")
       private final @Nullable Object customDetails;
 
     public Object getCustomDetails() {
@@ -54,7 +54,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Encryption details for the fabric.
      * 
      */
-    @InputImport(name="encryptionDetails")
+    @Import(name="encryptionDetails")
       private final @Nullable EncryptionDetailsResponse encryptionDetails;
 
     public Optional<EncryptionDetailsResponse> getEncryptionDetails() {
@@ -65,7 +65,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Friendly name of the fabric.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -76,7 +76,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Health of fabric.
      * 
      */
-    @InputImport(name="health")
+    @Import(name="health")
       private final @Nullable String health;
 
     public Optional<String> getHealth() {
@@ -87,7 +87,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Fabric health error details.
      * 
      */
-    @InputImport(name="healthErrorDetails")
+    @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
     public List<HealthErrorResponse> getHealthErrorDetails() {
@@ -98,7 +98,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Dra Registration Id.
      * 
      */
-    @InputImport(name="internalIdentifier")
+    @Import(name="internalIdentifier")
       private final @Nullable String internalIdentifier;
 
     public Optional<String> getInternalIdentifier() {
@@ -109,7 +109,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Rollover encryption details for the fabric.
      * 
      */
-    @InputImport(name="rolloverEncryptionDetails")
+    @Import(name="rolloverEncryptionDetails")
       private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
     public Optional<EncryptionDetailsResponse> getRolloverEncryptionDetails() {

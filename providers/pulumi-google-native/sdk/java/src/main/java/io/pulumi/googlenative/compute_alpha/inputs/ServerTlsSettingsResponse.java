@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsContextResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
      * Configures the mechanism to obtain security certificates and identity information.
      * 
      */
-    @InputImport(name="proxyTlsContext", required=true)
+    @Import(name="proxyTlsContext", required=true)
       private final TlsContextResponse proxyTlsContext;
 
     public TlsContextResponse getProxyTlsContext() {
@@ -33,7 +33,7 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
      * A list of alternate names to verify the subject identity in the certificate presented by the client.
      * 
      */
-    @InputImport(name="subjectAltNames", required=true)
+    @Import(name="subjectAltNames", required=true)
       private final List<String> subjectAltNames;
 
     public List<String> getSubjectAltNames() {
@@ -44,7 +44,7 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
      * Indicates whether connections should be secured using TLS. The value of this field determines how TLS is enforced. This field can be set to one of the following: - SIMPLE Secure connections with standard TLS semantics. - MUTUAL Secure connections to the backends using mutual TLS by presenting client certificates for authentication.
      * 
      */
-    @InputImport(name="tlsMode", required=true)
+    @Import(name="tlsMode", required=true)
       private final String tlsMode;
 
     public String getTlsMode() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatch;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptions;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRule {
     /**
      * Action to take when `match` matches the request. Valid values:
@@ -54,14 +54,14 @@ public final class SecurityPolicyRule {
      */
     private final @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRule(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("match") SecurityPolicyRuleMatch match,
-        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("rateLimitOptions") @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("match") SecurityPolicyRuleMatch match,
+        @CustomType.Parameter("preview") @Nullable Boolean preview,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("rateLimitOptions") @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
         this.action = action;
         this.description = description;
         this.match = match;

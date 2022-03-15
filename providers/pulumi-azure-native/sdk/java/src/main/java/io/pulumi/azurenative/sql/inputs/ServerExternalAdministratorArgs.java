@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.AdministratorType;
 import io.pulumi.azurenative.sql.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
      * Type of the sever administrator.
      * 
      */
-    @InputImport(name="administratorType")
+    @Import(name="administratorType")
       private final @Nullable Output<Either<String,AdministratorType>> administratorType;
 
     public Output<Either<String,AdministratorType>> getAdministratorType() {
@@ -37,7 +37,7 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
      * Azure Active Directory only Authentication enabled.
      * 
      */
-    @InputImport(name="azureADOnlyAuthentication")
+    @Import(name="azureADOnlyAuthentication")
       private final @Nullable Output<Boolean> azureADOnlyAuthentication;
 
     public Output<Boolean> getAzureADOnlyAuthentication() {
@@ -48,7 +48,7 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
      * Login name of the server administrator.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
@@ -59,7 +59,7 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
      * Principal Type of the sever administrator.
      * 
      */
-    @InputImport(name="principalType")
+    @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> getPrincipalType() {
@@ -70,7 +70,7 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
      * SID (object ID) of the server administrator.
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable Output<String> sid;
 
     public Output<String> getSid() {
@@ -81,7 +81,7 @@ public final class ServerExternalAdministratorArgs extends io.pulumi.resources.R
      * Tenant ID of the administrator.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

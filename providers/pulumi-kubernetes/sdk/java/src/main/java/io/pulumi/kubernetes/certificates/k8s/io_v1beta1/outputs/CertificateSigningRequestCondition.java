@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateSigningRequestCondition {
     /**
      * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
@@ -42,14 +42,14 @@ public final class CertificateSigningRequestCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateSigningRequestCondition(
-        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
-        @OutputCustomType.Parameter("lastUpdateTime") @Nullable String lastUpdateTime,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @CustomType.Parameter("lastUpdateTime") @Nullable String lastUpdateTime,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.lastUpdateTime = lastUpdateTime;
         this.message = message;

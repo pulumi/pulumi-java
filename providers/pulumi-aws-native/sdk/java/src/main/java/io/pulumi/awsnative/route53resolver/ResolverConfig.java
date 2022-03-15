@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53resolver.ResolverConfigArgs;
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverse;
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class ResolverConfig extends io.pulumi.resources.CustomResource {
      * ResolverAutodefinedReverseStatus, possible values are ENABLING, ENABLED, DISABLING AND DISABLED.
      * 
      */
-    @OutputExport(name="autodefinedReverse", type=ResolverConfigAutodefinedReverse.class, parameters={})
+    @Export(name="autodefinedReverse", type=ResolverConfigAutodefinedReverse.class, parameters={})
     private Output<ResolverConfigAutodefinedReverse> autodefinedReverse;
 
     /**
@@ -37,7 +37,7 @@ public class ResolverConfig extends io.pulumi.resources.CustomResource {
      * Represents the desired status of AutodefinedReverse. The only supported value on creation is DISABLE. Deletion of this resource will return AutodefinedReverse to its default value (ENABLED).
      * 
      */
-    @OutputExport(name="autodefinedReverseFlag", type=ResolverConfigAutodefinedReverseFlag.class, parameters={})
+    @Export(name="autodefinedReverseFlag", type=ResolverConfigAutodefinedReverseFlag.class, parameters={})
     private Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
     /**
@@ -51,7 +51,7 @@ public class ResolverConfig extends io.pulumi.resources.CustomResource {
      * AccountId
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -65,7 +65,7 @@ public class ResolverConfig extends io.pulumi.resources.CustomResource {
      * ResourceId
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**

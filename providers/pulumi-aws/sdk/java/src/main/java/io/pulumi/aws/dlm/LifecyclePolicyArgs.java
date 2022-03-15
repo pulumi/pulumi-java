@@ -5,7 +5,7 @@ package io.pulumi.aws.dlm;
 
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * A description for the DLM lifecycle policy.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of an IAM role that is able to be assumed by the DLM service.
      * 
      */
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -42,7 +42,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * See the `policy_details` configuration block. Max of 1.
      * 
      */
-    @InputImport(name="policyDetails", required=true)
+    @Import(name="policyDetails", required=true)
       private final Output<LifecyclePolicyPolicyDetailsArgs> policyDetails;
 
     public Output<LifecyclePolicyPolicyDetailsArgs> getPolicyDetails() {
@@ -53,7 +53,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -64,7 +64,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

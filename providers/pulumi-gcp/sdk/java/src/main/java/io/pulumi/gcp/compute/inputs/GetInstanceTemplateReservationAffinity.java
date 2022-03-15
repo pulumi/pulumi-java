@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ public final class GetInstanceTemplateReservationAffinity extends io.pulumi.reso
 
     public static final GetInstanceTemplateReservationAffinity Empty = new GetInstanceTemplateReservationAffinity();
 
-    @InputImport(name="specificReservations", required=true)
+    @Import(name="specificReservations", required=true)
       private final List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
 
     public List<GetInstanceTemplateReservationAffinitySpecificReservation> getSpecificReservations() {
@@ -25,7 +25,7 @@ public final class GetInstanceTemplateReservationAffinity extends io.pulumi.reso
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class EnvironmentConfigWorkloadsConfigWebServerGetArgs extends io.p
 
     public static final EnvironmentConfigWorkloadsConfigWebServerGetArgs Empty = new EnvironmentConfigWorkloadsConfigWebServerGetArgs();
 
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
         return this.cpu == null ? Output.empty() : this.cpu;
     }
 
-    @InputImport(name="memoryGb")
+    @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
     public Output<Double> getMemoryGb() {
         return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
-    @InputImport(name="storageGb")
+    @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
     public Output<Double> getStorageGb() {

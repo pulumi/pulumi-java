@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AcceleratorAttributesGetArgs extends io.pulumi.resources.Reso
      * Indicates whether flow logs are enabled. Defaults to `false`. Valid values: `true`, `false`.
      * 
      */
-    @InputImport(name="flowLogsEnabled")
+    @Import(name="flowLogsEnabled")
       private final @Nullable Output<Boolean> flowLogsEnabled;
 
     public Output<Boolean> getFlowLogsEnabled() {
@@ -30,7 +30,7 @@ public final class AcceleratorAttributesGetArgs extends io.pulumi.resources.Reso
      * The name of the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
      * 
      */
-    @InputImport(name="flowLogsS3Bucket")
+    @Import(name="flowLogsS3Bucket")
       private final @Nullable Output<String> flowLogsS3Bucket;
 
     public Output<String> getFlowLogsS3Bucket() {
@@ -41,7 +41,7 @@ public final class AcceleratorAttributesGetArgs extends io.pulumi.resources.Reso
      * The prefix for the location in the Amazon S3 bucket for the flow logs. Required if `flow_logs_enabled` is `true`.
      * 
      */
-    @InputImport(name="flowLogsS3Prefix")
+    @Import(name="flowLogsS3Prefix")
       private final @Nullable Output<String> flowLogsS3Prefix;
 
     public Output<String> getFlowLogsS3Prefix() {

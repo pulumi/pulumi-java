@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.TokenCertificateResponse;
 import io.pulumi.azurenative.containerregistry.inputs.TokenPasswordResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,14 +20,14 @@ public final class TokenCredentialsPropertiesResponse extends io.pulumi.resource
 
     public static final TokenCredentialsPropertiesResponse Empty = new TokenCredentialsPropertiesResponse();
 
-    @InputImport(name="certificates")
+    @Import(name="certificates")
       private final @Nullable List<TokenCertificateResponse> certificates;
 
     public List<TokenCertificateResponse> getCertificates() {
         return this.certificates == null ? List.of() : this.certificates;
     }
 
-    @InputImport(name="passwords")
+    @Import(name="passwords")
       private final @Nullable List<TokenPasswordResponse> passwords;
 
     public List<TokenPasswordResponse> getPasswords() {

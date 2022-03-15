@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.ScheduleResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetScanConfigResult {
     /**
      * The authentication configuration. If specified, service will use the authentication configuration during scanning.
@@ -80,21 +80,21 @@ public final class GetScanConfigResult {
      */
     private final String userAgent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScanConfigResult(
-        @OutputCustomType.Parameter("authentication") AuthenticationResponse authentication,
-        @OutputCustomType.Parameter("blacklistPatterns") List<String> blacklistPatterns,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("exportToSecurityCommandCenter") String exportToSecurityCommandCenter,
-        @OutputCustomType.Parameter("ignoreHttpStatusErrors") Boolean ignoreHttpStatusErrors,
-        @OutputCustomType.Parameter("managedScan") Boolean managedScan,
-        @OutputCustomType.Parameter("maxQps") Integer maxQps,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("riskLevel") String riskLevel,
-        @OutputCustomType.Parameter("schedule") ScheduleResponse schedule,
-        @OutputCustomType.Parameter("startingUrls") List<String> startingUrls,
-        @OutputCustomType.Parameter("staticIpScan") Boolean staticIpScan,
-        @OutputCustomType.Parameter("userAgent") String userAgent) {
+        @CustomType.Parameter("authentication") AuthenticationResponse authentication,
+        @CustomType.Parameter("blacklistPatterns") List<String> blacklistPatterns,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("exportToSecurityCommandCenter") String exportToSecurityCommandCenter,
+        @CustomType.Parameter("ignoreHttpStatusErrors") Boolean ignoreHttpStatusErrors,
+        @CustomType.Parameter("managedScan") Boolean managedScan,
+        @CustomType.Parameter("maxQps") Integer maxQps,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("riskLevel") String riskLevel,
+        @CustomType.Parameter("schedule") ScheduleResponse schedule,
+        @CustomType.Parameter("startingUrls") List<String> startingUrls,
+        @CustomType.Parameter("staticIpScan") Boolean staticIpScan,
+        @CustomType.Parameter("userAgent") String userAgent) {
         this.authentication = authentication;
         this.blacklistPatterns = blacklistPatterns;
         this.displayName = displayName;

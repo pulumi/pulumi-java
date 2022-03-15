@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class ResourceGuardOperationDetailResponse extends io.pulumi.resour
 
     public static final ResourceGuardOperationDetailResponse Empty = new ResourceGuardOperationDetailResponse();
 
-    @InputImport(name="defaultResourceRequest")
+    @Import(name="defaultResourceRequest")
       private final @Nullable String defaultResourceRequest;
 
     public Optional<String> getDefaultResourceRequest() {
         return this.defaultResourceRequest == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceRequest);
     }
 
-    @InputImport(name="vaultCriticalOperation")
+    @Import(name="vaultCriticalOperation")
       private final @Nullable String vaultCriticalOperation;
 
     public Optional<String> getVaultCriticalOperation() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dynamics365fraudprotection.outputs.DFPInstanceAdmin
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * A collection of DFP instance administrators
      * 
      */
-    @OutputExport(name="administration", type=DFPInstanceAdministratorsResponse.class, parameters={})
+    @Export(name="administration", type=DFPInstanceAdministratorsResponse.class, parameters={})
     private Output</* @Nullable */ DFPInstanceAdministratorsResponse> administration;
 
     /**
@@ -51,7 +51,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * Location of the DFP resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * The current deployment state of DFP resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -107,7 +107,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * Key-value pairs of additional resource provisioning properties.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class InstanceDetails extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

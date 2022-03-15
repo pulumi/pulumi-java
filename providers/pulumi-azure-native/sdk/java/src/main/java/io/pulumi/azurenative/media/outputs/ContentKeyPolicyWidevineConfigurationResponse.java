@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyWidevineConfigurationResponse {
     /**
      * The discriminator for derived types.
@@ -21,10 +21,10 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
      */
     private final String widevineTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyWidevineConfigurationResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("widevineTemplate") String widevineTemplate) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("widevineTemplate") String widevineTemplate) {
         this.odataType = odataType;
         this.widevineTemplate = widevineTemplate;
     }

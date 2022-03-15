@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.FilterTrackPropertyConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
      * The track selections.
      * 
      */
-    @InputImport(name="trackSelections", required=true)
+    @Import(name="trackSelections", required=true)
       private final Output<List<FilterTrackPropertyConditionArgs>> trackSelections;
 
     public Output<List<FilterTrackPropertyConditionArgs>> getTrackSelections() {

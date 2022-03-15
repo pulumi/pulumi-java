@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs;
@@ -21,7 +21,7 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> retentionPolicy;
 
     public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs> getRetentionPolicy() {
@@ -32,7 +32,7 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
      * Specifies the frequency for the operation, using the unix-cron format.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> schedule;
 
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleArgs> getSchedule() {
@@ -44,7 +44,7 @@ public final class ResourcePolicySnapshotSchedulePolicyArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="snapshotProperties")
+    @Import(name="snapshotProperties")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> snapshotProperties;
 
     public Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs> getSnapshotProperties() {

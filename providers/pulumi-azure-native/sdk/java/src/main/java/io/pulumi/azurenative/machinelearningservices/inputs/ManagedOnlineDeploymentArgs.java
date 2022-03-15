@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetRefer
 import io.pulumi.azurenative.machinelearningservices.inputs.ProbeSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * If true, enables Application Insights logging.
      * 
      */
-    @InputImport(name="appInsightsEnabled")
+    @Import(name="appInsightsEnabled")
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
     public Output<Boolean> getAppInsightsEnabled() {
@@ -41,7 +41,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Code configuration for the endpoint deployment.
      * 
      */
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
     public Output<CodeConfigurationArgs> getCodeConfiguration() {
@@ -52,7 +52,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Description of the endpoint deployment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Expected value is 'Managed'.
      * 
      */
-    @InputImport(name="endpointComputeType", required=true)
+    @Import(name="endpointComputeType", required=true)
       private final Output<String> endpointComputeType;
 
     public Output<String> getEndpointComputeType() {
@@ -75,7 +75,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -86,7 +86,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Environment variables configuration for the deployment.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -97,7 +97,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Compute instance type.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -108,7 +108,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Deployment container liveness/readiness probe configuration.
      * 
      */
-    @InputImport(name="livenessProbe")
+    @Import(name="livenessProbe")
       private final @Nullable Output<ProbeSettingsArgs> livenessProbe;
 
     public Output<ProbeSettingsArgs> getLivenessProbe() {
@@ -119,7 +119,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Reference to the model asset for the endpoint deployment.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<Object> model;
 
     public Output<Object> getModel() {
@@ -130,7 +130,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -141,7 +141,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Deployment container liveness/readiness probe configuration.
      * 
      */
-    @InputImport(name="readinessProbe")
+    @Import(name="readinessProbe")
       private final @Nullable Output<ProbeSettingsArgs> readinessProbe;
 
     public Output<ProbeSettingsArgs> getReadinessProbe() {
@@ -152,7 +152,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Online deployment scoring requests configuration.
      * 
      */
-    @InputImport(name="requestSettings")
+    @Import(name="requestSettings")
       private final @Nullable Output<OnlineRequestSettingsArgs> requestSettings;
 
     public Output<OnlineRequestSettingsArgs> getRequestSettings() {
@@ -163,7 +163,7 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
      * Online deployment scaling configuration.
      * 
      */
-    @InputImport(name="scaleSettings")
+    @Import(name="scaleSettings")
       private final @Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
     public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {

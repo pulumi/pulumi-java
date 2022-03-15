@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISLogLocationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SSISPackageLocationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SSISPropertyOverrideResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia", required=true)
+    @Import(name="connectVia", required=true)
       private final IntegrationRuntimeReferenceResponse connectVia;
 
     public IntegrationRuntimeReferenceResponse getConnectVia() {
@@ -46,7 +46,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -57,7 +57,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -68,7 +68,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The environment path to execute the SSIS package. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="environmentPath")
+    @Import(name="environmentPath")
       private final @Nullable Object environmentPath;
 
     public Optional<Object> getEnvironmentPath() {
@@ -79,7 +79,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The package execution credential.
      * 
      */
-    @InputImport(name="executionCredential")
+    @Import(name="executionCredential")
       private final @Nullable SSISExecutionCredentialResponse executionCredential;
 
     public Optional<SSISExecutionCredentialResponse> getExecutionCredential() {
@@ -90,7 +90,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -101,7 +101,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * SSIS package execution log location.
      * 
      */
-    @InputImport(name="logLocation")
+    @Import(name="logLocation")
       private final @Nullable SSISLogLocationResponse logLocation;
 
     public Optional<SSISLogLocationResponse> getLogLocation() {
@@ -112,7 +112,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The logging level of SSIS package execution. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable Object loggingLevel;
 
     public Optional<Object> getLoggingLevel() {
@@ -123,7 +123,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -134,7 +134,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The package level connection managers to execute the SSIS package.
      * 
      */
-    @InputImport(name="packageConnectionManagers")
+    @Import(name="packageConnectionManagers")
       private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers;
 
     public Map<String,Map<String,SSISExecutionParameterResponse>> getPackageConnectionManagers() {
@@ -145,7 +145,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * SSIS package location.
      * 
      */
-    @InputImport(name="packageLocation", required=true)
+    @Import(name="packageLocation", required=true)
       private final SSISPackageLocationResponse packageLocation;
 
     public SSISPackageLocationResponse getPackageLocation() {
@@ -156,7 +156,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The package level parameters to execute the SSIS package.
      * 
      */
-    @InputImport(name="packageParameters")
+    @Import(name="packageParameters")
       private final @Nullable Map<String,SSISExecutionParameterResponse> packageParameters;
 
     public Map<String,SSISExecutionParameterResponse> getPackageParameters() {
@@ -167,7 +167,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -178,7 +178,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The project level connection managers to execute the SSIS package.
      * 
      */
-    @InputImport(name="projectConnectionManagers")
+    @Import(name="projectConnectionManagers")
       private final @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers;
 
     public Map<String,Map<String,SSISExecutionParameterResponse>> getProjectConnectionManagers() {
@@ -189,7 +189,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The project level parameters to execute the SSIS package.
      * 
      */
-    @InputImport(name="projectParameters")
+    @Import(name="projectParameters")
       private final @Nullable Map<String,SSISExecutionParameterResponse> projectParameters;
 
     public Map<String,SSISExecutionParameterResponse> getProjectParameters() {
@@ -200,7 +200,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * The property overrides to execute the SSIS package.
      * 
      */
-    @InputImport(name="propertyOverrides")
+    @Import(name="propertyOverrides")
       private final @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides;
 
     public Map<String,SSISPropertyOverrideResponse> getPropertyOverrides() {
@@ -211,7 +211,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Specifies the runtime to execute SSIS package. The value should be "x86" or "x64". Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Object runtime;
 
     public Optional<Object> getRuntime() {
@@ -223,7 +223,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Expected value is 'ExecuteSSISPackage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -234,7 +234,7 @@ public final class ExecuteSSISPackageActivityResponse extends io.pulumi.resource
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

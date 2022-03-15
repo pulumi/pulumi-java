@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotImageResponseCardArgs;
 import io.pulumi.awsnative.lex.inputs.BotPlainTextMessageArgs;
 import io.pulumi.awsnative.lex.inputs.BotSSMLMessageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,28 +21,28 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotMessageArgs Empty = new BotMessageArgs();
 
-    @InputImport(name="customPayload")
+    @Import(name="customPayload")
       private final @Nullable Output<BotCustomPayloadArgs> customPayload;
 
     public Output<BotCustomPayloadArgs> getCustomPayload() {
         return this.customPayload == null ? Output.empty() : this.customPayload;
     }
 
-    @InputImport(name="imageResponseCard")
+    @Import(name="imageResponseCard")
       private final @Nullable Output<BotImageResponseCardArgs> imageResponseCard;
 
     public Output<BotImageResponseCardArgs> getImageResponseCard() {
         return this.imageResponseCard == null ? Output.empty() : this.imageResponseCard;
     }
 
-    @InputImport(name="plainTextMessage")
+    @Import(name="plainTextMessage")
       private final @Nullable Output<BotPlainTextMessageArgs> plainTextMessage;
 
     public Output<BotPlainTextMessageArgs> getPlainTextMessage() {
         return this.plainTextMessage == null ? Output.empty() : this.plainTextMessage;
     }
 
-    @InputImport(name="sSMLMessage")
+    @Import(name="sSMLMessage")
       private final @Nullable Output<BotSSMLMessageArgs> sSMLMessage;
 
     public Output<BotSSMLMessageArgs> getSSMLMessage() {

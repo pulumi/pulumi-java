@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserTablesSqlSyncTaskInputResponse {
     /**
      * List of source database names to collect tables for
@@ -32,12 +32,12 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserTablesSqlSyncTaskInputResponse(
-        @OutputCustomType.Parameter("selectedSourceDatabases") List<String> selectedSourceDatabases,
-        @OutputCustomType.Parameter("selectedTargetDatabases") List<String> selectedTargetDatabases,
-        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("selectedSourceDatabases") List<String> selectedSourceDatabases,
+        @CustomType.Parameter("selectedTargetDatabases") List<String> selectedTargetDatabases,
+        @CustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedSourceDatabases = selectedSourceDatabases;
         this.selectedTargetDatabases = selectedTargetDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;

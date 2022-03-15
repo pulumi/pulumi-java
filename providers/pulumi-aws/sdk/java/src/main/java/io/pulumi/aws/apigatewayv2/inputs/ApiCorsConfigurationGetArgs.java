@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ApiCorsConfigurationGetArgs extends io.pulumi.resources.Resou
      * Whether credentials are included in the CORS request.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
     public Output<Boolean> getAllowCredentials() {
@@ -32,7 +32,7 @@ public final class ApiCorsConfigurationGetArgs extends io.pulumi.resources.Resou
      * The set of allowed HTTP headers.
      * 
      */
-    @InputImport(name="allowHeaders")
+    @Import(name="allowHeaders")
       private final @Nullable Output<List<String>> allowHeaders;
 
     public Output<List<String>> getAllowHeaders() {
@@ -43,7 +43,7 @@ public final class ApiCorsConfigurationGetArgs extends io.pulumi.resources.Resou
      * The set of allowed HTTP methods.
      * 
      */
-    @InputImport(name="allowMethods")
+    @Import(name="allowMethods")
       private final @Nullable Output<List<String>> allowMethods;
 
     public Output<List<String>> getAllowMethods() {
@@ -54,7 +54,7 @@ public final class ApiCorsConfigurationGetArgs extends io.pulumi.resources.Resou
      * The set of allowed origins.
      * 
      */
-    @InputImport(name="allowOrigins")
+    @Import(name="allowOrigins")
       private final @Nullable Output<List<String>> allowOrigins;
 
     public Output<List<String>> getAllowOrigins() {
@@ -65,7 +65,7 @@ public final class ApiCorsConfigurationGetArgs extends io.pulumi.resources.Resou
      * The set of exposed HTTP headers.
      * 
      */
-    @InputImport(name="exposeHeaders")
+    @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
     public Output<List<String>> getExposeHeaders() {
@@ -76,7 +76,7 @@ public final class ApiCorsConfigurationGetArgs extends io.pulumi.resources.Resou
      * The number of seconds that the browser should cache preflight request results.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
     public Output<Integer> getMaxAge() {

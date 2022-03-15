@@ -5,7 +5,7 @@ package io.pulumi.aws.mediaconvert.inputs;
 
 import io.pulumi.aws.mediaconvert.inputs.QueueReservationPlanSettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * The Arn of the queue
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * A description of the queue
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * A unique identifier describing the queue
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
      * 
      */
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<String> pricingPlan;
 
     public Output<String> getPricingPlan() {
@@ -64,7 +64,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * A detail pricing plan of the  reserved queue. See below.
      * 
      */
-    @InputImport(name="reservationPlanSettings")
+    @Import(name="reservationPlanSettings")
       private final @Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings;
 
     public Output<QueueReservationPlanSettingsGetArgs> getReservationPlanSettings() {
@@ -75,7 +75,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -86,7 +86,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

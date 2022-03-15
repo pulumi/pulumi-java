@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetHierarchyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetPropertyArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssetArgs Empty = new AssetArgs();
 
-    @InputImport(name="assetHierarchies")
+    @Import(name="assetHierarchies")
       private final @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
 
     public Output<List<AssetHierarchyArgs>> getAssetHierarchies() {
@@ -29,7 +29,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the asset model from which to create the asset.
      * 
      */
-    @InputImport(name="assetModelId", required=true)
+    @Import(name="assetModelId", required=true)
       private final Output<String> assetModelId;
 
     public Output<String> getAssetModelId() {
@@ -40,14 +40,14 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * A unique, friendly name for the asset.
      * 
      */
-    @InputImport(name="assetName")
+    @Import(name="assetName")
       private final @Nullable Output<String> assetName;
 
     public Output<String> getAssetName() {
         return this.assetName == null ? Output.empty() : this.assetName;
     }
 
-    @InputImport(name="assetProperties")
+    @Import(name="assetProperties")
       private final @Nullable Output<List<AssetPropertyArgs>> assetProperties;
 
     public Output<List<AssetPropertyArgs>> getAssetProperties() {
@@ -58,7 +58,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the asset.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AssetTagArgs>> tags;
 
     public Output<List<AssetTagArgs>> getTags() {

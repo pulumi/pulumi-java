@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy {
     private final @Nullable Boolean crossResourceGroupMoveEnabled;
     private final @Nullable Boolean crossSubscriptionMoveEnabled;
     private final @Nullable Boolean validationRequired;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(
-        @OutputCustomType.Parameter("crossResourceGroupMoveEnabled") @Nullable Boolean crossResourceGroupMoveEnabled,
-        @OutputCustomType.Parameter("crossSubscriptionMoveEnabled") @Nullable Boolean crossSubscriptionMoveEnabled,
-        @OutputCustomType.Parameter("validationRequired") @Nullable Boolean validationRequired) {
+        @CustomType.Parameter("crossResourceGroupMoveEnabled") @Nullable Boolean crossResourceGroupMoveEnabled,
+        @CustomType.Parameter("crossSubscriptionMoveEnabled") @Nullable Boolean crossSubscriptionMoveEnabled,
+        @CustomType.Parameter("validationRequired") @Nullable Boolean validationRequired) {
         this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
         this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
         this.validationRequired = validationRequired;

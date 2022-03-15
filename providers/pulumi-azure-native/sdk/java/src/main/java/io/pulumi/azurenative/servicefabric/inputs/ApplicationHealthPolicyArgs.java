@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeHealthPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
      * The health policy used by default to evaluate the health of a service type.
      * 
      */
-    @InputImport(name="defaultServiceTypeHealthPolicy")
+    @Import(name="defaultServiceTypeHealthPolicy")
       private final @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
     public Output<ServiceTypeHealthPolicyArgs> getDefaultServiceTypeHealthPolicy() {
@@ -35,7 +35,7 @@ public final class ApplicationHealthPolicyArgs extends io.pulumi.resources.Resou
      * The map with service type health policy per service type name. The map is empty by default.
      * 
      */
-    @InputImport(name="serviceTypeHealthPolicies")
+    @Import(name="serviceTypeHealthPolicies")
       private final @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
     public Output<Map<String,ServiceTypeHealthPolicyArgs>> getServiceTypeHealthPolicies() {

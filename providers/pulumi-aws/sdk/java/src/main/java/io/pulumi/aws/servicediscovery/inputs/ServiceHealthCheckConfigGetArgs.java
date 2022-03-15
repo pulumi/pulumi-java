@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
      * The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -30,7 +30,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
      * The path that you want Route 53 to request when performing health checks. Route 53 automatically adds the DNS name for the service. If you don't specify a value, the default value is /.
      * 
      */
-    @InputImport(name="resourcePath")
+    @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
     public Output<String> getResourcePath() {
@@ -41,7 +41,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
      * The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

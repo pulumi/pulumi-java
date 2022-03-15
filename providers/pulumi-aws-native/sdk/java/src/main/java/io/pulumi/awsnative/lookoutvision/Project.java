@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lookoutvision;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lookoutvision.ProjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:lookoutvision:Project")
 public class Project extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="projectName", type=String.class, parameters={})
+    @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
     public Output<String> getProjectName() {

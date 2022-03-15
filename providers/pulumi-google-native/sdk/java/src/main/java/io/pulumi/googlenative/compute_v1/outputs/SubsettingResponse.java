@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubsettingResponse {
     private final String policy;
 
-    @OutputCustomType.Constructor
-    private SubsettingResponse(@OutputCustomType.Parameter("policy") String policy) {
+    @CustomType.Constructor
+    private SubsettingResponse(@CustomType.Parameter("policy") String policy) {
         this.policy = policy;
     }
 

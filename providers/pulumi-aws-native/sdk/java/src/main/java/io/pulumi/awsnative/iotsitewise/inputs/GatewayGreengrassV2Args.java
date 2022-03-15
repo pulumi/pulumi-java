@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GatewayGreengrassV2Args extends io.pulumi.resources.ResourceA
      * The name of the CoreDevice in GreenGrass V2.
      * 
      */
-    @InputImport(name="coreDeviceThingName", required=true)
+    @Import(name="coreDeviceThingName", required=true)
       private final Output<String> coreDeviceThingName;
 
     public Output<String> getCoreDeviceThingName() {

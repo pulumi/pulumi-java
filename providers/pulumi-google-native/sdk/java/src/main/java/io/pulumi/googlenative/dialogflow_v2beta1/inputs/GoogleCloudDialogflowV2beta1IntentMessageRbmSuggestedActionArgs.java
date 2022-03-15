@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * Suggested client side action: Dial a phone number
      * 
      */
-    @InputImport(name="dial")
+    @Import(name="dial")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> dial;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs> getDial() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * Suggested client side action: Open a URI on device
      * 
      */
-    @InputImport(name="openUrl")
+    @Import(name="openUrl")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> openUrl;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriArgs> getOpenUrl() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested action. This data will be also forwarded to webhook to allow performing custom business logic.
      * 
      */
-    @InputImport(name="postbackData")
+    @Import(name="postbackData")
       private final @Nullable Output<String> postbackData;
 
     public Output<String> getPostbackData() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * Suggested client side action: Share user location
      * 
      */
-    @InputImport(name="shareLocation")
+    @Import(name="shareLocation")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> shareLocation;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationArgs> getShareLocation() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionAr
      * Text to display alongside the action.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {

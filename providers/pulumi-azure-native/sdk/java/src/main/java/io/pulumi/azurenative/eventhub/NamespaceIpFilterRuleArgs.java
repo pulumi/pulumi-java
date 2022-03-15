@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.eventhub.enums.IPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * The IP Filter Action
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,IPAction>> action;
 
     public Output<Either<String,IPAction>> getAction() {
@@ -31,7 +31,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * IP Filter name
      * 
      */
-    @InputImport(name="filterName")
+    @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
     public Output<String> getFilterName() {
@@ -42,7 +42,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * The IP Filter Rule name.
      * 
      */
-    @InputImport(name="ipFilterRuleName")
+    @Import(name="ipFilterRuleName")
       private final @Nullable Output<String> ipFilterRuleName;
 
     public Output<String> getIpFilterRuleName() {
@@ -53,7 +53,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * IP Mask
      * 
      */
-    @InputImport(name="ipMask")
+    @Import(name="ipMask")
       private final @Nullable Output<String> ipMask;
 
     public Output<String> getIpMask() {
@@ -64,7 +64,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -75,7 +75,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

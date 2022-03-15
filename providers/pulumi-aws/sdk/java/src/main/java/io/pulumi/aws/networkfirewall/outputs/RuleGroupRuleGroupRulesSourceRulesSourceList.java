@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
     /**
      * String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
@@ -26,11 +26,11 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
      */
     private final List<String> targets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceRulesSourceList(
-        @OutputCustomType.Parameter("generatedRulesType") String generatedRulesType,
-        @OutputCustomType.Parameter("targetTypes") List<String> targetTypes,
-        @OutputCustomType.Parameter("targets") List<String> targets) {
+        @CustomType.Parameter("generatedRulesType") String generatedRulesType,
+        @CustomType.Parameter("targetTypes") List<String> targetTypes,
+        @CustomType.Parameter("targets") List<String> targets) {
         this.generatedRulesType = generatedRulesType;
         this.targetTypes = targetTypes;
         this.targets = targets;

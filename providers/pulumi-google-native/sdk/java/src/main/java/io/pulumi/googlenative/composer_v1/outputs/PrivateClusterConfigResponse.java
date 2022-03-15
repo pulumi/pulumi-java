@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateClusterConfigResponse {
     /**
      * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
@@ -26,11 +26,11 @@ public final class PrivateClusterConfigResponse {
      */
     private final String masterIpv4ReservedRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateClusterConfigResponse(
-        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
-        @OutputCustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
-        @OutputCustomType.Parameter("masterIpv4ReservedRange") String masterIpv4ReservedRange) {
+        @CustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @CustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
+        @CustomType.Parameter("masterIpv4ReservedRange") String masterIpv4ReservedRange) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         this.masterIpv4ReservedRange = masterIpv4ReservedRange;

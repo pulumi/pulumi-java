@@ -9,7 +9,7 @@ import io.pulumi.azurenative.kubernetes.outputs.ConnectedClusterIdentityResponse
 import io.pulumi.azurenative.kubernetes.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
      * 
      */
-    @OutputExport(name="agentPublicKeyCertificate", type=String.class, parameters={})
+    @Export(name="agentPublicKeyCertificate", type=String.class, parameters={})
     private Output<String> agentPublicKeyCertificate;
 
     /**
@@ -52,7 +52,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Version of the agent running on the connected cluster resource
      * 
      */
-    @OutputExport(name="agentVersion", type=String.class, parameters={})
+    @Export(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
     /**
@@ -66,7 +66,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Represents the connectivity status of the connected cluster.
      * 
      */
-    @OutputExport(name="connectivityStatus", type=String.class, parameters={})
+    @Export(name="connectivityStatus", type=String.class, parameters={})
     private Output<String> connectivityStatus;
 
     /**
@@ -80,7 +80,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The Kubernetes distribution running on this connected cluster.
      * 
      */
-    @OutputExport(name="distribution", type=String.class, parameters={})
+    @Export(name="distribution", type=String.class, parameters={})
     private Output</* @Nullable */ String> distribution;
 
     /**
@@ -94,7 +94,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The identity of the connected cluster.
      * 
      */
-    @OutputExport(name="identity", type=ConnectedClusterIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ConnectedClusterIdentityResponse.class, parameters={})
     private Output<ConnectedClusterIdentityResponse> identity;
 
     /**
@@ -108,7 +108,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
      * 
      */
-    @OutputExport(name="infrastructure", type=String.class, parameters={})
+    @Export(name="infrastructure", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructure;
 
     /**
@@ -122,7 +122,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The Kubernetes version of the connected cluster resource
      * 
      */
-    @OutputExport(name="kubernetesVersion", type=String.class, parameters={})
+    @Export(name="kubernetesVersion", type=String.class, parameters={})
     private Output<String> kubernetesVersion;
 
     /**
@@ -136,7 +136,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Time representing the last instance when heart beat was received from the cluster
      * 
      */
-    @OutputExport(name="lastConnectivityTime", type=String.class, parameters={})
+    @Export(name="lastConnectivityTime", type=String.class, parameters={})
     private Output<String> lastConnectivityTime;
 
     /**
@@ -150,7 +150,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -164,7 +164,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Expiration time of the managed identity certificate
      * 
      */
-    @OutputExport(name="managedIdentityCertificateExpirationTime", type=String.class, parameters={})
+    @Export(name="managedIdentityCertificateExpirationTime", type=String.class, parameters={})
     private Output<String> managedIdentityCertificateExpirationTime;
 
     /**
@@ -178,7 +178,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -192,7 +192,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Connected cluster offering
      * 
      */
-    @OutputExport(name="offering", type=String.class, parameters={})
+    @Export(name="offering", type=String.class, parameters={})
     private Output<String> offering;
 
     /**
@@ -206,7 +206,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Provisioning state of the connected cluster resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -220,7 +220,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -234,7 +234,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -248,7 +248,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Number of CPU cores present in the connected cluster resource
      * 
      */
-    @OutputExport(name="totalCoreCount", type=Integer.class, parameters={})
+    @Export(name="totalCoreCount", type=Integer.class, parameters={})
     private Output<Integer> totalCoreCount;
 
     /**
@@ -262,7 +262,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * Number of nodes present in the connected cluster resource
      * 
      */
-    @OutputExport(name="totalNodeCount", type=Integer.class, parameters={})
+    @Export(name="totalNodeCount", type=Integer.class, parameters={})
     private Output<Integer> totalNodeCount;
 
     /**
@@ -276,7 +276,7 @@ public class ConnectedCluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

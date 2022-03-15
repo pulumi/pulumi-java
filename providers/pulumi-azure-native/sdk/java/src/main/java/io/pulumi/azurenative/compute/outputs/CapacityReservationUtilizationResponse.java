@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CapacityReservationUtilizationResponse {
     /**
      * A list of all virtual machines resource ids allocated against the capacity reservation.
@@ -16,8 +16,8 @@ public final class CapacityReservationUtilizationResponse {
      */
     private final List<SubResourceReadOnlyResponse> virtualMachinesAllocated;
 
-    @OutputCustomType.Constructor
-    private CapacityReservationUtilizationResponse(@OutputCustomType.Parameter("virtualMachinesAllocated") List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
+    @CustomType.Constructor
+    private CapacityReservationUtilizationResponse(@CustomType.Parameter("virtualMachinesAllocated") List<SubResourceReadOnlyResponse> virtualMachinesAllocated) {
         this.virtualMachinesAllocated = virtualMachinesAllocated;
     }
 

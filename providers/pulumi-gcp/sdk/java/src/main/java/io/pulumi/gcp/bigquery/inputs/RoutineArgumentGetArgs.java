@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * Possible values are `FIXED_TYPE` and `ANY_TYPE`.
      * 
      */
-    @InputImport(name="argumentKind")
+    @Import(name="argumentKind")
       private final @Nullable Output<String> argumentKind;
 
     public Output<String> getArgumentKind() {
@@ -37,7 +37,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * the schema as returned by the API.
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
@@ -49,7 +49,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * Possible values are `IN`, `OUT`, and `INOUT`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -60,7 +60,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * The name of this argument. Can be absent for function return argument.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

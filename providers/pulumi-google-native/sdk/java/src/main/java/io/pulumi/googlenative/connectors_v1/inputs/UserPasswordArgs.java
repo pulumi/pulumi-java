@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * Secret version reference containing the password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<SecretArgs> password;
 
     public Output<SecretArgs> getPassword() {
@@ -34,7 +34,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * Username.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
      */
-    @InputImport(name="additionalLatencyMilliseconds")
+    @Import(name="additionalLatencyMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyMilliseconds;
 
     public Output<Integer> getAdditionalLatencyMilliseconds() {
@@ -34,7 +34,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * The number of samples to consider for load balancing decisions
      * 
      */
-    @InputImport(name="sampleSize")
+    @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
     public Output<Integer> getSampleSize() {
@@ -67,7 +67,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * The number of samples within the sample period that must succeed
      * 
      */
-    @InputImport(name="successfulSamplesRequired")
+    @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;
 
     public Output<Integer> getSuccessfulSamplesRequired() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketEventBridgeConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketLambdaConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketQueueConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,28 +22,28 @@ public final class BucketNotificationConfiguration extends io.pulumi.resources.I
 
     public static final BucketNotificationConfiguration Empty = new BucketNotificationConfiguration();
 
-    @InputImport(name="eventBridgeConfiguration")
+    @Import(name="eventBridgeConfiguration")
       private final @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration;
 
     public Optional<BucketEventBridgeConfiguration> getEventBridgeConfiguration() {
         return this.eventBridgeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.eventBridgeConfiguration);
     }
 
-    @InputImport(name="lambdaConfigurations")
+    @Import(name="lambdaConfigurations")
       private final @Nullable List<BucketLambdaConfiguration> lambdaConfigurations;
 
     public List<BucketLambdaConfiguration> getLambdaConfigurations() {
         return this.lambdaConfigurations == null ? List.of() : this.lambdaConfigurations;
     }
 
-    @InputImport(name="queueConfigurations")
+    @Import(name="queueConfigurations")
       private final @Nullable List<BucketQueueConfiguration> queueConfigurations;
 
     public List<BucketQueueConfiguration> getQueueConfigurations() {
         return this.queueConfigurations == null ? List.of() : this.queueConfigurations;
     }
 
-    @InputImport(name="topicConfigurations")
+    @Import(name="topicConfigurations")
       private final @Nullable List<BucketTopicConfiguration> topicConfigurations;
 
     public List<BucketTopicConfiguration> getTopicConfigurations() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponseMetadata;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterDefinitionsValueResponse {
     /**
      * The allowed values for the parameter.
@@ -35,12 +35,12 @@ public final class ParameterDefinitionsValueResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterDefinitionsValueResponse(
-        @OutputCustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
-        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
-        @OutputCustomType.Parameter("metadata") @Nullable ParameterDefinitionsValueResponseMetadata metadata,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
+        @CustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @CustomType.Parameter("metadata") @Nullable ParameterDefinitionsValueResponseMetadata metadata,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.metadata = metadata;

@@ -7,25 +7,25 @@ import io.pulumi.awsnative.databrew.outputs.JobColumnSelector;
 import io.pulumi.awsnative.databrew.outputs.JobColumnStatisticsConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobEntityDetectorConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobStatisticsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobProfileConfiguration {
     private final @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations;
     private final @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration;
     private final @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
     private final @Nullable List<JobColumnSelector> profileColumns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobProfileConfiguration(
-        @OutputCustomType.Parameter("columnStatisticsConfigurations") @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
-        @OutputCustomType.Parameter("datasetStatisticsConfiguration") @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
-        @OutputCustomType.Parameter("entityDetectorConfiguration") @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
-        @OutputCustomType.Parameter("profileColumns") @Nullable List<JobColumnSelector> profileColumns) {
+        @CustomType.Parameter("columnStatisticsConfigurations") @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
+        @CustomType.Parameter("datasetStatisticsConfiguration") @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
+        @CustomType.Parameter("entityDetectorConfiguration") @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
+        @CustomType.Parameter("profileColumns") @Nullable List<JobColumnSelector> profileColumns) {
         this.columnStatisticsConfigurations = columnStatisticsConfigurations;
         this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
         this.entityDetectorConfiguration = entityDetectorConfiguration;

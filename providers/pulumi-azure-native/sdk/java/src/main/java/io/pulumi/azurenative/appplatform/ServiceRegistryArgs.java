@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -29,7 +29,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -40,7 +40,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
      * The name of Service Registry.
      * 
      */
-    @InputImport(name="serviceRegistryName")
+    @Import(name="serviceRegistryName")
       private final @Nullable Output<String> serviceRegistryName;
 
     public Output<String> getServiceRegistryName() {

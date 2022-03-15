@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
 
     public static final DocumentParameterArgs Empty = new DocumentParameterArgs();
 
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -25,7 +25,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
      * The description of the document.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,14 +36,14 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
      * The name of the document.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

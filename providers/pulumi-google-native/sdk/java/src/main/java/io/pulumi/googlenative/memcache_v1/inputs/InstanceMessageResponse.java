@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
      * A code that correspond to one type of user-facing message.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -27,7 +27,7 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
      * Message on memcached instance which will be exposed to users.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

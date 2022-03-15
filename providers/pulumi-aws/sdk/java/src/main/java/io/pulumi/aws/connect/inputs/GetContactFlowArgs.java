@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific Contact Flow by contact flow id
      * 
      */
-    @InputImport(name="contactFlowId")
+    @Import(name="contactFlowId")
       private final @Nullable String contactFlowId;
 
     public Optional<String> getContactFlowId() {
@@ -30,7 +30,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
      * Reference to the hosting Amazon Connect Instance
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -41,7 +41,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific Contact Flow by name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -52,7 +52,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
      * A the map of tags to assign to the Contact Flow.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -63,7 +63,7 @@ public final class GetContactFlowArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies the type of Contact Flow.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

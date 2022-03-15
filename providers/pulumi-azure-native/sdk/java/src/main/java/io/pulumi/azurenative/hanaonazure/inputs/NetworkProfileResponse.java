@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.IpAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the circuit id for connecting to express route.
      * 
      */
-    @InputImport(name="circuitId", required=true)
+    @Import(name="circuitId", required=true)
       private final String circuitId;
 
     public String getCircuitId() {
@@ -35,7 +35,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the network interfaces for the HANA instance.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable List<IpAddressResponse> networkInterfaces;
 
     public List<IpAddressResponse> getNetworkInterfaces() {

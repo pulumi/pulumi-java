@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCipherTextResult {
     /**
      * Base64 encoded ciphertext
@@ -25,13 +25,13 @@ public final class GetCipherTextResult {
     private final String keyId;
     private final String plaintext;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCipherTextResult(
-        @OutputCustomType.Parameter("ciphertextBlob") String ciphertextBlob,
-        @OutputCustomType.Parameter("context") @Nullable Map<String,String> context,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("plaintext") String plaintext) {
+        @CustomType.Parameter("ciphertextBlob") String ciphertextBlob,
+        @CustomType.Parameter("context") @Nullable Map<String,String> context,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("plaintext") String plaintext) {
         this.ciphertextBlob = ciphertextBlob;
         this.context = context;
         this.id = id;

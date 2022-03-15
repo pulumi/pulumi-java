@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class FunctionIamPolicyState extends io.pulumi.resources.ResourceAr
 
     public static final FunctionIamPolicyState Empty = new FunctionIamPolicyState();
 
-    @InputImport(name="cloudFunction")
+    @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
         return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
     }
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
         return this.policyData == null ? Output.empty() : this.policyData;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

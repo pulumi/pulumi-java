@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
      * 
      */
-    @InputImport(name="labPlanName", required=true)
+    @Import(name="labPlanName", required=true)
       private final String labPlanName;
 
     public String getLabPlanName() {
@@ -27,7 +27,7 @@ public final class GetLabPlanArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

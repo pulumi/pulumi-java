@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineSourceTriggerDescriptorResponse {
     /**
      * The timestamp when the source update happened.
@@ -17,8 +17,8 @@ public final class PipelineSourceTriggerDescriptorResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor
-    private PipelineSourceTriggerDescriptorResponse(@OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
+    @CustomType.Constructor
+    private PipelineSourceTriggerDescriptorResponse(@CustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.timestamp = timestamp;
     }
 

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.RegisteredServerArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server Agent Version
      * 
      */
-    @OutputExport(name="agentVersion", type=String.class, parameters={})
+    @Export(name="agentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> agentVersion;
 
     /**
@@ -49,7 +49,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server Agent Version Expiration Date
      * 
      */
-    @OutputExport(name="agentVersionExpirationDate", type=String.class, parameters={})
+    @Export(name="agentVersionExpirationDate", type=String.class, parameters={})
     private Output<String> agentVersionExpirationDate;
 
     /**
@@ -63,7 +63,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server Agent Version Status
      * 
      */
-    @OutputExport(name="agentVersionStatus", type=String.class, parameters={})
+    @Export(name="agentVersionStatus", type=String.class, parameters={})
     private Output<String> agentVersionStatus;
 
     /**
@@ -77,7 +77,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server clusterId
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterId;
 
     /**
@@ -91,7 +91,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server clusterName
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterName;
 
     /**
@@ -105,7 +105,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Resource discoveryEndpointUri
      * 
      */
-    @OutputExport(name="discoveryEndpointUri", type=String.class, parameters={})
+    @Export(name="discoveryEndpointUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> discoveryEndpointUri;
 
     /**
@@ -119,7 +119,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Friendly Name
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -133,7 +133,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server last heart beat
      * 
      */
-    @OutputExport(name="lastHeartBeat", type=String.class, parameters={})
+    @Export(name="lastHeartBeat", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastHeartBeat;
 
     /**
@@ -147,7 +147,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Resource Last Operation Name
      * 
      */
-    @OutputExport(name="lastOperationName", type=String.class, parameters={})
+    @Export(name="lastOperationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastOperationName;
 
     /**
@@ -161,7 +161,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server lastWorkflowId
      * 
      */
-    @OutputExport(name="lastWorkflowId", type=String.class, parameters={})
+    @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastWorkflowId;
 
     /**
@@ -175,7 +175,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Management Endpoint Uri
      * 
      */
-    @OutputExport(name="managementEndpointUri", type=String.class, parameters={})
+    @Export(name="managementEndpointUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> managementEndpointUri;
 
     /**
@@ -189,7 +189,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Monitoring Configuration
      * 
      */
-    @OutputExport(name="monitoringConfiguration", type=String.class, parameters={})
+    @Export(name="monitoringConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitoringConfiguration;
 
     /**
@@ -203,7 +203,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Telemetry Endpoint Uri
      * 
      */
-    @OutputExport(name="monitoringEndpointUri", type=String.class, parameters={})
+    @Export(name="monitoringEndpointUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> monitoringEndpointUri;
 
     /**
@@ -217,7 +217,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -231,7 +231,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server Provisioning State
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -245,7 +245,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Resource Location
      * 
      */
-    @OutputExport(name="resourceLocation", type=String.class, parameters={})
+    @Export(name="resourceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceLocation;
 
     /**
@@ -259,7 +259,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server Certificate
      * 
      */
-    @OutputExport(name="serverCertificate", type=String.class, parameters={})
+    @Export(name="serverCertificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverCertificate;
 
     /**
@@ -273,7 +273,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server serverId
      * 
      */
-    @OutputExport(name="serverId", type=String.class, parameters={})
+    @Export(name="serverId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverId;
 
     /**
@@ -287,7 +287,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server Management Error Code
      * 
      */
-    @OutputExport(name="serverManagementErrorCode", type=Integer.class, parameters={})
+    @Export(name="serverManagementErrorCode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverManagementErrorCode;
 
     /**
@@ -301,7 +301,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server OS Version
      * 
      */
-    @OutputExport(name="serverOSVersion", type=String.class, parameters={})
+    @Export(name="serverOSVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverOSVersion;
 
     /**
@@ -315,7 +315,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server serverRole
      * 
      */
-    @OutputExport(name="serverRole", type=String.class, parameters={})
+    @Export(name="serverRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverRole;
 
     /**
@@ -329,7 +329,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Service Location
      * 
      */
-    @OutputExport(name="serviceLocation", type=String.class, parameters={})
+    @Export(name="serviceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceLocation;
 
     /**
@@ -343,7 +343,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * Registered Server storageSyncServiceUid
      * 
      */
-    @OutputExport(name="storageSyncServiceUid", type=String.class, parameters={})
+    @Export(name="storageSyncServiceUid", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageSyncServiceUid;
 
     /**
@@ -357,7 +357,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

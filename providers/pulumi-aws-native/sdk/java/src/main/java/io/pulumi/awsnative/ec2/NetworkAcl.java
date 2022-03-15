@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.NetworkAclArgs;
 import io.pulumi.awsnative.ec2.outputs.NetworkAclTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * The tags to assign to the network ACL.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={NetworkAclTag.class})
+    @Export(name="tags", type=List.class, parameters={NetworkAclTag.class})
     private Output</* @Nullable */ List<NetworkAclTag>> tags;
 
     /**
@@ -37,7 +37,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * The ID of the VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

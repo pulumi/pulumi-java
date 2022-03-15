@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.ConversationArgs;
@@ -25,7 +25,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
      * 
      */
-    @OutputExport(name="conversationProfile", type=String.class, parameters={})
+    @Export(name="conversationProfile", type=String.class, parameters={})
     private Output<String> conversationProfile;
 
     /**
@@ -39,7 +39,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
      * 
      */
-    @OutputExport(name="conversationStage", type=String.class, parameters={})
+    @Export(name="conversationStage", type=String.class, parameters={})
     private Output<String> conversationStage;
 
     /**
@@ -53,7 +53,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The time the conversation was finished.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -67,7 +67,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The current state of the Conversation.
      * 
      */
-    @OutputExport(name="lifecycleState", type=String.class, parameters={})
+    @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
@@ -81,7 +81,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The unique identifier of this conversation. Format: `projects//locations//conversations/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * It will not be empty if the conversation is to be connected over telephony.
      * 
      */
-    @OutputExport(name="phoneNumber", type=GoogleCloudDialogflowV2ConversationPhoneNumberResponse.class, parameters={})
+    @Export(name="phoneNumber", type=GoogleCloudDialogflowV2ConversationPhoneNumberResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2ConversationPhoneNumberResponse> phoneNumber;
 
     /**
@@ -109,7 +109,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * The time the conversation was started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**

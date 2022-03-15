@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
      * 
      */
-    @InputImport(name="bundleId")
+    @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
@@ -34,7 +34,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * The source file
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<FileReferenceArgs> content;
 
     public Output<FileReferenceArgs> getContent() {
@@ -45,7 +45,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the file on the device, inside the app's sandboxed filesystem
      * 
      */
-    @InputImport(name="devicePath")
+    @Import(name="devicePath")
       private final @Nullable Output<String> devicePath;
 
     public Output<String> getDevicePath() {

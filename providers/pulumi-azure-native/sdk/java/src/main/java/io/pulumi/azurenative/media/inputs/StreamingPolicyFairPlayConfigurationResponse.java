@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StreamingPolicyFairPlayConfigurationResponse extends io.pulum
      * All license to be persistent or not
      * 
      */
-    @InputImport(name="allowPersistentLicense", required=true)
+    @Import(name="allowPersistentLicense", required=true)
       private final Boolean allowPersistentLicense;
 
     public Boolean getAllowPersistentLicense() {
@@ -34,7 +34,7 @@ public final class StreamingPolicyFairPlayConfigurationResponse extends io.pulum
      * Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
      * 
      */
-    @InputImport(name="customLicenseAcquisitionUrlTemplate")
+    @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
     public Optional<String> getCustomLicenseAcquisitionUrlTemplate() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.enums.DomainMappingSpecCertificateMode;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * The mode of the certificate.
      * 
      */
-    @InputImport(name="certificateMode")
+    @Import(name="certificateMode")
       private final @Nullable Output<DomainMappingSpecCertificateMode> certificateMode;
 
     public Output<DomainMappingSpecCertificateMode> getCertificateMode() {
@@ -35,7 +35,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * If set, the mapping will override any mapping set before this spec was set. It is recommended that the user leaves this empty to receive an error warning about a potential conflict and only set it once the respective UI has given such a warning.
      * 
      */
-    @InputImport(name="forceOverride")
+    @Import(name="forceOverride")
       private final @Nullable Output<Boolean> forceOverride;
 
     public Output<Boolean> getForceOverride() {
@@ -46,7 +46,7 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * The name of the Knative Route that this DomainMapping applies to. The route must exist.
      * 
      */
-    @InputImport(name="routeName")
+    @Import(name="routeName")
       private final @Nullable Output<String> routeName;
 
     public Output<String> getRouteName() {

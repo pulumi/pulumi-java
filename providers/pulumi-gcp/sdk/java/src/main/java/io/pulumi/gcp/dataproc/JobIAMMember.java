@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.JobIAMMemberArgs;
@@ -53,7 +53,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:dataproc/jobIAMMember:JobIAMMember")
 public class JobIAMMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=JobIAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=JobIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ JobIAMMemberCondition> condition;
 
     public Output</* @Nullable */ JobIAMMemberCondition> getCondition() {
@@ -63,7 +63,7 @@ public class JobIAMMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the jobs's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -73,13 +73,13 @@ public class JobIAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     public Output<String> getJobId() {
         return this.jobId;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -90,7 +90,7 @@ public class JobIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -106,7 +106,7 @@ public class JobIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -123,7 +123,7 @@ public class JobIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

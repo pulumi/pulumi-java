@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.ContentPathMapResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryResponse {
     /**
      * Branch name of repository.
@@ -39,13 +39,13 @@ public final class RepositoryResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryResponse(
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("deploymentLogsUrl") @Nullable String deploymentLogsUrl,
-        @OutputCustomType.Parameter("displayUrl") @Nullable String displayUrl,
-        @OutputCustomType.Parameter("pathMapping") @Nullable List<ContentPathMapResponse> pathMapping,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("deploymentLogsUrl") @Nullable String deploymentLogsUrl,
+        @CustomType.Parameter("displayUrl") @Nullable String displayUrl,
+        @CustomType.Parameter("pathMapping") @Nullable List<ContentPathMapResponse> pathMapping,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.branch = branch;
         this.deploymentLogsUrl = deploymentLogsUrl;
         this.displayUrl = displayUrl;

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceHealthCheckConfigurationProtocol;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceHealthCheckConfiguration {
     /**
      * Health check Healthy Threshold
@@ -44,14 +44,14 @@ public final class ServiceHealthCheckConfiguration {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceHealthCheckConfiguration(
-        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("protocol") @Nullable ServiceHealthCheckConfigurationProtocol protocol,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
+        @CustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("protocol") @Nullable ServiceHealthCheckConfigurationProtocol protocol,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
         this.path = path;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetComparisonExpressionResponse {
     /**
      * The name of the column to use in comparison.
@@ -26,11 +26,11 @@ public final class BudgetComparisonExpressionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetComparisonExpressionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.operator = operator;
         this.values = values;

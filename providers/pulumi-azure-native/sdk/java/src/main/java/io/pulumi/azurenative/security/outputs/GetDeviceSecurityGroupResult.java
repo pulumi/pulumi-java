@@ -7,13 +7,13 @@ import io.pulumi.azurenative.security.outputs.AllowlistCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.DenylistCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.ThresholdCustomAlertRuleResponse;
 import io.pulumi.azurenative.security.outputs.TimeWindowCustomAlertRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceSecurityGroupResult {
     /**
      * The allow-list custom alert rules.
@@ -51,15 +51,15 @@ public final class GetDeviceSecurityGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceSecurityGroupResult(
-        @OutputCustomType.Parameter("allowlistRules") @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules,
-        @OutputCustomType.Parameter("denylistRules") @Nullable List<DenylistCustomAlertRuleResponse> denylistRules,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("thresholdRules") @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules,
-        @OutputCustomType.Parameter("timeWindowRules") @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowlistRules") @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules,
+        @CustomType.Parameter("denylistRules") @Nullable List<DenylistCustomAlertRuleResponse> denylistRules,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("thresholdRules") @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules,
+        @CustomType.Parameter("timeWindowRules") @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules,
+        @CustomType.Parameter("type") String type) {
         this.allowlistRules = allowlistRules;
         this.denylistRules = denylistRules;
         this.id = id;

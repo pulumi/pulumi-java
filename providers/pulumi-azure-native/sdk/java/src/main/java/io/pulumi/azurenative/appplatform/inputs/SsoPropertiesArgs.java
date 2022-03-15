@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The public identifier for the application
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -34,7 +34,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The secret known only to the application and the authorization server
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -45,7 +45,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of Issuer Identifier
      * 
      */
-    @InputImport(name="issuerUri")
+    @Import(name="issuerUri")
       private final @Nullable Output<String> issuerUri;
 
     public Output<String> getIssuerUri() {
@@ -56,7 +56,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * It defines the specific actions applications can be allowed to do on a user's behalf
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
     public Output<List<String>> getScope() {

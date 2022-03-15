@@ -3,25 +3,25 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceConfig {
     private final @Nullable String binaryData;
     private final @Nullable String cloudUpdateTime;
     private final @Nullable String deviceAckTime;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceConfig(
-        @OutputCustomType.Parameter("binaryData") @Nullable String binaryData,
-        @OutputCustomType.Parameter("cloudUpdateTime") @Nullable String cloudUpdateTime,
-        @OutputCustomType.Parameter("deviceAckTime") @Nullable String deviceAckTime,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("binaryData") @Nullable String binaryData,
+        @CustomType.Parameter("cloudUpdateTime") @Nullable String cloudUpdateTime,
+        @CustomType.Parameter("deviceAckTime") @Nullable String deviceAckTime,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.binaryData = binaryData;
         this.cloudUpdateTime = cloudUpdateTime;
         this.deviceAckTime = deviceAckTime;

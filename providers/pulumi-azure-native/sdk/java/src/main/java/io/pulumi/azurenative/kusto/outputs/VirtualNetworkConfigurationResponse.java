@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkConfigurationResponse {
     /**
      * Data management's service public IP address resource id.
@@ -25,11 +25,11 @@ public final class VirtualNetworkConfigurationResponse {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkConfigurationResponse(
-        @OutputCustomType.Parameter("dataManagementPublicIpId") String dataManagementPublicIpId,
-        @OutputCustomType.Parameter("enginePublicIpId") String enginePublicIpId,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("dataManagementPublicIpId") String dataManagementPublicIpId,
+        @CustomType.Parameter("enginePublicIpId") String enginePublicIpId,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.dataManagementPublicIpId = dataManagementPublicIpId;
         this.enginePublicIpId = enginePublicIpId;
         this.subnetId = subnetId;

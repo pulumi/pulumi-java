@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMetricDimensionOperator;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileMetricDimension {
     /**
      * A unique identifier for the dimension.
@@ -23,10 +23,10 @@ public final class SecurityProfileMetricDimension {
      */
     private final @Nullable SecurityProfileMetricDimensionOperator operator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileMetricDimension(
-        @OutputCustomType.Parameter("dimensionName") String dimensionName,
-        @OutputCustomType.Parameter("operator") @Nullable SecurityProfileMetricDimensionOperator operator) {
+        @CustomType.Parameter("dimensionName") String dimensionName,
+        @CustomType.Parameter("operator") @Nullable SecurityProfileMetricDimensionOperator operator) {
         this.dimensionName = dimensionName;
         this.operator = operator;
     }

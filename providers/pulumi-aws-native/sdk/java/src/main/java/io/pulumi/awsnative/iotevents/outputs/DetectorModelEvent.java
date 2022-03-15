@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelEvent {
     /**
      * The actions to be performed.
@@ -29,11 +29,11 @@ public final class DetectorModelEvent {
      */
     private final String eventName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelEvent(
-        @OutputCustomType.Parameter("actions") @Nullable List<DetectorModelAction> actions,
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("eventName") String eventName) {
+        @CustomType.Parameter("actions") @Nullable List<DetectorModelAction> actions,
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("eventName") String eventName) {
         this.actions = actions;
         this.condition = condition;
         this.eventName = eventName;

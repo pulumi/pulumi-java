@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshPreferencesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
      * Override default parameters for Instance Refresh.
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences;
 
     public Output<GroupInstanceRefreshPreferencesArgs> getPreferences() {
@@ -31,7 +31,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
      * The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
      * 
      */
-    @InputImport(name="strategy", required=true)
+    @Import(name="strategy", required=true)
       private final Output<String> strategy;
 
     public Output<String> getStrategy() {
@@ -42,7 +42,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
      * Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<List<String>> triggers;
 
     public Output<List<String>> getTriggers() {

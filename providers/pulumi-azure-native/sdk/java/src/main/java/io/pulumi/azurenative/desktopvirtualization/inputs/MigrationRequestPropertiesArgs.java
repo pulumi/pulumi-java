@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 import io.pulumi.azurenative.desktopvirtualization.enums.Operation;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
      * The path to the legacy object to migrate.
      * 
      */
-    @InputImport(name="migrationPath")
+    @Import(name="migrationPath")
       private final @Nullable Output<String> migrationPath;
 
     public Output<String> getMigrationPath() {
@@ -35,7 +35,7 @@ public final class MigrationRequestPropertiesArgs extends io.pulumi.resources.Re
      * The type of operation for migration.
      * 
      */
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable Output<Either<String,Operation>> operation;
 
     public Output<Either<String,Operation>> getOperation() {

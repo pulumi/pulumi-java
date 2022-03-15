@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
      * Column name. Type: object (or Expression with resultType string).
      * 
      */
-    @InputImport(name="columnName")
+    @Import(name="columnName")
       private final @Nullable Object columnName;
 
     public Optional<Object> getColumnName() {
@@ -33,7 +33,7 @@ public final class DWCopyCommandDefaultValueResponse extends io.pulumi.resources
      * The default value of the column. Type: object (or Expression with resultType string).
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {

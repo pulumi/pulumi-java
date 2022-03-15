@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends i
      * Certificate public data.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable String data;
 
     public Optional<String> getData() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends i
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -44,7 +44,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends i
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -55,7 +55,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends i
      * Name of the authentication certificate that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -66,7 +66,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends i
      * The provisioning state of the authentication certificate resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -77,7 +77,7 @@ public final class ApplicationGatewayAuthenticationCertificateResponse extends i
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

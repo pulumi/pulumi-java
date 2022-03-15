@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ManagedRuleGroupOverrideResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleSetResponse {
     /**
      * Verizon only : If the rule set supports anomaly detection mode, this describes the threshold for blocking requests.
@@ -35,12 +35,12 @@ public final class ManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRuleSetResponse(
-        @OutputCustomType.Parameter("anomalyScore") @Nullable Integer anomalyScore,
-        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
-        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
+        @CustomType.Parameter("anomalyScore") @Nullable Integer anomalyScore,
+        @CustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @CustomType.Parameter("ruleSetType") String ruleSetType,
+        @CustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.anomalyScore = anomalyScore;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetType = ruleSetType;

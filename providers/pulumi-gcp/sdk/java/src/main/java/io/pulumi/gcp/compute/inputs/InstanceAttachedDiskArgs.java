@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * under `/dev/disk/by-id/google-*`
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -33,14 +33,14 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * to encrypt this disk. Only one of `kms_key_self_link` and `disk_encryption_key_raw` may be set.
      * 
      */
-    @InputImport(name="diskEncryptionKeyRaw")
+    @Import(name="diskEncryptionKeyRaw")
       private final @Nullable Output<String> diskEncryptionKeyRaw;
 
     public Output<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Output.empty() : this.diskEncryptionKeyRaw;
     }
 
-    @InputImport(name="diskEncryptionKeySha256")
+    @Import(name="diskEncryptionKeySha256")
       private final @Nullable Output<String> diskEncryptionKeySha256;
 
     public Output<String> getDiskEncryptionKeySha256() {
@@ -53,7 +53,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * and `disk_encryption_key_raw` may be set.
      * 
      */
-    @InputImport(name="kmsKeySelfLink")
+    @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
     public Output<String> getKmsKeySelfLink() {
@@ -67,7 +67,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * attach it to one or more instances in read-only mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -78,7 +78,7 @@ public final class InstanceAttachedDiskArgs extends io.pulumi.resources.Resource
      * The name or self_link of the disk to attach to this instance.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeAr
      * Rate of sampling for fixed-rate sampling.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable Double percentage;
 
     public Optional<Double> getPercentage() {
@@ -34,7 +34,7 @@ public final class SamplingSettingsResponse extends io.pulumi.resources.InvokeAr
      * Sampling type.
      * 
      */
-    @InputImport(name="samplingType")
+    @Import(name="samplingType")
       private final @Nullable String samplingType;
 
     public Optional<String> getSamplingType() {

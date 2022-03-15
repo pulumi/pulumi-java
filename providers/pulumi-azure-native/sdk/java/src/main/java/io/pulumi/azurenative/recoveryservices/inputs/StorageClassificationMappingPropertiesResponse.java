@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StorageClassificationMappingPropertiesResponse extends io.pul
      * Target storage object Id.
      * 
      */
-    @InputImport(name="targetStorageClassificationId")
+    @Import(name="targetStorageClassificationId")
       private final @Nullable String targetStorageClassificationId;
 
     public Optional<String> getTargetStorageClassificationId() {

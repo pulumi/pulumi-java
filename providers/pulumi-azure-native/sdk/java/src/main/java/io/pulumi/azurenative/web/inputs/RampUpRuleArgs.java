@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net.
      * 
      */
-    @InputImport(name="actionHostName")
+    @Import(name="actionHostName")
       private final @Nullable Output<String> actionHostName;
 
     public Output<String> getActionHostName() {
@@ -36,7 +36,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * https://www.siteextensions.net/packages/TiPCallback/
      * 
      */
-    @InputImport(name="changeDecisionCallbackUrl")
+    @Import(name="changeDecisionCallbackUrl")
       private final @Nullable Output<String> changeDecisionCallbackUrl;
 
     public Output<String> getChangeDecisionCallbackUrl() {
@@ -47,7 +47,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies interval in minutes to reevaluate ReroutePercentage.
      * 
      */
-    @InputImport(name="changeIntervalInMinutes")
+    @Import(name="changeIntervalInMinutes")
       private final @Nullable Output<Integer> changeIntervalInMinutes;
 
     public Output<Integer> getChangeIntervalInMinutes() {
@@ -60,7 +60,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>.
      * 
      */
-    @InputImport(name="changeStep")
+    @Import(name="changeStep")
       private final @Nullable Output<Double> changeStep;
 
     public Output<Double> getChangeStep() {
@@ -71,7 +71,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies upper boundary below which ReroutePercentage will stay.
      * 
      */
-    @InputImport(name="maxReroutePercentage")
+    @Import(name="maxReroutePercentage")
       private final @Nullable Output<Double> maxReroutePercentage;
 
     public Output<Double> getMaxReroutePercentage() {
@@ -82,7 +82,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies lower boundary above which ReroutePercentage will stay.
      * 
      */
-    @InputImport(name="minReroutePercentage")
+    @Import(name="minReroutePercentage")
       private final @Nullable Output<Double> minReroutePercentage;
 
     public Output<Double> getMinReroutePercentage() {
@@ -93,7 +93,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the routing rule. The recommended name would be to point to the slot which will receive the traffic in the experiment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -104,7 +104,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Percentage of the traffic which will be redirected to <code>ActionHostName</code>.
      * 
      */
-    @InputImport(name="reroutePercentage")
+    @Import(name="reroutePercentage")
       private final @Nullable Output<Double> reroutePercentage;
 
     public Output<Double> getReroutePercentage() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.mskconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkerConfigurationResult {
     /**
      * the Amazon Resource Name (ARN) of the worker configuration.
@@ -37,14 +37,14 @@ public final class GetWorkerConfigurationResult {
      */
     private final String propertiesFileContent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkerConfigurationResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("propertiesFileContent") String propertiesFileContent) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestRevision") Integer latestRevision,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("propertiesFileContent") String propertiesFileContent) {
         this.arn = arn;
         this.description = description;
         this.id = id;

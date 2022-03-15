@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetTaxonomyPolicyTagIamPolicyArgs extends io.pulumi.resources
 
     public static final GetTaxonomyPolicyTagIamPolicyArgs Empty = new GetTaxonomyPolicyTagIamPolicyArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="policyTagId", required=true)
+    @Import(name="policyTagId", required=true)
       private final String policyTagId;
 
     public String getPolicyTagId() {
         return this.policyTagId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="taxonomyId", required=true)
+    @Import(name="taxonomyId", required=true)
       private final String taxonomyId;
 
     public String getTaxonomyId() {

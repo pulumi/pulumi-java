@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,21 +16,21 @@ public final class ConfigurationAggregatorAccountAggregationSource extends io.pu
 
     public static final ConfigurationAggregatorAccountAggregationSource Empty = new ConfigurationAggregatorAccountAggregationSource();
 
-    @InputImport(name="accountIds", required=true)
+    @Import(name="accountIds", required=true)
       private final List<String> accountIds;
 
     public List<String> getAccountIds() {
         return this.accountIds;
     }
 
-    @InputImport(name="allAwsRegions")
+    @Import(name="allAwsRegions")
       private final @Nullable Boolean allAwsRegions;
 
     public Optional<Boolean> getAllAwsRegions() {
         return this.allAwsRegions == null ? Optional.empty() : Optional.ofNullable(this.allAwsRegions);
     }
 
-    @InputImport(name="awsRegions")
+    @Import(name="awsRegions")
       private final @Nullable List<String> awsRegions;
 
     public List<String> getAwsRegions() {

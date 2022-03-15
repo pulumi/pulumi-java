@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the deployment.
      * 
      */
-    @InputImport(name="deploymentName")
+    @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
     public Output<String> getDeploymentName() {
@@ -31,7 +31,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The location to store the deployment data.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The deployment properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<DeploymentPropertiesArgs> properties;
 
     public Output<DeploymentPropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to deploy the resources to. The name is case insensitive. The resource group must already exist.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Deployment tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

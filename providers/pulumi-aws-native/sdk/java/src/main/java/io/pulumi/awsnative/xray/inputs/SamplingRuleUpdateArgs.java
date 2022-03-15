@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -21,7 +21,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches attributes derived from the request.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Object> attributes;
 
     public Output<Object> getAttributes() {
@@ -32,7 +32,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
      */
-    @InputImport(name="fixedRate")
+    @Import(name="fixedRate")
       private final @Nullable Output<Double> fixedRate;
 
     public Output<Double> getFixedRate() {
@@ -43,7 +43,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches the HTTP method from a request URL.
      * 
      */
-    @InputImport(name="hTTPMethod")
+    @Import(name="hTTPMethod")
       private final @Nullable Output<String> hTTPMethod;
 
     public Output<String> getHTTPMethod() {
@@ -54,7 +54,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches the hostname from a request URL.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -65,7 +65,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * The priority of the sampling rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -76,7 +76,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
      */
-    @InputImport(name="reservoirSize")
+    @Import(name="reservoirSize")
       private final @Nullable Output<Integer> reservoirSize;
 
     public Output<Integer> getReservoirSize() {
@@ -87,21 +87,21 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches the ARN of the AWS resource on which the service runs.
      * 
      */
-    @InputImport(name="resourceARN")
+    @Import(name="resourceARN")
       private final @Nullable Output<String> resourceARN;
 
     public Output<String> getResourceARN() {
         return this.resourceARN == null ? Output.empty() : this.resourceARN;
     }
 
-    @InputImport(name="ruleARN")
+    @Import(name="ruleARN")
       private final @Nullable Output<String> ruleARN;
 
     public Output<String> getRuleARN() {
         return this.ruleARN == null ? Output.empty() : this.ruleARN;
     }
 
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -112,7 +112,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches the name that the service uses to identify itself in segments.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -123,7 +123,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches the origin that the service uses to identify its type in segments.
      * 
      */
-    @InputImport(name="serviceType")
+    @Import(name="serviceType")
       private final @Nullable Output<String> serviceType;
 
     public Output<String> getServiceType() {
@@ -134,7 +134,7 @@ public final class SamplingRuleUpdateArgs extends io.pulumi.resources.ResourceAr
      * Matches the path from a request URL.
      * 
      */
-    @InputImport(name="uRLPath")
+    @Import(name="uRLPath")
       private final @Nullable Output<String> uRLPath;
 
     public Output<String> getURLPath() {

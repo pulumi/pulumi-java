@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
      * Mapping from certificate name to base 64 encoded format.
      * 
      */
-    @InputImport(name="base64EncodedCertificates", required=true)
+    @Import(name="base64EncodedCertificates", required=true)
       private final Map<String,List<String>> base64EncodedCertificates;
 
     public Map<String,List<String>> getBase64EncodedCertificates() {
@@ -34,7 +34,7 @@ public final class GetTdeCertificatesSqlTaskOutputResponse extends io.pulumi.res
      * Validation errors
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders.inputs;
 import io.pulumi.azurenative.customproviders.enums.ValidationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
      * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
      * 
      */
-    @InputImport(name="specification", required=true)
+    @Import(name="specification", required=true)
       private final Output<String> specification;
 
     public Output<String> getSpecification() {
@@ -35,7 +35,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
      * The type of validation to run against a matching request.
      * 
      */
-    @InputImport(name="validationType")
+    @Import(name="validationType")
       private final @Nullable Output<Either<String,ValidationType>> validationType;
 
     public Output<Either<String,ValidationType>> getValidationType() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.UserFacingErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
      * Specifies the protection status error of the resource
      * 
      */
-    @InputImport(name="errorDetails")
+    @Import(name="errorDetails")
       private final @Nullable UserFacingErrorResponse errorDetails;
 
     public Optional<UserFacingErrorResponse> getErrorDetails() {
@@ -34,7 +34,7 @@ public final class ProtectionStatusDetailsResponse extends io.pulumi.resources.I
      * Specifies the protection status of the resource
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

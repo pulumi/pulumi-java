@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BudgetThresholdRuleArgs extends io.pulumi.resources.ResourceA
      * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
      * 
      */
-    @InputImport(name="spendBasis")
+    @Import(name="spendBasis")
       private final @Nullable Output<String> spendBasis;
 
     public Output<String> getSpendBasis() {
@@ -34,7 +34,7 @@ public final class BudgetThresholdRuleArgs extends io.pulumi.resources.ResourceA
      * 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
      * 
      */
-    @InputImport(name="thresholdPercent", required=true)
+    @Import(name="thresholdPercent", required=true)
       private final Output<Double> thresholdPercent;
 
     public Output<Double> getThresholdPercent() {

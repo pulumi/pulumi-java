@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SigningJobDestinationS3GetArgs extends io.pulumi.resources.Re
      * Name of the S3 bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -29,7 +29,7 @@ public final class SigningJobDestinationS3GetArgs extends io.pulumi.resources.Re
      * An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

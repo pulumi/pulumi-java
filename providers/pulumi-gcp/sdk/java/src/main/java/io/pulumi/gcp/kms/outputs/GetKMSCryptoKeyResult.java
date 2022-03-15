@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.kms.outputs.GetKMSCryptoKeyVersionTemplate;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSCryptoKeyResult {
     private final String destroyScheduledDuration;
     /**
@@ -38,18 +38,18 @@ public final class GetKMSCryptoKeyResult {
     private final Boolean skipInitialVersionCreation;
     private final List<GetKMSCryptoKeyVersionTemplate> versionTemplates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSCryptoKeyResult(
-        @OutputCustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("importOnly") Boolean importOnly,
-        @OutputCustomType.Parameter("keyRing") String keyRing,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("purpose") String purpose,
-        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod,
-        @OutputCustomType.Parameter("skipInitialVersionCreation") Boolean skipInitialVersionCreation,
-        @OutputCustomType.Parameter("versionTemplates") List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
+        @CustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("importOnly") Boolean importOnly,
+        @CustomType.Parameter("keyRing") String keyRing,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("purpose") String purpose,
+        @CustomType.Parameter("rotationPeriod") String rotationPeriod,
+        @CustomType.Parameter("skipInitialVersionCreation") Boolean skipInitialVersionCreation,
+        @CustomType.Parameter("versionTemplates") List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
         this.destroyScheduledDuration = destroyScheduledDuration;
         this.id = id;
         this.importOnly = importOnly;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricSetMetricSe
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetric;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSource;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorTimestampColumn;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * Dimensions for this MetricSet.
      * 
      */
-    @InputImport(name="dimensionList")
+    @Import(name="dimensionList")
       private final @Nullable List<String> dimensionList;
 
     public List<String> getDimensionList() {
@@ -35,7 +35,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * Metrics captured by this MetricSet.
      * 
      */
-    @InputImport(name="metricList", required=true)
+    @Import(name="metricList", required=true)
       private final List<AnomalyDetectorMetric> metricList;
 
     public List<AnomalyDetectorMetric> getMetricList() {
@@ -46,7 +46,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * A description for the MetricSet.
      * 
      */
-    @InputImport(name="metricSetDescription")
+    @Import(name="metricSetDescription")
       private final @Nullable String metricSetDescription;
 
     public Optional<String> getMetricSetDescription() {
@@ -57,7 +57,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * A frequency period to aggregate the data
      * 
      */
-    @InputImport(name="metricSetFrequency")
+    @Import(name="metricSetFrequency")
       private final @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency;
 
     public Optional<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
@@ -68,14 +68,14 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * The name of the MetricSet.
      * 
      */
-    @InputImport(name="metricSetName", required=true)
+    @Import(name="metricSetName", required=true)
       private final String metricSetName;
 
     public String getMetricSetName() {
         return this.metricSetName;
     }
 
-    @InputImport(name="metricSource", required=true)
+    @Import(name="metricSource", required=true)
       private final AnomalyDetectorMetricSource metricSource;
 
     public AnomalyDetectorMetricSource getMetricSource() {
@@ -86,21 +86,21 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * Offset, in seconds, between the frequency interval and the time at which the metrics are available.
      * 
      */
-    @InputImport(name="offset")
+    @Import(name="offset")
       private final @Nullable Integer offset;
 
     public Optional<Integer> getOffset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
     }
 
-    @InputImport(name="timestampColumn")
+    @Import(name="timestampColumn")
       private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
 
     public Optional<AnomalyDetectorTimestampColumn> getTimestampColumn() {
         return this.timestampColumn == null ? Optional.empty() : Optional.ofNullable(this.timestampColumn);
     }
 
-    @InputImport(name="timezone")
+    @Import(name="timezone")
       private final @Nullable String timezone;
 
     public Optional<String> getTimezone() {

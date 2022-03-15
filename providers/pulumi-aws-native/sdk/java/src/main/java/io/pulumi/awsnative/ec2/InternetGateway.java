@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.InternetGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.InternetGatewayTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * ID of internet gateway.
      * 
      */
-    @OutputExport(name="internetGatewayId", type=String.class, parameters={})
+    @Export(name="internetGatewayId", type=String.class, parameters={})
     private Output<String> internetGatewayId;
 
     /**
@@ -39,7 +39,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * Any tags to assign to the internet gateway.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={InternetGatewayTag.class})
+    @Export(name="tags", type=List.class, parameters={InternetGatewayTag.class})
     private Output</* @Nullable */ List<InternetGatewayTag>> tags;
 
     /**

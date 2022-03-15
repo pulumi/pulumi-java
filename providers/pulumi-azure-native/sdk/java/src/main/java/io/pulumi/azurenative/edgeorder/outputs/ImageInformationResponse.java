@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageInformationResponse {
     /**
      * Type of the image
@@ -20,10 +20,10 @@ public final class ImageInformationResponse {
      */
     private final String imageUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageInformationResponse(
-        @OutputCustomType.Parameter("imageType") String imageType,
-        @OutputCustomType.Parameter("imageUrl") String imageUrl) {
+        @CustomType.Parameter("imageType") String imageType,
+        @CustomType.Parameter("imageUrl") String imageUrl) {
         this.imageType = imageType;
         this.imageUrl = imageUrl;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.Inv
      * The resource group name of the VpnServerConfiguration.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetVpnServerConfigurationArgs extends io.pulumi.resources.Inv
      * The name of the VpnServerConfiguration being retrieved.
      * 
      */
-    @InputImport(name="vpnServerConfigurationName", required=true)
+    @Import(name="vpnServerConfigurationName", required=true)
       private final String vpnServerConfigurationName;
 
     public String getVpnServerConfigurationName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEngineVersionsResult {
     /**
      * Version of Kubernetes the service deploys by default.
@@ -52,18 +52,18 @@ public final class GetEngineVersionsResult {
     private final List<String> validNodeVersions;
     private final @Nullable String versionPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEngineVersionsResult(
-        @OutputCustomType.Parameter("defaultClusterVersion") String defaultClusterVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestMasterVersion") String latestMasterVersion,
-        @OutputCustomType.Parameter("latestNodeVersion") String latestNodeVersion,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("releaseChannelDefaultVersion") Map<String,String> releaseChannelDefaultVersion,
-        @OutputCustomType.Parameter("validMasterVersions") List<String> validMasterVersions,
-        @OutputCustomType.Parameter("validNodeVersions") List<String> validNodeVersions,
-        @OutputCustomType.Parameter("versionPrefix") @Nullable String versionPrefix) {
+        @CustomType.Parameter("defaultClusterVersion") String defaultClusterVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestMasterVersion") String latestMasterVersion,
+        @CustomType.Parameter("latestNodeVersion") String latestNodeVersion,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("releaseChannelDefaultVersion") Map<String,String> releaseChannelDefaultVersion,
+        @CustomType.Parameter("validMasterVersions") List<String> validMasterVersions,
+        @CustomType.Parameter("validNodeVersions") List<String> validNodeVersions,
+        @CustomType.Parameter("versionPrefix") @Nullable String versionPrefix) {
         this.defaultClusterVersion = defaultClusterVersion;
         this.id = id;
         this.latestMasterVersion = latestMasterVersion;

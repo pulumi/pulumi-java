@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.AnalysisArgs;
@@ -22,7 +22,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * The result of the analysis, which is populated when the analysis finishes.
      * 
      */
-    @OutputExport(name="analysisResult", type=GoogleCloudContactcenterinsightsV1AnalysisResultResponse.class, parameters={})
+    @Export(name="analysisResult", type=GoogleCloudContactcenterinsightsV1AnalysisResultResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1AnalysisResultResponse> analysisResult;
 
     /**
@@ -36,7 +36,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * The time at which the analysis was created, which occurs when the long-running operation completes.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -50,7 +50,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * The time at which the analysis was requested.
      * 
      */
-    @OutputExport(name="requestTime", type=String.class, parameters={})
+    @Export(name="requestTime", type=String.class, parameters={})
     private Output<String> requestTime;
 
     /**

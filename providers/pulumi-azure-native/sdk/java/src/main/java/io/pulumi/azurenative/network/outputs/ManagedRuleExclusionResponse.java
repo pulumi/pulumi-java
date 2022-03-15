@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleExclusionResponse {
     /**
      * The variable type to be excluded.
@@ -25,11 +25,11 @@ public final class ManagedRuleExclusionResponse {
      */
     private final String selectorMatchOperator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRuleExclusionResponse(
-        @OutputCustomType.Parameter("matchVariable") String matchVariable,
-        @OutputCustomType.Parameter("selector") String selector,
-        @OutputCustomType.Parameter("selectorMatchOperator") String selectorMatchOperator) {
+        @CustomType.Parameter("matchVariable") String matchVariable,
+        @CustomType.Parameter("selector") String selector,
+        @CustomType.Parameter("selectorMatchOperator") String selectorMatchOperator) {
         this.matchVariable = matchVariable;
         this.selector = selector;
         this.selectorMatchOperator = selectorMatchOperator;

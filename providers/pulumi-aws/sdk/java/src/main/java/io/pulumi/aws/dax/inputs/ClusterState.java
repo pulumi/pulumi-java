@@ -6,7 +6,7 @@ package io.pulumi.aws.dax.inputs;
 import io.pulumi.aws.dax.inputs.ClusterNodeGetArgs;
 import io.pulumi.aws.dax.inputs.ClusterServerSideEncryptionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the DAX cluster
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * nodes will be created
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -46,7 +46,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The DNS name of the DAX cluster without the port appended
      * 
      */
-    @InputImport(name="clusterAddress")
+    @Import(name="clusterAddress")
       private final @Nullable Output<String> clusterAddress;
 
     public Output<String> getClusterAddress() {
@@ -59,7 +59,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Default value is `NONE`.
      * 
      */
-    @InputImport(name="clusterEndpointEncryptionType")
+    @Import(name="clusterEndpointEncryptionType")
       private final @Nullable Output<String> clusterEndpointEncryptionType;
 
     public Output<String> getClusterEndpointEncryptionType() {
@@ -71,7 +71,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * lowercase
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -83,7 +83,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * consisting of a DNS name and a port number
      * 
      */
-    @InputImport(name="configurationEndpoint")
+    @Import(name="configurationEndpoint")
       private final @Nullable Output<String> configurationEndpoint;
 
     public Output<String> getConfigurationEndpoint() {
@@ -94,7 +94,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Description for the cluster
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -107,7 +107,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * permissions to access DynamoDB on your behalf
      * 
      */
-    @InputImport(name="iamRoleArn")
+    @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -121,7 +121,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * `sun:05:00-sun:09:00`
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
@@ -133,7 +133,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -146,7 +146,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * `${aws_dax_cluster.test.nodes.0.address}`
      * 
      */
-    @InputImport(name="nodes")
+    @Import(name="nodes")
       private final @Nullable Output<List<ClusterNodeGetArgs>> nodes;
 
     public Output<List<ClusterNodeGetArgs>> getNodes() {
@@ -159,7 +159,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
      * 
      */
-    @InputImport(name="notificationTopicArn")
+    @Import(name="notificationTopicArn")
       private final @Nullable Output<String> notificationTopicArn;
 
     public Output<String> getNotificationTopicArn() {
@@ -171,7 +171,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * with this DAX cluster
      * 
      */
-    @InputImport(name="parameterGroupName")
+    @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
@@ -182,7 +182,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The port used by the configuration endpoint
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -195,7 +195,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * replicas
      * 
      */
-    @InputImport(name="replicationFactor")
+    @Import(name="replicationFactor")
       private final @Nullable Output<Integer> replicationFactor;
 
     public Output<Integer> getReplicationFactor() {
@@ -207,7 +207,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * with the cluster
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -218,7 +218,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Encrypt at rest options
      * 
      */
-    @InputImport(name="serverSideEncryption")
+    @Import(name="serverSideEncryption")
       private final @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
 
     public Output<ClusterServerSideEncryptionGetArgs> getServerSideEncryption() {
@@ -230,7 +230,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * cluster
      * 
      */
-    @InputImport(name="subnetGroupName")
+    @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
@@ -241,7 +241,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -252,7 +252,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.wafregional.SizeConstraintSetArgs;
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetState;
 import io.pulumi.aws.wafregional.outputs.SizeConstraintSetSizeConstraint;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:wafregional/sizeConstraintSet:SizeConstraintSet")
 public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * The name or description of the Size Constraint Set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -54,7 +54,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    @OutputExport(name="sizeConstraints", type=List.class, parameters={SizeConstraintSetSizeConstraint.class})
+    @Export(name="sizeConstraints", type=List.class, parameters={SizeConstraintSetSizeConstraint.class})
     private Output</* @Nullable */ List<SizeConstraintSetSizeConstraint>> sizeConstraints;
 
     /**

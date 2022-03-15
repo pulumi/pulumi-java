@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.BasicAutoscalingAlgorithmResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.InstanceGroupAutoscalingPolicyConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAutoscalingPolicyResult {
     private final BasicAutoscalingAlgorithmResponse basicAlgorithm;
     /**
@@ -28,12 +28,12 @@ public final class GetAutoscalingPolicyResult {
      */
     private final InstanceGroupAutoscalingPolicyConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAutoscalingPolicyResult(
-        @OutputCustomType.Parameter("basicAlgorithm") BasicAutoscalingAlgorithmResponse basicAlgorithm,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secondaryWorkerConfig") InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
-        @OutputCustomType.Parameter("workerConfig") InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
+        @CustomType.Parameter("basicAlgorithm") BasicAutoscalingAlgorithmResponse basicAlgorithm,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secondaryWorkerConfig") InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
+        @CustomType.Parameter("workerConfig") InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
         this.basicAlgorithm = basicAlgorithm;
         this.name = name;
         this.secondaryWorkerConfig = secondaryWorkerConfig;

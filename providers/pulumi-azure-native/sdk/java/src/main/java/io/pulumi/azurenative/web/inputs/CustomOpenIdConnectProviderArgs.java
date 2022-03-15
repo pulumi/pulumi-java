@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectLoginArgs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectRegistrationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * The configuration settings of the login flow of the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<OpenIdConnectLoginArgs> login;
 
     public Output<OpenIdConnectLoginArgs> getLogin() {
@@ -46,7 +46,7 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * The configuration settings of the app registration for the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="registration")
+    @Import(name="registration")
       private final @Nullable Output<OpenIdConnectRegistrationArgs> registration;
 
     public Output<OpenIdConnectRegistrationArgs> getRegistration() {

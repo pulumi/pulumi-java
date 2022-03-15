@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
      * Programmatic code for the cause of the assessment status
      * 
      */
-    @InputImport(name="cause")
+    @Import(name="cause")
       private final @Nullable String cause;
 
     public Optional<String> getCause() {
@@ -33,7 +33,7 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
      * Programmatic code for the status of the assessment
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -44,7 +44,7 @@ public final class AssessmentStatusResponse extends io.pulumi.resources.InvokeAr
      * Human readable description of the assessment status
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {

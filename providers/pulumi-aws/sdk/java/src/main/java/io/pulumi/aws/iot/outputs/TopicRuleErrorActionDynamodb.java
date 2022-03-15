@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleErrorActionDynamodb {
     /**
      * The hash key name.
@@ -62,18 +62,18 @@ public final class TopicRuleErrorActionDynamodb {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleErrorActionDynamodb(
-        @OutputCustomType.Parameter("hashKeyField") String hashKeyField,
-        @OutputCustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
-        @OutputCustomType.Parameter("hashKeyValue") String hashKeyValue,
-        @OutputCustomType.Parameter("operation") @Nullable String operation,
-        @OutputCustomType.Parameter("payloadField") @Nullable String payloadField,
-        @OutputCustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
-        @OutputCustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
-        @OutputCustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("hashKeyField") String hashKeyField,
+        @CustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
+        @CustomType.Parameter("hashKeyValue") String hashKeyValue,
+        @CustomType.Parameter("operation") @Nullable String operation,
+        @CustomType.Parameter("payloadField") @Nullable String payloadField,
+        @CustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
+        @CustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
+        @CustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("tableName") String tableName) {
         this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = hashKeyValue;

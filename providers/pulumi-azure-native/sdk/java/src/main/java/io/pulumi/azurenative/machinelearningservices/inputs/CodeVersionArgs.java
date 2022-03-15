@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class CodeVersionArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource ID of the datastore where the asset is located.
      * 
      */
-    @InputImport(name="datastoreId")
+    @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
@@ -35,7 +35,7 @@ public final class CodeVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class CodeVersionArgs extends io.pulumi.resources.ResourceArgs {
      * If the name version are system generated (anonymous registration).
      * 
      */
-    @InputImport(name="isAnonymous")
+    @Import(name="isAnonymous")
       private final @Nullable Output<Boolean> isAnonymous;
 
     public Output<Boolean> getIsAnonymous() {
@@ -57,7 +57,7 @@ public final class CodeVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The path of the file/directory in the datastore.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -68,7 +68,7 @@ public final class CodeVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -79,7 +79,7 @@ public final class CodeVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

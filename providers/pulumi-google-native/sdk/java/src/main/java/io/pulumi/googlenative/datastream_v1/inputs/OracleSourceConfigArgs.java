@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * Oracle objects to exclude from the stream.
      * 
      */
-    @InputImport(name="excludeObjects")
+    @Import(name="excludeObjects")
       private final @Nullable Output<OracleRdbmsArgs> excludeObjects;
 
     public Output<OracleRdbmsArgs> getExcludeObjects() {
@@ -33,7 +33,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
      * Oracle objects to include in the stream.
      * 
      */
-    @InputImport(name="includeObjects")
+    @Import(name="includeObjects")
       private final @Nullable Output<OracleRdbmsArgs> includeObjects;
 
     public Output<OracleRdbmsArgs> getIncludeObjects() {

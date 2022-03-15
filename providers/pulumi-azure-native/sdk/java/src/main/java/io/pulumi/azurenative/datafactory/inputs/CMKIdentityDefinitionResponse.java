@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CMKIdentityDefinitionResponse extends io.pulumi.resources.Inv
      * The resource id of the user assigned identity to authenticate to customer's key vault.
      * 
      */
-    @InputImport(name="userAssignedIdentity")
+    @Import(name="userAssignedIdentity")
       private final @Nullable String userAssignedIdentity;
 
     public Optional<String> getUserAssignedIdentity() {

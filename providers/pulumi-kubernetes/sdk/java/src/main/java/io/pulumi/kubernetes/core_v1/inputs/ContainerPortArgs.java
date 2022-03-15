@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
      * 
      */
-    @InputImport(name="containerPort", required=true)
+    @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -34,7 +34,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * What host IP to bind the external port to.
      * 
      */
-    @InputImport(name="hostIP")
+    @Import(name="hostIP")
       private final @Nullable Output<String> hostIP;
 
     public Output<String> getHostIP() {
@@ -45,7 +45,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.
      * 
      */
-    @InputImport(name="hostPort")
+    @Import(name="hostPort")
       private final @Nullable Output<Integer> hostPort;
 
     public Output<Integer> getHostPort() {
@@ -56,7 +56,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"UDP"` is the UDP protocol.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {

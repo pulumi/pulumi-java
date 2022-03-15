@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionTrustedKeyGroupItem {
     /**
      * The ID of the key group that contains the public keys
@@ -23,10 +23,10 @@ public final class DistributionTrustedKeyGroupItem {
      */
     private final @Nullable List<String> keyPairIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionTrustedKeyGroupItem(
-        @OutputCustomType.Parameter("keyGroupId") @Nullable String keyGroupId,
-        @OutputCustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
+        @CustomType.Parameter("keyGroupId") @Nullable String keyGroupId,
+        @CustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
         this.keyGroupId = keyGroupId;
         this.keyPairIds = keyPairIds;
     }

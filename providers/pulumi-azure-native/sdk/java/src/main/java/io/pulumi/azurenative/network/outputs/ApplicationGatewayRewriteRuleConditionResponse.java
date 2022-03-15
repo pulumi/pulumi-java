@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayRewriteRuleConditionResponse {
     /**
      * Setting this parameter to truth value with force the pattern to do a case in-sensitive comparison.
@@ -33,12 +33,12 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
      */
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayRewriteRuleConditionResponse(
-        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
-        @OutputCustomType.Parameter("negate") @Nullable Boolean negate,
-        @OutputCustomType.Parameter("pattern") @Nullable String pattern,
-        @OutputCustomType.Parameter("variable") @Nullable String variable) {
+        @CustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @CustomType.Parameter("negate") @Nullable Boolean negate,
+        @CustomType.Parameter("pattern") @Nullable String pattern,
+        @CustomType.Parameter("variable") @Nullable String variable) {
         this.ignoreCase = ignoreCase;
         this.negate = negate;
         this.pattern = pattern;

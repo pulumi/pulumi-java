@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ServiceNetworkSettingsArgs;
@@ -46,7 +46,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="networkSettings", type=ServiceNetworkSettingsNetworkSettings.class, parameters={})
+    @Export(name="networkSettings", type=ServiceNetworkSettingsNetworkSettings.class, parameters={})
     private Output<ServiceNetworkSettingsNetworkSettings> networkSettings;
 
     /**
@@ -62,7 +62,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -77,7 +77,7 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
      * The name of the service these settings apply to.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppPremierAddOnSlotResult {
     /**
      * Resource Id.
@@ -68,19 +68,19 @@ public final class GetWebAppPremierAddOnSlotResult {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppPremierAddOnSlotResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("marketplaceOffer") @Nullable String marketplaceOffer,
-        @OutputCustomType.Parameter("marketplacePublisher") @Nullable String marketplacePublisher,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("product") @Nullable String product,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("marketplaceOffer") @Nullable String marketplaceOffer,
+        @CustomType.Parameter("marketplacePublisher") @Nullable String marketplacePublisher,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("product") @Nullable String product,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vendor") @Nullable String vendor) {
         this.id = id;
         this.kind = kind;
         this.location = location;

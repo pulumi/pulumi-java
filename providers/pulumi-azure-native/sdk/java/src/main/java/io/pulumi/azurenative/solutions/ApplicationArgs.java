@@ -8,7 +8,7 @@ import io.pulumi.azurenative.solutions.inputs.IdentityArgs;
 import io.pulumi.azurenative.solutions.inputs.PlanArgs;
 import io.pulumi.azurenative.solutions.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified path of managed application definition Id.
      * 
      */
-    @InputImport(name="applicationDefinitionId")
+    @Import(name="applicationDefinitionId")
       private final @Nullable Output<String> applicationDefinitionId;
 
     public Output<String> getApplicationDefinitionId() {
@@ -35,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the managed application.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -46,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -57,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The managed application Jit access policy.
      * 
      */
-    @InputImport(name="jitAccessPolicy")
+    @Import(name="jitAccessPolicy")
       private final @Nullable Output<ApplicationJitAccessPolicyArgs> jitAccessPolicy;
 
     public Output<ApplicationJitAccessPolicyArgs> getJitAccessPolicy() {
@@ -68,7 +68,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -79,7 +79,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -90,7 +90,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the resource that manages this resource.
      * 
      */
-    @InputImport(name="managedBy")
+    @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
@@ -101,7 +101,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The managed resource group Id.
      * 
      */
-    @InputImport(name="managedResourceGroupId")
+    @Import(name="managedResourceGroupId")
       private final @Nullable Output<String> managedResourceGroupId;
 
     public Output<String> getManagedResourceGroupId() {
@@ -112,7 +112,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
@@ -123,7 +123,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The plan information.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
     public Output<PlanArgs> getPlan() {
@@ -134,7 +134,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -145,7 +145,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -156,7 +156,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRule;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSet {
     /**
      * If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
@@ -24,10 +24,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
      */
     private final List<PreventionInspectTemplateInspectConfigRuleSetRule> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSet(
-        @OutputCustomType.Parameter("infoTypes") List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes,
-        @OutputCustomType.Parameter("rules") List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
+        @CustomType.Parameter("infoTypes") List<PreventionInspectTemplateInspectConfigRuleSetInfoType> infoTypes,
+        @CustomType.Parameter("rules") List<PreventionInspectTemplateInspectConfigRuleSetRule> rules) {
         this.infoTypes = infoTypes;
         this.rules = rules;
     }

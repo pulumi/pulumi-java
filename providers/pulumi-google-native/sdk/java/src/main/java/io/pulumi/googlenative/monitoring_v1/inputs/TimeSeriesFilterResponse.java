@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
      * 
      */
-    @InputImport(name="aggregation", required=true)
+    @Import(name="aggregation", required=true)
       private final AggregationResponse aggregation;
 
     public AggregationResponse getAggregation() {
@@ -33,7 +33,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
      * The monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that identifies the metric types, resources, and projects to query.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {
@@ -44,7 +44,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
      * Ranking based time series filter.
      * 
      */
-    @InputImport(name="pickTimeSeriesFilter", required=true)
+    @Import(name="pickTimeSeriesFilter", required=true)
       private final PickTimeSeriesFilterResponse pickTimeSeriesFilter;
 
     public PickTimeSeriesFilterResponse getPickTimeSeriesFilter() {
@@ -55,7 +55,7 @@ public final class TimeSeriesFilterResponse extends io.pulumi.resources.InvokeAr
      * Apply a second aggregation after aggregation is applied.
      * 
      */
-    @InputImport(name="secondaryAggregation", required=true)
+    @Import(name="secondaryAggregation", required=true)
       private final AggregationResponse secondaryAggregation;
 
     public AggregationResponse getSecondaryAggregation() {

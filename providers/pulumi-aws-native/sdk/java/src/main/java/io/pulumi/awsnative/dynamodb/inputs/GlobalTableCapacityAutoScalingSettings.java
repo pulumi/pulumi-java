@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTargetTrackingScalingPolicyConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GlobalTableCapacityAutoScalingSettings extends io.pulumi.reso
 
     public static final GlobalTableCapacityAutoScalingSettings Empty = new GlobalTableCapacityAutoScalingSettings();
 
-    @InputImport(name="maxCapacity", required=true)
+    @Import(name="maxCapacity", required=true)
       private final Integer maxCapacity;
 
     public Integer getMaxCapacity() {
         return this.maxCapacity;
     }
 
-    @InputImport(name="minCapacity", required=true)
+    @Import(name="minCapacity", required=true)
       private final Integer minCapacity;
 
     public Integer getMinCapacity() {
         return this.minCapacity;
     }
 
-    @InputImport(name="seedCapacity")
+    @Import(name="seedCapacity")
       private final @Nullable Integer seedCapacity;
 
     public Optional<Integer> getSeedCapacity() {
         return this.seedCapacity == null ? Optional.empty() : Optional.ofNullable(this.seedCapacity);
     }
 
-    @InputImport(name="targetTrackingScalingPolicyConfiguration", required=true)
+    @Import(name="targetTrackingScalingPolicyConfiguration", required=true)
       private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
 
     public GlobalTableTargetTrackingScalingPolicyConfiguration getTargetTrackingScalingPolicyConfiguration() {

@@ -14,7 +14,7 @@ import io.pulumi.aws.lex.outputs.IntentFulfillmentActivity;
 import io.pulumi.aws.lex.outputs.IntentRejectionStatement;
 import io.pulumi.aws.lex.outputs.IntentSlot;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The ARN of the Lex intent.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -57,7 +57,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * included as an argument because the resource will add it automatically when updating the intent.
      * 
      */
-    @OutputExport(name="checksum", type=String.class, parameters={})
+    @Export(name="checksum", type=String.class, parameters={})
     private Output<String> checksum;
 
     /**
@@ -76,7 +76,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * mutually exclusive. You can specify only one. Attributes are documented under statement.
      * 
      */
-    @OutputExport(name="conclusionStatement", type=IntentConclusionStatement.class, parameters={})
+    @Export(name="conclusionStatement", type=IntentConclusionStatement.class, parameters={})
     private Output</* @Nullable */ IntentConclusionStatement> conclusionStatement;
 
     /**
@@ -96,7 +96,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * or neither. Attributes are documented under prompt.
      * 
      */
-    @OutputExport(name="confirmationPrompt", type=IntentConfirmationPrompt.class, parameters={})
+    @Export(name="confirmationPrompt", type=IntentConfirmationPrompt.class, parameters={})
     private Output</* @Nullable */ IntentConfirmationPrompt> confirmationPrompt;
 
     /**
@@ -113,7 +113,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * resource is created and on each update. Defaults to `false`.
      * 
      */
-    @OutputExport(name="createVersion", type=Boolean.class, parameters={})
+    @Export(name="createVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> createVersion;
 
     /**
@@ -128,7 +128,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The date when the intent version was created.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -142,7 +142,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -157,7 +157,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
      * 
      */
-    @OutputExport(name="dialogCodeHook", type=IntentDialogCodeHook.class, parameters={})
+    @Export(name="dialogCodeHook", type=IntentDialogCodeHook.class, parameters={})
     private Output</* @Nullable */ IntentDialogCodeHook> dialogCodeHook;
 
     /**
@@ -175,7 +175,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
      * 
      */
-    @OutputExport(name="followUpPrompt", type=IntentFollowUpPrompt.class, parameters={})
+    @Export(name="followUpPrompt", type=IntentFollowUpPrompt.class, parameters={})
     private Output</* @Nullable */ IntentFollowUpPrompt> followUpPrompt;
 
     /**
@@ -194,7 +194,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * places an order with a local pizza store. Attributes are documented under fulfillment_activity.
      * 
      */
-    @OutputExport(name="fulfillmentActivity", type=IntentFulfillmentActivity.class, parameters={})
+    @Export(name="fulfillmentActivity", type=IntentFulfillmentActivity.class, parameters={})
     private Output<IntentFulfillmentActivity> fulfillmentActivity;
 
     /**
@@ -210,7 +210,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The date when the $LATEST version of this intent was updated.
      * 
      */
-    @OutputExport(name="lastUpdatedDate", type=String.class, parameters={})
+    @Export(name="lastUpdatedDate", type=String.class, parameters={})
     private Output<String> lastUpdatedDate;
 
     /**
@@ -224,7 +224,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -241,7 +241,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * in the Alexa Skills Kit.
      * 
      */
-    @OutputExport(name="parentIntentSignature", type=String.class, parameters={})
+    @Export(name="parentIntentSignature", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentIntentSignature;
 
     /**
@@ -260,7 +260,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * documented below under statement.
      * 
      */
-    @OutputExport(name="rejectionStatement", type=IntentRejectionStatement.class, parameters={})
+    @Export(name="rejectionStatement", type=IntentRejectionStatement.class, parameters={})
     private Output</* @Nullable */ IntentRejectionStatement> rejectionStatement;
 
     /**
@@ -278,7 +278,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
      */
-    @OutputExport(name="sampleUtterances", type=List.class, parameters={String.class})
+    @Export(name="sampleUtterances", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sampleUtterances;
 
     /**
@@ -295,7 +295,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * from the user using prompts defined in the slots. Attributes are documented under slot.
      * 
      */
-    @OutputExport(name="slots", type=List.class, parameters={IntentSlot.class})
+    @Export(name="slots", type=List.class, parameters={IntentSlot.class})
     private Output</* @Nullable */ List<IntentSlot>> slots;
 
     /**
@@ -310,7 +310,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * The version of the bot.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

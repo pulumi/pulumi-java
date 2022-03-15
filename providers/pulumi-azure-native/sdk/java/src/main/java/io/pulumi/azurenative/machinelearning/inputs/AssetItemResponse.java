@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.inputs.BlobLocationResponse;
 import io.pulumi.azurenative.machinelearning.inputs.InputPortResponse;
 import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterResponse;
 import io.pulumi.azurenative.machinelearning.inputs.OutputPortResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * Asset's Id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -39,7 +39,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * Information about the asset's input ports.
      * 
      */
-    @InputImport(name="inputPorts")
+    @Import(name="inputPorts")
       private final @Nullable Map<String,InputPortResponse> inputPorts;
 
     public Map<String,InputPortResponse> getInputPorts() {
@@ -50,7 +50,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * Access information for the asset.
      * 
      */
-    @InputImport(name="locationInfo", required=true)
+    @Import(name="locationInfo", required=true)
       private final BlobLocationResponse locationInfo;
 
     public BlobLocationResponse getLocationInfo() {
@@ -61,7 +61,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * If the asset is a custom module, this holds the module's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -72,7 +72,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * Asset's friendly name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -83,7 +83,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * Information about the asset's output ports.
      * 
      */
-    @InputImport(name="outputPorts")
+    @Import(name="outputPorts")
       private final @Nullable Map<String,OutputPortResponse> outputPorts;
 
     public Map<String,OutputPortResponse> getOutputPorts() {
@@ -94,7 +94,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * If the asset is a custom module, this holds the module's parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
     public List<ModuleAssetParameterResponse> getParameters() {
@@ -105,7 +105,7 @@ public final class AssetItemResponse extends io.pulumi.resources.InvokeArgs {
      * Asset's type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

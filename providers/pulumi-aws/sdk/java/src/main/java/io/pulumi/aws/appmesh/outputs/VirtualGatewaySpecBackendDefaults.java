@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaults {
     /**
      * The default client policy for virtual gateway backends.
@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecBackendDefaults {
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecBackendDefaults(@OutputCustomType.Parameter("clientPolicy") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecBackendDefaults(@CustomType.Parameter("clientPolicy") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 

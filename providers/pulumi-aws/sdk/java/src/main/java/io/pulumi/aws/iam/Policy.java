@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.PolicyArgs;
 import io.pulumi.aws.iam.inputs.PolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The ARN assigned by AWS to this policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Description of the IAM policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The name of the policy. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -75,7 +75,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -90,7 +90,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     /**
@@ -105,7 +105,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The policy document. This is a JSON formatted string.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -119,7 +119,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The policy's ID.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**
@@ -133,7 +133,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Map of resource tags for the IAM Policy
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

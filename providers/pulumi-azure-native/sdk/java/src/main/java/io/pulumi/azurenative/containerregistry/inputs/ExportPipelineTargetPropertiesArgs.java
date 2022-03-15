@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * They key vault secret uri to obtain the target storage SAS token.
      * 
      */
-    @InputImport(name="keyVaultUri", required=true)
+    @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
     public Output<String> getKeyVaultUri() {
@@ -33,7 +33,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * The type of target for the export pipeline.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -46,7 +46,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
      * When 'AzureStorageBlobContainer':  "https://accountName.blob.core.windows.net/containerName"
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

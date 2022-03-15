@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.workflowexecutions_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.workflowexecutions_v1.ExecutionArgs;
@@ -25,7 +25,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
      * 
      */
-    @OutputExport(name="argument", type=String.class, parameters={})
+    @Export(name="argument", type=String.class, parameters={})
     private Output<String> argument;
 
     /**
@@ -39,7 +39,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * The call logging level associated to this execution.
      * 
      */
-    @OutputExport(name="callLogLevel", type=String.class, parameters={})
+    @Export(name="callLogLevel", type=String.class, parameters={})
     private Output<String> callLogLevel;
 
     /**
@@ -53,7 +53,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * Marks the end of execution, successful or not.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -67,7 +67,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * The error which caused the execution to finish prematurely. The value is only present if the execution's state is `FAILED` or `CANCELLED`.
      * 
      */
-    @OutputExport(name="error", type=ErrorResponse.class, parameters={})
+    @Export(name="error", type=ErrorResponse.class, parameters={})
     private Output<ErrorResponse> error;
 
     /**
@@ -81,7 +81,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * Output of the execution represented as a JSON string. The value can only be present if the execution's state is `SUCCEEDED`.
      * 
      */
-    @OutputExport(name="result", type=String.class, parameters={})
+    @Export(name="result", type=String.class, parameters={})
     private Output<String> result;
 
     /**
@@ -109,7 +109,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * Marks the beginning of execution.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -123,7 +123,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * Current state of the execution.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -137,7 +137,7 @@ public class Execution extends io.pulumi.resources.CustomResource {
      * Revision of the workflow this execution is using.
      * 
      */
-    @OutputExport(name="workflowRevisionId", type=String.class, parameters={})
+    @Export(name="workflowRevisionId", type=String.class, parameters={})
     private Output<String> workflowRevisionId;
 
     /**

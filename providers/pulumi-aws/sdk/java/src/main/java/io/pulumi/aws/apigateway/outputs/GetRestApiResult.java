@@ -4,14 +4,14 @@
 package io.pulumi.aws.apigateway.outputs;
 
 import io.pulumi.aws.apigateway.outputs.GetRestApiEndpointConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRestApiResult {
     /**
      * The source of the API key for requests.
@@ -70,20 +70,20 @@ public final class GetRestApiResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRestApiResult(
-        @OutputCustomType.Parameter("apiKeySource") String apiKeySource,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("binaryMediaTypes") List<String> binaryMediaTypes,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endpointConfigurations") List<GetRestApiEndpointConfiguration> endpointConfigurations,
-        @OutputCustomType.Parameter("executionArn") String executionArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("minimumCompressionSize") Integer minimumCompressionSize,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") String policy,
-        @OutputCustomType.Parameter("rootResourceId") String rootResourceId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("apiKeySource") String apiKeySource,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("binaryMediaTypes") List<String> binaryMediaTypes,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endpointConfigurations") List<GetRestApiEndpointConfiguration> endpointConfigurations,
+        @CustomType.Parameter("executionArn") String executionArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("minimumCompressionSize") Integer minimumCompressionSize,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") String policy,
+        @CustomType.Parameter("rootResourceId") String rootResourceId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.apiKeySource = apiKeySource;
         this.arn = arn;
         this.binaryMediaTypes = binaryMediaTypes;

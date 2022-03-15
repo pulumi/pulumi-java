@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetSqlMITaskInputResponse {
     /**
      * Connection information for target SQL Server
@@ -15,8 +15,8 @@ public final class ConnectToTargetSqlMITaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
-    private ConnectToTargetSqlMITaskInputResponse(@OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
+    @CustomType.Constructor
+    private ConnectToTargetSqlMITaskInputResponse(@CustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.targetConnectionInfo = targetConnectionInfo;
     }
 

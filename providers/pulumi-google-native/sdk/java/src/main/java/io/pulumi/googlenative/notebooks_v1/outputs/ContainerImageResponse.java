@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerImageResponse {
     /**
      * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
@@ -20,10 +20,10 @@ public final class ContainerImageResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerImageResponse(
-        @OutputCustomType.Parameter("repository") String repository,
-        @OutputCustomType.Parameter("tag") String tag) {
+        @CustomType.Parameter("repository") String repository,
+        @CustomType.Parameter("tag") String tag) {
         this.repository = repository;
         this.tag = tag;
     }

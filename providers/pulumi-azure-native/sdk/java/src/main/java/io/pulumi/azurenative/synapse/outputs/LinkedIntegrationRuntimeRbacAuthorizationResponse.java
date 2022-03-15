@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
     /**
      * The authorization type for integration runtime sharing.
@@ -21,10 +21,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedIntegrationRuntimeRbacAuthorizationResponse(
-        @OutputCustomType.Parameter("authorizationType") String authorizationType,
-        @OutputCustomType.Parameter("resourceId") String resourceId) {
+        @CustomType.Parameter("authorizationType") String authorizationType,
+        @CustomType.Parameter("resourceId") String resourceId) {
         this.authorizationType = authorizationType;
         this.resourceId = resourceId;
     }

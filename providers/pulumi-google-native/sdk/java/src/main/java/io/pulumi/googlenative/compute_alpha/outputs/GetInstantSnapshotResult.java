@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstantSnapshotResourceStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstantSnapshotResult {
     /**
      * The architecture of the instant snapshot. Valid values are ARM64 or X86_64.
@@ -103,26 +103,26 @@ public final class GetInstantSnapshotResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstantSnapshotResult(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("resourceStatus") InstantSnapshotResourceStatusResponse resourceStatus,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
-        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("guestFlush") Boolean guestFlush,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("resourceStatus") InstantSnapshotResourceStatusResponse resourceStatus,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("sourceDisk") String sourceDisk,
+        @CustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("zone") String zone) {
         this.architecture = architecture;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

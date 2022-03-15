@@ -14,7 +14,7 @@ import io.pulumi.azurenative.synapse.inputs.VirtualNetworkProfileArgs;
 import io.pulumi.azurenative.synapse.inputs.WorkspaceRepositoryConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Connectivity endpoints
      * 
      */
-    @InputImport(name="connectivityEndpoints")
+    @Import(name="connectivityEndpoints")
       private final @Nullable Output<Map<String,String>> connectivityEndpoints;
 
     public Output<Map<String,String>> getConnectivityEndpoints() {
@@ -41,7 +41,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Workspace default data lake storage account details
      * 
      */
-    @InputImport(name="defaultDataLakeStorage")
+    @Import(name="defaultDataLakeStorage")
       private final @Nullable Output<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
 
     public Output<DataLakeStorageAccountDetailsArgs> getDefaultDataLakeStorage() {
@@ -52,7 +52,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption details of the workspace
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionDetailsArgs> encryption;
 
     public Output<EncryptionDetailsArgs> getEncryption() {
@@ -63,7 +63,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Identity of the workspace
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
     public Output<ManagedIdentityArgs> getIdentity() {
@@ -74,7 +74,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -85,7 +85,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and '-', '_', '(', ')' and'.'. Note that the name cannot end with '.'
      * 
      */
-    @InputImport(name="managedResourceGroupName")
+    @Import(name="managedResourceGroupName")
       private final @Nullable Output<String> managedResourceGroupName;
 
     public Output<String> getManagedResourceGroupName() {
@@ -96,7 +96,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Setting this to 'default' will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
-    @InputImport(name="managedVirtualNetwork")
+    @Import(name="managedVirtualNetwork")
       private final @Nullable Output<String> managedVirtualNetwork;
 
     public Output<String> getManagedVirtualNetwork() {
@@ -107,7 +107,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Managed Virtual Network Settings
      * 
      */
-    @InputImport(name="managedVirtualNetworkSettings")
+    @Import(name="managedVirtualNetworkSettings")
       private final @Nullable Output<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
 
     public Output<ManagedVirtualNetworkSettingsArgs> getManagedVirtualNetworkSettings() {
@@ -118,7 +118,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Private endpoint connections to the workspace
      * 
      */
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
@@ -129,7 +129,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Enable or Disable public network access to workspace
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,WorkspacePublicNetworkAccess>> getPublicNetworkAccess() {
@@ -140,7 +140,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Purview Configuration
      * 
      */
-    @InputImport(name="purviewConfiguration")
+    @Import(name="purviewConfiguration")
       private final @Nullable Output<PurviewConfigurationArgs> purviewConfiguration;
 
     public Output<PurviewConfigurationArgs> getPurviewConfiguration() {
@@ -151,7 +151,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -162,7 +162,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Login for workspace SQL active directory administrator
      * 
      */
-    @InputImport(name="sqlAdministratorLogin")
+    @Import(name="sqlAdministratorLogin")
       private final @Nullable Output<String> sqlAdministratorLogin;
 
     public Output<String> getSqlAdministratorLogin() {
@@ -173,7 +173,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * SQL administrator login password
      * 
      */
-    @InputImport(name="sqlAdministratorLoginPassword")
+    @Import(name="sqlAdministratorLoginPassword")
       private final @Nullable Output<String> sqlAdministratorLoginPassword;
 
     public Output<String> getSqlAdministratorLoginPassword() {
@@ -184,7 +184,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -195,7 +195,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Network profile
      * 
      */
-    @InputImport(name="virtualNetworkProfile")
+    @Import(name="virtualNetworkProfile")
       private final @Nullable Output<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
     public Output<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
@@ -206,7 +206,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName")
+    @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {
@@ -217,7 +217,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Git integration settings
      * 
      */
-    @InputImport(name="workspaceRepositoryConfiguration")
+    @Import(name="workspaceRepositoryConfiguration")
       private final @Nullable Output<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
 
     public Output<WorkspaceRepositoryConfigurationArgs> getWorkspaceRepositoryConfiguration() {

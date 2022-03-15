@@ -5,7 +5,7 @@ package io.pulumi.awsnative.certificatemanager;
 
 import io.pulumi.awsnative.certificatemanager.inputs.AccountExpiryEventsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccountArgs Empty = new AccountArgs();
 
-    @InputImport(name="expiryEventsConfiguration", required=true)
+    @Import(name="expiryEventsConfiguration", required=true)
       private final Output<AccountExpiryEventsConfigurationArgs> expiryEventsConfiguration;
 
     public Output<AccountExpiryEventsConfigurationArgs> getExpiryEventsConfiguration() {

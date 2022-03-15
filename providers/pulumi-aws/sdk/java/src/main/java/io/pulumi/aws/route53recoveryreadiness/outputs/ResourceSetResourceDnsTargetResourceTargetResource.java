@@ -5,12 +5,12 @@ package io.pulumi.aws.route53recoveryreadiness.outputs;
 
 import io.pulumi.aws.route53recoveryreadiness.outputs.ResourceSetResourceDnsTargetResourceTargetResourceNlbResource;
 import io.pulumi.aws.route53recoveryreadiness.outputs.ResourceSetResourceDnsTargetResourceTargetResourceR53Resource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetResourceDnsTargetResourceTargetResource {
     /**
      * NLB resource a DNS Target Resource points to. Required if `r53_resource` is not set.
@@ -23,10 +23,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResource {
      */
     private final @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSetResourceDnsTargetResourceTargetResource(
-        @OutputCustomType.Parameter("nlbResource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource,
-        @OutputCustomType.Parameter("r53Resource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
+        @CustomType.Parameter("nlbResource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource,
+        @CustomType.Parameter("r53Resource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
         this.nlbResource = nlbResource;
         this.r53Resource = r53Resource;
     }

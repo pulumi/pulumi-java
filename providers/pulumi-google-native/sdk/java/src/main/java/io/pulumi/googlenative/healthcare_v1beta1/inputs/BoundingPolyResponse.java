@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VertexResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
      * A description of this polygon.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -33,7 +33,7 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
      * List of the vertices of this polygon.
      * 
      */
-    @InputImport(name="vertices", required=true)
+    @Import(name="vertices", required=true)
       private final List<VertexResponse> vertices;
 
     public List<VertexResponse> getVertices() {

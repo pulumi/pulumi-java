@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterNotificationConfigPubsubArgs;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterNotificationConfigArgs extends io.pulumi.resources.Res
      * The pubsub config for the cluster's upgrade notifications.
      * 
      */
-    @InputImport(name="pubsub", required=true)
+    @Import(name="pubsub", required=true)
       private final Output<ClusterNotificationConfigPubsubArgs> pubsub;
 
     public Output<ClusterNotificationConfigPubsubArgs> getPubsub() {

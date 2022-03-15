@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorEndpointScopeItemResponse {
     /**
      * The address of the endpoint item. Supported types are IPv4/IPv6 subnet mask or IPv4/IPv6 IP address.
@@ -17,8 +17,8 @@ public final class ConnectionMonitorEndpointScopeItemResponse {
      */
     private final @Nullable String address;
 
-    @OutputCustomType.Constructor
-    private ConnectionMonitorEndpointScopeItemResponse(@OutputCustomType.Parameter("address") @Nullable String address) {
+    @CustomType.Constructor
+    private ConnectionMonitorEndpointScopeItemResponse(@CustomType.Parameter("address") @Nullable String address) {
         this.address = address;
     }
 

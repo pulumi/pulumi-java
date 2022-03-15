@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DppIdentityDetailsResponse extends io.pulumi.resources.Invoke
      * The object ID of the service principal object for the managed identity that is used to grant role-based access to an Azure resource.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -33,7 +33,7 @@ public final class DppIdentityDetailsResponse extends io.pulumi.resources.Invoke
      * A Globally Unique Identifier (GUID) that represents the Azure AD tenant where the resource is now a member.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -44,7 +44,7 @@ public final class DppIdentityDetailsResponse extends io.pulumi.resources.Invoke
      * The identityType which can be either SystemAssigned or None
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

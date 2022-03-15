@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.TagFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementPolicyFilterResponse {
     /**
      * An array of blob index tag based filters, there can be at most 10 tag filters
@@ -28,11 +28,11 @@ public final class ManagementPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementPolicyFilterResponse(
-        @OutputCustomType.Parameter("blobIndexMatch") @Nullable List<TagFilterResponse> blobIndexMatch,
-        @OutputCustomType.Parameter("blobTypes") List<String> blobTypes,
-        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
+        @CustomType.Parameter("blobIndexMatch") @Nullable List<TagFilterResponse> blobIndexMatch,
+        @CustomType.Parameter("blobTypes") List<String> blobTypes,
+        @CustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.blobIndexMatch = blobIndexMatch;
         this.blobTypes = blobTypes;
         this.prefixMatch = prefixMatch;

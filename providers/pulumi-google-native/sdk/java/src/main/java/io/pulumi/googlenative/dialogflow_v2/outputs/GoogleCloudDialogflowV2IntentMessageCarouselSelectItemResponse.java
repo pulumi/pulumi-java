@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse {
     /**
      * Optional. The body text of the card.
@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        @OutputCustomType.Parameter("info") GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @CustomType.Parameter("info") GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info,
+        @CustomType.Parameter("title") String title) {
         this.description = description;
         this.image = image;
         this.info = info;

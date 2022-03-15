@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GcePersistentDiskCsiDriverConfigResponse {
     /**
      * Whether the Compute Engine PD CSI driver is enabled for this cluster.
@@ -15,8 +15,8 @@ public final class GcePersistentDiskCsiDriverConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GcePersistentDiskCsiDriverConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GcePersistentDiskCsiDriverConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration {
     /**
      * Specifies how the application should be restored. Valid values: `RESTORE_FROM_CUSTOM_SNAPSHOT`, `RESTORE_FROM_LATEST_SNAPSHOT`, `SKIP_RESTORE_FROM_SNAPSHOT`.
@@ -22,10 +22,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      */
     private final @Nullable String snapshotName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration(
-        @OutputCustomType.Parameter("applicationRestoreType") @Nullable String applicationRestoreType,
-        @OutputCustomType.Parameter("snapshotName") @Nullable String snapshotName) {
+        @CustomType.Parameter("applicationRestoreType") @Nullable String applicationRestoreType,
+        @CustomType.Parameter("snapshotName") @Nullable String snapshotName) {
         this.applicationRestoreType = applicationRestoreType;
         this.snapshotName = snapshotName;
     }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.outputs.IdentityResponse;
 import io.pulumi.azurenative.automation.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.automation.outputs.SkuResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAutomationAccountResult {
     /**
      * URL of automation hybrid service which is used for hybrid worker on-boarding.
@@ -115,27 +115,27 @@ public final class GetAutomationAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAutomationAccountResult(
-        @OutputCustomType.Parameter("automationHybridServiceUrl") @Nullable String automationHybridServiceUrl,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable Boolean publicNetworkAccess,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("automationHybridServiceUrl") @Nullable String automationHybridServiceUrl,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @CustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable Boolean publicNetworkAccess,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.automationHybridServiceUrl = automationHybridServiceUrl;
         this.creationTime = creationTime;
         this.description = description;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.desktopvirtualization.ApplicationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Resource Type of Application.
      * 
      */
-    @OutputExport(name="applicationType", type=String.class, parameters={})
+    @Export(name="applicationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationType;
 
     /**
@@ -50,7 +50,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Command Line Arguments for Application.
      * 
      */
-    @OutputExport(name="commandLineArguments", type=String.class, parameters={})
+    @Export(name="commandLineArguments", type=String.class, parameters={})
     private Output</* @Nullable */ String> commandLineArguments;
 
     /**
@@ -64,7 +64,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
      * 
      */
-    @OutputExport(name="commandLineSetting", type=String.class, parameters={})
+    @Export(name="commandLineSetting", type=String.class, parameters={})
     private Output<String> commandLineSetting;
 
     /**
@@ -78,7 +78,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Description of Application.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Specifies a path for the executable file for the application.
      * 
      */
-    @OutputExport(name="filePath", type=String.class, parameters={})
+    @Export(name="filePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> filePath;
 
     /**
@@ -106,7 +106,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Friendly name of Application.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -120,7 +120,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * the icon a 64 bit string as a byte array.
      * 
      */
-    @OutputExport(name="iconContent", type=String.class, parameters={})
+    @Export(name="iconContent", type=String.class, parameters={})
     private Output<String> iconContent;
 
     /**
@@ -134,7 +134,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Hash of the icon.
      * 
      */
-    @OutputExport(name="iconHash", type=String.class, parameters={})
+    @Export(name="iconHash", type=String.class, parameters={})
     private Output<String> iconHash;
 
     /**
@@ -148,7 +148,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Index of the icon.
      * 
      */
-    @OutputExport(name="iconIndex", type=Integer.class, parameters={})
+    @Export(name="iconIndex", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> iconIndex;
 
     /**
@@ -162,7 +162,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Path to icon.
      * 
      */
-    @OutputExport(name="iconPath", type=String.class, parameters={})
+    @Export(name="iconPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> iconPath;
 
     /**
@@ -176,7 +176,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Specifies the package application Id for MSIX applications
      * 
      */
-    @OutputExport(name="msixPackageApplicationId", type=String.class, parameters={})
+    @Export(name="msixPackageApplicationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> msixPackageApplicationId;
 
     /**
@@ -190,7 +190,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Specifies the package family name for MSIX applications
      * 
      */
-    @OutputExport(name="msixPackageFamilyName", type=String.class, parameters={})
+    @Export(name="msixPackageFamilyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> msixPackageFamilyName;
 
     /**
@@ -204,7 +204,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -218,7 +218,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * ObjectId of Application. (internal use)
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
@@ -232,7 +232,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
      */
-    @OutputExport(name="showInPortal", type=Boolean.class, parameters={})
+    @Export(name="showInPortal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> showInPortal;
 
     /**
@@ -246,7 +246,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

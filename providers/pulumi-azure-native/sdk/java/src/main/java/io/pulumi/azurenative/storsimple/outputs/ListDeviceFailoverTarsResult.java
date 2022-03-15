@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.FailoverTargetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListDeviceFailoverTarsResult {
     /**
      * The list of all the failover targets.
@@ -17,8 +17,8 @@ public final class ListDeviceFailoverTarsResult {
      */
     private final @Nullable List<FailoverTargetResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListDeviceFailoverTarsResult(@OutputCustomType.Parameter("value") @Nullable List<FailoverTargetResponse> value) {
+    @CustomType.Constructor
+    private ListDeviceFailoverTarsResult(@CustomType.Parameter("value") @Nullable List<FailoverTargetResponse> value) {
         this.value = value;
     }
 

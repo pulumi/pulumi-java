@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
      * The URL of this trusted identity provider.
      * 
      */
-    @InputImport(name="idProvider", required=true)
+    @Import(name="idProvider", required=true)
       private final Output<String> idProvider;
 
     public Output<String> getIdProvider() {
@@ -32,7 +32,7 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
      * The unique name of the trusted identity provider to create.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

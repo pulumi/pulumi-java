@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Maximum number of container replicas. Defaults to 10 if not set.
      * 
      */
-    @InputImport(name="maxReplicas")
+    @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
@@ -35,7 +35,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Minimum number of container replicas.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
@@ -46,7 +46,7 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * Scaling rules.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<ScaleRuleArgs>> rules;
 
     public Output<List<ScaleRuleArgs>> getRules() {

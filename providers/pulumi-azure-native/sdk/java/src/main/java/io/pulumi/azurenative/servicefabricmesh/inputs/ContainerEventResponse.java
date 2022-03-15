@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * The count of the event.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * Date/time of the first event.
      * 
      */
-    @InputImport(name="firstTimestamp")
+    @Import(name="firstTimestamp")
       private final @Nullable String firstTimestamp;
 
     public Optional<String> getFirstTimestamp() {
@@ -45,7 +45,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * Date/time of the last event.
      * 
      */
-    @InputImport(name="lastTimestamp")
+    @Import(name="lastTimestamp")
       private final @Nullable String lastTimestamp;
 
     public Optional<String> getLastTimestamp() {
@@ -56,7 +56,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * The event message
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -67,7 +67,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * The name of the container event.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -78,7 +78,7 @@ public final class ContainerEventResponse extends io.pulumi.resources.InvokeArgs
      * The event type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.OperationErrorErrorsItemResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
      * The array of errors encountered while processing this operation.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<OperationErrorErrorsItemResponse> errors;
 
     public List<OperationErrorErrorsItemResponse> getErrors() {

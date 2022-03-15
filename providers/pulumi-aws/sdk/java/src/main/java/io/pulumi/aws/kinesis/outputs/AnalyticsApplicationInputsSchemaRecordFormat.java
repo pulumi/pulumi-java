@@ -4,13 +4,13 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputsSchemaRecordFormat {
     /**
      * The Mapping Information for the record format.
@@ -24,10 +24,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormat {
      */
     private final @Nullable String recordFormatType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationInputsSchemaRecordFormat(
-        @OutputCustomType.Parameter("mappingParameters") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters,
-        @OutputCustomType.Parameter("recordFormatType") @Nullable String recordFormatType) {
+        @CustomType.Parameter("mappingParameters") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters,
+        @CustomType.Parameter("recordFormatType") @Nullable String recordFormatType) {
         this.mappingParameters = mappingParameters;
         this.recordFormatType = recordFormatType;
     }

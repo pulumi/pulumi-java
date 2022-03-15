@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ForwardingRuleInfoResponse {
     /**
      * Name of a Compute Engine forwarding rule.
@@ -45,15 +45,15 @@ public final class ForwardingRuleInfoResponse {
      */
     private final String vip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardingRuleInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("matchedPortRange") String matchedPortRange,
-        @OutputCustomType.Parameter("matchedProtocol") String matchedProtocol,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("vip") String vip) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("matchedPortRange") String matchedPortRange,
+        @CustomType.Parameter("matchedProtocol") String matchedProtocol,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("vip") String vip) {
         this.displayName = displayName;
         this.matchedPortRange = matchedPortRange;
         this.matchedProtocol = matchedProtocol;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AccountResponseSku extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the sku capacity.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class AccountResponseSku extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the sku name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

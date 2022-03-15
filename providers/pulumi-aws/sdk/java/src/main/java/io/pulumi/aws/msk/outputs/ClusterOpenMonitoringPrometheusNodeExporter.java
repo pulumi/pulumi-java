@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterOpenMonitoringPrometheusNodeExporter {
     /**
      * Indicates whether you want to enable or disable the JMX Exporter.
@@ -15,8 +15,8 @@ public final class ClusterOpenMonitoringPrometheusNodeExporter {
      */
     private final Boolean enabledInBroker;
 
-    @OutputCustomType.Constructor
-    private ClusterOpenMonitoringPrometheusNodeExporter(@OutputCustomType.Parameter("enabledInBroker") Boolean enabledInBroker) {
+    @CustomType.Constructor
+    private ClusterOpenMonitoringPrometheusNodeExporter(@CustomType.Parameter("enabledInBroker") Boolean enabledInBroker) {
         this.enabledInBroker = enabledInBroker;
     }
 

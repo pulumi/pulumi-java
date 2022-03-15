@@ -13,7 +13,7 @@ import io.pulumi.azurenative.databox.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.databox.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Delivery Info of Job.
      * 
      */
-    @InputImport(name="deliveryInfo")
+    @Import(name="deliveryInfo")
       private final @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
 
     public Output<JobDeliveryInfoArgs> getDeliveryInfo() {
@@ -40,7 +40,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Delivery type of Job.
      * 
      */
-    @InputImport(name="deliveryType")
+    @Import(name="deliveryType")
       private final @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
 
     public Output<Either<String,JobDeliveryType>> getDeliveryType() {
@@ -51,7 +51,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Details of a job run. This field will only be sent for expand details filter.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<Object> details;
 
     public Output<Object> getDetails() {
@@ -62,7 +62,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Msi identity of the resource
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -73,7 +73,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    @InputImport(name="jobName")
+    @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -84,7 +84,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This will be one of the supported and registered Azure Regions (e.g. West US, East US, Southeast Asia, etc.). The region of a resource cannot be changed once it is created, but if an identical region is specified on update the request will succeed.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -95,7 +95,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -106,7 +106,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The sku type.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -117,7 +117,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups).
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -128,7 +128,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the data transfer.
      * 
      */
-    @InputImport(name="transferType", required=true)
+    @Import(name="transferType", required=true)
       private final Output<Either<String,TransferType>> transferType;
 
     public Output<Either<String,TransferType>> getTransferType() {

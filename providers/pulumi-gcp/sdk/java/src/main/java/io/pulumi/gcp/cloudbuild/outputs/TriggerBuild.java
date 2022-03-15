@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifacts;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildAvailableSecrets;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildOptions;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuild {
     /**
      * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
@@ -97,20 +97,20 @@ public final class TriggerBuild {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuild(
-        @OutputCustomType.Parameter("artifacts") @Nullable TriggerBuildArtifacts artifacts,
-        @OutputCustomType.Parameter("availableSecrets") @Nullable TriggerBuildAvailableSecrets availableSecrets,
-        @OutputCustomType.Parameter("images") @Nullable List<String> images,
-        @OutputCustomType.Parameter("logsBucket") @Nullable String logsBucket,
-        @OutputCustomType.Parameter("options") @Nullable TriggerBuildOptions options,
-        @OutputCustomType.Parameter("queueTtl") @Nullable String queueTtl,
-        @OutputCustomType.Parameter("secrets") @Nullable List<TriggerBuildSecret> secrets,
-        @OutputCustomType.Parameter("source") @Nullable TriggerBuildSource source,
-        @OutputCustomType.Parameter("steps") List<TriggerBuildStep> steps,
-        @OutputCustomType.Parameter("substitutions") @Nullable Map<String,String> substitutions,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("artifacts") @Nullable TriggerBuildArtifacts artifacts,
+        @CustomType.Parameter("availableSecrets") @Nullable TriggerBuildAvailableSecrets availableSecrets,
+        @CustomType.Parameter("images") @Nullable List<String> images,
+        @CustomType.Parameter("logsBucket") @Nullable String logsBucket,
+        @CustomType.Parameter("options") @Nullable TriggerBuildOptions options,
+        @CustomType.Parameter("queueTtl") @Nullable String queueTtl,
+        @CustomType.Parameter("secrets") @Nullable List<TriggerBuildSecret> secrets,
+        @CustomType.Parameter("source") @Nullable TriggerBuildSource source,
+        @CustomType.Parameter("steps") List<TriggerBuildStep> steps,
+        @CustomType.Parameter("substitutions") @Nullable Map<String,String> substitutions,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.artifacts = artifacts;
         this.availableSecrets = availableSecrets;
         this.images = images;

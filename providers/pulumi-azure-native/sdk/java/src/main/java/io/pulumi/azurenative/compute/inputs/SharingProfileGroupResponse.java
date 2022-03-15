@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
      * A list of subscription/tenant ids the gallery is aimed to be shared to.
      * 
      */
-    @InputImport(name="ids")
+    @Import(name="ids")
       private final @Nullable List<String> ids;
 
     public List<String> getIds() {
@@ -34,7 +34,7 @@ public final class SharingProfileGroupResponse extends io.pulumi.resources.Invok
      * This property allows you to specify the type of sharing group. <br><br> Possible values are: <br><br> **Subscriptions** <br><br> **AADTenants**
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.NonResourceRule;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.ResourceRule;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubjectRulesReviewStatus {
     /**
      * EvaluationError can appear in combination with Rules. It indicates an error occurred during rule evaluation, such as an authorizer that doesn't support rule evaluation, and that ResourceRules and/or NonResourceRules may be incomplete.
@@ -36,12 +36,12 @@ public final class SubjectRulesReviewStatus {
      */
     private final List<ResourceRule> resourceRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectRulesReviewStatus(
-        @OutputCustomType.Parameter("evaluationError") @Nullable String evaluationError,
-        @OutputCustomType.Parameter("incomplete") Boolean incomplete,
-        @OutputCustomType.Parameter("nonResourceRules") List<NonResourceRule> nonResourceRules,
-        @OutputCustomType.Parameter("resourceRules") List<ResourceRule> resourceRules) {
+        @CustomType.Parameter("evaluationError") @Nullable String evaluationError,
+        @CustomType.Parameter("incomplete") Boolean incomplete,
+        @CustomType.Parameter("nonResourceRules") List<NonResourceRule> nonResourceRules,
+        @CustomType.Parameter("resourceRules") List<ResourceRule> resourceRules) {
         this.evaluationError = evaluationError;
         this.incomplete = incomplete;
         this.nonResourceRules = nonResourceRules;

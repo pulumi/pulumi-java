@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPredictionModelStatusResult {
     /**
      * The model status message.
@@ -66,19 +66,19 @@ public final class GetPredictionModelStatusResult {
      */
     private final Integer validationSetCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPredictionModelStatusResult(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("modelVersion") String modelVersion,
-        @OutputCustomType.Parameter("predictionGuidId") String predictionGuidId,
-        @OutputCustomType.Parameter("predictionName") String predictionName,
-        @OutputCustomType.Parameter("signalsUsed") Integer signalsUsed,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("testSetCount") Integer testSetCount,
-        @OutputCustomType.Parameter("trainingAccuracy") Integer trainingAccuracy,
-        @OutputCustomType.Parameter("trainingSetCount") Integer trainingSetCount,
-        @OutputCustomType.Parameter("validationSetCount") Integer validationSetCount) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("modelVersion") String modelVersion,
+        @CustomType.Parameter("predictionGuidId") String predictionGuidId,
+        @CustomType.Parameter("predictionName") String predictionName,
+        @CustomType.Parameter("signalsUsed") Integer signalsUsed,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("testSetCount") Integer testSetCount,
+        @CustomType.Parameter("trainingAccuracy") Integer trainingAccuracy,
+        @CustomType.Parameter("trainingSetCount") Integer trainingSetCount,
+        @CustomType.Parameter("validationSetCount") Integer validationSetCount) {
         this.message = message;
         this.modelVersion = modelVersion;
         this.predictionGuidId = predictionGuidId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketEventBridgeConfiguration extends io.pulumi.resources.In
      * Specifies whether to send notifications to Amazon EventBridge when events occur in an Amazon S3 bucket.
      * 
      */
-    @InputImport(name="eventBridgeEnabled", required=true)
+    @Import(name="eventBridgeEnabled", required=true)
       private final Boolean eventBridgeEnabled;
 
     public Boolean getEventBridgeEnabled() {

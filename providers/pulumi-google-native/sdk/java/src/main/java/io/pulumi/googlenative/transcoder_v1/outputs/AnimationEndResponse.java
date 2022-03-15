@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnimationEndResponse {
     /**
      * The time to end overlay object, in seconds. Default: 0
@@ -15,8 +15,8 @@ public final class AnimationEndResponse {
      */
     private final String startTimeOffset;
 
-    @OutputCustomType.Constructor
-    private AnimationEndResponse(@OutputCustomType.Parameter("startTimeOffset") String startTimeOffset) {
+    @CustomType.Constructor
+    private AnimationEndResponse(@CustomType.Parameter("startTimeOffset") String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
     }
 

@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceLogConfig {
     private final Boolean enable;
     private final Double sampleRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceLogConfig(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("sampleRate") Double sampleRate) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("sampleRate") Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

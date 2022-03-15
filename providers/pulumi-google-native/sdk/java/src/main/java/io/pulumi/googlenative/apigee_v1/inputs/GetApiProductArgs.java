@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetApiProductArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApiProductArgs Empty = new GetApiProductArgs();
 
-    @InputImport(name="apiproductId", required=true)
+    @Import(name="apiproductId", required=true)
       private final String apiproductId;
 
     public String getApiproductId() {
         return this.apiproductId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

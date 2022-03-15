@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckAuthInfoGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="authInfo")
+    @Import(name="authInfo")
       private final @Nullable Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo;
 
     public Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> getAuthInfo() {
@@ -34,7 +34,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -46,7 +46,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -57,7 +57,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
@@ -68,7 +68,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
      * 
      */
-    @InputImport(name="maskHeaders")
+    @Import(name="maskHeaders")
       private final @Nullable Output<Boolean> maskHeaders;
 
     public Output<Boolean> getMaskHeaders() {
@@ -79,7 +79,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -90,7 +90,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -103,7 +103,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
      * 
      */
-    @InputImport(name="requestMethod")
+    @Import(name="requestMethod")
       private final @Nullable Output<String> requestMethod;
 
     public Output<String> getRequestMethod() {
@@ -114,7 +114,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * If true, use HTTPS instead of HTTP to run the check.
      * 
      */
-    @InputImport(name="useSsl")
+    @Import(name="useSsl")
       private final @Nullable Output<Boolean> useSsl;
 
     public Output<Boolean> getUseSsl() {
@@ -125,7 +125,7 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends io.pulumi.resources
      * Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
      * 
      */
-    @InputImport(name="validateSsl")
+    @Import(name="validateSsl")
       private final @Nullable Output<Boolean> validateSsl;
 
     public Output<Boolean> getValidateSsl() {

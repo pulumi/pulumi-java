@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.enums.AddressType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Type of address.
      * 
      */
-    @InputImport(name="addressType")
+    @Import(name="addressType")
       private final @Nullable Output<Either<String,AddressType>> addressType;
 
     public Output<Either<String,AddressType>> getAddressType() {
@@ -35,7 +35,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the City.
      * 
      */
-    @InputImport(name="city")
+    @Import(name="city")
       private final @Nullable Output<String> city;
 
     public Output<String> getCity() {
@@ -46,7 +46,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the company.
      * 
      */
-    @InputImport(name="companyName")
+    @Import(name="companyName")
       private final @Nullable Output<String> companyName;
 
     public Output<String> getCompanyName() {
@@ -57,7 +57,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Country.
      * 
      */
-    @InputImport(name="country", required=true)
+    @Import(name="country", required=true)
       private final Output<String> country;
 
     public Output<String> getCountry() {
@@ -68,7 +68,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Postal code.
      * 
      */
-    @InputImport(name="postalCode")
+    @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
     public Output<String> getPostalCode() {
@@ -79,7 +79,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the State or Province.
      * 
      */
-    @InputImport(name="stateOrProvince")
+    @Import(name="stateOrProvince")
       private final @Nullable Output<String> stateOrProvince;
 
     public Output<String> getStateOrProvince() {
@@ -90,7 +90,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Street Address line 1.
      * 
      */
-    @InputImport(name="streetAddress1", required=true)
+    @Import(name="streetAddress1", required=true)
       private final Output<String> streetAddress1;
 
     public Output<String> getStreetAddress1() {
@@ -101,7 +101,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Street Address line 2.
      * 
      */
-    @InputImport(name="streetAddress2")
+    @Import(name="streetAddress2")
       private final @Nullable Output<String> streetAddress2;
 
     public Output<String> getStreetAddress2() {
@@ -112,7 +112,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Street Address line 3.
      * 
      */
-    @InputImport(name="streetAddress3")
+    @Import(name="streetAddress3")
       private final @Nullable Output<String> streetAddress3;
 
     public Output<String> getStreetAddress3() {
@@ -123,7 +123,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Extended Zip Code.
      * 
      */
-    @InputImport(name="zipExtendedCode")
+    @Import(name="zipExtendedCode")
       private final @Nullable Output<String> zipExtendedCode;
 
     public Output<String> getZipExtendedCode() {

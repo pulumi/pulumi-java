@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SetupScriptsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
      * 
      */
-    @InputImport(name="applicationSharingPolicy")
+    @Import(name="applicationSharingPolicy")
       private final @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
     public Output<Either<String,ApplicationSharingPolicy>> getApplicationSharingPolicy() {
@@ -40,7 +40,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * The Compute Instance Authorization type. Available values are personal (default).
      * 
      */
-    @InputImport(name="computeInstanceAuthorizationType")
+    @Import(name="computeInstanceAuthorizationType")
       private final @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
     public Output<Either<String,ComputeInstanceAuthorizationType>> getComputeInstanceAuthorizationType() {
@@ -51,7 +51,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * Settings for a personal compute instance.
      * 
      */
-    @InputImport(name="personalComputeInstanceSettings")
+    @Import(name="personalComputeInstanceSettings")
       private final @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
     public Output<PersonalComputeInstanceSettingsArgs> getPersonalComputeInstanceSettings() {
@@ -62,7 +62,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * Details of customized scripts to execute for setting up the cluster.
      * 
      */
-    @InputImport(name="setupScripts")
+    @Import(name="setupScripts")
       private final @Nullable Output<SetupScriptsArgs> setupScripts;
 
     public Output<SetupScriptsArgs> getSetupScripts() {
@@ -73,7 +73,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * Specifies policy and settings for SSH access.
      * 
      */
-    @InputImport(name="sshSettings")
+    @Import(name="sshSettings")
       private final @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
 
     public Output<ComputeInstanceSshSettingsArgs> getSshSettings() {
@@ -84,7 +84,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * Virtual network subnet resource ID the compute nodes belong to.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<ResourceIdArgs> subnet;
 
     public Output<ResourceIdArgs> getSubnet() {
@@ -95,7 +95,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
      * Virtual Machine Size
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

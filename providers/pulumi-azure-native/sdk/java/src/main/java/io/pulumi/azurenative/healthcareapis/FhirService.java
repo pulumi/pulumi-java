@@ -14,7 +14,7 @@ import io.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityRespon
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Fhir Service access policies.
      * 
      */
-    @OutputExport(name="accessPolicies", type=List.class, parameters={FhirServiceAccessPolicyEntryResponse.class})
+    @Export(name="accessPolicies", type=List.class, parameters={FhirServiceAccessPolicyEntryResponse.class})
     private Output</* @Nullable */ List<FhirServiceAccessPolicyEntryResponse>> accessPolicies;
 
     /**
@@ -56,7 +56,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Fhir Service Azure container registry configuration.
      * 
      */
-    @OutputExport(name="acrConfiguration", type=FhirServiceAcrConfigurationResponse.class, parameters={})
+    @Export(name="acrConfiguration", type=FhirServiceAcrConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceAcrConfigurationResponse> acrConfiguration;
 
     /**
@@ -70,7 +70,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Fhir Service authentication configuration.
      * 
      */
-    @OutputExport(name="authenticationConfiguration", type=FhirServiceAuthenticationConfigurationResponse.class, parameters={})
+    @Export(name="authenticationConfiguration", type=FhirServiceAuthenticationConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceAuthenticationConfigurationResponse> authenticationConfiguration;
 
     /**
@@ -84,7 +84,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Fhir Service Cors configuration.
      * 
      */
-    @OutputExport(name="corsConfiguration", type=FhirServiceCorsConfigurationResponse.class, parameters={})
+    @Export(name="corsConfiguration", type=FhirServiceCorsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceCorsConfigurationResponse> corsConfiguration;
 
     /**
@@ -98,7 +98,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -112,7 +112,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Fhir Service export configuration.
      * 
      */
-    @OutputExport(name="exportConfiguration", type=FhirServiceExportConfigurationResponse.class, parameters={})
+    @Export(name="exportConfiguration", type=FhirServiceExportConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ FhirServiceExportConfigurationResponse> exportConfiguration;
 
     /**
@@ -126,7 +126,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    @OutputExport(name="identity", type=ServiceManagedIdentityResponseIdentity.class, parameters={})
+    @Export(name="identity", type=ServiceManagedIdentityResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ServiceManagedIdentityResponseIdentity> identity;
 
     /**
@@ -140,7 +140,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * The kind of the service.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -154,7 +154,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -168,7 +168,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -182,7 +182,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * The provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -196,7 +196,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -210,7 +210,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -224,7 +224,7 @@ public class FhirService extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

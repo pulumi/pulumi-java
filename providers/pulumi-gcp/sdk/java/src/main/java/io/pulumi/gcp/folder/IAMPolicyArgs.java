@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 
-    @InputImport(name="folder", required=true)
+    @Import(name="folder", required=true)
       private final Output<String> folder;
 
     public Output<String> getFolder() {
         return this.folder;
     }
 
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {

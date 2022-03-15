@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.IngestionConnectionStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListIngestionSettingConnectionStringsResult {
     /**
      * Connection strings
@@ -16,8 +16,8 @@ public final class ListIngestionSettingConnectionStringsResult {
      */
     private final List<IngestionConnectionStringResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListIngestionSettingConnectionStringsResult(@OutputCustomType.Parameter("value") List<IngestionConnectionStringResponse> value) {
+    @CustomType.Constructor
+    private ListIngestionSettingConnectionStringsResult(@CustomType.Parameter("value") List<IngestionConnectionStringResponse> value) {
         this.value = value;
     }
 

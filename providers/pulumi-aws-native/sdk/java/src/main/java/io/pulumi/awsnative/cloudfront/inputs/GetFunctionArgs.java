@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
-    @InputImport(name="functionARN", required=true)
+    @Import(name="functionARN", required=true)
       private final String functionARN;
 
     public String getFunctionARN() {

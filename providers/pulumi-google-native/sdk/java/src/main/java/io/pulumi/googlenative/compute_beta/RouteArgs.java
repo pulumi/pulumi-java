@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this field when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are supported.
      * 
      */
-    @InputImport(name="destRange")
+    @Import(name="destRange")
       private final @Nullable Output<String> destRange;
 
     public Output<String> getDestRange() {
@@ -42,7 +42,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Fully-qualified URL of the network that this route applies to.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -64,7 +64,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-gateway
      * 
      */
-    @InputImport(name="nextHopGateway")
+    @Import(name="nextHopGateway")
       private final @Nullable Output<String> nextHopGateway;
 
     public Output<String> getNextHopGateway() {
@@ -75,7 +75,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets or the IP address of the forwarding Rule. For example, the following are all valid URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
      * 
      */
-    @InputImport(name="nextHopIlb")
+    @Import(name="nextHopIlb")
       private final @Nullable Output<String> nextHopIlb;
 
     public Output<String> getNextHopIlb() {
@@ -86,7 +86,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/
      * 
      */
-    @InputImport(name="nextHopInstance")
+    @Import(name="nextHopInstance")
       private final @Nullable Output<String> nextHopInstance;
 
     public Output<String> getNextHopInstance() {
@@ -97,7 +97,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The network IP address of an instance that should handle matching packets. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="nextHopIp")
+    @Import(name="nextHopIp")
       private final @Nullable Output<String> nextHopIp;
 
     public Output<String> getNextHopIp() {
@@ -108,7 +108,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the local network if it should handle matching packets.
      * 
      */
-    @InputImport(name="nextHopNetwork")
+    @Import(name="nextHopNetwork")
       private final @Nullable Output<String> nextHopNetwork;
 
     public Output<String> getNextHopNetwork() {
@@ -119,7 +119,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The URL to a VpnTunnel that should handle matching packets.
      * 
      */
-    @InputImport(name="nextHopVpnTunnel")
+    @Import(name="nextHopVpnTunnel")
       private final @Nullable Output<String> nextHopVpnTunnel;
 
     public Output<String> getNextHopVpnTunnel() {
@@ -130,21 +130,21 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length. In cases where multiple routes have equal prefix length, the one with the lowest-numbered priority value wins. The default value is `1000`. The priority value must be from `0` to `65535`, inclusive.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
         return this.priority == null ? Output.empty() : this.priority;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -155,7 +155,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * A list of instance tags to which this route applies.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {

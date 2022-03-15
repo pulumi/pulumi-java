@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The access key id used to access data.
      * 
      */
-    @InputImport(name="accessKeyId", required=true)
+    @Import(name="accessKeyId", required=true)
       private final Object accessKeyId;
 
     public Object getAccessKeyId() {
@@ -41,7 +41,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -52,7 +52,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -74,7 +74,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The endpoint of the Amazon MWS server, (i.e. mws.amazonservices.com)
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Object endpoint;
 
     public Object getEndpoint() {
@@ -96,7 +96,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The Amazon Marketplace ID you want to retrieve data from. To retrieve data from multiple Marketplace IDs, separate them with a comma (,). (i.e. A2EUQ1WTGCTBG2)
      * 
      */
-    @InputImport(name="marketplaceID", required=true)
+    @Import(name="marketplaceID", required=true)
       private final Object marketplaceID;
 
     public Object getMarketplaceID() {
@@ -107,7 +107,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The Amazon MWS authentication token.
      * 
      */
-    @InputImport(name="mwsAuthToken")
+    @Import(name="mwsAuthToken")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> mwsAuthToken;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getMwsAuthToken() {
@@ -118,7 +118,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -129,7 +129,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The secret key used to access data.
      * 
      */
-    @InputImport(name="secretKey")
+    @Import(name="secretKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecretKey() {
@@ -140,7 +140,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * The Amazon seller ID.
      * 
      */
-    @InputImport(name="sellerID", required=true)
+    @Import(name="sellerID", required=true)
       private final Object sellerID;
 
     public Object getSellerID() {
@@ -152,7 +152,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * Expected value is 'AmazonMWS'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -163,7 +163,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
      */
-    @InputImport(name="useEncryptedEndpoints")
+    @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
@@ -174,7 +174,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="useHostVerification")
+    @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
@@ -185,7 +185,7 @@ public final class AmazonMWSLinkedServiceResponse extends io.pulumi.resources.In
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="usePeerVerification")
+    @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {

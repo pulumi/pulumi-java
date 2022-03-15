@@ -7,13 +7,13 @@ import io.pulumi.azurenative.storage.outputs.CorsRulesResponse;
 import io.pulumi.azurenative.storage.outputs.DeleteRetentionPolicyResponse;
 import io.pulumi.azurenative.storage.outputs.ProtocolSettingsResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFileServicePropertiesResult {
     /**
      * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
@@ -51,15 +51,15 @@ public final class GetFileServicePropertiesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFileServicePropertiesResult(
-        @OutputCustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protocolSettings") @Nullable ProtocolSettingsResponse protocolSettings,
-        @OutputCustomType.Parameter("shareDeleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protocolSettings") @Nullable ProtocolSettingsResponse protocolSettings,
+        @CustomType.Parameter("shareDeleteRetentionPolicy") @Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("type") String type) {
         this.cors = cors;
         this.id = id;
         this.name = name;

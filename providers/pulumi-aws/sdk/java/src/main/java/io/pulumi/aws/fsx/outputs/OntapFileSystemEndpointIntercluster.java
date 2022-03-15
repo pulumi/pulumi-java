@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OntapFileSystemEndpointIntercluster {
     /**
      * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
@@ -23,10 +23,10 @@ public final class OntapFileSystemEndpointIntercluster {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OntapFileSystemEndpointIntercluster(
-        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
+        @CustomType.Parameter("dnsName") @Nullable String dnsName,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.dnsName = dnsName;
         this.ipAddresses = ipAddresses;
     }

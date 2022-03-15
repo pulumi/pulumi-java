@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.enums.FavoriteType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * Favorite category, as defined by the user at creation time.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
@@ -32,7 +32,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration of this particular favorite, which are driven by the Azure portal UX. Configuration data is a string containing valid JSON
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {
@@ -43,7 +43,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * The Id of a specific favorite defined in the Application Insights component
      * 
      */
-    @InputImport(name="favoriteId")
+    @Import(name="favoriteId")
       private final @Nullable Output<String> favoriteId;
 
     public Output<String> getFavoriteId() {
@@ -54,7 +54,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    @InputImport(name="favoriteType")
+    @Import(name="favoriteType")
       private final @Nullable Output<FavoriteType> favoriteType;
 
     public Output<FavoriteType> getFavoriteType() {
@@ -65,7 +65,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * Flag denoting wether or not this favorite was generated from a template.
      * 
      */
-    @InputImport(name="isGeneratedFromTemplate")
+    @Import(name="isGeneratedFromTemplate")
       private final @Nullable Output<Boolean> isGeneratedFromTemplate;
 
     public Output<Boolean> getIsGeneratedFromTemplate() {
@@ -76,7 +76,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * The user-defined name of the favorite.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -109,7 +109,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * The source of the favorite definition.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
     public Output<String> getSourceType() {
@@ -120,7 +120,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * A list of 0 or more tags that are associated with this favorite definition
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -131,7 +131,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * This instance's version of the data model. This can change as new features are added that can be marked favorite. Current examples include MetricsExplorer (ME) and Search.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorWorkerConfiguration {
     /**
      * The revision of the worker configuration to use.
@@ -21,10 +21,10 @@ public final class ConnectorWorkerConfiguration {
      */
     private final String workerConfigurationArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorWorkerConfiguration(
-        @OutputCustomType.Parameter("revision") Integer revision,
-        @OutputCustomType.Parameter("workerConfigurationArn") String workerConfigurationArn) {
+        @CustomType.Parameter("revision") Integer revision,
+        @CustomType.Parameter("workerConfigurationArn") String workerConfigurationArn) {
         this.revision = revision;
         this.workerConfigurationArn = workerConfigurationArn;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigIdpCertificateGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="idpCertificates", required=true)
+    @Import(name="idpCertificates", required=true)
       private final Output<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
 
     public Output<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> getIdpCertificates() {
@@ -33,7 +33,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * Unique identifier for all SAML entities
      * 
      */
-    @InputImport(name="idpEntityId", required=true)
+    @Import(name="idpEntityId", required=true)
       private final Output<String> idpEntityId;
 
     public Output<String> getIdpEntityId() {
@@ -44,7 +44,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * Indicates if outbounding SAMLRequest should be signed.
      * 
      */
-    @InputImport(name="signRequest")
+    @Import(name="signRequest")
       private final @Nullable Output<Boolean> signRequest;
 
     public Output<Boolean> getSignRequest() {
@@ -55,7 +55,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * URL to send Authentication request to.
      * 
      */
-    @InputImport(name="ssoUrl", required=true)
+    @Import(name="ssoUrl", required=true)
       private final Output<String> ssoUrl;
 
     public Output<String> getSsoUrl() {

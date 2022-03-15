@@ -6,13 +6,13 @@ package io.pulumi.awsnative.iotevents.outputs;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelOnEnter;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelOnExit;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelOnInput;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelState {
     private final @Nullable DetectorModelOnEnter onEnter;
     private final @Nullable DetectorModelOnExit onExit;
@@ -23,12 +23,12 @@ public final class DetectorModelState {
      */
     private final String stateName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelState(
-        @OutputCustomType.Parameter("onEnter") @Nullable DetectorModelOnEnter onEnter,
-        @OutputCustomType.Parameter("onExit") @Nullable DetectorModelOnExit onExit,
-        @OutputCustomType.Parameter("onInput") @Nullable DetectorModelOnInput onInput,
-        @OutputCustomType.Parameter("stateName") String stateName) {
+        @CustomType.Parameter("onEnter") @Nullable DetectorModelOnEnter onEnter,
+        @CustomType.Parameter("onExit") @Nullable DetectorModelOnExit onExit,
+        @CustomType.Parameter("onInput") @Nullable DetectorModelOnInput onInput,
+        @CustomType.Parameter("stateName") String stateName) {
         this.onEnter = onEnter;
         this.onExit = onExit;
         this.onInput = onInput;

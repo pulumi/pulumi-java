@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * Gets or sets the count of database instances assessed.
      * 
      */
-    @InputImport(name="databaseInstancesAssessedCount")
+    @Import(name="databaseInstancesAssessedCount")
       private final @Nullable Integer databaseInstancesAssessedCount;
 
     public Optional<Integer> getDatabaseInstancesAssessedCount() {
@@ -34,7 +34,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * Gets or sets the count of databases assessed.
      * 
      */
-    @InputImport(name="databasesAssessedCount")
+    @Import(name="databasesAssessedCount")
       private final @Nullable Integer databasesAssessedCount;
 
     public Optional<Integer> getDatabasesAssessedCount() {
@@ -46,7 +46,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * Expected value is 'Databases'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -57,7 +57,7 @@ public final class DatabasesSolutionSummaryResponse extends io.pulumi.resources.
      * Gets or sets the count of databases ready for migration.
      * 
      */
-    @InputImport(name="migrationReadyCount")
+    @Import(name="migrationReadyCount")
       private final @Nullable Integer migrationReadyCount;
 
     public Optional<Integer> getMigrationReadyCount() {

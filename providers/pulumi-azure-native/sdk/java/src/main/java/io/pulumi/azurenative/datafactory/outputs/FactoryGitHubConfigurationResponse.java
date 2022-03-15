@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.GitHubClientSecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FactoryGitHubConfigurationResponse {
     /**
      * Account name.
@@ -59,17 +59,17 @@ public final class FactoryGitHubConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FactoryGitHubConfigurationResponse(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable GitHubClientSecretResponse clientSecret,
-        @OutputCustomType.Parameter("collaborationBranch") String collaborationBranch,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
-        @OutputCustomType.Parameter("repositoryName") String repositoryName,
-        @OutputCustomType.Parameter("rootFolder") String rootFolder,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable GitHubClientSecretResponse clientSecret,
+        @CustomType.Parameter("collaborationBranch") String collaborationBranch,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @CustomType.Parameter("repositoryName") String repositoryName,
+        @CustomType.Parameter("rootFolder") String rootFolder,
+        @CustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.clientId = clientId;
         this.clientSecret = clientSecret;

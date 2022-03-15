@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.iam.outputs.GetTestablePermissionsPermission;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTestablePermissionsResult {
     /**
      * The the support level of this permission for custom roles.
@@ -31,13 +31,13 @@ public final class GetTestablePermissionsResult {
     private final List<GetTestablePermissionsPermission> permissions;
     private final @Nullable List<String> stages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestablePermissionsResult(
-        @OutputCustomType.Parameter("customSupportLevel") @Nullable String customSupportLevel,
-        @OutputCustomType.Parameter("fullResourceName") String fullResourceName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("permissions") List<GetTestablePermissionsPermission> permissions,
-        @OutputCustomType.Parameter("stages") @Nullable List<String> stages) {
+        @CustomType.Parameter("customSupportLevel") @Nullable String customSupportLevel,
+        @CustomType.Parameter("fullResourceName") String fullResourceName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("permissions") List<GetTestablePermissionsPermission> permissions,
+        @CustomType.Parameter("stages") @Nullable List<String> stages) {
         this.customSupportLevel = customSupportLevel;
         this.fullResourceName = fullResourceName;
         this.id = id;

@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetGlueConfiguration {
     private final String databaseName;
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetGlueConfiguration(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("tableName") String tableName) {
         this.databaseName = databaseName;
         this.tableName = tableName;
     }

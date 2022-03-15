@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.NotificationPreferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactDetailsResponse {
     /**
      * Contact name of the person.
@@ -44,14 +44,14 @@ public final class ContactDetailsResponse {
      */
     private final @Nullable String phoneExtension;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactDetailsResponse(
-        @OutputCustomType.Parameter("contactName") String contactName,
-        @OutputCustomType.Parameter("emailList") List<String> emailList,
-        @OutputCustomType.Parameter("mobile") @Nullable String mobile,
-        @OutputCustomType.Parameter("notificationPreference") @Nullable List<NotificationPreferenceResponse> notificationPreference,
-        @OutputCustomType.Parameter("phone") String phone,
-        @OutputCustomType.Parameter("phoneExtension") @Nullable String phoneExtension) {
+        @CustomType.Parameter("contactName") String contactName,
+        @CustomType.Parameter("emailList") List<String> emailList,
+        @CustomType.Parameter("mobile") @Nullable String mobile,
+        @CustomType.Parameter("notificationPreference") @Nullable List<NotificationPreferenceResponse> notificationPreference,
+        @CustomType.Parameter("phone") String phone,
+        @CustomType.Parameter("phoneExtension") @Nullable String phoneExtension) {
         this.contactName = contactName;
         this.emailList = emailList;
         this.mobile = mobile;

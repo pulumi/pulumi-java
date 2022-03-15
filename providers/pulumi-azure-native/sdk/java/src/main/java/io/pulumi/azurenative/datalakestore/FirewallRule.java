@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datalakestore.FirewallRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @OutputExport(name="endIpAddress", type=String.class, parameters={})
+    @Export(name="endIpAddress", type=String.class, parameters={})
     private Output<String> endIpAddress;
 
     /**
@@ -48,7 +48,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @OutputExport(name="startIpAddress", type=String.class, parameters={})
+    @Export(name="startIpAddress", type=String.class, parameters={})
     private Output<String> startIpAddress;
 
     /**
@@ -76,7 +76,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

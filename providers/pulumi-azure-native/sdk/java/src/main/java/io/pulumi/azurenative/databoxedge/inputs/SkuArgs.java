@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.SkuName;
 import io.pulumi.azurenative.databoxedge.enums.SkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> getName() {
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU tier. This is based on the SKU name.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;
 
     public Output<Either<String,SkuTier>> getTier() {

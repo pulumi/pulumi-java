@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskDetailsResponse {
     /**
      * The hard disk max size in MB.
@@ -33,12 +33,12 @@ public final class DiskDetailsResponse {
      */
     private final @Nullable String vhdType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskDetailsResponse(
-        @OutputCustomType.Parameter("maxSizeMB") @Nullable Double maxSizeMB,
-        @OutputCustomType.Parameter("vhdId") @Nullable String vhdId,
-        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName,
-        @OutputCustomType.Parameter("vhdType") @Nullable String vhdType) {
+        @CustomType.Parameter("maxSizeMB") @Nullable Double maxSizeMB,
+        @CustomType.Parameter("vhdId") @Nullable String vhdId,
+        @CustomType.Parameter("vhdName") @Nullable String vhdName,
+        @CustomType.Parameter("vhdType") @Nullable String vhdType) {
         this.maxSizeMB = maxSizeMB;
         this.vhdId = vhdId;
         this.vhdName = vhdName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The CRON expression for the task schedule
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final String schedule;
 
     public String getSchedule() {
@@ -44,7 +44,7 @@ public final class TimerTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The current status of trigger.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

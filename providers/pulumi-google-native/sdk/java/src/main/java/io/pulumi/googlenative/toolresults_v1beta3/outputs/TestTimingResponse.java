@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestTimingResponse {
     /**
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
@@ -15,8 +15,8 @@ public final class TestTimingResponse {
      */
     private final DurationResponse testProcessDuration;
 
-    @OutputCustomType.Constructor
-    private TestTimingResponse(@OutputCustomType.Parameter("testProcessDuration") DurationResponse testProcessDuration) {
+    @CustomType.Constructor
+    private TestTimingResponse(@CustomType.Parameter("testProcessDuration") DurationResponse testProcessDuration) {
         this.testProcessDuration = testProcessDuration;
     }
 

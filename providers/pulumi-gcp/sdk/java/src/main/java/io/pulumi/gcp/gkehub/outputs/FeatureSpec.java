@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureSpecMulticlusteringress;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureSpec {
     /**
      * Multicluster Ingress-specific spec.
@@ -18,8 +18,8 @@ public final class FeatureSpec {
      */
     private final @Nullable FeatureSpecMulticlusteringress multiclusteringress;
 
-    @OutputCustomType.Constructor
-    private FeatureSpec(@OutputCustomType.Parameter("multiclusteringress") @Nullable FeatureSpecMulticlusteringress multiclusteringress) {
+    @CustomType.Constructor
+    private FeatureSpec(@CustomType.Parameter("multiclusteringress") @Nullable FeatureSpecMulticlusteringress multiclusteringress) {
         this.multiclusteringress = multiclusteringress;
     }
 

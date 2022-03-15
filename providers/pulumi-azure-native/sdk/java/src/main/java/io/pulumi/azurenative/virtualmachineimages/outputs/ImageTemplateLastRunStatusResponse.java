@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateLastRunStatusResponse {
     /**
      * End time of the last run (UTC)
@@ -37,13 +37,13 @@ public final class ImageTemplateLastRunStatusResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateLastRunStatusResponse(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("runState") @Nullable String runState,
-        @OutputCustomType.Parameter("runSubState") @Nullable String runSubState,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("runState") @Nullable String runState,
+        @CustomType.Parameter("runSubState") @Nullable String runSubState,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.message = message;
         this.runState = runState;

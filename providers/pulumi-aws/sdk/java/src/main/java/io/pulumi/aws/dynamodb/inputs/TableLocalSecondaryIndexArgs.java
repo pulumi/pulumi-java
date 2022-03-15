@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * The name of the index
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * do not need to be defined as attributes on the table.
      * 
      */
-    @InputImport(name="nonKeyAttributes")
+    @Import(name="nonKeyAttributes")
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
     public Output<List<String>> getNonKeyAttributes() {
@@ -47,7 +47,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * parameter.
      * 
      */
-    @InputImport(name="projectionType", required=true)
+    @Import(name="projectionType", required=true)
       private final Output<String> projectionType;
 
     public Output<String> getProjectionType() {
@@ -58,7 +58,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
      * The name of the range key; must be defined
      * 
      */
-    @InputImport(name="rangeKey", required=true)
+    @Import(name="rangeKey", required=true)
       private final Output<String> rangeKey;
 
     public Output<String> getRangeKey() {

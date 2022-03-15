@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * updates to the origin access identity.
      * 
      */
-    @InputImport(name="callerReference")
+    @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
     public Output<String> getCallerReference() {
@@ -31,7 +31,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * origin access identity to use in CloudFront, see below.
      * 
      */
-    @InputImport(name="cloudfrontAccessIdentityPath")
+    @Import(name="cloudfrontAccessIdentityPath")
       private final @Nullable Output<String> cloudfrontAccessIdentityPath;
 
     public Output<String> getCloudfrontAccessIdentityPath() {
@@ -42,7 +42,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * An optional comment for the origin access identity.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -54,7 +54,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -67,7 +67,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * E2QWRUHAPOMQZL`.
      * 
      */
-    @InputImport(name="iamArn")
+    @Import(name="iamArn")
       private final @Nullable Output<String> iamArn;
 
     public Output<String> getIamArn() {
@@ -80,7 +80,7 @@ public final class OriginAccessIdentityState extends io.pulumi.resources.Resourc
      * permission to an object in Amazon S3.
      * 
      */
-    @InputImport(name="s3CanonicalUserId")
+    @Import(name="s3CanonicalUserId")
       private final @Nullable Output<String> s3CanonicalUserId;
 
     public Output<String> getS3CanonicalUserId() {

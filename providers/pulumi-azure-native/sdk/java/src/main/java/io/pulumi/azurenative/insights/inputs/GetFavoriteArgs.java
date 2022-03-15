@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
      * The Id of a specific favorite defined in the Application Insights component
      * 
      */
-    @InputImport(name="favoriteId", required=true)
+    @Import(name="favoriteId", required=true)
       private final String favoriteId;
 
     public String getFavoriteId() {
@@ -27,7 +27,7 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetFavoriteArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {

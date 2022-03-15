@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.EnvgroupArgs;
@@ -22,7 +22,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * The time at which the environment group was created as milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -36,7 +36,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * Host names for this environment group.
      * 
      */
-    @OutputExport(name="hostnames", type=List.class, parameters={String.class})
+    @Export(name="hostnames", type=List.class, parameters={String.class})
     private Output<List<String>> hostnames;
 
     /**
@@ -50,7 +50,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * The time at which the environment group was last updated as milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -64,7 +64,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * ID of the environment group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * State of the environment group. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * The virtual machine extension name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -35,7 +35,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
@@ -46,7 +46,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * The resource status information.
      * 
      */
-    @InputImport(name="substatuses")
+    @Import(name="substatuses")
       private final @Nullable List<InstanceViewStatusResponse> substatuses;
 
     public List<InstanceViewStatusResponse> getSubstatuses() {
@@ -57,7 +57,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -68,7 +68,7 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {

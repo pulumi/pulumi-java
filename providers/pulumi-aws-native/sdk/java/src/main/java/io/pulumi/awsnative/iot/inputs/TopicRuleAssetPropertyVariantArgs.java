@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
 
     public static final TopicRuleAssetPropertyVariantArgs Empty = new TopicRuleAssetPropertyVariantArgs();
 
-    @InputImport(name="booleanValue")
+    @Import(name="booleanValue")
       private final @Nullable Output<String> booleanValue;
 
     public Output<String> getBooleanValue() {
         return this.booleanValue == null ? Output.empty() : this.booleanValue;
     }
 
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable Output<String> doubleValue;
 
     public Output<String> getDoubleValue() {
         return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
-    @InputImport(name="integerValue")
+    @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
     public Output<String> getIntegerValue() {
         return this.integerValue == null ? Output.empty() : this.integerValue;
     }
 
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {

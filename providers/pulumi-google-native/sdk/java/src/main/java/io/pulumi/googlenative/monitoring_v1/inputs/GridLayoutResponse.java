@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
      * 
      */
-    @InputImport(name="columns", required=true)
+    @Import(name="columns", required=true)
       private final String columns;
 
     public String getColumns() {
@@ -33,7 +33,7 @@ public final class GridLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * The informational elements that are arranged into the columns row-first.
      * 
      */
-    @InputImport(name="widgets", required=true)
+    @Import(name="widgets", required=true)
       private final List<WidgetResponse> widgets;
 
     public List<WidgetResponse> getWidgets() {

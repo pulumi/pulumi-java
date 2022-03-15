@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LoadBalancerStatus;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressStatus {
     /**
      * LoadBalancer contains the current status of the load-balancer.
@@ -17,8 +17,8 @@ public final class IngressStatus {
      */
     private final @Nullable LoadBalancerStatus loadBalancer;
 
-    @OutputCustomType.Constructor
-    private IngressStatus(@OutputCustomType.Parameter("loadBalancer") @Nullable LoadBalancerStatus loadBalancer) {
+    @CustomType.Constructor
+    private IngressStatus(@CustomType.Parameter("loadBalancer") @Nullable LoadBalancerStatus loadBalancer) {
         this.loadBalancer = loadBalancer;
     }
 

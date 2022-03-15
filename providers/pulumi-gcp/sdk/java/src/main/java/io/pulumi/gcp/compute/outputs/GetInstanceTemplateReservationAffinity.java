@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateReservationAffinity {
     private final List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
     /**
@@ -18,10 +18,10 @@ public final class GetInstanceTemplateReservationAffinity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateReservationAffinity(
-        @OutputCustomType.Parameter("specificReservations") List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("specificReservations") List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations,
+        @CustomType.Parameter("type") String type) {
         this.specificReservations = specificReservations;
         this.type = type;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelectorTerm;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreferredSchedulingTerm {
     /**
      * A node selector term, associated with the corresponding weight.
@@ -21,10 +21,10 @@ public final class PreferredSchedulingTerm {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreferredSchedulingTerm(
-        @OutputCustomType.Parameter("preference") NodeSelectorTerm preference,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("preference") NodeSelectorTerm preference,
+        @CustomType.Parameter("weight") Integer weight) {
         this.preference = preference;
         this.weight = weight;
     }

@@ -5,7 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketObjectArgs;
@@ -37,7 +37,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * The name of the containing bucket.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -52,7 +52,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
      */
-    @OutputExport(name="cacheControl", type=String.class, parameters={})
+    @Export(name="cacheControl", type=String.class, parameters={})
     private Output</* @Nullable */ String> cacheControl;
 
     /**
@@ -67,7 +67,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
@@ -81,7 +81,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
      */
-    @OutputExport(name="contentDisposition", type=String.class, parameters={})
+    @Export(name="contentDisposition", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentDisposition;
 
     /**
@@ -95,7 +95,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
      */
-    @OutputExport(name="contentEncoding", type=String.class, parameters={})
+    @Export(name="contentEncoding", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentEncoding;
 
     /**
@@ -109,7 +109,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
      */
-    @OutputExport(name="contentLanguage", type=String.class, parameters={})
+    @Export(name="contentLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentLanguage;
 
     /**
@@ -123,7 +123,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -137,7 +137,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * (Computed) Base 64 CRC32 hash of the uploaded data.
      * 
      */
-    @OutputExport(name="crc32c", type=String.class, parameters={})
+    @Export(name="crc32c", type=String.class, parameters={})
     private Output<String> crc32c;
 
     /**
@@ -152,7 +152,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="customerEncryption", type=BucketObjectCustomerEncryption.class, parameters={})
+    @Export(name="customerEncryption", type=BucketObjectCustomerEncryption.class, parameters={})
     private Output</* @Nullable */ BucketObjectCustomerEncryption> customerEncryption;
 
     /**
@@ -163,7 +163,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ BucketObjectCustomerEncryption> getCustomerEncryption() {
         return this.customerEncryption;
     }
-    @OutputExport(name="detectMd5hash", type=String.class, parameters={})
+    @Export(name="detectMd5hash", type=String.class, parameters={})
     private Output</* @Nullable */ String> detectMd5hash;
 
     public Output</* @Nullable */ String> getDetectMd5hash() {
@@ -175,7 +175,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * will be subject to bucket-level retention (if any).
      * 
      */
-    @OutputExport(name="eventBasedHold", type=Boolean.class, parameters={})
+    @Export(name="eventBasedHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> eventBasedHold;
 
     /**
@@ -191,7 +191,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
@@ -205,7 +205,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * (Computed) Base 64 MD5 hash of the uploaded data.
      * 
      */
-    @OutputExport(name="md5hash", type=String.class, parameters={})
+    @Export(name="md5hash", type=String.class, parameters={})
     private Output<String> md5hash;
 
     /**
@@ -219,7 +219,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * (Computed) A url reference to download this object.
      * 
      */
-    @OutputExport(name="mediaLink", type=String.class, parameters={})
+    @Export(name="mediaLink", type=String.class, parameters={})
     private Output<String> mediaLink;
 
     /**
@@ -233,7 +233,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * User-provided metadata, in key/value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -247,7 +247,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * The name of the object. If you're interpolating the name of this object, see `output_name` instead.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -262,7 +262,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * `gcp.storage.ObjectACL` resources when your `gcp.storage.BucketObject` is recreated.
      * 
      */
-    @OutputExport(name="outputName", type=String.class, parameters={})
+    @Export(name="outputName", type=String.class, parameters={})
     private Output<String> outputName;
 
     /**
@@ -277,7 +277,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * (Computed) A url reference to this object.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -292,7 +292,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * if `content` is not.
      * 
      */
-    @OutputExport(name="source", type=AssetOrArchive.class, parameters={})
+    @Export(name="source", type=AssetOrArchive.class, parameters={})
     private Output</* @Nullable */ AssetOrArchive> source;
 
     /**
@@ -309,7 +309,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
      */
-    @OutputExport(name="storageClass", type=String.class, parameters={})
+    @Export(name="storageClass", type=String.class, parameters={})
     private Output<String> storageClass;
 
     /**
@@ -326,7 +326,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * overwrites.
      * 
      */
-    @OutputExport(name="temporaryHold", type=Boolean.class, parameters={})
+    @Export(name="temporaryHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> temporaryHold;
 
     /**

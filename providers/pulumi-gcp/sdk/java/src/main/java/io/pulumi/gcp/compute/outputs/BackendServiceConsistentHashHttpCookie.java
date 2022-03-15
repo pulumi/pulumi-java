@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.BackendServiceConsistentHashHttpCookieTtl;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceConsistentHashHttpCookie {
     /**
      * Name of the cookie.
@@ -29,11 +29,11 @@ public final class BackendServiceConsistentHashHttpCookie {
      */
     private final @Nullable BackendServiceConsistentHashHttpCookieTtl ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceConsistentHashHttpCookie(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("ttl") @Nullable BackendServiceConsistentHashHttpCookieTtl ttl) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("ttl") @Nullable BackendServiceConsistentHashHttpCookieTtl ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;

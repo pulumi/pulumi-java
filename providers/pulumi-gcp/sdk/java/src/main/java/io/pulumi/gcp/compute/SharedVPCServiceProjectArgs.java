@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
      * The ID of a host project to associate.
      * 
      */
-    @InputImport(name="hostProject", required=true)
+    @Import(name="hostProject", required=true)
       private final Output<String> hostProject;
 
     public Output<String> getHostProject() {
@@ -28,7 +28,7 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
      * The ID of the project that will serve as a Shared VPC service project.
      * 
      */
-    @InputImport(name="serviceProject", required=true)
+    @Import(name="serviceProject", required=true)
       private final Output<String> serviceProject;
 
     public Output<String> getServiceProject() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.digitaltwins.inputs.DigitalTwinsIdentityArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.PrivateEndpointConnectionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * The managed identity for the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<DigitalTwinsIdentityArgs> identity;
 
     public Output<DigitalTwinsIdentityArgs> getIdentity() {
@@ -35,14 +35,14 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="privateEndpointConnections")
+    @Import(name="privateEndpointConnections")
       private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
@@ -53,7 +53,7 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * Public network access for the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -64,7 +64,7 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -86,7 +86,7 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

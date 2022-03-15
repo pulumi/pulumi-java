@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaEventSourceType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ComponentVersionLambdaEventSourceArgs extends io.pulumi.resou
 
     public static final ComponentVersionLambdaEventSourceArgs Empty = new ComponentVersionLambdaEventSourceArgs();
 
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
         return this.topic == null ? Output.empty() : this.topic;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ComponentVersionLambdaEventSourceType> type;
 
     public Output<ComponentVersionLambdaEventSourceType> getType() {

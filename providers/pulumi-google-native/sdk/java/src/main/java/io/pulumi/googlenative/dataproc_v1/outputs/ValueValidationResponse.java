@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValueValidationResponse {
     /**
      * List of allowed values for the parameter.
@@ -16,8 +16,8 @@ public final class ValueValidationResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
-    private ValueValidationResponse(@OutputCustomType.Parameter("values") List<String> values) {
+    @CustomType.Constructor
+    private ValueValidationResponse(@CustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

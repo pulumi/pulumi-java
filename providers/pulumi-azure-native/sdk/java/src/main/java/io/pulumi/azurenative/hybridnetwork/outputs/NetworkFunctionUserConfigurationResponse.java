@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponseOsProfile;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkInterfaceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkFunctionUserConfigurationResponse {
     /**
      * The network interface configuration.
@@ -36,12 +36,12 @@ public final class NetworkFunctionUserConfigurationResponse {
      */
     private final @Nullable Object userDataParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkFunctionUserConfigurationResponse(
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("osProfile") @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile,
-        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
-        @OutputCustomType.Parameter("userDataParameters") @Nullable Object userDataParameters) {
+        @CustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("osProfile") @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile,
+        @CustomType.Parameter("roleName") @Nullable String roleName,
+        @CustomType.Parameter("userDataParameters") @Nullable Object userDataParameters) {
         this.networkInterfaces = networkInterfaces;
         this.osProfile = osProfile;
         this.roleName = roleName;

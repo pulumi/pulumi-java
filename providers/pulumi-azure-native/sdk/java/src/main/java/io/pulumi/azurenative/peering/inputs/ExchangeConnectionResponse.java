@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.BgpSessionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * The BGP session associated with the connection.
      * 
      */
-    @InputImport(name="bgpSession")
+    @Import(name="bgpSession")
       private final @Nullable BgpSessionResponse bgpSession;
 
     public Optional<BgpSessionResponse> getBgpSession() {
@@ -35,7 +35,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * The unique identifier (GUID) for the connection.
      * 
      */
-    @InputImport(name="connectionIdentifier")
+    @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
 
     public Optional<String> getConnectionIdentifier() {
@@ -46,7 +46,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * The state of the connection.
      * 
      */
-    @InputImport(name="connectionState", required=true)
+    @Import(name="connectionState", required=true)
       private final String connectionState;
 
     public String getConnectionState() {
@@ -57,7 +57,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * The error message related to the connection state, if any.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -68,7 +68,7 @@ public final class ExchangeConnectionResponse extends io.pulumi.resources.Invoke
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
      */
-    @InputImport(name="peeringDBFacilityId")
+    @Import(name="peeringDBFacilityId")
       private final @Nullable Integer peeringDBFacilityId;
 
     public Optional<Integer> getPeeringDBFacilityId() {

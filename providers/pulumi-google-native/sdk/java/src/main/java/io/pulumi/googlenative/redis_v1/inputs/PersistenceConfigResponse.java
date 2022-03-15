@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
      * 
      */
-    @InputImport(name="persistenceMode", required=true)
+    @Import(name="persistenceMode", required=true)
       private final String persistenceMode;
 
     public String getPersistenceMode() {
@@ -31,7 +31,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * The next time that a snapshot attempt is scheduled to occur.
      * 
      */
-    @InputImport(name="rdbNextSnapshotTime", required=true)
+    @Import(name="rdbNextSnapshotTime", required=true)
       private final String rdbNextSnapshotTime;
 
     public String getRdbNextSnapshotTime() {
@@ -42,7 +42,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. Period between RDB snapshots. Snapshots will be attempted every period starting from the provided snapshot start time. For example, a start time of 01/01/2033 06:45 and SIX_HOURS snapshot period will do nothing until 01/01/2033, and then trigger snapshots every day at 06:45, 12:45, 18:45, and 00:45 the next day, and so on. If not provided, TWENTY_FOUR_HOURS will be used as default.
      * 
      */
-    @InputImport(name="rdbSnapshotPeriod", required=true)
+    @Import(name="rdbSnapshotPeriod", required=true)
       private final String rdbSnapshotPeriod;
 
     public String getRdbSnapshotPeriod() {
@@ -53,7 +53,7 @@ public final class PersistenceConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. Date and time that the first snapshot was/will be attempted, and to which future snapshots will be aligned. If not provided, the current time will be used.
      * 
      */
-    @InputImport(name="rdbSnapshotStartTime", required=true)
+    @Import(name="rdbSnapshotStartTime", required=true)
       private final String rdbSnapshotStartTime;
 
     public String getRdbSnapshotStartTime() {

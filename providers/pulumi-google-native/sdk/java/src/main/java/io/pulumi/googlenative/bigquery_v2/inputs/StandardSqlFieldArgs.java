@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
      * Optional. The name of this field. Can be absent for struct fields.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
      * Optional. The type of this parameter. Absent if not explicitly specified (e.g., CREATE FUNCTION statement can omit the return type; in this case the output parameter does not have this "type" field).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<StandardSqlDataTypeArgs> type;
 
     public Output<StandardSqlDataTypeArgs> getType() {

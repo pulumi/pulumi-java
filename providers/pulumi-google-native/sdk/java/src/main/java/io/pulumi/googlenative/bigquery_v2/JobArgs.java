@@ -5,7 +5,7 @@ package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobReferenceArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] Describes the job configuration.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<JobConfigurationArgs> configuration;
 
     public Output<JobConfigurationArgs> getConfiguration() {
@@ -32,21 +32,21 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Reference describing the unique-per-user name of the job.
      * 
      */
-    @InputImport(name="jobReference")
+    @Import(name="jobReference")
       private final @Nullable Output<JobReferenceArgs> jobReference;
 
     public Output<JobReferenceArgs> getJobReference() {
         return this.jobReference == null ? Output.empty() : this.jobReference;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {

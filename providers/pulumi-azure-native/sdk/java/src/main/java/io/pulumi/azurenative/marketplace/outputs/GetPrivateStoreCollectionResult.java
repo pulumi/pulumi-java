@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.marketplace.outputs;
 
 import io.pulumi.azurenative.marketplace.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateStoreCollectionResult {
     /**
      * Indicating whether all subscriptions are selected (=true) or not (=false).
@@ -71,19 +71,19 @@ public final class GetPrivateStoreCollectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateStoreCollectionResult(
-        @OutputCustomType.Parameter("allSubscriptions") @Nullable Boolean allSubscriptions,
-        @OutputCustomType.Parameter("claim") @Nullable String claim,
-        @OutputCustomType.Parameter("collectionId") String collectionId,
-        @OutputCustomType.Parameter("collectionName") @Nullable String collectionName,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfOffers") Double numberOfOffers,
-        @OutputCustomType.Parameter("subscriptionsList") @Nullable List<String> subscriptionsList,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allSubscriptions") @Nullable Boolean allSubscriptions,
+        @CustomType.Parameter("claim") @Nullable String claim,
+        @CustomType.Parameter("collectionId") String collectionId,
+        @CustomType.Parameter("collectionName") @Nullable String collectionName,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfOffers") Double numberOfOffers,
+        @CustomType.Parameter("subscriptionsList") @Nullable List<String> subscriptionsList,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.allSubscriptions = allSubscriptions;
         this.claim = claim;
         this.collectionId = collectionId;

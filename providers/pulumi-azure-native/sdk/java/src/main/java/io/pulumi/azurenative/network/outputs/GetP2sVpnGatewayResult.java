@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.P2SConnectionConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetP2sVpnGatewayResult {
     /**
      * List of all customer specified DNS servers IP addresses.
@@ -89,22 +89,22 @@ public final class GetP2sVpnGatewayResult {
      */
     private final @Nullable SubResourceResponse vpnServerConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetP2sVpnGatewayResult(
-        @OutputCustomType.Parameter("customDnsServers") @Nullable List<String> customDnsServers,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("p2SConnectionConfigurations") @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
-        @OutputCustomType.Parameter("vpnClientConnectionHealth") VpnClientConnectionHealthResponse vpnClientConnectionHealth,
-        @OutputCustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit,
-        @OutputCustomType.Parameter("vpnServerConfiguration") @Nullable SubResourceResponse vpnServerConfiguration) {
+        @CustomType.Parameter("customDnsServers") @Nullable List<String> customDnsServers,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("p2SConnectionConfigurations") @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @CustomType.Parameter("vpnClientConnectionHealth") VpnClientConnectionHealthResponse vpnClientConnectionHealth,
+        @CustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit,
+        @CustomType.Parameter("vpnServerConfiguration") @Nullable SubResourceResponse vpnServerConfiguration) {
         this.customDnsServers = customDnsServers;
         this.etag = etag;
         this.id = id;

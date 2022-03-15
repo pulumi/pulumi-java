@@ -4,14 +4,14 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicyPort {
     /**
      * If set, indicates that the range of ports from port to endPort, inclusive, should be allowed by the policy. This field cannot be defined if the port field is not defined or if the port field is defined as a named (string) port. The endPort must be equal or greater than port. This feature is in Beta state and is enabled by default. It can be disabled using the Feature Gate "NetworkPolicyEndPort".
@@ -29,11 +29,11 @@ public final class NetworkPolicyPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicyPort(
-        @OutputCustomType.Parameter("endPort") @Nullable Integer endPort,
-        @OutputCustomType.Parameter("port") @Nullable Either<Integer,String> port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("endPort") @Nullable Integer endPort,
+        @CustomType.Parameter("port") @Nullable Either<Integer,String> port,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.endPort = endPort;
         this.port = port;
         this.protocol = protocol;

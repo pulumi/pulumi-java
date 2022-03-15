@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1.inputs.PrivateClusterConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="cloudComposerNetworkIpv4CidrBlock", required=true)
+    @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
       private final String cloudComposerNetworkIpv4CidrBlock;
 
     public String getCloudComposerNetworkIpv4CidrBlock() {
@@ -33,7 +33,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * The IP range reserved for the tenant project's Cloud Composer network. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="cloudComposerNetworkIpv4ReservedRange", required=true)
+    @Import(name="cloudComposerNetworkIpv4ReservedRange", required=true)
       private final String cloudComposerNetworkIpv4ReservedRange;
 
     public String getCloudComposerNetworkIpv4ReservedRange() {
@@ -44,7 +44,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
      * 
      */
-    @InputImport(name="cloudSqlIpv4CidrBlock", required=true)
+    @Import(name="cloudSqlIpv4CidrBlock", required=true)
       private final String cloudSqlIpv4CidrBlock;
 
     public String getCloudSqlIpv4CidrBlock() {
@@ -55,7 +55,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="enablePrivateEnvironment", required=true)
+    @Import(name="enablePrivateEnvironment", required=true)
       private final Boolean enablePrivateEnvironment;
 
     public Boolean getEnablePrivateEnvironment() {
@@ -66,7 +66,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
      * 
      */
-    @InputImport(name="privateClusterConfig", required=true)
+    @Import(name="privateClusterConfig", required=true)
       private final PrivateClusterConfigResponse privateClusterConfig;
 
     public PrivateClusterConfigResponse getPrivateClusterConfig() {
@@ -77,7 +77,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `private_cluster_config.master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="webServerIpv4CidrBlock", required=true)
+    @Import(name="webServerIpv4CidrBlock", required=true)
       private final String webServerIpv4CidrBlock;
 
     public String getWebServerIpv4CidrBlock() {
@@ -88,7 +88,7 @@ public final class PrivateEnvironmentConfigResponse extends io.pulumi.resources.
      * The IP range reserved for the tenant project's App Engine VMs. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="webServerIpv4ReservedRange", required=true)
+    @Import(name="webServerIpv4ReservedRange", required=true)
       private final String webServerIpv4ReservedRange;
 
     public String getWebServerIpv4ReservedRange() {

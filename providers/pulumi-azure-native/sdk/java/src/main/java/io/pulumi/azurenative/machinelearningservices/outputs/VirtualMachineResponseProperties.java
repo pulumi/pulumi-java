@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.VirtualMachineSshCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineResponseProperties {
     /**
      * Public IP address of the virtual machine.
@@ -34,12 +34,12 @@ public final class VirtualMachineResponseProperties {
      */
     private final @Nullable String virtualMachineSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineResponseProperties(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @OutputCustomType.Parameter("sshPort") @Nullable Integer sshPort,
-        @OutputCustomType.Parameter("virtualMachineSize") @Nullable String virtualMachineSize) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
+        @CustomType.Parameter("sshPort") @Nullable Integer sshPort,
+        @CustomType.Parameter("virtualMachineSize") @Nullable String virtualMachineSize) {
         this.address = address;
         this.administratorAccount = administratorAccount;
         this.sshPort = sshPort;

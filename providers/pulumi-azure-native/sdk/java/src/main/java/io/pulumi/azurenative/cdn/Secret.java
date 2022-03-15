@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyParametersResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:cdn:Secret")
 public class Secret extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -45,7 +45,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -59,7 +59,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * object which contains secret parameters
      * 
      */
-    @OutputExport(name="parameters", type=Object.class, parameters={})
+    @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
@@ -73,7 +73,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -87,7 +87,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -101,7 +101,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

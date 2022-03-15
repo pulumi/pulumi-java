@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1.inputs.AllowedIpRangeResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebServerNetworkAccessControlResponse extends io.pulumi.resou
      * A collection of allowed IP ranges with descriptions.
      * 
      */
-    @InputImport(name="allowedIpRanges", required=true)
+    @Import(name="allowedIpRanges", required=true)
       private final List<AllowedIpRangeResponse> allowedIpRanges;
 
     public List<AllowedIpRangeResponse> getAllowedIpRanges() {

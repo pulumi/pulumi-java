@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxEntityTypeEntity {
     /**
      * A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions.
@@ -24,10 +24,10 @@ public final class CxEntityTypeEntity {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxEntityTypeEntity(
-        @OutputCustomType.Parameter("synonyms") @Nullable List<String> synonyms,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("synonyms") @Nullable List<String> synonyms,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

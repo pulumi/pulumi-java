@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeSelectorRequirement {
     /**
      * The label key that the selector applies to.
@@ -35,11 +35,11 @@ public final class NodeSelectorRequirement {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeSelectorRequirement(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.operator = operator;
         this.values = values;

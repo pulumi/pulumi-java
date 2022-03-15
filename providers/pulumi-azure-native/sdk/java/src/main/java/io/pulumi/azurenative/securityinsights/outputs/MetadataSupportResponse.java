@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetadataSupportResponse {
     /**
      * Email of support contact
@@ -32,12 +32,12 @@ public final class MetadataSupportResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataSupportResponse(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("link") @Nullable String link,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("link") @Nullable String link,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tier") String tier) {
         this.email = email;
         this.link = link;
         this.name = name;

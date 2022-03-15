@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskSchedule {
     /**
      * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination location
@@ -15,8 +15,8 @@ public final class TaskSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
-    private TaskSchedule(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+    @CustomType.Constructor
+    private TaskSchedule(@CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

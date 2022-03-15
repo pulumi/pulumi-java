@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecResourcesReservationGenericResources {
     private final @Nullable List<String> discreteResourcesSpecs;
     private final @Nullable List<String> namedResourcesSpecs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecResourcesReservationGenericResources(
-        @OutputCustomType.Parameter("discreteResourcesSpecs") @Nullable List<String> discreteResourcesSpecs,
-        @OutputCustomType.Parameter("namedResourcesSpecs") @Nullable List<String> namedResourcesSpecs) {
+        @CustomType.Parameter("discreteResourcesSpecs") @Nullable List<String> discreteResourcesSpecs,
+        @CustomType.Parameter("namedResourcesSpecs") @Nullable List<String> namedResourcesSpecs) {
         this.discreteResourcesSpecs = discreteResourcesSpecs;
         this.namedResourcesSpecs = namedResourcesSpecs;
     }

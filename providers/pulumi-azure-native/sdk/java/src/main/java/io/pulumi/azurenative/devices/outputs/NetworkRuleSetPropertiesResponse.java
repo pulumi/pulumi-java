@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.NetworkRuleSetIpRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleSetPropertiesResponse {
     /**
      * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
@@ -30,11 +30,11 @@ public final class NetworkRuleSetPropertiesResponse {
      */
     private final List<NetworkRuleSetIpRuleResponse> ipRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRuleSetPropertiesResponse(
-        @OutputCustomType.Parameter("applyToBuiltInEventHubEndpoint") Boolean applyToBuiltInEventHubEndpoint,
-        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
-        @OutputCustomType.Parameter("ipRules") List<NetworkRuleSetIpRuleResponse> ipRules) {
+        @CustomType.Parameter("applyToBuiltInEventHubEndpoint") Boolean applyToBuiltInEventHubEndpoint,
+        @CustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @CustomType.Parameter("ipRules") List<NetworkRuleSetIpRuleResponse> ipRules) {
         this.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;

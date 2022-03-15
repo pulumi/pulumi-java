@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyLoadBalancingUtilizationResponse {
     /**
      * Fraction of backend capacity utilization (set in HTTP(S) load balancing configuration) that the autoscaler maintains. Must be a positive float value. If not defined, the default is 0.8.
@@ -15,8 +15,8 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse {
      */
     private final Double utilizationTarget;
 
-    @OutputCustomType.Constructor
-    private AutoscalingPolicyLoadBalancingUtilizationResponse(@OutputCustomType.Parameter("utilizationTarget") Double utilizationTarget) {
+    @CustomType.Constructor
+    private AutoscalingPolicyLoadBalancingUtilizationResponse(@CustomType.Parameter("utilizationTarget") Double utilizationTarget) {
         this.utilizationTarget = utilizationTarget;
     }
 

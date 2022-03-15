@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customproviders.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssociationResult {
     /**
      * The association id.
@@ -37,13 +37,13 @@ public final class GetAssociationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssociationResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;

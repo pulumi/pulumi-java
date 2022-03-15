@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * The email address
      * 
      */
-    @InputImport(name="emailAddress", required=true)
+    @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
@@ -34,7 +34,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -45,7 +45,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * The password for the email address. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {

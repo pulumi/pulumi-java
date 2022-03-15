@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.analysisservices.inputs;
 
 import io.pulumi.azurenative.analysisservices.inputs.IPv4FirewallRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IPv4FirewallSettingsResponse extends io.pulumi.resources.Invo
      * The indicator of enabling PBI service.
      * 
      */
-    @InputImport(name="enablePowerBIService")
+    @Import(name="enablePowerBIService")
       private final @Nullable Boolean enablePowerBIService;
 
     public Optional<Boolean> getEnablePowerBIService() {
@@ -35,7 +35,7 @@ public final class IPv4FirewallSettingsResponse extends io.pulumi.resources.Invo
      * An array of firewall rules.
      * 
      */
-    @InputImport(name="firewallRules")
+    @Import(name="firewallRules")
       private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
     public List<IPv4FirewallRuleResponse> getFirewallRules() {

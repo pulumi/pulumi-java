@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.folder.inputs.IAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMBindingArgs Empty = new IAMBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMBindingConditionArgs> condition;
 
     public Output<IAMBindingConditionArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
      * 
      */
-    @InputImport(name="folder", required=true)
+    @Import(name="folder", required=true)
       private final Output<String> folder;
 
     public Output<String> getFolder() {
@@ -44,7 +44,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -57,7 +57,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

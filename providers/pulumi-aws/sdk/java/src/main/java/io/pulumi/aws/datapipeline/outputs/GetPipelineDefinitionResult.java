@@ -6,13 +6,13 @@ package io.pulumi.aws.datapipeline.outputs;
 import io.pulumi.aws.datapipeline.outputs.GetPipelineDefinitionParameterObject;
 import io.pulumi.aws.datapipeline.outputs.GetPipelineDefinitionParameterValue;
 import io.pulumi.aws.datapipeline.outputs.GetPipelineDefinitionPipelineObject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineDefinitionResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -36,13 +36,13 @@ public final class GetPipelineDefinitionResult {
      */
     private final List<GetPipelineDefinitionPipelineObject> pipelineObjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineDefinitionResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parameterObjects") List<GetPipelineDefinitionParameterObject> parameterObjects,
-        @OutputCustomType.Parameter("parameterValues") @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
-        @OutputCustomType.Parameter("pipelineId") String pipelineId,
-        @OutputCustomType.Parameter("pipelineObjects") List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parameterObjects") List<GetPipelineDefinitionParameterObject> parameterObjects,
+        @CustomType.Parameter("parameterValues") @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
+        @CustomType.Parameter("pipelineId") String pipelineId,
+        @CustomType.Parameter("pipelineObjects") List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
         this.id = id;
         this.parameterObjects = parameterObjects;
         this.parameterValues = parameterValues;

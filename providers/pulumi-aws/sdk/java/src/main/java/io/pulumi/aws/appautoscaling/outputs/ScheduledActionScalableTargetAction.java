@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appautoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledActionScalableTargetAction {
     /**
      * The maximum capacity. At least one of `max_capacity` or `min_capacity` must be set.
@@ -22,10 +22,10 @@ public final class ScheduledActionScalableTargetAction {
      */
     private final @Nullable Integer minCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledActionScalableTargetAction(
-        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
-        @OutputCustomType.Parameter("minCapacity") @Nullable Integer minCapacity) {
+        @CustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @CustomType.Parameter("minCapacity") @Nullable Integer minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }

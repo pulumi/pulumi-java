@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteResult {
     /**
      * The create time of the resource.
@@ -47,15 +47,15 @@ public final class GetRouteResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("destinationAddress") String destinationAddress,
-        @OutputCustomType.Parameter("destinationPort") Integer destinationPort,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("destinationAddress") String destinationAddress,
+        @CustomType.Parameter("destinationPort") Integer destinationPort,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.destinationAddress = destinationAddress;
         this.destinationPort = destinationPort;

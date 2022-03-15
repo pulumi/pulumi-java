@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CacheEncryptionSettingsResponse extends io.pulumi.resources.I
      * Specifies the location of the key encryption key in Key Vault.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {

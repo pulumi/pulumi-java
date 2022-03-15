@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.DataSourcePrecedenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ProfileEnumValidValuesFormatResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PropertyDefinitionResponse {
     /**
      * Array value separator for properties with isArray set.
@@ -97,24 +97,24 @@ public final class PropertyDefinitionResponse {
      */
     private final @Nullable String schemaItemPropLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PropertyDefinitionResponse(
-        @OutputCustomType.Parameter("arrayValueSeparator") @Nullable String arrayValueSeparator,
-        @OutputCustomType.Parameter("dataSourcePrecedenceRules") List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
-        @OutputCustomType.Parameter("enumValidValues") @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
-        @OutputCustomType.Parameter("fieldName") String fieldName,
-        @OutputCustomType.Parameter("fieldType") String fieldType,
-        @OutputCustomType.Parameter("isArray") @Nullable Boolean isArray,
-        @OutputCustomType.Parameter("isAvailableInGraph") @Nullable Boolean isAvailableInGraph,
-        @OutputCustomType.Parameter("isEnum") @Nullable Boolean isEnum,
-        @OutputCustomType.Parameter("isFlagEnum") @Nullable Boolean isFlagEnum,
-        @OutputCustomType.Parameter("isImage") @Nullable Boolean isImage,
-        @OutputCustomType.Parameter("isLocalizedString") @Nullable Boolean isLocalizedString,
-        @OutputCustomType.Parameter("isName") @Nullable Boolean isName,
-        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
-        @OutputCustomType.Parameter("maxLength") @Nullable Integer maxLength,
-        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
-        @OutputCustomType.Parameter("schemaItemPropLink") @Nullable String schemaItemPropLink) {
+        @CustomType.Parameter("arrayValueSeparator") @Nullable String arrayValueSeparator,
+        @CustomType.Parameter("dataSourcePrecedenceRules") List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
+        @CustomType.Parameter("enumValidValues") @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
+        @CustomType.Parameter("fieldName") String fieldName,
+        @CustomType.Parameter("fieldType") String fieldType,
+        @CustomType.Parameter("isArray") @Nullable Boolean isArray,
+        @CustomType.Parameter("isAvailableInGraph") @Nullable Boolean isAvailableInGraph,
+        @CustomType.Parameter("isEnum") @Nullable Boolean isEnum,
+        @CustomType.Parameter("isFlagEnum") @Nullable Boolean isFlagEnum,
+        @CustomType.Parameter("isImage") @Nullable Boolean isImage,
+        @CustomType.Parameter("isLocalizedString") @Nullable Boolean isLocalizedString,
+        @CustomType.Parameter("isName") @Nullable Boolean isName,
+        @CustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @CustomType.Parameter("maxLength") @Nullable Integer maxLength,
+        @CustomType.Parameter("propertyId") @Nullable String propertyId,
+        @CustomType.Parameter("schemaItemPropLink") @Nullable String schemaItemPropLink) {
         this.arrayValueSeparator = arrayValueSeparator;
         this.dataSourcePrecedenceRules = dataSourcePrecedenceRules;
         this.enumValidValues = enumValidValues;

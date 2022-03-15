@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * Namespace path on a Cache for a Storage Target.
      * 
      */
-    @InputImport(name="namespacePath")
+    @Import(name="namespacePath")
       private final @Nullable Output<String> namespacePath;
 
     public Output<String> getNamespacePath() {
@@ -33,7 +33,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * Name of the access policy applied to this junction.
      * 
      */
-    @InputImport(name="nfsAccessPolicy")
+    @Import(name="nfsAccessPolicy")
       private final @Nullable Output<String> nfsAccessPolicy;
 
     public Output<String> getNfsAccessPolicy() {
@@ -44,7 +44,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * NFS export where targetPath exists.
      * 
      */
-    @InputImport(name="nfsExport")
+    @Import(name="nfsExport")
       private final @Nullable Output<String> nfsExport;
 
     public Output<String> getNfsExport() {
@@ -55,7 +55,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
      * Path in Storage Target to which namespacePath points.
      * 
      */
-    @InputImport(name="targetPath")
+    @Import(name="targetPath")
       private final @Nullable Output<String> targetPath;
 
     public Output<String> getTargetPath() {

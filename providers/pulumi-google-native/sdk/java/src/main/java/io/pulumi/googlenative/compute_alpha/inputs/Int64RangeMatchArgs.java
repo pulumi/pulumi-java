@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
      * The end of the range (exclusive) in signed long integer format.
      * 
      */
-    @InputImport(name="rangeEnd")
+    @Import(name="rangeEnd")
       private final @Nullable Output<String> rangeEnd;
 
     public Output<String> getRangeEnd() {
@@ -33,7 +33,7 @@ public final class Int64RangeMatchArgs extends io.pulumi.resources.ResourceArgs 
      * The start of the range (inclusive) in signed long integer format.
      * 
      */
-    @InputImport(name="rangeStart")
+    @Import(name="rangeStart")
       private final @Nullable Output<String> rangeStart;
 
     public Output<String> getRangeStart() {

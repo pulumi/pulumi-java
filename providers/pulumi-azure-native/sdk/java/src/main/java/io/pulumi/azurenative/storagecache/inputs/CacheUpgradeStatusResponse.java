@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * Version string of the firmware currently installed on this Cache.
      * 
      */
-    @InputImport(name="currentFirmwareVersion", required=true)
+    @Import(name="currentFirmwareVersion", required=true)
       private final String currentFirmwareVersion;
 
     public String getCurrentFirmwareVersion() {
@@ -31,7 +31,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * Time at which the pending firmware update will automatically be installed on the Cache.
      * 
      */
-    @InputImport(name="firmwareUpdateDeadline", required=true)
+    @Import(name="firmwareUpdateDeadline", required=true)
       private final String firmwareUpdateDeadline;
 
     public String getFirmwareUpdateDeadline() {
@@ -42,7 +42,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
      * 
      */
-    @InputImport(name="firmwareUpdateStatus", required=true)
+    @Import(name="firmwareUpdateStatus", required=true)
       private final String firmwareUpdateStatus;
 
     public String getFirmwareUpdateStatus() {
@@ -53,7 +53,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * Time of the last successful firmware update.
      * 
      */
-    @InputImport(name="lastFirmwareUpdate", required=true)
+    @Import(name="lastFirmwareUpdate", required=true)
       private final String lastFirmwareUpdate;
 
     public String getLastFirmwareUpdate() {
@@ -64,7 +64,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * When firmwareUpdateAvailable is true, this field holds the version string for the update.
      * 
      */
-    @InputImport(name="pendingFirmwareVersion", required=true)
+    @Import(name="pendingFirmwareVersion", required=true)
       private final String pendingFirmwareVersion;
 
     public String getPendingFirmwareVersion() {

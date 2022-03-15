@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaEventSourceType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVersionLambdaEventSource {
     private final @Nullable String topic;
     private final @Nullable ComponentVersionLambdaEventSourceType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVersionLambdaEventSource(
-        @OutputCustomType.Parameter("topic") @Nullable String topic,
-        @OutputCustomType.Parameter("type") @Nullable ComponentVersionLambdaEventSourceType type) {
+        @CustomType.Parameter("topic") @Nullable String topic,
+        @CustomType.Parameter("type") @Nullable ComponentVersionLambdaEventSourceType type) {
         this.topic = topic;
         this.type = type;
     }

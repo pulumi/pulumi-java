@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.ExternalDataConfigurationResponse;
@@ -21,7 +21,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableResult {
     /**
      * [Beta] Clustering specification for the table. Must be specified with partitioning, data in the table will be first partitioned and subsequently clustered.
@@ -169,37 +169,37 @@ public final class GetTableResult {
      */
     private final ViewDefinitionResponse view;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableResult(
-        @OutputCustomType.Parameter("clustering") ClusteringResponse clustering,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("defaultCollation") String defaultCollation,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("encryptionConfiguration") EncryptionConfigurationResponse encryptionConfiguration,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("externalDataConfiguration") ExternalDataConfigurationResponse externalDataConfiguration,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("materializedView") MaterializedViewDefinitionResponse materializedView,
-        @OutputCustomType.Parameter("model") ModelDefinitionResponse model,
-        @OutputCustomType.Parameter("numBytes") String numBytes,
-        @OutputCustomType.Parameter("numLongTermBytes") String numLongTermBytes,
-        @OutputCustomType.Parameter("numPhysicalBytes") String numPhysicalBytes,
-        @OutputCustomType.Parameter("numRows") String numRows,
-        @OutputCustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
-        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
-        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("snapshotDefinition") SnapshotDefinitionResponse snapshotDefinition,
-        @OutputCustomType.Parameter("streamingBuffer") StreamingbufferResponse streamingBuffer,
-        @OutputCustomType.Parameter("tableReference") TableReferenceResponse tableReference,
-        @OutputCustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("view") ViewDefinitionResponse view) {
+        @CustomType.Parameter("clustering") ClusteringResponse clustering,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("defaultCollation") String defaultCollation,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("encryptionConfiguration") EncryptionConfigurationResponse encryptionConfiguration,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("externalDataConfiguration") ExternalDataConfigurationResponse externalDataConfiguration,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("materializedView") MaterializedViewDefinitionResponse materializedView,
+        @CustomType.Parameter("model") ModelDefinitionResponse model,
+        @CustomType.Parameter("numBytes") String numBytes,
+        @CustomType.Parameter("numLongTermBytes") String numLongTermBytes,
+        @CustomType.Parameter("numPhysicalBytes") String numPhysicalBytes,
+        @CustomType.Parameter("numRows") String numRows,
+        @CustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
+        @CustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @CustomType.Parameter("schema") TableSchemaResponse schema,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("snapshotDefinition") SnapshotDefinitionResponse snapshotDefinition,
+        @CustomType.Parameter("streamingBuffer") StreamingbufferResponse streamingBuffer,
+        @CustomType.Parameter("tableReference") TableReferenceResponse tableReference,
+        @CustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("view") ViewDefinitionResponse view) {
         this.clustering = clustering;
         this.creationTime = creationTime;
         this.defaultCollation = defaultCollation;

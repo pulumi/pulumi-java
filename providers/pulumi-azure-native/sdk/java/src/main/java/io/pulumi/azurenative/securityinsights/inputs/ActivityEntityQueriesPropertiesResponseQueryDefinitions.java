@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions exten
      * The Activity query to run on a given entity
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {

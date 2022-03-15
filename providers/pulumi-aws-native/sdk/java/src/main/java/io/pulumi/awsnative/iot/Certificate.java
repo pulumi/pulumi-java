@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.CertificateArgs;
 import io.pulumi.awsnative.iot.enums.CertificateMode;
 import io.pulumi.awsnative.iot.enums.CertificateStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,37 +19,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iot:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="cACertificatePem", type=String.class, parameters={})
+    @Export(name="cACertificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> cACertificatePem;
 
     public Output</* @Nullable */ String> getCACertificatePem() {
         return this.cACertificatePem;
     }
-    @OutputExport(name="certificateMode", type=CertificateMode.class, parameters={})
+    @Export(name="certificateMode", type=CertificateMode.class, parameters={})
     private Output</* @Nullable */ CertificateMode> certificateMode;
 
     public Output</* @Nullable */ CertificateMode> getCertificateMode() {
         return this.certificateMode;
     }
-    @OutputExport(name="certificatePem", type=String.class, parameters={})
+    @Export(name="certificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificatePem;
 
     public Output</* @Nullable */ String> getCertificatePem() {
         return this.certificatePem;
     }
-    @OutputExport(name="certificateSigningRequest", type=String.class, parameters={})
+    @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateSigningRequest;
 
     public Output</* @Nullable */ String> getCertificateSigningRequest() {
         return this.certificateSigningRequest;
     }
-    @OutputExport(name="status", type=CertificateStatus.class, parameters={})
+    @Export(name="status", type=CertificateStatus.class, parameters={})
     private Output<CertificateStatus> status;
 
     public Output<CertificateStatus> getStatus() {

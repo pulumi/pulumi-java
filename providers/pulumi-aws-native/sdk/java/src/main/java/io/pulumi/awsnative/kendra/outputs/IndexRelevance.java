@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexOrder;
 import io.pulumi.awsnative.kendra.outputs.IndexValueImportanceItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexRelevance {
     private final @Nullable String duration;
     private final @Nullable Boolean freshness;
@@ -22,13 +22,13 @@ public final class IndexRelevance {
     private final @Nullable IndexOrder rankOrder;
     private final @Nullable List<IndexValueImportanceItem> valueImportanceItems;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexRelevance(
-        @OutputCustomType.Parameter("duration") @Nullable String duration,
-        @OutputCustomType.Parameter("freshness") @Nullable Boolean freshness,
-        @OutputCustomType.Parameter("importance") @Nullable Integer importance,
-        @OutputCustomType.Parameter("rankOrder") @Nullable IndexOrder rankOrder,
-        @OutputCustomType.Parameter("valueImportanceItems") @Nullable List<IndexValueImportanceItem> valueImportanceItems) {
+        @CustomType.Parameter("duration") @Nullable String duration,
+        @CustomType.Parameter("freshness") @Nullable Boolean freshness,
+        @CustomType.Parameter("importance") @Nullable Integer importance,
+        @CustomType.Parameter("rankOrder") @Nullable IndexOrder rankOrder,
+        @CustomType.Parameter("valueImportanceItems") @Nullable List<IndexValueImportanceItem> valueImportanceItems) {
         this.duration = duration;
         this.freshness = freshness;
         this.importance = importance;

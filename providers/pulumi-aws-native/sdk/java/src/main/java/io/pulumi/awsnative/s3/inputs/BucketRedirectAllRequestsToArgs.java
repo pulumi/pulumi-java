@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectAllRequestsToProtocol;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
      * Name of the host where requests are redirected.
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -34,7 +34,7 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<BucketRedirectAllRequestsToProtocol> protocol;
 
     public Output<BucketRedirectAllRequestsToProtocol> getProtocol() {

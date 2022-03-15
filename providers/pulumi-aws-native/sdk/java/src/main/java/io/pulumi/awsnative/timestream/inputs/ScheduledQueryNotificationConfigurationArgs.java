@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQuerySnsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
 
     public static final ScheduledQueryNotificationConfigurationArgs Empty = new ScheduledQueryNotificationConfigurationArgs();
 
-    @InputImport(name="snsConfiguration", required=true)
+    @Import(name="snsConfiguration", required=true)
       private final Output<ScheduledQuerySnsConfigurationArgs> snsConfiguration;
 
     public Output<ScheduledQuerySnsConfigurationArgs> getSnsConfiguration() {

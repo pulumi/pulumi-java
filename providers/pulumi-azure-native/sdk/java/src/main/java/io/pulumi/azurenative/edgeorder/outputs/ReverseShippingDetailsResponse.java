@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReverseShippingDetailsResponse {
     /**
      * Carrier Name for display purpose. Not to be used for any processing.
@@ -35,13 +35,13 @@ public final class ReverseShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReverseShippingDetailsResponse(
-        @OutputCustomType.Parameter("carrierDisplayName") String carrierDisplayName,
-        @OutputCustomType.Parameter("carrierName") String carrierName,
-        @OutputCustomType.Parameter("sasKeyForLabel") String sasKeyForLabel,
-        @OutputCustomType.Parameter("trackingId") String trackingId,
-        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
+        @CustomType.Parameter("carrierDisplayName") String carrierDisplayName,
+        @CustomType.Parameter("carrierName") String carrierName,
+        @CustomType.Parameter("sasKeyForLabel") String sasKeyForLabel,
+        @CustomType.Parameter("trackingId") String trackingId,
+        @CustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierDisplayName = carrierDisplayName;
         this.carrierName = carrierName;
         this.sasKeyForLabel = sasKeyForLabel;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.Action;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * The action of virtual network rule.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,Action>> action;
 
     public Output<Either<String,Action>> getAction() {
@@ -35,7 +35,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
      * 
      */
-    @InputImport(name="virtualNetworkResourceId", required=true)
+    @Import(name="virtualNetworkResourceId", required=true)
       private final Output<String> virtualNetworkResourceId;
 
     public Output<String> getVirtualNetworkResourceId() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.container_v1beta1.NodePoolArgs;
@@ -31,7 +31,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
      * 
      */
-    @OutputExport(name="autoscaling", type=NodePoolAutoscalingResponse.class, parameters={})
+    @Export(name="autoscaling", type=NodePoolAutoscalingResponse.class, parameters={})
     private Output<NodePoolAutoscalingResponse> autoscaling;
 
     /**
@@ -45,7 +45,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * Which conditions caused the current node pool state.
      * 
      */
-    @OutputExport(name="conditions", type=List.class, parameters={StatusConditionResponse.class})
+    @Export(name="conditions", type=List.class, parameters={StatusConditionResponse.class})
     private Output<List<StatusConditionResponse>> conditions;
 
     /**
@@ -59,7 +59,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The node configuration of the pool.
      * 
      */
-    @OutputExport(name="config", type=NodeConfigResponse.class, parameters={})
+    @Export(name="config", type=NodeConfigResponse.class, parameters={})
     private Output<NodeConfigResponse> config;
 
     /**
@@ -73,7 +73,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
      * 
      */
-    @OutputExport(name="initialNodeCount", type=Integer.class, parameters={})
+    @Export(name="initialNodeCount", type=Integer.class, parameters={})
     private Output<Integer> initialNodeCount;
 
     /**
@@ -87,7 +87,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
      * 
      */
-    @OutputExport(name="instanceGroupUrls", type=List.class, parameters={String.class})
+    @Export(name="instanceGroupUrls", type=List.class, parameters={String.class})
     private Output<List<String>> instanceGroupUrls;
 
     /**
@@ -101,7 +101,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={String.class})
+    @Export(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
     /**
@@ -115,7 +115,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * NodeManagement configuration for this NodePool.
      * 
      */
-    @OutputExport(name="management", type=NodeManagementResponse.class, parameters={})
+    @Export(name="management", type=NodeManagementResponse.class, parameters={})
     private Output<NodeManagementResponse> management;
 
     /**
@@ -129,7 +129,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    @OutputExport(name="maxPodsConstraint", type=MaxPodsConstraintResponse.class, parameters={})
+    @Export(name="maxPodsConstraint", type=MaxPodsConstraintResponse.class, parameters={})
     private Output<MaxPodsConstraintResponse> maxPodsConstraint;
 
     /**
@@ -143,7 +143,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The name of the node pool.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -157,7 +157,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
      * 
      */
-    @OutputExport(name="networkConfig", type=NodeNetworkConfigResponse.class, parameters={})
+    @Export(name="networkConfig", type=NodeNetworkConfigResponse.class, parameters={})
     private Output<NodeNetworkConfigResponse> networkConfig;
 
     /**
@@ -171,7 +171,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * Specifies the node placement policy.
      * 
      */
-    @OutputExport(name="placementPolicy", type=PlacementPolicyResponse.class, parameters={})
+    @Export(name="placementPolicy", type=PlacementPolicyResponse.class, parameters={})
     private Output<PlacementPolicyResponse> placementPolicy;
 
     /**
@@ -185,7 +185,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * [Output only] The pod CIDR block size per node in this node pool.
      * 
      */
-    @OutputExport(name="podIpv4CidrSize", type=Integer.class, parameters={})
+    @Export(name="podIpv4CidrSize", type=Integer.class, parameters={})
     private Output<Integer> podIpv4CidrSize;
 
     /**
@@ -199,7 +199,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * [Output only] Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -213,7 +213,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * [Output only] The status of the nodes in this pool instance.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -227,7 +227,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * Upgrade settings control disruption and speed of the upgrade.
      * 
      */
-    @OutputExport(name="upgradeSettings", type=UpgradeSettingsResponse.class, parameters={})
+    @Export(name="upgradeSettings", type=UpgradeSettingsResponse.class, parameters={})
     private Output<UpgradeSettingsResponse> upgradeSettings;
 
     /**
@@ -241,7 +241,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * The version of the Kubernetes of this node.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

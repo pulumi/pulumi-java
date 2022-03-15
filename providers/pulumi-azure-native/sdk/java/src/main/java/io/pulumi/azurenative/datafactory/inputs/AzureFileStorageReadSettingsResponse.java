@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="deleteFilesAfterCompletion")
+    @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Object deleteFilesAfterCompletion;
 
     public Optional<Object> getDeleteFilesAfterCompletion() {
@@ -35,7 +35,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -46,7 +46,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Indicates whether to enable partition discovery.
      * 
      */
-    @InputImport(name="enablePartitionDiscovery")
+    @Import(name="enablePartitionDiscovery")
       private final @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> getEnablePartitionDiscovery() {
@@ -57,7 +57,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileListPath")
+    @Import(name="fileListPath")
       private final @Nullable Object fileListPath;
 
     public Optional<Object> getFileListPath() {
@@ -68,7 +68,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -79,7 +79,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="modifiedDatetimeEnd")
+    @Import(name="modifiedDatetimeEnd")
       private final @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> getModifiedDatetimeEnd() {
@@ -90,7 +90,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="modifiedDatetimeStart")
+    @Import(name="modifiedDatetimeStart")
       private final @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> getModifiedDatetimeStart() {
@@ -101,7 +101,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionRootPath")
+    @Import(name="partitionRootPath")
       private final @Nullable Object partitionRootPath;
 
     public Optional<Object> getPartitionRootPath() {
@@ -112,7 +112,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * The prefix filter for the Azure File name starting from root path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Object prefix;
 
     public Optional<Object> getPrefix() {
@@ -123,7 +123,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="recursive")
+    @Import(name="recursive")
       private final @Nullable Object recursive;
 
     public Optional<Object> getRecursive() {
@@ -135,7 +135,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Expected value is 'AzureFileStorageReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -146,7 +146,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Azure File Storage wildcardFileName. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="wildcardFileName")
+    @Import(name="wildcardFileName")
       private final @Nullable Object wildcardFileName;
 
     public Optional<Object> getWildcardFileName() {
@@ -157,7 +157,7 @@ public final class AzureFileStorageReadSettingsResponse extends io.pulumi.resour
      * Azure File Storage wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="wildcardFolderPath")
+    @Import(name="wildcardFolderPath")
       private final @Nullable Object wildcardFolderPath;
 
     public Optional<Object> getWildcardFolderPath() {

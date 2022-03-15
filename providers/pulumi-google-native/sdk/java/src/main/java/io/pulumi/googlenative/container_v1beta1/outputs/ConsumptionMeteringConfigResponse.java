@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConsumptionMeteringConfigResponse {
     /**
      * Whether to enable consumption metering for this cluster. If enabled, a second BigQuery table will be created to hold resource consumption records.
@@ -15,8 +15,8 @@ public final class ConsumptionMeteringConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ConsumptionMeteringConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private ConsumptionMeteringConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

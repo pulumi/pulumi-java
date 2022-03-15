@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * Indicates whether the volume is deleted on instance termination.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
@@ -35,7 +35,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * Specifies whether the volume should be encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -46,7 +46,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * The number of input/output (I/O) operations per second (IOPS) to provision for the volume.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -57,7 +57,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * The snapshot ID of the volume to use.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -68,7 +68,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * The throughput (MiBps) to provision for a gp3 volume.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
@@ -79,7 +79,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * The volume size, in GiBs.
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
@@ -90,7 +90,7 @@ public final class LaunchConfigurationBlockDeviceArgs extends io.pulumi.resource
      * The volume type.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigArgs;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AuthorityConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subjectConfig", required=true)
+    @Import(name="subjectConfig", required=true)
       private final Output<AuthorityConfigSubjectConfigArgs> subjectConfig;
 
     public Output<AuthorityConfigSubjectConfigArgs> getSubjectConfig() {
@@ -31,7 +31,7 @@ public final class AuthorityConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="x509Config", required=true)
+    @Import(name="x509Config", required=true)
       private final Output<AuthorityConfigX509ConfigArgs> x509Config;
 
     public Output<AuthorityConfigX509ConfigArgs> getX509Config() {

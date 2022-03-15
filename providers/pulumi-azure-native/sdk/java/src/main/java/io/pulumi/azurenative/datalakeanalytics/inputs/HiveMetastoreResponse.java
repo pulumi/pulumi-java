@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The databaseName for the Hive MetaStore
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -27,7 +27,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The resource identifier.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -38,7 +38,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -49,7 +49,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The current state of the NestedResource
      * 
      */
-    @InputImport(name="nestedResourceProvisioningState", required=true)
+    @Import(name="nestedResourceProvisioningState", required=true)
       private final String nestedResourceProvisioningState;
 
     public String getNestedResourceProvisioningState() {
@@ -60,7 +60,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The password for the Hive MetaStore
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -71,7 +71,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The runtimeVersion for the Hive MetaStore
      * 
      */
-    @InputImport(name="runtimeVersion", required=true)
+    @Import(name="runtimeVersion", required=true)
       private final String runtimeVersion;
 
     public String getRuntimeVersion() {
@@ -82,7 +82,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The serverUri for the Hive MetaStore
      * 
      */
-    @InputImport(name="serverUri", required=true)
+    @Import(name="serverUri", required=true)
       private final String serverUri;
 
     public String getServerUri() {
@@ -93,7 +93,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -104,7 +104,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * The userName for the Hive MetaStore
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

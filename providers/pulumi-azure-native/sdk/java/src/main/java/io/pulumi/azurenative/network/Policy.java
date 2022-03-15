@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.SecurityPolicyLinkResponse;
 import io.pulumi.azurenative.network.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes custom rules inside the policy.
      * 
      */
-    @OutputExport(name="customRules", type=CustomRuleListResponse.class, parameters={})
+    @Export(name="customRules", type=CustomRuleListResponse.class, parameters={})
     private Output</* @Nullable */ CustomRuleListResponse> customRules;
 
     /**
@@ -56,7 +56,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -70,7 +70,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes Frontend Endpoints associated with this Web Application Firewall policy.
      * 
      */
-    @OutputExport(name="frontendEndpointLinks", type=List.class, parameters={FrontendEndpointLinkResponse.class})
+    @Export(name="frontendEndpointLinks", type=List.class, parameters={FrontendEndpointLinkResponse.class})
     private Output<List<FrontendEndpointLinkResponse>> frontendEndpointLinks;
 
     /**
@@ -84,7 +84,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -98,7 +98,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes managed rules inside the policy.
      * 
      */
-    @OutputExport(name="managedRules", type=ManagedRuleSetListResponse.class, parameters={})
+    @Export(name="managedRules", type=ManagedRuleSetListResponse.class, parameters={})
     private Output</* @Nullable */ ManagedRuleSetListResponse> managedRules;
 
     /**
@@ -112,7 +112,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes settings for the policy.
      * 
      */
-    @OutputExport(name="policySettings", type=FrontDoorPolicySettingsResponse.class, parameters={})
+    @Export(name="policySettings", type=FrontDoorPolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ FrontDoorPolicySettingsResponse> policySettings;
 
     /**
@@ -140,7 +140,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Provisioning state of the policy.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     public Output<String> getResourceState() {
@@ -160,7 +160,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes Routing Rules associated with this Web Application Firewall policy.
      * 
      */
-    @OutputExport(name="routingRuleLinks", type=List.class, parameters={RoutingRuleLinkResponse.class})
+    @Export(name="routingRuleLinks", type=List.class, parameters={RoutingRuleLinkResponse.class})
     private Output<List<RoutingRuleLinkResponse>> routingRuleLinks;
 
     /**
@@ -174,7 +174,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes Security Policy associated with this Web Application Firewall policy.
      * 
      */
-    @OutputExport(name="securityPolicyLinks", type=List.class, parameters={SecurityPolicyLinkResponse.class})
+    @Export(name="securityPolicyLinks", type=List.class, parameters={SecurityPolicyLinkResponse.class})
     private Output<List<SecurityPolicyLinkResponse>> securityPolicyLinks;
 
     /**
@@ -188,7 +188,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -202,7 +202,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -216,7 +216,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

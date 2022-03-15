@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * Search results table's Description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp to end the search by (UTC)
      * 
      */
-    @InputImport(name="endSearchTime")
+    @Import(name="endSearchTime")
       private final @Nullable Output<String> endSearchTime;
 
     public Output<String> getEndSearchTime() {
@@ -45,7 +45,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * Limit the search job to return up to specified number of rows.
      * 
      */
-    @InputImport(name="limit")
+    @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
     public Output<Integer> getLimit() {
@@ -56,7 +56,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * Search job query.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -67,7 +67,7 @@ public final class SearchResultsArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp to start the search from (UTC)
      * 
      */
-    @InputImport(name="startSearchTime")
+    @Import(name="startSearchTime")
       private final @Nullable Output<String> startSearchTime;
 
     public Output<String> getStartSearchTime() {

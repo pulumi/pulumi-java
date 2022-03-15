@@ -6,14 +6,14 @@ package io.pulumi.aws.cloudfront.outputs;
 import io.pulumi.aws.cloudfront.outputs.GetOriginRequestPolicyCookiesConfig;
 import io.pulumi.aws.cloudfront.outputs.GetOriginRequestPolicyHeadersConfig;
 import io.pulumi.aws.cloudfront.outputs.GetOriginRequestPolicyQueryStringsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOriginRequestPolicyResult {
     /**
      * Comment to describe the origin request policy.
@@ -43,15 +43,15 @@ public final class GetOriginRequestPolicyResult {
      */
     private final List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOriginRequestPolicyResult(
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("cookiesConfigs") List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("headersConfigs") List<GetOriginRequestPolicyHeadersConfig> headersConfigs,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("queryStringsConfigs") List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("cookiesConfigs") List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("headersConfigs") List<GetOriginRequestPolicyHeadersConfig> headersConfigs,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("queryStringsConfigs") List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
         this.comment = comment;
         this.cookiesConfigs = cookiesConfigs;
         this.etag = etag;

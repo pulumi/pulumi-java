@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * The domain for the cluster (immutable).
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable String domain;
 
     public Optional<String> getDomain() {
@@ -33,7 +33,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * The pull secret for the cluster (immutable).
      * 
      */
-    @InputImport(name="pullSecret")
+    @Import(name="pullSecret")
       private final @Nullable String pullSecret;
 
     public Optional<String> getPullSecret() {
@@ -44,7 +44,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * The ID of the cluster resource group (immutable).
      * 
      */
-    @InputImport(name="resourceGroupId")
+    @Import(name="resourceGroupId")
       private final @Nullable String resourceGroupId;
 
     public Optional<String> getResourceGroupId() {
@@ -55,7 +55,7 @@ public final class ClusterProfileResponse extends io.pulumi.resources.InvokeArgs
      * The version of the cluster (immutable).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

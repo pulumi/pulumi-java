@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IPAllocationPolicyResponse {
     /**
      * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
@@ -61,18 +61,18 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean useRoutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPAllocationPolicyResponse(
-        @OutputCustomType.Parameter("allowRouteOverlap") Boolean allowRouteOverlap,
-        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
-        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
-        @OutputCustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
-        @OutputCustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
-        @OutputCustomType.Parameter("subnetworkName") String subnetworkName,
-        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases,
-        @OutputCustomType.Parameter("useRoutes") Boolean useRoutes) {
+        @CustomType.Parameter("allowRouteOverlap") Boolean allowRouteOverlap,
+        @CustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @CustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @CustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
+        @CustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
+        @CustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @CustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @CustomType.Parameter("subnetworkName") String subnetworkName,
+        @CustomType.Parameter("useIpAliases") Boolean useIpAliases,
+        @CustomType.Parameter("useRoutes") Boolean useRoutes) {
         this.allowRouteOverlap = allowRouteOverlap;
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;

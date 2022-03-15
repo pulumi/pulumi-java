@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoCreationPropertiesResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoPublishingOptionsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * An array of upstream node references within the topology to be used as inputs for this node.
      * 
      */
-    @InputImport(name="inputs", required=true)
+    @Import(name="inputs", required=true)
       private final List<NodeInputResponse> inputs;
 
     public List<NodeInputResponse> getInputs() {
@@ -37,7 +37,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Node name. Must be unique within the topology.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -49,7 +49,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -60,7 +60,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Optional video properties to be used in case a new video resource needs to be created on the service.
      * 
      */
-    @InputImport(name="videoCreationProperties")
+    @Import(name="videoCreationProperties")
       private final @Nullable VideoCreationPropertiesResponse videoCreationProperties;
 
     public Optional<VideoCreationPropertiesResponse> getVideoCreationProperties() {
@@ -71,7 +71,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Name of a new or existing video resource used to capture and publish content. Note: if downstream of RTSP source, and if disableArchive is set to true, then no content is archived.
      * 
      */
-    @InputImport(name="videoName", required=true)
+    @Import(name="videoName", required=true)
       private final String videoName;
 
     public String getVideoName() {
@@ -82,7 +82,7 @@ public final class VideoSinkResponse extends io.pulumi.resources.InvokeArgs {
      * Options to change how the video sink publishes content via the video resource. This property is only allowed for topologies where "kind" is set to "live".
      * 
      */
-    @InputImport(name="videoPublishingOptions")
+    @Import(name="videoPublishingOptions")
       private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
     public Optional<VideoPublishingOptionsResponse> getVideoPublishingOptions() {

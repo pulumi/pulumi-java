@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTagKeyResult {
     /**
      * Creation time.
@@ -50,16 +50,16 @@ public final class GetTagKeyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTagKeyResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespacedName") String namespacedName,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("shortName") String shortName,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespacedName") String namespacedName,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("shortName") String shortName,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.etag = etag;

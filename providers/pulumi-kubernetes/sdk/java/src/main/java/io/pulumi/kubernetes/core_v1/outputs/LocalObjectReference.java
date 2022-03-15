@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocalObjectReference {
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
@@ -17,8 +17,8 @@ public final class LocalObjectReference {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private LocalObjectReference(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private LocalObjectReference(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

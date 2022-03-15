@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuilderConfigResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.MetadataResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.RecipeResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InTotoProvenanceResponse {
     /**
      * required
@@ -30,12 +30,12 @@ public final class InTotoProvenanceResponse {
      */
     private final RecipeResponse recipe;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InTotoProvenanceResponse(
-        @OutputCustomType.Parameter("builderConfig") BuilderConfigResponse builderConfig,
-        @OutputCustomType.Parameter("materials") List<String> materials,
-        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
-        @OutputCustomType.Parameter("recipe") RecipeResponse recipe) {
+        @CustomType.Parameter("builderConfig") BuilderConfigResponse builderConfig,
+        @CustomType.Parameter("materials") List<String> materials,
+        @CustomType.Parameter("metadata") MetadataResponse metadata,
+        @CustomType.Parameter("recipe") RecipeResponse recipe) {
         this.builderConfig = builderConfig;
         this.materials = materials;
         this.metadata = metadata;

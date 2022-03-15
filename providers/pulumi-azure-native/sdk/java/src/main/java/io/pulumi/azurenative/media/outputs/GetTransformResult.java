@@ -5,14 +5,14 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.azurenative.media.outputs.TransformOutputResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransformResult {
     /**
      * The UTC date and time when the Transform was created, in 'YYYY-MM-DDThh:mm:ssZ' format.
@@ -55,16 +55,16 @@ public final class GetTransformResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransformResult(
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputs") List<TransformOutputResponse> outputs,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputs") List<TransformOutputResponse> outputs,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.created = created;
         this.description = description;
         this.id = id;

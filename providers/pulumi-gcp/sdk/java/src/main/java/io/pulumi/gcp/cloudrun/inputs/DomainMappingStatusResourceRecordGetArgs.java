@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class DomainMappingStatusResourceRecordGetArgs extends io.pulumi.re
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="rrdata")
+    @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
 
     public Output<String> getRrdata() {
         return this.rrdata == null ? Output.empty() : this.rrdata;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

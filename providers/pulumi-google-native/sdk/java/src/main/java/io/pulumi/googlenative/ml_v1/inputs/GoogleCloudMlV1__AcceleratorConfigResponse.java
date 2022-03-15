@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
      * The number of accelerators to attach to each machine running the job.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final String count;
 
     public String getCount() {
@@ -31,7 +31,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse extends io.pulumi.
      * The type of accelerator to use.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

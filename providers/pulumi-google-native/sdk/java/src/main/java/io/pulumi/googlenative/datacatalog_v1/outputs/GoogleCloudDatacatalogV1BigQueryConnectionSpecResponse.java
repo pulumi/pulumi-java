@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
     /**
      * Specification for the BigQuery connection to a Cloud SQL instance.
@@ -27,11 +27,11 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
      */
     private final Boolean hasCredential;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(
-        @OutputCustomType.Parameter("cloudSql") GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
-        @OutputCustomType.Parameter("connectionType") String connectionType,
-        @OutputCustomType.Parameter("hasCredential") Boolean hasCredential) {
+        @CustomType.Parameter("cloudSql") GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
+        @CustomType.Parameter("connectionType") String connectionType,
+        @CustomType.Parameter("hasCredential") Boolean hasCredential) {
         this.cloudSql = cloudSql;
         this.connectionType = connectionType;
         this.hasCredential = hasCredential;

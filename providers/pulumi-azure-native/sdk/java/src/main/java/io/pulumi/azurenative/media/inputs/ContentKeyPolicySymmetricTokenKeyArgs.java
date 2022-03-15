@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
      * The key value of the key
      * 
      */
-    @InputImport(name="keyValue", required=true)
+    @Import(name="keyValue", required=true)
       private final Output<String> keyValue;
 
     public Output<String> getKeyValue() {
@@ -33,7 +33,7 @@ public final class ContentKeyPolicySymmetricTokenKeyArgs extends io.pulumi.resou
      * Expected value is '#Microsoft.Media.ContentKeyPolicySymmetricTokenKey'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

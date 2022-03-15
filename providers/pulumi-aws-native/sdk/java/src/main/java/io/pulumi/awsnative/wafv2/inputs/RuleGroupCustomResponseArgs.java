@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +25,14 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
      * Custom response body key.
      * 
      */
-    @InputImport(name="customResponseBodyKey")
+    @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
 
     public Output<String> getCustomResponseBodyKey() {
         return this.customResponseBodyKey == null ? Output.empty() : this.customResponseBodyKey;
     }
 
-    @InputImport(name="responseCode", required=true)
+    @Import(name="responseCode", required=true)
       private final Output<Integer> responseCode;
 
     public Output<Integer> getResponseCode() {
@@ -43,7 +43,7 @@ public final class RuleGroupCustomResponseArgs extends io.pulumi.resources.Resou
      * Collection of HTTP headers.
      * 
      */
-    @InputImport(name="responseHeaders")
+    @Import(name="responseHeaders")
       private final @Nullable Output<List<RuleGroupCustomHTTPHeaderArgs>> responseHeaders;
 
     public Output<List<RuleGroupCustomHTTPHeaderArgs>> getResponseHeaders() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.TargetEligibilityResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FailoverTargetResponse {
     /**
      * The amount of free local storage available on the device in bytes.
@@ -70,19 +70,19 @@ public final class FailoverTargetResponse {
      */
     private final @Nullable Integer volumesCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FailoverTargetResponse(
-        @OutputCustomType.Parameter("availableLocalStorageInBytes") @Nullable Double availableLocalStorageInBytes,
-        @OutputCustomType.Parameter("availableTieredStorageInBytes") @Nullable Double availableTieredStorageInBytes,
-        @OutputCustomType.Parameter("dataContainersCount") @Nullable Integer dataContainersCount,
-        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
-        @OutputCustomType.Parameter("deviceLocation") @Nullable String deviceLocation,
-        @OutputCustomType.Parameter("deviceSoftwareVersion") @Nullable String deviceSoftwareVersion,
-        @OutputCustomType.Parameter("deviceStatus") @Nullable String deviceStatus,
-        @OutputCustomType.Parameter("eligibilityResult") @Nullable TargetEligibilityResultResponse eligibilityResult,
-        @OutputCustomType.Parameter("friendlyDeviceSoftwareVersion") @Nullable String friendlyDeviceSoftwareVersion,
-        @OutputCustomType.Parameter("modelDescription") @Nullable String modelDescription,
-        @OutputCustomType.Parameter("volumesCount") @Nullable Integer volumesCount) {
+        @CustomType.Parameter("availableLocalStorageInBytes") @Nullable Double availableLocalStorageInBytes,
+        @CustomType.Parameter("availableTieredStorageInBytes") @Nullable Double availableTieredStorageInBytes,
+        @CustomType.Parameter("dataContainersCount") @Nullable Integer dataContainersCount,
+        @CustomType.Parameter("deviceId") @Nullable String deviceId,
+        @CustomType.Parameter("deviceLocation") @Nullable String deviceLocation,
+        @CustomType.Parameter("deviceSoftwareVersion") @Nullable String deviceSoftwareVersion,
+        @CustomType.Parameter("deviceStatus") @Nullable String deviceStatus,
+        @CustomType.Parameter("eligibilityResult") @Nullable TargetEligibilityResultResponse eligibilityResult,
+        @CustomType.Parameter("friendlyDeviceSoftwareVersion") @Nullable String friendlyDeviceSoftwareVersion,
+        @CustomType.Parameter("modelDescription") @Nullable String modelDescription,
+        @CustomType.Parameter("volumesCount") @Nullable Integer volumesCount) {
         this.availableLocalStorageInBytes = availableLocalStorageInBytes;
         this.availableTieredStorageInBytes = availableTieredStorageInBytes;
         this.dataContainersCount = dataContainersCount;

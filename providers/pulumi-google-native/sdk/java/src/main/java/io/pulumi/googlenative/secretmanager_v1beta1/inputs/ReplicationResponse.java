@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.AutomaticResponse;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.UserManagedResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
      * The Secret will automatically be replicated without any restrictions.
      * 
      */
-    @InputImport(name="automatic", required=true)
+    @Import(name="automatic", required=true)
       private final AutomaticResponse automatic;
 
     public AutomaticResponse getAutomatic() {
@@ -32,7 +32,7 @@ public final class ReplicationResponse extends io.pulumi.resources.InvokeArgs {
      * The Secret will only be replicated into the locations specified.
      * 
      */
-    @InputImport(name="userManaged", required=true)
+    @Import(name="userManaged", required=true)
       private final UserManagedResponse userManaged;
 
     public UserManagedResponse getUserManaged() {

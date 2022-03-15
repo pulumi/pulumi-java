@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
      * The name of the notebook workspace resource.
      * 
      */
-    @InputImport(name="notebookWorkspaceName")
+    @Import(name="notebookWorkspaceName")
       private final @Nullable Output<String> notebookWorkspaceName;
 
     public Output<String> getNotebookWorkspaceName() {
@@ -40,7 +40,7 @@ public final class NotebookWorkspaceArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

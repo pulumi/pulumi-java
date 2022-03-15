@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIotHubDataConnectionResult {
     /**
      * The iot hub consumer group.
@@ -79,21 +79,21 @@ public final class GetIotHubDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIotHubDataConnectionResult(
-        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
-        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
-        @OutputCustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("iotHubResourceId") String iotHubResourceId,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sharedAccessPolicyName") String sharedAccessPolicyName,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("consumerGroup") String consumerGroup,
+        @CustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @CustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("iotHubResourceId") String iotHubResourceId,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sharedAccessPolicyName") String sharedAccessPolicyName,
+        @CustomType.Parameter("tableName") @Nullable String tableName,
+        @CustomType.Parameter("type") String type) {
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
         this.eventSystemProperties = eventSystemProperties;

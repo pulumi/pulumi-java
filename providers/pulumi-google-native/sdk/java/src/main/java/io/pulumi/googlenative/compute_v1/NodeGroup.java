@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.NodeGroupArgs;
@@ -24,7 +24,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Specifies how autoscaling should behave.
      * 
      */
-    @OutputExport(name="autoscalingPolicy", type=NodeGroupAutoscalingPolicyResponse.class, parameters={})
+    @Export(name="autoscalingPolicy", type=NodeGroupAutoscalingPolicyResponse.class, parameters={})
     private Output<NodeGroupAutoscalingPolicyResponse> autoscalingPolicy;
 
     /**
@@ -38,7 +38,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -52,7 +52,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -62,7 +62,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -72,7 +72,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The type of the resource. Always compute#nodeGroup for node group.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -86,7 +86,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
      * 
      */
-    @OutputExport(name="locationHint", type=String.class, parameters={})
+    @Export(name="locationHint", type=String.class, parameters={})
     private Output<String> locationHint;
 
     /**
@@ -100,7 +100,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
      * 
      */
-    @OutputExport(name="maintenancePolicy", type=String.class, parameters={})
+    @Export(name="maintenancePolicy", type=String.class, parameters={})
     private Output<String> maintenancePolicy;
 
     /**
@@ -110,7 +110,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getMaintenancePolicy() {
         return this.maintenancePolicy;
     }
-    @OutputExport(name="maintenanceWindow", type=NodeGroupMaintenanceWindowResponse.class, parameters={})
+    @Export(name="maintenanceWindow", type=NodeGroupMaintenanceWindowResponse.class, parameters={})
     private Output<NodeGroupMaintenanceWindowResponse> maintenanceWindow;
 
     public Output<NodeGroupMaintenanceWindowResponse> getMaintenanceWindow() {
@@ -120,7 +120,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -134,7 +134,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * URL of the node template to create the node group from.
      * 
      */
-    @OutputExport(name="nodeTemplate", type=String.class, parameters={})
+    @Export(name="nodeTemplate", type=String.class, parameters={})
     private Output<String> nodeTemplate;
 
     /**
@@ -148,7 +148,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -162,7 +162,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The total number of nodes in the node group.
      * 
      */
-    @OutputExport(name="size", type=Integer.class, parameters={})
+    @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
@@ -172,7 +172,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
     public Output<Integer> getSize() {
         return this.size;
     }
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     public Output<String> getStatus() {
@@ -182,7 +182,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The name of the zone where the node group resides, such as us-central1-a.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

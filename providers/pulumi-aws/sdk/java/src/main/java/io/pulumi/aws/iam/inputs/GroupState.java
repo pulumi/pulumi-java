@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS for this group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The group's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. Group names are not distinguished by case. For example, you cannot create groups named both "ADMINS" and "admins".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Path in which to create the group.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -51,7 +51,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The [unique ID][1] assigned by AWS.
      * 
      */
-    @InputImport(name="uniqueId")
+    @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
     public Output<String> getUniqueId() {

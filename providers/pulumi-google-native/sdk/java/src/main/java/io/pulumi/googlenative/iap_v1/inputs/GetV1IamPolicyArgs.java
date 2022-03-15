@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iap_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetV1IamPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetV1IamPolicyArgs Empty = new GetV1IamPolicyArgs();
 
-    @InputImport(name="v1Id", required=true)
+    @Import(name="v1Id", required=true)
       private final String v1Id;
 
     public String getV1Id() {

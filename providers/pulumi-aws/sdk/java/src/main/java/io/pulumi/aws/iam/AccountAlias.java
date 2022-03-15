@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.AccountAliasArgs;
 import io.pulumi.aws.iam.inputs.AccountAliasState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class AccountAlias extends io.pulumi.resources.CustomResource {
      * The account alias
      * 
      */
-    @OutputExport(name="accountAlias", type=String.class, parameters={})
+    @Export(name="accountAlias", type=String.class, parameters={})
     private Output<String> accountAlias;
 
     /**

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.outputs.JobInputSequenceResponse;
 import io.pulumi.azurenative.media.outputs.JobInputsResponse;
 import io.pulumi.azurenative.media.outputs.JobOutputAssetResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
@@ -92,22 +92,22 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("correlationData") @Nullable Map<String,String> correlationData,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("input") Object input,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputs") List<JobOutputAssetResponse> outputs,
-        @OutputCustomType.Parameter("priority") @Nullable String priority,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("correlationData") @Nullable Map<String,String> correlationData,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("input") Object input,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputs") List<JobOutputAssetResponse> outputs,
+        @CustomType.Parameter("priority") @Nullable String priority,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.correlationData = correlationData;
         this.created = created;
         this.description = description;

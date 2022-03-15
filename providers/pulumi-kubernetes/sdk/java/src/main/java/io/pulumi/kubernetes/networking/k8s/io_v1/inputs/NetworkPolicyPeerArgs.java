@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IPBlockArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
      * 
      */
-    @InputImport(name="ipBlock")
+    @Import(name="ipBlock")
       private final @Nullable Output<IPBlockArgs> ipBlock;
 
     public Output<IPBlockArgs> getIpBlock() {
@@ -36,7 +36,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects all Pods in the Namespaces selected by NamespaceSelector.
      * 
      */
-    @InputImport(name="namespaceSelector")
+    @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
     public Output<LabelSelectorArgs> getNamespaceSelector() {
@@ -49,7 +49,7 @@ public final class NetworkPolicyPeerArgs extends io.pulumi.resources.ResourceArg
      * If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects the Pods matching PodSelector in the Namespaces selected by NamespaceSelector. Otherwise it selects the Pods matching PodSelector in the policy's own Namespace.
      * 
      */
-    @InputImport(name="podSelector")
+    @Import(name="podSelector")
       private final @Nullable Output<LabelSelectorArgs> podSelector;
 
     public Output<LabelSelectorArgs> getPodSelector() {

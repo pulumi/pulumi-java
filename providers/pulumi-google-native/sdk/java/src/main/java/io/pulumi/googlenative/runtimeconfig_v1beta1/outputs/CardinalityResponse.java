@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CardinalityResponse {
     /**
      * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
@@ -21,10 +21,10 @@ public final class CardinalityResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CardinalityResponse(
-        @OutputCustomType.Parameter("number") Integer number,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("number") Integer number,
+        @CustomType.Parameter("path") String path) {
         this.number = number;
         this.path = path;
     }

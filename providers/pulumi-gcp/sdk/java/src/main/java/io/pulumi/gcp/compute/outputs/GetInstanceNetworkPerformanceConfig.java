@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceNetworkPerformanceConfig {
     /**
      * The egress bandwidth tier for the instance.
@@ -15,8 +15,8 @@ public final class GetInstanceNetworkPerformanceConfig {
      */
     private final String totalEgressBandwidthTier;
 
-    @OutputCustomType.Constructor
-    private GetInstanceNetworkPerformanceConfig(@OutputCustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
+    @CustomType.Constructor
+    private GetInstanceNetworkPerformanceConfig(@CustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaImageResponse {
     /**
      * Height of the image in number of pixels. This field must be nonnegative. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2alphaImageResponse {
      */
     private final Integer width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2alphaImageResponse(
-        @OutputCustomType.Parameter("height") Integer height,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("width") Integer width) {
+        @CustomType.Parameter("height") Integer height,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("width") Integer width) {
         this.height = height;
         this.uri = uri;
         this.width = width;

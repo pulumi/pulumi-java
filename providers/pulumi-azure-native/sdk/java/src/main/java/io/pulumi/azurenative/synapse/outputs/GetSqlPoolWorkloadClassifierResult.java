@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlPoolWorkloadClassifierResult {
     /**
      * The workload classifier context.
@@ -57,17 +57,17 @@ public final class GetSqlPoolWorkloadClassifierResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlPoolWorkloadClassifierResult(
-        @OutputCustomType.Parameter("context") @Nullable String context,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("importance") @Nullable String importance,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("memberName") String memberName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("context") @Nullable String context,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("importance") @Nullable String importance,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("memberName") String memberName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("type") String type) {
         this.context = context;
         this.endTime = endTime;
         this.id = id;

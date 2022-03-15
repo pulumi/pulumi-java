@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MLTransformParametersFindMatchesParameters {
     /**
      * The value that is selected when tuning your transform for a balance between accuracy and cost.
@@ -34,12 +34,12 @@ public final class MLTransformParametersFindMatchesParameters {
      */
     private final @Nullable String primaryKeyColumnName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MLTransformParametersFindMatchesParameters(
-        @OutputCustomType.Parameter("accuracyCostTradeOff") @Nullable Double accuracyCostTradeOff,
-        @OutputCustomType.Parameter("enforceProvidedLabels") @Nullable Boolean enforceProvidedLabels,
-        @OutputCustomType.Parameter("precisionRecallTradeOff") @Nullable Double precisionRecallTradeOff,
-        @OutputCustomType.Parameter("primaryKeyColumnName") @Nullable String primaryKeyColumnName) {
+        @CustomType.Parameter("accuracyCostTradeOff") @Nullable Double accuracyCostTradeOff,
+        @CustomType.Parameter("enforceProvidedLabels") @Nullable Boolean enforceProvidedLabels,
+        @CustomType.Parameter("precisionRecallTradeOff") @Nullable Double precisionRecallTradeOff,
+        @CustomType.Parameter("primaryKeyColumnName") @Nullable String primaryKeyColumnName) {
         this.accuracyCostTradeOff = accuracyCostTradeOff;
         this.enforceProvidedLabels = enforceProvidedLabels;
         this.precisionRecallTradeOff = precisionRecallTradeOff;

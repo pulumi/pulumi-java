@@ -15,7 +15,7 @@ import io.pulumi.awsnative.quicksight.outputs.DataSourceSslProperties;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceTag;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceVpcConnectionProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      *             are automatically allowed.</p>
      * 
      */
-    @OutputExport(name="alternateDataSourceParameters", type=List.class, parameters={DataSourceParameters.class})
+    @Export(name="alternateDataSourceParameters", type=List.class, parameters={DataSourceParameters.class})
     private Output</* @Nullable */ List<DataSourceParameters>> alternateDataSourceParameters;
 
     /**
@@ -61,7 +61,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * <p>The Amazon Resource Name (ARN) of the data source.</p>
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -71,7 +71,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> awsAccountId;
 
     public Output</* @Nullable */ String> getAwsAccountId() {
@@ -81,7 +81,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * <p>The time that this data source was created.</p>
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -91,25 +91,25 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    @OutputExport(name="credentials", type=DataSourceCredentials.class, parameters={})
+    @Export(name="credentials", type=DataSourceCredentials.class, parameters={})
     private Output</* @Nullable */ DataSourceCredentials> credentials;
 
     public Output</* @Nullable */ DataSourceCredentials> getCredentials() {
         return this.credentials;
     }
-    @OutputExport(name="dataSourceId", type=String.class, parameters={})
+    @Export(name="dataSourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSourceId;
 
     public Output</* @Nullable */ String> getDataSourceId() {
         return this.dataSourceId;
     }
-    @OutputExport(name="dataSourceParameters", type=DataSourceParameters.class, parameters={})
+    @Export(name="dataSourceParameters", type=DataSourceParameters.class, parameters={})
     private Output</* @Nullable */ DataSourceParameters> dataSourceParameters;
 
     public Output</* @Nullable */ DataSourceParameters> getDataSourceParameters() {
         return this.dataSourceParameters;
     }
-    @OutputExport(name="errorInfo", type=DataSourceErrorInfo.class, parameters={})
+    @Export(name="errorInfo", type=DataSourceErrorInfo.class, parameters={})
     private Output</* @Nullable */ DataSourceErrorInfo> errorInfo;
 
     public Output</* @Nullable */ DataSourceErrorInfo> getErrorInfo() {
@@ -119,7 +119,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * <p>The last time that this data source was updated.</p>
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -133,7 +133,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * <p>A display name for the data source.</p>
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -147,7 +147,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * <p>A list of resource permissions on the data source.</p>
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={DataSourceResourcePermission.class})
+    @Export(name="permissions", type=List.class, parameters={DataSourceResourcePermission.class})
     private Output</* @Nullable */ List<DataSourceResourcePermission>> permissions;
 
     /**
@@ -157,13 +157,13 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DataSourceResourcePermission>> getPermissions() {
         return this.permissions;
     }
-    @OutputExport(name="sslProperties", type=DataSourceSslProperties.class, parameters={})
+    @Export(name="sslProperties", type=DataSourceSslProperties.class, parameters={})
     private Output</* @Nullable */ DataSourceSslProperties> sslProperties;
 
     public Output</* @Nullable */ DataSourceSslProperties> getSslProperties() {
         return this.sslProperties;
     }
-    @OutputExport(name="status", type=DataSourceResourceStatus.class, parameters={})
+    @Export(name="status", type=DataSourceResourceStatus.class, parameters={})
     private Output<DataSourceResourceStatus> status;
 
     public Output<DataSourceResourceStatus> getStatus() {
@@ -173,7 +173,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.</p>
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DataSourceTag.class})
+    @Export(name="tags", type=List.class, parameters={DataSourceTag.class})
     private Output</* @Nullable */ List<DataSourceTag>> tags;
 
     /**
@@ -183,13 +183,13 @@ public class DataSource extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DataSourceTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=DataSourceType.class, parameters={})
+    @Export(name="type", type=DataSourceType.class, parameters={})
     private Output</* @Nullable */ DataSourceType> type;
 
     public Output</* @Nullable */ DataSourceType> getType() {
         return this.type;
     }
-    @OutputExport(name="vpcConnectionProperties", type=DataSourceVpcConnectionProperties.class, parameters={})
+    @Export(name="vpcConnectionProperties", type=DataSourceVpcConnectionProperties.class, parameters={})
     private Output</* @Nullable */ DataSourceVpcConnectionProperties> vpcConnectionProperties;
 
     public Output</* @Nullable */ DataSourceVpcConnectionProperties> getVpcConnectionProperties() {

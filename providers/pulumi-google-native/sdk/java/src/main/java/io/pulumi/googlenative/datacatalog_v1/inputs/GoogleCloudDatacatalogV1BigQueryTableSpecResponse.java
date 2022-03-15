@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1TableSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ViewSpecResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
      * The table source type.
      * 
      */
-    @InputImport(name="tableSourceType", required=true)
+    @Import(name="tableSourceType", required=true)
       private final String tableSourceType;
 
     public String getTableSourceType() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
      * Specification of a BigQuery table. Populated only if the `table_source_type` is `BIGQUERY_TABLE`.
      * 
      */
-    @InputImport(name="tableSpec", required=true)
+    @Import(name="tableSpec", required=true)
       private final GoogleCloudDatacatalogV1TableSpecResponse tableSpec;
 
     public GoogleCloudDatacatalogV1TableSpecResponse getTableSpec() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecResponse extends io.
      * Table view specification. Populated only if the `table_source_type` is `BIGQUERY_VIEW`.
      * 
      */
-    @InputImport(name="viewSpec", required=true)
+    @Import(name="viewSpec", required=true)
       private final GoogleCloudDatacatalogV1ViewSpecResponse viewSpec;
 
     public GoogleCloudDatacatalogV1ViewSpecResponse getViewSpec() {

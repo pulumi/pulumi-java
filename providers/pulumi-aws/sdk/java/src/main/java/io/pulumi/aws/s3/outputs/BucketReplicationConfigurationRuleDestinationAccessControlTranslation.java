@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigurationRuleDestinationAccessControlTranslation {
     /**
      * The override value for the owner on replicated objects. Currently only `Destination` is supported.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
      */
     private final String owner;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigurationRuleDestinationAccessControlTranslation(@OutputCustomType.Parameter("owner") String owner) {
+    @CustomType.Constructor
+    private BucketReplicationConfigurationRuleDestinationAccessControlTranslation(@CustomType.Parameter("owner") String owner) {
         this.owner = owner;
     }
 

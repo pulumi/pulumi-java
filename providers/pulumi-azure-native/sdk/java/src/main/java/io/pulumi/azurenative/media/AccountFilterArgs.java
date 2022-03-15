@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.FilterTrackSelectionArgs;
 import io.pulumi.azurenative.media.inputs.FirstQualityArgs;
 import io.pulumi.azurenative.media.inputs.PresentationTimeRangeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The Account Filter name
      * 
      */
-    @InputImport(name="filterName")
+    @Import(name="filterName")
       private final @Nullable Output<String> filterName;
 
     public Output<String> getFilterName() {
@@ -44,7 +44,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The first quality.
      * 
      */
-    @InputImport(name="firstQuality")
+    @Import(name="firstQuality")
       private final @Nullable Output<FirstQualityArgs> firstQuality;
 
     public Output<FirstQualityArgs> getFirstQuality() {
@@ -55,7 +55,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The presentation time range.
      * 
      */
-    @InputImport(name="presentationTimeRange")
+    @Import(name="presentationTimeRange")
       private final @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
 
     public Output<PresentationTimeRangeArgs> getPresentationTimeRange() {
@@ -66,7 +66,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class AccountFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The tracks selection conditions.
      * 
      */
-    @InputImport(name="tracks")
+    @Import(name="tracks")
       private final @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
     public Output<List<FilterTrackSelectionArgs>> getTracks() {

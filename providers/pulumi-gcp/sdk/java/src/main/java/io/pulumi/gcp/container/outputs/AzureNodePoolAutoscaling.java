@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureNodePoolAutoscaling {
     /**
      * Required. Maximum number of nodes in the node pool. Must be >= min_node_count.
@@ -20,10 +20,10 @@ public final class AzureNodePoolAutoscaling {
      */
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureNodePoolAutoscaling(
-        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
-        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
+        @CustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @CustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
     }

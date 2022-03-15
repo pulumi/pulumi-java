@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigtable.inputs.InstanceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
 
     public static final InstanceIamMemberArgs Empty = new InstanceIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<InstanceIamMemberConditionArgs> condition;
 
     public Output<InstanceIamMemberConditionArgs> getCondition() {
@@ -26,14 +26,14 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * The name or relative resource id of the instance to manage IAM policies for.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -45,7 +45,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * is not provided, a default will be supplied.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -58,7 +58,7 @@ public final class InstanceIamMemberArgs extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

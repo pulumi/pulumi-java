@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionPlacementConstraint {
     /**
      * Cluster Query Language expression to apply to the constraint. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
@@ -22,10 +22,10 @@ public final class TaskDefinitionPlacementConstraint {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionPlacementConstraint(
-        @OutputCustomType.Parameter("expression") @Nullable String expression,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expression") @Nullable String expression,
+        @CustomType.Parameter("type") String type) {
         this.expression = expression;
         this.type = type;
     }

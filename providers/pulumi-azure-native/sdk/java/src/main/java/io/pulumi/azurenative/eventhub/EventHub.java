@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventhub.EventHubArgs;
 import io.pulumi.azurenative.eventhub.outputs.CaptureDescriptionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * Properties of capture description
      * 
      */
-    @OutputExport(name="captureDescription", type=CaptureDescriptionResponse.class, parameters={})
+    @Export(name="captureDescription", type=CaptureDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ CaptureDescriptionResponse> captureDescription;
 
     /**
@@ -50,7 +50,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * Exact time the Event Hub was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -64,7 +64,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * Number of days to retain the events for this Event Hub, value should be 1 to 7 days
      * 
      */
-    @OutputExport(name="messageRetentionInDays", type=Double.class, parameters={})
+    @Export(name="messageRetentionInDays", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> messageRetentionInDays;
 
     /**
@@ -78,7 +78,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.
      * 
      */
-    @OutputExport(name="partitionCount", type=Double.class, parameters={})
+    @Export(name="partitionCount", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> partitionCount;
 
     /**
@@ -106,7 +106,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * Current number of shards on the Event Hub.
      * 
      */
-    @OutputExport(name="partitionIds", type=List.class, parameters={String.class})
+    @Export(name="partitionIds", type=List.class, parameters={String.class})
     private Output<List<String>> partitionIds;
 
     /**
@@ -120,7 +120,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * Enumerates the possible values for the status of the Event Hub.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -134,7 +134,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -148,7 +148,7 @@ public class EventHub extends io.pulumi.resources.CustomResource {
      * The exact time the message was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

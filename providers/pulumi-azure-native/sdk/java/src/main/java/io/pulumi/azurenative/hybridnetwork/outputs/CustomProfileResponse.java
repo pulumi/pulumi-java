@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomProfileResponse {
     /**
      * Path for metadata configuration.
@@ -17,8 +17,8 @@ public final class CustomProfileResponse {
      */
     private final @Nullable String metadataConfigurationPath;
 
-    @OutputCustomType.Constructor
-    private CustomProfileResponse(@OutputCustomType.Parameter("metadataConfigurationPath") @Nullable String metadataConfigurationPath) {
+    @CustomType.Constructor
+    private CustomProfileResponse(@CustomType.Parameter("metadataConfigurationPath") @Nullable String metadataConfigurationPath) {
         this.metadataConfigurationPath = metadataConfigurationPath;
     }
 

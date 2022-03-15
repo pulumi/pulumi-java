@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.servicequotas.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -21,11 +21,11 @@ public final class GetServiceResult {
     private final String serviceCode;
     private final String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("serviceCode") String serviceCode,
-        @OutputCustomType.Parameter("serviceName") String serviceName) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("serviceCode") String serviceCode,
+        @CustomType.Parameter("serviceName") String serviceName) {
         this.id = id;
         this.serviceCode = serviceCode;
         this.serviceName = serviceName;

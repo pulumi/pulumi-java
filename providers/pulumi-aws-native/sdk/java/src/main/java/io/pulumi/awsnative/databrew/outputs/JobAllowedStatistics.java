@@ -3,17 +3,17 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobAllowedStatistics {
     private final List<String> statistics;
 
-    @OutputCustomType.Constructor
-    private JobAllowedStatistics(@OutputCustomType.Parameter("statistics") List<String> statistics) {
+    @CustomType.Constructor
+    private JobAllowedStatistics(@CustomType.Parameter("statistics") List<String> statistics) {
         this.statistics = statistics;
     }
 

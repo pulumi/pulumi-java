@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
      * Whether to set database read only before migration
      * 
      */
-    @InputImport(name="makeSourceDbReadOnly")
+    @Import(name="makeSourceDbReadOnly")
       private final @Nullable Boolean makeSourceDbReadOnly;
 
     public Optional<Boolean> getMakeSourceDbReadOnly() {
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
      * Name of the database
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
      * Mapping of source to target tables
      * 
      */
-    @InputImport(name="tableMap")
+    @Import(name="tableMap")
       private final @Nullable Map<String,String> tableMap;
 
     public Map<String,String> getTableMap() {
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends io.pulumi.
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
      */
-    @InputImport(name="targetDatabaseName")
+    @Import(name="targetDatabaseName")
       private final @Nullable String targetDatabaseName;
 
     public Optional<String> getTargetDatabaseName() {

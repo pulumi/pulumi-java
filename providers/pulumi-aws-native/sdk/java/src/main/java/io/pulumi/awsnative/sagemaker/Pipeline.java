@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.PipelineArgs;
 import io.pulumi.awsnative.sagemaker.outputs.ParallelismConfigurationProperties;
 import io.pulumi.awsnative.sagemaker.outputs.PipelineTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -23,13 +23,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:sagemaker:Pipeline")
 public class Pipeline extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="parallelismConfiguration", type=ParallelismConfigurationProperties.class, parameters={})
+    @Export(name="parallelismConfiguration", type=ParallelismConfigurationProperties.class, parameters={})
     private Output</* @Nullable */ ParallelismConfigurationProperties> parallelismConfiguration;
 
     public Output</* @Nullable */ ParallelismConfigurationProperties> getParallelismConfiguration() {
         return this.parallelismConfiguration;
     }
-    @OutputExport(name="pipelineDefinition", type=Object.class, parameters={})
+    @Export(name="pipelineDefinition", type=Object.class, parameters={})
     private Output<Object> pipelineDefinition;
 
     public Output<Object> getPipelineDefinition() {
@@ -39,7 +39,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The description of the Pipeline.
      * 
      */
-    @OutputExport(name="pipelineDescription", type=String.class, parameters={})
+    @Export(name="pipelineDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineDescription;
 
     /**
@@ -53,7 +53,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The display name of the Pipeline.
      * 
      */
-    @OutputExport(name="pipelineDisplayName", type=String.class, parameters={})
+    @Export(name="pipelineDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineDisplayName;
 
     /**
@@ -67,7 +67,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The name of the Pipeline.
      * 
      */
-    @OutputExport(name="pipelineName", type=String.class, parameters={})
+    @Export(name="pipelineName", type=String.class, parameters={})
     private Output<String> pipelineName;
 
     /**
@@ -81,7 +81,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Role Arn
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -91,7 +91,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="tags", type=List.class, parameters={PipelineTag.class})
+    @Export(name="tags", type=List.class, parameters={PipelineTag.class})
     private Output</* @Nullable */ List<PipelineTag>> tags;
 
     public Output</* @Nullable */ List<PipelineTag>> getTags() {

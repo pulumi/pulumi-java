@@ -7,7 +7,7 @@ import io.pulumi.awsnative.finspace.enums.EnvironmentFederationMode;
 import io.pulumi.awsnative.finspace.inputs.EnvironmentFederationParametersArgs;
 import io.pulumi.awsnative.finspace.inputs.EnvironmentSuperuserParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * ARNs of FinSpace Data Bundles to install
      * 
      */
-    @InputImport(name="dataBundles")
+    @Import(name="dataBundles")
       private final @Nullable Output<List<String>> dataBundles;
 
     public Output<List<String>> getDataBundles() {
@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the Environment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,14 +44,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Federation mode used with the Environment
      * 
      */
-    @InputImport(name="federationMode")
+    @Import(name="federationMode")
       private final @Nullable Output<EnvironmentFederationMode> federationMode;
 
     public Output<EnvironmentFederationMode> getFederationMode() {
         return this.federationMode == null ? Output.empty() : this.federationMode;
     }
 
-    @InputImport(name="federationParameters")
+    @Import(name="federationParameters")
       private final @Nullable Output<EnvironmentFederationParametersArgs> federationParameters;
 
     public Output<EnvironmentFederationParametersArgs> getFederationParameters() {
@@ -62,7 +62,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * KMS key used to encrypt customer data within FinSpace Environment infrastructure
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -73,14 +73,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Environment
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="superuserParameters")
+    @Import(name="superuserParameters")
       private final @Nullable Output<EnvironmentSuperuserParametersArgs> superuserParameters;
 
     public Output<EnvironmentSuperuserParametersArgs> getSuperuserParameters() {

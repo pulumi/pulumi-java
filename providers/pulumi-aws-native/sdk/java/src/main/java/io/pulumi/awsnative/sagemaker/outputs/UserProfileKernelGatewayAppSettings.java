@@ -5,13 +5,13 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileCustomImage;
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileKernelGatewayAppSettings {
     /**
      * A list of custom SageMaker images that are configured to run as a KernelGateway app.
@@ -24,10 +24,10 @@ public final class UserProfileKernelGatewayAppSettings {
      */
     private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserProfileKernelGatewayAppSettings(
-        @OutputCustomType.Parameter("customImages") @Nullable List<UserProfileCustomImage> customImages,
-        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable UserProfileResourceSpec defaultResourceSpec) {
+        @CustomType.Parameter("customImages") @Nullable List<UserProfileCustomImage> customImages,
+        @CustomType.Parameter("defaultResourceSpec") @Nullable UserProfileResourceSpec defaultResourceSpec) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
     }

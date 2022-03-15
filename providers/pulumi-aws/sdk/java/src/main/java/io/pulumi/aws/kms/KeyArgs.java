@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is `false`.
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
@@ -36,7 +36,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Valid values: `SYMMETRIC_DEFAULT`,  `RSA_2048`, `RSA_3072`, `RSA_4096`, `ECC_NIST_P256`, `ECC_NIST_P384`, `ECC_NIST_P521`, or `ECC_SECG_P256K1`. Defaults to `SYMMETRIC_DEFAULT`. For help with choosing a key spec, see the [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html).
      * 
      */
-    @InputImport(name="customerMasterKeySpec")
+    @Import(name="customerMasterKeySpec")
       private final @Nullable Output<String> customerMasterKeySpec;
 
     public Output<String> getCustomerMasterKeySpec() {
@@ -49,7 +49,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its replica keys is deleted. Otherwise, the waiting period begins immediately.
      * 
      */
-    @InputImport(name="deletionWindowInDays")
+    @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
     public Output<Integer> getDeletionWindowInDays() {
@@ -60,7 +60,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the key as viewed in AWS console.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -71,7 +71,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
      * 
      */
-    @InputImport(name="enableKeyRotation")
+    @Import(name="enableKeyRotation")
       private final @Nullable Output<Boolean> enableKeyRotation;
 
     public Output<Boolean> getEnableKeyRotation() {
@@ -82,7 +82,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the key is enabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -94,7 +94,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to `ENCRYPT_DECRYPT`.
      * 
      */
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<String> keyUsage;
 
     public Output<String> getKeyUsage() {
@@ -105,7 +105,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
      * 
      */
-    @InputImport(name="multiRegion")
+    @Import(name="multiRegion")
       private final @Nullable Output<Boolean> multiRegion;
 
     public Output<Boolean> getMultiRegion() {
@@ -116,7 +116,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * A valid policy JSON document. Although this is a key policy, not an IAM policy, an `aws.iam.getPolicyDocument`, in the form that designates a principal, can be used.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -127,7 +127,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

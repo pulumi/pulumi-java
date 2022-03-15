@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The VCenter discovery status.
      * 
      */
-    @InputImport(name="discoveryStatus")
+    @Import(name="discoveryStatus")
       private final @Nullable String discoveryStatus;
 
     public Optional<String> getDiscoveryStatus() {
@@ -35,7 +35,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The ARM resource name of the fabric containing this VCenter.
      * 
      */
-    @InputImport(name="fabricArmResourceName")
+    @Import(name="fabricArmResourceName")
       private final @Nullable String fabricArmResourceName;
 
     public Optional<String> getFabricArmResourceName() {
@@ -46,7 +46,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * Friendly name of the vCenter.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -57,7 +57,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The health errors for this VCenter.
      * 
      */
-    @InputImport(name="healthErrors")
+    @Import(name="healthErrors")
       private final @Nullable List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
@@ -68,7 +68,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The infrastructure Id of vCenter.
      * 
      */
-    @InputImport(name="infrastructureId")
+    @Import(name="infrastructureId")
       private final @Nullable String infrastructureId;
 
     public Optional<String> getInfrastructureId() {
@@ -79,7 +79,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * VCenter internal ID.
      * 
      */
-    @InputImport(name="internalId")
+    @Import(name="internalId")
       private final @Nullable String internalId;
 
     public Optional<String> getInternalId() {
@@ -90,7 +90,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The IP address of the vCenter.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -101,7 +101,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The time when the last heartbeat was received by vCenter.
      * 
      */
-    @InputImport(name="lastHeartbeat")
+    @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
     public Optional<String> getLastHeartbeat() {
@@ -112,7 +112,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The port number for discovery.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable String port;
 
     public Optional<String> getPort() {
@@ -123,7 +123,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The process server Id.
      * 
      */
-    @InputImport(name="processServerId")
+    @Import(name="processServerId")
       private final @Nullable String processServerId;
 
     public Optional<String> getProcessServerId() {
@@ -134,7 +134,7 @@ public final class VCenterPropertiesResponse extends io.pulumi.resources.InvokeA
      * The account Id which has privileges to discover the vCenter.
      * 
      */
-    @InputImport(name="runAsAccountId")
+    @Import(name="runAsAccountId")
       private final @Nullable String runAsAccountId;
 
     public Optional<String> getRunAsAccountId() {

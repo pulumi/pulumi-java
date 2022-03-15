@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvGroupAttachmentArgs;
@@ -43,7 +43,7 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
      * 
      */
-    @OutputExport(name="envgroupId", type=String.class, parameters={})
+    @Export(name="envgroupId", type=String.class, parameters={})
     private Output<String> envgroupId;
 
     /**
@@ -58,7 +58,7 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
      * The resource ID of the environment.
      * 
      */
-    @OutputExport(name="environment", type=String.class, parameters={})
+    @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
@@ -72,7 +72,7 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
      * The name of the newly created attachment (output parameter).
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

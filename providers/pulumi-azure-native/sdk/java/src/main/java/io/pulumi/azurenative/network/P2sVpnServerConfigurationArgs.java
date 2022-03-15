@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.P2SVpnServerConfigVpnClientRevokedCe
 import io.pulumi.azurenative.network.inputs.P2SVpnServerConfigVpnClientRootCertificateArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -37,7 +37,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * Radius client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="p2SVpnServerConfigRadiusClientRootCertificates")
+    @Import(name="p2SVpnServerConfigRadiusClientRootCertificates")
       private final @Nullable Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> p2SVpnServerConfigRadiusClientRootCertificates;
 
     public Output<List<P2SVpnServerConfigRadiusClientRootCertificateArgs>> getP2SVpnServerConfigRadiusClientRootCertificates() {
@@ -59,7 +59,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * Radius Server root certificate of P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="p2SVpnServerConfigRadiusServerRootCertificates")
+    @Import(name="p2SVpnServerConfigRadiusServerRootCertificates")
       private final @Nullable Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> p2SVpnServerConfigRadiusServerRootCertificates;
 
     public Output<List<P2SVpnServerConfigRadiusServerRootCertificateArgs>> getP2SVpnServerConfigRadiusServerRootCertificates() {
@@ -70,7 +70,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * VPN client revoked certificate of P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="p2SVpnServerConfigVpnClientRevokedCertificates")
+    @Import(name="p2SVpnServerConfigVpnClientRevokedCertificates")
       private final @Nullable Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> p2SVpnServerConfigVpnClientRevokedCertificates;
 
     public Output<List<P2SVpnServerConfigVpnClientRevokedCertificateArgs>> getP2SVpnServerConfigVpnClientRevokedCertificates() {
@@ -81,7 +81,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * VPN client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="p2SVpnServerConfigVpnClientRootCertificates")
+    @Import(name="p2SVpnServerConfigVpnClientRootCertificates")
       private final @Nullable Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> p2SVpnServerConfigVpnClientRootCertificates;
 
     public Output<List<P2SVpnServerConfigVpnClientRootCertificateArgs>> getP2SVpnServerConfigVpnClientRootCertificates() {
@@ -92,7 +92,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * The name of the P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="p2SVpnServerConfigurationName")
+    @Import(name="p2SVpnServerConfigurationName")
       private final @Nullable Output<String> p2SVpnServerConfigurationName;
 
     public Output<String> getP2SVpnServerConfigurationName() {
@@ -103,7 +103,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @InputImport(name="radiusServerAddress")
+    @Import(name="radiusServerAddress")
       private final @Nullable Output<String> radiusServerAddress;
 
     public Output<String> getRadiusServerAddress() {
@@ -114,7 +114,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @InputImport(name="radiusServerSecret")
+    @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
 
     public Output<String> getRadiusServerSecret() {
@@ -125,7 +125,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * The resource group name of the VirtualWan.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -136,7 +136,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * The name of the VirtualWan.
      * 
      */
-    @InputImport(name="virtualWanName", required=true)
+    @Import(name="virtualWanName", required=true)
       private final Output<String> virtualWanName;
 
     public Output<String> getVirtualWanName() {
@@ -147,7 +147,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * VpnClientIpsecPolicies for P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnClientIpsecPolicies")
+    @Import(name="vpnClientIpsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
     public Output<List<IpsecPolicyArgs>> getVpnClientIpsecPolicies() {
@@ -158,7 +158,7 @@ public final class P2sVpnServerConfigurationArgs extends io.pulumi.resources.Res
      * VPN protocols for the P2SVpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnProtocols")
+    @Import(name="vpnProtocols")
       private final @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
 
     public Output<List<Either<String,VpnGatewayTunnelingProtocol>>> getVpnProtocols() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.workflowexecutions_v1beta.inputs.StackTraceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Human-readable stack trace string.
      * 
      */
-    @InputImport(name="context", required=true)
+    @Import(name="context", required=true)
       private final String context;
 
     public String getContext() {
@@ -32,7 +32,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Error message and data returned represented as a JSON string.
      * 
      */
-    @InputImport(name="payload", required=true)
+    @Import(name="payload", required=true)
       private final String payload;
 
     public String getPayload() {
@@ -43,7 +43,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Stack trace with detailed information of where error was generated.
      * 
      */
-    @InputImport(name="stackTrace", required=true)
+    @Import(name="stackTrace", required=true)
       private final StackTraceResponse stackTrace;
 
     public StackTraceResponse getStackTrace() {

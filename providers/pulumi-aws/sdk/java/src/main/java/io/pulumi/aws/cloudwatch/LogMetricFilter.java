@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudwatch.LogMetricFilterArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogMetricFilterState;
 import io.pulumi.aws.cloudwatch.outputs.LogMetricFilterMetricTransformation;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * The name of the log group to associate the metric filter with.
      * 
      */
-    @OutputExport(name="logGroupName", type=String.class, parameters={})
+    @Export(name="logGroupName", type=String.class, parameters={})
     private Output<String> logGroupName;
 
     /**
@@ -47,7 +47,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * A block defining collection of information needed to define how metric data gets emitted. See below.
      * 
      */
-    @OutputExport(name="metricTransformation", type=LogMetricFilterMetricTransformation.class, parameters={})
+    @Export(name="metricTransformation", type=LogMetricFilterMetricTransformation.class, parameters={})
     private Output<LogMetricFilterMetricTransformation> metricTransformation;
 
     /**
@@ -61,7 +61,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * A name for the metric filter.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class LogMetricFilter extends io.pulumi.resources.CustomResource {
      * for extracting metric data out of ingested log events.
      * 
      */
-    @OutputExport(name="pattern", type=String.class, parameters={})
+    @Export(name="pattern", type=String.class, parameters={})
     private Output<String> pattern;
 
     /**

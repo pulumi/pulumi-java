@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
      * Customize how deployment manager will validate the resource against schema errors.
      * 
      */
-    @InputImport(name="schemaValidation", required=true)
+    @Import(name="schemaValidation", required=true)
       private final String schemaValidation;
 
     public String getSchemaValidation() {
@@ -31,7 +31,7 @@ public final class ValidationOptionsResponse extends io.pulumi.resources.InvokeA
      * Specify what to do with extra properties when executing a request.
      * 
      */
-    @InputImport(name="undeclaredProperties", required=true)
+    @Import(name="undeclaredProperties", required=true)
       private final String undeclaredProperties;
 
     public String getUndeclaredProperties() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.ClientCertificateArgs;
 import io.pulumi.aws.apigateway.inputs.ClientCertificateState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * The date when the client certificate was created.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -61,7 +61,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * The description of the client certificate.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -75,7 +75,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * The date when the client certificate will expire.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output<String> expirationDate;
 
     /**
@@ -89,7 +89,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * The PEM-encoded public key of the client certificate.
      * 
      */
-    @OutputExport(name="pemEncodedCertificate", type=String.class, parameters={})
+    @Export(name="pemEncodedCertificate", type=String.class, parameters={})
     private Output<String> pemEncodedCertificate;
 
     /**
@@ -103,7 +103,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -117,7 +117,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

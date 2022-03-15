@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobCsvOutputOptions {
     private final @Nullable String delimiter;
 
-    @OutputCustomType.Constructor
-    private JobCsvOutputOptions(@OutputCustomType.Parameter("delimiter") @Nullable String delimiter) {
+    @CustomType.Constructor
+    private JobCsvOutputOptions(@CustomType.Parameter("delimiter") @Nullable String delimiter) {
         this.delimiter = delimiter;
     }
 

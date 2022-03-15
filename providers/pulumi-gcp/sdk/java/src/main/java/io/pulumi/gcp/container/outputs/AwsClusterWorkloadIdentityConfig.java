@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AwsClusterWorkloadIdentityConfig {
     private final @Nullable String identityProvider;
     private final @Nullable String issuerUri;
     private final @Nullable String workloadPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsClusterWorkloadIdentityConfig(
-        @OutputCustomType.Parameter("identityProvider") @Nullable String identityProvider,
-        @OutputCustomType.Parameter("issuerUri") @Nullable String issuerUri,
-        @OutputCustomType.Parameter("workloadPool") @Nullable String workloadPool) {
+        @CustomType.Parameter("identityProvider") @Nullable String identityProvider,
+        @CustomType.Parameter("issuerUri") @Nullable String issuerUri,
+        @CustomType.Parameter("workloadPool") @Nullable String workloadPool) {
         this.identityProvider = identityProvider;
         this.issuerUri = issuerUri;
         this.workloadPool = workloadPool;

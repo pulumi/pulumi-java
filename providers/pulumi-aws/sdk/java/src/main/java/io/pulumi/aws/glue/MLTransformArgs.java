@@ -6,7 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.MLTransformInputRecordTableArgs;
 import io.pulumi.aws.glue.inputs.MLTransformParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the ML Transform.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
-    @InputImport(name="glueVersion")
+    @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
     public Output<String> getGlueVersion() {
@@ -46,7 +46,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * A list of AWS Glue table definitions used by the transform. see Input Record Tables.
      * 
      */
-    @InputImport(name="inputRecordTables", required=true)
+    @Import(name="inputRecordTables", required=true)
       private final Output<List<MLTransformInputRecordTableArgs>> inputRecordTables;
 
     public Output<List<MLTransformInputRecordTableArgs>> getInputRecordTables() {
@@ -57,7 +57,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
      * 
      */
-    @InputImport(name="maxCapacity")
+    @Import(name="maxCapacity")
       private final @Nullable Output<Double> maxCapacity;
 
     public Output<Double> getMaxCapacity() {
@@ -68,7 +68,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of times to retry this ML Transform if it fails.
      * 
      */
-    @InputImport(name="maxRetries")
+    @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
@@ -79,7 +79,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The name you assign to this ML Transform. It must be unique in your account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
      * 
      */
-    @InputImport(name="numberOfWorkers")
+    @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
     public Output<Integer> getNumberOfWorkers() {
@@ -101,7 +101,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<MLTransformParametersArgs> parameters;
 
     public Output<MLTransformParametersArgs> getParameters() {
@@ -112,7 +112,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role associated with this ML Transform.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -123,7 +123,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -134,7 +134,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -145,7 +145,7 @@ public final class MLTransformArgs extends io.pulumi.resources.ResourceArgs {
      * The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
      * 
      */
-    @InputImport(name="workerType")
+    @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
     public Output<String> getWorkerType() {

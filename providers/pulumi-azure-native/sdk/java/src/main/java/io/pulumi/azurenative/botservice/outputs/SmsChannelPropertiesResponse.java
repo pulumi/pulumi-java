@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SmsChannelPropertiesResponse {
     /**
      * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
@@ -38,13 +38,13 @@ public final class SmsChannelPropertiesResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SmsChannelPropertiesResponse(
-        @OutputCustomType.Parameter("accountSID") String accountSID,
-        @OutputCustomType.Parameter("authToken") @Nullable String authToken,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated,
-        @OutputCustomType.Parameter("phone") String phone) {
+        @CustomType.Parameter("accountSID") String accountSID,
+        @CustomType.Parameter("authToken") @Nullable String authToken,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("isValidated") @Nullable Boolean isValidated,
+        @CustomType.Parameter("phone") String phone) {
         this.accountSID = accountSID;
         this.authToken = authToken;
         this.isEnabled = isEnabled;

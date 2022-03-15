@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.ResourceManagementPrivateLinkArgs;
 import io.pulumi.azurenative.authorization.outputs.ResourceManagementPrivateLinkEndpointConnectionsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * the region of the rmpl
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -48,7 +48,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * The rmpl Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -58,7 +58,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="properties", type=ResourceManagementPrivateLinkEndpointConnectionsResponse.class, parameters={})
+    @Export(name="properties", type=ResourceManagementPrivateLinkEndpointConnectionsResponse.class, parameters={})
     private Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> properties;
 
     public Output<ResourceManagementPrivateLinkEndpointConnectionsResponse> getProperties() {
@@ -68,7 +68,7 @@ public class ResourceManagementPrivateLink extends io.pulumi.resources.CustomRes
      * The operation type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

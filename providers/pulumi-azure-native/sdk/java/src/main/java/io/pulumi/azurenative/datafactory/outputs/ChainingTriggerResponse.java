@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.PipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChainingTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
@@ -52,15 +52,15 @@ public final class ChainingTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChainingTriggerResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("dependsOn") List<PipelineReferenceResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
-        @OutputCustomType.Parameter("runDimension") String runDimension,
-        @OutputCustomType.Parameter("runtimeState") String runtimeState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("dependsOn") List<PipelineReferenceResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
+        @CustomType.Parameter("runDimension") String runDimension,
+        @CustomType.Parameter("runtimeState") String runtimeState,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.dependsOn = dependsOn;
         this.description = description;

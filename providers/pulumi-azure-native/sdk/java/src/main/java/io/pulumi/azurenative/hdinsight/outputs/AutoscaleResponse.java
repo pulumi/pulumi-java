@@ -5,12 +5,12 @@ package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.AutoscaleCapacityResponse;
 import io.pulumi.azurenative.hdinsight.outputs.AutoscaleRecurrenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleResponse {
     /**
      * Parameters for load-based autoscale
@@ -23,10 +23,10 @@ public final class AutoscaleResponse {
      */
     private final @Nullable AutoscaleRecurrenceResponse recurrence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscaleResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable AutoscaleCapacityResponse capacity,
-        @OutputCustomType.Parameter("recurrence") @Nullable AutoscaleRecurrenceResponse recurrence) {
+        @CustomType.Parameter("capacity") @Nullable AutoscaleCapacityResponse capacity,
+        @CustomType.Parameter("recurrence") @Nullable AutoscaleRecurrenceResponse recurrence) {
         this.capacity = capacity;
         this.recurrence = recurrence;
     }

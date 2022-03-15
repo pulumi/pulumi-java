@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketLifecycleRuleCondition {
     private final Integer age;
     private final String createdBefore;
@@ -21,17 +21,17 @@ public final class GetBucketLifecycleRuleCondition {
     private final Integer numNewerVersions;
     private final String withState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketLifecycleRuleCondition(
-        @OutputCustomType.Parameter("age") Integer age,
-        @OutputCustomType.Parameter("createdBefore") String createdBefore,
-        @OutputCustomType.Parameter("customTimeBefore") String customTimeBefore,
-        @OutputCustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
-        @OutputCustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
-        @OutputCustomType.Parameter("matchesStorageClasses") List<String> matchesStorageClasses,
-        @OutputCustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
-        @OutputCustomType.Parameter("numNewerVersions") Integer numNewerVersions,
-        @OutputCustomType.Parameter("withState") String withState) {
+        @CustomType.Parameter("age") Integer age,
+        @CustomType.Parameter("createdBefore") String createdBefore,
+        @CustomType.Parameter("customTimeBefore") String customTimeBefore,
+        @CustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
+        @CustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
+        @CustomType.Parameter("matchesStorageClasses") List<String> matchesStorageClasses,
+        @CustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
+        @CustomType.Parameter("numNewerVersions") Integer numNewerVersions,
+        @CustomType.Parameter("withState") String withState) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;

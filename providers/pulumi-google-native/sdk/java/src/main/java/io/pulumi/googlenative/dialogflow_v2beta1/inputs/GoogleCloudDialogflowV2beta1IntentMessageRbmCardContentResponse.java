@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * Optional. However at least one of the title, description or media must be set. Media (image, GIF or a video) to include in the card.
      * 
      */
-    @InputImport(name="media", required=true)
+    @Import(name="media", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse getMedia() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * Optional. List of suggestions to include in the card.
      * 
      */
-    @InputImport(name="suggestions", required=true)
+    @Import(name="suggestions", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> getSuggestions() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * Optional. Title of the card (at most 200 bytes). At least one of the title, description or media must be set.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

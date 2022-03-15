@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterIdentityResponse {
     /**
      * The principal id of the system assigned identity which is used by master components.
@@ -34,12 +34,12 @@ public final class ManagedClusterIdentityResponse {
      */
     private final @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,ManagedClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

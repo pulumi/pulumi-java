@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy {
     /**
      * Defines the request parameters that contribute to the cache key.
@@ -97,17 +97,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable String signedRequestMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy(
-        @OutputCustomType.Parameter("cacheKeyPolicy") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy,
-        @OutputCustomType.Parameter("cacheMode") @Nullable String cacheMode,
-        @OutputCustomType.Parameter("clientTtl") @Nullable String clientTtl,
-        @OutputCustomType.Parameter("defaultTtl") @Nullable String defaultTtl,
-        @OutputCustomType.Parameter("maxTtl") @Nullable String maxTtl,
-        @OutputCustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
-        @OutputCustomType.Parameter("negativeCachingPolicy") @Nullable Map<String,String> negativeCachingPolicy,
-        @OutputCustomType.Parameter("signedRequestKeyset") @Nullable String signedRequestKeyset,
-        @OutputCustomType.Parameter("signedRequestMode") @Nullable String signedRequestMode) {
+        @CustomType.Parameter("cacheKeyPolicy") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy,
+        @CustomType.Parameter("cacheMode") @Nullable String cacheMode,
+        @CustomType.Parameter("clientTtl") @Nullable String clientTtl,
+        @CustomType.Parameter("defaultTtl") @Nullable String defaultTtl,
+        @CustomType.Parameter("maxTtl") @Nullable String maxTtl,
+        @CustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
+        @CustomType.Parameter("negativeCachingPolicy") @Nullable Map<String,String> negativeCachingPolicy,
+        @CustomType.Parameter("signedRequestKeyset") @Nullable String signedRequestKeyset,
+        @CustomType.Parameter("signedRequestMode") @Nullable String signedRequestMode) {
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
      * Description of the connection state.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ConnectionStateResponse extends io.pulumi.resources.InvokeArg
      * Status of the connection.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

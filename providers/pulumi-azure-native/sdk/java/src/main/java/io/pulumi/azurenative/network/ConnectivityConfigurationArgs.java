@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.ConnectivityGroupItemArgs;
 import io.pulumi.azurenative.network.inputs.HubArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * Groups for configuration
      * 
      */
-    @InputImport(name="appliesToGroups")
+    @Import(name="appliesToGroups")
       private final @Nullable Output<List<ConnectivityGroupItemArgs>> appliesToGroups;
 
     public Output<List<ConnectivityGroupItemArgs>> getAppliesToGroups() {
@@ -36,7 +36,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * The name of the network manager connectivity configuration.
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -47,7 +47,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * Connectivity topology type.
      * 
      */
-    @InputImport(name="connectivityTopology", required=true)
+    @Import(name="connectivityTopology", required=true)
       private final Output<Either<String,ConnectivityTopology>> connectivityTopology;
 
     public Output<Either<String,ConnectivityTopology>> getConnectivityTopology() {
@@ -58,7 +58,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * Flag if need to remove current existing peerings.
      * 
      */
-    @InputImport(name="deleteExistingPeering")
+    @Import(name="deleteExistingPeering")
       private final @Nullable Output<Either<String,DeleteExistingPeering>> deleteExistingPeering;
 
     public Output<Either<String,DeleteExistingPeering>> getDeleteExistingPeering() {
@@ -69,7 +69,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * A description of the connectivity configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -80,7 +80,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * A friendly name for the resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -91,7 +91,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * List of hubItems
      * 
      */
-    @InputImport(name="hubs")
+    @Import(name="hubs")
       private final @Nullable Output<List<HubArgs>> hubs;
 
     public Output<List<HubArgs>> getHubs() {
@@ -102,7 +102,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * Flag if global mesh is supported.
      * 
      */
-    @InputImport(name="isGlobal")
+    @Import(name="isGlobal")
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
     public Output<Either<String,IsGlobal>> getIsGlobal() {
@@ -113,7 +113,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
     public Output<String> getNetworkManagerName() {
@@ -124,7 +124,7 @@ public final class ConnectivityConfigurationArgs extends io.pulumi.resources.Res
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

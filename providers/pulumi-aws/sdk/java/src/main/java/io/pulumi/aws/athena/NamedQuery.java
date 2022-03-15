@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.athena.NamedQueryArgs;
 import io.pulumi.aws.athena.inputs.NamedQueryState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The database to which the query belongs.
      * 
      */
-    @OutputExport(name="database", type=String.class, parameters={})
+    @Export(name="database", type=String.class, parameters={})
     private Output<String> database;
 
     /**
@@ -46,7 +46,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * A brief explanation of the query. Maximum length of 1024.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -60,7 +60,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The plain language name for the query. Maximum length of 128.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -74,7 +74,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The text of the query itself. In other words, all query statements. Maximum length of 262144.
      * 
      */
-    @OutputExport(name="query", type=String.class, parameters={})
+    @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
@@ -88,7 +88,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * The workgroup to which the query belongs. Defaults to `primary`
      * 
      */
-    @OutputExport(name="workgroup", type=String.class, parameters={})
+    @Export(name="workgroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> workgroup;
 
     /**

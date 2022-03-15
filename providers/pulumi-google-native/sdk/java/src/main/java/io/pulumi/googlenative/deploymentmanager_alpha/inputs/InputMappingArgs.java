@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.InputMappingLocation;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the field that is going to be injected.
      * 
      */
-    @InputImport(name="fieldName")
+    @Import(name="fieldName")
       private final @Nullable Output<String> fieldName;
 
     public Output<String> getFieldName() {
@@ -34,7 +34,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The location where this mapping applies.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<InputMappingLocation> location;
 
     public Output<InputMappingLocation> getLocation() {
@@ -45,7 +45,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Regex to evaluate on method to decide if input applies.
      * 
      */
-    @InputImport(name="methodMatch")
+    @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
 
     public Output<String> getMethodMatch() {
@@ -56,7 +56,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * A jsonPath expression to select an element.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

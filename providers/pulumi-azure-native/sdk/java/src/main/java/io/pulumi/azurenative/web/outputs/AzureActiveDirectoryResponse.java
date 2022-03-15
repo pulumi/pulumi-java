@@ -6,13 +6,13 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AzureActiveDirectoryLoginResponse;
 import io.pulumi.azurenative.web.outputs.AzureActiveDirectoryRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.AzureActiveDirectoryValidationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureActiveDirectoryResponse {
     /**
      * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -42,13 +42,13 @@ public final class AzureActiveDirectoryResponse {
      */
     private final @Nullable AzureActiveDirectoryValidationResponse validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureActiveDirectoryResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("isAutoProvisioned") @Nullable Boolean isAutoProvisioned,
-        @OutputCustomType.Parameter("login") @Nullable AzureActiveDirectoryLoginResponse login,
-        @OutputCustomType.Parameter("registration") @Nullable AzureActiveDirectoryRegistrationResponse registration,
-        @OutputCustomType.Parameter("validation") @Nullable AzureActiveDirectoryValidationResponse validation) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("isAutoProvisioned") @Nullable Boolean isAutoProvisioned,
+        @CustomType.Parameter("login") @Nullable AzureActiveDirectoryLoginResponse login,
+        @CustomType.Parameter("registration") @Nullable AzureActiveDirectoryRegistrationResponse registration,
+        @CustomType.Parameter("validation") @Nullable AzureActiveDirectoryValidationResponse validation) {
         this.enabled = enabled;
         this.isAutoProvisioned = isAutoProvisioned;
         this.login = login;

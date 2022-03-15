@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * The route table ID.
      * 
      */
-    @InputImport(name="routeTableId", required=true)
+    @Import(name="routeTableId", required=true)
       private final String routeTableId;
 
     public String getRouteTableId() {

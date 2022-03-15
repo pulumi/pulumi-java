@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ApiManagementServiceSkuPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdditionalLocationResponse {
     /**
      * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
@@ -56,16 +56,16 @@ public final class AdditionalLocationResponse {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdditionalLocationResponse(
-        @OutputCustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
-        @OutputCustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
-        @OutputCustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
-        @OutputCustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
-        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
+        @CustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
+        @CustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
+        @CustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
+        @CustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.disableGateway = disableGateway;
         this.gatewayRegionalUrl = gatewayRegionalUrl;
         this.location = location;

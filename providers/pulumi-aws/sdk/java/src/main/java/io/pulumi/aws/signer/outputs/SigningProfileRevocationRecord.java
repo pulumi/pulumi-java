@@ -3,23 +3,23 @@
 
 package io.pulumi.aws.signer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SigningProfileRevocationRecord {
     private final @Nullable String revocationEffectiveFrom;
     private final @Nullable String revokedAt;
     private final @Nullable String revokedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SigningProfileRevocationRecord(
-        @OutputCustomType.Parameter("revocationEffectiveFrom") @Nullable String revocationEffectiveFrom,
-        @OutputCustomType.Parameter("revokedAt") @Nullable String revokedAt,
-        @OutputCustomType.Parameter("revokedBy") @Nullable String revokedBy) {
+        @CustomType.Parameter("revocationEffectiveFrom") @Nullable String revocationEffectiveFrom,
+        @CustomType.Parameter("revokedAt") @Nullable String revokedAt,
+        @CustomType.Parameter("revokedBy") @Nullable String revokedBy) {
         this.revocationEffectiveFrom = revocationEffectiveFrom;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;

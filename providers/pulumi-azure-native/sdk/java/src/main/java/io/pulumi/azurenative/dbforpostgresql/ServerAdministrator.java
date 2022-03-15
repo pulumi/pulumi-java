@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbforpostgresql.ServerAdministratorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * The type of administrator.
      * 
      */
-    @OutputExport(name="administratorType", type=String.class, parameters={})
+    @Export(name="administratorType", type=String.class, parameters={})
     private Output<String> administratorType;
 
     /**
@@ -48,7 +48,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * The server administrator login account name.
      * 
      */
-    @OutputExport(name="login", type=String.class, parameters={})
+    @Export(name="login", type=String.class, parameters={})
     private Output<String> login;
 
     /**
@@ -62,7 +62,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * The server administrator Sid (Secure ID).
      * 
      */
-    @OutputExport(name="sid", type=String.class, parameters={})
+    @Export(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
     /**
@@ -90,7 +90,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * The server Active Directory Administrator tenant id.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -104,7 +104,7 @@ public class ServerAdministrator extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

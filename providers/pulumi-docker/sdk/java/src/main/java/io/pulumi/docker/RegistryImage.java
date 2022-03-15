@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.docker.RegistryImageArgs;
 import io.pulumi.docker.Utilities;
@@ -110,7 +110,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * Definition for building the image
      * 
      */
-    @OutputExport(name="build", type=RegistryImageBuild.class, parameters={})
+    @Export(name="build", type=RegistryImageBuild.class, parameters={})
     private Output</* @Nullable */ RegistryImageBuild> build;
 
     /**
@@ -124,7 +124,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    @OutputExport(name="insecureSkipVerify", type=Boolean.class, parameters={})
+    @Export(name="insecureSkipVerify", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> insecureSkipVerify;
 
     /**
@@ -139,7 +139,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */
-    @OutputExport(name="keepRemotely", type=Boolean.class, parameters={})
+    @Export(name="keepRemotely", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> keepRemotely;
 
     /**
@@ -154,7 +154,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * The name of the Docker image.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -168,7 +168,7 @@ public class RegistryImage extends io.pulumi.resources.CustomResource {
      * The sha256 digest of the image.
      * 
      */
-    @OutputExport(name="sha256Digest", type=String.class, parameters={})
+    @Export(name="sha256Digest", type=String.class, parameters={})
     private Output<String> sha256Digest;
 
     /**

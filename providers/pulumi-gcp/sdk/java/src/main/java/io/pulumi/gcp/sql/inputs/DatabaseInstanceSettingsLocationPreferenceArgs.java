@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
      * in. Must be in the same region as this instance.
      * 
      */
-    @InputImport(name="followGaeApplication")
+    @Import(name="followGaeApplication")
       private final @Nullable Output<String> followGaeApplication;
 
     public Output<String> getFollowGaeApplication() {
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
      * [zone](https://cloud.google.com/compute/docs/zones?hl=en).
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

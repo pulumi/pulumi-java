@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.MetadataItemsItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Array of key/value pairs. The total size of all keys and values must be less than 512 KB.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<MetadataItemsItemArgs>> items;
 
     public Output<List<MetadataItemsItemArgs>> getItems() {

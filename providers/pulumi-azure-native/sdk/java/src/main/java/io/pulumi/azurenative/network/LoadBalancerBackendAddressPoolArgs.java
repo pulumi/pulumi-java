@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.LoadBalancerBackendAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * The name of the backend address pool.
      * 
      */
-    @InputImport(name="backendAddressPoolName")
+    @Import(name="backendAddressPoolName")
       private final @Nullable Output<String> backendAddressPoolName;
 
     public Output<String> getBackendAddressPoolName() {
@@ -31,7 +31,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -42,7 +42,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * An array of backend addresses.
      * 
      */
-    @InputImport(name="loadBalancerBackendAddresses")
+    @Import(name="loadBalancerBackendAddresses")
       private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
     public Output<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
@@ -53,7 +53,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * The name of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerName", required=true)
+    @Import(name="loadBalancerName", required=true)
       private final Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
@@ -64,7 +64,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * The location of the backend address pool.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -75,7 +75,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

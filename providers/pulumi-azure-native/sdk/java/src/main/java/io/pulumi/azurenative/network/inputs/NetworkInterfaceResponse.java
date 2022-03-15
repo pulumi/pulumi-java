@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NetworkSecurityGroupResponse;
 import io.pulumi.azurenative.network.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The DNS settings in network interface.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable NetworkInterfaceDnsSettingsResponse dnsSettings;
 
     public Optional<NetworkInterfaceDnsSettingsResponse> getDnsSettings() {
@@ -44,7 +44,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A reference to the dscp configuration to which the network interface is linked.
      * 
      */
-    @InputImport(name="dscpConfiguration", required=true)
+    @Import(name="dscpConfiguration", required=true)
       private final SubResourceResponse dscpConfiguration;
 
     public SubResourceResponse getDscpConfiguration() {
@@ -55,7 +55,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * If the network interface is accelerated networking enabled.
      * 
      */
-    @InputImport(name="enableAcceleratedNetworking")
+    @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> getEnableAcceleratedNetworking() {
@@ -66,7 +66,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Indicates whether IP forwarding is enabled on this network interface.
      * 
      */
-    @InputImport(name="enableIPForwarding")
+    @Import(name="enableIPForwarding")
       private final @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> getEnableIPForwarding() {
@@ -77,7 +77,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -88,7 +88,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The extended location of the network interface.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
@@ -99,7 +99,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A list of references to linked BareMetal resources.
      * 
      */
-    @InputImport(name="hostedWorkloads", required=true)
+    @Import(name="hostedWorkloads", required=true)
       private final List<String> hostedWorkloads;
 
     public List<String> getHostedWorkloads() {
@@ -110,7 +110,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -121,7 +121,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A list of IPConfigurations of the network interface.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
@@ -132,7 +132,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -143,7 +143,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The MAC address of the network interface.
      * 
      */
-    @InputImport(name="macAddress", required=true)
+    @Import(name="macAddress", required=true)
       private final String macAddress;
 
     public String getMacAddress() {
@@ -154,7 +154,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Migration phase of Network Interface resource.
      * 
      */
-    @InputImport(name="migrationPhase")
+    @Import(name="migrationPhase")
       private final @Nullable String migrationPhase;
 
     public Optional<String> getMigrationPhase() {
@@ -165,7 +165,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -176,7 +176,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The reference to the NetworkSecurityGroup resource.
      * 
      */
-    @InputImport(name="networkSecurityGroup")
+    @Import(name="networkSecurityGroup")
       private final @Nullable NetworkSecurityGroupResponse networkSecurityGroup;
 
     public Optional<NetworkSecurityGroupResponse> getNetworkSecurityGroup() {
@@ -187,7 +187,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Type of Network Interface resource.
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable String nicType;
 
     public Optional<String> getNicType() {
@@ -198,7 +198,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Whether this is a primary network interface on a virtual machine.
      * 
      */
-    @InputImport(name="primary", required=true)
+    @Import(name="primary", required=true)
       private final Boolean primary;
 
     public Boolean getPrimary() {
@@ -209,7 +209,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A reference to the private endpoint to which the network interface is linked.
      * 
      */
-    @InputImport(name="privateEndpoint", required=true)
+    @Import(name="privateEndpoint", required=true)
       private final PrivateEndpointResponse privateEndpoint;
 
     public PrivateEndpointResponse getPrivateEndpoint() {
@@ -220,7 +220,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Privatelinkservice of the network interface resource.
      * 
      */
-    @InputImport(name="privateLinkService")
+    @Import(name="privateLinkService")
       private final @Nullable PrivateLinkServiceResponse privateLinkService;
 
     public Optional<PrivateLinkServiceResponse> getPrivateLinkService() {
@@ -231,7 +231,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The provisioning state of the network interface resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -242,7 +242,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The resource GUID property of the network interface resource.
      * 
      */
-    @InputImport(name="resourceGuid", required=true)
+    @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
     public String getResourceGuid() {
@@ -253,7 +253,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -264,7 +264,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * A list of TapConfigurations of the network interface.
      * 
      */
-    @InputImport(name="tapConfigurations", required=true)
+    @Import(name="tapConfigurations", required=true)
       private final List<NetworkInterfaceTapConfigurationResponse> tapConfigurations;
 
     public List<NetworkInterfaceTapConfigurationResponse> getTapConfigurations() {
@@ -275,7 +275,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -286,7 +286,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The reference to a virtual machine.
      * 
      */
-    @InputImport(name="virtualMachine", required=true)
+    @Import(name="virtualMachine", required=true)
       private final SubResourceResponse virtualMachine;
 
     public SubResourceResponse getVirtualMachine() {

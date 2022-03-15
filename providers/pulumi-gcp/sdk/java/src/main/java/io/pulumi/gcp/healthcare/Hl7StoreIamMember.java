@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.Hl7StoreIamMemberArgs;
@@ -59,7 +59,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember")
 public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=Hl7StoreIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=Hl7StoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ Hl7StoreIamMemberCondition> condition;
 
     public Output</* @Nullable */ Hl7StoreIamMemberCondition> getCondition() {
@@ -69,7 +69,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the HL7v2 store's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -86,7 +86,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="hl7V2StoreId", type=String.class, parameters={})
+    @Export(name="hl7V2StoreId", type=String.class, parameters={})
     private Output<String> hl7V2StoreId;
 
     /**
@@ -99,7 +99,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -111,7 +111,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

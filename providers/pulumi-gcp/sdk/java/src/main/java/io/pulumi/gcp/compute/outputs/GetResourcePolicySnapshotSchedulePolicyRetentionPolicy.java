@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicySnapshotSchedulePolicyRetentionPolicy {
     private final Integer maxRetentionDays;
     private final String onSourceDiskDelete;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicyRetentionPolicy(
-        @OutputCustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
-        @OutputCustomType.Parameter("onSourceDiskDelete") String onSourceDiskDelete) {
+        @CustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
+        @CustomType.Parameter("onSourceDiskDelete") String onSourceDiskDelete) {
         this.maxRetentionDays = maxRetentionDays;
         this.onSourceDiskDelete = onSourceDiskDelete;
     }

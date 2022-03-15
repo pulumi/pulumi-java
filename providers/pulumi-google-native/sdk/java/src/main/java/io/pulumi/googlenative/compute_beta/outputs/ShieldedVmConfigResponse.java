@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShieldedVmConfigResponse {
     /**
      * Defines whether the instance has integrity monitoring enabled.
@@ -25,11 +25,11 @@ public final class ShieldedVmConfigResponse {
      */
     private final Boolean enableVtpm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShieldedVmConfigResponse(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
-        @OutputCustomType.Parameter("enableVtpm") Boolean enableVtpm) {
+        @CustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
+        @CustomType.Parameter("enableVtpm") Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

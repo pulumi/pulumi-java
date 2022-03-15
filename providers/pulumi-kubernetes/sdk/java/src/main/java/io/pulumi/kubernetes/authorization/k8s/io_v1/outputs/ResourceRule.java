@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceRule {
     /**
      * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.  "*" means all.
@@ -33,12 +33,12 @@ public final class ResourceRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceRule(
-        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
-        @OutputCustomType.Parameter("resourceNames") @Nullable List<String> resourceNames,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
-        @OutputCustomType.Parameter("verbs") List<String> verbs) {
+        @CustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @CustomType.Parameter("resourceNames") @Nullable List<String> resourceNames,
+        @CustomType.Parameter("resources") @Nullable List<String> resources,
+        @CustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.resourceNames = resourceNames;
         this.resources = resources;

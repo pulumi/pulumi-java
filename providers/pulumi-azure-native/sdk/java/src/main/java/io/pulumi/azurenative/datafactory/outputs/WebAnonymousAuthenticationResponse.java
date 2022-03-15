@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAnonymousAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
@@ -22,10 +22,10 @@ public final class WebAnonymousAuthenticationResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAnonymousAuthenticationResponse(
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("url") Object url) {
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("url") Object url) {
         this.authenticationType = authenticationType;
         this.url = url;
     }

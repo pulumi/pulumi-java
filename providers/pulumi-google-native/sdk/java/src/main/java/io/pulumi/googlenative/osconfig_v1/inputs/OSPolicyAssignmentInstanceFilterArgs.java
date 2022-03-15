@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentInstanceFilterInventoryArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentLabelSetArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * Target all VMs in the project. If true, no other criteria is permitted.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
     public Output<Boolean> getAll() {
@@ -36,7 +36,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
      * 
      */
-    @InputImport(name="exclusionLabels")
+    @Import(name="exclusionLabels")
       private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
 
     public Output<List<OSPolicyAssignmentLabelSetArgs>> getExclusionLabels() {
@@ -47,7 +47,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
      * 
      */
-    @InputImport(name="inclusionLabels")
+    @Import(name="inclusionLabels")
       private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
 
     public Output<List<OSPolicyAssignmentLabelSetArgs>> getInclusionLabels() {
@@ -58,7 +58,7 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
      * 
      */
-    @InputImport(name="inventories")
+    @Import(name="inventories")
       private final @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
     public Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> getInventories() {

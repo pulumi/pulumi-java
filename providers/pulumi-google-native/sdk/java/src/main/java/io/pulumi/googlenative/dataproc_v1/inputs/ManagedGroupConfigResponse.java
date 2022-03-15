@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
      * The name of the Instance Group Manager for this group.
      * 
      */
-    @InputImport(name="instanceGroupManagerName", required=true)
+    @Import(name="instanceGroupManagerName", required=true)
       private final String instanceGroupManagerName;
 
     public String getInstanceGroupManagerName() {
@@ -31,7 +31,7 @@ public final class ManagedGroupConfigResponse extends io.pulumi.resources.Invoke
      * The name of the Instance Template used for the Managed Instance Group.
      * 
      */
-    @InputImport(name="instanceTemplateName", required=true)
+    @Import(name="instanceTemplateName", required=true)
       private final String instanceTemplateName;
 
     public String getInstanceTemplateName() {

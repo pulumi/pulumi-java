@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.outputs.AssociationInstanceAssociationOutputLocation;
 import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ssm:Association")
 public class Association extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="applyOnlyAtCronInterval", type=Boolean.class, parameters={})
+    @Export(name="applyOnlyAtCronInterval", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> applyOnlyAtCronInterval;
 
     public Output</* @Nullable */ Boolean> getApplyOnlyAtCronInterval() {
@@ -37,7 +37,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * Unique identifier of the association.
      * 
      */
-    @OutputExport(name="associationId", type=String.class, parameters={})
+    @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     /**
@@ -51,7 +51,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * The name of the association.
      * 
      */
-    @OutputExport(name="associationName", type=String.class, parameters={})
+    @Export(name="associationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> associationName;
 
     /**
@@ -61,19 +61,19 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAssociationName() {
         return this.associationName;
     }
-    @OutputExport(name="automationTargetParameterName", type=String.class, parameters={})
+    @Export(name="automationTargetParameterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> automationTargetParameterName;
 
     public Output</* @Nullable */ String> getAutomationTargetParameterName() {
         return this.automationTargetParameterName;
     }
-    @OutputExport(name="calendarNames", type=List.class, parameters={String.class})
+    @Export(name="calendarNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> calendarNames;
 
     public Output</* @Nullable */ List<String>> getCalendarNames() {
         return this.calendarNames;
     }
-    @OutputExport(name="complianceSeverity", type=AssociationComplianceSeverity.class, parameters={})
+    @Export(name="complianceSeverity", type=AssociationComplianceSeverity.class, parameters={})
     private Output</* @Nullable */ AssociationComplianceSeverity> complianceSeverity;
 
     public Output</* @Nullable */ AssociationComplianceSeverity> getComplianceSeverity() {
@@ -83,7 +83,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * The version of the SSM document to associate with the target.
      * 
      */
-    @OutputExport(name="documentVersion", type=String.class, parameters={})
+    @Export(name="documentVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentVersion;
 
     /**
@@ -97,7 +97,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * The ID of the instance that the SSM document is associated with.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceId;
 
     /**
@@ -107,13 +107,13 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getInstanceId() {
         return this.instanceId;
     }
-    @OutputExport(name="maxConcurrency", type=String.class, parameters={})
+    @Export(name="maxConcurrency", type=String.class, parameters={})
     private Output</* @Nullable */ String> maxConcurrency;
 
     public Output</* @Nullable */ String> getMaxConcurrency() {
         return this.maxConcurrency;
     }
-    @OutputExport(name="maxErrors", type=String.class, parameters={})
+    @Export(name="maxErrors", type=String.class, parameters={})
     private Output</* @Nullable */ String> maxErrors;
 
     public Output</* @Nullable */ String> getMaxErrors() {
@@ -123,7 +123,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * The name of the SSM document.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="outputLocation", type=AssociationInstanceAssociationOutputLocation.class, parameters={})
+    @Export(name="outputLocation", type=AssociationInstanceAssociationOutputLocation.class, parameters={})
     private Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> outputLocation;
 
     public Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> getOutputLocation() {
@@ -143,7 +143,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * Parameter values that the SSM document uses at runtime.
      * 
      */
-    @OutputExport(name="parameters", type=Object.class, parameters={})
+    @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
@@ -157,7 +157,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * A Cron or Rate expression that specifies when the association is applied to the target.
      * 
      */
-    @OutputExport(name="scheduleExpression", type=String.class, parameters={})
+    @Export(name="scheduleExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduleExpression;
 
     /**
@@ -167,7 +167,7 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getScheduleExpression() {
         return this.scheduleExpression;
     }
-    @OutputExport(name="syncCompliance", type=AssociationSyncCompliance.class, parameters={})
+    @Export(name="syncCompliance", type=AssociationSyncCompliance.class, parameters={})
     private Output</* @Nullable */ AssociationSyncCompliance> syncCompliance;
 
     public Output</* @Nullable */ AssociationSyncCompliance> getSyncCompliance() {
@@ -177,7 +177,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * The targets that the SSM document sends commands to.
      * 
      */
-    @OutputExport(name="targets", type=List.class, parameters={AssociationTarget.class})
+    @Export(name="targets", type=List.class, parameters={AssociationTarget.class})
     private Output</* @Nullable */ List<AssociationTarget>> targets;
 
     /**
@@ -187,7 +187,7 @@ public class Association extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<AssociationTarget>> getTargets() {
         return this.targets;
     }
-    @OutputExport(name="waitForSuccessTimeoutSeconds", type=Integer.class, parameters={})
+    @Export(name="waitForSuccessTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> waitForSuccessTimeoutSeconds;
 
     public Output</* @Nullable */ Integer> getWaitForSuccessTimeoutSeconds() {

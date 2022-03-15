@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OidcTokenResponse {
     /**
      * Audience to be used when generating OIDC token. The audience claim identifies the recipients that the JWT is intended for. The audience value is a single case-sensitive string. Having multiple values (array) for the audience field is not supported. More info about the OIDC JWT token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3 Note: if not specified, the Push endpoint URL will be used.
@@ -20,10 +20,10 @@ public final class OidcTokenResponse {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OidcTokenResponse(
-        @OutputCustomType.Parameter("audience") String audience,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
+        @CustomType.Parameter("audience") String audience,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }

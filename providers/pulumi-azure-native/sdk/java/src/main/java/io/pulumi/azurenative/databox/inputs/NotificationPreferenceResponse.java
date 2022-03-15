@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NotificationPreferenceResponse extends io.pulumi.resources.In
      * Notification is required or not.
      * 
      */
-    @InputImport(name="sendNotification", required=true)
+    @Import(name="sendNotification", required=true)
       private final Boolean sendNotification;
 
     public Boolean getSendNotification() {
@@ -32,7 +32,7 @@ public final class NotificationPreferenceResponse extends io.pulumi.resources.In
      * Name of the stage.
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final String stageName;
 
     public String getStageName() {

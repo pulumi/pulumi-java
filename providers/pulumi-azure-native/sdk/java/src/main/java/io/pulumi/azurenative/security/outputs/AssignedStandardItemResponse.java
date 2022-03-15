@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignedStandardItemResponse {
     /**
      * full resourceId of the Microsoft.Security/standard object
@@ -17,8 +17,8 @@ public final class AssignedStandardItemResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private AssignedStandardItemResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private AssignedStandardItemResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

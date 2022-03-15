@@ -7,7 +7,7 @@ import io.pulumi.awsnative.signer.enums.SigningProfilePlatformId;
 import io.pulumi.awsnative.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import io.pulumi.awsnative.signer.inputs.SigningProfileTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the target signing platform.
      * 
      */
-    @InputImport(name="platformId", required=true)
+    @Import(name="platformId", required=true)
       private final Output<SigningProfilePlatformId> platformId;
 
     public Output<SigningProfilePlatformId> getPlatformId() {
@@ -32,7 +32,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Signature validity period of the profile.
      * 
      */
-    @InputImport(name="signatureValidityPeriod")
+    @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
     public Output<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
@@ -43,7 +43,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags associated with the signing profile.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SigningProfileTagArgs>> tags;
 
     public Output<List<SigningProfileTagArgs>> getTags() {

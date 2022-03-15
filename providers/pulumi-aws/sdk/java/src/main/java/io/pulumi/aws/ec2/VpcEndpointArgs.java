@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).
      * 
      */
-    @InputImport(name="autoAccept")
+    @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
     public Output<Boolean> getAutoAccept() {
@@ -32,7 +32,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -44,7 +44,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to `false`.
      * 
      */
-    @InputImport(name="privateDnsEnabled")
+    @Import(name="privateDnsEnabled")
       private final @Nullable Output<Boolean> privateDnsEnabled;
 
     public Output<Boolean> getPrivateDnsEnabled() {
@@ -55,7 +55,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * One or more route table IDs. Applicable for endpoints of type `Gateway`.
      * 
      */
-    @InputImport(name="routeTableIds")
+    @Import(name="routeTableIds")
       private final @Nullable Output<List<String>> routeTableIds;
 
     public Output<List<String>> getRouteTableIds() {
@@ -66,7 +66,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -77,7 +77,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The service name. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -88,7 +88,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -99,7 +99,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
      * 
      */
-    @InputImport(name="vpcEndpointType")
+    @Import(name="vpcEndpointType")
       private final @Nullable Output<String> vpcEndpointType;
 
     public Output<String> getVpcEndpointType() {
@@ -121,7 +121,7 @@ public final class VpcEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC in which the endpoint will be used.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ToolExecutionStepResponse extends io.pulumi.resources.InvokeA
      * A Tool execution. - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="toolExecution", required=true)
+    @Import(name="toolExecution", required=true)
       private final ToolExecutionResponse toolExecution;
 
     public ToolExecutionResponse getToolExecution() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @InputImport(name="expiry", required=true)
+    @Import(name="expiry", required=true)
       private final Output<String> expiry;
 
     public Output<String> getExpiry() {
@@ -32,7 +32,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * Subject of the certificate.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final Output<String> subject;
 
     public Output<String> getSubject() {
@@ -43,7 +43,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * Thumbprint of the certificate.
      * 
      */
-    @InputImport(name="thumbprint", required=true)
+    @Import(name="thumbprint", required=true)
       private final Output<String> thumbprint;
 
     public Output<String> getThumbprint() {

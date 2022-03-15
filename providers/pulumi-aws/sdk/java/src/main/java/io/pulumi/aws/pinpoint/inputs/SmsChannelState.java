@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -31,7 +31,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -42,7 +42,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * Promotional messages per second that can be sent.
      * 
      */
-    @InputImport(name="promotionalMessagesPerSecond")
+    @Import(name="promotionalMessagesPerSecond")
       private final @Nullable Output<Integer> promotionalMessagesPerSecond;
 
     public Output<Integer> getPromotionalMessagesPerSecond() {
@@ -53,7 +53,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * Sender identifier of your messages.
      * 
      */
-    @InputImport(name="senderId")
+    @Import(name="senderId")
       private final @Nullable Output<String> senderId;
 
     public Output<String> getSenderId() {
@@ -64,7 +64,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * The Short Code registered with the phone provider.
      * 
      */
-    @InputImport(name="shortCode")
+    @Import(name="shortCode")
       private final @Nullable Output<String> shortCode;
 
     public Output<String> getShortCode() {
@@ -75,7 +75,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
      * Transactional messages per second that can be sent.
      * 
      */
-    @InputImport(name="transactionalMessagesPerSecond")
+    @Import(name="transactionalMessagesPerSecond")
       private final @Nullable Output<Integer> transactionalMessagesPerSecond;
 
     public Output<Integer> getTransactionalMessagesPerSecond() {

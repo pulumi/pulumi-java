@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRuleCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerRuleResult {
     private final @Nullable List<ListenerRuleAction> actions;
     private final @Nullable List<ListenerRuleRuleCondition> conditions;
@@ -22,13 +22,13 @@ public final class GetListenerRuleResult {
     private final @Nullable Integer priority;
     private final @Nullable String ruleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerRuleResult(
-        @OutputCustomType.Parameter("actions") @Nullable List<ListenerRuleAction> actions,
-        @OutputCustomType.Parameter("conditions") @Nullable List<ListenerRuleRuleCondition> conditions,
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("ruleArn") @Nullable String ruleArn) {
+        @CustomType.Parameter("actions") @Nullable List<ListenerRuleAction> actions,
+        @CustomType.Parameter("conditions") @Nullable List<ListenerRuleRuleCondition> conditions,
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("ruleArn") @Nullable String ruleArn) {
         this.actions = actions;
         this.conditions = conditions;
         this.isDefault = isDefault;

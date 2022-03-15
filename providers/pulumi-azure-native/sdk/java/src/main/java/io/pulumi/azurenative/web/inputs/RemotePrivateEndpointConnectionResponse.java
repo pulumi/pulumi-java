@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ArmIdWrapperResponse;
 import io.pulumi.azurenative.web.inputs.PrivateLinkConnectionStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -36,7 +36,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * Private IPAddresses mapped to the remote private endpoint
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
@@ -47,7 +47,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -58,7 +58,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -69,7 +69,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * PrivateEndpoint of a remote private endpoint connection
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable ArmIdWrapperResponse privateEndpoint;
 
     public Optional<ArmIdWrapperResponse> getPrivateEndpoint() {
@@ -80,14 +80,14 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * The state of a private link connection
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -98,7 +98,7 @@ public final class RemotePrivateEndpointConnectionResponse extends io.pulumi.res
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

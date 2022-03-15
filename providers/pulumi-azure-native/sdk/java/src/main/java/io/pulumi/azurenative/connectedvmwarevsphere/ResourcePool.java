@@ -10,7 +10,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusRespon
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Utilization will not exceed this limit even if there are available resources.
      * 
      */
-    @OutputExport(name="cpuLimitMHz", type=Double.class, parameters={})
+    @Export(name="cpuLimitMHz", type=Double.class, parameters={})
     private Output<Double> cpuLimitMHz;
 
     /**
@@ -56,7 +56,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * to be available.
      * 
      */
-    @OutputExport(name="cpuReservationMHz", type=Double.class, parameters={})
+    @Export(name="cpuReservationMHz", type=Double.class, parameters={})
     private Output<Double> cpuReservationMHz;
 
     /**
@@ -72,7 +72,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * This property is used in relative allocation between resource consumers.
      * 
      */
-    @OutputExport(name="cpuSharesLevel", type=String.class, parameters={})
+    @Export(name="cpuSharesLevel", type=String.class, parameters={})
     private Output<String> cpuSharesLevel;
 
     /**
@@ -87,7 +87,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    @OutputExport(name="customResourceName", type=String.class, parameters={})
+    @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
@@ -101,7 +101,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the extended location.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -115,7 +115,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the inventory Item ID for the resource pool.
      * 
      */
-    @OutputExport(name="inventoryItemId", type=String.class, parameters={})
+    @Export(name="inventoryItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> inventoryItemId;
 
     /**
@@ -129,7 +129,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -143,7 +143,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -158,7 +158,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Utilization will not exceed the specified limit even if there are available resources.
      * 
      */
-    @OutputExport(name="memLimitMB", type=Double.class, parameters={})
+    @Export(name="memLimitMB", type=Double.class, parameters={})
     private Output<Double> memLimitMB;
 
     /**
@@ -174,7 +174,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * megabytes.
      * 
      */
-    @OutputExport(name="memReservationMB", type=Double.class, parameters={})
+    @Export(name="memReservationMB", type=Double.class, parameters={})
     private Output<Double> memReservationMB;
 
     /**
@@ -190,7 +190,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * This property is used in relative allocation between resource consumers.
      * 
      */
-    @OutputExport(name="memSharesLevel", type=String.class, parameters={})
+    @Export(name="memSharesLevel", type=String.class, parameters={})
     private Output<String> memSharesLevel;
 
     /**
@@ -205,7 +205,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the vCenter Managed Object name for the resource pool.
      * 
      */
-    @OutputExport(name="moName", type=String.class, parameters={})
+    @Export(name="moName", type=String.class, parameters={})
     private Output<String> moName;
 
     /**
@@ -219,7 +219,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the vCenter MoRef (Managed Object Reference) ID for the resource pool.
      * 
      */
-    @OutputExport(name="moRefId", type=String.class, parameters={})
+    @Export(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
     /**
@@ -233,7 +233,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -247,7 +247,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -261,7 +261,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * The resource status information.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
@@ -275,7 +275,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -289,7 +289,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -303,7 +303,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -317,7 +317,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets a unique identifier for this resource.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
@@ -331,7 +331,7 @@ public class ResourcePool extends io.pulumi.resources.CustomResource {
      * Gets or sets the ARM Id of the vCenter resource in which this resource pool resides.
      * 
      */
-    @OutputExport(name="vCenterId", type=String.class, parameters={})
+    @Export(name="vCenterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vCenterId;
 
     /**

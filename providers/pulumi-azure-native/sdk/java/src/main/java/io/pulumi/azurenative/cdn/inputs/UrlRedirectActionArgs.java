@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.UrlRedirectActionParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'UrlRedirect'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class UrlRedirectActionArgs extends io.pulumi.resources.ResourceArg
      * Defines the parameters for the action.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<UrlRedirectActionParametersArgs> parameters;
 
     public Output<UrlRedirectActionParametersArgs> getParameters() {

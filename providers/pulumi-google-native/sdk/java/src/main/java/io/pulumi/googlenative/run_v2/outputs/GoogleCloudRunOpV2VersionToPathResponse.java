@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2VersionToPathResponse {
     /**
      * Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume's default mode will be used. Notes * Internally, a umask of 0222 will be applied to any non-zero value. * This is an integer representation of the mode bits. So, the octal integer value should look exactly as the chmod numeric notation with a leading zero. Some examples: for chmod 777 (a=rwx), set to 0777 (octal) or 511 (base-10). For chmod 640 (u=rw,g=r), set to 0640 (octal) or 416 (base-10). For chmod 755 (u=rwx,g=rx,o=rx), set to 0755 (octal) or 493 (base-10). * This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
@@ -26,11 +26,11 @@ public final class GoogleCloudRunOpV2VersionToPathResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2VersionToPathResponse(
-        @OutputCustomType.Parameter("mode") Integer mode,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("mode") Integer mode,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("version") String version) {
         this.mode = mode;
         this.path = path;
         this.version = version;

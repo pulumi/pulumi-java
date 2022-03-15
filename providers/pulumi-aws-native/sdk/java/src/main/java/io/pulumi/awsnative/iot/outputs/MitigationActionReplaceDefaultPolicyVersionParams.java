@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionReplaceDefaultPolicyVersionParamsTemplateName;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MitigationActionReplaceDefaultPolicyVersionParams {
     private final MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
 
-    @OutputCustomType.Constructor
-    private MitigationActionReplaceDefaultPolicyVersionParams(@OutputCustomType.Parameter("templateName") MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
+    @CustomType.Constructor
+    private MitigationActionReplaceDefaultPolicyVersionParams(@CustomType.Parameter("templateName") MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
         this.templateName = templateName;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum amount of the resource in the cluster.
      * 
      */
-    @InputImport(name="maximum")
+    @Import(name="maximum")
       private final @Nullable Output<String> maximum;
 
     public Output<String> getMaximum() {
@@ -33,7 +33,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum amount of the resource in the cluster.
      * 
      */
-    @InputImport(name="minimum")
+    @Import(name="minimum")
       private final @Nullable Output<String> minimum;
 
     public Output<String> getMinimum() {
@@ -44,7 +44,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name "cpu", "memory" or gpu-specific string.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

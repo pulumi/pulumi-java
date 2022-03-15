@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.firestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexField {
     /**
      * Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
@@ -31,11 +31,11 @@ public final class IndexField {
      */
     private final @Nullable String order;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexField(
-        @OutputCustomType.Parameter("arrayConfig") @Nullable String arrayConfig,
-        @OutputCustomType.Parameter("fieldPath") @Nullable String fieldPath,
-        @OutputCustomType.Parameter("order") @Nullable String order) {
+        @CustomType.Parameter("arrayConfig") @Nullable String arrayConfig,
+        @CustomType.Parameter("fieldPath") @Nullable String fieldPath,
+        @CustomType.Parameter("order") @Nullable String order) {
         this.arrayConfig = arrayConfig;
         this.fieldPath = fieldPath;
         this.order = order;

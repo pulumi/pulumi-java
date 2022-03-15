@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
      * Name of the account setting to set. Valid values are `serviceLongArnFormat`, `taskLongArnFormat`, `containerInstanceLongArnFormat`, `awsvpcTrunking` and `containerInsights`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="principalArn")
+    @Import(name="principalArn")
       private final @Nullable Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
@@ -36,7 +36,7 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
      * State of the setting. Valid values are `enabled` and `disabled`.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

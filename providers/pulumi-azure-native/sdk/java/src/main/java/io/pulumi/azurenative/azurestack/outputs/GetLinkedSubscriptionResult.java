@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkedSubscriptionResult {
     /**
      * The status of the remote management connection of the Azure Stack device.
@@ -89,23 +89,23 @@ public final class GetLinkedSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkedSubscriptionResult(
-        @OutputCustomType.Parameter("deviceConnectionStatus") String deviceConnectionStatus,
-        @OutputCustomType.Parameter("deviceId") String deviceId,
-        @OutputCustomType.Parameter("deviceLinkState") String deviceLinkState,
-        @OutputCustomType.Parameter("deviceObjectId") String deviceObjectId,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastConnectedTime") String lastConnectedTime,
-        @OutputCustomType.Parameter("linkedSubscriptionId") @Nullable String linkedSubscriptionId,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("registrationResourceId") @Nullable String registrationResourceId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deviceConnectionStatus") String deviceConnectionStatus,
+        @CustomType.Parameter("deviceId") String deviceId,
+        @CustomType.Parameter("deviceLinkState") String deviceLinkState,
+        @CustomType.Parameter("deviceObjectId") String deviceObjectId,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastConnectedTime") String lastConnectedTime,
+        @CustomType.Parameter("linkedSubscriptionId") @Nullable String linkedSubscriptionId,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("registrationResourceId") @Nullable String registrationResourceId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.deviceConnectionStatus = deviceConnectionStatus;
         this.deviceId = deviceId;
         this.deviceLinkState = deviceLinkState;

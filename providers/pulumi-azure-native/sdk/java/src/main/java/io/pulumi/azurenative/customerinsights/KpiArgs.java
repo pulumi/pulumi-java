@@ -10,7 +10,7 @@ import io.pulumi.azurenative.customerinsights.inputs.KpiAliasArgs;
 import io.pulumi.azurenative.customerinsights.inputs.KpiExtractArgs;
 import io.pulumi.azurenative.customerinsights.inputs.KpiThresholdsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The aliases.
      * 
      */
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable Output<List<KpiAliasArgs>> aliases;
 
     public Output<List<KpiAliasArgs>> getAliases() {
@@ -37,7 +37,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The calculation window.
      * 
      */
-    @InputImport(name="calculationWindow", required=true)
+    @Import(name="calculationWindow", required=true)
       private final Output<CalculationWindowTypes> calculationWindow;
 
     public Output<CalculationWindowTypes> getCalculationWindow() {
@@ -48,7 +48,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * Name of calculation window field.
      * 
      */
-    @InputImport(name="calculationWindowFieldName")
+    @Import(name="calculationWindowFieldName")
       private final @Nullable Output<String> calculationWindowFieldName;
 
     public Output<String> getCalculationWindowFieldName() {
@@ -59,7 +59,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * Localized description for the KPI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
@@ -70,7 +70,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * Localized display name for the KPI.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
@@ -81,7 +81,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The mapping entity type.
      * 
      */
-    @InputImport(name="entityType", required=true)
+    @Import(name="entityType", required=true)
       private final Output<EntityTypes> entityType;
 
     public Output<EntityTypes> getEntityType() {
@@ -92,7 +92,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The mapping entity name.
      * 
      */
-    @InputImport(name="entityTypeName", required=true)
+    @Import(name="entityTypeName", required=true)
       private final Output<String> entityTypeName;
 
     public Output<String> getEntityTypeName() {
@@ -103,7 +103,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The computation expression for the KPI.
      * 
      */
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final Output<String> expression;
 
     public Output<String> getExpression() {
@@ -114,7 +114,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The KPI extracts.
      * 
      */
-    @InputImport(name="extracts")
+    @Import(name="extracts")
       private final @Nullable Output<List<KpiExtractArgs>> extracts;
 
     public Output<List<KpiExtractArgs>> getExtracts() {
@@ -125,7 +125,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The filter expression for the KPI.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -136,7 +136,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The computation function for the KPI.
      * 
      */
-    @InputImport(name="function", required=true)
+    @Import(name="function", required=true)
       private final Output<KpiFunctions> function;
 
     public Output<KpiFunctions> getFunction() {
@@ -147,7 +147,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * the group by properties for the KPI.
      * 
      */
-    @InputImport(name="groupBy")
+    @Import(name="groupBy")
       private final @Nullable Output<List<String>> groupBy;
 
     public Output<List<String>> getGroupBy() {
@@ -158,7 +158,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -169,7 +169,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the KPI.
      * 
      */
-    @InputImport(name="kpiName")
+    @Import(name="kpiName")
       private final @Nullable Output<String> kpiName;
 
     public Output<String> getKpiName() {
@@ -180,7 +180,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -191,7 +191,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The KPI thresholds.
      * 
      */
-    @InputImport(name="thresHolds")
+    @Import(name="thresHolds")
       private final @Nullable Output<KpiThresholdsArgs> thresHolds;
 
     public Output<KpiThresholdsArgs> getThresHolds() {
@@ -202,7 +202,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
      * The unit of measurement for the KPI.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

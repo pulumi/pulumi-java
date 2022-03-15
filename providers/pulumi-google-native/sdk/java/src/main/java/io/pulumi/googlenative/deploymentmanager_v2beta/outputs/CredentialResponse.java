@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.BasicAuthResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.ServiceAccountResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CredentialResponse {
     /**
      * Basic Auth Credential, only used by TypeProvider.
@@ -27,11 +27,11 @@ public final class CredentialResponse {
      */
     private final Boolean useProjectDefault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CredentialResponse(
-        @OutputCustomType.Parameter("basicAuth") BasicAuthResponse basicAuth,
-        @OutputCustomType.Parameter("serviceAccount") ServiceAccountResponse serviceAccount,
-        @OutputCustomType.Parameter("useProjectDefault") Boolean useProjectDefault) {
+        @CustomType.Parameter("basicAuth") BasicAuthResponse basicAuth,
+        @CustomType.Parameter("serviceAccount") ServiceAccountResponse serviceAccount,
+        @CustomType.Parameter("useProjectDefault") Boolean useProjectDefault) {
         this.basicAuth = basicAuth;
         this.serviceAccount = serviceAccount;
         this.useProjectDefault = useProjectDefault;

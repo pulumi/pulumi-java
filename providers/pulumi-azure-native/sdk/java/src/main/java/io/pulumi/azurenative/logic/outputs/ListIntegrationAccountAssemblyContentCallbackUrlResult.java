@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.WorkflowTriggerListCallbackUrlQueriesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListIntegrationAccountAssemblyContentCallbackUrlResult {
     /**
      * Gets the workflow trigger callback URL base path.
@@ -44,14 +44,14 @@ public final class ListIntegrationAccountAssemblyContentCallbackUrlResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListIntegrationAccountAssemblyContentCallbackUrlResult(
-        @OutputCustomType.Parameter("basePath") String basePath,
-        @OutputCustomType.Parameter("method") String method,
-        @OutputCustomType.Parameter("queries") @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries,
-        @OutputCustomType.Parameter("relativePath") String relativePath,
-        @OutputCustomType.Parameter("relativePathParameters") @Nullable List<String> relativePathParameters,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("basePath") String basePath,
+        @CustomType.Parameter("method") String method,
+        @CustomType.Parameter("queries") @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries,
+        @CustomType.Parameter("relativePath") String relativePath,
+        @CustomType.Parameter("relativePathParameters") @Nullable List<String> relativePathParameters,
+        @CustomType.Parameter("value") String value) {
         this.basePath = basePath;
         this.method = method;
         this.queries = queries;

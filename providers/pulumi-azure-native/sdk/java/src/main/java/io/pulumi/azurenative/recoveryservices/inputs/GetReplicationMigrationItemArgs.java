@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReplicationMigrationItemArgs extends io.pulumi.resources.I
      * Fabric unique name.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final String fabricName;
 
     public String getFabricName() {
@@ -27,7 +27,7 @@ public final class GetReplicationMigrationItemArgs extends io.pulumi.resources.I
      * Migration item name.
      * 
      */
-    @InputImport(name="migrationItemName", required=true)
+    @Import(name="migrationItemName", required=true)
       private final String migrationItemName;
 
     public String getMigrationItemName() {
@@ -38,7 +38,7 @@ public final class GetReplicationMigrationItemArgs extends io.pulumi.resources.I
      * Protection container name.
      * 
      */
-    @InputImport(name="protectionContainerName", required=true)
+    @Import(name="protectionContainerName", required=true)
       private final String protectionContainerName;
 
     public String getProtectionContainerName() {
@@ -49,7 +49,7 @@ public final class GetReplicationMigrationItemArgs extends io.pulumi.resources.I
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -60,7 +60,7 @@ public final class GetReplicationMigrationItemArgs extends io.pulumi.resources.I
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {

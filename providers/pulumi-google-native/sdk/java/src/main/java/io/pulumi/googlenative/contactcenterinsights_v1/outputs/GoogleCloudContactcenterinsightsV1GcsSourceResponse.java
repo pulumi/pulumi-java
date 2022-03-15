@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     /**
      * Cloud Storage URI that points to a file that contains the conversation audio.
@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
      */
     private final String transcriptUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1GcsSourceResponse(
-        @OutputCustomType.Parameter("audioUri") String audioUri,
-        @OutputCustomType.Parameter("transcriptUri") String transcriptUri) {
+        @CustomType.Parameter("audioUri") String audioUri,
+        @CustomType.Parameter("transcriptUri") String transcriptUri) {
         this.audioUri = audioUri;
         this.transcriptUri = transcriptUri;
     }

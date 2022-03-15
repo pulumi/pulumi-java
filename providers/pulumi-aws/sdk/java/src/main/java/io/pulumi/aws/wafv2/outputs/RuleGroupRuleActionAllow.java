@@ -4,12 +4,12 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleActionAllowCustomRequestHandling;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleActionAllow {
     /**
      * Defines custom handling for the web request. See Custom Request Handling below for details.
@@ -17,8 +17,8 @@ public final class RuleGroupRuleActionAllow {
      */
     private final @Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleActionAllow(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
+    @CustomType.Constructor
+    private RuleGroupRuleActionAllow(@CustomType.Parameter("customRequestHandling") @Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

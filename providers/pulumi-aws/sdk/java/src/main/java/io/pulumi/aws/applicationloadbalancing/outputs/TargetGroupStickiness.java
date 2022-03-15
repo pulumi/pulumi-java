@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetGroupStickiness {
     /**
      * Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
@@ -34,12 +34,12 @@ public final class TargetGroupStickiness {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetGroupStickiness(
-        @OutputCustomType.Parameter("cookieDuration") @Nullable Integer cookieDuration,
-        @OutputCustomType.Parameter("cookieName") @Nullable String cookieName,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cookieDuration") @Nullable Integer cookieDuration,
+        @CustomType.Parameter("cookieName") @Nullable String cookieName,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("type") String type) {
         this.cookieDuration = cookieDuration;
         this.cookieName = cookieName;
         this.enabled = enabled;

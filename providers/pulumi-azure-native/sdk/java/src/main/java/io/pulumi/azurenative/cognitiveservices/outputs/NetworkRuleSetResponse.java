@@ -5,14 +5,14 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.IpRuleResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleSetResponse {
     /**
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
@@ -30,11 +30,11 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRuleSetResponse(
-        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
-        @OutputCustomType.Parameter("ipRules") @Nullable List<IpRuleResponse> ipRules,
-        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @CustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @CustomType.Parameter("ipRules") @Nullable List<IpRuleResponse> ipRules,
+        @CustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
         this.virtualNetworkRules = virtualNetworkRules;

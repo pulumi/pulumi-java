@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ClusterLoggingPropertiesArgs extends io.pulumi.resources.Reso
 
     public static final ClusterLoggingPropertiesArgs Empty = new ClusterLoggingPropertiesArgs();
 
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName;
     }
 
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {

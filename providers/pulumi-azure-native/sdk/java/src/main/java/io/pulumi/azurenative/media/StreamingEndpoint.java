@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.outputs.StreamingEndpointAccessControlRespons
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -41,7 +41,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The access control definition of the streaming endpoint.
      * 
      */
-    @OutputExport(name="accessControl", type=StreamingEndpointAccessControlResponse.class, parameters={})
+    @Export(name="accessControl", type=StreamingEndpointAccessControlResponse.class, parameters={})
     private Output</* @Nullable */ StreamingEndpointAccessControlResponse> accessControl;
 
     /**
@@ -55,7 +55,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * This feature is deprecated, do not set a value for this property.
      * 
      */
-    @OutputExport(name="availabilitySetName", type=String.class, parameters={})
+    @Export(name="availabilitySetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilitySetName;
 
     /**
@@ -69,7 +69,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The CDN enabled flag.
      * 
      */
-    @OutputExport(name="cdnEnabled", type=Boolean.class, parameters={})
+    @Export(name="cdnEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cdnEnabled;
 
     /**
@@ -83,7 +83,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The CDN profile name.
      * 
      */
-    @OutputExport(name="cdnProfile", type=String.class, parameters={})
+    @Export(name="cdnProfile", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdnProfile;
 
     /**
@@ -97,7 +97,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The CDN provider name.
      * 
      */
-    @OutputExport(name="cdnProvider", type=String.class, parameters={})
+    @Export(name="cdnProvider", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdnProvider;
 
     /**
@@ -111,7 +111,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The exact time the streaming endpoint was created.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -125,7 +125,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The streaming endpoint access policies.
      * 
      */
-    @OutputExport(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
+    @Export(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
     private Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies;
 
     /**
@@ -139,7 +139,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The custom host names of the streaming endpoint
      * 
      */
-    @OutputExport(name="customHostNames", type=List.class, parameters={String.class})
+    @Export(name="customHostNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customHostNames;
 
     /**
@@ -153,7 +153,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The streaming endpoint description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -167,7 +167,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The free trial expiration time.
      * 
      */
-    @OutputExport(name="freeTrialEndTime", type=String.class, parameters={})
+    @Export(name="freeTrialEndTime", type=String.class, parameters={})
     private Output<String> freeTrialEndTime;
 
     /**
@@ -181,7 +181,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The streaming endpoint host name.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -195,7 +195,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The exact time the streaming endpoint was last modified.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -209,7 +209,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -223,7 +223,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * Max cache age
      * 
      */
-    @OutputExport(name="maxCacheAge", type=Double.class, parameters={})
+    @Export(name="maxCacheAge", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxCacheAge;
 
     /**
@@ -237,7 +237,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -251,7 +251,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The provisioning state of the streaming endpoint.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -265,7 +265,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The resource state of the streaming endpoint.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -279,7 +279,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The number of scale units. Use the Scale operation to adjust this value.
      * 
      */
-    @OutputExport(name="scaleUnits", type=Integer.class, parameters={})
+    @Export(name="scaleUnits", type=Integer.class, parameters={})
     private Output<Integer> scaleUnits;
 
     /**
@@ -293,7 +293,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -307,7 +307,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -321,7 +321,7 @@ public class StreamingEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

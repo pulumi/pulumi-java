@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainNodeToNodeEncryption {
     /**
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
@@ -15,8 +15,8 @@ public final class DomainNodeToNodeEncryption {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private DomainNodeToNodeEncryption(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private DomainNodeToNodeEncryption(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

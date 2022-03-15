@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HoursOfOperationTimeSlice {
     /**
      * The hours.
@@ -20,10 +20,10 @@ public final class HoursOfOperationTimeSlice {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HoursOfOperationTimeSlice(
-        @OutputCustomType.Parameter("hours") Integer hours,
-        @OutputCustomType.Parameter("minutes") Integer minutes) {
+        @CustomType.Parameter("hours") Integer hours,
+        @CustomType.Parameter("minutes") Integer minutes) {
         this.hours = hours;
         this.minutes = minutes;
     }

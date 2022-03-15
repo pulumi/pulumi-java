@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
      * The phone number to transfer the call to in [E.164 format](https://en.wikipedia.org/wiki/E.164). We currently only allow transferring to US numbers (+1xxxyyyzzzz).
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
     public Output<String> getPhoneNumber() {

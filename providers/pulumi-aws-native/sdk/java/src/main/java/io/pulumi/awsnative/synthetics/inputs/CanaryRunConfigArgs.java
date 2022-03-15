@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -20,7 +20,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Enable active tracing if set to true
      * 
      */
-    @InputImport(name="activeTracing")
+    @Import(name="activeTracing")
       private final @Nullable Output<Boolean> activeTracing;
 
     public Output<Boolean> getActiveTracing() {
@@ -31,7 +31,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Environment variable key-value pairs.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Object> environmentVariables;
 
     public Output<Object> getEnvironmentVariables() {
@@ -42,7 +42,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Provide maximum memory available for canary in MB
      * 
      */
-    @InputImport(name="memoryInMB")
+    @Import(name="memoryInMB")
       private final @Nullable Output<Integer> memoryInMB;
 
     public Output<Integer> getMemoryInMB() {
@@ -53,7 +53,7 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Provide maximum canary timeout per run in seconds
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

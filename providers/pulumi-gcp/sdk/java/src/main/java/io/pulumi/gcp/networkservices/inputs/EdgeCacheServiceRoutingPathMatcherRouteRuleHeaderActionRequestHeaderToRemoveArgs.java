@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {

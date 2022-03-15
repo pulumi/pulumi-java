@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportDeliveryDestinationResponse {
     /**
      * The name of the container where exports will be uploaded.
@@ -27,11 +27,11 @@ public final class ExportDeliveryDestinationResponse {
      */
     private final @Nullable String rootFolderPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportDeliveryDestinationResponse(
-        @OutputCustomType.Parameter("container") String container,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("rootFolderPath") @Nullable String rootFolderPath) {
+        @CustomType.Parameter("container") String container,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("rootFolderPath") @Nullable String rootFolderPath) {
         this.container = container;
         this.resourceId = resourceId;
         this.rootFolderPath = rootFolderPath;

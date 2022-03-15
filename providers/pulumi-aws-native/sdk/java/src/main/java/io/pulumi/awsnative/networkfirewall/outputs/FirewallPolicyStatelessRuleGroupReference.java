@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyStatelessRuleGroupReference {
     private final Integer priority;
     private final String resourceArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyStatelessRuleGroupReference(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("resourceArn") String resourceArn) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("resourceArn") String resourceArn) {
         this.priority = priority;
         this.resourceArn = resourceArn;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterExclusionLabel;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterInclusionLabel;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterInventory;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentInstanceFilter {
     /**
      * Target all VMs in the project. If true, no other criteria is permitted.
@@ -36,12 +36,12 @@ public final class OsPolicyAssignmentInstanceFilter {
      */
     private final @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentInstanceFilter(
-        @OutputCustomType.Parameter("all") @Nullable Boolean all,
-        @OutputCustomType.Parameter("exclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels,
-        @OutputCustomType.Parameter("inclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels,
-        @OutputCustomType.Parameter("inventories") @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
+        @CustomType.Parameter("all") @Nullable Boolean all,
+        @CustomType.Parameter("exclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels,
+        @CustomType.Parameter("inclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels,
+        @CustomType.Parameter("inventories") @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;

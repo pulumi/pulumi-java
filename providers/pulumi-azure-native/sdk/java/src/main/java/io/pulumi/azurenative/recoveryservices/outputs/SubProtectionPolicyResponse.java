@@ -9,14 +9,14 @@ import io.pulumi.azurenative.recoveryservices.outputs.LongTermSchedulePolicyResp
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubProtectionPolicyResponse {
     /**
      * Type of backup policy type
@@ -34,11 +34,11 @@ public final class SubProtectionPolicyResponse {
      */
     private final @Nullable Object schedulePolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubProtectionPolicyResponse(
-        @OutputCustomType.Parameter("policyType") @Nullable String policyType,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy) {
+        @CustomType.Parameter("policyType") @Nullable String policyType,
+        @CustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @CustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy) {
         this.policyType = policyType;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

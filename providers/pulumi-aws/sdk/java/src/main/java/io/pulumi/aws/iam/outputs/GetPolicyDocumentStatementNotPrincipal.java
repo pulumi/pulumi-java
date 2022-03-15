@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyDocumentStatementNotPrincipal {
     /**
      * List of identifiers for principals. When `type` is `AWS`, these are IAM principal ARNs, e.g., `arn:aws:iam::12345678901:role/yak-role`.  When `type` is `Service`, these are AWS Service roles, e.g., `lambda.amazonaws.com`. When `type` is `Federated`, these are web identity users or SAML provider ARNs, e.g., `accounts.google.com` or `arn:aws:iam::12345678901:saml-provider/yak-saml-provider`. When `type` is `CanonicalUser`, these are [canonical user IDs](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingCanonicalId), e.g., `79a59df900b949e55d96a1e698fbacedfd6e09d98eacf8f8d5218e7cd47ef2be`.
@@ -21,10 +21,10 @@ public final class GetPolicyDocumentStatementNotPrincipal {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyDocumentStatementNotPrincipal(
-        @OutputCustomType.Parameter("identifiers") List<String> identifiers,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("identifiers") List<String> identifiers,
+        @CustomType.Parameter("type") String type) {
         this.identifiers = identifiers;
         this.type = type;
     }

@@ -5,23 +5,23 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentUpdatesSpecification;
 import io.pulumi.awsnative.lex.outputs.BotPostFulfillmentStatusSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotFulfillmentCodeHookSetting {
     private final Boolean enabled;
     private final @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification;
     private final @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotFulfillmentCodeHookSetting(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("fulfillmentUpdatesSpecification") @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
-        @OutputCustomType.Parameter("postFulfillmentStatusSpecification") @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("fulfillmentUpdatesSpecification") @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
+        @CustomType.Parameter("postFulfillmentStatusSpecification") @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
         this.enabled = enabled;
         this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;

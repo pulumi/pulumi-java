@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerAdministratorsResponse {
     /**
      * An array of administrator user identities.
@@ -17,8 +17,8 @@ public final class ServerAdministratorsResponse {
      */
     private final @Nullable List<String> members;
 
-    @OutputCustomType.Constructor
-    private ServerAdministratorsResponse(@OutputCustomType.Parameter("members") @Nullable List<String> members) {
+    @CustomType.Constructor
+    private ServerAdministratorsResponse(@CustomType.Parameter("members") @Nullable List<String> members) {
         this.members = members;
     }
 

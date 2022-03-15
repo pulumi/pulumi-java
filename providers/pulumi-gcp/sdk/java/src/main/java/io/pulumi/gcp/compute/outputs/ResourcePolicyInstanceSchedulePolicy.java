@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.ResourcePolicyInstanceSchedulePolicyVmStartSchedule;
 import io.pulumi.gcp.compute.outputs.ResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyInstanceSchedulePolicy {
     /**
      * The expiration time of the schedule. The timestamp is an RFC3339 string.
@@ -42,13 +42,13 @@ public final class ResourcePolicyInstanceSchedulePolicy {
      */
     private final @Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyInstanceSchedulePolicy(
-        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("vmStartSchedule") @Nullable ResourcePolicyInstanceSchedulePolicyVmStartSchedule vmStartSchedule,
-        @OutputCustomType.Parameter("vmStopSchedule") @Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule) {
+        @CustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("vmStartSchedule") @Nullable ResourcePolicyInstanceSchedulePolicyVmStartSchedule vmStartSchedule,
+        @CustomType.Parameter("vmStopSchedule") @Nullable ResourcePolicyInstanceSchedulePolicyVmStopSchedule vmStopSchedule) {
         this.expirationTime = expirationTime;
         this.startTime = startTime;
         this.timeZone = timeZone;

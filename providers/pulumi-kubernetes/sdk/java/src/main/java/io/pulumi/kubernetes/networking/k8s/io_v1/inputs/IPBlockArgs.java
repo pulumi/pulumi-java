@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
      * CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64"
      * 
      */
-    @InputImport(name="cidr", required=true)
+    @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -34,7 +34,7 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
      * Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64" Except values will be rejected if they are outside the CIDR range
      * 
      */
-    @InputImport(name="except")
+    @Import(name="except")
       private final @Nullable Output<List<String>> except;
 
     public Output<List<String>> getExcept() {

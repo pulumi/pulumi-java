@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.AuthorizationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistrationDefinitionPropertiesResponse {
     /**
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
@@ -44,14 +44,14 @@ public final class RegistrationDefinitionPropertiesResponse {
      */
     private final @Nullable String registrationDefinitionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistrationDefinitionPropertiesResponse(
-        @OutputCustomType.Parameter("authorizations") List<AuthorizationResponse> authorizations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("managedByTenantId") String managedByTenantId,
-        @OutputCustomType.Parameter("managedByTenantName") String managedByTenantName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("registrationDefinitionName") @Nullable String registrationDefinitionName) {
+        @CustomType.Parameter("authorizations") List<AuthorizationResponse> authorizations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("managedByTenantId") String managedByTenantId,
+        @CustomType.Parameter("managedByTenantName") String managedByTenantName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("registrationDefinitionName") @Nullable String registrationDefinitionName) {
         this.authorizations = authorizations;
         this.description = description;
         this.managedByTenantId = managedByTenantId;

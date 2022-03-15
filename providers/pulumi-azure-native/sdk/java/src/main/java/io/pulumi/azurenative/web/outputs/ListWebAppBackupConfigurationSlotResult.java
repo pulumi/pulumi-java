@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.BackupScheduleResponse;
 import io.pulumi.azurenative.web.outputs.DatabaseBackupSettingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppBackupConfigurationSlotResult {
     /**
      * Name of the backup.
@@ -61,17 +61,17 @@ public final class ListWebAppBackupConfigurationSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppBackupConfigurationSlotResult(
-        @OutputCustomType.Parameter("backupName") @Nullable String backupName,
-        @OutputCustomType.Parameter("backupSchedule") @Nullable BackupScheduleResponse backupSchedule,
-        @OutputCustomType.Parameter("databases") @Nullable List<DatabaseBackupSettingResponse> databases,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("storageAccountUrl") String storageAccountUrl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backupName") @Nullable String backupName,
+        @CustomType.Parameter("backupSchedule") @Nullable BackupScheduleResponse backupSchedule,
+        @CustomType.Parameter("databases") @Nullable List<DatabaseBackupSettingResponse> databases,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("storageAccountUrl") String storageAccountUrl,
+        @CustomType.Parameter("type") String type) {
         this.backupName = backupName;
         this.backupSchedule = backupSchedule;
         this.databases = databases;

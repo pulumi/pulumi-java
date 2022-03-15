@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelCustomExpr {
     /**
      * Description of the expression
@@ -32,12 +32,12 @@ public final class AccessLevelCustomExpr {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelCustomExpr(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("title") @Nullable String title) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.expression = expression;
         this.location = location;

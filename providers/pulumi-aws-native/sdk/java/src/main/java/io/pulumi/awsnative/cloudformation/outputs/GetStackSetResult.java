@@ -9,14 +9,14 @@ import io.pulumi.awsnative.cloudformation.outputs.StackSetAutoDeployment;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetParameter;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetStackInstances;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStackSetResult {
     /**
      * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
@@ -74,19 +74,19 @@ public final class GetStackSetResult {
      */
     private final @Nullable String templateBody;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStackSetResult(
-        @OutputCustomType.Parameter("administrationRoleARN") @Nullable String administrationRoleARN,
-        @OutputCustomType.Parameter("autoDeployment") @Nullable StackSetAutoDeployment autoDeployment,
-        @OutputCustomType.Parameter("capabilities") @Nullable List<StackSetCapability> capabilities,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("executionRoleName") @Nullable String executionRoleName,
-        @OutputCustomType.Parameter("managedExecution") @Nullable ManagedExecutionProperties managedExecution,
-        @OutputCustomType.Parameter("parameters") @Nullable List<StackSetParameter> parameters,
-        @OutputCustomType.Parameter("stackInstancesGroup") @Nullable List<StackSetStackInstances> stackInstancesGroup,
-        @OutputCustomType.Parameter("stackSetId") @Nullable String stackSetId,
-        @OutputCustomType.Parameter("tags") @Nullable List<StackSetTag> tags,
-        @OutputCustomType.Parameter("templateBody") @Nullable String templateBody) {
+        @CustomType.Parameter("administrationRoleARN") @Nullable String administrationRoleARN,
+        @CustomType.Parameter("autoDeployment") @Nullable StackSetAutoDeployment autoDeployment,
+        @CustomType.Parameter("capabilities") @Nullable List<StackSetCapability> capabilities,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("executionRoleName") @Nullable String executionRoleName,
+        @CustomType.Parameter("managedExecution") @Nullable ManagedExecutionProperties managedExecution,
+        @CustomType.Parameter("parameters") @Nullable List<StackSetParameter> parameters,
+        @CustomType.Parameter("stackInstancesGroup") @Nullable List<StackSetStackInstances> stackInstancesGroup,
+        @CustomType.Parameter("stackSetId") @Nullable String stackSetId,
+        @CustomType.Parameter("tags") @Nullable List<StackSetTag> tags,
+        @CustomType.Parameter("templateBody") @Nullable String templateBody) {
         this.administrationRoleARN = administrationRoleARN;
         this.autoDeployment = autoDeployment;
         this.capabilities = capabilities;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.enums.PathMatchType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
      * replacement string for matched part of the Uri.
      * 
      */
-    @InputImport(name="rewrite")
+    @Import(name="rewrite")
       private final @Nullable Output<String> rewrite;
 
     public Output<String> getRewrite() {
@@ -35,7 +35,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
      * how to match value in the Uri
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,PathMatchType>> type;
 
     public Output<Either<String,PathMatchType>> getType() {
@@ -46,7 +46,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
      * Uri path to match for request.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

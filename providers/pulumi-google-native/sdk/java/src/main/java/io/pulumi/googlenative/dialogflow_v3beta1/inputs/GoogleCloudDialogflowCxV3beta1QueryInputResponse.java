@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1AudioInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1DtmfInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventInputResponse;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * The natural language speech audio to be processed.
      * 
      */
-    @InputImport(name="audio", required=true)
+    @Import(name="audio", required=true)
       private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
 
     public GoogleCloudDialogflowCxV3beta1AudioInputResponse getAudio() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * The DTMF event to be handled.
      * 
      */
-    @InputImport(name="dtmf", required=true)
+    @Import(name="dtmf", required=true)
       private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
 
     public GoogleCloudDialogflowCxV3beta1DtmfInputResponse getDtmf() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * The event to be triggered.
      * 
      */
-    @InputImport(name="event", required=true)
+    @Import(name="event", required=true)
       private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
 
     public GoogleCloudDialogflowCxV3beta1EventInputResponse getEvent() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * The intent to be triggered.
      * 
      */
-    @InputImport(name="intent", required=true)
+    @Import(name="intent", required=true)
       private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
 
     public GoogleCloudDialogflowCxV3beta1IntentInputResponse getIntent() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
      * 
      */
-    @InputImport(name="languageCode", required=true)
+    @Import(name="languageCode", required=true)
       private final String languageCode;
 
     public String getLanguageCode() {
@@ -80,7 +80,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * The natural language text to be processed.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
 
     public GoogleCloudDialogflowCxV3beta1TextInputResponse getText() {

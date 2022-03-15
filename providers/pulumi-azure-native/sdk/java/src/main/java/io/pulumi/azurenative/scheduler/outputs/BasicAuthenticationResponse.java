@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BasicAuthenticationResponse {
     /**
      * Gets or sets the password, return value will always be empty.
@@ -28,11 +28,11 @@ public final class BasicAuthenticationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BasicAuthenticationResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.type = type;
         this.username = username;

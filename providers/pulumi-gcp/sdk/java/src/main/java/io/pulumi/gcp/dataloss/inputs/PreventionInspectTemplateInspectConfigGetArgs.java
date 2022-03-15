@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsGetArgs;
@@ -25,7 +25,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
      * 
      */
-    @InputImport(name="contentOptions")
+    @Import(name="contentOptions")
       private final @Nullable Output<List<String>> contentOptions;
 
     public Output<List<String>> getContentOptions() {
@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="customInfoTypes")
+    @Import(name="customInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> getCustomInfoTypes() {
@@ -49,7 +49,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="excludeInfoTypes")
+    @Import(name="excludeInfoTypes")
       private final @Nullable Output<Boolean> excludeInfoTypes;
 
     public Output<Boolean> getExcludeInfoTypes() {
@@ -60,7 +60,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * When true, a contextual quote from the data that triggered a finding is included in the response.
      * 
      */
-    @InputImport(name="includeQuote")
+    @Import(name="includeQuote")
       private final @Nullable Output<Boolean> includeQuote;
 
     public Output<Boolean> getIncludeQuote() {
@@ -72,7 +72,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="infoTypes")
+    @Import(name="infoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> getInfoTypes() {
@@ -84,7 +84,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
 
     public Output<PreventionInspectTemplateInspectConfigLimitsGetArgs> getLimits() {
@@ -97,7 +97,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
      */
-    @InputImport(name="minLikelihood")
+    @Import(name="minLikelihood")
       private final @Nullable Output<String> minLikelihood;
 
     public Output<String> getMinLikelihood() {
@@ -110,7 +110,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ruleSets")
+    @Import(name="ruleSets")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
 
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> getRuleSets() {

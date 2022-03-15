@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
      * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<SystemParameterArgs>> parameters;
 
     public Output<List<SystemParameterArgs>> getParameters() {
@@ -35,7 +35,7 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {

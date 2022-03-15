@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ErrorDetailResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * Error Additional Detail in case the status is non-success.
      * 
      */
-    @InputImport(name="additionalDetail", required=true)
+    @Import(name="additionalDetail", required=true)
       private final String additionalDetail;
 
     public String getAdditionalDetail() {
@@ -34,7 +34,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * Error Detail in case the status is non-success.
      * 
      */
-    @InputImport(name="errorDetail")
+    @Import(name="errorDetail")
       private final @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> getErrorDetail() {
@@ -45,7 +45,7 @@ public final class InquiryValidationResponse extends io.pulumi.resources.InvokeA
      * Status for the Inquiry Validation.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

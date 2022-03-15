@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
      * Representing which tracks should not be encrypted
      * 
      */
-    @InputImport(name="clearTracks")
+    @Import(name="clearTracks")
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
     public Output<List<TrackSelectionArgs>> getClearTracks() {
@@ -37,7 +37,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
      */
-    @InputImport(name="contentKeys")
+    @Import(name="contentKeys")
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
     public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
@@ -48,7 +48,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
      * Configuration of DRMs for CommonEncryptionCenc encryption scheme
      * 
      */
-    @InputImport(name="drm")
+    @Import(name="drm")
       private final @Nullable Output<CencDrmConfigurationArgs> drm;
 
     public Output<CencDrmConfigurationArgs> getDrm() {
@@ -59,7 +59,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
      * Representing supported protocols
      * 
      */
-    @InputImport(name="enabledProtocols")
+    @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
     public Output<EnabledProtocolsArgs> getEnabledProtocols() {

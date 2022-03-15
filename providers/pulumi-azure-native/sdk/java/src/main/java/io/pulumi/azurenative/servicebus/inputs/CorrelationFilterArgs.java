@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Content type of the message.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -35,7 +35,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Identifier of the correlation.
      * 
      */
-    @InputImport(name="correlationId")
+    @Import(name="correlationId")
       private final @Nullable Output<String> correlationId;
 
     public Output<String> getCorrelationId() {
@@ -46,7 +46,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Application specific label.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -57,7 +57,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Identifier of the message.
      * 
      */
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -68,7 +68,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * dictionary object for custom filters
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -79,7 +79,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Address of the queue to reply to.
      * 
      */
-    @InputImport(name="replyTo")
+    @Import(name="replyTo")
       private final @Nullable Output<String> replyTo;
 
     public Output<String> getReplyTo() {
@@ -90,7 +90,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Session identifier to reply to.
      * 
      */
-    @InputImport(name="replyToSessionId")
+    @Import(name="replyToSessionId")
       private final @Nullable Output<String> replyToSessionId;
 
     public Output<String> getReplyToSessionId() {
@@ -101,7 +101,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Value that indicates whether the rule action requires preprocessing.
      * 
      */
-    @InputImport(name="requiresPreprocessing")
+    @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
 
     public Output<Boolean> getRequiresPreprocessing() {
@@ -112,7 +112,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Session identifier.
      * 
      */
-    @InputImport(name="sessionId")
+    @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
 
     public Output<String> getSessionId() {
@@ -123,7 +123,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * Address to send to.
      * 
      */
-    @InputImport(name="to")
+    @Import(name="to")
       private final @Nullable Output<String> to;
 
     public Output<String> getTo() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
      * The URI of the Azure blob container that contains the custom setup script.
      * 
      */
-    @InputImport(name="blobContainerUri")
+    @Import(name="blobContainerUri")
       private final @Nullable String blobContainerUri;
 
     public Optional<String> getBlobContainerUri() {
@@ -34,7 +34,7 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
      * The SAS token of the Azure blob container.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable SecureStringResponse sasToken;
 
     public Optional<SecureStringResponse> getSasToken() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountResponse {
     /**
      * The Azure Resource Manager ID of the storage account resource.
@@ -20,10 +20,10 @@ public final class StorageAccountResponse {
      */
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("key") String key) {
         this.id = id;
         this.key = key;
     }

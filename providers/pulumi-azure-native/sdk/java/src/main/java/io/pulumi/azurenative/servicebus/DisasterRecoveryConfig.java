@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.DisasterRecoveryConfigArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
      */
-    @OutputExport(name="alternateName", type=String.class, parameters={})
+    @Export(name="alternateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternateName;
 
     /**
@@ -49,7 +49,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
      */
-    @OutputExport(name="partnerNamespace", type=String.class, parameters={})
+    @Export(name="partnerNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerNamespace;
 
     /**
@@ -77,7 +77,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * Number of entities pending to be replicated.
      * 
      */
-    @OutputExport(name="pendingReplicationOperationsCount", type=Double.class, parameters={})
+    @Export(name="pendingReplicationOperationsCount", type=Double.class, parameters={})
     private Output<Double> pendingReplicationOperationsCount;
 
     /**
@@ -91,7 +91,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Alias(Disaster Recovery configuration) - possible values 'Accepted' or 'Succeeded' or 'Failed'
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * role of namespace in GEO DR - possible values 'Primary' or 'PrimaryNotReplicating' or 'Secondary'
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -119,7 +119,7 @@ public class DisasterRecoveryConfig extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

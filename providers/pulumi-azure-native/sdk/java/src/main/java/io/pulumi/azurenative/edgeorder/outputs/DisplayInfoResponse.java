@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DisplayInfoResponse {
     /**
      * Configuration display name
@@ -20,10 +20,10 @@ public final class DisplayInfoResponse {
      */
     private final String productFamilyDisplayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DisplayInfoResponse(
-        @OutputCustomType.Parameter("configurationDisplayName") String configurationDisplayName,
-        @OutputCustomType.Parameter("productFamilyDisplayName") String productFamilyDisplayName) {
+        @CustomType.Parameter("configurationDisplayName") String configurationDisplayName,
+        @CustomType.Parameter("productFamilyDisplayName") String productFamilyDisplayName) {
         this.configurationDisplayName = configurationDisplayName;
         this.productFamilyDisplayName = productFamilyDisplayName;
     }

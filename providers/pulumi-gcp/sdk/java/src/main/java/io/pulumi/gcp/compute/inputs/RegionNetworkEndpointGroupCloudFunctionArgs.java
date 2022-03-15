@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RegionNetworkEndpointGroupCloudFunctionArgs extends io.pulumi
      * Example value: "func1".
      * 
      */
-    @InputImport(name="function")
+    @Import(name="function")
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
@@ -36,7 +36,7 @@ public final class RegionNetworkEndpointGroupCloudFunctionArgs extends io.pulumi
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
      */
-    @InputImport(name="urlMask")
+    @Import(name="urlMask")
       private final @Nullable Output<String> urlMask;
 
     public Output<String> getUrlMask() {

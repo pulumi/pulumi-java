@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
      * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
      * 
      */
-    @InputImport(name="method", required=true)
+    @Import(name="method", required=true)
       private final String method;
 
     public String getMethod() {
@@ -31,7 +31,7 @@ public final class RecommendedActionImplementationInfoResponse extends io.pulumi
      * Gets the manual implementation script. e.g., T-SQL script that could be executed on the database.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final String script;
 
     public String getScript() {

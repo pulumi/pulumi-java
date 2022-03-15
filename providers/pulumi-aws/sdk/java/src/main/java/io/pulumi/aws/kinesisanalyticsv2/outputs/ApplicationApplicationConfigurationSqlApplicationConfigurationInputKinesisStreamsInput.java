@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput {
     /**
      * The ARN of the input Kinesis data stream to read.
@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String resourceArn;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput(@OutputCustomType.Parameter("resourceArn") String resourceArn) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput(@CustomType.Parameter("resourceArn") String resourceArn) {
         this.resourceArn = resourceArn;
     }
 

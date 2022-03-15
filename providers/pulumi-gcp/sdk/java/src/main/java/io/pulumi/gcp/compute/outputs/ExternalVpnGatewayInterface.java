@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExternalVpnGatewayInterface {
     /**
      * The numeric ID for this interface. Allowed values are based on the redundancy type
@@ -30,10 +30,10 @@ public final class ExternalVpnGatewayInterface {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalVpnGatewayInterface(
-        @OutputCustomType.Parameter("id") @Nullable Integer id,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
+        @CustomType.Parameter("id") @Nullable Integer id,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.id = id;
         this.ipAddress = ipAddress;
     }

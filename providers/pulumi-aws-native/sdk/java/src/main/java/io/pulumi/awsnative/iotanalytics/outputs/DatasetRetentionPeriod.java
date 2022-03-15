@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetRetentionPeriod {
     private final Integer numberOfDays;
     private final Boolean unlimited;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetRetentionPeriod(
-        @OutputCustomType.Parameter("numberOfDays") Integer numberOfDays,
-        @OutputCustomType.Parameter("unlimited") Boolean unlimited) {
+        @CustomType.Parameter("numberOfDays") Integer numberOfDays,
+        @CustomType.Parameter("unlimited") Boolean unlimited) {
         this.numberOfDays = numberOfDays;
         this.unlimited = unlimited;
     }

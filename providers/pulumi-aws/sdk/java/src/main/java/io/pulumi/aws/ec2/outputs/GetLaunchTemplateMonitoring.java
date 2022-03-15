@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateMonitoring {
     /**
      * Whether Nitro Enclaves are enabled.
@@ -15,8 +15,8 @@ public final class GetLaunchTemplateMonitoring {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GetLaunchTemplateMonitoring(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GetLaunchTemplateMonitoring(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * The ARN of the DHCP Options Set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -42,7 +42,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
      * 
      */
-    @InputImport(name="domainNameServers")
+    @Import(name="domainNameServers")
       private final @Nullable Output<List<String>> domainNameServers;
 
     public Output<List<String>> getDomainNameServers() {
@@ -53,7 +53,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * List of NETBIOS name servers.
      * 
      */
-    @InputImport(name="netbiosNameServers")
+    @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
     public Output<List<String>> getNetbiosNameServers() {
@@ -64,7 +64,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    @InputImport(name="netbiosNodeType")
+    @Import(name="netbiosNodeType")
       private final @Nullable Output<String> netbiosNodeType;
 
     public Output<String> getNetbiosNodeType() {
@@ -75,7 +75,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * List of NTP servers to configure.
      * 
      */
-    @InputImport(name="ntpServers")
+    @Import(name="ntpServers")
       private final @Nullable Output<List<String>> ntpServers;
 
     public Output<List<String>> getNtpServers() {
@@ -86,7 +86,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * The ID of the AWS account that owns the DHCP options set.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -97,7 +97,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class VpcDhcpOptionsState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.DisasterRecoveryConfigurationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Whether or not failover can be done automatically.
      * 
      */
-    @OutputExport(name="autoFailover", type=String.class, parameters={})
+    @Export(name="autoFailover", type=String.class, parameters={})
     private Output<String> autoFailover;
 
     /**
@@ -48,7 +48,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * How aggressive the automatic failover should be.
      * 
      */
-    @OutputExport(name="failoverPolicy", type=String.class, parameters={})
+    @Export(name="failoverPolicy", type=String.class, parameters={})
     private Output<String> failoverPolicy;
 
     /**
@@ -62,7 +62,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Location of the server that contains this disaster recovery configuration.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -76,7 +76,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Logical name of the server.
      * 
      */
-    @OutputExport(name="logicalServerName", type=String.class, parameters={})
+    @Export(name="logicalServerName", type=String.class, parameters={})
     private Output<String> logicalServerName;
 
     /**
@@ -90,7 +90,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Logical name of the partner server.
      * 
      */
-    @OutputExport(name="partnerLogicalServerName", type=String.class, parameters={})
+    @Export(name="partnerLogicalServerName", type=String.class, parameters={})
     private Output<String> partnerLogicalServerName;
 
     /**
@@ -118,7 +118,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Id of the partner server.
      * 
      */
-    @OutputExport(name="partnerServerId", type=String.class, parameters={})
+    @Export(name="partnerServerId", type=String.class, parameters={})
     private Output<String> partnerServerId;
 
     /**
@@ -132,7 +132,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * The role of the current server in the disaster recovery configuration.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -146,7 +146,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * The status of the disaster recovery configuration.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -160,7 +160,7 @@ public class DisasterRecoveryConfiguration extends io.pulumi.resources.CustomRes
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

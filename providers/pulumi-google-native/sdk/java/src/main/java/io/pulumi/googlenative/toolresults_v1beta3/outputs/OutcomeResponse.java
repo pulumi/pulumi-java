@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FailureDetailResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.InconclusiveDetailResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.SkippedDetailResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.toolresults_v1beta3.outputs.SuccessDetailResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OutcomeResponse {
     /**
      * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
@@ -39,13 +39,13 @@ public final class OutcomeResponse {
      */
     private final String summary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OutcomeResponse(
-        @OutputCustomType.Parameter("failureDetail") FailureDetailResponse failureDetail,
-        @OutputCustomType.Parameter("inconclusiveDetail") InconclusiveDetailResponse inconclusiveDetail,
-        @OutputCustomType.Parameter("skippedDetail") SkippedDetailResponse skippedDetail,
-        @OutputCustomType.Parameter("successDetail") SuccessDetailResponse successDetail,
-        @OutputCustomType.Parameter("summary") String summary) {
+        @CustomType.Parameter("failureDetail") FailureDetailResponse failureDetail,
+        @CustomType.Parameter("inconclusiveDetail") InconclusiveDetailResponse inconclusiveDetail,
+        @CustomType.Parameter("skippedDetail") SkippedDetailResponse skippedDetail,
+        @CustomType.Parameter("successDetail") SuccessDetailResponse successDetail,
+        @CustomType.Parameter("summary") String summary) {
         this.failureDetail = failureDetail;
         this.inconclusiveDetail = inconclusiveDetail;
         this.skippedDetail = skippedDetail;

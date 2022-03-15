@@ -3,18 +3,18 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMap {
     private final @Nullable String config;
 
-    @OutputCustomType.Constructor
-    private ConfigMap(@OutputCustomType.Parameter("config") @Nullable String config) {
+    @CustomType.Constructor
+    private ConfigMap(@CustomType.Parameter("config") @Nullable String config) {
         this.config = config;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SettingsPropertiesResponseCache {
     /**
      * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
@@ -42,14 +42,14 @@ public final class SettingsPropertiesResponseCache {
      */
     private final String subchannel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SettingsPropertiesResponseCache(
-        @OutputCustomType.Parameter("channel") String channel,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") @Nullable String parent,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("subchannel") String subchannel) {
+        @CustomType.Parameter("channel") String channel,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") @Nullable String parent,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("subchannel") String subchannel) {
         this.channel = channel;
         this.id = id;
         this.name = name;

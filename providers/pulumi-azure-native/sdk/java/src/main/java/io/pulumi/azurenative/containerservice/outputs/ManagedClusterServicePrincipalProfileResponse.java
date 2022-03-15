@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterServicePrincipalProfileResponse {
     /**
      * The ID for the service principal.
@@ -22,10 +22,10 @@ public final class ManagedClusterServicePrincipalProfileResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterServicePrincipalProfileResponse(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("secret") @Nullable String secret) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("secret") @Nullable String secret) {
         this.clientId = clientId;
         this.secret = secret;
     }

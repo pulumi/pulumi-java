@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.DeviceProfileArgs;
 import io.pulumi.awsnative.iotwireless.outputs.DeviceProfileLoRaWANDeviceProfile;
 import io.pulumi.awsnative.iotwireless.outputs.DeviceProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * Service profile Arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * LoRaWANDeviceProfile supports all LoRa specific attributes for service profile for CreateDeviceProfile operation
      * 
      */
-    @OutputExport(name="loRaWAN", type=DeviceProfileLoRaWANDeviceProfile.class, parameters={})
+    @Export(name="loRaWAN", type=DeviceProfileLoRaWANDeviceProfile.class, parameters={})
     private Output</* @Nullable */ DeviceProfileLoRaWANDeviceProfile> loRaWAN;
 
     /**
@@ -52,7 +52,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * Name of service profile
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -66,7 +66,7 @@ public class DeviceProfile extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the device profile.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DeviceProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={DeviceProfileTag.class})
     private Output</* @Nullable */ List<DeviceProfileTag>> tags;
 
     /**

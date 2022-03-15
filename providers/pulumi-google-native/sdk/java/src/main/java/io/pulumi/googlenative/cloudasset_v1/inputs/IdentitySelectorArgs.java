@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IdentitySelectorArgs extends io.pulumi.resources.ResourceArgs
      * The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<String> identity;
 
     public Output<String> getIdentity() {

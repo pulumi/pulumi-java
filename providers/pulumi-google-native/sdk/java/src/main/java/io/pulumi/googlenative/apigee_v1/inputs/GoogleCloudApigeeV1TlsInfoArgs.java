@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TlsInfoCommonNameArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
      * 
      */
-    @InputImport(name="ciphers")
+    @Import(name="ciphers")
       private final @Nullable Output<List<String>> ciphers;
 
     public Output<List<String>> getCiphers() {
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * Optional. Enables two-way TLS.
      * 
      */
-    @InputImport(name="clientAuthEnabled")
+    @Import(name="clientAuthEnabled")
       private final @Nullable Output<Boolean> clientAuthEnabled;
 
     public Output<Boolean> getClientAuthEnabled() {
@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * The TLS Common Name of the certificate.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName;
 
     public Output<GoogleCloudApigeeV1TlsInfoCommonNameArgs> getCommonName() {
@@ -58,7 +58,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * Enables TLS. If false, neither one-way nor two-way TLS will be enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -69,7 +69,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * If true, Edge ignores TLS certificate errors. Valid when configuring TLS for target servers and target endpoints, and when configuring virtual hosts that use 2-way TLS. When used with a target endpoint/target server, if the backend system uses SNI and returns a cert with a subject Distinguished Name (DN) that does not match the hostname, there is no way to ignore the error and the connection fails.
      * 
      */
-    @InputImport(name="ignoreValidationErrors")
+    @Import(name="ignoreValidationErrors")
       private final @Nullable Output<Boolean> ignoreValidationErrors;
 
     public Output<Boolean> getIgnoreValidationErrors() {
@@ -80,7 +80,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * Required if `client_auth_enabled` is true. The resource ID for the alias containing the private key and cert.
      * 
      */
-    @InputImport(name="keyAlias")
+    @Import(name="keyAlias")
       private final @Nullable Output<String> keyAlias;
 
     public Output<String> getKeyAlias() {
@@ -91,7 +91,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * Required if `client_auth_enabled` is true. The resource ID of the keystore.
      * 
      */
-    @InputImport(name="keyStore")
+    @Import(name="keyStore")
       private final @Nullable Output<String> keyStore;
 
     public Output<String> getKeyStore() {
@@ -102,7 +102,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * The TLS versioins to be used.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable Output<List<String>> protocols;
 
     public Output<List<String>> getProtocols() {
@@ -113,7 +113,7 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
      * The resource ID of the truststore.
      * 
      */
-    @InputImport(name="trustStore")
+    @Import(name="trustStore")
       private final @Nullable Output<String> trustStore;
 
     public Output<String> getTrustStore() {

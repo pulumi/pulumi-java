@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorJsonFormatDescriptorFileCompression;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorJsonFormatDescriptor {
     private final @Nullable String charset;
     private final @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorJsonFormatDescriptor(
-        @OutputCustomType.Parameter("charset") @Nullable String charset,
-        @OutputCustomType.Parameter("fileCompression") @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
+        @CustomType.Parameter("charset") @Nullable String charset,
+        @CustomType.Parameter("fileCompression") @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
         this.charset = charset;
         this.fileCompression = fileCompression;
     }

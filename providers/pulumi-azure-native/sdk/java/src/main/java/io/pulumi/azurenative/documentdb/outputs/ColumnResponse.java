@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ColumnResponse {
     /**
      * Name of the Cosmos DB Cassandra table column
@@ -22,10 +22,10 @@ public final class ColumnResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ColumnResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.type = type;
     }

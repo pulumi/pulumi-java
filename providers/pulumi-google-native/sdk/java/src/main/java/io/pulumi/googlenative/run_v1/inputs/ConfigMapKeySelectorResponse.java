@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * The key to select.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -33,7 +33,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
      */
-    @InputImport(name="localObjectReference", required=true)
+    @Import(name="localObjectReference", required=true)
       private final LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse getLocalObjectReference() {
@@ -44,7 +44,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * The ConfigMap to select from.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class ConfigMapKeySelectorResponse extends io.pulumi.resources.Invo
      * (Optional) Specify whether the ConfigMap or its key must be defined
      * 
      */
-    @InputImport(name="optional", required=true)
+    @Import(name="optional", required=true)
       private final Boolean optional;
 
     public Boolean getOptional() {

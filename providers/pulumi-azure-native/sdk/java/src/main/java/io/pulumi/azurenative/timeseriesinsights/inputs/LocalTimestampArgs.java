@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.LocalTimestampFormat;
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampTimeZoneOffsetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
      * An enum that represents the format of the local timestamp property that needs to be set.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Either<String,LocalTimestampFormat>> format;
 
     public Output<Either<String,LocalTimestampFormat>> getFormat() {
@@ -36,7 +36,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
      * An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.
      * 
      */
-    @InputImport(name="timeZoneOffset")
+    @Import(name="timeZoneOffset")
       private final @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
 
     public Output<LocalTimestampTimeZoneOffsetArgs> getTimeZoneOffset() {

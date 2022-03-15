@@ -5,13 +5,13 @@ package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.RemediationDeploymentSummaryResponse;
 import io.pulumi.azurenative.policyinsights.outputs.RemediationFiltersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRemediationAtManagementGroupResult {
     /**
      * The time at which the remediation was created.
@@ -69,19 +69,19 @@ public final class GetRemediationAtManagementGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRemediationAtManagementGroupResult(
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("deploymentStatus") RemediationDeploymentSummaryResponse deploymentStatus,
-        @OutputCustomType.Parameter("filters") @Nullable RemediationFiltersResponse filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyAssignmentId") @Nullable String policyAssignmentId,
-        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceDiscoveryMode") @Nullable String resourceDiscoveryMode,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("deploymentStatus") RemediationDeploymentSummaryResponse deploymentStatus,
+        @CustomType.Parameter("filters") @Nullable RemediationFiltersResponse filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyAssignmentId") @Nullable String policyAssignmentId,
+        @CustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceDiscoveryMode") @Nullable String resourceDiscoveryMode,
+        @CustomType.Parameter("type") String type) {
         this.createdOn = createdOn;
         this.deploymentStatus = deploymentStatus;
         this.filters = filters;

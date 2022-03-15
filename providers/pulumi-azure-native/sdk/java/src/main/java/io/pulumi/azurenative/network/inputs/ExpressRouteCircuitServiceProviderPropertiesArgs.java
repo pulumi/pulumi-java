@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * The BandwidthInMbps.
      * 
      */
-    @InputImport(name="bandwidthInMbps")
+    @Import(name="bandwidthInMbps")
       private final @Nullable Output<Integer> bandwidthInMbps;
 
     public Output<Integer> getBandwidthInMbps() {
@@ -34,7 +34,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * The peering location.
      * 
      */
-    @InputImport(name="peeringLocation")
+    @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
 
     public Output<String> getPeeringLocation() {
@@ -45,7 +45,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
      * The serviceProviderName.
      * 
      */
-    @InputImport(name="serviceProviderName")
+    @Import(name="serviceProviderName")
       private final @Nullable Output<String> serviceProviderName;
 
     public Output<String> getServiceProviderName() {

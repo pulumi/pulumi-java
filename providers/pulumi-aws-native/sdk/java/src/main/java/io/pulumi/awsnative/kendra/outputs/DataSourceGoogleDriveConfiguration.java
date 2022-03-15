@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceGoogleDriveConfiguration {
     private final @Nullable List<String> excludeMimeTypes;
     private final @Nullable List<String> excludeSharedDrives;
@@ -20,15 +20,15 @@ public final class DataSourceGoogleDriveConfiguration {
     private final @Nullable List<String> inclusionPatterns;
     private final String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceGoogleDriveConfiguration(
-        @OutputCustomType.Parameter("excludeMimeTypes") @Nullable List<String> excludeMimeTypes,
-        @OutputCustomType.Parameter("excludeSharedDrives") @Nullable List<String> excludeSharedDrives,
-        @OutputCustomType.Parameter("excludeUserAccounts") @Nullable List<String> excludeUserAccounts,
-        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
-        @OutputCustomType.Parameter("secretArn") String secretArn) {
+        @CustomType.Parameter("excludeMimeTypes") @Nullable List<String> excludeMimeTypes,
+        @CustomType.Parameter("excludeSharedDrives") @Nullable List<String> excludeSharedDrives,
+        @CustomType.Parameter("excludeUserAccounts") @Nullable List<String> excludeUserAccounts,
+        @CustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @CustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @CustomType.Parameter("secretArn") String secretArn) {
         this.excludeMimeTypes = excludeMimeTypes;
         this.excludeSharedDrives = excludeSharedDrives;
         this.excludeUserAccounts = excludeUserAccounts;

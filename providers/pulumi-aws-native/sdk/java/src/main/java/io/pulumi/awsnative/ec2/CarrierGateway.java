@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.CarrierGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.CarrierGatewayTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * The ID of the carrier gateway.
      * 
      */
-    @OutputExport(name="carrierGatewayId", type=String.class, parameters={})
+    @Export(name="carrierGatewayId", type=String.class, parameters={})
     private Output<String> carrierGatewayId;
 
     /**
@@ -37,7 +37,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * The ID of the owner.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -51,7 +51,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * The state of the carrier gateway.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -65,7 +65,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * The tags for the carrier gateway.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={CarrierGatewayTag.class})
+    @Export(name="tags", type=List.class, parameters={CarrierGatewayTag.class})
     private Output</* @Nullable */ List<CarrierGatewayTag>> tags;
 
     /**
@@ -79,7 +79,7 @@ public class CarrierGateway extends io.pulumi.resources.CustomResource {
      * The ID of the VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

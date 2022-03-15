@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreIamBindingArgs;
@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:healthcare/dicomStoreIamBinding:DicomStoreIamBinding")
 public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=DicomStoreIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=DicomStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamBindingCondition> condition;
 
     public Output</* @Nullable */ DicomStoreIamBindingCondition> getCondition() {
@@ -73,7 +73,7 @@ public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="dicomStoreId", type=String.class, parameters={})
+    @Export(name="dicomStoreId", type=String.class, parameters={})
     private Output<String> dicomStoreId;
 
     /**
@@ -90,7 +90,7 @@ public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the DICOM store's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -100,7 +100,7 @@ public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -112,7 +112,7 @@ public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

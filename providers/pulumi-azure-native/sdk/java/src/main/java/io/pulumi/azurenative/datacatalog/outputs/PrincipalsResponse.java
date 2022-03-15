@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrincipalsResponse {
     /**
      * Object Id for the user
@@ -22,10 +22,10 @@ public final class PrincipalsResponse {
      */
     private final @Nullable String upn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrincipalsResponse(
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("upn") @Nullable String upn) {
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("upn") @Nullable String upn) {
         this.objectId = objectId;
         this.upn = upn;
     }

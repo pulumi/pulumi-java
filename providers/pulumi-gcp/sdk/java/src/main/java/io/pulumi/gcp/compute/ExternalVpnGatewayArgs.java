@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ExternalVpnGatewayInterfaceArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="interfaces")
+    @Import(name="interfaces")
       private final @Nullable Output<List<ExternalVpnGatewayInterfaceArgs>> interfaces;
 
     public Output<List<ExternalVpnGatewayInterfaceArgs>> getInterfaces() {
@@ -49,7 +49,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -73,7 +73,7 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
      * Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and `TWO_IPS_REDUNDANCY`.
      * 
      */
-    @InputImport(name="redundancyType")
+    @Import(name="redundancyType")
       private final @Nullable Output<String> redundancyType;
 
     public Output<String> getRedundancyType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.PublicDelegatedPrefixPublicDelegatedSubPrefixArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
      * 
      */
-    @InputImport(name="ipCidrRange")
+    @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -43,7 +43,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * If true, the prefix will be live migrated.
      * 
      */
-    @InputImport(name="isLiveMigration")
+    @Import(name="isLiveMigration")
       private final @Nullable Output<Boolean> isLiveMigration;
 
     public Output<Boolean> getIsLiveMigration() {
@@ -54,7 +54,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,14 +65,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
      * 
      */
-    @InputImport(name="parentPrefix")
+    @Import(name="parentPrefix")
       private final @Nullable Output<String> parentPrefix;
 
     public Output<String> getParentPrefix() {
         return this.parentPrefix == null ? Output.empty() : this.parentPrefix;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -83,14 +83,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
      * The list of sub public delegated prefixes that exist for this public delegated prefix.
      * 
      */
-    @InputImport(name="publicDelegatedSubPrefixs")
+    @Import(name="publicDelegatedSubPrefixs")
       private final @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
 
     public Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> getPublicDelegatedSubPrefixs() {
         return this.publicDelegatedSubPrefixs == null ? Output.empty() : this.publicDelegatedSubPrefixs;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

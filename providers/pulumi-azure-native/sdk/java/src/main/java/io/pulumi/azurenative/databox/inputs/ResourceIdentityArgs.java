@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * Identity type
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -35,7 +35,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * User Assigned Identities
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

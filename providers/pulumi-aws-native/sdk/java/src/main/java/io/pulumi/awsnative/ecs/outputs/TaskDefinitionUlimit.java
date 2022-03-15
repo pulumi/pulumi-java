@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionUlimit {
     private final Integer hardLimit;
     private final String name;
     private final Integer softLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionUlimit(
-        @OutputCustomType.Parameter("hardLimit") Integer hardLimit,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("softLimit") Integer softLimit) {
+        @CustomType.Parameter("hardLimit") Integer hardLimit,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("softLimit") Integer softLimit) {
         this.hardLimit = hardLimit;
         this.name = name;
         this.softLimit = softLimit;

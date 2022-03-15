@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.example.inputs.ObjectArgs;
 import io.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;
 import io.pulumi.example.inputs.SomeOtherObjectArgs;
@@ -16,21 +16,21 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TypeUsesArgs Empty = new TypeUsesArgs();
 
-    @InputImport(name="bar")
+    @Import(name="bar")
       private final @Nullable Output<SomeOtherObjectArgs> bar;
 
     public Output<SomeOtherObjectArgs> getBar() {
         return this.bar == null ? Output.empty() : this.bar;
     }
 
-    @InputImport(name="baz")
+    @Import(name="baz")
       private final @Nullable Output<ObjectWithNodeOptionalInputsArgs> baz;
 
     public Output<ObjectWithNodeOptionalInputsArgs> getBaz() {
         return this.baz == null ? Output.empty() : this.baz;
     }
 
-    @InputImport(name="foo")
+    @Import(name="foo")
       private final @Nullable Output<ObjectArgs> foo;
 
     public Output<ObjectArgs> getFoo() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EventTargetKinesisTargetArgs extends io.pulumi.resources.Reso
      * The JSON path to be extracted from the event and used as the partition key.
      * 
      */
-    @InputImport(name="partitionKeyPath")
+    @Import(name="partitionKeyPath")
       private final @Nullable Output<String> partitionKeyPath;
 
     public Output<String> getPartitionKeyPath() {

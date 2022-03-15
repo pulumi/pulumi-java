@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetKeyRingIamPolicyArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetKeyRingIamPolicyArgs Empty = new GetKeyRingIamPolicyArgs();
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final String keyRingId;
 
     public String getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

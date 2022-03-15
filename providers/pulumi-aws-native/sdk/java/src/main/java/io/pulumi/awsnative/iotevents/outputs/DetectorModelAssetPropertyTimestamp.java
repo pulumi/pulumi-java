@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelAssetPropertyTimestamp {
     /**
      * The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
@@ -22,10 +22,10 @@ public final class DetectorModelAssetPropertyTimestamp {
      */
     private final String timeInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelAssetPropertyTimestamp(
-        @OutputCustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
-        @OutputCustomType.Parameter("timeInSeconds") String timeInSeconds) {
+        @CustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
+        @CustomType.Parameter("timeInSeconds") String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
         this.timeInSeconds = timeInSeconds;
     }

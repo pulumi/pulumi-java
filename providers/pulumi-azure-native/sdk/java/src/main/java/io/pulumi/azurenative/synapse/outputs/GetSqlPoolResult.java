@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlPoolResult {
     /**
      * Collation mode
@@ -103,24 +103,24 @@ public final class GetSqlPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlPoolResult(
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
-        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("recoverableDatabaseId") @Nullable String recoverableDatabaseId,
-        @OutputCustomType.Parameter("restorePointInTime") @Nullable String restorePointInTime,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("sourceDatabaseId") @Nullable String sourceDatabaseId,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("createMode") @Nullable String createMode,
+        @CustomType.Parameter("creationDate") @Nullable String creationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("recoverableDatabaseId") @Nullable String recoverableDatabaseId,
+        @CustomType.Parameter("restorePointInTime") @Nullable String restorePointInTime,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("sourceDatabaseId") @Nullable String sourceDatabaseId,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.collation = collation;
         this.createMode = createMode;
         this.creationDate = creationDate;

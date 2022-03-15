@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceColumnConfiguration {
     private final List<String> changeDetectingColumns;
     private final String documentDataColumnName;
@@ -19,13 +19,13 @@ public final class DataSourceColumnConfiguration {
     private final @Nullable String documentTitleColumnName;
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceColumnConfiguration(
-        @OutputCustomType.Parameter("changeDetectingColumns") List<String> changeDetectingColumns,
-        @OutputCustomType.Parameter("documentDataColumnName") String documentDataColumnName,
-        @OutputCustomType.Parameter("documentIdColumnName") String documentIdColumnName,
-        @OutputCustomType.Parameter("documentTitleColumnName") @Nullable String documentTitleColumnName,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        @CustomType.Parameter("changeDetectingColumns") List<String> changeDetectingColumns,
+        @CustomType.Parameter("documentDataColumnName") String documentDataColumnName,
+        @CustomType.Parameter("documentIdColumnName") String documentIdColumnName,
+        @CustomType.Parameter("documentTitleColumnName") @Nullable String documentTitleColumnName,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
         this.changeDetectingColumns = changeDetectingColumns;
         this.documentDataColumnName = documentDataColumnName;
         this.documentIdColumnName = documentIdColumnName;

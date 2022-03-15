@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,28 +13,28 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault extends i
 
     public static final GetClusterClusterAutoscalingAutoProvisioningDefault Empty = new GetClusterClusterAutoscalingAutoProvisioningDefault();
 
-    @InputImport(name="imageType", required=true)
+    @Import(name="imageType", required=true)
       private final String imageType;
 
     public String getImageType() {
         return this.imageType;
     }
 
-    @InputImport(name="minCpuPlatform", required=true)
+    @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
     }
 
-    @InputImport(name="oauthScopes", required=true)
+    @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
     public List<String> getOauthScopes() {
         return this.oauthScopes;
     }
 
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {

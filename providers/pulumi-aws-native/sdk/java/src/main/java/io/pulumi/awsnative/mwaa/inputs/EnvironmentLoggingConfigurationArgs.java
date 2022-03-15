@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mwaa.inputs;
 
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentModuleLoggingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,35 +18,35 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
 
     public static final EnvironmentLoggingConfigurationArgs Empty = new EnvironmentLoggingConfigurationArgs();
 
-    @InputImport(name="dagProcessingLogs")
+    @Import(name="dagProcessingLogs")
       private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> dagProcessingLogs;
 
     public Output<EnvironmentModuleLoggingConfigurationArgs> getDagProcessingLogs() {
         return this.dagProcessingLogs == null ? Output.empty() : this.dagProcessingLogs;
     }
 
-    @InputImport(name="schedulerLogs")
+    @Import(name="schedulerLogs")
       private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> schedulerLogs;
 
     public Output<EnvironmentModuleLoggingConfigurationArgs> getSchedulerLogs() {
         return this.schedulerLogs == null ? Output.empty() : this.schedulerLogs;
     }
 
-    @InputImport(name="taskLogs")
+    @Import(name="taskLogs")
       private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> taskLogs;
 
     public Output<EnvironmentModuleLoggingConfigurationArgs> getTaskLogs() {
         return this.taskLogs == null ? Output.empty() : this.taskLogs;
     }
 
-    @InputImport(name="webserverLogs")
+    @Import(name="webserverLogs")
       private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> webserverLogs;
 
     public Output<EnvironmentModuleLoggingConfigurationArgs> getWebserverLogs() {
         return this.webserverLogs == null ? Output.empty() : this.webserverLogs;
     }
 
-    @InputImport(name="workerLogs")
+    @Import(name="workerLogs")
       private final @Nullable Output<EnvironmentModuleLoggingConfigurationArgs> workerLogs;
 
     public Output<EnvironmentModuleLoggingConfigurationArgs> getWorkerLogs() {

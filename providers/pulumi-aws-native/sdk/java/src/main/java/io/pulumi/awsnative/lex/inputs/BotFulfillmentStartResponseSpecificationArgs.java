@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
      * Determines whether the user can interrupt the start message while it is playing.
      * 
      */
-    @InputImport(name="allowInterrupt")
+    @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
     public Output<Boolean> getAllowInterrupt() {
@@ -36,14 +36,14 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
      * The delay between when the Lambda fulfillment function starts running and the start message is played. If the Lambda function returns before the delay is over, the start message isn't played.
      * 
      */
-    @InputImport(name="delayInSeconds", required=true)
+    @Import(name="delayInSeconds", required=true)
       private final Output<Integer> delayInSeconds;
 
     public Output<Integer> getDelayInSeconds() {
         return this.delayInSeconds;
     }
 
-    @InputImport(name="messageGroups", required=true)
+    @Import(name="messageGroups", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroups;
 
     public Output<List<BotMessageGroupArgs>> getMessageGroups() {

@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelDefinition {
     /**
      * The state that is entered at the creation of each detector (instance).
@@ -22,10 +22,10 @@ public final class DetectorModelDefinition {
      */
     private final List<DetectorModelState> states;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelDefinition(
-        @OutputCustomType.Parameter("initialStateName") String initialStateName,
-        @OutputCustomType.Parameter("states") List<DetectorModelState> states) {
+        @CustomType.Parameter("initialStateName") String initialStateName,
+        @CustomType.Parameter("states") List<DetectorModelState> states) {
         this.initialStateName = initialStateName;
         this.states = states;
     }

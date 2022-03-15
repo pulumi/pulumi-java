@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
      * <p>The hexadecimal codes for the colors.</p>
      * 
      */
-    @InputImport(name="colors")
+    @Import(name="colors")
       private final @Nullable Output<List<String>> colors;
 
     public Output<List<String>> getColors() {
@@ -37,7 +37,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
      *             highlighted.</p>
      * 
      */
-    @InputImport(name="emptyFillColor")
+    @Import(name="emptyFillColor")
       private final @Nullable Output<String> emptyFillColor;
 
     public Output<String> getEmptyFillColor() {
@@ -48,7 +48,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
      * <p>The minimum and maximum hexadecimal codes that describe a color gradient. </p>
      * 
      */
-    @InputImport(name="minMaxGradient")
+    @Import(name="minMaxGradient")
       private final @Nullable Output<List<String>> minMaxGradient;
 
     public Output<List<String>> getMinMaxGradient() {

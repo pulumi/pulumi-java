@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleMatcherConfigDestinationPortResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleMatcherConfigLayer4ConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatcherConfigResponse {
     /**
      * CIDR IP address range. This field may only be specified when versioned_expr is set to FIREWALL.
@@ -33,12 +33,12 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleMatcherConfigResponse(
-        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
-        @OutputCustomType.Parameter("destPorts") List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts,
-        @OutputCustomType.Parameter("layer4Configs") List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
-        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
+        @CustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @CustomType.Parameter("destPorts") List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts,
+        @CustomType.Parameter("layer4Configs") List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
+        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.destPorts = destPorts;
         this.layer4Configs = layer4Configs;

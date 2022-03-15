@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * Use the `aws.acm.Certificate` resource to configure an ACM certificate.
      * 
      */
-    @InputImport(name="certificateArn", required=true)
+    @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -30,7 +30,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * The endpoint type. Valid values: `REGIONAL`.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -41,7 +41,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * The Amazon Route 53 Hosted Zone ID of the endpoint.
      * 
      */
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -52,7 +52,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * The Transport Layer Security (TLS) version of the [security policy](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html) for the domain name. Valid values: `TLS_1_2`.
      * 
      */
-    @InputImport(name="securityPolicy", required=true)
+    @Import(name="securityPolicy", required=true)
       private final Output<String> securityPolicy;
 
     public Output<String> getSecurityPolicy() {
@@ -63,7 +63,7 @@ public final class DomainNameDomainNameConfigurationGetArgs extends io.pulumi.re
      * The target domain name.
      * 
      */
-    @InputImport(name="targetDomainName")
+    @Import(name="targetDomainName")
       private final @Nullable Output<String> targetDomainName;
 
     public Output<String> getTargetDomainName() {

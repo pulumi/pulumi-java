@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpAddressRangeResponse {
     /**
      * The IP address range.
@@ -17,8 +17,8 @@ public final class IpAddressRangeResponse {
      */
     private final @Nullable String addressRange;
 
-    @OutputCustomType.Constructor
-    private IpAddressRangeResponse(@OutputCustomType.Parameter("addressRange") @Nullable String addressRange) {
+    @CustomType.Constructor
+    private IpAddressRangeResponse(@CustomType.Parameter("addressRange") @Nullable String addressRange) {
         this.addressRange = addressRange;
     }
 

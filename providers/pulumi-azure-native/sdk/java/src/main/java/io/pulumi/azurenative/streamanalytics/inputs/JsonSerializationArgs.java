@@ -7,7 +7,7 @@ import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.azurenative.streamanalytics.enums.JsonOutputSerializationFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<Either<String,Encoding>> encoding;
 
     public Output<Either<String,Encoding>> getEncoding() {
@@ -36,7 +36,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
 
     public Output<Either<String,JsonOutputSerializationFormat>> getFormat() {
@@ -48,7 +48,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Json'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

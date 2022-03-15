@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LaunchTemplateCreditSpecificationGetArgs extends io.pulumi.re
      * The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
      * 
      */
-    @InputImport(name="cpuCredits")
+    @Import(name="cpuCredits")
       private final @Nullable Output<String> cpuCredits;
 
     public Output<String> getCpuCredits() {

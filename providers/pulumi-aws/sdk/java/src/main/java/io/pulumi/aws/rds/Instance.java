@@ -9,7 +9,7 @@ import io.pulumi.aws.rds.inputs.InstanceState;
 import io.pulumi.aws.rds.outputs.InstanceRestoreToPointInTime;
 import io.pulumi.aws.rds.outputs.InstanceS3Import;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -59,7 +59,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The hostname of the RDS instance. See also `endpoint` and `port`.
      * 
      */
-    @OutputExport(name="address", type=String.class, parameters={})
+    @Export(name="address", type=String.class, parameters={})
     private Output<String> address;
 
     /**
@@ -73,7 +73,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The allocated storage in gibibytes. If `max_allocated_storage` is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs. If `replicate_source_db` is set, the value is ignored during the creation of the instance.
      * 
      */
-    @OutputExport(name="allocatedStorage", type=Integer.class, parameters={})
+    @Export(name="allocatedStorage", type=Integer.class, parameters={})
     private Output<Integer> allocatedStorage;
 
     /**
@@ -89,7 +89,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * the change is asynchronously applied as soon as possible.
      * 
      */
-    @OutputExport(name="allowMajorVersionUpgrade", type=Boolean.class, parameters={})
+    @Export(name="allowMajorVersionUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowMajorVersionUpgrade;
 
     /**
@@ -108,7 +108,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
      * 
      */
-    @OutputExport(name="applyImmediately", type=Boolean.class, parameters={})
+    @Export(name="applyImmediately", type=Boolean.class, parameters={})
     private Output<Boolean> applyImmediately;
 
     /**
@@ -125,7 +125,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ARN of the RDS instance.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -141,7 +141,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Defaults to true.
      * 
      */
-    @OutputExport(name="autoMinorVersionUpgrade", type=Boolean.class, parameters={})
+    @Export(name="autoMinorVersionUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoMinorVersionUpgrade;
 
     /**
@@ -157,7 +157,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The AZ for the RDS instance.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -172,7 +172,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * between `0` and `35`. Must be greater than `0` if the database is used as a source for a Read Replica. [See Read Replica][1].
      * 
      */
-    @OutputExport(name="backupRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="backupRetentionPeriod", type=Integer.class, parameters={})
     private Output<Integer> backupRetentionPeriod;
 
     /**
@@ -189,7 +189,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * not overlap with `maintenance_window`.
      * 
      */
-    @OutputExport(name="backupWindow", type=String.class, parameters={})
+    @Export(name="backupWindow", type=String.class, parameters={})
     private Output<String> backupWindow;
 
     /**
@@ -205,7 +205,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The identifier of the CA certificate for the DB instance.
      * 
      */
-    @OutputExport(name="caCertIdentifier", type=String.class, parameters={})
+    @Export(name="caCertIdentifier", type=String.class, parameters={})
     private Output<String> caCertIdentifier;
 
     /**
@@ -222,7 +222,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
      * 
      */
-    @OutputExport(name="characterSetName", type=String.class, parameters={})
+    @Export(name="characterSetName", type=String.class, parameters={})
     private Output<String> characterSetName;
 
     /**
@@ -239,7 +239,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Copy all Instance `tags` to snapshots. Default is `false`.
      * 
      */
-    @OutputExport(name="copyTagsToSnapshot", type=Boolean.class, parameters={})
+    @Export(name="copyTagsToSnapshot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> copyTagsToSnapshot;
 
     /**
@@ -253,7 +253,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
      * 
      */
-    @OutputExport(name="customerOwnedIpEnabled", type=Boolean.class, parameters={})
+    @Export(name="customerOwnedIpEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> customerOwnedIpEnabled;
 
     /**
@@ -273,7 +273,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * for additional read replica contraints.
      * 
      */
-    @OutputExport(name="dbSubnetGroupName", type=String.class, parameters={})
+    @Export(name="dbSubnetGroupName", type=String.class, parameters={})
     private Output<String> dbSubnetGroupName;
 
     /**
@@ -293,7 +293,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies whether to remove automated backups immediately after the DB instance is deleted. Default is `true`.
      * 
      */
-    @OutputExport(name="deleteAutomatedBackups", type=Boolean.class, parameters={})
+    @Export(name="deleteAutomatedBackups", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteAutomatedBackups;
 
     /**
@@ -307,7 +307,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -321,7 +321,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ID of the Directory Service Active Directory domain to create the instance in.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output</* @Nullable */ String> domain;
 
     /**
@@ -335,7 +335,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the IAM role to be used when making API calls to the Directory Service.
      * 
      */
-    @OutputExport(name="domainIamRoleName", type=String.class, parameters={})
+    @Export(name="domainIamRoleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainIamRoleName;
 
     /**
@@ -349,7 +349,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Set of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
      * 
      */
-    @OutputExport(name="enabledCloudwatchLogsExports", type=List.class, parameters={String.class})
+    @Export(name="enabledCloudwatchLogsExports", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> enabledCloudwatchLogsExports;
 
     /**
@@ -363,7 +363,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The connection endpoint in `address:port` format.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -382,7 +382,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in the Amazon RDS User Guide.
      * 
      */
-    @OutputExport(name="engine", type=String.class, parameters={})
+    @Export(name="engine", type=String.class, parameters={})
     private Output<String> engine;
 
     /**
@@ -405,7 +405,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
      * 
      */
-    @OutputExport(name="engineVersion", type=String.class, parameters={})
+    @Export(name="engineVersion", type=String.class, parameters={})
     private Output<String> engineVersion;
 
     /**
@@ -423,7 +423,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The running version of the database.
      * 
      */
-    @OutputExport(name="engineVersionActual", type=String.class, parameters={})
+    @Export(name="engineVersionActual", type=String.class, parameters={})
     private Output<String> engineVersionActual;
 
     /**
@@ -439,7 +439,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * set to `false`. The value must begin with a letter, only contain alphanumeric characters and hyphens, and not end with a hyphen or contain two consecutive hyphens. Must not be provided when deleting a read replica.
      * 
      */
-    @OutputExport(name="finalSnapshotIdentifier", type=String.class, parameters={})
+    @Export(name="finalSnapshotIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> finalSnapshotIdentifier;
 
     /**
@@ -456,7 +456,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in a Route 53 Alias record).
      * 
      */
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**
@@ -473,7 +473,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * accounts is enabled.
      * 
      */
-    @OutputExport(name="iamDatabaseAuthenticationEnabled", type=Boolean.class, parameters={})
+    @Export(name="iamDatabaseAuthenticationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> iamDatabaseAuthenticationEnabled;
 
     /**
@@ -490,7 +490,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @OutputExport(name="identifier", type=String.class, parameters={})
+    @Export(name="identifier", type=String.class, parameters={})
     private Output<String> identifier;
 
     /**
@@ -506,7 +506,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @OutputExport(name="identifierPrefix", type=String.class, parameters={})
+    @Export(name="identifierPrefix", type=String.class, parameters={})
     private Output<String> identifierPrefix;
 
     /**
@@ -521,7 +521,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The instance type of the RDS instance.
      * 
      */
-    @OutputExport(name="instanceClass", type=String.class, parameters={})
+    @Export(name="instanceClass", type=String.class, parameters={})
     private Output<String> instanceClass;
 
     /**
@@ -536,7 +536,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * storage_type of "io1".
      * 
      */
-    @OutputExport(name="iops", type=Integer.class, parameters={})
+    @Export(name="iops", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> iops;
 
     /**
@@ -552,7 +552,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * encrypted replica, set this to the destination KMS ARN.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -567,7 +567,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The latest time, in UTC [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), to which a database can be restored with point-in-time restore.
      * 
      */
-    @OutputExport(name="latestRestorableTime", type=String.class, parameters={})
+    @Export(name="latestRestorableTime", type=String.class, parameters={})
     private Output<String> latestRestorableTime;
 
     /**
@@ -582,7 +582,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * SE1) License model information for this DB instance.
      * 
      */
-    @OutputExport(name="licenseModel", type=String.class, parameters={})
+    @Export(name="licenseModel", type=String.class, parameters={})
     private Output<String> licenseModel;
 
     /**
@@ -601,7 +601,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * for more information.
      * 
      */
-    @OutputExport(name="maintenanceWindow", type=String.class, parameters={})
+    @Export(name="maintenanceWindow", type=String.class, parameters={})
     private Output<String> maintenanceWindow;
 
     /**
@@ -619,7 +619,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to `allocated_storage`. Must be greater than or equal to `allocated_storage` or `0` to disable Storage Autoscaling.
      * 
      */
-    @OutputExport(name="maxAllocatedStorage", type=Integer.class, parameters={})
+    @Export(name="maxAllocatedStorage", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxAllocatedStorage;
 
     /**
@@ -636,7 +636,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Values: 0, 1, 5, 10, 15, 30, 60.
      * 
      */
-    @OutputExport(name="monitoringInterval", type=Integer.class, parameters={})
+    @Export(name="monitoringInterval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monitoringInterval;
 
     /**
@@ -657,7 +657,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
      * 
      */
-    @OutputExport(name="monitoringRoleArn", type=String.class, parameters={})
+    @Export(name="monitoringRoleArn", type=String.class, parameters={})
     private Output<String> monitoringRoleArn;
 
     /**
@@ -675,7 +675,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies if the RDS instance is multi-AZ
      * 
      */
-    @OutputExport(name="multiAz", type=Boolean.class, parameters={})
+    @Export(name="multiAz", type=Boolean.class, parameters={})
     private Output<Boolean> multiAz;
 
     /**
@@ -689,7 +689,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -704,7 +704,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
      * 
      */
-    @OutputExport(name="ncharCharacterSetName", type=String.class, parameters={})
+    @Export(name="ncharCharacterSetName", type=String.class, parameters={})
     private Output<String> ncharCharacterSetName;
 
     /**
@@ -719,7 +719,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Name of the DB option group to associate.
      * 
      */
-    @OutputExport(name="optionGroupName", type=String.class, parameters={})
+    @Export(name="optionGroupName", type=String.class, parameters={})
     private Output<String> optionGroupName;
 
     /**
@@ -734,7 +734,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * associate.
      * 
      */
-    @OutputExport(name="parameterGroupName", type=String.class, parameters={})
+    @Export(name="parameterGroupName", type=String.class, parameters={})
     private Output<String> parameterGroupName;
 
     /**
@@ -751,7 +751,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * logs, and it will be stored in the state file.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -767,7 +767,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies whether Performance Insights are enabled. Defaults to false.
      * 
      */
-    @OutputExport(name="performanceInsightsEnabled", type=Boolean.class, parameters={})
+    @Export(name="performanceInsightsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> performanceInsightsEnabled;
 
     /**
@@ -781,7 +781,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true. Once KMS key is set, it can never be changed.
      * 
      */
-    @OutputExport(name="performanceInsightsKmsKeyId", type=String.class, parameters={})
+    @Export(name="performanceInsightsKmsKeyId", type=String.class, parameters={})
     private Output<String> performanceInsightsKmsKeyId;
 
     /**
@@ -795,7 +795,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
      * 
      */
-    @OutputExport(name="performanceInsightsRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="performanceInsightsRetentionPeriod", type=Integer.class, parameters={})
     private Output<Integer> performanceInsightsRetentionPeriod;
 
     /**
@@ -809,7 +809,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The port on which the DB accepts connections.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -824,7 +824,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * accessible. Default is `false`.
      * 
      */
-    @OutputExport(name="publiclyAccessible", type=Boolean.class, parameters={})
+    @Export(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAccessible;
 
     /**
@@ -840,7 +840,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
      * 
      */
-    @OutputExport(name="replicaMode", type=String.class, parameters={})
+    @Export(name="replicaMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicaMode;
 
     /**
@@ -851,7 +851,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getReplicaMode() {
         return this.replicaMode;
     }
-    @OutputExport(name="replicas", type=List.class, parameters={String.class})
+    @Export(name="replicas", type=List.class, parameters={String.class})
     private Output<List<String>> replicas;
 
     public Output<List<String>> getReplicas() {
@@ -869,7 +869,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * for more information on using Replication.
      * 
      */
-    @OutputExport(name="replicateSourceDb", type=String.class, parameters={})
+    @Export(name="replicateSourceDb", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicateSourceDb;
 
     /**
@@ -891,7 +891,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The RDS Resource ID of this instance.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -905,7 +905,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
      * 
      */
-    @OutputExport(name="restoreToPointInTime", type=InstanceRestoreToPointInTime.class, parameters={})
+    @Export(name="restoreToPointInTime", type=InstanceRestoreToPointInTime.class, parameters={})
     private Output</* @Nullable */ InstanceRestoreToPointInTime> restoreToPointInTime;
 
     /**
@@ -919,7 +919,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
      * 
      */
-    @OutputExport(name="s3Import", type=InstanceS3Import.class, parameters={})
+    @Export(name="s3Import", type=InstanceS3Import.class, parameters={})
     private Output</* @Nullable */ InstanceS3Import> s3Import;
 
     /**
@@ -935,7 +935,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
      * 
      */
-    @OutputExport(name="securityGroupNames", type=List.class, parameters={String.class})
+    @Export(name="securityGroupNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupNames;
 
     /**
@@ -955,7 +955,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is `false`.
      * 
      */
-    @OutputExport(name="skipFinalSnapshot", type=Boolean.class, parameters={})
+    @Export(name="skipFinalSnapshot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipFinalSnapshot;
 
     /**
@@ -975,7 +975,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * RDS console, e.g: rds:production-2015-06-26-06-05.
      * 
      */
-    @OutputExport(name="snapshotIdentifier", type=String.class, parameters={})
+    @Export(name="snapshotIdentifier", type=String.class, parameters={})
     private Output<String> snapshotIdentifier;
 
     /**
@@ -991,7 +991,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The RDS instance status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -1008,7 +1008,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * default is `false` if not specified.
      * 
      */
-    @OutputExport(name="storageEncrypted", type=Boolean.class, parameters={})
+    @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> storageEncrypted;
 
     /**
@@ -1027,7 +1027,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * specified, "gp2" if not.
      * 
      */
-    @OutputExport(name="storageType", type=String.class, parameters={})
+    @Export(name="storageType", type=String.class, parameters={})
     private Output<String> storageType;
 
     /**
@@ -1043,7 +1043,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -1057,7 +1057,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -1075,7 +1075,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * for more information.
      * 
      */
-    @OutputExport(name="timezone", type=String.class, parameters={})
+    @Export(name="timezone", type=String.class, parameters={})
     private Output<String> timezone;
 
     /**
@@ -1094,7 +1094,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is provided) Username for the master DB user.
      * 
      */
-    @OutputExport(name="username", type=String.class, parameters={})
+    @Export(name="username", type=String.class, parameters={})
     private Output<String> username;
 
     /**
@@ -1110,7 +1110,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * associate.
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSecurityGroupIds;
 
     /**

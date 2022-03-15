@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.events.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionParameter {
     private final @Nullable Boolean isValueSecret;
     private final String key;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionParameter(
-        @OutputCustomType.Parameter("isValueSecret") @Nullable Boolean isValueSecret,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("isValueSecret") @Nullable Boolean isValueSecret,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.isValueSecret = isValueSecret;
         this.key = key;
         this.value = value;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.ContactDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPeerAsnResult {
     /**
      * The error message for the validation state
@@ -55,16 +55,16 @@ public final class GetPeerAsnResult {
      */
     private final @Nullable String validationState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPeerAsnResult(
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerAsn") @Nullable Integer peerAsn,
-        @OutputCustomType.Parameter("peerContactDetail") @Nullable List<ContactDetailResponse> peerContactDetail,
-        @OutputCustomType.Parameter("peerName") @Nullable String peerName,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationState") @Nullable String validationState) {
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerAsn") @Nullable Integer peerAsn,
+        @CustomType.Parameter("peerContactDetail") @Nullable List<ContactDetailResponse> peerContactDetail,
+        @CustomType.Parameter("peerName") @Nullable String peerName,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationState") @Nullable String validationState) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.name = name;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketObjectLockRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
 
     public static final BucketObjectLockConfigurationArgs Empty = new BucketObjectLockConfigurationArgs();
 
-    @InputImport(name="objectLockEnabled")
+    @Import(name="objectLockEnabled")
       private final @Nullable Output<String> objectLockEnabled;
 
     public Output<String> getObjectLockEnabled() {
         return this.objectLockEnabled == null ? Output.empty() : this.objectLockEnabled;
     }
 
-    @InputImport(name="rule")
+    @Import(name="rule")
       private final @Nullable Output<BucketObjectLockRuleArgs> rule;
 
     public Output<BucketObjectLockRuleArgs> getRule() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataMaskingEntityResponse {
     /**
      * Data masking mode.
@@ -22,10 +22,10 @@ public final class DataMaskingEntityResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataMaskingEntityResponse(
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.mode = mode;
         this.value = value;
     }

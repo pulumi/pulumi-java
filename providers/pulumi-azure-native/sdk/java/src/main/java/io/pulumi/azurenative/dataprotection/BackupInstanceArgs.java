@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the backup instance
      * 
      */
-    @InputImport(name="backupInstanceName")
+    @Import(name="backupInstanceName")
       private final @Nullable Output<String> backupInstanceName;
 
     public Output<String> getBackupInstanceName() {
@@ -29,7 +29,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * BackupInstanceResource properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
 
     public Output<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> getProperties() {
@@ -40,7 +40,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group where the backup vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the backup vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
     public Output<String> getVaultName() {

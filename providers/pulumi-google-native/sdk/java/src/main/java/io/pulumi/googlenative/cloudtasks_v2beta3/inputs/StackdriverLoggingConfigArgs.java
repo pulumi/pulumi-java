@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
      * Specifies the fraction of operations to write to [Stackdriver Logging](https://cloud.google.com/logging/docs/). This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the default and means that no operations are logged.
      * 
      */
-    @InputImport(name="samplingRatio")
+    @Import(name="samplingRatio")
       private final @Nullable Output<Double> samplingRatio;
 
     public Output<Double> getSamplingRatio() {

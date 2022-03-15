@@ -11,7 +11,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigTimePeriodResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Show costs accumulated over time.
      * 
      */
-    @OutputExport(name="accumulated", type=String.class, parameters={})
+    @Export(name="accumulated", type=String.class, parameters={})
     private Output</* @Nullable */ String> accumulated;
 
     /**
@@ -53,7 +53,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Chart type of the main view in Cost Analysis. Required.
      * 
      */
-    @OutputExport(name="chart", type=String.class, parameters={})
+    @Export(name="chart", type=String.class, parameters={})
     private Output</* @Nullable */ String> chart;
 
     /**
@@ -67,7 +67,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Date the user created this view.
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -81,7 +81,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Selected currency.
      * 
      */
-    @OutputExport(name="currency", type=String.class, parameters={})
+    @Export(name="currency", type=String.class, parameters={})
     private Output<String> currency;
 
     /**
@@ -95,7 +95,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Has definition for data in this report config.
      * 
      */
-    @OutputExport(name="dataSet", type=ReportConfigDatasetResponse.class, parameters={})
+    @Export(name="dataSet", type=ReportConfigDatasetResponse.class, parameters={})
     private Output</* @Nullable */ ReportConfigDatasetResponse> dataSet;
 
     /**
@@ -109,7 +109,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Selected date range for viewing cost in.
      * 
      */
-    @OutputExport(name="dateRange", type=String.class, parameters={})
+    @Export(name="dateRange", type=String.class, parameters={})
     private Output<String> dateRange;
 
     /**
@@ -123,7 +123,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * User input name of the view. Required.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -137,7 +137,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -151,7 +151,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Include monetary commitment
      * 
      */
-    @OutputExport(name="includeMonetaryCommitment", type=Boolean.class, parameters={})
+    @Export(name="includeMonetaryCommitment", type=Boolean.class, parameters={})
     private Output<Boolean> includeMonetaryCommitment;
 
     /**
@@ -165,7 +165,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * List of KPIs to show in Cost Analysis UI.
      * 
      */
-    @OutputExport(name="kpis", type=List.class, parameters={KpiPropertiesResponse.class})
+    @Export(name="kpis", type=List.class, parameters={KpiPropertiesResponse.class})
     private Output</* @Nullable */ List<KpiPropertiesResponse>> kpis;
 
     /**
@@ -179,7 +179,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Metric to use when displaying costs.
      * 
      */
-    @OutputExport(name="metric", type=String.class, parameters={})
+    @Export(name="metric", type=String.class, parameters={})
     private Output</* @Nullable */ String> metric;
 
     /**
@@ -193,7 +193,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Date when the user last modified this view.
      * 
      */
-    @OutputExport(name="modifiedOn", type=String.class, parameters={})
+    @Export(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
     /**
@@ -207,7 +207,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -221,7 +221,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Configuration of 3 sub-views in the Cost Analysis UI.
      * 
      */
-    @OutputExport(name="pivots", type=List.class, parameters={PivotPropertiesResponse.class})
+    @Export(name="pivots", type=List.class, parameters={PivotPropertiesResponse.class})
     private Output</* @Nullable */ List<PivotPropertiesResponse>> pivots;
 
     /**
@@ -235,7 +235,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -249,7 +249,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Has time period for pulling data for the report.
      * 
      */
-    @OutputExport(name="timePeriod", type=ReportConfigTimePeriodResponse.class, parameters={})
+    @Export(name="timePeriod", type=ReportConfigTimePeriodResponse.class, parameters={})
     private Output</* @Nullable */ ReportConfigTimePeriodResponse> timePeriod;
 
     /**
@@ -263,7 +263,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
      */
-    @OutputExport(name="timeframe", type=String.class, parameters={})
+    @Export(name="timeframe", type=String.class, parameters={})
     private Output<String> timeframe;
 
     /**
@@ -277,7 +277,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the SNS topic
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
      * The AWS Account ID of the SNS topic owner
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -40,7 +40,7 @@ public final class TopicPolicyState extends io.pulumi.resources.ResourceArgs {
      * The fully-formed AWS policy as JSON.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {

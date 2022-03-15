@@ -5,14 +5,14 @@ package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetResource;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceSetResult {
     /**
      * The Amazon Resource Name (ARN) of the resource set.
@@ -30,11 +30,11 @@ public final class GetResourceSetResult {
      */
     private final @Nullable List<ResourceSetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceSetResult(
-        @OutputCustomType.Parameter("resourceSetArn") @Nullable String resourceSetArn,
-        @OutputCustomType.Parameter("resources") @Nullable List<ResourceSetResource> resources,
-        @OutputCustomType.Parameter("tags") @Nullable List<ResourceSetTag> tags) {
+        @CustomType.Parameter("resourceSetArn") @Nullable String resourceSetArn,
+        @CustomType.Parameter("resources") @Nullable List<ResourceSetResource> resources,
+        @CustomType.Parameter("tags") @Nullable List<ResourceSetTag> tags) {
         this.resourceSetArn = resourceSetArn;
         this.resources = resources;
         this.tags = tags;

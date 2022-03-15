@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorVpcConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,56 +14,56 @@ public final class AnomalyDetectorRDSSourceConfig extends io.pulumi.resources.In
 
     public static final AnomalyDetectorRDSSourceConfig Empty = new AnomalyDetectorRDSSourceConfig();
 
-    @InputImport(name="dBInstanceIdentifier", required=true)
+    @Import(name="dBInstanceIdentifier", required=true)
       private final String dBInstanceIdentifier;
 
     public String getDBInstanceIdentifier() {
         return this.dBInstanceIdentifier;
     }
 
-    @InputImport(name="databaseHost", required=true)
+    @Import(name="databaseHost", required=true)
       private final String databaseHost;
 
     public String getDatabaseHost() {
         return this.databaseHost;
     }
 
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="databasePort", required=true)
+    @Import(name="databasePort", required=true)
       private final Integer databasePort;
 
     public Integer getDatabasePort() {
         return this.databasePort;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="secretManagerArn", required=true)
+    @Import(name="secretManagerArn", required=true)
       private final String secretManagerArn;
 
     public String getSecretManagerArn() {
         return this.secretManagerArn;
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {
         return this.tableName;
     }
 
-    @InputImport(name="vpcConfiguration", required=true)
+    @Import(name="vpcConfiguration", required=true)
       private final AnomalyDetectorVpcConfiguration vpcConfiguration;
 
     public AnomalyDetectorVpcConfiguration getVpcConfiguration() {

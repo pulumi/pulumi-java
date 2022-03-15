@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
     /**
      * Azure Internal monitoring pipeline account.
@@ -54,16 +54,16 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureInternalMonitoringPipelineSinkDescriptionResponse(
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("autoKeyConfigUrl") @Nullable String autoKeyConfigUrl,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fluentdConfigUrl") @Nullable Object fluentdConfigUrl,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("maConfigUrl") @Nullable String maConfigUrl,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("autoKeyConfigUrl") @Nullable String autoKeyConfigUrl,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fluentdConfigUrl") @Nullable Object fluentdConfigUrl,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("maConfigUrl") @Nullable String maConfigUrl,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace) {
         this.accountName = accountName;
         this.autoKeyConfigUrl = autoKeyConfigUrl;
         this.description = description;

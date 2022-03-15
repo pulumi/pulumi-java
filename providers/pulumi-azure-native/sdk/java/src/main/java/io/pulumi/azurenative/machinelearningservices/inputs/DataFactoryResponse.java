@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * Location for the underlying compute
      * 
      */
-    @InputImport(name="computeLocation")
+    @Import(name="computeLocation")
       private final @Nullable String computeLocation;
 
     public Optional<String> getComputeLocation() {
@@ -37,7 +37,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'DataFactory'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final String computeType;
 
     public String getComputeType() {
@@ -48,7 +48,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * The description of the Machine Learning compute.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -59,7 +59,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.
      * 
      */
-    @InputImport(name="isAttachedCompute", required=true)
+    @Import(name="isAttachedCompute", required=true)
       private final Boolean isAttachedCompute;
 
     public Boolean getIsAttachedCompute() {
@@ -70,7 +70,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * Errors during provisioning
      * 
      */
-    @InputImport(name="provisioningErrors", required=true)
+    @Import(name="provisioningErrors", required=true)
       private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
     public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
@@ -81,7 +81,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -92,7 +92,7 @@ public final class DataFactoryResponse extends io.pulumi.resources.InvokeArgs {
      * ARM resource id of the underlying compute
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

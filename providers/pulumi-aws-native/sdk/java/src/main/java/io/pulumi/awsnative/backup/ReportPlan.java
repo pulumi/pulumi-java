@@ -9,7 +9,7 @@ import io.pulumi.awsnative.backup.outputs.ReportDeliveryChannelProperties;
 import io.pulumi.awsnative.backup.outputs.ReportPlanTag;
 import io.pulumi.awsnative.backup.outputs.ReportSettingProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
      * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
      * 
      */
-    @OutputExport(name="reportDeliveryChannel", type=ReportDeliveryChannelProperties.class, parameters={})
+    @Export(name="reportDeliveryChannel", type=ReportDeliveryChannelProperties.class, parameters={})
     private Output<ReportDeliveryChannelProperties> reportDeliveryChannel;
 
     /**
@@ -39,7 +39,7 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
      * An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
      * 
      */
-    @OutputExport(name="reportPlanArn", type=String.class, parameters={})
+    @Export(name="reportPlanArn", type=String.class, parameters={})
     private Output<String> reportPlanArn;
 
     /**
@@ -53,7 +53,7 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
      * An optional description of the report plan with a maximum of 1,024 characters.
      * 
      */
-    @OutputExport(name="reportPlanDescription", type=String.class, parameters={})
+    @Export(name="reportPlanDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportPlanDescription;
 
     /**
@@ -67,7 +67,7 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
      * The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    @OutputExport(name="reportPlanName", type=String.class, parameters={})
+    @Export(name="reportPlanName", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportPlanName;
 
     /**
@@ -81,7 +81,7 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
      * 
      */
-    @OutputExport(name="reportPlanTags", type=List.class, parameters={ReportPlanTag.class})
+    @Export(name="reportPlanTags", type=List.class, parameters={ReportPlanTag.class})
     private Output</* @Nullable */ List<ReportPlanTag>> reportPlanTags;
 
     /**
@@ -95,7 +95,7 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
      * Identifies the report template for the report. Reports are built using a report template.
      * 
      */
-    @OutputExport(name="reportSetting", type=ReportSettingProperties.class, parameters={})
+    @Export(name="reportSetting", type=ReportSettingProperties.class, parameters={})
     private Output<ReportSettingProperties> reportSetting;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleNoncurrentVersionExpiration {
     /**
      * Specifies the number of days noncurrent object versions expire.
@@ -17,8 +17,8 @@ public final class BucketLifecycleRuleNoncurrentVersionExpiration {
      */
     private final @Nullable Integer days;
 
-    @OutputCustomType.Constructor
-    private BucketLifecycleRuleNoncurrentVersionExpiration(@OutputCustomType.Parameter("days") @Nullable Integer days) {
+    @CustomType.Constructor
+    private BucketLifecycleRuleNoncurrentVersionExpiration(@CustomType.Parameter("days") @Nullable Integer days) {
         this.days = days;
     }
 

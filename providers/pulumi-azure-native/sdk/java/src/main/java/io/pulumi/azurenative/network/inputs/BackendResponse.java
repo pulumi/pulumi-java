@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * Location of the backend (IP address or FQDN)
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable String address;
 
     public Optional<String> getAddress() {
@@ -34,7 +34,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The value to use as the host header sent to the backend. If blank or unspecified, this defaults to the incoming host.
      * 
      */
-    @InputImport(name="backendHostHeader")
+    @Import(name="backendHostHeader")
       private final @Nullable String backendHostHeader;
 
     public Optional<String> getBackendHostHeader() {
@@ -45,7 +45,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to enable use of this backend. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -56,7 +56,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The HTTP TCP port number. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpPort")
+    @Import(name="httpPort")
       private final @Nullable Integer httpPort;
 
     public Optional<Integer> getHttpPort() {
@@ -67,7 +67,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The HTTPS TCP port number. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpsPort")
+    @Import(name="httpsPort")
       private final @Nullable Integer httpsPort;
 
     public Optional<Integer> getHttpsPort() {
@@ -78,7 +78,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * Priority to use for load balancing. Higher priorities will not be used for load balancing if any lower priority backend is healthy.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -89,7 +89,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The Approval status for the connection to the Private Link
      * 
      */
-    @InputImport(name="privateEndpointStatus", required=true)
+    @Import(name="privateEndpointStatus", required=true)
       private final String privateEndpointStatus;
 
     public String getPrivateEndpointStatus() {
@@ -100,7 +100,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
      */
-    @InputImport(name="privateLinkAlias")
+    @Import(name="privateLinkAlias")
       private final @Nullable String privateLinkAlias;
 
     public Optional<String> getPrivateLinkAlias() {
@@ -111,7 +111,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * A custom message to be included in the approval request to connect to the Private Link
      * 
      */
-    @InputImport(name="privateLinkApprovalMessage")
+    @Import(name="privateLinkApprovalMessage")
       private final @Nullable String privateLinkApprovalMessage;
 
     public Optional<String> getPrivateLinkApprovalMessage() {
@@ -122,7 +122,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
      */
-    @InputImport(name="privateLinkLocation")
+    @Import(name="privateLinkLocation")
       private final @Nullable String privateLinkLocation;
 
     public Optional<String> getPrivateLinkLocation() {
@@ -133,7 +133,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
 
     public Optional<String> getPrivateLinkResourceId() {
@@ -144,7 +144,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * Weight of this endpoint for load balancing purposes.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {

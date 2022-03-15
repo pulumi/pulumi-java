@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * Friendly Name
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -33,7 +33,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * Remote Dns ips
      * 
      */
-    @InputImport(name="remoteDnsIps")
+    @Import(name="remoteDnsIps")
       private final @Nullable String remoteDnsIps;
 
     public Optional<String> getRemoteDnsIps() {
@@ -44,7 +44,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * Trust Direction
      * 
      */
-    @InputImport(name="trustDirection")
+    @Import(name="trustDirection")
       private final @Nullable String trustDirection;
 
     public Optional<String> getTrustDirection() {
@@ -55,7 +55,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * Trust Password
      * 
      */
-    @InputImport(name="trustPassword")
+    @Import(name="trustPassword")
       private final @Nullable String trustPassword;
 
     public Optional<String> getTrustPassword() {
@@ -66,7 +66,7 @@ public final class ForestTrustResponse extends io.pulumi.resources.InvokeArgs {
      * Trusted Domain FQDN
      * 
      */
-    @InputImport(name="trustedDomainFqdn")
+    @Import(name="trustedDomainFqdn")
       private final @Nullable String trustedDomainFqdn;
 
     public Optional<String> getTrustedDomainFqdn() {

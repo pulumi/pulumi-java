@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePassthroughExtensionsAdditionalExtension;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePassthroughExtensions {
     /**
      * Optional. Describes custom X.509 extensions.
@@ -23,10 +23,10 @@ public final class CertificateTemplatePassthroughExtensions {
      */
     private final @Nullable List<String> knownExtensions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePassthroughExtensions(
-        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions,
-        @OutputCustomType.Parameter("knownExtensions") @Nullable List<String> knownExtensions) {
+        @CustomType.Parameter("additionalExtensions") @Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions,
+        @CustomType.Parameter("knownExtensions") @Nullable List<String> knownExtensions) {
         this.additionalExtensions = additionalExtensions;
         this.knownExtensions = knownExtensions;
     }

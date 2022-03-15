@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,21 +18,21 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
 
     public static final BotPostFulfillmentStatusSpecificationArgs Empty = new BotPostFulfillmentStatusSpecificationArgs();
 
-    @InputImport(name="failureResponse")
+    @Import(name="failureResponse")
       private final @Nullable Output<BotResponseSpecificationArgs> failureResponse;
 
     public Output<BotResponseSpecificationArgs> getFailureResponse() {
         return this.failureResponse == null ? Output.empty() : this.failureResponse;
     }
 
-    @InputImport(name="successResponse")
+    @Import(name="successResponse")
       private final @Nullable Output<BotResponseSpecificationArgs> successResponse;
 
     public Output<BotResponseSpecificationArgs> getSuccessResponse() {
         return this.successResponse == null ? Output.empty() : this.successResponse;
     }
 
-    @InputImport(name="timeoutResponse")
+    @Import(name="timeoutResponse")
       private final @Nullable Output<BotResponseSpecificationArgs> timeoutResponse;
 
     public Output<BotResponseSpecificationArgs> getTimeoutResponse() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BatchEndpointResponse {
     /**
      * Enum to determine endpoint authentication mode.
@@ -44,14 +44,14 @@ public final class BatchEndpointResponse {
      */
     private final @Nullable Map<String,Integer> traffic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BatchEndpointResponse(
-        @OutputCustomType.Parameter("authMode") @Nullable String authMode,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("scoringUri") String scoringUri,
-        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
-        @OutputCustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
+        @CustomType.Parameter("authMode") @Nullable String authMode,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("scoringUri") String scoringUri,
+        @CustomType.Parameter("swaggerUri") String swaggerUri,
+        @CustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
         this.authMode = authMode;
         this.description = description;
         this.properties = properties;

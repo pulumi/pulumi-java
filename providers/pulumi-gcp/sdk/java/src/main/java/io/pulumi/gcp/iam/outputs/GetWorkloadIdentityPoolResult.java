@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadIdentityPoolResult {
     private final String description;
     private final Boolean disabled;
@@ -25,16 +25,16 @@ public final class GetWorkloadIdentityPoolResult {
     private final String state;
     private final String workloadIdentityPoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadIdentityPoolResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("workloadIdentityPoolId") String workloadIdentityPoolId) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("workloadIdentityPoolId") String workloadIdentityPoolId) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;

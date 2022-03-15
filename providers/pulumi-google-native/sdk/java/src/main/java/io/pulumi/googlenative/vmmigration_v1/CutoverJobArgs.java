@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,42 +14,42 @@ public final class CutoverJobArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CutoverJobArgs Empty = new CutoverJobArgs();
 
-    @InputImport(name="cutoverJobId", required=true)
+    @Import(name="cutoverJobId", required=true)
       private final Output<String> cutoverJobId;
 
     public Output<String> getCutoverJobId() {
         return this.cutoverJobId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="migratingVmId", required=true)
+    @Import(name="migratingVmId", required=true)
       private final Output<String> migratingVmId;
 
     public Output<String> getMigratingVmId() {
         return this.migratingVmId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
     public Output<String> getSourceId() {

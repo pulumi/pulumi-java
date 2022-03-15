@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
      * The ID of the PackagingConfiguration being applied to the Asset.
      * 
      */
-    @InputImport(name="packagingConfigurationId", required=true)
+    @Import(name="packagingConfigurationId", required=true)
       private final String packagingConfigurationId;
 
     public String getPackagingConfigurationId() {
@@ -31,7 +31,7 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
      * The URL of the parent manifest for the repackaged Asset.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

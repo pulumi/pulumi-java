@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetHostedZoneArgs extends io.pulumi.resources.InvokeArgs {
      * The region you'd like the zone for. By default, fetches the current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {

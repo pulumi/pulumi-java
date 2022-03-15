@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * Active Directory password for `ad_domain_join_user`. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="adDomainJoinPassword")
+    @Import(name="adDomainJoinPassword")
       private final @Nullable Output<String> adDomainJoinPassword;
 
     public Output<String> getAdDomainJoinPassword() {
@@ -29,7 +29,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * Required only when establishing a cross-realm trust with an Active Directory domain. A user with sufficient privileges to join resources to the domain. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="adDomainJoinUser")
+    @Import(name="adDomainJoinUser")
       private final @Nullable Output<String> adDomainJoinUser;
 
     public Output<String> getAdDomainJoinUser() {
@@ -40,7 +40,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * Required only when establishing a cross-realm trust with a KDC in a different realm. The cross-realm principal password, which must be identical across realms. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="crossRealmTrustPrincipalPassword")
+    @Import(name="crossRealmTrustPrincipalPassword")
       private final @Nullable Output<String> crossRealmTrustPrincipalPassword;
 
     public Output<String> getCrossRealmTrustPrincipalPassword() {
@@ -51,7 +51,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * Password used within the cluster for the kadmin service on the cluster-dedicated KDC, which maintains Kerberos principals, password policies, and keytabs for the cluster. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="kdcAdminPassword", required=true)
+    @Import(name="kdcAdminPassword", required=true)
       private final Output<String> kdcAdminPassword;
 
     public Output<String> getKdcAdminPassword() {
@@ -62,7 +62,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
      * Name of the Kerberos realm to which all nodes in a cluster belong. For example, `EC2.INTERNAL`
      * 
      */
-    @InputImport(name="realm", required=true)
+    @Import(name="realm", required=true)
       private final Output<String> realm;
 
     public Output<String> getRealm() {

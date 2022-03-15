@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * DatasourceType of the resource.
      * 
      */
-    @InputImport(name="datasourceType")
+    @Import(name="datasourceType")
       private final @Nullable String datasourceType;
 
     public Optional<String> getDatasourceType() {
@@ -33,7 +33,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * Type of Datasource object, used to initialize the right inherited type
      * 
      */
-    @InputImport(name="objectType")
+    @Import(name="objectType")
       private final @Nullable String objectType;
 
     public Optional<String> getObjectType() {
@@ -44,7 +44,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * Full ARM ID of the resource. For azure resources, this is ARM ID. For non azure resources, this will be the ID created by backup service via Fabric/Vault.
      * 
      */
-    @InputImport(name="resourceID", required=true)
+    @Import(name="resourceID", required=true)
       private final String resourceID;
 
     public String getResourceID() {
@@ -55,7 +55,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * Location of datasource.
      * 
      */
-    @InputImport(name="resourceLocation")
+    @Import(name="resourceLocation")
       private final @Nullable String resourceLocation;
 
     public Optional<String> getResourceLocation() {
@@ -66,7 +66,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * Unique identifier of the resource in the context of parent.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
@@ -77,7 +77,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Type of Datasource.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
@@ -88,7 +88,7 @@ public final class DatasourceResponse extends io.pulumi.resources.InvokeArgs {
      * Uri of the resource.
      * 
      */
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {

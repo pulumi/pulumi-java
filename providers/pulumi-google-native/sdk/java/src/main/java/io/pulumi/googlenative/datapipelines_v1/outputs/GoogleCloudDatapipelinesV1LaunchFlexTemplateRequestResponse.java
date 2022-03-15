@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
     /**
      * Parameter to launch a job from a Flex Template.
@@ -32,12 +32,12 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
      */
     private final Boolean validateOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(
-        @OutputCustomType.Parameter("launchParameter") GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("validateOnly") Boolean validateOnly) {
+        @CustomType.Parameter("launchParameter") GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("validateOnly") Boolean validateOnly) {
         this.launchParameter = launchParameter;
         this.location = location;
         this.project = project;

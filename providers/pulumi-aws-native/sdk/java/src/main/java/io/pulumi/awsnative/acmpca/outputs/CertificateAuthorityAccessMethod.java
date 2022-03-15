@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityAccessMethod {
     private final @Nullable String accessMethodType;
     private final @Nullable String customObjectIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityAccessMethod(
-        @OutputCustomType.Parameter("accessMethodType") @Nullable String accessMethodType,
-        @OutputCustomType.Parameter("customObjectIdentifier") @Nullable String customObjectIdentifier) {
+        @CustomType.Parameter("accessMethodType") @Nullable String accessMethodType,
+        @CustomType.Parameter("customObjectIdentifier") @Nullable String customObjectIdentifier) {
         this.accessMethodType = accessMethodType;
         this.customObjectIdentifier = customObjectIdentifier;
     }

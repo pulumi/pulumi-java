@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlProjectTeamResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetObjectAccessControlResult {
     /**
      * The name of the bucket.
@@ -82,20 +82,20 @@ public final class GetObjectAccessControlResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetObjectAccessControlResult(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("entity") String entity,
-        @OutputCustomType.Parameter("entityId") String entityId,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("generation") String generation,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("object") String object,
-        @OutputCustomType.Parameter("projectTeam") ObjectAccessControlProjectTeamResponse projectTeam,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("entity") String entity,
+        @CustomType.Parameter("entityId") String entityId,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("generation") String generation,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("object") String object,
+        @CustomType.Parameter("projectTeam") ObjectAccessControlProjectTeamResponse projectTeam,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.bucket = bucket;
         this.domain = domain;
         this.email = email;

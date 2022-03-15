@@ -8,7 +8,7 @@ import io.pulumi.aws.wafregional.RuleArgs;
 import io.pulumi.aws.wafregional.inputs.RuleState;
 import io.pulumi.aws.wafregional.outputs.RulePredicate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +46,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The ARN of the WAF Regional Rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
@@ -74,7 +74,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The name or description of the rule.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -88,7 +88,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The objects to include in a rule (documented below).
      * 
      */
-    @OutputExport(name="predicates", type=List.class, parameters={RulePredicate.class})
+    @Export(name="predicates", type=List.class, parameters={RulePredicate.class})
     private Output</* @Nullable */ List<RulePredicate>> predicates;
 
     /**
@@ -102,7 +102,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -116,7 +116,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

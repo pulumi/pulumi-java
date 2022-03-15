@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * Container name associated with the backed up item.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -29,7 +29,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * Fabric name associated with the backed up item.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final String fabricName;
 
     public String getFabricName() {
@@ -40,7 +40,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * OData filter options.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable String filter;
 
     public Optional<String> getFilter() {
@@ -51,7 +51,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * Backed up item name whose details are to be fetched.
      * 
      */
-    @InputImport(name="protectedItemName", required=true)
+    @Import(name="protectedItemName", required=true)
       private final String protectedItemName;
 
     public String getProtectedItemName() {
@@ -62,7 +62,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class GetProtectedItemArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final String vaultName;
 
     public String getVaultName() {

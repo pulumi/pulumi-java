@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
 
     public static final DistributionFunctionAssociationArgs Empty = new DistributionFunctionAssociationArgs();
 
-    @InputImport(name="eventType")
+    @Import(name="eventType")
       private final @Nullable Output<String> eventType;
 
     public Output<String> getEventType() {
         return this.eventType == null ? Output.empty() : this.eventType;
     }
 
-    @InputImport(name="functionARN")
+    @Import(name="functionARN")
       private final @Nullable Output<String> functionARN;
 
     public Output<String> getFunctionARN() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageOutputResourceAmi {
     /**
      * Account identifier of the AMI.
@@ -37,13 +37,13 @@ public final class ImageOutputResourceAmi {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageOutputResourceAmi(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.accountId = accountId;
         this.description = description;
         this.image = image;

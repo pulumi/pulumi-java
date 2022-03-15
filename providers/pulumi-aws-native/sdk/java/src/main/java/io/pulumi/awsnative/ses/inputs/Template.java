@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
      * The HTML body of the email.
      * 
      */
-    @InputImport(name="htmlPart")
+    @Import(name="htmlPart")
       private final @Nullable String htmlPart;
 
     public Optional<String> getHtmlPart() {
@@ -33,7 +33,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
      * The subject line of the email.
      * 
      */
-    @InputImport(name="subjectPart", required=true)
+    @Import(name="subjectPart", required=true)
       private final String subjectPart;
 
     public String getSubjectPart() {
@@ -44,7 +44,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
      * The name of the template.
      * 
      */
-    @InputImport(name="templateName")
+    @Import(name="templateName")
       private final @Nullable String templateName;
 
     public Optional<String> getTemplateName() {
@@ -55,7 +55,7 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
      * The email body that is visible to recipients whose email clients do not display HTML content.
      * 
      */
-    @InputImport(name="textPart")
+    @Import(name="textPart")
       private final @Nullable String textPart;
 
     public Optional<String> getTextPart() {

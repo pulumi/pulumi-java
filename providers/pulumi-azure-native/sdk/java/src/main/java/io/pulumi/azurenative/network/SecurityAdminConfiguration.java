@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.SecurityAdminConfigurationArgs;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * Flag if need to delete existing network security groups.
      * 
      */
-    @OutputExport(name="deleteExistingNSGs", type=String.class, parameters={})
+    @Export(name="deleteExistingNSGs", type=String.class, parameters={})
     private Output</* @Nullable */ String> deleteExistingNSGs;
 
     /**
@@ -49,7 +49,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * A description of the security configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * A display name of the security configuration.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -91,7 +91,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * Security Type.
      * 
      */
-    @OutputExport(name="securityType", type=String.class, parameters={})
+    @Export(name="securityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityType;
 
     /**
@@ -133,7 +133,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * The system metadata related to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -147,7 +147,7 @@ public class SecurityAdminConfiguration extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

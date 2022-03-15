@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.IamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,21 +21,21 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IamBindingConditionArgs> condition;
 
     public Output<IamBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -47,7 +47,7 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -60,14 +60,14 @@ public final class IamBindingArgs extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
         return this.role;
     }
 
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
     public Output<String> getTableId() {

@@ -6,13 +6,13 @@ package io.pulumi.aws.s3.outputs;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleDestinationAccessControlTranslation;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleDestinationMetrics;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleDestinationReplicationTime;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigurationRuleDestination {
     /**
      * Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
@@ -51,15 +51,15 @@ public final class BucketReplicationConfigurationRuleDestination {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigurationRuleDestination(
-        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation,
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("metrics") @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics,
-        @OutputCustomType.Parameter("replicaKmsKeyId") @Nullable String replicaKmsKeyId,
-        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime,
-        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
+        @CustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation,
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("metrics") @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics,
+        @CustomType.Parameter("replicaKmsKeyId") @Nullable String replicaKmsKeyId,
+        @CustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime,
+        @CustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.accountId = accountId;
         this.bucket = bucket;

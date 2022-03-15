@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.JobStatusResponse;
 import io.pulumi.azurenative.migrate.inputs.MoveResourceErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
      * An error response from the azure resource mover service.
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable MoveResourceErrorResponse errors;
 
     public Optional<MoveResourceErrorResponse> getErrors() {
@@ -35,7 +35,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
      * Defines the job status.
      * 
      */
-    @InputImport(name="jobStatus")
+    @Import(name="jobStatus")
       private final @Nullable JobStatusResponse jobStatus;
 
     public Optional<JobStatusResponse> getJobStatus() {
@@ -46,7 +46,7 @@ public final class MoveResourcePropertiesResponseMoveStatus extends io.pulumi.re
      * Defines the MoveResource states.
      * 
      */
-    @InputImport(name="moveState", required=true)
+    @Import(name="moveState", required=true)
       private final String moveState;
 
     public String getMoveState() {

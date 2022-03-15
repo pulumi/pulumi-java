@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The machine-readable description of the error, such as 'InvalidRequest' or 'InternalServerError'
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -32,7 +32,7 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Inner errors that caused this error
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<ODataErrorResponse> details;
 
     public List<ODataErrorResponse> getDetails() {
@@ -43,7 +43,7 @@ public final class ODataErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The human-readable description of the error
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

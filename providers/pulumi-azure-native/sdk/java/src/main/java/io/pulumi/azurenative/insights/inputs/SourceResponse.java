@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * List of  Resource referred into query
      * 
      */
-    @InputImport(name="authorizedResources")
+    @Import(name="authorizedResources")
       private final @Nullable List<String> authorizedResources;
 
     public List<String> getAuthorizedResources() {
@@ -34,7 +34,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * The resource uri over which log search query is to be run.
      * 
      */
-    @InputImport(name="dataSourceId", required=true)
+    @Import(name="dataSourceId", required=true)
       private final String dataSourceId;
 
     public String getDataSourceId() {
@@ -45,7 +45,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Log search query. Required for action type - AlertingAction
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {
@@ -56,7 +56,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Set value to 'ResultCount' .
      * 
      */
-    @InputImport(name="queryType")
+    @Import(name="queryType")
       private final @Nullable String queryType;
 
     public Optional<String> getQueryType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
      * Expected value is 'StorageAccount'.
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
     public String getDataAccountType() {
@@ -32,7 +32,7 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
      * Storage Account Resource Id.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
     public String getStorageAccountId() {

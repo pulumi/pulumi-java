@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.inputs.AssignedComponentItemArgs;
 import io.pulumi.azurenative.security.inputs.AssignedStandardItemArgs;
 import io.pulumi.azurenative.security.inputs.AssignmentPropertiesAdditionalDataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Additional data about the assignment
      * 
      */
-    @InputImport(name="additionalData")
+    @Import(name="additionalData")
       private final @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
     public Output<AssignmentPropertiesAdditionalDataArgs> getAdditionalData() {
@@ -34,7 +34,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Component item with key as applied to this standard assignment over the given scope
      * 
      */
-    @InputImport(name="assignedComponent")
+    @Import(name="assignedComponent")
       private final @Nullable Output<AssignedComponentItemArgs> assignedComponent;
 
     public Output<AssignedComponentItemArgs> getAssignedComponent() {
@@ -45,7 +45,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Standard item with key as applied to this standard assignment over the given scope
      * 
      */
-    @InputImport(name="assignedStandard")
+    @Import(name="assignedStandard")
       private final @Nullable Output<AssignedStandardItemArgs> assignedStandard;
 
     public Output<AssignedStandardItemArgs> getAssignedStandard() {
@@ -56,7 +56,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The security assignment key - unique key for the standard assignment
      * 
      */
-    @InputImport(name="assignmentId")
+    @Import(name="assignmentId")
       private final @Nullable Output<String> assignmentId;
 
     public Output<String> getAssignmentId() {
@@ -67,7 +67,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * description of the standardAssignment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * display name of the standardAssignment
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -89,7 +89,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * expected effect of this assignment (Disable/Exempt/etc)
      * 
      */
-    @InputImport(name="effect")
+    @Import(name="effect")
       private final @Nullable Output<String> effect;
 
     public Output<String> getEffect() {
@@ -100,7 +100,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Expiration date of this assignment as a full ISO date
      * 
      */
-    @InputImport(name="expiresOn")
+    @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
     public Output<String> getExpiresOn() {
@@ -111,7 +111,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of the resource
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -122,7 +122,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Location where the resource is stored
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -133,7 +133,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -144,7 +144,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -155,7 +155,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -166,7 +166,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

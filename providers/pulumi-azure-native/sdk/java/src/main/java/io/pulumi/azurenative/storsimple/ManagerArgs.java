@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.storsimple.inputs.ManagerIntrinsicSettingsArgs;
 import io.pulumi.azurenative.storsimple.inputs.ManagerSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Represents the type of StorSimple Manager.
      * 
      */
-    @InputImport(name="cisIntrinsicSettings")
+    @Import(name="cisIntrinsicSettings")
       private final @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
 
     public Output<ManagerIntrinsicSettingsArgs> getCisIntrinsicSettings() {
@@ -32,7 +32,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The geo location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The manager name
      * 
      */
-    @InputImport(name="managerName")
+    @Import(name="managerName")
       private final @Nullable Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -54,7 +54,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the state of the resource as it is getting provisioned. Value of "Succeeded" means the Manager was successfully created.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -65,7 +65,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the Sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ManagerSkuArgs> sku;
 
     public Output<ManagerSkuArgs> getSku() {
@@ -87,7 +87,7 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * The tags attached to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

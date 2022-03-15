@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.DiskResponse;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](/compute/docs/gpus/#gpus-list).
@@ -190,42 +190,42 @@ public final class GetInstanceResult {
      */
     private final VmImageResponse vmImage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("acceleratorConfig") AcceleratorConfigResponse acceleratorConfig,
-        @OutputCustomType.Parameter("bootDiskSizeGb") String bootDiskSizeGb,
-        @OutputCustomType.Parameter("bootDiskType") String bootDiskType,
-        @OutputCustomType.Parameter("containerImage") ContainerImageResponse containerImage,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
-        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
-        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
-        @OutputCustomType.Parameter("diskEncryption") String diskEncryption,
-        @OutputCustomType.Parameter("disks") List<DiskResponse> disks,
-        @OutputCustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
-        @OutputCustomType.Parameter("instanceOwners") List<String> instanceOwners,
-        @OutputCustomType.Parameter("kmsKey") String kmsKey,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("nicType") String nicType,
-        @OutputCustomType.Parameter("noProxyAccess") Boolean noProxyAccess,
-        @OutputCustomType.Parameter("noPublicIp") Boolean noPublicIp,
-        @OutputCustomType.Parameter("noRemoveDataDisk") Boolean noRemoveDataDisk,
-        @OutputCustomType.Parameter("postStartupScript") String postStartupScript,
-        @OutputCustomType.Parameter("proxyUri") String proxyUri,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subnet") String subnet,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("upgradeHistory") List<UpgradeHistoryEntryResponse> upgradeHistory,
-        @OutputCustomType.Parameter("vmImage") VmImageResponse vmImage) {
+        @CustomType.Parameter("acceleratorConfig") AcceleratorConfigResponse acceleratorConfig,
+        @CustomType.Parameter("bootDiskSizeGb") String bootDiskSizeGb,
+        @CustomType.Parameter("bootDiskType") String bootDiskType,
+        @CustomType.Parameter("containerImage") ContainerImageResponse containerImage,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
+        @CustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @CustomType.Parameter("dataDiskType") String dataDiskType,
+        @CustomType.Parameter("diskEncryption") String diskEncryption,
+        @CustomType.Parameter("disks") List<DiskResponse> disks,
+        @CustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
+        @CustomType.Parameter("instanceOwners") List<String> instanceOwners,
+        @CustomType.Parameter("kmsKey") String kmsKey,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("nicType") String nicType,
+        @CustomType.Parameter("noProxyAccess") Boolean noProxyAccess,
+        @CustomType.Parameter("noPublicIp") Boolean noPublicIp,
+        @CustomType.Parameter("noRemoveDataDisk") Boolean noRemoveDataDisk,
+        @CustomType.Parameter("postStartupScript") String postStartupScript,
+        @CustomType.Parameter("proxyUri") String proxyUri,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subnet") String subnet,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("upgradeHistory") List<UpgradeHistoryEntryResponse> upgradeHistory,
+        @CustomType.Parameter("vmImage") VmImageResponse vmImage) {
         this.acceleratorConfig = acceleratorConfig;
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1ProvisionedServiceResponse {
     /**
      * The product pertaining to the provisioning resource as specified in the Offer.
@@ -25,11 +25,11 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
      */
     private final String skuId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1ProvisionedServiceResponse(
-        @OutputCustomType.Parameter("productId") String productId,
-        @OutputCustomType.Parameter("provisioningId") String provisioningId,
-        @OutputCustomType.Parameter("skuId") String skuId) {
+        @CustomType.Parameter("productId") String productId,
+        @CustomType.Parameter("provisioningId") String provisioningId,
+        @CustomType.Parameter("skuId") String skuId) {
         this.productId = productId;
         this.provisioningId = provisioningId;
         this.skuId = skuId;

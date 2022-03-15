@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextArgs extends io.pulumi
      * The plain-text authorization message for the prefix and account.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -29,7 +29,7 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextArgs extends io.pulumi
      * The signed authorization message for the prefix and account.
      * 
      */
-    @InputImport(name="signature")
+    @Import(name="signature")
       private final @Nullable Output<String> signature;
 
     public Output<String> getSignature() {

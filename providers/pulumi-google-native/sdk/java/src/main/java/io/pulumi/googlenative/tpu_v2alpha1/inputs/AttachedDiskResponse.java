@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -31,7 +31,7 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the full path to an existing disk. For example: "projects/my-project/zones/us-central1-c/disks/my-disk".
      * 
      */
-    @InputImport(name="sourceDisk", required=true)
+    @Import(name="sourceDisk", required=true)
       private final String sourceDisk;
 
     public String getSourceDisk() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final Output<String> day;
 
     public Output<String> getDay() {
@@ -29,7 +29,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

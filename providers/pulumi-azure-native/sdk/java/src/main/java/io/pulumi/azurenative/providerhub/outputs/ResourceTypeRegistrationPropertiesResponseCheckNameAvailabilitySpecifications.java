@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,15 +11,15 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications {
     private final @Nullable Boolean enableDefaultValidation;
     private final @Nullable List<String> resourceTypesWithCustomValidation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(
-        @OutputCustomType.Parameter("enableDefaultValidation") @Nullable Boolean enableDefaultValidation,
-        @OutputCustomType.Parameter("resourceTypesWithCustomValidation") @Nullable List<String> resourceTypesWithCustomValidation) {
+        @CustomType.Parameter("enableDefaultValidation") @Nullable Boolean enableDefaultValidation,
+        @CustomType.Parameter("resourceTypesWithCustomValidation") @Nullable List<String> resourceTypesWithCustomValidation) {
         this.enableDefaultValidation = enableDefaultValidation;
         this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
     }

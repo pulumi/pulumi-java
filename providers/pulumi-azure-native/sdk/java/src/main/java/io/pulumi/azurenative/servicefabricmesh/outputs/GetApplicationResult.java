@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.DiagnosticsDescriptionResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ServiceResourceDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * Internal - used by Visual Studio to setup the debugging session on the local development environment.
@@ -91,23 +91,23 @@ public final class GetApplicationResult {
      */
     private final String unhealthyEvaluation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("debugParams") @Nullable String debugParams,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsDescriptionResponse diagnostics,
-        @OutputCustomType.Parameter("healthState") String healthState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceNames") List<String> serviceNames,
-        @OutputCustomType.Parameter("services") @Nullable List<ServiceResourceDescriptionResponse> services,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unhealthyEvaluation") String unhealthyEvaluation) {
+        @CustomType.Parameter("debugParams") @Nullable String debugParams,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("diagnostics") @Nullable DiagnosticsDescriptionResponse diagnostics,
+        @CustomType.Parameter("healthState") String healthState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceNames") List<String> serviceNames,
+        @CustomType.Parameter("services") @Nullable List<ServiceResourceDescriptionResponse> services,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unhealthyEvaluation") String unhealthyEvaluation) {
         this.debugParams = debugParams;
         this.description = description;
         this.diagnostics = diagnostics;

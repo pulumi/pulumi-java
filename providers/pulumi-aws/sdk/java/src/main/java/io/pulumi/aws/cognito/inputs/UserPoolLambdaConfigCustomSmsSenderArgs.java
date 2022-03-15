@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class UserPoolLambdaConfigCustomSmsSenderArgs extends io.pulumi.res
      * The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
      * 
      */
-    @InputImport(name="lambdaArn", required=true)
+    @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
     public Output<String> getLambdaArn() {
@@ -28,7 +28,7 @@ public final class UserPoolLambdaConfigCustomSmsSenderArgs extends io.pulumi.res
      * The Lambda version represents the signature of the "request" attribute in the "event" information Amazon Cognito passes to your custom SMS Lambda function. The only supported value is `V1_0`.
      * 
      */
-    @InputImport(name="lambdaVersion", required=true)
+    @Import(name="lambdaVersion", required=true)
       private final Output<String> lambdaVersion;
 
     public Output<String> getLambdaVersion() {

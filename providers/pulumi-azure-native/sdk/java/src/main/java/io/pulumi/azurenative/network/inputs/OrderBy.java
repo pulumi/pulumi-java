@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
      * Describes the actual column name to sort by
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable String field;
 
     public Optional<String> getField() {
@@ -33,7 +33,7 @@ public final class OrderBy extends io.pulumi.resources.InvokeArgs {
      * Describes if results should be in ascending/descending order
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable String order;
 
     public Optional<String> getOrder() {

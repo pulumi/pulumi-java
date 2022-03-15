@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2ProtectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * Agent expiry date.
      * 
      */
-    @InputImport(name="agentExpiryDate")
+    @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
 
     public Optional<String> getAgentExpiryDate() {
@@ -41,7 +41,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The agent version.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
@@ -52,7 +52,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * Azure VM Disk details.
      * 
      */
-    @InputImport(name="azureVMDiskDetails")
+    @Import(name="azureVMDiskDetails")
       private final @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails;
 
     public List<AzureVmDiskDetailsResponse> getAzureVMDiskDetails() {
@@ -63,7 +63,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The compressed data change rate in MB.
      * 
      */
-    @InputImport(name="compressedDataRateInMB")
+    @Import(name="compressedDataRateInMB")
       private final @Nullable Double compressedDataRateInMB;
 
     public Optional<Double> getCompressedDataRateInMB() {
@@ -74,7 +74,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The data stores of the on-premise machine. Value can be list of strings that contain data store names.
      * 
      */
-    @InputImport(name="datastores")
+    @Import(name="datastores")
       private final @Nullable List<String> datastores;
 
     public List<String> getDatastores() {
@@ -85,7 +85,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * A value indicating the discovery type of the machine. Value can be vCenter or physical.
      * 
      */
-    @InputImport(name="discoveryType")
+    @Import(name="discoveryType")
       private final @Nullable String discoveryType;
 
     public Optional<String> getDiscoveryType() {
@@ -96,7 +96,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * A value indicating whether any disk is resized for this VM.
      * 
      */
-    @InputImport(name="diskResized")
+    @Import(name="diskResized")
       private final @Nullable String diskResized;
 
     public Optional<String> getDiskResized() {
@@ -107,7 +107,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
      * 
      */
-    @InputImport(name="enableRdpOnTargetOption")
+    @Import(name="enableRdpOnTargetOption")
       private final @Nullable String enableRdpOnTargetOption;
 
     public Optional<String> getEnableRdpOnTargetOption() {
@@ -118,7 +118,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The infrastructure VM Id.
      * 
      */
-    @InputImport(name="infrastructureVmId")
+    @Import(name="infrastructureVmId")
       private final @Nullable String infrastructureVmId;
 
     public Optional<String> getInfrastructureVmId() {
@@ -130,7 +130,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * Expected value is 'InMageAzureV2'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -141,7 +141,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The source IP address.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -152,7 +152,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * A value indicating whether installed agent needs to be updated.
      * 
      */
-    @InputImport(name="isAgentUpdateRequired")
+    @Import(name="isAgentUpdateRequired")
       private final @Nullable String isAgentUpdateRequired;
 
     public Optional<String> getIsAgentUpdateRequired() {
@@ -163,7 +163,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * A value indicating whether the source server requires a restart after update.
      * 
      */
-    @InputImport(name="isRebootAfterUpdateRequired")
+    @Import(name="isRebootAfterUpdateRequired")
       private final @Nullable String isRebootAfterUpdateRequired;
 
     public Optional<String> getIsRebootAfterUpdateRequired() {
@@ -174,7 +174,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The last heartbeat received from the source server.
      * 
      */
-    @InputImport(name="lastHeartbeat")
+    @Import(name="lastHeartbeat")
       private final @Nullable String lastHeartbeat;
 
     public Optional<String> getLastHeartbeat() {
@@ -185,7 +185,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The last RPO calculated time.
      * 
      */
-    @InputImport(name="lastRpoCalculatedTime")
+    @Import(name="lastRpoCalculatedTime")
       private final @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> getLastRpoCalculatedTime() {
@@ -196,7 +196,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The last update time received from on-prem components.
      * 
      */
-    @InputImport(name="lastUpdateReceivedTime")
+    @Import(name="lastUpdateReceivedTime")
       private final @Nullable String lastUpdateReceivedTime;
 
     public Optional<String> getLastUpdateReceivedTime() {
@@ -207,7 +207,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * License Type of the VM to be used.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
@@ -218,7 +218,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The master target Id.
      * 
      */
-    @InputImport(name="masterTargetId")
+    @Import(name="masterTargetId")
       private final @Nullable String masterTargetId;
 
     public Optional<String> getMasterTargetId() {
@@ -229,7 +229,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The multi vm group Id.
      * 
      */
-    @InputImport(name="multiVmGroupId")
+    @Import(name="multiVmGroupId")
       private final @Nullable String multiVmGroupId;
 
     public Optional<String> getMultiVmGroupId() {
@@ -240,7 +240,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The multi vm group name.
      * 
      */
-    @InputImport(name="multiVmGroupName")
+    @Import(name="multiVmGroupName")
       private final @Nullable String multiVmGroupName;
 
     public Optional<String> getMultiVmGroupName() {
@@ -251,7 +251,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * A value indicating whether multi vm sync is enabled or disabled.
      * 
      */
-    @InputImport(name="multiVmSyncStatus")
+    @Import(name="multiVmSyncStatus")
       private final @Nullable String multiVmSyncStatus;
 
     public Optional<String> getMultiVmSyncStatus() {
@@ -262,7 +262,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The id of the disk containing the OS.
      * 
      */
-    @InputImport(name="osDiskId")
+    @Import(name="osDiskId")
       private final @Nullable String osDiskId;
 
     public Optional<String> getOsDiskId() {
@@ -273,7 +273,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The type of the OS on the VM.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -284,7 +284,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The OS Version of the protected item.
      * 
      */
-    @InputImport(name="osVersion")
+    @Import(name="osVersion")
       private final @Nullable String osVersion;
 
     public Optional<String> getOsVersion() {
@@ -295,7 +295,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The process server Id.
      * 
      */
-    @InputImport(name="processServerId")
+    @Import(name="processServerId")
       private final @Nullable String processServerId;
 
     public Optional<String> getProcessServerId() {
@@ -306,7 +306,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The process server name.
      * 
      */
-    @InputImport(name="processServerName", required=true)
+    @Import(name="processServerName", required=true)
       private final String processServerName;
 
     public String getProcessServerName() {
@@ -317,7 +317,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The list of protected disks.
      * 
      */
-    @InputImport(name="protectedDisks")
+    @Import(name="protectedDisks")
       private final @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks;
 
     public List<InMageAzureV2ProtectedDiskDetailsResponse> getProtectedDisks() {
@@ -328,7 +328,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The list of protected managed disks.
      * 
      */
-    @InputImport(name="protectedManagedDisks")
+    @Import(name="protectedManagedDisks")
       private final @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks;
 
     public List<InMageAzureV2ManagedDiskDetailsResponse> getProtectedManagedDisks() {
@@ -339,7 +339,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The protection stage.
      * 
      */
-    @InputImport(name="protectionStage")
+    @Import(name="protectionStage")
       private final @Nullable String protectionStage;
 
     public Optional<String> getProtectionStage() {
@@ -350,7 +350,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The recovery availability set Id.
      * 
      */
-    @InputImport(name="recoveryAvailabilitySetId")
+    @Import(name="recoveryAvailabilitySetId")
       private final @Nullable String recoveryAvailabilitySetId;
 
     public Optional<String> getRecoveryAvailabilitySetId() {
@@ -361,7 +361,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The ARM id of the log storage account used for replication. This will be set to null if no log storage account was provided during enable protection.
      * 
      */
-    @InputImport(name="recoveryAzureLogStorageAccountId")
+    @Import(name="recoveryAzureLogStorageAccountId")
       private final @Nullable String recoveryAzureLogStorageAccountId;
 
     public Optional<String> getRecoveryAzureLogStorageAccountId() {
@@ -372,7 +372,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The target resource group Id.
      * 
      */
-    @InputImport(name="recoveryAzureResourceGroupId")
+    @Import(name="recoveryAzureResourceGroupId")
       private final @Nullable String recoveryAzureResourceGroupId;
 
     public Optional<String> getRecoveryAzureResourceGroupId() {
@@ -383,7 +383,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The recovery Azure storage account.
      * 
      */
-    @InputImport(name="recoveryAzureStorageAccount")
+    @Import(name="recoveryAzureStorageAccount")
       private final @Nullable String recoveryAzureStorageAccount;
 
     public Optional<String> getRecoveryAzureStorageAccount() {
@@ -394,7 +394,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * Recovery Azure given name.
      * 
      */
-    @InputImport(name="recoveryAzureVMName")
+    @Import(name="recoveryAzureVMName")
       private final @Nullable String recoveryAzureVMName;
 
     public Optional<String> getRecoveryAzureVMName() {
@@ -405,7 +405,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The Recovery Azure VM size.
      * 
      */
-    @InputImport(name="recoveryAzureVMSize")
+    @Import(name="recoveryAzureVMSize")
       private final @Nullable String recoveryAzureVMSize;
 
     public Optional<String> getRecoveryAzureVMSize() {
@@ -416,7 +416,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The replica id of the protected item.
      * 
      */
-    @InputImport(name="replicaId")
+    @Import(name="replicaId")
       private final @Nullable String replicaId;
 
     public Optional<String> getReplicaId() {
@@ -427,7 +427,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The resync progress percentage.
      * 
      */
-    @InputImport(name="resyncProgressPercentage")
+    @Import(name="resyncProgressPercentage")
       private final @Nullable Integer resyncProgressPercentage;
 
     public Optional<Integer> getResyncProgressPercentage() {
@@ -438,7 +438,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The RPO in seconds.
      * 
      */
-    @InputImport(name="rpoInSeconds")
+    @Import(name="rpoInSeconds")
       private final @Nullable Double rpoInSeconds;
 
     public Optional<Double> getRpoInSeconds() {
@@ -449,7 +449,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The selected recovery azure network Id.
      * 
      */
-    @InputImport(name="selectedRecoveryAzureNetworkId")
+    @Import(name="selectedRecoveryAzureNetworkId")
       private final @Nullable String selectedRecoveryAzureNetworkId;
 
     public Optional<String> getSelectedRecoveryAzureNetworkId() {
@@ -460,7 +460,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The selected source nic Id which will be used as the primary nic during failover.
      * 
      */
-    @InputImport(name="selectedSourceNicId")
+    @Import(name="selectedSourceNicId")
       private final @Nullable String selectedSourceNicId;
 
     public Optional<String> getSelectedSourceNicId() {
@@ -471,7 +471,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The test failover virtual network.
      * 
      */
-    @InputImport(name="selectedTfoAzureNetworkId")
+    @Import(name="selectedTfoAzureNetworkId")
       private final @Nullable String selectedTfoAzureNetworkId;
 
     public Optional<String> getSelectedTfoAzureNetworkId() {
@@ -482,7 +482,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The CPU count of the VM on the primary side.
      * 
      */
-    @InputImport(name="sourceVmCpuCount")
+    @Import(name="sourceVmCpuCount")
       private final @Nullable Integer sourceVmCpuCount;
 
     public Optional<Integer> getSourceVmCpuCount() {
@@ -493,7 +493,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The RAM size of the VM on the primary side.
      * 
      */
-    @InputImport(name="sourceVmRamSizeInMB")
+    @Import(name="sourceVmRamSizeInMB")
       private final @Nullable Integer sourceVmRamSizeInMB;
 
     public Optional<Integer> getSourceVmRamSizeInMB() {
@@ -504,7 +504,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The target availability zone.
      * 
      */
-    @InputImport(name="targetAvailabilityZone")
+    @Import(name="targetAvailabilityZone")
       private final @Nullable String targetAvailabilityZone;
 
     public Optional<String> getTargetAvailabilityZone() {
@@ -515,7 +515,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The target proximity placement group Id.
      * 
      */
-    @InputImport(name="targetProximityPlacementGroupId")
+    @Import(name="targetProximityPlacementGroupId")
       private final @Nullable String targetProximityPlacementGroupId;
 
     public Optional<String> getTargetProximityPlacementGroupId() {
@@ -526,7 +526,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The ARM Id of the target Azure VM. This value will be null until the VM is failed over. Only after failure it will be populated with the ARM Id of the Azure VM.
      * 
      */
-    @InputImport(name="targetVmId")
+    @Import(name="targetVmId")
       private final @Nullable String targetVmId;
 
     public Optional<String> getTargetVmId() {
@@ -537,7 +537,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The uncompressed data change rate in MB.
      * 
      */
-    @InputImport(name="uncompressedDataRateInMB")
+    @Import(name="uncompressedDataRateInMB")
       private final @Nullable Double uncompressedDataRateInMB;
 
     public Optional<Double> getUncompressedDataRateInMB() {
@@ -548,7 +548,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * A value indicating whether managed disks should be used during failover.
      * 
      */
-    @InputImport(name="useManagedDisks")
+    @Import(name="useManagedDisks")
       private final @Nullable String useManagedDisks;
 
     public Optional<String> getUseManagedDisks() {
@@ -559,7 +559,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The vCenter infrastructure Id.
      * 
      */
-    @InputImport(name="vCenterInfrastructureId")
+    @Import(name="vCenterInfrastructureId")
       private final @Nullable String vCenterInfrastructureId;
 
     public Optional<String> getVCenterInfrastructureId() {
@@ -570,7 +570,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The validation errors of the on-premise machine Value can be list of validation errors.
      * 
      */
-    @InputImport(name="validationErrors")
+    @Import(name="validationErrors")
       private final @Nullable List<HealthErrorResponse> validationErrors;
 
     public List<HealthErrorResponse> getValidationErrors() {
@@ -581,7 +581,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The OS disk VHD name.
      * 
      */
-    @InputImport(name="vhdName")
+    @Import(name="vhdName")
       private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {
@@ -592,7 +592,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The virtual machine Id.
      * 
      */
-    @InputImport(name="vmId")
+    @Import(name="vmId")
       private final @Nullable String vmId;
 
     public Optional<String> getVmId() {
@@ -603,7 +603,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The PE Network details.
      * 
      */
-    @InputImport(name="vmNics")
+    @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
 
     public List<VMNicDetailsResponse> getVmNics() {
@@ -614,7 +614,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The protection state for the vm.
      * 
      */
-    @InputImport(name="vmProtectionState")
+    @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
 
     public Optional<String> getVmProtectionState() {
@@ -625,7 +625,7 @@ public final class InMageAzureV2ReplicationDetailsResponse extends io.pulumi.res
      * The protection state description for the vm.
      * 
      */
-    @InputImport(name="vmProtectionStateDescription")
+    @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;
 
     public Optional<String> getVmProtectionStateDescription() {

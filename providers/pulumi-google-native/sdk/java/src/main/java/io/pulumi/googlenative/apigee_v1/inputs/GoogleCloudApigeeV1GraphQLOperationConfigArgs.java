@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QuotaArgs;
@@ -26,7 +26,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
      * 
      */
-    @InputImport(name="apiSource", required=true)
+    @Import(name="apiSource", required=true)
       private final Output<String> apiSource;
 
     public Output<String> getApiSource() {
@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * Custom attributes associated with the operation.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
@@ -48,7 +48,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
      * 
      */
-    @InputImport(name="operations", required=true)
+    @Import(name="operations", required=true)
       private final Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> operations;
 
     public Output<List<GoogleCloudApigeeV1GraphQLOperationArgs>> getOperations() {
@@ -59,7 +59,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigArgs extends io.pulu
      * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
      * 
      */
-    @InputImport(name="quota")
+    @Import(name="quota")
       private final @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
 
     public Output<GoogleCloudApigeeV1QuotaArgs> getQuota() {

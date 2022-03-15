@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
      * NSX DNS Zone identifier. Generally the same as the DNS Zone's display name
      * 
      */
-    @InputImport(name="dnsZoneId", required=true)
+    @Import(name="dnsZoneId", required=true)
       private final String dnsZoneId;
 
     public String getDnsZoneId() {
@@ -27,7 +27,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
     public String getPrivateCloudName() {
@@ -38,7 +38,7 @@ public final class GetWorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Inv
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ObjectIdArgs extends io.pulumi.resources.ResourceArgs {
      * The parts of an OID path. The most significant parts of the path come first.
      * 
      */
-    @InputImport(name="objectIdPath", required=true)
+    @Import(name="objectIdPath", required=true)
       private final Output<List<Integer>> objectIdPath;
 
     public Output<List<Integer>> getObjectIdPath() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * The source disks replication rate for the last 30 minutes in bytes per second.
      * 
      */
-    @InputImport(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
+    @Import(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
       private final String lastThirtyMinutesAverageBytesPerSecond;
 
     public String getLastThirtyMinutesAverageBytesPerSecond() {
@@ -31,7 +31,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * The source disks replication rate for the last 2 minutes in bytes per second.
      * 
      */
-    @InputImport(name="lastTwoMinutesAverageBytesPerSecond", required=true)
+    @Import(name="lastTwoMinutesAverageBytesPerSecond", required=true)
       private final String lastTwoMinutesAverageBytesPerSecond;
 
     public String getLastTwoMinutesAverageBytesPerSecond() {
@@ -42,7 +42,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * Replicated bytes in the step.
      * 
      */
-    @InputImport(name="replicatedBytes", required=true)
+    @Import(name="replicatedBytes", required=true)
       private final String replicatedBytes;
 
     public String getReplicatedBytes() {
@@ -53,7 +53,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * Total bytes to be handled in the step.
      * 
      */
-    @InputImport(name="totalBytes", required=true)
+    @Import(name="totalBytes", required=true)
       private final String totalBytes;
 
     public String getTotalBytes() {

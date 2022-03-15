@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.RoutineArgs;
@@ -50,7 +50,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="arguments", type=List.class, parameters={RoutineArgument.class})
+    @Export(name="arguments", type=List.class, parameters={RoutineArgument.class})
     private Output</* @Nullable */ List<RoutineArgument>> arguments;
 
     /**
@@ -65,7 +65,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The time when this routine was created, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="creationTime", type=Integer.class, parameters={})
+    @Export(name="creationTime", type=Integer.class, parameters={})
     private Output<Integer> creationTime;
 
     /**
@@ -79,7 +79,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The ID of the dataset containing this routine
      * 
      */
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     /**
@@ -94,7 +94,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * If language=SQL, it is the substring inside (but excluding) the parentheses.
      * 
      */
-    @OutputExport(name="definitionBody", type=String.class, parameters={})
+    @Export(name="definitionBody", type=String.class, parameters={})
     private Output<String> definitionBody;
 
     /**
@@ -109,7 +109,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The description of the routine if defined.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -124,7 +124,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
      * 
      */
-    @OutputExport(name="determinismLevel", type=String.class, parameters={})
+    @Export(name="determinismLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> determinismLevel;
 
     /**
@@ -140,7 +140,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * imported JAVASCRIPT libraries.
      * 
      */
-    @OutputExport(name="importedLibraries", type=List.class, parameters={String.class})
+    @Export(name="importedLibraries", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> importedLibraries;
 
     /**
@@ -156,7 +156,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Possible values are `SQL` and `JAVASCRIPT`.
      * 
      */
-    @OutputExport(name="language", type=String.class, parameters={})
+    @Export(name="language", type=String.class, parameters={})
     private Output</* @Nullable */ String> language;
 
     /**
@@ -171,7 +171,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The time when this routine was modified, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=Integer.class, parameters={})
+    @Export(name="lastModifiedTime", type=Integer.class, parameters={})
     private Output<Integer> lastModifiedTime;
 
     /**
@@ -186,7 +186,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -204,7 +204,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * be cast to match the column types specificed in return table type, at query time.
      * 
      */
-    @OutputExport(name="returnTableType", type=String.class, parameters={})
+    @Export(name="returnTableType", type=String.class, parameters={})
     private Output</* @Nullable */ String> returnTableType;
 
     /**
@@ -229,7 +229,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * the schema as returned by the API.
      * 
      */
-    @OutputExport(name="returnType", type=String.class, parameters={})
+    @Export(name="returnType", type=String.class, parameters={})
     private Output</* @Nullable */ String> returnType;
 
     /**
@@ -251,7 +251,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
      */
-    @OutputExport(name="routineId", type=String.class, parameters={})
+    @Export(name="routineId", type=String.class, parameters={})
     private Output<String> routineId;
 
     /**
@@ -266,7 +266,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
      * 
      */
-    @OutputExport(name="routineType", type=String.class, parameters={})
+    @Export(name="routineType", type=String.class, parameters={})
     private Output</* @Nullable */ String> routineType;
 
     /**

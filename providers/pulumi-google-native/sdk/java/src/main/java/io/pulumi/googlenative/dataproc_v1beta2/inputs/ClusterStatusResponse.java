@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
      * Optional details of cluster's state.
      * 
      */
-    @InputImport(name="detail", required=true)
+    @Import(name="detail", required=true)
       private final String detail;
 
     public String getDetail() {
@@ -31,7 +31,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The cluster's state.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -42,7 +42,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
      * Time when this state was entered (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="stateStartTime", required=true)
+    @Import(name="stateStartTime", required=true)
       private final String stateStartTime;
 
     public String getStateStartTime() {
@@ -53,7 +53,7 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
      * Additional state information that includes status reported by the agent.
      * 
      */
-    @InputImport(name="substate", required=true)
+    @Import(name="substate", required=true)
       private final String substate;
 
     public String getSubstate() {

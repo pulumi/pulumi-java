@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * Optional. A target for the deployment.
      * 
      */
-    @InputImport(name="namespacedGkeDeploymentTarget")
+    @Import(name="namespacedGkeDeploymentTarget")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs> namespacedGkeDeploymentTarget;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs> getNamespacedGkeDeploymentTarget() {

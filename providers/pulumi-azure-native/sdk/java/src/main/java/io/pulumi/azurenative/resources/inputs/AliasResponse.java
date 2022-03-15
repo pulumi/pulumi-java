@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.inputs;
 import io.pulumi.azurenative.resources.inputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.inputs.AliasPathResponse;
 import io.pulumi.azurenative.resources.inputs.AliasPatternResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * The default alias path metadata. Applies to the default path and to any alias path that doesn't have metadata
      * 
      */
-    @InputImport(name="defaultMetadata", required=true)
+    @Import(name="defaultMetadata", required=true)
       private final AliasPathMetadataResponse defaultMetadata;
 
     public AliasPathMetadataResponse getDefaultMetadata() {
@@ -37,7 +37,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * The default path for an alias.
      * 
      */
-    @InputImport(name="defaultPath")
+    @Import(name="defaultPath")
       private final @Nullable String defaultPath;
 
     public Optional<String> getDefaultPath() {
@@ -48,7 +48,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * The default pattern for an alias.
      * 
      */
-    @InputImport(name="defaultPattern")
+    @Import(name="defaultPattern")
       private final @Nullable AliasPatternResponse defaultPattern;
 
     public Optional<AliasPatternResponse> getDefaultPattern() {
@@ -59,7 +59,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * The alias name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -70,7 +70,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * The paths for an alias.
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable List<AliasPathResponse> paths;
 
     public List<AliasPathResponse> getPaths() {
@@ -81,7 +81,7 @@ public final class AliasResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the alias.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.PhraseMatcherArgs;
@@ -24,7 +24,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The most recent time at which the activation status was updated.
      * 
      */
-    @OutputExport(name="activationUpdateTime", type=String.class, parameters={})
+    @Export(name="activationUpdateTime", type=String.class, parameters={})
     private Output<String> activationUpdateTime;
 
     /**
@@ -38,7 +38,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * Applies the phrase matcher only when it is active.
      * 
      */
-    @OutputExport(name="active", type=Boolean.class, parameters={})
+    @Export(name="active", type=Boolean.class, parameters={})
     private Output<Boolean> active;
 
     /**
@@ -52,7 +52,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The human-readable name of the phrase matcher.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * A list of phase match rule groups that are included in this matcher.
      * 
      */
-    @OutputExport(name="phraseMatchRuleGroups", type=List.class, parameters={GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse.class})
+    @Export(name="phraseMatchRuleGroups", type=List.class, parameters={GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse.class})
     private Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse>> phraseMatchRuleGroups;
 
     /**
@@ -94,7 +94,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The timestamp of when the revision was created. It is also the create time when a new matcher is added.
      * 
      */
-    @OutputExport(name="revisionCreateTime", type=String.class, parameters={})
+    @Export(name="revisionCreateTime", type=String.class, parameters={})
     private Output<String> revisionCreateTime;
 
     /**
@@ -108,7 +108,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * Immutable. The revision ID of the phrase matcher. A new revision is committed whenever the matcher is changed, except when it is activated or deactivated. A server generated random ID will be used. Example: locations/global/phraseMatchers/my-first-matcher@1234567
      * 
      */
-    @OutputExport(name="revisionId", type=String.class, parameters={})
+    @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
     /**
@@ -122,7 +122,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
      * 
      */
-    @OutputExport(name="roleMatch", type=String.class, parameters={})
+    @Export(name="roleMatch", type=String.class, parameters={})
     private Output<String> roleMatch;
 
     /**
@@ -136,7 +136,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The type of this phrase matcher.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -150,7 +150,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The most recent time at which the phrase matcher was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -164,7 +164,7 @@ public class PhraseMatcher extends io.pulumi.resources.CustomResource {
      * The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
      * 
      */
-    @OutputExport(name="versionTag", type=String.class, parameters={})
+    @Export(name="versionTag", type=String.class, parameters={})
     private Output<String> versionTag;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * Specifies the security identifier (SID) for Azure Storage.
      * 
      */
-    @InputImport(name="azureStorageSid", required=true)
+    @Import(name="azureStorageSid", required=true)
       private final String azureStorageSid;
 
     public String getAzureStorageSid() {
@@ -31,7 +31,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * Specifies the domain GUID.
      * 
      */
-    @InputImport(name="domainGuid", required=true)
+    @Import(name="domainGuid", required=true)
       private final String domainGuid;
 
     public String getDomainGuid() {
@@ -42,7 +42,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * Specifies the primary domain that the AD DNS server is authoritative for.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -53,7 +53,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * Specifies the security identifier (SID).
      * 
      */
-    @InputImport(name="domainSid", required=true)
+    @Import(name="domainSid", required=true)
       private final String domainSid;
 
     public String getDomainSid() {
@@ -64,7 +64,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * Specifies the Active Directory forest to get.
      * 
      */
-    @InputImport(name="forestName", required=true)
+    @Import(name="forestName", required=true)
       private final String forestName;
 
     public String getForestName() {
@@ -75,7 +75,7 @@ public final class ActiveDirectoryPropertiesResponse extends io.pulumi.resources
      * Specifies the NetBIOS domain name.
      * 
      */
-    @InputImport(name="netBiosDomainName", required=true)
+    @Import(name="netBiosDomainName", required=true)
       private final String netBiosDomainName;
 
     public String getNetBiosDomainName() {

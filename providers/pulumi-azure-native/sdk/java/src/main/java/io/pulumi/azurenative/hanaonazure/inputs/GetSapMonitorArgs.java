@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetSapMonitorArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the SAP monitor resource.
      * 
      */
-    @InputImport(name="sapMonitorName", required=true)
+    @Import(name="sapMonitorName", required=true)
       private final String sapMonitorName;
 
     public String getSapMonitorName() {

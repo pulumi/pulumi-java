@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DynamicExecutorAllocationResponse extends io.pulumi.resources
      * Indicates whether Dynamic Executor Allocation is enabled or not.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
      * Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable Output<String> algorithm;
 
     public Output<String> getAlgorithm() {
@@ -31,7 +31,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
      * Length of the keys in bits
      * 
      */
-    @InputImport(name="keyLength")
+    @Import(name="keyLength")
       private final @Nullable Output<Integer> keyLength;
 
     public Output<Integer> getKeyLength() {
@@ -48,7 +48,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
      * Possible values are `keySigning` and `zoneSigning`.
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
     public Output<String> getKeyType() {
@@ -59,7 +59,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
      * Identifies what kind of resource this is
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

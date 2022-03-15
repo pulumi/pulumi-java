@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.UnencryptedCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListJobCredentialsResult {
     /**
      * Link for the next set of unencrypted credentials.
@@ -24,10 +24,10 @@ public final class ListJobCredentialsResult {
      */
     private final @Nullable List<UnencryptedCredentialsResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListJobCredentialsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<UnencryptedCredentialsResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<UnencryptedCredentialsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VersionDetailsResponse {
     /**
      * Version expiry date.
@@ -27,11 +27,11 @@ public final class VersionDetailsResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VersionDetailsResponse(
-        @OutputCustomType.Parameter("expiryDate") @Nullable String expiryDate,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("expiryDate") @Nullable String expiryDate,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.expiryDate = expiryDate;
         this.status = status;
         this.version = version;

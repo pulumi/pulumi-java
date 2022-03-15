@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
      * Commitment quota quantity.
      * 
      */
-    @InputImport(name="quantity")
+    @Import(name="quantity")
       private final @Nullable Double quantity;
 
     public Optional<Double> getQuantity() {
@@ -34,7 +34,7 @@ public final class CommitmentQuotaResponse extends io.pulumi.resources.InvokeArg
      * Commitment quota unit.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable String unit;
 
     public Optional<String> getUnit() {

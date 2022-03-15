@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.IPAMScopeIpamScopeType;
 import io.pulumi.awsnative.ec2.outputs.IPAMScopeTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIPAMScopeResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM scope.
@@ -53,16 +53,16 @@ public final class GetIPAMScopeResult {
      */
     private final @Nullable List<IPAMScopeTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIPAMScopeResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("ipamArn") @Nullable String ipamArn,
-        @OutputCustomType.Parameter("ipamScopeId") @Nullable String ipamScopeId,
-        @OutputCustomType.Parameter("ipamScopeType") @Nullable IPAMScopeIpamScopeType ipamScopeType,
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("poolCount") @Nullable Integer poolCount,
-        @OutputCustomType.Parameter("tags") @Nullable List<IPAMScopeTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("ipamArn") @Nullable String ipamArn,
+        @CustomType.Parameter("ipamScopeId") @Nullable String ipamScopeId,
+        @CustomType.Parameter("ipamScopeType") @Nullable IPAMScopeIpamScopeType ipamScopeType,
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("poolCount") @Nullable Integer poolCount,
+        @CustomType.Parameter("tags") @Nullable List<IPAMScopeTag> tags) {
         this.arn = arn;
         this.description = description;
         this.ipamArn = ipamArn;

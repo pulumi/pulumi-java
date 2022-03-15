@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3VersionVariantsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse {
     /**
      * The condition defines which subset of sessions are selected for this experiment. If not specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse {
      */
     private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3ExperimentDefinitionResponse(
-        @OutputCustomType.Parameter("condition") String condition,
-        @OutputCustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
+        @CustomType.Parameter("condition") String condition,
+        @CustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
         this.condition = condition;
         this.versionVariants = versionVariants;
     }

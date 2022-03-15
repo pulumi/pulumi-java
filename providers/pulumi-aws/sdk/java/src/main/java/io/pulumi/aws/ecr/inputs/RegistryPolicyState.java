@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
 
     public static final RegistryPolicyState Empty = new RegistryPolicyState();
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -25,7 +25,7 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
      * The registry ID where the registry was created.
      * 
      */
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {

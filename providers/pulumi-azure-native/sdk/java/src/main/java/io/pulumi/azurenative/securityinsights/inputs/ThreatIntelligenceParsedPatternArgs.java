@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.ThreatIntelligenceParsedPatternTypeValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
      * Pattern type key
      * 
      */
-    @InputImport(name="patternTypeKey")
+    @Import(name="patternTypeKey")
       private final @Nullable Output<String> patternTypeKey;
 
     public Output<String> getPatternTypeKey() {
@@ -35,7 +35,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
      * Pattern type keys
      * 
      */
-    @InputImport(name="patternTypeValues")
+    @Import(name="patternTypeValues")
       private final @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
     public Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> getPatternTypeValues() {

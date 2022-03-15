@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
 
     public static final GroupMembershipState Empty = new GroupMembershipState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -25,7 +25,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -36,7 +36,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The name of the group in which the member will be added.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -47,7 +47,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The name of the member to add to the group.
      * 
      */
-    @InputImport(name="memberName")
+    @Import(name="memberName")
       private final @Nullable Output<String> memberName;
 
     public Output<String> getMemberName() {
@@ -58,7 +58,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The namespace. Defaults to `default`. Currently only `default` is supported.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {

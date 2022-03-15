@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.outputs.TopologySelectorTerm;
@@ -29,7 +29,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * AllowVolumeExpansion shows whether the storage class allow volume expand
      * 
      */
-    @OutputExport(name="allowVolumeExpansion", type=Boolean.class, parameters={})
+    @Export(name="allowVolumeExpansion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVolumeExpansion;
 
     /**
@@ -43,7 +43,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
      * 
      */
-    @OutputExport(name="allowedTopologies", type=List.class, parameters={TopologySelectorTerm.class})
+    @Export(name="allowedTopologies", type=List.class, parameters={TopologySelectorTerm.class})
     private Output</* @Nullable */ List<TopologySelectorTerm>> allowedTopologies;
 
     /**
@@ -57,7 +57,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -71,7 +71,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -85,7 +85,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -99,7 +99,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
      * 
      */
-    @OutputExport(name="mountOptions", type=List.class, parameters={String.class})
+    @Export(name="mountOptions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> mountOptions;
 
     /**
@@ -113,7 +113,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -127,7 +127,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Provisioner indicates the type of the provisioner.
      * 
      */
-    @OutputExport(name="provisioner", type=String.class, parameters={})
+    @Export(name="provisioner", type=String.class, parameters={})
     private Output<String> provisioner;
 
     /**
@@ -141,7 +141,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
      * 
      */
-    @OutputExport(name="reclaimPolicy", type=String.class, parameters={})
+    @Export(name="reclaimPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> reclaimPolicy;
 
     /**
@@ -155,7 +155,7 @@ public class StorageClass extends io.pulumi.resources.CustomResource {
      * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
      * 
      */
-    @OutputExport(name="volumeBindingMode", type=String.class, parameters={})
+    @Export(name="volumeBindingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeBindingMode;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GlobalTableKeySchemaArgs extends io.pulumi.resources.Resource
 
     public static final GlobalTableKeySchemaArgs Empty = new GlobalTableKeySchemaArgs();
 
-    @InputImport(name="attributeName", required=true)
+    @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
     public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final Output<String> keyType;
 
     public Output<String> getKeyType() {

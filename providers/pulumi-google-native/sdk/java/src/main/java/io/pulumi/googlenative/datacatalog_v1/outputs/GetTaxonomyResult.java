@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1SystemTimestampsResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTaxonomyResult {
     /**
      * Optional. A list of policy types that are activated for this taxonomy. If not set, defaults to an empty list.
@@ -43,14 +43,14 @@ public final class GetTaxonomyResult {
      */
     private final GoogleCloudDatacatalogV1SystemTimestampsResponse taxonomyTimestamps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaxonomyResult(
-        @OutputCustomType.Parameter("activatedPolicyTypes") List<String> activatedPolicyTypes,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyTagCount") Integer policyTagCount,
-        @OutputCustomType.Parameter("taxonomyTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse taxonomyTimestamps) {
+        @CustomType.Parameter("activatedPolicyTypes") List<String> activatedPolicyTypes,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyTagCount") Integer policyTagCount,
+        @CustomType.Parameter("taxonomyTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse taxonomyTimestamps) {
         this.activatedPolicyTypes = activatedPolicyTypes;
         this.description = description;
         this.displayName = displayName;

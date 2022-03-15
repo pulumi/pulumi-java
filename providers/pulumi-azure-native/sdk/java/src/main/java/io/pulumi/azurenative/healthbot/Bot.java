@@ -10,7 +10,7 @@ import io.pulumi.azurenative.healthbot.outputs.SkuResponse;
 import io.pulumi.azurenative.healthbot.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -52,7 +52,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * The set of properties specific to Healthbot resource.
      * 
      */
-    @OutputExport(name="properties", type=HealthBotPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=HealthBotPropertiesResponse.class, parameters={})
     private Output<HealthBotPropertiesResponse> properties;
 
     /**
@@ -80,7 +80,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * SKU of the HealthBot.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -94,7 +94,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -108,7 +108,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -122,7 +122,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

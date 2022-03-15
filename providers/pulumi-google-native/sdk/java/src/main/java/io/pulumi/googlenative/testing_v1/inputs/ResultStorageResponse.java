@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageResponse;
 import io.pulumi.googlenative.testing_v1.inputs.ToolResultsExecutionResponse;
 import io.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryResponse;
@@ -23,7 +23,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * Required.
      * 
      */
-    @InputImport(name="googleCloudStorage", required=true)
+    @Import(name="googleCloudStorage", required=true)
       private final GoogleCloudStorageResponse googleCloudStorage;
 
     public GoogleCloudStorageResponse getGoogleCloudStorage() {
@@ -34,7 +34,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * URL to the results in the Firebase Web Console.
      * 
      */
-    @InputImport(name="resultsUrl", required=true)
+    @Import(name="resultsUrl", required=true)
       private final String resultsUrl;
 
     public String getResultsUrl() {
@@ -45,7 +45,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * The tool results execution that results are written to.
      * 
      */
-    @InputImport(name="toolResultsExecution", required=true)
+    @Import(name="toolResultsExecution", required=true)
       private final ToolResultsExecutionResponse toolResultsExecution;
 
     public ToolResultsExecutionResponse getToolResultsExecution() {
@@ -56,7 +56,7 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
      * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
      * 
      */
-    @InputImport(name="toolResultsHistory", required=true)
+    @Import(name="toolResultsHistory", required=true)
       private final ToolResultsHistoryResponse toolResultsHistory;
 
     public ToolResultsHistoryResponse getToolResultsHistory() {

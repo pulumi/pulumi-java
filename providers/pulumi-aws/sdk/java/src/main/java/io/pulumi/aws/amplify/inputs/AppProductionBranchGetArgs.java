@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * The branch name for the production branch.
      * 
      */
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -29,7 +29,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * The last deploy time of the production branch.
      * 
      */
-    @InputImport(name="lastDeployTime")
+    @Import(name="lastDeployTime")
       private final @Nullable Output<String> lastDeployTime;
 
     public Output<String> getLastDeployTime() {
@@ -40,7 +40,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -51,7 +51,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
      * The thumbnail URL for the production branch.
      * 
      */
-    @InputImport(name="thumbnailUrl")
+    @Import(name="thumbnailUrl")
       private final @Nullable Output<String> thumbnailUrl;
 
     public Output<String> getThumbnailUrl() {

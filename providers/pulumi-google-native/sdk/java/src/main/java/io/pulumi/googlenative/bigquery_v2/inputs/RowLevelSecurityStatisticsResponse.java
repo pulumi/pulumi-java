@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class RowLevelSecurityStatisticsResponse extends io.pulumi.resource
      * [Preview] Whether any accessed data was protected by row access policies.
      * 
      */
-    @InputImport(name="rowLevelSecurityApplied", required=true)
+    @Import(name="rowLevelSecurityApplied", required=true)
       private final Boolean rowLevelSecurityApplied;
 
     public Boolean getRowLevelSecurityApplied() {

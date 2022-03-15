@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketReplicaModificationsStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
      * Specifies whether Amazon S3 replicates modifications on replicas.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final BucketReplicaModificationsStatus status;
 
     public BucketReplicaModificationsStatus getStatus() {

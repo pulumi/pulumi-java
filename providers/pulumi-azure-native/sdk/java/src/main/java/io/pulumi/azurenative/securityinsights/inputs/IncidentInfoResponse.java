@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Incident Id
      * 
      */
-    @InputImport(name="incidentId")
+    @Import(name="incidentId")
       private final @Nullable String incidentId;
 
     public Optional<String> getIncidentId() {
@@ -33,7 +33,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Relation Name
      * 
      */
-    @InputImport(name="relationName")
+    @Import(name="relationName")
       private final @Nullable String relationName;
 
     public Optional<String> getRelationName() {
@@ -44,7 +44,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The severity of the incident
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable String severity;
 
     public Optional<String> getSeverity() {
@@ -55,7 +55,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The title of the incident
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable String title;
 
     public Optional<String> getTitle() {

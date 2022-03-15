@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetChannelPartnerLinkArgs extends io.pulumi.resources.InvokeA
 
     public static final GetChannelPartnerLinkArgs Empty = new GetChannelPartnerLinkArgs();
 
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
     }
 
-    @InputImport(name="channelPartnerLinkId", required=true)
+    @Import(name="channelPartnerLinkId", required=true)
       private final String channelPartnerLinkId;
 
     public String getChannelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable String view;
 
     public Optional<String> getView() {

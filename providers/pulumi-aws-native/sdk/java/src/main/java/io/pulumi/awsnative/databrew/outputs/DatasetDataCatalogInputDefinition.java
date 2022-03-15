@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.DatasetS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetDataCatalogInputDefinition {
     /**
      * Catalog id
@@ -29,12 +29,12 @@ public final class DatasetDataCatalogInputDefinition {
     private final @Nullable String tableName;
     private final @Nullable DatasetS3Location tempDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetDataCatalogInputDefinition(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
-        @OutputCustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("tableName") @Nullable String tableName,
+        @CustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.tableName = tableName;

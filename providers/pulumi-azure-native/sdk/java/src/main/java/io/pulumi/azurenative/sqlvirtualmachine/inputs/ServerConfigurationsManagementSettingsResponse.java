@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.AdditionalFeaturesServerCo
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlConnectivityUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * Additional SQL feature settings.
      * 
      */
-    @InputImport(name="additionalFeaturesServerConfigurations")
+    @Import(name="additionalFeaturesServerConfigurations")
       private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
 
     public Optional<AdditionalFeaturesServerConfigurationsResponse> getAdditionalFeaturesServerConfigurations() {
@@ -36,7 +36,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * SQL connectivity type settings.
      * 
      */
-    @InputImport(name="sqlConnectivityUpdateSettings")
+    @Import(name="sqlConnectivityUpdateSettings")
       private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
 
     public Optional<SqlConnectivityUpdateSettingsResponse> getSqlConnectivityUpdateSettings() {
@@ -47,7 +47,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * SQL storage update settings.
      * 
      */
-    @InputImport(name="sqlStorageUpdateSettings")
+    @Import(name="sqlStorageUpdateSettings")
       private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
 
     public Optional<SqlStorageUpdateSettingsResponse> getSqlStorageUpdateSettings() {
@@ -58,7 +58,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * SQL workload type settings.
      * 
      */
-    @InputImport(name="sqlWorkloadTypeUpdateSettings")
+    @Import(name="sqlWorkloadTypeUpdateSettings")
       private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> getSqlWorkloadTypeUpdateSettings() {

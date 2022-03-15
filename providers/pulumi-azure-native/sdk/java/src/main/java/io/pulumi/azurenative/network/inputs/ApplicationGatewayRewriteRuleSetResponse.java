@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * Name of the rewrite rule set that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * The provisioning state of the rewrite rule set resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends io.pulumi.re
      * Rewrite rules in the rewrite rule set.
      * 
      */
-    @InputImport(name="rewriteRules")
+    @Import(name="rewriteRules")
       private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
     public List<ApplicationGatewayRewriteRuleResponse> getRewriteRules() {

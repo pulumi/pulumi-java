@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecGetArgs;
@@ -24,7 +24,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
      */
-    @InputImport(name="accessUrls")
+    @Import(name="accessUrls")
       private final @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
     public Output<List<AuthorityAccessUrlGetArgs>> getAccessUrls() {
@@ -35,7 +35,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * The user provided Resource ID for this Certificate Authority.
      * 
      */
-    @InputImport(name="certificateAuthorityId")
+    @Import(name="certificateAuthorityId")
       private final @Nullable Output<String> certificateAuthorityId;
 
     public Output<String> getCertificateAuthorityId() {
@@ -47,7 +47,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<AuthorityConfigGetArgs> config;
 
     public Output<AuthorityConfigGetArgs> getConfig() {
@@ -59,7 +59,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -74,7 +74,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * created.
      * 
      */
-    @InputImport(name="gcsBucket")
+    @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
 
     public Output<String> getGcsBucket() {
@@ -86,7 +86,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * Use with care. Defaults to `false`.
      * 
      */
-    @InputImport(name="ignoreActiveCertificatesOnDeletion")
+    @Import(name="ignoreActiveCertificatesOnDeletion")
       private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
     public Output<Boolean> getIgnoreActiveCertificatesOnDeletion() {
@@ -100,7 +100,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="keySpec")
+    @Import(name="keySpec")
       private final @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
 
     public Output<AuthorityKeySpecGetArgs> getKeySpec() {
@@ -113,7 +113,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -126,7 +126,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="lifetime")
+    @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
@@ -138,7 +138,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * running `gcloud privateca locations list`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -149,7 +149,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -162,7 +162,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * current CertificateAuthority's certificate.
      * 
      */
-    @InputImport(name="pemCaCertificates")
+    @Import(name="pemCaCertificates")
       private final @Nullable Output<List<String>> pemCaCertificates;
 
     public Output<List<String>> getPemCaCertificates() {
@@ -173,7 +173,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * The name of the CaPool this Certificate Authority belongs to.
      * 
      */
-    @InputImport(name="pool")
+    @Import(name="pool")
       private final @Nullable Output<String> pool;
 
     public Output<String> getPool() {
@@ -185,7 +185,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -196,7 +196,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * The State for this CertificateAuthority.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -212,7 +212,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -224,7 +224,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

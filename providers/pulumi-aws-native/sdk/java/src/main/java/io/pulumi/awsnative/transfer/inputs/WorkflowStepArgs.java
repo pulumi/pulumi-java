@@ -9,7 +9,7 @@ import io.pulumi.awsnative.transfer.inputs.WorkflowStepCustomStepDetailsProperti
 import io.pulumi.awsnative.transfer.inputs.WorkflowStepDeleteStepDetailsPropertiesArgs;
 import io.pulumi.awsnative.transfer.inputs.WorkflowStepTagStepDetailsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +26,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
      * Details for a step that performs a file copy.
      * 
      */
-    @InputImport(name="copyStepDetails")
+    @Import(name="copyStepDetails")
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
 
     public Output<WorkflowStepCopyStepDetailsPropertiesArgs> getCopyStepDetails() {
@@ -37,7 +37,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
      * Details for a step that invokes a lambda function.
      * 
      */
-    @InputImport(name="customStepDetails")
+    @Import(name="customStepDetails")
       private final @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
 
     public Output<WorkflowStepCustomStepDetailsPropertiesArgs> getCustomStepDetails() {
@@ -48,7 +48,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
      * Details for a step that deletes the file.
      * 
      */
-    @InputImport(name="deleteStepDetails")
+    @Import(name="deleteStepDetails")
       private final @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
 
     public Output<WorkflowStepDeleteStepDetailsPropertiesArgs> getDeleteStepDetails() {
@@ -59,14 +59,14 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
      * Details for a step that creates one or more tags.
      * 
      */
-    @InputImport(name="tagStepDetails")
+    @Import(name="tagStepDetails")
       private final @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
 
     public Output<WorkflowStepTagStepDetailsPropertiesArgs> getTagStepDetails() {
         return this.tagStepDetails == null ? Output.empty() : this.tagStepDetails;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<WorkflowStepType> type;
 
     public Output<WorkflowStepType> getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleAssociationPropertyResponse {
     /**
      * Gets or sets the name of the Schedule.
@@ -17,8 +17,8 @@ public final class ScheduleAssociationPropertyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private ScheduleAssociationPropertyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private ScheduleAssociationPropertyResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

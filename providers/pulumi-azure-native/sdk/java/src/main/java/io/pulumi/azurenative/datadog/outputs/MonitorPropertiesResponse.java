@@ -5,14 +5,14 @@ package io.pulumi.azurenative.datadog.outputs;
 
 import io.pulumi.azurenative.datadog.outputs.DatadogOrganizationPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.UserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitorPropertiesResponse {
     /**
      * Datadog organization properties
@@ -42,15 +42,15 @@ public final class MonitorPropertiesResponse {
      */
     private final @Nullable UserInfoResponse userInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitorPropertiesResponse(
-        @OutputCustomType.Parameter("datadogOrganizationProperties") @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties,
-        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
-        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
-        @OutputCustomType.Parameter("marketplaceSubscriptionStatus") String marketplaceSubscriptionStatus,
-        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
+        @CustomType.Parameter("datadogOrganizationProperties") @Nullable DatadogOrganizationPropertiesResponse datadogOrganizationProperties,
+        @CustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @CustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @CustomType.Parameter("marketplaceSubscriptionStatus") String marketplaceSubscriptionStatus,
+        @CustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
         this.datadogOrganizationProperties = datadogOrganizationProperties;
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;

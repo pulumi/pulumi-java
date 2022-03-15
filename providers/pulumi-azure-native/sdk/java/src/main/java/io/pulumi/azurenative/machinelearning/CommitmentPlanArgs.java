@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.machinelearning.inputs.ResourceSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure ML commitment plan name.
      * 
      */
-    @InputImport(name="commitmentPlanName")
+    @Import(name="commitmentPlanName")
       private final @Nullable Output<String> commitmentPlanName;
 
     public Output<String> getCommitmentPlanName() {
@@ -31,7 +31,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The commitment plan SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
     public Output<ResourceSkuArgs> getSku() {
@@ -64,7 +64,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined tags for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

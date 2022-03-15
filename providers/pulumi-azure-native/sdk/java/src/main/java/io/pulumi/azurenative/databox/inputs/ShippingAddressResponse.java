@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Type of address.
      * 
      */
-    @InputImport(name="addressType")
+    @Import(name="addressType")
       private final @Nullable String addressType;
 
     public Optional<String> getAddressType() {
@@ -33,7 +33,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Name of the City.
      * 
      */
-    @InputImport(name="city")
+    @Import(name="city")
       private final @Nullable String city;
 
     public Optional<String> getCity() {
@@ -44,7 +44,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Name of the company.
      * 
      */
-    @InputImport(name="companyName")
+    @Import(name="companyName")
       private final @Nullable String companyName;
 
     public Optional<String> getCompanyName() {
@@ -55,7 +55,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Name of the Country.
      * 
      */
-    @InputImport(name="country", required=true)
+    @Import(name="country", required=true)
       private final String country;
 
     public String getCountry() {
@@ -66,7 +66,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Postal code.
      * 
      */
-    @InputImport(name="postalCode")
+    @Import(name="postalCode")
       private final @Nullable String postalCode;
 
     public Optional<String> getPostalCode() {
@@ -77,7 +77,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Name of the State or Province.
      * 
      */
-    @InputImport(name="stateOrProvince")
+    @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
 
     public Optional<String> getStateOrProvince() {
@@ -88,7 +88,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Street Address line 1.
      * 
      */
-    @InputImport(name="streetAddress1", required=true)
+    @Import(name="streetAddress1", required=true)
       private final String streetAddress1;
 
     public String getStreetAddress1() {
@@ -99,7 +99,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Street Address line 2.
      * 
      */
-    @InputImport(name="streetAddress2")
+    @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
 
     public Optional<String> getStreetAddress2() {
@@ -110,7 +110,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Street Address line 3.
      * 
      */
-    @InputImport(name="streetAddress3")
+    @Import(name="streetAddress3")
       private final @Nullable String streetAddress3;
 
     public Optional<String> getStreetAddress3() {
@@ -121,7 +121,7 @@ public final class ShippingAddressResponse extends io.pulumi.resources.InvokeArg
      * Extended Zip Code.
      * 
      */
-    @InputImport(name="zipExtendedCode")
+    @Import(name="zipExtendedCode")
       private final @Nullable String zipExtendedCode;
 
     public Optional<String> getZipExtendedCode() {

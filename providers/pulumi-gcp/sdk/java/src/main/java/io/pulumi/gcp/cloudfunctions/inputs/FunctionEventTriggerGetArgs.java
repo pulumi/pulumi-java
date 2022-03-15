@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerFailurePolicyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * full reference of accepted triggers.
      * 
      */
-    @InputImport(name="eventType", required=true)
+    @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
     public Output<String> getEventType() {
@@ -32,7 +32,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * Specifies policy for failed executions. Structure is documented below.
      * 
      */
-    @InputImport(name="failurePolicy")
+    @Import(name="failurePolicy")
       private final @Nullable Output<FunctionEventTriggerFailurePolicyGetArgs> failurePolicy;
 
     public Output<FunctionEventTriggerFailurePolicyGetArgs> getFailurePolicy() {
@@ -44,7 +44,7 @@ public final class FunctionEventTriggerGetArgs extends io.pulumi.resources.Resou
      * which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<String> resource;
 
     public Output<String> getResource() {

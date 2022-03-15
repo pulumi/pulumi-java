@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managementpartner.PartnerArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the DateTime when the partner was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdTime;
 
     /**
@@ -49,7 +49,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * Type of the partner
      * 
      */
-    @OutputExport(name="etag", type=Integer.class, parameters={})
+    @Export(name="etag", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> etag;
 
     /**
@@ -63,7 +63,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * Name of the partner
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the object id.
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectId;
 
     /**
@@ -91,7 +91,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the partner id
      * 
      */
-    @OutputExport(name="partnerId", type=String.class, parameters={})
+    @Export(name="partnerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerId;
 
     /**
@@ -105,7 +105,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the partner name
      * 
      */
-    @OutputExport(name="partnerName", type=String.class, parameters={})
+    @Export(name="partnerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerName;
 
     /**
@@ -119,7 +119,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the tenant id.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -133,7 +133,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * Type of resource. "Microsoft.ManagementPartner/partners"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -147,7 +147,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the DateTime when the partner was updated.
      * 
      */
-    @OutputExport(name="updatedTime", type=String.class, parameters={})
+    @Export(name="updatedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> updatedTime;
 
     /**
@@ -161,7 +161,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * This is the version.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> version;
 
     /**

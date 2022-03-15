@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    @InputImport(name="instanceArn")
+    @Import(name="instanceArn")
       private final @Nullable Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -29,7 +29,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
      * 
      */
-    @InputImport(name="managedPolicyArn")
+    @Import(name="managedPolicyArn")
       private final @Nullable Output<String> managedPolicyArn;
 
     public Output<String> getManagedPolicyArn() {
@@ -40,7 +40,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * The name of the IAM Managed Policy.
      * 
      */
-    @InputImport(name="managedPolicyName")
+    @Import(name="managedPolicyName")
       private final @Nullable Output<String> managedPolicyName;
 
     public Output<String> getManagedPolicyName() {
@@ -51,7 +51,7 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    @InputImport(name="permissionSetArn")
+    @Import(name="permissionSetArn")
       private final @Nullable Output<String> permissionSetArn;
 
     public Output<String> getPermissionSetArn() {

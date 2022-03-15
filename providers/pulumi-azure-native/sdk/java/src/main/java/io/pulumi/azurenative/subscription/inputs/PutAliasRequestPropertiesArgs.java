@@ -6,7 +6,7 @@ package io.pulumi.azurenative.subscription.inputs;
 import io.pulumi.azurenative.subscription.enums.Workload;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * Determines whether subscription is fieldLed, partnerLed or LegacyEA
      * 
      */
-    @InputImport(name="billingScope")
+    @Import(name="billingScope")
       private final @Nullable Output<String> billingScope;
 
     public Output<String> getBillingScope() {
@@ -35,7 +35,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * The friendly name of the subscription.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -46,7 +46,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * Reseller ID, basically MPN Id
      * 
      */
-    @InputImport(name="resellerId")
+    @Import(name="resellerId")
       private final @Nullable Output<String> resellerId;
 
     public Output<String> getResellerId() {
@@ -57,7 +57,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * This parameter can be used to create alias for existing subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -68,7 +68,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
      * The workload type of the subscription. It can be either Production or DevTest.
      * 
      */
-    @InputImport(name="workload")
+    @Import(name="workload")
       private final @Nullable Output<Either<String,Workload>> workload;
 
     public Output<Either<String,Workload>> getWorkload() {

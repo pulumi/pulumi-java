@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * The name of a Cloud Storage bucket.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -31,7 +31,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * least one of these regular expressions will be excluded from the scan.
      * 
      */
-    @InputImport(name="excludeRegexes")
+    @Import(name="excludeRegexes")
       private final @Nullable Output<List<String>> excludeRegexes;
 
     public Output<List<String>> getExcludeRegexes() {
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * match all files by default (this is equivalent to including .* in the list)
      * 
      */
-    @InputImport(name="includeRegexes")
+    @Import(name="includeRegexes")
       private final @Nullable Output<List<String>> includeRegexes;
 
     public Output<List<String>> getIncludeRegexes() {

@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.HttpVersionMatchConditionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryRuleHttpVersionConditionResponse {
     /**
      * The name of the condition for the delivery rule.
@@ -22,10 +22,10 @@ public final class DeliveryRuleHttpVersionConditionResponse {
      */
     private final HttpVersionMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryRuleHttpVersionConditionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") HttpVersionMatchConditionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") HttpVersionMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

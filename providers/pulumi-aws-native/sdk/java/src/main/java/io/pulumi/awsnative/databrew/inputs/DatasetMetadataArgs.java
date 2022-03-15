@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
      * 
      */
-    @InputImport(name="sourceArn")
+    @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;
 
     public Output<String> getSourceArn() {

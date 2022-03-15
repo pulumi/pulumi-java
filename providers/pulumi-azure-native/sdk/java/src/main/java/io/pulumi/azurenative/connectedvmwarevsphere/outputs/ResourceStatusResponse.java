@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceStatusResponse {
     /**
      * The last update time for this condition.
@@ -40,14 +40,14 @@ public final class ResourceStatusResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceStatusResponse(
-        @OutputCustomType.Parameter("lastUpdatedAt") String lastUpdatedAt,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("lastUpdatedAt") String lastUpdatedAt,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.lastUpdatedAt = lastUpdatedAt;
         this.message = message;
         this.reason = reason;

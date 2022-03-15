@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
      * Predefined client side actions that user can choose
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> getAction() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
      * Predefined replies for user to select instead of typing
      * 
      */
-    @InputImport(name="reply")
+    @Import(name="reply")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> getReply() {

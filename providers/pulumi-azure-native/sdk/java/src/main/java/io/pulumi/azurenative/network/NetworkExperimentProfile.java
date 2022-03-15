@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.NetworkExperimentProfileArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * The state of the Experiment
      * 
      */
-    @OutputExport(name="enabledState", type=String.class, parameters={})
+    @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
@@ -49,7 +49,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -77,7 +77,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * Resource status.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -105,7 +105,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -119,7 +119,7 @@ public class NetworkExperimentProfile extends io.pulumi.resources.CustomResource
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

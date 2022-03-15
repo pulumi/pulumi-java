@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsLogSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BotAliasConversationLogsArgs extends io.pulumi.resources.Reso
      * The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
      * 
      */
-    @InputImport(name="iamRoleArn", required=true)
+    @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -31,7 +31,7 @@ public final class BotAliasConversationLogsArgs extends io.pulumi.resources.Reso
      * The settings for your conversation logs. You can log text, audio, or both. Attributes are documented under log_settings.
      * 
      */
-    @InputImport(name="logSettings")
+    @Import(name="logSettings")
       private final @Nullable Output<List<BotAliasConversationLogsLogSettingArgs>> logSettings;
 
     public Output<List<BotAliasConversationLogsLogSettingArgs>> getLogSettings() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.FilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * Enable notifications for Pub/Sub.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * Allows filtering to one or more specific event types. If no filter is specified, or if a filter is specified with no event types, all event types will be sent
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<FilterArgs> filter;
 
     public Output<FilterArgs> getFilter() {
@@ -46,7 +46,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
      * The desired Pub/Sub topic to which notifications will be sent by GKE. Format is `projects/{project}/topics/{topic}`.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {

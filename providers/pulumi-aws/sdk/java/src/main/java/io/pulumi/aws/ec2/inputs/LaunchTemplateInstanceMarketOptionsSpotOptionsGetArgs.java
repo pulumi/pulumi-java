@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * The required duration in minutes. This value must be a multiple of 60.
      * 
      */
-    @InputImport(name="blockDurationMinutes")
+    @Import(name="blockDurationMinutes")
       private final @Nullable Output<Integer> blockDurationMinutes;
 
     public Output<Integer> getBlockDurationMinutes() {
@@ -31,7 +31,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * `stop`, or `terminate`. (Default: `terminate`).
      * 
      */
-    @InputImport(name="instanceInterruptionBehavior")
+    @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
     public Output<String> getInstanceInterruptionBehavior() {
@@ -42,7 +42,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * The maximum hourly price you're willing to pay for the Spot Instances.
      * 
      */
-    @InputImport(name="maxPrice")
+    @Import(name="maxPrice")
       private final @Nullable Output<String> maxPrice;
 
     public Output<String> getMaxPrice() {
@@ -53,7 +53,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * The Spot Instance request type. Can be `one-time`, or `persistent`.
      * 
      */
-    @InputImport(name="spotInstanceType")
+    @Import(name="spotInstanceType")
       private final @Nullable Output<String> spotInstanceType;
 
     public Output<String> getSpotInstanceType() {
@@ -64,7 +64,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs extends
      * The end date of the request.
      * 
      */
-    @InputImport(name="validUntil")
+    @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudidentity.GroupMembershipArgs;
@@ -48,7 +48,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The time when the Membership was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -62,7 +62,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The name of the Group to create this membership in.
      * 
      */
-    @OutputExport(name="group", type=String.class, parameters={})
+    @Export(name="group", type=String.class, parameters={})
     private Output<String> group;
 
     /**
@@ -77,7 +77,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="memberKey", type=GroupMembershipMemberKey.class, parameters={})
+    @Export(name="memberKey", type=GroupMembershipMemberKey.class, parameters={})
     private Output<GroupMembershipMemberKey> memberKey;
 
     /**
@@ -93,7 +93,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="preferredMemberKey", type=GroupMembershipPreferredMemberKey.class, parameters={})
+    @Export(name="preferredMemberKey", type=GroupMembershipPreferredMemberKey.class, parameters={})
     private Output<GroupMembershipPreferredMemberKey> preferredMemberKey;
 
     /**
@@ -126,7 +126,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={GroupMembershipRole.class})
+    @Export(name="roles", type=List.class, parameters={GroupMembershipRole.class})
     private Output<List<GroupMembershipRole>> roles;
 
     /**
@@ -142,7 +142,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The type of the membership.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -156,7 +156,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The time when the Membership was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

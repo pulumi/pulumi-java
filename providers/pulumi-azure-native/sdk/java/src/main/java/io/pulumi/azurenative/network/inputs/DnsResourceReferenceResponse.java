@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DnsResourceReferenceResponse extends io.pulumi.resources.Invo
      * A list of dns Records
      * 
      */
-    @InputImport(name="dnsResources")
+    @Import(name="dnsResources")
       private final @Nullable List<SubResourceResponse> dnsResources;
 
     public List<SubResourceResponse> getDnsResources() {
@@ -34,7 +34,7 @@ public final class DnsResourceReferenceResponse extends io.pulumi.resources.Invo
      * A reference to an azure resource from where the dns resource value is taken.
      * 
      */
-    @InputImport(name="targetResource")
+    @Import(name="targetResource")
       private final @Nullable SubResourceResponse targetResource;
 
     public Optional<SubResourceResponse> getTargetResource() {

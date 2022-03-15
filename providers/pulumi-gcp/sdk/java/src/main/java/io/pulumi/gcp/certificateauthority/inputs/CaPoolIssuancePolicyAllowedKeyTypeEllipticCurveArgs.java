@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends i
      * Possible values are `ECDSA_P256`, `ECDSA_P384`, and `EDDSA_25519`.
      * 
      */
-    @InputImport(name="signatureAlgorithm", required=true)
+    @Import(name="signatureAlgorithm", required=true)
       private final Output<String> signatureAlgorithm;
 
     public Output<String> getSignatureAlgorithm() {

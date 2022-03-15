@@ -9,13 +9,13 @@ import io.pulumi.azurenative.scheduler.outputs.RetryPolicyResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusQueueMessageResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusTopicMessageResponse;
 import io.pulumi.azurenative.scheduler.outputs.StorageQueueMessageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobActionResponse {
     /**
      * Gets or sets the error action.
@@ -53,15 +53,15 @@ public final class JobActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobActionResponse(
-        @OutputCustomType.Parameter("errorAction") @Nullable JobErrorActionResponse errorAction,
-        @OutputCustomType.Parameter("queueMessage") @Nullable StorageQueueMessageResponse queueMessage,
-        @OutputCustomType.Parameter("request") @Nullable HttpRequestResponse request,
-        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
-        @OutputCustomType.Parameter("serviceBusQueueMessage") @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage,
-        @OutputCustomType.Parameter("serviceBusTopicMessage") @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("errorAction") @Nullable JobErrorActionResponse errorAction,
+        @CustomType.Parameter("queueMessage") @Nullable StorageQueueMessageResponse queueMessage,
+        @CustomType.Parameter("request") @Nullable HttpRequestResponse request,
+        @CustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @CustomType.Parameter("serviceBusQueueMessage") @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage,
+        @CustomType.Parameter("serviceBusTopicMessage") @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.errorAction = errorAction;
         this.queueMessage = queueMessage;
         this.request = request;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.portal.TenantConfigurationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
      */
-    @OutputExport(name="enforcePrivateMarkdownStorage", type=Boolean.class, parameters={})
+    @Export(name="enforcePrivateMarkdownStorage", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enforcePrivateMarkdownStorage;
 
     /**
@@ -49,7 +49,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class TenantConfiguration extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

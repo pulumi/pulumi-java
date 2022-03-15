@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConflictResolutionPolicyResponse {
     /**
      * The conflict resolution path in the case of LastWriterWins mode.
@@ -27,11 +27,11 @@ public final class ConflictResolutionPolicyResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConflictResolutionPolicyResponse(
-        @OutputCustomType.Parameter("conflictResolutionPath") @Nullable String conflictResolutionPath,
-        @OutputCustomType.Parameter("conflictResolutionProcedure") @Nullable String conflictResolutionProcedure,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("conflictResolutionPath") @Nullable String conflictResolutionPath,
+        @CustomType.Parameter("conflictResolutionProcedure") @Nullable String conflictResolutionProcedure,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.conflictResolutionPath = conflictResolutionPath;
         this.conflictResolutionProcedure = conflictResolutionProcedure;
         this.mode = mode;

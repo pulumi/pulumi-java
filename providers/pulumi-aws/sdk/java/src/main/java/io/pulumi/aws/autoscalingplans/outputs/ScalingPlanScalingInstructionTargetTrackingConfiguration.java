@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscalingplans.outputs;
 
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification;
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
     /**
      * A customized metric. You can specify either `customized_scaling_metric_specification` or `predefined_scaling_metric_specification`.
@@ -56,15 +56,15 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingPlanScalingInstructionTargetTrackingConfiguration(
-        @OutputCustomType.Parameter("customizedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification,
-        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
-        @OutputCustomType.Parameter("estimatedInstanceWarmup") @Nullable Integer estimatedInstanceWarmup,
-        @OutputCustomType.Parameter("predefinedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
-        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
-        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
-        @OutputCustomType.Parameter("targetValue") Double targetValue) {
+        @CustomType.Parameter("customizedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification,
+        @CustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @CustomType.Parameter("estimatedInstanceWarmup") @Nullable Integer estimatedInstanceWarmup,
+        @CustomType.Parameter("predefinedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
+        @CustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @CustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @CustomType.Parameter("targetValue") Double targetValue) {
         this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;

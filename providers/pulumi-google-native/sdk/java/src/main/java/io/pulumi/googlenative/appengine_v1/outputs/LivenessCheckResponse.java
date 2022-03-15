@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LivenessCheckResponse {
     /**
      * Interval between health checks.
@@ -46,15 +46,15 @@ public final class LivenessCheckResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LivenessCheckResponse(
-        @OutputCustomType.Parameter("checkInterval") String checkInterval,
-        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("initialDelay") String initialDelay,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
-        @OutputCustomType.Parameter("timeout") String timeout) {
+        @CustomType.Parameter("checkInterval") String checkInterval,
+        @CustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("initialDelay") String initialDelay,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("successThreshold") Integer successThreshold,
+        @CustomType.Parameter("timeout") String timeout) {
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;
         this.host = host;

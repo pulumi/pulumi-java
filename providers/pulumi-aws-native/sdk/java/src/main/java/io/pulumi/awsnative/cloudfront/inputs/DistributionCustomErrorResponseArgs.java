@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,28 +16,28 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
 
     public static final DistributionCustomErrorResponseArgs Empty = new DistributionCustomErrorResponseArgs();
 
-    @InputImport(name="errorCachingMinTTL")
+    @Import(name="errorCachingMinTTL")
       private final @Nullable Output<Double> errorCachingMinTTL;
 
     public Output<Double> getErrorCachingMinTTL() {
         return this.errorCachingMinTTL == null ? Output.empty() : this.errorCachingMinTTL;
     }
 
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Output<Integer> errorCode;
 
     public Output<Integer> getErrorCode() {
         return this.errorCode;
     }
 
-    @InputImport(name="responseCode")
+    @Import(name="responseCode")
       private final @Nullable Output<Integer> responseCode;
 
     public Output<Integer> getResponseCode() {
         return this.responseCode == null ? Output.empty() : this.responseCode;
     }
 
-    @InputImport(name="responsePagePath")
+    @Import(name="responsePagePath")
       private final @Nullable Output<String> responsePagePath;
 
     public Output<String> getResponsePagePath() {

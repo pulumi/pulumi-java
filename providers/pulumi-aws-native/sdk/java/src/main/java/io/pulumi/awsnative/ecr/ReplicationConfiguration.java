@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecr;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ecr.ReplicationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * The RegistryId associated with the aws account.
      * 
      */
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**
@@ -33,7 +33,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
     public Output<String> getRegistryId() {
         return this.registryId;
     }
-    @OutputExport(name="replicationConfiguration", type=io.pulumi.awsnative.ecr.outputs.ReplicationConfiguration.class, parameters={})
+    @Export(name="replicationConfiguration", type=io.pulumi.awsnative.ecr.outputs.ReplicationConfiguration.class, parameters={})
     private Output<io.pulumi.awsnative.ecr.outputs.ReplicationConfiguration> replicationConfiguration;
 
     public Output<io.pulumi.awsnative.ecr.outputs.ReplicationConfiguration> getReplicationConfiguration() {

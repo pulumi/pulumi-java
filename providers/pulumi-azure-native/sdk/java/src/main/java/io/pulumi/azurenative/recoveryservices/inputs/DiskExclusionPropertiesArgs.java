@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
      * List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.
      * 
      */
-    @InputImport(name="diskLunList")
+    @Import(name="diskLunList")
       private final @Nullable Output<List<Integer>> diskLunList;
 
     public Output<List<Integer>> getDiskLunList() {
@@ -31,7 +31,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
      * Flag to indicate whether DiskLunList is to be included/ excluded from backup.
      * 
      */
-    @InputImport(name="isInclusionList")
+    @Import(name="isInclusionList")
       private final @Nullable Output<Boolean> isInclusionList;
 
     public Output<Boolean> getIsInclusionList() {

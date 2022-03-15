@@ -13,7 +13,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLRule;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTag;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,49 +26,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:wafv2:WebACL")
 public class WebACL extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="capacity", type=Integer.class, parameters={})
+    @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
         return this.capacity;
     }
-    @OutputExport(name="captchaConfig", type=WebACLCaptchaConfig.class, parameters={})
+    @Export(name="captchaConfig", type=WebACLCaptchaConfig.class, parameters={})
     private Output</* @Nullable */ WebACLCaptchaConfig> captchaConfig;
 
     public Output</* @Nullable */ WebACLCaptchaConfig> getCaptchaConfig() {
         return this.captchaConfig;
     }
-    @OutputExport(name="customResponseBodies", type=WebACLCustomResponseBodies.class, parameters={})
+    @Export(name="customResponseBodies", type=WebACLCustomResponseBodies.class, parameters={})
     private Output</* @Nullable */ WebACLCustomResponseBodies> customResponseBodies;
 
     public Output</* @Nullable */ WebACLCustomResponseBodies> getCustomResponseBodies() {
         return this.customResponseBodies;
     }
-    @OutputExport(name="defaultAction", type=WebACLDefaultAction.class, parameters={})
+    @Export(name="defaultAction", type=WebACLDefaultAction.class, parameters={})
     private Output<WebACLDefaultAction> defaultAction;
 
     public Output<WebACLDefaultAction> getDefaultAction() {
         return this.defaultAction;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="labelNamespace", type=String.class, parameters={})
+    @Export(name="labelNamespace", type=String.class, parameters={})
     private Output<String> labelNamespace;
 
     public Output<String> getLabelNamespace() {
         return this.labelNamespace;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
@@ -78,7 +78,7 @@ public class WebACL extends io.pulumi.resources.CustomResource {
      * Collection of Rules.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={WebACLRule.class})
+    @Export(name="rules", type=List.class, parameters={WebACLRule.class})
     private Output</* @Nullable */ List<WebACLRule>> rules;
 
     /**
@@ -88,19 +88,19 @@ public class WebACL extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<WebACLRule>> getRules() {
         return this.rules;
     }
-    @OutputExport(name="scope", type=WebACLScope.class, parameters={})
+    @Export(name="scope", type=WebACLScope.class, parameters={})
     private Output<WebACLScope> scope;
 
     public Output<WebACLScope> getScope() {
         return this.scope;
     }
-    @OutputExport(name="tags", type=List.class, parameters={WebACLTag.class})
+    @Export(name="tags", type=List.class, parameters={WebACLTag.class})
     private Output</* @Nullable */ List<WebACLTag>> tags;
 
     public Output</* @Nullable */ List<WebACLTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="visibilityConfig", type=WebACLVisibilityConfig.class, parameters={})
+    @Export(name="visibilityConfig", type=WebACLVisibilityConfig.class, parameters={})
     private Output<WebACLVisibilityConfig> visibilityConfig;
 
     public Output<WebACLVisibilityConfig> getVisibilityConfig() {

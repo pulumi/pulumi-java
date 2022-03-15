@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigEndpointConfig {
     /**
      * The flag to enable http access to specific ports
@@ -21,10 +21,10 @@ public final class ClusterClusterConfigEndpointConfig {
     private final Boolean enableHttpPortAccess;
     private final @Nullable Map<String,Object> httpPorts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigEndpointConfig(
-        @OutputCustomType.Parameter("enableHttpPortAccess") Boolean enableHttpPortAccess,
-        @OutputCustomType.Parameter("httpPorts") @Nullable Map<String,Object> httpPorts) {
+        @CustomType.Parameter("enableHttpPortAccess") Boolean enableHttpPortAccess,
+        @CustomType.Parameter("httpPorts") @Nullable Map<String,Object> httpPorts) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         this.httpPorts = httpPorts;
     }

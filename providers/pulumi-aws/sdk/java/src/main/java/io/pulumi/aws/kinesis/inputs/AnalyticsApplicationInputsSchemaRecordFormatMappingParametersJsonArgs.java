@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * Path to the top-level parent that contains the records.
      * 
      */
-    @InputImport(name="recordRowPath", required=true)
+    @Import(name="recordRowPath", required=true)
       private final Output<String> recordRowPath;
 
     public Output<String> getRecordRowPath() {

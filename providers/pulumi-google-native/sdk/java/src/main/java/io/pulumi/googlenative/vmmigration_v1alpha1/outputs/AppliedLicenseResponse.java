@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppliedLicenseResponse {
     /**
      * The OS license returned from the adaptation module's report.
@@ -20,10 +20,10 @@ public final class AppliedLicenseResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppliedLicenseResponse(
-        @OutputCustomType.Parameter("osLicense") String osLicense,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("osLicense") String osLicense,
+        @CustomType.Parameter("type") String type) {
         this.osLicense = osLicense;
         this.type = type;
     }

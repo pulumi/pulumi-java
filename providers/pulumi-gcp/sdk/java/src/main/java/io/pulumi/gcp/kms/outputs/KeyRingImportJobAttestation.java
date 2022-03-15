@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyRingImportJobAttestation {
     private final @Nullable String content;
     private final @Nullable String format;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyRingImportJobAttestation(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("format") @Nullable String format) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("format") @Nullable String format) {
         this.content = content;
         this.format = format;
     }

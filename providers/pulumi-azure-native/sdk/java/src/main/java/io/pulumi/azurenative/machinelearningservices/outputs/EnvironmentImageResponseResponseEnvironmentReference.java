@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentImageResponseResponseEnvironmentReference {
     /**
      * Name of the environment.
@@ -22,10 +22,10 @@ public final class EnvironmentImageResponseResponseEnvironmentReference {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentImageResponseResponseEnvironmentReference(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.version = version;
     }

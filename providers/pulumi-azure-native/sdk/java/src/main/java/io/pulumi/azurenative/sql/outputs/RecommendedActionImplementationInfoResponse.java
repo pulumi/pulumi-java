@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedActionImplementationInfoResponse {
     /**
      * Gets the method in which this recommended action can be manually implemented. e.g., TSql, AzurePowerShell.
@@ -20,10 +20,10 @@ public final class RecommendedActionImplementationInfoResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedActionImplementationInfoResponse(
-        @OutputCustomType.Parameter("method") String method,
-        @OutputCustomType.Parameter("script") String script) {
+        @CustomType.Parameter("method") String method,
+        @CustomType.Parameter("script") String script) {
         this.method = method;
         this.script = script;
     }

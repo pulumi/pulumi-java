@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.ProximityPlacementGroupType;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * Describes colocation status of the Proximity Placement Group.
      * 
      */
-    @InputImport(name="colocationStatus")
+    @Import(name="colocationStatus")
       private final @Nullable Output<InstanceViewStatusArgs> colocationStatus;
 
     public Output<InstanceViewStatusArgs> getColocationStatus() {
@@ -33,7 +33,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * The name of the proximity placement group.
      * 
      */
-    @InputImport(name="proximityPlacementGroupName")
+    @Import(name="proximityPlacementGroupName")
       private final @Nullable Output<String> proximityPlacementGroupName;
 
     public Output<String> getProximityPlacementGroupName() {
@@ -55,7 +55,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.
      * 
      */
-    @InputImport(name="proximityPlacementGroupType")
+    @Import(name="proximityPlacementGroupType")
       private final @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
 
     public Output<Either<String,ProximityPlacementGroupType>> getProximityPlacementGroupType() {
@@ -66,7 +66,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

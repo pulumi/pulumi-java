@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MonitoringScheduleConstraintsResource extends io.pulumi.resou
      * The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
      * 
      */
-    @InputImport(name="s3Uri")
+    @Import(name="s3Uri")
       private final @Nullable String s3Uri;
 
     public Optional<String> getS3Uri() {

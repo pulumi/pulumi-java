@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetHealthCheckLogConfig extends io.pulumi.resources.InvokeArg
 
     public static final GetHealthCheckLogConfig Empty = new GetHealthCheckLogConfig();
 
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Boolean enable;
 
     public Boolean getEnable() {

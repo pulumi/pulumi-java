@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyDefinitionGroupResponse {
     /**
      * A resource ID of a resource that contains additional metadata about the group.
@@ -37,13 +37,13 @@ public final class PolicyDefinitionGroupResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyDefinitionGroupResponse(
-        @OutputCustomType.Parameter("additionalMetadataId") @Nullable String additionalMetadataId,
-        @OutputCustomType.Parameter("category") @Nullable String category,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("additionalMetadataId") @Nullable String additionalMetadataId,
+        @CustomType.Parameter("category") @Nullable String category,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("name") String name) {
         this.additionalMetadataId = additionalMetadataId;
         this.category = category;
         this.description = description;

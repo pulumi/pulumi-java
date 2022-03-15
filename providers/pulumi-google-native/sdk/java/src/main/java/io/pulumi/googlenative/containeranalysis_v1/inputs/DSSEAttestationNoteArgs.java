@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.DSSEHintArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
      * DSSEHint hints at the purpose of the attestation authority.
      * 
      */
-    @InputImport(name="hint")
+    @Import(name="hint")
       private final @Nullable Output<DSSEHintArgs> hint;
 
     public Output<DSSEHintArgs> getHint() {

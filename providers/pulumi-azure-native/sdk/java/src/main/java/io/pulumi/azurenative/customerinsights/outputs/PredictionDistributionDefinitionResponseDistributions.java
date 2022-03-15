@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PredictionDistributionDefinitionResponseDistributions {
     /**
      * Number of negatives.
@@ -38,13 +38,13 @@ public final class PredictionDistributionDefinitionResponseDistributions {
      */
     private final @Nullable Integer scoreThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PredictionDistributionDefinitionResponseDistributions(
-        @OutputCustomType.Parameter("negatives") @Nullable Double negatives,
-        @OutputCustomType.Parameter("negativesAboveThreshold") @Nullable Double negativesAboveThreshold,
-        @OutputCustomType.Parameter("positives") @Nullable Double positives,
-        @OutputCustomType.Parameter("positivesAboveThreshold") @Nullable Double positivesAboveThreshold,
-        @OutputCustomType.Parameter("scoreThreshold") @Nullable Integer scoreThreshold) {
+        @CustomType.Parameter("negatives") @Nullable Double negatives,
+        @CustomType.Parameter("negativesAboveThreshold") @Nullable Double negativesAboveThreshold,
+        @CustomType.Parameter("positives") @Nullable Double positives,
+        @CustomType.Parameter("positivesAboveThreshold") @Nullable Double positivesAboveThreshold,
+        @CustomType.Parameter("scoreThreshold") @Nullable Integer scoreThreshold) {
         this.negatives = negatives;
         this.negativesAboveThreshold = negativesAboveThreshold;
         this.positives = positives;

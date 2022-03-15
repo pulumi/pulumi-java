@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.DeploymentUpdateLabelEntryResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentUpdateResponse {
     /**
      * An optional user-provided description of the deployment after the current update has been applied.
@@ -27,11 +27,11 @@ public final class DeploymentUpdateResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentUpdateResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
-        @OutputCustomType.Parameter("manifest") String manifest) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
+        @CustomType.Parameter("manifest") String manifest) {
         this.description = description;
         this.labels = labels;
         this.manifest = manifest;

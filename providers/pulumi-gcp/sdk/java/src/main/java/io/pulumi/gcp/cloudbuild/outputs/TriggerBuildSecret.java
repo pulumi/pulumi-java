@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildSecret {
     /**
      * Cloud KMS key name to use to decrypt these envs.
@@ -24,10 +24,10 @@ public final class TriggerBuildSecret {
      */
     private final @Nullable Map<String,String> secretEnv;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildSecret(
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("secretEnv") @Nullable Map<String,String> secretEnv) {
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("secretEnv") @Nullable Map<String,String> secretEnv) {
         this.kmsKeyName = kmsKeyName;
         this.secretEnv = secretEnv;
     }

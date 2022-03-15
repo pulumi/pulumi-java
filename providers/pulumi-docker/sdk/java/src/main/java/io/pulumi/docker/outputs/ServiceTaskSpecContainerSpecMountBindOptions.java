@@ -3,18 +3,18 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecMountBindOptions {
     private final @Nullable String propagation;
 
-    @OutputCustomType.Constructor
-    private ServiceTaskSpecContainerSpecMountBindOptions(@OutputCustomType.Parameter("propagation") @Nullable String propagation) {
+    @CustomType.Constructor
+    private ServiceTaskSpecContainerSpecMountBindOptions(@CustomType.Parameter("propagation") @Nullable String propagation) {
         this.propagation = propagation;
     }
 

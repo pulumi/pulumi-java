@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.DatastoreArgs;
@@ -23,7 +23,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Datastore Configurations.
      * 
      */
-    @OutputExport(name="datastoreConfig", type=GoogleCloudApigeeV1DatastoreConfigResponse.class, parameters={})
+    @Export(name="datastoreConfig", type=GoogleCloudApigeeV1DatastoreConfigResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1DatastoreConfigResponse> datastoreConfig;
 
     /**
@@ -51,7 +51,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Display name in UI
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Datastore last update time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
      * 
      */
-    @OutputExport(name="lastUpdateTime", type=String.class, parameters={})
+    @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
@@ -79,7 +79,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Organization that the datastore belongs to
      * 
      */
-    @OutputExport(name="org", type=String.class, parameters={})
+    @Export(name="org", type=String.class, parameters={})
     private Output<String> org;
 
     /**
@@ -93,7 +93,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Resource link of Datastore. Example: `/organizations/{org}/analytics/datastores/{uuid}`
      * 
      */
-    @OutputExport(name="self", type=String.class, parameters={})
+    @Export(name="self", type=String.class, parameters={})
     private Output<String> self;
 
     /**
@@ -107,7 +107,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Destination storage type. Supported types `gcs` or `bigquery`.
      * 
      */
-    @OutputExport(name="targetType", type=String.class, parameters={})
+    @Export(name="targetType", type=String.class, parameters={})
     private Output<String> targetType;
 
     /**

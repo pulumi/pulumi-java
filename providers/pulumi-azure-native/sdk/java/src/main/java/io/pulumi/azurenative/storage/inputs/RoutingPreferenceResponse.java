@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
      * A boolean flag which indicates whether internet routing storage endpoints are to be published
      * 
      */
-    @InputImport(name="publishInternetEndpoints")
+    @Import(name="publishInternetEndpoints")
       private final @Nullable Boolean publishInternetEndpoints;
 
     public Optional<Boolean> getPublishInternetEndpoints() {
@@ -34,7 +34,7 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
      * A boolean flag which indicates whether microsoft routing storage endpoints are to be published
      * 
      */
-    @InputImport(name="publishMicrosoftEndpoints")
+    @Import(name="publishMicrosoftEndpoints")
       private final @Nullable Boolean publishMicrosoftEndpoints;
 
     public Optional<Boolean> getPublishMicrosoftEndpoints() {
@@ -45,7 +45,7 @@ public final class RoutingPreferenceResponse extends io.pulumi.resources.InvokeA
      * Routing Choice defines the kind of network routing opted by the user.
      * 
      */
-    @InputImport(name="routingChoice")
+    @Import(name="routingChoice")
       private final @Nullable String routingChoice;
 
     public Optional<String> getRoutingChoice() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * ISO 8601 repeating time interval format
      * 
      */
-    @InputImport(name="repeatingTimeIntervals", required=true)
+    @Import(name="repeatingTimeIntervals", required=true)
       private final Output<List<String>> repeatingTimeIntervals;
 
     public Output<List<String>> getRepeatingTimeIntervals() {

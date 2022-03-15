@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * The number of seconds for a proxy to wait for a connection to become available in the connection pool.
      * 
      */
-    @InputImport(name="connectionBorrowTimeout")
+    @Import(name="connectionBorrowTimeout")
       private final @Nullable Integer connectionBorrowTimeout;
 
     public Optional<Integer> getConnectionBorrowTimeout() {
@@ -31,7 +31,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * One or more SQL statements for the proxy to run when opening each new database connection.
      * 
      */
-    @InputImport(name="initQuery")
+    @Import(name="initQuery")
       private final @Nullable String initQuery;
 
     public Optional<String> getInitQuery() {
@@ -42,7 +42,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * The maximum size of the connection pool for each target in a target group.
      * 
      */
-    @InputImport(name="maxConnectionsPercent")
+    @Import(name="maxConnectionsPercent")
       private final @Nullable Integer maxConnectionsPercent;
 
     public Optional<Integer> getMaxConnectionsPercent() {
@@ -53,7 +53,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * Controls how actively the proxy closes idle database connections in the connection pool.
      * 
      */
-    @InputImport(name="maxIdleConnectionsPercent")
+    @Import(name="maxIdleConnectionsPercent")
       private final @Nullable Integer maxIdleConnectionsPercent;
 
     public Optional<Integer> getMaxIdleConnectionsPercent() {
@@ -64,7 +64,7 @@ public final class DBProxyTargetGroupConnectionPoolConfigurationInfoFormat exten
      * Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection.
      * 
      */
-    @InputImport(name="sessionPinningFilters")
+    @Import(name="sessionPinningFilters")
       private final @Nullable List<String> sessionPinningFilters;
 
     public List<String> getSessionPinningFilters() {

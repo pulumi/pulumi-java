@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * All recorded object metrics for this trial. This field is not currently populated.
      * 
      */
-    @InputImport(name="allMetrics", required=true)
+    @Import(name="allMetrics", required=true)
       private final List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics;
 
     public List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> getAllMetrics() {
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * Details related to built-in algorithms jobs. Only set for trials of built-in algorithms jobs that have succeeded.
      * 
      */
-    @InputImport(name="builtInAlgorithmOutput", required=true)
+    @Import(name="builtInAlgorithmOutput", required=true)
       private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * End time for the trial.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * The final objective metric seen for this trial.
      * 
      */
-    @InputImport(name="finalMetric", required=true)
+    @Import(name="finalMetric", required=true)
       private final GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric;
 
     public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse getFinalMetric() {
@@ -69,7 +69,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * The hyperparameters given to this trial.
      * 
      */
-    @InputImport(name="hyperparameters", required=true)
+    @Import(name="hyperparameters", required=true)
       private final Map<String,String> hyperparameters;
 
     public Map<String,String> getHyperparameters() {
@@ -80,7 +80,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * True if the trial is stopped early.
      * 
      */
-    @InputImport(name="isTrialStoppedEarly", required=true)
+    @Import(name="isTrialStoppedEarly", required=true)
       private final Boolean isTrialStoppedEarly;
 
     public Boolean getIsTrialStoppedEarly() {
@@ -91,7 +91,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * Start time for the trial.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -102,7 +102,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * The detailed state of the trial.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -113,7 +113,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * The trial id for these results.
      * 
      */
-    @InputImport(name="trialId", required=true)
+    @Import(name="trialId", required=true)
       private final String trialId;
 
     public String getTrialId() {
@@ -124,7 +124,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse extends io.pulu
      * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if this trial is part of a hyperparameter tuning job and the job's training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
      * 
      */
-    @InputImport(name="webAccessUris", required=true)
+    @Import(name="webAccessUris", required=true)
       private final Map<String,String> webAccessUris;
 
     public Map<String,String> getWebAccessUris() {

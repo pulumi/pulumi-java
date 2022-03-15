@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint {
     /**
      * The resource id of the private endpoint resource from Microsoft.Network provider.
@@ -17,8 +17,8 @@ public final class PrivateEndpointConnectionPropertiesResponsePrivateEndpoint {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private PrivateEndpointConnectionPropertiesResponsePrivateEndpoint(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private PrivateEndpointConnectionPropertiesResponsePrivateEndpoint(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

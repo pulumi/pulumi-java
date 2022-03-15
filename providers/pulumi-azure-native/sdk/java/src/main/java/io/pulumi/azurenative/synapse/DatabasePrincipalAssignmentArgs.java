@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.DatabasePrincipalRole;
 import io.pulumi.azurenative.synapse.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The name of the database in the Kusto pool.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -32,7 +32,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName", required=true)
+    @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -43,7 +43,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The name of the Kusto principalAssignment.
      * 
      */
-    @InputImport(name="principalAssignmentName")
+    @Import(name="principalAssignmentName")
       private final @Nullable Output<String> principalAssignmentName;
 
     public Output<String> getPrincipalAssignmentName() {
@@ -54,7 +54,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The principal ID assigned to the database principal. It can be a user email, application ID, or security group name.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -65,7 +65,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * Principal type.
      * 
      */
-    @InputImport(name="principalType", required=true)
+    @Import(name="principalType", required=true)
       private final Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> getPrincipalType() {
@@ -76,7 +76,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * Database principal role.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<Either<String,DatabasePrincipalRole>> role;
 
     public Output<Either<String,DatabasePrincipalRole>> getRole() {
@@ -98,7 +98,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The tenant id of the principal
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -109,7 +109,7 @@ public final class DatabasePrincipalAssignmentArgs extends io.pulumi.resources.R
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

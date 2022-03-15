@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetPrivateLinkScopeArgs extends io.pulumi.resources.InvokeArg
      * The name of the Azure Arc PrivateLinkScope resource.
      * 
      */
-    @InputImport(name="scopeName", required=true)
+    @Import(name="scopeName", required=true)
       private final String scopeName;
 
     public String getScopeName() {

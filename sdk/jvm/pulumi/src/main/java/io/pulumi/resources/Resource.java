@@ -6,7 +6,7 @@ import io.pulumi.Stack;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.Urn;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.Strings;
@@ -30,7 +30,7 @@ import static java.util.Objects.requireNonNull;
 @ParametersAreNonnullByDefault
 public abstract class Resource {
 
-    @OutputExport(name = Constants.UrnPropertyName, type = String.class)
+    @Export(name = Constants.UrnPropertyName, type = String.class)
     private /* final-ish */ Output<String> urn; // this can be set only once with the setter or reflection
     private final String type;
     private final String name;

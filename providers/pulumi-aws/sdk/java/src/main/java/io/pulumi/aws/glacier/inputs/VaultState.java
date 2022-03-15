@@ -5,7 +5,7 @@ package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.aws.glacier.inputs.VaultNotificationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The heredoc syntax or `file` function is helpful here. Use the [Glacier Developer Guide](https://docs.aws.amazon.com/amazonglacier/latest/dev/vault-access-policy.html) for more information on Glacier Vault Policy
      * 
      */
-    @InputImport(name="accessPolicy")
+    @Import(name="accessPolicy")
       private final @Nullable Output<String> accessPolicy;
 
     public Output<String> getAccessPolicy() {
@@ -32,7 +32,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the vault.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The URI of the vault that was created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The name of the Vault. Names can be between 1 and 255 characters long and the valid characters are a-z, A-Z, 0-9, '_' (underscore), '-' (hyphen), and '.' (period).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The notifications for the Vault. Fields documented below.
      * 
      */
-    @InputImport(name="notification")
+    @Import(name="notification")
       private final @Nullable Output<VaultNotificationGetArgs> notification;
 
     public Output<VaultNotificationGetArgs> getNotification() {
@@ -76,7 +76,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

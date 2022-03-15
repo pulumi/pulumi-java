@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyPlayReadyPlayRightResponse {
     /**
      * Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
@@ -80,21 +80,21 @@ public final class ContentKeyPolicyPlayReadyPlayRightResponse {
      */
     private final @Nullable Integer uncompressedDigitalVideoOpl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyPlayReadyPlayRightResponse(
-        @OutputCustomType.Parameter("agcAndColorStripeRestriction") @Nullable Integer agcAndColorStripeRestriction,
-        @OutputCustomType.Parameter("allowPassingVideoContentToUnknownOutput") String allowPassingVideoContentToUnknownOutput,
-        @OutputCustomType.Parameter("analogVideoOpl") @Nullable Integer analogVideoOpl,
-        @OutputCustomType.Parameter("compressedDigitalAudioOpl") @Nullable Integer compressedDigitalAudioOpl,
-        @OutputCustomType.Parameter("compressedDigitalVideoOpl") @Nullable Integer compressedDigitalVideoOpl,
-        @OutputCustomType.Parameter("digitalVideoOnlyContentRestriction") Boolean digitalVideoOnlyContentRestriction,
-        @OutputCustomType.Parameter("explicitAnalogTelevisionOutputRestriction") @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction,
-        @OutputCustomType.Parameter("firstPlayExpiration") @Nullable String firstPlayExpiration,
-        @OutputCustomType.Parameter("imageConstraintForAnalogComponentVideoRestriction") Boolean imageConstraintForAnalogComponentVideoRestriction,
-        @OutputCustomType.Parameter("imageConstraintForAnalogComputerMonitorRestriction") Boolean imageConstraintForAnalogComputerMonitorRestriction,
-        @OutputCustomType.Parameter("scmsRestriction") @Nullable Integer scmsRestriction,
-        @OutputCustomType.Parameter("uncompressedDigitalAudioOpl") @Nullable Integer uncompressedDigitalAudioOpl,
-        @OutputCustomType.Parameter("uncompressedDigitalVideoOpl") @Nullable Integer uncompressedDigitalVideoOpl) {
+        @CustomType.Parameter("agcAndColorStripeRestriction") @Nullable Integer agcAndColorStripeRestriction,
+        @CustomType.Parameter("allowPassingVideoContentToUnknownOutput") String allowPassingVideoContentToUnknownOutput,
+        @CustomType.Parameter("analogVideoOpl") @Nullable Integer analogVideoOpl,
+        @CustomType.Parameter("compressedDigitalAudioOpl") @Nullable Integer compressedDigitalAudioOpl,
+        @CustomType.Parameter("compressedDigitalVideoOpl") @Nullable Integer compressedDigitalVideoOpl,
+        @CustomType.Parameter("digitalVideoOnlyContentRestriction") Boolean digitalVideoOnlyContentRestriction,
+        @CustomType.Parameter("explicitAnalogTelevisionOutputRestriction") @Nullable ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse explicitAnalogTelevisionOutputRestriction,
+        @CustomType.Parameter("firstPlayExpiration") @Nullable String firstPlayExpiration,
+        @CustomType.Parameter("imageConstraintForAnalogComponentVideoRestriction") Boolean imageConstraintForAnalogComponentVideoRestriction,
+        @CustomType.Parameter("imageConstraintForAnalogComputerMonitorRestriction") Boolean imageConstraintForAnalogComputerMonitorRestriction,
+        @CustomType.Parameter("scmsRestriction") @Nullable Integer scmsRestriction,
+        @CustomType.Parameter("uncompressedDigitalAudioOpl") @Nullable Integer uncompressedDigitalAudioOpl,
+        @CustomType.Parameter("uncompressedDigitalVideoOpl") @Nullable Integer uncompressedDigitalVideoOpl) {
         this.agcAndColorStripeRestriction = agcAndColorStripeRestriction;
         this.allowPassingVideoContentToUnknownOutput = allowPassingVideoContentToUnknownOutput;
         this.analogVideoOpl = analogVideoOpl;

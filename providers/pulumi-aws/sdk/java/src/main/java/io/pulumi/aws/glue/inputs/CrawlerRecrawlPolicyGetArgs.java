@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CrawlerRecrawlPolicyGetArgs extends io.pulumi.resources.Resou
      * Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
      * 
      */
-    @InputImport(name="recrawlBehavior")
+    @Import(name="recrawlBehavior")
       private final @Nullable Output<String> recrawlBehavior;
 
     public Output<String> getRecrawlBehavior() {

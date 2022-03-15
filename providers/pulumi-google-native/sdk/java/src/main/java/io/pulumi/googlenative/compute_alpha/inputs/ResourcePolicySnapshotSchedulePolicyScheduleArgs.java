@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyHourlyCycleArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyWeeklyCycleArgs;
@@ -20,21 +20,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
 
-    @InputImport(name="dailySchedule")
+    @Import(name="dailySchedule")
       private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule;
 
     public Output<ResourcePolicyDailyCycleArgs> getDailySchedule() {
         return this.dailySchedule == null ? Output.empty() : this.dailySchedule;
     }
 
-    @InputImport(name="hourlySchedule")
+    @Import(name="hourlySchedule")
       private final @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule;
 
     public Output<ResourcePolicyHourlyCycleArgs> getHourlySchedule() {
         return this.hourlySchedule == null ? Output.empty() : this.hourlySchedule;
     }
 
-    @InputImport(name="weeklySchedule")
+    @Import(name="weeklySchedule")
       private final @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
 
     public Output<ResourcePolicyWeeklyCycleArgs> getWeeklySchedule() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableAttribute {
     /**
      * The name of the index
@@ -20,10 +20,10 @@ public final class TableAttribute {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableAttribute(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }

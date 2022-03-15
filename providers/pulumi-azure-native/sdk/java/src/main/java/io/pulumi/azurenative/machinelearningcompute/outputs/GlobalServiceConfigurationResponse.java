@@ -6,13 +6,13 @@ package io.pulumi.azurenative.machinelearningcompute.outputs;
 import io.pulumi.azurenative.machinelearningcompute.outputs.AutoScaleConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServiceAuthConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SslConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalServiceConfigurationResponse {
     /**
      * The auto-scale configuration
@@ -35,12 +35,12 @@ public final class GlobalServiceConfigurationResponse {
      */
     private final @Nullable SslConfigurationResponse ssl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalServiceConfigurationResponse(
-        @OutputCustomType.Parameter("autoScale") @Nullable AutoScaleConfigurationResponse autoScale,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("serviceAuth") @Nullable ServiceAuthConfigurationResponse serviceAuth,
-        @OutputCustomType.Parameter("ssl") @Nullable SslConfigurationResponse ssl) {
+        @CustomType.Parameter("autoScale") @Nullable AutoScaleConfigurationResponse autoScale,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("serviceAuth") @Nullable ServiceAuthConfigurationResponse serviceAuth,
+        @CustomType.Parameter("ssl") @Nullable SslConfigurationResponse ssl) {
         this.autoScale = autoScale;
         this.etag = etag;
         this.serviceAuth = serviceAuth;

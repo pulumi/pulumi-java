@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends io.pulu
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
     public Output<String> getDayOfWeek() {

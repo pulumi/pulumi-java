@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobCondition;
 import io.pulumi.kubernetes.batch_v1.outputs.UncountedTerminatedPods;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStatus {
     /**
      * The number of pending and running pods.
@@ -68,17 +68,17 @@ public final class JobStatus {
      */
     private final @Nullable UncountedTerminatedPods uncountedTerminatedPods;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatus(
-        @OutputCustomType.Parameter("active") @Nullable Integer active,
-        @OutputCustomType.Parameter("completedIndexes") @Nullable String completedIndexes,
-        @OutputCustomType.Parameter("completionTime") @Nullable String completionTime,
-        @OutputCustomType.Parameter("conditions") @Nullable List<JobCondition> conditions,
-        @OutputCustomType.Parameter("failed") @Nullable Integer failed,
-        @OutputCustomType.Parameter("ready") @Nullable Integer ready,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("succeeded") @Nullable Integer succeeded,
-        @OutputCustomType.Parameter("uncountedTerminatedPods") @Nullable UncountedTerminatedPods uncountedTerminatedPods) {
+        @CustomType.Parameter("active") @Nullable Integer active,
+        @CustomType.Parameter("completedIndexes") @Nullable String completedIndexes,
+        @CustomType.Parameter("completionTime") @Nullable String completionTime,
+        @CustomType.Parameter("conditions") @Nullable List<JobCondition> conditions,
+        @CustomType.Parameter("failed") @Nullable Integer failed,
+        @CustomType.Parameter("ready") @Nullable Integer ready,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("succeeded") @Nullable Integer succeeded,
+        @CustomType.Parameter("uncountedTerminatedPods") @Nullable UncountedTerminatedPods uncountedTerminatedPods) {
         this.active = active;
         this.completedIndexes = completedIndexes;
         this.completionTime = completionTime;

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ManagedNetworkPeeringPolicyPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedNetworkPeeringPolicyResult {
     /**
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -38,13 +38,13 @@ public final class GetManagedNetworkPeeringPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedNetworkPeeringPolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ManagedNetworkPeeringPolicyPropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ManagedNetworkPeeringPolicyPropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

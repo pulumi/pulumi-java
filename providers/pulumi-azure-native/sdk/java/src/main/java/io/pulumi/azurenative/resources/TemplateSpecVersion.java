@@ -9,7 +9,7 @@ import io.pulumi.azurenative.resources.outputs.LinkedTemplateArtifactResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * Template Spec version description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * An array of linked template artifacts.
      * 
      */
-    @OutputExport(name="linkedTemplates", type=List.class, parameters={LinkedTemplateArtifactResponse.class})
+    @Export(name="linkedTemplates", type=List.class, parameters={LinkedTemplateArtifactResponse.class})
     private Output</* @Nullable */ List<LinkedTemplateArtifactResponse>> linkedTemplates;
 
     /**
@@ -66,7 +66,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * The location of the Template Spec Version. It must match the location of the parent Template Spec.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * The main Azure Resource Manager template content.
      * 
      */
-    @OutputExport(name="mainTemplate", type=Object.class, parameters={})
+    @Export(name="mainTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> mainTemplate;
 
     /**
@@ -94,7 +94,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * The version metadata. Metadata is an open-ended object and is typically a collection of key-value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -108,7 +108,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -136,7 +136,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -164,7 +164,7 @@ public class TemplateSpecVersion extends io.pulumi.resources.CustomResource {
      * The Azure Resource Manager template UI definition content.
      * 
      */
-    @OutputExport(name="uiFormDefinition", type=Object.class, parameters={})
+    @Export(name="uiFormDefinition", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> uiFormDefinition;
 
     /**

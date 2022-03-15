@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse {
     /**
      * Number of conversations the issue model has analyzed at this point in time.
@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      */
     private final String unclassifiedConversationsCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(
-        @OutputCustomType.Parameter("analyzedConversationsCount") String analyzedConversationsCount,
-        @OutputCustomType.Parameter("issueStats") Map<String,String> issueStats,
-        @OutputCustomType.Parameter("unclassifiedConversationsCount") String unclassifiedConversationsCount) {
+        @CustomType.Parameter("analyzedConversationsCount") String analyzedConversationsCount,
+        @CustomType.Parameter("issueStats") Map<String,String> issueStats,
+        @CustomType.Parameter("unclassifiedConversationsCount") String unclassifiedConversationsCount) {
         this.analyzedConversationsCount = analyzedConversationsCount;
         this.issueStats = issueStats;
         this.unclassifiedConversationsCount = unclassifiedConversationsCount;

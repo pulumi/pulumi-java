@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
 
     public static final GlobalTableTimeToLiveSpecificationArgs Empty = new GlobalTableTimeToLiveSpecificationArgs();
 
-    @InputImport(name="attributeName")
+    @Import(name="attributeName")
       private final @Nullable Output<String> attributeName;
 
     public Output<String> getAttributeName() {
         return this.attributeName == null ? Output.empty() : this.attributeName;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

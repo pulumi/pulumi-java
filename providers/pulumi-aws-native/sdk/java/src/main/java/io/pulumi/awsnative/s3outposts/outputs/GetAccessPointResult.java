@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointResult {
     /**
      * The Amazon Resource Name (ARN) of the specified AccessPoint.
@@ -23,10 +23,10 @@ public final class GetAccessPointResult {
      */
     private final @Nullable Object policy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("policy") @Nullable Object policy) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("policy") @Nullable Object policy) {
         this.arn = arn;
         this.policy = policy;
     }

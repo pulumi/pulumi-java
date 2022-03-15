@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets administrator username.
      * 
      */
-    @InputImport(name="adminUsername")
+    @Import(name="adminUsername")
       private final @Nullable String adminUsername;
 
     public Optional<String> getAdminUsername() {
@@ -33,7 +33,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets computer name.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable String computerName;
 
     public Optional<String> getComputerName() {
@@ -44,7 +44,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets os name.
      * 
      */
-    @InputImport(name="osName", required=true)
+    @Import(name="osName", required=true)
       private final String osName;
 
     public String getOsName() {
@@ -55,7 +55,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the type of the os.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -66,7 +66,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the current running status of VMware Tools running in the guest operating system.
      * 
      */
-    @InputImport(name="toolsRunningStatus", required=true)
+    @Import(name="toolsRunningStatus", required=true)
       private final String toolsRunningStatus;
 
     public String getToolsRunningStatus() {
@@ -77,7 +77,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the current version of VMware Tools.
      * 
      */
-    @InputImport(name="toolsVersion", required=true)
+    @Import(name="toolsVersion", required=true)
       private final String toolsVersion;
 
     public String getToolsVersion() {
@@ -88,7 +88,7 @@ public final class OsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
      */
-    @InputImport(name="toolsVersionStatus", required=true)
+    @Import(name="toolsVersionStatus", required=true)
       private final String toolsVersionStatus;
 
     public String getToolsVersionStatus() {

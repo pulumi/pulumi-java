@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.BackupShortTermRetentionPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomRe
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomRe
      * The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
      */
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**
@@ -63,7 +63,7 @@ public class BackupShortTermRetentionPolicy extends io.pulumi.resources.CustomRe
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

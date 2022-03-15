@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
      * Connection string value.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
@@ -33,7 +33,7 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
      * Name of connection string.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -44,7 +44,7 @@ public final class ConnStringInfoResponse extends io.pulumi.resources.InvokeArgs
      * Type of database.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

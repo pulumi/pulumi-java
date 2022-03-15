@@ -9,7 +9,7 @@ import io.pulumi.azurenative.digitaltwins.outputs.DigitalTwinsIdentityResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * Time when DigitalTwinsInstance was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -51,7 +51,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * Api endpoint to work with DigitalTwinsInstance.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -65,7 +65,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * The managed identity for the DigitalTwinsInstance.
      * 
      */
-    @OutputExport(name="identity", type=DigitalTwinsIdentityResponse.class, parameters={})
+    @Export(name="identity", type=DigitalTwinsIdentityResponse.class, parameters={})
     private Output</* @Nullable */ DigitalTwinsIdentityResponse> identity;
 
     /**
@@ -79,7 +79,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * Time when DigitalTwinsInstance was updated.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -93,7 +93,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -117,7 +117,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
@@ -127,7 +127,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * The provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -141,7 +141,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * Public network access for the DigitalTwinsInstance.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -155,7 +155,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -169,7 +169,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

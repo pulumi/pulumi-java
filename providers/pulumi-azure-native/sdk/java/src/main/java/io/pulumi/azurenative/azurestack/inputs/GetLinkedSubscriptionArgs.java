@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
      * Name of the Linked Subscription resource.
      * 
      */
-    @InputImport(name="linkedSubscriptionName", required=true)
+    @Import(name="linkedSubscriptionName", required=true)
       private final String linkedSubscriptionName;
 
     public String getLinkedSubscriptionName() {
@@ -27,7 +27,7 @@ public final class GetLinkedSubscriptionArgs extends io.pulumi.resources.InvokeA
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
     public String getResourceGroup() {

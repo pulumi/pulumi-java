@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ebs.VolumeArgs;
 import io.pulumi.aws.ebs.inputs.VolumeState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,7 +35,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The AZ where the EBS volume will exist.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -63,7 +63,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * If true, the disk will be encrypted.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output<Boolean> encrypted;
 
     /**
@@ -77,7 +77,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The amount of IOPS to provision for the disk. Only valid for `type` of `io1`, `io2` or `gp3`.
      * 
      */
-    @OutputExport(name="iops", type=Integer.class, parameters={})
+    @Export(name="iops", type=Integer.class, parameters={})
     private Output<Integer> iops;
 
     /**
@@ -87,7 +87,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
     public Output<Integer> getIops() {
         return this.iops;
     }
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -97,7 +97,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
      * 
      */
-    @OutputExport(name="multiAttachEnabled", type=Boolean.class, parameters={})
+    @Export(name="multiAttachEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> multiAttachEnabled;
 
     /**
@@ -111,7 +111,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Outpost.
      * 
      */
-    @OutputExport(name="outpostArn", type=String.class, parameters={})
+    @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
     /**
@@ -125,7 +125,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The size of the drive in GiBs.
      * 
      */
-    @OutputExport(name="size", type=Integer.class, parameters={})
+    @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
@@ -139,7 +139,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * A snapshot to base the EBS volume off of.
      * 
      */
-    @OutputExport(name="snapshotId", type=String.class, parameters={})
+    @Export(name="snapshotId", type=String.class, parameters={})
     private Output<String> snapshotId;
 
     /**
@@ -153,7 +153,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -167,7 +167,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -181,7 +181,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The throughput that the volume supports, in MiB/s. Only valid for `type` of `gp3`.
      * 
      */
-    @OutputExport(name="throughput", type=Integer.class, parameters={})
+    @Export(name="throughput", type=Integer.class, parameters={})
     private Output<Integer> throughput;
 
     /**
@@ -195,7 +195,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The type of EBS volume. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

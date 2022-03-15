@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.wafv2.WebAclAssociationArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -37,7 +37,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**
@@ -51,7 +51,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
      * 
      */
-    @OutputExport(name="webAclArn", type=String.class, parameters={})
+    @Export(name="webAclArn", type=String.class, parameters={})
     private Output<String> webAclArn;
 
     /**

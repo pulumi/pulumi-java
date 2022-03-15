@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStepArchiveExtraction;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStepDpkgInstallation;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStepFileCopy;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeUpdateStep {
     /**
      * Extracts an archive into the specified directory.
@@ -60,15 +60,15 @@ public final class GuestPoliciesRecipeUpdateStep {
      */
     private final @Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeUpdateStep(
-        @OutputCustomType.Parameter("archiveExtraction") @Nullable GuestPoliciesRecipeUpdateStepArchiveExtraction archiveExtraction,
-        @OutputCustomType.Parameter("dpkgInstallation") @Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation,
-        @OutputCustomType.Parameter("fileCopy") @Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy,
-        @OutputCustomType.Parameter("fileExec") @Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec,
-        @OutputCustomType.Parameter("msiInstallation") @Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation,
-        @OutputCustomType.Parameter("rpmInstallation") @Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation,
-        @OutputCustomType.Parameter("scriptRun") @Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
+        @CustomType.Parameter("archiveExtraction") @Nullable GuestPoliciesRecipeUpdateStepArchiveExtraction archiveExtraction,
+        @CustomType.Parameter("dpkgInstallation") @Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation,
+        @CustomType.Parameter("fileCopy") @Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy,
+        @CustomType.Parameter("fileExec") @Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec,
+        @CustomType.Parameter("msiInstallation") @Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation,
+        @CustomType.Parameter("rpmInstallation") @Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation,
+        @CustomType.Parameter("scriptRun") @Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
         this.archiveExtraction = archiveExtraction;
         this.dpkgInstallation = dpkgInstallation;
         this.fileCopy = fileCopy;

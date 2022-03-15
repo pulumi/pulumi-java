@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.RowResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * The rows of content to display.
      * 
      */
-    @InputImport(name="rows", required=true)
+    @Import(name="rows", required=true)
       private final List<RowResponse> rows;
 
     public List<RowResponse> getRows() {

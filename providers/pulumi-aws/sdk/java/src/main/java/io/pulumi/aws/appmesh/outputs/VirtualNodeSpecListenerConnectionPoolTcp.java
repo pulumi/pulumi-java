@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerConnectionPoolTcp {
     /**
      * Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerConnectionPoolTcp {
      */
     private final Integer maxConnections;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecListenerConnectionPoolTcp(@OutputCustomType.Parameter("maxConnections") Integer maxConnections) {
+    @CustomType.Constructor
+    private VirtualNodeSpecListenerConnectionPoolTcp(@CustomType.Parameter("maxConnections") Integer maxConnections) {
         this.maxConnections = maxConnections;
     }
 

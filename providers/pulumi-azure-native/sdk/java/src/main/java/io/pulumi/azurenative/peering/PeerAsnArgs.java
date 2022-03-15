@@ -7,7 +7,7 @@ import io.pulumi.azurenative.peering.enums.ValidationState;
 import io.pulumi.azurenative.peering.inputs.ContactDetailArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The Autonomous System Number (ASN) of the peer.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable Output<Integer> peerAsn;
 
     public Output<Integer> getPeerAsn() {
@@ -34,7 +34,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The peer ASN name.
      * 
      */
-    @InputImport(name="peerAsnName")
+    @Import(name="peerAsnName")
       private final @Nullable Output<String> peerAsnName;
 
     public Output<String> getPeerAsnName() {
@@ -45,7 +45,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The contact details of the peer.
      * 
      */
-    @InputImport(name="peerContactDetail")
+    @Import(name="peerContactDetail")
       private final @Nullable Output<List<ContactDetailArgs>> peerContactDetail;
 
     public Output<List<ContactDetailArgs>> getPeerContactDetail() {
@@ -56,7 +56,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the peer.
      * 
      */
-    @InputImport(name="peerName")
+    @Import(name="peerName")
       private final @Nullable Output<String> peerName;
 
     public Output<String> getPeerName() {
@@ -67,7 +67,7 @@ public final class PeerAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The validation state of the ASN associated with the peer.
      * 
      */
-    @InputImport(name="validationState")
+    @Import(name="validationState")
       private final @Nullable Output<Either<String,ValidationState>> validationState;
 
     public Output<Either<String,ValidationState>> getValidationState() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.CustomEntityStoreAssignmentArgs;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * The link to entity store database.
      * 
      */
-    @OutputExport(name="entityStoreDatabaseLink", type=String.class, parameters={})
+    @Export(name="entityStoreDatabaseLink", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityStoreDatabaseLink;
 
     /**
@@ -49,7 +49,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
      */
-    @OutputExport(name="principal", type=String.class, parameters={})
+    @Export(name="principal", type=String.class, parameters={})
     private Output</* @Nullable */ String> principal;
 
     /**
@@ -77,7 +77,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -91,7 +91,7 @@ public class CustomEntityStoreAssignment extends io.pulumi.resources.CustomResou
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

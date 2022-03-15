@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.DataMaskingEntityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataMaskingResponse {
     /**
      * Masking settings for headers
@@ -22,10 +22,10 @@ public final class DataMaskingResponse {
      */
     private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataMaskingResponse(
-        @OutputCustomType.Parameter("headers") @Nullable List<DataMaskingEntityResponse> headers,
-        @OutputCustomType.Parameter("queryParams") @Nullable List<DataMaskingEntityResponse> queryParams) {
+        @CustomType.Parameter("headers") @Nullable List<DataMaskingEntityResponse> headers,
+        @CustomType.Parameter("queryParams") @Nullable List<DataMaskingEntityResponse> queryParams) {
         this.headers = headers;
         this.queryParams = queryParams;
     }

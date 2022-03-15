@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServiceTreeInfoArgs Empty = new ServiceTreeInfoArgs();
 
-    @InputImport(name="componentId")
+    @Import(name="componentId")
       private final @Nullable Output<String> componentId;
 
     public Output<String> getComponentId() {
         return this.componentId == null ? Output.empty() : this.componentId;
     }
 
-    @InputImport(name="serviceId")
+    @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
     public Output<String> getServiceId() {

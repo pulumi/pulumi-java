@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -30,7 +30,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * The name of the network interface.
      * 
      */
-    @InputImport(name="networkInterfaceName", required=true)
+    @Import(name="networkInterfaceName", required=true)
       private final Output<String> networkInterfaceName;
 
     public Output<String> getNetworkInterfaceName() {
@@ -52,7 +52,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * The name of the tap configuration.
      * 
      */
-    @InputImport(name="tapConfigurationName")
+    @Import(name="tapConfigurationName")
       private final @Nullable Output<String> tapConfigurationName;
 
     public Output<String> getTapConfigurationName() {
@@ -74,7 +74,7 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * The reference to the Virtual Network Tap resource.
      * 
      */
-    @InputImport(name="virtualNetworkTap")
+    @Import(name="virtualNetworkTap")
       private final @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
     public Output<VirtualNetworkTapArgs> getVirtualNetworkTap() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ebs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetEbsVolumesFilter extends io.pulumi.resources.InvokeArgs {
      * For example, if matching against the `size` filter, use:
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class GetEbsVolumesFilter extends io.pulumi.resources.InvokeArgs {
      * EBS Volume IDs will be selected if any one of the given values match.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

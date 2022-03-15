@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.relay.WCFRelayArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * The time the WCF relay was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -50,7 +50,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * Returns true if the relay is dynamic; otherwise, false.
      * 
      */
-    @OutputExport(name="isDynamic", type=Boolean.class, parameters={})
+    @Export(name="isDynamic", type=Boolean.class, parameters={})
     private Output<Boolean> isDynamic;
 
     /**
@@ -64,7 +64,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * The number of listeners for this relay. Note that min :1 and max:25 are supported.
      * 
      */
-    @OutputExport(name="listenerCount", type=Integer.class, parameters={})
+    @Export(name="listenerCount", type=Integer.class, parameters={})
     private Output<Integer> listenerCount;
 
     /**
@@ -78,7 +78,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * WCF relay type.
      * 
      */
-    @OutputExport(name="relayType", type=String.class, parameters={})
+    @Export(name="relayType", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayType;
 
     /**
@@ -106,7 +106,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * Returns true if client authorization is needed for this relay; otherwise, false.
      * 
      */
-    @OutputExport(name="requiresClientAuthorization", type=Boolean.class, parameters={})
+    @Export(name="requiresClientAuthorization", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresClientAuthorization;
 
     /**
@@ -120,7 +120,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * Returns true if transport security is needed for this relay; otherwise, false.
      * 
      */
-    @OutputExport(name="requiresTransportSecurity", type=Boolean.class, parameters={})
+    @Export(name="requiresTransportSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresTransportSecurity;
 
     /**
@@ -134,7 +134,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -148,7 +148,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * The time the namespace was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**
@@ -162,7 +162,7 @@ public class WCFRelay extends io.pulumi.resources.CustomResource {
      * The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    @OutputExport(name="userMetadata", type=String.class, parameters={})
+    @Export(name="userMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> userMetadata;
 
     /**

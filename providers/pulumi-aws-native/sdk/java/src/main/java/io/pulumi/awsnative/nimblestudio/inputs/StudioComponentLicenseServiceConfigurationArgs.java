@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
      * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {

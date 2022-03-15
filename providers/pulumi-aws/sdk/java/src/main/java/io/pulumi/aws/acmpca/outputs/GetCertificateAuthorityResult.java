@@ -4,13 +4,13 @@
 package io.pulumi.aws.acmpca.outputs;
 
 import io.pulumi.aws.acmpca.outputs.GetCertificateAuthorityRevocationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateAuthorityResult {
     private final String arn;
     /**
@@ -75,20 +75,20 @@ public final class GetCertificateAuthorityResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateAuthorityResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("certificateChain") String certificateChain,
-        @OutputCustomType.Parameter("certificateSigningRequest") String certificateSigningRequest,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("notAfter") String notAfter,
-        @OutputCustomType.Parameter("notBefore") String notBefore,
-        @OutputCustomType.Parameter("revocationConfigurations") List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations,
-        @OutputCustomType.Parameter("serial") String serial,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("certificateChain") String certificateChain,
+        @CustomType.Parameter("certificateSigningRequest") String certificateSigningRequest,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("notAfter") String notAfter,
+        @CustomType.Parameter("notBefore") String notBefore,
+        @CustomType.Parameter("revocationConfigurations") List<GetCertificateAuthorityRevocationConfiguration> revocationConfigurations,
+        @CustomType.Parameter("serial") String serial,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateChain = certificateChain;

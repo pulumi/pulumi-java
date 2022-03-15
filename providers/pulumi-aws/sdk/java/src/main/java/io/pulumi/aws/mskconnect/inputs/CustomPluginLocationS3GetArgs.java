@@ -4,7 +4,7 @@
 package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CustomPluginLocationS3GetArgs extends io.pulumi.resources.Res
      * The Amazon Resource Name (ARN) of an S3 bucket.
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -29,7 +29,7 @@ public final class CustomPluginLocationS3GetArgs extends io.pulumi.resources.Res
      * The file key for an object in an S3 bucket.
      * 
      */
-    @InputImport(name="fileKey", required=true)
+    @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
     public Output<String> getFileKey() {
@@ -40,7 +40,7 @@ public final class CustomPluginLocationS3GetArgs extends io.pulumi.resources.Res
      * The version of an object in an S3 bucket.
      * 
      */
-    @InputImport(name="objectVersion")
+    @Import(name="objectVersion")
       private final @Nullable Output<String> objectVersion;
 
     public Output<String> getObjectVersion() {

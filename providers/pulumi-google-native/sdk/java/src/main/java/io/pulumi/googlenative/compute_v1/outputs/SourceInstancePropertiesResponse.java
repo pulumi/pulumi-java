@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.MetadataResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NetworkInterfaceResponse;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceInstancePropertiesResponse {
     /**
      * Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
@@ -85,21 +85,21 @@ public final class SourceInstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceInstancePropertiesResponse(
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disks") List<SavedAttachedDiskResponse> disks,
-        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
-        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
-        @OutputCustomType.Parameter("tags") TagsResponse tags) {
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disks") List<SavedAttachedDiskResponse> disks,
+        @CustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") MetadataResponse metadata,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @CustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @CustomType.Parameter("tags") TagsResponse tags) {
         this.canIpForward = canIpForward;
         this.deletionProtection = deletionProtection;
         this.description = description;

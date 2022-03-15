@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse {
     /**
      * Knowledge documents to query from. Format: `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are supported.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      */
     private final List<String> documents;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(@OutputCustomType.Parameter("documents") List<String> documents) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(@CustomType.Parameter("documents") List<String> documents) {
         this.documents = documents;
     }
 

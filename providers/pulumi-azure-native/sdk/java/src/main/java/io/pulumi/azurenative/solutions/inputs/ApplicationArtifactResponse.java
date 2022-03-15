@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApplicationArtifactResponse extends io.pulumi.resources.Invok
      * The managed application artifact name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class ApplicationArtifactResponse extends io.pulumi.resources.Invok
      * The managed application artifact type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -42,7 +42,7 @@ public final class ApplicationArtifactResponse extends io.pulumi.resources.Invok
      * The managed application artifact blob uri.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

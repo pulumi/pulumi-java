@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
      * The TrackAttribute to filter the tracks by.
      * 
      */
-    @InputImport(name="attribute", required=true)
+    @Import(name="attribute", required=true)
       private final String attribute;
 
     public String getAttribute() {
@@ -33,7 +33,7 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
      * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {
@@ -44,7 +44,7 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
      * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.
      * 
      */
-    @InputImport(name="filterValue")
+    @Import(name="filterValue")
       private final @Nullable String filterValue;
 
     public Optional<String> getFilterValue() {
@@ -56,7 +56,7 @@ public final class SelectVideoTrackByAttributeResponse extends io.pulumi.resourc
      * Expected value is '#Microsoft.Media.SelectVideoTrackByAttribute'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

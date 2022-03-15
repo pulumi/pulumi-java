@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.ManagedIdentitySettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
      * Managed identity settings for upstream.
      * 
      */
-    @InputImport(name="managedIdentity")
+    @Import(name="managedIdentity")
       private final @Nullable ManagedIdentitySettingsResponse managedIdentity;
 
     public Optional<ManagedIdentitySettingsResponse> getManagedIdentity() {
@@ -34,7 +34,7 @@ public final class UpstreamAuthSettingsResponse extends io.pulumi.resources.Invo
      * Upstream auth type enum.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

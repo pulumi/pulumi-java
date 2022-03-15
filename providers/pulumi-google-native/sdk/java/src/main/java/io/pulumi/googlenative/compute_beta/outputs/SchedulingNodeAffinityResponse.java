@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchedulingNodeAffinityResponse {
     /**
      * Corresponds to the label key of Node resource.
@@ -26,11 +26,11 @@ public final class SchedulingNodeAffinityResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulingNodeAffinityResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.operator = operator;
         this.values = values;

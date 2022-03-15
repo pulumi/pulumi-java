@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
 
     public static final ResourceTypeRegistrationPropertiesResponseIdentityManagement Empty = new ResourceTypeRegistrationPropertiesResponseIdentityManagement();
 
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

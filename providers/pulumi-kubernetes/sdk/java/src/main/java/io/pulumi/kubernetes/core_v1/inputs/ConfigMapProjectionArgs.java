@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.KeyToPathArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class ConfigMapProjectionArgs extends io.pulumi.resources.ResourceA
      * If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<KeyToPathArgs>> items;
 
     public Output<List<KeyToPathArgs>> getItems() {
@@ -38,7 +38,7 @@ public final class ConfigMapProjectionArgs extends io.pulumi.resources.ResourceA
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class ConfigMapProjectionArgs extends io.pulumi.resources.ResourceA
      * Specify whether the ConfigMap or its keys must be defined
      * 
      */
-    @InputImport(name="optional")
+    @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
     public Output<Boolean> getOptional() {

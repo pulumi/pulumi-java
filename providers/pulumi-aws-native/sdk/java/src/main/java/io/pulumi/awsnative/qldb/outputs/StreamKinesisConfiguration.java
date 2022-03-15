@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.qldb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamKinesisConfiguration {
     private final @Nullable Boolean aggregationEnabled;
     private final @Nullable String streamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamKinesisConfiguration(
-        @OutputCustomType.Parameter("aggregationEnabled") @Nullable Boolean aggregationEnabled,
-        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn) {
+        @CustomType.Parameter("aggregationEnabled") @Nullable Boolean aggregationEnabled,
+        @CustomType.Parameter("streamArn") @Nullable String streamArn) {
         this.aggregationEnabled = aggregationEnabled;
         this.streamArn = streamArn;
     }

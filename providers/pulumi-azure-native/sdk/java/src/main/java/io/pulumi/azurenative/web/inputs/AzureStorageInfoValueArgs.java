@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.AzureStorageType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * Access key for the storage account.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
@@ -34,7 +34,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * Name of the storage account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -45,7 +45,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * Path to mount the storage within the site's runtime environment.
      * 
      */
-    @InputImport(name="mountPath")
+    @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
     public Output<String> getMountPath() {
@@ -56,7 +56,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * Name of the file share (container name, for Blob storage).
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -67,7 +67,7 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
      * Type of storage.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<AzureStorageType> type;
 
     public Output<AzureStorageType> getType() {

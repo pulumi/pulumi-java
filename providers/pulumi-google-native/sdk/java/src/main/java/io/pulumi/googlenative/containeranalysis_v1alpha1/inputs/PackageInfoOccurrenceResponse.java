@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * A place for the SPDX file creator to record any general comments about the package being described
      * 
      */
-    @InputImport(name="comment", required=true)
+    @Import(name="comment", required=true)
       private final String comment;
 
     public String getComment() {
@@ -32,7 +32,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * Provide the actual file name of the package, or path of the directory being treated as a package
      * 
      */
-    @InputImport(name="filename", required=true)
+    @Import(name="filename", required=true)
       private final String filename;
 
     public String getFilename() {
@@ -43,7 +43,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
      * 
      */
-    @InputImport(name="homePage", required=true)
+    @Import(name="homePage", required=true)
       private final String homePage;
 
     public String getHomePage() {
@@ -54,7 +54,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * package or alternative values, if the governing license cannot be determined
      * 
      */
-    @InputImport(name="licenseConcluded", required=true)
+    @Import(name="licenseConcluded", required=true)
       private final LicenseResponse licenseConcluded;
 
     public LicenseResponse getLicenseConcluded() {
@@ -65,7 +65,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {
@@ -76,7 +76,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * Provide a place for the SPDX file creator to record any relevant background information or additional comments about the origin of the package
      * 
      */
-    @InputImport(name="sourceInfo", required=true)
+    @Import(name="sourceInfo", required=true)
       private final String sourceInfo;
 
     public String getSourceInfo() {
@@ -87,7 +87,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * A short description of the package
      * 
      */
-    @InputImport(name="summaryDescription", required=true)
+    @Import(name="summaryDescription", required=true)
       private final String summaryDescription;
 
     public String getSummaryDescription() {
@@ -98,7 +98,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * Identify the full name of the package as given by the Package Originator
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {
@@ -109,7 +109,7 @@ public final class PackageInfoOccurrenceResponse extends io.pulumi.resources.Inv
      * Identify the version of the package
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

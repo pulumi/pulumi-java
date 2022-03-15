@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotPlacementTenancy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetSpotPlacement {
     private final @Nullable String availabilityZone;
     private final @Nullable String groupName;
     private final @Nullable SpotFleetSpotPlacementTenancy tenancy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetSpotPlacement(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
-        @OutputCustomType.Parameter("tenancy") @Nullable SpotFleetSpotPlacementTenancy tenancy) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("groupName") @Nullable String groupName,
+        @CustomType.Parameter("tenancy") @Nullable SpotFleetSpotPlacementTenancy tenancy) {
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;
         this.tenancy = tenancy;

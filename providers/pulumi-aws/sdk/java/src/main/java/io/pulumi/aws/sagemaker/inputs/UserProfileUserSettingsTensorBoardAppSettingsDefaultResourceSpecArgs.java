@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
      * The instance type.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -29,7 +29,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
      * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * 
      */
-    @InputImport(name="lifecycleConfigArn")
+    @Import(name="lifecycleConfigArn")
       private final @Nullable Output<String> lifecycleConfigArn;
 
     public Output<String> getLifecycleConfigArn() {
@@ -40,7 +40,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
      * The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
      */
-    @InputImport(name="sagemakerImageArn")
+    @Import(name="sagemakerImageArn")
       private final @Nullable Output<String> sagemakerImageArn;
 
     public Output<String> getSagemakerImageArn() {
@@ -51,7 +51,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
      * The ARN of the image version created on the instance.
      * 
      */
-    @InputImport(name="sagemakerImageVersionArn")
+    @Import(name="sagemakerImageVersionArn")
       private final @Nullable Output<String> sagemakerImageVersionArn;
 
     public Output<String> getSagemakerImageVersionArn() {

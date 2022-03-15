@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hdinsight.ApplicationArgs;
 import io.pulumi.azurenative.hdinsight.outputs.ApplicationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ETag for the application
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The properties of the application.
      * 
      */
-    @OutputExport(name="properties", type=ApplicationPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ApplicationPropertiesResponse.class, parameters={})
     private Output<ApplicationPropertiesResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The tags for the application.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -92,7 +92,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

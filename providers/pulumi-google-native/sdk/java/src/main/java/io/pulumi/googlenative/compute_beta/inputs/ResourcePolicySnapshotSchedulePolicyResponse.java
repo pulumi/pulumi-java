@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedulePolicyScheduleResponse;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse;
@@ -22,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
      * Retention policy applied to snapshots created by this resource policy.
      * 
      */
-    @InputImport(name="retentionPolicy", required=true)
+    @Import(name="retentionPolicy", required=true)
       private final ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy;
 
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse getRetentionPolicy() {
@@ -33,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
      * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule;
 
     public ResourcePolicySnapshotSchedulePolicyScheduleResponse getSchedule() {
@@ -44,7 +44,7 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
      * Properties with which snapshots are created such as labels, encryption keys.
      * 
      */
-    @InputImport(name="snapshotProperties", required=true)
+    @Import(name="snapshotProperties", required=true)
       private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
     public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse getSnapshotProperties() {

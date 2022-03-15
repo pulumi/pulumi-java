@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExec;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFile;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkg;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
     /**
      * Exec resource
@@ -41,13 +41,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResource(
-        @OutputCustomType.Parameter("exec") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec,
-        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("pkg") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg,
-        @OutputCustomType.Parameter("repository") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
+        @CustomType.Parameter("exec") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec,
+        @CustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("pkg") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg,
+        @CustomType.Parameter("repository") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
         this.exec = exec;
         this.file = file;
         this.id = id;

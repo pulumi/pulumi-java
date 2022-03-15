@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * instance (see list below)
      * 
      */
-    @InputImport(name="availabilityZone", required=true)
+    @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -31,7 +31,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
      * 
      */
-    @InputImport(name="blueprintId", required=true)
+    @Import(name="blueprintId", required=true)
       private final Output<String> blueprintId;
 
     public Output<String> getBlueprintId() {
@@ -42,7 +42,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The bundle of specification information (see list below)
      * 
      */
-    @InputImport(name="bundleId", required=true)
+    @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
 
     public Output<String> getBundleId() {
@@ -54,7 +54,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
      * 
      */
-    @InputImport(name="keyPairName")
+    @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
     public Output<String> getKeyPairName() {
@@ -65,7 +65,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * launch script to configure server with additional user data
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {

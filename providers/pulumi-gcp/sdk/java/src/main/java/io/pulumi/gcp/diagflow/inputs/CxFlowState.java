@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowNluSettingsGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteGetArgs;
@@ -22,7 +22,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the flow.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -48,7 +48,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="eventHandlers")
+    @Import(name="eventHandlers")
       private final @Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers;
 
     public Output<List<CxFlowEventHandlerGetArgs>> getEventHandlers() {
@@ -64,7 +64,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -76,7 +76,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of this event handler.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nluSettings")
+    @Import(name="nluSettings")
       private final @Nullable Output<CxFlowNluSettingsGetArgs> nluSettings;
 
     public Output<CxFlowNluSettingsGetArgs> getNluSettings() {
@@ -100,7 +100,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -114,7 +114,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
      * 
      */
-    @InputImport(name="transitionRouteGroups")
+    @Import(name="transitionRouteGroups")
       private final @Nullable Output<List<String>> transitionRouteGroups;
 
     public Output<List<String>> getTransitionRouteGroups() {
@@ -127,7 +127,7 @@ public final class CxFlowState extends io.pulumi.resources.ResourceArgs {
      * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
-    @InputImport(name="transitionRoutes")
+    @Import(name="transitionRoutes")
       private final @Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
 
     public Output<List<CxFlowTransitionRouteGetArgs>> getTransitionRoutes() {

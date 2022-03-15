@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -29,7 +29,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
      * 
      */
-    @InputImport(name="css")
+    @Import(name="css")
       private final @Nullable Output<String> css;
 
     public Output<String> getCss() {
@@ -40,7 +40,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
      * 
      */
-    @InputImport(name="imageFile")
+    @Import(name="imageFile")
       private final @Nullable Output<String> imageFile;
 
     public Output<String> getImageFile() {
@@ -51,7 +51,7 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
      * The user pool ID for the user pool.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

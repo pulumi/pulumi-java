@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
      * List of source database names to collect tables for
      * 
      */
-    @InputImport(name="selectedSourceDatabases", required=true)
+    @Import(name="selectedSourceDatabases", required=true)
       private final Output<List<String>> selectedSourceDatabases;
 
     public Output<List<String>> getSelectedSourceDatabases() {
@@ -34,7 +34,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
      * List of target database names to collect tables for
      * 
      */
-    @InputImport(name="selectedTargetDatabases", required=true)
+    @Import(name="selectedTargetDatabases", required=true)
       private final Output<List<String>> selectedTargetDatabases;
 
     public Output<List<String>> getSelectedTargetDatabases() {
@@ -45,7 +45,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
      * Connection information for SQL Server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
@@ -56,7 +56,7 @@ public final class GetUserTablesSqlSyncTaskInputArgs extends io.pulumi.resources
      * Connection information for SQL DB
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {

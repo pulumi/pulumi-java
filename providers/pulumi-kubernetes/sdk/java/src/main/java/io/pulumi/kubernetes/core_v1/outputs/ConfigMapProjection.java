@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.KeyToPath;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMapProjection {
     /**
      * If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.
@@ -30,11 +30,11 @@ public final class ConfigMapProjection {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigMapProjection(
-        @OutputCustomType.Parameter("items") @Nullable List<KeyToPath> items,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
+        @CustomType.Parameter("items") @Nullable List<KeyToPath> items,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("optional") @Nullable Boolean optional) {
         this.items = items;
         this.name = name;
         this.optional = optional;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * The metrics and corresponding confidence intervals in the inference result.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> metrics;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricArgs>> getMetrics() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * Number of sessions that were allocated to this version.
      * 
      */
-    @InputImport(name="sessionCount")
+    @Import(name="sessionCount")
       private final @Nullable Output<Integer> sessionCount;
 
     public Output<Integer> getSessionCount() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsA
      * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

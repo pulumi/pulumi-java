@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates the name of an attribute defined in the consent store.
      * 
      */
-    @InputImport(name="attributeDefinitionId", required=true)
+    @Import(name="attributeDefinitionId", required=true)
       private final String attributeDefinitionId;
 
     public String getAttributeDefinitionId() {
@@ -32,7 +32,7 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
      * The value of the attribute. Must be an acceptable value as defined in the consent store. For example, if the consent store defines "data type" with acceptable values "questionnaire" and "step-count", when the attribute name is data type, this field must contain one of those values.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

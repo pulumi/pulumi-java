@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * The private link resource group ids.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * The resource of private end point.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState", required=true)
+    @Import(name="privateLinkServiceConnectionState", required=true)
       private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {

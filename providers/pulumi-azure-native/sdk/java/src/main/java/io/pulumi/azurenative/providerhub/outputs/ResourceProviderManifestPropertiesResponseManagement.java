@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.ServiceTreeInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderManifestPropertiesResponseManagement {
     private final @Nullable String incidentContactEmail;
     private final @Nullable String incidentRoutingService;
@@ -23,16 +23,16 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
     private final @Nullable List<String> schemaOwners;
     private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceProviderManifestPropertiesResponseManagement(
-        @OutputCustomType.Parameter("incidentContactEmail") @Nullable String incidentContactEmail,
-        @OutputCustomType.Parameter("incidentRoutingService") @Nullable String incidentRoutingService,
-        @OutputCustomType.Parameter("incidentRoutingTeam") @Nullable String incidentRoutingTeam,
-        @OutputCustomType.Parameter("manifestOwners") @Nullable List<String> manifestOwners,
-        @OutputCustomType.Parameter("resourceAccessPolicy") @Nullable String resourceAccessPolicy,
-        @OutputCustomType.Parameter("resourceAccessRoles") @Nullable List<Object> resourceAccessRoles,
-        @OutputCustomType.Parameter("schemaOwners") @Nullable List<String> schemaOwners,
-        @OutputCustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
+        @CustomType.Parameter("incidentContactEmail") @Nullable String incidentContactEmail,
+        @CustomType.Parameter("incidentRoutingService") @Nullable String incidentRoutingService,
+        @CustomType.Parameter("incidentRoutingTeam") @Nullable String incidentRoutingTeam,
+        @CustomType.Parameter("manifestOwners") @Nullable List<String> manifestOwners,
+        @CustomType.Parameter("resourceAccessPolicy") @Nullable String resourceAccessPolicy,
+        @CustomType.Parameter("resourceAccessRoles") @Nullable List<Object> resourceAccessRoles,
+        @CustomType.Parameter("schemaOwners") @Nullable List<String> schemaOwners,
+        @CustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
         this.incidentContactEmail = incidentContactEmail;
         this.incidentRoutingService = incidentRoutingService;
         this.incidentRoutingTeam = incidentRoutingTeam;

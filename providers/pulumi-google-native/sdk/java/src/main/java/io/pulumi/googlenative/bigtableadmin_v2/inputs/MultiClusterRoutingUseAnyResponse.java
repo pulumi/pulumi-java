@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MultiClusterRoutingUseAnyResponse extends io.pulumi.resources
      * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
      * 
      */
-    @InputImport(name="clusterIds", required=true)
+    @Import(name="clusterIds", required=true)
       private final List<String> clusterIds;
 
     public List<String> getClusterIds() {

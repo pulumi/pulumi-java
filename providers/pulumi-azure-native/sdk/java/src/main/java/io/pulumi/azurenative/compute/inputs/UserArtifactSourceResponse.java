@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
      * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
      * 
      */
-    @InputImport(name="defaultConfigurationLink")
+    @Import(name="defaultConfigurationLink")
       private final @Nullable String defaultConfigurationLink;
 
     public Optional<String> getDefaultConfigurationLink() {
@@ -33,7 +33,7 @@ public final class UserArtifactSourceResponse extends io.pulumi.resources.Invoke
      * Required. The mediaLink of the artifact, must be a readable storage page blob.
      * 
      */
-    @InputImport(name="mediaLink", required=true)
+    @Import(name="mediaLink", required=true)
       private final String mediaLink;
 
     public String getMediaLink() {

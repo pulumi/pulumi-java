@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FuotaTaskLoRaWAN {
     /**
      * FUOTA task LoRaWAN RF region
@@ -22,10 +22,10 @@ public final class FuotaTaskLoRaWAN {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FuotaTaskLoRaWAN(
-        @OutputCustomType.Parameter("rfRegion") String rfRegion,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("rfRegion") String rfRegion,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.rfRegion = rfRegion;
         this.startTime = startTime;
     }

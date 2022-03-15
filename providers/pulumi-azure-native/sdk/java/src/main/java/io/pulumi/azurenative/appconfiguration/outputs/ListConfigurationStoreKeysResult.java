@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.appconfiguration.outputs;
 
 import io.pulumi.azurenative.appconfiguration.outputs.ApiKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListConfigurationStoreKeysResult {
     /**
      * The URI that can be used to request the next set of paged results.
@@ -24,10 +24,10 @@ public final class ListConfigurationStoreKeysResult {
      */
     private final @Nullable List<ApiKeyResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListConfigurationStoreKeysResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<ApiKeyResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<ApiKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

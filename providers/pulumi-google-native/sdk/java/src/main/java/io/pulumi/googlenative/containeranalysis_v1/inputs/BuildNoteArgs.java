@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Version of the builder which produced this build.
      * 
      */
-    @InputImport(name="builderVersion", required=true)
+    @Import(name="builderVersion", required=true)
       private final Output<String> builderVersion;
 
     public Output<String> getBuilderVersion() {

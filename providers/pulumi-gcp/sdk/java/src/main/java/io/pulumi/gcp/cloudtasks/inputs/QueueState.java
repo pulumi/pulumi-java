@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudtasks.inputs.QueueAppEngineRoutingOverrideGetArgs;
 import io.pulumi.gcp.cloudtasks.inputs.QueueRateLimitsGetArgs;
 import io.pulumi.gcp.cloudtasks.inputs.QueueRetryConfigGetArgs;
@@ -24,7 +24,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="appEngineRoutingOverride")
+    @Import(name="appEngineRoutingOverride")
       private final @Nullable Output<QueueAppEngineRoutingOverrideGetArgs> appEngineRoutingOverride;
 
     public Output<QueueAppEngineRoutingOverrideGetArgs> getAppEngineRoutingOverride() {
@@ -35,7 +35,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * The location of the queue
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -46,7 +46,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * The queue name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -76,7 +76,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      *   Structure is documented below.
      * 
      */
-    @InputImport(name="rateLimits")
+    @Import(name="rateLimits")
       private final @Nullable Output<QueueRateLimitsGetArgs> rateLimits;
 
     public Output<QueueRateLimitsGetArgs> getRateLimits() {
@@ -88,7 +88,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retryConfig")
+    @Import(name="retryConfig")
       private final @Nullable Output<QueueRetryConfigGetArgs> retryConfig;
 
     public Output<QueueRetryConfigGetArgs> getRetryConfig() {
@@ -100,7 +100,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="stackdriverLoggingConfig")
+    @Import(name="stackdriverLoggingConfig")
       private final @Nullable Output<QueueStackdriverLoggingConfigGetArgs> stackdriverLoggingConfig;
 
     public Output<QueueStackdriverLoggingConfigGetArgs> getStackdriverLoggingConfig() {

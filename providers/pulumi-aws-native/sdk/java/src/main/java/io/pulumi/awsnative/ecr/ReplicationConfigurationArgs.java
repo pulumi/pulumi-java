@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -12,7 +12,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
 
     public static final ReplicationConfigurationArgs Empty = new ReplicationConfigurationArgs();
 
-    @InputImport(name="replicationConfiguration", required=true)
+    @Import(name="replicationConfiguration", required=true)
       private final Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> replicationConfiguration;
 
     public Output<io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationArgs> getReplicationConfiguration() {

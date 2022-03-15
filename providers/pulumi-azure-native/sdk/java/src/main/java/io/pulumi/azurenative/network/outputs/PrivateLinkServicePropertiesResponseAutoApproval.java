@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServicePropertiesResponseAutoApproval {
     /**
      * The list of subscriptions.
@@ -17,8 +17,8 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
      */
     private final @Nullable List<String> subscriptions;
 
-    @OutputCustomType.Constructor
-    private PrivateLinkServicePropertiesResponseAutoApproval(@OutputCustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
+    @CustomType.Constructor
+    private PrivateLinkServicePropertiesResponseAutoApproval(@CustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
         this.subscriptions = subscriptions;
     }
 

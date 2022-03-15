@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
      * If you have configured an application-based health check for the group, this field controls whether to trigger VM autohealing based on a failed health check. Valid values are: - ON (default): The group recreates running VMs that fail the application-based health check. - OFF: When set to OFF, you can still observe instance health state, but the group does not recreate VMs that fail the application-based health check. This is useful for troubleshooting and setting up your health check configuration.
      * 
      */
-    @InputImport(name="onHealthCheck")
+    @Import(name="onHealthCheck")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
     public Output<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {

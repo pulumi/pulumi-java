@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.VaultNotificationsArgs;
 import io.pulumi.aws.backup.inputs.VaultNotificationsState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class VaultNotifications extends io.pulumi.resources.CustomResource {
      * The ARN of the vault.
      * 
      */
-    @OutputExport(name="backupVaultArn", type=String.class, parameters={})
+    @Export(name="backupVaultArn", type=String.class, parameters={})
     private Output<String> backupVaultArn;
 
     /**
@@ -47,7 +47,7 @@ public class VaultNotifications extends io.pulumi.resources.CustomResource {
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * 
      */
-    @OutputExport(name="backupVaultEvents", type=List.class, parameters={String.class})
+    @Export(name="backupVaultEvents", type=List.class, parameters={String.class})
     private Output<List<String>> backupVaultEvents;
 
     /**
@@ -61,7 +61,7 @@ public class VaultNotifications extends io.pulumi.resources.CustomResource {
      * Name of the backup vault to add notifications for.
      * 
      */
-    @OutputExport(name="backupVaultName", type=String.class, parameters={})
+    @Export(name="backupVaultName", type=String.class, parameters={})
     private Output<String> backupVaultName;
 
     /**
@@ -75,7 +75,7 @@ public class VaultNotifications extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
      * 
      */
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
 
     /**

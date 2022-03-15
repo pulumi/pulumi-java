@@ -6,7 +6,7 @@ package io.pulumi.awsnative.acmpca;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.acmpca.CertificateAuthorityActivationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * Certificate Authority certificate that will be installed in the Certificate Authority.
      * 
      */
-    @OutputExport(name="certificate", type=String.class, parameters={})
+    @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
@@ -35,7 +35,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * Arn of the Certificate Authority.
      * 
      */
-    @OutputExport(name="certificateAuthorityArn", type=String.class, parameters={})
+    @Export(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output<String> certificateAuthorityArn;
 
     /**
@@ -49,7 +49,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * Certificate chain for the Certificate Authority certificate.
      * 
      */
-    @OutputExport(name="certificateChain", type=String.class, parameters={})
+    @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     /**
@@ -63,7 +63,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * The complete certificate chain, including the Certificate Authority certificate.
      * 
      */
-    @OutputExport(name="completeCertificateChain", type=String.class, parameters={})
+    @Export(name="completeCertificateChain", type=String.class, parameters={})
     private Output<String> completeCertificateChain;
 
     /**
@@ -77,7 +77,7 @@ public class CertificateAuthorityActivation extends io.pulumi.resources.CustomRe
      * The status of the Certificate Authority.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**

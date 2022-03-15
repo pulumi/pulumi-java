@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
      * User-specified description for the IP range.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class RouterPeerAdvertisedIpRangeArgs extends io.pulumi.resources.R
      * CIDR-formatted string.
      * 
      */
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final Output<String> range;
 
     public Output<String> getRange() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FactoryVSTSConfigurationResponse {
     /**
      * Account name.
@@ -53,16 +53,16 @@ public final class FactoryVSTSConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FactoryVSTSConfigurationResponse(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("collaborationBranch") String collaborationBranch,
-        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
-        @OutputCustomType.Parameter("projectName") String projectName,
-        @OutputCustomType.Parameter("repositoryName") String repositoryName,
-        @OutputCustomType.Parameter("rootFolder") String rootFolder,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("collaborationBranch") String collaborationBranch,
+        @CustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @CustomType.Parameter("projectName") String projectName,
+        @CustomType.Parameter("repositoryName") String repositoryName,
+        @CustomType.Parameter("rootFolder") String rootFolder,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.collaborationBranch = collaborationBranch;
         this.lastCommitId = lastCommitId;

@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionS3Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelExplainabilityJobDefinitionMonitoringOutput {
     private final ModelExplainabilityJobDefinitionS3Output s3Output;
 
-    @OutputCustomType.Constructor
-    private ModelExplainabilityJobDefinitionMonitoringOutput(@OutputCustomType.Parameter("s3Output") ModelExplainabilityJobDefinitionS3Output s3Output) {
+    @CustomType.Constructor
+    private ModelExplainabilityJobDefinitionMonitoringOutput(@CustomType.Parameter("s3Output") ModelExplainabilityJobDefinitionS3Output s3Output) {
         this.s3Output = s3Output;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.UsageRuleResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UsageResponse {
     /**
      * The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
@@ -27,11 +27,11 @@ public final class UsageResponse {
      */
     private final List<UsageRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsageResponse(
-        @OutputCustomType.Parameter("producerNotificationChannel") String producerNotificationChannel,
-        @OutputCustomType.Parameter("requirements") List<String> requirements,
-        @OutputCustomType.Parameter("rules") List<UsageRuleResponse> rules) {
+        @CustomType.Parameter("producerNotificationChannel") String producerNotificationChannel,
+        @CustomType.Parameter("requirements") List<String> requirements,
+        @CustomType.Parameter("rules") List<UsageRuleResponse> rules) {
         this.producerNotificationChannel = producerNotificationChannel;
         this.requirements = requirements;
         this.rules = rules;

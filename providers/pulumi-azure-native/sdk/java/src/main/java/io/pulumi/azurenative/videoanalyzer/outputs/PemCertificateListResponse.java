@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PemCertificateListResponse {
     /**
      * PEM formatted public certificates. One certificate per entry.
@@ -22,10 +22,10 @@ public final class PemCertificateListResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PemCertificateListResponse(
-        @OutputCustomType.Parameter("certificates") List<String> certificates,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificates") List<String> certificates,
+        @CustomType.Parameter("type") String type) {
         this.certificates = certificates;
         this.type = type;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class PipelineLambda extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineLambda Empty = new PipelineLambda();
 
-    @InputImport(name="batchSize", required=true)
+    @Import(name="batchSize", required=true)
       private final Integer batchSize;
 
     public Integer getBatchSize() {
         return this.batchSize;
     }
 
-    @InputImport(name="lambdaName", required=true)
+    @Import(name="lambdaName", required=true)
       private final String lambdaName;
 
     public String getLambdaName() {
         return this.lambdaName;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="next")
+    @Import(name="next")
       private final @Nullable String next;
 
     public Optional<String> getNext() {

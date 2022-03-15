@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
      * The resource ID of the storage account to be used for auto-storage account.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {

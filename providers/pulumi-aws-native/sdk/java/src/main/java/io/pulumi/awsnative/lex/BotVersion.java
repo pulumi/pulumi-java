@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lex.BotVersionArgs;
 import io.pulumi.awsnative.lex.outputs.BotVersionLocaleSpecification;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,25 +19,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:lex:BotVersion")
 public class BotVersion extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="botId", type=String.class, parameters={})
+    @Export(name="botId", type=String.class, parameters={})
     private Output<String> botId;
 
     public Output<String> getBotId() {
         return this.botId;
     }
-    @OutputExport(name="botVersion", type=String.class, parameters={})
+    @Export(name="botVersion", type=String.class, parameters={})
     private Output<String> botVersion;
 
     public Output<String> getBotVersion() {
         return this.botVersion;
     }
-    @OutputExport(name="botVersionLocaleSpecification", type=List.class, parameters={BotVersionLocaleSpecification.class})
+    @Export(name="botVersionLocaleSpecification", type=List.class, parameters={BotVersionLocaleSpecification.class})
     private Output<List<BotVersionLocaleSpecification>> botVersionLocaleSpecification;
 
     public Output<List<BotVersionLocaleSpecification>> getBotVersionLocaleSpecification() {
         return this.botVersionLocaleSpecification;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * DB cluster identifier.
      * 
      */
-    @InputImport(name="dbClusterIdentifier")
+    @Import(name="dbClusterIdentifier")
       private final @Nullable Output<String> dbClusterIdentifier;
 
     public Output<String> getDbClusterIdentifier() {
@@ -30,7 +30,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * DB instance identifier.
      * 
      */
-    @InputImport(name="dbInstanceIdentifier")
+    @Import(name="dbInstanceIdentifier")
       private final @Nullable Output<String> dbInstanceIdentifier;
 
     public Output<String> getDbInstanceIdentifier() {
@@ -41,7 +41,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * The name of the DB proxy.
      * 
      */
-    @InputImport(name="dbProxyName")
+    @Import(name="dbProxyName")
       private final @Nullable Output<String> dbProxyName;
 
     public Output<String> getDbProxyName() {
@@ -52,7 +52,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * Hostname for the target RDS DB Instance. Only returned for `RDS_INSTANCE` type.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -63,7 +63,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * Port for the target RDS DB Instance or Aurora DB Cluster.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -74,7 +74,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * Identifier representing the DB Instance or DB Cluster target.
      * 
      */
-    @InputImport(name="rdsResourceId")
+    @Import(name="rdsResourceId")
       private final @Nullable Output<String> rdsResourceId;
 
     public Output<String> getRdsResourceId() {
@@ -85,7 +85,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) for the DB instance or DB cluster. Currently not returned by the RDS API.
      * 
      */
-    @InputImport(name="targetArn")
+    @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
     public Output<String> getTargetArn() {
@@ -96,7 +96,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * The name of the target group.
      * 
      */
-    @InputImport(name="targetGroupName")
+    @Import(name="targetGroupName")
       private final @Nullable Output<String> targetGroupName;
 
     public Output<String> getTargetGroupName() {
@@ -107,7 +107,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * DB Cluster identifier for the DB Instance target. Not returned unless manually importing an `RDS_INSTANCE` target that is part of a DB Cluster.
      * 
      */
-    @InputImport(name="trackedClusterId")
+    @Import(name="trackedClusterId")
       private final @Nullable Output<String> trackedClusterId;
 
     public Output<String> getTrackedClusterId() {
@@ -118,7 +118,7 @@ public final class ProxyTargetState extends io.pulumi.resources.ResourceArgs {
      * Type of targetE.g., `RDS_INSTANCE` or `TRACKED_CLUSTER`
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.peering.inputs.PeeringPropertiesExchangeArgs;
 import io.pulumi.azurenative.peering.inputs.PeeringSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that define a direct peering.
      * 
      */
-    @InputImport(name="direct")
+    @Import(name="direct")
       private final @Nullable Output<PeeringPropertiesDirectArgs> direct;
 
     public Output<PeeringPropertiesDirectArgs> getDirect() {
@@ -35,7 +35,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that define an exchange peering.
      * 
      */
-    @InputImport(name="exchange")
+    @Import(name="exchange")
       private final @Nullable Output<PeeringPropertiesExchangeArgs> exchange;
 
     public Output<PeeringPropertiesExchangeArgs> getExchange() {
@@ -46,7 +46,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the peering.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -57,7 +57,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the peering.
      * 
      */
-    @InputImport(name="peeringLocation")
+    @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
 
     public Output<String> getPeeringLocation() {
@@ -79,7 +79,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the peering.
      * 
      */
-    @InputImport(name="peeringName")
+    @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
     public Output<String> getPeeringName() {
@@ -90,7 +90,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU that defines the tier and kind of the peering.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<PeeringSkuArgs> sku;
 
     public Output<PeeringSkuArgs> getSku() {
@@ -112,7 +112,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

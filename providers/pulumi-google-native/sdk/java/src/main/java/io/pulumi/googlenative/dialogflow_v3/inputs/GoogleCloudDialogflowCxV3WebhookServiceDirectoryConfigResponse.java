@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
      * Generic Service configuration of this webhook.
      * 
      */
-    @InputImport(name="genericWebService", required=true)
+    @Import(name="genericWebService", required=true)
       private final GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService;
 
     public GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse getGenericWebService() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
      * The name of [Service Directory](https://cloud.google.com/service-directory) service. Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory must be the same as the location of the agent.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

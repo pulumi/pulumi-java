@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
      */
-    @InputImport(name="enableHttpPortAccess")
+    @Import(name="enableHttpPortAccess")
       private final @Nullable Output<Boolean> enableHttpPortAccess;
 
     public Output<Boolean> getEnableHttpPortAccess() {
@@ -32,7 +32,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
      * Output only. The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
      */
-    @InputImport(name="httpPorts")
+    @Import(name="httpPorts")
       private final @Nullable Output<Map<String,String>> httpPorts;
 
     public Output<Map<String,String>> getHttpPorts() {

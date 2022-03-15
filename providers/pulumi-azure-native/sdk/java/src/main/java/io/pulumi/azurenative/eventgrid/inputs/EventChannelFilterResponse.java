@@ -22,7 +22,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringNotBeginsWithAdvancedFilterR
 import io.pulumi.azurenative.eventgrid.inputs.StringNotContainsAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
@@ -43,7 +43,7 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
      * An array of advanced filters that are used for filtering event channels.
      * 
      */
-    @InputImport(name="advancedFilters")
+    @Import(name="advancedFilters")
       private final @Nullable List<Object> advancedFilters;
 
     public List<Object> getAdvancedFilters() {
@@ -54,7 +54,7 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
      * Allows advanced filters to be evaluated against an array of values instead of expecting a singular value. The default value is either false or null.
      * 
      */
-    @InputImport(name="enableAdvancedFilteringOnArrays")
+    @Import(name="enableAdvancedFilteringOnArrays")
       private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 
     public Optional<Boolean> getEnableAdvancedFilteringOnArrays() {

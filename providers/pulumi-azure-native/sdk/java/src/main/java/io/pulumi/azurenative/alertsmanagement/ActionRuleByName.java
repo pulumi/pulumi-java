@@ -10,7 +10,7 @@ import io.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class ActionRuleByName extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -53,7 +53,7 @@ public class ActionRuleByName extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class ActionRuleByName extends io.pulumi.resources.CustomResource {
      * action rule properties
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -81,7 +81,7 @@ public class ActionRuleByName extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -95,7 +95,7 @@ public class ActionRuleByName extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

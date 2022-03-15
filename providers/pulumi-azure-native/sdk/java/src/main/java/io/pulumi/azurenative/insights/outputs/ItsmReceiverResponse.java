@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ItsmReceiverResponse {
     /**
      * Unique identification of ITSM connection among multiple defined in above workspace.
@@ -35,13 +35,13 @@ public final class ItsmReceiverResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ItsmReceiverResponse(
-        @OutputCustomType.Parameter("connectionId") String connectionId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("ticketConfiguration") String ticketConfiguration,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
+        @CustomType.Parameter("connectionId") String connectionId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("ticketConfiguration") String ticketConfiguration,
+        @CustomType.Parameter("workspaceId") String workspaceId) {
         this.connectionId = connectionId;
         this.name = name;
         this.region = region;

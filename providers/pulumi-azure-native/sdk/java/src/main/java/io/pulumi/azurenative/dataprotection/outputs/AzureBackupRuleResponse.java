@@ -8,13 +8,13 @@ import io.pulumi.azurenative.dataprotection.outputs.AzureBackupParamsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ScheduleBasedTriggerContextResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBackupRuleResponse {
     /**
      * BackupParameters base
@@ -38,13 +38,13 @@ public final class AzureBackupRuleResponse {
      */
     private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBackupRuleResponse(
-        @OutputCustomType.Parameter("backupParameters") @Nullable AzureBackupParamsResponse backupParameters,
-        @OutputCustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("trigger") Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
+        @CustomType.Parameter("backupParameters") @Nullable AzureBackupParamsResponse backupParameters,
+        @CustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("trigger") Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
         this.backupParameters = backupParameters;
         this.dataStore = dataStore;
         this.name = name;

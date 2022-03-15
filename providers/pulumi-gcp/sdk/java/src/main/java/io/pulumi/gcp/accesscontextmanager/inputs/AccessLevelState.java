@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="basic")
+    @Import(name="basic")
       private final @Nullable Output<AccessLevelBasicGetArgs> basic;
 
     public Output<AccessLevelBasicGetArgs> getBasic() {
@@ -34,7 +34,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="custom")
+    @Import(name="custom")
       private final @Nullable Output<AccessLevelCustomGetArgs> custom;
 
     public Output<AccessLevelCustomGetArgs> getCustom() {
@@ -45,7 +45,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * Description of the expression
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -81,7 +81,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
      * Title for the expression, i.e. a short string describing its purpose.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

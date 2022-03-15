@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -30,7 +30,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * The port on which targets receive traffic.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -41,7 +41,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * The ARN of the target group with which to register targets
      * 
      */
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {
@@ -52,7 +52,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
      * The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {

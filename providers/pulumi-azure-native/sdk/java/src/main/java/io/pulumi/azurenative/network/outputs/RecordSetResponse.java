@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecordSetResponse {
     /**
      * Fqdn that resolves to private endpoint ip address.
@@ -44,14 +44,14 @@ public final class RecordSetResponse {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecordSetResponse(
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("recordSetName") @Nullable String recordSetName,
-        @OutputCustomType.Parameter("recordType") @Nullable String recordType,
-        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("recordSetName") @Nullable String recordSetName,
+        @CustomType.Parameter("recordType") @Nullable String recordType,
+        @CustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
         this.provisioningState = provisioningState;

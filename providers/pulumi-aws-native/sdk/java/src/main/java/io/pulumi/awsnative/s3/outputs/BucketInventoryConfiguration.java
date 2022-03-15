@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationIncludedObjectVe
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationOptionalFieldsItem;
 import io.pulumi.awsnative.s3.enums.BucketInventoryConfigurationScheduleFrequency;
 import io.pulumi.awsnative.s3.outputs.BucketDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketInventoryConfiguration {
     private final BucketDestination destination;
     /**
@@ -49,15 +49,15 @@ public final class BucketInventoryConfiguration {
      */
     private final BucketInventoryConfigurationScheduleFrequency scheduleFrequency;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketInventoryConfiguration(
-        @OutputCustomType.Parameter("destination") BucketDestination destination,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includedObjectVersions") BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions,
-        @OutputCustomType.Parameter("optionalFields") @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("scheduleFrequency") BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
+        @CustomType.Parameter("destination") BucketDestination destination,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includedObjectVersions") BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions,
+        @CustomType.Parameter("optionalFields") @Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("scheduleFrequency") BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
         this.destination = destination;
         this.enabled = enabled;
         this.id = id;

@@ -5,11 +5,11 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.ServiceRegistryPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceRegistryResult {
     /**
      * Fully qualified resource Id for the resource.
@@ -37,13 +37,13 @@ public final class GetServiceRegistryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceRegistryResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ServiceRegistryPropertiesResponse properties,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ServiceRegistryPropertiesResponse properties,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesGetArgs extend
 
     public static final InstanceFromMachineImageAdvancedMachineFeaturesGetArgs Empty = new InstanceFromMachineImageAdvancedMachineFeaturesGetArgs();
 
-    @InputImport(name="enableNestedVirtualization")
+    @Import(name="enableNestedVirtualization")
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
     public Output<Boolean> getEnableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Output.empty() : this.enableNestedVirtualization;
     }
 
-    @InputImport(name="threadsPerCore")
+    @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
     public Output<Integer> getThreadsPerCore() {

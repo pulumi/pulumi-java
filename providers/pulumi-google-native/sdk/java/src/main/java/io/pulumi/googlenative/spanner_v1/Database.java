@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.DatabaseArgs;
@@ -26,7 +26,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * If exists, the time at which the database creation started.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The dialect of the Cloud Spanner Database.
      * 
      */
-    @OutputExport(name="databaseDialect", type=String.class, parameters={})
+    @Export(name="databaseDialect", type=String.class, parameters={})
     private Output<String> databaseDialect;
 
     /**
@@ -54,7 +54,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The read-write region which contains the database's leader replicas. This is the same as the value of default_leader database option set using DatabaseAdmin.CreateDatabase or DatabaseAdmin.UpdateDatabaseDdl. If not explicitly set, this is empty.
      * 
      */
-    @OutputExport(name="defaultLeader", type=String.class, parameters={})
+    @Export(name="defaultLeader", type=String.class, parameters={})
     private Output<String> defaultLeader;
 
     /**
@@ -68,7 +68,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Earliest timestamp at which older versions of the data can be read. This value is continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are using this value to recover data, make sure to account for the time from the moment when the value is queried to the moment when you initiate the recovery.
      * 
      */
-    @OutputExport(name="earliestVersionTime", type=String.class, parameters={})
+    @Export(name="earliestVersionTime", type=String.class, parameters={})
     private Output<String> earliestVersionTime;
 
     /**
@@ -82,7 +82,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * For databases that are using customer managed encryption, this field contains the encryption configuration for the database. For databases that are using Google default or other types of encryption, this field is empty.
      * 
      */
-    @OutputExport(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
+    @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
@@ -96,7 +96,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * For databases that are using customer managed encryption, this field contains the encryption information for the database, such as encryption state and the Cloud KMS key versions that are in use. For databases that are using Google default or other types of encryption, this field is empty. This field is propagated lazily from the backend. There might be a delay from when a key version is being used and when it appears in this field.
      * 
      */
-    @OutputExport(name="encryptionInfo", type=List.class, parameters={EncryptionInfoResponse.class})
+    @Export(name="encryptionInfo", type=List.class, parameters={EncryptionInfoResponse.class})
     private Output<List<EncryptionInfoResponse>> encryptionInfo;
 
     /**
@@ -110,7 +110,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name of the database. Values are of the form `projects//instances//databases/`, where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other API methods to identify the database.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Applicable only for restored databases. Contains information about the restore source.
      * 
      */
-    @OutputExport(name="restoreInfo", type=RestoreInfoResponse.class, parameters={})
+    @Export(name="restoreInfo", type=RestoreInfoResponse.class, parameters={})
     private Output<RestoreInfoResponse> restoreInfo;
 
     /**
@@ -138,7 +138,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The current database state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -152,7 +152,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The period in which Cloud Spanner retains all versions of data for the database. This is the same as the value of version_retention_period database option set using UpdateDatabaseDdl. Defaults to 1 hour, if not set.
      * 
      */
-    @OutputExport(name="versionRetentionPeriod", type=String.class, parameters={})
+    @Export(name="versionRetentionPeriod", type=String.class, parameters={})
     private Output<String> versionRetentionPeriod;
 
     /**

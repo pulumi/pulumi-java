@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
      * Enable deblocker. The default is `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
      * Set strength of the deblocker. Enter a value between 0 and 1. The higher the value, the stronger the block removal. 0 is no deblocking. The default is 0.
      * 
      */
-    @InputImport(name="strength")
+    @Import(name="strength")
       private final @Nullable Output<Double> strength;
 
     public Output<Double> getStrength() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.dbformysql.outputs.SkuResponse;
 import io.pulumi.azurenative.dbformysql.outputs.StorageProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
      * 
      */
-    @OutputExport(name="administratorLogin", type=String.class, parameters={})
+    @Export(name="administratorLogin", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorLogin;
 
     /**
@@ -54,7 +54,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Status showing whether the server data encryption is enabled with customer-managed keys.
      * 
      */
-    @OutputExport(name="byokEnforcement", type=String.class, parameters={})
+    @Export(name="byokEnforcement", type=String.class, parameters={})
     private Output<String> byokEnforcement;
 
     /**
@@ -68,7 +68,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Earliest restore point creation time (ISO8601 format)
      * 
      */
-    @OutputExport(name="earliestRestoreDate", type=String.class, parameters={})
+    @Export(name="earliestRestoreDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> earliestRestoreDate;
 
     /**
@@ -82,7 +82,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name of a server.
      * 
      */
-    @OutputExport(name="fullyQualifiedDomainName", type=String.class, parameters={})
+    @Export(name="fullyQualifiedDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> fullyQualifiedDomainName;
 
     /**
@@ -96,7 +96,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The Azure Active Directory identity of the server.
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -110,7 +110,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Status showing whether the server enabled infrastructure encryption.
      * 
      */
-    @OutputExport(name="infrastructureEncryption", type=String.class, parameters={})
+    @Export(name="infrastructureEncryption", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructureEncryption;
 
     /**
@@ -124,7 +124,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -138,7 +138,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The master server id of a replica server.
      * 
      */
-    @OutputExport(name="masterServerId", type=String.class, parameters={})
+    @Export(name="masterServerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> masterServerId;
 
     /**
@@ -152,7 +152,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Enforce a minimal Tls version for the server.
      * 
      */
-    @OutputExport(name="minimalTlsVersion", type=String.class, parameters={})
+    @Export(name="minimalTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
@@ -166,7 +166,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -180,7 +180,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * List of private endpoint connections on a server
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={ServerPrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={ServerPrivateEndpointConnectionResponse.class})
     private Output<List<ServerPrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -194,7 +194,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Whether or not public network access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -208,7 +208,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The maximum number of replicas that a master server can have.
      * 
      */
-    @OutputExport(name="replicaCapacity", type=Integer.class, parameters={})
+    @Export(name="replicaCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> replicaCapacity;
 
     /**
@@ -222,7 +222,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The replication role of the server.
      * 
      */
-    @OutputExport(name="replicationRole", type=String.class, parameters={})
+    @Export(name="replicationRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicationRole;
 
     /**
@@ -236,7 +236,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The SKU (pricing tier) of the server.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -250,7 +250,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Enable ssl enforcement or not when connect to server.
      * 
      */
-    @OutputExport(name="sslEnforcement", type=String.class, parameters={})
+    @Export(name="sslEnforcement", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslEnforcement;
 
     /**
@@ -264,7 +264,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Storage profile of a server.
      * 
      */
-    @OutputExport(name="storageProfile", type=StorageProfileResponse.class, parameters={})
+    @Export(name="storageProfile", type=StorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ StorageProfileResponse> storageProfile;
 
     /**
@@ -278,7 +278,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -292,7 +292,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -306,7 +306,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * A state of a server that is visible to user.
      * 
      */
-    @OutputExport(name="userVisibleState", type=String.class, parameters={})
+    @Export(name="userVisibleState", type=String.class, parameters={})
     private Output</* @Nullable */ String> userVisibleState;
 
     /**
@@ -320,7 +320,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * Server version.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.GetClusterPrivateClusterConfigMasterGlobalAccessConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -15,49 +15,49 @@ public final class GetClusterPrivateClusterConfig extends io.pulumi.resources.In
 
     public static final GetClusterPrivateClusterConfig Empty = new GetClusterPrivateClusterConfig();
 
-    @InputImport(name="enablePrivateEndpoint", required=true)
+    @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
-    @InputImport(name="enablePrivateNodes", required=true)
+    @Import(name="enablePrivateNodes", required=true)
       private final Boolean enablePrivateNodes;
 
     public Boolean getEnablePrivateNodes() {
         return this.enablePrivateNodes;
     }
 
-    @InputImport(name="masterGlobalAccessConfigs", required=true)
+    @Import(name="masterGlobalAccessConfigs", required=true)
       private final List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs;
 
     public List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> getMasterGlobalAccessConfigs() {
         return this.masterGlobalAccessConfigs;
     }
 
-    @InputImport(name="masterIpv4CidrBlock", required=true)
+    @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
-    @InputImport(name="peeringName", required=true)
+    @Import(name="peeringName", required=true)
       private final String peeringName;
 
     public String getPeeringName() {
         return this.peeringName;
     }
 
-    @InputImport(name="privateEndpoint", required=true)
+    @Import(name="privateEndpoint", required=true)
       private final String privateEndpoint;
 
     public String getPrivateEndpoint() {
         return this.privateEndpoint;
     }
 
-    @InputImport(name="publicEndpoint", required=true)
+    @Import(name="publicEndpoint", required=true)
       private final String publicEndpoint;
 
     public String getPublicEndpoint() {

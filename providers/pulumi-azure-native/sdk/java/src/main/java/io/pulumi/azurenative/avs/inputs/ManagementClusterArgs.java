@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
      * The cluster size
      * 
      */
-    @InputImport(name="clusterSize", required=true)
+    @Import(name="clusterSize", required=true)
       private final Output<Integer> clusterSize;
 
     public Output<Integer> getClusterSize() {

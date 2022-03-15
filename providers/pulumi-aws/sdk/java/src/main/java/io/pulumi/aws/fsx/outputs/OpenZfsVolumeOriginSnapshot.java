@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OpenZfsVolumeOriginSnapshot {
     private final String copyStrategy;
     private final String snapshotArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenZfsVolumeOriginSnapshot(
-        @OutputCustomType.Parameter("copyStrategy") String copyStrategy,
-        @OutputCustomType.Parameter("snapshotArn") String snapshotArn) {
+        @CustomType.Parameter("copyStrategy") String copyStrategy,
+        @CustomType.Parameter("snapshotArn") String snapshotArn) {
         this.copyStrategy = copyStrategy;
         this.snapshotArn = snapshotArn;
     }

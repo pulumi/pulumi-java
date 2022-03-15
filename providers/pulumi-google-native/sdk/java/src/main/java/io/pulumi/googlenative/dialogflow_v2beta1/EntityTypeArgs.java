@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.EntityTypeAutoExpansionMode;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.EntityTypeKind;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1EntityTypeEntityArgs;
@@ -23,7 +23,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Indicates whether the entity type can be automatically expanded.
      * 
      */
-    @InputImport(name="autoExpansionMode")
+    @Import(name="autoExpansionMode")
       private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
 
     public Output<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
@@ -34,7 +34,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the entity type.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Enables fuzzy entity extraction during classification.
      * 
      */
-    @InputImport(name="enableFuzzyExtraction")
+    @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
@@ -56,7 +56,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The collection of entity entries associated with the entity type.
      * 
      */
-    @InputImport(name="entities")
+    @Import(name="entities")
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> entities;
 
     public Output<List<GoogleCloudDialogflowV2beta1EntityTypeEntityArgs>> getEntities() {
@@ -67,21 +67,21 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the kind of entity type.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<EntityTypeKind> kind;
 
     public Output<EntityTypeKind> getKind() {
         return this.kind;
     }
 
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
         return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -92,14 +92,14 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/` - `projects//locations//agent/entityTypes/`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

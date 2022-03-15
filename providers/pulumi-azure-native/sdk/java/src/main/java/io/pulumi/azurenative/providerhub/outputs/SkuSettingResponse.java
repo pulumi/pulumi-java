@@ -7,14 +7,14 @@ import io.pulumi.azurenative.providerhub.outputs.SkuCapabilityResponse;
 import io.pulumi.azurenative.providerhub.outputs.SkuCostResponse;
 import io.pulumi.azurenative.providerhub.outputs.SkuLocationInfoResponse;
 import io.pulumi.azurenative.providerhub.outputs.SkuSettingResponseCapacity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuSettingResponse {
     private final @Nullable List<SkuCapabilityResponse> capabilities;
     private final @Nullable SkuSettingResponseCapacity capacity;
@@ -29,20 +29,20 @@ public final class SkuSettingResponse {
     private final @Nullable String size;
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuSettingResponse(
-        @OutputCustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
-        @OutputCustomType.Parameter("capacity") @Nullable SkuSettingResponseCapacity capacity,
-        @OutputCustomType.Parameter("costs") @Nullable List<SkuCostResponse> costs,
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("locationInfo") @Nullable List<SkuLocationInfoResponse> locationInfo,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
-        @OutputCustomType.Parameter("requiredQuotaIds") @Nullable List<String> requiredQuotaIds,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
+        @CustomType.Parameter("capacity") @Nullable SkuSettingResponseCapacity capacity,
+        @CustomType.Parameter("costs") @Nullable List<SkuCostResponse> costs,
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("locationInfo") @Nullable List<SkuLocationInfoResponse> locationInfo,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @CustomType.Parameter("requiredQuotaIds") @Nullable List<String> requiredQuotaIds,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.costs = costs;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.WebhookAction;
 import io.pulumi.azurenative.containerregistry.enums.WebhookStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The list of actions that trigger the webhook to post notifications.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<Either<String,WebhookAction>>> actions;
 
     public Output<List<Either<String,WebhookAction>>> getActions() {
@@ -34,7 +34,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Custom headers that will be added to the webhook notifications.
      * 
      */
-    @InputImport(name="customHeaders")
+    @Import(name="customHeaders")
       private final @Nullable Output<Map<String,String>> customHeaders;
 
     public Output<Map<String,String>> getCustomHeaders() {
@@ -45,7 +45,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the webhook. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -67,7 +67,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -78,7 +78,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -89,7 +89,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The service URI for the webhook to post notifications.
      * 
      */
-    @InputImport(name="serviceUri", required=true)
+    @Import(name="serviceUri", required=true)
       private final Output<String> serviceUri;
 
     public Output<String> getServiceUri() {
@@ -100,7 +100,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the webhook at the time the operation was called.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,WebhookStatus>> status;
 
     public Output<Either<String,WebhookStatus>> getStatus() {
@@ -111,7 +111,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the webhook.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -122,7 +122,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the webhook.
      * 
      */
-    @InputImport(name="webhookName")
+    @Import(name="webhookName")
       private final @Nullable Output<String> webhookName;
 
     public Output<String> getWebhookName() {

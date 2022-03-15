@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicyResponse {
     /**
      * Whether network policy is enabled on the cluster.
@@ -21,10 +21,10 @@ public final class NetworkPolicyResponse {
      */
     private final String provider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicyResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("provider") String provider) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("provider") String provider) {
         this.enabled = enabled;
         this.provider = provider;
     }

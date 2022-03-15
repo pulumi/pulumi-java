@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionCertFingerprint {
     private final @Nullable String sha256Hash;
 
-    @OutputCustomType.Constructor
-    private CertificateCertificateDescriptionCertFingerprint(@OutputCustomType.Parameter("sha256Hash") @Nullable String sha256Hash) {
+    @CustomType.Constructor
+    private CertificateCertificateDescriptionCertFingerprint(@CustomType.Parameter("sha256Hash") @Nullable String sha256Hash) {
         this.sha256Hash = sha256Hash;
     }
 

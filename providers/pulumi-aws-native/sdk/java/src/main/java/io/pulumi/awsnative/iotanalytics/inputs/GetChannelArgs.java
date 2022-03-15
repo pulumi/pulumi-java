@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
-    @InputImport(name="channelName", required=true)
+    @Import(name="channelName", required=true)
       private final String channelName;
 
     public String getChannelName() {

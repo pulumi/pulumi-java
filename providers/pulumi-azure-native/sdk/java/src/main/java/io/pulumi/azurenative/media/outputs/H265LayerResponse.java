@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class H265LayerResponse {
     /**
      * Specifies whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.
@@ -85,22 +85,22 @@ public final class H265LayerResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private H265LayerResponse(
-        @OutputCustomType.Parameter("adaptiveBFrame") @Nullable Boolean adaptiveBFrame,
-        @OutputCustomType.Parameter("bFrames") @Nullable Integer bFrames,
-        @OutputCustomType.Parameter("bitrate") Integer bitrate,
-        @OutputCustomType.Parameter("bufferWindow") @Nullable String bufferWindow,
-        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
-        @OutputCustomType.Parameter("height") @Nullable String height,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("profile") @Nullable String profile,
-        @OutputCustomType.Parameter("referenceFrames") @Nullable Integer referenceFrames,
-        @OutputCustomType.Parameter("slices") @Nullable Integer slices,
-        @OutputCustomType.Parameter("width") @Nullable String width) {
+        @CustomType.Parameter("adaptiveBFrame") @Nullable Boolean adaptiveBFrame,
+        @CustomType.Parameter("bFrames") @Nullable Integer bFrames,
+        @CustomType.Parameter("bitrate") Integer bitrate,
+        @CustomType.Parameter("bufferWindow") @Nullable String bufferWindow,
+        @CustomType.Parameter("frameRate") @Nullable String frameRate,
+        @CustomType.Parameter("height") @Nullable String height,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("profile") @Nullable String profile,
+        @CustomType.Parameter("referenceFrames") @Nullable Integer referenceFrames,
+        @CustomType.Parameter("slices") @Nullable Integer slices,
+        @CustomType.Parameter("width") @Nullable String width) {
         this.adaptiveBFrame = adaptiveBFrame;
         this.bFrames = bFrames;
         this.bitrate = bitrate;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceProvenanceResponse {
     /**
      * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. Note that `FileHashes` will only be populated if `BuildOptions` has requested a `SourceProvenanceHash`. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (`.tar.gz`), the `FileHash` will be for the single path to that file.
@@ -34,12 +34,12 @@ public final class SourceProvenanceResponse {
      */
     private final StorageSourceManifestResponse resolvedStorageSourceManifest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceProvenanceResponse(
-        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes,
-        @OutputCustomType.Parameter("resolvedRepoSource") RepoSourceResponse resolvedRepoSource,
-        @OutputCustomType.Parameter("resolvedStorageSource") StorageSourceResponse resolvedStorageSource,
-        @OutputCustomType.Parameter("resolvedStorageSourceManifest") StorageSourceManifestResponse resolvedStorageSourceManifest) {
+        @CustomType.Parameter("fileHashes") Map<String,String> fileHashes,
+        @CustomType.Parameter("resolvedRepoSource") RepoSourceResponse resolvedRepoSource,
+        @CustomType.Parameter("resolvedStorageSource") StorageSourceResponse resolvedStorageSource,
+        @CustomType.Parameter("resolvedStorageSourceManifest") StorageSourceManifestResponse resolvedStorageSourceManifest) {
         this.fileHashes = fileHashes;
         this.resolvedRepoSource = resolvedRepoSource;
         this.resolvedStorageSource = resolvedStorageSource;

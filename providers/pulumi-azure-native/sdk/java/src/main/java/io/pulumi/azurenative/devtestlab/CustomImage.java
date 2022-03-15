@@ -11,7 +11,7 @@ import io.pulumi.azurenative.devtestlab.outputs.CustomImagePropertiesFromVmRespo
 import io.pulumi.azurenative.devtestlab.outputs.DataDiskStorageTypeInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The author of the custom image.
      * 
      */
-    @OutputExport(name="author", type=String.class, parameters={})
+    @Export(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
     /**
@@ -54,7 +54,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The creation date of the custom image.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -68,7 +68,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * Storage information about the plan related to this custom image
      * 
      */
-    @OutputExport(name="customImagePlan", type=CustomImagePropertiesFromPlanResponse.class, parameters={})
+    @Export(name="customImagePlan", type=CustomImagePropertiesFromPlanResponse.class, parameters={})
     private Output</* @Nullable */ CustomImagePropertiesFromPlanResponse> customImagePlan;
 
     /**
@@ -82,7 +82,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * Storage information about the data disks present in the custom image
      * 
      */
-    @OutputExport(name="dataDiskStorageInfo", type=List.class, parameters={DataDiskStorageTypeInfoResponse.class})
+    @Export(name="dataDiskStorageInfo", type=List.class, parameters={DataDiskStorageTypeInfoResponse.class})
     private Output</* @Nullable */ List<DataDiskStorageTypeInfoResponse>> dataDiskStorageInfo;
 
     /**
@@ -96,7 +96,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The description of the custom image.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -110,7 +110,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
      * 
      */
-    @OutputExport(name="isPlanAuthorized", type=Boolean.class, parameters={})
+    @Export(name="isPlanAuthorized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isPlanAuthorized;
 
     /**
@@ -124,7 +124,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -138,7 +138,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The Managed Image Id backing the custom image.
      * 
      */
-    @OutputExport(name="managedImageId", type=String.class, parameters={})
+    @Export(name="managedImageId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedImageId;
 
     /**
@@ -152,7 +152,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The Managed Snapshot Id backing the custom image.
      * 
      */
-    @OutputExport(name="managedSnapshotId", type=String.class, parameters={})
+    @Export(name="managedSnapshotId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedSnapshotId;
 
     /**
@@ -166,7 +166,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -180,7 +180,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -194,7 +194,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -208,7 +208,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -222,7 +222,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
@@ -236,7 +236,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The VHD from which the image is to be created.
      * 
      */
-    @OutputExport(name="vhd", type=CustomImagePropertiesCustomResponse.class, parameters={})
+    @Export(name="vhd", type=CustomImagePropertiesCustomResponse.class, parameters={})
     private Output</* @Nullable */ CustomImagePropertiesCustomResponse> vhd;
 
     /**
@@ -250,7 +250,7 @@ public class CustomImage extends io.pulumi.resources.CustomResource {
      * The virtual machine from which the image is to be created.
      * 
      */
-    @OutputExport(name="vm", type=CustomImagePropertiesFromVmResponse.class, parameters={})
+    @Export(name="vm", type=CustomImagePropertiesFromVmResponse.class, parameters={})
     private Output</* @Nullable */ CustomImagePropertiesFromVmResponse> vm;
 
     /**

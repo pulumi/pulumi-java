@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeMount {
     /**
      * Path within the container at which the volume should be mounted.  Must not contain ':'.
@@ -43,14 +43,14 @@ public final class VolumeMount {
      */
     private final @Nullable String subPathExpr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeMount(
-        @OutputCustomType.Parameter("mountPath") String mountPath,
-        @OutputCustomType.Parameter("mountPropagation") @Nullable String mountPropagation,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("subPath") @Nullable String subPath,
-        @OutputCustomType.Parameter("subPathExpr") @Nullable String subPathExpr) {
+        @CustomType.Parameter("mountPath") String mountPath,
+        @CustomType.Parameter("mountPropagation") @Nullable String mountPropagation,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("subPath") @Nullable String subPath,
+        @CustomType.Parameter("subPathExpr") @Nullable String subPathExpr) {
         this.mountPath = mountPath;
         this.mountPropagation = mountPropagation;
         this.name = name;

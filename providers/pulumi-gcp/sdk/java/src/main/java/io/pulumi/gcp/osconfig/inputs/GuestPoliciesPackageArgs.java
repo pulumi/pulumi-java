@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
      * 
      */
-    @InputImport(name="desiredState")
+    @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
     public Output<String> getDesiredState() {
@@ -41,7 +41,7 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
      * 
      */
-    @InputImport(name="manager")
+    @Import(name="manager")
       private final @Nullable Output<String> manager;
 
     public Output<String> getManager() {
@@ -55,7 +55,7 @@ public final class GuestPoliciesPackageArgs extends io.pulumi.resources.Resource
      * could potentially have conflicting assignments.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

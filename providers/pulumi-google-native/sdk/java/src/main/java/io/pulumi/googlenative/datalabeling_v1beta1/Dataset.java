@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.DatasetArgs;
@@ -24,7 +24,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The names of any related resources that are blocking changes to the dataset.
      * 
      */
-    @OutputExport(name="blockingResources", type=List.class, parameters={String.class})
+    @Export(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
     /**
@@ -38,7 +38,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Time the dataset is created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The number of data items in the dataset.
      * 
      */
-    @OutputExport(name="dataItemCount", type=String.class, parameters={})
+    @Export(name="dataItemCount", type=String.class, parameters={})
     private Output<String> dataItemCount;
 
     /**
@@ -66,7 +66,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Optional. User-provided description of the annotation specification set. The description can be up to 10000 characters long.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The display name of the dataset. Maximum of 64 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -94,7 +94,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * This is populated with the original input configs where ImportData is called. It is available only after the clients import data to this dataset.
      * 
      */
-    @OutputExport(name="inputConfigs", type=List.class, parameters={GoogleCloudDatalabelingV1beta1InputConfigResponse.class})
+    @Export(name="inputConfigs", type=List.class, parameters={GoogleCloudDatalabelingV1beta1InputConfigResponse.class})
     private Output<List<GoogleCloudDatalabelingV1beta1InputConfigResponse>> inputConfigs;
 
     /**
@@ -108,7 +108,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Last time that the Dataset is migrated to AI Platform V2. If any of the AnnotatedDataset is migrated, the last_migration_time in Dataset is also updated.
      * 
      */
-    @OutputExport(name="lastMigrateTime", type=String.class, parameters={})
+    @Export(name="lastMigrateTime", type=String.class, parameters={})
     private Output<String> lastMigrateTime;
 
     /**
@@ -122,7 +122,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Dataset resource name, format is: projects/{project_id}/datasets/{dataset_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

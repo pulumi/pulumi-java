@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCredentialResult {
     /**
      * Gets the creation time.
@@ -47,15 +47,15 @@ public final class GetCredentialResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCredentialResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") String userName) {
         this.creationTime = creationTime;
         this.description = description;
         this.id = id;

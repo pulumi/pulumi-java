@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig {
     /**
      * A JSON expressing use-case specific conditions declaratively. If any condition is matched, atomic tasks are created against the configured work team. For more information about how to structure the JSON, see [JSON Schema for Human Loop Activation Conditions in Amazon Augmented AI](https://docs.aws.amazon.com/sagemaker/latest/dg/a2i-human-fallback-conditions-json-schema.html).
@@ -15,8 +15,8 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
      */
     private final String humanLoopActivationConditions;
 
-    @OutputCustomType.Constructor
-    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig(@OutputCustomType.Parameter("humanLoopActivationConditions") String humanLoopActivationConditions) {
+    @CustomType.Constructor
+    private FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig(@CustomType.Parameter("humanLoopActivationConditions") String humanLoopActivationConditions) {
         this.humanLoopActivationConditions = humanLoopActivationConditions;
     }
 

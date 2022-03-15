@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
 
     public static final ConnectionParameterArgs Empty = new ConnectionParameterArgs();
 
-    @InputImport(name="isValueSecret")
+    @Import(name="isValueSecret")
       private final @Nullable Output<Boolean> isValueSecret;
 
     public Output<Boolean> getIsValueSecret() {
         return this.isValueSecret == null ? Output.empty() : this.isValueSecret;
     }
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

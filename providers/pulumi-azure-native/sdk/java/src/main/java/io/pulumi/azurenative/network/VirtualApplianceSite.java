@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.VirtualApplianceSiteArgs;
 import io.pulumi.azurenative.network.outputs.Office365PolicyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * Address Prefix.
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
@@ -49,7 +49,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * Name of the virtual appliance site.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -77,7 +77,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * Office 365 Policy.
      * 
      */
-    @OutputExport(name="o365Policy", type=Office365PolicyPropertiesResponse.class, parameters={})
+    @Export(name="o365Policy", type=Office365PolicyPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ Office365PolicyPropertiesResponse> o365Policy;
 
     /**
@@ -91,7 +91,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class VirtualApplianceSite extends io.pulumi.resources.CustomResource {
      * Site type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GlobalTableKeySchema extends io.pulumi.resources.InvokeArgs {
 
     public static final GlobalTableKeySchema Empty = new GlobalTableKeySchema();
 
-    @InputImport(name="attributeName", required=true)
+    @Import(name="attributeName", required=true)
       private final String attributeName;
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final String keyType;
 
     public String getKeyType() {

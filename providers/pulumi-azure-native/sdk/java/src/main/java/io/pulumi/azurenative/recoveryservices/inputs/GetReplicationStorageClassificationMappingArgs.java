@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * Fabric name.
      * 
      */
-    @InputImport(name="fabricName", required=true)
+    @Import(name="fabricName", required=true)
       private final String fabricName;
 
     public String getFabricName() {
@@ -27,7 +27,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * The name of the resource group where the recovery services vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * The name of the recovery services vault.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {
@@ -49,7 +49,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * Storage classification mapping name.
      * 
      */
-    @InputImport(name="storageClassificationMappingName", required=true)
+    @Import(name="storageClassificationMappingName", required=true)
       private final String storageClassificationMappingName;
 
     public String getStorageClassificationMappingName() {
@@ -60,7 +60,7 @@ public final class GetReplicationStorageClassificationMappingArgs extends io.pul
      * Storage classification name.
      * 
      */
-    @InputImport(name="storageClassificationName", required=true)
+    @Import(name="storageClassificationName", required=true)
       private final String storageClassificationName;
 
     public String getStorageClassificationName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentSourceResponse;
 import io.pulumi.azurenative.automation.outputs.DscConfigurationParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDscConfigurationResult {
     /**
      * Gets or sets the creation time.
@@ -97,24 +97,24 @@ public final class GetDscConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDscConfigurationResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("jobCount") @Nullable Integer jobCount,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("logVerbose") @Nullable Boolean logVerbose,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeConfigurationCount") @Nullable Integer nodeConfigurationCount,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,DscConfigurationParameterResponse> parameters,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("source") @Nullable ContentSourceResponse source,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("jobCount") @Nullable Integer jobCount,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("logVerbose") @Nullable Boolean logVerbose,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeConfigurationCount") @Nullable Integer nodeConfigurationCount,
+        @CustomType.Parameter("parameters") @Nullable Map<String,DscConfigurationParameterResponse> parameters,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("source") @Nullable ContentSourceResponse source,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.etag = etag;

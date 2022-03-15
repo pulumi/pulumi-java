@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecActionResponse {
     /**
      * (Optional) Command is the command line to execute inside the container, the working directory for the command is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.
@@ -16,8 +16,8 @@ public final class ExecActionResponse {
      */
     private final List<String> command;
 
-    @OutputCustomType.Constructor
-    private ExecActionResponse(@OutputCustomType.Parameter("command") List<String> command) {
+    @CustomType.Constructor
+    private ExecActionResponse(@CustomType.Parameter("command") List<String> command) {
         this.command = command;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeOfferingFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
      * One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetInstanceTypeOfferingFilter> filters;
 
     public List<GetInstanceTypeOfferingFilter> getFilters() {
@@ -31,7 +31,7 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
      * Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
      * 
      */
-    @InputImport(name="locationType")
+    @Import(name="locationType")
       private final @Nullable String locationType;
 
     public Optional<String> getLocationType() {
@@ -42,7 +42,7 @@ public final class GetInstanceTypeOfferingArgs extends io.pulumi.resources.Invok
      * Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    @InputImport(name="preferredInstanceTypes")
+    @Import(name="preferredInstanceTypes")
       private final @Nullable List<String> preferredInstanceTypes;
 
     public List<String> getPreferredInstanceTypes() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetScheduledActionArgs extends io.pulumi.resources.InvokeArgs
      * The name of the scheduled action. The name must be unique within an account.
      * 
      */
-    @InputImport(name="scheduledActionName", required=true)
+    @Import(name="scheduledActionName", required=true)
       private final String scheduledActionName;
 
     public String getScheduledActionName() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.resources.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.resources.outputs.ScriptStatusResponse;
 import io.pulumi.azurenative.resources.outputs.StorageAccountConfigurationResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAzureCliScriptResult {
     /**
      * Command line arguments to pass to the script. Arguments are separated by spaces. ex: -Name blue* -Location 'West US 2'
@@ -137,31 +137,31 @@ public final class GetAzureCliScriptResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAzureCliScriptResult(
-        @OutputCustomType.Parameter("arguments") @Nullable String arguments,
-        @OutputCustomType.Parameter("azCliVersion") String azCliVersion,
-        @OutputCustomType.Parameter("cleanupPreference") @Nullable String cleanupPreference,
-        @OutputCustomType.Parameter("containerSettings") @Nullable ContainerConfigurationResponse containerSettings,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputs") Map<String,Object> outputs,
-        @OutputCustomType.Parameter("primaryScriptUri") @Nullable String primaryScriptUri,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("retentionInterval") String retentionInterval,
-        @OutputCustomType.Parameter("scriptContent") @Nullable String scriptContent,
-        @OutputCustomType.Parameter("status") ScriptStatusResponse status,
-        @OutputCustomType.Parameter("storageAccountSettings") @Nullable StorageAccountConfigurationResponse storageAccountSettings,
-        @OutputCustomType.Parameter("supportingScriptUris") @Nullable List<String> supportingScriptUris,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arguments") @Nullable String arguments,
+        @CustomType.Parameter("azCliVersion") String azCliVersion,
+        @CustomType.Parameter("cleanupPreference") @Nullable String cleanupPreference,
+        @CustomType.Parameter("containerSettings") @Nullable ContainerConfigurationResponse containerSettings,
+        @CustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputs") Map<String,Object> outputs,
+        @CustomType.Parameter("primaryScriptUri") @Nullable String primaryScriptUri,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("retentionInterval") String retentionInterval,
+        @CustomType.Parameter("scriptContent") @Nullable String scriptContent,
+        @CustomType.Parameter("status") ScriptStatusResponse status,
+        @CustomType.Parameter("storageAccountSettings") @Nullable StorageAccountConfigurationResponse storageAccountSettings,
+        @CustomType.Parameter("supportingScriptUris") @Nullable List<String> supportingScriptUris,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeout") @Nullable String timeout,
+        @CustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.azCliVersion = azCliVersion;
         this.cleanupPreference = cleanupPreference;

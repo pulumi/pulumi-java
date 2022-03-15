@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final MaterialResponse Empty = new MaterialResponse();
 
-    @InputImport(name="digest", required=true)
+    @Import(name="digest", required=true)
       private final Map<String,String> digest;
 
     public Map<String,String> getDigest() {
         return this.digest;
     }
 
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

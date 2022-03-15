@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotwireless.enums.TaskDefinitionType;
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANUpdateGatewayTaskEntry;
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionTag;
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionUpdateWirelessGatewayTaskCreate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskDefinitionResult {
     /**
      * TaskDefinition arn. Returned after successful create.
@@ -58,16 +58,16 @@ public final class GetTaskDefinitionResult {
      */
     private final @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskDefinitionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("autoCreateTasks") @Nullable Boolean autoCreateTasks,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loRaWANUpdateGatewayTaskEntry") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<TaskDefinitionTag> tags,
-        @OutputCustomType.Parameter("taskDefinitionType") @Nullable TaskDefinitionType taskDefinitionType,
-        @OutputCustomType.Parameter("update") @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("autoCreateTasks") @Nullable Boolean autoCreateTasks,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loRaWANUpdateGatewayTaskEntry") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<TaskDefinitionTag> tags,
+        @CustomType.Parameter("taskDefinitionType") @Nullable TaskDefinitionType taskDefinitionType,
+        @CustomType.Parameter("update") @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
         this.arn = arn;
         this.autoCreateTasks = autoCreateTasks;
         this.id = id;

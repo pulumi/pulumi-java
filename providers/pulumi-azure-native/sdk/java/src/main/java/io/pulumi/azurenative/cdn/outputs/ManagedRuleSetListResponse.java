@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ManagedRuleSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleSetListResponse {
     /**
      * List of rule sets.
@@ -17,8 +17,8 @@ public final class ManagedRuleSetListResponse {
      */
     private final @Nullable List<ManagedRuleSetResponse> managedRuleSets;
 
-    @OutputCustomType.Constructor
-    private ManagedRuleSetListResponse(@OutputCustomType.Parameter("managedRuleSets") @Nullable List<ManagedRuleSetResponse> managedRuleSets) {
+    @CustomType.Constructor
+    private ManagedRuleSetListResponse(@CustomType.Parameter("managedRuleSets") @Nullable List<ManagedRuleSetResponse> managedRuleSets) {
         this.managedRuleSets = managedRuleSets;
     }
 

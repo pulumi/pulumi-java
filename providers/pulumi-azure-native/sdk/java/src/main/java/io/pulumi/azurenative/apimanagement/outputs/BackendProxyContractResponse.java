@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendProxyContractResponse {
     /**
      * Password to connect to the WebProxy Server
@@ -27,11 +27,11 @@ public final class BackendProxyContractResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendProxyContractResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.url = url;
         this.username = username;

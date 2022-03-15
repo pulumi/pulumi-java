@@ -5,7 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.ThingTypePropertiesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the created AWS IoT Thing Type.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * Whether the thing type is deprecated. If true, no new things could be associated with this type.
      * 
      */
-    @InputImport(name="deprecated")
+    @Import(name="deprecated")
       private final @Nullable Output<Boolean> deprecated;
 
     public Output<Boolean> getDeprecated() {
@@ -43,7 +43,7 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * The name of the thing type.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * , Configuration block that can contain the following properties of the thing type:
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ThingTypePropertiesGetArgs> properties;
 
     public Output<ThingTypePropertiesGetArgs> getProperties() {
@@ -65,7 +65,7 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class ThingTypeState extends io.pulumi.resources.ResourceArgs {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

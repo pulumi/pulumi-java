@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * Resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -34,7 +34,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * The name of the Load balancer
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * Properties of the load balancer configuration.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
     public Output<LoadBalancerConfigurationPropertiesArgs> getProperties() {

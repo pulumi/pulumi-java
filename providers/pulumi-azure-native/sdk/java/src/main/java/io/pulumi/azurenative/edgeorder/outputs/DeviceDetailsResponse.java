@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeviceDetailsResponse {
     /**
      * Management Resource Id
@@ -25,11 +25,11 @@ public final class DeviceDetailsResponse {
      */
     private final String serialNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceDetailsResponse(
-        @OutputCustomType.Parameter("managementResourceId") String managementResourceId,
-        @OutputCustomType.Parameter("managementResourceTenantId") String managementResourceTenantId,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber) {
+        @CustomType.Parameter("managementResourceId") String managementResourceId,
+        @CustomType.Parameter("managementResourceTenantId") String managementResourceTenantId,
+        @CustomType.Parameter("serialNumber") String serialNumber) {
         this.managementResourceId = managementResourceId;
         this.managementResourceTenantId = managementResourceTenantId;
         this.serialNumber = serialNumber;

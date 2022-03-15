@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    @InputImport(name="defaultGameServerConfig", required=true)
+    @Import(name="defaultGameServerConfig", required=true)
       private final Output<String> defaultGameServerConfig;
 
     public Output<String> getDefaultGameServerConfig() {
@@ -33,7 +33,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
      * 
      */
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -48,7 +48,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gameServerConfigOverrides")
+    @Import(name="gameServerConfigOverrides")
       private final @Nullable Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides;
 
     public Output<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> getGameServerConfigOverrides() {
@@ -60,7 +60,7 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

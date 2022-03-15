@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallRuleGroupArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * The ARN (Amazon Resource Name) of the rule group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * A name that lets you identify the rule group, to manage and use it.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * The AWS account ID for the account that created the rule group. When a rule group is shared with your account, this is the account that has shared the rule group with you.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -75,7 +75,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM). Valid values: `NOT_SHARED`, `SHARED_BY_ME`, `SHARED_WITH_ME`
      * 
      */
-    @OutputExport(name="shareStatus", type=String.class, parameters={})
+    @Export(name="shareStatus", type=String.class, parameters={})
     private Output<String> shareStatus;
 
     /**
@@ -89,7 +89,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -103,7 +103,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Destination IP range of the route.
      * 
      */
-    @InputImport(name="destIpRange", required=true)
+    @Import(name="destIpRange", required=true)
       private final String destIpRange;
 
     public String getDestIpRange() {
@@ -33,7 +33,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of a Compute Engine route.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -44,7 +44,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Instance tags of the route.
      * 
      */
-    @InputImport(name="instanceTags", required=true)
+    @Import(name="instanceTags", required=true)
       private final List<String> instanceTags;
 
     public List<String> getInstanceTags() {
@@ -55,7 +55,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of a Compute Engine network.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -66,7 +66,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Next hop of the route.
      * 
      */
-    @InputImport(name="nextHop", required=true)
+    @Import(name="nextHop", required=true)
       private final String nextHop;
 
     public String getNextHop() {
@@ -77,7 +77,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Type of next hop.
      * 
      */
-    @InputImport(name="nextHopType", required=true)
+    @Import(name="nextHopType", required=true)
       private final String nextHopType;
 
     public String getNextHopType() {
@@ -88,7 +88,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Priority of the route.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -99,7 +99,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Type of route.
      * 
      */
-    @InputImport(name="routeType", required=true)
+    @Import(name="routeType", required=true)
       private final String routeType;
 
     public String getRouteType() {
@@ -110,7 +110,7 @@ public final class RouteInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of a Compute Engine route. Dynamic route from cloud router does not have a URI. Advertised route from Google Cloud VPC to on-premises network also does not have a URI.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

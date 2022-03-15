@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * The common name of the client certificate.
      * 
      */
-    @InputImport(name="certificateCommonName", required=true)
+    @Import(name="certificateCommonName", required=true)
       private final String certificateCommonName;
 
     public String getCertificateCommonName() {
@@ -32,7 +32,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * The issuer thumbprint of the client certificate.
      * 
      */
-    @InputImport(name="certificateIssuerThumbprint", required=true)
+    @Import(name="certificateIssuerThumbprint", required=true)
       private final String certificateIssuerThumbprint;
 
     public String getCertificateIssuerThumbprint() {
@@ -43,7 +43,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
      * 
      */
-    @InputImport(name="isAdmin", required=true)
+    @Import(name="isAdmin", required=true)
       private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {

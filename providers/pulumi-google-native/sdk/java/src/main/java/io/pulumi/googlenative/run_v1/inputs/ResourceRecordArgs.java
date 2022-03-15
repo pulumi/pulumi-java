@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.enums.ResourceRecordType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
      * Relative name of the object affected by this record. Only applicable for `CNAME` records. Example: 'www'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
      * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
      * 
      */
-    @InputImport(name="rrdata")
+    @Import(name="rrdata")
       private final @Nullable Output<String> rrdata;
 
     public Output<String> getRrdata() {
@@ -45,7 +45,7 @@ public final class ResourceRecordArgs extends io.pulumi.resources.ResourceArgs {
      * Resource record type. Example: `AAAA`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ResourceRecordType> type;
 
     public Output<ResourceRecordType> getType() {

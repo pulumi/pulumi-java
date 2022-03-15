@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * If `true`, deletes any reports that belong to a report group before deleting the report group. If `false`, you must delete any reports in the report group before deleting it. Default value is `false`.
      * 
      */
-    @InputImport(name="deleteReports")
+    @Import(name="deleteReports")
       private final @Nullable Output<Boolean> deleteReports;
 
     public Output<Boolean> getDeleteReports() {
@@ -32,7 +32,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
      * 
      */
-    @InputImport(name="exportConfig", required=true)
+    @Import(name="exportConfig", required=true)
       private final Output<ReportGroupExportConfigArgs> exportConfig;
 
     public Output<ReportGroupExportConfigArgs> getExportConfig() {
@@ -43,7 +43,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of a Report Group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -65,7 +65,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The export configuration type. Valid values are `S3` and `NO_EXPORT`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

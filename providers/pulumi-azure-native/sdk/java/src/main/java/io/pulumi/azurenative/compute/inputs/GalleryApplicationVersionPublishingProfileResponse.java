@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.TargetRegionResponse;
 import io.pulumi.azurenative.compute.inputs.UserArtifactManageResponse;
 import io.pulumi.azurenative.compute.inputs.UserArtifactSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * Optional. Whether or not this application reports health.
      * 
      */
-    @InputImport(name="enableHealthCheck")
+    @Import(name="enableHealthCheck")
       private final @Nullable Boolean enableHealthCheck;
 
     public Optional<Boolean> getEnableHealthCheck() {
@@ -39,7 +39,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    @InputImport(name="endOfLifeDate")
+    @Import(name="endOfLifeDate")
       private final @Nullable String endOfLifeDate;
 
     public Optional<String> getEndOfLifeDate() {
@@ -50,14 +50,14 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
      * 
      */
-    @InputImport(name="excludeFromLatest")
+    @Import(name="excludeFromLatest")
       private final @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
     }
 
-    @InputImport(name="manageActions")
+    @Import(name="manageActions")
       private final @Nullable UserArtifactManageResponse manageActions;
 
     public Optional<UserArtifactManageResponse> getManageActions() {
@@ -68,7 +68,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * The timestamp for when the gallery image version is published.
      * 
      */
-    @InputImport(name="publishedDate", required=true)
+    @Import(name="publishedDate", required=true)
       private final String publishedDate;
 
     public String getPublishedDate() {
@@ -79,7 +79,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Integer replicaCount;
 
     public Optional<Integer> getReplicaCount() {
@@ -90,7 +90,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * The source image from which the Image Version is going to be created.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final UserArtifactSourceResponse source;
 
     public UserArtifactSourceResponse getSource() {
@@ -101,7 +101,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
@@ -112,7 +112,7 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends io
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
      */
-    @InputImport(name="targetRegions")
+    @Import(name="targetRegions")
       private final @Nullable List<TargetRegionResponse> targetRegions;
 
     public List<TargetRegionResponse> getTargetRegions() {

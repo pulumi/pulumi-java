@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * SKU family name
@@ -20,10 +20,10 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("name") String name) {
         this.family = family;
         this.name = name;
     }

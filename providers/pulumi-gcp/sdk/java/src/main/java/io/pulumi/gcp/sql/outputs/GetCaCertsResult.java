@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.GetCaCertsCert;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCaCertsResult {
     /**
      * SHA1 fingerprint of the currently active CA certificate.
@@ -29,13 +29,13 @@ public final class GetCaCertsResult {
     private final String instance;
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCaCertsResult(
-        @OutputCustomType.Parameter("activeVersion") String activeVersion,
-        @OutputCustomType.Parameter("certs") List<GetCaCertsCert> certs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("activeVersion") String activeVersion,
+        @CustomType.Parameter("certs") List<GetCaCertsCert> certs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("project") String project) {
         this.activeVersion = activeVersion;
         this.certs = certs;
         this.id = id;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.BandwidthLimitResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAgentPoolResult {
     /**
      * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
@@ -31,12 +31,12 @@ public final class GetAgentPoolResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAgentPoolResult(
-        @OutputCustomType.Parameter("bandwidthLimit") BandwidthLimitResponse bandwidthLimit,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("bandwidthLimit") BandwidthLimitResponse bandwidthLimit,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.bandwidthLimit = bandwidthLimit;
         this.displayName = displayName;
         this.name = name;

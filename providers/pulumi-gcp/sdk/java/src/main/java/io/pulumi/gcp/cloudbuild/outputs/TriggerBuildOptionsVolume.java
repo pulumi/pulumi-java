@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildOptionsVolume {
     /**
      * Name of the volume to mount.
@@ -26,10 +26,10 @@ public final class TriggerBuildOptionsVolume {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildOptionsVolume(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.name = name;
         this.path = path;
     }

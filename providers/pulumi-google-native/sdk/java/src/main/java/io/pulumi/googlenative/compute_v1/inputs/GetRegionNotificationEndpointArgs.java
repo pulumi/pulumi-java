@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetRegionNotificationEndpointArgs extends io.pulumi.resources
 
     public static final GetRegionNotificationEndpointArgs Empty = new GetRegionNotificationEndpointArgs();
 
-    @InputImport(name="notificationEndpoint", required=true)
+    @Import(name="notificationEndpoint", required=true)
       private final String notificationEndpoint;
 
     public String getNotificationEndpoint() {
         return this.notificationEndpoint;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

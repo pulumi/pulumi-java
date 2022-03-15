@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.BackendServiceConsistentHashHttpCookieTtlGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
      * Name of the cookie.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
      * Path to set for the cookie.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -42,7 +42,7 @@ public final class BackendServiceConsistentHashHttpCookieGetArgs extends io.pulu
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<BackendServiceConsistentHashHttpCookieTtlGetArgs> ttl;
 
     public Output<BackendServiceConsistentHashHttpCookieTtlGetArgs> getTtl() {

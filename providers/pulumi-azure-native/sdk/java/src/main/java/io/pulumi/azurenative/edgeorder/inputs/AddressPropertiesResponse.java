@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
      * Status of address validation
      * 
      */
-    @InputImport(name="addressValidationStatus", required=true)
+    @Import(name="addressValidationStatus", required=true)
       private final String addressValidationStatus;
 
     public String getAddressValidationStatus() {
@@ -35,7 +35,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
      * Contact details for the address
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse getContactDetails() {
@@ -46,7 +46,7 @@ public final class AddressPropertiesResponse extends io.pulumi.resources.InvokeA
      * Shipping details for the address
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> getShippingAddress() {

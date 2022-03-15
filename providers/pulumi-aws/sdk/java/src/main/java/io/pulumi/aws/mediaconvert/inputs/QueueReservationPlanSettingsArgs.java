@@ -4,7 +4,7 @@
 package io.pulumi.aws.mediaconvert.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class QueueReservationPlanSettingsArgs extends io.pulumi.resources.
      * The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
      * 
      */
-    @InputImport(name="commitment", required=true)
+    @Import(name="commitment", required=true)
       private final Output<String> commitment;
 
     public Output<String> getCommitment() {
@@ -29,7 +29,7 @@ public final class QueueReservationPlanSettingsArgs extends io.pulumi.resources.
      * Specifies whether the term of your reserved queue pricing plan. Valid values are `AUTO_RENEW` or `EXPIRE`.
      * 
      */
-    @InputImport(name="renewalType", required=true)
+    @Import(name="renewalType", required=true)
       private final Output<String> renewalType;
 
     public Output<String> getRenewalType() {
@@ -40,7 +40,7 @@ public final class QueueReservationPlanSettingsArgs extends io.pulumi.resources.
      * Specifies the number of reserved transcode slots (RTS) for queue.
      * 
      */
-    @InputImport(name="reservedSlots", required=true)
+    @Import(name="reservedSlots", required=true)
       private final Output<Integer> reservedSlots;
 
     public Output<Integer> getReservedSlots() {

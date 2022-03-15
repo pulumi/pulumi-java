@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.LBBackendAddressPoolResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.LBFrontendIPConfigurationResourceSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * Gets or sets the backend address pools of the load balancer.
      * 
      */
-    @InputImport(name="backendAddressPools")
+    @Import(name="backendAddressPools")
       private final @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
     public Output<List<LBBackendAddressPoolResourceSettingsArgs>> getBackendAddressPools() {
@@ -36,7 +36,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * Gets or sets the frontend IP configurations of the load balancer.
      * 
      */
-    @InputImport(name="frontendIPConfigurations")
+    @Import(name="frontendIPConfigurations")
       private final @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
     public Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> getFrontendIPConfigurations() {
@@ -48,7 +48,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * Expected value is 'Microsoft.Network/loadBalancers'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -59,7 +59,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * Gets or sets load balancer sku (Basic/Standard).
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
@@ -70,7 +70,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {
@@ -82,7 +82,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
      *  precedence only if frontend IP configurations settings are not present.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<String> zones;
 
     public Output<String> getZones() {

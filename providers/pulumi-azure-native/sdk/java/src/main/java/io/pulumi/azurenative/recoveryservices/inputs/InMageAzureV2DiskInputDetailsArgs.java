@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
      * The DiskEncryptionSet ARM ID.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
     public Output<String> getDiskEncryptionSetId() {
@@ -35,7 +35,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
      * The DiskId.
      * 
      */
-    @InputImport(name="diskId")
+    @Import(name="diskId")
       private final @Nullable Output<String> diskId;
 
     public Output<String> getDiskId() {
@@ -46,7 +46,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
      * The DiskType.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
     public Output<Either<String,DiskAccountType>> getDiskType() {
@@ -57,7 +57,7 @@ public final class InMageAzureV2DiskInputDetailsArgs extends io.pulumi.resources
      * The LogStorageAccountId.
      * 
      */
-    @InputImport(name="logStorageAccountId")
+    @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
 
     public Output<String> getLogStorageAccountId() {

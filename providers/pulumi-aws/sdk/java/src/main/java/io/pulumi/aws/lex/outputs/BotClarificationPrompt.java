@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.BotClarificationPromptMessage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotClarificationPrompt {
     /**
      * The number of times to prompt the user for information.
@@ -34,11 +34,11 @@ public final class BotClarificationPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotClarificationPrompt(
-        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
-        @OutputCustomType.Parameter("messages") List<BotClarificationPromptMessage> messages,
-        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
+        @CustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @CustomType.Parameter("messages") List<BotClarificationPromptMessage> messages,
+        @CustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;

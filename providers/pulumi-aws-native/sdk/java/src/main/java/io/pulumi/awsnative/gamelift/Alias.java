@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.gamelift.AliasArgs;
 import io.pulumi.awsnative.gamelift.outputs.AliasRoutingStrategy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Unique alias ID
      * 
      */
-    @OutputExport(name="aliasId", type=String.class, parameters={})
+    @Export(name="aliasId", type=String.class, parameters={})
     private Output<String> aliasId;
 
     /**
@@ -38,7 +38,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * A human-readable description of the alias.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * A descriptive label that is associated with an alias. Alias names do not need to be unique.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
      * 
      */
-    @OutputExport(name="routingStrategy", type=AliasRoutingStrategy.class, parameters={})
+    @Export(name="routingStrategy", type=AliasRoutingStrategy.class, parameters={})
     private Output<AliasRoutingStrategy> routingStrategy;
 
     /**

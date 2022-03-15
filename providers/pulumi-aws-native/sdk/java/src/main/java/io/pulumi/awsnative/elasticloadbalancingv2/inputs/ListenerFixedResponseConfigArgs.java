@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ListenerFixedResponseConfigArgs extends io.pulumi.resources.R
 
     public static final ListenerFixedResponseConfigArgs Empty = new ListenerFixedResponseConfigArgs();
 
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
         return this.contentType == null ? Output.empty() : this.contentType;
     }
 
-    @InputImport(name="messageBody")
+    @Import(name="messageBody")
       private final @Nullable Output<String> messageBody;
 
     public Output<String> getMessageBody() {
         return this.messageBody == null ? Output.empty() : this.messageBody;
     }
 
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
     public Output<String> getStatusCode() {

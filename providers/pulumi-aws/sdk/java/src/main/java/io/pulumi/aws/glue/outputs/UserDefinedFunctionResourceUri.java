@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserDefinedFunctionResourceUri {
     /**
      * The type of the resource. can be one of `JAR`, `FILE`, and `ARCHIVE`.
@@ -20,10 +20,10 @@ public final class UserDefinedFunctionResourceUri {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserDefinedFunctionResourceUri(
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("uri") String uri) {
         this.resourceType = resourceType;
         this.uri = uri;
     }

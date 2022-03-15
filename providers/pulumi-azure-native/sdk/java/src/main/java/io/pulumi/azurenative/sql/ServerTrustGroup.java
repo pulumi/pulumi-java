@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.ServerTrustGroupArgs;
 import io.pulumi.azurenative.sql.outputs.ServerInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
      * Group members information for the server trust group.
      * 
      */
-    @OutputExport(name="groupMembers", type=List.class, parameters={ServerInfoResponse.class})
+    @Export(name="groupMembers", type=List.class, parameters={ServerInfoResponse.class})
     private Output<List<ServerInfoResponse>> groupMembers;
 
     /**
@@ -49,7 +49,7 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
      * Trust scope of the server trust group.
      * 
      */
-    @OutputExport(name="trustScopes", type=List.class, parameters={String.class})
+    @Export(name="trustScopes", type=List.class, parameters={String.class})
     private Output<List<String>> trustScopes;
 
     /**
@@ -77,7 +77,7 @@ public class ServerTrustGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

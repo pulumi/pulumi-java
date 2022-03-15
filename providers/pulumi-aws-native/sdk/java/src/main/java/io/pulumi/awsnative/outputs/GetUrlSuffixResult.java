@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUrlSuffixResult {
     private final String urlSuffix;
 
-    @OutputCustomType.Constructor
-    private GetUrlSuffixResult(@OutputCustomType.Parameter("urlSuffix") String urlSuffix) {
+    @CustomType.Constructor
+    private GetUrlSuffixResult(@CustomType.Parameter("urlSuffix") String urlSuffix) {
         this.urlSuffix = urlSuffix;
     }
 

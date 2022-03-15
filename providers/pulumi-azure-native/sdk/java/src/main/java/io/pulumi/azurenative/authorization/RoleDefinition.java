@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.RoleDefinitionArgs;
 import io.pulumi.azurenative.authorization.outputs.PermissionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * Role definition assignable scopes.
      * 
      */
-    @OutputExport(name="assignableScopes", type=List.class, parameters={String.class})
+    @Export(name="assignableScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assignableScopes;
 
     /**
@@ -49,7 +49,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * The role definition description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * The role definition name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * Role definition permissions.
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={PermissionResponse.class})
+    @Export(name="permissions", type=List.class, parameters={PermissionResponse.class})
     private Output</* @Nullable */ List<PermissionResponse>> permissions;
 
     /**
@@ -91,7 +91,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * The role name.
      * 
      */
-    @OutputExport(name="roleName", type=String.class, parameters={})
+    @Export(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
     /**
@@ -105,7 +105,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * The role type.
      * 
      */
-    @OutputExport(name="roleType", type=String.class, parameters={})
+    @Export(name="roleType", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleType;
 
     /**
@@ -119,7 +119,7 @@ public class RoleDefinition extends io.pulumi.resources.CustomResource {
      * The role definition type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

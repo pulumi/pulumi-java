@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse {
     /**
      * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
@@ -42,14 +42,14 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse(
-        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("queryRecord") String queryRecord,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("confidenceScore") Double confidenceScore,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("queryRecord") String queryRecord,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("uri") String uri) {
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;
         this.queryRecord = queryRecord;

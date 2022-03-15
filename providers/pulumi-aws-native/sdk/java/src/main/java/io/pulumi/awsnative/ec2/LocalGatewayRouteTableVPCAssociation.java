@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.LocalGatewayRouteTableVPCAssociationArgs;
 import io.pulumi.awsnative.ec2.outputs.LocalGatewayRouteTableVPCAssociationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * The ID of the local gateway.
      * 
      */
-    @OutputExport(name="localGatewayId", type=String.class, parameters={})
+    @Export(name="localGatewayId", type=String.class, parameters={})
     private Output<String> localGatewayId;
 
     /**
@@ -37,7 +37,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * The ID of the local gateway route table.
      * 
      */
-    @OutputExport(name="localGatewayRouteTableId", type=String.class, parameters={})
+    @Export(name="localGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> localGatewayRouteTableId;
 
     /**
@@ -51,7 +51,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * The ID of the association.
      * 
      */
-    @OutputExport(name="localGatewayRouteTableVpcAssociationId", type=String.class, parameters={})
+    @Export(name="localGatewayRouteTableVpcAssociationId", type=String.class, parameters={})
     private Output<String> localGatewayRouteTableVpcAssociationId;
 
     /**
@@ -65,7 +65,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * The state of the association.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -79,7 +79,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * The tags for the association.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LocalGatewayRouteTableVPCAssociationTag.class})
+    @Export(name="tags", type=List.class, parameters={LocalGatewayRouteTableVPCAssociationTag.class})
     private Output</* @Nullable */ List<LocalGatewayRouteTableVPCAssociationTag>> tags;
 
     /**
@@ -93,7 +93,7 @@ public class LocalGatewayRouteTableVPCAssociation extends io.pulumi.resources.Cu
      * The ID of the VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

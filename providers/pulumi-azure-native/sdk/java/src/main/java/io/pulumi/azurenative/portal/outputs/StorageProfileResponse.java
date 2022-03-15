@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * Size of file share
@@ -28,11 +28,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable String storageAccountResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageProfileResponse(
-        @OutputCustomType.Parameter("diskSizeInGB") @Nullable Integer diskSizeInGB,
-        @OutputCustomType.Parameter("fileShareName") @Nullable String fileShareName,
-        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
+        @CustomType.Parameter("diskSizeInGB") @Nullable Integer diskSizeInGB,
+        @CustomType.Parameter("fileShareName") @Nullable String fileShareName,
+        @CustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
         this.diskSizeInGB = diskSizeInGB;
         this.fileShareName = fileShareName;
         this.storageAccountResourceId = storageAccountResourceId;

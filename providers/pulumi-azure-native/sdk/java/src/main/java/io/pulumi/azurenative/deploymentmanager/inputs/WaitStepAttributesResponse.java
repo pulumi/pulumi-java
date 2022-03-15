@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class WaitStepAttributesResponse extends io.pulumi.resources.Invoke
      * The duration in ISO 8601 format of how long the wait should be.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {

@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyReferrerPolicy {
     private final Boolean override;
     private final String referrerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyReferrerPolicy(
-        @OutputCustomType.Parameter("override") Boolean override,
-        @OutputCustomType.Parameter("referrerPolicy") String referrerPolicy) {
+        @CustomType.Parameter("override") Boolean override,
+        @CustomType.Parameter("referrerPolicy") String referrerPolicy) {
         this.override = override;
         this.referrerPolicy = referrerPolicy;
     }

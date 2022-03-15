@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCollectorResult {
     /**
      * The time at which the data collector was created in milliseconds since the epoch.
@@ -35,13 +35,13 @@ public final class GetDataCollectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCollectorResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.createdAt = createdAt;
         this.description = description;
         this.lastModifiedAt = lastModifiedAt;

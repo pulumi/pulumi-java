@@ -4,14 +4,14 @@
 package io.pulumi.aws.organizations.outputs;
 
 import io.pulumi.aws.organizations.outputs.GetDelegatedAdministratorsDelegatedAdministrator;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDelegatedAdministratorsResult {
     /**
      * The list of delegated administrators in your organization, which have the following attributes:
@@ -25,11 +25,11 @@ public final class GetDelegatedAdministratorsResult {
     private final String id;
     private final @Nullable String servicePrincipal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDelegatedAdministratorsResult(
-        @OutputCustomType.Parameter("delegatedAdministrators") List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("servicePrincipal") @Nullable String servicePrincipal) {
+        @CustomType.Parameter("delegatedAdministrators") List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("servicePrincipal") @Nullable String servicePrincipal) {
         this.delegatedAdministrators = delegatedAdministrators;
         this.id = id;
         this.servicePrincipal = servicePrincipal;

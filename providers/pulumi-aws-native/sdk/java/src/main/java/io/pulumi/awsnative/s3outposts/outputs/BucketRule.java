@@ -6,14 +6,14 @@ package io.pulumi.awsnative.s3outposts.outputs;
 import io.pulumi.awsnative.s3outposts.enums.BucketRuleStatus;
 import io.pulumi.awsnative.s3outposts.outputs.BucketAbortIncompleteMultipartUpload;
 import io.pulumi.awsnative.s3outposts.outputs.BucketRuleFilterProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRule {
     /**
      * Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3Outposts bucket.
@@ -42,14 +42,14 @@ public final class BucketRule {
     private final @Nullable String id;
     private final @Nullable BucketRuleStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRule(
-        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
-        @OutputCustomType.Parameter("filter") @Nullable BucketRuleFilterProperties filter,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("status") @Nullable BucketRuleStatus status) {
+        @CustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @CustomType.Parameter("filter") @Nullable BucketRuleFilterProperties filter,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("status") @Nullable BucketRuleStatus status) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expirationDate = expirationDate;
         this.expirationInDays = expirationInDays;

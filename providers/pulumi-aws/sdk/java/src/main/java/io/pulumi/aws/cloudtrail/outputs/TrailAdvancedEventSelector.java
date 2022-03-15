@@ -4,14 +4,14 @@
 package io.pulumi.aws.cloudtrail.outputs;
 
 import io.pulumi.aws.cloudtrail.outputs.TrailAdvancedEventSelectorFieldSelector;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrailAdvancedEventSelector {
     /**
      * Specifies the selector statements in an advanced event selector. Fields documented below.
@@ -24,10 +24,10 @@ public final class TrailAdvancedEventSelector {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrailAdvancedEventSelector(
-        @OutputCustomType.Parameter("fieldSelectors") List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("fieldSelectors") List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.fieldSelectors = fieldSelectors;
         this.name = name;
     }

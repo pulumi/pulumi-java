@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClientAuthenticationTls {
     /**
      * List of ACM Certificate Authority Amazon Resource Names (ARNs).
@@ -17,8 +17,8 @@ public final class ClusterClientAuthenticationTls {
      */
     private final @Nullable List<String> certificateAuthorityArns;
 
-    @OutputCustomType.Constructor
-    private ClusterClientAuthenticationTls(@OutputCustomType.Parameter("certificateAuthorityArns") @Nullable List<String> certificateAuthorityArns) {
+    @CustomType.Constructor
+    private ClusterClientAuthenticationTls(@CustomType.Parameter("certificateAuthorityArns") @Nullable List<String> certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
     }
 

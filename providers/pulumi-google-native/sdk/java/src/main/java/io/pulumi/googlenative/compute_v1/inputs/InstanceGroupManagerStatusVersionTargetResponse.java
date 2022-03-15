@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse extends io.pu
      * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
      * 
      */
-    @InputImport(name="isReached", required=true)
+    @Import(name="isReached", required=true)
       private final Boolean isReached;
 
     public Boolean getIsReached() {

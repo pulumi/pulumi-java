@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceBackend {
     private final String balancingMode;
     private final Double capacityScaler;
@@ -27,19 +27,19 @@ public final class GetBackendServiceBackend {
     private final Double maxRatePerInstance;
     private final Double maxUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceBackend(
-        @OutputCustomType.Parameter("balancingMode") String balancingMode,
-        @OutputCustomType.Parameter("capacityScaler") Double capacityScaler,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
-        @OutputCustomType.Parameter("maxConnectionsPerEndpoint") Integer maxConnectionsPerEndpoint,
-        @OutputCustomType.Parameter("maxConnectionsPerInstance") Integer maxConnectionsPerInstance,
-        @OutputCustomType.Parameter("maxRate") Integer maxRate,
-        @OutputCustomType.Parameter("maxRatePerEndpoint") Double maxRatePerEndpoint,
-        @OutputCustomType.Parameter("maxRatePerInstance") Double maxRatePerInstance,
-        @OutputCustomType.Parameter("maxUtilization") Double maxUtilization) {
+        @CustomType.Parameter("balancingMode") String balancingMode,
+        @CustomType.Parameter("capacityScaler") Double capacityScaler,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("maxConnections") Integer maxConnections,
+        @CustomType.Parameter("maxConnectionsPerEndpoint") Integer maxConnectionsPerEndpoint,
+        @CustomType.Parameter("maxConnectionsPerInstance") Integer maxConnectionsPerInstance,
+        @CustomType.Parameter("maxRate") Integer maxRate,
+        @CustomType.Parameter("maxRatePerEndpoint") Double maxRatePerEndpoint,
+        @CustomType.Parameter("maxRatePerInstance") Double maxRatePerInstance,
+        @CustomType.Parameter("maxUtilization") Double maxUtilization) {
         this.balancingMode = balancingMode;
         this.capacityScaler = capacityScaler;
         this.description = description;

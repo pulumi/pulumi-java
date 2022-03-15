@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -34,7 +34,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Configures which HTTP method to use to probe the backends defined under backendPools.
      * 
      */
-    @InputImport(name="healthProbeMethod")
+    @Import(name="healthProbeMethod")
       private final @Nullable String healthProbeMethod;
 
     public Optional<String> getHealthProbeMethod() {
@@ -45,7 +45,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -56,7 +56,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * The number of seconds between health probes.
      * 
      */
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
@@ -67,7 +67,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -78,7 +78,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * The path to use for the health probe. Default is /
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -89,7 +89,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Protocol scheme to use for this probe
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -100,7 +100,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Resource status.
      * 
      */
-    @InputImport(name="resourceState", required=true)
+    @Import(name="resourceState", required=true)
       private final String resourceState;
 
     public String getResourceState() {
@@ -111,7 +111,7 @@ public final class HealthProbeSettingsModelResponse extends io.pulumi.resources.
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

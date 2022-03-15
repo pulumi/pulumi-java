@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dms.EventSubscriptionArgs;
 import io.pulumi.aws.dms.inputs.EventSubscriptionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DMS Event Subscription.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Whether the event subscription should be enabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -63,7 +63,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
      * 
      */
-    @OutputExport(name="eventCategories", type=List.class, parameters={String.class})
+    @Export(name="eventCategories", type=List.class, parameters={String.class})
     private Output<List<String>> eventCategories;
 
     /**
@@ -77,7 +77,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Name of event subscription.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * SNS topic arn to send events on.
      * 
      */
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
 
     /**
@@ -105,7 +105,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Ids of sources to listen to.
      * 
      */
-    @OutputExport(name="sourceIds", type=List.class, parameters={String.class})
+    @Export(name="sourceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourceIds;
 
     /**
@@ -119,7 +119,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Type of source for events. Valid values: `replication-instance` or `replication-task`
      * 
      */
-    @OutputExport(name="sourceType", type=String.class, parameters={})
+    @Export(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
     /**
@@ -133,7 +133,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

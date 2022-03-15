@@ -6,14 +6,14 @@ package io.pulumi.aws.eks.outputs;
 import io.pulumi.aws.eks.outputs.GetNodeGroupRemoteAccess;
 import io.pulumi.aws.eks.outputs.GetNodeGroupResource;
 import io.pulumi.aws.eks.outputs.GetNodeGroupScalingConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeGroupResult {
     /**
      * Type of Amazon Machine Image (AMI) associated with the EKS Node Group.
@@ -93,25 +93,25 @@ public final class GetNodeGroupResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeGroupResult(
-        @OutputCustomType.Parameter("amiType") String amiType,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("diskSize") Integer diskSize,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("nodeGroupName") String nodeGroupName,
-        @OutputCustomType.Parameter("nodeRoleArn") String nodeRoleArn,
-        @OutputCustomType.Parameter("releaseVersion") String releaseVersion,
-        @OutputCustomType.Parameter("remoteAccesses") List<GetNodeGroupRemoteAccess> remoteAccesses,
-        @OutputCustomType.Parameter("resources") List<GetNodeGroupResource> resources,
-        @OutputCustomType.Parameter("scalingConfigs") List<GetNodeGroupScalingConfig> scalingConfigs,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("amiType") String amiType,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("diskSize") Integer diskSize,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("nodeGroupName") String nodeGroupName,
+        @CustomType.Parameter("nodeRoleArn") String nodeRoleArn,
+        @CustomType.Parameter("releaseVersion") String releaseVersion,
+        @CustomType.Parameter("remoteAccesses") List<GetNodeGroupRemoteAccess> remoteAccesses,
+        @CustomType.Parameter("resources") List<GetNodeGroupResource> resources,
+        @CustomType.Parameter("scalingConfigs") List<GetNodeGroupScalingConfig> scalingConfigs,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") String version) {
         this.amiType = amiType;
         this.arn = arn;
         this.clusterName = clusterName;

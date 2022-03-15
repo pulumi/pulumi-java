@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexGetArgs;
@@ -21,7 +21,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * A description of the info type.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dictionary")
+    @Import(name="dictionary")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
 
     public Output<PreventionStoredInfoTypeDictionaryGetArgs> getDictionary() {
@@ -44,7 +44,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * User set display name of the info type.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="largeCustomDictionary")
+    @Import(name="largeCustomDictionary")
       private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> getLargeCustomDictionary() {
@@ -67,7 +67,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * Name describing the field.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -94,7 +94,7 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
 
     public Output<PreventionStoredInfoTypeRegexGetArgs> getRegex() {

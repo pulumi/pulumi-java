@@ -4,7 +4,7 @@
 package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
      * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -29,7 +29,7 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
      * Indicates the type of resource. This field should be specified to correspond the id to the right project type (CONSUMER_PROJECT or ENCRYPTION_KEYS_PROJECT) Possible values: RESOURCE_TYPE_UNSPECIFIED, CONSUMER_PROJECT, ENCRYPTION_KEYS_PROJECT, KEYRING, CONSUMER_FOLDER
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

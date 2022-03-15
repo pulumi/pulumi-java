@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acmpca.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,35 +14,35 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
 
     public static final GetCertificateAuthorityRevocationConfigurationCrlConfiguration Empty = new GetCertificateAuthorityRevocationConfigurationCrlConfiguration();
 
-    @InputImport(name="customCname", required=true)
+    @Import(name="customCname", required=true)
       private final String customCname;
 
     public String getCustomCname() {
         return this.customCname;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="expirationInDays", required=true)
+    @Import(name="expirationInDays", required=true)
       private final Integer expirationInDays;
 
     public Integer getExpirationInDays() {
         return this.expirationInDays;
     }
 
-    @InputImport(name="s3BucketName", required=true)
+    @Import(name="s3BucketName", required=true)
       private final String s3BucketName;
 
     public String getS3BucketName() {
         return this.s3BucketName;
     }
 
-    @InputImport(name="s3ObjectAcl", required=true)
+    @Import(name="s3ObjectAcl", required=true)
       private final String s3ObjectAcl;
 
     public String getS3ObjectAcl() {

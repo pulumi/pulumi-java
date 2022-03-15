@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
     private final @Nullable Boolean disable;
     private final @Nullable String level;
@@ -18,13 +18,13 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
     private final @Nullable String type;
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext(
-        @OutputCustomType.Parameter("disable") @Nullable Boolean disable,
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("role") @Nullable String role,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("disable") @Nullable Boolean disable,
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("role") @Nullable String role,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.disable = disable;
         this.level = level;
         this.role = role;

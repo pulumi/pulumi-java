@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetArchiveResult {
     private final @Nullable String arn;
     private final @Nullable String description;
     private final @Nullable Object eventPattern;
     private final @Nullable Integer retentionDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetArchiveResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("eventPattern") @Nullable Object eventPattern,
-        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("eventPattern") @Nullable Object eventPattern,
+        @CustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
         this.arn = arn;
         this.description = description;
         this.eventPattern = eventPattern;

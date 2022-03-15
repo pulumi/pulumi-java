@@ -6,13 +6,13 @@ package io.pulumi.awsnative.lex.outputs;
 import io.pulumi.awsnative.lex.outputs.BotMultipleValuesSetting;
 import io.pulumi.awsnative.lex.outputs.BotObfuscationSetting;
 import io.pulumi.awsnative.lex.outputs.BotSlotValueElicitationSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotSlot {
     private final @Nullable String description;
     private final @Nullable BotMultipleValuesSetting multipleValuesSetting;
@@ -21,14 +21,14 @@ public final class BotSlot {
     private final String slotTypeName;
     private final BotSlotValueElicitationSetting valueElicitationSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotSlot(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("multipleValuesSetting") @Nullable BotMultipleValuesSetting multipleValuesSetting,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("obfuscationSetting") @Nullable BotObfuscationSetting obfuscationSetting,
-        @OutputCustomType.Parameter("slotTypeName") String slotTypeName,
-        @OutputCustomType.Parameter("valueElicitationSetting") BotSlotValueElicitationSetting valueElicitationSetting) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("multipleValuesSetting") @Nullable BotMultipleValuesSetting multipleValuesSetting,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("obfuscationSetting") @Nullable BotObfuscationSetting obfuscationSetting,
+        @CustomType.Parameter("slotTypeName") String slotTypeName,
+        @CustomType.Parameter("valueElicitationSetting") BotSlotValueElicitationSetting valueElicitationSetting) {
         this.description = description;
         this.multipleValuesSetting = multipleValuesSetting;
         this.name = name;

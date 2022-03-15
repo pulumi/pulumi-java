@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CpuUtilizationResponse {
     /**
      * Period of time over which CPU utilization is calculated.
@@ -21,10 +21,10 @@ public final class CpuUtilizationResponse {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CpuUtilizationResponse(
-        @OutputCustomType.Parameter("aggregationWindowLength") String aggregationWindowLength,
-        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
+        @CustomType.Parameter("aggregationWindowLength") String aggregationWindowLength,
+        @CustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.aggregationWindowLength = aggregationWindowLength;
         this.targetUtilization = targetUtilization;
     }

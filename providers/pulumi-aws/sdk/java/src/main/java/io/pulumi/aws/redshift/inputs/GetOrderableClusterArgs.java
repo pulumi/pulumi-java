@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * Reshift Cluster typeE.g., `multi-node` or `single-node`
      * 
      */
-    @InputImport(name="clusterType")
+    @Import(name="clusterType")
       private final @Nullable String clusterType;
 
     public Optional<String> getClusterType() {
@@ -30,7 +30,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * Redshift Cluster versionE.g., `1.0`
      * 
      */
-    @InputImport(name="clusterVersion")
+    @Import(name="clusterVersion")
       private final @Nullable String clusterVersion;
 
     public Optional<String> getClusterVersion() {
@@ -41,7 +41,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * Redshift Cluster node typeE.g., `dc2.8xlarge`
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable String nodeType;
 
     public Optional<String> getNodeType() {
@@ -52,7 +52,7 @@ public final class GetOrderableClusterArgs extends io.pulumi.resources.InvokeArg
      * Ordered list of preferred Redshift Cluster node types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    @InputImport(name="preferredNodeTypes")
+    @Import(name="preferredNodeTypes")
       private final @Nullable List<String> preferredNodeTypes;
 
     public List<String> getPreferredNodeTypes() {

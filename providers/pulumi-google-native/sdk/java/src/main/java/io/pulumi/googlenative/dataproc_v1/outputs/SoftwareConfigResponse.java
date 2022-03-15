@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareConfigResponse {
     /**
      * Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
@@ -27,11 +27,11 @@ public final class SoftwareConfigResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareConfigResponse(
-        @OutputCustomType.Parameter("imageVersion") String imageVersion,
-        @OutputCustomType.Parameter("optionalComponents") List<String> optionalComponents,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
+        @CustomType.Parameter("imageVersion") String imageVersion,
+        @CustomType.Parameter("optionalComponents") List<String> optionalComponents,
+        @CustomType.Parameter("properties") Map<String,String> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.properties = properties;

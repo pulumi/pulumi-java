@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppAuthSettingsSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -33,7 +33,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Gets a JSON string containing the Azure AD Acl settings.
      * 
      */
-    @OutputExport(name="aadClaimsAuthorization", type=String.class, parameters={})
+    @Export(name="aadClaimsAuthorization", type=String.class, parameters={})
     private Output</* @Nullable */ String> aadClaimsAuthorization;
 
     /**
@@ -48,7 +48,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * a user logs in. Each parameter must be in the form "key=value".
      * 
      */
-    @OutputExport(name="additionalLoginParams", type=List.class, parameters={String.class})
+    @Export(name="additionalLoginParams", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> additionalLoginParams;
 
     /**
@@ -65,7 +65,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * allowed audience, regardless of this setting.
      * 
      */
-    @OutputExport(name="allowedAudiences", type=List.class, parameters={String.class})
+    @Export(name="allowedAudiences", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedAudiences;
 
     /**
@@ -83,7 +83,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Note that URLs within the current domain are always implicitly allowed.
      * 
      */
-    @OutputExport(name="allowedExternalRedirectUrls", type=List.class, parameters={String.class})
+    @Export(name="allowedExternalRedirectUrls", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedExternalRedirectUrls;
 
     /**
@@ -100,7 +100,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * If the path is relative, base will the site's root directory.
      * 
      */
-    @OutputExport(name="authFilePath", type=String.class, parameters={})
+    @Export(name="authFilePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> authFilePath;
 
     /**
@@ -118,7 +118,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientId;
 
     /**
@@ -138,7 +138,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecret;
 
     /**
@@ -156,7 +156,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * a replacement for the Client Secret. It is also optional.
      * 
      */
-    @OutputExport(name="clientSecretCertificateThumbprint", type=String.class, parameters={})
+    @Export(name="clientSecretCertificateThumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecretCertificateThumbprint;
 
     /**
@@ -171,7 +171,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * The app setting name that contains the client secret of the relying party application.
      * 
      */
-    @OutputExport(name="clientSecretSettingName", type=String.class, parameters={})
+    @Export(name="clientSecretSettingName", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientSecretSettingName;
 
     /**
@@ -186,7 +186,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * The setting in this value can control the behavior of the control plane for Authentication / Authorization.
      * 
      */
-    @OutputExport(name="configVersion", type=String.class, parameters={})
+    @Export(name="configVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> configVersion;
 
     /**
@@ -203,7 +203,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * action is set to "RedirectToLoginPage".
      * 
      */
-    @OutputExport(name="defaultProvider", type=String.class, parameters={})
+    @Export(name="defaultProvider", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultProvider;
 
     /**
@@ -219,7 +219,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -235,7 +235,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    @OutputExport(name="facebookAppId", type=String.class, parameters={})
+    @Export(name="facebookAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> facebookAppId;
 
     /**
@@ -253,7 +253,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    @OutputExport(name="facebookAppSecret", type=String.class, parameters={})
+    @Export(name="facebookAppSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> facebookAppSecret;
 
     /**
@@ -269,7 +269,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * The app setting name that contains the app secret used for Facebook Login.
      * 
      */
-    @OutputExport(name="facebookAppSecretSettingName", type=String.class, parameters={})
+    @Export(name="facebookAppSecretSettingName", type=String.class, parameters={})
     private Output</* @Nullable */ String> facebookAppSecretSettingName;
 
     /**
@@ -285,7 +285,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Facebook Login documentation: https://developers.facebook.com/docs/facebook-login
      * 
      */
-    @OutputExport(name="facebookOAuthScopes", type=List.class, parameters={String.class})
+    @Export(name="facebookOAuthScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> facebookOAuthScopes;
 
     /**
@@ -302,7 +302,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * This setting is required for enabling Github login
      * 
      */
-    @OutputExport(name="gitHubClientId", type=String.class, parameters={})
+    @Export(name="gitHubClientId", type=String.class, parameters={})
     private Output</* @Nullable */ String> gitHubClientId;
 
     /**
@@ -318,7 +318,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * This setting is required for enabling Github login.
      * 
      */
-    @OutputExport(name="gitHubClientSecret", type=String.class, parameters={})
+    @Export(name="gitHubClientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> gitHubClientSecret;
 
     /**
@@ -334,7 +334,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * app used for GitHub Login.
      * 
      */
-    @OutputExport(name="gitHubClientSecretSettingName", type=String.class, parameters={})
+    @Export(name="gitHubClientSecretSettingName", type=String.class, parameters={})
     private Output</* @Nullable */ String> gitHubClientSecretSettingName;
 
     /**
@@ -350,7 +350,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * This setting is optional
      * 
      */
-    @OutputExport(name="gitHubOAuthScopes", type=List.class, parameters={String.class})
+    @Export(name="gitHubOAuthScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> gitHubOAuthScopes;
 
     /**
@@ -367,7 +367,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    @OutputExport(name="googleClientId", type=String.class, parameters={})
+    @Export(name="googleClientId", type=String.class, parameters={})
     private Output</* @Nullable */ String> googleClientId;
 
     /**
@@ -385,7 +385,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    @OutputExport(name="googleClientSecret", type=String.class, parameters={})
+    @Export(name="googleClientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> googleClientSecret;
 
     /**
@@ -402,7 +402,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * the Google web application.
      * 
      */
-    @OutputExport(name="googleClientSecretSettingName", type=String.class, parameters={})
+    @Export(name="googleClientSecretSettingName", type=String.class, parameters={})
     private Output</* @Nullable */ String> googleClientSecretSettingName;
 
     /**
@@ -419,7 +419,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/
      * 
      */
-    @OutputExport(name="googleOAuthScopes", type=List.class, parameters={String.class})
+    @Export(name="googleOAuthScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> googleOAuthScopes;
 
     /**
@@ -436,7 +436,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * "false" otherwise
      * 
      */
-    @OutputExport(name="isAuthFromFile", type=String.class, parameters={})
+    @Export(name="isAuthFromFile", type=String.class, parameters={})
     private Output</* @Nullable */ String> isAuthFromFile;
 
     /**
@@ -454,7 +454,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
      */
-    @OutputExport(name="issuer", type=String.class, parameters={})
+    @Export(name="issuer", type=String.class, parameters={})
     private Output</* @Nullable */ String> issuer;
 
     /**
@@ -471,7 +471,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -487,7 +487,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
      */
-    @OutputExport(name="microsoftAccountClientId", type=String.class, parameters={})
+    @Export(name="microsoftAccountClientId", type=String.class, parameters={})
     private Output</* @Nullable */ String> microsoftAccountClientId;
 
     /**
@@ -505,7 +505,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm
      * 
      */
-    @OutputExport(name="microsoftAccountClientSecret", type=String.class, parameters={})
+    @Export(name="microsoftAccountClientSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> microsoftAccountClientSecret;
 
     /**
@@ -522,7 +522,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * app used for authentication.
      * 
      */
-    @OutputExport(name="microsoftAccountClientSecretSettingName", type=String.class, parameters={})
+    @Export(name="microsoftAccountClientSecretSettingName", type=String.class, parameters={})
     private Output</* @Nullable */ String> microsoftAccountClientSecretSettingName;
 
     /**
@@ -539,7 +539,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx
      * 
      */
-    @OutputExport(name="microsoftAccountOAuthScopes", type=List.class, parameters={String.class})
+    @Export(name="microsoftAccountOAuthScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> microsoftAccountOAuthScopes;
 
     /**
@@ -555,7 +555,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -570,7 +570,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
      */
-    @OutputExport(name="runtimeVersion", type=String.class, parameters={})
+    @Export(name="runtimeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeVersion;
 
     /**
@@ -586,7 +586,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * call the token refresh API. The default is 72 hours.
      * 
      */
-    @OutputExport(name="tokenRefreshExtensionHours", type=Double.class, parameters={})
+    @Export(name="tokenRefreshExtensionHours", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> tokenRefreshExtensionHours;
 
     /**
@@ -602,7 +602,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      *  The default is <code>false</code>.
      * 
      */
-    @OutputExport(name="tokenStoreEnabled", type=Boolean.class, parameters={})
+    @Export(name="tokenStoreEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tokenStoreEnabled;
 
     /**
@@ -619,7 +619,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    @OutputExport(name="twitterConsumerKey", type=String.class, parameters={})
+    @Export(name="twitterConsumerKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> twitterConsumerKey;
 
     /**
@@ -637,7 +637,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in
      * 
      */
-    @OutputExport(name="twitterConsumerSecret", type=String.class, parameters={})
+    @Export(name="twitterConsumerSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> twitterConsumerSecret;
 
     /**
@@ -654,7 +654,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * application used for sign-in.
      * 
      */
-    @OutputExport(name="twitterConsumerSecretSettingName", type=String.class, parameters={})
+    @Export(name="twitterConsumerSecretSettingName", type=String.class, parameters={})
     private Output</* @Nullable */ String> twitterConsumerSecretSettingName;
 
     /**
@@ -669,7 +669,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -683,7 +683,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * The action to take when an unauthenticated client attempts to access the app.
      * 
      */
-    @OutputExport(name="unauthenticatedClientAction", type=String.class, parameters={})
+    @Export(name="unauthenticatedClientAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> unauthenticatedClientAction;
 
     /**
@@ -697,7 +697,7 @@ public class WebAppAuthSettingsSlot extends io.pulumi.resources.CustomResource {
      * Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.
      * 
      */
-    @OutputExport(name="validateIssuer", type=Boolean.class, parameters={})
+    @Export(name="validateIssuer", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateIssuer;
 
     /**

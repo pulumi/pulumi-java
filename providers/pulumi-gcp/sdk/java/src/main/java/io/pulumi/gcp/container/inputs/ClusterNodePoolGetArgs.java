@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolAutoscalingGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolManagementGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolNetworkConfigGetArgs;
@@ -21,7 +21,7 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final ClusterNodePoolGetArgs Empty = new ClusterNodePoolGetArgs();
 
-    @InputImport(name="autoscaling")
+    @Import(name="autoscaling")
       private final @Nullable Output<ClusterNodePoolAutoscalingGetArgs> autoscaling;
 
     public Output<ClusterNodePoolAutoscalingGetArgs> getAutoscaling() {
@@ -37,35 +37,35 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * `remove_default_node_pool` to `true`.
      * 
      */
-    @InputImport(name="initialNodeCount")
+    @Import(name="initialNodeCount")
       private final @Nullable Output<Integer> initialNodeCount;
 
     public Output<Integer> getInitialNodeCount() {
         return this.initialNodeCount == null ? Output.empty() : this.initialNodeCount;
     }
 
-    @InputImport(name="instanceGroupUrls")
+    @Import(name="instanceGroupUrls")
       private final @Nullable Output<List<String>> instanceGroupUrls;
 
     public Output<List<String>> getInstanceGroupUrls() {
         return this.instanceGroupUrls == null ? Output.empty() : this.instanceGroupUrls;
     }
 
-    @InputImport(name="managedInstanceGroupUrls")
+    @Import(name="managedInstanceGroupUrls")
       private final @Nullable Output<List<String>> managedInstanceGroupUrls;
 
     public Output<List<String>> getManagedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls == null ? Output.empty() : this.managedInstanceGroupUrls;
     }
 
-    @InputImport(name="management")
+    @Import(name="management")
       private final @Nullable Output<ClusterNodePoolManagementGetArgs> management;
 
     public Output<ClusterNodePoolManagementGetArgs> getManagement() {
         return this.management == null ? Output.empty() : this.management;
     }
 
-    @InputImport(name="maxPodsPerNode")
+    @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
     public Output<Integer> getMaxPodsPerNode() {
@@ -77,14 +77,14 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * location.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -96,7 +96,7 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * [Adding Pod IP address ranges](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-pod-cidr)) to the node pool. Structure is documented below
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<ClusterNodePoolNetworkConfigGetArgs> networkConfig;
 
     public Output<ClusterNodePoolNetworkConfigGetArgs> getNetworkConfig() {
@@ -111,14 +111,14 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nodeConfig")
+    @Import(name="nodeConfig")
       private final @Nullable Output<ClusterNodePoolNodeConfigGetArgs> nodeConfig;
 
     public Output<ClusterNodePoolNodeConfigGetArgs> getNodeConfig() {
         return this.nodeConfig == null ? Output.empty() : this.nodeConfig;
     }
 
-    @InputImport(name="nodeCount")
+    @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
     public Output<Integer> getNodeCount() {
@@ -132,21 +132,21 @@ public final class ClusterNodePoolGetArgs extends io.pulumi.resources.ResourceAr
      * a zonal cluster, omit the cluster's zone.
      * 
      */
-    @InputImport(name="nodeLocations")
+    @Import(name="nodeLocations")
       private final @Nullable Output<List<String>> nodeLocations;
 
     public Output<List<String>> getNodeLocations() {
         return this.nodeLocations == null ? Output.empty() : this.nodeLocations;
     }
 
-    @InputImport(name="upgradeSettings")
+    @Import(name="upgradeSettings")
       private final @Nullable Output<ClusterNodePoolUpgradeSettingsGetArgs> upgradeSettings;
 
     public Output<ClusterNodePoolUpgradeSettingsGetArgs> getUpgradeSettings() {
         return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionEndpointInput;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInput {
     private final ModelExplainabilityJobDefinitionEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor
-    private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(@OutputCustomType.Parameter("endpointInput") ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
+    @CustomType.Constructor
+    private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(@CustomType.Parameter("endpointInput") ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 

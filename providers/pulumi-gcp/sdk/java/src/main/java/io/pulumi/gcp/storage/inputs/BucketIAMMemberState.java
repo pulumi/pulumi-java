@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<BucketIAMMemberConditionGetArgs> condition;
 
     public Output<BucketIAMMemberConditionGetArgs> getCondition() {
@@ -42,14 +42,14 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -62,7 +62,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

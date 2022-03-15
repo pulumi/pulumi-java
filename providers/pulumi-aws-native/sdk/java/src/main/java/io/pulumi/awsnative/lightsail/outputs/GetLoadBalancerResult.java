@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.LoadBalancerTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerResult {
     /**
      * The names of the instances attached to the load balancer.
@@ -41,14 +41,14 @@ public final class GetLoadBalancerResult {
      */
     private final @Nullable List<LoadBalancerTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerResult(
-        @OutputCustomType.Parameter("attachedInstances") @Nullable List<String> attachedInstances,
-        @OutputCustomType.Parameter("healthCheckPath") @Nullable String healthCheckPath,
-        @OutputCustomType.Parameter("loadBalancerArn") @Nullable String loadBalancerArn,
-        @OutputCustomType.Parameter("sessionStickinessEnabled") @Nullable Boolean sessionStickinessEnabled,
-        @OutputCustomType.Parameter("sessionStickinessLBCookieDurationSeconds") @Nullable String sessionStickinessLBCookieDurationSeconds,
-        @OutputCustomType.Parameter("tags") @Nullable List<LoadBalancerTag> tags) {
+        @CustomType.Parameter("attachedInstances") @Nullable List<String> attachedInstances,
+        @CustomType.Parameter("healthCheckPath") @Nullable String healthCheckPath,
+        @CustomType.Parameter("loadBalancerArn") @Nullable String loadBalancerArn,
+        @CustomType.Parameter("sessionStickinessEnabled") @Nullable Boolean sessionStickinessEnabled,
+        @CustomType.Parameter("sessionStickinessLBCookieDurationSeconds") @Nullable String sessionStickinessLBCookieDurationSeconds,
+        @CustomType.Parameter("tags") @Nullable List<LoadBalancerTag> tags) {
         this.attachedInstances = attachedInstances;
         this.healthCheckPath = healthCheckPath;
         this.loadBalancerArn = loadBalancerArn;

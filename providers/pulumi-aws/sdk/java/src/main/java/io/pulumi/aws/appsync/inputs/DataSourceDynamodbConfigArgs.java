@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigDeltaSyncConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
 
     public static final DataSourceDynamodbConfigArgs Empty = new DataSourceDynamodbConfigArgs();
 
-    @InputImport(name="deltaSyncConfig")
+    @Import(name="deltaSyncConfig")
       private final @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> deltaSyncConfig;
 
     public Output<DataSourceDynamodbConfigDeltaSyncConfigArgs> getDeltaSyncConfig() {
@@ -27,7 +27,7 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -38,7 +38,7 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * Name of the DynamoDB table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -49,14 +49,14 @@ public final class DataSourceDynamodbConfigArgs extends io.pulumi.resources.Reso
      * Set to `true` to use Amazon Cognito credentials with this data source.
      * 
      */
-    @InputImport(name="useCallerCredentials")
+    @Import(name="useCallerCredentials")
       private final @Nullable Output<Boolean> useCallerCredentials;
 
     public Output<Boolean> getUseCallerCredentials() {
         return this.useCallerCredentials == null ? Output.empty() : this.useCallerCredentials;
     }
 
-    @InputImport(name="versioned")
+    @Import(name="versioned")
       private final @Nullable Output<Boolean> versioned;
 
     public Output<Boolean> getVersioned() {

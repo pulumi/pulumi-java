@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.enums.ScriptType;
 import io.pulumi.azurenative.resources.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -33,7 +33,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * Type of the script.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,ScriptType>> kind;
 
     public Output<Either<String,ScriptType>> getKind() {
@@ -44,7 +44,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * The location of the ACI and the storage account for the deployment script.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * Name of the deployment script.
      * 
      */
-    @InputImport(name="scriptName")
+    @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
     public Output<String> getScriptName() {
@@ -77,7 +77,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

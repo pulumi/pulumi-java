@@ -4,7 +4,7 @@
 package io.pulumi.gcp.oslogin.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * An expiration time in microseconds since epoch.
      * 
      */
-    @InputImport(name="expirationTimeUsec")
+    @Import(name="expirationTimeUsec")
       private final @Nullable Output<String> expirationTimeUsec;
 
     public Output<String> getExpirationTimeUsec() {
@@ -29,7 +29,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * The SHA-256 fingerprint of the SSH public key.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -40,7 +40,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -51,7 +51,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * The project ID of the Google Cloud Platform project.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -62,7 +62,7 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * The user email.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

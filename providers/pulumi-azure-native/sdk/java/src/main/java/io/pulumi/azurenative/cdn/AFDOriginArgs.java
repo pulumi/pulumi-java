@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.SharedPrivateLinkResourcePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Resource reference to the Azure origin resource.
      * 
      */
-    @InputImport(name="azureOrigin")
+    @Import(name="azureOrigin")
       private final @Nullable Output<ResourceReferenceArgs> azureOrigin;
 
     public Output<ResourceReferenceArgs> getAzureOrigin() {
@@ -34,7 +34,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
     public Output<Either<String,EnabledState>> getEnabledState() {
@@ -45,7 +45,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -56,7 +56,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpPort")
+    @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
     public Output<Integer> getHttpPort() {
@@ -67,7 +67,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpsPort")
+    @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
     public Output<Integer> getHttpsPort() {
@@ -78,7 +78,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the origin group which is unique within the profile.
      * 
      */
-    @InputImport(name="originGroupName", required=true)
+    @Import(name="originGroupName", required=true)
       private final Output<String> originGroupName;
 
     public Output<String> getOriginGroupName() {
@@ -89,7 +89,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    @InputImport(name="originHostHeader")
+    @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
     public Output<String> getOriginHostHeader() {
@@ -100,7 +100,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the origin that is unique within the profile.
      * 
      */
-    @InputImport(name="originName")
+    @Import(name="originName")
       private final @Nullable Output<String> originName;
 
     public Output<String> getOriginName() {
@@ -111,7 +111,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -122,7 +122,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -133,7 +133,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -144,7 +144,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the private link resource for private origin.
      * 
      */
-    @InputImport(name="sharedPrivateLinkResource")
+    @Import(name="sharedPrivateLinkResource")
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource;
 
     public Output<SharedPrivateLinkResourcePropertiesArgs> getSharedPrivateLinkResource() {
@@ -155,7 +155,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

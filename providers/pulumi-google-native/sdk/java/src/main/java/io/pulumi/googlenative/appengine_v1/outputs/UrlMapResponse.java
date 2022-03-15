@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.ApiEndpointHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ScriptHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.StaticFilesHandlerResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlMapResponse {
     /**
      * Uses API Endpoints to handle requests.
@@ -53,16 +53,16 @@ public final class UrlMapResponse {
      */
     private final String urlRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlMapResponse(
-        @OutputCustomType.Parameter("apiEndpoint") ApiEndpointHandlerResponse apiEndpoint,
-        @OutputCustomType.Parameter("authFailAction") String authFailAction,
-        @OutputCustomType.Parameter("login") String login,
-        @OutputCustomType.Parameter("redirectHttpResponseCode") String redirectHttpResponseCode,
-        @OutputCustomType.Parameter("script") ScriptHandlerResponse script,
-        @OutputCustomType.Parameter("securityLevel") String securityLevel,
-        @OutputCustomType.Parameter("staticFiles") StaticFilesHandlerResponse staticFiles,
-        @OutputCustomType.Parameter("urlRegex") String urlRegex) {
+        @CustomType.Parameter("apiEndpoint") ApiEndpointHandlerResponse apiEndpoint,
+        @CustomType.Parameter("authFailAction") String authFailAction,
+        @CustomType.Parameter("login") String login,
+        @CustomType.Parameter("redirectHttpResponseCode") String redirectHttpResponseCode,
+        @CustomType.Parameter("script") ScriptHandlerResponse script,
+        @CustomType.Parameter("securityLevel") String securityLevel,
+        @CustomType.Parameter("staticFiles") StaticFilesHandlerResponse staticFiles,
+        @CustomType.Parameter("urlRegex") String urlRegex) {
         this.apiEndpoint = apiEndpoint;
         this.authFailAction = authFailAction;
         this.login = login;

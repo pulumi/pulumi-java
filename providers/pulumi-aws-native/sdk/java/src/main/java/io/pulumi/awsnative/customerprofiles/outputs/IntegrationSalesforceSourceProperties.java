@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationSalesforceSourceProperties {
     private final @Nullable Boolean enableDynamicFieldUpdate;
     private final @Nullable Boolean includeDeletedRecords;
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationSalesforceSourceProperties(
-        @OutputCustomType.Parameter("enableDynamicFieldUpdate") @Nullable Boolean enableDynamicFieldUpdate,
-        @OutputCustomType.Parameter("includeDeletedRecords") @Nullable Boolean includeDeletedRecords,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("enableDynamicFieldUpdate") @Nullable Boolean enableDynamicFieldUpdate,
+        @CustomType.Parameter("includeDeletedRecords") @Nullable Boolean includeDeletedRecords,
+        @CustomType.Parameter("object") String object) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         this.includeDeletedRecords = includeDeletedRecords;
         this.object = object;

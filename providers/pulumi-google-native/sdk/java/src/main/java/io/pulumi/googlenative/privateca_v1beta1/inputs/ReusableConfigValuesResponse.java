@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CaOptionsResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.KeyUsageResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdResponse;
@@ -25,7 +25,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * Optional. Describes custom X.509 extensions.
      * 
      */
-    @InputImport(name="additionalExtensions", required=true)
+    @Import(name="additionalExtensions", required=true)
       private final List<X509ExtensionResponse> additionalExtensions;
 
     public List<X509ExtensionResponse> getAdditionalExtensions() {
@@ -36,7 +36,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
      * 
      */
-    @InputImport(name="aiaOcspServers", required=true)
+    @Import(name="aiaOcspServers", required=true)
       private final List<String> aiaOcspServers;
 
     public List<String> getAiaOcspServers() {
@@ -47,7 +47,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * Optional. Describes options in this ReusableConfigValues that are relevant in a CA certificate.
      * 
      */
-    @InputImport(name="caOptions", required=true)
+    @Import(name="caOptions", required=true)
       private final CaOptionsResponse caOptions;
 
     public CaOptionsResponse getCaOptions() {
@@ -58,7 +58,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * Optional. Indicates the intended use for keys that correspond to a certificate.
      * 
      */
-    @InputImport(name="keyUsage", required=true)
+    @Import(name="keyUsage", required=true)
       private final KeyUsageResponse keyUsage;
 
     public KeyUsageResponse getKeyUsage() {
@@ -69,7 +69,7 @@ public final class ReusableConfigValuesResponse extends io.pulumi.resources.Invo
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * 
      */
-    @InputImport(name="policyIds", required=true)
+    @Import(name="policyIds", required=true)
       private final List<ObjectIdResponse> policyIds;
 
     public List<ObjectIdResponse> getPolicyIds() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.lb.ListenerCertificateArgs;
 import io.pulumi.aws.lb.inputs.ListenerCertificateState;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class ListenerCertificate extends io.pulumi.resources.CustomResource {
      * The ARN of the certificate to attach to the listener.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
@@ -52,7 +52,7 @@ public class ListenerCertificate extends io.pulumi.resources.CustomResource {
      * The ARN of the listener to which to attach the certificate.
      * 
      */
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**

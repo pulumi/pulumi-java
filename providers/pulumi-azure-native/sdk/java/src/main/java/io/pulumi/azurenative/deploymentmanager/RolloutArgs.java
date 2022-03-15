@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager;
 import io.pulumi.azurenative.deploymentmanager.inputs.IdentityArgs;
 import io.pulumi.azurenative.deploymentmanager.inputs.StepGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The reference to the artifact source resource Id where the payload is located.
      * 
      */
-    @InputImport(name="artifactSourceId")
+    @Import(name="artifactSourceId")
       private final @Nullable Output<String> artifactSourceId;
 
     public Output<String> getArtifactSourceId() {
@@ -33,7 +33,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the build being deployed.
      * 
      */
-    @InputImport(name="buildVersion", required=true)
+    @Import(name="buildVersion", required=true)
       private final Output<String> buildVersion;
 
     public Output<String> getBuildVersion() {
@@ -44,7 +44,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Identity for the resource.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -55,7 +55,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The rollout name.
      * 
      */
-    @InputImport(name="rolloutName")
+    @Import(name="rolloutName")
       private final @Nullable Output<String> rolloutName;
 
     public Output<String> getRolloutName() {
@@ -88,7 +88,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The list of step groups that define the orchestration.
      * 
      */
-    @InputImport(name="stepGroups", required=true)
+    @Import(name="stepGroups", required=true)
       private final Output<List<StepGroupArgs>> stepGroups;
 
     public Output<List<StepGroupArgs>> getStepGroups() {
@@ -99,7 +99,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
      * 
      */
-    @InputImport(name="targetServiceTopologyId", required=true)
+    @Import(name="targetServiceTopologyId", required=true)
       private final Output<String> targetServiceTopologyId;
 
     public Output<String> getTargetServiceTopologyId() {

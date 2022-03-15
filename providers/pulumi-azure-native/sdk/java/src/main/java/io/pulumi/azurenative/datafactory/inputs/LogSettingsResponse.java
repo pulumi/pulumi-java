@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CopyActivityLogSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.LogLocationSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies settings for copy activity log.
      * 
      */
-    @InputImport(name="copyActivityLogSettings")
+    @Import(name="copyActivityLogSettings")
       private final @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
 
     public Optional<CopyActivityLogSettingsResponse> getCopyActivityLogSettings() {
@@ -35,7 +35,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether to enable copy activity log. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableCopyActivityLog")
+    @Import(name="enableCopyActivityLog")
       private final @Nullable Object enableCopyActivityLog;
 
     public Optional<Object> getEnableCopyActivityLog() {
@@ -46,7 +46,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Log location settings customer needs to provide when enabling log.
      * 
      */
-    @InputImport(name="logLocationSettings", required=true)
+    @Import(name="logLocationSettings", required=true)
       private final LogLocationSettingsResponse logLocationSettings;
 
     public LogLocationSettingsResponse getLogLocationSettings() {

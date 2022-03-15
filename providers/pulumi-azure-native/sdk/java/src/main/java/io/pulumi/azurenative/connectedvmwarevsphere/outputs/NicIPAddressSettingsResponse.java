@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NicIPAddressSettingsResponse {
     /**
      * Gets the ip address allocation method.
@@ -25,11 +25,11 @@ public final class NicIPAddressSettingsResponse {
      */
     private final String subnetMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NicIPAddressSettingsResponse(
-        @OutputCustomType.Parameter("allocationMethod") String allocationMethod,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("subnetMask") String subnetMask) {
+        @CustomType.Parameter("allocationMethod") String allocationMethod,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("subnetMask") String subnetMask) {
         this.allocationMethod = allocationMethod;
         this.ipAddress = ipAddress;
         this.subnetMask = subnetMask;

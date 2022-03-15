@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.billingbudgets_v1.outputs.GoogleCloudBillingBudgetsV1CustomPeriodResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudBillingBudgetsV1FilterResponse {
     /**
      * Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it tracks usage from July 1 to September 30 when the current calendar month is July, August, September, so on.
@@ -53,16 +53,16 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse {
      */
     private final List<String> subaccounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudBillingBudgetsV1FilterResponse(
-        @OutputCustomType.Parameter("calendarPeriod") String calendarPeriod,
-        @OutputCustomType.Parameter("creditTypes") List<String> creditTypes,
-        @OutputCustomType.Parameter("creditTypesTreatment") String creditTypesTreatment,
-        @OutputCustomType.Parameter("customPeriod") GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("projects") List<String> projects,
-        @OutputCustomType.Parameter("services") List<String> services,
-        @OutputCustomType.Parameter("subaccounts") List<String> subaccounts) {
+        @CustomType.Parameter("calendarPeriod") String calendarPeriod,
+        @CustomType.Parameter("creditTypes") List<String> creditTypes,
+        @CustomType.Parameter("creditTypesTreatment") String creditTypesTreatment,
+        @CustomType.Parameter("customPeriod") GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("projects") List<String> projects,
+        @CustomType.Parameter("services") List<String> services,
+        @CustomType.Parameter("subaccounts") List<String> subaccounts) {
         this.calendarPeriod = calendarPeriod;
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;

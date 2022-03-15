@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
      * The reference name.
      * 
      */
-    @InputImport(name="ref")
+    @Import(name="ref")
       private final @Nullable String ref;
 
     public Optional<String> getRef() {

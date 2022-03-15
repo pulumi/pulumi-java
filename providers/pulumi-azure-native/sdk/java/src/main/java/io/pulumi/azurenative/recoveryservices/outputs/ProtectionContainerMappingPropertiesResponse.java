@@ -7,14 +7,14 @@ import io.pulumi.azurenative.recoveryservices.outputs.A2AProtectionContainerMapp
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtProtectionContainerMappingDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProtectionContainerMappingPropertiesResponse {
     /**
      * Health of pairing.
@@ -72,19 +72,19 @@ public final class ProtectionContainerMappingPropertiesResponse {
      */
     private final @Nullable String targetProtectionContainerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProtectionContainerMappingPropertiesResponse(
-        @OutputCustomType.Parameter("health") @Nullable String health,
-        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @OutputCustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails,
-        @OutputCustomType.Parameter("sourceFabricFriendlyName") @Nullable String sourceFabricFriendlyName,
-        @OutputCustomType.Parameter("sourceProtectionContainerFriendlyName") @Nullable String sourceProtectionContainerFriendlyName,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("targetFabricFriendlyName") @Nullable String targetFabricFriendlyName,
-        @OutputCustomType.Parameter("targetProtectionContainerFriendlyName") @Nullable String targetProtectionContainerFriendlyName,
-        @OutputCustomType.Parameter("targetProtectionContainerId") @Nullable String targetProtectionContainerId) {
+        @CustomType.Parameter("health") @Nullable String health,
+        @CustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @CustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("providerSpecificDetails") @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails,
+        @CustomType.Parameter("sourceFabricFriendlyName") @Nullable String sourceFabricFriendlyName,
+        @CustomType.Parameter("sourceProtectionContainerFriendlyName") @Nullable String sourceProtectionContainerFriendlyName,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("targetFabricFriendlyName") @Nullable String targetFabricFriendlyName,
+        @CustomType.Parameter("targetProtectionContainerFriendlyName") @Nullable String targetProtectionContainerFriendlyName,
+        @CustomType.Parameter("targetProtectionContainerId") @Nullable String targetProtectionContainerId) {
         this.health = health;
         this.healthErrorDetails = healthErrorDetails;
         this.policyFriendlyName = policyFriendlyName;

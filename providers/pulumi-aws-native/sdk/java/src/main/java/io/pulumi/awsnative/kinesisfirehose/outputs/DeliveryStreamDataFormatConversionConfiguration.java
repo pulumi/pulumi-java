@@ -6,25 +6,25 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamInputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamOutputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamSchemaConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamDataFormatConversionConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration;
     private final @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
     private final @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamDataFormatConversionConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("inputFormatConfiguration") @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
-        @OutputCustomType.Parameter("outputFormatConfiguration") @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
-        @OutputCustomType.Parameter("schemaConfiguration") @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("inputFormatConfiguration") @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
+        @CustomType.Parameter("outputFormatConfiguration") @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
+        @CustomType.Parameter("schemaConfiguration") @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
         this.enabled = enabled;
         this.inputFormatConfiguration = inputFormatConfiguration;
         this.outputFormatConfiguration = outputFormatConfiguration;

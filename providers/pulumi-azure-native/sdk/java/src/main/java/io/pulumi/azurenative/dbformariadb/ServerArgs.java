@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dbformariadb.inputs.ServerPropertiesForReplicaArgs;
 import io.pulumi.azurenative.dbformariadb.inputs.ServerPropertiesForRestoreArgs;
 import io.pulumi.azurenative.dbformariadb.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * The location the resource resides in.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -36,7 +36,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the server.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -47,7 +47,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -58,7 +58,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName")
+    @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -69,7 +69,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU (pricing tier) of the server.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -80,7 +80,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * Application-specific metadata in the form of key-value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

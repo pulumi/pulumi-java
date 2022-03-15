@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DynamicExecutorAllocationResponse {
     /**
      * Indicates whether Dynamic Executor Allocation is enabled or not.
@@ -17,8 +17,8 @@ public final class DynamicExecutorAllocationResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private DynamicExecutorAllocationResponse(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private DynamicExecutorAllocationResponse(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

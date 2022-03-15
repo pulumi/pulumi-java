@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.UserDefinedFunctionResourceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * [Required] A query that BigQuery executes when the view is referenced.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final String query;
 
     public String getQuery() {
@@ -30,7 +30,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * True if the column names are explicitly specified. For example by using the 'CREATE VIEW v(c1, c2) AS ...' syntax. Can only be set using BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/
      * 
      */
-    @InputImport(name="useExplicitColumnNames", required=true)
+    @Import(name="useExplicitColumnNames", required=true)
       private final Boolean useExplicitColumnNames;
 
     public Boolean getUseExplicitColumnNames() {
@@ -41,7 +41,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set to false, the view will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ Queries and views that reference this view must use the same flag value.
      * 
      */
-    @InputImport(name="useLegacySql", required=true)
+    @Import(name="useLegacySql", required=true)
       private final Boolean useLegacySql;
 
     public Boolean getUseLegacySql() {
@@ -52,7 +52,7 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * Describes user-defined function resources used in the query.
      * 
      */
-    @InputImport(name="userDefinedFunctionResources", required=true)
+    @Import(name="userDefinedFunctionResources", required=true)
       private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {

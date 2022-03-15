@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * The ARN (Amazon Resource Name) of the Route 53 Resolver query logging configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * You can send query logs to an S3 bucket, a CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.
      * 
      */
-    @InputImport(name="destinationArn")
+    @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -42,7 +42,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * The name of the Route 53 Resolver query logging configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * The AWS account ID of the account that created the query logging configuration.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -66,7 +66,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    @InputImport(name="shareStatus")
+    @Import(name="shareStatus")
       private final @Nullable Output<String> shareStatus;
 
     public Output<String> getShareStatus() {
@@ -77,7 +77,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class ResolverQueryLogConfigState extends io.pulumi.resources.Resou
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

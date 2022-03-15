@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegistryTag {
     /**
      * A key to identify the tag.
@@ -20,10 +20,10 @@ public final class RegistryTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

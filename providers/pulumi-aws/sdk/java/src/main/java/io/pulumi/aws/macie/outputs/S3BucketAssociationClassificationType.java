@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.macie.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class S3BucketAssociationClassificationType {
     /**
      * A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
@@ -24,10 +24,10 @@ public final class S3BucketAssociationClassificationType {
      */
     private final @Nullable String oneTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private S3BucketAssociationClassificationType(
-        @OutputCustomType.Parameter("continuous") @Nullable String continuous,
-        @OutputCustomType.Parameter("oneTime") @Nullable String oneTime) {
+        @CustomType.Parameter("continuous") @Nullable String continuous,
+        @CustomType.Parameter("oneTime") @Nullable String oneTime) {
         this.continuous = continuous;
         this.oneTime = oneTime;
     }

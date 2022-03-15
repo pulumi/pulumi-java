@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrePostStepResponse {
     /**
      * The resource Id of the step to be run.
@@ -15,8 +15,8 @@ public final class PrePostStepResponse {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor
-    private PrePostStepResponse(@OutputCustomType.Parameter("stepId") String stepId) {
+    @CustomType.Constructor
+    private PrePostStepResponse(@CustomType.Parameter("stepId") String stepId) {
         this.stepId = stepId;
     }
 

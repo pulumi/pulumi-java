@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the key used to access the storage account.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable String key;
 
     public Optional<String> getKey() {
@@ -33,7 +33,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the name of the storage account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

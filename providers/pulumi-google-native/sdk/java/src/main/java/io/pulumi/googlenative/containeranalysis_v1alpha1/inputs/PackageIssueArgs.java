@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityLocationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the vulnerability.
      * 
      */
-    @InputImport(name="affectedLocation")
+    @Import(name="affectedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
 
     public Output<VulnerabilityLocationArgs> getAffectedLocation() {
@@ -34,7 +34,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the available fix for vulnerability.
      * 
      */
-    @InputImport(name="fixedLocation")
+    @Import(name="fixedLocation")
       private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
     public Output<VulnerabilityLocationArgs> getFixedLocation() {
@@ -45,14 +45,14 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * The type of package (e.g. OS, MAVEN, GO).
      * 
      */
-    @InputImport(name="packageType")
+    @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
     public Output<String> getPackageType() {
         return this.packageType == null ? Output.empty() : this.packageType;
     }
 
-    @InputImport(name="severityName")
+    @Import(name="severityName")
       private final @Nullable Output<String> severityName;
 
     public Output<String> getSeverityName() {

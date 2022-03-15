@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListServerGatewayStatusResult {
     /**
      * Live message of list gateway. Status: 0 - Live
@@ -17,8 +17,8 @@ public final class ListServerGatewayStatusResult {
      */
     private final @Nullable Integer status;
 
-    @OutputCustomType.Constructor
-    private ListServerGatewayStatusResult(@OutputCustomType.Parameter("status") @Nullable Integer status) {
+    @CustomType.Constructor
+    private ListServerGatewayStatusResult(@CustomType.Parameter("status") @Nullable Integer status) {
         this.status = status;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GuestPoliciesPackageRepositoryZypperGetArgs extends io.pulumi
      * The location of the repository directory.
      * 
      */
-    @InputImport(name="baseUrl", required=true)
+    @Import(name="baseUrl", required=true)
       private final Output<String> baseUrl;
 
     public Output<String> getBaseUrl() {
@@ -30,7 +30,7 @@ public final class GuestPoliciesPackageRepositoryZypperGetArgs extends io.pulumi
      * The display name of the repository.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class GuestPoliciesPackageRepositoryZypperGetArgs extends io.pulumi
      * URIs of GPG keys.
      * 
      */
-    @InputImport(name="gpgKeys")
+    @Import(name="gpgKeys")
       private final @Nullable Output<List<String>> gpgKeys;
 
     public Output<List<String>> getGpgKeys() {
@@ -53,7 +53,7 @@ public final class GuestPoliciesPackageRepositoryZypperGetArgs extends io.pulumi
      * Artifacts in a recipe cannot have the same id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {

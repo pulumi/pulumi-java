@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @Deprecated /* Deprecated in favor of duration */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     @Deprecated /* Deprecated in favor of duration */
@@ -35,7 +35,7 @@ public final class GCPolicyMaxAgeGetArgs extends io.pulumi.resources.ResourceArg
      * Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {

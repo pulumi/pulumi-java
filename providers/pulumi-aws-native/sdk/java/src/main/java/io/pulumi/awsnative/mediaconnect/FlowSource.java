@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediaconnect.FlowSourceArgs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSourceEncryption;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The type of encryption that is used on the content ingested from this source.
      * 
      */
-    @OutputExport(name="decryption", type=FlowSourceEncryption.class, parameters={})
+    @Export(name="decryption", type=FlowSourceEncryption.class, parameters={})
     private Output</* @Nullable */ FlowSourceEncryption> decryption;
 
     /**
@@ -38,7 +38,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -52,7 +52,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
      * 
      */
-    @OutputExport(name="entitlementArn", type=String.class, parameters={})
+    @Export(name="entitlementArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> entitlementArn;
 
     /**
@@ -66,7 +66,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The ARN of the flow.
      * 
      */
-    @OutputExport(name="flowArn", type=String.class, parameters={})
+    @Export(name="flowArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> flowArn;
 
     /**
@@ -80,7 +80,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The IP address that the flow will be listening on for incoming content.
      * 
      */
-    @OutputExport(name="ingestIp", type=String.class, parameters={})
+    @Export(name="ingestIp", type=String.class, parameters={})
     private Output<String> ingestIp;
 
     /**
@@ -94,7 +94,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The port that the flow will be listening on for incoming content.
      * 
      */
-    @OutputExport(name="ingestPort", type=Integer.class, parameters={})
+    @Export(name="ingestPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ingestPort;
 
     /**
@@ -108,7 +108,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
      * 
      */
-    @OutputExport(name="maxBitrate", type=Integer.class, parameters={})
+    @Export(name="maxBitrate", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxBitrate;
 
     /**
@@ -122,7 +122,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
-    @OutputExport(name="maxLatency", type=Integer.class, parameters={})
+    @Export(name="maxLatency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxLatency;
 
     /**
@@ -136,7 +136,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The name of the source.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The protocol that is used by the source.
      * 
      */
-    @OutputExport(name="protocol", type=FlowSourceProtocol.class, parameters={})
+    @Export(name="protocol", type=FlowSourceProtocol.class, parameters={})
     private Output</* @Nullable */ FlowSourceProtocol> protocol;
 
     /**
@@ -164,7 +164,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The ARN of the source.
      * 
      */
-    @OutputExport(name="sourceArn", type=String.class, parameters={})
+    @Export(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;
 
     /**
@@ -178,7 +178,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The port that the flow will be listening on for incoming content.(ReadOnly)
      * 
      */
-    @OutputExport(name="sourceIngestPort", type=String.class, parameters={})
+    @Export(name="sourceIngestPort", type=String.class, parameters={})
     private Output<String> sourceIngestPort;
 
     /**
@@ -192,7 +192,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
-    @OutputExport(name="streamId", type=String.class, parameters={})
+    @Export(name="streamId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamId;
 
     /**
@@ -206,7 +206,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The name of the VPC Interface this Source is configured with.
      * 
      */
-    @OutputExport(name="vpcInterfaceName", type=String.class, parameters={})
+    @Export(name="vpcInterfaceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcInterfaceName;
 
     /**
@@ -220,7 +220,7 @@ public class FlowSource extends io.pulumi.resources.CustomResource {
      * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
-    @OutputExport(name="whitelistCidr", type=String.class, parameters={})
+    @Export(name="whitelistCidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> whitelistCidr;
 
     /**

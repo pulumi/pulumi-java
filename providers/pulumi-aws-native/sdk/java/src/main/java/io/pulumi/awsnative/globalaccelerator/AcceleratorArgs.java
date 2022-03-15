@@ -6,7 +6,7 @@ package io.pulumi.awsnative.globalaccelerator;
 import io.pulumi.awsnative.globalaccelerator.enums.AcceleratorIpAddressType;
 import io.pulumi.awsnative.globalaccelerator.inputs.AcceleratorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether an accelerator is enabled. The value is true or false.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -33,7 +33,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * IP Address type.
      * 
      */
-    @InputImport(name="ipAddressType")
+    @Import(name="ipAddressType")
       private final @Nullable Output<AcceleratorIpAddressType> ipAddressType;
 
     public Output<AcceleratorIpAddressType> getIpAddressType() {
@@ -44,7 +44,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * The IP addresses from BYOIP Prefix pool.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
@@ -55,14 +55,14 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of accelerator.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AcceleratorTagArgs>> tags;
 
     public Output<List<AcceleratorTagArgs>> getTags() {

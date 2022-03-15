@@ -10,14 +10,14 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.RunResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TaskRunRequestResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskRunResult {
     /**
      * How the run should be forced to rerun even if the run request configuration has not changed
@@ -70,18 +70,18 @@ public final class GetTaskRunResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskRunResult(
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("runRequest") @Nullable Object runRequest,
-        @OutputCustomType.Parameter("runResult") RunResponse runResult,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("runRequest") @Nullable Object runRequest,
+        @CustomType.Parameter("runResult") RunResponse runResult,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.forceUpdateTag = forceUpdateTag;
         this.id = id;
         this.identity = identity;

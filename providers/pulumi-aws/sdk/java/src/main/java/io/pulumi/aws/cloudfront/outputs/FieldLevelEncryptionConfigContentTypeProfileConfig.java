@@ -4,11 +4,11 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
     /**
      * Object that contains an attribute `items` that contains the list of configurations for a field-level encryption content type-profile. See Content Type Profile.
@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
      */
     private final Boolean forwardWhenContentTypeIsUnknown;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldLevelEncryptionConfigContentTypeProfileConfig(
-        @OutputCustomType.Parameter("contentTypeProfiles") FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
-        @OutputCustomType.Parameter("forwardWhenContentTypeIsUnknown") Boolean forwardWhenContentTypeIsUnknown) {
+        @CustomType.Parameter("contentTypeProfiles") FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
+        @CustomType.Parameter("forwardWhenContentTypeIsUnknown") Boolean forwardWhenContentTypeIsUnknown) {
         this.contentTypeProfiles = contentTypeProfiles;
         this.forwardWhenContentTypeIsUnknown = forwardWhenContentTypeIsUnknown;
     }

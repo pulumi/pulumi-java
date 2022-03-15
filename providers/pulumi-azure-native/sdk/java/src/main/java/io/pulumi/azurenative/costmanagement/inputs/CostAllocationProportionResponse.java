@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
      * Target resource for cost allocation
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class CostAllocationProportionResponse extends io.pulumi.resources.
      * Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
      * 
      */
-    @InputImport(name="percentage", required=true)
+    @Import(name="percentage", required=true)
       private final Double percentage;
 
     public Double getPercentage() {

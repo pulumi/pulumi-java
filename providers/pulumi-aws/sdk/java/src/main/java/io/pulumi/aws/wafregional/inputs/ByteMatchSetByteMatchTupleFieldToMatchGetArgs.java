@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchGetArgs extends io.pulu
      * When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -29,7 +29,7 @@ public final class ByteMatchSetByteMatchTupleFieldToMatchGetArgs extends io.pulu
      * The part of the web request that you want AWS WAF to search for a specified string.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

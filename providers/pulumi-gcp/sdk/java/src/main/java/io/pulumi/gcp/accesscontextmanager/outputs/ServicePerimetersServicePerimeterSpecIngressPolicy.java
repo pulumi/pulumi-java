@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterSpecIngressPolicy {
     /**
      * Defines the conditions on the source of a request causing this `IngressPolicy`
@@ -27,10 +27,10 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicy {
      */
     private final @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterSpecIngressPolicy(
-        @OutputCustomType.Parameter("ingressFrom") @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom ingressFrom,
-        @OutputCustomType.Parameter("ingressTo") @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
+        @CustomType.Parameter("ingressFrom") @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom ingressFrom,
+        @CustomType.Parameter("ingressTo") @Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
         this.ingressFrom = ingressFrom;
         this.ingressTo = ingressTo;
     }

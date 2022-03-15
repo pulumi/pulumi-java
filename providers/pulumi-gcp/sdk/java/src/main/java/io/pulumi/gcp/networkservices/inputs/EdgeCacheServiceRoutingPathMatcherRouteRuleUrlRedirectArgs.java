@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
      * The host that will be used in the redirect response instead of the one that was supplied in the request.
      * 
      */
-    @InputImport(name="hostRedirect")
+    @Import(name="hostRedirect")
       private final @Nullable Output<String> hostRedirect;
 
     public Output<String> getHostRedirect() {
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
      * This can only be set if there is at least one (1) edgeSslCertificate set on the service.
      * 
      */
-    @InputImport(name="httpsRedirect")
+    @Import(name="httpsRedirect")
       private final @Nullable Output<Boolean> httpsRedirect;
 
     public Output<Boolean> getHttpsRedirect() {
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
      * The path value must be between 1 and 1024 characters.
      * 
      */
-    @InputImport(name="pathRedirect")
+    @Import(name="pathRedirect")
       private final @Nullable Output<String> pathRedirect;
 
     public Output<String> getPathRedirect() {
@@ -56,7 +56,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
      * prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
      * 
      */
-    @InputImport(name="prefixRedirect")
+    @Import(name="prefixRedirect")
       private final @Nullable Output<String> prefixRedirect;
 
     public Output<String> getPrefixRedirect() {
@@ -70,7 +70,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
      * - `FOUND`, which corresponds to 302.
      * 
      */
-    @InputImport(name="redirectResponseCode")
+    @Import(name="redirectResponseCode")
       private final @Nullable Output<String> redirectResponseCode;
 
     public Output<String> getRedirectResponseCode() {
@@ -81,7 +81,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
      * If set to true, any accompanying query portion of the original URL is removed prior to redirecting the request. If set to false, the query portion of the original URL is retained.
      * 
      */
-    @InputImport(name="stripQuery")
+    @Import(name="stripQuery")
       private final @Nullable Output<Boolean> stripQuery;
 
     public Output<Boolean> getStripQuery() {

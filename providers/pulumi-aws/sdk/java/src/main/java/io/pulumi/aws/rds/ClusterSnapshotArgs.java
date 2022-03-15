@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * The DB Cluster Identifier from which to take the snapshot.
      * 
      */
-    @InputImport(name="dbClusterIdentifier", required=true)
+    @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
     public Output<String> getDbClusterIdentifier() {
@@ -30,7 +30,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * The Identifier for the snapshot.
      * 
      */
-    @InputImport(name="dbClusterSnapshotIdentifier", required=true)
+    @Import(name="dbClusterSnapshotIdentifier", required=true)
       private final Output<String> dbClusterSnapshotIdentifier;
 
     public Output<String> getDbClusterSnapshotIdentifier() {
@@ -41,7 +41,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the DB cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

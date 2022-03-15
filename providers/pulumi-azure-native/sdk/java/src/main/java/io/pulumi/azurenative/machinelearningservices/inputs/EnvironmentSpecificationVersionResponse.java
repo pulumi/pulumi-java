@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DockerBuildResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImageResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.InferenceContainerPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
      * 
      */
-    @InputImport(name="condaFile")
+    @Import(name="condaFile")
       private final @Nullable String condaFile;
 
     public Optional<String> getCondaFile() {
@@ -41,7 +41,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -52,7 +52,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * Configuration settings for Docker.
      * 
      */
-    @InputImport(name="docker")
+    @Import(name="docker")
       private final @Nullable Either<DockerBuildResponse,DockerImageResponse> docker;
 
     public Either<DockerBuildResponse,DockerImageResponse> getDocker() {
@@ -64,7 +64,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
      * 
      */
-    @InputImport(name="environmentSpecificationType", required=true)
+    @Import(name="environmentSpecificationType", required=true)
       private final String environmentSpecificationType;
 
     public String getEnvironmentSpecificationType() {
@@ -75,7 +75,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * Defines configuration specific to inference.
      * 
      */
-    @InputImport(name="inferenceContainerProperties")
+    @Import(name="inferenceContainerProperties")
       private final @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties;
 
     public Optional<InferenceContainerPropertiesResponse> getInferenceContainerProperties() {
@@ -86,7 +86,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * If the name version are system generated (anonymous registration).
      * 
      */
-    @InputImport(name="isAnonymous")
+    @Import(name="isAnonymous")
       private final @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> getIsAnonymous() {
@@ -97,7 +97,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -108,7 +108,7 @@ public final class EnvironmentSpecificationVersionResponse extends io.pulumi.res
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

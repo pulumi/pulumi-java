@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
      * Determines how Route 53 Resolver handles queries during failures, for example when all traffic that is sent to DNS Firewall fails to receive a reply. By default, fail open is disabled, which means the failure mode is closed. This approach favors security over availability. DNS Firewall blocks queries that it is unable to evaluate properly. If you enable this option, the failure mode is open. This approach favors availability over security. DNS Firewall allows queries to proceed if it is unable to properly evaluate them. Valid values: `ENABLED`, `DISABLED`.
      * 
      */
-    @InputImport(name="firewallFailOpen")
+    @Import(name="firewallFailOpen")
       private final @Nullable Output<String> firewallFailOpen;
 
     public Output<String> getFirewallFailOpen() {
@@ -29,7 +29,7 @@ public final class ResolverFirewallConfigArgs extends io.pulumi.resources.Resour
      * The ID of the VPC that the configuration is for.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {

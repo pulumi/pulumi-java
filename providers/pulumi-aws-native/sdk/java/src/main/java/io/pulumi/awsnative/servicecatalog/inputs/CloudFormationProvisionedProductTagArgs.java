@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class CloudFormationProvisionedProductTagArgs extends io.pulumi.res
 
     public static final CloudFormationProvisionedProductTagArgs Empty = new CloudFormationProvisionedProductTagArgs();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

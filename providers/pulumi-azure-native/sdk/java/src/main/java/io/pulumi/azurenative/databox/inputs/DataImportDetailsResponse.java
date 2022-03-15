@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.StorageAccountDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class DataImportDetailsResponse extends io.pulumi.resources.InvokeA
      * Account details of the data to be transferred
      * 
      */
-    @InputImport(name="accountDetails", required=true)
+    @Import(name="accountDetails", required=true)
       private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {

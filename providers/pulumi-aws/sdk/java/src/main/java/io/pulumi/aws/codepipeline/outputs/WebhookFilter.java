@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codepipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebhookFilter {
     /**
      * The [JSON path](https://github.com/json-path/JsonPath) to filter on.
@@ -20,10 +20,10 @@ public final class WebhookFilter {
      */
     private final String matchEquals;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookFilter(
-        @OutputCustomType.Parameter("jsonPath") String jsonPath,
-        @OutputCustomType.Parameter("matchEquals") String matchEquals) {
+        @CustomType.Parameter("jsonPath") String jsonPath,
+        @CustomType.Parameter("matchEquals") String matchEquals) {
         this.jsonPath = jsonPath;
         this.matchEquals = matchEquals;
     }

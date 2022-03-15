@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.containerregistry.enums.OS;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the agent pool.
      * 
      */
-    @InputImport(name="agentPoolName")
+    @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
     public Output<String> getAgentPoolName() {
@@ -33,7 +33,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The count of agent machine
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -44,7 +44,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The OS of agent machine
      * 
      */
-    @InputImport(name="os")
+    @Import(name="os")
       private final @Nullable Output<Either<String,OS>> os;
 
     public Output<Either<String,OS>> getOs() {
@@ -66,7 +66,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -77,7 +77,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The Tier of agent machine
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -110,7 +110,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The Virtual Network Subnet Resource Id of the agent machine
      * 
      */
-    @InputImport(name="virtualNetworkSubnetResourceId")
+    @Import(name="virtualNetworkSubnetResourceId")
       private final @Nullable Output<String> virtualNetworkSubnetResourceId;
 
     public Output<String> getVirtualNetworkSubnetResourceId() {

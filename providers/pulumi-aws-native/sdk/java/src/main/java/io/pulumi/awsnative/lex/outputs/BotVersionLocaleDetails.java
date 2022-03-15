@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotVersionLocaleDetails {
     private final String sourceBotVersion;
 
-    @OutputCustomType.Constructor
-    private BotVersionLocaleDetails(@OutputCustomType.Parameter("sourceBotVersion") String sourceBotVersion) {
+    @CustomType.Constructor
+    private BotVersionLocaleDetails(@CustomType.Parameter("sourceBotVersion") String sourceBotVersion) {
         this.sourceBotVersion = sourceBotVersion;
     }
 

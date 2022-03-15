@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.AuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuditConfigResponse {
     /**
      * The configuration for logging of each type of permission.
@@ -23,11 +23,11 @@ public final class AuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuditConfigResponse(
-        @OutputCustomType.Parameter("auditLogConfigs") List<AuditLogConfigResponse> auditLogConfigs,
-        @OutputCustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("auditLogConfigs") List<AuditLogConfigResponse> auditLogConfigs,
+        @CustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
+        @CustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.exemptedMembers = exemptedMembers;
         this.service = service;

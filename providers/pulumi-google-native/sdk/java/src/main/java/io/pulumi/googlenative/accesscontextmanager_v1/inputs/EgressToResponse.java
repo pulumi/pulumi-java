@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ApiOperationResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
      * A list of ApiOperations allowed to be performed by the sources specified in the corresponding EgressFrom. A request matches if it uses an operation/service in this list.
      * 
      */
-    @InputImport(name="operations", required=true)
+    @Import(name="operations", required=true)
       private final List<ApiOperationResponse> operations;
 
     public List<ApiOperationResponse> getOperations() {
@@ -33,7 +33,7 @@ public final class EgressToResponse extends io.pulumi.resources.InvokeArgs {
      * A list of resources, currently only projects in the form `projects/`, that are allowed to be accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is specified for `resources`, then this EgressTo rule will authorize access to all resources outside the perimeter.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final List<String> resources;
 
     public List<String> getResources() {

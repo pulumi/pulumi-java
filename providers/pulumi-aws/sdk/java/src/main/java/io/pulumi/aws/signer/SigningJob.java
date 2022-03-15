@@ -11,7 +11,7 @@ import io.pulumi.aws.signer.outputs.SigningJobRevocationRecord;
 import io.pulumi.aws.signer.outputs.SigningJobSignedObject;
 import io.pulumi.aws.signer.outputs.SigningJobSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
      * 
      */
-    @OutputExport(name="completedAt", type=String.class, parameters={})
+    @Export(name="completedAt", type=String.class, parameters={})
     private Output<String> completedAt;
 
     /**
@@ -52,7 +52,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -66,7 +66,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The S3 bucket in which to save your signed object. See Destination below for details.
      * 
      */
-    @OutputExport(name="destination", type=SigningJobDestination.class, parameters={})
+    @Export(name="destination", type=SigningJobDestination.class, parameters={})
     private Output<SigningJobDestination> destination;
 
     /**
@@ -80,7 +80,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
      * 
      */
-    @OutputExport(name="ignoreSigningJobFailure", type=Boolean.class, parameters={})
+    @Export(name="ignoreSigningJobFailure", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreSigningJobFailure;
 
     /**
@@ -94,7 +94,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The ID of the signing job on output.
      * 
      */
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     /**
@@ -108,7 +108,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The IAM entity that initiated the signing job.
      * 
      */
-    @OutputExport(name="jobInvoker", type=String.class, parameters={})
+    @Export(name="jobInvoker", type=String.class, parameters={})
     private Output<String> jobInvoker;
 
     /**
@@ -122,7 +122,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the job owner.
      * 
      */
-    @OutputExport(name="jobOwner", type=String.class, parameters={})
+    @Export(name="jobOwner", type=String.class, parameters={})
     private Output<String> jobOwner;
 
     /**
@@ -136,7 +136,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * A human-readable name for the signing platform associated with the signing job.
      * 
      */
-    @OutputExport(name="platformDisplayName", type=String.class, parameters={})
+    @Export(name="platformDisplayName", type=String.class, parameters={})
     private Output<String> platformDisplayName;
 
     /**
@@ -150,7 +150,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The platform to which your signed code image will be distributed.
      * 
      */
-    @OutputExport(name="platformId", type=String.class, parameters={})
+    @Export(name="platformId", type=String.class, parameters={})
     private Output<String> platformId;
 
     /**
@@ -164,7 +164,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The name of the profile to initiate the signing operation.
      * 
      */
-    @OutputExport(name="profileName", type=String.class, parameters={})
+    @Export(name="profileName", type=String.class, parameters={})
     private Output<String> profileName;
 
     /**
@@ -178,7 +178,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The version of the signing profile used to initiate the signing job.
      * 
      */
-    @OutputExport(name="profileVersion", type=String.class, parameters={})
+    @Export(name="profileVersion", type=String.class, parameters={})
     private Output<String> profileVersion;
 
     /**
@@ -192,7 +192,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The IAM principal that requested the signing job.
      * 
      */
-    @OutputExport(name="requestedBy", type=String.class, parameters={})
+    @Export(name="requestedBy", type=String.class, parameters={})
     private Output<String> requestedBy;
 
     /**
@@ -206,7 +206,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
      * 
      */
-    @OutputExport(name="revocationRecords", type=List.class, parameters={SigningJobRevocationRecord.class})
+    @Export(name="revocationRecords", type=List.class, parameters={SigningJobRevocationRecord.class})
     private Output<List<SigningJobRevocationRecord>> revocationRecords;
 
     /**
@@ -220,7 +220,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The time when the signature of a signing job expires.
      * 
      */
-    @OutputExport(name="signatureExpiresAt", type=String.class, parameters={})
+    @Export(name="signatureExpiresAt", type=String.class, parameters={})
     private Output<String> signatureExpiresAt;
 
     /**
@@ -234,7 +234,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * Name of the S3 bucket where the signed code image is saved by code signing.
      * 
      */
-    @OutputExport(name="signedObjects", type=List.class, parameters={SigningJobSignedObject.class})
+    @Export(name="signedObjects", type=List.class, parameters={SigningJobSignedObject.class})
     private Output<List<SigningJobSignedObject>> signedObjects;
 
     /**
@@ -248,7 +248,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * The S3 bucket that contains the object to sign. See Source below for details.
      * 
      */
-    @OutputExport(name="source", type=SigningJobSource.class, parameters={})
+    @Export(name="source", type=SigningJobSource.class, parameters={})
     private Output<SigningJobSource> source;
 
     /**
@@ -262,7 +262,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * Status of the signing job.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -276,7 +276,7 @@ public class SigningJob extends io.pulumi.resources.CustomResource {
      * String value that contains the status reason.
      * 
      */
-    @OutputExport(name="statusReason", type=String.class, parameters={})
+    @Export(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;
 
     /**

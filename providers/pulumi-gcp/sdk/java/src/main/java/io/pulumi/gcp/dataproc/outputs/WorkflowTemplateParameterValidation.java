@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateParameterValidationRegex;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateParameterValidationValues;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateParameterValidation {
     /**
      * Validation based on regular expressions.
@@ -23,10 +23,10 @@ public final class WorkflowTemplateParameterValidation {
      */
     private final @Nullable WorkflowTemplateParameterValidationValues values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateParameterValidation(
-        @OutputCustomType.Parameter("regex") @Nullable WorkflowTemplateParameterValidationRegex regex,
-        @OutputCustomType.Parameter("values") @Nullable WorkflowTemplateParameterValidationValues values) {
+        @CustomType.Parameter("regex") @Nullable WorkflowTemplateParameterValidationRegex regex,
+        @CustomType.Parameter("values") @Nullable WorkflowTemplateParameterValidationValues values) {
         this.regex = regex;
         this.values = values;
     }

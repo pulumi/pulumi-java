@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetInstanceBootDiskInitializeParam;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
      * Whether the disk will be auto-deleted when the instance is deleted.
      * 
      */
-    @InputImport(name="autoDelete", required=true)
+    @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
@@ -31,21 +31,21 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
      * under `/dev/disk/by-id/`
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
     }
 
-    @InputImport(name="diskEncryptionKeyRaw", required=true)
+    @Import(name="diskEncryptionKeyRaw", required=true)
       private final String diskEncryptionKeyRaw;
 
     public String getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw;
     }
 
-    @InputImport(name="diskEncryptionKeySha256", required=true)
+    @Import(name="diskEncryptionKeySha256", required=true)
       private final String diskEncryptionKeySha256;
 
     public String getDiskEncryptionKeySha256() {
@@ -57,14 +57,14 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="initializeParams", required=true)
+    @Import(name="initializeParams", required=true)
       private final List<GetInstanceBootDiskInitializeParam> initializeParams;
 
     public List<GetInstanceBootDiskInitializeParam> getInitializeParams() {
         return this.initializeParams;
     }
 
-    @InputImport(name="kmsKeySelfLink", required=true)
+    @Import(name="kmsKeySelfLink", required=true)
       private final String kmsKeySelfLink;
 
     public String getKmsKeySelfLink() {
@@ -75,7 +75,7 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
      * Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -86,7 +86,7 @@ public final class GetInstanceBootDisk extends io.pulumi.resources.InvokeArgs {
      * The name or self_link of the disk attached to this instance.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {

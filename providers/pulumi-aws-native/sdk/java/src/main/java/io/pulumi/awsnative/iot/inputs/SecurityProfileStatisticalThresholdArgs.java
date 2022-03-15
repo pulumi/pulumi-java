@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileStatisticalThresholdStatistic;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
      * The percentile which resolves to a threshold value by which compliance with a behavior is determined
      * 
      */
-    @InputImport(name="statistic")
+    @Import(name="statistic")
       private final @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
 
     public Output<SecurityProfileStatisticalThresholdStatistic> getStatistic() {

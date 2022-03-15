@@ -4,13 +4,13 @@
 package io.pulumi.aws.datapipeline.outputs;
 
 import io.pulumi.aws.datapipeline.outputs.PipelineDefinitionParameterObjectAttribute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDefinitionParameterObject {
     private final @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes;
     /**
@@ -19,10 +19,10 @@ public final class PipelineDefinitionParameterObject {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDefinitionParameterObject(
-        @OutputCustomType.Parameter("attributes") @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("attributes") @Nullable List<PipelineDefinitionParameterObjectAttribute> attributes,
+        @CustomType.Parameter("id") String id) {
         this.attributes = attributes;
         this.id = id;
     }

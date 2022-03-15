@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption {
     /**
      * Encryption mode to use for job bookmarks data. Valid values: `CSE-KMS`, `DISABLED`. Default value: `DISABLED`.
@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption(
-        @OutputCustomType.Parameter("jobBookmarksEncryptionMode") @Nullable String jobBookmarksEncryptionMode,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
+        @CustomType.Parameter("jobBookmarksEncryptionMode") @Nullable String jobBookmarksEncryptionMode,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }

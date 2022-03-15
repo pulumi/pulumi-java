@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.ResourceAssociationArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * The name or the Id of the Application.
      * 
      */
-    @OutputExport(name="application", type=String.class, parameters={})
+    @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
     /**
@@ -32,7 +32,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     public Output<String> getApplication() {
         return this.application;
     }
-    @OutputExport(name="applicationArn", type=String.class, parameters={})
+    @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
     public Output<String> getApplicationArn() {
@@ -42,7 +42,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * The name or the Id of the Resource.
      * 
      */
-    @OutputExport(name="resource", type=String.class, parameters={})
+    @Export(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
     /**
@@ -52,7 +52,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
     public Output<String> getResource() {
         return this.resource;
     }
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -62,7 +62,7 @@ public class ResourceAssociation extends io.pulumi.resources.CustomResource {
      * The type of the CFN Resource for now it's enum CFN_STACK.
      * 
      */
-    @OutputExport(name="resourceType", type=ResourceAssociationResourceType.class, parameters={})
+    @Export(name="resourceType", type=ResourceAssociationResourceType.class, parameters={})
     private Output<ResourceAssociationResourceType> resourceType;
 
     /**

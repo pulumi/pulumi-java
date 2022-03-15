@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
      * The objectId of the Managed Identity that is linked to the Managed Storage account.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -31,7 +31,7 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
      * The tenant Id where the Managed Identity is created.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -42,7 +42,7 @@ public final class ManagedIdentityConfigurationResponse extends io.pulumi.resour
      * The type of Identity created. It can be either SystemAssigned or UserAssigned.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

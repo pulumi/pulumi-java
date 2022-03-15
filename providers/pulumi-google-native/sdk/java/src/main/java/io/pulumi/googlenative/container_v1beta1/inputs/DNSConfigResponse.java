@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
      * cluster_dns indicates which in-cluster DNS provider should be used.
      * 
      */
-    @InputImport(name="clusterDns", required=true)
+    @Import(name="clusterDns", required=true)
       private final String clusterDns;
 
     public String getClusterDns() {
@@ -31,7 +31,7 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
      * cluster_dns_domain is the suffix used for all cluster service records.
      * 
      */
-    @InputImport(name="clusterDnsDomain", required=true)
+    @Import(name="clusterDnsDomain", required=true)
       private final String clusterDnsDomain;
 
     public String getClusterDnsDomain() {
@@ -42,7 +42,7 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
      * cluster_dns_scope indicates the scope of access to cluster DNS records.
      * 
      */
-    @InputImport(name="clusterDnsScope", required=true)
+    @Import(name="clusterDnsScope", required=true)
       private final String clusterDnsScope;
 
     public String getClusterDnsScope() {

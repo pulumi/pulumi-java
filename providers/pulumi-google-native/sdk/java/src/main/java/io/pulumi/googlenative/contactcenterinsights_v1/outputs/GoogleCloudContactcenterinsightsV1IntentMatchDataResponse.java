@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse {
     /**
      * The id of the matched intent. Can be used to retrieve the corresponding intent information.
@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse {
      */
     private final String intentUniqueId;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(@OutputCustomType.Parameter("intentUniqueId") String intentUniqueId) {
+    @CustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(@CustomType.Parameter("intentUniqueId") String intentUniqueId) {
         this.intentUniqueId = intentUniqueId;
     }
 

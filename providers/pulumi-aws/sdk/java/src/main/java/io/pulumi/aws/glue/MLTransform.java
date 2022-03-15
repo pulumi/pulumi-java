@@ -10,7 +10,7 @@ import io.pulumi.aws.glue.outputs.MLTransformInputRecordTable;
 import io.pulumi.aws.glue.outputs.MLTransformParameters;
 import io.pulumi.aws.glue.outputs.MLTransformSchema;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of Glue ML Transform.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * Description of the ML Transform.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -67,7 +67,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
-    @OutputExport(name="glueVersion", type=String.class, parameters={})
+    @Export(name="glueVersion", type=String.class, parameters={})
     private Output<String> glueVersion;
 
     /**
@@ -81,7 +81,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * A list of AWS Glue table definitions used by the transform. see Input Record Tables.
      * 
      */
-    @OutputExport(name="inputRecordTables", type=List.class, parameters={MLTransformInputRecordTable.class})
+    @Export(name="inputRecordTables", type=List.class, parameters={MLTransformInputRecordTable.class})
     private Output<List<MLTransformInputRecordTable>> inputRecordTables;
 
     /**
@@ -95,7 +95,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The number of labels available for this transform.
      * 
      */
-    @OutputExport(name="labelCount", type=Integer.class, parameters={})
+    @Export(name="labelCount", type=Integer.class, parameters={})
     private Output<Integer> labelCount;
 
     /**
@@ -109,7 +109,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The number of AWS Glue data processing units (DPUs) that are allocated to task runs for this transform. You can allocate from `2` to `100` DPUs; the default is `10`. `max_capacity` is a mutually exclusive option with `number_of_workers` and `worker_type`.
      * 
      */
-    @OutputExport(name="maxCapacity", type=Double.class, parameters={})
+    @Export(name="maxCapacity", type=Double.class, parameters={})
     private Output<Double> maxCapacity;
 
     /**
@@ -123,7 +123,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The maximum number of times to retry this ML Transform if it fails.
      * 
      */
-    @OutputExport(name="maxRetries", type=Integer.class, parameters={})
+    @Export(name="maxRetries", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetries;
 
     /**
@@ -137,7 +137,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The name you assign to this ML Transform. It must be unique in your account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The number of workers of a defined `worker_type` that are allocated when an ML Transform runs. Required with `worker_type`.
      * 
      */
-    @OutputExport(name="numberOfWorkers", type=Integer.class, parameters={})
+    @Export(name="numberOfWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfWorkers;
 
     /**
@@ -165,7 +165,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The algorithmic parameters that are specific to the transform type used. Conditionally dependent on the transform type. see Parameters.
      * 
      */
-    @OutputExport(name="parameters", type=MLTransformParameters.class, parameters={})
+    @Export(name="parameters", type=MLTransformParameters.class, parameters={})
     private Output<MLTransformParameters> parameters;
 
     /**
@@ -179,7 +179,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The ARN of the IAM role associated with this ML Transform.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -193,7 +193,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The object that represents the schema that this transform accepts. see Schema.
      * 
      */
-    @OutputExport(name="schemas", type=List.class, parameters={MLTransformSchema.class})
+    @Export(name="schemas", type=List.class, parameters={MLTransformSchema.class})
     private Output<List<MLTransformSchema>> schemas;
 
     /**
@@ -207,7 +207,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -221,7 +221,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -235,7 +235,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The ML Transform timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    @OutputExport(name="timeout", type=Integer.class, parameters={})
+    @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
@@ -249,7 +249,7 @@ public class MLTransform extends io.pulumi.resources.CustomResource {
      * The type of predefined worker that is allocated when an ML Transform runs. Accepts a value of `Standard`, `G.1X`, or `G.2X`. Required with `number_of_workers`.
      * 
      */
-    @OutputExport(name="workerType", type=String.class, parameters={})
+    @Export(name="workerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerType;
 
     /**

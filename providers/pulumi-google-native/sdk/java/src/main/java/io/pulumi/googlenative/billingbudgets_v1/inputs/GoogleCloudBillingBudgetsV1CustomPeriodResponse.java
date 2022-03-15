@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeDateResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse extends io.pu
      * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.
      * 
      */
-    @InputImport(name="endDate", required=true)
+    @Import(name="endDate", required=true)
       private final GoogleTypeDateResponse endDate;
 
     public GoogleTypeDateResponse getEndDate() {
@@ -31,7 +31,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse extends io.pu
      * The start date must be after January 1, 2017.
      * 
      */
-    @InputImport(name="startDate", required=true)
+    @Import(name="startDate", required=true)
       private final GoogleTypeDateResponse startDate;
 
     public GoogleTypeDateResponse getStartDate() {

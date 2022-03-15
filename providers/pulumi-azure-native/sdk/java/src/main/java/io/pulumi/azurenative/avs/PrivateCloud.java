@@ -12,7 +12,7 @@ import io.pulumi.azurenative.avs.outputs.ManagementClusterResponse;
 import io.pulumi.azurenative.avs.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * An ExpressRoute Circuit
      * 
      */
-    @OutputExport(name="circuit", type=CircuitResponse.class, parameters={})
+    @Export(name="circuit", type=CircuitResponse.class, parameters={})
     private Output</* @Nullable */ CircuitResponse> circuit;
 
     /**
@@ -54,7 +54,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * The endpoints
      * 
      */
-    @OutputExport(name="endpoints", type=EndpointsResponse.class, parameters={})
+    @Export(name="endpoints", type=EndpointsResponse.class, parameters={})
     private Output<EndpointsResponse> endpoints;
 
     /**
@@ -68,7 +68,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * vCenter Single Sign On Identity Sources
      * 
      */
-    @OutputExport(name="identitySources", type=List.class, parameters={IdentitySourceResponse.class})
+    @Export(name="identitySources", type=List.class, parameters={IdentitySourceResponse.class})
     private Output</* @Nullable */ List<IdentitySourceResponse>> identitySources;
 
     /**
@@ -82,7 +82,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Connectivity to internet is enabled or disabled
      * 
      */
-    @OutputExport(name="internet", type=String.class, parameters={})
+    @Export(name="internet", type=String.class, parameters={})
     private Output</* @Nullable */ String> internet;
 
     /**
@@ -96,7 +96,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -110,7 +110,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * The default cluster used for management
      * 
      */
-    @OutputExport(name="managementCluster", type=ManagementClusterResponse.class, parameters={})
+    @Export(name="managementCluster", type=ManagementClusterResponse.class, parameters={})
     private Output<ManagementClusterResponse> managementCluster;
 
     /**
@@ -124,7 +124,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Network used to access vCenter Server and NSX-T Manager
      * 
      */
-    @OutputExport(name="managementNetwork", type=String.class, parameters={})
+    @Export(name="managementNetwork", type=String.class, parameters={})
     private Output<String> managementNetwork;
 
     /**
@@ -138,7 +138,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -152,7 +152,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22
      * 
      */
-    @OutputExport(name="networkBlock", type=String.class, parameters={})
+    @Export(name="networkBlock", type=String.class, parameters={})
     private Output<String> networkBlock;
 
     /**
@@ -166,7 +166,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Thumbprint of the NSX-T Manager SSL certificate
      * 
      */
-    @OutputExport(name="nsxtCertificateThumbprint", type=String.class, parameters={})
+    @Export(name="nsxtCertificateThumbprint", type=String.class, parameters={})
     private Output<String> nsxtCertificateThumbprint;
 
     /**
@@ -180,7 +180,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Optionally, set the NSX-T Manager password when the private cloud is created
      * 
      */
-    @OutputExport(name="nsxtPassword", type=String.class, parameters={})
+    @Export(name="nsxtPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> nsxtPassword;
 
     /**
@@ -194,7 +194,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Used for virtual machine cold migration, cloning, and snapshot migration
      * 
      */
-    @OutputExport(name="provisioningNetwork", type=String.class, parameters={})
+    @Export(name="provisioningNetwork", type=String.class, parameters={})
     private Output<String> provisioningNetwork;
 
     /**
@@ -208,7 +208,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * The provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -222,7 +222,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * The private cloud SKU
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -236,7 +236,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -250,7 +250,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -264,7 +264,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Thumbprint of the vCenter Server SSL certificate
      * 
      */
-    @OutputExport(name="vcenterCertificateThumbprint", type=String.class, parameters={})
+    @Export(name="vcenterCertificateThumbprint", type=String.class, parameters={})
     private Output<String> vcenterCertificateThumbprint;
 
     /**
@@ -278,7 +278,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Optionally, set the vCenter admin password when the private cloud is created
      * 
      */
-    @OutputExport(name="vcenterPassword", type=String.class, parameters={})
+    @Export(name="vcenterPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> vcenterPassword;
 
     /**
@@ -292,7 +292,7 @@ public class PrivateCloud extends io.pulumi.resources.CustomResource {
      * Used for live migration of virtual machines
      * 
      */
-    @OutputExport(name="vmotionNetwork", type=String.class, parameters={})
+    @Export(name="vmotionNetwork", type=String.class, parameters={})
     private Output<String> vmotionNetwork;
 
     /**

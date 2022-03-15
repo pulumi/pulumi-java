@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LicenseIssuerData {
     private final String name;
     private final @Nullable String signKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseIssuerData(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("signKey") @Nullable String signKey) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("signKey") @Nullable String signKey) {
         this.name = name;
         this.signKey = signKey;
     }

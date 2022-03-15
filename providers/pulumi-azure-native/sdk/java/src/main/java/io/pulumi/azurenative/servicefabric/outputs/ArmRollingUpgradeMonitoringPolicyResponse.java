@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArmRollingUpgradeMonitoringPolicyResponse {
     /**
      * The activation Mode of the service package
@@ -42,14 +42,14 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
      */
     private final @Nullable String upgradeTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArmRollingUpgradeMonitoringPolicyResponse(
-        @OutputCustomType.Parameter("failureAction") @Nullable String failureAction,
-        @OutputCustomType.Parameter("healthCheckRetryTimeout") @Nullable String healthCheckRetryTimeout,
-        @OutputCustomType.Parameter("healthCheckStableDuration") @Nullable String healthCheckStableDuration,
-        @OutputCustomType.Parameter("healthCheckWaitDuration") @Nullable String healthCheckWaitDuration,
-        @OutputCustomType.Parameter("upgradeDomainTimeout") @Nullable String upgradeDomainTimeout,
-        @OutputCustomType.Parameter("upgradeTimeout") @Nullable String upgradeTimeout) {
+        @CustomType.Parameter("failureAction") @Nullable String failureAction,
+        @CustomType.Parameter("healthCheckRetryTimeout") @Nullable String healthCheckRetryTimeout,
+        @CustomType.Parameter("healthCheckStableDuration") @Nullable String healthCheckStableDuration,
+        @CustomType.Parameter("healthCheckWaitDuration") @Nullable String healthCheckWaitDuration,
+        @CustomType.Parameter("upgradeDomainTimeout") @Nullable String upgradeDomainTimeout,
+        @CustomType.Parameter("upgradeTimeout") @Nullable String upgradeTimeout) {
         this.failureAction = failureAction;
         this.healthCheckRetryTimeout = healthCheckRetryTimeout;
         this.healthCheckStableDuration = healthCheckStableDuration;

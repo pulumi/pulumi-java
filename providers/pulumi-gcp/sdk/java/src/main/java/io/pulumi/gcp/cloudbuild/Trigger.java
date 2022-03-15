@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudbuild.TriggerArgs;
@@ -57,7 +57,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="build", type=TriggerBuild.class, parameters={})
+    @Export(name="build", type=TriggerBuild.class, parameters={})
     private Output</* @Nullable */ TriggerBuild> build;
 
     /**
@@ -72,7 +72,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Time when the trigger was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -86,7 +86,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Human-readable description of the trigger.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -100,7 +100,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -114,7 +114,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
      * 
      */
-    @OutputExport(name="filename", type=String.class, parameters={})
+    @Export(name="filename", type=String.class, parameters={})
     private Output</* @Nullable */ String> filename;
 
     /**
@@ -130,7 +130,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="github", type=TriggerGithub.class, parameters={})
+    @Export(name="github", type=TriggerGithub.class, parameters={})
     private Output</* @Nullable */ TriggerGithub> github;
 
     /**
@@ -152,7 +152,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * of the ignoredFiles globs, then we do not trigger a build.
      * 
      */
-    @OutputExport(name="ignoredFiles", type=List.class, parameters={String.class})
+    @Export(name="ignoredFiles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ignoredFiles;
 
     /**
@@ -180,7 +180,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * a build.
      * 
      */
-    @OutputExport(name="includedFiles", type=List.class, parameters={String.class})
+    @Export(name="includedFiles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> includedFiles;
 
     /**
@@ -204,7 +204,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Each named volume must be used by at least two build steps.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -221,7 +221,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -239,7 +239,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="pubsubConfig", type=TriggerPubsubConfig.class, parameters={})
+    @Export(name="pubsubConfig", type=TriggerPubsubConfig.class, parameters={})
     private Output</* @Nullable */ TriggerPubsubConfig> pubsubConfig;
 
     /**
@@ -260,7 +260,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccount;
 
     /**
@@ -278,7 +278,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
-    @OutputExport(name="substitutions", type=Map.class, parameters={String.class, String.class})
+    @Export(name="substitutions", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> substitutions;
 
     /**
@@ -292,7 +292,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Tags for annotation of a Build. These are not docker tags.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
     /**
@@ -306,7 +306,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The unique identifier for the trigger.
      * 
      */
-    @OutputExport(name="triggerId", type=String.class, parameters={})
+    @Export(name="triggerId", type=String.class, parameters={})
     private Output<String> triggerId;
 
     /**
@@ -325,7 +325,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="triggerTemplate", type=TriggerTriggerTemplate.class, parameters={})
+    @Export(name="triggerTemplate", type=TriggerTriggerTemplate.class, parameters={})
     private Output</* @Nullable */ TriggerTriggerTemplate> triggerTemplate;
 
     /**
@@ -347,7 +347,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="webhookConfig", type=TriggerWebhookConfig.class, parameters={})
+    @Export(name="webhookConfig", type=TriggerWebhookConfig.class, parameters={})
     private Output</* @Nullable */ TriggerWebhookConfig> webhookConfig;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListVideoContentTokenResult {
     /**
      * The content token expiration date in ISO8601 format (eg. 2021-01-01T00:00:00Z).
@@ -20,10 +20,10 @@ public final class ListVideoContentTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListVideoContentTokenResult(
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("token") String token) {
         this.expirationDate = expirationDate;
         this.token = token;
     }

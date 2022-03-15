@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -43,7 +43,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -59,7 +59,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * the sensitive_labels block, but cannot be configured in both places.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -71,7 +71,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * [CHANNEL_ID] is automatically assigned by the server on creation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -83,7 +83,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -100,7 +100,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sensitiveLabels")
+    @Import(name="sensitiveLabels")
       private final @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
 
     public Output<NotificationChannelSensitiveLabelsGetArgs> getSensitiveLabels() {
@@ -111,7 +111,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc...
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -122,7 +122,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
@@ -139,7 +139,7 @@ public final class NotificationChannelState extends io.pulumi.resources.Resource
      * UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.
      * 
      */
-    @InputImport(name="verificationStatus")
+    @Import(name="verificationStatus")
       private final @Nullable Output<String> verificationStatus;
 
     public Output<String> getVerificationStatus() {

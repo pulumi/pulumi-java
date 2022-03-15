@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetEnvironmentConfigDatabaseConfig extends io.pulumi.resource
 
     public static final GetEnvironmentConfigDatabaseConfig Empty = new GetEnvironmentConfigDatabaseConfig();
 
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {

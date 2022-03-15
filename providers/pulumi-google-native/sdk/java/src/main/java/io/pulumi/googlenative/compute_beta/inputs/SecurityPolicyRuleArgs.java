@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.SecurityPolicyRuleDirection;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleHttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleMatcherArgs;
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -41,7 +41,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<SecurityPolicyRuleDirection> direction;
 
     public Output<SecurityPolicyRuleDirection> getDirection() {
@@ -63,7 +63,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be specified when the versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
@@ -74,7 +74,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Optional, additional actions that are performed on headers.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
     public Output<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
@@ -85,7 +85,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
      * 
      */
-    @InputImport(name="match")
+    @Import(name="match")
       private final @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
 
     public Output<SecurityPolicyRuleMatcherArgs> getMatch() {
@@ -96,7 +96,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * If set to true, the specified action is not enforced.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -107,7 +107,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -118,7 +118,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="rateLimitOptions")
+    @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
     public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
@@ -129,7 +129,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Parameters defining the redirect action. Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="redirectOptions")
+    @Import(name="redirectOptions")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
     public Output<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
@@ -140,7 +140,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
      * 
      */
-    @InputImport(name="ruleNumber")
+    @Import(name="ruleNumber")
       private final @Nullable Output<String> ruleNumber;
 
     public Output<String> getRuleNumber() {
@@ -151,7 +151,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="targetResources")
+    @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
 
     public Output<List<String>> getTargetResources() {
@@ -162,7 +162,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
      */
-    @InputImport(name="targetServiceAccounts")
+    @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
     public Output<List<String>> getTargetServiceAccounts() {

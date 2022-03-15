@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicySkuResponse {
     /**
      * Tier of Firewall Policy.
@@ -17,8 +17,8 @@ public final class FirewallPolicySkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicySkuResponse(@OutputCustomType.Parameter("tier") @Nullable String tier) {
+    @CustomType.Constructor
+    private FirewallPolicySkuResponse(@CustomType.Parameter("tier") @Nullable String tier) {
         this.tier = tier;
     }
 

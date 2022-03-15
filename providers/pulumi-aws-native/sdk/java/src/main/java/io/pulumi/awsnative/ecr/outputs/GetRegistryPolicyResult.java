@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryPolicyResult {
     /**
      * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
@@ -19,10 +19,10 @@ public final class GetRegistryPolicyResult {
     private final @Nullable Object policyText;
     private final @Nullable String registryId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryPolicyResult(
-        @OutputCustomType.Parameter("policyText") @Nullable Object policyText,
-        @OutputCustomType.Parameter("registryId") @Nullable String registryId) {
+        @CustomType.Parameter("policyText") @Nullable Object policyText,
+        @CustomType.Parameter("registryId") @Nullable String registryId) {
         this.policyText = policyText;
         this.registryId = registryId;
     }

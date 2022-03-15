@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotMappingPropertiesResponse {
     /**
      * The mapping.
@@ -17,8 +17,8 @@ public final class IotMappingPropertiesResponse {
      */
     private final @Nullable Object content;
 
-    @OutputCustomType.Constructor
-    private IotMappingPropertiesResponse(@OutputCustomType.Parameter("content") @Nullable Object content) {
+    @CustomType.Constructor
+    private IotMappingPropertiesResponse(@CustomType.Parameter("content") @Nullable Object content) {
         this.content = content;
     }
 

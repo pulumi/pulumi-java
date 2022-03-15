@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSServiceResponseResponseLivenessProbeRequirements {
     /**
      * The number of failures to allow before returning an unhealthy status.
@@ -37,13 +37,13 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSServiceResponseResponseLivenessProbeRequirements(
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
-        @OutputCustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
-        @OutputCustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
-        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @CustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
+        @CustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
+        @CustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.failureThreshold = failureThreshold;
         this.initialDelaySeconds = initialDelaySeconds;
         this.periodSeconds = periodSeconds;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the role assignment.
      * 
      */
-    @InputImport(name="assignmentName", required=true)
+    @Import(name="assignmentName", required=true)
       private final String assignmentName;
 
     public String getAssignmentName() {
@@ -27,7 +27,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final String hubName;
 
     public String getHubName() {
@@ -38,7 +38,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AsymmetricEncryptedSecretResponse {
     /**
      * The algorithm used to encrypt "Value".
@@ -27,11 +27,11 @@ public final class AsymmetricEncryptedSecretResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AsymmetricEncryptedSecretResponse(
-        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
-        @OutputCustomType.Parameter("encryptionCertThumbprint") @Nullable String encryptionCertThumbprint,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @CustomType.Parameter("encryptionCertThumbprint") @Nullable String encryptionCertThumbprint,
+        @CustomType.Parameter("value") String value) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionCertThumbprint = encryptionCertThumbprint;
         this.value = value;

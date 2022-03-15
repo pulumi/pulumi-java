@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kusto.enums.AzureSkuName;
 import io.pulumi.azurenative.kusto.enums.AzureSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The number of instances of the cluster.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -37,7 +37,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,AzureSkuName>> name;
 
     public Output<Either<String,AzureSkuName>> getName() {
@@ -48,7 +48,7 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU tier.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<Either<String,AzureSkuTier>> tier;
 
     public Output<Either<String,AzureSkuTier>> getTier() {

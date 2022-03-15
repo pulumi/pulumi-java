@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.InboundSamlConfigArgs;
@@ -47,7 +47,7 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
      * Human friendly display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -61,7 +61,7 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
      * If this config allows users to sign in with the provider.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -76,7 +76,7 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="idpConfig", type=InboundSamlConfigIdpConfig.class, parameters={})
+    @Export(name="idpConfig", type=InboundSamlConfigIdpConfig.class, parameters={})
     private Output<InboundSamlConfigIdpConfig> idpConfig;
 
     /**
@@ -93,7 +93,7 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
      * alphanumeric character, and have at least 2 characters.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -127,7 +127,7 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="spConfig", type=InboundSamlConfigSpConfig.class, parameters={})
+    @Export(name="spConfig", type=InboundSamlConfigSpConfig.class, parameters={})
     private Output<InboundSamlConfigSpConfig> spConfig;
 
     /**

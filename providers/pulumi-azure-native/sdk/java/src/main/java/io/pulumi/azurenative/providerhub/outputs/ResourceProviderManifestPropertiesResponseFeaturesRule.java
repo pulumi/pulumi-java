@@ -3,16 +3,16 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderManifestPropertiesResponseFeaturesRule {
     private final String requiredFeaturesPolicy;
 
-    @OutputCustomType.Constructor
-    private ResourceProviderManifestPropertiesResponseFeaturesRule(@OutputCustomType.Parameter("requiredFeaturesPolicy") String requiredFeaturesPolicy) {
+    @CustomType.Constructor
+    private ResourceProviderManifestPropertiesResponseFeaturesRule(@CustomType.Parameter("requiredFeaturesPolicy") String requiredFeaturesPolicy) {
         this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 

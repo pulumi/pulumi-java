@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
      * Email of author contact
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -33,7 +33,7 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
      * Link for author/vendor page
      * 
      */
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable String link;
 
     public Optional<String> getLink() {
@@ -44,7 +44,7 @@ public final class MetadataAuthorResponse extends io.pulumi.resources.InvokeArgs
      * Name of the author. Company or person.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.ParameterDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure Video Analyzer account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description for the pipeline.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * List of the instance level parameter values for the user-defined topology parameters. A pipeline can only define or override parameters values for parameters which have been declared in the referenced topology. Topology parameters without a default value must be defined. Topology parameters with a default value can be optionally be overridden.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
     public Output<List<ParameterDefinitionArgs>> getParameters() {
@@ -53,7 +53,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * The pipeline job name.
      * 
      */
-    @InputImport(name="pipelineJobName")
+    @Import(name="pipelineJobName")
       private final @Nullable Output<String> pipelineJobName;
 
     public Output<String> getPipelineJobName() {
@@ -64,7 +64,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class PipelineJobArgs extends io.pulumi.resources.ResourceArgs {
      * Reference to an existing pipeline topology. When activated, this pipeline job will process content according to the pipeline topology definition.
      * 
      */
-    @InputImport(name="topologyName", required=true)
+    @Import(name="topologyName", required=true)
       private final Output<String> topologyName;
 
     public Output<String> getTopologyName() {

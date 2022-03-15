@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
      * Polymorphic credentials to present to the endpoint.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
     public Output<MediaGraphUsernamePasswordCredentialsArgs> getCredentials() {
@@ -35,7 +35,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
      * Expected value is '#Microsoft.Media.MediaGraphClearEndpoint'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -46,7 +46,7 @@ public final class MediaGraphClearEndpointArgs extends io.pulumi.resources.Resou
      * Url for the endpoint.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionCloudSqlCredential {
     /**
      * Password for database.
@@ -21,10 +21,10 @@ public final class ConnectionCloudSqlCredential {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionCloudSqlCredential(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }

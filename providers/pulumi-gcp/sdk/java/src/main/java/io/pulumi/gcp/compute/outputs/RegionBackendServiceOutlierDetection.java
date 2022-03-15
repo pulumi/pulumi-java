@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetectionBaseEjectionTime;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetectionInterval;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionBackendServiceOutlierDetection {
     /**
      * The base time that a host is ejected for. The real time is equal to the base
@@ -97,19 +97,19 @@ public final class RegionBackendServiceOutlierDetection {
      */
     private final @Nullable Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionBackendServiceOutlierDetection(
-        @OutputCustomType.Parameter("baseEjectionTime") @Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime,
-        @OutputCustomType.Parameter("consecutiveErrors") @Nullable Integer consecutiveErrors,
-        @OutputCustomType.Parameter("consecutiveGatewayFailure") @Nullable Integer consecutiveGatewayFailure,
-        @OutputCustomType.Parameter("enforcingConsecutiveErrors") @Nullable Integer enforcingConsecutiveErrors,
-        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") @Nullable Integer enforcingConsecutiveGatewayFailure,
-        @OutputCustomType.Parameter("enforcingSuccessRate") @Nullable Integer enforcingSuccessRate,
-        @OutputCustomType.Parameter("interval") @Nullable RegionBackendServiceOutlierDetectionInterval interval,
-        @OutputCustomType.Parameter("maxEjectionPercent") @Nullable Integer maxEjectionPercent,
-        @OutputCustomType.Parameter("successRateMinimumHosts") @Nullable Integer successRateMinimumHosts,
-        @OutputCustomType.Parameter("successRateRequestVolume") @Nullable Integer successRateRequestVolume,
-        @OutputCustomType.Parameter("successRateStdevFactor") @Nullable Integer successRateStdevFactor) {
+        @CustomType.Parameter("baseEjectionTime") @Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime,
+        @CustomType.Parameter("consecutiveErrors") @Nullable Integer consecutiveErrors,
+        @CustomType.Parameter("consecutiveGatewayFailure") @Nullable Integer consecutiveGatewayFailure,
+        @CustomType.Parameter("enforcingConsecutiveErrors") @Nullable Integer enforcingConsecutiveErrors,
+        @CustomType.Parameter("enforcingConsecutiveGatewayFailure") @Nullable Integer enforcingConsecutiveGatewayFailure,
+        @CustomType.Parameter("enforcingSuccessRate") @Nullable Integer enforcingSuccessRate,
+        @CustomType.Parameter("interval") @Nullable RegionBackendServiceOutlierDetectionInterval interval,
+        @CustomType.Parameter("maxEjectionPercent") @Nullable Integer maxEjectionPercent,
+        @CustomType.Parameter("successRateMinimumHosts") @Nullable Integer successRateMinimumHosts,
+        @CustomType.Parameter("successRateRequestVolume") @Nullable Integer successRateRequestVolume,
+        @CustomType.Parameter("successRateStdevFactor") @Nullable Integer successRateStdevFactor) {
         this.baseEjectionTime = baseEjectionTime;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;

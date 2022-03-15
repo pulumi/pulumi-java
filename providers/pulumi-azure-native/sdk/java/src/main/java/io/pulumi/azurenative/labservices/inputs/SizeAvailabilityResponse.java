@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
      * Whether or not this size category is available
      * 
      */
-    @InputImport(name="isAvailable")
+    @Import(name="isAvailable")
       private final @Nullable Boolean isAvailable;
 
     public Optional<Boolean> getIsAvailable() {
@@ -34,7 +34,7 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
      * The category of the size (Basic, Standard, Performance).
      * 
      */
-    @InputImport(name="sizeCategory")
+    @Import(name="sizeCategory")
       private final @Nullable String sizeCategory;
 
     public Optional<String> getSizeCategory() {

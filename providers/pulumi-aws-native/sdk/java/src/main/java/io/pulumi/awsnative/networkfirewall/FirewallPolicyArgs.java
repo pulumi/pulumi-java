@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallPolicyArgs Empty = new FirewallPolicyArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="firewallPolicy", required=true)
+    @Import(name="firewallPolicy", required=true)
       private final Output<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy;
 
     public Output<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> getFirewallPolicy() {
         return this.firewallPolicy;
     }
 
-    @InputImport(name="firewallPolicyName")
+    @Import(name="firewallPolicyName")
       private final @Nullable Output<String> firewallPolicyName;
 
     public Output<String> getFirewallPolicyName() {
         return this.firewallPolicyName == null ? Output.empty() : this.firewallPolicyName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FirewallPolicyTagArgs>> tags;
 
     public Output<List<FirewallPolicyTagArgs>> getTags() {

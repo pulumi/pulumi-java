@@ -5,23 +5,23 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopePathStatementRequest;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeThroughResourcesStatementRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAccessScopeAccessScopePathRequest {
     private final @Nullable NetworkInsightsAccessScopePathStatementRequest destination;
     private final @Nullable NetworkInsightsAccessScopePathStatementRequest source;
     private final @Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAccessScopeAccessScopePathRequest(
-        @OutputCustomType.Parameter("destination") @Nullable NetworkInsightsAccessScopePathStatementRequest destination,
-        @OutputCustomType.Parameter("source") @Nullable NetworkInsightsAccessScopePathStatementRequest source,
-        @OutputCustomType.Parameter("throughResources") @Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
+        @CustomType.Parameter("destination") @Nullable NetworkInsightsAccessScopePathStatementRequest destination,
+        @CustomType.Parameter("source") @Nullable NetworkInsightsAccessScopePathStatementRequest source,
+        @CustomType.Parameter("throughResources") @Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
         this.destination = destination;
         this.source = source;
         this.throughResources = throughResources;

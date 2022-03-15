@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmFabricSpecificDet
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareV2FabricSpecificDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FabricPropertiesResponse {
     /**
      * BCDR state of the fabric.
@@ -62,16 +62,16 @@ public final class FabricPropertiesResponse {
      */
     private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FabricPropertiesResponse(
-        @OutputCustomType.Parameter("bcdrState") @Nullable String bcdrState,
-        @OutputCustomType.Parameter("customDetails") @Nullable Object customDetails,
-        @OutputCustomType.Parameter("encryptionDetails") @Nullable EncryptionDetailsResponse encryptionDetails,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("health") @Nullable String health,
-        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @OutputCustomType.Parameter("internalIdentifier") @Nullable String internalIdentifier,
-        @OutputCustomType.Parameter("rolloverEncryptionDetails") @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
+        @CustomType.Parameter("bcdrState") @Nullable String bcdrState,
+        @CustomType.Parameter("customDetails") @Nullable Object customDetails,
+        @CustomType.Parameter("encryptionDetails") @Nullable EncryptionDetailsResponse encryptionDetails,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("health") @Nullable String health,
+        @CustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @CustomType.Parameter("internalIdentifier") @Nullable String internalIdentifier,
+        @CustomType.Parameter("rolloverEncryptionDetails") @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
         this.bcdrState = bcdrState;
         this.customDetails = customDetails;
         this.encryptionDetails = encryptionDetails;

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropert
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseProviderAuthentication;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseRequestHeaderOptions;
 import io.pulumi.azurenative.providerhub.outputs.ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderRegistrationResponseProperties {
     private final @Nullable List<ResourceProviderCapabilitiesResponse> capabilities;
     private final @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule;
@@ -38,23 +38,23 @@ public final class ProviderRegistrationResponseProperties {
     private final @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
     private final @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderRegistrationResponseProperties(
-        @OutputCustomType.Parameter("capabilities") @Nullable List<ResourceProviderCapabilitiesResponse> capabilities,
-        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule,
-        @OutputCustomType.Parameter("management") @Nullable ResourceProviderManifestPropertiesResponseManagement management,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("providerAuthentication") @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication,
-        @OutputCustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @OutputCustomType.Parameter("providerHubMetadata") @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata,
-        @OutputCustomType.Parameter("providerType") @Nullable String providerType,
-        @OutputCustomType.Parameter("providerVersion") @Nullable String providerVersion,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("requestHeaderOptions") @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions,
-        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
-        @OutputCustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
-        @OutputCustomType.Parameter("templateDeploymentOptions") @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
+        @CustomType.Parameter("capabilities") @Nullable List<ResourceProviderCapabilitiesResponse> capabilities,
+        @CustomType.Parameter("featuresRule") @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule,
+        @CustomType.Parameter("management") @Nullable ResourceProviderManifestPropertiesResponseManagement management,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("providerAuthentication") @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication,
+        @CustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
+        @CustomType.Parameter("providerHubMetadata") @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata,
+        @CustomType.Parameter("providerType") @Nullable String providerType,
+        @CustomType.Parameter("providerVersion") @Nullable String providerVersion,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("requestHeaderOptions") @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions,
+        @CustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @CustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
+        @CustomType.Parameter("templateDeploymentOptions") @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
         this.capabilities = capabilities;
         this.featuresRule = featuresRule;
         this.management = management;

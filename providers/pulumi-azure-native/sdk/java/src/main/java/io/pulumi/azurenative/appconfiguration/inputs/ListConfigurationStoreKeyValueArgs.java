@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
      * The name of the configuration store.
      * 
      */
-    @InputImport(name="configStoreName", required=true)
+    @Import(name="configStoreName", required=true)
       private final String configStoreName;
 
     public String getConfigStoreName() {
@@ -29,7 +29,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
      * The key to retrieve.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -40,7 +40,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
      * The label of the key.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -51,7 +51,7 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

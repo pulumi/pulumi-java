@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The time the watchlist item was created
      * 
      */
-    @InputImport(name="created")
+    @Import(name="created")
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
@@ -32,7 +32,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a user that created the watchlist item
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<WatchlistUserInfoArgs> createdBy;
 
     public Output<WatchlistUserInfoArgs> getCreatedBy() {
@@ -43,7 +43,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * key-value pairs for a watchlist item entity mapping
      * 
      */
-    @InputImport(name="entityMapping")
+    @Import(name="entityMapping")
       private final @Nullable Output<Object> entityMapping;
 
     public Output<Object> getEntityMapping() {
@@ -54,7 +54,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * A flag that indicates if the watchlist item is deleted or not
      * 
      */
-    @InputImport(name="isDeleted")
+    @Import(name="isDeleted")
       private final @Nullable Output<Boolean> isDeleted;
 
     public Output<Boolean> getIsDeleted() {
@@ -65,7 +65,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * key-value pairs for a watchlist item
      * 
      */
-    @InputImport(name="itemsKeyValue", required=true)
+    @Import(name="itemsKeyValue", required=true)
       private final Output<Object> itemsKeyValue;
 
     public Output<Object> getItemsKeyValue() {
@@ -76,7 +76,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -87,7 +87,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The tenantId to which the watchlist item belongs to
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -109,7 +109,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The last time the watchlist item was updated
      * 
      */
-    @InputImport(name="updated")
+    @Import(name="updated")
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
@@ -120,7 +120,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a user that updated the watchlist item
      * 
      */
-    @InputImport(name="updatedBy")
+    @Import(name="updatedBy")
       private final @Nullable Output<WatchlistUserInfoArgs> updatedBy;
 
     public Output<WatchlistUserInfoArgs> getUpdatedBy() {
@@ -131,7 +131,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * Watchlist Alias
      * 
      */
-    @InputImport(name="watchlistAlias", required=true)
+    @Import(name="watchlistAlias", required=true)
       private final Output<String> watchlistAlias;
 
     public Output<String> getWatchlistAlias() {
@@ -142,7 +142,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The id (a Guid) of the watchlist item
      * 
      */
-    @InputImport(name="watchlistItemId")
+    @Import(name="watchlistItemId")
       private final @Nullable Output<String> watchlistItemId;
 
     public Output<String> getWatchlistItemId() {
@@ -153,7 +153,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the watchlist item
      * 
      */
-    @InputImport(name="watchlistItemType")
+    @Import(name="watchlistItemType")
       private final @Nullable Output<String> watchlistItemType;
 
     public Output<String> getWatchlistItemType() {
@@ -164,7 +164,7 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

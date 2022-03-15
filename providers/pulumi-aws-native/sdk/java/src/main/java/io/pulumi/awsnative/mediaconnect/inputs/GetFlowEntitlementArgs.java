@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFlowEntitlementArgs extends io.pulumi.resources.InvokeArgs
      * The ARN of the entitlement.
      * 
      */
-    @InputImport(name="entitlementArn", required=true)
+    @Import(name="entitlementArn", required=true)
       private final String entitlementArn;
 
     public String getEntitlementArn() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
     /**
      * Current volume free space percentage.
@@ -26,11 +26,11 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
      */
     private final String lastUpdatedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudTieringVolumeFreeSpacePolicyStatusResponse(
-        @OutputCustomType.Parameter("currentVolumeFreeSpacePercent") Integer currentVolumeFreeSpacePercent,
-        @OutputCustomType.Parameter("effectiveVolumeFreeSpacePolicy") Integer effectiveVolumeFreeSpacePolicy,
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
+        @CustomType.Parameter("currentVolumeFreeSpacePercent") Integer currentVolumeFreeSpacePercent,
+        @CustomType.Parameter("effectiveVolumeFreeSpacePolicy") Integer effectiveVolumeFreeSpacePolicy,
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
         this.currentVolumeFreeSpacePercent = currentVolumeFreeSpacePercent;
         this.effectiveVolumeFreeSpacePolicy = effectiveVolumeFreeSpacePolicy;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;

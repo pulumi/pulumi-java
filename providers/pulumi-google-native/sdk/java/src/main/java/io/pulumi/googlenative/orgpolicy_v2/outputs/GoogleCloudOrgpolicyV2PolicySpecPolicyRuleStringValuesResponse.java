@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse {
     /**
      * List of values allowed at this resource.
@@ -21,10 +21,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
      */
     private final List<String> deniedValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(
-        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
-        @OutputCustomType.Parameter("deniedValues") List<String> deniedValues) {
+        @CustomType.Parameter("allowedValues") List<String> allowedValues,
+        @CustomType.Parameter("deniedValues") List<String> deniedValues) {
         this.allowedValues = allowedValues;
         this.deniedValues = deniedValues;
     }

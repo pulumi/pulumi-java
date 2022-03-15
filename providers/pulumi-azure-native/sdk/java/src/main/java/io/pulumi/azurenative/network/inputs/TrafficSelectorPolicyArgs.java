@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
      * A collection of local address spaces in CIDR format.
      * 
      */
-    @InputImport(name="localAddressRanges", required=true)
+    @Import(name="localAddressRanges", required=true)
       private final Output<List<String>> localAddressRanges;
 
     public Output<List<String>> getLocalAddressRanges() {
@@ -33,7 +33,7 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
      * A collection of remote address spaces in CIDR format.
      * 
      */
-    @InputImport(name="remoteAddressRanges", required=true)
+    @Import(name="remoteAddressRanges", required=true)
       private final Output<List<String>> remoteAddressRanges;
 
     public Output<List<String>> getRemoteAddressRanges() {

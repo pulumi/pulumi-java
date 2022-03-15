@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * Optional. If specified, this field is used to set the authority header by the sender of notifications. See https://tools.ietf.org/html/rfc7540#section-8.1.2.3
      * 
      */
-    @InputImport(name="authority", required=true)
+    @Import(name="authority", required=true)
       private final String authority;
 
     public String getAuthority() {
@@ -33,7 +33,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * Endpoint to which gRPC notifications are sent. This must be a valid gRPCLB DNS name.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final String endpoint;
 
     public String getEndpoint() {
@@ -44,7 +44,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * Optional. If specified, this field is used to populate the "name" field in gRPC requests.
      * 
      */
-    @InputImport(name="payloadName", required=true)
+    @Import(name="payloadName", required=true)
       private final String payloadName;
 
     public String getPayloadName() {
@@ -55,7 +55,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * Optional. This field is used to configure how often to send a full update of all non-healthy backends. If unspecified, full updates are not sent. If specified, must be in the range between 600 seconds to 3600 seconds. Nanos are disallowed.
      * 
      */
-    @InputImport(name="resendInterval", required=true)
+    @Import(name="resendInterval", required=true)
       private final DurationResponse resendInterval;
 
     public DurationResponse getResendInterval() {
@@ -66,7 +66,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends io.pulumi.re
      * How much time (in seconds) is spent attempting notification retries until a successful response is received. Default is 30s. Limit is 20m (1200s). Must be a positive number.
      * 
      */
-    @InputImport(name="retryDurationSec", required=true)
+    @Import(name="retryDurationSec", required=true)
       private final Integer retryDurationSec;
 
     public Integer getRetryDurationSec() {

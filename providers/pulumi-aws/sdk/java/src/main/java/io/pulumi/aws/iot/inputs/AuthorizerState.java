@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the authorizer.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the authorizer's Lambda function.
      * 
      */
-    @InputImport(name="authorizerFunctionArn")
+    @Import(name="authorizerFunctionArn")
       private final @Nullable Output<String> authorizerFunctionArn;
 
     public Output<String> getAuthorizerFunctionArn() {
@@ -42,7 +42,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The name of the authorizer.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether AWS IoT validates the token signature in an authorization request. Default: `false`.
      * 
      */
-    @InputImport(name="signingDisabled")
+    @Import(name="signingDisabled")
       private final @Nullable Output<Boolean> signingDisabled;
 
     public Output<Boolean> getSigningDisabled() {
@@ -64,7 +64,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The status of Authorizer request at creation. Valid values: `ACTIVE`, `INACTIVE`. Default: `ACTIVE`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -75,7 +75,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The name of the token key used to extract the token from the HTTP headers. This value is required if signing is enabled in your authorizer.
      * 
      */
-    @InputImport(name="tokenKeyName")
+    @Import(name="tokenKeyName")
       private final @Nullable Output<String> tokenKeyName;
 
     public Output<String> getTokenKeyName() {
@@ -86,7 +86,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.
      * 
      */
-    @InputImport(name="tokenSigningPublicKeys")
+    @Import(name="tokenSigningPublicKeys")
       private final @Nullable Output<Map<String,String>> tokenSigningPublicKeys;
 
     public Output<Map<String,String>> getTokenSigningPublicKeys() {

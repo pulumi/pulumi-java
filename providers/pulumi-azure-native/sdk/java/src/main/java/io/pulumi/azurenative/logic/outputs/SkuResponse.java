@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The name.
@@ -23,10 +23,10 @@ public final class SkuResponse {
      */
     private final @Nullable ResourceReferenceResponse plan;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") @Nullable ResourceReferenceResponse plan) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") @Nullable ResourceReferenceResponse plan) {
         this.name = name;
         this.plan = plan;
     }

@@ -4,13 +4,13 @@
 package io.pulumi.aws.wafregional.outputs;
 
 import io.pulumi.aws.wafregional.outputs.ByteMatchSetByteMatchTupleFieldToMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ByteMatchSetByteMatchTuple {
     /**
      * Settings for the ByteMatchTuple. FieldToMatch documented below.
@@ -33,12 +33,12 @@ public final class ByteMatchSetByteMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ByteMatchSetByteMatchTuple(
-        @OutputCustomType.Parameter("fieldToMatch") ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("positionalConstraint") String positionalConstraint,
-        @OutputCustomType.Parameter("targetString") @Nullable String targetString,
-        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
+        @CustomType.Parameter("fieldToMatch") ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch,
+        @CustomType.Parameter("positionalConstraint") String positionalConstraint,
+        @CustomType.Parameter("targetString") @Nullable String targetString,
+        @CustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.targetString = targetString;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1InputConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatasetResult {
     /**
      * The names of any related resources that are blocking changes to the dataset.
@@ -52,16 +52,16 @@ public final class GetDatasetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatasetResult(
-        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dataItemCount") String dataItemCount,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("inputConfigs") List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs,
-        @OutputCustomType.Parameter("lastMigrateTime") String lastMigrateTime,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("blockingResources") List<String> blockingResources,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dataItemCount") String dataItemCount,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("inputConfigs") List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs,
+        @CustomType.Parameter("lastMigrateTime") String lastMigrateTime,
+        @CustomType.Parameter("name") String name) {
         this.blockingResources = blockingResources;
         this.createTime = createTime;
         this.dataItemCount = dataItemCount;

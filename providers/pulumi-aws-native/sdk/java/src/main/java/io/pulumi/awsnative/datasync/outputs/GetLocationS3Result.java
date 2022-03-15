@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationS3Tag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationS3Result {
     /**
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket location.
@@ -29,11 +29,11 @@ public final class GetLocationS3Result {
      */
     private final @Nullable List<LocationS3Tag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationS3Result(
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationS3Tag> tags) {
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("tags") @Nullable List<LocationS3Tag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.tags = tags;

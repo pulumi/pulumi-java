@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.ConstraintArgs;
 import io.pulumi.aws.servicecatalog.inputs.ConstraintState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @OutputExport(name="acceptLanguage", type=String.class, parameters={})
+    @Export(name="acceptLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> acceptLanguage;
 
     /**
@@ -48,7 +48,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Description of the constraint.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -62,7 +62,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Owner of the constraint.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -76,7 +76,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Constraint parameters in JSON format. The syntax depends on the constraint type. See details below.
      * 
      */
-    @OutputExport(name="parameters", type=String.class, parameters={})
+    @Export(name="parameters", type=String.class, parameters={})
     private Output<String> parameters;
 
     /**
@@ -90,7 +90,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Portfolio identifier.
      * 
      */
-    @OutputExport(name="portfolioId", type=String.class, parameters={})
+    @Export(name="portfolioId", type=String.class, parameters={})
     private Output<String> portfolioId;
 
     /**
@@ -104,7 +104,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Product identifier.
      * 
      */
-    @OutputExport(name="productId", type=String.class, parameters={})
+    @Export(name="productId", type=String.class, parameters={})
     private Output<String> productId;
 
     /**
@@ -114,7 +114,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
     public Output<String> getProductId() {
         return this.productId;
     }
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     public Output<String> getStatus() {
@@ -124,7 +124,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * The account name of the Azure Storage Account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -32,7 +32,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is 'StorageAccount'.
      * 
      */
-    @InputImport(name="storageType", required=true)
+    @Import(name="storageType", required=true)
       private final String storageType;
 
     public String getStorageType() {

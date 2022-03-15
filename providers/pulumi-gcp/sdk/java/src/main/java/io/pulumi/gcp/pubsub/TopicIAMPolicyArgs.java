@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -31,7 +31,7 @@ public final class TopicIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -42,7 +42,7 @@ public final class TopicIAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

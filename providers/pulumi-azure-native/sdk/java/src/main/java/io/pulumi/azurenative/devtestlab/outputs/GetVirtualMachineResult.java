@@ -11,7 +11,7 @@ import io.pulumi.azurenative.devtestlab.outputs.DataDiskPropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.GalleryImageReferenceResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NetworkInterfacePropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleCreationParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineResult {
     /**
      * Indicates whether another user can take ownership of the virtual machine
@@ -223,48 +223,48 @@ public final class GetVirtualMachineResult {
      */
     private final String virtualMachineCreationSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineResult(
-        @OutputCustomType.Parameter("allowClaim") @Nullable Boolean allowClaim,
-        @OutputCustomType.Parameter("applicableSchedule") ApplicableScheduleResponse applicableSchedule,
-        @OutputCustomType.Parameter("artifactDeploymentStatus") ArtifactDeploymentStatusPropertiesResponse artifactDeploymentStatus,
-        @OutputCustomType.Parameter("artifacts") @Nullable List<ArtifactInstallPropertiesResponse> artifacts,
-        @OutputCustomType.Parameter("computeId") String computeId,
-        @OutputCustomType.Parameter("computeVm") ComputeVmPropertiesResponse computeVm,
-        @OutputCustomType.Parameter("createdByUser") String createdByUser,
-        @OutputCustomType.Parameter("createdByUserId") String createdByUserId,
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("customImageId") @Nullable String customImageId,
-        @OutputCustomType.Parameter("dataDiskParameters") @Nullable List<DataDiskPropertiesResponse> dataDiskParameters,
-        @OutputCustomType.Parameter("disallowPublicIpAddress") @Nullable Boolean disallowPublicIpAddress,
-        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("galleryImageReference") @Nullable GalleryImageReferenceResponse galleryImageReference,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isAuthenticationWithSshKey") @Nullable Boolean isAuthenticationWithSshKey,
-        @OutputCustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
-        @OutputCustomType.Parameter("labVirtualNetworkId") @Nullable String labVirtualNetworkId,
-        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterface") @Nullable NetworkInterfacePropertiesResponse networkInterface,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("ownerObjectId") @Nullable String ownerObjectId,
-        @OutputCustomType.Parameter("ownerUserPrincipalName") @Nullable String ownerUserPrincipalName,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("planId") @Nullable String planId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scheduleParameters") @Nullable List<ScheduleCreationParameterResponse> scheduleParameters,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("sshKey") @Nullable String sshKey,
-        @OutputCustomType.Parameter("storageType") @Nullable String storageType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("userName") @Nullable String userName,
-        @OutputCustomType.Parameter("virtualMachineCreationSource") String virtualMachineCreationSource) {
+        @CustomType.Parameter("allowClaim") @Nullable Boolean allowClaim,
+        @CustomType.Parameter("applicableSchedule") ApplicableScheduleResponse applicableSchedule,
+        @CustomType.Parameter("artifactDeploymentStatus") ArtifactDeploymentStatusPropertiesResponse artifactDeploymentStatus,
+        @CustomType.Parameter("artifacts") @Nullable List<ArtifactInstallPropertiesResponse> artifacts,
+        @CustomType.Parameter("computeId") String computeId,
+        @CustomType.Parameter("computeVm") ComputeVmPropertiesResponse computeVm,
+        @CustomType.Parameter("createdByUser") String createdByUser,
+        @CustomType.Parameter("createdByUserId") String createdByUserId,
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("customImageId") @Nullable String customImageId,
+        @CustomType.Parameter("dataDiskParameters") @Nullable List<DataDiskPropertiesResponse> dataDiskParameters,
+        @CustomType.Parameter("disallowPublicIpAddress") @Nullable Boolean disallowPublicIpAddress,
+        @CustomType.Parameter("environmentId") @Nullable String environmentId,
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("galleryImageReference") @Nullable GalleryImageReferenceResponse galleryImageReference,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isAuthenticationWithSshKey") @Nullable Boolean isAuthenticationWithSshKey,
+        @CustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
+        @CustomType.Parameter("labVirtualNetworkId") @Nullable String labVirtualNetworkId,
+        @CustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterface") @Nullable NetworkInterfacePropertiesResponse networkInterface,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("ownerObjectId") @Nullable String ownerObjectId,
+        @CustomType.Parameter("ownerUserPrincipalName") @Nullable String ownerUserPrincipalName,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("planId") @Nullable String planId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scheduleParameters") @Nullable List<ScheduleCreationParameterResponse> scheduleParameters,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("sshKey") @Nullable String sshKey,
+        @CustomType.Parameter("storageType") @Nullable String storageType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("userName") @Nullable String userName,
+        @CustomType.Parameter("virtualMachineCreationSource") String virtualMachineCreationSource) {
         this.allowClaim = allowClaim;
         this.applicableSchedule = applicableSchedule;
         this.artifactDeploymentStatus = artifactDeploymentStatus;

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TypedLocalObjectReference;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressClassSpec {
     /**
      * Controller refers to the name of the controller that should handle this class. This allows for different "flavors" that are controlled by the same controller. For example, you may have different Parameters for the same implementing controller. This should be specified as a domain-prefixed path no more than 250 characters in length, e.g. "acme.io/ingress-controller". This field is immutable.
@@ -23,10 +23,10 @@ public final class IngressClassSpec {
      */
     private final @Nullable TypedLocalObjectReference parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressClassSpec(
-        @OutputCustomType.Parameter("controller") @Nullable String controller,
-        @OutputCustomType.Parameter("parameters") @Nullable TypedLocalObjectReference parameters) {
+        @CustomType.Parameter("controller") @Nullable String controller,
+        @CustomType.Parameter("parameters") @Nullable TypedLocalObjectReference parameters) {
         this.controller = controller;
         this.parameters = parameters;
     }

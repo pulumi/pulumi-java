@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,14 +20,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
      * Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
      * 
      */
-    @InputImport(name="imageVersion")
+    @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
     public Output<String> getImageVersion() {
         return this.imageVersion == null ? Output.empty() : this.imageVersion;
     }
 
-    @InputImport(name="optionalComponents")
+    @Import(name="optionalComponents")
       private final @Nullable Output<List<String>> optionalComponents;
 
     public Output<List<String>> getOptionalComponents() {
@@ -38,7 +38,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

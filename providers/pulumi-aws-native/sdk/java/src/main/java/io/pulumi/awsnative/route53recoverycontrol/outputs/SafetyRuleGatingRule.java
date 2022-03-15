@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SafetyRuleGatingRule {
     /**
      * The gating controls for the gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
@@ -28,11 +28,11 @@ public final class SafetyRuleGatingRule {
      */
     private final Integer waitPeriodMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SafetyRuleGatingRule(
-        @OutputCustomType.Parameter("gatingControls") List<String> gatingControls,
-        @OutputCustomType.Parameter("targetControls") List<String> targetControls,
-        @OutputCustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
+        @CustomType.Parameter("gatingControls") List<String> gatingControls,
+        @CustomType.Parameter("targetControls") List<String> targetControls,
+        @CustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
         this.gatingControls = gatingControls;
         this.targetControls = targetControls;
         this.waitPeriodMs = waitPeriodMs;

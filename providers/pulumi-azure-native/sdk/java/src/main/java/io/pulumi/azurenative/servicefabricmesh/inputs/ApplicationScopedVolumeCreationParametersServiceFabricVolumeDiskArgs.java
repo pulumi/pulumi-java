@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.enums.SizeTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * User readable description of the volume.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * Expected value is 'ServiceFabricVolumeDisk'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -47,7 +47,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * Volume size
      * 
      */
-    @InputImport(name="sizeDisk", required=true)
+    @Import(name="sizeDisk", required=true)
       private final Output<Either<String,SizeTypes>> sizeDisk;
 
     public Output<Either<String,SizeTypes>> getSizeDisk() {

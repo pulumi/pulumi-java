@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JsonFieldResponse {
     /**
      * Name of a field in the input event schema that's to be used as the source of a mapping.
@@ -17,8 +17,8 @@ public final class JsonFieldResponse {
      */
     private final @Nullable String sourceField;
 
-    @OutputCustomType.Constructor
-    private JsonFieldResponse(@OutputCustomType.Parameter("sourceField") @Nullable String sourceField) {
+    @CustomType.Constructor
+    private JsonFieldResponse(@CustomType.Parameter("sourceField") @Nullable String sourceField) {
         this.sourceField = sourceField;
     }
 

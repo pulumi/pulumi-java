@@ -5,7 +5,7 @@ package io.pulumi.awsnative.healthlake.inputs;
 
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastorePreloadDataConfigPreloadDataType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class FHIRDatastorePreloadDataConfigArgs extends io.pulumi.resource
      * The type of preloaded data. Only Synthea preloaded data is supported.
      * 
      */
-    @InputImport(name="preloadDataType", required=true)
+    @Import(name="preloadDataType", required=true)
       private final Output<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType;
 
     public Output<FHIRDatastorePreloadDataConfigPreloadDataType> getPreloadDataType() {

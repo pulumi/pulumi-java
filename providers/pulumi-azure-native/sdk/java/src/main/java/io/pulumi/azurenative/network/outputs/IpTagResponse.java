@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpTagResponse {
     /**
      * The IP tag type. Example: FirstPartyUsage.
@@ -22,10 +22,10 @@ public final class IpTagResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpTagResponse(
-        @OutputCustomType.Parameter("ipTagType") @Nullable String ipTagType,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("ipTagType") @Nullable String ipTagType,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.ipTagType = ipTagType;
         this.tag = tag;
     }

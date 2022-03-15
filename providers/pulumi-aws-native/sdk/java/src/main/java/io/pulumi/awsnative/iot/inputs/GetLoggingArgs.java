@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLoggingArgs extends io.pulumi.resources.InvokeArgs {
      * Your 12-digit account ID (used as the primary identifier for the CloudFormation resource).
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {

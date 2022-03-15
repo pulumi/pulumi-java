@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.CustomerManagedEncryptionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicaResponse {
     /**
      * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
@@ -21,10 +21,10 @@ public final class ReplicaResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicaResponse(
-        @OutputCustomType.Parameter("customerManagedEncryption") CustomerManagedEncryptionResponse customerManagedEncryption,
-        @OutputCustomType.Parameter("location") String location) {
+        @CustomType.Parameter("customerManagedEncryption") CustomerManagedEncryptionResponse customerManagedEncryption,
+        @CustomType.Parameter("location") String location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }

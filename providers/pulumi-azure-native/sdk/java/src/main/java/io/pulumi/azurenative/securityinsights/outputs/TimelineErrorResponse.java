@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimelineErrorResponse {
     /**
      * the error message
@@ -27,11 +27,11 @@ public final class TimelineErrorResponse {
      */
     private final @Nullable String queryId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimelineErrorResponse(
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("queryId") @Nullable String queryId) {
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("queryId") @Nullable String queryId) {
         this.errorMessage = errorMessage;
         this.kind = kind;
         this.queryId = queryId;

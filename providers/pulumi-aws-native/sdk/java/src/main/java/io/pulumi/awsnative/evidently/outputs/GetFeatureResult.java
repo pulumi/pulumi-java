@@ -7,14 +7,14 @@ import io.pulumi.awsnative.evidently.enums.FeatureEvaluationStrategy;
 import io.pulumi.awsnative.evidently.outputs.FeatureEntityOverride;
 import io.pulumi.awsnative.evidently.outputs.FeatureTag;
 import io.pulumi.awsnative.evidently.outputs.FeatureVariationObject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFeatureResult {
     private final @Nullable String arn;
     private final @Nullable String defaultVariation;
@@ -28,15 +28,15 @@ public final class GetFeatureResult {
     private final @Nullable List<FeatureTag> tags;
     private final @Nullable List<FeatureVariationObject> variations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFeatureResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("defaultVariation") @Nullable String defaultVariation,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("entityOverrides") @Nullable List<FeatureEntityOverride> entityOverrides,
-        @OutputCustomType.Parameter("evaluationStrategy") @Nullable FeatureEvaluationStrategy evaluationStrategy,
-        @OutputCustomType.Parameter("tags") @Nullable List<FeatureTag> tags,
-        @OutputCustomType.Parameter("variations") @Nullable List<FeatureVariationObject> variations) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("defaultVariation") @Nullable String defaultVariation,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("entityOverrides") @Nullable List<FeatureEntityOverride> entityOverrides,
+        @CustomType.Parameter("evaluationStrategy") @Nullable FeatureEvaluationStrategy evaluationStrategy,
+        @CustomType.Parameter("tags") @Nullable List<FeatureTag> tags,
+        @CustomType.Parameter("variations") @Nullable List<FeatureVariationObject> variations) {
         this.arn = arn;
         this.defaultVariation = defaultVariation;
         this.description = description;

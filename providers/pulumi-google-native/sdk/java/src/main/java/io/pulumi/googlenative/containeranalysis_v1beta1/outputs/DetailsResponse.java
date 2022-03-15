@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AttestationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetailsResponse {
     /**
      * Attestation for the resource.
@@ -15,8 +15,8 @@ public final class DetailsResponse {
      */
     private final AttestationResponse attestation;
 
-    @OutputCustomType.Constructor
-    private DetailsResponse(@OutputCustomType.Parameter("attestation") AttestationResponse attestation) {
+    @CustomType.Constructor
+    private DetailsResponse(@CustomType.Parameter("attestation") AttestationResponse attestation) {
         this.attestation = attestation;
     }
 

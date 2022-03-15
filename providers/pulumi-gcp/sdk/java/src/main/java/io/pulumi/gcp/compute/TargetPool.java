@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetPoolArgs;
@@ -51,7 +51,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * failover\_ratio.
      * 
      */
-    @OutputExport(name="backupPool", type=String.class, parameters={})
+    @Export(name="backupPool", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupPool;
 
     /**
@@ -66,7 +66,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * Textual description field.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -81,7 +81,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * backup pool (which must also be set).
      * 
      */
-    @OutputExport(name="failoverRatio", type=Double.class, parameters={})
+    @Export(name="failoverRatio", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> failoverRatio;
 
     /**
@@ -97,7 +97,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * legacy `gcp.compute.HttpHealthCheck` is supported.
      * 
      */
-    @OutputExport(name="healthChecks", type=String.class, parameters={})
+    @Export(name="healthChecks", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthChecks;
 
     /**
@@ -116,7 +116,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * target pool.
      * 
      */
-    @OutputExport(name="instances", type=List.class, parameters={String.class})
+    @Export(name="instances", type=List.class, parameters={String.class})
     private Output<List<String>> instances;
 
     /**
@@ -135,7 +135,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * this forces a new resource to be created.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -167,7 +167,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * region.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -182,7 +182,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -198,7 +198,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
      * 
      */
-    @OutputExport(name="sessionAffinity", type=String.class, parameters={})
+    @Export(name="sessionAffinity", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionAffinity;
 
     /**

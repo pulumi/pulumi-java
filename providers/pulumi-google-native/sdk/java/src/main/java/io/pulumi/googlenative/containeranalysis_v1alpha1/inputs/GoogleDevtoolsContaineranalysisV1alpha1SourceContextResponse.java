@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse;
@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
      */
-    @InputImport(name="cloudRepo", required=true)
+    @Import(name="cloudRepo", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
 
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse getCloudRepo() {
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * A SourceContext referring to a Gerrit project.
      * 
      */
-    @InputImport(name="gerrit", required=true)
+    @Import(name="gerrit", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
 
     public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse getGerrit() {
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
      */
-    @InputImport(name="git", required=true)
+    @Import(name="git", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
 
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse getGit() {
@@ -57,7 +57,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * Labels with user defined metadata.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {

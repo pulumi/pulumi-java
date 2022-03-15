@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs;
@@ -32,7 +32,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
      * 
      */
-    @InputImport(name="autoscalingConfig")
+    @Import(name="autoscalingConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> getAutoscalingConfig() {
@@ -43,7 +43,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Encryption settings for the cluster.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> encryptionConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> getEncryptionConfig() {
@@ -54,7 +54,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Port/endpoint configuration for this cluster
      * 
      */
-    @InputImport(name="endpointConfig")
+    @Import(name="endpointConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> endpointConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> getEndpointConfig() {
@@ -65,7 +65,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. The shared Compute Engine config settings for all instances in a cluster.
      * 
      */
-    @InputImport(name="gceClusterConfig")
+    @Import(name="gceClusterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> getGceClusterConfig() {
@@ -76,7 +76,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as `gce_cluster_config`, `master_config`, `worker_config`, `secondary_worker_config`, and `autoscaling_config`.
      * 
      */
-    @InputImport(name="gkeClusterConfig")
+    @Import(name="gkeClusterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> gkeClusterConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> getGkeClusterConfig() {
@@ -87,7 +87,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's `role` metadata to run an executable on a master or worker node, as shown below using `curl` (you can also use `wget`): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if ; then ... master specific actions ... else ... worker specific actions ... fi
      * 
      */
-    @InputImport(name="initializationActions")
+    @Import(name="initializationActions")
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> initializationActions;
 
     public Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> getInitializationActions() {
@@ -98,7 +98,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Lifecycle setting for the cluster.
      * 
      */
-    @InputImport(name="lifecycleConfig")
+    @Import(name="lifecycleConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> getLifecycleConfig() {
@@ -109,7 +109,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
      */
-    @InputImport(name="masterConfig")
+    @Import(name="masterConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> masterConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> getMasterConfig() {
@@ -120,7 +120,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Metastore configuration.
      * 
      */
-    @InputImport(name="metastoreConfig")
+    @Import(name="metastoreConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> metastoreConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> getMetastoreConfig() {
@@ -131,7 +131,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
      */
-    @InputImport(name="secondaryWorkerConfig")
+    @Import(name="secondaryWorkerConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> getSecondaryWorkerConfig() {
@@ -142,7 +142,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. Security settings for the cluster.
      * 
      */
-    @InputImport(name="securityConfig")
+    @Import(name="securityConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> securityConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> getSecurityConfig() {
@@ -153,7 +153,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. The config settings for software inside the cluster.
      * 
      */
-    @InputImport(name="softwareConfig")
+    @Import(name="softwareConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> softwareConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> getSoftwareConfig() {
@@ -164,7 +164,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
      * 
      */
-    @InputImport(name="stagingBucket")
+    @Import(name="stagingBucket")
       private final @Nullable Output<String> stagingBucket;
 
     public Output<String> getStagingBucket() {
@@ -175,7 +175,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket.
      * 
      */
-    @InputImport(name="tempBucket")
+    @Import(name="tempBucket")
       private final @Nullable Output<String> tempBucket;
 
     public Output<String> getTempBucket() {
@@ -186,7 +186,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> workerConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> getWorkerConfig() {

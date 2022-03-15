@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanAutomationRunbookActionDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanManualActionDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanScriptActionDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * The action name.
      * 
      */
-    @InputImport(name="actionName", required=true)
+    @Import(name="actionName", required=true)
       private final String actionName;
 
     public String getActionName() {
@@ -36,7 +36,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * The custom details.
      * 
      */
-    @InputImport(name="customDetails", required=true)
+    @Import(name="customDetails", required=true)
       private final Object customDetails;
 
     public Object getCustomDetails() {
@@ -47,7 +47,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * The list of failover directions.
      * 
      */
-    @InputImport(name="failoverDirections", required=true)
+    @Import(name="failoverDirections", required=true)
       private final List<String> failoverDirections;
 
     public List<String> getFailoverDirections() {
@@ -58,7 +58,7 @@ public final class RecoveryPlanActionResponse extends io.pulumi.resources.Invoke
      * The list of failover types.
      * 
      */
-    @InputImport(name="failoverTypes", required=true)
+    @Import(name="failoverTypes", required=true)
       private final List<String> failoverTypes;
 
     public List<String> getFailoverTypes() {

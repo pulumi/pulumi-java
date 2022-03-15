@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketDataExport {
     private final BucketDestination destination;
     /**
@@ -17,10 +17,10 @@ public final class BucketDataExport {
      */
     private final String outputSchemaVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketDataExport(
-        @OutputCustomType.Parameter("destination") BucketDestination destination,
-        @OutputCustomType.Parameter("outputSchemaVersion") String outputSchemaVersion) {
+        @CustomType.Parameter("destination") BucketDestination destination,
+        @CustomType.Parameter("outputSchemaVersion") String outputSchemaVersion) {
         this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }

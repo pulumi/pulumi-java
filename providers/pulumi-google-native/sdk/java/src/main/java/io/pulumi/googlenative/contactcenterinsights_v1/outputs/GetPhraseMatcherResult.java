@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPhraseMatcherResult {
     /**
      * The most recent time at which the activation status was updated.
@@ -68,19 +68,19 @@ public final class GetPhraseMatcherResult {
      */
     private final String versionTag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPhraseMatcherResult(
-        @OutputCustomType.Parameter("activationUpdateTime") String activationUpdateTime,
-        @OutputCustomType.Parameter("active") Boolean active,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("phraseMatchRuleGroups") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups,
-        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
-        @OutputCustomType.Parameter("revisionId") String revisionId,
-        @OutputCustomType.Parameter("roleMatch") String roleMatch,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("versionTag") String versionTag) {
+        @CustomType.Parameter("activationUpdateTime") String activationUpdateTime,
+        @CustomType.Parameter("active") Boolean active,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("phraseMatchRuleGroups") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups,
+        @CustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @CustomType.Parameter("revisionId") String revisionId,
+        @CustomType.Parameter("roleMatch") String roleMatch,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("versionTag") String versionTag) {
         this.activationUpdateTime = activationUpdateTime;
         this.active = active;
         this.displayName = displayName;

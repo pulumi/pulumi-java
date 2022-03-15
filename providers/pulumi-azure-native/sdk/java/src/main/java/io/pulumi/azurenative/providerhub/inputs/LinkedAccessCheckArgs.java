@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
 
     public static final LinkedAccessCheckArgs Empty = new LinkedAccessCheckArgs();
 
-    @InputImport(name="actionName")
+    @Import(name="actionName")
       private final @Nullable Output<String> actionName;
 
     public Output<String> getActionName() {
         return this.actionName == null ? Output.empty() : this.actionName;
     }
 
-    @InputImport(name="linkedAction")
+    @Import(name="linkedAction")
       private final @Nullable Output<String> linkedAction;
 
     public Output<String> getLinkedAction() {
         return this.linkedAction == null ? Output.empty() : this.linkedAction;
     }
 
-    @InputImport(name="linkedActionVerb")
+    @Import(name="linkedActionVerb")
       private final @Nullable Output<String> linkedActionVerb;
 
     public Output<String> getLinkedActionVerb() {
         return this.linkedActionVerb == null ? Output.empty() : this.linkedActionVerb;
     }
 
-    @InputImport(name="linkedProperty")
+    @Import(name="linkedProperty")
       private final @Nullable Output<String> linkedProperty;
 
     public Output<String> getLinkedProperty() {
         return this.linkedProperty == null ? Output.empty() : this.linkedProperty;
     }
 
-    @InputImport(name="linkedType")
+    @Import(name="linkedType")
       private final @Nullable Output<String> linkedType;
 
     public Output<String> getLinkedType() {

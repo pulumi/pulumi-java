@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RouterBgpAdvertisedIpRangeGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
      */
-    @InputImport(name="advertiseMode")
+    @Import(name="advertiseMode")
       private final @Nullable Output<String> advertiseMode;
 
     public Output<String> getAdvertiseMode() {
@@ -39,7 +39,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * This enum field has the one valid value: ALL_SUBNETS
      * 
      */
-    @InputImport(name="advertisedGroups")
+    @Import(name="advertisedGroups")
       private final @Nullable Output<List<String>> advertisedGroups;
 
     public Output<List<String>> getAdvertisedGroups() {
@@ -55,7 +55,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="advertisedIpRanges")
+    @Import(name="advertisedIpRanges")
       private final @Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
     public Output<List<RouterBgpAdvertisedIpRangeGetArgs>> getAdvertisedIpRanges() {
@@ -69,7 +69,7 @@ public final class RouterBgpGetArgs extends io.pulumi.resources.ResourceArgs {
      * will have the same local ASN.
      * 
      */
-    @InputImport(name="asn", required=true)
+    @Import(name="asn", required=true)
       private final Output<Integer> asn;
 
     public Output<Integer> getAsn() {

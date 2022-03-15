@@ -5,14 +5,14 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.LiveEventEndpointResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventInputAccessControlResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventInputResponse {
     /**
      * Access control for live event input.
@@ -40,13 +40,13 @@ public final class LiveEventInputResponse {
      */
     private final String streamingProtocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiveEventInputResponse(
-        @OutputCustomType.Parameter("accessControl") @Nullable LiveEventInputAccessControlResponse accessControl,
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
-        @OutputCustomType.Parameter("keyFrameIntervalDuration") @Nullable String keyFrameIntervalDuration,
-        @OutputCustomType.Parameter("streamingProtocol") String streamingProtocol) {
+        @CustomType.Parameter("accessControl") @Nullable LiveEventInputAccessControlResponse accessControl,
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
+        @CustomType.Parameter("keyFrameIntervalDuration") @Nullable String keyFrameIntervalDuration,
+        @CustomType.Parameter("streamingProtocol") String streamingProtocol) {
         this.accessControl = accessControl;
         this.accessToken = accessToken;
         this.endpoints = endpoints;

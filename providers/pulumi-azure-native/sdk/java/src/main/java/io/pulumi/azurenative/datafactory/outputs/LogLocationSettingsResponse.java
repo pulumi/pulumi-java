@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogLocationSettingsResponse {
     /**
      * Log storage linked service reference.
@@ -23,10 +23,10 @@ public final class LogLocationSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogLocationSettingsResponse(
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("path") @Nullable Object path) {
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("path") @Nullable Object path) {
         this.linkedServiceName = linkedServiceName;
         this.path = path;
     }

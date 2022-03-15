@@ -3,17 +3,17 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ByProductsResponse {
     private final Map<String,String> customValues;
 
-    @OutputCustomType.Constructor
-    private ByProductsResponse(@OutputCustomType.Parameter("customValues") Map<String,String> customValues) {
+    @CustomType.Constructor
+    private ByProductsResponse(@CustomType.Parameter("customValues") Map<String,String> customValues) {
         this.customValues = customValues;
     }
 

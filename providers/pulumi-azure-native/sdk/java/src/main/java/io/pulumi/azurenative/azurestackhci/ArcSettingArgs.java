@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurestackhci;
 import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the proxy resource holding details of HCI ArcSetting information.
      * 
      */
-    @InputImport(name="arcSettingName")
+    @Import(name="arcSettingName")
       private final @Nullable Output<String> arcSettingName;
 
     public Output<String> getArcSettingName() {
@@ -31,7 +31,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -42,7 +42,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -53,7 +53,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that created the resource.
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
@@ -64,7 +64,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that created the resource.
      * 
      */
-    @InputImport(name="createdByType")
+    @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
     public Output<Either<String,CreatedByType>> getCreatedByType() {
@@ -75,7 +75,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @InputImport(name="lastModifiedAt")
+    @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
     public Output<String> getLastModifiedAt() {
@@ -86,7 +86,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedBy")
+    @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
     public Output<String> getLastModifiedBy() {
@@ -97,7 +97,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedByType")
+    @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
     public Output<Either<String,CreatedByType>> getLastModifiedByType() {
@@ -108,7 +108,7 @@ public final class ArcSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

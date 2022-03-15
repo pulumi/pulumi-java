@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apikeys_v2.KeyArgs;
@@ -23,7 +23,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * A timestamp identifying the time this key was originally created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * A timestamp when this key was deleted. If the resource is not deleted, this must be empty.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -51,7 +51,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * A checksum computed by the server based on the current value of the Key resource. This may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding. See https://google.aip.dev/154.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -79,7 +79,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * An encrypted and signed value held by this key. This field can be accessed only through the `GetKeyString` method.
      * 
      */
-    @OutputExport(name="keyString", type=String.class, parameters={})
+    @Export(name="keyString", type=String.class, parameters={})
     private Output<String> keyString;
 
     /**
@@ -93,7 +93,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The resource name of the key. The `name` has the form: `projects//locations/global/keys/`. For example: `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Key restrictions.
      * 
      */
-    @OutputExport(name="restrictions", type=V2RestrictionsResponse.class, parameters={})
+    @Export(name="restrictions", type=V2RestrictionsResponse.class, parameters={})
     private Output<V2RestrictionsResponse> restrictions;
 
     /**
@@ -121,7 +121,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Unique id in UUID4 format.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -135,7 +135,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * A timestamp identifying the time this key was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.WebTestGeolocationResponse;
 import io.pulumi.azurenative.insights.outputs.WebTestPropertiesResponseConfiguration;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * An XML configuration specification for a WebTest.
      * 
      */
-    @OutputExport(name="configuration", type=WebTestPropertiesResponseConfiguration.class, parameters={})
+    @Export(name="configuration", type=WebTestPropertiesResponseConfiguration.class, parameters={})
     private Output</* @Nullable */ WebTestPropertiesResponseConfiguration> configuration;
 
     /**
@@ -53,7 +53,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Purpose/user defined descriptive test for this WebTest.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -67,7 +67,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Is the test actively being monitored.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -81,7 +81,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
      */
-    @OutputExport(name="frequency", type=Integer.class, parameters={})
+    @Export(name="frequency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frequency;
 
     /**
@@ -95,7 +95,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * The kind of web test that this web test watches. Choices are ping and multistep.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -109,7 +109,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -123,7 +123,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * A list of where to physically run the tests from to give global coverage for accessibility of your application.
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={WebTestGeolocationResponse.class})
+    @Export(name="locations", type=List.class, parameters={WebTestGeolocationResponse.class})
     private Output<List<WebTestGeolocationResponse>> locations;
 
     /**
@@ -137,7 +137,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -165,7 +165,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Allow for retries should this WebTest fail.
      * 
      */
-    @OutputExport(name="retryEnabled", type=Boolean.class, parameters={})
+    @Export(name="retryEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> retryEnabled;
 
     /**
@@ -179,7 +179,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
      */
-    @OutputExport(name="syntheticMonitorId", type=String.class, parameters={})
+    @Export(name="syntheticMonitorId", type=String.class, parameters={})
     private Output<String> syntheticMonitorId;
 
     /**
@@ -193,7 +193,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -207,7 +207,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
      */
-    @OutputExport(name="timeout", type=Integer.class, parameters={})
+    @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
@@ -221,7 +221,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -235,7 +235,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * The kind of web test this is, valid choices are ping and multistep.
      * 
      */
-    @OutputExport(name="webTestKind", type=String.class, parameters={})
+    @Export(name="webTestKind", type=String.class, parameters={})
     private Output<String> webTestKind;
 
     /**
@@ -249,7 +249,7 @@ public class WebTest extends io.pulumi.resources.CustomResource {
      * User defined name if this WebTest.
      * 
      */
-    @OutputExport(name="webTestName", type=String.class, parameters={})
+    @Export(name="webTestName", type=String.class, parameters={})
     private Output<String> webTestName;
 
     /**

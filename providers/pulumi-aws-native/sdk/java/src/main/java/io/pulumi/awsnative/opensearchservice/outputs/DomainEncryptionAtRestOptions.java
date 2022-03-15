@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainEncryptionAtRestOptions {
     private final @Nullable Boolean enabled;
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainEncryptionAtRestOptions(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }

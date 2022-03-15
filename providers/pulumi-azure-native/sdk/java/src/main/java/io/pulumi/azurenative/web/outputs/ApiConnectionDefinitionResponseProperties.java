@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ApiConnectionTestLinkResponse;
 import io.pulumi.azurenative.web.outputs.ApiReferenceResponse;
 import io.pulumi.azurenative.web.outputs.ConnectionStatusDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiConnectionDefinitionResponseProperties {
     private final @Nullable ApiReferenceResponse api;
     /**
@@ -58,17 +58,17 @@ public final class ApiConnectionDefinitionResponseProperties {
      */
     private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiConnectionDefinitionResponseProperties(
-        @OutputCustomType.Parameter("api") @Nullable ApiReferenceResponse api,
-        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("customParameterValues") @Nullable Map<String,String> customParameterValues,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("nonSecretParameterValues") @Nullable Map<String,String> nonSecretParameterValues,
-        @OutputCustomType.Parameter("parameterValues") @Nullable Map<String,String> parameterValues,
-        @OutputCustomType.Parameter("statuses") @Nullable List<ConnectionStatusDefinitionResponse> statuses,
-        @OutputCustomType.Parameter("testLinks") @Nullable List<ApiConnectionTestLinkResponse> testLinks) {
+        @CustomType.Parameter("api") @Nullable ApiReferenceResponse api,
+        @CustomType.Parameter("changedTime") @Nullable String changedTime,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("customParameterValues") @Nullable Map<String,String> customParameterValues,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("nonSecretParameterValues") @Nullable Map<String,String> nonSecretParameterValues,
+        @CustomType.Parameter("parameterValues") @Nullable Map<String,String> parameterValues,
+        @CustomType.Parameter("statuses") @Nullable List<ConnectionStatusDefinitionResponse> statuses,
+        @CustomType.Parameter("testLinks") @Nullable List<ApiConnectionTestLinkResponse> testLinks) {
         this.api = api;
         this.changedTime = changedTime;
         this.createdTime = createdTime;

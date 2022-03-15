@@ -4,12 +4,12 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig {
     /**
      * Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(
-        @OutputCustomType.Parameter("cookieBehavior") String cookieBehavior,
-        @OutputCustomType.Parameter("cookies") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
+        @CustomType.Parameter("cookieBehavior") String cookieBehavior,
+        @CustomType.Parameter("cookies") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
         this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }

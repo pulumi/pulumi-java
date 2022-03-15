@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.refactorspaces.outputs;
 
 import io.pulumi.awsnative.refactorspaces.enums.ApplicationApiGatewayEndpointType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApiGatewayProxyInput {
     private final @Nullable ApplicationApiGatewayEndpointType endpointType;
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApiGatewayProxyInput(
-        @OutputCustomType.Parameter("endpointType") @Nullable ApplicationApiGatewayEndpointType endpointType,
-        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
+        @CustomType.Parameter("endpointType") @Nullable ApplicationApiGatewayEndpointType endpointType,
+        @CustomType.Parameter("stageName") @Nullable String stageName) {
         this.endpointType = endpointType;
         this.stageName = stageName;
     }

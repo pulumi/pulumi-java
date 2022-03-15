@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DistributionArchitecture;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * The CPU architecture for which packages in this distribution channel were built
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<DistributionArchitecture> architecture;
 
     public Output<DistributionArchitecture> getArchitecture() {
@@ -35,7 +35,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * The cpe_uri in [cpe format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
      */
-    @InputImport(name="cpeUri")
+    @Import(name="cpeUri")
       private final @Nullable Output<String> cpeUri;
 
     public Output<String> getCpeUri() {
@@ -46,7 +46,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * The distribution channel-specific description of this package.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * The latest available version of this package in this distribution channel.
      * 
      */
-    @InputImport(name="latestVersion")
+    @Import(name="latestVersion")
       private final @Nullable Output<VersionArgs> latestVersion;
 
     public Output<VersionArgs> getLatestVersion() {
@@ -68,7 +68,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * A freeform string denoting the maintainer of this package.
      * 
      */
-    @InputImport(name="maintainer")
+    @Import(name="maintainer")
       private final @Nullable Output<String> maintainer;
 
     public Output<String> getMaintainer() {
@@ -79,7 +79,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
      * The distribution channel-specific homepage for this package.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

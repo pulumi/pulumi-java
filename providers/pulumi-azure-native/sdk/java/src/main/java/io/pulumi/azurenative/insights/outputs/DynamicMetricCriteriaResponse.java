@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DynamicThresholdFailingPeriodsResponse;
 import io.pulumi.azurenative.insights.outputs.MetricDimensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DynamicMetricCriteriaResponse {
     /**
      * The extent of deviation required to trigger an alert. This will affect how tight the threshold is to the metric series pattern.
@@ -72,19 +72,19 @@ public final class DynamicMetricCriteriaResponse {
      */
     private final String timeAggregation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DynamicMetricCriteriaResponse(
-        @OutputCustomType.Parameter("alertSensitivity") String alertSensitivity,
-        @OutputCustomType.Parameter("criterionType") String criterionType,
-        @OutputCustomType.Parameter("dimensions") @Nullable List<MetricDimensionResponse> dimensions,
-        @OutputCustomType.Parameter("failingPeriods") DynamicThresholdFailingPeriodsResponse failingPeriods,
-        @OutputCustomType.Parameter("ignoreDataBefore") @Nullable String ignoreDataBefore,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("skipMetricValidation") @Nullable Boolean skipMetricValidation,
-        @OutputCustomType.Parameter("timeAggregation") String timeAggregation) {
+        @CustomType.Parameter("alertSensitivity") String alertSensitivity,
+        @CustomType.Parameter("criterionType") String criterionType,
+        @CustomType.Parameter("dimensions") @Nullable List<MetricDimensionResponse> dimensions,
+        @CustomType.Parameter("failingPeriods") DynamicThresholdFailingPeriodsResponse failingPeriods,
+        @CustomType.Parameter("ignoreDataBefore") @Nullable String ignoreDataBefore,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("skipMetricValidation") @Nullable Boolean skipMetricValidation,
+        @CustomType.Parameter("timeAggregation") String timeAggregation) {
         this.alertSensitivity = alertSensitivity;
         this.criterionType = criterionType;
         this.dimensions = dimensions;

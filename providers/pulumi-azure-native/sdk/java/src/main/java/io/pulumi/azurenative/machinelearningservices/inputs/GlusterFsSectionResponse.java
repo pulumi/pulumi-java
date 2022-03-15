@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
      * The server address of one of the servers that hosts the GlusterFS. Can be either the IP address or server name.
      * 
      */
-    @InputImport(name="serverAddress", required=true)
+    @Import(name="serverAddress", required=true)
       private final String serverAddress;
 
     public String getServerAddress() {
@@ -31,7 +31,7 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
      * The name of the created GlusterFS volume.
      * 
      */
-    @InputImport(name="volumeName", required=true)
+    @Import(name="volumeName", required=true)
       private final String volumeName;
 
     public String getVolumeName() {

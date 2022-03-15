@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionEndpointInputArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -18,14 +18,14 @@ public final class ModelQualityJobDefinitionModelQualityJobInputArgs extends io.
 
     public static final ModelQualityJobDefinitionModelQualityJobInputArgs Empty = new ModelQualityJobDefinitionModelQualityJobInputArgs();
 
-    @InputImport(name="endpointInput", required=true)
+    @Import(name="endpointInput", required=true)
       private final Output<ModelQualityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<ModelQualityJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
     }
 
-    @InputImport(name="groundTruthS3Input", required=true)
+    @Import(name="groundTruthS3Input", required=true)
       private final Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
     public Output<ModelQualityJobDefinitionMonitoringGroundTruthS3InputArgs> getGroundTruthS3Input() {

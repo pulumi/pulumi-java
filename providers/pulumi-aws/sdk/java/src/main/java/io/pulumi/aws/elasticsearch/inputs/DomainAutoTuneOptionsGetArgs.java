@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsMaintenanceScheduleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
      * The Auto-Tune desired state for the domain. Valid values: `ENABLED` or `DISABLED`.
      * 
      */
-    @InputImport(name="desiredState", required=true)
+    @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
     public Output<String> getDesiredState() {
@@ -31,7 +31,7 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
      * Configuration block for Auto-Tune maintenance windows. Can be specified multiple times for each maintenance window. Detailed below.
      * 
      */
-    @InputImport(name="maintenanceSchedules")
+    @Import(name="maintenanceSchedules")
       private final @Nullable Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> maintenanceSchedules;
 
     public Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> getMaintenanceSchedules() {
@@ -42,7 +42,7 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
      * Whether to roll back to default Auto-Tune settings when disabling Auto-Tune. Valid values: `DEFAULT_ROLLBACK` or `NO_ROLLBACK`.
      * 
      */
-    @InputImport(name="rollbackOnDisable")
+    @Import(name="rollbackOnDisable")
       private final @Nullable Output<String> rollbackOnDisable;
 
     public Output<String> getRollbackOnDisable() {

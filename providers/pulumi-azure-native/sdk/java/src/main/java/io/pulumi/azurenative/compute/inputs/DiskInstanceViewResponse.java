@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
      * Specifies the encryption settings for the OS Disk. <br><br> Minimum api-version: 2015-06-15
      * 
      */
-    @InputImport(name="encryptionSettings")
+    @Import(name="encryptionSettings")
       private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
 
     public List<DiskEncryptionSettingsResponse> getEncryptionSettings() {
@@ -36,7 +36,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -47,7 +47,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {

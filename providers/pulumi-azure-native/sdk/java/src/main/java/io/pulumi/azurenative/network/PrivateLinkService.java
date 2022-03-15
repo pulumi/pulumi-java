@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.PrivateLinkServicePropertiesRespons
 import io.pulumi.azurenative.network.outputs.PrivateLinkServicePropertiesResponseVisibility;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * The alias of the private link service.
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
@@ -57,7 +57,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * The auto-approval list of the private link service.
      * 
      */
-    @OutputExport(name="autoApproval", type=PrivateLinkServicePropertiesResponseAutoApproval.class, parameters={})
+    @Export(name="autoApproval", type=PrivateLinkServicePropertiesResponseAutoApproval.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServicePropertiesResponseAutoApproval> autoApproval;
 
     /**
@@ -71,7 +71,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * Whether the private link service is enabled for proxy protocol or not.
      * 
      */
-    @OutputExport(name="enableProxyProtocol", type=Boolean.class, parameters={})
+    @Export(name="enableProxyProtocol", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableProxyProtocol;
 
     /**
@@ -85,7 +85,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -99,7 +99,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * The extended location of the load balancer.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -113,7 +113,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * The list of Fqdn.
      * 
      */
-    @OutputExport(name="fqdns", type=List.class, parameters={String.class})
+    @Export(name="fqdns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> fqdns;
 
     /**
@@ -127,7 +127,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * An array of private link service IP configurations.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={PrivateLinkServiceIpConfigurationResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={PrivateLinkServiceIpConfigurationResponse.class})
     private Output</* @Nullable */ List<PrivateLinkServiceIpConfigurationResponse>> ipConfigurations;
 
     /**
@@ -141,7 +141,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * An array of references to the load balancer IP configurations.
      * 
      */
-    @OutputExport(name="loadBalancerFrontendIpConfigurations", type=List.class, parameters={FrontendIPConfigurationResponse.class})
+    @Export(name="loadBalancerFrontendIpConfigurations", type=List.class, parameters={FrontendIPConfigurationResponse.class})
     private Output</* @Nullable */ List<FrontendIPConfigurationResponse>> loadBalancerFrontendIpConfigurations;
 
     /**
@@ -155,7 +155,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -169,7 +169,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -183,7 +183,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * An array of references to the network interfaces created for this private link service.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
@@ -197,7 +197,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * An array of list about connections to the private endpoint.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -211,7 +211,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * The provisioning state of the private link service resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -225,7 +225,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -239,7 +239,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -253,7 +253,7 @@ public class PrivateLinkService extends io.pulumi.resources.CustomResource {
      * The visibility list of the private link service.
      * 
      */
-    @OutputExport(name="visibility", type=PrivateLinkServicePropertiesResponseVisibility.class, parameters={})
+    @Export(name="visibility", type=PrivateLinkServicePropertiesResponseVisibility.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServicePropertiesResponseVisibility> visibility;
 
     /**

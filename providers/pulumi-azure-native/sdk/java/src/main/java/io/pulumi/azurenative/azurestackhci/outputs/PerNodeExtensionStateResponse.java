@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.azurestackhci.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PerNodeExtensionStateResponse {
     /**
      * Fully qualified resource ID for the particular Arc Extension on this node.
@@ -25,11 +25,11 @@ public final class PerNodeExtensionStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PerNodeExtensionStateResponse(
-        @OutputCustomType.Parameter("extension") String extension,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("extension") String extension,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.extension = extension;
         this.name = name;
         this.state = state;

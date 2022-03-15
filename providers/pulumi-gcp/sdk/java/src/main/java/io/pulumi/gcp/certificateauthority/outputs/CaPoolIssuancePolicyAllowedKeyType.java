@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyTypeRsa;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicyAllowedKeyType {
     /**
      * Represents an allowed Elliptic Curve key type.
@@ -25,10 +25,10 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      */
     private final @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolIssuancePolicyAllowedKeyType(
-        @OutputCustomType.Parameter("ellipticCurve") @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve,
-        @OutputCustomType.Parameter("rsa") @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
+        @CustomType.Parameter("ellipticCurve") @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve,
+        @CustomType.Parameter("rsa") @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }

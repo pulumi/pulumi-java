@@ -5,11 +5,11 @@ package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.SubResourceResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VaultCertificateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VaultSecretGroupResponse {
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
@@ -22,10 +22,10 @@ public final class VaultSecretGroupResponse {
      */
     private final List<VaultCertificateResponse> vaultCertificates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VaultSecretGroupResponse(
-        @OutputCustomType.Parameter("sourceVault") SubResourceResponse sourceVault,
-        @OutputCustomType.Parameter("vaultCertificates") List<VaultCertificateResponse> vaultCertificates) {
+        @CustomType.Parameter("sourceVault") SubResourceResponse sourceVault,
+        @CustomType.Parameter("vaultCertificates") List<VaultCertificateResponse> vaultCertificates) {
         this.sourceVault = sourceVault;
         this.vaultCertificates = vaultCertificates;
     }

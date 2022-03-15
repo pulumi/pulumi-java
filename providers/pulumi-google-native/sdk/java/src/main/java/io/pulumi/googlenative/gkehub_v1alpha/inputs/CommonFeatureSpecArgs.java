@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.CloudAuditLoggingFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.MultiClusterIngressFeatureSpecArgs;
@@ -24,7 +24,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * Appdevexperience specific spec.
      * 
      */
-    @InputImport(name="appdevexperience")
+    @Import(name="appdevexperience")
       private final @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
     public Output<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
@@ -35,7 +35,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * Cloud Audit Logging-specific spec.
      * 
      */
-    @InputImport(name="cloudauditlogging")
+    @Import(name="cloudauditlogging")
       private final @Nullable Output<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
 
     public Output<CloudAuditLoggingFeatureSpecArgs> getCloudauditlogging() {
@@ -46,7 +46,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * Multicluster Ingress-specific spec.
      * 
      */
-    @InputImport(name="multiclusteringress")
+    @Import(name="multiclusteringress")
       private final @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
     public Output<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {

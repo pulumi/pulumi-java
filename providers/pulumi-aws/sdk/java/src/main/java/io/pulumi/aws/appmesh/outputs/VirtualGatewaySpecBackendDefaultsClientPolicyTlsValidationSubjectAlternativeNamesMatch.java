@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch {
     /**
      * The values sent must match the specified values exactly.
@@ -16,8 +16,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
      */
     private final List<String> exacts;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch(@OutputCustomType.Parameter("exacts") List<String> exacts) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch(@CustomType.Parameter("exacts") List<String> exacts) {
         this.exacts = exacts;
     }
 

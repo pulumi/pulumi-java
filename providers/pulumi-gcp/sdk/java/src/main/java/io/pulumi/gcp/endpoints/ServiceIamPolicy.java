@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.endpoints.ServiceIamPolicyArgs;
@@ -60,7 +60,7 @@ public class ServiceIamPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -75,7 +75,7 @@ public class ServiceIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -86,7 +86,7 @@ public class ServiceIamPolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getPolicyData() {
         return this.policyData;
     }
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     public Output<String> getServiceName() {

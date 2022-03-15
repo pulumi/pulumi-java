@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialPublicKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
      * The time at which this credential becomes invalid.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -31,7 +31,7 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="publicKey", required=true)
+    @Import(name="publicKey", required=true)
       private final Output<DeviceCredentialPublicKeyGetArgs> publicKey;
 
     public Output<DeviceCredentialPublicKeyGetArgs> getPublicKey() {

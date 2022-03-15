@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupCustomRequestHandling;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleActionCaptchaProperties {
     private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleActionCaptchaProperties(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupCustomRequestHandling customRequestHandling) {
+    @CustomType.Constructor
+    private RuleGroupRuleActionCaptchaProperties(@CustomType.Parameter("customRequestHandling") @Nullable RuleGroupCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

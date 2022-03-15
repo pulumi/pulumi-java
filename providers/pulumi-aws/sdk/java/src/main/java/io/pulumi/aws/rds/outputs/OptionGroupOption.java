@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.outputs;
 
 import io.pulumi.aws.rds.outputs.OptionGroupOptionOptionSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OptionGroupOption {
     /**
      * A list of DB Security Groups for which the option is enabled.
@@ -45,14 +45,14 @@ public final class OptionGroupOption {
      */
     private final @Nullable List<String> vpcSecurityGroupMemberships;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OptionGroupOption(
-        @OutputCustomType.Parameter("dbSecurityGroupMemberships") @Nullable List<String> dbSecurityGroupMemberships,
-        @OutputCustomType.Parameter("optionName") String optionName,
-        @OutputCustomType.Parameter("optionSettings") @Nullable List<OptionGroupOptionOptionSetting> optionSettings,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("version") @Nullable String version,
-        @OutputCustomType.Parameter("vpcSecurityGroupMemberships") @Nullable List<String> vpcSecurityGroupMemberships) {
+        @CustomType.Parameter("dbSecurityGroupMemberships") @Nullable List<String> dbSecurityGroupMemberships,
+        @CustomType.Parameter("optionName") String optionName,
+        @CustomType.Parameter("optionSettings") @Nullable List<OptionGroupOptionOptionSetting> optionSettings,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("version") @Nullable String version,
+        @CustomType.Parameter("vpcSecurityGroupMemberships") @Nullable List<String> vpcSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
         this.optionName = optionName;
         this.optionSettings = optionSettings;

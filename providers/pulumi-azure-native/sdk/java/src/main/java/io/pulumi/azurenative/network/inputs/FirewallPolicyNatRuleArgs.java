@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.FirewallPolicyNatRuleActionArgs;
 import io.pulumi.azurenative.network.inputs.NatRuleConditionArgs;
 import io.pulumi.azurenative.network.inputs.NetworkRuleConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * The action type of a Nat rule.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<FirewallPolicyNatRuleActionArgs> action;
 
     public Output<FirewallPolicyNatRuleActionArgs> getAction() {
@@ -39,7 +39,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * The name of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -50,7 +50,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * Priority of the Firewall Policy Rule resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -61,7 +61,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * The match conditions for incoming traffic.
      * 
      */
-    @InputImport(name="ruleCondition")
+    @Import(name="ruleCondition")
       private final @Nullable Output<Object> ruleCondition;
 
     public Output<Object> getRuleCondition() {
@@ -73,7 +73,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * Expected value is 'FirewallPolicyNatRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
     public Output<String> getRuleType() {
@@ -84,7 +84,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * The translated address for this NAT rule.
      * 
      */
-    @InputImport(name="translatedAddress")
+    @Import(name="translatedAddress")
       private final @Nullable Output<String> translatedAddress;
 
     public Output<String> getTranslatedAddress() {
@@ -95,7 +95,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
      * The translated port for this NAT rule.
      * 
      */
-    @InputImport(name="translatedPort")
+    @Import(name="translatedPort")
       private final @Nullable Output<String> translatedPort;
 
     public Output<String> getTranslatedPort() {

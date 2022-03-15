@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasCloudWatchLogGroupLogDestination {
     /**
      * A string used to identify this tag
@@ -20,10 +20,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
      */
     private final String logPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasCloudWatchLogGroupLogDestination(
-        @OutputCustomType.Parameter("cloudWatchLogGroupArn") String cloudWatchLogGroupArn,
-        @OutputCustomType.Parameter("logPrefix") String logPrefix) {
+        @CustomType.Parameter("cloudWatchLogGroupArn") String cloudWatchLogGroupArn,
+        @CustomType.Parameter("logPrefix") String logPrefix) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.logPrefix = logPrefix;
     }

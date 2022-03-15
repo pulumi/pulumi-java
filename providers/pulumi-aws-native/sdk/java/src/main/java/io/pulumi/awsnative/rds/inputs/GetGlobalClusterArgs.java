@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGlobalClusterArgs extends io.pulumi.resources.InvokeArgs {
      * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * 
      */
-    @InputImport(name="globalClusterIdentifier", required=true)
+    @Import(name="globalClusterIdentifier", required=true)
       private final String globalClusterIdentifier;
 
     public String getGlobalClusterIdentifier() {

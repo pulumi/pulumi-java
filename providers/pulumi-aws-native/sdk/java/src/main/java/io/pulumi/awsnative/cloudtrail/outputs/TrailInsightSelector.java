@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudtrail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrailInsightSelector {
     /**
      * The type of insight to log on a trail.
@@ -17,8 +17,8 @@ public final class TrailInsightSelector {
      */
     private final @Nullable String insightType;
 
-    @OutputCustomType.Constructor
-    private TrailInsightSelector(@OutputCustomType.Parameter("insightType") @Nullable String insightType) {
+    @CustomType.Constructor
+    private TrailInsightSelector(@CustomType.Parameter("insightType") @Nullable String insightType) {
         this.insightType = insightType;
     }
 

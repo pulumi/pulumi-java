@@ -6,12 +6,12 @@ package io.pulumi.azurenative.documentdb.outputs;
 import io.pulumi.azurenative.documentdb.outputs.CassandraPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.outputs.ClusterKeyResponse;
 import io.pulumi.azurenative.documentdb.outputs.ColumnResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CassandraSchemaResponse {
     /**
      * List of cluster key.
@@ -29,11 +29,11 @@ public final class CassandraSchemaResponse {
      */
     private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CassandraSchemaResponse(
-        @OutputCustomType.Parameter("clusterKeys") @Nullable List<ClusterKeyResponse> clusterKeys,
-        @OutputCustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
-        @OutputCustomType.Parameter("partitionKeys") @Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
+        @CustomType.Parameter("clusterKeys") @Nullable List<ClusterKeyResponse> clusterKeys,
+        @CustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
+        @CustomType.Parameter("partitionKeys") @Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
         this.clusterKeys = clusterKeys;
         this.columns = columns;
         this.partitionKeys = partitionKeys;

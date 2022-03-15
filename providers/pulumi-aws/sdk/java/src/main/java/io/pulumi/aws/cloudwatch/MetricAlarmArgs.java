@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
      * 
      */
-    @InputImport(name="actionsEnabled")
+    @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
 
     public Output<Boolean> getActionsEnabled() {
@@ -35,7 +35,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="alarmActions")
+    @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
 
     public Output<List<String>> getAlarmActions() {
@@ -46,7 +46,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The description for the alarm.
      * 
      */
-    @InputImport(name="alarmDescription")
+    @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
 
     public Output<String> getAlarmDescription() {
@@ -57,7 +57,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: `GreaterThanOrEqualToThreshold`, `GreaterThanThreshold`, `LessThanThreshold`, `LessThanOrEqualToThreshold`. Additionally, the values  `LessThanLowerOrGreaterThanUpperThreshold`, `LessThanLowerThreshold`, and `GreaterThanUpperThreshold` are used only for alarms based on anomaly detection models.
      * 
      */
-    @InputImport(name="comparisonOperator", required=true)
+    @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
     public Output<String> getComparisonOperator() {
@@ -68,7 +68,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The number of datapoints that must be breaching to trigger the alarm.
      * 
      */
-    @InputImport(name="datapointsToAlarm")
+    @Import(name="datapointsToAlarm")
       private final @Nullable Output<Integer> datapointsToAlarm;
 
     public Output<Integer> getDatapointsToAlarm() {
@@ -79,7 +79,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
     public Output<Map<String,String>> getDimensions() {
@@ -95,7 +95,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The following values are supported: `ignore`, and `evaluate`.
      * 
      */
-    @InputImport(name="evaluateLowSampleCountPercentiles")
+    @Import(name="evaluateLowSampleCountPercentiles")
       private final @Nullable Output<String> evaluateLowSampleCountPercentiles;
 
     public Output<String> getEvaluateLowSampleCountPercentiles() {
@@ -106,7 +106,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The number of periods over which data is compared to the specified threshold.
      * 
      */
-    @InputImport(name="evaluationPeriods", required=true)
+    @Import(name="evaluationPeriods", required=true)
       private final Output<Integer> evaluationPeriods;
 
     public Output<Integer> getEvaluationPeriods() {
@@ -117,7 +117,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
      * 
      */
-    @InputImport(name="extendedStatistic")
+    @Import(name="extendedStatistic")
       private final @Nullable Output<String> extendedStatistic;
 
     public Output<String> getExtendedStatistic() {
@@ -128,7 +128,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="insufficientDataActions")
+    @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
 
     public Output<List<String>> getInsufficientDataActions() {
@@ -140,7 +140,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @InputImport(name="metricName")
+    @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -151,7 +151,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Enables you to create an alarm based on a metric math expression. You may specify at most 20.
      * 
      */
-    @InputImport(name="metricQueries")
+    @Import(name="metricQueries")
       private final @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries;
 
     public Output<List<MetricAlarmMetricQueryArgs>> getMetricQueries() {
@@ -162,7 +162,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The descriptive name for the alarm. This name must be unique within the user's AWS account
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -174,7 +174,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -185,7 +185,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="okActions")
+    @Import(name="okActions")
       private final @Nullable Output<List<String>> okActions;
 
     public Output<List<String>> getOkActions() {
@@ -196,7 +196,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The period in seconds over which the specified `stat` is applied.
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<Integer> period;
 
     public Output<Integer> getPeriod() {
@@ -208,7 +208,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */
-    @InputImport(name="statistic")
+    @Import(name="statistic")
       private final @Nullable Output<String> statistic;
 
     public Output<String> getStatistic() {
@@ -219,7 +219,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -230,7 +230,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -241,7 +241,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
      * 
      */
-    @InputImport(name="thresholdMetricId")
+    @Import(name="thresholdMetricId")
       private final @Nullable Output<String> thresholdMetricId;
 
     public Output<String> getThresholdMetricId() {
@@ -252,7 +252,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
      * 
      */
-    @InputImport(name="treatMissingData")
+    @Import(name="treatMissingData")
       private final @Nullable Output<String> treatMissingData;
 
     public Output<String> getTreatMissingData() {
@@ -263,7 +263,7 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The unit for this metric.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

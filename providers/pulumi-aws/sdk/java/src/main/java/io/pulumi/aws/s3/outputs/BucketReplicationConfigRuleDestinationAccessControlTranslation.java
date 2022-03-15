@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestinationAccessControlTranslation {
     /**
      * Specifies the replica ownership. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the Amazon S3 API Reference. Valid values: `Destination`.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
      */
     private final String owner;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigRuleDestinationAccessControlTranslation(@OutputCustomType.Parameter("owner") String owner) {
+    @CustomType.Constructor
+    private BucketReplicationConfigRuleDestinationAccessControlTranslation(@CustomType.Parameter("owner") String owner) {
         this.owner = owner;
     }
 

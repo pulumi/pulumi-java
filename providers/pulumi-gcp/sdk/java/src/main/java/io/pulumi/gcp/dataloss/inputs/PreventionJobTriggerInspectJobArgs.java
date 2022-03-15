@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<PreventionJobTriggerInspectJobActionArgs>> actions;
 
     public Output<List<PreventionJobTriggerInspectJobActionArgs>> getActions() {
@@ -32,7 +32,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
      * The name of the template to run when this job is triggered.
      * 
      */
-    @InputImport(name="inspectTemplateName", required=true)
+    @Import(name="inspectTemplateName", required=true)
       private final Output<String> inspectTemplateName;
 
     public Output<String> getInspectTemplateName() {
@@ -44,7 +44,7 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="storageConfig", required=true)
+    @Import(name="storageConfig", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigArgs> getStorageConfig() {

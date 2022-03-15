@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
      * 
      */
-    @InputImport(name="applianceModeSupport")
+    @Import(name="applianceModeSupport")
       private final @Nullable String applianceModeSupport;
 
     public Optional<String> getApplianceModeSupport() {
@@ -33,7 +33,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
      * Indicates whether to enable DNS Support for Vpc Attachment. Valid Values: enable | disable
      * 
      */
-    @InputImport(name="dnsSupport")
+    @Import(name="dnsSupport")
       private final @Nullable String dnsSupport;
 
     public Optional<String> getDnsSupport() {
@@ -44,7 +44,7 @@ public final class OptionsProperties extends io.pulumi.resources.InvokeArgs {
      * Indicates whether to enable Ipv6 Support for Vpc Attachment. Valid Values: enable | disable
      * 
      */
-    @InputImport(name="ipv6Support")
+    @Import(name="ipv6Support")
       private final @Nullable String ipv6Support;
 
     public Optional<String> getIpv6Support() {

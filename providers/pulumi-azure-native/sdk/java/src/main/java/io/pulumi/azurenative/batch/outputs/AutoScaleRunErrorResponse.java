@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoScaleRunErrorResponse {
     /**
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
@@ -23,11 +23,11 @@ public final class AutoScaleRunErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoScaleRunErrorResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") @Nullable List<AutoScaleRunErrorResponse> details,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") @Nullable List<AutoScaleRunErrorResponse> details,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

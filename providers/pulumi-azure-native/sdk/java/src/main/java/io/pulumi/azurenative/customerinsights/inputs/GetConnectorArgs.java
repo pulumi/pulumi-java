@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the connector.
      * 
      */
-    @InputImport(name="connectorName", required=true)
+    @Import(name="connectorName", required=true)
       private final String connectorName;
 
     public String getConnectorName() {
@@ -27,7 +27,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final String hubName;
 
     public String getHubName() {
@@ -38,7 +38,7 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -4,14 +4,14 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePort {
     /**
      * The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
@@ -49,14 +49,14 @@ public final class ServicePort {
      */
     private final @Nullable Either<Integer,String> targetPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePort(
-        @OutputCustomType.Parameter("appProtocol") @Nullable String appProtocol,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("nodePort") @Nullable Integer nodePort,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("targetPort") @Nullable Either<Integer,String> targetPort) {
+        @CustomType.Parameter("appProtocol") @Nullable String appProtocol,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("nodePort") @Nullable Integer nodePort,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("targetPort") @Nullable Either<Integer,String> targetPort) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.nodePort = nodePort;

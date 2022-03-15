@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicequotas.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
      * Quota code within the service. When configured, the data source directly looks up the service quota. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html). One of `quota_code` or `quota_name` must be specified.
      * 
      */
-    @InputImport(name="quotaCode")
+    @Import(name="quotaCode")
       private final @Nullable String quotaCode;
 
     public Optional<String> getQuotaCode() {
@@ -29,7 +29,7 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
      * Quota name within the service. When configured, the data source searches through all service quotas to find the matching quota name. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html). One of `quota_name` or `quota_code` must be specified.
      * 
      */
-    @InputImport(name="quotaName")
+    @Import(name="quotaName")
       private final @Nullable String quotaName;
 
     public Optional<String> getQuotaName() {
@@ -40,7 +40,7 @@ public final class GetServiceQuotaArgs extends io.pulumi.resources.InvokeArgs {
      * Service code for the quota. Available values can be found with the `aws.servicequotas.getService` or [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
      * 
      */
-    @InputImport(name="serviceCode", required=true)
+    @Import(name="serviceCode", required=true)
       private final String serviceCode;
 
     public String getServiceCode() {

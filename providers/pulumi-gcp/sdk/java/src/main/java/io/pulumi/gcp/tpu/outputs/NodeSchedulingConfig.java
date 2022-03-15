@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.tpu.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeSchedulingConfig {
     /**
      * Defines whether the TPU instance is preemptible.
@@ -15,8 +15,8 @@ public final class NodeSchedulingConfig {
      */
     private final Boolean preemptible;
 
-    @OutputCustomType.Constructor
-    private NodeSchedulingConfig(@OutputCustomType.Parameter("preemptible") Boolean preemptible) {
+    @CustomType.Constructor
+    private NodeSchedulingConfig(@CustomType.Parameter("preemptible") Boolean preemptible) {
         this.preemptible = preemptible;
     }
 

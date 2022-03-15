@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.detective.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMemberInvitationResult {
     /**
      * When set to true, invitation emails are not sent to the member accounts. Member accounts must still accept the invitation before they are added to the behavior graph. Updating this field has no effect.
@@ -28,11 +28,11 @@ public final class GetMemberInvitationResult {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMemberInvitationResult(
-        @OutputCustomType.Parameter("disableEmailNotification") @Nullable Boolean disableEmailNotification,
-        @OutputCustomType.Parameter("memberEmailAddress") @Nullable String memberEmailAddress,
-        @OutputCustomType.Parameter("message") @Nullable String message) {
+        @CustomType.Parameter("disableEmailNotification") @Nullable Boolean disableEmailNotification,
+        @CustomType.Parameter("memberEmailAddress") @Nullable String memberEmailAddress,
+        @CustomType.Parameter("message") @Nullable String message) {
         this.disableEmailNotification = disableEmailNotification;
         this.memberEmailAddress = memberEmailAddress;
         this.message = message;

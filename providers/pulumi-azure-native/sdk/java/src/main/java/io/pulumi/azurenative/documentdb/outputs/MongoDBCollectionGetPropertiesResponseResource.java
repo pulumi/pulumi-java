@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.MongoIndexResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MongoDBCollectionGetPropertiesResponseResource {
     /**
      * Analytical TTL.
@@ -52,15 +52,15 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MongoDBCollectionGetPropertiesResponseResource(
-        @OutputCustomType.Parameter("analyticalStorageTtl") @Nullable Integer analyticalStorageTtl,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("indexes") @Nullable List<MongoIndexResponse> indexes,
-        @OutputCustomType.Parameter("rid") String rid,
-        @OutputCustomType.Parameter("shardKey") @Nullable Map<String,String> shardKey,
-        @OutputCustomType.Parameter("ts") Double ts) {
+        @CustomType.Parameter("analyticalStorageTtl") @Nullable Integer analyticalStorageTtl,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("indexes") @Nullable List<MongoIndexResponse> indexes,
+        @CustomType.Parameter("rid") String rid,
+        @CustomType.Parameter("shardKey") @Nullable Map<String,String> shardKey,
+        @CustomType.Parameter("ts") Double ts) {
         this.analyticalStorageTtl = analyticalStorageTtl;
         this.etag = etag;
         this.id = id;

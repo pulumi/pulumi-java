@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.AuthorizerArgs;
 import io.pulumi.aws.apigateway.inputs.AuthorizerState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
      * 
      */
-    @OutputExport(name="authorizerCredentials", type=String.class, parameters={})
+    @Export(name="authorizerCredentials", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerCredentials;
 
     /**
@@ -48,7 +48,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The TTL of cached authorizer results in seconds. Defaults to `300`.
      * 
      */
-    @OutputExport(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
+    @Export(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> authorizerResultTtlInSeconds;
 
     /**
@@ -63,7 +63,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * e.g., `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
      * 
      */
-    @OutputExport(name="authorizerUri", type=String.class, parameters={})
+    @Export(name="authorizerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerUri;
 
     /**
@@ -78,7 +78,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
      * 
      */
-    @OutputExport(name="identitySource", type=String.class, parameters={})
+    @Export(name="identitySource", type=String.class, parameters={})
     private Output</* @Nullable */ String> identitySource;
 
     /**
@@ -92,7 +92,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
      * 
      */
-    @OutputExport(name="identityValidationExpression", type=String.class, parameters={})
+    @Export(name="identityValidationExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> identityValidationExpression;
 
     /**
@@ -106,7 +106,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The name of the authorizer
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
      * 
      */
-    @OutputExport(name="providerArns", type=List.class, parameters={String.class})
+    @Export(name="providerArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> providerArns;
 
     /**
@@ -134,7 +134,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The ID of the associated REST API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**
@@ -148,7 +148,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

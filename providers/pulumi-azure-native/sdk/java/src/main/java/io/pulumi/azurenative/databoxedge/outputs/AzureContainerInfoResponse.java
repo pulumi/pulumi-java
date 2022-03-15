@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureContainerInfoResponse {
     /**
      * Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).
@@ -25,11 +25,11 @@ public final class AzureContainerInfoResponse {
      */
     private final String storageAccountCredentialId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureContainerInfoResponse(
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("dataFormat") String dataFormat,
-        @OutputCustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId) {
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("dataFormat") String dataFormat,
+        @CustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId) {
         this.containerName = containerName;
         this.dataFormat = dataFormat;
         this.storageAccountCredentialId = storageAccountCredentialId;

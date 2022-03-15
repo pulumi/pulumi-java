@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
      * 
      */
-    @InputImport(name="customSecurityGroupId", required=true)
+    @Import(name="customSecurityGroupId", required=true)
       private final String customSecurityGroupId;
 
     public String getCustomSecurityGroupId() {
@@ -28,7 +28,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * The default organizational unit (OU) for your WorkSpace directories.
      * 
      */
-    @InputImport(name="defaultOu", required=true)
+    @Import(name="defaultOu", required=true)
       private final String defaultOu;
 
     public String getDefaultOu() {
@@ -39,7 +39,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * Indicates whether internet access is enabled for your WorkSpaces.
      * 
      */
-    @InputImport(name="enableInternetAccess", required=true)
+    @Import(name="enableInternetAccess", required=true)
       private final Boolean enableInternetAccess;
 
     public Boolean getEnableInternetAccess() {
@@ -50,7 +50,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
      * 
      */
-    @InputImport(name="enableMaintenanceMode", required=true)
+    @Import(name="enableMaintenanceMode", required=true)
       private final Boolean enableMaintenanceMode;
 
     public Boolean getEnableMaintenanceMode() {
@@ -61,7 +61,7 @@ public final class GetDirectoryWorkspaceCreationProperty extends io.pulumi.resou
      * Indicates whether users are local administrators of their WorkSpaces.
      * 
      */
-    @InputImport(name="userEnabledAsLocalAdministrator", required=true)
+    @Import(name="userEnabledAsLocalAdministrator", required=true)
       private final Boolean userEnabledAsLocalAdministrator;
 
     public Boolean getUserEnabledAsLocalAdministrator() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallRuleResult {
     /**
      * highest IP address included in the range
@@ -35,13 +35,13 @@ public final class GetFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallRuleResult(
-        @OutputCustomType.Parameter("endIP") String endIP,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startIP") String startIP,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endIP") String endIP,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startIP") String startIP,
+        @CustomType.Parameter("type") String type) {
         this.endIP = endIP;
         this.id = id;
         this.name = name;

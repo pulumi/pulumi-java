@@ -6,12 +6,12 @@ package io.pulumi.aws.appmesh.outputs;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPoolGrpc;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPoolHttp2;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPoolHttp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListenerConnectionPool {
     /**
      * Connection pool information for gRPC listeners.
@@ -29,11 +29,11 @@ public final class VirtualGatewaySpecListenerConnectionPool {
      */
     private final @Nullable VirtualGatewaySpecListenerConnectionPoolHttp2 http2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecListenerConnectionPool(
-        @OutputCustomType.Parameter("grpc") @Nullable VirtualGatewaySpecListenerConnectionPoolGrpc grpc,
-        @OutputCustomType.Parameter("http") @Nullable VirtualGatewaySpecListenerConnectionPoolHttp http,
-        @OutputCustomType.Parameter("http2") @Nullable VirtualGatewaySpecListenerConnectionPoolHttp2 http2) {
+        @CustomType.Parameter("grpc") @Nullable VirtualGatewaySpecListenerConnectionPoolGrpc grpc,
+        @CustomType.Parameter("http") @Nullable VirtualGatewaySpecListenerConnectionPoolHttp http,
+        @CustomType.Parameter("http2") @Nullable VirtualGatewaySpecListenerConnectionPoolHttp2 http2) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketTieringAccessTier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
      * S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
      * 
      */
-    @InputImport(name="accessTier", required=true)
+    @Import(name="accessTier", required=true)
       private final Output<BucketTieringAccessTier> accessTier;
 
     public Output<BucketTieringAccessTier> getAccessTier() {
@@ -29,7 +29,7 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
      * The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days. The maximum can be up to 2 years (730 days).
      * 
      */
-    @InputImport(name="days", required=true)
+    @Import(name="days", required=true)
       private final Output<Integer> days;
 
     public Output<Integer> getDays() {

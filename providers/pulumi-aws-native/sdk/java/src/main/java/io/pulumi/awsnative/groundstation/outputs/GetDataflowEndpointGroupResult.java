@@ -5,26 +5,26 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupEndpointDetails;
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataflowEndpointGroupResult {
     private final @Nullable String arn;
     private final @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails;
     private final @Nullable String id;
     private final @Nullable List<DataflowEndpointGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataflowEndpointGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("endpointDetails") @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("tags") @Nullable List<DataflowEndpointGroupTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("endpointDetails") @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("tags") @Nullable List<DataflowEndpointGroupTag> tags) {
         this.arn = arn;
         this.endpointDetails = endpointDetails;
         this.id = id;

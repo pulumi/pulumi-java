@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.enums.FilterFileType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
      * Path of the file that contains the details of all items to transfer.
      * 
      */
-    @InputImport(name="filterFilePath", required=true)
+    @Import(name="filterFilePath", required=true)
       private final Output<String> filterFilePath;
 
     public Output<String> getFilterFilePath() {
@@ -34,7 +34,7 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
      * Type of the filter file.
      * 
      */
-    @InputImport(name="filterFileType", required=true)
+    @Import(name="filterFileType", required=true)
       private final Output<Either<String,FilterFileType>> filterFileType;
 
     public Output<Either<String,FilterFileType>> getFilterFileType() {

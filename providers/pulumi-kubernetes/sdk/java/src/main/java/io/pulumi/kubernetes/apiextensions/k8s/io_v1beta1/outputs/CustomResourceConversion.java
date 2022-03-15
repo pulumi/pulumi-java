@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.WebhookClientConfig;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceConversion {
     /**
      * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail. Defaults to `["v1beta1"]`.
@@ -30,11 +30,11 @@ public final class CustomResourceConversion {
      */
     private final @Nullable WebhookClientConfig webhookClientConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceConversion(
-        @OutputCustomType.Parameter("conversionReviewVersions") @Nullable List<String> conversionReviewVersions,
-        @OutputCustomType.Parameter("strategy") String strategy,
-        @OutputCustomType.Parameter("webhookClientConfig") @Nullable WebhookClientConfig webhookClientConfig) {
+        @CustomType.Parameter("conversionReviewVersions") @Nullable List<String> conversionReviewVersions,
+        @CustomType.Parameter("strategy") String strategy,
+        @CustomType.Parameter("webhookClientConfig") @Nullable WebhookClientConfig webhookClientConfig) {
         this.conversionReviewVersions = conversionReviewVersions;
         this.strategy = strategy;
         this.webhookClientConfig = webhookClientConfig;

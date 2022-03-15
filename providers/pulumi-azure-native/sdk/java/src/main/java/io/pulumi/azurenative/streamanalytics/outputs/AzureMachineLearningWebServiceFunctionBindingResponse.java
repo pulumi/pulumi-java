@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.AzureMachineLearningWebServiceInputsResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.AzureMachineLearningWebServiceOutputColumnResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureMachineLearningWebServiceFunctionBindingResponse {
     /**
      * The API key used to authenticate with Request-Response endpoint.
@@ -47,14 +47,14 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureMachineLearningWebServiceFunctionBindingResponse(
-        @OutputCustomType.Parameter("apiKey") @Nullable String apiKey,
-        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("inputs") @Nullable AzureMachineLearningWebServiceInputsResponse inputs,
-        @OutputCustomType.Parameter("outputs") @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("apiKey") @Nullable String apiKey,
+        @CustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("inputs") @Nullable AzureMachineLearningWebServiceInputsResponse inputs,
+        @CustomType.Parameter("outputs") @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs,
+        @CustomType.Parameter("type") String type) {
         this.apiKey = apiKey;
         this.batchSize = batchSize;
         this.endpoint = endpoint;

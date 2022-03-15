@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
 
     public static final GetDirectoryConnectSetting Empty = new GetDirectoryConnectSetting();
 
-    @InputImport(name="availabilityZones", required=true)
+    @Import(name="availabilityZones", required=true)
       private final List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
@@ -24,7 +24,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * The IP addresses of the AD Connector servers.
      * 
      */
-    @InputImport(name="connectIps", required=true)
+    @Import(name="connectIps", required=true)
       private final List<String> connectIps;
 
     public List<String> getConnectIps() {
@@ -35,7 +35,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * The DNS IP addresses of the domain to connect to.
      * 
      */
-    @InputImport(name="customerDnsIps", required=true)
+    @Import(name="customerDnsIps", required=true)
       private final List<String> customerDnsIps;
 
     public List<String> getCustomerDnsIps() {
@@ -46,7 +46,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * The username corresponding to the password provided.
      * 
      */
-    @InputImport(name="customerUsername", required=true)
+    @Import(name="customerUsername", required=true)
       private final String customerUsername;
 
     public String getCustomerUsername() {
@@ -57,7 +57,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
@@ -68,7 +68,7 @@ public final class GetDirectoryConnectSetting extends io.pulumi.resources.Invoke
      * The ID of the VPC that the connector is in.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

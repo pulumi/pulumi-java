@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Object count;
 
     public Optional<Object> getCount() {
@@ -34,7 +34,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Interval between retries in seconds. Default is 30.
      * 
      */
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {

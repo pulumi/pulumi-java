@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.HostedTransitVirtualInterfaceAcceptorArgs;
 import io.pulumi.aws.directconnect.inputs.HostedTransitVirtualInterfaceAcceptorState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class HostedTransitVirtualInterfaceAcceptor extends io.pulumi.resources.C
      * The ARN of the virtual interface.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class HostedTransitVirtualInterfaceAcceptor extends io.pulumi.resources.C
      * The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    @OutputExport(name="dxGatewayId", type=String.class, parameters={})
+    @Export(name="dxGatewayId", type=String.class, parameters={})
     private Output<String> dxGatewayId;
 
     /**
@@ -64,7 +64,7 @@ public class HostedTransitVirtualInterfaceAcceptor extends io.pulumi.resources.C
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -78,7 +78,7 @@ public class HostedTransitVirtualInterfaceAcceptor extends io.pulumi.resources.C
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -92,7 +92,7 @@ public class HostedTransitVirtualInterfaceAcceptor extends io.pulumi.resources.C
      * The ID of the Direct Connect virtual interface to accept.
      * 
      */
-    @OutputExport(name="virtualInterfaceId", type=String.class, parameters={})
+    @Export(name="virtualInterfaceId", type=String.class, parameters={})
     private Output<String> virtualInterfaceId;
 
     /**

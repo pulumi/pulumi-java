@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobCommandGetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class JobCommandGetArgs extends io.pulumi.resources.ResourceArgs {
      * The Python version being used to execute a Python shell job. Allowed values are 2 or 3.
      * 
      */
-    @InputImport(name="pythonVersion")
+    @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
     public Output<String> getPythonVersion() {
@@ -40,7 +40,7 @@ public final class JobCommandGetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the S3 path to a script that executes a job.
      * 
      */
-    @InputImport(name="scriptLocation", required=true)
+    @Import(name="scriptLocation", required=true)
       private final Output<String> scriptLocation;
 
     public Output<String> getScriptLocation() {

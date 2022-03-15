@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.datafactory.inputs.SelfHostedIntegrationRuntimeNodeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * Whether Self-hosted integration runtime auto update has been turned on.
      * 
      */
-    @InputImport(name="autoUpdate", required=true)
+    @Import(name="autoUpdate", required=true)
       private final String autoUpdate;
 
     public String getAutoUpdate() {
@@ -37,7 +37,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The estimated time when the self-hosted integration runtime will be updated.
      * 
      */
-    @InputImport(name="autoUpdateETA", required=true)
+    @Import(name="autoUpdateETA", required=true)
       private final String autoUpdateETA;
 
     public String getAutoUpdateETA() {
@@ -48,7 +48,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * Object with additional information about integration runtime capabilities.
      * 
      */
-    @InputImport(name="capabilities", required=true)
+    @Import(name="capabilities", required=true)
       private final Map<String,String> capabilities;
 
     public Map<String,String> getCapabilities() {
@@ -59,7 +59,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The time at which the integration runtime was created, in ISO8601 format.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -70,7 +70,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The data factory name which the integration runtime belong to.
      * 
      */
-    @InputImport(name="dataFactoryName", required=true)
+    @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
 
     public String getDataFactoryName() {
@@ -81,7 +81,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
      * 
      */
-    @InputImport(name="internalChannelEncryption", required=true)
+    @Import(name="internalChannelEncryption", required=true)
       private final String internalChannelEncryption;
 
     public String getInternalChannelEncryption() {
@@ -92,7 +92,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The latest version on download center.
      * 
      */
-    @InputImport(name="latestVersion", required=true)
+    @Import(name="latestVersion", required=true)
       private final String latestVersion;
 
     public String getLatestVersion() {
@@ -103,7 +103,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The list of linked integration runtimes that are created to share with this integration runtime.
      * 
      */
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable List<LinkedIntegrationRuntimeResponse> links;
 
     public List<LinkedIntegrationRuntimeResponse> getLinks() {
@@ -114,7 +114,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The local time zone offset in hours.
      * 
      */
-    @InputImport(name="localTimeZoneOffset", required=true)
+    @Import(name="localTimeZoneOffset", required=true)
       private final String localTimeZoneOffset;
 
     public String getLocalTimeZoneOffset() {
@@ -125,7 +125,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The list of nodes for this integration runtime.
      * 
      */
-    @InputImport(name="nodes")
+    @Import(name="nodes")
       private final @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
 
     public List<SelfHostedIntegrationRuntimeNodeResponse> getNodes() {
@@ -136,7 +136,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The version that the integration runtime is going to update to.
      * 
      */
-    @InputImport(name="pushedVersion", required=true)
+    @Import(name="pushedVersion", required=true)
       private final String pushedVersion;
 
     public String getPushedVersion() {
@@ -147,7 +147,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The date at which the integration runtime will be scheduled to update, in ISO8601 format.
      * 
      */
-    @InputImport(name="scheduledUpdateDate", required=true)
+    @Import(name="scheduledUpdateDate", required=true)
       private final String scheduledUpdateDate;
 
     public String getScheduledUpdateDate() {
@@ -158,7 +158,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The URLs for the services used in integration runtime backend service.
      * 
      */
-    @InputImport(name="serviceUrls", required=true)
+    @Import(name="serviceUrls", required=true)
       private final List<String> serviceUrls;
 
     public List<String> getServiceUrls() {
@@ -169,7 +169,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The state of integration runtime.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -180,7 +180,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The task queue id of the integration runtime.
      * 
      */
-    @InputImport(name="taskQueueId", required=true)
+    @Import(name="taskQueueId", required=true)
       private final String taskQueueId;
 
     public String getTaskQueueId() {
@@ -192,7 +192,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * Expected value is 'SelfHosted'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -203,7 +203,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
      * 
      */
-    @InputImport(name="updateDelayOffset", required=true)
+    @Import(name="updateDelayOffset", required=true)
       private final String updateDelayOffset;
 
     public String getUpdateDelayOffset() {
@@ -214,7 +214,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * Version of the integration runtime.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {
@@ -225,7 +225,7 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends io.pulumi.
      * Status of the integration runtime version.
      * 
      */
-    @InputImport(name="versionStatus", required=true)
+    @Import(name="versionStatus", required=true)
       private final String versionStatus;
 
     public String getVersionStatus() {

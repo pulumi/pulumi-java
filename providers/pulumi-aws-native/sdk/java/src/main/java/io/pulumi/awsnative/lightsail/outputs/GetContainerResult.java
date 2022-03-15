@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 import io.pulumi.awsnative.lightsail.outputs.ContainerPublicDomainName;
 import io.pulumi.awsnative.lightsail.outputs.ContainerServiceDeployment;
 import io.pulumi.awsnative.lightsail.outputs.ContainerTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContainerResult {
     private final @Nullable String containerArn;
     /**
@@ -54,16 +54,16 @@ public final class GetContainerResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContainerResult(
-        @OutputCustomType.Parameter("containerArn") @Nullable String containerArn,
-        @OutputCustomType.Parameter("containerServiceDeployment") @Nullable ContainerServiceDeployment containerServiceDeployment,
-        @OutputCustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
-        @OutputCustomType.Parameter("power") @Nullable String power,
-        @OutputCustomType.Parameter("publicDomainNames") @Nullable List<ContainerPublicDomainName> publicDomainNames,
-        @OutputCustomType.Parameter("scale") @Nullable Integer scale,
-        @OutputCustomType.Parameter("tags") @Nullable List<ContainerTag> tags,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("containerArn") @Nullable String containerArn,
+        @CustomType.Parameter("containerServiceDeployment") @Nullable ContainerServiceDeployment containerServiceDeployment,
+        @CustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
+        @CustomType.Parameter("power") @Nullable String power,
+        @CustomType.Parameter("publicDomainNames") @Nullable List<ContainerPublicDomainName> publicDomainNames,
+        @CustomType.Parameter("scale") @Nullable Integer scale,
+        @CustomType.Parameter("tags") @Nullable List<ContainerTag> tags,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.containerArn = containerArn;
         this.containerServiceDeployment = containerServiceDeployment;
         this.isDisabled = isDisabled;

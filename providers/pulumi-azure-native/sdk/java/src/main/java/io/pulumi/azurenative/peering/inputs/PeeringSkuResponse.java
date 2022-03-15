@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The family of the peering SKU.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable String family;
 
     public Optional<String> getFamily() {
@@ -33,7 +33,7 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the peering SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -44,7 +44,7 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The size of the peering SKU.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable String size;
 
     public Optional<String> getSize() {
@@ -55,7 +55,7 @@ public final class PeeringSkuResponse extends io.pulumi.resources.InvokeArgs {
      * The tier of the peering SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

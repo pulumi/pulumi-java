@@ -6,13 +6,13 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyCookiesConfig;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyHeadersConfig;
 import io.pulumi.awsnative.cloudfront.outputs.OriginRequestPolicyQueryStringsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginRequestPolicyConfig {
     private final @Nullable String comment;
     private final OriginRequestPolicyCookiesConfig cookiesConfig;
@@ -20,13 +20,13 @@ public final class OriginRequestPolicyConfig {
     private final String name;
     private final OriginRequestPolicyQueryStringsConfig queryStringsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginRequestPolicyConfig(
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("cookiesConfig") OriginRequestPolicyCookiesConfig cookiesConfig,
-        @OutputCustomType.Parameter("headersConfig") OriginRequestPolicyHeadersConfig headersConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("queryStringsConfig") OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("cookiesConfig") OriginRequestPolicyCookiesConfig cookiesConfig,
+        @CustomType.Parameter("headersConfig") OriginRequestPolicyHeadersConfig headersConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("queryStringsConfig") OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
         this.comment = comment;
         this.cookiesConfig = cookiesConfig;
         this.headersConfig = headersConfig;

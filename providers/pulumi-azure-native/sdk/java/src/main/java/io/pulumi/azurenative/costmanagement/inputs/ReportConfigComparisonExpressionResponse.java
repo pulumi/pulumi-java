@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
      * The name of the column to use in comparison.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
      * The operator to use for comparison.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -43,7 +43,7 @@ public final class ReportConfigComparisonExpressionResponse extends io.pulumi.re
      * Array of values to use for comparison
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PlacementPolicyResponse {
     /**
      * The type of placement.
@@ -15,8 +15,8 @@ public final class PlacementPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private PlacementPolicyResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private PlacementPolicyResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

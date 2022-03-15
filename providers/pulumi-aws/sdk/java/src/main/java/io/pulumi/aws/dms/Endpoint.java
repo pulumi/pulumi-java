@@ -12,7 +12,7 @@ import io.pulumi.aws.dms.outputs.EndpointKinesisSettings;
 import io.pulumi.aws.dms.outputs.EndpointMongodbSettings;
 import io.pulumi.aws.dms.outputs.EndpointS3Settings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the certificate.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
@@ -53,7 +53,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The name of the endpoint database.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
@@ -67,7 +67,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Configuration block with Elasticsearch settings. Detailed below.
      * 
      */
-    @OutputExport(name="elasticsearchSettings", type=EndpointElasticsearchSettings.class, parameters={})
+    @Export(name="elasticsearchSettings", type=EndpointElasticsearchSettings.class, parameters={})
     private Output</* @Nullable */ EndpointElasticsearchSettings> elasticsearchSettings;
 
     /**
@@ -81,7 +81,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the endpoint.
      * 
      */
-    @OutputExport(name="endpointArn", type=String.class, parameters={})
+    @Export(name="endpointArn", type=String.class, parameters={})
     private Output<String> endpointArn;
 
     /**
@@ -95,7 +95,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The database endpoint identifier.
      * 
      */
-    @OutputExport(name="endpointId", type=String.class, parameters={})
+    @Export(name="endpointId", type=String.class, parameters={})
     private Output<String> endpointId;
 
     /**
@@ -109,7 +109,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of endpoint. Can be one of `source | target`.
      * 
      */
-    @OutputExport(name="endpointType", type=String.class, parameters={})
+    @Export(name="endpointType", type=String.class, parameters={})
     private Output<String> endpointType;
 
     /**
@@ -123,7 +123,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
      * 
      */
-    @OutputExport(name="engineName", type=String.class, parameters={})
+    @Export(name="engineName", type=String.class, parameters={})
     private Output<String> engineName;
 
     /**
@@ -137,7 +137,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib).
      * 
      */
-    @OutputExport(name="extraConnectionAttributes", type=String.class, parameters={})
+    @Export(name="extraConnectionAttributes", type=String.class, parameters={})
     private Output<String> extraConnectionAttributes;
 
     /**
@@ -151,7 +151,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Configuration block with Kafka settings. Detailed below.
      * 
      */
-    @OutputExport(name="kafkaSettings", type=EndpointKafkaSettings.class, parameters={})
+    @Export(name="kafkaSettings", type=EndpointKafkaSettings.class, parameters={})
     private Output</* @Nullable */ EndpointKafkaSettings> kafkaSettings;
 
     /**
@@ -165,7 +165,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Configuration block with Kinesis settings. Detailed below.
      * 
      */
-    @OutputExport(name="kinesisSettings", type=EndpointKinesisSettings.class, parameters={})
+    @Export(name="kinesisSettings", type=EndpointKinesisSettings.class, parameters={})
     private Output</* @Nullable */ EndpointKinesisSettings> kinesisSettings;
 
     /**
@@ -179,7 +179,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output<String> kmsKeyArn;
 
     /**
@@ -193,7 +193,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Configuration block with MongoDB settings. Detailed below.
      * 
      */
-    @OutputExport(name="mongodbSettings", type=EndpointMongodbSettings.class, parameters={})
+    @Export(name="mongodbSettings", type=EndpointMongodbSettings.class, parameters={})
     private Output</* @Nullable */ EndpointMongodbSettings> mongodbSettings;
 
     /**
@@ -207,7 +207,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The password to be used to login to the endpoint database.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -221,7 +221,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The port used by the endpoint database.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -235,7 +235,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Configuration block with S3 settings. Detailed below.
      * 
      */
-    @OutputExport(name="s3Settings", type=EndpointS3Settings.class, parameters={})
+    @Export(name="s3Settings", type=EndpointS3Settings.class, parameters={})
     private Output</* @Nullable */ EndpointS3Settings> s3Settings;
 
     /**
@@ -249,7 +249,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
-    @OutputExport(name="secretsManagerAccessRoleArn", type=String.class, parameters={})
+    @Export(name="secretsManagerAccessRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretsManagerAccessRoleArn;
 
     /**
@@ -263,7 +263,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
-    @OutputExport(name="secretsManagerArn", type=String.class, parameters={})
+    @Export(name="secretsManagerArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretsManagerArn;
 
     /**
@@ -277,7 +277,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The host name of the server.
      * 
      */
-    @OutputExport(name="serverName", type=String.class, parameters={})
+    @Export(name="serverName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverName;
 
     /**
@@ -291,7 +291,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
      * 
      */
-    @OutputExport(name="serviceAccessRole", type=String.class, parameters={})
+    @Export(name="serviceAccessRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccessRole;
 
     /**
@@ -305,7 +305,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
      * 
      */
-    @OutputExport(name="sslMode", type=String.class, parameters={})
+    @Export(name="sslMode", type=String.class, parameters={})
     private Output<String> sslMode;
 
     /**
@@ -319,7 +319,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -333,7 +333,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -347,7 +347,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The user name to be used to login to the endpoint database.
      * 
      */
-    @OutputExport(name="username", type=String.class, parameters={})
+    @Export(name="username", type=String.class, parameters={})
     private Output</* @Nullable */ String> username;
 
     /**

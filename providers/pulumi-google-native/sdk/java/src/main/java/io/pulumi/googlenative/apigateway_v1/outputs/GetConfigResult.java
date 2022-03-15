@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigFileResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigGrpcServiceDefinitionResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigOpenApiDocumentResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigResult {
     /**
      * Created time.
@@ -70,19 +70,19 @@ public final class GetConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("gatewayServiceAccount") String gatewayServiceAccount,
-        @OutputCustomType.Parameter("grpcServices") List<ApigatewayApiConfigGrpcServiceDefinitionResponse> grpcServices,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("managedServiceConfigs") List<ApigatewayApiConfigFileResponse> managedServiceConfigs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("openapiDocuments") List<ApigatewayApiConfigOpenApiDocumentResponse> openapiDocuments,
-        @OutputCustomType.Parameter("serviceConfigId") String serviceConfigId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("gatewayServiceAccount") String gatewayServiceAccount,
+        @CustomType.Parameter("grpcServices") List<ApigatewayApiConfigGrpcServiceDefinitionResponse> grpcServices,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("managedServiceConfigs") List<ApigatewayApiConfigFileResponse> managedServiceConfigs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("openapiDocuments") List<ApigatewayApiConfigOpenApiDocumentResponse> openapiDocuments,
+        @CustomType.Parameter("serviceConfigId") String serviceConfigId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.gatewayServiceAccount = gatewayServiceAccount;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkLinkResult {
     /**
      * The ETag of the virtual network link.
@@ -65,18 +65,18 @@ public final class GetVirtualNetworkLinkResult {
      */
     private final String virtualNetworkLinkState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkLinkResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("registrationEnabled") @Nullable Boolean registrationEnabled,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork,
-        @OutputCustomType.Parameter("virtualNetworkLinkState") String virtualNetworkLinkState) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("registrationEnabled") @Nullable Boolean registrationEnabled,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork,
+        @CustomType.Parameter("virtualNetworkLinkState") String virtualNetworkLinkState) {
         this.etag = etag;
         this.id = id;
         this.location = location;

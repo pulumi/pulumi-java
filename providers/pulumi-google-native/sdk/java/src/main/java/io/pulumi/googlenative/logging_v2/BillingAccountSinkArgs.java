@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.logging_v2.inputs.BigQueryOptionsArgs;
 import io.pulumi.googlenative.logging_v2.inputs.LogExclusionArgs;
 import java.lang.Boolean;
@@ -22,14 +22,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * Optional. Options that affect sinks exporting data to BigQuery.
      * 
      */
-    @InputImport(name="bigqueryOptions")
+    @Import(name="bigqueryOptions")
       private final @Nullable Output<BigQueryOptionsArgs> bigqueryOptions;
 
     public Output<BigQueryOptionsArgs> getBigqueryOptions() {
         return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
     }
 
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
@@ -40,7 +40,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * Optional. A description of this sink.The maximum length of the description is 8000 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * The export destination: "storage.googleapis.com/[GCS_BUCKET]" "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]" "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]" The sink's writer_identity, set when the sink is created, must have permission to write to the destination or else the log entries are not exported. For more information, see Exporting Logs with Sinks (https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<String> destination;
 
     public Output<String> getDestination() {
@@ -62,7 +62,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * Optional. If set to true, then this sink is disabled and it does not export any log entries.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -73,7 +73,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * Optional. Log entries that match any of these exclusion filters will not be exported.If a log entry is matched by both filter and one of exclusion_filters it will not be exported.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<LogExclusionArgs>> exclusions;
 
     public Output<List<LogExclusionArgs>> getExclusions() {
@@ -84,7 +84,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * Optional. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries). The only exported log entries are those that are in the resource owning the sink and that match the filter.For example:logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -95,7 +95,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * Optional. This field applies only to sinks owned by organizations and folders. If the field is false, the default, only the logs owned by the sink's parent resource are available for export. If the field is true, then log entries from all the projects, folders, and billing accounts contained in the sink's parent resource are also available for export. Whether a particular log entry from the children is exported depends on the sink's filter expression.For example, if this field is true, then the filter resource.type=gce_instance would export all Compute Engine VM instance log entries from all projects in the sink's parent.To only export entries from certain child projects, filter on the project part of the log name:logName:("projects/test-project1/" OR "projects/test-project2/") AND resource.type=gce_instance
      * 
      */
-    @InputImport(name="includeChildren")
+    @Import(name="includeChildren")
       private final @Nullable Output<Boolean> includeChildren;
 
     public Output<Boolean> getIncludeChildren() {
@@ -106,14 +106,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * The client-assigned sink identifier, unique within the project.For example: "my-syslog-errors-to-pubsub". Sink identifiers are limited to 100 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="uniqueWriterIdentity")
+    @Import(name="uniqueWriterIdentity")
       private final @Nullable Output<String> uniqueWriterIdentity;
 
     public Output<String> getUniqueWriterIdentity() {

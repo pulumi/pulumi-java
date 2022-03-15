@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * Email of the user who created the synchronization
      * 
      */
-    @InputImport(name="consumerEmail")
+    @Import(name="consumerEmail")
       private final @Nullable String consumerEmail;
 
     public Optional<String> getConsumerEmail() {
@@ -34,7 +34,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * Name of the user who created the synchronization
      * 
      */
-    @InputImport(name="consumerName")
+    @Import(name="consumerName")
       private final @Nullable String consumerName;
 
     public Optional<String> getConsumerName() {
@@ -45,7 +45,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * Tenant name of the consumer who created the synchronization
      * 
      */
-    @InputImport(name="consumerTenantName")
+    @Import(name="consumerTenantName")
       private final @Nullable String consumerTenantName;
 
     public Optional<String> getConsumerTenantName() {
@@ -56,7 +56,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * synchronization duration
      * 
      */
-    @InputImport(name="durationMs")
+    @Import(name="durationMs")
       private final @Nullable Integer durationMs;
 
     public Optional<Integer> getDurationMs() {
@@ -67,7 +67,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * End time of synchronization
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -78,7 +78,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * message of synchronization
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -89,7 +89,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * start time of synchronization
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -100,7 +100,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * Raw Status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -111,7 +111,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * Synchronization id
      * 
      */
-    @InputImport(name="synchronizationId")
+    @Import(name="synchronizationId")
       private final @Nullable String synchronizationId;
 
     public Optional<String> getSynchronizationId() {
@@ -122,7 +122,7 @@ public final class ShareSynchronizationResponse extends io.pulumi.resources.Invo
      * Synchronization mode
      * 
      */
-    @InputImport(name="synchronizationMode", required=true)
+    @Import(name="synchronizationMode", required=true)
       private final String synchronizationMode;
 
     public String getSynchronizationMode() {

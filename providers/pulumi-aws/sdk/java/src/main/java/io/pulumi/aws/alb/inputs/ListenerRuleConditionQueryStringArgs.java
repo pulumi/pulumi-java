@@ -4,7 +4,7 @@
 package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ListenerRuleConditionQueryStringArgs extends io.pulumi.resour
      * Query string key pattern to match.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -29,7 +29,7 @@ public final class ListenerRuleConditionQueryStringArgs extends io.pulumi.resour
      * Query string value pattern to match.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

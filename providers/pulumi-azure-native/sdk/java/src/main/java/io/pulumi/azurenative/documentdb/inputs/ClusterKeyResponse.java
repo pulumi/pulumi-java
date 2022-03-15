@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the Cosmos DB Cassandra table cluster key
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class ClusterKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
      * 
      */
-    @InputImport(name="orderBy")
+    @Import(name="orderBy")
       private final @Nullable String orderBy;
 
     public Optional<String> getOrderBy() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CertificateChainsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
      * The certificate chains needed to validate the attestation
      * 
      */
-    @InputImport(name="certChains", required=true)
+    @Import(name="certChains", required=true)
       private final CertificateChainsResponse certChains;
 
     public CertificateChainsResponse getCertChains() {
@@ -32,7 +32,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
      * The attestation data provided by the HSM when the key operation was performed.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -43,7 +43,7 @@ public final class KeyOperationAttestationResponse extends io.pulumi.resources.I
      * The format of the attestation data.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final String format;
 
     public String getFormat() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
      * Structure is documented below.
      * 
      */
-    @InputImport(name="abort")
+    @Import(name="abort")
       private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
 
     public Output<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> getAbort() {
@@ -32,7 +32,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
      * Structure is documented below.
      * 
      */
-    @InputImport(name="delay")
+    @Import(name="delay")
       private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
 
     public Output<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> getDelay() {

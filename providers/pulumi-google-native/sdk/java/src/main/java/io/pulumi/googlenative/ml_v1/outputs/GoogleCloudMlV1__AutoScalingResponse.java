@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__MetricSpecResponse;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__AutoScalingResponse {
     /**
      * The maximum number of nodes to scale this model under load. The actual value will depend on resource quota and availability.
@@ -27,11 +27,11 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
      */
     private final Integer minNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__AutoScalingResponse(
-        @OutputCustomType.Parameter("maxNodes") Integer maxNodes,
-        @OutputCustomType.Parameter("metrics") List<GoogleCloudMlV1__MetricSpecResponse> metrics,
-        @OutputCustomType.Parameter("minNodes") Integer minNodes) {
+        @CustomType.Parameter("maxNodes") Integer maxNodes,
+        @CustomType.Parameter("metrics") List<GoogleCloudMlV1__MetricSpecResponse> metrics,
+        @CustomType.Parameter("minNodes") Integer minNodes) {
         this.maxNodes = maxNodes;
         this.metrics = metrics;
         this.minNodes = minNodes;

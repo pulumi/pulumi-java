@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse {
     /**
      * Maximum age of the snapshot that is allowed to be kept.
@@ -21,10 +21,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse {
      */
     private final String onSourceDiskDelete;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(
-        @OutputCustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
-        @OutputCustomType.Parameter("onSourceDiskDelete") String onSourceDiskDelete) {
+        @CustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
+        @CustomType.Parameter("onSourceDiskDelete") String onSourceDiskDelete) {
         this.maxRetentionDays = maxRetentionDays;
         this.onSourceDiskDelete = onSourceDiskDelete;
     }

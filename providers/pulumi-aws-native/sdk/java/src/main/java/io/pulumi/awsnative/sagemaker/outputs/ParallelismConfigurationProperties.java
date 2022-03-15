@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParallelismConfigurationProperties {
     /**
      * Maximum parallel execution steps
@@ -15,8 +15,8 @@ public final class ParallelismConfigurationProperties {
      */
     private final Integer maxParallelExecutionSteps;
 
-    @OutputCustomType.Constructor
-    private ParallelismConfigurationProperties(@OutputCustomType.Parameter("maxParallelExecutionSteps") Integer maxParallelExecutionSteps) {
+    @CustomType.Constructor
+    private ParallelismConfigurationProperties(@CustomType.Parameter("maxParallelExecutionSteps") Integer maxParallelExecutionSteps) {
         this.maxParallelExecutionSteps = maxParallelExecutionSteps;
     }
 

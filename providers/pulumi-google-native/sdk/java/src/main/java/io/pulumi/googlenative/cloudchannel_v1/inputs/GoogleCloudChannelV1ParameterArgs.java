@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
      * Name of the parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1ParameterArgs extends io.pulumi.resources
      * Value of the parameter.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<GoogleCloudChannelV1ValueArgs> value;
 
     public Output<GoogleCloudChannelV1ValueArgs> getValue() {

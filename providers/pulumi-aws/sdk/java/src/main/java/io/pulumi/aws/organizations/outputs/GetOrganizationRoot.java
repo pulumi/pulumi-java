@@ -4,12 +4,12 @@
 package io.pulumi.aws.organizations.outputs;
 
 import io.pulumi.aws.organizations.outputs.GetOrganizationRootPolicyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationRoot {
     /**
      * ARN of the root
@@ -32,12 +32,12 @@ public final class GetOrganizationRoot {
      */
     private final List<GetOrganizationRootPolicyType> policyTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationRoot(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyTypes") List<GetOrganizationRootPolicyType> policyTypes) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyTypes") List<GetOrganizationRootPolicyType> policyTypes) {
         this.arn = arn;
         this.id = id;
         this.name = name;

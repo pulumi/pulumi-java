@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.HTTPHeaderResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HTTPGetActionResponse {
     /**
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
@@ -32,12 +32,12 @@ public final class HTTPGetActionResponse {
      */
     private final String scheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HTTPGetActionResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("httpHeaders") List<HTTPHeaderResponse> httpHeaders,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("scheme") String scheme) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("httpHeaders") List<HTTPHeaderResponse> httpHeaders,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("scheme") String scheme) {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;

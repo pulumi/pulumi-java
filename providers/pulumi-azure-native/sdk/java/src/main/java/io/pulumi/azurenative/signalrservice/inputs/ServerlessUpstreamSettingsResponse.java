@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.azurenative.signalrservice.inputs.UpstreamTemplateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ServerlessUpstreamSettingsResponse extends io.pulumi.resource
      * Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
      * 
      */
-    @InputImport(name="templates")
+    @Import(name="templates")
       private final @Nullable List<UpstreamTemplateResponse> templates;
 
     public List<UpstreamTemplateResponse> getTemplates() {

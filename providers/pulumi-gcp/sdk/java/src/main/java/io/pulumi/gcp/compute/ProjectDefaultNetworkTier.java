@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ProjectDefaultNetworkTierArgs;
@@ -38,7 +38,7 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * This field can take the following values: `PREMIUM` or `STANDARD`.
      * 
      */
-    @OutputExport(name="networkTier", type=String.class, parameters={})
+    @Export(name="networkTier", type=String.class, parameters={})
     private Output<String> networkTier;
 
     /**
@@ -54,7 +54,7 @@ public class ProjectDefaultNetworkTier extends io.pulumi.resources.CustomResourc
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

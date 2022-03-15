@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.inputs.DataCollectionRuleDestinationsArgs;
 import io.pulumi.azurenative.insights.inputs.DataFlowArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the data collection rule. The name is case insensitive.
      * 
      */
-    @InputImport(name="dataCollectionRuleName")
+    @Import(name="dataCollectionRuleName")
       private final @Nullable Output<String> dataCollectionRuleName;
 
     public Output<String> getDataCollectionRuleName() {
@@ -36,7 +36,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * The specification of data flows.
      * 
      */
-    @InputImport(name="dataFlows")
+    @Import(name="dataFlows")
       private final @Nullable Output<List<DataFlowArgs>> dataFlows;
 
     public Output<List<DataFlowArgs>> getDataFlows() {
@@ -48,7 +48,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * This property is optional and can be omitted if the rule is meant to be used via direct calls to the provisioned endpoint.
      * 
      */
-    @InputImport(name="dataSources")
+    @Import(name="dataSources")
       private final @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
 
     public Output<DataCollectionRuleDataSourcesArgs> getDataSources() {
@@ -59,7 +59,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * Description of the data collection rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -70,7 +70,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * The specification of destinations.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
 
     public Output<DataCollectionRuleDestinationsArgs> getDestinations() {
@@ -81,7 +81,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * The kind of the resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
 
     public Output<Either<String,KnownDataCollectionRuleResourceKind>> getKind() {
@@ -92,7 +92,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * The geo-location where the resource lives.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -103,7 +103,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -114,7 +114,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

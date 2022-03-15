@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewaySkuName;
 import io.pulumi.azurenative.network.enums.ApplicationGatewayTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
      * Capacity (instance count) of an application gateway.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
      * Name of an application gateway SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
 
     public Output<Either<String,ApplicationGatewaySkuName>> getName() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
      * Tier of an application gateway.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,ApplicationGatewayTier>> tier;
 
     public Output<Either<String,ApplicationGatewayTier>> getTier() {

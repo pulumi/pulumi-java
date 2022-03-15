@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.DateAfterCreationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementPolicyVersionResponse {
     /**
      * The function to delete the blob version
@@ -27,11 +27,11 @@ public final class ManagementPolicyVersionResponse {
      */
     private final @Nullable DateAfterCreationResponse tierToCool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementPolicyVersionResponse(
-        @OutputCustomType.Parameter("delete") @Nullable DateAfterCreationResponse delete,
-        @OutputCustomType.Parameter("tierToArchive") @Nullable DateAfterCreationResponse tierToArchive,
-        @OutputCustomType.Parameter("tierToCool") @Nullable DateAfterCreationResponse tierToCool) {
+        @CustomType.Parameter("delete") @Nullable DateAfterCreationResponse delete,
+        @CustomType.Parameter("tierToArchive") @Nullable DateAfterCreationResponse tierToArchive,
+        @CustomType.Parameter("tierToCool") @Nullable DateAfterCreationResponse tierToCool) {
         this.delete = delete;
         this.tierToArchive = tierToArchive;
         this.tierToCool = tierToCool;

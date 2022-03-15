@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.rekognition.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private GetProjectResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private GetProjectResult(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

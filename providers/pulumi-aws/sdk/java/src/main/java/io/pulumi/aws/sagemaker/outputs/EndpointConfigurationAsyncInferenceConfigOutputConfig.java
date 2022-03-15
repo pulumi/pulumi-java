@@ -4,13 +4,13 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
     /**
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
@@ -28,11 +28,11 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
      */
     private final String s3OutputPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfigOutputConfig(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("notificationConfig") @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig,
-        @OutputCustomType.Parameter("s3OutputPath") String s3OutputPath) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("notificationConfig") @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig,
+        @CustomType.Parameter("s3OutputPath") String s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.notificationConfig = notificationConfig;
         this.s3OutputPath = s3OutputPath;

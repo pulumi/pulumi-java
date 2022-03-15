@@ -6,13 +6,13 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.outputs.WebACLJsonBody;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLFieldToMatch {
     /**
      * All query arguments of a web request.
@@ -47,16 +47,16 @@ public final class WebACLFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLFieldToMatch(
-        @OutputCustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
-        @OutputCustomType.Parameter("body") @Nullable Object body,
-        @OutputCustomType.Parameter("jsonBody") @Nullable WebACLJsonBody jsonBody,
-        @OutputCustomType.Parameter("method") @Nullable Object method,
-        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
-        @OutputCustomType.Parameter("singleHeader") @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader,
-        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
-        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
+        @CustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
+        @CustomType.Parameter("body") @Nullable Object body,
+        @CustomType.Parameter("jsonBody") @Nullable WebACLJsonBody jsonBody,
+        @CustomType.Parameter("method") @Nullable Object method,
+        @CustomType.Parameter("queryString") @Nullable Object queryString,
+        @CustomType.Parameter("singleHeader") @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader,
+        @CustomType.Parameter("singleQueryArgument") @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
+        @CustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.jsonBody = jsonBody;

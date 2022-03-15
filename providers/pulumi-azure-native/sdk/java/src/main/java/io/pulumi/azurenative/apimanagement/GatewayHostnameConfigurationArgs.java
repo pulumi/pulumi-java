@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Identifier of Certificate entity that will be used for TLS connection establishment
      * 
      */
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
     public Output<String> getCertificateId() {
@@ -30,7 +30,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
      * 
      */
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -41,7 +41,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Gateway hostname configuration identifier. Must be unique in the scope of parent Gateway entity.
      * 
      */
-    @InputImport(name="hcId")
+    @Import(name="hcId")
       private final @Nullable Output<String> hcId;
 
     public Output<String> getHcId() {
@@ -52,7 +52,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Hostname value. Supports valid domain name, partial or full wildcard
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -63,7 +63,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Specifies if HTTP/2.0 is supported
      * 
      */
-    @InputImport(name="http2Enabled")
+    @Import(name="http2Enabled")
       private final @Nullable Output<Boolean> http2Enabled;
 
     public Output<Boolean> getHttp2Enabled() {
@@ -74,7 +74,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Determines whether gateway requests client certificate
      * 
      */
-    @InputImport(name="negotiateClientCertificate")
+    @Import(name="negotiateClientCertificate")
       private final @Nullable Output<Boolean> negotiateClientCertificate;
 
     public Output<Boolean> getNegotiateClientCertificate() {
@@ -85,7 +85,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -107,7 +107,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Specifies if TLS 1.0 is supported
      * 
      */
-    @InputImport(name="tls10Enabled")
+    @Import(name="tls10Enabled")
       private final @Nullable Output<Boolean> tls10Enabled;
 
     public Output<Boolean> getTls10Enabled() {
@@ -118,7 +118,7 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
      * Specifies if TLS 1.1 is supported
      * 
      */
-    @InputImport(name="tls11Enabled")
+    @Import(name="tls11Enabled")
       private final @Nullable Output<Boolean> tls11Enabled;
 
     public Output<Boolean> getTls11Enabled() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamPolicyArgs;
@@ -14,19 +14,19 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:billing/accountIamPolicy:AccountIamPolicy")
 public class AccountIamPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="billingAccountId", type=String.class, parameters={})
+    @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     public Output<String> getPolicyData() {

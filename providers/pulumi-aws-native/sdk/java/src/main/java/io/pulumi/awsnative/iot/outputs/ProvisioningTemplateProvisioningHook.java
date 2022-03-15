@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProvisioningTemplateProvisioningHook {
     private final @Nullable String payloadVersion;
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProvisioningTemplateProvisioningHook(
-        @OutputCustomType.Parameter("payloadVersion") @Nullable String payloadVersion,
-        @OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
+        @CustomType.Parameter("payloadVersion") @Nullable String payloadVersion,
+        @CustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.payloadVersion = payloadVersion;
         this.targetArn = targetArn;
     }

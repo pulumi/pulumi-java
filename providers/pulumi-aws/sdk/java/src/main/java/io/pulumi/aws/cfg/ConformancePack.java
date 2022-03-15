@@ -8,7 +8,7 @@ import io.pulumi.aws.cfg.ConformancePackArgs;
 import io.pulumi.aws.cfg.inputs.ConformancePackState;
 import io.pulumi.aws.cfg.outputs.ConformancePackInputParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the conformance pack.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -54,7 +54,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * Amazon S3 bucket where AWS Config stores conformance pack templates. Maximum length of 63.
      * 
      */
-    @OutputExport(name="deliveryS3Bucket", type=String.class, parameters={})
+    @Export(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
     /**
@@ -68,7 +68,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * The prefix for the Amazon S3 bucket. Maximum length of 1024.
      * 
      */
-    @OutputExport(name="deliveryS3KeyPrefix", type=String.class, parameters={})
+    @Export(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
     /**
@@ -82,7 +82,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the `template_body` or in the template stored in Amazon S3 if using `template_s3_uri`.
      * 
      */
-    @OutputExport(name="inputParameters", type=List.class, parameters={ConformancePackInputParameter.class})
+    @Export(name="inputParameters", type=List.class, parameters={ConformancePackInputParameter.class})
     private Output</* @Nullable */ List<ConformancePackInputParameter>> inputParameters;
 
     /**
@@ -96,7 +96,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * The name of the conformance pack. Must begin with a letter and contain from 1 to 256 alphanumeric characters and hyphens.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * A string containing full conformance pack template body. Maximum length of 51200. Drift detection is not possible with this argument.
      * 
      */
-    @OutputExport(name="templateBody", type=String.class, parameters={})
+    @Export(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
     /**
@@ -124,7 +124,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * Location of file, e.g., `s3://bucketname/prefix`, containing the template body. The uri must point to the conformance pack template that is located in an Amazon S3 bucket in the same region as the conformance pack. Maximum length of 1024. Drift detection is not possible with this argument.
      * 
      */
-    @OutputExport(name="templateS3Uri", type=String.class, parameters={})
+    @Export(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
     /**

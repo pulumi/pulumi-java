@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
 
     public static final GoogleCloudDatalabelingV1beta1AttemptResponse Empty = new GoogleCloudDatalabelingV1beta1AttemptResponse();
 
-    @InputImport(name="attemptTime", required=true)
+    @Import(name="attemptTime", required=true)
       private final String attemptTime;
 
     public String getAttemptTime() {
@@ -29,7 +29,7 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse extends io.pulu
      * Details of errors that occurred.
      * 
      */
-    @InputImport(name="partialFailures", required=true)
+    @Import(name="partialFailures", required=true)
       private final List<GoogleRpcStatusResponse> partialFailures;
 
     public List<GoogleRpcStatusResponse> getPartialFailures() {

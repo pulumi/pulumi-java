@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.CurrentScenarioDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanA2ADetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryPlanPropertiesResponse {
     /**
      * The list of allowed operations.
@@ -96,24 +96,24 @@ public final class RecoveryPlanPropertiesResponse {
      */
     private final @Nullable List<String> replicationProviders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryPlanPropertiesResponse(
-        @OutputCustomType.Parameter("allowedOperations") @Nullable List<String> allowedOperations,
-        @OutputCustomType.Parameter("currentScenario") @Nullable CurrentScenarioDetailsResponse currentScenario,
-        @OutputCustomType.Parameter("currentScenarioStatus") @Nullable String currentScenarioStatus,
-        @OutputCustomType.Parameter("currentScenarioStatusDescription") @Nullable String currentScenarioStatusDescription,
-        @OutputCustomType.Parameter("failoverDeploymentModel") @Nullable String failoverDeploymentModel,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("groups") @Nullable List<RecoveryPlanGroupResponse> groups,
-        @OutputCustomType.Parameter("lastPlannedFailoverTime") @Nullable String lastPlannedFailoverTime,
-        @OutputCustomType.Parameter("lastTestFailoverTime") @Nullable String lastTestFailoverTime,
-        @OutputCustomType.Parameter("lastUnplannedFailoverTime") @Nullable String lastUnplannedFailoverTime,
-        @OutputCustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
-        @OutputCustomType.Parameter("primaryFabricId") @Nullable String primaryFabricId,
-        @OutputCustomType.Parameter("providerSpecificDetails") List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails,
-        @OutputCustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
-        @OutputCustomType.Parameter("recoveryFabricId") @Nullable String recoveryFabricId,
-        @OutputCustomType.Parameter("replicationProviders") @Nullable List<String> replicationProviders) {
+        @CustomType.Parameter("allowedOperations") @Nullable List<String> allowedOperations,
+        @CustomType.Parameter("currentScenario") @Nullable CurrentScenarioDetailsResponse currentScenario,
+        @CustomType.Parameter("currentScenarioStatus") @Nullable String currentScenarioStatus,
+        @CustomType.Parameter("currentScenarioStatusDescription") @Nullable String currentScenarioStatusDescription,
+        @CustomType.Parameter("failoverDeploymentModel") @Nullable String failoverDeploymentModel,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("groups") @Nullable List<RecoveryPlanGroupResponse> groups,
+        @CustomType.Parameter("lastPlannedFailoverTime") @Nullable String lastPlannedFailoverTime,
+        @CustomType.Parameter("lastTestFailoverTime") @Nullable String lastTestFailoverTime,
+        @CustomType.Parameter("lastUnplannedFailoverTime") @Nullable String lastUnplannedFailoverTime,
+        @CustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
+        @CustomType.Parameter("primaryFabricId") @Nullable String primaryFabricId,
+        @CustomType.Parameter("providerSpecificDetails") List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails,
+        @CustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
+        @CustomType.Parameter("recoveryFabricId") @Nullable String recoveryFabricId,
+        @CustomType.Parameter("replicationProviders") @Nullable List<String> replicationProviders) {
         this.allowedOperations = allowedOperations;
         this.currentScenario = currentScenario;
         this.currentScenarioStatus = currentScenarioStatus;

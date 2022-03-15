@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVolumeResult {
     /**
      * The IDs of the access control records, associated with the volume.
@@ -79,21 +79,21 @@ public final class GetVolumeResult {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVolumeResult(
-        @OutputCustomType.Parameter("accessControlRecordIds") List<String> accessControlRecordIds,
-        @OutputCustomType.Parameter("backupPolicyIds") List<String> backupPolicyIds,
-        @OutputCustomType.Parameter("backupStatus") String backupStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("monitoringStatus") String monitoringStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationStatus") String operationStatus,
-        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeContainerId") String volumeContainerId,
-        @OutputCustomType.Parameter("volumeStatus") String volumeStatus,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("accessControlRecordIds") List<String> accessControlRecordIds,
+        @CustomType.Parameter("backupPolicyIds") List<String> backupPolicyIds,
+        @CustomType.Parameter("backupStatus") String backupStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("monitoringStatus") String monitoringStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationStatus") String operationStatus,
+        @CustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeContainerId") String volumeContainerId,
+        @CustomType.Parameter("volumeStatus") String volumeStatus,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.accessControlRecordIds = accessControlRecordIds;
         this.backupPolicyIds = backupPolicyIds;
         this.backupStatus = backupStatus;

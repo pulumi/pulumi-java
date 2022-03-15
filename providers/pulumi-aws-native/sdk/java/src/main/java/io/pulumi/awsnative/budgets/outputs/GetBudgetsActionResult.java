@@ -8,14 +8,14 @@ import io.pulumi.awsnative.budgets.enums.BudgetsActionNotificationType;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionActionThreshold;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionSubscriber;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBudgetsActionResult {
     private final @Nullable String actionId;
     private final @Nullable BudgetsActionActionThreshold actionThreshold;
@@ -25,15 +25,15 @@ public final class GetBudgetsActionResult {
     private final @Nullable BudgetsActionNotificationType notificationType;
     private final @Nullable List<BudgetsActionSubscriber> subscribers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBudgetsActionResult(
-        @OutputCustomType.Parameter("actionId") @Nullable String actionId,
-        @OutputCustomType.Parameter("actionThreshold") @Nullable BudgetsActionActionThreshold actionThreshold,
-        @OutputCustomType.Parameter("approvalModel") @Nullable BudgetsActionApprovalModel approvalModel,
-        @OutputCustomType.Parameter("definition") @Nullable BudgetsActionDefinition definition,
-        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
-        @OutputCustomType.Parameter("notificationType") @Nullable BudgetsActionNotificationType notificationType,
-        @OutputCustomType.Parameter("subscribers") @Nullable List<BudgetsActionSubscriber> subscribers) {
+        @CustomType.Parameter("actionId") @Nullable String actionId,
+        @CustomType.Parameter("actionThreshold") @Nullable BudgetsActionActionThreshold actionThreshold,
+        @CustomType.Parameter("approvalModel") @Nullable BudgetsActionApprovalModel approvalModel,
+        @CustomType.Parameter("definition") @Nullable BudgetsActionDefinition definition,
+        @CustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @CustomType.Parameter("notificationType") @Nullable BudgetsActionNotificationType notificationType,
+        @CustomType.Parameter("subscribers") @Nullable List<BudgetsActionSubscriber> subscribers) {
         this.actionId = actionId;
         this.actionThreshold = actionThreshold;
         this.approvalModel = approvalModel;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * The Key Vault identity.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -37,7 +37,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * The properties of the key used to encrypt the account.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
@@ -48,7 +48,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
      * The type of key used to encrypt the Account Key.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,AccountEncryptionKeyType>> type;
 
     public Output<Either<String,AccountEncryptionKeyType>> getType() {

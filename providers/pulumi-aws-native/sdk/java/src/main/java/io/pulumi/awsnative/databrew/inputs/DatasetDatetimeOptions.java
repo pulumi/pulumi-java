@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
      * Date/time format of a date parameter
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final String format;
 
     public String getFormat() {
@@ -29,7 +29,7 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
      * Locale code for a date parameter
      * 
      */
-    @InputImport(name="localeCode")
+    @Import(name="localeCode")
       private final @Nullable String localeCode;
 
     public Optional<String> getLocaleCode() {
@@ -40,7 +40,7 @@ public final class DatasetDatetimeOptions extends io.pulumi.resources.InvokeArgs
      * Timezone offset
      * 
      */
-    @InputImport(name="timezoneOffset")
+    @Import(name="timezoneOffset")
       private final @Nullable String timezoneOffset;
 
     public Optional<String> getTimezoneOffset() {

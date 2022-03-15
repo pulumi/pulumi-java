@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID. Valid values: `on`, `off`. Default: `on`.
      * 
      */
-    @InputImport(name="autoPlacement")
+    @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
     public Output<String> getAutoPlacement() {
@@ -30,7 +30,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone in which to allocate the Dedicated Host.
      * 
      */
-    @InputImport(name="availabilityZone", required=true)
+    @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -41,7 +41,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to enable or disable host recovery for the Dedicated Host. Valid values: `on`, `off`. Default: `off`.
      * 
      */
-    @InputImport(name="hostRecovery")
+    @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
     public Output<String> getHostRecovery() {
@@ -52,7 +52,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the instance family to be supported by the Dedicated Hosts. If you specify an instance family, the Dedicated Hosts support multiple instance types within that instance family. Exactly one of `instance_family` or `instance_type` must be specified.
      * 
      */
-    @InputImport(name="instanceFamily")
+    @Import(name="instanceFamily")
       private final @Nullable Output<String> instanceFamily;
 
     public Output<String> getInstanceFamily() {
@@ -63,7 +63,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.  Exactly one of `instance_family` or `instance_type` must be specified.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -74,7 +74,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

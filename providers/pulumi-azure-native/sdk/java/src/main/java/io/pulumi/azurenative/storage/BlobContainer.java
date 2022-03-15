@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storage.outputs.ImmutabilityPolicyPropertiesRespons
 import io.pulumi.azurenative.storage.outputs.LegalHoldPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Default the container to use specified encryption scope for all writes.
      * 
      */
-    @OutputExport(name="defaultEncryptionScope", type=String.class, parameters={})
+    @Export(name="defaultEncryptionScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultEncryptionScope;
 
     /**
@@ -53,7 +53,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Indicates whether the blob container was deleted.
      * 
      */
-    @OutputExport(name="deleted", type=Boolean.class, parameters={})
+    @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
@@ -67,7 +67,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Blob container deletion time.
      * 
      */
-    @OutputExport(name="deletedTime", type=String.class, parameters={})
+    @Export(name="deletedTime", type=String.class, parameters={})
     private Output<String> deletedTime;
 
     /**
@@ -81,7 +81,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Block override of encryption scope from the container default.
      * 
      */
-    @OutputExport(name="denyEncryptionScopeOverride", type=Boolean.class, parameters={})
+    @Export(name="denyEncryptionScopeOverride", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> denyEncryptionScopeOverride;
 
     /**
@@ -95,7 +95,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Resource Etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -109,7 +109,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.
      * 
      */
-    @OutputExport(name="hasImmutabilityPolicy", type=Boolean.class, parameters={})
+    @Export(name="hasImmutabilityPolicy", type=Boolean.class, parameters={})
     private Output<Boolean> hasImmutabilityPolicy;
 
     /**
@@ -123,7 +123,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
      * 
      */
-    @OutputExport(name="hasLegalHold", type=Boolean.class, parameters={})
+    @Export(name="hasLegalHold", type=Boolean.class, parameters={})
     private Output<Boolean> hasLegalHold;
 
     /**
@@ -137,7 +137,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The ImmutabilityPolicy property of the container.
      * 
      */
-    @OutputExport(name="immutabilityPolicy", type=ImmutabilityPolicyPropertiesResponse.class, parameters={})
+    @Export(name="immutabilityPolicy", type=ImmutabilityPolicyPropertiesResponse.class, parameters={})
     private Output<ImmutabilityPolicyPropertiesResponse> immutabilityPolicy;
 
     /**
@@ -151,7 +151,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Returns the date and time the container was last modified.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -165,7 +165,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.
      * 
      */
-    @OutputExport(name="leaseDuration", type=String.class, parameters={})
+    @Export(name="leaseDuration", type=String.class, parameters={})
     private Output<String> leaseDuration;
 
     /**
@@ -179,7 +179,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Lease state of the container.
      * 
      */
-    @OutputExport(name="leaseState", type=String.class, parameters={})
+    @Export(name="leaseState", type=String.class, parameters={})
     private Output<String> leaseState;
 
     /**
@@ -193,7 +193,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The lease status of the container.
      * 
      */
-    @OutputExport(name="leaseStatus", type=String.class, parameters={})
+    @Export(name="leaseStatus", type=String.class, parameters={})
     private Output<String> leaseStatus;
 
     /**
@@ -207,7 +207,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The LegalHold property of the container.
      * 
      */
-    @OutputExport(name="legalHold", type=LegalHoldPropertiesResponse.class, parameters={})
+    @Export(name="legalHold", type=LegalHoldPropertiesResponse.class, parameters={})
     private Output<LegalHoldPropertiesResponse> legalHold;
 
     /**
@@ -221,7 +221,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * A name-value pair to associate with the container as metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -235,7 +235,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -249,7 +249,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Specifies whether data in the container may be accessed publicly and the level of access.
      * 
      */
-    @OutputExport(name="publicAccess", type=String.class, parameters={})
+    @Export(name="publicAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicAccess;
 
     /**
@@ -263,7 +263,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * Remaining retention days for soft deleted blob container.
      * 
      */
-    @OutputExport(name="remainingRetentionDays", type=Integer.class, parameters={})
+    @Export(name="remainingRetentionDays", type=Integer.class, parameters={})
     private Output<Integer> remainingRetentionDays;
 
     /**
@@ -277,7 +277,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -291,7 +291,7 @@ public class BlobContainer extends io.pulumi.resources.CustomResource {
      * The version of the deleted blob container.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

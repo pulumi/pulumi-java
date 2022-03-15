@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * Caching behavior. Valid values are `FULL_REQUEST_CACHING` and `PER_RESOLVER_CACHING`.
      * 
      */
-    @InputImport(name="apiCachingBehavior", required=true)
+    @Import(name="apiCachingBehavior", required=true)
       private final Output<String> apiCachingBehavior;
 
     public Output<String> getApiCachingBehavior() {
@@ -31,7 +31,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * The GraphQL API ID.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -42,7 +42,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * At-rest encryption flag for cache. You cannot update this setting after creation.
      * 
      */
-    @InputImport(name="atRestEncryptionEnabled")
+    @Import(name="atRestEncryptionEnabled")
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
     public Output<Boolean> getAtRestEncryptionEnabled() {
@@ -53,7 +53,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * 
      */
-    @InputImport(name="transitEncryptionEnabled")
+    @Import(name="transitEncryptionEnabled")
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
     public Output<Boolean> getTransitEncryptionEnabled() {
@@ -64,7 +64,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * TTL in seconds for cache entries.
      * 
      */
-    @InputImport(name="ttl", required=true)
+    @Import(name="ttl", required=true)
       private final Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
@@ -75,7 +75,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
      * The cache instance type. Valid values are `SMALL`, `MEDIUM`, `LARGE`, `XLARGE`, `LARGE_2X`, `LARGE_4X`, `LARGE_8X`, `LARGE_12X`, `T2_SMALL`, `T2_MEDIUM`, `R4_LARGE`, `R4_XLARGE`, `R4_2XLARGE`, `R4_4XLARGE`, `R4_8XLARGE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

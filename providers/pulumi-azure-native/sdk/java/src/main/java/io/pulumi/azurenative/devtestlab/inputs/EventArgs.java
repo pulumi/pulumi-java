@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.NotificationChannelEventType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
      * 
      */
-    @InputImport(name="eventName")
+    @Import(name="eventName")
       private final @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
     public Output<Either<String,NotificationChannelEventType>> getEventName() {

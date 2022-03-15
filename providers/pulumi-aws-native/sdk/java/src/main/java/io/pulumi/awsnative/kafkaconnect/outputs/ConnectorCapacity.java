@@ -5,20 +5,20 @@ package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorAutoScaling;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorProvisionedCapacity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorCapacity {
     private final @Nullable ConnectorAutoScaling autoScaling;
     private final @Nullable ConnectorProvisionedCapacity provisionedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorCapacity(
-        @OutputCustomType.Parameter("autoScaling") @Nullable ConnectorAutoScaling autoScaling,
-        @OutputCustomType.Parameter("provisionedCapacity") @Nullable ConnectorProvisionedCapacity provisionedCapacity) {
+        @CustomType.Parameter("autoScaling") @Nullable ConnectorAutoScaling autoScaling,
+        @CustomType.Parameter("provisionedCapacity") @Nullable ConnectorProvisionedCapacity provisionedCapacity) {
         this.autoScaling = autoScaling;
         this.provisionedCapacity = provisionedCapacity;
     }

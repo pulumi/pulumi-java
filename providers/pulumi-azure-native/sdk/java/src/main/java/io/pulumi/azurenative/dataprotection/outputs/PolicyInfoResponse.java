@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.PolicyParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyInfoResponse {
     private final String policyId;
     /**
@@ -20,11 +20,11 @@ public final class PolicyInfoResponse {
     private final @Nullable PolicyParametersResponse policyParameters;
     private final String policyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyInfoResponse(
-        @OutputCustomType.Parameter("policyId") String policyId,
-        @OutputCustomType.Parameter("policyParameters") @Nullable PolicyParametersResponse policyParameters,
-        @OutputCustomType.Parameter("policyVersion") String policyVersion) {
+        @CustomType.Parameter("policyId") String policyId,
+        @CustomType.Parameter("policyParameters") @Nullable PolicyParametersResponse policyParameters,
+        @CustomType.Parameter("policyVersion") String policyVersion) {
         this.policyId = policyId;
         this.policyParameters = policyParameters;
         this.policyVersion = policyVersion;

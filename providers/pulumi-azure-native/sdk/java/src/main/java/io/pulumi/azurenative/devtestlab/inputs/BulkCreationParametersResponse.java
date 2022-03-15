@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BulkCreationParametersResponse extends io.pulumi.resources.In
      * The number of virtual machine instances to create.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {

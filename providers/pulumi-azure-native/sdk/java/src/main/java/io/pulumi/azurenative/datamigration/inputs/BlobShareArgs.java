@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BlobShareArgs extends io.pulumi.resources.ResourceArgs {
      * SAS URI of Azure Storage Account Container.
      * 
      */
-    @InputImport(name="sasUri", required=true)
+    @Import(name="sasUri", required=true)
       private final Output<String> sasUri;
 
     public Output<String> getSasUri() {

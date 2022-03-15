@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate {
     /**
      * A local file certificate.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate {
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate(
-        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile file,
-        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
+        @CustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile file,
+        @CustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
         this.file = file;
         this.sds = sds;
     }

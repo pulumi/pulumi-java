@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * ARM resource ID of the datastore where the data output will be stored.
      * 
      */
-    @InputImport(name="datastoreId")
+    @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
@@ -31,7 +31,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * Mechanism for data movement to datastore.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
 
     public Output<Either<String,DataBindingMode>> getMode() {
@@ -42,7 +42,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * Location of data inside the container process.
      * 
      */
-    @InputImport(name="pathOnCompute")
+    @Import(name="pathOnCompute")
       private final @Nullable Output<String> pathOnCompute;
 
     public Output<String> getPathOnCompute() {
@@ -53,7 +53,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * Path within the datastore to the data.
      * 
      */
-    @InputImport(name="pathOnDatastore")
+    @Import(name="pathOnDatastore")
       private final @Nullable Output<String> pathOnDatastore;
 
     public Output<String> getPathOnDatastore() {

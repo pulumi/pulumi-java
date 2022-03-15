@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -17,49 +17,49 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
 
     public static final CapacityReservationFleetInstanceTypeSpecificationArgs Empty = new CapacityReservationFleetInstanceTypeSpecificationArgs();
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="availabilityZoneId")
+    @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
         return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
     }
 
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
-    @InputImport(name="instancePlatform")
+    @Import(name="instancePlatform")
       private final @Nullable Output<String> instancePlatform;
 
     public Output<String> getInstancePlatform() {
         return this.instancePlatform == null ? Output.empty() : this.instancePlatform;
     }
 
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
         return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
         return this.priority == null ? Output.empty() : this.priority;
     }
 
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Double> weight;
 
     public Output<Double> getWeight() {

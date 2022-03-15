@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelfSubjectRulesReviewSpec {
     /**
      * Namespace to evaluate rules for. Required.
@@ -17,8 +17,8 @@ public final class SelfSubjectRulesReviewSpec {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor
-    private SelfSubjectRulesReviewSpec(@OutputCustomType.Parameter("namespace") @Nullable String namespace) {
+    @CustomType.Constructor
+    private SelfSubjectRulesReviewSpec(@CustomType.Parameter("namespace") @Nullable String namespace) {
         this.namespace = namespace;
     }
 

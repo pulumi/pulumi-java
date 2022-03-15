@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAccountResponse {
     /**
      * The IAM service account email address like test@myproject.iam.gserviceaccount.com
@@ -15,8 +15,8 @@ public final class ServiceAccountResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor
-    private ServiceAccountResponse(@OutputCustomType.Parameter("email") String email) {
+    @CustomType.Constructor
+    private ServiceAccountResponse(@CustomType.Parameter("email") String email) {
         this.email = email;
     }
 

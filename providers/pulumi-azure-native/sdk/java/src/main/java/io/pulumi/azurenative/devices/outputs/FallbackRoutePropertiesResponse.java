@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FallbackRoutePropertiesResponse {
     /**
      * The condition which is evaluated in order to apply the fallback route. If the condition is not provided it will evaluate to true by default. For grammar, See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
@@ -39,13 +39,13 @@ public final class FallbackRoutePropertiesResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FallbackRoutePropertiesResponse(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("endpointNames") List<String> endpointNames,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("source") String source) {
         this.condition = condition;
         this.endpointNames = endpointNames;
         this.isEnabled = isEnabled;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
      * 
      */
-    @InputImport(name="isErrorType")
+    @Import(name="isErrorType")
       private final @Nullable Output<Boolean> isErrorType;
 
     public Output<Boolean> getIsErrorType() {
@@ -34,7 +34,7 @@ public final class CustomErrorRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Selects messages to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {

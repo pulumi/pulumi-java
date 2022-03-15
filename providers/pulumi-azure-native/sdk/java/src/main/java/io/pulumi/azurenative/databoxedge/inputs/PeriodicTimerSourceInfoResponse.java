@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
      * Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final String schedule;
 
     public String getSchedule() {
@@ -33,7 +33,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
      * The time of the day that results in a valid trigger. Schedule is computed with reference to the time specified upto seconds. If timezone is not specified the time will considered to be in device timezone. The value will always be returned as UTC time.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -44,7 +44,7 @@ public final class PeriodicTimerSourceInfoResponse extends io.pulumi.resources.I
      * Topic where periodic events are published to IoT device.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable String topic;
 
     public Optional<String> getTopic() {

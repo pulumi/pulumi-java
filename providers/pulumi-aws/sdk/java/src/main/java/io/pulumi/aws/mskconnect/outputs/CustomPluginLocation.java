@@ -4,10 +4,10 @@
 package io.pulumi.aws.mskconnect.outputs;
 
 import io.pulumi.aws.mskconnect.outputs.CustomPluginLocationS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomPluginLocation {
     /**
      * Information of the plugin file stored in Amazon S3. See below.
@@ -15,8 +15,8 @@ public final class CustomPluginLocation {
      */
     private final CustomPluginLocationS3 s3;
 
-    @OutputCustomType.Constructor
-    private CustomPluginLocation(@OutputCustomType.Parameter("s3") CustomPluginLocationS3 s3) {
+    @CustomType.Constructor
+    private CustomPluginLocation(@CustomType.Parameter("s3") CustomPluginLocationS3 s3) {
         this.s3 = s3;
     }
 

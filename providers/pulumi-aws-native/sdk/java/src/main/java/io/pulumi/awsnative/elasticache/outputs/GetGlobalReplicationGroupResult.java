@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.elasticache.outputs;
 
 import io.pulumi.awsnative.elasticache.outputs.GlobalReplicationGroupMember;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalReplicationGroupResult {
     /**
      * Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
@@ -34,12 +34,12 @@ public final class GetGlobalReplicationGroupResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalReplicationGroupResult(
-        @OutputCustomType.Parameter("cacheParameterGroupName") @Nullable String cacheParameterGroupName,
-        @OutputCustomType.Parameter("globalReplicationGroupId") @Nullable String globalReplicationGroupId,
-        @OutputCustomType.Parameter("members") @Nullable List<GlobalReplicationGroupMember> members,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("cacheParameterGroupName") @Nullable String cacheParameterGroupName,
+        @CustomType.Parameter("globalReplicationGroupId") @Nullable String globalReplicationGroupId,
+        @CustomType.Parameter("members") @Nullable List<GlobalReplicationGroupMember> members,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.cacheParameterGroupName = cacheParameterGroupName;
         this.globalReplicationGroupId = globalReplicationGroupId;
         this.members = members;

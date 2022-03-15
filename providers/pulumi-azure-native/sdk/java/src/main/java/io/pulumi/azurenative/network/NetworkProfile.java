@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceConfigurat
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * List of chid container network interface configurations.
      * 
      */
-    @OutputExport(name="containerNetworkInterfaceConfigurations", type=List.class, parameters={ContainerNetworkInterfaceConfigurationResponse.class})
+    @Export(name="containerNetworkInterfaceConfigurations", type=List.class, parameters={ContainerNetworkInterfaceConfigurationResponse.class})
     private Output</* @Nullable */ List<ContainerNetworkInterfaceConfigurationResponse>> containerNetworkInterfaceConfigurations;
 
     /**
@@ -51,7 +51,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * List of child container network interfaces.
      * 
      */
-    @OutputExport(name="containerNetworkInterfaces", type=List.class, parameters={ContainerNetworkInterfaceResponse.class})
+    @Export(name="containerNetworkInterfaces", type=List.class, parameters={ContainerNetworkInterfaceResponse.class})
     private Output<List<ContainerNetworkInterfaceResponse>> containerNetworkInterfaces;
 
     /**
@@ -65,7 +65,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -79,7 +79,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -93,7 +93,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * The provisioning state of the network profile resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the network profile resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -135,7 +135,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

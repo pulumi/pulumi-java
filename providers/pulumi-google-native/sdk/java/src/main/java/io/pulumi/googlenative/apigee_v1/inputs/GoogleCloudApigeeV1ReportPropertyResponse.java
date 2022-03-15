@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
      * name of the property
      * 
      */
-    @InputImport(name="property", required=true)
+    @Import(name="property", required=true)
       private final String property;
 
     public String getProperty() {
@@ -29,7 +29,7 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends io.pulumi.r
      * property values
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> value;
 
     public List<GoogleCloudApigeeV1AttributeResponse> getValue() {

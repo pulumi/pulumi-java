@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.DatasetParameterType;
 import io.pulumi.awsnative.databrew.inputs.DatasetDatetimeOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,28 +22,28 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * Add the value of this parameter as a column in a dataset.
      * 
      */
-    @InputImport(name="createColumn")
+    @Import(name="createColumn")
       private final @Nullable Output<Boolean> createColumn;
 
     public Output<Boolean> getCreateColumn() {
         return this.createColumn == null ? Output.empty() : this.createColumn;
     }
 
-    @InputImport(name="datetimeOptions")
+    @Import(name="datetimeOptions")
       private final @Nullable Output<DatasetDatetimeOptionsArgs> datetimeOptions;
 
     public Output<DatasetDatetimeOptionsArgs> getDatetimeOptions() {
         return this.datetimeOptions == null ? Output.empty() : this.datetimeOptions;
     }
 
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<DatasetFilterExpressionArgs> filter;
 
     public Output<DatasetFilterExpressionArgs> getFilter() {
         return this.filter == null ? Output.empty() : this.filter;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
      * Parameter type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<DatasetParameterType> type;
 
     public Output<DatasetParameterType> getType() {

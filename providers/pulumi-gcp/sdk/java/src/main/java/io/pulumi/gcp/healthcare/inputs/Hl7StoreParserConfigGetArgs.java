@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * Determines whether messages with no header are allowed.
      * 
      */
-    @InputImport(name="allowNullHeader")
+    @Import(name="allowNullHeader")
       private final @Nullable Output<Boolean> allowNullHeader;
 
     public Output<Boolean> getAllowNullHeader() {
@@ -31,7 +31,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * store if schematized parsing is desired.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -43,7 +43,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * A base64-encoded string.
      * 
      */
-    @InputImport(name="segmentTerminator")
+    @Import(name="segmentTerminator")
       private final @Nullable Output<String> segmentTerminator;
 
     public Output<String> getSegmentTerminator() {
@@ -56,7 +56,7 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
      * Possible values are `V1` and `V2`.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.CustomAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.GoogleAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.IapCredentialResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthenticationResponse {
     /**
      * Authentication using a custom account.
@@ -27,11 +27,11 @@ public final class AuthenticationResponse {
      */
     private final IapCredentialResponse iapCredential;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthenticationResponse(
-        @OutputCustomType.Parameter("customAccount") CustomAccountResponse customAccount,
-        @OutputCustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount,
-        @OutputCustomType.Parameter("iapCredential") IapCredentialResponse iapCredential) {
+        @CustomType.Parameter("customAccount") CustomAccountResponse customAccount,
+        @CustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount,
+        @CustomType.Parameter("iapCredential") IapCredentialResponse iapCredential) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
         this.iapCredential = iapCredential;

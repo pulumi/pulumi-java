@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PacketMirroringForwardingRuleInfoResponse {
     /**
      * Unique identifier for the forwarding rule; defined by the server.
@@ -20,10 +20,10 @@ public final class PacketMirroringForwardingRuleInfoResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketMirroringForwardingRuleInfoResponse(
-        @OutputCustomType.Parameter("canonicalUrl") String canonicalUrl,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("canonicalUrl") String canonicalUrl,
+        @CustomType.Parameter("url") String url) {
         this.canonicalUrl = canonicalUrl;
         this.url = url;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.ResponseBasedDetectedErrorTypes;
 import io.pulumi.azurenative.cdn.inputs.HttpErrorRangeParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
      * The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
      * 
      */
-    @InputImport(name="httpErrorRanges")
+    @Import(name="httpErrorRanges")
       private final @Nullable Output<List<HttpErrorRangeParametersArgs>> httpErrorRanges;
 
     public Output<List<HttpErrorRangeParametersArgs>> getHttpErrorRanges() {
@@ -36,7 +36,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
      * Type of response errors for real user requests for which origin will be deemed unhealthy
      * 
      */
-    @InputImport(name="responseBasedDetectedErrorTypes")
+    @Import(name="responseBasedDetectedErrorTypes")
       private final @Nullable Output<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes;
 
     public Output<ResponseBasedDetectedErrorTypes> getResponseBasedDetectedErrorTypes() {
@@ -47,7 +47,7 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
      * The percentage of failed requests in the sample where failover should trigger.
      * 
      */
-    @InputImport(name="responseBasedFailoverThresholdPercentage")
+    @Import(name="responseBasedFailoverThresholdPercentage")
       private final @Nullable Output<Integer> responseBasedFailoverThresholdPercentage;
 
     public Output<Integer> getResponseBasedFailoverThresholdPercentage() {

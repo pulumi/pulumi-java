@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
      * 
      */
-    @InputImport(name="emails")
+    @Import(name="emails")
       private final @Nullable Output<List<String>> emails;
 
     public Output<List<String>> getEmails() {
@@ -34,7 +34,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * Optional but at least one of uris, emails or instruction must be specified. Use this field to provide instructions, such as "Mail your application to ...", that a candidate can follow to apply for the job. This field accepts and sanitizes HTML input, and also accepts bold, italic, ordered list, and unordered list markup tags. The maximum number of allowed characters is 3,000.
      * 
      */
-    @InputImport(name="instruction")
+    @Import(name="instruction")
       private final @Nullable Output<String> instruction;
 
     public Output<String> getInstruction() {
@@ -45,7 +45,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
      * Optional but at least one of uris, emails or instruction must be specified. Use this URI field to direct an applicant to a website, for example to link to an online application form. The maximum number of allowed characters for each entry is 2,000.
      * 
      */
-    @InputImport(name="uris")
+    @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
     public Output<List<String>> getUris() {

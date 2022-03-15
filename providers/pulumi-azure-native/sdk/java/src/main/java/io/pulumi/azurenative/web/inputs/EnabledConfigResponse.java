@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs 
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

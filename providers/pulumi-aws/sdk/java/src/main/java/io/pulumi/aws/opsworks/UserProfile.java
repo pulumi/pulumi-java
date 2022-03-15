@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.opsworks.UserProfileArgs;
 import io.pulumi.aws.opsworks.inputs.UserProfileState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * Whether users can specify their own SSH public key through the My Settings page
      * 
      */
-    @OutputExport(name="allowSelfManagement", type=Boolean.class, parameters={})
+    @Export(name="allowSelfManagement", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowSelfManagement;
 
     /**
@@ -39,7 +39,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The users public key
      * 
      */
-    @OutputExport(name="sshPublicKey", type=String.class, parameters={})
+    @Export(name="sshPublicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sshPublicKey;
 
     /**
@@ -53,7 +53,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The ssh username, with witch this user wants to log in
      * 
      */
-    @OutputExport(name="sshUsername", type=String.class, parameters={})
+    @Export(name="sshUsername", type=String.class, parameters={})
     private Output<String> sshUsername;
 
     /**
@@ -67,7 +67,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The user's IAM ARN
      * 
      */
-    @OutputExport(name="userArn", type=String.class, parameters={})
+    @Export(name="userArn", type=String.class, parameters={})
     private Output<String> userArn;
 
     /**

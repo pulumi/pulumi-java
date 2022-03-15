@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
      * The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
      * 
      */
-    @InputImport(name="actionThresholdType", required=true)
+    @Import(name="actionThresholdType", required=true)
       private final Output<String> actionThresholdType;
 
     public Output<String> getActionThresholdType() {
@@ -29,7 +29,7 @@ public final class BudgetActionActionThresholdArgs extends io.pulumi.resources.R
      * The threshold of a notification.
      * 
      */
-    @InputImport(name="actionThresholdValue", required=true)
+    @Import(name="actionThresholdValue", required=true)
       private final Output<Double> actionThresholdValue;
 
     public Output<Double> getActionThresholdValue() {

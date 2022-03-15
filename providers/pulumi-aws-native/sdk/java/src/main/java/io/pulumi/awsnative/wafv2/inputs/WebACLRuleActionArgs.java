@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCaptchaActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCountActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,28 +21,28 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final WebACLRuleActionArgs Empty = new WebACLRuleActionArgs();
 
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<WebACLAllowActionArgs> allow;
 
     public Output<WebACLAllowActionArgs> getAllow() {
         return this.allow == null ? Output.empty() : this.allow;
     }
 
-    @InputImport(name="block")
+    @Import(name="block")
       private final @Nullable Output<WebACLBlockActionArgs> block;
 
     public Output<WebACLBlockActionArgs> getBlock() {
         return this.block == null ? Output.empty() : this.block;
     }
 
-    @InputImport(name="captcha")
+    @Import(name="captcha")
       private final @Nullable Output<WebACLCaptchaActionArgs> captcha;
 
     public Output<WebACLCaptchaActionArgs> getCaptcha() {
         return this.captcha == null ? Output.empty() : this.captcha;
     }
 
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<WebACLCountActionArgs> count;
 
     public Output<WebACLCountActionArgs> getCount() {

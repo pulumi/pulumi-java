@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3TestCaseResultTestResult;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * The conversation turns uttered during the test case replay in chronological order.
      * 
      */
-    @InputImport(name="conversationTurns")
+    @Import(name="conversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> conversationTurns;
 
     public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getConversationTurns() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * Environment where the test was run. If not set, it indicates the draft environment.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * Whether the test case passed in the agent environment.
      * 
      */
-    @InputImport(name="testResult")
+    @Import(name="testResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> testResult;
 
     public Output<GoogleCloudDialogflowCxV3TestCaseResultTestResult> getTestResult() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultArgs extends io.pulumi
      * The time that the test was run.
      * 
      */
-    @InputImport(name="testTime")
+    @Import(name="testTime")
       private final @Nullable Output<String> testTime;
 
     public Output<String> getTestTime() {

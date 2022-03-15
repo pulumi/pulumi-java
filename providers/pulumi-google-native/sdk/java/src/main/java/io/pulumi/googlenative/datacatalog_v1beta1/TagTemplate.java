@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.TagTemplateArgs;
@@ -22,7 +22,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The display name for this template. Defaults to an empty string.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -36,7 +36,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Map of tag template field IDs to the settings for the field. This map is an exhaustive list of the allowed fields. This map must contain at least one field and at most 500 fields. The keys to this map are tag template field IDs. Field IDs can contain letters (both uppercase and lowercase), numbers (0-9) and underscores (_). Field IDs must be at least 1 character long and at most 64 characters long. Field IDs must start with a letter or underscore.
      * 
      */
-    @OutputExport(name="fields", type=Map.class, parameters={String.class, String.class})
+    @Export(name="fields", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> fields;
 
     /**
@@ -50,7 +50,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The resource name of the tag template in URL format. Example: * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id} Note that this TagTemplate and its child resources may not actually be stored in the location in this name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

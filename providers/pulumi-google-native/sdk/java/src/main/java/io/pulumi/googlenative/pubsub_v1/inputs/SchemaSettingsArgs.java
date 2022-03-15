@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaSettingsEncoding;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The encoding of messages validated against `schema`.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<SchemaSettingsEncoding> encoding;
 
     public Output<SchemaSettingsEncoding> getEncoding() {
@@ -34,7 +34,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the schema that messages published should be validated against. Format is `projects/{project}/schemas/{schema}`. The value of this field will be `_deleted-schema_` if the schema has been deleted.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<String> schema;
 
     public Output<String> getSchema() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.IntegrationResponseArgs;
 import io.pulumi.aws.apigateway.inputs.IntegrationResponseState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
      * 
      */
-    @OutputExport(name="contentHandling", type=String.class, parameters={})
+    @Export(name="contentHandling", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentHandling;
 
     /**
@@ -50,7 +50,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    @OutputExport(name="httpMethod", type=String.class, parameters={})
+    @Export(name="httpMethod", type=String.class, parameters={})
     private Output<String> httpMethod;
 
     /**
@@ -64,7 +64,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * The API resource ID
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -79,7 +79,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
      * 
      */
-    @OutputExport(name="responseParameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="responseParameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> responseParameters;
 
     /**
@@ -94,7 +94,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * A map specifying the templates used to transform the integration response body
      * 
      */
-    @OutputExport(name="responseTemplates", type=Map.class, parameters={String.class, String.class})
+    @Export(name="responseTemplates", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> responseTemplates;
 
     /**
@@ -108,7 +108,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * The ID of the associated REST API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**
@@ -125,7 +125,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
      * 
      */
-    @OutputExport(name="selectionPattern", type=String.class, parameters={})
+    @Export(name="selectionPattern", type=String.class, parameters={})
     private Output</* @Nullable */ String> selectionPattern;
 
     /**
@@ -142,7 +142,7 @@ public class IntegrationResponse extends io.pulumi.resources.CustomResource {
      * The HTTP status code
      * 
      */
-    @OutputExport(name="statusCode", type=String.class, parameters={})
+    @Export(name="statusCode", type=String.class, parameters={})
     private Output<String> statusCode;
 
     /**

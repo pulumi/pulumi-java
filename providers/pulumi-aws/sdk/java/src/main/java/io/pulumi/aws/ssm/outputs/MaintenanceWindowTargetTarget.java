@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTargetTarget {
     private final String key;
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTargetTarget(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.values = values;
     }

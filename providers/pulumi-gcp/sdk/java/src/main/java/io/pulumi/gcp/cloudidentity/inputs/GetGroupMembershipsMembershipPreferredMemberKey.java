@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey extends io.pu
      * to the Identity Source's requirements.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -32,7 +32,7 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey extends io.pu
      * If populated, the EntityKey represents an external-identity-mapped group.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final String namespace;
 
     public String getNamespace() {

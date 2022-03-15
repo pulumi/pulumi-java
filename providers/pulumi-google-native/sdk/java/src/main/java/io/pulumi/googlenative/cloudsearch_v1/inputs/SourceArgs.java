@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourcePredefinedSource;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * Source name for content indexed by the Indexing API.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * Predefined content source for Google Apps.
      * 
      */
-    @InputImport(name="predefinedSource")
+    @Import(name="predefinedSource")
       private final @Nullable Output<SourcePredefinedSource> predefinedSource;
 
     public Output<SourcePredefinedSource> getPredefinedSource() {

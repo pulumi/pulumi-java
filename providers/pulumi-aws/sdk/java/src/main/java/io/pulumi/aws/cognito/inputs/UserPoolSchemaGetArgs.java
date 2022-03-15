@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.UserPoolSchemaNumberAttributeConstraintsGetArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolSchemaStringAttributeConstraintsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
      * 
      */
-    @InputImport(name="attributeDataType", required=true)
+    @Import(name="attributeDataType", required=true)
       private final Output<String> attributeDataType;
 
     public Output<String> getAttributeDataType() {
@@ -32,7 +32,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Whether the attribute type is developer only.
      * 
      */
-    @InputImport(name="developerOnlyAttribute")
+    @Import(name="developerOnlyAttribute")
       private final @Nullable Output<Boolean> developerOnlyAttribute;
 
     public Output<Boolean> getDeveloperOnlyAttribute() {
@@ -43,7 +43,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Whether the attribute can be changed once it has been created.
      * 
      */
-    @InputImport(name="mutable")
+    @Import(name="mutable")
       private final @Nullable Output<Boolean> mutable;
 
     public Output<Boolean> getMutable() {
@@ -54,7 +54,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Name of the attribute.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Configuration block for the constraints for an attribute of the number type. Detailed below.
      * 
      */
-    @InputImport(name="numberAttributeConstraints")
+    @Import(name="numberAttributeConstraints")
       private final @Nullable Output<UserPoolSchemaNumberAttributeConstraintsGetArgs> numberAttributeConstraints;
 
     public Output<UserPoolSchemaNumberAttributeConstraintsGetArgs> getNumberAttributeConstraints() {
@@ -76,7 +76,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
     public Output<Boolean> getRequired() {
@@ -87,7 +87,7 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
      * Constraints for an attribute of the string type. Detailed below.
      * 
      */
-    @InputImport(name="stringAttributeConstraints")
+    @Import(name="stringAttributeConstraints")
       private final @Nullable Output<UserPoolSchemaStringAttributeConstraintsGetArgs> stringAttributeConstraints;
 
     public Output<UserPoolSchemaStringAttributeConstraintsGetArgs> getStringAttributeConstraints() {

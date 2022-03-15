@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
      * The ID of the Route 53 Resolver query logging configuration that you want to associate a VPC with.
      * 
      */
-    @InputImport(name="resolverQueryLogConfigId", required=true)
+    @Import(name="resolverQueryLogConfigId", required=true)
       private final Output<String> resolverQueryLogConfigId;
 
     public Output<String> getResolverQueryLogConfigId() {
@@ -28,7 +28,7 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
      * The ID of a VPC that you want this query logging configuration to log queries for.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {

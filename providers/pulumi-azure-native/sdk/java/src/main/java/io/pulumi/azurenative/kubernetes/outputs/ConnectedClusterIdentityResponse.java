@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.kubernetes.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectedClusterIdentityResponse {
     /**
      * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
@@ -25,11 +25,11 @@ public final class ConnectedClusterIdentityResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectedClusterIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

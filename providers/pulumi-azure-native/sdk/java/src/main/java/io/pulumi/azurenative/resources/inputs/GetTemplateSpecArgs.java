@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
      * Allows for expansion of additional Template Spec details in the response. Optional.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetTemplateSpecArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Template Spec.
      * 
      */
-    @InputImport(name="templateSpecName", required=true)
+    @Import(name="templateSpecName", required=true)
       private final String templateSpecName;
 
     public String getTemplateSpecName() {

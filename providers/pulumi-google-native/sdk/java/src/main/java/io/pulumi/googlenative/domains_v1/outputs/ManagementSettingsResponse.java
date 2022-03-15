@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagementSettingsResponse {
     /**
      * The renewal method for this `Registration`.
@@ -20,10 +20,10 @@ public final class ManagementSettingsResponse {
      */
     private final String transferLockState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementSettingsResponse(
-        @OutputCustomType.Parameter("renewalMethod") String renewalMethod,
-        @OutputCustomType.Parameter("transferLockState") String transferLockState) {
+        @CustomType.Parameter("renewalMethod") String renewalMethod,
+        @CustomType.Parameter("transferLockState") String transferLockState) {
         this.renewalMethod = renewalMethod;
         this.transferLockState = transferLockState;
     }

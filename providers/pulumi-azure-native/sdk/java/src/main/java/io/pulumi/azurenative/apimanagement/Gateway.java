@@ -8,7 +8,7 @@ import io.pulumi.azurenative.apimanagement.GatewayArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ResourceLocationDataContractResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Gateway description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -49,7 +49,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Gateway location.
      * 
      */
-    @OutputExport(name="locationData", type=ResourceLocationDataContractResponse.class, parameters={})
+    @Export(name="locationData", type=ResourceLocationDataContractResponse.class, parameters={})
     private Output</* @Nullable */ ResourceLocationDataContractResponse> locationData;
 
     /**
@@ -63,7 +63,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

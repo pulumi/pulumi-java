@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1WorkloadResponse {
     /**
      * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
@@ -21,10 +21,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
      */
     private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1WorkloadResponse(
-        @OutputCustomType.Parameter("dataflowFlexTemplateRequest") GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
-        @OutputCustomType.Parameter("dataflowLaunchTemplateRequest") GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
+        @CustomType.Parameter("dataflowFlexTemplateRequest") GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
+        @CustomType.Parameter("dataflowLaunchTemplateRequest") GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
         this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
         this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
      * Git commit hash.
      * 
      */
-    @InputImport(name="revisionId", required=true)
+    @Import(name="revisionId", required=true)
       private final Output<String> revisionId;
 
     public Output<String> getRevisionId() {
@@ -33,7 +33,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs e
      * Git repository URL.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectionMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectorProfileResult {
     /**
      * Mode in which data transfer should be enabled. Private connection mode is currently enabled for Salesforce, Snowflake, Trendmicro and Singular
@@ -28,11 +28,11 @@ public final class GetConnectorProfileResult {
      */
     private final @Nullable String credentialsArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectorProfileResult(
-        @OutputCustomType.Parameter("connectionMode") @Nullable ConnectorProfileConnectionMode connectionMode,
-        @OutputCustomType.Parameter("connectorProfileArn") @Nullable String connectorProfileArn,
-        @OutputCustomType.Parameter("credentialsArn") @Nullable String credentialsArn) {
+        @CustomType.Parameter("connectionMode") @Nullable ConnectorProfileConnectionMode connectionMode,
+        @CustomType.Parameter("connectorProfileArn") @Nullable String connectorProfileArn,
+        @CustomType.Parameter("credentialsArn") @Nullable String credentialsArn) {
         this.connectionMode = connectionMode;
         this.connectorProfileArn = connectorProfileArn;
         this.credentialsArn = credentialsArn;

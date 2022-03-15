@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLBIPRangesResult {
     /**
      * The IP ranges used for health checks when **HTTP(S), SSL proxy, TCP proxy, and Internal load balancing** is used
@@ -26,11 +26,11 @@ public final class GetLBIPRangesResult {
      */
     private final List<String> networks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLBIPRangesResult(
-        @OutputCustomType.Parameter("httpSslTcpInternals") List<String> httpSslTcpInternals,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("networks") List<String> networks) {
+        @CustomType.Parameter("httpSslTcpInternals") List<String> httpSslTcpInternals,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("networks") List<String> networks) {
         this.httpSslTcpInternals = httpSslTcpInternals;
         this.id = id;
         this.networks = networks;

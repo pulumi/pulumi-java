@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.LoadBalancerTlsCertificateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
      * An array of strings listing alternative domains and subdomains for your SSL/TLS certificate.
      * 
      */
-    @OutputExport(name="certificateAlternativeNames", type=List.class, parameters={String.class})
+    @Export(name="certificateAlternativeNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> certificateAlternativeNames;
 
     /**
@@ -37,7 +37,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
      * The domain name (e.g., example.com ) for your SSL/TLS certificate.
      * 
      */
-    @OutputExport(name="certificateDomainName", type=String.class, parameters={})
+    @Export(name="certificateDomainName", type=String.class, parameters={})
     private Output<String> certificateDomainName;
 
     /**
@@ -51,7 +51,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
      * The SSL/TLS certificate name.
      * 
      */
-    @OutputExport(name="certificateName", type=String.class, parameters={})
+    @Export(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
     /**
@@ -65,7 +65,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
      * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
      * 
      */
-    @OutputExport(name="isAttached", type=Boolean.class, parameters={})
+    @Export(name="isAttached", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAttached;
 
     /**
@@ -79,7 +79,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
      * The name of your load balancer.
      * 
      */
-    @OutputExport(name="loadBalancerName", type=String.class, parameters={})
+    @Export(name="loadBalancerName", type=String.class, parameters={})
     private Output<String> loadBalancerName;
 
     /**
@@ -89,7 +89,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
     public Output<String> getLoadBalancerName() {
         return this.loadBalancerName;
     }
-    @OutputExport(name="loadBalancerTlsCertificateArn", type=String.class, parameters={})
+    @Export(name="loadBalancerTlsCertificateArn", type=String.class, parameters={})
     private Output<String> loadBalancerTlsCertificateArn;
 
     public Output<String> getLoadBalancerTlsCertificateArn() {
@@ -99,7 +99,7 @@ public class LoadBalancerTlsCertificate extends io.pulumi.resources.CustomResour
      * The validation status of the SSL/TLS certificate.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

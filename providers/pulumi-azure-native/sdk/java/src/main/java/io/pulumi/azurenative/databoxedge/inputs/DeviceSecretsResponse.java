@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.SecretResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of BMCDefaultUserPassword
      * 
      */
-    @InputImport(name="bmcDefaultUserPassword")
+    @Import(name="bmcDefaultUserPassword")
       private final @Nullable SecretResponse bmcDefaultUserPassword;
 
     public Optional<SecretResponse> getBmcDefaultUserPassword() {
@@ -33,7 +33,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of HcsDataVolumeBitLockerExternalKey
      * 
      */
-    @InputImport(name="hcsDataVolumeBitLockerExternalKey")
+    @Import(name="hcsDataVolumeBitLockerExternalKey")
       private final @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
 
     public Optional<SecretResponse> getHcsDataVolumeBitLockerExternalKey() {
@@ -44,7 +44,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of HcsInternalVolumeBitLockerExternalKey
      * 
      */
-    @InputImport(name="hcsInternalVolumeBitLockerExternalKey")
+    @Import(name="hcsInternalVolumeBitLockerExternalKey")
       private final @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
 
     public Optional<SecretResponse> getHcsInternalVolumeBitLockerExternalKey() {
@@ -55,7 +55,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of RotateKeyForDataVolumeBitlocker
      * 
      */
-    @InputImport(name="rotateKeyForDataVolumeBitlocker")
+    @Import(name="rotateKeyForDataVolumeBitlocker")
       private final @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
 
     public Optional<SecretResponse> getRotateKeyForDataVolumeBitlocker() {
@@ -66,7 +66,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of RotateKeysForSedDrivesSerialized
      * 
      */
-    @InputImport(name="rotateKeysForSedDrivesSerialized")
+    @Import(name="rotateKeysForSedDrivesSerialized")
       private final @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
 
     public Optional<SecretResponse> getRotateKeysForSedDrivesSerialized() {
@@ -77,7 +77,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of SEDEncryptionExternalKey
      * 
      */
-    @InputImport(name="sedEncryptionExternalKey")
+    @Import(name="sedEncryptionExternalKey")
       private final @Nullable SecretResponse sedEncryptionExternalKey;
 
     public Optional<SecretResponse> getSedEncryptionExternalKey() {
@@ -88,7 +88,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of SEDEncryptionExternalKeyId
      * 
      */
-    @InputImport(name="sedEncryptionExternalKeyId")
+    @Import(name="sedEncryptionExternalKeyId")
       private final @Nullable SecretResponse sedEncryptionExternalKeyId;
 
     public Optional<SecretResponse> getSedEncryptionExternalKeyId() {
@@ -99,7 +99,7 @@ public final class DeviceSecretsResponse extends io.pulumi.resources.InvokeArgs 
      * Keyvault Id of SystemVolumeBitLockerRecoveryKey
      * 
      */
-    @InputImport(name="systemVolumeBitLockerRecoveryKey")
+    @Import(name="systemVolumeBitLockerRecoveryKey")
       private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
     public Optional<SecretResponse> getSystemVolumeBitLockerRecoveryKey() {

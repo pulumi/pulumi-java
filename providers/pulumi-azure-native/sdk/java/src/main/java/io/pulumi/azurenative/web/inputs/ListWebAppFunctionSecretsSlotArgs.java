@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
      * Function name.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final String functionName;
 
     public String getFunctionName() {
@@ -27,7 +27,7 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
      * Site name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class ListWebAppFunctionSecretsSlotArgs extends io.pulumi.resources
      * Name of the deployment slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final String slot;
 
     public String getSlot() {

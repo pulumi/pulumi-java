@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
      * The ID that uniquely identifies a billing account.
      * 
      */
-    @InputImport(name="billingAccountName", required=true)
+    @Import(name="billingAccountName", required=true)
       private final String billingAccountName;
 
     public String getBillingAccountName() {
@@ -27,7 +27,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
      * The ID that uniquely identifies a role assignment.
      * 
      */
-    @InputImport(name="billingRoleAssignmentName", required=true)
+    @Import(name="billingRoleAssignmentName", required=true)
       private final String billingRoleAssignmentName;
 
     public String getBillingRoleAssignmentName() {
@@ -38,7 +38,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
      * The ID that uniquely identifies a department.
      * 
      */
-    @InputImport(name="departmentName", required=true)
+    @Import(name="departmentName", required=true)
       private final String departmentName;
 
     public String getDepartmentName() {

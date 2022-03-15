@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunSourcePropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunTargetPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<List<String>> artifacts;
 
     public Output<List<String>> getArtifacts() {
@@ -39,7 +39,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * The digest of the tar used to transfer the artifacts.
      * 
      */
-    @InputImport(name="catalogDigest")
+    @Import(name="catalogDigest")
       private final @Nullable Output<String> catalogDigest;
 
     public Output<String> getCatalogDigest() {
@@ -50,7 +50,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * The resource ID of the pipeline to run.
      * 
      */
-    @InputImport(name="pipelineResourceId")
+    @Import(name="pipelineResourceId")
       private final @Nullable Output<String> pipelineResourceId;
 
     public Output<String> getPipelineResourceId() {
@@ -61,7 +61,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * The source properties of the pipeline run.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<PipelineRunSourcePropertiesArgs> source;
 
     public Output<PipelineRunSourcePropertiesArgs> getSource() {
@@ -72,7 +72,7 @@ public final class PipelineRunRequestArgs extends io.pulumi.resources.ResourceAr
      * The target properties of the pipeline run.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<PipelineRunTargetPropertiesArgs> target;
 
     public Output<PipelineRunTargetPropertiesArgs> getTarget() {

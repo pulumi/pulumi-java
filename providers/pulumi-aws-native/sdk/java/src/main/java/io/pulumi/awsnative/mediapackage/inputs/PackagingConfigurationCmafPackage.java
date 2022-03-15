@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationCmafEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifest;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
 
     public static final PackagingConfigurationCmafPackage Empty = new PackagingConfigurationCmafPackage();
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable PackagingConfigurationCmafEncryption encryption;
 
     public Optional<PackagingConfigurationCmafEncryption> getEncryption() {
@@ -33,7 +33,7 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
      * A list of HLS manifest configurations.
      * 
      */
-    @InputImport(name="hlsManifests", required=true)
+    @Import(name="hlsManifests", required=true)
       private final List<PackagingConfigurationHlsManifest> hlsManifests;
 
     public List<PackagingConfigurationHlsManifest> getHlsManifests() {
@@ -44,14 +44,14 @@ public final class PackagingConfigurationCmafPackage extends io.pulumi.resources
      * When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set (SPS), Picture Parameter Set (PPS), and Video Parameter Set (VPS) metadata in every video segment instead of in the init fragment. This lets you use different SPS/PPS/VPS settings for your assets during content playback.
      * 
      */
-    @InputImport(name="includeEncoderConfigurationInSegments")
+    @Import(name="includeEncoderConfigurationInSegments")
       private final @Nullable Boolean includeEncoderConfigurationInSegments;
 
     public Optional<Boolean> getIncludeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Optional.empty() : Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
 
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {

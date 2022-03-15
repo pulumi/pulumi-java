@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
      * Without a value, AWS will treat this bound as infinity.
      * 
      */
-    @InputImport(name="metricIntervalLowerBound")
+    @Import(name="metricIntervalLowerBound")
       private final @Nullable Output<String> metricIntervalLowerBound;
 
     public Output<String> getMetricIntervalLowerBound() {
@@ -35,7 +35,7 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
      * must be greater than the lower bound.
      * 
      */
-    @InputImport(name="metricIntervalUpperBound")
+    @Import(name="metricIntervalUpperBound")
       private final @Nullable Output<String> metricIntervalUpperBound;
 
     public Output<String> getMetricIntervalUpperBound() {
@@ -48,7 +48,7 @@ public final class PolicyStepAdjustmentArgs extends io.pulumi.resources.Resource
      * up. A negative value scales down.
      * 
      */
-    @InputImport(name="scalingAdjustment", required=true)
+    @Import(name="scalingAdjustment", required=true)
       private final Output<Integer> scalingAdjustment;
 
     public Output<Integer> getScalingAdjustment() {

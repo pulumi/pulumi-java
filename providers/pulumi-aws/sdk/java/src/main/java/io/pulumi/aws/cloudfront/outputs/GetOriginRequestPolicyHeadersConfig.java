@@ -4,20 +4,20 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.GetOriginRequestPolicyHeadersConfigHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOriginRequestPolicyHeadersConfig {
     private final String headerBehavior;
     private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOriginRequestPolicyHeadersConfig(
-        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
-        @OutputCustomType.Parameter("headers") List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
+        @CustomType.Parameter("headerBehavior") String headerBehavior,
+        @CustomType.Parameter("headers") List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

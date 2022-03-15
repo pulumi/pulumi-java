@@ -4,14 +4,14 @@
 package io.pulumi.aws.ram.outputs;
 
 import io.pulumi.aws.ram.outputs.GetResourceShareFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceShareResult {
     /**
      * The Amazon Resource Name (ARN) of the resource share.
@@ -42,16 +42,16 @@ public final class GetResourceShareResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceShareResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetResourceShareFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owningAccountId") String owningAccountId,
-        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("filters") @Nullable List<GetResourceShareFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owningAccountId") String owningAccountId,
+        @CustomType.Parameter("resourceOwner") String resourceOwner,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.filters = filters;
         this.id = id;

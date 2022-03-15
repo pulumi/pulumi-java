@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceAttemptResultResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceStatusResponse {
     /**
      * Optional. Represents time when the instance was completed. It is not guaranteed to be set in happens-before order across separate operations. It is represented in RFC3339 form and is in UTC. +optional
@@ -52,16 +52,16 @@ public final class InstanceStatusResponse {
      */
     private final Integer succeeded;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceStatusResponse(
-        @OutputCustomType.Parameter("completionTime") String completionTime,
-        @OutputCustomType.Parameter("failed") Integer failed,
-        @OutputCustomType.Parameter("index") Integer index,
-        @OutputCustomType.Parameter("lastAttemptResult") InstanceAttemptResultResponse lastAttemptResult,
-        @OutputCustomType.Parameter("lastExitCode") Integer lastExitCode,
-        @OutputCustomType.Parameter("restarted") Integer restarted,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("succeeded") Integer succeeded) {
+        @CustomType.Parameter("completionTime") String completionTime,
+        @CustomType.Parameter("failed") Integer failed,
+        @CustomType.Parameter("index") Integer index,
+        @CustomType.Parameter("lastAttemptResult") InstanceAttemptResultResponse lastAttemptResult,
+        @CustomType.Parameter("lastExitCode") Integer lastExitCode,
+        @CustomType.Parameter("restarted") Integer restarted,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("succeeded") Integer succeeded) {
         this.completionTime = completionTime;
         this.failed = failed;
         this.index = index;

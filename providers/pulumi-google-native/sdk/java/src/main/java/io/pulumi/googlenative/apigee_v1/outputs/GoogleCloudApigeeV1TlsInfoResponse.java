@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TlsInfoCommonNameResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1TlsInfoResponse {
     /**
      * The SSL/TLS cipher suites to be used. Must be one of the cipher suite names listed in: http://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#ciphersuites
@@ -58,17 +58,17 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
      */
     private final String trustStore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1TlsInfoResponse(
-        @OutputCustomType.Parameter("ciphers") List<String> ciphers,
-        @OutputCustomType.Parameter("clientAuthEnabled") Boolean clientAuthEnabled,
-        @OutputCustomType.Parameter("commonName") GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("ignoreValidationErrors") Boolean ignoreValidationErrors,
-        @OutputCustomType.Parameter("keyAlias") String keyAlias,
-        @OutputCustomType.Parameter("keyStore") String keyStore,
-        @OutputCustomType.Parameter("protocols") List<String> protocols,
-        @OutputCustomType.Parameter("trustStore") String trustStore) {
+        @CustomType.Parameter("ciphers") List<String> ciphers,
+        @CustomType.Parameter("clientAuthEnabled") Boolean clientAuthEnabled,
+        @CustomType.Parameter("commonName") GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("ignoreValidationErrors") Boolean ignoreValidationErrors,
+        @CustomType.Parameter("keyAlias") String keyAlias,
+        @CustomType.Parameter("keyStore") String keyStore,
+        @CustomType.Parameter("protocols") List<String> protocols,
+        @CustomType.Parameter("trustStore") String trustStore) {
         this.ciphers = ciphers;
         this.clientAuthEnabled = clientAuthEnabled;
         this.commonName = commonName;

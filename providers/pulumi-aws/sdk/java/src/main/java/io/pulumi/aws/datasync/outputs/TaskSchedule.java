@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskSchedule {
     /**
      * Specifies the schedule you want your task to use for repeated executions. For more information, see [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
@@ -15,8 +15,8 @@ public final class TaskSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
-    private TaskSchedule(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+    @CustomType.Constructor
+    private TaskSchedule(@CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

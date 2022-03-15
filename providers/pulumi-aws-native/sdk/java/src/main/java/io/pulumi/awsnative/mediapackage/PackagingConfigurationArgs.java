@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsPackageA
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * A CMAF packaging configuration.
      * 
      */
-    @InputImport(name="cmafPackage")
+    @Import(name="cmafPackage")
       private final @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
     public Output<PackagingConfigurationCmafPackageArgs> getCmafPackage() {
@@ -35,7 +35,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
      */
-    @InputImport(name="dashPackage")
+    @Import(name="dashPackage")
       private final @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
 
     public Output<PackagingConfigurationDashPackageArgs> getDashPackage() {
@@ -46,7 +46,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * An HTTP Live Streaming (HLS) packaging configuration.
      * 
      */
-    @InputImport(name="hlsPackage")
+    @Import(name="hlsPackage")
       private final @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
     public Output<PackagingConfigurationHlsPackageArgs> getHlsPackage() {
@@ -57,7 +57,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
      */
-    @InputImport(name="mssPackage")
+    @Import(name="mssPackage")
       private final @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
 
     public Output<PackagingConfigurationMssPackageArgs> getMssPackage() {
@@ -68,7 +68,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * The ID of a PackagingGroup.
      * 
      */
-    @InputImport(name="packagingGroupId", required=true)
+    @Import(name="packagingGroupId", required=true)
       private final Output<String> packagingGroupId;
 
     public Output<String> getPackagingGroupId() {
@@ -79,7 +79,7 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
     public Output<List<PackagingConfigurationTagArgs>> getTags() {

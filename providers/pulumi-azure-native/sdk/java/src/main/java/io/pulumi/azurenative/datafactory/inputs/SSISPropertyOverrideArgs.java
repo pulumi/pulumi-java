@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
      * Whether SSIS package property override value is sensitive data. Value will be encrypted in SSISDB if it is true
      * 
      */
-    @InputImport(name="isSensitive")
+    @Import(name="isSensitive")
       private final @Nullable Output<Boolean> isSensitive;
 
     public Output<Boolean> getIsSensitive() {
@@ -34,7 +34,7 @@ public final class SSISPropertyOverrideArgs extends io.pulumi.resources.Resource
      * SSIS package property override value. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Object> value;
 
     public Output<Object> getValue() {

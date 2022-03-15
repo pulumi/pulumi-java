@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstancePublicPortsPortInfo {
     /**
      * Set of CIDR blocks.
@@ -33,12 +33,12 @@ public final class InstancePublicPortsPortInfo {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstancePublicPortsPortInfo(
-        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("toPort") Integer toPort) {
+        @CustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("toPort") Integer toPort) {
         this.cidrs = cidrs;
         this.fromPort = fromPort;
         this.protocol = protocol;

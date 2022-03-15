@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetTriggerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTriggerArgs Empty = new GetTriggerArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="triggerId", required=true)
+    @Import(name="triggerId", required=true)
       private final String triggerId;
 
     public String getTriggerId() {

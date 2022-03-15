@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
      * A docker container image that resides in Google Container Registry.
      * 
      */
-    @InputImport(name="containerImage")
+    @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
     public Output<String> getContainerImage() {
@@ -34,7 +34,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
      * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK Harness.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -45,7 +45,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
      * If true, recommends the Dataflow service to use only one core per SDK container instance with this image. If false (or unset) recommends using more than one core per SDK container instance with this image for efficiency. Note that Dataflow service may choose to override this property if needed.
      * 
      */
-    @InputImport(name="useSingleCorePerContainer")
+    @Import(name="useSingleCorePerContainer")
       private final @Nullable Output<Boolean> useSingleCorePerContainer;
 
     public Output<Boolean> getUseSingleCorePerContainer() {

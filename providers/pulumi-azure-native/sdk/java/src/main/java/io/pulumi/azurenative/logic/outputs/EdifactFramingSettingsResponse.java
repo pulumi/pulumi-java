@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactFramingSettingsResponse {
     /**
      * The character encoding.
@@ -68,19 +68,19 @@ public final class EdifactFramingSettingsResponse {
      */
     private final @Nullable String serviceCodeListDirectoryVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactFramingSettingsResponse(
-        @OutputCustomType.Parameter("characterEncoding") @Nullable String characterEncoding,
-        @OutputCustomType.Parameter("characterSet") String characterSet,
-        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
-        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
-        @OutputCustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
-        @OutputCustomType.Parameter("protocolVersion") Integer protocolVersion,
-        @OutputCustomType.Parameter("releaseIndicator") Integer releaseIndicator,
-        @OutputCustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
-        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
-        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
-        @OutputCustomType.Parameter("serviceCodeListDirectoryVersion") @Nullable String serviceCodeListDirectoryVersion) {
+        @CustomType.Parameter("characterEncoding") @Nullable String characterEncoding,
+        @CustomType.Parameter("characterSet") String characterSet,
+        @CustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @CustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @CustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
+        @CustomType.Parameter("protocolVersion") Integer protocolVersion,
+        @CustomType.Parameter("releaseIndicator") Integer releaseIndicator,
+        @CustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
+        @CustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @CustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @CustomType.Parameter("serviceCodeListDirectoryVersion") @Nullable String serviceCodeListDirectoryVersion) {
         this.characterEncoding = characterEncoding;
         this.characterSet = characterSet;
         this.componentSeparator = componentSeparator;

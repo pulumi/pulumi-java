@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.AdhocBasedTaggingCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
      * Expected value is 'AdhocBasedTriggerContext'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {
@@ -34,7 +34,7 @@ public final class AdhocBasedTriggerContextArgs extends io.pulumi.resources.Reso
      * Tagging Criteria containing retention tag for adhoc backup.
      * 
      */
-    @InputImport(name="taggingCriteria", required=true)
+    @Import(name="taggingCriteria", required=true)
       private final Output<AdhocBasedTaggingCriteriaArgs> taggingCriteria;
 
     public Output<AdhocBasedTaggingCriteriaArgs> getTaggingCriteria() {

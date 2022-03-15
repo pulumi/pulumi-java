@@ -8,7 +8,7 @@ import io.pulumi.aws.opsworks.StackArgs;
 import io.pulumi.aws.opsworks.inputs.StackState;
 import io.pulumi.aws.opsworks.outputs.StackCustomCookbooksSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * If set to `"LATEST"`, OpsWorks will automatically install the latest version.
      * 
      */
-    @OutputExport(name="agentVersion", type=String.class, parameters={})
+    @Export(name="agentVersion", type=String.class, parameters={})
     private Output<String> agentVersion;
 
     /**
@@ -46,7 +46,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
     public Output<String> getAgentVersion() {
         return this.agentVersion;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -56,7 +56,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * If `manage_berkshelf` is enabled, the version of Berkshelf to use.
      * 
      */
-    @OutputExport(name="berkshelfVersion", type=String.class, parameters={})
+    @Export(name="berkshelfVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> berkshelfVersion;
 
     /**
@@ -70,7 +70,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Color to paint next to the stack's resources in the OpsWorks console.
      * 
      */
-    @OutputExport(name="color", type=String.class, parameters={})
+    @Export(name="color", type=String.class, parameters={})
     private Output</* @Nullable */ String> color;
 
     /**
@@ -84,7 +84,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Name of the configuration manager to use. Defaults to "Chef".
      * 
      */
-    @OutputExport(name="configurationManagerName", type=String.class, parameters={})
+    @Export(name="configurationManagerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationManagerName;
 
     /**
@@ -98,7 +98,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Version of the configuration manager to use. Defaults to "11.4".
      * 
      */
-    @OutputExport(name="configurationManagerVersion", type=String.class, parameters={})
+    @Export(name="configurationManagerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> configurationManagerVersion;
 
     /**
@@ -113,7 +113,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * described below.
      * 
      */
-    @OutputExport(name="customCookbooksSources", type=List.class, parameters={StackCustomCookbooksSource.class})
+    @Export(name="customCookbooksSources", type=List.class, parameters={StackCustomCookbooksSource.class})
     private Output<List<StackCustomCookbooksSource>> customCookbooksSources;
 
     /**
@@ -128,7 +128,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Custom JSON attributes to apply to the entire stack.
      * 
      */
-    @OutputExport(name="customJson", type=String.class, parameters={})
+    @Export(name="customJson", type=String.class, parameters={})
     private Output</* @Nullable */ String> customJson;
 
     /**
@@ -143,7 +143,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * by default. This is required unless you set `vpc_id`.
      * 
      */
-    @OutputExport(name="defaultAvailabilityZone", type=String.class, parameters={})
+    @Export(name="defaultAvailabilityZone", type=String.class, parameters={})
     private Output<String> defaultAvailabilityZone;
 
     /**
@@ -159,7 +159,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * will have by default.
      * 
      */
-    @OutputExport(name="defaultInstanceProfileArn", type=String.class, parameters={})
+    @Export(name="defaultInstanceProfileArn", type=String.class, parameters={})
     private Output<String> defaultInstanceProfileArn;
 
     /**
@@ -174,7 +174,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Name of OS that will be installed on instances by default.
      * 
      */
-    @OutputExport(name="defaultOs", type=String.class, parameters={})
+    @Export(name="defaultOs", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultOs;
 
     /**
@@ -188,7 +188,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Name of the type of root device instances will have by default.
      * 
      */
-    @OutputExport(name="defaultRootDeviceType", type=String.class, parameters={})
+    @Export(name="defaultRootDeviceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRootDeviceType;
 
     /**
@@ -202,7 +202,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Name of the SSH keypair that instances will have by default.
      * 
      */
-    @OutputExport(name="defaultSshKeyName", type=String.class, parameters={})
+    @Export(name="defaultSshKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultSshKeyName;
 
     /**
@@ -217,7 +217,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * if `vpc_id` is set, and forbidden if it isn't.
      * 
      */
-    @OutputExport(name="defaultSubnetId", type=String.class, parameters={})
+    @Export(name="defaultSubnetId", type=String.class, parameters={})
     private Output<String> defaultSubnetId;
 
     /**
@@ -233,7 +233,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * within this stack.
      * 
      */
-    @OutputExport(name="hostnameTheme", type=String.class, parameters={})
+    @Export(name="hostnameTheme", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostnameTheme;
 
     /**
@@ -248,7 +248,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Boolean value controlling whether Opsworks will run Berkshelf for this stack.
      * 
      */
-    @OutputExport(name="manageBerkshelf", type=Boolean.class, parameters={})
+    @Export(name="manageBerkshelf", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> manageBerkshelf;
 
     /**
@@ -262,7 +262,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * The name of the stack.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -276,7 +276,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * The name of the region where the stack will exist.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -290,7 +290,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * The ARN of an IAM role that the OpsWorks service will act as.
      * 
      */
-    @OutputExport(name="serviceRoleArn", type=String.class, parameters={})
+    @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output<String> serviceRoleArn;
 
     /**
@@ -300,7 +300,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
     public Output<String> getServiceRoleArn() {
         return this.serviceRoleArn;
     }
-    @OutputExport(name="stackEndpoint", type=String.class, parameters={})
+    @Export(name="stackEndpoint", type=String.class, parameters={})
     private Output<String> stackEndpoint;
 
     public Output<String> getStackEndpoint() {
@@ -310,7 +310,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -324,7 +324,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -339,7 +339,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * enabled.
      * 
      */
-    @OutputExport(name="useCustomCookbooks", type=Boolean.class, parameters={})
+    @Export(name="useCustomCookbooks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useCustomCookbooks;
 
     /**
@@ -355,7 +355,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * security groups apply to created instances.
      * 
      */
-    @OutputExport(name="useOpsworksSecurityGroups", type=Boolean.class, parameters={})
+    @Export(name="useOpsworksSecurityGroups", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useOpsworksSecurityGroups;
 
     /**
@@ -370,7 +370,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * The id of the VPC that this stack belongs to.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

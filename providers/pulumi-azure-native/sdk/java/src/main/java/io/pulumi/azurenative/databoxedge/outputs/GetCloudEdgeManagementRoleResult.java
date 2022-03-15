@@ -5,11 +5,11 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.EdgeProfileResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudEdgeManagementRoleResult {
     /**
      * Edge Profile of the resource
@@ -53,16 +53,16 @@ public final class GetCloudEdgeManagementRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudEdgeManagementRoleResult(
-        @OutputCustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("localManagementStatus") String localManagementStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("roleStatus") String roleStatus,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("localManagementStatus") String localManagementStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("roleStatus") String roleStatus,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.edgeProfile = edgeProfile;
         this.id = id;
         this.kind = kind;

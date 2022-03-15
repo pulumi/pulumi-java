@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TypeProviderLabelEntryResponse {
     /**
      * Key of the label
@@ -20,10 +20,10 @@ public final class TypeProviderLabelEntryResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TypeProviderLabelEntryResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

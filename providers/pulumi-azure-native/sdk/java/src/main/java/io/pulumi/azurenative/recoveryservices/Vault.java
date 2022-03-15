@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.SystemDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Optional ETag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -53,7 +53,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityDataResponse.class, parameters={})
+    @Export(name="identity", type=IdentityDataResponse.class, parameters={})
     private Output</* @Nullable */ IdentityDataResponse> identity;
 
     /**
@@ -67,7 +67,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -81,7 +81,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Resource name associated with the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Properties of the vault.
      * 
      */
-    @OutputExport(name="properties", type=VaultPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=VaultPropertiesResponse.class, parameters={})
     private Output<VaultPropertiesResponse> properties;
 
     /**
@@ -109,7 +109,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Identifies the unique system identifier for each Azure resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -123,7 +123,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -137,7 +137,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -151,7 +151,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

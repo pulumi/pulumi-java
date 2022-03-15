@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
     /**
      * Enable the PodSecurityPolicy controller for this cluster.
@@ -16,8 +16,8 @@ public final class ClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ClusterAddonsConfigGcePersistentDiskCsiDriverConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private ClusterAddonsConfigGcePersistentDiskCsiDriverConfig(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

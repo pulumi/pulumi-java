@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.LabVhdResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListLabVhdsResult {
     /**
      * Link for next set of results.
@@ -24,10 +24,10 @@ public final class ListLabVhdsResult {
      */
     private final @Nullable List<LabVhdResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListLabVhdsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<LabVhdResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<LabVhdResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.SourceLifeCycleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,21 +21,21 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
 
     public static final AzureRetentionRuleArgs Empty = new AzureRetentionRuleArgs();
 
-    @InputImport(name="isDefault")
+    @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
         return this.isDefault == null ? Output.empty() : this.isDefault;
     }
 
-    @InputImport(name="lifecycles", required=true)
+    @Import(name="lifecycles", required=true)
       private final Output<List<SourceLifeCycleArgs>> lifecycles;
 
     public Output<List<SourceLifeCycleArgs>> getLifecycles() {
         return this.lifecycles;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'AzureRetentionRule'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {

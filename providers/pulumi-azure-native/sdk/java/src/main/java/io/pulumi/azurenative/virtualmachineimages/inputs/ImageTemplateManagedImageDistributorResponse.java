@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
      */
-    @InputImport(name="artifactTags")
+    @Import(name="artifactTags")
       private final @Nullable Map<String,String> artifactTags;
 
     public Map<String,String> getArtifactTags() {
@@ -34,7 +34,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * Resource Id of the Managed Disk Image
      * 
      */
-    @InputImport(name="imageId", required=true)
+    @Import(name="imageId", required=true)
       private final String imageId;
 
     public String getImageId() {
@@ -45,7 +45,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * Azure location for the image, should match if image already exists
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -56,7 +56,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * The name to be used for the associated RunOutput.
      * 
      */
-    @InputImport(name="runOutputName", required=true)
+    @Import(name="runOutputName", required=true)
       private final String runOutputName;
 
     public String getRunOutputName() {
@@ -68,7 +68,7 @@ public final class ImageTemplateManagedImageDistributorResponse extends io.pulum
      * Expected value is 'ManagedImage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

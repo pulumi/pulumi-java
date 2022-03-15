@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProvisioningErrorResponse {
     /**
      * Verbose error message about the provisioning failure
@@ -22,10 +22,10 @@ public final class ProvisioningErrorResponse {
      */
     private final @Nullable String provisioningErrorCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProvisioningErrorResponse(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("provisioningErrorCode") @Nullable String provisioningErrorCode) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("provisioningErrorCode") @Nullable String provisioningErrorCode) {
         this.message = message;
         this.provisioningErrorCode = provisioningErrorCode;
     }

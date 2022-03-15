@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
 
     public static final ConsentStoreIamBindingState Empty = new ConsentStoreIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamBindingConditionGetArgs> condition;
 
     public Output<ConsentStoreIamBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="consentStoreId")
+    @Import(name="consentStoreId")
       private final @Nullable Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
@@ -40,7 +40,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
@@ -51,14 +51,14 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -71,7 +71,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

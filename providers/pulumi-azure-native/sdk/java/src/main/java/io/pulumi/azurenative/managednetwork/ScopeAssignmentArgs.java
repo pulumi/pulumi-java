@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * The managed network ID with scope will be assigned to.
      * 
      */
-    @InputImport(name="assignedManagedNetwork")
+    @Import(name="assignedManagedNetwork")
       private final @Nullable Output<String> assignedManagedNetwork;
 
     public Output<String> getAssignedManagedNetwork() {
@@ -29,7 +29,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -40,7 +40,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * The base resource of the scope assignment to create. The scope can be any REST resource instance. For example, use 'subscriptions/{subscription-id}' for a subscription, 'subscriptions/{subscription-id}/resourceGroups/{resource-group-name}' for a resource group, and 'subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/{resource-provider}/{resource-type}/{resource-name}' for a resource.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -51,7 +51,7 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the scope assignment to create.
      * 
      */
-    @InputImport(name="scopeAssignmentName")
+    @Import(name="scopeAssignmentName")
       private final @Nullable Output<String> scopeAssignmentName;
 
     public Output<String> getScopeAssignmentName() {

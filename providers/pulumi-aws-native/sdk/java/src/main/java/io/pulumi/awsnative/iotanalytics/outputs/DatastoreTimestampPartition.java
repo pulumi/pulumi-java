@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreTimestampPartition {
     private final String attributeName;
     private final @Nullable String timestampFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreTimestampPartition(
-        @OutputCustomType.Parameter("attributeName") String attributeName,
-        @OutputCustomType.Parameter("timestampFormat") @Nullable String timestampFormat) {
+        @CustomType.Parameter("attributeName") String attributeName,
+        @CustomType.Parameter("timestampFormat") @Nullable String timestampFormat) {
         this.attributeName = attributeName;
         this.timestampFormat = timestampFormat;
     }

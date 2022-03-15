@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -43,7 +43,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * Allow classic operations.
      * 
      */
-    @OutputExport(name="allowClassicOperations", type=Boolean.class, parameters={})
+    @Export(name="allowClassicOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowClassicOperations;
 
     /**
@@ -57,7 +57,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The list of authorizations.
      * 
      */
-    @OutputExport(name="authorizations", type=List.class, parameters={ExpressRouteCircuitAuthorizationResponse.class})
+    @Export(name="authorizations", type=List.class, parameters={ExpressRouteCircuitAuthorizationResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitAuthorizationResponse>> authorizations;
 
     /**
@@ -71,7 +71,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The bandwidth of the circuit when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    @OutputExport(name="bandwidthInGbps", type=Double.class, parameters={})
+    @Export(name="bandwidthInGbps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> bandwidthInGbps;
 
     /**
@@ -85,7 +85,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The CircuitProvisioningState state of the resource.
      * 
      */
-    @OutputExport(name="circuitProvisioningState", type=String.class, parameters={})
+    @Export(name="circuitProvisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> circuitProvisioningState;
 
     /**
@@ -99,7 +99,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -113,7 +113,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The reference to the ExpressRoutePort resource when the circuit is provisioned on an ExpressRoutePort resource.
      * 
      */
-    @OutputExport(name="expressRoutePort", type=SubResourceResponse.class, parameters={})
+    @Export(name="expressRoutePort", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> expressRoutePort;
 
     /**
@@ -127,7 +127,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The GatewayManager Etag.
      * 
      */
-    @OutputExport(name="gatewayManagerEtag", type=String.class, parameters={})
+    @Export(name="gatewayManagerEtag", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayManagerEtag;
 
     /**
@@ -141,7 +141,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * Flag denoting global reach status.
      * 
      */
-    @OutputExport(name="globalReachEnabled", type=Boolean.class, parameters={})
+    @Export(name="globalReachEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> globalReachEnabled;
 
     /**
@@ -155,7 +155,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -169,7 +169,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -183,7 +183,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The list of peerings.
      * 
      */
-    @OutputExport(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
+    @Export(name="peerings", type=List.class, parameters={ExpressRouteCircuitPeeringResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitPeeringResponse>> peerings;
 
     /**
@@ -197,7 +197,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The provisioning state of the express route circuit resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -211,7 +211,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The ServiceKey.
      * 
      */
-    @OutputExport(name="serviceKey", type=String.class, parameters={})
+    @Export(name="serviceKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceKey;
 
     /**
@@ -225,7 +225,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The ServiceProviderNotes.
      * 
      */
-    @OutputExport(name="serviceProviderNotes", type=String.class, parameters={})
+    @Export(name="serviceProviderNotes", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceProviderNotes;
 
     /**
@@ -239,7 +239,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The ServiceProviderProperties.
      * 
      */
-    @OutputExport(name="serviceProviderProperties", type=ExpressRouteCircuitServiceProviderPropertiesResponse.class, parameters={})
+    @Export(name="serviceProviderProperties", type=ExpressRouteCircuitServiceProviderPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitServiceProviderPropertiesResponse> serviceProviderProperties;
 
     /**
@@ -253,7 +253,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The ServiceProviderProvisioningState state of the resource.
      * 
      */
-    @OutputExport(name="serviceProviderProvisioningState", type=String.class, parameters={})
+    @Export(name="serviceProviderProvisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceProviderProvisioningState;
 
     /**
@@ -267,7 +267,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The SKU.
      * 
      */
-    @OutputExport(name="sku", type=ExpressRouteCircuitSkuResponse.class, parameters={})
+    @Export(name="sku", type=ExpressRouteCircuitSkuResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitSkuResponse> sku;
 
     /**
@@ -281,7 +281,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * The identifier of the circuit traffic. Outer tag for QinQ encapsulation.
      * 
      */
-    @OutputExport(name="stag", type=Integer.class, parameters={})
+    @Export(name="stag", type=Integer.class, parameters={})
     private Output<Integer> stag;
 
     /**
@@ -295,7 +295,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -309,7 +309,7 @@ public class ExpressRouteCircuit extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

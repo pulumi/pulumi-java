@@ -5,13 +5,13 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.outputs.ServiceCodeConfiguration;
 import io.pulumi.awsnative.apprunner.outputs.ServiceSourceCodeVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCodeRepository {
     private final @Nullable ServiceCodeConfiguration codeConfiguration;
     /**
@@ -21,11 +21,11 @@ public final class ServiceCodeRepository {
     private final String repositoryUrl;
     private final ServiceSourceCodeVersion sourceCodeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCodeRepository(
-        @OutputCustomType.Parameter("codeConfiguration") @Nullable ServiceCodeConfiguration codeConfiguration,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
-        @OutputCustomType.Parameter("sourceCodeVersion") ServiceSourceCodeVersion sourceCodeVersion) {
+        @CustomType.Parameter("codeConfiguration") @Nullable ServiceCodeConfiguration codeConfiguration,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @CustomType.Parameter("sourceCodeVersion") ServiceSourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = repositoryUrl;
         this.sourceCodeVersion = sourceCodeVersion;

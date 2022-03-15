@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetInstanceIpv6Address {
     private final String ipv6Address;
 
-    @OutputCustomType.Constructor
-    private SpotFleetInstanceIpv6Address(@OutputCustomType.Parameter("ipv6Address") String ipv6Address) {
+    @CustomType.Constructor
+    private SpotFleetInstanceIpv6Address(@CustomType.Parameter("ipv6Address") String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
 

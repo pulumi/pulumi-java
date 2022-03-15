@@ -5,20 +5,20 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.ThemeTileLayoutStyle;
 import io.pulumi.awsnative.quicksight.outputs.ThemeTileStyle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeSheetStyle {
     private final @Nullable ThemeTileStyle tile;
     private final @Nullable ThemeTileLayoutStyle tileLayout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeSheetStyle(
-        @OutputCustomType.Parameter("tile") @Nullable ThemeTileStyle tile,
-        @OutputCustomType.Parameter("tileLayout") @Nullable ThemeTileLayoutStyle tileLayout) {
+        @CustomType.Parameter("tile") @Nullable ThemeTileStyle tile,
+        @CustomType.Parameter("tileLayout") @Nullable ThemeTileLayoutStyle tileLayout) {
         this.tile = tile;
         this.tileLayout = tileLayout;
     }

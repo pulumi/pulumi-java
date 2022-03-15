@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TransientCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2UnwrappedCryptoKeyResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CryptoKeyResponse {
     /**
      * Key wrapped using Cloud KMS
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
      */
     private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CryptoKeyResponse(
-        @OutputCustomType.Parameter("kmsWrapped") GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
-        @OutputCustomType.Parameter("transient") GooglePrivacyDlpV2TransientCryptoKeyResponse $transient,
-        @OutputCustomType.Parameter("unwrapped") GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
+        @CustomType.Parameter("kmsWrapped") GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
+        @CustomType.Parameter("transient") GooglePrivacyDlpV2TransientCryptoKeyResponse $transient,
+        @CustomType.Parameter("unwrapped") GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
         this.kmsWrapped = kmsWrapped;
         this.$transient = $transient;
         this.unwrapped = unwrapped;

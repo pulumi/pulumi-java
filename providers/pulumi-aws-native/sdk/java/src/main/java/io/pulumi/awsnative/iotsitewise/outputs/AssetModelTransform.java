@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelExpressionVariable;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelTransform {
     /**
      * The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
@@ -22,10 +22,10 @@ public final class AssetModelTransform {
      */
     private final List<AssetModelExpressionVariable> variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelTransform(
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("variables") List<AssetModelExpressionVariable> variables) {
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("variables") List<AssetModelExpressionVariable> variables) {
         this.expression = expression;
         this.variables = variables;
     }

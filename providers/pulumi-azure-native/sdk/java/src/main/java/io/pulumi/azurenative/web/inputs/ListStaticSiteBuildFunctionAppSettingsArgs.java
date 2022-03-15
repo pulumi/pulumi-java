@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.
      * The stage site identifier.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final String environmentName;
 
     public String getEnvironmentName() {
@@ -27,7 +27,7 @@ public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.
      * Name of the static site.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class ListStaticSiteBuildFunctionAppSettingsArgs extends io.pulumi.
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

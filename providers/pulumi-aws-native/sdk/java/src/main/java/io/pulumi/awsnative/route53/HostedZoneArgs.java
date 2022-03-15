@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53.inputs.HostedZoneQueryLoggingConfigArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneTagArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneVPCArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final HostedZoneArgs Empty = new HostedZoneArgs();
 
-    @InputImport(name="hostedZoneConfig")
+    @Import(name="hostedZoneConfig")
       private final @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
 
     public Output<HostedZoneConfigArgs> getHostedZoneConfig() {
@@ -32,7 +32,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * For information about using tags for cost allocation, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide.
      * 
      */
-    @InputImport(name="hostedZoneTags")
+    @Import(name="hostedZoneTags")
       private final @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
 
     public Output<List<HostedZoneTagArgs>> getHostedZoneTags() {
@@ -45,14 +45,14 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * If you're creating a public hosted zone, this is the name you have registered with your DNS registrar. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of NameServers that are returned by the Fn::GetAtt intrinsic function.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="queryLoggingConfig")
+    @Import(name="queryLoggingConfig")
       private final @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
 
     public Output<HostedZoneQueryLoggingConfigArgs> getQueryLoggingConfig() {
@@ -63,7 +63,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * A complex type that contains information about the VPCs that are associated with the specified hosted zone.
      * 
      */
-    @InputImport(name="vPCs")
+    @Import(name="vPCs")
       private final @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
     public Output<List<HostedZoneVPCArgs>> getVPCs() {

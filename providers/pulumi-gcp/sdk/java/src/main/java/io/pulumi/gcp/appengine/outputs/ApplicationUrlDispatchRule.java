@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationUrlDispatchRule {
     private final @Nullable String domain;
     private final @Nullable String path;
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationUrlDispatchRule(
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("service") @Nullable String service) {
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("service") @Nullable String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;

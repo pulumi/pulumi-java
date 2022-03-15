@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * The Amazon Resource Name (ARN) of the human task user interface.
      * 
      */
-    @InputImport(name="humanTaskUiArn", required=true)
+    @Import(name="humanTaskUiArn", required=true)
       private final Output<String> humanTaskUiArn;
 
     public Output<String> getHumanTaskUiArn() {
@@ -32,7 +32,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * Defines the amount of money paid to an Amazon Mechanical Turk worker for each task performed. See Public Workforce Task Price details below.
      * 
      */
-    @InputImport(name="publicWorkforceTaskPrice")
+    @Import(name="publicWorkforceTaskPrice")
       private final @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice;
 
     public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> getPublicWorkforceTaskPrice() {
@@ -43,7 +43,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * The length of time that a task remains available for review by human workers. Valid value range between `1` and `864000`.
      * 
      */
-    @InputImport(name="taskAvailabilityLifetimeInSeconds")
+    @Import(name="taskAvailabilityLifetimeInSeconds")
       private final @Nullable Output<Integer> taskAvailabilityLifetimeInSeconds;
 
     public Output<Integer> getTaskAvailabilityLifetimeInSeconds() {
@@ -54,7 +54,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * The number of distinct workers who will perform the same task on each object. Valid value range between `1` and `3`.
      * 
      */
-    @InputImport(name="taskCount", required=true)
+    @Import(name="taskCount", required=true)
       private final Output<Integer> taskCount;
 
     public Output<Integer> getTaskCount() {
@@ -65,7 +65,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * A description for the human worker task.
      * 
      */
-    @InputImport(name="taskDescription", required=true)
+    @Import(name="taskDescription", required=true)
       private final Output<String> taskDescription;
 
     public Output<String> getTaskDescription() {
@@ -76,7 +76,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * An array of keywords used to describe the task so that workers can discover the task.
      * 
      */
-    @InputImport(name="taskKeywords")
+    @Import(name="taskKeywords")
       private final @Nullable Output<List<String>> taskKeywords;
 
     public Output<List<String>> getTaskKeywords() {
@@ -87,7 +87,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * The amount of time that a worker has to complete a task. The default value is `3600` seconds.
      * 
      */
-    @InputImport(name="taskTimeLimitInSeconds")
+    @Import(name="taskTimeLimitInSeconds")
       private final @Nullable Output<Integer> taskTimeLimitInSeconds;
 
     public Output<Integer> getTaskTimeLimitInSeconds() {
@@ -98,7 +98,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * A title for the human worker task.
      * 
      */
-    @InputImport(name="taskTitle", required=true)
+    @Import(name="taskTitle", required=true)
       private final Output<String> taskTitle;
 
     public Output<String> getTaskTitle() {
@@ -109,7 +109,7 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
      * The Amazon Resource Name (ARN) of the human task user interface. Amazon Resource Name (ARN) of a team of workers. For Public workforces see [AWS Docs](https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-management-public.html).
      * 
      */
-    @InputImport(name="workteamArn", required=true)
+    @Import(name="workteamArn", required=true)
       private final Output<String> workteamArn;
 
     public Output<String> getWorkteamArn() {

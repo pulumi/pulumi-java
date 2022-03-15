@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.ProjectSample;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * Dataset name
@@ -33,12 +33,12 @@ public final class GetProjectResult {
      */
     private final @Nullable ProjectSample sample;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
-        @OutputCustomType.Parameter("recipeName") @Nullable String recipeName,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("sample") @Nullable ProjectSample sample) {
+        @CustomType.Parameter("datasetName") @Nullable String datasetName,
+        @CustomType.Parameter("recipeName") @Nullable String recipeName,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("sample") @Nullable ProjectSample sample) {
         this.datasetName = datasetName;
         this.recipeName = recipeName;
         this.roleArn = roleArn;

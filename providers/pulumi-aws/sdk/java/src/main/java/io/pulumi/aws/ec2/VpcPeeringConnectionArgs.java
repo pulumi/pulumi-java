@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterArgs;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionRequesterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * the peering connection (a maximum of one).
      * 
      */
-    @InputImport(name="accepter")
+    @Import(name="accepter")
       private final @Nullable Output<VpcPeeringConnectionAccepterArgs> accepter;
 
     public Output<VpcPeeringConnectionAccepterArgs> getAccepter() {
@@ -34,7 +34,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * Accept the peering (both VPCs need to be in the same AWS account and region).
      * 
      */
-    @InputImport(name="autoAccept")
+    @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
     public Output<Boolean> getAutoAccept() {
@@ -46,7 +46,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
-    @InputImport(name="peerOwnerId")
+    @Import(name="peerOwnerId")
       private final @Nullable Output<String> peerOwnerId;
 
     public Output<String> getPeerOwnerId() {
@@ -58,7 +58,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
      * 
      */
-    @InputImport(name="peerRegion")
+    @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
     public Output<String> getPeerRegion() {
@@ -69,7 +69,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * The ID of the VPC with which you are creating the VPC Peering Connection.
      * 
      */
-    @InputImport(name="peerVpcId", required=true)
+    @Import(name="peerVpcId", required=true)
       private final Output<String> peerVpcId;
 
     public Output<String> getPeerVpcId() {
@@ -81,7 +81,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * the peering connection (a maximum of one).
      * 
      */
-    @InputImport(name="requester")
+    @Import(name="requester")
       private final @Nullable Output<VpcPeeringConnectionRequesterArgs> requester;
 
     public Output<VpcPeeringConnectionRequesterArgs> getRequester() {
@@ -92,7 +92,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -103,7 +103,7 @@ public final class VpcPeeringConnectionArgs extends io.pulumi.resources.Resource
      * The ID of the requester VPC.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

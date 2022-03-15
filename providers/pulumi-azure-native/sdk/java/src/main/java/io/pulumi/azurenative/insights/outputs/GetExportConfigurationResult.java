@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExportConfigurationResult {
     /**
      * The name of the Application Insights component.
@@ -107,27 +107,27 @@ public final class GetExportConfigurationResult {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExportConfigurationResult(
-        @OutputCustomType.Parameter("applicationName") String applicationName,
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("destinationAccountId") String destinationAccountId,
-        @OutputCustomType.Parameter("destinationStorageLocationId") String destinationStorageLocationId,
-        @OutputCustomType.Parameter("destinationStorageSubscriptionId") String destinationStorageSubscriptionId,
-        @OutputCustomType.Parameter("destinationType") String destinationType,
-        @OutputCustomType.Parameter("exportId") String exportId,
-        @OutputCustomType.Parameter("exportStatus") String exportStatus,
-        @OutputCustomType.Parameter("instrumentationKey") String instrumentationKey,
-        @OutputCustomType.Parameter("isUserEnabled") String isUserEnabled,
-        @OutputCustomType.Parameter("lastGapTime") String lastGapTime,
-        @OutputCustomType.Parameter("lastSuccessTime") String lastSuccessTime,
-        @OutputCustomType.Parameter("lastUserUpdate") String lastUserUpdate,
-        @OutputCustomType.Parameter("notificationQueueEnabled") @Nullable String notificationQueueEnabled,
-        @OutputCustomType.Parameter("permanentErrorReason") String permanentErrorReason,
-        @OutputCustomType.Parameter("recordTypes") @Nullable String recordTypes,
-        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
-        @OutputCustomType.Parameter("storageName") String storageName,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
+        @CustomType.Parameter("applicationName") String applicationName,
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("destinationAccountId") String destinationAccountId,
+        @CustomType.Parameter("destinationStorageLocationId") String destinationStorageLocationId,
+        @CustomType.Parameter("destinationStorageSubscriptionId") String destinationStorageSubscriptionId,
+        @CustomType.Parameter("destinationType") String destinationType,
+        @CustomType.Parameter("exportId") String exportId,
+        @CustomType.Parameter("exportStatus") String exportStatus,
+        @CustomType.Parameter("instrumentationKey") String instrumentationKey,
+        @CustomType.Parameter("isUserEnabled") String isUserEnabled,
+        @CustomType.Parameter("lastGapTime") String lastGapTime,
+        @CustomType.Parameter("lastSuccessTime") String lastSuccessTime,
+        @CustomType.Parameter("lastUserUpdate") String lastUserUpdate,
+        @CustomType.Parameter("notificationQueueEnabled") @Nullable String notificationQueueEnabled,
+        @CustomType.Parameter("permanentErrorReason") String permanentErrorReason,
+        @CustomType.Parameter("recordTypes") @Nullable String recordTypes,
+        @CustomType.Parameter("resourceGroup") String resourceGroup,
+        @CustomType.Parameter("storageName") String storageName,
+        @CustomType.Parameter("subscriptionId") String subscriptionId) {
         this.applicationName = applicationName;
         this.containerName = containerName;
         this.destinationAccountId = destinationAccountId;

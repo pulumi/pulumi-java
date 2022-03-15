@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceLoadBalancer {
     /**
      * Name of the container to associate with the load balancer (as it appears in a container definition).
@@ -33,12 +33,12 @@ public final class ServiceLoadBalancer {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceLoadBalancer(
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("containerPort") Integer containerPort,
-        @OutputCustomType.Parameter("elbName") @Nullable String elbName,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("containerPort") Integer containerPort,
+        @CustomType.Parameter("elbName") @Nullable String elbName,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.elbName = elbName;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * be overwritten by the API-calculated ID.
      * 
      */
-    @InputImport(name="asciiArmoredPgpPublicKey")
+    @Import(name="asciiArmoredPgpPublicKey")
       private final @Nullable Output<String> asciiArmoredPgpPublicKey;
 
     public Output<String> getAsciiArmoredPgpPublicKey() {
@@ -38,7 +38,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * A descriptive comment. This field may be updated.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -54,7 +54,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * See the documentation on publicKey cases below for details.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -70,7 +70,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pkixPublicKey")
+    @Import(name="pkixPublicKey")
       private final @Nullable Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey;
 
     public Output<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> getPkixPublicKey() {

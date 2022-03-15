@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentInstanceFilterInventory {
     /**
      * Required. The OS short name
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentInstanceFilterInventory {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentInstanceFilterInventory(
-        @OutputCustomType.Parameter("osShortName") String osShortName,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
+        @CustomType.Parameter("osShortName") String osShortName,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osShortName = osShortName;
         this.osVersion = osVersion;
     }

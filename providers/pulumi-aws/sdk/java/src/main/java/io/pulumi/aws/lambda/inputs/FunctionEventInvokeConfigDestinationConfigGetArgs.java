@@ -6,7 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs;
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
      * Configuration block with destination configuration for failed asynchronous invocations. See below for details.
      * 
      */
-    @InputImport(name="onFailure")
+    @Import(name="onFailure")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure;
 
     public Output<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> getOnFailure() {
@@ -30,7 +30,7 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
      * Configuration block with destination configuration for successful asynchronous invocations. See below for details.
      * 
      */
-    @InputImport(name="onSuccess")
+    @Import(name="onSuccess")
       private final @Nullable Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess;
 
     public Output<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> getOnSuccess() {

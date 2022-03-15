@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.firestore.inputs.IndexFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The collection being indexed.
      * 
      */
-    @InputImport(name="collection", required=true)
+    @Import(name="collection", required=true)
       private final Output<String> collection;
 
     public Output<String> getCollection() {
@@ -31,7 +31,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -48,7 +48,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final Output<List<IndexFieldArgs>> fields;
 
     public Output<List<IndexFieldArgs>> getFields() {
@@ -60,7 +60,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -73,7 +73,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `COLLECTION` and `COLLECTION_GROUP`.
      * 
      */
-    @InputImport(name="queryScope")
+    @Import(name="queryScope")
       private final @Nullable Output<String> queryScope;
 
     public Output<String> getQueryScope() {

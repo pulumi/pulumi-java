@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
      * The maximal number of workers. Must be equal to or greater than min_size.
      * 
      */
-    @InputImport(name="maxSize")
+    @Import(name="maxSize")
       private final @Nullable Output<String> maxSize;
 
     public Output<String> getMaxSize() {
@@ -33,7 +33,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
      * The minimal number of workers. Must be greater than 0.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<String> minSize;
 
     public Output<String> getMinSize() {

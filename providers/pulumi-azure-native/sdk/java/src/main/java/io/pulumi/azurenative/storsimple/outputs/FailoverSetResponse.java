@@ -5,13 +5,13 @@ package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.FailoverSetEligibilityResultResponse;
 import io.pulumi.azurenative.storsimple.outputs.VolumeContainerFailoverMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FailoverSetResponse {
     /**
      * The eligibility result of the failover set, for failover.
@@ -24,10 +24,10 @@ public final class FailoverSetResponse {
      */
     private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FailoverSetResponse(
-        @OutputCustomType.Parameter("eligibilityResult") @Nullable FailoverSetEligibilityResultResponse eligibilityResult,
-        @OutputCustomType.Parameter("volumeContainers") @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
+        @CustomType.Parameter("eligibilityResult") @Nullable FailoverSetEligibilityResultResponse eligibilityResult,
+        @CustomType.Parameter("volumeContainers") @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers) {
         this.eligibilityResult = eligibilityResult;
         this.volumeContainers = volumeContainers;
     }

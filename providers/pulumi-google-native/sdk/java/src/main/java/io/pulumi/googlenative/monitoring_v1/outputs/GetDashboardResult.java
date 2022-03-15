@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.GridLayoutResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.MosaicLayoutResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDashboardResult {
     /**
      * The content is divided into equally spaced columns and the widgets are arranged vertically.
@@ -55,16 +55,16 @@ public final class GetDashboardResult {
      */
     private final RowLayoutResponse rowLayout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDashboardResult(
-        @OutputCustomType.Parameter("columnLayout") ColumnLayoutResponse columnLayout,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("gridLayout") GridLayoutResponse gridLayout,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mosaicLayout") MosaicLayoutResponse mosaicLayout,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rowLayout") RowLayoutResponse rowLayout) {
+        @CustomType.Parameter("columnLayout") ColumnLayoutResponse columnLayout,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("gridLayout") GridLayoutResponse gridLayout,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mosaicLayout") MosaicLayoutResponse mosaicLayout,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rowLayout") RowLayoutResponse rowLayout) {
         this.columnLayout = columnLayout;
         this.displayName = displayName;
         this.etag = etag;

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageResult {
     /**
      * The Amazon Resource Name (ARN) of the image.
@@ -32,12 +32,12 @@ public final class GetImageResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
-        @OutputCustomType.Parameter("imageId") @Nullable String imageId,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
+        @CustomType.Parameter("imageId") @Nullable String imageId,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.containerRecipeArn = containerRecipeArn;
         this.imageId = imageId;

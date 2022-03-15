@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationalUnitAccount {
     /**
      * ARN of the organizational unit
@@ -32,12 +32,12 @@ public final class OrganizationalUnitAccount {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationalUnitAccount(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.email = email;
         this.id = id;

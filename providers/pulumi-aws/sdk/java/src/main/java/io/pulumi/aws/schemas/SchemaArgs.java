@@ -4,7 +4,7 @@
 package io.pulumi.aws.schemas;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The schema specification. Must be a valid Open API 3.0 spec.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -30,7 +30,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the schema. Maximum of 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the registry in which this schema belongs.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -63,7 +63,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the schema. Valid values: `OpenApi3`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

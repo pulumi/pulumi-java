@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.DatasetParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetPathParameter {
     private final DatasetParameter datasetParameter;
     private final String pathParameterName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetPathParameter(
-        @OutputCustomType.Parameter("datasetParameter") DatasetParameter datasetParameter,
-        @OutputCustomType.Parameter("pathParameterName") String pathParameterName) {
+        @CustomType.Parameter("datasetParameter") DatasetParameter datasetParameter,
+        @CustomType.Parameter("pathParameterName") String pathParameterName) {
         this.datasetParameter = datasetParameter;
         this.pathParameterName = pathParameterName;
     }

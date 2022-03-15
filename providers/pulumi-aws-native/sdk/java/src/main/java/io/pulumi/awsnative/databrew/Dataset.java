@@ -11,7 +11,7 @@ import io.pulumi.awsnative.databrew.outputs.DatasetInput;
 import io.pulumi.awsnative.databrew.outputs.DatasetPathOptions;
 import io.pulumi.awsnative.databrew.outputs.DatasetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Dataset format
      * 
      */
-    @OutputExport(name="format", type=DatasetFormat.class, parameters={})
+    @Export(name="format", type=DatasetFormat.class, parameters={})
     private Output</* @Nullable */ DatasetFormat> format;
 
     /**
@@ -43,7 +43,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Format options for dataset
      * 
      */
-    @OutputExport(name="formatOptions", type=DatasetFormatOptions.class, parameters={})
+    @Export(name="formatOptions", type=DatasetFormatOptions.class, parameters={})
     private Output</* @Nullable */ DatasetFormatOptions> formatOptions;
 
     /**
@@ -57,7 +57,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Input
      * 
      */
-    @OutputExport(name="input", type=DatasetInput.class, parameters={})
+    @Export(name="input", type=DatasetInput.class, parameters={})
     private Output<DatasetInput> input;
 
     /**
@@ -71,7 +71,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Dataset name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -85,7 +85,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * PathOptions
      * 
      */
-    @OutputExport(name="pathOptions", type=DatasetPathOptions.class, parameters={})
+    @Export(name="pathOptions", type=DatasetPathOptions.class, parameters={})
     private Output</* @Nullable */ DatasetPathOptions> pathOptions;
 
     /**
@@ -95,7 +95,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ DatasetPathOptions> getPathOptions() {
         return this.pathOptions;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DatasetTag.class})
+    @Export(name="tags", type=List.class, parameters={DatasetTag.class})
     private Output</* @Nullable */ List<DatasetTag>> tags;
 
     public Output</* @Nullable */ List<DatasetTag>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StackSetAutoDeploymentGetArgs extends io.pulumi.resources.Res
      * Whether or not auto-deployment is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -29,7 +29,7 @@ public final class StackSetAutoDeploymentGetArgs extends io.pulumi.resources.Res
      * Whether or not to retain stacks when the account is removed.
      * 
      */
-    @InputImport(name="retainStacksOnAccountRemoval")
+    @Import(name="retainStacksOnAccountRemoval")
       private final @Nullable Output<Boolean> retainStacksOnAccountRemoval;
 
     public Output<Boolean> getRetainStacksOnAccountRemoval() {

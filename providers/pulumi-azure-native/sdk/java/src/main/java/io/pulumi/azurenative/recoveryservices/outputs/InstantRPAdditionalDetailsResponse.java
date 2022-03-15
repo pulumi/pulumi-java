@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstantRPAdditionalDetailsResponse {
     private final @Nullable String azureBackupRGNamePrefix;
     private final @Nullable String azureBackupRGNameSuffix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstantRPAdditionalDetailsResponse(
-        @OutputCustomType.Parameter("azureBackupRGNamePrefix") @Nullable String azureBackupRGNamePrefix,
-        @OutputCustomType.Parameter("azureBackupRGNameSuffix") @Nullable String azureBackupRGNameSuffix) {
+        @CustomType.Parameter("azureBackupRGNamePrefix") @Nullable String azureBackupRGNamePrefix,
+        @CustomType.Parameter("azureBackupRGNameSuffix") @Nullable String azureBackupRGNameSuffix) {
         this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
         this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
     }

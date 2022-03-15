@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsent;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMatchedLog;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMonitoringQueryLanguage;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyCondition {
     /**
      * A condition that checks that a time series
@@ -63,14 +63,14 @@ public final class AlertPolicyCondition {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyCondition(
-        @OutputCustomType.Parameter("conditionAbsent") @Nullable AlertPolicyConditionConditionAbsent conditionAbsent,
-        @OutputCustomType.Parameter("conditionMatchedLog") @Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog,
-        @OutputCustomType.Parameter("conditionMonitoringQueryLanguage") @Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage,
-        @OutputCustomType.Parameter("conditionThreshold") @Nullable AlertPolicyConditionConditionThreshold conditionThreshold,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("conditionAbsent") @Nullable AlertPolicyConditionConditionAbsent conditionAbsent,
+        @CustomType.Parameter("conditionMatchedLog") @Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog,
+        @CustomType.Parameter("conditionMonitoringQueryLanguage") @Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage,
+        @CustomType.Parameter("conditionThreshold") @Nullable AlertPolicyConditionConditionThreshold conditionThreshold,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.conditionAbsent = conditionAbsent;
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;

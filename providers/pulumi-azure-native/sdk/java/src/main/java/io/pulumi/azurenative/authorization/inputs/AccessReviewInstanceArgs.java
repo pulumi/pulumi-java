@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
      * The DateTime when the review instance is scheduled to end.
      * 
      */
-    @InputImport(name="endDateTime")
+    @Import(name="endDateTime")
       private final @Nullable Output<String> endDateTime;
 
     public Output<String> getEndDateTime() {
@@ -33,7 +33,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
      * The DateTime when the review instance is scheduled to be start.
      * 
      */
-    @InputImport(name="startDateTime")
+    @Import(name="startDateTime")
       private final @Nullable Output<String> startDateTime;
 
     public Output<String> getStartDateTime() {

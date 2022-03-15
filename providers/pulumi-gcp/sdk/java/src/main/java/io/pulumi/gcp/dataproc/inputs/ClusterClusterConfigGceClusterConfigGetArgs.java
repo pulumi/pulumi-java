@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * will be launched in.
      * 
      */
-    @InputImport(name="internalIpOnly")
+    @Import(name="internalIpOnly")
       private final @Nullable Output<Boolean> internalIpOnly;
 
     public Output<Boolean> getInternalIpOnly() {
@@ -38,7 +38,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -51,7 +51,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * If neither is specified, this defaults to the "default" network.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -63,7 +63,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * If not specified, the "default" service account is used.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -78,7 +78,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
      */
-    @InputImport(name="serviceAccountScopes")
+    @Import(name="serviceAccountScopes")
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
     public Output<List<String>> getServiceAccountScopes() {
@@ -89,7 +89,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * Shielded Instance Config for clusters using [Compute Engine Shielded VMs](https://cloud.google.com/security/shielded-cloud/shielded-vm).
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
     public Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
@@ -101,7 +101,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * subnetwork the cluster will be part of. Conflicts with `network`.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -113,7 +113,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * Tags are used to identify valid sources or targets for network firewalls.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -130,7 +130,7 @@ public final class ClusterClusterConfigGceClusterConfigGetArgs extends io.pulumi
      * `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

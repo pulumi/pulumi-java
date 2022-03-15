@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.NamespacedGkeDeploymentTargetResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GkeClusterConfigResponse extends io.pulumi.resources.InvokeAr
      * Optional. A target for the deployment.
      * 
      */
-    @InputImport(name="namespacedGkeDeploymentTarget", required=true)
+    @Import(name="namespacedGkeDeploymentTarget", required=true)
       private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
     public NamespacedGkeDeploymentTargetResponse getNamespacedGkeDeploymentTarget() {

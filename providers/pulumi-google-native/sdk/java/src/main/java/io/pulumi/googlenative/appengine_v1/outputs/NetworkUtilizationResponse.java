@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkUtilizationResponse {
     /**
      * Target bytes received per second.
@@ -30,12 +30,12 @@ public final class NetworkUtilizationResponse {
      */
     private final Integer targetSentPacketsPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkUtilizationResponse(
-        @OutputCustomType.Parameter("targetReceivedBytesPerSecond") Integer targetReceivedBytesPerSecond,
-        @OutputCustomType.Parameter("targetReceivedPacketsPerSecond") Integer targetReceivedPacketsPerSecond,
-        @OutputCustomType.Parameter("targetSentBytesPerSecond") Integer targetSentBytesPerSecond,
-        @OutputCustomType.Parameter("targetSentPacketsPerSecond") Integer targetSentPacketsPerSecond) {
+        @CustomType.Parameter("targetReceivedBytesPerSecond") Integer targetReceivedBytesPerSecond,
+        @CustomType.Parameter("targetReceivedPacketsPerSecond") Integer targetReceivedPacketsPerSecond,
+        @CustomType.Parameter("targetSentBytesPerSecond") Integer targetSentBytesPerSecond,
+        @CustomType.Parameter("targetSentPacketsPerSecond") Integer targetSentPacketsPerSecond) {
         this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
         this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
         this.targetSentBytesPerSecond = targetSentBytesPerSecond;

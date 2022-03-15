@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMetricsResponse {
     /**
      * The HDFS metrics.
@@ -21,10 +21,10 @@ public final class ClusterMetricsResponse {
      */
     private final Map<String,String> yarnMetrics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMetricsResponse(
-        @OutputCustomType.Parameter("hdfsMetrics") Map<String,String> hdfsMetrics,
-        @OutputCustomType.Parameter("yarnMetrics") Map<String,String> yarnMetrics) {
+        @CustomType.Parameter("hdfsMetrics") Map<String,String> hdfsMetrics,
+        @CustomType.Parameter("yarnMetrics") Map<String,String> yarnMetrics) {
         this.hdfsMetrics = hdfsMetrics;
         this.yarnMetrics = yarnMetrics;
     }

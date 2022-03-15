@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.stepfunctions.outputs;
 
 import io.pulumi.awsnative.stepfunctions.outputs.ActivityTagsEntry;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetActivityResult {
     private final @Nullable String arn;
     private final @Nullable List<ActivityTagsEntry> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetActivityResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ActivityTagsEntry> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<ActivityTagsEntry> tags) {
         this.arn = arn;
         this.tags = tags;
     }

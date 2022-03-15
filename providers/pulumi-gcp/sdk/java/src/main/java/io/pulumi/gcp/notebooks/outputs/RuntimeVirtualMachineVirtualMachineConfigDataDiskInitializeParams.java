@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams {
     /**
      * Provide this property when creating the disk.
@@ -50,13 +50,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("diskName") @Nullable String diskName,
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;

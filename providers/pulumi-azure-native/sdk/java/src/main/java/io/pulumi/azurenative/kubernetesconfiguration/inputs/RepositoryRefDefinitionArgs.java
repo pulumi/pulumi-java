@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * The git repository branch name to checkout.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -33,7 +33,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence over semver.
      * 
      */
-    @InputImport(name="commit")
+    @Import(name="commit")
       private final @Nullable Output<String> commit;
 
     public Output<String> getCommit() {
@@ -44,7 +44,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * The semver range used to match against git repository tags. This takes precedence over tag.
      * 
      */
-    @InputImport(name="semver")
+    @Import(name="semver")
       private final @Nullable Output<String> semver;
 
     public Output<String> getSemver() {
@@ -55,7 +55,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * The git repository tag name to checkout. This takes precedence over branch.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

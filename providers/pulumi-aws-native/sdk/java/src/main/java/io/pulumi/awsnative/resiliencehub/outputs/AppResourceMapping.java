@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.resiliencehub.outputs;
 
 import io.pulumi.awsnative.resiliencehub.outputs.AppPhysicalResourceId;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppResourceMapping {
     private final @Nullable String logicalStackName;
     private final String mappingType;
     private final AppPhysicalResourceId physicalResourceId;
     private final @Nullable String resourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppResourceMapping(
-        @OutputCustomType.Parameter("logicalStackName") @Nullable String logicalStackName,
-        @OutputCustomType.Parameter("mappingType") String mappingType,
-        @OutputCustomType.Parameter("physicalResourceId") AppPhysicalResourceId physicalResourceId,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName) {
+        @CustomType.Parameter("logicalStackName") @Nullable String logicalStackName,
+        @CustomType.Parameter("mappingType") String mappingType,
+        @CustomType.Parameter("physicalResourceId") AppPhysicalResourceId physicalResourceId,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName) {
         this.logicalStackName = logicalStackName;
         this.mappingType = mappingType;
         this.physicalResourceId = physicalResourceId;

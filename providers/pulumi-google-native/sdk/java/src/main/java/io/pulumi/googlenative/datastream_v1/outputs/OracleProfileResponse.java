@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OracleProfileResponse {
     /**
      * Connection string attributes
@@ -42,14 +42,14 @@ public final class OracleProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OracleProfileResponse(
-        @OutputCustomType.Parameter("connectionAttributes") Map<String,String> connectionAttributes,
-        @OutputCustomType.Parameter("databaseService") String databaseService,
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("connectionAttributes") Map<String,String> connectionAttributes,
+        @CustomType.Parameter("databaseService") String databaseService,
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("username") String username) {
         this.connectionAttributes = connectionAttributes;
         this.databaseService = databaseService;
         this.hostname = hostname;

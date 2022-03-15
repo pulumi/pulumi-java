@@ -9,7 +9,7 @@ import io.pulumi.azurenative.apimanagement.outputs.GroupContractPropertiesRespon
 import io.pulumi.azurenative.apimanagement.outputs.UserIdentityContractResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Email address.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output</* @Nullable */ String> email;
 
     /**
@@ -50,7 +50,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * First name.
      * 
      */
-    @OutputExport(name="firstName", type=String.class, parameters={})
+    @Export(name="firstName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstName;
 
     /**
@@ -64,7 +64,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Collection of groups user is part of.
      * 
      */
-    @OutputExport(name="groups", type=List.class, parameters={GroupContractPropertiesResponse.class})
+    @Export(name="groups", type=List.class, parameters={GroupContractPropertiesResponse.class})
     private Output<List<GroupContractPropertiesResponse>> groups;
 
     /**
@@ -78,7 +78,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Collection of user identities.
      * 
      */
-    @OutputExport(name="identities", type=List.class, parameters={UserIdentityContractResponse.class})
+    @Export(name="identities", type=List.class, parameters={UserIdentityContractResponse.class})
     private Output</* @Nullable */ List<UserIdentityContractResponse>> identities;
 
     /**
@@ -92,7 +92,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Last name.
      * 
      */
-    @OutputExport(name="lastName", type=String.class, parameters={})
+    @Export(name="lastName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastName;
 
     /**
@@ -106,7 +106,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Optional note about a user set by the administrator.
      * 
      */
-    @OutputExport(name="note", type=String.class, parameters={})
+    @Export(name="note", type=String.class, parameters={})
     private Output</* @Nullable */ String> note;
 
     /**
@@ -134,7 +134,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Date of user registration. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="registrationDate", type=String.class, parameters={})
+    @Export(name="registrationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> registrationDate;
 
     /**
@@ -148,7 +148,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -162,7 +162,7 @@ public class GroupUser extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

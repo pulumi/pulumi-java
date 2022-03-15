@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionGetArgs;
@@ -26,7 +26,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -42,7 +42,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultRouteAction")
+    @Import(name="defaultRouteAction")
       private final @Nullable Output<URLMapDefaultRouteActionGetArgs> defaultRouteAction;
 
     public Output<URLMapDefaultRouteActionGetArgs> getDefaultRouteAction() {
@@ -53,7 +53,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * The backend service or backend bucket to use when none of the given paths match.
      * 
      */
-    @InputImport(name="defaultService")
+    @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
@@ -67,7 +67,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultUrlRedirect")
+    @Import(name="defaultUrlRedirect")
       private final @Nullable Output<URLMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Output<URLMapDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
@@ -78,7 +78,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -104,7 +104,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<URLMapHeaderActionGetArgs> headerAction;
 
     public Output<URLMapHeaderActionGetArgs> getHeaderAction() {
@@ -116,7 +116,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hostRules")
+    @Import(name="hostRules")
       private final @Nullable Output<List<URLMapHostRuleGetArgs>> hostRules;
 
     public Output<List<URLMapHostRuleGetArgs>> getHostRules() {
@@ -127,7 +127,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="mapId")
+    @Import(name="mapId")
       private final @Nullable Output<Integer> mapId;
 
     public Output<Integer> getMapId() {
@@ -139,7 +139,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -151,7 +151,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * hostRule matches the URL's host portion.
      * 
      */
-    @InputImport(name="pathMatchers")
+    @Import(name="pathMatchers")
       private final @Nullable Output<List<URLMapPathMatcherGetArgs>> pathMatchers;
 
     public Output<List<URLMapPathMatcherGetArgs>> getPathMatchers() {
@@ -163,7 +163,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -174,7 +174,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -188,7 +188,7 @@ public final class URLMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="tests")
+    @Import(name="tests")
       private final @Nullable Output<List<URLMapTestGetArgs>> tests;
 
     public Output<List<URLMapTestGetArgs>> getTests() {

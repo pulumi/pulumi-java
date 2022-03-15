@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.enums.VolumeProvider;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeProviderParametersAzureFileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * This type describes a volume provided by an Azure Files file share.
      * 
      */
-    @InputImport(name="azureFileParameters")
+    @Import(name="azureFileParameters")
       private final @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters;
 
     public Output<VolumeProviderParametersAzureFileArgs> getAzureFileParameters() {
@@ -33,7 +33,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * User readable description of the volume.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Provider of the volume.
      * 
      */
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final Output<Either<String,VolumeProvider>> provider;
 
     public Output<Either<String,VolumeProvider>> getProvider() {
@@ -66,7 +66,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the volume.
      * 
      */
-    @InputImport(name="volumeResourceName")
+    @Import(name="volumeResourceName")
       private final @Nullable Output<String> volumeResourceName;
 
     public Output<String> getVolumeResourceName() {

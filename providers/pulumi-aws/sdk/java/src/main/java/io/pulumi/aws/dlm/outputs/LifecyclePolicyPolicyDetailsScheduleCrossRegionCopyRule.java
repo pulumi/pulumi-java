@@ -5,14 +5,14 @@ package io.pulumi.aws.dlm.outputs;
 
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
     /**
      * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this argument is not specified, the default KMS key for the account is used.
@@ -45,14 +45,14 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule(
-        @OutputCustomType.Parameter("cmkArn") @Nullable String cmkArn,
-        @OutputCustomType.Parameter("copyTags") @Nullable Boolean copyTags,
-        @OutputCustomType.Parameter("deprecateRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("retainRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("cmkArn") @Nullable String cmkArn,
+        @CustomType.Parameter("copyTags") @Nullable Boolean copyTags,
+        @CustomType.Parameter("deprecateRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("retainRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule,
+        @CustomType.Parameter("target") String target) {
         this.cmkArn = cmkArn;
         this.copyTags = copyTags;
         this.deprecateRule = deprecateRule;

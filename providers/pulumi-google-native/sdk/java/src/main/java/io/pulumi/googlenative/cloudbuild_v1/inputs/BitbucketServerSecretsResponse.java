@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
      * The resource name for the admin access token's secret version.
      * 
      */
-    @InputImport(name="adminAccessTokenVersionName", required=true)
+    @Import(name="adminAccessTokenVersionName", required=true)
       private final String adminAccessTokenVersionName;
 
     public String getAdminAccessTokenVersionName() {
@@ -31,7 +31,7 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
      * The resource name for the read access token's secret version.
      * 
      */
-    @InputImport(name="readAccessTokenVersionName", required=true)
+    @Import(name="readAccessTokenVersionName", required=true)
       private final String readAccessTokenVersionName;
 
     public String getReadAccessTokenVersionName() {
@@ -42,7 +42,7 @@ public final class BitbucketServerSecretsResponse extends io.pulumi.resources.In
      * Immutable. The resource name for the webhook secret's secret version. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
      */
-    @InputImport(name="webhookSecretVersionName", required=true)
+    @Import(name="webhookSecretVersionName", required=true)
       private final String webhookSecretVersionName;
 
     public String getWebhookSecretVersionName() {

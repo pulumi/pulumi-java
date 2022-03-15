@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationArgs extends io.pul
      * - A value that specifies who can mount the file system. You can provide a wildcard character (*), an IP address (0.0.0.0), or a CIDR address (192.0.2.0/24. By default, Amazon FSx uses the wildcard character when specifying the client.
      * 
      */
-    @InputImport(name="clients", required=true)
+    @Import(name="clients", required=true)
       private final Output<String> clients;
 
     public Output<String> getClients() {
@@ -29,7 +29,7 @@ public final class OpenZfsVolumeNfsExportsClientConfigurationArgs extends io.pul
      * -  The options to use when mounting the file system. Maximum of 20 items. See the [Linix NFS exports man page](https://linux.die.net/man/5/exports) for more information. `crossmount` and `sync` are used by default.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final Output<List<String>> options;
 
     public Output<List<String>> getOptions() {

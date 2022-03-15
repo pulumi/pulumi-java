@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetDatabaseInstanceIpAddress extends io.pulumi.resources.Invo
 
     public static final GetDatabaseInstanceIpAddress Empty = new GetDatabaseInstanceIpAddress();
 
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
     }
 
-    @InputImport(name="timeToRetire", required=true)
+    @Import(name="timeToRetire", required=true)
       private final String timeToRetire;
 
     public String getTimeToRetire() {
         return this.timeToRetire;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

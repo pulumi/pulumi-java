@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetZoneResult {
     /**
      * The etag of the zone.
@@ -81,21 +81,21 @@ public final class GetZoneResult {
      */
     private final @Nullable String zoneType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetZoneResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
-        @OutputCustomType.Parameter("maxNumberOfRecordsPerRecordSet") Double maxNumberOfRecordsPerRecordSet,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
-        @OutputCustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
-        @OutputCustomType.Parameter("registrationVirtualNetworks") @Nullable List<SubResourceResponse> registrationVirtualNetworks,
-        @OutputCustomType.Parameter("resolutionVirtualNetworks") @Nullable List<SubResourceResponse> resolutionVirtualNetworks,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zoneType") @Nullable String zoneType) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
+        @CustomType.Parameter("maxNumberOfRecordsPerRecordSet") Double maxNumberOfRecordsPerRecordSet,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameServers") List<String> nameServers,
+        @CustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
+        @CustomType.Parameter("registrationVirtualNetworks") @Nullable List<SubResourceResponse> registrationVirtualNetworks,
+        @CustomType.Parameter("resolutionVirtualNetworks") @Nullable List<SubResourceResponse> resolutionVirtualNetworks,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zoneType") @Nullable String zoneType) {
         this.etag = etag;
         this.id = id;
         this.location = location;

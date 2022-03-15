@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeArgs;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the column family.
      * 
      */
-    @InputImport(name="columnFamily", required=true)
+    @Import(name="columnFamily", required=true)
       private final Output<String> columnFamily;
 
     public Output<String> getColumnFamily() {
@@ -32,7 +32,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bigtable instance.
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -43,7 +43,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * GC policy that applies to all cells older than the given age.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Output<GCPolicyMaxAgeArgs> maxAge;
 
     public Output<GCPolicyMaxAgeArgs> getMaxAge() {
@@ -54,7 +54,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * GC policy that applies to all versions of a cell except for the most recent.
      * 
      */
-    @InputImport(name="maxVersions")
+    @Import(name="maxVersions")
       private final @Nullable Output<List<GCPolicyMaxVersionArgs>> maxVersions;
 
     public Output<List<GCPolicyMaxVersionArgs>> getMaxVersions() {
@@ -65,7 +65,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -76,7 +76,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -87,7 +87,7 @@ public final class GCPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the table.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final Output<String> table;
 
     public Output<String> getTable() {

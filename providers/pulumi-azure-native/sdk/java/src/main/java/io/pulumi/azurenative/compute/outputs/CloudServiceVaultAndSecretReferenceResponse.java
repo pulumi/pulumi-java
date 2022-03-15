@@ -4,21 +4,21 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceVaultAndSecretReferenceResponse {
     private final @Nullable String secretUrl;
     private final @Nullable SubResourceResponse sourceVault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceVaultAndSecretReferenceResponse(
-        @OutputCustomType.Parameter("secretUrl") @Nullable String secretUrl,
-        @OutputCustomType.Parameter("sourceVault") @Nullable SubResourceResponse sourceVault) {
+        @CustomType.Parameter("secretUrl") @Nullable String secretUrl,
+        @CustomType.Parameter("sourceVault") @Nullable SubResourceResponse sourceVault) {
         this.secretUrl = secretUrl;
         this.sourceVault = sourceVault;
     }

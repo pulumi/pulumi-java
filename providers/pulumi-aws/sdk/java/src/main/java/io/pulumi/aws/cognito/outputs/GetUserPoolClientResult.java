@@ -5,14 +5,14 @@ package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.GetUserPoolClientAnalyticsConfiguration;
 import io.pulumi.aws.cognito.outputs.GetUserPoolClientTokenValidityUnit;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserPoolClientResult {
     /**
      * (Optional) Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
@@ -114,31 +114,31 @@ public final class GetUserPoolClientResult {
      */
     private final List<String> writeAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserPoolClientResult(
-        @OutputCustomType.Parameter("accessTokenValidity") Integer accessTokenValidity,
-        @OutputCustomType.Parameter("allowedOauthFlows") List<String> allowedOauthFlows,
-        @OutputCustomType.Parameter("allowedOauthFlowsUserPoolClient") Boolean allowedOauthFlowsUserPoolClient,
-        @OutputCustomType.Parameter("allowedOauthScopes") List<String> allowedOauthScopes,
-        @OutputCustomType.Parameter("analyticsConfigurations") List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations,
-        @OutputCustomType.Parameter("callbackUrls") List<String> callbackUrls,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret,
-        @OutputCustomType.Parameter("defaultRedirectUri") String defaultRedirectUri,
-        @OutputCustomType.Parameter("enableTokenRevocation") Boolean enableTokenRevocation,
-        @OutputCustomType.Parameter("explicitAuthFlows") List<String> explicitAuthFlows,
-        @OutputCustomType.Parameter("generateSecret") Boolean generateSecret,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idTokenValidity") Integer idTokenValidity,
-        @OutputCustomType.Parameter("logoutUrls") List<String> logoutUrls,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("preventUserExistenceErrors") String preventUserExistenceErrors,
-        @OutputCustomType.Parameter("readAttributes") List<String> readAttributes,
-        @OutputCustomType.Parameter("refreshTokenValidity") Integer refreshTokenValidity,
-        @OutputCustomType.Parameter("supportedIdentityProviders") List<String> supportedIdentityProviders,
-        @OutputCustomType.Parameter("tokenValidityUnits") List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
-        @OutputCustomType.Parameter("userPoolId") String userPoolId,
-        @OutputCustomType.Parameter("writeAttributes") List<String> writeAttributes) {
+        @CustomType.Parameter("accessTokenValidity") Integer accessTokenValidity,
+        @CustomType.Parameter("allowedOauthFlows") List<String> allowedOauthFlows,
+        @CustomType.Parameter("allowedOauthFlowsUserPoolClient") Boolean allowedOauthFlowsUserPoolClient,
+        @CustomType.Parameter("allowedOauthScopes") List<String> allowedOauthScopes,
+        @CustomType.Parameter("analyticsConfigurations") List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations,
+        @CustomType.Parameter("callbackUrls") List<String> callbackUrls,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret,
+        @CustomType.Parameter("defaultRedirectUri") String defaultRedirectUri,
+        @CustomType.Parameter("enableTokenRevocation") Boolean enableTokenRevocation,
+        @CustomType.Parameter("explicitAuthFlows") List<String> explicitAuthFlows,
+        @CustomType.Parameter("generateSecret") Boolean generateSecret,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idTokenValidity") Integer idTokenValidity,
+        @CustomType.Parameter("logoutUrls") List<String> logoutUrls,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("preventUserExistenceErrors") String preventUserExistenceErrors,
+        @CustomType.Parameter("readAttributes") List<String> readAttributes,
+        @CustomType.Parameter("refreshTokenValidity") Integer refreshTokenValidity,
+        @CustomType.Parameter("supportedIdentityProviders") List<String> supportedIdentityProviders,
+        @CustomType.Parameter("tokenValidityUnits") List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
+        @CustomType.Parameter("userPoolId") String userPoolId,
+        @CustomType.Parameter("writeAttributes") List<String> writeAttributes) {
         this.accessTokenValidity = accessTokenValidity;
         this.allowedOauthFlows = allowedOauthFlows;
         this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;

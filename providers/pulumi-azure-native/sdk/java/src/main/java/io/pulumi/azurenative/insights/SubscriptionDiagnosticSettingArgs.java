@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.SubscriptionLogSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The resource Id for the event hub authorization rule.
      * 
      */
-    @InputImport(name="eventHubAuthorizationRuleId")
+    @Import(name="eventHubAuthorizationRuleId")
       private final @Nullable Output<String> eventHubAuthorizationRuleId;
 
     public Output<String> getEventHubAuthorizationRuleId() {
@@ -31,7 +31,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The name of the event hub. If none is specified, the default event hub will be selected.
      * 
      */
-    @InputImport(name="eventHubName")
+    @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
@@ -42,7 +42,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * Location of the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The list of logs settings.
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable Output<List<SubscriptionLogSettingsArgs>> logs;
 
     public Output<List<SubscriptionLogSettingsArgs>> getLogs() {
@@ -64,7 +64,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The name of the diagnostic setting.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.
      * 
      */
-    @InputImport(name="serviceBusRuleId")
+    @Import(name="serviceBusRuleId")
       private final @Nullable Output<String> serviceBusRuleId;
 
     public Output<String> getServiceBusRuleId() {
@@ -86,7 +86,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The resource ID of the storage account to which you would like to send Diagnostic Logs.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {
@@ -97,7 +97,7 @@ public final class SubscriptionDiagnosticSettingArgs extends io.pulumi.resources
      * The full ARM resource ID of the Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {

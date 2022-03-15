@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetSecurityGroupFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecurityGroupResult {
     /**
      * The computed ARN of the security group.
@@ -29,15 +29,15 @@ public final class GetSecurityGroupResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecurityGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetSecurityGroupFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("filters") @Nullable List<GetSecurityGroupFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.description = description;
         this.filters = filters;

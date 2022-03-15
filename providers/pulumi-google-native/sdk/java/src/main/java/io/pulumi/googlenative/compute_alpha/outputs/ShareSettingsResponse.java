@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShareSettingsResponse {
     /**
      * A map of folder id and folder config to specify consumer projects for this shared-reservation. This is only valid when share_type's value is DIRECT_PROJECTS_UNDER_SPECIFIC_FOLDERS. Folder id should be a string of number, and without "folders/" prefix.
@@ -32,12 +32,12 @@ public final class ShareSettingsResponse {
      */
     private final String shareType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShareSettingsResponse(
-        @OutputCustomType.Parameter("folderMap") Map<String,String> folderMap,
-        @OutputCustomType.Parameter("projectMap") Map<String,String> projectMap,
-        @OutputCustomType.Parameter("projects") List<String> projects,
-        @OutputCustomType.Parameter("shareType") String shareType) {
+        @CustomType.Parameter("folderMap") Map<String,String> folderMap,
+        @CustomType.Parameter("projectMap") Map<String,String> projectMap,
+        @CustomType.Parameter("projects") List<String> projects,
+        @CustomType.Parameter("shareType") String shareType) {
         this.folderMap = folderMap;
         this.projectMap = projectMap;
         this.projects = projects;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TxtRecordResponse {
     /**
      * The text value of this TXT record.
@@ -17,8 +17,8 @@ public final class TxtRecordResponse {
      */
     private final @Nullable List<String> value;
 
-    @OutputCustomType.Constructor
-    private TxtRecordResponse(@OutputCustomType.Parameter("value") @Nullable List<String> value) {
+    @CustomType.Constructor
+    private TxtRecordResponse(@CustomType.Parameter("value") @Nullable List<String> value) {
         this.value = value;
     }
 

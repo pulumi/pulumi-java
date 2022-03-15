@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
      * 
      */
-    @InputImport(name="recordColumnDelimiter", required=true)
+    @Import(name="recordColumnDelimiter", required=true)
       private final Output<String> recordColumnDelimiter;
 
     public Output<String> getRecordColumnDelimiter() {
@@ -28,7 +28,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The row delimiter. For example, in a CSV format, `\n` is the typical row delimiter.
      * 
      */
-    @InputImport(name="recordRowDelimiter", required=true)
+    @Import(name="recordRowDelimiter", required=true)
       private final Output<String> recordRowDelimiter;
 
     public Output<String> getRecordRowDelimiter() {

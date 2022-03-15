@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class A2AUnprotectedDiskDetailsResponse extends io.pulumi.resources
      * The source lun Id for the data disk.
      * 
      */
-    @InputImport(name="diskLunId")
+    @Import(name="diskLunId")
       private final @Nullable Integer diskLunId;
 
     public Optional<Integer> getDiskLunId() {

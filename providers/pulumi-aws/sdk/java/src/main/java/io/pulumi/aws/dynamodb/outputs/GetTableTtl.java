@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableTtl {
     private final String attributeName;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableTtl(
-        @OutputCustomType.Parameter("attributeName") String attributeName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("attributeName") String attributeName,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }

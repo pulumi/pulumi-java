@@ -12,7 +12,7 @@ import io.pulumi.aws.eks.outputs.ClusterIdentity;
 import io.pulumi.aws.eks.outputs.ClusterKubernetesNetworkConfig;
 import io.pulumi.aws.eks.outputs.ClusterVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * ARN of the cluster.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
      * 
      */
-    @OutputExport(name="certificateAuthority", type=ClusterCertificateAuthority.class, parameters={})
+    @Export(name="certificateAuthority", type=ClusterCertificateAuthority.class, parameters={})
     private Output<ClusterCertificateAuthority> certificateAuthority;
 
     /**
@@ -67,7 +67,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Unix epoch timestamp in seconds for when the cluster was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -81,7 +81,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
      * 
      */
-    @OutputExport(name="enabledClusterLogTypes", type=List.class, parameters={String.class})
+    @Export(name="enabledClusterLogTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> enabledClusterLogTypes;
 
     /**
@@ -95,7 +95,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
      * 
      */
-    @OutputExport(name="encryptionConfig", type=ClusterEncryptionConfig.class, parameters={})
+    @Export(name="encryptionConfig", type=ClusterEncryptionConfig.class, parameters={})
     private Output</* @Nullable */ ClusterEncryptionConfig> encryptionConfig;
 
     /**
@@ -109,7 +109,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Endpoint for your Kubernetes API server.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -123,7 +123,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
      * 
      */
-    @OutputExport(name="identities", type=List.class, parameters={ClusterIdentity.class})
+    @Export(name="identities", type=List.class, parameters={ClusterIdentity.class})
     private Output<List<ClusterIdentity>> identities;
 
     /**
@@ -137,7 +137,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @OutputExport(name="kubernetesNetworkConfig", type=ClusterKubernetesNetworkConfig.class, parameters={})
+    @Export(name="kubernetesNetworkConfig", type=ClusterKubernetesNetworkConfig.class, parameters={})
     private Output<ClusterKubernetesNetworkConfig> kubernetesNetworkConfig;
 
     /**
@@ -151,7 +151,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -165,7 +165,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Platform version for the cluster.
      * 
      */
-    @OutputExport(name="platformVersion", type=String.class, parameters={})
+    @Export(name="platformVersion", type=String.class, parameters={})
     private Output<String> platformVersion;
 
     /**
@@ -179,7 +179,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -193,7 +193,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -207,7 +207,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -221,7 +221,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -235,7 +235,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
@@ -249,7 +249,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
      * 
      */
-    @OutputExport(name="vpcConfig", type=ClusterVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=ClusterVpcConfig.class, parameters={})
     private Output<ClusterVpcConfig> vpcConfig;
 
     /**

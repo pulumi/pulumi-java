@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderSinkArgs;
@@ -39,7 +39,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    @OutputExport(name="bigqueryOptions", type=FolderSinkBigqueryOptions.class, parameters={})
+    @Export(name="bigqueryOptions", type=FolderSinkBigqueryOptions.class, parameters={})
     private Output<FolderSinkBigqueryOptions> bigqueryOptions;
 
     /**
@@ -53,7 +53,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * A description of this exclusion.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -70,7 +70,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
     /**
@@ -87,7 +87,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -101,7 +101,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    @OutputExport(name="exclusions", type=List.class, parameters={FolderSinkExclusion.class})
+    @Export(name="exclusions", type=List.class, parameters={FolderSinkExclusion.class})
     private Output</* @Nullable */ List<FolderSinkExclusion>> exclusions;
 
     /**
@@ -116,7 +116,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output</* @Nullable */ String> filter;
 
     /**
@@ -132,7 +132,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * accepted.
      * 
      */
-    @OutputExport(name="folder", type=String.class, parameters={})
+    @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     /**
@@ -148,7 +148,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
      * 
      */
-    @OutputExport(name="includeChildren", type=Boolean.class, parameters={})
+    @Export(name="includeChildren", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> includeChildren;
 
     /**
@@ -163,7 +163,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * configured `destination`.
      * 
      */
-    @OutputExport(name="writerIdentity", type=String.class, parameters={})
+    @Export(name="writerIdentity", type=String.class, parameters={})
     private Output<String> writerIdentity;
 
     /**

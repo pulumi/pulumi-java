@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse {
     /**
      * Whether the classification task is multi-label or not.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      */
     private final Boolean isMultiLabel;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(@OutputCustomType.Parameter("isMultiLabel") Boolean isMultiLabel) {
+    @CustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(@CustomType.Parameter("isMultiLabel") Boolean isMultiLabel) {
         this.isMultiLabel = isMultiLabel;
     }
 

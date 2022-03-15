@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionMonitoringQueryLanguageTrigger;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
     /**
      * The amount of time that a time series must
@@ -50,11 +50,11 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      */
     private final @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyConditionConditionMonitoringQueryLanguage(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
         this.duration = duration;
         this.query = query;
         this.trigger = trigger;

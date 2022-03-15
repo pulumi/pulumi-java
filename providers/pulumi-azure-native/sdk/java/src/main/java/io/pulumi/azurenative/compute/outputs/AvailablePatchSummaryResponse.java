@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AvailablePatchSummaryResponse {
     /**
      * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
@@ -53,16 +53,16 @@ public final class AvailablePatchSummaryResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AvailablePatchSummaryResponse(
-        @OutputCustomType.Parameter("assessmentActivityId") String assessmentActivityId,
-        @OutputCustomType.Parameter("criticalAndSecurityPatchCount") Integer criticalAndSecurityPatchCount,
-        @OutputCustomType.Parameter("error") ApiErrorResponse error,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("otherPatchCount") Integer otherPatchCount,
-        @OutputCustomType.Parameter("rebootPending") Boolean rebootPending,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("assessmentActivityId") String assessmentActivityId,
+        @CustomType.Parameter("criticalAndSecurityPatchCount") Integer criticalAndSecurityPatchCount,
+        @CustomType.Parameter("error") ApiErrorResponse error,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("otherPatchCount") Integer otherPatchCount,
+        @CustomType.Parameter("rebootPending") Boolean rebootPending,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status) {
         this.assessmentActivityId = assessmentActivityId;
         this.criticalAndSecurityPatchCount = criticalAndSecurityPatchCount;
         this.error = error;

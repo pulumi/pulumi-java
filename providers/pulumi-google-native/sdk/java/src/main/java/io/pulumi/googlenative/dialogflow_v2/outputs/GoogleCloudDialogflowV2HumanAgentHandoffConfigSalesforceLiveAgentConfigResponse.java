@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse {
     /**
      * Live Agent chat button ID.
@@ -30,12 +30,12 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      */
     private final String organizationId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse(
-        @OutputCustomType.Parameter("buttonId") String buttonId,
-        @OutputCustomType.Parameter("deploymentId") String deploymentId,
-        @OutputCustomType.Parameter("endpointDomain") String endpointDomain,
-        @OutputCustomType.Parameter("organizationId") String organizationId) {
+        @CustomType.Parameter("buttonId") String buttonId,
+        @CustomType.Parameter("deploymentId") String deploymentId,
+        @CustomType.Parameter("endpointDomain") String endpointDomain,
+        @CustomType.Parameter("organizationId") String organizationId) {
         this.buttonId = buttonId;
         this.deploymentId = deploymentId;
         this.endpointDomain = endpointDomain;

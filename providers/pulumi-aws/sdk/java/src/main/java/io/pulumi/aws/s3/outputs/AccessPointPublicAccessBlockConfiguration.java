@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointPublicAccessBlockConfiguration {
     /**
      * Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
@@ -38,12 +38,12 @@ public final class AccessPointPublicAccessBlockConfiguration {
      */
     private final @Nullable Boolean restrictPublicBuckets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointPublicAccessBlockConfiguration(
-        @OutputCustomType.Parameter("blockPublicAcls") @Nullable Boolean blockPublicAcls,
-        @OutputCustomType.Parameter("blockPublicPolicy") @Nullable Boolean blockPublicPolicy,
-        @OutputCustomType.Parameter("ignorePublicAcls") @Nullable Boolean ignorePublicAcls,
-        @OutputCustomType.Parameter("restrictPublicBuckets") @Nullable Boolean restrictPublicBuckets) {
+        @CustomType.Parameter("blockPublicAcls") @Nullable Boolean blockPublicAcls,
+        @CustomType.Parameter("blockPublicPolicy") @Nullable Boolean blockPublicPolicy,
+        @CustomType.Parameter("ignorePublicAcls") @Nullable Boolean ignorePublicAcls,
+        @CustomType.Parameter("restrictPublicBuckets") @Nullable Boolean restrictPublicBuckets) {
         this.blockPublicAcls = blockPublicAcls;
         this.blockPublicPolicy = blockPublicPolicy;
         this.ignorePublicAcls = ignorePublicAcls;

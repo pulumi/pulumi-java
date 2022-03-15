@@ -6,13 +6,13 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.EnabledConfigResponse;
 import io.pulumi.azurenative.web.outputs.HttpLogsConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppDiagnosticLogsConfigurationResult {
     /**
      * Application logs configuration.
@@ -55,16 +55,16 @@ public final class GetWebAppDiagnosticLogsConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppDiagnosticLogsConfigurationResult(
-        @OutputCustomType.Parameter("applicationLogs") @Nullable ApplicationLogsConfigResponse applicationLogs,
-        @OutputCustomType.Parameter("detailedErrorMessages") @Nullable EnabledConfigResponse detailedErrorMessages,
-        @OutputCustomType.Parameter("failedRequestsTracing") @Nullable EnabledConfigResponse failedRequestsTracing,
-        @OutputCustomType.Parameter("httpLogs") @Nullable HttpLogsConfigResponse httpLogs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("applicationLogs") @Nullable ApplicationLogsConfigResponse applicationLogs,
+        @CustomType.Parameter("detailedErrorMessages") @Nullable EnabledConfigResponse detailedErrorMessages,
+        @CustomType.Parameter("failedRequestsTracing") @Nullable EnabledConfigResponse failedRequestsTracing,
+        @CustomType.Parameter("httpLogs") @Nullable HttpLogsConfigResponse httpLogs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.applicationLogs = applicationLogs;
         this.detailedErrorMessages = detailedErrorMessages;
         this.failedRequestsTracing = failedRequestsTracing;

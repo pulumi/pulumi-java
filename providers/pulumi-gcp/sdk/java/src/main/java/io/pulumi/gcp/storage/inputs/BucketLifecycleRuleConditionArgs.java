@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * Minimum age of an object in days to satisfy this condition.
      * 
      */
-    @InputImport(name="age")
+    @Import(name="age")
       private final @Nullable Output<Integer> age;
 
     public Output<Integer> getAge() {
@@ -31,7 +31,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
      * 
      */
-    @InputImport(name="createdBefore")
+    @Import(name="createdBefore")
       private final @Nullable Output<String> createdBefore;
 
     public Output<String> getCreatedBefore() {
@@ -42,7 +42,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when the customTime metadata for the object is set to an earlier date than the date used in this lifecycle condition.
      * 
      */
-    @InputImport(name="customTimeBefore")
+    @Import(name="customTimeBefore")
       private final @Nullable Output<String> customTimeBefore;
 
     public Output<String> getCustomTimeBefore() {
@@ -53,7 +53,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * Days since the date set in the `customTime` metadata for the object. This condition is satisfied when the current date and time is at least the specified number of days after the `customTime`.
      * 
      */
-    @InputImport(name="daysSinceCustomTime")
+    @Import(name="daysSinceCustomTime")
       private final @Nullable Output<Integer> daysSinceCustomTime;
 
     public Output<Integer> getDaysSinceCustomTime() {
@@ -64,7 +64,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
      * 
      */
-    @InputImport(name="daysSinceNoncurrentTime")
+    @Import(name="daysSinceNoncurrentTime")
       private final @Nullable Output<Integer> daysSinceNoncurrentTime;
 
     public Output<Integer> getDaysSinceNoncurrentTime() {
@@ -75,7 +75,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `DURABLE_REDUCED_AVAILABILITY`.
      * 
      */
-    @InputImport(name="matchesStorageClasses")
+    @Import(name="matchesStorageClasses")
       private final @Nullable Output<List<String>> matchesStorageClasses;
 
     public Output<List<String>> getMatchesStorageClasses() {
@@ -86,7 +86,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
      * 
      */
-    @InputImport(name="noncurrentTimeBefore")
+    @Import(name="noncurrentTimeBefore")
       private final @Nullable Output<String> noncurrentTimeBefore;
 
     public Output<String> getNoncurrentTimeBefore() {
@@ -97,7 +97,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
      * 
      */
-    @InputImport(name="numNewerVersions")
+    @Import(name="numNewerVersions")
       private final @Nullable Output<Integer> numNewerVersions;
 
     public Output<Integer> getNumNewerVersions() {
@@ -108,7 +108,7 @@ public final class BucketLifecycleRuleConditionArgs extends io.pulumi.resources.
      * Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
      * 
      */
-    @InputImport(name="withState")
+    @Import(name="withState")
       private final @Nullable Output<String> withState;
 
     public Output<String> getWithState() {

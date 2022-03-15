@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesFilterRatioResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesFilterResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeSeriesQueryResponse {
     /**
      * Filter parameters to fetch time series.
@@ -32,12 +32,12 @@ public final class TimeSeriesQueryResponse {
      */
     private final String unitOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeSeriesQueryResponse(
-        @OutputCustomType.Parameter("timeSeriesFilter") TimeSeriesFilterResponse timeSeriesFilter,
-        @OutputCustomType.Parameter("timeSeriesFilterRatio") TimeSeriesFilterRatioResponse timeSeriesFilterRatio,
-        @OutputCustomType.Parameter("timeSeriesQueryLanguage") String timeSeriesQueryLanguage,
-        @OutputCustomType.Parameter("unitOverride") String unitOverride) {
+        @CustomType.Parameter("timeSeriesFilter") TimeSeriesFilterResponse timeSeriesFilter,
+        @CustomType.Parameter("timeSeriesFilterRatio") TimeSeriesFilterRatioResponse timeSeriesFilterRatio,
+        @CustomType.Parameter("timeSeriesQueryLanguage") String timeSeriesQueryLanguage,
+        @CustomType.Parameter("unitOverride") String unitOverride) {
         this.timeSeriesFilter = timeSeriesFilter;
         this.timeSeriesFilterRatio = timeSeriesFilterRatio;
         this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;

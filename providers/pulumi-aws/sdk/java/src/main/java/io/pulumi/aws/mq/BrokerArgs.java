@@ -10,7 +10,7 @@ import io.pulumi.aws.mq.inputs.BrokerLogsArgs;
 import io.pulumi.aws.mq.inputs.BrokerMaintenanceWindowStartTimeArgs;
 import io.pulumi.aws.mq.inputs.BrokerUserArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is `false`.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -38,7 +38,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication strategy used to secure the broker. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
      * 
      */
-    @InputImport(name="authenticationStrategy")
+    @Import(name="authenticationStrategy")
       private final @Nullable Output<String> authenticationStrategy;
 
     public Output<String> getAuthenticationStrategy() {
@@ -49,7 +49,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to automatically upgrade to new minor versions of brokers as Amazon MQ makes releases available.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
@@ -60,7 +60,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the broker.
      * 
      */
-    @InputImport(name="brokerName")
+    @Import(name="brokerName")
       private final @Nullable Output<String> brokerName;
 
     public Output<String> getBrokerName() {
@@ -71,7 +71,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for broker configuration. Applies to `engine_type` of `ActiveMQ` only. Detailed below.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<BrokerConfigurationArgs> configuration;
 
     public Output<BrokerConfigurationArgs> getConfiguration() {
@@ -82,7 +82,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Deployment mode of the broker. Valid values are `SINGLE_INSTANCE`, `ACTIVE_STANDBY_MULTI_AZ`, and `CLUSTER_MULTI_AZ`. Default is `SINGLE_INSTANCE`.
      * 
      */
-    @InputImport(name="deploymentMode")
+    @Import(name="deploymentMode")
       private final @Nullable Output<String> deploymentMode;
 
     public Output<String> getDeploymentMode() {
@@ -93,7 +93,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing encryption options. Detailed below.
      * 
      */
-    @InputImport(name="encryptionOptions")
+    @Import(name="encryptionOptions")
       private final @Nullable Output<BrokerEncryptionOptionsArgs> encryptionOptions;
 
     public Output<BrokerEncryptionOptionsArgs> getEncryptionOptions() {
@@ -104,7 +104,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
      * 
      */
-    @InputImport(name="engineType", required=true)
+    @Import(name="engineType", required=true)
       private final Output<String> engineType;
 
     public Output<String> getEngineType() {
@@ -115,7 +115,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions. For example, `5.15.0`.
      * 
      */
-    @InputImport(name="engineVersion", required=true)
+    @Import(name="engineVersion", required=true)
       private final Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -126,7 +126,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Broker's instance type. For example, `mq.t3.micro`, `mq.m5.large`.
      * 
      */
-    @InputImport(name="hostInstanceType", required=true)
+    @Import(name="hostInstanceType", required=true)
       private final Output<String> hostInstanceType;
 
     public Output<String> getHostInstanceType() {
@@ -137,7 +137,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for `engine_type` `RabbitMQ`. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)
      * 
      */
-    @InputImport(name="ldapServerMetadata")
+    @Import(name="ldapServerMetadata")
       private final @Nullable Output<BrokerLdapServerMetadataArgs> ldapServerMetadata;
 
     public Output<BrokerLdapServerMetadataArgs> getLdapServerMetadata() {
@@ -148,7 +148,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the logging configuration of the broker. Detailed below.
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable Output<BrokerLogsArgs> logs;
 
     public Output<BrokerLogsArgs> getLogs() {
@@ -159,7 +159,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the maintenance window start time. Detailed below.
      * 
      */
-    @InputImport(name="maintenanceWindowStartTime")
+    @Import(name="maintenanceWindowStartTime")
       private final @Nullable Output<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime;
 
     public Output<BrokerMaintenanceWindowStartTimeArgs> getMaintenanceWindowStartTime() {
@@ -170,7 +170,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
      * 
      */
-    @InputImport(name="publiclyAccessible")
+    @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
     public Output<Boolean> getPubliclyAccessible() {
@@ -181,7 +181,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * List of security group IDs assigned to the broker.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -192,7 +192,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Storage type of the broker. For `engine_type` `ActiveMQ`, the valid values are `efs` and `ebs`, and the AWS-default is `efs`. For `engine_type` `RabbitMQ`, only `ebs` is supported. When using `ebs`, only the `mq.m5` broker instance type family is supported.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -203,7 +203,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * List of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires multiple subnets.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -214,7 +214,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the broker. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -225,7 +225,7 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for broker users. For `engine_type` of `RabbitMQ`, Amazon MQ does not return broker users preventing this resource from making user updates and drift detection. Detailed below.
      * 
      */
-    @InputImport(name="users", required=true)
+    @Import(name="users", required=true)
       private final Output<List<BrokerUserArgs>> users;
 
     public Output<List<BrokerUserArgs>> getUsers() {

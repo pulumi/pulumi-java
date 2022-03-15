@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ClusterConfigurationInfoGetArgs extends io.pulumi.resources.R
      * Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class ClusterConfigurationInfoGetArgs extends io.pulumi.resources.R
      * Revision of the MSK Configuration to use in the cluster.
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final Output<Integer> revision;
 
     public Output<Integer> getRevision() {

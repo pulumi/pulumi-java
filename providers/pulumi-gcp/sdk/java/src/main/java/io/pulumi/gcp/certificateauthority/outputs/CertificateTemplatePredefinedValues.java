@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsage;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValues {
     /**
      * Optional. Describes custom X.509 extensions.
@@ -42,13 +42,13 @@ public final class CertificateTemplatePredefinedValues {
      */
     private final @Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePredefinedValues(
-        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions,
-        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
-        @OutputCustomType.Parameter("caOptions") @Nullable CertificateTemplatePredefinedValuesCaOptions caOptions,
-        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage,
-        @OutputCustomType.Parameter("policyIds") @Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
+        @CustomType.Parameter("additionalExtensions") @Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions,
+        @CustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @CustomType.Parameter("caOptions") @Nullable CertificateTemplatePredefinedValuesCaOptions caOptions,
+        @CustomType.Parameter("keyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage,
+        @CustomType.Parameter("policyIds") @Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

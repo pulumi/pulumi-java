@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecConfig {
     private final String configId;
     private final @Nullable String configName;
@@ -19,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecConfig {
     private final String fileName;
     private final @Nullable String fileUid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecConfig(
-        @OutputCustomType.Parameter("configId") String configId,
-        @OutputCustomType.Parameter("configName") @Nullable String configName,
-        @OutputCustomType.Parameter("fileGid") @Nullable String fileGid,
-        @OutputCustomType.Parameter("fileMode") @Nullable Integer fileMode,
-        @OutputCustomType.Parameter("fileName") String fileName,
-        @OutputCustomType.Parameter("fileUid") @Nullable String fileUid) {
+        @CustomType.Parameter("configId") String configId,
+        @CustomType.Parameter("configName") @Nullable String configName,
+        @CustomType.Parameter("fileGid") @Nullable String fileGid,
+        @CustomType.Parameter("fileMode") @Nullable Integer fileMode,
+        @CustomType.Parameter("fileName") String fileName,
+        @CustomType.Parameter("fileUid") @Nullable String fileUid) {
         this.configId = configId;
         this.configName = configName;
         this.fileGid = fileGid;

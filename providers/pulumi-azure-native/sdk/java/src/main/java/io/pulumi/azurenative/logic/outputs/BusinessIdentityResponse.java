@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BusinessIdentityResponse {
     /**
      * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
@@ -20,10 +20,10 @@ public final class BusinessIdentityResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BusinessIdentityResponse(
-        @OutputCustomType.Parameter("qualifier") String qualifier,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("qualifier") String qualifier,
+        @CustomType.Parameter("value") String value) {
         this.qualifier = qualifier;
         this.value = value;
     }

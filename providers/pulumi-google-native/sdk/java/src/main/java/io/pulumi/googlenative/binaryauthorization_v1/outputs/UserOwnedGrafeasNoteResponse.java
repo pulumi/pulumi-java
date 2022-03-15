@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.binaryauthorization_v1.outputs.AttestorPublicKeyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserOwnedGrafeasNoteResponse {
     /**
      * This field will contain the service account email address that this Attestor will use as the principal when querying Container Analysis. Attestor administrators must grant this service account the IAM role needed to read attestations from the note_reference in Container Analysis (`containeranalysis.notes.occurrences.viewer`). This email address is fixed for the lifetime of the Attestor, but callers should not make any other assumptions about the service account email; future versions may use an email based on a different naming pattern.
@@ -27,11 +27,11 @@ public final class UserOwnedGrafeasNoteResponse {
      */
     private final List<AttestorPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserOwnedGrafeasNoteResponse(
-        @OutputCustomType.Parameter("delegationServiceAccountEmail") String delegationServiceAccountEmail,
-        @OutputCustomType.Parameter("noteReference") String noteReference,
-        @OutputCustomType.Parameter("publicKeys") List<AttestorPublicKeyResponse> publicKeys) {
+        @CustomType.Parameter("delegationServiceAccountEmail") String delegationServiceAccountEmail,
+        @CustomType.Parameter("noteReference") String noteReference,
+        @CustomType.Parameter("publicKeys") List<AttestorPublicKeyResponse> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         this.noteReference = noteReference;
         this.publicKeys = publicKeys;

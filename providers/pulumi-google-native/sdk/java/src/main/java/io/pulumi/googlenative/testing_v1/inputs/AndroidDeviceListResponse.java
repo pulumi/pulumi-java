@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AndroidDeviceListResponse extends io.pulumi.resources.InvokeA
      * A list of Android devices.
      * 
      */
-    @InputImport(name="androidDevices", required=true)
+    @Import(name="androidDevices", required=true)
       private final List<AndroidDeviceResponse> androidDevices;
 
     public List<AndroidDeviceResponse> getAndroidDevices() {

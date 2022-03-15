@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity {
     /**
      * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
@@ -28,11 +28,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity(
-        @OutputCustomType.Parameter("consumeReservationType") @Nullable String consumeReservationType,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("consumeReservationType") @Nullable String consumeReservationType,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;

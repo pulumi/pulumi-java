@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class RuleGroupRuleVariables extends io.pulumi.resources.InvokeArgs
 
     public static final RuleGroupRuleVariables Empty = new RuleGroupRuleVariables();
 
-    @InputImport(name="iPSets")
+    @Import(name="iPSets")
       private final @Nullable Object iPSets;
 
     public Optional<Object> getIPSets() {
         return this.iPSets == null ? Optional.empty() : Optional.ofNullable(this.iPSets);
     }
 
-    @InputImport(name="portSets")
+    @Import(name="portSets")
       private final @Nullable Object portSets;
 
     public Optional<Object> getPortSets() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementBinauthz;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementConfigSync;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementHierarchyController;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureMembershipConfigmanagement {
     /**
      * Binauthz configuration for the cluster. Structure is documented below.
@@ -41,13 +41,13 @@ public final class FeatureMembershipConfigmanagement {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureMembershipConfigmanagement(
-        @OutputCustomType.Parameter("binauthz") @Nullable FeatureMembershipConfigmanagementBinauthz binauthz,
-        @OutputCustomType.Parameter("configSync") @Nullable FeatureMembershipConfigmanagementConfigSync configSync,
-        @OutputCustomType.Parameter("hierarchyController") @Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController,
-        @OutputCustomType.Parameter("policyController") @Nullable FeatureMembershipConfigmanagementPolicyController policyController,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("binauthz") @Nullable FeatureMembershipConfigmanagementBinauthz binauthz,
+        @CustomType.Parameter("configSync") @Nullable FeatureMembershipConfigmanagementConfigSync configSync,
+        @CustomType.Parameter("hierarchyController") @Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController,
+        @CustomType.Parameter("policyController") @Nullable FeatureMembershipConfigmanagementPolicyController policyController,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.binauthz = binauthz;
         this.configSync = configSync;
         this.hierarchyController = hierarchyController;

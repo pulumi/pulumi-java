@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstancePropertiesGuestAccelerator;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstancePropertiesLocalSsd;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReservationSpecificReservationInstanceProperties {
     /**
      * Guest accelerator type and count.
@@ -41,12 +41,12 @@ public final class ReservationSpecificReservationInstanceProperties {
      */
     private final @Nullable String minCpuPlatform;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationSpecificReservationInstanceProperties(
-        @OutputCustomType.Parameter("guestAccelerators") @Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators,
-        @OutputCustomType.Parameter("localSsds") @Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform) {
+        @CustomType.Parameter("guestAccelerators") @Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("localSsds") @Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
         this.machineType = machineType;

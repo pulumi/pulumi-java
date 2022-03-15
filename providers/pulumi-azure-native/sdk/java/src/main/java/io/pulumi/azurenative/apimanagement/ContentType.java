@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ContentTypeArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * Content type description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -49,7 +49,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * Content type schema.
      * 
      */
-    @OutputExport(name="schema", type=Object.class, parameters={})
+    @Export(name="schema", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> schema;
 
     /**
@@ -77,7 +77,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -91,7 +91,7 @@ public class ContentType extends io.pulumi.resources.CustomResource {
      * Content type version.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

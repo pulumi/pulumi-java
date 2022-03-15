@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppCustomRule {
     private final @Nullable String condition;
     private final String source;
     private final @Nullable String status;
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppCustomRule(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("target") String target) {
         this.condition = condition;
         this.source = source;
         this.status = status;

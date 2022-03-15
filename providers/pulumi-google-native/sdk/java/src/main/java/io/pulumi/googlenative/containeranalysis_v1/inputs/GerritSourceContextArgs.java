@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AliasContextArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * An alias, which may be a branch or tag.
      * 
      */
-    @InputImport(name="aliasContext")
+    @Import(name="aliasContext")
       private final @Nullable Output<AliasContextArgs> aliasContext;
 
     public Output<AliasContextArgs> getAliasContext() {
@@ -34,7 +34,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * The full project name within the host. Projects may be nested, so "project/subproject" is a valid project name. The "repo name" is the hostURI/project.
      * 
      */
-    @InputImport(name="gerritProject")
+    @Import(name="gerritProject")
       private final @Nullable Output<String> gerritProject;
 
     public Output<String> getGerritProject() {
@@ -45,7 +45,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * The URI of a running Gerrit instance.
      * 
      */
-    @InputImport(name="hostUri")
+    @Import(name="hostUri")
       private final @Nullable Output<String> hostUri;
 
     public Output<String> getHostUri() {
@@ -56,7 +56,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * A revision (commit) ID.
      * 
      */
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {

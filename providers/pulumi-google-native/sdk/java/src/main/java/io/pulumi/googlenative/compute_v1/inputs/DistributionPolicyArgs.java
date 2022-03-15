@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.DistributionPolicyTargetShape;
 import io.pulumi.googlenative.compute_v1.inputs.DistributionPolicyZoneConfigurationArgs;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
      * The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
      * 
      */
-    @InputImport(name="targetShape")
+    @Import(name="targetShape")
       private final @Nullable Output<DistributionPolicyTargetShape> targetShape;
 
     public Output<DistributionPolicyTargetShape> getTargetShape() {
@@ -31,7 +31,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
      * Zones where the regional managed instance group will create and manage its instances.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
     public Output<List<DistributionPolicyZoneConfigurationArgs>> getZones() {

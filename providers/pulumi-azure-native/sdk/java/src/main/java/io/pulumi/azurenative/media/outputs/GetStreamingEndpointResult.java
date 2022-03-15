@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.CrossSiteAccessPoliciesResponse;
 import io.pulumi.azurenative.media.outputs.StreamingEndpointAccessControlResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamingEndpointResult {
     /**
      * The access control definition of the streaming endpoint.
@@ -130,30 +130,30 @@ public final class GetStreamingEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamingEndpointResult(
-        @OutputCustomType.Parameter("accessControl") @Nullable StreamingEndpointAccessControlResponse accessControl,
-        @OutputCustomType.Parameter("availabilitySetName") @Nullable String availabilitySetName,
-        @OutputCustomType.Parameter("cdnEnabled") @Nullable Boolean cdnEnabled,
-        @OutputCustomType.Parameter("cdnProfile") @Nullable String cdnProfile,
-        @OutputCustomType.Parameter("cdnProvider") @Nullable String cdnProvider,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
-        @OutputCustomType.Parameter("customHostNames") @Nullable List<String> customHostNames,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("freeTrialEndTime") String freeTrialEndTime,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maxCacheAge") @Nullable Double maxCacheAge,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("scaleUnits") Integer scaleUnits,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessControl") @Nullable StreamingEndpointAccessControlResponse accessControl,
+        @CustomType.Parameter("availabilitySetName") @Nullable String availabilitySetName,
+        @CustomType.Parameter("cdnEnabled") @Nullable Boolean cdnEnabled,
+        @CustomType.Parameter("cdnProfile") @Nullable String cdnProfile,
+        @CustomType.Parameter("cdnProvider") @Nullable String cdnProvider,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
+        @CustomType.Parameter("customHostNames") @Nullable List<String> customHostNames,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("freeTrialEndTime") String freeTrialEndTime,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxCacheAge") @Nullable Double maxCacheAge,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("scaleUnits") Integer scaleUnits,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accessControl = accessControl;
         this.availabilitySetName = availabilitySetName;
         this.cdnEnabled = cdnEnabled;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.PrivateEndpointArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Gets or sets private endpoint associated with the private endpoint connection
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
     public Output<PrivateEndpointArgs> getPrivateEndpoint() {
@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Gets or sets private link service connection state
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -48,7 +48,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Gets or sets provisioning state of the private endpoint connection
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {

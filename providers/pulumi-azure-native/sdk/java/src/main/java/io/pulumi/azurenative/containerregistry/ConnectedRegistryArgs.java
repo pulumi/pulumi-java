@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.LoggingPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.ParentPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The list of the ACR token resource IDs used to authenticate clients to the connected registry.
      * 
      */
-    @InputImport(name="clientTokenIds")
+    @Import(name="clientTokenIds")
       private final @Nullable Output<List<String>> clientTokenIds;
 
     public Output<List<String>> getClientTokenIds() {
@@ -34,7 +34,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The name of the connected registry.
      * 
      */
-    @InputImport(name="connectedRegistryName")
+    @Import(name="connectedRegistryName")
       private final @Nullable Output<String> connectedRegistryName;
 
     public Output<String> getConnectedRegistryName() {
@@ -45,7 +45,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The logging properties of the connected registry.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<LoggingPropertiesArgs> logging;
 
     public Output<LoggingPropertiesArgs> getLogging() {
@@ -56,7 +56,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The mode of the connected registry resource that indicates the permissions of the registry.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<Either<String,ConnectedRegistryMode>> mode;
 
     public Output<Either<String,ConnectedRegistryMode>> getMode() {
@@ -67,7 +67,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The parent of the connected registry.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<ParentPropertiesArgs> parent;
 
     public Output<ParentPropertiesArgs> getParent() {
@@ -78,7 +78,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -89,7 +89,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

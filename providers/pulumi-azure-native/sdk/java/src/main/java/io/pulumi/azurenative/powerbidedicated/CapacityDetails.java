@@ -10,7 +10,7 @@ import io.pulumi.azurenative.powerbidedicated.outputs.DedicatedCapacityAdministr
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * A collection of Dedicated capacity administrators
      * 
      */
-    @OutputExport(name="administration", type=DedicatedCapacityAdministratorsResponse.class, parameters={})
+    @Export(name="administration", type=DedicatedCapacityAdministratorsResponse.class, parameters={})
     private Output</* @Nullable */ DedicatedCapacityAdministratorsResponse> administration;
 
     /**
@@ -52,7 +52,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * Capacity name
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
@@ -66,7 +66,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * Location of the PowerBI Dedicated resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * Specifies the generation of the Power BI Embedded capacity. If no value is specified, the default value 'Gen2' is used. [Learn More](https://docs.microsoft.com/power-bi/developer/embedded/power-bi-embedded-generation-2)
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -94,7 +94,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * The name of the PowerBI Dedicated resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * The current deployment state of PowerBI Dedicated resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * The SKU of the PowerBI Dedicated capacity resource.
      * 
      */
-    @OutputExport(name="sku", type=CapacitySkuResponse.class, parameters={})
+    @Export(name="sku", type=CapacitySkuResponse.class, parameters={})
     private Output<CapacitySkuResponse> sku;
 
     /**
@@ -136,7 +136,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * The current state of PowerBI Dedicated resource. The state is to indicate more states outside of resource provisioning.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -150,7 +150,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output</* @Nullable */ SystemDataResponse> systemData;
 
     /**
@@ -164,7 +164,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * Key-value pairs of additional resource provisioning properties.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -178,7 +178,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * Tenant ID for the capacity. Used for creating Pro Plus capacity.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -192,7 +192,7 @@ public class CapacityDetails extends io.pulumi.resources.CustomResource {
      * The type of the PowerBI Dedicated resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

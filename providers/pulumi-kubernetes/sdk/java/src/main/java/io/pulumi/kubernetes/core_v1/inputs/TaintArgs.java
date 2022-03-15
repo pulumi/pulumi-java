@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"PreferNoSchedule"` Like TaintEffectNoSchedule, but the scheduler tries not to schedule new pods onto the node, rather than prohibiting new pods from scheduling onto the node entirely. Enforced by the scheduler.
      * 
      */
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final Output<String> effect;
 
     public Output<String> getEffect() {
@@ -38,7 +38,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * Required. The taint key to be applied to a node.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -49,7 +49,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.
      * 
      */
-    @InputImport(name="timeAdded")
+    @Import(name="timeAdded")
       private final @Nullable Output<String> timeAdded;
 
     public Output<String> getTimeAdded() {
@@ -60,7 +60,7 @@ public final class TaintArgs extends io.pulumi.resources.ResourceArgs {
      * The taint value corresponding to the taint key.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

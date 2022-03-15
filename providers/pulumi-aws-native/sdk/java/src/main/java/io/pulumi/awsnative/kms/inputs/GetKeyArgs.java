@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final String keyId;
 
     public String getKeyId() {

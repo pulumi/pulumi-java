@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.SnapshotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The creation date of the snapshot
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -48,7 +48,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -62,7 +62,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -90,7 +90,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * UUID v4 used to identify the Snapshot
      * 
      */
-    @OutputExport(name="snapshotId", type=String.class, parameters={})
+    @Export(name="snapshotId", type=String.class, parameters={})
     private Output<String> snapshotId;
 
     /**
@@ -104,7 +104,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

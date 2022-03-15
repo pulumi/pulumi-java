@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.OutputDataBindingArg
 import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource ID of the code asset.
      * 
      */
-    @InputImport(name="codeId")
+    @Import(name="codeId")
       private final @Nullable Output<String> codeId;
 
     public Output<String> getCodeId() {
@@ -40,7 +40,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * The command to execute on startup of the job. eg. "python train.py"
      * 
      */
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final Output<String> command;
 
     public Output<String> getCommand() {
@@ -51,7 +51,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Output<Object> distribution;
 
     public Output<Object> getDistribution() {
@@ -62,7 +62,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * The ARM resource ID of the Environment specification for the job.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -73,7 +73,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Environment variables included in the job.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -84,7 +84,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Mapping of input data bindings used in the job.
      * 
      */
-    @InputImport(name="inputDataBindings")
+    @Import(name="inputDataBindings")
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
     public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
@@ -95,7 +95,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Mapping of output data bindings used in the job.
      * 
      */
-    @InputImport(name="outputDataBindings")
+    @Import(name="outputDataBindings")
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
     public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
@@ -107,7 +107,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Only supports duration with precision as low as Seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

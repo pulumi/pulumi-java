@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogStorageSettingsResponse {
     /**
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
@@ -33,12 +33,12 @@ public final class LogStorageSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogStorageSettingsResponse(
-        @OutputCustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("logLevel") @Nullable Object logLevel,
-        @OutputCustomType.Parameter("path") @Nullable Object path) {
+        @CustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("logLevel") @Nullable Object logLevel,
+        @CustomType.Parameter("path") @Nullable Object path) {
         this.enableReliableLogging = enableReliableLogging;
         this.linkedServiceName = linkedServiceName;
         this.logLevel = logLevel;

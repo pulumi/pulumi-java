@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigSoftwareConfig {
     private final @Nullable Map<String,String> airflowConfigOverrides;
     private final @Nullable Map<String,String> envVariables;
@@ -20,14 +20,14 @@ public final class EnvironmentConfigSoftwareConfig {
     private final @Nullable String pythonVersion;
     private final @Nullable Integer schedulerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigSoftwareConfig(
-        @OutputCustomType.Parameter("airflowConfigOverrides") @Nullable Map<String,String> airflowConfigOverrides,
-        @OutputCustomType.Parameter("envVariables") @Nullable Map<String,String> envVariables,
-        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
-        @OutputCustomType.Parameter("pypiPackages") @Nullable Map<String,String> pypiPackages,
-        @OutputCustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
-        @OutputCustomType.Parameter("schedulerCount") @Nullable Integer schedulerCount) {
+        @CustomType.Parameter("airflowConfigOverrides") @Nullable Map<String,String> airflowConfigOverrides,
+        @CustomType.Parameter("envVariables") @Nullable Map<String,String> envVariables,
+        @CustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @CustomType.Parameter("pypiPackages") @Nullable Map<String,String> pypiPackages,
+        @CustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
+        @CustomType.Parameter("schedulerCount") @Nullable Integer schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;

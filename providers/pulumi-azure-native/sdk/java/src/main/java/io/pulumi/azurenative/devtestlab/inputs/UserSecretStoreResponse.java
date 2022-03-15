@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserSecretStoreResponse extends io.pulumi.resources.InvokeArg
      * The ID of the user's Key vault.
      * 
      */
-    @InputImport(name="keyVaultId")
+    @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
@@ -33,7 +33,7 @@ public final class UserSecretStoreResponse extends io.pulumi.resources.InvokeArg
      * The URI of the user's Key vault.
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {

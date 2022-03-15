@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The security level for the function.
      * 
      */
-    @InputImport(name="securityLevel", required=true)
+    @Import(name="securityLevel", required=true)
       private final String securityLevel;
 
     public String getSecurityLevel() {
@@ -31,7 +31,7 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The deployed url for the function.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

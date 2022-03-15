@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
      * The name of the connection monitor.
      * 
      */
-    @InputImport(name="connectionMonitorName", required=true)
+    @Import(name="connectionMonitorName", required=true)
       private final String connectionMonitorName;
 
     public String getConnectionMonitorName() {
@@ -27,7 +27,7 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
      * The name of the Network Watcher resource.
      * 
      */
-    @InputImport(name="networkWatcherName", required=true)
+    @Import(name="networkWatcherName", required=true)
       private final String networkWatcherName;
 
     public String getNetworkWatcherName() {
@@ -38,7 +38,7 @@ public final class GetConnectionMonitorArgs extends io.pulumi.resources.InvokeAr
      * The name of the resource group containing Network Watcher.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The SKU name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The service tier
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

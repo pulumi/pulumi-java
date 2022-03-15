@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.StepResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
      * Derived from the source and destination endpoints definition specified by user request, and validated by the data plane model. If there are multiple traces starting from different source locations, then the endpoint_info may be different between traces.
      * 
      */
-    @InputImport(name="endpointInfo", required=true)
+    @Import(name="endpointInfo", required=true)
       private final EndpointInfoResponse endpointInfo;
 
     public EndpointInfoResponse getEndpointInfo() {
@@ -33,7 +33,7 @@ public final class TraceResponse extends io.pulumi.resources.InvokeArgs {
      * A trace of a test contains multiple steps from the initial state to the final state (delivered, dropped, forwarded, or aborted). The steps are ordered by the processing sequence within the simulated network state machine. It is critical to preserve the order of the steps and avoid reordering or sorting them.
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final List<StepResponse> steps;
 
     public List<StepResponse> getSteps() {

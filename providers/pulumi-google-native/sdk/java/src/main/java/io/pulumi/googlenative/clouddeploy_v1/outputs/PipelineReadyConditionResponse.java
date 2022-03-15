@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineReadyConditionResponse {
     /**
      * True if the Pipeline is in a valid state. Otherwise at least one condition in `PipelineCondition` is in an invalid state. Iterate over those conditions and see which condition(s) has status = false to find out what is wrong with the Pipeline.
@@ -21,10 +21,10 @@ public final class PipelineReadyConditionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineReadyConditionResponse(
-        @OutputCustomType.Parameter("status") Boolean status,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("status") Boolean status,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.status = status;
         this.updateTime = updateTime;
     }

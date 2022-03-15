@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.SubjectResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubjectConfigResponse {
     /**
      * Optional. The "common name" of the distinguished name.
@@ -27,11 +27,11 @@ public final class SubjectConfigResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectConfigResponse(
-        @OutputCustomType.Parameter("commonName") String commonName,
-        @OutputCustomType.Parameter("subject") SubjectResponse subject,
-        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
+        @CustomType.Parameter("commonName") String commonName,
+        @CustomType.Parameter("subject") SubjectResponse subject,
+        @CustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.commonName = commonName;
         this.subject = subject;
         this.subjectAltName = subjectAltName;

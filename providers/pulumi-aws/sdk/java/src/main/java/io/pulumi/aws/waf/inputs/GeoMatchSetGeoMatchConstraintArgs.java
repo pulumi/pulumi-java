@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends io.pulumi.resources
      * The type of geographical area you want AWS WAF to search for. Currently Country is the only valid value.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -30,7 +30,7 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends io.pulumi.resources
      * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConstraint.html) for all supported values.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

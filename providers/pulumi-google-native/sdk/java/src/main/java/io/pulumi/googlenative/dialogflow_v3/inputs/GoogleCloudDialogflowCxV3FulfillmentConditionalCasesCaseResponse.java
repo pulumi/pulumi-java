@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * A list of case content.
      * 
      */
-    @InputImport(name="caseContent", required=true)
+    @Import(name="caseContent", required=true)
       private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> caseContent;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse> getCaseContent() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseRespo
      * The condition to activate and select this case. Empty means the condition is always true. The condition is evaluated against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final String condition;
 
     public String getCondition() {

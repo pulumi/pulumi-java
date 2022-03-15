@@ -3,26 +3,26 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecRestartPolicy {
     private final @Nullable String condition;
     private final @Nullable String delay;
     private final @Nullable Integer maxAttempts;
     private final @Nullable String window;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecRestartPolicy(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("delay") @Nullable String delay,
-        @OutputCustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
-        @OutputCustomType.Parameter("window") @Nullable String window) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("delay") @Nullable String delay,
+        @CustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
+        @CustomType.Parameter("window") @Nullable String window) {
         this.condition = condition;
         this.delay = delay;
         this.maxAttempts = maxAttempts;

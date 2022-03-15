@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends io.pulumi.re
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="secretAccessKey", required=true)
+    @Import(name="secretAccessKey", required=true)
       private final Output<String> secretAccessKey;
 
     public Output<String> getSecretAccessKey() {

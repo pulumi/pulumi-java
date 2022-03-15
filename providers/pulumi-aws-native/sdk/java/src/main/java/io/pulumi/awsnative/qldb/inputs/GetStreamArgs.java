@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.qldb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetStreamArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStreamArgs Empty = new GetStreamArgs();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="ledgerName", required=true)
+    @Import(name="ledgerName", required=true)
       private final String ledgerName;
 
     public String getLedgerName() {

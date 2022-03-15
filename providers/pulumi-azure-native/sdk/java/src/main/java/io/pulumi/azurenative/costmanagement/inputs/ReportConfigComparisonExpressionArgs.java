@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.OperatorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
      * The name of the column to use in comparison.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
      * The operator to use for comparison.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,OperatorType>> operator;
 
     public Output<Either<String,OperatorType>> getOperator() {
@@ -46,7 +46,7 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
      * Array of values to use for comparison
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

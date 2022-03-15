@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JsonFileFormatResponse {
     /**
      * Compression of the loaded JSON file.
@@ -20,10 +20,10 @@ public final class JsonFileFormatResponse {
      */
     private final String schemaFileFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JsonFileFormatResponse(
-        @OutputCustomType.Parameter("compression") String compression,
-        @OutputCustomType.Parameter("schemaFileFormat") String schemaFileFormat) {
+        @CustomType.Parameter("compression") String compression,
+        @CustomType.Parameter("schemaFileFormat") String schemaFileFormat) {
         this.compression = compression;
         this.schemaFileFormat = schemaFileFormat;
     }

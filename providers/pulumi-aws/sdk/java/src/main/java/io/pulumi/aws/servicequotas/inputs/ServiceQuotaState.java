@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicequotas.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Whether the service quota can be increased.
      * 
      */
-    @InputImport(name="adjustable")
+    @Import(name="adjustable")
       private final @Nullable Output<Boolean> adjustable;
 
     public Output<Boolean> getAdjustable() {
@@ -31,7 +31,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the service quota.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Default value of the service quota.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<Double> defaultValue;
 
     public Output<Double> getDefaultValue() {
@@ -53,7 +53,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
      * 
      */
-    @InputImport(name="quotaCode")
+    @Import(name="quotaCode")
       private final @Nullable Output<String> quotaCode;
 
     public Output<String> getQuotaCode() {
@@ -64,21 +64,21 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Name of the quota.
      * 
      */
-    @InputImport(name="quotaName")
+    @Import(name="quotaName")
       private final @Nullable Output<String> quotaName;
 
     public Output<String> getQuotaName() {
         return this.quotaName == null ? Output.empty() : this.quotaName;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="requestStatus")
+    @Import(name="requestStatus")
       private final @Nullable Output<String> requestStatus;
 
     public Output<String> getRequestStatus() {
@@ -89,7 +89,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
      * 
      */
-    @InputImport(name="serviceCode")
+    @Import(name="serviceCode")
       private final @Nullable Output<String> serviceCode;
 
     public Output<String> getServiceCode() {
@@ -100,7 +100,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Name of the service.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -111,7 +111,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
      * Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
      * Whether to export the custom routes to the peer network.
      * 
      */
-    @InputImport(name="exportCustomRoutes")
+    @Import(name="exportCustomRoutes")
       private final @Nullable Output<Boolean> exportCustomRoutes;
 
     public Output<Boolean> getExportCustomRoutes() {
@@ -30,7 +30,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
      * Whether to import the custom routes to the peer network.
      * 
      */
-    @InputImport(name="importCustomRoutes")
+    @Import(name="importCustomRoutes")
       private final @Nullable Output<Boolean> importCustomRoutes;
 
     public Output<Boolean> getImportCustomRoutes() {
@@ -41,7 +41,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
      * The name of the primary network for the peering.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -52,7 +52,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
      * Name of the peering.
      * 
      */
-    @InputImport(name="peering")
+    @Import(name="peering")
       private final @Nullable Output<String> peering;
 
     public Output<String> getPeering() {
@@ -64,7 +64,7 @@ public final class NetworkPeeringRoutesConfigState extends io.pulumi.resources.R
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

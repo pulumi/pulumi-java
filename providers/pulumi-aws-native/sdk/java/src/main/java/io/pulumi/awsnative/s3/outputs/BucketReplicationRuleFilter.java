@@ -5,23 +5,23 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketReplicationRuleAndOperator;
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationRuleFilter {
     private final @Nullable BucketReplicationRuleAndOperator and;
     private final @Nullable String prefix;
     private final @Nullable BucketTagFilter tagFilter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationRuleFilter(
-        @OutputCustomType.Parameter("and") @Nullable BucketReplicationRuleAndOperator and,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("tagFilter") @Nullable BucketTagFilter tagFilter) {
+        @CustomType.Parameter("and") @Nullable BucketReplicationRuleAndOperator and,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("tagFilter") @Nullable BucketTagFilter tagFilter) {
         this.and = and;
         this.prefix = prefix;
         this.tagFilter = tagFilter;

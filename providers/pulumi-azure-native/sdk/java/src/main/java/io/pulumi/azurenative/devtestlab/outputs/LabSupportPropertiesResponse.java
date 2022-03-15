@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabSupportPropertiesResponse {
     /**
      * Is the lab support banner active/enabled at this time?
@@ -22,10 +22,10 @@ public final class LabSupportPropertiesResponse {
      */
     private final @Nullable String markdown;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabSupportPropertiesResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
-        @OutputCustomType.Parameter("markdown") @Nullable String markdown) {
+        @CustomType.Parameter("enabled") @Nullable String enabled,
+        @CustomType.Parameter("markdown") @Nullable String markdown) {
         this.enabled = enabled;
         this.markdown = markdown;
     }

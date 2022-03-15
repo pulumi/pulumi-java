@@ -9,14 +9,14 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleHttpReques
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRulePathPatternConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleQueryStringConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleSourceIpConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleRuleCondition {
     private final @Nullable String field;
     private final @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig;
@@ -27,16 +27,16 @@ public final class ListenerRuleRuleCondition {
     private final @Nullable ListenerRuleSourceIpConfig sourceIpConfig;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleRuleCondition(
-        @OutputCustomType.Parameter("field") @Nullable String field,
-        @OutputCustomType.Parameter("hostHeaderConfig") @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig,
-        @OutputCustomType.Parameter("httpHeaderConfig") @Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig,
-        @OutputCustomType.Parameter("httpRequestMethodConfig") @Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig,
-        @OutputCustomType.Parameter("pathPatternConfig") @Nullable ListenerRulePathPatternConfig pathPatternConfig,
-        @OutputCustomType.Parameter("queryStringConfig") @Nullable ListenerRuleQueryStringConfig queryStringConfig,
-        @OutputCustomType.Parameter("sourceIpConfig") @Nullable ListenerRuleSourceIpConfig sourceIpConfig,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("field") @Nullable String field,
+        @CustomType.Parameter("hostHeaderConfig") @Nullable ListenerRuleHostHeaderConfig hostHeaderConfig,
+        @CustomType.Parameter("httpHeaderConfig") @Nullable ListenerRuleHttpHeaderConfig httpHeaderConfig,
+        @CustomType.Parameter("httpRequestMethodConfig") @Nullable ListenerRuleHttpRequestMethodConfig httpRequestMethodConfig,
+        @CustomType.Parameter("pathPatternConfig") @Nullable ListenerRulePathPatternConfig pathPatternConfig,
+        @CustomType.Parameter("queryStringConfig") @Nullable ListenerRuleQueryStringConfig queryStringConfig,
+        @CustomType.Parameter("sourceIpConfig") @Nullable ListenerRuleSourceIpConfig sourceIpConfig,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.field = field;
         this.hostHeaderConfig = hostHeaderConfig;
         this.httpHeaderConfig = httpHeaderConfig;

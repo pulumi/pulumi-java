@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
@@ -15,8 +15,8 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
      */
     private final String schedule;
 
-    @OutputCustomType.Constructor
-    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(@OutputCustomType.Parameter("schedule") String schedule) {
+    @CustomType.Constructor
+    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(@CustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 

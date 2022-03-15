@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.containeranalysis_v1beta1.OccurrenceArgs;
@@ -35,7 +35,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes an attestation of an artifact.
      * 
      */
-    @OutputExport(name="attestation", type=DetailsResponse.class, parameters={})
+    @Export(name="attestation", type=DetailsResponse.class, parameters={})
     private Output<DetailsResponse> attestation;
 
     /**
@@ -49,7 +49,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a verifiable build.
      * 
      */
-    @OutputExport(name="build", type=GrafeasV1beta1BuildDetailsResponse.class, parameters={})
+    @Export(name="build", type=GrafeasV1beta1BuildDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1BuildDetailsResponse> build;
 
     /**
@@ -63,7 +63,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * The time this occurrence was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -77,7 +77,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes the deployment of an artifact on a runtime.
      * 
      */
-    @OutputExport(name="deployment", type=GrafeasV1beta1DeploymentDetailsResponse.class, parameters={})
+    @Export(name="deployment", type=GrafeasV1beta1DeploymentDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1DeploymentDetailsResponse> deployment;
 
     /**
@@ -91,7 +91,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes how this resource derives from the basis in the associated note.
      * 
      */
-    @OutputExport(name="derivedImage", type=GrafeasV1beta1ImageDetailsResponse.class, parameters={})
+    @Export(name="derivedImage", type=GrafeasV1beta1ImageDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1ImageDetailsResponse> derivedImage;
 
     /**
@@ -105,7 +105,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes when a resource was discovered.
      * 
      */
-    @OutputExport(name="discovered", type=GrafeasV1beta1DiscoveryDetailsResponse.class, parameters={})
+    @Export(name="discovered", type=GrafeasV1beta1DiscoveryDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1DiscoveryDetailsResponse> discovered;
 
     /**
@@ -119,7 +119,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes the installation of a package on the linked resource.
      * 
      */
-    @OutputExport(name="installation", type=GrafeasV1beta1PackageDetailsResponse.class, parameters={})
+    @Export(name="installation", type=GrafeasV1beta1PackageDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1PackageDetailsResponse> installation;
 
     /**
@@ -133,7 +133,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a specific in-toto link.
      * 
      */
-    @OutputExport(name="intoto", type=GrafeasV1beta1IntotoDetailsResponse.class, parameters={})
+    @Export(name="intoto", type=GrafeasV1beta1IntotoDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1IntotoDetailsResponse> intoto;
 
     /**
@@ -147,7 +147,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -161,7 +161,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -175,7 +175,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="noteName", type=String.class, parameters={})
+    @Export(name="noteName", type=String.class, parameters={})
     private Output<String> noteName;
 
     /**
@@ -189,7 +189,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * A description of actions that can be taken to remedy the note.
      * 
      */
-    @OutputExport(name="remediation", type=String.class, parameters={})
+    @Export(name="remediation", type=String.class, parameters={})
     private Output<String> remediation;
 
     /**
@@ -203,7 +203,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Immutable. The resource for which the occurrence applies.
      * 
      */
-    @OutputExport(name="resource", type=ResourceResponse.class, parameters={})
+    @Export(name="resource", type=ResourceResponse.class, parameters={})
     private Output<ResourceResponse> resource;
 
     /**
@@ -217,7 +217,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a specific software bill of materials document.
      * 
      */
-    @OutputExport(name="sbom", type=DocumentOccurrenceResponse.class, parameters={})
+    @Export(name="sbom", type=DocumentOccurrenceResponse.class, parameters={})
     private Output<DocumentOccurrenceResponse> sbom;
 
     /**
@@ -231,7 +231,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a specific SPDX File.
      * 
      */
-    @OutputExport(name="spdxFile", type=FileOccurrenceResponse.class, parameters={})
+    @Export(name="spdxFile", type=FileOccurrenceResponse.class, parameters={})
     private Output<FileOccurrenceResponse> spdxFile;
 
     /**
@@ -245,7 +245,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a specific SPDX Package.
      * 
      */
-    @OutputExport(name="spdxPackage", type=PackageInfoOccurrenceResponse.class, parameters={})
+    @Export(name="spdxPackage", type=PackageInfoOccurrenceResponse.class, parameters={})
     private Output<PackageInfoOccurrenceResponse> spdxPackage;
 
     /**
@@ -259,7 +259,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a specific SPDX Relationship.
      * 
      */
-    @OutputExport(name="spdxRelationship", type=RelationshipOccurrenceResponse.class, parameters={})
+    @Export(name="spdxRelationship", type=RelationshipOccurrenceResponse.class, parameters={})
     private Output<RelationshipOccurrenceResponse> spdxRelationship;
 
     /**
@@ -273,7 +273,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * The time this occurrence was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -287,7 +287,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * Describes a security vulnerability.
      * 
      */
-    @OutputExport(name="vulnerability", type=GrafeasV1beta1VulnerabilityDetailsResponse.class, parameters={})
+    @Export(name="vulnerability", type=GrafeasV1beta1VulnerabilityDetailsResponse.class, parameters={})
     private Output<GrafeasV1beta1VulnerabilityDetailsResponse> vulnerability;
 
     /**

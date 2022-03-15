@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleTableResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
      * Tables in the schema.
      * 
      */
-    @InputImport(name="oracleTables", required=true)
+    @Import(name="oracleTables", required=true)
       private final List<OracleTableResponse> oracleTables;
 
     public List<OracleTableResponse> getOracleTables() {
@@ -33,7 +33,7 @@ public final class OracleSchemaResponse extends io.pulumi.resources.InvokeArgs {
      * Schema name.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final String schema;
 
     public String getSchema() {

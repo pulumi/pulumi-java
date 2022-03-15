@@ -5,7 +5,7 @@ package io.pulumi.aws.emr;
 
 import io.pulumi.aws.emr.inputs.InstanceGroupEbsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The autoscaling policy document. This is a JSON formatted string. See [EMR Auto Scaling](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html)
      * 
      */
-    @InputImport(name="autoscalingPolicy")
+    @Import(name="autoscalingPolicy")
       private final @Nullable Output<String> autoscalingPolicy;
 
     public Output<String> getAutoscalingPolicy() {
@@ -33,7 +33,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * If set, the bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
      * 
      */
-    @InputImport(name="bidPrice")
+    @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
     public Output<String> getBidPrice() {
@@ -44,7 +44,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -55,7 +55,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A JSON string for supplying list of configurations specific to the EMR instance group. Note that this can only be changed when using EMR release 5.21 or later.
      * 
      */
-    @InputImport(name="configurationsJson")
+    @Import(name="configurationsJson")
       private final @Nullable Output<String> configurationsJson;
 
     public Output<String> getConfigurationsJson() {
@@ -66,7 +66,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * One or more `ebs_config` blocks as defined below. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="ebsConfigs")
+    @Import(name="ebsConfigs")
       private final @Nullable Output<List<InstanceGroupEbsConfigArgs>> ebsConfigs;
 
     public Output<List<InstanceGroupEbsConfigArgs>> getEbsConfigs() {
@@ -77,7 +77,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether an Amazon EBS volume is EBS-optimized. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
@@ -88,7 +88,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * target number of instances for the instance group. defaults to 0.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -99,7 +99,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The EC2 instance type for all instances in the instance group. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -110,7 +110,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Human friendly name given to the instance group. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

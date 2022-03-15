@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyCertificateAuthorityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyTransportSecurityResponse {
     /**
      * The CA used for intermediate CA generation.
@@ -17,8 +17,8 @@ public final class FirewallPolicyTransportSecurityResponse {
      */
     private final @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyTransportSecurityResponse(@OutputCustomType.Parameter("certificateAuthority") @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
+    @CustomType.Constructor
+    private FirewallPolicyTransportSecurityResponse(@CustomType.Parameter("certificateAuthority") @Nullable FirewallPolicyCertificateAuthorityResponse certificateAuthority) {
         this.certificateAuthority = certificateAuthority;
     }
 

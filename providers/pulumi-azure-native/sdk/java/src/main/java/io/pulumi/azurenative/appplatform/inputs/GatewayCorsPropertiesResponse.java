@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * Whether user credentials are supported on cross-site requests. Valid values: `true`, `false`.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Boolean allowCredentials;
 
     public Optional<Boolean> getAllowCredentials() {
@@ -36,7 +36,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * Allowed headers in cross-site requests. The special value `*` allows actual requests to send any header.
      * 
      */
-    @InputImport(name="allowedHeaders")
+    @Import(name="allowedHeaders")
       private final @Nullable List<String> allowedHeaders;
 
     public List<String> getAllowedHeaders() {
@@ -47,7 +47,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * Allowed HTTP methods on cross-site requests. The special value `*` allows all methods. If not set, `GET` and `HEAD` are allowed by default.
      * 
      */
-    @InputImport(name="allowedMethods")
+    @Import(name="allowedMethods")
       private final @Nullable List<String> allowedMethods;
 
     public List<String> getAllowedMethods() {
@@ -58,7 +58,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * Allowed origins to make cross-site requests. The special value `*` allows all domains.
      * 
      */
-    @InputImport(name="allowedOrigins")
+    @Import(name="allowedOrigins")
       private final @Nullable List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
@@ -69,7 +69,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * HTTP response headers to expose for cross-site requests.
      * 
      */
-    @InputImport(name="exposedHeaders")
+    @Import(name="exposedHeaders")
       private final @Nullable List<String> exposedHeaders;
 
     public List<String> getExposedHeaders() {
@@ -80,7 +80,7 @@ public final class GatewayCorsPropertiesResponse extends io.pulumi.resources.Inv
      * How long, in seconds, the response from a pre-flight request can be cached by clients.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Integer maxAge;
 
     public Optional<Integer> getMaxAge() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ManagedZoneForwardingConfigTargetNameServerGetArgs extends io
      * Possible values are `default` and `private`.
      * 
      */
-    @InputImport(name="forwardingPath")
+    @Import(name="forwardingPath")
       private final @Nullable Output<String> forwardingPath;
 
     public Output<String> getForwardingPath() {
@@ -32,7 +32,7 @@ public final class ManagedZoneForwardingConfigTargetNameServerGetArgs extends io
      * IPv4 address of a target name server.
      * 
      */
-    @InputImport(name="ipv4Address", required=true)
+    @Import(name="ipv4Address", required=true)
       private final Output<String> ipv4Address;
 
     public Output<String> getIpv4Address() {

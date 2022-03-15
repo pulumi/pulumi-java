@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.FieldResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SourceContextResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TypeResponse {
     /**
      * The list of fields.
@@ -44,14 +44,14 @@ public final class TypeResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TypeResponse(
-        @OutputCustomType.Parameter("fields") List<FieldResponse> fields,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("oneofs") List<String> oneofs,
-        @OutputCustomType.Parameter("options") List<OptionResponse> options,
-        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
-        @OutputCustomType.Parameter("syntax") String syntax) {
+        @CustomType.Parameter("fields") List<FieldResponse> fields,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("oneofs") List<String> oneofs,
+        @CustomType.Parameter("options") List<OptionResponse> options,
+        @CustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @CustomType.Parameter("syntax") String syntax) {
         this.fields = fields;
         this.name = name;
         this.oneofs = oneofs;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.NamespaceConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      * Represents the latest available observations of a namespace's current state.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<NamespaceConditionArgs>> conditions;
 
     public Output<List<NamespaceConditionArgs>> getConditions() {
@@ -39,7 +39,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
      *  - `"Terminating"` means the namespace is undergoing graceful termination
      * 
      */
-    @InputImport(name="phase")
+    @Import(name="phase")
       private final @Nullable Output<String> phase;
 
     public Output<String> getPhase() {

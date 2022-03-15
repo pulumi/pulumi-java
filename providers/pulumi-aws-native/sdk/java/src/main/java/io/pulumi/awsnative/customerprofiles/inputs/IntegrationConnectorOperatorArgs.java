@@ -9,7 +9,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationSalesforceConnector
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationServiceNowConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationZendeskConnectorOperator;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,35 +18,35 @@ public final class IntegrationConnectorOperatorArgs extends io.pulumi.resources.
 
     public static final IntegrationConnectorOperatorArgs Empty = new IntegrationConnectorOperatorArgs();
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable Output<IntegrationMarketoConnectorOperator> marketo;
 
     public Output<IntegrationMarketoConnectorOperator> getMarketo() {
         return this.marketo == null ? Output.empty() : this.marketo;
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<IntegrationS3ConnectorOperator> s3;
 
     public Output<IntegrationS3ConnectorOperator> getS3() {
         return this.s3 == null ? Output.empty() : this.s3;
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable Output<IntegrationSalesforceConnectorOperator> salesforce;
 
     public Output<IntegrationSalesforceConnectorOperator> getSalesforce() {
         return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<IntegrationServiceNowConnectorOperator> serviceNow;
 
     public Output<IntegrationServiceNowConnectorOperator> getServiceNow() {
         return this.serviceNow == null ? Output.empty() : this.serviceNow;
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable Output<IntegrationZendeskConnectorOperator> zendesk;
 
     public Output<IntegrationZendeskConnectorOperator> getZendesk() {

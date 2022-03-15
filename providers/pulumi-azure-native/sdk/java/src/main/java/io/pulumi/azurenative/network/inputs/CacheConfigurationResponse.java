@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year
      * 
      */
-    @InputImport(name="cacheDuration")
+    @Import(name="cacheDuration")
       private final @Nullable String cacheDuration;
 
     public Optional<String> getCacheDuration() {
@@ -33,7 +33,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * Whether to use dynamic compression for cached content
      * 
      */
-    @InputImport(name="dynamicCompression")
+    @Import(name="dynamicCompression")
       private final @Nullable String dynamicCompression;
 
     public Optional<String> getDynamicCompression() {
@@ -44,7 +44,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * Treatment of URL query terms when forming the cache key.
      * 
      */
-    @InputImport(name="queryParameterStripDirective")
+    @Import(name="queryParameterStripDirective")
       private final @Nullable String queryParameterStripDirective;
 
     public Optional<String> getQueryParameterStripDirective() {
@@ -55,7 +55,7 @@ public final class CacheConfigurationResponse extends io.pulumi.resources.Invoke
      * query parameters to include or exclude (comma separated).
      * 
      */
-    @InputImport(name="queryParameters")
+    @Import(name="queryParameters")
       private final @Nullable String queryParameters;
 
     public Optional<String> getQueryParameters() {

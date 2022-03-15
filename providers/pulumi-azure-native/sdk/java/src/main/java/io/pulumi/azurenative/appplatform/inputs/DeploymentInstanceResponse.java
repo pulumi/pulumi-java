@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
      * Discovery status of the deployment instance
      * 
      */
-    @InputImport(name="discoveryStatus", required=true)
+    @Import(name="discoveryStatus", required=true)
       private final String discoveryStatus;
 
     public String getDiscoveryStatus() {
@@ -31,7 +31,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
      * Name of the deployment instance
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
      * Failed reason of the deployment instance
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {
@@ -53,7 +53,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
      * Start time of the deployment instance
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -64,7 +64,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
      * Status of the deployment instance
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

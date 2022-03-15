@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskImageEncryptionResponse {
     /**
      * A relative URI containing the resource ID of the disk encryption set.
@@ -23,10 +23,10 @@ public final class DataDiskImageEncryptionResponse {
      */
     private final Integer lun;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskImageEncryptionResponse(
-        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
-        @OutputCustomType.Parameter("lun") Integer lun) {
+        @CustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @CustomType.Parameter("lun") Integer lun) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.lun = lun;
     }

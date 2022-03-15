@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
      * The full resource ID of a subnet in a virtual network to deploy the API Management service in.
      * 
      */
-    @InputImport(name="subnetResourceId")
+    @Import(name="subnetResourceId")
       private final @Nullable String subnetResourceId;
 
     public Optional<String> getSubnetResourceId() {
@@ -33,7 +33,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
      * The name of the subnet.
      * 
      */
-    @InputImport(name="subnetname", required=true)
+    @Import(name="subnetname", required=true)
       private final String subnetname;
 
     public String getSubnetname() {
@@ -44,7 +44,7 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
      * The virtual network ID. This is typically a GUID. Expect a null GUID by default.
      * 
      */
-    @InputImport(name="vnetid", required=true)
+    @Import(name="vnetid", required=true)
       private final String vnetid;
 
     public String getVnetid() {

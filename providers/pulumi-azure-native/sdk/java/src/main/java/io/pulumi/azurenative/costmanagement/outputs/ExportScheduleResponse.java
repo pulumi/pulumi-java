@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportRecurrencePeriodResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportScheduleResponse {
     /**
      * The schedule recurrence.
@@ -28,11 +28,11 @@ public final class ExportScheduleResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportScheduleResponse(
-        @OutputCustomType.Parameter("recurrence") @Nullable String recurrence,
-        @OutputCustomType.Parameter("recurrencePeriod") @Nullable ExportRecurrencePeriodResponse recurrencePeriod,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("recurrence") @Nullable String recurrence,
+        @CustomType.Parameter("recurrencePeriod") @Nullable ExportRecurrencePeriodResponse recurrencePeriod,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.recurrence = recurrence;
         this.recurrencePeriod = recurrencePeriod;
         this.status = status;

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamKMSEncryptionConfig {
     private final String aWSKMSKeyARN;
 
-    @OutputCustomType.Constructor
-    private DeliveryStreamKMSEncryptionConfig(@OutputCustomType.Parameter("aWSKMSKeyARN") String aWSKMSKeyARN) {
+    @CustomType.Constructor
+    private DeliveryStreamKMSEncryptionConfig(@CustomType.Parameter("aWSKMSKeyARN") String aWSKMSKeyARN) {
         this.aWSKMSKeyARN = aWSKMSKeyARN;
     }
 

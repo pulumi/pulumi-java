@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
      * the id of the action group to use.
      * 
      */
-    @InputImport(name="actionGroupId")
+    @Import(name="actionGroupId")
       private final @Nullable Output<String> actionGroupId;
 
     public Output<String> getActionGroupId() {
@@ -34,7 +34,7 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
      * This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.
      * 
      */
-    @InputImport(name="webHookProperties")
+    @Import(name="webHookProperties")
       private final @Nullable Output<Map<String,String>> webHookProperties;
 
     public Output<Map<String,String>> getWebHookProperties() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -22,11 +22,11 @@ public final class GetLocationsResult {
     private final List<String> locations;
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("locations") List<String> locations,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("locations") List<String> locations,
+        @CustomType.Parameter("project") String project) {
         this.id = id;
         this.locations = locations;
         this.project = project;

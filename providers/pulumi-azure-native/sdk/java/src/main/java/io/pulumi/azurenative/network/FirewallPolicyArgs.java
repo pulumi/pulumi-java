@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The parent firewall policy from which rules are inherited.
      * 
      */
-    @InputImport(name="basePolicy")
+    @Import(name="basePolicy")
       private final @Nullable Output<SubResourceArgs> basePolicy;
 
     public Output<SubResourceArgs> getBasePolicy() {
@@ -41,7 +41,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * DNS Proxy Settings definition.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
     public Output<DnsSettingsArgs> getDnsSettings() {
@@ -52,7 +52,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Firewall Policy.
      * 
      */
-    @InputImport(name="firewallPolicyName")
+    @Import(name="firewallPolicyName")
       private final @Nullable Output<String> firewallPolicyName;
 
     public Output<String> getFirewallPolicyName() {
@@ -63,7 +63,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -74,7 +74,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the firewall policy.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -85,7 +85,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Insights on Firewall Policy.
      * 
      */
-    @InputImport(name="insights")
+    @Import(name="insights")
       private final @Nullable Output<FirewallPolicyInsightsArgs> insights;
 
     public Output<FirewallPolicyInsightsArgs> getInsights() {
@@ -96,7 +96,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for Intrusion detection.
      * 
      */
-    @InputImport(name="intrusionDetection")
+    @Import(name="intrusionDetection")
       private final @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
     public Output<FirewallPolicyIntrusionDetectionArgs> getIntrusionDetection() {
@@ -107,7 +107,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -118,7 +118,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -129,7 +129,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The Firewall Policy SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<FirewallPolicySkuArgs> sku;
 
     public Output<FirewallPolicySkuArgs> getSku() {
@@ -140,7 +140,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The private IP addresses/IP ranges to which traffic will not be SNAT.
      * 
      */
-    @InputImport(name="snat")
+    @Import(name="snat")
       private final @Nullable Output<FirewallPolicySNATArgs> snat;
 
     public Output<FirewallPolicySNATArgs> getSnat() {
@@ -151,7 +151,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -162,7 +162,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The operation mode for Threat Intelligence.
      * 
      */
-    @InputImport(name="threatIntelMode")
+    @Import(name="threatIntelMode")
       private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
     public Output<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
@@ -173,7 +173,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * ThreatIntel Whitelist for Firewall Policy.
      * 
      */
-    @InputImport(name="threatIntelWhitelist")
+    @Import(name="threatIntelWhitelist")
       private final @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
     public Output<FirewallPolicyThreatIntelWhitelistArgs> getThreatIntelWhitelist() {
@@ -184,7 +184,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * TLS Configuration definition.
      * 
      */
-    @InputImport(name="transportSecurity")
+    @Import(name="transportSecurity")
       private final @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
     public Output<FirewallPolicyTransportSecurityArgs> getTransportSecurity() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
      * [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
      * 
      */
-    @InputImport(name="autoUpgradeStartTime", required=true)
+    @Import(name="autoUpgradeStartTime", required=true)
       private final String autoUpgradeStartTime;
 
     public String getAutoUpgradeStartTime() {
@@ -31,7 +31,7 @@ public final class AutoUpgradeOptionsResponse extends io.pulumi.resources.Invoke
      * [Output only] This field is set when upgrades are about to commence with the description of the upgrade.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {

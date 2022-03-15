@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,42 +16,42 @@ public final class DeliveryStreamParquetSerDeArgs extends io.pulumi.resources.Re
 
     public static final DeliveryStreamParquetSerDeArgs Empty = new DeliveryStreamParquetSerDeArgs();
 
-    @InputImport(name="blockSizeBytes")
+    @Import(name="blockSizeBytes")
       private final @Nullable Output<Integer> blockSizeBytes;
 
     public Output<Integer> getBlockSizeBytes() {
         return this.blockSizeBytes == null ? Output.empty() : this.blockSizeBytes;
     }
 
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
         return this.compression == null ? Output.empty() : this.compression;
     }
 
-    @InputImport(name="enableDictionaryCompression")
+    @Import(name="enableDictionaryCompression")
       private final @Nullable Output<Boolean> enableDictionaryCompression;
 
     public Output<Boolean> getEnableDictionaryCompression() {
         return this.enableDictionaryCompression == null ? Output.empty() : this.enableDictionaryCompression;
     }
 
-    @InputImport(name="maxPaddingBytes")
+    @Import(name="maxPaddingBytes")
       private final @Nullable Output<Integer> maxPaddingBytes;
 
     public Output<Integer> getMaxPaddingBytes() {
         return this.maxPaddingBytes == null ? Output.empty() : this.maxPaddingBytes;
     }
 
-    @InputImport(name="pageSizeBytes")
+    @Import(name="pageSizeBytes")
       private final @Nullable Output<Integer> pageSizeBytes;
 
     public Output<Integer> getPageSizeBytes() {
         return this.pageSizeBytes == null ? Output.empty() : this.pageSizeBytes;
     }
 
-    @InputImport(name="writerVersion")
+    @Import(name="writerVersion")
       private final @Nullable Output<String> writerVersion;
 
     public Output<String> getWriterVersion() {

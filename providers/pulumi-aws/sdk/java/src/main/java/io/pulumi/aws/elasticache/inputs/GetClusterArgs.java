@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * Group identifier.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final String clusterId;
 
     public String getClusterId() {
@@ -30,7 +30,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * The tags assigned to the resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ServiceProviderParameterResponseConstraints;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ServiceProviderParameterResponseMetadata extends io.pulumi.re
      * the constraints of the bot meta data.
      * 
      */
-    @InputImport(name="constraints")
+    @Import(name="constraints")
       private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 
     public Optional<ServiceProviderParameterResponseConstraints> getConstraints() {

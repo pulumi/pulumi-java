@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIdentitySettingsResponse {
     /**
      * The Resource indicating the App ID URI of the target resource.
@@ -18,8 +18,8 @@ public final class ManagedIdentitySettingsResponse {
      */
     private final @Nullable String resource;
 
-    @OutputCustomType.Constructor
-    private ManagedIdentitySettingsResponse(@OutputCustomType.Parameter("resource") @Nullable String resource) {
+    @CustomType.Constructor
+    private ManagedIdentitySettingsResponse(@CustomType.Parameter("resource") @Nullable String resource) {
         this.resource = resource;
     }
 

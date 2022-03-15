@@ -5,13 +5,13 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseTableResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserTablesSqlTaskOutputResponse {
     /**
      * Mapping from database name to list of tables
@@ -29,11 +29,11 @@ public final class GetUserTablesSqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserTablesSqlTaskOutputResponse(
-        @OutputCustomType.Parameter("databasesToTables") Map<String,List<DatabaseTableResponse>> databasesToTables,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("databasesToTables") Map<String,List<DatabaseTableResponse>> databasesToTables,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databasesToTables = databasesToTables;
         this.id = id;
         this.validationErrors = validationErrors;

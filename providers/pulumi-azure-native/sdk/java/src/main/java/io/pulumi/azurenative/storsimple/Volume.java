@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.VolumeArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The IDs of the access control records, associated with the volume.
      * 
      */
-    @OutputExport(name="accessControlRecordIds", type=List.class, parameters={String.class})
+    @Export(name="accessControlRecordIds", type=List.class, parameters={String.class})
     private Output<List<String>> accessControlRecordIds;
 
     /**
@@ -49,7 +49,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The IDs of the backup policies, in which this volume is part of.
      * 
      */
-    @OutputExport(name="backupPolicyIds", type=List.class, parameters={String.class})
+    @Export(name="backupPolicyIds", type=List.class, parameters={String.class})
     private Output<List<String>> backupPolicyIds;
 
     /**
@@ -63,7 +63,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The backup status of the volume.
      * 
      */
-    @OutputExport(name="backupStatus", type=String.class, parameters={})
+    @Export(name="backupStatus", type=String.class, parameters={})
     private Output<String> backupStatus;
 
     /**
@@ -77,7 +77,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -91,7 +91,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The monitoring status of the volume.
      * 
      */
-    @OutputExport(name="monitoringStatus", type=String.class, parameters={})
+    @Export(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
     /**
@@ -105,7 +105,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The operation status on the volume.
      * 
      */
-    @OutputExport(name="operationStatus", type=String.class, parameters={})
+    @Export(name="operationStatus", type=String.class, parameters={})
     private Output<String> operationStatus;
 
     /**
@@ -133,7 +133,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The size of the volume in bytes.
      * 
      */
-    @OutputExport(name="sizeInBytes", type=Double.class, parameters={})
+    @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output<Double> sizeInBytes;
 
     /**
@@ -147,7 +147,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The ID of the volume container, in which this volume is created.
      * 
      */
-    @OutputExport(name="volumeContainerId", type=String.class, parameters={})
+    @Export(name="volumeContainerId", type=String.class, parameters={})
     private Output<String> volumeContainerId;
 
     /**
@@ -175,7 +175,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The volume status.
      * 
      */
-    @OutputExport(name="volumeStatus", type=String.class, parameters={})
+    @Export(name="volumeStatus", type=String.class, parameters={})
     private Output<String> volumeStatus;
 
     /**
@@ -189,7 +189,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The type of the volume.
      * 
      */
-    @OutputExport(name="volumeType", type=String.class, parameters={})
+    @Export(name="volumeType", type=String.class, parameters={})
     private Output<String> volumeType;
 
     /**

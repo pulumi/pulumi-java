@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.outputs;
 
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamespaceResult {
     /**
      * The time the namespace was created.
@@ -110,27 +110,27 @@ public final class GetNamespaceResult {
      */
     private final @Nullable String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNamespaceResult(
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("critical") @Nullable Boolean critical,
-        @OutputCustomType.Parameter("dataCenter") @Nullable String dataCenter,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("metricId") String metricId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespaceType") @Nullable String namespaceType,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("scaleUnit") @Nullable String scaleUnit,
-        @OutputCustomType.Parameter("serviceBusEndpoint") @Nullable String serviceBusEndpoint,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") @Nullable String updatedAt) {
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("critical") @Nullable Boolean critical,
+        @CustomType.Parameter("dataCenter") @Nullable String dataCenter,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("metricId") String metricId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespaceType") @Nullable String namespaceType,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("scaleUnit") @Nullable String scaleUnit,
+        @CustomType.Parameter("serviceBusEndpoint") @Nullable String serviceBusEndpoint,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") @Nullable String updatedAt) {
         this.createdAt = createdAt;
         this.critical = critical;
         this.dataCenter = dataCenter;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.PatchInstanceFilterGroupLabelArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * Target all VM instances in the project. If true, no other criteria is permitted.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
     public Output<Boolean> getAll() {
@@ -36,7 +36,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * Targets VM instances matching at least one of these label sets. This allows targeting of disparate groups, for example "env=prod or env=staging".
      * 
      */
-    @InputImport(name="groupLabels")
+    @Import(name="groupLabels")
       private final @Nullable Output<List<PatchInstanceFilterGroupLabelArgs>> groupLabels;
 
     public Output<List<PatchInstanceFilterGroupLabelArgs>> getGroupLabels() {
@@ -47,7 +47,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
      * 
      */
-    @InputImport(name="instanceNamePrefixes")
+    @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
 
     public Output<List<String>> getInstanceNamePrefixes() {
@@ -58,7 +58,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -69,7 +69,7 @@ public final class PatchInstanceFilterArgs extends io.pulumi.resources.ResourceA
      * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

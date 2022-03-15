@@ -6,7 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.AccessPointPublicAccessBlockConfigurationArgs;
 import io.pulumi.aws.s3.inputs.AccessPointVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the AWS provider.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -31,7 +31,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -42,7 +42,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Name you want to assign to this access point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Valid JSON document that specifies the policy that you want to apply to this access point. Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = ""`) _will not_ delete the policy since it could have been set by `aws.s3control.AccessPointPolicy`. To remove the `policy`, set it to `"{}"` (an empty JSON document).
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -64,7 +64,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
      * 
      */
-    @InputImport(name="publicAccessBlockConfiguration")
+    @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     public Output<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
@@ -75,7 +75,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
      * 
      */
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorMappingFormatResponse {
     /**
      * The oData language.
@@ -42,14 +42,14 @@ public final class ConnectorMappingFormatResponse {
      */
     private final @Nullable String quoteEscapeCharacter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorMappingFormatResponse(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
-        @OutputCustomType.Parameter("arraySeparator") @Nullable String arraySeparator,
-        @OutputCustomType.Parameter("columnDelimiter") @Nullable String columnDelimiter,
-        @OutputCustomType.Parameter("formatType") String formatType,
-        @OutputCustomType.Parameter("quoteCharacter") @Nullable String quoteCharacter,
-        @OutputCustomType.Parameter("quoteEscapeCharacter") @Nullable String quoteEscapeCharacter) {
+        @CustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @CustomType.Parameter("arraySeparator") @Nullable String arraySeparator,
+        @CustomType.Parameter("columnDelimiter") @Nullable String columnDelimiter,
+        @CustomType.Parameter("formatType") String formatType,
+        @CustomType.Parameter("quoteCharacter") @Nullable String quoteCharacter,
+        @CustomType.Parameter("quoteEscapeCharacter") @Nullable String quoteEscapeCharacter) {
         this.acceptLanguage = acceptLanguage;
         this.arraySeparator = arraySeparator;
         this.columnDelimiter = columnDelimiter;

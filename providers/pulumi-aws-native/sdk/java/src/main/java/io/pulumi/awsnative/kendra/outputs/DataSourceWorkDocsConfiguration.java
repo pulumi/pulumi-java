@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWorkDocsConfiguration {
     private final @Nullable Boolean crawlComments;
     private final @Nullable List<String> exclusionPatterns;
@@ -21,14 +21,14 @@ public final class DataSourceWorkDocsConfiguration {
     private final String organizationId;
     private final @Nullable Boolean useChangeLog;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceWorkDocsConfiguration(
-        @OutputCustomType.Parameter("crawlComments") @Nullable Boolean crawlComments,
-        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
-        @OutputCustomType.Parameter("organizationId") String organizationId,
-        @OutputCustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog) {
+        @CustomType.Parameter("crawlComments") @Nullable Boolean crawlComments,
+        @CustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @CustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @CustomType.Parameter("organizationId") String organizationId,
+        @CustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog) {
         this.crawlComments = crawlComments;
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;

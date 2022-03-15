@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.forecast.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDatasetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the dataset group to delete.
      * 
      */
-    @InputImport(name="datasetGroupArn", required=true)
+    @Import(name="datasetGroupArn", required=true)
       private final String datasetGroupArn;
 
     public String getDatasetGroupArn() {

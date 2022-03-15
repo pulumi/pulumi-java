@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CapabilityResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the SKU capability.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class CapabilityResponse extends io.pulumi.resources.InvokeArgs {
      * Reason of the SKU capability.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable String reason;
 
     public Optional<String> getReason() {
@@ -44,7 +44,7 @@ public final class CapabilityResponse extends io.pulumi.resources.InvokeArgs {
      * Value of the SKU capability.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

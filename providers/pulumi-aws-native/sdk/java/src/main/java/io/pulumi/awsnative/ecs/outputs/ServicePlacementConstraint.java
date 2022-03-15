@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.ServicePlacementConstraintType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePlacementConstraint {
     private final @Nullable String expression;
     private final ServicePlacementConstraintType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePlacementConstraint(
-        @OutputCustomType.Parameter("expression") @Nullable String expression,
-        @OutputCustomType.Parameter("type") ServicePlacementConstraintType type) {
+        @CustomType.Parameter("expression") @Nullable String expression,
+        @CustomType.Parameter("type") ServicePlacementConstraintType type) {
         this.expression = expression;
         this.type = type;
     }

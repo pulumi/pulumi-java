@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BasicDependencyResponse extends io.pulumi.resources.InvokeArg
      * The ID of the dependency.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class BasicDependencyResponse extends io.pulumi.resources.InvokeArg
      * The dependency resource name.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
@@ -44,7 +44,7 @@ public final class BasicDependencyResponse extends io.pulumi.resources.InvokeArg
      * The dependency resource type.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {

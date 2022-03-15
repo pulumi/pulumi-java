@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TopologySelectorLabelRequirement;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopologySelectorTerm {
     /**
      * A list of topology selector requirements by labels.
@@ -17,8 +17,8 @@ public final class TopologySelectorTerm {
      */
     private final @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions;
 
-    @OutputCustomType.Constructor
-    private TopologySelectorTerm(@OutputCustomType.Parameter("matchLabelExpressions") @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
+    @CustomType.Constructor
+    private TopologySelectorTerm(@CustomType.Parameter("matchLabelExpressions") @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
         this.matchLabelExpressions = matchLabelExpressions;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
 
     public static final ServiceEndpointSpecPortGetArgs Empty = new ServiceEndpointSpecPortGetArgs();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
         return this.protocol == null ? Output.empty() : this.protocol;
     }
 
-    @InputImport(name="publishMode")
+    @Import(name="publishMode")
       private final @Nullable Output<String> publishMode;
 
     public Output<String> getPublishMode() {
         return this.publishMode == null ? Output.empty() : this.publishMode;
     }
 
-    @InputImport(name="publishedPort")
+    @Import(name="publishedPort")
       private final @Nullable Output<Integer> publishedPort;
 
     public Output<Integer> getPublishedPort() {
         return this.publishedPort == null ? Output.empty() : this.publishedPort;
     }
 
-    @InputImport(name="targetPort", required=true)
+    @Import(name="targetPort", required=true)
       private final Output<Integer> targetPort;
 
     public Output<Integer> getTargetPort() {

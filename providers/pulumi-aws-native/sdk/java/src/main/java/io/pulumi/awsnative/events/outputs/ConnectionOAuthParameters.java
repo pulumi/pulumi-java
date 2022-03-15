@@ -6,25 +6,25 @@ package io.pulumi.awsnative.events.outputs;
 import io.pulumi.awsnative.events.enums.ConnectionOAuthParametersHttpMethod;
 import io.pulumi.awsnative.events.outputs.ConnectionClientParameters;
 import io.pulumi.awsnative.events.outputs.ConnectionHttpParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionOAuthParameters {
     private final String authorizationEndpoint;
     private final ConnectionClientParameters clientParameters;
     private final ConnectionOAuthParametersHttpMethod httpMethod;
     private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionOAuthParameters(
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("clientParameters") ConnectionClientParameters clientParameters,
-        @OutputCustomType.Parameter("httpMethod") ConnectionOAuthParametersHttpMethod httpMethod,
-        @OutputCustomType.Parameter("oAuthHttpParameters") @Nullable ConnectionHttpParameters oAuthHttpParameters) {
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("clientParameters") ConnectionClientParameters clientParameters,
+        @CustomType.Parameter("httpMethod") ConnectionOAuthParametersHttpMethod httpMethod,
+        @CustomType.Parameter("oAuthHttpParameters") @Nullable ConnectionHttpParameters oAuthHttpParameters) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
         this.httpMethod = httpMethod;

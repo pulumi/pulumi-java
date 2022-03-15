@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,63 +17,63 @@ public final class RemoteImageBuildGetArgs extends io.pulumi.resources.ResourceA
 
     public static final RemoteImageBuildGetArgs Empty = new RemoteImageBuildGetArgs();
 
-    @InputImport(name="buildArg")
+    @Import(name="buildArg")
       private final @Nullable Output<Map<String,String>> buildArg;
 
     public Output<Map<String,String>> getBuildArg() {
         return this.buildArg == null ? Output.empty() : this.buildArg;
     }
 
-    @InputImport(name="dockerfile")
+    @Import(name="dockerfile")
       private final @Nullable Output<String> dockerfile;
 
     public Output<String> getDockerfile() {
         return this.dockerfile == null ? Output.empty() : this.dockerfile;
     }
 
-    @InputImport(name="forceRemove")
+    @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
     public Output<Boolean> getForceRemove() {
         return this.forceRemove == null ? Output.empty() : this.forceRemove;
     }
 
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<Map<String,String>> label;
 
     public Output<Map<String,String>> getLabel() {
         return this.label == null ? Output.empty() : this.label;
     }
 
-    @InputImport(name="noCache")
+    @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
     public Output<Boolean> getNoCache() {
         return this.noCache == null ? Output.empty() : this.noCache;
     }
 
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
         return this.path;
     }
 
-    @InputImport(name="remove")
+    @Import(name="remove")
       private final @Nullable Output<Boolean> remove;
 
     public Output<Boolean> getRemove() {
         return this.remove == null ? Output.empty() : this.remove;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {

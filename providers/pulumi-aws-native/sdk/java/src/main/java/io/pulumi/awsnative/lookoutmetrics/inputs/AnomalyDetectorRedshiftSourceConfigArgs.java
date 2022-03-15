@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,56 +15,56 @@ public final class AnomalyDetectorRedshiftSourceConfigArgs extends io.pulumi.res
 
     public static final AnomalyDetectorRedshiftSourceConfigArgs Empty = new AnomalyDetectorRedshiftSourceConfigArgs();
 
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    @InputImport(name="databaseHost", required=true)
+    @Import(name="databaseHost", required=true)
       private final Output<String> databaseHost;
 
     public Output<String> getDatabaseHost() {
         return this.databaseHost;
     }
 
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="databasePort", required=true)
+    @Import(name="databasePort", required=true)
       private final Output<Integer> databasePort;
 
     public Output<Integer> getDatabasePort() {
         return this.databasePort;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="secretManagerArn", required=true)
+    @Import(name="secretManagerArn", required=true)
       private final Output<String> secretManagerArn;
 
     public Output<String> getSecretManagerArn() {
         return this.secretManagerArn;
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
         return this.tableName;
     }
 
-    @InputImport(name="vpcConfiguration", required=true)
+    @Import(name="vpcConfiguration", required=true)
       private final Output<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration;
 
     public Output<AnomalyDetectorVpcConfigurationArgs> getVpcConfiguration() {

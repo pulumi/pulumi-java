@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId", required=true)
+    @Import(name="artifactId", required=true)
       private final String artifactId;
 
     public String getArtifactId() {
@@ -32,7 +32,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * The absolute path on the instance to put the file.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final String destination;
 
     public String getDestination() {
@@ -43,7 +43,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * Whether to allow this step to overwrite existing files. If this is false and the file already exists the file is not overwritten and the step is considered a success. Defaults to false.
      * 
      */
-    @InputImport(name="overwrite", required=true)
+    @Import(name="overwrite", required=true)
       private final Boolean overwrite;
 
     public Boolean getOverwrite() {
@@ -54,7 +54,7 @@ public final class SoftwareRecipeStepCopyFileResponse extends io.pulumi.resource
      * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final String permissions;
 
     public String getPermissions() {

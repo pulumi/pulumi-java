@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IPAMPoolProvisionedCidr {
     private final String cidr;
 
-    @OutputCustomType.Constructor
-    private IPAMPoolProvisionedCidr(@OutputCustomType.Parameter("cidr") String cidr) {
+    @CustomType.Constructor
+    private IPAMPoolProvisionedCidr(@CustomType.Parameter("cidr") String cidr) {
         this.cidr = cidr;
     }
 

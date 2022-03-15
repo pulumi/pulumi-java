@@ -6,7 +6,7 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.notificationhubs.enums.NamespaceType;
 import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The time the namespace was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -33,7 +33,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the namespace is set as Critical.
      * 
      */
-    @InputImport(name="critical")
+    @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
@@ -44,7 +44,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Data center for the namespace
      * 
      */
-    @InputImport(name="dataCenter")
+    @Import(name="dataCenter")
       private final @Nullable Output<String> dataCenter;
 
     public Output<String> getDataCenter() {
@@ -55,7 +55,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the namespace is currently enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -66,7 +66,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the namespace.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace name.
      * 
      */
-    @InputImport(name="namespaceName")
+    @Import(name="namespaceName")
       private final @Nullable Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -99,7 +99,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace type.
      * 
      */
-    @InputImport(name="namespaceType")
+    @Import(name="namespaceType")
       private final @Nullable Output<NamespaceType> namespaceType;
 
     public Output<NamespaceType> getNamespaceType() {
@@ -110,7 +110,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Provisioning state of the Namespace.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -121,7 +121,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the targeted region in which the namespace should be created. It can be any of the following values: Australia East, Australia Southeast, Central US, East US, East US 2, West US, North Central US, South Central US, East Asia, Southeast Asia, Brazil South, Japan East, Japan West, North Europe, West Europe
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -132,7 +132,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -143,7 +143,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * ScaleUnit where the namespace gets created
      * 
      */
-    @InputImport(name="scaleUnit")
+    @Import(name="scaleUnit")
       private final @Nullable Output<String> scaleUnit;
 
     public Output<String> getScaleUnit() {
@@ -154,7 +154,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Endpoint you can use to perform NotificationHub operations.
      * 
      */
-    @InputImport(name="serviceBusEndpoint")
+    @Import(name="serviceBusEndpoint")
       private final @Nullable Output<String> serviceBusEndpoint;
 
     public Output<String> getServiceBusEndpoint() {
@@ -165,7 +165,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The sku of the created namespace
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -176,7 +176,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the namespace. It can be any of these values:1 = Created/Active2 = Creating3 = Suspended4 = Deleting
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -187,7 +187,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The Id of the Azure subscription associated with the namespace.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -198,7 +198,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -209,7 +209,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The time the namespace was updated.
      * 
      */
-    @InputImport(name="updatedAt")
+    @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;
 
     public Output<String> getUpdatedAt() {

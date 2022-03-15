@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDocumentResult {
     /**
      * The ARN of the document.
@@ -35,15 +35,15 @@ public final class GetDocumentResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDocumentResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("documentFormat") @Nullable String documentFormat,
-        @OutputCustomType.Parameter("documentType") String documentType,
-        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("documentFormat") @Nullable String documentFormat,
+        @CustomType.Parameter("documentType") String documentType,
+        @CustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.arn = arn;
         this.content = content;
         this.documentFormat = documentFormat;

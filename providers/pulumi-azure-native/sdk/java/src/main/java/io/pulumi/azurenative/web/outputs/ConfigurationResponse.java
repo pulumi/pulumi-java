@@ -6,14 +6,14 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.IngressResponse;
 import io.pulumi.azurenative.web.outputs.RegistryCredentialsResponse;
 import io.pulumi.azurenative.web.outputs.SecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationResponse {
     /**
      * ActiveRevisionsMode controls how active revisions are handled for the Container app:
@@ -37,12 +37,12 @@ public final class ConfigurationResponse {
      */
     private final @Nullable List<SecretResponse> secrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationResponse(
-        @OutputCustomType.Parameter("activeRevisionsMode") @Nullable String activeRevisionsMode,
-        @OutputCustomType.Parameter("ingress") @Nullable IngressResponse ingress,
-        @OutputCustomType.Parameter("registries") @Nullable List<RegistryCredentialsResponse> registries,
-        @OutputCustomType.Parameter("secrets") @Nullable List<SecretResponse> secrets) {
+        @CustomType.Parameter("activeRevisionsMode") @Nullable String activeRevisionsMode,
+        @CustomType.Parameter("ingress") @Nullable IngressResponse ingress,
+        @CustomType.Parameter("registries") @Nullable List<RegistryCredentialsResponse> registries,
+        @CustomType.Parameter("secrets") @Nullable List<SecretResponse> secrets) {
         this.activeRevisionsMode = activeRevisionsMode;
         this.ingress = ingress;
         this.registries = registries;

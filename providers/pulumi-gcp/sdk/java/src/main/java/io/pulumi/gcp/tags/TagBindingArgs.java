@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
      * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -28,7 +28,7 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
      * The TagValue of the TagBinding. Must be of the form tagValues/456.
      * 
      */
-    @InputImport(name="tagValue", required=true)
+    @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
     public Output<String> getTagValue() {

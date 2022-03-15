@@ -6,11 +6,11 @@ package io.pulumi.azurenative.avs.outputs;
 import io.pulumi.azurenative.avs.outputs.VmHostPlacementPolicyPropertiesResponse;
 import io.pulumi.azurenative.avs.outputs.VmVmPlacementPolicyPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPlacementPolicyResult {
     /**
      * Resource ID.
@@ -33,12 +33,12 @@ public final class GetPlacementPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPlacementPolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse> properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.RegistryImageBuildAuthConfig;
 import io.pulumi.docker.outputs.RegistryImageBuildUlimit;
 import java.lang.Boolean;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistryImageBuild {
     private final @Nullable List<RegistryImageBuildAuthConfig> authConfigs;
     private final @Nullable Map<String,String> buildArgs;
@@ -50,40 +50,40 @@ public final class RegistryImageBuild {
     private final @Nullable List<RegistryImageBuildUlimit> ulimits;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryImageBuild(
-        @OutputCustomType.Parameter("authConfigs") @Nullable List<RegistryImageBuildAuthConfig> authConfigs,
-        @OutputCustomType.Parameter("buildArgs") @Nullable Map<String,String> buildArgs,
-        @OutputCustomType.Parameter("buildId") @Nullable String buildId,
-        @OutputCustomType.Parameter("cacheFroms") @Nullable List<String> cacheFroms,
-        @OutputCustomType.Parameter("cgroupParent") @Nullable String cgroupParent,
-        @OutputCustomType.Parameter("context") String context,
-        @OutputCustomType.Parameter("cpuPeriod") @Nullable Integer cpuPeriod,
-        @OutputCustomType.Parameter("cpuQuota") @Nullable Integer cpuQuota,
-        @OutputCustomType.Parameter("cpuSetCpus") @Nullable String cpuSetCpus,
-        @OutputCustomType.Parameter("cpuSetMems") @Nullable String cpuSetMems,
-        @OutputCustomType.Parameter("cpuShares") @Nullable Integer cpuShares,
-        @OutputCustomType.Parameter("dockerfile") @Nullable String dockerfile,
-        @OutputCustomType.Parameter("extraHosts") @Nullable List<String> extraHosts,
-        @OutputCustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
-        @OutputCustomType.Parameter("isolation") @Nullable String isolation,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("memory") @Nullable Integer memory,
-        @OutputCustomType.Parameter("memorySwap") @Nullable Integer memorySwap,
-        @OutputCustomType.Parameter("networkMode") @Nullable String networkMode,
-        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
-        @OutputCustomType.Parameter("platform") @Nullable String platform,
-        @OutputCustomType.Parameter("pullParent") @Nullable Boolean pullParent,
-        @OutputCustomType.Parameter("remoteContext") @Nullable String remoteContext,
-        @OutputCustomType.Parameter("remove") @Nullable Boolean remove,
-        @OutputCustomType.Parameter("securityOpts") @Nullable List<String> securityOpts,
-        @OutputCustomType.Parameter("sessionId") @Nullable String sessionId,
-        @OutputCustomType.Parameter("shmSize") @Nullable Integer shmSize,
-        @OutputCustomType.Parameter("squash") @Nullable Boolean squash,
-        @OutputCustomType.Parameter("suppressOutput") @Nullable Boolean suppressOutput,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("ulimits") @Nullable List<RegistryImageBuildUlimit> ulimits,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("authConfigs") @Nullable List<RegistryImageBuildAuthConfig> authConfigs,
+        @CustomType.Parameter("buildArgs") @Nullable Map<String,String> buildArgs,
+        @CustomType.Parameter("buildId") @Nullable String buildId,
+        @CustomType.Parameter("cacheFroms") @Nullable List<String> cacheFroms,
+        @CustomType.Parameter("cgroupParent") @Nullable String cgroupParent,
+        @CustomType.Parameter("context") String context,
+        @CustomType.Parameter("cpuPeriod") @Nullable Integer cpuPeriod,
+        @CustomType.Parameter("cpuQuota") @Nullable Integer cpuQuota,
+        @CustomType.Parameter("cpuSetCpus") @Nullable String cpuSetCpus,
+        @CustomType.Parameter("cpuSetMems") @Nullable String cpuSetMems,
+        @CustomType.Parameter("cpuShares") @Nullable Integer cpuShares,
+        @CustomType.Parameter("dockerfile") @Nullable String dockerfile,
+        @CustomType.Parameter("extraHosts") @Nullable List<String> extraHosts,
+        @CustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
+        @CustomType.Parameter("isolation") @Nullable String isolation,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("memory") @Nullable Integer memory,
+        @CustomType.Parameter("memorySwap") @Nullable Integer memorySwap,
+        @CustomType.Parameter("networkMode") @Nullable String networkMode,
+        @CustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @CustomType.Parameter("platform") @Nullable String platform,
+        @CustomType.Parameter("pullParent") @Nullable Boolean pullParent,
+        @CustomType.Parameter("remoteContext") @Nullable String remoteContext,
+        @CustomType.Parameter("remove") @Nullable Boolean remove,
+        @CustomType.Parameter("securityOpts") @Nullable List<String> securityOpts,
+        @CustomType.Parameter("sessionId") @Nullable String sessionId,
+        @CustomType.Parameter("shmSize") @Nullable Integer shmSize,
+        @CustomType.Parameter("squash") @Nullable Boolean squash,
+        @CustomType.Parameter("suppressOutput") @Nullable Boolean suppressOutput,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("ulimits") @Nullable List<RegistryImageBuildUlimit> ulimits,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.authConfigs = authConfigs;
         this.buildArgs = buildArgs;
         this.buildId = buildId;

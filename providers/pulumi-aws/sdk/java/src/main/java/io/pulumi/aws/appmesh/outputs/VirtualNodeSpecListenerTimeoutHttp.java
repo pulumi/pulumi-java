@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutHttpIdle;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutHttpPerRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTimeoutHttp {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTimeoutHttp(
-        @OutputCustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutHttpIdle idle,
-        @OutputCustomType.Parameter("perRequest") @Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest) {
+        @CustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutHttpIdle idle,
+        @CustomType.Parameter("perRequest") @Nullable VirtualNodeSpecListenerTimeoutHttpPerRequest perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteCircuitPeeringConfigResponse {
     /**
      * The communities of bgp peering. Specified for microsoft peering.
@@ -44,14 +44,14 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
      */
     private final @Nullable String routingRegistryName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressRouteCircuitPeeringConfigResponse(
-        @OutputCustomType.Parameter("advertisedCommunities") @Nullable List<String> advertisedCommunities,
-        @OutputCustomType.Parameter("advertisedPublicPrefixes") @Nullable List<String> advertisedPublicPrefixes,
-        @OutputCustomType.Parameter("advertisedPublicPrefixesState") String advertisedPublicPrefixesState,
-        @OutputCustomType.Parameter("customerASN") @Nullable Integer customerASN,
-        @OutputCustomType.Parameter("legacyMode") @Nullable Integer legacyMode,
-        @OutputCustomType.Parameter("routingRegistryName") @Nullable String routingRegistryName) {
+        @CustomType.Parameter("advertisedCommunities") @Nullable List<String> advertisedCommunities,
+        @CustomType.Parameter("advertisedPublicPrefixes") @Nullable List<String> advertisedPublicPrefixes,
+        @CustomType.Parameter("advertisedPublicPrefixesState") String advertisedPublicPrefixesState,
+        @CustomType.Parameter("customerASN") @Nullable Integer customerASN,
+        @CustomType.Parameter("legacyMode") @Nullable Integer legacyMode,
+        @CustomType.Parameter("routingRegistryName") @Nullable String routingRegistryName) {
         this.advertisedCommunities = advertisedCommunities;
         this.advertisedPublicPrefixes = advertisedPublicPrefixes;
         this.advertisedPublicPrefixesState = advertisedPublicPrefixesState;

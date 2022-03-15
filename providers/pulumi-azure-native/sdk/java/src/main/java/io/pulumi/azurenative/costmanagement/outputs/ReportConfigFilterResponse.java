@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigComparisonExpressionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportConfigFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
@@ -43,14 +43,14 @@ public final class ReportConfigFilterResponse {
      */
     private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportConfigFilterResponse(
-        @OutputCustomType.Parameter("and") @Nullable List<ReportConfigFilterResponse> and,
-        @OutputCustomType.Parameter("dimensions") @Nullable ReportConfigComparisonExpressionResponse dimensions,
-        @OutputCustomType.Parameter("or") @Nullable List<ReportConfigFilterResponse> or,
-        @OutputCustomType.Parameter("tagKey") @Nullable ReportConfigComparisonExpressionResponse tagKey,
-        @OutputCustomType.Parameter("tagValue") @Nullable ReportConfigComparisonExpressionResponse tagValue,
-        @OutputCustomType.Parameter("tags") @Nullable ReportConfigComparisonExpressionResponse tags) {
+        @CustomType.Parameter("and") @Nullable List<ReportConfigFilterResponse> and,
+        @CustomType.Parameter("dimensions") @Nullable ReportConfigComparisonExpressionResponse dimensions,
+        @CustomType.Parameter("or") @Nullable List<ReportConfigFilterResponse> or,
+        @CustomType.Parameter("tagKey") @Nullable ReportConfigComparisonExpressionResponse tagKey,
+        @CustomType.Parameter("tagValue") @Nullable ReportConfigComparisonExpressionResponse tagValue,
+        @CustomType.Parameter("tags") @Nullable ReportConfigComparisonExpressionResponse tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.or = or;

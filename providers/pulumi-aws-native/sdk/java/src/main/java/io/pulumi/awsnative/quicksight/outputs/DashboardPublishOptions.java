@@ -6,22 +6,22 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.outputs.DashboardAdHocFilteringOption;
 import io.pulumi.awsnative.quicksight.outputs.DashboardExportToCSVOption;
 import io.pulumi.awsnative.quicksight.outputs.DashboardSheetControlsOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardPublishOptions {
     private final @Nullable DashboardAdHocFilteringOption adHocFilteringOption;
     private final @Nullable DashboardExportToCSVOption exportToCSVOption;
     private final @Nullable DashboardSheetControlsOption sheetControlsOption;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardPublishOptions(
-        @OutputCustomType.Parameter("adHocFilteringOption") @Nullable DashboardAdHocFilteringOption adHocFilteringOption,
-        @OutputCustomType.Parameter("exportToCSVOption") @Nullable DashboardExportToCSVOption exportToCSVOption,
-        @OutputCustomType.Parameter("sheetControlsOption") @Nullable DashboardSheetControlsOption sheetControlsOption) {
+        @CustomType.Parameter("adHocFilteringOption") @Nullable DashboardAdHocFilteringOption adHocFilteringOption,
+        @CustomType.Parameter("exportToCSVOption") @Nullable DashboardExportToCSVOption exportToCSVOption,
+        @CustomType.Parameter("sheetControlsOption") @Nullable DashboardSheetControlsOption sheetControlsOption) {
         this.adHocFilteringOption = adHocFilteringOption;
         this.exportToCSVOption = exportToCSVOption;
         this.sheetControlsOption = sheetControlsOption;

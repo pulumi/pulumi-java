@@ -8,7 +8,7 @@ import io.pulumi.aws.imagebuilder.InfrastructureConfigurationArgs;
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationState;
 import io.pulumi.aws.imagebuilder.outputs.InfrastructureConfigurationLogging;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Amazon Resource Name (ARN) of the configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Date when the configuration was created.
      * 
      */
-    @OutputExport(name="dateCreated", type=String.class, parameters={})
+    @Export(name="dateCreated", type=String.class, parameters={})
     private Output<String> dateCreated;
 
     /**
@@ -64,7 +64,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Date when the configuration was updated.
      * 
      */
-    @OutputExport(name="dateUpdated", type=String.class, parameters={})
+    @Export(name="dateUpdated", type=String.class, parameters={})
     private Output<String> dateUpdated;
 
     /**
@@ -78,7 +78,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Description for the configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Name of IAM Instance Profile.
      * 
      */
-    @OutputExport(name="instanceProfileName", type=String.class, parameters={})
+    @Export(name="instanceProfileName", type=String.class, parameters={})
     private Output<String> instanceProfileName;
 
     /**
@@ -106,7 +106,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Set of EC2 Instance Types.
      * 
      */
-    @OutputExport(name="instanceTypes", type=List.class, parameters={String.class})
+    @Export(name="instanceTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> instanceTypes;
 
     /**
@@ -120,7 +120,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Name of EC2 Key Pair.
      * 
      */
-    @OutputExport(name="keyPair", type=String.class, parameters={})
+    @Export(name="keyPair", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyPair;
 
     /**
@@ -134,7 +134,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Configuration block with logging settings. Detailed below.
      * 
      */
-    @OutputExport(name="logging", type=InfrastructureConfigurationLogging.class, parameters={})
+    @Export(name="logging", type=InfrastructureConfigurationLogging.class, parameters={})
     private Output</* @Nullable */ InfrastructureConfigurationLogging> logging;
 
     /**
@@ -148,7 +148,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Name for the configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -162,7 +162,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Key-value map of resource tags to assign to infrastructure created by the configuration.
      * 
      */
-    @OutputExport(name="resourceTags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="resourceTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> resourceTags;
 
     /**
@@ -176,7 +176,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Set of EC2 Security Group identifiers.
      * 
      */
-    @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupIds;
 
     /**
@@ -190,7 +190,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Amazon Resource Name (ARN) of SNS Topic.
      * 
      */
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicArn;
 
     /**
@@ -204,7 +204,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * EC2 Subnet identifier. Also requires `security_group_ids` argument.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -218,7 +218,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Key-value map of resource tags to assign to the configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -232,7 +232,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -246,7 +246,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
      * 
      */
-    @OutputExport(name="terminateInstanceOnFailure", type=Boolean.class, parameters={})
+    @Export(name="terminateInstanceOnFailure", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> terminateInstanceOnFailure;
 
     /**

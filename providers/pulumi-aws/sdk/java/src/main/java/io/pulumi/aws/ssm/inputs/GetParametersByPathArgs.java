@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
      * The prefix path of the parameter.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -30,7 +30,7 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
      * Whether to recursively return parameters under `path`. Defaults to `false`.
      * 
      */
-    @InputImport(name="recursive")
+    @Import(name="recursive")
       private final @Nullable Boolean recursive;
 
     public Optional<Boolean> getRecursive() {
@@ -41,7 +41,7 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
      * Whether to return decrypted `SecureString` value. Defaults to `true`.
      * 
      */
-    @InputImport(name="withDecryption")
+    @Import(name="withDecryption")
       private final @Nullable Boolean withDecryption;
 
     public Optional<Boolean> getWithDecryption() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointStreamSelectionStreamOrder;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
      * The maximum video bitrate (bps) to include in output.
      * 
      */
-    @InputImport(name="maxVideoBitsPerSecond")
+    @Import(name="maxVideoBitsPerSecond")
       private final @Nullable Output<Integer> maxVideoBitsPerSecond;
 
     public Output<Integer> getMaxVideoBitsPerSecond() {
@@ -34,7 +34,7 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
      * The minimum video bitrate (bps) to include in output.
      * 
      */
-    @InputImport(name="minVideoBitsPerSecond")
+    @Import(name="minVideoBitsPerSecond")
       private final @Nullable Output<Integer> minVideoBitsPerSecond;
 
     public Output<Integer> getMinVideoBitsPerSecond() {
@@ -45,7 +45,7 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
      * A directive that determines the order of streams in the output.
      * 
      */
-    @InputImport(name="streamOrder")
+    @Import(name="streamOrder")
       private final @Nullable Output<OriginEndpointStreamSelectionStreamOrder> streamOrder;
 
     public Output<OriginEndpointStreamSelectionStreamOrder> getStreamOrder() {

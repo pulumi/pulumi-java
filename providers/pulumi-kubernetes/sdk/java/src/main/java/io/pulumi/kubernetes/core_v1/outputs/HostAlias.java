@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostAlias {
     /**
      * Hostnames for the above IP address.
@@ -23,10 +23,10 @@ public final class HostAlias {
      */
     private final @Nullable String ip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostAlias(
-        @OutputCustomType.Parameter("hostnames") @Nullable List<String> hostnames,
-        @OutputCustomType.Parameter("ip") @Nullable String ip) {
+        @CustomType.Parameter("hostnames") @Nullable List<String> hostnames,
+        @CustomType.Parameter("ip") @Nullable String ip) {
         this.hostnames = hostnames;
         this.ip = ip;
     }

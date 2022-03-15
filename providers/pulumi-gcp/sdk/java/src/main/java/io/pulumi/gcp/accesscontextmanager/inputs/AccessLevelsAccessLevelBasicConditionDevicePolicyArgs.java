@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
      * Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
      * 
      */
-    @InputImport(name="allowedDeviceManagementLevels")
+    @Import(name="allowedDeviceManagementLevels")
       private final @Nullable Output<List<String>> allowedDeviceManagementLevels;
 
     public Output<List<String>> getAllowedDeviceManagementLevels() {
@@ -36,7 +36,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
      * Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
      * 
      */
-    @InputImport(name="allowedEncryptionStatuses")
+    @Import(name="allowedEncryptionStatuses")
       private final @Nullable Output<List<String>> allowedEncryptionStatuses;
 
     public Output<List<String>> getAllowedEncryptionStatuses() {
@@ -49,7 +49,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
      * Structure is documented below.
      * 
      */
-    @InputImport(name="osConstraints")
+    @Import(name="osConstraints")
       private final @Nullable Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs>> osConstraints;
 
     public Output<List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraintArgs>> getOsConstraints() {
@@ -60,7 +60,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
      * Whether the device needs to be approved by the customer admin.
      * 
      */
-    @InputImport(name="requireAdminApproval")
+    @Import(name="requireAdminApproval")
       private final @Nullable Output<Boolean> requireAdminApproval;
 
     public Output<Boolean> getRequireAdminApproval() {
@@ -71,7 +71,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
      * Whether the device needs to be corp owned.
      * 
      */
-    @InputImport(name="requireCorpOwned")
+    @Import(name="requireCorpOwned")
       private final @Nullable Output<Boolean> requireCorpOwned;
 
     public Output<Boolean> getRequireCorpOwned() {
@@ -83,7 +83,7 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyArgs extends
      * to be true. Defaults to false.
      * 
      */
-    @InputImport(name="requireScreenLock")
+    @Import(name="requireScreenLock")
       private final @Nullable Output<Boolean> requireScreenLock;
 
     public Output<Boolean> getRequireScreenLock() {

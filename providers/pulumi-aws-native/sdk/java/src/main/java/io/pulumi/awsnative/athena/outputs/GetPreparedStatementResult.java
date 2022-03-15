@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.athena.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPreparedStatementResult {
     /**
      * The description of the prepared statement.
@@ -22,10 +22,10 @@ public final class GetPreparedStatementResult {
      */
     private final @Nullable String queryStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPreparedStatementResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("queryStatement") @Nullable String queryStatement) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("queryStatement") @Nullable String queryStatement) {
         this.description = description;
         this.queryStatement = queryStatement;
     }

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationDeltaHealthPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterUpgradeDeltaHealthPolicyResponse {
     /**
      * Defines the application delta health policy map used to evaluate the health of an application or one of its child entities when upgrading the cluster.
@@ -40,12 +40,12 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse {
      */
     private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterUpgradeDeltaHealthPolicyResponse(
-        @OutputCustomType.Parameter("applicationDeltaHealthPolicies") @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies,
-        @OutputCustomType.Parameter("maxPercentDeltaUnhealthyApplications") Integer maxPercentDeltaUnhealthyApplications,
-        @OutputCustomType.Parameter("maxPercentDeltaUnhealthyNodes") Integer maxPercentDeltaUnhealthyNodes,
-        @OutputCustomType.Parameter("maxPercentUpgradeDomainDeltaUnhealthyNodes") Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
+        @CustomType.Parameter("applicationDeltaHealthPolicies") @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies,
+        @CustomType.Parameter("maxPercentDeltaUnhealthyApplications") Integer maxPercentDeltaUnhealthyApplications,
+        @CustomType.Parameter("maxPercentDeltaUnhealthyNodes") Integer maxPercentDeltaUnhealthyNodes,
+        @CustomType.Parameter("maxPercentUpgradeDomainDeltaUnhealthyNodes") Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
         this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
         this.maxPercentDeltaUnhealthyApplications = maxPercentDeltaUnhealthyApplications;
         this.maxPercentDeltaUnhealthyNodes = maxPercentDeltaUnhealthyNodes;

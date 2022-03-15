@@ -5,7 +5,7 @@ package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.StoredQueryTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StoredQueryArgs Empty = new StoredQueryArgs();
 
-    @InputImport(name="queryDescription")
+    @Import(name="queryDescription")
       private final @Nullable Output<String> queryDescription;
 
     public Output<String> getQueryDescription() {
         return this.queryDescription == null ? Output.empty() : this.queryDescription;
     }
 
-    @InputImport(name="queryExpression", required=true)
+    @Import(name="queryExpression", required=true)
       private final Output<String> queryExpression;
 
     public Output<String> getQueryExpression() {
         return this.queryExpression;
     }
 
-    @InputImport(name="queryName", required=true)
+    @Import(name="queryName", required=true)
       private final Output<String> queryName;
 
     public Output<String> getQueryName() {
@@ -41,7 +41,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the stored query.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StoredQueryTagArgs>> tags;
 
     public Output<List<StoredQueryTagArgs>> getTags() {

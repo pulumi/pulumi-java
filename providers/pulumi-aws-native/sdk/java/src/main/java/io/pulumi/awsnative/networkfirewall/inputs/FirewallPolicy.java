@@ -7,7 +7,7 @@ import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyCustomAction;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyStatefulEngineOptions;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyStatefulRuleGroupReference;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyStatelessRuleGroupReference;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,49 +19,49 @@ public final class FirewallPolicy extends io.pulumi.resources.InvokeArgs {
 
     public static final FirewallPolicy Empty = new FirewallPolicy();
 
-    @InputImport(name="statefulDefaultActions")
+    @Import(name="statefulDefaultActions")
       private final @Nullable List<String> statefulDefaultActions;
 
     public List<String> getStatefulDefaultActions() {
         return this.statefulDefaultActions == null ? List.of() : this.statefulDefaultActions;
     }
 
-    @InputImport(name="statefulEngineOptions")
+    @Import(name="statefulEngineOptions")
       private final @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions;
 
     public Optional<FirewallPolicyStatefulEngineOptions> getStatefulEngineOptions() {
         return this.statefulEngineOptions == null ? Optional.empty() : Optional.ofNullable(this.statefulEngineOptions);
     }
 
-    @InputImport(name="statefulRuleGroupReferences")
+    @Import(name="statefulRuleGroupReferences")
       private final @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences;
 
     public List<FirewallPolicyStatefulRuleGroupReference> getStatefulRuleGroupReferences() {
         return this.statefulRuleGroupReferences == null ? List.of() : this.statefulRuleGroupReferences;
     }
 
-    @InputImport(name="statelessCustomActions")
+    @Import(name="statelessCustomActions")
       private final @Nullable List<FirewallPolicyCustomAction> statelessCustomActions;
 
     public List<FirewallPolicyCustomAction> getStatelessCustomActions() {
         return this.statelessCustomActions == null ? List.of() : this.statelessCustomActions;
     }
 
-    @InputImport(name="statelessDefaultActions", required=true)
+    @Import(name="statelessDefaultActions", required=true)
       private final List<String> statelessDefaultActions;
 
     public List<String> getStatelessDefaultActions() {
         return this.statelessDefaultActions;
     }
 
-    @InputImport(name="statelessFragmentDefaultActions", required=true)
+    @Import(name="statelessFragmentDefaultActions", required=true)
       private final List<String> statelessFragmentDefaultActions;
 
     public List<String> getStatelessFragmentDefaultActions() {
         return this.statelessFragmentDefaultActions;
     }
 
-    @InputImport(name="statelessRuleGroupReferences")
+    @Import(name="statelessRuleGroupReferences")
       private final @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
     public List<FirewallPolicyStatelessRuleGroupReference> getStatelessRuleGroupReferences() {

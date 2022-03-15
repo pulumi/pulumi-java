@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import io.pulumi.googlenative.run_v1.inputs.ServiceSpecArgs;
 import io.pulumi.googlenative.run_v1.inputs.ServiceStatusArgs;
@@ -21,14 +21,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The API version for this call such as "serving.knative.dev/v1".
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
         return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
-    @InputImport(name="dryRun")
+    @Import(name="dryRun")
       private final @Nullable Output<String> dryRun;
 
     public Output<String> getDryRun() {
@@ -39,14 +39,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of resource, in this case "Service".
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,14 +57,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata associated with this Service, including name, namespace, labels, and annotations. Cloud Run (fully managed) uses the following annotation keys to configure features on a Service: * `run.googleapis.com/ingress` sets the ingress settings for the Service. See [the ingress settings documentation](/run/docs/securing/ingress) for details on configuring ingress settings. * `run.googleapis.com/ingress-status` is output-only and contains the currently active ingress settings for the Service. `run.googleapis.com/ingress-status` may differ from `run.googleapis.com/ingress` while the system is processing a change to `run.googleapis.com/ingress` or if the system failed to process a change to `run.googleapis.com/ingress`. When the system has processed all changes successfully `run.googleapis.com/ingress-status` and `run.googleapis.com/ingress` are equal.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Output.empty() : this.metadata;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -75,7 +75,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Spec holds the desired state of the Service (from the client).
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<ServiceSpecArgs> spec;
 
     public Output<ServiceSpecArgs> getSpec() {
@@ -86,7 +86,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Status communicates the observed state of the Service (from the controller).
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<ServiceStatusArgs> status;
 
     public Output<ServiceStatusArgs> getStatus() {

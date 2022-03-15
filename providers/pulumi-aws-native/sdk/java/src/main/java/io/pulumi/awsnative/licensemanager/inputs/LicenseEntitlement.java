@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,42 +16,42 @@ public final class LicenseEntitlement extends io.pulumi.resources.InvokeArgs {
 
     public static final LicenseEntitlement Empty = new LicenseEntitlement();
 
-    @InputImport(name="allowCheckIn")
+    @Import(name="allowCheckIn")
       private final @Nullable Boolean allowCheckIn;
 
     public Optional<Boolean> getAllowCheckIn() {
         return this.allowCheckIn == null ? Optional.empty() : Optional.ofNullable(this.allowCheckIn);
     }
 
-    @InputImport(name="maxCount")
+    @Import(name="maxCount")
       private final @Nullable Integer maxCount;
 
     public Optional<Integer> getMaxCount() {
         return this.maxCount == null ? Optional.empty() : Optional.ofNullable(this.maxCount);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="overage")
+    @Import(name="overage")
       private final @Nullable Boolean overage;
 
     public Optional<Boolean> getOverage() {
         return this.overage == null ? Optional.empty() : Optional.ofNullable(this.overage);
     }
 
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final String unit;
 
     public String getUnit() {
         return this.unit;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

@@ -5,12 +5,12 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.EventSubscriptionIdentityResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StorageBlobDeadLetterDestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeadLetterWithResourceIdentityResponse {
     /**
      * Information about the destination where events have to be delivered for the event subscription.
@@ -24,10 +24,10 @@ public final class DeadLetterWithResourceIdentityResponse {
      */
     private final @Nullable EventSubscriptionIdentityResponse identity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeadLetterWithResourceIdentityResponse(
-        @OutputCustomType.Parameter("deadLetterDestination") @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
-        @OutputCustomType.Parameter("identity") @Nullable EventSubscriptionIdentityResponse identity) {
+        @CustomType.Parameter("deadLetterDestination") @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
+        @CustomType.Parameter("identity") @Nullable EventSubscriptionIdentityResponse identity) {
         this.deadLetterDestination = deadLetterDestination;
         this.identity = identity;
     }

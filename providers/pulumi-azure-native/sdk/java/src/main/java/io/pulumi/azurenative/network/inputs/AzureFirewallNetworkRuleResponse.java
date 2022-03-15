@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * Description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * List of destination IP addresses.
      * 
      */
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
@@ -45,7 +45,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * List of destination FQDNs.
      * 
      */
-    @InputImport(name="destinationFqdns")
+    @Import(name="destinationFqdns")
       private final @Nullable List<String> destinationFqdns;
 
     public List<String> getDestinationFqdns() {
@@ -56,7 +56,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * List of destination IpGroups for this rule.
      * 
      */
-    @InputImport(name="destinationIpGroups")
+    @Import(name="destinationIpGroups")
       private final @Nullable List<String> destinationIpGroups;
 
     public List<String> getDestinationIpGroups() {
@@ -67,7 +67,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * List of destination ports.
      * 
      */
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
@@ -78,7 +78,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * Name of the network rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -89,7 +89,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * Array of AzureFirewallNetworkRuleProtocols.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable List<String> protocols;
 
     public List<String> getProtocols() {
@@ -100,7 +100,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * List of source IP addresses for this rule.
      * 
      */
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
@@ -111,7 +111,7 @@ public final class AzureFirewallNetworkRuleResponse extends io.pulumi.resources.
      * List of source IpGroups for this rule.
      * 
      */
-    @InputImport(name="sourceIpGroups")
+    @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {

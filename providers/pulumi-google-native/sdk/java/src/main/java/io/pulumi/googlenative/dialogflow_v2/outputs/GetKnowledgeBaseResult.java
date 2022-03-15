@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKnowledgeBaseResult {
     /**
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
@@ -25,11 +25,11 @@ public final class GetKnowledgeBaseResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKnowledgeBaseResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.languageCode = languageCode;
         this.name = name;

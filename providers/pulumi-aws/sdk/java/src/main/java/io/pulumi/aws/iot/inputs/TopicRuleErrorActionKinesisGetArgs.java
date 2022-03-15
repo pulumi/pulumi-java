@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
      * The partition key.
      * 
      */
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
     public Output<String> getPartitionKey() {
@@ -29,7 +29,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
      * The ARN of the IAM role that grants access to the Amazon Kinesis stream.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -40,7 +40,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
      * The name of the Amazon Kinesis stream.
      * 
      */
-    @InputImport(name="streamName", required=true)
+    @Import(name="streamName", required=true)
       private final Output<String> streamName;
 
     public Output<String> getStreamName() {

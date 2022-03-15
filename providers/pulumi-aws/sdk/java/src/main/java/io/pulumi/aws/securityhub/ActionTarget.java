@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.ActionTargetArgs;
 import io.pulumi.aws.securityhub.inputs.ActionTargetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Security Hub custom action target.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * The name of the custom action target.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -60,7 +60,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * The ID for the custom action target.
      * 
      */
-    @OutputExport(name="identifier", type=String.class, parameters={})
+    @Export(name="identifier", type=String.class, parameters={})
     private Output<String> identifier;
 
     /**
@@ -74,7 +74,7 @@ public class ActionTarget extends io.pulumi.resources.CustomResource {
      * The description for the custom action target.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

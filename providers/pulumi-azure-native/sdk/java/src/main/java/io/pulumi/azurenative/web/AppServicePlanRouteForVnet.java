@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.AppServicePlanRouteForVnetArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
      * 
      */
-    @OutputExport(name="endAddress", type=String.class, parameters={})
+    @Export(name="endAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> endAddress;
 
     /**
@@ -45,7 +45,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -59,7 +59,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * These values will be used for syncing an app's routes with those from a Virtual Network.
      * 
      */
-    @OutputExport(name="routeType", type=String.class, parameters={})
+    @Export(name="routeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> routeType;
 
     /**
@@ -97,7 +97,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * The starting address for this route. This may also include a CIDR notation, in which case the end address must not be specified.
      * 
      */
-    @OutputExport(name="startAddress", type=String.class, parameters={})
+    @Export(name="startAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> startAddress;
 
     /**
@@ -111,7 +111,7 @@ public class AppServicePlanRouteForVnet extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

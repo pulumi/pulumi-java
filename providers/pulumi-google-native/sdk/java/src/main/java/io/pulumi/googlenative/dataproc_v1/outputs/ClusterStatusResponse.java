@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterStatusResponse {
     /**
      * Optional. Output only. Details of cluster's state.
@@ -30,12 +30,12 @@ public final class ClusterStatusResponse {
      */
     private final String substate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterStatusResponse(
-        @OutputCustomType.Parameter("detail") String detail,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateStartTime") String stateStartTime,
-        @OutputCustomType.Parameter("substate") String substate) {
+        @CustomType.Parameter("detail") String detail,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateStartTime") String stateStartTime,
+        @CustomType.Parameter("substate") String substate) {
         this.detail = detail;
         this.state = state;
         this.stateStartTime = stateStartTime;

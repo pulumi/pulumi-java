@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyIntrusionDetectionConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyIntrusionDetectionResponse {
     /**
      * Intrusion detection configuration properties.
@@ -23,10 +23,10 @@ public final class FirewallPolicyIntrusionDetectionResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyIntrusionDetectionResponse(
-        @OutputCustomType.Parameter("configuration") @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("configuration") @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.configuration = configuration;
         this.mode = mode;
     }

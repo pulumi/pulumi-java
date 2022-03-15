@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
      * The number of rows that were returned by the search job.
      * 
      */
-    @InputImport(name="ingestedRecords", required=true)
+    @Import(name="ingestedRecords", required=true)
       private final Integer ingestedRecords;
 
     public Integer getIngestedRecords() {
@@ -32,7 +32,7 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
      * Search job completion percentage.
      * 
      */
-    @InputImport(name="progress", required=true)
+    @Import(name="progress", required=true)
       private final Double progress;
 
     public Double getProgress() {

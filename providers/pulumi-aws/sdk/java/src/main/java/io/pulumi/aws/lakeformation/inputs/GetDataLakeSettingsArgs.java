@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetDataLakeSettingsArgs extends io.pulumi.resources.InvokeArg
      * Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {

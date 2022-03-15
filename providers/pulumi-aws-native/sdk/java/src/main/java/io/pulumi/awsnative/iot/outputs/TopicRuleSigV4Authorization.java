@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleSigV4Authorization {
     private final String roleArn;
     private final String serviceName;
     private final String signingRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleSigV4Authorization(
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("signingRegion") String signingRegion) {
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("signingRegion") String signingRegion) {
         this.roleArn = roleArn;
         this.serviceName = serviceName;
         this.signingRegion = signingRegion;

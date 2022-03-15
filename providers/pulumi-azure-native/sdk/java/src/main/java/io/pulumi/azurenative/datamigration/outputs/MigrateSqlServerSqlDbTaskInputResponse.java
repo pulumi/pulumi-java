@@ -6,13 +6,13 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlDbDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrationValidationOptionsResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbTaskInputResponse {
     /**
      * Databases to migrate
@@ -37,12 +37,12 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
      */
     private final @Nullable MigrationValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbTaskInputResponse(
-        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases,
-        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo,
-        @OutputCustomType.Parameter("validationOptions") @Nullable MigrationValidationOptionsResponse validationOptions) {
+        @CustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlDbDatabaseInputResponse> selectedDatabases,
+        @CustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo,
+        @CustomType.Parameter("validationOptions") @Nullable MigrationValidationOptionsResponse validationOptions) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallSubnetMapping {
     /**
      * The unique identifier for the subnet.
@@ -15,8 +15,8 @@ public final class FirewallSubnetMapping {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
-    private FirewallSubnetMapping(@OutputCustomType.Parameter("subnetId") String subnetId) {
+    @CustomType.Constructor
+    private FirewallSubnetMapping(@CustomType.Parameter("subnetId") String subnetId) {
         this.subnetId = subnetId;
     }
 

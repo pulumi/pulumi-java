@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.security.inputs.SecurityContactPropertiesAlertNotificationsArgs;
 import io.pulumi.azurenative.security.inputs.SecurityContactPropertiesNotificationsByRoleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * Defines whether to send email notifications about new security alerts
      * 
      */
-    @InputImport(name="alertNotifications")
+    @Import(name="alertNotifications")
       private final @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
     public Output<SecurityContactPropertiesAlertNotificationsArgs> getAlertNotifications() {
@@ -31,7 +31,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
      */
-    @InputImport(name="emails")
+    @Import(name="emails")
       private final @Nullable Output<String> emails;
 
     public Output<String> getEmails() {
@@ -42,7 +42,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
      */
-    @InputImport(name="notificationsByRole")
+    @Import(name="notificationsByRole")
       private final @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
     public Output<SecurityContactPropertiesNotificationsByRoleArgs> getNotificationsByRole() {
@@ -53,7 +53,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * The security contact's phone number
      * 
      */
-    @InputImport(name="phone")
+    @Import(name="phone")
       private final @Nullable Output<String> phone;
 
     public Output<String> getPhone() {
@@ -64,7 +64,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the security contact object
      * 
      */
-    @InputImport(name="securityContactName")
+    @Import(name="securityContactName")
       private final @Nullable Output<String> securityContactName;
 
     public Output<String> getSecurityContactName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventHubStreamInputDataSourceResponse {
     /**
      * The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.
@@ -43,14 +43,14 @@ public final class EventHubStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventHubStreamInputDataSourceResponse(
-        @OutputCustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
-        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
-        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
-        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
-        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
+        @CustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @CustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @CustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @CustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @CustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.eventHubName = eventHubName;
         this.serviceBusNamespace = serviceBusNamespace;

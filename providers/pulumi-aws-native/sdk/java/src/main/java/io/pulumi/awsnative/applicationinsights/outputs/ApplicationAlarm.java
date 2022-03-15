@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationAlarm {
     /**
      * The name of the CloudWatch alarm to be monitored for the component.
@@ -23,10 +23,10 @@ public final class ApplicationAlarm {
      */
     private final @Nullable ApplicationAlarmSeverity severity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationAlarm(
-        @OutputCustomType.Parameter("alarmName") String alarmName,
-        @OutputCustomType.Parameter("severity") @Nullable ApplicationAlarmSeverity severity) {
+        @CustomType.Parameter("alarmName") String alarmName,
+        @CustomType.Parameter("severity") @Nullable ApplicationAlarmSeverity severity) {
         this.alarmName = alarmName;
         this.severity = severity;
     }

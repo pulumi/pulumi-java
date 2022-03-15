@@ -10,14 +10,14 @@ import io.pulumi.awsnative.quicksight.outputs.DataSourceResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceSslProperties;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceTag;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceVpcConnectionProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataSourceResult {
     /**
      * <p>A set of alternate data source parameters that you want to share for the credentials
@@ -68,20 +68,20 @@ public final class GetDataSourceResult {
     private final @Nullable List<DataSourceTag> tags;
     private final @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataSourceResult(
-        @OutputCustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("dataSourceParameters") @Nullable DataSourceParameters dataSourceParameters,
-        @OutputCustomType.Parameter("errorInfo") @Nullable DataSourceErrorInfo errorInfo,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("permissions") @Nullable List<DataSourceResourcePermission> permissions,
-        @OutputCustomType.Parameter("sslProperties") @Nullable DataSourceSslProperties sslProperties,
-        @OutputCustomType.Parameter("status") @Nullable DataSourceResourceStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable List<DataSourceTag> tags,
-        @OutputCustomType.Parameter("vpcConnectionProperties") @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
+        @CustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("dataSourceParameters") @Nullable DataSourceParameters dataSourceParameters,
+        @CustomType.Parameter("errorInfo") @Nullable DataSourceErrorInfo errorInfo,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("permissions") @Nullable List<DataSourceResourcePermission> permissions,
+        @CustomType.Parameter("sslProperties") @Nullable DataSourceSslProperties sslProperties,
+        @CustomType.Parameter("status") @Nullable DataSourceResourceStatus status,
+        @CustomType.Parameter("tags") @Nullable List<DataSourceTag> tags,
+        @CustomType.Parameter("vpcConnectionProperties") @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
         this.arn = arn;
         this.createdTime = createdTime;

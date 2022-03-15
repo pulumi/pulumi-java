@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg;
 import io.pulumi.aws.cfg.inputs.RuleScopeArgs;
 import io.pulumi.aws.cfg.inputs.RuleSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the rule
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * A string in JSON format that is passed to the AWS Config rule Lambda function.
      * 
      */
-    @InputImport(name="inputParameters")
+    @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
     public Output<String> getInputParameters() {
@@ -43,7 +43,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
-    @InputImport(name="maximumExecutionFrequency")
+    @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
     public Output<String> getMaximumExecutionFrequency() {
@@ -54,7 +54,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Scope defines which resources can trigger an evaluation for the rule as documented below.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<RuleScopeArgs> scope;
 
     public Output<RuleScopeArgs> getScope() {
@@ -76,7 +76,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<RuleSourceArgs> source;
 
     public Output<RuleSourceArgs> getSource() {
@@ -87,7 +87,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

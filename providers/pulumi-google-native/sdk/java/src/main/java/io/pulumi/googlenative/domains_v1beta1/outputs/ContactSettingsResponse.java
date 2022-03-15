@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.ContactResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContactSettingsResponse {
     /**
      * The administrative contact for the `Registration`.
@@ -31,12 +31,12 @@ public final class ContactSettingsResponse {
      */
     private final ContactResponse technicalContact;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactSettingsResponse(
-        @OutputCustomType.Parameter("adminContact") ContactResponse adminContact,
-        @OutputCustomType.Parameter("privacy") String privacy,
-        @OutputCustomType.Parameter("registrantContact") ContactResponse registrantContact,
-        @OutputCustomType.Parameter("technicalContact") ContactResponse technicalContact) {
+        @CustomType.Parameter("adminContact") ContactResponse adminContact,
+        @CustomType.Parameter("privacy") String privacy,
+        @CustomType.Parameter("registrantContact") ContactResponse registrantContact,
+        @CustomType.Parameter("technicalContact") ContactResponse technicalContact) {
         this.adminContact = adminContact;
         this.privacy = privacy;
         this.registrantContact = registrantContact;

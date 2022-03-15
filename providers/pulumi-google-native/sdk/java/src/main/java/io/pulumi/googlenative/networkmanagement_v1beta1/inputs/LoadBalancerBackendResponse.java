@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * Name of a Compute Engine instance or network endpoint.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -32,7 +32,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * A list of firewall rule URIs allowing probes from health check IP ranges.
      * 
      */
-    @InputImport(name="healthCheckAllowingFirewallRules", required=true)
+    @Import(name="healthCheckAllowingFirewallRules", required=true)
       private final List<String> healthCheckAllowingFirewallRules;
 
     public List<String> getHealthCheckAllowingFirewallRules() {
@@ -43,7 +43,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * A list of firewall rule URIs blocking probes from health check IP ranges.
      * 
      */
-    @InputImport(name="healthCheckBlockingFirewallRules", required=true)
+    @Import(name="healthCheckBlockingFirewallRules", required=true)
       private final List<String> healthCheckBlockingFirewallRules;
 
     public List<String> getHealthCheckBlockingFirewallRules() {
@@ -54,7 +54,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * State of the health check firewall configuration.
      * 
      */
-    @InputImport(name="healthCheckFirewallState", required=true)
+    @Import(name="healthCheckFirewallState", required=true)
       private final String healthCheckFirewallState;
 
     public String getHealthCheckFirewallState() {
@@ -65,7 +65,7 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
      * URI of a Compute Engine instance or network endpoint.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

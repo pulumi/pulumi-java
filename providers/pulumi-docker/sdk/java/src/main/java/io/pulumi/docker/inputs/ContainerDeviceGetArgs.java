@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final ContainerDeviceGetArgs Empty = new ContainerDeviceGetArgs();
 
-    @InputImport(name="containerPath")
+    @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
     public Output<String> getContainerPath() {
         return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
-    @InputImport(name="hostPath", required=true)
+    @Import(name="hostPath", required=true)
       private final Output<String> hostPath;
 
     public Output<String> getHostPath() {
         return this.hostPath;
     }
 
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {

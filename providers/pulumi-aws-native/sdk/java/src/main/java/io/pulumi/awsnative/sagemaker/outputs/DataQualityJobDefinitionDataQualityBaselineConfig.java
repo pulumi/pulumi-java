@@ -5,23 +5,23 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionConstraintsResource;
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionStatisticsResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataQualityJobDefinitionDataQualityBaselineConfig {
     private final @Nullable String baseliningJobName;
     private final @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource;
     private final @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataQualityJobDefinitionDataQualityBaselineConfig(
-        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
-        @OutputCustomType.Parameter("constraintsResource") @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource,
-        @OutputCustomType.Parameter("statisticsResource") @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
+        @CustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @CustomType.Parameter("constraintsResource") @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource,
+        @CustomType.Parameter("statisticsResource") @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
         this.statisticsResource = statisticsResource;

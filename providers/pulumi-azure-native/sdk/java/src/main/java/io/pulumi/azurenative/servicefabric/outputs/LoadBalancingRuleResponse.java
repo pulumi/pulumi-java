@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancingRuleResponse {
     /**
      * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
@@ -38,13 +38,13 @@ public final class LoadBalancingRuleResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancingRuleResponse(
-        @OutputCustomType.Parameter("backendPort") Integer backendPort,
-        @OutputCustomType.Parameter("frontendPort") Integer frontendPort,
-        @OutputCustomType.Parameter("probeProtocol") String probeProtocol,
-        @OutputCustomType.Parameter("probeRequestPath") @Nullable String probeRequestPath,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("backendPort") Integer backendPort,
+        @CustomType.Parameter("frontendPort") Integer frontendPort,
+        @CustomType.Parameter("probeProtocol") String probeProtocol,
+        @CustomType.Parameter("probeRequestPath") @Nullable String probeRequestPath,
+        @CustomType.Parameter("protocol") String protocol) {
         this.backendPort = backendPort;
         this.frontendPort = frontendPort;
         this.probeProtocol = probeProtocol;

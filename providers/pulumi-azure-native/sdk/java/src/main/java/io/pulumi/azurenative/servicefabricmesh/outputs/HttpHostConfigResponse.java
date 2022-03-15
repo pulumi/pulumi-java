@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.HttpRouteConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpHostConfigResponse {
     /**
      * http hostname config name.
@@ -22,10 +22,10 @@ public final class HttpHostConfigResponse {
      */
     private final List<HttpRouteConfigResponse> routes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpHostConfigResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("routes") List<HttpRouteConfigResponse> routes) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("routes") List<HttpRouteConfigResponse> routes) {
         this.name = name;
         this.routes = routes;
     }

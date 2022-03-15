@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
      * The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
      * 
      */
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable String dataType;
 
     public Optional<String> getDataType() {
@@ -34,7 +34,7 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
      * The zero based index of the function parameter this input maps to.
      * 
      */
-    @InputImport(name="mapTo")
+    @Import(name="mapTo")
       private final @Nullable Integer mapTo;
 
     public Optional<Integer> getMapTo() {
@@ -45,7 +45,7 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
      * The name of the input column.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

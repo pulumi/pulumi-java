@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.DefaultConsistencyLevel;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * The default consistency level and configuration settings of the Cosmos DB account.
      * 
      */
-    @InputImport(name="defaultConsistencyLevel", required=true)
+    @Import(name="defaultConsistencyLevel", required=true)
       private final Output<DefaultConsistencyLevel> defaultConsistencyLevel;
 
     public Output<DefaultConsistencyLevel> getDefaultConsistencyLevel() {
@@ -35,7 +35,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
      * 
      */
-    @InputImport(name="maxIntervalInSeconds")
+    @Import(name="maxIntervalInSeconds")
       private final @Nullable Output<Integer> maxIntervalInSeconds;
 
     public Output<Integer> getMaxIntervalInSeconds() {
@@ -46,7 +46,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.
      * 
      */
-    @InputImport(name="maxStalenessPrefix")
+    @Import(name="maxStalenessPrefix")
       private final @Nullable Output<Double> maxStalenessPrefix;
 
     public Output<Double> getMaxStalenessPrefix() {

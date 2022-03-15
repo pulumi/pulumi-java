@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * The path-qualified name of the .proto file that contained the associated protobuf element. For example: `"google/protobuf/source_context.proto"`.
      * 
      */
-    @InputImport(name="fileName", required=true)
+    @Import(name="fileName", required=true)
       private final String fileName;
 
     public String getFileName() {

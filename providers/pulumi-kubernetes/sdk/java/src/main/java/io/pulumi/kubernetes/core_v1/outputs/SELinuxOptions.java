@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SELinuxOptions {
     /**
      * Level is SELinux level label that applies to the container.
@@ -32,12 +32,12 @@ public final class SELinuxOptions {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SELinuxOptions(
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("role") @Nullable String role,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("role") @Nullable String role,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.level = level;
         this.role = role;
         this.type = type;

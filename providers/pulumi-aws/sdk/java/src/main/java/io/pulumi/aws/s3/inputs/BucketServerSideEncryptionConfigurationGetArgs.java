@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
      * A single object for server-side encryption by default configuration. (documented below)
      * 
      */
-    @InputImport(name="rule", required=true)
+    @Import(name="rule", required=true)
       private final Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
 
     public Output<BucketServerSideEncryptionConfigurationRuleGetArgs> getRule() {

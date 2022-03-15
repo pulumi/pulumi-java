@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeAdditionalInstanceConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageRecipeResult {
     /**
      * Specify additional settings and launch scripts for your build instances.
@@ -23,10 +23,10 @@ public final class GetImageRecipeResult {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageRecipeResult(
-        @OutputCustomType.Parameter("additionalInstanceConfiguration") @Nullable ImageRecipeAdditionalInstanceConfiguration additionalInstanceConfiguration,
-        @OutputCustomType.Parameter("arn") @Nullable String arn) {
+        @CustomType.Parameter("additionalInstanceConfiguration") @Nullable ImageRecipeAdditionalInstanceConfiguration additionalInstanceConfiguration,
+        @CustomType.Parameter("arn") @Nullable String arn) {
         this.additionalInstanceConfiguration = additionalInstanceConfiguration;
         this.arn = arn;
     }

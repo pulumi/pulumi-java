@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * The default value of an optional parameter. If the parameter is required, the default value will be ignored.
      * 
      */
-    @InputImport(name="defaultValue", required=true)
+    @Import(name="defaultValue", required=true)
       private final Object defaultValue;
 
     public Object getDefaultValue() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * The human-readable name of the parameter, unique within the form.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * The entity type of the parameter. Format: `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or `projects//locations//agents//entityTypes/` for developer entity types.
      * 
      */
-    @InputImport(name="entityType", required=true)
+    @Import(name="entityType", required=true)
       private final String entityType;
 
     public String getEntityType() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * Defines fill behavior for the parameter.
      * 
      */
-    @InputImport(name="fillBehavior", required=true)
+    @Import(name="fillBehavior", required=true)
       private final GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior;
 
     public GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse getFillBehavior() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * Indicates whether the parameter represents a list of values.
      * 
      */
-    @InputImport(name="isList", required=true)
+    @Import(name="isList", required=true)
       private final Boolean isList;
 
     public Boolean getIsList() {
@@ -78,7 +78,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
      */
-    @InputImport(name="redact", required=true)
+    @Import(name="redact", required=true)
       private final Boolean redact;
 
     public Boolean getRedact() {
@@ -89,7 +89,7 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse extends io.pul
      * Indicates whether the parameter is required. Optional parameters will not trigger prompts; however, they are filled if the user specifies them. Required parameters must be filled before form filling concludes.
      * 
      */
-    @InputImport(name="required", required=true)
+    @Import(name="required", required=true)
       private final Boolean required;
 
     public Boolean getRequired() {

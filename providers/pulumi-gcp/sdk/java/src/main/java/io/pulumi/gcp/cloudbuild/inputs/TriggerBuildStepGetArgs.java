@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildStepVolumeGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * remainder will be used as arguments.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -43,7 +43,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * for the step's execution.
      * 
      */
-    @InputImport(name="dir")
+    @Import(name="dir")
       private final @Nullable Output<String> dir;
 
     public Output<String> getDir() {
@@ -56,7 +56,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * If unset, the image's default entrypoint is used
      * 
      */
-    @InputImport(name="entrypoint")
+    @Import(name="entrypoint")
       private final @Nullable Output<String> entrypoint;
 
     public Output<String> getEntrypoint() {
@@ -70,7 +70,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
      */
-    @InputImport(name="envs")
+    @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
     public Output<List<String>> getEnvs() {
@@ -82,7 +82,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * reference this build step as a dependency.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -95,7 +95,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * Each named volume must be used by at least two build steps.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -108,7 +108,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * will be available to all build steps in this build.
      * 
      */
-    @InputImport(name="secretEnvs")
+    @Import(name="secretEnvs")
       private final @Nullable Output<List<String>> secretEnvs;
 
     public Output<List<String>> getSecretEnvs() {
@@ -122,7 +122,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * completes or the build itself times out.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
@@ -135,7 +135,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timing")
+    @Import(name="timing")
       private final @Nullable Output<String> timing;
 
     public Output<String> getTiming() {
@@ -152,7 +152,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes;
 
     public Output<List<TriggerBuildStepVolumeGetArgs>> getVolumes() {
@@ -167,7 +167,7 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
      * have completed successfully.
      * 
      */
-    @InputImport(name="waitFors")
+    @Import(name="waitFors")
       private final @Nullable Output<List<String>> waitFors;
 
     public Output<List<String>> getWaitFors() {

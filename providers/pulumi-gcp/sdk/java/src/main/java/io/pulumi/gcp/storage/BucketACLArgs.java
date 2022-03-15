@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket it applies to.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -30,7 +30,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * Configure this ACL to be the default ACL.
      * 
      */
-    @InputImport(name="defaultAcl")
+    @Import(name="defaultAcl")
       private final @Nullable Output<String> defaultAcl;
 
     public Output<String> getDefaultAcl() {
@@ -41,7 +41,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
-    @InputImport(name="predefinedAcl")
+    @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
     public Output<String> getPredefinedAcl() {
@@ -52,7 +52,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefined_acl` is not.
      * 
      */
-    @InputImport(name="roleEntities")
+    @Import(name="roleEntities")
       private final @Nullable Output<List<String>> roleEntities;
 
     public Output<List<String>> getRoleEntities() {

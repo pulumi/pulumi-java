@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
      * ARN of the cell
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
      * Unique name describing the cell.
      * 
      */
-    @InputImport(name="cellName")
+    @Import(name="cellName")
       private final @Nullable Output<String> cellName;
 
     public Output<String> getCellName() {
@@ -42,7 +42,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
      * List of cell arns to add as nested fault domains within this cell.
      * 
      */
-    @InputImport(name="cells")
+    @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
     public Output<List<String>> getCells() {
@@ -53,7 +53,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
      * List of readiness scopes (recovery groups or cells) that contain this cell.
      * 
      */
-    @InputImport(name="parentReadinessScopes")
+    @Import(name="parentReadinessScopes")
       private final @Nullable Output<List<String>> parentReadinessScopes;
 
     public Output<List<String>> getParentReadinessScopes() {
@@ -64,7 +64,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

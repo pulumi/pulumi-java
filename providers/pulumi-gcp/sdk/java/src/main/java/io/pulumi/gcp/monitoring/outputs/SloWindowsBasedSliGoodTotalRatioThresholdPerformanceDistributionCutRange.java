@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
     /**
      * max value for the range (inclusive). If not given,
@@ -26,10 +26,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      */
     private final @Nullable Double min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange(
-        @OutputCustomType.Parameter("max") @Nullable Double max,
-        @OutputCustomType.Parameter("min") @Nullable Double min) {
+        @CustomType.Parameter("max") @Nullable Double max,
+        @CustomType.Parameter("min") @Nullable Double min) {
         this.max = max;
         this.min = min;
     }

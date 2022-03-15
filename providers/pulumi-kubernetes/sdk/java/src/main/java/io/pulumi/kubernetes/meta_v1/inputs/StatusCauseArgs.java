@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      *   "items[0].name" - the field "name" on the first array entry in "items"
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
@@ -37,7 +37,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable description of the cause of the error.  This field may be presented as-is to a reader.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -48,7 +48,7 @@ public final class StatusCauseArgs extends io.pulumi.resources.ResourceArgs {
      * A machine-readable description of the cause of the error. If this value is empty there is no information available.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {

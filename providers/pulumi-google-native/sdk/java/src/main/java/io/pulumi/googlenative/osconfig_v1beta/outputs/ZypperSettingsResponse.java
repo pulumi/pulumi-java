@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ZypperSettingsResponse {
     /**
      * Install only patches with these categories. Common categories include security, recommended, and feature.
@@ -42,14 +42,14 @@ public final class ZypperSettingsResponse {
      */
     private final Boolean withUpdate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ZypperSettingsResponse(
-        @OutputCustomType.Parameter("categories") List<String> categories,
-        @OutputCustomType.Parameter("excludes") List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePatches") List<String> exclusivePatches,
-        @OutputCustomType.Parameter("severities") List<String> severities,
-        @OutputCustomType.Parameter("withOptional") Boolean withOptional,
-        @OutputCustomType.Parameter("withUpdate") Boolean withUpdate) {
+        @CustomType.Parameter("categories") List<String> categories,
+        @CustomType.Parameter("excludes") List<String> excludes,
+        @CustomType.Parameter("exclusivePatches") List<String> exclusivePatches,
+        @CustomType.Parameter("severities") List<String> severities,
+        @CustomType.Parameter("withOptional") Boolean withOptional,
+        @CustomType.Parameter("withUpdate") Boolean withUpdate) {
         this.categories = categories;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

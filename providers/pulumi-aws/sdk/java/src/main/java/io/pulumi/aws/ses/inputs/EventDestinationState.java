@@ -7,7 +7,7 @@ import io.pulumi.aws.ses.inputs.EventDestinationCloudwatchDestinationGetArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationGetArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationSnsDestinationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * The SES event destination ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * CloudWatch destination for the events
      * 
      */
-    @InputImport(name="cloudwatchDestinations")
+    @Import(name="cloudwatchDestinations")
       private final @Nullable Output<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations;
 
     public Output<List<EventDestinationCloudwatchDestinationGetArgs>> getCloudwatchDestinations() {
@@ -45,7 +45,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * The name of the configuration set
      * 
      */
-    @InputImport(name="configurationSetName")
+    @Import(name="configurationSetName")
       private final @Nullable Output<String> configurationSetName;
 
     public Output<String> getConfigurationSetName() {
@@ -56,7 +56,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * If true, the event destination will be enabled
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -67,7 +67,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * Send the events to a kinesis firehose destination
      * 
      */
-    @InputImport(name="kinesisDestination")
+    @Import(name="kinesisDestination")
       private final @Nullable Output<EventDestinationKinesisDestinationGetArgs> kinesisDestination;
 
     public Output<EventDestinationKinesisDestinationGetArgs> getKinesisDestination() {
@@ -78,7 +78,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
      * 
      */
-    @InputImport(name="matchingTypes")
+    @Import(name="matchingTypes")
       private final @Nullable Output<List<String>> matchingTypes;
 
     public Output<List<String>> getMatchingTypes() {
@@ -89,7 +89,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * The name of the event destination
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
      * Send the events to an SNS Topic destination
      * 
      */
-    @InputImport(name="snsDestination")
+    @Import(name="snsDestination")
       private final @Nullable Output<EventDestinationSnsDestinationGetArgs> snsDestination;
 
     public Output<EventDestinationSnsDestinationGetArgs> getSnsDestination() {

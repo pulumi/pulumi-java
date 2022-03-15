@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestackhci.outputs;
 
 import io.pulumi.azurenative.azurestackhci.outputs.PerNodeExtensionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExtensionResult {
     /**
      * Aggregate state of Arc Extensions across the nodes in this HCI cluster.
@@ -106,26 +106,26 @@ public final class GetExtensionResult {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExtensionResult(
-        @OutputCustomType.Parameter("aggregateState") String aggregateState,
-        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("perNodeExtensionDetails") List<PerNodeExtensionStateResponse> perNodeExtensionDetails,
-        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("settings") @Nullable Object settings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
+        @CustomType.Parameter("aggregateState") String aggregateState,
+        @CustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("createdByType") @Nullable String createdByType,
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("perNodeExtensionDetails") List<PerNodeExtensionStateResponse> perNodeExtensionDetails,
+        @CustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("settings") @Nullable Object settings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.aggregateState = aggregateState;
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.createdAt = createdAt;

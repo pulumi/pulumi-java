@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType;
 import io.pulumi.azurenative.sql.enums.JobTargetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The target database name.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -36,7 +36,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The target elastic pool name.
      * 
      */
-    @InputImport(name="elasticPoolName")
+    @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
 
     public Output<String> getElasticPoolName() {
@@ -47,7 +47,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the target is included or excluded from the group.
      * 
      */
-    @InputImport(name="membershipType")
+    @Import(name="membershipType")
       private final @Nullable Output<JobTargetGroupMembershipType> membershipType;
 
     public Output<JobTargetGroupMembershipType> getMembershipType() {
@@ -58,7 +58,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
      * 
      */
-    @InputImport(name="refreshCredential")
+    @Import(name="refreshCredential")
       private final @Nullable Output<String> refreshCredential;
 
     public Output<String> getRefreshCredential() {
@@ -69,7 +69,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The target server name.
      * 
      */
-    @InputImport(name="serverName")
+    @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -80,7 +80,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The target shard map.
      * 
      */
-    @InputImport(name="shardMapName")
+    @Import(name="shardMapName")
       private final @Nullable Output<String> shardMapName;
 
     public Output<String> getShardMapName() {
@@ -91,7 +91,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The target type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,JobTargetType>> type;
 
     public Output<Either<String,JobTargetType>> getType() {

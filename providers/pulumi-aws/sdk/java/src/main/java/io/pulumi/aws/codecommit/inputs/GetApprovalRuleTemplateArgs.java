@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codecommit.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApprovalRuleTemplateArgs extends io.pulumi.resources.Invok
      * The name for the approval rule template. This needs to be less than 100 characters.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

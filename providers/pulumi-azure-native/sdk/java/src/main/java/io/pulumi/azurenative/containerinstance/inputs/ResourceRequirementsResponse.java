@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.ResourceLimitsResponse;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequestsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * The resource limits of this container instance.
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable ResourceLimitsResponse limits;
 
     public Optional<ResourceLimitsResponse> getLimits() {
@@ -34,7 +34,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * The resource requests of this container instance.
      * 
      */
-    @InputImport(name="requests", required=true)
+    @Import(name="requests", required=true)
       private final ResourceRequestsResponse requests;
 
     public ResourceRequestsResponse getRequests() {

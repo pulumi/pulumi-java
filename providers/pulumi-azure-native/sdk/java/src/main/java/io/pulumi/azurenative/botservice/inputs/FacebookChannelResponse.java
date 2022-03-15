@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.FacebookChannelPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'FacebookChannel'.
      * 
      */
-    @InputImport(name="channelName", required=true)
+    @Import(name="channelName", required=true)
       private final String channelName;
 
     public String getChannelName() {
@@ -35,7 +35,7 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
      * Entity Tag of the resource
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable String etag;
 
     public Optional<String> getEtag() {
@@ -46,7 +46,7 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -57,7 +57,7 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
      * The set of properties specific to bot facebook channel
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable FacebookChannelPropertiesResponse properties;
 
     public Optional<FacebookChannelPropertiesResponse> getProperties() {
@@ -68,7 +68,7 @@ public final class FacebookChannelResponse extends io.pulumi.resources.InvokeArg
      * Provisioning state of the resource
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

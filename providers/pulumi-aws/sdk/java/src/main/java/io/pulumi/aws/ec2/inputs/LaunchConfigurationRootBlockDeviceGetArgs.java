@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,42 +16,42 @@ public final class LaunchConfigurationRootBlockDeviceGetArgs extends io.pulumi.r
 
     public static final LaunchConfigurationRootBlockDeviceGetArgs Empty = new LaunchConfigurationRootBlockDeviceGetArgs();
 
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
     }
 
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
         return this.encrypted == null ? Output.empty() : this.encrypted;
     }
 
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
         return this.iops == null ? Output.empty() : this.iops;
     }
 
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
         return this.throughput == null ? Output.empty() : this.throughput;
     }
 
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
         return this.volumeSize == null ? Output.empty() : this.volumeSize;
     }
 
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

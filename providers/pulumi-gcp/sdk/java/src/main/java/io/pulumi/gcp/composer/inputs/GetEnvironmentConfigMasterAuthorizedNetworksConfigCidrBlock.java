@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock e
 
     public static final GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock Empty = new GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock();
 
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
     public String getCidrBlock() {
         return this.cidrBlock;
     }
 
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {

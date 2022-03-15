@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.LabelDescriptorValueType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
      * A human-readable description for the label.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
      * The label key.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -45,7 +45,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
      * The type of data that can be assigned to the label.
      * 
      */
-    @InputImport(name="valueType")
+    @Import(name="valueType")
       private final @Nullable Output<LabelDescriptorValueType> valueType;
 
     public Output<LabelDescriptorValueType> getValueType() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.DynamicGroupMetadataResponse;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.EntityKeyResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * The time when the `Group` was created.
@@ -58,17 +58,17 @@ public final class GetGroupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
-        @OutputCustomType.Parameter("groupKey") EntityKeyResponse groupKey,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
+        @CustomType.Parameter("groupKey") EntityKeyResponse groupKey,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

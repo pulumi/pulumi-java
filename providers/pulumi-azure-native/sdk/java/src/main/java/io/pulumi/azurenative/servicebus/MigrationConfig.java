@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.servicebus.MigrationConfigArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * State in which Standard to Premium Migration is, possible values : Unknown, Reverting, Completing, Initiating, Syncing, Active
      * 
      */
-    @OutputExport(name="migrationState", type=String.class, parameters={})
+    @Export(name="migrationState", type=String.class, parameters={})
     private Output<String> migrationState;
 
     /**
@@ -49,7 +49,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * Number of entities pending to be replicated.
      * 
      */
-    @OutputExport(name="pendingReplicationOperationsCount", type=Double.class, parameters={})
+    @Export(name="pendingReplicationOperationsCount", type=Double.class, parameters={})
     private Output<Double> pendingReplicationOperationsCount;
 
     /**
@@ -77,7 +77,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * Name to access Standard Namespace after migration
      * 
      */
-    @OutputExport(name="postMigrationName", type=String.class, parameters={})
+    @Export(name="postMigrationName", type=String.class, parameters={})
     private Output<String> postMigrationName;
 
     /**
@@ -91,7 +91,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * Provisioning state of Migration Configuration
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * Existing premium Namespace ARM Id name which has no entities, will be used for migration
      * 
      */
-    @OutputExport(name="targetNamespace", type=String.class, parameters={})
+    @Export(name="targetNamespace", type=String.class, parameters={})
     private Output<String> targetNamespace;
 
     /**
@@ -119,7 +119,7 @@ public class MigrationConfig extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

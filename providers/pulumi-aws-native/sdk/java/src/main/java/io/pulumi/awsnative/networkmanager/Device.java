@@ -8,7 +8,7 @@ import io.pulumi.awsnative.networkmanager.DeviceArgs;
 import io.pulumi.awsnative.networkmanager.outputs.DeviceLocation;
 import io.pulumi.awsnative.networkmanager.outputs.DeviceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The description of the device.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the device.
      * 
      */
-    @OutputExport(name="deviceArn", type=String.class, parameters={})
+    @Export(name="deviceArn", type=String.class, parameters={})
     private Output<String> deviceArn;
 
     /**
@@ -52,7 +52,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The ID of the device.
      * 
      */
-    @OutputExport(name="deviceId", type=String.class, parameters={})
+    @Export(name="deviceId", type=String.class, parameters={})
     private Output<String> deviceId;
 
     /**
@@ -66,7 +66,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The ID of the global network.
      * 
      */
-    @OutputExport(name="globalNetworkId", type=String.class, parameters={})
+    @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
@@ -80,7 +80,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The site location.
      * 
      */
-    @OutputExport(name="location", type=DeviceLocation.class, parameters={})
+    @Export(name="location", type=DeviceLocation.class, parameters={})
     private Output</* @Nullable */ DeviceLocation> location;
 
     /**
@@ -94,7 +94,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The device model
      * 
      */
-    @OutputExport(name="model", type=String.class, parameters={})
+    @Export(name="model", type=String.class, parameters={})
     private Output</* @Nullable */ String> model;
 
     /**
@@ -108,7 +108,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The device serial number.
      * 
      */
-    @OutputExport(name="serialNumber", type=String.class, parameters={})
+    @Export(name="serialNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> serialNumber;
 
     /**
@@ -122,7 +122,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The site ID.
      * 
      */
-    @OutputExport(name="siteId", type=String.class, parameters={})
+    @Export(name="siteId", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteId;
 
     /**
@@ -136,7 +136,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The tags for the device.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DeviceTag.class})
+    @Export(name="tags", type=List.class, parameters={DeviceTag.class})
     private Output</* @Nullable */ List<DeviceTag>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The device type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -164,7 +164,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The device vendor.
      * 
      */
-    @OutputExport(name="vendor", type=String.class, parameters={})
+    @Export(name="vendor", type=String.class, parameters={})
     private Output</* @Nullable */ String> vendor;
 
     /**

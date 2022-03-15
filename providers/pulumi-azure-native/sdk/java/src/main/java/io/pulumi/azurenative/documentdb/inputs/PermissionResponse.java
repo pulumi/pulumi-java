@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
      * An array of data actions that are allowed.
      * 
      */
-    @InputImport(name="dataActions")
+    @Import(name="dataActions")
       private final @Nullable List<String> dataActions;
 
     public List<String> getDataActions() {
@@ -34,7 +34,7 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
      * An array of data actions that are denied.
      * 
      */
-    @InputImport(name="notDataActions")
+    @Import(name="notDataActions")
       private final @Nullable List<String> notDataActions;
 
     public List<String> getNotDataActions() {

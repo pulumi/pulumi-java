@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
      * The ARN of the policy you want to apply
      * 
      */
-    @InputImport(name="policyArn")
+    @Import(name="policyArn")
       private final @Nullable Output<String> policyArn;
 
     public Output<String> getPolicyArn() {
@@ -29,7 +29,7 @@ public final class RolePolicyAttachmentState extends io.pulumi.resources.Resourc
      * The name of the IAM role to which the policy should be applied
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

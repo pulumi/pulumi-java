@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class WebACLLabel extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLLabel Empty = new WebACLLabel();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

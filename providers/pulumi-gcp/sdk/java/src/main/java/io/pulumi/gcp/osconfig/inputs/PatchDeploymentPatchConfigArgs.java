@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigAptArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigGooArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepArgs;
@@ -26,7 +26,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="apt")
+    @Import(name="apt")
       private final @Nullable Output<PatchDeploymentPatchConfigAptArgs> apt;
 
     public Output<PatchDeploymentPatchConfigAptArgs> getApt() {
@@ -38,7 +38,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="goo")
+    @Import(name="goo")
       private final @Nullable Output<PatchDeploymentPatchConfigGooArgs> goo;
 
     public Output<PatchDeploymentPatchConfigGooArgs> getGoo() {
@@ -50,7 +50,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="postStep")
+    @Import(name="postStep")
       private final @Nullable Output<PatchDeploymentPatchConfigPostStepArgs> postStep;
 
     public Output<PatchDeploymentPatchConfigPostStepArgs> getPostStep() {
@@ -62,7 +62,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="preStep")
+    @Import(name="preStep")
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepArgs> preStep;
 
     public Output<PatchDeploymentPatchConfigPreStepArgs> getPreStep() {
@@ -74,7 +74,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
      * 
      */
-    @InputImport(name="rebootConfig")
+    @Import(name="rebootConfig")
       private final @Nullable Output<String> rebootConfig;
 
     public Output<String> getRebootConfig() {
@@ -86,7 +86,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="windowsUpdate")
+    @Import(name="windowsUpdate")
       private final @Nullable Output<PatchDeploymentPatchConfigWindowsUpdateArgs> windowsUpdate;
 
     public Output<PatchDeploymentPatchConfigWindowsUpdateArgs> getWindowsUpdate() {
@@ -98,7 +98,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="yum")
+    @Import(name="yum")
       private final @Nullable Output<PatchDeploymentPatchConfigYumArgs> yum;
 
     public Output<PatchDeploymentPatchConfigYumArgs> getYum() {
@@ -110,7 +110,7 @@ public final class PatchDeploymentPatchConfigArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="zypper")
+    @Import(name="zypper")
       private final @Nullable Output<PatchDeploymentPatchConfigZypperArgs> zypper;
 
     public Output<PatchDeploymentPatchConfigZypperArgs> getZypper() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.artifactregistry_v1beta2.outputs.MavenRepositoryConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryResult {
     /**
      * The time when the repository was created.
@@ -52,16 +52,16 @@ public final class GetRepositoryResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mavenConfig") MavenRepositoryConfigResponse mavenConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mavenConfig") MavenRepositoryConfigResponse mavenConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.format = format;

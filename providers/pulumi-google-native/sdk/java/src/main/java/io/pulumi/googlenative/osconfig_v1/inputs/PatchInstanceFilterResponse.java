@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.PatchInstanceFilterGroupLabelResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * Target all VM instances in the project. If true, no other criteria is permitted.
      * 
      */
-    @InputImport(name="all", required=true)
+    @Import(name="all", required=true)
       private final Boolean all;
 
     public Boolean getAll() {
@@ -34,7 +34,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
      * 
      */
-    @InputImport(name="groupLabels", required=true)
+    @Import(name="groupLabels", required=true)
       private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
 
     public List<PatchInstanceFilterGroupLabelResponse> getGroupLabels() {
@@ -45,7 +45,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group VMs when targeting configs, for example prefix="prod-".
      * 
      */
-    @InputImport(name="instanceNamePrefixes", required=true)
+    @Import(name="instanceNamePrefixes", required=true)
       private final List<String> instanceNamePrefixes;
 
     public List<String> getInstanceNamePrefixes() {
@@ -56,7 +56,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * Targets any of the VM instances specified. Instances are specified by their URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`, `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<String> instances;
 
     public List<String> getInstances() {
@@ -67,7 +67,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
      * 
      */
-    @InputImport(name="zones", required=true)
+    @Import(name="zones", required=true)
       private final List<String> zones;
 
     public List<String> getZones() {

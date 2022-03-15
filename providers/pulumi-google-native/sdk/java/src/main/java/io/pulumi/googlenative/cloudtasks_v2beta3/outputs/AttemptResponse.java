@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttemptResponse {
     /**
      * The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
@@ -31,12 +31,12 @@ public final class AttemptResponse {
      */
     private final String scheduleTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttemptResponse(
-        @OutputCustomType.Parameter("dispatchTime") String dispatchTime,
-        @OutputCustomType.Parameter("responseStatus") StatusResponse responseStatus,
-        @OutputCustomType.Parameter("responseTime") String responseTime,
-        @OutputCustomType.Parameter("scheduleTime") String scheduleTime) {
+        @CustomType.Parameter("dispatchTime") String dispatchTime,
+        @CustomType.Parameter("responseStatus") StatusResponse responseStatus,
+        @CustomType.Parameter("responseTime") String responseTime,
+        @CustomType.Parameter("scheduleTime") String scheduleTime) {
         this.dispatchTime = dispatchTime;
         this.responseStatus = responseStatus;
         this.responseTime = responseTime;

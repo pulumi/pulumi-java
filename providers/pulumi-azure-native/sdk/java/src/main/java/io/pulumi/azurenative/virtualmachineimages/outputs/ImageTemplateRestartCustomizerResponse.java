@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateRestartCustomizerResponse {
     /**
      * Friendly Name to provide context on what this customization step does
@@ -38,13 +38,13 @@ public final class ImageTemplateRestartCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateRestartCustomizerResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("restartCheckCommand") @Nullable String restartCheckCommand,
-        @OutputCustomType.Parameter("restartCommand") @Nullable String restartCommand,
-        @OutputCustomType.Parameter("restartTimeout") @Nullable String restartTimeout,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("restartCheckCommand") @Nullable String restartCheckCommand,
+        @CustomType.Parameter("restartCommand") @Nullable String restartCommand,
+        @CustomType.Parameter("restartTimeout") @Nullable String restartTimeout,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.restartCheckCommand = restartCheckCommand;
         this.restartCommand = restartCommand;

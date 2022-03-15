@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
      * The name of the express route circuit.
      * 
      */
-    @InputImport(name="circuitName", required=true)
+    @Import(name="circuitName", required=true)
       private final String circuitName;
 
     public String getCircuitName() {
@@ -27,7 +27,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
      * The name of the peering.
      * 
      */
-    @InputImport(name="peeringName", required=true)
+    @Import(name="peeringName", required=true)
       private final String peeringName;
 
     public String getPeeringName() {
@@ -38,7 +38,7 @@ public final class GetExpressRouteCircuitPeeringArgs extends io.pulumi.resources
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

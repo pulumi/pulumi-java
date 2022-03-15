@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecommendedActionErrorInfoResponse {
     /**
      * Gets the reason why the recommended action was put to error state. e.g., DatabaseHasQdsOff, IndexAlreadyExists
@@ -20,10 +20,10 @@ public final class RecommendedActionErrorInfoResponse {
      */
     private final String isRetryable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecommendedActionErrorInfoResponse(
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("isRetryable") String isRetryable) {
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("isRetryable") String isRetryable) {
         this.errorCode = errorCode;
         this.isRetryable = isRetryable;
     }

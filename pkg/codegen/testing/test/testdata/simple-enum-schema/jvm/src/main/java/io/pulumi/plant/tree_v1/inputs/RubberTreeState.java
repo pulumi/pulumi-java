@@ -5,7 +5,7 @@ package io.pulumi.plant.tree_v1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.plant.tree_v1.enums.Farm;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class RubberTreeState extends io.pulumi.resources.ResourceArgs {
 
     public static final RubberTreeState Empty = new RubberTreeState();
 
-    @InputImport(name="farm")
+    @Import(name="farm")
       private final @Nullable Output<Either<Farm,String>> farm;
 
     public Output<Either<Farm,String>> getFarm() {

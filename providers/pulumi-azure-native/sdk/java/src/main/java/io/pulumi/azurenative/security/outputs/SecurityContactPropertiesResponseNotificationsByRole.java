@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityContactPropertiesResponseNotificationsByRole {
     /**
      * Defines which RBAC roles will get email notifications from Azure Security Center. List of allowed RBAC roles:
@@ -23,10 +23,10 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityContactPropertiesResponseNotificationsByRole(
-        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("roles") @Nullable List<String> roles,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.roles = roles;
         this.state = state;
     }

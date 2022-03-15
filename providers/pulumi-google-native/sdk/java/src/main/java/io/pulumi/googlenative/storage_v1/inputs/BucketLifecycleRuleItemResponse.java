@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemActionResponse;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemConditionResponse;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
      * The action to take.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final BucketLifecycleRuleItemActionResponse action;
 
     public BucketLifecycleRuleItemActionResponse getAction() {
@@ -28,7 +28,7 @@ public final class BucketLifecycleRuleItemResponse extends io.pulumi.resources.I
      * The condition(s) under which the action will be taken.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final BucketLifecycleRuleItemConditionResponse condition;
 
     public BucketLifecycleRuleItemConditionResponse getCondition() {

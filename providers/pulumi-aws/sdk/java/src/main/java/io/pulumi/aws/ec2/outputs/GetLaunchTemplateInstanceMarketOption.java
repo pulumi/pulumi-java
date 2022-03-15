@@ -4,20 +4,20 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetLaunchTemplateInstanceMarketOptionSpotOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateInstanceMarketOption {
     private final String marketType;
     private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplateInstanceMarketOption(
-        @OutputCustomType.Parameter("marketType") String marketType,
-        @OutputCustomType.Parameter("spotOptions") List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
+        @CustomType.Parameter("marketType") String marketType,
+        @CustomType.Parameter("spotOptions") List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
         this.marketType = marketType;
         this.spotOptions = spotOptions;
     }

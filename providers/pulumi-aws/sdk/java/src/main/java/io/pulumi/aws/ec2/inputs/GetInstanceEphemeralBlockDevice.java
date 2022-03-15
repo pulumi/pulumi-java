@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetInstanceEphemeralBlockDevice extends io.pulumi.resources.I
      * The physical name of the device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -30,7 +30,7 @@ public final class GetInstanceEphemeralBlockDevice extends io.pulumi.resources.I
      * Whether the specified device included in the device mapping was suppressed or not (Boolean).
      * 
      */
-    @InputImport(name="noDevice")
+    @Import(name="noDevice")
       private final @Nullable Boolean noDevice;
 
     public Optional<Boolean> getNoDevice() {
@@ -41,7 +41,7 @@ public final class GetInstanceEphemeralBlockDevice extends io.pulumi.resources.I
      * The virtual device name.
      * 
      */
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable String virtualName;
 
     public Optional<String> getVirtualName() {

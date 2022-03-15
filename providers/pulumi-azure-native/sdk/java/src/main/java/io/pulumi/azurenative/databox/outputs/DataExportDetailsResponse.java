@@ -7,13 +7,13 @@ import io.pulumi.azurenative.databox.outputs.ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.StorageAccountDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataExportDetailsResponse {
     /**
      * Account details of the data to be transferred
@@ -31,11 +31,11 @@ public final class DataExportDetailsResponse {
      */
     private final TransferConfigurationResponse transferConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataExportDetailsResponse(
-        @OutputCustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
-        @OutputCustomType.Parameter("logCollectionLevel") @Nullable String logCollectionLevel,
-        @OutputCustomType.Parameter("transferConfiguration") TransferConfigurationResponse transferConfiguration) {
+        @CustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
+        @CustomType.Parameter("logCollectionLevel") @Nullable String logCollectionLevel,
+        @CustomType.Parameter("transferConfiguration") TransferConfigurationResponse transferConfiguration) {
         this.accountDetails = accountDetails;
         this.logCollectionLevel = logCollectionLevel;
         this.transferConfiguration = transferConfiguration;

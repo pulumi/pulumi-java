@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * An absolute path to the document to return in case of a 4XX error.
      * 
      */
-    @InputImport(name="errorDocument")
+    @Import(name="errorDocument")
       private final @Nullable Output<String> errorDocument;
 
     public Output<String> getErrorDocument() {
@@ -31,7 +31,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
      * 
      */
-    @InputImport(name="indexDocument")
+    @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
 
     public Output<String> getIndexDocument() {
@@ -42,7 +42,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
      */
-    @InputImport(name="redirectAllRequestsTo")
+    @Import(name="redirectAllRequestsTo")
       private final @Nullable Output<String> redirectAllRequestsTo;
 
     public Output<String> getRedirectAllRequestsTo() {
@@ -54,7 +54,7 @@ public final class BucketWebsiteGetArgs extends io.pulumi.resources.ResourceArgs
      * describing redirect behavior and when redirects are applied.
      * 
      */
-    @InputImport(name="routingRules")
+    @Import(name="routingRules")
       private final @Nullable Output<Either<String,List<String>>> routingRules;
 
     public Output<Either<String,List<String>>> getRoutingRules() {

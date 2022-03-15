@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<String> folder;
 
     public Output<String> getFolder() {
         return this.folder == null ? Output.empty() : this.folder;
     }
 
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

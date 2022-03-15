@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MethodResponse {
     /**
      * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
@@ -28,11 +28,11 @@ public final class MethodResponse {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MethodResponse(
-        @OutputCustomType.Parameter("responseModels") @Nullable Object responseModels,
-        @OutputCustomType.Parameter("responseParameters") @Nullable Object responseParameters,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("responseModels") @Nullable Object responseModels,
+        @CustomType.Parameter("responseParameters") @Nullable Object responseParameters,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.responseModels = responseModels;
         this.responseParameters = responseParameters;
         this.statusCode = statusCode;

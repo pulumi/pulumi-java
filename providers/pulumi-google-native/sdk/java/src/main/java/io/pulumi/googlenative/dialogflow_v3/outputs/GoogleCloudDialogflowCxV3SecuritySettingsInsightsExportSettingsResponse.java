@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse {
     /**
      * If enabled, we will automatically exports conversations to Insights and Insights runs its analyzers.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      */
     private final Boolean enableInsightsExport;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(@OutputCustomType.Parameter("enableInsightsExport") Boolean enableInsightsExport) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(@CustomType.Parameter("enableInsightsExport") Boolean enableInsightsExport) {
         this.enableInsightsExport = enableInsightsExport;
     }
 

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.inputs.SoaRecordArgs;
 import io.pulumi.azurenative.network.inputs.SrvRecordArgs;
 import io.pulumi.azurenative.network.inputs.TxtRecordArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of A records in the record set.
      * 
      */
-    @InputImport(name="aRecords")
+    @Import(name="aRecords")
       private final @Nullable Output<List<ARecordArgs>> aRecords;
 
     public Output<List<ARecordArgs>> getARecords() {
@@ -40,7 +40,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of AAAA records in the record set.
      * 
      */
-    @InputImport(name="aaaaRecords")
+    @Import(name="aaaaRecords")
       private final @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
 
     public Output<List<AaaaRecordArgs>> getAaaaRecords() {
@@ -51,7 +51,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The CNAME record in the record set.
      * 
      */
-    @InputImport(name="cnameRecord")
+    @Import(name="cnameRecord")
       private final @Nullable Output<CnameRecordArgs> cnameRecord;
 
     public Output<CnameRecordArgs> getCnameRecord() {
@@ -62,7 +62,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The metadata attached to the record set.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -73,7 +73,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of MX records in the record set.
      * 
      */
-    @InputImport(name="mxRecords")
+    @Import(name="mxRecords")
       private final @Nullable Output<List<MxRecordArgs>> mxRecords;
 
     public Output<List<MxRecordArgs>> getMxRecords() {
@@ -84,7 +84,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Private DNS zone (without a terminating dot).
      * 
      */
-    @InputImport(name="privateZoneName", required=true)
+    @Import(name="privateZoneName", required=true)
       private final Output<String> privateZoneName;
 
     public Output<String> getPrivateZoneName() {
@@ -95,7 +95,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of PTR records in the record set.
      * 
      */
-    @InputImport(name="ptrRecords")
+    @Import(name="ptrRecords")
       private final @Nullable Output<List<PtrRecordArgs>> ptrRecords;
 
     public Output<List<PtrRecordArgs>> getPtrRecords() {
@@ -106,7 +106,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The type of DNS record in this record set. Record sets of type SOA can be updated but not created (they are created when the Private DNS zone is created).
      * 
      */
-    @InputImport(name="recordType", required=true)
+    @Import(name="recordType", required=true)
       private final Output<String> recordType;
 
     public Output<String> getRecordType() {
@@ -117,7 +117,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the record set, relative to the name of the zone.
      * 
      */
-    @InputImport(name="relativeRecordSetName")
+    @Import(name="relativeRecordSetName")
       private final @Nullable Output<String> relativeRecordSetName;
 
     public Output<String> getRelativeRecordSetName() {
@@ -128,7 +128,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -139,7 +139,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The SOA record in the record set.
      * 
      */
-    @InputImport(name="soaRecord")
+    @Import(name="soaRecord")
       private final @Nullable Output<SoaRecordArgs> soaRecord;
 
     public Output<SoaRecordArgs> getSoaRecord() {
@@ -150,7 +150,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of SRV records in the record set.
      * 
      */
-    @InputImport(name="srvRecords")
+    @Import(name="srvRecords")
       private final @Nullable Output<List<SrvRecordArgs>> srvRecords;
 
     public Output<List<SrvRecordArgs>> getSrvRecords() {
@@ -161,7 +161,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The TTL (time-to-live) of the records in the record set.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<Double> ttl;
 
     public Output<Double> getTtl() {
@@ -172,7 +172,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of TXT records in the record set.
      * 
      */
-    @InputImport(name="txtRecords")
+    @Import(name="txtRecords")
       private final @Nullable Output<List<TxtRecordArgs>> txtRecords;
 
     public Output<List<TxtRecordArgs>> getTxtRecords() {

@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.CapacityReservationFleetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityReservationFleetTagSpecification {
     private final @Nullable String resourceType;
     private final @Nullable List<CapacityReservationFleetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityReservationFleetTagSpecification(
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("tags") @Nullable List<CapacityReservationFleetTag> tags) {
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("tags") @Nullable List<CapacityReservationFleetTag> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelArgs;
@@ -48,7 +48,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="basic", type=AccessLevelBasic.class, parameters={})
+    @Export(name="basic", type=AccessLevelBasic.class, parameters={})
     private Output</* @Nullable */ AccessLevelBasic> basic;
 
     /**
@@ -65,7 +65,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="custom", type=AccessLevelCustom.class, parameters={})
+    @Export(name="custom", type=AccessLevelCustom.class, parameters={})
     private Output</* @Nullable */ AccessLevelCustom> custom;
 
     /**
@@ -81,7 +81,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Description of the expression
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -97,7 +97,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -114,7 +114,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -129,7 +129,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Title for the expression, i.e. a short string describing its purpose.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

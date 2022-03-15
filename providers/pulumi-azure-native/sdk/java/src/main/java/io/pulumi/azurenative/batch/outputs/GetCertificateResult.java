@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.DeleteCertificateErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * This is only returned when the certificate provisioningState is 'Failed'.
@@ -66,21 +66,21 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("deleteCertificateError") DeleteCertificateErrorResponse deleteCertificateError,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("previousProvisioningState") String previousProvisioningState,
-        @OutputCustomType.Parameter("previousProvisioningStateTransitionTime") String previousProvisioningStateTransitionTime,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("provisioningStateTransitionTime") String provisioningStateTransitionTime,
-        @OutputCustomType.Parameter("publicData") String publicData,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
-        @OutputCustomType.Parameter("thumbprintAlgorithm") @Nullable String thumbprintAlgorithm,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deleteCertificateError") DeleteCertificateErrorResponse deleteCertificateError,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("previousProvisioningState") String previousProvisioningState,
+        @CustomType.Parameter("previousProvisioningStateTransitionTime") String previousProvisioningStateTransitionTime,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("provisioningStateTransitionTime") String provisioningStateTransitionTime,
+        @CustomType.Parameter("publicData") String publicData,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @CustomType.Parameter("thumbprintAlgorithm") @Nullable String thumbprintAlgorithm,
+        @CustomType.Parameter("type") String type) {
         this.deleteCertificateError = deleteCertificateError;
         this.etag = etag;
         this.format = format;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X12FramingSettingsResponse {
     /**
      * The X12 character set.
@@ -47,15 +47,15 @@ public final class X12FramingSettingsResponse {
      */
     private final String segmentTerminatorSuffix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12FramingSettingsResponse(
-        @OutputCustomType.Parameter("characterSet") String characterSet,
-        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
-        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
-        @OutputCustomType.Parameter("replaceCharacter") Integer replaceCharacter,
-        @OutputCustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
-        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
-        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix) {
+        @CustomType.Parameter("characterSet") String characterSet,
+        @CustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @CustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @CustomType.Parameter("replaceCharacter") Integer replaceCharacter,
+        @CustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
+        @CustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @CustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix) {
         this.characterSet = characterSet;
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;

@@ -7,12 +7,12 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionAllowProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionBlockProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionCaptchaProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleActionCountProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleAction {
     /**
      * Allow traffic towards application.
@@ -35,12 +35,12 @@ public final class RuleGroupRuleAction {
      */
     private final @Nullable RuleGroupRuleActionCountProperties count;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleAction(
-        @OutputCustomType.Parameter("allow") @Nullable RuleGroupRuleActionAllowProperties allow,
-        @OutputCustomType.Parameter("block") @Nullable RuleGroupRuleActionBlockProperties block,
-        @OutputCustomType.Parameter("captcha") @Nullable RuleGroupRuleActionCaptchaProperties captcha,
-        @OutputCustomType.Parameter("count") @Nullable RuleGroupRuleActionCountProperties count) {
+        @CustomType.Parameter("allow") @Nullable RuleGroupRuleActionAllowProperties allow,
+        @CustomType.Parameter("block") @Nullable RuleGroupRuleActionBlockProperties block,
+        @CustomType.Parameter("captcha") @Nullable RuleGroupRuleActionCaptchaProperties captcha,
+        @CustomType.Parameter("count") @Nullable RuleGroupRuleActionCountProperties count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIntegrationRuntimeErrorResponse {
     /**
      * Error code.
@@ -31,12 +31,12 @@ public final class ManagedIntegrationRuntimeErrorResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIntegrationRuntimeErrorResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("parameters") List<String> parameters,
-        @OutputCustomType.Parameter("time") String time) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("parameters") List<String> parameters,
+        @CustomType.Parameter("time") String time) {
         this.code = code;
         this.message = message;
         this.parameters = parameters;

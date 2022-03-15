@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * A human-readable description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * false.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -44,7 +44,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * write a filter.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -55,7 +55,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * The name of the logging exclusion.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class OrganizationExclusionState extends io.pulumi.resources.Resour
      * The organization to create the exclusion in.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {

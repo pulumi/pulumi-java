@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DynamicGroupStatusResponse {
     /**
      * Status of the dynamic group.
@@ -20,10 +20,10 @@ public final class DynamicGroupStatusResponse {
      */
     private final String statusTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DynamicGroupStatusResponse(
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusTime") String statusTime) {
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusTime") String statusTime) {
         this.status = status;
         this.statusTime = statusTime;
     }

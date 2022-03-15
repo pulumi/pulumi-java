@@ -5,7 +5,7 @@ package io.pulumi.aws.lightsail;
 
 import io.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
      * Name of the Lightsail Instance.
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -30,7 +30,7 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
      * Configuration block with port information. AWS closes all currently open ports that are not included in the `port_info`. Detailed below.
      * 
      */
-    @InputImport(name="portInfos", required=true)
+    @Import(name="portInfos", required=true)
       private final Output<List<InstancePublicPortsPortInfoArgs>> portInfos;
 
     public Output<List<InstancePublicPortsPortInfoArgs>> getPortInfos() {

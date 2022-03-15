@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AzureSqlProtectedItemExtendedInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Type of backup management for the backed up item.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -35,7 +35,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Name of the backup set the backup item belongs to
      * 
      */
-    @InputImport(name="backupSetName")
+    @Import(name="backupSetName")
       private final @Nullable String backupSetName;
 
     public Optional<String> getBackupSetName() {
@@ -46,7 +46,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Unique name of container
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
@@ -57,7 +57,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable String createMode;
 
     public Optional<String> getCreateMode() {
@@ -68,7 +68,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Time for deferred deletion in UTC
      * 
      */
-    @InputImport(name="deferredDeleteTimeInUTC")
+    @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable String deferredDeleteTimeInUTC;
 
     public Optional<String> getDeferredDeleteTimeInUTC() {
@@ -79,7 +79,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
      */
-    @InputImport(name="deferredDeleteTimeRemaining")
+    @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable String deferredDeleteTimeRemaining;
 
     public Optional<String> getDeferredDeleteTimeRemaining() {
@@ -90,7 +90,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Additional information for this backup item.
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable AzureSqlProtectedItemExtendedInfoResponse extendedInfo;
 
     public Optional<AzureSqlProtectedItemExtendedInfoResponse> getExtendedInfo() {
@@ -101,7 +101,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
      */
-    @InputImport(name="isDeferredDeleteScheduleUpcoming")
+    @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
     public Optional<Boolean> getIsDeferredDeleteScheduleUpcoming() {
@@ -112,7 +112,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
      */
-    @InputImport(name="isRehydrate")
+    @Import(name="isRehydrate")
       private final @Nullable Boolean isRehydrate;
 
     public Optional<Boolean> getIsRehydrate() {
@@ -123,7 +123,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
      */
-    @InputImport(name="isScheduledForDeferredDelete")
+    @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Boolean isScheduledForDeferredDelete;
 
     public Optional<Boolean> getIsScheduledForDeferredDelete() {
@@ -134,7 +134,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
      */
-    @InputImport(name="lastRecoveryPoint")
+    @Import(name="lastRecoveryPoint")
       private final @Nullable String lastRecoveryPoint;
 
     public Optional<String> getLastRecoveryPoint() {
@@ -145,7 +145,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * ID of the backup policy with which this item is backed up.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
@@ -156,7 +156,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.
      * 
      */
-    @InputImport(name="protectedItemDataId")
+    @Import(name="protectedItemDataId")
       private final @Nullable String protectedItemDataId;
 
     public Optional<String> getProtectedItemDataId() {
@@ -168,7 +168,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Expected value is 'Microsoft.Sql/servers/databases'.
      * 
      */
-    @InputImport(name="protectedItemType", required=true)
+    @Import(name="protectedItemType", required=true)
       private final String protectedItemType;
 
     public String getProtectedItemType() {
@@ -179,7 +179,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Backup state of the backed up item.
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable String protectionState;
 
     public Optional<String> getProtectionState() {
@@ -190,7 +190,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * ARM ID of the resource to be backed up.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
@@ -201,7 +201,7 @@ public final class AzureSqlProtectedItemResponse extends io.pulumi.resources.Inv
      * Type of workload this item represents.
      * 
      */
-    @InputImport(name="workloadType")
+    @Import(name="workloadType")
       private final @Nullable String workloadType;
 
     public Optional<String> getWorkloadType() {

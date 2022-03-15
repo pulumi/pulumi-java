@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.enums.MaintenanceWindowDayOfWeek;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * The day of week, when the window starts.
      * 
      */
-    @InputImport(name="dayOfWeek")
+    @Import(name="dayOfWeek")
       private final @Nullable Output<MaintenanceWindowDayOfWeek> dayOfWeek;
 
     public Output<MaintenanceWindowDayOfWeek> getDayOfWeek() {
@@ -34,7 +34,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * The hour of day (0-23) when the window starts.
      * 
      */
-    @InputImport(name="hourOfDay")
+    @Import(name="hourOfDay")
       private final @Nullable Output<Integer> hourOfDay;
 
     public Output<Integer> getHourOfDay() {

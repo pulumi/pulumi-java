@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyGroupPlacementPolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicy;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyResult {
     /**
      * Description of this Resource Policy.
@@ -37,17 +37,17 @@ public final class GetResourcePolicyResult {
     private final String selfLink;
     private final List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicyResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("groupPlacementPolicies") List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceSchedulePolicies") List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("snapshotSchedulePolicies") List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("groupPlacementPolicies") List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceSchedulePolicies") List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("snapshotSchedulePolicies") List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
         this.description = description;
         this.groupPlacementPolicies = groupPlacementPolicies;
         this.id = id;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
      * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
      * 
      */
-    @InputImport(name="groupIndexes", required=true)
+    @Import(name="groupIndexes", required=true)
       private final List<Integer> groupIndexes;
 
     public List<Integer> getGroupIndexes() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
      * Pattern defining the regular expression. Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
      * 
      */
-    @InputImport(name="pattern", required=true)
+    @Import(name="pattern", required=true)
       private final String pattern;
 
     public String getPattern() {

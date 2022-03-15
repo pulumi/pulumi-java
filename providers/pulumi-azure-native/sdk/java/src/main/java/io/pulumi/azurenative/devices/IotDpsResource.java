@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devices.outputs.IotDpsPropertiesDescriptionResponse
 import io.pulumi.azurenative.devices.outputs.IotDpsSkuInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * Service specific properties for a provisioning service
      * 
      */
-    @OutputExport(name="properties", type=IotDpsPropertiesDescriptionResponse.class, parameters={})
+    @Export(name="properties", type=IotDpsPropertiesDescriptionResponse.class, parameters={})
     private Output<IotDpsPropertiesDescriptionResponse> properties;
 
     /**
@@ -93,7 +93,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * Sku info for a provisioning Service.
      * 
      */
-    @OutputExport(name="sku", type=IotDpsSkuInfoResponse.class, parameters={})
+    @Export(name="sku", type=IotDpsSkuInfoResponse.class, parameters={})
     private Output<IotDpsSkuInfoResponse> sku;
 
     /**
@@ -107,7 +107,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class IotDpsResource extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

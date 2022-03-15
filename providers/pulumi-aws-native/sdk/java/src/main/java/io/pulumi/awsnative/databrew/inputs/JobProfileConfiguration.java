@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.JobColumnSelector;
 import io.pulumi.awsnative.databrew.inputs.JobColumnStatisticsConfiguration;
 import io.pulumi.awsnative.databrew.inputs.JobEntityDetectorConfiguration;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,28 +18,28 @@ public final class JobProfileConfiguration extends io.pulumi.resources.InvokeArg
 
     public static final JobProfileConfiguration Empty = new JobProfileConfiguration();
 
-    @InputImport(name="columnStatisticsConfigurations")
+    @Import(name="columnStatisticsConfigurations")
       private final @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations;
 
     public List<JobColumnStatisticsConfiguration> getColumnStatisticsConfigurations() {
         return this.columnStatisticsConfigurations == null ? List.of() : this.columnStatisticsConfigurations;
     }
 
-    @InputImport(name="datasetStatisticsConfiguration")
+    @Import(name="datasetStatisticsConfiguration")
       private final @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration;
 
     public Optional<JobStatisticsConfiguration> getDatasetStatisticsConfiguration() {
         return this.datasetStatisticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.datasetStatisticsConfiguration);
     }
 
-    @InputImport(name="entityDetectorConfiguration")
+    @Import(name="entityDetectorConfiguration")
       private final @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
 
     public Optional<JobEntityDetectorConfiguration> getEntityDetectorConfiguration() {
         return this.entityDetectorConfiguration == null ? Optional.empty() : Optional.ofNullable(this.entityDetectorConfiguration);
     }
 
-    @InputImport(name="profileColumns")
+    @Import(name="profileColumns")
       private final @Nullable List<JobColumnSelector> profileColumns;
 
     public List<JobColumnSelector> getProfileColumns() {

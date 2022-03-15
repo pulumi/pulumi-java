@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerSecurityAlertPolicyResult {
     /**
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
@@ -65,18 +65,18 @@ public final class GetServerSecurityAlertPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerSecurityAlertPolicyResult(
-        @OutputCustomType.Parameter("disabledAlerts") @Nullable List<String> disabledAlerts,
-        @OutputCustomType.Parameter("emailAccountAdmins") @Nullable Boolean emailAccountAdmins,
-        @OutputCustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageAccountAccessKey") @Nullable String storageAccountAccessKey,
-        @OutputCustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("disabledAlerts") @Nullable List<String> disabledAlerts,
+        @CustomType.Parameter("emailAccountAdmins") @Nullable Boolean emailAccountAdmins,
+        @CustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageAccountAccessKey") @Nullable String storageAccountAccessKey,
+        @CustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
+        @CustomType.Parameter("type") String type) {
         this.disabledAlerts = disabledAlerts;
         this.emailAccountAdmins = emailAccountAdmins;
         this.emailAddresses = emailAddresses;

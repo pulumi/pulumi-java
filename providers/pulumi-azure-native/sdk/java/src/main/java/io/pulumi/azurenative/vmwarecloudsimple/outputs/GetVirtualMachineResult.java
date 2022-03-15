@@ -8,7 +8,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.outputs.ResourcePoolResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskControllerResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualNicResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineResult {
     /**
      * The amount of memory
@@ -156,35 +156,35 @@ public final class GetVirtualMachineResult {
      */
     private final String vmwaretools;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineResult(
-        @OutputCustomType.Parameter("amountOfRam") Integer amountOfRam,
-        @OutputCustomType.Parameter("controllers") List<VirtualDiskControllerResponse> controllers,
-        @OutputCustomType.Parameter("customization") @Nullable GuestOSCustomizationResponse customization,
-        @OutputCustomType.Parameter("disks") @Nullable List<VirtualDiskResponse> disks,
-        @OutputCustomType.Parameter("dnsname") String dnsname,
-        @OutputCustomType.Parameter("exposeToGuestVM") @Nullable Boolean exposeToGuestVM,
-        @OutputCustomType.Parameter("folder") String folder,
-        @OutputCustomType.Parameter("guestOS") String guestOS,
-        @OutputCustomType.Parameter("guestOSType") String guestOSType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nics") @Nullable List<VirtualNicResponse> nics,
-        @OutputCustomType.Parameter("numberOfCores") Integer numberOfCores,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIP") String publicIP,
-        @OutputCustomType.Parameter("resourcePool") @Nullable ResourcePoolResponse resourcePool,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("templateId") @Nullable String templateId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("username") @Nullable String username,
-        @OutputCustomType.Parameter("vSphereNetworks") @Nullable List<String> vSphereNetworks,
-        @OutputCustomType.Parameter("vmId") String vmId,
-        @OutputCustomType.Parameter("vmwaretools") String vmwaretools) {
+        @CustomType.Parameter("amountOfRam") Integer amountOfRam,
+        @CustomType.Parameter("controllers") List<VirtualDiskControllerResponse> controllers,
+        @CustomType.Parameter("customization") @Nullable GuestOSCustomizationResponse customization,
+        @CustomType.Parameter("disks") @Nullable List<VirtualDiskResponse> disks,
+        @CustomType.Parameter("dnsname") String dnsname,
+        @CustomType.Parameter("exposeToGuestVM") @Nullable Boolean exposeToGuestVM,
+        @CustomType.Parameter("folder") String folder,
+        @CustomType.Parameter("guestOS") String guestOS,
+        @CustomType.Parameter("guestOSType") String guestOSType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nics") @Nullable List<VirtualNicResponse> nics,
+        @CustomType.Parameter("numberOfCores") Integer numberOfCores,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("privateCloudId") String privateCloudId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIP") String publicIP,
+        @CustomType.Parameter("resourcePool") @Nullable ResourcePoolResponse resourcePool,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("templateId") @Nullable String templateId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("username") @Nullable String username,
+        @CustomType.Parameter("vSphereNetworks") @Nullable List<String> vSphereNetworks,
+        @CustomType.Parameter("vmId") String vmId,
+        @CustomType.Parameter("vmwaretools") String vmwaretools) {
         this.amountOfRam = amountOfRam;
         this.controllers = controllers;
         this.customization = customization;

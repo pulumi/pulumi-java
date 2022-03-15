@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketTieringAccessTier;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketTiering {
     /**
      * S3 Intelligent-Tiering access tier. See Storage class for automatically optimizing frequently and infrequently accessed objects for a list of access tiers in the S3 Intelligent-Tiering storage class.
@@ -21,10 +21,10 @@ public final class BucketTiering {
      */
     private final Integer days;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketTiering(
-        @OutputCustomType.Parameter("accessTier") BucketTieringAccessTier accessTier,
-        @OutputCustomType.Parameter("days") Integer days) {
+        @CustomType.Parameter("accessTier") BucketTieringAccessTier accessTier,
+        @CustomType.Parameter("days") Integer days) {
         this.accessTier = accessTier;
         this.days = days;
     }

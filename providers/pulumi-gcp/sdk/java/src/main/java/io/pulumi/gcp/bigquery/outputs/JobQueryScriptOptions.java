@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobQueryScriptOptions {
     /**
      * Determines which statement in the script represents the "key result",
@@ -29,11 +29,11 @@ public final class JobQueryScriptOptions {
      */
     private final @Nullable String statementTimeoutMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobQueryScriptOptions(
-        @OutputCustomType.Parameter("keyResultStatement") @Nullable String keyResultStatement,
-        @OutputCustomType.Parameter("statementByteBudget") @Nullable String statementByteBudget,
-        @OutputCustomType.Parameter("statementTimeoutMs") @Nullable String statementTimeoutMs) {
+        @CustomType.Parameter("keyResultStatement") @Nullable String keyResultStatement,
+        @CustomType.Parameter("statementByteBudget") @Nullable String statementByteBudget,
+        @CustomType.Parameter("statementTimeoutMs") @Nullable String statementTimeoutMs) {
         this.keyResultStatement = keyResultStatement;
         this.statementByteBudget = statementByteBudget;
         this.statementTimeoutMs = statementTimeoutMs;

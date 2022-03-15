@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDisasterRecoveryConfigurationResult {
     /**
      * Whether or not failover can be done automatically.
@@ -65,19 +65,19 @@ public final class GetDisasterRecoveryConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDisasterRecoveryConfigurationResult(
-        @OutputCustomType.Parameter("autoFailover") String autoFailover,
-        @OutputCustomType.Parameter("failoverPolicy") String failoverPolicy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("logicalServerName") String logicalServerName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnerLogicalServerName") String partnerLogicalServerName,
-        @OutputCustomType.Parameter("partnerServerId") String partnerServerId,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoFailover") String autoFailover,
+        @CustomType.Parameter("failoverPolicy") String failoverPolicy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("logicalServerName") String logicalServerName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnerLogicalServerName") String partnerLogicalServerName,
+        @CustomType.Parameter("partnerServerId") String partnerServerId,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.autoFailover = autoFailover;
         this.failoverPolicy = failoverPolicy;
         this.id = id;

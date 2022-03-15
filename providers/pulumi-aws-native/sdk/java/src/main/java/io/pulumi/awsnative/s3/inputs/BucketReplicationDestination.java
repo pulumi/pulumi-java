@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.BucketAccessControlTranslation;
 import io.pulumi.awsnative.s3.inputs.BucketEncryptionConfiguration;
 import io.pulumi.awsnative.s3.inputs.BucketMetrics;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTime;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,42 +23,42 @@ public final class BucketReplicationDestination extends io.pulumi.resources.Invo
 
     public static final BucketReplicationDestination Empty = new BucketReplicationDestination();
 
-    @InputImport(name="accessControlTranslation")
+    @Import(name="accessControlTranslation")
       private final @Nullable BucketAccessControlTranslation accessControlTranslation;
 
     public Optional<BucketAccessControlTranslation> getAccessControlTranslation() {
         return this.accessControlTranslation == null ? Optional.empty() : Optional.ofNullable(this.accessControlTranslation);
     }
 
-    @InputImport(name="account")
+    @Import(name="account")
       private final @Nullable String account;
 
     public Optional<String> getAccount() {
         return this.account == null ? Optional.empty() : Optional.ofNullable(this.account);
     }
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable BucketEncryptionConfiguration encryptionConfiguration;
 
     public Optional<BucketEncryptionConfiguration> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable BucketMetrics metrics;
 
     public Optional<BucketMetrics> getMetrics() {
         return this.metrics == null ? Optional.empty() : Optional.ofNullable(this.metrics);
     }
 
-    @InputImport(name="replicationTime")
+    @Import(name="replicationTime")
       private final @Nullable BucketReplicationTime replicationTime;
 
     public Optional<BucketReplicationTime> getReplicationTime() {
@@ -69,7 +69,7 @@ public final class BucketReplicationDestination extends io.pulumi.resources.Invo
      * The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable BucketReplicationDestinationStorageClass storageClass;
 
     public Optional<BucketReplicationDestinationStorageClass> getStorageClass() {

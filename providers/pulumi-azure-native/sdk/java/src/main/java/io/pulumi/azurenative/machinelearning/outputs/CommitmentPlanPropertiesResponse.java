@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.PlanQuantityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CommitmentPlanPropertiesResponse {
     /**
      * Indicates whether usage beyond the commitment plan's included quantities will be charged.
@@ -64,18 +64,18 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final Boolean suspendPlanOnOverage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommitmentPlanPropertiesResponse(
-        @OutputCustomType.Parameter("chargeForOverage") Boolean chargeForOverage,
-        @OutputCustomType.Parameter("chargeForPlan") Boolean chargeForPlan,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("includedQuantities") Map<String,PlanQuantityResponse> includedQuantities,
-        @OutputCustomType.Parameter("maxAssociationLimit") Integer maxAssociationLimit,
-        @OutputCustomType.Parameter("maxCapacityLimit") Integer maxCapacityLimit,
-        @OutputCustomType.Parameter("minCapacityLimit") Integer minCapacityLimit,
-        @OutputCustomType.Parameter("planMeter") String planMeter,
-        @OutputCustomType.Parameter("refillFrequencyInDays") Integer refillFrequencyInDays,
-        @OutputCustomType.Parameter("suspendPlanOnOverage") Boolean suspendPlanOnOverage) {
+        @CustomType.Parameter("chargeForOverage") Boolean chargeForOverage,
+        @CustomType.Parameter("chargeForPlan") Boolean chargeForPlan,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("includedQuantities") Map<String,PlanQuantityResponse> includedQuantities,
+        @CustomType.Parameter("maxAssociationLimit") Integer maxAssociationLimit,
+        @CustomType.Parameter("maxCapacityLimit") Integer maxCapacityLimit,
+        @CustomType.Parameter("minCapacityLimit") Integer minCapacityLimit,
+        @CustomType.Parameter("planMeter") String planMeter,
+        @CustomType.Parameter("refillFrequencyInDays") Integer refillFrequencyInDays,
+        @CustomType.Parameter("suspendPlanOnOverage") Boolean suspendPlanOnOverage) {
         this.chargeForOverage = chargeForOverage;
         this.chargeForPlan = chargeForPlan;
         this.creationDate = creationDate;

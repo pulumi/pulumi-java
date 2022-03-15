@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<Object> body;
 
     public Output<Object> getBody() {
@@ -41,7 +41,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -52,7 +52,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final Output<Object> functionName;
 
     public Output<Object> getFunctionName() {
@@ -74,7 +74,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Represents the headers that will be sent to the request. For example, to set the language and type on a request: "headers" : { "Accept-Language": "en-us", "Content-Type": "application/json" }. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Object> headers;
 
     public Output<Object> getHeaders() {
@@ -85,7 +85,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -96,7 +96,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Rest API method for target endpoint.
      * 
      */
-    @InputImport(name="method", required=true)
+    @Import(name="method", required=true)
       private final Output<Either<String,AzureFunctionActivityMethod>> method;
 
     public Output<Either<String,AzureFunctionActivityMethod>> getMethod() {
@@ -107,7 +107,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -118,7 +118,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -130,7 +130,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Expected value is 'AzureFunctionActivity'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -141,7 +141,7 @@ public final class AzureFunctionActivityArgs extends io.pulumi.resources.Resourc
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

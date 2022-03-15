@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse extends io.pulum
      * Value to replace it with.
      * 
      */
-    @InputImport(name="newValue", required=true)
+    @Import(name="newValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse newValue;
 
     public GooglePrivacyDlpV2ValueResponse getNewValue() {

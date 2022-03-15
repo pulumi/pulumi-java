@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransitGatewayConnectOptions {
     /**
      * The tunnel protocol.
@@ -17,8 +17,8 @@ public final class TransitGatewayConnectOptions {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
-    private TransitGatewayConnectOptions(@OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+    @CustomType.Constructor
+    private TransitGatewayConnectOptions(@CustomType.Parameter("protocol") @Nullable String protocol) {
         this.protocol = protocol;
     }
 

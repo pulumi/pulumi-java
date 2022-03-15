@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetBitbucketServerConfigArgs extends io.pulumi.resources.Invo
 
     public static final GetBitbucketServerConfigArgs Empty = new GetBitbucketServerConfigArgs();
 
-    @InputImport(name="bitbucketServerConfigId", required=true)
+    @Import(name="bitbucketServerConfigId", required=true)
       private final String bitbucketServerConfigId;
 
     public String getBitbucketServerConfigId() {
         return this.bitbucketServerConfigId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

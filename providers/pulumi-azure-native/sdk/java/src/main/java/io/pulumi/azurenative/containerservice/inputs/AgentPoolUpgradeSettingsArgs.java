@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AgentPoolUpgradeSettingsArgs extends io.pulumi.resources.Reso
      * Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
      * 
      */
-    @InputImport(name="maxSurge")
+    @Import(name="maxSurge")
       private final @Nullable Output<String> maxSurge;
 
     public Output<String> getMaxSurge() {

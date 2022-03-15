@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.EipAssociationArgs;
 import io.pulumi.aws.ec2.inputs.EipAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * The allocation ID. This is required for EC2-VPC.
      * 
      */
-    @OutputExport(name="allocationId", type=String.class, parameters={})
+    @Export(name="allocationId", type=String.class, parameters={})
     private Output<String> allocationId;
 
     /**
@@ -54,7 +54,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * be re-associated. Defaults to `true` in VPC.
      * 
      */
-    @OutputExport(name="allowReassociation", type=Boolean.class, parameters={})
+    @Export(name="allowReassociation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowReassociation;
 
     /**
@@ -72,7 +72,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * instance ID unless exactly one network interface is attached.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -91,7 +91,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * interface ID.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -110,7 +110,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * address.
      * 
      */
-    @OutputExport(name="privateIpAddress", type=String.class, parameters={})
+    @Export(name="privateIpAddress", type=String.class, parameters={})
     private Output<String> privateIpAddress;
 
     /**
@@ -127,7 +127,7 @@ public class EipAssociation extends io.pulumi.resources.CustomResource {
      * The Elastic IP address. This is required for EC2-Classic.
      * 
      */
-    @OutputExport(name="publicIp", type=String.class, parameters={})
+    @Export(name="publicIp", type=String.class, parameters={})
     private Output<String> publicIp;
 
     /**

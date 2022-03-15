@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.BuildpackBindingLaunchPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BuildpackBindingPropertiesResponse {
     /**
      * Buildpack Binding Type
@@ -28,11 +28,11 @@ public final class BuildpackBindingPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildpackBindingPropertiesResponse(
-        @OutputCustomType.Parameter("bindingType") @Nullable String bindingType,
-        @OutputCustomType.Parameter("launchProperties") @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("bindingType") @Nullable String bindingType,
+        @CustomType.Parameter("launchProperties") @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.bindingType = bindingType;
         this.launchProperties = launchProperties;
         this.provisioningState = provisioningState;

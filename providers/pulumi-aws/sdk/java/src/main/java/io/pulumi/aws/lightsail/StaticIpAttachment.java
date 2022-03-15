@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lightsail.StaticIpAttachmentArgs;
 import io.pulumi.aws.lightsail.inputs.StaticIpAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public class StaticIpAttachment extends io.pulumi.resources.CustomResource {
      * The name of the Lightsail instance to attach the IP to
      * 
      */
-    @OutputExport(name="instanceName", type=String.class, parameters={})
+    @Export(name="instanceName", type=String.class, parameters={})
     private Output<String> instanceName;
 
     /**
@@ -40,7 +40,7 @@ public class StaticIpAttachment extends io.pulumi.resources.CustomResource {
      * The allocated static IP address
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -54,7 +54,7 @@ public class StaticIpAttachment extends io.pulumi.resources.CustomResource {
      * The name of the allocated static IP
      * 
      */
-    @OutputExport(name="staticIpName", type=String.class, parameters={})
+    @Export(name="staticIpName", type=String.class, parameters={})
     private Output<String> staticIpName;
 
     /**

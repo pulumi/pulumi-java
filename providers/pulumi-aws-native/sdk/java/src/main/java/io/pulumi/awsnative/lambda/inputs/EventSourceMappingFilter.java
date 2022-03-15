@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeAr
      * The filter pattern that defines which events should be passed for invocations.
      * 
      */
-    @InputImport(name="pattern")
+    @Import(name="pattern")
       private final @Nullable String pattern;
 
     public Optional<String> getPattern() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
      * 
      */
-    @InputImport(name="newerNoncurrentVersions")
+    @Import(name="newerNoncurrentVersions")
       private final @Nullable Output<Integer> newerNoncurrentVersions;
 
     public Output<Integer> getNewerNoncurrentVersions() {
@@ -34,7 +34,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * The class of storage used to store the object.
      * 
      */
-    @InputImport(name="storageClass", required=true)
+    @Import(name="storageClass", required=true)
       private final Output<BucketNoncurrentVersionTransitionStorageClass> storageClass;
 
     public Output<BucketNoncurrentVersionTransitionStorageClass> getStorageClass() {
@@ -45,7 +45,7 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
      * Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
      * 
      */
-    @InputImport(name="transitionInDays", required=true)
+    @Import(name="transitionInDays", required=true)
       private final Output<Integer> transitionInDays;
 
     public Output<Integer> getTransitionInDays() {

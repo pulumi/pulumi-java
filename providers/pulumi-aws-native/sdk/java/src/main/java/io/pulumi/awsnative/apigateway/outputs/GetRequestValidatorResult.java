@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRequestValidatorResult {
     /**
      * ID of the request validator.
@@ -28,11 +28,11 @@ public final class GetRequestValidatorResult {
      */
     private final @Nullable Boolean validateRequestParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRequestValidatorResult(
-        @OutputCustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId,
-        @OutputCustomType.Parameter("validateRequestBody") @Nullable Boolean validateRequestBody,
-        @OutputCustomType.Parameter("validateRequestParameters") @Nullable Boolean validateRequestParameters) {
+        @CustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId,
+        @CustomType.Parameter("validateRequestBody") @Nullable Boolean validateRequestBody,
+        @CustomType.Parameter("validateRequestParameters") @Nullable Boolean validateRequestParameters) {
         this.requestValidatorId = requestValidatorId;
         this.validateRequestBody = validateRequestBody;
         this.validateRequestParameters = validateRequestParameters;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -30,7 +30,7 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -42,14 +42,14 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

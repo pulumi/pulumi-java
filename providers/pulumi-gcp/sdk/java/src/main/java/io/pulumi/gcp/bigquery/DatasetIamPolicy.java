@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetIamPolicyArgs;
@@ -74,7 +74,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * The dataset ID.
      * 
      */
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     /**
@@ -88,7 +88,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -103,7 +103,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -119,7 +119,7 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi
      * The name of the virtual network subnet.
      * 
      */
-    @InputImport(name="subnetName")
+    @Import(name="subnetName")
       private final @Nullable String subnetName;
 
     public Optional<String> getSubnetName() {
@@ -33,7 +33,7 @@ public final class ACIServiceResponseResponseVnetConfiguration extends io.pulumi
      * The name of the virtual network.
      * 
      */
-    @InputImport(name="vnetName")
+    @Import(name="vnetName")
       private final @Nullable String vnetName;
 
     public Optional<String> getVnetName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
      * The canonical url of the search parameter resource.
      * 
      */
-    @InputImport(name="canonicalUrl")
+    @Import(name="canonicalUrl")
       private final @Nullable Output<String> canonicalUrl;
 
     public Output<String> getCanonicalUrl() {
@@ -33,7 +33,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
      * The versioned name of the search parameter resource. The format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/_history/{version-id} For fhir stores with disable_resource_versioning=true, the format is projects/{project-id}/locations/{location}/datasets/{dataset-id}/fhirStores/{fhirStore-id}/fhir/SearchParameter/{resource-id}/
      * 
      */
-    @InputImport(name="parameter")
+    @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
     public Output<String> getParameter() {

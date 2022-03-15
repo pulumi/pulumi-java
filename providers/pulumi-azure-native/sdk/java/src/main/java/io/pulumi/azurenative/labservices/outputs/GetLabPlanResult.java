@@ -8,7 +8,7 @@ import io.pulumi.azurenative.labservices.outputs.ConnectionProfileResponse;
 import io.pulumi.azurenative.labservices.outputs.LabPlanNetworkProfileResponse;
 import io.pulumi.azurenative.labservices.outputs.SupportInfoResponse;
 import io.pulumi.azurenative.labservices.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLabPlanResult {
     /**
      * The allowed regions for the lab creator to use when creating labs using this lab plan.
@@ -89,22 +89,22 @@ public final class GetLabPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLabPlanResult(
-        @OutputCustomType.Parameter("allowedRegions") @Nullable List<String> allowedRegions,
-        @OutputCustomType.Parameter("defaultAutoShutdownProfile") @Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile,
-        @OutputCustomType.Parameter("defaultConnectionProfile") @Nullable ConnectionProfileResponse defaultConnectionProfile,
-        @OutputCustomType.Parameter("defaultNetworkProfile") @Nullable LabPlanNetworkProfileResponse defaultNetworkProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkedLmsInstance") @Nullable String linkedLmsInstance,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sharedGalleryId") @Nullable String sharedGalleryId,
-        @OutputCustomType.Parameter("supportInfo") @Nullable SupportInfoResponse supportInfo,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowedRegions") @Nullable List<String> allowedRegions,
+        @CustomType.Parameter("defaultAutoShutdownProfile") @Nullable AutoShutdownProfileResponse defaultAutoShutdownProfile,
+        @CustomType.Parameter("defaultConnectionProfile") @Nullable ConnectionProfileResponse defaultConnectionProfile,
+        @CustomType.Parameter("defaultNetworkProfile") @Nullable LabPlanNetworkProfileResponse defaultNetworkProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkedLmsInstance") @Nullable String linkedLmsInstance,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sharedGalleryId") @Nullable String sharedGalleryId,
+        @CustomType.Parameter("supportInfo") @Nullable SupportInfoResponse supportInfo,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.allowedRegions = allowedRegions;
         this.defaultAutoShutdownProfile = defaultAutoShutdownProfile;
         this.defaultConnectionProfile = defaultConnectionProfile;

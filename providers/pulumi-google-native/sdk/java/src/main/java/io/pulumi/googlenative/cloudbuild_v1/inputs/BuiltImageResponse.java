@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
      * Docker Registry 2.0 digest.
      * 
      */
-    @InputImport(name="digest", required=true)
+    @Import(name="digest", required=true)
       private final String digest;
 
     public String getDigest() {
@@ -32,7 +32,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
      * Name used to push the container image to Google Container Registry, as presented to `docker push`.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class BuiltImageResponse extends io.pulumi.resources.InvokeArgs {
      * Stores timing information for pushing the specified image.
      * 
      */
-    @InputImport(name="pushTiming", required=true)
+    @Import(name="pushTiming", required=true)
       private final TimeSpanResponse pushTiming;
 
     public TimeSpanResponse getPushTiming() {

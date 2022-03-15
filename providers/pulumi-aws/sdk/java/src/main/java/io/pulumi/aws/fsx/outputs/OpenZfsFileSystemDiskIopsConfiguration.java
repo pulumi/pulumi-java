@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenZfsFileSystemDiskIopsConfiguration {
     /**
      * - The total number of SSD IOPS provisioned for the file system.
@@ -23,10 +23,10 @@ public final class OpenZfsFileSystemDiskIopsConfiguration {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenZfsFileSystemDiskIopsConfiguration(
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.iops = iops;
         this.mode = mode;
     }

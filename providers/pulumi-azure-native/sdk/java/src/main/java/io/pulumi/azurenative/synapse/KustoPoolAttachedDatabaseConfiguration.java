@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.azurenative.synapse.outputs.TableLevelSharingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The list of databases from the clusterResourceId which are currently attached to the kusto pool.
      * 
      */
-    @OutputExport(name="attachedDatabaseNames", type=List.class, parameters={String.class})
+    @Export(name="attachedDatabaseNames", type=List.class, parameters={String.class})
     private Output<List<String>> attachedDatabaseNames;
 
     /**
@@ -50,7 +50,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -64,7 +64,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The default principals modification kind
      * 
      */
-    @OutputExport(name="defaultPrincipalsModificationKind", type=String.class, parameters={})
+    @Export(name="defaultPrincipalsModificationKind", type=String.class, parameters={})
     private Output<String> defaultPrincipalsModificationKind;
 
     /**
@@ -78,7 +78,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The resource id of the kusto pool where the databases you would like to attach reside.
      * 
      */
-    @OutputExport(name="kustoPoolResourceId", type=String.class, parameters={})
+    @Export(name="kustoPoolResourceId", type=String.class, parameters={})
     private Output<String> kustoPoolResourceId;
 
     /**
@@ -92,7 +92,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -106,7 +106,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -134,7 +134,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -148,7 +148,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * Table level sharing specifications
      * 
      */
-    @OutputExport(name="tableLevelSharingProperties", type=TableLevelSharingPropertiesResponse.class, parameters={})
+    @Export(name="tableLevelSharingProperties", type=TableLevelSharingPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ TableLevelSharingPropertiesResponse> tableLevelSharingProperties;
 
     /**
@@ -162,7 +162,7 @@ public class KustoPoolAttachedDatabaseConfiguration extends io.pulumi.resources.
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

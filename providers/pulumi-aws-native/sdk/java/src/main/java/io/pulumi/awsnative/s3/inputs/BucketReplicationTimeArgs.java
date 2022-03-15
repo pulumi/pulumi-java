@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketReplicationTimeStatus;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -14,14 +14,14 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
 
     public static final BucketReplicationTimeArgs Empty = new BucketReplicationTimeArgs();
 
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<BucketReplicationTimeStatus> status;
 
     public Output<BucketReplicationTimeStatus> getStatus() {
         return this.status;
     }
 
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final Output<BucketReplicationTimeValueArgs> time;
 
     public Output<BucketReplicationTimeValueArgs> getTime() {

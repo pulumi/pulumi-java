@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentAnalyticsItemPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAnalyticsItemResult {
     /**
      * The content of this item
@@ -58,17 +58,17 @@ public final class GetAnalyticsItemResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnalyticsItemResult(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("properties") ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("timeModified") String timeModified,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("properties") ApplicationInsightsComponentAnalyticsItemPropertiesResponse properties,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("timeModified") String timeModified,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("version") String version) {
         this.content = content;
         this.id = id;
         this.name = name;

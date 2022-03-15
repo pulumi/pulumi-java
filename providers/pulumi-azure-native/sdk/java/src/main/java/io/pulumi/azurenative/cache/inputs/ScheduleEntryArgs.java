@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.azurenative.cache.enums.DayOfWeek;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * Day of the week when a cache can be patched.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<DayOfWeek> dayOfWeek;
 
     public Output<DayOfWeek> getDayOfWeek() {
@@ -35,7 +35,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * ISO8601 timespan specifying how much time cache patching can take.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
@@ -46,7 +46,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * Start hour after which cache patching can start.
      * 
      */
-    @InputImport(name="startHourUtc", required=true)
+    @Import(name="startHourUtc", required=true)
       private final Output<Integer> startHourUtc;
 
     public Output<Integer> getStartHourUtc() {

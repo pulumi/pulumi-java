@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The Amazon Resource Name (ARN) of the delegated administrator's account.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -27,7 +27,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The date when the account was made a delegated administrator.
      * 
      */
-    @InputImport(name="delegationEnabledDate", required=true)
+    @Import(name="delegationEnabledDate", required=true)
       private final String delegationEnabledDate;
 
     public String getDelegationEnabledDate() {
@@ -38,7 +38,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The email address that is associated with the delegated administrator's AWS account.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -49,7 +49,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The unique identifier (ID) of the delegated administrator's account.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -60,7 +60,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The method by which the delegated administrator's account joined the organization.
      * 
      */
-    @InputImport(name="joinedMethod", required=true)
+    @Import(name="joinedMethod", required=true)
       private final String joinedMethod;
 
     public String getJoinedMethod() {
@@ -71,7 +71,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The date when the delegated administrator's account became a part of the organization.
      * 
      */
-    @InputImport(name="joinedTimestamp", required=true)
+    @Import(name="joinedTimestamp", required=true)
       private final String joinedTimestamp;
 
     public String getJoinedTimestamp() {
@@ -82,7 +82,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The friendly name of the delegated administrator's account.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -93,7 +93,7 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator extends io.p
      * The status of the delegated administrator's account in the organization.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

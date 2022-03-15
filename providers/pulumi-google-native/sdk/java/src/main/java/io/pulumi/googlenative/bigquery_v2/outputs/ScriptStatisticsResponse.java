@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ScriptStackFrameResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScriptStatisticsResponse {
     /**
      * Whether this child job was a statement or expression.
@@ -22,10 +22,10 @@ public final class ScriptStatisticsResponse {
      */
     private final List<ScriptStackFrameResponse> stackFrames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptStatisticsResponse(
-        @OutputCustomType.Parameter("evaluationKind") String evaluationKind,
-        @OutputCustomType.Parameter("stackFrames") List<ScriptStackFrameResponse> stackFrames) {
+        @CustomType.Parameter("evaluationKind") String evaluationKind,
+        @CustomType.Parameter("stackFrames") List<ScriptStackFrameResponse> stackFrames) {
         this.evaluationKind = evaluationKind;
         this.stackFrames = stackFrames;
     }

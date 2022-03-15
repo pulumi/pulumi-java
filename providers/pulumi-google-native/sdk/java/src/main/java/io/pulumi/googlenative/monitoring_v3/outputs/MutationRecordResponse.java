@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MutationRecordResponse {
     /**
      * When the change occurred.
@@ -20,10 +20,10 @@ public final class MutationRecordResponse {
      */
     private final String mutatedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MutationRecordResponse(
-        @OutputCustomType.Parameter("mutateTime") String mutateTime,
-        @OutputCustomType.Parameter("mutatedBy") String mutatedBy) {
+        @CustomType.Parameter("mutateTime") String mutateTime,
+        @CustomType.Parameter("mutatedBy") String mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }

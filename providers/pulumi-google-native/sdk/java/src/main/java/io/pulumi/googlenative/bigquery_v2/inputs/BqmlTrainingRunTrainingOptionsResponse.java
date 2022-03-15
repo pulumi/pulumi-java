@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -18,63 +18,63 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
 
     public static final BqmlTrainingRunTrainingOptionsResponse Empty = new BqmlTrainingRunTrainingOptionsResponse();
 
-    @InputImport(name="earlyStop", required=true)
+    @Import(name="earlyStop", required=true)
       private final Boolean earlyStop;
 
     public Boolean getEarlyStop() {
         return this.earlyStop;
     }
 
-    @InputImport(name="l1Reg", required=true)
+    @Import(name="l1Reg", required=true)
       private final Double l1Reg;
 
     public Double getL1Reg() {
         return this.l1Reg;
     }
 
-    @InputImport(name="l2Reg", required=true)
+    @Import(name="l2Reg", required=true)
       private final Double l2Reg;
 
     public Double getL2Reg() {
         return this.l2Reg;
     }
 
-    @InputImport(name="learnRate", required=true)
+    @Import(name="learnRate", required=true)
       private final Double learnRate;
 
     public Double getLearnRate() {
         return this.learnRate;
     }
 
-    @InputImport(name="learnRateStrategy", required=true)
+    @Import(name="learnRateStrategy", required=true)
       private final String learnRateStrategy;
 
     public String getLearnRateStrategy() {
         return this.learnRateStrategy;
     }
 
-    @InputImport(name="lineSearchInitLearnRate", required=true)
+    @Import(name="lineSearchInitLearnRate", required=true)
       private final Double lineSearchInitLearnRate;
 
     public Double getLineSearchInitLearnRate() {
         return this.lineSearchInitLearnRate;
     }
 
-    @InputImport(name="maxIteration", required=true)
+    @Import(name="maxIteration", required=true)
       private final String maxIteration;
 
     public String getMaxIteration() {
         return this.maxIteration;
     }
 
-    @InputImport(name="minRelProgress", required=true)
+    @Import(name="minRelProgress", required=true)
       private final Double minRelProgress;
 
     public Double getMinRelProgress() {
         return this.minRelProgress;
     }
 
-    @InputImport(name="warmStart", required=true)
+    @Import(name="warmStart", required=true)
       private final Boolean warmStart;
 
     public Boolean getWarmStart() {

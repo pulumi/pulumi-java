@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs;
@@ -46,7 +46,7 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
      * A human-readable description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -60,7 +60,7 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
      * Set of label tags associated with the EdgeCache resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -76,7 +76,7 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
      * and all following characters must be a dash, underscore, letter or digit.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -112,7 +112,7 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="publicKeys", type=List.class, parameters={EdgeCacheKeysetPublicKey.class})
+    @Export(name="publicKeys", type=List.class, parameters={EdgeCacheKeysetPublicKey.class})
     private Output<List<EdgeCacheKeysetPublicKey>> publicKeys;
 
     /**

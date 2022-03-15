@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleMatcherLayer4ConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyRuleMatcherResponse {
     /**
      * Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
@@ -63,18 +63,18 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
-        @OutputCustomType.Parameter("destAddressGroups") List<String> destAddressGroups,
-        @OutputCustomType.Parameter("destFqdns") List<String> destFqdns,
-        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
-        @OutputCustomType.Parameter("destRegionCodes") List<String> destRegionCodes,
-        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        @OutputCustomType.Parameter("srcAddressGroups") List<String> srcAddressGroups,
-        @OutputCustomType.Parameter("srcFqdns") List<String> srcFqdns,
-        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
-        @OutputCustomType.Parameter("srcRegionCodes") List<String> srcRegionCodes,
-        @OutputCustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+        @CustomType.Parameter("destAddressGroups") List<String> destAddressGroups,
+        @CustomType.Parameter("destFqdns") List<String> destFqdns,
+        @CustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @CustomType.Parameter("destRegionCodes") List<String> destRegionCodes,
+        @CustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
+        @CustomType.Parameter("srcAddressGroups") List<String> srcAddressGroups,
+        @CustomType.Parameter("srcFqdns") List<String> srcFqdns,
+        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
+        @CustomType.Parameter("srcRegionCodes") List<String> srcRegionCodes,
+        @CustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
         this.destAddressGroups = destAddressGroups;
         this.destFqdns = destFqdns;
         this.destIpRanges = destIpRanges;

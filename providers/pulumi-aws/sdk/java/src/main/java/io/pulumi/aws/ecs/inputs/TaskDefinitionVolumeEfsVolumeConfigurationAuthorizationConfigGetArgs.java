@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * Access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
      * 
      */
-    @InputImport(name="accessPointId")
+    @Import(name="accessPointId")
       private final @Nullable Output<String> accessPointId;
 
     public Output<String> getAccessPointId() {
@@ -29,7 +29,7 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * Whether or not to use the Amazon ECS task IAM role defined in a task definition when mounting the Amazon EFS file system. If enabled, transit encryption must be enabled in the EFSVolumeConfiguration. Valid values: `ENABLED`, `DISABLED`. If this parameter is omitted, the default value of `DISABLED` is used.
      * 
      */
-    @InputImport(name="iam")
+    @Import(name="iam")
       private final @Nullable Output<String> iam;
 
     public Output<String> getIam() {

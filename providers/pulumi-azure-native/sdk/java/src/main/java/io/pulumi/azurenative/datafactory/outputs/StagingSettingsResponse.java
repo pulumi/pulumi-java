@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StagingSettingsResponse {
     /**
      * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
@@ -28,11 +28,11 @@ public final class StagingSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StagingSettingsResponse(
-        @OutputCustomType.Parameter("enableCompression") @Nullable Object enableCompression,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("path") @Nullable Object path) {
+        @CustomType.Parameter("enableCompression") @Nullable Object enableCompression,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("path") @Nullable Object path) {
         this.enableCompression = enableCompression;
         this.linkedServiceName = linkedServiceName;
         this.path = path;

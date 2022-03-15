@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FailoverGroupReadOnlyEndpointResponse {
     /**
      * Failover policy of the read-only endpoint for the failover group.
@@ -17,8 +17,8 @@ public final class FailoverGroupReadOnlyEndpointResponse {
      */
     private final @Nullable String failoverPolicy;
 
-    @OutputCustomType.Constructor
-    private FailoverGroupReadOnlyEndpointResponse(@OutputCustomType.Parameter("failoverPolicy") @Nullable String failoverPolicy) {
+    @CustomType.Constructor
+    private FailoverGroupReadOnlyEndpointResponse(@CustomType.Parameter("failoverPolicy") @Nullable String failoverPolicy) {
         this.failoverPolicy = failoverPolicy;
     }
 

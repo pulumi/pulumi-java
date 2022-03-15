@@ -5,7 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.OptionGroupOptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the engine that this option group should be associated with.
      * 
      */
-    @InputImport(name="engineName", required=true)
+    @Import(name="engineName", required=true)
       private final Output<String> engineName;
 
     public Output<String> getEngineName() {
@@ -32,7 +32,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the major version of the engine that this option group should be associated with.
      * 
      */
-    @InputImport(name="majorEngineVersion", required=true)
+    @Import(name="majorEngineVersion", required=true)
       private final Output<String> majorEngineVersion;
 
     public Output<String> getMajorEngineVersion() {
@@ -43,7 +43,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Name of the setting.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -65,7 +65,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the option group. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="optionGroupDescription")
+    @Import(name="optionGroupDescription")
       private final @Nullable Output<String> optionGroupDescription;
 
     public Output<String> getOptionGroupDescription() {
@@ -76,7 +76,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of Options to apply.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionGroupOptionArgs>> options;
 
     public Output<List<OptionGroupOptionArgs>> getOptions() {
@@ -87,7 +87,7 @@ public final class OptionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

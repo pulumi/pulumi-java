@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetFilesLimitArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,21 +21,21 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
 
     public static final DatasetPathOptionsArgs Empty = new DatasetPathOptionsArgs();
 
-    @InputImport(name="filesLimit")
+    @Import(name="filesLimit")
       private final @Nullable Output<DatasetFilesLimitArgs> filesLimit;
 
     public Output<DatasetFilesLimitArgs> getFilesLimit() {
         return this.filesLimit == null ? Output.empty() : this.filesLimit;
     }
 
-    @InputImport(name="lastModifiedDateCondition")
+    @Import(name="lastModifiedDateCondition")
       private final @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
 
     public Output<DatasetFilterExpressionArgs> getLastModifiedDateCondition() {
         return this.lastModifiedDateCondition == null ? Output.empty() : this.lastModifiedDateCondition;
     }
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<DatasetPathParameterArgs>> parameters;
 
     public Output<List<DatasetPathParameterArgs>> getParameters() {

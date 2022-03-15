@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2clientvpn.inputs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionGetArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Information about the authentication method to be used to authenticate clients.
      * 
      */
-    @InputImport(name="authenticationOptions")
+    @Import(name="authenticationOptions")
       private final @Nullable Output<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions;
 
     public Output<List<EndpointAuthenticationOptionGetArgs>> getAuthenticationOptions() {
@@ -45,7 +45,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
      * 
      */
-    @InputImport(name="clientCidrBlock")
+    @Import(name="clientCidrBlock")
       private final @Nullable Output<String> clientCidrBlock;
 
     public Output<String> getClientCidrBlock() {
@@ -56,7 +56,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Information about the client connection logging options.
      * 
      */
-    @InputImport(name="connectionLogOptions")
+    @Import(name="connectionLogOptions")
       private final @Nullable Output<EndpointConnectionLogOptionsGetArgs> connectionLogOptions;
 
     public Output<EndpointConnectionLogOptionsGetArgs> getConnectionLogOptions() {
@@ -67,7 +67,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * A brief description of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The DNS name to be used by clients when establishing their VPN session.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -89,7 +89,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the connecting device is used.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
@@ -100,7 +100,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Specify whether to enable the self-service portal for the Client VPN endpoint. Values can be `enabled` or `disabled`. Default value is `disabled`.
      * 
      */
-    @InputImport(name="selfServicePortal")
+    @Import(name="selfServicePortal")
       private final @Nullable Output<String> selfServicePortal;
 
     public Output<String> getSelfServicePortal() {
@@ -111,7 +111,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the ACM server certificate.
      * 
      */
-    @InputImport(name="serverCertificateArn")
+    @Import(name="serverCertificateArn")
       private final @Nullable Output<String> serverCertificateArn;
 
     public Output<String> getServerCertificateArn() {
@@ -122,7 +122,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
      * 
      */
-    @InputImport(name="splitTunnel")
+    @Import(name="splitTunnel")
       private final @Nullable Output<Boolean> splitTunnel;
 
     public Output<Boolean> getSplitTunnel() {
@@ -133,7 +133,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The current state of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -144,7 +144,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * A mapping of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -155,7 +155,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -166,7 +166,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The transport protocol to be used by the VPN session. Default value is `udp`.
      * 
      */
-    @InputImport(name="transportProtocol")
+    @Import(name="transportProtocol")
       private final @Nullable Output<String> transportProtocol;
 
     public Output<String> getTransportProtocol() {

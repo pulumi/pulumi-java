@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.DomainResourceSpecInstanceType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DomainResourceSpec extends io.pulumi.resources.InvokeArgs {
      * The instance type that the image version runs on.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable DomainResourceSpecInstanceType instanceType;
 
     public Optional<DomainResourceSpecInstanceType> getInstanceType() {
@@ -30,7 +30,7 @@ public final class DomainResourceSpec extends io.pulumi.resources.InvokeArgs {
      * The ARN of the SageMaker image that the image version belongs to.
      * 
      */
-    @InputImport(name="sageMakerImageArn")
+    @Import(name="sageMakerImageArn")
       private final @Nullable String sageMakerImageArn;
 
     public Optional<String> getSageMakerImageArn() {
@@ -41,7 +41,7 @@ public final class DomainResourceSpec extends io.pulumi.resources.InvokeArgs {
      * The ARN of the image version created on the instance.
      * 
      */
-    @InputImport(name="sageMakerImageVersionArn")
+    @Import(name="sageMakerImageVersionArn")
       private final @Nullable String sageMakerImageVersionArn;
 
     public Optional<String> getSageMakerImageVersionArn() {

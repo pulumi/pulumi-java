@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TriggerDependencyReferenceResponse {
     /**
      * Referenced trigger.
@@ -22,10 +22,10 @@ public final class TriggerDependencyReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerDependencyReferenceResponse(
-        @OutputCustomType.Parameter("referenceTrigger") TriggerReferenceResponse referenceTrigger,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("referenceTrigger") TriggerReferenceResponse referenceTrigger,
+        @CustomType.Parameter("type") String type) {
         this.referenceTrigger = referenceTrigger;
         this.type = type;
     }

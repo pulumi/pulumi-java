@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the certificate. This can be an Certificate Manager (ACM) certificate or an Identity and Access Management (IAM) server certificate. The certifiacte must reside in us-east-1.
      * 
      */
-    @InputImport(name="certificateArn", required=true)
+    @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -29,7 +29,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the Domain Name.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {

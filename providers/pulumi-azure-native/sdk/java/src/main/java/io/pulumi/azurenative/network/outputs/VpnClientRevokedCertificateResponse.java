@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnClientRevokedCertificateResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -37,13 +37,13 @@ public final class VpnClientRevokedCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnClientRevokedCertificateResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.etag = etag;
         this.id = id;
         this.name = name;

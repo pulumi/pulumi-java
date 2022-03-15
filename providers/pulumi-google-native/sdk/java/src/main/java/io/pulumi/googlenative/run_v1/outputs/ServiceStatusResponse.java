@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.AddressableResponse;
 import io.pulumi.googlenative.run_v1.outputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.outputs.TrafficTargetResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceStatusResponse {
     /**
      * From RouteStatus. Similar to url, information on where the service is available on HTTP.
@@ -50,15 +50,15 @@ public final class ServiceStatusResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceStatusResponse(
-        @OutputCustomType.Parameter("address") AddressableResponse address,
-        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
-        @OutputCustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
-        @OutputCustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
-        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
-        @OutputCustomType.Parameter("traffic") List<TrafficTargetResponse> traffic,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("address") AddressableResponse address,
+        @CustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
+        @CustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
+        @CustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
+        @CustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @CustomType.Parameter("traffic") List<TrafficTargetResponse> traffic,
+        @CustomType.Parameter("url") String url) {
         this.address = address;
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;

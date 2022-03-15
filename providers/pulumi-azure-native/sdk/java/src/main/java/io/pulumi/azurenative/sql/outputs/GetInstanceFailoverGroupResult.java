@@ -7,14 +7,14 @@ import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadOnlyEndpointRe
 import io.pulumi.azurenative.sql.outputs.InstanceFailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePairInfoResponse;
 import io.pulumi.azurenative.sql.outputs.PartnerRegionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceFailoverGroupResult {
     /**
      * Resource ID.
@@ -62,17 +62,17 @@ public final class GetInstanceFailoverGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceFailoverGroupResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("managedInstancePairs") List<ManagedInstancePairInfoResponse> managedInstancePairs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnerRegions") List<PartnerRegionInfoResponse> partnerRegions,
-        @OutputCustomType.Parameter("readOnlyEndpoint") @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
-        @OutputCustomType.Parameter("readWriteEndpoint") InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint,
-        @OutputCustomType.Parameter("replicationRole") String replicationRole,
-        @OutputCustomType.Parameter("replicationState") String replicationState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("managedInstancePairs") List<ManagedInstancePairInfoResponse> managedInstancePairs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnerRegions") List<PartnerRegionInfoResponse> partnerRegions,
+        @CustomType.Parameter("readOnlyEndpoint") @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
+        @CustomType.Parameter("readWriteEndpoint") InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint,
+        @CustomType.Parameter("replicationRole") String replicationRole,
+        @CustomType.Parameter("replicationState") String replicationState,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.managedInstancePairs = managedInstancePairs;
         this.name = name;

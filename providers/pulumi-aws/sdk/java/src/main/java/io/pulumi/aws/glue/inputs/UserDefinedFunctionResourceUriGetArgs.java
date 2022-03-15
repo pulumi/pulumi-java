@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class UserDefinedFunctionResourceUriGetArgs extends io.pulumi.resou
      * The type of the resource. can be one of `JAR`, `FILE`, and `ARCHIVE`.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -28,7 +28,7 @@ public final class UserDefinedFunctionResourceUriGetArgs extends io.pulumi.resou
      * The URI for accessing the resource.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

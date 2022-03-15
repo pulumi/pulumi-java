@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketIAMBindingArgs;
@@ -66,7 +66,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -81,7 +81,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=BucketIAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=BucketIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ BucketIAMBindingCondition> condition;
 
     /**
@@ -96,7 +96,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -120,7 +120,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * * **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
      * 
      */
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     /**
@@ -146,7 +146,7 @@ public class BucketIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

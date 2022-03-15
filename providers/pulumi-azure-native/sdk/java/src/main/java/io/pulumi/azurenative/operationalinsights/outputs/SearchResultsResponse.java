@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SearchResultsResponse {
     /**
      * Search results table's Description.
@@ -43,14 +43,14 @@ public final class SearchResultsResponse {
      */
     private final @Nullable String startSearchTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SearchResultsResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("endSearchTime") @Nullable String endSearchTime,
-        @OutputCustomType.Parameter("limit") @Nullable Integer limit,
-        @OutputCustomType.Parameter("query") @Nullable String query,
-        @OutputCustomType.Parameter("sourceTable") String sourceTable,
-        @OutputCustomType.Parameter("startSearchTime") @Nullable String startSearchTime) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("endSearchTime") @Nullable String endSearchTime,
+        @CustomType.Parameter("limit") @Nullable Integer limit,
+        @CustomType.Parameter("query") @Nullable String query,
+        @CustomType.Parameter("sourceTable") String sourceTable,
+        @CustomType.Parameter("startSearchTime") @Nullable String startSearchTime) {
         this.description = description;
         this.endSearchTime = endSearchTime;
         this.limit = limit;

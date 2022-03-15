@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.inputs.BasicAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.inputs.ClientCertAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.inputs.OAuthAuthenticationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the authentication method of the request.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Object authentication;
 
     public Object getAuthentication() {
@@ -34,7 +34,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the request body.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable String body;
 
     public Optional<String> getBody() {
@@ -45,7 +45,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the headers.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
@@ -56,7 +56,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the method of the request.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable String method;
 
     public Optional<String> getMethod() {
@@ -67,7 +67,7 @@ public final class HttpRequestResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the URI of the request.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable String uri;
 
     public Optional<String> getUri() {

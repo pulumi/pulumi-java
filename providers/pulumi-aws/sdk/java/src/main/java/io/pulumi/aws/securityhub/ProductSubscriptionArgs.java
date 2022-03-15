@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
      * The ARN of the product that generates findings that you want to import into Security Hub - see below.
      * 
      */
-    @InputImport(name="productArn", required=true)
+    @Import(name="productArn", required=true)
       private final Output<String> productArn;
 
     public Output<String> getProductArn() {

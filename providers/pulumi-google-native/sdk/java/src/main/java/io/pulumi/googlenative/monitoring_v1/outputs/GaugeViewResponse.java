@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GaugeViewResponse {
     /**
      * The lower bound for this gauge chart. The value of the chart should always be greater than or equal to this.
@@ -20,10 +20,10 @@ public final class GaugeViewResponse {
      */
     private final Double upperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GaugeViewResponse(
-        @OutputCustomType.Parameter("lowerBound") Double lowerBound,
-        @OutputCustomType.Parameter("upperBound") Double upperBound) {
+        @CustomType.Parameter("lowerBound") Double lowerBound,
+        @CustomType.Parameter("upperBound") Double upperBound) {
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;
     }

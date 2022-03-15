@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.KnownDataCollectionEndpointResourceK
 import io.pulumi.azurenative.insights.inputs.DataCollectionEndpointNetworkAclsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * The name of the data collection endpoint. The name is case insensitive.
      * 
      */
-    @InputImport(name="dataCollectionEndpointName")
+    @Import(name="dataCollectionEndpointName")
       private final @Nullable Output<String> dataCollectionEndpointName;
 
     public Output<String> getDataCollectionEndpointName() {
@@ -33,7 +33,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * Description of the data collection endpoint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
      * 
      */
-    @InputImport(name="immutableId")
+    @Import(name="immutableId")
       private final @Nullable Output<String> immutableId;
 
     public Output<String> getImmutableId() {
@@ -55,7 +55,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * The kind of the resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,KnownDataCollectionEndpointResourceKind>> kind;
 
     public Output<Either<String,KnownDataCollectionEndpointResourceKind>> getKind() {
@@ -66,7 +66,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * The geo-location where the resource lives.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * Network access control rules for the endpoints.
      * 
      */
-    @InputImport(name="networkAcls")
+    @Import(name="networkAcls")
       private final @Nullable Output<DataCollectionEndpointNetworkAclsArgs> networkAcls;
 
     public Output<DataCollectionEndpointNetworkAclsArgs> getNetworkAcls() {
@@ -88,7 +88,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

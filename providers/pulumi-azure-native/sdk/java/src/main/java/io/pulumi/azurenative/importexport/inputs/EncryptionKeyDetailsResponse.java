@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
      * The type of kek encryption key
      * 
      */
-    @InputImport(name="kekType")
+    @Import(name="kekType")
       private final @Nullable String kekType;
 
     public Optional<String> getKekType() {
@@ -33,7 +33,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
      * Specifies the url for kek encryption key.
      * 
      */
-    @InputImport(name="kekUrl")
+    @Import(name="kekUrl")
       private final @Nullable String kekUrl;
 
     public Optional<String> getKekUrl() {
@@ -44,7 +44,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
      * Specifies the keyvault resource id for kek encryption key.
      * 
      */
-    @InputImport(name="kekVaultResourceID")
+    @Import(name="kekVaultResourceID")
       private final @Nullable String kekVaultResourceID;
 
     public Optional<String> getKekVaultResourceID() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANGatewayVersion;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate extends io.pulum
 
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskCreate Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskCreate();
 
-    @InputImport(name="currentVersion")
+    @Import(name="currentVersion")
       private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> getCurrentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
     }
 
-    @InputImport(name="sigKeyCrc")
+    @Import(name="sigKeyCrc")
       private final @Nullable Integer sigKeyCrc;
 
     public Optional<Integer> getSigKeyCrc() {
         return this.sigKeyCrc == null ? Optional.empty() : Optional.ofNullable(this.sigKeyCrc);
     }
 
-    @InputImport(name="updateSignature")
+    @Import(name="updateSignature")
       private final @Nullable String updateSignature;
 
     public Optional<String> getUpdateSignature() {
         return this.updateSignature == null ? Optional.empty() : Optional.ofNullable(this.updateSignature);
     }
 
-    @InputImport(name="updateVersion")
+    @Import(name="updateVersion")
       private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> getUpdateVersion() {

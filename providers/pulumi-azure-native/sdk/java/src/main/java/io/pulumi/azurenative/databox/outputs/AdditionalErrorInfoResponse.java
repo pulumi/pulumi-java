@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AdditionalErrorInfoResponse {
     /**
      * Additional error info.
@@ -23,10 +23,10 @@ public final class AdditionalErrorInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdditionalErrorInfoResponse(
-        @OutputCustomType.Parameter("info") @Nullable Object info,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("info") @Nullable Object info,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.info = info;
         this.type = type;
     }

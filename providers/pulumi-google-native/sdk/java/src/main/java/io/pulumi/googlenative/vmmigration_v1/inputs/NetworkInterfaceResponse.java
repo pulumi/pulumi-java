@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The external IP to define in the NIC.
      * 
      */
-    @InputImport(name="externalIp", required=true)
+    @Import(name="externalIp", required=true)
       private final String externalIp;
 
     public String getExternalIp() {
@@ -31,7 +31,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
      * 
      */
-    @InputImport(name="internalIp", required=true)
+    @Import(name="internalIp", required=true)
       private final String internalIp;
 
     public String getInternalIp() {
@@ -42,7 +42,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The network to connect the NIC to.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -53,7 +53,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * The subnetwork to connect the NIC to.
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {

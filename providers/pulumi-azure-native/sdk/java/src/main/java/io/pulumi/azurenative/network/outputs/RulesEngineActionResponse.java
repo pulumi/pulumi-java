@@ -7,13 +7,13 @@ import io.pulumi.azurenative.network.outputs.ForwardingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.HeaderActionResponse;
 import io.pulumi.azurenative.network.outputs.RedirectConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RulesEngineActionResponse {
     /**
      * A list of header actions to apply from the request from AFD to the origin.
@@ -31,11 +31,11 @@ public final class RulesEngineActionResponse {
      */
     private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RulesEngineActionResponse(
-        @OutputCustomType.Parameter("requestHeaderActions") @Nullable List<HeaderActionResponse> requestHeaderActions,
-        @OutputCustomType.Parameter("responseHeaderActions") @Nullable List<HeaderActionResponse> responseHeaderActions,
-        @OutputCustomType.Parameter("routeConfigurationOverride") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
+        @CustomType.Parameter("requestHeaderActions") @Nullable List<HeaderActionResponse> requestHeaderActions,
+        @CustomType.Parameter("responseHeaderActions") @Nullable List<HeaderActionResponse> responseHeaderActions,
+        @CustomType.Parameter("routeConfigurationOverride") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
         this.requestHeaderActions = requestHeaderActions;
         this.responseHeaderActions = responseHeaderActions;
         this.routeConfigurationOverride = routeConfigurationOverride;

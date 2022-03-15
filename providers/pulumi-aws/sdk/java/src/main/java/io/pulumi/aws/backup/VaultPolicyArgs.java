@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the backup vault to add policy for.
      * 
      */
-    @InputImport(name="backupVaultName", required=true)
+    @Import(name="backupVaultName", required=true)
       private final Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
@@ -28,7 +28,7 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The backup vault access policy document in JSON format.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

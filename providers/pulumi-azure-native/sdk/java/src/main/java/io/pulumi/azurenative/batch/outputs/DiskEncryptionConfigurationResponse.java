@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskEncryptionConfigurationResponse {
     /**
      * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
@@ -17,8 +17,8 @@ public final class DiskEncryptionConfigurationResponse {
      */
     private final @Nullable List<String> targets;
 
-    @OutputCustomType.Constructor
-    private DiskEncryptionConfigurationResponse(@OutputCustomType.Parameter("targets") @Nullable List<String> targets) {
+    @CustomType.Constructor
+    private DiskEncryptionConfigurationResponse(@CustomType.Parameter("targets") @Nullable List<String> targets) {
         this.targets = targets;
     }
 

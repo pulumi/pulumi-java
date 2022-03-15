@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionDurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WeeklyRetentionScheduleResponse {
     /**
      * List of days of week for weekly retention policy.
@@ -29,11 +29,11 @@ public final class WeeklyRetentionScheduleResponse {
      */
     private final @Nullable List<String> retentionTimes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeeklyRetentionScheduleResponse(
-        @OutputCustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
-        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
-        @OutputCustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
+        @CustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
+        @CustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @CustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
         this.daysOfTheWeek = daysOfTheWeek;
         this.retentionDuration = retentionDuration;
         this.retentionTimes = retentionTimes;

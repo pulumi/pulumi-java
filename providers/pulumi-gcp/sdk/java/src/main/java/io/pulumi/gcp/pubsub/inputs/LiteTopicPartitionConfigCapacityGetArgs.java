@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
      * Subscribe throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
      * 
      */
-    @InputImport(name="publishMibPerSec", required=true)
+    @Import(name="publishMibPerSec", required=true)
       private final Output<Integer> publishMibPerSec;
 
     public Output<Integer> getPublishMibPerSec() {
@@ -28,7 +28,7 @@ public final class LiteTopicPartitionConfigCapacityGetArgs extends io.pulumi.res
      * Publish throughput capacity per partition in MiB/s. Must be >= 4 and <= 16.
      * 
      */
-    @InputImport(name="subscribeMibPerSec", required=true)
+    @Import(name="subscribeMibPerSec", required=true)
       private final Output<Integer> subscribeMibPerSec;
 
     public Output<Integer> getSubscribeMibPerSec() {

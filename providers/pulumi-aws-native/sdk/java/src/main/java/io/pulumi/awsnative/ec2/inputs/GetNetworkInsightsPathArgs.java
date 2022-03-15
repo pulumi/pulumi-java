@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetNetworkInsightsPathArgs extends io.pulumi.resources.Invoke
 
     public static final GetNetworkInsightsPathArgs Empty = new GetNetworkInsightsPathArgs();
 
-    @InputImport(name="networkInsightsPathId", required=true)
+    @Import(name="networkInsightsPathId", required=true)
       private final String networkInsightsPathId;
 
     public String getNetworkInsightsPathId() {

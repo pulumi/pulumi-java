@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSourceErrorInfoType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceErrorInfo {
     /**
      * <p>Error message.</p>
@@ -19,10 +19,10 @@ public final class DataSourceErrorInfo {
     private final @Nullable String message;
     private final @Nullable DataSourceErrorInfoType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceErrorInfo(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") @Nullable DataSourceErrorInfoType type) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") @Nullable DataSourceErrorInfoType type) {
         this.message = message;
         this.type = type;
     }

@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTl
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
      * The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
      * 
      */
-    @InputImport(name="acm")
+    @Import(name="acm")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> getAcm() {
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
      * The TLS validation context trust for a local file certificate.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> getFile() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
      * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
      */
-    @InputImport(name="sds")
+    @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> getSds() {

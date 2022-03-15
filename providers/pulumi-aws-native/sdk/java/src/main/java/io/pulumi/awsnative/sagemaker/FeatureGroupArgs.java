@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.OfflineStoreConfigPropertiesArgs;
 import io.pulumi.awsnative.sagemaker.inputs.OnlineStoreConfigPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Description about the FeatureGroup.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Event Time Feature Name.
      * 
      */
-    @InputImport(name="eventTimeFeatureName", required=true)
+    @Import(name="eventTimeFeatureName", required=true)
       private final Output<String> eventTimeFeatureName;
 
     public Output<String> getEventTimeFeatureName() {
@@ -45,7 +45,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An Array of Feature Definition
      * 
      */
-    @InputImport(name="featureDefinitions", required=true)
+    @Import(name="featureDefinitions", required=true)
       private final Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
     public Output<List<FeatureGroupFeatureDefinitionArgs>> getFeatureDefinitions() {
@@ -56,21 +56,21 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Name of the FeatureGroup.
      * 
      */
-    @InputImport(name="featureGroupName")
+    @Import(name="featureGroupName")
       private final @Nullable Output<String> featureGroupName;
 
     public Output<String> getFeatureGroupName() {
         return this.featureGroupName == null ? Output.empty() : this.featureGroupName;
     }
 
-    @InputImport(name="offlineStoreConfig")
+    @Import(name="offlineStoreConfig")
       private final @Nullable Output<OfflineStoreConfigPropertiesArgs> offlineStoreConfig;
 
     public Output<OfflineStoreConfigPropertiesArgs> getOfflineStoreConfig() {
         return this.offlineStoreConfig == null ? Output.empty() : this.offlineStoreConfig;
     }
 
-    @InputImport(name="onlineStoreConfig")
+    @Import(name="onlineStoreConfig")
       private final @Nullable Output<OnlineStoreConfigPropertiesArgs> onlineStoreConfig;
 
     public Output<OnlineStoreConfigPropertiesArgs> getOnlineStoreConfig() {
@@ -81,7 +81,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Record Identifier Feature Name.
      * 
      */
-    @InputImport(name="recordIdentifierFeatureName", required=true)
+    @Import(name="recordIdentifierFeatureName", required=true)
       private final Output<String> recordIdentifierFeatureName;
 
     public Output<String> getRecordIdentifierFeatureName() {
@@ -92,7 +92,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Role Arn
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -103,7 +103,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pair to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FeatureGroupTagArgs>> tags;
 
     public Output<List<FeatureGroupTagArgs>> getTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWorkloadsConfigScheduler;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWorkloadsConfigWebServer;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWorkloadsConfigWorker;
@@ -11,17 +11,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigWorkloadsConfig {
     private final @Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler;
     private final @Nullable EnvironmentConfigWorkloadsConfigWebServer webServer;
     private final @Nullable EnvironmentConfigWorkloadsConfigWorker worker;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigWorkloadsConfig(
-        @OutputCustomType.Parameter("scheduler") @Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler,
-        @OutputCustomType.Parameter("webServer") @Nullable EnvironmentConfigWorkloadsConfigWebServer webServer,
-        @OutputCustomType.Parameter("worker") @Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
+        @CustomType.Parameter("scheduler") @Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler,
+        @CustomType.Parameter("webServer") @Nullable EnvironmentConfigWorkloadsConfigWebServer webServer,
+        @CustomType.Parameter("worker") @Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
         this.scheduler = scheduler;
         this.webServer = webServer;
         this.worker = worker;

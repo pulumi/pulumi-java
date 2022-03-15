@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1beta1.enums.EnvironmentState;
 import io.pulumi.googlenative.composer_v1beta1.inputs.EnvironmentConfigArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration parameters for this environment.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<EnvironmentConfigArgs> config;
 
     public Output<EnvironmentConfigArgs> getConfig() {
@@ -32,14 +32,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -50,14 +50,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of the environment.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<EnvironmentState> state;
 
     public Output<EnvironmentState> getState() {

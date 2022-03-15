@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
 
     public static final FhirStoreIamMemberState Empty = new FhirStoreIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<FhirStoreIamMemberConditionGetArgs> condition;
 
     public Output<FhirStoreIamMemberConditionGetArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the FHIR store's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -40,14 +40,14 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="fhirStoreId")
+    @Import(name="fhirStoreId")
       private final @Nullable Output<String> fhirStoreId;
 
     public Output<String> getFhirStoreId() {
         return this.fhirStoreId == null ? Output.empty() : this.fhirStoreId;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -60,7 +60,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the fields in a table.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<TableFieldSchemaArgs>> fields;
 
     public Output<List<TableFieldSchemaArgs>> getFields() {

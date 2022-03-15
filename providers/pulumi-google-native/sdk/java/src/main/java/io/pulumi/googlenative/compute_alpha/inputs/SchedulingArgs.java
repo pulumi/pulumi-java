@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.SchedulingInstanceTerminationAction;
 import io.pulumi.googlenative.compute_alpha.enums.SchedulingMaintenanceInterval;
 import io.pulumi.googlenative.compute_alpha.enums.SchedulingOnHostMaintenance;
@@ -31,7 +31,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
      * 
      */
-    @InputImport(name="automaticRestart")
+    @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
     public Output<Boolean> getAutomaticRestart() {
@@ -42,7 +42,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the availability domain (AD), which this instance should be scheduled on. The AD belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the instance. Specify a value between 1-max count of availability domains in your GroupPlacementPolicy. See go/placement-policy-extension for more details.
      * 
      */
-    @InputImport(name="availabilityDomain")
+    @Import(name="availabilityDomain")
       private final @Nullable Output<Integer> availabilityDomain;
 
     public Output<Integer> getAvailabilityDomain() {
@@ -53,7 +53,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Current number of vCPUs available for VM. 0 or unset means default vCPUs of the current machine type.
      * 
      */
-    @InputImport(name="currentCpus")
+    @Import(name="currentCpus")
       private final @Nullable Output<Integer> currentCpus;
 
     public Output<Integer> getCurrentCpus() {
@@ -64,7 +64,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Current amount of memory (in MB) available for VM. 0 or unset means default amount of memory of the current machine type.
      * 
      */
-    @InputImport(name="currentMemoryMb")
+    @Import(name="currentMemoryMb")
       private final @Nullable Output<String> currentMemoryMb;
 
     public Output<String> getCurrentMemoryMb() {
@@ -75,7 +75,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
      * 
      */
-    @InputImport(name="hostErrorTimeoutSeconds")
+    @Import(name="hostErrorTimeoutSeconds")
       private final @Nullable Output<Integer> hostErrorTimeoutSeconds;
 
     public Output<Integer> getHostErrorTimeoutSeconds() {
@@ -86,7 +86,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the termination action for the instance.
      * 
      */
-    @InputImport(name="instanceTerminationAction")
+    @Import(name="instanceTerminationAction")
       private final @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
     public Output<SchedulingInstanceTerminationAction> getInstanceTerminationAction() {
@@ -97,7 +97,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Defines whether the instance is tolerant of higher cpu latency. This can only be set during instance creation, or when the instance is not currently running. It must not be set if the preemptible option is also set.
      * 
      */
-    @InputImport(name="latencyTolerant")
+    @Import(name="latencyTolerant")
       private final @Nullable Output<Boolean> latencyTolerant;
 
     public Output<Boolean> getLatencyTolerant() {
@@ -108,7 +108,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
      * 
      */
-    @InputImport(name="locationHint")
+    @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
     public Output<String> getLocationHint() {
@@ -119,7 +119,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
      * 
      */
-    @InputImport(name="maintenanceFreezeDurationHours")
+    @Import(name="maintenanceFreezeDurationHours")
       private final @Nullable Output<Integer> maintenanceFreezeDurationHours;
 
     public Output<Integer> getMaintenanceFreezeDurationHours() {
@@ -130,7 +130,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * For more information about maintenance intervals, see Setting maintenance intervals.
      * 
      */
-    @InputImport(name="maintenanceInterval")
+    @Import(name="maintenanceInterval")
       private final @Nullable Output<SchedulingMaintenanceInterval> maintenanceInterval;
 
     public Output<SchedulingMaintenanceInterval> getMaintenanceInterval() {
@@ -141,7 +141,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
      * 
      */
-    @InputImport(name="maxRunDuration")
+    @Import(name="maxRunDuration")
       private final @Nullable Output<DurationArgs> maxRunDuration;
 
     public Output<DurationArgs> getMaxRunDuration() {
@@ -152,7 +152,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
      */
-    @InputImport(name="minNodeCpus")
+    @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
     public Output<Integer> getMinNodeCpus() {
@@ -163,7 +163,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
      * 
      */
-    @InputImport(name="nodeAffinities")
+    @Import(name="nodeAffinities")
       private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Output<List<SchedulingNodeAffinityArgs>> getNodeAffinities() {
@@ -174,7 +174,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
      * 
      */
-    @InputImport(name="onHostMaintenance")
+    @Import(name="onHostMaintenance")
       private final @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
 
     public Output<SchedulingOnHostMaintenance> getOnHostMaintenance() {
@@ -185,7 +185,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
      * 
      */
-    @InputImport(name="preemptible")
+    @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {
@@ -196,7 +196,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the provisioning model of the instance.
      * 
      */
-    @InputImport(name="provisioningModel")
+    @Import(name="provisioningModel")
       private final @Nullable Output<SchedulingProvisioningModel> provisioningModel;
 
     public Output<SchedulingProvisioningModel> getProvisioningModel() {
@@ -207,7 +207,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
      * 
      */
-    @InputImport(name="terminationTime")
+    @Import(name="terminationTime")
       private final @Nullable Output<String> terminationTime;
 
     public Output<String> getTerminationTime() {

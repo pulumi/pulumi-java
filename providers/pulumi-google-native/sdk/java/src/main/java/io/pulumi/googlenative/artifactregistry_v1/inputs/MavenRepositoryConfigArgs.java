@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.artifactregistry_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.artifactregistry_v1.enums.MavenRepositoryConfigVersionPolicy;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
      * The repository with this flag will allow publishing the same snapshot versions.
      * 
      */
-    @InputImport(name="allowSnapshotOverwrites")
+    @Import(name="allowSnapshotOverwrites")
       private final @Nullable Output<Boolean> allowSnapshotOverwrites;
 
     public Output<Boolean> getAllowSnapshotOverwrites() {
@@ -34,7 +34,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
      * Version policy defines the versions that the registry will accept.
      * 
      */
-    @InputImport(name="versionPolicy")
+    @Import(name="versionPolicy")
       private final @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
     public Output<MavenRepositoryConfigVersionPolicy> getVersionPolicy() {

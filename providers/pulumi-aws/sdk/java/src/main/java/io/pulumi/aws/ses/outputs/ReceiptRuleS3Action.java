@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleS3Action {
     /**
      * The name of the S3 bucket
@@ -38,13 +38,13 @@ public final class ReceiptRuleS3Action {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleS3Action(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix,
-        @OutputCustomType.Parameter("position") Integer position,
-        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix,
+        @CustomType.Parameter("position") Integer position,
+        @CustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.objectKeyPrefix = objectKeyPrefix;

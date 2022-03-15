@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosXcTestResponse {
     /**
      * The bundle id for the application under test.
@@ -37,13 +37,13 @@ public final class IosXcTestResponse {
      */
     private final FileReferenceResponse xctestrun;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IosXcTestResponse(
-        @OutputCustomType.Parameter("appBundleId") String appBundleId,
-        @OutputCustomType.Parameter("testSpecialEntitlements") Boolean testSpecialEntitlements,
-        @OutputCustomType.Parameter("testsZip") FileReferenceResponse testsZip,
-        @OutputCustomType.Parameter("xcodeVersion") String xcodeVersion,
-        @OutputCustomType.Parameter("xctestrun") FileReferenceResponse xctestrun) {
+        @CustomType.Parameter("appBundleId") String appBundleId,
+        @CustomType.Parameter("testSpecialEntitlements") Boolean testSpecialEntitlements,
+        @CustomType.Parameter("testsZip") FileReferenceResponse testsZip,
+        @CustomType.Parameter("xcodeVersion") String xcodeVersion,
+        @CustomType.Parameter("xctestrun") FileReferenceResponse xctestrun) {
         this.appBundleId = appBundleId;
         this.testSpecialEntitlements = testSpecialEntitlements;
         this.testsZip = testsZip;

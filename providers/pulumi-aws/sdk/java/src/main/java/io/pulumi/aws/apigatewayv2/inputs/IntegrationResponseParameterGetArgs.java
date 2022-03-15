@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
      * 
      */
-    @InputImport(name="mappings", required=true)
+    @Import(name="mappings", required=true)
       private final Output<Map<String,String>> mappings;
 
     public Output<Map<String,String>> getMappings() {
@@ -30,7 +30,7 @@ public final class IntegrationResponseParameterGetArgs extends io.pulumi.resourc
      * The HTTP status code in the range 200-599.
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
     public Output<String> getStatusCode() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * A unique primary identifier for a Resource
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -27,7 +27,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the RestApi resource in which you want to create this resource..
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

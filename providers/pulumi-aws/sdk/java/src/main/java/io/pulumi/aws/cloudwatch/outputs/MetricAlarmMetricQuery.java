@@ -4,14 +4,14 @@
 package io.pulumi.aws.cloudwatch.outputs;
 
 import io.pulumi.aws.cloudwatch.outputs.MetricAlarmMetricQueryMetric;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricAlarmMetricQuery {
     /**
      * The ID of the account where the metrics are located, if this is a cross-account alarm.
@@ -44,14 +44,14 @@ public final class MetricAlarmMetricQuery {
      */
     private final @Nullable Boolean returnData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricAlarmMetricQuery(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("expression") @Nullable String expression,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("metric") @Nullable MetricAlarmMetricQueryMetric metric,
-        @OutputCustomType.Parameter("returnData") @Nullable Boolean returnData) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("expression") @Nullable String expression,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("metric") @Nullable MetricAlarmMetricQueryMetric metric,
+        @CustomType.Parameter("returnData") @Nullable Boolean returnData) {
         this.accountId = accountId;
         this.expression = expression;
         this.id = id;

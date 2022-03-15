@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
      * Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
      * 
      */
-    @InputImport(name="basePath")
+    @Import(name="basePath")
       private final @Nullable Output<String> basePath;
 
     public Output<String> getBasePath() {
@@ -29,7 +29,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
      * The already-registered domain name to connect the API to.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -40,7 +40,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
      * The id of the API to connect.
      * 
      */
-    @InputImport(name="restApi")
+    @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -51,7 +51,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
      * The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {

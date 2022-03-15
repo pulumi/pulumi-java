@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
      * this service that return in no more than threshold.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<String> threshold;
 
     public Output<String> getThreshold() {

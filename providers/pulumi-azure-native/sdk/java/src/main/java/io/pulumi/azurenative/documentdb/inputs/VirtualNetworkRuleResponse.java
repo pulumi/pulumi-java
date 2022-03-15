@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -34,7 +34,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
-    @InputImport(name="ignoreMissingVNetServiceEndpoint")
+    @Import(name="ignoreMissingVNetServiceEndpoint")
       private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
     public Optional<Boolean> getIgnoreMissingVNetServiceEndpoint() {

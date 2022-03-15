@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * `false`.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -35,7 +35,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of cluster
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -47,7 +47,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * instances in the DB cluster can be created in.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -58,7 +58,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The days to retain backups for. Default `1`
      * 
      */
-    @InputImport(name="backupRetentionPeriod")
+    @Import(name="backupRetentionPeriod")
       private final @Nullable Output<Integer> backupRetentionPeriod;
 
     public Output<Integer> getBackupRetentionPeriod() {
@@ -69,7 +69,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The cluster identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -80,7 +80,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
      * 
      */
-    @InputImport(name="clusterIdentifierPrefix")
+    @Import(name="clusterIdentifierPrefix")
       private final @Nullable Output<String> clusterIdentifierPrefix;
 
     public Output<String> getClusterIdentifierPrefix() {
@@ -91,7 +91,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of DocDB Instances that are a part of this cluster
      * 
      */
-    @InputImport(name="clusterMembers")
+    @Import(name="clusterMembers")
       private final @Nullable Output<List<String>> clusterMembers;
 
     public Output<List<String>> getClusterMembers() {
@@ -102,7 +102,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The DocDB Cluster Resource ID
      * 
      */
-    @InputImport(name="clusterResourceId")
+    @Import(name="clusterResourceId")
       private final @Nullable Output<String> clusterResourceId;
 
     public Output<String> getClusterResourceId() {
@@ -113,7 +113,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A cluster parameter group to associate with the cluster.
      * 
      */
-    @InputImport(name="dbClusterParameterGroupName")
+    @Import(name="dbClusterParameterGroupName")
       private final @Nullable Output<String> dbClusterParameterGroupName;
 
     public Output<String> getDbClusterParameterGroupName() {
@@ -124,7 +124,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A DB subnet group to associate with this DB instance.
      * 
      */
-    @InputImport(name="dbSubnetGroupName")
+    @Import(name="dbSubnetGroupName")
       private final @Nullable Output<String> dbSubnetGroupName;
 
     public Output<String> getDbSubnetGroupName() {
@@ -135,7 +135,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -147,7 +147,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The following log types are supported: `audit`, `profiler`.
      * 
      */
-    @InputImport(name="enabledCloudwatchLogsExports")
+    @Import(name="enabledCloudwatchLogsExports")
       private final @Nullable Output<List<String>> enabledCloudwatchLogsExports;
 
     public Output<List<String>> getEnabledCloudwatchLogsExports() {
@@ -158,7 +158,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The DNS address of the DocDB instance
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -169,7 +169,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -180,7 +180,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The database engine version. Updating this argument results in an outage.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -193,7 +193,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * made.
      * 
      */
-    @InputImport(name="finalSnapshotIdentifier")
+    @Import(name="finalSnapshotIdentifier")
       private final @Nullable Output<String> finalSnapshotIdentifier;
 
     public Output<String> getFinalSnapshotIdentifier() {
@@ -204,7 +204,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The global cluster identifier specified on `aws.docdb.GlobalCluster`.
      * 
      */
-    @InputImport(name="globalClusterIdentifier")
+    @Import(name="globalClusterIdentifier")
       private final @Nullable Output<String> globalClusterIdentifier;
 
     public Output<String> getGlobalClusterIdentifier() {
@@ -215,7 +215,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The Route53 Hosted Zone ID of the endpoint
      * 
      */
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -226,7 +226,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -238,7 +238,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
      * 
      */
-    @InputImport(name="masterPassword")
+    @Import(name="masterPassword")
       private final @Nullable Output<String> masterPassword;
 
     public Output<String> getMasterPassword() {
@@ -249,7 +249,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Username for the master DB user.
      * 
      */
-    @InputImport(name="masterUsername")
+    @Import(name="masterUsername")
       private final @Nullable Output<String> masterUsername;
 
     public Output<String> getMasterUsername() {
@@ -260,7 +260,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The port on which the DB accepts connections
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -272,7 +272,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
      * 
      */
-    @InputImport(name="preferredBackupWindow")
+    @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
     public Output<String> getPreferredBackupWindow() {
@@ -283,7 +283,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
      * 
      */
-    @InputImport(name="preferredMaintenanceWindow")
+    @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
@@ -294,7 +294,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
      * 
      */
-    @InputImport(name="readerEndpoint")
+    @Import(name="readerEndpoint")
       private final @Nullable Output<String> readerEndpoint;
 
     public Output<String> getReaderEndpoint() {
@@ -305,7 +305,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    @InputImport(name="skipFinalSnapshot")
+    @Import(name="skipFinalSnapshot")
       private final @Nullable Output<Boolean> skipFinalSnapshot;
 
     public Output<Boolean> getSkipFinalSnapshot() {
@@ -316,7 +316,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
      * 
      */
-    @InputImport(name="snapshotIdentifier")
+    @Import(name="snapshotIdentifier")
       private final @Nullable Output<String> snapshotIdentifier;
 
     public Output<String> getSnapshotIdentifier() {
@@ -327,7 +327,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the DB cluster is encrypted. The default is `false`.
      * 
      */
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {
@@ -338,7 +338,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the DB cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -349,7 +349,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -361,7 +361,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * with the Cluster
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {

@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.InputAttribute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InputDefinition {
     /**
      * The attributes from the JSON payload that are made available by the input. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`. Each such message contains a JSON payload, and those attributes (and their paired values) specified here are available for use in the `condition` expressions used by detectors that monitor this input.
@@ -16,8 +16,8 @@ public final class InputDefinition {
      */
     private final List<InputAttribute> attributes;
 
-    @OutputCustomType.Constructor
-    private InputDefinition(@OutputCustomType.Parameter("attributes") List<InputAttribute> attributes) {
+    @CustomType.Constructor
+    private InputDefinition(@CustomType.Parameter("attributes") List<InputAttribute> attributes) {
         this.attributes = attributes;
     }
 

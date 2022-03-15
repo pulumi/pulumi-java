@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
      * Cpu allocated to each Spring Cloud Gateway Operator instance.
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final String cpu;
 
     public String getCpu() {
@@ -32,7 +32,7 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
      * Instance count of the Spring Cloud Gateway Operator.
      * 
      */
-    @InputImport(name="instanceCount", required=true)
+    @Import(name="instanceCount", required=true)
       private final Integer instanceCount;
 
     public Integer getInstanceCount() {
@@ -43,7 +43,7 @@ public final class GatewayOperatorResourceRequestsResponse extends io.pulumi.res
      * Memory allocated to each Spring Cloud Gateway Operator instance.
      * 
      */
-    @InputImport(name="memory", required=true)
+    @Import(name="memory", required=true)
       private final String memory;
 
     public String getMemory() {

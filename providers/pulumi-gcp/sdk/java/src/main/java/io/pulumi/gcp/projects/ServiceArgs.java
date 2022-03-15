@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * services depend on this service when destroying it.
      * 
      */
-    @InputImport(name="disableDependentServices")
+    @Import(name="disableDependentServices")
       private final @Nullable Output<Boolean> disableDependentServices;
 
     public Output<Boolean> getDisableDependentServices() {
@@ -33,7 +33,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, disable the service when the resource is destroyed. Defaults to true. May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
      * 
      */
-    @InputImport(name="disableOnDestroy")
+    @Import(name="disableOnDestroy")
       private final @Nullable Output<Boolean> disableOnDestroy;
 
     public Output<Boolean> getDisableOnDestroy() {
@@ -45,7 +45,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -56,7 +56,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The service to enable.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

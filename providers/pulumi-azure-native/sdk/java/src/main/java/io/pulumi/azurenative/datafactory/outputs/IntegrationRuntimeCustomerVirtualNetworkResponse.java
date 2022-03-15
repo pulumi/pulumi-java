@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
     /**
      * The ID of subnet to which Azure-SSIS integration runtime will join.
@@ -17,8 +17,8 @@ public final class IntegrationRuntimeCustomerVirtualNetworkResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
-    private IntegrationRuntimeCustomerVirtualNetworkResponse(@OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+    @CustomType.Constructor
+    private IntegrationRuntimeCustomerVirtualNetworkResponse(@CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.subnetId = subnetId;
     }
 

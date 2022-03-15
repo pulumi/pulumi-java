@@ -5,13 +5,13 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanActionResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanProtectedItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryPlanGroupResponse {
     /**
      * The end group actions.
@@ -34,12 +34,12 @@ public final class RecoveryPlanGroupResponse {
      */
     private final @Nullable List<RecoveryPlanActionResponse> startGroupActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryPlanGroupResponse(
-        @OutputCustomType.Parameter("endGroupActions") @Nullable List<RecoveryPlanActionResponse> endGroupActions,
-        @OutputCustomType.Parameter("groupType") String groupType,
-        @OutputCustomType.Parameter("replicationProtectedItems") @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems,
-        @OutputCustomType.Parameter("startGroupActions") @Nullable List<RecoveryPlanActionResponse> startGroupActions) {
+        @CustomType.Parameter("endGroupActions") @Nullable List<RecoveryPlanActionResponse> endGroupActions,
+        @CustomType.Parameter("groupType") String groupType,
+        @CustomType.Parameter("replicationProtectedItems") @Nullable List<RecoveryPlanProtectedItemResponse> replicationProtectedItems,
+        @CustomType.Parameter("startGroupActions") @Nullable List<RecoveryPlanActionResponse> startGroupActions) {
         this.endGroupActions = endGroupActions;
         this.groupType = groupType;
         this.replicationProtectedItems = replicationProtectedItems;

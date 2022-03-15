@@ -5,14 +5,14 @@ package io.pulumi.awsnative.accessanalyzer.outputs;
 
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerArchiveRule;
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAnalyzerResult {
     private final @Nullable List<AnalyzerArchiveRule> archiveRules;
     /**
@@ -26,11 +26,11 @@ public final class GetAnalyzerResult {
      */
     private final @Nullable List<AnalyzerTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnalyzerResult(
-        @OutputCustomType.Parameter("archiveRules") @Nullable List<AnalyzerArchiveRule> archiveRules,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<AnalyzerTag> tags) {
+        @CustomType.Parameter("archiveRules") @Nullable List<AnalyzerArchiveRule> archiveRules,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<AnalyzerTag> tags) {
         this.archiveRules = archiveRules;
         this.arn = arn;
         this.tags = tags;

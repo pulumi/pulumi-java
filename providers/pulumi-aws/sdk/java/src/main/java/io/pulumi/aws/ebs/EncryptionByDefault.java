@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ebs.EncryptionByDefaultArgs;
 import io.pulumi.aws.ebs.inputs.EncryptionByDefaultState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class EncryptionByDefault extends io.pulumi.resources.CustomResource {
      * Whether or not default EBS encryption is enabled. Valid values are `true` or `false`. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**

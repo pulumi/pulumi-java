@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.HubRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -31,7 +31,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * List of labels associated with this route table.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<String>> labels;
 
     public Output<List<String>> getLabels() {
@@ -42,7 +42,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the VirtualHub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the RouteTable.
      * 
      */
-    @InputImport(name="routeTableName")
+    @Import(name="routeTableName")
       private final @Nullable Output<String> routeTableName;
 
     public Output<String> getRouteTableName() {
@@ -75,7 +75,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * List of all routes.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<List<HubRouteArgs>> routes;
 
     public Output<List<HubRouteArgs>> getRoutes() {
@@ -86,7 +86,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName", required=true)
+    @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
     public Output<String> getVirtualHubName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RolePolicy {
     /**
      * The policy document.
@@ -20,10 +20,10 @@ public final class RolePolicy {
      */
     private final String policyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RolePolicy(
-        @OutputCustomType.Parameter("policyDocument") String policyDocument,
-        @OutputCustomType.Parameter("policyName") String policyName) {
+        @CustomType.Parameter("policyDocument") String policyDocument,
+        @CustomType.Parameter("policyName") String policyName) {
         this.policyDocument = policyDocument;
         this.policyName = policyName;
     }

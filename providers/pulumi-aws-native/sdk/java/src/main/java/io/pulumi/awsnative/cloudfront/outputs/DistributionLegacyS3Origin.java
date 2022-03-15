@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionLegacyS3Origin {
     private final String dNSName;
     private final @Nullable String originAccessIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionLegacyS3Origin(
-        @OutputCustomType.Parameter("dNSName") String dNSName,
-        @OutputCustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
+        @CustomType.Parameter("dNSName") String dNSName,
+        @CustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
         this.dNSName = dNSName;
         this.originAccessIdentity = originAccessIdentity;
     }

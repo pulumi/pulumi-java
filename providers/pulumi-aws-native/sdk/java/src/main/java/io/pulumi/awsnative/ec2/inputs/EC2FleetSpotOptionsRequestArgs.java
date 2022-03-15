@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestAllocationStrateg
 import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestInstanceInterruptionBehavior;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetMaintenanceStrategiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,56 +19,56 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
 
     public static final EC2FleetSpotOptionsRequestArgs Empty = new EC2FleetSpotOptionsRequestArgs();
 
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
 
     public Output<EC2FleetSpotOptionsRequestAllocationStrategy> getAllocationStrategy() {
         return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
     }
 
-    @InputImport(name="instanceInterruptionBehavior")
+    @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
 
     public Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
     }
 
-    @InputImport(name="instancePoolsToUseCount")
+    @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
     public Output<Integer> getInstancePoolsToUseCount() {
         return this.instancePoolsToUseCount == null ? Output.empty() : this.instancePoolsToUseCount;
     }
 
-    @InputImport(name="maintenanceStrategies")
+    @Import(name="maintenanceStrategies")
       private final @Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
 
     public Output<EC2FleetMaintenanceStrategiesArgs> getMaintenanceStrategies() {
         return this.maintenanceStrategies == null ? Output.empty() : this.maintenanceStrategies;
     }
 
-    @InputImport(name="maxTotalPrice")
+    @Import(name="maxTotalPrice")
       private final @Nullable Output<String> maxTotalPrice;
 
     public Output<String> getMaxTotalPrice() {
         return this.maxTotalPrice == null ? Output.empty() : this.maxTotalPrice;
     }
 
-    @InputImport(name="minTargetCapacity")
+    @Import(name="minTargetCapacity")
       private final @Nullable Output<Integer> minTargetCapacity;
 
     public Output<Integer> getMinTargetCapacity() {
         return this.minTargetCapacity == null ? Output.empty() : this.minTargetCapacity;
     }
 
-    @InputImport(name="singleAvailabilityZone")
+    @Import(name="singleAvailabilityZone")
       private final @Nullable Output<Boolean> singleAvailabilityZone;
 
     public Output<Boolean> getSingleAvailabilityZone() {
         return this.singleAvailabilityZone == null ? Output.empty() : this.singleAvailabilityZone;
     }
 
-    @InputImport(name="singleInstanceType")
+    @Import(name="singleInstanceType")
       private final @Nullable Output<Boolean> singleInstanceType;
 
     public Output<Boolean> getSingleInstanceType() {

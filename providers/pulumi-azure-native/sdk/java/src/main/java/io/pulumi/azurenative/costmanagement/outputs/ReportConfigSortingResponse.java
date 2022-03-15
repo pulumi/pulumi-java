@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportConfigSortingResponse {
     /**
      * Direction of sort.
@@ -22,10 +22,10 @@ public final class ReportConfigSortingResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportConfigSortingResponse(
-        @OutputCustomType.Parameter("direction") @Nullable String direction,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("direction") @Nullable String direction,
+        @CustomType.Parameter("name") String name) {
         this.direction = direction;
         this.name = name;
     }

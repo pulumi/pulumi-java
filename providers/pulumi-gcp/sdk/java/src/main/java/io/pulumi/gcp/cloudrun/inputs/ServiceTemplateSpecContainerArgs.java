@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerPortArgs;
@@ -32,7 +32,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -51,7 +51,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="commands")
+    @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
@@ -73,7 +73,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
-    @InputImport(name="envFroms")
+    @Import(name="envFroms")
       private final @Nullable Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
@@ -86,7 +86,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="envs")
+    @Import(name="envs")
       private final @Nullable Output<List<ServiceTemplateSpecContainerEnvArgs>> envs;
 
     public Output<List<ServiceTemplateSpecContainerEnvArgs>> getEnvs() {
@@ -99,7 +99,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * More info: https://kubernetes.io/docs/concepts/containers/images
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -113,7 +113,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ServiceTemplateSpecContainerPortArgs>> ports;
 
     public Output<List<ServiceTemplateSpecContainerPortArgs>> getPorts() {
@@ -127,7 +127,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<ServiceTemplateSpecContainerResourcesArgs> resources;
 
     public Output<ServiceTemplateSpecContainerResourcesArgs> getResources() {
@@ -140,7 +140,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
 
     public Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> getVolumeMounts() {
@@ -159,7 +159,7 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
-    @InputImport(name="workingDir")
+    @Import(name="workingDir")
       private final @Nullable Output<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */

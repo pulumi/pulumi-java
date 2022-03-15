@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * An identity provider that reflects the `issuer` in the workload identity pool.
      * 
      */
-    @InputImport(name="identityProvider", required=true)
+    @Import(name="identityProvider", required=true)
       private final String identityProvider;
 
     public String getIdentityProvider() {
@@ -31,7 +31,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. A JSON Web Token (JWT) issuer URI. `issuer` must start with `https://` and be a valid URL with length <2000 characters. If set, then Google will allow valid OIDC tokens from this issuer to authenticate within the workload_identity_pool. OIDC discovery will be performed on this URI to validate tokens from the issuer. Clearing `issuer` disables Workload Identity. `issuer` cannot be directly modified; it must be cleared (and Workload Identity disabled) before using a new issuer (and re-enabling Workload Identity).
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -42,7 +42,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. OIDC verification keys for this Membership in JWKS format (RFC 7517). When this field is set, OIDC discovery will NOT be performed on `issuer`, and instead OIDC tokens will be validated using this field.
      * 
      */
-    @InputImport(name="oidcJwks", required=true)
+    @Import(name="oidcJwks", required=true)
       private final String oidcJwks;
 
     public String getOidcJwks() {
@@ -53,7 +53,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the workload identity pool in which `issuer` will be recognized. There is a single Workload Identity Pool per Hub that is shared between all Memberships that belong to that Hub. For a Hub hosted in {PROJECT_ID}, the workload pool format is `{PROJECT_ID}.hub.id.goog`, although this is subject to change in newer versions of this API.
      * 
      */
-    @InputImport(name="workloadIdentityPool", required=true)
+    @Import(name="workloadIdentityPool", required=true)
       private final String workloadIdentityPool;
 
     public String getWorkloadIdentityPool() {

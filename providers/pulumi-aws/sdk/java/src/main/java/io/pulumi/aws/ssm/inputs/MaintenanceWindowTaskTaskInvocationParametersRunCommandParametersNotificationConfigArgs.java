@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
      * 
      */
-    @InputImport(name="notificationArn")
+    @Import(name="notificationArn")
       private final @Nullable Output<String> notificationArn;
 
     public Output<String> getNotificationArn() {
@@ -30,7 +30,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
      * 
      */
-    @InputImport(name="notificationEvents")
+    @Import(name="notificationEvents")
       private final @Nullable Output<List<String>> notificationEvents;
 
     public Output<List<String>> getNotificationEvents() {
@@ -41,7 +41,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
      * 
      */
-    @InputImport(name="notificationType")
+    @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
     public Output<String> getNotificationType() {

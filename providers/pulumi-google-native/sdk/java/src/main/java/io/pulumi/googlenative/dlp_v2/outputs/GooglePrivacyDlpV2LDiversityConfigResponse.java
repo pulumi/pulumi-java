@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LDiversityConfigResponse {
     /**
      * Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2LDiversityConfigResponse(
-        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds,
-        @OutputCustomType.Parameter("sensitiveAttribute") GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
+        @CustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds,
+        @CustomType.Parameter("sensitiveAttribute") GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
         this.quasiIds = quasiIds;
         this.sensitiveAttribute = sensitiveAttribute;
     }

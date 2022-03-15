@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * API identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * Comment identifier within an Issue. Must be unique in the current Issue.
      * 
      */
-    @InputImport(name="commentId")
+    @Import(name="commentId")
       private final @Nullable Output<String> commentId;
 
     public Output<String> getCommentId() {
@@ -40,7 +40,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * Date and time when the comment was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -51,7 +51,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * Issue identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="issueId", required=true)
+    @Import(name="issueId", required=true)
       private final Output<String> issueId;
 
     public Output<String> getIssueId() {
@@ -62,7 +62,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -84,7 +84,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * Comment text.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final Output<String> text;
 
     public Output<String> getText() {
@@ -95,7 +95,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
      * A resource identifier for the user who left the comment.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

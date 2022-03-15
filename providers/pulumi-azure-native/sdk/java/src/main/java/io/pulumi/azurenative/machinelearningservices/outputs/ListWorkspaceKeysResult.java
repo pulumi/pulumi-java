@@ -5,11 +5,11 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ListNotebookKeysResultResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.RegistryListCredentialsResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListWorkspaceKeysResult {
     private final String appInsightsInstrumentationKey;
     private final RegistryListCredentialsResultResponse containerRegistryCredentials;
@@ -17,13 +17,13 @@ public final class ListWorkspaceKeysResult {
     private final String userStorageKey;
     private final String userStorageResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWorkspaceKeysResult(
-        @OutputCustomType.Parameter("appInsightsInstrumentationKey") String appInsightsInstrumentationKey,
-        @OutputCustomType.Parameter("containerRegistryCredentials") RegistryListCredentialsResultResponse containerRegistryCredentials,
-        @OutputCustomType.Parameter("notebookAccessKeys") ListNotebookKeysResultResponse notebookAccessKeys,
-        @OutputCustomType.Parameter("userStorageKey") String userStorageKey,
-        @OutputCustomType.Parameter("userStorageResourceId") String userStorageResourceId) {
+        @CustomType.Parameter("appInsightsInstrumentationKey") String appInsightsInstrumentationKey,
+        @CustomType.Parameter("containerRegistryCredentials") RegistryListCredentialsResultResponse containerRegistryCredentials,
+        @CustomType.Parameter("notebookAccessKeys") ListNotebookKeysResultResponse notebookAccessKeys,
+        @CustomType.Parameter("userStorageKey") String userStorageKey,
+        @CustomType.Parameter("userStorageResourceId") String userStorageResourceId) {
         this.appInsightsInstrumentationKey = appInsightsInstrumentationKey;
         this.containerRegistryCredentials = containerRegistryCredentials;
         this.notebookAccessKeys = notebookAccessKeys;

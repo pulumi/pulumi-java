@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
      * The unique identifier of the Managed Compute Engine instance.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -32,7 +32,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
      * The user-friendly name of the Managed Compute Engine instance.
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -44,7 +44,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="virtualMachineConfig")
+    @Import(name="virtualMachineConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigArgs> getVirtualMachineConfig() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.TokenStatus;
 import io.pulumi.azurenative.containerregistry.inputs.TokenCredentialsPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * The credentials that can be used for authenticating the token.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<TokenCredentialsPropertiesArgs> credentials;
 
     public Output<TokenCredentialsPropertiesArgs> getCredentials() {
@@ -32,7 +32,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -43,7 +43,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the scope map to which the token will be associated with.
      * 
      */
-    @InputImport(name="scopeMapId")
+    @Import(name="scopeMapId")
       private final @Nullable Output<String> scopeMapId;
 
     public Output<String> getScopeMapId() {
@@ -65,7 +65,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the token example enabled or disabled.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TokenStatus>> status;
 
     public Output<Either<String,TokenStatus>> getStatus() {
@@ -76,7 +76,7 @@ public final class TokenArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the token.
      * 
      */
-    @InputImport(name="tokenName")
+    @Import(name="tokenName")
       private final @Nullable Output<String> tokenName;
 
     public Output<String> getTokenName() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourcePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SharedPrivateLinkResourceResponse {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -33,12 +33,12 @@ public final class SharedPrivateLinkResourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SharedPrivateLinkResourceResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") @Nullable SharedPrivateLinkResourcePropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") @Nullable SharedPrivateLinkResourcePropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

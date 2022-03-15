@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.NotebookInstanceLifecycleConfigurationArgs;
 import io.pulumi.aws.sagemaker.inputs.NotebookInstanceLifecycleConfigurationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public class NotebookInstanceLifecycleConfiguration extends io.pulumi.resources.
      * The Amazon Resource Name (ARN) assigned by AWS to this lifecycle configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class NotebookInstanceLifecycleConfiguration extends io.pulumi.resources.
      * The name of the lifecycle configuration (must be unique). If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -58,7 +58,7 @@ public class NotebookInstanceLifecycleConfiguration extends io.pulumi.resources.
      * A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.
      * 
      */
-    @OutputExport(name="onCreate", type=String.class, parameters={})
+    @Export(name="onCreate", type=String.class, parameters={})
     private Output</* @Nullable */ String> onCreate;
 
     /**
@@ -72,7 +72,7 @@ public class NotebookInstanceLifecycleConfiguration extends io.pulumi.resources.
      * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
      * 
      */
-    @OutputExport(name="onStart", type=String.class, parameters={})
+    @Export(name="onStart", type=String.class, parameters={})
     private Output</* @Nullable */ String> onStart;
 
     /**

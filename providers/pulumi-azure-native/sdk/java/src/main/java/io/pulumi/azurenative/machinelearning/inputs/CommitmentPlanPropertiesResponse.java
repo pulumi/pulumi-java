@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.PlanQuantityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Indicates whether usage beyond the commitment plan's included quantities will be charged.
      * 
      */
-    @InputImport(name="chargeForOverage", required=true)
+    @Import(name="chargeForOverage", required=true)
       private final Boolean chargeForOverage;
 
     public Boolean getChargeForOverage() {
@@ -35,7 +35,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Indicates whether the commitment plan will incur a charge.
      * 
      */
-    @InputImport(name="chargeForPlan", required=true)
+    @Import(name="chargeForPlan", required=true)
       private final Boolean chargeForPlan;
 
     public Boolean getChargeForPlan() {
@@ -46,7 +46,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The date at which this commitment plan was created, in ISO 8601 format.
      * 
      */
-    @InputImport(name="creationDate", required=true)
+    @Import(name="creationDate", required=true)
       private final String creationDate;
 
     public String getCreationDate() {
@@ -57,7 +57,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The included resource quantities this plan gives you.
      * 
      */
-    @InputImport(name="includedQuantities", required=true)
+    @Import(name="includedQuantities", required=true)
       private final Map<String,PlanQuantityResponse> includedQuantities;
 
     public Map<String,PlanQuantityResponse> getIncludedQuantities() {
@@ -68,7 +68,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The maximum number of commitment associations that can be children of this commitment plan.
      * 
      */
-    @InputImport(name="maxAssociationLimit", required=true)
+    @Import(name="maxAssociationLimit", required=true)
       private final Integer maxAssociationLimit;
 
     public Integer getMaxAssociationLimit() {
@@ -79,7 +79,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The maximum scale-out capacity for this commitment plan.
      * 
      */
-    @InputImport(name="maxCapacityLimit", required=true)
+    @Import(name="maxCapacityLimit", required=true)
       private final Integer maxCapacityLimit;
 
     public Integer getMaxCapacityLimit() {
@@ -90,7 +90,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The minimum scale-out capacity for this commitment plan.
      * 
      */
-    @InputImport(name="minCapacityLimit", required=true)
+    @Import(name="minCapacityLimit", required=true)
       private final Integer minCapacityLimit;
 
     public Integer getMinCapacityLimit() {
@@ -101,7 +101,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The Azure meter which will be used to charge for this commitment plan.
      * 
      */
-    @InputImport(name="planMeter", required=true)
+    @Import(name="planMeter", required=true)
       private final String planMeter;
 
     public String getPlanMeter() {
@@ -112,7 +112,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * The frequency at which this commitment plan's included quantities are refilled.
      * 
      */
-    @InputImport(name="refillFrequencyInDays", required=true)
+    @Import(name="refillFrequencyInDays", required=true)
       private final Integer refillFrequencyInDays;
 
     public Integer getRefillFrequencyInDays() {
@@ -123,7 +123,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.
      * 
      */
-    @InputImport(name="suspendPlanOnOverage", required=true)
+    @Import(name="suspendPlanOnOverage", required=true)
       private final Boolean suspendPlanOnOverage;
 
     public Boolean getSuspendPlanOnOverage() {

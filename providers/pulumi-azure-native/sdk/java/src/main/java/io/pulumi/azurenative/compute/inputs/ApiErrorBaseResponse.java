@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
      * The error code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -33,7 +33,7 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
      * The error message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -44,7 +44,7 @@ public final class ApiErrorBaseResponse extends io.pulumi.resources.InvokeArgs {
      * The target of the particular error.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

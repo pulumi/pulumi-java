@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.RRSetRoutingPolicyResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceRecordSetResult {
     private final String kind;
     /**
@@ -44,15 +44,15 @@ public final class GetResourceRecordSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceRecordSetResult(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("routingPolicy") RRSetRoutingPolicyResponse routingPolicy,
-        @OutputCustomType.Parameter("rrdatas") List<String> rrdatas,
-        @OutputCustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas,
-        @OutputCustomType.Parameter("ttl") Integer ttl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("routingPolicy") RRSetRoutingPolicyResponse routingPolicy,
+        @CustomType.Parameter("rrdatas") List<String> rrdatas,
+        @CustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas,
+        @CustomType.Parameter("ttl") Integer ttl,
+        @CustomType.Parameter("type") String type) {
         this.kind = kind;
         this.name = name;
         this.routingPolicy = routingPolicy;

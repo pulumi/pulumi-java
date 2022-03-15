@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiFeatureStoreEntityTypeArgs;
@@ -31,7 +31,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * nine fractional digits.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -46,7 +46,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * Used to perform consistent read-modify-write updates.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -60,7 +60,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
      * 
      */
-    @OutputExport(name="featurestore", type=String.class, parameters={})
+    @Export(name="featurestore", type=String.class, parameters={})
     private Output<String> featurestore;
 
     /**
@@ -74,7 +74,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * A set of key/value label pairs to assign to this EntityType.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -90,7 +90,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="monitoringConfig", type=AiFeatureStoreEntityTypeMonitoringConfig.class, parameters={})
+    @Export(name="monitoringConfig", type=AiFeatureStoreEntityTypeMonitoringConfig.class, parameters={})
     private Output</* @Nullable */ AiFeatureStoreEntityTypeMonitoringConfig> monitoringConfig;
 
     /**
@@ -106,7 +106,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * to nine fractional digits.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

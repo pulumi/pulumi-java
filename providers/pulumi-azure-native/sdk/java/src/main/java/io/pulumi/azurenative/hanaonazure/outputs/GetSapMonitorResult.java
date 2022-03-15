@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSapMonitorResult {
     /**
      * The value indicating whether to send analytics to Microsoft
@@ -79,21 +79,21 @@ public final class GetSapMonitorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSapMonitorResult(
-        @OutputCustomType.Parameter("enableCustomerAnalytics") @Nullable Boolean enableCustomerAnalytics,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("logAnalyticsWorkspaceArmId") @Nullable String logAnalyticsWorkspaceArmId,
-        @OutputCustomType.Parameter("logAnalyticsWorkspaceId") @Nullable String logAnalyticsWorkspaceId,
-        @OutputCustomType.Parameter("logAnalyticsWorkspaceSharedKey") @Nullable String logAnalyticsWorkspaceSharedKey,
-        @OutputCustomType.Parameter("managedResourceGroupName") String managedResourceGroupName,
-        @OutputCustomType.Parameter("monitorSubnet") @Nullable String monitorSubnet,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sapMonitorCollectorVersion") String sapMonitorCollectorVersion,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("enableCustomerAnalytics") @Nullable Boolean enableCustomerAnalytics,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("logAnalyticsWorkspaceArmId") @Nullable String logAnalyticsWorkspaceArmId,
+        @CustomType.Parameter("logAnalyticsWorkspaceId") @Nullable String logAnalyticsWorkspaceId,
+        @CustomType.Parameter("logAnalyticsWorkspaceSharedKey") @Nullable String logAnalyticsWorkspaceSharedKey,
+        @CustomType.Parameter("managedResourceGroupName") String managedResourceGroupName,
+        @CustomType.Parameter("monitorSubnet") @Nullable String monitorSubnet,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sapMonitorCollectorVersion") String sapMonitorCollectorVersion,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.enableCustomerAnalytics = enableCustomerAnalytics;
         this.id = id;
         this.location = location;

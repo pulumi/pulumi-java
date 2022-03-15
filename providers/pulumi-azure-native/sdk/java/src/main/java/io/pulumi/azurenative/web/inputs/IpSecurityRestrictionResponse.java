@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * Allow or Deny access for this IP range.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable String action;
 
     public Optional<String> getAction() {
@@ -36,7 +36,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * IP restriction rule description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -62,7 +62,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * The matching logic is exact match.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Map<String,List<String>> headers;
 
     public Map<String,List<String>> getHeaders() {
@@ -76,7 +76,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * SubnetMask property must not be specified.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -87,7 +87,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * IP restriction rule name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -98,7 +98,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * Priority of IP restriction rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -109,7 +109,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * Subnet mask for the range of IP addresses the restriction is valid for.
      * 
      */
-    @InputImport(name="subnetMask")
+    @Import(name="subnetMask")
       private final @Nullable String subnetMask;
 
     public Optional<String> getSubnetMask() {
@@ -120,7 +120,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * (internal) Subnet traffic tag
      * 
      */
-    @InputImport(name="subnetTrafficTag")
+    @Import(name="subnetTrafficTag")
       private final @Nullable Integer subnetTrafficTag;
 
     public Optional<Integer> getSubnetTrafficTag() {
@@ -131,7 +131,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * Defines what this IP filter will be used for. This is to support IP filtering on proxies.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable String tag;
 
     public Optional<String> getTag() {
@@ -142,7 +142,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * Virtual network resource id
      * 
      */
-    @InputImport(name="vnetSubnetResourceId")
+    @Import(name="vnetSubnetResourceId")
       private final @Nullable String vnetSubnetResourceId;
 
     public Optional<String> getVnetSubnetResourceId() {
@@ -153,7 +153,7 @@ public final class IpSecurityRestrictionResponse extends io.pulumi.resources.Inv
      * (internal) Vnet traffic tag
      * 
      */
-    @InputImport(name="vnetTrafficTag")
+    @Import(name="vnetTrafficTag")
       private final @Nullable Integer vnetTrafficTag;
 
     public Optional<Integer> getVnetTrafficTag() {

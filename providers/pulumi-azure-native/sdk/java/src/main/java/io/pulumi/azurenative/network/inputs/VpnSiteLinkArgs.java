@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsArgs;
 import io.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The set of bgp properties.
      * 
      */
-    @InputImport(name="bgpProperties")
+    @Import(name="bgpProperties")
       private final @Nullable Output<VpnLinkBgpSettingsArgs> bgpProperties;
 
     public Output<VpnLinkBgpSettingsArgs> getBgpProperties() {
@@ -35,7 +35,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * FQDN of vpn-site-link.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -46,7 +46,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -57,7 +57,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The ip-address for the vpn-site-link.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -68,7 +68,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The link provider properties.
      * 
      */
-    @InputImport(name="linkProperties")
+    @Import(name="linkProperties")
       private final @Nullable Output<VpnLinkProviderPropertiesArgs> linkProperties;
 
     public Output<VpnLinkProviderPropertiesArgs> getLinkProperties() {
@@ -79,7 +79,7 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

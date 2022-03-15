@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameterFillBehaviorInitialPromptFulfillment;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageFormParameterFillBehavior {
     /**
      * The fulfillment to provide the initial prompt that the agent can present to the user in order to fill the parameter.
@@ -18,8 +18,8 @@ public final class CxPageFormParameterFillBehavior {
      */
     private final @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment;
 
-    @OutputCustomType.Constructor
-    private CxPageFormParameterFillBehavior(@OutputCustomType.Parameter("initialPromptFulfillment") @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
+    @CustomType.Constructor
+    private CxPageFormParameterFillBehavior(@CustomType.Parameter("initialPromptFulfillment") @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
         this.initialPromptFulfillment = initialPromptFulfillment;
     }
 

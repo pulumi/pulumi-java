@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * Project from which to list available regions. Defaults to project declared in the provider.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -30,7 +30,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * Defaults to no filtering (all available regions - both `UP` and `DOWN`).
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
      * 
      */
-    @InputImport(name="s3Bucket", required=true)
+    @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
@@ -33,7 +33,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 key of the deployment package.
      * 
      */
-    @InputImport(name="s3ObjectKey", required=true)
+    @Import(name="s3ObjectKey", required=true)
       private final Output<String> s3ObjectKey;
 
     public Output<String> getS3ObjectKey() {
@@ -44,7 +44,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * For versioned objects, the version of the deployment package object to use. If not specified, the current object version will be used.
      * 
      */
-    @InputImport(name="s3ObjectVersion")
+    @Import(name="s3ObjectVersion")
       private final @Nullable Output<String> s3ObjectVersion;
 
     public Output<String> getS3ObjectVersion() {

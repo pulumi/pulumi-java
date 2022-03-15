@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -52,7 +52,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -66,7 +66,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * Datastore properties
      * 
      */
-    @OutputExport(name="properties", type=DatastoreResponse.class, parameters={})
+    @Export(name="properties", type=DatastoreResponse.class, parameters={})
     private Output<DatastoreResponse> properties;
 
     /**
@@ -94,7 +94,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * The sku of the workspace.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -108,7 +108,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -122,7 +122,7 @@ public class MachineLearningDatastore extends io.pulumi.resources.CustomResource
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

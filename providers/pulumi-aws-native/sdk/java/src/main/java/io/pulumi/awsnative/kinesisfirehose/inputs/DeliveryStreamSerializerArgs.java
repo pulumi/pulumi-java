@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOrcSerDeArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamParquetSerDeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
 
     public static final DeliveryStreamSerializerArgs Empty = new DeliveryStreamSerializerArgs();
 
-    @InputImport(name="orcSerDe")
+    @Import(name="orcSerDe")
       private final @Nullable Output<DeliveryStreamOrcSerDeArgs> orcSerDe;
 
     public Output<DeliveryStreamOrcSerDeArgs> getOrcSerDe() {
         return this.orcSerDe == null ? Output.empty() : this.orcSerDe;
     }
 
-    @InputImport(name="parquetSerDe")
+    @Import(name="parquetSerDe")
       private final @Nullable Output<DeliveryStreamParquetSerDeArgs> parquetSerDe;
 
     public Output<DeliveryStreamParquetSerDeArgs> getParquetSerDe() {

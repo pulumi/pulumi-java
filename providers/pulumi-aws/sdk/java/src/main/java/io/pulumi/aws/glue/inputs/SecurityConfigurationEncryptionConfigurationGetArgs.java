@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationClo
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs;
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -15,14 +15,14 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
 
     public static final SecurityConfigurationEncryptionConfigurationGetArgs Empty = new SecurityConfigurationEncryptionConfigurationGetArgs();
 
-    @InputImport(name="cloudwatchEncryption", required=true)
+    @Import(name="cloudwatchEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> cloudwatchEncryption;
 
     public Output<SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionGetArgs> getCloudwatchEncryption() {
         return this.cloudwatchEncryption;
     }
 
-    @InputImport(name="jobBookmarksEncryption", required=true)
+    @Import(name="jobBookmarksEncryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> jobBookmarksEncryption;
 
     public Output<SecurityConfigurationEncryptionConfigurationJobBookmarksEncryptionGetArgs> getJobBookmarksEncryption() {
@@ -33,7 +33,7 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
      * A ` s3_encryption  ` block as described below, which contains encryption configuration for S3 data.
      * 
      */
-    @InputImport(name="s3Encryption", required=true)
+    @Import(name="s3Encryption", required=true)
       private final Output<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> s3Encryption;
 
     public Output<SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs> getS3Encryption() {

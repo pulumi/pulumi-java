@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.CspmMonitorAwsOfferingResponseNativeCloudConnection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
      * The offering description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -34,7 +34,7 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
      * The native cloud connection configuration
      * 
      */
-    @InputImport(name="nativeCloudConnection")
+    @Import(name="nativeCloudConnection")
       private final @Nullable CspmMonitorAwsOfferingResponseNativeCloudConnection nativeCloudConnection;
 
     public Optional<CspmMonitorAwsOfferingResponseNativeCloudConnection> getNativeCloudConnection() {
@@ -46,7 +46,7 @@ public final class CspmMonitorAwsOfferingResponse extends io.pulumi.resources.In
      * Expected value is 'CspmMonitorAws'.
      * 
      */
-    @InputImport(name="offeringType", required=true)
+    @Import(name="offeringType", required=true)
       private final String offeringType;
 
     public String getOfferingType() {

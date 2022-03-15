@@ -8,7 +8,7 @@ import io.pulumi.aws.wafregional.XssMatchSetArgs;
 import io.pulumi.aws.wafregional.inputs.XssMatchSetState;
 import io.pulumi.aws.wafregional.outputs.XssMatchSetXssMatchTuple;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * The name of the set
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class XssMatchSet extends io.pulumi.resources.CustomResource {
      * The parts of web requests that you want to inspect for cross-site scripting attacks.
      * 
      */
-    @OutputExport(name="xssMatchTuples", type=List.class, parameters={XssMatchSetXssMatchTuple.class})
+    @Export(name="xssMatchTuples", type=List.class, parameters={XssMatchSetXssMatchTuple.class})
     private Output</* @Nullable */ List<XssMatchSetXssMatchTuple>> xssMatchTuples;
 
     /**

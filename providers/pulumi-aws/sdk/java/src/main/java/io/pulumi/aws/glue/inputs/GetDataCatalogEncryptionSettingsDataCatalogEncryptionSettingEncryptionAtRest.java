@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
      * The encryption-at-rest mode for encrypting Data Catalog data.
      * 
      */
-    @InputImport(name="catalogEncryptionMode", required=true)
+    @Import(name="catalogEncryptionMode", required=true)
       private final String catalogEncryptionMode;
 
     public String getCatalogEncryptionMode() {
@@ -27,7 +27,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingE
      * The ARN of the AWS KMS key to use for encryption at rest.
      * 
      */
-    @InputImport(name="sseAwsKmsKeyId", required=true)
+    @Import(name="sseAwsKmsKeyId", required=true)
       private final String sseAwsKmsKeyId;
 
     public String getSseAwsKmsKeyId() {

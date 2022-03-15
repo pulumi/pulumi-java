@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataCollectionEndpointResponseNetworkAcls {
     /**
      * The configuration to set whether network access from public internet to the endpoints are allowed.
@@ -17,8 +17,8 @@ public final class DataCollectionEndpointResponseNetworkAcls {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor
-    private DataCollectionEndpointResponseNetworkAcls(@OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
+    @CustomType.Constructor
+    private DataCollectionEndpointResponseNetworkAcls(@CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.publicNetworkAccess = publicNetworkAccess;
     }
 

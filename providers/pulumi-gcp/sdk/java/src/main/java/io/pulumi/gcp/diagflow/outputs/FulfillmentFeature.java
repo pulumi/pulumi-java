@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FulfillmentFeature {
     /**
      * The type of the feature that enabled for fulfillment.
@@ -17,8 +17,8 @@ public final class FulfillmentFeature {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private FulfillmentFeature(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private FulfillmentFeature(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
      * Map of attributes of the thing.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -30,7 +30,7 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the thing.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class ThingArgs extends io.pulumi.resources.ResourceArgs {
      * The thing type name.
      * 
      */
-    @InputImport(name="thingTypeName")
+    @Import(name="thingTypeName")
       private final @Nullable Output<String> thingTypeName;
 
     public Output<String> getThingTypeName() {

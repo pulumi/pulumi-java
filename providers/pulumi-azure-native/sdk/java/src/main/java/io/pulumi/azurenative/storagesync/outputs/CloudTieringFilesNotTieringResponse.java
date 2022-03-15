@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.FilesNotTieringErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudTieringFilesNotTieringResponse {
     /**
      * Array of tiering errors
@@ -28,11 +28,11 @@ public final class CloudTieringFilesNotTieringResponse {
      */
     private final Double totalFileCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudTieringFilesNotTieringResponse(
-        @OutputCustomType.Parameter("errors") List<FilesNotTieringErrorResponse> errors,
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
-        @OutputCustomType.Parameter("totalFileCount") Double totalFileCount) {
+        @CustomType.Parameter("errors") List<FilesNotTieringErrorResponse> errors,
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @CustomType.Parameter("totalFileCount") Double totalFileCount) {
         this.errors = errors;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.totalFileCount = totalFileCount;

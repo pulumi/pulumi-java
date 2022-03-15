@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
 
     public Output<CryptoKeyIAMMemberConditionArgs> getCondition() {
@@ -34,14 +34,14 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * the provider's project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="cryptoKeyId", required=true)
+    @Import(name="cryptoKeyId", required=true)
       private final Output<String> cryptoKeyId;
 
     public Output<String> getCryptoKeyId() {
         return this.cryptoKeyId;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -53,7 +53,7 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

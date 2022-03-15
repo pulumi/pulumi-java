@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecrpublic.RepositoryPolicyArgs;
 import io.pulumi.aws.ecrpublic.inputs.RepositoryPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:ecrpublic/repositoryPolicy:RepositoryPolicy")
 public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -42,7 +42,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * The registry ID where the repository was created.
      * 
      */
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**
@@ -56,7 +56,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * Name of the repository to apply the policy.
      * 
      */
-    @OutputExport(name="repositoryName", type=String.class, parameters={})
+    @Export(name="repositoryName", type=String.class, parameters={})
     private Output<String> repositoryName;
 
     /**

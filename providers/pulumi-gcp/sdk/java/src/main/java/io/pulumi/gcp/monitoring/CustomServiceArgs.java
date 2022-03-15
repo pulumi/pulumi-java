@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name used for UI elements listing this Service.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -31,7 +31,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -43,7 +43,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * service ID.
      * 
      */
-    @InputImport(name="serviceId")
+    @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
     public Output<String> getServiceId() {
@@ -55,7 +55,7 @@ public final class CustomServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="telemetry")
+    @Import(name="telemetry")
       private final @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
     public Output<CustomServiceTelemetryArgs> getTelemetry() {

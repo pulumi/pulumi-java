@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbilling_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBillingAccountResult {
     /**
      * The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
@@ -31,12 +31,12 @@ public final class GetBillingAccountResult {
      */
     private final Boolean open;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBillingAccountResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("masterBillingAccount") String masterBillingAccount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("open") Boolean open) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("masterBillingAccount") String masterBillingAccount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("open") Boolean open) {
         this.displayName = displayName;
         this.masterBillingAccount = masterBillingAccount;
         this.name = name;

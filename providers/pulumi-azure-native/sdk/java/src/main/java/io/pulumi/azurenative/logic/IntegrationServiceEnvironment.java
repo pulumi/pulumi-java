@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentSkuRespo
 import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * Managed service identity properties.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -52,7 +52,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -66,7 +66,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * The integration service environment properties.
      * 
      */
-    @OutputExport(name="properties", type=IntegrationServiceEnvironmentPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=IntegrationServiceEnvironmentPropertiesResponse.class, parameters={})
     private Output<IntegrationServiceEnvironmentPropertiesResponse> properties;
 
     /**
@@ -94,7 +94,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * The sku.
      * 
      */
-    @OutputExport(name="sku", type=IntegrationServiceEnvironmentSkuResponse.class, parameters={})
+    @Export(name="sku", type=IntegrationServiceEnvironmentSkuResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationServiceEnvironmentSkuResponse> sku;
 
     /**
@@ -108,7 +108,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -122,7 +122,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

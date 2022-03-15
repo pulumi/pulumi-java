@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthProbeSettingsModelResponse {
     /**
      * Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
@@ -58,17 +58,17 @@ public final class HealthProbeSettingsModelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthProbeSettingsModelResponse(
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("healthProbeMethod") @Nullable String healthProbeMethod,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("healthProbeMethod") @Nullable String healthProbeMethod,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("type") String type) {
         this.enabledState = enabledState;
         this.healthProbeMethod = healthProbeMethod;
         this.id = id;

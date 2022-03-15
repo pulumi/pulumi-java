@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * HDInsight cluster URI. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="clusterUri", required=true)
+    @Import(name="clusterUri", required=true)
       private final Output<Object> clusterUri;
 
     public Output<Object> getClusterUri() {
@@ -53,7 +53,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -75,7 +75,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -86,7 +86,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * Specify the FileSystem if the main storage for the HDInsight is ADLS Gen2. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileSystem")
+    @Import(name="fileSystem")
       private final @Nullable Output<Object> fileSystem;
 
     public Output<Object> getFileSystem() {
@@ -97,7 +97,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * A reference to the Azure SQL linked service that points to the HCatalog database.
      * 
      */
-    @InputImport(name="hcatalogLinkedServiceName")
+    @Import(name="hcatalogLinkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
@@ -108,7 +108,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * Specify if the HDInsight is created with ESP (Enterprise Security Package). Type: Boolean.
      * 
      */
-    @InputImport(name="isEspEnabled")
+    @Import(name="isEspEnabled")
       private final @Nullable Output<Object> isEspEnabled;
 
     public Output<Object> getIsEspEnabled() {
@@ -119,7 +119,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * The Azure Storage linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -130,7 +130,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -141,7 +141,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * HDInsight cluster password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -153,7 +153,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * Expected value is 'HDInsight'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -164,7 +164,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * HDInsight cluster user name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {

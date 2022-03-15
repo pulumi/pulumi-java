@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the key.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to disable the policy lockout check performed when creating or updating the key's policy. Setting this value to `true` increases the risk that the key becomes unmanageable. For more information, refer to the scenario in the [Default Key Policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section in the AWS Key Management Service Developer Guide. Defaults to `false`.
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
@@ -43,7 +43,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Duration in days after which the key is deleted after destruction of the resource. Must be between `7` and `30` days. Defaults to `30`.
      * 
      */
-    @InputImport(name="deletionWindowInDays")
+    @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
     public Output<Integer> getDeletionWindowInDays() {
@@ -54,7 +54,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Description of the key.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the key is enabled. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -76,7 +76,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Whether the key material expires. Empty when pending key material import, otherwise `KEY_MATERIAL_EXPIRES` or `KEY_MATERIAL_DOES_NOT_EXPIRE`.
      * 
      */
-    @InputImport(name="expirationModel")
+    @Import(name="expirationModel")
       private final @Nullable Output<String> expirationModel;
 
     public Output<String> getExpirationModel() {
@@ -87,7 +87,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.
      * 
      */
-    @InputImport(name="keyMaterialBase64")
+    @Import(name="keyMaterialBase64")
       private final @Nullable Output<String> keyMaterialBase64;
 
     public Output<String> getKeyMaterialBase64() {
@@ -98,7 +98,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * The state of the CMK.
      * 
      */
-    @InputImport(name="keyState")
+    @Import(name="keyState")
       private final @Nullable Output<String> keyState;
 
     public Output<String> getKeyState() {
@@ -109,7 +109,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * The cryptographic operations for which you can use the CMK.
      * 
      */
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<String> keyUsage;
 
     public Output<String> getKeyUsage() {
@@ -120,7 +120,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the KMS key is a multi-Region (`true`) or regional (`false`) key. Defaults to `false`.
      * 
      */
-    @InputImport(name="multiRegion")
+    @Import(name="multiRegion")
       private final @Nullable Output<Boolean> multiRegion;
 
     public Output<Boolean> getMultiRegion() {
@@ -131,7 +131,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -142,7 +142,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * A key-value map of tags to assign to the key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -153,7 +153,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -164,7 +164,7 @@ public final class ExternalKeyState extends io.pulumi.resources.ResourceArgs {
      * Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the CMK becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    @InputImport(name="validTo")
+    @Import(name="validTo")
       private final @Nullable Output<String> validTo;
 
     public Output<String> getValidTo() {

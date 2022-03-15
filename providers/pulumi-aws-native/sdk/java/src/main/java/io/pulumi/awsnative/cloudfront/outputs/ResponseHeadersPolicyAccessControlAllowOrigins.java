@@ -3,17 +3,17 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyAccessControlAllowOrigins {
     private final List<String> items;
 
-    @OutputCustomType.Constructor
-    private ResponseHeadersPolicyAccessControlAllowOrigins(@OutputCustomType.Parameter("items") List<String> items) {
+    @CustomType.Constructor
+    private ResponseHeadersPolicyAccessControlAllowOrigins(@CustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

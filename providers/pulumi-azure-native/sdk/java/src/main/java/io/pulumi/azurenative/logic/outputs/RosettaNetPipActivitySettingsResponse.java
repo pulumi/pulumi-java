@@ -5,11 +5,11 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipAcknowledgmentOfReceiptSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipActivityBehaviorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RosettaNetPipActivitySettingsResponse {
     /**
      * The RosettaNet ProcessConfiguration acknowledgement settings.
@@ -27,11 +27,11 @@ public final class RosettaNetPipActivitySettingsResponse {
      */
     private final String activityType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RosettaNetPipActivitySettingsResponse(
-        @OutputCustomType.Parameter("acknowledgmentOfReceiptSettings") RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
-        @OutputCustomType.Parameter("activityBehavior") RosettaNetPipActivityBehaviorResponse activityBehavior,
-        @OutputCustomType.Parameter("activityType") String activityType) {
+        @CustomType.Parameter("acknowledgmentOfReceiptSettings") RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
+        @CustomType.Parameter("activityBehavior") RosettaNetPipActivityBehaviorResponse activityBehavior,
+        @CustomType.Parameter("activityType") String activityType) {
         this.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
         this.activityBehavior = activityBehavior;
         this.activityType = activityType;

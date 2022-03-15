@@ -5,7 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.aws.iot.inputs.ThingGroupPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Thing Group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the parent Thing Group.
      * 
      */
-    @InputImport(name="parentGroupName")
+    @Import(name="parentGroupName")
       private final @Nullable Output<String> parentGroupName;
 
     public Output<String> getParentGroupName() {
@@ -42,7 +42,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Thing Group properties. Defined below.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ThingGroupPropertiesArgs> properties;
 
     public Output<ThingGroupPropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

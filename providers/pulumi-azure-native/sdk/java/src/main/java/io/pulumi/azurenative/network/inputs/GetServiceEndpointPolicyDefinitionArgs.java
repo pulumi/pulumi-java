@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
      * The name of the service endpoint policy definition name.
      * 
      */
-    @InputImport(name="serviceEndpointPolicyDefinitionName", required=true)
+    @Import(name="serviceEndpointPolicyDefinitionName", required=true)
       private final String serviceEndpointPolicyDefinitionName;
 
     public String getServiceEndpointPolicyDefinitionName() {
@@ -38,7 +38,7 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
      * The name of the service endpoint policy name.
      * 
      */
-    @InputImport(name="serviceEndpointPolicyName", required=true)
+    @Import(name="serviceEndpointPolicyName", required=true)
       private final String serviceEndpointPolicyName;
 
     public String getServiceEndpointPolicyName() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TlsInfoResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetServerResult {
     /**
      * Optional. A human-readable description of this TargetServer.
@@ -48,15 +48,15 @@ public final class GetTargetServerResult {
      */
     private final GoogleCloudApigeeV1TlsInfoResponse sSLInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetServerResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("sSLInfo") GoogleCloudApigeeV1TlsInfoResponse sSLInfo) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("sSLInfo") GoogleCloudApigeeV1TlsInfoResponse sSLInfo) {
         this.description = description;
         this.host = host;
         this.isEnabled = isEnabled;

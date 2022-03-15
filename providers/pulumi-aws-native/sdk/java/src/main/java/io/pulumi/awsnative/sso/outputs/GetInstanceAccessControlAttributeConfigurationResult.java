@@ -5,13 +5,13 @@ package io.pulumi.awsnative.sso.outputs;
 
 import io.pulumi.awsnative.sso.outputs.InstanceAccessControlAttributeConfigurationAccessControlAttribute;
 import io.pulumi.awsnative.sso.outputs.InstanceAccessControlAttributeConfigurationProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceAccessControlAttributeConfigurationResult {
     private final @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
     /**
@@ -20,10 +20,10 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
      */
     private final @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceAccessControlAttributeConfigurationResult(
-        @OutputCustomType.Parameter("accessControlAttributes") @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes,
-        @OutputCustomType.Parameter("instanceAccessControlAttributeConfiguration") @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
+        @CustomType.Parameter("accessControlAttributes") @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes,
+        @CustomType.Parameter("instanceAccessControlAttributeConfiguration") @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
         this.accessControlAttributes = accessControlAttributes;
         this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
     }

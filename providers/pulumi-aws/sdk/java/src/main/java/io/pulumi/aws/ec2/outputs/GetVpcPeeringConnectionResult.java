@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.outputs;
 import io.pulumi.aws.ec2.outputs.GetVpcPeeringConnectionCidrBlockSet;
 import io.pulumi.aws.ec2.outputs.GetVpcPeeringConnectionFilter;
 import io.pulumi.aws.ec2.outputs.GetVpcPeeringConnectionPeerCidrBlockSet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcPeeringConnectionResult {
     /**
      * A configuration block that describes [VPC Peering Connection]
@@ -55,24 +55,24 @@ public final class GetVpcPeeringConnectionResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcPeeringConnectionResult(
-        @OutputCustomType.Parameter("accepter") Map<String,Boolean> accepter,
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("cidrBlockSets") List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcPeeringConnectionFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("peerCidrBlock") String peerCidrBlock,
-        @OutputCustomType.Parameter("peerCidrBlockSets") List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets,
-        @OutputCustomType.Parameter("peerOwnerId") String peerOwnerId,
-        @OutputCustomType.Parameter("peerRegion") String peerRegion,
-        @OutputCustomType.Parameter("peerVpcId") String peerVpcId,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("requester") Map<String,Boolean> requester,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("accepter") Map<String,Boolean> accepter,
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("cidrBlockSets") List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcPeeringConnectionFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("peerCidrBlock") String peerCidrBlock,
+        @CustomType.Parameter("peerCidrBlockSets") List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets,
+        @CustomType.Parameter("peerOwnerId") String peerOwnerId,
+        @CustomType.Parameter("peerRegion") String peerRegion,
+        @CustomType.Parameter("peerVpcId") String peerVpcId,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("requester") Map<String,Boolean> requester,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.accepter = accepter;
         this.cidrBlock = cidrBlock;
         this.cidrBlockSets = cidrBlockSets;

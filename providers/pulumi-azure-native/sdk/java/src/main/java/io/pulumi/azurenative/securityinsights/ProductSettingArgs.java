@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.SettingKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the setting
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,SettingKind>> kind;
 
     public Output<Either<String,SettingKind>> getKind() {
@@ -31,7 +31,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -42,7 +42,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
      * 
      */
-    @InputImport(name="settingsName")
+    @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
 
     public Output<String> getSettingsName() {
@@ -64,7 +64,7 @@ public final class ProductSettingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

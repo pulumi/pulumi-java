@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiIssueCommentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * Date and time when the comment was created.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdDate;
 
     /**
@@ -48,7 +48,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * Comment text.
      * 
      */
-    @OutputExport(name="text", type=String.class, parameters={})
+    @Export(name="text", type=String.class, parameters={})
     private Output<String> text;
 
     /**
@@ -76,7 +76,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -90,7 +90,7 @@ public class ApiIssueComment extends io.pulumi.resources.CustomResource {
      * A resource identifier for the user who left the comment.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**

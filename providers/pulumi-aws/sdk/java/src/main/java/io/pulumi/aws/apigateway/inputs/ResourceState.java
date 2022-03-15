@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the parent API resource
      * 
      */
-    @InputImport(name="parentId")
+    @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -29,7 +29,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * The complete path for this API resource, including all parent paths.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -40,7 +40,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * The last path segment of this API resource.
      * 
      */
-    @InputImport(name="pathPart")
+    @Import(name="pathPart")
       private final @Nullable Output<String> pathPart;
 
     public Output<String> getPathPart() {
@@ -51,7 +51,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi")
+    @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {

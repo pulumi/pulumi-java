@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.IPRuleArgs;
 import io.pulumi.azurenative.containerregistry.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * The default action of allow or deny when no other rules match.
      * 
      */
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final Output<Either<String,DefaultAction>> defaultAction;
 
     public Output<Either<String,DefaultAction>> getDefaultAction() {
@@ -38,7 +38,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * The IP ACL rules.
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable Output<List<IPRuleArgs>> ipRules;
 
     public Output<List<IPRuleArgs>> getIpRules() {
@@ -49,7 +49,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual network rules.
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Output<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {

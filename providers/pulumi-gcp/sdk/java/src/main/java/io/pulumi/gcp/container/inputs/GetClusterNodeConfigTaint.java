@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetClusterNodeConfigTaint extends io.pulumi.resources.InvokeA
 
     public static final GetClusterNodeConfigTaint Empty = new GetClusterNodeConfigTaint();
 
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final String effect;
 
     public String getEffect() {
         return this.effect;
     }
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
         return this.key;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

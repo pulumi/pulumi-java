@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointAdsOnDeliveryRestric
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdTriggersItem;
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestPlaylistType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointHlsManifest {
     /**
      * This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
@@ -65,18 +65,18 @@ public final class OriginEndpointHlsManifest {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointHlsManifest(
-        @OutputCustomType.Parameter("adMarkers") @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
-        @OutputCustomType.Parameter("adTriggers") @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
-        @OutputCustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
-        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
-        @OutputCustomType.Parameter("playlistType") @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
-        @OutputCustomType.Parameter("playlistWindowSeconds") @Nullable Integer playlistWindowSeconds,
-        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("adMarkers") @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
+        @CustomType.Parameter("adTriggers") @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
+        @CustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @CustomType.Parameter("manifestName") @Nullable String manifestName,
+        @CustomType.Parameter("playlistType") @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
+        @CustomType.Parameter("playlistWindowSeconds") @Nullable Integer playlistWindowSeconds,
+        @CustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.adMarkers = adMarkers;
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;

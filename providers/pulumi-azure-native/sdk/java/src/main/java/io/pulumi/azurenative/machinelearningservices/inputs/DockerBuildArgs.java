@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * <seealso href="https://docs.docker.com/engine/context/working-with-contexts/" />
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -37,7 +37,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Build'.
      * 
      */
-    @InputImport(name="dockerSpecificationType", required=true)
+    @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
 
     public Output<String> getDockerSpecificationType() {
@@ -49,7 +49,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * <seealso href="https://repo2docker.readthedocs.io/en/latest/config_files.html#dockerfile-advanced-environments" />
      * 
      */
-    @InputImport(name="dockerfile", required=true)
+    @Import(name="dockerfile", required=true)
       private final Output<String> dockerfile;
 
     public Output<String> getDockerfile() {
@@ -60,7 +60,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * The platform information of the docker image.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;
 
     public Output<DockerImagePlatformArgs> getPlatform() {

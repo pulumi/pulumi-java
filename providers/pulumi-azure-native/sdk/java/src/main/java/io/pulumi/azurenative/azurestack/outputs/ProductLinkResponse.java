@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProductLinkResponse {
     /**
      * The description of the link.
@@ -22,10 +22,10 @@ public final class ProductLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProductLinkResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.displayName = displayName;
         this.uri = uri;
     }

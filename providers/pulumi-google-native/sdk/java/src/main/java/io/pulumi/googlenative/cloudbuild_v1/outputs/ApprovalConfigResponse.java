@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApprovalConfigResponse {
     /**
      * Whether or not approval is needed. If this is set on a build, it will become pending when created, and will need to be explicitly approved to start.
@@ -15,8 +15,8 @@ public final class ApprovalConfigResponse {
      */
     private final Boolean approvalRequired;
 
-    @OutputCustomType.Constructor
-    private ApprovalConfigResponse(@OutputCustomType.Parameter("approvalRequired") Boolean approvalRequired) {
+    @CustomType.Constructor
+    private ApprovalConfigResponse(@CustomType.Parameter("approvalRequired") Boolean approvalRequired) {
         this.approvalRequired = approvalRequired;
     }
 

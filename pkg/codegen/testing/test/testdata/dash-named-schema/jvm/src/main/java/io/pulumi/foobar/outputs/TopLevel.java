@@ -3,18 +3,18 @@
 
 package io.pulumi.foobar.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopLevel {
     private final @Nullable String buzz;
 
-    @OutputCustomType.Constructor
-    private TopLevel(@OutputCustomType.Parameter("buzz") @Nullable String buzz) {
+    @CustomType.Constructor
+    private TopLevel(@CustomType.Parameter("buzz") @Nullable String buzz) {
         this.buzz = buzz;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class NodePoolNodeConfigKubeletConfigGetArgs extends io.pulumi.reso
 
     public static final NodePoolNodeConfigKubeletConfigGetArgs Empty = new NodePoolNodeConfigKubeletConfigGetArgs();
 
-    @InputImport(name="cpuCfsQuota")
+    @Import(name="cpuCfsQuota")
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
     public Output<Boolean> getCpuCfsQuota() {
         return this.cpuCfsQuota == null ? Output.empty() : this.cpuCfsQuota;
     }
 
-    @InputImport(name="cpuCfsQuotaPeriod")
+    @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
     public Output<String> getCpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Output.empty() : this.cpuCfsQuotaPeriod;
     }
 
-    @InputImport(name="cpuManagerPolicy", required=true)
+    @Import(name="cpuManagerPolicy", required=true)
       private final Output<String> cpuManagerPolicy;
 
     public Output<String> getCpuManagerPolicy() {

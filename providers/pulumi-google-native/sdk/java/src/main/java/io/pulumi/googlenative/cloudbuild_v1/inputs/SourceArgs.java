@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceManifestArgs;
@@ -24,7 +24,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, get the source from this location in a Cloud Source Repository.
      * 
      */
-    @InputImport(name="repoSource")
+    @Import(name="repoSource")
       private final @Nullable Output<RepoSourceArgs> repoSource;
 
     public Output<RepoSourceArgs> getRepoSource() {
@@ -35,7 +35,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, get the source from this location in Google Cloud Storage.
      * 
      */
-    @InputImport(name="storageSource")
+    @Import(name="storageSource")
       private final @Nullable Output<StorageSourceArgs> storageSource;
 
     public Output<StorageSourceArgs> getStorageSource() {
@@ -46,7 +46,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, get the source from this manifest in Google Cloud Storage. This feature is in Preview; see description [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
      * 
      */
-    @InputImport(name="storageSourceManifest")
+    @Import(name="storageSourceManifest")
       private final @Nullable Output<StorageSourceManifestArgs> storageSourceManifest;
 
     public Output<StorageSourceManifestArgs> getStorageSourceManifest() {

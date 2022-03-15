@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceExclusionOptionsResponse {
     /**
      * Scope specifies the upgrade scope which upgrades are blocked by the exclusion.
@@ -15,8 +15,8 @@ public final class MaintenanceExclusionOptionsResponse {
      */
     private final String scope;
 
-    @OutputCustomType.Constructor
-    private MaintenanceExclusionOptionsResponse(@OutputCustomType.Parameter("scope") String scope) {
+    @CustomType.Constructor
+    private MaintenanceExclusionOptionsResponse(@CustomType.Parameter("scope") String scope) {
         this.scope = scope;
     }
 

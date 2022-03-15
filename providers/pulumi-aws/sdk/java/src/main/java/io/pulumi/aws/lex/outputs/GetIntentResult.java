@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIntentResult {
     /**
      * The ARN of the Lex intent.
@@ -61,17 +61,17 @@ public final class GetIntentResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntentResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parentIntentSignature") String parentIntentSignature,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parentIntentSignature") String parentIntentSignature,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.arn = arn;
         this.checksum = checksum;
         this.createdDate = createdDate;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.outputs.ServiceCapacityProviderStrategyItem;
 import io.pulumi.awsnative.ecs.outputs.ServiceDeploymentConfiguration;
 import io.pulumi.awsnative.ecs.outputs.ServiceNetworkConfiguration;
 import io.pulumi.awsnative.ecs.outputs.ServiceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     private final @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy;
     private final @Nullable ServiceDeploymentConfiguration deploymentConfiguration;
@@ -30,19 +30,19 @@ public final class GetServiceResult {
     private final @Nullable List<ServiceTag> tags;
     private final @Nullable String taskDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("capacityProviderStrategy") @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
-        @OutputCustomType.Parameter("deploymentConfiguration") @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
-        @OutputCustomType.Parameter("desiredCount") @Nullable Integer desiredCount,
-        @OutputCustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
-        @OutputCustomType.Parameter("healthCheckGracePeriodSeconds") @Nullable Integer healthCheckGracePeriodSeconds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkConfiguration") @Nullable ServiceNetworkConfiguration networkConfiguration,
-        @OutputCustomType.Parameter("platformVersion") @Nullable String platformVersion,
-        @OutputCustomType.Parameter("serviceArn") @Nullable String serviceArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ServiceTag> tags,
-        @OutputCustomType.Parameter("taskDefinition") @Nullable String taskDefinition) {
+        @CustomType.Parameter("capacityProviderStrategy") @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
+        @CustomType.Parameter("deploymentConfiguration") @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
+        @CustomType.Parameter("desiredCount") @Nullable Integer desiredCount,
+        @CustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
+        @CustomType.Parameter("healthCheckGracePeriodSeconds") @Nullable Integer healthCheckGracePeriodSeconds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkConfiguration") @Nullable ServiceNetworkConfiguration networkConfiguration,
+        @CustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @CustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @CustomType.Parameter("tags") @Nullable List<ServiceTag> tags,
+        @CustomType.Parameter("taskDefinition") @Nullable String taskDefinition) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         this.deploymentConfiguration = deploymentConfiguration;
         this.desiredCount = desiredCount;

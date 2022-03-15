@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConsoleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the console
      * 
      */
-    @InputImport(name="consoleName", required=true)
+    @Import(name="consoleName", required=true)
       private final String consoleName;
 
     public String getConsoleName() {

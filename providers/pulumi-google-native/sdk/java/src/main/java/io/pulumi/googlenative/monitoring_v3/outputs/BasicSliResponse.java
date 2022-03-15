@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AvailabilityCriteriaResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.LatencyCriteriaResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BasicSliResponse {
     /**
      * Good service is defined to be the count of requests made to this service that return successfully.
@@ -38,13 +38,13 @@ public final class BasicSliResponse {
      */
     private final List<String> version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BasicSliResponse(
-        @OutputCustomType.Parameter("availability") AvailabilityCriteriaResponse availability,
-        @OutputCustomType.Parameter("latency") LatencyCriteriaResponse latency,
-        @OutputCustomType.Parameter("location") List<String> location,
-        @OutputCustomType.Parameter("method") List<String> method,
-        @OutputCustomType.Parameter("version") List<String> version) {
+        @CustomType.Parameter("availability") AvailabilityCriteriaResponse availability,
+        @CustomType.Parameter("latency") LatencyCriteriaResponse latency,
+        @CustomType.Parameter("location") List<String> location,
+        @CustomType.Parameter("method") List<String> method,
+        @CustomType.Parameter("version") List<String> version) {
         this.availability = availability;
         this.latency = latency;
         this.location = location;

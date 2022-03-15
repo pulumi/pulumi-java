@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.GlobalServiceConfigu
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * AppInsights configuration.
      * 
      */
-    @OutputExport(name="appInsights", type=AppInsightsPropertiesResponse.class, parameters={})
+    @Export(name="appInsights", type=AppInsightsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AppInsightsPropertiesResponse> appInsights;
 
     /**
@@ -55,7 +55,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * The cluster type.
      * 
      */
-    @OutputExport(name="clusterType", type=String.class, parameters={})
+    @Export(name="clusterType", type=String.class, parameters={})
     private Output<String> clusterType;
 
     /**
@@ -69,7 +69,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Container Registry properties.
      * 
      */
-    @OutputExport(name="containerRegistry", type=ContainerRegistryPropertiesResponse.class, parameters={})
+    @Export(name="containerRegistry", type=ContainerRegistryPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ContainerRegistryPropertiesResponse> containerRegistry;
 
     /**
@@ -83,7 +83,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Parameters for the Azure Container Service cluster.
      * 
      */
-    @OutputExport(name="containerService", type=AcsClusterPropertiesResponse.class, parameters={})
+    @Export(name="containerService", type=AcsClusterPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AcsClusterPropertiesResponse> containerService;
 
     /**
@@ -97,7 +97,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * The date and time when the cluster was created.
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -111,7 +111,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * The description of the cluster.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -125,7 +125,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Contains global configuration for the web services in the cluster.
      * 
      */
-    @OutputExport(name="globalServiceConfiguration", type=GlobalServiceConfigurationResponse.class, parameters={})
+    @Export(name="globalServiceConfiguration", type=GlobalServiceConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ GlobalServiceConfigurationResponse> globalServiceConfiguration;
 
     /**
@@ -139,7 +139,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -153,7 +153,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * The date and time when the cluster was last modified.
      * 
      */
-    @OutputExport(name="modifiedOn", type=String.class, parameters={})
+    @Export(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
     /**
@@ -167,7 +167,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -181,7 +181,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * List of provisioning errors reported by the resource provider.
      * 
      */
-    @OutputExport(name="provisioningErrors", type=List.class, parameters={ErrorResponseWrapperResponse.class})
+    @Export(name="provisioningErrors", type=List.class, parameters={ErrorResponseWrapperResponse.class})
     private Output<List<ErrorResponseWrapperResponse>> provisioningErrors;
 
     /**
@@ -195,7 +195,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -209,7 +209,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Storage Account properties.
      * 
      */
-    @OutputExport(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
+    @Export(name="storageAccount", type=StorageAccountPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ StorageAccountPropertiesResponse> storageAccount;
 
     /**
@@ -223,7 +223,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -237,7 +237,7 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

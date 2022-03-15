@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.TopicArgs;
@@ -24,7 +24,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -38,7 +38,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The settings for this topic's partitions.
      * 
      */
-    @OutputExport(name="partitionConfig", type=PartitionConfigResponse.class, parameters={})
+    @Export(name="partitionConfig", type=PartitionConfigResponse.class, parameters={})
     private Output<PartitionConfigResponse> partitionConfig;
 
     /**
@@ -52,7 +52,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The settings for this topic's Reservation usage.
      * 
      */
-    @OutputExport(name="reservationConfig", type=ReservationConfigResponse.class, parameters={})
+    @Export(name="reservationConfig", type=ReservationConfigResponse.class, parameters={})
     private Output<ReservationConfigResponse> reservationConfig;
 
     /**
@@ -66,7 +66,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The settings for this topic's message retention.
      * 
      */
-    @OutputExport(name="retentionConfig", type=RetentionConfigResponse.class, parameters={})
+    @Export(name="retentionConfig", type=RetentionConfigResponse.class, parameters={})
     private Output<RetentionConfigResponse> retentionConfig;
 
     /**

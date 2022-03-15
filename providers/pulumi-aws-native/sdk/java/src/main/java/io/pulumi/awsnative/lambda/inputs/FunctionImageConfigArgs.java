@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
      * Command.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -30,7 +30,7 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
      * EntryPoint.
      * 
      */
-    @InputImport(name="entryPoint")
+    @Import(name="entryPoint")
       private final @Nullable Output<List<String>> entryPoint;
 
     public Output<List<String>> getEntryPoint() {
@@ -41,7 +41,7 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
      * WorkingDirectory.
      * 
      */
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

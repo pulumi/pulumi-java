@@ -5,14 +5,14 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateColumnGroupSchema;
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetSchema;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateDataSetConfiguration {
     /**
      * <p>A structure containing the list of column group schemas.</p>
@@ -26,11 +26,11 @@ public final class TemplateDataSetConfiguration {
      */
     private final @Nullable String placeholder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateDataSetConfiguration(
-        @OutputCustomType.Parameter("columnGroupSchemaList") @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList,
-        @OutputCustomType.Parameter("dataSetSchema") @Nullable TemplateDataSetSchema dataSetSchema,
-        @OutputCustomType.Parameter("placeholder") @Nullable String placeholder) {
+        @CustomType.Parameter("columnGroupSchemaList") @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList,
+        @CustomType.Parameter("dataSetSchema") @Nullable TemplateDataSetSchema dataSetSchema,
+        @CustomType.Parameter("placeholder") @Nullable String placeholder) {
         this.columnGroupSchemaList = columnGroupSchemaList;
         this.dataSetSchema = dataSetSchema;
         this.placeholder = placeholder;

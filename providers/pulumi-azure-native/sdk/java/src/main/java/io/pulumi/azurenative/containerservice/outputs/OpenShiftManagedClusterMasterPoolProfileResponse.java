@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenShiftManagedClusterMasterPoolProfileResponse {
     /**
      * Number of masters (VMs) to host docker containers. The default value is 3.
@@ -38,13 +38,13 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
      */
     private final String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenShiftManagedClusterMasterPoolProfileResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("subnetCidr") @Nullable String subnetCidr,
-        @OutputCustomType.Parameter("vmSize") String vmSize) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("subnetCidr") @Nullable String subnetCidr,
+        @CustomType.Parameter("vmSize") String vmSize) {
         this.count = count;
         this.name = name;
         this.osType = osType;

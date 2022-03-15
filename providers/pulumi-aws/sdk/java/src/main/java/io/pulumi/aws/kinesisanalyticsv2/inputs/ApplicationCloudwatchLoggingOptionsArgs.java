@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
 
     public static final ApplicationCloudwatchLoggingOptionsArgs Empty = new ApplicationCloudwatchLoggingOptionsArgs();
 
-    @InputImport(name="cloudwatchLoggingOptionId")
+    @Import(name="cloudwatchLoggingOptionId")
       private final @Nullable Output<String> cloudwatchLoggingOptionId;
 
     public Output<String> getCloudwatchLoggingOptionId() {
@@ -25,7 +25,7 @@ public final class ApplicationCloudwatchLoggingOptionsArgs extends io.pulumi.res
      * The ARN of the CloudWatch log stream to receive application messages.
      * 
      */
-    @InputImport(name="logStreamArn", required=true)
+    @Import(name="logStreamArn", required=true)
       private final Output<String> logStreamArn;
 
     public Output<String> getLogStreamArn() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * The gRPC routing information for the route.
      * 
      */
-    @InputImport(name="grpcRoute")
+    @Import(name="grpcRoute")
       private final @Nullable Output<RouteSpecGrpcRouteGetArgs> grpcRoute;
 
     public Output<RouteSpecGrpcRouteGetArgs> getGrpcRoute() {
@@ -33,7 +33,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP/2 routing information for the route.
      * 
      */
-    @InputImport(name="http2Route")
+    @Import(name="http2Route")
       private final @Nullable Output<RouteSpecHttp2RouteGetArgs> http2Route;
 
     public Output<RouteSpecHttp2RouteGetArgs> getHttp2Route() {
@@ -44,7 +44,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP routing information for the route.
      * 
      */
-    @InputImport(name="httpRoute")
+    @Import(name="httpRoute")
       private final @Nullable Output<RouteSpecHttpRouteGetArgs> httpRoute;
 
     public Output<RouteSpecHttpRouteGetArgs> getHttpRoute() {
@@ -56,7 +56,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * Routes are matched based on the specified value, where `0` is the highest priority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -67,7 +67,7 @@ public final class RouteSpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * The TCP routing information for the route.
      * 
      */
-    @InputImport(name="tcpRoute")
+    @Import(name="tcpRoute")
       private final @Nullable Output<RouteSpecTcpRouteGetArgs> tcpRoute;
 
     public Output<RouteSpecTcpRouteGetArgs> getTcpRoute() {

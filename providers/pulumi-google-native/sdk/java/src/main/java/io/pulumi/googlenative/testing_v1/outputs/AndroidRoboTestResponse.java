@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.RoboDirectiveResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidRoboTestResponse {
     /**
      * The APK for the application under test.
@@ -55,16 +55,16 @@ public final class AndroidRoboTestResponse {
      */
     private final List<RoboStartingIntentResponse> startingIntents;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidRoboTestResponse(
-        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
-        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
-        @OutputCustomType.Parameter("appInitialActivity") String appInitialActivity,
-        @OutputCustomType.Parameter("appPackageId") String appPackageId,
-        @OutputCustomType.Parameter("roboDirectives") List<RoboDirectiveResponse> roboDirectives,
-        @OutputCustomType.Parameter("roboMode") String roboMode,
-        @OutputCustomType.Parameter("roboScript") FileReferenceResponse roboScript,
-        @OutputCustomType.Parameter("startingIntents") List<RoboStartingIntentResponse> startingIntents) {
+        @CustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @CustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @CustomType.Parameter("appInitialActivity") String appInitialActivity,
+        @CustomType.Parameter("appPackageId") String appPackageId,
+        @CustomType.Parameter("roboDirectives") List<RoboDirectiveResponse> roboDirectives,
+        @CustomType.Parameter("roboMode") String roboMode,
+        @CustomType.Parameter("roboScript") FileReferenceResponse roboScript,
+        @CustomType.Parameter("startingIntents") List<RoboStartingIntentResponse> startingIntents) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appInitialActivity = appInitialActivity;

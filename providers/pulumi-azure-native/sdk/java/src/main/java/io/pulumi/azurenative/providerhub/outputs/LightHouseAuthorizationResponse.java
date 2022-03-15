@@ -3,19 +3,19 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LightHouseAuthorizationResponse {
     private final String principalId;
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LightHouseAuthorizationResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.principalId = principalId;
         this.roleDefinitionId = roleDefinitionId;
     }

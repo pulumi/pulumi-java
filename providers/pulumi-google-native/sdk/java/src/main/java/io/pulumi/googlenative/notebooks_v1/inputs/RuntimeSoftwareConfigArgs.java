@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
      * 
      */
-    @InputImport(name="customGpuDriverPath")
+    @Import(name="customGpuDriverPath")
       private final @Nullable Output<String> customGpuDriverPath;
 
     public Output<String> getCustomGpuDriverPath() {
@@ -37,7 +37,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Verifies core internal services are running. Default: True
      * 
      */
-    @InputImport(name="enableHealthMonitoring")
+    @Import(name="enableHealthMonitoring")
       private final @Nullable Output<Boolean> enableHealthMonitoring;
 
     public Output<Boolean> getEnableHealthMonitoring() {
@@ -48,7 +48,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Runtime will automatically shutdown after idle_shutdown_time. Default: True
      * 
      */
-    @InputImport(name="idleShutdown")
+    @Import(name="idleShutdown")
       private final @Nullable Output<Boolean> idleShutdown;
 
     public Output<Boolean> getIdleShutdown() {
@@ -59,7 +59,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Time in minutes to wait before shutting down runtime. Default: 180 minutes
      * 
      */
-    @InputImport(name="idleShutdownTimeout")
+    @Import(name="idleShutdownTimeout")
       private final @Nullable Output<Integer> idleShutdownTimeout;
 
     public Output<Integer> getIdleShutdownTimeout() {
@@ -70,7 +70,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Install Nvidia Driver automatically.
      * 
      */
-    @InputImport(name="installGpuDriver")
+    @Import(name="installGpuDriver")
       private final @Nullable Output<Boolean> installGpuDriver;
 
     public Output<Boolean> getInstallGpuDriver() {
@@ -81,7 +81,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Optional. Use a list of container images to use as Kernels in the notebook instance.
      * 
      */
-    @InputImport(name="kernels")
+    @Import(name="kernels")
       private final @Nullable Output<List<ContainerImageArgs>> kernels;
 
     public Output<List<ContainerImageArgs>> getKernels() {
@@ -92,7 +92,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
      */
-    @InputImport(name="notebookUpgradeSchedule")
+    @Import(name="notebookUpgradeSchedule")
       private final @Nullable Output<String> notebookUpgradeSchedule;
 
     public Output<String> getNotebookUpgradeSchedule() {
@@ -103,7 +103,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
      * 
      */
-    @InputImport(name="postStartupScript")
+    @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {

@@ -5,10 +5,10 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecHttp2RouteAction;
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecHttp2RouteMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpecHttp2Route {
     /**
      * The action to take if a match is determined.
@@ -21,10 +21,10 @@ public final class GatewayRouteSpecHttp2Route {
      */
     private final GatewayRouteSpecHttp2RouteMatch match;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayRouteSpecHttp2Route(
-        @OutputCustomType.Parameter("action") GatewayRouteSpecHttp2RouteAction action,
-        @OutputCustomType.Parameter("match") GatewayRouteSpecHttp2RouteMatch match) {
+        @CustomType.Parameter("action") GatewayRouteSpecHttp2RouteAction action,
+        @CustomType.Parameter("match") GatewayRouteSpecHttp2RouteMatch match) {
         this.action = action;
         this.match = match;
     }

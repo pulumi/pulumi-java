@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiVersionSetContractDetailsResponse {
     /**
      * Description of API Version Set.
@@ -42,14 +42,14 @@ public final class ApiVersionSetContractDetailsResponse {
      */
     private final @Nullable String versioningScheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiVersionSetContractDetailsResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("versionHeaderName") @Nullable String versionHeaderName,
-        @OutputCustomType.Parameter("versionQueryName") @Nullable String versionQueryName,
-        @OutputCustomType.Parameter("versioningScheme") @Nullable String versioningScheme) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("versionHeaderName") @Nullable String versionHeaderName,
+        @CustomType.Parameter("versionQueryName") @Nullable String versionQueryName,
+        @CustomType.Parameter("versioningScheme") @Nullable String versioningScheme) {
         this.description = description;
         this.id = id;
         this.name = name;

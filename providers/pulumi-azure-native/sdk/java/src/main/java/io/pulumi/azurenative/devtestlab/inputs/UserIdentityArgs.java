@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Set to the app Id of the client JWT making the request.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -33,7 +33,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Set to the object Id of the client JWT making the request. Not all users have object Id. For CSP (reseller) scenarios for example, object Id is not available.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -44,7 +44,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Set to the principal Id of the client JWT making the request. Service principal will not have the principal Id.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -55,7 +55,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Set to the principal name / UPN of the client JWT making the request.
      * 
      */
-    @InputImport(name="principalName")
+    @Import(name="principalName")
       private final @Nullable Output<String> principalName;
 
     public Output<String> getPrincipalName() {
@@ -66,7 +66,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Set to the tenant ID of the client JWT making the request.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

@@ -5,13 +5,13 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource {
     private final @Nullable String referenceId;
     /**
@@ -30,12 +30,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource(
-        @OutputCustomType.Parameter("referenceId") @Nullable String referenceId,
-        @OutputCustomType.Parameter("referenceSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema,
-        @OutputCustomType.Parameter("s3ReferenceDataSource") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("referenceId") @Nullable String referenceId,
+        @CustomType.Parameter("referenceSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema,
+        @CustomType.Parameter("s3ReferenceDataSource") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
+        @CustomType.Parameter("tableName") String tableName) {
         this.referenceId = referenceId;
         this.referenceSchema = referenceSchema;
         this.s3ReferenceDataSource = s3ReferenceDataSource;

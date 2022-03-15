@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Config information.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<Object> config;
 
     public Output<Object> getConfig() {
@@ -32,7 +32,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Config URI.
      * 
      */
-    @InputImport(name="configHref")
+    @Import(name="configHref")
       private final @Nullable Output<String> configHref;
 
     public Output<String> getConfigHref() {
@@ -43,7 +43,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * File list.
      * 
      */
-    @InputImport(name="files")
+    @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
 
     public Output<Map<String,String>> getFiles() {
@@ -54,7 +54,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Function App ID.
      * 
      */
-    @InputImport(name="functionAppId")
+    @Import(name="functionAppId")
       private final @Nullable Output<String> functionAppId;
 
     public Output<String> getFunctionAppId() {
@@ -65,7 +65,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Function name.
      * 
      */
-    @InputImport(name="functionName")
+    @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -76,7 +76,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Function URI.
      * 
      */
-    @InputImport(name="href")
+    @Import(name="href")
       private final @Nullable Output<String> href;
 
     public Output<String> getHref() {
@@ -87,7 +87,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The invocation URL
      * 
      */
-    @InputImport(name="invokeUrlTemplate")
+    @Import(name="invokeUrlTemplate")
       private final @Nullable Output<String> invokeUrlTemplate;
 
     public Output<String> getInvokeUrlTemplate() {
@@ -98,7 +98,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets a value indicating whether the function is disabled
      * 
      */
-    @InputImport(name="isDisabled")
+    @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
 
     public Output<Boolean> getIsDisabled() {
@@ -109,7 +109,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -120,7 +120,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The function language
      * 
      */
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
@@ -131,7 +131,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Site name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -142,7 +142,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -153,7 +153,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Script URI.
      * 
      */
-    @InputImport(name="scriptHref")
+    @Import(name="scriptHref")
       private final @Nullable Output<String> scriptHref;
 
     public Output<String> getScriptHref() {
@@ -164,7 +164,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Script root path URI.
      * 
      */
-    @InputImport(name="scriptRootPathHref")
+    @Import(name="scriptRootPathHref")
       private final @Nullable Output<String> scriptRootPathHref;
 
     public Output<String> getScriptRootPathHref() {
@@ -175,7 +175,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Secrets file URI.
      * 
      */
-    @InputImport(name="secretsFileHref")
+    @Import(name="secretsFileHref")
       private final @Nullable Output<String> secretsFileHref;
 
     public Output<String> getSecretsFileHref() {
@@ -186,7 +186,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Test data used when testing via the Azure Portal.
      * 
      */
-    @InputImport(name="testData")
+    @Import(name="testData")
       private final @Nullable Output<String> testData;
 
     public Output<String> getTestData() {
@@ -197,7 +197,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Test data URI.
      * 
      */
-    @InputImport(name="testDataHref")
+    @Import(name="testDataHref")
       private final @Nullable Output<String> testDataHref;
 
     public Output<String> getTestDataHref() {

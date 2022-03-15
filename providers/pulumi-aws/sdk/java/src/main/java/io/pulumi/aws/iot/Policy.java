@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iot.PolicyArgs;
 import io.pulumi.aws.iot.inputs.PolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The ARN assigned by AWS to this policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The default version of this policy.
      * 
      */
-    @OutputExport(name="defaultVersionId", type=String.class, parameters={})
+    @Export(name="defaultVersionId", type=String.class, parameters={})
     private Output<String> defaultVersionId;
 
     /**
@@ -60,7 +60,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The name of the policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -74,7 +74,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The policy document. This is a JSON formatted string. Use the [IoT Developer Guide](http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html) for more information on IoT Policies.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

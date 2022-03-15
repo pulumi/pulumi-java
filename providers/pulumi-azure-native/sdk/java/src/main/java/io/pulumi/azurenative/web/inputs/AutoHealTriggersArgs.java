@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.SlowRequestsBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesRangeBasedTriggerArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * A rule based on private bytes.
      * 
      */
-    @InputImport(name="privateBytesInKB")
+    @Import(name="privateBytesInKB")
       private final @Nullable Output<Integer> privateBytesInKB;
 
     public Output<Integer> getPrivateBytesInKB() {
@@ -38,7 +38,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * A rule based on total requests.
      * 
      */
-    @InputImport(name="requests")
+    @Import(name="requests")
       private final @Nullable Output<RequestsBasedTriggerArgs> requests;
 
     public Output<RequestsBasedTriggerArgs> getRequests() {
@@ -49,7 +49,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * A rule based on request execution time.
      * 
      */
-    @InputImport(name="slowRequests")
+    @Import(name="slowRequests")
       private final @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
 
     public Output<SlowRequestsBasedTriggerArgs> getSlowRequests() {
@@ -60,7 +60,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * A rule based on multiple Slow Requests Rule with path
      * 
      */
-    @InputImport(name="slowRequestsWithPath")
+    @Import(name="slowRequestsWithPath")
       private final @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
     public Output<List<SlowRequestsBasedTriggerArgs>> getSlowRequestsWithPath() {
@@ -71,7 +71,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * A rule based on status codes.
      * 
      */
-    @InputImport(name="statusCodes")
+    @Import(name="statusCodes")
       private final @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
     public Output<List<StatusCodesBasedTriggerArgs>> getStatusCodes() {
@@ -82,7 +82,7 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * A rule based on status codes ranges.
      * 
      */
-    @InputImport(name="statusCodesRange")
+    @Import(name="statusCodesRange")
       private final @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
     public Output<List<StatusCodesRangeBasedTriggerArgs>> getStatusCodesRange() {

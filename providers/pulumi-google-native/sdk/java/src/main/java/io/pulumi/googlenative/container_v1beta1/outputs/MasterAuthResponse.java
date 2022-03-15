@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.ClientCertificateConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MasterAuthResponse {
     /**
      * [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
@@ -37,14 +37,14 @@ public final class MasterAuthResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MasterAuthResponse(
-        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
-        @OutputCustomType.Parameter("clientCertificateConfig") ClientCertificateConfigResponse clientCertificateConfig,
-        @OutputCustomType.Parameter("clientKey") String clientKey,
-        @OutputCustomType.Parameter("clusterCaCertificate") String clusterCaCertificate,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("clientCertificate") String clientCertificate,
+        @CustomType.Parameter("clientCertificateConfig") ClientCertificateConfigResponse clientCertificateConfig,
+        @CustomType.Parameter("clientKey") String clientKey,
+        @CustomType.Parameter("clusterCaCertificate") String clusterCaCertificate,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfig = clientCertificateConfig;
         this.clientKey = clientKey;

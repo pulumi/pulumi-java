@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestApiEndpointConfiguration {
     /**
      * A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE`, `REGIONAL` or `PRIVATE`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
@@ -22,10 +22,10 @@ public final class RestApiEndpointConfiguration {
      */
     private final @Nullable List<String> vpcEndpointIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestApiEndpointConfiguration(
-        @OutputCustomType.Parameter("types") String types,
-        @OutputCustomType.Parameter("vpcEndpointIds") @Nullable List<String> vpcEndpointIds) {
+        @CustomType.Parameter("types") String types,
+        @CustomType.Parameter("vpcEndpointIds") @Nullable List<String> vpcEndpointIds) {
         this.types = types;
         this.vpcEndpointIds = vpcEndpointIds;
     }

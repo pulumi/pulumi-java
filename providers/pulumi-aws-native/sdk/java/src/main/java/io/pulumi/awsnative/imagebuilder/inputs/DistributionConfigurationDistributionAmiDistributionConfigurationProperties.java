@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The tags to apply to AMIs distributed to this Region.
      * 
      */
-    @InputImport(name="amiTags")
+    @Import(name="amiTags")
       private final @Nullable Object amiTags;
 
     public Optional<Object> getAmiTags() {
@@ -36,7 +36,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The description of the AMI distribution configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -47,7 +47,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The KMS key identifier used to encrypt the distributed image.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
@@ -58,7 +58,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
      * 
      */
-    @InputImport(name="launchPermissionConfiguration")
+    @Import(name="launchPermissionConfiguration")
       private final @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
 
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> getLaunchPermissionConfiguration() {
@@ -69,7 +69,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The name of the AMI distribution configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * The ID of accounts to which you want to distribute an image.
      * 
      */
-    @InputImport(name="targetAccountIds")
+    @Import(name="targetAccountIds")
       private final @Nullable List<String> targetAccountIds;
 
     public List<String> getTargetAccountIds() {

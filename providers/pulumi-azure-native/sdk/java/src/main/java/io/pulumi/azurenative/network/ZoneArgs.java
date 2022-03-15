@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.ZoneType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -33,7 +33,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    @InputImport(name="registrationVirtualNetworks")
+    @Import(name="registrationVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
 
     public Output<List<SubResourceArgs>> getRegistrationVirtualNetworks() {
@@ -44,7 +44,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    @InputImport(name="resolutionVirtualNetworks")
+    @Import(name="resolutionVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
 
     public Output<List<SubResourceArgs>> getResolutionVirtualNetworks() {
@@ -55,7 +55,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -77,7 +77,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the DNS zone (without a terminating dot).
      * 
      */
-    @InputImport(name="zoneName")
+    @Import(name="zoneName")
       private final @Nullable Output<String> zoneName;
 
     public Output<String> getZoneName() {
@@ -88,7 +88,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
      * The type of this DNS zone (Public or Private).
      * 
      */
-    @InputImport(name="zoneType")
+    @Import(name="zoneType")
       private final @Nullable Output<ZoneType> zoneType;
 
     public Output<ZoneType> getZoneType() {

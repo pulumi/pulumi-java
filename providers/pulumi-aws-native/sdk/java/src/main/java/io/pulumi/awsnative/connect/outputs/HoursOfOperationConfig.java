@@ -5,10 +5,10 @@ package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationTimeSlice;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HoursOfOperationConfig {
     /**
      * The day that the hours of operation applies to.
@@ -26,11 +26,11 @@ public final class HoursOfOperationConfig {
      */
     private final HoursOfOperationTimeSlice startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HoursOfOperationConfig(
-        @OutputCustomType.Parameter("day") HoursOfOperationConfigDay day,
-        @OutputCustomType.Parameter("endTime") HoursOfOperationTimeSlice endTime,
-        @OutputCustomType.Parameter("startTime") HoursOfOperationTimeSlice startTime) {
+        @CustomType.Parameter("day") HoursOfOperationConfigDay day,
+        @CustomType.Parameter("endTime") HoursOfOperationTimeSlice endTime,
+        @CustomType.Parameter("startTime") HoursOfOperationTimeSlice startTime) {
         this.day = day;
         this.endTime = endTime;
         this.startTime = startTime;

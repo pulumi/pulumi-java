@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TagFilterResponse {
     /**
      * This is the filter tag name, it can have 1 - 128 characters
@@ -25,11 +25,11 @@ public final class TagFilterResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagFilterResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("op") String op,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("op") String op,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.op = op;
         this.value = value;

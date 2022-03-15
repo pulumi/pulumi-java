@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResponseHeadersPolicyResult {
     private final @Nullable String id;
     private final @Nullable String lastModifiedTime;
     private final @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResponseHeadersPolicyResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("responseHeadersPolicyConfig") @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("responseHeadersPolicyConfig") @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;

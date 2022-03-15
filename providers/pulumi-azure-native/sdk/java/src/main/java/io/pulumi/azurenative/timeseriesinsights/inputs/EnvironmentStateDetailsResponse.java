@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.I
      * Contains the code that represents the reason of an environment being in a particular state. Can be used to programmatically handle specific cases.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -33,7 +33,7 @@ public final class EnvironmentStateDetailsResponse extends io.pulumi.resources.I
      * A message that describes the state in detail.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {

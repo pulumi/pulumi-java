@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.SelfDependencyTumblingWindowTri
 import io.pulumi.azurenative.datafactory.outputs.TriggerDependencyReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TumblingWindowTriggerDependencyReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TumblingWindowTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
@@ -86,21 +86,21 @@ public final class TumblingWindowTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TumblingWindowTriggerResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("delay") @Nullable Object delay,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<Object> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("frequency") String frequency,
-        @OutputCustomType.Parameter("interval") Integer interval,
-        @OutputCustomType.Parameter("maxConcurrency") Integer maxConcurrency,
-        @OutputCustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
-        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
-        @OutputCustomType.Parameter("runtimeState") String runtimeState,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("delay") @Nullable Object delay,
+        @CustomType.Parameter("dependsOn") @Nullable List<Object> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("frequency") String frequency,
+        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("maxConcurrency") Integer maxConcurrency,
+        @CustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
+        @CustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @CustomType.Parameter("runtimeState") String runtimeState,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.delay = delay;
         this.dependsOn = dependsOn;

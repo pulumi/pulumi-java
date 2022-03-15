@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.AdhocBasedTaggingCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AdhocBasedTriggerContextResponse {
     /**
      * Type of the specific object - used for deserializing
@@ -22,10 +22,10 @@ public final class AdhocBasedTriggerContextResponse {
      */
     private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdhocBasedTriggerContextResponse(
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("taggingCriteria") AdhocBasedTaggingCriteriaResponse taggingCriteria) {
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("taggingCriteria") AdhocBasedTaggingCriteriaResponse taggingCriteria) {
         this.objectType = objectType;
         this.taggingCriteria = taggingCriteria;
     }

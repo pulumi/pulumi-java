@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleEntryResponse {
     /**
      * Day of the week when a cache can be patched.
@@ -28,11 +28,11 @@ public final class ScheduleEntryResponse {
      */
     private final Integer startHourUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleEntryResponse(
-        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
-        @OutputCustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
-        @OutputCustomType.Parameter("startHourUtc") Integer startHourUtc) {
+        @CustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @CustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
+        @CustomType.Parameter("startHourUtc") Integer startHourUtc) {
         this.dayOfWeek = dayOfWeek;
         this.maintenanceWindow = maintenanceWindow;
         this.startHourUtc = startHourUtc;

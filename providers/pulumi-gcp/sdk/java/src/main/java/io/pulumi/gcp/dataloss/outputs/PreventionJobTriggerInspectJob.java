@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobAction;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfig;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJob {
     /**
      * A task to execute on the completion of a job.
@@ -30,11 +30,11 @@ public final class PreventionJobTriggerInspectJob {
      */
     private final PreventionJobTriggerInspectJobStorageConfig storageConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJob(
-        @OutputCustomType.Parameter("actions") List<PreventionJobTriggerInspectJobAction> actions,
-        @OutputCustomType.Parameter("inspectTemplateName") String inspectTemplateName,
-        @OutputCustomType.Parameter("storageConfig") PreventionJobTriggerInspectJobStorageConfig storageConfig) {
+        @CustomType.Parameter("actions") List<PreventionJobTriggerInspectJobAction> actions,
+        @CustomType.Parameter("inspectTemplateName") String inspectTemplateName,
+        @CustomType.Parameter("storageConfig") PreventionJobTriggerInspectJobStorageConfig storageConfig) {
         this.actions = actions;
         this.inspectTemplateName = inspectTemplateName;
         this.storageConfig = storageConfig;

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecHttpDataSource {
     /**
      * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
@@ -15,8 +15,8 @@ public final class TransferJobTransferSpecHttpDataSource {
      */
     private final String listUrl;
 
-    @OutputCustomType.Constructor
-    private TransferJobTransferSpecHttpDataSource(@OutputCustomType.Parameter("listUrl") String listUrl) {
+    @CustomType.Constructor
+    private TransferJobTransferSpecHttpDataSource(@CustomType.Parameter("listUrl") String listUrl) {
         this.listUrl = listUrl;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
 
     public static final IdentityAwareProxyClientArgs Empty = new IdentityAwareProxyClientArgs();
 
-    @InputImport(name="brandId", required=true)
+    @Import(name="brandId", required=true)
       private final Output<String> brandId;
 
     public Output<String> getBrandId() {
@@ -25,14 +25,14 @@ public final class IdentityAwareProxyClientArgs extends io.pulumi.resources.Reso
      * Human-friendly name given to the OAuth client.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

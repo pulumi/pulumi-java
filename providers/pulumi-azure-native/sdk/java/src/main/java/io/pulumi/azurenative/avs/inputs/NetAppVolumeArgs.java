@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * File path through which the NFS volume is exposed by the provider
      * 
      */
-    @InputImport(name="nfsFilePath")
+    @Import(name="nfsFilePath")
       private final @Nullable Output<String> nfsFilePath;
 
     public Output<String> getNfsFilePath() {
@@ -33,7 +33,7 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * IP address of the NFS provider
      * 
      */
-    @InputImport(name="nfsProviderIp")
+    @Import(name="nfsProviderIp")
       private final @Nullable Output<String> nfsProviderIp;
 
     public Output<String> getNfsProviderIp() {

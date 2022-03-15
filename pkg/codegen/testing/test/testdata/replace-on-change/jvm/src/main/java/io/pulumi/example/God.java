@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.Dog;
 import io.pulumi.example.GodArgs;
@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::God")
 public class God extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="backwards", type=Dog.class, parameters={})
+    @Export(name="backwards", type=Dog.class, parameters={})
     private Output</* @Nullable */ Dog> backwards;
 
     public Output</* @Nullable */ Dog> getBackwards() {

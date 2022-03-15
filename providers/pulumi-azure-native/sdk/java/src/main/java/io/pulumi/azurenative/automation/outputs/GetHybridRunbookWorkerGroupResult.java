@@ -6,14 +6,14 @@ package io.pulumi.azurenative.automation.outputs;
 import io.pulumi.azurenative.automation.outputs.HybridRunbookWorkerLegacyResponse;
 import io.pulumi.azurenative.automation.outputs.RunAsCredentialAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHybridRunbookWorkerGroupResult {
     /**
      * Sets the credential of a worker group.
@@ -51,15 +51,15 @@ public final class GetHybridRunbookWorkerGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHybridRunbookWorkerGroupResult(
-        @OutputCustomType.Parameter("credential") @Nullable RunAsCredentialAssociationPropertyResponse credential,
-        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
-        @OutputCustomType.Parameter("hybridRunbookWorkers") @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("credential") @Nullable RunAsCredentialAssociationPropertyResponse credential,
+        @CustomType.Parameter("groupType") @Nullable String groupType,
+        @CustomType.Parameter("hybridRunbookWorkers") @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.credential = credential;
         this.groupType = groupType;
         this.hybridRunbookWorkers = hybridRunbookWorkers;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
      * Optional. Settings for displaying the image. Applies to every image in items.
      * 
      */
-    @InputImport(name="imageDisplayOptions")
+    @Import(name="imageDisplayOptions")
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
      * List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> getItems() {

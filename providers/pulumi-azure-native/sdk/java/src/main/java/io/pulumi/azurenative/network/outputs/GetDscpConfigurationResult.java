@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.QosIpRangeResponse;
 import io.pulumi.azurenative.network.outputs.QosPortRangeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDscpConfigurationResult {
     /**
      * Associated Network Interfaces to the DSCP Configuration.
@@ -98,24 +98,24 @@ public final class GetDscpConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDscpConfigurationResult(
-        @OutputCustomType.Parameter("associatedNetworkInterfaces") List<NetworkInterfaceResponse> associatedNetworkInterfaces,
-        @OutputCustomType.Parameter("destinationIpRanges") @Nullable List<QosIpRangeResponse> destinationIpRanges,
-        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<QosPortRangeResponse> destinationPortRanges,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("markings") @Nullable List<Integer> markings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("qosCollectionId") String qosCollectionId,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("sourceIpRanges") @Nullable List<QosIpRangeResponse> sourceIpRanges,
-        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<QosPortRangeResponse> sourcePortRanges,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("associatedNetworkInterfaces") List<NetworkInterfaceResponse> associatedNetworkInterfaces,
+        @CustomType.Parameter("destinationIpRanges") @Nullable List<QosIpRangeResponse> destinationIpRanges,
+        @CustomType.Parameter("destinationPortRanges") @Nullable List<QosPortRangeResponse> destinationPortRanges,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("markings") @Nullable List<Integer> markings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("qosCollectionId") String qosCollectionId,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("sourceIpRanges") @Nullable List<QosIpRangeResponse> sourceIpRanges,
+        @CustomType.Parameter("sourcePortRanges") @Nullable List<QosPortRangeResponse> sourcePortRanges,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.associatedNetworkInterfaces = associatedNetworkInterfaces;
         this.destinationIpRanges = destinationIpRanges;
         this.destinationPortRanges = destinationPortRanges;

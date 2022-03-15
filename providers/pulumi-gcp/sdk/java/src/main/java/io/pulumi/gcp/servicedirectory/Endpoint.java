@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.EndpointArgs;
@@ -48,7 +48,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * IPv4 or IPv6 address of the endpoint.
      * 
      */
-    @OutputExport(name="address", type=String.class, parameters={})
+    @Export(name="address", type=String.class, parameters={})
     private Output</* @Nullable */ String> address;
 
     /**
@@ -63,7 +63,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * lowercase letters or the hyphen character.
      * 
      */
-    @OutputExport(name="endpointId", type=String.class, parameters={})
+    @Export(name="endpointId", type=String.class, parameters={})
     private Output<String> endpointId;
 
     /**
@@ -81,7 +81,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -98,7 +98,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The resource name for the endpoint in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -112,7 +112,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The URL to the network, such as projects/PROJECT_NUMBER/locations/global/networks/NETWORK_NAME.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output</* @Nullable */ String> network;
 
     /**
@@ -127,7 +127,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * range of [0, 65535]. If unspecified, the default is 0.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -142,7 +142,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The resource name of the service that this endpoint provides.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**

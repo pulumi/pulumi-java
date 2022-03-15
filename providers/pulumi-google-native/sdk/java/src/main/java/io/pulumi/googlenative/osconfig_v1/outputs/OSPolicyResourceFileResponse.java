@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileGcsResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileRemoteResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceFileResponse {
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
@@ -33,12 +33,12 @@ public final class OSPolicyResourceFileResponse {
      */
     private final OSPolicyResourceFileRemoteResponse remote;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceFileResponse(
-        @OutputCustomType.Parameter("allowInsecure") Boolean allowInsecure,
-        @OutputCustomType.Parameter("gcs") OSPolicyResourceFileGcsResponse gcs,
-        @OutputCustomType.Parameter("localPath") String localPath,
-        @OutputCustomType.Parameter("remote") OSPolicyResourceFileRemoteResponse remote) {
+        @CustomType.Parameter("allowInsecure") Boolean allowInsecure,
+        @CustomType.Parameter("gcs") OSPolicyResourceFileGcsResponse gcs,
+        @CustomType.Parameter("localPath") String localPath,
+        @CustomType.Parameter("remote") OSPolicyResourceFileRemoteResponse remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

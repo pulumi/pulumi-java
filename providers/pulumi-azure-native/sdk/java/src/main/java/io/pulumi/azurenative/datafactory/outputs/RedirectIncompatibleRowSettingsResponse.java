@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RedirectIncompatibleRowSettingsResponse {
     /**
      * Name of the Azure Storage, Storage SAS, or Azure Data Lake Store linked service used for redirecting incompatible row. Must be specified if redirectIncompatibleRowSettings is specified. Type: string (or Expression with resultType string).
@@ -22,10 +22,10 @@ public final class RedirectIncompatibleRowSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RedirectIncompatibleRowSettingsResponse(
-        @OutputCustomType.Parameter("linkedServiceName") Object linkedServiceName,
-        @OutputCustomType.Parameter("path") @Nullable Object path) {
+        @CustomType.Parameter("linkedServiceName") Object linkedServiceName,
+        @CustomType.Parameter("path") @Nullable Object path) {
         this.linkedServiceName = linkedServiceName;
         this.path = path;
     }

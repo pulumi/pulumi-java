@@ -5,7 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.aws.route53.inputs.ResolverEndpointIpAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final Output<String> direction;
 
     public Output<String> getDirection() {
@@ -35,7 +35,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
      * 
      */
-    @InputImport(name="ipAddresses", required=true)
+    @Import(name="ipAddresses", required=true)
       private final Output<List<ResolverEndpointIpAddressArgs>> ipAddresses;
 
     public Output<List<ResolverEndpointIpAddressArgs>> getIpAddresses() {
@@ -46,7 +46,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * The friendly name of the Route 53 Resolver endpoint.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * The ID of one or more security groups that you want to use to control access to this VPC.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -68,7 +68,7 @@ public final class ResolverEndpointArgs extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

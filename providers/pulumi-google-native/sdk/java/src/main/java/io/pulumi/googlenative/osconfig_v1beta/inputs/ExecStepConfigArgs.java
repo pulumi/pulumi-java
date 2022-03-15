@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.enums.ExecStepConfigInterpreter;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.GcsObjectArgs;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
      */
-    @InputImport(name="allowedSuccessCodes")
+    @Import(name="allowedSuccessCodes")
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
     public Output<List<Integer>> getAllowedSuccessCodes() {
@@ -37,7 +37,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A Google Cloud Storage object containing the executable.
      * 
      */
-    @InputImport(name="gcsObject")
+    @Import(name="gcsObject")
       private final @Nullable Output<GcsObjectArgs> gcsObject;
 
     public Output<GcsObjectArgs> getGcsObject() {
@@ -48,7 +48,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The script interpreter to use to run the script. If no interpreter is specified the script will be executed directly, which will likely only succeed for scripts with [shebang lines] (https://en.wikipedia.org/wiki/Shebang_\(Unix\)).
      * 
      */
-    @InputImport(name="interpreter")
+    @Import(name="interpreter")
       private final @Nullable Output<ExecStepConfigInterpreter> interpreter;
 
     public Output<ExecStepConfigInterpreter> getInterpreter() {
@@ -59,7 +59,7 @@ public final class ExecStepConfigArgs extends io.pulumi.resources.ResourceArgs {
      * An absolute path to the executable on the VM.
      * 
      */
-    @InputImport(name="localPath")
+    @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
     public Output<String> getLocalPath() {

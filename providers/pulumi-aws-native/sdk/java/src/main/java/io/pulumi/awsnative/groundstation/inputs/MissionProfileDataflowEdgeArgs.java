@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
 
     public static final MissionProfileDataflowEdgeArgs Empty = new MissionProfileDataflowEdgeArgs();
 
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
         return this.destination == null ? Output.empty() : this.destination;
     }
 
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The FCM legacy endpoint. Default value is 'https://fcm.googleapis.com/fcm/send'
      * 
      */
-    @InputImport(name="gcmEndpoint")
+    @Import(name="gcmEndpoint")
       private final @Nullable Output<String> gcmEndpoint;
 
     public Output<String> getGcmEndpoint() {
@@ -33,7 +33,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The Google API key.
      * 
      */
-    @InputImport(name="googleApiKey")
+    @Import(name="googleApiKey")
       private final @Nullable Output<String> googleApiKey;
 
     public Output<String> getGoogleApiKey() {

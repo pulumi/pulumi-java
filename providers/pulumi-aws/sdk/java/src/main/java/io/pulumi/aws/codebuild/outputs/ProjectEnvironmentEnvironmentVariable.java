@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectEnvironmentEnvironmentVariable {
     /**
      * Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
@@ -27,11 +27,11 @@ public final class ProjectEnvironmentEnvironmentVariable {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectEnvironmentEnvironmentVariable(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.type = type;
         this.value = value;

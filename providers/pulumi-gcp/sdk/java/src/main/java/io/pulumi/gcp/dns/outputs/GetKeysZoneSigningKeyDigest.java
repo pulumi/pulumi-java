@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeysZoneSigningKeyDigest {
     /**
      * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
@@ -22,10 +22,10 @@ public final class GetKeysZoneSigningKeyDigest {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeysZoneSigningKeyDigest(
-        @OutputCustomType.Parameter("digest") @Nullable String digest,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("digest") @Nullable String digest,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.digest = digest;
         this.type = type;
     }

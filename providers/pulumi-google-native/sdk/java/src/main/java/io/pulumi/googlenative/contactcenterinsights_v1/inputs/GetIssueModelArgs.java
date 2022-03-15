@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetIssueModelArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIssueModelArgs Empty = new GetIssueModelArgs();
 
-    @InputImport(name="issueModelId", required=true)
+    @Import(name="issueModelId", required=true)
       private final String issueModelId;
 
     public String getIssueModelId() {
         return this.issueModelId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

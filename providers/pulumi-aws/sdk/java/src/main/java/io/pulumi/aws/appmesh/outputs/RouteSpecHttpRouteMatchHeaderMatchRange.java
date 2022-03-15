@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttpRouteMatchHeaderMatchRange {
     /**
      * The end of the range.
@@ -20,10 +20,10 @@ public final class RouteSpecHttpRouteMatchHeaderMatchRange {
      */
     private final Integer start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttpRouteMatchHeaderMatchRange(
-        @OutputCustomType.Parameter("end") Integer end,
-        @OutputCustomType.Parameter("start") Integer start) {
+        @CustomType.Parameter("end") Integer end,
+        @CustomType.Parameter("start") Integer start) {
         this.end = end;
         this.start = start;
     }

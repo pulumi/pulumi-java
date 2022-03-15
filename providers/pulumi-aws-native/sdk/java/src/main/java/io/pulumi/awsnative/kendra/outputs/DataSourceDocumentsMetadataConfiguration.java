@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceDocumentsMetadataConfiguration {
     private final @Nullable String s3Prefix;
 
-    @OutputCustomType.Constructor
-    private DataSourceDocumentsMetadataConfiguration(@OutputCustomType.Parameter("s3Prefix") @Nullable String s3Prefix) {
+    @CustomType.Constructor
+    private DataSourceDocumentsMetadataConfiguration(@CustomType.Parameter("s3Prefix") @Nullable String s3Prefix) {
         this.s3Prefix = s3Prefix;
     }
 

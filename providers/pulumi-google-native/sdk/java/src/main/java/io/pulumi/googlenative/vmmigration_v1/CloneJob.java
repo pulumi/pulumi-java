@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.CloneJobArgs;
@@ -25,7 +25,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * Details of the target VM in Compute Engine.
      * 
      */
-    @OutputExport(name="computeEngineTargetDetails", type=ComputeEngineTargetDetailsResponse.class, parameters={})
+    @Export(name="computeEngineTargetDetails", type=ComputeEngineTargetDetailsResponse.class, parameters={})
     private Output<ComputeEngineTargetDetailsResponse> computeEngineTargetDetails;
 
     /**
@@ -39,7 +39,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * The time the clone job was created (as an API call, not when it was actually created in the target).
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * Provides details for the errors that led to the Clone Job's state.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -67,7 +67,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * The name of the clone.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * State of the clone job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -95,7 +95,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * The time the state was last updated.
      * 
      */
-    @OutputExport(name="stateTime", type=String.class, parameters={})
+    @Export(name="stateTime", type=String.class, parameters={})
     private Output<String> stateTime;
 
     /**

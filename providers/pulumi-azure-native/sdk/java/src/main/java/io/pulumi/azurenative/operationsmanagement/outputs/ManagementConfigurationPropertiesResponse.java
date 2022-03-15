@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
 import io.pulumi.azurenative.operationsmanagement.outputs.ArmTemplateParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementConfigurationPropertiesResponse {
     /**
      * The applicationId of the appliance for this Management.
@@ -40,13 +40,13 @@ public final class ManagementConfigurationPropertiesResponse {
      */
     private final Object template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementConfigurationPropertiesResponse(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("parameters") List<ArmTemplateParameterResponse> parameters,
-        @OutputCustomType.Parameter("parentResourceType") String parentResourceType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("template") Object template) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("parameters") List<ArmTemplateParameterResponse> parameters,
+        @CustomType.Parameter("parentResourceType") String parentResourceType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("template") Object template) {
         this.applicationId = applicationId;
         this.parameters = parameters;
         this.parentResourceType = parentResourceType;

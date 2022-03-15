@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * permissions for the CMK whenever the encrypted data is requested.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -33,7 +33,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the log group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -57,7 +57,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * If you select 0, the events in the log group are always retained and never expire.
      * 
      */
-    @InputImport(name="retentionInDays")
+    @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
@@ -68,7 +68,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

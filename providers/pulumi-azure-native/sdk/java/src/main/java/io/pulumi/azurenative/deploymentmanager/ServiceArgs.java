@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service resource.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -52,7 +52,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service topology .
      * 
      */
-    @InputImport(name="serviceTopologyName", required=true)
+    @Import(name="serviceTopologyName", required=true)
       private final Output<String> serviceTopologyName;
 
     public Output<String> getServiceTopologyName() {
@@ -63,7 +63,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure location to which the resources in the service belong to or should be deployed to.
      * 
      */
-    @InputImport(name="targetLocation", required=true)
+    @Import(name="targetLocation", required=true)
       private final Output<String> targetLocation;
 
     public Output<String> getTargetLocation() {
@@ -85,7 +85,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The subscription to which the resources in the service belong to or should be deployed to.
      * 
      */
-    @InputImport(name="targetSubscriptionId", required=true)
+    @Import(name="targetSubscriptionId", required=true)
       private final Output<String> targetSubscriptionId;
 
     public Output<String> getTargetSubscriptionId() {

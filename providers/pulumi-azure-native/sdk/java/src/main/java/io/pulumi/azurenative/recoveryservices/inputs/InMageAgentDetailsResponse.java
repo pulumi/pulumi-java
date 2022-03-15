@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * Agent expiry date.
      * 
      */
-    @InputImport(name="agentExpiryDate")
+    @Import(name="agentExpiryDate")
       private final @Nullable String agentExpiryDate;
 
     public Optional<String> getAgentExpiryDate() {
@@ -33,7 +33,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * A value indicating whether installed agent needs to be updated.
      * 
      */
-    @InputImport(name="agentUpdateStatus")
+    @Import(name="agentUpdateStatus")
       private final @Nullable String agentUpdateStatus;
 
     public Optional<String> getAgentUpdateStatus() {
@@ -44,7 +44,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * The agent version.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
@@ -55,7 +55,7 @@ public final class InMageAgentDetailsResponse extends io.pulumi.resources.Invoke
      * A value indicating whether reboot is required after update is applied.
      * 
      */
-    @InputImport(name="postUpdateRebootStatus")
+    @Import(name="postUpdateRebootStatus")
       private final @Nullable String postUpdateRebootStatus;
 
     public Optional<String> getPostUpdateRebootStatus() {

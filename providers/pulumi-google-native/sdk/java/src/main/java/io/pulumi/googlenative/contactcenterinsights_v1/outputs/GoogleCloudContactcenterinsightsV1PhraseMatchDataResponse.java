@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
     /**
      * The human-readable name of the phrase matcher.
@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
      */
     private final String phraseMatcher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("phraseMatcher") String phraseMatcher) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("phraseMatcher") String phraseMatcher) {
         this.displayName = displayName;
         this.phraseMatcher = phraseMatcher;
     }

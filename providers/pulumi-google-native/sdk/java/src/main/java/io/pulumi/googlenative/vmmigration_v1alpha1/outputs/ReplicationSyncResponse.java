@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationSyncResponse {
     /**
      * The most updated snapshot created time in the source that finished replication.
@@ -15,8 +15,8 @@ public final class ReplicationSyncResponse {
      */
     private final String lastSyncTime;
 
-    @OutputCustomType.Constructor
-    private ReplicationSyncResponse(@OutputCustomType.Parameter("lastSyncTime") String lastSyncTime) {
+    @CustomType.Constructor
+    private ReplicationSyncResponse(@CustomType.Parameter("lastSyncTime") String lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse {
     /**
      * Approximate number of distinct phrases in the dictionary.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse {
      */
     private final String approxNumPhrases;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(@OutputCustomType.Parameter("approxNumPhrases") String approxNumPhrases) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(@CustomType.Parameter("approxNumPhrases") String approxNumPhrases) {
         this.approxNumPhrases = approxNumPhrases;
     }
 

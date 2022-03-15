@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DicomServiceAuthenticationConfigurationResponse {
     /**
      * The audiences for the service
@@ -21,10 +21,10 @@ public final class DicomServiceAuthenticationConfigurationResponse {
      */
     private final String authority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DicomServiceAuthenticationConfigurationResponse(
-        @OutputCustomType.Parameter("audiences") List<String> audiences,
-        @OutputCustomType.Parameter("authority") String authority) {
+        @CustomType.Parameter("audiences") List<String> audiences,
+        @CustomType.Parameter("authority") String authority) {
         this.audiences = audiences;
         this.authority = authority;
     }

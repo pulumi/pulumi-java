@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * The number of guest accelerator cards exposed to each VM.
      * 
      */
-    @InputImport(name="acceleratorCount", required=true)
+    @Import(name="acceleratorCount", required=true)
       private final String acceleratorCount;
 
     public String getAcceleratorCount() {
@@ -31,7 +31,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * The type of accelerator to attach to each VM, e.g. "nvidia-tesla-k80" for nVidia Tesla K80.
      * 
      */
-    @InputImport(name="acceleratorType", required=true)
+    @Import(name="acceleratorType", required=true)
       private final String acceleratorType;
 
     public String getAcceleratorType() {

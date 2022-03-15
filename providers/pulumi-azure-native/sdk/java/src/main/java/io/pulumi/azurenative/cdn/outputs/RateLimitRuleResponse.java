@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.MatchConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RateLimitRuleResponse {
     /**
      * Describes what action to be applied when rule matches
@@ -50,15 +50,15 @@ public final class RateLimitRuleResponse {
      */
     private final Integer rateLimitThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RateLimitRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("rateLimitDurationInMinutes") Integer rateLimitDurationInMinutes,
-        @OutputCustomType.Parameter("rateLimitThreshold") Integer rateLimitThreshold) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("rateLimitDurationInMinutes") Integer rateLimitDurationInMinutes,
+        @CustomType.Parameter("rateLimitThreshold") Integer rateLimitThreshold) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;

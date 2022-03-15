@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
      * Maximum latency value that is allowed for any player.
      * 
      */
-    @InputImport(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
+    @Import(name="maximumIndividualPlayerLatencyMilliseconds", required=true)
       private final Output<Integer> maximumIndividualPlayerLatencyMilliseconds;
 
     public Output<Integer> getMaximumIndividualPlayerLatencyMilliseconds() {
@@ -29,7 +29,7 @@ public final class GameSessionQueuePlayerLatencyPolicyGetArgs extends io.pulumi.
      * Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
      * 
      */
-    @InputImport(name="policyDurationSeconds")
+    @Import(name="policyDurationSeconds")
       private final @Nullable Output<Integer> policyDurationSeconds;
 
     public Output<Integer> getPolicyDurationSeconds() {

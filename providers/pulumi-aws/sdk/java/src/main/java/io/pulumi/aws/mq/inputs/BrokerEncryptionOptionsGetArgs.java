@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BrokerEncryptionOptionsGetArgs extends io.pulumi.resources.Re
      * Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -30,7 +30,7 @@ public final class BrokerEncryptionOptionsGetArgs extends io.pulumi.resources.Re
      * Whether to enable an AWS-owned KMS CMK that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS-managed CMK aliased to `aws/mq` in your account.
      * 
      */
-    @InputImport(name="useAwsOwnedKey")
+    @Import(name="useAwsOwnedKey")
       private final @Nullable Output<Boolean> useAwsOwnedKey;
 
     public Output<Boolean> getUseAwsOwnedKey() {

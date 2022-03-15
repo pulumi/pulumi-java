@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.ContainerRegistryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerConfigurationResponse {
     /**
      * This is the full image reference, as would be specified to "docker pull". An image will be sourced from the default Docker registry unless the image is fully qualified with an alternative registry.
@@ -24,11 +24,11 @@ public final class ContainerConfigurationResponse {
     private final @Nullable List<ContainerRegistryResponse> containerRegistries;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerConfigurationResponse(
-        @OutputCustomType.Parameter("containerImageNames") @Nullable List<String> containerImageNames,
-        @OutputCustomType.Parameter("containerRegistries") @Nullable List<ContainerRegistryResponse> containerRegistries,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containerImageNames") @Nullable List<String> containerImageNames,
+        @CustomType.Parameter("containerRegistries") @Nullable List<ContainerRegistryResponse> containerRegistries,
+        @CustomType.Parameter("type") String type) {
         this.containerImageNames = containerImageNames;
         this.containerRegistries = containerRegistries;
         this.type = type;

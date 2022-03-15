@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * address or omitted to allow GCP to choose a valid one for you.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -37,7 +37,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
-    @InputImport(name="addressType")
+    @Import(name="addressType")
       private final @Nullable Output<String> addressType;
 
     public Output<String> getAddressType() {
@@ -48,7 +48,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -59,7 +59,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -71,7 +71,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    @InputImport(name="ipVersion")
+    @Import(name="ipVersion")
       private final @Nullable Output<String> ipVersion;
 
     public Output<String> getIpVersion() {
@@ -82,7 +82,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @InputImport(name="labelFingerprint")
+    @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
     public Output<String> getLabelFingerprint() {
@@ -93,7 +93,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this address.  A list of key->value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -110,7 +110,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -124,7 +124,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * This should only be set when using an Internal address.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -138,7 +138,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
      * 
      */
-    @InputImport(name="prefixLength")
+    @Import(name="prefixLength")
       private final @Nullable Output<Integer> prefixLength;
 
     public Output<Integer> getPrefixLength() {
@@ -150,7 +150,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -163,7 +163,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
@@ -174,7 +174,7 @@ public final class GlobalAddressState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {

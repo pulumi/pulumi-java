@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * The document name to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="documentName", required=true)
+    @Import(name="documentName", required=true)
       private final Output<String> documentName;
 
     public Output<String> getDocumentName() {
@@ -36,7 +36,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * The version of the document to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
@@ -47,7 +47,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * The parameters to set when starting the SSM automation document.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters;
 
     public Output<List<ResponsePlanSsmParameterArgs>> getParameters() {
@@ -58,7 +58,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * The role ARN to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -69,7 +69,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
      * The account type to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="targetAccount")
+    @Import(name="targetAccount")
       private final @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
     public Output<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {

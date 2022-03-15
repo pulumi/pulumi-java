@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * defined as an attribute in the resource.
      * 
      */
-    @InputImport(name="hashKey", required=true)
+    @Import(name="hashKey", required=true)
       private final Output<String> hashKey;
 
     public Output<String> getHashKey() {
@@ -32,7 +32,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * The name of the index
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * do not need to be defined as attributes on the table.
      * 
      */
-    @InputImport(name="nonKeyAttributes")
+    @Import(name="nonKeyAttributes")
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
     public Output<List<String>> getNonKeyAttributes() {
@@ -60,7 +60,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * parameter.
      * 
      */
-    @InputImport(name="projectionType", required=true)
+    @Import(name="projectionType", required=true)
       private final Output<String> projectionType;
 
     public Output<String> getProjectionType() {
@@ -71,7 +71,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * The name of the range key; must be defined
      * 
      */
-    @InputImport(name="rangeKey")
+    @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
     public Output<String> getRangeKey() {
@@ -82,7 +82,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    @InputImport(name="readCapacity")
+    @Import(name="readCapacity")
       private final @Nullable Output<Integer> readCapacity;
 
     public Output<Integer> getReadCapacity() {
@@ -93,7 +93,7 @@ public final class TableGlobalSecondaryIndexArgs extends io.pulumi.resources.Res
      * The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    @InputImport(name="writeCapacity")
+    @Import(name="writeCapacity")
       private final @Nullable Output<Integer> writeCapacity;
 
     public Output<Integer> getWriteCapacity() {

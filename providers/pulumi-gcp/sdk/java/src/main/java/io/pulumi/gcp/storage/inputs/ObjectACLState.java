@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket the object is stored in.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -30,7 +30,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * The name of the object to apply the acl to.
      * 
      */
-    @InputImport(name="object")
+    @Import(name="object")
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {
@@ -41,7 +41,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
-    @InputImport(name="predefinedAcl")
+    @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
     public Output<String> getPredefinedAcl() {
@@ -53,7 +53,7 @@ public final class ObjectACLState extends io.pulumi.resources.ResourceArgs {
      * Must be set if `predefined_acl` is not.
      * 
      */
-    @InputImport(name="roleEntities")
+    @Import(name="roleEntities")
       private final @Nullable Output<List<String>> roleEntities;
 
     public Output<List<String>> getRoleEntities() {

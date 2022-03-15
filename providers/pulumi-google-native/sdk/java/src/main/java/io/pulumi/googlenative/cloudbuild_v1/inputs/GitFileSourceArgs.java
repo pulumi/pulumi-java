@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.enums.GitFileSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The path of the file, with the repo root as the root of the path.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -34,7 +34,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * See RepoType above.
      * 
      */
-    @InputImport(name="repoType")
+    @Import(name="repoType")
       private final @Nullable Output<GitFileSourceRepoType> repoType;
 
     public Output<GitFileSourceRepoType> getRepoType() {
@@ -45,7 +45,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {
@@ -56,7 +56,7 @@ public final class GitFileSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the repo (optional). If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

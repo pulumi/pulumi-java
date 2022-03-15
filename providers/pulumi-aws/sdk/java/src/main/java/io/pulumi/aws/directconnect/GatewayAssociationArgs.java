@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
      * VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
      * 
      */
-    @InputImport(name="allowedPrefixes")
+    @Import(name="allowedPrefixes")
       private final @Nullable Output<List<String>> allowedPrefixes;
 
     public Output<List<String>> getAllowedPrefixes() {
@@ -31,7 +31,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
      * Used for single account Direct Connect gateway associations.
      * 
      */
-    @InputImport(name="associatedGatewayId")
+    @Import(name="associatedGatewayId")
       private final @Nullable Output<String> associatedGatewayId;
 
     public Output<String> getAssociatedGatewayId() {
@@ -43,7 +43,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    @InputImport(name="associatedGatewayOwnerAccountId")
+    @Import(name="associatedGatewayOwnerAccountId")
       private final @Nullable Output<String> associatedGatewayOwnerAccountId;
 
     public Output<String> getAssociatedGatewayOwnerAccountId() {
@@ -54,7 +54,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
      * The ID of the Direct Connect gateway.
      * 
      */
-    @InputImport(name="dxGatewayId", required=true)
+    @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
     public Output<String> getDxGatewayId() {
@@ -66,7 +66,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    @InputImport(name="proposalId")
+    @Import(name="proposalId")
       private final @Nullable Output<String> proposalId;
 
     public Output<String> getProposalId() {
@@ -79,7 +79,7 @@ public final class GatewayAssociationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @Deprecated /* use 'associated_gateway_id' argument instead */
-    @InputImport(name="vpnGatewayId")
+    @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
     @Deprecated /* use 'associated_gateway_id' argument instead */

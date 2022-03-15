@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualServiceSpecProviderVirtualNode extends io.pulumi.re
      * The name of the virtual node that is acting as a service provider.
      * 
      */
-    @InputImport(name="virtualNodeName", required=true)
+    @Import(name="virtualNodeName", required=true)
       private final String virtualNodeName;
 
     public String getVirtualNodeName() {

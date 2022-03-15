@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDNSSECArgs extends io.pulumi.resources.InvokeArgs {
      * The unique string (ID) used to identify a hosted zone.
      * 
      */
-    @InputImport(name="hostedZoneId", required=true)
+    @Import(name="hostedZoneId", required=true)
       private final String hostedZoneId;
 
     public String getHostedZoneId() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.saas.inputs;
 
 import io.pulumi.azurenative.saas.inputs.SaasPropertiesResponseTerm;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * Whether the SaaS subscription will auto renew upon term end.
      * 
      */
-    @InputImport(name="autoRenew")
+    @Import(name="autoRenew")
       private final @Nullable Boolean autoRenew;
 
     public Optional<Boolean> getAutoRenew() {
@@ -37,7 +37,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The created date of this resource.
      * 
      */
-    @InputImport(name="created", required=true)
+    @Import(name="created", required=true)
       private final String created;
 
     public String getCreated() {
@@ -48,7 +48,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * Whether the current term is a Free Trial term
      * 
      */
-    @InputImport(name="isFreeTrial")
+    @Import(name="isFreeTrial")
       private final @Nullable Boolean isFreeTrial;
 
     public Optional<Boolean> getIsFreeTrial() {
@@ -59,7 +59,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The last modifier date if this resource.
      * 
      */
-    @InputImport(name="lastModified")
+    @Import(name="lastModified")
       private final @Nullable String lastModified;
 
     public Optional<String> getLastModified() {
@@ -70,7 +70,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The offer id.
      * 
      */
-    @InputImport(name="offerId")
+    @Import(name="offerId")
       private final @Nullable String offerId;
 
     public Optional<String> getOfferId() {
@@ -81,7 +81,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.
      * 
      */
-    @InputImport(name="paymentChannelMetadata")
+    @Import(name="paymentChannelMetadata")
       private final @Nullable Map<String,String> paymentChannelMetadata;
 
     public Map<String,String> getPaymentChannelMetadata() {
@@ -92,7 +92,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The Payment channel for the SaasSubscription.
      * 
      */
-    @InputImport(name="paymentChannelType")
+    @Import(name="paymentChannelType")
       private final @Nullable String paymentChannelType;
 
     public Optional<String> getPaymentChannelType() {
@@ -103,7 +103,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The publisher id.
      * 
      */
-    @InputImport(name="publisherId")
+    @Import(name="publisherId")
       private final @Nullable String publisherId;
 
     public Optional<String> getPublisherId() {
@@ -114,7 +114,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The environment in the publisher side for this resource.
      * 
      */
-    @InputImport(name="publisherTestEnvironment")
+    @Import(name="publisherTestEnvironment")
       private final @Nullable String publisherTestEnvironment;
 
     public Optional<String> getPublisherTestEnvironment() {
@@ -125,7 +125,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The seat count.
      * 
      */
-    @InputImport(name="quantity")
+    @Import(name="quantity")
       private final @Nullable Double quantity;
 
     public Optional<Double> getQuantity() {
@@ -136,7 +136,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The SaaS resource name.
      * 
      */
-    @InputImport(name="saasResourceName")
+    @Import(name="saasResourceName")
       private final @Nullable String saasResourceName;
 
     public Optional<String> getSaasResourceName() {
@@ -147,7 +147,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The saas session id used for dev service migration request.
      * 
      */
-    @InputImport(name="saasSessionId")
+    @Import(name="saasSessionId")
       private final @Nullable String saasSessionId;
 
     public Optional<String> getSaasSessionId() {
@@ -158,7 +158,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The saas subscription id used for tenant to subscription level migration request.
      * 
      */
-    @InputImport(name="saasSubscriptionId")
+    @Import(name="saasSubscriptionId")
       private final @Nullable String saasSubscriptionId;
 
     public Optional<String> getSaasSubscriptionId() {
@@ -169,7 +169,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The plan id.
      * 
      */
-    @InputImport(name="skuId")
+    @Import(name="skuId")
       private final @Nullable String skuId;
 
     public Optional<String> getSkuId() {
@@ -180,7 +180,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The SaaS Subscription Status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -191,7 +191,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The current Term object.
      * 
      */
-    @InputImport(name="term")
+    @Import(name="term")
       private final @Nullable SaasPropertiesResponseTerm term;
 
     public Optional<SaasPropertiesResponseTerm> getTerm() {
@@ -202,7 +202,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * The current Term id.
      * 
      */
-    @InputImport(name="termId")
+    @Import(name="termId")
       private final @Nullable String termId;
 
     public Optional<String> getTermId() {

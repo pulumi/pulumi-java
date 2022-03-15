@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobSchedulingResponse {
     /**
      * Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed.A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.Note: Currently, this restartable job option is not supported in Dataproc workflow template (https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template) jobs.
@@ -20,10 +20,10 @@ public final class JobSchedulingResponse {
      */
     private final Integer maxFailuresTotal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobSchedulingResponse(
-        @OutputCustomType.Parameter("maxFailuresPerHour") Integer maxFailuresPerHour,
-        @OutputCustomType.Parameter("maxFailuresTotal") Integer maxFailuresTotal) {
+        @CustomType.Parameter("maxFailuresPerHour") Integer maxFailuresPerHour,
+        @CustomType.Parameter("maxFailuresTotal") Integer maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }

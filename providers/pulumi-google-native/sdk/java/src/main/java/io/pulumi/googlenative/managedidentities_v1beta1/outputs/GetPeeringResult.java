@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPeeringResult {
     /**
      * The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
@@ -51,16 +51,16 @@ public final class GetPeeringResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPeeringResult(
-        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("domainResource") String domainResource,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("domainResource") String domainResource,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.authorizedNetwork = authorizedNetwork;
         this.createTime = createTime;
         this.domainResource = domainResource;

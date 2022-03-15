@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs.CloudSqlPropertiesResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * Cloud SQL properties.
@@ -47,15 +47,15 @@ public final class GetConnectionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("cloudSql") CloudSqlPropertiesResponse cloudSql,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("hasCredential") Boolean hasCredential,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("cloudSql") CloudSqlPropertiesResponse cloudSql,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("hasCredential") Boolean hasCredential,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name) {
         this.cloudSql = cloudSql;
         this.creationTime = creationTime;
         this.description = description;

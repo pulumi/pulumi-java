@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
      * Last modified time of this blueprint definition.
      * 
      */
-    @InputImport(name="lastModified", required=true)
+    @Import(name="lastModified", required=true)
       private final String lastModified;
 
     public String getLastModified() {
@@ -32,7 +32,7 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
      * List of resources that were created by the blueprint assignment.
      * 
      */
-    @InputImport(name="managedResources", required=true)
+    @Import(name="managedResources", required=true)
       private final List<String> managedResources;
 
     public List<String> getManagedResources() {
@@ -43,7 +43,7 @@ public final class AssignmentStatusResponse extends io.pulumi.resources.InvokeAr
      * Creation time of this blueprint definition.
      * 
      */
-    @InputImport(name="timeCreated", required=true)
+    @Import(name="timeCreated", required=true)
       private final String timeCreated;
 
     public String getTimeCreated() {

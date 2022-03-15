@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageResponse {
     /**
      * The resource to read the package from. The supported resource type is: Google Cloud Storage: storage.googleapis.com/{bucket} bucket.storage.googleapis.com/
@@ -20,10 +20,10 @@ public final class PackageResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageResponse(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name) {
         this.location = location;
         this.name = name;
     }

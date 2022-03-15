@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetCompanyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCompanyArgs Empty = new GetCompanyArgs();
 
-    @InputImport(name="companyId", required=true)
+    @Import(name="companyId", required=true)
       private final String companyId;
 
     public String getCompanyId() {
         return this.companyId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

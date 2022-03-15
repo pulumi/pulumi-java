@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassifierCsvClassifier {
     /**
      * Enables the processing of files that contain only one column.
@@ -44,14 +44,14 @@ public final class ClassifierCsvClassifier {
      */
     private final @Nullable String quoteSymbol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassifierCsvClassifier(
-        @OutputCustomType.Parameter("allowSingleColumn") @Nullable Boolean allowSingleColumn,
-        @OutputCustomType.Parameter("containsHeader") @Nullable String containsHeader,
-        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
-        @OutputCustomType.Parameter("disableValueTrimming") @Nullable Boolean disableValueTrimming,
-        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
-        @OutputCustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
+        @CustomType.Parameter("allowSingleColumn") @Nullable Boolean allowSingleColumn,
+        @CustomType.Parameter("containsHeader") @Nullable String containsHeader,
+        @CustomType.Parameter("delimiter") @Nullable String delimiter,
+        @CustomType.Parameter("disableValueTrimming") @Nullable Boolean disableValueTrimming,
+        @CustomType.Parameter("headers") @Nullable List<String> headers,
+        @CustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
         this.allowSingleColumn = allowSingleColumn;
         this.containsHeader = containsHeader;
         this.delimiter = delimiter;

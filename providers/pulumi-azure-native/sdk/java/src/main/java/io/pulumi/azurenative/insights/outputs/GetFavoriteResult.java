@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFavoriteResult {
     /**
      * Favorite category, as defined by the user at creation time.
@@ -69,19 +69,19 @@ public final class GetFavoriteResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFavoriteResult(
-        @OutputCustomType.Parameter("category") @Nullable String category,
-        @OutputCustomType.Parameter("config") @Nullable String config,
-        @OutputCustomType.Parameter("favoriteId") String favoriteId,
-        @OutputCustomType.Parameter("favoriteType") @Nullable String favoriteType,
-        @OutputCustomType.Parameter("isGeneratedFromTemplate") @Nullable Boolean isGeneratedFromTemplate,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("timeModified") String timeModified,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("category") @Nullable String category,
+        @CustomType.Parameter("config") @Nullable String config,
+        @CustomType.Parameter("favoriteId") String favoriteId,
+        @CustomType.Parameter("favoriteType") @Nullable String favoriteType,
+        @CustomType.Parameter("isGeneratedFromTemplate") @Nullable Boolean isGeneratedFromTemplate,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceType") @Nullable String sourceType,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("timeModified") String timeModified,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.category = category;
         this.config = config;
         this.favoriteId = favoriteId;

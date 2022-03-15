@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -31,7 +31,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * An optional string description of this rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * this rule can be modified by the user.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -58,7 +58,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * IP address or range, defined using CIDR notation, of requests that this rule applies to.
      * 
      */
-    @InputImport(name="sourceRange", required=true)
+    @Import(name="sourceRange", required=true)
       private final Output<String> sourceRange;
 
     public Output<String> getSourceRange() {

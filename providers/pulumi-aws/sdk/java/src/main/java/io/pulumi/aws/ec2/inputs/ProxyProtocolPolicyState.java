@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
      * should be applied. This can be specified if the protocol is SSL or TCP.
      * 
      */
-    @InputImport(name="instancePorts")
+    @Import(name="instancePorts")
       private final @Nullable Output<List<String>> instancePorts;
 
     public Output<List<String>> getInstancePorts() {
@@ -32,7 +32,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
      * should be attached.
      * 
      */
-    @InputImport(name="loadBalancer")
+    @Import(name="loadBalancer")
       private final @Nullable Output<String> loadBalancer;
 
     public Output<String> getLoadBalancer() {

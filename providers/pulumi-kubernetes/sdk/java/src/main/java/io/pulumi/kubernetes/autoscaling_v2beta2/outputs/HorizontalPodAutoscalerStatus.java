@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscalerCondition;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.MetricStatus;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalerStatus {
     /**
      * conditions is the set of conditions required for this autoscaler to scale its target, and indicates whether or not those conditions are met.
@@ -46,14 +46,14 @@ public final class HorizontalPodAutoscalerStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HorizontalPodAutoscalerStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<HorizontalPodAutoscalerCondition> conditions,
-        @OutputCustomType.Parameter("currentMetrics") @Nullable List<MetricStatus> currentMetrics,
-        @OutputCustomType.Parameter("currentReplicas") Integer currentReplicas,
-        @OutputCustomType.Parameter("desiredReplicas") Integer desiredReplicas,
-        @OutputCustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
+        @CustomType.Parameter("conditions") @Nullable List<HorizontalPodAutoscalerCondition> conditions,
+        @CustomType.Parameter("currentMetrics") @Nullable List<MetricStatus> currentMetrics,
+        @CustomType.Parameter("currentReplicas") Integer currentReplicas,
+        @CustomType.Parameter("desiredReplicas") Integer desiredReplicas,
+        @CustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.conditions = conditions;
         this.currentMetrics = currentMetrics;
         this.currentReplicas = currentReplicas;

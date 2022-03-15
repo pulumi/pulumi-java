@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateCpuOptions {
     /**
      * The number of CPU cores for the instance.
@@ -23,10 +23,10 @@ public final class LaunchTemplateCpuOptions {
      */
     private final @Nullable Integer threadsPerCore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateCpuOptions(
-        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
-        @OutputCustomType.Parameter("threadsPerCore") @Nullable Integer threadsPerCore) {
+        @CustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @CustomType.Parameter("threadsPerCore") @Nullable Integer threadsPerCore) {
         this.coreCount = coreCount;
         this.threadsPerCore = threadsPerCore;
     }

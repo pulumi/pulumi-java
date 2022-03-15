@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.BoundingPolyResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
      * The list of polygons outlining the sensitive regions in the image.
      * 
      */
-    @InputImport(name="boundingPolys", required=true)
+    @Import(name="boundingPolys", required=true)
       private final List<BoundingPolyResponse> boundingPolys;
 
     public List<BoundingPolyResponse> getBoundingPolys() {
@@ -33,7 +33,7 @@ public final class ImageAnnotationResponse extends io.pulumi.resources.InvokeArg
      * 0-based index of the image frame. For example, an image frame in a DICOM instance.
      * 
      */
-    @InputImport(name="frameIndex", required=true)
+    @Import(name="frameIndex", required=true)
       private final Integer frameIndex;
 
     public Integer getFrameIndex() {

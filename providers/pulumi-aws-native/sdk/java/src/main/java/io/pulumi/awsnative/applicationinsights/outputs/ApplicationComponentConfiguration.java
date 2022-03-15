@@ -5,13 +5,13 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationConfigurationDetails;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationSubComponentTypeConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationComponentConfiguration {
     /**
      * The configuration settings
@@ -24,10 +24,10 @@ public final class ApplicationComponentConfiguration {
      */
     private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationComponentConfiguration(
-        @OutputCustomType.Parameter("configurationDetails") @Nullable ApplicationConfigurationDetails configurationDetails,
-        @OutputCustomType.Parameter("subComponentTypeConfigurations") @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
+        @CustomType.Parameter("configurationDetails") @Nullable ApplicationConfigurationDetails configurationDetails,
+        @CustomType.Parameter("subComponentTypeConfigurations") @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
         this.configurationDetails = configurationDetails;
         this.subComponentTypeConfigurations = subComponentTypeConfigurations;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DistributionOriginShield extends io.pulumi.resources.InvokeAr
 
     public static final DistributionOriginShield Empty = new DistributionOriginShield();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    @InputImport(name="originShieldRegion")
+    @Import(name="originShieldRegion")
       private final @Nullable String originShieldRegion;
 
     public Optional<String> getOriginShieldRegion() {

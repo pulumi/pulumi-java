@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs;
@@ -22,7 +22,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="baseKeyUsage", required=true)
+    @Import(name="baseKeyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
     public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
@@ -34,7 +34,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="extendedKeyUsage", required=true)
+    @Import(name="extendedKeyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
     public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
@@ -46,7 +46,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs extends io.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="unknownExtendedKeyUsages")
+    @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
     public Output<List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {

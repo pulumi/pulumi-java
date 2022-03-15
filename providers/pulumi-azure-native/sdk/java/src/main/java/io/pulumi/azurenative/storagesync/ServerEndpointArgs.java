@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagesync.enums.InitialDownloadPolicy;
 import io.pulumi.azurenative.storagesync.enums.LocalCacheMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Tiering.
      * 
      */
-    @InputImport(name="cloudTiering")
+    @Import(name="cloudTiering")
       private final @Nullable Output<Either<String,FeatureStatus>> cloudTiering;
 
     public Output<Either<String,FeatureStatus>> getCloudTiering() {
@@ -34,7 +34,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly Name
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -45,7 +45,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Policy for how namespace and files are recalled during FastDr.
      * 
      */
-    @InputImport(name="initialDownloadPolicy")
+    @Import(name="initialDownloadPolicy")
       private final @Nullable Output<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
 
     public Output<Either<String,InitialDownloadPolicy>> getInitialDownloadPolicy() {
@@ -56,7 +56,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
      * 
      */
-    @InputImport(name="localCacheMode")
+    @Import(name="localCacheMode")
       private final @Nullable Output<Either<String,LocalCacheMode>> localCacheMode;
 
     public Output<Either<String,LocalCacheMode>> getLocalCacheMode() {
@@ -67,7 +67,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Offline data transfer
      * 
      */
-    @InputImport(name="offlineDataTransfer")
+    @Import(name="offlineDataTransfer")
       private final @Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer;
 
     public Output<Either<String,FeatureStatus>> getOfflineDataTransfer() {
@@ -78,7 +78,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Offline data transfer share name
      * 
      */
-    @InputImport(name="offlineDataTransferShareName")
+    @Import(name="offlineDataTransferShareName")
       private final @Nullable Output<String> offlineDataTransferShareName;
 
     public Output<String> getOfflineDataTransferShareName() {
@@ -89,7 +89,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Server Endpoint object.
      * 
      */
-    @InputImport(name="serverEndpointName")
+    @Import(name="serverEndpointName")
       private final @Nullable Output<String> serverEndpointName;
 
     public Output<String> getServerEndpointName() {
@@ -111,7 +111,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Server Local path.
      * 
      */
-    @InputImport(name="serverLocalPath")
+    @Import(name="serverLocalPath")
       private final @Nullable Output<String> serverLocalPath;
 
     public Output<String> getServerLocalPath() {
@@ -122,7 +122,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Server Resource Id.
      * 
      */
-    @InputImport(name="serverResourceId")
+    @Import(name="serverResourceId")
       private final @Nullable Output<String> serverResourceId;
 
     public Output<String> getServerResourceId() {
@@ -133,7 +133,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Storage Sync Service resource.
      * 
      */
-    @InputImport(name="storageSyncServiceName", required=true)
+    @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
     public Output<String> getStorageSyncServiceName() {
@@ -144,7 +144,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Sync Group resource.
      * 
      */
-    @InputImport(name="syncGroupName", required=true)
+    @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;
 
     public Output<String> getSyncGroupName() {
@@ -155,7 +155,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Tier files older than days.
      * 
      */
-    @InputImport(name="tierFilesOlderThanDays")
+    @Import(name="tierFilesOlderThanDays")
       private final @Nullable Output<Integer> tierFilesOlderThanDays;
 
     public Output<Integer> getTierFilesOlderThanDays() {
@@ -166,7 +166,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Level of free space to be maintained by Cloud Tiering if it is enabled.
      * 
      */
-    @InputImport(name="volumeFreeSpacePercent")
+    @Import(name="volumeFreeSpacePercent")
       private final @Nullable Output<Integer> volumeFreeSpacePercent;
 
     public Output<Integer> getVolumeFreeSpacePercent() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRoleAssignmentArtifactArgs extends io.pulumi.resources.Inv
      * Name of the blueprint artifact.
      * 
      */
-    @InputImport(name="artifactName", required=true)
+    @Import(name="artifactName", required=true)
       private final String artifactName;
 
     public String getArtifactName() {
@@ -27,7 +27,7 @@ public final class GetRoleAssignmentArtifactArgs extends io.pulumi.resources.Inv
      * Name of the blueprint definition.
      * 
      */
-    @InputImport(name="blueprintName", required=true)
+    @Import(name="blueprintName", required=true)
       private final String blueprintName;
 
     public String getBlueprintName() {
@@ -38,7 +38,7 @@ public final class GetRoleAssignmentArtifactArgs extends io.pulumi.resources.Inv
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final String resourceScope;
 
     public String getResourceScope() {

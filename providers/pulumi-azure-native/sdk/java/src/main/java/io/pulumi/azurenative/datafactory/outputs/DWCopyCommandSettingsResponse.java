@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.DWCopyCommandDefaultValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DWCopyCommandSettingsResponse {
     /**
      * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalOptions": { "MAXERRORS": "1000", "DATEFORMAT": "'ymd'" }
@@ -24,10 +24,10 @@ public final class DWCopyCommandSettingsResponse {
      */
     private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DWCopyCommandSettingsResponse(
-        @OutputCustomType.Parameter("additionalOptions") @Nullable Map<String,String> additionalOptions,
-        @OutputCustomType.Parameter("defaultValues") @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
+        @CustomType.Parameter("additionalOptions") @Nullable Map<String,String> additionalOptions,
+        @CustomType.Parameter("defaultValues") @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
         this.additionalOptions = additionalOptions;
         this.defaultValues = defaultValues;
     }

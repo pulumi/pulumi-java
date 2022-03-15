@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.EncryptionSettingsElementResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionSettingsCollectionResponse {
     /**
      * Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
@@ -30,11 +30,11 @@ public final class EncryptionSettingsCollectionResponse {
      */
     private final @Nullable String encryptionSettingsVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionSettingsCollectionResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("encryptionSettings") @Nullable List<EncryptionSettingsElementResponse> encryptionSettings,
-        @OutputCustomType.Parameter("encryptionSettingsVersion") @Nullable String encryptionSettingsVersion) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("encryptionSettings") @Nullable List<EncryptionSettingsElementResponse> encryptionSettings,
+        @CustomType.Parameter("encryptionSettingsVersion") @Nullable String encryptionSettingsVersion) {
         this.enabled = enabled;
         this.encryptionSettings = encryptionSettings;
         this.encryptionSettingsVersion = encryptionSettingsVersion;

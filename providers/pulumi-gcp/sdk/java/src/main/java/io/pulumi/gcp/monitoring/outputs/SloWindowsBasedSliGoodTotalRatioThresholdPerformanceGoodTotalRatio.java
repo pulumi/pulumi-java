@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
     /**
      * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -44,11 +44,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotal
      */
     private final @Nullable String totalServiceFilter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio(
-        @OutputCustomType.Parameter("badServiceFilter") @Nullable String badServiceFilter,
-        @OutputCustomType.Parameter("goodServiceFilter") @Nullable String goodServiceFilter,
-        @OutputCustomType.Parameter("totalServiceFilter") @Nullable String totalServiceFilter) {
+        @CustomType.Parameter("badServiceFilter") @Nullable String badServiceFilter,
+        @CustomType.Parameter("goodServiceFilter") @Nullable String goodServiceFilter,
+        @CustomType.Parameter("totalServiceFilter") @Nullable String totalServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         this.goodServiceFilter = goodServiceFilter;
         this.totalServiceFilter = totalServiceFilter;

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListIotDpsResourceKeysResult {
     /**
      * The next link.
@@ -23,10 +23,10 @@ public final class ListIotDpsResourceKeysResult {
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListIotDpsResourceKeysResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

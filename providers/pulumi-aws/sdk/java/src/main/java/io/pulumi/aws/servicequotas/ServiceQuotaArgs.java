@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicequotas;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
      * Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
      * 
      */
-    @InputImport(name="quotaCode", required=true)
+    @Import(name="quotaCode", required=true)
       private final Output<String> quotaCode;
 
     public Output<String> getQuotaCode() {
@@ -29,7 +29,7 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
      * Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
      * 
      */
-    @InputImport(name="serviceCode", required=true)
+    @Import(name="serviceCode", required=true)
       private final Output<String> serviceCode;
 
     public Output<String> getServiceCode() {
@@ -40,7 +40,7 @@ public final class ServiceQuotaArgs extends io.pulumi.resources.ResourceArgs {
      * Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Double> value;
 
     public Output<Double> getValue() {

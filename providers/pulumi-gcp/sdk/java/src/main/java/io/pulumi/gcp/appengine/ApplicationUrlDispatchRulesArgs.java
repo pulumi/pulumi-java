@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dispatchRules", required=true)
+    @Import(name="dispatchRules", required=true)
       private final Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
     public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> getDispatchRules() {
@@ -33,7 +33,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

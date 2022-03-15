@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.IPAMAllocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,13 +18,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:IPAMAllocation")
 public class IPAMAllocation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="cidr", type=String.class, parameters={})
+    @Export(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
     public Output</* @Nullable */ String> getCidr() {
         return this.cidr;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
@@ -34,7 +34,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * Id of the allocation.
      * 
      */
-    @OutputExport(name="ipamPoolAllocationId", type=String.class, parameters={})
+    @Export(name="ipamPoolAllocationId", type=String.class, parameters={})
     private Output<String> ipamPoolAllocationId;
 
     /**
@@ -48,7 +48,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * Id of the IPAM Pool.
      * 
      */
-    @OutputExport(name="ipamPoolId", type=String.class, parameters={})
+    @Export(name="ipamPoolId", type=String.class, parameters={})
     private Output<String> ipamPoolId;
 
     /**
@@ -62,7 +62,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
      * 
      */
-    @OutputExport(name="netmaskLength", type=Integer.class, parameters={})
+    @Export(name="netmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> netmaskLength;
 
     /**

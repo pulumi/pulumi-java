@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeProviderParametersAzureFileResponse {
     /**
      * Access key of the Azure storage account for the File Share.
@@ -27,11 +27,11 @@ public final class VolumeProviderParametersAzureFileResponse {
      */
     private final String shareName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeProviderParametersAzureFileResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("shareName") String shareName) {
+        @CustomType.Parameter("accountKey") @Nullable String accountKey,
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("shareName") String shareName) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.shareName = shareName;

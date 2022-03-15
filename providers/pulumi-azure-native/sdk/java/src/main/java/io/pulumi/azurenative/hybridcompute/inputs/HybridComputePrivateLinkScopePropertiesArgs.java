@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridcompute.inputs;
 import io.pulumi.azurenative.hybridcompute.enums.PublicNetworkAccessType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
      * Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccess() {

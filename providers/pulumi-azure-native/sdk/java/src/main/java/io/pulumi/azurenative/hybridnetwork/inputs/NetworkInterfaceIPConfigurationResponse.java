@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The list of DNS servers IP addresses.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
@@ -34,7 +34,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The value of the gateway.
      * 
      */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable String gateway;
 
     public Optional<String> getGateway() {
@@ -45,7 +45,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The value of the IP address.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -56,7 +56,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * IP address allocation method.
      * 
      */
-    @InputImport(name="ipAllocationMethod")
+    @Import(name="ipAllocationMethod")
       private final @Nullable String ipAllocationMethod;
 
     public Optional<String> getIpAllocationMethod() {
@@ -67,7 +67,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * IP address version.
      * 
      */
-    @InputImport(name="ipVersion")
+    @Import(name="ipVersion")
       private final @Nullable String ipVersion;
 
     public Optional<String> getIpVersion() {
@@ -78,7 +78,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The value of the subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable String subnet;
 
     public Optional<String> getSubnet() {

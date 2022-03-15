@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UsageRuleResponse {
     /**
      * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user or application.
@@ -26,11 +26,11 @@ public final class UsageRuleResponse {
      */
     private final Boolean skipServiceControl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsageRuleResponse(
-        @OutputCustomType.Parameter("allowUnregisteredCalls") Boolean allowUnregisteredCalls,
-        @OutputCustomType.Parameter("selector") String selector,
-        @OutputCustomType.Parameter("skipServiceControl") Boolean skipServiceControl) {
+        @CustomType.Parameter("allowUnregisteredCalls") Boolean allowUnregisteredCalls,
+        @CustomType.Parameter("selector") String selector,
+        @CustomType.Parameter("skipServiceControl") Boolean skipServiceControl) {
         this.allowUnregisteredCalls = allowUnregisteredCalls;
         this.selector = selector;
         this.skipServiceControl = skipServiceControl;

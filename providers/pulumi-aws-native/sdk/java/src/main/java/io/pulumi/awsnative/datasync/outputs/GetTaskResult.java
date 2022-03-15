@@ -8,14 +8,14 @@ import io.pulumi.awsnative.datasync.outputs.TaskFilterRule;
 import io.pulumi.awsnative.datasync.outputs.TaskOptions;
 import io.pulumi.awsnative.datasync.outputs.TaskSchedule;
 import io.pulumi.awsnative.datasync.outputs.TaskTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskResult {
     /**
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
@@ -59,21 +59,21 @@ public final class GetTaskResult {
      */
     private final @Nullable String taskArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskResult(
-        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
-        @OutputCustomType.Parameter("destinationNetworkInterfaceArns") @Nullable List<String> destinationNetworkInterfaceArns,
-        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
-        @OutputCustomType.Parameter("errorDetail") @Nullable String errorDetail,
-        @OutputCustomType.Parameter("excludes") @Nullable List<TaskFilterRule> excludes,
-        @OutputCustomType.Parameter("includes") @Nullable List<TaskFilterRule> includes,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("options") @Nullable TaskOptions options,
-        @OutputCustomType.Parameter("schedule") @Nullable TaskSchedule schedule,
-        @OutputCustomType.Parameter("sourceNetworkInterfaceArns") @Nullable List<String> sourceNetworkInterfaceArns,
-        @OutputCustomType.Parameter("status") @Nullable TaskStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable List<TaskTag> tags,
-        @OutputCustomType.Parameter("taskArn") @Nullable String taskArn) {
+        @CustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @CustomType.Parameter("destinationNetworkInterfaceArns") @Nullable List<String> destinationNetworkInterfaceArns,
+        @CustomType.Parameter("errorCode") @Nullable String errorCode,
+        @CustomType.Parameter("errorDetail") @Nullable String errorDetail,
+        @CustomType.Parameter("excludes") @Nullable List<TaskFilterRule> excludes,
+        @CustomType.Parameter("includes") @Nullable List<TaskFilterRule> includes,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("options") @Nullable TaskOptions options,
+        @CustomType.Parameter("schedule") @Nullable TaskSchedule schedule,
+        @CustomType.Parameter("sourceNetworkInterfaceArns") @Nullable List<String> sourceNetworkInterfaceArns,
+        @CustomType.Parameter("status") @Nullable TaskStatus status,
+        @CustomType.Parameter("tags") @Nullable List<TaskTag> tags,
+        @CustomType.Parameter("taskArn") @Nullable String taskArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
         this.errorCode = errorCode;

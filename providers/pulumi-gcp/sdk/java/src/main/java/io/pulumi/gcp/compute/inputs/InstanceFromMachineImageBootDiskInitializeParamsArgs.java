@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -17,28 +17,28 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsArgs extends 
 
     public static final InstanceFromMachineImageBootDiskInitializeParamsArgs Empty = new InstanceFromMachineImageBootDiskInitializeParamsArgs();
 
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
         return this.image == null ? Output.empty() : this.image;
     }
 
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
     public Output<Map<String,Object>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
         return this.size == null ? Output.empty() : this.size;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

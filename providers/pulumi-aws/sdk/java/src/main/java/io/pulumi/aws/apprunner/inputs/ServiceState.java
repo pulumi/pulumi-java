@@ -8,7 +8,7 @@ import io.pulumi.aws.apprunner.inputs.ServiceHealthCheckConfigurationGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceInstanceConfigurationGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * ARN of the App Runner service.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
      * 
      */
-    @InputImport(name="autoScalingConfigurationArn")
+    @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
 
     public Output<String> getAutoScalingConfigurationArn() {
@@ -45,7 +45,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<ServiceEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Output<ServiceEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
@@ -56,7 +56,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
      * 
      */
-    @InputImport(name="healthCheckConfiguration")
+    @Import(name="healthCheckConfiguration")
       private final @Nullable Output<ServiceHealthCheckConfigurationGetArgs> healthCheckConfiguration;
 
     public Output<ServiceHealthCheckConfigurationGetArgs> getHealthCheckConfiguration() {
@@ -67,7 +67,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
      * 
      */
-    @InputImport(name="instanceConfiguration")
+    @Import(name="instanceConfiguration")
       private final @Nullable Output<ServiceInstanceConfigurationGetArgs> instanceConfiguration;
 
     public Output<ServiceInstanceConfigurationGetArgs> getInstanceConfiguration() {
@@ -78,7 +78,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
      * 
      */
-    @InputImport(name="serviceId")
+    @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
     public Output<String> getServiceId() {
@@ -89,7 +89,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Name of the service.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -100,7 +100,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
      * 
      */
-    @InputImport(name="serviceUrl")
+    @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
 
     public Output<String> getServiceUrl() {
@@ -111,7 +111,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
      * 
      */
-    @InputImport(name="sourceConfiguration")
+    @Import(name="sourceConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationGetArgs> sourceConfiguration;
 
     public Output<ServiceSourceConfigurationGetArgs> getSourceConfiguration() {
@@ -122,7 +122,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The current state of the App Runner service.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -133,7 +133,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -144,7 +144,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

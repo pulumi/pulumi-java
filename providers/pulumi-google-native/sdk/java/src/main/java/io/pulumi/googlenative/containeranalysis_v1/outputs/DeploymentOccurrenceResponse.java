@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentOccurrenceResponse {
     /**
      * Address of the runtime element hosting this deployment.
@@ -46,15 +46,15 @@ public final class DeploymentOccurrenceResponse {
      */
     private final String userEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentOccurrenceResponse(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("config") String config,
-        @OutputCustomType.Parameter("deployTime") String deployTime,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("resourceUri") List<String> resourceUri,
-        @OutputCustomType.Parameter("undeployTime") String undeployTime,
-        @OutputCustomType.Parameter("userEmail") String userEmail) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("config") String config,
+        @CustomType.Parameter("deployTime") String deployTime,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("resourceUri") List<String> resourceUri,
+        @CustomType.Parameter("undeployTime") String undeployTime,
+        @CustomType.Parameter("userEmail") String userEmail) {
         this.address = address;
         this.config = config;
         this.deployTime = deployTime;

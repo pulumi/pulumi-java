@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.NodeTemplateCpuOvercommitType;
 import io.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.LocalDiskArgs;
@@ -21,7 +21,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final NodeTemplateArgs Empty = new NodeTemplateArgs();
 
-    @InputImport(name="accelerators")
+    @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
     public Output<List<AcceleratorConfigArgs>> getAccelerators() {
@@ -32,7 +32,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * CPU overcommit.
      * 
      */
-    @InputImport(name="cpuOvercommitType")
+    @Import(name="cpuOvercommitType")
       private final @Nullable Output<NodeTemplateCpuOvercommitType> cpuOvercommitType;
 
     public Output<NodeTemplateCpuOvercommitType> getCpuOvercommitType() {
@@ -43,14 +43,14 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<List<LocalDiskArgs>> disks;
 
     public Output<List<LocalDiskArgs>> getDisks() {
@@ -61,7 +61,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to use for node affinity, which will be used in instance scheduling.
      * 
      */
-    @InputImport(name="nodeAffinityLabels")
+    @Import(name="nodeAffinityLabels")
       private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
     public Output<Map<String,String>> getNodeAffinityLabels() {
@@ -83,7 +83,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The node type to use for nodes group that are created from this template.
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -94,28 +94,28 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The flexible properties of the desired node type. Node groups that use this node template will create nodes of a type that matches these properties. This field is mutually exclusive with the node_type property; you can only define one or the other, but not both.
      * 
      */
-    @InputImport(name="nodeTypeFlexibility")
+    @Import(name="nodeTypeFlexibility")
       private final @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
 
     public Output<NodeTemplateNodeTypeFlexibilityArgs> getNodeTypeFlexibility() {
         return this.nodeTypeFlexibility == null ? Output.empty() : this.nodeTypeFlexibility;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -126,7 +126,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the binding properties for the physical server. Valid values include: - *[Default]* RESTART_NODE_ON_ANY_SERVER: Restarts VMs on any available physical server - RESTART_NODE_ON_MINIMAL_SERVER: Restarts VMs on the same physical server whenever possible See Sole-tenant node options for more information.
      * 
      */
-    @InputImport(name="serverBinding")
+    @Import(name="serverBinding")
       private final @Nullable Output<ServerBindingArgs> serverBinding;
 
     public Output<ServerBindingArgs> getServerBinding() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class RuleGroupRuleOption extends io.pulumi.resources.InvokeArgs {
 
     public static final RuleGroupRuleOption Empty = new RuleGroupRuleOption();
 
-    @InputImport(name="keyword", required=true)
+    @Import(name="keyword", required=true)
       private final String keyword;
 
     public String getKeyword() {
         return this.keyword;
     }
 
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable List<String> settings;
 
     public List<String> getSettings() {

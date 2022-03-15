@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.EnvironmentArgs;
@@ -49,7 +49,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="containerImage", type=EnvironmentContainerImage.class, parameters={})
+    @Export(name="containerImage", type=EnvironmentContainerImage.class, parameters={})
     private Output</* @Nullable */ EnvironmentContainerImage> containerImage;
 
     /**
@@ -64,7 +64,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Instance creation time
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -78,7 +78,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * A brief description of this environment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Display name of this environment for the UI.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -106,7 +106,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * A reference to the zone where the machine resides.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -121,7 +121,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
      * 
      */
-    @OutputExport(name="postStartupScript", type=String.class, parameters={})
+    @Export(name="postStartupScript", type=String.class, parameters={})
     private Output</* @Nullable */ String> postStartupScript;
 
     /**
@@ -153,7 +153,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Format: projects/{project_id}
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -169,7 +169,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="vmImage", type=EnvironmentVmImage.class, parameters={})
+    @Export(name="vmImage", type=EnvironmentVmImage.class, parameters={})
     private Output</* @Nullable */ EnvironmentVmImage> vmImage;
 
     /**

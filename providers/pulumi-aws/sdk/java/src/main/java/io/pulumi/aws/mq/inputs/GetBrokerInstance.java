@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class GetBrokerInstance extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBrokerInstance Empty = new GetBrokerInstance();
 
-    @InputImport(name="consoleUrl", required=true)
+    @Import(name="consoleUrl", required=true)
       private final String consoleUrl;
 
     public String getConsoleUrl() {
         return this.consoleUrl;
     }
 
-    @InputImport(name="endpoints", required=true)
+    @Import(name="endpoints", required=true)
       private final List<String> endpoints;
 
     public List<String> getEndpoints() {
         return this.endpoints;
     }
 
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.AdditionalErrorInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Cloud error additional info.
      * 
      */
-    @InputImport(name="additionalInfo", required=true)
+    @Import(name="additionalInfo", required=true)
       private final List<AdditionalErrorInfoResponse> additionalInfo;
 
     public List<AdditionalErrorInfoResponse> getAdditionalInfo() {
@@ -35,7 +35,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Cloud error code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -46,7 +46,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Cloud error details.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<CloudErrorResponse> details;
 
     public List<CloudErrorResponse> getDetails() {
@@ -57,7 +57,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Cloud error message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -68,7 +68,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Cloud error target.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

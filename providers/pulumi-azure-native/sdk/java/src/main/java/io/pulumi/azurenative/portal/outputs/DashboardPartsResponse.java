@@ -5,12 +5,12 @@ package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.DashboardPartsResponsePosition;
 import io.pulumi.azurenative.portal.outputs.MarkdownPartMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardPartsResponse {
     /**
      * The dashboard part's metadata.
@@ -23,10 +23,10 @@ public final class DashboardPartsResponse {
      */
     private final DashboardPartsResponsePosition position;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardPartsResponse(
-        @OutputCustomType.Parameter("metadata") @Nullable MarkdownPartMetadataResponse metadata,
-        @OutputCustomType.Parameter("position") DashboardPartsResponsePosition position) {
+        @CustomType.Parameter("metadata") @Nullable MarkdownPartMetadataResponse metadata,
+        @CustomType.Parameter("position") DashboardPartsResponsePosition position) {
         this.metadata = metadata;
         this.position = position;
     }

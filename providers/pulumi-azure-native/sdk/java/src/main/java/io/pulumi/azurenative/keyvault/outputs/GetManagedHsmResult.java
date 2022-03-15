@@ -6,14 +6,14 @@ package io.pulumi.azurenative.keyvault.outputs;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmPropertiesResponse;
 import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedHsmResult {
     /**
      * The Azure Resource Manager resource ID for the managed HSM Pool.
@@ -56,16 +56,16 @@ public final class GetManagedHsmResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedHsmResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ManagedHsmPropertiesResponse properties,
-        @OutputCustomType.Parameter("sku") @Nullable ManagedHsmSkuResponse sku,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ManagedHsmPropertiesResponse properties,
+        @CustomType.Parameter("sku") @Nullable ManagedHsmSkuResponse sku,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

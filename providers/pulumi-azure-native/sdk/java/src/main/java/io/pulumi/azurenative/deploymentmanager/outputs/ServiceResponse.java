@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.ServiceUnitResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceResponse {
     /**
      * Name of the service.
@@ -34,12 +34,12 @@ public final class ServiceResponse {
      */
     private final String targetSubscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("serviceUnits") @Nullable List<ServiceUnitResponse> serviceUnits,
-        @OutputCustomType.Parameter("targetLocation") String targetLocation,
-        @OutputCustomType.Parameter("targetSubscriptionId") String targetSubscriptionId) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("serviceUnits") @Nullable List<ServiceUnitResponse> serviceUnits,
+        @CustomType.Parameter("targetLocation") String targetLocation,
+        @CustomType.Parameter("targetSubscriptionId") String targetSubscriptionId) {
         this.name = name;
         this.serviceUnits = serviceUnits;
         this.targetLocation = targetLocation;

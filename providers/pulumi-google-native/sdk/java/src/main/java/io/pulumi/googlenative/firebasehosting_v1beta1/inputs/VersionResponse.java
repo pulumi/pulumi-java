@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.ServingConfigResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The configuration for the behavior of the site. This configuration exists in the [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final ServingConfigResponse config;
 
     public ServingConfigResponse getConfig() {
@@ -34,7 +34,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The time at which the version was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -45,7 +45,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the user who created the version.
      * 
      */
-    @InputImport(name="createUser", required=true)
+    @Import(name="createUser", required=true)
       private final ActingUserResponse createUser;
 
     public ActingUserResponse getCreateUser() {
@@ -56,7 +56,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The time at which the version was `DELETED`.
      * 
      */
-    @InputImport(name="deleteTime", required=true)
+    @Import(name="deleteTime", required=true)
       private final String deleteTime;
 
     public String getDeleteTime() {
@@ -67,7 +67,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the user who `DELETED` the version.
      * 
      */
-    @InputImport(name="deleteUser", required=true)
+    @Import(name="deleteUser", required=true)
       private final ActingUserResponse deleteUser;
 
     public ActingUserResponse getDeleteUser() {
@@ -78,7 +78,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The total number of files associated with the version. This value is calculated after a version is `FINALIZED`.
      * 
      */
-    @InputImport(name="fileCount", required=true)
+    @Import(name="fileCount", required=true)
       private final String fileCount;
 
     public String getFileCount() {
@@ -89,7 +89,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The time at which the version was `FINALIZED`.
      * 
      */
-    @InputImport(name="finalizeTime", required=true)
+    @Import(name="finalizeTime", required=true)
       private final String finalizeTime;
 
     public String getFinalizeTime() {
@@ -100,7 +100,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the user who `FINALIZED` the version.
      * 
      */
-    @InputImport(name="finalizeUser", required=true)
+    @Import(name="finalizeUser", required=true)
       private final ActingUserResponse finalizeUser;
 
     public ActingUserResponse getFinalizeUser() {
@@ -111,7 +111,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The labels used for extra metadata and/or filtering.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -122,7 +122,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The fully-qualified resource name for the version, in the format: sites/ SITE_ID/versions/VERSION_ID This name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -133,7 +133,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The deploy status of the version. For a successful deploy, call [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all desired files](sites.versions/populateFiles) to the version, then [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave the version in the `CREATED` state for more than 12 hours, the system will automatically mark the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling [`DeleteVersion`](sites.versions/delete).
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -144,7 +144,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The total stored bytesize of the version. This value is calculated after a version is `FINALIZED`.
      * 
      */
-    @InputImport(name="versionBytes", required=true)
+    @Import(name="versionBytes", required=true)
       private final String versionBytes;
 
     public String getVersionBytes() {

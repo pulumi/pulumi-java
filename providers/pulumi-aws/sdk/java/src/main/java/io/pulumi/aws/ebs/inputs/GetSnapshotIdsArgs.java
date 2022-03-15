@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.GetSnapshotIdsFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
      * [describe-volumes in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSnapshotIdsFilter> filters;
 
     public List<GetSnapshotIdsFilter> getFilters() {
@@ -33,7 +33,7 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
      * Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
      * 
      */
-    @InputImport(name="owners")
+    @Import(name="owners")
       private final @Nullable List<String> owners;
 
     public List<String> getOwners() {
@@ -44,7 +44,7 @@ public final class GetSnapshotIdsArgs extends io.pulumi.resources.InvokeArgs {
      * One or more AWS accounts IDs that can create volumes from the snapshot.
      * 
      */
-    @InputImport(name="restorableByUserIds")
+    @Import(name="restorableByUserIds")
       private final @Nullable List<String> restorableByUserIds;
 
     public List<String> getRestorableByUserIds() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.awsnative.cloudformation.enums.StackSetRegionConcurrencyType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,42 +21,42 @@ public final class StackSetOperationPreferencesArgs extends io.pulumi.resources.
 
     public static final StackSetOperationPreferencesArgs Empty = new StackSetOperationPreferencesArgs();
 
-    @InputImport(name="failureToleranceCount")
+    @Import(name="failureToleranceCount")
       private final @Nullable Output<Integer> failureToleranceCount;
 
     public Output<Integer> getFailureToleranceCount() {
         return this.failureToleranceCount == null ? Output.empty() : this.failureToleranceCount;
     }
 
-    @InputImport(name="failureTolerancePercentage")
+    @Import(name="failureTolerancePercentage")
       private final @Nullable Output<Integer> failureTolerancePercentage;
 
     public Output<Integer> getFailureTolerancePercentage() {
         return this.failureTolerancePercentage == null ? Output.empty() : this.failureTolerancePercentage;
     }
 
-    @InputImport(name="maxConcurrentCount")
+    @Import(name="maxConcurrentCount")
       private final @Nullable Output<Integer> maxConcurrentCount;
 
     public Output<Integer> getMaxConcurrentCount() {
         return this.maxConcurrentCount == null ? Output.empty() : this.maxConcurrentCount;
     }
 
-    @InputImport(name="maxConcurrentPercentage")
+    @Import(name="maxConcurrentPercentage")
       private final @Nullable Output<Integer> maxConcurrentPercentage;
 
     public Output<Integer> getMaxConcurrentPercentage() {
         return this.maxConcurrentPercentage == null ? Output.empty() : this.maxConcurrentPercentage;
     }
 
-    @InputImport(name="regionConcurrencyType")
+    @Import(name="regionConcurrencyType")
       private final @Nullable Output<StackSetRegionConcurrencyType> regionConcurrencyType;
 
     public Output<StackSetRegionConcurrencyType> getRegionConcurrencyType() {
         return this.regionConcurrencyType == null ? Output.empty() : this.regionConcurrencyType;
     }
 
-    @InputImport(name="regionOrder")
+    @Import(name="regionOrder")
       private final @Nullable Output<List<String>> regionOrder;
 
     public Output<List<String>> getRegionOrder() {

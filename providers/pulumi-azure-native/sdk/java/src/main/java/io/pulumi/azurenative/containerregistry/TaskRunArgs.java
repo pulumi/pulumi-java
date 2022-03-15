@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerregistry.inputs.FileTaskRunRequestArgs;
 import io.pulumi.azurenative.containerregistry.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TaskRunRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * How the run should be forced to rerun even if the run request configuration has not changed
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -35,7 +35,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * Identity for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
@@ -46,7 +46,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -68,7 +68,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -79,7 +79,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * The request (parameters) for the run
      * 
      */
-    @InputImport(name="runRequest")
+    @Import(name="runRequest")
       private final @Nullable Output<Object> runRequest;
 
     public Output<Object> getRunRequest() {
@@ -90,7 +90,7 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the task run.
      * 
      */
-    @InputImport(name="taskRunName")
+    @Import(name="taskRunName")
       private final @Nullable Output<String> taskRunName;
 
     public Output<String> getTaskRunName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
      */
-    @InputImport(name="archiveUris", required=true)
+    @Import(name="archiveUris", required=true)
       private final List<String> archiveUris;
 
     public List<String> getArchiveUris() {
@@ -34,7 +34,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The arguments to pass to the driver. Do not include arguments, such as --conf, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
      */
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final List<String> args;
 
     public List<String> getArgs() {
@@ -45,7 +45,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. HCFS URIs of files to be placed in the working directory of each executor. Useful for naively parallel tasks.
      * 
      */
-    @InputImport(name="fileUris", required=true)
+    @Import(name="fileUris", required=true)
       private final List<String> fileUris;
 
     public List<String> getFileUris() {
@@ -56,7 +56,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark driver and tasks.
      * 
      */
-    @InputImport(name="jarFileUris", required=true)
+    @Import(name="jarFileUris", required=true)
       private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
@@ -67,7 +67,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The runtime log config for job execution.
      * 
      */
-    @InputImport(name="loggingConfig", required=true)
+    @Import(name="loggingConfig", required=true)
       private final LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse getLoggingConfig() {
@@ -78,7 +78,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the driver's main class. The jar file that contains the class must be in the default CLASSPATH or specified in jar_file_uris.
      * 
      */
-    @InputImport(name="mainClass", required=true)
+    @Import(name="mainClass", required=true)
       private final String mainClass;
 
     public String getMainClass() {
@@ -89,7 +89,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * The HCFS URI of the jar file that contains the main class.
      * 
      */
-    @InputImport(name="mainJarFileUri", required=true)
+    @Import(name="mainJarFileUri", required=true)
       private final String mainJarFileUri;
 
     public String getMainJarFileUri() {
@@ -100,7 +100,7 @@ public final class SparkJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {

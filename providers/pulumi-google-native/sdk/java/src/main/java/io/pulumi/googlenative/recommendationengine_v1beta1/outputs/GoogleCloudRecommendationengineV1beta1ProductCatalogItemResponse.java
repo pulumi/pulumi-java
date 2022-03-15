@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1ImageResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse {
     /**
      * Optional. The available quantity of the item.
@@ -55,16 +55,16 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      */
     private final String stockState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(
-        @OutputCustomType.Parameter("availableQuantity") String availableQuantity,
-        @OutputCustomType.Parameter("canonicalProductUri") String canonicalProductUri,
-        @OutputCustomType.Parameter("costs") Map<String,String> costs,
-        @OutputCustomType.Parameter("currencyCode") String currencyCode,
-        @OutputCustomType.Parameter("exactPrice") GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice,
-        @OutputCustomType.Parameter("images") List<GoogleCloudRecommendationengineV1beta1ImageResponse> images,
-        @OutputCustomType.Parameter("priceRange") GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange,
-        @OutputCustomType.Parameter("stockState") String stockState) {
+        @CustomType.Parameter("availableQuantity") String availableQuantity,
+        @CustomType.Parameter("canonicalProductUri") String canonicalProductUri,
+        @CustomType.Parameter("costs") Map<String,String> costs,
+        @CustomType.Parameter("currencyCode") String currencyCode,
+        @CustomType.Parameter("exactPrice") GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice,
+        @CustomType.Parameter("images") List<GoogleCloudRecommendationengineV1beta1ImageResponse> images,
+        @CustomType.Parameter("priceRange") GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange,
+        @CustomType.Parameter("stockState") String stockState) {
         this.availableQuantity = availableQuantity;
         this.canonicalProductUri = canonicalProductUri;
         this.costs = costs;

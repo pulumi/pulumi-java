@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLPositionalConstraint;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformation;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,35 +22,35 @@ public final class WebACLByteMatchStatement extends io.pulumi.resources.InvokeAr
 
     public static final WebACLByteMatchStatement Empty = new WebACLByteMatchStatement();
 
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
-    @InputImport(name="positionalConstraint", required=true)
+    @Import(name="positionalConstraint", required=true)
       private final WebACLPositionalConstraint positionalConstraint;
 
     public WebACLPositionalConstraint getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
-    @InputImport(name="searchString")
+    @Import(name="searchString")
       private final @Nullable String searchString;
 
     public Optional<String> getSearchString() {
         return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
     }
 
-    @InputImport(name="searchStringBase64")
+    @Import(name="searchStringBase64")
       private final @Nullable String searchStringBase64;
 
     public Optional<String> getSearchStringBase64() {
         return this.searchStringBase64 == null ? Optional.empty() : Optional.ofNullable(this.searchStringBase64);
     }
 
-    @InputImport(name="textTransformations", required=true)
+    @Import(name="textTransformations", required=true)
       private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {

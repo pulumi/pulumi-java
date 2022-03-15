@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolPasswordPolicy {
     /**
      * Minimum length of the password policy that you have set.
@@ -43,14 +43,14 @@ public final class UserPoolPasswordPolicy {
      */
     private final @Nullable Integer temporaryPasswordValidityDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolPasswordPolicy(
-        @OutputCustomType.Parameter("minimumLength") @Nullable Integer minimumLength,
-        @OutputCustomType.Parameter("requireLowercase") @Nullable Boolean requireLowercase,
-        @OutputCustomType.Parameter("requireNumbers") @Nullable Boolean requireNumbers,
-        @OutputCustomType.Parameter("requireSymbols") @Nullable Boolean requireSymbols,
-        @OutputCustomType.Parameter("requireUppercase") @Nullable Boolean requireUppercase,
-        @OutputCustomType.Parameter("temporaryPasswordValidityDays") @Nullable Integer temporaryPasswordValidityDays) {
+        @CustomType.Parameter("minimumLength") @Nullable Integer minimumLength,
+        @CustomType.Parameter("requireLowercase") @Nullable Boolean requireLowercase,
+        @CustomType.Parameter("requireNumbers") @Nullable Boolean requireNumbers,
+        @CustomType.Parameter("requireSymbols") @Nullable Boolean requireSymbols,
+        @CustomType.Parameter("requireUppercase") @Nullable Boolean requireUppercase,
+        @CustomType.Parameter("temporaryPasswordValidityDays") @Nullable Integer temporaryPasswordValidityDays) {
         this.minimumLength = minimumLength;
         this.requireLowercase = requireLowercase;
         this.requireNumbers = requireNumbers;

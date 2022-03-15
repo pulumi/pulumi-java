@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.EnvironmentSpecific
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class EnvironmentSpecificationVersion extends io.pulumi.resources.CustomR
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class EnvironmentSpecificationVersion extends io.pulumi.resources.CustomR
      * Additional attributes of the entity.
      * 
      */
-    @OutputExport(name="properties", type=EnvironmentSpecificationVersionResponse.class, parameters={})
+    @Export(name="properties", type=EnvironmentSpecificationVersionResponse.class, parameters={})
     private Output<EnvironmentSpecificationVersionResponse> properties;
 
     /**
@@ -64,7 +64,7 @@ public class EnvironmentSpecificationVersion extends io.pulumi.resources.CustomR
      * System data associated with resource provider
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -78,7 +78,7 @@ public class EnvironmentSpecificationVersion extends io.pulumi.resources.CustomR
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

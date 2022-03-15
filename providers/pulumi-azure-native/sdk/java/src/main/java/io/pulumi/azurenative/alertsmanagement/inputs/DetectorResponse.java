@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -36,7 +36,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * The detector id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -47,7 +47,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
      * 
      */
-    @InputImport(name="imagePaths")
+    @Import(name="imagePaths")
       private final @Nullable List<String> imagePaths;
 
     public List<String> getImagePaths() {
@@ -58,7 +58,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -69,7 +69,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * The detector's parameters.'
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
@@ -80,7 +80,7 @@ public final class DetectorResponse extends io.pulumi.resources.InvokeArgs {
      * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
      * 
      */
-    @InputImport(name="supportedResourceTypes")
+    @Import(name="supportedResourceTypes")
       private final @Nullable List<String> supportedResourceTypes;
 
     public List<String> getSupportedResourceTypes() {

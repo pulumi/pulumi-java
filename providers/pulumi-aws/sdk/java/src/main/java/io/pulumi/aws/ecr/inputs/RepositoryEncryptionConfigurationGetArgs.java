@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RepositoryEncryptionConfigurationGetArgs extends io.pulumi.re
      * The encryption type to use for the repository. Valid values are `AES256` or `KMS`. Defaults to `AES256`.
      * 
      */
-    @InputImport(name="encryptionType")
+    @Import(name="encryptionType")
       private final @Nullable Output<String> encryptionType;
 
     public Output<String> getEncryptionType() {
@@ -29,7 +29,7 @@ public final class RepositoryEncryptionConfigurationGetArgs extends io.pulumi.re
      * The ARN of the KMS key to use when `encryption_type` is `KMS`. If not specified, uses the default AWS managed key for ECR.
      * 
      */
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {

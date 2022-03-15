@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.ContactResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * The administrative contact for the `Registration`.
      * 
      */
-    @InputImport(name="adminContact", required=true)
+    @Import(name="adminContact", required=true)
       private final ContactResponse adminContact;
 
     public ContactResponse getAdminContact() {
@@ -32,7 +32,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * Privacy setting for the contacts associated with the `Registration`.
      * 
      */
-    @InputImport(name="privacy", required=true)
+    @Import(name="privacy", required=true)
       private final String privacy;
 
     public String getPrivacy() {
@@ -43,7 +43,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * The registrant contact for the `Registration`. *Caution: Anyone with access to this email address, phone number, and/or postal address can take control of the domain.* *Warning: For new `Registration`s, the registrant receives an email confirmation that they must complete within 15 days to avoid domain suspension.*
      * 
      */
-    @InputImport(name="registrantContact", required=true)
+    @Import(name="registrantContact", required=true)
       private final ContactResponse registrantContact;
 
     public ContactResponse getRegistrantContact() {
@@ -54,7 +54,7 @@ public final class ContactSettingsResponse extends io.pulumi.resources.InvokeArg
      * The technical contact for the `Registration`.
      * 
      */
-    @InputImport(name="technicalContact", required=true)
+    @Import(name="technicalContact", required=true)
       private final ContactResponse technicalContact;
 
     public ContactResponse getTechnicalContact() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebasehosting_v1beta1.ChannelArgs;
@@ -24,7 +24,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The time at which the channel was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the `ttl` field.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -52,7 +52,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Text labels used for extra metadata and/or filtering.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -66,7 +66,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The fully-qualified resource name for the channel, in the format: sites/ SITE_ID/channels/CHANNEL_ID
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The current release for the channel, if any.
      * 
      */
-    @OutputExport(name="release", type=ReleaseResponse.class, parameters={})
+    @Export(name="release", type=ReleaseResponse.class, parameters={})
     private Output<ReleaseResponse> release;
 
     /**
@@ -94,7 +94,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The number of previous releases to retain on the channel for rollback or other purposes. Must be a number between 1-100. Defaults to 10 for new channels.
      * 
      */
-    @OutputExport(name="retainedReleaseCount", type=Integer.class, parameters={})
+    @Export(name="retainedReleaseCount", type=Integer.class, parameters={})
     private Output<Integer> retainedReleaseCount;
 
     /**
@@ -108,7 +108,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * Input only. A time-to-live for this channel. Sets `expire_time` to the provided duration past the time of the request.
      * 
      */
-    @OutputExport(name="ttl", type=String.class, parameters={})
+    @Export(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
     /**
@@ -122,7 +122,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The time at which the channel was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -136,7 +136,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The URL at which the content of this channel's current release can be viewed. This URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this channel is the `live` channel for the Hosting site, then the content of this channel's current release can also be viewed at any connected custom domains.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

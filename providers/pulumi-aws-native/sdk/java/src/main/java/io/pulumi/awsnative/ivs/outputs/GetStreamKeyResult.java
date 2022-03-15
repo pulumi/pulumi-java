@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.outputs.StreamKeyTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamKeyResult {
     /**
      * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
@@ -29,11 +29,11 @@ public final class GetStreamKeyResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamKeyResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<StreamKeyTag> tags,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<StreamKeyTag> tags,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.arn = arn;
         this.tags = tags;
         this.value = value;

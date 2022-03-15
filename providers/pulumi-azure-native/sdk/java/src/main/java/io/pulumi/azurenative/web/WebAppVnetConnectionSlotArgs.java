@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Point-To-Site VPN connection.
      * 
      */
-    @InputImport(name="certBlob")
+    @Import(name="certBlob")
       private final @Nullable Output<String> certBlob;
 
     public Output<String> getCertBlob() {
@@ -31,7 +31,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * DNS servers to be used by this Virtual Network. This should be a comma-separated list of IP addresses.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<String> dnsServers;
 
     public Output<String> getDnsServers() {
@@ -42,7 +42,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Flag that is used to denote if this is VNET injection
      * 
      */
-    @InputImport(name="isSwift")
+    @Import(name="isSwift")
       private final @Nullable Output<Boolean> isSwift;
 
     public Output<Boolean> getIsSwift() {
@@ -53,7 +53,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -64,7 +64,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Name of the deployment slot. If a slot is not specified, the API will add or update connections for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {
@@ -97,7 +97,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * Name of an existing Virtual Network.
      * 
      */
-    @InputImport(name="vnetName")
+    @Import(name="vnetName")
       private final @Nullable Output<String> vnetName;
 
     public Output<String> getVnetName() {
@@ -108,7 +108,7 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
      * The Virtual Network's resource ID.
      * 
      */
-    @InputImport(name="vnetResourceId")
+    @Import(name="vnetResourceId")
       private final @Nullable Output<String> vnetResourceId;
 
     public Output<String> getVnetResourceId() {

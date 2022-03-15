@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
      * The timestamp, in seconds, in the Unix epoch format. The valid range is between `1-31556889864403199`. You can also specify an expression.
      * 
      */
-    @InputImport(name="offsetInNanos")
+    @Import(name="offsetInNanos")
       private final @Nullable String offsetInNanos;
 
     public Optional<String> getOffsetInNanos() {
@@ -33,7 +33,7 @@ public final class DetectorModelAssetPropertyTimestamp extends io.pulumi.resourc
      * The nanosecond offset converted from `timeInSeconds`. The valid range is between `0-999999999`. You can also specify an expression.
      * 
      */
-    @InputImport(name="timeInSeconds", required=true)
+    @Import(name="timeInSeconds", required=true)
       private final String timeInSeconds;
 
     public String getTimeInSeconds() {

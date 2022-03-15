@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.awsnative.ecr.enums.ReplicationConfigurationFilterType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulum
 
     public static final ReplicationConfigurationRepositoryFilterArgs Empty = new ReplicationConfigurationRepositoryFilterArgs();
 
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {
         return this.filter;
     }
 
-    @InputImport(name="filterType", required=true)
+    @Import(name="filterType", required=true)
       private final Output<ReplicationConfigurationFilterType> filterType;
 
     public Output<ReplicationConfigurationFilterType> getFilterType() {

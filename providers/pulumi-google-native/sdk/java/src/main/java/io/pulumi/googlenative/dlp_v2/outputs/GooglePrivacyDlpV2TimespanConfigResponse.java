@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2TimespanConfigResponse {
     /**
      * When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.
@@ -32,12 +32,12 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse timestampField;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2TimespanConfigResponse(
-        @OutputCustomType.Parameter("enableAutoPopulationOfTimespanConfig") Boolean enableAutoPopulationOfTimespanConfig,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("timestampField") GooglePrivacyDlpV2FieldIdResponse timestampField) {
+        @CustomType.Parameter("enableAutoPopulationOfTimespanConfig") Boolean enableAutoPopulationOfTimespanConfig,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("timestampField") GooglePrivacyDlpV2FieldIdResponse timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;

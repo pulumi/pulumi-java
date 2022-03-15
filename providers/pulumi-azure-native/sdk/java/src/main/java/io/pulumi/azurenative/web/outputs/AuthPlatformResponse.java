@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthPlatformResponse {
     /**
      * The path of the config file containing auth settings if they come from a file.
@@ -30,11 +30,11 @@ public final class AuthPlatformResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthPlatformResponse(
-        @OutputCustomType.Parameter("configFilePath") @Nullable String configFilePath,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
+        @CustomType.Parameter("configFilePath") @Nullable String configFilePath,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.configFilePath = configFilePath;
         this.enabled = enabled;
         this.runtimeVersion = runtimeVersion;

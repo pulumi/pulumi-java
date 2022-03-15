@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * The ARN for a configuration for DNSSEC validation.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * The owner account ID of the virtual private cloud (VPC) for a configuration for DNSSEC validation.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -40,7 +40,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * The ID of the virtual private cloud (VPC) that you're updating the DNSSEC validation status for.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -51,7 +51,7 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
      * The validation status for a DNSSEC configuration. The status can be one of the following: `ENABLING`, `ENABLED`, `DISABLING` and `DISABLED`.
      * 
      */
-    @InputImport(name="validationStatus")
+    @Import(name="validationStatus")
       private final @Nullable Output<String> validationStatus;
 
     public Output<String> getValidationStatus() {

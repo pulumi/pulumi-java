@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetInstanceNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.inputs.GetInstanceNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.inputs.GetInstanceNetworkInterfaceIpv6AccessConfig;
@@ -22,7 +22,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * instance can be accessed via the Internet. Structure documented below.
      * 
      */
-    @InputImport(name="accessConfigs", required=true)
+    @Import(name="accessConfigs", required=true)
       private final List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs;
 
     public List<GetInstanceNetworkInterfaceAccessConfig> getAccessConfigs() {
@@ -33,21 +33,21 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * An array of alias IP ranges for this network interface. Structure documented below.
      * 
      */
-    @InputImport(name="aliasIpRanges", required=true)
+    @Import(name="aliasIpRanges", required=true)
       private final List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges;
 
     public List<GetInstanceNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
 
-    @InputImport(name="ipv6AccessConfigs", required=true)
+    @Import(name="ipv6AccessConfigs", required=true)
       private final List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
 
     public List<GetInstanceNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
 
-    @InputImport(name="ipv6AccessType", required=true)
+    @Import(name="ipv6AccessType", required=true)
       private final String ipv6AccessType;
 
     public String getIpv6AccessType() {
@@ -58,7 +58,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * The name of the instance. One of `name` or `self_link` must be provided.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -69,7 +69,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * The name or self_link of the network attached to this interface.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -80,28 +80,28 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * The private IP address assigned to the instance.
      * 
      */
-    @InputImport(name="networkIp", required=true)
+    @Import(name="networkIp", required=true)
       private final String networkIp;
 
     public String getNetworkIp() {
         return this.networkIp;
     }
 
-    @InputImport(name="nicType", required=true)
+    @Import(name="nicType", required=true)
       private final String nicType;
 
     public String getNicType() {
         return this.nicType;
     }
 
-    @InputImport(name="queueCount", required=true)
+    @Import(name="queueCount", required=true)
       private final Integer queueCount;
 
     public Integer getQueueCount() {
         return this.queueCount;
     }
 
-    @InputImport(name="stackType", required=true)
+    @Import(name="stackType", required=true)
       private final String stackType;
 
     public String getStackType() {
@@ -112,7 +112,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * The name or self_link of the subnetwork attached to this interface.
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {
@@ -123,7 +123,7 @@ public final class GetInstanceNetworkInterface extends io.pulumi.resources.Invok
      * The project in which the subnetwork belongs.
      * 
      */
-    @InputImport(name="subnetworkProject", required=true)
+    @Import(name="subnetworkProject", required=true)
       private final String subnetworkProject;
 
     public String getSubnetworkProject() {

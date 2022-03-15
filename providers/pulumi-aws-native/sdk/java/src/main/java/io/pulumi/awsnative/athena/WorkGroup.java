@@ -10,7 +10,7 @@ import io.pulumi.awsnative.athena.outputs.WorkGroupConfiguration;
 import io.pulumi.awsnative.athena.outputs.WorkGroupConfigurationUpdates;
 import io.pulumi.awsnative.athena.outputs.WorkGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +29,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The date and time the workgroup was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -43,7 +43,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The workgroup description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -57,7 +57,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The workGroup name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -71,7 +71,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
      */
-    @OutputExport(name="recursiveDeleteOption", type=Boolean.class, parameters={})
+    @Export(name="recursiveDeleteOption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recursiveDeleteOption;
 
     /**
@@ -85,7 +85,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The state of the workgroup: ENABLED or DISABLED.
      * 
      */
-    @OutputExport(name="state", type=WorkGroupState.class, parameters={})
+    @Export(name="state", type=WorkGroupState.class, parameters={})
     private Output</* @Nullable */ WorkGroupState> state;
 
     /**
@@ -99,7 +99,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * One or more tags, separated by commas, that you want to attach to the workgroup as you create it
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={WorkGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={WorkGroupTag.class})
     private Output</* @Nullable */ List<WorkGroupTag>> tags;
 
     /**
@@ -113,7 +113,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The workgroup configuration
      * 
      */
-    @OutputExport(name="workGroupConfiguration", type=WorkGroupConfiguration.class, parameters={})
+    @Export(name="workGroupConfiguration", type=WorkGroupConfiguration.class, parameters={})
     private Output</* @Nullable */ WorkGroupConfiguration> workGroupConfiguration;
 
     /**
@@ -127,7 +127,7 @@ public class WorkGroup extends io.pulumi.resources.CustomResource {
      * The workgroup configuration update object
      * 
      */
-    @OutputExport(name="workGroupConfigurationUpdates", type=WorkGroupConfigurationUpdates.class, parameters={})
+    @Export(name="workGroupConfigurationUpdates", type=WorkGroupConfigurationUpdates.class, parameters={})
     private Output</* @Nullable */ WorkGroupConfigurationUpdates> workGroupConfigurationUpdates;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.chatbot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSlackChannelConfigurationArgs extends io.pulumi.resources.
      * Amazon Resource Name (ARN) of the configuration
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

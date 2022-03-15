@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyAssociationResponse {
     /**
      * The target that the firewall policy is attached to.
@@ -35,13 +35,13 @@ public final class FirewallPolicyAssociationResponse {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyAssociationResponse(
-        @OutputCustomType.Parameter("attachmentTarget") String attachmentTarget,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("firewallPolicyId") String firewallPolicyId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("shortName") String shortName) {
+        @CustomType.Parameter("attachmentTarget") String attachmentTarget,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("firewallPolicyId") String firewallPolicyId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("shortName") String shortName) {
         this.attachmentTarget = attachmentTarget;
         this.displayName = displayName;
         this.firewallPolicyId = firewallPolicyId;

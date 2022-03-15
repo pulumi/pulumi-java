@@ -4,7 +4,7 @@
 package io.pulumi.aws.identitystore.inputs;
 
 import io.pulumi.aws.identitystore.inputs.GetUserFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final List<GetUserFilter> filters;
 
     public List<GetUserFilter> getFilters() {
@@ -31,7 +31,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * The Identity Store ID associated with the Single Sign-On Instance.
      * 
      */
-    @InputImport(name="identityStoreId", required=true)
+    @Import(name="identityStoreId", required=true)
       private final String identityStoreId;
 
     public String getIdentityStoreId() {
@@ -42,7 +42,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier for a user in the Identity Store.
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable String userId;
 
     public Optional<String> getUserId() {

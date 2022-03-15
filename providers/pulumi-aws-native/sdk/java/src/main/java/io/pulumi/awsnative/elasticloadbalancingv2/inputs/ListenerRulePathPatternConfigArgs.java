@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ListenerRulePathPatternConfigArgs extends io.pulumi.resources
 
     public static final ListenerRulePathPatternConfigArgs Empty = new ListenerRulePathPatternConfigArgs();
 
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

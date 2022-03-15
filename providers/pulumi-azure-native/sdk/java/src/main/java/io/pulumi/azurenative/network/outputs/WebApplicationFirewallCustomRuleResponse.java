@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.MatchConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebApplicationFirewallCustomRuleResponse {
     /**
      * Type of Actions.
@@ -45,14 +45,14 @@ public final class WebApplicationFirewallCustomRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebApplicationFirewallCustomRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleType") String ruleType) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.etag = etag;
         this.matchConditions = matchConditions;

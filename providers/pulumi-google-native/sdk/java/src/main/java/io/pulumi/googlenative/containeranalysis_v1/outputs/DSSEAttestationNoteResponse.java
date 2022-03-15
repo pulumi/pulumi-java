@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.DSSEHintResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DSSEAttestationNoteResponse {
     /**
      * DSSEHint hints at the purpose of the attestation authority.
@@ -15,8 +15,8 @@ public final class DSSEAttestationNoteResponse {
      */
     private final DSSEHintResponse hint;
 
-    @OutputCustomType.Constructor
-    private DSSEAttestationNoteResponse(@OutputCustomType.Parameter("hint") DSSEHintResponse hint) {
+    @CustomType.Constructor
+    private DSSEAttestationNoteResponse(@CustomType.Parameter("hint") DSSEHintResponse hint) {
         this.hint = hint;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * The sso instance that the permission set is owned.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
     public String getInstanceArn() {
@@ -29,7 +29,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * The permission set that the assignemt will be assigned
      * 
      */
-    @InputImport(name="permissionSetArn", required=true)
+    @Import(name="permissionSetArn", required=true)
       private final String permissionSetArn;
 
     public String getPermissionSetArn() {
@@ -40,7 +40,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * The assignee's identifier, user id/group id
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -51,7 +51,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * The assignee's type, user/group
      * 
      */
-    @InputImport(name="principalType", required=true)
+    @Import(name="principalType", required=true)
       private final AssignmentPrincipalType principalType;
 
     public AssignmentPrincipalType getPrincipalType() {
@@ -62,7 +62,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * The account id to be provisioned.
      * 
      */
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final String targetId;
 
     public String getTargetId() {
@@ -73,7 +73,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * The type of resource to be provsioned to, only aws account now
      * 
      */
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final AssignmentTargetType targetType;
 
     public AssignmentTargetType getTargetType() {

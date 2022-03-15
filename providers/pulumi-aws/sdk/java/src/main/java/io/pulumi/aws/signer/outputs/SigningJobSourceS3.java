@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.signer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SigningJobSourceS3 {
     /**
      * Name of the S3 bucket.
@@ -25,11 +25,11 @@ public final class SigningJobSourceS3 {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SigningJobSourceS3(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("version") String version) {
         this.bucket = bucket;
         this.key = key;
         this.version = version;

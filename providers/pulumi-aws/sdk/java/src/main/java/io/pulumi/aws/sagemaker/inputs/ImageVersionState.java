@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * * `image_arn`- The Amazon Resource Name (ARN) of the image the version is based on.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * The registry path of the container image on which this image version is based.
      * 
      */
-    @InputImport(name="baseImage")
+    @Import(name="baseImage")
       private final @Nullable Output<String> baseImage;
 
     public Output<String> getBaseImage() {
@@ -42,14 +42,14 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * The registry path of the container image that contains this image version.
      * 
      */
-    @InputImport(name="containerImage")
+    @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
     public Output<String> getContainerImage() {
         return this.containerImage == null ? Output.empty() : this.containerImage;
     }
 
-    @InputImport(name="imageArn")
+    @Import(name="imageArn")
       private final @Nullable Output<String> imageArn;
 
     public Output<String> getImageArn() {
@@ -60,14 +60,14 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
      * The name of the image. Must be unique to your account.
      * 
      */
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
         return this.imageName == null ? Output.empty() : this.imageName;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

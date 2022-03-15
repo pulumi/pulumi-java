@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AwsClusterControlPlaneAwsServicesAuthentication {
     /**
      * Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
@@ -22,10 +22,10 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
      */
     private final @Nullable String roleSessionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsClusterControlPlaneAwsServicesAuthentication(
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("roleSessionName") @Nullable String roleSessionName) {
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("roleSessionName") @Nullable String roleSessionName) {
         this.roleArn = roleArn;
         this.roleSessionName = roleSessionName;
     }

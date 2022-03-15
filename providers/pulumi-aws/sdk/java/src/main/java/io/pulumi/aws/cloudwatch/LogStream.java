@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogStreamArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogStreamState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class LogStream extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) specifying the log stream.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class LogStream extends io.pulumi.resources.CustomResource {
      * The name of the log group under which the log stream is to be created.
      * 
      */
-    @OutputExport(name="logGroupName", type=String.class, parameters={})
+    @Export(name="logGroupName", type=String.class, parameters={})
     private Output<String> logGroupName;
 
     /**
@@ -60,7 +60,7 @@ public class LogStream extends io.pulumi.resources.CustomResource {
      * The name of the log stream. Must not be longer than 512 characters and must not contain `:`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

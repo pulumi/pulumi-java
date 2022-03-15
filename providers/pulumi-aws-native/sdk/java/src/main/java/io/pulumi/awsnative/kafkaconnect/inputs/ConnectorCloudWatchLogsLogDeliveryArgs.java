@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
      * Specifies whether the logs get sent to the specified CloudWatch Logs destination.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class ConnectorCloudWatchLogsLogDeliveryArgs extends io.pulumi.reso
      * The CloudWatch log group that is the destination for log delivery.
      * 
      */
-    @InputImport(name="logGroup")
+    @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
     public Output<String> getLogGroup() {

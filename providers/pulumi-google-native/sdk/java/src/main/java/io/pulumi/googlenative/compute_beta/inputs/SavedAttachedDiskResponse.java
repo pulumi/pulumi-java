@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.inputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
      */
-    @InputImport(name="autoDelete", required=true)
+    @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
@@ -36,7 +36,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
      * 
      */
-    @InputImport(name="boot", required=true)
+    @Import(name="boot", required=true)
       private final Boolean boot;
 
     public Boolean getBoot() {
@@ -47,7 +47,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Specifies the name of the disk attached to the source instance.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -58,7 +58,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * The encryption key for the disk.
      * 
      */
-    @InputImport(name="diskEncryptionKey", required=true)
+    @Import(name="diskEncryptionKey", required=true)
       private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
     public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
@@ -69,7 +69,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * The size of the disk in base-2 GB.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
     public String getDiskSizeGb() {
@@ -80,7 +80,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * URL of the disk type resource. For example: projects/project /zones/zone/diskTypes/pd-standard or pd-ssd
      * 
      */
-    @InputImport(name="diskType", required=true)
+    @Import(name="diskType", required=true)
       private final String diskType;
 
     public String getDiskType() {
@@ -91,7 +91,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
      * 
      */
-    @InputImport(name="guestOsFeatures", required=true)
+    @Import(name="guestOsFeatures", required=true)
       private final List<GuestOsFeatureResponse> guestOsFeatures;
 
     public List<GuestOsFeatureResponse> getGuestOsFeatures() {
@@ -102,7 +102,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Specifies zero-based index of the disk that is attached to the source instance.
      * 
      */
-    @InputImport(name="index", required=true)
+    @Import(name="index", required=true)
       private final Integer index;
 
     public Integer getIndex() {
@@ -113,7 +113,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
      * 
      */
-    @InputImport(name="interface", required=true)
+    @Import(name="interface", required=true)
       private final String $interface;
 
     public String get$interface() {
@@ -124,7 +124,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -135,7 +135,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Any valid publicly visible licenses.
      * 
      */
-    @InputImport(name="licenses", required=true)
+    @Import(name="licenses", required=true)
       private final List<String> licenses;
 
     public List<String> getLicenses() {
@@ -146,7 +146,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -157,7 +157,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Specifies a URL of the disk attached to the source instance.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -168,7 +168,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * A size of the storage used by the disk's snapshot by this machine image.
      * 
      */
-    @InputImport(name="storageBytes", required=true)
+    @Import(name="storageBytes", required=true)
       private final String storageBytes;
 
     public String getStorageBytes() {
@@ -179,7 +179,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
      * 
      */
-    @InputImport(name="storageBytesStatus", required=true)
+    @Import(name="storageBytesStatus", required=true)
       private final String storageBytesStatus;
 
     public String getStorageBytesStatus() {
@@ -190,7 +190,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

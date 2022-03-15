@@ -6,14 +6,14 @@ package io.pulumi.azurenative.customproviders.outputs;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPActionRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPResourceTypeRouteDefinitionResponse;
 import io.pulumi.azurenative.customproviders.outputs.CustomRPValidationsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomResourceProviderResult {
     /**
      * A list of actions that the custom resource provider implements.
@@ -61,17 +61,17 @@ public final class GetCustomResourceProviderResult {
      */
     private final @Nullable List<CustomRPValidationsResponse> validations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomResourceProviderResult(
-        @OutputCustomType.Parameter("actions") @Nullable List<CustomRPActionRouteDefinitionResponse> actions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceTypes") @Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validations") @Nullable List<CustomRPValidationsResponse> validations) {
+        @CustomType.Parameter("actions") @Nullable List<CustomRPActionRouteDefinitionResponse> actions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceTypes") @Nullable List<CustomRPResourceTypeRouteDefinitionResponse> resourceTypes,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validations") @Nullable List<CustomRPValidationsResponse> validations) {
         this.actions = actions;
         this.id = id;
         this.location = location;

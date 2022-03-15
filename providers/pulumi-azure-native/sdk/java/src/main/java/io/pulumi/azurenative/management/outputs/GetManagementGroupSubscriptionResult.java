@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.DescendantParentGroupInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagementGroupSubscriptionResult {
     /**
      * The friendly name of the subscription.
@@ -48,15 +48,15 @@ public final class GetManagementGroupSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagementGroupSubscriptionResult(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") @Nullable DescendantParentGroupInfoResponse parent,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") @Nullable DescendantParentGroupInfoResponse parent,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tenant") @Nullable String tenant,
+        @CustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

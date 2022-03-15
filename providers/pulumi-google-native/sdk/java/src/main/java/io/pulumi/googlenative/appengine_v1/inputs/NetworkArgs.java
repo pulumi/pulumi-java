@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="forwardedPorts")
+    @Import(name="forwardedPorts")
       private final @Nullable Output<List<String>> forwardedPorts;
 
     public Output<List<String>> getForwardedPorts() {
@@ -35,7 +35,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Tag to apply to the instance during creation. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="instanceTag")
+    @Import(name="instanceTag")
       private final @Nullable Output<String> instanceTag;
 
     public Output<String> getInstanceTag() {
@@ -46,7 +46,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Google Compute Engine network where the virtual machines are created. Specify the short name, not the resource path.Defaults to default.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Enable session affinity. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="sessionAffinity")
+    @Import(name="sessionAffinity")
       private final @Nullable Output<Boolean> sessionAffinity;
 
     public Output<Boolean> getSessionAffinity() {
@@ -68,7 +68,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.If a subnetwork name is specified, a network name will also be required unless it is for the default network. If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range. If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetwork_name) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network. If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetwork_name must be specified and the IP address is created from the IPCidrRange of the subnetwork.If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
      * 
      */
-    @InputImport(name="subnetworkName")
+    @Import(name="subnetworkName")
       private final @Nullable Output<String> subnetworkName;
 
     public Output<String> getSubnetworkName() {

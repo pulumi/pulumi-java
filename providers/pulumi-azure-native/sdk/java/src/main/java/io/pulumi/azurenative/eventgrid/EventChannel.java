@@ -11,7 +11,7 @@ import io.pulumi.azurenative.eventgrid.outputs.EventChannelSourceResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * Represents the destination of an event channel.
      * 
      */
-    @OutputExport(name="destination", type=EventChannelDestinationResponse.class, parameters={})
+    @Export(name="destination", type=EventChannelDestinationResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelDestinationResponse> destination;
 
     /**
@@ -53,7 +53,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * the event channel and corresponding partner topic are deleted.
      * 
      */
-    @OutputExport(name="expirationTimeIfNotActivatedUtc", type=String.class, parameters={})
+    @Export(name="expirationTimeIfNotActivatedUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationTimeIfNotActivatedUtc;
 
     /**
@@ -68,7 +68,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * Information about the filter for the event channel.
      * 
      */
-    @OutputExport(name="filter", type=EventChannelFilterResponse.class, parameters={})
+    @Export(name="filter", type=EventChannelFilterResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelFilterResponse> filter;
 
     /**
@@ -82,7 +82,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
      * 
      */
-    @OutputExport(name="partnerTopicFriendlyDescription", type=String.class, parameters={})
+    @Export(name="partnerTopicFriendlyDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerTopicFriendlyDescription;
 
     /**
@@ -112,7 +112,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * The readiness state of the corresponding partner topic.
      * 
      */
-    @OutputExport(name="partnerTopicReadinessState", type=String.class, parameters={})
+    @Export(name="partnerTopicReadinessState", type=String.class, parameters={})
     private Output<String> partnerTopicReadinessState;
 
     /**
@@ -126,7 +126,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * Provisioning state of the event channel.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -140,7 +140,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * Source of the event channel. This represents a unique resource in the partner's resource model.
      * 
      */
-    @OutputExport(name="source", type=EventChannelSourceResponse.class, parameters={})
+    @Export(name="source", type=EventChannelSourceResponse.class, parameters={})
     private Output</* @Nullable */ EventChannelSourceResponse> source;
 
     /**
@@ -154,7 +154,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * The system metadata relating to Event Channel resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -168,7 +168,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

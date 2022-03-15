@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VariableSpecificationResponse {
     /**
      * Default value of variable.
@@ -23,10 +23,10 @@ public final class VariableSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VariableSpecificationResponse(
-        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @CustomType.Parameter("type") String type) {
         this.defaultValue = defaultValue;
         this.type = type;
     }

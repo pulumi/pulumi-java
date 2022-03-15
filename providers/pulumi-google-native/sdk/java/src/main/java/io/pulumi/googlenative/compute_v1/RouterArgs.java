@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.RouterBgpArgs;
 import io.pulumi.googlenative.compute_v1.inputs.RouterBgpPeerArgs;
 import io.pulumi.googlenative.compute_v1.inputs.RouterInterfaceArgs;
@@ -24,7 +24,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * BGP information specific to this router.
      * 
      */
-    @InputImport(name="bgp")
+    @Import(name="bgp")
       private final @Nullable Output<RouterBgpArgs> bgp;
 
     public Output<RouterBgpArgs> getBgp() {
@@ -35,7 +35,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
      * 
      */
-    @InputImport(name="bgpPeers")
+    @Import(name="bgpPeers")
       private final @Nullable Output<List<RouterBgpPeerArgs>> bgpPeers;
 
     public Output<List<RouterBgpPeerArgs>> getBgpPeers() {
@@ -46,7 +46,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments). Not currently available publicly.
      * 
      */
-    @InputImport(name="encryptedInterconnectRouter")
+    @Import(name="encryptedInterconnectRouter")
       private final @Nullable Output<Boolean> encryptedInterconnectRouter;
 
     public Output<Boolean> getEncryptedInterconnectRouter() {
@@ -68,7 +68,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * Router interfaces. Each interface requires either one linked resource, (for example, linkedVpnTunnel), or IP address and IP address range (for example, ipRange), or both.
      * 
      */
-    @InputImport(name="interfaces")
+    @Import(name="interfaces")
       private final @Nullable Output<List<RouterInterfaceArgs>> interfaces;
 
     public Output<List<RouterInterfaceArgs>> getInterfaces() {
@@ -79,7 +79,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * A list of NAT services created in this router.
      * 
      */
-    @InputImport(name="nats")
+    @Import(name="nats")
       private final @Nullable Output<List<RouterNatArgs>> nats;
 
     public Output<List<RouterNatArgs>> getNats() {
@@ -101,28 +101,28 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
      * URI of the network to which this router belongs.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
         return this.network == null ? Output.empty() : this.network;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

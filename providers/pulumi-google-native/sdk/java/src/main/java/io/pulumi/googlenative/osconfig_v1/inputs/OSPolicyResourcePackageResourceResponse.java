@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceAPTResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceDebResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceGooGetResponse;
@@ -27,7 +27,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * A package managed by Apt.
      * 
      */
-    @InputImport(name="apt", required=true)
+    @Import(name="apt", required=true)
       private final OSPolicyResourcePackageResourceAPTResponse apt;
 
     public OSPolicyResourcePackageResourceAPTResponse getApt() {
@@ -38,7 +38,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * A deb package file.
      * 
      */
-    @InputImport(name="deb", required=true)
+    @Import(name="deb", required=true)
       private final OSPolicyResourcePackageResourceDebResponse deb;
 
     public OSPolicyResourcePackageResourceDebResponse getDeb() {
@@ -49,7 +49,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * The desired state the agent should maintain for this package.
      * 
      */
-    @InputImport(name="desiredState", required=true)
+    @Import(name="desiredState", required=true)
       private final String desiredState;
 
     public String getDesiredState() {
@@ -60,7 +60,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * A package managed by GooGet.
      * 
      */
-    @InputImport(name="googet", required=true)
+    @Import(name="googet", required=true)
       private final OSPolicyResourcePackageResourceGooGetResponse googet;
 
     public OSPolicyResourcePackageResourceGooGetResponse getGooget() {
@@ -71,7 +71,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * An MSI package.
      * 
      */
-    @InputImport(name="msi", required=true)
+    @Import(name="msi", required=true)
       private final OSPolicyResourcePackageResourceMSIResponse msi;
 
     public OSPolicyResourcePackageResourceMSIResponse getMsi() {
@@ -82,7 +82,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * An rpm package file.
      * 
      */
-    @InputImport(name="rpm", required=true)
+    @Import(name="rpm", required=true)
       private final OSPolicyResourcePackageResourceRPMResponse rpm;
 
     public OSPolicyResourcePackageResourceRPMResponse getRpm() {
@@ -93,7 +93,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * A package managed by YUM.
      * 
      */
-    @InputImport(name="yum", required=true)
+    @Import(name="yum", required=true)
       private final OSPolicyResourcePackageResourceYUMResponse yum;
 
     public OSPolicyResourcePackageResourceYUMResponse getYum() {
@@ -104,7 +104,7 @@ public final class OSPolicyResourcePackageResourceResponse extends io.pulumi.res
      * A package managed by Zypper.
      * 
      */
-    @InputImport(name="zypper", required=true)
+    @Import(name="zypper", required=true)
       private final OSPolicyResourcePackageResourceZypperResponse zypper;
 
     public OSPolicyResourcePackageResourceZypperResponse getZypper() {

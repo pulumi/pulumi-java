@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ids_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ids_v1.EndpointArgs;
@@ -24,7 +24,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The create time timestamp.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * User-provided description of the endpoint
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The fully qualified URL of the endpoint's ILB Forwarding Rule.
      * 
      */
-    @OutputExport(name="endpointForwardingRule", type=String.class, parameters={})
+    @Export(name="endpointForwardingRule", type=String.class, parameters={})
     private Output<String> endpointForwardingRule;
 
     /**
@@ -66,7 +66,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The IP address of the IDS Endpoint's ILB.
      * 
      */
-    @OutputExport(name="endpointIp", type=String.class, parameters={})
+    @Export(name="endpointIp", type=String.class, parameters={})
     private Output<String> endpointIp;
 
     /**
@@ -80,7 +80,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The labels of the endpoint.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -94,7 +94,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The name of the endpoint.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The fully qualified URL of the network to which the IDS Endpoint is attached.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -122,7 +122,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Lowest threat severity that this endpoint will alert on.
      * 
      */
-    @OutputExport(name="severity", type=String.class, parameters={})
+    @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
@@ -136,7 +136,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Current state of the endpoint.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -150,7 +150,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Whether the endpoint should report traffic logs in addition to threat logs.
      * 
      */
-    @OutputExport(name="trafficLogs", type=Boolean.class, parameters={})
+    @Export(name="trafficLogs", type=Boolean.class, parameters={})
     private Output<Boolean> trafficLogs;
 
     /**
@@ -164,7 +164,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The update time timestamp.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

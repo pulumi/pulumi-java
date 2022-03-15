@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * The ARN of the customer gateway.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
-    @InputImport(name="bgpAsn")
+    @Import(name="bgpAsn")
       private final @Nullable Output<String> bgpAsn;
 
     public Output<String> getBgpAsn() {
@@ -41,7 +41,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) for the customer gateway certificate.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -52,7 +52,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * A name for the customer gateway device.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -63,7 +63,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * The IP address of the gateway's Internet-routable external interface.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -74,7 +74,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * Tags to apply to the gateway. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -85,7 +85,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -97,7 +97,7 @@ public final class CustomerGatewayState extends io.pulumi.resources.ResourceArgs
      * supports at this time is "ipsec.1".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

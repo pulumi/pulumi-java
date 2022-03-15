@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GcsSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Source data URI. For example, `gs://my_bucket/my_object`.
      * 
      */
-    @InputImport(name="inputUri", required=true)
+    @Import(name="inputUri", required=true)
       private final String inputUri;
 
     public String getInputUri() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CxPageFormParameterFillBehaviorGetArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="initialPromptFulfillment")
+    @Import(name="initialPromptFulfillment")
       private final @Nullable Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> initialPromptFulfillment;
 
     public Output<CxPageFormParameterFillBehaviorInitialPromptFulfillmentGetArgs> getInitialPromptFulfillment() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.NetworkACLResponse;
 import io.pulumi.azurenative.webpubsub.inputs.PrivateEndpointACLResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
      * Default action when no other rule matches
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
@@ -36,7 +36,7 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
      * ACLs for requests from private endpoints
      * 
      */
-    @InputImport(name="privateEndpoints")
+    @Import(name="privateEndpoints")
       private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
 
     public List<PrivateEndpointACLResponse> getPrivateEndpoints() {
@@ -47,7 +47,7 @@ public final class WebPubSubNetworkACLsResponse extends io.pulumi.resources.Invo
      * ACL for requests from public network
      * 
      */
-    @InputImport(name="publicNetwork")
+    @Import(name="publicNetwork")
       private final @Nullable NetworkACLResponse publicNetwork;
 
     public Optional<NetworkACLResponse> getPublicNetwork() {

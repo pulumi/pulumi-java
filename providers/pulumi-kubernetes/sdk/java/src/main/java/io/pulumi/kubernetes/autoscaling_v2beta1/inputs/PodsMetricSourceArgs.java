@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * metricName is the name of the metric in question
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -34,7 +34,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set, it is passed as an additional parameter to the metrics server for more specific metrics scoping When unset, just the metricName will be used to gather metrics.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
@@ -45,7 +45,7 @@ public final class PodsMetricSourceArgs extends io.pulumi.resources.ResourceArgs
      * targetAverageValue is the target value of the average of the metric across all relevant pods (as a quantity)
      * 
      */
-    @InputImport(name="targetAverageValue", required=true)
+    @Import(name="targetAverageValue", required=true)
       private final Output<String> targetAverageValue;
 
     public Output<String> getTargetAverageValue() {

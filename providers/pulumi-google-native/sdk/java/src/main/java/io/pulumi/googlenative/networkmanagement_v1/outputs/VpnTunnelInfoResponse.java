@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpnTunnelInfoResponse {
     /**
      * Name of a VPN tunnel.
@@ -55,17 +55,17 @@ public final class VpnTunnelInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnTunnelInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("remoteGateway") String remoteGateway,
-        @OutputCustomType.Parameter("remoteGatewayIp") String remoteGatewayIp,
-        @OutputCustomType.Parameter("routingType") String routingType,
-        @OutputCustomType.Parameter("sourceGateway") String sourceGateway,
-        @OutputCustomType.Parameter("sourceGatewayIp") String sourceGatewayIp,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("remoteGateway") String remoteGateway,
+        @CustomType.Parameter("remoteGatewayIp") String remoteGatewayIp,
+        @CustomType.Parameter("routingType") String routingType,
+        @CustomType.Parameter("sourceGateway") String sourceGateway,
+        @CustomType.Parameter("sourceGatewayIp") String sourceGatewayIp,
+        @CustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.networkUri = networkUri;
         this.region = region;

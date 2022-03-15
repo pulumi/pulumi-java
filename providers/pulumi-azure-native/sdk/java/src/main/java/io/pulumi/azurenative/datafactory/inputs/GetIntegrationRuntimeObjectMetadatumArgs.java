@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final String factoryName;
 
     public String getFactoryName() {
@@ -29,7 +29,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * The integration runtime name.
      * 
      */
-    @InputImport(name="integrationRuntimeName", required=true)
+    @Import(name="integrationRuntimeName", required=true)
       private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
@@ -40,7 +40,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * Metadata path.
      * 
      */
-    @InputImport(name="metadataPath")
+    @Import(name="metadataPath")
       private final @Nullable String metadataPath;
 
     public Optional<String> getMetadataPath() {
@@ -51,7 +51,7 @@ public final class GetIntegrationRuntimeObjectMetadatumArgs extends io.pulumi.re
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

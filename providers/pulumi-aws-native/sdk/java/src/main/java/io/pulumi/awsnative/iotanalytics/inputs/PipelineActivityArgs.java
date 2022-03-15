@@ -14,7 +14,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.PipelineMathArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineRemoveAttributesArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineSelectAttributesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,70 +23,70 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
 
     public static final PipelineActivityArgs Empty = new PipelineActivityArgs();
 
-    @InputImport(name="addAttributes")
+    @Import(name="addAttributes")
       private final @Nullable Output<PipelineAddAttributesArgs> addAttributes;
 
     public Output<PipelineAddAttributesArgs> getAddAttributes() {
         return this.addAttributes == null ? Output.empty() : this.addAttributes;
     }
 
-    @InputImport(name="channel")
+    @Import(name="channel")
       private final @Nullable Output<PipelineChannelArgs> channel;
 
     public Output<PipelineChannelArgs> getChannel() {
         return this.channel == null ? Output.empty() : this.channel;
     }
 
-    @InputImport(name="datastore")
+    @Import(name="datastore")
       private final @Nullable Output<PipelineDatastoreArgs> datastore;
 
     public Output<PipelineDatastoreArgs> getDatastore() {
         return this.datastore == null ? Output.empty() : this.datastore;
     }
 
-    @InputImport(name="deviceRegistryEnrich")
+    @Import(name="deviceRegistryEnrich")
       private final @Nullable Output<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
 
     public Output<PipelineDeviceRegistryEnrichArgs> getDeviceRegistryEnrich() {
         return this.deviceRegistryEnrich == null ? Output.empty() : this.deviceRegistryEnrich;
     }
 
-    @InputImport(name="deviceShadowEnrich")
+    @Import(name="deviceShadowEnrich")
       private final @Nullable Output<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
 
     public Output<PipelineDeviceShadowEnrichArgs> getDeviceShadowEnrich() {
         return this.deviceShadowEnrich == null ? Output.empty() : this.deviceShadowEnrich;
     }
 
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<PipelineFilterArgs> filter;
 
     public Output<PipelineFilterArgs> getFilter() {
         return this.filter == null ? Output.empty() : this.filter;
     }
 
-    @InputImport(name="lambda")
+    @Import(name="lambda")
       private final @Nullable Output<PipelineLambdaArgs> lambda;
 
     public Output<PipelineLambdaArgs> getLambda() {
         return this.lambda == null ? Output.empty() : this.lambda;
     }
 
-    @InputImport(name="math")
+    @Import(name="math")
       private final @Nullable Output<PipelineMathArgs> math;
 
     public Output<PipelineMathArgs> getMath() {
         return this.math == null ? Output.empty() : this.math;
     }
 
-    @InputImport(name="removeAttributes")
+    @Import(name="removeAttributes")
       private final @Nullable Output<PipelineRemoveAttributesArgs> removeAttributes;
 
     public Output<PipelineRemoveAttributesArgs> getRemoveAttributes() {
         return this.removeAttributes == null ? Output.empty() : this.removeAttributes;
     }
 
-    @InputImport(name="selectAttributes")
+    @Import(name="selectAttributes")
       private final @Nullable Output<PipelineSelectAttributesArgs> selectAttributes;
 
     public Output<PipelineSelectAttributesArgs> getSelectAttributes() {

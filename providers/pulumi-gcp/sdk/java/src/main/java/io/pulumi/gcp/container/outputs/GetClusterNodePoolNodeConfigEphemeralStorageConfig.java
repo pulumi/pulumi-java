@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolNodeConfigEphemeralStorageConfig {
     private final Integer localSsdCount;
 
-    @OutputCustomType.Constructor
-    private GetClusterNodePoolNodeConfigEphemeralStorageConfig(@OutputCustomType.Parameter("localSsdCount") Integer localSsdCount) {
+    @CustomType.Constructor
+    private GetClusterNodePoolNodeConfigEphemeralStorageConfig(@CustomType.Parameter("localSsdCount") Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
     }
 

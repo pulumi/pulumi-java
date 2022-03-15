@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelAssetPropertyVariant {
     /**
      * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
@@ -32,12 +32,12 @@ public final class DetectorModelAssetPropertyVariant {
      */
     private final @Nullable String stringValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelAssetPropertyVariant(
-        @OutputCustomType.Parameter("booleanValue") @Nullable String booleanValue,
-        @OutputCustomType.Parameter("doubleValue") @Nullable String doubleValue,
-        @OutputCustomType.Parameter("integerValue") @Nullable String integerValue,
-        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue) {
+        @CustomType.Parameter("booleanValue") @Nullable String booleanValue,
+        @CustomType.Parameter("doubleValue") @Nullable String doubleValue,
+        @CustomType.Parameter("integerValue") @Nullable String integerValue,
+        @CustomType.Parameter("stringValue") @Nullable String stringValue) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.integerValue = integerValue;

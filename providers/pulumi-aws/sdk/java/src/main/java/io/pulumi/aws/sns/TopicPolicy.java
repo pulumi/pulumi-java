@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sns.TopicPolicyArgs;
 import io.pulumi.aws.sns.inputs.TopicPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * The ARN of the SNS topic
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * The AWS Account ID of the SNS topic owner
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -62,7 +62,7 @@ public class TopicPolicy extends io.pulumi.resources.CustomResource {
      * The fully-formed AWS policy as JSON.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

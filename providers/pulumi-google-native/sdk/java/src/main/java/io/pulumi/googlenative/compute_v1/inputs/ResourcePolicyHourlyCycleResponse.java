@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
      * [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
@@ -32,7 +32,7 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
      * Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
      * 
      */
-    @InputImport(name="hoursInCycle", required=true)
+    @Import(name="hoursInCycle", required=true)
       private final Integer hoursInCycle;
 
     public Integer getHoursInCycle() {
@@ -43,7 +43,7 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
      * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

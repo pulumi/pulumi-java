@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReplicationConfigurationResult {
     /**
      * The RegistryId associated with the aws account.
@@ -19,10 +19,10 @@ public final class GetReplicationConfigurationResult {
     private final @Nullable String registryId;
     private final @Nullable ReplicationConfiguration replicationConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReplicationConfigurationResult(
-        @OutputCustomType.Parameter("registryId") @Nullable String registryId,
-        @OutputCustomType.Parameter("replicationConfiguration") @Nullable ReplicationConfiguration replicationConfiguration) {
+        @CustomType.Parameter("registryId") @Nullable String registryId,
+        @CustomType.Parameter("replicationConfiguration") @Nullable ReplicationConfiguration replicationConfiguration) {
         this.registryId = registryId;
         this.replicationConfiguration = replicationConfiguration;
     }

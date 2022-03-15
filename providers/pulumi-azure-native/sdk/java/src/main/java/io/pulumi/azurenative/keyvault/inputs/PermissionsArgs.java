@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.enums.SecretPermissions;
 import io.pulumi.azurenative.keyvault.enums.StoragePermissions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Permissions to certificates
      * 
      */
-    @InputImport(name="certificates")
+    @Import(name="certificates")
       private final @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
 
     public Output<List<Either<String,CertificatePermissions>>> getCertificates() {
@@ -39,7 +39,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Permissions to keys
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<List<Either<String,KeyPermissions>>> keys;
 
     public Output<List<Either<String,KeyPermissions>>> getKeys() {
@@ -50,7 +50,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Permissions to secrets
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
 
     public Output<List<Either<String,SecretPermissions>>> getSecrets() {
@@ -61,7 +61,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Permissions to storage accounts
      * 
      */
-    @InputImport(name="storage")
+    @Import(name="storage")
       private final @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
     public Output<List<Either<String,StoragePermissions>>> getStorage() {

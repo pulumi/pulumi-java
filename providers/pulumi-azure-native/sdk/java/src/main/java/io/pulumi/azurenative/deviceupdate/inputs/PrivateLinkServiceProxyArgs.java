@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.GroupConnectivityInformationArgs;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
      * Group connectivity information.
      * 
      */
-    @InputImport(name="groupConnectivityInformation")
+    @Import(name="groupConnectivityInformation")
       private final @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
     public Output<List<GroupConnectivityInformationArgs>> getGroupConnectivityInformation() {
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
      * NRP resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
      * Remote private link service connection state
      * 
      */
-    @InputImport(name="remotePrivateLinkServiceConnectionState")
+    @Import(name="remotePrivateLinkServiceConnectionState")
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getRemotePrivateLinkServiceConnectionState() {

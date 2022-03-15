@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
      * The Amazon Resource Name (ARN) of the Amazon EFS access point that provides access to the file system.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -27,7 +27,7 @@ public final class FunctionFileSystemConfig extends io.pulumi.resources.InvokeAr
      * The path where the function can access the file system, starting with /mnt/.
      * 
      */
-    @InputImport(name="localMountPath", required=true)
+    @Import(name="localMountPath", required=true)
       private final String localMountPath;
 
     public String getLocalMountPath() {

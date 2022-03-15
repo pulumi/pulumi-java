@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.DscConfigurationAssociationPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDscNodeConfigurationResult {
     /**
      * Gets or sets the configuration of the node.
@@ -60,17 +60,17 @@ public final class GetDscNodeConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDscNodeConfigurationResult(
-        @OutputCustomType.Parameter("configuration") @Nullable DscConfigurationAssociationPropertyResponse configuration,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("incrementNodeConfigurationBuild") @Nullable Boolean incrementNodeConfigurationBuild,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeCount") @Nullable Double nodeCount,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("configuration") @Nullable DscConfigurationAssociationPropertyResponse configuration,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("incrementNodeConfigurationBuild") @Nullable Boolean incrementNodeConfigurationBuild,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeCount") @Nullable Double nodeCount,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("type") String type) {
         this.configuration = configuration;
         this.creationTime = creationTime;
         this.id = id;

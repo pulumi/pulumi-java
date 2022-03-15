@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.ServiceProfileArgs;
 import io.pulumi.awsnative.iotwireless.outputs.ServiceProfileLoRaWANServiceProfile;
 import io.pulumi.awsnative.iotwireless.outputs.ServiceProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class ServiceProfile extends io.pulumi.resources.CustomResource {
      * Service profile Arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class ServiceProfile extends io.pulumi.resources.CustomResource {
      * LoRaWAN supports all LoRa specific attributes for service profile for CreateServiceProfile operation
      * 
      */
-    @OutputExport(name="loRaWAN", type=ServiceProfileLoRaWANServiceProfile.class, parameters={})
+    @Export(name="loRaWAN", type=ServiceProfileLoRaWANServiceProfile.class, parameters={})
     private Output</* @Nullable */ ServiceProfileLoRaWANServiceProfile> loRaWAN;
 
     /**
@@ -52,7 +52,7 @@ public class ServiceProfile extends io.pulumi.resources.CustomResource {
      * Name of service profile
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -66,7 +66,7 @@ public class ServiceProfile extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the service profile.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ServiceProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={ServiceProfileTag.class})
     private Output</* @Nullable */ List<ServiceProfileTag>> tags;
 
     /**

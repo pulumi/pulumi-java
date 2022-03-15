@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.hybridconnectivity.EndpointArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
@@ -48,7 +48,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The identity that created the resource.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
@@ -62,7 +62,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of identity that created the resource.
      * 
      */
-    @OutputExport(name="createdByType", type=String.class, parameters={})
+    @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
@@ -76,7 +76,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
@@ -90,7 +90,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -104,7 +104,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedByType", type=String.class, parameters={})
+    @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
@@ -118,7 +118,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -128,7 +128,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -138,7 +138,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The resource Id of the connectivity endpoint (optional).
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -152,7 +152,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

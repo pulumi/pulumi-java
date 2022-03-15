@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Auto Scaling group for the lifecycle hook.
      * 
      */
-    @InputImport(name="autoScalingGroupName", required=true)
+    @Import(name="autoScalingGroupName", required=true)
       private final String autoScalingGroupName;
 
     public String getAutoScalingGroupName() {
@@ -27,7 +27,7 @@ public final class GetLifecycleHookArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the lifecycle hook.
      * 
      */
-    @InputImport(name="lifecycleHookName", required=true)
+    @Import(name="lifecycleHookName", required=true)
       private final String lifecycleHookName;
 
     public String getLifecycleHookName() {

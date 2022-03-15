@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.EnvironmentDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListGlobalUserEnvironmentsResult {
     /**
      * List of all the environments
@@ -17,8 +17,8 @@ public final class ListGlobalUserEnvironmentsResult {
      */
     private final @Nullable List<EnvironmentDetailsResponse> environments;
 
-    @OutputCustomType.Constructor
-    private ListGlobalUserEnvironmentsResult(@OutputCustomType.Parameter("environments") @Nullable List<EnvironmentDetailsResponse> environments) {
+    @CustomType.Constructor
+    private ListGlobalUserEnvironmentsResult(@CustomType.Parameter("environments") @Nullable List<EnvironmentDetailsResponse> environments) {
         this.environments = environments;
     }
 

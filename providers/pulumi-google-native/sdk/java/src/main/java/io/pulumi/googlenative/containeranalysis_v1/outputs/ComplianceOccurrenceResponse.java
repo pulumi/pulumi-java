@@ -3,21 +3,21 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.NonCompliantFileResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComplianceOccurrenceResponse {
     private final String nonComplianceReason;
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComplianceOccurrenceResponse(
-        @OutputCustomType.Parameter("nonComplianceReason") String nonComplianceReason,
-        @OutputCustomType.Parameter("nonCompliantFiles") List<NonCompliantFileResponse> nonCompliantFiles) {
+        @CustomType.Parameter("nonComplianceReason") String nonComplianceReason,
+        @CustomType.Parameter("nonCompliantFiles") List<NonCompliantFileResponse> nonCompliantFiles) {
         this.nonComplianceReason = nonComplianceReason;
         this.nonCompliantFiles = nonCompliantFiles;
     }

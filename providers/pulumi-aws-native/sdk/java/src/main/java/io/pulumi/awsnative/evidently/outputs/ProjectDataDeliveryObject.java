@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.evidently.outputs;
 
 import io.pulumi.awsnative.evidently.outputs.ProjectS3Destination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectDataDeliveryObject {
     private final @Nullable String logGroup;
     private final @Nullable ProjectS3Destination s3;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectDataDeliveryObject(
-        @OutputCustomType.Parameter("logGroup") @Nullable String logGroup,
-        @OutputCustomType.Parameter("s3") @Nullable ProjectS3Destination s3) {
+        @CustomType.Parameter("logGroup") @Nullable String logGroup,
+        @CustomType.Parameter("s3") @Nullable ProjectS3Destination s3) {
         this.logGroup = logGroup;
         this.s3 = s3;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
      * The object identifier of the current versioned Key Vault Key in use.
      * 
      */
-    @InputImport(name="currentVersionedKeyIdentifier", required=true)
+    @Import(name="currentVersionedKeyIdentifier", required=true)
       private final String currentVersionedKeyIdentifier;
 
     public String getCurrentVersionedKeyIdentifier() {
@@ -33,7 +33,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
      * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
      * 
      */
-    @InputImport(name="keyUri")
+    @Import(name="keyUri")
       private final @Nullable String keyUri;
 
     public Optional<String> getKeyUri() {
@@ -44,7 +44,7 @@ public final class EncryptionScopeKeyVaultPropertiesResponse extends io.pulumi.r
      * Timestamp of last rotation of the Key Vault Key.
      * 
      */
-    @InputImport(name="lastKeyRotationTimestamp", required=true)
+    @Import(name="lastKeyRotationTimestamp", required=true)
       private final String lastKeyRotationTimestamp;
 
     public String getLastKeyRotationTimestamp() {

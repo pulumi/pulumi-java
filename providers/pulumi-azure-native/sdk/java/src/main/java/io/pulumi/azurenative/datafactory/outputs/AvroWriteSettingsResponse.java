@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AvroWriteSettingsResponse {
     /**
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
@@ -39,13 +39,13 @@ public final class AvroWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AvroWriteSettingsResponse(
-        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
-        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
-        @OutputCustomType.Parameter("recordName") @Nullable String recordName,
-        @OutputCustomType.Parameter("recordNamespace") @Nullable String recordNamespace,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @CustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @CustomType.Parameter("recordName") @Nullable String recordName,
+        @CustomType.Parameter("recordNamespace") @Nullable String recordNamespace,
+        @CustomType.Parameter("type") String type) {
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
         this.recordName = recordName;

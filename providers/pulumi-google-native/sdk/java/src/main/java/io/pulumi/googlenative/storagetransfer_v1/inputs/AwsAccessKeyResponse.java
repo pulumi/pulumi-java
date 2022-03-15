@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
      * AWS access key ID.
      * 
      */
-    @InputImport(name="accessKeyId", required=true)
+    @Import(name="accessKeyId", required=true)
       private final String accessKeyId;
 
     public String getAccessKeyId() {
@@ -31,7 +31,7 @@ public final class AwsAccessKeyResponse extends io.pulumi.resources.InvokeArgs {
      * AWS secret access key. This field is not returned in RPC responses.
      * 
      */
-    @InputImport(name="secretAccessKey", required=true)
+    @Import(name="secretAccessKey", required=true)
       private final String secretAccessKey;
 
     public String getSecretAccessKey() {

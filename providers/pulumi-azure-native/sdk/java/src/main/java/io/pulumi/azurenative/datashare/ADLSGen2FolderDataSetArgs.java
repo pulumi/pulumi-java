@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * The name of the dataSet.
      * 
      */
-    @InputImport(name="dataSetName")
+    @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
     public Output<String> getDataSetName() {
@@ -40,7 +40,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * File system to which the folder belongs.
      * 
      */
-    @InputImport(name="fileSystem", required=true)
+    @Import(name="fileSystem", required=true)
       private final Output<String> fileSystem;
 
     public Output<String> getFileSystem() {
@@ -51,7 +51,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * Folder path within the file system.
      * 
      */
-    @InputImport(name="folderPath", required=true)
+    @Import(name="folderPath", required=true)
       private final Output<String> folderPath;
 
     public Output<String> getFolderPath() {
@@ -63,7 +63,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * Expected value is 'AdlsGen2Folder'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -74,7 +74,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * Resource group of storage account
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -85,7 +85,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * The name of the share to add the data set to.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -107,7 +107,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * Storage account name of the source data set
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
@@ -118,7 +118,7 @@ public final class ADLSGen2FolderDataSetArgs extends io.pulumi.resources.Resourc
      * Subscription id of storage account
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {

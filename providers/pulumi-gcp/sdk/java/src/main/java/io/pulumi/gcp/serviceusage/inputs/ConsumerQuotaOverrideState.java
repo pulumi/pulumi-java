@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceusage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
     public Output<Map<String,String>> getDimensions() {
@@ -32,7 +32,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * If `force` is `true`, that safety check is ignored.
      * 
      */
-    @InputImport(name="force")
+    @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
     public Output<Boolean> getForce() {
@@ -43,7 +43,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * The limit on the metric, e.g. `/project/region`.
      * 
      */
-    @InputImport(name="limit")
+    @Import(name="limit")
       private final @Nullable Output<String> limit;
 
     public Output<String> getLimit() {
@@ -54,7 +54,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
      * 
      */
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable Output<String> metric;
 
     public Output<String> getMetric() {
@@ -65,7 +65,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * The server-generated name of the quota override.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
      * 
      */
-    @InputImport(name="overrideValue")
+    @Import(name="overrideValue")
       private final @Nullable Output<String> overrideValue;
 
     public Output<String> getOverrideValue() {
@@ -88,7 +88,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -99,7 +99,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * The service that the metrics belong to, e.g. `compute.googleapis.com`.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

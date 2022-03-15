@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleOverrideResponse {
     /**
      * Describes the override action to be applied when rule matches.
@@ -27,11 +27,11 @@ public final class ManagedRuleOverrideResponse {
      */
     private final String ruleId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRuleOverrideResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("ruleId") String ruleId) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("ruleId") String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
         this.ruleId = ruleId;

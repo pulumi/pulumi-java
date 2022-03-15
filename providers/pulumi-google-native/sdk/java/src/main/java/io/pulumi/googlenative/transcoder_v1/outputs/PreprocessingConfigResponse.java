@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AudioResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ColorResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.CropResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.transcoder_v1.outputs.DenoiseResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.PadResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreprocessingConfigResponse {
     /**
      * Audio preprocessing configuration.
@@ -45,14 +45,14 @@ public final class PreprocessingConfigResponse {
      */
     private final PadResponse pad;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreprocessingConfigResponse(
-        @OutputCustomType.Parameter("audio") AudioResponse audio,
-        @OutputCustomType.Parameter("color") ColorResponse color,
-        @OutputCustomType.Parameter("crop") CropResponse crop,
-        @OutputCustomType.Parameter("deblock") DeblockResponse deblock,
-        @OutputCustomType.Parameter("denoise") DenoiseResponse denoise,
-        @OutputCustomType.Parameter("pad") PadResponse pad) {
+        @CustomType.Parameter("audio") AudioResponse audio,
+        @CustomType.Parameter("color") ColorResponse color,
+        @CustomType.Parameter("crop") CropResponse crop,
+        @CustomType.Parameter("deblock") DeblockResponse deblock,
+        @CustomType.Parameter("denoise") DenoiseResponse denoise,
+        @CustomType.Parameter("pad") PadResponse pad) {
         this.audio = audio;
         this.color = color;
         this.crop = crop;

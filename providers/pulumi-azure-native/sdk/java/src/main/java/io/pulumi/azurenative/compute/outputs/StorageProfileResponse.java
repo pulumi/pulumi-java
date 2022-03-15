@@ -6,13 +6,13 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.DataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.OSDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
@@ -30,11 +30,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable OSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageProfileResponse(
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
-        @OutputCustomType.Parameter("osDisk") @Nullable OSDiskResponse osDisk) {
+        @CustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
+        @CustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
+        @CustomType.Parameter("osDisk") @Nullable OSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;

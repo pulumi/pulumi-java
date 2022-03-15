@@ -18,7 +18,7 @@ import io.pulumi.awsnative.appflow.enums.FlowSlackConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowTrendmicroConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowVeevaConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowZendeskConnectorOperator;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -32,105 +32,105 @@ public final class FlowConnectorOperator extends io.pulumi.resources.InvokeArgs 
 
     public static final FlowConnectorOperator Empty = new FlowConnectorOperator();
 
-    @InputImport(name="amplitude")
+    @Import(name="amplitude")
       private final @Nullable FlowAmplitudeConnectorOperator amplitude;
 
     public Optional<FlowAmplitudeConnectorOperator> getAmplitude() {
         return this.amplitude == null ? Optional.empty() : Optional.ofNullable(this.amplitude);
     }
 
-    @InputImport(name="datadog")
+    @Import(name="datadog")
       private final @Nullable FlowDatadogConnectorOperator datadog;
 
     public Optional<FlowDatadogConnectorOperator> getDatadog() {
         return this.datadog == null ? Optional.empty() : Optional.ofNullable(this.datadog);
     }
 
-    @InputImport(name="dynatrace")
+    @Import(name="dynatrace")
       private final @Nullable FlowDynatraceConnectorOperator dynatrace;
 
     public Optional<FlowDynatraceConnectorOperator> getDynatrace() {
         return this.dynatrace == null ? Optional.empty() : Optional.ofNullable(this.dynatrace);
     }
 
-    @InputImport(name="googleAnalytics")
+    @Import(name="googleAnalytics")
       private final @Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics;
 
     public Optional<FlowGoogleAnalyticsConnectorOperator> getGoogleAnalytics() {
         return this.googleAnalytics == null ? Optional.empty() : Optional.ofNullable(this.googleAnalytics);
     }
 
-    @InputImport(name="inforNexus")
+    @Import(name="inforNexus")
       private final @Nullable FlowInforNexusConnectorOperator inforNexus;
 
     public Optional<FlowInforNexusConnectorOperator> getInforNexus() {
         return this.inforNexus == null ? Optional.empty() : Optional.ofNullable(this.inforNexus);
     }
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable FlowMarketoConnectorOperator marketo;
 
     public Optional<FlowMarketoConnectorOperator> getMarketo() {
         return this.marketo == null ? Optional.empty() : Optional.ofNullable(this.marketo);
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable FlowS3ConnectorOperator s3;
 
     public Optional<FlowS3ConnectorOperator> getS3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 
-    @InputImport(name="sAPOData")
+    @Import(name="sAPOData")
       private final @Nullable FlowSAPODataConnectorOperator sAPOData;
 
     public Optional<FlowSAPODataConnectorOperator> getSAPOData() {
         return this.sAPOData == null ? Optional.empty() : Optional.ofNullable(this.sAPOData);
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable FlowSalesforceConnectorOperator salesforce;
 
     public Optional<FlowSalesforceConnectorOperator> getSalesforce() {
         return this.salesforce == null ? Optional.empty() : Optional.ofNullable(this.salesforce);
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable FlowServiceNowConnectorOperator serviceNow;
 
     public Optional<FlowServiceNowConnectorOperator> getServiceNow() {
         return this.serviceNow == null ? Optional.empty() : Optional.ofNullable(this.serviceNow);
     }
 
-    @InputImport(name="singular")
+    @Import(name="singular")
       private final @Nullable FlowSingularConnectorOperator singular;
 
     public Optional<FlowSingularConnectorOperator> getSingular() {
         return this.singular == null ? Optional.empty() : Optional.ofNullable(this.singular);
     }
 
-    @InputImport(name="slack")
+    @Import(name="slack")
       private final @Nullable FlowSlackConnectorOperator slack;
 
     public Optional<FlowSlackConnectorOperator> getSlack() {
         return this.slack == null ? Optional.empty() : Optional.ofNullable(this.slack);
     }
 
-    @InputImport(name="trendmicro")
+    @Import(name="trendmicro")
       private final @Nullable FlowTrendmicroConnectorOperator trendmicro;
 
     public Optional<FlowTrendmicroConnectorOperator> getTrendmicro() {
         return this.trendmicro == null ? Optional.empty() : Optional.ofNullable(this.trendmicro);
     }
 
-    @InputImport(name="veeva")
+    @Import(name="veeva")
       private final @Nullable FlowVeevaConnectorOperator veeva;
 
     public Optional<FlowVeevaConnectorOperator> getVeeva() {
         return this.veeva == null ? Optional.empty() : Optional.ofNullable(this.veeva);
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable FlowZendeskConnectorOperator zendesk;
 
     public Optional<FlowZendeskConnectorOperator> getZendesk() {

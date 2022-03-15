@@ -10,7 +10,7 @@ import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * compression settings.
      * 
      */
-    @OutputExport(name="compressionSettings", type=CompressionSettingsResponse.class, parameters={})
+    @Export(name="compressionSettings", type=CompressionSettingsResponse.class, parameters={})
     private Output</* @Nullable */ CompressionSettingsResponse> compressionSettings;
 
     /**
@@ -51,7 +51,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Domains referenced by this endpoint.
      * 
      */
-    @OutputExport(name="customDomains", type=List.class, parameters={ResourceReferenceResponse.class})
+    @Export(name="customDomains", type=List.class, parameters={ResourceReferenceResponse.class})
     private Output</* @Nullable */ List<ResourceReferenceResponse>> customDomains;
 
     /**
@@ -61,7 +61,7 @@ public class Route extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<ResourceReferenceResponse>> getCustomDomains() {
         return this.customDomains;
     }
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -71,7 +71,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @OutputExport(name="enabledState", type=String.class, parameters={})
+    @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
@@ -85,7 +85,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Protocol this rule will use when forwarding traffic to backends.
      * 
      */
-    @OutputExport(name="forwardingProtocol", type=String.class, parameters={})
+    @Export(name="forwardingProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> forwardingProtocol;
 
     /**
@@ -99,7 +99,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up this rule and it will be the first rule that gets executed.
      * 
      */
-    @OutputExport(name="httpsRedirect", type=String.class, parameters={})
+    @Export(name="httpsRedirect", type=String.class, parameters={})
     private Output</* @Nullable */ String> httpsRedirect;
 
     /**
@@ -113,7 +113,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * whether this route will be linked to the default endpoint domain.
      * 
      */
-    @OutputExport(name="linkToDefaultDomain", type=String.class, parameters={})
+    @Export(name="linkToDefaultDomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkToDefaultDomain;
 
     /**
@@ -127,7 +127,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A reference to the origin group.
      * 
      */
-    @OutputExport(name="originGroup", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="originGroup", type=ResourceReferenceResponse.class, parameters={})
     private Output<ResourceReferenceResponse> originGroup;
 
     /**
@@ -155,7 +155,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    @OutputExport(name="originPath", type=String.class, parameters={})
+    @Export(name="originPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> originPath;
 
     /**
@@ -169,7 +169,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The route patterns of the rule.
      * 
      */
-    @OutputExport(name="patternsToMatch", type=List.class, parameters={String.class})
+    @Export(name="patternsToMatch", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> patternsToMatch;
 
     /**
@@ -183,7 +183,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -197,7 +197,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    @OutputExport(name="queryStringCachingBehavior", type=String.class, parameters={})
+    @Export(name="queryStringCachingBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryStringCachingBehavior;
 
     /**
@@ -211,7 +211,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * rule sets referenced by this endpoint.
      * 
      */
-    @OutputExport(name="ruleSets", type=List.class, parameters={ResourceReferenceResponse.class})
+    @Export(name="ruleSets", type=List.class, parameters={ResourceReferenceResponse.class})
     private Output</* @Nullable */ List<ResourceReferenceResponse>> ruleSets;
 
     /**
@@ -225,7 +225,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * List of supported protocols for this route.
      * 
      */
-    @OutputExport(name="supportedProtocols", type=List.class, parameters={String.class})
+    @Export(name="supportedProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportedProtocols;
 
     /**
@@ -239,7 +239,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -253,7 +253,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -9,7 +9,7 @@ import io.pulumi.aws.storagegateway.inputs.NfsFileShareState;
 import io.pulumi.aws.storagegateway.outputs.NfsFileShareCacheAttributes;
 import io.pulumi.aws.storagegateway.outputs.NfsFileShareNfsFileShareDefaults;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the NFS File Share.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the storage used for audit logs.
      * 
      */
-    @OutputExport(name="auditDestinationArn", type=String.class, parameters={})
+    @Export(name="auditDestinationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> auditDestinationArn;
 
     /**
@@ -65,7 +65,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    @OutputExport(name="cacheAttributes", type=NfsFileShareCacheAttributes.class, parameters={})
+    @Export(name="cacheAttributes", type=NfsFileShareCacheAttributes.class, parameters={})
     private Output</* @Nullable */ NfsFileShareCacheAttributes> cacheAttributes;
 
     /**
@@ -79,7 +79,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
      * 
      */
-    @OutputExport(name="clientLists", type=List.class, parameters={String.class})
+    @Export(name="clientLists", type=List.class, parameters={String.class})
     private Output<List<String>> clientLists;
 
     /**
@@ -93,7 +93,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The default [storage class](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-DefaultStorageClass) for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`.
      * 
      */
-    @OutputExport(name="defaultStorageClass", type=String.class, parameters={})
+    @Export(name="defaultStorageClass", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultStorageClass;
 
     /**
@@ -107,7 +107,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
      * 
      */
-    @OutputExport(name="fileShareName", type=String.class, parameters={})
+    @Export(name="fileShareName", type=String.class, parameters={})
     private Output<String> fileShareName;
 
     /**
@@ -121,7 +121,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * ID of the NFS File Share.
      * 
      */
-    @OutputExport(name="fileshareId", type=String.class, parameters={})
+    @Export(name="fileshareId", type=String.class, parameters={})
     private Output<String> fileshareId;
 
     /**
@@ -135,7 +135,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the file gateway.
      * 
      */
-    @OutputExport(name="gatewayArn", type=String.class, parameters={})
+    @Export(name="gatewayArn", type=String.class, parameters={})
     private Output<String> gatewayArn;
 
     /**
@@ -149,7 +149,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
      * 
      */
-    @OutputExport(name="guessMimeTypeEnabled", type=Boolean.class, parameters={})
+    @Export(name="guessMimeTypeEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> guessMimeTypeEnabled;
 
     /**
@@ -163,7 +163,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
      * 
      */
-    @OutputExport(name="kmsEncrypted", type=Boolean.class, parameters={})
+    @Export(name="kmsEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> kmsEncrypted;
 
     /**
@@ -177,7 +177,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
@@ -191,7 +191,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The ARN of the backed storage used for storing file data.
      * 
      */
-    @OutputExport(name="locationArn", type=String.class, parameters={})
+    @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
@@ -205,7 +205,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
      * 
      */
-    @OutputExport(name="nfsFileShareDefaults", type=NfsFileShareNfsFileShareDefaults.class, parameters={})
+    @Export(name="nfsFileShareDefaults", type=NfsFileShareNfsFileShareDefaults.class, parameters={})
     private Output</* @Nullable */ NfsFileShareNfsFileShareDefaults> nfsFileShareDefaults;
 
     /**
@@ -219,7 +219,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
      * 
      */
-    @OutputExport(name="notificationPolicy", type=String.class, parameters={})
+    @Export(name="notificationPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationPolicy;
 
     /**
@@ -233,7 +233,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Access Control List permission for S3 bucket objects. Defaults to `private`.
      * 
      */
-    @OutputExport(name="objectAcl", type=String.class, parameters={})
+    @Export(name="objectAcl", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectAcl;
 
     /**
@@ -247,7 +247,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * File share path used by the NFS client to identify the mount point.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
@@ -261,7 +261,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
      * 
      */
-    @OutputExport(name="readOnly", type=Boolean.class, parameters={})
+    @Export(name="readOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> readOnly;
 
     /**
@@ -275,7 +275,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
      * 
      */
-    @OutputExport(name="requesterPays", type=Boolean.class, parameters={})
+    @Export(name="requesterPays", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requesterPays;
 
     /**
@@ -289,7 +289,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -303,7 +303,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
      * 
      */
-    @OutputExport(name="squash", type=String.class, parameters={})
+    @Export(name="squash", type=String.class, parameters={})
     private Output</* @Nullable */ String> squash;
 
     /**
@@ -317,7 +317,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -331,7 +331,7 @@ public class NfsFileShare extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

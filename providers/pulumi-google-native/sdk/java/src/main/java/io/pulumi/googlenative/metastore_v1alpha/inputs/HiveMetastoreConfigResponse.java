@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.KerberosConfigResponse;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen.
      * 
      */
-    @InputImport(name="auxiliaryVersions", required=true)
+    @Import(name="auxiliaryVersions", required=true)
       private final Map<String,String> auxiliaryVersions;
 
     public Map<String,String> getAuxiliaryVersions() {
@@ -33,7 +33,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden). These overrides are also applied to auxiliary versions and can be further customized in the auxiliary version's AuxiliaryVersionConfig.
      * 
      */
-    @InputImport(name="configOverrides", required=true)
+    @Import(name="configOverrides", required=true)
       private final Map<String,String> configOverrides;
 
     public Map<String,String> getConfigOverrides() {
@@ -44,7 +44,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
      * 
      */
-    @InputImport(name="endpointProtocol", required=true)
+    @Import(name="endpointProtocol", required=true)
       private final String endpointProtocol;
 
     public String getEndpointProtocol() {
@@ -55,7 +55,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * Information used to configure the Hive metastore service as a service principal in a Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field from the request's service.
      * 
      */
-    @InputImport(name="kerberosConfig", required=true)
+    @Import(name="kerberosConfig", required=true)
       private final KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse getKerberosConfig() {
@@ -66,7 +66,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * Immutable. The Hive metastore schema version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

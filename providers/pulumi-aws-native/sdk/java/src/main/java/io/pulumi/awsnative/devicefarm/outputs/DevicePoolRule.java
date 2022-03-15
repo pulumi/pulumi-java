@@ -5,13 +5,13 @@ package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleAttribute;
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleOperator;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DevicePoolRule {
     /**
      * The rule's stringified attribute.
@@ -29,11 +29,11 @@ public final class DevicePoolRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DevicePoolRule(
-        @OutputCustomType.Parameter("attribute") @Nullable DevicePoolRuleAttribute attribute,
-        @OutputCustomType.Parameter("operator") @Nullable DevicePoolRuleOperator operator,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("attribute") @Nullable DevicePoolRuleAttribute attribute,
+        @CustomType.Parameter("operator") @Nullable DevicePoolRuleOperator operator,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.attribute = attribute;
         this.operator = operator;
         this.value = value;

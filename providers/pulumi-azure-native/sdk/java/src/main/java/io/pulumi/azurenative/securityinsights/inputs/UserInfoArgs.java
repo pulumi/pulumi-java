@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The object id of the user.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
     public Output<String> getObjectId() {

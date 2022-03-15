@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * The state of the Experiment
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,State>> enabledState;
 
     public Output<Either<String,State>> getEnabledState() {
@@ -32,7 +32,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * The name of the Profile
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * The Profile identifier associated with the Tenant and Partner
      * 
      */
-    @InputImport(name="profileName")
+    @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -65,7 +65,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class NetworkExperimentProfileArgs extends io.pulumi.resources.Reso
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.RolloutStatus;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DeleteServiceStrategyArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.TrafficPercentStrategyArgs;
@@ -21,7 +21,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Creation time of the rollout. Readonly.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -32,7 +32,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The strategy associated with a rollout to delete a `ManagedService`. Readonly.
      * 
      */
-    @InputImport(name="deleteServiceStrategy")
+    @Import(name="deleteServiceStrategy")
       private final @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
     public Output<DeleteServiceStrategyArgs> getDeleteServiceStrategy() {
@@ -43,7 +43,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Unique identifier of this Rollout. Must be no longer than 63 characters and only lower case letters, digits, '.', '_' and '-' are allowed. If not specified by client, the server will generate one. The generated id will have the form of , where "date" is the create date in ISO 8601 format. "revision number" is a monotonically increasing positive number that is reset every day for each service. An example of the generated rollout_id is '2016-02-16r1'
      * 
      */
-    @InputImport(name="rolloutId")
+    @Import(name="rolloutId")
       private final @Nullable Output<String> rolloutId;
 
     public Output<String> getRolloutId() {
@@ -54,7 +54,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service associated with this Rollout.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -65,7 +65,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * The status of this rollout. Readonly. In case of a failed rollout, the system will automatically rollback to the current Rollout version. Readonly.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<RolloutStatus> status;
 
     public Output<RolloutStatus> getStatus() {
@@ -76,7 +76,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * Google Service Control selects service configurations based on traffic percentage.
      * 
      */
-    @InputImport(name="trafficPercentStrategy")
+    @Import(name="trafficPercentStrategy")
       private final @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
     public Output<TrafficPercentStrategyArgs> getTrafficPercentStrategy() {

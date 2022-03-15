@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchInstanceFilterGroupLabelResponse {
     /**
      * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter.
@@ -16,8 +16,8 @@ public final class PatchInstanceFilterGroupLabelResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private PatchInstanceFilterGroupLabelResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
+    @CustomType.Constructor
+    private PatchInstanceFilterGroupLabelResponse(@CustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

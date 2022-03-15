@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.testing_v1.TestMatrixArgs;
@@ -32,7 +32,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * Information about the client which invoked the test.
      * 
      */
-    @OutputExport(name="clientInfo", type=ClientInfoResponse.class, parameters={})
+    @Export(name="clientInfo", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> clientInfo;
 
     /**
@@ -46,7 +46,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * The devices the tests are being executed on.
      * 
      */
-    @OutputExport(name="environmentMatrix", type=EnvironmentMatrixResponse.class, parameters={})
+    @Export(name="environmentMatrix", type=EnvironmentMatrixResponse.class, parameters={})
     private Output<EnvironmentMatrixResponse> environmentMatrix;
 
     /**
@@ -60,7 +60,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
      * 
      */
-    @OutputExport(name="failFast", type=Boolean.class, parameters={})
+    @Export(name="failFast", type=Boolean.class, parameters={})
     private Output<Boolean> failFast;
 
     /**
@@ -74,7 +74,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
      * 
      */
-    @OutputExport(name="flakyTestAttempts", type=Integer.class, parameters={})
+    @Export(name="flakyTestAttempts", type=Integer.class, parameters={})
     private Output<Integer> flakyTestAttempts;
 
     /**
@@ -88,7 +88,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.
      * 
      */
-    @OutputExport(name="invalidMatrixDetails", type=String.class, parameters={})
+    @Export(name="invalidMatrixDetails", type=String.class, parameters={})
     private Output<String> invalidMatrixDetails;
 
     /**
@@ -102,7 +102,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
      * 
      */
-    @OutputExport(name="outcomeSummary", type=String.class, parameters={})
+    @Export(name="outcomeSummary", type=String.class, parameters={})
     private Output<String> outcomeSummary;
 
     /**
@@ -116,7 +116,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * The cloud project that owns the test matrix.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -130,7 +130,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * Where the results for the matrix are written.
      * 
      */
-    @OutputExport(name="resultStorage", type=ResultStorageResponse.class, parameters={})
+    @Export(name="resultStorage", type=ResultStorageResponse.class, parameters={})
     private Output<ResultStorageResponse> resultStorage;
 
     /**
@@ -144,7 +144,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * Indicates the current progress of the test matrix.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -158,7 +158,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * The list of test executions that the service creates for this matrix.
      * 
      */
-    @OutputExport(name="testExecutions", type=List.class, parameters={TestExecutionResponse.class})
+    @Export(name="testExecutions", type=List.class, parameters={TestExecutionResponse.class})
     private Output<List<TestExecutionResponse>> testExecutions;
 
     /**
@@ -172,7 +172,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * Unique id set by the service.
      * 
      */
-    @OutputExport(name="testMatrixId", type=String.class, parameters={})
+    @Export(name="testMatrixId", type=String.class, parameters={})
     private Output<String> testMatrixId;
 
     /**
@@ -186,7 +186,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * How to run the test.
      * 
      */
-    @OutputExport(name="testSpecification", type=TestSpecificationResponse.class, parameters={})
+    @Export(name="testSpecification", type=TestSpecificationResponse.class, parameters={})
     private Output<TestSpecificationResponse> testSpecification;
 
     /**
@@ -200,7 +200,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * The time this test matrix was initially created.
      * 
      */
-    @OutputExport(name="timestamp", type=String.class, parameters={})
+    @Export(name="timestamp", type=String.class, parameters={})
     private Output<String> timestamp;
 
     /**

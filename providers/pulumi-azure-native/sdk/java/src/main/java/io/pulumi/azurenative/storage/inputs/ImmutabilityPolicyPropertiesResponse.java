@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.UpdateHistoryPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
      */
-    @InputImport(name="allowProtectedAppendWrites")
+    @Import(name="allowProtectedAppendWrites")
       private final @Nullable Boolean allowProtectedAppendWrites;
 
     public Optional<Boolean> getAllowProtectedAppendWrites() {
@@ -37,7 +37,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * ImmutabilityPolicy Etag.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -48,7 +48,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
      */
-    @InputImport(name="immutabilityPeriodSinceCreationInDays")
+    @Import(name="immutabilityPeriodSinceCreationInDays")
       private final @Nullable Integer immutabilityPeriodSinceCreationInDays;
 
     public Optional<Integer> getImmutabilityPeriodSinceCreationInDays() {
@@ -59,7 +59,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -70,7 +70,7 @@ public final class ImmutabilityPolicyPropertiesResponse extends io.pulumi.resour
      * The ImmutabilityPolicy update history of the blob container.
      * 
      */
-    @InputImport(name="updateHistory", required=true)
+    @Import(name="updateHistory", required=true)
       private final List<UpdateHistoryPropertyResponse> updateHistory;
 
     public List<UpdateHistoryPropertyResponse> getUpdateHistory() {

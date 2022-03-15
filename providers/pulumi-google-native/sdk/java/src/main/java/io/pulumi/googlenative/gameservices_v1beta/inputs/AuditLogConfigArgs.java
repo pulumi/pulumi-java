@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.enums.AuditLogConfigLogType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,14 +25,14 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
      */
-    @InputImport(name="exemptedMembers")
+    @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
     }
 
-    @InputImport(name="ignoreChildExemptions")
+    @Import(name="ignoreChildExemptions")
       private final @Nullable Output<Boolean> ignoreChildExemptions;
 
     public Output<Boolean> getIgnoreChildExemptions() {
@@ -43,7 +43,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The log type that this config enables.
      * 
      */
-    @InputImport(name="logType")
+    @Import(name="logType")
       private final @Nullable Output<AuditLogConfigLogType> logType;
 
     public Output<AuditLogConfigLogType> getLogType() {

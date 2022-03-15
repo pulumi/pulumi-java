@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for logging of each type of permission.
      * 
      */
-    @InputImport(name="auditLogConfigs")
+    @Import(name="auditLogConfigs")
       private final @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
 
     public Output<List<AuditLogConfigArgs>> getAuditLogConfigs() {
@@ -35,7 +35,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

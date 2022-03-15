@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagesync.inputs.CloudTieringDatePolicyStatusResp
 import io.pulumi.azurenative.storagesync.inputs.CloudTieringFilesNotTieringResponse;
 import io.pulumi.azurenative.storagesync.inputs.CloudTieringSpaceSavingsResponse;
 import io.pulumi.azurenative.storagesync.inputs.CloudTieringVolumeFreeSpacePolicyStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Information regarding how well the local cache on the server is performing.
      * 
      */
-    @InputImport(name="cachePerformance", required=true)
+    @Import(name="cachePerformance", required=true)
       private final CloudTieringCachePerformanceResponse cachePerformance;
 
     public CloudTieringCachePerformanceResponse getCachePerformance() {
@@ -37,7 +37,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Status of the date policy
      * 
      */
-    @InputImport(name="datePolicyStatus", required=true)
+    @Import(name="datePolicyStatus", required=true)
       private final CloudTieringDatePolicyStatusResponse datePolicyStatus;
 
     public CloudTieringDatePolicyStatusResponse getDatePolicyStatus() {
@@ -48,7 +48,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Information regarding files that failed to be tiered
      * 
      */
-    @InputImport(name="filesNotTiering", required=true)
+    @Import(name="filesNotTiering", required=true)
       private final CloudTieringFilesNotTieringResponse filesNotTiering;
 
     public CloudTieringFilesNotTieringResponse getFilesNotTiering() {
@@ -59,7 +59,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Cloud tiering health state.
      * 
      */
-    @InputImport(name="health", required=true)
+    @Import(name="health", required=true)
       private final String health;
 
     public String getHealth() {
@@ -70,7 +70,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * The last updated timestamp of health state
      * 
      */
-    @InputImport(name="healthLastUpdatedTimestamp", required=true)
+    @Import(name="healthLastUpdatedTimestamp", required=true)
       private final String healthLastUpdatedTimestamp;
 
     public String getHealthLastUpdatedTimestamp() {
@@ -81,7 +81,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Last cloud tiering result (HResult)
      * 
      */
-    @InputImport(name="lastCloudTieringResult", required=true)
+    @Import(name="lastCloudTieringResult", required=true)
       private final Integer lastCloudTieringResult;
 
     public Integer getLastCloudTieringResult() {
@@ -92,7 +92,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Last cloud tiering success timestamp
      * 
      */
-    @InputImport(name="lastSuccessTimestamp", required=true)
+    @Import(name="lastSuccessTimestamp", required=true)
       private final String lastSuccessTimestamp;
 
     public String getLastSuccessTimestamp() {
@@ -103,7 +103,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
@@ -114,7 +114,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Information regarding how much local space cloud tiering is saving.
      * 
      */
-    @InputImport(name="spaceSavings", required=true)
+    @Import(name="spaceSavings", required=true)
       private final CloudTieringSpaceSavingsResponse spaceSavings;
 
     public CloudTieringSpaceSavingsResponse getSpaceSavings() {
@@ -125,7 +125,7 @@ public final class ServerEndpointCloudTieringStatusResponse extends io.pulumi.re
      * Status of the volume free space policy
      * 
      */
-    @InputImport(name="volumeFreeSpacePolicyStatus", required=true)
+    @Import(name="volumeFreeSpacePolicyStatus", required=true)
       private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
     public CloudTieringVolumeFreeSpacePolicyStatusResponse getVolumeFreeSpacePolicyStatus() {

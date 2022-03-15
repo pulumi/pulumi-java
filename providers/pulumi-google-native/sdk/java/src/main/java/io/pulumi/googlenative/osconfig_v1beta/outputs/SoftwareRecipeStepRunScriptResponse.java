@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepRunScriptResponse {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
@@ -27,11 +27,11 @@ public final class SoftwareRecipeStepRunScriptResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeStepRunScriptResponse(
-        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
-        @OutputCustomType.Parameter("interpreter") String interpreter,
-        @OutputCustomType.Parameter("script") String script) {
+        @CustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @CustomType.Parameter("interpreter") String interpreter,
+        @CustomType.Parameter("script") String script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
         this.script = script;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdTrigger;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyConditionConditionThreshold {
     /**
      * Specifies the alignment of data points in
@@ -131,16 +131,16 @@ public final class AlertPolicyConditionConditionThreshold {
      */
     private final @Nullable AlertPolicyConditionConditionThresholdTrigger trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyConditionConditionThreshold(
-        @OutputCustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations,
-        @OutputCustomType.Parameter("comparison") String comparison,
-        @OutputCustomType.Parameter("denominatorAggregations") @Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations,
-        @OutputCustomType.Parameter("denominatorFilter") @Nullable String denominatorFilter,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("thresholdValue") @Nullable Double thresholdValue,
-        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
+        @CustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations,
+        @CustomType.Parameter("comparison") String comparison,
+        @CustomType.Parameter("denominatorAggregations") @Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations,
+        @CustomType.Parameter("denominatorFilter") @Nullable String denominatorFilter,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("thresholdValue") @Nullable Double thresholdValue,
+        @CustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
         this.aggregations = aggregations;
         this.comparison = comparison;
         this.denominatorAggregations = denominatorAggregations;

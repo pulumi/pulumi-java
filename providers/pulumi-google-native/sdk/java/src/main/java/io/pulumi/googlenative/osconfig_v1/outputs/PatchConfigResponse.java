@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.AptSettingsResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.ExecStepResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.GooSettingsResponse;
@@ -14,7 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchConfigResponse {
     /**
      * Apt update settings. Use this setting to override the default `apt` patch rules.
@@ -62,17 +62,17 @@ public final class PatchConfigResponse {
      */
     private final ZypperSettingsResponse zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchConfigResponse(
-        @OutputCustomType.Parameter("apt") AptSettingsResponse apt,
-        @OutputCustomType.Parameter("goo") GooSettingsResponse goo,
-        @OutputCustomType.Parameter("migInstancesAllowed") Boolean migInstancesAllowed,
-        @OutputCustomType.Parameter("postStep") ExecStepResponse postStep,
-        @OutputCustomType.Parameter("preStep") ExecStepResponse preStep,
-        @OutputCustomType.Parameter("rebootConfig") String rebootConfig,
-        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateSettingsResponse windowsUpdate,
-        @OutputCustomType.Parameter("yum") YumSettingsResponse yum,
-        @OutputCustomType.Parameter("zypper") ZypperSettingsResponse zypper) {
+        @CustomType.Parameter("apt") AptSettingsResponse apt,
+        @CustomType.Parameter("goo") GooSettingsResponse goo,
+        @CustomType.Parameter("migInstancesAllowed") Boolean migInstancesAllowed,
+        @CustomType.Parameter("postStep") ExecStepResponse postStep,
+        @CustomType.Parameter("preStep") ExecStepResponse preStep,
+        @CustomType.Parameter("rebootConfig") String rebootConfig,
+        @CustomType.Parameter("windowsUpdate") WindowsUpdateSettingsResponse windowsUpdate,
+        @CustomType.Parameter("yum") YumSettingsResponse yum,
+        @CustomType.Parameter("zypper") ZypperSettingsResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.migInstancesAllowed = migInstancesAllowed;

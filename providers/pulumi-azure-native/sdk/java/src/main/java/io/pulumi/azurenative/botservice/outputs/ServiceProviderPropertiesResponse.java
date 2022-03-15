@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceProviderPropertiesResponse {
     /**
      * Display Name of the Service Provider
@@ -43,14 +43,14 @@ public final class ServiceProviderPropertiesResponse {
      */
     private final String serviceProviderName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceProviderPropertiesResponse(
-        @OutputCustomType.Parameter("devPortalUrl") String devPortalUrl,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("iconUrl") String iconUrl,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ServiceProviderParameterResponse> parameters,
-        @OutputCustomType.Parameter("serviceProviderName") String serviceProviderName) {
+        @CustomType.Parameter("devPortalUrl") String devPortalUrl,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("iconUrl") String iconUrl,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parameters") @Nullable List<ServiceProviderParameterResponse> parameters,
+        @CustomType.Parameter("serviceProviderName") String serviceProviderName) {
         this.devPortalUrl = devPortalUrl;
         this.displayName = displayName;
         this.iconUrl = iconUrl;

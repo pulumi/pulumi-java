@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNode {
     /**
      * an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
@@ -18,10 +18,10 @@ public final class InstanceNode {
     private final @Nullable String id;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNode(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.id = id;
         this.zone = zone;
     }

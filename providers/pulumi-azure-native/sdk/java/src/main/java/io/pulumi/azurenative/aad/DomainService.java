@@ -14,7 +14,7 @@ import io.pulumi.azurenative.aad.outputs.ResourceForestSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Deployment Id
      * 
      */
-    @OutputExport(name="deploymentId", type=String.class, parameters={})
+    @Export(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
     /**
@@ -57,7 +57,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Domain Configuration Type
      * 
      */
-    @OutputExport(name="domainConfigurationType", type=String.class, parameters={})
+    @Export(name="domainConfigurationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainConfigurationType;
 
     /**
@@ -71,7 +71,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     /**
@@ -85,7 +85,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * DomainSecurity Settings
      * 
      */
-    @OutputExport(name="domainSecuritySettings", type=DomainSecuritySettingsResponse.class, parameters={})
+    @Export(name="domainSecuritySettings", type=DomainSecuritySettingsResponse.class, parameters={})
     private Output</* @Nullable */ DomainSecuritySettingsResponse> domainSecuritySettings;
 
     /**
@@ -99,7 +99,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Resource etag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -113,7 +113,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Enabled or Disabled flag to turn on Group-based filtered sync
      * 
      */
-    @OutputExport(name="filteredSync", type=String.class, parameters={})
+    @Export(name="filteredSync", type=String.class, parameters={})
     private Output</* @Nullable */ String> filteredSync;
 
     /**
@@ -127,7 +127,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Secure LDAP Settings
      * 
      */
-    @OutputExport(name="ldapsSettings", type=LdapsSettingsResponse.class, parameters={})
+    @Export(name="ldapsSettings", type=LdapsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ LdapsSettingsResponse> ldapsSettings;
 
     /**
@@ -141,7 +141,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -155,7 +155,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Migration Properties
      * 
      */
-    @OutputExport(name="migrationProperties", type=MigrationPropertiesResponse.class, parameters={})
+    @Export(name="migrationProperties", type=MigrationPropertiesResponse.class, parameters={})
     private Output<MigrationPropertiesResponse> migrationProperties;
 
     /**
@@ -169,7 +169,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -183,7 +183,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Notification Settings
      * 
      */
-    @OutputExport(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
+    @Export(name="notificationSettings", type=NotificationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NotificationSettingsResponse> notificationSettings;
 
     /**
@@ -197,7 +197,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * the current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -211,7 +211,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * List of ReplicaSets
      * 
      */
-    @OutputExport(name="replicaSets", type=List.class, parameters={ReplicaSetResponse.class})
+    @Export(name="replicaSets", type=List.class, parameters={ReplicaSetResponse.class})
     private Output</* @Nullable */ List<ReplicaSetResponse>> replicaSets;
 
     /**
@@ -225,7 +225,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Resource Forest Settings
      * 
      */
-    @OutputExport(name="resourceForestSettings", type=ResourceForestSettingsResponse.class, parameters={})
+    @Export(name="resourceForestSettings", type=ResourceForestSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ResourceForestSettingsResponse> resourceForestSettings;
 
     /**
@@ -239,7 +239,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Sku Type
      * 
      */
-    @OutputExport(name="sku", type=String.class, parameters={})
+    @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
@@ -253,7 +253,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * SyncOwner ReplicaSet Id
      * 
      */
-    @OutputExport(name="syncOwner", type=String.class, parameters={})
+    @Export(name="syncOwner", type=String.class, parameters={})
     private Output<String> syncOwner;
 
     /**
@@ -267,7 +267,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -281,7 +281,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -295,7 +295,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Azure Active Directory Tenant Id
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -309,7 +309,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -323,7 +323,7 @@ public class DomainService extends io.pulumi.resources.CustomResource {
      * Data Model Version
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

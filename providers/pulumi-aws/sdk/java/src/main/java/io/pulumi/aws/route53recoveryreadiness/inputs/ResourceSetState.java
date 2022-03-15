@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
      * NLB resource ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
      * Unique name describing the resource set.
      * 
      */
-    @InputImport(name="resourceSetName")
+    @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
@@ -43,7 +43,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
      * Type of the resources in the resource set.
      * 
      */
-    @InputImport(name="resourceSetType")
+    @Import(name="resourceSetType")
       private final @Nullable Output<String> resourceSetType;
 
     public Output<String> getResourceSetType() {
@@ -54,7 +54,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
      * List of resources to add to this resource set. See below.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<ResourceSetResourceGetArgs>> resources;
 
     public Output<List<ResourceSetResourceGetArgs>> getResources() {
@@ -65,7 +65,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class ResourceSetState extends io.pulumi.resources.ResourceArgs {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

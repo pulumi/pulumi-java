@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'Custom'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
     public Output<String> getComputeType() {
@@ -37,7 +37,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The description of the service.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The Environment, models and assets needed for inferencing.
      * 
      */
-    @InputImport(name="environmentImageRequest")
+    @Import(name="environmentImageRequest")
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
@@ -59,7 +59,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * Is this the default variant.
      * 
      */
-    @InputImport(name="isDefault")
+    @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
@@ -70,7 +70,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The authentication keys.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
     public Output<CreateServiceRequestKeysArgs> getKeys() {
@@ -81,7 +81,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The service tag dictionary. Tags are mutable.
      * 
      */
-    @InputImport(name="kvTags")
+    @Import(name="kvTags")
       private final @Nullable Output<Map<String,String>> kvTags;
 
     public Output<Map<String,String>> getKvTags() {
@@ -92,7 +92,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Azure location/region.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -103,7 +103,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The service properties dictionary. Properties are immutable.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -114,7 +114,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -125,7 +125,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Azure Machine Learning service.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -136,7 +136,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The amount of traffic variant receives.
      * 
      */
-    @InputImport(name="trafficPercentile")
+    @Import(name="trafficPercentile")
       private final @Nullable Output<Double> trafficPercentile;
 
     public Output<Double> getTrafficPercentile() {
@@ -147,7 +147,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * The type of the variant.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,VariantType>> type;
 
     public Output<Either<String,VariantType>> getType() {
@@ -158,7 +158,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

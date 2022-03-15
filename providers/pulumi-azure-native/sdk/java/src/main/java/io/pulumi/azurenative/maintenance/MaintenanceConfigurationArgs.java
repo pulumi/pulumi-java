@@ -6,7 +6,7 @@ package io.pulumi.azurenative.maintenance;
 import io.pulumi.azurenative.maintenance.enums.MaintenanceScope;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
      * 
      */
-    @InputImport(name="extensionProperties")
+    @Import(name="extensionProperties")
       private final @Nullable Output<Map<String,String>> extensionProperties;
 
     public Output<Map<String,String>> getExtensionProperties() {
@@ -32,7 +32,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Gets or sets location of the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
      * 
      */
-    @InputImport(name="maintenanceScope")
+    @Import(name="maintenanceScope")
       private final @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
 
     public Output<Either<String,MaintenanceScope>> getMaintenanceScope() {
@@ -54,7 +54,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -65,7 +65,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Resource Identifier
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -87,7 +87,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
      * Gets or sets tags of the resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

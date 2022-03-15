@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final Output<String> secret;
 
     public Output<String> getSecret() {
@@ -32,7 +32,7 @@ public final class TriggerWebhookConfigGetArgs extends io.pulumi.resources.Resou
      * Only populated on get requests.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

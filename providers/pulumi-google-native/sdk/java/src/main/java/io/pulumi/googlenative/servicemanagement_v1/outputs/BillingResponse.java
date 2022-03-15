@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.BillingDestinationResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BillingResponse {
     /**
      * Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
@@ -16,8 +16,8 @@ public final class BillingResponse {
      */
     private final List<BillingDestinationResponse> consumerDestinations;
 
-    @OutputCustomType.Constructor
-    private BillingResponse(@OutputCustomType.Parameter("consumerDestinations") List<BillingDestinationResponse> consumerDestinations) {
+    @CustomType.Constructor
+    private BillingResponse(@CustomType.Parameter("consumerDestinations") List<BillingDestinationResponse> consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
     }
 

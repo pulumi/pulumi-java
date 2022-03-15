@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * A list of pointers to currently running jobs.
      * 
      */
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Output<List<ObjectReferenceArgs>> active;
 
     public Output<List<ObjectReferenceArgs>> getActive() {
@@ -35,7 +35,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Information when was the last time the job was successfully scheduled.
      * 
      */
-    @InputImport(name="lastScheduleTime")
+    @Import(name="lastScheduleTime")
       private final @Nullable Output<String> lastScheduleTime;
 
     public Output<String> getLastScheduleTime() {
@@ -46,7 +46,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Information when was the last time the job successfully completed.
      * 
      */
-    @InputImport(name="lastSuccessfulTime")
+    @Import(name="lastSuccessfulTime")
       private final @Nullable Output<String> lastSuccessfulTime;
 
     public Output<String> getLastSuccessfulTime() {

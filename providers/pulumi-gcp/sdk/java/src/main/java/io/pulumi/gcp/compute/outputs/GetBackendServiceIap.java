@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceIap {
     private final String oauth2ClientId;
     private final String oauth2ClientSecret;
     private final String oauth2ClientSecretSha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceIap(
-        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
-        @OutputCustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
-        @OutputCustomType.Parameter("oauth2ClientSecretSha256") String oauth2ClientSecretSha256) {
+        @CustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @CustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
+        @CustomType.Parameter("oauth2ClientSecretSha256") String oauth2ClientSecretSha256) {
         this.oauth2ClientId = oauth2ClientId;
         this.oauth2ClientSecret = oauth2ClientSecret;
         this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;

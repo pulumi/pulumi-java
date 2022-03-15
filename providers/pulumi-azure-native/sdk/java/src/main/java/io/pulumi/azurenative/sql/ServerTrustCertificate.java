@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ServerTrustCertificateArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
      * The certificate name
      * 
      */
-    @OutputExport(name="certificateName", type=String.class, parameters={})
+    @Export(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
     /**
@@ -48,7 +48,7 @@ public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
      * The certificate public blob
      * 
      */
-    @OutputExport(name="publicBlob", type=String.class, parameters={})
+    @Export(name="publicBlob", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicBlob;
 
     /**
@@ -76,7 +76,7 @@ public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
      * The certificate thumbprint
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -90,7 +90,7 @@ public class ServerTrustCertificate extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

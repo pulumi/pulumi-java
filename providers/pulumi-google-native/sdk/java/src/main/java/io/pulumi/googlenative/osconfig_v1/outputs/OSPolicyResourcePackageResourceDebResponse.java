@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourcePackageResourceDebResponse {
     /**
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
@@ -21,10 +21,10 @@ public final class OSPolicyResourcePackageResourceDebResponse {
      */
     private final OSPolicyResourceFileResponse source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourcePackageResourceDebResponse(
-        @OutputCustomType.Parameter("pullDeps") Boolean pullDeps,
-        @OutputCustomType.Parameter("source") OSPolicyResourceFileResponse source) {
+        @CustomType.Parameter("pullDeps") Boolean pullDeps,
+        @CustomType.Parameter("source") OSPolicyResourceFileResponse source) {
         this.pullDeps = pullDeps;
         this.source = source;
     }

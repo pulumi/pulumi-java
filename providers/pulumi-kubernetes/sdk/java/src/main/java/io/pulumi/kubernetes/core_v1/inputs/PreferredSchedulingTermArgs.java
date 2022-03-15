@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
      * A node selector term, associated with the corresponding weight.
      * 
      */
-    @InputImport(name="preference", required=true)
+    @Import(name="preference", required=true)
       private final Output<NodeSelectorTermArgs> preference;
 
     public Output<NodeSelectorTermArgs> getPreference() {
@@ -33,7 +33,7 @@ public final class PreferredSchedulingTermArgs extends io.pulumi.resources.Resou
      * Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

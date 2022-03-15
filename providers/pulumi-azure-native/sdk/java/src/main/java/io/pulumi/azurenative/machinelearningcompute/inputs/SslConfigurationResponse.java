@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The SSL cert data in PEM format.
      * 
      */
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable String cert;
 
     public Optional<String> getCert() {
@@ -33,7 +33,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The CName of the certificate.
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable String cname;
 
     public Optional<String> getCname() {
@@ -44,7 +44,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable String key;
 
     public Optional<String> getKey() {
@@ -55,7 +55,7 @@ public final class SslConfigurationResponse extends io.pulumi.resources.InvokeAr
      * SSL status. Allowed values are Enabled and Disabled.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupFailoverCriteria;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupMembers;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,21 +14,21 @@ public final class DistributionOriginGroup extends io.pulumi.resources.InvokeArg
 
     public static final DistributionOriginGroup Empty = new DistributionOriginGroup();
 
-    @InputImport(name="failoverCriteria", required=true)
+    @Import(name="failoverCriteria", required=true)
       private final DistributionOriginGroupFailoverCriteria failoverCriteria;
 
     public DistributionOriginGroupFailoverCriteria getFailoverCriteria() {
         return this.failoverCriteria;
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final DistributionOriginGroupMembers members;
 
     public DistributionOriginGroupMembers getMembers() {

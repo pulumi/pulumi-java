@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyAssignmentLabelSetResponse {
     /**
      * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
@@ -16,8 +16,8 @@ public final class OSPolicyAssignmentLabelSetResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private OSPolicyAssignmentLabelSetResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
+    @CustomType.Constructor
+    private OSPolicyAssignmentLabelSetResponse(@CustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

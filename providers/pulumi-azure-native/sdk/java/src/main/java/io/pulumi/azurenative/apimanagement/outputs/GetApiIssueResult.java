@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiIssueResult {
     /**
      * A resource identifier for the API the issue was created for.
@@ -57,17 +57,17 @@ public final class GetApiIssueResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiIssueResult(
-        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("apiId") @Nullable String apiId,
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userId") String userId) {
         this.apiId = apiId;
         this.createdDate = createdDate;
         this.description = description;

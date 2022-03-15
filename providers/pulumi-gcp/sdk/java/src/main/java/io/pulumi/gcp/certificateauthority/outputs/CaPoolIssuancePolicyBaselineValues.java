@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesKeyUsage;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicyBaselineValues {
     /**
      * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
@@ -46,13 +46,13 @@ public final class CaPoolIssuancePolicyBaselineValues {
      */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolIssuancePolicyBaselineValues(
-        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions,
-        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
-        @OutputCustomType.Parameter("caOptions") CaPoolIssuancePolicyBaselineValuesCaOptions caOptions,
-        @OutputCustomType.Parameter("keyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage,
-        @OutputCustomType.Parameter("policyIds") @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
+        @CustomType.Parameter("additionalExtensions") @Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions,
+        @CustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @CustomType.Parameter("caOptions") CaPoolIssuancePolicyBaselineValuesCaOptions caOptions,
+        @CustomType.Parameter("keyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage,
+        @CustomType.Parameter("policyIds") @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

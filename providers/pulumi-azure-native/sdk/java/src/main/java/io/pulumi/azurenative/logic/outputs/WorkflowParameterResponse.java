@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowParameterResponse {
     /**
      * The description.
@@ -33,12 +33,12 @@ public final class WorkflowParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowParameterResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.description = description;
         this.metadata = metadata;
         this.type = type;

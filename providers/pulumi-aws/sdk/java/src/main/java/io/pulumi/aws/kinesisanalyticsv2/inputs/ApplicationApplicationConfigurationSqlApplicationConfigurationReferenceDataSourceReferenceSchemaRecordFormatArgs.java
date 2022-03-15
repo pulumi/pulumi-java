@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Provides additional mapping information specific to the record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
      * 
      */
-    @InputImport(name="mappingParameters", required=true)
+    @Import(name="mappingParameters", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> getMappingParameters() {
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The type of record format. Valid values: `CSV`, `JSON`.
      * 
      */
-    @InputImport(name="recordFormatType", required=true)
+    @Import(name="recordFormatType", required=true)
       private final Output<String> recordFormatType;
 
     public Output<String> getRecordFormatType() {

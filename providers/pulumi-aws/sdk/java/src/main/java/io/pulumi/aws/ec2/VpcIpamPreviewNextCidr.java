@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcIpamPreviewNextCidrArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpamPreviewNextCidrState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * The previewed CIDR from the pool.
      * 
      */
-    @OutputExport(name="cidr", type=String.class, parameters={})
+    @Export(name="cidr", type=String.class, parameters={})
     private Output<String> cidr;
 
     /**
@@ -40,7 +40,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    @OutputExport(name="disallowedCidrs", type=List.class, parameters={String.class})
+    @Export(name="disallowedCidrs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> disallowedCidrs;
 
     /**
@@ -54,7 +54,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    @OutputExport(name="ipamPoolId", type=String.class, parameters={})
+    @Export(name="ipamPoolId", type=String.class, parameters={})
     private Output<String> ipamPoolId;
 
     /**
@@ -68,7 +68,7 @@ public class VpcIpamPreviewNextCidr extends io.pulumi.resources.CustomResource {
      * The netmask length of the CIDR you would like to preview from the IPAM pool.
      * 
      */
-    @OutputExport(name="netmaskLength", type=Integer.class, parameters={})
+    @Export(name="netmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> netmaskLength;
 
     /**

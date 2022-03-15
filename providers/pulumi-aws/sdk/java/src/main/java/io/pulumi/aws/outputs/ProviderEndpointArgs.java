@@ -4,12 +4,12 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderEndpointArgs {
     private @Nullable Output<String> accessanalyzer;
     private @Nullable Output<String> account;
@@ -313,7 +313,7 @@ public final class ProviderEndpointArgs {
     private @Nullable Output<String> workspaces;
     private @Nullable Output<String> xray;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
 
     private ProviderEndpointArgs() {
         this.accessanalyzer = Output.empty();

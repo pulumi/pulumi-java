@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline.inputs;
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreGetArgs;
 import io.pulumi.aws.codepipeline.inputs.PipelineStageGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * The codepipeline ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    @InputImport(name="artifactStore")
+    @Import(name="artifactStore")
       private final @Nullable Output<PipelineArtifactStoreGetArgs> artifactStore;
 
     public Output<PipelineArtifactStoreGetArgs> getArtifactStore() {
@@ -44,7 +44,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * The name of the pipeline.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -66,7 +66,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * A stage block. Stages are documented below.
      * 
      */
-    @InputImport(name="stages")
+    @Import(name="stages")
       private final @Nullable Output<List<PipelineStageGetArgs>> stages;
 
     public Output<List<PipelineStageGetArgs>> getStages() {
@@ -77,7 +77,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class PipelineState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

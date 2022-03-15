@@ -5,14 +5,14 @@ package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.AttestationEvidenceResponse;
 import io.pulumi.azurenative.policyinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAttestationAtResourceGroupResult {
     /**
      * Comments describing why this attestation was created.
@@ -80,21 +80,21 @@ public final class GetAttestationAtResourceGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttestationAtResourceGroupResult(
-        @OutputCustomType.Parameter("comments") @Nullable String comments,
-        @OutputCustomType.Parameter("complianceState") @Nullable String complianceState,
-        @OutputCustomType.Parameter("evidence") @Nullable List<AttestationEvidenceResponse> evidence,
-        @OutputCustomType.Parameter("expiresOn") @Nullable String expiresOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastComplianceStateChangeAt") String lastComplianceStateChangeAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") @Nullable String owner,
-        @OutputCustomType.Parameter("policyAssignmentId") String policyAssignmentId,
-        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("comments") @Nullable String comments,
+        @CustomType.Parameter("complianceState") @Nullable String complianceState,
+        @CustomType.Parameter("evidence") @Nullable List<AttestationEvidenceResponse> evidence,
+        @CustomType.Parameter("expiresOn") @Nullable String expiresOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastComplianceStateChangeAt") String lastComplianceStateChangeAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") @Nullable String owner,
+        @CustomType.Parameter("policyAssignmentId") String policyAssignmentId,
+        @CustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.comments = comments;
         this.complianceState = complianceState;
         this.evidence = evidence;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3outposts;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Outpost to contain this endpoint.
      * 
      */
-    @InputImport(name="outpostId", required=true)
+    @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -28,7 +28,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the EC2 Security Group.
      * 
      */
-    @InputImport(name="securityGroupId", required=true)
+    @Import(name="securityGroupId", required=true)
       private final Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
@@ -39,7 +39,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the EC2 Subnet.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

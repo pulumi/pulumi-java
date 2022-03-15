@@ -5,23 +5,23 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotPromptSpecification;
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotIntentConfirmationSetting {
     private final BotResponseSpecification declinationResponse;
     private final @Nullable Boolean isActive;
     private final BotPromptSpecification promptSpecification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotIntentConfirmationSetting(
-        @OutputCustomType.Parameter("declinationResponse") BotResponseSpecification declinationResponse,
-        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
-        @OutputCustomType.Parameter("promptSpecification") BotPromptSpecification promptSpecification) {
+        @CustomType.Parameter("declinationResponse") BotResponseSpecification declinationResponse,
+        @CustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @CustomType.Parameter("promptSpecification") BotPromptSpecification promptSpecification) {
         this.declinationResponse = declinationResponse;
         this.isActive = isActive;
         this.promptSpecification = promptSpecification;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,21 +18,21 @@ public final class JobS3Location extends io.pulumi.resources.InvokeArgs {
 
     public static final JobS3Location Empty = new JobS3Location();
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
-    @InputImport(name="bucketOwner")
+    @Import(name="bucketOwner")
       private final @Nullable String bucketOwner;
 
     public Optional<String> getBucketOwner() {
         return this.bucketOwner == null ? Optional.empty() : Optional.ofNullable(this.bucketOwner);
     }
 
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable String key;
 
     public Optional<String> getKey() {

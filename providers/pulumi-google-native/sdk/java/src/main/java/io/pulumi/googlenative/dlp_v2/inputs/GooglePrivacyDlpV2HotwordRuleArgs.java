@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LikelihoodAdjustmentArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ProximityArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
      * Regular expression pattern defining what qualifies as a hotword.
      * 
      */
-    @InputImport(name="hotwordRegex")
+    @Import(name="hotwordRegex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex;
 
     public Output<GooglePrivacyDlpV2RegexArgs> getHotwordRegex() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
      * Likelihood adjustment to apply to all matching findings.
      * 
      */
-    @InputImport(name="likelihoodAdjustment")
+    @Import(name="likelihoodAdjustment")
       private final @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment;
 
     public Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> getLikelihoodAdjustment() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
      * Proximity of the finding within which the entire hotword must reside. The total length of the window cannot exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be used to match substrings of the finding itself. For example, the certainty of a phone number regex "\(\d{3}\) \d{3}-\d{4}" could be adjusted upwards if the area code is known to be the local area code of a company office using the hotword regex "\(xxx\)", where "xxx" is the area code in question.
      * 
      */
-    @InputImport(name="proximity")
+    @Import(name="proximity")
       private final @Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity;
 
     public Output<GooglePrivacyDlpV2ProximityArgs> getProximity() {

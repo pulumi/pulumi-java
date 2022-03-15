@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.BuildProvenanceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1BuildDetailsResponse {
     /**
      * The actual provenance for the build.
@@ -21,10 +21,10 @@ public final class GrafeasV1beta1BuildDetailsResponse {
      */
     private final String provenanceBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GrafeasV1beta1BuildDetailsResponse(
-        @OutputCustomType.Parameter("provenance") BuildProvenanceResponse provenance,
-        @OutputCustomType.Parameter("provenanceBytes") String provenanceBytes) {
+        @CustomType.Parameter("provenance") BuildProvenanceResponse provenance,
+        @CustomType.Parameter("provenanceBytes") String provenanceBytes) {
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;
     }

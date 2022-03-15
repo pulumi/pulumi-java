@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse {
     /**
      * Card content.
@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      */
     private final String thumbnailImageAlignment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(
-        @OutputCustomType.Parameter("cardContent") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
-        @OutputCustomType.Parameter("cardOrientation") String cardOrientation,
-        @OutputCustomType.Parameter("thumbnailImageAlignment") String thumbnailImageAlignment) {
+        @CustomType.Parameter("cardContent") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
+        @CustomType.Parameter("cardOrientation") String cardOrientation,
+        @CustomType.Parameter("thumbnailImageAlignment") String thumbnailImageAlignment) {
         this.cardContent = cardContent;
         this.cardOrientation = cardOrientation;
         this.thumbnailImageAlignment = thumbnailImageAlignment;

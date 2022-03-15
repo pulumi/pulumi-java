@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleEndDateGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleStartDateGetArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleStartTimeOfDayGetArgs;
@@ -20,7 +20,7 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
      * The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
      * 
      */
-    @InputImport(name="scheduleEndDate")
+    @Import(name="scheduleEndDate")
       private final @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate;
 
     public Output<TransferJobScheduleScheduleEndDateGetArgs> getScheduleEndDate() {
@@ -31,7 +31,7 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
      * The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
      * 
      */
-    @InputImport(name="scheduleStartDate", required=true)
+    @Import(name="scheduleStartDate", required=true)
       private final Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate;
 
     public Output<TransferJobScheduleScheduleStartDateGetArgs> getScheduleStartDate() {
@@ -42,7 +42,7 @@ public final class TransferJobScheduleGetArgs extends io.pulumi.resources.Resour
      * The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
      * 
      */
-    @InputImport(name="startTimeOfDay")
+    @Import(name="startTimeOfDay")
       private final @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay;
 
     public Output<TransferJobScheduleStartTimeOfDayGetArgs> getStartTimeOfDay() {

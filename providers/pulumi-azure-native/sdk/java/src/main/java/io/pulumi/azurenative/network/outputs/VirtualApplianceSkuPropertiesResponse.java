@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualApplianceSkuPropertiesResponse {
     /**
      * Virtual Appliance Scale Unit.
@@ -27,11 +27,11 @@ public final class VirtualApplianceSkuPropertiesResponse {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualApplianceSkuPropertiesResponse(
-        @OutputCustomType.Parameter("bundledScaleUnit") @Nullable String bundledScaleUnit,
-        @OutputCustomType.Parameter("marketPlaceVersion") @Nullable String marketPlaceVersion,
-        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
+        @CustomType.Parameter("bundledScaleUnit") @Nullable String bundledScaleUnit,
+        @CustomType.Parameter("marketPlaceVersion") @Nullable String marketPlaceVersion,
+        @CustomType.Parameter("vendor") @Nullable String vendor) {
         this.bundledScaleUnit = bundledScaleUnit;
         this.marketPlaceVersion = marketPlaceVersion;
         this.vendor = vendor;

@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) that identifies the rule group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -43,7 +43,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A friendly description of the rule group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A friendly name of the rule group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
      * 
      */
-    @InputImport(name="ruleGroup")
+    @Import(name="ruleGroup")
       private final @Nullable Output<RuleGroupRuleGroupGetArgs> ruleGroup;
 
     public Output<RuleGroupRuleGroupGetArgs> getRuleGroup() {
@@ -76,7 +76,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<String> rules;
 
     public Output<String> getRules() {
@@ -87,7 +87,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -109,7 +109,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -120,7 +120,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A string token used when updating the rule group.
      * 
      */
-    @InputImport(name="updateToken")
+    @Import(name="updateToken")
       private final @Nullable Output<String> updateToken;
 
     public Output<String> getUpdateToken() {

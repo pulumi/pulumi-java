@@ -6,7 +6,7 @@ package io.pulumi.awsnative.acmpca;
 import io.pulumi.awsnative.acmpca.inputs.CertificateApiPassthroughArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateValidityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * These are fields to be overridden in a certificate at the time of issuance. These requires an API_Passthrough template be used or they will be ignored.
      * 
      */
-    @InputImport(name="apiPassthrough")
+    @Import(name="apiPassthrough")
       private final @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough;
 
     public Output<CertificateApiPassthroughArgs> getApiPassthrough() {
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the private CA to issue the certificate.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate signing request (CSR) for the Certificate.
      * 
      */
-    @InputImport(name="certificateSigningRequest", required=true)
+    @Import(name="certificateSigningRequest", required=true)
       private final Output<String> certificateSigningRequest;
 
     public Output<String> getCertificateSigningRequest() {
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the algorithm that will be used to sign the Certificate.
      * 
      */
-    @InputImport(name="signingAlgorithm", required=true)
+    @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
     public Output<String> getSigningAlgorithm() {
@@ -64,7 +64,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a custom configuration template to use when issuing a certificate. If this parameter is not provided, ACM Private CA defaults to the EndEntityCertificate/V1 template.
      * 
      */
-    @InputImport(name="templateArn")
+    @Import(name="templateArn")
       private final @Nullable Output<String> templateArn;
 
     public Output<String> getTemplateArn() {
@@ -75,7 +75,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The time before which the Certificate will be valid.
      * 
      */
-    @InputImport(name="validity", required=true)
+    @Import(name="validity", required=true)
       private final Output<CertificateValidityArgs> validity;
 
     public Output<CertificateValidityArgs> getValidity() {
@@ -86,7 +86,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The time after which the Certificate will be valid.
      * 
      */
-    @InputImport(name="validityNotBefore")
+    @Import(name="validityNotBefore")
       private final @Nullable Output<CertificateValidityArgs> validityNotBefore;
 
     public Output<CertificateValidityArgs> getValidityNotBefore() {

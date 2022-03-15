@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.CdnCertificateSourceParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CdnManagedHttpsParametersResponse {
     /**
      * Defines the source of the SSL certificate.
@@ -34,12 +34,12 @@ public final class CdnManagedHttpsParametersResponse {
      */
     private final String protocolType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CdnManagedHttpsParametersResponse(
-        @OutputCustomType.Parameter("certificateSource") String certificateSource,
-        @OutputCustomType.Parameter("certificateSourceParameters") CdnCertificateSourceParametersResponse certificateSourceParameters,
-        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
-        @OutputCustomType.Parameter("protocolType") String protocolType) {
+        @CustomType.Parameter("certificateSource") String certificateSource,
+        @CustomType.Parameter("certificateSourceParameters") CdnCertificateSourceParametersResponse certificateSourceParameters,
+        @CustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @CustomType.Parameter("protocolType") String protocolType) {
         this.certificateSource = certificateSource;
         this.certificateSourceParameters = certificateSourceParameters;
         this.minimumTlsVersion = minimumTlsVersion;

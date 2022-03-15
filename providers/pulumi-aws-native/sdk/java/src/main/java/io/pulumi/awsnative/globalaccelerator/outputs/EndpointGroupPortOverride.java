@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointGroupPortOverride {
     private final Integer endpointPort;
     private final Integer listenerPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointGroupPortOverride(
-        @OutputCustomType.Parameter("endpointPort") Integer endpointPort,
-        @OutputCustomType.Parameter("listenerPort") Integer listenerPort) {
+        @CustomType.Parameter("endpointPort") Integer endpointPort,
+        @CustomType.Parameter("listenerPort") Integer listenerPort) {
         this.endpointPort = endpointPort;
         this.listenerPort = listenerPort;
     }

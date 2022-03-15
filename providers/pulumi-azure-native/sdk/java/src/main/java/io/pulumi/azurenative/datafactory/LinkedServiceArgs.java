@@ -106,7 +106,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XeroLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoLinkedServiceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -121,7 +121,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -132,7 +132,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The linked service name.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
 
     public Output<String> getLinkedServiceName() {
@@ -143,7 +143,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of linked service.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -154,7 +154,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

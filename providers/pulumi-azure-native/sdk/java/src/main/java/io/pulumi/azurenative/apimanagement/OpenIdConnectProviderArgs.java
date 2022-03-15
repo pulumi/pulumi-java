@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * Client ID of developer console which is the client application.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -29,7 +29,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * Client Secret of developer console which is the client application.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -40,7 +40,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * User-friendly description of OpenID Connect Provider.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * User-friendly OpenID Connect Provider name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -62,7 +62,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * Metadata endpoint URI.
      * 
      */
-    @InputImport(name="metadataEndpoint", required=true)
+    @Import(name="metadataEndpoint", required=true)
       private final Output<String> metadataEndpoint;
 
     public Output<String> getMetadataEndpoint() {
@@ -73,7 +73,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * Identifier of the OpenID Connect Provider.
      * 
      */
-    @InputImport(name="opid")
+    @Import(name="opid")
       private final @Nullable Output<String> opid;
 
     public Output<String> getOpid() {
@@ -84,7 +84,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -95,7 +95,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

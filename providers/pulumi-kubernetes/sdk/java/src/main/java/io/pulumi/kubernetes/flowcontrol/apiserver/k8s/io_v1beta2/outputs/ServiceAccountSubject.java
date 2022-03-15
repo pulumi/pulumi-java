@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAccountSubject {
     /**
      * `name` is the name of matching ServiceAccount objects, or "*" to match regardless of name. Required.
@@ -20,10 +20,10 @@ public final class ServiceAccountSubject {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAccountSubject(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace) {
         this.name = name;
         this.namespace = namespace;
     }

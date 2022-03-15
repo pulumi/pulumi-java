@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * The expand expression to apply on the operation.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * The name of the virtual machine run command.
      * 
      */
-    @InputImport(name="runCommandName", required=true)
+    @Import(name="runCommandName", required=true)
       private final String runCommandName;
 
     public String getRunCommandName() {
@@ -51,7 +51,7 @@ public final class GetVirtualMachineRunCommandByVirtualMachineArgs extends io.pu
      * The name of the virtual machine containing the run command.
      * 
      */
-    @InputImport(name="vmName", required=true)
+    @Import(name="vmName", required=true)
       private final String vmName;
 
     public String getVmName() {

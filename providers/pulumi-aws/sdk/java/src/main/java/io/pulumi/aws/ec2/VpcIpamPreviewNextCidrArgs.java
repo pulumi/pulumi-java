@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
      * Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    @InputImport(name="disallowedCidrs")
+    @Import(name="disallowedCidrs")
       private final @Nullable Output<List<String>> disallowedCidrs;
 
     public Output<List<String>> getDisallowedCidrs() {
@@ -31,7 +31,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
      * The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    @InputImport(name="ipamPoolId", required=true)
+    @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
     public Output<String> getIpamPoolId() {
@@ -42,7 +42,7 @@ public final class VpcIpamPreviewNextCidrArgs extends io.pulumi.resources.Resour
      * The netmask length of the CIDR you would like to preview from the IPAM pool.
      * 
      */
-    @InputImport(name="netmaskLength")
+    @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
     public Output<Integer> getNetmaskLength() {

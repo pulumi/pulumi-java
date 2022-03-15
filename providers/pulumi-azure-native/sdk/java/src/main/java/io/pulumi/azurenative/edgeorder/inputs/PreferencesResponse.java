@@ -7,7 +7,7 @@ import io.pulumi.azurenative.edgeorder.inputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ManagementResourcePreferencesResponse;
 import io.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceResponse;
 import io.pulumi.azurenative.edgeorder.inputs.TransportPreferencesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Preferences related to the Encryption.
      * 
      */
-    @InputImport(name="encryptionPreferences")
+    @Import(name="encryptionPreferences")
       private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
@@ -37,7 +37,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Preferences related to the Management resource.
      * 
      */
-    @InputImport(name="managementResourcePreferences")
+    @Import(name="managementResourcePreferences")
       private final @Nullable ManagementResourcePreferencesResponse managementResourcePreferences;
 
     public Optional<ManagementResourcePreferencesResponse> getManagementResourcePreferences() {
@@ -48,7 +48,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Notification preferences.
      * 
      */
-    @InputImport(name="notificationPreferences")
+    @Import(name="notificationPreferences")
       private final @Nullable List<NotificationPreferenceResponse> notificationPreferences;
 
     public List<NotificationPreferenceResponse> getNotificationPreferences() {
@@ -59,7 +59,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Preferences related to the shipment logistics of the order.
      * 
      */
-    @InputImport(name="transportPreferences")
+    @Import(name="transportPreferences")
       private final @Nullable TransportPreferencesResponse transportPreferences;
 
     public Optional<TransportPreferencesResponse> getTransportPreferences() {

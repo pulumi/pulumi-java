@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfigurationSource;
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationValues;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
 
     public static final ServiceCodeConfiguration Empty = new ServiceCodeConfiguration();
 
-    @InputImport(name="codeConfigurationValues")
+    @Import(name="codeConfigurationValues")
       private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
 
     public Optional<ServiceCodeConfigurationValues> getCodeConfigurationValues() {
@@ -30,7 +30,7 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
      * Configuration Source
      * 
      */
-    @InputImport(name="configurationSource", required=true)
+    @Import(name="configurationSource", required=true)
       private final ServiceCodeConfigurationConfigurationSource configurationSource;
 
     public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.AuditSinkSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuditSink {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -30,12 +30,12 @@ public final class AuditSink {
      */
     private final @Nullable AuditSinkSpec spec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuditSink(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable AuditSinkSpec spec) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable AuditSinkSpec spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

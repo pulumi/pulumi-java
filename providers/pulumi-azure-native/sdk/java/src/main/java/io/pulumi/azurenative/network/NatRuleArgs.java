@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.VpnNatRuleType;
 import io.pulumi.azurenative.network.inputs.VpnNatRuleMappingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The private IP address external mapping for NAT.
      * 
      */
-    @InputImport(name="externalMappings")
+    @Import(name="externalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> externalMappings;
 
     public Output<List<VpnNatRuleMappingArgs>> getExternalMappings() {
@@ -34,7 +34,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the gateway.
      * 
      */
-    @InputImport(name="gatewayName", required=true)
+    @Import(name="gatewayName", required=true)
       private final Output<String> gatewayName;
 
     public Output<String> getGatewayName() {
@@ -45,7 +45,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -56,7 +56,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The private IP address internal mapping for NAT.
      * 
      */
-    @InputImport(name="internalMappings")
+    @Import(name="internalMappings")
       private final @Nullable Output<List<VpnNatRuleMappingArgs>> internalMappings;
 
     public Output<List<VpnNatRuleMappingArgs>> getInternalMappings() {
@@ -67,7 +67,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The IP Configuration ID this NAT rule applies to.
      * 
      */
-    @InputImport(name="ipConfigurationId")
+    @Import(name="ipConfigurationId")
       private final @Nullable Output<String> ipConfigurationId;
 
     public Output<String> getIpConfigurationId() {
@@ -78,7 +78,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The Source NAT direction of a VPN NAT.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,VpnNatRuleMode>> mode;
 
     public Output<Either<String,VpnNatRuleMode>> getMode() {
@@ -89,7 +89,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the nat rule.
      * 
      */
-    @InputImport(name="natRuleName")
+    @Import(name="natRuleName")
       private final @Nullable Output<String> natRuleName;
 
     public Output<String> getNatRuleName() {
@@ -111,7 +111,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the VpnGateway.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -122,7 +122,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The type of NAT rule for VPN NAT.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,VpnNatRuleType>> type;
 
     public Output<Either<String,VpnNatRuleType>> getType() {

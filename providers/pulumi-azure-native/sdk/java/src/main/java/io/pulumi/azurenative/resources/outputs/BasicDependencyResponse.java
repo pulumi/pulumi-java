@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BasicDependencyResponse {
     /**
      * The ID of the dependency.
@@ -27,11 +27,11 @@ public final class BasicDependencyResponse {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BasicDependencyResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.id = id;
         this.resourceName = resourceName;
         this.resourceType = resourceType;

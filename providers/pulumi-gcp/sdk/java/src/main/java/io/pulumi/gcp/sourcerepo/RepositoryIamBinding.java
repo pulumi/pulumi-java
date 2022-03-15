@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sourcerepo.RepositoryIamBindingArgs;
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:sourcerepo/repositoryIamBinding:RepositoryIamBinding")
 public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=RepositoryIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=RepositoryIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ RepositoryIamBindingCondition> condition;
 
     public Output</* @Nullable */ RepositoryIamBindingCondition> getCondition() {
@@ -68,7 +68,7 @@ public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -89,7 +89,7 @@ public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -100,7 +100,7 @@ public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="repository", type=String.class, parameters={})
+    @Export(name="repository", type=String.class, parameters={})
     private Output<String> repository;
 
     public Output<String> getRepository() {
@@ -112,7 +112,7 @@ public class RepositoryIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

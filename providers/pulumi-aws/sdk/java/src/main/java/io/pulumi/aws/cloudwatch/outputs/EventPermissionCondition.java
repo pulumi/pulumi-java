@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventPermissionCondition {
     /**
      * Key for the condition. Valid values: `aws:PrincipalOrgID`.
@@ -25,11 +25,11 @@ public final class EventPermissionCondition {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventPermissionCondition(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.type = type;
         this.value = value;

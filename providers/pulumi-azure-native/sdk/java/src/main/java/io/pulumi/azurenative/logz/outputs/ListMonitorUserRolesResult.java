@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.UserRoleResponseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListMonitorUserRolesResult {
     /**
      * Link to the next set of results, if any.
@@ -24,10 +24,10 @@ public final class ListMonitorUserRolesResult {
      */
     private final @Nullable List<UserRoleResponseResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListMonitorUserRolesResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<UserRoleResponseResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<UserRoleResponseResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

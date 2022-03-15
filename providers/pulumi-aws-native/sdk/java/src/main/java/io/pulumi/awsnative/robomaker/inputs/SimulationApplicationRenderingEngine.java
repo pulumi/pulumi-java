@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRenderingEngineName;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SimulationApplicationRenderingEngine extends io.pulumi.resour
      * The name of the rendering engine.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final SimulationApplicationRenderingEngineName name;
 
     public SimulationApplicationRenderingEngineName getName() {
@@ -32,7 +32,7 @@ public final class SimulationApplicationRenderingEngine extends io.pulumi.resour
      * The version of the rendering engine.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

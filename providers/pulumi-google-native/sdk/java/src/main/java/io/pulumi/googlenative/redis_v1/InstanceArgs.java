@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.redis_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.redis_v1.enums.InstanceConnectMode;
 import io.pulumi.googlenative.redis_v1.enums.InstanceReadReplicasMode;
 import io.pulumi.googlenative.redis_v1.enums.InstanceTier;
@@ -27,7 +27,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. If specified, at least one node will be provisioned in this zone in addition to the zone specified in location_id. Only applicable to standard tier. If provided, it must be a different zone from the one provided in [location_id]. Additional nodes beyond the first 2 will be placed in zones selected by the service.
      * 
      */
-    @InputImport(name="alternativeLocationId")
+    @Import(name="alternativeLocationId")
       private final @Nullable Output<String> alternativeLocationId;
 
     public Output<String> getAlternativeLocationId() {
@@ -38,7 +38,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the instance. Default value is "false" meaning AUTH is disabled.
      * 
      */
-    @InputImport(name="authEnabled")
+    @Import(name="authEnabled")
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
@@ -49,7 +49,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is connected. If left unspecified, the `default` network will be used.
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -60,7 +60,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The network connect mode of the Redis instance. If not provided, the connect mode defaults to DIRECT_PEERING.
      * 
      */
-    @InputImport(name="connectMode")
+    @Import(name="connectMode")
       private final @Nullable Output<InstanceConnectMode> connectMode;
 
     public Output<InstanceConnectMode> getConnectMode() {
@@ -71,14 +71,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An arbitrary and optional user-provided name for the instance.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -89,7 +89,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user provided metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -100,7 +100,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The zone where the instance will be provisioned. If not provided, the service will choose a zone from the specified region for the instance. For standard tier, additional nodes will be added across multiple zones for protection against zonal failures. If specified, at least one node will be provisioned in this zone.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -111,7 +111,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The maintenance policy for the instance. If not provided, maintenance events can be performed at any time.
      * 
      */
-    @InputImport(name="maintenancePolicy")
+    @Import(name="maintenancePolicy")
       private final @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
     public Output<MaintenancePolicyArgs> getMaintenancePolicy() {
@@ -122,7 +122,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Redis memory size in GiB.
      * 
      */
-    @InputImport(name="memorySizeGb", required=true)
+    @Import(name="memorySizeGb", required=true)
       private final Output<Integer> memorySizeGb;
 
     public Output<Integer> getMemorySizeGb() {
@@ -133,7 +133,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Redis instances are managed and addressed at regional level so location_id here refers to a GCP region; however, users may choose which specific zone (or collection of zones for cross-zone instances) an instance should be provisioned in. Refer to location_id and alternative_location_id fields for more details.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -144,14 +144,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Persistence configuration parameters
      * 
      */
-    @InputImport(name="persistenceConfig")
+    @Import(name="persistenceConfig")
       private final @Nullable Output<PersistenceConfigArgs> persistenceConfig;
 
     public Output<PersistenceConfigArgs> getPersistenceConfig() {
         return this.persistenceConfig == null ? Output.empty() : this.persistenceConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -162,7 +162,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Read replica mode. Can only be specified when trying to create the instance.
      * 
      */
-    @InputImport(name="readReplicasMode")
+    @Import(name="readReplicasMode")
       private final @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
 
     public Output<InstanceReadReplicasMode> getReadReplicasMode() {
@@ -173,7 +173,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Redis configuration parameters, according to http://redis.io/topics/config. Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-entries
      * 
      */
-    @InputImport(name="redisConfigs")
+    @Import(name="redisConfigs")
       private final @Nullable Output<Map<String,String>> redisConfigs;
 
     public Output<Map<String,String>> getRedisConfigs() {
@@ -184,7 +184,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The version of Redis software. If not provided, latest supported version will be used. Currently, the supported values are: * `REDIS_3_2` for Redis 3.2 compatibility * `REDIS_4_0` for Redis 4.0 compatibility (default) * `REDIS_5_0` for Redis 5.0 compatibility * `REDIS_6_X` for Redis 6.x compatibility
      * 
      */
-    @InputImport(name="redisVersion")
+    @Import(name="redisVersion")
       private final @Nullable Output<String> redisVersion;
 
     public Output<String> getRedisVersion() {
@@ -195,7 +195,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The number of replica nodes. The valid range for the Standard Tier with read replicas enabled is [1-5] and defaults to 2. If read replicas are not enabled for a Standard Tier instance, the only valid value is 1 and the default is 1. The valid value for basic tier is 0 and the default is also 0.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
@@ -206,7 +206,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses that are reserved for this instance. Range must be unique and non-overlapping with existing subnets in an authorized network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges associated with this private service access connection. If not provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. For READ_REPLICAS_ENABLED the default block size is /28.
      * 
      */
-    @InputImport(name="reservedIpRange")
+    @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {
@@ -217,7 +217,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range. At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during instance creation.
      * 
      */
-    @InputImport(name="secondaryIpRange")
+    @Import(name="secondaryIpRange")
       private final @Nullable Output<String> secondaryIpRange;
 
     public Output<String> getSecondaryIpRange() {
@@ -228,7 +228,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The service tier of the instance.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<InstanceTier> tier;
 
     public Output<InstanceTier> getTier() {
@@ -239,7 +239,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The TLS mode of the Redis instance. If not provided, TLS is disabled for the instance.
      * 
      */
-    @InputImport(name="transitEncryptionMode")
+    @Import(name="transitEncryptionMode")
       private final @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
 
     public Output<InstanceTransitEncryptionMode> getTransitEncryptionMode() {

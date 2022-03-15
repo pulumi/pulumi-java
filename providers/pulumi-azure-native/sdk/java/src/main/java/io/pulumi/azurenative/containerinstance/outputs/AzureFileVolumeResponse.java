@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFileVolumeResponse {
     /**
      * The flag indicating whether the Azure File shared mounted as a volume is read-only.
@@ -33,12 +33,12 @@ public final class AzureFileVolumeResponse {
      */
     private final String storageAccountName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFileVolumeResponse(
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("shareName") String shareName,
-        @OutputCustomType.Parameter("storageAccountKey") @Nullable String storageAccountKey,
-        @OutputCustomType.Parameter("storageAccountName") String storageAccountName) {
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("shareName") String shareName,
+        @CustomType.Parameter("storageAccountKey") @Nullable String storageAccountKey,
+        @CustomType.Parameter("storageAccountName") String storageAccountName) {
         this.readOnly = readOnly;
         this.shareName = shareName;
         this.storageAccountKey = storageAccountKey;

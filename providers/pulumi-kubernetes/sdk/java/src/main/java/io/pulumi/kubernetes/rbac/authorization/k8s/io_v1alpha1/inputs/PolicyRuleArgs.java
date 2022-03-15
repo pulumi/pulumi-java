@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * APIGroups is the name of the APIGroup that contains the resources.  If multiple API groups are specified, any action requested against one of the enumerated resources in any API group will be allowed.
      * 
      */
-    @InputImport(name="apiGroups")
+    @Import(name="apiGroups")
       private final @Nullable Output<List<String>> apiGroups;
 
     public Output<List<String>> getApiGroups() {
@@ -34,7 +34,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path This name is intentionally different than the internal type so that the DefaultConvert works nicely and because the ordering may be different. Since non-resource URLs are not namespaced, this field is only applicable for ClusterRoles referenced from a ClusterRoleBinding. Rules can either apply to API resources (such as "pods" or "secrets") or non-resource URL paths (such as "/api"),  but not both.
      * 
      */
-    @InputImport(name="nonResourceURLs")
+    @Import(name="nonResourceURLs")
       private final @Nullable Output<List<String>> nonResourceURLs;
 
     public Output<List<String>> getNonResourceURLs() {
@@ -45,7 +45,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * ResourceNames is an optional white list of names that the rule applies to.  An empty set means that everything is allowed.
      * 
      */
-    @InputImport(name="resourceNames")
+    @Import(name="resourceNames")
       private final @Nullable Output<List<String>> resourceNames;
 
     public Output<List<String>> getResourceNames() {
@@ -56,7 +56,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resources is a list of resources this rule applies to.  ResourceAll represents all resources.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
@@ -67,7 +67,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.
      * 
      */
-    @InputImport(name="verbs", required=true)
+    @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
     public Output<List<String>> getVerbs() {

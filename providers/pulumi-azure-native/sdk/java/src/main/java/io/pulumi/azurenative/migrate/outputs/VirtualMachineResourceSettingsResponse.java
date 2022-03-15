@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
@@ -38,13 +38,13 @@ public final class VirtualMachineResourceSettingsResponse {
      */
     private final @Nullable String targetVmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineResourceSettingsResponse(
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
-        @OutputCustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
-        @OutputCustomType.Parameter("targetVmSize") @Nullable String targetVmSize) {
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
+        @CustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
+        @CustomType.Parameter("targetResourceName") String targetResourceName,
+        @CustomType.Parameter("targetVmSize") @Nullable String targetVmSize) {
         this.resourceType = resourceType;
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetAvailabilityZone = targetAvailabilityZone;

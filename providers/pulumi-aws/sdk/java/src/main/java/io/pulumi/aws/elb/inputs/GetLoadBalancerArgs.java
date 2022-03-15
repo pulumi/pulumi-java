@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * The unique name of the load balancer.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

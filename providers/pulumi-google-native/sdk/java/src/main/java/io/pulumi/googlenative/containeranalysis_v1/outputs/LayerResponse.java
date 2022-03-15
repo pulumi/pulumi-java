@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LayerResponse {
     /**
      * The recovered arguments to the Dockerfile directive.
@@ -20,10 +20,10 @@ public final class LayerResponse {
      */
     private final String directive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LayerResponse(
-        @OutputCustomType.Parameter("arguments") String arguments,
-        @OutputCustomType.Parameter("directive") String directive) {
+        @CustomType.Parameter("arguments") String arguments,
+        @CustomType.Parameter("directive") String directive) {
         this.arguments = arguments;
         this.directive = directive;
     }

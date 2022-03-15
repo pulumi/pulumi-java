@@ -8,7 +8,7 @@ import io.pulumi.azurenative.keyvault.KeyArgs;
 import io.pulumi.azurenative.keyvault.outputs.KeyAttributesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The attributes of the key.
      * 
      */
-    @OutputExport(name="attributes", type=KeyAttributesResponse.class, parameters={})
+    @Export(name="attributes", type=KeyAttributesResponse.class, parameters={})
     private Output</* @Nullable */ KeyAttributesResponse> attributes;
 
     /**
@@ -51,7 +51,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
      */
-    @OutputExport(name="curveName", type=String.class, parameters={})
+    @Export(name="curveName", type=String.class, parameters={})
     private Output</* @Nullable */ String> curveName;
 
     /**
@@ -61,7 +61,7 @@ public class Key extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getCurveName() {
         return this.curveName;
     }
-    @OutputExport(name="keyOps", type=List.class, parameters={String.class})
+    @Export(name="keyOps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keyOps;
 
     public Output</* @Nullable */ List<String>> getKeyOps() {
@@ -71,7 +71,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
      */
-    @OutputExport(name="keySize", type=Integer.class, parameters={})
+    @Export(name="keySize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> keySize;
 
     /**
@@ -85,7 +85,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The URI to retrieve the current version of the key.
      * 
      */
-    @OutputExport(name="keyUri", type=String.class, parameters={})
+    @Export(name="keyUri", type=String.class, parameters={})
     private Output<String> keyUri;
 
     /**
@@ -99,7 +99,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The URI to retrieve the specific version of the key.
      * 
      */
-    @OutputExport(name="keyUriWithVersion", type=String.class, parameters={})
+    @Export(name="keyUriWithVersion", type=String.class, parameters={})
     private Output<String> keyUriWithVersion;
 
     /**
@@ -113,7 +113,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The type of the key. For valid values, see JsonWebKeyType.
      * 
      */
-    @OutputExport(name="kty", type=String.class, parameters={})
+    @Export(name="kty", type=String.class, parameters={})
     private Output</* @Nullable */ String> kty;
 
     /**
@@ -127,7 +127,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Azure location of the key vault resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -141,7 +141,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Name of the key vault resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Tags assigned to the key vault resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -169,7 +169,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Resource type of the key vault resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

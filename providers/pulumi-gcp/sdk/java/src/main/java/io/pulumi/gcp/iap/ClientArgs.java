@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
      * 
      */
-    @InputImport(name="brand", required=true)
+    @Import(name="brand", required=true)
       private final Output<String> brand;
 
     public Output<String> getBrand() {
@@ -30,7 +30,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * Human-friendly name given to the OAuth client.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {

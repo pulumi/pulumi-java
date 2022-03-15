@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OAuthAuthenticationResponse {
     /**
      * Gets or sets the audience.
@@ -38,13 +38,13 @@ public final class OAuthAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OAuthAuthenticationResponse(
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("secret") @Nullable String secret,
-        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("secret") @Nullable String secret,
+        @CustomType.Parameter("tenant") @Nullable String tenant,
+        @CustomType.Parameter("type") String type) {
         this.audience = audience;
         this.clientId = clientId;
         this.secret = secret;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyDailyCycleResponse {
     /**
      * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
@@ -26,11 +26,11 @@ public final class ResourcePolicyDailyCycleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyDailyCycleResponse(
-        @OutputCustomType.Parameter("daysInCycle") Integer daysInCycle,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("daysInCycle") Integer daysInCycle,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTime") String startTime) {
         this.daysInCycle = daysInCycle;
         this.duration = duration;
         this.startTime = startTime;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The country code of the subject.
      * 
      */
-    @InputImport(name="countryCode", required=true)
+    @Import(name="countryCode", required=true)
       private final String countryCode;
 
     public String getCountryCode() {
@@ -31,7 +31,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The locality or city of the subject.
      * 
      */
-    @InputImport(name="locality", required=true)
+    @Import(name="locality", required=true)
       private final String locality;
 
     public String getLocality() {
@@ -42,7 +42,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The organization of the subject.
      * 
      */
-    @InputImport(name="organization", required=true)
+    @Import(name="organization", required=true)
       private final String organization;
 
     public String getOrganization() {
@@ -53,7 +53,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The organizational_unit of the subject.
      * 
      */
-    @InputImport(name="organizationalUnit", required=true)
+    @Import(name="organizationalUnit", required=true)
       private final String organizationalUnit;
 
     public String getOrganizationalUnit() {
@@ -64,7 +64,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The postal code of the subject.
      * 
      */
-    @InputImport(name="postalCode", required=true)
+    @Import(name="postalCode", required=true)
       private final String postalCode;
 
     public String getPostalCode() {
@@ -75,7 +75,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The province, territory, or regional state of the subject.
      * 
      */
-    @InputImport(name="province", required=true)
+    @Import(name="province", required=true)
       private final String province;
 
     public String getProvince() {
@@ -86,7 +86,7 @@ public final class SubjectResponse extends io.pulumi.resources.InvokeArgs {
      * The street address of the subject.
      * 
      */
-    @InputImport(name="streetAddress", required=true)
+    @Import(name="streetAddress", required=true)
       private final String streetAddress;
 
     public String getStreetAddress() {

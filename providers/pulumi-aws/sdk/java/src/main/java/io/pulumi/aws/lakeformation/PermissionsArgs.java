@@ -8,7 +8,7 @@ import io.pulumi.aws.lakeformation.inputs.PermissionsDatabaseArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsTableArgs;
 import io.pulumi.aws.lakeformation.inputs.PermissionsTableWithColumnsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -35,7 +35,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
      * 
      */
-    @InputImport(name="catalogResource")
+    @Import(name="catalogResource")
       private final @Nullable Output<Boolean> catalogResource;
 
     public Output<Boolean> getCatalogResource() {
@@ -46,7 +46,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for a data location resource. Detailed below.
      * 
      */
-    @InputImport(name="dataLocation")
+    @Import(name="dataLocation")
       private final @Nullable Output<PermissionsDataLocationArgs> dataLocation;
 
     public Output<PermissionsDataLocationArgs> getDataLocation() {
@@ -57,7 +57,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for a database resource. Detailed below.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<PermissionsDatabaseArgs> database;
 
     public Output<PermissionsDatabaseArgs> getDatabase() {
@@ -68,7 +68,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
@@ -79,7 +79,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Subset of `permissions` which the principal can pass.
      * 
      */
-    @InputImport(name="permissionsWithGrantOptions")
+    @Import(name="permissionsWithGrantOptions")
       private final @Nullable Output<List<String>> permissionsWithGrantOptions;
 
     public Output<List<String>> getPermissionsWithGrantOptions() {
@@ -90,7 +90,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Principal to be granted the permissions on the resource. Supported principals include `IAM_ALLOWED_PRINCIPALS` (see Default Behavior and `IAMAllowedPrincipals` above), IAM roles, users, groups, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -101,7 +101,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for a table resource. Detailed below.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable Output<PermissionsTableArgs> table;
 
     public Output<PermissionsTableArgs> getTable() {
@@ -112,7 +112,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for a table with columns resource. Detailed below.
      * 
      */
-    @InputImport(name="tableWithColumns")
+    @Import(name="tableWithColumns")
       private final @Nullable Output<PermissionsTableWithColumnsArgs> tableWithColumns;
 
     public Output<PermissionsTableWithColumnsArgs> getTableWithColumns() {

@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicyRetentionPolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicySchedule;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicySnapshotProperty;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicySnapshotSchedulePolicy {
     private final List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies;
     private final List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
     private final List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicy(
-        @OutputCustomType.Parameter("retentionPolicies") List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies,
-        @OutputCustomType.Parameter("schedules") List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules,
-        @OutputCustomType.Parameter("snapshotProperties") List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
+        @CustomType.Parameter("retentionPolicies") List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies,
+        @CustomType.Parameter("schedules") List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules,
+        @CustomType.Parameter("snapshotProperties") List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
         this.retentionPolicies = retentionPolicies;
         this.schedules = schedules;
         this.snapshotProperties = snapshotProperties;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ZoneMappingResponse {
     /**
      * The location of the zone mapping.
@@ -19,10 +19,10 @@ public final class ZoneMappingResponse {
     private final @Nullable String location;
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ZoneMappingResponse(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.location = location;
         this.zones = zones;
     }

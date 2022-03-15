@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOrigin;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyResult {
     /**
      * A comment to describe the cache policy.
@@ -47,16 +47,16 @@ public final class GetCachePolicyResult {
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCachePolicyResult(
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
-        @OutputCustomType.Parameter("minTtl") Integer minTtl,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parametersInCacheKeyAndForwardedToOrigins") List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("maxTtl") Integer maxTtl,
+        @CustomType.Parameter("minTtl") Integer minTtl,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parametersInCacheKeyAndForwardedToOrigins") List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
         this.comment = comment;
         this.defaultTtl = defaultTtl;
         this.etag = etag;

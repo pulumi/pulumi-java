@@ -9,7 +9,7 @@ import io.pulumi.azurenative.attestation.outputs.PrivateEndpointConnectionRespon
 import io.pulumi.azurenative.attestation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * Gets the uri of attestation service
      * 
      */
-    @OutputExport(name="attestUri", type=String.class, parameters={})
+    @Export(name="attestUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> attestUri;
 
     /**
@@ -48,7 +48,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -62,7 +62,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * List of private endpoint connections associated with the attestation provider.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -90,7 +90,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * Status of attestation service.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -104,7 +104,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -118,7 +118,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -132,7 +132,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * Trust model for the attestation provider.
      * 
      */
-    @OutputExport(name="trustModel", type=String.class, parameters={})
+    @Export(name="trustModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> trustModel;
 
     /**
@@ -146,7 +146,7 @@ public class AttestationProvider extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * The client ID associated with your PayPal application.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Object clientId;
 
     public Object getClientId() {
@@ -52,7 +52,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * The client secret associated with your PayPal application.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getClientSecret() {
@@ -63,7 +63,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -74,7 +74,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -85,7 +85,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -96,7 +96,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * The URL of the PayPal instance. (i.e. api.sandbox.paypal.com)
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Object host;
 
     public Object getHost() {
@@ -107,7 +107,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -119,7 +119,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * Expected value is 'Paypal'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -130,7 +130,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
      */
-    @InputImport(name="useEncryptedEndpoints")
+    @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
@@ -141,7 +141,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="useHostVerification")
+    @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
@@ -152,7 +152,7 @@ public final class PaypalLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="usePeerVerification")
+    @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {

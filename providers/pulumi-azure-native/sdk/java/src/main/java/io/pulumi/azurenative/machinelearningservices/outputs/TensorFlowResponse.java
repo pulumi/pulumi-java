@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TensorFlowResponse {
     /**
      * Enum to determine the job distribution type.
@@ -29,11 +29,11 @@ public final class TensorFlowResponse {
      */
     private final @Nullable Integer workerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TensorFlowResponse(
-        @OutputCustomType.Parameter("distributionType") String distributionType,
-        @OutputCustomType.Parameter("parameterServerCount") @Nullable Integer parameterServerCount,
-        @OutputCustomType.Parameter("workerCount") @Nullable Integer workerCount) {
+        @CustomType.Parameter("distributionType") String distributionType,
+        @CustomType.Parameter("parameterServerCount") @Nullable Integer parameterServerCount,
+        @CustomType.Parameter("workerCount") @Nullable Integer workerCount) {
         this.distributionType = distributionType;
         this.parameterServerCount = parameterServerCount;
         this.workerCount = workerCount;

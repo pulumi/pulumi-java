@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJobHiveJobQueryList {
     /**
      * Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
@@ -16,8 +16,8 @@ public final class WorkflowTemplateJobHiveJobQueryList {
      */
     private final List<String> queries;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplateJobHiveJobQueryList(@OutputCustomType.Parameter("queries") List<String> queries) {
+    @CustomType.Constructor
+    private WorkflowTemplateJobHiveJobQueryList(@CustomType.Parameter("queries") List<String> queries) {
         this.queries = queries;
     }
 

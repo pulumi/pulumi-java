@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsAccessKeyResponse {
     /**
      * AWS access key ID.
@@ -20,10 +20,10 @@ public final class AwsAccessKeyResponse {
      */
     private final String secretAccessKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsAccessKeyResponse(
-        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
-        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey) {
+        @CustomType.Parameter("accessKeyId") String accessKeyId,
+        @CustomType.Parameter("secretAccessKey") String secretAccessKey) {
         this.accessKeyId = accessKeyId;
         this.secretAccessKey = secretAccessKey;
     }

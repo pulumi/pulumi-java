@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
      * Defines whether the instance has integrity monitoring enabled.
      * 
      */
-    @InputImport(name="enableIntegrityMonitoring", required=true)
+    @Import(name="enableIntegrityMonitoring", required=true)
       private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
@@ -31,7 +31,7 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
      * Defines whether the instance has Secure Boot enabled.
      * 
      */
-    @InputImport(name="enableSecureBoot", required=true)
+    @Import(name="enableSecureBoot", required=true)
       private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {
@@ -42,7 +42,7 @@ public final class ShieldedVmConfigResponse extends io.pulumi.resources.InvokeAr
      * Defines whether the instance has the vTPM enabled.
      * 
      */
-    @InputImport(name="enableVtpm", required=true)
+    @Import(name="enableVtpm", required=true)
       private final Boolean enableVtpm;
 
     public Boolean getEnableVtpm() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
-    @InputImport(name="actionsRequired", required=true)
+    @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
 
     public String getActionsRequired() {
@@ -31,7 +31,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * The reason for approval/rejection of the connection.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -42,7 +42,7 @@ public final class PrivateLinkConnectionStateResponse extends io.pulumi.resource
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the remote resource/service.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

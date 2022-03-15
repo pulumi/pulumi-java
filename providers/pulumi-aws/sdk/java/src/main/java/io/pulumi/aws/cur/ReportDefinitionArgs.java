@@ -4,7 +4,7 @@
 package io.pulumi.aws.cur;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * A list of additional artifacts. Valid values are: `REDSHIFT`, `QUICKSIGHT`, `ATHENA`. When ATHENA exists within additional_artifacts, no other artifact type can be declared and report_versioning must be `OVERWRITE_REPORT`.
      * 
      */
-    @InputImport(name="additionalArtifacts")
+    @Import(name="additionalArtifacts")
       private final @Nullable Output<List<String>> additionalArtifacts;
 
     public Output<List<String>> getAdditionalArtifacts() {
@@ -31,7 +31,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * A list of schema elements. Valid values are: `RESOURCES`.
      * 
      */
-    @InputImport(name="additionalSchemaElements", required=true)
+    @Import(name="additionalSchemaElements", required=true)
       private final Output<List<String>> additionalSchemaElements;
 
     public Output<List<String>> getAdditionalSchemaElements() {
@@ -42,7 +42,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Compression format for report. Valid values are: `GZIP`, `ZIP`, `Parquet`. If `Parquet` is used, then format must also be `Parquet`.
      * 
      */
-    @InputImport(name="compression", required=true)
+    @Import(name="compression", required=true)
       private final Output<String> compression;
 
     public Output<String> getCompression() {
@@ -53,7 +53,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Format for report. Valid values are: `textORcsv`, `Parquet`. If `Parquet` is used, then Compression must also be `Parquet`.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
@@ -64,7 +64,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.
      * 
      */
-    @InputImport(name="refreshClosedReports")
+    @Import(name="refreshClosedReports")
       private final @Nullable Output<Boolean> refreshClosedReports;
 
     public Output<Boolean> getRefreshClosedReports() {
@@ -75,7 +75,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
      * 
      */
-    @InputImport(name="reportName", required=true)
+    @Import(name="reportName", required=true)
       private final Output<String> reportName;
 
     public Output<String> getReportName() {
@@ -86,7 +86,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: `CREATE_NEW_REPORT` and `OVERWRITE_REPORT`.
      * 
      */
-    @InputImport(name="reportVersioning")
+    @Import(name="reportVersioning")
       private final @Nullable Output<String> reportVersioning;
 
     public Output<String> getReportVersioning() {
@@ -97,7 +97,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Name of the existing S3 bucket to hold generated reports.
      * 
      */
-    @InputImport(name="s3Bucket", required=true)
+    @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
@@ -108,7 +108,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Report path prefix. Limited to 256 characters.
      * 
      */
-    @InputImport(name="s3Prefix")
+    @Import(name="s3Prefix")
       private final @Nullable Output<String> s3Prefix;
 
     public Output<String> getS3Prefix() {
@@ -119,7 +119,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * Region of the existing S3 bucket to hold generated reports.
      * 
      */
-    @InputImport(name="s3Region", required=true)
+    @Import(name="s3Region", required=true)
       private final Output<String> s3Region;
 
     public Output<String> getS3Region() {
@@ -130,7 +130,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * The frequency on which report data are measured and displayed.  Valid values are: `HOURLY`, `DAILY`.
      * 
      */
-    @InputImport(name="timeUnit", required=true)
+    @Import(name="timeUnit", required=true)
       private final Output<String> timeUnit;
 
     public Output<String> getTimeUnit() {

@@ -4,7 +4,7 @@
 package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.example.Resource;
 import io.pulumi.example.inputs.ConfigMapArgs;
 import io.pulumi.example.inputs.SomeOtherObjectArgs;
@@ -19,21 +19,21 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ObjectArgs Empty = new ObjectArgs();
 
-    @InputImport(name="bar")
+    @Import(name="bar")
       private final @Nullable Output<String> bar;
 
     public Output<String> getBar() {
         return this.bar == null ? Output.empty() : this.bar;
     }
 
-    @InputImport(name="configs")
+    @Import(name="configs")
       private final @Nullable Output<List<ConfigMapArgs>> configs;
 
     public Output<List<ConfigMapArgs>> getConfigs() {
         return this.configs == null ? Output.empty() : this.configs;
     }
 
-    @InputImport(name="foo")
+    @Import(name="foo")
       private final @Nullable Output<Resource> foo;
 
     public Output<Resource> getFoo() {
@@ -44,7 +44,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
      * List of lists of other objects
      * 
      */
-    @InputImport(name="others")
+    @Import(name="others")
       private final @Nullable Output<List<List<SomeOtherObjectArgs>>> others;
 
     public Output<List<List<SomeOtherObjectArgs>>> getOthers() {
@@ -55,7 +55,7 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Mapping from string to list of some other object
      * 
      */
-    @InputImport(name="stillOthers")
+    @Import(name="stillOthers")
       private final @Nullable Output<Map<String,List<SomeOtherObjectArgs>>> stillOthers;
 
     public Output<Map<String,List<SomeOtherObjectArgs>>> getStillOthers() {

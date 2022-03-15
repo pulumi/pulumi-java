@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.SqlServerDatabaseDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseResult {
     /**
      * The Cloud SQL charset value.
@@ -47,16 +47,16 @@ public final class GetDatabaseResult {
     private final String selfLink;
     private final SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseResult(
-        @OutputCustomType.Parameter("charset") String charset,
-        @OutputCustomType.Parameter("collation") String collation,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sqlserverDatabaseDetails") SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
+        @CustomType.Parameter("charset") String charset,
+        @CustomType.Parameter("collation") String collation,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sqlserverDatabaseDetails") SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
         this.charset = charset;
         this.collation = collation;
         this.instance = instance;

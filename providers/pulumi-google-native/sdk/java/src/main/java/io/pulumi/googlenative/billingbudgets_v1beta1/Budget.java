@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.billingbudgets_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.billingbudgets_v1beta1.BudgetArgs;
@@ -27,7 +27,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
      * 
      */
-    @OutputExport(name="allUpdatesRule", type=GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse.class, parameters={})
+    @Export(name="allUpdatesRule", type=GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse> allUpdatesRule;
 
     /**
@@ -41,7 +41,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Budgeted amount.
      * 
      */
-    @OutputExport(name="amount", type=GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse.class, parameters={})
+    @Export(name="amount", type=GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse> amount;
 
     /**
@@ -55,7 +55,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
      * 
      */
-    @OutputExport(name="budgetFilter", type=GoogleCloudBillingBudgetsV1beta1FilterResponse.class, parameters={})
+    @Export(name="budgetFilter", type=GoogleCloudBillingBudgetsV1beta1FilterResponse.class, parameters={})
     private Output<GoogleCloudBillingBudgetsV1beta1FilterResponse> budgetFilter;
 
     /**
@@ -69,7 +69,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * User data for display name in UI. Validation: <= 60 chars.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -83,7 +83,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -97,7 +97,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
      * 
      */
-    @OutputExport(name="thresholdRules", type=List.class, parameters={GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse.class})
+    @Export(name="thresholdRules", type=List.class, parameters={GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse.class})
     private Output<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse>> thresholdRules;
 
     /**

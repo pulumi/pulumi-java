@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
     /**
      * Only specify this field if the related model performs image object detection (`IMAGE_BOUNDING_BOX_ANNOTATION`). Describes how to evaluate bounding boxes.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(@OutputCustomType.Parameter("boundingBoxEvaluationOptions") GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions) {
+    @CustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(@CustomType.Parameter("boundingBoxEvaluationOptions") GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions) {
         this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
      * placement policy affinity type
      * 
      */
-    @InputImport(name="affinityType", required=true)
+    @Import(name="affinityType", required=true)
       private final String affinityType;
 
     public String getAffinityType() {
@@ -34,7 +34,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
      * Display name of the placement policy
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
      * The provisioning state
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -56,7 +56,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
      * Whether the placement policy is enabled or disabled
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -68,7 +68,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
      * Expected value is 'VmVm'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -79,7 +79,7 @@ public final class VmVmPlacementPolicyPropertiesResponse extends io.pulumi.resou
      * Virtual machine members list
      * 
      */
-    @InputImport(name="vmMembers", required=true)
+    @Import(name="vmMembers", required=true)
       private final List<String> vmMembers;
 
     public List<String> getVmMembers() {

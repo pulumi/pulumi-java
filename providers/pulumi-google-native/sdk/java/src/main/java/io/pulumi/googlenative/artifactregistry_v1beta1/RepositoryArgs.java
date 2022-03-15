@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.artifactregistry_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.artifactregistry_v1beta1.enums.RepositoryFormat;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the repository was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -31,7 +31,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The user-provided description of the repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The format of packages that are stored in the repository.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<RepositoryFormat> format;
 
     public Output<RepositoryFormat> getFormat() {
@@ -53,7 +53,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud KMS resource name of the customer managed encryption key that’s used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -64,14 +64,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Labels with user-defined metadata. This field may contain up to 64 entries. Label keys and values may be no longer than 63 characters. Label keys must begin with a lowercase letter and may only contain lowercase letters, numeric characters, underscores, and dashes.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -82,21 +82,21 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="repositoryId")
+    @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
@@ -107,7 +107,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the repository was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

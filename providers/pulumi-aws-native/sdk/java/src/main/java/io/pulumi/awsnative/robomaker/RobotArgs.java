@@ -6,7 +6,7 @@ package io.pulumi.awsnative.robomaker;
 import io.pulumi.awsnative.robomaker.enums.RobotArchitecture;
 import io.pulumi.awsnative.robomaker.inputs.RobotTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * The target architecture of the robot.
      * 
      */
-    @InputImport(name="architecture", required=true)
+    @Import(name="architecture", required=true)
       private final Output<RobotArchitecture> architecture;
 
     public Output<RobotArchitecture> getArchitecture() {
@@ -31,7 +31,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the fleet.
      * 
      */
-    @InputImport(name="fleet")
+    @Import(name="fleet")
       private final @Nullable Output<String> fleet;
 
     public Output<String> getFleet() {
@@ -42,7 +42,7 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * The Greengrass group id.
      * 
      */
-    @InputImport(name="greengrassGroupId", required=true)
+    @Import(name="greengrassGroupId", required=true)
       private final Output<String> greengrassGroupId;
 
     public Output<String> getGreengrassGroupId() {
@@ -53,14 +53,14 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the robot.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<RobotTagsArgs> tags;
 
     public Output<RobotTagsArgs> getTags() {

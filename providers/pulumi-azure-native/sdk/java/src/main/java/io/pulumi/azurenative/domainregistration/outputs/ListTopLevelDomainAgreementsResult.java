@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.domainregistration.outputs;
 
 import io.pulumi.azurenative.domainregistration.outputs.TldLegalAgreementResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListTopLevelDomainAgreementsResult {
     /**
      * Link to next page of resources.
@@ -22,10 +22,10 @@ public final class ListTopLevelDomainAgreementsResult {
      */
     private final List<TldLegalAgreementResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListTopLevelDomainAgreementsResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<TldLegalAgreementResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<TldLegalAgreementResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

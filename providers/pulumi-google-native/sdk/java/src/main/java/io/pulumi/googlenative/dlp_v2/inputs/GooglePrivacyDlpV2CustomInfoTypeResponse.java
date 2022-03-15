@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DetectionRuleResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
      * 
      */
-    @InputImport(name="detectionRules", required=true)
+    @Import(name="detectionRules", required=true)
       private final List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
 
     public List<GooglePrivacyDlpV2DetectionRuleResponse> getDetectionRules() {
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * A list of phrases to detect as a CustomInfoType.
      * 
      */
-    @InputImport(name="dictionary", required=true)
+    @Import(name="dictionary", required=true)
       private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
      * 
      */
-    @InputImport(name="exclusionType", required=true)
+    @Import(name="exclusionType", required=true)
       private final String exclusionType;
 
     public String getExclusionType() {
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing infoTypes and that infoType is specified in `InspectContent.info_types` field. Specifying the latter adds findings to the one detected by the system. If built-in info type is not specified in `InspectContent.info_types` list then the name is treated as a custom info type.
      * 
      */
-    @InputImport(name="infoType", required=true)
+    @Import(name="infoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria specified by the rule. Defaults to `VERY_LIKELY` if not specified.
      * 
      */
-    @InputImport(name="likelihood", required=true)
+    @Import(name="likelihood", required=true)
       private final String likelihood;
 
     public String getLikelihood() {
@@ -82,7 +82,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * Regular expression based CustomInfoType.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse getRegex() {
@@ -93,7 +93,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
      * 
      */
-    @InputImport(name="storedType", required=true)
+    @Import(name="storedType", required=true)
       private final GooglePrivacyDlpV2StoredTypeResponse storedType;
 
     public GooglePrivacyDlpV2StoredTypeResponse getStoredType() {
@@ -104,7 +104,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * Message for detecting output from deidentification transformations that support reversing.
      * 
      */
-    @InputImport(name="surrogateType", required=true)
+    @Import(name="surrogateType", required=true)
       private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
     public GooglePrivacyDlpV2SurrogateTypeResponse getSurrogateType() {

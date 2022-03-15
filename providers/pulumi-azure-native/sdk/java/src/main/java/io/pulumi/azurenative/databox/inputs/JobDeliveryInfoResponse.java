@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class JobDeliveryInfoResponse extends io.pulumi.resources.InvokeArg
      * Scheduled date time.
      * 
      */
-    @InputImport(name="scheduledDateTime")
+    @Import(name="scheduledDateTime")
       private final @Nullable String scheduledDateTime;
 
     public Optional<String> getScheduledDateTime() {

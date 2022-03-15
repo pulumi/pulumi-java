@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FirstQualityResponse extends io.pulumi.resources.InvokeArgs {
      * The first quality bitrate.
      * 
      */
-    @InputImport(name="bitrate", required=true)
+    @Import(name="bitrate", required=true)
       private final Integer bitrate;
 
     public Integer getBitrate() {

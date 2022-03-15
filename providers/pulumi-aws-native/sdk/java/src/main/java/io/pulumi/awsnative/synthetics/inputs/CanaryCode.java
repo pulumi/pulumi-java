@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class CanaryCode extends io.pulumi.resources.InvokeArgs {
 
     public static final CanaryCode Empty = new CanaryCode();
 
-    @InputImport(name="handler", required=true)
+    @Import(name="handler", required=true)
       private final String handler;
 
     public String getHandler() {
         return this.handler;
     }
 
-    @InputImport(name="s3Bucket")
+    @Import(name="s3Bucket")
       private final @Nullable String s3Bucket;
 
     public Optional<String> getS3Bucket() {
         return this.s3Bucket == null ? Optional.empty() : Optional.ofNullable(this.s3Bucket);
     }
 
-    @InputImport(name="s3Key")
+    @Import(name="s3Key")
       private final @Nullable String s3Key;
 
     public Optional<String> getS3Key() {
         return this.s3Key == null ? Optional.empty() : Optional.ofNullable(this.s3Key);
     }
 
-    @InputImport(name="s3ObjectVersion")
+    @Import(name="s3ObjectVersion")
       private final @Nullable String s3ObjectVersion;
 
     public Optional<String> getS3ObjectVersion() {
         return this.s3ObjectVersion == null ? Optional.empty() : Optional.ofNullable(this.s3ObjectVersion);
     }
 
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable String script;
 
     public Optional<String> getScript() {

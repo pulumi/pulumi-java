@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.DevicePolicyResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConditionResponse {
     /**
      * Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.
@@ -43,14 +43,14 @@ public final class ConditionResponse {
      */
     private final List<String> requiredAccessLevels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConditionResponse(
-        @OutputCustomType.Parameter("devicePolicy") DevicePolicyResponse devicePolicy,
-        @OutputCustomType.Parameter("ipSubnetworks") List<String> ipSubnetworks,
-        @OutputCustomType.Parameter("members") List<String> members,
-        @OutputCustomType.Parameter("negate") Boolean negate,
-        @OutputCustomType.Parameter("regions") List<String> regions,
-        @OutputCustomType.Parameter("requiredAccessLevels") List<String> requiredAccessLevels) {
+        @CustomType.Parameter("devicePolicy") DevicePolicyResponse devicePolicy,
+        @CustomType.Parameter("ipSubnetworks") List<String> ipSubnetworks,
+        @CustomType.Parameter("members") List<String> members,
+        @CustomType.Parameter("negate") Boolean negate,
+        @CustomType.Parameter("regions") List<String> regions,
+        @CustomType.Parameter("requiredAccessLevels") List<String> requiredAccessLevels) {
         this.devicePolicy = devicePolicy;
         this.ipSubnetworks = ipSubnetworks;
         this.members = members;

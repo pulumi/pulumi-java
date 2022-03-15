@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.ConnectionArgs;
 import io.pulumi.aws.directconnect.inputs.ConnectionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The ARN of the connection.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The Direct Connect endpoint on which the physical connection terminates.
      * 
      */
-    @OutputExport(name="awsDevice", type=String.class, parameters={})
+    @Export(name="awsDevice", type=String.class, parameters={})
     private Output<String> awsDevice;
 
     /**
@@ -62,7 +62,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
      * 
      */
-    @OutputExport(name="bandwidth", type=String.class, parameters={})
+    @Export(name="bandwidth", type=String.class, parameters={})
     private Output<String> bandwidth;
 
     /**
@@ -76,7 +76,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
      * 
      */
-    @OutputExport(name="hasLogicalRedundancy", type=String.class, parameters={})
+    @Export(name="hasLogicalRedundancy", type=String.class, parameters={})
     private Output<String> hasLogicalRedundancy;
 
     /**
@@ -90,7 +90,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Boolean value representing if jumbo frames have been enabled for this connection.
      * 
      */
-    @OutputExport(name="jumboFrameCapable", type=Boolean.class, parameters={})
+    @Export(name="jumboFrameCapable", type=Boolean.class, parameters={})
     private Output<Boolean> jumboFrameCapable;
 
     /**
@@ -104,7 +104,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -118,7 +118,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -132,7 +132,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The ID of the AWS account that owns the connection.
      * 
      */
-    @OutputExport(name="ownerAccountId", type=String.class, parameters={})
+    @Export(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
     /**
@@ -146,7 +146,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the service provider associated with the connection.
      * 
      */
-    @OutputExport(name="providerName", type=String.class, parameters={})
+    @Export(name="providerName", type=String.class, parameters={})
     private Output<String> providerName;
 
     /**
@@ -160,7 +160,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -174,7 +174,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

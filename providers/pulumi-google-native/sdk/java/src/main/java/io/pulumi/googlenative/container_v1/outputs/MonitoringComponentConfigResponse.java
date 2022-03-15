@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringComponentConfigResponse {
     /**
      * Select components to collect metrics. An empty set would disable all monitoring.
@@ -16,8 +16,8 @@ public final class MonitoringComponentConfigResponse {
      */
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor
-    private MonitoringComponentConfigResponse(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
+    @CustomType.Constructor
+    private MonitoringComponentConfigResponse(@CustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 

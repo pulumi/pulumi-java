@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -29,7 +29,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -41,7 +41,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.QueryListResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrestoJobResponse {
     /**
      * Optional. Presto client tags to attach to this query
@@ -50,15 +50,15 @@ public final class PrestoJobResponse {
      */
     private final QueryListResponse queryList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrestoJobResponse(
-        @OutputCustomType.Parameter("clientTags") List<String> clientTags,
-        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
-        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
-        @OutputCustomType.Parameter("outputFormat") String outputFormat,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
-        @OutputCustomType.Parameter("queryList") QueryListResponse queryList) {
+        @CustomType.Parameter("clientTags") List<String> clientTags,
+        @CustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @CustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @CustomType.Parameter("outputFormat") String outputFormat,
+        @CustomType.Parameter("properties") Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") String queryFileUri,
+        @CustomType.Parameter("queryList") QueryListResponse queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;

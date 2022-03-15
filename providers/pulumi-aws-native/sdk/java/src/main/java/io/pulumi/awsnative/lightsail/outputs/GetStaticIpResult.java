@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStaticIpResult {
     /**
      * The instance where the static IP is attached.
@@ -29,12 +29,12 @@ public final class GetStaticIpResult {
     private final @Nullable Boolean isAttached;
     private final @Nullable String staticIpArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStaticIpResult(
-        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
-        @OutputCustomType.Parameter("staticIpArn") @Nullable String staticIpArn) {
+        @CustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @CustomType.Parameter("staticIpArn") @Nullable String staticIpArn) {
         this.attachedTo = attachedTo;
         this.ipAddress = ipAddress;
         this.isAttached = isAttached;

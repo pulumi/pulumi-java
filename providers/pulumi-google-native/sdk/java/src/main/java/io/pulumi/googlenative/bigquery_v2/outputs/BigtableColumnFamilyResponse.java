@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigtableColumnResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigtableColumnFamilyResponse {
     /**
      * [Optional] Lists of columns that should be exposed as individual fields as opposed to a list of (column name, value) pairs. All columns whose qualifier matches a qualifier in this list can be accessed as .. Other columns can be accessed as a list through .Column field.
@@ -38,13 +38,13 @@ public final class BigtableColumnFamilyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BigtableColumnFamilyResponse(
-        @OutputCustomType.Parameter("columns") List<BigtableColumnResponse> columns,
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("familyId") String familyId,
-        @OutputCustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("columns") List<BigtableColumnResponse> columns,
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("familyId") String familyId,
+        @CustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
+        @CustomType.Parameter("type") String type) {
         this.columns = columns;
         this.encoding = encoding;
         this.familyId = familyId;

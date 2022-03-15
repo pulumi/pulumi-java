@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1__XraiAttributionResponse extends io.pulumi.re
      * Number of steps for approximating the path integral. A good value to start is 50 and gradually increase until the sum to diff property is met within the desired error range.
      * 
      */
-    @InputImport(name="numIntegralSteps", required=true)
+    @Import(name="numIntegralSteps", required=true)
       private final Integer numIntegralSteps;
 
     public Integer getNumIntegralSteps() {

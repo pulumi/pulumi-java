@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorTermArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * AllowVolumeExpansion shows whether the storage class allow volume expand
      * 
      */
-    @InputImport(name="allowVolumeExpansion")
+    @Import(name="allowVolumeExpansion")
       private final @Nullable Output<Boolean> allowVolumeExpansion;
 
     public Output<Boolean> getAllowVolumeExpansion() {
@@ -34,7 +34,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Restrict the node topologies where volumes can be dynamically provisioned. Each volume plugin defines its own supported topology specifications. An empty TopologySelectorTerm list means there is no topology restriction. This field is only honored by servers that enable the VolumeScheduling feature.
      * 
      */
-    @InputImport(name="allowedTopologies")
+    @Import(name="allowedTopologies")
       private final @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
 
     public Output<List<TopologySelectorTermArgs>> getAllowedTopologies() {
@@ -45,7 +45,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -56,7 +56,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -67,7 +67,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -78,7 +78,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Dynamically provisioned PersistentVolumes of this storage class are created with these mountOptions, e.g. ["ro", "soft"]. Not validated - mount of the PVs will simply fail if one is invalid.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<List<String>> mountOptions;
 
     public Output<List<String>> getMountOptions() {
@@ -89,7 +89,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Parameters holds the parameters for the provisioner that should create volumes of this storage class.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -100,7 +100,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Provisioner indicates the type of the provisioner.
      * 
      */
-    @InputImport(name="provisioner", required=true)
+    @Import(name="provisioner", required=true)
       private final Output<String> provisioner;
 
     public Output<String> getProvisioner() {
@@ -111,7 +111,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * Dynamically provisioned PersistentVolumes of this storage class are created with this reclaimPolicy. Defaults to Delete.
      * 
      */
-    @InputImport(name="reclaimPolicy")
+    @Import(name="reclaimPolicy")
       private final @Nullable Output<String> reclaimPolicy;
 
     public Output<String> getReclaimPolicy() {
@@ -122,7 +122,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
      * VolumeBindingMode indicates how PersistentVolumeClaims should be provisioned and bound.  When unset, VolumeBindingImmediate is used. This field is only honored by servers that enable the VolumeScheduling feature.
      * 
      */
-    @InputImport(name="volumeBindingMode")
+    @Import(name="volumeBindingMode")
       private final @Nullable Output<String> volumeBindingMode;
 
     public Output<String> getVolumeBindingMode() {

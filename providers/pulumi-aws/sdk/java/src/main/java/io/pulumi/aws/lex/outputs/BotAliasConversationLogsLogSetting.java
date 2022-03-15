@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasConversationLogsLogSetting {
     /**
      * The destination where logs are delivered. Options are `CLOUDWATCH_LOGS` or `S3`.
@@ -37,13 +37,13 @@ public final class BotAliasConversationLogsLogSetting {
      */
     private final @Nullable String resourcePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasConversationLogsLogSetting(
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("logType") String logType,
-        @OutputCustomType.Parameter("resourceArn") String resourceArn,
-        @OutputCustomType.Parameter("resourcePrefix") @Nullable String resourcePrefix) {
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("logType") String logType,
+        @CustomType.Parameter("resourceArn") String resourceArn,
+        @CustomType.Parameter("resourcePrefix") @Nullable String resourcePrefix) {
         this.destination = destination;
         this.kmsKeyArn = kmsKeyArn;
         this.logType = logType;

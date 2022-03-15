@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.wafv2.enums.RegexPatternSetScope;
 import io.pulumi.awsnative.wafv2.inputs.RegexPatternSetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the entity.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,14 +32,14 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the RegexPatternSet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="regularExpressionList", required=true)
+    @Import(name="regularExpressionList", required=true)
       private final Output<List<String>> regularExpressionList;
 
     public Output<List<String>> getRegularExpressionList() {
@@ -50,14 +50,14 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * Use CLOUDFRONT for CloudFront RegexPatternSet, use REGIONAL for Application Load Balancer and API Gateway.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<RegexPatternSetScope> scope;
 
     public Output<RegexPatternSetScope> getScope() {
         return this.scope;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RegexPatternSetTagArgs>> tags;
 
     public Output<List<RegexPatternSetTagArgs>> getTags() {

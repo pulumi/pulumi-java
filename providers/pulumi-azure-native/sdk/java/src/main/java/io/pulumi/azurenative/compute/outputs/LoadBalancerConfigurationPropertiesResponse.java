@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerFrontendIPConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerConfigurationPropertiesResponse {
     /**
      * Specifies the frontend IP to be used for the load balancer. Only IPv4 frontend IP address is supported. Each load balancer configuration must have exactly one frontend IP configuration.
@@ -16,8 +16,8 @@ public final class LoadBalancerConfigurationPropertiesResponse {
      */
     private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
-    @OutputCustomType.Constructor
-    private LoadBalancerConfigurationPropertiesResponse(@OutputCustomType.Parameter("frontendIPConfigurations") List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
+    @CustomType.Constructor
+    private LoadBalancerConfigurationPropertiesResponse(@CustomType.Parameter("frontendIPConfigurations") List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
         this.frontendIPConfigurations = frontendIPConfigurations;
     }
 

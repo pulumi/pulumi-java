@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig {
     /**
      * Optional. A target for the deployment.
@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig(@OutputCustomType.Parameter("namespacedGkeDeploymentTarget") @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
+    @CustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig(@CustomType.Parameter("namespacedGkeDeploymentTarget") @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
         this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
     }
 

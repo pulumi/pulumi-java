@@ -6,14 +6,14 @@ package io.pulumi.aws.ec2.outputs;
 import io.pulumi.aws.ec2.outputs.GetRouteTableAssociation;
 import io.pulumi.aws.ec2.outputs.GetRouteTableFilter;
 import io.pulumi.aws.ec2.outputs.GetRouteTableRoute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteTableResult {
     /**
      * ARN of the route table.
@@ -59,19 +59,19 @@ public final class GetRouteTableResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteTableResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("associations") List<GetRouteTableAssociation> associations,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
-        @OutputCustomType.Parameter("gatewayId") String gatewayId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("routeTableId") String routeTableId,
-        @OutputCustomType.Parameter("routes") List<GetRouteTableRoute> routes,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("associations") List<GetRouteTableAssociation> associations,
+        @CustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
+        @CustomType.Parameter("gatewayId") String gatewayId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("routeTableId") String routeTableId,
+        @CustomType.Parameter("routes") List<GetRouteTableRoute> routes,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.associations = associations;
         this.filters = filters;

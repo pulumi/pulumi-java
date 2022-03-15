@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * CPU limits in cores. At present, only full cores are supported.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
@@ -33,7 +33,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The memory limit in GB.
      * 
      */
-    @InputImport(name="memoryInGB")
+    @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;
 
     public Output<Double> getMemoryInGB() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.EventHandlerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebPubSubHubPropertiesResponse {
     /**
      * The settings for configuring if anonymous connections are allowed for this hub: "allow" or "deny". Default to "deny".
@@ -24,10 +24,10 @@ public final class WebPubSubHubPropertiesResponse {
      */
     private final @Nullable List<EventHandlerResponse> eventHandlers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebPubSubHubPropertiesResponse(
-        @OutputCustomType.Parameter("anonymousConnectPolicy") @Nullable String anonymousConnectPolicy,
-        @OutputCustomType.Parameter("eventHandlers") @Nullable List<EventHandlerResponse> eventHandlers) {
+        @CustomType.Parameter("anonymousConnectPolicy") @Nullable String anonymousConnectPolicy,
+        @CustomType.Parameter("eventHandlers") @Nullable List<EventHandlerResponse> eventHandlers) {
         this.anonymousConnectPolicy = anonymousConnectPolicy;
         this.eventHandlers = eventHandlers;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiscoveryResponse {
     /**
      * Immutable. The kind of analysis that is handled by this discovery.
@@ -15,8 +15,8 @@ public final class DiscoveryResponse {
      */
     private final String analysisKind;
 
-    @OutputCustomType.Constructor
-    private DiscoveryResponse(@OutputCustomType.Parameter("analysisKind") String analysisKind) {
+    @CustomType.Constructor
+    private DiscoveryResponse(@CustomType.Parameter("analysisKind") String analysisKind) {
         this.analysisKind = analysisKind;
     }
 

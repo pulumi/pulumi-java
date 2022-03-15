@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.DeploymentInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.DeploymentSettingsResponse;
 import io.pulumi.azurenative.appplatform.inputs.UserSourceInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Indicates whether the Deployment is active
      * 
      */
-    @InputImport(name="active", required=true)
+    @Import(name="active", required=true)
       private final Boolean active;
 
     public Boolean getActive() {
@@ -38,7 +38,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * App name of the deployment
      * 
      */
-    @InputImport(name="appName", required=true)
+    @Import(name="appName", required=true)
       private final String appName;
 
     public String getAppName() {
@@ -49,7 +49,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Date time when the resource is created
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -60,7 +60,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Deployment settings of the Deployment
      * 
      */
-    @InputImport(name="deploymentSettings")
+    @Import(name="deploymentSettings")
       private final @Nullable DeploymentSettingsResponse deploymentSettings;
 
     public Optional<DeploymentSettingsResponse> getDeploymentSettings() {
@@ -71,7 +71,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Collection of instances belong to the Deployment
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<DeploymentInstanceResponse> instances;
 
     public List<DeploymentInstanceResponse> getInstances() {
@@ -82,7 +82,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Provisioning state of the Deployment
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -93,7 +93,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Uploaded source information of the deployment.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable UserSourceInfoResponse source;
 
     public Optional<UserSourceInfoResponse> getSource() {
@@ -104,7 +104,7 @@ public final class DeploymentResourcePropertiesResponse extends io.pulumi.resour
      * Status of the Deployment
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

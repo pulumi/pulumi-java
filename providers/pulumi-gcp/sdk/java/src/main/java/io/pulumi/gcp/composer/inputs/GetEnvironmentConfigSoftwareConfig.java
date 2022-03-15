@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -14,42 +14,42 @@ public final class GetEnvironmentConfigSoftwareConfig extends io.pulumi.resource
 
     public static final GetEnvironmentConfigSoftwareConfig Empty = new GetEnvironmentConfigSoftwareConfig();
 
-    @InputImport(name="airflowConfigOverrides", required=true)
+    @Import(name="airflowConfigOverrides", required=true)
       private final Map<String,String> airflowConfigOverrides;
 
     public Map<String,String> getAirflowConfigOverrides() {
         return this.airflowConfigOverrides;
     }
 
-    @InputImport(name="envVariables", required=true)
+    @Import(name="envVariables", required=true)
       private final Map<String,String> envVariables;
 
     public Map<String,String> getEnvVariables() {
         return this.envVariables;
     }
 
-    @InputImport(name="imageVersion", required=true)
+    @Import(name="imageVersion", required=true)
       private final String imageVersion;
 
     public String getImageVersion() {
         return this.imageVersion;
     }
 
-    @InputImport(name="pypiPackages", required=true)
+    @Import(name="pypiPackages", required=true)
       private final Map<String,String> pypiPackages;
 
     public Map<String,String> getPypiPackages() {
         return this.pypiPackages;
     }
 
-    @InputImport(name="pythonVersion", required=true)
+    @Import(name="pythonVersion", required=true)
       private final String pythonVersion;
 
     public String getPythonVersion() {
         return this.pythonVersion;
     }
 
-    @InputImport(name="schedulerCount", required=true)
+    @Import(name="schedulerCount", required=true)
       private final Integer schedulerCount;
 
     public Integer getSchedulerCount() {

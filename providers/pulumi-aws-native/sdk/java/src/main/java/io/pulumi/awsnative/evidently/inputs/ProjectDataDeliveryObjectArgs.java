@@ -5,7 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.inputs.ProjectS3DestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
 
     public static final ProjectDataDeliveryObjectArgs Empty = new ProjectDataDeliveryObjectArgs();
 
-    @InputImport(name="logGroup")
+    @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
     public Output<String> getLogGroup() {
         return this.logGroup == null ? Output.empty() : this.logGroup;
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<ProjectS3DestinationArgs> s3;
 
     public Output<ProjectS3DestinationArgs> getS3() {

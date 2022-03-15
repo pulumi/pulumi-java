@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.delegatednetwork.ControllerDetailsArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * dnc application id should be used by customer to authenticate with dnc gateway.
      * 
      */
-    @OutputExport(name="dncAppId", type=String.class, parameters={})
+    @Export(name="dncAppId", type=String.class, parameters={})
     private Output<String> dncAppId;
 
     /**
@@ -49,7 +49,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * dnc endpoint url that customers can use to connect to
      * 
      */
-    @OutputExport(name="dncEndpoint", type=String.class, parameters={})
+    @Export(name="dncEndpoint", type=String.class, parameters={})
     private Output<String> dncEndpoint;
 
     /**
@@ -63,7 +63,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * tenant id of dnc application id
      * 
      */
-    @OutputExport(name="dncTenantId", type=String.class, parameters={})
+    @Export(name="dncTenantId", type=String.class, parameters={})
     private Output<String> dncTenantId;
 
     /**
@@ -77,7 +77,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -91,7 +91,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * The current state of dnc controller resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * Resource guid.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -133,7 +133,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class ControllerDetails extends io.pulumi.resources.CustomResource {
      * The type of resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

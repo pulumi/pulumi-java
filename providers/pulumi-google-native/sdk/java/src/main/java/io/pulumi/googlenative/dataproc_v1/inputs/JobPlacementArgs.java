@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Cluster labels to identify a cluster where the job will be submitted.
      * 
      */
-    @InputImport(name="clusterLabels")
+    @Import(name="clusterLabels")
       private final @Nullable Output<Map<String,String>> clusterLabels;
 
     public Output<Map<String,String>> getClusterLabels() {
@@ -34,7 +34,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster where the job will be submitted.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {

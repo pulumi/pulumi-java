@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WarningResponse {
     /**
      * The priority for this warning.
@@ -20,10 +20,10 @@ public final class WarningResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WarningResponse(
-        @OutputCustomType.Parameter("priority") String priority,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("priority") String priority,
+        @CustomType.Parameter("text") String text) {
         this.priority = priority;
         this.text = text;
     }

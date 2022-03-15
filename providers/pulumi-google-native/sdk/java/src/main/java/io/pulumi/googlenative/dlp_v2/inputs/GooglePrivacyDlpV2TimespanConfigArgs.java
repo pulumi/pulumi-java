@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * When the job is started by a JobTrigger we will automatically figure out a valid start_time to avoid scanning files that have not been modified since the last time the JobTrigger executed. This will be based on the time of the execution of the last run of the JobTrigger.
      * 
      */
-    @InputImport(name="enableAutoPopulationOfTimespanConfig")
+    @Import(name="enableAutoPopulationOfTimespanConfig")
       private final @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
 
     public Output<Boolean> getEnableAutoPopulationOfTimespanConfig() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * Exclude files, tables, or rows newer than this value. If not set, no upper time limit is applied.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * Exclude files, tables, or rows older than this value. If not set, no lower time limit is applied.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
      * Specification of the field containing the timestamp of scanned items. Used for data sources like Datastore and BigQuery. For BigQuery: If this value is not specified and the table was modified between the given start and end times, the entire table will be scanned. If this value is specified, then rows are filtered based on the given start and end times. Rows with a `NULL` value in the provided BigQuery column are skipped. Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`, `TIMESTAMP`, and `DATETIME`. For Datastore: If this value is specified, then entities are filtered based on the given start and end times. If an entity does not contain the provided timestamp property or contains empty or invalid values, then it is included. Valid data types of the provided timestamp property are: `TIMESTAMP`.
      * 
      */
-    @InputImport(name="timestampField")
+    @Import(name="timestampField")
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> timestampField;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getTimestampField() {

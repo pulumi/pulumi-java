@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.TopicArgs;
@@ -25,7 +25,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published on this topic. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
@@ -39,7 +39,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -53,7 +53,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Indicates the minimum duration to retain a message after it is published to the topic. If this field is set, messages published to the topic in the last `message_retention_duration` are always available to subscribers. For instance, it allows any attached subscription to [seek to a timestamp](https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) that is up to `message_retention_duration` in the past. If this field is not set, message retention is controlled by settings on individual subscriptions. Cannot be more than 31 days or less than 10 minutes.
      * 
      */
-    @OutputExport(name="messageRetentionDuration", type=String.class, parameters={})
+    @Export(name="messageRetentionDuration", type=String.class, parameters={})
     private Output<String> messageRetentionDuration;
 
     /**
@@ -67,7 +67,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect.
      * 
      */
-    @OutputExport(name="messageStoragePolicy", type=MessageStoragePolicyResponse.class, parameters={})
+    @Export(name="messageStoragePolicy", type=MessageStoragePolicyResponse.class, parameters={})
     private Output<MessageStoragePolicyResponse> messageStoragePolicy;
 
     /**
@@ -81,7 +81,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -109,7 +109,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Settings for validating messages published against a schema.
      * 
      */
-    @OutputExport(name="schemaSettings", type=SchemaSettingsResponse.class, parameters={})
+    @Export(name="schemaSettings", type=SchemaSettingsResponse.class, parameters={})
     private Output<SchemaSettingsResponse> schemaSettings;
 
     /**

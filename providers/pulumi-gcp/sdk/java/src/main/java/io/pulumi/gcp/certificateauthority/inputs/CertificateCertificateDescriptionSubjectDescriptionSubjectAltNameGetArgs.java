@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
 
     public static final CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs();
 
-    @InputImport(name="customSans")
+    @Import(name="customSans")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs>> customSans;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanGetArgs>> getCustomSans() {
@@ -27,7 +27,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * Contains only valid, fully-qualified host names.
      * 
      */
-    @InputImport(name="dnsNames")
+    @Import(name="dnsNames")
       private final @Nullable Output<List<String>> dnsNames;
 
     public Output<List<String>> getDnsNames() {
@@ -38,7 +38,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * Contains only valid RFC 2822 E-mail addresses.
      * 
      */
-    @InputImport(name="emailAddresses")
+    @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
     public Output<List<String>> getEmailAddresses() {
@@ -49,7 +49,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
@@ -60,7 +60,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * Contains only valid RFC 3986 URIs.
      * 
      */
-    @InputImport(name="uris")
+    @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
     public Output<List<String>> getUris() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteGatewayPropertiesResponseBounds;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
     /**
      * Minimum and maximum number of scale units to deploy.
@@ -17,8 +17,8 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
      */
     private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
-    @OutputCustomType.Constructor
-    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@OutputCustomType.Parameter("bounds") @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
+    @CustomType.Constructor
+    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@CustomType.Parameter("bounds") @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
         this.bounds = bounds;
     }
 

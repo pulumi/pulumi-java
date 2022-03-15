@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicySkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
      * Tier of Firewall Policy.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,FirewallPolicySkuTier>> tier;
 
     public Output<Either<String,FirewallPolicySkuTier>> getTier() {

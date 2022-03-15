@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileDatadogConnectorProfileCredentials {
     /**
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
@@ -20,10 +20,10 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
      */
     private final String applicationKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileDatadogConnectorProfileCredentials(
-        @OutputCustomType.Parameter("apiKey") String apiKey,
-        @OutputCustomType.Parameter("applicationKey") String applicationKey) {
+        @CustomType.Parameter("apiKey") String apiKey,
+        @CustomType.Parameter("applicationKey") String applicationKey) {
         this.apiKey = apiKey;
         this.applicationKey = applicationKey;
     }

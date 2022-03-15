@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceCircuitBreakersConnectTimeout;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionBackendServiceCircuitBreakers {
     /**
      * The timeout for new network connections to hosts.
@@ -51,14 +51,14 @@ public final class RegionBackendServiceCircuitBreakers {
      */
     private final @Nullable Integer maxRetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionBackendServiceCircuitBreakers(
-        @OutputCustomType.Parameter("connectTimeout") @Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout,
-        @OutputCustomType.Parameter("maxConnections") @Nullable Integer maxConnections,
-        @OutputCustomType.Parameter("maxPendingRequests") @Nullable Integer maxPendingRequests,
-        @OutputCustomType.Parameter("maxRequests") @Nullable Integer maxRequests,
-        @OutputCustomType.Parameter("maxRequestsPerConnection") @Nullable Integer maxRequestsPerConnection,
-        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries) {
+        @CustomType.Parameter("connectTimeout") @Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout,
+        @CustomType.Parameter("maxConnections") @Nullable Integer maxConnections,
+        @CustomType.Parameter("maxPendingRequests") @Nullable Integer maxPendingRequests,
+        @CustomType.Parameter("maxRequests") @Nullable Integer maxRequests,
+        @CustomType.Parameter("maxRequestsPerConnection") @Nullable Integer maxRequestsPerConnection,
+        @CustomType.Parameter("maxRetries") @Nullable Integer maxRetries) {
         this.connectTimeout = connectTimeout;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;

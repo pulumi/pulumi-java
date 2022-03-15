@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ContainerServiceSshPublicKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerServiceSshConfigurationResponse {
     /**
      * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
@@ -16,8 +16,8 @@ public final class ContainerServiceSshConfigurationResponse {
      */
     private final List<ContainerServiceSshPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor
-    private ContainerServiceSshConfigurationResponse(@OutputCustomType.Parameter("publicKeys") List<ContainerServiceSshPublicKeyResponse> publicKeys) {
+    @CustomType.Constructor
+    private ContainerServiceSshConfigurationResponse(@CustomType.Parameter("publicKeys") List<ContainerServiceSshPublicKeyResponse> publicKeys) {
         this.publicKeys = publicKeys;
     }
 

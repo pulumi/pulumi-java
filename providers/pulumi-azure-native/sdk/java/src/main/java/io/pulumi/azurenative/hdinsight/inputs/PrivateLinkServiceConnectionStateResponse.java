@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * Whether there is further actions.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
@@ -33,7 +33,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * The optional description of the status.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * The concrete private link service connection.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

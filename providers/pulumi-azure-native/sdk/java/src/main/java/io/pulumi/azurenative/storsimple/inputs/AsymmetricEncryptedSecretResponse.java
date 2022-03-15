@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
      * The algorithm used to encrypt "Value".
      * 
      */
-    @InputImport(name="encryptionAlgorithm", required=true)
+    @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
 
     public String getEncryptionAlgorithm() {
@@ -33,7 +33,7 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
      * Thumbprint certificate that was used to encrypt "Value". If the value in unencrypted, it will be null.
      * 
      */
-    @InputImport(name="encryptionCertThumbprint")
+    @Import(name="encryptionCertThumbprint")
       private final @Nullable String encryptionCertThumbprint;
 
     public Optional<String> getEncryptionCertThumbprint() {
@@ -44,7 +44,7 @@ public final class AsymmetricEncryptedSecretResponse extends io.pulumi.resources
      * The value of the secret.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

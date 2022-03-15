@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
 
     public static final NamespaceConditionArgs Empty = new NamespaceConditionArgs();
 
-    @InputImport(name="lastTransitionTime")
+    @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
     public Output<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Output.empty() : this.lastTransitionTime;
     }
 
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
         return this.message == null ? Output.empty() : this.message;
     }
 
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -43,7 +43,7 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
      * Status of the condition, one of True, False, Unknown.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {
@@ -61,7 +61,7 @@ public final class NamespaceConditionArgs extends io.pulumi.resources.ResourceAr
      *  - `"NamespaceFinalizersRemaining"` contains information about which finalizers are on resources remaining in a namespace.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

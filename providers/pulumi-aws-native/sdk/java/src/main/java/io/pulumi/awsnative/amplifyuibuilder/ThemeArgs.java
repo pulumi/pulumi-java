@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplifyuibuilder;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValuesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeArgs Empty = new ThemeArgs();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="overrides")
+    @Import(name="overrides")
       private final @Nullable Output<List<ThemeValuesArgs>> overrides;
 
     public Output<List<ThemeValuesArgs>> getOverrides() {
         return this.overrides == null ? Output.empty() : this.overrides;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<ThemeTagsArgs> tags;
 
     public Output<ThemeTagsArgs> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<ThemeValuesArgs>> values;
 
     public Output<List<ThemeValuesArgs>> getValues() {

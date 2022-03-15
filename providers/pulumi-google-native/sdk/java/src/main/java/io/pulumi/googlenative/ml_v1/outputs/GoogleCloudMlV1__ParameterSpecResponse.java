@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__ParameterSpecResponse {
     /**
      * Required if type is `CATEGORICAL`. The list of possible categories.
@@ -47,15 +47,15 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__ParameterSpecResponse(
-        @OutputCustomType.Parameter("categoricalValues") List<String> categoricalValues,
-        @OutputCustomType.Parameter("discreteValues") List<Double> discreteValues,
-        @OutputCustomType.Parameter("maxValue") Double maxValue,
-        @OutputCustomType.Parameter("minValue") Double minValue,
-        @OutputCustomType.Parameter("parameterName") String parameterName,
-        @OutputCustomType.Parameter("scaleType") String scaleType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("categoricalValues") List<String> categoricalValues,
+        @CustomType.Parameter("discreteValues") List<Double> discreteValues,
+        @CustomType.Parameter("maxValue") Double maxValue,
+        @CustomType.Parameter("minValue") Double minValue,
+        @CustomType.Parameter("parameterName") String parameterName,
+        @CustomType.Parameter("scaleType") String scaleType,
+        @CustomType.Parameter("type") String type) {
         this.categoricalValues = categoricalValues;
         this.discreteValues = discreteValues;
         this.maxValue = maxValue;

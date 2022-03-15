@@ -3,21 +3,21 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThingGroupMetadataRootToParentGroup {
     private final @Nullable String groupArn;
     private final @Nullable String groupName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThingGroupMetadataRootToParentGroup(
-        @OutputCustomType.Parameter("groupArn") @Nullable String groupArn,
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName) {
+        @CustomType.Parameter("groupArn") @Nullable String groupArn,
+        @CustomType.Parameter("groupName") @Nullable String groupName) {
         this.groupArn = groupArn;
         this.groupName = groupName;
     }

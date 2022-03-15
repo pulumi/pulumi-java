@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * of the Project.
      * 
      */
-    @InputImport(name="enrolledAncestor")
+    @Import(name="enrolledAncestor")
       private final @Nullable Output<Boolean> enrolledAncestor;
 
     public Output<Boolean> getEnrolledAncestor() {
@@ -37,7 +37,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="enrolledServices")
+    @Import(name="enrolledServices")
       private final @Nullable Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> enrolledServices;
 
     public Output<List<AccessApprovalSettingsEnrolledServiceGetArgs>> getEnrolledServices() {
@@ -48,7 +48,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * resources of that resource. A maximum of 50 email addresses are allowed.
      * 
      */
-    @InputImport(name="notificationEmails")
+    @Import(name="notificationEmails")
       private final @Nullable Output<List<String>> notificationEmails;
 
     public Output<List<String>> getNotificationEmails() {
@@ -78,7 +78,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @Deprecated /* Deprecated in favor of `project_id` */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
@@ -90,7 +90,7 @@ public final class AccessApprovalSettingsState extends io.pulumi.resources.Resou
      * ID of the project of the access approval settings.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {

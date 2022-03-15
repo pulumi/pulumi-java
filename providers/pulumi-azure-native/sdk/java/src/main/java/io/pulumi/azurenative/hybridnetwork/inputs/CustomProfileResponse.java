@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CustomProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Path for metadata configuration.
      * 
      */
-    @InputImport(name="metadataConfigurationPath")
+    @Import(name="metadataConfigurationPath")
       private final @Nullable String metadataConfigurationPath;
 
     public Optional<String> getMetadataConfigurationPath() {

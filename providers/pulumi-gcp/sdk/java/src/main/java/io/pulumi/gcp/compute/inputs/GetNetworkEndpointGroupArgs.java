@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * Provide either this or a `self_link`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -31,7 +31,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -42,7 +42,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * The Network Endpoint Group self\_link.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable String selfLink;
 
     public Optional<String> getSelfLink() {
@@ -53,7 +53,7 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
      * The Network Endpoint Group availability zone.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable String zone;
 
     public Optional<String> getZone() {

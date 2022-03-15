@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.FlowSchemaConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
      * `conditions` is a list of the current states of FlowSchema.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
     public Output<List<FlowSchemaConditionArgs>> getConditions() {

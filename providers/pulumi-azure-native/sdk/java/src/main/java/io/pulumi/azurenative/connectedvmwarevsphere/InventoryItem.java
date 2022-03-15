@@ -8,7 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.InventoryItemArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * They inventory type.
      * 
      */
-    @OutputExport(name="inventoryType", type=String.class, parameters={})
+    @Export(name="inventoryType", type=String.class, parameters={})
     private Output<String> inventoryType;
 
     /**
@@ -49,7 +49,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -63,7 +63,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
      */
-    @OutputExport(name="managedResourceId", type=String.class, parameters={})
+    @Export(name="managedResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceId;
 
     /**
@@ -77,7 +77,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * Gets or sets the vCenter Managed Object name for the inventory item.
      * 
      */
-    @OutputExport(name="moName", type=String.class, parameters={})
+    @Export(name="moName", type=String.class, parameters={})
     private Output</* @Nullable */ String> moName;
 
     /**
@@ -91,7 +91,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
      */
-    @OutputExport(name="moRefId", type=String.class, parameters={})
+    @Export(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
     /**
@@ -105,7 +105,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -133,7 +133,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -147,7 +147,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

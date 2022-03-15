@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * Defaults to [0]. A list of possible return values that the program can return to indicate a success.
      * 
      */
-    @InputImport(name="allowedExitCodes")
+    @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
     public Output<List<Integer>> getAllowedExitCodes() {
@@ -35,7 +35,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * Arguments to be passed to the provided executable.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -46,7 +46,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId")
+    @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
 
     public Output<String> getArtifactId() {
@@ -57,7 +57,7 @@ public final class SoftwareRecipeStepExecFileArgs extends io.pulumi.resources.Re
      * The absolute path of the file on the local filesystem.
      * 
      */
-    @InputImport(name="localPath")
+    @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
     public Output<String> getLocalPath() {

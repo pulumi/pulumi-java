@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.AlertsSuppressionRuleArgs;
 import io.pulumi.azurenative.security.outputs.SuppressionAlertsScopeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * Type of the alert to automatically suppress. For all alert types, use '*'
      * 
      */
-    @OutputExport(name="alertType", type=String.class, parameters={})
+    @Export(name="alertType", type=String.class, parameters={})
     private Output<String> alertType;
 
     /**
@@ -49,7 +49,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * Any comment regarding the rule
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
@@ -63,7 +63,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
      */
-    @OutputExport(name="expirationDateUtc", type=String.class, parameters={})
+    @Export(name="expirationDateUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDateUtc;
 
     /**
@@ -77,7 +77,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * The last time this rule was modified
      * 
      */
-    @OutputExport(name="lastModifiedUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
@@ -91,7 +91,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * The reason for dismissing the alert
      * 
      */
-    @OutputExport(name="reason", type=String.class, parameters={})
+    @Export(name="reason", type=String.class, parameters={})
     private Output<String> reason;
 
     /**
@@ -119,7 +119,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * Possible states of the rule
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -133,7 +133,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * The suppression conditions
      * 
      */
-    @OutputExport(name="suppressionAlertsScope", type=SuppressionAlertsScopeResponse.class, parameters={})
+    @Export(name="suppressionAlertsScope", type=SuppressionAlertsScopeResponse.class, parameters={})
     private Output</* @Nullable */ SuppressionAlertsScopeResponse> suppressionAlertsScope;
 
     /**
@@ -147,7 +147,7 @@ public class AlertsSuppressionRule extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

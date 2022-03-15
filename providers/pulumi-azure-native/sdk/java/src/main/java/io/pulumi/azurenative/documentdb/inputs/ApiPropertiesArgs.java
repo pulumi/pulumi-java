@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.ServerVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the ServerVersion of an a MongoDB account.
      * 
      */
-    @InputImport(name="serverVersion")
+    @Import(name="serverVersion")
       private final @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
     public Output<Either<String,ServerVersion>> getServerVersion() {

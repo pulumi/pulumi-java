@@ -5,14 +5,14 @@ package io.pulumi.azurenative.loadtestservice.outputs;
 
 import io.pulumi.azurenative.loadtestservice.outputs.SystemAssignedServiceIdentityResponse;
 import io.pulumi.azurenative.loadtestservice.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadTestResult {
     /**
      * Resource data plane URI.
@@ -65,18 +65,18 @@ public final class GetLoadTestResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadTestResult(
-        @OutputCustomType.Parameter("dataPlaneURI") String dataPlaneURI,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable SystemAssignedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataPlaneURI") String dataPlaneURI,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable SystemAssignedServiceIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.dataPlaneURI = dataPlaneURI;
         this.description = description;
         this.id = id;

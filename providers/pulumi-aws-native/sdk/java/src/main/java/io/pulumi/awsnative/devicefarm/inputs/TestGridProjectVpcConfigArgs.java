@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
      * A list of VPC security group IDs in your Amazon VPC.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -33,14 +33,14 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
      * A list of VPC subnet IDs in your Amazon VPC.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

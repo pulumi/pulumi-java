@@ -15,7 +15,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyResponse;
 import io.pulumi.azurenative.databox.inputs.PackageShippingDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.PreferencesResponse;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Shared access key to download the chain of custody logs
      * 
      */
-    @InputImport(name="chainOfCustodySasKey", required=true)
+    @Import(name="chainOfCustodySasKey", required=true)
       private final String chainOfCustodySasKey;
 
     public String getChainOfCustodySasKey() {
@@ -49,7 +49,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Contact details for notification and shipping.
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse getContactDetails() {
@@ -60,7 +60,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * List of copy log details.
      * 
      */
-    @InputImport(name="copyLogDetails", required=true)
+    @Import(name="copyLogDetails", required=true)
       private final List<Object> copyLogDetails;
 
     public List<Object> getCopyLogDetails() {
@@ -71,7 +71,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Copy progress per disk.
      * 
      */
-    @InputImport(name="copyProgress", required=true)
+    @Import(name="copyProgress", required=true)
       private final List<DataBoxDiskCopyProgressResponse> copyProgress;
 
     public List<DataBoxDiskCopyProgressResponse> getCopyProgress() {
@@ -82,7 +82,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Details of the data to be exported from azure.
      * 
      */
-    @InputImport(name="dataExportDetails")
+    @Import(name="dataExportDetails")
       private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
     public List<DataExportDetailsResponse> getDataExportDetails() {
@@ -93,7 +93,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Details of the data to be imported into azure.
      * 
      */
-    @InputImport(name="dataImportDetails")
+    @Import(name="dataImportDetails")
       private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
     public List<DataImportDetailsResponse> getDataImportDetails() {
@@ -104,7 +104,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Delivery package shipping details.
      * 
      */
-    @InputImport(name="deliveryPackage", required=true)
+    @Import(name="deliveryPackage", required=true)
       private final PackageShippingDetailsResponse deliveryPackage;
 
     public PackageShippingDetailsResponse getDeliveryPackage() {
@@ -115,7 +115,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Contains the map of disk serial number to the disk size being used for the job. Is returned only after the disks are shipped to the customer.
      * 
      */
-    @InputImport(name="disksAndSizeDetails", required=true)
+    @Import(name="disksAndSizeDetails", required=true)
       private final Map<String,Integer> disksAndSizeDetails;
 
     public Map<String,Integer> getDisksAndSizeDetails() {
@@ -126,7 +126,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
      */
-    @InputImport(name="expectedDataSizeInTeraBytes")
+    @Import(name="expectedDataSizeInTeraBytes")
       private final @Nullable Integer expectedDataSizeInTeraBytes;
 
     public Optional<Integer> getExpectedDataSizeInTeraBytes() {
@@ -138,7 +138,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Expected value is 'DataBoxDisk'.
      * 
      */
-    @InputImport(name="jobDetailsType", required=true)
+    @Import(name="jobDetailsType", required=true)
       private final String jobDetailsType;
 
     public String getJobDetailsType() {
@@ -149,7 +149,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * List of stages that run in the job.
      * 
      */
-    @InputImport(name="jobStages", required=true)
+    @Import(name="jobStages", required=true)
       private final List<JobStagesResponse> jobStages;
 
     public List<JobStagesResponse> getJobStages() {
@@ -160,7 +160,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Details about which key encryption type is being used.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
     public Optional<KeyEncryptionKeyResponse> getKeyEncryptionKey() {
@@ -171,7 +171,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * User entered passkey for DataBox Disk job.
      * 
      */
-    @InputImport(name="passkey")
+    @Import(name="passkey")
       private final @Nullable String passkey;
 
     public Optional<String> getPasskey() {
@@ -182,7 +182,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Preferences for the order.
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> getPreferences() {
@@ -193,7 +193,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * User preference on what size disks are needed for the job. The map is from the disk size in TB to the count. Eg. {2,5} means 5 disks of 2 TB size. Key is string but will be checked against an int.
      * 
      */
-    @InputImport(name="preferredDisks")
+    @Import(name="preferredDisks")
       private final @Nullable Map<String,Integer> preferredDisks;
 
     public Map<String,Integer> getPreferredDisks() {
@@ -204,7 +204,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Return package shipping details.
      * 
      */
-    @InputImport(name="returnPackage", required=true)
+    @Import(name="returnPackage", required=true)
       private final PackageShippingDetailsResponse returnPackage;
 
     public PackageShippingDetailsResponse getReturnPackage() {
@@ -215,7 +215,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Shared access key to download the return shipment label
      * 
      */
-    @InputImport(name="reverseShipmentLabelSasKey", required=true)
+    @Import(name="reverseShipmentLabelSasKey", required=true)
       private final String reverseShipmentLabelSasKey;
 
     public String getReverseShipmentLabelSasKey() {
@@ -226,7 +226,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * Shipping address of the customer.
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> getShippingAddress() {

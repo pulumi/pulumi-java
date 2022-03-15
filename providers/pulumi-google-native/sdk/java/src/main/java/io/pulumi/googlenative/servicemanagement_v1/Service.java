@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicemanagement_v1.ServiceArgs;
@@ -22,7 +22,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * ID of the project that produces and owns this service.
      * 
      */
-    @OutputExport(name="producerProjectId", type=String.class, parameters={})
+    @Export(name="producerProjectId", type=String.class, parameters={})
     private Output<String> producerProjectId;
 
     /**
@@ -36,7 +36,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the service. See the [overview](/service-management/overview) for naming requirements.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**

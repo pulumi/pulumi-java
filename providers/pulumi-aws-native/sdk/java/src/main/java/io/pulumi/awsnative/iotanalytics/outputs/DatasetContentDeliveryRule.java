@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetContentDeliveryRuleDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetContentDeliveryRule {
     private final DatasetContentDeliveryRuleDestination destination;
     private final @Nullable String entryName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetContentDeliveryRule(
-        @OutputCustomType.Parameter("destination") DatasetContentDeliveryRuleDestination destination,
-        @OutputCustomType.Parameter("entryName") @Nullable String entryName) {
+        @CustomType.Parameter("destination") DatasetContentDeliveryRuleDestination destination,
+        @CustomType.Parameter("entryName") @Nullable String entryName) {
         this.destination = destination;
         this.entryName = entryName;
     }

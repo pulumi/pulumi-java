@@ -7,7 +7,7 @@ import io.pulumi.azurenative.iotsecurity.enums.OnboardingKind;
 import io.pulumi.azurenative.iotsecurity.inputs.DefenderSettingsPropertiesMdeIntegrationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * Size of the device quota. Value is required to be in multiples of 100.
      * 
      */
-    @InputImport(name="deviceQuota", required=true)
+    @Import(name="deviceQuota", required=true)
       private final Output<Integer> deviceQuota;
 
     public Output<Integer> getDeviceQuota() {
@@ -33,7 +33,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * MDE integration configuration
      * 
      */
-    @InputImport(name="mdeIntegration", required=true)
+    @Import(name="mdeIntegration", required=true)
       private final Output<DefenderSettingsPropertiesMdeIntegrationArgs> mdeIntegration;
 
     public Output<DefenderSettingsPropertiesMdeIntegrationArgs> getMdeIntegration() {
@@ -44,7 +44,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * The kind of onboarding for the subscription
      * 
      */
-    @InputImport(name="onboardingKind", required=true)
+    @Import(name="onboardingKind", required=true)
       private final Output<Either<String,OnboardingKind>> onboardingKind;
 
     public Output<Either<String,OnboardingKind>> getOnboardingKind() {
@@ -55,7 +55,7 @@ public final class DefenderSettingArgs extends io.pulumi.resources.ResourceArgs 
      * Sentinel Workspace Resource Ids
      * 
      */
-    @InputImport(name="sentinelWorkspaceResourceIds", required=true)
+    @Import(name="sentinelWorkspaceResourceIds", required=true)
       private final Output<List<String>> sentinelWorkspaceResourceIds;
 
     public Output<List<String>> getSentinelWorkspaceResourceIds() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.DirectConnectionResponse;
 import io.pulumi.azurenative.peering.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
      * The set of connections that constitute a direct peering.
      * 
      */
-    @InputImport(name="connections")
+    @Import(name="connections")
       private final @Nullable List<DirectConnectionResponse> connections;
 
     public List<DirectConnectionResponse> getConnections() {
@@ -37,7 +37,7 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
      * The type of direct peering.
      * 
      */
-    @InputImport(name="directPeeringType")
+    @Import(name="directPeeringType")
       private final @Nullable String directPeeringType;
 
     public Optional<String> getDirectPeeringType() {
@@ -48,7 +48,7 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
      * The reference of the peer ASN.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable SubResourceResponse peerAsn;
 
     public Optional<SubResourceResponse> getPeerAsn() {
@@ -59,7 +59,7 @@ public final class PeeringPropertiesDirectResponse extends io.pulumi.resources.I
      * The flag that indicates whether or not the peering is used for peering service.
      * 
      */
-    @InputImport(name="useForPeeringService", required=true)
+    @Import(name="useForPeeringService", required=true)
       private final Boolean useForPeeringService;
 
     public Boolean getUseForPeeringService() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
     /**
      * If set to true, contributors will have the option to select sentiment of the label they selected, to mark it as negative or positive label. Default is false.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
      */
     private final Boolean enableLabelSentimentSelection;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse(@OutputCustomType.Parameter("enableLabelSentimentSelection") Boolean enableLabelSentimentSelection) {
+    @CustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse(@CustomType.Parameter("enableLabelSentimentSelection") Boolean enableLabelSentimentSelection) {
         this.enableLabelSentimentSelection = enableLabelSentimentSelection;
     }
 

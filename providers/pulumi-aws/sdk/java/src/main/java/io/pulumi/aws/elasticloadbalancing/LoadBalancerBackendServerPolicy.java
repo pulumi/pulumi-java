@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticloadbalancing.LoadBalancerBackendServerPolicyArgs;
 import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerBackendServerPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * The instance port to apply the policy to.
      * 
      */
-    @OutputExport(name="instancePort", type=Integer.class, parameters={})
+    @Export(name="instancePort", type=Integer.class, parameters={})
     private Output<Integer> instancePort;
 
     /**
@@ -44,7 +44,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * The load balancer to attach the policy to.
      * 
      */
-    @OutputExport(name="loadBalancerName", type=String.class, parameters={})
+    @Export(name="loadBalancerName", type=String.class, parameters={})
     private Output<String> loadBalancerName;
 
     /**
@@ -58,7 +58,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * List of Policy Names to apply to the backend server.
      * 
      */
-    @OutputExport(name="policyNames", type=List.class, parameters={String.class})
+    @Export(name="policyNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> policyNames;
 
     /**

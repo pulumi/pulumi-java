@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.enums.ServerLevelPermissionsGroup;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
      * Permission group for validations
      * 
      */
-    @InputImport(name="checkPermissionsGroup")
+    @Import(name="checkPermissionsGroup")
       private final @Nullable Output<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup;
 
     public Output<Either<String,ServerLevelPermissionsGroup>> getCheckPermissionsGroup() {
@@ -37,7 +37,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
      * Flag for whether to collect agent jobs from source server.
      * 
      */
-    @InputImport(name="collectAgentJobs")
+    @Import(name="collectAgentJobs")
       private final @Nullable Output<Boolean> collectAgentJobs;
 
     public Output<Boolean> getCollectAgentJobs() {
@@ -48,7 +48,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
      * Flag for whether to collect logins from source server.
      * 
      */
-    @InputImport(name="collectLogins")
+    @Import(name="collectLogins")
       private final @Nullable Output<Boolean> collectLogins;
 
     public Output<Boolean> getCollectLogins() {
@@ -59,7 +59,7 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
      * Connection information for Source SQL Server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {

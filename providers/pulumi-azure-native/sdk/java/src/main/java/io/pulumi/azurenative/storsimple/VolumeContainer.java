@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.VolumeContainerArgs;
 import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The bandwidth-rate set on the volume container.
      * 
      */
-    @OutputExport(name="bandWidthRateInMbps", type=Integer.class, parameters={})
+    @Export(name="bandWidthRateInMbps", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> bandWidthRateInMbps;
 
     /**
@@ -51,7 +51,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The ID of the bandwidth setting associated with the volume container.
      * 
      */
-    @OutputExport(name="bandwidthSettingId", type=String.class, parameters={})
+    @Export(name="bandwidthSettingId", type=String.class, parameters={})
     private Output</* @Nullable */ String> bandwidthSettingId;
 
     /**
@@ -65,7 +65,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The key used to encrypt data in the volume container. It is required when property 'EncryptionStatus' is "Enabled".
      * 
      */
-    @OutputExport(name="encryptionKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
+    @Export(name="encryptionKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> encryptionKey;
 
     /**
@@ -79,7 +79,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The flag to denote whether encryption is enabled or not.
      * 
      */
-    @OutputExport(name="encryptionStatus", type=String.class, parameters={})
+    @Export(name="encryptionStatus", type=String.class, parameters={})
     private Output<String> encryptionStatus;
 
     /**
@@ -93,7 +93,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -107,7 +107,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The owner ship status of the volume container. Only when the status is "NotOwned", the delete operation on the volume container is permitted.
      * 
      */
-    @OutputExport(name="ownerShipStatus", type=String.class, parameters={})
+    @Export(name="ownerShipStatus", type=String.class, parameters={})
     private Output<String> ownerShipStatus;
 
     /**
@@ -135,7 +135,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The path ID of storage account associated with the volume container.
      * 
      */
-    @OutputExport(name="storageAccountCredentialId", type=String.class, parameters={})
+    @Export(name="storageAccountCredentialId", type=String.class, parameters={})
     private Output<String> storageAccountCredentialId;
 
     /**
@@ -149,7 +149,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The total cloud storage for the volume container.
      * 
      */
-    @OutputExport(name="totalCloudStorageUsageInBytes", type=Double.class, parameters={})
+    @Export(name="totalCloudStorageUsageInBytes", type=Double.class, parameters={})
     private Output<Double> totalCloudStorageUsageInBytes;
 
     /**
@@ -163,7 +163,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class VolumeContainer extends io.pulumi.resources.CustomResource {
      * The number of volumes in the volume Container.
      * 
      */
-    @OutputExport(name="volumeCount", type=Integer.class, parameters={})
+    @Export(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
     /**

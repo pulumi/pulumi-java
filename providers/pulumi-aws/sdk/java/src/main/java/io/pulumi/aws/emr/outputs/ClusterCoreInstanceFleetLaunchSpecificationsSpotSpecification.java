@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification {
     /**
      * Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
@@ -33,12 +33,12 @@ public final class ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification
      */
     private final Integer timeoutDurationMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification(
-        @OutputCustomType.Parameter("allocationStrategy") String allocationStrategy,
-        @OutputCustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
-        @OutputCustomType.Parameter("timeoutAction") String timeoutAction,
-        @OutputCustomType.Parameter("timeoutDurationMinutes") Integer timeoutDurationMinutes) {
+        @CustomType.Parameter("allocationStrategy") String allocationStrategy,
+        @CustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
+        @CustomType.Parameter("timeoutAction") String timeoutAction,
+        @CustomType.Parameter("timeoutDurationMinutes") Integer timeoutDurationMinutes) {
         this.allocationStrategy = allocationStrategy;
         this.blockDurationMinutes = blockDurationMinutes;
         this.timeoutAction = timeoutAction;

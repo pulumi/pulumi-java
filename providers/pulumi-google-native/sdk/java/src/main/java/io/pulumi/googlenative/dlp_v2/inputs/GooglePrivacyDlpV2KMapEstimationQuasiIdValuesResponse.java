@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
      * The estimated anonymity for these quasi-identifier values.
      * 
      */
-    @InputImport(name="estimatedAnonymity", required=true)
+    @Import(name="estimatedAnonymity", required=true)
       private final String estimatedAnonymity;
 
     public String getEstimatedAnonymity() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse extends
      * The quasi-identifier values.
      * 
      */
-    @InputImport(name="quasiIdsValues", required=true)
+    @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {

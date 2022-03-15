@@ -4,13 +4,13 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.aws.outputs.GetAutoscalingGroupsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAutoscalingGroupsResult {
     /**
      * A list of the Autoscaling Groups Arns in the current region.
@@ -29,12 +29,12 @@ public final class GetAutoscalingGroupsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAutoscalingGroupsResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetAutoscalingGroupsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("filters") @Nullable List<GetAutoscalingGroupsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

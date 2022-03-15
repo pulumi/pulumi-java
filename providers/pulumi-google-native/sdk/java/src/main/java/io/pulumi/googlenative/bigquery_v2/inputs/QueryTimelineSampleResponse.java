@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
      * Total number of units currently being processed by workers. This does not correspond directly to slot usage. This is the largest value observed since the last sample.
      * 
      */
-    @InputImport(name="activeUnits", required=true)
+    @Import(name="activeUnits", required=true)
       private final String activeUnits;
 
     public String getActiveUnits() {
@@ -27,7 +27,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
      * Total parallel units of work completed by this query.
      * 
      */
-    @InputImport(name="completedUnits", required=true)
+    @Import(name="completedUnits", required=true)
       private final String completedUnits;
 
     public String getCompletedUnits() {
@@ -38,7 +38,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
      * Milliseconds elapsed since the start of query execution.
      * 
      */
-    @InputImport(name="elapsedMs", required=true)
+    @Import(name="elapsedMs", required=true)
       private final String elapsedMs;
 
     public String getElapsedMs() {
@@ -49,7 +49,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
      * Total parallel units of work remaining for the active stages.
      * 
      */
-    @InputImport(name="pendingUnits", required=true)
+    @Import(name="pendingUnits", required=true)
       private final String pendingUnits;
 
     public String getPendingUnits() {
@@ -60,7 +60,7 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
      * Cumulative slot-ms consumed by the query.
      * 
      */
-    @InputImport(name="totalSlotMs", required=true)
+    @Import(name="totalSlotMs", required=true)
       private final String totalSlotMs;
 
     public String getTotalSlotMs() {

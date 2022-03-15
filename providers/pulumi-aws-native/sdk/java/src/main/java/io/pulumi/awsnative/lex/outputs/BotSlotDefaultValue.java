@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotDefaultValue {
     /**
      * The default value to use when a user doesn't provide a value for a slot.
@@ -15,8 +15,8 @@ public final class BotSlotDefaultValue {
      */
     private final String defaultValue;
 
-    @OutputCustomType.Constructor
-    private BotSlotDefaultValue(@OutputCustomType.Parameter("defaultValue") String defaultValue) {
+    @CustomType.Constructor
+    private BotSlotDefaultValue(@CustomType.Parameter("defaultValue") String defaultValue) {
         this.defaultValue = defaultValue;
     }
 

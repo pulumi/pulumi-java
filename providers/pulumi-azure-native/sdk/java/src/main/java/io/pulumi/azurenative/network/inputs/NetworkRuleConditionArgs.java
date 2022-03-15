@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicyRuleConditionNetworkProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * Description of the rule condition.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * List of destination IP addresses or Service Tags.
      * 
      */
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
     public Output<List<String>> getDestinationAddresses() {
@@ -47,7 +47,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * List of destination IpGroups for this rule.
      * 
      */
-    @InputImport(name="destinationIpGroups")
+    @Import(name="destinationIpGroups")
       private final @Nullable Output<List<String>> destinationIpGroups;
 
     public Output<List<String>> getDestinationIpGroups() {
@@ -58,7 +58,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * List of destination ports.
      * 
      */
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable Output<List<String>> destinationPorts;
 
     public Output<List<String>> getDestinationPorts() {
@@ -69,7 +69,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * Array of FirewallPolicyRuleConditionNetworkProtocols.
      * 
      */
-    @InputImport(name="ipProtocols")
+    @Import(name="ipProtocols")
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
 
     public Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> getIpProtocols() {
@@ -80,7 +80,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * Name of the rule condition.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * Expected value is 'NetworkRuleCondition'.
      * 
      */
-    @InputImport(name="ruleConditionType", required=true)
+    @Import(name="ruleConditionType", required=true)
       private final Output<String> ruleConditionType;
 
     public Output<String> getRuleConditionType() {
@@ -103,7 +103,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * List of source IP addresses for this rule.
      * 
      */
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
     public Output<List<String>> getSourceAddresses() {
@@ -114,7 +114,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
      * List of source IpGroups for this rule.
      * 
      */
-    @InputImport(name="sourceIpGroups")
+    @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
     public Output<List<String>> getSourceIpGroups() {

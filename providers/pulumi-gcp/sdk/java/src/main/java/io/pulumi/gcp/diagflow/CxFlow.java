@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxFlowArgs;
@@ -46,7 +46,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -60,7 +60,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * The human-readable name of the flow.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -78,7 +78,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="eventHandlers", type=List.class, parameters={CxFlowEventHandler.class})
+    @Export(name="eventHandlers", type=List.class, parameters={CxFlowEventHandler.class})
     private Output<List<CxFlowEventHandler>> eventHandlers;
 
     /**
@@ -101,7 +101,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> languageCode;
 
     /**
@@ -121,7 +121,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * The unique identifier of this event handler.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="nluSettings", type=CxFlowNluSettings.class, parameters={})
+    @Export(name="nluSettings", type=CxFlowNluSettings.class, parameters={})
     private Output</* @Nullable */ CxFlowNluSettings> nluSettings;
 
     /**
@@ -153,7 +153,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
     /**
@@ -171,7 +171,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
      * 
      */
-    @OutputExport(name="transitionRouteGroups", type=List.class, parameters={String.class})
+    @Export(name="transitionRouteGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> transitionRouteGroups;
 
     /**
@@ -190,7 +190,7 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
      * They are inherited by every page's [transition routes][Page.transition_routes] and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.
      * 
      */
-    @OutputExport(name="transitionRoutes", type=List.class, parameters={CxFlowTransitionRoute.class})
+    @Export(name="transitionRoutes", type=List.class, parameters={CxFlowTransitionRoute.class})
     private Output</* @Nullable */ List<CxFlowTransitionRoute>> transitionRoutes;
 
     /**

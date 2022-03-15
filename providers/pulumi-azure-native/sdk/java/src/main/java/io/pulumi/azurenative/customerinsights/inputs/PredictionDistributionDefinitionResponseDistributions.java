@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * Number of negatives.
      * 
      */
-    @InputImport(name="negatives")
+    @Import(name="negatives")
       private final @Nullable Double negatives;
 
     public Optional<Double> getNegatives() {
@@ -34,7 +34,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * Number of negatives above threshold.
      * 
      */
-    @InputImport(name="negativesAboveThreshold")
+    @Import(name="negativesAboveThreshold")
       private final @Nullable Double negativesAboveThreshold;
 
     public Optional<Double> getNegativesAboveThreshold() {
@@ -45,7 +45,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * Number of positives.
      * 
      */
-    @InputImport(name="positives")
+    @Import(name="positives")
       private final @Nullable Double positives;
 
     public Optional<Double> getPositives() {
@@ -56,7 +56,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * Number of positives above threshold.
      * 
      */
-    @InputImport(name="positivesAboveThreshold")
+    @Import(name="positivesAboveThreshold")
       private final @Nullable Double positivesAboveThreshold;
 
     public Optional<Double> getPositivesAboveThreshold() {
@@ -67,7 +67,7 @@ public final class PredictionDistributionDefinitionResponseDistributions extends
      * Score threshold.
      * 
      */
-    @InputImport(name="scoreThreshold")
+    @Import(name="scoreThreshold")
       private final @Nullable Integer scoreThreshold;
 
     public Optional<Integer> getScoreThreshold() {

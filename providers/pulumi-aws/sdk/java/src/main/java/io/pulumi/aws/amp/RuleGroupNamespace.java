@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amp.RuleGroupNamespaceArgs;
 import io.pulumi.aws.amp.inputs.RuleGroupNamespaceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * the rule group namespace data that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html).
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
@@ -46,7 +46,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * The name of the rule group namespace
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class RuleGroupNamespace extends io.pulumi.resources.CustomResource {
      * The id of the prometheus workspace the rule group namespace should be linked to
      * 
      */
-    @OutputExport(name="workspaceId", type=String.class, parameters={})
+    @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**

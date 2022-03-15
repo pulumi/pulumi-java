@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.PeeringServicePrefixEventResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrefixResult {
     /**
      * The error message for validation state
@@ -64,18 +64,18 @@ public final class GetPrefixResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrefixResult(
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("events") List<PeeringServicePrefixEventResponse> events,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("learnedType") String learnedType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringServicePrefixKey") @Nullable String peeringServicePrefixKey,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("prefixValidationState") String prefixValidationState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("events") List<PeeringServicePrefixEventResponse> events,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("learnedType") String learnedType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringServicePrefixKey") @Nullable String peeringServicePrefixKey,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("prefixValidationState") String prefixValidationState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.errorMessage = errorMessage;
         this.events = events;
         this.id = id;

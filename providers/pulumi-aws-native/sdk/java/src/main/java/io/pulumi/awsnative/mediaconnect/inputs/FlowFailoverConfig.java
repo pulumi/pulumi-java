@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class FlowFailoverConfig extends io.pulumi.resources.InvokeArgs {
      * Search window time to look for dash-7 packets
      * 
      */
-    @InputImport(name="recoveryWindow")
+    @Import(name="recoveryWindow")
       private final @Nullable Integer recoveryWindow;
 
     public Optional<Integer> getRecoveryWindow() {
         return this.recoveryWindow == null ? Optional.empty() : Optional.ofNullable(this.recoveryWindow);
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable FlowFailoverConfigState state;
 
     public Optional<FlowFailoverConfigState> getState() {

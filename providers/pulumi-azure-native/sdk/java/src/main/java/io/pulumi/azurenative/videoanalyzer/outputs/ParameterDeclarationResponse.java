@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterDeclarationResponse {
     /**
      * The default value for the parameter to be used if the pipeline does not specify a value.
@@ -32,12 +32,12 @@ public final class ParameterDeclarationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterDeclarationResponse(
-        @OutputCustomType.Parameter("default") @Nullable String $default,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("default") @Nullable String $default,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.$default = $default;
         this.description = description;
         this.name = name;

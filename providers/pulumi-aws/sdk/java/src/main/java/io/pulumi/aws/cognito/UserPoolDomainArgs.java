@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -29,7 +29,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The domain string.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {
@@ -40,7 +40,7 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The user pool ID.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

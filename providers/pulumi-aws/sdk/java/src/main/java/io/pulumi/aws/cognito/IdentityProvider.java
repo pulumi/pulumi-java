@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.IdentityProviderArgs;
 import io.pulumi.aws.cognito.inputs.IdentityProviderState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
      * 
      */
-    @OutputExport(name="attributeMapping", type=Map.class, parameters={String.class, String.class})
+    @Export(name="attributeMapping", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> attributeMapping;
 
     /**
@@ -48,7 +48,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The list of identity providers.
      * 
      */
-    @OutputExport(name="idpIdentifiers", type=List.class, parameters={String.class})
+    @Export(name="idpIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> idpIdentifiers;
 
     /**
@@ -62,7 +62,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The map of identity details, such as access token
      * 
      */
-    @OutputExport(name="providerDetails", type=Map.class, parameters={String.class, String.class})
+    @Export(name="providerDetails", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> providerDetails;
 
     /**
@@ -76,7 +76,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The provider name
      * 
      */
-    @OutputExport(name="providerName", type=String.class, parameters={})
+    @Export(name="providerName", type=String.class, parameters={})
     private Output<String> providerName;
 
     /**
@@ -90,7 +90,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
      * 
      */
-    @OutputExport(name="providerType", type=String.class, parameters={})
+    @Export(name="providerType", type=String.class, parameters={})
     private Output<String> providerType;
 
     /**
@@ -104,7 +104,7 @@ public class IdentityProvider extends io.pulumi.resources.CustomResource {
      * The user pool id
      * 
      */
-    @OutputExport(name="userPoolId", type=String.class, parameters={})
+    @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
     /**

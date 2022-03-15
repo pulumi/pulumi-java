@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
      * Properties of the SKU instances being reserved.
      * 
      */
-    @InputImport(name="instanceProperties")
+    @Import(name="instanceProperties")
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
     public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
@@ -30,7 +30,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
      * Total number of instances for which capacity assurance is requested at a future time period.
      * 
      */
-    @InputImport(name="totalCount")
+    @Import(name="totalCount")
       private final @Nullable Output<String> totalCount;
 
     public Output<String> getTotalCount() {

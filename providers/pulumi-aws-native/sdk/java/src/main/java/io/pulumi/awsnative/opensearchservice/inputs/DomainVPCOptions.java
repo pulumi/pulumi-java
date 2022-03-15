@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DomainVPCOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final DomainVPCOptions Empty = new DomainVPCOptions();
 
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds == null ? List.of() : this.securityGroupIds;
     }
 
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable List<String> subnetIds;
 
     public List<String> getSubnetIds() {

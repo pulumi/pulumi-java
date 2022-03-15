@@ -5,18 +5,18 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketReplicationTimeStatus;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationTimeValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationTime {
     private final BucketReplicationTimeStatus status;
     private final BucketReplicationTimeValue time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationTime(
-        @OutputCustomType.Parameter("status") BucketReplicationTimeStatus status,
-        @OutputCustomType.Parameter("time") BucketReplicationTimeValue time) {
+        @CustomType.Parameter("status") BucketReplicationTimeStatus status,
+        @CustomType.Parameter("time") BucketReplicationTimeValue time) {
         this.status = status;
         this.time = time;
     }

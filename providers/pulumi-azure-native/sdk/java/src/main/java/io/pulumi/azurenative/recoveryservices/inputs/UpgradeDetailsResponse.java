@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * UTC time at which the upgrade operation has ended.
      * 
      */
-    @InputImport(name="endTimeUtc", required=true)
+    @Import(name="endTimeUtc", required=true)
       private final String endTimeUtc;
 
     public String getEndTimeUtc() {
@@ -31,7 +31,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * UTC time at which the upgrade operation status was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTimeUtc", required=true)
+    @Import(name="lastUpdatedTimeUtc", required=true)
       private final String lastUpdatedTimeUtc;
 
     public String getLastUpdatedTimeUtc() {
@@ -42,7 +42,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Message to the user containing information about the upgrade operation.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -53,7 +53,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * ID of the vault upgrade operation.
      * 
      */
-    @InputImport(name="operationId", required=true)
+    @Import(name="operationId", required=true)
       private final String operationId;
 
     public String getOperationId() {
@@ -64,7 +64,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Resource ID of the vault before the upgrade.
      * 
      */
-    @InputImport(name="previousResourceId", required=true)
+    @Import(name="previousResourceId", required=true)
       private final String previousResourceId;
 
     public String getPreviousResourceId() {
@@ -75,7 +75,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * UTC time at which the upgrade operation has started.
      * 
      */
-    @InputImport(name="startTimeUtc", required=true)
+    @Import(name="startTimeUtc", required=true)
       private final String startTimeUtc;
 
     public String getStartTimeUtc() {
@@ -86,7 +86,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Status of the vault upgrade operation.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -97,7 +97,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The way the vault upgrade was triggered.
      * 
      */
-    @InputImport(name="triggerType", required=true)
+    @Import(name="triggerType", required=true)
       private final String triggerType;
 
     public String getTriggerType() {
@@ -108,7 +108,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Resource ID of the upgraded vault.
      * 
      */
-    @InputImport(name="upgradedResourceId", required=true)
+    @Import(name="upgradedResourceId", required=true)
       private final String upgradedResourceId;
 
     public String getUpgradedResourceId() {

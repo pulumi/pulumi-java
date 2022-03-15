@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayConfigResponse {
     /**
      * Indicates how to authorize and/or authenticate devices to access the gateway.
@@ -30,12 +30,12 @@ public final class GatewayConfigResponse {
      */
     private final String lastAccessedGatewayTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayConfigResponse(
-        @OutputCustomType.Parameter("gatewayAuthMethod") String gatewayAuthMethod,
-        @OutputCustomType.Parameter("gatewayType") String gatewayType,
-        @OutputCustomType.Parameter("lastAccessedGatewayId") String lastAccessedGatewayId,
-        @OutputCustomType.Parameter("lastAccessedGatewayTime") String lastAccessedGatewayTime) {
+        @CustomType.Parameter("gatewayAuthMethod") String gatewayAuthMethod,
+        @CustomType.Parameter("gatewayType") String gatewayType,
+        @CustomType.Parameter("lastAccessedGatewayId") String lastAccessedGatewayId,
+        @CustomType.Parameter("lastAccessedGatewayTime") String lastAccessedGatewayTime) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
         this.lastAccessedGatewayId = lastAccessedGatewayId;

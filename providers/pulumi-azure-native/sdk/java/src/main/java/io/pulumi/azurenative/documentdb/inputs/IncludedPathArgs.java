@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.IndexesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * List of indexes for this path
      * 
      */
-    @InputImport(name="indexes")
+    @Import(name="indexes")
       private final @Nullable Output<List<IndexesArgs>> indexes;
 
     public Output<List<IndexesArgs>> getIndexes() {
@@ -35,7 +35,7 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

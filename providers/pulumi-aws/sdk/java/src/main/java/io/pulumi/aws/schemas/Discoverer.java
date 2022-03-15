@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.schemas.DiscovererArgs;
 import io.pulumi.aws.schemas.inputs.DiscovererState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the discoverer.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * The description of the discoverer. Maximum of 256 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * The ARN of the event bus to discover event schemas on.
      * 
      */
-    @OutputExport(name="sourceArn", type=String.class, parameters={})
+    @Export(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;
 
     /**
@@ -77,7 +77,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -91,7 +91,7 @@ public class Discoverer extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

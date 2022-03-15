@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPrivateLinkIpConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * An array of application gateway private link ip configurations.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable List<ApplicationGatewayPrivateLinkIpConfigurationResponse> ipConfigurations;
 
     public List<ApplicationGatewayPrivateLinkIpConfigurationResponse> getIpConfigurations() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * Name of the private link configuration that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * The provisioning state of the application gateway private link configuration.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -79,7 +79,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationResponse extends io
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -26,7 +26,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -37,14 +37,14 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,14 +55,14 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
      * 
      */
-    @InputImport(name="managedService")
+    @Import(name="managedService")
       private final @Nullable Output<String> managedService;
 
     public Output<String> getManagedService() {
         return this.managedService == null ? Output.empty() : this.managedService;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

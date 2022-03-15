@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCustomPlugin;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorPlugin {
     private final ConnectorCustomPlugin customPlugin;
 
-    @OutputCustomType.Constructor
-    private ConnectorPlugin(@OutputCustomType.Parameter("customPlugin") ConnectorCustomPlugin customPlugin) {
+    @CustomType.Constructor
+    private ConnectorPlugin(@CustomType.Parameter("customPlugin") ConnectorCustomPlugin customPlugin) {
         this.customPlugin = customPlugin;
     }
 

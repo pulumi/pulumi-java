@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationTaskType;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationConnectorOperatorArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskPropertiesMapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class IntegrationTaskArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final IntegrationTaskArgs Empty = new IntegrationTaskArgs();
 
-    @InputImport(name="connectorOperator")
+    @Import(name="connectorOperator")
       private final @Nullable Output<IntegrationConnectorOperatorArgs> connectorOperator;
 
     public Output<IntegrationConnectorOperatorArgs> getConnectorOperator() {
         return this.connectorOperator == null ? Output.empty() : this.connectorOperator;
     }
 
-    @InputImport(name="destinationField")
+    @Import(name="destinationField")
       private final @Nullable Output<String> destinationField;
 
     public Output<String> getDestinationField() {
         return this.destinationField == null ? Output.empty() : this.destinationField;
     }
 
-    @InputImport(name="sourceFields", required=true)
+    @Import(name="sourceFields", required=true)
       private final Output<List<String>> sourceFields;
 
     public Output<List<String>> getSourceFields() {
         return this.sourceFields;
     }
 
-    @InputImport(name="taskProperties")
+    @Import(name="taskProperties")
       private final @Nullable Output<List<IntegrationTaskPropertiesMapArgs>> taskProperties;
 
     public Output<List<IntegrationTaskPropertiesMapArgs>> getTaskProperties() {
         return this.taskProperties == null ? Output.empty() : this.taskProperties;
     }
 
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final Output<IntegrationTaskType> taskType;
 
     public Output<IntegrationTaskType> getTaskType() {

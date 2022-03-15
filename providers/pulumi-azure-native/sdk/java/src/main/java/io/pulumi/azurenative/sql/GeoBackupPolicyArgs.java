@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.GeoBackupPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -30,7 +30,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the geo backup policy.
      * 
      */
-    @InputImport(name="geoBackupPolicyName")
+    @Import(name="geoBackupPolicyName")
       private final @Nullable Output<String> geoBackupPolicyName;
 
     public Output<String> getGeoBackupPolicyName() {
@@ -41,7 +41,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -63,7 +63,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The state of the geo backup policy.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<GeoBackupPolicyState> state;
 
     public Output<GeoBackupPolicyState> getState() {

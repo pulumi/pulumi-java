@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,42 +14,42 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
 
     public static final DeliveryStreamSchemaConfigurationArgs Empty = new DeliveryStreamSchemaConfigurationArgs();
 
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
         return this.catalogId == null ? Output.empty() : this.catalogId;
     }
 
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
         return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
         return this.region == null ? Output.empty() : this.region;
     }
 
-    @InputImport(name="roleARN")
+    @Import(name="roleARN")
       private final @Nullable Output<String> roleARN;
 
     public Output<String> getRoleARN() {
         return this.roleARN == null ? Output.empty() : this.roleARN;
     }
 
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
         return this.tableName == null ? Output.empty() : this.tableName;
     }
 
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {

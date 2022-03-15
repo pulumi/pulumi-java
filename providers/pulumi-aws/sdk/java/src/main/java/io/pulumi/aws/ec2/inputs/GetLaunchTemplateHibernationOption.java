@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetLaunchTemplateHibernationOption extends io.pulumi.resource
 
     public static final GetLaunchTemplateHibernationOption Empty = new GetLaunchTemplateHibernationOption();
 
-    @InputImport(name="configured", required=true)
+    @Import(name="configured", required=true)
       private final Boolean configured;
 
     public Boolean getConfigured() {

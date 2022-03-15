@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Device group name
      * 
      */
-    @InputImport(name="deviceGroupName", required=true)
+    @Import(name="deviceGroupName", required=true)
       private final String deviceGroupName;
 
     public String getDeviceGroupName() {
@@ -27,7 +27,7 @@ public final class GetDeviceGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Defender for IoT location
      * 
      */
-    @InputImport(name="iotDefenderLocation", required=true)
+    @Import(name="iotDefenderLocation", required=true)
       private final String iotDefenderLocation;
 
     public String getIotDefenderLocation() {

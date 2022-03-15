@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectCache {
     /**
      * Location of the source code from git or s3.
@@ -28,11 +28,11 @@ public final class ProjectCache {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectCache(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("modes") @Nullable List<String> modes,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("modes") @Nullable List<String> modes,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.location = location;
         this.modes = modes;
         this.type = type;

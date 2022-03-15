@@ -6,7 +6,7 @@ package io.pulumi.aws.opsworks.inputs;
 import io.pulumi.aws.opsworks.inputs.RailsAppLayerCloudwatchConfigurationGetArgs;
 import io.pulumi.aws.opsworks.inputs.RailsAppLayerEbsVolumeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Keyword for the app server to use. Defaults to "apache_passenger".
      * 
      */
-    @InputImport(name="appServer")
+    @Import(name="appServer")
       private final @Nullable Output<String> appServer;
 
     public Output<String> getAppServer() {
@@ -35,7 +35,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name(ARN) of the layer.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -46,7 +46,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Whether to automatically assign an elastic IP address to the layer's instances.
      * 
      */
-    @InputImport(name="autoAssignElasticIps")
+    @Import(name="autoAssignElasticIps")
       private final @Nullable Output<Boolean> autoAssignElasticIps;
 
     public Output<Boolean> getAutoAssignElasticIps() {
@@ -57,7 +57,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
      * 
      */
-    @InputImport(name="autoAssignPublicIps")
+    @Import(name="autoAssignPublicIps")
       private final @Nullable Output<Boolean> autoAssignPublicIps;
 
     public Output<Boolean> getAutoAssignPublicIps() {
@@ -68,7 +68,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Whether to enable auto-healing for the layer.
      * 
      */
-    @InputImport(name="autoHealing")
+    @Import(name="autoHealing")
       private final @Nullable Output<Boolean> autoHealing;
 
     public Output<Boolean> getAutoHealing() {
@@ -79,28 +79,28 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
      * 
      */
-    @InputImport(name="bundlerVersion")
+    @Import(name="bundlerVersion")
       private final @Nullable Output<String> bundlerVersion;
 
     public Output<String> getBundlerVersion() {
         return this.bundlerVersion == null ? Output.empty() : this.bundlerVersion;
     }
 
-    @InputImport(name="cloudwatchConfiguration")
+    @Import(name="cloudwatchConfiguration")
       private final @Nullable Output<RailsAppLayerCloudwatchConfigurationGetArgs> cloudwatchConfiguration;
 
     public Output<RailsAppLayerCloudwatchConfigurationGetArgs> getCloudwatchConfiguration() {
         return this.cloudwatchConfiguration == null ? Output.empty() : this.cloudwatchConfiguration;
     }
 
-    @InputImport(name="customConfigureRecipes")
+    @Import(name="customConfigureRecipes")
       private final @Nullable Output<List<String>> customConfigureRecipes;
 
     public Output<List<String>> getCustomConfigureRecipes() {
         return this.customConfigureRecipes == null ? Output.empty() : this.customConfigureRecipes;
     }
 
-    @InputImport(name="customDeployRecipes")
+    @Import(name="customDeployRecipes")
       private final @Nullable Output<List<String>> customDeployRecipes;
 
     public Output<List<String>> getCustomDeployRecipes() {
@@ -111,7 +111,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM profile that will be used for the layer's instances.
      * 
      */
-    @InputImport(name="customInstanceProfileArn")
+    @Import(name="customInstanceProfileArn")
       private final @Nullable Output<String> customInstanceProfileArn;
 
     public Output<String> getCustomInstanceProfileArn() {
@@ -122,7 +122,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Custom JSON attributes to apply to the layer.
      * 
      */
-    @InputImport(name="customJson")
+    @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
     public Output<String> getCustomJson() {
@@ -133,28 +133,28 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Ids for a set of security groups to apply to the layer's instances.
      * 
      */
-    @InputImport(name="customSecurityGroupIds")
+    @Import(name="customSecurityGroupIds")
       private final @Nullable Output<List<String>> customSecurityGroupIds;
 
     public Output<List<String>> getCustomSecurityGroupIds() {
         return this.customSecurityGroupIds == null ? Output.empty() : this.customSecurityGroupIds;
     }
 
-    @InputImport(name="customSetupRecipes")
+    @Import(name="customSetupRecipes")
       private final @Nullable Output<List<String>> customSetupRecipes;
 
     public Output<List<String>> getCustomSetupRecipes() {
         return this.customSetupRecipes == null ? Output.empty() : this.customSetupRecipes;
     }
 
-    @InputImport(name="customShutdownRecipes")
+    @Import(name="customShutdownRecipes")
       private final @Nullable Output<List<String>> customShutdownRecipes;
 
     public Output<List<String>> getCustomShutdownRecipes() {
         return this.customShutdownRecipes == null ? Output.empty() : this.customShutdownRecipes;
     }
 
-    @InputImport(name="customUndeployRecipes")
+    @Import(name="customUndeployRecipes")
       private final @Nullable Output<List<String>> customUndeployRecipes;
 
     public Output<List<String>> getCustomUndeployRecipes() {
@@ -165,7 +165,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Whether to enable Elastic Load Balancing connection draining.
      * 
      */
-    @InputImport(name="drainElbOnShutdown")
+    @Import(name="drainElbOnShutdown")
       private final @Nullable Output<Boolean> drainElbOnShutdown;
 
     public Output<Boolean> getDrainElbOnShutdown() {
@@ -176,7 +176,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
      * 
      */
-    @InputImport(name="ebsVolumes")
+    @Import(name="ebsVolumes")
       private final @Nullable Output<List<RailsAppLayerEbsVolumeGetArgs>> ebsVolumes;
 
     public Output<List<RailsAppLayerEbsVolumeGetArgs>> getEbsVolumes() {
@@ -187,7 +187,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Name of an Elastic Load Balancer to attach to this layer
      * 
      */
-    @InputImport(name="elasticLoadBalancer")
+    @Import(name="elasticLoadBalancer")
       private final @Nullable Output<String> elasticLoadBalancer;
 
     public Output<String> getElasticLoadBalancer() {
@@ -198,7 +198,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Whether to install OS and package updates on each instance when it boots.
      * 
      */
-    @InputImport(name="installUpdatesOnBoot")
+    @Import(name="installUpdatesOnBoot")
       private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
     public Output<Boolean> getInstallUpdatesOnBoot() {
@@ -209,7 +209,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
      * 
      */
-    @InputImport(name="instanceShutdownTimeout")
+    @Import(name="instanceShutdownTimeout")
       private final @Nullable Output<Integer> instanceShutdownTimeout;
 
     public Output<Integer> getInstanceShutdownTimeout() {
@@ -220,7 +220,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Whether OpsWorks should manage bundler. On by default.
      * 
      */
-    @InputImport(name="manageBundler")
+    @Import(name="manageBundler")
       private final @Nullable Output<Boolean> manageBundler;
 
     public Output<Boolean> getManageBundler() {
@@ -231,7 +231,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * A human-readable name for the layer.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -242,7 +242,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The version of Passenger to use. Defaults to "4.0.46".
      * 
      */
-    @InputImport(name="passengerVersion")
+    @Import(name="passengerVersion")
       private final @Nullable Output<String> passengerVersion;
 
     public Output<String> getPassengerVersion() {
@@ -253,7 +253,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The version of Ruby to use. Defaults to "2.0.0".
      * 
      */
-    @InputImport(name="rubyVersion")
+    @Import(name="rubyVersion")
       private final @Nullable Output<String> rubyVersion;
 
     public Output<String> getRubyVersion() {
@@ -264,7 +264,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The version of RubyGems to use. Defaults to "2.2.2".
      * 
      */
-    @InputImport(name="rubygemsVersion")
+    @Import(name="rubygemsVersion")
       private final @Nullable Output<String> rubygemsVersion;
 
     public Output<String> getRubygemsVersion() {
@@ -275,7 +275,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * The id of the stack the layer will belong to.
      * 
      */
-    @InputImport(name="stackId")
+    @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
     public Output<String> getStackId() {
@@ -286,7 +286,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Names of a set of system packages to install on the layer's instances.
      * 
      */
-    @InputImport(name="systemPackages")
+    @Import(name="systemPackages")
       private final @Nullable Output<List<String>> systemPackages;
 
     public Output<List<String>> getSystemPackages() {
@@ -297,7 +297,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -308,7 +308,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -319,7 +319,7 @@ public final class RailsAppLayerState extends io.pulumi.resources.ResourceArgs {
      * Whether to use EBS-optimized instances.
      * 
      */
-    @InputImport(name="useEbsOptimizedInstances")
+    @Import(name="useEbsOptimizedInstances")
       private final @Nullable Output<Boolean> useEbsOptimizedInstances;
 
     public Output<Boolean> getUseEbsOptimizedInstances() {

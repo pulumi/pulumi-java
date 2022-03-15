@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * Version of the Logz agent installed on the VM.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
@@ -33,7 +33,7 @@ public final class VMResourcesResponse extends io.pulumi.resources.InvokeArgs {
      * Request of a list vm host update operation.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {

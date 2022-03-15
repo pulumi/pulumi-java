@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * The related categories for the function.
      * 
      */
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
     public Output<List<String>> getCategories() {
@@ -34,7 +34,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * The related resource types for the function.
      * 
      */
-    @InputImport(name="resourceTypes")
+    @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {
@@ -45,7 +45,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
      * The related Log Analytics solutions for the function.
      * 
      */
-    @InputImport(name="solutions")
+    @Import(name="solutions")
       private final @Nullable Output<List<String>> solutions;
 
     public Output<List<String>> getSolutions() {

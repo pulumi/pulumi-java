@@ -7,7 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupStatefulRuleOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
      * A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
      * 
      */
-    @InputImport(name="ruleVariables")
+    @Import(name="ruleVariables")
       private final @Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
 
     public Output<RuleGroupRuleGroupRuleVariablesArgs> getRuleVariables() {
@@ -31,7 +31,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
      * A configuration block that defines the stateful or stateless rules for the rule group. See Rules Source below for details.
      * 
      */
-    @InputImport(name="rulesSource", required=true)
+    @Import(name="rulesSource", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource;
 
     public Output<RuleGroupRuleGroupRulesSourceArgs> getRulesSource() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
      * A configuration block that defines stateful rule options for the rule group. See Stateful Rule Options below for details.
      * 
      */
-    @InputImport(name="statefulRuleOptions")
+    @Import(name="statefulRuleOptions")
       private final @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
 
     public Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> getStatefulRuleOptions() {

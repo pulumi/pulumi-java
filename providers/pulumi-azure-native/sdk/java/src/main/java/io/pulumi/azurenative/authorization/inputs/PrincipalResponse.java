@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the principal made changes
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
      * Email of principal
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -44,7 +44,7 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
      * The id of the principal made changes
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -55,7 +55,7 @@ public final class PrincipalResponse extends io.pulumi.resources.InvokeArgs {
      * Type of principal such as user , group etc
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

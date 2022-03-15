@@ -10,7 +10,7 @@ import io.pulumi.awsnative.apigateway.outputs.UsagePlanQuotaSettings;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanTag;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanThrottleSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * The API stages to associate with this usage plan.
      * 
      */
-    @OutputExport(name="apiStages", type=List.class, parameters={UsagePlanApiStage.class})
+    @Export(name="apiStages", type=List.class, parameters={UsagePlanApiStage.class})
     private Output</* @Nullable */ List<UsagePlanApiStage>> apiStages;
 
     /**
@@ -40,7 +40,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * A description of the usage plan.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * Configures the number of requests that users can make within a given interval.
      * 
      */
-    @OutputExport(name="quota", type=UsagePlanQuotaSettings.class, parameters={})
+    @Export(name="quota", type=UsagePlanQuotaSettings.class, parameters={})
     private Output</* @Nullable */ UsagePlanQuotaSettings> quota;
 
     /**
@@ -68,7 +68,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * An array of arbitrary tags (key-value pairs) to associate with the usage plan.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={UsagePlanTag.class})
+    @Export(name="tags", type=List.class, parameters={UsagePlanTag.class})
     private Output</* @Nullable */ List<UsagePlanTag>> tags;
 
     /**
@@ -82,7 +82,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * Configures the overall request rate (average requests per second) and burst capacity.
      * 
      */
-    @OutputExport(name="throttle", type=UsagePlanThrottleSettings.class, parameters={})
+    @Export(name="throttle", type=UsagePlanThrottleSettings.class, parameters={})
     private Output</* @Nullable */ UsagePlanThrottleSettings> throttle;
 
     /**
@@ -96,7 +96,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * A name for the usage plan.
      * 
      */
-    @OutputExport(name="usagePlanName", type=String.class, parameters={})
+    @Export(name="usagePlanName", type=String.class, parameters={})
     private Output</* @Nullable */ String> usagePlanName;
 
     /**

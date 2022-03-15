@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.EntityReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the package store
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class PackageStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The package store linked service reference.
      * 
      */
-    @InputImport(name="packageStoreLinkedService", required=true)
+    @Import(name="packageStoreLinkedService", required=true)
       private final EntityReferenceResponse packageStoreLinkedService;
 
     public EntityReferenceResponse getPackageStoreLinkedService() {

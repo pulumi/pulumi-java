@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenIdConnectConfigResponse {
     /**
      * The endpoint to be used to make an authorization request.
@@ -37,13 +37,13 @@ public final class OpenIdConnectConfigResponse {
      */
     private final @Nullable String wellKnownOpenIdConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenIdConnectConfigResponse(
-        @OutputCustomType.Parameter("authorizationEndpoint") @Nullable String authorizationEndpoint,
-        @OutputCustomType.Parameter("certificationUri") @Nullable String certificationUri,
-        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
-        @OutputCustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
-        @OutputCustomType.Parameter("wellKnownOpenIdConfiguration") @Nullable String wellKnownOpenIdConfiguration) {
+        @CustomType.Parameter("authorizationEndpoint") @Nullable String authorizationEndpoint,
+        @CustomType.Parameter("certificationUri") @Nullable String certificationUri,
+        @CustomType.Parameter("issuer") @Nullable String issuer,
+        @CustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
+        @CustomType.Parameter("wellKnownOpenIdConfiguration") @Nullable String wellKnownOpenIdConfiguration) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.certificationUri = certificationUri;
         this.issuer = issuer;

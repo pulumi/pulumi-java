@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.azurenative.compute.inputs.VaultCertificateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
      * 
      */
-    @InputImport(name="sourceVault")
+    @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
 
     public Output<SubResourceArgs> getSourceVault() {
@@ -35,7 +35,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
      * The list of key vault references in SourceVault which contain certificates.
      * 
      */
-    @InputImport(name="vaultCertificates")
+    @Import(name="vaultCertificates")
       private final @Nullable Output<List<VaultCertificateArgs>> vaultCertificates;
 
     public Output<List<VaultCertificateArgs>> getVaultCertificates() {

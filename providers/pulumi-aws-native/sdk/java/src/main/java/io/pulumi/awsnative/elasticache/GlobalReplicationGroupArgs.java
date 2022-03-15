@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticache;
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupMemberArgs;
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupRegionalConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * AutomaticFailoverEnabled
      * 
      */
-    @InputImport(name="automaticFailoverEnabled")
+    @Import(name="automaticFailoverEnabled")
       private final @Nullable Output<Boolean> automaticFailoverEnabled;
 
     public Output<Boolean> getAutomaticFailoverEnabled() {
@@ -34,7 +34,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The cache node type of the Global Datastore
      * 
      */
-    @InputImport(name="cacheNodeType")
+    @Import(name="cacheNodeType")
       private final @Nullable Output<String> cacheNodeType;
 
     public Output<String> getCacheNodeType() {
@@ -45,7 +45,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * Cache parameter group name to use for the new engine version. This parameter cannot be modified independently.
      * 
      */
-    @InputImport(name="cacheParameterGroupName")
+    @Import(name="cacheParameterGroupName")
       private final @Nullable Output<String> cacheParameterGroupName;
 
     public Output<String> getCacheParameterGroupName() {
@@ -56,7 +56,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The engine version of the Global Datastore.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -67,7 +67,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * Indicates the number of node groups in the Global Datastore.
      * 
      */
-    @InputImport(name="globalNodeGroupCount")
+    @Import(name="globalNodeGroupCount")
       private final @Nullable Output<Integer> globalNodeGroupCount;
 
     public Output<Integer> getGlobalNodeGroupCount() {
@@ -78,7 +78,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The optional description of the Global Datastore
      * 
      */
-    @InputImport(name="globalReplicationGroupDescription")
+    @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
     public Output<String> getGlobalReplicationGroupDescription() {
@@ -89,7 +89,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The suffix name of a Global Datastore. Amazon ElastiCache automatically applies a prefix to the Global Datastore ID when it is created. Each AWS Region has its own prefix.
      * 
      */
-    @InputImport(name="globalReplicationGroupIdSuffix")
+    @Import(name="globalReplicationGroupIdSuffix")
       private final @Nullable Output<String> globalReplicationGroupIdSuffix;
 
     public Output<String> getGlobalReplicationGroupIdSuffix() {
@@ -100,7 +100,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The replication groups that comprise the Global Datastore.
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<GlobalReplicationGroupMemberArgs>> members;
 
     public Output<List<GlobalReplicationGroupMemberArgs>> getMembers() {
@@ -111,7 +111,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * Describes the replication group IDs, the AWS regions where they are stored and the shard configuration for each that comprise the Global Datastore
      * 
      */
-    @InputImport(name="regionalConfigurations")
+    @Import(name="regionalConfigurations")
       private final @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
     public Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> getRegionalConfigurations() {

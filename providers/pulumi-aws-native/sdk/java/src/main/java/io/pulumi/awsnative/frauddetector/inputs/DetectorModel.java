@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.frauddetector.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DetectorModel extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorModel Empty = new DetectorModel();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {

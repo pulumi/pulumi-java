@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * The AWS Key Management Service key ID to encrypt the data between the local client and the container.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -30,7 +30,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * The log configuration for the results of the execute command actions Required when `logging` is `OVERRIDE`. Detailed below.
      * 
      */
-    @InputImport(name="logConfiguration")
+    @Import(name="logConfiguration")
       private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
 
     public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> getLogConfiguration() {
@@ -41,7 +41,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * The log setting to use for redirecting logs for your execute command results. Valid values are `NONE`, `DEFAULT`, and `OVERRIDE`.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<String> logging;
 
     public Output<String> getLogging() {

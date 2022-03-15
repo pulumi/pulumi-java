@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse {
     /**
      * Chain name that the snapshot is created in.
@@ -33,12 +33,12 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      */
     private final List<String> storageLocations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(
-        @OutputCustomType.Parameter("chainName") String chainName,
-        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations) {
+        @CustomType.Parameter("chainName") String chainName,
+        @CustomType.Parameter("guestFlush") Boolean guestFlush,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("storageLocations") List<String> storageLocations) {
         this.chainName = chainName;
         this.guestFlush = guestFlush;
         this.labels = labels;

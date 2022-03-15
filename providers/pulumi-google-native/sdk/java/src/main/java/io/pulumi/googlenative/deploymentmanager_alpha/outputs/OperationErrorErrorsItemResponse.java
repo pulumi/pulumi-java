@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationErrorErrorsItemResponse {
     /**
      * The error type identifier for this error.
@@ -25,11 +25,11 @@ public final class OperationErrorErrorsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OperationErrorErrorsItemResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.location = location;
         this.message = message;

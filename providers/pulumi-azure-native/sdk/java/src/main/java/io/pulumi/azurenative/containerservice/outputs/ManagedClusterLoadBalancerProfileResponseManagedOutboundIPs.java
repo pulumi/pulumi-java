@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs {
     /**
      * Desired number of outbound IP created/managed by Azure for the cluster load balancer. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1.
@@ -17,8 +17,8 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor
-    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(@OutputCustomType.Parameter("count") @Nullable Integer count) {
+    @CustomType.Constructor
+    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(@CustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

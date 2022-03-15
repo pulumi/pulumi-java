@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.TemplateColumnGroupColumnSchema;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateColumnGroupSchema {
     /**
      * <p>A structure containing the list of schemas for column group columns.</p>
@@ -24,10 +24,10 @@ public final class TemplateColumnGroupSchema {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateColumnGroupSchema(
-        @OutputCustomType.Parameter("columnGroupColumnSchemaList") @Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("columnGroupColumnSchemaList") @Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.columnGroupColumnSchemaList = columnGroupColumnSchemaList;
         this.name = name;
     }

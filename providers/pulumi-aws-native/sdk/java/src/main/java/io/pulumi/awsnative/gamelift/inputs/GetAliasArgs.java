@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
      * Unique alias ID
      * 
      */
-    @InputImport(name="aliasId", required=true)
+    @Import(name="aliasId", required=true)
       private final String aliasId;
 
     public String getAliasId() {

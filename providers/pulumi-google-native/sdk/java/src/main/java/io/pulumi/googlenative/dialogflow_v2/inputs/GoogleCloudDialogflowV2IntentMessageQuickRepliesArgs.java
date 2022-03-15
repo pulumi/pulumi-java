@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
      * Optional. The collection of quick replies.
      * 
      */
-    @InputImport(name="quickReplies")
+    @Import(name="quickReplies")
       private final @Nullable Output<List<String>> quickReplies;
 
     public Output<List<String>> getQuickReplies() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
      * Optional. The title of the collection of quick replies.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

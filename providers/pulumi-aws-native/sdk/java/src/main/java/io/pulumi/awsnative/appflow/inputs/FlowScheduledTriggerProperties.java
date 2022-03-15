@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowScheduledTriggerPropertiesDataPullMode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,42 +20,42 @@ public final class FlowScheduledTriggerProperties extends io.pulumi.resources.In
 
     public static final FlowScheduledTriggerProperties Empty = new FlowScheduledTriggerProperties();
 
-    @InputImport(name="dataPullMode")
+    @Import(name="dataPullMode")
       private final @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode;
 
     public Optional<FlowScheduledTriggerPropertiesDataPullMode> getDataPullMode() {
         return this.dataPullMode == null ? Optional.empty() : Optional.ofNullable(this.dataPullMode);
     }
 
-    @InputImport(name="scheduleEndTime")
+    @Import(name="scheduleEndTime")
       private final @Nullable Double scheduleEndTime;
 
     public Optional<Double> getScheduleEndTime() {
         return this.scheduleEndTime == null ? Optional.empty() : Optional.ofNullable(this.scheduleEndTime);
     }
 
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
     public String getScheduleExpression() {
         return this.scheduleExpression;
     }
 
-    @InputImport(name="scheduleOffset")
+    @Import(name="scheduleOffset")
       private final @Nullable Double scheduleOffset;
 
     public Optional<Double> getScheduleOffset() {
         return this.scheduleOffset == null ? Optional.empty() : Optional.ofNullable(this.scheduleOffset);
     }
 
-    @InputImport(name="scheduleStartTime")
+    @Import(name="scheduleStartTime")
       private final @Nullable Double scheduleStartTime;
 
     public Optional<Double> getScheduleStartTime() {
         return this.scheduleStartTime == null ? Optional.empty() : Optional.ofNullable(this.scheduleStartTime);
     }
 
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {

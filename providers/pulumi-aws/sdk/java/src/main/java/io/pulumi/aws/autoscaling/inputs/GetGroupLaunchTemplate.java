@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGroupLaunchTemplate extends io.pulumi.resources.InvokeArgs
      * Name of the Auto Scaling Group.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -27,14 +27,14 @@ public final class GetGroupLaunchTemplate extends io.pulumi.resources.InvokeArgs
      * Specify the exact name of the desired autoscaling group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

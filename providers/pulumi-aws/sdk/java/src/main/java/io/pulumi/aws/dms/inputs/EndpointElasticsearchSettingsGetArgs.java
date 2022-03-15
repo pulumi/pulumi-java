@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * Endpoint for the Elasticsearch cluster.
      * 
      */
-    @InputImport(name="endpointUri", required=true)
+    @Import(name="endpointUri", required=true)
       private final Output<String> endpointUri;
 
     public Output<String> getEndpointUri() {
@@ -30,7 +30,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * Maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster. Defaults to `300`.
      * 
      */
-    @InputImport(name="errorRetryDuration")
+    @Import(name="errorRetryDuration")
       private final @Nullable Output<Integer> errorRetryDuration;
 
     public Output<Integer> getErrorRetryDuration() {
@@ -41,7 +41,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * Maximum percentage of records that can fail to be written before a full load operation stops. Defaults to `10`.
      * 
      */
-    @InputImport(name="fullLoadErrorPercentage")
+    @Import(name="fullLoadErrorPercentage")
       private final @Nullable Output<Integer> fullLoadErrorPercentage;
 
     public Output<Integer> getFullLoadErrorPercentage() {
@@ -52,7 +52,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
      * Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Elasticsearch cluster.
      * 
      */
-    @InputImport(name="serviceAccessRoleArn", required=true)
+    @Import(name="serviceAccessRoleArn", required=true)
       private final Output<String> serviceAccessRoleArn;
 
     public Output<String> getServiceAccessRoleArn() {

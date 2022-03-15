@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
     /**
      * Keyword defined by open source detection systems like Snort or Suricata for stateful rule inspection.
@@ -23,10 +23,10 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption {
      */
     private final @Nullable List<String> settings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption(
-        @OutputCustomType.Parameter("keyword") String keyword,
-        @OutputCustomType.Parameter("settings") @Nullable List<String> settings) {
+        @CustomType.Parameter("keyword") String keyword,
+        @CustomType.Parameter("settings") @Nullable List<String> settings) {
         this.keyword = keyword;
         this.settings = settings;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.outputs.CustomProfileResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.OsProfileResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.StorageProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkFunctionRoleConfigurationResponse {
     /**
      * Specifies the custom settings for the virtual machine.
@@ -63,17 +63,17 @@ public final class NetworkFunctionRoleConfigurationResponse {
      */
     private final @Nullable String virtualMachineSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkFunctionRoleConfigurationResponse(
-        @OutputCustomType.Parameter("customProfile") @Nullable CustomProfileResponse customProfile,
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
-        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
-        @OutputCustomType.Parameter("roleType") @Nullable String roleType,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("userDataParameters") @Nullable Object userDataParameters,
-        @OutputCustomType.Parameter("userDataTemplate") @Nullable Object userDataTemplate,
-        @OutputCustomType.Parameter("virtualMachineSize") @Nullable String virtualMachineSize) {
+        @CustomType.Parameter("customProfile") @Nullable CustomProfileResponse customProfile,
+        @CustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
+        @CustomType.Parameter("roleName") @Nullable String roleName,
+        @CustomType.Parameter("roleType") @Nullable String roleType,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("userDataParameters") @Nullable Object userDataParameters,
+        @CustomType.Parameter("userDataTemplate") @Nullable Object userDataTemplate,
+        @CustomType.Parameter("virtualMachineSize") @Nullable String virtualMachineSize) {
         this.customProfile = customProfile;
         this.networkInterfaces = networkInterfaces;
         this.osProfile = osProfile;

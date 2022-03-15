@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyGeoPolicyArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyWrrPolicyArgs;
 import java.lang.String;
@@ -20,35 +20,35 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
 
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 
-    @InputImport(name="geo")
+    @Import(name="geo")
       private final @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo;
 
     public Output<RRSetRoutingPolicyGeoPolicyArgs> getGeo() {
         return this.geo == null ? Output.empty() : this.geo;
     }
 
-    @InputImport(name="geoPolicy")
+    @Import(name="geoPolicy")
       private final @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geoPolicy;
 
     public Output<RRSetRoutingPolicyGeoPolicyArgs> getGeoPolicy() {
         return this.geoPolicy == null ? Output.empty() : this.geoPolicy;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="wrr")
+    @Import(name="wrr")
       private final @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 
     public Output<RRSetRoutingPolicyWrrPolicyArgs> getWrr() {
         return this.wrr == null ? Output.empty() : this.wrr;
     }
 
-    @InputImport(name="wrrPolicy")
+    @Import(name="wrrPolicy")
       private final @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrrPolicy;
 
     public Output<RRSetRoutingPolicyWrrPolicyArgs> getWrrPolicy() {

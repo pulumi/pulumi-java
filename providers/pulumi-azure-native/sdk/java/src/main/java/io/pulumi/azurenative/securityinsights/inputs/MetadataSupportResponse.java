@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * Email of support contact
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -33,7 +33,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * Link for support help, like to support page to open a ticket etc.
      * 
      */
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable String link;
 
     public Optional<String> getLink() {
@@ -44,7 +44,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * Name of the support contact. Company or person.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * Type of support for content item
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {

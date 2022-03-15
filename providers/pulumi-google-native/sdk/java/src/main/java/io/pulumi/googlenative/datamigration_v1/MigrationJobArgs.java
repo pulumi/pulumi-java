@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1.enums.MigrationJobState;
 import io.pulumi.googlenative.datamigration_v1.enums.MigrationJobType;
 import io.pulumi.googlenative.datamigration_v1.inputs.DatabaseTypeArgs;
@@ -25,7 +25,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name (URI) of the destination connection profile.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<String> destination;
 
     public Output<String> getDestination() {
@@ -36,7 +36,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The database engine type and provider of the destination.
      * 
      */
-    @InputImport(name="destinationDatabase")
+    @Import(name="destinationDatabase")
       private final @Nullable Output<DatabaseTypeArgs> destinationDatabase;
 
     public Output<DatabaseTypeArgs> getDestinationDatabase() {
@@ -47,7 +47,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The migration job display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -58,7 +58,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The path to the dump file in Google Cloud Storage, in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
      * 
      */
-    @InputImport(name="dumpPath")
+    @Import(name="dumpPath")
       private final @Nullable Output<String> dumpPath;
 
     public Output<String> getDumpPath() {
@@ -69,21 +69,21 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The resource labels for migration job to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="migrationJobId", required=true)
+    @Import(name="migrationJobId", required=true)
       private final Output<String> migrationJobId;
 
     public Output<String> getMigrationJobId() {
@@ -94,21 +94,21 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name (URI) of this migration job resource, in the form of: projects/{project}/locations/{location}/migrationJobs/{migrationJob}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -119,7 +119,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
      * 
      */
-    @InputImport(name="reverseSshConnectivity")
+    @Import(name="reverseSshConnectivity")
       private final @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
 
     public Output<ReverseSshConnectivityArgs> getReverseSshConnectivity() {
@@ -130,7 +130,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name (URI) of the source connection profile.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {
@@ -141,7 +141,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The database engine type and provider of the source.
      * 
      */
-    @InputImport(name="sourceDatabase")
+    @Import(name="sourceDatabase")
       private final @Nullable Output<DatabaseTypeArgs> sourceDatabase;
 
     public Output<DatabaseTypeArgs> getSourceDatabase() {
@@ -152,7 +152,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The current migration job state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<MigrationJobState> state;
 
     public Output<MigrationJobState> getState() {
@@ -163,7 +163,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * static ip connectivity data (default, no additional details needed).
      * 
      */
-    @InputImport(name="staticIpConnectivity")
+    @Import(name="staticIpConnectivity")
       private final @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
 
     public Output<StaticIpConnectivityArgs> getStaticIpConnectivity() {
@@ -174,7 +174,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The migration job type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<MigrationJobType> type;
 
     public Output<MigrationJobType> getType() {
@@ -185,7 +185,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
      * The details of the VPC network that the source database is located in.
      * 
      */
-    @InputImport(name="vpcPeeringConnectivity")
+    @Import(name="vpcPeeringConnectivity")
       private final @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
 
     public Output<VpcPeeringConnectivityArgs> getVpcPeeringConnectivity() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerSchemaChangePolicy {
     /**
      * The deletion behavior when the crawler finds a deleted object. Valid values: `LOG`, `DELETE_FROM_DATABASE`, or `DEPRECATE_IN_DATABASE`. Defaults to `DEPRECATE_IN_DATABASE`.
@@ -22,10 +22,10 @@ public final class CrawlerSchemaChangePolicy {
      */
     private final @Nullable String updateBehavior;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerSchemaChangePolicy(
-        @OutputCustomType.Parameter("deleteBehavior") @Nullable String deleteBehavior,
-        @OutputCustomType.Parameter("updateBehavior") @Nullable String updateBehavior) {
+        @CustomType.Parameter("deleteBehavior") @Nullable String deleteBehavior,
+        @CustomType.Parameter("updateBehavior") @Nullable String updateBehavior) {
         this.deleteBehavior = deleteBehavior;
         this.updateBehavior = updateBehavior;
     }

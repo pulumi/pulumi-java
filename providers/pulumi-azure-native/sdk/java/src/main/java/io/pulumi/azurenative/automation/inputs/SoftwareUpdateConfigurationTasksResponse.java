@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TaskPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
      * Post task properties.
      * 
      */
-    @InputImport(name="postTask")
+    @Import(name="postTask")
       private final @Nullable TaskPropertiesResponse postTask;
 
     public Optional<TaskPropertiesResponse> getPostTask() {
@@ -33,7 +33,7 @@ public final class SoftwareUpdateConfigurationTasksResponse extends io.pulumi.re
      * Pre task properties.
      * 
      */
-    @InputImport(name="preTask")
+    @Import(name="preTask")
       private final @Nullable TaskPropertiesResponse preTask;
 
     public Optional<TaskPropertiesResponse> getPreTask() {

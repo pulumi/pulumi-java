@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultKeyResponseAttributes {
     /**
      * When the key was created.
@@ -28,11 +28,11 @@ public final class KeyVaultKeyResponseAttributes {
      */
     private final @Nullable Double updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultKeyResponseAttributes(
-        @OutputCustomType.Parameter("created") @Nullable Double created,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("updated") @Nullable Double updated) {
+        @CustomType.Parameter("created") @Nullable Double created,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("updated") @Nullable Double updated) {
         this.created = created;
         this.enabled = enabled;
         this.updated = updated;

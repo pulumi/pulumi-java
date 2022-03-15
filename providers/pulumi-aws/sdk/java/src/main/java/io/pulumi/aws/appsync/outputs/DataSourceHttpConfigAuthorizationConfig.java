@@ -4,13 +4,13 @@
 package io.pulumi.aws.appsync.outputs;
 
 import io.pulumi.aws.appsync.outputs.DataSourceHttpConfigAuthorizationConfigAwsIamConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceHttpConfigAuthorizationConfig {
     /**
      * The authorization type that the HTTP endpoint requires. Default values is `AWS_IAM`.
@@ -23,10 +23,10 @@ public final class DataSourceHttpConfigAuthorizationConfig {
      */
     private final @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceHttpConfigAuthorizationConfig(
-        @OutputCustomType.Parameter("authorizationType") @Nullable String authorizationType,
-        @OutputCustomType.Parameter("awsIamConfig") @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
+        @CustomType.Parameter("authorizationType") @Nullable String authorizationType,
+        @CustomType.Parameter("awsIamConfig") @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
         this.authorizationType = authorizationType;
         this.awsIamConfig = awsIamConfig;
     }

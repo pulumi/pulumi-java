@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyBindingCondition;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable GetIAMPolicyBindingCondition condition;
 
     public Optional<GetIAMPolicyBindingCondition> getCondition() {
@@ -38,7 +38,7 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
      * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final List<String> members;
 
     public List<String> getMembers() {
@@ -51,7 +51,7 @@ public final class GetIAMPolicyBinding extends io.pulumi.resources.InvokeArgs {
      * Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final String role;
 
     public String getRole() {

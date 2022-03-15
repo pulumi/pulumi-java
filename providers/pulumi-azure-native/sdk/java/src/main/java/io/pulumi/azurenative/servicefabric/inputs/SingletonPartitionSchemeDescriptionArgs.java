@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
      * Expected value is 'Singleton'.
      * 
      */
-    @InputImport(name="partitionScheme", required=true)
+    @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;
 
     public Output<String> getPartitionScheme() {

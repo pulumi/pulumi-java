@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
      * $expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
      * The name of the order item
      * 
      */
-    @InputImport(name="orderItemName", required=true)
+    @Import(name="orderItemName", required=true)
       private final String orderItemName;
 
     public String getOrderItemName() {
@@ -40,7 +40,7 @@ public final class GetOrderItemByNameArgs extends io.pulumi.resources.InvokeArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

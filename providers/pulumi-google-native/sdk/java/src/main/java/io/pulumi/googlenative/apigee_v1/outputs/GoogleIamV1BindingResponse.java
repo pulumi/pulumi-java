@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleTypeExprResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleIamV1BindingResponse {
     /**
      * The condition that is associated with this binding. If the condition evaluates to `true`, then this binding applies to the current request. If the condition evaluates to `false`, then this binding does not apply to the current request. However, a different role binding might grant the same role to one or more of the principals in this binding. To learn which resources support conditions in their IAM policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
@@ -27,11 +27,11 @@ public final class GoogleIamV1BindingResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleIamV1BindingResponse(
-        @OutputCustomType.Parameter("condition") GoogleTypeExprResponse condition,
-        @OutputCustomType.Parameter("members") List<String> members,
-        @OutputCustomType.Parameter("role") String role) {
+        @CustomType.Parameter("condition") GoogleTypeExprResponse condition,
+        @CustomType.Parameter("members") List<String> members,
+        @CustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;

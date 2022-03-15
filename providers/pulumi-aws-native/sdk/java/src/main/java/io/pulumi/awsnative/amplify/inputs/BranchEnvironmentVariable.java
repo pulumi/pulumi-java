@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class BranchEnvironmentVariable extends io.pulumi.resources.InvokeA
 
     public static final BranchEnvironmentVariable Empty = new BranchEnvironmentVariable();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
      * The time that this attempt was dispatched. `dispatch_time` will be truncated to the nearest microsecond.
      * 
      */
-    @InputImport(name="dispatchTime", required=true)
+    @Import(name="dispatchTime", required=true)
       private final String dispatchTime;
 
     public String getDispatchTime() {
@@ -32,7 +32,7 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
      * The response from the worker for this attempt. If `response_time` is unset, then the task has not been attempted or is currently running and the `response_status` field is meaningless.
      * 
      */
-    @InputImport(name="responseStatus", required=true)
+    @Import(name="responseStatus", required=true)
       private final StatusResponse responseStatus;
 
     public StatusResponse getResponseStatus() {
@@ -43,7 +43,7 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
      * The time that this attempt response was received. `response_time` will be truncated to the nearest microsecond.
      * 
      */
-    @InputImport(name="responseTime", required=true)
+    @Import(name="responseTime", required=true)
       private final String responseTime;
 
     public String getResponseTime() {
@@ -54,7 +54,7 @@ public final class AttemptResponse extends io.pulumi.resources.InvokeArgs {
      * The time that this attempt was scheduled. `schedule_time` will be truncated to the nearest microsecond.
      * 
      */
-    @InputImport(name="scheduleTime", required=true)
+    @Import(name="scheduleTime", required=true)
       private final String scheduleTime;
 
     public String getScheduleTime() {

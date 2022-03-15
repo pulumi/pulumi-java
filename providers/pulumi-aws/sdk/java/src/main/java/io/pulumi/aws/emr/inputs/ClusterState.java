@@ -13,7 +13,7 @@ import io.pulumi.aws.emr.inputs.ClusterMasterInstanceFleetGetArgs;
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupGetArgs;
 import io.pulumi.aws.emr.inputs.ClusterStepGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
      * 
      */
-    @InputImport(name="additionalInfo")
+    @Import(name="additionalInfo")
       private final @Nullable Output<String> additionalInfo;
 
     public Output<String> getAdditionalInfo() {
@@ -42,14 +42,14 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive.
      * 
      */
-    @InputImport(name="applications")
+    @Import(name="applications")
       private final @Nullable Output<List<String>> applications;
 
     public Output<List<String>> getApplications() {
         return this.applications == null ? Output.empty() : this.applications;
     }
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -60,7 +60,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * An auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the amount of idle time in seconds after which a cluster automatically terminates. See Auto Termination Policy Below.
      * 
      */
-    @InputImport(name="autoTerminationPolicy")
+    @Import(name="autoTerminationPolicy")
       private final @Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy;
 
     public Output<ClusterAutoTerminationPolicyGetArgs> getAutoTerminationPolicy() {
@@ -71,7 +71,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
      * 
      */
-    @InputImport(name="autoscalingRole")
+    @Import(name="autoscalingRole")
       private final @Nullable Output<String> autoscalingRole;
 
     public Output<String> getAutoscalingRole() {
@@ -82,14 +82,14 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. See below.
      * 
      */
-    @InputImport(name="bootstrapActions")
+    @Import(name="bootstrapActions")
       private final @Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions;
 
     public Output<List<ClusterBootstrapActionGetArgs>> getBootstrapActions() {
         return this.bootstrapActions == null ? Output.empty() : this.bootstrapActions;
     }
 
-    @InputImport(name="clusterState")
+    @Import(name="clusterState")
       private final @Nullable Output<String> clusterState;
 
     public Output<String> getClusterState() {
@@ -100,7 +100,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
      * 
      */
-    @InputImport(name="configurations")
+    @Import(name="configurations")
       private final @Nullable Output<String> configurations;
 
     public Output<String> getConfigurations() {
@@ -111,7 +111,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * JSON string for supplying list of configurations for the EMR cluster.
      * 
      */
-    @InputImport(name="configurationsJson")
+    @Import(name="configurationsJson")
       private final @Nullable Output<String> configurationsJson;
 
     public Output<String> getConfigurationsJson() {
@@ -122,7 +122,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `core_instance_group` configuration blocks are set. Detailed below.
      * 
      */
-    @InputImport(name="coreInstanceFleet")
+    @Import(name="coreInstanceFleet")
       private final @Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet;
 
     public Output<ClusterCoreInstanceFleetGetArgs> getCoreInstanceFleet() {
@@ -133,7 +133,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
      * 
      */
-    @InputImport(name="coreInstanceGroup")
+    @Import(name="coreInstanceGroup")
       private final @Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup;
 
     public Output<ClusterCoreInstanceGroupGetArgs> getCoreInstanceGroup() {
@@ -144,7 +144,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
      * 
      */
-    @InputImport(name="customAmiId")
+    @Import(name="customAmiId")
       private final @Nullable Output<String> customAmiId;
 
     public Output<String> getCustomAmiId() {
@@ -155,7 +155,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
      * 
      */
-    @InputImport(name="ebsRootVolumeSize")
+    @Import(name="ebsRootVolumeSize")
       private final @Nullable Output<Integer> ebsRootVolumeSize;
 
     public Output<Integer> getEbsRootVolumeSize() {
@@ -166,7 +166,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Attributes for the EC2 instances running the job flow. See below.
      * 
      */
-    @InputImport(name="ec2Attributes")
+    @Import(name="ec2Attributes")
       private final @Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes;
 
     public Output<ClusterEc2AttributesGetArgs> getEc2Attributes() {
@@ -177,7 +177,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Switch on/off run cluster with no steps or when all steps are complete (default is on)
      * 
      */
-    @InputImport(name="keepJobFlowAliveWhenNoSteps")
+    @Import(name="keepJobFlowAliveWhenNoSteps")
       private final @Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps;
 
     public Output<Boolean> getKeepJobFlowAliveWhenNoSteps() {
@@ -188,7 +188,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Kerberos configuration for the cluster. See below.
      * 
      */
-    @InputImport(name="kerberosAttributes")
+    @Import(name="kerberosAttributes")
       private final @Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes;
 
     public Output<ClusterKerberosAttributesGetArgs> getKerberosAttributes() {
@@ -199,7 +199,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * AWS KMS customer master key (CMK) key ID or arn used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later, excluding EMR 6.0.0.
      * 
      */
-    @InputImport(name="logEncryptionKmsKeyId")
+    @Import(name="logEncryptionKmsKeyId")
       private final @Nullable Output<String> logEncryptionKmsKeyId;
 
     public Output<String> getLogEncryptionKmsKeyId() {
@@ -210,7 +210,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created.
      * 
      */
-    @InputImport(name="logUri")
+    @Import(name="logUri")
       private final @Nullable Output<String> logUri;
 
     public Output<String> getLogUri() {
@@ -221,7 +221,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `master_instance_group` configuration blocks are set. Detailed below.
      * 
      */
-    @InputImport(name="masterInstanceFleet")
+    @Import(name="masterInstanceFleet")
       private final @Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet;
 
     public Output<ClusterMasterInstanceFleetGetArgs> getMasterInstanceFleet() {
@@ -232,7 +232,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
      * 
      */
-    @InputImport(name="masterInstanceGroup")
+    @Import(name="masterInstanceGroup")
       private final @Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup;
 
     public Output<ClusterMasterInstanceGroupGetArgs> getMasterInstanceGroup() {
@@ -243,7 +243,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The DNS name of the master node. If the cluster is on a private subnet, this is the private DNS name. On a public subnet, this is the public DNS name.
      * 
      */
-    @InputImport(name="masterPublicDns")
+    @Import(name="masterPublicDns")
       private final @Nullable Output<String> masterPublicDns;
 
     public Output<String> getMasterPublicDns() {
@@ -254,7 +254,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Name of the step.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -265,7 +265,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Release label for the Amazon EMR release.
      * 
      */
-    @InputImport(name="releaseLabel")
+    @Import(name="releaseLabel")
       private final @Nullable Output<String> releaseLabel;
 
     public Output<String> getReleaseLabel() {
@@ -276,7 +276,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
      * 
      */
-    @InputImport(name="scaleDownBehavior")
+    @Import(name="scaleDownBehavior")
       private final @Nullable Output<String> scaleDownBehavior;
 
     public Output<String> getScaleDownBehavior() {
@@ -287,7 +287,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater.
      * 
      */
-    @InputImport(name="securityConfiguration")
+    @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
@@ -298,7 +298,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * IAM role that will be assumed by the Amazon EMR service to access AWS resources.
      * 
      */
-    @InputImport(name="serviceRole")
+    @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
@@ -309,7 +309,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater (default is 1).
      * 
      */
-    @InputImport(name="stepConcurrencyLevel")
+    @Import(name="stepConcurrencyLevel")
       private final @Nullable Output<Integer> stepConcurrencyLevel;
 
     public Output<Integer> getStepConcurrencyLevel() {
@@ -320,7 +320,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of steps to run when creating the cluster. See below. It is highly recommended to utilize the lifecycle resource options block with `ignoreChanges` if other steps are being managed outside of this provider.
      * 
      */
-    @InputImport(name="steps")
+    @Import(name="steps")
       private final @Nullable Output<List<ClusterStepGetArgs>> steps;
 
     public Output<List<ClusterStepGetArgs>> getSteps() {
@@ -331,7 +331,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * list of tags to apply to the EMR Cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -342,7 +342,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -353,7 +353,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
      * 
      */
-    @InputImport(name="terminationProtection")
+    @Import(name="terminationProtection")
       private final @Nullable Output<Boolean> terminationProtection;
 
     public Output<Boolean> getTerminationProtection() {
@@ -364,7 +364,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default value is `true`.
      * 
      */
-    @InputImport(name="visibleToAllUsers")
+    @Import(name="visibleToAllUsers")
       private final @Nullable Output<Boolean> visibleToAllUsers;
 
     public Output<Boolean> getVisibleToAllUsers() {

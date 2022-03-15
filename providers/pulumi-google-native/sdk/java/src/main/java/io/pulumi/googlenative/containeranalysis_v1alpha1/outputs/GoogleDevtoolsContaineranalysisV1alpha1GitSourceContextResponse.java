@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse {
     /**
      * Git commit hash.
@@ -20,10 +20,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(
-        @OutputCustomType.Parameter("revisionId") String revisionId,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("revisionId") String revisionId,
+        @CustomType.Parameter("url") String url) {
         this.revisionId = revisionId;
         this.url = url;
     }

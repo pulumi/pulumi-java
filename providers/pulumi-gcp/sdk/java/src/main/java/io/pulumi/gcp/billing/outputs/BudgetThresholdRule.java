@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetThresholdRule {
     /**
      * The type of basis used to determine if spend has passed
@@ -27,10 +27,10 @@ public final class BudgetThresholdRule {
      */
     private final Double thresholdPercent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetThresholdRule(
-        @OutputCustomType.Parameter("spendBasis") @Nullable String spendBasis,
-        @OutputCustomType.Parameter("thresholdPercent") Double thresholdPercent) {
+        @CustomType.Parameter("spendBasis") @Nullable String spendBasis,
+        @CustomType.Parameter("thresholdPercent") Double thresholdPercent) {
         this.spendBasis = spendBasis;
         this.thresholdPercent = thresholdPercent;
     }

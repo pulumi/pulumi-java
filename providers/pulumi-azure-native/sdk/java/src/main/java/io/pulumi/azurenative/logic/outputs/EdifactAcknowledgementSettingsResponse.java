@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactAcknowledgementSettingsResponse {
     /**
      * The acknowledgement control number lower bound.
@@ -69,19 +69,19 @@ public final class EdifactAcknowledgementSettingsResponse {
      */
     private final Boolean sendSynchronousAcknowledgement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactAcknowledgementSettingsResponse(
-        @OutputCustomType.Parameter("acknowledgementControlNumberLowerBound") Integer acknowledgementControlNumberLowerBound,
-        @OutputCustomType.Parameter("acknowledgementControlNumberPrefix") @Nullable String acknowledgementControlNumberPrefix,
-        @OutputCustomType.Parameter("acknowledgementControlNumberSuffix") @Nullable String acknowledgementControlNumberSuffix,
-        @OutputCustomType.Parameter("acknowledgementControlNumberUpperBound") Integer acknowledgementControlNumberUpperBound,
-        @OutputCustomType.Parameter("batchFunctionalAcknowledgements") Boolean batchFunctionalAcknowledgements,
-        @OutputCustomType.Parameter("batchTechnicalAcknowledgements") Boolean batchTechnicalAcknowledgements,
-        @OutputCustomType.Parameter("needFunctionalAcknowledgement") Boolean needFunctionalAcknowledgement,
-        @OutputCustomType.Parameter("needLoopForValidMessages") Boolean needLoopForValidMessages,
-        @OutputCustomType.Parameter("needTechnicalAcknowledgement") Boolean needTechnicalAcknowledgement,
-        @OutputCustomType.Parameter("rolloverAcknowledgementControlNumber") Boolean rolloverAcknowledgementControlNumber,
-        @OutputCustomType.Parameter("sendSynchronousAcknowledgement") Boolean sendSynchronousAcknowledgement) {
+        @CustomType.Parameter("acknowledgementControlNumberLowerBound") Integer acknowledgementControlNumberLowerBound,
+        @CustomType.Parameter("acknowledgementControlNumberPrefix") @Nullable String acknowledgementControlNumberPrefix,
+        @CustomType.Parameter("acknowledgementControlNumberSuffix") @Nullable String acknowledgementControlNumberSuffix,
+        @CustomType.Parameter("acknowledgementControlNumberUpperBound") Integer acknowledgementControlNumberUpperBound,
+        @CustomType.Parameter("batchFunctionalAcknowledgements") Boolean batchFunctionalAcknowledgements,
+        @CustomType.Parameter("batchTechnicalAcknowledgements") Boolean batchTechnicalAcknowledgements,
+        @CustomType.Parameter("needFunctionalAcknowledgement") Boolean needFunctionalAcknowledgement,
+        @CustomType.Parameter("needLoopForValidMessages") Boolean needLoopForValidMessages,
+        @CustomType.Parameter("needTechnicalAcknowledgement") Boolean needTechnicalAcknowledgement,
+        @CustomType.Parameter("rolloverAcknowledgementControlNumber") Boolean rolloverAcknowledgementControlNumber,
+        @CustomType.Parameter("sendSynchronousAcknowledgement") Boolean sendSynchronousAcknowledgement) {
         this.acknowledgementControlNumberLowerBound = acknowledgementControlNumberLowerBound;
         this.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
         this.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;

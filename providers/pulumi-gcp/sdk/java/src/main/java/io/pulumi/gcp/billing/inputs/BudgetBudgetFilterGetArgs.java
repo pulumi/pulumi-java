@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * account and all subaccounts, if they exist.
      * 
      */
-    @InputImport(name="creditTypes")
+    @Import(name="creditTypes")
       private final @Nullable Output<List<String>> creditTypes;
 
     public Output<List<String>> getCreditTypes() {
@@ -39,7 +39,7 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
      * 
      */
-    @InputImport(name="creditTypesTreatment")
+    @Import(name="creditTypesTreatment")
       private final @Nullable Output<String> creditTypesTreatment;
 
     public Output<String> getCreditTypesTreatment() {
@@ -51,7 +51,7 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * this set of labeled resources should be included in the budget.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -66,7 +66,7 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * the usage occurred on.
      * 
      */
-    @InputImport(name="projects")
+    @Import(name="projects")
       private final @Nullable Output<List<String>> projects;
 
     public Output<List<String>> getProjects() {
@@ -82,7 +82,7 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * https://cloud.google.com/billing/v1/how-tos/catalog-api.
      * 
      */
-    @InputImport(name="services")
+    @Import(name="services")
       private final @Nullable Output<List<String>> services;
 
     public Output<List<String>> getServices() {
@@ -98,7 +98,7 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
      * account and all subaccounts, if they exist.
      * 
      */
-    @InputImport(name="subaccounts")
+    @Import(name="subaccounts")
       private final @Nullable Output<List<String>> subaccounts;
 
     public Output<List<String>> getSubaccounts() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * Method used to authenticate against the storage endpoint
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -34,7 +34,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
      * 
      */
-    @InputImport(name="batchFrequencyInSeconds")
+    @Import(name="batchFrequencyInSeconds")
       private final @Nullable Integer batchFrequencyInSeconds;
 
     public Optional<Integer> getBatchFrequencyInSeconds() {
@@ -45,7 +45,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * The connection string of the storage account.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
@@ -56,7 +56,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * The name of storage container in the storage account.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -67,7 +67,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * Encoding that is used to serialize messages to blobs. Supported values are 'avro', 'avrodeflate', and 'JSON'. Default value is 'avro'.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable String encoding;
 
     public Optional<String> getEncoding() {
@@ -78,7 +78,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * The url of the storage endpoint. It must include the protocol https://
      * 
      */
-    @InputImport(name="endpointUri")
+    @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
@@ -89,7 +89,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
      * 
      */
-    @InputImport(name="fileNameFormat")
+    @Import(name="fileNameFormat")
       private final @Nullable String fileNameFormat;
 
     public Optional<String> getFileNameFormat() {
@@ -100,7 +100,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * Id of the storage container endpoint
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -111,7 +111,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
      * 
      */
-    @InputImport(name="maxChunkSizeInBytes")
+    @Import(name="maxChunkSizeInBytes")
       private final @Nullable Integer maxChunkSizeInBytes;
 
     public Optional<Integer> getMaxChunkSizeInBytes() {
@@ -122,7 +122,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -133,7 +133,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * The name of the resource group of the storage account.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
@@ -144,7 +144,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * The subscription identifier of the storage account.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {

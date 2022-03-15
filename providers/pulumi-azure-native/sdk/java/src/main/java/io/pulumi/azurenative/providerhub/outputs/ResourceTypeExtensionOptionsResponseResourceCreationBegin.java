@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
     private final @Nullable List<String> request;
     private final @Nullable List<String> response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceTypeExtensionOptionsResponseResourceCreationBegin(
-        @OutputCustomType.Parameter("request") @Nullable List<String> request,
-        @OutputCustomType.Parameter("response") @Nullable List<String> response) {
+        @CustomType.Parameter("request") @Nullable List<String> request,
+        @CustomType.Parameter("response") @Nullable List<String> response) {
         this.request = request;
         this.response = response;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
      * represent individual user or service account only.
      * 
      */
-    @InputImport(name="identities")
+    @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
     public Output<List<String>> getIdentities() {
@@ -35,7 +35,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
      * Possible values are `IDENTITY_TYPE_UNSPECIFIED`, `ANY_IDENTITY`, `ANY_USER_ACCOUNT`, and `ANY_SERVICE_ACCOUNT`.
      * 
      */
-    @InputImport(name="identityType")
+    @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
     public Output<String> getIdentityType() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.PrivilegeResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
      * An array of actions that are allowed.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
@@ -35,7 +35,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
      * An Azure Cosmos DB Mongo DB Resource.
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Output<PrivilegeResourceArgs> resource;
 
     public Output<PrivilegeResourceArgs> getResource() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.LogAnalyticsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
 
     public static final AppLogsConfigurationArgs Empty = new AppLogsConfigurationArgs();
 
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
         return this.destination == null ? Output.empty() : this.destination;
     }
 
-    @InputImport(name="logAnalyticsConfiguration")
+    @Import(name="logAnalyticsConfiguration")
       private final @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
     public Output<LogAnalyticsConfigurationArgs> getLogAnalyticsConfiguration() {

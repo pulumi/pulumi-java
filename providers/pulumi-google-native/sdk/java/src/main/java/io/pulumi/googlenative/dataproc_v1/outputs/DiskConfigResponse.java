@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiskConfigResponse {
     /**
      * Optional. Size in GB of the boot disk (default is 500GB).
@@ -31,12 +31,12 @@ public final class DiskConfigResponse {
      */
     private final Integer numLocalSsds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskConfigResponse(
-        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
-        @OutputCustomType.Parameter("bootDiskType") String bootDiskType,
-        @OutputCustomType.Parameter("localSsdInterface") String localSsdInterface,
-        @OutputCustomType.Parameter("numLocalSsds") Integer numLocalSsds) {
+        @CustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @CustomType.Parameter("bootDiskType") String bootDiskType,
+        @CustomType.Parameter("localSsdInterface") String localSsdInterface,
+        @CustomType.Parameter("numLocalSsds") Integer numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.localSsdInterface = localSsdInterface;

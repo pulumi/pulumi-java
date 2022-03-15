@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -32,7 +32,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum inclusive value of the range.
      * 
      */
-    @InputImport(name="max", required=true)
+    @Import(name="max", required=true)
       private final Output<Integer> max;
 
     public Output<Integer> getMax() {
@@ -43,7 +43,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum inclusive value of the range.
      * 
      */
-    @InputImport(name="min", required=true)
+    @Import(name="min", required=true)
       private final Output<Integer> min;
 
     public Output<Integer> getMin() {
@@ -54,7 +54,7 @@ public final class RandomIntegerArgs extends io.pulumi.resources.ResourceArgs {
      * A custom seed to always produce the same value.
      * 
      */
-    @InputImport(name="seed")
+    @Import(name="seed")
       private final @Nullable Output<String> seed;
 
     public Output<String> getSeed() {

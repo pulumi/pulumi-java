@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.ApplicationTags;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     private final @Nullable String arn;
     /**
@@ -26,13 +26,13 @@ public final class GetApplicationResult {
     private final @Nullable String name;
     private final @Nullable ApplicationTags tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable ApplicationTags tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable ApplicationTags tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

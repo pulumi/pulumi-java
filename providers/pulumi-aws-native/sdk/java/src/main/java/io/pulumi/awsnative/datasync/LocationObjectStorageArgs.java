@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.inputs.LocationObjectStorageTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * Optional. The access key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
@@ -33,7 +33,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
      * 
      */
-    @InputImport(name="agentArns", required=true)
+    @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -44,7 +44,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * The name of the bucket on the self-managed object storage server.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -55,7 +55,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * Optional. The secret key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    @InputImport(name="secretKey")
+    @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
     public Output<String> getSecretKey() {
@@ -66,7 +66,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
      * 
      */
-    @InputImport(name="serverHostname", required=true)
+    @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
     public Output<String> getServerHostname() {
@@ -77,7 +77,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * The port that your self-managed server accepts inbound network traffic on.
      * 
      */
-    @InputImport(name="serverPort")
+    @Import(name="serverPort")
       private final @Nullable Output<Integer> serverPort;
 
     public Output<Integer> getServerPort() {
@@ -88,7 +88,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * The protocol that the object storage server uses to communicate.
      * 
      */
-    @InputImport(name="serverProtocol")
+    @Import(name="serverProtocol")
       private final @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
 
     public Output<LocationObjectStorageServerProtocol> getServerProtocol() {
@@ -99,7 +99,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * The subdirectory in the self-managed object storage server that is used to read data from.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -110,7 +110,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
 
     public Output<List<LocationObjectStorageTagArgs>> getTags() {

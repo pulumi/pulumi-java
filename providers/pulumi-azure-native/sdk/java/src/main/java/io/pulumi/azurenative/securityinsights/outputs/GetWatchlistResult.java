@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWatchlistResult {
     /**
      * The content type of the raw content. Example : text/csv or text/tsv
@@ -147,34 +147,34 @@ public final class GetWatchlistResult {
      */
     private final @Nullable String watchlistType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWatchlistResult(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("created") @Nullable String created,
-        @OutputCustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
-        @OutputCustomType.Parameter("defaultDuration") @Nullable String defaultDuration,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
-        @OutputCustomType.Parameter("itemsSearchKey") String itemsSearchKey,
-        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfLinesToSkip") @Nullable Integer numberOfLinesToSkip,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("rawContent") @Nullable String rawContent,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updated") @Nullable String updated,
-        @OutputCustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
-        @OutputCustomType.Parameter("uploadStatus") @Nullable String uploadStatus,
-        @OutputCustomType.Parameter("watchlistAlias") @Nullable String watchlistAlias,
-        @OutputCustomType.Parameter("watchlistId") @Nullable String watchlistId,
-        @OutputCustomType.Parameter("watchlistItemsCount") @Nullable Integer watchlistItemsCount,
-        @OutputCustomType.Parameter("watchlistType") @Nullable String watchlistType) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("created") @Nullable String created,
+        @CustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
+        @CustomType.Parameter("defaultDuration") @Nullable String defaultDuration,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
+        @CustomType.Parameter("itemsSearchKey") String itemsSearchKey,
+        @CustomType.Parameter("labels") @Nullable List<String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfLinesToSkip") @Nullable Integer numberOfLinesToSkip,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("rawContent") @Nullable String rawContent,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updated") @Nullable String updated,
+        @CustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
+        @CustomType.Parameter("uploadStatus") @Nullable String uploadStatus,
+        @CustomType.Parameter("watchlistAlias") @Nullable String watchlistAlias,
+        @CustomType.Parameter("watchlistId") @Nullable String watchlistId,
+        @CustomType.Parameter("watchlistItemsCount") @Nullable Integer watchlistItemsCount,
+        @CustomType.Parameter("watchlistType") @Nullable String watchlistType) {
         this.contentType = contentType;
         this.created = created;
         this.createdBy = createdBy;

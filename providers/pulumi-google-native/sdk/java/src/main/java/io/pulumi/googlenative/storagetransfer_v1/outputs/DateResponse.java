@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DateResponse {
     /**
      * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
@@ -25,11 +25,11 @@ public final class DateResponse {
      */
     private final Integer year;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DateResponse(
-        @OutputCustomType.Parameter("day") Integer day,
-        @OutputCustomType.Parameter("month") Integer month,
-        @OutputCustomType.Parameter("year") Integer year) {
+        @CustomType.Parameter("day") Integer day,
+        @CustomType.Parameter("month") Integer month,
+        @CustomType.Parameter("year") Integer year) {
         this.day = day;
         this.month = month;
         this.year = year;

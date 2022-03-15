@@ -6,7 +6,7 @@ package io.pulumi.aws.backup.inputs;
 import io.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingGetArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * An object that specifies backup options for each resource type.
      * 
      */
-    @InputImport(name="advancedBackupSettings")
+    @Import(name="advancedBackupSettings")
       private final @Nullable Output<List<PlanAdvancedBackupSettingGetArgs>> advancedBackupSettings;
 
     public Output<List<PlanAdvancedBackupSettingGetArgs>> getAdvancedBackupSettings() {
@@ -33,7 +33,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the backup plan.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * The display name of a backup plan.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * A rule object that specifies a scheduled task that is used to back up a selection of resources.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<PlanRuleGetArgs>> rules;
 
     public Output<List<PlanRuleGetArgs>> getRules() {
@@ -66,7 +66,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the plans you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -77,7 +77,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -88,7 +88,7 @@ public final class PlanState extends io.pulumi.resources.ResourceArgs {
      * Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -5,12 +5,12 @@ package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.outputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterStringFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterPackageFilter {
     private final @Nullable FilterStringFilter architecture;
     private final @Nullable FilterNumberFilter epoch;
@@ -19,14 +19,14 @@ public final class FilterPackageFilter {
     private final @Nullable FilterStringFilter sourceLayerHash;
     private final @Nullable FilterStringFilter version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterPackageFilter(
-        @OutputCustomType.Parameter("architecture") @Nullable FilterStringFilter architecture,
-        @OutputCustomType.Parameter("epoch") @Nullable FilterNumberFilter epoch,
-        @OutputCustomType.Parameter("name") @Nullable FilterStringFilter name,
-        @OutputCustomType.Parameter("release") @Nullable FilterStringFilter release,
-        @OutputCustomType.Parameter("sourceLayerHash") @Nullable FilterStringFilter sourceLayerHash,
-        @OutputCustomType.Parameter("version") @Nullable FilterStringFilter version) {
+        @CustomType.Parameter("architecture") @Nullable FilterStringFilter architecture,
+        @CustomType.Parameter("epoch") @Nullable FilterNumberFilter epoch,
+        @CustomType.Parameter("name") @Nullable FilterStringFilter name,
+        @CustomType.Parameter("release") @Nullable FilterStringFilter release,
+        @CustomType.Parameter("sourceLayerHash") @Nullable FilterStringFilter sourceLayerHash,
+        @CustomType.Parameter("version") @Nullable FilterStringFilter version) {
         this.architecture = architecture;
         this.epoch = epoch;
         this.name = name;

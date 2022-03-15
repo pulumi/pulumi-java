@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.route53recoveryreadiness.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource {
     /**
      * NLB resource ARN.
@@ -17,8 +17,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResource(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResource(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs;
@@ -21,7 +21,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dailySchedule")
+    @Import(name="dailySchedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
 
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> getDailySchedule() {
@@ -33,7 +33,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hourlySchedule")
+    @Import(name="hourlySchedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
 
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> getHourlySchedule() {
@@ -45,7 +45,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * Structure is documented below.
      * 
      */
-    @InputImport(name="weeklySchedule")
+    @Import(name="weeklySchedule")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
 
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> getWeeklySchedule() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A comment to describe the key group..
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -30,7 +30,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the identifiers of the public keys in the key group.
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final Output<List<String>> items;
 
     public Output<List<String>> getItems() {
@@ -41,7 +41,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A name to identify the key group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

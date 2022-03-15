@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Type of authentication used to connect to the Informix as ODBC data store. Possible values are: Anonymous and Basic. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Object> authenticationType;
 
     public Output<Object> getAuthenticationType() {
@@ -52,7 +52,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -63,7 +63,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The non-access credential portion of the connection string as well as an optional encrypted credential. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -74,7 +74,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The access credential portion of the connection string specified in driver-specific property-value format.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> credential;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getCredential() {
@@ -85,7 +85,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -96,7 +96,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -107,7 +107,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -118,7 +118,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Password for Basic authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -130,7 +130,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Expected value is 'Informix'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -141,7 +141,7 @@ public final class InformixLinkedServiceArgs extends io.pulumi.resources.Resourc
      * User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {

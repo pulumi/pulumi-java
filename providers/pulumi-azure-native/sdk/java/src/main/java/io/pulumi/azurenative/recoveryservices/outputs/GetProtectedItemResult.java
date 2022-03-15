@@ -15,7 +15,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureVmWorkloadSQLDatabase
 import io.pulumi.azurenative.recoveryservices.outputs.DPMProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.GenericProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabFileFolderProtectedItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProtectedItemResult {
     /**
      * Optional ETag.
@@ -61,15 +61,15 @@ public final class GetProtectedItemResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProtectedItemResult(
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.location = location;

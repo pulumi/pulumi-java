@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UnknownTargetResponse {
     /**
      * Dictionary of string->string pairs containing information about the Storage Target.
@@ -17,8 +17,8 @@ public final class UnknownTargetResponse {
      */
     private final @Nullable Map<String,String> attributes;
 
-    @OutputCustomType.Constructor
-    private UnknownTargetResponse(@OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes) {
+    @CustomType.Constructor
+    private UnknownTargetResponse(@CustomType.Parameter("attributes") @Nullable Map<String,String> attributes) {
         this.attributes = attributes;
     }
 

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TumblingWindowTriggerDependencyReferenceResponse {
     /**
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
@@ -34,12 +34,12 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TumblingWindowTriggerDependencyReferenceResponse(
-        @OutputCustomType.Parameter("offset") @Nullable String offset,
-        @OutputCustomType.Parameter("referenceTrigger") TriggerReferenceResponse referenceTrigger,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("offset") @Nullable String offset,
+        @CustomType.Parameter("referenceTrigger") TriggerReferenceResponse referenceTrigger,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("type") String type) {
         this.offset = offset;
         this.referenceTrigger = referenceTrigger;
         this.size = size;

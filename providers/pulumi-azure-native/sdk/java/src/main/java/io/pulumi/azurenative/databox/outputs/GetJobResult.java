@@ -11,7 +11,7 @@ import io.pulumi.azurenative.databox.outputs.JobDeliveryInfoResponse;
 import io.pulumi.azurenative.databox.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.databox.outputs.SkuResponse;
 import io.pulumi.azurenative.databox.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * Reason for cancellation.
@@ -128,29 +128,29 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("cancellationReason") String cancellationReason,
-        @OutputCustomType.Parameter("deliveryInfo") @Nullable JobDeliveryInfoResponse deliveryInfo,
-        @OutputCustomType.Parameter("deliveryType") @Nullable String deliveryType,
-        @OutputCustomType.Parameter("details") @Nullable Object details,
-        @OutputCustomType.Parameter("error") CloudErrorResponse error,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("isCancellable") Boolean isCancellable,
-        @OutputCustomType.Parameter("isCancellableWithoutFee") Boolean isCancellableWithoutFee,
-        @OutputCustomType.Parameter("isDeletable") Boolean isDeletable,
-        @OutputCustomType.Parameter("isPrepareToShipEnabled") Boolean isPrepareToShipEnabled,
-        @OutputCustomType.Parameter("isShippingAddressEditable") Boolean isShippingAddressEditable,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("transferType") String transferType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cancellationReason") String cancellationReason,
+        @CustomType.Parameter("deliveryInfo") @Nullable JobDeliveryInfoResponse deliveryInfo,
+        @CustomType.Parameter("deliveryType") @Nullable String deliveryType,
+        @CustomType.Parameter("details") @Nullable Object details,
+        @CustomType.Parameter("error") CloudErrorResponse error,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("isCancellable") Boolean isCancellable,
+        @CustomType.Parameter("isCancellableWithoutFee") Boolean isCancellableWithoutFee,
+        @CustomType.Parameter("isDeletable") Boolean isDeletable,
+        @CustomType.Parameter("isPrepareToShipEnabled") Boolean isPrepareToShipEnabled,
+        @CustomType.Parameter("isShippingAddressEditable") Boolean isShippingAddressEditable,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("transferType") String transferType,
+        @CustomType.Parameter("type") String type) {
         this.cancellationReason = cancellationReason;
         this.deliveryInfo = deliveryInfo;
         this.deliveryType = deliveryType;

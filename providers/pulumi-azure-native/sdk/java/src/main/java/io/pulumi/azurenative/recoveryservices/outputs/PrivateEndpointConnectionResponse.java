@@ -5,13 +5,13 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionResponse {
     /**
      * Gets or sets private endpoint associated with the private endpoint connection
@@ -29,11 +29,11 @@ public final class PrivateEndpointConnectionResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionResponse(
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;

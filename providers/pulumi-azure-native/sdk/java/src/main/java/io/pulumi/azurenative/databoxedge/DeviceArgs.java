@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.databoxedge.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the Data Box Edge/Gateway device.
      * 
      */
-    @InputImport(name="dataBoxEdgeDeviceStatus")
+    @Import(name="dataBoxEdgeDeviceStatus")
       private final @Nullable Output<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
 
     public Output<Either<String,DataBoxEdgeDeviceStatus>> getDataBoxEdgeDeviceStatus() {
@@ -34,7 +34,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -45,7 +45,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Msi identity of the resource
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -56,7 +56,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -78,7 +78,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU type.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -89,7 +89,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

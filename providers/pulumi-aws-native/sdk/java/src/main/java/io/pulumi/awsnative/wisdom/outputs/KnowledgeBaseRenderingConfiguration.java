@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.wisdom.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KnowledgeBaseRenderingConfiguration {
     private final @Nullable String templateUri;
 
-    @OutputCustomType.Constructor
-    private KnowledgeBaseRenderingConfiguration(@OutputCustomType.Parameter("templateUri") @Nullable String templateUri) {
+    @CustomType.Constructor
+    private KnowledgeBaseRenderingConfiguration(@CustomType.Parameter("templateUri") @Nullable String templateUri) {
         this.templateUri = templateUri;
     }
 

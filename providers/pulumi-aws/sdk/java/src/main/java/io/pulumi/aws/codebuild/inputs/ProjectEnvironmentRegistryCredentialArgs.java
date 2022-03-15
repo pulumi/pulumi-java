@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ProjectEnvironmentRegistryCredentialArgs extends io.pulumi.re
      * ARN or name of credentials created using AWS Secrets Manager.
      * 
      */
-    @InputImport(name="credential", required=true)
+    @Import(name="credential", required=true)
       private final Output<String> credential;
 
     public Output<String> getCredential() {
@@ -28,7 +28,7 @@ public final class ProjectEnvironmentRegistryCredentialArgs extends io.pulumi.re
      * Service that created the credentials to access a private Docker registry. Valid value: `SECRETS_MANAGER` (AWS Secrets Manager).
      * 
      */
-    @InputImport(name="credentialProvider", required=true)
+    @Import(name="credentialProvider", required=true)
       private final Output<String> credentialProvider;
 
     public Output<String> getCredentialProvider() {

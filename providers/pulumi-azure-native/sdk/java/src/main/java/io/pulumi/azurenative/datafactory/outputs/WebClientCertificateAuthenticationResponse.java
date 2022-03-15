@@ -6,12 +6,12 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebClientCertificateAuthenticationResponse {
     /**
      * Type of authentication used to connect to the web table source.
@@ -35,12 +35,12 @@ public final class WebClientCertificateAuthenticationResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebClientCertificateAuthenticationResponse(
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("pfx") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        @OutputCustomType.Parameter("url") Object url) {
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("pfx") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
+        @CustomType.Parameter("url") Object url) {
         this.authenticationType = authenticationType;
         this.password = password;
         this.pfx = pfx;

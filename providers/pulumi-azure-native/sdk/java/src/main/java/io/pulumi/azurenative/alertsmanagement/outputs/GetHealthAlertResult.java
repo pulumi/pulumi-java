@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertActionResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthAlertCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHealthAlertResult {
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
@@ -71,19 +71,19 @@ public final class GetHealthAlertResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHealthAlertResult(
-        @OutputCustomType.Parameter("actions") @Nullable List<HealthAlertActionResponse> actions,
-        @OutputCustomType.Parameter("criteria") HealthAlertCriteriaResponse criteria,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("actions") @Nullable List<HealthAlertActionResponse> actions,
+        @CustomType.Parameter("criteria") HealthAlertCriteriaResponse criteria,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scopes") @Nullable List<String> scopes,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.actions = actions;
         this.criteria = criteria;
         this.description = description;

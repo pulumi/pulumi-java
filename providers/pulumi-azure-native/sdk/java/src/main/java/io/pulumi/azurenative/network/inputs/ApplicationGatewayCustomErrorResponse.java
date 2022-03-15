@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
      * Error page URL of the application gateway customer error.
      * 
      */
-    @InputImport(name="customErrorPageUrl")
+    @Import(name="customErrorPageUrl")
       private final @Nullable String customErrorPageUrl;
 
     public Optional<String> getCustomErrorPageUrl() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
      * Status code of the application gateway customer error.
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable String statusCode;
 
     public Optional<String> getStatusCode() {

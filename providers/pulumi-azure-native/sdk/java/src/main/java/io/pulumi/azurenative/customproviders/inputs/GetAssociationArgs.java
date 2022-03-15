@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the association.
      * 
      */
-    @InputImport(name="associationName", required=true)
+    @Import(name="associationName", required=true)
       private final String associationName;
 
     public String getAssociationName() {
@@ -27,7 +27,7 @@ public final class GetAssociationArgs extends io.pulumi.resources.InvokeArgs {
      * The scope of the association.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

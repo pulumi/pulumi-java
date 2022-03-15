@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.devicefarm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DevicePoolRule {
     /**
      * The rule's stringified attribute. Valid values are: `APPIUM_VERSION`, `ARN`, `AVAILABILITY`, `FLEET_TYPE`, `FORM_FACTOR`, `INSTANCE_ARN`, `INSTANCE_LABELS`, `MANUFACTURER`, `MODEL`, `OS_VERSION`, `PLATFORM`, `REMOTE_ACCESS_ENABLED`, `REMOTE_DEBUG_ENABLED`.
@@ -27,11 +27,11 @@ public final class DevicePoolRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DevicePoolRule(
-        @OutputCustomType.Parameter("attribute") @Nullable String attribute,
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("attribute") @Nullable String attribute,
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.attribute = attribute;
         this.operator = operator;
         this.value = value;

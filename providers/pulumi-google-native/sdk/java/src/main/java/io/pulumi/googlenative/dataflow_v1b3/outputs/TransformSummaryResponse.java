@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DisplayDataResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransformSummaryResponse {
     /**
      * Transform-specific display data.
@@ -37,13 +37,13 @@ public final class TransformSummaryResponse {
      */
     private final List<String> outputCollectionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransformSummaryResponse(
-        @OutputCustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
-        @OutputCustomType.Parameter("inputCollectionName") List<String> inputCollectionName,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputCollectionName") List<String> outputCollectionName) {
+        @CustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
+        @CustomType.Parameter("inputCollectionName") List<String> inputCollectionName,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputCollectionName") List<String> outputCollectionName) {
         this.displayData = displayData;
         this.inputCollectionName = inputCollectionName;
         this.kind = kind;

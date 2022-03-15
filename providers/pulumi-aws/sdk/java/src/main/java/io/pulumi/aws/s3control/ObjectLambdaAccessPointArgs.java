@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
 
     public static final ObjectLambdaAccessPointArgs Empty = new ObjectLambdaAccessPointArgs();
 
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -26,7 +26,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
      * A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
      * 
      */
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Output<ObjectLambdaAccessPointConfigurationArgs> configuration;
 
     public Output<ObjectLambdaAccessPointConfigurationArgs> getConfiguration() {
@@ -37,7 +37,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
      * The name for this Object Lambda Access Point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

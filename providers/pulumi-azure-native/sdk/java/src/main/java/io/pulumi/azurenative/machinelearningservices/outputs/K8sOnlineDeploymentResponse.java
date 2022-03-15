@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.OnlineRequestSettin
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ProbeSettingsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class K8sOnlineDeploymentResponse {
     /**
      * If true, enables Application Insights logging.
@@ -91,21 +91,21 @@ public final class K8sOnlineDeploymentResponse {
      */
     private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private K8sOnlineDeploymentResponse(
-        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
-        @OutputCustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
-        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("endpointComputeType") String endpointComputeType,
-        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("livenessProbe") @Nullable ProbeSettingsResponse livenessProbe,
-        @OutputCustomType.Parameter("model") @Nullable Object model,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestSettings") @Nullable OnlineRequestSettingsResponse requestSettings,
-        @OutputCustomType.Parameter("scaleSettings") @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
+        @CustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @CustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
+        @CustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("endpointComputeType") String endpointComputeType,
+        @CustomType.Parameter("environmentId") @Nullable String environmentId,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @CustomType.Parameter("livenessProbe") @Nullable ProbeSettingsResponse livenessProbe,
+        @CustomType.Parameter("model") @Nullable Object model,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestSettings") @Nullable OnlineRequestSettingsResponse requestSettings,
+        @CustomType.Parameter("scaleSettings") @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
         this.appInsightsEnabled = appInsightsEnabled;
         this.codeConfiguration = codeConfiguration;
         this.containerResourceRequirements = containerResourceRequirements;

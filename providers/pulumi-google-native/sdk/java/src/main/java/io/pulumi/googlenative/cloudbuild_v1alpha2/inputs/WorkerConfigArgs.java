@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
@@ -33,7 +33,7 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Machine Type of the worker, such as n1-standard-1. See https://cloud.google.com/compute/docs/machine-types. If left blank, Cloud Build will use a standard unspecified machine to create the worker pool.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {

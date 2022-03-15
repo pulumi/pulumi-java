@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * Each value may be one of `POLICY_TYPE_UNSPECIFIED` and `FINE_GRAINED_ACCESS_CONTROL`.
      * 
      */
-    @InputImport(name="activatedPolicyTypes")
+    @Import(name="activatedPolicyTypes")
       private final @Nullable Output<List<String>> activatedPolicyTypes;
 
     public Output<List<String>> getActivatedPolicyTypes() {
@@ -34,7 +34,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * long when encoded in UTF-8. If not set, defaults to an empty description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * long when encoded in UTF-8.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -60,7 +60,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -71,7 +71,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
      * Taxonomy location region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * The ID of the asset that has the specified property. You can specify an expression.
      * 
      */
-    @InputImport(name="assetId")
+    @Import(name="assetId")
       private final @Nullable Output<String> assetId;
 
     public Output<String> getAssetId() {
@@ -34,7 +34,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * A unique identifier for this entry. You can use the entry ID to track which data entry causes an error in case of failure. The default is a new unique identifier. You can also specify an expression.
      * 
      */
-    @InputImport(name="entryId")
+    @Import(name="entryId")
       private final @Nullable Output<String> entryId;
 
     public Output<String> getEntryId() {
@@ -45,7 +45,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * The alias of the asset property. You can also specify an expression.
      * 
      */
-    @InputImport(name="propertyAlias")
+    @Import(name="propertyAlias")
       private final @Nullable Output<String> propertyAlias;
 
     public Output<String> getPropertyAlias() {
@@ -56,14 +56,14 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
      * The ID of the asset property. You can specify an expression.
      * 
      */
-    @InputImport(name="propertyId")
+    @Import(name="propertyId")
       private final @Nullable Output<String> propertyId;
 
     public Output<String> getPropertyId() {
         return this.propertyId == null ? Output.empty() : this.propertyId;
     }
 
-    @InputImport(name="propertyValue", required=true)
+    @Import(name="propertyValue", required=true)
       private final Output<DetectorModelAssetPropertyValueArgs> propertyValue;
 
     public Output<DetectorModelAssetPropertyValueArgs> getPropertyValue() {

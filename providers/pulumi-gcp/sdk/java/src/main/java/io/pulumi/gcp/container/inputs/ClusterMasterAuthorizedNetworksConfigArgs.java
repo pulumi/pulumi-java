@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthorizedNetworksConfigCidrBlockArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
      * Kubernetes cluster master through HTTPS.
      * 
      */
-    @InputImport(name="cidrBlocks")
+    @Import(name="cidrBlocks")
       private final @Nullable Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
     public Output<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {

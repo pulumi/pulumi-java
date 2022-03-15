@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.mskconnect.WorkerConfigurationArgs;
 import io.pulumi.aws.mskconnect.inputs.WorkerConfigurationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * the Amazon Resource Name (ARN) of the worker configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * A summary description of the worker configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * an ID of the latest successfully created revision of the worker configuration.
      * 
      */
-    @OutputExport(name="latestRevision", type=Integer.class, parameters={})
+    @Export(name="latestRevision", type=Integer.class, parameters={})
     private Output<Integer> latestRevision;
 
     /**
@@ -75,7 +75,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the worker configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -89,7 +89,7 @@ public class WorkerConfiguration extends io.pulumi.resources.CustomResource {
      * Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
      * 
      */
-    @OutputExport(name="propertiesFileContent", type=String.class, parameters={})
+    @Export(name="propertiesFileContent", type=String.class, parameters={})
     private Output<String> propertiesFileContent;
 
     /**

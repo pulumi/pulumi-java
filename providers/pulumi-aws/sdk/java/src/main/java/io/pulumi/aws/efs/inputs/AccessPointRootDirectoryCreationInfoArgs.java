@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * POSIX group ID to apply to the `root_directory`.
      * 
      */
-    @InputImport(name="ownerGid", required=true)
+    @Import(name="ownerGid", required=true)
       private final Output<Integer> ownerGid;
 
     public Output<Integer> getOwnerGid() {
@@ -29,7 +29,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * POSIX user ID to apply to the `root_directory`.
      * 
      */
-    @InputImport(name="ownerUid", required=true)
+    @Import(name="ownerUid", required=true)
       private final Output<Integer> ownerUid;
 
     public Output<Integer> getOwnerUid() {
@@ -40,7 +40,7 @@ public final class AccessPointRootDirectoryCreationInfoArgs extends io.pulumi.re
      * POSIX permissions to apply to the RootDirectory, in the format of an octal number representing the file's mode bits.
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
     public Output<String> getPermissions() {

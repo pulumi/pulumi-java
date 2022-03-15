@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.datastore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataStoreIndexProperty {
     /**
      * The direction the index should optimize for sorting.
@@ -21,10 +21,10 @@ public final class DataStoreIndexProperty {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataStoreIndexProperty(
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("name") String name) {
         this.direction = direction;
         this.name = name;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServicePrincipalPropertiesResponse {
     /**
      * The service principal client ID
@@ -20,10 +20,10 @@ public final class ServicePrincipalPropertiesResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePrincipalPropertiesResponse(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("secret") String secret) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("secret") String secret) {
         this.clientId = clientId;
         this.secret = secret;
     }

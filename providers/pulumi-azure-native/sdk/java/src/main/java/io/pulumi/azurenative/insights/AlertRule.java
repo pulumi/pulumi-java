@@ -13,7 +13,7 @@ import io.pulumi.azurenative.insights.outputs.ThresholdRuleConditionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -43,7 +43,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @OutputExport(name="action", type=Either.class, parameters={RuleEmailActionResponse.class, RuleWebhookActionResponse.class})
+    @Export(name="action", type=Either.class, parameters={RuleEmailActionResponse.class, RuleWebhookActionResponse.class})
     private Output</* @Nullable */ Either<RuleEmailActionResponse,RuleWebhookActionResponse>> action;
 
     /**
@@ -57,7 +57,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={Either.class})
+    @Export(name="actions", type=List.class, parameters={Either.class})
     private Output</* @Nullable */ List<Either<RuleEmailActionResponse,RuleWebhookActionResponse>>> actions;
 
     /**
@@ -71,7 +71,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * the condition that results in the alert rule being activated.
      * 
      */
-    @OutputExport(name="condition", type=Object.class, parameters={})
+    @Export(name="condition", type=Object.class, parameters={})
     private Output<Object> condition;
 
     /**
@@ -85,7 +85,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * the description of the alert rule that will be included in the alert email.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -99,7 +99,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * the flag that indicates whether the alert rule is enabled.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> isEnabled;
 
     /**
@@ -113,7 +113,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * Last time the rule was updated in ISO8601 format.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -127,7 +127,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -141,7 +141,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -169,7 +169,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -183,7 +183,7 @@ public class AlertRule extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

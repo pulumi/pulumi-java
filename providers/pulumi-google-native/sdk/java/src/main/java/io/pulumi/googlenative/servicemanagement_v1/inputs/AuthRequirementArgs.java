@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
      * NOTE: This will be deprecated soon, once AuthProvider.audiences is implemented and accepted in all the runtime components. The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences will be accepted. When this setting is absent, only JWTs with audience "https://Service_name/API_name" will be accepted. For example, if no audiences are in the setting, LibraryService API will only accept JWTs with the following audience "https://library-example.googleapis.com/google.example.library.v1.LibraryService". Example: audiences: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
      * 
      */
-    @InputImport(name="audiences")
+    @Import(name="audiences")
       private final @Nullable Output<String> audiences;
 
     public Output<String> getAudiences() {
@@ -33,7 +33,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
      * id from authentication provider. Example: provider_id: bookstore_auth
      * 
      */
-    @InputImport(name="providerId")
+    @Import(name="providerId")
       private final @Nullable Output<String> providerId;
 
     public Output<String> getProviderId() {

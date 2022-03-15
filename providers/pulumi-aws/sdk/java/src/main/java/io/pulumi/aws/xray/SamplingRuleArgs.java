@@ -4,7 +4,7 @@
 package io.pulumi.aws.xray;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches attributes derived from the request.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -32,7 +32,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The percentage of matching requests to instrument, after the reservoir is exhausted.
      * 
      */
-    @InputImport(name="fixedRate", required=true)
+    @Import(name="fixedRate", required=true)
       private final Output<Double> fixedRate;
 
     public Output<Double> getFixedRate() {
@@ -43,7 +43,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches the hostname from a request URL.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -54,7 +54,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches the HTTP method of a request.
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -65,7 +65,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The priority of the sampling rule.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -76,7 +76,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
      * 
      */
-    @InputImport(name="reservoirSize", required=true)
+    @Import(name="reservoirSize", required=true)
       private final Output<Integer> reservoirSize;
 
     public Output<Integer> getReservoirSize() {
@@ -87,7 +87,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches the ARN of the AWS resource on which the service runs.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -98,7 +98,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the sampling rule.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -109,7 +109,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches the `name` that the service uses to identify itself in segments.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -120,7 +120,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches the `origin` that the service uses to identify its type in segments.
      * 
      */
-    @InputImport(name="serviceType", required=true)
+    @Import(name="serviceType", required=true)
       private final Output<String> serviceType;
 
     public Output<String> getServiceType() {
@@ -131,7 +131,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -142,7 +142,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Matches the path from a request URL.
      * 
      */
-    @InputImport(name="urlPath", required=true)
+    @Import(name="urlPath", required=true)
       private final Output<String> urlPath;
 
     public Output<String> getUrlPath() {
@@ -153,7 +153,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the sampling rule format (`1` )
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<Integer> version;
 
     public Output<Integer> getVersion() {

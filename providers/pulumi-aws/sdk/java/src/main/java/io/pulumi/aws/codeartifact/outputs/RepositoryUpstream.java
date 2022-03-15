@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codeartifact.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryUpstream {
     /**
      * The name of an upstream repository.
@@ -15,8 +15,8 @@ public final class RepositoryUpstream {
      */
     private final String repositoryName;
 
-    @OutputCustomType.Constructor
-    private RepositoryUpstream(@OutputCustomType.Parameter("repositoryName") String repositoryName) {
+    @CustomType.Constructor
+    private RepositoryUpstream(@CustomType.Parameter("repositoryName") String repositoryName) {
         this.repositoryName = repositoryName;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.TagValueArgs;
@@ -21,7 +21,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -35,7 +35,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Optional. User-assigned description of the TagValue. Must not exceed 256 characters. Read-write.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagValueRequest for details.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Immutable. Resource name for TagValue in the format `tagValues/456`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Namespaced name of the TagValue. Must be in the format `{organization_id}/{tag_key_short_name}/{short_name}`.
      * 
      */
-    @OutputExport(name="namespacedName", type=String.class, parameters={})
+    @Export(name="namespacedName", type=String.class, parameters={})
     private Output<String> namespacedName;
 
     /**
@@ -91,7 +91,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -105,7 +105,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Immutable. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @OutputExport(name="shortName", type=String.class, parameters={})
+    @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**
@@ -119,7 +119,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Update time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

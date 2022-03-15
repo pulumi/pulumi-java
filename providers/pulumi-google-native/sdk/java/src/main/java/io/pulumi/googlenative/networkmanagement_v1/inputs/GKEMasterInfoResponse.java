@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * URI of a GKE cluster network.
      * 
      */
-    @InputImport(name="clusterNetworkUri", required=true)
+    @Import(name="clusterNetworkUri", required=true)
       private final String clusterNetworkUri;
 
     public String getClusterNetworkUri() {
@@ -31,7 +31,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * URI of a GKE cluster.
      * 
      */
-    @InputImport(name="clusterUri", required=true)
+    @Import(name="clusterUri", required=true)
       private final String clusterUri;
 
     public String getClusterUri() {
@@ -42,7 +42,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * External IP address of a GKE cluster master.
      * 
      */
-    @InputImport(name="externalIp", required=true)
+    @Import(name="externalIp", required=true)
       private final String externalIp;
 
     public String getExternalIp() {
@@ -53,7 +53,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * Internal IP address of a GKE cluster master.
      * 
      */
-    @InputImport(name="internalIp", required=true)
+    @Import(name="internalIp", required=true)
       private final String internalIp;
 
     public String getInternalIp() {

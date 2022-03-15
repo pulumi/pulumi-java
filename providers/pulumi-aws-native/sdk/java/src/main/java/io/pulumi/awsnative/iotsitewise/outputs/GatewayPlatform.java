@@ -5,12 +5,12 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayGreengrass;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayGreengrassV2;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayPlatform {
     /**
      * A gateway that runs on AWS IoT Greengrass V1.
@@ -23,10 +23,10 @@ public final class GatewayPlatform {
      */
     private final @Nullable GatewayGreengrassV2 greengrassV2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayPlatform(
-        @OutputCustomType.Parameter("greengrass") @Nullable GatewayGreengrass greengrass,
-        @OutputCustomType.Parameter("greengrassV2") @Nullable GatewayGreengrassV2 greengrassV2) {
+        @CustomType.Parameter("greengrass") @Nullable GatewayGreengrass greengrass,
+        @CustomType.Parameter("greengrassV2") @Nullable GatewayGreengrassV2 greengrassV2) {
         this.greengrass = greengrass;
         this.greengrassV2 = greengrassV2;
     }

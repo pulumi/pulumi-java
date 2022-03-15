@@ -6,7 +6,7 @@ package io.pulumi.awsnative.efs.outputs;
 import io.pulumi.awsnative.efs.outputs.FileSystemBackupPolicy;
 import io.pulumi.awsnative.efs.outputs.FileSystemElasticFileSystemTag;
 import io.pulumi.awsnative.efs.outputs.FileSystemLifecyclePolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFileSystemResult {
     private final @Nullable String arn;
     private final @Nullable FileSystemBackupPolicy backupPolicy;
@@ -26,16 +26,16 @@ public final class GetFileSystemResult {
     private final @Nullable Double provisionedThroughputInMibps;
     private final @Nullable String throughputMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFileSystemResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("backupPolicy") @Nullable FileSystemBackupPolicy backupPolicy,
-        @OutputCustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
-        @OutputCustomType.Parameter("fileSystemPolicy") @Nullable Object fileSystemPolicy,
-        @OutputCustomType.Parameter("fileSystemTags") @Nullable List<FileSystemElasticFileSystemTag> fileSystemTags,
-        @OutputCustomType.Parameter("lifecyclePolicies") @Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies,
-        @OutputCustomType.Parameter("provisionedThroughputInMibps") @Nullable Double provisionedThroughputInMibps,
-        @OutputCustomType.Parameter("throughputMode") @Nullable String throughputMode) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("backupPolicy") @Nullable FileSystemBackupPolicy backupPolicy,
+        @CustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
+        @CustomType.Parameter("fileSystemPolicy") @Nullable Object fileSystemPolicy,
+        @CustomType.Parameter("fileSystemTags") @Nullable List<FileSystemElasticFileSystemTag> fileSystemTags,
+        @CustomType.Parameter("lifecyclePolicies") @Nullable List<FileSystemLifecyclePolicy> lifecyclePolicies,
+        @CustomType.Parameter("provisionedThroughputInMibps") @Nullable Double provisionedThroughputInMibps,
+        @CustomType.Parameter("throughputMode") @Nullable String throughputMode) {
         this.arn = arn;
         this.backupPolicy = backupPolicy;
         this.fileSystemId = fileSystemId;

@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -30,7 +30,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * The Amazon S3 bucket ARN of the destination.
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -41,7 +41,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * Contains the type of server-side encryption to use to encrypt the inventory (documented below).
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption;
 
     public Output<InventoryDestinationBucketEncryptionArgs> getEncryption() {
@@ -52,7 +52,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * Specifies the output format of the inventory results. Can be `CSV`, [`ORC`](https://orc.apache.org/) or [`Parquet`](https://parquet.apache.org/).
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
@@ -63,7 +63,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
      * The prefix that is prepended to all inventory results.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

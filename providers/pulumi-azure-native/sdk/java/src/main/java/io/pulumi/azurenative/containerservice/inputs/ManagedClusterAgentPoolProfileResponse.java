@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.inputs.AgentPoolUpgradeSettingsRes
 import io.pulumi.azurenative.containerservice.inputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.inputs.LinuxOSConfigResponse;
 import io.pulumi.azurenative.containerservice.inputs.PowerStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -31,7 +31,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
@@ -42,7 +42,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
@@ -53,7 +53,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Whether to enable auto-scaler
      * 
      */
-    @InputImport(name="enableAutoScaling")
+    @Import(name="enableAutoScaling")
       private final @Nullable Boolean enableAutoScaling;
 
     public Optional<Boolean> getEnableAutoScaling() {
@@ -64,7 +64,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Whether to enable EncryptionAtHost
      * 
      */
-    @InputImport(name="enableEncryptionAtHost")
+    @Import(name="enableEncryptionAtHost")
       private final @Nullable Boolean enableEncryptionAtHost;
 
     public Optional<Boolean> getEnableEncryptionAtHost() {
@@ -75,7 +75,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Whether to use FIPS enabled OS
      * 
      */
-    @InputImport(name="enableFIPS")
+    @Import(name="enableFIPS")
       private final @Nullable Boolean enableFIPS;
 
     public Optional<Boolean> getEnableFIPS() {
@@ -86,7 +86,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Enable public IP for nodes
      * 
      */
-    @InputImport(name="enableNodePublicIP")
+    @Import(name="enableNodePublicIP")
       private final @Nullable Boolean enableNodePublicIP;
 
     public Optional<Boolean> getEnableNodePublicIP() {
@@ -97,7 +97,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
      * 
      */
-    @InputImport(name="gpuInstanceProfile")
+    @Import(name="gpuInstanceProfile")
       private final @Nullable String gpuInstanceProfile;
 
     public Optional<String> getGpuInstanceProfile() {
@@ -108,7 +108,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * KubeletConfig specifies the configuration of kubelet on agent nodes.
      * 
      */
-    @InputImport(name="kubeletConfig")
+    @Import(name="kubeletConfig")
       private final @Nullable KubeletConfigResponse kubeletConfig;
 
     public Optional<KubeletConfigResponse> getKubeletConfig() {
@@ -119,7 +119,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
      * 
      */
-    @InputImport(name="kubeletDiskType")
+    @Import(name="kubeletDiskType")
       private final @Nullable String kubeletDiskType;
 
     public Optional<String> getKubeletDiskType() {
@@ -130,7 +130,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * LinuxOSConfig specifies the OS configuration of linux agent nodes.
      * 
      */
-    @InputImport(name="linuxOSConfig")
+    @Import(name="linuxOSConfig")
       private final @Nullable LinuxOSConfigResponse linuxOSConfig;
 
     public Optional<LinuxOSConfigResponse> getLinuxOSConfig() {
@@ -141,7 +141,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Maximum number of nodes for auto-scaling
      * 
      */
-    @InputImport(name="maxCount")
+    @Import(name="maxCount")
       private final @Nullable Integer maxCount;
 
     public Optional<Integer> getMaxCount() {
@@ -152,7 +152,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Maximum number of pods that can run on a node.
      * 
      */
-    @InputImport(name="maxPods")
+    @Import(name="maxPods")
       private final @Nullable Integer maxPods;
 
     public Optional<Integer> getMaxPods() {
@@ -163,7 +163,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Minimum number of nodes for auto-scaling
      * 
      */
-    @InputImport(name="minCount")
+    @Import(name="minCount")
       private final @Nullable Integer minCount;
 
     public Optional<Integer> getMinCount() {
@@ -174,7 +174,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * AgentPoolMode represents mode of an agent pool
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -185,7 +185,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Unique name of the agent pool profile in the context of the subscription and resource group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -196,7 +196,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Version of node image
      * 
      */
-    @InputImport(name="nodeImageVersion", required=true)
+    @Import(name="nodeImageVersion", required=true)
       private final String nodeImageVersion;
 
     public String getNodeImageVersion() {
@@ -207,7 +207,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Agent pool node labels to be persisted across all nodes in agent pool.
      * 
      */
-    @InputImport(name="nodeLabels")
+    @Import(name="nodeLabels")
       private final @Nullable Map<String,String> nodeLabels;
 
     public Map<String,String> getNodeLabels() {
@@ -218,7 +218,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
      * 
      */
-    @InputImport(name="nodePublicIPPrefixID")
+    @Import(name="nodePublicIPPrefixID")
       private final @Nullable String nodePublicIPPrefixID;
 
     public Optional<String> getNodePublicIPPrefixID() {
@@ -229,7 +229,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
      * 
      */
-    @InputImport(name="nodeTaints")
+    @Import(name="nodeTaints")
       private final @Nullable List<String> nodeTaints;
 
     public List<String> getNodeTaints() {
@@ -240,7 +240,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Version of orchestrator specified when creating the managed cluster.
      * 
      */
-    @InputImport(name="orchestratorVersion")
+    @Import(name="orchestratorVersion")
       private final @Nullable String orchestratorVersion;
 
     public Optional<String> getOrchestratorVersion() {
@@ -251,7 +251,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
      * 
      */
-    @InputImport(name="osDiskSizeGB")
+    @Import(name="osDiskSizeGB")
       private final @Nullable Integer osDiskSizeGB;
 
     public Optional<Integer> getOsDiskSizeGB() {
@@ -262,7 +262,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * OS disk type to be used for machines in a given agent pool. Allowed values are 'Ephemeral' and 'Managed'. If unspecified, defaults to 'Ephemeral' when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation.
      * 
      */
-    @InputImport(name="osDiskType")
+    @Import(name="osDiskType")
       private final @Nullable String osDiskType;
 
     public Optional<String> getOsDiskType() {
@@ -273,7 +273,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
      * 
      */
-    @InputImport(name="osSKU")
+    @Import(name="osSKU")
       private final @Nullable String osSKU;
 
     public Optional<String> getOsSKU() {
@@ -284,7 +284,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -295,7 +295,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Pod SubnetID specifies the VNet's subnet identifier for pods.
      * 
      */
-    @InputImport(name="podSubnetID")
+    @Import(name="podSubnetID")
       private final @Nullable String podSubnetID;
 
     public Optional<String> getPodSubnetID() {
@@ -306,7 +306,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Describes whether the Agent Pool is Running or Stopped
      * 
      */
-    @InputImport(name="powerState", required=true)
+    @Import(name="powerState", required=true)
       private final PowerStateResponse powerState;
 
     public PowerStateResponse getPowerState() {
@@ -317,7 +317,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -328,7 +328,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * The ID for Proximity Placement Group.
      * 
      */
-    @InputImport(name="proximityPlacementGroupID")
+    @Import(name="proximityPlacementGroupID")
       private final @Nullable String proximityPlacementGroupID;
 
     public Optional<String> getProximityPlacementGroupID() {
@@ -339,7 +339,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
      * 
      */
-    @InputImport(name="scaleSetEvictionPolicy")
+    @Import(name="scaleSetEvictionPolicy")
       private final @Nullable String scaleSetEvictionPolicy;
 
     public Optional<String> getScaleSetEvictionPolicy() {
@@ -350,7 +350,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
      * 
      */
-    @InputImport(name="scaleSetPriority")
+    @Import(name="scaleSetPriority")
       private final @Nullable String scaleSetPriority;
 
     public Optional<String> getScaleSetPriority() {
@@ -361,7 +361,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
      * 
      */
-    @InputImport(name="spotMaxPrice")
+    @Import(name="spotMaxPrice")
       private final @Nullable Double spotMaxPrice;
 
     public Optional<Double> getSpotMaxPrice() {
@@ -372,7 +372,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Agent pool tags to be persisted on the agent pool virtual machine scale set.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -383,7 +383,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * AgentPoolType represents types of an agent pool
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -394,7 +394,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Settings for upgrading the agentpool
      * 
      */
-    @InputImport(name="upgradeSettings")
+    @Import(name="upgradeSettings")
       private final @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings;
 
     public Optional<AgentPoolUpgradeSettingsResponse> getUpgradeSettings() {
@@ -405,7 +405,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * Size of agent VMs.
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
@@ -416,7 +416,7 @@ public final class ManagedClusterAgentPoolProfileResponse extends io.pulumi.reso
      * VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods
      * 
      */
-    @InputImport(name="vnetSubnetID")
+    @Import(name="vnetSubnetID")
       private final @Nullable String vnetSubnetID;
 
     public Optional<String> getVnetSubnetID() {

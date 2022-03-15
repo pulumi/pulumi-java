@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableServerSideEncryption {
     private final Boolean enabled;
     private final String kmsKeyArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableServerSideEncryption(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
         this.enabled = enabled;
         this.kmsKeyArn = kmsKeyArn;
     }

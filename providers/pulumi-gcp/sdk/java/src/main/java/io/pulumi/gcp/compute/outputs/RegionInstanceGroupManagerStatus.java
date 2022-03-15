@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionInstanceGroupManagerStatusStateful;
 import io.pulumi.gcp.compute.outputs.RegionInstanceGroupManagerStatusVersionTarget;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionInstanceGroupManagerStatus {
     /**
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
@@ -30,11 +30,11 @@ public final class RegionInstanceGroupManagerStatus {
      */
     private final @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionInstanceGroupManagerStatus(
-        @OutputCustomType.Parameter("isStable") @Nullable Boolean isStable,
-        @OutputCustomType.Parameter("statefuls") @Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls,
-        @OutputCustomType.Parameter("versionTargets") @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
+        @CustomType.Parameter("isStable") @Nullable Boolean isStable,
+        @CustomType.Parameter("statefuls") @Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls,
+        @CustomType.Parameter("versionTargets") @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
         this.isStable = isStable;
         this.statefuls = statefuls;
         this.versionTargets = versionTargets;

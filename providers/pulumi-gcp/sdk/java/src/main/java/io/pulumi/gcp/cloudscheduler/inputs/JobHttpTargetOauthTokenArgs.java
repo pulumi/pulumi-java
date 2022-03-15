@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
      * "https://www.googleapis.com/auth/cloud-platform" will be used.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -31,7 +31,7 @@ public final class JobHttpTargetOauthTokenArgs extends io.pulumi.resources.Resou
      * The service account must be within the same project as the job.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {

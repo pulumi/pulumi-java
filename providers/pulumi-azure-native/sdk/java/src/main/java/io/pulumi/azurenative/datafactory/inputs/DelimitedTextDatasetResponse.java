@@ -19,7 +19,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -52,7 +52,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The column delimiter. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="columnDelimiter")
+    @Import(name="columnDelimiter")
       private final @Nullable Object columnDelimiter;
 
     public Optional<Object> getColumnDelimiter() {
@@ -63,7 +63,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The data compressionCodec. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="compressionCodec")
+    @Import(name="compressionCodec")
       private final @Nullable Object compressionCodec;
 
     public Optional<Object> getCompressionCodec() {
@@ -74,7 +74,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The data compression method used for DelimitedText.
      * 
      */
-    @InputImport(name="compressionLevel")
+    @Import(name="compressionLevel")
       private final @Nullable Object compressionLevel;
 
     public Optional<Object> getCompressionLevel() {
@@ -85,7 +85,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -96,7 +96,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encodingName")
+    @Import(name="encodingName")
       private final @Nullable Object encodingName;
 
     public Optional<Object> getEncodingName() {
@@ -107,7 +107,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The escape character. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="escapeChar")
+    @Import(name="escapeChar")
       private final @Nullable Object escapeChar;
 
     public Optional<Object> getEscapeChar() {
@@ -118,7 +118,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="firstRowAsHeader")
+    @Import(name="firstRowAsHeader")
       private final @Nullable Object firstRowAsHeader;
 
     public Optional<Object> getFirstRowAsHeader() {
@@ -129,7 +129,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
@@ -140,7 +140,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -151,7 +151,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The location of the delimited text storage.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Object location;
 
     public Object getLocation() {
@@ -162,7 +162,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The null value string. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="nullValue")
+    @Import(name="nullValue")
       private final @Nullable Object nullValue;
 
     public Optional<Object> getNullValue() {
@@ -173,7 +173,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -184,7 +184,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The quote character. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="quoteChar")
+    @Import(name="quoteChar")
       private final @Nullable Object quoteChar;
 
     public Optional<Object> getQuoteChar() {
@@ -195,7 +195,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * The row delimiter. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="rowDelimiter")
+    @Import(name="rowDelimiter")
       private final @Nullable Object rowDelimiter;
 
     public Optional<Object> getRowDelimiter() {
@@ -206,7 +206,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
@@ -217,7 +217,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
@@ -229,7 +229,7 @@ public final class DelimitedTextDatasetResponse extends io.pulumi.resources.Invo
      * Expected value is 'DelimitedText'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

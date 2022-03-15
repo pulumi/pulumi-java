@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetNodeGroupRemoteAccess extends io.pulumi.resources.InvokeAr
      * EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group.
      * 
      */
-    @InputImport(name="ec2SshKey", required=true)
+    @Import(name="ec2SshKey", required=true)
       private final String ec2SshKey;
 
     public String getEc2SshKey() {
@@ -28,7 +28,7 @@ public final class GetNodeGroupRemoteAccess extends io.pulumi.resources.InvokeAr
      * Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes.
      * 
      */
-    @InputImport(name="sourceSecurityGroupIds", required=true)
+    @Import(name="sourceSecurityGroupIds", required=true)
       private final List<String> sourceSecurityGroupIds;
 
     public List<String> getSourceSecurityGroupIds() {

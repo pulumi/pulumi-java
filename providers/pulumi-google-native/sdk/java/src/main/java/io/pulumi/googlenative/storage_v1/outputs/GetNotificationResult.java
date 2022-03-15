@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationResult {
     /**
      * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
@@ -52,16 +52,16 @@ public final class GetNotificationResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationResult(
-        @OutputCustomType.Parameter("customAttributes") Map<String,String> customAttributes,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("eventTypes") List<String> eventTypes,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("objectNamePrefix") String objectNamePrefix,
-        @OutputCustomType.Parameter("payloadFormat") String payloadFormat,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("customAttributes") Map<String,String> customAttributes,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("eventTypes") List<String> eventTypes,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("objectNamePrefix") String objectNamePrefix,
+        @CustomType.Parameter("payloadFormat") String payloadFormat,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("topic") String topic) {
         this.customAttributes = customAttributes;
         this.etag = etag;
         this.eventTypes = eventTypes;

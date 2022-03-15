@@ -5,12 +5,12 @@ package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.OntapFileSystemEndpointIntercluster;
 import io.pulumi.aws.fsx.outputs.OntapFileSystemEndpointManagement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OntapFileSystemEndpoint {
     /**
      * An endpoint for managing your file system by setting up NetApp SnapMirror with other ONTAP systems. See Endpoint.
@@ -23,10 +23,10 @@ public final class OntapFileSystemEndpoint {
      */
     private final @Nullable List<OntapFileSystemEndpointManagement> managements;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OntapFileSystemEndpoint(
-        @OutputCustomType.Parameter("interclusters") @Nullable List<OntapFileSystemEndpointIntercluster> interclusters,
-        @OutputCustomType.Parameter("managements") @Nullable List<OntapFileSystemEndpointManagement> managements) {
+        @CustomType.Parameter("interclusters") @Nullable List<OntapFileSystemEndpointIntercluster> interclusters,
+        @CustomType.Parameter("managements") @Nullable List<OntapFileSystemEndpointManagement> managements) {
         this.interclusters = interclusters;
         this.managements = managements;
     }

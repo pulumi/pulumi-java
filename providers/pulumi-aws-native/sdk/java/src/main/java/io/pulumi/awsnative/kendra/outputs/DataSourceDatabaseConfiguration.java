@@ -9,12 +9,12 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceColumnConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceConnectionConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSqlConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceDatabaseConfiguration {
     private final @Nullable DataSourceAclConfiguration aclConfiguration;
     private final DataSourceColumnConfiguration columnConfiguration;
@@ -23,14 +23,14 @@ public final class DataSourceDatabaseConfiguration {
     private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceDatabaseConfiguration(
-        @OutputCustomType.Parameter("aclConfiguration") @Nullable DataSourceAclConfiguration aclConfiguration,
-        @OutputCustomType.Parameter("columnConfiguration") DataSourceColumnConfiguration columnConfiguration,
-        @OutputCustomType.Parameter("connectionConfiguration") DataSourceConnectionConfiguration connectionConfiguration,
-        @OutputCustomType.Parameter("databaseEngineType") DataSourceDatabaseEngineType databaseEngineType,
-        @OutputCustomType.Parameter("sqlConfiguration") @Nullable DataSourceSqlConfiguration sqlConfiguration,
-        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @CustomType.Parameter("aclConfiguration") @Nullable DataSourceAclConfiguration aclConfiguration,
+        @CustomType.Parameter("columnConfiguration") DataSourceColumnConfiguration columnConfiguration,
+        @CustomType.Parameter("connectionConfiguration") DataSourceConnectionConfiguration connectionConfiguration,
+        @CustomType.Parameter("databaseEngineType") DataSourceDatabaseEngineType databaseEngineType,
+        @CustomType.Parameter("sqlConfiguration") @Nullable DataSourceSqlConfiguration sqlConfiguration,
+        @CustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.aclConfiguration = aclConfiguration;
         this.columnConfiguration = columnConfiguration;
         this.connectionConfiguration = connectionConfiguration;

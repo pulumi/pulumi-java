@@ -5,12 +5,12 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.JobTemplateAction;
 import io.pulumi.awsnative.iot.enums.JobTemplateFailureType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobTemplateAbortCriteria {
     /**
      * The type of job action to take to initiate the job abort.
@@ -33,12 +33,12 @@ public final class JobTemplateAbortCriteria {
      */
     private final Double thresholdPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobTemplateAbortCriteria(
-        @OutputCustomType.Parameter("action") JobTemplateAction action,
-        @OutputCustomType.Parameter("failureType") JobTemplateFailureType failureType,
-        @OutputCustomType.Parameter("minNumberOfExecutedThings") Integer minNumberOfExecutedThings,
-        @OutputCustomType.Parameter("thresholdPercentage") Double thresholdPercentage) {
+        @CustomType.Parameter("action") JobTemplateAction action,
+        @CustomType.Parameter("failureType") JobTemplateFailureType failureType,
+        @CustomType.Parameter("minNumberOfExecutedThings") Integer minNumberOfExecutedThings,
+        @CustomType.Parameter("thresholdPercentage") Double thresholdPercentage) {
         this.action = action;
         this.failureType = failureType;
         this.minNumberOfExecutedThings = minNumberOfExecutedThings;

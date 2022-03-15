@@ -5,12 +5,12 @@ package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteName;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRobotSoftwareSuiteVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SimulationApplicationRobotSoftwareSuite {
     /**
      * The name of the robot software suite.
@@ -23,10 +23,10 @@ public final class SimulationApplicationRobotSoftwareSuite {
      */
     private final @Nullable SimulationApplicationRobotSoftwareSuiteVersion version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SimulationApplicationRobotSoftwareSuite(
-        @OutputCustomType.Parameter("name") SimulationApplicationRobotSoftwareSuiteName name,
-        @OutputCustomType.Parameter("version") @Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
+        @CustomType.Parameter("name") SimulationApplicationRobotSoftwareSuiteName name,
+        @CustomType.Parameter("version") @Nullable SimulationApplicationRobotSoftwareSuiteVersion version) {
         this.name = name;
         this.version = version;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs extends 
 
     public static final EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs Empty = new EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs();
 
-    @InputImport(name="clusterIpv4CidrBlock")
+    @Import(name="clusterIpv4CidrBlock")
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
     public Output<String> getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock == null ? Output.empty() : this.clusterIpv4CidrBlock;
     }
 
-    @InputImport(name="clusterSecondaryRangeName")
+    @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
     public Output<String> getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName == null ? Output.empty() : this.clusterSecondaryRangeName;
     }
 
-    @InputImport(name="servicesIpv4CidrBlock")
+    @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
     public Output<String> getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock == null ? Output.empty() : this.servicesIpv4CidrBlock;
     }
 
-    @InputImport(name="servicesSecondaryRangeName")
+    @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
     public Output<String> getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName == null ? Output.empty() : this.servicesSecondaryRangeName;
     }
 
-    @InputImport(name="useIpAliases")
+    @Import(name="useIpAliases")
       private final @Nullable Output<Boolean> useIpAliases;
 
     public Output<Boolean> getUseIpAliases() {

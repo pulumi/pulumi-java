@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.speech_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.speech_v1.outputs.ClassItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomClassResult {
     /**
      * If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
@@ -27,11 +27,11 @@ public final class GetCustomClassResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomClassResult(
-        @OutputCustomType.Parameter("customClassId") String customClassId,
-        @OutputCustomType.Parameter("items") List<ClassItemResponse> items,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("customClassId") String customClassId,
+        @CustomType.Parameter("items") List<ClassItemResponse> items,
+        @CustomType.Parameter("name") String name) {
         this.customClassId = customClassId;
         this.items = items;
         this.name = name;

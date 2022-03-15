@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewayIPConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewaySkuResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkGatewayResult {
     /**
      * ActiveActive flag.
@@ -142,32 +142,32 @@ public final class GetVirtualNetworkGatewayResult {
      */
     private final @Nullable String vpnType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkGatewayResult(
-        @OutputCustomType.Parameter("activeActive") @Nullable Boolean activeActive,
-        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
-        @OutputCustomType.Parameter("customRoutes") @Nullable AddressSpaceResponse customRoutes,
-        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
-        @OutputCustomType.Parameter("enableDnsForwarding") @Nullable Boolean enableDnsForwarding,
-        @OutputCustomType.Parameter("enablePrivateIpAddress") @Nullable Boolean enablePrivateIpAddress,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("gatewayDefaultSite") @Nullable SubResourceResponse gatewayDefaultSite,
-        @OutputCustomType.Parameter("gatewayType") @Nullable String gatewayType,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("inboundDnsForwardingEndpoint") String inboundDnsForwardingEndpoint,
-        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("sku") @Nullable VirtualNetworkGatewaySkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vNetExtendedLocationResourceId") @Nullable String vNetExtendedLocationResourceId,
-        @OutputCustomType.Parameter("vpnClientConfiguration") @Nullable VpnClientConfigurationResponse vpnClientConfiguration,
-        @OutputCustomType.Parameter("vpnGatewayGeneration") @Nullable String vpnGatewayGeneration,
-        @OutputCustomType.Parameter("vpnType") @Nullable String vpnType) {
+        @CustomType.Parameter("activeActive") @Nullable Boolean activeActive,
+        @CustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @CustomType.Parameter("customRoutes") @Nullable AddressSpaceResponse customRoutes,
+        @CustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @CustomType.Parameter("enableDnsForwarding") @Nullable Boolean enableDnsForwarding,
+        @CustomType.Parameter("enablePrivateIpAddress") @Nullable Boolean enablePrivateIpAddress,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("gatewayDefaultSite") @Nullable SubResourceResponse gatewayDefaultSite,
+        @CustomType.Parameter("gatewayType") @Nullable String gatewayType,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("inboundDnsForwardingEndpoint") String inboundDnsForwardingEndpoint,
+        @CustomType.Parameter("ipConfigurations") @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("sku") @Nullable VirtualNetworkGatewaySkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vNetExtendedLocationResourceId") @Nullable String vNetExtendedLocationResourceId,
+        @CustomType.Parameter("vpnClientConfiguration") @Nullable VpnClientConfigurationResponse vpnClientConfiguration,
+        @CustomType.Parameter("vpnGatewayGeneration") @Nullable String vpnGatewayGeneration,
+        @CustomType.Parameter("vpnType") @Nullable String vpnType) {
         this.activeActive = activeActive;
         this.bgpSettings = bgpSettings;
         this.customRoutes = customRoutes;

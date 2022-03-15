@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputKinesisStreamArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputLambdaArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputSchemaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * The ARN of the Kinesis Analytics Application.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -34,7 +34,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * See Kinesis Firehose below for more details.
      * 
      */
-    @InputImport(name="kinesisFirehose")
+    @Import(name="kinesisFirehose")
       private final @Nullable Output<AnalyticsApplicationOutputKinesisFirehoseArgs> kinesisFirehose;
 
     public Output<AnalyticsApplicationOutputKinesisFirehoseArgs> getKinesisFirehose() {
@@ -46,7 +46,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * See Kinesis Stream below for more details.
      * 
      */
-    @InputImport(name="kinesisStream")
+    @Import(name="kinesisStream")
       private final @Nullable Output<AnalyticsApplicationOutputKinesisStreamArgs> kinesisStream;
 
     public Output<AnalyticsApplicationOutputKinesisStreamArgs> getKinesisStream() {
@@ -57,7 +57,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * The Lambda function destination. See Lambda below for more details.
      * 
      */
-    @InputImport(name="lambda")
+    @Import(name="lambda")
       private final @Nullable Output<AnalyticsApplicationOutputLambdaArgs> lambda;
 
     public Output<AnalyticsApplicationOutputLambdaArgs> getLambda() {
@@ -68,7 +68,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * The Name of the in-application stream.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class AnalyticsApplicationOutputArgs extends io.pulumi.resources.Re
      * The Schema format of the data written to the destination. See Destination Schema below for more details.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationOutputSchemaArgs> schema;
 
     public Output<AnalyticsApplicationOutputSchemaArgs> getSchema() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsProfileResponse {
     /**
      * Gets or sets administrator username.
@@ -47,15 +47,15 @@ public final class OsProfileResponse {
      */
     private final String toolsVersionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsProfileResponse(
-        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
-        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
-        @OutputCustomType.Parameter("osName") String osName,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("toolsRunningStatus") String toolsRunningStatus,
-        @OutputCustomType.Parameter("toolsVersion") String toolsVersion,
-        @OutputCustomType.Parameter("toolsVersionStatus") String toolsVersionStatus) {
+        @CustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @CustomType.Parameter("computerName") @Nullable String computerName,
+        @CustomType.Parameter("osName") String osName,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("toolsRunningStatus") String toolsRunningStatus,
+        @CustomType.Parameter("toolsVersion") String toolsVersion,
+        @CustomType.Parameter("toolsVersionStatus") String toolsVersionStatus) {
         this.adminUsername = adminUsername;
         this.computerName = computerName;
         this.osName = osName;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableEncryptionConfiguration {
     /**
      * The self link or full name of a key which should be used to
@@ -26,10 +26,10 @@ public final class TableEncryptionConfiguration {
      */
     private final @Nullable String kmsKeyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableEncryptionConfiguration(
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }

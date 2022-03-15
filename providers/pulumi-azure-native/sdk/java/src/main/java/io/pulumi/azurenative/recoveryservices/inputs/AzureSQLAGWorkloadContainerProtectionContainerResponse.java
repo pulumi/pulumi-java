@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadContainerExtendedInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -38,7 +38,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Expected value is 'SQLAGWorkLoadContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final String containerType;
 
     public String getContainerType() {
@@ -49,7 +49,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Additional details of a workload container.
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo;
 
     public Optional<AzureWorkloadContainerExtendedInfoResponse> getExtendedInfo() {
@@ -60,7 +60,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -71,7 +71,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
@@ -82,7 +82,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Time stamp when this container was updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
@@ -93,7 +93,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Re-Do Operation
      * 
      */
-    @InputImport(name="operationType")
+    @Import(name="operationType")
       private final @Nullable String operationType;
 
     public Optional<String> getOperationType() {
@@ -104,7 +104,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
@@ -115,7 +115,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * ARM ID of the virtual machine represented by this Azure Workload Container
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
@@ -126,7 +126,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse extend
      * Workload type for which registration was sent.
      * 
      */
-    @InputImport(name="workloadType")
+    @Import(name="workloadType")
       private final @Nullable String workloadType;
 
     public Optional<String> getWorkloadType() {

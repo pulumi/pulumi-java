@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SessionArgs Empty = new SessionArgs();
 
-    @InputImport(name="databaseId", required=true)
+    @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
     public Output<String> getDatabaseId() {
         return this.databaseId;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -33,14 +33,14 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * The labels for the session. * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. * No more than 64 labels can be associated with a given session. See https://goo.gl/xmQnxf for more information on and examples of labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

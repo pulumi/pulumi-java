@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.WebACLRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class WebACLRateBasedStatementArgs extends io.pulumi.resources.Reso
 
     public static final WebACLRateBasedStatementArgs Empty = new WebACLRateBasedStatementArgs();
 
-    @InputImport(name="aggregateKeyType", required=true)
+    @Import(name="aggregateKeyType", required=true)
       private final Output<WebACLRateBasedStatementAggregateKeyType> aggregateKeyType;
 
     public Output<WebACLRateBasedStatementAggregateKeyType> getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
-    @InputImport(name="forwardedIPConfig")
+    @Import(name="forwardedIPConfig")
       private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
     public Output<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Output.empty() : this.forwardedIPConfig;
     }
 
-    @InputImport(name="limit", required=true)
+    @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
     public Output<Integer> getLimit() {
         return this.limit;
     }
 
-    @InputImport(name="scopeDownStatement")
+    @Import(name="scopeDownStatement")
       private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
     public Output<WebACLStatementArgs> getScopeDownStatement() {

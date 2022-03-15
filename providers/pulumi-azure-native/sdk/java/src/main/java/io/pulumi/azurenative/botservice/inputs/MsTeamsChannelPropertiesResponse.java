@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
      * Whether this channel accepted terms
      * 
      */
-    @InputImport(name="acceptedTerms")
+    @Import(name="acceptedTerms")
       private final @Nullable Boolean acceptedTerms;
 
     public Optional<Boolean> getAcceptedTerms() {
@@ -34,7 +34,7 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
      * Webhook for Microsoft Teams channel calls
      * 
      */
-    @InputImport(name="callingWebHook")
+    @Import(name="callingWebHook")
       private final @Nullable String callingWebHook;
 
     public Optional<String> getCallingWebHook() {
@@ -45,7 +45,7 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
      * Deployment environment for Microsoft Teams channel calls
      * 
      */
-    @InputImport(name="deploymentEnvironment")
+    @Import(name="deploymentEnvironment")
       private final @Nullable String deploymentEnvironment;
 
     public Optional<String> getDeploymentEnvironment() {
@@ -56,7 +56,7 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
      * Enable calling for Microsoft Teams channel
      * 
      */
-    @InputImport(name="enableCalling")
+    @Import(name="enableCalling")
       private final @Nullable Boolean enableCalling;
 
     public Optional<Boolean> getEnableCalling() {
@@ -67,7 +67,7 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
      * Webhook for Microsoft Teams channel calls
      * 
      */
-    @InputImport(name="incomingCallRoute")
+    @Import(name="incomingCallRoute")
       private final @Nullable String incomingCallRoute;
 
     public Optional<String> getIncomingCallRoute() {
@@ -78,7 +78,7 @@ public final class MsTeamsChannelPropertiesResponse extends io.pulumi.resources.
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {

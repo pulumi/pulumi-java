@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDisksGroupsResponse {
     /**
      * ReadOnly. The DiskSize in GB. Do not set this value.
@@ -28,11 +28,11 @@ public final class DataDisksGroupsResponse {
      */
     private final String storageAccountType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDisksGroupsResponse(
-        @OutputCustomType.Parameter("diskSizeGB") Integer diskSizeGB,
-        @OutputCustomType.Parameter("disksPerNode") @Nullable Integer disksPerNode,
-        @OutputCustomType.Parameter("storageAccountType") String storageAccountType) {
+        @CustomType.Parameter("diskSizeGB") Integer diskSizeGB,
+        @CustomType.Parameter("disksPerNode") @Nullable Integer disksPerNode,
+        @CustomType.Parameter("storageAccountType") String storageAccountType) {
         this.diskSizeGB = diskSizeGB;
         this.disksPerNode = disksPerNode;
         this.storageAccountType = storageAccountType;

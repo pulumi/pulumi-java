@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.appintegrations.outputs;
 
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationMetadata;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventIntegrationAssociation {
     /**
      * The metadata associated with the client.
@@ -39,13 +39,13 @@ public final class EventIntegrationAssociation {
      */
     private final @Nullable String eventIntegrationAssociationId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventIntegrationAssociation(
-        @OutputCustomType.Parameter("clientAssociationMetadata") @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("eventBridgeRuleName") @Nullable String eventBridgeRuleName,
-        @OutputCustomType.Parameter("eventIntegrationAssociationArn") @Nullable String eventIntegrationAssociationArn,
-        @OutputCustomType.Parameter("eventIntegrationAssociationId") @Nullable String eventIntegrationAssociationId) {
+        @CustomType.Parameter("clientAssociationMetadata") @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("eventBridgeRuleName") @Nullable String eventBridgeRuleName,
+        @CustomType.Parameter("eventIntegrationAssociationArn") @Nullable String eventIntegrationAssociationArn,
+        @CustomType.Parameter("eventIntegrationAssociationId") @Nullable String eventIntegrationAssociationId) {
         this.clientAssociationMetadata = clientAssociationMetadata;
         this.clientId = clientId;
         this.eventBridgeRuleName = eventBridgeRuleName;

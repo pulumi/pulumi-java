@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainEndpointOptions {
     /**
      * Enables or disables the requirement that all requests to the domain arrive over HTTPS.
@@ -23,10 +23,10 @@ public final class DomainEndpointOptions {
      */
     private final @Nullable String tlsSecurityPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainEndpointOptions(
-        @OutputCustomType.Parameter("enforceHttps") @Nullable Boolean enforceHttps,
-        @OutputCustomType.Parameter("tlsSecurityPolicy") @Nullable String tlsSecurityPolicy) {
+        @CustomType.Parameter("enforceHttps") @Nullable Boolean enforceHttps,
+        @CustomType.Parameter("tlsSecurityPolicy") @Nullable String tlsSecurityPolicy) {
         this.enforceHttps = enforceHttps;
         this.tlsSecurityPolicy = tlsSecurityPolicy;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingIAMPolicyArgs;
@@ -68,7 +68,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -85,7 +85,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="keyRingId", type=String.class, parameters={})
+    @Export(name="keyRingId", type=String.class, parameters={})
     private Output<String> keyRingId;
 
     /**
@@ -103,7 +103,7 @@ public class KeyRingIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.TrafficSelectorPolicyResponse;
 import io.pulumi.azurenative.network.outputs.VpnSiteLinkConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -42,7 +42,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Expected bandwidth in MBPS.
      * 
      */
-    @OutputExport(name="connectionBandwidth", type=Integer.class, parameters={})
+    @Export(name="connectionBandwidth", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> connectionBandwidth;
 
     /**
@@ -56,7 +56,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * The connection status.
      * 
      */
-    @OutputExport(name="connectionStatus", type=String.class, parameters={})
+    @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
@@ -70,7 +70,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * DPD timeout in seconds for vpn connection.
      * 
      */
-    @OutputExport(name="dpdTimeoutSeconds", type=Integer.class, parameters={})
+    @Export(name="dpdTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dpdTimeoutSeconds;
 
     /**
@@ -84,7 +84,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Egress bytes transferred.
      * 
      */
-    @OutputExport(name="egressBytesTransferred", type=Double.class, parameters={})
+    @Export(name="egressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> egressBytesTransferred;
 
     /**
@@ -98,7 +98,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * EnableBgp flag.
      * 
      */
-    @OutputExport(name="enableBgp", type=Boolean.class, parameters={})
+    @Export(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
     /**
@@ -112,7 +112,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Enable internet security.
      * 
      */
-    @OutputExport(name="enableInternetSecurity", type=Boolean.class, parameters={})
+    @Export(name="enableInternetSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInternetSecurity;
 
     /**
@@ -126,7 +126,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * EnableBgp flag.
      * 
      */
-    @OutputExport(name="enableRateLimiting", type=Boolean.class, parameters={})
+    @Export(name="enableRateLimiting", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableRateLimiting;
 
     /**
@@ -140,7 +140,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -154,7 +154,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Ingress bytes transferred.
      * 
      */
-    @OutputExport(name="ingressBytesTransferred", type=Double.class, parameters={})
+    @Export(name="ingressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> ingressBytesTransferred;
 
     /**
@@ -168,7 +168,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * The IPSec Policies to be considered by this connection.
      * 
      */
-    @OutputExport(name="ipsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
+    @Export(name="ipsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies;
 
     /**
@@ -182,7 +182,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -196,7 +196,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * The provisioning state of the VPN connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -210,7 +210,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Id of the connected vpn site.
      * 
      */
-    @OutputExport(name="remoteVpnSite", type=SubResourceResponse.class, parameters={})
+    @Export(name="remoteVpnSite", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> remoteVpnSite;
 
     /**
@@ -224,7 +224,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @OutputExport(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
+    @Export(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration;
 
     /**
@@ -238,7 +238,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Routing weight for vpn connection.
      * 
      */
-    @OutputExport(name="routingWeight", type=Integer.class, parameters={})
+    @Export(name="routingWeight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> routingWeight;
 
     /**
@@ -252,7 +252,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * SharedKey for the vpn connection.
      * 
      */
-    @OutputExport(name="sharedKey", type=String.class, parameters={})
+    @Export(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
     /**
@@ -266,7 +266,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * The Traffic Selector Policies to be considered by this connection.
      * 
      */
-    @OutputExport(name="trafficSelectorPolicies", type=List.class, parameters={TrafficSelectorPolicyResponse.class})
+    @Export(name="trafficSelectorPolicies", type=List.class, parameters={TrafficSelectorPolicyResponse.class})
     private Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies;
 
     /**
@@ -280,7 +280,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Use local azure ip to initiate connection.
      * 
      */
-    @OutputExport(name="useLocalAzureIpAddress", type=Boolean.class, parameters={})
+    @Export(name="useLocalAzureIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useLocalAzureIpAddress;
 
     /**
@@ -294,7 +294,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Enable policy-based traffic selectors.
      * 
      */
-    @OutputExport(name="usePolicyBasedTrafficSelectors", type=Boolean.class, parameters={})
+    @Export(name="usePolicyBasedTrafficSelectors", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors;
 
     /**
@@ -308,7 +308,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * Connection protocol used for this connection.
      * 
      */
-    @OutputExport(name="vpnConnectionProtocolType", type=String.class, parameters={})
+    @Export(name="vpnConnectionProtocolType", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnConnectionProtocolType;
 
     /**
@@ -322,7 +322,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * List of all vpn site link connections to the gateway.
      * 
      */
-    @OutputExport(name="vpnLinkConnections", type=List.class, parameters={VpnSiteLinkConnectionResponse.class})
+    @Export(name="vpnLinkConnections", type=List.class, parameters={VpnSiteLinkConnectionResponse.class})
     private Output</* @Nullable */ List<VpnSiteLinkConnectionResponse>> vpnLinkConnections;
 
     /**

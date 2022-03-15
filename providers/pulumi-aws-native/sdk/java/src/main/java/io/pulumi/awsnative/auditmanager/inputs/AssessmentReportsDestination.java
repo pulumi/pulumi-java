@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentReportDestinationType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class AssessmentReportsDestination extends io.pulumi.resources.Invo
 
     public static final AssessmentReportsDestination Empty = new AssessmentReportsDestination();
 
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable String destination;
 
     public Optional<String> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
-    @InputImport(name="destinationType")
+    @Import(name="destinationType")
       private final @Nullable AssessmentReportDestinationType destinationType;
 
     public Optional<AssessmentReportDestinationType> getDestinationType() {

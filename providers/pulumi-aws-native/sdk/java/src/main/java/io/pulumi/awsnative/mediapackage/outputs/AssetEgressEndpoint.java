@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetEgressEndpoint {
     /**
      * The ID of the PackagingConfiguration being applied to the Asset.
@@ -20,10 +20,10 @@ public final class AssetEgressEndpoint {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetEgressEndpoint(
-        @OutputCustomType.Parameter("packagingConfigurationId") String packagingConfigurationId,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("packagingConfigurationId") String packagingConfigurationId,
+        @CustomType.Parameter("url") String url) {
         this.packagingConfigurationId = packagingConfigurationId;
         this.url = url;
     }

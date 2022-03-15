@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyDailyCycleResponse;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyHourlyCycleResponse;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyWeeklyCycleResponse;
@@ -18,21 +18,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends 
 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleResponse Empty = new ResourcePolicySnapshotSchedulePolicyScheduleResponse();
 
-    @InputImport(name="dailySchedule", required=true)
+    @Import(name="dailySchedule", required=true)
       private final ResourcePolicyDailyCycleResponse dailySchedule;
 
     public ResourcePolicyDailyCycleResponse getDailySchedule() {
         return this.dailySchedule;
     }
 
-    @InputImport(name="hourlySchedule", required=true)
+    @Import(name="hourlySchedule", required=true)
       private final ResourcePolicyHourlyCycleResponse hourlySchedule;
 
     public ResourcePolicyHourlyCycleResponse getHourlySchedule() {
         return this.hourlySchedule;
     }
 
-    @InputImport(name="weeklySchedule", required=true)
+    @Import(name="weeklySchedule", required=true)
       private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
     public ResourcePolicyWeeklyCycleResponse getWeeklySchedule() {

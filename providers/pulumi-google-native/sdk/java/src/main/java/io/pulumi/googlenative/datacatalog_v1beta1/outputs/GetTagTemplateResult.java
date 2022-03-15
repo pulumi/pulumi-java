@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTagTemplateResult {
     /**
      * The display name for this template. Defaults to an empty string.
@@ -26,11 +26,11 @@ public final class GetTagTemplateResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTagTemplateResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("fields") Map<String,String> fields,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("fields") Map<String,String> fields,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.fields = fields;
         this.name = name;

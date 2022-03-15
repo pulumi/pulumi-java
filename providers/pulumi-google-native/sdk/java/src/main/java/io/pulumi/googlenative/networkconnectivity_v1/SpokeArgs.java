@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedInterconnectAttachmentsArgs;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedRouterApplianceInstancesArgs;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.LinkedVpnTunnelsArgs;
@@ -22,7 +22,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of the spoke.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of the hub that this spoke is attached to.
      * 
      */
-    @InputImport(name="hub")
+    @Import(name="hub")
       private final @Nullable Output<String> hub;
 
     public Output<String> getHub() {
@@ -44,7 +44,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -55,7 +55,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * VLAN attachments that are associated with the spoke.
      * 
      */
-    @InputImport(name="linkedInterconnectAttachments")
+    @Import(name="linkedInterconnectAttachments")
       private final @Nullable Output<LinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
     public Output<LinkedInterconnectAttachmentsArgs> getLinkedInterconnectAttachments() {
@@ -66,7 +66,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Router appliance instances that are associated with the spoke.
      * 
      */
-    @InputImport(name="linkedRouterApplianceInstances")
+    @Import(name="linkedRouterApplianceInstances")
       private final @Nullable Output<LinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
     public Output<LinkedRouterApplianceInstancesArgs> getLinkedRouterApplianceInstances() {
@@ -77,14 +77,14 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * VPN tunnels that are associated with the spoke.
      * 
      */
-    @InputImport(name="linkedVpnTunnels")
+    @Import(name="linkedVpnTunnels")
       private final @Nullable Output<LinkedVpnTunnelsArgs> linkedVpnTunnels;
 
     public Output<LinkedVpnTunnelsArgs> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels == null ? Output.empty() : this.linkedVpnTunnels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -95,28 +95,28 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of the spoke. Spoke names must be unique. They use the following form: `projects/{project_number}/locations/{region}/spokes/{spoke_id}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="spokeId", required=true)
+    @Import(name="spokeId", required=true)
       private final Output<String> spokeId;
 
     public Output<String> getSpokeId() {

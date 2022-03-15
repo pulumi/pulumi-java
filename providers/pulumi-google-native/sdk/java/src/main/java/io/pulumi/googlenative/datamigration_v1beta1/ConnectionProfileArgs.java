@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.ConnectionProfileProvider;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.ConnectionProfileState;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.CloudSqlConnectionProfileArgs;
@@ -23,14 +23,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * A CloudSQL database connection profile.
      * 
      */
-    @InputImport(name="cloudsql")
+    @Import(name="cloudsql")
       private final @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
 
     public Output<CloudSqlConnectionProfileArgs> getCloudsql() {
         return this.cloudsql == null ? Output.empty() : this.cloudsql;
     }
 
-    @InputImport(name="connectionProfileId", required=true)
+    @Import(name="connectionProfileId", required=true)
       private final Output<String> connectionProfileId;
 
     public Output<String> getConnectionProfileId() {
@@ -41,7 +41,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * The connection profile display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -52,14 +52,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -70,7 +70,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * A MySQL database connection profile.
      * 
      */
-    @InputImport(name="mysql")
+    @Import(name="mysql")
       private final @Nullable Output<MySqlConnectionProfileArgs> mysql;
 
     public Output<MySqlConnectionProfileArgs> getMysql() {
@@ -81,14 +81,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -99,14 +99,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * The database provider.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<ConnectionProfileProvider> provider;
 
     public Output<ConnectionProfileProvider> getProvider() {
         return this.provider == null ? Output.empty() : this.provider;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -117,7 +117,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * The current connection profile state (e.g. DRAFT, READY, or FAILED).
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<ConnectionProfileState> state;
 
     public Output<ConnectionProfileState> getState() {

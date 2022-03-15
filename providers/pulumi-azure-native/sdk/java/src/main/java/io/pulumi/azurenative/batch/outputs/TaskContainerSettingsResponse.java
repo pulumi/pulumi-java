@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.ContainerRegistryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskContainerSettingsResponse {
     /**
      * These additional options are supplied as arguments to the "docker create" command, in addition to those controlled by the Batch Service.
@@ -29,12 +29,12 @@ public final class TaskContainerSettingsResponse {
     private final @Nullable ContainerRegistryResponse registry;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskContainerSettingsResponse(
-        @OutputCustomType.Parameter("containerRunOptions") @Nullable String containerRunOptions,
-        @OutputCustomType.Parameter("imageName") String imageName,
-        @OutputCustomType.Parameter("registry") @Nullable ContainerRegistryResponse registry,
-        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
+        @CustomType.Parameter("containerRunOptions") @Nullable String containerRunOptions,
+        @CustomType.Parameter("imageName") String imageName,
+        @CustomType.Parameter("registry") @Nullable ContainerRegistryResponse registry,
+        @CustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.containerRunOptions = containerRunOptions;
         this.imageName = imageName;
         this.registry = registry;

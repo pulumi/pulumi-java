@@ -6,24 +6,24 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLSizeConstraintStatementComparisonOperator;
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLSizeConstraintStatement {
     private final WebACLSizeConstraintStatementComparisonOperator comparisonOperator;
     private final WebACLFieldToMatch fieldToMatch;
     private final Double size;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLSizeConstraintStatement(
-        @OutputCustomType.Parameter("comparisonOperator") WebACLSizeConstraintStatementComparisonOperator comparisonOperator,
-        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("size") Double size,
-        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
+        @CustomType.Parameter("comparisonOperator") WebACLSizeConstraintStatementComparisonOperator comparisonOperator,
+        @CustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @CustomType.Parameter("size") Double size,
+        @CustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

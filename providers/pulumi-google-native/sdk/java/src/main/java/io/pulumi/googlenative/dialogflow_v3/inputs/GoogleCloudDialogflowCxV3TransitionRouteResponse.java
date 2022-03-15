@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final String condition;
 
     public String getCondition() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates that the transition can only happen when the given intent is matched. At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
      * 
      */
-    @InputImport(name="intent", required=true)
+    @Import(name="intent", required=true)
       private final String intent;
 
     public String getIntent() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * The unique identifier of this transition route.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @InputImport(name="targetFlow", required=true)
+    @Import(name="targetFlow", required=true)
       private final String targetFlow;
 
     public String getTargetFlow() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
      */
-    @InputImport(name="targetPage", required=true)
+    @Import(name="targetPage", required=true)
       private final String targetPage;
 
     public String getTargetPage() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse extends io.p
      * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment` and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
      * 
      */
-    @InputImport(name="triggerFulfillment", required=true)
+    @Import(name="triggerFulfillment", required=true)
       private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
     public GoogleCloudDialogflowCxV3FulfillmentResponse getTriggerFulfillment() {

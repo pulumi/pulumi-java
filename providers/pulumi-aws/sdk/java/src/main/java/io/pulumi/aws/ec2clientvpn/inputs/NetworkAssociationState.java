@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * The unique ID of the target network association.
      * 
      */
-    @InputImport(name="associationId")
+    @Import(name="associationId")
       private final @Nullable Output<String> associationId;
 
     public Output<String> getAssociationId() {
@@ -30,7 +30,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * The ID of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="clientVpnEndpointId")
+    @Import(name="clientVpnEndpointId")
       private final @Nullable Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
@@ -41,7 +41,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -52,7 +52,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * The current state of the target network association.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -63,7 +63,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * The ID of the subnet to associate with the Client VPN endpoint.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -74,7 +74,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
      * The ID of the VPC in which the target subnet is located.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.aws.outputs.GetAvailabilityZonesFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAvailabilityZonesResult {
     private final @Nullable Boolean allAvailabilityZones;
     private final @Nullable List<String> excludeNames;
@@ -36,17 +36,17 @@ public final class GetAvailabilityZonesResult {
      */
     private final List<String> zoneIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAvailabilityZonesResult(
-        @OutputCustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
-        @OutputCustomType.Parameter("excludeNames") @Nullable List<String> excludeNames,
-        @OutputCustomType.Parameter("excludeZoneIds") @Nullable List<String> excludeZoneIds,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetAvailabilityZonesFilter> filters,
-        @OutputCustomType.Parameter("groupNames") List<String> groupNames,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("zoneIds") List<String> zoneIds) {
+        @CustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
+        @CustomType.Parameter("excludeNames") @Nullable List<String> excludeNames,
+        @CustomType.Parameter("excludeZoneIds") @Nullable List<String> excludeZoneIds,
+        @CustomType.Parameter("filters") @Nullable List<GetAvailabilityZonesFilter> filters,
+        @CustomType.Parameter("groupNames") List<String> groupNames,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("zoneIds") List<String> zoneIds) {
         this.allAvailabilityZones = allAvailabilityZones;
         this.excludeNames = excludeNames;
         this.excludeZoneIds = excludeZoneIds;

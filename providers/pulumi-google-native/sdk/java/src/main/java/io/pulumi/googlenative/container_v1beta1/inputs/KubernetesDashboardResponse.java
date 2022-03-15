@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KubernetesDashboardResponse extends io.pulumi.resources.Invok
      * Whether the Kubernetes Dashboard is enabled for this cluster.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {

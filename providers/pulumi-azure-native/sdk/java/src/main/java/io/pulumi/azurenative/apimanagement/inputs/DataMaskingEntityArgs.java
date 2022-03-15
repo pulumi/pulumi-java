@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.DataMaskingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * Data masking mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,DataMaskingMode>> mode;
 
     public Output<Either<String,DataMaskingMode>> getMode() {
@@ -31,7 +31,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * The name of an entity to mask (e.g. a name of a header or a query parameter).
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

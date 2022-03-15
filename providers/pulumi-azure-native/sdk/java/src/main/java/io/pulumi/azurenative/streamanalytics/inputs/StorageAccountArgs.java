@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
@@ -33,7 +33,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {

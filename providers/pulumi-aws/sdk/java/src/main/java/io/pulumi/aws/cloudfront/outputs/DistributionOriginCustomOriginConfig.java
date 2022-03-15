@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginCustomOriginConfig {
     /**
      * The HTTP port the custom origin listens on.
@@ -47,14 +47,14 @@ public final class DistributionOriginCustomOriginConfig {
      */
     private final List<String> originSslProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOriginCustomOriginConfig(
-        @OutputCustomType.Parameter("httpPort") Integer httpPort,
-        @OutputCustomType.Parameter("httpsPort") Integer httpsPort,
-        @OutputCustomType.Parameter("originKeepaliveTimeout") @Nullable Integer originKeepaliveTimeout,
-        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
-        @OutputCustomType.Parameter("originReadTimeout") @Nullable Integer originReadTimeout,
-        @OutputCustomType.Parameter("originSslProtocols") List<String> originSslProtocols) {
+        @CustomType.Parameter("httpPort") Integer httpPort,
+        @CustomType.Parameter("httpsPort") Integer httpsPort,
+        @CustomType.Parameter("originKeepaliveTimeout") @Nullable Integer originKeepaliveTimeout,
+        @CustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @CustomType.Parameter("originReadTimeout") @Nullable Integer originReadTimeout,
+        @CustomType.Parameter("originSslProtocols") List<String> originSslProtocols) {
         this.httpPort = httpPort;
         this.httpsPort = httpsPort;
         this.originKeepaliveTimeout = originKeepaliveTimeout;

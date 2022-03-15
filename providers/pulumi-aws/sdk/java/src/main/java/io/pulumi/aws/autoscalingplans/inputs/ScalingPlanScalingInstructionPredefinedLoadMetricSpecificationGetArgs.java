@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
      * The metric type. Valid values: `ALBTargetGroupRequestCount`, `ASGTotalCPUUtilization`, `ASGTotalNetworkIn`, `ASGTotalNetworkOut`.
      * 
      */
-    @InputImport(name="predefinedLoadMetricType", required=true)
+    @Import(name="predefinedLoadMetricType", required=true)
       private final Output<String> predefinedLoadMetricType;
 
     public Output<String> getPredefinedLoadMetricType() {
@@ -29,7 +29,7 @@ public final class ScalingPlanScalingInstructionPredefinedLoadMetricSpecificatio
      * Identifies the resource associated with the metric type.
      * 
      */
-    @InputImport(name="resourceLabel")
+    @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
     public Output<String> getResourceLabel() {

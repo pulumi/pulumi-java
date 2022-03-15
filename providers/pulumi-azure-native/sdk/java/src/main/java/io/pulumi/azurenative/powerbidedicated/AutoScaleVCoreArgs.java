@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbidedicated;
 import io.pulumi.azurenative.powerbidedicated.inputs.AutoScaleVCoreSkuArgs;
 import io.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum capacity of an auto scale v-core resource.
      * 
      */
-    @InputImport(name="capacityLimit")
+    @Import(name="capacityLimit")
       private final @Nullable Output<Integer> capacityLimit;
 
     public Output<Integer> getCapacityLimit() {
@@ -33,7 +33,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * The object ID of the capacity resource associated with the auto scale v-core resource.
      * 
      */
-    @InputImport(name="capacityObjectId")
+    @Import(name="capacityObjectId")
       private final @Nullable Output<String> capacityObjectId;
 
     public Output<String> getCapacityObjectId() {
@@ -44,7 +44,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the PowerBI Dedicated resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure Resource group of which a given PowerBIDedicated capacity is part. This name must be at least 1 character in length, and no more than 90.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the auto scale v-core resource.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<AutoScaleVCoreSkuArgs> sku;
 
     public Output<AutoScaleVCoreSkuArgs> getSku() {
@@ -77,7 +77,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @InputImport(name="systemData")
+    @Import(name="systemData")
       private final @Nullable Output<SystemDataArgs> systemData;
 
     public Output<SystemDataArgs> getSystemData() {
@@ -88,7 +88,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of additional resource provisioning properties.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the auto scale v-core. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    @InputImport(name="vcoreName")
+    @Import(name="vcoreName")
       private final @Nullable Output<String> vcoreName;
 
     public Output<String> getVcoreName() {

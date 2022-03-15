@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ImageArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
      * List of Animations. The list should be chronological, without any time overlap.
      * 
      */
-    @InputImport(name="animations")
+    @Import(name="animations")
       private final @Nullable Output<List<AnimationArgs>> animations;
 
     public Output<List<AnimationArgs>> getAnimations() {
@@ -35,7 +35,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
      * Image overlay.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<ImageArgs> image;
 
     public Output<ImageArgs> getImage() {

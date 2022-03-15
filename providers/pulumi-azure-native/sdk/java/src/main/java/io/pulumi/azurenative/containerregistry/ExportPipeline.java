@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The identity of the export pipeline.
      * 
      */
-    @OutputExport(name="identity", type=IdentityPropertiesResponse.class, parameters={})
+    @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
@@ -51,7 +51,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The location of the export pipeline.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The list of all options configured for the pipeline.
      * 
      */
-    @OutputExport(name="options", type=List.class, parameters={String.class})
+    @Export(name="options", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> options;
 
     /**
@@ -93,7 +93,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The provisioning state of the pipeline at the time the operation was called.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -121,7 +121,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The target properties of the export pipeline.
      * 
      */
-    @OutputExport(name="target", type=ExportPipelineTargetPropertiesResponse.class, parameters={})
+    @Export(name="target", type=ExportPipelineTargetPropertiesResponse.class, parameters={})
     private Output<ExportPipelineTargetPropertiesResponse> target;
 
     /**
@@ -135,7 +135,7 @@ public class ExportPipeline extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

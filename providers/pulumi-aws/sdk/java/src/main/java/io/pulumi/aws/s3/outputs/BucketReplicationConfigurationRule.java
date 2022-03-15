@@ -6,14 +6,14 @@ package io.pulumi.aws.s3.outputs;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleDestination;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleFilter;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleSourceSelectionCriteria;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigurationRule {
     /**
      * Whether delete markers are replicated. The only valid value is `Enabled`. To disable, omit this argument. This argument is only valid with V2 replication configurations (i.e., when `filter` is used).
@@ -56,16 +56,16 @@ public final class BucketReplicationConfigurationRule {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigurationRule(
-        @OutputCustomType.Parameter("deleteMarkerReplicationStatus") @Nullable String deleteMarkerReplicationStatus,
-        @OutputCustomType.Parameter("destination") BucketReplicationConfigurationRuleDestination destination,
-        @OutputCustomType.Parameter("filter") @Nullable BucketReplicationConfigurationRuleFilter filter,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("sourceSelectionCriteria") @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("deleteMarkerReplicationStatus") @Nullable String deleteMarkerReplicationStatus,
+        @CustomType.Parameter("destination") BucketReplicationConfigurationRuleDestination destination,
+        @CustomType.Parameter("filter") @Nullable BucketReplicationConfigurationRuleFilter filter,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("sourceSelectionCriteria") @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria,
+        @CustomType.Parameter("status") String status) {
         this.deleteMarkerReplicationStatus = deleteMarkerReplicationStatus;
         this.destination = destination;
         this.filter = filter;

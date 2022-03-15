@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.macie2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue {
     /**
      * The object property to use in the condition.
@@ -18,10 +18,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     private final @Nullable String key;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

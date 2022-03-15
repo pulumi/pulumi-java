@@ -11,7 +11,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLRuleArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTagArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,35 +22,35 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebACLArgs Empty = new WebACLArgs();
 
-    @InputImport(name="captchaConfig")
+    @Import(name="captchaConfig")
       private final @Nullable Output<WebACLCaptchaConfigArgs> captchaConfig;
 
     public Output<WebACLCaptchaConfigArgs> getCaptchaConfig() {
         return this.captchaConfig == null ? Output.empty() : this.captchaConfig;
     }
 
-    @InputImport(name="customResponseBodies")
+    @Import(name="customResponseBodies")
       private final @Nullable Output<WebACLCustomResponseBodiesArgs> customResponseBodies;
 
     public Output<WebACLCustomResponseBodiesArgs> getCustomResponseBodies() {
         return this.customResponseBodies == null ? Output.empty() : this.customResponseBodies;
     }
 
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final Output<WebACLDefaultActionArgs> defaultAction;
 
     public Output<WebACLDefaultActionArgs> getDefaultAction() {
         return this.defaultAction;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,28 +61,28 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of Rules.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<WebACLRuleArgs>> rules;
 
     public Output<List<WebACLRuleArgs>> getRules() {
         return this.rules == null ? Output.empty() : this.rules;
     }
 
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<WebACLScope> scope;
 
     public Output<WebACLScope> getScope() {
         return this.scope;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<WebACLTagArgs>> tags;
 
     public Output<List<WebACLTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="visibilityConfig", required=true)
+    @Import(name="visibilityConfig", required=true)
       private final Output<WebACLVisibilityConfigArgs> visibilityConfig;
 
     public Output<WebACLVisibilityConfigArgs> getVisibilityConfig() {

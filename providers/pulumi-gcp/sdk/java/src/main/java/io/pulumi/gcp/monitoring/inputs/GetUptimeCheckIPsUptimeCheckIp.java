@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
      * IPv4 or IPv6 format.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -31,7 +31,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
      * (and its containing state/province or country) within the broader umbrella region category.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -42,7 +42,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
      * A broad region category in which the IP address is located.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

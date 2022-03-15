@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownPerfCounterDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * To get a list of performance counters on Windows, run the command 'typeperf'.
      * 
      */
-    @InputImport(name="counterSpecifiers")
+    @Import(name="counterSpecifiers")
       private final @Nullable Output<List<String>> counterSpecifiers;
 
     public Output<List<String>> getCounterSpecifiers() {
@@ -41,7 +41,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * The number of seconds between consecutive counter measurements (samples).
      * 
      */
-    @InputImport(name="samplingFrequencyInSeconds")
+    @Import(name="samplingFrequencyInSeconds")
       private final @Nullable Output<Integer> samplingFrequencyInSeconds;
 
     public Output<Integer> getSamplingFrequencyInSeconds() {
@@ -64,7 +64,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> getStreams() {

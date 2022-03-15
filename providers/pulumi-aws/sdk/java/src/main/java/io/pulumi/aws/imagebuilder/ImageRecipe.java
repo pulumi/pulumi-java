@@ -9,7 +9,7 @@ import io.pulumi.aws.imagebuilder.inputs.ImageRecipeState;
 import io.pulumi.aws.imagebuilder.outputs.ImageRecipeBlockDeviceMapping;
 import io.pulumi.aws.imagebuilder.outputs.ImageRecipeComponent;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * (Required) Amazon Resource Name (ARN) of the image recipe.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Configuration block(s) with block device mappings for the the image recipe. Detailed below.
      * 
      */
-    @OutputExport(name="blockDeviceMappings", type=List.class, parameters={ImageRecipeBlockDeviceMapping.class})
+    @Export(name="blockDeviceMappings", type=List.class, parameters={ImageRecipeBlockDeviceMapping.class})
     private Output</* @Nullable */ List<ImageRecipeBlockDeviceMapping>> blockDeviceMappings;
 
     /**
@@ -64,7 +64,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Ordered configuration block(s) with components for the image recipe. Detailed below.
      * 
      */
-    @OutputExport(name="components", type=List.class, parameters={ImageRecipeComponent.class})
+    @Export(name="components", type=List.class, parameters={ImageRecipeComponent.class})
     private Output<List<ImageRecipeComponent>> components;
 
     /**
@@ -78,7 +78,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Date the image recipe was created.
      * 
      */
-    @OutputExport(name="dateCreated", type=String.class, parameters={})
+    @Export(name="dateCreated", type=String.class, parameters={})
     private Output<String> dateCreated;
 
     /**
@@ -92,7 +92,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Description of the image recipe.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -106,7 +106,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Name of the image recipe.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Owner of the image recipe.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -134,7 +134,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Platform of the image recipe.
      * 
      */
-    @OutputExport(name="parentImage", type=String.class, parameters={})
+    @Export(name="parentImage", type=String.class, parameters={})
     private Output<String> parentImage;
 
     /**
@@ -148,7 +148,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Platform of the image recipe.
      * 
      */
-    @OutputExport(name="platform", type=String.class, parameters={})
+    @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     /**
@@ -162,7 +162,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags for the image recipe. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -176,7 +176,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -190,7 +190,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Base64 encoded user data. Use this to provide commands or a command script to run when you launch your build instance.
      * 
      */
-    @OutputExport(name="userDataBase64", type=String.class, parameters={})
+    @Export(name="userDataBase64", type=String.class, parameters={})
     private Output<String> userDataBase64;
 
     /**
@@ -204,7 +204,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * Version of the image recipe.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
@@ -218,7 +218,7 @@ public class ImageRecipe extends io.pulumi.resources.CustomResource {
      * The working directory to be used during build and test workflows.
      * 
      */
-    @OutputExport(name="workingDirectory", type=String.class, parameters={})
+    @Export(name="workingDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDirectory;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * The principal id of virtual machine scale set identity. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -35,7 +35,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * The tenant id associated with the virtual machine scale set. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -46,7 +46,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -57,7 +57,7 @@ public final class VirtualMachineScaleSetIdentityResponse extends io.pulumi.reso
      * The list of user identities associated with the virtual machine scale set. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,VirtualMachineScaleSetIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {

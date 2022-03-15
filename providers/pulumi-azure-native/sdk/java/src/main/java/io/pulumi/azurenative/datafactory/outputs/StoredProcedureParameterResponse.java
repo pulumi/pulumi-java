@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StoredProcedureParameterResponse {
     /**
      * Stored procedure parameter type.
@@ -23,10 +23,10 @@ public final class StoredProcedureParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StoredProcedureParameterResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.type = type;
         this.value = value;
     }

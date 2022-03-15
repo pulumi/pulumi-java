@@ -8,14 +8,14 @@ import io.pulumi.azurenative.operationalinsights.outputs.ResultStatisticsRespons
 import io.pulumi.azurenative.operationalinsights.outputs.SchemaResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SearchResultsResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTableResult {
     /**
      * The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
@@ -88,22 +88,22 @@ public final class GetTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableResult(
-        @OutputCustomType.Parameter("archiveRetentionInDays") Integer archiveRetentionInDays,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastPlanModifiedDate") String lastPlanModifiedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") @Nullable String plan,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("restoredLogs") @Nullable RestoredLogsResponse restoredLogs,
-        @OutputCustomType.Parameter("resultStatistics") @Nullable ResultStatisticsResponse resultStatistics,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
-        @OutputCustomType.Parameter("schema") @Nullable SchemaResponse schema,
-        @OutputCustomType.Parameter("searchResults") @Nullable SearchResultsResponse searchResults,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("totalRetentionInDays") @Nullable Integer totalRetentionInDays,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("archiveRetentionInDays") Integer archiveRetentionInDays,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastPlanModifiedDate") String lastPlanModifiedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") @Nullable String plan,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("restoredLogs") @Nullable RestoredLogsResponse restoredLogs,
+        @CustomType.Parameter("resultStatistics") @Nullable ResultStatisticsResponse resultStatistics,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @CustomType.Parameter("schema") @Nullable SchemaResponse schema,
+        @CustomType.Parameter("searchResults") @Nullable SearchResultsResponse searchResults,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("totalRetentionInDays") @Nullable Integer totalRetentionInDays,
+        @CustomType.Parameter("type") String type) {
         this.archiveRetentionInDays = archiveRetentionInDays;
         this.id = id;
         this.lastPlanModifiedDate = lastPlanModifiedDate;

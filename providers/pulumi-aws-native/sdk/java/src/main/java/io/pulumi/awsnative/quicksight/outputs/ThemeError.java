@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.ThemeErrorType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeError {
     /**
      * <p>The error message.</p>
@@ -19,10 +19,10 @@ public final class ThemeError {
     private final @Nullable String message;
     private final @Nullable ThemeErrorType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeError(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") @Nullable ThemeErrorType type) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") @Nullable ThemeErrorType type) {
         this.message = message;
         this.type = type;
     }

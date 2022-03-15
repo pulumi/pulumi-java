@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse e
      * A function alias, used when the type of the item is Function
      * 
      */
-    @InputImport(name="functionAlias")
+    @Import(name="functionAlias")
       private final @Nullable String functionAlias;
 
     public Optional<String> getFunctionAlias() {

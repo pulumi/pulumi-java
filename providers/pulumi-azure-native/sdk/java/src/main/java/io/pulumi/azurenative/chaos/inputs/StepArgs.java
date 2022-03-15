@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.inputs.BranchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * List of branches.
      * 
      */
-    @InputImport(name="branches", required=true)
+    @Import(name="branches", required=true)
       private final Output<List<BranchArgs>> branches;
 
     public Output<List<BranchArgs>> getBranches() {
@@ -34,7 +34,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * String of the step name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

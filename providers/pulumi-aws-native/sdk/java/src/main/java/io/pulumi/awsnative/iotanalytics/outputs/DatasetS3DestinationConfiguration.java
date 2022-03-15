@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetGlueConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetS3DestinationConfiguration {
     private final String bucket;
     private final @Nullable DatasetGlueConfiguration glueConfiguration;
     private final String key;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetS3DestinationConfiguration(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("glueConfiguration") @Nullable DatasetGlueConfiguration glueConfiguration,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("glueConfiguration") @Nullable DatasetGlueConfiguration glueConfiguration,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucket = bucket;
         this.glueConfiguration = glueConfiguration;
         this.key = key;

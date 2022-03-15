@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse {
     /**
      * Whether the transcript segment was covered under the configured smart reply allowlist in Agent Assist.
@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final Boolean smartReplyAllowlistCovered;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(@OutputCustomType.Parameter("smartReplyAllowlistCovered") Boolean smartReplyAllowlistCovered) {
+    @CustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(@CustomType.Parameter("smartReplyAllowlistCovered") Boolean smartReplyAllowlistCovered) {
         this.smartReplyAllowlistCovered = smartReplyAllowlistCovered;
     }
 

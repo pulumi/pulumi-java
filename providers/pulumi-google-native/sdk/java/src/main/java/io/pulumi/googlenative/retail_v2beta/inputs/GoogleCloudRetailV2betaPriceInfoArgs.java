@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
      * The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
      * 
      */
-    @InputImport(name="cost")
+    @Import(name="cost")
       private final @Nullable Output<Double> cost;
 
     public Output<Double> getCost() {
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
      * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
      * 
      */
-    @InputImport(name="currencyCode")
+    @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
      * Price of the product without any discount. If zero, by default set to be the price.
      * 
      */
-    @InputImport(name="originalPrice")
+    @Import(name="originalPrice")
       private final @Nullable Output<Double> originalPrice;
 
     public Output<Double> getOriginalPrice() {
@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
      * Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.price](https://schema.org/price).
      * 
      */
-    @InputImport(name="price")
+    @Import(name="price")
       private final @Nullable Output<Double> price;
 
     public Output<Double> getPrice() {
@@ -67,7 +67,7 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
      * The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.
      * 
      */
-    @InputImport(name="priceEffectiveTime")
+    @Import(name="priceEffectiveTime")
       private final @Nullable Output<String> priceEffectiveTime;
 
     public Output<String> getPriceEffectiveTime() {
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2betaPriceInfoArgs extends io.pulumi.resour
      * The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.
      * 
      */
-    @InputImport(name="priceExpireTime")
+    @Import(name="priceExpireTime")
       private final @Nullable Output<String> priceExpireTime;
 
     public Output<String> getPriceExpireTime() {

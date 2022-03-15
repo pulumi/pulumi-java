@@ -9,7 +9,7 @@ import io.pulumi.azurenative.policyinsights.outputs.RemediationDeploymentSummary
 import io.pulumi.azurenative.policyinsights.outputs.RemediationFiltersResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The time at which the remediation was created.
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -50,7 +50,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The deployment status summary for all deployments created by the remediation.
      * 
      */
-    @OutputExport(name="deploymentStatus", type=RemediationDeploymentSummaryResponse.class, parameters={})
+    @Export(name="deploymentStatus", type=RemediationDeploymentSummaryResponse.class, parameters={})
     private Output<RemediationDeploymentSummaryResponse> deploymentStatus;
 
     /**
@@ -64,7 +64,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The filters that will be applied to determine which resources to remediate.
      * 
      */
-    @OutputExport(name="filters", type=RemediationFiltersResponse.class, parameters={})
+    @Export(name="filters", type=RemediationFiltersResponse.class, parameters={})
     private Output</* @Nullable */ RemediationFiltersResponse> filters;
 
     /**
@@ -78,7 +78,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The time at which the remediation was last updated.
      * 
      */
-    @OutputExport(name="lastUpdatedOn", type=String.class, parameters={})
+    @Export(name="lastUpdatedOn", type=String.class, parameters={})
     private Output<String> lastUpdatedOn;
 
     /**
@@ -92,7 +92,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The name of the remediation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The resource ID of the policy assignment that should be remediated.
      * 
      */
-    @OutputExport(name="policyAssignmentId", type=String.class, parameters={})
+    @Export(name="policyAssignmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyAssignmentId;
 
     /**
@@ -120,7 +120,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The policy definition reference ID of the individual definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.
      * 
      */
-    @OutputExport(name="policyDefinitionReferenceId", type=String.class, parameters={})
+    @Export(name="policyDefinitionReferenceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyDefinitionReferenceId;
 
     /**
@@ -134,7 +134,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The status of the remediation.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -148,7 +148,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The way resources to remediate are discovered. Defaults to ExistingNonCompliant if not specified.
      * 
      */
-    @OutputExport(name="resourceDiscoveryMode", type=String.class, parameters={})
+    @Export(name="resourceDiscoveryMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceDiscoveryMode;
 
     /**
@@ -162,7 +162,7 @@ public class RemediationAtManagementGroup extends io.pulumi.resources.CustomReso
      * The type of the remediation.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

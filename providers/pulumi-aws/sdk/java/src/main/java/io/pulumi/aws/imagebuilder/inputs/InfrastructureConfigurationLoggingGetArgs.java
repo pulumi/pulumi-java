@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingS3LogsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class InfrastructureConfigurationLoggingGetArgs extends io.pulumi.r
      * Configuration block with S3 logging settings. Detailed below.
      * 
      */
-    @InputImport(name="s3Logs", required=true)
+    @Import(name="s3Logs", required=true)
       private final Output<InfrastructureConfigurationLoggingS3LogsGetArgs> s3Logs;
 
     public Output<InfrastructureConfigurationLoggingS3LogsGetArgs> getS3Logs() {

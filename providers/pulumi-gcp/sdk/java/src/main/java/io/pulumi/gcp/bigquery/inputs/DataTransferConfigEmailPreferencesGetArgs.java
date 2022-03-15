@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataTransferConfigEmailPreferencesGetArgs extends io.pulumi.r
      * If true, email notifications will be sent on transfer run failures.
      * 
      */
-    @InputImport(name="enableFailureEmail", required=true)
+    @Import(name="enableFailureEmail", required=true)
       private final Output<Boolean> enableFailureEmail;
 
     public Output<Boolean> getEnableFailureEmail() {

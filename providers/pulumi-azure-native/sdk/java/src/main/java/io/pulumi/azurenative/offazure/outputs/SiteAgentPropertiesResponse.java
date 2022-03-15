@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.offazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SiteAgentPropertiesResponse {
     /**
      * ID of the agent.
@@ -37,13 +37,13 @@ public final class SiteAgentPropertiesResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SiteAgentPropertiesResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
-        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
-        @OutputCustomType.Parameter("lastHeartBeatUtc") String lastHeartBeatUtc,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @CustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @CustomType.Parameter("lastHeartBeatUtc") String lastHeartBeatUtc,
+        @CustomType.Parameter("version") String version) {
         this.id = id;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;

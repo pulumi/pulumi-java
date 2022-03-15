@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsCredsAuthenticationDetailsPropertiesResponse {
     /**
      * The ID of the cloud account
@@ -42,14 +42,14 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
      */
     private final List<String> grantedPermissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsCredsAuthenticationDetailsPropertiesResponse(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("awsAccessKeyId") String awsAccessKeyId,
-        @OutputCustomType.Parameter("awsSecretAccessKey") String awsSecretAccessKey,
-        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("awsAccessKeyId") String awsAccessKeyId,
+        @CustomType.Parameter("awsSecretAccessKey") String awsSecretAccessKey,
+        @CustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
         this.accountId = accountId;
         this.authenticationProvisioningState = authenticationProvisioningState;
         this.authenticationType = authenticationType;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3outposts;
 import io.pulumi.awsnative.s3outposts.inputs.BucketLifecycleConfigurationArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the bucket.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -32,7 +32,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Rules that define how Amazon S3Outposts manages objects during their lifetime.
      * 
      */
-    @InputImport(name="lifecycleConfiguration")
+    @Import(name="lifecycleConfiguration")
       private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
     public Output<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
@@ -43,7 +43,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the customer outpost on which the bucket resides.
      * 
      */
-    @InputImport(name="outpostId", required=true)
+    @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -54,7 +54,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * An arbitrary set of tags (key-value pairs) for this S3Outposts bucket.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;
 
     public Output<List<BucketTagArgs>> getTags() {

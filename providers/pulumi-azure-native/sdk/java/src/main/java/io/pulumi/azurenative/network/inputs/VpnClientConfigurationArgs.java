@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.inputs.VpnClientRevokedCertificateArgs;
 import io.pulumi.azurenative.network.inputs.VpnClientRootCertificateArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The AADAudience property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
      */
-    @InputImport(name="aadAudience")
+    @Import(name="aadAudience")
       private final @Nullable Output<String> aadAudience;
 
     public Output<String> getAadAudience() {
@@ -42,7 +42,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The AADIssuer property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
      */
-    @InputImport(name="aadIssuer")
+    @Import(name="aadIssuer")
       private final @Nullable Output<String> aadIssuer;
 
     public Output<String> getAadIssuer() {
@@ -53,7 +53,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The AADTenant property of the VirtualNetworkGateway resource for vpn client connection used for AAD authentication.
      * 
      */
-    @InputImport(name="aadTenant")
+    @Import(name="aadTenant")
       private final @Nullable Output<String> aadTenant;
 
     public Output<String> getAadTenant() {
@@ -64,7 +64,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The radius server address property of the VirtualNetworkGateway resource for vpn client connection.
      * 
      */
-    @InputImport(name="radiusServerAddress")
+    @Import(name="radiusServerAddress")
       private final @Nullable Output<String> radiusServerAddress;
 
     public Output<String> getRadiusServerAddress() {
@@ -75,7 +75,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The radius secret property of the VirtualNetworkGateway resource for vpn client connection.
      * 
      */
-    @InputImport(name="radiusServerSecret")
+    @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
 
     public Output<String> getRadiusServerSecret() {
@@ -86,7 +86,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The radiusServers property for multiple radius server configuration.
      * 
      */
-    @InputImport(name="radiusServers")
+    @Import(name="radiusServers")
       private final @Nullable Output<List<RadiusServerArgs>> radiusServers;
 
     public Output<List<RadiusServerArgs>> getRadiusServers() {
@@ -97,7 +97,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * VPN authentication types for the virtual network gateway..
      * 
      */
-    @InputImport(name="vpnAuthenticationTypes")
+    @Import(name="vpnAuthenticationTypes")
       private final @Nullable Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
 
     public Output<List<Either<String,VpnAuthenticationType>>> getVpnAuthenticationTypes() {
@@ -108,7 +108,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * The reference to the address space resource which represents Address space for P2S VpnClient.
      * 
      */
-    @InputImport(name="vpnClientAddressPool")
+    @Import(name="vpnClientAddressPool")
       private final @Nullable Output<AddressSpaceArgs> vpnClientAddressPool;
 
     public Output<AddressSpaceArgs> getVpnClientAddressPool() {
@@ -119,7 +119,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * VpnClientIpsecPolicies for virtual network gateway P2S client.
      * 
      */
-    @InputImport(name="vpnClientIpsecPolicies")
+    @Import(name="vpnClientIpsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
     public Output<List<IpsecPolicyArgs>> getVpnClientIpsecPolicies() {
@@ -130,7 +130,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * VpnClientProtocols for Virtual network gateway.
      * 
      */
-    @InputImport(name="vpnClientProtocols")
+    @Import(name="vpnClientProtocols")
       private final @Nullable Output<List<Either<String,VpnClientProtocol>>> vpnClientProtocols;
 
     public Output<List<Either<String,VpnClientProtocol>>> getVpnClientProtocols() {
@@ -141,7 +141,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * VpnClientRevokedCertificate for Virtual network gateway.
      * 
      */
-    @InputImport(name="vpnClientRevokedCertificates")
+    @Import(name="vpnClientRevokedCertificates")
       private final @Nullable Output<List<VpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
 
     public Output<List<VpnClientRevokedCertificateArgs>> getVpnClientRevokedCertificates() {
@@ -152,7 +152,7 @@ public final class VpnClientConfigurationArgs extends io.pulumi.resources.Resour
      * VpnClientRootCertificate for virtual network gateway.
      * 
      */
-    @InputImport(name="vpnClientRootCertificates")
+    @Import(name="vpnClientRootCertificates")
       private final @Nullable Output<List<VpnClientRootCertificateArgs>> vpnClientRootCertificates;
 
     public Output<List<VpnClientRootCertificateArgs>> getVpnClientRootCertificates() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.IotEventHubIngestionEndpointC
 import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Device Mappings.
      * 
      */
-    @InputImport(name="deviceMapping")
+    @Import(name="deviceMapping")
       private final @Nullable Output<IotMappingPropertiesArgs> deviceMapping;
 
     public Output<IotMappingPropertiesArgs> getDeviceMapping() {
@@ -33,7 +33,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Setting indicating whether the service has a managed identity associated with it.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ServiceManagedIdentityIdentityArgs> identity;
 
     public Output<ServiceManagedIdentityIdentityArgs> getIdentity() {
@@ -44,7 +44,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Source configuration.
      * 
      */
-    @InputImport(name="ingestionEndpointConfiguration")
+    @Import(name="ingestionEndpointConfiguration")
       private final @Nullable Output<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
     public Output<IotEventHubIngestionEndpointConfigurationArgs> getIngestionEndpointConfiguration() {
@@ -55,7 +55,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of IoT Connector resource.
      * 
      */
-    @InputImport(name="iotConnectorName")
+    @Import(name="iotConnectorName")
       private final @Nullable Output<String> iotConnectorName;
 
     public Output<String> getIotConnectorName() {
@@ -66,7 +66,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the service instance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of workspace resource.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationScopedVolumeResponse {
     /**
      * Describes parameters for creating application-scoped volumes.
@@ -34,12 +34,12 @@ public final class ApplicationScopedVolumeResponse {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationScopedVolumeResponse(
-        @OutputCustomType.Parameter("creationParameters") ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters,
-        @OutputCustomType.Parameter("destinationPath") String destinationPath,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("creationParameters") ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters,
+        @CustomType.Parameter("destinationPath") String destinationPath,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.creationParameters = creationParameters;
         this.destinationPath = destinationPath;
         this.name = name;

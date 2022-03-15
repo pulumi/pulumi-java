@@ -5,7 +5,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.awsnative.resourcegroups.enums.GroupResourceQueryType;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupQuery;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class GroupResourceQuery extends io.pulumi.resources.InvokeArgs {
 
     public static final GroupResourceQuery Empty = new GroupResourceQuery();
 
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable GroupQuery query;
 
     public Optional<GroupQuery> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable GroupResourceQueryType type;
 
     public Optional<GroupResourceQueryType> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,56 +15,56 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
 
     public static final EC2FleetPlacementArgs Empty = new EC2FleetPlacementArgs();
 
-    @InputImport(name="affinity")
+    @Import(name="affinity")
       private final @Nullable Output<String> affinity;
 
     public Output<String> getAffinity() {
         return this.affinity == null ? Output.empty() : this.affinity;
     }
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
         return this.groupName == null ? Output.empty() : this.groupName;
     }
 
-    @InputImport(name="hostId")
+    @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
         return this.hostId == null ? Output.empty() : this.hostId;
     }
 
-    @InputImport(name="hostResourceGroupArn")
+    @Import(name="hostResourceGroupArn")
       private final @Nullable Output<String> hostResourceGroupArn;
 
     public Output<String> getHostResourceGroupArn() {
         return this.hostResourceGroupArn == null ? Output.empty() : this.hostResourceGroupArn;
     }
 
-    @InputImport(name="partitionNumber")
+    @Import(name="partitionNumber")
       private final @Nullable Output<Integer> partitionNumber;
 
     public Output<Integer> getPartitionNumber() {
         return this.partitionNumber == null ? Output.empty() : this.partitionNumber;
     }
 
-    @InputImport(name="spreadDomain")
+    @Import(name="spreadDomain")
       private final @Nullable Output<String> spreadDomain;
 
     public Output<String> getSpreadDomain() {
         return this.spreadDomain == null ? Output.empty() : this.spreadDomain;
     }
 
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable Output<String> tenancy;
 
     public Output<String> getTenancy() {

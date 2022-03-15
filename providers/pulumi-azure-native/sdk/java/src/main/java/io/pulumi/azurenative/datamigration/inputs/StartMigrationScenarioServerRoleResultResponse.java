@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
      * Migration exceptions and warnings.
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -33,7 +33,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
      * Name of server role.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class StartMigrationScenarioServerRoleResultResponse extends io.pul
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

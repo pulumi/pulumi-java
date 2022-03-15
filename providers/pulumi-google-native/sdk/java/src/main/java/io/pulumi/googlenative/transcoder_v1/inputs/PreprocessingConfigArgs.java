@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ColorArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.CropArgs;
@@ -27,7 +27,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * Audio preprocessing configuration.
      * 
      */
-    @InputImport(name="audio")
+    @Import(name="audio")
       private final @Nullable Output<AudioArgs> audio;
 
     public Output<AudioArgs> getAudio() {
@@ -38,7 +38,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * Color preprocessing configuration.
      * 
      */
-    @InputImport(name="color")
+    @Import(name="color")
       private final @Nullable Output<ColorArgs> color;
 
     public Output<ColorArgs> getColor() {
@@ -49,7 +49,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * Specify the video cropping configuration.
      * 
      */
-    @InputImport(name="crop")
+    @Import(name="crop")
       private final @Nullable Output<CropArgs> crop;
 
     public Output<CropArgs> getCrop() {
@@ -60,7 +60,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * Deblock preprocessing configuration.
      * 
      */
-    @InputImport(name="deblock")
+    @Import(name="deblock")
       private final @Nullable Output<DeblockArgs> deblock;
 
     public Output<DeblockArgs> getDeblock() {
@@ -71,7 +71,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * Denoise preprocessing configuration.
      * 
      */
-    @InputImport(name="denoise")
+    @Import(name="denoise")
       private final @Nullable Output<DenoiseArgs> denoise;
 
     public Output<DenoiseArgs> getDenoise() {
@@ -82,7 +82,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * Specify the video pad filter configuration.
      * 
      */
-    @InputImport(name="pad")
+    @Import(name="pad")
       private final @Nullable Output<PadArgs> pad;
 
     public Output<PadArgs> getPad() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AzureNodePoolConfigSshConfigArgs extends io.pulumi.resources.
      * Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
      * 
      */
-    @InputImport(name="authorizedKey", required=true)
+    @Import(name="authorizedKey", required=true)
       private final Output<String> authorizedKey;
 
     public Output<String> getAuthorizedKey() {

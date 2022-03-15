@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GlobalTableProjection extends io.pulumi.resources.InvokeArgs 
 
     public static final GlobalTableProjection Empty = new GlobalTableProjection();
 
-    @InputImport(name="nonKeyAttributes")
+    @Import(name="nonKeyAttributes")
       private final @Nullable List<String> nonKeyAttributes;
 
     public List<String> getNonKeyAttributes() {
         return this.nonKeyAttributes == null ? List.of() : this.nonKeyAttributes;
     }
 
-    @InputImport(name="projectionType")
+    @Import(name="projectionType")
       private final @Nullable String projectionType;
 
     public Optional<String> getProjectionType() {

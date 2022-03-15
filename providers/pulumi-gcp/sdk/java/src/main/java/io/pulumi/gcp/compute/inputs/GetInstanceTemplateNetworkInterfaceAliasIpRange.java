@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends io.pu
      * error.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
     public String getIpCidrRange() {
@@ -33,7 +33,7 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends io.pu
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
      */
-    @InputImport(name="subnetworkRangeName", required=true)
+    @Import(name="subnetworkRangeName", required=true)
       private final String subnetworkRangeName;
 
     public String getSubnetworkRangeName() {

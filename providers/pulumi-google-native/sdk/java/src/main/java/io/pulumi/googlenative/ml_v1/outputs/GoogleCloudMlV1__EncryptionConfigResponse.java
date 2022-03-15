@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__EncryptionConfigResponse {
     /**
      * The Cloud KMS resource identifier of the customer-managed encryption key used to protect a resource, such as a training job. It has the following format: `projects/{PROJECT_ID}/locations/{REGION}/keyRings/{KEY_RING_NAME}/cryptoKeys/{KEY_NAME}`
@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1__EncryptionConfigResponse(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1__EncryptionConfigResponse(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

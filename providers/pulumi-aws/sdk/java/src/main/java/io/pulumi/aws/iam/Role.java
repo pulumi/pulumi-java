@@ -8,7 +8,7 @@ import io.pulumi.aws.iam.RoleArgs;
 import io.pulumi.aws.iam.inputs.RoleState;
 import io.pulumi.aws.iam.outputs.RoleInlinePolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) specifying the role.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -55,7 +55,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Policy that grants an entity permission to assume the role.
      * 
      */
-    @OutputExport(name="assumeRolePolicy", type=String.class, parameters={})
+    @Export(name="assumeRolePolicy", type=String.class, parameters={})
     private Output<String> assumeRolePolicy;
 
     /**
@@ -69,7 +69,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Creation date of the IAM role.
      * 
      */
-    @OutputExport(name="createDate", type=String.class, parameters={})
+    @Export(name="createDate", type=String.class, parameters={})
     private Output<String> createDate;
 
     /**
@@ -83,7 +83,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Description of the role.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -97,7 +97,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
      * 
      */
-    @OutputExport(name="forceDetachPolicies", type=Boolean.class, parameters={})
+    @Export(name="forceDetachPolicies", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDetachPolicies;
 
     /**
@@ -111,7 +111,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
      * 
      */
-    @OutputExport(name="inlinePolicies", type=List.class, parameters={RoleInlinePolicy.class})
+    @Export(name="inlinePolicies", type=List.class, parameters={RoleInlinePolicy.class})
     private Output<List<RoleInlinePolicy>> inlinePolicies;
 
     /**
@@ -125,7 +125,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
      * 
      */
-    @OutputExport(name="managedPolicyArns", type=List.class, parameters={String.class})
+    @Export(name="managedPolicyArns", type=List.class, parameters={String.class})
     private Output<List<String>> managedPolicyArns;
 
     /**
@@ -139,7 +139,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    @OutputExport(name="maxSessionDuration", type=Integer.class, parameters={})
+    @Export(name="maxSessionDuration", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSessionDuration;
 
     /**
@@ -153,7 +153,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Name of the role policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -167,7 +167,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -181,7 +181,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     /**
@@ -195,7 +195,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * ARN of the policy that is used to set the permissions boundary for the role.
      * 
      */
-    @OutputExport(name="permissionsBoundary", type=String.class, parameters={})
+    @Export(name="permissionsBoundary", type=String.class, parameters={})
     private Output</* @Nullable */ String> permissionsBoundary;
 
     /**
@@ -209,7 +209,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -223,7 +223,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -237,7 +237,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * Stable and unique string identifying the role.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the machine learning team account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the machine learning project under a team account workspace.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final String projectName;
 
     public String getProjectName() {
@@ -38,7 +38,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group to which the machine learning team account belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the machine learning team account workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

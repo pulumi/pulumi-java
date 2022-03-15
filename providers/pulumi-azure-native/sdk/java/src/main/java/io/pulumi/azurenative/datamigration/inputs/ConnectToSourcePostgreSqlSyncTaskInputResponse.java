@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.PostgreSqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class ConnectToSourcePostgreSqlSyncTaskInputResponse extends io.pul
      * Connection information for source PostgreSQL server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final PostgreSqlConnectionInfoResponse sourceConnectionInfo;
 
     public PostgreSqlConnectionInfoResponse getSourceConnectionInfo() {

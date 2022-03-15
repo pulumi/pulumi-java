@@ -7,7 +7,7 @@ import io.pulumi.aws.lakeformation.outputs.GetPermissionsDataLocation;
 import io.pulumi.aws.lakeformation.outputs.GetPermissionsDatabase;
 import io.pulumi.aws.lakeformation.outputs.GetPermissionsTable;
 import io.pulumi.aws.lakeformation.outputs.GetPermissionsTableWithColumns;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionsResult {
     private final @Nullable String catalogId;
     private final @Nullable Boolean catalogResource;
@@ -40,18 +40,18 @@ public final class GetPermissionsResult {
     private final GetPermissionsTable table;
     private final GetPermissionsTableWithColumns tableWithColumns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionsResult(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("catalogResource") @Nullable Boolean catalogResource,
-        @OutputCustomType.Parameter("dataLocation") GetPermissionsDataLocation dataLocation,
-        @OutputCustomType.Parameter("database") GetPermissionsDatabase database,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("permissions") List<String> permissions,
-        @OutputCustomType.Parameter("permissionsWithGrantOptions") List<String> permissionsWithGrantOptions,
-        @OutputCustomType.Parameter("principal") String principal,
-        @OutputCustomType.Parameter("table") GetPermissionsTable table,
-        @OutputCustomType.Parameter("tableWithColumns") GetPermissionsTableWithColumns tableWithColumns) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("catalogResource") @Nullable Boolean catalogResource,
+        @CustomType.Parameter("dataLocation") GetPermissionsDataLocation dataLocation,
+        @CustomType.Parameter("database") GetPermissionsDatabase database,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("permissions") List<String> permissions,
+        @CustomType.Parameter("permissionsWithGrantOptions") List<String> permissionsWithGrantOptions,
+        @CustomType.Parameter("principal") String principal,
+        @CustomType.Parameter("table") GetPermissionsTable table,
+        @CustomType.Parameter("tableWithColumns") GetPermissionsTableWithColumns tableWithColumns) {
         this.catalogId = catalogId;
         this.catalogResource = catalogResource;
         this.dataLocation = dataLocation;

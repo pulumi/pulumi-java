@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RouteArgs;
@@ -26,7 +26,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Whether this route can conflict with existing subnetworks. Setting this to true allows this route to conflict with subnetworks that have already been configured on the corresponding network.
      * 
      */
-    @OutputExport(name="allowConflictingSubnetworks", type=Boolean.class, parameters={})
+    @Export(name="allowConflictingSubnetworks", type=Boolean.class, parameters={})
     private Output<Boolean> allowConflictingSubnetworks;
 
     /**
@@ -40,7 +40,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * AS path.
      * 
      */
-    @OutputExport(name="asPaths", type=List.class, parameters={RouteAsPathResponse.class})
+    @Export(name="asPaths", type=List.class, parameters={RouteAsPathResponse.class})
     private Output<List<RouteAsPathResponse>> asPaths;
 
     /**
@@ -54,7 +54,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -68,7 +68,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this field when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -82,7 +82,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are supported.
      * 
      */
-    @OutputExport(name="destRange", type=String.class, parameters={})
+    @Export(name="destRange", type=String.class, parameters={})
     private Output<String> destRange;
 
     /**
@@ -96,7 +96,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * ILB route behavior when ILB is deemed unhealthy based on user specified threshold on the Backend Service of the internal load balancing.
      * 
      */
-    @OutputExport(name="ilbRouteBehaviorOnUnhealthy", type=String.class, parameters={})
+    @Export(name="ilbRouteBehaviorOnUnhealthy", type=String.class, parameters={})
     private Output<String> ilbRouteBehaviorOnUnhealthy;
 
     /**
@@ -110,7 +110,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Type of this resource. Always compute#routes for Route resources.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -124,7 +124,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Fully-qualified URL of the network that this route applies to.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -152,7 +152,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-gateway
      * 
      */
-    @OutputExport(name="nextHopGateway", type=String.class, parameters={})
+    @Export(name="nextHopGateway", type=String.class, parameters={})
     private Output<String> nextHopGateway;
 
     /**
@@ -166,7 +166,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets or the IP address of the forwarding Rule. For example, the following are all valid URLs: - 10.128.0.56 - https://www.googleapis.com/compute/v1/projects/project/regions/region /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule
      * 
      */
-    @OutputExport(name="nextHopIlb", type=String.class, parameters={})
+    @Export(name="nextHopIlb", type=String.class, parameters={})
     private Output<String> nextHopIlb;
 
     /**
@@ -180,7 +180,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/
      * 
      */
-    @OutputExport(name="nextHopInstance", type=String.class, parameters={})
+    @Export(name="nextHopInstance", type=String.class, parameters={})
     private Output<String> nextHopInstance;
 
     /**
@@ -194,7 +194,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URL to an InterconnectAttachment which is the next hop for the route. This field will only be populated for the dynamic routes generated by Cloud Router with a linked interconnectAttachment.
      * 
      */
-    @OutputExport(name="nextHopInterconnectAttachment", type=String.class, parameters={})
+    @Export(name="nextHopInterconnectAttachment", type=String.class, parameters={})
     private Output<String> nextHopInterconnectAttachment;
 
     /**
@@ -208,7 +208,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The network IP address of an instance that should handle matching packets. Only IPv4 is supported.
      * 
      */
-    @OutputExport(name="nextHopIp", type=String.class, parameters={})
+    @Export(name="nextHopIp", type=String.class, parameters={})
     private Output<String> nextHopIp;
 
     /**
@@ -222,7 +222,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URL of the local network if it should handle matching packets.
      * 
      */
-    @OutputExport(name="nextHopNetwork", type=String.class, parameters={})
+    @Export(name="nextHopNetwork", type=String.class, parameters={})
     private Output<String> nextHopNetwork;
 
     /**
@@ -236,7 +236,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The network peering name that should handle matching packets, which should conform to RFC1035.
      * 
      */
-    @OutputExport(name="nextHopPeering", type=String.class, parameters={})
+    @Export(name="nextHopPeering", type=String.class, parameters={})
     private Output<String> nextHopPeering;
 
     /**
@@ -250,7 +250,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URL to a VpnTunnel that should handle matching packets.
      * 
      */
-    @OutputExport(name="nextHopVpnTunnel", type=String.class, parameters={})
+    @Export(name="nextHopVpnTunnel", type=String.class, parameters={})
     private Output<String> nextHopVpnTunnel;
 
     /**
@@ -264,7 +264,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length. In cases where multiple routes have equal prefix length, the one with the lowest-numbered priority value wins. The default value is `1000`. The priority value must be from `0` to `65535`, inclusive.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -278,7 +278,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * [Output only] The status of the route.
      * 
      */
-    @OutputExport(name="routeStatus", type=String.class, parameters={})
+    @Export(name="routeStatus", type=String.class, parameters={})
     private Output<String> routeStatus;
 
     /**
@@ -292,7 +292,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route
      * 
      */
-    @OutputExport(name="routeType", type=String.class, parameters={})
+    @Export(name="routeType", type=String.class, parameters={})
     private Output<String> routeType;
 
     /**
@@ -306,7 +306,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Server-defined fully-qualified URL for this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -320,7 +320,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -334,7 +334,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A list of instance tags to which this route applies.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
@@ -348,7 +348,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * If potential misconfigurations are detected for this route, this field will be populated with warning messages.
      * 
      */
-    @OutputExport(name="warnings", type=List.class, parameters={RouteWarningsItemResponse.class})
+    @Export(name="warnings", type=List.class, parameters={RouteWarningsItemResponse.class})
     private Output<List<RouteWarningsItemResponse>> warnings;
 
     /**

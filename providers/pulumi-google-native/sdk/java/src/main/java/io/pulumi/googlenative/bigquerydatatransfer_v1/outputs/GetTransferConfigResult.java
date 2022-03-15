@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.EmailPreferencesResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.ScheduleOptionsResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.UserInfoResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTransferConfigResult {
     /**
      * The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
@@ -96,24 +96,24 @@ public final class GetTransferConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransferConfigResult(
-        @OutputCustomType.Parameter("dataRefreshWindowDays") Integer dataRefreshWindowDays,
-        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
-        @OutputCustomType.Parameter("datasetRegion") String datasetRegion,
-        @OutputCustomType.Parameter("destinationDatasetId") String destinationDatasetId,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("emailPreferences") EmailPreferencesResponse emailPreferences,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextRunTime") String nextRunTime,
-        @OutputCustomType.Parameter("notificationPubsubTopic") String notificationPubsubTopic,
-        @OutputCustomType.Parameter("ownerInfo") UserInfoResponse ownerInfo,
-        @OutputCustomType.Parameter("params") Map<String,String> params,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("scheduleOptions") ScheduleOptionsResponse scheduleOptions,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("dataRefreshWindowDays") Integer dataRefreshWindowDays,
+        @CustomType.Parameter("dataSourceId") String dataSourceId,
+        @CustomType.Parameter("datasetRegion") String datasetRegion,
+        @CustomType.Parameter("destinationDatasetId") String destinationDatasetId,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("emailPreferences") EmailPreferencesResponse emailPreferences,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextRunTime") String nextRunTime,
+        @CustomType.Parameter("notificationPubsubTopic") String notificationPubsubTopic,
+        @CustomType.Parameter("ownerInfo") UserInfoResponse ownerInfo,
+        @CustomType.Parameter("params") Map<String,String> params,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("scheduleOptions") ScheduleOptionsResponse scheduleOptions,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         this.dataSourceId = dataSourceId;
         this.datasetRegion = datasetRegion;

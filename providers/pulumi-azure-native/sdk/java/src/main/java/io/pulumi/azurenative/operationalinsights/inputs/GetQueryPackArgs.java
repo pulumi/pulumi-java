@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Log Analytics QueryPack resource.
      * 
      */
-    @InputImport(name="queryPackName", required=true)
+    @Import(name="queryPackName", required=true)
       private final String queryPackName;
 
     public String getQueryPackName() {
@@ -27,7 +27,7 @@ public final class GetQueryPackArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

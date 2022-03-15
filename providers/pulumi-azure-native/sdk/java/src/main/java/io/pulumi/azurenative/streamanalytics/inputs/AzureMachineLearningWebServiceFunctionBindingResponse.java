@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputsResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceOutputColumnResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * The API key used to authenticate with Request-Response endpoint.
      * 
      */
-    @InputImport(name="apiKey")
+    @Import(name="apiKey")
       private final @Nullable String apiKey;
 
     public Optional<String> getApiKey() {
@@ -37,7 +37,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Integer batchSize;
 
     public Optional<Integer> getBatchSize() {
@@ -48,7 +48,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
@@ -59,7 +59,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * The inputs for the Azure Machine Learning web service endpoint.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable AzureMachineLearningWebServiceInputsResponse inputs;
 
     public Optional<AzureMachineLearningWebServiceInputsResponse> getInputs() {
@@ -70,7 +70,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * A list of outputs from the Azure Machine Learning web service endpoint execution.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs;
 
     public List<AzureMachineLearningWebServiceOutputColumnResponse> getOutputs() {
@@ -82,7 +82,7 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
      * Expected value is 'Microsoft.MachineLearning/WebService'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

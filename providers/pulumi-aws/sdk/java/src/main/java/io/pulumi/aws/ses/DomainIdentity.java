@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.DomainIdentityArgs;
 import io.pulumi.aws.ses.inputs.DomainIdentityState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class DomainIdentity extends io.pulumi.resources.CustomResource {
      * The ARN of the domain identity.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class DomainIdentity extends io.pulumi.resources.CustomResource {
      * The domain name to assign to SES
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -66,7 +66,7 @@ public class DomainIdentity extends io.pulumi.resources.CustomResource {
      * docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
      * 
      */
-    @OutputExport(name="verificationToken", type=String.class, parameters={})
+    @Export(name="verificationToken", type=String.class, parameters={})
     private Output<String> verificationToken;
 
     /**

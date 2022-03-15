@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.AutoprovisioningNodePoolDefaultsResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ResourceLimitResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAutoscalingResponse {
     /**
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
@@ -39,13 +39,13 @@ public final class ClusterAutoscalingResponse {
      */
     private final List<ResourceLimitResponse> resourceLimits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterAutoscalingResponse(
-        @OutputCustomType.Parameter("autoprovisioningLocations") List<String> autoprovisioningLocations,
-        @OutputCustomType.Parameter("autoprovisioningNodePoolDefaults") AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
-        @OutputCustomType.Parameter("autoscalingProfile") String autoscalingProfile,
-        @OutputCustomType.Parameter("enableNodeAutoprovisioning") Boolean enableNodeAutoprovisioning,
-        @OutputCustomType.Parameter("resourceLimits") List<ResourceLimitResponse> resourceLimits) {
+        @CustomType.Parameter("autoprovisioningLocations") List<String> autoprovisioningLocations,
+        @CustomType.Parameter("autoprovisioningNodePoolDefaults") AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
+        @CustomType.Parameter("autoscalingProfile") String autoscalingProfile,
+        @CustomType.Parameter("enableNodeAutoprovisioning") Boolean enableNodeAutoprovisioning,
+        @CustomType.Parameter("resourceLimits") List<ResourceLimitResponse> resourceLimits) {
         this.autoprovisioningLocations = autoprovisioningLocations;
         this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
         this.autoscalingProfile = autoscalingProfile;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.directconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGatewayResult {
     /**
      * The ASN on the Amazon side of the connection.
@@ -26,12 +26,12 @@ public final class GetGatewayResult {
      */
     private final String ownerAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGatewayResult(
-        @OutputCustomType.Parameter("amazonSideAsn") String amazonSideAsn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerAccountId") String ownerAccountId) {
+        @CustomType.Parameter("amazonSideAsn") String amazonSideAsn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerAccountId") String ownerAccountId) {
         this.amazonSideAsn = amazonSideAsn;
         this.id = id;
         this.name = name;

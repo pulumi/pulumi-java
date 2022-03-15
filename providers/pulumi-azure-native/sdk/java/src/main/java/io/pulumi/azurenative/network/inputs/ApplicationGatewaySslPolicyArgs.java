@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewaySslPolicyType;
 import io.pulumi.azurenative.network.enums.ApplicationGatewaySslProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * Ssl cipher suites to be enabled in the specified order to application gateway.
      * 
      */
-    @InputImport(name="cipherSuites")
+    @Import(name="cipherSuites")
       private final @Nullable Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> cipherSuites;
 
     public Output<List<Either<String,ApplicationGatewaySslCipherSuite>>> getCipherSuites() {
@@ -39,7 +39,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * Ssl protocols to be disabled on application gateway.
      * 
      */
-    @InputImport(name="disabledSslProtocols")
+    @Import(name="disabledSslProtocols")
       private final @Nullable Output<List<Either<String,ApplicationGatewaySslProtocol>>> disabledSslProtocols;
 
     public Output<List<Either<String,ApplicationGatewaySslProtocol>>> getDisabledSslProtocols() {
@@ -50,7 +50,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * Minimum version of Ssl protocol to be supported on application gateway.
      * 
      */
-    @InputImport(name="minProtocolVersion")
+    @Import(name="minProtocolVersion")
       private final @Nullable Output<Either<String,ApplicationGatewaySslProtocol>> minProtocolVersion;
 
     public Output<Either<String,ApplicationGatewaySslProtocol>> getMinProtocolVersion() {
@@ -61,7 +61,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * Name of Ssl predefined policy.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<Either<String,ApplicationGatewaySslPolicyName>> policyName;
 
     public Output<Either<String,ApplicationGatewaySslPolicyName>> getPolicyName() {
@@ -72,7 +72,7 @@ public final class ApplicationGatewaySslPolicyArgs extends io.pulumi.resources.R
      * Type of Ssl Policy.
      * 
      */
-    @InputImport(name="policyType")
+    @Import(name="policyType")
       private final @Nullable Output<Either<String,ApplicationGatewaySslPolicyType>> policyType;
 
     public Output<Either<String,ApplicationGatewaySslPolicyType>> getPolicyType() {

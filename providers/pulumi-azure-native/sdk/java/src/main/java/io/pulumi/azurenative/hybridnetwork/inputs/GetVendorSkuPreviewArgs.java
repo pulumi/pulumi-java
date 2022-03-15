@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
      * Preview subscription ID.
      * 
      */
-    @InputImport(name="previewSubscription", required=true)
+    @Import(name="previewSubscription", required=true)
       private final String previewSubscription;
 
     public String getPreviewSubscription() {
@@ -27,7 +27,7 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
      * The name of the vendor sku.
      * 
      */
-    @InputImport(name="skuName", required=true)
+    @Import(name="skuName", required=true)
       private final String skuName;
 
     public String getSkuName() {
@@ -38,7 +38,7 @@ public final class GetVendorSkuPreviewArgs extends io.pulumi.resources.InvokeArg
      * The name of the vendor.
      * 
      */
-    @InputImport(name="vendorName", required=true)
+    @Import(name="vendorName", required=true)
       private final String vendorName;
 
     public String getVendorName() {

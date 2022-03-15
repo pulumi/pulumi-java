@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class GameServerGroupInstanceDefinition extends io.pulumi.resources
 
     public static final GameServerGroupInstanceDefinition Empty = new GameServerGroupInstanceDefinition();
 
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
     }
 
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable String weightedCapacity;
 
     public Optional<String> getWeightedCapacity() {

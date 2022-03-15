@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogAnalyticsOutputResponse {
     /**
      * Output file Uri path to blob container.
@@ -15,8 +15,8 @@ public final class LogAnalyticsOutputResponse {
      */
     private final String output;
 
-    @OutputCustomType.Constructor
-    private LogAnalyticsOutputResponse(@OutputCustomType.Parameter("output") String output) {
+    @CustomType.Constructor
+    private LogAnalyticsOutputResponse(@CustomType.Parameter("output") String output) {
         this.output = output;
     }
 

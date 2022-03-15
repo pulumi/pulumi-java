@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that are associated with a function.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
     public Output<ScalarFunctionPropertiesArgs> getProperties() {

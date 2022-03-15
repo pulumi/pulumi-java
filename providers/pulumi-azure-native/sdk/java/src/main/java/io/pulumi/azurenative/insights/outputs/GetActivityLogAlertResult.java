@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ActionListResponse;
 import io.pulumi.azurenative.insights.outputs.AlertRuleAllOfConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetActivityLogAlertResult {
     /**
      * The actions that will activate when the condition is met.
@@ -67,18 +67,18 @@ public final class GetActivityLogAlertResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetActivityLogAlertResult(
-        @OutputCustomType.Parameter("actions") ActionListResponse actions,
-        @OutputCustomType.Parameter("condition") AlertRuleAllOfConditionResponse condition,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("actions") ActionListResponse actions,
+        @CustomType.Parameter("condition") AlertRuleAllOfConditionResponse condition,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.actions = actions;
         this.condition = condition;
         this.description = description;

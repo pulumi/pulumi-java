@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.NotebookPreparationErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotebookResourceInfoResponse {
     private final @Nullable String fqdn;
     /**
@@ -24,11 +24,11 @@ public final class NotebookResourceInfoResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotebookResourceInfoResponse(
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("notebookPreparationError") @Nullable NotebookPreparationErrorResponse notebookPreparationError,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("notebookPreparationError") @Nullable NotebookPreparationErrorResponse notebookPreparationError,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.fqdn = fqdn;
         this.notebookPreparationError = notebookPreparationError;
         this.resourceId = resourceId;

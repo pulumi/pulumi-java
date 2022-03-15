@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
      * The creation time of the resource within the given system.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
      * The expiration time of the resource within the given system. Currently only apllicable to BigQuery resources.
      * 
      */
-    @InputImport(name="expireTime", required=true)
+    @Import(name="expireTime", required=true)
       private final String expireTime;
 
     public String getExpireTime() {
@@ -42,7 +42,7 @@ public final class GoogleCloudDatacatalogV1beta1SystemTimestampsResponse extends
      * The last-modified time of the resource within the given system.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

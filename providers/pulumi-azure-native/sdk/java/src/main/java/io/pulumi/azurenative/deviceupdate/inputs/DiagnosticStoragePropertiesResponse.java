@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
      * Authentication Type
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
     public String getAuthenticationType() {
@@ -33,7 +33,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
      * ConnectionString of the diagnostic storage account
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
@@ -44,7 +44,7 @@ public final class DiagnosticStoragePropertiesResponse extends io.pulumi.resourc
      * ResourceId of the diagnostic storage account
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

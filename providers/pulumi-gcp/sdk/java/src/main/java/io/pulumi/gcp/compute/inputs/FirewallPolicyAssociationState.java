@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * The target that the firewall policy is attached to.
      * 
      */
-    @InputImport(name="attachmentTarget")
+    @Import(name="attachmentTarget")
       private final @Nullable Output<String> attachmentTarget;
 
     public Output<String> getAttachmentTarget() {
@@ -29,7 +29,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * The firewall policy ID of the association.
      * 
      */
-    @InputImport(name="firewallPolicy")
+    @Import(name="firewallPolicy")
       private final @Nullable Output<String> firewallPolicy;
 
     public Output<String> getFirewallPolicy() {
@@ -40,7 +40,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * The name for an association.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
      * The short name of the firewall policy of the association.
      * 
      */
-    @InputImport(name="shortName")
+    @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {

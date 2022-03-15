@@ -5,7 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
-    @InputImport(name="configs")
+    @Import(name="configs")
       private final @Nullable Output<List<HoursOfOperationConfigGetArgs>> configs;
 
     public Output<List<HoursOfOperationConfigGetArgs>> getConfigs() {
@@ -32,7 +32,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * Specifies the description of the Hours of Operation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
      */
-    @InputImport(name="hoursOfOperationArn")
+    @Import(name="hoursOfOperationArn")
       private final @Nullable Output<String> hoursOfOperationArn;
 
     public Output<String> getHoursOfOperationArn() {
@@ -54,7 +54,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * The identifier for the hours of operation.
      * 
      */
-    @InputImport(name="hoursOfOperationId")
+    @Import(name="hoursOfOperationId")
       private final @Nullable Output<String> hoursOfOperationId;
 
     public Output<String> getHoursOfOperationId() {
@@ -65,7 +65,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -76,7 +76,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * Specifies the name of the Hours of Operation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -109,7 +109,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
      * Specifies the time zone of the Hours of Operation.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

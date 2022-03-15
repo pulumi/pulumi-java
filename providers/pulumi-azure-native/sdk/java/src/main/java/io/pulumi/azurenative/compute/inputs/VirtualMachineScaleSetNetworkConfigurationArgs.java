@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetIPConfiguratio
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Specify what happens to the network interface when the VM is deleted
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
     public Output<Either<String,DeleteOptions>> getDeleteOption() {
@@ -40,7 +40,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * The dns settings to be applied on the network interfaces.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings;
 
     public Output<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> getDnsSettings() {
@@ -51,7 +51,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Specifies whether the network interface is accelerated networking-enabled.
      * 
      */
-    @InputImport(name="enableAcceleratedNetworking")
+    @Import(name="enableAcceleratedNetworking")
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
     public Output<Boolean> getEnableAcceleratedNetworking() {
@@ -62,7 +62,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Specifies whether the network interface is FPGA networking-enabled.
      * 
      */
-    @InputImport(name="enableFpga")
+    @Import(name="enableFpga")
       private final @Nullable Output<Boolean> enableFpga;
 
     public Output<Boolean> getEnableFpga() {
@@ -73,7 +73,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Whether IP forwarding enabled on this NIC.
      * 
      */
-    @InputImport(name="enableIPForwarding")
+    @Import(name="enableIPForwarding")
       private final @Nullable Output<Boolean> enableIPForwarding;
 
     public Output<Boolean> getEnableIPForwarding() {
@@ -84,7 +84,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -95,7 +95,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Specifies the IP configurations of the network interface.
      * 
      */
-    @InputImport(name="ipConfigurations", required=true)
+    @Import(name="ipConfigurations", required=true)
       private final Output<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations;
 
     public Output<List<VirtualMachineScaleSetIPConfigurationArgs>> getIpConfigurations() {
@@ -106,7 +106,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * The network configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -117,7 +117,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * The network security group.
      * 
      */
-    @InputImport(name="networkSecurityGroup")
+    @Import(name="networkSecurityGroup")
       private final @Nullable Output<SubResourceArgs> networkSecurityGroup;
 
     public Output<SubResourceArgs> getNetworkSecurityGroup() {
@@ -128,7 +128,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
     public Output<Boolean> getPrimary() {

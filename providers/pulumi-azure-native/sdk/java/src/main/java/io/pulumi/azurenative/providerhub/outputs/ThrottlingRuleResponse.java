@@ -4,23 +4,23 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.ThrottlingMetricResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThrottlingRuleResponse {
     private final String action;
     private final List<ThrottlingMetricResponse> metrics;
     private final @Nullable List<String> requiredFeatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThrottlingRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("metrics") List<ThrottlingMetricResponse> metrics,
-        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("metrics") List<ThrottlingMetricResponse> metrics,
+        @CustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
         this.action = action;
         this.metrics = metrics;
         this.requiredFeatures = requiredFeatures;

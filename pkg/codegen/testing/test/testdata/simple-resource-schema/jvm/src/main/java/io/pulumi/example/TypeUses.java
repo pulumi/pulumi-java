@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.TypeUsesArgs;
 import io.pulumi.example.Utilities;
@@ -15,19 +15,19 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::TypeUses")
 public class TypeUses extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="bar", type=SomeOtherObject.class, parameters={})
+    @Export(name="bar", type=SomeOtherObject.class, parameters={})
     private Output</* @Nullable */ SomeOtherObject> bar;
 
     public Output</* @Nullable */ SomeOtherObject> getBar() {
         return this.bar;
     }
-    @OutputExport(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
+    @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
     public Output</* @Nullable */ ObjectWithNodeOptionalInputs> getBaz() {
         return this.baz;
     }
-    @OutputExport(name="foo", type=Object.class, parameters={})
+    @Export(name="foo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> foo;
 
     public Output</* @Nullable */ Object> getFoo() {

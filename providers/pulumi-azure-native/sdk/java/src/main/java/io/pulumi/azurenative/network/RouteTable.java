@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.RouteResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Whether to disable the routes learned by BGP on that route table. True means disable.
      * 
      */
-    @OutputExport(name="disableBgpRoutePropagation", type=Boolean.class, parameters={})
+    @Export(name="disableBgpRoutePropagation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableBgpRoutePropagation;
 
     /**
@@ -52,7 +52,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -66,7 +66,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -80,7 +80,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The provisioning state of the route table resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -108,7 +108,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the route table.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -122,7 +122,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Collection of routes contained within a route table.
      * 
      */
-    @OutputExport(name="routes", type=List.class, parameters={RouteResponse.class})
+    @Export(name="routes", type=List.class, parameters={RouteResponse.class})
     private Output</* @Nullable */ List<RouteResponse>> routes;
 
     /**
@@ -136,7 +136,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * A collection of references to subnets.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
+    @Export(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output<List<SubnetResponse>> subnets;
 
     /**
@@ -150,7 +150,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

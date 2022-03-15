@@ -4,21 +4,21 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.OriginRequestPolicyCookiesConfigCookies;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginRequestPolicyCookiesConfig {
     private final String cookieBehavior;
     private final @Nullable OriginRequestPolicyCookiesConfigCookies cookies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginRequestPolicyCookiesConfig(
-        @OutputCustomType.Parameter("cookieBehavior") String cookieBehavior,
-        @OutputCustomType.Parameter("cookies") @Nullable OriginRequestPolicyCookiesConfigCookies cookies) {
+        @CustomType.Parameter("cookieBehavior") String cookieBehavior,
+        @CustomType.Parameter("cookies") @Nullable OriginRequestPolicyCookiesConfigCookies cookies) {
         this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }

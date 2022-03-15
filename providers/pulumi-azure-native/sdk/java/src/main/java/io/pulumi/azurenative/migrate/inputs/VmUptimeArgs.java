@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
      * Number of days in a month for VM uptime.
      * 
      */
-    @InputImport(name="daysPerMonth")
+    @Import(name="daysPerMonth")
       private final @Nullable Output<Double> daysPerMonth;
 
     public Output<Double> getDaysPerMonth() {
@@ -29,7 +29,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
      * Number of hours per day for VM uptime.
      * 
      */
-    @InputImport(name="hoursPerDay")
+    @Import(name="hoursPerDay")
       private final @Nullable Output<Double> hoursPerDay;
 
     public Output<Double> getHoursPerDay() {

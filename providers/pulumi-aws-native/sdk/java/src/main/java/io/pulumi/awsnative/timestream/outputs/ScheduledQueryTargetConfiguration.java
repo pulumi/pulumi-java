@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryTimestreamConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryTargetConfiguration {
     private final ScheduledQueryTimestreamConfiguration timestreamConfiguration;
 
-    @OutputCustomType.Constructor
-    private ScheduledQueryTargetConfiguration(@OutputCustomType.Parameter("timestreamConfiguration") ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
+    @CustomType.Constructor
+    private ScheduledQueryTargetConfiguration(@CustomType.Parameter("timestreamConfiguration") ScheduledQueryTimestreamConfiguration timestreamConfiguration) {
         this.timestreamConfiguration = timestreamConfiguration;
     }
 

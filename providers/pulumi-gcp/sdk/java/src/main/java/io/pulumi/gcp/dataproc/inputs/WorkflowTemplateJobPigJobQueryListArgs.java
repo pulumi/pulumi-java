@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class WorkflowTemplateJobPigJobQueryListArgs extends io.pulumi.reso
      * Required. The queries to execute. You do not need to end a query expression with a semicolon. Multiple queries can be specified in one string by separating each with a semicolon. Here is an example of a Dataproc API snippet that uses a QueryList to specify a HiveJob: "hiveJob": { "queryList": { "queries": } }
      * 
      */
-    @InputImport(name="queries", required=true)
+    @Import(name="queries", required=true)
       private final Output<List<String>> queries;
 
     public Output<List<String>> getQueries() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
      * List of paths must be unique for each document in the Azure Cosmos DB service
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {

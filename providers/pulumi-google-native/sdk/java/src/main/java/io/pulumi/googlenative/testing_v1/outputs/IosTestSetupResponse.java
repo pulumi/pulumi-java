@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceFileResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosTestSetupResponse {
     /**
      * iOS apps to install in addition to those being directly tested.
@@ -33,12 +33,12 @@ public final class IosTestSetupResponse {
      */
     private final List<IosDeviceFileResponse> pushFiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IosTestSetupResponse(
-        @OutputCustomType.Parameter("additionalIpas") List<FileReferenceResponse> additionalIpas,
-        @OutputCustomType.Parameter("networkProfile") String networkProfile,
-        @OutputCustomType.Parameter("pullDirectories") List<IosDeviceFileResponse> pullDirectories,
-        @OutputCustomType.Parameter("pushFiles") List<IosDeviceFileResponse> pushFiles) {
+        @CustomType.Parameter("additionalIpas") List<FileReferenceResponse> additionalIpas,
+        @CustomType.Parameter("networkProfile") String networkProfile,
+        @CustomType.Parameter("pullDirectories") List<IosDeviceFileResponse> pullDirectories,
+        @CustomType.Parameter("pushFiles") List<IosDeviceFileResponse> pushFiles) {
         this.additionalIpas = additionalIpas;
         this.networkProfile = networkProfile;
         this.pullDirectories = pullDirectories;

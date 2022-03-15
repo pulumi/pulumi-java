@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpcEndpointServicePrivateDnsNameConfiguration {
     /**
      * Name of the record subdomain the service provider needs to create.
@@ -32,12 +32,12 @@ public final class VpcEndpointServicePrivateDnsNameConfiguration {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcEndpointServicePrivateDnsNameConfiguration(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.state = state;
         this.type = type;

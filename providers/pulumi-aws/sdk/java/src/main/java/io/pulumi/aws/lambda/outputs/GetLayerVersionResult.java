@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLayerVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the Lambda Layer with version.
@@ -82,24 +82,24 @@ public final class GetLayerVersionResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLayerVersionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("compatibleArchitecture") @Nullable String compatibleArchitecture,
-        @OutputCustomType.Parameter("compatibleArchitectures") List<String> compatibleArchitectures,
-        @OutputCustomType.Parameter("compatibleRuntime") @Nullable String compatibleRuntime,
-        @OutputCustomType.Parameter("compatibleRuntimes") List<String> compatibleRuntimes,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("layerArn") String layerArn,
-        @OutputCustomType.Parameter("layerName") String layerName,
-        @OutputCustomType.Parameter("licenseInfo") String licenseInfo,
-        @OutputCustomType.Parameter("signingJobArn") String signingJobArn,
-        @OutputCustomType.Parameter("signingProfileVersionArn") String signingProfileVersionArn,
-        @OutputCustomType.Parameter("sourceCodeHash") String sourceCodeHash,
-        @OutputCustomType.Parameter("sourceCodeSize") Integer sourceCodeSize,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("compatibleArchitecture") @Nullable String compatibleArchitecture,
+        @CustomType.Parameter("compatibleArchitectures") List<String> compatibleArchitectures,
+        @CustomType.Parameter("compatibleRuntime") @Nullable String compatibleRuntime,
+        @CustomType.Parameter("compatibleRuntimes") List<String> compatibleRuntimes,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("layerArn") String layerArn,
+        @CustomType.Parameter("layerName") String layerName,
+        @CustomType.Parameter("licenseInfo") String licenseInfo,
+        @CustomType.Parameter("signingJobArn") String signingJobArn,
+        @CustomType.Parameter("signingProfileVersionArn") String signingProfileVersionArn,
+        @CustomType.Parameter("sourceCodeHash") String sourceCodeHash,
+        @CustomType.Parameter("sourceCodeSize") Integer sourceCodeSize,
+        @CustomType.Parameter("version") Integer version) {
         this.arn = arn;
         this.compatibleArchitecture = compatibleArchitecture;
         this.compatibleArchitectures = compatibleArchitectures;

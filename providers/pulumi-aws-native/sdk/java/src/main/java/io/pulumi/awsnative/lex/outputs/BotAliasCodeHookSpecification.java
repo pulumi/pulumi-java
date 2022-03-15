@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasLambdaCodeHook;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasCodeHookSpecification {
     private final BotAliasLambdaCodeHook lambdaCodeHook;
 
-    @OutputCustomType.Constructor
-    private BotAliasCodeHookSpecification(@OutputCustomType.Parameter("lambdaCodeHook") BotAliasLambdaCodeHook lambdaCodeHook) {
+    @CustomType.Constructor
+    private BotAliasCodeHookSpecification(@CustomType.Parameter("lambdaCodeHook") BotAliasLambdaCodeHook lambdaCodeHook) {
         this.lambdaCodeHook = lambdaCodeHook;
     }
 

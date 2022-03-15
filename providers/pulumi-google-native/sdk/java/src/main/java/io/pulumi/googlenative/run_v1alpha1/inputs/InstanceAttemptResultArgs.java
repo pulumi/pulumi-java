@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.GoogleRpcStatusArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
      * Optional. The exit code of this attempt. This may be unset if the container was unable to exit cleanly with a code due to some other failure. See status field for possible failure details.
      * 
      */
-    @InputImport(name="exitCode")
+    @Import(name="exitCode")
       private final @Nullable Output<Integer> exitCode;
 
     public Output<Integer> getExitCode() {
@@ -34,7 +34,7 @@ public final class InstanceAttemptResultArgs extends io.pulumi.resources.Resourc
      * Optional. The status of this attempt. If the status code is OK, then the attempt succeeded.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;
 
     public Output<GoogleRpcStatusArgs> getStatus() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventFilterResponse {
     /**
      * The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
@@ -20,10 +20,10 @@ public final class EventFilterResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventFilterResponse(
-        @OutputCustomType.Parameter("attribute") String attribute,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("attribute") String attribute,
+        @CustomType.Parameter("value") String value) {
         this.attribute = attribute;
         this.value = value;
     }

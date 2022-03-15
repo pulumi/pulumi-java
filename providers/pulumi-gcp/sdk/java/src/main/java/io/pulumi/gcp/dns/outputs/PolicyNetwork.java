@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PolicyNetwork {
     /**
      * The id or fully qualified URL of the VPC network to forward queries to.
@@ -17,8 +17,8 @@ public final class PolicyNetwork {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor
-    private PolicyNetwork(@OutputCustomType.Parameter("networkUrl") String networkUrl) {
+    @CustomType.Constructor
+    private PolicyNetwork(@CustomType.Parameter("networkUrl") String networkUrl) {
         this.networkUrl = networkUrl;
     }
 

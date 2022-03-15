@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
      * Value or column name
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {
@@ -31,7 +31,7 @@ public final class RulesetSubstitutionValue extends io.pulumi.resources.InvokeAr
      * Variable name
      * 
      */
-    @InputImport(name="valueReference", required=true)
+    @Import(name="valueReference", required=true)
       private final String valueReference;
 
     public String getValueReference() {

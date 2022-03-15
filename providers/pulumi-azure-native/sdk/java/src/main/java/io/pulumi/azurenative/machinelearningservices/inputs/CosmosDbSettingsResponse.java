@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class CosmosDbSettingsResponse extends io.pulumi.resources.InvokeAr
      * The throughput of the collections in cosmosdb database
      * 
      */
-    @InputImport(name="collectionsThroughput")
+    @Import(name="collectionsThroughput")
       private final @Nullable Integer collectionsThroughput;
 
     public Optional<Integer> getCollectionsThroughput() {

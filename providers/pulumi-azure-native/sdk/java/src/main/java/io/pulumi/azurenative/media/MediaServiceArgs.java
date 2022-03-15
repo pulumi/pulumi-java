@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.MediaServiceIdentityArgs;
 import io.pulumi.azurenative.media.inputs.StorageAccountArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -36,7 +36,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The account encryption properties.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<AccountEncryptionArgs> encryption;
 
     public Output<AccountEncryptionArgs> getEncryption() {
@@ -47,7 +47,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The Managed Identity for the Media Services account.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<MediaServiceIdentityArgs> identity;
 
     public Output<MediaServiceIdentityArgs> getIdentity() {
@@ -58,7 +58,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,7 +69,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -80,14 +80,14 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The storage accounts for this resource.
      * 
      */
-    @InputImport(name="storageAccounts")
+    @Import(name="storageAccounts")
       private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
     public Output<List<StorageAccountArgs>> getStorageAccounts() {
         return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
     }
 
-    @InputImport(name="storageAuthentication")
+    @Import(name="storageAuthentication")
       private final @Nullable Output<Either<String,StorageAuthentication>> storageAuthentication;
 
     public Output<Either<String,StorageAuthentication>> getStorageAuthentication() {
@@ -98,7 +98,7 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

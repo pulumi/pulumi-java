@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.endpoints.inputs.ServiceApiGetArgs;
 import io.pulumi.gcp.endpoints.inputs.ServiceEndpointGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * A list of API objects.
      * 
      */
-    @InputImport(name="apis")
+    @Import(name="apis")
       private final @Nullable Output<List<ServiceApiGetArgs>> apis;
 
     public Output<List<ServiceApiGetArgs>> getApis() {
@@ -33,7 +33,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * to compute engine instances as a tag.
      * 
      */
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -44,7 +44,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The address at which the service can be found - usually the same as the service name.
      * 
      */
-    @InputImport(name="dnsAddress")
+    @Import(name="dnsAddress")
       private final @Nullable Output<String> dnsAddress;
 
     public Output<String> getDnsAddress() {
@@ -55,7 +55,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * A list of Endpoint objects.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<ServiceEndpointGetArgs>> endpoints;
 
     public Output<List<ServiceEndpointGetArgs>> getEndpoints() {
@@ -67,7 +67,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * protoc_output_base64. open_api config must not be provided.
      * 
      */
-    @InputImport(name="grpcConfig")
+    @Import(name="grpcConfig")
       private final @Nullable Output<String> grpcConfig;
 
     public Output<String> getGrpcConfig() {
@@ -79,7 +79,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * protoc_output_base64 must be specified.
      * 
      */
-    @InputImport(name="openapiConfig")
+    @Import(name="openapiConfig")
       private final @Nullable Output<String> openapiConfig;
 
     public Output<String> getOpenapiConfig() {
@@ -90,7 +90,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The project ID that the service belongs to. If not provided, provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -102,7 +102,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * base64-encoded.
      * 
      */
-    @InputImport(name="protocOutputBase64")
+    @Import(name="protocOutputBase64")
       private final @Nullable Output<String> protocOutputBase64;
 
     public Output<String> getProtocOutputBase64() {
@@ -113,7 +113,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {

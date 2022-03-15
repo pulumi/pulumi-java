@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FaceDetectorPresetResponse {
     /**
      * Blur type
@@ -39,13 +39,13 @@ public final class FaceDetectorPresetResponse {
      */
     private final @Nullable String resolution;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FaceDetectorPresetResponse(
-        @OutputCustomType.Parameter("blurType") @Nullable String blurType,
-        @OutputCustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("resolution") @Nullable String resolution) {
+        @CustomType.Parameter("blurType") @Nullable String blurType,
+        @CustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("resolution") @Nullable String resolution) {
         this.blurType = blurType;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes {
     /**
      * A list of public IP prefix resources.
@@ -17,8 +17,8 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes {
      */
     private final @Nullable List<ResourceReferenceResponse> publicIPPrefixes;
 
-    @OutputCustomType.Constructor
-    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(@OutputCustomType.Parameter("publicIPPrefixes") @Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
+    @CustomType.Constructor
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes(@CustomType.Parameter("publicIPPrefixes") @Nullable List<ResourceReferenceResponse> publicIPPrefixes) {
         this.publicIPPrefixes = publicIPPrefixes;
     }
 

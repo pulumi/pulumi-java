@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IapTestServiceAccountInfoResponse extends io.pulumi.resources
      * Describes OAuth2 Client ID of resources protected by Identity-Aware-Proxy(IAP).
      * 
      */
-    @InputImport(name="targetAudienceClientId", required=true)
+    @Import(name="targetAudienceClientId", required=true)
       private final String targetAudienceClientId;
 
     public String getTargetAudienceClientId() {

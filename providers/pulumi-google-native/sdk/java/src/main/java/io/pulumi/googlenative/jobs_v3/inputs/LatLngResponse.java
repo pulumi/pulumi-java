@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
      * The latitude in degrees. It must be in the range [-90.0, +90.0].
      * 
      */
-    @InputImport(name="latitude", required=true)
+    @Import(name="latitude", required=true)
       private final Double latitude;
 
     public Double getLatitude() {
@@ -31,7 +31,7 @@ public final class LatLngResponse extends io.pulumi.resources.InvokeArgs {
      * The longitude in degrees. It must be in the range [-180.0, +180.0].
      * 
      */
-    @InputImport(name="longitude", required=true)
+    @Import(name="longitude", required=true)
       private final Double longitude;
 
     public Double getLongitude() {

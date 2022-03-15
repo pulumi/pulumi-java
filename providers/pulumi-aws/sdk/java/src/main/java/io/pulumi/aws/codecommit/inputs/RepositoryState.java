@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the repository
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The URL to use for cloning the repository over HTTPS.
      * 
      */
-    @InputImport(name="cloneUrlHttp")
+    @Import(name="cloneUrlHttp")
       private final @Nullable Output<String> cloneUrlHttp;
 
     public Output<String> getCloneUrlHttp() {
@@ -41,7 +41,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The URL to use for cloning the repository over SSH.
      * 
      */
-    @InputImport(name="cloneUrlSsh")
+    @Import(name="cloneUrlSsh")
       private final @Nullable Output<String> cloneUrlSsh;
 
     public Output<String> getCloneUrlSsh() {
@@ -52,7 +52,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The default branch of the repository. The branch specified here needs to exist.
      * 
      */
-    @InputImport(name="defaultBranch")
+    @Import(name="defaultBranch")
       private final @Nullable Output<String> defaultBranch;
 
     public Output<String> getDefaultBranch() {
@@ -63,7 +63,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The description of the repository. This needs to be less than 1000 characters
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The ID of the repository
      * 
      */
-    @InputImport(name="repositoryId")
+    @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
@@ -85,7 +85,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The name for the repository. This needs to be less than 100 characters.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -96,7 +96,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

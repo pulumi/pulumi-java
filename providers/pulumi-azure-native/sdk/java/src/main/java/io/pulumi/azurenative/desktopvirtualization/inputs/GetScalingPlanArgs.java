@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetScalingPlanArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetScalingPlanArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the scaling plan.
      * 
      */
-    @InputImport(name="scalingPlanName", required=true)
+    @Import(name="scalingPlanName", required=true)
       private final String scalingPlanName;
 
     public String getScalingPlanName() {

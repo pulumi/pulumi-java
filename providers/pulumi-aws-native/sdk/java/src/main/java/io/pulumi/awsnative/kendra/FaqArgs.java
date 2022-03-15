@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.FaqFileFormat;
 import io.pulumi.awsnative.kendra.inputs.FaqS3PathArgs;
 import io.pulumi.awsnative.kendra.inputs.FaqTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * FAQ description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * FAQ file format
      * 
      */
-    @InputImport(name="fileFormat")
+    @Import(name="fileFormat")
       private final @Nullable Output<FaqFileFormat> fileFormat;
 
     public Output<FaqFileFormat> getFileFormat() {
@@ -44,7 +44,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * Index ID
      * 
      */
-    @InputImport(name="indexId", required=true)
+    @Import(name="indexId", required=true)
       private final Output<String> indexId;
 
     public Output<String> getIndexId() {
@@ -55,7 +55,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * FAQ name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * FAQ role ARN
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -77,7 +77,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * FAQ S3 path
      * 
      */
-    @InputImport(name="s3Path", required=true)
+    @Import(name="s3Path", required=true)
       private final Output<FaqS3PathArgs> s3Path;
 
     public Output<FaqS3PathArgs> getS3Path() {
@@ -88,7 +88,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
      * Tags for labeling the FAQ
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FaqTagArgs>> tags;
 
     public Output<List<FaqTagArgs>> getTags() {

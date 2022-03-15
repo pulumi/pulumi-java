@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.UrlMapTestHeaderResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlMapTestResponse {
     /**
      * Description of this test case.
@@ -48,15 +48,15 @@ public final class UrlMapTestResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlMapTestResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expectedOutputUrl") String expectedOutputUrl,
-        @OutputCustomType.Parameter("expectedRedirectResponseCode") Integer expectedRedirectResponseCode,
-        @OutputCustomType.Parameter("headers") List<UrlMapTestHeaderResponse> headers,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expectedOutputUrl") String expectedOutputUrl,
+        @CustomType.Parameter("expectedRedirectResponseCode") Integer expectedRedirectResponseCode,
+        @CustomType.Parameter("headers") List<UrlMapTestHeaderResponse> headers,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("service") String service) {
         this.description = description;
         this.expectedOutputUrl = expectedOutputUrl;
         this.expectedRedirectResponseCode = expectedRedirectResponseCode;

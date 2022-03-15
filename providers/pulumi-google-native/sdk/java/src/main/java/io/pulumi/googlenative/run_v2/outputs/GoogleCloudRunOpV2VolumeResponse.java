@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2CloudSqlInstanceResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2SecretVolumeSourceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2VolumeResponse {
     /**
      * For Cloud SQL volumes, contains the specific instances that should be mounted. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
@@ -27,11 +27,11 @@ public final class GoogleCloudRunOpV2VolumeResponse {
      */
     private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2VolumeResponse(
-        @OutputCustomType.Parameter("cloudSqlInstance") GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secret") GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
+        @CustomType.Parameter("cloudSqlInstance") GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secret") GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
         this.cloudSqlInstance = cloudSqlInstance;
         this.name = name;
         this.secret = secret;

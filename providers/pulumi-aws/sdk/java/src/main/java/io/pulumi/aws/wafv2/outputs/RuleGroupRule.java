@@ -7,14 +7,14 @@ import io.pulumi.aws.wafv2.outputs.RuleGroupRuleAction;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleRuleLabel;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatement;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleVisibilityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRule {
     /**
      * The action that AWS WAF should take on a web request when it matches the rule's statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
@@ -47,14 +47,14 @@ public final class RuleGroupRule {
      */
     private final RuleGroupRuleVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRule(
-        @OutputCustomType.Parameter("action") RuleGroupRuleAction action,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleLabels") @Nullable List<RuleGroupRuleRuleLabel> ruleLabels,
-        @OutputCustomType.Parameter("statement") RuleGroupRuleStatement statement,
-        @OutputCustomType.Parameter("visibilityConfig") RuleGroupRuleVisibilityConfig visibilityConfig) {
+        @CustomType.Parameter("action") RuleGroupRuleAction action,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleLabels") @Nullable List<RuleGroupRuleRuleLabel> ruleLabels,
+        @CustomType.Parameter("statement") RuleGroupRuleStatement statement,
+        @CustomType.Parameter("visibilityConfig") RuleGroupRuleVisibilityConfig visibilityConfig) {
         this.action = action;
         this.name = name;
         this.priority = priority;

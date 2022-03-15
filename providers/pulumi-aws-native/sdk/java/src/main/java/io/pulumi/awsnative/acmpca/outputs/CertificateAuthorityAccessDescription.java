@@ -5,18 +5,18 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityAccessMethod;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityGeneralName;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityAccessDescription {
     private final CertificateAuthorityGeneralName accessLocation;
     private final CertificateAuthorityAccessMethod accessMethod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityAccessDescription(
-        @OutputCustomType.Parameter("accessLocation") CertificateAuthorityGeneralName accessLocation,
-        @OutputCustomType.Parameter("accessMethod") CertificateAuthorityAccessMethod accessMethod) {
+        @CustomType.Parameter("accessLocation") CertificateAuthorityGeneralName accessLocation,
+        @CustomType.Parameter("accessMethod") CertificateAuthorityAccessMethod accessMethod) {
         this.accessLocation = accessLocation;
         this.accessMethod = accessMethod;
     }

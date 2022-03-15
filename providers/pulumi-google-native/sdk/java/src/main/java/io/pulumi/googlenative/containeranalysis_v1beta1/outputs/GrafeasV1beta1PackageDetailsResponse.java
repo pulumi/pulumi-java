@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.InstallationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1PackageDetailsResponse {
     /**
      * Where the package was installed.
@@ -15,8 +15,8 @@ public final class GrafeasV1beta1PackageDetailsResponse {
      */
     private final InstallationResponse installation;
 
-    @OutputCustomType.Constructor
-    private GrafeasV1beta1PackageDetailsResponse(@OutputCustomType.Parameter("installation") InstallationResponse installation) {
+    @CustomType.Constructor
+    private GrafeasV1beta1PackageDetailsResponse(@CustomType.Parameter("installation") InstallationResponse installation) {
         this.installation = installation;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
      * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
      * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
      * 
      */
-    @InputImport(name="product")
+    @Import(name="product")
       private final @Nullable Output<String> product;
 
     public Output<String> getProduct() {
@@ -44,7 +44,7 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
      * promotionCode, Not really used now, can you left as empty
      * 
      */
-    @InputImport(name="promotionCode")
+    @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
     public Output<String> getPromotionCode() {
@@ -55,7 +55,7 @@ public final class SolutionPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Publisher name. For gallery solution, it is Microsoft.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {

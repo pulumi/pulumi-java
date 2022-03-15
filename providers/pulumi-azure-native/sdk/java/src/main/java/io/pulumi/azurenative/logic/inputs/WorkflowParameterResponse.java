@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Object metadata;
 
     public Optional<Object> getMetadata() {
@@ -45,7 +45,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * The type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -56,7 +56,7 @@ public final class WorkflowParameterResponse extends io.pulumi.resources.InvokeA
      * The value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Object value;
 
     public Optional<Object> getValue() {

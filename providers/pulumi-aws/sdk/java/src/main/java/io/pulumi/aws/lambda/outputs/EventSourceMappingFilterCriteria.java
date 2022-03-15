@@ -4,12 +4,12 @@
 package io.pulumi.aws.lambda.outputs;
 
 import io.pulumi.aws.lambda.outputs.EventSourceMappingFilterCriteriaFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingFilterCriteria {
     /**
      * A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
@@ -17,8 +17,8 @@ public final class EventSourceMappingFilterCriteria {
      */
     private final @Nullable List<EventSourceMappingFilterCriteriaFilter> filters;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingFilterCriteria(@OutputCustomType.Parameter("filters") @Nullable List<EventSourceMappingFilterCriteriaFilter> filters) {
+    @CustomType.Constructor
+    private EventSourceMappingFilterCriteria(@CustomType.Parameter("filters") @Nullable List<EventSourceMappingFilterCriteriaFilter> filters) {
         this.filters = filters;
     }
 

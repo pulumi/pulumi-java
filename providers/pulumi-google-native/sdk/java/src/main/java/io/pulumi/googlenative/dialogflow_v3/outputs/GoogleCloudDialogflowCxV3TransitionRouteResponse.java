@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FulfillmentResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3TransitionRouteResponse {
     /**
      * The condition to evaluate against form parameters or session parameters. See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of `intent` or `condition` must be specified. When both `intent` and `condition` are specified, the transition can only happen when both are fulfilled.
@@ -41,14 +41,14 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteResponse {
      */
     private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3TransitionRouteResponse(
-        @OutputCustomType.Parameter("condition") String condition,
-        @OutputCustomType.Parameter("intent") String intent,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("targetFlow") String targetFlow,
-        @OutputCustomType.Parameter("targetPage") String targetPage,
-        @OutputCustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
+        @CustomType.Parameter("condition") String condition,
+        @CustomType.Parameter("intent") String intent,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("targetFlow") String targetFlow,
+        @CustomType.Parameter("targetPage") String targetPage,
+        @CustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
         this.condition = condition;
         this.intent = intent;
         this.name = name;

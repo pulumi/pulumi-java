@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SpatialSpecResponse extends io.pulumi.resources.InvokeArgs {
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -30,7 +30,7 @@ public final class SpatialSpecResponse extends io.pulumi.resources.InvokeArgs {
      * List of path's spatial type
      * 
      */
-    @InputImport(name="types")
+    @Import(name="types")
       private final @Nullable List<String> types;
 
     public List<String> getTypes() {

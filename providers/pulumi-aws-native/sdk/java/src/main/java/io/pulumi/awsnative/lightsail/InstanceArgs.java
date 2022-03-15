@@ -10,7 +10,7 @@ import io.pulumi.awsnative.lightsail.inputs.InstanceNetworkingArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceStateArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    @InputImport(name="addOns")
+    @Import(name="addOns")
       private final @Nullable Output<List<InstanceAddOnArgs>> addOns;
 
     public Output<List<InstanceAddOnArgs>> getAddOns() {
@@ -36,7 +36,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -47,7 +47,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0 ). Use the get blueprints operation to return a list of available images (or blueprints ).
      * 
      */
-    @InputImport(name="blueprintId", required=true)
+    @Import(name="blueprintId", required=true)
       private final Output<String> blueprintId;
 
     public Output<String> getBlueprintId() {
@@ -58,14 +58,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).
      * 
      */
-    @InputImport(name="bundleId", required=true)
+    @Import(name="bundleId", required=true)
       private final Output<String> bundleId;
 
     public Output<String> getBundleId() {
         return this.bundleId;
     }
 
-    @InputImport(name="hardware")
+    @Import(name="hardware")
       private final @Nullable Output<InstanceHardwareArgs> hardware;
 
     public Output<InstanceHardwareArgs> getHardware() {
@@ -76,7 +76,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The names to use for your new Lightsail instance.
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -87,28 +87,28 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of your key pair.
      * 
      */
-    @InputImport(name="keyPairName")
+    @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
     public Output<String> getKeyPairName() {
         return this.keyPairName == null ? Output.empty() : this.keyPairName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<InstanceLocationArgs> location;
 
     public Output<InstanceLocationArgs> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="networking")
+    @Import(name="networking")
       private final @Nullable Output<InstanceNetworkingArgs> networking;
 
     public Output<InstanceNetworkingArgs> getNetworking() {
         return this.networking == null ? Output.empty() : this.networking;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<InstanceStateArgs> state;
 
     public Output<InstanceStateArgs> getState() {
@@ -119,7 +119,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<InstanceTagArgs>> tags;
 
     public Output<List<InstanceTagArgs>> getTags() {
@@ -130,7 +130,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {

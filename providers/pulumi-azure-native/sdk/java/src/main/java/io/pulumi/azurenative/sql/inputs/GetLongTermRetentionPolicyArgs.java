@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -27,7 +27,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
      * The policy name. Should always be Default.
      * 
      */
-    @InputImport(name="policyName", required=true)
+    @Import(name="policyName", required=true)
       private final String policyName;
 
     public String getPolicyName() {
@@ -38,7 +38,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetLongTermRetentionPolicyArgs extends io.pulumi.resources.In
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {

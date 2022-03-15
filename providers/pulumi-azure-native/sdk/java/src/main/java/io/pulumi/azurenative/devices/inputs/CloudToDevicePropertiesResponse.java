@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.inputs.FeedbackPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
      * The default time to live for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
      */
-    @InputImport(name="defaultTtlAsIso8601")
+    @Import(name="defaultTtlAsIso8601")
       private final @Nullable String defaultTtlAsIso8601;
 
     public Optional<String> getDefaultTtlAsIso8601() {
@@ -35,7 +35,7 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
      * The properties of the feedback queue for cloud-to-device messages.
      * 
      */
-    @InputImport(name="feedback")
+    @Import(name="feedback")
       private final @Nullable FeedbackPropertiesResponse feedback;
 
     public Optional<FeedbackPropertiesResponse> getFeedback() {
@@ -46,7 +46,7 @@ public final class CloudToDevicePropertiesResponse extends io.pulumi.resources.I
      * The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
      */
-    @InputImport(name="maxDeliveryCount")
+    @Import(name="maxDeliveryCount")
       private final @Nullable Integer maxDeliveryCount;
 
     public Optional<Integer> getMaxDeliveryCount() {

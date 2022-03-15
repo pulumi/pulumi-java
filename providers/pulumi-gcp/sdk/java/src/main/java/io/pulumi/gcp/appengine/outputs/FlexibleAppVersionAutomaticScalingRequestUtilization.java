@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
     /**
      * Target number of concurrent requests.
@@ -23,10 +23,10 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
      */
     private final @Nullable String targetRequestCountPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionAutomaticScalingRequestUtilization(
-        @OutputCustomType.Parameter("targetConcurrentRequests") @Nullable Double targetConcurrentRequests,
-        @OutputCustomType.Parameter("targetRequestCountPerSecond") @Nullable String targetRequestCountPerSecond) {
+        @CustomType.Parameter("targetConcurrentRequests") @Nullable Double targetConcurrentRequests,
+        @CustomType.Parameter("targetRequestCountPerSecond") @Nullable String targetRequestCountPerSecond) {
         this.targetConcurrentRequests = targetConcurrentRequests;
         this.targetRequestCountPerSecond = targetRequestCountPerSecond;
     }

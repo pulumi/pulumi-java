@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
      * Describes the cloud service role sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<CloudServiceRoleSkuArgs> sku;
 
     public Output<CloudServiceRoleSkuArgs> getSku() {

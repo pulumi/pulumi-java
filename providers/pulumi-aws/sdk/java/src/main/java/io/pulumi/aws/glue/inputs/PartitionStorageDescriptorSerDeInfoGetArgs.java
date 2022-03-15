@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
      * Name of the SerDe.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
      * A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -41,7 +41,7 @@ public final class PartitionStorageDescriptorSerDeInfoGetArgs extends io.pulumi.
      * Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
      * 
      */
-    @InputImport(name="serializationLibrary")
+    @Import(name="serializationLibrary")
       private final @Nullable Output<String> serializationLibrary;
 
     public Output<String> getSerializationLibrary() {

@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeMetric {
     private final @Nullable Map<String,String> systemMetrics;
 
-    @OutputCustomType.Constructor
-    private RuntimeMetric(@OutputCustomType.Parameter("systemMetrics") @Nullable Map<String,String> systemMetrics) {
+    @CustomType.Constructor
+    private RuntimeMetric(@CustomType.Parameter("systemMetrics") @Nullable Map<String,String> systemMetrics) {
         this.systemMetrics = systemMetrics;
     }
 

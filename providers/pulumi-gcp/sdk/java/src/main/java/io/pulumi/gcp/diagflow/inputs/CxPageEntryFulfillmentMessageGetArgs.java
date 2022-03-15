@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentMessageTextGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
      * A collection of text responses.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
 
     public Output<CxPageEntryFulfillmentMessageTextGetArgs> getText() {

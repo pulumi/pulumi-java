@@ -11,14 +11,14 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyTokenRestrictionRespo
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyUnknownConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyUnknownRestrictionResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyWidevineConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyOptionResponse {
     /**
      * The key delivery configuration.
@@ -41,12 +41,12 @@ public final class ContentKeyPolicyOptionResponse {
      */
     private final Object restriction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyOptionResponse(
-        @OutputCustomType.Parameter("configuration") Object configuration,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("policyOptionId") String policyOptionId,
-        @OutputCustomType.Parameter("restriction") Object restriction) {
+        @CustomType.Parameter("configuration") Object configuration,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("policyOptionId") String policyOptionId,
+        @CustomType.Parameter("restriction") Object restriction) {
         this.configuration = configuration;
         this.name = name;
         this.policyOptionId = policyOptionId;

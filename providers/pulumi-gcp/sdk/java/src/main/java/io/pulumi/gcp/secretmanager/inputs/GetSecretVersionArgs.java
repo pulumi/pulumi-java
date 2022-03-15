@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -30,7 +30,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
      * The secret to get the secret version for.
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final String secret;
 
     public String getSecret() {
@@ -42,7 +42,7 @@ public final class GetSecretVersionArgs extends io.pulumi.resources.InvokeArgs {
      * is not provided, the latest version is retrieved.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

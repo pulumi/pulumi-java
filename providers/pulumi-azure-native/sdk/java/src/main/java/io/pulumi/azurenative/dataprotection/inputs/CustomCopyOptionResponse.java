@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CustomCopyOptionResponse extends io.pulumi.resources.InvokeAr
      * Data copied after given timespan
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable String duration;
 
     public Optional<String> getDuration() {
@@ -34,7 +34,7 @@ public final class CustomCopyOptionResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'CustomCopyOption'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {

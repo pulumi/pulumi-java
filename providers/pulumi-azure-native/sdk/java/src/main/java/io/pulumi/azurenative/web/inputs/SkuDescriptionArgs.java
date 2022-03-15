@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.CapabilityArgs;
 import io.pulumi.azurenative.web.inputs.SkuCapacityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Capabilities of the SKU, e.g., is traffic manager enabled?
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<List<CapabilityArgs>> capabilities;
 
     public Output<List<CapabilityArgs>> getCapabilities() {
@@ -37,7 +37,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Current number of instances assigned to the resource.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -48,7 +48,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Family code of the resource SKU.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -59,7 +59,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Locations of the SKU.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -70,7 +70,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Size specifier of the resource SKU.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -92,7 +92,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Min, max, and default scale values of the SKU.
      * 
      */
-    @InputImport(name="skuCapacity")
+    @Import(name="skuCapacity")
       private final @Nullable Output<SkuCapacityArgs> skuCapacity;
 
     public Output<SkuCapacityArgs> getSkuCapacity() {
@@ -103,7 +103,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Service tier of the resource SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

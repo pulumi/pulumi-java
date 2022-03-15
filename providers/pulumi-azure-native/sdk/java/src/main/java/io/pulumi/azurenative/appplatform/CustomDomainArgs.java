@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.CustomDomainPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the App resource.
      * 
      */
-    @InputImport(name="appName", required=true)
+    @Import(name="appName", required=true)
       private final Output<String> appName;
 
     public Output<String> getAppName() {
@@ -30,7 +30,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom domain resource.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -41,7 +41,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the custom domain resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CustomDomainPropertiesArgs> properties;
 
     public Output<CustomDomainPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

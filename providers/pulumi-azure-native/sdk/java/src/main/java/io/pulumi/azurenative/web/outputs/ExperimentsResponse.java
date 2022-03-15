@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.RampUpRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentsResponse {
     /**
      * List of ramp-up rules.
@@ -17,8 +17,8 @@ public final class ExperimentsResponse {
      */
     private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
-    @OutputCustomType.Constructor
-    private ExperimentsResponse(@OutputCustomType.Parameter("rampUpRules") @Nullable List<RampUpRuleResponse> rampUpRules) {
+    @CustomType.Constructor
+    private ExperimentsResponse(@CustomType.Parameter("rampUpRules") @Nullable List<RampUpRuleResponse> rampUpRules) {
         this.rampUpRules = rampUpRules;
     }
 

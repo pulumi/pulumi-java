@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. Defaults to `UseDefaultValue`. See the [SES API documentation](https://docs.aws.amazon.com/ses/latest/APIReference/API_SetIdentityMailFromDomain.html) for more information.
      * 
      */
-    @InputImport(name="behaviorOnMxFailure")
+    @Import(name="behaviorOnMxFailure")
       private final @Nullable Output<String> behaviorOnMxFailure;
 
     public Output<String> getBehaviorOnMxFailure() {
@@ -29,7 +29,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * Verified domain name to generate DKIM tokens for.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {
@@ -40,7 +40,7 @@ public final class MailFromArgs extends io.pulumi.resources.ResourceArgs {
      * Subdomain (of above domain) which is to be used as MAIL FROM address (Required for DMARC validation)
      * 
      */
-    @InputImport(name="mailFromDomain", required=true)
+    @Import(name="mailFromDomain", required=true)
       private final Output<String> mailFromDomain;
 
     public Output<String> getMailFromDomain() {

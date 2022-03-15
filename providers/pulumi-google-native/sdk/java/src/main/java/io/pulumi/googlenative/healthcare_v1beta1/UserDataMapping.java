@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.UserDataMappingArgs;
@@ -24,7 +24,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * Indicates the time when this mapping was archived.
      * 
      */
-    @OutputExport(name="archiveTime", type=String.class, parameters={})
+    @Export(name="archiveTime", type=String.class, parameters={})
     private Output<String> archiveTime;
 
     /**
@@ -38,7 +38,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * Indicates whether this mapping is archived.
      * 
      */
-    @OutputExport(name="archived", type=Boolean.class, parameters={})
+    @Export(name="archived", type=Boolean.class, parameters={})
     private Output<Boolean> archived;
 
     /**
@@ -52,7 +52,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * A unique identifier for the mapped resource.
      * 
      */
-    @OutputExport(name="dataId", type=String.class, parameters={})
+    @Export(name="dataId", type=String.class, parameters={})
     private Output<String> dataId;
 
     /**
@@ -66,7 +66,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
      * 
      */
-    @OutputExport(name="resourceAttributes", type=List.class, parameters={AttributeResponse.class})
+    @Export(name="resourceAttributes", type=List.class, parameters={AttributeResponse.class})
     private Output<List<AttributeResponse>> resourceAttributes;
 
     /**
@@ -94,7 +94,7 @@ public class UserDataMapping extends io.pulumi.resources.CustomResource {
      * User's UUID provided by the client.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**

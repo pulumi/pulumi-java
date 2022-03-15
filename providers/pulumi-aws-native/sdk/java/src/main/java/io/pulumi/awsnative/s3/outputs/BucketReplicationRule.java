@@ -8,14 +8,14 @@ import io.pulumi.awsnative.s3.outputs.BucketDeleteMarkerReplication;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationDestination;
 import io.pulumi.awsnative.s3.outputs.BucketReplicationRuleFilter;
 import io.pulumi.awsnative.s3.outputs.BucketSourceSelectionCriteria;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationRule {
     private final @Nullable BucketDeleteMarkerReplication deleteMarkerReplication;
     private final BucketReplicationDestination destination;
@@ -38,16 +38,16 @@ public final class BucketReplicationRule {
      */
     private final BucketReplicationRuleStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationRule(
-        @OutputCustomType.Parameter("deleteMarkerReplication") @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
-        @OutputCustomType.Parameter("destination") BucketReplicationDestination destination,
-        @OutputCustomType.Parameter("filter") @Nullable BucketReplicationRuleFilter filter,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("sourceSelectionCriteria") @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
-        @OutputCustomType.Parameter("status") BucketReplicationRuleStatus status) {
+        @CustomType.Parameter("deleteMarkerReplication") @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
+        @CustomType.Parameter("destination") BucketReplicationDestination destination,
+        @CustomType.Parameter("filter") @Nullable BucketReplicationRuleFilter filter,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("sourceSelectionCriteria") @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
+        @CustomType.Parameter("status") BucketReplicationRuleStatus status) {
         this.deleteMarkerReplication = deleteMarkerReplication;
         this.destination = destination;
         this.filter = filter;

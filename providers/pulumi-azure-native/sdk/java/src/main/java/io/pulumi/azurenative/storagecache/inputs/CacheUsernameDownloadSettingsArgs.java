@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagecache.enums.UsernameSource;
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsCredentialsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
      * 
      */
-    @InputImport(name="autoDownloadCertificate")
+    @Import(name="autoDownloadCertificate")
       private final @Nullable Output<Boolean> autoDownloadCertificate;
 
     public Output<Boolean> getAutoDownloadCertificate() {
@@ -37,7 +37,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.
      * 
      */
-    @InputImport(name="caCertificateURI")
+    @Import(name="caCertificateURI")
       private final @Nullable Output<String> caCertificateURI;
 
     public Output<String> getCaCertificateURI() {
@@ -48,7 +48,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * When present, these are the credentials for the secure LDAP connection.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<CacheUsernameDownloadSettingsCredentialsArgs> credentials;
 
     public Output<CacheUsernameDownloadSettingsCredentialsArgs> getCredentials() {
@@ -59,7 +59,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * Whether or not the LDAP connection should be encrypted.
      * 
      */
-    @InputImport(name="encryptLdapConnection")
+    @Import(name="encryptLdapConnection")
       private final @Nullable Output<Boolean> encryptLdapConnection;
 
     public Output<Boolean> getEncryptLdapConnection() {
@@ -70,7 +70,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * Whether or not Extended Groups is enabled.
      * 
      */
-    @InputImport(name="extendedGroups")
+    @Import(name="extendedGroups")
       private final @Nullable Output<Boolean> extendedGroups;
 
     public Output<Boolean> getExtendedGroups() {
@@ -81,7 +81,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.
      * 
      */
-    @InputImport(name="groupFileURI")
+    @Import(name="groupFileURI")
       private final @Nullable Output<String> groupFileURI;
 
     public Output<String> getGroupFileURI() {
@@ -92,7 +92,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * The base distinguished name for the LDAP domain.
      * 
      */
-    @InputImport(name="ldapBaseDN")
+    @Import(name="ldapBaseDN")
       private final @Nullable Output<String> ldapBaseDN;
 
     public Output<String> getLdapBaseDN() {
@@ -103,7 +103,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * The fully qualified domain name or IP address of the LDAP server to use.
      * 
      */
-    @InputImport(name="ldapServer")
+    @Import(name="ldapServer")
       private final @Nullable Output<String> ldapServer;
 
     public Output<String> getLdapServer() {
@@ -114,7 +114,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.
      * 
      */
-    @InputImport(name="requireValidCertificate")
+    @Import(name="requireValidCertificate")
       private final @Nullable Output<Boolean> requireValidCertificate;
 
     public Output<Boolean> getRequireValidCertificate() {
@@ -125,7 +125,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.
      * 
      */
-    @InputImport(name="userFileURI")
+    @Import(name="userFileURI")
       private final @Nullable Output<String> userFileURI;
 
     public Output<String> getUserFileURI() {
@@ -136,7 +136,7 @@ public final class CacheUsernameDownloadSettingsArgs extends io.pulumi.resources
      * This setting determines how the cache gets username and group names for clients.
      * 
      */
-    @InputImport(name="usernameSource")
+    @Import(name="usernameSource")
       private final @Nullable Output<Either<String,UsernameSource>> usernameSource;
 
     public Output<Either<String,UsernameSource>> getUsernameSource() {

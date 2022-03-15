@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomRequestHandlingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
 
     public static final WebACLCaptchaActionArgs Empty = new WebACLCaptchaActionArgs();
 
-    @InputImport(name="customRequestHandling")
+    @Import(name="customRequestHandling")
       private final @Nullable Output<WebACLCustomRequestHandlingArgs> customRequestHandling;
 
     public Output<WebACLCustomRequestHandlingArgs> getCustomRequestHandling() {

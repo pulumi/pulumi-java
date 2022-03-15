@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSlotTypeEnumerationValue {
     private final List<String> synonyms;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSlotTypeEnumerationValue(
-        @OutputCustomType.Parameter("synonyms") List<String> synonyms,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("synonyms") List<String> synonyms,
+        @CustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

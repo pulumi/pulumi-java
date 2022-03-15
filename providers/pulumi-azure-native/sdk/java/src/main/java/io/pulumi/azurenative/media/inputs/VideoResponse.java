@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
      */
-    @InputImport(name="keyFrameInterval")
+    @Import(name="keyFrameInterval")
       private final @Nullable String keyFrameInterval;
 
     public Optional<String> getKeyFrameInterval() {
@@ -33,7 +33,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -45,7 +45,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.Media.Video'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -56,7 +56,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
      */
-    @InputImport(name="stretchMode")
+    @Import(name="stretchMode")
       private final @Nullable String stretchMode;
 
     public Optional<String> getStretchMode() {
@@ -67,7 +67,7 @@ public final class VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The Video Sync Mode
      * 
      */
-    @InputImport(name="syncMode")
+    @Import(name="syncMode")
       private final @Nullable String syncMode;
 
     public Optional<String> getSyncMode() {

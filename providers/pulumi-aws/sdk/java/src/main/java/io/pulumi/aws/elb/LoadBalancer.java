@@ -11,7 +11,7 @@ import io.pulumi.aws.elb.outputs.LoadBalancerHealthCheck;
 import io.pulumi.aws.elb.outputs.LoadBalancerListener;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -56,7 +56,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * An Access Logs block. Access Logs documented below.
      * 
      */
-    @OutputExport(name="accessLogs", type=LoadBalancerAccessLogs.class, parameters={})
+    @Export(name="accessLogs", type=LoadBalancerAccessLogs.class, parameters={})
     private Output</* @Nullable */ LoadBalancerAccessLogs> accessLogs;
 
     /**
@@ -70,7 +70,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The ARN of the ELB
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -84,7 +84,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The AZ's to serve traffic in.
      * 
      */
-    @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
+    @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
@@ -98,7 +98,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Boolean to enable connection draining. Default: `false`
      * 
      */
-    @OutputExport(name="connectionDraining", type=Boolean.class, parameters={})
+    @Export(name="connectionDraining", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> connectionDraining;
 
     /**
@@ -112,7 +112,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The time in seconds to allow for connections to drain. Default: `300`
      * 
      */
-    @OutputExport(name="connectionDrainingTimeout", type=Integer.class, parameters={})
+    @Export(name="connectionDrainingTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> connectionDrainingTimeout;
 
     /**
@@ -126,7 +126,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Enable cross-zone load balancing. Default: `true`
      * 
      */
-    @OutputExport(name="crossZoneLoadBalancing", type=Boolean.class, parameters={})
+    @Export(name="crossZoneLoadBalancing", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> crossZoneLoadBalancing;
 
     /**
@@ -140,7 +140,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    @OutputExport(name="desyncMitigationMode", type=String.class, parameters={})
+    @Export(name="desyncMitigationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> desyncMitigationMode;
 
     /**
@@ -154,7 +154,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The DNS name of the ELB
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -168,7 +168,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A health_check block. Health Check documented below.
      * 
      */
-    @OutputExport(name="healthCheck", type=LoadBalancerHealthCheck.class, parameters={})
+    @Export(name="healthCheck", type=LoadBalancerHealthCheck.class, parameters={})
     private Output<LoadBalancerHealthCheck> healthCheck;
 
     /**
@@ -182,7 +182,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The time in seconds that the connection is allowed to be idle. Default: `60`
      * 
      */
-    @OutputExport(name="idleTimeout", type=Integer.class, parameters={})
+    @Export(name="idleTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeout;
 
     /**
@@ -196,7 +196,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A list of instance ids to place in the ELB pool.
      * 
      */
-    @OutputExport(name="instances", type=List.class, parameters={String.class})
+    @Export(name="instances", type=List.class, parameters={String.class})
     private Output<List<String>> instances;
 
     /**
@@ -210,7 +210,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * If true, ELB will be an internal ELB.
      * 
      */
-    @OutputExport(name="internal", type=Boolean.class, parameters={})
+    @Export(name="internal", type=Boolean.class, parameters={})
     private Output<Boolean> internal;
 
     /**
@@ -224,7 +224,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A list of listener blocks. Listeners documented below.
      * 
      */
-    @OutputExport(name="listeners", type=List.class, parameters={LoadBalancerListener.class})
+    @Export(name="listeners", type=List.class, parameters={LoadBalancerListener.class})
     private Output<List<LoadBalancerListener>> listeners;
 
     /**
@@ -238,7 +238,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The name of the ELB. By default generated by this provider.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -253,7 +253,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -269,7 +269,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Only valid if creating an ELB within a VPC
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
@@ -286,7 +286,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * instances. Use this for Classic or Default VPC only.
      * 
      */
-    @OutputExport(name="sourceSecurityGroup", type=String.class, parameters={})
+    @Export(name="sourceSecurityGroup", type=String.class, parameters={})
     private Output<String> sourceSecurityGroup;
 
     /**
@@ -304,7 +304,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * instances. Only available on ELBs launched in a VPC.
      * 
      */
-    @OutputExport(name="sourceSecurityGroupId", type=String.class, parameters={})
+    @Export(name="sourceSecurityGroupId", type=String.class, parameters={})
     private Output<String> sourceSecurityGroupId;
 
     /**
@@ -320,7 +320,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A list of subnet IDs to attach to the ELB.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={String.class})
+    @Export(name="subnets", type=List.class, parameters={String.class})
     private Output<List<String>> subnets;
 
     /**
@@ -334,7 +334,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -348,7 +348,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -362,7 +362,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
      * 
      */
-    @OutputExport(name="zoneId", type=String.class, parameters={})
+    @Export(name="zoneId", type=String.class, parameters={})
     private Output<String> zoneId;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.docdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrderableDbInstanceResult {
     /**
      * Availability zones where the instance is available.
@@ -30,16 +30,16 @@ public final class GetOrderableDbInstanceResult {
     private final @Nullable List<String> preferredInstanceClasses;
     private final Boolean vpc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrderableDbInstanceResult(
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("engine") @Nullable String engine,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceClass") String instanceClass,
-        @OutputCustomType.Parameter("licenseModel") @Nullable String licenseModel,
-        @OutputCustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
-        @OutputCustomType.Parameter("vpc") Boolean vpc) {
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("engine") @Nullable String engine,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceClass") String instanceClass,
+        @CustomType.Parameter("licenseModel") @Nullable String licenseModel,
+        @CustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
+        @CustomType.Parameter("vpc") Boolean vpc) {
         this.availabilityZones = availabilityZones;
         this.engine = engine;
         this.engineVersion = engineVersion;

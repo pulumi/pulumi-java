@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.awsnative.s3outposts.inputs.AccessPointVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the AccessPoint.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The access point policy associated with this access point.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<Object> policy;
 
     public Output<Object> getPolicy() {
@@ -53,7 +53,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
      * 
      */
-    @InputImport(name="vpcConfiguration", required=true)
+    @Import(name="vpcConfiguration", required=true)
       private final Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {

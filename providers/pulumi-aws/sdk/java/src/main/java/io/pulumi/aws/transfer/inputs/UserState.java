@@ -6,7 +6,7 @@ package io.pulumi.aws.transfer.inputs;
 import io.pulumi.aws.transfer.inputs.UserHomeDirectoryMappingGetArgs;
 import io.pulumi.aws.transfer.inputs.UserPosixProfileGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of Transfer User
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
      * 
      */
-    @InputImport(name="homeDirectory")
+    @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
     public Output<String> getHomeDirectory() {
@@ -44,7 +44,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
      * 
      */
-    @InputImport(name="homeDirectoryMappings")
+    @Import(name="homeDirectoryMappings")
       private final @Nullable Output<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings;
 
     public Output<List<UserHomeDirectoryMappingGetArgs>> getHomeDirectoryMappings() {
@@ -55,7 +55,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
      * 
      */
-    @InputImport(name="homeDirectoryType")
+    @Import(name="homeDirectoryType")
       private final @Nullable Output<String> homeDirectoryType;
 
     public Output<String> getHomeDirectoryType() {
@@ -66,7 +66,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -77,7 +77,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
-    @InputImport(name="posixProfile")
+    @Import(name="posixProfile")
       private final @Nullable Output<UserPosixProfileGetArgs> posixProfile;
 
     public Output<UserPosixProfileGetArgs> getPosixProfile() {
@@ -88,7 +88,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -99,7 +99,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    @InputImport(name="serverId")
+    @Import(name="serverId")
       private final @Nullable Output<String> serverId;
 
     public Output<String> getServerId() {
@@ -110,7 +110,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -121,7 +121,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -132,7 +132,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The name used for log in to your SFTP server.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

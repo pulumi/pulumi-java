@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogFileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecLoggingAccessLogArgs extends io.pulumi.resourc
      * The file object to send virtual node access logs to.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecLoggingAccessLogFileArgs> file;
 
     public Output<VirtualNodeSpecLoggingAccessLogFileArgs> getFile() {

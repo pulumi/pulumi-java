@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * A number that CloudFront uses as the value for the max-age directive in the Strict-Transport-Security HTTP response header.
      * 
      */
-    @InputImport(name="accessControlMaxAgeSec", required=true)
+    @Import(name="accessControlMaxAgeSec", required=true)
       private final Integer accessControlMaxAgeSec;
 
     public Integer getAccessControlMaxAgeSec() {
@@ -28,7 +28,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * A Boolean value that determines whether CloudFront includes the includeSubDomains directive in the Strict-Transport-Security HTTP response header.
      * 
      */
-    @InputImport(name="includeSubdomains", required=true)
+    @Import(name="includeSubdomains", required=true)
       private final Boolean includeSubdomains;
 
     public Boolean getIncludeSubdomains() {
@@ -39,7 +39,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {
@@ -50,7 +50,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      * A Boolean value that determines whether CloudFront includes the preload directive in the Strict-Transport-Security HTTP response header.
      * 
      */
-    @InputImport(name="preload", required=true)
+    @Import(name="preload", required=true)
       private final Boolean preload;
 
     public Boolean getPreload() {

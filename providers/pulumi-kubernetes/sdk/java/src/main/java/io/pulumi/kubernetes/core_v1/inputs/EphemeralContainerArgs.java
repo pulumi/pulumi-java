@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
@@ -37,7 +37,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -48,7 +48,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -59,7 +59,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * List of environment variables to set in the container. Cannot be updated.
      * 
      */
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable Output<List<EnvVarArgs>> env;
 
     public Output<List<EnvVarArgs>> getEnv() {
@@ -70,7 +70,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
      * 
      */
-    @InputImport(name="envFrom")
+    @Import(name="envFrom")
       private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
     public Output<List<EnvFromSourceArgs>> getEnvFrom() {
@@ -81,7 +81,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -97,7 +97,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      *  - `"Never"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
      * 
      */
-    @InputImport(name="imagePullPolicy")
+    @Import(name="imagePullPolicy")
       private final @Nullable Output<String> imagePullPolicy;
 
     public Output<String> getImagePullPolicy() {
@@ -108,7 +108,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Lifecycle is not allowed for ephemeral containers.
      * 
      */
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable Output<LifecycleArgs> lifecycle;
 
     public Output<LifecycleArgs> getLifecycle() {
@@ -119,7 +119,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Probes are not allowed for ephemeral containers.
      * 
      */
-    @InputImport(name="livenessProbe")
+    @Import(name="livenessProbe")
       private final @Nullable Output<ProbeArgs> livenessProbe;
 
     public Output<ProbeArgs> getLivenessProbe() {
@@ -130,7 +130,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Name of the ephemeral container specified as a DNS_LABEL. This name must be unique among all containers, init containers and ephemeral containers.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -141,7 +141,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Ports are not allowed for ephemeral containers.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ContainerPortArgs>> ports;
 
     public Output<List<ContainerPortArgs>> getPorts() {
@@ -152,7 +152,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Probes are not allowed for ephemeral containers.
      * 
      */
-    @InputImport(name="readinessProbe")
+    @Import(name="readinessProbe")
       private final @Nullable Output<ProbeArgs> readinessProbe;
 
     public Output<ProbeArgs> getReadinessProbe() {
@@ -163,7 +163,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources already allocated to the pod.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<ResourceRequirementsArgs> resources;
 
     public Output<ResourceRequirementsArgs> getResources() {
@@ -174,7 +174,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Optional: SecurityContext defines the security options the ephemeral container should be run with. If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
      * 
      */
-    @InputImport(name="securityContext")
+    @Import(name="securityContext")
       private final @Nullable Output<SecurityContextArgs> securityContext;
 
     public Output<SecurityContextArgs> getSecurityContext() {
@@ -185,7 +185,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Probes are not allowed for ephemeral containers.
      * 
      */
-    @InputImport(name="startupProbe")
+    @Import(name="startupProbe")
       private final @Nullable Output<ProbeArgs> startupProbe;
 
     public Output<ProbeArgs> getStartupProbe() {
@@ -196,7 +196,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.
      * 
      */
-    @InputImport(name="stdin")
+    @Import(name="stdin")
       private final @Nullable Output<Boolean> stdin;
 
     public Output<Boolean> getStdin() {
@@ -207,7 +207,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false
      * 
      */
-    @InputImport(name="stdinOnce")
+    @Import(name="stdinOnce")
       private final @Nullable Output<Boolean> stdinOnce;
 
     public Output<Boolean> getStdinOnce() {
@@ -220,7 +220,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * The container runtime must implement support for this feature. If the runtime does not support namespace targeting then the result of setting this field is undefined.
      * 
      */
-    @InputImport(name="targetContainerName")
+    @Import(name="targetContainerName")
       private final @Nullable Output<String> targetContainerName;
 
     public Output<String> getTargetContainerName() {
@@ -231,7 +231,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.
      * 
      */
-    @InputImport(name="terminationMessagePath")
+    @Import(name="terminationMessagePath")
       private final @Nullable Output<String> terminationMessagePath;
 
     public Output<String> getTerminationMessagePath() {
@@ -246,7 +246,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      *  - `"File"` is the default behavior and will set the container status message to the contents of the container's terminationMessagePath when the container exits.
      * 
      */
-    @InputImport(name="terminationMessagePolicy")
+    @Import(name="terminationMessagePolicy")
       private final @Nullable Output<String> terminationMessagePolicy;
 
     public Output<String> getTerminationMessagePolicy() {
@@ -257,7 +257,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.
      * 
      */
-    @InputImport(name="tty")
+    @Import(name="tty")
       private final @Nullable Output<Boolean> tty;
 
     public Output<Boolean> getTty() {
@@ -268,7 +268,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * volumeDevices is the list of block devices to be used by the container.
      * 
      */
-    @InputImport(name="volumeDevices")
+    @Import(name="volumeDevices")
       private final @Nullable Output<List<VolumeDeviceArgs>> volumeDevices;
 
     public Output<List<VolumeDeviceArgs>> getVolumeDevices() {
@@ -279,7 +279,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Pod volumes to mount into the container's filesystem. Subpath mounts are not allowed for ephemeral containers. Cannot be updated.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
     public Output<List<VolumeMountArgs>> getVolumeMounts() {
@@ -290,7 +290,7 @@ public final class EphemeralContainerArgs extends io.pulumi.resources.ResourceAr
      * Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.
      * 
      */
-    @InputImport(name="workingDir")
+    @Import(name="workingDir")
       private final @Nullable Output<String> workingDir;
 
     public Output<String> getWorkingDir() {

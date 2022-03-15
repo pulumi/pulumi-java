@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStorageMode;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamingSessionStorageRootArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,14 +25,14 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends io
      *                 <code>UPLOAD</code>.</p>
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode;
 
     public Output<List<LaunchProfileStreamingSessionStorageMode>> getMode() {
         return this.mode == null ? Output.empty() : this.mode;
     }
 
-    @InputImport(name="root")
+    @Import(name="root")
       private final @Nullable Output<LaunchProfileStreamingSessionStorageRootArgs> root;
 
     public Output<LaunchProfileStreamingSessionStorageRootArgs> getRoot() {

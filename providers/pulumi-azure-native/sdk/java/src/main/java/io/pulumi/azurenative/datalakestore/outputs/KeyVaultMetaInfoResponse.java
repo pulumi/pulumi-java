@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultMetaInfoResponse {
     /**
      * The name of the user managed encryption key.
@@ -25,11 +25,11 @@ public final class KeyVaultMetaInfoResponse {
      */
     private final String keyVaultResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultMetaInfoResponse(
-        @OutputCustomType.Parameter("encryptionKeyName") String encryptionKeyName,
-        @OutputCustomType.Parameter("encryptionKeyVersion") String encryptionKeyVersion,
-        @OutputCustomType.Parameter("keyVaultResourceId") String keyVaultResourceId) {
+        @CustomType.Parameter("encryptionKeyName") String encryptionKeyName,
+        @CustomType.Parameter("encryptionKeyVersion") String encryptionKeyVersion,
+        @CustomType.Parameter("keyVaultResourceId") String keyVaultResourceId) {
         this.encryptionKeyName = encryptionKeyName;
         this.encryptionKeyVersion = encryptionKeyVersion;
         this.keyVaultResourceId = keyVaultResourceId;

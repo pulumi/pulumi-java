@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoScaleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
      * 
      */
-    @InputImport(name="bitrateKbps")
+    @Import(name="bitrateKbps")
       private final @Nullable Output<String> bitrateKbps;
 
     public Output<String> getBitrateKbps() {
@@ -34,7 +34,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
      * 
      */
-    @InputImport(name="frameRate")
+    @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
 
     public Output<String> getFrameRate() {
@@ -45,7 +45,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<VideoScaleArgs> scale;
 
     public Output<VideoScaleArgs> getScale() {
@@ -57,7 +57,7 @@ public final class VideoEncoderH264Args extends io.pulumi.resources.ResourceArgs
      * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

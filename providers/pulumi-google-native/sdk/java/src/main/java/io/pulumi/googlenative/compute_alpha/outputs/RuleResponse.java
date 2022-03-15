@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ConditionResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.LogConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -48,15 +48,15 @@ public final class RuleResponse {
      */
     private final List<String> permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("ins") List<String> ins,
-        @OutputCustomType.Parameter("logConfigs") List<LogConfigResponse> logConfigs,
-        @OutputCustomType.Parameter("notIns") List<String> notIns,
-        @OutputCustomType.Parameter("permissions") List<String> permissions) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("ins") List<String> ins,
+        @CustomType.Parameter("logConfigs") List<LogConfigResponse> logConfigs,
+        @CustomType.Parameter("notIns") List<String> notIns,
+        @CustomType.Parameter("permissions") List<String> permissions) {
         this.action = action;
         this.conditions = conditions;
         this.description = description;

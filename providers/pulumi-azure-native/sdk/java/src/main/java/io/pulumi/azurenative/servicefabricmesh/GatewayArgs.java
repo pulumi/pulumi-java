@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.HttpConfigArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.TcpConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * User readable description of the gateway.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Network that the Application is using.
      * 
      */
-    @InputImport(name="destinationNetwork", required=true)
+    @Import(name="destinationNetwork", required=true)
       private final Output<NetworkRefArgs> destinationNetwork;
 
     public Output<NetworkRefArgs> getDestinationNetwork() {
@@ -45,7 +45,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the gateway.
      * 
      */
-    @InputImport(name="gatewayResourceName")
+    @Import(name="gatewayResourceName")
       private final @Nullable Output<String> gatewayResourceName;
 
     public Output<String> getGatewayResourceName() {
@@ -56,7 +56,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for http connectivity for this gateway.
      * 
      */
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable Output<List<HttpConfigArgs>> http;
 
     public Output<List<HttpConfigArgs>> getHttp() {
@@ -67,7 +67,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Network the gateway should listen on for requests.
      * 
      */
-    @InputImport(name="sourceNetwork", required=true)
+    @Import(name="sourceNetwork", required=true)
       private final Output<NetworkRefArgs> sourceNetwork;
 
     public Output<NetworkRefArgs> getSourceNetwork() {
@@ -100,7 +100,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for tcp connectivity for this gateway.
      * 
      */
-    @InputImport(name="tcp")
+    @Import(name="tcp")
       private final @Nullable Output<List<TcpConfigArgs>> tcp;
 
     public Output<List<TcpConfigArgs>> getTcp() {

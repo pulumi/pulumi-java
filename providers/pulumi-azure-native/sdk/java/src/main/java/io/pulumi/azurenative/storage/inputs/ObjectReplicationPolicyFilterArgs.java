@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
      * 
      */
-    @InputImport(name="minCreationTime")
+    @Import(name="minCreationTime")
       private final @Nullable Output<String> minCreationTime;
 
     public Output<String> getMinCreationTime() {
@@ -34,7 +34,7 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
      * Optional. Filters the results to replicate only blobs whose names begin with the specified prefix.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable Output<List<String>> prefixMatch;
 
     public Output<List<String>> getPrefixMatch() {

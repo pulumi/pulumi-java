@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.outputs.ClusterEncryptionConfigProviderProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEncryptionConfig {
     /**
      * The encryption provider for the cluster.
@@ -24,10 +24,10 @@ public final class ClusterEncryptionConfig {
      */
     private final @Nullable List<String> resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEncryptionConfig(
-        @OutputCustomType.Parameter("provider") @Nullable ClusterEncryptionConfigProviderProperties provider,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources) {
+        @CustomType.Parameter("provider") @Nullable ClusterEncryptionConfigProviderProperties provider,
+        @CustomType.Parameter("resources") @Nullable List<String> resources) {
         this.provider = provider;
         this.resources = resources;
     }

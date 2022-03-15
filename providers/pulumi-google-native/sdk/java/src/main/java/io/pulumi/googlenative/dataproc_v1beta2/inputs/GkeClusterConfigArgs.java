@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.NamespacedGkeDeploymentTargetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
      * Optional. A target for the deployment.
      * 
      */
-    @InputImport(name="namespacedGkeDeploymentTarget")
+    @Import(name="namespacedGkeDeploymentTarget")
       private final @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
     public Output<NamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {

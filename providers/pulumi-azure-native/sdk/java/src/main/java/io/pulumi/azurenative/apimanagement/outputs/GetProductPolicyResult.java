@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProductPolicyResult {
     /**
      * Format of the policyContent.
@@ -37,13 +37,13 @@ public final class GetProductPolicyResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductPolicyResult(
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.format = format;
         this.id = id;
         this.name = name;

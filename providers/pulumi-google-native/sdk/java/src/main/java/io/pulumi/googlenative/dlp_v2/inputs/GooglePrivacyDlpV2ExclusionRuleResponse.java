@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExcludeInfoTypesResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexResponse;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * Dictionary which defines the rule.
      * 
      */
-    @InputImport(name="dictionary", required=true)
+    @Import(name="dictionary", required=true)
       private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * Set of infoTypes for which findings would affect this rule.
      * 
      */
-    @InputImport(name="excludeInfoTypes", required=true)
+    @Import(name="excludeInfoTypes", required=true)
       private final GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes;
 
     public GooglePrivacyDlpV2ExcludeInfoTypesResponse getExcludeInfoTypes() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * How the rule is applied, see MatchingType documentation for details.
      * 
      */
-    @InputImport(name="matchingType", required=true)
+    @Import(name="matchingType", required=true)
       private final String matchingType;
 
     public String getMatchingType() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse extends io.pulumi.res
      * Regular expression which defines the rule.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse getRegex() {

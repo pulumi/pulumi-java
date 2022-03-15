@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProgressMetricsResponse {
     /**
      * The completed datapoint count.
@@ -31,12 +31,12 @@ public final class ProgressMetricsResponse {
      */
     private final Double totalDatapointCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProgressMetricsResponse(
-        @OutputCustomType.Parameter("completedDatapointCount") Double completedDatapointCount,
-        @OutputCustomType.Parameter("incrementalDatasetLastRefreshTime") String incrementalDatasetLastRefreshTime,
-        @OutputCustomType.Parameter("skippedDatapointCount") Double skippedDatapointCount,
-        @OutputCustomType.Parameter("totalDatapointCount") Double totalDatapointCount) {
+        @CustomType.Parameter("completedDatapointCount") Double completedDatapointCount,
+        @CustomType.Parameter("incrementalDatasetLastRefreshTime") String incrementalDatasetLastRefreshTime,
+        @CustomType.Parameter("skippedDatapointCount") Double skippedDatapointCount,
+        @CustomType.Parameter("totalDatapointCount") Double totalDatapointCount) {
         this.completedDatapointCount = completedDatapointCount;
         this.incrementalDatasetLastRefreshTime = incrementalDatasetLastRefreshTime;
         this.skippedDatapointCount = skippedDatapointCount;

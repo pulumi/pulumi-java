@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionReplaceDefaultPolicyVersionParamsTemplateName;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
 
     public static final MitigationActionReplaceDefaultPolicyVersionParamsArgs Empty = new MitigationActionReplaceDefaultPolicyVersionParamsArgs();
 
-    @InputImport(name="templateName", required=true)
+    @Import(name="templateName", required=true)
       private final Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
     public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> getTemplateName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
      * 
      */
-    @InputImport(name="cloudBuildId")
+    @Import(name="cloudBuildId")
       private final @Nullable Output<String> cloudBuildId;
 
     public Output<String> getCloudBuildId() {

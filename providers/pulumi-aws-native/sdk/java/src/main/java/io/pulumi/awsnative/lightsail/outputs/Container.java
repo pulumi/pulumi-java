@@ -5,14 +5,14 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.ContainerEnvironmentVariable;
 import io.pulumi.awsnative.lightsail.outputs.ContainerPortInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Container {
     /**
      * The launch command for the container.
@@ -40,13 +40,13 @@ public final class Container {
      */
     private final @Nullable List<ContainerPortInfo> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Container(
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("environment") @Nullable List<ContainerEnvironmentVariable> environment,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPortInfo> ports) {
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("environment") @Nullable List<ContainerEnvironmentVariable> environment,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("ports") @Nullable List<ContainerPortInfo> ports) {
         this.command = command;
         this.containerName = containerName;
         this.environment = environment;

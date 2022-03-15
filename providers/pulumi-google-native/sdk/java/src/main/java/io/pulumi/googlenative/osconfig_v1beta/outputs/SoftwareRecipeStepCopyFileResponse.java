@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepCopyFileResponse {
     /**
      * The id of the relevant artifact in the recipe.
@@ -31,12 +31,12 @@ public final class SoftwareRecipeStepCopyFileResponse {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeStepCopyFileResponse(
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("overwrite") Boolean overwrite,
-        @OutputCustomType.Parameter("permissions") String permissions) {
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("overwrite") Boolean overwrite,
+        @CustomType.Parameter("permissions") String permissions) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.overwrite = overwrite;

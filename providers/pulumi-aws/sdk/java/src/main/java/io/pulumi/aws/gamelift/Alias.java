@@ -8,7 +8,7 @@ import io.pulumi.aws.gamelift.AliasArgs;
 import io.pulumi.aws.gamelift.inputs.AliasState;
 import io.pulumi.aws.gamelift.outputs.AliasRoutingStrategy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Alias ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Description of the alias.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Name of the alias.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Specifies the fleet and/or routing type to use for the alias.
      * 
      */
-    @OutputExport(name="routingStrategy", type=AliasRoutingStrategy.class, parameters={})
+    @Export(name="routingStrategy", type=AliasRoutingStrategy.class, parameters={})
     private Output<AliasRoutingStrategy> routingStrategy;
 
     /**
@@ -90,7 +90,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -104,7 +104,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

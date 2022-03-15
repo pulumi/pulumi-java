@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the rule.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The event bus to associate with this rule. If you omit this, the `default` event bus is used.
      * 
      */
-    @InputImport(name="eventBusName")
+    @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
@@ -53,7 +53,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
      * 
      */
-    @InputImport(name="eventPattern")
+    @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
 
     public Output<String> getEventPattern() {
@@ -64,7 +64,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * Whether the rule should be enabled (defaults to `true`).
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -75,7 +75,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -97,7 +97,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -108,7 +108,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus. For more information, refer to the AWS documentation [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
      * 
      */
-    @InputImport(name="scheduleExpression")
+    @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
@@ -119,7 +119,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -130,7 +130,7 @@ public final class EventRuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

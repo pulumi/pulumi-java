@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * AAD OID (user or group) if the principal type is ActiveDirectory. MSA PUID if the principal type is MicrosoftAccount
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -33,7 +33,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * Name of the parameter in the connection provider's OAuth settings
      * 
      */
-    @InputImport(name="parameterName")
+    @Import(name="parameterName")
       private final @Nullable String parameterName;
 
     public Optional<String> getParameterName() {
@@ -44,7 +44,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * Name of the parameter in the connection provider's OAuth settings
      * 
      */
-    @InputImport(name="redirectUrl")
+    @Import(name="redirectUrl")
       private final @Nullable String redirectUrl;
 
     public Optional<String> getRedirectUrl() {
@@ -55,7 +55,7 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
      * The tenant id
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

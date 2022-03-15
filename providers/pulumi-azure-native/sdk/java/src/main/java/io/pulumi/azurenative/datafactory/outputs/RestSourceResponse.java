@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -74,20 +74,20 @@ public final class RestSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestSourceResponse(
-        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
-        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("paginationRules") @Nullable Object paginationRules,
-        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
-        @OutputCustomType.Parameter("requestInterval") @Nullable Object requestInterval,
-        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @CustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("paginationRules") @Nullable Object paginationRules,
+        @CustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @CustomType.Parameter("requestInterval") @Nullable Object requestInterval,
+        @CustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;

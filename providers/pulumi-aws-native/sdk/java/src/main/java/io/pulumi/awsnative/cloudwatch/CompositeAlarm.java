@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudwatch;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudwatch.CompositeAlarmArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
      * 
      */
-    @OutputExport(name="actionsEnabled", type=Boolean.class, parameters={})
+    @Export(name="actionsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> actionsEnabled;
 
     /**
@@ -37,7 +37,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="alarmActions", type=List.class, parameters={String.class})
+    @Export(name="alarmActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> alarmActions;
 
     /**
@@ -51,7 +51,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The description of the alarm
      * 
      */
-    @OutputExport(name="alarmDescription", type=String.class, parameters={})
+    @Export(name="alarmDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> alarmDescription;
 
     /**
@@ -65,7 +65,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The name of the Composite Alarm
      * 
      */
-    @OutputExport(name="alarmName", type=String.class, parameters={})
+    @Export(name="alarmName", type=String.class, parameters={})
     private Output<String> alarmName;
 
     /**
@@ -79,7 +79,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
      * 
      */
-    @OutputExport(name="alarmRule", type=String.class, parameters={})
+    @Export(name="alarmRule", type=String.class, parameters={})
     private Output<String> alarmRule;
 
     /**
@@ -93,7 +93,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the alarm
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -107,7 +107,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="insufficientDataActions", type=List.class, parameters={String.class})
+    @Export(name="insufficientDataActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> insufficientDataActions;
 
     /**
@@ -121,7 +121,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="oKActions", type=List.class, parameters={String.class})
+    @Export(name="oKActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> oKActions;
 
     /**

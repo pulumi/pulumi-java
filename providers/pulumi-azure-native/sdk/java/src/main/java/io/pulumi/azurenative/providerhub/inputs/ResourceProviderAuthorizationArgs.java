@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
 
     public static final ResourceProviderAuthorizationArgs Empty = new ResourceProviderAuthorizationArgs();
 
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
         return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
-    @InputImport(name="managedByRoleDefinitionId")
+    @Import(name="managedByRoleDefinitionId")
       private final @Nullable Output<String> managedByRoleDefinitionId;
 
     public Output<String> getManagedByRoleDefinitionId() {
         return this.managedByRoleDefinitionId == null ? Output.empty() : this.managedByRoleDefinitionId;
     }
 
-    @InputImport(name="roleDefinitionId")
+    @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {

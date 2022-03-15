@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclDefaultActionAllowCustomRequestHandlingInsertHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclDefaultActionAllowCustomRequestHandling {
     /**
      * The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
@@ -16,8 +16,8 @@ public final class WebAclDefaultActionAllowCustomRequestHandling {
      */
     private final List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders;
 
-    @OutputCustomType.Constructor
-    private WebAclDefaultActionAllowCustomRequestHandling(@OutputCustomType.Parameter("insertHeaders") List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
+    @CustomType.Constructor
+    private WebAclDefaultActionAllowCustomRequestHandling(@CustomType.Parameter("insertHeaders") List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
         this.insertHeaders = insertHeaders;
     }
 

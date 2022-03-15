@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TextResponse {
     /**
      * The text content to be displayed.
@@ -20,10 +20,10 @@ public final class TextResponse {
      */
     private final String format;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TextResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("format") String format) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("format") String format) {
         this.content = content;
         this.format = format;
     }

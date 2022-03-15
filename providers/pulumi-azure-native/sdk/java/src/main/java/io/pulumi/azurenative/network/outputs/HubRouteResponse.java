@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HubRouteResponse {
     /**
      * The type of destinations (eg: CIDR, ResourceId, Service).
@@ -36,13 +36,13 @@ public final class HubRouteResponse {
      */
     private final String nextHopType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HubRouteResponse(
-        @OutputCustomType.Parameter("destinationType") String destinationType,
-        @OutputCustomType.Parameter("destinations") List<String> destinations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextHop") String nextHop,
-        @OutputCustomType.Parameter("nextHopType") String nextHopType) {
+        @CustomType.Parameter("destinationType") String destinationType,
+        @CustomType.Parameter("destinations") List<String> destinations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextHop") String nextHop,
+        @CustomType.Parameter("nextHopType") String nextHopType) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.name = name;

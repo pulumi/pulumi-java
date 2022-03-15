@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.MethodResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.MixinResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiResponse {
     /**
      * The methods of this interface, in unspecified order.
@@ -50,15 +50,15 @@ public final class ApiResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiResponse(
-        @OutputCustomType.Parameter("methods") List<MethodResponse> methods,
-        @OutputCustomType.Parameter("mixins") List<MixinResponse> mixins,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") List<OptionResponse> options,
-        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
-        @OutputCustomType.Parameter("syntax") String syntax,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("methods") List<MethodResponse> methods,
+        @CustomType.Parameter("mixins") List<MixinResponse> mixins,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") List<OptionResponse> options,
+        @CustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @CustomType.Parameter("syntax") String syntax,
+        @CustomType.Parameter("version") String version) {
         this.methods = methods;
         this.mixins = mixins;
         this.name = name;

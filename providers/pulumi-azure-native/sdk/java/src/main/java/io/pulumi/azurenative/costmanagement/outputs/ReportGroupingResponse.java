@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReportGroupingResponse {
     /**
      * The name of the column to group.
@@ -20,10 +20,10 @@ public final class ReportGroupingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportGroupingResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }

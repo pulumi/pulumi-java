@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
      * The client ID for the credentials to use for authorization. Created and stored in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -28,7 +28,7 @@ public final class EventConnectionAuthParametersOauthClientParametersGetArgs ext
      * The client secret for the credentials to use for authorization. Created and stored in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {

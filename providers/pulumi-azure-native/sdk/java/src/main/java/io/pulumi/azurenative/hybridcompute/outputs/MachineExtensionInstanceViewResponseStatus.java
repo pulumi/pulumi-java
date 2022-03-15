@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hybridcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MachineExtensionInstanceViewResponseStatus {
     /**
      * The status code.
@@ -35,13 +35,13 @@ public final class MachineExtensionInstanceViewResponseStatus {
      */
     private final String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MachineExtensionInstanceViewResponseStatus(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("displayStatus") String displayStatus,
-        @OutputCustomType.Parameter("level") String level,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("time") String time) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("displayStatus") String displayStatus,
+        @CustomType.Parameter("level") String level,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("time") String time) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.level = level;

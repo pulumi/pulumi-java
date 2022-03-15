@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.EntityTypeArgs;
@@ -25,7 +25,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Optional. Indicates whether the entity type can be automatically expanded.
      * 
      */
-    @OutputExport(name="autoExpansionMode", type=String.class, parameters={})
+    @Export(name="autoExpansionMode", type=String.class, parameters={})
     private Output<String> autoExpansionMode;
 
     /**
@@ -39,7 +39,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * The name of the entity type.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -53,7 +53,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Optional. Enables fuzzy entity extraction during classification.
      * 
      */
-    @OutputExport(name="enableFuzzyExtraction", type=Boolean.class, parameters={})
+    @Export(name="enableFuzzyExtraction", type=Boolean.class, parameters={})
     private Output<Boolean> enableFuzzyExtraction;
 
     /**
@@ -67,7 +67,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Optional. The collection of entity entries associated with the entity type.
      * 
      */
-    @OutputExport(name="entities", type=List.class, parameters={GoogleCloudDialogflowV2EntityTypeEntityResponse.class})
+    @Export(name="entities", type=List.class, parameters={GoogleCloudDialogflowV2EntityTypeEntityResponse.class})
     private Output<List<GoogleCloudDialogflowV2EntityTypeEntityResponse>> entities;
 
     /**
@@ -81,7 +81,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Indicates the kind of entity type.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -95,7 +95,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes methods. Format: `projects//agent/entityTypes/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

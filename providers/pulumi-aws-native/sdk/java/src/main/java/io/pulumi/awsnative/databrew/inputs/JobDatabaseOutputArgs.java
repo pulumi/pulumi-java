@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
 
     public static final JobDatabaseOutputArgs Empty = new JobDatabaseOutputArgs();
 
-    @InputImport(name="databaseOptions", required=true)
+    @Import(name="databaseOptions", required=true)
       private final Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
     public Output<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
@@ -27,7 +27,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
      * Database table name
      * 
      */
-    @InputImport(name="databaseOutputMode")
+    @Import(name="databaseOutputMode")
       private final @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
 
     public Output<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
@@ -38,7 +38,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
      * Glue connection name
      * 
      */
-    @InputImport(name="glueConnectionName", required=true)
+    @Import(name="glueConnectionName", required=true)
       private final Output<String> glueConnectionName;
 
     public Output<String> getGlueConnectionName() {

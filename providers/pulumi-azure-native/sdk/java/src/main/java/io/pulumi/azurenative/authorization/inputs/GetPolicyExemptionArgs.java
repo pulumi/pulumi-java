@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
      * The name of the policy exemption to delete.
      * 
      */
-    @InputImport(name="policyExemptionName", required=true)
+    @Import(name="policyExemptionName", required=true)
       private final String policyExemptionName;
 
     public String getPolicyExemptionName() {
@@ -27,7 +27,7 @@ public final class GetPolicyExemptionArgs extends io.pulumi.resources.InvokeArgs
      * The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QuobyteVolumeSource {
     /**
      * Group to map volume access to Default is no group
@@ -43,14 +43,14 @@ public final class QuobyteVolumeSource {
      */
     private final String volume;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuobyteVolumeSource(
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("registry") String registry,
-        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
-        @OutputCustomType.Parameter("user") @Nullable String user,
-        @OutputCustomType.Parameter("volume") String volume) {
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("registry") String registry,
+        @CustomType.Parameter("tenant") @Nullable String tenant,
+        @CustomType.Parameter("user") @Nullable String user,
+        @CustomType.Parameter("volume") String volume) {
         this.group = group;
         this.readOnly = readOnly;
         this.registry = registry;

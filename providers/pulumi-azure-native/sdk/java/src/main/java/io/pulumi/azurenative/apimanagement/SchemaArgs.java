@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.SchemaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Free-form schema entity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Schema id identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="schemaId")
+    @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
@@ -53,7 +53,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Schema Type. Immutable.
      * 
      */
-    @InputImport(name="schemaType", required=true)
+    @Import(name="schemaType", required=true)
       private final Output<Either<String,SchemaType>> schemaType;
 
     public Output<Either<String,SchemaType>> getSchemaType() {
@@ -64,7 +64,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -75,7 +75,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Json-encoded string for non json-based schema.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

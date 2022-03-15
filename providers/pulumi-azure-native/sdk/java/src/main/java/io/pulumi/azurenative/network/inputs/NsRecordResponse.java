@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The name server name for this NS record.
      * 
      */
-    @InputImport(name="nsdname")
+    @Import(name="nsdname")
       private final @Nullable String nsdname;
 
     public Optional<String> getNsdname() {

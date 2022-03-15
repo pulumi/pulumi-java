@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse {
     /**
      * Do not trigger if last utterance is small talk.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      */
     private final Boolean onlyEndUser;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(
-        @OutputCustomType.Parameter("noSmalltalk") Boolean noSmalltalk,
-        @OutputCustomType.Parameter("onlyEndUser") Boolean onlyEndUser) {
+        @CustomType.Parameter("noSmalltalk") Boolean noSmalltalk,
+        @CustomType.Parameter("onlyEndUser") Boolean onlyEndUser) {
         this.noSmalltalk = noSmalltalk;
         this.onlyEndUser = onlyEndUser;
     }

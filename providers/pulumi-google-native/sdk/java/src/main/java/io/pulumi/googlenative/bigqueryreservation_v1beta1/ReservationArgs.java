@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
      * 
      */
-    @InputImport(name="ignoreIdleSlots")
+    @Import(name="ignoreIdleSlots")
       private final @Nullable Output<Boolean> ignoreIdleSlots;
 
     public Output<Boolean> getIgnoreIdleSlots() {
         return this.ignoreIdleSlots == null ? Output.empty() : this.ignoreIdleSlots;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -37,21 +37,21 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the reservation, e.g., `projects/*{@literal /}locations/*{@literal /}reservations/team1-prod`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="reservationId")
+    @Import(name="reservationId")
       private final @Nullable Output<String> reservationId;
 
     public Output<String> getReservationId() {
@@ -62,7 +62,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If the new reservation's slot capacity exceed the project's slot capacity or if total slot capacity of the new reservation and its siblings exceeds the project's slot capacity, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
      * 
      */
-    @InputImport(name="slotCapacity")
+    @Import(name="slotCapacity")
       private final @Nullable Output<String> slotCapacity;
 
     public Output<String> getSlotCapacity() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.panorama;
 
 import io.pulumi.awsnative.panorama.inputs.PackageTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PackageArgs Empty = new PackageArgs();
 
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
         return this.packageName == null ? Output.empty() : this.packageName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PackageTagArgs>> tags;
 
     public Output<List<PackageTagArgs>> getTags() {

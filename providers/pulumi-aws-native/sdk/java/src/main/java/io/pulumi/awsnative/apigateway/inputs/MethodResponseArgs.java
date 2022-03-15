@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The resources used for the response's content type. Specify response models as key-value pairs (string-to-string maps), with a content type as the key and a Model resource name as the value.
      * 
      */
-    @InputImport(name="responseModels")
+    @Import(name="responseModels")
       private final @Nullable Output<Object> responseModels;
 
     public Output<Object> getResponseModels() {
@@ -30,7 +30,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * Response parameters that API Gateway sends to the client that called a method. Specify response parameters as key-value pairs (string-to-Boolean maps), with a destination as the key and a Boolean as the value.
      * 
      */
-    @InputImport(name="responseParameters")
+    @Import(name="responseParameters")
       private final @Nullable Output<Object> responseParameters;
 
     public Output<Object> getResponseParameters() {
@@ -41,7 +41,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The method response's status code, which you map to an IntegrationResponse.
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
     public Output<String> getStatusCode() {

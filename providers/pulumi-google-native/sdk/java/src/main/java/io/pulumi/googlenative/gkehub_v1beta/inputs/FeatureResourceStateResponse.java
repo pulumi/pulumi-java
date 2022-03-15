@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
      * The current state of the Feature resource in the Hub API.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

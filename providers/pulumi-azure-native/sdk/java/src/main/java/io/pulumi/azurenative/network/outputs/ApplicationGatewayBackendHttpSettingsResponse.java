@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayConnectionDrainingResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayBackendHttpSettingsResponse {
     /**
      * Cookie name to use for the affinity cookie.
@@ -107,26 +107,26 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayBackendHttpSettingsResponse(
-        @OutputCustomType.Parameter("affinityCookieName") @Nullable String affinityCookieName,
-        @OutputCustomType.Parameter("authenticationCertificates") @Nullable List<SubResourceResponse> authenticationCertificates,
-        @OutputCustomType.Parameter("connectionDraining") @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
-        @OutputCustomType.Parameter("cookieBasedAffinity") @Nullable String cookieBasedAffinity,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("pickHostNameFromBackendAddress") @Nullable Boolean pickHostNameFromBackendAddress,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("probe") @Nullable SubResourceResponse probe,
-        @OutputCustomType.Parameter("probeEnabled") @Nullable Boolean probeEnabled,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestTimeout") @Nullable Integer requestTimeout,
-        @OutputCustomType.Parameter("trustedRootCertificates") @Nullable List<SubResourceResponse> trustedRootCertificates,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("affinityCookieName") @Nullable String affinityCookieName,
+        @CustomType.Parameter("authenticationCertificates") @Nullable List<SubResourceResponse> authenticationCertificates,
+        @CustomType.Parameter("connectionDraining") @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
+        @CustomType.Parameter("cookieBasedAffinity") @Nullable String cookieBasedAffinity,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("pickHostNameFromBackendAddress") @Nullable Boolean pickHostNameFromBackendAddress,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("probe") @Nullable SubResourceResponse probe,
+        @CustomType.Parameter("probeEnabled") @Nullable Boolean probeEnabled,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestTimeout") @Nullable Integer requestTimeout,
+        @CustomType.Parameter("trustedRootCertificates") @Nullable List<SubResourceResponse> trustedRootCertificates,
+        @CustomType.Parameter("type") String type) {
         this.affinityCookieName = affinityCookieName;
         this.authenticationCertificates = authenticationCertificates;
         this.connectionDraining = connectionDraining;

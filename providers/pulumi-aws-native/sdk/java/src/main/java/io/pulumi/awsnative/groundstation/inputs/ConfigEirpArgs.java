@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigEirpUnits;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ConfigEirpArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigEirpArgs Empty = new ConfigEirpArgs();
 
-    @InputImport(name="units")
+    @Import(name="units")
       private final @Nullable Output<ConfigEirpUnits> units;
 
     public Output<ConfigEirpUnits> getUnits() {
         return this.units == null ? Output.empty() : this.units;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {

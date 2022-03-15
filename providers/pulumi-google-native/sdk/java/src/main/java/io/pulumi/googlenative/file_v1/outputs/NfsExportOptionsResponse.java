@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NfsExportOptionsResponse {
     /**
      * Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
@@ -36,13 +36,13 @@ public final class NfsExportOptionsResponse {
      */
     private final String squashMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NfsExportOptionsResponse(
-        @OutputCustomType.Parameter("accessMode") String accessMode,
-        @OutputCustomType.Parameter("anonGid") String anonGid,
-        @OutputCustomType.Parameter("anonUid") String anonUid,
-        @OutputCustomType.Parameter("ipRanges") List<String> ipRanges,
-        @OutputCustomType.Parameter("squashMode") String squashMode) {
+        @CustomType.Parameter("accessMode") String accessMode,
+        @CustomType.Parameter("anonGid") String anonGid,
+        @CustomType.Parameter("anonUid") String anonUid,
+        @CustomType.Parameter("ipRanges") List<String> ipRanges,
+        @CustomType.Parameter("squashMode") String squashMode) {
         this.accessMode = accessMode;
         this.anonGid = anonGid;
         this.anonUid = anonUid;

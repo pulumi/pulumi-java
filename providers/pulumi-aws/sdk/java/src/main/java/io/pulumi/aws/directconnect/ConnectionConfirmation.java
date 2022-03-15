@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.ConnectionConfirmationArgs;
 import io.pulumi.aws.directconnect.inputs.ConnectionConfirmationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class ConnectionConfirmation extends io.pulumi.resources.CustomResource {
      * The ID of the hosted connection.
      * 
      */
-    @OutputExport(name="connectionId", type=String.class, parameters={})
+    @Export(name="connectionId", type=String.class, parameters={})
     private Output<String> connectionId;
 
     /**

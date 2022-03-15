@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ApplicableScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceFabricResult {
     /**
      * The applicable schedule for the virtual machine.
@@ -64,18 +64,18 @@ public final class GetServiceFabricResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceFabricResult(
-        @OutputCustomType.Parameter("applicableSchedule") ApplicableScheduleResponse applicableSchedule,
-        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
-        @OutputCustomType.Parameter("externalServiceFabricId") @Nullable String externalServiceFabricId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
+        @CustomType.Parameter("applicableSchedule") ApplicableScheduleResponse applicableSchedule,
+        @CustomType.Parameter("environmentId") @Nullable String environmentId,
+        @CustomType.Parameter("externalServiceFabricId") @Nullable String externalServiceFabricId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.applicableSchedule = applicableSchedule;
         this.environmentId = environmentId;
         this.externalServiceFabricId = externalServiceFabricId;

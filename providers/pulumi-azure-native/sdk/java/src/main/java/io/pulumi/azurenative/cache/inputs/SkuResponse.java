@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
      * 
      */
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Integer capacity;
 
     public Integer getCapacity() {
@@ -32,7 +32,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final String family;
 
     public String getFamily() {
@@ -43,7 +43,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

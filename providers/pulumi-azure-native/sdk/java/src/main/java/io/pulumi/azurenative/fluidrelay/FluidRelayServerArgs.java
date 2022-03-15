@@ -6,7 +6,7 @@ package io.pulumi.azurenative.fluidrelay;
 import io.pulumi.azurenative.fluidrelay.enums.ProvisioningState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * The resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * Provision states for FluidRelay RP
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {
@@ -54,7 +54,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * The resource group containing the resource.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -65,7 +65,7 @@ public final class FluidRelayServerArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

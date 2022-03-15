@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.greengrassv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVersionComponentPlatform {
     private final @Nullable Object attributes;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVersionComponentPlatform(
-        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("attributes") @Nullable Object attributes,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.attributes = attributes;
         this.name = name;
     }

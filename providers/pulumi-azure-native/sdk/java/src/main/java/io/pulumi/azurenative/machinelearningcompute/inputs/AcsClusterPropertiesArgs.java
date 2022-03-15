@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.KubernetesClusterProp
 import io.pulumi.azurenative.machinelearningcompute.inputs.SystemServiceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * The number of agent nodes in the Container Service. This can be changed to scale the cluster.
      * 
      */
-    @InputImport(name="agentCount")
+    @Import(name="agentCount")
       private final @Nullable Output<Integer> agentCount;
 
     public Output<Integer> getAgentCount() {
@@ -40,7 +40,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * The Azure VM size of the agent VM nodes. This cannot be changed once the cluster is created. This list is non exhaustive; refer to https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes for the possible VM sizes.
      * 
      */
-    @InputImport(name="agentVmSize")
+    @Import(name="agentVmSize")
       private final @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
 
     public Output<Either<String,AgentVMSizeTypes>> getAgentVmSize() {
@@ -51,7 +51,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * The number of master nodes in the container service.
      * 
      */
-    @InputImport(name="masterCount")
+    @Import(name="masterCount")
       private final @Nullable Output<Integer> masterCount;
 
     public Output<Integer> getMasterCount() {
@@ -62,7 +62,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * Orchestrator specific properties
      * 
      */
-    @InputImport(name="orchestratorProperties")
+    @Import(name="orchestratorProperties")
       private final @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
     public Output<KubernetesClusterPropertiesArgs> getOrchestratorProperties() {
@@ -73,7 +73,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * Type of orchestrator. It cannot be changed once the cluster is created.
      * 
      */
-    @InputImport(name="orchestratorType", required=true)
+    @Import(name="orchestratorType", required=true)
       private final Output<Either<String,OrchestratorType>> orchestratorType;
 
     public Output<Either<String,OrchestratorType>> getOrchestratorType() {
@@ -84,7 +84,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
      * The system services deployed to the cluster
      * 
      */
-    @InputImport(name="systemServices")
+    @Import(name="systemServices")
       private final @Nullable Output<List<SystemServiceArgs>> systemServices;
 
     public Output<List<SystemServiceArgs>> getSystemServices() {

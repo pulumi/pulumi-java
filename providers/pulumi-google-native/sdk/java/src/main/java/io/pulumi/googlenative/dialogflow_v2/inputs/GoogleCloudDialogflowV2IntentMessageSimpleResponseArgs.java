@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * Optional. The text to display.
      * 
      */
-    @InputImport(name="displayText")
+    @Import(name="displayText")
       private final @Nullable Output<String> displayText;
 
     public Output<String> getDisplayText() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the SSML format. Mutually exclusive with text_to_speech.
      * 
      */
-    @InputImport(name="ssml")
+    @Import(name="ssml")
       private final @Nullable Output<String> ssml;
 
     public Output<String> getSsml() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually exclusive with ssml.
      * 
      */
-    @InputImport(name="textToSpeech")
+    @Import(name="textToSpeech")
       private final @Nullable Output<String> textToSpeech;
 
     public Output<String> getTextToSpeech() {

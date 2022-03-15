@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionUrlMapArgs;
@@ -51,7 +51,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -67,7 +67,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * the URL's path portion.
      * 
      */
-    @OutputExport(name="defaultService", type=String.class, parameters={})
+    @Export(name="defaultService", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultService;
 
     /**
@@ -86,7 +86,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="defaultUrlRedirect", type=RegionUrlMapDefaultUrlRedirect.class, parameters={})
+    @Export(name="defaultUrlRedirect", type=RegionUrlMapDefaultUrlRedirect.class, parameters={})
     private Output</* @Nullable */ RegionUrlMapDefaultUrlRedirect> defaultUrlRedirect;
 
     /**
@@ -103,7 +103,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Description of this test case.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -117,7 +117,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -132,7 +132,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="hostRules", type=List.class, parameters={RegionUrlMapHostRule.class})
+    @Export(name="hostRules", type=List.class, parameters={RegionUrlMapHostRule.class})
     private Output</* @Nullable */ List<RegionUrlMapHostRule>> hostRules;
 
     /**
@@ -147,7 +147,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * The unique identifier for the resource.
      * 
      */
-    @OutputExport(name="mapId", type=Integer.class, parameters={})
+    @Export(name="mapId", type=Integer.class, parameters={})
     private Output<Integer> mapId;
 
     /**
@@ -162,7 +162,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * request, in the absence of which the request match fails.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * the URL if the hostRule matches the URL's host portion.
      * 
      */
-    @OutputExport(name="pathMatchers", type=List.class, parameters={RegionUrlMapPathMatcher.class})
+    @Export(name="pathMatchers", type=List.class, parameters={RegionUrlMapPathMatcher.class})
     private Output</* @Nullable */ List<RegionUrlMapPathMatcher>> pathMatchers;
 
     /**
@@ -194,7 +194,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -210,7 +210,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -225,7 +225,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -241,7 +241,7 @@ public class RegionUrlMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="tests", type=List.class, parameters={RegionUrlMapTest.class})
+    @Export(name="tests", type=List.class, parameters={RegionUrlMapTest.class})
     private Output</* @Nullable */ List<RegionUrlMapTest>> tests;
 
     /**

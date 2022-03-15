@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * The number of consecutive checks that must succeed before App Runner decides that the service is healthy. Defaults to 1. Minimum value of 1. Maximum value of 20.
      * 
      */
-    @InputImport(name="healthyThreshold")
+    @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -30,7 +30,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * The time interval, in seconds, between health checks. Defaults to 5. Minimum value of 1. Maximum value of 20.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -41,7 +41,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * The URL to send requests to for health checks. Defaults to `/`. Minimum length of 0. Maximum length of 51200.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -52,7 +52,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * The IP protocol that App Runner uses to perform health checks for your service. Valid values: `TCP`, `HTTP`. Defaults to `TCP`. If you set protocol to `HTTP`, App Runner sends health check requests to the HTTP path specified by `path`.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -63,7 +63,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * The time, in seconds, to wait for a health check response before deciding it failed. Defaults to 2. Minimum value of  1. Maximum value of 20.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -74,7 +74,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * The number of consecutive checks that must fail before App Runner decides that the service is unhealthy. Defaults to 5. Minimum value of  1. Maximum value of 20.
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponse {
     /**
      * CIDR of the Vnet to peer.
@@ -27,11 +27,11 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String vnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkProfileResponse(
-        @OutputCustomType.Parameter("peerVnetId") @Nullable String peerVnetId,
-        @OutputCustomType.Parameter("vnetCidr") @Nullable String vnetCidr,
-        @OutputCustomType.Parameter("vnetId") @Nullable String vnetId) {
+        @CustomType.Parameter("peerVnetId") @Nullable String peerVnetId,
+        @CustomType.Parameter("vnetCidr") @Nullable String vnetCidr,
+        @CustomType.Parameter("vnetId") @Nullable String vnetId) {
         this.peerVnetId = peerVnetId;
         this.vnetCidr = vnetCidr;
         this.vnetId = vnetId;

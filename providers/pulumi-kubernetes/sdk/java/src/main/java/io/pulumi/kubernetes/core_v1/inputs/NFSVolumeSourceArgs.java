@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -34,7 +34,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -45,7 +45,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
      * 
      */
-    @InputImport(name="server", required=true)
+    @Import(name="server", required=true)
       private final Output<String> server;
 
     public Output<String> getServer() {

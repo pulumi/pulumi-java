@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceRequirements;
 import io.pulumi.kubernetes.core_v1.outputs.TypedLocalObjectReference;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeClaimSpec {
     /**
      * AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
@@ -61,16 +61,16 @@ public final class PersistentVolumeClaimSpec {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeClaimSpec(
-        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
-        @OutputCustomType.Parameter("dataSource") @Nullable TypedLocalObjectReference dataSource,
-        @OutputCustomType.Parameter("dataSourceRef") @Nullable TypedLocalObjectReference dataSourceRef,
-        @OutputCustomType.Parameter("resources") @Nullable ResourceRequirements resources,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("storageClassName") @Nullable String storageClassName,
-        @OutputCustomType.Parameter("volumeMode") @Nullable String volumeMode,
-        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
+        @CustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @CustomType.Parameter("dataSource") @Nullable TypedLocalObjectReference dataSource,
+        @CustomType.Parameter("dataSourceRef") @Nullable TypedLocalObjectReference dataSourceRef,
+        @CustomType.Parameter("resources") @Nullable ResourceRequirements resources,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("storageClassName") @Nullable String storageClassName,
+        @CustomType.Parameter("volumeMode") @Nullable String volumeMode,
+        @CustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.accessModes = accessModes;
         this.dataSource = dataSource;
         this.dataSourceRef = dataSourceRef;

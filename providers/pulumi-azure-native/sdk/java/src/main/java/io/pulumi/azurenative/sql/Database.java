@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.DatabaseArgs;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -39,7 +39,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
      * 
      */
-    @OutputExport(name="autoPauseDelay", type=Integer.class, parameters={})
+    @Export(name="autoPauseDelay", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> autoPauseDelay;
 
     /**
@@ -53,7 +53,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Collation of the metadata catalog.
      * 
      */
-    @OutputExport(name="catalogCollation", type=String.class, parameters={})
+    @Export(name="catalogCollation", type=String.class, parameters={})
     private Output</* @Nullable */ String> catalogCollation;
 
     /**
@@ -67,7 +67,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The collation of the database.
      * 
      */
-    @OutputExport(name="collation", type=String.class, parameters={})
+    @Export(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
     /**
@@ -81,7 +81,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The creation date of the database (ISO8601 format).
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -95,7 +95,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The storage account type used to store backups for this database.
      * 
      */
-    @OutputExport(name="currentBackupStorageRedundancy", type=String.class, parameters={})
+    @Export(name="currentBackupStorageRedundancy", type=String.class, parameters={})
     private Output<String> currentBackupStorageRedundancy;
 
     /**
@@ -109,7 +109,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The current service level objective name of the database.
      * 
      */
-    @OutputExport(name="currentServiceObjectiveName", type=String.class, parameters={})
+    @Export(name="currentServiceObjectiveName", type=String.class, parameters={})
     private Output<String> currentServiceObjectiveName;
 
     /**
@@ -123,7 +123,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name and tier of the SKU.
      * 
      */
-    @OutputExport(name="currentSku", type=SkuResponse.class, parameters={})
+    @Export(name="currentSku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> currentSku;
 
     /**
@@ -137,7 +137,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The ID of the database.
      * 
      */
-    @OutputExport(name="databaseId", type=String.class, parameters={})
+    @Export(name="databaseId", type=String.class, parameters={})
     private Output<String> databaseId;
 
     /**
@@ -151,7 +151,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The default secondary region for this database.
      * 
      */
-    @OutputExport(name="defaultSecondaryLocation", type=String.class, parameters={})
+    @Export(name="defaultSecondaryLocation", type=String.class, parameters={})
     private Output<String> defaultSecondaryLocation;
 
     /**
@@ -165,7 +165,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * This records the earliest start date and time that restore is available for this database (ISO8601 format).
      * 
      */
-    @OutputExport(name="earliestRestoreDate", type=String.class, parameters={})
+    @Export(name="earliestRestoreDate", type=String.class, parameters={})
     private Output<String> earliestRestoreDate;
 
     /**
@@ -179,7 +179,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The resource identifier of the elastic pool containing this database.
      * 
      */
-    @OutputExport(name="elasticPoolId", type=String.class, parameters={})
+    @Export(name="elasticPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> elasticPoolId;
 
     /**
@@ -193,7 +193,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Failover Group resource identifier that this database belongs to.
      * 
      */
-    @OutputExport(name="failoverGroupId", type=String.class, parameters={})
+    @Export(name="failoverGroupId", type=String.class, parameters={})
     private Output<String> failoverGroupId;
 
     /**
@@ -207,7 +207,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The number of secondary replicas associated with the database that are used to provide high availability.
      * 
      */
-    @OutputExport(name="highAvailabilityReplicaCount", type=Integer.class, parameters={})
+    @Export(name="highAvailabilityReplicaCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> highAvailabilityReplicaCount;
 
     /**
@@ -221,7 +221,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Kind of database. This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -235,7 +235,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
      * 
      */
-    @OutputExport(name="licenseType", type=String.class, parameters={})
+    @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
@@ -249,7 +249,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -263,7 +263,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
      * 
      */
-    @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
+    @Export(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
     /**
@@ -277,7 +277,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Resource that manages the database.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
     /**
@@ -291,7 +291,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The max log size for this database.
      * 
      */
-    @OutputExport(name="maxLogSizeBytes", type=Double.class, parameters={})
+    @Export(name="maxLogSizeBytes", type=Double.class, parameters={})
     private Output<Double> maxLogSizeBytes;
 
     /**
@@ -305,7 +305,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The max size of the database expressed in bytes.
      * 
      */
-    @OutputExport(name="maxSizeBytes", type=Double.class, parameters={})
+    @Export(name="maxSizeBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxSizeBytes;
 
     /**
@@ -319,7 +319,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Minimal capacity that database will always have allocated, if not paused
      * 
      */
-    @OutputExport(name="minCapacity", type=Double.class, parameters={})
+    @Export(name="minCapacity", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minCapacity;
 
     /**
@@ -333,7 +333,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -347,7 +347,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The date when database was paused by user configuration or action(ISO8601 format). Null if the database is ready.
      * 
      */
-    @OutputExport(name="pausedDate", type=String.class, parameters={})
+    @Export(name="pausedDate", type=String.class, parameters={})
     private Output<String> pausedDate;
 
     /**
@@ -361,7 +361,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
      * 
      */
-    @OutputExport(name="readScale", type=String.class, parameters={})
+    @Export(name="readScale", type=String.class, parameters={})
     private Output</* @Nullable */ String> readScale;
 
     /**
@@ -375,7 +375,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The storage account type to be used to store backups for this database.
      * 
      */
-    @OutputExport(name="requestedBackupStorageRedundancy", type=String.class, parameters={})
+    @Export(name="requestedBackupStorageRedundancy", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestedBackupStorageRedundancy;
 
     /**
@@ -389,7 +389,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The requested service level objective name of the database.
      * 
      */
-    @OutputExport(name="requestedServiceObjectiveName", type=String.class, parameters={})
+    @Export(name="requestedServiceObjectiveName", type=String.class, parameters={})
     private Output<String> requestedServiceObjectiveName;
 
     /**
@@ -403,7 +403,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The date when database was resumed by user action or database login (ISO8601 format). Null if the database is paused.
      * 
      */
-    @OutputExport(name="resumedDate", type=String.class, parameters={})
+    @Export(name="resumedDate", type=String.class, parameters={})
     private Output<String> resumedDate;
 
     /**
@@ -417,7 +417,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
      * 
      */
-    @OutputExport(name="secondaryType", type=String.class, parameters={})
+    @Export(name="secondaryType", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryType;
 
     /**
@@ -433,7 +433,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -449,7 +449,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The status of the database.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -463,7 +463,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -477,7 +477,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -491,7 +491,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
      * 
      */
-    @OutputExport(name="zoneRedundant", type=Boolean.class, parameters={})
+    @Export(name="zoneRedundant", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> zoneRedundant;
 
     /**

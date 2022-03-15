@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.ServicePerimeterArgs;
@@ -22,7 +22,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Description of the `ServicePerimeter` and its use. Does not affect behavior.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -36,7 +36,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Resource name for the ServicePerimeter. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Perimeter type indicator. A single project is allowed to be a member of single regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a perimeter bridge without being included in regular perimeter. For perimeter bridges, restricted/unrestricted service lists as well as access lists must be empty.
      * 
      */
-    @OutputExport(name="perimeterType", type=String.class, parameters={})
+    @Export(name="perimeterType", type=String.class, parameters={})
     private Output<String> perimeterType;
 
     /**
@@ -64,7 +64,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Current ServicePerimeter configuration. Specifies sets of resources, restricted/unrestricted services and access levels that determine perimeter content and boundaries.
      * 
      */
-    @OutputExport(name="status", type=ServicePerimeterConfigResponse.class, parameters={})
+    @Export(name="status", type=ServicePerimeterConfigResponse.class, parameters={})
     private Output<ServicePerimeterConfigResponse> status;
 
     /**
@@ -78,7 +78,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

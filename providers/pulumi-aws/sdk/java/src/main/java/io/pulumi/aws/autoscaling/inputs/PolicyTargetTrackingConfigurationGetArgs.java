@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * A customized metric. Conflicts with `predefined_metric_specification`.
      * 
      */
-    @InputImport(name="customizedMetricSpecification")
+    @Import(name="customizedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
     public Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
@@ -32,7 +32,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * Indicates whether scale in by the target tracking policy is disabled.
      * 
      */
-    @InputImport(name="disableScaleIn")
+    @Import(name="disableScaleIn")
       private final @Nullable Output<Boolean> disableScaleIn;
 
     public Output<Boolean> getDisableScaleIn() {
@@ -43,7 +43,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * A predefined metric. Conflicts with `customized_metric_specification`.
      * 
      */
-    @InputImport(name="predefinedMetricSpecification")
+    @Import(name="predefinedMetricSpecification")
       private final @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
     public Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
@@ -54,7 +54,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
      * The target value for the metric.
      * 
      */
-    @InputImport(name="targetValue", required=true)
+    @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
     public Output<Double> getTargetValue() {

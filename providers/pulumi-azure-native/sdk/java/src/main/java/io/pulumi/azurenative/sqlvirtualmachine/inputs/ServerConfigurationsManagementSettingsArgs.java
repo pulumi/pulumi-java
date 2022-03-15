@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlConnectivityUpdateSetti
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * Additional SQL feature settings.
      * 
      */
-    @InputImport(name="additionalFeaturesServerConfigurations")
+    @Import(name="additionalFeaturesServerConfigurations")
       private final @Nullable Output<AdditionalFeaturesServerConfigurationsArgs> additionalFeaturesServerConfigurations;
 
     public Output<AdditionalFeaturesServerConfigurationsArgs> getAdditionalFeaturesServerConfigurations() {
@@ -36,7 +36,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * SQL connectivity type settings.
      * 
      */
-    @InputImport(name="sqlConnectivityUpdateSettings")
+    @Import(name="sqlConnectivityUpdateSettings")
       private final @Nullable Output<SqlConnectivityUpdateSettingsArgs> sqlConnectivityUpdateSettings;
 
     public Output<SqlConnectivityUpdateSettingsArgs> getSqlConnectivityUpdateSettings() {
@@ -47,7 +47,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * SQL storage update settings.
      * 
      */
-    @InputImport(name="sqlStorageUpdateSettings")
+    @Import(name="sqlStorageUpdateSettings")
       private final @Nullable Output<SqlStorageUpdateSettingsArgs> sqlStorageUpdateSettings;
 
     public Output<SqlStorageUpdateSettingsArgs> getSqlStorageUpdateSettings() {
@@ -58,7 +58,7 @@ public final class ServerConfigurationsManagementSettingsArgs extends io.pulumi.
      * SQL workload type settings.
      * 
      */
-    @InputImport(name="sqlWorkloadTypeUpdateSettings")
+    @Import(name="sqlWorkloadTypeUpdateSettings")
       private final @Nullable Output<SqlWorkloadTypeUpdateSettingsArgs> sqlWorkloadTypeUpdateSettings;
 
     public Output<SqlWorkloadTypeUpdateSettingsArgs> getSqlWorkloadTypeUpdateSettings() {

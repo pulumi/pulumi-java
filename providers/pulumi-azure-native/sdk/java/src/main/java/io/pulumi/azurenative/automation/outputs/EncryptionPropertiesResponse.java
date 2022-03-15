@@ -5,13 +5,13 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.EncryptionPropertiesResponseIdentity;
 import io.pulumi.azurenative.automation.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPropertiesResponse {
     /**
      * User identity used for CMK.
@@ -29,11 +29,11 @@ public final class EncryptionPropertiesResponse {
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionPropertiesResponse(
-        @OutputCustomType.Parameter("identity") @Nullable EncryptionPropertiesResponseIdentity identity,
-        @OutputCustomType.Parameter("keySource") @Nullable String keySource,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        @CustomType.Parameter("identity") @Nullable EncryptionPropertiesResponseIdentity identity,
+        @CustomType.Parameter("keySource") @Nullable String keySource,
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
         this.identity = identity;
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;

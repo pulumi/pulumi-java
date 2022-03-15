@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.CloudRunConfigResponse;
 import io.pulumi.googlenative.container_v1.inputs.ConfigConnectorConfigResponse;
 import io.pulumi.googlenative.container_v1.inputs.DnsCacheConfigResponse;
@@ -28,7 +28,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
      * 
      */
-    @InputImport(name="cloudRunConfig", required=true)
+    @Import(name="cloudRunConfig", required=true)
       private final CloudRunConfigResponse cloudRunConfig;
 
     public CloudRunConfigResponse getCloudRunConfig() {
@@ -39,7 +39,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP services through the Kubernetes API
      * 
      */
-    @InputImport(name="configConnectorConfig", required=true)
+    @Import(name="configConnectorConfig", required=true)
       private final ConfigConnectorConfigResponse configConnectorConfig;
 
     public ConfigConnectorConfigResponse getConfigConnectorConfig() {
@@ -50,7 +50,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
      * 
      */
-    @InputImport(name="dnsCacheConfig", required=true)
+    @Import(name="dnsCacheConfig", required=true)
       private final DnsCacheConfigResponse dnsCacheConfig;
 
     public DnsCacheConfigResponse getDnsCacheConfig() {
@@ -61,7 +61,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the Compute Engine Persistent Disk CSI driver.
      * 
      */
-    @InputImport(name="gcePersistentDiskCsiDriverConfig", required=true)
+    @Import(name="gcePersistentDiskCsiDriverConfig", required=true)
       private final GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig;
 
     public GcePersistentDiskCsiDriverConfigResponse getGcePersistentDiskCsiDriverConfig() {
@@ -72,7 +72,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the GCP Filestore CSI driver.
      * 
      */
-    @InputImport(name="gcpFilestoreCsiDriverConfig", required=true)
+    @Import(name="gcpFilestoreCsiDriverConfig", required=true)
       private final GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig;
 
     public GcpFilestoreCsiDriverConfigResponse getGcpFilestoreCsiDriverConfig() {
@@ -83,7 +83,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the horizontal pod autoscaling feature, which increases or decreases the number of replica pods a replication controller has based on the resource usage of the existing pods.
      * 
      */
-    @InputImport(name="horizontalPodAutoscaling", required=true)
+    @Import(name="horizontalPodAutoscaling", required=true)
       private final HorizontalPodAutoscalingResponse horizontalPodAutoscaling;
 
     public HorizontalPodAutoscalingResponse getHorizontalPodAutoscaling() {
@@ -94,7 +94,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP load balancers for services in a cluster.
      * 
      */
-    @InputImport(name="httpLoadBalancing", required=true)
+    @Import(name="httpLoadBalancing", required=true)
       private final HttpLoadBalancingResponse httpLoadBalancing;
 
     public HttpLoadBalancingResponse getHttpLoadBalancing() {
@@ -105,7 +105,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for the Kubernetes Dashboard. This addon is deprecated, and will be disabled in 1.15. It is recommended to use the Cloud Console to manage and monitor your Kubernetes clusters, workloads and applications. For more information, see: https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * 
      */
-    @InputImport(name="kubernetesDashboard", required=true)
+    @Import(name="kubernetesDashboard", required=true)
       private final KubernetesDashboardResponse kubernetesDashboard;
 
     public KubernetesDashboardResponse getKubernetesDashboard() {
@@ -116,7 +116,7 @@ public final class AddonsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it does not track whether network policy is enabled for the nodes.
      * 
      */
-    @InputImport(name="networkPolicyConfig", required=true)
+    @Import(name="networkPolicyConfig", required=true)
       private final NetworkPolicyConfigResponse networkPolicyConfig;
 
     public NetworkPolicyConfigResponse getNetworkPolicyConfig() {

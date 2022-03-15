@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
      * The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32
      * 
      */
-    @InputImport(name="qualifier", required=true)
+    @Import(name="qualifier", required=true)
       private final String qualifier;
 
     public String getQualifier() {
@@ -31,7 +31,7 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
      * The user defined business identity value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFailoverReplicaResponse {
     /**
      * The availability status of the failover replica. A false status indicates that the failover replica is out of sync. The primary instance can only failover to the failover replica when the status is true.
@@ -21,10 +21,10 @@ public final class InstanceFailoverReplicaResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFailoverReplicaResponse(
-        @OutputCustomType.Parameter("available") Boolean available,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("available") Boolean available,
+        @CustomType.Parameter("name") String name) {
         this.available = available;
         this.name = name;
     }

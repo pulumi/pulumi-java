@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
      * 
      */
-    @InputImport(name="cluster", required=true)
+    @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -33,7 +33,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Google Compute Engine in which the cluster resides, which can either be compute zone (for example, us-central1-a) for the zonal clusters or region (for example, us-central1) for regional clusters.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace the GKE service is running in.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -55,7 +55,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The relative path on the GKE service the events should be sent to. The value must conform to the definition of a URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -66,7 +66,7 @@ public final class GKEArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the GKE service.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

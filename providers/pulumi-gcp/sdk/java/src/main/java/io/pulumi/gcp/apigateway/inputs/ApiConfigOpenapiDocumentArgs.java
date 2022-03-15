@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentDocumentArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApiConfigOpenapiDocumentArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="document", required=true)
+    @Import(name="document", required=true)
       private final Output<ApiConfigOpenapiDocumentDocumentArgs> document;
 
     public Output<ApiConfigOpenapiDocumentDocumentArgs> getDocument() {

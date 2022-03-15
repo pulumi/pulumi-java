@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoverycontrol.ControlPanelArgs;
 import io.pulumi.aws.route53recoverycontrol.inputs.ControlPanelState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,7 +34,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * ARN of the control panel.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * ARN of the cluster in which this control panel will reside.
      * 
      */
-    @OutputExport(name="clusterArn", type=String.class, parameters={})
+    @Export(name="clusterArn", type=String.class, parameters={})
     private Output<String> clusterArn;
 
     /**
@@ -62,7 +62,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * Whether a control panel is default.
      * 
      */
-    @OutputExport(name="defaultControlPanel", type=Boolean.class, parameters={})
+    @Export(name="defaultControlPanel", type=Boolean.class, parameters={})
     private Output<Boolean> defaultControlPanel;
 
     /**
@@ -76,7 +76,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * Name describing the control panel.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * Number routing controls in a control panel.
      * 
      */
-    @OutputExport(name="routingControlCount", type=Integer.class, parameters={})
+    @Export(name="routingControlCount", type=Integer.class, parameters={})
     private Output<Integer> routingControlCount;
 
     /**
@@ -104,7 +104,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * Status of control panel: `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

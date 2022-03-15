@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListIngestionSettingTokensArgs extends io.pulumi.resources.In
      * Name of the ingestion setting
      * 
      */
-    @InputImport(name="ingestionSettingName", required=true)
+    @Import(name="ingestionSettingName", required=true)
       private final String ingestionSettingName;
 
     public String getIngestionSettingName() {

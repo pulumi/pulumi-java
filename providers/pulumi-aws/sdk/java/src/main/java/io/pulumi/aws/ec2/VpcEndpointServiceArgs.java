@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
      * 
      */
-    @InputImport(name="acceptanceRequired", required=true)
+    @Import(name="acceptanceRequired", required=true)
       private final Output<Boolean> acceptanceRequired;
 
     public Output<Boolean> getAcceptanceRequired() {
@@ -32,7 +32,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * The ARNs of one or more principals allowed to discover the endpoint service.
      * 
      */
-    @InputImport(name="allowedPrincipals")
+    @Import(name="allowedPrincipals")
       private final @Nullable Output<List<String>> allowedPrincipals;
 
     public Output<List<String>> getAllowedPrincipals() {
@@ -43,7 +43,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
      * 
      */
-    @InputImport(name="gatewayLoadBalancerArns")
+    @Import(name="gatewayLoadBalancerArns")
       private final @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
     public Output<List<String>> getGatewayLoadBalancerArns() {
@@ -54,7 +54,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
      * 
      */
-    @InputImport(name="networkLoadBalancerArns")
+    @Import(name="networkLoadBalancerArns")
       private final @Nullable Output<List<String>> networkLoadBalancerArns;
 
     public Output<List<String>> getNetworkLoadBalancerArns() {
@@ -65,7 +65,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * The private DNS name for the service.
      * 
      */
-    @InputImport(name="privateDnsName")
+    @Import(name="privateDnsName")
       private final @Nullable Output<String> privateDnsName;
 
     public Output<String> getPrivateDnsName() {
@@ -76,7 +76,7 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

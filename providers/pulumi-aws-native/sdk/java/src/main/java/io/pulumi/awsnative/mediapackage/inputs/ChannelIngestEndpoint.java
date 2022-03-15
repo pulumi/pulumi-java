@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * The system generated unique identifier for the IngestEndpoint
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * The system generated password for ingest authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -44,7 +44,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * The ingest URL to which the source stream should be sent.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {
@@ -55,7 +55,7 @@ public final class ChannelIngestEndpoint extends io.pulumi.resources.InvokeArgs 
      * The system generated username for ingest authentication.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

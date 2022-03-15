@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OsDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -34,7 +34,7 @@ public final class OsDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The VHD name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class OsDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The OS type.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {

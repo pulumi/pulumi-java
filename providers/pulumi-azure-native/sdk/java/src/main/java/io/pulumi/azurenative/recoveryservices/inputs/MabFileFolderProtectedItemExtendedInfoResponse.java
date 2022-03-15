@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
      * Last time when the agent data synced to service.
      * 
      */
-    @InputImport(name="lastRefreshedAt")
+    @Import(name="lastRefreshedAt")
       private final @Nullable String lastRefreshedAt;
 
     public Optional<String> getLastRefreshedAt() {
@@ -34,7 +34,7 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
      * The oldest backup copy available.
      * 
      */
-    @InputImport(name="oldestRecoveryPoint")
+    @Import(name="oldestRecoveryPoint")
       private final @Nullable String oldestRecoveryPoint;
 
     public Optional<String> getOldestRecoveryPoint() {
@@ -45,7 +45,7 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse extends io.pul
      * Number of backup copies associated with the backup item.
      * 
      */
-    @InputImport(name="recoveryPointCount")
+    @Import(name="recoveryPointCount")
       private final @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> getRecoveryPointCount() {

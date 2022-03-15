@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingHostRuleGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherGetArgs;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class EdgeCacheServiceRoutingGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hostRules", required=true)
+    @Import(name="hostRules", required=true)
       private final Output<List<EdgeCacheServiceRoutingHostRuleGetArgs>> hostRules;
 
     public Output<List<EdgeCacheServiceRoutingHostRuleGetArgs>> getHostRules() {
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingGetArgs extends io.pulumi.resources.Re
      * The name of the pathMatcher associated with this hostRule.
      * 
      */
-    @InputImport(name="pathMatchers", required=true)
+    @Import(name="pathMatchers", required=true)
       private final Output<List<EdgeCacheServiceRoutingPathMatcherGetArgs>> pathMatchers;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherGetArgs>> getPathMatchers() {

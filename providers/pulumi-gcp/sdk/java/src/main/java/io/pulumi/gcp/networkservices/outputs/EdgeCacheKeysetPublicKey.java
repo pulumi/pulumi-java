@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheKeysetPublicKey {
     /**
      * The ID of the public key. The ID must be 1-63 characters long, and comply with RFC1035.
@@ -24,10 +24,10 @@ public final class EdgeCacheKeysetPublicKey {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheKeysetPublicKey(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("value") String value) {
         this.id = id;
         this.value = value;
     }

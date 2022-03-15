@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduledSynchronizationSettingResult {
     /**
      * Time at which the synchronization setting was created.
@@ -62,18 +62,18 @@ public final class GetScheduledSynchronizationSettingResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduledSynchronizationSettingResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("recurrenceInterval") String recurrenceInterval,
-        @OutputCustomType.Parameter("synchronizationTime") String synchronizationTime,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("recurrenceInterval") String recurrenceInterval,
+        @CustomType.Parameter("synchronizationTime") String synchronizationTime,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.id = id;
         this.kind = kind;

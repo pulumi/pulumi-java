@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
      * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
      * 
      */
-    @InputImport(name="desiredEC2Instances", required=true)
+    @Import(name="desiredEC2Instances", required=true)
       private final Output<Integer> desiredEC2Instances;
 
     public Output<Integer> getDesiredEC2Instances() {
@@ -32,7 +32,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
      * The maximum value that is allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "1". Once the fleet is active, you can change this value.
      * 
      */
-    @InputImport(name="maxSize", required=true)
+    @Import(name="maxSize", required=true)
       private final Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
@@ -43,7 +43,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
      * The minimum value allowed for the fleet's instance count for a location. When creating a new fleet, GameLift automatically sets this value to "0". After the fleet is active, you can change this value.
      * 
      */
-    @InputImport(name="minSize", required=true)
+    @Import(name="minSize", required=true)
       private final Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {

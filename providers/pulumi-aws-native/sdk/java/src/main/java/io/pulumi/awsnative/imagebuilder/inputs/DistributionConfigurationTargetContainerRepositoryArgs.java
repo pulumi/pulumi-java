@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.DistributionConfigurationTargetContainerRepositoryService;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * The repository name of target container repository.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -34,7 +34,7 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * The service of target container repository.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
     public Output<DistributionConfigurationTargetContainerRepositoryService> getService() {

@@ -5,22 +5,22 @@ package io.pulumi.aws.kms.outputs;
 
 import io.pulumi.aws.kms.outputs.GetKeyMultiRegionConfigurationPrimaryKey;
 import io.pulumi.aws.kms.outputs.GetKeyMultiRegionConfigurationReplicaKey;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyMultiRegionConfiguration {
     private final String multiRegionKeyType;
     private final List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
     private final List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyMultiRegionConfiguration(
-        @OutputCustomType.Parameter("multiRegionKeyType") String multiRegionKeyType,
-        @OutputCustomType.Parameter("primaryKeys") List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys,
-        @OutputCustomType.Parameter("replicaKeys") List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
+        @CustomType.Parameter("multiRegionKeyType") String multiRegionKeyType,
+        @CustomType.Parameter("primaryKeys") List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys,
+        @CustomType.Parameter("replicaKeys") List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
         this.multiRegionKeyType = multiRegionKeyType;
         this.primaryKeys = primaryKeys;
         this.replicaKeys = replicaKeys;

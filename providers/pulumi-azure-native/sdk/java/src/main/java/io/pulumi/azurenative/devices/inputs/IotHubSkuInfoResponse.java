@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Double capacity;
 
     public Optional<Double> getCapacity() {
@@ -34,7 +34,7 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class IotHubSkuInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The billing tier for the IoT hub.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionReceiverValueResponse {
     /**
      * The role of the notification receiver.
@@ -27,11 +27,11 @@ public final class SubscriptionReceiverValueResponse {
      */
     private final @Nullable String subscriptionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionReceiverValueResponse(
-        @OutputCustomType.Parameter("role") @Nullable String role,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("subscriptionName") @Nullable String subscriptionName) {
+        @CustomType.Parameter("role") @Nullable String role,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("subscriptionName") @Nullable String subscriptionName) {
         this.role = role;
         this.subscriptionId = subscriptionId;
         this.subscriptionName = subscriptionName;

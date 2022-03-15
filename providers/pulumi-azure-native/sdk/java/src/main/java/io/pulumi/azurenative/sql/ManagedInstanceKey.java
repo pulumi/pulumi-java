@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ManagedInstanceKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ManagedInstanceKey extends io.pulumi.resources.CustomResource {
      * Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    @OutputExport(name="autoRotationEnabled", type=Boolean.class, parameters={})
+    @Export(name="autoRotationEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> autoRotationEnabled;
 
     /**
@@ -49,7 +49,7 @@ public class ManagedInstanceKey extends io.pulumi.resources.CustomResource {
      * The key creation date.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -63,7 +63,7 @@ public class ManagedInstanceKey extends io.pulumi.resources.CustomResource {
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -77,7 +77,7 @@ public class ManagedInstanceKey extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class ManagedInstanceKey extends io.pulumi.resources.CustomResource {
      * Thumbprint of the key.
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -105,7 +105,7 @@ public class ManagedInstanceKey extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

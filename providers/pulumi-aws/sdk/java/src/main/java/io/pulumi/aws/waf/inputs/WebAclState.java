@@ -7,7 +7,7 @@ import io.pulumi.aws.waf.inputs.WebAclDefaultActionGetArgs;
 import io.pulumi.aws.waf.inputs.WebAclLoggingConfigurationGetArgs;
 import io.pulumi.aws.waf.inputs.WebAclRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the WAF WebACL.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable Output<WebAclDefaultActionGetArgs> defaultAction;
 
     public Output<WebAclDefaultActionGetArgs> getDefaultAction() {
@@ -45,7 +45,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * Configuration block to enable WAF logging. Detailed below.
      * 
      */
-    @InputImport(name="loggingConfiguration")
+    @Import(name="loggingConfiguration")
       private final @Nullable Output<WebAclLoggingConfigurationGetArgs> loggingConfiguration;
 
     public Output<WebAclLoggingConfigurationGetArgs> getLoggingConfiguration() {
@@ -56,7 +56,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * The name or description for the Amazon CloudWatch metric of this web ACL.
      * 
      */
-    @InputImport(name="metricName")
+    @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -67,7 +67,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * The name or description of the web ACL.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<WebAclRuleGetArgs>> rules;
 
     public Output<List<WebAclRuleGetArgs>> getRules() {
@@ -89,7 +89,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -100,7 +100,7 @@ public final class WebAclState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

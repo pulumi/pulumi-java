@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * The application name of the script action, if any.
      * 
      */
-    @InputImport(name="applicationName", required=true)
+    @Import(name="applicationName", required=true)
       private final String applicationName;
 
     public String getApplicationName() {
@@ -34,7 +34,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * The name of the script action.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * The parameters for the script
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
@@ -56,7 +56,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * The list of roles where script will be executed.
      * 
      */
-    @InputImport(name="roles", required=true)
+    @Import(name="roles", required=true)
       private final List<String> roles;
 
     public List<String> getRoles() {
@@ -67,7 +67,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * The URI to the script.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

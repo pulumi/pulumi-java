@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyAssignmentInstanceFilterResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyAssignmentRolloutResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOsPolicyAssignmentResult {
     /**
      * Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.
@@ -80,21 +80,21 @@ public final class GetOsPolicyAssignmentResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOsPolicyAssignmentResult(
-        @OutputCustomType.Parameter("baseline") Boolean baseline,
-        @OutputCustomType.Parameter("deleted") Boolean deleted,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("instanceFilter") OSPolicyAssignmentInstanceFilterResponse instanceFilter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osPolicies") List<OSPolicyResponse> osPolicies,
-        @OutputCustomType.Parameter("reconciling") Boolean reconciling,
-        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
-        @OutputCustomType.Parameter("revisionId") String revisionId,
-        @OutputCustomType.Parameter("rollout") OSPolicyAssignmentRolloutResponse rollout,
-        @OutputCustomType.Parameter("rolloutState") String rolloutState,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("baseline") Boolean baseline,
+        @CustomType.Parameter("deleted") Boolean deleted,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("instanceFilter") OSPolicyAssignmentInstanceFilterResponse instanceFilter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osPolicies") List<OSPolicyResponse> osPolicies,
+        @CustomType.Parameter("reconciling") Boolean reconciling,
+        @CustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @CustomType.Parameter("revisionId") String revisionId,
+        @CustomType.Parameter("rollout") OSPolicyAssignmentRolloutResponse rollout,
+        @CustomType.Parameter("rolloutState") String rolloutState,
+        @CustomType.Parameter("uid") String uid) {
         this.baseline = baseline;
         this.deleted = deleted;
         this.description = description;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 import io.pulumi.azurenative.healthcareapis.enums.ManagedServiceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ServicesResourceIdentityArgs extends io.pulumi.resources.Reso
      * Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
     public Output<Either<String,ManagedServiceIdentityType>> getType() {

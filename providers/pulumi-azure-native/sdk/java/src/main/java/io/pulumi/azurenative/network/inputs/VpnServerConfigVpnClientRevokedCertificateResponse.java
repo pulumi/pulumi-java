@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io
      * The certificate name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse extends io
      * The revoked VPN client certificate thumbprint.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

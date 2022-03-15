@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * The name of the database.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<String> database;
 
     public Output<String> getDatabase() {
@@ -30,7 +30,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * The database user name.
      * 
      */
-    @InputImport(name="dbUser")
+    @Import(name="dbUser")
       private final @Nullable Output<String> dbUser;
 
     public Output<String> getDbUser() {
@@ -41,7 +41,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * The name or ARN of the secret that enables access to the database.
      * 
      */
-    @InputImport(name="secretsManagerArn")
+    @Import(name="secretsManagerArn")
       private final @Nullable Output<String> secretsManagerArn;
 
     public Output<String> getSecretsManagerArn() {
@@ -52,7 +52,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * The SQL statement text to run.
      * 
      */
-    @InputImport(name="sql")
+    @Import(name="sql")
       private final @Nullable Output<String> sql;
 
     public Output<String> getSql() {
@@ -63,7 +63,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * The name of the SQL statement.
      * 
      */
-    @InputImport(name="statementName")
+    @Import(name="statementName")
       private final @Nullable Output<String> statementName;
 
     public Output<String> getStatementName() {
@@ -74,7 +74,7 @@ public final class EventTargetRedshiftTargetArgs extends io.pulumi.resources.Res
      * Indicates whether to send an event back to EventBridge after the SQL statement runs.
      * 
      */
-    @InputImport(name="withEvent")
+    @Import(name="withEvent")
       private final @Nullable Output<Boolean> withEvent;
 
     public Output<Boolean> getWithEvent() {

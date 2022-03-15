@@ -5,12 +5,12 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketRedirectRule;
 import io.pulumi.awsnative.s3.outputs.BucketRoutingRuleCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRoutingRule {
     /**
      * Container for redirect information. You can redirect requests to another host, to another page, or with another protocol. In the event of an error, you can specify a different error code to return.
@@ -19,10 +19,10 @@ public final class BucketRoutingRule {
     private final BucketRedirectRule redirectRule;
     private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRoutingRule(
-        @OutputCustomType.Parameter("redirectRule") BucketRedirectRule redirectRule,
-        @OutputCustomType.Parameter("routingRuleCondition") @Nullable BucketRoutingRuleCondition routingRuleCondition) {
+        @CustomType.Parameter("redirectRule") BucketRedirectRule redirectRule,
+        @CustomType.Parameter("routingRuleCondition") @Nullable BucketRoutingRuleCondition routingRuleCondition) {
         this.redirectRule = redirectRule;
         this.routingRuleCondition = routingRuleCondition;
     }

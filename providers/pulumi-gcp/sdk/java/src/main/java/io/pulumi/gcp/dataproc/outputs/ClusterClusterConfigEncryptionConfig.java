@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigEncryptionConfig {
     /**
      * The Cloud KMS key name to use for PD disk encryption for
@@ -16,8 +16,8 @@ public final class ClusterClusterConfigEncryptionConfig {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private ClusterClusterConfigEncryptionConfig(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private ClusterClusterConfigEncryptionConfig(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

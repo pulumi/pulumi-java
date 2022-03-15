@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class V2ApiTargetResponse {
     /**
      * Optional. List of one or more methods that can be called. If empty, all methods for the service are allowed. A wildcard (*) can be used as the last symbol. Valid examples: `google.cloud.translate.v2.TranslateService.GetSupportedLanguage` `TranslateText` `Get*` `translate.googleapis.com.Get*`
@@ -21,10 +21,10 @@ public final class V2ApiTargetResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private V2ApiTargetResponse(
-        @OutputCustomType.Parameter("methods") List<String> methods,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("methods") List<String> methods,
+        @CustomType.Parameter("service") String service) {
         this.methods = methods;
         this.service = service;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkteamMemberDefinitionCognitoMemberDefinition {
     /**
      * An identifier for an application client. You must create the app client ID using Amazon Cognito.
@@ -25,11 +25,11 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
      */
     private final String userPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkteamMemberDefinitionCognitoMemberDefinition(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("userGroup") String userGroup,
-        @OutputCustomType.Parameter("userPool") String userPool) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("userGroup") String userGroup,
+        @CustomType.Parameter("userPool") String userPool) {
         this.clientId = clientId;
         this.userGroup = userGroup;
         this.userPool = userPool;

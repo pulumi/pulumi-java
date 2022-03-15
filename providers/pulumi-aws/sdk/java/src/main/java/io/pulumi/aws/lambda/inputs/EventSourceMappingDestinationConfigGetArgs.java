@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigOnFailureGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class EventSourceMappingDestinationConfigGetArgs extends io.pulumi.
      * The destination configuration for failed invocations. Detailed below.
      * 
      */
-    @InputImport(name="onFailure")
+    @Import(name="onFailure")
       private final @Nullable Output<EventSourceMappingDestinationConfigOnFailureGetArgs> onFailure;
 
     public Output<EventSourceMappingDestinationConfigOnFailureGetArgs> getOnFailure() {

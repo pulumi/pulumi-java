@@ -8,7 +8,7 @@ import io.pulumi.aws.chime.VoiceConnectorGroupArgs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorGroupState;
 import io.pulumi.aws.chime.outputs.VoiceConnectorGroupConnector;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class VoiceConnectorGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Chime Voice Connectors to route inbound calls to.
      * 
      */
-    @OutputExport(name="connectors", type=List.class, parameters={VoiceConnectorGroupConnector.class})
+    @Export(name="connectors", type=List.class, parameters={VoiceConnectorGroupConnector.class})
     private Output</* @Nullable */ List<VoiceConnectorGroupConnector>> connectors;
 
     /**
@@ -50,7 +50,7 @@ public class VoiceConnectorGroup extends io.pulumi.resources.CustomResource {
      * The name of the Amazon Chime Voice Connector group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

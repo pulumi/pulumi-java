@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amplify.BackendEnvironmentArgs;
 import io.pulumi.aws.amplify.inputs.BackendEnvironmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * The unique ID for an Amplify app.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -46,7 +46,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * The name of deployment artifacts.
      * 
      */
-    @OutputExport(name="deploymentArtifacts", type=String.class, parameters={})
+    @Export(name="deploymentArtifacts", type=String.class, parameters={})
     private Output<String> deploymentArtifacts;
 
     /**
@@ -74,7 +74,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * The name for the backend environment.
      * 
      */
-    @OutputExport(name="environmentName", type=String.class, parameters={})
+    @Export(name="environmentName", type=String.class, parameters={})
     private Output<String> environmentName;
 
     /**
@@ -88,7 +88,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * The AWS CloudFormation stack name of a backend environment.
      * 
      */
-    @OutputExport(name="stackName", type=String.class, parameters={})
+    @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
     /**

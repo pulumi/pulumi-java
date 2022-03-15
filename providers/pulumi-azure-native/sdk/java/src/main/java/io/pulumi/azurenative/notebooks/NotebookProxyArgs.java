@@ -5,7 +5,7 @@ package io.pulumi.azurenative.notebooks;
 
 import io.pulumi.azurenative.notebooks.inputs.NotebookResourceSystemDataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The friendly string identifier of the creator of the NotebookProxy resource.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -30,7 +30,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The public DNS name
      * 
      */
-    @InputImport(name="publicDns")
+    @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
     public Output<String> getPublicDns() {
@@ -41,7 +41,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Allow public network access on a V-Net locked notebook resource
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
     public Output<String> getPublicNetworkAccess() {
@@ -52,7 +52,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The region of the NotebookProxy resource.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -63,7 +63,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -85,7 +85,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The alternate application ID used for auth token request in the data plane
      * 
      */
-    @InputImport(name="secondaryAppId")
+    @Import(name="secondaryAppId")
       private final @Nullable Output<String> secondaryAppId;
 
     public Output<String> getSecondaryAppId() {
@@ -96,7 +96,7 @@ public final class NotebookProxyArgs extends io.pulumi.resources.ResourceArgs {
      * System data for notebook resource
      * 
      */
-    @InputImport(name="systemData")
+    @Import(name="systemData")
       private final @Nullable Output<NotebookResourceSystemDataArgs> systemData;
 
     public Output<NotebookResourceSystemDataArgs> getSystemData() {

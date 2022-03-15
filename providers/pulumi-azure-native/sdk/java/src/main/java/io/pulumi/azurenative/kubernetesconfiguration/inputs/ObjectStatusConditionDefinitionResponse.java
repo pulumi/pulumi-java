@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * Last time this status condition has changed
      * 
      */
-    @InputImport(name="lastTransitionTime")
+    @Import(name="lastTransitionTime")
       private final @Nullable String lastTransitionTime;
 
     public Optional<String> getLastTransitionTime() {
@@ -33,7 +33,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * A more verbose description of the object status condition
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -44,7 +44,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * Reason for the specified status condition type status
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable String reason;
 
     public Optional<String> getReason() {
@@ -55,7 +55,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * Status of the Kubernetes object condition type
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -66,7 +66,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * Object status condition type for this object
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.workflowexecutions_v1beta.outputs.PositionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StackTraceElementResponse {
     /**
      * The source position information of the stack trace element.
@@ -26,11 +26,11 @@ public final class StackTraceElementResponse {
      */
     private final String step;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackTraceElementResponse(
-        @OutputCustomType.Parameter("position") PositionResponse position,
-        @OutputCustomType.Parameter("routine") String routine,
-        @OutputCustomType.Parameter("step") String step) {
+        @CustomType.Parameter("position") PositionResponse position,
+        @CustomType.Parameter("routine") String routine,
+        @CustomType.Parameter("step") String step) {
         this.position = position;
         this.routine = routine;
         this.step = step;

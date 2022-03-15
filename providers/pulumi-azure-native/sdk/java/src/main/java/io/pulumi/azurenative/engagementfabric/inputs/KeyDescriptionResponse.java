@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * The name of the key
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * The rank of the key
      * 
      */
-    @InputImport(name="rank", required=true)
+    @Import(name="rank", required=true)
       private final String rank;
 
     public String getRank() {
@@ -42,7 +42,7 @@ public final class KeyDescriptionResponse extends io.pulumi.resources.InvokeArgs
      * The value of the key
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

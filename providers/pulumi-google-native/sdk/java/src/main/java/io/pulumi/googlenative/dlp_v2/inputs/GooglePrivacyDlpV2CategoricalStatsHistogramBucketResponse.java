@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueFrequencyResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * Total number of values in this bucket.
      * 
      */
-    @InputImport(name="bucketSize", required=true)
+    @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
     public String getBucketSize() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * Total number of distinct values in this bucket.
      * 
      */
-    @InputImport(name="bucketValueCount", required=true)
+    @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
     public String getBucketValueCount() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * Sample of value frequencies in this bucket. The total number of values returned per bucket is capped at 20.
      * 
      */
-    @InputImport(name="bucketValues", required=true)
+    @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> getBucketValues() {
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * Lower bound on the value frequency of the values in this bucket.
      * 
      */
-    @InputImport(name="valueFrequencyLowerBound", required=true)
+    @Import(name="valueFrequencyLowerBound", required=true)
       private final String valueFrequencyLowerBound;
 
     public String getValueFrequencyLowerBound() {
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse ext
      * Upper bound on the value frequency of the values in this bucket.
      * 
      */
-    @InputImport(name="valueFrequencyUpperBound", required=true)
+    @Import(name="valueFrequencyUpperBound", required=true)
       private final String valueFrequencyUpperBound;
 
     public String getValueFrequencyUpperBound() {

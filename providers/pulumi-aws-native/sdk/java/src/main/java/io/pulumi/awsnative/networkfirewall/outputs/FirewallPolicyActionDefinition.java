@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyPublishMetricAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyActionDefinition {
     private final @Nullable FirewallPolicyPublishMetricAction publishMetricAction;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyActionDefinition(@OutputCustomType.Parameter("publishMetricAction") @Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
+    @CustomType.Constructor
+    private FirewallPolicyActionDefinition(@CustomType.Parameter("publishMetricAction") @Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 

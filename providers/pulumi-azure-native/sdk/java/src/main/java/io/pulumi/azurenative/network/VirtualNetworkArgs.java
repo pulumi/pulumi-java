@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkPeeringArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
      */
-    @InputImport(name="addressSpace")
+    @Import(name="addressSpace")
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
 
     public Output<AddressSpaceArgs> getAddressSpace() {
@@ -39,7 +39,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
      */
-    @InputImport(name="bgpCommunities")
+    @Import(name="bgpCommunities")
       private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
     public Output<VirtualNetworkBgpCommunitiesArgs> getBgpCommunities() {
@@ -50,7 +50,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The DDoS protection plan associated with the virtual network.
      * 
      */
-    @InputImport(name="ddosProtectionPlan")
+    @Import(name="ddosProtectionPlan")
       private final @Nullable Output<SubResourceArgs> ddosProtectionPlan;
 
     public Output<SubResourceArgs> getDdosProtectionPlan() {
@@ -61,7 +61,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
      */
-    @InputImport(name="dhcpOptions")
+    @Import(name="dhcpOptions")
       private final @Nullable Output<DhcpOptionsArgs> dhcpOptions;
 
     public Output<DhcpOptionsArgs> getDhcpOptions() {
@@ -72,7 +72,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
      */
-    @InputImport(name="enableDdosProtection")
+    @Import(name="enableDdosProtection")
       private final @Nullable Output<Boolean> enableDdosProtection;
 
     public Output<Boolean> getEnableDdosProtection() {
@@ -83,7 +83,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
      */
-    @InputImport(name="enableVmProtection")
+    @Import(name="enableVmProtection")
       private final @Nullable Output<Boolean> enableVmProtection;
 
     public Output<Boolean> getEnableVmProtection() {
@@ -94,7 +94,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location of the virtual network.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -105,7 +105,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -116,7 +116,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Array of IpAllocation which reference this VNET.
      * 
      */
-    @InputImport(name="ipAllocations")
+    @Import(name="ipAllocations")
       private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
     public Output<List<SubResourceArgs>> getIpAllocations() {
@@ -127,7 +127,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -138,7 +138,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -149,7 +149,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * A list of subnets in a Virtual Network.
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<SubnetArgs>> subnets;
 
     public Output<List<SubnetArgs>> getSubnets() {
@@ -160,7 +160,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -171,7 +171,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the virtual network.
      * 
      */
-    @InputImport(name="virtualNetworkName")
+    @Import(name="virtualNetworkName")
       private final @Nullable Output<String> virtualNetworkName;
 
     public Output<String> getVirtualNetworkName() {
@@ -182,7 +182,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * A list of peerings in a Virtual Network.
      * 
      */
-    @InputImport(name="virtualNetworkPeerings")
+    @Import(name="virtualNetworkPeerings")
       private final @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
     public Output<List<VirtualNetworkPeeringArgs>> getVirtualNetworkPeerings() {

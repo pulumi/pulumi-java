@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceOrderedPlacementStrategy {
     /**
      * For the `spread` placement strategy, valid values are `instanceId` (or `host`,
@@ -25,10 +25,10 @@ public final class ServiceOrderedPlacementStrategy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceOrderedPlacementStrategy(
-        @OutputCustomType.Parameter("field") @Nullable String field,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("field") @Nullable String field,
+        @CustomType.Parameter("type") String type) {
         this.field = field;
         this.type = type;
     }

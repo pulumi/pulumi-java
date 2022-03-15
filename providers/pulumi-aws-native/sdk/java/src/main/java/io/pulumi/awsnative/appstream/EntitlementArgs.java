@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appstream;
 
 import io.pulumi.awsnative.appstream.inputs.EntitlementAttributeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
-    @InputImport(name="appVisibility", required=true)
+    @Import(name="appVisibility", required=true)
       private final Output<String> appVisibility;
 
     public Output<String> getAppVisibility() {
         return this.appVisibility;
     }
 
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final Output<List<EntitlementAttributeArgs>> attributes;
 
     public Output<List<EntitlementAttributeArgs>> getAttributes() {
         return this.attributes;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="stackName", required=true)
+    @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
     public Output<String> getStackName() {

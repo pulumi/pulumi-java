@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.H264CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.H265CodecSettingsResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.Vp9CodecSettingsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VideoStreamResponse {
     /**
      * H264 codec settings.
@@ -27,11 +27,11 @@ public final class VideoStreamResponse {
      */
     private final Vp9CodecSettingsResponse vp9;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoStreamResponse(
-        @OutputCustomType.Parameter("h264") H264CodecSettingsResponse h264,
-        @OutputCustomType.Parameter("h265") H265CodecSettingsResponse h265,
-        @OutputCustomType.Parameter("vp9") Vp9CodecSettingsResponse vp9) {
+        @CustomType.Parameter("h264") H264CodecSettingsResponse h264,
+        @CustomType.Parameter("h265") H265CodecSettingsResponse h265,
+        @CustomType.Parameter("vp9") Vp9CodecSettingsResponse vp9) {
         this.h264 = h264;
         this.h265 = h265;
         this.vp9 = vp9;

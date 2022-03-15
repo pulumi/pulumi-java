@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.artifactregistry.RepositoryArgs;
@@ -51,7 +51,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The time when the repository was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -65,7 +65,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The user-provided description of the repository.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -87,7 +87,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * - HELM ([alpha](https://cloud.google.com/products#product-launch-stages))
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output<String> format;
 
     /**
@@ -112,7 +112,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * This value may not be changed after the Repository has been created.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyName;
 
     /**
@@ -133,7 +133,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * and dashes.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -151,7 +151,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the location this repository is located in.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -165,7 +165,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -180,7 +180,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -196,7 +196,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * "repo1"
      * 
      */
-    @OutputExport(name="repositoryId", type=String.class, parameters={})
+    @Export(name="repositoryId", type=String.class, parameters={})
     private Output<String> repositoryId;
 
     /**
@@ -211,7 +211,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The time when the repository was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

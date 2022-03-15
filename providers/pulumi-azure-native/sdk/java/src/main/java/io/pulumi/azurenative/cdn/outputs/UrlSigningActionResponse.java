@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.UrlSigningActionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlSigningActionResponse {
     /**
      * The name of the action for the delivery rule.
@@ -22,10 +22,10 @@ public final class UrlSigningActionResponse {
      */
     private final UrlSigningActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlSigningActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") UrlSigningActionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") UrlSigningActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

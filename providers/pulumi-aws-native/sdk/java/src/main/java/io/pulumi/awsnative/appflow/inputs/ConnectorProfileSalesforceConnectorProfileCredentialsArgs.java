@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * The credentials used to access protected resources.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
@@ -30,7 +30,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * The client credentials to fetch access token and refresh token.
      * 
      */
-    @InputImport(name="clientCredentialsArn")
+    @Import(name="clientCredentialsArn")
       private final @Nullable Output<String> clientCredentialsArn;
 
     public Output<String> getClientCredentialsArn() {
@@ -41,7 +41,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * The oauth needed to request security tokens from the connector endpoint.
      * 
      */
-    @InputImport(name="connectorOAuthRequest")
+    @Import(name="connectorOAuthRequest")
       private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
     public Output<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
@@ -52,7 +52,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * The credentials used to acquire new access tokens.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {

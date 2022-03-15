@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.GeoBackupPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * Kind of geo backup policy.  This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -48,7 +48,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * Backup policy location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -62,7 +62,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * The state of the geo backup policy.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -90,7 +90,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * The storage type of the geo backup policy.
      * 
      */
-    @OutputExport(name="storageType", type=String.class, parameters={})
+    @Export(name="storageType", type=String.class, parameters={})
     private Output<String> storageType;
 
     /**
@@ -104,7 +104,7 @@ public class GeoBackupPolicy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

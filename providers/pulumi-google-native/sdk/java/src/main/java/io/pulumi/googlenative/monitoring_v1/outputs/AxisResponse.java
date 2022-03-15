@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AxisResponse {
     /**
      * The label of the axis.
@@ -20,10 +20,10 @@ public final class AxisResponse {
      */
     private final String scale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AxisResponse(
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("scale") String scale) {
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("scale") String scale) {
         this.label = label;
         this.scale = scale;
     }

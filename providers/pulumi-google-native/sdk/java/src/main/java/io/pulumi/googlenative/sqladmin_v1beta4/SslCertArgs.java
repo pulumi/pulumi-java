@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * User supplied name. Must be a distinct name from the other certificates for this instance.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
         return this.commonName == null ? Output.empty() : this.commonName;
     }
 
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

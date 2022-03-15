@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhrasePartGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
      * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -39,7 +39,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="parts", required=true)
+    @Import(name="parts", required=true)
       private final Output<List<CxIntentTrainingPhrasePartGetArgs>> parts;
 
     public Output<List<CxIntentTrainingPhrasePartGetArgs>> getParts() {
@@ -50,7 +50,7 @@ public final class CxIntentTrainingPhraseGetArgs extends io.pulumi.resources.Res
      * Indicates how many times this example was added to the intent.
      * 
      */
-    @InputImport(name="repeatCount")
+    @Import(name="repeatCount")
       private final @Nullable Output<Integer> repeatCount;
 
     public Output<Integer> getRepeatCount() {

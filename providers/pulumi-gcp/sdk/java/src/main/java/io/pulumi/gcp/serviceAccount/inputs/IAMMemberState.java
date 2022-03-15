@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.serviceAccount.inputs.IAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMMemberConditionGetArgs> condition;
 
     public Output<IAMMemberConditionGetArgs> getCondition() {
@@ -31,14 +31,14 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * (Computed) The etag of the service account IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -51,7 +51,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -62,7 +62,7 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
      * The fully-qualified name of the service account to apply policy to.
      * 
      */
-    @InputImport(name="serviceAccountId")
+    @Import(name="serviceAccountId")
       private final @Nullable Output<String> serviceAccountId;
 
     public Output<String> getServiceAccountId() {

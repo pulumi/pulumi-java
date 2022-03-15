@@ -3,22 +3,22 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTypeInstanceDisk {
     private final Integer count;
     private final Integer size;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTypeInstanceDisk(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("type") String type) {
         this.count = count;
         this.size = size;
         this.type = type;

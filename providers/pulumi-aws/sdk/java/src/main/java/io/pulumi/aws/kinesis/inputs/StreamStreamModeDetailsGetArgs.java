@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StreamStreamModeDetailsGetArgs extends io.pulumi.resources.Re
      * Specifies the capacity mode of the stream. Must be either `PROVISIONED` or `ON_DEMAND`.
      * 
      */
-    @InputImport(name="streamMode", required=true)
+    @Import(name="streamMode", required=true)
       private final Output<String> streamMode;
 
     public Output<String> getStreamMode() {

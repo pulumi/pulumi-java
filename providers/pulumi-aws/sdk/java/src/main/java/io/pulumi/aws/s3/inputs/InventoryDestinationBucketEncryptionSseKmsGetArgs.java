@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InventoryDestinationBucketEncryptionSseKmsGetArgs extends io.
      * The ARN of the KMS customer master key (CMK) used to encrypt the inventory file.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
     public Output<String> getKeyId() {

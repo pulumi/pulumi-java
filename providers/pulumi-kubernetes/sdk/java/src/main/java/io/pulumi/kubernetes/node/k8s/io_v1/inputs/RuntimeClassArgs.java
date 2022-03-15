@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1.inputs.SchedulingArgs;
@@ -25,7 +25,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -36,7 +36,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * Handler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node & CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called "runc" might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The Handler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
      * 
      */
-    @InputImport(name="handler", required=true)
+    @Import(name="handler", required=true)
       private final Output<String> handler;
 
     public Output<String> getHandler() {
@@ -47,7 +47,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -58,7 +58,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -71,7 +71,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
      * 
      */
-    @InputImport(name="overhead")
+    @Import(name="overhead")
       private final @Nullable Output<OverheadArgs> overhead;
 
     public Output<OverheadArgs> getOverhead() {
@@ -82,7 +82,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
     public Output<SchedulingArgs> getScheduling() {

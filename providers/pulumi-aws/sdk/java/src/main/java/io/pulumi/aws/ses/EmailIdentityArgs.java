@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The email address to assign to SES
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {

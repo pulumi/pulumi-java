@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.NotificationConfigResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.ScheduleResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.storagetransfer_v1.outputs.TransferSpecResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTransferJobResult {
     /**
      * The time that the transfer job was created.
@@ -74,20 +74,20 @@ public final class GetTransferJobResult {
      */
     private final TransferSpecResponse transferSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransferJobResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("deletionTime") String deletionTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("lastModificationTime") String lastModificationTime,
-        @OutputCustomType.Parameter("latestOperationName") String latestOperationName,
-        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("schedule") ScheduleResponse schedule,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("transferSpec") TransferSpecResponse transferSpec) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("deletionTime") String deletionTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("lastModificationTime") String lastModificationTime,
+        @CustomType.Parameter("latestOperationName") String latestOperationName,
+        @CustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("schedule") ScheduleResponse schedule,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("transferSpec") TransferSpecResponse transferSpec) {
         this.creationTime = creationTime;
         this.deletionTime = deletionTime;
         this.description = description;

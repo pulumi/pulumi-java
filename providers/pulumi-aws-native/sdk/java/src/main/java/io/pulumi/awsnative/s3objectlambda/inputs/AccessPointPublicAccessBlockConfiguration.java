@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class AccessPointPublicAccessBlockConfiguration extends io.pulumi.r
      *    Enabling this setting doesn't affect existing policies or ACLs.
      * 
      */
-    @InputImport(name="blockPublicAcls")
+    @Import(name="blockPublicAcls")
       private final @Nullable Boolean blockPublicAcls;
 
     public Optional<Boolean> getBlockPublicAcls() {
@@ -37,7 +37,7 @@ public final class AccessPointPublicAccessBlockConfiguration extends io.pulumi.r
      * Specifies whether Amazon S3 should block public bucket policies for buckets in this account. Setting this element to TRUE causes Amazon S3 to reject calls to PUT Bucket policy if the specified bucket policy allows public access. Enabling this setting doesn't affect existing bucket policies.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Boolean blockPublicPolicy;
 
     public Optional<Boolean> getBlockPublicPolicy() {
@@ -48,7 +48,7 @@ public final class AccessPointPublicAccessBlockConfiguration extends io.pulumi.r
      * Specifies whether Amazon S3 should ignore public ACLs for buckets in this account. Setting this element to TRUE causes Amazon S3 to ignore all public ACLs on buckets in this account and any objects that they contain. Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.
      * 
      */
-    @InputImport(name="ignorePublicAcls")
+    @Import(name="ignorePublicAcls")
       private final @Nullable Boolean ignorePublicAcls;
 
     public Optional<Boolean> getIgnorePublicAcls() {
@@ -60,7 +60,7 @@ public final class AccessPointPublicAccessBlockConfiguration extends io.pulumi.r
      * Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.
      * 
      */
-    @InputImport(name="restrictPublicBuckets")
+    @Import(name="restrictPublicBuckets")
       private final @Nullable Boolean restrictPublicBuckets;
 
     public Optional<Boolean> getRestrictPublicBuckets() {

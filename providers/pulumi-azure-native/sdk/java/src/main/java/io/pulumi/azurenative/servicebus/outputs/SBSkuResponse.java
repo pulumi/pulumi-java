@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SBSkuResponse {
     /**
      * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
@@ -28,11 +28,11 @@ public final class SBSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SBSkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse {
     /**
      * Name of the key.
@@ -32,12 +32,12 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("rights") String rights,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("rights") String rights,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.keyName = keyName;
         this.primaryKey = primaryKey;
         this.rights = rights;

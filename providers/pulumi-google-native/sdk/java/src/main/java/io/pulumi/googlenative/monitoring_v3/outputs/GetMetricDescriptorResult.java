@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.LabelDescriptorResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricDescriptorMetadataResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMetricDescriptorResult {
     /**
      * A detailed description of the metric, which can be used in documentation.
@@ -68,19 +68,19 @@ public final class GetMetricDescriptorResult {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMetricDescriptorResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
-        @OutputCustomType.Parameter("launchStage") String launchStage,
-        @OutputCustomType.Parameter("metadata") MetricDescriptorMetadataResponse metadata,
-        @OutputCustomType.Parameter("metricKind") String metricKind,
-        @OutputCustomType.Parameter("monitoredResourceTypes") List<String> monitoredResourceTypes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("valueType") String valueType) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
+        @CustomType.Parameter("launchStage") String launchStage,
+        @CustomType.Parameter("metadata") MetricDescriptorMetadataResponse metadata,
+        @CustomType.Parameter("metricKind") String metricKind,
+        @CustomType.Parameter("monitoredResourceTypes") List<String> monitoredResourceTypes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("valueType") String valueType) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;

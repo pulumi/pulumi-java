@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse extends io.pul
      * If the table is a dated shard, i.e., with name pattern `[prefix]YYYYMMDD`, `grouped_entry` is the Data Catalog resource name of the date sharded grouped entry, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`. Otherwise, `grouped_entry` is empty.
      * 
      */
-    @InputImport(name="groupedEntry", required=true)
+    @Import(name="groupedEntry", required=true)
       private final String groupedEntry;
 
     public String getGroupedEntry() {

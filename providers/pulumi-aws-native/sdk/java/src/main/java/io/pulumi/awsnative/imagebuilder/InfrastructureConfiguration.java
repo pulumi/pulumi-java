@@ -8,7 +8,7 @@ import io.pulumi.awsnative.imagebuilder.InfrastructureConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationInstanceMetadataOptions;
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationLogging;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -26,7 +26,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The description of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The instance metadata option settings for the infrastructure configuration.
      * 
      */
-    @OutputExport(name="instanceMetadataOptions", type=InfrastructureConfigurationInstanceMetadataOptions.class, parameters={})
+    @Export(name="instanceMetadataOptions", type=InfrastructureConfigurationInstanceMetadataOptions.class, parameters={})
     private Output</* @Nullable */ InfrastructureConfigurationInstanceMetadataOptions> instanceMetadataOptions;
 
     /**
@@ -68,7 +68,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The instance profile of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="instanceProfileName", type=String.class, parameters={})
+    @Export(name="instanceProfileName", type=String.class, parameters={})
     private Output<String> instanceProfileName;
 
     /**
@@ -82,7 +82,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The instance types of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="instanceTypes", type=List.class, parameters={String.class})
+    @Export(name="instanceTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> instanceTypes;
 
     /**
@@ -96,7 +96,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The EC2 key pair of the infrastructure configuration..
      * 
      */
-    @OutputExport(name="keyPair", type=String.class, parameters={})
+    @Export(name="keyPair", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyPair;
 
     /**
@@ -110,7 +110,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The logging configuration of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="logging", type=InfrastructureConfigurationLogging.class, parameters={})
+    @Export(name="logging", type=InfrastructureConfigurationLogging.class, parameters={})
     private Output</* @Nullable */ InfrastructureConfigurationLogging> logging;
 
     /**
@@ -124,7 +124,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The name of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The tags attached to the resource created by Image Builder.
      * 
      */
-    @OutputExport(name="resourceTags", type=Object.class, parameters={})
+    @Export(name="resourceTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> resourceTags;
 
     /**
@@ -152,7 +152,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The security group IDs of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupIds;
 
     /**
@@ -166,7 +166,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicArn;
 
     /**
@@ -180,7 +180,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The subnet ID of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -194,7 +194,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The tags associated with the component.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
@@ -208,7 +208,7 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
      * The terminate instance on failure configuration of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="terminateInstanceOnFailure", type=Boolean.class, parameters={})
+    @Export(name="terminateInstanceOnFailure", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> terminateInstanceOnFailure;
 
     /**

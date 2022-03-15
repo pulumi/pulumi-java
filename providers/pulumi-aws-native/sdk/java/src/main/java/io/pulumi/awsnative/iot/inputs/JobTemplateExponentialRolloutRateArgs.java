@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateRateIncreaseCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
      * The minimum number of things that will be notified of a pending job, per minute at the start of job rollout. This parameter allows you to define the initial rate of rollout.
      * 
      */
-    @InputImport(name="baseRatePerMinute", required=true)
+    @Import(name="baseRatePerMinute", required=true)
       private final Output<Integer> baseRatePerMinute;
 
     public Output<Integer> getBaseRatePerMinute() {
@@ -34,7 +34,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
      * The exponential factor to increase the rate of rollout for a job.
      * 
      */
-    @InputImport(name="incrementFactor", required=true)
+    @Import(name="incrementFactor", required=true)
       private final Output<Double> incrementFactor;
 
     public Output<Double> getIncrementFactor() {
@@ -45,7 +45,7 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
      * The criteria to initiate the increase in rate of rollout for a job.
      * 
      */
-    @InputImport(name="rateIncreaseCriteria", required=true)
+    @Import(name="rateIncreaseCriteria", required=true)
       private final Output<JobTemplateRateIncreaseCriteriaArgs> rateIncreaseCriteria;
 
     public Output<JobTemplateRateIncreaseCriteriaArgs> getRateIncreaseCriteria() {

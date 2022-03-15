@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.FunctionConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.FunctionMetadataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FunctionArgs Empty = new FunctionArgs();
 
-    @InputImport(name="autoPublish")
+    @Import(name="autoPublish")
       private final @Nullable Output<Boolean> autoPublish;
 
     public Output<Boolean> getAutoPublish() {
         return this.autoPublish == null ? Output.empty() : this.autoPublish;
     }
 
-    @InputImport(name="functionCode")
+    @Import(name="functionCode")
       private final @Nullable Output<String> functionCode;
 
     public Output<String> getFunctionCode() {
         return this.functionCode == null ? Output.empty() : this.functionCode;
     }
 
-    @InputImport(name="functionConfig")
+    @Import(name="functionConfig")
       private final @Nullable Output<FunctionConfigArgs> functionConfig;
 
     public Output<FunctionConfigArgs> getFunctionConfig() {
         return this.functionConfig == null ? Output.empty() : this.functionConfig;
     }
 
-    @InputImport(name="functionMetadata")
+    @Import(name="functionMetadata")
       private final @Nullable Output<FunctionMetadataArgs> functionMetadata;
 
     public Output<FunctionMetadataArgs> getFunctionMetadata() {
         return this.functionMetadata == null ? Output.empty() : this.functionMetadata;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

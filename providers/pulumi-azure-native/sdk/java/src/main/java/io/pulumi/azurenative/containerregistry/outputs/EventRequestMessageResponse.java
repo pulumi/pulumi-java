@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.EventContentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventRequestMessageResponse {
     /**
      * The content of the event request message.
@@ -39,13 +39,13 @@ public final class EventRequestMessageResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventRequestMessageResponse(
-        @OutputCustomType.Parameter("content") @Nullable EventContentResponse content,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("requestUri") @Nullable String requestUri,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("content") @Nullable EventContentResponse content,
+        @CustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("requestUri") @Nullable String requestUri,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.content = content;
         this.headers = headers;
         this.method = method;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The capacity of the SKU, if it supports scaling
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU family, used when the service has multiple performance classes within a tier, such as 'A', 'D', etc. for virtual machines
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -45,7 +45,7 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the SKU, such as 'P3'
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the SKU, used when the name alone does not denote a service size or when a SKU has multiple performance classes within a family, e.g. 'A1' for virtual machines
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -67,7 +67,7 @@ public final class ServiceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

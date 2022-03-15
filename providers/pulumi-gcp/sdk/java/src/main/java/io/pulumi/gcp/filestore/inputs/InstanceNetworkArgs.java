@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
      */
-    @InputImport(name="connectMode")
+    @Import(name="connectMode")
       private final @Nullable Output<String> connectMode;
 
     public Output<String> getConnectMode() {
@@ -35,7 +35,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
      * A list of IPv4 or IPv6 addresses.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
@@ -48,7 +48,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
      * Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
      * 
      */
-    @InputImport(name="modes", required=true)
+    @Import(name="modes", required=true)
       private final Output<List<String>> modes;
 
     public Output<List<String>> getModes() {
@@ -60,7 +60,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
      * instance is connected.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -72,7 +72,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
      * addresses reserved for this instance.
      * 
      */
-    @InputImport(name="reservedIpRange")
+    @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
      */
-    @InputImport(name="lockDurationAsIso8601")
+    @Import(name="lockDurationAsIso8601")
       private final @Nullable Output<String> lockDurationAsIso8601;
 
     public Output<String> getLockDurationAsIso8601() {
@@ -34,7 +34,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
      */
-    @InputImport(name="maxDeliveryCount")
+    @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
     public Output<Integer> getMaxDeliveryCount() {
@@ -45,7 +45,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
      * 
      */
-    @InputImport(name="ttlAsIso8601")
+    @Import(name="ttlAsIso8601")
       private final @Nullable Output<String> ttlAsIso8601;
 
     public Output<String> getTtlAsIso8601() {

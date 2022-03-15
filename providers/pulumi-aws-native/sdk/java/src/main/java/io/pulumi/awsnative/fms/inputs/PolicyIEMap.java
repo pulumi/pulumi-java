@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class PolicyIEMap extends io.pulumi.resources.InvokeArgs {
 
     public static final PolicyIEMap Empty = new PolicyIEMap();
 
-    @InputImport(name="aCCOUNT")
+    @Import(name="aCCOUNT")
       private final @Nullable List<String> aCCOUNT;
 
     public List<String> getACCOUNT() {
         return this.aCCOUNT == null ? List.of() : this.aCCOUNT;
     }
 
-    @InputImport(name="oRGUNIT")
+    @Import(name="oRGUNIT")
       private final @Nullable List<String> oRGUNIT;
 
     public List<String> getORGUNIT() {

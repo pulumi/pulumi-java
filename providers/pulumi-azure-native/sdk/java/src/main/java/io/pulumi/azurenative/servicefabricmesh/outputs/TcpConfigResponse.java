@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.GatewayDestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TcpConfigResponse {
     /**
      * Describes destination endpoint for routing traffic.
@@ -27,11 +27,11 @@ public final class TcpConfigResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TcpConfigResponse(
-        @OutputCustomType.Parameter("destination") GatewayDestinationResponse destination,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("destination") GatewayDestinationResponse destination,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port) {
         this.destination = destination;
         this.name = name;
         this.port = port;

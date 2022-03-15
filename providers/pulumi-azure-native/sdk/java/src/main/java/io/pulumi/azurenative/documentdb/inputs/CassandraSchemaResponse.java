@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.CassandraPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ClusterKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ColumnResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
      * List of cluster key.
      * 
      */
-    @InputImport(name="clusterKeys")
+    @Import(name="clusterKeys")
       private final @Nullable List<ClusterKeyResponse> clusterKeys;
 
     public List<ClusterKeyResponse> getClusterKeys() {
@@ -36,7 +36,7 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
      * List of Cassandra table columns.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable List<ColumnResponse> columns;
 
     public List<ColumnResponse> getColumns() {
@@ -47,7 +47,7 @@ public final class CassandraSchemaResponse extends io.pulumi.resources.InvokeArg
      * List of partition key.
      * 
      */
-    @InputImport(name="partitionKeys")
+    @Import(name="partitionKeys")
       private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
     public List<CassandraPartitionKeyResponse> getPartitionKeys() {

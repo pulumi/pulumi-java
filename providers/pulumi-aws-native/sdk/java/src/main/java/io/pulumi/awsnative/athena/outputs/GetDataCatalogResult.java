@@ -5,7 +5,7 @@ package io.pulumi.awsnative.athena.outputs;
 
 import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.outputs.DataCatalogTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCatalogResult {
     /**
      * A description of the data catalog to be created.
@@ -36,12 +36,12 @@ public final class GetDataCatalogResult {
      */
     private final @Nullable DataCatalogType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCatalogResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
-        @OutputCustomType.Parameter("tags") @Nullable List<DataCatalogTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable DataCatalogType type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("parameters") @Nullable Object parameters,
+        @CustomType.Parameter("tags") @Nullable List<DataCatalogTag> tags,
+        @CustomType.Parameter("type") @Nullable DataCatalogType type) {
         this.description = description;
         this.parameters = parameters;
         this.tags = tags;

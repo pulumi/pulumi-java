@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
     /**
      * The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.
@@ -24,10 +24,10 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
      */
     private final @Nullable String monitoringInterval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis(
-        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
-        @OutputCustomType.Parameter("monitoringInterval") @Nullable String monitoringInterval) {
+        @CustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @CustomType.Parameter("monitoringInterval") @Nullable String monitoringInterval) {
         this.disabled = disabled;
         this.monitoringInterval = monitoringInterval;
     }

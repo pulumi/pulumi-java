@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesF
 import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
-    @OutputExport(name="allowForwardedTraffic", type=Boolean.class, parameters={})
+    @Export(name="allowForwardedTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowForwardedTraffic;
 
     /**
@@ -52,7 +52,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
-    @OutputExport(name="allowGatewayTransit", type=Boolean.class, parameters={})
+    @Export(name="allowGatewayTransit", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowGatewayTransit;
 
     /**
@@ -66,7 +66,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
-    @OutputExport(name="allowVirtualNetworkAccess", type=Boolean.class, parameters={})
+    @Export(name="allowVirtualNetworkAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVirtualNetworkAccess;
 
     /**
@@ -80,7 +80,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * The reference to the databricks virtual network address space.
      * 
      */
-    @OutputExport(name="databricksAddressSpace", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="databricksAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> databricksAddressSpace;
 
     /**
@@ -94,7 +94,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
-    @OutputExport(name="databricksVirtualNetwork", type=VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork.class, parameters={})
+    @Export(name="databricksVirtualNetwork", type=VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork> databricksVirtualNetwork;
 
     /**
@@ -108,7 +108,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * Name of the virtual network peering resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * The status of the virtual network peering.
      * 
      */
-    @OutputExport(name="peeringState", type=String.class, parameters={})
+    @Export(name="peeringState", type=String.class, parameters={})
     private Output<String> peeringState;
 
     /**
@@ -136,7 +136,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual network peering resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * The reference to the remote virtual network address space.
      * 
      */
-    @OutputExport(name="remoteAddressSpace", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="remoteAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> remoteAddressSpace;
 
     /**
@@ -164,7 +164,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      *  The remote virtual network should be in the same region. See here to learn more (https://docs.microsoft.com/en-us/azure/databricks/administration-guide/cloud-configurations/azure/vnet-peering).
      * 
      */
-    @OutputExport(name="remoteVirtualNetwork", type=VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork.class, parameters={})
+    @Export(name="remoteVirtualNetwork", type=VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork.class, parameters={})
     private Output<VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork> remoteVirtualNetwork;
 
     /**
@@ -178,7 +178,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * type of the virtual network peering resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -192,7 +192,7 @@ public class VNetPeering extends io.pulumi.resources.CustomResource {
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
-    @OutputExport(name="useRemoteGateways", type=Boolean.class, parameters={})
+    @Export(name="useRemoteGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useRemoteGateways;
 
     /**

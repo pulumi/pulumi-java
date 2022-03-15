@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetRegionCommitmentArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetRegionCommitmentArgs Empty = new GetRegionCommitmentArgs();
 
-    @InputImport(name="commitment", required=true)
+    @Import(name="commitment", required=true)
       private final String commitment;
 
     public String getCommitment() {
         return this.commitment;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

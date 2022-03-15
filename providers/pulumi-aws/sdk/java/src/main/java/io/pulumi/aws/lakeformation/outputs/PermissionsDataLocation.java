@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lakeformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PermissionsDataLocation {
     /**
      * Amazon Resource Name (ARN) that uniquely identifies the data location resource.
@@ -22,10 +22,10 @@ public final class PermissionsDataLocation {
      */
     private final @Nullable String catalogId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PermissionsDataLocation(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("catalogId") @Nullable String catalogId) {
         this.arn = arn;
         this.catalogId = catalogId;
     }

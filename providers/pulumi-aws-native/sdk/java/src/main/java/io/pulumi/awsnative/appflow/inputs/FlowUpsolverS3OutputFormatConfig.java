@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowFileType;
 import io.pulumi.awsnative.appflow.inputs.FlowAggregationConfig;
 import io.pulumi.awsnative.appflow.inputs.FlowPrefixConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class FlowUpsolverS3OutputFormatConfig extends io.pulumi.resources.
 
     public static final FlowUpsolverS3OutputFormatConfig Empty = new FlowUpsolverS3OutputFormatConfig();
 
-    @InputImport(name="aggregationConfig")
+    @Import(name="aggregationConfig")
       private final @Nullable FlowAggregationConfig aggregationConfig;
 
     public Optional<FlowAggregationConfig> getAggregationConfig() {
         return this.aggregationConfig == null ? Optional.empty() : Optional.ofNullable(this.aggregationConfig);
     }
 
-    @InputImport(name="fileType")
+    @Import(name="fileType")
       private final @Nullable FlowFileType fileType;
 
     public Optional<FlowFileType> getFileType() {
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
     }
 
-    @InputImport(name="prefixConfig", required=true)
+    @Import(name="prefixConfig", required=true)
       private final FlowPrefixConfig prefixConfig;
 
     public FlowPrefixConfig getPrefixConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
      * 
      */
-    @InputImport(name="peerAccountId")
+    @Import(name="peerAccountId")
       private final @Nullable Output<String> peerAccountId;
 
     public Output<String> getPeerAccountId() {
@@ -30,7 +30,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * Region of EC2 Transit Gateway to peer with.
      * 
      */
-    @InputImport(name="peerRegion")
+    @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
     public Output<String> getPeerRegion() {
@@ -41,7 +41,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * Identifier of EC2 Transit Gateway to peer with.
      * 
      */
-    @InputImport(name="peerTransitGatewayId")
+    @Import(name="peerTransitGatewayId")
       private final @Nullable Output<String> peerTransitGatewayId;
 
     public Output<String> getPeerTransitGatewayId() {
@@ -52,7 +52,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * Key-value tags for the EC2 Transit Gateway Peering Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -74,7 +74,7 @@ public final class PeeringAttachmentState extends io.pulumi.resources.ResourceAr
      * Identifier of EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {

@@ -5,12 +5,12 @@ package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheActiveDirectorySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheUsernameDownloadSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheDirectorySettingsResponse {
     /**
      * Specifies settings for joining the HPC Cache to an Active Directory domain.
@@ -23,10 +23,10 @@ public final class CacheDirectorySettingsResponse {
      */
     private final @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheDirectorySettingsResponse(
-        @OutputCustomType.Parameter("activeDirectory") @Nullable CacheActiveDirectorySettingsResponse activeDirectory,
-        @OutputCustomType.Parameter("usernameDownload") @Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
+        @CustomType.Parameter("activeDirectory") @Nullable CacheActiveDirectorySettingsResponse activeDirectory,
+        @CustomType.Parameter("usernameDownload") @Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
         this.activeDirectory = activeDirectory;
         this.usernameDownload = usernameDownload;
     }

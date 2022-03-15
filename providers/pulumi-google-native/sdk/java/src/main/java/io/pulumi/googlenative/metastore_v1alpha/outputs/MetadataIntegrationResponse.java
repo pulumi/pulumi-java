@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DataCatalogConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DataplexConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataIntegrationResponse {
     /**
      * The integration config for the Data Catalog service.
@@ -21,10 +21,10 @@ public final class MetadataIntegrationResponse {
      */
     private final DataplexConfigResponse dataplexConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataIntegrationResponse(
-        @OutputCustomType.Parameter("dataCatalogConfig") DataCatalogConfigResponse dataCatalogConfig,
-        @OutputCustomType.Parameter("dataplexConfig") DataplexConfigResponse dataplexConfig) {
+        @CustomType.Parameter("dataCatalogConfig") DataCatalogConfigResponse dataCatalogConfig,
+        @CustomType.Parameter("dataplexConfig") DataplexConfigResponse dataplexConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.dataplexConfig = dataplexConfig;
     }

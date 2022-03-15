@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.stepfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineTracingConfiguration {
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private StateMachineTracingConfiguration(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private StateMachineTracingConfiguration(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

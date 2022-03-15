@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
      * AWS account identifier to designate as a delegated administrator for GuardDuty.
      * 
      */
-    @InputImport(name="adminAccountId", required=true)
+    @Import(name="adminAccountId", required=true)
       private final Output<String> adminAccountId;
 
     public Output<String> getAdminAccountId() {

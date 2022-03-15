@@ -5,23 +5,23 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetContainerAction;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetQueryAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetAction {
     private final String actionName;
     private final @Nullable DatasetContainerAction containerAction;
     private final @Nullable DatasetQueryAction queryAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetAction(
-        @OutputCustomType.Parameter("actionName") String actionName,
-        @OutputCustomType.Parameter("containerAction") @Nullable DatasetContainerAction containerAction,
-        @OutputCustomType.Parameter("queryAction") @Nullable DatasetQueryAction queryAction) {
+        @CustomType.Parameter("actionName") String actionName,
+        @CustomType.Parameter("containerAction") @Nullable DatasetContainerAction containerAction,
+        @CustomType.Parameter("queryAction") @Nullable DatasetQueryAction queryAction) {
         this.actionName = actionName;
         this.containerAction = containerAction;
         this.queryAction = queryAction;

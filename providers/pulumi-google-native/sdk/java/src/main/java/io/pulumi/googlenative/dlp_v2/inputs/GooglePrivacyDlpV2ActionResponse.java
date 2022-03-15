@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2JobNotificationEmailsResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PublishSummaryToCsccResponse;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * Enable email notification for project owners and editors on job's completion/failure.
      * 
      */
-    @InputImport(name="jobNotificationEmails", required=true)
+    @Import(name="jobNotificationEmails", required=true)
       private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
 
     public GooglePrivacyDlpV2JobNotificationEmailsResponse getJobNotificationEmails() {
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * Publish a notification to a pubsub topic.
      * 
      */
-    @InputImport(name="pubSub", required=true)
+    @Import(name="pubSub", required=true)
       private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
 
     public GooglePrivacyDlpV2PublishToPubSubResponse getPubSub() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * Publish findings to Cloud Datahub.
      * 
      */
-    @InputImport(name="publishFindingsToCloudDataCatalog", required=true)
+    @Import(name="publishFindingsToCloudDataCatalog", required=true)
       private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
 
     public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse getPublishFindingsToCloudDataCatalog() {
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * Publish summary to Cloud Security Command Center (Alpha).
      * 
      */
-    @InputImport(name="publishSummaryToCscc", required=true)
+    @Import(name="publishSummaryToCscc", required=true)
       private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
 
     public GooglePrivacyDlpV2PublishSummaryToCsccResponse getPublishSummaryToCscc() {
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * Enable Stackdriver metric dlp.googleapis.com/finding_count.
      * 
      */
-    @InputImport(name="publishToStackdriver", required=true)
+    @Import(name="publishToStackdriver", required=true)
       private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
 
     public GooglePrivacyDlpV2PublishToStackdriverResponse getPublishToStackdriver() {
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends io.pulumi.resources.
      * Save resulting findings in a provided location.
      * 
      */
-    @InputImport(name="saveFindings", required=true)
+    @Import(name="saveFindings", required=true)
       private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
 
     public GooglePrivacyDlpV2SaveFindingsResponse getSaveFindings() {

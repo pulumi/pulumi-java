@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRootCert
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -54,7 +54,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * The name of the P2SVpnServerConfiguration that is unique within a VirtualWan in a resource group. This name can be used to access the resource along with Paren VirtualWan resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -68,7 +68,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * List of references to P2SVpnGateways.
      * 
      */
-    @OutputExport(name="p2SVpnGateways", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="p2SVpnGateways", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> p2SVpnGateways;
 
     /**
@@ -82,7 +82,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * Radius client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    @OutputExport(name="p2SVpnServerConfigRadiusClientRootCertificates", type=List.class, parameters={P2SVpnServerConfigRadiusClientRootCertificateResponse.class})
+    @Export(name="p2SVpnServerConfigRadiusClientRootCertificates", type=List.class, parameters={P2SVpnServerConfigRadiusClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<P2SVpnServerConfigRadiusClientRootCertificateResponse>> p2SVpnServerConfigRadiusClientRootCertificates;
 
     /**
@@ -96,7 +96,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * Radius Server root certificate of P2SVpnServerConfiguration.
      * 
      */
-    @OutputExport(name="p2SVpnServerConfigRadiusServerRootCertificates", type=List.class, parameters={P2SVpnServerConfigRadiusServerRootCertificateResponse.class})
+    @Export(name="p2SVpnServerConfigRadiusServerRootCertificates", type=List.class, parameters={P2SVpnServerConfigRadiusServerRootCertificateResponse.class})
     private Output</* @Nullable */ List<P2SVpnServerConfigRadiusServerRootCertificateResponse>> p2SVpnServerConfigRadiusServerRootCertificates;
 
     /**
@@ -110,7 +110,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * VPN client revoked certificate of P2SVpnServerConfiguration.
      * 
      */
-    @OutputExport(name="p2SVpnServerConfigVpnClientRevokedCertificates", type=List.class, parameters={P2SVpnServerConfigVpnClientRevokedCertificateResponse.class})
+    @Export(name="p2SVpnServerConfigVpnClientRevokedCertificates", type=List.class, parameters={P2SVpnServerConfigVpnClientRevokedCertificateResponse.class})
     private Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRevokedCertificateResponse>> p2SVpnServerConfigVpnClientRevokedCertificates;
 
     /**
@@ -124,7 +124,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * VPN client root certificate of P2SVpnServerConfiguration.
      * 
      */
-    @OutputExport(name="p2SVpnServerConfigVpnClientRootCertificates", type=List.class, parameters={P2SVpnServerConfigVpnClientRootCertificateResponse.class})
+    @Export(name="p2SVpnServerConfigVpnClientRootCertificates", type=List.class, parameters={P2SVpnServerConfigVpnClientRootCertificateResponse.class})
     private Output</* @Nullable */ List<P2SVpnServerConfigVpnClientRootCertificateResponse>> p2SVpnServerConfigVpnClientRootCertificates;
 
     /**
@@ -138,7 +138,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * The provisioning state of the P2S VPN server configuration resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -152,7 +152,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * The radius server address property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @OutputExport(name="radiusServerAddress", type=String.class, parameters={})
+    @Export(name="radiusServerAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerAddress;
 
     /**
@@ -166,7 +166,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * The radius secret property of the P2SVpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @OutputExport(name="radiusServerSecret", type=String.class, parameters={})
+    @Export(name="radiusServerSecret", type=String.class, parameters={})
     private Output</* @Nullable */ String> radiusServerSecret;
 
     /**
@@ -180,7 +180,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * VpnClientIpsecPolicies for P2SVpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnClientIpsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
+    @Export(name="vpnClientIpsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> vpnClientIpsecPolicies;
 
     /**
@@ -194,7 +194,7 @@ public class P2sVpnServerConfiguration extends io.pulumi.resources.CustomResourc
      * VPN protocols for the P2SVpnServerConfiguration.
      * 
      */
-    @OutputExport(name="vpnProtocols", type=List.class, parameters={String.class})
+    @Export(name="vpnProtocols", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpnProtocols;
 
     /**

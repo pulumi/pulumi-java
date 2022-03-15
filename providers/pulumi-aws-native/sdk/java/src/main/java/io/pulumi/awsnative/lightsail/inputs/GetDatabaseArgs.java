@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
      * The name to use for your new Lightsail database resource.
      * 
      */
-    @InputImport(name="relationalDatabaseName", required=true)
+    @Import(name="relationalDatabaseName", required=true)
       private final String relationalDatabaseName;
 
     public String getRelationalDatabaseName() {

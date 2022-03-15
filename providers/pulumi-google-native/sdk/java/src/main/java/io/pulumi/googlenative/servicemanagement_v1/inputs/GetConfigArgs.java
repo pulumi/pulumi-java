@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
-    @InputImport(name="configId", required=true)
+    @Import(name="configId", required=true)
       private final String configId;
 
     public String getConfigId() {
         return this.configId;
     }
 
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
     }
 
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable String view;
 
     public Optional<String> getView() {

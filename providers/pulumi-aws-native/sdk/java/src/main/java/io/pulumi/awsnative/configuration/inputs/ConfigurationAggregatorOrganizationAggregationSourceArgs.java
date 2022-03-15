@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,21 +16,21 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
 
     public static final ConfigurationAggregatorOrganizationAggregationSourceArgs Empty = new ConfigurationAggregatorOrganizationAggregationSourceArgs();
 
-    @InputImport(name="allAwsRegions")
+    @Import(name="allAwsRegions")
       private final @Nullable Output<Boolean> allAwsRegions;
 
     public Output<Boolean> getAllAwsRegions() {
         return this.allAwsRegions == null ? Output.empty() : this.allAwsRegions;
     }
 
-    @InputImport(name="awsRegions")
+    @Import(name="awsRegions")
       private final @Nullable Output<List<String>> awsRegions;
 
     public Output<List<String>> getAwsRegions() {
         return this.awsRegions == null ? Output.empty() : this.awsRegions;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * Whether there is further actions.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
     public Output<String> getActionsRequired() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The optional description of the status.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The concrete private link service connection.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {

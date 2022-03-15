@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataPathAssetReferenceResponse {
     /**
      * ARM resource ID of the datastore where the asset is located.
@@ -28,11 +28,11 @@ public final class DataPathAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataPathAssetReferenceResponse(
-        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("referenceType") String referenceType) {
+        @CustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("referenceType") String referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
         this.referenceType = referenceType;

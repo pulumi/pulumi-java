@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2FulfillmentResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2TextToSpeechSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("agentVersion") String agentVersion,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fulfillment") GoogleCloudDialogflowV2FulfillmentResponse fulfillment,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("textToSpeechSettings") GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("agentVersion") String agentVersion,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fulfillment") GoogleCloudDialogflowV2FulfillmentResponse fulfillment,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("textToSpeechSettings") GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.agentVersion = agentVersion;
         this.description = description;
         this.fulfillment = fulfillment;

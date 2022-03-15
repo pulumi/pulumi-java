@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Provide a unique identifier to match analysis information on each specific file in a package
      * 
      */
-    @InputImport(name="checksum", required=true)
+    @Import(name="checksum", required=true)
       private final List<String> checksum;
 
     public List<String> getChecksum() {
@@ -32,7 +32,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
      * This field provides information about the type of file identified
      * 
      */
-    @InputImport(name="fileType", required=true)
+    @Import(name="fileType", required=true)
       private final String fileType;
 
     public String getFileType() {
@@ -43,7 +43,7 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Identify the full path and filename that corresponds to the file information in this section
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

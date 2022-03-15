@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appstream.UserArgs;
 import io.pulumi.aws.appstream.inputs.UserState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * ARN of the appstream user.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
      * 
      */
-    @OutputExport(name="authenticationType", type=String.class, parameters={})
+    @Export(name="authenticationType", type=String.class, parameters={})
     private Output<String> authenticationType;
 
     /**
@@ -61,7 +61,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, when the user was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -75,7 +75,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Specifies whether the user in the user pool is enabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -89,7 +89,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * First name, or given name, of the user.
      * 
      */
-    @OutputExport(name="firstName", type=String.class, parameters={})
+    @Export(name="firstName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstName;
 
     /**
@@ -103,7 +103,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Last name, or surname, of the user.
      * 
      */
-    @OutputExport(name="lastName", type=String.class, parameters={})
+    @Export(name="lastName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastName;
 
     /**
@@ -117,7 +117,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Send an email notification.
      * 
      */
-    @OutputExport(name="sendEmailNotification", type=Boolean.class, parameters={})
+    @Export(name="sendEmailNotification", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sendEmailNotification;
 
     /**
@@ -131,7 +131,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Email address of the user.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

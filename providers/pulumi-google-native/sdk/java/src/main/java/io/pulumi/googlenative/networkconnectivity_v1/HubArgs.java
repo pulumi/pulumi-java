@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RoutingVPCArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of the hub.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="hubId", required=true)
+    @Import(name="hubId", required=true)
       private final Output<String> hubId;
 
     public Output<String> getHubId() {
@@ -39,7 +39,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -50,21 +50,21 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of the hub. Hub names must be unique. They use the following form: `projects/{project_number}/locations/global/hubs/{hub_id}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -75,7 +75,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * The VPC networks associated with this hub's spokes. This field is read-only. Network Connectivity Center automatically populates it based on the set of spokes attached to the hub.
      * 
      */
-    @InputImport(name="routingVpcs")
+    @Import(name="routingVpcs")
       private final @Nullable Output<List<RoutingVPCArgs>> routingVpcs;
 
     public Output<List<RoutingVPCArgs>> getRoutingVpcs() {

@@ -11,7 +11,7 @@ import io.pulumi.aws.glue.outputs.ClassifierGrokClassifier;
 import io.pulumi.aws.glue.outputs.ClassifierJsonClassifier;
 import io.pulumi.aws.glue.outputs.ClassifierXmlClassifier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -38,7 +38,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * A classifier for Csv content. Defined below.
      * 
      */
-    @OutputExport(name="csvClassifier", type=ClassifierCsvClassifier.class, parameters={})
+    @Export(name="csvClassifier", type=ClassifierCsvClassifier.class, parameters={})
     private Output</* @Nullable */ ClassifierCsvClassifier> csvClassifier;
 
     /**
@@ -52,7 +52,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * A classifier that uses grok patterns. Defined below.
      * 
      */
-    @OutputExport(name="grokClassifier", type=ClassifierGrokClassifier.class, parameters={})
+    @Export(name="grokClassifier", type=ClassifierGrokClassifier.class, parameters={})
     private Output</* @Nullable */ ClassifierGrokClassifier> grokClassifier;
 
     /**
@@ -66,7 +66,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * A classifier for JSON content. Defined below.
      * 
      */
-    @OutputExport(name="jsonClassifier", type=ClassifierJsonClassifier.class, parameters={})
+    @Export(name="jsonClassifier", type=ClassifierJsonClassifier.class, parameters={})
     private Output</* @Nullable */ ClassifierJsonClassifier> jsonClassifier;
 
     /**
@@ -80,7 +80,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * The name of the classifier.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * A classifier for XML content. Defined below.
      * 
      */
-    @OutputExport(name="xmlClassifier", type=ClassifierXmlClassifier.class, parameters={})
+    @Export(name="xmlClassifier", type=ClassifierXmlClassifier.class, parameters={})
     private Output</* @Nullable */ ClassifierXmlClassifier> xmlClassifier;
 
     /**

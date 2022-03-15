@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.outputs;
 import io.pulumi.azurenative.avs.outputs.PSCredentialExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptSecureStringExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptStringExecutionParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScriptExecutionLogsResult {
     /**
      * Standard error output stream from the powershell execution
@@ -108,26 +108,26 @@ public final class GetScriptExecutionLogsResult {
      */
     private final List<String> warnings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScriptExecutionLogsResult(
-        @OutputCustomType.Parameter("errors") List<String> errors,
-        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
-        @OutputCustomType.Parameter("finishedAt") String finishedAt,
-        @OutputCustomType.Parameter("hiddenParameters") @Nullable List<Object> hiddenParameters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("information") List<String> information,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namedOutputs") @Nullable Map<String,Object> namedOutputs,
-        @OutputCustomType.Parameter("output") @Nullable List<String> output,
-        @OutputCustomType.Parameter("parameters") @Nullable List<Object> parameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("retention") @Nullable String retention,
-        @OutputCustomType.Parameter("scriptCmdletId") @Nullable String scriptCmdletId,
-        @OutputCustomType.Parameter("startedAt") String startedAt,
-        @OutputCustomType.Parameter("submittedAt") String submittedAt,
-        @OutputCustomType.Parameter("timeout") String timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("warnings") List<String> warnings) {
+        @CustomType.Parameter("errors") List<String> errors,
+        @CustomType.Parameter("failureReason") @Nullable String failureReason,
+        @CustomType.Parameter("finishedAt") String finishedAt,
+        @CustomType.Parameter("hiddenParameters") @Nullable List<Object> hiddenParameters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("information") List<String> information,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namedOutputs") @Nullable Map<String,Object> namedOutputs,
+        @CustomType.Parameter("output") @Nullable List<String> output,
+        @CustomType.Parameter("parameters") @Nullable List<Object> parameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("retention") @Nullable String retention,
+        @CustomType.Parameter("scriptCmdletId") @Nullable String scriptCmdletId,
+        @CustomType.Parameter("startedAt") String startedAt,
+        @CustomType.Parameter("submittedAt") String submittedAt,
+        @CustomType.Parameter("timeout") String timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("warnings") List<String> warnings) {
         this.errors = errors;
         this.failureReason = failureReason;
         this.finishedAt = finishedAt;

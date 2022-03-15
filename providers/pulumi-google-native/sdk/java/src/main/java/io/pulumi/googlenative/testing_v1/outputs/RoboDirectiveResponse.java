@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RoboDirectiveResponse {
     /**
      * The type of action that Robo should perform on the specified element.
@@ -25,11 +25,11 @@ public final class RoboDirectiveResponse {
      */
     private final String resourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoboDirectiveResponse(
-        @OutputCustomType.Parameter("actionType") String actionType,
-        @OutputCustomType.Parameter("inputText") String inputText,
-        @OutputCustomType.Parameter("resourceName") String resourceName) {
+        @CustomType.Parameter("actionType") String actionType,
+        @CustomType.Parameter("inputText") String inputText,
+        @CustomType.Parameter("resourceName") String resourceName) {
         this.actionType = actionType;
         this.inputText = inputText;
         this.resourceName = resourceName;

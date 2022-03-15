@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
      * A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
      * 
      */
-    @InputImport(name="continent")
+    @Import(name="continent")
       private final @Nullable Output<String> continent;
 
     public Output<String> getContinent() {
@@ -29,7 +29,7 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
      * A two-character country code or `*` to indicate a default resource record set.
      * 
      */
-    @InputImport(name="country")
+    @Import(name="country")
       private final @Nullable Output<String> country;
 
     public Output<String> getCountry() {
@@ -40,7 +40,7 @@ public final class RecordGeolocationRoutingPolicyArgs extends io.pulumi.resource
      * A subdivision code for a country.
      * 
      */
-    @InputImport(name="subdivision")
+    @Import(name="subdivision")
       private final @Nullable Output<String> subdivision;
 
     public Output<String> getSubdivision() {

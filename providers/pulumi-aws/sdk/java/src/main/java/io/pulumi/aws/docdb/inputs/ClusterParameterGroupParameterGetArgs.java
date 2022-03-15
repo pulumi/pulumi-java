@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterParameterGroupParameterGetArgs extends io.pulumi.resou
      * Valid values are `immediate` and `pending-reboot`. Defaults to `pending-reboot`.
      * 
      */
-    @InputImport(name="applyMethod")
+    @Import(name="applyMethod")
       private final @Nullable Output<String> applyMethod;
 
     public Output<String> getApplyMethod() {
@@ -29,7 +29,7 @@ public final class ClusterParameterGroupParameterGetArgs extends io.pulumi.resou
      * The name of the documentDB parameter.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class ClusterParameterGroupParameterGetArgs extends io.pulumi.resou
      * The value of the documentDB parameter.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

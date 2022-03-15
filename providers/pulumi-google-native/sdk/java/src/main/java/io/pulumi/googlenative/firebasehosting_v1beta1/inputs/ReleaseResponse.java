@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.VersionResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * The deploy description when the release was created. The value can be up to 512 characters.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -33,7 +33,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * The unique identifier for the release, in either of the following formats: - sites/SITE_ID/releases/RELEASE_ID - sites/SITE_ID/channels/CHANNEL_ID/releases/RELEASE_ID This name is provided in the response body when you call [`releases.create`](sites.releases/create) or [`channels.releases.create`](sites.channels.releases/create).
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * The time at which the version is set to be public.
      * 
      */
-    @InputImport(name="releaseTime", required=true)
+    @Import(name="releaseTime", required=true)
       private final String releaseTime;
 
     public String getReleaseTime() {
@@ -55,7 +55,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the user who created the release.
      * 
      */
-    @InputImport(name="releaseUser", required=true)
+    @Import(name="releaseUser", required=true)
       private final ActingUserResponse releaseUser;
 
     public ActingUserResponse getReleaseUser() {
@@ -66,7 +66,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * Explains the reason for the release. Specify a value for this field only when creating a `SITE_DISABLE` type release.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -77,7 +77,7 @@ public final class ReleaseResponse extends io.pulumi.resources.InvokeArgs {
      * The configuration and content that was released.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final VersionResponse version;
 
     public VersionResponse getVersion() {

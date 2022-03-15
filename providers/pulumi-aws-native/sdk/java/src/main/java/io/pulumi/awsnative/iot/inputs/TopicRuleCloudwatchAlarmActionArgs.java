@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,28 +13,28 @@ public final class TopicRuleCloudwatchAlarmActionArgs extends io.pulumi.resource
 
     public static final TopicRuleCloudwatchAlarmActionArgs Empty = new TopicRuleCloudwatchAlarmActionArgs();
 
-    @InputImport(name="alarmName", required=true)
+    @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
     public Output<String> getAlarmName() {
         return this.alarmName;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stateReason", required=true)
+    @Import(name="stateReason", required=true)
       private final Output<String> stateReason;
 
     public Output<String> getStateReason() {
         return this.stateReason;
     }
 
-    @InputImport(name="stateValue", required=true)
+    @Import(name="stateValue", required=true)
       private final Output<String> stateValue;
 
     public Output<String> getStateValue() {

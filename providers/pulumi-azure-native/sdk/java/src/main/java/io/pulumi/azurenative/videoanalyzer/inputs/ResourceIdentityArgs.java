@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * The user assigned managed identity's resource identifier to use when accessing a resource.
      * 
      */
-    @InputImport(name="userAssignedIdentity", required=true)
+    @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;
 
     public Output<String> getUserAssignedIdentity() {

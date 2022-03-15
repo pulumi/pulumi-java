@@ -7,7 +7,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionIamActionDefinitionGet
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionScpActionDefinitionGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionSsmActionDefinitionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
      * The AWS Identity and Access Management (IAM) action definition details. See IAM Action Definition.
      * 
      */
-    @InputImport(name="iamActionDefinition")
+    @Import(name="iamActionDefinition")
       private final @Nullable Output<BudgetActionDefinitionIamActionDefinitionGetArgs> iamActionDefinition;
 
     public Output<BudgetActionDefinitionIamActionDefinitionGetArgs> getIamActionDefinition() {
@@ -31,7 +31,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
      * The service control policies (SCPs) action definition details. See SCP Action Definition.
      * 
      */
-    @InputImport(name="scpActionDefinition")
+    @Import(name="scpActionDefinition")
       private final @Nullable Output<BudgetActionDefinitionScpActionDefinitionGetArgs> scpActionDefinition;
 
     public Output<BudgetActionDefinitionScpActionDefinitionGetArgs> getScpActionDefinition() {
@@ -42,7 +42,7 @@ public final class BudgetActionDefinitionGetArgs extends io.pulumi.resources.Res
      * The AWS Systems Manager (SSM) action definition details. See SSM Action Definition.
      * 
      */
-    @InputImport(name="ssmActionDefinition")
+    @Import(name="ssmActionDefinition")
       private final @Nullable Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> ssmActionDefinition;
 
     public Output<BudgetActionDefinitionSsmActionDefinitionGetArgs> getSsmActionDefinition() {

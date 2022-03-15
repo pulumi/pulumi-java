@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceServiceNowServiceCatalogConfiguration {
     private final @Nullable Boolean crawlAttachments;
     private final String documentDataFieldName;
@@ -21,14 +21,14 @@ public final class DataSourceServiceNowServiceCatalogConfiguration {
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
     private final @Nullable List<String> includeAttachmentFilePatterns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceServiceNowServiceCatalogConfiguration(
-        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
-        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
-        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
-        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns) {
+        @CustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @CustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @CustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @CustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @CustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns) {
         this.crawlAttachments = crawlAttachments;
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;

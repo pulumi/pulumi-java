@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OrganizationAdminAccountState extends io.pulumi.resources.Res
      * The AWS account ID for the account to designate as the delegated Amazon Macie administrator account for the organization.
      * 
      */
-    @InputImport(name="adminAccountId")
+    @Import(name="adminAccountId")
       private final @Nullable Output<String> adminAccountId;
 
     public Output<String> getAdminAccountId() {

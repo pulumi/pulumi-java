@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricTarget;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExternalMetricSource {
     /**
      * metric identifies the target metric by name and selector
@@ -21,10 +21,10 @@ public final class ExternalMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalMetricSource(
-        @OutputCustomType.Parameter("metric") MetricIdentifier metric,
-        @OutputCustomType.Parameter("target") MetricTarget target) {
+        @CustomType.Parameter("metric") MetricIdentifier metric,
+        @CustomType.Parameter("target") MetricTarget target) {
         this.metric = metric;
         this.target = target;
     }

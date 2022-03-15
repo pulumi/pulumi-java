@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocalCopyResponse {
     /**
      * The name of the disk where this parameter is located. Can be the name of one of the disks specified in the Resources field, or "boot", which represents the Docker instance's boot disk and has a mount point of `/`.
@@ -20,10 +20,10 @@ public final class LocalCopyResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocalCopyResponse(
-        @OutputCustomType.Parameter("disk") String disk,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("disk") String disk,
+        @CustomType.Parameter("path") String path) {
         this.disk = disk;
         this.path = path;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * Describes parameters for creating application-scoped volumes.
      * 
      */
-    @InputImport(name="creationParameters", required=true)
+    @Import(name="creationParameters", required=true)
       private final Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
 
     public Output<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> getCreationParameters() {
@@ -35,7 +35,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * The path within the container at which the volume should be mounted. Only valid path characters are allowed.
      * 
      */
-    @InputImport(name="destinationPath", required=true)
+    @Import(name="destinationPath", required=true)
       private final Output<String> destinationPath;
 
     public Output<String> getDestinationPath() {
@@ -46,7 +46,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * Name of the volume being referenced.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * The flag indicating whether the volume is read only. Default is 'false'.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {

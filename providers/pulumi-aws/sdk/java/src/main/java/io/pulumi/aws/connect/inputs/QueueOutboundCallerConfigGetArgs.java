@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class QueueOutboundCallerConfigGetArgs extends io.pulumi.resources.
      * Specifies the caller ID name.
      * 
      */
-    @InputImport(name="outboundCallerIdName")
+    @Import(name="outboundCallerIdName")
       private final @Nullable Output<String> outboundCallerIdName;
 
     public Output<String> getOutboundCallerIdName() {
@@ -29,7 +29,7 @@ public final class QueueOutboundCallerConfigGetArgs extends io.pulumi.resources.
      * Specifies the caller ID number.
      * 
      */
-    @InputImport(name="outboundCallerIdNumberId")
+    @Import(name="outboundCallerIdNumberId")
       private final @Nullable Output<String> outboundCallerIdNumberId;
 
     public Output<String> getOutboundCallerIdNumberId() {
@@ -40,7 +40,7 @@ public final class QueueOutboundCallerConfigGetArgs extends io.pulumi.resources.
      * Specifies outbound whisper flow to be used during an outbound call.
      * 
      */
-    @InputImport(name="outboundFlowId")
+    @Import(name="outboundFlowId")
       private final @Nullable Output<String> outboundFlowId;
 
     public Output<String> getOutboundFlowId() {

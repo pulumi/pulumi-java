@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.NotificationConfigArgs;
@@ -22,7 +22,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The description of the notification config (max of 1024 characters).
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -36,7 +36,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The relative resource name of this notification config. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".
      * 
      */
-    @OutputExport(name="pubsubTopic", type=String.class, parameters={})
+    @Export(name="pubsubTopic", type=String.class, parameters={})
     private Output<String> pubsubTopic;
 
     /**
@@ -64,7 +64,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -78,7 +78,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The config for triggering streaming-based notifications.
      * 
      */
-    @OutputExport(name="streamingConfig", type=StreamingConfigResponse.class, parameters={})
+    @Export(name="streamingConfig", type=StreamingConfigResponse.class, parameters={})
     private Output<StreamingConfigResponse> streamingConfig;
 
     /**

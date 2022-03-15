@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActionGroupsInformationResponse {
     /**
      * An optional custom email subject to use in email notifications.
@@ -28,11 +28,11 @@ public final class ActionGroupsInformationResponse {
      */
     private final List<String> groupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActionGroupsInformationResponse(
-        @OutputCustomType.Parameter("customEmailSubject") @Nullable String customEmailSubject,
-        @OutputCustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
-        @OutputCustomType.Parameter("groupIds") List<String> groupIds) {
+        @CustomType.Parameter("customEmailSubject") @Nullable String customEmailSubject,
+        @CustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
+        @CustomType.Parameter("groupIds") List<String> groupIds) {
         this.customEmailSubject = customEmailSubject;
         this.customWebhookPayload = customWebhookPayload;
         this.groupIds = groupIds;

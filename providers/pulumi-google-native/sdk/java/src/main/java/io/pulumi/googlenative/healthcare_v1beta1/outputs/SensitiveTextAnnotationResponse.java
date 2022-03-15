@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SensitiveTextAnnotationResponse {
     /**
      * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}
@@ -16,8 +16,8 @@ public final class SensitiveTextAnnotationResponse {
      */
     private final Map<String,String> details;
 
-    @OutputCustomType.Constructor
-    private SensitiveTextAnnotationResponse(@OutputCustomType.Parameter("details") Map<String,String> details) {
+    @CustomType.Constructor
+    private SensitiveTextAnnotationResponse(@CustomType.Parameter("details") Map<String,String> details) {
         this.details = details;
     }
 

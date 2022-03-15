@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * The Sql database name installed on the machine
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -32,7 +32,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * The name of the machine
      * 
      */
-    @InputImport(name="machineName", required=true)
+    @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
     public Output<String> getMachineName() {
@@ -43,7 +43,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * The Sql server name installed on the machine
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -55,7 +55,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * Expected value is 'OnPremiseSql'.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {
@@ -66,7 +66,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * The oms agent Id installed on the machine
      * 
      */
-    @InputImport(name="sourceComputerId", required=true)
+    @Import(name="sourceComputerId", required=true)
       private final Output<String> sourceComputerId;
 
     public Output<String> getSourceComputerId() {
@@ -77,7 +77,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * The unique Id of the machine
      * 
      */
-    @InputImport(name="vmuuid", required=true)
+    @Import(name="vmuuid", required=true)
       private final Output<String> vmuuid;
 
     public Output<String> getVmuuid() {
@@ -88,7 +88,7 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
      * Azure resource Id of the workspace the machine is attached to
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {

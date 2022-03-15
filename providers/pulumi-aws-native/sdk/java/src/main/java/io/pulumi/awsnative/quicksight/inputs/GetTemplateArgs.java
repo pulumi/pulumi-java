@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTemplateArgs Empty = new GetTemplateArgs();
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
     }
 
-    @InputImport(name="templateId", required=true)
+    @Import(name="templateId", required=true)
       private final String templateId;
 
     public String getTemplateId() {

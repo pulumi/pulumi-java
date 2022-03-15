@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ses.outputs;
 
 import io.pulumi.awsnative.ses.outputs.ContactListTag;
 import io.pulumi.awsnative.ses.outputs.ContactListTopic;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactListResult {
     /**
      * The description of the contact list.
@@ -30,11 +30,11 @@ public final class GetContactListResult {
      */
     private final @Nullable List<ContactListTopic> topics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactListResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("tags") @Nullable List<ContactListTag> tags,
-        @OutputCustomType.Parameter("topics") @Nullable List<ContactListTopic> topics) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("tags") @Nullable List<ContactListTag> tags,
+        @CustomType.Parameter("topics") @Nullable List<ContactListTopic> topics) {
         this.description = description;
         this.tags = tags;
         this.topics = topics;

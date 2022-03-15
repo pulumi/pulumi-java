@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
      * The library requirements.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -33,7 +33,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
      * The filename of the library requirements file.
      * 
      */
-    @InputImport(name="filename")
+    @Import(name="filename")
       private final @Nullable String filename;
 
     public Optional<String> getFilename() {
@@ -44,7 +44,7 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
      * The last update time of the library requirements file.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final String time;
 
     public String getTime() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAssociationLinkResponse {
     /**
      * If true, the resource can be deleted.
@@ -59,17 +59,17 @@ public final class ServiceAssociationLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAssociationLinkResponse(
-        @OutputCustomType.Parameter("allowDelete") @Nullable Boolean allowDelete,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("link") @Nullable String link,
-        @OutputCustomType.Parameter("linkedResourceType") @Nullable String linkedResourceType,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowDelete") @Nullable Boolean allowDelete,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("link") @Nullable String link,
+        @CustomType.Parameter("linkedResourceType") @Nullable String linkedResourceType,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.allowDelete = allowDelete;
         this.etag = etag;
         this.id = id;

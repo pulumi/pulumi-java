@@ -14,7 +14,7 @@ import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentManagedA
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The API definition.
      * 
      */
-    @OutputExport(name="apiDefinitionUrl", type=String.class, parameters={})
+    @Export(name="apiDefinitionUrl", type=String.class, parameters={})
     private Output<String> apiDefinitionUrl;
 
     /**
@@ -57,7 +57,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The api definitions.
      * 
      */
-    @OutputExport(name="apiDefinitions", type=ApiResourceDefinitionsResponse.class, parameters={})
+    @Export(name="apiDefinitions", type=ApiResourceDefinitionsResponse.class, parameters={})
     private Output<ApiResourceDefinitionsResponse> apiDefinitions;
 
     /**
@@ -71,7 +71,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The backend service.
      * 
      */
-    @OutputExport(name="backendService", type=ApiResourceBackendServiceResponse.class, parameters={})
+    @Export(name="backendService", type=ApiResourceBackendServiceResponse.class, parameters={})
     private Output<ApiResourceBackendServiceResponse> backendService;
 
     /**
@@ -85,7 +85,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The capabilities.
      * 
      */
-    @OutputExport(name="capabilities", type=List.class, parameters={String.class})
+    @Export(name="capabilities", type=List.class, parameters={String.class})
     private Output<List<String>> capabilities;
 
     /**
@@ -99,7 +99,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The category.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
@@ -113,7 +113,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The connection parameters.
      * 
      */
-    @OutputExport(name="connectionParameters", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="connectionParameters", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> connectionParameters;
 
     /**
@@ -127,7 +127,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The integration service environment managed api deployment parameters.
      * 
      */
-    @OutputExport(name="deploymentParameters", type=IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse.class, parameters={})
+    @Export(name="deploymentParameters", type=IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> deploymentParameters;
 
     /**
@@ -141,7 +141,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The api general information.
      * 
      */
-    @OutputExport(name="generalInformation", type=ApiResourceGeneralInformationResponse.class, parameters={})
+    @Export(name="generalInformation", type=ApiResourceGeneralInformationResponse.class, parameters={})
     private Output<ApiResourceGeneralInformationResponse> generalInformation;
 
     /**
@@ -155,7 +155,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The integration service environment reference.
      * 
      */
-    @OutputExport(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
     /**
@@ -169,7 +169,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -183,7 +183,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The metadata.
      * 
      */
-    @OutputExport(name="metadata", type=ApiResourceMetadataResponse.class, parameters={})
+    @Export(name="metadata", type=ApiResourceMetadataResponse.class, parameters={})
     private Output<ApiResourceMetadataResponse> metadata;
 
     /**
@@ -197,7 +197,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -211,7 +211,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The policies for the API.
      * 
      */
-    @OutputExport(name="policies", type=ApiResourcePoliciesResponse.class, parameters={})
+    @Export(name="policies", type=ApiResourcePoliciesResponse.class, parameters={})
     private Output<ApiResourcePoliciesResponse> policies;
 
     /**
@@ -225,7 +225,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -239,7 +239,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The runtime urls.
      * 
      */
-    @OutputExport(name="runtimeUrls", type=List.class, parameters={String.class})
+    @Export(name="runtimeUrls", type=List.class, parameters={String.class})
     private Output<List<String>> runtimeUrls;
 
     /**
@@ -253,7 +253,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -267,7 +267,7 @@ public class IntegrationServiceEnvironmentManagedApi extends io.pulumi.resources
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

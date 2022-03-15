@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -26,7 +26,7 @@ public class ClusterRole extends io.pulumi.resources.CustomResource {
      * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
      * 
      */
-    @OutputExport(name="aggregationRule", type=AggregationRule.class, parameters={})
+    @Export(name="aggregationRule", type=AggregationRule.class, parameters={})
     private Output</* @Nullable */ AggregationRule> aggregationRule;
 
     /**
@@ -40,7 +40,7 @@ public class ClusterRole extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -54,7 +54,7 @@ public class ClusterRole extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -68,7 +68,7 @@ public class ClusterRole extends io.pulumi.resources.CustomResource {
      * Standard object's metadata.
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -82,7 +82,7 @@ public class ClusterRole extends io.pulumi.resources.CustomResource {
      * Rules holds all the PolicyRules for this ClusterRole
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={PolicyRule.class})
+    @Export(name="rules", type=List.class, parameters={PolicyRule.class})
     private Output</* @Nullable */ List<PolicyRule>> rules;
 
     /**

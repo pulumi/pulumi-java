@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1.inputs.MySqlReplicaConfigurationResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReplicaConfigurationResponse extends io.pulumi.resources.Invo
      * Specifies if the replica is the failover target. If the field is set to `true`, the replica will be designated as a failover replica. In case the primary instance fails, the replica instance will be promoted as the new primary instance. Only one replica can be specified as failover target, and the replica has to be in different zone with the primary instance.
      * 
      */
-    @InputImport(name="failoverTarget", required=true)
+    @Import(name="failoverTarget", required=true)
       private final Boolean failoverTarget;
 
     public Boolean getFailoverTarget() {
@@ -33,7 +33,7 @@ public final class ReplicaConfigurationResponse extends io.pulumi.resources.Invo
      * This is always `sql#replicaConfiguration`.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -44,7 +44,7 @@ public final class ReplicaConfigurationResponse extends io.pulumi.resources.Invo
      * MySQL specific configuration when replicating from a MySQL on-premises primary instance. Replication configuration information such as the username, password, certificates, and keys are not stored in the instance metadata. The configuration information is used only to set up the replication connection and is stored by MySQL in a file named `master.info` in the data directory.
      * 
      */
-    @InputImport(name="mysqlReplicaConfiguration", required=true)
+    @Import(name="mysqlReplicaConfiguration", required=true)
       private final MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
 
     public MySqlReplicaConfigurationResponse getMysqlReplicaConfiguration() {

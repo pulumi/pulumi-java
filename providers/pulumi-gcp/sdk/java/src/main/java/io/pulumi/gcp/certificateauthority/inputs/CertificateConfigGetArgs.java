@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigGetArgs;
@@ -20,7 +20,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="publicKey", required=true)
+    @Import(name="publicKey", required=true)
       private final Output<CertificateConfigPublicKeyGetArgs> publicKey;
 
     public Output<CertificateConfigPublicKeyGetArgs> getPublicKey() {
@@ -32,7 +32,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subjectConfig", required=true)
+    @Import(name="subjectConfig", required=true)
       private final Output<CertificateConfigSubjectConfigGetArgs> subjectConfig;
 
     public Output<CertificateConfigSubjectConfigGetArgs> getSubjectConfig() {
@@ -44,7 +44,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="x509Config", required=true)
+    @Import(name="x509Config", required=true)
       private final Output<CertificateConfigX509ConfigGetArgs> x509Config;
 
     public Output<CertificateConfigX509ConfigGetArgs> getX509Config() {

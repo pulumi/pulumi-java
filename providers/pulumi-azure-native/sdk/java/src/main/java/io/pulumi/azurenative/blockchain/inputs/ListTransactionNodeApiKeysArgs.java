@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blockchain.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
      * Blockchain member name.
      * 
      */
-    @InputImport(name="blockchainMemberName", required=true)
+    @Import(name="blockchainMemberName", required=true)
       private final String blockchainMemberName;
 
     public String getBlockchainMemberName() {
@@ -27,7 +27,7 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class ListTransactionNodeApiKeysArgs extends io.pulumi.resources.In
      * Transaction node name.
      * 
      */
-    @InputImport(name="transactionNodeName", required=true)
+    @Import(name="transactionNodeName", required=true)
       private final String transactionNodeName;
 
     public String getTransactionNodeName() {

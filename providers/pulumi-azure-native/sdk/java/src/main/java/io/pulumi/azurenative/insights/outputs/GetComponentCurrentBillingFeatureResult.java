@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentDataVolumeCapResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentCurrentBillingFeatureResult {
     /**
      * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
@@ -24,10 +24,10 @@ public final class GetComponentCurrentBillingFeatureResult {
      */
     private final @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentCurrentBillingFeatureResult(
-        @OutputCustomType.Parameter("currentBillingFeatures") @Nullable List<String> currentBillingFeatures,
-        @OutputCustomType.Parameter("dataVolumeCap") @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
+        @CustomType.Parameter("currentBillingFeatures") @Nullable List<String> currentBillingFeatures,
+        @CustomType.Parameter("dataVolumeCap") @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
         this.currentBillingFeatures = currentBillingFeatures;
         this.dataVolumeCap = dataVolumeCap;
     }

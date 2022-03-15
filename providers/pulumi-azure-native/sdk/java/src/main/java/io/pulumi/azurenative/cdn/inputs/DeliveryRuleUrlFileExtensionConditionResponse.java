@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.UrlFileExtensionMatchConditionParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulu
      * Expected value is 'UrlFileExtension'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse extends io.pulu
      * Defines the parameters for the condition.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final UrlFileExtensionMatchConditionParametersResponse parameters;
 
     public UrlFileExtensionMatchConditionParametersResponse getParameters() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DomainEncryptionAtRestOptions extends io.pulumi.resources.Inv
 
     public static final DomainEncryptionAtRestOptions Empty = new DomainEncryptionAtRestOptions();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {

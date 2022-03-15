@@ -8,12 +8,12 @@ import io.pulumi.awsnative.customerprofiles.outputs.IntegrationS3SourcePropertie
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationSalesforceSourceProperties;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationServiceNowSourceProperties;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationZendeskSourceProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationSourceConnectorProperties {
     private final @Nullable IntegrationMarketoSourceProperties marketo;
     private final @Nullable IntegrationS3SourceProperties s3;
@@ -21,13 +21,13 @@ public final class IntegrationSourceConnectorProperties {
     private final @Nullable IntegrationServiceNowSourceProperties serviceNow;
     private final @Nullable IntegrationZendeskSourceProperties zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationSourceConnectorProperties(
-        @OutputCustomType.Parameter("marketo") @Nullable IntegrationMarketoSourceProperties marketo,
-        @OutputCustomType.Parameter("s3") @Nullable IntegrationS3SourceProperties s3,
-        @OutputCustomType.Parameter("salesforce") @Nullable IntegrationSalesforceSourceProperties salesforce,
-        @OutputCustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowSourceProperties serviceNow,
-        @OutputCustomType.Parameter("zendesk") @Nullable IntegrationZendeskSourceProperties zendesk) {
+        @CustomType.Parameter("marketo") @Nullable IntegrationMarketoSourceProperties marketo,
+        @CustomType.Parameter("s3") @Nullable IntegrationS3SourceProperties s3,
+        @CustomType.Parameter("salesforce") @Nullable IntegrationSalesforceSourceProperties salesforce,
+        @CustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowSourceProperties serviceNow,
+        @CustomType.Parameter("zendesk") @Nullable IntegrationZendeskSourceProperties zendesk) {
         this.marketo = marketo;
         this.s3 = s3;
         this.salesforce = salesforce;

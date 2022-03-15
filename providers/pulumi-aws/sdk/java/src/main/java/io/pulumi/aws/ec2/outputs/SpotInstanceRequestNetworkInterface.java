@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotInstanceRequestNetworkInterface {
     /**
      * Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
@@ -29,11 +29,11 @@ public final class SpotInstanceRequestNetworkInterface {
      */
     private final String networkInterfaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotInstanceRequestNetworkInterface(
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
-        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
+        @CustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @CustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @CustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceIndex = deviceIndex;
         this.networkInterfaceId = networkInterfaceId;

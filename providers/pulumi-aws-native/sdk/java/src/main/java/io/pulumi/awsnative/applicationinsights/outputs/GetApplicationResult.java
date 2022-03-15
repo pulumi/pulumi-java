@@ -7,7 +7,7 @@ import io.pulumi.awsnative.applicationinsights.outputs.ApplicationComponentMonit
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationCustomComponent;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLogPatternSet;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * The ARN of the ApplicationInsights application.
@@ -63,17 +63,17 @@ public final class GetApplicationResult {
      */
     private final @Nullable List<ApplicationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("applicationARN") @Nullable String applicationARN,
-        @OutputCustomType.Parameter("autoConfigurationEnabled") @Nullable Boolean autoConfigurationEnabled,
-        @OutputCustomType.Parameter("cWEMonitorEnabled") @Nullable Boolean cWEMonitorEnabled,
-        @OutputCustomType.Parameter("componentMonitoringSettings") @Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings,
-        @OutputCustomType.Parameter("customComponents") @Nullable List<ApplicationCustomComponent> customComponents,
-        @OutputCustomType.Parameter("logPatternSets") @Nullable List<ApplicationLogPatternSet> logPatternSets,
-        @OutputCustomType.Parameter("opsCenterEnabled") @Nullable Boolean opsCenterEnabled,
-        @OutputCustomType.Parameter("opsItemSNSTopicArn") @Nullable String opsItemSNSTopicArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
+        @CustomType.Parameter("applicationARN") @Nullable String applicationARN,
+        @CustomType.Parameter("autoConfigurationEnabled") @Nullable Boolean autoConfigurationEnabled,
+        @CustomType.Parameter("cWEMonitorEnabled") @Nullable Boolean cWEMonitorEnabled,
+        @CustomType.Parameter("componentMonitoringSettings") @Nullable List<ApplicationComponentMonitoringSetting> componentMonitoringSettings,
+        @CustomType.Parameter("customComponents") @Nullable List<ApplicationCustomComponent> customComponents,
+        @CustomType.Parameter("logPatternSets") @Nullable List<ApplicationLogPatternSet> logPatternSets,
+        @CustomType.Parameter("opsCenterEnabled") @Nullable Boolean opsCenterEnabled,
+        @CustomType.Parameter("opsItemSNSTopicArn") @Nullable String opsItemSNSTopicArn,
+        @CustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
         this.applicationARN = applicationARN;
         this.autoConfigurationEnabled = autoConfigurationEnabled;
         this.cWEMonitorEnabled = cWEMonitorEnabled;

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath {
     /**
      * A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
@@ -15,8 +15,8 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      */
     private final String path;
 
-    @OutputCustomType.Constructor
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(@OutputCustomType.Parameter("path") String path) {
+    @CustomType.Constructor
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(@CustomType.Parameter("path") String path) {
         this.path = path;
     }
 

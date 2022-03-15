@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorTimestampColumn {
     /**
      * A timestamp format for the timestamps in the dataset
@@ -18,10 +18,10 @@ public final class AnomalyDetectorTimestampColumn {
     private final @Nullable String columnFormat;
     private final @Nullable String columnName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorTimestampColumn(
-        @OutputCustomType.Parameter("columnFormat") @Nullable String columnFormat,
-        @OutputCustomType.Parameter("columnName") @Nullable String columnName) {
+        @CustomType.Parameter("columnFormat") @Nullable String columnFormat,
+        @CustomType.Parameter("columnName") @Nullable String columnName) {
         this.columnFormat = columnFormat;
         this.columnName = columnName;
     }

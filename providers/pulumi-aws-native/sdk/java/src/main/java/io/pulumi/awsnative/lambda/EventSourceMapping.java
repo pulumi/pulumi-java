@@ -11,7 +11,7 @@ import io.pulumi.awsnative.lambda.outputs.EventSourceMappingSelfManagedEventSour
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
 import io.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -30,7 +30,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * The maximum number of items to retrieve in a single batch.
      * 
      */
-    @OutputExport(name="batchSize", type=Integer.class, parameters={})
+    @Export(name="batchSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> batchSize;
 
     /**
@@ -44,7 +44,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) If the function returns an error, split the batch in two and retry.
      * 
      */
-    @OutputExport(name="bisectBatchOnFunctionError", type=Boolean.class, parameters={})
+    @Export(name="bisectBatchOnFunctionError", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> bisectBatchOnFunctionError;
 
     /**
@@ -58,7 +58,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      * 
      */
-    @OutputExport(name="destinationConfig", type=EventSourceMappingDestinationConfig.class, parameters={})
+    @Export(name="destinationConfig", type=EventSourceMappingDestinationConfig.class, parameters={})
     private Output</* @Nullable */ EventSourceMappingDestinationConfig> destinationConfig;
 
     /**
@@ -72,7 +72,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * Disables the event source mapping to pause polling and invocation.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -86,7 +86,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the event source.
      * 
      */
-    @OutputExport(name="eventSourceArn", type=String.class, parameters={})
+    @Export(name="eventSourceArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventSourceArn;
 
     /**
@@ -100,7 +100,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * The filter criteria to control event filtering.
      * 
      */
-    @OutputExport(name="filterCriteria", type=FilterCriteriaProperties.class, parameters={})
+    @Export(name="filterCriteria", type=FilterCriteriaProperties.class, parameters={})
     private Output</* @Nullable */ FilterCriteriaProperties> filterCriteria;
 
     /**
@@ -114,7 +114,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * The name of the Lambda function.
      * 
      */
-    @OutputExport(name="functionName", type=String.class, parameters={})
+    @Export(name="functionName", type=String.class, parameters={})
     private Output<String> functionName;
 
     /**
@@ -128,7 +128,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) A list of response types supported by the function.
      * 
      */
-    @OutputExport(name="functionResponseTypes", type=List.class, parameters={EventSourceMappingFunctionResponseTypesItem.class})
+    @Export(name="functionResponseTypes", type=List.class, parameters={EventSourceMappingFunctionResponseTypesItem.class})
     private Output</* @Nullable */ List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes;
 
     /**
@@ -142,7 +142,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) The maximum amount of time to gather records before invoking the function, in seconds.
      * 
      */
-    @OutputExport(name="maximumBatchingWindowInSeconds", type=Integer.class, parameters={})
+    @Export(name="maximumBatchingWindowInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumBatchingWindowInSeconds;
 
     /**
@@ -156,7 +156,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) The maximum age of a record that Lambda sends to a function for processing.
      * 
      */
-    @OutputExport(name="maximumRecordAgeInSeconds", type=Integer.class, parameters={})
+    @Export(name="maximumRecordAgeInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumRecordAgeInSeconds;
 
     /**
@@ -170,7 +170,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) The maximum number of times to retry when the function returns an error.
      * 
      */
-    @OutputExport(name="maximumRetryAttempts", type=Integer.class, parameters={})
+    @Export(name="maximumRetryAttempts", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumRetryAttempts;
 
     /**
@@ -184,7 +184,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) The number of batches to process from each shard concurrently.
      * 
      */
-    @OutputExport(name="parallelizationFactor", type=Integer.class, parameters={})
+    @Export(name="parallelizationFactor", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> parallelizationFactor;
 
     /**
@@ -198,7 +198,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (ActiveMQ) A list of ActiveMQ queues.
      * 
      */
-    @OutputExport(name="queues", type=List.class, parameters={String.class})
+    @Export(name="queues", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> queues;
 
     /**
@@ -212,7 +212,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * Self-managed event source endpoints.
      * 
      */
-    @OutputExport(name="selfManagedEventSource", type=EventSourceMappingSelfManagedEventSource.class, parameters={})
+    @Export(name="selfManagedEventSource", type=EventSourceMappingSelfManagedEventSource.class, parameters={})
     private Output</* @Nullable */ EventSourceMappingSelfManagedEventSource> selfManagedEventSource;
 
     /**
@@ -226,7 +226,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * A list of SourceAccessConfiguration.
      * 
      */
-    @OutputExport(name="sourceAccessConfigurations", type=List.class, parameters={EventSourceMappingSourceAccessConfiguration.class})
+    @Export(name="sourceAccessConfigurations", type=List.class, parameters={EventSourceMappingSourceAccessConfiguration.class})
     private Output</* @Nullable */ List<EventSourceMappingSourceAccessConfiguration>> sourceAccessConfigurations;
 
     /**
@@ -240,7 +240,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
      * 
      */
-    @OutputExport(name="startingPosition", type=String.class, parameters={})
+    @Export(name="startingPosition", type=String.class, parameters={})
     private Output</* @Nullable */ String> startingPosition;
 
     /**
@@ -254,7 +254,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time seconds.
      * 
      */
-    @OutputExport(name="startingPositionTimestamp", type=Double.class, parameters={})
+    @Export(name="startingPositionTimestamp", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> startingPositionTimestamp;
 
     /**
@@ -268,7 +268,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Kafka) A list of Kafka topics.
      * 
      */
-    @OutputExport(name="topics", type=List.class, parameters={String.class})
+    @Export(name="topics", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> topics;
 
     /**
@@ -282,7 +282,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
      * 
      */
-    @OutputExport(name="tumblingWindowInSeconds", type=Integer.class, parameters={})
+    @Export(name="tumblingWindowInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tumblingWindowInSeconds;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DmlStatisticsResponse {
     /**
      * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
@@ -25,11 +25,11 @@ public final class DmlStatisticsResponse {
      */
     private final String updatedRowCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DmlStatisticsResponse(
-        @OutputCustomType.Parameter("deletedRowCount") String deletedRowCount,
-        @OutputCustomType.Parameter("insertedRowCount") String insertedRowCount,
-        @OutputCustomType.Parameter("updatedRowCount") String updatedRowCount) {
+        @CustomType.Parameter("deletedRowCount") String deletedRowCount,
+        @CustomType.Parameter("insertedRowCount") String insertedRowCount,
+        @CustomType.Parameter("updatedRowCount") String updatedRowCount) {
         this.deletedRowCount = deletedRowCount;
         this.insertedRowCount = insertedRowCount;
         this.updatedRowCount = updatedRowCount;

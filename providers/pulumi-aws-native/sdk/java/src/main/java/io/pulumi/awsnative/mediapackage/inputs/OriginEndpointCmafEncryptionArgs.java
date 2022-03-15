@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OriginEndpointCmafEncryptionArgs extends io.pulumi.resources.
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
      * 
      */
-    @InputImport(name="constantInitializationVector")
+    @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
 
     public Output<String> getConstantInitializationVector() {
@@ -35,14 +35,14 @@ public final class OriginEndpointCmafEncryptionArgs extends io.pulumi.resources.
      * Time (in seconds) between each encryption key rotation.
      * 
      */
-    @InputImport(name="keyRotationIntervalSeconds")
+    @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
     public Output<Integer> getKeyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Output.empty() : this.keyRotationIntervalSeconds;
     }
 
-    @InputImport(name="spekeKeyProvider", required=true)
+    @Import(name="spekeKeyProvider", required=true)
       private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {

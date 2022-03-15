@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcIpv4CidrBlockAssociationArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpv4CidrBlockAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -50,7 +50,7 @@ public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The ID of an IPv4 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
      * 
      */
-    @OutputExport(name="ipv4IpamPoolId", type=String.class, parameters={})
+    @Export(name="ipv4IpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipv4IpamPoolId;
 
     /**
@@ -64,7 +64,7 @@ public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
      * 
      */
-    @OutputExport(name="ipv4NetmaskLength", type=Integer.class, parameters={})
+    @Export(name="ipv4NetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv4NetmaskLength;
 
     /**
@@ -78,7 +78,7 @@ public class VpcIpv4CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The ID of the VPC to make the association with.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

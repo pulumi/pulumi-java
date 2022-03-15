@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.IPAddressProvisioningType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
      * The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
      * 
      */
-    @InputImport(name="ipAddressIds")
+    @Import(name="ipAddressIds")
       private final @Nullable Output<List<String>> ipAddressIds;
 
     public Output<List<String>> getIpAddressIds() {
@@ -35,7 +35,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
      * The default value is BatchManaged
      * 
      */
-    @InputImport(name="provision")
+    @Import(name="provision")
       private final @Nullable Output<IPAddressProvisioningType> provision;
 
     public Output<IPAddressProvisioningType> getProvision() {

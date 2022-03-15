@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.AllowedConfigListResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.AllowedSubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.IssuanceModesResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityPolicyResponse {
     /**
      * Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
@@ -51,15 +51,15 @@ public final class CertificateAuthorityPolicyResponse {
      */
     private final ReusableConfigWrapperResponse overwriteConfigValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityPolicyResponse(
-        @OutputCustomType.Parameter("allowedCommonNames") List<String> allowedCommonNames,
-        @OutputCustomType.Parameter("allowedConfigList") AllowedConfigListResponse allowedConfigList,
-        @OutputCustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
-        @OutputCustomType.Parameter("allowedLocationsAndOrganizations") List<SubjectResponse> allowedLocationsAndOrganizations,
-        @OutputCustomType.Parameter("allowedSans") AllowedSubjectAltNamesResponse allowedSans,
-        @OutputCustomType.Parameter("maximumLifetime") String maximumLifetime,
-        @OutputCustomType.Parameter("overwriteConfigValues") ReusableConfigWrapperResponse overwriteConfigValues) {
+        @CustomType.Parameter("allowedCommonNames") List<String> allowedCommonNames,
+        @CustomType.Parameter("allowedConfigList") AllowedConfigListResponse allowedConfigList,
+        @CustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
+        @CustomType.Parameter("allowedLocationsAndOrganizations") List<SubjectResponse> allowedLocationsAndOrganizations,
+        @CustomType.Parameter("allowedSans") AllowedSubjectAltNamesResponse allowedSans,
+        @CustomType.Parameter("maximumLifetime") String maximumLifetime,
+        @CustomType.Parameter("overwriteConfigValues") ReusableConfigWrapperResponse overwriteConfigValues) {
         this.allowedCommonNames = allowedCommonNames;
         this.allowedConfigList = allowedConfigList;
         this.allowedIssuanceModes = allowedIssuanceModes;

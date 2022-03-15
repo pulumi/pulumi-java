@@ -8,7 +8,7 @@ import io.pulumi.azurenative.peering.inputs.DirectConnectionArgs;
 import io.pulumi.azurenative.peering.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
      * The set of connections that constitute a direct peering.
      * 
      */
-    @InputImport(name="connections")
+    @Import(name="connections")
       private final @Nullable Output<List<DirectConnectionArgs>> connections;
 
     public Output<List<DirectConnectionArgs>> getConnections() {
@@ -38,7 +38,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
      * The type of direct peering.
      * 
      */
-    @InputImport(name="directPeeringType")
+    @Import(name="directPeeringType")
       private final @Nullable Output<Either<String,DirectPeeringType>> directPeeringType;
 
     public Output<Either<String,DirectPeeringType>> getDirectPeeringType() {
@@ -49,7 +49,7 @@ public final class PeeringPropertiesDirectArgs extends io.pulumi.resources.Resou
      * The reference of the peer ASN.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable Output<SubResourceArgs> peerAsn;
 
     public Output<SubResourceArgs> getPeerAsn() {

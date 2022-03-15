@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VertexResponse {
     /**
      * X coordinate.
@@ -20,10 +20,10 @@ public final class VertexResponse {
      */
     private final Integer y;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VertexResponse(
-        @OutputCustomType.Parameter("x") Integer x,
-        @OutputCustomType.Parameter("y") Integer y) {
+        @CustomType.Parameter("x") Integer x,
+        @CustomType.Parameter("y") Integer y) {
         this.x = x;
         this.y = y;
     }

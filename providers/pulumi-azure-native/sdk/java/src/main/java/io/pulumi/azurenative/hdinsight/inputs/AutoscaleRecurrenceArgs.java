@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
      * Array of schedule-based autoscale rules
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
 
     public Output<List<AutoscaleScheduleArgs>> getSchedule() {
@@ -35,7 +35,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
      * The time zone for the autoscale schedule times
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
      * Enum value name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -34,7 +34,7 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
      * Enum value number.
      * 
      */
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final Integer number;
 
     public Integer getNumber() {
@@ -45,7 +45,7 @@ public final class EnumValueResponse extends io.pulumi.resources.InvokeArgs {
      * Protocol buffer options.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {

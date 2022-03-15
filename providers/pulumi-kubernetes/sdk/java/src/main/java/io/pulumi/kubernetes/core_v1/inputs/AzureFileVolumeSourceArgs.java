@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -34,7 +34,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
      * the name of secret that contains Azure Storage Account Name and Key
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
     public Output<String> getSecretName() {
@@ -45,7 +45,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
      * Share Name
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
     public Output<String> getShareName() {

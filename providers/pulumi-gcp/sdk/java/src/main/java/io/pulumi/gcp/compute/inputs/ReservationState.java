@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsGetArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationGetArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
      * 
      */
-    @InputImport(name="commitment")
+    @Import(name="commitment")
       private final @Nullable Output<String> commitment;
 
     public Output<String> getCommitment() {
@@ -32,7 +32,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -43,7 +43,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -83,7 +83,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -95,7 +95,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="shareSettings")
+    @Import(name="shareSettings")
       private final @Nullable Output<ReservationShareSettingsGetArgs> shareSettings;
 
     public Output<ReservationShareSettingsGetArgs> getShareSettings() {
@@ -107,7 +107,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="specificReservation")
+    @Import(name="specificReservation")
       private final @Nullable Output<ReservationSpecificReservationGetArgs> specificReservation;
 
     public Output<ReservationSpecificReservationGetArgs> getSpecificReservation() {
@@ -120,7 +120,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * affinity for any reservation. Defaults to false.
      * 
      */
-    @InputImport(name="specificReservationRequired")
+    @Import(name="specificReservationRequired")
       private final @Nullable Output<Boolean> specificReservationRequired;
 
     public Output<Boolean> getSpecificReservationRequired() {
@@ -131,7 +131,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * The status of the reservation.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -142,7 +142,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * The zone where the reservation is made.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

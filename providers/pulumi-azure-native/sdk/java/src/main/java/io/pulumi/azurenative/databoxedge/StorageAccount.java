@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.StorageAccountArgs;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * BlobEndpoint of Storage Account
      * 
      */
-    @OutputExport(name="blobEndpoint", type=String.class, parameters={})
+    @Export(name="blobEndpoint", type=String.class, parameters={})
     private Output<String> blobEndpoint;
 
     /**
@@ -50,7 +50,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The Container Count. Present only for Storage Accounts with DataPolicy set to Cloud.
      * 
      */
-    @OutputExport(name="containerCount", type=Integer.class, parameters={})
+    @Export(name="containerCount", type=Integer.class, parameters={})
     private Output<Integer> containerCount;
 
     /**
@@ -64,7 +64,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Data policy of the storage Account.
      * 
      */
-    @OutputExport(name="dataPolicy", type=String.class, parameters={})
+    @Export(name="dataPolicy", type=String.class, parameters={})
     private Output<String> dataPolicy;
 
     /**
@@ -78,7 +78,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Description for the storage Account.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Storage Account Credential Id
      * 
      */
-    @OutputExport(name="storageAccountCredentialId", type=String.class, parameters={})
+    @Export(name="storageAccountCredentialId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountCredentialId;
 
     /**
@@ -120,7 +120,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Current status of the storage account
      * 
      */
-    @OutputExport(name="storageAccountStatus", type=String.class, parameters={})
+    @Export(name="storageAccountStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountStatus;
 
     /**
@@ -134,7 +134,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * StorageAccount object on ASE device
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -148,7 +148,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

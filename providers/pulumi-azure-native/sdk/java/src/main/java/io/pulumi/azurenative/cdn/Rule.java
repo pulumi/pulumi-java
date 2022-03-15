@@ -30,7 +30,7 @@ import io.pulumi.azurenative.cdn.outputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningActionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -59,7 +59,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={Object.class})
+    @Export(name="actions", type=List.class, parameters={Object.class})
     private Output<List<Object>> actions;
 
     /**
@@ -73,7 +73,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * A list of conditions that must be matched for the actions to be executed
      * 
      */
-    @OutputExport(name="conditions", type=List.class, parameters={Object.class})
+    @Export(name="conditions", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> conditions;
 
     /**
@@ -83,7 +83,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<Object>> getConditions() {
         return this.conditions;
     }
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -93,7 +93,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
-    @OutputExport(name="matchProcessingBehavior", type=String.class, parameters={})
+    @Export(name="matchProcessingBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> matchProcessingBehavior;
 
     /**
@@ -107,7 +107,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
      */
-    @OutputExport(name="order", type=Integer.class, parameters={})
+    @Export(name="order", type=Integer.class, parameters={})
     private Output<Integer> order;
 
     /**
@@ -135,7 +135,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -163,7 +163,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

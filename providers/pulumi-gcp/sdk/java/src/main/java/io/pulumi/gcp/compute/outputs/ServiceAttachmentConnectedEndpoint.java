@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAttachmentConnectedEndpoint {
     private final @Nullable String endpoint;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAttachmentConnectedEndpoint(
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.endpoint = endpoint;
         this.status = status;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouteSpecGrpcRouteMatchArgs extends io.pulumi.resources.Resou
      * The data to match from the gRPC request.
      * 
      */
-    @InputImport(name="metadatas")
+    @Import(name="metadatas")
       private final @Nullable Output<List<RouteSpecGrpcRouteMatchMetadataArgs>> metadatas;
 
     public Output<List<RouteSpecGrpcRouteMatchMetadataArgs>> getMetadatas() {
@@ -31,7 +31,7 @@ public final class RouteSpecGrpcRouteMatchArgs extends io.pulumi.resources.Resou
      * The method name to match from the request. If you specify a name, you must also specify a `service_name`.
      * 
      */
-    @InputImport(name="methodName")
+    @Import(name="methodName")
       private final @Nullable Output<String> methodName;
 
     public Output<String> getMethodName() {
@@ -43,7 +43,7 @@ public final class RouteSpecGrpcRouteMatchArgs extends io.pulumi.resources.Resou
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -54,7 +54,7 @@ public final class RouteSpecGrpcRouteMatchArgs extends io.pulumi.resources.Resou
      * The fully qualified domain name for the service to match from the request.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {

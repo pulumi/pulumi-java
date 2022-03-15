@@ -7,7 +7,7 @@ import io.pulumi.aws.organizations.inputs.OrganizationAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationNonMasterAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationRootGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
      */
-    @InputImport(name="accounts")
+    @Import(name="accounts")
       private final @Nullable Output<List<OrganizationAccountGetArgs>> accounts;
 
     public Output<List<OrganizationAccountGetArgs>> getAccounts() {
@@ -33,7 +33,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * ARN of the root
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
      */
-    @InputImport(name="awsServiceAccessPrincipals")
+    @Import(name="awsServiceAccessPrincipals")
       private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
     public Output<List<String>> getAwsServiceAccessPrincipals() {
@@ -55,7 +55,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
      */
-    @InputImport(name="enabledPolicyTypes")
+    @Import(name="enabledPolicyTypes")
       private final @Nullable Output<List<String>> enabledPolicyTypes;
 
     public Output<List<String>> getEnabledPolicyTypes() {
@@ -66,7 +66,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Specify "ALL" (default) or "CONSOLIDATED_BILLING".
      * 
      */
-    @InputImport(name="featureSet")
+    @Import(name="featureSet")
       private final @Nullable Output<String> featureSet;
 
     public Output<String> getFeatureSet() {
@@ -77,7 +77,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * ARN of the master account
      * 
      */
-    @InputImport(name="masterAccountArn")
+    @Import(name="masterAccountArn")
       private final @Nullable Output<String> masterAccountArn;
 
     public Output<String> getMasterAccountArn() {
@@ -88,7 +88,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Email address of the master account
      * 
      */
-    @InputImport(name="masterAccountEmail")
+    @Import(name="masterAccountEmail")
       private final @Nullable Output<String> masterAccountEmail;
 
     public Output<String> getMasterAccountEmail() {
@@ -99,7 +99,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the master account
      * 
      */
-    @InputImport(name="masterAccountId")
+    @Import(name="masterAccountId")
       private final @Nullable Output<String> masterAccountId;
 
     public Output<String> getMasterAccountId() {
@@ -110,7 +110,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
      */
-    @InputImport(name="nonMasterAccounts")
+    @Import(name="nonMasterAccounts")
       private final @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
 
     public Output<List<OrganizationNonMasterAccountGetArgs>> getNonMasterAccounts() {
@@ -121,7 +121,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * List of organization roots. All elements have these attributes:
      * 
      */
-    @InputImport(name="roots")
+    @Import(name="roots")
       private final @Nullable Output<List<OrganizationRootGetArgs>> roots;
 
     public Output<List<OrganizationRootGetArgs>> getRoots() {

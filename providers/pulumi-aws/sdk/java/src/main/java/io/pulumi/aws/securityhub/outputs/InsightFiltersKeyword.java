@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.securityhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersKeyword {
     /**
      * A value for the keyword.
@@ -15,8 +15,8 @@ public final class InsightFiltersKeyword {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private InsightFiltersKeyword(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private InsightFiltersKeyword(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

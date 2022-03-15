@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketMetricFilter {
     /**
      * Object prefix for filtering (singular).
@@ -23,10 +23,10 @@ public final class BucketMetricFilter {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketMetricFilter(
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.prefix = prefix;
         this.tags = tags;
     }

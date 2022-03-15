@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.StatusArgs;
@@ -24,7 +24,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -38,7 +38,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * Suggested HTTP return code for this status, 0 if not set.
      * 
      */
-    @OutputExport(name="code", type=Integer.class, parameters={})
+    @Export(name="code", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> code;
 
     /**
@@ -52,7 +52,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
      * 
      */
-    @OutputExport(name="details", type=StatusDetails.class, parameters={})
+    @Export(name="details", type=StatusDetails.class, parameters={})
     private Output</* @Nullable */ StatusDetails> details;
 
     /**
@@ -66,7 +66,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * A human-readable description of the status of this operation.
      * 
      */
-    @OutputExport(name="message", type=String.class, parameters={})
+    @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
@@ -94,7 +94,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="metadata", type=ListMeta.class, parameters={})
+    @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     /**
@@ -108,7 +108,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
      * 
      */
-    @OutputExport(name="reason", type=String.class, parameters={})
+    @Export(name="reason", type=String.class, parameters={})
     private Output</* @Nullable */ String> reason;
 
     /**
@@ -122,7 +122,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**

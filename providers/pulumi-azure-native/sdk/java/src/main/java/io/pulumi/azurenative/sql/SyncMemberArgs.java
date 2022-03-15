@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.SyncDirection;
 import io.pulumi.azurenative.sql.enums.SyncMemberDbType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Database name of the member database in the sync member.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -33,7 +33,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Database type of the sync member.
      * 
      */
-    @InputImport(name="databaseType")
+    @Import(name="databaseType")
       private final @Nullable Output<Either<String,SyncMemberDbType>> databaseType;
 
     public Output<Either<String,SyncMemberDbType>> getDatabaseType() {
@@ -44,7 +44,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Password of the member database in the sync member.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -55,7 +55,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Server name of the member database in the sync member
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -77,7 +77,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * SQL Server database id of the sync member.
      * 
      */
-    @InputImport(name="sqlServerDatabaseId")
+    @Import(name="sqlServerDatabaseId")
       private final @Nullable Output<String> sqlServerDatabaseId;
 
     public Output<String> getSqlServerDatabaseId() {
@@ -88,7 +88,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource id of the sync agent in the sync member.
      * 
      */
-    @InputImport(name="syncAgentId")
+    @Import(name="syncAgentId")
       private final @Nullable Output<String> syncAgentId;
 
     public Output<String> getSyncAgentId() {
@@ -99,7 +99,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Sync direction of the sync member.
      * 
      */
-    @InputImport(name="syncDirection")
+    @Import(name="syncDirection")
       private final @Nullable Output<Either<String,SyncDirection>> syncDirection;
 
     public Output<Either<String,SyncDirection>> getSyncDirection() {
@@ -110,7 +110,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the sync group on which the sync member is hosted.
      * 
      */
-    @InputImport(name="syncGroupName", required=true)
+    @Import(name="syncGroupName", required=true)
       private final Output<String> syncGroupName;
 
     public Output<String> getSyncGroupName() {
@@ -121,7 +121,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource id of the sync member logical database, for sync members in Azure.
      * 
      */
-    @InputImport(name="syncMemberAzureDatabaseResourceId")
+    @Import(name="syncMemberAzureDatabaseResourceId")
       private final @Nullable Output<String> syncMemberAzureDatabaseResourceId;
 
     public Output<String> getSyncMemberAzureDatabaseResourceId() {
@@ -132,7 +132,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the sync member.
      * 
      */
-    @InputImport(name="syncMemberName")
+    @Import(name="syncMemberName")
       private final @Nullable Output<String> syncMemberName;
 
     public Output<String> getSyncMemberName() {
@@ -143,7 +143,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to use private link connection.
      * 
      */
-    @InputImport(name="usePrivateLinkConnection")
+    @Import(name="usePrivateLinkConnection")
       private final @Nullable Output<Boolean> usePrivateLinkConnection;
 
     public Output<Boolean> getUsePrivateLinkConnection() {
@@ -154,7 +154,7 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
      * User name of the member database in the sync member.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

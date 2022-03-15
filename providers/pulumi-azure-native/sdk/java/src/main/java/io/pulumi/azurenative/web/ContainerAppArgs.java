@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.ConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.TemplateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Non versioned Container App configuration properties.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ConfigurationArgs> configuration;
 
     public Output<ConfigurationArgs> getConfiguration() {
@@ -32,7 +32,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -43,7 +43,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of the Container App's KubeEnvironment.
      * 
      */
-    @InputImport(name="kubeEnvironmentId")
+    @Import(name="kubeEnvironmentId")
       private final @Nullable Output<String> kubeEnvironmentId;
 
     public Output<String> getKubeEnvironmentId() {
@@ -54,7 +54,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Container App.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class ContainerAppArgs extends io.pulumi.resources.ResourceArgs {
      * Container App versioned application definition.
      * 
      */
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<TemplateArgs> template;
 
     public Output<TemplateArgs> getTemplate() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHealthCheckHttpHealthCheck {
     private final String host;
     private final Integer port;
@@ -18,15 +18,15 @@ public final class GetHealthCheckHttpHealthCheck {
     private final String requestPath;
     private final String response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHealthCheckHttpHealthCheck(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("portSpecification") String portSpecification,
-        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
-        @OutputCustomType.Parameter("requestPath") String requestPath,
-        @OutputCustomType.Parameter("response") String response) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("portSpecification") String portSpecification,
+        @CustomType.Parameter("proxyHeader") String proxyHeader,
+        @CustomType.Parameter("requestPath") String requestPath,
+        @CustomType.Parameter("response") String response) {
         this.host = host;
         this.port = port;
         this.portName = portName;

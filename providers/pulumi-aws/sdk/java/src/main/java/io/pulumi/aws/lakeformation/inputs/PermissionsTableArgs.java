@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -30,7 +30,7 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -41,14 +41,14 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
      * Name of the table resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="wildcard")
+    @Import(name="wildcard")
       private final @Nullable Output<Boolean> wildcard;
 
     public Output<Boolean> getWildcard() {

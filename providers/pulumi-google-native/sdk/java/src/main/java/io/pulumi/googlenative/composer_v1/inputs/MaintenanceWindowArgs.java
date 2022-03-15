@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * Maintenance window end time. It is used only to calculate the duration of the maintenance window. The value for end-time must be in the future, relative to `start_time`.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -32,7 +32,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * Maintenance window recurrence. Format is a subset of [RFC-5545](https://tools.ietf.org/html/rfc5545) `RRULE`. The only allowed values for `FREQ` field are `FREQ=DAILY` and `FREQ=WEEKLY;BYDAY=...` Example values: `FREQ=WEEKLY;BYDAY=TU,WE`, `FREQ=DAILY`.
      * 
      */
-    @InputImport(name="recurrence", required=true)
+    @Import(name="recurrence", required=true)
       private final Output<String> recurrence;
 
     public Output<String> getRecurrence() {
@@ -43,7 +43,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * Start time of the first recurrence of the maintenance window.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

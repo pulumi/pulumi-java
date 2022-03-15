@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttp2RouteTimeoutIdle;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttp2RouteTimeoutPerRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttp2RouteTimeout {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
@@ -23,10 +23,10 @@ public final class RouteSpecHttp2RouteTimeout {
      */
     private final @Nullable RouteSpecHttp2RouteTimeoutPerRequest perRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttp2RouteTimeout(
-        @OutputCustomType.Parameter("idle") @Nullable RouteSpecHttp2RouteTimeoutIdle idle,
-        @OutputCustomType.Parameter("perRequest") @Nullable RouteSpecHttp2RouteTimeoutPerRequest perRequest) {
+        @CustomType.Parameter("idle") @Nullable RouteSpecHttp2RouteTimeoutIdle idle,
+        @CustomType.Parameter("perRequest") @Nullable RouteSpecHttp2RouteTimeoutPerRequest perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }

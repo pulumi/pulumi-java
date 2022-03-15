@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerAccessLogs {
     /**
      * The S3 bucket name to store the logs in.
@@ -34,12 +34,12 @@ public final class LoadBalancerAccessLogs {
      */
     private final @Nullable Integer interval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerAccessLogs(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("interval") @Nullable Integer interval) {
         this.bucket = bucket;
         this.bucketPrefix = bucketPrefix;
         this.enabled = enabled;

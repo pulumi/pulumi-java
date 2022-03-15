@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.LoadBalancerConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * Name of the availability group listener.
      * 
      */
-    @InputImport(name="availabilityGroupListenerName")
+    @Import(name="availabilityGroupListenerName")
       private final @Nullable Output<String> availabilityGroupListenerName;
 
     public Output<String> getAvailabilityGroupListenerName() {
@@ -33,7 +33,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * Name of the availability group.
      * 
      */
-    @InputImport(name="availabilityGroupName")
+    @Import(name="availabilityGroupName")
       private final @Nullable Output<String> availabilityGroupName;
 
     public Output<String> getAvailabilityGroupName() {
@@ -44,7 +44,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * Create a default availability group if it does not exist.
      * 
      */
-    @InputImport(name="createDefaultAvailabilityGroupIfNotExist")
+    @Import(name="createDefaultAvailabilityGroupIfNotExist")
       private final @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
     public Output<Boolean> getCreateDefaultAvailabilityGroupIfNotExist() {
@@ -55,7 +55,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * List of load balancer configurations for an availability group listener.
      * 
      */
-    @InputImport(name="loadBalancerConfigurations")
+    @Import(name="loadBalancerConfigurations")
       private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
     public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
@@ -66,7 +66,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * Listener port.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -77,7 +77,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class AvailabilityGroupListenerArgs extends io.pulumi.resources.Res
      * Name of the SQL virtual machine group.
      * 
      */
-    @InputImport(name="sqlVirtualMachineGroupName", required=true)
+    @Import(name="sqlVirtualMachineGroupName", required=true)
       private final Output<String> sqlVirtualMachineGroupName;
 
     public Output<String> getSqlVirtualMachineGroupName() {

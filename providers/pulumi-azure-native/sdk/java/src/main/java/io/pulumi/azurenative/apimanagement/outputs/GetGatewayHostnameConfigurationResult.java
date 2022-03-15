@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGatewayHostnameConfigurationResult {
     /**
      * Identifier of Certificate entity that will be used for TLS connection establishment
@@ -58,17 +58,17 @@ public final class GetGatewayHostnameConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGatewayHostnameConfigurationResult(
-        @OutputCustomType.Parameter("certificateId") @Nullable String certificateId,
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("http2Enabled") @Nullable Boolean http2Enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
-        @OutputCustomType.Parameter("tls10Enabled") @Nullable Boolean tls10Enabled,
-        @OutputCustomType.Parameter("tls11Enabled") @Nullable Boolean tls11Enabled,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificateId") @Nullable String certificateId,
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("http2Enabled") @Nullable Boolean http2Enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
+        @CustomType.Parameter("tls10Enabled") @Nullable Boolean tls10Enabled,
+        @CustomType.Parameter("tls11Enabled") @Nullable Boolean tls11Enabled,
+        @CustomType.Parameter("type") String type) {
         this.certificateId = certificateId;
         this.hostname = hostname;
         this.http2Enabled = http2Enabled;

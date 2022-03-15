@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.DnsResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDnsResourceReferenceByTarResourcesResult {
     /**
      * The result of dns resource reference request. A list of dns resource references for each of the azure resource in the request
@@ -17,8 +17,8 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
      */
     private final @Nullable List<DnsResourceReferenceResponse> dnsResourceReferences;
 
-    @OutputCustomType.Constructor
-    private GetDnsResourceReferenceByTarResourcesResult(@OutputCustomType.Parameter("dnsResourceReferences") @Nullable List<DnsResourceReferenceResponse> dnsResourceReferences) {
+    @CustomType.Constructor
+    private GetDnsResourceReferenceByTarResourcesResult(@CustomType.Parameter("dnsResourceReferences") @Nullable List<DnsResourceReferenceResponse> dnsResourceReferences) {
         this.dnsResourceReferences = dnsResourceReferences;
     }
 

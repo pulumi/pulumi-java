@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AdBreakResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.EditAtomResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.ElementaryStreamResponse;
@@ -30,7 +30,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of ad breaks. Specifies where to insert ad break tags in the output manifests.
      * 
      */
-    @InputImport(name="adBreaks", required=true)
+    @Import(name="adBreaks", required=true)
       private final List<AdBreakResponse> adBreaks;
 
     public List<AdBreakResponse> getAdBreaks() {
@@ -41,7 +41,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of `Edit atom`s. Defines the ultimate timeline of the resulting file or manifest.
      * 
      */
-    @InputImport(name="editList", required=true)
+    @Import(name="editList", required=true)
       private final List<EditAtomResponse> editList;
 
     public List<EditAtomResponse> getEditList() {
@@ -52,7 +52,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of elementary streams.
      * 
      */
-    @InputImport(name="elementaryStreams", required=true)
+    @Import(name="elementaryStreams", required=true)
       private final List<ElementaryStreamResponse> elementaryStreams;
 
     public List<ElementaryStreamResponse> getElementaryStreams() {
@@ -63,7 +63,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of input assets stored in Cloud Storage.
      * 
      */
-    @InputImport(name="inputs", required=true)
+    @Import(name="inputs", required=true)
       private final List<InputResponse> inputs;
 
     public List<InputResponse> getInputs() {
@@ -74,7 +74,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of output manifests.
      * 
      */
-    @InputImport(name="manifests", required=true)
+    @Import(name="manifests", required=true)
       private final List<ManifestResponse> manifests;
 
     public List<ManifestResponse> getManifests() {
@@ -85,7 +85,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of multiplexing settings for output streams.
      * 
      */
-    @InputImport(name="muxStreams", required=true)
+    @Import(name="muxStreams", required=true)
       private final List<MuxStreamResponse> muxStreams;
 
     public List<MuxStreamResponse> getMuxStreams() {
@@ -96,7 +96,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Output configuration.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final OutputResponse output;
 
     public OutputResponse getOutput() {
@@ -107,7 +107,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of overlays on the output video, in descending Z-order.
      * 
      */
-    @InputImport(name="overlays", required=true)
+    @Import(name="overlays", required=true)
       private final List<OverlayResponse> overlays;
 
     public List<OverlayResponse> getOverlays() {
@@ -118,7 +118,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Destination on Pub/Sub.
      * 
      */
-    @InputImport(name="pubsubDestination", required=true)
+    @Import(name="pubsubDestination", required=true)
       private final PubsubDestinationResponse pubsubDestination;
 
     public PubsubDestinationResponse getPubsubDestination() {
@@ -129,7 +129,7 @@ public final class JobConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List of output sprite sheets.
      * 
      */
-    @InputImport(name="spriteSheets", required=true)
+    @Import(name="spriteSheets", required=true)
       private final List<SpriteSheetResponse> spriteSheets;
 
     public List<SpriteSheetResponse> getSpriteSheets() {

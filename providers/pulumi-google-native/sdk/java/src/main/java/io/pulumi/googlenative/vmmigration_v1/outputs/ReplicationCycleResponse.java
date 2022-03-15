@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationCycleResponse {
     /**
      * The current progress in percentage of this cycle.
@@ -21,10 +21,10 @@ public final class ReplicationCycleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationCycleResponse(
-        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("progressPercent") Integer progressPercent,
+        @CustomType.Parameter("startTime") String startTime) {
         this.progressPercent = progressPercent;
         this.startTime = startTime;
     }

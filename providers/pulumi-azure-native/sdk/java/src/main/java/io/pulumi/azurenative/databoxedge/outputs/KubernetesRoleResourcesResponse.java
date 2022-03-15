@@ -6,12 +6,12 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleComputeResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleNetworkResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleStorageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesRoleResourcesResponse {
     /**
      * Kubernetes role compute resource
@@ -29,11 +29,11 @@ public final class KubernetesRoleResourcesResponse {
      */
     private final @Nullable KubernetesRoleStorageResponse storage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesRoleResourcesResponse(
-        @OutputCustomType.Parameter("compute") KubernetesRoleComputeResponse compute,
-        @OutputCustomType.Parameter("network") KubernetesRoleNetworkResponse network,
-        @OutputCustomType.Parameter("storage") @Nullable KubernetesRoleStorageResponse storage) {
+        @CustomType.Parameter("compute") KubernetesRoleComputeResponse compute,
+        @CustomType.Parameter("network") KubernetesRoleNetworkResponse network,
+        @CustomType.Parameter("storage") @Nullable KubernetesRoleStorageResponse storage) {
         this.compute = compute;
         this.network = network;
         this.storage = storage;

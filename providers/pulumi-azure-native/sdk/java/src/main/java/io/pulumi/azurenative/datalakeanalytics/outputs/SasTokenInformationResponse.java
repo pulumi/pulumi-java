@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SasTokenInformationResponse {
     /**
      * The access token for the associated Azure Storage Container.
@@ -15,8 +15,8 @@ public final class SasTokenInformationResponse {
      */
     private final String accessToken;
 
-    @OutputCustomType.Constructor
-    private SasTokenInformationResponse(@OutputCustomType.Parameter("accessToken") String accessToken) {
+    @CustomType.Constructor
+    private SasTokenInformationResponse(@CustomType.Parameter("accessToken") String accessToken) {
         this.accessToken = accessToken;
     }
 

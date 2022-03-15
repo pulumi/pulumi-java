@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventCategoriesResult {
     /**
      * A list of the event categories.
@@ -24,11 +24,11 @@ public final class GetEventCategoriesResult {
     private final String id;
     private final @Nullable String sourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventCategoriesResult(
-        @OutputCustomType.Parameter("eventCategories") List<String> eventCategories,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType) {
+        @CustomType.Parameter("eventCategories") List<String> eventCategories,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("sourceType") @Nullable String sourceType) {
         this.eventCategories = eventCategories;
         this.id = id;
         this.sourceType = sourceType;

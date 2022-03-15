@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
      * Key of the label
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -33,7 +33,7 @@ public final class DeploymentLabelEntryArgs extends io.pulumi.resources.Resource
      * Value of the label
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

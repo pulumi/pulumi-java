@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobPubsubTargetArgs;
@@ -25,7 +25,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="appEngineHttpTarget")
+    @Import(name="appEngineHttpTarget")
       private final @Nullable Output<JobAppEngineHttpTargetArgs> appEngineHttpTarget;
 
     public Output<JobAppEngineHttpTargetArgs> getAppEngineHttpTarget() {
@@ -43,7 +43,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
-    @InputImport(name="attemptDeadline")
+    @Import(name="attemptDeadline")
       private final @Nullable Output<String> attemptDeadline;
 
     public Output<String> getAttemptDeadline() {
@@ -55,7 +55,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * This string must not contain more than 500 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -69,7 +69,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="httpTarget")
+    @Import(name="httpTarget")
       private final @Nullable Output<JobHttpTargetArgs> httpTarget;
 
     public Output<JobHttpTargetArgs> getHttpTarget() {
@@ -80,7 +80,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -106,7 +106,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pubsubTarget")
+    @Import(name="pubsubTarget")
       private final @Nullable Output<JobPubsubTargetArgs> pubsubTarget;
 
     public Output<JobPubsubTargetArgs> getPubsubTarget() {
@@ -117,7 +117,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -131,7 +131,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retryConfig")
+    @Import(name="retryConfig")
       private final @Nullable Output<JobRetryConfigArgs> retryConfig;
 
     public Output<JobRetryConfigArgs> getRetryConfig() {
@@ -142,7 +142,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the schedule on which the job will be executed.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -154,7 +154,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The value of this field must be a time zone name from the tz database.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

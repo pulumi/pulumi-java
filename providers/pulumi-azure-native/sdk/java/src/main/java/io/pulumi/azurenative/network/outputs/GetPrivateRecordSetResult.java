@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.PtrRecordResponse;
 import io.pulumi.azurenative.network.outputs.SoaRecordResponse;
 import io.pulumi.azurenative.network.outputs.SrvRecordResponse;
 import io.pulumi.azurenative.network.outputs.TxtRecordResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateRecordSetResult {
     /**
      * The list of A records in the record set.
@@ -104,24 +104,24 @@ public final class GetPrivateRecordSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateRecordSetResult(
-        @OutputCustomType.Parameter("aRecords") @Nullable List<ARecordResponse> aRecords,
-        @OutputCustomType.Parameter("aaaaRecords") @Nullable List<AaaaRecordResponse> aaaaRecords,
-        @OutputCustomType.Parameter("cnameRecord") @Nullable CnameRecordResponse cnameRecord,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isAutoRegistered") Boolean isAutoRegistered,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("mxRecords") @Nullable List<MxRecordResponse> mxRecords,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ptrRecords") @Nullable List<PtrRecordResponse> ptrRecords,
-        @OutputCustomType.Parameter("soaRecord") @Nullable SoaRecordResponse soaRecord,
-        @OutputCustomType.Parameter("srvRecords") @Nullable List<SrvRecordResponse> srvRecords,
-        @OutputCustomType.Parameter("ttl") @Nullable Double ttl,
-        @OutputCustomType.Parameter("txtRecords") @Nullable List<TxtRecordResponse> txtRecords,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("aRecords") @Nullable List<ARecordResponse> aRecords,
+        @CustomType.Parameter("aaaaRecords") @Nullable List<AaaaRecordResponse> aaaaRecords,
+        @CustomType.Parameter("cnameRecord") @Nullable CnameRecordResponse cnameRecord,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isAutoRegistered") Boolean isAutoRegistered,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("mxRecords") @Nullable List<MxRecordResponse> mxRecords,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ptrRecords") @Nullable List<PtrRecordResponse> ptrRecords,
+        @CustomType.Parameter("soaRecord") @Nullable SoaRecordResponse soaRecord,
+        @CustomType.Parameter("srvRecords") @Nullable List<SrvRecordResponse> srvRecords,
+        @CustomType.Parameter("ttl") @Nullable Double ttl,
+        @CustomType.Parameter("txtRecords") @Nullable List<TxtRecordResponse> txtRecords,
+        @CustomType.Parameter("type") String type) {
         this.aRecords = aRecords;
         this.aaaaRecords = aaaaRecords;
         this.cnameRecord = cnameRecord;

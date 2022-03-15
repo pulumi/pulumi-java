@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobQueryDefaultDatasetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobQueryDestinationEncryptionConfigurationArgs;
 import io.pulumi.gcp.bigquery.inputs.JobQueryDestinationTableArgs;
@@ -28,7 +28,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * However, you must still set destinationTable when result size exceeds the allowed maximum response size.
      * 
      */
-    @InputImport(name="allowLargeResults")
+    @Import(name="allowLargeResults")
       private final @Nullable Output<Boolean> allowLargeResults;
 
     public Output<Boolean> getAllowLargeResults() {
@@ -44,7 +44,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
      */
-    @InputImport(name="createDisposition")
+    @Import(name="createDisposition")
       private final @Nullable Output<String> createDisposition;
 
     public Output<String> getCreateDisposition() {
@@ -56,7 +56,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultDataset")
+    @Import(name="defaultDataset")
       private final @Nullable Output<JobQueryDefaultDatasetArgs> defaultDataset;
 
     public Output<JobQueryDefaultDatasetArgs> getDefaultDataset() {
@@ -68,7 +68,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destinationEncryptionConfiguration")
+    @Import(name="destinationEncryptionConfiguration")
       private final @Nullable Output<JobQueryDestinationEncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Output<JobQueryDestinationEncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
@@ -80,7 +80,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destinationTable")
+    @Import(name="destinationTable")
       private final @Nullable Output<JobQueryDestinationTableArgs> destinationTable;
 
     public Output<JobQueryDestinationTableArgs> getDestinationTable() {
@@ -92,7 +92,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
      * 
      */
-    @InputImport(name="flattenResults")
+    @Import(name="flattenResults")
       private final @Nullable Output<Boolean> flattenResults;
 
     public Output<Boolean> getFlattenResults() {
@@ -104,7 +104,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * If unspecified, this will be set to your project default.
      * 
      */
-    @InputImport(name="maximumBillingTier")
+    @Import(name="maximumBillingTier")
       private final @Nullable Output<Integer> maximumBillingTier;
 
     public Output<Integer> getMaximumBillingTier() {
@@ -116,7 +116,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * If unspecified, this will be set to your project default.
      * 
      */
-    @InputImport(name="maximumBytesBilled")
+    @Import(name="maximumBytesBilled")
       private final @Nullable Output<String> maximumBytesBilled;
 
     public Output<String> getMaximumBytesBilled() {
@@ -127,7 +127,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
      * 
      */
-    @InputImport(name="parameterMode")
+    @Import(name="parameterMode")
       private final @Nullable Output<String> parameterMode;
 
     public Output<String> getParameterMode() {
@@ -140,7 +140,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `INTERACTIVE` and `BATCH`.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<String> priority;
 
     public Output<String> getPriority() {
@@ -152,7 +152,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -168,7 +168,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
      */
-    @InputImport(name="schemaUpdateOptions")
+    @Import(name="schemaUpdateOptions")
       private final @Nullable Output<List<String>> schemaUpdateOptions;
 
     public Output<List<String>> getSchemaUpdateOptions() {
@@ -180,7 +180,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scriptOptions")
+    @Import(name="scriptOptions")
       private final @Nullable Output<JobQueryScriptOptionsArgs> scriptOptions;
 
     public Output<JobQueryScriptOptionsArgs> getScriptOptions() {
@@ -192,7 +192,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * If set to false, the query will use BigQuery's standard SQL.
      * 
      */
-    @InputImport(name="useLegacySql")
+    @Import(name="useLegacySql")
       private final @Nullable Output<Boolean> useLegacySql;
 
     public Output<Boolean> getUseLegacySql() {
@@ -205,7 +205,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is true.
      * 
      */
-    @InputImport(name="useQueryCache")
+    @Import(name="useQueryCache")
       private final @Nullable Output<Boolean> useQueryCache;
 
     public Output<Boolean> getUseQueryCache() {
@@ -217,7 +217,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="userDefinedFunctionResources")
+    @Import(name="userDefinedFunctionResources")
       private final @Nullable Output<List<JobQueryUserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
     public Output<List<JobQueryUserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
@@ -235,7 +235,7 @@ public final class JobQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
      */
-    @InputImport(name="writeDisposition")
+    @Import(name="writeDisposition")
       private final @Nullable Output<String> writeDisposition;
 
     public Output<String> getWriteDisposition() {

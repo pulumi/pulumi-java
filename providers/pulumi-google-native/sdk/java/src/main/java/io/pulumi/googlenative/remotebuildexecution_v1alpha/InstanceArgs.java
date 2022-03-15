@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The policy to define whether or not RBE features can be used or how they can be used.
      * 
      */
-    @InputImport(name="featurePolicy")
+    @Import(name="featurePolicy")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> getFeaturePolicy() {
@@ -30,7 +30,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the created instance. A valid `instance_id` must: be 6-50 characters long, contain only lowercase letters, digits, hyphens and underscores, start with a lowercase letter, and end with a lowercase letter or a digit.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -41,7 +41,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The location is a GCP region. Currently only `us-central1` is supported.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,14 +52,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
         return this.parent == null ? Output.empty() : this.parent;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

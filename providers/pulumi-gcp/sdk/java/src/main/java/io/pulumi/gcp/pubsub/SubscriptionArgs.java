@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionDeadLetterPolicyArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionExpirationPolicyArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigArgs;
@@ -39,7 +39,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * will eventually redeliver the message.
      * 
      */
-    @InputImport(name="ackDeadlineSeconds")
+    @Import(name="ackDeadlineSeconds")
       private final @Nullable Output<Integer> ackDeadlineSeconds;
 
     public Output<Integer> getAckDeadlineSeconds() {
@@ -57,7 +57,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="deadLetterPolicy")
+    @Import(name="deadLetterPolicy")
       private final @Nullable Output<SubscriptionDeadLetterPolicyArgs> deadLetterPolicy;
 
     public Output<SubscriptionDeadLetterPolicyArgs> getDeadLetterPolicy() {
@@ -70,7 +70,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * may be delivered in any order.
      * 
      */
-    @InputImport(name="enableMessageOrdering")
+    @Import(name="enableMessageOrdering")
       private final @Nullable Output<Boolean> enableMessageOrdering;
 
     public Output<Boolean> getEnableMessageOrdering() {
@@ -88,7 +88,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="expirationPolicy")
+    @Import(name="expirationPolicy")
       private final @Nullable Output<SubscriptionExpirationPolicyArgs> expirationPolicy;
 
     public Output<SubscriptionExpirationPolicyArgs> getExpirationPolicy() {
@@ -102,7 +102,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * you can't modify the filter.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -113,7 +113,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to this Subscription.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -131,7 +131,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * by 's'. Example: `"600.5s"`.
      * 
      */
-    @InputImport(name="messageRetentionDuration")
+    @Import(name="messageRetentionDuration")
       private final @Nullable Output<String> messageRetentionDuration;
 
     public Output<String> getMessageRetentionDuration() {
@@ -142,7 +142,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the subscription.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -154,7 +154,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -168,7 +168,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pushConfig")
+    @Import(name="pushConfig")
       private final @Nullable Output<SubscriptionPushConfigArgs> pushConfig;
 
     public Output<SubscriptionPushConfigArgs> getPushConfig() {
@@ -182,7 +182,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * messageRetentionDuration window.
      * 
      */
-    @InputImport(name="retainAckedMessages")
+    @Import(name="retainAckedMessages")
       private final @Nullable Output<Boolean> retainAckedMessages;
 
     public Output<Boolean> getRetainAckedMessages() {
@@ -196,7 +196,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<SubscriptionRetryPolicyArgs> retryPolicy;
 
     public Output<SubscriptionRetryPolicyArgs> getRetryPolicy() {
@@ -207,7 +207,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to a Topic resource.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

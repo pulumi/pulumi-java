@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,28 +20,28 @@ public final class ApiConfigIamMemberArgs extends io.pulumi.resources.ResourceAr
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="api", required=true)
+    @Import(name="api", required=true)
       private final Output<String> api;
 
     public Output<String> getApi() {
         return this.api;
     }
 
-    @InputImport(name="apiConfig", required=true)
+    @Import(name="apiConfig", required=true)
       private final Output<String> apiConfig;
 
     public Output<String> getApiConfig() {
         return this.apiConfig;
     }
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ApiConfigIamMemberConditionArgs> condition;
 
     public Output<ApiConfigIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -53,7 +53,7 @@ public final class ApiConfigIamMemberArgs extends io.pulumi.resources.ResourceAr
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -66,7 +66,7 @@ public final class ApiConfigIamMemberArgs extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

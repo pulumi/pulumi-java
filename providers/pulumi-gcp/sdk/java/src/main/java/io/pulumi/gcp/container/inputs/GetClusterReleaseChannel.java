@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetClusterReleaseChannel extends io.pulumi.resources.InvokeAr
 
     public static final GetClusterReleaseChannel Empty = new GetClusterReleaseChannel();
 
-    @InputImport(name="channel", required=true)
+    @Import(name="channel", required=true)
       private final String channel;
 
     public String getChannel() {

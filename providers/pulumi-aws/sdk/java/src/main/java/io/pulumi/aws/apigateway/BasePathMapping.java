@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.BasePathMappingArgs;
 import io.pulumi.aws.apigateway.inputs.BasePathMappingState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +40,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * Path segment that must be prepended to the path when accessing the API via this mapping. If omitted, the API is exposed at the root of the given domain.
      * 
      */
-    @OutputExport(name="basePath", type=String.class, parameters={})
+    @Export(name="basePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> basePath;
 
     /**
@@ -54,7 +54,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The already-registered domain name to connect the API to.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -68,7 +68,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The id of the API to connect.
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**
@@ -82,7 +82,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.
      * 
      */
-    @OutputExport(name="stageName", type=String.class, parameters={})
+    @Export(name="stageName", type=String.class, parameters={})
     private Output</* @Nullable */ String> stageName;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetHostArgs extends io.pulumi.resources.InvokeArgs {
      * Id of the host created.
      * 
      */
-    @InputImport(name="hostId", required=true)
+    @Import(name="hostId", required=true)
       private final String hostId;
 
     public String getHostId() {

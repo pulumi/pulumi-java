@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
      * The position of the action in the receipt rule
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<Integer> position;
 
     public Output<Integer> getPosition() {
@@ -30,7 +30,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
      * The scope to apply
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -41,7 +41,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
      * The ARN of an SNS topic to notify
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

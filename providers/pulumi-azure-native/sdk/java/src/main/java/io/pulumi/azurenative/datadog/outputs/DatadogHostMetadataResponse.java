@@ -5,13 +5,13 @@ package io.pulumi.azurenative.datadog.outputs;
 
 import io.pulumi.azurenative.datadog.outputs.DatadogInstallMethodResponse;
 import io.pulumi.azurenative.datadog.outputs.DatadogLogsAgentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatadogHostMetadataResponse {
     /**
      * The agent version.
@@ -21,11 +21,11 @@ public final class DatadogHostMetadataResponse {
     private final @Nullable DatadogInstallMethodResponse installMethod;
     private final @Nullable DatadogLogsAgentResponse logsAgent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatadogHostMetadataResponse(
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("installMethod") @Nullable DatadogInstallMethodResponse installMethod,
-        @OutputCustomType.Parameter("logsAgent") @Nullable DatadogLogsAgentResponse logsAgent) {
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("installMethod") @Nullable DatadogInstallMethodResponse installMethod,
+        @CustomType.Parameter("logsAgent") @Nullable DatadogLogsAgentResponse logsAgent) {
         this.agentVersion = agentVersion;
         this.installMethod = installMethod;
         this.logsAgent = logsAgent;

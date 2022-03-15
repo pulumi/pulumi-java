@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuiltImageResponse {
     /**
      * Docker Registry 2.0 digest.
@@ -26,11 +26,11 @@ public final class BuiltImageResponse {
      */
     private final TimeSpanResponse pushTiming;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuiltImageResponse(
-        @OutputCustomType.Parameter("digest") String digest,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pushTiming") TimeSpanResponse pushTiming) {
+        @CustomType.Parameter("digest") String digest,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pushTiming") TimeSpanResponse pushTiming) {
         this.digest = digest;
         this.name = name;
         this.pushTiming = pushTiming;

@@ -8,7 +8,7 @@ import io.pulumi.aws.lambda.LayerVersionArgs;
 import io.pulumi.aws.lambda.inputs.LayerVersionState;
 import io.pulumi.core.Archive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * ARN of the Lambda Layer with version.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
      * 
      */
-    @OutputExport(name="code", type=Archive.class, parameters={})
+    @Export(name="code", type=Archive.class, parameters={})
     private Output</* @Nullable */ Archive> code;
 
     /**
@@ -64,7 +64,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * List of [Architectures](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleArchitectures) this layer is compatible with. Currently `x86_64` and `arm64` can be specified.
      * 
      */
-    @OutputExport(name="compatibleArchitectures", type=List.class, parameters={String.class})
+    @Export(name="compatibleArchitectures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> compatibleArchitectures;
 
     /**
@@ -78,7 +78,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * List of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
      * 
      */
-    @OutputExport(name="compatibleRuntimes", type=List.class, parameters={String.class})
+    @Export(name="compatibleRuntimes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> compatibleRuntimes;
 
     /**
@@ -92,7 +92,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Date this resource was created.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -106,7 +106,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Description of what your Lambda Layer does.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -120,7 +120,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * ARN of the Lambda Layer without version.
      * 
      */
-    @OutputExport(name="layerArn", type=String.class, parameters={})
+    @Export(name="layerArn", type=String.class, parameters={})
     private Output<String> layerArn;
 
     /**
@@ -134,7 +134,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Unique name for your Lambda Layer
      * 
      */
-    @OutputExport(name="layerName", type=String.class, parameters={})
+    @Export(name="layerName", type=String.class, parameters={})
     private Output<String> layerName;
 
     /**
@@ -148,7 +148,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
      * 
      */
-    @OutputExport(name="licenseInfo", type=String.class, parameters={})
+    @Export(name="licenseInfo", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseInfo;
 
     /**
@@ -162,7 +162,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
      * 
      */
-    @OutputExport(name="s3Bucket", type=String.class, parameters={})
+    @Export(name="s3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Bucket;
 
     /**
@@ -176,7 +176,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * S3 key of an object containing the function's deployment package. Conflicts with `filename`.
      * 
      */
-    @OutputExport(name="s3Key", type=String.class, parameters={})
+    @Export(name="s3Key", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3Key;
 
     /**
@@ -190,7 +190,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Object version containing the function's deployment package. Conflicts with `filename`.
      * 
      */
-    @OutputExport(name="s3ObjectVersion", type=String.class, parameters={})
+    @Export(name="s3ObjectVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3ObjectVersion;
 
     /**
@@ -204,7 +204,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * ARN of a signing job.
      * 
      */
-    @OutputExport(name="signingJobArn", type=String.class, parameters={})
+    @Export(name="signingJobArn", type=String.class, parameters={})
     private Output<String> signingJobArn;
 
     /**
@@ -218,7 +218,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * ARN for a signing profile version.
      * 
      */
-    @OutputExport(name="signingProfileVersionArn", type=String.class, parameters={})
+    @Export(name="signingProfileVersionArn", type=String.class, parameters={})
     private Output<String> signingProfileVersionArn;
 
     /**
@@ -232,7 +232,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Whether to retain the old version of a previously deployed Lambda Layer. Default is `false`. When this is not set to `true`, changing any of `compatible_architectures`, `compatible_runtimes`, `description`, `filename`, `layer_name`, `license_info`, `s3_bucket`, `s3_key`, `s3_object_version`, or `source_code_hash` forces deletion of the existing layer version and creation of a new layer version.
      * 
      */
-    @OutputExport(name="skipDestroy", type=Boolean.class, parameters={})
+    @Export(name="skipDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipDestroy;
 
     /**
@@ -242,7 +242,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getSkipDestroy() {
         return this.skipDestroy;
     }
-    @OutputExport(name="sourceCodeHash", type=String.class, parameters={})
+    @Export(name="sourceCodeHash", type=String.class, parameters={})
     private Output<String> sourceCodeHash;
 
     public Output<String> getSourceCodeHash() {
@@ -252,7 +252,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Size in bytes of the function .zip file.
      * 
      */
-    @OutputExport(name="sourceCodeSize", type=Integer.class, parameters={})
+    @Export(name="sourceCodeSize", type=Integer.class, parameters={})
     private Output<Integer> sourceCodeSize;
 
     /**
@@ -266,7 +266,7 @@ public class LayerVersion extends io.pulumi.resources.CustomResource {
      * Lambda Layer version.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

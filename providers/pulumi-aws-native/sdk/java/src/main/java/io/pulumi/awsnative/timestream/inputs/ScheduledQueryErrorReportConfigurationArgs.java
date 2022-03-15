@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryS3ConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ScheduledQueryErrorReportConfigurationArgs extends io.pulumi.
 
     public static final ScheduledQueryErrorReportConfigurationArgs Empty = new ScheduledQueryErrorReportConfigurationArgs();
 
-    @InputImport(name="s3Configuration", required=true)
+    @Import(name="s3Configuration", required=true)
       private final Output<ScheduledQueryS3ConfigurationArgs> s3Configuration;
 
     public Output<ScheduledQueryS3ConfigurationArgs> getS3Configuration() {

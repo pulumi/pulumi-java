@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.inputs.IdentityArgs;
 import io.pulumi.azurenative.resources.inputs.PlanArgs;
 import io.pulumi.azurenative.resources.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -34,7 +34,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of the resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -45,7 +45,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the resource that manages this resource.
      * 
      */
-    @InputImport(name="managedBy")
+    @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
@@ -67,7 +67,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The parent resource identity.
      * 
      */
-    @InputImport(name="parentResourcePath", required=true)
+    @Import(name="parentResourcePath", required=true)
       private final Output<String> parentResourcePath;
 
     public Output<String> getParentResourcePath() {
@@ -78,7 +78,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The plan of the resource.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
     public Output<PlanArgs> getPlan() {
@@ -89,7 +89,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -100,7 +100,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group for the resource. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -111,7 +111,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource to create.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -122,7 +122,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of the resource provider.
      * 
      */
-    @InputImport(name="resourceProviderNamespace", required=true)
+    @Import(name="resourceProviderNamespace", required=true)
       private final Output<String> resourceProviderNamespace;
 
     public Output<String> getResourceProviderNamespace() {
@@ -133,7 +133,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource type of the resource to create.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -144,7 +144,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -155,7 +155,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

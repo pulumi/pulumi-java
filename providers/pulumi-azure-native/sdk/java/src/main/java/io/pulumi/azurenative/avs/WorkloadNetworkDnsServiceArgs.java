@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.DnsServiceLogLevelEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * Default DNS zone of the DNS Service.
      * 
      */
-    @InputImport(name="defaultDnsZone")
+    @Import(name="defaultDnsZone")
       private final @Nullable Output<String> defaultDnsZone;
 
     public Output<String> getDefaultDnsZone() {
@@ -33,7 +33,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * Display name of the DNS Service.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * NSX DNS Service identifier. Generally the same as the DNS Service's display name
      * 
      */
-    @InputImport(name="dnsServiceId")
+    @Import(name="dnsServiceId")
       private final @Nullable Output<String> dnsServiceId;
 
     public Output<String> getDnsServiceId() {
@@ -55,7 +55,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * DNS service IP of the DNS Service.
      * 
      */
-    @InputImport(name="dnsServiceIp")
+    @Import(name="dnsServiceIp")
       private final @Nullable Output<String> dnsServiceIp;
 
     public Output<String> getDnsServiceIp() {
@@ -66,7 +66,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * FQDN zones of the DNS Service.
      * 
      */
-    @InputImport(name="fqdnZones")
+    @Import(name="fqdnZones")
       private final @Nullable Output<List<String>> fqdnZones;
 
     public Output<List<String>> getFqdnZones() {
@@ -77,7 +77,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * DNS Service log level.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
     public Output<Either<String,DnsServiceLogLevelEnum>> getLogLevel() {
@@ -88,7 +88,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -99,7 +99,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
      * NSX revision number.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {

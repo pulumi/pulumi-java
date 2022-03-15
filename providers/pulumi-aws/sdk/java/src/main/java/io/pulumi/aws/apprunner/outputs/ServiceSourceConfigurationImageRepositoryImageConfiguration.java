@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfigurationImageRepositoryImageConfiguration {
     /**
      * The port that your application listens to in the container. Defaults to `"8080"`.
@@ -28,11 +28,11 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfiguration {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfigurationImageRepositoryImageConfiguration(
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
-        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
+        @CustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;

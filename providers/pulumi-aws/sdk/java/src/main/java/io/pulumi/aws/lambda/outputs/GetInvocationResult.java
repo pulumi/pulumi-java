@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInvocationResult {
     private final String functionName;
     /**
@@ -25,13 +25,13 @@ public final class GetInvocationResult {
      */
     private final String result;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInvocationResult(
-        @OutputCustomType.Parameter("functionName") String functionName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("input") String input,
-        @OutputCustomType.Parameter("qualifier") @Nullable String qualifier,
-        @OutputCustomType.Parameter("result") String result) {
+        @CustomType.Parameter("functionName") String functionName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("input") String input,
+        @CustomType.Parameter("qualifier") @Nullable String qualifier,
+        @CustomType.Parameter("result") String result) {
         this.functionName = functionName;
         this.id = id;
         this.input = input;

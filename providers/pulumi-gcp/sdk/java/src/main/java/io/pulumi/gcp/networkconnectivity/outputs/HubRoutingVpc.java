@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.networkconnectivity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HubRoutingVpc {
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
-    private HubRoutingVpc(@OutputCustomType.Parameter("uri") @Nullable String uri) {
+    @CustomType.Constructor
+    private HubRoutingVpc(@CustomType.Parameter("uri") @Nullable String uri) {
         this.uri = uri;
     }
 

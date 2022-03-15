@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -31,7 +31,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identifier of the subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<ApiEntityReferenceArgs> subnet;
 
     public Output<ApiEntityReferenceArgs> getSubnet() {

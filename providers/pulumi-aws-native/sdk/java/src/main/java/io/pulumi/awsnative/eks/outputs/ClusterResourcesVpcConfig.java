@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterResourcesVpcConfig {
     /**
      * Set this value to true to enable private access for your cluster's Kubernetes API server endpoint. If you enable private access, Kubernetes API requests from within your cluster's VPC use the private VPC endpoint. The default value for this parameter is false, which disables private access for your Kubernetes API server. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that publicAccessCidrs includes the necessary CIDR blocks for communication with the nodes or Fargate pods.
@@ -39,13 +39,13 @@ public final class ClusterResourcesVpcConfig {
      */
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterResourcesVpcConfig(
-        @OutputCustomType.Parameter("endpointPrivateAccess") @Nullable Boolean endpointPrivateAccess,
-        @OutputCustomType.Parameter("endpointPublicAccess") @Nullable Boolean endpointPublicAccess,
-        @OutputCustomType.Parameter("publicAccessCidrs") @Nullable List<String> publicAccessCidrs,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
+        @CustomType.Parameter("endpointPrivateAccess") @Nullable Boolean endpointPrivateAccess,
+        @CustomType.Parameter("endpointPublicAccess") @Nullable Boolean endpointPublicAccess,
+        @CustomType.Parameter("publicAccessCidrs") @Nullable List<String> publicAccessCidrs,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.endpointPrivateAccess = endpointPrivateAccess;
         this.endpointPublicAccess = endpointPublicAccess;
         this.publicAccessCidrs = publicAccessCidrs;

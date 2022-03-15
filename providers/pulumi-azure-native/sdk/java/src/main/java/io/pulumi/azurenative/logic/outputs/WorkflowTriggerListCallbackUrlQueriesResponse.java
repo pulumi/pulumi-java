@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTriggerListCallbackUrlQueriesResponse {
     /**
      * The api version.
@@ -37,13 +37,13 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
      */
     private final @Nullable String sv;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTriggerListCallbackUrlQueriesResponse(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("se") @Nullable String se,
-        @OutputCustomType.Parameter("sig") @Nullable String sig,
-        @OutputCustomType.Parameter("sp") @Nullable String sp,
-        @OutputCustomType.Parameter("sv") @Nullable String sv) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("se") @Nullable String se,
+        @CustomType.Parameter("sig") @Nullable String sig,
+        @CustomType.Parameter("sp") @Nullable String sp,
+        @CustomType.Parameter("sv") @Nullable String sv) {
         this.apiVersion = apiVersion;
         this.se = se;
         this.sig = sig;

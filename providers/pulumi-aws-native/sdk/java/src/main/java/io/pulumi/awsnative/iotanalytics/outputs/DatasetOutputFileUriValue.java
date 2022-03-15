@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetOutputFileUriValue {
     private final String fileName;
 
-    @OutputCustomType.Constructor
-    private DatasetOutputFileUriValue(@OutputCustomType.Parameter("fileName") String fileName) {
+    @CustomType.Constructor
+    private DatasetOutputFileUriValue(@CustomType.Parameter("fileName") String fileName) {
         this.fileName = fileName;
     }
 

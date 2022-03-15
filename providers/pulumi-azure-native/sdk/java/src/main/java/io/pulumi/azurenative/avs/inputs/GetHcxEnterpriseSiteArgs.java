@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
      * Name of the HCX Enterprise Site in the private cloud
      * 
      */
-    @InputImport(name="hcxEnterpriseSiteName", required=true)
+    @Import(name="hcxEnterpriseSiteName", required=true)
       private final String hcxEnterpriseSiteName;
 
     public String getHcxEnterpriseSiteName() {
@@ -27,7 +27,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
     public String getPrivateCloudName() {
@@ -38,7 +38,7 @@ public final class GetHcxEnterpriseSiteArgs extends io.pulumi.resources.InvokeAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

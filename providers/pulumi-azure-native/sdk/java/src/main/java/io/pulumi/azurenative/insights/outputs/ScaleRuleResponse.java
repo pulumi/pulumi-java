@@ -5,10 +5,10 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MetricTriggerResponse;
 import io.pulumi.azurenative.insights.outputs.ScaleActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScaleRuleResponse {
     /**
      * the trigger that results in a scaling action.
@@ -21,10 +21,10 @@ public final class ScaleRuleResponse {
      */
     private final ScaleActionResponse scaleAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleRuleResponse(
-        @OutputCustomType.Parameter("metricTrigger") MetricTriggerResponse metricTrigger,
-        @OutputCustomType.Parameter("scaleAction") ScaleActionResponse scaleAction) {
+        @CustomType.Parameter("metricTrigger") MetricTriggerResponse metricTrigger,
+        @CustomType.Parameter("scaleAction") ScaleActionResponse scaleAction) {
         this.metricTrigger = metricTrigger;
         this.scaleAction = scaleAction;
     }

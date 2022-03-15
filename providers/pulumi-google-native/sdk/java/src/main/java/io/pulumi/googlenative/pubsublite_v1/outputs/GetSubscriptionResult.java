@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.DeliveryConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubscriptionResult {
     /**
      * The settings for this subscription's message delivery.
@@ -26,11 +26,11 @@ public final class GetSubscriptionResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubscriptionResult(
-        @OutputCustomType.Parameter("deliveryConfig") DeliveryConfigResponse deliveryConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("deliveryConfig") DeliveryConfigResponse deliveryConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("topic") String topic) {
         this.deliveryConfig = deliveryConfig;
         this.name = name;
         this.topic = topic;

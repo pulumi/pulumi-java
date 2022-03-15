@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
      * Request Count.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class RequestsBasedTriggerResponse extends io.pulumi.resources.Invo
      * Time interval.
      * 
      */
-    @InputImport(name="timeInterval")
+    @Import(name="timeInterval")
       private final @Nullable String timeInterval;
 
     public Optional<String> getTimeInterval() {

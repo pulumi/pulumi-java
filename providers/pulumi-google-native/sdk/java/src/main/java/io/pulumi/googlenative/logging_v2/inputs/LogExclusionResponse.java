@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * The creation timestamp of the exclusion.This field may not be present for older exclusions.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -32,7 +32,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. A description of this exclusion.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. If set to True, then this exclusion is disabled and it does not exclude any log entries. You can update an exclusion to change the value of this field.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {
@@ -54,7 +54,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries) that matches the log entries to be excluded. By using the sample function (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than 100% of the matching log entries.For example, the following query matches 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity<ERROR sample(insertId, 0.99)
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {
@@ -65,7 +65,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -76,7 +76,7 @@ public final class LogExclusionResponse extends io.pulumi.resources.InvokeArgs {
      * The last update timestamp of the exclusion.This field may not be present for older exclusions.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

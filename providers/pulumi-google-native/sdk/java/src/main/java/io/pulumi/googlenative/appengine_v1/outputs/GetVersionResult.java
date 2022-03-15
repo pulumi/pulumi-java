@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.ApiConfigHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.AutomaticScalingResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.BasicScalingResponse;
@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVersionResult {
     /**
      * Serving configuration for Google Cloud Endpoints (https://cloud.google.com/appengine/docs/python/endpoints/).Only returned in GET requests if view=FULL is set.
@@ -214,45 +214,45 @@ public final class GetVersionResult {
      */
     private final VpcAccessConnectorResponse vpcAccessConnector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVersionResult(
-        @OutputCustomType.Parameter("apiConfig") ApiConfigHandlerResponse apiConfig,
-        @OutputCustomType.Parameter("automaticScaling") AutomaticScalingResponse automaticScaling,
-        @OutputCustomType.Parameter("basicScaling") BasicScalingResponse basicScaling,
-        @OutputCustomType.Parameter("betaSettings") Map<String,String> betaSettings,
-        @OutputCustomType.Parameter("buildEnvVariables") Map<String,String> buildEnvVariables,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("createdBy") String createdBy,
-        @OutputCustomType.Parameter("defaultExpiration") String defaultExpiration,
-        @OutputCustomType.Parameter("deployment") DeploymentResponse deployment,
-        @OutputCustomType.Parameter("diskUsageBytes") String diskUsageBytes,
-        @OutputCustomType.Parameter("endpointsApiService") EndpointsApiServiceResponse endpointsApiService,
-        @OutputCustomType.Parameter("entrypoint") EntrypointResponse entrypoint,
-        @OutputCustomType.Parameter("env") String env,
-        @OutputCustomType.Parameter("envVariables") Map<String,String> envVariables,
-        @OutputCustomType.Parameter("errorHandlers") List<ErrorHandlerResponse> errorHandlers,
-        @OutputCustomType.Parameter("handlers") List<UrlMapResponse> handlers,
-        @OutputCustomType.Parameter("healthCheck") HealthCheckResponse healthCheck,
-        @OutputCustomType.Parameter("inboundServices") List<String> inboundServices,
-        @OutputCustomType.Parameter("instanceClass") String instanceClass,
-        @OutputCustomType.Parameter("libraries") List<LibraryResponse> libraries,
-        @OutputCustomType.Parameter("livenessCheck") LivenessCheckResponse livenessCheck,
-        @OutputCustomType.Parameter("manualScaling") ManualScalingResponse manualScaling,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") NetworkResponse network,
-        @OutputCustomType.Parameter("nobuildFilesRegex") String nobuildFilesRegex,
-        @OutputCustomType.Parameter("readinessCheck") ReadinessCheckResponse readinessCheck,
-        @OutputCustomType.Parameter("resources") ResourcesResponse resources,
-        @OutputCustomType.Parameter("runtime") String runtime,
-        @OutputCustomType.Parameter("runtimeApiVersion") String runtimeApiVersion,
-        @OutputCustomType.Parameter("runtimeChannel") String runtimeChannel,
-        @OutputCustomType.Parameter("runtimeMainExecutablePath") String runtimeMainExecutablePath,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("servingStatus") String servingStatus,
-        @OutputCustomType.Parameter("threadsafe") Boolean threadsafe,
-        @OutputCustomType.Parameter("versionUrl") String versionUrl,
-        @OutputCustomType.Parameter("vm") Boolean vm,
-        @OutputCustomType.Parameter("vpcAccessConnector") VpcAccessConnectorResponse vpcAccessConnector) {
+        @CustomType.Parameter("apiConfig") ApiConfigHandlerResponse apiConfig,
+        @CustomType.Parameter("automaticScaling") AutomaticScalingResponse automaticScaling,
+        @CustomType.Parameter("basicScaling") BasicScalingResponse basicScaling,
+        @CustomType.Parameter("betaSettings") Map<String,String> betaSettings,
+        @CustomType.Parameter("buildEnvVariables") Map<String,String> buildEnvVariables,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("createdBy") String createdBy,
+        @CustomType.Parameter("defaultExpiration") String defaultExpiration,
+        @CustomType.Parameter("deployment") DeploymentResponse deployment,
+        @CustomType.Parameter("diskUsageBytes") String diskUsageBytes,
+        @CustomType.Parameter("endpointsApiService") EndpointsApiServiceResponse endpointsApiService,
+        @CustomType.Parameter("entrypoint") EntrypointResponse entrypoint,
+        @CustomType.Parameter("env") String env,
+        @CustomType.Parameter("envVariables") Map<String,String> envVariables,
+        @CustomType.Parameter("errorHandlers") List<ErrorHandlerResponse> errorHandlers,
+        @CustomType.Parameter("handlers") List<UrlMapResponse> handlers,
+        @CustomType.Parameter("healthCheck") HealthCheckResponse healthCheck,
+        @CustomType.Parameter("inboundServices") List<String> inboundServices,
+        @CustomType.Parameter("instanceClass") String instanceClass,
+        @CustomType.Parameter("libraries") List<LibraryResponse> libraries,
+        @CustomType.Parameter("livenessCheck") LivenessCheckResponse livenessCheck,
+        @CustomType.Parameter("manualScaling") ManualScalingResponse manualScaling,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") NetworkResponse network,
+        @CustomType.Parameter("nobuildFilesRegex") String nobuildFilesRegex,
+        @CustomType.Parameter("readinessCheck") ReadinessCheckResponse readinessCheck,
+        @CustomType.Parameter("resources") ResourcesResponse resources,
+        @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("runtimeApiVersion") String runtimeApiVersion,
+        @CustomType.Parameter("runtimeChannel") String runtimeChannel,
+        @CustomType.Parameter("runtimeMainExecutablePath") String runtimeMainExecutablePath,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("servingStatus") String servingStatus,
+        @CustomType.Parameter("threadsafe") Boolean threadsafe,
+        @CustomType.Parameter("versionUrl") String versionUrl,
+        @CustomType.Parameter("vm") Boolean vm,
+        @CustomType.Parameter("vpcAccessConnector") VpcAccessConnectorResponse vpcAccessConnector) {
         this.apiConfig = apiConfig;
         this.automaticScaling = automaticScaling;
         this.basicScaling = basicScaling;

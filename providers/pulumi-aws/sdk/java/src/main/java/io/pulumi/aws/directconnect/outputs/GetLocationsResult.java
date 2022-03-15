@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.directconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -21,10 +21,10 @@ public final class GetLocationsResult {
      */
     private final List<String> locationCodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("locationCodes") List<String> locationCodes) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("locationCodes") List<String> locationCodes) {
         this.id = id;
         this.locationCodes = locationCodes;
     }

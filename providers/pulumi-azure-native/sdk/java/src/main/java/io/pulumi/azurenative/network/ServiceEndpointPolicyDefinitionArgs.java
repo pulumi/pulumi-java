@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * A description for this rule. Restricted to 140 chars.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -41,7 +41,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * Service endpoint name.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -74,7 +74,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * The name of the service endpoint policy definition name.
      * 
      */
-    @InputImport(name="serviceEndpointPolicyDefinitionName")
+    @Import(name="serviceEndpointPolicyDefinitionName")
       private final @Nullable Output<String> serviceEndpointPolicyDefinitionName;
 
     public Output<String> getServiceEndpointPolicyDefinitionName() {
@@ -85,7 +85,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * The name of the service endpoint policy.
      * 
      */
-    @InputImport(name="serviceEndpointPolicyName", required=true)
+    @Import(name="serviceEndpointPolicyName", required=true)
       private final Output<String> serviceEndpointPolicyName;
 
     public Output<String> getServiceEndpointPolicyName() {
@@ -96,7 +96,7 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * A list of service resources.
      * 
      */
-    @InputImport(name="serviceResources")
+    @Import(name="serviceResources")
       private final @Nullable Output<List<String>> serviceResources;
 
     public Output<List<String>> getServiceResources() {

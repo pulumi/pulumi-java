@@ -8,7 +8,7 @@ import io.pulumi.aws.ecr.RegistryScanningConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationState;
 import io.pulumi.aws.ecr.outputs.RegistryScanningConfigurationRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * The registry ID the scanning configuration applies to.
      * 
      */
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**
@@ -48,7 +48,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * One or multiple blocks specifying scanning rules to determine which repository filters are used and at what frequency scanning will occur. See below for schema.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={RegistryScanningConfigurationRule.class})
+    @Export(name="rules", type=List.class, parameters={RegistryScanningConfigurationRule.class})
     private Output</* @Nullable */ List<RegistryScanningConfigurationRule>> rules;
 
     /**
@@ -62,7 +62,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * the scanning type to set for the registry. Can be either `ENHANCED` or `BASIC`.
      * 
      */
-    @OutputExport(name="scanType", type=String.class, parameters={})
+    @Export(name="scanType", type=String.class, parameters={})
     private Output<String> scanType;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how often to publish updates to policy findings for the account. This includes publishing updates to AWS Security Hub and Amazon EventBridge (formerly called Amazon CloudWatch Events). Valid values are `FIFTEEN_MINUTES`, `ONE_HOUR` or `SIX_HOURS`.
      * 
      */
-    @InputImport(name="findingPublishingFrequency")
+    @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
     public Output<String> getFindingPublishingFrequency() {
@@ -29,7 +29,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

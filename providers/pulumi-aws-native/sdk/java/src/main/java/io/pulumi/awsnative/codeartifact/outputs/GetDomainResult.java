@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeartifact.outputs;
 
 import io.pulumi.awsnative.codeartifact.outputs.DomainTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     /**
      * The ARN of the domain.
@@ -40,13 +40,13 @@ public final class GetDomainResult {
      */
     private final @Nullable List<DomainTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("owner") @Nullable String owner,
-        @OutputCustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
-        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("owner") @Nullable String owner,
+        @CustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
+        @CustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
         this.arn = arn;
         this.name = name;
         this.owner = owner;

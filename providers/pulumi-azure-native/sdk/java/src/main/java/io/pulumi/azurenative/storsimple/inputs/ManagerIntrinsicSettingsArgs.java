@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.enums.ManagerType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
      * The type of StorSimple Manager.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<ManagerType> type;
 
     public Output<ManagerType> getType() {

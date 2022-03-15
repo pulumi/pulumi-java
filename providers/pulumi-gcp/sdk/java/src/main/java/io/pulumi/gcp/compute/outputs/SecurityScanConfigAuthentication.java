@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.SecurityScanConfigAuthenticationCustomAccount;
 import io.pulumi.gcp.compute.outputs.SecurityScanConfigAuthenticationGoogleAccount;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityScanConfigAuthentication {
     /**
      * Describes authentication configuration that uses a custom account.
@@ -25,10 +25,10 @@ public final class SecurityScanConfigAuthentication {
      */
     private final @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityScanConfigAuthentication(
-        @OutputCustomType.Parameter("customAccount") @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount,
-        @OutputCustomType.Parameter("googleAccount") @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
+        @CustomType.Parameter("customAccount") @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount,
+        @CustomType.Parameter("googleAccount") @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }

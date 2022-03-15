@@ -6,7 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.GetQuickConnectQuickConnectConfigPhoneConfig;
 import io.pulumi.aws.connect.inputs.GetQuickConnectQuickConnectConfigQueueConfig;
 import io.pulumi.aws.connect.inputs.GetQuickConnectQuickConnectConfigUserConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * Specifies the phone configuration of the Quick Connect. This is returned only if `quick_connect_type` is `PHONE_NUMBER`. The `phone_config` block is documented below.
      * 
      */
-    @InputImport(name="phoneConfigs", required=true)
+    @Import(name="phoneConfigs", required=true)
       private final List<GetQuickConnectQuickConnectConfigPhoneConfig> phoneConfigs;
 
     public List<GetQuickConnectQuickConnectConfigPhoneConfig> getPhoneConfigs() {
@@ -31,7 +31,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * Specifies the queue configuration of the Quick Connect. This is returned only if `quick_connect_type` is `QUEUE`. The `queue_config` block is documented below.
      * 
      */
-    @InputImport(name="queueConfigs", required=true)
+    @Import(name="queueConfigs", required=true)
       private final List<GetQuickConnectQuickConnectConfigQueueConfig> queueConfigs;
 
     public List<GetQuickConnectQuickConnectConfigQueueConfig> getQueueConfigs() {
@@ -42,7 +42,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * Specifies the configuration type of the Quick Connect. Valid values are `PHONE_NUMBER`, `QUEUE`, `USER`.
      * 
      */
-    @InputImport(name="quickConnectType", required=true)
+    @Import(name="quickConnectType", required=true)
       private final String quickConnectType;
 
     public String getQuickConnectType() {
@@ -53,7 +53,7 @@ public final class GetQuickConnectQuickConnectConfig extends io.pulumi.resources
      * Specifies the user configuration of the Quick Connect. This is returned only if `quick_connect_type` is `USER`. The `user_config` block is documented below.
      * 
      */
-    @InputImport(name="userConfigs", required=true)
+    @Import(name="userConfigs", required=true)
       private final List<GetQuickConnectQuickConnectConfigUserConfig> userConfigs;
 
     public List<GetQuickConnectQuickConnectConfigUserConfig> getUserConfigs() {

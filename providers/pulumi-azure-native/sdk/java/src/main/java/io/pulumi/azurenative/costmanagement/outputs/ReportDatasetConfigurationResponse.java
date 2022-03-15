@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportDatasetConfigurationResponse {
     /**
      * Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.
@@ -17,8 +17,8 @@ public final class ReportDatasetConfigurationResponse {
      */
     private final @Nullable List<String> columns;
 
-    @OutputCustomType.Constructor
-    private ReportDatasetConfigurationResponse(@OutputCustomType.Parameter("columns") @Nullable List<String> columns) {
+    @CustomType.Constructor
+    private ReportDatasetConfigurationResponse(@CustomType.Parameter("columns") @Nullable List<String> columns) {
         this.columns = columns;
     }
 

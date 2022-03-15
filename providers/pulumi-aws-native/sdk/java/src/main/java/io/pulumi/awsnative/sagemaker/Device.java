@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.DeviceArgs;
 import io.pulumi.awsnative.sagemaker.outputs.DeviceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The Edge Device you want to register against a device fleet
      * 
      */
-    @OutputExport(name="device", type=io.pulumi.awsnative.sagemaker.outputs.Device.class, parameters={})
+    @Export(name="device", type=io.pulumi.awsnative.sagemaker.outputs.Device.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> device;
 
     /**
@@ -37,7 +37,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The name of the edge device fleet
      * 
      */
-    @OutputExport(name="deviceFleetName", type=String.class, parameters={})
+    @Export(name="deviceFleetName", type=String.class, parameters={})
     private Output<String> deviceFleetName;
 
     /**
@@ -51,7 +51,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Associate tags with the resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DeviceTag.class})
+    @Export(name="tags", type=List.class, parameters={DeviceTag.class})
     private Output</* @Nullable */ List<DeviceTag>> tags;
 
     /**

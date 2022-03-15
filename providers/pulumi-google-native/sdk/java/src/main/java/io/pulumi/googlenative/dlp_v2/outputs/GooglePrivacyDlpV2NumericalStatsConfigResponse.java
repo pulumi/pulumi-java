@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
     /**
      * Field to compute numerical stats on. Supported types are integer, float, date, datetime, timestamp, time.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2NumericalStatsConfigResponse(@OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2NumericalStatsConfigResponse(@CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.field = field;
     }
 

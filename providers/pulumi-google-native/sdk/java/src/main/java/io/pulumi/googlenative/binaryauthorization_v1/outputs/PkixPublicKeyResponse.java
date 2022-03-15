@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PkixPublicKeyResponse {
     /**
      * A PEM-encoded public key, as described in https://tools.ietf.org/html/rfc7468#section-13
@@ -20,10 +20,10 @@ public final class PkixPublicKeyResponse {
      */
     private final String signatureAlgorithm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PkixPublicKeyResponse(
-        @OutputCustomType.Parameter("publicKeyPem") String publicKeyPem,
-        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm) {
+        @CustomType.Parameter("publicKeyPem") String publicKeyPem,
+        @CustomType.Parameter("signatureAlgorithm") String signatureAlgorithm) {
         this.publicKeyPem = publicKeyPem;
         this.signatureAlgorithm = signatureAlgorithm;
     }

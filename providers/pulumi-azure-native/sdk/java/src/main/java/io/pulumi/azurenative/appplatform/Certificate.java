@@ -8,7 +8,7 @@ import io.pulumi.azurenative.appplatform.CertificateArgs;
 import io.pulumi.azurenative.appplatform.outputs.CertificatePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Properties of the certificate resource payload.
      * 
      */
-    @OutputExport(name="properties", type=CertificatePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=CertificatePropertiesResponse.class, parameters={})
     private Output<CertificatePropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

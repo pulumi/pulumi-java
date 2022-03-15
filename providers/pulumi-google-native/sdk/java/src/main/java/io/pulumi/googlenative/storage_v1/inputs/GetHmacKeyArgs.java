@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetHmacKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetHmacKeyArgs Empty = new GetHmacKeyArgs();
 
-    @InputImport(name="accessId", required=true)
+    @Import(name="accessId", required=true)
       private final String accessId;
 
     public String getAccessId() {
         return this.accessId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {

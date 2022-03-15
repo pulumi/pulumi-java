@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.OrganizationSecurityPolicyArgs;
@@ -27,13 +27,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:compute/alpha:OrganizationSecurityPolicy")
 public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="adaptiveProtectionConfig", type=SecurityPolicyAdaptiveProtectionConfigResponse.class, parameters={})
+    @Export(name="adaptiveProtectionConfig", type=SecurityPolicyAdaptiveProtectionConfigResponse.class, parameters={})
     private Output<SecurityPolicyAdaptiveProtectionConfigResponse> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigResponse> getAdaptiveProtectionConfig() {
         return this.adaptiveProtectionConfig;
     }
-    @OutputExport(name="advancedOptionsConfig", type=SecurityPolicyAdvancedOptionsConfigResponse.class, parameters={})
+    @Export(name="advancedOptionsConfig", type=SecurityPolicyAdvancedOptionsConfigResponse.class, parameters={})
     private Output<SecurityPolicyAdvancedOptionsConfigResponse> advancedOptionsConfig;
 
     public Output<SecurityPolicyAdvancedOptionsConfigResponse> getAdvancedOptionsConfig() {
@@ -43,7 +43,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * A list of associations that belong to this policy.
      * 
      */
-    @OutputExport(name="associations", type=List.class, parameters={SecurityPolicyAssociationResponse.class})
+    @Export(name="associations", type=List.class, parameters={SecurityPolicyAssociationResponse.class})
     private Output<List<SecurityPolicyAssociationResponse>> associations;
 
     /**
@@ -53,7 +53,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
     public Output<List<SecurityPolicyAssociationResponse>> getAssociations() {
         return this.associations;
     }
-    @OutputExport(name="cloudArmorConfig", type=SecurityPolicyCloudArmorConfigResponse.class, parameters={})
+    @Export(name="cloudArmorConfig", type=SecurityPolicyCloudArmorConfigResponse.class, parameters={})
     private Output<SecurityPolicyCloudArmorConfigResponse> cloudArmorConfig;
 
     public Output<SecurityPolicyCloudArmorConfigResponse> getCloudArmorConfig() {
@@ -63,7 +63,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -73,7 +73,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
     public Output<String> getCreationTimestamp() {
         return this.creationTimestamp;
     }
-    @OutputExport(name="ddosProtectionConfig", type=SecurityPolicyDdosProtectionConfigResponse.class, parameters={})
+    @Export(name="ddosProtectionConfig", type=SecurityPolicyDdosProtectionConfigResponse.class, parameters={})
     private Output<SecurityPolicyDdosProtectionConfigResponse> ddosProtectionConfig;
 
     public Output<SecurityPolicyDdosProtectionConfigResponse> getDdosProtectionConfig() {
@@ -83,7 +83,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -97,7 +97,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * User-provided name of the Organization security plicy. The name should be unique in the organization in which the security policy is created. This should only be used when SecurityPolicyType is FIREWALL. The name must be 1-63 characters long, and comply with https://www.ietf.org/rfc/rfc1035.txt. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -111,7 +111,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Specifies a fingerprint for this resource, which is essentially a hash of the metadata's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update metadata. You must always provide an up-to-date fingerprint hash in order to update or change metadata, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make get() request to the security policy.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -125,7 +125,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * [Output only] Type of the resource. Always compute#securityPolicyfor security policies
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -139,7 +139,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * A fingerprint for the labels being applied to this security policy, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels. To see the latest fingerprint, make get() request to the security policy.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -153,7 +153,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -167,7 +167,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -181,7 +181,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * The parent of the security policy.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -191,7 +191,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
     public Output<String> getParent() {
         return this.parent;
     }
-    @OutputExport(name="recaptchaOptionsConfig", type=SecurityPolicyRecaptchaOptionsConfigResponse.class, parameters={})
+    @Export(name="recaptchaOptionsConfig", type=SecurityPolicyRecaptchaOptionsConfigResponse.class, parameters={})
     private Output<SecurityPolicyRecaptchaOptionsConfigResponse> recaptchaOptionsConfig;
 
     public Output<SecurityPolicyRecaptchaOptionsConfigResponse> getRecaptchaOptionsConfig() {
@@ -201,7 +201,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * URL of the region where the regional security policy resides. This field is not applicable to global security policies.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -215,7 +215,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Total count of all security policy rule tuples. A security policy can not exceed a set number of tuples.
      * 
      */
-    @OutputExport(name="ruleTupleCount", type=Integer.class, parameters={})
+    @Export(name="ruleTupleCount", type=Integer.class, parameters={})
     private Output<Integer> ruleTupleCount;
 
     /**
@@ -229,7 +229,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * A list of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match "*"). If no rules are provided when creating a security policy, a default rule with action "allow" will be added.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={SecurityPolicyRuleResponse.class})
+    @Export(name="rules", type=List.class, parameters={SecurityPolicyRuleResponse.class})
     private Output<List<SecurityPolicyRuleResponse>> rules;
 
     /**
@@ -243,7 +243,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -257,7 +257,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -271,7 +271,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * The type indicates the intended use of the security policy. CLOUD_ARMOR - Cloud Armor backend security policies can be configured to filter incoming HTTP requests targeting backend services. They filter requests before they hit the origin servers. CLOUD_ARMOR_EDGE - Cloud Armor edge security policies can be configured to filter incoming HTTP requests targeting backend services (including Cloud CDN-enabled) as well as backend buckets (Cloud Storage). They filter requests before the request is served from Google's cache.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

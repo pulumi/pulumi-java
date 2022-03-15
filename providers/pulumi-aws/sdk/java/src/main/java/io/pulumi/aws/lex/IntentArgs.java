@@ -11,7 +11,7 @@ import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityArgs;
 import io.pulumi.aws.lex.inputs.IntentRejectionStatementArgs;
 import io.pulumi.aws.lex.inputs.IntentSlotArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * mutually exclusive. You can specify only one. Attributes are documented under statement.
      * 
      */
-    @InputImport(name="conclusionStatement")
+    @Import(name="conclusionStatement")
       private final @Nullable Output<IntentConclusionStatementArgs> conclusionStatement;
 
     public Output<IntentConclusionStatementArgs> getConclusionStatement() {
@@ -44,7 +44,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * or neither. Attributes are documented under prompt.
      * 
      */
-    @InputImport(name="confirmationPrompt")
+    @Import(name="confirmationPrompt")
       private final @Nullable Output<IntentConfirmationPromptArgs> confirmationPrompt;
 
     public Output<IntentConfirmationPromptArgs> getConfirmationPrompt() {
@@ -56,7 +56,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * resource is created and on each update. Defaults to `false`.
      * 
      */
-    @InputImport(name="createVersion")
+    @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
     public Output<Boolean> getCreateVersion() {
@@ -67,7 +67,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -79,7 +79,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
      * 
      */
-    @InputImport(name="dialogCodeHook")
+    @Import(name="dialogCodeHook")
       private final @Nullable Output<IntentDialogCodeHookArgs> dialogCodeHook;
 
     public Output<IntentDialogCodeHookArgs> getDialogCodeHook() {
@@ -93,7 +93,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
      * 
      */
-    @InputImport(name="followUpPrompt")
+    @Import(name="followUpPrompt")
       private final @Nullable Output<IntentFollowUpPromptArgs> followUpPrompt;
 
     public Output<IntentFollowUpPromptArgs> getFollowUpPrompt() {
@@ -106,7 +106,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * places an order with a local pizza store. Attributes are documented under fulfillment_activity.
      * 
      */
-    @InputImport(name="fulfillmentActivity", required=true)
+    @Import(name="fulfillmentActivity", required=true)
       private final Output<IntentFulfillmentActivityArgs> fulfillmentActivity;
 
     public Output<IntentFulfillmentActivityArgs> getFulfillmentActivity() {
@@ -117,7 +117,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -131,7 +131,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * in the Alexa Skills Kit.
      * 
      */
-    @InputImport(name="parentIntentSignature")
+    @Import(name="parentIntentSignature")
       private final @Nullable Output<String> parentIntentSignature;
 
     public Output<String> getParentIntentSignature() {
@@ -144,7 +144,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * documented below under statement.
      * 
      */
-    @InputImport(name="rejectionStatement")
+    @Import(name="rejectionStatement")
       private final @Nullable Output<IntentRejectionStatementArgs> rejectionStatement;
 
     public Output<IntentRejectionStatementArgs> getRejectionStatement() {
@@ -157,7 +157,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="sampleUtterances")
+    @Import(name="sampleUtterances")
       private final @Nullable Output<List<String>> sampleUtterances;
 
     public Output<List<String>> getSampleUtterances() {
@@ -169,7 +169,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
      * from the user using prompts defined in the slots. Attributes are documented under slot.
      * 
      */
-    @InputImport(name="slots")
+    @Import(name="slots")
       private final @Nullable Output<List<IntentSlotArgs>> slots;
 
     public Output<List<IntentSlotArgs>> getSlots() {

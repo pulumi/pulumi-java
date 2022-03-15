@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * Default string modeled as parameter for auto generation to work correctly.
      * 
      */
-    @InputImport(name="default", required=true)
+    @Import(name="default", required=true)
       private final String $default;
 
     public String get$default() {
@@ -27,7 +27,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the redis cache.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class GetPatchScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

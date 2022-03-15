@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The customer's ASN from which traffic originates.
      * 
      */
-    @InputImport(name="asn")
+    @Import(name="asn")
       private final @Nullable Output<Integer> asn;
 
     public Output<Integer> getAsn() {
@@ -30,7 +30,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the peering.
      * 
      */
-    @InputImport(name="peeringName", required=true)
+    @Import(name="peeringName", required=true)
       private final Output<String> peeringName;
 
     public Output<String> getPeeringName() {
@@ -41,7 +41,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the ASN.
      * 
      */
-    @InputImport(name="registeredAsnName")
+    @Import(name="registeredAsnName")
       private final @Nullable Output<String> registeredAsnName;
 
     public Output<String> getRegisteredAsnName() {
@@ -52,7 +52,7 @@ public final class RegisteredAsnArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

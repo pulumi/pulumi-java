@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.glacier.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VaultNotification {
     /**
      * You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
@@ -21,10 +21,10 @@ public final class VaultNotification {
      */
     private final String snsTopic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VaultNotification(
-        @OutputCustomType.Parameter("events") List<String> events,
-        @OutputCustomType.Parameter("snsTopic") String snsTopic) {
+        @CustomType.Parameter("events") List<String> events,
+        @CustomType.Parameter("snsTopic") String snsTopic) {
         this.events = events;
         this.snsTopic = snsTopic;
     }

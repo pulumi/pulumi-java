@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.aws.datasync.inputs.LocationSmbMountOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @InputImport(name="agentArns", required=true)
+    @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -32,7 +32,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Windows domain the SMB server belongs to.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -43,7 +43,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing mount options used by DataSync to access the SMB Server. Can be `AUTOMATIC`, `SMB2`, or `SMB3`.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<LocationSmbMountOptionsArgs> mountOptions;
 
     public Output<LocationSmbMountOptionsArgs> getMountOptions() {
@@ -54,7 +54,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * The password of the user who can mount the share and has file permissions in the SMB.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -65,7 +65,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
      * 
      */
-    @InputImport(name="serverHostname", required=true)
+    @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
     public Output<String> getServerHostname() {
@@ -76,7 +76,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
      * 
      */
-    @InputImport(name="subdirectory", required=true)
+    @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -87,7 +87,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class LocationSmbArgs extends io.pulumi.resources.ResourceArgs {
      * The user who can mount the share and has file and folder permissions in the SMB share.
      * 
      */
-    @InputImport(name="user", required=true)
+    @Import(name="user", required=true)
       private final Output<String> user;
 
     public Output<String> getUser() {

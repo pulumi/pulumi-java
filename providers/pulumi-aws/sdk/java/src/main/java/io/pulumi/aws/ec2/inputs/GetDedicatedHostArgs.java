@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetDedicatedHostFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetDedicatedHostFilter> filters;
 
     public List<GetDedicatedHostFilter> getFilters() {
@@ -32,14 +32,14 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the Dedicated Host.
      * 
      */
-    @InputImport(name="hostId")
+    @Import(name="hostId")
       private final @Nullable String hostId;
 
     public Optional<String> getHostId() {
         return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

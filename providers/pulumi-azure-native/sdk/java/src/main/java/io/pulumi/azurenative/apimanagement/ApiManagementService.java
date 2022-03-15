@@ -14,7 +14,7 @@ import io.pulumi.azurenative.apimanagement.outputs.HostnameConfigurationResponse
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Additional datacenter locations of the API Management service.
      * 
      */
-    @OutputExport(name="additionalLocations", type=List.class, parameters={AdditionalLocationResponse.class})
+    @Export(name="additionalLocations", type=List.class, parameters={AdditionalLocationResponse.class})
     private Output</* @Nullable */ List<AdditionalLocationResponse>> additionalLocations;
 
     /**
@@ -57,7 +57,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Control Plane Apis version constraint for the API Management service.
      * 
      */
-    @OutputExport(name="apiVersionConstraint", type=ApiVersionConstraintResponse.class, parameters={})
+    @Export(name="apiVersionConstraint", type=ApiVersionConstraintResponse.class, parameters={})
     private Output</* @Nullable */ ApiVersionConstraintResponse> apiVersionConstraint;
 
     /**
@@ -71,7 +71,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10.
      * 
      */
-    @OutputExport(name="certificates", type=List.class, parameters={CertificateConfigurationResponse.class})
+    @Export(name="certificates", type=List.class, parameters={CertificateConfigurationResponse.class})
     private Output</* @Nullable */ List<CertificateConfigurationResponse>> certificates;
 
     /**
@@ -85,7 +85,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Creation UTC date of the API Management service.The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="createdAtUtc", type=String.class, parameters={})
+    @Export(name="createdAtUtc", type=String.class, parameters={})
     private Output<String> createdAtUtc;
 
     /**
@@ -99,7 +99,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Custom properties of the API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be used to disable just TLS 1.1 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value is `True` if the service was created on or before April 1st 2018 and `False` otherwise. Http2 setting's default value is `False`.</br></br>You can disable any of next ciphers by using settings `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example, `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default value is `true` for them.  Note: next ciphers can't be disabled since they are required by Azure CloudService internal components: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384
      * 
      */
-    @OutputExport(name="customProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="customProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> customProperties;
 
     /**
@@ -113,7 +113,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * DEveloper Portal endpoint URL of the API Management service.
      * 
      */
-    @OutputExport(name="developerPortalUrl", type=String.class, parameters={})
+    @Export(name="developerPortalUrl", type=String.class, parameters={})
     private Output<String> developerPortalUrl;
 
     /**
@@ -127,7 +127,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in master region.
      * 
      */
-    @OutputExport(name="disableGateway", type=Boolean.class, parameters={})
+    @Export(name="disableGateway", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableGateway;
 
     /**
@@ -141,7 +141,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Property only meant to be used for Consumption SKU Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
      * 
      */
-    @OutputExport(name="enableClientCertificate", type=Boolean.class, parameters={})
+    @Export(name="enableClientCertificate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableClientCertificate;
 
     /**
@@ -155,7 +155,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * ETag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -169,7 +169,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Gateway URL of the API Management service in the Default Region.
      * 
      */
-    @OutputExport(name="gatewayRegionalUrl", type=String.class, parameters={})
+    @Export(name="gatewayRegionalUrl", type=String.class, parameters={})
     private Output<String> gatewayRegionalUrl;
 
     /**
@@ -183,7 +183,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Gateway URL of the API Management service.
      * 
      */
-    @OutputExport(name="gatewayUrl", type=String.class, parameters={})
+    @Export(name="gatewayUrl", type=String.class, parameters={})
     private Output<String> gatewayUrl;
 
     /**
@@ -197,7 +197,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Custom hostname configuration of the API Management service.
      * 
      */
-    @OutputExport(name="hostnameConfigurations", type=List.class, parameters={HostnameConfigurationResponse.class})
+    @Export(name="hostnameConfigurations", type=List.class, parameters={HostnameConfigurationResponse.class})
     private Output</* @Nullable */ List<HostnameConfigurationResponse>> hostnameConfigurations;
 
     /**
@@ -211,7 +211,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Managed service identity of the Api Management service.
      * 
      */
-    @OutputExport(name="identity", type=ApiManagementServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ApiManagementServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ApiManagementServiceIdentityResponse> identity;
 
     /**
@@ -225,7 +225,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -239,7 +239,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Management API endpoint URL of the API Management service.
      * 
      */
-    @OutputExport(name="managementApiUrl", type=String.class, parameters={})
+    @Export(name="managementApiUrl", type=String.class, parameters={})
     private Output<String> managementApiUrl;
 
     /**
@@ -253,7 +253,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -267,7 +267,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Email address from which the notification will be sent.
      * 
      */
-    @OutputExport(name="notificationSenderEmail", type=String.class, parameters={})
+    @Export(name="notificationSenderEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationSenderEmail;
 
     /**
@@ -281,7 +281,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Publisher portal endpoint Url of the API Management service.
      * 
      */
-    @OutputExport(name="portalUrl", type=String.class, parameters={})
+    @Export(name="portalUrl", type=String.class, parameters={})
     private Output<String> portalUrl;
 
     /**
@@ -295,7 +295,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Private Static Load Balanced IP addresses of the API Management service in Primary region which is deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
      * 
      */
-    @OutputExport(name="privateIPAddresses", type=List.class, parameters={String.class})
+    @Export(name="privateIPAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> privateIPAddresses;
 
     /**
@@ -309,7 +309,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * The current provisioning state of the API Management service which can be one of the following: Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -323,7 +323,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Public Static Load Balanced IP addresses of the API Management service in Primary region. Available only for Basic, Standard, Premium and Isolated SKU.
      * 
      */
-    @OutputExport(name="publicIPAddresses", type=List.class, parameters={String.class})
+    @Export(name="publicIPAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> publicIPAddresses;
 
     /**
@@ -337,7 +337,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Publisher email.
      * 
      */
-    @OutputExport(name="publisherEmail", type=String.class, parameters={})
+    @Export(name="publisherEmail", type=String.class, parameters={})
     private Output<String> publisherEmail;
 
     /**
@@ -351,7 +351,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Publisher name.
      * 
      */
-    @OutputExport(name="publisherName", type=String.class, parameters={})
+    @Export(name="publisherName", type=String.class, parameters={})
     private Output<String> publisherName;
 
     /**
@@ -365,7 +365,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True all other properties will be ignored.
      * 
      */
-    @OutputExport(name="restore", type=Boolean.class, parameters={})
+    @Export(name="restore", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> restore;
 
     /**
@@ -379,7 +379,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * SCM endpoint URL of the API Management service.
      * 
      */
-    @OutputExport(name="scmUrl", type=String.class, parameters={})
+    @Export(name="scmUrl", type=String.class, parameters={})
     private Output<String> scmUrl;
 
     /**
@@ -393,7 +393,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * SKU properties of the API Management service.
      * 
      */
-    @OutputExport(name="sku", type=ApiManagementServiceSkuPropertiesResponse.class, parameters={})
+    @Export(name="sku", type=ApiManagementServiceSkuPropertiesResponse.class, parameters={})
     private Output<ApiManagementServiceSkuPropertiesResponse> sku;
 
     /**
@@ -407,7 +407,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -421,7 +421,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * The provisioning state of the API Management service, which is targeted by the long running operation started on the service.
      * 
      */
-    @OutputExport(name="targetProvisioningState", type=String.class, parameters={})
+    @Export(name="targetProvisioningState", type=String.class, parameters={})
     private Output<String> targetProvisioningState;
 
     /**
@@ -435,7 +435,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource is set to Microsoft.ApiManagement.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -449,7 +449,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * Virtual network configuration of the API Management service.
      * 
      */
-    @OutputExport(name="virtualNetworkConfiguration", type=VirtualNetworkConfigurationResponse.class, parameters={})
+    @Export(name="virtualNetworkConfiguration", type=VirtualNetworkConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkConfigurationResponse> virtualNetworkConfiguration;
 
     /**
@@ -463,7 +463,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * The type of VPN in which API Management service needs to be configured in. None (Default Value) means the API Management service is not part of any Virtual Network, External means the API Management deployment is set up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is setup inside a Virtual Network having an Intranet Facing Endpoint only.
      * 
      */
-    @OutputExport(name="virtualNetworkType", type=String.class, parameters={})
+    @Export(name="virtualNetworkType", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkType;
 
     /**
@@ -477,7 +477,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

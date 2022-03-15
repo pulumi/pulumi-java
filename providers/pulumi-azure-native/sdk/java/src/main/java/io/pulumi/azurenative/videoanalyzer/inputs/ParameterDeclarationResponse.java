@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * The default value for the parameter to be used if the pipeline does not specify a value.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable String $default;
 
     public Optional<String> get$default() {
@@ -33,7 +33,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * Description of the parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -44,7 +44,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * Name of the parameter.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class ParameterDeclarationResponse extends io.pulumi.resources.Invo
      * Type of the parameter.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

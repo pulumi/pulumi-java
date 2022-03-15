@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.PerfSampleSeriesArgs;
@@ -25,7 +25,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * Basic series represented by a line chart
      * 
      */
-    @OutputExport(name="basicPerfSampleSeries", type=BasicPerfSampleSeriesResponse.class, parameters={})
+    @Export(name="basicPerfSampleSeries", type=BasicPerfSampleSeriesResponse.class, parameters={})
     private Output<BasicPerfSampleSeriesResponse> basicPerfSampleSeries;
 
     /**
@@ -39,7 +39,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * A tool results execution ID.
      * 
      */
-    @OutputExport(name="executionId", type=String.class, parameters={})
+    @Export(name="executionId", type=String.class, parameters={})
     private Output<String> executionId;
 
     /**
@@ -53,7 +53,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * A tool results history ID.
      * 
      */
-    @OutputExport(name="historyId", type=String.class, parameters={})
+    @Export(name="historyId", type=String.class, parameters={})
     private Output<String> historyId;
 
     /**
@@ -67,7 +67,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * The cloud project
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -81,7 +81,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * A sample series id
      * 
      */
-    @OutputExport(name="sampleSeriesId", type=String.class, parameters={})
+    @Export(name="sampleSeriesId", type=String.class, parameters={})
     private Output<String> sampleSeriesId;
 
     /**
@@ -95,7 +95,7 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
      * A tool results step ID.
      * 
      */
-    @OutputExport(name="stepId", type=String.class, parameters={})
+    @Export(name="stepId", type=String.class, parameters={})
     private Output<String> stepId;
 
     /**

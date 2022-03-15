@@ -6,13 +6,13 @@ package io.pulumi.azurenative.streamanalytics.outputs;
 import io.pulumi.azurenative.streamanalytics.outputs.ReferenceInputPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.StreamInputPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInputResult {
     /**
      * Resource Id
@@ -35,12 +35,12 @@ public final class GetInputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInputResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("properties") Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("properties") Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

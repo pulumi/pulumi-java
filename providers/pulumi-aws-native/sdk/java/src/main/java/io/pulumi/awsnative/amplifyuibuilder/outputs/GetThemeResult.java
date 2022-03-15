@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.amplifyuibuilder.outputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ThemeValues;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetThemeResult {
     private final @Nullable String appId;
     private final @Nullable String createdAt;
@@ -22,16 +22,16 @@ public final class GetThemeResult {
     private final @Nullable List<ThemeValues> overrides;
     private final @Nullable List<ThemeValues> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetThemeResult(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("environmentName") @Nullable String environmentName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("overrides") @Nullable List<ThemeValues> overrides,
-        @OutputCustomType.Parameter("values") @Nullable List<ThemeValues> values) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("environmentName") @Nullable String environmentName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("overrides") @Nullable List<ThemeValues> overrides,
+        @CustomType.Parameter("values") @Nullable List<ThemeValues> values) {
         this.appId = appId;
         this.createdAt = createdAt;
         this.environmentName = environmentName;

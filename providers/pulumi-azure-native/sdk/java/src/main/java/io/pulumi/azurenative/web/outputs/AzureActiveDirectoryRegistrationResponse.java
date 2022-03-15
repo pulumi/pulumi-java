@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureActiveDirectoryRegistrationResponse {
     /**
      * The Client ID of this relying party application, known as the client_id.
@@ -51,14 +51,14 @@ public final class AzureActiveDirectoryRegistrationResponse {
      */
     private final @Nullable String openIdIssuer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureActiveDirectoryRegistrationResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecretCertificateIssuer") @Nullable String clientSecretCertificateIssuer,
-        @OutputCustomType.Parameter("clientSecretCertificateSubjectAlternativeName") @Nullable String clientSecretCertificateSubjectAlternativeName,
-        @OutputCustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
-        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
-        @OutputCustomType.Parameter("openIdIssuer") @Nullable String openIdIssuer) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecretCertificateIssuer") @Nullable String clientSecretCertificateIssuer,
+        @CustomType.Parameter("clientSecretCertificateSubjectAlternativeName") @Nullable String clientSecretCertificateSubjectAlternativeName,
+        @CustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
+        @CustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
+        @CustomType.Parameter("openIdIssuer") @Nullable String openIdIssuer) {
         this.clientId = clientId;
         this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
         this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;

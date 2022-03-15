@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs;
@@ -28,7 +28,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * The time at which this CryptoKey was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -42,7 +42,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      * 
      */
-    @OutputExport(name="cryptoKeyBackend", type=String.class, parameters={})
+    @Export(name="cryptoKeyBackend", type=String.class, parameters={})
     private Output<String> cryptoKeyBackend;
 
     /**
@@ -56,7 +56,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
      * 
      */
-    @OutputExport(name="destroyScheduledDuration", type=String.class, parameters={})
+    @Export(name="destroyScheduledDuration", type=String.class, parameters={})
     private Output<String> destroyScheduledDuration;
 
     /**
@@ -70,7 +70,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Immutable. Whether this key may contain imported versions only.
      * 
      */
-    @OutputExport(name="importOnly", type=Boolean.class, parameters={})
+    @Export(name="importOnly", type=Boolean.class, parameters={})
     private Output<Boolean> importOnly;
 
     /**
@@ -84,7 +84,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -98,7 +98,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -112,7 +112,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
      */
-    @OutputExport(name="nextRotationTime", type=String.class, parameters={})
+    @Export(name="nextRotationTime", type=String.class, parameters={})
     private Output<String> nextRotationTime;
 
     /**
@@ -126,7 +126,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * A copy of the "primary" CryptoKeyVersion that will be used by Encrypt when this CryptoKey is given in EncryptRequest.name. The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be omitted.
      * 
      */
-    @OutputExport(name="primary", type=CryptoKeyVersionResponse.class, parameters={})
+    @Export(name="primary", type=CryptoKeyVersionResponse.class, parameters={})
     private Output<CryptoKeyVersionResponse> primary;
 
     /**
@@ -140,7 +140,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * Immutable. The immutable purpose of this CryptoKey.
      * 
      */
-    @OutputExport(name="purpose", type=String.class, parameters={})
+    @Export(name="purpose", type=String.class, parameters={})
     private Output<String> purpose;
 
     /**
@@ -154,7 +154,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
      */
-    @OutputExport(name="rotationPeriod", type=String.class, parameters={})
+    @Export(name="rotationPeriod", type=String.class, parameters={})
     private Output<String> rotationPeriod;
 
     /**
@@ -168,7 +168,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
      * 
      */
-    @OutputExport(name="versionTemplate", type=CryptoKeyVersionTemplateResponse.class, parameters={})
+    @Export(name="versionTemplate", type=CryptoKeyVersionTemplateResponse.class, parameters={})
     private Output<CryptoKeyVersionTemplateResponse> versionTemplate;
 
     /**

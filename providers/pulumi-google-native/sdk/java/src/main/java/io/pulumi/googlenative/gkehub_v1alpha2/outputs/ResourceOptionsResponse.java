@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceOptionsResponse {
     /**
      * Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
@@ -26,11 +26,11 @@ public final class ResourceOptionsResponse {
      */
     private final Boolean v1beta1Crd;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceOptionsResponse(
-        @OutputCustomType.Parameter("connectVersion") String connectVersion,
-        @OutputCustomType.Parameter("k8sVersion") String k8sVersion,
-        @OutputCustomType.Parameter("v1beta1Crd") Boolean v1beta1Crd) {
+        @CustomType.Parameter("connectVersion") String connectVersion,
+        @CustomType.Parameter("k8sVersion") String k8sVersion,
+        @CustomType.Parameter("v1beta1Crd") Boolean v1beta1Crd) {
         this.connectVersion = connectVersion;
         this.k8sVersion = k8sVersion;
         this.v1beta1Crd = v1beta1Crd;

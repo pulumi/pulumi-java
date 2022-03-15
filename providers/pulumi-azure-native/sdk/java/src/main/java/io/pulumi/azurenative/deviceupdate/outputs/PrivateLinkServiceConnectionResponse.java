@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionResponse {
     /**
      * List of group IDs.
@@ -28,11 +28,11 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final @Nullable String requestMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage) {
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage) {
         this.groupIds = groupIds;
         this.name = name;
         this.requestMessage = requestMessage;

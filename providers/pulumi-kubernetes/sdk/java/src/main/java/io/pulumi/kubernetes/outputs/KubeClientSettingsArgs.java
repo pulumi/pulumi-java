@@ -4,13 +4,13 @@
 package io.pulumi.kubernetes.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KubeClientSettingsArgs {
     /**
      * Maximum burst for throttle. Default value is 10.
@@ -23,10 +23,10 @@ public final class KubeClientSettingsArgs {
      */
     private final @Nullable Output<Double> qps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubeClientSettingsArgs(
-        @OutputCustomType.Parameter("burst") @Nullable Output<Integer> burst,
-        @OutputCustomType.Parameter("qps") @Nullable Output<Double> qps) {
+        @CustomType.Parameter("burst") @Nullable Output<Integer> burst,
+        @CustomType.Parameter("qps") @Nullable Output<Double> qps) {
         this.burst = burst;
         this.qps = qps;
     }

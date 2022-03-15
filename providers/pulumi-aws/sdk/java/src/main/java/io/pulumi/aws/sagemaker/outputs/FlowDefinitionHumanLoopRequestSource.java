@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowDefinitionHumanLoopRequestSource {
     /**
      * Specifies whether Amazon Rekognition or Amazon Textract are used as the integration source. Valid values are: `AWS/Rekognition/DetectModerationLabels/Image/V3` and `AWS/Textract/AnalyzeDocument/Forms/V1`.
@@ -15,8 +15,8 @@ public final class FlowDefinitionHumanLoopRequestSource {
      */
     private final String awsManagedHumanLoopRequestSource;
 
-    @OutputCustomType.Constructor
-    private FlowDefinitionHumanLoopRequestSource(@OutputCustomType.Parameter("awsManagedHumanLoopRequestSource") String awsManagedHumanLoopRequestSource) {
+    @CustomType.Constructor
+    private FlowDefinitionHumanLoopRequestSource(@CustomType.Parameter("awsManagedHumanLoopRequestSource") String awsManagedHumanLoopRequestSource) {
         this.awsManagedHumanLoopRequestSource = awsManagedHumanLoopRequestSource;
     }
 

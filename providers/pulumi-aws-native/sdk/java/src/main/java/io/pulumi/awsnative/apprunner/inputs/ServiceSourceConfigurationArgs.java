@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apprunner.inputs.ServiceAuthenticationConfigurationAr
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeRepositoryArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceImageRepositoryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
 
     public static final ServiceSourceConfigurationArgs Empty = new ServiceSourceConfigurationArgs();
 
-    @InputImport(name="authenticationConfiguration")
+    @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceAuthenticationConfigurationArgs> authenticationConfiguration;
 
     public Output<ServiceAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
@@ -32,21 +32,21 @@ public final class ServiceSourceConfigurationArgs extends io.pulumi.resources.Re
      * Auto Deployment enabled
      * 
      */
-    @InputImport(name="autoDeploymentsEnabled")
+    @Import(name="autoDeploymentsEnabled")
       private final @Nullable Output<Boolean> autoDeploymentsEnabled;
 
     public Output<Boolean> getAutoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Output.empty() : this.autoDeploymentsEnabled;
     }
 
-    @InputImport(name="codeRepository")
+    @Import(name="codeRepository")
       private final @Nullable Output<ServiceCodeRepositoryArgs> codeRepository;
 
     public Output<ServiceCodeRepositoryArgs> getCodeRepository() {
         return this.codeRepository == null ? Output.empty() : this.codeRepository;
     }
 
-    @InputImport(name="imageRepository")
+    @Import(name="imageRepository")
       private final @Nullable Output<ServiceImageRepositoryArgs> imageRepository;
 
     public Output<ServiceImageRepositoryArgs> getImageRepository() {

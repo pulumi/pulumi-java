@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
      * The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
      * 
      */
-    @InputImport(name="base")
+    @Import(name="base")
       private final @Nullable Output<Integer> base;
 
     public Output<Integer> getBase() {
@@ -30,7 +30,7 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
      * The short name or full Amazon Resource Name (ARN) of the capacity provider.
      * 
      */
-    @InputImport(name="capacityProvider", required=true)
+    @Import(name="capacityProvider", required=true)
       private final Output<String> capacityProvider;
 
     public Output<String> getCapacityProvider() {
@@ -41,7 +41,7 @@ public final class TaskSetCapacityProviderStrategyGetArgs extends io.pulumi.reso
      * The relative percentage of the total number of launched tasks that should use the specified capacity provider.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

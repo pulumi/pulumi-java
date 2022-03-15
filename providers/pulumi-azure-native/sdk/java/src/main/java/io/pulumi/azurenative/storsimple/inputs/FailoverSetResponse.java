@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.FailoverSetEligibilityResultResponse;
 import io.pulumi.azurenative.storsimple.inputs.VolumeContainerFailoverMetadataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
      * The eligibility result of the failover set, for failover.
      * 
      */
-    @InputImport(name="eligibilityResult")
+    @Import(name="eligibilityResult")
       private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
 
     public Optional<FailoverSetEligibilityResultResponse> getEligibilityResult() {
@@ -35,7 +35,7 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
      * The list of meta data of volume containers, which are part of the failover set.
      * 
      */
-    @InputImport(name="volumeContainers")
+    @Import(name="volumeContainers")
       private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
     public List<VolumeContainerFailoverMetadataResponse> getVolumeContainers() {

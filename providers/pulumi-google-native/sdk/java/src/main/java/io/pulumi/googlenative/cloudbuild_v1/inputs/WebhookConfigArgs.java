@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.enums.WebhookConfigState;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name for the secret required as a URL parameter.
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final Output<String> secret;
 
     public Output<String> getSecret() {
@@ -34,7 +34,7 @@ public final class WebhookConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<WebhookConfigState> state;
 
     public Output<WebhookConfigState> getState() {

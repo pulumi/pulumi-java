@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
      * digest is a map from a hash algorithm (e.g. sha256) to the value in the material
      * 
      */
-    @InputImport(name="digest", required=true)
+    @Import(name="digest", required=true)
       private final Map<String,String> digest;
 
     public Map<String,String> getDigest() {
@@ -32,7 +32,7 @@ public final class MaterialResponse extends io.pulumi.resources.InvokeArgs {
      * uri is the uri of the material
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

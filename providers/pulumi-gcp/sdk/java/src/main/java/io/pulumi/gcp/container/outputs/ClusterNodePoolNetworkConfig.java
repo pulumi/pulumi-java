@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolNetworkConfig {
     /**
      * Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified.
@@ -28,11 +28,11 @@ public final class ClusterNodePoolNetworkConfig {
      */
     private final String podRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodePoolNetworkConfig(
-        @OutputCustomType.Parameter("createPodRange") @Nullable Boolean createPodRange,
-        @OutputCustomType.Parameter("podIpv4CidrBlock") @Nullable String podIpv4CidrBlock,
-        @OutputCustomType.Parameter("podRange") String podRange) {
+        @CustomType.Parameter("createPodRange") @Nullable Boolean createPodRange,
+        @CustomType.Parameter("podIpv4CidrBlock") @Nullable String podIpv4CidrBlock,
+        @CustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;

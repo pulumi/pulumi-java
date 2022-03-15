@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionDeviceArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionKernelCapabilitiesArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionTmpfsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -19,49 +19,49 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
 
     public static final TaskDefinitionLinuxParametersArgs Empty = new TaskDefinitionLinuxParametersArgs();
 
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<TaskDefinitionKernelCapabilitiesArgs> capabilities;
 
     public Output<TaskDefinitionKernelCapabilitiesArgs> getCapabilities() {
         return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
-    @InputImport(name="devices")
+    @Import(name="devices")
       private final @Nullable Output<List<TaskDefinitionDeviceArgs>> devices;
 
     public Output<List<TaskDefinitionDeviceArgs>> getDevices() {
         return this.devices == null ? Output.empty() : this.devices;
     }
 
-    @InputImport(name="initProcessEnabled")
+    @Import(name="initProcessEnabled")
       private final @Nullable Output<Boolean> initProcessEnabled;
 
     public Output<Boolean> getInitProcessEnabled() {
         return this.initProcessEnabled == null ? Output.empty() : this.initProcessEnabled;
     }
 
-    @InputImport(name="maxSwap")
+    @Import(name="maxSwap")
       private final @Nullable Output<Integer> maxSwap;
 
     public Output<Integer> getMaxSwap() {
         return this.maxSwap == null ? Output.empty() : this.maxSwap;
     }
 
-    @InputImport(name="sharedMemorySize")
+    @Import(name="sharedMemorySize")
       private final @Nullable Output<Integer> sharedMemorySize;
 
     public Output<Integer> getSharedMemorySize() {
         return this.sharedMemorySize == null ? Output.empty() : this.sharedMemorySize;
     }
 
-    @InputImport(name="swappiness")
+    @Import(name="swappiness")
       private final @Nullable Output<Integer> swappiness;
 
     public Output<Integer> getSwappiness() {
         return this.swappiness == null ? Output.empty() : this.swappiness;
     }
 
-    @InputImport(name="tmpfs")
+    @Import(name="tmpfs")
       private final @Nullable Output<List<TaskDefinitionTmpfsArgs>> tmpfs;
 
     public Output<List<TaskDefinitionTmpfsArgs>> getTmpfs() {

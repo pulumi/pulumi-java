@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.AzureMLWebServiceFileResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -41,7 +41,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -52,7 +52,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Key,Value pairs to be passed to the Azure ML Batch Execution Service endpoint. Keys must match the names of web service parameters defined in the published Azure ML web service. Values will be passed in the GlobalParameters property of the Azure ML batch execution request.
      * 
      */
-    @InputImport(name="globalParameters")
+    @Import(name="globalParameters")
       private final @Nullable Map<String,Object> globalParameters;
 
     public Map<String,Object> getGlobalParameters() {
@@ -63,7 +63,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -74,7 +74,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -85,7 +85,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -97,7 +97,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Expected value is 'AzureMLBatchExecution'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -108,7 +108,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
@@ -119,7 +119,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Inputs to AzureMLWebServiceFile objects specifying the input Blob locations.. This information will be passed in the WebServiceInputs property of the Azure ML batch execution request.
      * 
      */
-    @InputImport(name="webServiceInputs")
+    @Import(name="webServiceInputs")
       private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
 
     public Map<String,AzureMLWebServiceFileResponse> getWebServiceInputs() {
@@ -130,7 +130,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * Key,Value pairs, mapping the names of Azure ML endpoint's Web Service Outputs to AzureMLWebServiceFile objects specifying the output Blob locations. This information will be passed in the WebServiceOutputs property of the Azure ML batch execution request.
      * 
      */
-    @InputImport(name="webServiceOutputs")
+    @Import(name="webServiceOutputs")
       private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
 
     public Map<String,AzureMLWebServiceFileResponse> getWebServiceOutputs() {

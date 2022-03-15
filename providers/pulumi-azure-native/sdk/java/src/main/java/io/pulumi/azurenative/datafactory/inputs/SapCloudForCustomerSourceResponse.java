@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
@@ -34,7 +34,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -45,7 +45,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * The timeout (TimeSpan) to get an HTTP response. It is the timeout to get a response, not the timeout to read response data. Default value: 00:05:00. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="httpRequestTimeout")
+    @Import(name="httpRequestTimeout")
       private final @Nullable Object httpRequestTimeout;
 
     public Optional<Object> getHttpRequestTimeout() {
@@ -56,7 +56,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -67,7 +67,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * SAP Cloud for Customer OData query. For example, "$top=1". Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Object query;
 
     public Optional<Object> getQuery() {
@@ -78,7 +78,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
@@ -89,7 +89,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
@@ -100,7 +100,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
@@ -112,7 +112,7 @@ public final class SapCloudForCustomerSourceResponse extends io.pulumi.resources
      * Expected value is 'SapCloudForCustomerSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

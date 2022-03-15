@@ -3,22 +3,22 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SwaggerSpecificationResponse {
     private final @Nullable List<String> apiVersions;
     private final @Nullable String swaggerSpecFolderUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SwaggerSpecificationResponse(
-        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
-        @OutputCustomType.Parameter("swaggerSpecFolderUri") @Nullable String swaggerSpecFolderUri) {
+        @CustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @CustomType.Parameter("swaggerSpecFolderUri") @Nullable String swaggerSpecFolderUri) {
         this.apiVersions = apiVersions;
         this.swaggerSpecFolderUri = swaggerSpecFolderUri;
     }

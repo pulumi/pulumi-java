@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountResponseSku {
     /**
      * Gets or sets the sku capacity.
@@ -23,10 +23,10 @@ public final class AccountResponseSku {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountResponseSku(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.capacity = capacity;
         this.name = name;
     }

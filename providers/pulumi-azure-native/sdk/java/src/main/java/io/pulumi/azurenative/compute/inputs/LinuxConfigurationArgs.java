@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.LinuxPatchSettingsArgs;
 import io.pulumi.azurenative.compute.inputs.SshConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether password authentication should be disabled.
      * 
      */
-    @InputImport(name="disablePasswordAuthentication")
+    @Import(name="disablePasswordAuthentication")
       private final @Nullable Output<Boolean> disablePasswordAuthentication;
 
     public Output<Boolean> getDisablePasswordAuthentication() {
@@ -35,7 +35,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * [Preview Feature] Specifies settings related to VM Guest Patching on Linux.
      * 
      */
-    @InputImport(name="patchSettings")
+    @Import(name="patchSettings")
       private final @Nullable Output<LinuxPatchSettingsArgs> patchSettings;
 
     public Output<LinuxPatchSettingsArgs> getPatchSettings() {
@@ -46,7 +46,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.
      * 
      */
-    @InputImport(name="provisionVMAgent")
+    @Import(name="provisionVMAgent")
       private final @Nullable Output<Boolean> provisionVMAgent;
 
     public Output<Boolean> getProvisionVMAgent() {
@@ -57,7 +57,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * Specifies the ssh key configuration for a Linux OS.
      * 
      */
-    @InputImport(name="ssh")
+    @Import(name="ssh")
       private final @Nullable Output<SshConfigurationArgs> ssh;
 
     public Output<SshConfigurationArgs> getSsh() {

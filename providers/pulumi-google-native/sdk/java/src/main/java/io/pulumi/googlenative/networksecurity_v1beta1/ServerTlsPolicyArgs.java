@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1CertificateProviderArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.MTLSPolicyArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
      */
-    @InputImport(name="allowOpen")
+    @Import(name="allowOpen")
       private final @Nullable Output<Boolean> allowOpen;
 
     public Output<Boolean> getAllowOpen() {
@@ -33,7 +33,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Free-text description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,14 +44,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Set of label tags associated with the resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -62,7 +62,7 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
      */
-    @InputImport(name="mtlsPolicy")
+    @Import(name="mtlsPolicy")
       private final @Nullable Output<MTLSPolicyArgs> mtlsPolicy;
 
     public Output<MTLSPolicyArgs> getMtlsPolicy() {
@@ -73,14 +73,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -91,14 +91,14 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
      */
-    @InputImport(name="serverCertificate")
+    @Import(name="serverCertificate")
       private final @Nullable Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate;
 
     public Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> getServerCertificate() {
         return this.serverCertificate == null ? Output.empty() : this.serverCertificate;
     }
 
-    @InputImport(name="serverTlsPolicyId", required=true)
+    @Import(name="serverTlsPolicyId", required=true)
       private final Output<String> serverTlsPolicyId;
 
     public Output<String> getServerTlsPolicyId() {

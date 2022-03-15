@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ArtifactHashesArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArtifactHashesArgs Empty = new ArtifactHashesArgs();
 
-    @InputImport(name="sha256")
+    @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
     public Output<String> getSha256() {

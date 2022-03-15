@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyParametersInCacheKeyAndForwardedToOrigin;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CachePolicyConfig {
     private final @Nullable String comment;
     private final Double defaultTTL;
@@ -20,14 +20,14 @@ public final class CachePolicyConfig {
     private final String name;
     private final CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CachePolicyConfig(
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("defaultTTL") Double defaultTTL,
-        @OutputCustomType.Parameter("maxTTL") Double maxTTL,
-        @OutputCustomType.Parameter("minTTL") Double minTTL,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parametersInCacheKeyAndForwardedToOrigin") CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("defaultTTL") Double defaultTTL,
+        @CustomType.Parameter("maxTTL") Double maxTTL,
+        @CustomType.Parameter("minTTL") Double minTTL,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parametersInCacheKeyAndForwardedToOrigin") CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
         this.comment = comment;
         this.defaultTTL = defaultTTL;
         this.maxTTL = maxTTL;

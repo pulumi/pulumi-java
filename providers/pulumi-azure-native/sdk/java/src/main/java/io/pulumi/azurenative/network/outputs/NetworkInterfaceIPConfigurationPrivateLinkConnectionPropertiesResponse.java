@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse {
     /**
      * List of FQDNs for current private link connection.
@@ -26,11 +26,11 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
      */
     private final String requiredMemberName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse(
-        @OutputCustomType.Parameter("fqdns") List<String> fqdns,
-        @OutputCustomType.Parameter("groupId") String groupId,
-        @OutputCustomType.Parameter("requiredMemberName") String requiredMemberName) {
+        @CustomType.Parameter("fqdns") List<String> fqdns,
+        @CustomType.Parameter("groupId") String groupId,
+        @CustomType.Parameter("requiredMemberName") String requiredMemberName) {
         this.fqdns = fqdns;
         this.groupId = groupId;
         this.requiredMemberName = requiredMemberName;

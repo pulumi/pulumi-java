@@ -3,22 +3,22 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionStateRuleResponse {
     private final @Nullable List<String> allowedActions;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionStateRuleResponse(
-        @OutputCustomType.Parameter("allowedActions") @Nullable List<String> allowedActions,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("allowedActions") @Nullable List<String> allowedActions,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.allowedActions = allowedActions;
         this.state = state;
     }

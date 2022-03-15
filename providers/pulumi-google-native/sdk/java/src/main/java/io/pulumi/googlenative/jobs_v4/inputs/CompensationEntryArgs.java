@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v4.enums.CompensationEntryType;
 import io.pulumi.googlenative.jobs_v4.enums.CompensationEntryUnit;
 import io.pulumi.googlenative.jobs_v4.inputs.CompensationRangeArgs;
@@ -27,7 +27,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * Compensation amount.
      * 
      */
-    @InputImport(name="amount")
+    @Import(name="amount")
       private final @Nullable Output<MoneyArgs> amount;
 
     public Output<MoneyArgs> getAmount() {
@@ -38,7 +38,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -49,7 +49,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
      * 
      */
-    @InputImport(name="expectedUnitsPerYear")
+    @Import(name="expectedUnitsPerYear")
       private final @Nullable Output<Double> expectedUnitsPerYear;
 
     public Output<Double> getExpectedUnitsPerYear() {
@@ -60,7 +60,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * Compensation range.
      * 
      */
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable Output<CompensationRangeArgs> range;
 
     public Output<CompensationRangeArgs> getRange() {
@@ -71,7 +71,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * Compensation type. Default is CompensationType.COMPENSATION_TYPE_UNSPECIFIED.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<CompensationEntryType> type;
 
     public Output<CompensationEntryType> getType() {
@@ -82,7 +82,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<CompensationEntryUnit> unit;
 
     public Output<CompensationEntryUnit> getUnit() {

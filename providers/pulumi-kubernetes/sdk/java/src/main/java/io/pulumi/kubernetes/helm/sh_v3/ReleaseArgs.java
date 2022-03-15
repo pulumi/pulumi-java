@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.helm.sh_v3;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.helm.sh_v3.inputs.RepositoryOptsArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
      * 
      */
-    @InputImport(name="atomic")
+    @Import(name="atomic")
       private final @Nullable Output<Boolean> atomic;
 
     public Output<Boolean> getAtomic() {
@@ -36,7 +36,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Chart name to be installed. A path may be used.
      * 
      */
-    @InputImport(name="chart", required=true)
+    @Import(name="chart", required=true)
       private final Output<String> chart;
 
     public Output<String> getChart() {
@@ -47,14 +47,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Allow deletion of new resources created in this upgrade when upgrade fails.
      * 
      */
-    @InputImport(name="cleanupOnFail")
+    @Import(name="cleanupOnFail")
       private final @Nullable Output<Boolean> cleanupOnFail;
 
     public Output<Boolean> getCleanupOnFail() {
         return this.cleanupOnFail == null ? Output.empty() : this.cleanupOnFail;
     }
 
-    @InputImport(name="compat")
+    @Import(name="compat")
       private final @Nullable Output<String> compat;
 
     public Output<String> getCompat() {
@@ -65,7 +65,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Create the namespace if it does not exist.
      * 
      */
-    @InputImport(name="createNamespace")
+    @Import(name="createNamespace")
       private final @Nullable Output<Boolean> createNamespace;
 
     public Output<Boolean> getCreateNamespace() {
@@ -76,7 +76,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Run helm dependency update before installing the chart.
      * 
      */
-    @InputImport(name="dependencyUpdate")
+    @Import(name="dependencyUpdate")
       private final @Nullable Output<Boolean> dependencyUpdate;
 
     public Output<Boolean> getDependencyUpdate() {
@@ -87,7 +87,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Add a custom description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -98,7 +98,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
      * 
      */
-    @InputImport(name="devel")
+    @Import(name="devel")
       private final @Nullable Output<Boolean> devel;
 
     public Output<Boolean> getDevel() {
@@ -109,7 +109,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
-    @InputImport(name="disableCRDHooks")
+    @Import(name="disableCRDHooks")
       private final @Nullable Output<Boolean> disableCRDHooks;
 
     public Output<Boolean> getDisableCRDHooks() {
@@ -120,7 +120,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
      * 
      */
-    @InputImport(name="disableOpenapiValidation")
+    @Import(name="disableOpenapiValidation")
       private final @Nullable Output<Boolean> disableOpenapiValidation;
 
     public Output<Boolean> getDisableOpenapiValidation() {
@@ -131,7 +131,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Prevent hooks from running.
      * 
      */
-    @InputImport(name="disableWebhooks")
+    @Import(name="disableWebhooks")
       private final @Nullable Output<Boolean> disableWebhooks;
 
     public Output<Boolean> getDisableWebhooks() {
@@ -142,7 +142,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Force resource update through delete/recreate if needed.
      * 
      */
-    @InputImport(name="forceUpdate")
+    @Import(name="forceUpdate")
       private final @Nullable Output<Boolean> forceUpdate;
 
     public Output<Boolean> getForceUpdate() {
@@ -153,7 +153,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Location of public keys used for verification. Used only if `verify` is true
      * 
      */
-    @InputImport(name="keyring")
+    @Import(name="keyring")
       private final @Nullable Output<String> keyring;
 
     public Output<String> getKeyring() {
@@ -164,7 +164,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Run helm lint when planning.
      * 
      */
-    @InputImport(name="lint")
+    @Import(name="lint")
       private final @Nullable Output<Boolean> lint;
 
     public Output<Boolean> getLint() {
@@ -175,7 +175,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * The rendered manifests as JSON. Not yet supported.
      * 
      */
-    @InputImport(name="manifest")
+    @Import(name="manifest")
       private final @Nullable Output<Map<String,Object>> manifest;
 
     public Output<Map<String,Object>> getManifest() {
@@ -186,7 +186,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Limit the maximum number of revisions saved per release. Use 0 for no limit.
      * 
      */
-    @InputImport(name="maxHistory")
+    @Import(name="maxHistory")
       private final @Nullable Output<Integer> maxHistory;
 
     public Output<Integer> getMaxHistory() {
@@ -197,7 +197,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Release name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -208,7 +208,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Namespace to install the release into.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -219,7 +219,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Postrender command to run.
      * 
      */
-    @InputImport(name="postrender")
+    @Import(name="postrender")
       private final @Nullable Output<String> postrender;
 
     public Output<String> getPostrender() {
@@ -230,7 +230,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Perform pods restart during upgrade/rollback.
      * 
      */
-    @InputImport(name="recreatePods")
+    @Import(name="recreatePods")
       private final @Nullable Output<Boolean> recreatePods;
 
     public Output<Boolean> getRecreatePods() {
@@ -241,7 +241,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * If set, render subchart notes along with the parent.
      * 
      */
-    @InputImport(name="renderSubchartNotes")
+    @Import(name="renderSubchartNotes")
       private final @Nullable Output<Boolean> renderSubchartNotes;
 
     public Output<Boolean> getRenderSubchartNotes() {
@@ -252,7 +252,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Re-use the given name, even if that name is already used. This is unsafe in production
      * 
      */
-    @InputImport(name="replace")
+    @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
     public Output<Boolean> getReplace() {
@@ -263,7 +263,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Specification defining the Helm chart repository to use.
      * 
      */
-    @InputImport(name="repositoryOpts")
+    @Import(name="repositoryOpts")
       private final @Nullable Output<RepositoryOptsArgs> repositoryOpts;
 
     public Output<RepositoryOptsArgs> getRepositoryOpts() {
@@ -274,7 +274,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * When upgrading, reset the values to the ones built into the chart.
      * 
      */
-    @InputImport(name="resetValues")
+    @Import(name="resetValues")
       private final @Nullable Output<Boolean> resetValues;
 
     public Output<Boolean> getResetValues() {
@@ -285,7 +285,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Names of resources created by the release grouped by "kind/version".
      * 
      */
-    @InputImport(name="resourceNames")
+    @Import(name="resourceNames")
       private final @Nullable Output<Map<String,List<String>>> resourceNames;
 
     public Output<Map<String,List<String>>> getResourceNames() {
@@ -296,7 +296,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
      * 
      */
-    @InputImport(name="reuseValues")
+    @Import(name="reuseValues")
       private final @Nullable Output<Boolean> reuseValues;
 
     public Output<Boolean> getReuseValues() {
@@ -307,7 +307,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
      * 
      */
-    @InputImport(name="skipAwait")
+    @Import(name="skipAwait")
       private final @Nullable Output<Boolean> skipAwait;
 
     public Output<Boolean> getSkipAwait() {
@@ -318,7 +318,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * If set, no CRDs will be installed. By default, CRDs are installed if not already present.
      * 
      */
-    @InputImport(name="skipCrds")
+    @Import(name="skipCrds")
       private final @Nullable Output<Boolean> skipCrds;
 
     public Output<Boolean> getSkipCrds() {
@@ -329,7 +329,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Time in seconds to wait for any individual kubernetes operation.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -340,7 +340,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * List of assets (raw yaml files). Content is read and merged with values.
      * 
      */
-    @InputImport(name="valueYamlFiles")
+    @Import(name="valueYamlFiles")
       private final @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
 
     public Output<List<AssetOrArchive>> getValueYamlFiles() {
@@ -351,7 +351,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Custom values set for the release.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<Map<String,Object>> values;
 
     public Output<Map<String,Object>> getValues() {
@@ -362,7 +362,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Verify the package before installing it.
      * 
      */
-    @InputImport(name="verify")
+    @Import(name="verify")
       private final @Nullable Output<Boolean> verify;
 
     public Output<Boolean> getVerify() {
@@ -373,7 +373,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Specify the exact chart version to install. If this is not specified, the latest version is installed.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -384,7 +384,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
      * 
      */
-    @InputImport(name="waitForJobs")
+    @Import(name="waitForJobs")
       private final @Nullable Output<Boolean> waitForJobs;
 
     public Output<Boolean> getWaitForJobs() {

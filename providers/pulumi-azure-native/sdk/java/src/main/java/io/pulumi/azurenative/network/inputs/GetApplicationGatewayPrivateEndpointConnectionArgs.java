@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
      * The name of the application gateway.
      * 
      */
-    @InputImport(name="applicationGatewayName", required=true)
+    @Import(name="applicationGatewayName", required=true)
       private final String applicationGatewayName;
 
     public String getApplicationGatewayName() {
@@ -27,7 +27,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
      * The name of the application gateway private endpoint connection.
      * 
      */
-    @InputImport(name="connectionName", required=true)
+    @Import(name="connectionName", required=true)
       private final String connectionName;
 
     public String getConnectionName() {
@@ -38,7 +38,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

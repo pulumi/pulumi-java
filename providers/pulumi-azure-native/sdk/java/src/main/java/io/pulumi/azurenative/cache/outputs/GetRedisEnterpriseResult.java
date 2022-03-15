@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache.outputs;
 
 import io.pulumi.azurenative.cache.outputs.EnterpriseSkuResponse;
 import io.pulumi.azurenative.cache.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRedisEnterpriseResult {
     /**
      * DNS name of the cluster endpoint
@@ -81,21 +81,21 @@ public final class GetRedisEnterpriseResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRedisEnterpriseResult(
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("redisVersion") String redisVersion,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("sku") EnterpriseSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("redisVersion") String redisVersion,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("sku") EnterpriseSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.hostName = hostName;
         this.id = id;
         this.location = location;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.RulesEngineActionArgs;
 import io.pulumi.azurenative.network.inputs.RulesEngineMatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Actions to perform on the request and response if all of the match conditions are met.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RulesEngineActionArgs> action;
 
     public Output<RulesEngineActionArgs> getAction() {
@@ -39,7 +39,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
      * 
      */
-    @InputImport(name="matchConditions")
+    @Import(name="matchConditions")
       private final @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
 
     public Output<List<RulesEngineMatchConditionArgs>> getMatchConditions() {
@@ -50,7 +50,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
-    @InputImport(name="matchProcessingBehavior")
+    @Import(name="matchProcessingBehavior")
       private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
     public Output<Either<String,MatchProcessingBehavior>> getMatchProcessingBehavior() {
@@ -61,7 +61,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * A name to refer to this specific rule.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * A priority assigned to this rule.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotcoredeviceadvisor.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SuiteDefinitionDeviceUnderTest {
     private final @Nullable String certificateArn;
     private final @Nullable String thingArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SuiteDefinitionDeviceUnderTest(
-        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
-        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn) {
+        @CustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @CustomType.Parameter("thingArn") @Nullable String thingArn) {
         this.certificateArn = certificateArn;
         this.thingArn = thingArn;
     }

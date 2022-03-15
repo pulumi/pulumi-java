@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AmlComputeResponseProperties;
 import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmlComputeResponse {
     /**
      * Location for the underlying compute
@@ -57,16 +57,16 @@ public final class AmlComputeResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmlComputeResponse(
-        @OutputCustomType.Parameter("computeLocation") @Nullable String computeLocation,
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
-        @OutputCustomType.Parameter("properties") @Nullable AmlComputeResponseProperties properties,
-        @OutputCustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("computeLocation") @Nullable String computeLocation,
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
+        @CustomType.Parameter("properties") @Nullable AmlComputeResponseProperties properties,
+        @CustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.computeLocation = computeLocation;
         this.computeType = computeType;
         this.description = description;

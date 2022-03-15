@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the resource. Always compute#savedDisk for attached disks.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -31,7 +31,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies a URL of the disk attached to the source instance.
      * 
      */
-    @InputImport(name="sourceDisk", required=true)
+    @Import(name="sourceDisk", required=true)
       private final String sourceDisk;
 
     public String getSourceDisk() {
@@ -42,7 +42,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Size of the individual disk snapshot used by this machine image.
      * 
      */
-    @InputImport(name="storageBytes", required=true)
+    @Import(name="storageBytes", required=true)
       private final String storageBytes;
 
     public String getStorageBytes() {
@@ -53,7 +53,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
      * 
      */
-    @InputImport(name="storageBytesStatus", required=true)
+    @Import(name="storageBytesStatus", required=true)
       private final String storageBytesStatus;
 
     public String getStorageBytesStatus() {

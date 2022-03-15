@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGkeClusterReferenceGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gkeClusterReference", required=true)
+    @Import(name="gkeClusterReference", required=true)
       private final Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
 
     public Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> getGkeClusterReference() {
@@ -32,7 +32,7 @@ public final class GameServerClusterConnectionInfoGetArgs extends io.pulumi.reso
      * during creation.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

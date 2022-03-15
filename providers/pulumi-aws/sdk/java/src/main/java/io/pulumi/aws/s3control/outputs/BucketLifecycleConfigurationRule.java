@@ -6,13 +6,13 @@ package io.pulumi.aws.s3control.outputs;
 import io.pulumi.aws.s3control.outputs.BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload;
 import io.pulumi.aws.s3control.outputs.BucketLifecycleConfigurationRuleExpiration;
 import io.pulumi.aws.s3control.outputs.BucketLifecycleConfigurationRuleFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleConfigurationRule {
     /**
      * Configuration block containing settings for abort incomplete multipart upload.
@@ -40,13 +40,13 @@ public final class BucketLifecycleConfigurationRule {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleConfigurationRule(
-        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @OutputCustomType.Parameter("expiration") @Nullable BucketLifecycleConfigurationRuleExpiration expiration,
-        @OutputCustomType.Parameter("filter") @Nullable BucketLifecycleConfigurationRuleFilter filter,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @CustomType.Parameter("expiration") @Nullable BucketLifecycleConfigurationRuleExpiration expiration,
+        @CustomType.Parameter("filter") @Nullable BucketLifecycleConfigurationRuleFilter filter,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expiration = expiration;
         this.filter = filter;

@@ -4,21 +4,21 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.LogAnalyticsConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppLogsConfigurationResponse {
     private final @Nullable String destination;
     private final @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppLogsConfigurationResponse(
-        @OutputCustomType.Parameter("destination") @Nullable String destination,
-        @OutputCustomType.Parameter("logAnalyticsConfiguration") @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
+        @CustomType.Parameter("destination") @Nullable String destination,
+        @CustomType.Parameter("logAnalyticsConfiguration") @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
         this.destination = destination;
         this.logAnalyticsConfiguration = logAnalyticsConfiguration;
     }

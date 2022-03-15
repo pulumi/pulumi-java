@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * Human friendly display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * If this config allows users to sign in with the provider.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -44,7 +44,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="idpConfig", required=true)
+    @Import(name="idpConfig", required=true)
       private final Output<TenantInboundSamlConfigIdpConfigArgs> idpConfig;
 
     public Output<TenantInboundSamlConfigIdpConfigArgs> getIdpConfig() {
@@ -57,7 +57,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * alphanumeric character, and have at least 2 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -82,7 +82,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spConfig", required=true)
+    @Import(name="spConfig", required=true)
       private final Output<TenantInboundSamlConfigSpConfigArgs> spConfig;
 
     public Output<TenantInboundSamlConfigSpConfigArgs> getSpConfig() {
@@ -93,7 +93,7 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
      * The name of the tenant where this inbound SAML config resource exists
      * 
      */
-    @InputImport(name="tenant", required=true)
+    @Import(name="tenant", required=true)
       private final Output<String> tenant;
 
     public Output<String> getTenant() {

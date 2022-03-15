@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetAmiFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    @InputImport(name="executableUsers")
+    @Import(name="executableUsers")
       private final @Nullable List<String> executableUsers;
 
     public List<String> getExecutableUsers() {
@@ -36,7 +36,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * [describe-images in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetAmiFilter> filters;
 
     public List<GetAmiFilter> getFilters() {
@@ -48,7 +48,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * recent AMI.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -63,7 +63,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    @InputImport(name="nameRegex")
+    @Import(name="nameRegex")
       private final @Nullable String nameRegex;
 
     public Optional<String> getNameRegex() {
@@ -74,7 +74,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
      * 
      */
-    @InputImport(name="owners", required=true)
+    @Import(name="owners", required=true)
       private final List<String> owners;
 
     public List<String> getOwners() {
@@ -87,7 +87,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * * `tags.#.value` - The value of the tag.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

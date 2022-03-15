@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SQLStorageSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * Disk configuration to apply to SQL Server.
      * 
      */
-    @InputImport(name="diskConfigurationType")
+    @Import(name="diskConfigurationType")
       private final @Nullable String diskConfigurationType;
 
     public Optional<String> getDiskConfigurationType() {
@@ -34,7 +34,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * SQL Server Data Storage Settings.
      * 
      */
-    @InputImport(name="sqlDataSettings")
+    @Import(name="sqlDataSettings")
       private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
 
     public Optional<SQLStorageSettingsResponse> getSqlDataSettings() {
@@ -45,7 +45,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * SQL Server Log Storage Settings.
      * 
      */
-    @InputImport(name="sqlLogSettings")
+    @Import(name="sqlLogSettings")
       private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
 
     public Optional<SQLStorageSettingsResponse> getSqlLogSettings() {
@@ -56,7 +56,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * SQL Server TempDb Storage Settings.
      * 
      */
-    @InputImport(name="sqlTempDbSettings")
+    @Import(name="sqlTempDbSettings")
       private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
 
     public Optional<SQLStorageSettingsResponse> getSqlTempDbSettings() {
@@ -67,7 +67,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * Storage workload type.
      * 
      */
-    @InputImport(name="storageWorkloadType")
+    @Import(name="storageWorkloadType")
       private final @Nullable String storageWorkloadType;
 
     public Optional<String> getStorageWorkloadType() {

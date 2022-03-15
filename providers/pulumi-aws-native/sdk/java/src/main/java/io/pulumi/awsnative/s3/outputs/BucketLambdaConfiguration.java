@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketNotificationFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLambdaConfiguration {
     /**
      * The Amazon S3 bucket event for which to invoke the AWS Lambda function.
@@ -28,11 +28,11 @@ public final class BucketLambdaConfiguration {
      */
     private final String function;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLambdaConfiguration(
-        @OutputCustomType.Parameter("event") String event,
-        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
-        @OutputCustomType.Parameter("function") String function) {
+        @CustomType.Parameter("event") String event,
+        @CustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @CustomType.Parameter("function") String function) {
         this.event = event;
         this.filter = filter;
         this.function = function;

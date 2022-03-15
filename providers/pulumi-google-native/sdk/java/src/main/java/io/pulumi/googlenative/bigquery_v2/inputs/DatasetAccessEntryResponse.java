@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class DatasetAccessEntryResponse extends io.pulumi.resources.Invoke
      * [Required] The dataset this entry applies to.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
     }
 
-    @InputImport(name="targetTypes", required=true)
+    @Import(name="targetTypes", required=true)
       private final List<String> targetTypes;
 
     public List<String> getTargetTypes() {

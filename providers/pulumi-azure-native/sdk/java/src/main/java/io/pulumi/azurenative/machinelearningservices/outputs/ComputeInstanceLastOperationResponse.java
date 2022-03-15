@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeInstanceLastOperationResponse {
     /**
      * Name of the last operation.
@@ -27,11 +27,11 @@ public final class ComputeInstanceLastOperationResponse {
      */
     private final @Nullable String operationTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeInstanceLastOperationResponse(
-        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
-        @OutputCustomType.Parameter("operationStatus") @Nullable String operationStatus,
-        @OutputCustomType.Parameter("operationTime") @Nullable String operationTime) {
+        @CustomType.Parameter("operationName") @Nullable String operationName,
+        @CustomType.Parameter("operationStatus") @Nullable String operationStatus,
+        @CustomType.Parameter("operationTime") @Nullable String operationTime) {
         this.operationName = operationName;
         this.operationStatus = operationStatus;
         this.operationTime = operationTime;

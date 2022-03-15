@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleTypeExprResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
     /**
      * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
@@ -37,13 +37,13 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
      */
     private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(
-        @OutputCustomType.Parameter("allowAll") Boolean allowAll,
-        @OutputCustomType.Parameter("condition") GoogleTypeExprResponse condition,
-        @OutputCustomType.Parameter("denyAll") Boolean denyAll,
-        @OutputCustomType.Parameter("enforce") Boolean enforce,
-        @OutputCustomType.Parameter("values") GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
+        @CustomType.Parameter("allowAll") Boolean allowAll,
+        @CustomType.Parameter("condition") GoogleTypeExprResponse condition,
+        @CustomType.Parameter("denyAll") Boolean denyAll,
+        @CustomType.Parameter("enforce") Boolean enforce,
+        @CustomType.Parameter("values") GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.IssueModelArgs;
@@ -23,7 +23,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * The time at which this issue model was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * The representative name for the issue model.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -51,7 +51,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * Configs for the input data that used to create the issue model.
      * 
      */
-    @OutputExport(name="inputDataConfig", type=GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse.class, parameters={})
+    @Export(name="inputDataConfig", type=GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse> inputDataConfig;
 
     /**
@@ -65,7 +65,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * State of the model.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -93,7 +93,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * Immutable. The issue model's label statistics on its training data.
      * 
      */
-    @OutputExport(name="trainingStats", type=GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse.class, parameters={})
+    @Export(name="trainingStats", type=GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse.class, parameters={})
     private Output<GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse> trainingStats;
 
     /**
@@ -107,7 +107,7 @@ public class IssueModel extends io.pulumi.resources.CustomResource {
      * The most recent time at which the issue model was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

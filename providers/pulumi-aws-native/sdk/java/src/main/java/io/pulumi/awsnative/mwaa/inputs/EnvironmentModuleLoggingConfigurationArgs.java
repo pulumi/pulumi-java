@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mwaa.inputs;
 
 import io.pulumi.awsnative.mwaa.enums.EnvironmentLoggingLevel;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
 
     public static final EnvironmentModuleLoggingConfigurationArgs Empty = new EnvironmentModuleLoggingConfigurationArgs();
 
-    @InputImport(name="cloudWatchLogGroupArn")
+    @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
     public Output<String> getCloudWatchLogGroupArn() {
         return this.cloudWatchLogGroupArn == null ? Output.empty() : this.cloudWatchLogGroupArn;
     }
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<EnvironmentLoggingLevel> logLevel;
 
     public Output<EnvironmentLoggingLevel> getLogLevel() {

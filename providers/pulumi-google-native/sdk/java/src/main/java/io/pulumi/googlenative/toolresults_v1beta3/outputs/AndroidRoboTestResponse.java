@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidRoboTestResponse {
     /**
      * The initial activity that should be used to start the app. Optional
@@ -36,13 +36,13 @@ public final class AndroidRoboTestResponse {
      */
     private final Integer maxSteps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidRoboTestResponse(
-        @OutputCustomType.Parameter("appInitialActivity") String appInitialActivity,
-        @OutputCustomType.Parameter("bootstrapPackageId") String bootstrapPackageId,
-        @OutputCustomType.Parameter("bootstrapRunnerClass") String bootstrapRunnerClass,
-        @OutputCustomType.Parameter("maxDepth") Integer maxDepth,
-        @OutputCustomType.Parameter("maxSteps") Integer maxSteps) {
+        @CustomType.Parameter("appInitialActivity") String appInitialActivity,
+        @CustomType.Parameter("bootstrapPackageId") String bootstrapPackageId,
+        @CustomType.Parameter("bootstrapRunnerClass") String bootstrapRunnerClass,
+        @CustomType.Parameter("maxDepth") Integer maxDepth,
+        @CustomType.Parameter("maxSteps") Integer maxSteps) {
         this.appInitialActivity = appInitialActivity;
         this.bootstrapPackageId = bootstrapPackageId;
         this.bootstrapRunnerClass = bootstrapRunnerClass;

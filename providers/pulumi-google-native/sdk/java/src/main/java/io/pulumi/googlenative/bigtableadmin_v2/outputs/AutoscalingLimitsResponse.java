@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingLimitsResponse {
     /**
      * Maximum number of nodes to scale up to.
@@ -20,10 +20,10 @@ public final class AutoscalingLimitsResponse {
      */
     private final Integer minServeNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingLimitsResponse(
-        @OutputCustomType.Parameter("maxServeNodes") Integer maxServeNodes,
-        @OutputCustomType.Parameter("minServeNodes") Integer minServeNodes) {
+        @CustomType.Parameter("maxServeNodes") Integer maxServeNodes,
+        @CustomType.Parameter("minServeNodes") Integer minServeNodes) {
         this.maxServeNodes = maxServeNodes;
         this.minServeNodes = minServeNodes;
     }

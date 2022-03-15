@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -34,7 +34,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
      * Specification of the desired behavior of the job. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;
 
     public Output<JobSpecArgs> getSpec() {

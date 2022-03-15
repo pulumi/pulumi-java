@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ScaleSettingsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.UserAccountCredentialsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.VirtualMachineImageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmlComputeResponseProperties {
     /**
      * Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
@@ -101,24 +101,24 @@ public final class AmlComputeResponseProperties {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmlComputeResponseProperties(
-        @OutputCustomType.Parameter("allocationState") String allocationState,
-        @OutputCustomType.Parameter("allocationStateTransitionTime") String allocationStateTransitionTime,
-        @OutputCustomType.Parameter("currentNodeCount") Integer currentNodeCount,
-        @OutputCustomType.Parameter("enableNodePublicIp") @Nullable Boolean enableNodePublicIp,
-        @OutputCustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
-        @OutputCustomType.Parameter("isolatedNetwork") @Nullable Boolean isolatedNetwork,
-        @OutputCustomType.Parameter("nodeStateCounts") NodeStateCountsResponse nodeStateCounts,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("remoteLoginPortPublicAccess") @Nullable String remoteLoginPortPublicAccess,
-        @OutputCustomType.Parameter("scaleSettings") @Nullable ScaleSettingsResponse scaleSettings,
-        @OutputCustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
-        @OutputCustomType.Parameter("targetNodeCount") Integer targetNodeCount,
-        @OutputCustomType.Parameter("userAccountCredentials") @Nullable UserAccountCredentialsResponse userAccountCredentials,
-        @OutputCustomType.Parameter("virtualMachineImage") @Nullable VirtualMachineImageResponse virtualMachineImage,
-        @OutputCustomType.Parameter("vmPriority") @Nullable String vmPriority,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("allocationState") String allocationState,
+        @CustomType.Parameter("allocationStateTransitionTime") String allocationStateTransitionTime,
+        @CustomType.Parameter("currentNodeCount") Integer currentNodeCount,
+        @CustomType.Parameter("enableNodePublicIp") @Nullable Boolean enableNodePublicIp,
+        @CustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
+        @CustomType.Parameter("isolatedNetwork") @Nullable Boolean isolatedNetwork,
+        @CustomType.Parameter("nodeStateCounts") NodeStateCountsResponse nodeStateCounts,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("remoteLoginPortPublicAccess") @Nullable String remoteLoginPortPublicAccess,
+        @CustomType.Parameter("scaleSettings") @Nullable ScaleSettingsResponse scaleSettings,
+        @CustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
+        @CustomType.Parameter("targetNodeCount") Integer targetNodeCount,
+        @CustomType.Parameter("userAccountCredentials") @Nullable UserAccountCredentialsResponse userAccountCredentials,
+        @CustomType.Parameter("virtualMachineImage") @Nullable VirtualMachineImageResponse virtualMachineImage,
+        @CustomType.Parameter("vmPriority") @Nullable String vmPriority,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.allocationState = allocationState;
         this.allocationStateTransitionTime = allocationStateTransitionTime;
         this.currentNodeCount = currentNodeCount;

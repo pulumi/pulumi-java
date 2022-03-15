@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.UrlSigningParamIdentifierResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UrlSigningActionParametersResponse {
     /**
      * Algorithm to use for URL signing
@@ -25,11 +25,11 @@ public final class UrlSigningActionParametersResponse {
      */
     private final @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlSigningActionParametersResponse(
-        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("parameterNameOverride") @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
+        @CustomType.Parameter("algorithm") @Nullable String algorithm,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("parameterNameOverride") @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
         this.algorithm = algorithm;
         this.odataType = odataType;
         this.parameterNameOverride = parameterNameOverride;

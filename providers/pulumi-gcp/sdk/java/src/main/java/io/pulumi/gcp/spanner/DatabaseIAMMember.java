@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMMemberArgs;
@@ -60,7 +60,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:spanner/databaseIAMMember:DatabaseIAMMember")
 public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=DatabaseIAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=DatabaseIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatabaseIAMMemberCondition> condition;
 
     public Output</* @Nullable */ DatabaseIAMMemberCondition> getCondition() {
@@ -70,7 +70,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * The name of the Spanner database.
      * 
      */
-    @OutputExport(name="database", type=String.class, parameters={})
+    @Export(name="database", type=String.class, parameters={})
     private Output<String> database;
 
     /**
@@ -84,7 +84,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the database's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -98,7 +98,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * The name of the Spanner instance the database belongs to.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -108,7 +108,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getInstance() {
         return this.instance;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -119,7 +119,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -136,7 +136,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

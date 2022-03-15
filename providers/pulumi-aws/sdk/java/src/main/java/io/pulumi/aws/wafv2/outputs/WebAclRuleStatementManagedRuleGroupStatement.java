@@ -5,14 +5,14 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementManagedRuleGroupStatementExcludedRule;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatement {
     /**
      * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
@@ -35,12 +35,12 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
      */
     private final String vendorName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatement(
-        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
-        @OutputCustomType.Parameter("vendorName") String vendorName) {
+        @CustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
+        @CustomType.Parameter("vendorName") String vendorName) {
         this.excludedRules = excludedRules;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;

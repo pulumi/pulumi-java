@@ -5,23 +5,23 @@ package io.pulumi.awsnative.licensemanager.outputs;
 
 import io.pulumi.awsnative.licensemanager.outputs.LicenseBorrowConfiguration;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseProvisionalConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LicenseConsumptionConfiguration {
     private final @Nullable LicenseBorrowConfiguration borrowConfiguration;
     private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
     private final @Nullable String renewType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseConsumptionConfiguration(
-        @OutputCustomType.Parameter("borrowConfiguration") @Nullable LicenseBorrowConfiguration borrowConfiguration,
-        @OutputCustomType.Parameter("provisionalConfiguration") @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
-        @OutputCustomType.Parameter("renewType") @Nullable String renewType) {
+        @CustomType.Parameter("borrowConfiguration") @Nullable LicenseBorrowConfiguration borrowConfiguration,
+        @CustomType.Parameter("provisionalConfiguration") @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
+        @CustomType.Parameter("renewType") @Nullable String renewType) {
         this.borrowConfiguration = borrowConfiguration;
         this.provisionalConfiguration = provisionalConfiguration;
         this.renewType = renewType;

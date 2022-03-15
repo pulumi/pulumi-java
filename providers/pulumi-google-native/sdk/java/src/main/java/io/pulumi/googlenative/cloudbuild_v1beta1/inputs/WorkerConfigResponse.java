@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final String diskSizeGb;
 
     public String getDiskSizeGb() {
@@ -32,7 +32,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Machine type of a worker, such as `n1-standard-1`. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). If left blank, Cloud Build will use `n1-standard-1`.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -43,7 +43,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
      * If true, workers are created without any public address, which prevents network egress to public IPs.
      * 
      */
-    @InputImport(name="noExternalIp", required=true)
+    @Import(name="noExternalIp", required=true)
       private final Boolean noExternalIp;
 
     public Boolean getNoExternalIp() {

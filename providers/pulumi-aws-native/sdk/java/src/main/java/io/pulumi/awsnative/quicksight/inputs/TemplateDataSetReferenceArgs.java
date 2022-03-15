@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
      * <p>Dataset Amazon Resource Name (ARN).</p>
      * 
      */
-    @InputImport(name="dataSetArn", required=true)
+    @Import(name="dataSetArn", required=true)
       private final Output<String> dataSetArn;
 
     public Output<String> getDataSetArn() {
@@ -32,7 +32,7 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
      * <p>Dataset placeholder.</p>
      * 
      */
-    @InputImport(name="dataSetPlaceholder", required=true)
+    @Import(name="dataSetPlaceholder", required=true)
       private final Output<String> dataSetPlaceholder;
 
     public Output<String> getDataSetPlaceholder() {

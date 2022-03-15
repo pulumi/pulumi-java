@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.inputs;
 
 import io.pulumi.azurenative.features.inputs.AuthorizationProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The feature approval type.
      * 
      */
-    @InputImport(name="approvalType", required=true)
+    @Import(name="approvalType", required=true)
       private final String approvalType;
 
     public String getApprovalType() {
@@ -32,7 +32,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * Authorization Profile
      * 
      */
-    @InputImport(name="authorizationProfile")
+    @Import(name="authorizationProfile")
       private final @Nullable AuthorizationProfileResponse authorizationProfile;
 
     public Optional<AuthorizationProfileResponse> getAuthorizationProfile() {
@@ -43,7 +43,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The feature description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -54,7 +54,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The featureDisplayName.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The feature documentation link.
      * 
      */
-    @InputImport(name="documentationLink", required=true)
+    @Import(name="documentationLink", required=true)
       private final String documentationLink;
 
     public String getDocumentationLink() {
@@ -76,7 +76,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The featureName.
      * 
      */
-    @InputImport(name="featureName", required=true)
+    @Import(name="featureName", required=true)
       private final String featureName;
 
     public String getFeatureName() {
@@ -87,7 +87,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * Key-value pairs for meta data.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -98,7 +98,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The providerNamespace.
      * 
      */
-    @InputImport(name="providerNamespace", required=true)
+    @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
     public String getProviderNamespace() {
@@ -109,7 +109,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The feature registration date.
      * 
      */
-    @InputImport(name="registrationDate", required=true)
+    @Import(name="registrationDate", required=true)
       private final String registrationDate;
 
     public String getRegistrationDate() {
@@ -120,7 +120,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The feature release date.
      * 
      */
-    @InputImport(name="releaseDate", required=true)
+    @Import(name="releaseDate", required=true)
       private final String releaseDate;
 
     public String getReleaseDate() {
@@ -131,7 +131,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * Indicates whether feature should be displayed in Portal.
      * 
      */
-    @InputImport(name="shouldFeatureDisplayInPortal")
+    @Import(name="shouldFeatureDisplayInPortal")
       private final @Nullable Boolean shouldFeatureDisplayInPortal;
 
     public Optional<Boolean> getShouldFeatureDisplayInPortal() {
@@ -142,7 +142,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -153,7 +153,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The subscriptionId.
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
     public String getSubscriptionId() {
@@ -164,7 +164,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * The tenantId.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {

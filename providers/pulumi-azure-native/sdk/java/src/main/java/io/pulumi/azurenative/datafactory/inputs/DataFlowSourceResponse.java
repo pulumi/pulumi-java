@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
      * Dataset reference.
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable DatasetReferenceResponse dataset;
 
     public Optional<DatasetReferenceResponse> getDataset() {
@@ -36,7 +36,7 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
      * Transformation description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -47,7 +47,7 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
      * Flowlet Reference
      * 
      */
-    @InputImport(name="flowlet")
+    @Import(name="flowlet")
       private final @Nullable DataFlowReferenceResponse flowlet;
 
     public Optional<DataFlowReferenceResponse> getFlowlet() {
@@ -58,7 +58,7 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedService")
+    @Import(name="linkedService")
       private final @Nullable LinkedServiceReferenceResponse linkedService;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
@@ -69,7 +69,7 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
      * Transformation name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -80,7 +80,7 @@ public final class DataFlowSourceResponse extends io.pulumi.resources.InvokeArgs
      * Schema linked service reference.
      * 
      */
-    @InputImport(name="schemaLinkedService")
+    @Import(name="schemaLinkedService")
       private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> getSchemaLinkedService() {

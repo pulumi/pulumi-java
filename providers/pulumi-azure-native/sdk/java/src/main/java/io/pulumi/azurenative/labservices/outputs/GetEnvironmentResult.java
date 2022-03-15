@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices.outputs;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * The name or email address of the user who has claimed the environment
@@ -102,25 +102,25 @@ public final class GetEnvironmentResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("claimedByUserName") String claimedByUserName,
-        @OutputCustomType.Parameter("claimedByUserObjectId") String claimedByUserObjectId,
-        @OutputCustomType.Parameter("claimedByUserPrincipalId") String claimedByUserPrincipalId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isClaimed") Boolean isClaimed,
-        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
-        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterface") NetworkInterfaceResponse networkInterface,
-        @OutputCustomType.Parameter("passwordLastReset") String passwordLastReset,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("resourceSets") @Nullable ResourceSetResponse resourceSets,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("totalUsage") String totalUsage,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
+        @CustomType.Parameter("claimedByUserName") String claimedByUserName,
+        @CustomType.Parameter("claimedByUserObjectId") String claimedByUserObjectId,
+        @CustomType.Parameter("claimedByUserPrincipalId") String claimedByUserPrincipalId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isClaimed") Boolean isClaimed,
+        @CustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @CustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterface") NetworkInterfaceResponse networkInterface,
+        @CustomType.Parameter("passwordLastReset") String passwordLastReset,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("resourceSets") @Nullable ResourceSetResponse resourceSets,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("totalUsage") String totalUsage,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.claimedByUserName = claimedByUserName;
         this.claimedByUserObjectId = claimedByUserObjectId;
         this.claimedByUserPrincipalId = claimedByUserPrincipalId;

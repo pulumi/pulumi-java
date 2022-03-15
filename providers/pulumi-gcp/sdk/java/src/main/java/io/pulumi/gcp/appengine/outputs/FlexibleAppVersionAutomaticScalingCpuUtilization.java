@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
     /**
      * Period of time over which CPU utilization is calculated.
@@ -23,10 +23,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionAutomaticScalingCpuUtilization(
-        @OutputCustomType.Parameter("aggregationWindowLength") @Nullable String aggregationWindowLength,
-        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
+        @CustomType.Parameter("aggregationWindowLength") @Nullable String aggregationWindowLength,
+        @CustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.aggregationWindowLength = aggregationWindowLength;
         this.targetUtilization = targetUtilization;
     }

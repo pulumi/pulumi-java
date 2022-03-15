@@ -5,12 +5,12 @@ package io.pulumi.aws.lambda.outputs;
 
 import io.pulumi.aws.lambda.outputs.GetCodeSigningConfigAllowedPublisher;
 import io.pulumi.aws.lambda.outputs.GetCodeSigningConfigPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCodeSigningConfigResult {
     /**
      * List of allowed publishers as signing profiles for this code signing configuration.
@@ -44,15 +44,15 @@ public final class GetCodeSigningConfigResult {
      */
     private final List<GetCodeSigningConfigPolicy> policies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCodeSigningConfigResult(
-        @OutputCustomType.Parameter("allowedPublishers") List<GetCodeSigningConfigAllowedPublisher> allowedPublishers,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("configId") String configId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("policies") List<GetCodeSigningConfigPolicy> policies) {
+        @CustomType.Parameter("allowedPublishers") List<GetCodeSigningConfigAllowedPublisher> allowedPublishers,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("configId") String configId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("policies") List<GetCodeSigningConfigPolicy> policies) {
         this.allowedPublishers = allowedPublishers;
         this.arn = arn;
         this.configId = configId;

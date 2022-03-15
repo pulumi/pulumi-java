@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.WebhookArgs;
 import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -51,7 +51,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the expiry time.
      * 
      */
-    @OutputExport(name="expiryTime", type=String.class, parameters={})
+    @Export(name="expiryTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryTime;
 
     /**
@@ -79,7 +79,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the value of the enabled flag of the webhook.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
@@ -93,7 +93,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the last invoked time.
      * 
      */
-    @OutputExport(name="lastInvokedTime", type=String.class, parameters={})
+    @Export(name="lastInvokedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastInvokedTime;
 
     /**
@@ -107,7 +107,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Details of the user who last modified the Webhook
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -121,7 +121,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -135,7 +135,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the parameters of the job that is created when the webhook calls the runbook it is associated with.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -163,7 +163,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the name of the hybrid worker group the webhook job will run on.
      * 
      */
-    @OutputExport(name="runOn", type=String.class, parameters={})
+    @Export(name="runOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> runOn;
 
     /**
@@ -177,7 +177,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the runbook the webhook is associated with.
      * 
      */
-    @OutputExport(name="runbook", type=RunbookAssociationPropertyResponse.class, parameters={})
+    @Export(name="runbook", type=RunbookAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook;
 
     /**
@@ -191,7 +191,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -205,7 +205,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Gets or sets the webhook uri.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**

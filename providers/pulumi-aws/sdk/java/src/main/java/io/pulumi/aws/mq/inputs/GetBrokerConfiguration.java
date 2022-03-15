@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetBrokerConfiguration extends io.pulumi.resources.InvokeArgs
 
     public static final GetBrokerConfiguration Empty = new GetBrokerConfiguration();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final Integer revision;
 
     public Integer getRevision() {

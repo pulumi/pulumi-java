@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.EmailTemplateParametersContractPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEmailTemplateResult {
     /**
      * Email Template Body. This should be a valid XDocument
@@ -60,17 +60,17 @@ public final class GetEmailTemplateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEmailTemplateResult(
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isDefault") Boolean isDefault,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") String type) {
         this.body = body;
         this.description = description;
         this.id = id;

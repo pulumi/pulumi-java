@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.GitRepositoryDefini
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.KustomizationDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFluxConfigurationResult {
     /**
      * Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects.
@@ -109,26 +109,26 @@ public final class GetFluxConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFluxConfigurationResult(
-        @OutputCustomType.Parameter("complianceState") String complianceState,
-        @OutputCustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("gitRepository") @Nullable GitRepositoryDefinitionResponse gitRepository,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kustomizations") @Nullable Map<String,KustomizationDefinitionResponse> kustomizations,
-        @OutputCustomType.Parameter("lastSourceSyncedAt") String lastSourceSyncedAt,
-        @OutputCustomType.Parameter("lastSourceSyncedCommitId") String lastSourceSyncedCommitId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("repositoryPublicKey") String repositoryPublicKey,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("sourceKind") @Nullable String sourceKind,
-        @OutputCustomType.Parameter("statuses") List<ObjectStatusDefinitionResponse> statuses,
-        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("complianceState") String complianceState,
+        @CustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("gitRepository") @Nullable GitRepositoryDefinitionResponse gitRepository,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kustomizations") @Nullable Map<String,KustomizationDefinitionResponse> kustomizations,
+        @CustomType.Parameter("lastSourceSyncedAt") String lastSourceSyncedAt,
+        @CustomType.Parameter("lastSourceSyncedCommitId") String lastSourceSyncedCommitId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("repositoryPublicKey") String repositoryPublicKey,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("sourceKind") @Nullable String sourceKind,
+        @CustomType.Parameter("statuses") List<ObjectStatusDefinitionResponse> statuses,
+        @CustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.complianceState = complianceState;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.errorMessage = errorMessage;

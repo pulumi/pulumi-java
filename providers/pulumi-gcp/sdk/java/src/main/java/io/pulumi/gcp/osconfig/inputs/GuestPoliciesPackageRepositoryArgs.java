@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryAptArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGooArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryYumArgs;
@@ -22,7 +22,7 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="apt")
+    @Import(name="apt")
       private final @Nullable Output<GuestPoliciesPackageRepositoryAptArgs> apt;
 
     public Output<GuestPoliciesPackageRepositoryAptArgs> getApt() {
@@ -34,7 +34,7 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="goo")
+    @Import(name="goo")
       private final @Nullable Output<GuestPoliciesPackageRepositoryGooArgs> goo;
 
     public Output<GuestPoliciesPackageRepositoryGooArgs> getGoo() {
@@ -46,7 +46,7 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="yum")
+    @Import(name="yum")
       private final @Nullable Output<GuestPoliciesPackageRepositoryYumArgs> yum;
 
     public Output<GuestPoliciesPackageRepositoryYumArgs> getYum() {
@@ -58,7 +58,7 @@ public final class GuestPoliciesPackageRepositoryArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="zypper")
+    @Import(name="zypper")
       private final @Nullable Output<GuestPoliciesPackageRepositoryZypperArgs> zypper;
 
     public Output<GuestPoliciesPackageRepositoryZypperArgs> getZypper() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
      * Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -28,7 +28,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
      * Elastic Inference accelerator type to use.
      * 
      */
-    @InputImport(name="deviceType", required=true)
+    @Import(name="deviceType", required=true)
       private final Output<String> deviceType;
 
     public Output<String> getDeviceType() {

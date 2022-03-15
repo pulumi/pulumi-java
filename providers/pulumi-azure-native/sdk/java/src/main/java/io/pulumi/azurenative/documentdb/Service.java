@@ -10,7 +10,7 @@ import io.pulumi.azurenative.documentdb.outputs.SqlDedicatedGatewayServiceResour
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the database account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Services response resource.
      * 
      */
-    @OutputExport(name="properties", type=Either.class, parameters={DataTransferServiceResourcePropertiesResponse.class, SqlDedicatedGatewayServiceResourcePropertiesResponse.class})
+    @Export(name="properties", type=Either.class, parameters={DataTransferServiceResourcePropertiesResponse.class, SqlDedicatedGatewayServiceResourcePropertiesResponse.class})
     private Output<Either<DataTransferServiceResourcePropertiesResponse,SqlDedicatedGatewayServiceResourcePropertiesResponse>> properties;
 
     /**
@@ -65,7 +65,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

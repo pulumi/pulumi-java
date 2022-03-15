@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBillingAccountResult {
     private final @Nullable String billingAccount;
     private final String displayName;
@@ -32,14 +32,14 @@ public final class GetBillingAccountResult {
      */
     private final List<String> projectIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBillingAccountResult(
-        @OutputCustomType.Parameter("billingAccount") @Nullable String billingAccount,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("open") Boolean open,
-        @OutputCustomType.Parameter("projectIds") List<String> projectIds) {
+        @CustomType.Parameter("billingAccount") @Nullable String billingAccount,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("open") Boolean open,
+        @CustomType.Parameter("projectIds") List<String> projectIds) {
         this.billingAccount = billingAccount;
         this.displayName = displayName;
         this.id = id;

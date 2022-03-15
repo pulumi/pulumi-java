@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegexPatternSetRegularExpression {
     /**
      * The string representing the regular expression, see the AWS WAF [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/waf-regex-pattern-set-creating.html) for more information.
@@ -15,8 +15,8 @@ public final class RegexPatternSetRegularExpression {
      */
     private final String regexString;
 
-    @OutputCustomType.Constructor
-    private RegexPatternSetRegularExpression(@OutputCustomType.Parameter("regexString") String regexString) {
+    @CustomType.Constructor
+    private RegexPatternSetRegularExpression(@CustomType.Parameter("regexString") String regexString) {
         this.regexString = regexString;
     }
 

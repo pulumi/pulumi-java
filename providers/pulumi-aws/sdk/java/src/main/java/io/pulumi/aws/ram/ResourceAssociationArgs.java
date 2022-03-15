@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * Amazon Resource Name (ARN) of the resource to associate with the RAM Resource Share.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -28,7 +28,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * Amazon Resource Name (ARN) of the RAM Resource Share.
      * 
      */
-    @InputImport(name="resourceShareArn", required=true)
+    @Import(name="resourceShareArn", required=true)
       private final Output<String> resourceShareArn;
 
     public Output<String> getResourceShareArn() {

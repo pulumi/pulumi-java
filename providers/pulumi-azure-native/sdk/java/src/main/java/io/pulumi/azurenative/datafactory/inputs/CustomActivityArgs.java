@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.CustomActivityReferenceObjectArg
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).
      * 
      */
-    @InputImport(name="autoUserSpecification")
+    @Import(name="autoUserSpecification")
       private final @Nullable Output<Object> autoUserSpecification;
 
     public Output<Object> getAutoUserSpecification() {
@@ -41,7 +41,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Command for custom activity Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final Output<Object> command;
 
     public Output<Object> getCommand() {
@@ -52,7 +52,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -63,7 +63,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * User defined property bag. There is no restriction on the keys or values that can be used. The user specified custom activity has the full responsibility to consume and interpret the content defined.
      * 
      */
-    @InputImport(name="extendedProperties")
+    @Import(name="extendedProperties")
       private final @Nullable Output<Map<String,Object>> extendedProperties;
 
     public Output<Map<String,Object>> getExtendedProperties() {
@@ -85,7 +85,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Folder path for resource files Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
@@ -96,7 +96,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -107,7 +107,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -118,7 +118,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -129,7 +129,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Reference objects
      * 
      */
-    @InputImport(name="referenceObjects")
+    @Import(name="referenceObjects")
       private final @Nullable Output<CustomActivityReferenceObjectArgs> referenceObjects;
 
     public Output<CustomActivityReferenceObjectArgs> getReferenceObjects() {
@@ -140,7 +140,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Resource linked service reference.
      * 
      */
-    @InputImport(name="resourceLinkedService")
+    @Import(name="resourceLinkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> resourceLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getResourceLinkedService() {
@@ -151,7 +151,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * The retention time for the files submitted for custom activity. Type: double (or Expression with resultType double).
      * 
      */
-    @InputImport(name="retentionTimeInDays")
+    @Import(name="retentionTimeInDays")
       private final @Nullable Output<Object> retentionTimeInDays;
 
     public Output<Object> getRetentionTimeInDays() {
@@ -163,7 +163,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Custom'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -174,7 +174,7 @@ public final class CustomActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

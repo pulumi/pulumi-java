@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.inputs.MetadataResponse;
 import io.pulumi.googlenative.compute_v1.inputs.NetworkInterfaceResponse;
@@ -30,7 +30,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
      */
-    @InputImport(name="canIpForward", required=true)
+    @Import(name="canIpForward", required=true)
       private final Boolean canIpForward;
 
     public Boolean getCanIpForward() {
@@ -41,7 +41,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * Whether the instance created from this machine image should be protected against deletion.
      * 
      */
-    @InputImport(name="deletionProtection", required=true)
+    @Import(name="deletionProtection", required=true)
       private final Boolean deletionProtection;
 
     public Boolean getDeletionProtection() {
@@ -52,7 +52,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * An optional text description for the instances that are created from this machine image.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -63,7 +63,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * An array of disks that are associated with the instances that are created from this machine image.
      * 
      */
-    @InputImport(name="disks", required=true)
+    @Import(name="disks", required=true)
       private final List<SavedAttachedDiskResponse> disks;
 
     public List<SavedAttachedDiskResponse> getDisks() {
@@ -74,7 +74,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * A list of guest accelerator cards' type and count to use for instances created from this machine image.
      * 
      */
-    @InputImport(name="guestAccelerators", required=true)
+    @Import(name="guestAccelerators", required=true)
       private final List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
@@ -85,7 +85,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * Labels to apply to instances that are created from this machine image.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -96,7 +96,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * The machine type to use for instances that are created from this machine image.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -107,7 +107,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final MetadataResponse metadata;
 
     public MetadataResponse getMetadata() {
@@ -118,7 +118,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
      * 
      */
-    @InputImport(name="minCpuPlatform", required=true)
+    @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
@@ -129,7 +129,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * An array of network access configurations for this interface.
      * 
      */
-    @InputImport(name="networkInterfaces", required=true)
+    @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
@@ -140,7 +140,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * Specifies the scheduling options for the instances that are created from this machine image.
      * 
      */
-    @InputImport(name="scheduling", required=true)
+    @Import(name="scheduling", required=true)
       private final SchedulingResponse scheduling;
 
     public SchedulingResponse getScheduling() {
@@ -151,7 +151,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
      * 
      */
-    @InputImport(name="serviceAccounts", required=true)
+    @Import(name="serviceAccounts", required=true)
       private final List<ServiceAccountResponse> serviceAccounts;
 
     public List<ServiceAccountResponse> getServiceAccounts() {
@@ -162,7 +162,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final TagsResponse tags;
 
     public TagsResponse getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.ElasticPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Elastic cloud properties.
      * 
      */
-    @InputImport(name="elasticProperties")
+    @Import(name="elasticProperties")
       private final @Nullable ElasticPropertiesResponse elasticProperties;
 
     public Optional<ElasticPropertiesResponse> getElasticProperties() {
         return this.elasticProperties == null ? Optional.empty() : Optional.ofNullable(this.elasticProperties);
     }
 
-    @InputImport(name="liftrResourceCategory", required=true)
+    @Import(name="liftrResourceCategory", required=true)
       private final String liftrResourceCategory;
 
     public String getLiftrResourceCategory() {
@@ -42,7 +42,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * The priority of the resource.
      * 
      */
-    @InputImport(name="liftrResourcePreference", required=true)
+    @Import(name="liftrResourcePreference", required=true)
       private final Integer liftrResourcePreference;
 
     public Integer getLiftrResourcePreference() {
@@ -53,7 +53,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
-    @InputImport(name="monitoringStatus")
+    @Import(name="monitoringStatus")
       private final @Nullable String monitoringStatus;
 
     public Optional<String> getMonitoringStatus() {
@@ -64,7 +64,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * Provisioning state of the monitor resource.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {

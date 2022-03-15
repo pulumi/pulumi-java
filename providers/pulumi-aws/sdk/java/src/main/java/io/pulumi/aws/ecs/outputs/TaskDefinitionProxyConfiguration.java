@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionProxyConfiguration {
     /**
      * Name of the container that will serve as the App Mesh proxy.
@@ -28,11 +28,11 @@ public final class TaskDefinitionProxyConfiguration {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionProxyConfiguration(
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.containerName = containerName;
         this.properties = properties;
         this.type = type;

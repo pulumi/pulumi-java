@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImagePipelineImageTestsConfiguration {
     /**
      * Defines if tests should be executed when building this image.
@@ -23,10 +23,10 @@ public final class ImagePipelineImageTestsConfiguration {
      */
     private final @Nullable Integer timeoutMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImagePipelineImageTestsConfiguration(
-        @OutputCustomType.Parameter("imageTestsEnabled") @Nullable Boolean imageTestsEnabled,
-        @OutputCustomType.Parameter("timeoutMinutes") @Nullable Integer timeoutMinutes) {
+        @CustomType.Parameter("imageTestsEnabled") @Nullable Boolean imageTestsEnabled,
+        @CustomType.Parameter("timeoutMinutes") @Nullable Integer timeoutMinutes) {
         this.imageTestsEnabled = imageTestsEnabled;
         this.timeoutMinutes = timeoutMinutes;
     }

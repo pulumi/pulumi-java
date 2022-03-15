@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends io.p
      * The state of compliance, which only appears in the response.
      * 
      */
-    @InputImport(name="updateStatus", required=true)
+    @Import(name="updateStatus", required=true)
       private final String updateStatus;
 
     public String getUpdateStatus() {

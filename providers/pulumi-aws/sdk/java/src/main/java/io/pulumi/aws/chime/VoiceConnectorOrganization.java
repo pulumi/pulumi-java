@@ -8,7 +8,7 @@ import io.pulumi.aws.chime.VoiceConnectorOrganizationArgs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorOrganizationState;
 import io.pulumi.aws.chime.outputs.VoiceConnectorOrganizationRoute;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
      * When origination settings are disabled, inbound calls are not enabled for your Amazon Chime Voice Connector.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -49,7 +49,7 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
      * Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.
      * 
      */
-    @OutputExport(name="routes", type=List.class, parameters={VoiceConnectorOrganizationRoute.class})
+    @Export(name="routes", type=List.class, parameters={VoiceConnectorOrganizationRoute.class})
     private Output<List<VoiceConnectorOrganizationRoute>> routes;
 
     /**
@@ -63,7 +63,7 @@ public class VoiceConnectorOrganization extends io.pulumi.resources.CustomResour
      * The Amazon Chime Voice Connector ID.
      * 
      */
-    @OutputExport(name="voiceConnectorId", type=String.class, parameters={})
+    @Export(name="voiceConnectorId", type=String.class, parameters={})
     private Output<String> voiceConnectorId;
 
     /**

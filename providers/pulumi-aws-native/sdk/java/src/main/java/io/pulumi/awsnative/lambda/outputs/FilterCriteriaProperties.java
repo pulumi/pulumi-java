@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterCriteriaProperties {
     /**
      * List of filters of this FilterCriteria
@@ -17,8 +17,8 @@ public final class FilterCriteriaProperties {
      */
     private final @Nullable List<EventSourceMappingFilter> filters;
 
-    @OutputCustomType.Constructor
-    private FilterCriteriaProperties(@OutputCustomType.Parameter("filters") @Nullable List<EventSourceMappingFilter> filters) {
+    @CustomType.Constructor
+    private FilterCriteriaProperties(@CustomType.Parameter("filters") @Nullable List<EventSourceMappingFilter> filters) {
         this.filters = filters;
     }
 

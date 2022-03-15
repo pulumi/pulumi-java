@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableReplica {
     private final String kmsKeyArn;
     private final String regionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableReplica(
-        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn,
-        @OutputCustomType.Parameter("regionName") String regionName) {
+        @CustomType.Parameter("kmsKeyArn") String kmsKeyArn,
+        @CustomType.Parameter("regionName") String regionName) {
         this.kmsKeyArn = kmsKeyArn;
         this.regionName = regionName;
     }

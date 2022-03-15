@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.enums.ReservationAffinityConsumeReservationType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Optional. Type of reservation to consume
      * 
      */
-    @InputImport(name="consumeReservationType")
+    @Import(name="consumeReservationType")
       private final @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
     public Output<ReservationAffinityConsumeReservationType> getConsumeReservationType() {
@@ -35,7 +35,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Optional. Corresponds to the label key of reservation resource.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -46,7 +46,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Optional. Corresponds to the label values of reservation resource.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ActiveDefaultSecurityAdminRuleResponse;
 import io.pulumi.azurenative.network.outputs.ActiveSecurityAdminRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListActiveSecurityAdminRuleResult {
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
@@ -26,10 +26,10 @@ public final class ListActiveSecurityAdminRuleResult {
      */
     private final @Nullable List<Either<ActiveDefaultSecurityAdminRuleResponse,ActiveSecurityAdminRuleResponse>> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListActiveSecurityAdminRuleResult(
-        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
-        @OutputCustomType.Parameter("value") @Nullable List<Either<ActiveDefaultSecurityAdminRuleResponse,ActiveSecurityAdminRuleResponse>> value) {
+        @CustomType.Parameter("skipToken") @Nullable String skipToken,
+        @CustomType.Parameter("value") @Nullable List<Either<ActiveDefaultSecurityAdminRuleResponse,ActiveSecurityAdminRuleResponse>> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.JobTemplateExponentialRolloutRate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobExecutionsRolloutConfigProperties {
     /**
      * The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
@@ -23,10 +23,10 @@ public final class JobExecutionsRolloutConfigProperties {
      */
     private final @Nullable Integer maximumPerMinute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobExecutionsRolloutConfigProperties(
-        @OutputCustomType.Parameter("exponentialRolloutRate") @Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate,
-        @OutputCustomType.Parameter("maximumPerMinute") @Nullable Integer maximumPerMinute) {
+        @CustomType.Parameter("exponentialRolloutRate") @Nullable JobTemplateExponentialRolloutRate exponentialRolloutRate,
+        @CustomType.Parameter("maximumPerMinute") @Nullable Integer maximumPerMinute) {
         this.exponentialRolloutRate = exponentialRolloutRate;
         this.maximumPerMinute = maximumPerMinute;
     }

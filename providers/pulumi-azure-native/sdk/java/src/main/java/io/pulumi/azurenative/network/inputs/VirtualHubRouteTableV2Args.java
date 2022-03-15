@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteV2Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * List of all connections attached to this route table v2.
      * 
      */
-    @InputImport(name="attachedConnections")
+    @Import(name="attachedConnections")
       private final @Nullable Output<List<String>> attachedConnections;
 
     public Output<List<String>> getAttachedConnections() {
@@ -35,7 +35,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -46,7 +46,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class VirtualHubRouteTableV2Args extends io.pulumi.resources.Resour
      * List of all routes.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<List<VirtualHubRouteV2Args>> routes;
 
     public Output<List<VirtualHubRouteV2Args>> getRoutes() {

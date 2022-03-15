@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class A2AUnprotectedDiskDetailsResponse {
     /**
      * The source lun Id for the data disk.
@@ -17,8 +17,8 @@ public final class A2AUnprotectedDiskDetailsResponse {
      */
     private final @Nullable Integer diskLunId;
 
-    @OutputCustomType.Constructor
-    private A2AUnprotectedDiskDetailsResponse(@OutputCustomType.Parameter("diskLunId") @Nullable Integer diskLunId) {
+    @CustomType.Constructor
+    private A2AUnprotectedDiskDetailsResponse(@CustomType.Parameter("diskLunId") @Nullable Integer diskLunId) {
         this.diskLunId = diskLunId;
     }
 

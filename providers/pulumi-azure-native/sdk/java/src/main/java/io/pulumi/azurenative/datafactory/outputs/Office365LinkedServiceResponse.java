@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Office365LinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -71,18 +71,18 @@ public final class Office365LinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Office365LinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("office365TenantId") Object office365TenantId,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("servicePrincipalId") Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @OutputCustomType.Parameter("servicePrincipalTenantId") Object servicePrincipalTenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("office365TenantId") Object office365TenantId,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("servicePrincipalId") Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @CustomType.Parameter("servicePrincipalTenantId") Object servicePrincipalTenantId,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

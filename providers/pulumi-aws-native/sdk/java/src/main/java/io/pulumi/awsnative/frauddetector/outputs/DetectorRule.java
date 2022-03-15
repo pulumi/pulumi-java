@@ -6,14 +6,14 @@ package io.pulumi.awsnative.frauddetector.outputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorOutcome;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorRule {
     private final @Nullable String arn;
     /**
@@ -43,19 +43,19 @@ public final class DetectorRule {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorRule(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("detectorId") @Nullable String detectorId,
-        @OutputCustomType.Parameter("expression") @Nullable String expression,
-        @OutputCustomType.Parameter("language") @Nullable DetectorRuleLanguage language,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("outcomes") @Nullable List<DetectorOutcome> outcomes,
-        @OutputCustomType.Parameter("ruleId") @Nullable String ruleId,
-        @OutputCustomType.Parameter("ruleVersion") @Nullable String ruleVersion,
-        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("detectorId") @Nullable String detectorId,
+        @CustomType.Parameter("expression") @Nullable String expression,
+        @CustomType.Parameter("language") @Nullable DetectorRuleLanguage language,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("outcomes") @Nullable List<DetectorOutcome> outcomes,
+        @CustomType.Parameter("ruleId") @Nullable String ruleId,
+        @CustomType.Parameter("ruleVersion") @Nullable String ruleVersion,
+        @CustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

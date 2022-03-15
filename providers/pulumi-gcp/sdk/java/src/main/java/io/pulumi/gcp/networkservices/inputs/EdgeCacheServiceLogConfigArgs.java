@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EdgeCacheServiceLogConfigArgs extends io.pulumi.resources.Res
      * Specifies whether to enable logging for traffic served by this service.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceLogConfigArgs extends io.pulumi.resources.Res
      * This field can only be specified if logging is enabled for this service.
      * 
      */
-    @InputImport(name="sampleRate")
+    @Import(name="sampleRate")
       private final @Nullable Output<Double> sampleRate;
 
     public Output<Double> getSampleRate() {

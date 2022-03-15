@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleGetArgs;
 import io.pulumi.gcp.billing.inputs.BudgetAmountGetArgs;
 import io.pulumi.gcp.billing.inputs.BudgetBudgetFilterGetArgs;
@@ -26,7 +26,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="allUpdatesRule")
+    @Import(name="allUpdatesRule")
       private final @Nullable Output<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
 
     public Output<BudgetAllUpdatesRuleGetArgs> getAllUpdatesRule() {
@@ -38,7 +38,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="amount")
+    @Import(name="amount")
       private final @Nullable Output<BudgetAmountGetArgs> amount;
 
     public Output<BudgetAmountGetArgs> getAmount() {
@@ -49,7 +49,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * ID of the billing account to set a budget on.
      * 
      */
-    @InputImport(name="billingAccount")
+    @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
@@ -62,7 +62,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="budgetFilter")
+    @Import(name="budgetFilter")
       private final @Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter;
 
     public Output<BudgetBudgetFilterGetArgs> getBudgetFilter() {
@@ -73,7 +73,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * User data for display name in UI. Must be <= 60 chars.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -85,7 +85,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * billingAccounts/{billingAccountId}/budgets/{budgetId}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="thresholdRules")
+    @Import(name="thresholdRules")
       private final @Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules;
 
     public Output<List<BudgetThresholdRuleGetArgs>> getThresholdRules() {

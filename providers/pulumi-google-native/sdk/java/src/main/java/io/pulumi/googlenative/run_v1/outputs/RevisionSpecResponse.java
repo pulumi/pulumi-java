@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.ContainerResponse;
 import io.pulumi.googlenative.run_v1.outputs.LocalObjectReferenceResponse;
 import io.pulumi.googlenative.run_v1.outputs.VolumeResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RevisionSpecResponse {
     /**
      * ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. Cloud Run fully managed: supported, defaults to 80 Cloud Run for Anthos: supported, defaults to 0, which means concurrency to the application is not limited, and the system decides the target concurrency for the autoscaler.
@@ -47,15 +47,15 @@ public final class RevisionSpecResponse {
     private final Integer timeoutSeconds;
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RevisionSpecResponse(
-        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
-        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
-        @OutputCustomType.Parameter("enableServiceLinks") Boolean enableServiceLinks,
-        @OutputCustomType.Parameter("imagePullSecrets") List<LocalObjectReferenceResponse> imagePullSecrets,
-        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
-        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
-        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
+        @CustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @CustomType.Parameter("containers") List<ContainerResponse> containers,
+        @CustomType.Parameter("enableServiceLinks") Boolean enableServiceLinks,
+        @CustomType.Parameter("imagePullSecrets") List<LocalObjectReferenceResponse> imagePullSecrets,
+        @CustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @CustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
+        @CustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.enableServiceLinks = enableServiceLinks;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * Resource IDs of the public IP addresses that this integration runtime will use.
      * 
      */
-    @InputImport(name="publicIPs")
+    @Import(name="publicIPs")
       private final @Nullable Output<List<String>> publicIPs;
 
     public Output<List<String>> getPublicIPs() {
@@ -34,7 +34,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * The name of the subnet this integration runtime will join.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {
@@ -45,7 +45,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * The ID of subnet, to which this Azure-SSIS integration runtime will be joined.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -56,7 +56,7 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * The ID of the VNet that this integration runtime will join.
      * 
      */
-    @InputImport(name="vNetId")
+    @Import(name="vNetId")
       private final @Nullable Output<String> vNetId;
 
     public Output<String> getVNetId() {

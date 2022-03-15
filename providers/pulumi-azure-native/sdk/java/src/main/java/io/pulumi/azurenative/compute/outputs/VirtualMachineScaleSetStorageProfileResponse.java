@@ -6,13 +6,13 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetDataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetOSDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetStorageProfileResponse {
     /**
      * Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
@@ -30,11 +30,11 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
      */
     private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetStorageProfileResponse(
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
-        @OutputCustomType.Parameter("osDisk") @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
+        @CustomType.Parameter("dataDisks") @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
+        @CustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
+        @CustomType.Parameter("osDisk") @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;

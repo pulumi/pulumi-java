@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetStudioComponentArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetStudioComponentArgs Empty = new GetStudioComponentArgs();
 
-    @InputImport(name="studioComponentId", required=true)
+    @Import(name="studioComponentId", required=true)
       private final String studioComponentId;
 
     public String getStudioComponentId() {
@@ -23,7 +23,7 @@ public final class GetStudioComponentArgs extends io.pulumi.resources.InvokeArgs
      * <p>The studioId. </p>
      * 
      */
-    @InputImport(name="studioId", required=true)
+    @Import(name="studioId", required=true)
       private final String studioId;
 
     public String getStudioId() {

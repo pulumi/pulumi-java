@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.TrafficWeightResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressResponse {
     /**
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
@@ -42,14 +42,14 @@ public final class IngressResponse {
      */
     private final @Nullable String transport;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressResponse(
-        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
-        @OutputCustomType.Parameter("external") @Nullable Boolean external,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("targetPort") @Nullable Integer targetPort,
-        @OutputCustomType.Parameter("traffic") @Nullable List<TrafficWeightResponse> traffic,
-        @OutputCustomType.Parameter("transport") @Nullable String transport) {
+        @CustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @CustomType.Parameter("external") @Nullable Boolean external,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("targetPort") @Nullable Integer targetPort,
+        @CustomType.Parameter("traffic") @Nullable List<TrafficWeightResponse> traffic,
+        @CustomType.Parameter("transport") @Nullable String transport) {
         this.allowInsecure = allowInsecure;
         this.external = external;
         this.fqdn = fqdn;

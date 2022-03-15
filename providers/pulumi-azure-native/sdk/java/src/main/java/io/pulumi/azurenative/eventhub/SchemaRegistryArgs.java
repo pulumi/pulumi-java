@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.SchemaCompatibility;
 import io.pulumi.azurenative.eventhub.enums.SchemaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * dictionary object for SchemaGroup group properties
      * 
      */
-    @InputImport(name="groupProperties")
+    @Import(name="groupProperties")
       private final @Nullable Output<Map<String,String>> groupProperties;
 
     public Output<Map<String,String>> getGroupProperties() {
@@ -33,7 +33,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -44,14 +44,14 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="schemaCompatibility")
+    @Import(name="schemaCompatibility")
       private final @Nullable Output<Either<String,SchemaCompatibility>> schemaCompatibility;
 
     public Output<Either<String,SchemaCompatibility>> getSchemaCompatibility() {
@@ -62,14 +62,14 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * The Schema Group name
      * 
      */
-    @InputImport(name="schemaGroupName")
+    @Import(name="schemaGroupName")
       private final @Nullable Output<String> schemaGroupName;
 
     public Output<String> getSchemaGroupName() {
         return this.schemaGroupName == null ? Output.empty() : this.schemaGroupName;
     }
 
-    @InputImport(name="schemaType")
+    @Import(name="schemaType")
       private final @Nullable Output<Either<String,SchemaType>> schemaType;
 
     public Output<Either<String,SchemaType>> getSchemaType() {

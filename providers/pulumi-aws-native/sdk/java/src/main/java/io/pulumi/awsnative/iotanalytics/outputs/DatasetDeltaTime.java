@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetDeltaTime {
     private final Integer offsetSeconds;
     private final String timeExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetDeltaTime(
-        @OutputCustomType.Parameter("offsetSeconds") Integer offsetSeconds,
-        @OutputCustomType.Parameter("timeExpression") String timeExpression) {
+        @CustomType.Parameter("offsetSeconds") Integer offsetSeconds,
+        @CustomType.Parameter("timeExpression") String timeExpression) {
         this.offsetSeconds = offsetSeconds;
         this.timeExpression = timeExpression;
     }

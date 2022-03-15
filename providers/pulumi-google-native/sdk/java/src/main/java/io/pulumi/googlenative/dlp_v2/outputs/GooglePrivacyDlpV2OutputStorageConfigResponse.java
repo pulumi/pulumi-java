@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
     /**
      * Schema used for writing the findings for Inspect jobs. This field is only used for Inspect and must be unspecified for Risk jobs. Columns are derived from the `Finding` object. If appending to an existing table, any columns from the predefined schema that are missing will be added. No columns in the existing table will be deleted. If unspecified, then all available columns will be used for a new table or an (existing) table with no schema, and no changes will be made to an existing table that has a schema. Only for use with external storage.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2OutputStorageConfigResponse(
-        @OutputCustomType.Parameter("outputSchema") String outputSchema,
-        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @CustomType.Parameter("outputSchema") String outputSchema,
+        @CustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.outputSchema = outputSchema;
         this.table = table;
     }

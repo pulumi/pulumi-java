@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.SqlDBTableDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Unique id for identifying a data set resource
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -49,7 +49,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Database name of the source data set
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -64,7 +64,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Expected value is 'SqlDBTable'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Schema of the table. Default value is dbo.
      * 
      */
-    @OutputExport(name="schemaName", type=String.class, parameters={})
+    @Export(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
     /**
@@ -107,7 +107,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Resource id of SQL server
      * 
      */
-    @OutputExport(name="sqlServerResourceId", type=String.class, parameters={})
+    @Export(name="sqlServerResourceId", type=String.class, parameters={})
     private Output<String> sqlServerResourceId;
 
     /**
@@ -121,7 +121,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -135,7 +135,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * SQL DB table name.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
@@ -149,7 +149,7 @@ public class SqlDBTableDataSet extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

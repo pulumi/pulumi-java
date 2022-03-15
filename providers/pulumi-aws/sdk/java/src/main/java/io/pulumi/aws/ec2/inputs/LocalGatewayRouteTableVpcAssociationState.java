@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
 
     public static final LocalGatewayRouteTableVpcAssociationState Empty = new LocalGatewayRouteTableVpcAssociationState();
 
-    @InputImport(name="localGatewayId")
+    @Import(name="localGatewayId")
       private final @Nullable Output<String> localGatewayId;
 
     public Output<String> getLocalGatewayId() {
@@ -26,7 +26,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * Identifier of EC2 Local Gateway Route Table.
      * 
      */
-    @InputImport(name="localGatewayRouteTableId")
+    @Import(name="localGatewayRouteTableId")
       private final @Nullable Output<String> localGatewayRouteTableId;
 
     public Output<String> getLocalGatewayRouteTableId() {
@@ -37,7 +37,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -48,7 +48,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -59,7 +59,7 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
      * Identifier of EC2 VPC.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

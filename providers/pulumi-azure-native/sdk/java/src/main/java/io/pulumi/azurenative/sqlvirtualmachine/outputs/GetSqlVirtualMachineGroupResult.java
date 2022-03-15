@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlVirtualMachineGroupResult {
     /**
      * Cluster type.
@@ -74,20 +74,20 @@ public final class GetSqlVirtualMachineGroupResult {
      */
     private final @Nullable WsfcDomainProfileResponse wsfcDomainProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlVirtualMachineGroupResult(
-        @OutputCustomType.Parameter("clusterConfiguration") String clusterConfiguration,
-        @OutputCustomType.Parameter("clusterManagerType") String clusterManagerType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scaleType") String scaleType,
-        @OutputCustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
-        @OutputCustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("wsfcDomainProfile") @Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
+        @CustomType.Parameter("clusterConfiguration") String clusterConfiguration,
+        @CustomType.Parameter("clusterManagerType") String clusterManagerType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scaleType") String scaleType,
+        @CustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
+        @CustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("wsfcDomainProfile") @Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
         this.clusterConfiguration = clusterConfiguration;
         this.clusterManagerType = clusterManagerType;
         this.id = id;

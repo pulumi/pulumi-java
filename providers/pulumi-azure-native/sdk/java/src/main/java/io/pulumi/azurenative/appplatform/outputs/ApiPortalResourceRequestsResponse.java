@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiPortalResourceRequestsResponse {
     /**
      * Cpu allocated to each API portal instance
@@ -20,10 +20,10 @@ public final class ApiPortalResourceRequestsResponse {
      */
     private final String memory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiPortalResourceRequestsResponse(
-        @OutputCustomType.Parameter("cpu") String cpu,
-        @OutputCustomType.Parameter("memory") String memory) {
+        @CustomType.Parameter("cpu") String cpu,
+        @CustomType.Parameter("memory") String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }

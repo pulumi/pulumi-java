@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.ClusterResourcePropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The GEO location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the Service resource
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ClusterResourcePropertiesArgs> properties;
 
     public Output<ClusterResourcePropertiesArgs> getProperties() {
@@ -43,7 +43,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -65,7 +65,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Sku of the Service resource
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -76,7 +76,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

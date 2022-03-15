@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeepCreatedOriginResponse {
     /**
      * Origin is enabled for load balancing or not. By default, origin is always enabled.
@@ -74,20 +74,20 @@ public final class DeepCreatedOriginResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeepCreatedOriginResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
-        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
-        @OutputCustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
-        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
-        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @CustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
+        @CustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
+        @CustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @CustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.enabled = enabled;
         this.hostName = hostName;
         this.httpPort = httpPort;

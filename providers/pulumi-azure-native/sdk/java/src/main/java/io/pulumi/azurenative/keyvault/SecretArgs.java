@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the secret
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<SecretPropertiesArgs> properties;
 
     public Output<SecretPropertiesArgs> getProperties() {
@@ -31,7 +31,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Resource Group to which the vault belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the secret
      * 
      */
-    @InputImport(name="secretName")
+    @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {
@@ -53,7 +53,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * The tags that will be assigned to the secret.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the vault
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final Output<String> vaultName;
 
     public Output<String> getVaultName() {

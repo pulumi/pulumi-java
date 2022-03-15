@@ -12,7 +12,7 @@ import io.pulumi.azurenative.consumption.outputs.ForecastSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.NotificationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * The total amount of cost to track with the budget
      * 
      */
-    @OutputExport(name="amount", type=Double.class, parameters={})
+    @Export(name="amount", type=Double.class, parameters={})
     private Output<Double> amount;
 
     /**
@@ -55,7 +55,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * The category of the budget, whether the budget tracks cost or usage.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
@@ -69,7 +69,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * The current amount of cost which is being tracked for a budget.
      * 
      */
-    @OutputExport(name="currentSpend", type=CurrentSpendResponse.class, parameters={})
+    @Export(name="currentSpend", type=CurrentSpendResponse.class, parameters={})
     private Output<CurrentSpendResponse> currentSpend;
 
     /**
@@ -83,7 +83,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -97,7 +97,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * May be used to filter budgets by user-specified dimensions and/or tags.
      * 
      */
-    @OutputExport(name="filter", type=BudgetFilterResponse.class, parameters={})
+    @Export(name="filter", type=BudgetFilterResponse.class, parameters={})
     private Output</* @Nullable */ BudgetFilterResponse> filter;
 
     /**
@@ -111,7 +111,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * The forecasted cost which is being tracked for a budget.
      * 
      */
-    @OutputExport(name="forecastSpend", type=ForecastSpendResponse.class, parameters={})
+    @Export(name="forecastSpend", type=ForecastSpendResponse.class, parameters={})
     private Output<ForecastSpendResponse> forecastSpend;
 
     /**
@@ -125,7 +125,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
      */
-    @OutputExport(name="notifications", type=Map.class, parameters={String.class, NotificationResponse.class})
+    @Export(name="notifications", type=Map.class, parameters={String.class, NotificationResponse.class})
     private Output</* @Nullable */ Map<String,NotificationResponse>> notifications;
 
     /**
@@ -153,7 +153,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
      * 
      */
-    @OutputExport(name="timeGrain", type=String.class, parameters={})
+    @Export(name="timeGrain", type=String.class, parameters={})
     private Output<String> timeGrain;
 
     /**
@@ -167,7 +167,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
      * 
      */
-    @OutputExport(name="timePeriod", type=BudgetTimePeriodResponse.class, parameters={})
+    @Export(name="timePeriod", type=BudgetTimePeriodResponse.class, parameters={})
     private Output<BudgetTimePeriodResponse> timePeriod;
 
     /**
@@ -181,7 +181,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

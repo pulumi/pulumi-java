@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleRunPlaybookA
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleTriggeringLogicResponse;
 import io.pulumi.azurenative.securityinsights.outputs.ClientInfoResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAutomationRuleResult {
     /**
      * The actions to execute when the automation rule is triggered
@@ -79,20 +79,20 @@ public final class GetAutomationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAutomationRuleResult(
-        @OutputCustomType.Parameter("actions") List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions,
-        @OutputCustomType.Parameter("createdBy") ClientInfoResponse createdBy,
-        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedBy") ClientInfoResponse lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("order") Integer order,
-        @OutputCustomType.Parameter("triggeringLogic") AutomationRuleTriggeringLogicResponse triggeringLogic,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("actions") List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>> actions,
+        @CustomType.Parameter("createdBy") ClientInfoResponse createdBy,
+        @CustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedBy") ClientInfoResponse lastModifiedBy,
+        @CustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("order") Integer order,
+        @CustomType.Parameter("triggeringLogic") AutomationRuleTriggeringLogicResponse triggeringLogic,
+        @CustomType.Parameter("type") String type) {
         this.actions = actions;
         this.createdBy = createdBy;
         this.createdTimeUtc = createdTimeUtc;

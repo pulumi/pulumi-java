@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneCloudLoggingConfigResponse {
     /**
      * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
@@ -17,10 +17,10 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     private final Boolean enableLogging;
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneCloudLoggingConfigResponse(
-        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("enableLogging") Boolean enableLogging,
+        @CustomType.Parameter("kind") String kind) {
         this.enableLogging = enableLogging;
         this.kind = kind;
     }

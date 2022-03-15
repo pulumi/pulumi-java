@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.enums.QosType;
 import io.pulumi.azurenative.netapp.enums.ServiceLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the NetApp account
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -34,7 +34,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the capacity pool
      * 
      */
-    @InputImport(name="poolName")
+    @Import(name="poolName")
       private final @Nullable Output<String> poolName;
 
     public Output<String> getPoolName() {
@@ -56,7 +56,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * The qos type of the pool
      * 
      */
-    @InputImport(name="qosType")
+    @Import(name="qosType")
       private final @Nullable Output<Either<String,QosType>> qosType;
 
     public Output<Either<String,QosType>> getQosType() {
@@ -67,7 +67,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -78,7 +78,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * The service level of the file system
      * 
      */
-    @InputImport(name="serviceLevel", required=true)
+    @Import(name="serviceLevel", required=true)
       private final Output<Either<String,ServiceLevel>> serviceLevel;
 
     public Output<Either<String,ServiceLevel>> getServiceLevel() {
@@ -89,7 +89,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<Double> size;
 
     public Output<Double> getSize() {
@@ -100,7 +100,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

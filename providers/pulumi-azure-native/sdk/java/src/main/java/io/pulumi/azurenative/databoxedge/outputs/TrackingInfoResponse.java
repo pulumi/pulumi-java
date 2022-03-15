@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrackingInfoResponse {
     /**
      * Name of the carrier used in the delivery.
@@ -32,12 +32,12 @@ public final class TrackingInfoResponse {
      */
     private final @Nullable String trackingUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrackingInfoResponse(
-        @OutputCustomType.Parameter("carrierName") @Nullable String carrierName,
-        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
-        @OutputCustomType.Parameter("trackingId") @Nullable String trackingId,
-        @OutputCustomType.Parameter("trackingUrl") @Nullable String trackingUrl) {
+        @CustomType.Parameter("carrierName") @Nullable String carrierName,
+        @CustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @CustomType.Parameter("trackingId") @Nullable String trackingId,
+        @CustomType.Parameter("trackingUrl") @Nullable String trackingUrl) {
         this.carrierName = carrierName;
         this.serialNumber = serialNumber;
         this.trackingId = trackingId;

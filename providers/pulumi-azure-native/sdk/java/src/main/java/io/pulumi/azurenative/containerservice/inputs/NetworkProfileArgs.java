@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * CIDR of the Vnet to peer.
      * 
      */
-    @InputImport(name="peerVnetId")
+    @Import(name="peerVnetId")
       private final @Nullable Output<String> peerVnetId;
 
     public Output<String> getPeerVnetId() {
@@ -33,7 +33,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * CIDR for the OpenShift Vnet.
      * 
      */
-    @InputImport(name="vnetCidr")
+    @Import(name="vnetCidr")
       private final @Nullable Output<String> vnetCidr;
 
     public Output<String> getVnetCidr() {
@@ -44,7 +44,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the Vnet created for OSA cluster.
      * 
      */
-    @InputImport(name="vnetId")
+    @Import(name="vnetId")
       private final @Nullable Output<String> vnetId;
 
     public Output<String> getVnetId() {

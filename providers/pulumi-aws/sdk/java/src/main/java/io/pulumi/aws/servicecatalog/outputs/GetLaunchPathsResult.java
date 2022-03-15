@@ -4,14 +4,14 @@
 package io.pulumi.aws.servicecatalog.outputs;
 
 import io.pulumi.aws.servicecatalog.outputs.GetLaunchPathsSummary;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchPathsResult {
     private final @Nullable String acceptLanguage;
     /**
@@ -26,12 +26,12 @@ public final class GetLaunchPathsResult {
      */
     private final List<GetLaunchPathsSummary> summaries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchPathsResult(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("productId") String productId,
-        @OutputCustomType.Parameter("summaries") List<GetLaunchPathsSummary> summaries) {
+        @CustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("productId") String productId,
+        @CustomType.Parameter("summaries") List<GetLaunchPathsSummary> summaries) {
         this.acceptLanguage = acceptLanguage;
         this.id = id;
         this.productId = productId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * ID of the Gamelift Fleet to point the alias to.
      * 
      */
-    @InputImport(name="fleetId")
+    @Import(name="fleetId")
       private final @Nullable Output<String> fleetId;
 
     public Output<String> getFleetId() {
@@ -29,7 +29,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * Message text to be used with the `TERMINAL` routing strategy.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -40,7 +40,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
      * Type of routing strategyE.g., `SIMPLE` or `TERMINAL`
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

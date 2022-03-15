@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.EncryptionProtectorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    @OutputExport(name="autoRotationEnabled", type=Boolean.class, parameters={})
+    @Export(name="autoRotationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRotationEnabled;
 
     /**
@@ -49,7 +49,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -63,7 +63,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -77,7 +77,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * The name of the server key.
      * 
      */
-    @OutputExport(name="serverKeyName", type=String.class, parameters={})
+    @Export(name="serverKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverKeyName;
 
     /**
@@ -105,7 +105,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * The encryption protector type like 'ServiceManaged', 'AzureKeyVault'.
      * 
      */
-    @OutputExport(name="serverKeyType", type=String.class, parameters={})
+    @Export(name="serverKeyType", type=String.class, parameters={})
     private Output<String> serverKeyType;
 
     /**
@@ -119,7 +119,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Subregion of the encryption protector.
      * 
      */
-    @OutputExport(name="subregion", type=String.class, parameters={})
+    @Export(name="subregion", type=String.class, parameters={})
     private Output<String> subregion;
 
     /**
@@ -133,7 +133,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Thumbprint of the server key.
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -147,7 +147,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class EncryptionProtector extends io.pulumi.resources.CustomResource {
      * The URI of the server key.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     /**

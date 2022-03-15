@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfig;
 import io.pulumi.awsnative.appflow.inputs.FlowSourceConnectorProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * Name of source connector profile
      * 
      */
-    @InputImport(name="connectorProfileName")
+    @Import(name="connectorProfileName")
       private final @Nullable String connectorProfileName;
 
     public Optional<String> getConnectorProfileName() {
@@ -36,7 +36,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * Type of source connector
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final FlowConnectorType connectorType;
 
     public FlowConnectorType getConnectorType() {
@@ -47,7 +47,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * Configuration for scheduled incremental data pull
      * 
      */
-    @InputImport(name="incrementalPullConfig")
+    @Import(name="incrementalPullConfig")
       private final @Nullable FlowIncrementalPullConfig incrementalPullConfig;
 
     public Optional<FlowIncrementalPullConfig> getIncrementalPullConfig() {
@@ -58,7 +58,7 @@ public final class FlowSourceFlowConfig extends io.pulumi.resources.InvokeArgs {
      * Source connector details required to query a connector
      * 
      */
-    @InputImport(name="sourceConnectorProperties", required=true)
+    @Import(name="sourceConnectorProperties", required=true)
       private final FlowSourceConnectorProperties sourceConnectorProperties;
 
     public FlowSourceConnectorProperties getSourceConnectorProperties() {

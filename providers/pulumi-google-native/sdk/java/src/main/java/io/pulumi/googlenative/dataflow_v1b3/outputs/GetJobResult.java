@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageStateResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.JobMetadataResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * The client's unique identifier of the job, re-used across retried attempts. If this field is set, the service will ensure its uniqueness. The request to create a job will fail if the service has knowledge of a previously submitted job with the same client's ID and job name. The caller may use this field to ensure idempotence of job creation across retried attempts to create a job. By default, the field is empty and, in that case, the service ignores it.
@@ -133,31 +133,31 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("clientRequestId") String clientRequestId,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("createdFromSnapshotId") String createdFromSnapshotId,
-        @OutputCustomType.Parameter("currentState") String currentState,
-        @OutputCustomType.Parameter("currentStateTime") String currentStateTime,
-        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
-        @OutputCustomType.Parameter("jobMetadata") JobMetadataResponse jobMetadata,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pipelineDescription") PipelineDescriptionResponse pipelineDescription,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("replaceJobId") String replaceJobId,
-        @OutputCustomType.Parameter("replacedByJobId") String replacedByJobId,
-        @OutputCustomType.Parameter("requestedState") String requestedState,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("stageStates") List<ExecutionStageStateResponse> stageStates,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("steps") List<StepResponse> steps,
-        @OutputCustomType.Parameter("stepsLocation") String stepsLocation,
-        @OutputCustomType.Parameter("tempFiles") List<String> tempFiles,
-        @OutputCustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("clientRequestId") String clientRequestId,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("createdFromSnapshotId") String createdFromSnapshotId,
+        @CustomType.Parameter("currentState") String currentState,
+        @CustomType.Parameter("currentStateTime") String currentStateTime,
+        @CustomType.Parameter("environment") EnvironmentResponse environment,
+        @CustomType.Parameter("jobMetadata") JobMetadataResponse jobMetadata,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pipelineDescription") PipelineDescriptionResponse pipelineDescription,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("replaceJobId") String replaceJobId,
+        @CustomType.Parameter("replacedByJobId") String replacedByJobId,
+        @CustomType.Parameter("requestedState") String requestedState,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("stageStates") List<ExecutionStageStateResponse> stageStates,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("steps") List<StepResponse> steps,
+        @CustomType.Parameter("stepsLocation") String stepsLocation,
+        @CustomType.Parameter("tempFiles") List<String> tempFiles,
+        @CustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
+        @CustomType.Parameter("type") String type) {
         this.clientRequestId = clientRequestId;
         this.createTime = createTime;
         this.createdFromSnapshotId = createdFromSnapshotId;

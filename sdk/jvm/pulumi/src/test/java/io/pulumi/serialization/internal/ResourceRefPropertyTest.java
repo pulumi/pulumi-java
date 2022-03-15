@@ -7,7 +7,7 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.deployment.MockCallArgs;
@@ -254,7 +254,7 @@ class ResourceRefPropertyTest {
 
     public static class DeserializeCustomResourceStack extends Stack {
 
-        @OutputExport(type = ImmutableMap.class, parameters = {String.class, String.class})
+        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
         public DeserializeCustomResourceStack() {
@@ -279,7 +279,7 @@ class ResourceRefPropertyTest {
 
     public static class DeserializeMissingCustomResourceStack extends Stack {
 
-        @OutputExport(type = ImmutableMap.class, parameters = {String.class, String.class})
+        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
         public DeserializeMissingCustomResourceStack() {
@@ -301,7 +301,7 @@ class ResourceRefPropertyTest {
 
     public static class DeserializeComponentResourceStack extends Stack {
 
-        @OutputExport(type = ImmutableMap.class, parameters = {String.class, String.class})
+        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public final Output<ImmutableMap<String, String>> values;
 
         public DeserializeComponentResourceStack() {
@@ -323,7 +323,7 @@ class ResourceRefPropertyTest {
 
     public static class DeserializeMissingComponentResourceStack extends Stack {
 
-        @OutputExport(type = ImmutableMap.class, parameters = {String.class, String.class})
+        @Export(type = ImmutableMap.class, parameters = {String.class, String.class})
         public Output<ImmutableMap<String, String>> values;
 
         public DeserializeMissingComponentResourceStack() {

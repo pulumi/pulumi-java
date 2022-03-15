@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterSelectorResponse {
     /**
      * The cluster labels. Cluster must have all labels to match.
@@ -21,10 +21,10 @@ public final class ClusterSelectorResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterSelectorResponse(
-        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @CustomType.Parameter("zone") String zone) {
         this.clusterLabels = clusterLabels;
         this.zone = zone;
     }

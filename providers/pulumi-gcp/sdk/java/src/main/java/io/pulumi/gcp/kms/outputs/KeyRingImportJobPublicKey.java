@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyRingImportJobPublicKey {
     private final @Nullable String pem;
 
-    @OutputCustomType.Constructor
-    private KeyRingImportJobPublicKey(@OutputCustomType.Parameter("pem") @Nullable String pem) {
+    @CustomType.Constructor
+    private KeyRingImportJobPublicKey(@CustomType.Parameter("pem") @Nullable String pem) {
         this.pem = pem;
     }
 

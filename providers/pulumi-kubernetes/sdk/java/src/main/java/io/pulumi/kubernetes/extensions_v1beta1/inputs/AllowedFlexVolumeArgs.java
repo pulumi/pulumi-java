@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
      * driver is the name of the Flexvolume driver.
      * 
      */
-    @InputImport(name="driver", required=true)
+    @Import(name="driver", required=true)
       private final Output<String> driver;
 
     public Output<String> getDriver() {

@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.StorageLensPrefixLevelStorageMetrics;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensPrefixLevel {
     private final StorageLensPrefixLevelStorageMetrics storageMetrics;
 
-    @OutputCustomType.Constructor
-    private StorageLensPrefixLevel(@OutputCustomType.Parameter("storageMetrics") StorageLensPrefixLevelStorageMetrics storageMetrics) {
+    @CustomType.Constructor
+    private StorageLensPrefixLevel(@CustomType.Parameter("storageMetrics") StorageLensPrefixLevelStorageMetrics storageMetrics) {
         this.storageMetrics = storageMetrics;
     }
 

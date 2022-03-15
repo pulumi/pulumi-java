@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * Contact people for the entry.
      * 
      */
-    @InputImport(name="contacts")
+    @Import(name="contacts")
       private final @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
     public Output<GoogleCloudDatacatalogV1ContactsArgs> getContacts() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
      * Entry overview fields for rich text descriptions of entries.
      * 
      */
-    @InputImport(name="entryOverview")
+    @Import(name="entryOverview")
       private final @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
     public Output<GoogleCloudDatacatalogV1EntryOverviewArgs> getEntryOverview() {

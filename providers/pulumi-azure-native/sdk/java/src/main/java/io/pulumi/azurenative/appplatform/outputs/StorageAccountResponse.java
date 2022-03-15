@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountResponse {
     /**
      * The account name of the Azure Storage Account.
@@ -21,10 +21,10 @@ public final class StorageAccountResponse {
      */
     private final String storageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountResponse(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("storageType") String storageType) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("storageType") String storageType) {
         this.accountName = accountName;
         this.storageType = storageType;
     }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.transfer.inputs;
 import io.pulumi.awsnative.transfer.enums.WorkflowStepCopyStepDetailsPropertiesOverwriteExisting;
 import io.pulumi.awsnative.transfer.inputs.WorkflowInputFileLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
 
     public static final WorkflowStepCopyStepDetailsPropertiesArgs Empty = new WorkflowStepCopyStepDetailsPropertiesArgs();
 
-    @InputImport(name="destinationFileLocation")
+    @Import(name="destinationFileLocation")
       private final @Nullable Output<WorkflowInputFileLocationArgs> destinationFileLocation;
 
     public Output<WorkflowInputFileLocationArgs> getDestinationFileLocation() {
@@ -31,7 +31,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
      * The name of the step, used as an identifier.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
      * A flag that indicates whether or not to overwrite an existing file of the same name. The default is FALSE.
      * 
      */
-    @InputImport(name="overwriteExisting")
+    @Import(name="overwriteExisting")
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting;
 
     public Output<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> getOverwriteExisting() {

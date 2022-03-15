@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.ManagementGroupPathElementResponse;
 import io.pulumi.azurenative.management.outputs.ParentGroupInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementGroupDetailsResponse {
     /**
      * (Optional) The ID of the parent management group.
@@ -41,13 +41,13 @@ public final class ManagementGroupDetailsResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementGroupDetailsResponse(
-        @OutputCustomType.Parameter("parent") @Nullable ParentGroupInfoResponse parent,
-        @OutputCustomType.Parameter("path") @Nullable List<ManagementGroupPathElementResponse> path,
-        @OutputCustomType.Parameter("updatedBy") @Nullable String updatedBy,
-        @OutputCustomType.Parameter("updatedTime") @Nullable String updatedTime,
-        @OutputCustomType.Parameter("version") @Nullable Double version) {
+        @CustomType.Parameter("parent") @Nullable ParentGroupInfoResponse parent,
+        @CustomType.Parameter("path") @Nullable List<ManagementGroupPathElementResponse> path,
+        @CustomType.Parameter("updatedBy") @Nullable String updatedBy,
+        @CustomType.Parameter("updatedTime") @Nullable String updatedTime,
+        @CustomType.Parameter("version") @Nullable Double version) {
         this.parent = parent;
         this.path = path;
         this.updatedBy = updatedBy;

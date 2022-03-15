@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.inputs.GetInstanceTypeFpga;
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeGpus;
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeInferenceAccelerator;
 import io.pulumi.aws.ec2.inputs.GetInstanceTypeInstanceDisk;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The default number of cores for the instance type.
      * 
      */
-    @InputImport(name="defaultCores")
+    @Import(name="defaultCores")
       private final @Nullable Integer defaultCores;
 
     public Optional<Integer> getDefaultCores() {
@@ -35,7 +35,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The  default  number of threads per core for the instance type.
      * 
      */
-    @InputImport(name="defaultThreadsPerCore")
+    @Import(name="defaultThreadsPerCore")
       private final @Nullable Integer defaultThreadsPerCore;
 
     public Optional<Integer> getDefaultThreadsPerCore() {
@@ -50,7 +50,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * * `fpgas.#.name` - The name of the FPGA accelerator.
      * 
      */
-    @InputImport(name="fpgas")
+    @Import(name="fpgas")
       private final @Nullable List<GetInstanceTypeFpga> fpgas;
 
     public List<GetInstanceTypeFpga> getFpgas() {
@@ -65,7 +65,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * * `gpus.#.name` - The name of the GPU accelerator.
      * 
      */
-    @InputImport(name="gpuses")
+    @Import(name="gpuses")
       private final @Nullable List<GetInstanceTypeGpus> gpuses;
 
     public List<GetInstanceTypeGpus> getGpuses() {
@@ -80,14 +80,14 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * * `inference_accelerators.#.name` - The name of the Inference accelerator.
      * 
      */
-    @InputImport(name="hypervisor")
+    @Import(name="hypervisor")
       private final @Nullable String hypervisor;
 
     public Optional<String> getHypervisor() {
         return this.hypervisor == null ? Optional.empty() : Optional.ofNullable(this.hypervisor);
     }
 
-    @InputImport(name="inferenceAccelerators")
+    @Import(name="inferenceAccelerators")
       private final @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
 
     public List<GetInstanceTypeInferenceAccelerator> getInferenceAccelerators() {
@@ -101,7 +101,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * * `instance_disks.#.type` - The type of disk.
      * 
      */
-    @InputImport(name="instanceDisks")
+    @Import(name="instanceDisks")
       private final @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
 
     public List<GetInstanceTypeInstanceDisk> getInstanceDisks() {
@@ -112,7 +112,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * Instance
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -123,7 +123,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The maximum number of IPv6 addresses per network interface.
      * 
      */
-    @InputImport(name="maximumIpv6AddressesPerInterface")
+    @Import(name="maximumIpv6AddressesPerInterface")
       private final @Nullable Integer maximumIpv6AddressesPerInterface;
 
     public Optional<Integer> getMaximumIpv6AddressesPerInterface() {
@@ -134,7 +134,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The total memory of all FPGA accelerators for the instance type (in MiB).
      * 
      */
-    @InputImport(name="totalFpgaMemory")
+    @Import(name="totalFpgaMemory")
       private final @Nullable Integer totalFpgaMemory;
 
     public Optional<Integer> getTotalFpgaMemory() {
@@ -145,7 +145,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The total size of the memory for the GPU accelerators for the instance type (in MiB).
      * 
      */
-    @InputImport(name="totalGpuMemory")
+    @Import(name="totalGpuMemory")
       private final @Nullable Integer totalGpuMemory;
 
     public Optional<Integer> getTotalGpuMemory() {
@@ -156,7 +156,7 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The total size of the instance disks, in GB.
      * 
      */
-    @InputImport(name="totalInstanceStorage")
+    @Import(name="totalInstanceStorage")
       private final @Nullable Integer totalInstanceStorage;
 
     public Optional<Integer> getTotalInstanceStorage() {

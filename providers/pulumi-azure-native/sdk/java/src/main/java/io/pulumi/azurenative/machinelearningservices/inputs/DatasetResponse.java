@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetResponseLatest;
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * The dataset creation time (UTC).
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -37,7 +37,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Unique Dataset identifier.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
@@ -48,7 +48,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Dataset state
      * 
      */
-    @InputImport(name="datasetState")
+    @Import(name="datasetState")
       private final @Nullable DatasetStateResponse datasetState;
 
     public Optional<DatasetStateResponse> getDatasetState() {
@@ -59,7 +59,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Dataset Type.
      * 
      */
-    @InputImport(name="datasetType", required=true)
+    @Import(name="datasetType", required=true)
       private final String datasetType;
 
     public String getDatasetType() {
@@ -70,7 +70,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the default compute to be used for any Dataset actions (such as Profile, Write).
      * 
      */
-    @InputImport(name="defaultCompute", required=true)
+    @Import(name="defaultCompute", required=true)
       private final String defaultCompute;
 
     public String getDefaultCompute() {
@@ -81,7 +81,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Description about this dataset version.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -92,7 +92,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * eTag description
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -103,7 +103,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Flag to hide Dataset in UI
      * 
      */
-    @InputImport(name="isVisible", required=true)
+    @Import(name="isVisible", required=true)
       private final Boolean isVisible;
 
     public Boolean getIsVisible() {
@@ -114,7 +114,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Last created Dataset definition.
      * 
      */
-    @InputImport(name="latest")
+    @Import(name="latest")
       private final @Nullable DatasetResponseLatest latest;
 
     public Optional<DatasetResponseLatest> getLatest() {
@@ -125,7 +125,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * The dataset last modified time (UTC).
      * 
      */
-    @InputImport(name="modifiedTime", required=true)
+    @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
     public String getModifiedTime() {
@@ -136,7 +136,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Unique dataset name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -147,7 +147,7 @@ public final class DatasetResponse extends io.pulumi.resources.InvokeArgs {
      * Tags for this dataset version.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
     public Map<String,String> getTags() {

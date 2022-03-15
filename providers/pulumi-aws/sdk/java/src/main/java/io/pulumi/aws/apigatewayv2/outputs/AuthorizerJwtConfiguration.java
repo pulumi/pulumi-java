@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorizerJwtConfiguration {
     /**
      * A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
@@ -23,10 +23,10 @@ public final class AuthorizerJwtConfiguration {
      */
     private final @Nullable String issuer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorizerJwtConfiguration(
-        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
-        @OutputCustomType.Parameter("issuer") @Nullable String issuer) {
+        @CustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @CustomType.Parameter("issuer") @Nullable String issuer) {
         this.audiences = audiences;
         this.issuer = issuer;
     }

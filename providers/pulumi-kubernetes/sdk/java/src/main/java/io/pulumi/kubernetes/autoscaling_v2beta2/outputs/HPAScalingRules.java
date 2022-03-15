@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HPAScalingPolicy;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HPAScalingRules {
     /**
      * policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
@@ -30,11 +30,11 @@ public final class HPAScalingRules {
      */
     private final @Nullable Integer stabilizationWindowSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HPAScalingRules(
-        @OutputCustomType.Parameter("policies") @Nullable List<HPAScalingPolicy> policies,
-        @OutputCustomType.Parameter("selectPolicy") @Nullable String selectPolicy,
-        @OutputCustomType.Parameter("stabilizationWindowSeconds") @Nullable Integer stabilizationWindowSeconds) {
+        @CustomType.Parameter("policies") @Nullable List<HPAScalingPolicy> policies,
+        @CustomType.Parameter("selectPolicy") @Nullable String selectPolicy,
+        @CustomType.Parameter("stabilizationWindowSeconds") @Nullable Integer stabilizationWindowSeconds) {
         this.policies = policies;
         this.selectPolicy = selectPolicy;
         this.stabilizationWindowSeconds = stabilizationWindowSeconds;

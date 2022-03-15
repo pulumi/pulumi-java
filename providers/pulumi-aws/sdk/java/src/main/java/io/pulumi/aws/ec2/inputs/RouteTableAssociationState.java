@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * The gateway ID to create an association. Conflicts with `subnet_id`.
      * 
      */
-    @InputImport(name="gatewayId")
+    @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -29,7 +29,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * The ID of the routing table to associate with.
      * 
      */
-    @InputImport(name="routeTableId")
+    @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
     public Output<String> getRouteTableId() {
@@ -40,7 +40,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
      * The subnet ID to create an association. Conflicts with `gateway_id`.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

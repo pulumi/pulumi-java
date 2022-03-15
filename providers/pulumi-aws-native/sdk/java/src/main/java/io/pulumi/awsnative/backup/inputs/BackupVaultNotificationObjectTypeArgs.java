@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class BackupVaultNotificationObjectTypeArgs extends io.pulumi.resou
 
     public static final BackupVaultNotificationObjectTypeArgs Empty = new BackupVaultNotificationObjectTypeArgs();
 
-    @InputImport(name="backupVaultEvents", required=true)
+    @Import(name="backupVaultEvents", required=true)
       private final Output<List<String>> backupVaultEvents;
 
     public Output<List<String>> getBackupVaultEvents() {
         return this.backupVaultEvents;
     }
 
-    @InputImport(name="sNSTopicArn", required=true)
+    @Import(name="sNSTopicArn", required=true)
       private final Output<String> sNSTopicArn;
 
     public Output<String> getSNSTopicArn() {

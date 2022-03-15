@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ZipInfoResponse {
     /**
      * An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
@@ -21,10 +21,10 @@ public final class ZipInfoResponse {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ZipInfoResponse(
-        @OutputCustomType.Parameter("filesCount") Integer filesCount,
-        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
+        @CustomType.Parameter("filesCount") Integer filesCount,
+        @CustomType.Parameter("sourceUrl") String sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = sourceUrl;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.analysisservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * The rule name.
      * 
      */
-    @InputImport(name="firewallRuleName")
+    @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
     public Output<String> getFirewallRuleName() {
@@ -33,7 +33,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * The end range of IPv4.
      * 
      */
-    @InputImport(name="rangeEnd")
+    @Import(name="rangeEnd")
       private final @Nullable Output<String> rangeEnd;
 
     public Output<String> getRangeEnd() {
@@ -44,7 +44,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * The start range of IPv4.
      * 
      */
-    @InputImport(name="rangeStart")
+    @Import(name="rangeStart")
       private final @Nullable Output<String> rangeStart;
 
     public Output<String> getRangeStart() {

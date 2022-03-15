@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembership;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupMembershipsResult {
     private final String group;
     /**
@@ -23,11 +23,11 @@ public final class GetGroupMembershipsResult {
      */
     private final List<GetGroupMembershipsMembership> memberships;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupMembershipsResult(
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("memberships") List<GetGroupMembershipsMembership> memberships) {
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("memberships") List<GetGroupMembershipsMembership> memberships) {
         this.group = group;
         this.id = id;
         this.memberships = memberships;

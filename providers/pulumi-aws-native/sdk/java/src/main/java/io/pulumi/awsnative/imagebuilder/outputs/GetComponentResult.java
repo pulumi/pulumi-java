@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ComponentType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentResult {
     /**
      * The Amazon Resource Name (ARN) of the component.
@@ -29,11 +29,11 @@ public final class GetComponentResult {
      */
     private final @Nullable ComponentType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
-        @OutputCustomType.Parameter("type") @Nullable ComponentType type) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @CustomType.Parameter("type") @Nullable ComponentType type) {
         this.arn = arn;
         this.encrypted = encrypted;
         this.type = type;

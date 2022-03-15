@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionEnableIoTLoggingParamsLogLevel;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MitigationActionEnableIoTLoggingParams extends io.pulumi.reso
      *  Specifies which types of information are logged.
      * 
      */
-    @InputImport(name="logLevel", required=true)
+    @Import(name="logLevel", required=true)
       private final MitigationActionEnableIoTLoggingParamsLogLevel logLevel;
 
     public MitigationActionEnableIoTLoggingParamsLogLevel getLogLevel() {
@@ -32,7 +32,7 @@ public final class MitigationActionEnableIoTLoggingParams extends io.pulumi.reso
      *  The ARN of the IAM role used for logging.
      * 
      */
-    @InputImport(name="roleArnForLogging", required=true)
+    @Import(name="roleArnForLogging", required=true)
       private final String roleArnForLogging;
 
     public String getRoleArnForLogging() {

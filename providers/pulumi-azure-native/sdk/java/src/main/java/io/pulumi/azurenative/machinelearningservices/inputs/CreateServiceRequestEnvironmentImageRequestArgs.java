@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentImageRequ
 import io.pulumi.azurenative.machinelearningservices.inputs.ImageAssetArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * The list of assets.
      * 
      */
-    @InputImport(name="assets")
+    @Import(name="assets")
       private final @Nullable Output<List<ImageAssetArgs>> assets;
 
     public Output<List<ImageAssetArgs>> getAssets() {
@@ -38,7 +38,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * The name of the driver file.
      * 
      */
-    @InputImport(name="driverProgram")
+    @Import(name="driverProgram")
       private final @Nullable Output<String> driverProgram;
 
     public Output<String> getDriverProgram() {
@@ -49,7 +49,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * The details of the AZURE ML environment.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<EnvironmentImageRequestEnvironmentArgs> environment;
 
     public Output<EnvironmentImageRequestEnvironmentArgs> getEnvironment() {
@@ -60,7 +60,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * The unique identifying details of the AZURE ML environment.
      * 
      */
-    @InputImport(name="environmentReference")
+    @Import(name="environmentReference")
       private final @Nullable Output<EnvironmentImageRequestEnvironmentReferenceArgs> environmentReference;
 
     public Output<EnvironmentImageRequestEnvironmentReferenceArgs> getEnvironmentReference() {
@@ -71,7 +71,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * The list of model Ids.
      * 
      */
-    @InputImport(name="modelIds")
+    @Import(name="modelIds")
       private final @Nullable Output<List<String>> modelIds;
 
     public Output<List<String>> getModelIds() {
@@ -82,7 +82,7 @@ public final class CreateServiceRequestEnvironmentImageRequestArgs extends io.pu
      * The list of models.
      * 
      */
-    @InputImport(name="models")
+    @Import(name="models")
       private final @Nullable Output<List<ModelArgs>> models;
 
     public Output<List<ModelArgs>> getModels() {

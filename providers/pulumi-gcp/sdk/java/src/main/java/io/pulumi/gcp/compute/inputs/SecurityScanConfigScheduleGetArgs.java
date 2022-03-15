@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * The duration of time between executions in days
      * 
      */
-    @InputImport(name="intervalDurationDays", required=true)
+    @Import(name="intervalDurationDays", required=true)
       private final Output<Integer> intervalDurationDays;
 
     public Output<Integer> getIntervalDurationDays() {
@@ -32,7 +32,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * which means the scan will be scheduled to start immediately.
      * 
      */
-    @InputImport(name="scheduleTime")
+    @Import(name="scheduleTime")
       private final @Nullable Output<String> scheduleTime;
 
     public Output<String> getScheduleTime() {

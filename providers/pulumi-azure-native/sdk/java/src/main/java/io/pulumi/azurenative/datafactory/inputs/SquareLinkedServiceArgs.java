@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The client ID associated with your Square application.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
     public Output<Object> getClientId() {
@@ -52,7 +52,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The client secret associated with your Square application.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
@@ -63,7 +63,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -74,7 +74,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Properties used to connect to Square. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
      */
-    @InputImport(name="connectionProperties")
+    @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
     public Output<Object> getConnectionProperties() {
@@ -85,7 +85,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -96,7 +96,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -107,7 +107,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The URL of the Square instance. (i.e. mystore.mysquare.com)
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<Object> host;
 
     public Output<Object> getHost() {
@@ -118,7 +118,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -129,7 +129,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The redirect URL assigned in the Square application dashboard. (i.e. http://localhost:2500)
      * 
      */
-    @InputImport(name="redirectUri")
+    @Import(name="redirectUri")
       private final @Nullable Output<Object> redirectUri;
 
     public Output<Object> getRedirectUri() {
@@ -141,7 +141,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'Square'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -152,7 +152,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
      */
-    @InputImport(name="useEncryptedEndpoints")
+    @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
     public Output<Object> getUseEncryptedEndpoints() {
@@ -163,7 +163,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="useHostVerification")
+    @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
 
     public Output<Object> getUseHostVerification() {
@@ -174,7 +174,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="usePeerVerification")
+    @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;
 
     public Output<Object> getUsePeerVerification() {

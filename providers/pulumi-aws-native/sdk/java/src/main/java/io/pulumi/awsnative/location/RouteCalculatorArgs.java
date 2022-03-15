@@ -5,7 +5,7 @@ package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.RouteCalculatorPricingPlan;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final RouteCalculatorArgs Empty = new RouteCalculatorArgs();
 
-    @InputImport(name="calculatorName", required=true)
+    @Import(name="calculatorName", required=true)
       private final Output<String> calculatorName;
 
     public Output<String> getCalculatorName() {
         return this.calculatorName;
     }
 
-    @InputImport(name="dataSource", required=true)
+    @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
     public Output<String> getDataSource() {
         return this.dataSource;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
 
     public Output<RouteCalculatorPricingPlan> getPricingPlan() {

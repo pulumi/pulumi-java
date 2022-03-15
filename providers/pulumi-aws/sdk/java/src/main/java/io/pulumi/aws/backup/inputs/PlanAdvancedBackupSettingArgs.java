@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
      * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
      * 
      */
-    @InputImport(name="backupOptions", required=true)
+    @Import(name="backupOptions", required=true)
       private final Output<Map<String,String>> backupOptions;
 
     public Output<Map<String,String>> getBackupOptions() {
@@ -29,7 +29,7 @@ public final class PlanAdvancedBackupSettingArgs extends io.pulumi.resources.Res
      * The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

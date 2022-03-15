@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * Name of a Management Group Diagnostic Log category for a resource type this setting is applied to.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final Output<String> category;
 
     public Output<String> getCategory() {
@@ -33,7 +33,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * a value indicating whether this log is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

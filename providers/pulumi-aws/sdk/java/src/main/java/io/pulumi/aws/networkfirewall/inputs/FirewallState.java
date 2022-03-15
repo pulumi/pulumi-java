@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallFirewallStatusGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallSubnetMappingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) that identifies the firewall.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
      * 
      */
-    @InputImport(name="deleteProtection")
+    @Import(name="deleteProtection")
       private final @Nullable Output<Boolean> deleteProtection;
 
     public Output<Boolean> getDeleteProtection() {
@@ -45,7 +45,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A friendly description of the firewall.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the VPC Firewall policy.
      * 
      */
-    @InputImport(name="firewallPolicyArn")
+    @Import(name="firewallPolicyArn")
       private final @Nullable Output<String> firewallPolicyArn;
 
     public Output<String> getFirewallPolicyArn() {
@@ -67,7 +67,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
      * 
      */
-    @InputImport(name="firewallPolicyChangeProtection")
+    @Import(name="firewallPolicyChangeProtection")
       private final @Nullable Output<Boolean> firewallPolicyChangeProtection;
 
     public Output<Boolean> getFirewallPolicyChangeProtection() {
@@ -78,7 +78,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * Nested list of information about the current status of the firewall.
      * 
      */
-    @InputImport(name="firewallStatuses")
+    @Import(name="firewallStatuses")
       private final @Nullable Output<List<FirewallFirewallStatusGetArgs>> firewallStatuses;
 
     public Output<List<FirewallFirewallStatusGetArgs>> getFirewallStatuses() {
@@ -89,7 +89,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A friendly name of the firewall.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
      * 
      */
-    @InputImport(name="subnetChangeProtection")
+    @Import(name="subnetChangeProtection")
       private final @Nullable Output<Boolean> subnetChangeProtection;
 
     public Output<Boolean> getSubnetChangeProtection() {
@@ -111,7 +111,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
      * 
      */
-    @InputImport(name="subnetMappings")
+    @Import(name="subnetMappings")
       private final @Nullable Output<List<FirewallSubnetMappingGetArgs>> subnetMappings;
 
     public Output<List<FirewallSubnetMappingGetArgs>> getSubnetMappings() {
@@ -122,7 +122,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * Map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -133,7 +133,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -144,7 +144,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * A string token used when updating a firewall.
      * 
      */
-    @InputImport(name="updateToken")
+    @Import(name="updateToken")
       private final @Nullable Output<String> updateToken;
 
     public Output<String> getUpdateToken() {
@@ -155,7 +155,7 @@ public final class FirewallState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the VPC where AWS Network Firewall should create the firewall.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

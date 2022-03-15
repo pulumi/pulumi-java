@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticsConfigurationResponse {
     /**
      * Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
@@ -22,10 +22,10 @@ public final class DiagnosticsConfigurationResponse {
      */
     private final String level;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticsConfigurationResponse(
-        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
-        @OutputCustomType.Parameter("level") String level) {
+        @CustomType.Parameter("expiry") @Nullable String expiry,
+        @CustomType.Parameter("level") String level) {
         this.expiry = expiry;
         this.level = level;
     }

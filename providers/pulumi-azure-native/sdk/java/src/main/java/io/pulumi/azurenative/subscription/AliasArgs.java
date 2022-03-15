@@ -5,7 +5,7 @@ package io.pulumi.azurenative.subscription;
 
 import io.pulumi.azurenative.subscription.inputs.PutAliasRequestPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Name for this subscription creation request also known as alias. Note that this is not the same as subscription name and this doesn’t have any other lifecycle need beyond the request for subscription creation.
      * 
      */
-    @InputImport(name="aliasName")
+    @Import(name="aliasName")
       private final @Nullable Output<String> aliasName;
 
     public Output<String> getAliasName() {
@@ -30,7 +30,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Put alias request properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<PutAliasRequestPropertiesArgs> properties;
 
     public Output<PutAliasRequestPropertiesArgs> getProperties() {

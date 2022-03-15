@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CostAllocationProportionResponse {
     /**
      * Target resource for cost allocation
@@ -21,10 +21,10 @@ public final class CostAllocationProportionResponse {
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CostAllocationProportionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("percentage") Double percentage) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("percentage") Double percentage) {
         this.name = name;
         this.percentage = percentage;
     }

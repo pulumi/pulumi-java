@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * Resource id for Azure SQL database Managed instance
      * 
      */
-    @InputImport(name="managedInstanceResourceId", required=true)
+    @Import(name="managedInstanceResourceId", required=true)
       private final String managedInstanceResourceId;
 
     public String getManagedInstanceResourceId() {
@@ -33,7 +33,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * Password credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -45,7 +45,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * Expected value is 'MiSqlConnectionInfo'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -56,7 +56,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * User name
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {

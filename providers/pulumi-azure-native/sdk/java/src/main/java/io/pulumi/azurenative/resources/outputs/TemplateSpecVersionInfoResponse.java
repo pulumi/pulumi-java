@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TemplateSpecVersionInfoResponse {
     /**
      * Template Spec version description.
@@ -25,11 +25,11 @@ public final class TemplateSpecVersionInfoResponse {
      */
     private final String timeModified;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateSpecVersionInfoResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("timeModified") String timeModified) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("timeModified") String timeModified) {
         this.description = description;
         this.timeCreated = timeCreated;
         this.timeModified = timeModified;

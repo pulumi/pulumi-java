@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupOnlineStoreSecurityConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
 
     public static final OnlineStoreConfigPropertiesArgs Empty = new OnlineStoreConfigPropertiesArgs();
 
-    @InputImport(name="enableOnlineStore")
+    @Import(name="enableOnlineStore")
       private final @Nullable Output<Boolean> enableOnlineStore;
 
     public Output<Boolean> getEnableOnlineStore() {
         return this.enableOnlineStore == null ? Output.empty() : this.enableOnlineStore;
     }
 
-    @InputImport(name="securityConfig")
+    @Import(name="securityConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
     public Output<FeatureGroupOnlineStoreSecurityConfigArgs> getSecurityConfig() {

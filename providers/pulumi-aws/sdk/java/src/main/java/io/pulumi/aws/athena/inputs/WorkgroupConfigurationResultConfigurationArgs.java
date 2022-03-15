@@ -5,7 +5,7 @@ package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.aws.athena.inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
      * Configuration block with encryption settings. Documented below.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> getEncryptionConfiguration() {
@@ -30,7 +30,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
      * The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`. For more information, see [Queries and Query Result Files](https://docs.aws.amazon.com/athena/latest/ug/querying.html).
      * 
      */
-    @InputImport(name="outputLocation")
+    @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
     public Output<String> getOutputLocation() {

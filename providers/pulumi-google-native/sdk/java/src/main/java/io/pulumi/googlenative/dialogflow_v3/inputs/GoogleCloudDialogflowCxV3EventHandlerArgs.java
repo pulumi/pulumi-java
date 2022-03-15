@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * The name of the event to handle.
      * 
      */
-    @InputImport(name="event", required=true)
+    @Import(name="event", required=true)
       private final Output<String> event;
 
     public Output<String> getEvent() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * The target flow to transition to. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @InputImport(name="targetFlow")
+    @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
     public Output<String> getTargetFlow() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
      * 
      */
-    @InputImport(name="targetPage")
+    @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
     public Output<String> getTargetPage() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
      * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a handler handling webhooks.
      * 
      */
-    @InputImport(name="triggerFulfillment")
+    @Import(name="triggerFulfillment")
       private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
     public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> getTriggerFulfillment() {

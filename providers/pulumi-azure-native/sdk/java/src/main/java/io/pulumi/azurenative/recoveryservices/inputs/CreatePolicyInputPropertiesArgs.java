@@ -12,7 +12,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMagePolicyInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
      * The ReplicationProviderSettings.
      * 
      */
-    @InputImport(name="providerSpecificInput")
+    @Import(name="providerSpecificInput")
       private final @Nullable Output<Object> providerSpecificInput;
 
     public Output<Object> getProviderSpecificInput() {

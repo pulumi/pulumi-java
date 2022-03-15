@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecLoggingAccessLogFile;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecLoggingAccessLog {
     /**
      * The file object to send virtual node access logs to.
@@ -17,8 +17,8 @@ public final class VirtualNodeSpecLoggingAccessLog {
      */
     private final @Nullable VirtualNodeSpecLoggingAccessLogFile file;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecLoggingAccessLog(@OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecLoggingAccessLogFile file) {
+    @CustomType.Constructor
+    private VirtualNodeSpecLoggingAccessLog(@CustomType.Parameter("file") @Nullable VirtualNodeSpecLoggingAccessLogFile file) {
         this.file = file;
     }
 

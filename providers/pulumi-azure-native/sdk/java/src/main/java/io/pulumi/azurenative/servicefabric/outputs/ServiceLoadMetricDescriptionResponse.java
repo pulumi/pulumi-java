@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceLoadMetricDescriptionResponse {
     /**
      * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
@@ -38,13 +38,13 @@ public final class ServiceLoadMetricDescriptionResponse {
      */
     private final @Nullable String weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceLoadMetricDescriptionResponse(
-        @OutputCustomType.Parameter("defaultLoad") @Nullable Integer defaultLoad,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primaryDefaultLoad") @Nullable Integer primaryDefaultLoad,
-        @OutputCustomType.Parameter("secondaryDefaultLoad") @Nullable Integer secondaryDefaultLoad,
-        @OutputCustomType.Parameter("weight") @Nullable String weight) {
+        @CustomType.Parameter("defaultLoad") @Nullable Integer defaultLoad,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primaryDefaultLoad") @Nullable Integer primaryDefaultLoad,
+        @CustomType.Parameter("secondaryDefaultLoad") @Nullable Integer secondaryDefaultLoad,
+        @CustomType.Parameter("weight") @Nullable String weight) {
         this.defaultLoad = defaultLoad;
         this.name = name;
         this.primaryDefaultLoad = primaryDefaultLoad;

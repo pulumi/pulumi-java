@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Id of the Active Directory
      * 
      */
-    @InputImport(name="activeDirectoryId")
+    @Import(name="activeDirectoryId")
       private final @Nullable Output<String> activeDirectoryId;
 
     public Output<String> getActiveDirectoryId() {
@@ -35,7 +35,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the active directory machine. This optional parameter is used only while creating kerberos volume
      * 
      */
-    @InputImport(name="adName")
+    @Import(name="adName")
       private final @Nullable Output<String> adName;
 
     public Output<String> getAdName() {
@@ -46,7 +46,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * If enabled, AES encryption will be enabled for SMB communication.
      * 
      */
-    @InputImport(name="aesEncryption")
+    @Import(name="aesEncryption")
       private final @Nullable Output<Boolean> aesEncryption;
 
     public Output<Boolean> getAesEncryption() {
@@ -57,7 +57,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      *  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
      * 
      */
-    @InputImport(name="allowLocalNfsUsersWithLdap")
+    @Import(name="allowLocalNfsUsersWithLdap")
       private final @Nullable Output<Boolean> allowLocalNfsUsersWithLdap;
 
     public Output<Boolean> getAllowLocalNfsUsersWithLdap() {
@@ -68,7 +68,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
      * 
      */
-    @InputImport(name="backupOperators")
+    @Import(name="backupOperators")
       private final @Nullable Output<List<String>> backupOperators;
 
     public Output<List<String>> getBackupOperators() {
@@ -79,7 +79,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
      * 
      */
-    @InputImport(name="dns")
+    @Import(name="dns")
       private final @Nullable Output<String> dns;
 
     public Output<String> getDns() {
@@ -90,7 +90,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Active Directory domain
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -101,7 +101,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
      * 
      */
-    @InputImport(name="kdcIP")
+    @Import(name="kdcIP")
       private final @Nullable Output<String> kdcIP;
 
     public Output<String> getKdcIP() {
@@ -112,7 +112,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies whether or not the LDAP traffic needs to be secured via TLS.
      * 
      */
-    @InputImport(name="ldapOverTLS")
+    @Import(name="ldapOverTLS")
       private final @Nullable Output<Boolean> ldapOverTLS;
 
     public Output<Boolean> getLdapOverTLS() {
@@ -123,7 +123,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies whether or not the LDAP traffic needs to be signed.
      * 
      */
-    @InputImport(name="ldapSigning")
+    @Import(name="ldapSigning")
       private final @Nullable Output<Boolean> ldapSigning;
 
     public Output<Boolean> getLdapSigning() {
@@ -134,7 +134,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * The Organizational Unit (OU) within the Windows Active Directory
      * 
      */
-    @InputImport(name="organizationalUnit")
+    @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
     public Output<String> getOrganizationalUnit() {
@@ -145,7 +145,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Plain text password of Active Directory domain administrator, value is masked in the response
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -156,7 +156,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
      * 
      */
-    @InputImport(name="securityOperators")
+    @Import(name="securityOperators")
       private final @Nullable Output<List<String>> securityOperators;
 
     public Output<List<String>> getSecurityOperators() {
@@ -167,7 +167,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
      * 
      */
-    @InputImport(name="serverRootCACertificate")
+    @Import(name="serverRootCACertificate")
       private final @Nullable Output<String> serverRootCACertificate;
 
     public Output<String> getServerRootCACertificate() {
@@ -178,7 +178,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * The Active Directory site the service will limit Domain Controller discovery to
      * 
      */
-    @InputImport(name="site")
+    @Import(name="site")
       private final @Nullable Output<String> site;
 
     public Output<String> getSite() {
@@ -189,7 +189,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
      * 
      */
-    @InputImport(name="smbServerName")
+    @Import(name="smbServerName")
       private final @Nullable Output<String> smbServerName;
 
     public Output<String> getSmbServerName() {
@@ -200,7 +200,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
      * Username of Active Directory domain administrator
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TokenCredentialsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTokenResult {
     /**
      * The creation date of scope map.
@@ -59,17 +59,17 @@ public final class GetTokenResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTokenResult(
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("credentials") @Nullable TokenCredentialsPropertiesResponse credentials,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scopeMapId") @Nullable String scopeMapId,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("credentials") @Nullable TokenCredentialsPropertiesResponse credentials,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scopeMapId") @Nullable String scopeMapId,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.creationDate = creationDate;
         this.credentials = credentials;
         this.id = id;

@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends i
      * Override the instance type in the Launch Template.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -30,7 +30,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends i
      * Override the instance launch template specification in the Launch Template.
      * 
      */
-    @InputImport(name="launchTemplateSpecification")
+    @Import(name="launchTemplateSpecification")
       private final @Nullable Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
     public Output<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
@@ -41,7 +41,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideArgs extends i
      * The number of capacity units, which gives the instance type a proportional weight to other instance types.
      * 
      */
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Output<String> weightedCapacity;
 
     public Output<String> getWeightedCapacity() {

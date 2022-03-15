@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * Indicates whether the source files need to be deleted after copy completion. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="deleteFilesAfterCompletion")
+    @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Object deleteFilesAfterCompletion;
 
     public Optional<Object> getDeleteFilesAfterCompletion() {
@@ -35,7 +35,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -46,7 +46,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * Indicates whether to enable partition discovery.
      * 
      */
-    @InputImport(name="enablePartitionDiscovery")
+    @Import(name="enablePartitionDiscovery")
       private final @Nullable Boolean enablePartitionDiscovery;
 
     public Optional<Boolean> getEnablePartitionDiscovery() {
@@ -57,7 +57,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * Specify a filter to be used to select a subset of files in the folderPath rather than all files. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileFilter")
+    @Import(name="fileFilter")
       private final @Nullable Object fileFilter;
 
     public Optional<Object> getFileFilter() {
@@ -68,7 +68,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * Point to a text file that lists each file (relative path to the path configured in the dataset) that you want to copy. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileListPath")
+    @Import(name="fileListPath")
       private final @Nullable Object fileListPath;
 
     public Optional<Object> getFileListPath() {
@@ -79,7 +79,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -90,7 +90,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * The end of file's modified datetime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="modifiedDatetimeEnd")
+    @Import(name="modifiedDatetimeEnd")
       private final @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> getModifiedDatetimeEnd() {
@@ -101,7 +101,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * The start of file's modified datetime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="modifiedDatetimeStart")
+    @Import(name="modifiedDatetimeStart")
       private final @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> getModifiedDatetimeStart() {
@@ -112,7 +112,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionRootPath")
+    @Import(name="partitionRootPath")
       private final @Nullable Object partitionRootPath;
 
     public Optional<Object> getPartitionRootPath() {
@@ -123,7 +123,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="recursive")
+    @Import(name="recursive")
       private final @Nullable Object recursive;
 
     public Optional<Object> getRecursive() {
@@ -135,7 +135,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * Expected value is 'FileServerReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -146,7 +146,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * FileServer wildcardFileName. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="wildcardFileName")
+    @Import(name="wildcardFileName")
       private final @Nullable Object wildcardFileName;
 
     public Optional<Object> getWildcardFileName() {
@@ -157,7 +157,7 @@ public final class FileServerReadSettingsResponse extends io.pulumi.resources.In
      * FileServer wildcardFolderPath. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="wildcardFolderPath")
+    @Import(name="wildcardFolderPath")
       private final @Nullable Object wildcardFolderPath;
 
     public Optional<Object> getWildcardFolderPath() {

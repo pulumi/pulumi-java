@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesGetArgs extend
      * An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
      * 
      */
-    @InputImport(name="ands")
+    @Import(name="ands")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands;
 
     public Output<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> getAnds() {

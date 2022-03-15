@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM service account email address like test@myproject.iam.gserviceaccount.com
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {

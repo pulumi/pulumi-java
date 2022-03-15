@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.MeshSpecGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the service mesh.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The creation date of the service mesh.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -42,7 +42,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The last update date of the service mesh.
      * 
      */
-    @InputImport(name="lastUpdatedDate")
+    @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
     public Output<String> getLastUpdatedDate() {
@@ -53,7 +53,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the service mesh's owner.
      * 
      */
-    @InputImport(name="meshOwner")
+    @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
     public Output<String> getMeshOwner() {
@@ -64,7 +64,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The name to use for the service mesh. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The resource owner's AWS account ID.
      * 
      */
-    @InputImport(name="resourceOwner")
+    @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
     public Output<String> getResourceOwner() {
@@ -86,7 +86,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * The service mesh specification to apply.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<MeshSpecGetArgs> spec;
 
     public Output<MeshSpecGetArgs> getSpec() {
@@ -97,7 +97,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class MeshState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

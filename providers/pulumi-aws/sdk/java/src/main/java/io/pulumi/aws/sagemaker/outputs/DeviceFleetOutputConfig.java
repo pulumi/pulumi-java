@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceFleetOutputConfig {
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.
@@ -22,10 +22,10 @@ public final class DeviceFleetOutputConfig {
      */
     private final String s3OutputLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceFleetOutputConfig(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("s3OutputLocation") String s3OutputLocation) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("s3OutputLocation") String s3OutputLocation) {
         this.kmsKeyId = kmsKeyId;
         this.s3OutputLocation = s3OutputLocation;
     }

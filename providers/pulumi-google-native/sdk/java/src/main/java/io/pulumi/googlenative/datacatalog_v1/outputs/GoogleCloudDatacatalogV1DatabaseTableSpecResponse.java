@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
     /**
      * Type of this table.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

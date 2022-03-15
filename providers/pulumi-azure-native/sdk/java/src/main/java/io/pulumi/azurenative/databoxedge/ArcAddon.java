@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.ArcAddonArgs;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Host OS supported by the Arc addon.
      * 
      */
-    @OutputExport(name="hostPlatform", type=String.class, parameters={})
+    @Export(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
     /**
@@ -49,7 +49,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Platform where the runtime is hosted.
      * 
      */
-    @OutputExport(name="hostPlatformType", type=String.class, parameters={})
+    @Export(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
     /**
@@ -64,7 +64,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Expected value is 'ArcForKubernetes'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Addon Provisioning State
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Arc resource group name
      * 
      */
-    @OutputExport(name="resourceGroupName", type=String.class, parameters={})
+    @Export(name="resourceGroupName", type=String.class, parameters={})
     private Output<String> resourceGroupName;
 
     /**
@@ -121,7 +121,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Arc resource location
      * 
      */
-    @OutputExport(name="resourceLocation", type=String.class, parameters={})
+    @Export(name="resourceLocation", type=String.class, parameters={})
     private Output<String> resourceLocation;
 
     /**
@@ -135,7 +135,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Arc resource Name
      * 
      */
-    @OutputExport(name="resourceName", type=String.class, parameters={})
+    @Export(name="resourceName", type=String.class, parameters={})
     private Output<String> resourceName;
 
     /**
@@ -149,7 +149,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Arc resource subscription Id
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
@@ -163,7 +163,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Addon type
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -177,7 +177,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -191,7 +191,7 @@ public class ArcAddon extends io.pulumi.resources.CustomResource {
      * Arc resource version
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
      * Budget name.
      * 
      */
-    @InputImport(name="budgetName", required=true)
+    @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
     public Output<String> getBudgetName() {
@@ -28,7 +28,7 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
      * Resource identifier.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {

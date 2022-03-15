@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.management.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHierarchySettingResult {
     /**
      * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
@@ -43,14 +43,14 @@ public final class GetHierarchySettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHierarchySettingResult(
-        @OutputCustomType.Parameter("defaultManagementGroup") @Nullable String defaultManagementGroup,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requireAuthorizationForGroupCreation") @Nullable Boolean requireAuthorizationForGroupCreation,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("defaultManagementGroup") @Nullable String defaultManagementGroup,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requireAuthorizationForGroupCreation") @Nullable Boolean requireAuthorizationForGroupCreation,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.defaultManagementGroup = defaultManagementGroup;
         this.id = id;
         this.name = name;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybriddata;
 import io.pulumi.azurenative.hybriddata.enums.State;
 import io.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    @InputImport(name="customerSecrets")
+    @Import(name="customerSecrets")
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
     public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
@@ -33,7 +33,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    @InputImport(name="dataManagerName", required=true)
+    @Import(name="dataManagerName", required=true)
       private final Output<String> dataManagerName;
 
     public Output<String> getDataManagerName() {
@@ -44,7 +44,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * The data store/repository name to be created or updated.
      * 
      */
-    @InputImport(name="dataStoreName")
+    @Import(name="dataStoreName")
       private final @Nullable Output<String> dataStoreName;
 
     public Output<String> getDataStoreName() {
@@ -55,7 +55,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * The arm id of the data store type.
      * 
      */
-    @InputImport(name="dataStoreTypeId", required=true)
+    @Import(name="dataStoreTypeId", required=true)
       private final Output<String> dataStoreTypeId;
 
     public Output<String> getDataStoreTypeId() {
@@ -66,7 +66,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * A generic json used differently by each data source type.
      * 
      */
-    @InputImport(name="extendedProperties")
+    @Import(name="extendedProperties")
       private final @Nullable Output<Object> extendedProperties;
 
     public Output<Object> getExtendedProperties() {
@@ -77,7 +77,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
      */
-    @InputImport(name="repositoryId")
+    @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
@@ -88,7 +88,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class DataStoreArgs extends io.pulumi.resources.ResourceArgs {
      * State of the data source.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<State> state;
 
     public Output<State> getState() {

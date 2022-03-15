@@ -6,7 +6,7 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionStateArgs;
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * Name of the managed HSM Pool
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * Name of the private endpoint connection associated with the managed hsm pool.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -54,7 +54,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * Approval state of the private link connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<MHSMPrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -65,7 +65,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * Name of the resource group that contains the managed HSM pool.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * SKU details
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ManagedHsmSkuArgs> sku;
 
     public Output<ManagedHsmSkuArgs> getSku() {
@@ -87,7 +87,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

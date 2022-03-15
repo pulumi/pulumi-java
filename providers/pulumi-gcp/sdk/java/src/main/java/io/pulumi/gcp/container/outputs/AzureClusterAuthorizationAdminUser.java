@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterAuthorizationAdminUser {
     /**
      * Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
@@ -15,8 +15,8 @@ public final class AzureClusterAuthorizationAdminUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
-    private AzureClusterAuthorizationAdminUser(@OutputCustomType.Parameter("username") String username) {
+    @CustomType.Constructor
+    private AzureClusterAuthorizationAdminUser(@CustomType.Parameter("username") String username) {
         this.username = username;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageBuilderAccessEndpoint {
     /**
      * Type of interface endpoint.
@@ -22,10 +22,10 @@ public final class ImageBuilderAccessEndpoint {
      */
     private final @Nullable String vpceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageBuilderAccessEndpoint(
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("vpceId") @Nullable String vpceId) {
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("vpceId") @Nullable String vpceId) {
         this.endpointType = endpointType;
         this.vpceId = vpceId;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHttpHealthCheckResult {
     /**
      * How often (in seconds) to send a health check. The default value is 5 seconds.
@@ -76,21 +76,21 @@ public final class GetHttpHealthCheckResult {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHttpHealthCheckResult(
-        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("requestPath") String requestPath,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
-        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
+        @CustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("requestPath") String requestPath,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @CustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

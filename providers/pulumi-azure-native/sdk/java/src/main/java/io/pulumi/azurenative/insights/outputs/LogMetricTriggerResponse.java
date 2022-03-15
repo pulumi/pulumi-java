@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogMetricTriggerResponse {
     /**
      * Evaluation of metric on a particular column
@@ -33,12 +33,12 @@ public final class LogMetricTriggerResponse {
      */
     private final @Nullable String thresholdOperator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogMetricTriggerResponse(
-        @OutputCustomType.Parameter("metricColumn") @Nullable String metricColumn,
-        @OutputCustomType.Parameter("metricTriggerType") @Nullable String metricTriggerType,
-        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
-        @OutputCustomType.Parameter("thresholdOperator") @Nullable String thresholdOperator) {
+        @CustomType.Parameter("metricColumn") @Nullable String metricColumn,
+        @CustomType.Parameter("metricTriggerType") @Nullable String metricTriggerType,
+        @CustomType.Parameter("threshold") @Nullable Double threshold,
+        @CustomType.Parameter("thresholdOperator") @Nullable String thresholdOperator) {
         this.metricColumn = metricColumn;
         this.metricTriggerType = metricTriggerType;
         this.threshold = threshold;

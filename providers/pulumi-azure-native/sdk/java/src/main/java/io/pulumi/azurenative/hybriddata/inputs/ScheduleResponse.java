@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the schedule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -34,7 +34,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of repetition intervals in ISO 8601 format.
      * 
      */
-    @InputImport(name="policyList")
+    @Import(name="policyList")
       private final @Nullable List<String> policyList;
 
     public List<String> getPolicyList() {

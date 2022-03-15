@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1DataSourceResponse {
     /**
      * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
@@ -20,10 +20,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1DataSourceResponse(
-        @OutputCustomType.Parameter("resource") String resource,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("resource") String resource,
+        @CustomType.Parameter("service") String service) {
         this.resource = resource;
         this.service = service;
     }

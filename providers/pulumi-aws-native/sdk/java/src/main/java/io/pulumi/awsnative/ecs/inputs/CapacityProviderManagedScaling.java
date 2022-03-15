@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.CapacityProviderManagedScalingStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,35 +19,35 @@ public final class CapacityProviderManagedScaling extends io.pulumi.resources.In
 
     public static final CapacityProviderManagedScaling Empty = new CapacityProviderManagedScaling();
 
-    @InputImport(name="instanceWarmupPeriod")
+    @Import(name="instanceWarmupPeriod")
       private final @Nullable Integer instanceWarmupPeriod;
 
     public Optional<Integer> getInstanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Optional.empty() : Optional.ofNullable(this.instanceWarmupPeriod);
     }
 
-    @InputImport(name="maximumScalingStepSize")
+    @Import(name="maximumScalingStepSize")
       private final @Nullable Integer maximumScalingStepSize;
 
     public Optional<Integer> getMaximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Optional.empty() : Optional.ofNullable(this.maximumScalingStepSize);
     }
 
-    @InputImport(name="minimumScalingStepSize")
+    @Import(name="minimumScalingStepSize")
       private final @Nullable Integer minimumScalingStepSize;
 
     public Optional<Integer> getMinimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Optional.empty() : Optional.ofNullable(this.minimumScalingStepSize);
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable CapacityProviderManagedScalingStatus status;
 
     public Optional<CapacityProviderManagedScalingStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
     }
 
-    @InputImport(name="targetCapacity")
+    @Import(name="targetCapacity")
       private final @Nullable Integer targetCapacity;
 
     public Optional<Integer> getTargetCapacity() {

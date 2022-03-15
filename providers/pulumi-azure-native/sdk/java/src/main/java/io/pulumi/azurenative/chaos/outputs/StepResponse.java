@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.BranchResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StepResponse {
     /**
      * List of branches.
@@ -22,10 +22,10 @@ public final class StepResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StepResponse(
-        @OutputCustomType.Parameter("branches") List<BranchResponse> branches,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("branches") List<BranchResponse> branches,
+        @CustomType.Parameter("name") String name) {
         this.branches = branches;
         this.name = name;
     }

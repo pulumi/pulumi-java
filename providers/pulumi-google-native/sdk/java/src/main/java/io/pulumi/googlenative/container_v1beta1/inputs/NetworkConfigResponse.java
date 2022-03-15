@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.DNSConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.DefaultSnatStatusResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.ServiceExternalIPsConfigResponse;
@@ -24,7 +24,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
      * 
      */
-    @InputImport(name="datapathProvider", required=true)
+    @Import(name="datapathProvider", required=true)
       private final String datapathProvider;
 
     public String getDatapathProvider() {
@@ -35,7 +35,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when default_snat_status is disabled. When disabled is set to false, default IP masquerade rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
      * 
      */
-    @InputImport(name="defaultSnatStatus", required=true)
+    @Import(name="defaultSnatStatus", required=true)
       private final DefaultSnatStatusResponse defaultSnatStatus;
 
     public DefaultSnatStatusResponse getDefaultSnatStatus() {
@@ -46,7 +46,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * DNSConfig contains clusterDNS config for this cluster.
      * 
      */
-    @InputImport(name="dnsConfig", required=true)
+    @Import(name="dnsConfig", required=true)
       private final DNSConfigResponse dnsConfig;
 
     public DNSConfigResponse getDnsConfig() {
@@ -57,7 +57,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
      * 
      */
-    @InputImport(name="enableIntraNodeVisibility", required=true)
+    @Import(name="enableIntraNodeVisibility", required=true)
       private final Boolean enableIntraNodeVisibility;
 
     public Boolean getEnableIntraNodeVisibility() {
@@ -68,7 +68,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Whether L4ILB Subsetting is enabled for this cluster.
      * 
      */
-    @InputImport(name="enableL4ilbSubsetting", required=true)
+    @Import(name="enableL4ilbSubsetting", required=true)
       private final Boolean enableL4ilbSubsetting;
 
     public Boolean getEnableL4ilbSubsetting() {
@@ -79,7 +79,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The relative name of the Google Compute Engine network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the cluster is connected. Example: projects/my-project/global/networks/my-network
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -90,7 +90,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4)
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess", required=true)
+    @Import(name="privateIpv6GoogleAccess", required=true)
       private final String privateIpv6GoogleAccess;
 
     public String getPrivateIpv6GoogleAccess() {
@@ -101,7 +101,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * ServiceExternalIPsConfig specifies if services with externalIPs field are blocked or not.
      * 
      */
-    @InputImport(name="serviceExternalIpsConfig", required=true)
+    @Import(name="serviceExternalIpsConfig", required=true)
       private final ServiceExternalIPsConfigResponse serviceExternalIpsConfig;
 
     public ServiceExternalIPsConfigResponse getServiceExternalIpsConfig() {
@@ -112,7 +112,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The relative name of the Google Compute Engine [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {

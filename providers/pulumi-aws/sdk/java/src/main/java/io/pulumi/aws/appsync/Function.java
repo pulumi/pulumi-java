@@ -8,7 +8,7 @@ import io.pulumi.aws.appsync.FunctionArgs;
 import io.pulumi.aws.appsync.inputs.FunctionState;
 import io.pulumi.aws.appsync.outputs.FunctionSyncConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The ID of the associated AppSync API.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -48,7 +48,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The ARN of the Function object.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Function DataSource name.
      * 
      */
-    @OutputExport(name="dataSource", type=String.class, parameters={})
+    @Export(name="dataSource", type=String.class, parameters={})
     private Output<String> dataSource;
 
     /**
@@ -76,7 +76,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Function description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -90,7 +90,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * A unique ID representing the Function object.
      * 
      */
-    @OutputExport(name="functionId", type=String.class, parameters={})
+    @Export(name="functionId", type=String.class, parameters={})
     private Output<String> functionId;
 
     /**
@@ -104,7 +104,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The version of the request mapping template. Currently the supported value is `2018-05-29`.
      * 
      */
-    @OutputExport(name="functionVersion", type=String.class, parameters={})
+    @Export(name="functionVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionVersion;
 
     /**
@@ -118,7 +118,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    @OutputExport(name="maxBatchSize", type=Integer.class, parameters={})
+    @Export(name="maxBatchSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxBatchSize;
 
     /**
@@ -132,7 +132,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Function name. The function name does not have to be unique.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -146,7 +146,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
      * 
      */
-    @OutputExport(name="requestMappingTemplate", type=String.class, parameters={})
+    @Export(name="requestMappingTemplate", type=String.class, parameters={})
     private Output<String> requestMappingTemplate;
 
     /**
@@ -160,7 +160,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Function response mapping template.
      * 
      */
-    @OutputExport(name="responseMappingTemplate", type=String.class, parameters={})
+    @Export(name="responseMappingTemplate", type=String.class, parameters={})
     private Output<String> responseMappingTemplate;
 
     /**
@@ -174,7 +174,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    @OutputExport(name="syncConfig", type=FunctionSyncConfig.class, parameters={})
+    @Export(name="syncConfig", type=FunctionSyncConfig.class, parameters={})
     private Output</* @Nullable */ FunctionSyncConfig> syncConfig;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureResourceStateGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateGetArgs;
@@ -23,7 +23,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * Output only. When the Feature resource was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -34,7 +34,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * Output only. When the Feature resource was deleted.
      * 
      */
-    @InputImport(name="deleteTime")
+    @Import(name="deleteTime")
       private final @Nullable Output<String> deleteTime;
 
     public Output<String> getDeleteTime() {
@@ -45,7 +45,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * GCP labels for this Feature.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -56,7 +56,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * The full, unique name of this Feature resource
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -89,7 +89,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * State of the Feature resource itself.
      * 
      */
-    @InputImport(name="resourceStates")
+    @Import(name="resourceStates")
       private final @Nullable Output<List<FeatureResourceStateGetArgs>> resourceStates;
 
     public Output<List<FeatureResourceStateGetArgs>> getResourceStates() {
@@ -100,7 +100,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<FeatureSpecGetArgs> spec;
 
     public Output<FeatureSpecGetArgs> getSpec() {
@@ -111,7 +111,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * Output only. The Hub-wide Feature state
      * 
      */
-    @InputImport(name="states")
+    @Import(name="states")
       private final @Nullable Output<List<FeatureStateGetArgs>> states;
 
     public Output<List<FeatureStateGetArgs>> getStates() {
@@ -122,7 +122,7 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
      * Output only. When the Feature resource was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupCustomHTTPHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupCustomRequestHandling {
     /**
      * Collection of HTTP headers.
@@ -16,8 +16,8 @@ public final class RuleGroupCustomRequestHandling {
      */
     private final List<RuleGroupCustomHTTPHeader> insertHeaders;
 
-    @OutputCustomType.Constructor
-    private RuleGroupCustomRequestHandling(@OutputCustomType.Parameter("insertHeaders") List<RuleGroupCustomHTTPHeader> insertHeaders) {
+    @CustomType.Constructor
+    private RuleGroupCustomRequestHandling(@CustomType.Parameter("insertHeaders") List<RuleGroupCustomHTTPHeader> insertHeaders) {
         this.insertHeaders = insertHeaders;
     }
 

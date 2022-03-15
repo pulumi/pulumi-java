@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponsePolicyGKEClusterResponse {
     /**
      * The resource name of the cluster to bind this response policy to. This should be specified in the format like: projects/*{@literal /}locations/*{@literal /}clusters/*. This is referenced from GKE projects.locations.clusters.get API: https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/get
@@ -16,10 +16,10 @@ public final class ResponsePolicyGKEClusterResponse {
     private final String gkeClusterName;
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponsePolicyGKEClusterResponse(
-        @OutputCustomType.Parameter("gkeClusterName") String gkeClusterName,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("gkeClusterName") String gkeClusterName,
+        @CustomType.Parameter("kind") String kind) {
         this.gkeClusterName = gkeClusterName;
         this.kind = kind;
     }

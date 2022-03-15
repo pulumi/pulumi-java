@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DedicatedHostAvailableCapacityResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
      * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
      * 
      */
-    @InputImport(name="assetId", required=true)
+    @Import(name="assetId", required=true)
       private final String assetId;
 
     public String getAssetId() {
@@ -36,7 +36,7 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
      * Unutilized capacity of the dedicated host.
      * 
      */
-    @InputImport(name="availableCapacity")
+    @Import(name="availableCapacity")
       private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
     public Optional<DedicatedHostAvailableCapacityResponse> getAvailableCapacity() {
@@ -47,7 +47,7 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {

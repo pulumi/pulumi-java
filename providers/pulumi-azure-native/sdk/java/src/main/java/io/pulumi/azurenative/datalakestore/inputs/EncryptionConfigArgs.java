@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 import io.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import io.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * The Key Vault information for connecting to user managed encryption keys.
      * 
      */
-    @InputImport(name="keyVaultMetaInfo")
+    @Import(name="keyVaultMetaInfo")
       private final @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
     public Output<KeyVaultMetaInfoArgs> getKeyVaultMetaInfo() {
@@ -34,7 +34,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<EncryptionConfigType> type;
 
     public Output<EncryptionConfigType> getType() {

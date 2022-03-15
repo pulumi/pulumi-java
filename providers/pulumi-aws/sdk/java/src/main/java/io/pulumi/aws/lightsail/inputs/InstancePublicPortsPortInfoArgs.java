@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * Set of CIDR blocks.
      * 
      */
-    @InputImport(name="cidrs")
+    @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
     public Output<List<String>> getCidrs() {
@@ -31,7 +31,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * First port in a range of open ports on an instance.
      * 
      */
-    @InputImport(name="fromPort", required=true)
+    @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -42,7 +42,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * IP protocol name. Valid values are `tcp`, `all`, `udp`, and `icmp`.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -53,7 +53,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
      * Last port in a range of open ports on an instance.
      * 
      */
-    @InputImport(name="toPort", required=true)
+    @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

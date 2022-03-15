@@ -8,7 +8,7 @@ import io.pulumi.awsnative.nimblestudio.StudioArgs;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioEncryptionConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
      * 
      */
-    @OutputExport(name="adminRoleArn", type=String.class, parameters={})
+    @Export(name="adminRoleArn", type=String.class, parameters={})
     private Output<String> adminRoleArn;
 
     /**
@@ -37,7 +37,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>A friendly name for the studio.</p>
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -51,7 +51,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>The Amazon Web Services Region where the studio resource is located.</p>
      * 
      */
-    @OutputExport(name="homeRegion", type=String.class, parameters={})
+    @Export(name="homeRegion", type=String.class, parameters={})
     private Output<String> homeRegion;
 
     /**
@@ -65,7 +65,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>The Amazon Web Services SSO application client ID used to integrate with Amazon Web Services SSO to enable Amazon Web Services SSO users to log in to Nimble Studio portal.</p>
      * 
      */
-    @OutputExport(name="ssoClientId", type=String.class, parameters={})
+    @Export(name="ssoClientId", type=String.class, parameters={})
     private Output<String> ssoClientId;
 
     /**
@@ -75,13 +75,13 @@ public class Studio extends io.pulumi.resources.CustomResource {
     public Output<String> getSsoClientId() {
         return this.ssoClientId;
     }
-    @OutputExport(name="studioEncryptionConfiguration", type=StudioEncryptionConfiguration.class, parameters={})
+    @Export(name="studioEncryptionConfiguration", type=StudioEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ StudioEncryptionConfiguration> studioEncryptionConfiguration;
 
     public Output</* @Nullable */ StudioEncryptionConfiguration> getStudioEncryptionConfiguration() {
         return this.studioEncryptionConfiguration;
     }
-    @OutputExport(name="studioId", type=String.class, parameters={})
+    @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     public Output<String> getStudioId() {
@@ -91,7 +91,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>
      * 
      */
-    @OutputExport(name="studioName", type=String.class, parameters={})
+    @Export(name="studioName", type=String.class, parameters={})
     private Output<String> studioName;
 
     /**
@@ -105,7 +105,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>The address of the web page for the studio.</p>
      * 
      */
-    @OutputExport(name="studioUrl", type=String.class, parameters={})
+    @Export(name="studioUrl", type=String.class, parameters={})
     private Output<String> studioUrl;
 
     /**
@@ -115,7 +115,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
     public Output<String> getStudioUrl() {
         return this.studioUrl;
     }
-    @OutputExport(name="tags", type=StudioTags.class, parameters={})
+    @Export(name="tags", type=StudioTags.class, parameters={})
     private Output</* @Nullable */ StudioTags> tags;
 
     public Output</* @Nullable */ StudioTags> getTags() {
@@ -125,7 +125,7 @@ public class Studio extends io.pulumi.resources.CustomResource {
      * <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
      * 
      */
-    @OutputExport(name="userRoleArn", type=String.class, parameters={})
+    @Export(name="userRoleArn", type=String.class, parameters={})
     private Output<String> userRoleArn;
 
     /**

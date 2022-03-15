@@ -8,7 +8,7 @@ import io.pulumi.azurenative.communication.CommunicationServiceArgs;
 import io.pulumi.azurenative.communication.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * The location where the communication service stores its data at rest.
      * 
      */
-    @OutputExport(name="dataLocation", type=String.class, parameters={})
+    @Export(name="dataLocation", type=String.class, parameters={})
     private Output<String> dataLocation;
 
     /**
@@ -50,7 +50,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * FQDN of the CommunicationService instance.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -64,7 +64,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * The immutable resource Id of the communication service.
      * 
      */
-    @OutputExport(name="immutableResourceId", type=String.class, parameters={})
+    @Export(name="immutableResourceId", type=String.class, parameters={})
     private Output<String> immutableResourceId;
 
     /**
@@ -78,7 +78,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * The Azure location where the CommunicationService is running.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -92,7 +92,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * Resource ID of an Azure Notification Hub linked to this resource.
      * 
      */
-    @OutputExport(name="notificationHubId", type=String.class, parameters={})
+    @Export(name="notificationHubId", type=String.class, parameters={})
     private Output<String> notificationHubId;
 
     /**
@@ -120,7 +120,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -134,7 +134,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -148,7 +148,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * Tags of the service which is a list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -176,7 +176,7 @@ public class CommunicationService extends io.pulumi.resources.CustomResource {
      * Version of the CommunicationService resource. Probably you need the same or higher version of client SDKs.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

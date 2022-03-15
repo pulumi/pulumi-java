@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpcIpamPoolCidrCidrAuthorizationContext {
     /**
      * The plain-text authorization message for the prefix and account.
@@ -22,10 +22,10 @@ public final class VpcIpamPoolCidrCidrAuthorizationContext {
      */
     private final @Nullable String signature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcIpamPoolCidrCidrAuthorizationContext(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("signature") @Nullable String signature) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("signature") @Nullable String signature) {
         this.message = message;
         this.signature = signature;
     }

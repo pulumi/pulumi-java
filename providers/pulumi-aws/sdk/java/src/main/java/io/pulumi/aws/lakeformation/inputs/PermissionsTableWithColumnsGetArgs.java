@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -31,7 +31,7 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * Set of column names for the table.
      * 
      */
-    @InputImport(name="columnNames")
+    @Import(name="columnNames")
       private final @Nullable Output<List<String>> columnNames;
 
     public Output<List<String>> getColumnNames() {
@@ -42,14 +42,14 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="excludedColumnNames")
+    @Import(name="excludedColumnNames")
       private final @Nullable Output<List<String>> excludedColumnNames;
 
     public Output<List<String>> getExcludedColumnNames() {
@@ -60,14 +60,14 @@ public final class PermissionsTableWithColumnsGetArgs extends io.pulumi.resource
      * Name of the table resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="wildcard")
+    @Import(name="wildcard")
       private final @Nullable Output<Boolean> wildcard;
 
     public Output<Boolean> getWildcard() {

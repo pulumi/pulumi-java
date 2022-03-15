@@ -6,7 +6,7 @@ package io.pulumi.aws.backup.inputs;
 import io.pulumi.aws.backup.inputs.PlanRuleCopyActionGetArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleLifecycleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
      * 
      */
-    @InputImport(name="completionWindow")
+    @Import(name="completionWindow")
       private final @Nullable Output<Integer> completionWindow;
 
     public Output<Integer> getCompletionWindow() {
@@ -35,7 +35,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with copy operation settings. Detailed below.
      * 
      */
-    @InputImport(name="copyActions")
+    @Import(name="copyActions")
       private final @Nullable Output<List<PlanRuleCopyActionGetArgs>> copyActions;
 
     public Output<List<PlanRuleCopyActionGetArgs>> getCopyActions() {
@@ -46,7 +46,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Enable continuous backups for supported resources.
      * 
      */
-    @InputImport(name="enableContinuousBackup")
+    @Import(name="enableContinuousBackup")
       private final @Nullable Output<Boolean> enableContinuousBackup;
 
     public Output<Boolean> getEnableContinuousBackup() {
@@ -57,7 +57,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
      */
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable Output<PlanRuleLifecycleGetArgs> lifecycle;
 
     public Output<PlanRuleLifecycleGetArgs> getLifecycle() {
@@ -68,7 +68,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the resources that you create.
      * 
      */
-    @InputImport(name="recoveryPointTags")
+    @Import(name="recoveryPointTags")
       private final @Nullable Output<Map<String,String>> recoveryPointTags;
 
     public Output<Map<String,String>> getRecoveryPointTags() {
@@ -79,7 +79,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * An display name for a backup rule.
      * 
      */
-    @InputImport(name="ruleName", required=true)
+    @Import(name="ruleName", required=true)
       private final Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -90,7 +90,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * A CRON expression specifying when AWS Backup initiates a backup job.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -101,7 +101,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of time in minutes before beginning a backup.
      * 
      */
-    @InputImport(name="startWindow")
+    @Import(name="startWindow")
       private final @Nullable Output<Integer> startWindow;
 
     public Output<Integer> getStartWindow() {
@@ -112,7 +112,7 @@ public final class PlanRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of a logical container where backups are stored.
      * 
      */
-    @InputImport(name="targetVaultName", required=true)
+    @Import(name="targetVaultName", required=true)
       private final Output<String> targetVaultName;
 
     public Output<String> getTargetVaultName() {

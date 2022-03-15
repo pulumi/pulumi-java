@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ivs.PlaybackKeyPairArgs;
 import io.pulumi.awsnative.ivs.outputs.PlaybackKeyPairTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * Key-pair identifier.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * Key-pair identifier.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -53,7 +53,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -67,7 +67,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * The public portion of a customer-generated key pair.
      * 
      */
-    @OutputExport(name="publicKeyMaterial", type=String.class, parameters={})
+    @Export(name="publicKeyMaterial", type=String.class, parameters={})
     private Output<String> publicKeyMaterial;
 
     /**
@@ -81,7 +81,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={PlaybackKeyPairTag.class})
+    @Export(name="tags", type=List.class, parameters={PlaybackKeyPairTag.class})
     private Output</* @Nullable */ List<PlaybackKeyPairTag>> tags;
 
     /**

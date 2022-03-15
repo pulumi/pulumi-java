@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyFairPlayConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
      * FairPlay configurations
      * 
      */
-    @InputImport(name="fairPlay")
+    @Import(name="fairPlay")
       private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
 
     public Optional<StreamingPolicyFairPlayConfigurationResponse> getFairPlay() {
@@ -35,7 +35,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
      * PlayReady configurations
      * 
      */
-    @InputImport(name="playReady")
+    @Import(name="playReady")
       private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> getPlayReady() {
@@ -46,7 +46,7 @@ public final class CbcsDrmConfigurationResponse extends io.pulumi.resources.Invo
      * Widevine configurations
      * 
      */
-    @InputImport(name="widevine")
+    @Import(name="widevine")
       private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
     public Optional<StreamingPolicyWidevineConfigurationResponse> getWidevine() {

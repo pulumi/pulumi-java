@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationEFSTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationEFSResult {
     /**
      * The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.
@@ -29,11 +29,11 @@ public final class GetLocationEFSResult {
      */
     private final @Nullable List<LocationEFSTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationEFSResult(
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationEFSTag> tags) {
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("tags") @Nullable List<LocationEFSTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.tags = tags;

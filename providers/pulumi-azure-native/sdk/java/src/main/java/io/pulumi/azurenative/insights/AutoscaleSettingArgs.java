@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.AutoscaleNotificationArgs;
 import io.pulumi.azurenative.insights.inputs.AutoscaleProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * The autoscale setting name.
      * 
      */
-    @InputImport(name="autoscaleSettingName")
+    @Import(name="autoscaleSettingName")
       private final @Nullable Output<String> autoscaleSettingName;
 
     public Output<String> getAutoscaleSettingName() {
@@ -34,7 +34,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -45,7 +45,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * the name of the autoscale setting.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * the collection of notifications.
      * 
      */
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable Output<List<AutoscaleNotificationArgs>> notifications;
 
     public Output<List<AutoscaleNotificationArgs>> getNotifications() {
@@ -78,7 +78,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
      * 
      */
-    @InputImport(name="profiles", required=true)
+    @Import(name="profiles", required=true)
       private final Output<List<AutoscaleProfileArgs>> profiles;
 
     public Output<List<AutoscaleProfileArgs>> getProfiles() {
@@ -89,7 +89,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * the location of the resource that the autoscale setting should be added to.
      * 
      */
-    @InputImport(name="targetResourceLocation")
+    @Import(name="targetResourceLocation")
       private final @Nullable Output<String> targetResourceLocation;
 
     public Output<String> getTargetResourceLocation() {
@@ -122,7 +122,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * the resource identifier of the resource that the autoscale setting should be added to.
      * 
      */
-    @InputImport(name="targetResourceUri")
+    @Import(name="targetResourceUri")
       private final @Nullable Output<String> targetResourceUri;
 
     public Output<String> getTargetResourceUri() {

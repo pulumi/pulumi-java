@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainVpcOptions {
     private final @Nullable List<String> availabilityZones;
     /**
@@ -25,12 +25,12 @@ public final class DomainVpcOptions {
     private final @Nullable List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainVpcOptions(
-        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.availabilityZones = availabilityZones;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

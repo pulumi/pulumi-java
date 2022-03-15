@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.outputs.ClusterGetPropertiesResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ClusterIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The ETag for the resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identity of the cluster, if configured.
      * 
      */
-    @OutputExport(name="identity", type=ClusterIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ClusterIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ClusterIdentityResponse> identity;
 
     /**
@@ -65,7 +65,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -79,7 +79,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The properties of the cluster.
      * 
      */
-    @OutputExport(name="properties", type=ClusterGetPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ClusterGetPropertiesResponse.class, parameters={})
     private Output<ClusterGetPropertiesResponse> properties;
 
     /**
@@ -107,7 +107,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

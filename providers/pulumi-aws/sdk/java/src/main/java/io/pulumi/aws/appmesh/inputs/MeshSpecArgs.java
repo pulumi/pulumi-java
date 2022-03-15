@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.MeshSpecEgressFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class MeshSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The egress filter rules for the service mesh.
      * 
      */
-    @InputImport(name="egressFilter")
+    @Import(name="egressFilter")
       private final @Nullable Output<MeshSpecEgressFilterArgs> egressFilter;
 
     public Output<MeshSpecEgressFilterArgs> getEgressFilter() {

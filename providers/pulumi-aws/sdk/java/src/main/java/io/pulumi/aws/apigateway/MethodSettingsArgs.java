@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*{@literal /}*` for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., `trimprefix(aws_api_gateway_resource.example.path, "/")`).
      * 
      */
-    @InputImport(name="methodPath", required=true)
+    @Import(name="methodPath", required=true)
       private final Output<String> methodPath;
 
     public Output<String> getMethodPath() {
@@ -29,7 +29,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -40,7 +40,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The settings block, see below.
      * 
      */
-    @InputImport(name="settings", required=true)
+    @Import(name="settings", required=true)
       private final Output<MethodSettingsSettingsArgs> settings;
 
     public Output<MethodSettingsSettingsArgs> getSettings() {
@@ -51,7 +51,7 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the stage
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final Output<String> stageName;
 
     public Output<String> getStageName() {

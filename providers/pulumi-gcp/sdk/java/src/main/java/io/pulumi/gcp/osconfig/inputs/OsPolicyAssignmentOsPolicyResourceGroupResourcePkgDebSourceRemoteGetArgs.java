@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRe
      * SHA256 checksum of the remote file.
      * 
      */
-    @InputImport(name="sha256Checksum")
+    @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
     public Output<String> getSha256Checksum() {
@@ -29,7 +29,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRe
      * Required. URI for this repository.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

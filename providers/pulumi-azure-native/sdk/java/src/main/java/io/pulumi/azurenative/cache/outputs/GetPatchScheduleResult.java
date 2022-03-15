@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.cache.outputs;
 
 import io.pulumi.azurenative.cache.outputs.ScheduleEntryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPatchScheduleResult {
     /**
      * Resource ID.
@@ -32,12 +32,12 @@ public final class GetPatchScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPatchScheduleResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scheduleEntries") List<ScheduleEntryResponse> scheduleEntries,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scheduleEntries") List<ScheduleEntryResponse> scheduleEntries,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.scheduleEntries = scheduleEntries;

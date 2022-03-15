@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutIdleArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutPerRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class RouteSpecHttp2RouteTimeoutArgs extends io.pulumi.resources.Re
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
      */
-    @InputImport(name="idle")
+    @Import(name="idle")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutIdleArgs> idle;
 
     public Output<RouteSpecHttp2RouteTimeoutIdleArgs> getIdle() {
@@ -30,7 +30,7 @@ public final class RouteSpecHttp2RouteTimeoutArgs extends io.pulumi.resources.Re
      * The per request timeout.
      * 
      */
-    @InputImport(name="perRequest")
+    @Import(name="perRequest")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutPerRequestArgs> perRequest;
 
     public Output<RouteSpecHttp2RouteTimeoutPerRequestArgs> getPerRequest() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
      * secondary range.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
     public String getIpCidrRange() {
@@ -29,7 +29,7 @@ public final class GetSubnetworkSecondaryIpRange extends io.pulumi.resources.Inv
      * when adding an alias IP range to a VM instance.
      * 
      */
-    @InputImport(name="rangeName", required=true)
+    @Import(name="rangeName", required=true)
       private final String rangeName;
 
     public String getRangeName() {

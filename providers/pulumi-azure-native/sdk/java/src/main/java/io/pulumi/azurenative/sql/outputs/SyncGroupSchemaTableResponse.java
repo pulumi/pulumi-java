@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaTableColumnResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SyncGroupSchemaTableResponse {
     /**
      * List of columns in sync group schema.
@@ -24,10 +24,10 @@ public final class SyncGroupSchemaTableResponse {
      */
     private final @Nullable String quotedName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SyncGroupSchemaTableResponse(
-        @OutputCustomType.Parameter("columns") @Nullable List<SyncGroupSchemaTableColumnResponse> columns,
-        @OutputCustomType.Parameter("quotedName") @Nullable String quotedName) {
+        @CustomType.Parameter("columns") @Nullable List<SyncGroupSchemaTableColumnResponse> columns,
+        @CustomType.Parameter("quotedName") @Nullable String quotedName) {
         this.columns = columns;
         this.quotedName = quotedName;
     }

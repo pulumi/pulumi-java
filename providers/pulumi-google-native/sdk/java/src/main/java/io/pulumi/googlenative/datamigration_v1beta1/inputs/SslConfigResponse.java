@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. The x509 PEM-encoded certificate of the CA that signed the source database server's certificate. The replica will use this certificate to verify it's connecting to the right host.
      * 
      */
-    @InputImport(name="caCertificate", required=true)
+    @Import(name="caCertificate", required=true)
       private final String caCertificate;
 
     public String getCaCertificate() {
@@ -31,7 +31,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.If this field is used then the 'client_key' field is mandatory.
      * 
      */
-    @InputImport(name="clientCertificate", required=true)
+    @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
     public String getClientCertificate() {
@@ -42,7 +42,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' field is mandatory.
      * 
      */
-    @InputImport(name="clientKey", required=true)
+    @Import(name="clientKey", required=true)
       private final String clientKey;
 
     public String getClientKey() {
@@ -53,7 +53,7 @@ public final class SslConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The ssl config type according to 'client_key', 'client_certificate' and 'ca_certificate'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

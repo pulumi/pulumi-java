@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListConfigurationStoreKeyValueResult {
     /**
      * The content type of the key-value's value.
@@ -56,16 +56,16 @@ public final class ListConfigurationStoreKeyValueResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListConfigurationStoreKeyValueResult(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("locked") Boolean locked,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("locked") Boolean locked,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("value") String value) {
         this.contentType = contentType;
         this.eTag = eTag;
         this.key = key;

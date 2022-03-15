@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetAllUpdatesRule {
     /**
      * Boolean. When set to true, disables default notifications sent
@@ -45,12 +45,12 @@ public final class BudgetAllUpdatesRule {
      */
     private final @Nullable String schemaVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetAllUpdatesRule(
-        @OutputCustomType.Parameter("disableDefaultIamRecipients") @Nullable Boolean disableDefaultIamRecipients,
-        @OutputCustomType.Parameter("monitoringNotificationChannels") @Nullable List<String> monitoringNotificationChannels,
-        @OutputCustomType.Parameter("pubsubTopic") @Nullable String pubsubTopic,
-        @OutputCustomType.Parameter("schemaVersion") @Nullable String schemaVersion) {
+        @CustomType.Parameter("disableDefaultIamRecipients") @Nullable Boolean disableDefaultIamRecipients,
+        @CustomType.Parameter("monitoringNotificationChannels") @Nullable List<String> monitoringNotificationChannels,
+        @CustomType.Parameter("pubsubTopic") @Nullable String pubsubTopic,
+        @CustomType.Parameter("schemaVersion") @Nullable String schemaVersion) {
         this.disableDefaultIamRecipients = disableDefaultIamRecipients;
         this.monitoringNotificationChannels = monitoringNotificationChannels;
         this.pubsubTopic = pubsubTopic;

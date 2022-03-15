@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleResult {
     /**
      * The Amazon Resource Name (ARN) specifying the role.
@@ -63,19 +63,19 @@ public final class GetRoleResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("assumeRolePolicy") String assumeRolePolicy,
-        @OutputCustomType.Parameter("createDate") String createDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("maxSessionDuration") Integer maxSessionDuration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("permissionsBoundary") String permissionsBoundary,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("assumeRolePolicy") String assumeRolePolicy,
+        @CustomType.Parameter("createDate") String createDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("maxSessionDuration") Integer maxSessionDuration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("permissionsBoundary") String permissionsBoundary,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("uniqueId") String uniqueId) {
         this.arn = arn;
         this.assumeRolePolicy = assumeRolePolicy;
         this.createDate = createDate;

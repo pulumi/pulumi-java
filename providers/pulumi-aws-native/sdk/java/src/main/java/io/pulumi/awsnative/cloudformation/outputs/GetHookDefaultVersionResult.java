@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHookDefaultVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
@@ -34,12 +34,12 @@ public final class GetHookDefaultVersionResult {
      */
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHookDefaultVersionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
-        @OutputCustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("typeName") @Nullable String typeName,
+        @CustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn,
+        @CustomType.Parameter("versionId") @Nullable String versionId) {
         this.arn = arn;
         this.typeName = typeName;
         this.typeVersionArn = typeVersionArn;

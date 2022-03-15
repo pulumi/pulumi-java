@@ -8,7 +8,7 @@ import io.pulumi.awsnative.backup.BackupVaultArgs;
 import io.pulumi.awsnative.backup.outputs.BackupVaultLockConfigurationType;
 import io.pulumi.awsnative.backup.outputs.BackupVaultNotificationObjectType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -20,43 +20,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:backup:BackupVault")
 public class BackupVault extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accessPolicy", type=Object.class, parameters={})
+    @Export(name="accessPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> accessPolicy;
 
     public Output</* @Nullable */ Object> getAccessPolicy() {
         return this.accessPolicy;
     }
-    @OutputExport(name="backupVaultArn", type=String.class, parameters={})
+    @Export(name="backupVaultArn", type=String.class, parameters={})
     private Output<String> backupVaultArn;
 
     public Output<String> getBackupVaultArn() {
         return this.backupVaultArn;
     }
-    @OutputExport(name="backupVaultName", type=String.class, parameters={})
+    @Export(name="backupVaultName", type=String.class, parameters={})
     private Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
         return this.backupVaultName;
     }
-    @OutputExport(name="backupVaultTags", type=Object.class, parameters={})
+    @Export(name="backupVaultTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupVaultTags;
 
     public Output</* @Nullable */ Object> getBackupVaultTags() {
         return this.backupVaultTags;
     }
-    @OutputExport(name="encryptionKeyArn", type=String.class, parameters={})
+    @Export(name="encryptionKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyArn;
 
     public Output</* @Nullable */ String> getEncryptionKeyArn() {
         return this.encryptionKeyArn;
     }
-    @OutputExport(name="lockConfiguration", type=BackupVaultLockConfigurationType.class, parameters={})
+    @Export(name="lockConfiguration", type=BackupVaultLockConfigurationType.class, parameters={})
     private Output</* @Nullable */ BackupVaultLockConfigurationType> lockConfiguration;
 
     public Output</* @Nullable */ BackupVaultLockConfigurationType> getLockConfiguration() {
         return this.lockConfiguration;
     }
-    @OutputExport(name="notifications", type=BackupVaultNotificationObjectType.class, parameters={})
+    @Export(name="notifications", type=BackupVaultNotificationObjectType.class, parameters={})
     private Output</* @Nullable */ BackupVaultNotificationObjectType> notifications;
 
     public Output</* @Nullable */ BackupVaultNotificationObjectType> getNotifications() {

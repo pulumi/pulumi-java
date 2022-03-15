@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
 
     public static final TaskDefinitionFirelensConfigurationArgs Empty = new TaskDefinitionFirelensConfigurationArgs();
 
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<Object> options;
 
     public Output<Object> getOptions() {
         return this.options == null ? Output.empty() : this.options;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

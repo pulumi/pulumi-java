@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQuerySnsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryNotificationConfiguration {
     private final ScheduledQuerySnsConfiguration snsConfiguration;
 
-    @OutputCustomType.Constructor
-    private ScheduledQueryNotificationConfiguration(@OutputCustomType.Parameter("snsConfiguration") ScheduledQuerySnsConfiguration snsConfiguration) {
+    @CustomType.Constructor
+    private ScheduledQueryNotificationConfiguration(@CustomType.Parameter("snsConfiguration") ScheduledQuerySnsConfiguration snsConfiguration) {
         this.snsConfiguration = snsConfiguration;
     }
 

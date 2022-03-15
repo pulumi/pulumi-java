@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionResult {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionResult() {
     }
 

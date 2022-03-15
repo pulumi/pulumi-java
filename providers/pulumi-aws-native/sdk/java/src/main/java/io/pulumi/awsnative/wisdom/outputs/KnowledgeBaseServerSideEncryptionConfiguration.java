@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.wisdom.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KnowledgeBaseServerSideEncryptionConfiguration {
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor
-    private KnowledgeBaseServerSideEncryptionConfiguration(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
+    @CustomType.Constructor
+    private KnowledgeBaseServerSideEncryptionConfiguration(@CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 

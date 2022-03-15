@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * The name of the instance group.
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -31,7 +31,7 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * long, and comply with RFC1035.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * The port number, which can be a value between 1 and 65535.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -54,7 +54,7 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -65,7 +65,7 @@ public final class InstanceGroupNamedPortState extends io.pulumi.resources.Resou
      * The zone of the instance group.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

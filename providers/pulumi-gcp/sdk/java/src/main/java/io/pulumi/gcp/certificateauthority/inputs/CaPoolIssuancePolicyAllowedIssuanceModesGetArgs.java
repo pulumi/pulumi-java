@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
      * When true, allows callers to create Certificates by specifying a CertificateConfig.
      * 
      */
-    @InputImport(name="allowConfigBasedIssuance", required=true)
+    @Import(name="allowConfigBasedIssuance", required=true)
       private final Output<Boolean> allowConfigBasedIssuance;
 
     public Output<Boolean> getAllowConfigBasedIssuance() {
@@ -28,7 +28,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
      * When true, allows callers to create Certificates by specifying a CSR.
      * 
      */
-    @InputImport(name="allowCsrBasedIssuance", required=true)
+    @Import(name="allowCsrBasedIssuance", required=true)
       private final Output<Boolean> allowCsrBasedIssuance;
 
     public Output<Boolean> getAllowCsrBasedIssuance() {

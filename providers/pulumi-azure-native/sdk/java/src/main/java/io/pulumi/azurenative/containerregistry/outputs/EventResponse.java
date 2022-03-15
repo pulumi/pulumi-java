@@ -5,13 +5,13 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.EventRequestMessageResponse;
 import io.pulumi.azurenative.containerregistry.outputs.EventResponseMessageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventResponse {
     /**
      * The event request message sent to the service URI.
@@ -29,11 +29,11 @@ public final class EventResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventResponse(
-        @OutputCustomType.Parameter("eventRequestMessage") @Nullable EventRequestMessageResponse eventRequestMessage,
-        @OutputCustomType.Parameter("eventResponseMessage") @Nullable EventResponseMessageResponse eventResponseMessage,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("eventRequestMessage") @Nullable EventRequestMessageResponse eventRequestMessage,
+        @CustomType.Parameter("eventResponseMessage") @Nullable EventResponseMessageResponse eventResponseMessage,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.eventRequestMessage = eventRequestMessage;
         this.eventResponseMessage = eventResponseMessage;
         this.id = id;

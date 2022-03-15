@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectReference {
     /**
      * API version of the referent.
@@ -47,15 +47,15 @@ public final class ObjectReference {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectReference(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("fieldPath") @Nullable String fieldPath,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
-        @OutputCustomType.Parameter("uid") @Nullable String uid) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("fieldPath") @Nullable String fieldPath,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @CustomType.Parameter("uid") @Nullable String uid) {
         this.apiVersion = apiVersion;
         this.fieldPath = fieldPath;
         this.kind = kind;

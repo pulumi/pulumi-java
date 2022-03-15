@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.outputs.FargateProfileLabel;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FargateProfileSelector {
     private final @Nullable List<FargateProfileLabel> labels;
     private final String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FargateProfileSelector(
-        @OutputCustomType.Parameter("labels") @Nullable List<FargateProfileLabel> labels,
-        @OutputCustomType.Parameter("namespace") String namespace) {
+        @CustomType.Parameter("labels") @Nullable List<FargateProfileLabel> labels,
+        @CustomType.Parameter("namespace") String namespace) {
         this.labels = labels;
         this.namespace = namespace;
     }

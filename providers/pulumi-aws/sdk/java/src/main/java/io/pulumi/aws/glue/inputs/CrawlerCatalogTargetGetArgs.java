@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
      * The name of the Glue database to be synchronized.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -29,7 +29,7 @@ public final class CrawlerCatalogTargetGetArgs extends io.pulumi.resources.Resou
      * A list of catalog tables to be synchronized.
      * 
      */
-    @InputImport(name="tables", required=true)
+    @Import(name="tables", required=true)
       private final Output<List<String>> tables;
 
     public Output<List<String>> getTables() {

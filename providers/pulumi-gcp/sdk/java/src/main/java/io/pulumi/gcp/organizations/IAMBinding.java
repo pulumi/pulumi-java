@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.IAMBindingArgs;
@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:organizations/iAMBinding:IAMBinding")
 public class IAMBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=IAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
     public Output</* @Nullable */ IAMBindingCondition> getCondition() {
@@ -55,7 +55,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the organization's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -69,7 +69,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     /**
@@ -83,7 +83,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * The numeric ID of the organization in which you want to create a custom role.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**
@@ -99,7 +99,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

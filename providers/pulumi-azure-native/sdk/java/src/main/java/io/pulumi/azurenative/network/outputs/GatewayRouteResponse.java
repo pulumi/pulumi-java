@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteResponse {
     /**
      * The route's AS path sequence.
@@ -46,15 +46,15 @@ public final class GatewayRouteResponse {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayRouteResponse(
-        @OutputCustomType.Parameter("asPath") String asPath,
-        @OutputCustomType.Parameter("localAddress") String localAddress,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("nextHop") String nextHop,
-        @OutputCustomType.Parameter("origin") String origin,
-        @OutputCustomType.Parameter("sourcePeer") String sourcePeer,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("asPath") String asPath,
+        @CustomType.Parameter("localAddress") String localAddress,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("nextHop") String nextHop,
+        @CustomType.Parameter("origin") String origin,
+        @CustomType.Parameter("sourcePeer") String sourcePeer,
+        @CustomType.Parameter("weight") Integer weight) {
         this.asPath = asPath;
         this.localAddress = localAddress;
         this.network = network;

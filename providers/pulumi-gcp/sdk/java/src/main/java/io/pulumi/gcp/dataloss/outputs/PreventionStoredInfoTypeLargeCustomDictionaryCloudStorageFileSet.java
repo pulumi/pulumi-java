@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet {
     /**
      * The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
@@ -15,8 +15,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
      */
     private final String url;
 
-    @OutputCustomType.Constructor
-    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet(@OutputCustomType.Parameter("url") String url) {
+    @CustomType.Constructor
+    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet(@CustomType.Parameter("url") String url) {
         this.url = url;
     }
 

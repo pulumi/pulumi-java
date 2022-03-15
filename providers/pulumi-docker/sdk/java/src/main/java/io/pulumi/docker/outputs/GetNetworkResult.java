@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.GetNetworkIpamConfig;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkResult {
     private final String driver;
     private final String id;
@@ -22,15 +22,15 @@ public final class GetNetworkResult {
     private final Map<String,Object> options;
     private final String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkResult(
-        @OutputCustomType.Parameter("driver") String driver,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("internal") Boolean internal,
-        @OutputCustomType.Parameter("ipamConfigs") List<GetNetworkIpamConfig> ipamConfigs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") Map<String,Object> options,
-        @OutputCustomType.Parameter("scope") String scope) {
+        @CustomType.Parameter("driver") String driver,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("internal") Boolean internal,
+        @CustomType.Parameter("ipamConfigs") List<GetNetworkIpamConfig> ipamConfigs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") Map<String,Object> options,
+        @CustomType.Parameter("scope") String scope) {
         this.driver = driver;
         this.id = id;
         this.internal = internal;

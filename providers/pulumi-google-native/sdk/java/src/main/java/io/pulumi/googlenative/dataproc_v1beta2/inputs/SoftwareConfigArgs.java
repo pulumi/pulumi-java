@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.enums.SoftwareConfigOptionalComponentsItem;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The version of software inside the cluster. It must be one of the supported Dataproc Versions (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_dataproc_versions), such as "1.2" (including a subminor version, such as "1.2.29"), or the "preview" version (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
      * 
      */
-    @InputImport(name="imageVersion")
+    @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
     public Output<String> getImageVersion() {
@@ -36,7 +36,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The set of optional components to activate on the cluster.
      * 
      */
-    @InputImport(name="optionalComponents")
+    @Import(name="optionalComponents")
       private final @Nullable Output<List<SoftwareConfigOptionalComponentsItem>> optionalComponents;
 
     public Output<List<SoftwareConfigOptionalComponentsItem>> getOptionalComponents() {
@@ -47,7 +47,7 @@ public final class SoftwareConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The properties to set on daemon config files.Property keys are specified in prefix:property format, for example core:hadoop.tmp.dir. The following are supported prefixes and their mappings: capacity-scheduler: capacity-scheduler.xml core: core-site.xml distcp: distcp-default.xml hdfs: hdfs-site.xml hive: hive-site.xml mapred: mapred-site.xml pig: pig.properties spark: spark-defaults.conf yarn: yarn-site.xmlFor more information, see Cluster properties (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

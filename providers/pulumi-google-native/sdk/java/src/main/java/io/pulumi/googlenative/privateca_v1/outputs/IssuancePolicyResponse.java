@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.AllowedKeyTypeResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateIdentityConstraintsResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IssuancePolicyResponse {
     /**
      * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
@@ -46,14 +46,14 @@ public final class IssuancePolicyResponse {
      */
     private final CertificateExtensionConstraintsResponse passthroughExtensions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IssuancePolicyResponse(
-        @OutputCustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
-        @OutputCustomType.Parameter("allowedKeyTypes") List<AllowedKeyTypeResponse> allowedKeyTypes,
-        @OutputCustomType.Parameter("baselineValues") X509ParametersResponse baselineValues,
-        @OutputCustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
-        @OutputCustomType.Parameter("maximumLifetime") String maximumLifetime,
-        @OutputCustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions) {
+        @CustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
+        @CustomType.Parameter("allowedKeyTypes") List<AllowedKeyTypeResponse> allowedKeyTypes,
+        @CustomType.Parameter("baselineValues") X509ParametersResponse baselineValues,
+        @CustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
+        @CustomType.Parameter("maximumLifetime") String maximumLifetime,
+        @CustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;

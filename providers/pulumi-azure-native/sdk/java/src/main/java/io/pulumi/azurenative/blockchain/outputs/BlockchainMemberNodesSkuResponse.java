@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.blockchain.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlockchainMemberNodesSkuResponse {
     /**
      * Gets or sets the nodes capacity.
@@ -17,8 +17,8 @@ public final class BlockchainMemberNodesSkuResponse {
      */
     private final @Nullable Integer capacity;
 
-    @OutputCustomType.Constructor
-    private BlockchainMemberNodesSkuResponse(@OutputCustomType.Parameter("capacity") @Nullable Integer capacity) {
+    @CustomType.Constructor
+    private BlockchainMemberNodesSkuResponse(@CustomType.Parameter("capacity") @Nullable Integer capacity) {
         this.capacity = capacity;
     }
 

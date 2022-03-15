@@ -8,7 +8,7 @@ import io.pulumi.azurenative.documentdb.inputs.ContainerPartitionKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.IndexingPolicyArgs;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * Analytical TTL.
      * 
      */
-    @InputImport(name="analyticalStorageTtl")
+    @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Double> analyticalStorageTtl;
 
     public Output<Double> getAnalyticalStorageTtl() {
@@ -39,7 +39,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * The conflict resolution policy for the container.
      * 
      */
-    @InputImport(name="conflictResolutionPolicy")
+    @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
 
     public Output<ConflictResolutionPolicyArgs> getConflictResolutionPolicy() {
@@ -50,7 +50,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * Default time to live
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
     public Output<Integer> getDefaultTtl() {
@@ -61,7 +61,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * Name of the Cosmos DB SQL container
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -72,7 +72,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
      * 
      */
-    @InputImport(name="indexingPolicy")
+    @Import(name="indexingPolicy")
       private final @Nullable Output<IndexingPolicyArgs> indexingPolicy;
 
     public Output<IndexingPolicyArgs> getIndexingPolicy() {
@@ -83,7 +83,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * The configuration of the partition key to be used for partitioning data into multiple partitions
      * 
      */
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
 
     public Output<ContainerPartitionKeyArgs> getPartitionKey() {
@@ -94,7 +94,7 @@ public final class SqlContainerResourceArgs extends io.pulumi.resources.Resource
      * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
      * 
      */
-    @InputImport(name="uniqueKeyPolicy")
+    @Import(name="uniqueKeyPolicy")
       private final @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;
 
     public Output<UniqueKeyPolicyArgs> getUniqueKeyPolicy() {

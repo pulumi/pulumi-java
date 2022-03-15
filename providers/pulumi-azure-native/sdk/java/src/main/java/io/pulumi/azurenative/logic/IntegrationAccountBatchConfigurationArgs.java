@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.inputs.BatchConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
      * The batch configuration name.
      * 
      */
-    @InputImport(name="batchConfigurationName")
+    @Import(name="batchConfigurationName")
       private final @Nullable Output<String> batchConfigurationName;
 
     public Output<String> getBatchConfigurationName() {
@@ -31,7 +31,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -42,7 +42,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
      * The batch configuration properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<BatchConfigurationPropertiesArgs> properties;
 
     public Output<BatchConfigurationPropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class IntegrationAccountBatchConfigurationArgs extends io.pulumi.re
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.tpu_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchedulingConfigResponse {
     /**
      * Defines whether the node is preemptible.
@@ -20,10 +20,10 @@ public final class SchedulingConfigResponse {
      */
     private final Boolean reserved;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulingConfigResponse(
-        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
-        @OutputCustomType.Parameter("reserved") Boolean reserved) {
+        @CustomType.Parameter("preemptible") Boolean preemptible,
+        @CustomType.Parameter("reserved") Boolean reserved) {
         this.preemptible = preemptible;
         this.reserved = reserved;
     }

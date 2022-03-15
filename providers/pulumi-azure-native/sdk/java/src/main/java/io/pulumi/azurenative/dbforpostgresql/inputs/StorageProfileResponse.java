@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Backup retention days for the server.
      * 
      */
-    @InputImport(name="backupRetentionDays")
+    @Import(name="backupRetentionDays")
       private final @Nullable Integer backupRetentionDays;
 
     public Optional<Integer> getBackupRetentionDays() {
@@ -34,7 +34,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Enable Geo-redundant or not for server backup.
      * 
      */
-    @InputImport(name="geoRedundantBackup")
+    @Import(name="geoRedundantBackup")
       private final @Nullable String geoRedundantBackup;
 
     public Optional<String> getGeoRedundantBackup() {
@@ -45,7 +45,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Enable Storage Auto Grow.
      * 
      */
-    @InputImport(name="storageAutogrow")
+    @Import(name="storageAutogrow")
       private final @Nullable String storageAutogrow;
 
     public Optional<String> getStorageAutogrow() {
@@ -56,7 +56,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Max storage allowed for a server.
      * 
      */
-    @InputImport(name="storageMB")
+    @Import(name="storageMB")
       private final @Nullable Integer storageMB;
 
     public Optional<Integer> getStorageMB() {

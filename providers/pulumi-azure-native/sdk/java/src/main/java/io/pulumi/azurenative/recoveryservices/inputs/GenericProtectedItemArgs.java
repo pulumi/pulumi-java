@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DataSourceType;
 import io.pulumi.azurenative.recoveryservices.enums.ProtectionState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Type of backup management for the backed up item.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -41,7 +41,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Name of the backup set the backup item belongs to
      * 
      */
-    @InputImport(name="backupSetName")
+    @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
 
     public Output<String> getBackupSetName() {
@@ -52,7 +52,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Unique name of container
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -63,7 +63,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
@@ -74,7 +74,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Time for deferred deletion in UTC
      * 
      */
-    @InputImport(name="deferredDeleteTimeInUTC")
+    @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
     public Output<String> getDeferredDeleteTimeInUTC() {
@@ -85,7 +85,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
      */
-    @InputImport(name="deferredDeleteTimeRemaining")
+    @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
     public Output<String> getDeferredDeleteTimeRemaining() {
@@ -96,7 +96,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Name of this backup item's fabric.
      * 
      */
-    @InputImport(name="fabricName")
+    @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -107,7 +107,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -118,7 +118,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
      */
-    @InputImport(name="isDeferredDeleteScheduleUpcoming")
+    @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
@@ -129,7 +129,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
      */
-    @InputImport(name="isRehydrate")
+    @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
 
     public Output<Boolean> getIsRehydrate() {
@@ -140,7 +140,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
      */
-    @InputImport(name="isScheduledForDeferredDelete")
+    @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
     public Output<Boolean> getIsScheduledForDeferredDelete() {
@@ -151,7 +151,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
      */
-    @InputImport(name="lastRecoveryPoint")
+    @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
 
     public Output<String> getLastRecoveryPoint() {
@@ -162,7 +162,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * ID of the backup policy with which this item is backed up.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -173,7 +173,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
      */
-    @InputImport(name="policyState")
+    @Import(name="policyState")
       private final @Nullable Output<String> policyState;
 
     public Output<String> getPolicyState() {
@@ -184,7 +184,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Data Plane Service ID of the protected item.
      * 
      */
-    @InputImport(name="protectedItemId")
+    @Import(name="protectedItemId")
       private final @Nullable Output<Double> protectedItemId;
 
     public Output<Double> getProtectedItemId() {
@@ -196,7 +196,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Expected value is 'GenericProtectedItem'.
      * 
      */
-    @InputImport(name="protectedItemType", required=true)
+    @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
 
     public Output<String> getProtectedItemType() {
@@ -207,7 +207,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Backup state of this backup item.
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
 
     public Output<Either<String,ProtectionState>> getProtectionState() {
@@ -218,7 +218,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Loosely coupled (type, value) associations (example - parent of a protected item)
      * 
      */
-    @InputImport(name="sourceAssociations")
+    @Import(name="sourceAssociations")
       private final @Nullable Output<Map<String,String>> sourceAssociations;
 
     public Output<Map<String,String>> getSourceAssociations() {
@@ -229,7 +229,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * ARM ID of the resource to be backed up.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
@@ -240,7 +240,7 @@ public final class GenericProtectedItemArgs extends io.pulumi.resources.Resource
      * Type of workload this item represents.
      * 
      */
-    @InputImport(name="workloadType")
+    @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
     public Output<Either<String,DataSourceType>> getWorkloadType() {

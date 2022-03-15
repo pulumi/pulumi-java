@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SourceContextResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
      * 
      */
-    @InputImport(name="additionalContexts", required=true)
+    @Import(name="additionalContexts", required=true)
       private final List<SourceContextResponse> additionalContexts;
 
     public List<SourceContextResponse> getAdditionalContexts() {
@@ -34,7 +34,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * If provided, the input binary artifacts for the build came from this location.
      * 
      */
-    @InputImport(name="artifactStorageSourceUri", required=true)
+    @Import(name="artifactStorageSourceUri", required=true)
       private final String artifactStorageSourceUri;
 
     public String getArtifactStorageSourceUri() {
@@ -45,7 +45,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * If provided, the source code used for the build came from this location.
      * 
      */
-    @InputImport(name="context", required=true)
+    @Import(name="context", required=true)
       private final SourceContextResponse context;
 
     public SourceContextResponse getContext() {
@@ -56,7 +56,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
      * 
      */
-    @InputImport(name="fileHashes", required=true)
+    @Import(name="fileHashes", required=true)
       private final Map<String,String> fileHashes;
 
     public Map<String,String> getFileHashes() {

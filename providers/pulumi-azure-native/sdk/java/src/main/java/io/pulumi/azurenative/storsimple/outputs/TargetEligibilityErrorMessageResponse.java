@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetEligibilityErrorMessageResponse {
     /**
      * The localized error message stating the reason why the device is not eligible as a target device.
@@ -27,11 +27,11 @@ public final class TargetEligibilityErrorMessageResponse {
      */
     private final @Nullable String resultCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetEligibilityErrorMessageResponse(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
-        @OutputCustomType.Parameter("resultCode") @Nullable String resultCode) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("resolution") @Nullable String resolution,
+        @CustomType.Parameter("resultCode") @Nullable String resultCode) {
         this.message = message;
         this.resolution = resolution;
         this.resultCode = resultCode;

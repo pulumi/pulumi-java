@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupAppEngineResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupCloudFunctionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NetworkEndpointGroupCloudRunResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionNetworkEndpointGroupResult {
     /**
      * Metadata defined as annotations on the network endpoint group.
@@ -100,25 +100,25 @@ public final class GetRegionNetworkEndpointGroupResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionNetworkEndpointGroupResult(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("appEngine") NetworkEndpointGroupAppEngineResponse appEngine,
-        @OutputCustomType.Parameter("cloudFunction") NetworkEndpointGroupCloudFunctionResponse cloudFunction,
-        @OutputCustomType.Parameter("cloudRun") NetworkEndpointGroupCloudRunResponse cloudRun,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("defaultPort") Integer defaultPort,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkEndpointType") String networkEndpointType,
-        @OutputCustomType.Parameter("pscTargetService") String pscTargetService,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("appEngine") NetworkEndpointGroupAppEngineResponse appEngine,
+        @CustomType.Parameter("cloudFunction") NetworkEndpointGroupCloudFunctionResponse cloudFunction,
+        @CustomType.Parameter("cloudRun") NetworkEndpointGroupCloudRunResponse cloudRun,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("defaultPort") Integer defaultPort,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkEndpointType") String networkEndpointType,
+        @CustomType.Parameter("pscTargetService") String pscTargetService,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("zone") String zone) {
         this.annotations = annotations;
         this.appEngine = appEngine;
         this.cloudFunction = cloudFunction;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AzureNodePoolMaxPodsConstraintGetArgs extends io.pulumi.resou
      * Required. The maximum number of pods to schedule on a single node.
      * 
      */
-    @InputImport(name="maxPodsPerNode", required=true)
+    @Import(name="maxPodsPerNode", required=true)
       private final Output<Integer> maxPodsPerNode;
 
     public Output<Integer> getMaxPodsPerNode() {

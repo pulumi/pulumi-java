@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ServiceEncryptionConfigurationArgs extends io.pulumi.resource
      * The ARN of the KMS key used for encryption.
      * 
      */
-    @InputImport(name="kmsKey", required=true)
+    @Import(name="kmsKey", required=true)
       private final Output<String> kmsKey;
 
     public Output<String> getKmsKey() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRDSSourceConfigA
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRedshiftSourceConfigArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorS3SourceConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,35 +18,35 @@ public final class AnomalyDetectorMetricSourceArgs extends io.pulumi.resources.R
 
     public static final AnomalyDetectorMetricSourceArgs Empty = new AnomalyDetectorMetricSourceArgs();
 
-    @InputImport(name="appFlowConfig")
+    @Import(name="appFlowConfig")
       private final @Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
 
     public Output<AnomalyDetectorAppFlowConfigArgs> getAppFlowConfig() {
         return this.appFlowConfig == null ? Output.empty() : this.appFlowConfig;
     }
 
-    @InputImport(name="cloudwatchConfig")
+    @Import(name="cloudwatchConfig")
       private final @Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
 
     public Output<AnomalyDetectorCloudwatchConfigArgs> getCloudwatchConfig() {
         return this.cloudwatchConfig == null ? Output.empty() : this.cloudwatchConfig;
     }
 
-    @InputImport(name="rDSSourceConfig")
+    @Import(name="rDSSourceConfig")
       private final @Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
 
     public Output<AnomalyDetectorRDSSourceConfigArgs> getRDSSourceConfig() {
         return this.rDSSourceConfig == null ? Output.empty() : this.rDSSourceConfig;
     }
 
-    @InputImport(name="redshiftSourceConfig")
+    @Import(name="redshiftSourceConfig")
       private final @Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
 
     public Output<AnomalyDetectorRedshiftSourceConfigArgs> getRedshiftSourceConfig() {
         return this.redshiftSourceConfig == null ? Output.empty() : this.redshiftSourceConfig;
     }
 
-    @InputImport(name="s3SourceConfig")
+    @Import(name="s3SourceConfig")
       private final @Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
 
     public Output<AnomalyDetectorS3SourceConfigArgs> getS3SourceConfig() {

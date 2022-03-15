@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
      * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
      * 
      */
-    @InputImport(name="phoneNumber")
+    @Import(name="phoneNumber")
       private final @Nullable Output<String> phoneNumber;
 
     public Output<String> getPhoneNumber() {

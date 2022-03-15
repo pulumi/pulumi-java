@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.ThemeBorderStyle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeTileStyle {
     private final @Nullable ThemeBorderStyle border;
 
-    @OutputCustomType.Constructor
-    private ThemeTileStyle(@OutputCustomType.Parameter("border") @Nullable ThemeBorderStyle border) {
+    @CustomType.Constructor
+    private ThemeTileStyle(@CustomType.Parameter("border") @Nullable ThemeBorderStyle border) {
         this.border = border;
     }
 

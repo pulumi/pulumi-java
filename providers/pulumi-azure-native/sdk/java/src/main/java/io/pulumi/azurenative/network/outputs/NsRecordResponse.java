@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NsRecordResponse {
     /**
      * The name server name for this NS record.
@@ -17,8 +17,8 @@ public final class NsRecordResponse {
      */
     private final @Nullable String nsdname;
 
-    @OutputCustomType.Constructor
-    private NsRecordResponse(@OutputCustomType.Parameter("nsdname") @Nullable String nsdname) {
+    @CustomType.Constructor
+    private NsRecordResponse(@CustomType.Parameter("nsdname") @Nullable String nsdname) {
         this.nsdname = nsdname;
     }
 

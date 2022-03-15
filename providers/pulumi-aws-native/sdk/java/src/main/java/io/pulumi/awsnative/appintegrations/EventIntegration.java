@@ -9,7 +9,7 @@ import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationAssociation;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationEventFilter;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The associations with the event integration.
      * 
      */
-    @OutputExport(name="associations", type=List.class, parameters={EventIntegrationAssociation.class})
+    @Export(name="associations", type=List.class, parameters={EventIntegrationAssociation.class})
     private Output<List<EventIntegrationAssociation>> associations;
 
     /**
@@ -39,7 +39,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The event integration description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -53,7 +53,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The Amazon Eventbridge bus for the event integration.
      * 
      */
-    @OutputExport(name="eventBridgeBus", type=String.class, parameters={})
+    @Export(name="eventBridgeBus", type=String.class, parameters={})
     private Output<String> eventBridgeBus;
 
     /**
@@ -67,7 +67,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The EventFilter (source) associated with the event integration.
      * 
      */
-    @OutputExport(name="eventFilter", type=EventIntegrationEventFilter.class, parameters={})
+    @Export(name="eventFilter", type=EventIntegrationEventFilter.class, parameters={})
     private Output<EventIntegrationEventFilter> eventFilter;
 
     /**
@@ -81,7 +81,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the event integration.
      * 
      */
-    @OutputExport(name="eventIntegrationArn", type=String.class, parameters={})
+    @Export(name="eventIntegrationArn", type=String.class, parameters={})
     private Output<String> eventIntegrationArn;
 
     /**
@@ -95,7 +95,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The name of the event integration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class EventIntegration extends io.pulumi.resources.CustomResource {
      * The tags (keys and values) associated with the event integration.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={EventIntegrationTag.class})
+    @Export(name="tags", type=List.class, parameters={EventIntegrationTag.class})
     private Output</* @Nullable */ List<EventIntegrationTag>> tags;
 
     /**

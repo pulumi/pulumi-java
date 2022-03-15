@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class EventBusPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    @InputImport(name="eventBusName")
+    @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
         return this.eventBusName == null ? Output.empty() : this.eventBusName;
     }
 
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

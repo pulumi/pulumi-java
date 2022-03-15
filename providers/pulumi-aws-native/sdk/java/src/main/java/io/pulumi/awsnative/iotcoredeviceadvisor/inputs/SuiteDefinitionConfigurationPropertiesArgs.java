@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionDeviceUnderTestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,35 +17,35 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
 
     public static final SuiteDefinitionConfigurationPropertiesArgs Empty = new SuiteDefinitionConfigurationPropertiesArgs();
 
-    @InputImport(name="devicePermissionRoleArn", required=true)
+    @Import(name="devicePermissionRoleArn", required=true)
       private final Output<String> devicePermissionRoleArn;
 
     public Output<String> getDevicePermissionRoleArn() {
         return this.devicePermissionRoleArn;
     }
 
-    @InputImport(name="devices")
+    @Import(name="devices")
       private final @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
 
     public Output<List<SuiteDefinitionDeviceUnderTestArgs>> getDevices() {
         return this.devices == null ? Output.empty() : this.devices;
     }
 
-    @InputImport(name="intendedForQualification")
+    @Import(name="intendedForQualification")
       private final @Nullable Output<Boolean> intendedForQualification;
 
     public Output<Boolean> getIntendedForQualification() {
         return this.intendedForQualification == null ? Output.empty() : this.intendedForQualification;
     }
 
-    @InputImport(name="rootGroup", required=true)
+    @Import(name="rootGroup", required=true)
       private final Output<String> rootGroup;
 
     public Output<String> getRootGroup() {
         return this.rootGroup;
     }
 
-    @InputImport(name="suiteDefinitionName")
+    @Import(name="suiteDefinitionName")
       private final @Nullable Output<String> suiteDefinitionName;
 
     public Output<String> getSuiteDefinitionName() {

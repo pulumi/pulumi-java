@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantDefaultSupportedIdpConfigArgs;
@@ -45,7 +45,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * OAuth client ID
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -59,7 +59,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * OAuth client secret
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output<String> clientSecret;
 
     /**
@@ -73,7 +73,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * If this IDP allows the user to sign in
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -97,7 +97,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * * `yahoo.com`
      * 
      */
-    @OutputExport(name="idpId", type=String.class, parameters={})
+    @Export(name="idpId", type=String.class, parameters={})
     private Output<String> idpId;
 
     /**
@@ -121,7 +121,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * The name of the default supported IDP config resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -151,7 +151,7 @@ public class TenantDefaultSupportedIdpConfig extends io.pulumi.resources.CustomR
      * The name of the tenant where this DefaultSupportedIdpConfig resource exists
      * 
      */
-    @OutputExport(name="tenant", type=String.class, parameters={})
+    @Export(name="tenant", type=String.class, parameters={})
     private Output<String> tenant;
 
     /**

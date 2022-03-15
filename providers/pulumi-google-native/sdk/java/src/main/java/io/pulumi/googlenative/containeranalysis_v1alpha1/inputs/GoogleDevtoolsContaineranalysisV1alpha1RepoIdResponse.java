@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
      * A combination of a project ID and a repo name.
      * 
      */
-    @InputImport(name="projectRepoId", required=true)
+    @Import(name="projectRepoId", required=true)
       private final GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId;
 
     public GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse getProjectRepoId() {
@@ -32,7 +32,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse extends
      * A server-assigned, globally unique identifier.
      * 
      */
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final String uid;
 
     public String getUid() {

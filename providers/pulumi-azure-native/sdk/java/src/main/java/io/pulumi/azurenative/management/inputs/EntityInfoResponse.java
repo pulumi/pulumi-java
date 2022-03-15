@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.EntityParentGroupInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The friendly name of the management group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -36,7 +36,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The fully qualified ID for the entity.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -47,7 +47,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The users specific permissions to this item.
      * 
      */
-    @InputImport(name="inheritedPermissions")
+    @Import(name="inheritedPermissions")
       private final @Nullable String inheritedPermissions;
 
     public Optional<String> getInheritedPermissions() {
@@ -58,7 +58,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the entity. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -69,7 +69,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Number of children is the number of Groups that are exactly one level underneath the current Group.
      * 
      */
-    @InputImport(name="numberOfChildGroups")
+    @Import(name="numberOfChildGroups")
       private final @Nullable Integer numberOfChildGroups;
 
     public Optional<Integer> getNumberOfChildGroups() {
@@ -80,14 +80,14 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Number of children is the number of Groups and Subscriptions that are exactly one level underneath the current Group.
      * 
      */
-    @InputImport(name="numberOfChildren")
+    @Import(name="numberOfChildren")
       private final @Nullable Integer numberOfChildren;
 
     public Optional<Integer> getNumberOfChildren() {
         return this.numberOfChildren == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildren);
     }
 
-    @InputImport(name="numberOfDescendants")
+    @Import(name="numberOfDescendants")
       private final @Nullable Integer numberOfDescendants;
 
     public Optional<Integer> getNumberOfDescendants() {
@@ -98,7 +98,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) The ID of the parent management group.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable EntityParentGroupInfoResponse parent;
 
     public Optional<EntityParentGroupInfoResponse> getParent() {
@@ -109,7 +109,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The parent display name chain from the root group to the immediate parent
      * 
      */
-    @InputImport(name="parentDisplayNameChain")
+    @Import(name="parentDisplayNameChain")
       private final @Nullable List<String> parentDisplayNameChain;
 
     public List<String> getParentDisplayNameChain() {
@@ -120,7 +120,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The parent name chain from the root group to the immediate parent
      * 
      */
-    @InputImport(name="parentNameChain")
+    @Import(name="parentNameChain")
       private final @Nullable List<String> parentNameChain;
 
     public List<String> getParentNameChain() {
@@ -131,7 +131,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The users specific permissions to this item.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {
@@ -142,7 +142,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The AAD Tenant ID associated with the entity. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -153,7 +153,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the resource. For example, Microsoft.Management/managementGroups
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class EfsLocationEc2ConfigGetArgs extends io.pulumi.resources.Resou
      * List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
      * 
      */
-    @InputImport(name="securityGroupArns", required=true)
+    @Import(name="securityGroupArns", required=true)
       private final Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
@@ -29,7 +29,7 @@ public final class EfsLocationEc2ConfigGetArgs extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
      * 
      */
-    @InputImport(name="subnetArn", required=true)
+    @Import(name="subnetArn", required=true)
       private final Output<String> subnetArn;
 
     public Output<String> getSubnetArn() {

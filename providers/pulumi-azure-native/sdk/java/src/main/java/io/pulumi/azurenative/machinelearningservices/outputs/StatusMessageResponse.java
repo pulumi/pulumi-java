@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatusMessageResponse {
     /**
      * Service-defined message code.
@@ -30,12 +30,12 @@ public final class StatusMessageResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusMessageResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
-        @OutputCustomType.Parameter("level") String level,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @CustomType.Parameter("level") String level,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.createdTimeUtc = createdTimeUtc;
         this.level = level;

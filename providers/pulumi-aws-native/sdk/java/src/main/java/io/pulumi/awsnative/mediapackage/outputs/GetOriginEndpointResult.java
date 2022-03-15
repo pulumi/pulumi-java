@@ -10,7 +10,7 @@ import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointDashPackage;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointHlsPackage;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointMssPackage;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOriginEndpointResult {
     /**
      * The Amazon Resource Name (ARN) assigned to the OriginEndpoint.
@@ -76,23 +76,23 @@ public final class GetOriginEndpointResult {
      */
     private final @Nullable List<String> whitelist;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOriginEndpointResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("authorization") @Nullable OriginEndpointAuthorization authorization,
-        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
-        @OutputCustomType.Parameter("cmafPackage") @Nullable OriginEndpointCmafPackage cmafPackage,
-        @OutputCustomType.Parameter("dashPackage") @Nullable OriginEndpointDashPackage dashPackage,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("hlsPackage") @Nullable OriginEndpointHlsPackage hlsPackage,
-        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
-        @OutputCustomType.Parameter("mssPackage") @Nullable OriginEndpointMssPackage mssPackage,
-        @OutputCustomType.Parameter("origination") @Nullable OriginEndpointOrigination origination,
-        @OutputCustomType.Parameter("startoverWindowSeconds") @Nullable Integer startoverWindowSeconds,
-        @OutputCustomType.Parameter("tags") @Nullable List<OriginEndpointTag> tags,
-        @OutputCustomType.Parameter("timeDelaySeconds") @Nullable Integer timeDelaySeconds,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("whitelist") @Nullable List<String> whitelist) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("authorization") @Nullable OriginEndpointAuthorization authorization,
+        @CustomType.Parameter("channelId") @Nullable String channelId,
+        @CustomType.Parameter("cmafPackage") @Nullable OriginEndpointCmafPackage cmafPackage,
+        @CustomType.Parameter("dashPackage") @Nullable OriginEndpointDashPackage dashPackage,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("hlsPackage") @Nullable OriginEndpointHlsPackage hlsPackage,
+        @CustomType.Parameter("manifestName") @Nullable String manifestName,
+        @CustomType.Parameter("mssPackage") @Nullable OriginEndpointMssPackage mssPackage,
+        @CustomType.Parameter("origination") @Nullable OriginEndpointOrigination origination,
+        @CustomType.Parameter("startoverWindowSeconds") @Nullable Integer startoverWindowSeconds,
+        @CustomType.Parameter("tags") @Nullable List<OriginEndpointTag> tags,
+        @CustomType.Parameter("timeDelaySeconds") @Nullable Integer timeDelaySeconds,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("whitelist") @Nullable List<String> whitelist) {
         this.arn = arn;
         this.authorization = authorization;
         this.channelId = channelId;

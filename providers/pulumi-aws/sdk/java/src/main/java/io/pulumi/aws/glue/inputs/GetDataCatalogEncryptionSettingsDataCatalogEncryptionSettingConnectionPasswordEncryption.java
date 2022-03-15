@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
      * A KMS key ARN that is used to encrypt the connection password.
      * 
      */
-    @InputImport(name="awsKmsKeyId", required=true)
+    @Import(name="awsKmsKeyId", required=true)
       private final String awsKmsKeyId;
 
     public String getAwsKmsKeyId() {
@@ -28,7 +28,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
      * When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
      * 
      */
-    @InputImport(name="returnConnectionPasswordEncrypted", required=true)
+    @Import(name="returnConnectionPasswordEncrypted", required=true)
       private final Boolean returnConnectionPasswordEncrypted;
 
     public Boolean getReturnConnectionPasswordEncrypted() {

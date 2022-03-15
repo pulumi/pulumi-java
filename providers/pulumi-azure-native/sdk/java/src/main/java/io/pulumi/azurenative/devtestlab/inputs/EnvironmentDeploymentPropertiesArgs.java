@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.ArmTemplateParameterPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
      * The Azure Resource Manager template's identifier.
      * 
      */
-    @InputImport(name="armTemplateId")
+    @Import(name="armTemplateId")
       private final @Nullable Output<String> armTemplateId;
 
     public Output<String> getArmTemplateId() {
@@ -35,7 +35,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
      * The parameters of the Azure Resource Manager template.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
     public Output<List<ArmTemplateParameterPropertiesArgs>> getParameters() {

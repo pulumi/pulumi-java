@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends io.pulumi.res
      * Default target capacity type. Valid values: `on-demand`, `spot`.
      * 
      */
-    @InputImport(name="defaultTargetCapacityType", required=true)
+    @Import(name="defaultTargetCapacityType", required=true)
       private final Output<String> defaultTargetCapacityType;
 
     public Output<String> getDefaultTargetCapacityType() {
@@ -30,7 +30,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends io.pulumi.res
      * The number of On-Demand units to request.
      * 
      */
-    @InputImport(name="onDemandTargetCapacity")
+    @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
     public Output<Integer> getOnDemandTargetCapacity() {
@@ -41,7 +41,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends io.pulumi.res
      * The number of Spot units to request.
      * 
      */
-    @InputImport(name="spotTargetCapacity")
+    @Import(name="spotTargetCapacity")
       private final @Nullable Output<Integer> spotTargetCapacity;
 
     public Output<Integer> getSpotTargetCapacity() {
@@ -52,7 +52,7 @@ public final class FleetTargetCapacitySpecificationGetArgs extends io.pulumi.res
      * The number of units to request, filled using `default_target_capacity_type`.
      * 
      */
-    @InputImport(name="totalTargetCapacity", required=true)
+    @Import(name="totalTargetCapacity", required=true)
       private final Output<Integer> totalTargetCapacity;
 
     public Output<Integer> getTotalTargetCapacity() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGatewayRouteTableAssociationArgs extends io.pulumi.resourc
      * The ID of the gateway.
      * 
      */
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
     public String getGatewayId() {

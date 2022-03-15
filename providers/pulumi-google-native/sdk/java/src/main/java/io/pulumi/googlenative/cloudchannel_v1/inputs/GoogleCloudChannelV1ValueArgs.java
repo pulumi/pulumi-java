@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * Represents a boolean value.
      * 
      */
-    @InputImport(name="boolValue")
+    @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
     public Output<Boolean> getBoolValue() {
@@ -36,7 +36,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * Represents a double value.
      * 
      */
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
@@ -47,7 +47,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * Represents an int64 value.
      * 
      */
-    @InputImport(name="int64Value")
+    @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
 
     public Output<String> getInt64Value() {
@@ -58,7 +58,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * Represents an 'Any' proto value.
      * 
      */
-    @InputImport(name="protoValue")
+    @Import(name="protoValue")
       private final @Nullable Output<Map<String,String>> protoValue;
 
     public Output<Map<String,String>> getProtoValue() {
@@ -69,7 +69,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * Represents a string value.
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {

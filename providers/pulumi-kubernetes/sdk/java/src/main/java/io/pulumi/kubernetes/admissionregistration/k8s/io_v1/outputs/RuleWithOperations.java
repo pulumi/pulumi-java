@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleWithOperations {
     /**
      * APIGroups is the API groups the resources belong to. '*' is all groups. If '*' is present, the length of the slice must be one. Required.
@@ -44,13 +44,13 @@ public final class RuleWithOperations {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleWithOperations(
-        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
-        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
-        @OutputCustomType.Parameter("operations") @Nullable List<String> operations,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
-        @OutputCustomType.Parameter("scope") @Nullable String scope) {
+        @CustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @CustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @CustomType.Parameter("operations") @Nullable List<String> operations,
+        @CustomType.Parameter("resources") @Nullable List<String> resources,
+        @CustomType.Parameter("scope") @Nullable String scope) {
         this.apiGroups = apiGroups;
         this.apiVersions = apiVersions;
         this.operations = operations;

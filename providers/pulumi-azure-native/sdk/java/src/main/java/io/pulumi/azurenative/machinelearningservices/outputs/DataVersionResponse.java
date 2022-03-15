@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataVersionResponse {
     /**
      * The Format of dataset.
@@ -49,15 +49,15 @@ public final class DataVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataVersionResponse(
-        @OutputCustomType.Parameter("datasetType") @Nullable String datasetType,
-        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("datasetType") @Nullable String datasetType,
+        @CustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.datasetType = datasetType;
         this.datastoreId = datastoreId;
         this.description = description;

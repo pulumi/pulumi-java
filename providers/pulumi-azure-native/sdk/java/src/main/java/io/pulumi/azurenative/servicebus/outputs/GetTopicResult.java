@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * Last time the message was sent, or a request was received, for this topic.
@@ -111,27 +111,27 @@ public final class GetTopicResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicResult(
-        @OutputCustomType.Parameter("accessedAt") String accessedAt,
-        @OutputCustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
-        @OutputCustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
-        @OutputCustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
-        @OutputCustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
-        @OutputCustomType.Parameter("enableExpress") @Nullable Boolean enableExpress,
-        @OutputCustomType.Parameter("enablePartitioning") @Nullable Boolean enablePartitioning,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("maxSizeInMegabytes") @Nullable Integer maxSizeInMegabytes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requiresDuplicateDetection") @Nullable Boolean requiresDuplicateDetection,
-        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("subscriptionCount") Integer subscriptionCount,
-        @OutputCustomType.Parameter("supportOrdering") @Nullable Boolean supportOrdering,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("accessedAt") String accessedAt,
+        @CustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
+        @CustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
+        @CustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
+        @CustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
+        @CustomType.Parameter("enableExpress") @Nullable Boolean enableExpress,
+        @CustomType.Parameter("enablePartitioning") @Nullable Boolean enablePartitioning,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("maxSizeInMegabytes") @Nullable Integer maxSizeInMegabytes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requiresDuplicateDetection") @Nullable Boolean requiresDuplicateDetection,
+        @CustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("subscriptionCount") Integer subscriptionCount,
+        @CustomType.Parameter("supportOrdering") @Nullable Boolean supportOrdering,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
         this.countDetails = countDetails;

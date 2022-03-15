@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReservationSpecificReservationInstancePropertiesGuestAccelerator {
     /**
      * The number of the guest accelerator cards exposed to
@@ -25,10 +25,10 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationSpecificReservationInstancePropertiesGuestAccelerator(
-        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
+        @CustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @CustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.aws.lambda.inputs.AliasRoutingConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the alias.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Lambda Function name or ARN.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -41,7 +41,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
      * 
      */
-    @InputImport(name="functionVersion", required=true)
+    @Import(name="functionVersion", required=true)
       private final Output<String> functionVersion;
 
     public Output<String> getFunctionVersion() {
@@ -52,7 +52,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * The Lambda alias' route configuration settings. Fields documented below
      * 
      */
-    @InputImport(name="routingConfig")
+    @Import(name="routingConfig")
       private final @Nullable Output<AliasRoutingConfigArgs> routingConfig;
 
     public Output<AliasRoutingConfigArgs> getRoutingConfig() {

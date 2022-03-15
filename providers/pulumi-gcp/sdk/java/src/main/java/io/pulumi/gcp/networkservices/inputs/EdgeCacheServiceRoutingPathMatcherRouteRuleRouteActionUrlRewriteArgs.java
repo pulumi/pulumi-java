@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
      * 
      */
-    @InputImport(name="hostRewrite")
+    @Import(name="hostRewrite")
       private final @Nullable Output<String> hostRewrite;
 
     public Output<String> getHostRewrite() {
@@ -29,7 +29,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
      * 
      */
-    @InputImport(name="pathPrefixRewrite")
+    @Import(name="pathPrefixRewrite")
       private final @Nullable Output<String> pathPrefixRewrite;
 
     public Output<String> getPathPrefixRewrite() {
@@ -50,7 +50,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      * specified.
      * 
      */
-    @InputImport(name="pathTemplateRewrite")
+    @Import(name="pathTemplateRewrite")
       private final @Nullable Output<String> pathTemplateRewrite;
 
     public Output<String> getPathTemplateRewrite() {

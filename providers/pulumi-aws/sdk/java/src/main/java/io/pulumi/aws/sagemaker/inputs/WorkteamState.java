@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) assigned by AWS to this Workteam.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * A description of the work team.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
      * 
      */
-    @InputImport(name="memberDefinitions")
+    @Import(name="memberDefinitions")
       private final @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
 
     public Output<List<WorkteamMemberDefinitionGetArgs>> getMemberDefinitions() {
@@ -55,7 +55,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
      * 
      */
-    @InputImport(name="notificationConfiguration")
+    @Import(name="notificationConfiguration")
       private final @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
 
     public Output<WorkteamNotificationConfigurationGetArgs> getNotificationConfiguration() {
@@ -66,7 +66,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * The subdomain for your OIDC Identity Provider.
      * 
      */
-    @InputImport(name="subdomain")
+    @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
     public Output<String> getSubdomain() {
@@ -77,7 +77,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -99,7 +99,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * The name of the Workteam (must be unique).
      * 
      */
-    @InputImport(name="workforceName")
+    @Import(name="workforceName")
       private final @Nullable Output<String> workforceName;
 
     public Output<String> getWorkforceName() {
@@ -110,7 +110,7 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
      * The name of the workforce.
      * 
      */
-    @InputImport(name="workteamName")
+    @Import(name="workteamName")
       private final @Nullable Output<String> workteamName;
 
     public Output<String> getWorkteamName() {

@@ -4,11 +4,11 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.RealtimeLogConfigEndpointKinesisStreamConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RealtimeLogConfigEndpoint {
     /**
      * The Amazon Kinesis data stream configuration.
@@ -21,10 +21,10 @@ public final class RealtimeLogConfigEndpoint {
      */
     private final String streamType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RealtimeLogConfigEndpoint(
-        @OutputCustomType.Parameter("kinesisStreamConfig") RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig,
-        @OutputCustomType.Parameter("streamType") String streamType) {
+        @CustomType.Parameter("kinesisStreamConfig") RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig,
+        @CustomType.Parameter("streamType") String streamType) {
         this.kinesisStreamConfig = kinesisStreamConfig;
         this.streamType = streamType;
     }

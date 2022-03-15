@@ -4,14 +4,14 @@
 package io.pulumi.aws.apigateway.outputs;
 
 import io.pulumi.aws.apigateway.outputs.GetDomainNameEndpointConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainNameResult {
     /**
      * The ARN of the found custom domain name.
@@ -85,23 +85,23 @@ public final class GetDomainNameResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainNameResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificateArn") String certificateArn,
-        @OutputCustomType.Parameter("certificateName") String certificateName,
-        @OutputCustomType.Parameter("certificateUploadDate") String certificateUploadDate,
-        @OutputCustomType.Parameter("cloudfrontDomainName") String cloudfrontDomainName,
-        @OutputCustomType.Parameter("cloudfrontZoneId") String cloudfrontZoneId,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("endpointConfigurations") List<GetDomainNameEndpointConfiguration> endpointConfigurations,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("regionalCertificateArn") String regionalCertificateArn,
-        @OutputCustomType.Parameter("regionalCertificateName") String regionalCertificateName,
-        @OutputCustomType.Parameter("regionalDomainName") String regionalDomainName,
-        @OutputCustomType.Parameter("regionalZoneId") String regionalZoneId,
-        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificateArn") String certificateArn,
+        @CustomType.Parameter("certificateName") String certificateName,
+        @CustomType.Parameter("certificateUploadDate") String certificateUploadDate,
+        @CustomType.Parameter("cloudfrontDomainName") String cloudfrontDomainName,
+        @CustomType.Parameter("cloudfrontZoneId") String cloudfrontZoneId,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("endpointConfigurations") List<GetDomainNameEndpointConfiguration> endpointConfigurations,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("regionalCertificateArn") String regionalCertificateArn,
+        @CustomType.Parameter("regionalCertificateName") String regionalCertificateName,
+        @CustomType.Parameter("regionalDomainName") String regionalDomainName,
+        @CustomType.Parameter("regionalZoneId") String regionalZoneId,
+        @CustomType.Parameter("securityPolicy") String securityPolicy,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.arn = arn;
         this.certificateArn = certificateArn;
         this.certificateName = certificateName;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.JobTemplateJobRetryFailureType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class JobTemplateRetryCriteria extends io.pulumi.resources.InvokeAr
 
     public static final JobTemplateRetryCriteria Empty = new JobTemplateRetryCriteria();
 
-    @InputImport(name="failureType")
+    @Import(name="failureType")
       private final @Nullable JobTemplateJobRetryFailureType failureType;
 
     public Optional<JobTemplateJobRetryFailureType> getFailureType() {
         return this.failureType == null ? Optional.empty() : Optional.ofNullable(this.failureType);
     }
 
-    @InputImport(name="numberOfRetries")
+    @Import(name="numberOfRetries")
       private final @Nullable Integer numberOfRetries;
 
     public Optional<Integer> getNumberOfRetries() {

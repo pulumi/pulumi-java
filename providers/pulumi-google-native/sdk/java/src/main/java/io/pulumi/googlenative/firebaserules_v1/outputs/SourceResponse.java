@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebaserules_v1.outputs.FileResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * `File` set constituting the `Source` bundle.
@@ -16,8 +16,8 @@ public final class SourceResponse {
      */
     private final List<FileResponse> files;
 
-    @OutputCustomType.Constructor
-    private SourceResponse(@OutputCustomType.Parameter("files") List<FileResponse> files) {
+    @CustomType.Constructor
+    private SourceResponse(@CustomType.Parameter("files") List<FileResponse> files) {
         this.files = files;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleTimeAndCapacityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
      * Days of the week for a schedule-based autoscale rule
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable List<String> days;
 
     public List<String> getDays() {
@@ -35,7 +35,7 @@ public final class AutoscaleScheduleResponse extends io.pulumi.resources.InvokeA
      * Time and capacity for a schedule-based autoscale rule
      * 
      */
-    @InputImport(name="timeAndCapacity")
+    @Import(name="timeAndCapacity")
       private final @Nullable AutoscaleTimeAndCapacityResponse timeAndCapacity;
 
     public Optional<AutoscaleTimeAndCapacityResponse> getTimeAndCapacity() {

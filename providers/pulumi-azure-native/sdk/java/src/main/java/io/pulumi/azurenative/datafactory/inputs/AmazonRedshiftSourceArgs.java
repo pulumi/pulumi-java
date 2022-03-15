@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.RedshiftUnloadSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
     public Output<Object> getAdditionalColumns() {
@@ -35,7 +35,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -46,7 +46,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -57,7 +57,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * Database query. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<Object> query;
 
     public Output<Object> getQuery() {
@@ -68,7 +68,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
     public Output<Object> getQueryTimeout() {
@@ -79,7 +79,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
      * 
      */
-    @InputImport(name="redshiftUnloadSettings")
+    @Import(name="redshiftUnloadSettings")
       private final @Nullable Output<RedshiftUnloadSettingsArgs> redshiftUnloadSettings;
 
     public Output<RedshiftUnloadSettingsArgs> getRedshiftUnloadSettings() {
@@ -90,7 +90,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
@@ -101,7 +101,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
@@ -113,7 +113,7 @@ public final class AmazonRedshiftSourceArgs extends io.pulumi.resources.Resource
      * Expected value is 'AmazonRedshiftSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

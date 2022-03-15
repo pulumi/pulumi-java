@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiKeyResponse {
     /**
      * A connection string that can be used by supporting clients for authentication.
@@ -41,14 +41,14 @@ public final class ApiKeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiKeyResponse(
-        @OutputCustomType.Parameter("connectionString") String connectionString,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("readOnly") Boolean readOnly,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("connectionString") String connectionString,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("readOnly") Boolean readOnly,
+        @CustomType.Parameter("value") String value) {
         this.connectionString = connectionString;
         this.id = id;
         this.lastModified = lastModified;

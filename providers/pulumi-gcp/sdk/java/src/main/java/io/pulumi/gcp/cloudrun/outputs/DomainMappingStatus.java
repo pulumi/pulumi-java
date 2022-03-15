@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.DomainMappingStatusCondition;
 import io.pulumi.gcp.cloudrun.outputs.DomainMappingStatusResourceRecord;
 import java.lang.Integer;
@@ -13,19 +13,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainMappingStatus {
     private final @Nullable List<DomainMappingStatusCondition> conditions;
     private final @Nullable String mappedRouteName;
     private final @Nullable Integer observedGeneration;
     private final @Nullable List<DomainMappingStatusResourceRecord> resourceRecords;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMappingStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<DomainMappingStatusCondition> conditions,
-        @OutputCustomType.Parameter("mappedRouteName") @Nullable String mappedRouteName,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("resourceRecords") @Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
+        @CustomType.Parameter("conditions") @Nullable List<DomainMappingStatusCondition> conditions,
+        @CustomType.Parameter("mappedRouteName") @Nullable String mappedRouteName,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("resourceRecords") @Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;

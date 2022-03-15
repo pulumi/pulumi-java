@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagesync.StorageSyncServiceArgs;
 import io.pulumi.azurenative.storagesync.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * Incoming Traffic Policy
      * 
      */
-    @OutputExport(name="incomingTrafficPolicy", type=String.class, parameters={})
+    @Export(name="incomingTrafficPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> incomingTrafficPolicy;
 
     /**
@@ -51,7 +51,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * Resource Last Operation Name
      * 
      */
-    @OutputExport(name="lastOperationName", type=String.class, parameters={})
+    @Export(name="lastOperationName", type=String.class, parameters={})
     private Output<String> lastOperationName;
 
     /**
@@ -65,7 +65,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * StorageSyncService lastWorkflowId
      * 
      */
-    @OutputExport(name="lastWorkflowId", type=String.class, parameters={})
+    @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output<String> lastWorkflowId;
 
     /**
@@ -79,7 +79,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -93,7 +93,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * List of private endpoint connection associated with the specified storage sync service
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -121,7 +121,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * StorageSyncService Provisioning State
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * Storage Sync service status.
      * 
      */
-    @OutputExport(name="storageSyncServiceStatus", type=Integer.class, parameters={})
+    @Export(name="storageSyncServiceStatus", type=Integer.class, parameters={})
     private Output<Integer> storageSyncServiceStatus;
 
     /**
@@ -149,7 +149,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * Storage Sync service Uid
      * 
      */
-    @OutputExport(name="storageSyncServiceUid", type=String.class, parameters={})
+    @Export(name="storageSyncServiceUid", type=String.class, parameters={})
     private Output<String> storageSyncServiceUid;
 
     /**
@@ -163,7 +163,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class StorageSyncService extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

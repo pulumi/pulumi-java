@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskPoolVolumeResponse {
     /**
      * iSCSI provider target IP address list
@@ -23,10 +23,10 @@ public final class DiskPoolVolumeResponse {
      */
     private final @Nullable String lunName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskPoolVolumeResponse(
-        @OutputCustomType.Parameter("endpoints") @Nullable List<String> endpoints,
-        @OutputCustomType.Parameter("lunName") @Nullable String lunName) {
+        @CustomType.Parameter("endpoints") @Nullable List<String> endpoints,
+        @CustomType.Parameter("lunName") @Nullable String lunName) {
         this.endpoints = endpoints;
         this.lunName = lunName;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation {
     /**
      * The ARN for the S3 bucket containing the application code.
@@ -27,11 +27,11 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      */
     private final @Nullable String objectVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation(
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("fileKey") String fileKey,
-        @OutputCustomType.Parameter("objectVersion") @Nullable String objectVersion) {
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("fileKey") String fileKey,
+        @CustomType.Parameter("objectVersion") @Nullable String objectVersion) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.objectVersion = objectVersion;

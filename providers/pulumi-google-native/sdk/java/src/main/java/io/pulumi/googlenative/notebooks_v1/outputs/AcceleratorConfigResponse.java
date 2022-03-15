@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AcceleratorConfigResponse {
     /**
      * Count of cores of this accelerator.
@@ -20,10 +20,10 @@ public final class AcceleratorConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AcceleratorConfigResponse(
-        @OutputCustomType.Parameter("coreCount") String coreCount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("coreCount") String coreCount,
+        @CustomType.Parameter("type") String type) {
         this.coreCount = coreCount;
         this.type = type;
     }

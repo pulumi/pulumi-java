@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiteTopicReservationConfig {
     /**
      * The Reservation to use for this topic's throughput capacity.
@@ -17,8 +17,8 @@ public final class LiteTopicReservationConfig {
      */
     private final @Nullable String throughputReservation;
 
-    @OutputCustomType.Constructor
-    private LiteTopicReservationConfig(@OutputCustomType.Parameter("throughputReservation") @Nullable String throughputReservation) {
+    @CustomType.Constructor
+    private LiteTopicReservationConfig(@CustomType.Parameter("throughputReservation") @Nullable String throughputReservation) {
         this.throughputReservation = throughputReservation;
     }
 

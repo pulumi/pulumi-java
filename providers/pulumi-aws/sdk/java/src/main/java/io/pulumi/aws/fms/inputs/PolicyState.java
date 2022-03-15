@@ -7,7 +7,7 @@ import io.pulumi.aws.fms.inputs.PolicyExcludeMapGetArgs;
 import io.pulumi.aws.fms.inputs.PolicyIncludeMapGetArgs;
 import io.pulumi.aws.fms.inputs.PolicySecurityServicePolicyDataGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyState Empty = new PolicyState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * If true, the request will also perform a clean-up process. Defaults to `true`. More information can be found here [AWS Firewall Manager delete policy](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_DeletePolicy.html)
      * 
      */
-    @InputImport(name="deleteAllPolicyResources")
+    @Import(name="deleteAllPolicyResources")
       private final @Nullable Output<Boolean> deleteAllPolicyResources;
 
     public Output<Boolean> getDeleteAllPolicyResources() {
@@ -42,7 +42,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A map of lists of accounts and OU's to exclude from the policy.
      * 
      */
-    @InputImport(name="excludeMap")
+    @Import(name="excludeMap")
       private final @Nullable Output<PolicyExcludeMapGetArgs> excludeMap;
 
     public Output<PolicyExcludeMapGetArgs> getExcludeMap() {
@@ -53,7 +53,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A boolean value, if true the tags that are specified in the `resource_tags` are not protected by this policy. If set to false and resource_tags are populated, resources that contain tags will be protected by this policy.
      * 
      */
-    @InputImport(name="excludeResourceTags")
+    @Import(name="excludeResourceTags")
       private final @Nullable Output<Boolean> excludeResourceTags;
 
     public Output<Boolean> getExcludeResourceTags() {
@@ -64,7 +64,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A map of lists of accounts and OU's to include in the policy.
      * 
      */
-    @InputImport(name="includeMap")
+    @Import(name="includeMap")
       private final @Nullable Output<PolicyIncludeMapGetArgs> includeMap;
 
     public Output<PolicyIncludeMapGetArgs> getIncludeMap() {
@@ -75,7 +75,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The friendly name of the AWS Firewall Manager Policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A unique identifier for each update to the policy.
      * 
      */
-    @InputImport(name="policyUpdateToken")
+    @Import(name="policyUpdateToken")
       private final @Nullable Output<String> policyUpdateToken;
 
     public Output<String> getPolicyUpdateToken() {
@@ -97,7 +97,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A boolean value, indicates if the policy should automatically applied to resources that already exist in the account.
      * 
      */
-    @InputImport(name="remediationEnabled")
+    @Import(name="remediationEnabled")
       private final @Nullable Output<Boolean> remediationEnabled;
 
     public Output<Boolean> getRemediationEnabled() {
@@ -108,7 +108,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
      * 
      */
-    @InputImport(name="resourceTags")
+    @Import(name="resourceTags")
       private final @Nullable Output<Map<String,String>> resourceTags;
 
     public Output<Map<String,String>> getResourceTags() {
@@ -119,7 +119,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A resource type to protect. Conflicts with `resource_type_list`. See the [FMS API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_Policy.html#fms-Type-Policy-ResourceType) for more information about supported values.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -130,7 +130,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A list of resource types to protect. Conflicts with `resource_type`. See the [FMS API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_Policy.html#fms-Type-Policy-ResourceType) for more information about supported values.
      * 
      */
-    @InputImport(name="resourceTypeLists")
+    @Import(name="resourceTypeLists")
       private final @Nullable Output<List<String>> resourceTypeLists;
 
     public Output<List<String>> getResourceTypeLists() {
@@ -141,7 +141,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The objects to include in Security Service Policy Data. Documented below.
      * 
      */
-    @InputImport(name="securityServicePolicyData")
+    @Import(name="securityServicePolicyData")
       private final @Nullable Output<PolicySecurityServicePolicyDataGetArgs> securityServicePolicyData;
 
     public Output<PolicySecurityServicePolicyDataGetArgs> getSecurityServicePolicyData() {

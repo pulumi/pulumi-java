@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
      * 
      */
-    @OutputExport(name="allowHubToRemoteVnetTransit", type=Boolean.class, parameters={})
+    @Export(name="allowHubToRemoteVnetTransit", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowHubToRemoteVnetTransit;
 
     /**
@@ -51,7 +51,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * Deprecated: Allow RemoteVnet to use Virtual Hub's gateways.
      * 
      */
-    @OutputExport(name="allowRemoteVnetToUseHubVnetGateways", type=Boolean.class, parameters={})
+    @Export(name="allowRemoteVnetToUseHubVnetGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowRemoteVnetToUseHubVnetGateways;
 
     /**
@@ -65,7 +65,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * Enable internet security.
      * 
      */
-    @OutputExport(name="enableInternetSecurity", type=Boolean.class, parameters={})
+    @Export(name="enableInternetSecurity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInternetSecurity;
 
     /**
@@ -79,7 +79,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -93,7 +93,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -107,7 +107,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * The provisioning state of the hub virtual network connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * Reference to the remote virtual network.
      * 
      */
-    @OutputExport(name="remoteVirtualNetwork", type=SubResourceResponse.class, parameters={})
+    @Export(name="remoteVirtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork;
 
     /**
@@ -135,7 +135,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * The Routing Configuration indicating the associated and propagated route tables on this connection.
      * 
      */
-    @OutputExport(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
+    @Export(name="routingConfiguration", type=RoutingConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ RoutingConfigurationResponse> routingConfiguration;
 
     /**

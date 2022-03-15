@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.SmbSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Setting for SMB protocol
      * 
      */
-    @InputImport(name="smb")
+    @Import(name="smb")
       private final @Nullable Output<SmbSettingArgs> smb;
 
     public Output<SmbSettingArgs> getSmb() {

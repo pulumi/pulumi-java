@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DateResponse;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -19,42 +19,42 @@ public final class ValueResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ValueResponse Empty = new ValueResponse();
 
-    @InputImport(name="booleanValue", required=true)
+    @Import(name="booleanValue", required=true)
       private final Boolean booleanValue;
 
     public Boolean getBooleanValue() {
         return this.booleanValue;
     }
 
-    @InputImport(name="dateValue", required=true)
+    @Import(name="dateValue", required=true)
       private final DateResponse dateValue;
 
     public DateResponse getDateValue() {
         return this.dateValue;
     }
 
-    @InputImport(name="doubleValue", required=true)
+    @Import(name="doubleValue", required=true)
       private final Double doubleValue;
 
     public Double getDoubleValue() {
         return this.doubleValue;
     }
 
-    @InputImport(name="integerValue", required=true)
+    @Import(name="integerValue", required=true)
       private final String integerValue;
 
     public String getIntegerValue() {
         return this.integerValue;
     }
 
-    @InputImport(name="stringValue", required=true)
+    @Import(name="stringValue", required=true)
       private final String stringValue;
 
     public String getStringValue() {
         return this.stringValue;
     }
 
-    @InputImport(name="timestampValue", required=true)
+    @Import(name="timestampValue", required=true)
       private final String timestampValue;
 
     public String getTimestampValue() {

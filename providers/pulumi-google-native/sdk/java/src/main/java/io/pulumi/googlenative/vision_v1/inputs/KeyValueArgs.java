@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * The key of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -33,7 +33,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the label attached to the product. Cannot be empty and cannot exceed 128 bytes.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

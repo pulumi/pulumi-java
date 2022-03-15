@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UptimeCheckConfigTcpCheck {
     /**
      * The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
@@ -15,8 +15,8 @@ public final class UptimeCheckConfigTcpCheck {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
-    private UptimeCheckConfigTcpCheck(@OutputCustomType.Parameter("port") Integer port) {
+    @CustomType.Constructor
+    private UptimeCheckConfigTcpCheck(@CustomType.Parameter("port") Integer port) {
         this.port = port;
     }
 

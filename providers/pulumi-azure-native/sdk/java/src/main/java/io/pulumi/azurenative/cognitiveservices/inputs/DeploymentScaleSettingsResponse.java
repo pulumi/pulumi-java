@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeploymentScaleSettingsResponse extends io.pulumi.resources.I
      * Deployment capacity.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class DeploymentScaleSettingsResponse extends io.pulumi.resources.I
      * Deployment scale type.
      * 
      */
-    @InputImport(name="scaleType")
+    @Import(name="scaleType")
       private final @Nullable String scaleType;
 
     public Optional<String> getScaleType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
 
     public static final AzureFileShareConfigurationResponse Empty = new AzureFileShareConfigurationResponse();
 
-    @InputImport(name="accountKey", required=true)
+    @Import(name="accountKey", required=true)
       private final String accountKey;
 
     public String getAccountKey() {
         return this.accountKey;
     }
 
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -32,7 +32,7 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
      * This is of the form 'https://{account}.file.core.windows.net/'.
      * 
      */
-    @InputImport(name="azureFileUrl", required=true)
+    @Import(name="azureFileUrl", required=true)
       private final String azureFileUrl;
 
     public String getAzureFileUrl() {
@@ -43,7 +43,7 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable String mountOptions;
 
     public Optional<String> getMountOptions() {
@@ -54,7 +54,7 @@ public final class AzureFileShareConfigurationResponse extends io.pulumi.resourc
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
      */
-    @InputImport(name="relativeMountPath", required=true)
+    @Import(name="relativeMountPath", required=true)
       private final String relativeMountPath;
 
     public String getRelativeMountPath() {

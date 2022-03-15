@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchMetricDefinitionObject {
     /**
      * The JSON path to reference the entity id in the event.
@@ -29,13 +29,13 @@ public final class LaunchMetricDefinitionObject {
      */
     private final String valueKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchMetricDefinitionObject(
-        @OutputCustomType.Parameter("entityIdKey") String entityIdKey,
-        @OutputCustomType.Parameter("eventPattern") String eventPattern,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("unitLabel") @Nullable String unitLabel,
-        @OutputCustomType.Parameter("valueKey") String valueKey) {
+        @CustomType.Parameter("entityIdKey") String entityIdKey,
+        @CustomType.Parameter("eventPattern") String eventPattern,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("unitLabel") @Nullable String unitLabel,
+        @CustomType.Parameter("valueKey") String valueKey) {
         this.entityIdKey = entityIdKey;
         this.eventPattern = eventPattern;
         this.metricName = metricName;

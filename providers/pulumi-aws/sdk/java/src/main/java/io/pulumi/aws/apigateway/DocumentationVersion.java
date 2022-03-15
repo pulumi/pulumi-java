@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.DocumentationVersionArgs;
 import io.pulumi.aws.apigateway.inputs.DocumentationVersionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
      * The description of the API documentation version.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -46,7 +46,7 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
      * The ID of the associated Rest API
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -60,7 +60,7 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
      * The version identifier of the API documentation snapshot.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

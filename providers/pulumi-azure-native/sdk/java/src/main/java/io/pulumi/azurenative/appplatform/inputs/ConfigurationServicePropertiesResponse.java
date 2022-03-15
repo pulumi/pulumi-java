@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * Collection of instances belong to Application Configuration Service.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<ConfigurationServiceInstanceResponse> instances;
 
     public List<ConfigurationServiceInstanceResponse> getInstances() {
@@ -37,7 +37,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * State of the Application Configuration Service.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -48,7 +48,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * The requested resource quantity for required CPU and Memory.
      * 
      */
-    @InputImport(name="resourceRequests", required=true)
+    @Import(name="resourceRequests", required=true)
       private final ConfigurationServiceResourceRequestsResponse resourceRequests;
 
     public ConfigurationServiceResourceRequestsResponse getResourceRequests() {
@@ -59,7 +59,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * The settings of Application Configuration Service.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable ConfigurationServiceSettingsResponse settings;
 
     public Optional<ConfigurationServiceSettingsResponse> getSettings() {

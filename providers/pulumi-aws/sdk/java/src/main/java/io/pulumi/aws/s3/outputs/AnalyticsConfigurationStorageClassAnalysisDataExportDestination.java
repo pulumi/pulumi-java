@@ -4,10 +4,10 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestination {
     /**
      * Analytics data export currently only supports an S3 bucket destination (documented below).
@@ -15,8 +15,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      */
     private final AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination;
 
-    @OutputCustomType.Constructor
-    private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(@OutputCustomType.Parameter("s3BucketDestination") AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
+    @CustomType.Constructor
+    private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(@CustomType.Parameter("s3BucketDestination") AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
         this.s3BucketDestination = s3BucketDestination;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCounterOptionsCustomFieldResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="customFields", required=true)
+    @Import(name="customFields", required=true)
       private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
 
     public List<LogConfigCounterOptionsCustomFieldResponse> getCustomFields() {
@@ -33,7 +33,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final String field;
 
     public String getField() {
@@ -44,7 +44,7 @@ public final class LogConfigCounterOptionsResponse extends io.pulumi.resources.I
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final String metric;
 
     public String getMetric() {

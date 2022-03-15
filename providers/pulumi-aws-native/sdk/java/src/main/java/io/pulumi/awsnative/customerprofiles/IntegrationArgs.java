@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationFlowDefinitionArgs
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationObjectTypeMappingArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the domain.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName;
     }
 
-    @InputImport(name="flowDefinition")
+    @Import(name="flowDefinition")
       private final @Nullable Output<IntegrationFlowDefinitionArgs> flowDefinition;
 
     public Output<IntegrationFlowDefinitionArgs> getFlowDefinition() {
@@ -40,7 +40,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the ObjectType defined for the 3rd party data in Profile Service
      * 
      */
-    @InputImport(name="objectTypeName")
+    @Import(name="objectTypeName")
       private final @Nullable Output<String> objectTypeName;
 
     public Output<String> getObjectTypeName() {
@@ -51,7 +51,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The mapping between 3rd party event types and ObjectType names
      * 
      */
-    @InputImport(name="objectTypeNames")
+    @Import(name="objectTypeNames")
       private final @Nullable Output<List<IntegrationObjectTypeMappingArgs>> objectTypeNames;
 
     public Output<List<IntegrationObjectTypeMappingArgs>> getObjectTypeNames() {
@@ -62,7 +62,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The tags (keys and values) associated with the integration
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<IntegrationTagArgs>> tags;
 
     public Output<List<IntegrationTagArgs>> getTags() {
@@ -73,7 +73,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the S3 bucket or any other type of data source.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

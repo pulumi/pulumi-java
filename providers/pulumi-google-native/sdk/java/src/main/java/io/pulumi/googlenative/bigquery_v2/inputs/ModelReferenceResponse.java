@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ModelReferenceResponse extends io.pulumi.resources.InvokeArgs
      * [Required] The ID of the dataset containing this model.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
@@ -27,7 +27,7 @@ public final class ModelReferenceResponse extends io.pulumi.resources.InvokeArgs
      * [Required] The ID of the model. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
      */
-    @InputImport(name="modelId", required=true)
+    @Import(name="modelId", required=true)
       private final String modelId;
 
     public String getModelId() {
@@ -38,7 +38,7 @@ public final class ModelReferenceResponse extends io.pulumi.resources.InvokeArgs
      * [Required] The ID of the project containing this model.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

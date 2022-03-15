@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
      * The non-repudiation is required or not.
      * 
      */
-    @InputImport(name="isNonRepudiationRequired", required=true)
+    @Import(name="isNonRepudiationRequired", required=true)
       private final Boolean isNonRepudiationRequired;
 
     public Boolean getIsNonRepudiationRequired() {
@@ -32,7 +32,7 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse extends 
      * The time to acknowledge in seconds.
      * 
      */
-    @InputImport(name="timeToAcknowledgeInSeconds", required=true)
+    @Import(name="timeToAcknowledgeInSeconds", required=true)
       private final Integer timeToAcknowledgeInSeconds;
 
     public Integer getTimeToAcknowledgeInSeconds() {

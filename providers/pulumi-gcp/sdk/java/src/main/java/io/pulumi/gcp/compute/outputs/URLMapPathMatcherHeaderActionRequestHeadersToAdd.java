@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherHeaderActionRequestHeadersToAdd {
     /**
      * The name of the header to add.
@@ -27,11 +27,11 @@ public final class URLMapPathMatcherHeaderActionRequestHeadersToAdd {
      */
     private final Boolean replace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherHeaderActionRequestHeadersToAdd(
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("headerValue") String headerValue,
-        @OutputCustomType.Parameter("replace") Boolean replace) {
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("headerValue") String headerValue,
+        @CustomType.Parameter("replace") Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -29,7 +29,7 @@ public final class TagKeyIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="tagKey", required=true)
+    @Import(name="tagKey", required=true)
       private final Output<String> tagKey;
 
     public Output<String> getTagKey() {

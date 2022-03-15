@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1.enums.UrlMapAuthFailAction;
 import io.pulumi.googlenative.appengine_v1.enums.UrlMapLogin;
 import io.pulumi.googlenative.appengine_v1.enums.UrlMapRedirectHttpResponseCode;
@@ -29,7 +29,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * Uses API Endpoints to handle requests.
      * 
      */
-    @InputImport(name="apiEndpoint")
+    @Import(name="apiEndpoint")
       private final @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
 
     public Output<ApiEndpointHandlerArgs> getApiEndpoint() {
@@ -40,7 +40,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * Action to take when users access resources that require authentication. Defaults to redirect.
      * 
      */
-    @InputImport(name="authFailAction")
+    @Import(name="authFailAction")
       private final @Nullable Output<UrlMapAuthFailAction> authFailAction;
 
     public Output<UrlMapAuthFailAction> getAuthFailAction() {
@@ -51,7 +51,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * Level of login required to access this resource. Not supported for Node.js in the App Engine standard environment.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<UrlMapLogin> login;
 
     public Output<UrlMapLogin> getLogin() {
@@ -62,7 +62,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 30x code to use when performing redirects for the secure field. Defaults to 302.
      * 
      */
-    @InputImport(name="redirectHttpResponseCode")
+    @Import(name="redirectHttpResponseCode")
       private final @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
 
     public Output<UrlMapRedirectHttpResponseCode> getRedirectHttpResponseCode() {
@@ -73,7 +73,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script": "auto".
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<ScriptHandlerArgs> script;
 
     public Output<ScriptHandlerArgs> getScript() {
@@ -84,7 +84,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * Security (HTTPS) enforcement for this URL.
      * 
      */
-    @InputImport(name="securityLevel")
+    @Import(name="securityLevel")
       private final @Nullable Output<UrlMapSecurityLevel> securityLevel;
 
     public Output<UrlMapSecurityLevel> getSecurityLevel() {
@@ -95,7 +95,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * Returns the contents of a file, such as an image, as the response.
      * 
      */
-    @InputImport(name="staticFiles")
+    @Import(name="staticFiles")
       private final @Nullable Output<StaticFilesHandlerArgs> staticFiles;
 
     public Output<StaticFilesHandlerArgs> getStaticFiles() {
@@ -106,7 +106,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
      */
-    @InputImport(name="urlRegex")
+    @Import(name="urlRegex")
       private final @Nullable Output<String> urlRegex;
 
     public Output<String> getUrlRegex() {

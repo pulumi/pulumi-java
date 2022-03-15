@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiMetadataStoreArgs;
@@ -43,7 +43,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * nine fractional digits.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -58,7 +58,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * Description of the MetadataStore.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -73,7 +73,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="encryptionSpec", type=AiMetadataStoreEncryptionSpec.class, parameters={})
+    @Export(name="encryptionSpec", type=AiMetadataStoreEncryptionSpec.class, parameters={})
     private Output</* @Nullable */ AiMetadataStoreEncryptionSpec> encryptionSpec;
 
     /**
@@ -88,7 +88,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -103,7 +103,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -118,7 +118,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * The region of the Metadata Store. eg us-central1
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -132,7 +132,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * State information of the MetadataStore.
      * 
      */
-    @OutputExport(name="states", type=List.class, parameters={AiMetadataStoreState.class})
+    @Export(name="states", type=List.class, parameters={AiMetadataStoreState.class})
     private Output<List<AiMetadataStoreState>> states;
 
     /**
@@ -147,7 +147,7 @@ public class AiMetadataStore extends io.pulumi.resources.CustomResource {
      * to nine fractional digits.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * The "common name" of the distinguished name.
      * 
      */
-    @InputImport(name="commonName", required=true)
+    @Import(name="commonName", required=true)
       private final String commonName;
 
     public String getCommonName() {
@@ -33,7 +33,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * The serial number encoded in lowercase hexadecimal.
      * 
      */
-    @InputImport(name="hexSerialNumber", required=true)
+    @Import(name="hexSerialNumber", required=true)
       private final String hexSerialNumber;
 
     public String getHexSerialNumber() {
@@ -44,7 +44,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
      * 
      */
-    @InputImport(name="lifetime", required=true)
+    @Import(name="lifetime", required=true)
       private final String lifetime;
 
     public String getLifetime() {
@@ -55,7 +55,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * The time at which the certificate expires.
      * 
      */
-    @InputImport(name="notAfterTime", required=true)
+    @Import(name="notAfterTime", required=true)
       private final String notAfterTime;
 
     public String getNotAfterTime() {
@@ -66,7 +66,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * The time at which the certificate becomes valid.
      * 
      */
-    @InputImport(name="notBeforeTime", required=true)
+    @Import(name="notBeforeTime", required=true)
       private final String notBeforeTime;
 
     public String getNotBeforeTime() {
@@ -77,7 +77,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * Contains distinguished name fields such as the location and organization.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final SubjectResponse subject;
 
     public SubjectResponse getSubject() {
@@ -88,7 +88,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * The subject alternative name fields.
      * 
      */
-    @InputImport(name="subjectAltName", required=true)
+    @Import(name="subjectAltName", required=true)
       private final SubjectAltNamesResponse subjectAltName;
 
     public SubjectAltNamesResponse getSubjectAltName() {

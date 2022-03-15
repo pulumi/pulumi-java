@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.ErrorManagementTypes;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
      * The error limit allowed while importing data.
      * 
      */
-    @InputImport(name="errorLimit")
+    @Import(name="errorLimit")
       private final @Nullable Output<Integer> errorLimit;
 
     public Output<Integer> getErrorLimit() {
@@ -34,7 +34,7 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
      * The type of error management to use for the mapping.
      * 
      */
-    @InputImport(name="errorManagementType", required=true)
+    @Import(name="errorManagementType", required=true)
       private final Output<ErrorManagementTypes> errorManagementType;
 
     public Output<ErrorManagementTypes> getErrorManagementType() {

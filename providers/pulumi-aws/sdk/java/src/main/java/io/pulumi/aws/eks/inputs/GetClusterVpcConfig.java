@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * The cluster security group that was created by Amazon EKS for the cluster.
      * 
      */
-    @InputImport(name="clusterSecurityGroupId", required=true)
+    @Import(name="clusterSecurityGroupId", required=true)
       private final String clusterSecurityGroupId;
 
     public String getClusterSecurityGroupId() {
@@ -29,7 +29,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * Indicates whether or not the Amazon EKS private API server endpoint is enabled.
      * 
      */
-    @InputImport(name="endpointPrivateAccess", required=true)
+    @Import(name="endpointPrivateAccess", required=true)
       private final Boolean endpointPrivateAccess;
 
     public Boolean getEndpointPrivateAccess() {
@@ -40,7 +40,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * Indicates whether or not the Amazon EKS public API server endpoint is enabled.
      * 
      */
-    @InputImport(name="endpointPublicAccess", required=true)
+    @Import(name="endpointPublicAccess", required=true)
       private final Boolean endpointPublicAccess;
 
     public Boolean getEndpointPublicAccess() {
@@ -51,7 +51,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint.
      * 
      */
-    @InputImport(name="publicAccessCidrs", required=true)
+    @Import(name="publicAccessCidrs", required=true)
       private final List<String> publicAccessCidrs;
 
     public List<String> getPublicAccessCidrs() {
@@ -62,7 +62,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * List of security group IDs
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
@@ -73,7 +73,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * List of subnet IDs
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
@@ -84,7 +84,7 @@ public final class GetClusterVpcConfig extends io.pulumi.resources.InvokeArgs {
      * The VPC associated with your cluster.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

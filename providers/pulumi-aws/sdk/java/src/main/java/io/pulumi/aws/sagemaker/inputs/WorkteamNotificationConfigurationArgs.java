@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkteamNotificationConfigurationArgs extends io.pulumi.resou
      * The ARN for the SNS topic to which notifications should be published.
      * 
      */
-    @InputImport(name="notificationTopicArn")
+    @Import(name="notificationTopicArn")
       private final @Nullable Output<String> notificationTopicArn;
 
     public Output<String> getNotificationTopicArn() {

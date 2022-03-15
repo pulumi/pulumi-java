@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -36,7 +36,7 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -47,7 +47,7 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
     public List<TriggerPipelineReferenceResponse> getPipelines() {
@@ -58,7 +58,7 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
-    @InputImport(name="runtimeState", required=true)
+    @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
     public String getRuntimeState() {
@@ -70,7 +70,7 @@ public final class MultiplePipelineTriggerResponse extends io.pulumi.resources.I
      * Expected value is 'MultiplePipelineTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

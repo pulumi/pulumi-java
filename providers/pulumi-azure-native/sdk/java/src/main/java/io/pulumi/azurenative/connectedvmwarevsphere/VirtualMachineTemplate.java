@@ -12,7 +12,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VirtualDiskResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    @OutputExport(name="customResourceName", type=String.class, parameters={})
+    @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
@@ -55,7 +55,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the disks the template.
      * 
      */
-    @OutputExport(name="disks", type=List.class, parameters={VirtualDiskResponse.class})
+    @Export(name="disks", type=List.class, parameters={VirtualDiskResponse.class})
     private Output<List<VirtualDiskResponse>> disks;
 
     /**
@@ -69,7 +69,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the extended location.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -83,7 +83,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Firmware type
      * 
      */
-    @OutputExport(name="firmwareType", type=String.class, parameters={})
+    @Export(name="firmwareType", type=String.class, parameters={})
     private Output<String> firmwareType;
 
     /**
@@ -97,7 +97,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the folder path of the template.
      * 
      */
-    @OutputExport(name="folderPath", type=String.class, parameters={})
+    @Export(name="folderPath", type=String.class, parameters={})
     private Output<String> folderPath;
 
     /**
@@ -111,7 +111,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the inventory Item ID for the virtual machine template.
      * 
      */
-    @OutputExport(name="inventoryItemId", type=String.class, parameters={})
+    @Export(name="inventoryItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> inventoryItemId;
 
     /**
@@ -125,7 +125,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -139,7 +139,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -153,7 +153,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets memory size in MBs for the template.
      * 
      */
-    @OutputExport(name="memorySizeMB", type=Integer.class, parameters={})
+    @Export(name="memorySizeMB", type=Integer.class, parameters={})
     private Output<Integer> memorySizeMB;
 
     /**
@@ -167,7 +167,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the vCenter Managed Object name for the virtual machine template.
      * 
      */
-    @OutputExport(name="moName", type=String.class, parameters={})
+    @Export(name="moName", type=String.class, parameters={})
     private Output<String> moName;
 
     /**
@@ -182,7 +182,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * template.
      * 
      */
-    @OutputExport(name="moRefId", type=String.class, parameters={})
+    @Export(name="moRefId", type=String.class, parameters={})
     private Output</* @Nullable */ String> moRefId;
 
     /**
@@ -197,7 +197,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -211,7 +211,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the network interfaces of the template.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
@@ -225,7 +225,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the number of vCPUs for the template.
      * 
      */
-    @OutputExport(name="numCPUs", type=Integer.class, parameters={})
+    @Export(name="numCPUs", type=Integer.class, parameters={})
     private Output<Integer> numCPUs;
 
     /**
@@ -240,7 +240,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Defaults to 1 if unspecified.
      * 
      */
-    @OutputExport(name="numCoresPerSocket", type=Integer.class, parameters={})
+    @Export(name="numCoresPerSocket", type=Integer.class, parameters={})
     private Output<Integer> numCoresPerSocket;
 
     /**
@@ -255,7 +255,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets os name.
      * 
      */
-    @OutputExport(name="osName", type=String.class, parameters={})
+    @Export(name="osName", type=String.class, parameters={})
     private Output<String> osName;
 
     /**
@@ -269,7 +269,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the type of the os.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output<String> osType;
 
     /**
@@ -283,7 +283,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -297,7 +297,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * The resource status information.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
@@ -311,7 +311,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -325,7 +325,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -339,7 +339,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the current version of VMware Tools.
      * 
      */
-    @OutputExport(name="toolsVersion", type=String.class, parameters={})
+    @Export(name="toolsVersion", type=String.class, parameters={})
     private Output<String> toolsVersion;
 
     /**
@@ -353,7 +353,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the current version status of VMware Tools installed in the guest operating system.
      * 
      */
-    @OutputExport(name="toolsVersionStatus", type=String.class, parameters={})
+    @Export(name="toolsVersionStatus", type=String.class, parameters={})
     private Output<String> toolsVersionStatus;
 
     /**
@@ -367,7 +367,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -381,7 +381,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets a unique identifier for this resource.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**
@@ -395,7 +395,7 @@ public class VirtualMachineTemplate extends io.pulumi.resources.CustomResource {
      * Gets or sets the ARM Id of the vCenter resource in which this template resides.
      * 
      */
-    @OutputExport(name="vCenterId", type=String.class, parameters={})
+    @Export(name="vCenterId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vCenterId;
 
     /**

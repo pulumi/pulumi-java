@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
      * 
      */
-    @InputImport(name="operatorName", required=true)
+    @Import(name="operatorName", required=true)
       private final String operatorName;
 
     public String getOperatorName() {
@@ -27,7 +27,7 @@ public final class SortOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * Ascending is the default sort order
      * 
      */
-    @InputImport(name="sortOrder", required=true)
+    @Import(name="sortOrder", required=true)
       private final String sortOrder;
 
     public String getSortOrder() {

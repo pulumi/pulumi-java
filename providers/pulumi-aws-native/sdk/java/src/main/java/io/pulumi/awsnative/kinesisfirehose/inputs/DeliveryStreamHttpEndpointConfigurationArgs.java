@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
 
     public static final DeliveryStreamHttpEndpointConfigurationArgs Empty = new DeliveryStreamHttpEndpointConfigurationArgs();
 
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
         return this.accessKey == null ? Output.empty() : this.accessKey;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

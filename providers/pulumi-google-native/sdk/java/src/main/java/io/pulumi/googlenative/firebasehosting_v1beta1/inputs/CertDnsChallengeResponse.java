@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeAr
      * The domain name upon which the DNS challenge must be satisfied.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -31,7 +31,7 @@ public final class CertDnsChallengeResponse extends io.pulumi.resources.InvokeAr
      * The value that must be present as a TXT record on the domain name to satisfy the challenge.
      * 
      */
-    @InputImport(name="token", required=true)
+    @Import(name="token", required=true)
       private final String token;
 
     public String getToken() {

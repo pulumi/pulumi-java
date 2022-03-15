@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * The name of the capacity reservation group.
      * 
      */
-    @InputImport(name="capacityReservationGroupName", required=true)
+    @Import(name="capacityReservationGroupName", required=true)
       private final Output<String> capacityReservationGroupName;
 
     public Output<String> getCapacityReservationGroupName() {
@@ -32,7 +32,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * The name of the capacity reservation.
      * 
      */
-    @InputImport(name="capacityReservationName")
+    @Import(name="capacityReservationName")
       private final @Nullable Output<String> capacityReservationName;
 
     public Output<String> getCapacityReservationName() {
@@ -43,7 +43,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -76,7 +76,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
      * Availability Zone to use for this capacity reservation. The zone has to be single value and also should be part for the list of zones specified during the capacity reservation group creation. The zone can be assigned only during creation. If not provided, the reservation supports only non-zonal deployments. If provided, enforces VM/VMSS using this capacity reservation to be in same zone.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

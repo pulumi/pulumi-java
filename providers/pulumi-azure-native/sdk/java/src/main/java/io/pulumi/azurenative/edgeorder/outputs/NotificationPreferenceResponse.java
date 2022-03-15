@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationPreferenceResponse {
     /**
      * Notification is required or not.
@@ -21,10 +21,10 @@ public final class NotificationPreferenceResponse {
      */
     private final String stageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationPreferenceResponse(
-        @OutputCustomType.Parameter("sendNotification") Boolean sendNotification,
-        @OutputCustomType.Parameter("stageName") String stageName) {
+        @CustomType.Parameter("sendNotification") Boolean sendNotification,
+        @CustomType.Parameter("stageName") String stageName) {
         this.sendNotification = sendNotification;
         this.stageName = stageName;
     }

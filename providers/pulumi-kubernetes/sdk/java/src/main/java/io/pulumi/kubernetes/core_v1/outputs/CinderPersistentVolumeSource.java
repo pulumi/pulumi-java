@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SecretReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CinderPersistentVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
@@ -34,12 +34,12 @@ public final class CinderPersistentVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CinderPersistentVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
-        @OutputCustomType.Parameter("volumeID") String volumeID) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @CustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;

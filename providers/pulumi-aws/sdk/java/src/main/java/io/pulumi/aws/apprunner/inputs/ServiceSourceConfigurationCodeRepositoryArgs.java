@@ -6,7 +6,7 @@ package io.pulumi.aws.apprunner.inputs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends io.pulum
      * Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
      * 
      */
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs> codeConfiguration;
 
     public Output<ServiceSourceConfigurationCodeRepositoryCodeConfigurationArgs> getCodeConfiguration() {
@@ -31,7 +31,7 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends io.pulum
      * The location of the repository that contains the source code.
      * 
      */
-    @InputImport(name="repositoryUrl", required=true)
+    @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
     public Output<String> getRepositoryUrl() {
@@ -42,7 +42,7 @@ public final class ServiceSourceConfigurationCodeRepositoryArgs extends io.pulum
      * The version that should be used within the source code repository. See Source Code Version below for more details.
      * 
      */
-    @InputImport(name="sourceCodeVersion", required=true)
+    @Import(name="sourceCodeVersion", required=true)
       private final Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs> sourceCodeVersion;
 
     public Output<ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs> getSourceCodeVersion() {

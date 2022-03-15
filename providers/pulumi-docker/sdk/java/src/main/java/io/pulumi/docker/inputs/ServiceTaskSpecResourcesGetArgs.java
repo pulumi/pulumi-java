@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesLimitsGetArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGetArgs;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
 
     public static final ServiceTaskSpecResourcesGetArgs Empty = new ServiceTaskSpecResourcesGetArgs();
 
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
 
     public Output<ServiceTaskSpecResourcesLimitsGetArgs> getLimits() {
         return this.limits == null ? Output.empty() : this.limits;
     }
 
-    @InputImport(name="reservation")
+    @Import(name="reservation")
       private final @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
 
     public Output<ServiceTaskSpecResourcesReservationGetArgs> getReservation() {

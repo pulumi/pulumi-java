@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SELinuxOptions;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SELinuxStrategyOptions {
     /**
      * rule is the strategy that will dictate the allowable labels that may be set.
@@ -23,10 +23,10 @@ public final class SELinuxStrategyOptions {
      */
     private final @Nullable SELinuxOptions seLinuxOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SELinuxStrategyOptions(
-        @OutputCustomType.Parameter("rule") String rule,
-        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions) {
+        @CustomType.Parameter("rule") String rule,
+        @CustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions) {
         this.rule = rule;
         this.seLinuxOptions = seLinuxOptions;
     }

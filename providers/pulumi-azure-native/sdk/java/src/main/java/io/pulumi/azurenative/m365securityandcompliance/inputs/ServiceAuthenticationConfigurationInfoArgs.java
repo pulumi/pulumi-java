@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
      * The audience url for the service
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -34,7 +34,7 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
      * The authority url for the service
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable Output<String> authority;
 
     public Output<String> getAuthority() {
@@ -45,7 +45,7 @@ public final class ServiceAuthenticationConfigurationInfoArgs extends io.pulumi.
      * If the SMART on FHIR proxy is enabled
      * 
      */
-    @InputImport(name="smartProxyEnabled")
+    @Import(name="smartProxyEnabled")
       private final @Nullable Output<Boolean> smartProxyEnabled;
 
     public Output<Boolean> getSmartProxyEnabled() {

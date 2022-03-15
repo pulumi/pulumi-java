@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyStageKeyArgs;
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace.
      * 
      */
-    @InputImport(name="customerId")
+    @Import(name="customerId")
       private final @Nullable Output<String> customerId;
 
     public Output<String> getCustomerId() {
@@ -33,7 +33,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the purpose of the API key.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the API key can be used by clients.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -55,7 +55,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the key identifier is distinct from the created API key value. This parameter is deprecated and should not be used.
      * 
      */
-    @InputImport(name="generateDistinctId")
+    @Import(name="generateDistinctId")
       private final @Nullable Output<Boolean> generateDistinctId;
 
     public Output<Boolean> getGenerateDistinctId() {
@@ -66,7 +66,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the API key. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the API key name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of stages to associate with this API key.
      * 
      */
-    @InputImport(name="stageKeys")
+    @Import(name="stageKeys")
       private final @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
 
     public Output<List<ApiKeyStageKeyArgs>> getStageKeys() {
@@ -88,7 +88,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * An array of arbitrary tags (key-value pairs) to associate with the API key.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ApiKeyTagArgs>> tags;
 
     public Output<List<ApiKeyTagArgs>> getTags() {
@@ -99,7 +99,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the API key. Must be at least 20 characters long.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

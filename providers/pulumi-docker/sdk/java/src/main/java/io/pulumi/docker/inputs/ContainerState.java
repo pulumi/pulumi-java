@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ContainerCapabilitiesGetArgs;
 import io.pulumi.docker.inputs.ContainerDeviceGetArgs;
 import io.pulumi.docker.inputs.ContainerHealthcheckGetArgs;
@@ -35,7 +35,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
      * 
      */
-    @InputImport(name="attach")
+    @Import(name="attach")
       private final @Nullable Output<Boolean> attach;
 
     public Output<Boolean> getAttach() {
@@ -46,7 +46,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The network bridge of the container as read from its NetworkSettings.
      * 
      */
-    @InputImport(name="bridge")
+    @Import(name="bridge")
       private final @Nullable Output<String> bridge;
 
     public Output<String> getBridge() {
@@ -57,7 +57,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Add or drop certrain linux capabilities.
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<ContainerCapabilitiesGetArgs> capabilities;
 
     public Output<ContainerCapabilitiesGetArgs> getCapabilities() {
@@ -69,7 +69,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * `["/usr/bin/myprogram","-","baz.con"]`.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -80,7 +80,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The logs of the container if its execution is done (`attach` must be disabled).
      * 
      */
-    @InputImport(name="containerLogs")
+    @Import(name="containerLogs")
       private final @Nullable Output<String> containerLogs;
 
     public Output<String> getContainerLogs() {
@@ -91,7 +91,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
      * 
      */
-    @InputImport(name="cpuSet")
+    @Import(name="cpuSet")
       private final @Nullable Output<String> cpuSet;
 
     public Output<String> getCpuSet() {
@@ -102,7 +102,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * CPU shares (relative weight) for the container.
      * 
      */
-    @InputImport(name="cpuShares")
+    @Import(name="cpuShares")
       private final @Nullable Output<Integer> cpuShares;
 
     public Output<Integer> getCpuShares() {
@@ -114,7 +114,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * successful stop.
      * 
      */
-    @InputImport(name="destroyGraceSeconds")
+    @Import(name="destroyGraceSeconds")
       private final @Nullable Output<Integer> destroyGraceSeconds;
 
     public Output<Integer> getDestroyGraceSeconds() {
@@ -125,7 +125,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Bind devices to the container.
      * 
      */
-    @InputImport(name="devices")
+    @Import(name="devices")
       private final @Nullable Output<List<ContainerDeviceGetArgs>> devices;
 
     public Output<List<ContainerDeviceGetArgs>> getDevices() {
@@ -136,7 +136,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * DNS servers to use.
      * 
      */
-    @InputImport(name="dns")
+    @Import(name="dns")
       private final @Nullable Output<List<String>> dns;
 
     public Output<List<String>> getDns() {
@@ -147,7 +147,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
      * 
      */
-    @InputImport(name="dnsOpts")
+    @Import(name="dnsOpts")
       private final @Nullable Output<List<String>> dnsOpts;
 
     public Output<List<String>> getDnsOpts() {
@@ -158,7 +158,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * DNS search domains that are used when bare unqualified hostnames are used inside of the container.
      * 
      */
-    @InputImport(name="dnsSearches")
+    @Import(name="dnsSearches")
       private final @Nullable Output<List<String>> dnsSearches;
 
     public Output<List<String>> getDnsSearches() {
@@ -169,7 +169,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Domain name of the container.
      * 
      */
-    @InputImport(name="domainname")
+    @Import(name="domainname")
       private final @Nullable Output<String> domainname;
 
     public Output<String> getDomainname() {
@@ -182,7 +182,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * `"/usr/bin/myprogra"]`.
      * 
      */
-    @InputImport(name="entrypoints")
+    @Import(name="entrypoints")
       private final @Nullable Output<List<String>> entrypoints;
 
     public Output<List<String>> getEntrypoints() {
@@ -193,7 +193,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
      * 
      */
-    @InputImport(name="envs")
+    @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
     public Output<List<String>> getEnvs() {
@@ -204,7 +204,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The exit code of the container if its execution is done (`must_run` must be disabled).
      * 
      */
-    @InputImport(name="exitCode")
+    @Import(name="exitCode")
       private final @Nullable Output<Integer> exitCode;
 
     public Output<Integer> getExitCode() {
@@ -219,7 +219,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
@@ -231,7 +231,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Additional groups for the container user
      * 
      */
-    @InputImport(name="groupAdds")
+    @Import(name="groupAdds")
       private final @Nullable Output<List<String>> groupAdds;
 
     public Output<List<String>> getGroupAdds() {
@@ -242,7 +242,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * A test to perform to check that the container is healthy
      * 
      */
-    @InputImport(name="healthcheck")
+    @Import(name="healthcheck")
       private final @Nullable Output<ContainerHealthcheckGetArgs> healthcheck;
 
     public Output<ContainerHealthcheckGetArgs> getHealthcheck() {
@@ -253,7 +253,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Hostname of the container.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -264,7 +264,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Additional hosts to add to the container.
      * 
      */
-    @InputImport(name="hosts")
+    @Import(name="hosts")
       private final @Nullable Output<List<ContainerHostGetArgs>> hosts;
 
     public Output<List<ContainerHostGetArgs>> getHosts() {
@@ -276,7 +276,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * is shown in the example.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -288,7 +288,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * defaults.
      * 
      */
-    @InputImport(name="init")
+    @Import(name="init")
       private final @Nullable Output<Boolean> init;
 
     public Output<Boolean> getInit() {
@@ -303,7 +303,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
@@ -319,7 +319,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    @InputImport(name="ipPrefixLength")
+    @Import(name="ipPrefixLength")
       private final @Nullable Output<Integer> ipPrefixLength;
 
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
@@ -332,7 +332,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * `host`.
      * 
      */
-    @InputImport(name="ipcMode")
+    @Import(name="ipcMode")
       private final @Nullable Output<String> ipcMode;
 
     public Output<String> getIpcMode() {
@@ -343,7 +343,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * User-defined key/value metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<ContainerLabelGetArgs>> labels;
 
     public Output<List<ContainerLabelGetArgs>> getLabels() {
@@ -358,7 +358,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable Output<List<String>> links;
 
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
@@ -370,7 +370,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The logging driver to use for the container. Defaults to `json-file`.
      * 
      */
-    @InputImport(name="logDriver")
+    @Import(name="logDriver")
       private final @Nullable Output<String> logDriver;
 
     public Output<String> getLogDriver() {
@@ -381,7 +381,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Key/value pairs to use as options for the logging driver.
      * 
      */
-    @InputImport(name="logOpts")
+    @Import(name="logOpts")
       private final @Nullable Output<Map<String,Object>> logOpts;
 
     public Output<Map<String,Object>> getLogOpts() {
@@ -392,7 +392,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Save the container logs (`attach` must be enabled). Defaults to `false`.
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable Output<Boolean> logs;
 
     public Output<Boolean> getLogs() {
@@ -403,7 +403,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
      * 
      */
-    @InputImport(name="maxRetryCount")
+    @Import(name="maxRetryCount")
       private final @Nullable Output<Integer> maxRetryCount;
 
     public Output<Integer> getMaxRetryCount() {
@@ -414,7 +414,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The memory limit for the container in MBs.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<Integer> memory;
 
     public Output<Integer> getMemory() {
@@ -426,7 +426,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
      * 
      */
-    @InputImport(name="memorySwap")
+    @Import(name="memorySwap")
       private final @Nullable Output<Integer> memorySwap;
 
     public Output<Integer> getMemorySwap() {
@@ -437,7 +437,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Specification for mounts to be added to containers created as part of the service.
      * 
      */
-    @InputImport(name="mounts")
+    @Import(name="mounts")
       private final @Nullable Output<List<ContainerMountGetArgs>> mounts;
 
     public Output<List<ContainerMountGetArgs>> getMounts() {
@@ -449,7 +449,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * assumes it is successful. Defaults to `true`.
      * 
      */
-    @InputImport(name="mustRun")
+    @Import(name="mustRun")
       private final @Nullable Output<Boolean> mustRun;
 
     public Output<Boolean> getMustRun() {
@@ -460,7 +460,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The name of the container.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -475,7 +475,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    @InputImport(name="networkAliases")
+    @Import(name="networkAliases")
       private final @Nullable Output<List<String>> networkAliases;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
@@ -487,7 +487,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The data of the networks the container is connected to.
      * 
      */
-    @InputImport(name="networkDatas")
+    @Import(name="networkDatas")
       private final @Nullable Output<List<ContainerNetworkDataGetArgs>> networkDatas;
 
     public Output<List<ContainerNetworkDataGetArgs>> getNetworkDatas() {
@@ -498,7 +498,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Network mode of the container.
      * 
      */
-    @InputImport(name="networkMode")
+    @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
     public Output<String> getNetworkMode() {
@@ -513,7 +513,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<String>> networks;
 
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
@@ -525,7 +525,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The networks the container is attached to
      * 
      */
-    @InputImport(name="networksAdvanced")
+    @Import(name="networksAdvanced")
       private final @Nullable Output<List<ContainerNetworksAdvancedGetArgs>> networksAdvanced;
 
     public Output<List<ContainerNetworksAdvancedGetArgs>> getNetworksAdvanced() {
@@ -536,7 +536,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
      * 
      */
-    @InputImport(name="pidMode")
+    @Import(name="pidMode")
       private final @Nullable Output<String> pidMode;
 
     public Output<String> getPidMode() {
@@ -547,7 +547,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Publish a container's port(s) to the host.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ContainerPortGetArgs>> ports;
 
     public Output<List<ContainerPortGetArgs>> getPorts() {
@@ -558,7 +558,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * If `true`, the container runs in privileged mode.
      * 
      */
-    @InputImport(name="privileged")
+    @Import(name="privileged")
       private final @Nullable Output<Boolean> privileged;
 
     public Output<Boolean> getPrivileged() {
@@ -569,7 +569,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Publish all ports of the container.
      * 
      */
-    @InputImport(name="publishAllPorts")
+    @Import(name="publishAllPorts")
       private final @Nullable Output<Boolean> publishAllPorts;
 
     public Output<Boolean> getPublishAllPorts() {
@@ -580,7 +580,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * If `true`, the container will be started as readonly. Defaults to `false`.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -591,7 +591,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
      * 
      */
-    @InputImport(name="removeVolumes")
+    @Import(name="removeVolumes")
       private final @Nullable Output<Boolean> removeVolumes;
 
     public Output<Boolean> getRemoveVolumes() {
@@ -602,7 +602,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
      * 
      */
-    @InputImport(name="restart")
+    @Import(name="restart")
       private final @Nullable Output<String> restart;
 
     public Output<String> getRestart() {
@@ -614,7 +614,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * after creation. Defaults to `false`.
      * 
      */
-    @InputImport(name="rm")
+    @Import(name="rm")
       private final @Nullable Output<Boolean> rm;
 
     public Output<Boolean> getRm() {
@@ -626,7 +626,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * https://docs.docker.com/engine/reference/run/#security-configuration.
      * 
      */
-    @InputImport(name="securityOpts")
+    @Import(name="securityOpts")
       private final @Nullable Output<List<String>> securityOpts;
 
     public Output<List<String>> getSecurityOpts() {
@@ -637,7 +637,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Size of `/dev/shm` in MBs.
      * 
      */
-    @InputImport(name="shmSize")
+    @Import(name="shmSize")
       private final @Nullable Output<Integer> shmSize;
 
     public Output<Integer> getShmSize() {
@@ -649,7 +649,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Defaults to `true`.
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Output<Boolean> start;
 
     public Output<Boolean> getStart() {
@@ -660,7 +660,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
      * 
      */
-    @InputImport(name="stdinOpen")
+    @Import(name="stdinOpen")
       private final @Nullable Output<Boolean> stdinOpen;
 
     public Output<Boolean> getStdinOpen() {
@@ -671,7 +671,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Key/value pairs for the storage driver options, e.g. `size`: `120G`
      * 
      */
-    @InputImport(name="storageOpts")
+    @Import(name="storageOpts")
       private final @Nullable Output<Map<String,Object>> storageOpts;
 
     public Output<Map<String,Object>> getStorageOpts() {
@@ -682,7 +682,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * A map of kernel parameters (sysctls) to set in the container.
      * 
      */
-    @InputImport(name="sysctls")
+    @Import(name="sysctls")
       private final @Nullable Output<Map<String,Object>> sysctls;
 
     public Output<Map<String,Object>> getSysctls() {
@@ -693,7 +693,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
      * 
      */
-    @InputImport(name="tmpfs")
+    @Import(name="tmpfs")
       private final @Nullable Output<Map<String,Object>> tmpfs;
 
     public Output<Map<String,Object>> getTmpfs() {
@@ -704,7 +704,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
      * 
      */
-    @InputImport(name="tty")
+    @Import(name="tty")
       private final @Nullable Output<Boolean> tty;
 
     public Output<Boolean> getTty() {
@@ -715,7 +715,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Ulimit options to add.
      * 
      */
-    @InputImport(name="ulimits")
+    @Import(name="ulimits")
       private final @Nullable Output<List<ContainerUlimitGetArgs>> ulimits;
 
     public Output<List<ContainerUlimitGetArgs>> getUlimits() {
@@ -727,7 +727,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * at least one of them has to be set.
      * 
      */
-    @InputImport(name="uploads")
+    @Import(name="uploads")
       private final @Nullable Output<List<ContainerUploadGetArgs>> uploads;
 
     public Output<List<ContainerUploadGetArgs>> getUploads() {
@@ -739,7 +739,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * name.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
@@ -750,7 +750,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
      * 
      */
-    @InputImport(name="usernsMode")
+    @Import(name="usernsMode")
       private final @Nullable Output<String> usernsMode;
 
     public Output<String> getUsernsMode() {
@@ -761,7 +761,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * Spec for mounting volumes in the container.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<ContainerVolumeGetArgs>> volumes;
 
     public Output<List<ContainerVolumeGetArgs>> getVolumes() {
@@ -772,7 +772,7 @@ public final class ContainerState extends io.pulumi.resources.ResourceArgs {
      * The working directory for commands to run in.
      * 
      */
-    @InputImport(name="workingDir")
+    @Import(name="workingDir")
       private final @Nullable Output<String> workingDir;
 
     public Output<String> getWorkingDir() {

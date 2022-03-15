@@ -14,14 +14,14 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMagePolicyDetailsRespons
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RcmAzureMigrationPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmwareCbtPolicyDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyPropertiesResponse {
     /**
      * The FriendlyName.
@@ -34,10 +34,10 @@ public final class PolicyPropertiesResponse {
      */
     private final @Nullable Object providerSpecificDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyPropertiesResponse(
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails) {
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails) {
         this.friendlyName = friendlyName;
         this.providerSpecificDetails = providerSpecificDetails;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * The password for HTTP Basic authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -30,7 +30,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * The HTTP request headers to send together with fulfillment requests.
      * 
      */
-    @InputImport(name="requestHeaders")
+    @Import(name="requestHeaders")
       private final @Nullable Output<Map<String,String>> requestHeaders;
 
     public Output<Map<String,String>> getRequestHeaders() {
@@ -41,7 +41,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * The fulfillment URI for receiving POST requests. It must use https protocol.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {
@@ -52,7 +52,7 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * The user name for HTTP Basic authentication.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

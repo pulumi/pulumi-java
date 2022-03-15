@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.StorageAccountTypes;
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSetParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
      * Specifies the customer managed disk encryption set resource id for the managed disk.
      * 
      */
-    @InputImport(name="diskEncryptionSet")
+    @Import(name="diskEncryptionSet")
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
     public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
@@ -36,7 +36,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
      * Resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class ManagedDiskParametersArgs extends io.pulumi.resources.Resourc
      * Specifies the storage account type for the managed disk. Managed OS disk storage account type can only be set when you create the scale set. NOTE: UltraSSD_LRS can only be used with data disks, it cannot be used with OS Disk.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
     public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {

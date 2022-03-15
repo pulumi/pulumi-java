@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.ConnectionDetailsResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
      * List of connection details.
      * 
      */
-    @InputImport(name="connectionDetails")
+    @Import(name="connectionDetails")
       private final @Nullable List<ConnectionDetailsResponse> connectionDetails;
 
     public List<ConnectionDetailsResponse> getConnectionDetails() {
@@ -37,7 +37,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
      * Remote endpoint resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -48,7 +48,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
      * List of private link service connections that need manual approval.
      * 
      */
-    @InputImport(name="manualPrivateLinkServiceConnections")
+    @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
     public List<PrivateLinkServiceConnectionResponse> getManualPrivateLinkServiceConnections() {
@@ -59,7 +59,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
      * List of automatically approved private link service connections.
      * 
      */
-    @InputImport(name="privateLinkServiceConnections")
+    @Import(name="privateLinkServiceConnections")
       private final @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections;
 
     public List<PrivateLinkServiceConnectionResponse> getPrivateLinkServiceConnections() {
@@ -70,7 +70,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
      * List of private link service proxies.
      * 
      */
-    @InputImport(name="privateLinkServiceProxies")
+    @Import(name="privateLinkServiceProxies")
       private final @Nullable List<PrivateLinkServiceProxyResponse> privateLinkServiceProxies;
 
     public List<PrivateLinkServiceProxyResponse> getPrivateLinkServiceProxies() {
@@ -81,7 +81,7 @@ public final class RemotePrivateEndpointResponse extends io.pulumi.resources.Inv
      * Virtual network traffic tag.
      * 
      */
-    @InputImport(name="vnetTrafficTag", required=true)
+    @Import(name="vnetTrafficTag", required=true)
       private final String vnetTrafficTag;
 
     public String getVnetTrafficTag() {

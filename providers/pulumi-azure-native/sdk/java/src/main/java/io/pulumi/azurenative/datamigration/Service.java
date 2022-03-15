@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.ServiceArgs;
 import io.pulumi.azurenative.datamigration.outputs.ServiceSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * HTTP strong entity tag value. Ignored if submitted
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The resource kind. Only 'vm' (the default) is supported.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -64,7 +64,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -78,7 +78,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The resource's provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The public key of the service, used to encrypt secrets sent to the service
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
@@ -120,7 +120,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Service SKU
      * 
      */
-    @OutputExport(name="sku", type=ServiceSkuResponse.class, parameters={})
+    @Export(name="sku", type=ServiceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ServiceSkuResponse> sku;
 
     /**
@@ -134,7 +134,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -162,7 +162,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The ID of the Microsoft.Network/virtualNetworks/subnets resource to which the service should be joined
      * 
      */
-    @OutputExport(name="virtualSubnetId", type=String.class, parameters={})
+    @Export(name="virtualSubnetId", type=String.class, parameters={})
     private Output<String> virtualSubnetId;
 
     /**

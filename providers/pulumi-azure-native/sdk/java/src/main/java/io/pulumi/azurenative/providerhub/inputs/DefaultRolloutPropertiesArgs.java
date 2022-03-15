@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesSpecific
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesStatusArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,21 +22,21 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
 
     public static final DefaultRolloutPropertiesArgs Empty = new DefaultRolloutPropertiesArgs();
 
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
-    @InputImport(name="specification")
+    @Import(name="specification")
       private final @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
 
     public Output<DefaultRolloutPropertiesSpecificationArgs> getSpecification() {
         return this.specification == null ? Output.empty() : this.specification;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
 
     public Output<DefaultRolloutPropertiesStatusArgs> getStatus() {

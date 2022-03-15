@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateResponse {
     /**
      * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
@@ -57,17 +57,17 @@ public final class CertificateResponse {
      */
     private final List<String> subjectAlternativeDnsNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateResponse(
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("notAfterTime") String notAfterTime,
-        @OutputCustomType.Parameter("notBeforeTime") String notBeforeTime,
-        @OutputCustomType.Parameter("parsed") Boolean parsed,
-        @OutputCustomType.Parameter("rawDer") String rawDer,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("sha256Fingerprint") String sha256Fingerprint,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("subjectAlternativeDnsNames") List<String> subjectAlternativeDnsNames) {
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("notAfterTime") String notAfterTime,
+        @CustomType.Parameter("notBeforeTime") String notBeforeTime,
+        @CustomType.Parameter("parsed") Boolean parsed,
+        @CustomType.Parameter("rawDer") String rawDer,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("sha256Fingerprint") String sha256Fingerprint,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("subjectAlternativeDnsNames") List<String> subjectAlternativeDnsNames) {
         this.issuer = issuer;
         this.notAfterTime = notAfterTime;
         this.notBeforeTime = notBeforeTime;

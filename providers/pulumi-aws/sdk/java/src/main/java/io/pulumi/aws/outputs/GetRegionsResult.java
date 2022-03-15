@@ -4,7 +4,7 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.aws.outputs.GetRegionsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionsResult {
     private final @Nullable Boolean allRegions;
     private final @Nullable List<GetRegionsFilter> filters;
@@ -27,12 +27,12 @@ public final class GetRegionsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionsResult(
-        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetRegionsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names) {
+        @CustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @CustomType.Parameter("filters") @Nullable List<GetRegionsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names) {
         this.allRegions = allRegions;
         this.filters = filters;
         this.id = id;

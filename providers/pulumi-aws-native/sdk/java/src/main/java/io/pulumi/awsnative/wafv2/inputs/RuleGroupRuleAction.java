@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionAllowProperties;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionBlockProperties;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCaptchaProperties;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCountProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * Allow traffic towards application.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable RuleGroupRuleActionAllowProperties allow;
 
     public Optional<RuleGroupRuleActionAllowProperties> getAllow() {
@@ -36,7 +36,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * Block traffic towards application.
      * 
      */
-    @InputImport(name="block")
+    @Import(name="block")
       private final @Nullable RuleGroupRuleActionBlockProperties block;
 
     public Optional<RuleGroupRuleActionBlockProperties> getBlock() {
@@ -47,7 +47,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * Checks valid token exists with request.
      * 
      */
-    @InputImport(name="captcha")
+    @Import(name="captcha")
       private final @Nullable RuleGroupRuleActionCaptchaProperties captcha;
 
     public Optional<RuleGroupRuleActionCaptchaProperties> getCaptcha() {
@@ -58,7 +58,7 @@ public final class RuleGroupRuleAction extends io.pulumi.resources.InvokeArgs {
      * Count traffic towards application.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable RuleGroupRuleActionCountProperties count;
 
     public Optional<RuleGroupRuleActionCountProperties> getCount() {

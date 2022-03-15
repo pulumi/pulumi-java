@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ErrorDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributedNodesInfoResponse {
     /**
      * Error Details if the Status is non-success.
@@ -29,11 +29,11 @@ public final class DistributedNodesInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributedNodesInfoResponse(
-        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
-        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @CustomType.Parameter("nodeName") @Nullable String nodeName,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.errorDetail = errorDetail;
         this.nodeName = nodeName;
         this.status = status;

@@ -7,12 +7,12 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutGrpc;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutHttp2;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutHttp;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutTcp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTimeout {
     /**
      * Timeouts for gRPC listeners.
@@ -35,12 +35,12 @@ public final class VirtualNodeSpecListenerTimeout {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutTcp tcp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTimeout(
-        @OutputCustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerTimeoutGrpc grpc,
-        @OutputCustomType.Parameter("http") @Nullable VirtualNodeSpecListenerTimeoutHttp http,
-        @OutputCustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerTimeoutHttp2 http2,
-        @OutputCustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
+        @CustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerTimeoutGrpc grpc,
+        @CustomType.Parameter("http") @Nullable VirtualNodeSpecListenerTimeoutHttp http,
+        @CustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerTimeoutHttp2 http2,
+        @CustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;

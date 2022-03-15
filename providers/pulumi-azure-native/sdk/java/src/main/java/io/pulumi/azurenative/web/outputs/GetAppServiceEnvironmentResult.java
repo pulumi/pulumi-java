@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.NameValuePairResponse;
 import io.pulumi.azurenative.web.outputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppServiceEnvironmentResult {
     /**
      * Custom settings for changing the behavior of the App Service Environment.
@@ -124,29 +124,29 @@ public final class GetAppServiceEnvironmentResult {
      */
     private final VirtualNetworkProfileResponse virtualNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppServiceEnvironmentResult(
-        @OutputCustomType.Parameter("clusterSettings") @Nullable List<NameValuePairResponse> clusterSettings,
-        @OutputCustomType.Parameter("dedicatedHostCount") Integer dedicatedHostCount,
-        @OutputCustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
-        @OutputCustomType.Parameter("frontEndScaleFactor") @Nullable Integer frontEndScaleFactor,
-        @OutputCustomType.Parameter("hasLinuxWorkers") Boolean hasLinuxWorkers,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("internalLoadBalancingMode") @Nullable String internalLoadBalancingMode,
-        @OutputCustomType.Parameter("ipsslAddressCount") @Nullable Integer ipsslAddressCount,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maximumNumberOfMachines") Integer maximumNumberOfMachines,
-        @OutputCustomType.Parameter("multiRoleCount") Integer multiRoleCount,
-        @OutputCustomType.Parameter("multiSize") @Nullable String multiSize,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("suspended") Boolean suspended,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userWhitelistedIpRanges") @Nullable List<String> userWhitelistedIpRanges,
-        @OutputCustomType.Parameter("virtualNetwork") VirtualNetworkProfileResponse virtualNetwork) {
+        @CustomType.Parameter("clusterSettings") @Nullable List<NameValuePairResponse> clusterSettings,
+        @CustomType.Parameter("dedicatedHostCount") Integer dedicatedHostCount,
+        @CustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
+        @CustomType.Parameter("frontEndScaleFactor") @Nullable Integer frontEndScaleFactor,
+        @CustomType.Parameter("hasLinuxWorkers") Boolean hasLinuxWorkers,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("internalLoadBalancingMode") @Nullable String internalLoadBalancingMode,
+        @CustomType.Parameter("ipsslAddressCount") @Nullable Integer ipsslAddressCount,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maximumNumberOfMachines") Integer maximumNumberOfMachines,
+        @CustomType.Parameter("multiRoleCount") Integer multiRoleCount,
+        @CustomType.Parameter("multiSize") @Nullable String multiSize,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("suspended") Boolean suspended,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userWhitelistedIpRanges") @Nullable List<String> userWhitelistedIpRanges,
+        @CustomType.Parameter("virtualNetwork") VirtualNetworkProfileResponse virtualNetwork) {
         this.clusterSettings = clusterSettings;
         this.dedicatedHostCount = dedicatedHostCount;
         this.dnsSuffix = dnsSuffix;

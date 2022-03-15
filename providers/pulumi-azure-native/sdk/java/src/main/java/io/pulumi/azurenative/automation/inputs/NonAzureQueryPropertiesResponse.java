@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
      * Log Analytics Saved Search name.
      * 
      */
-    @InputImport(name="functionAlias")
+    @Import(name="functionAlias")
       private final @Nullable String functionAlias;
 
     public Optional<String> getFunctionAlias() {
@@ -33,7 +33,7 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
      * Workspace Id for Log Analytics in which the saved Search is resided.
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {

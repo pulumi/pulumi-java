@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetParameterArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the parameter.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -30,7 +30,7 @@ public final class GetParameterArgs extends io.pulumi.resources.InvokeArgs {
      * Whether to return decrypted `SecureString` value. Defaults to `true`.
      * 
      */
-    @InputImport(name="withDecryption")
+    @Import(name="withDecryption")
       private final @Nullable Boolean withDecryption;
 
     public Optional<Boolean> getWithDecryption() {

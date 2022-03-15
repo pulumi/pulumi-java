@@ -4,7 +4,7 @@
 package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
      * The type of key; one of `SSE_S3`, `SSE_KMS`, `CSE_KMS`
      * 
      */
-    @InputImport(name="encryptionOption", required=true)
+    @Import(name="encryptionOption", required=true)
       private final Output<String> encryptionOption;
 
     public Output<String> getEncryptionOption() {
@@ -29,7 +29,7 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
      * The KMS key ARN or ID; required for key types `SSE_KMS` and `CSE_KMS`.
      * 
      */
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {

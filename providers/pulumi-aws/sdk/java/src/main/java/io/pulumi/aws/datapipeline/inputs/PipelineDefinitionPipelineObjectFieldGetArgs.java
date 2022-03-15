@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
      * Field identifier.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -29,7 +29,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
      * Field value, expressed as the identifier of another object
      * 
      */
-    @InputImport(name="refValue")
+    @Import(name="refValue")
       private final @Nullable Output<String> refValue;
 
     public Output<String> getRefValue() {
@@ -40,7 +40,7 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
      * Field value, expressed as a String.
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {

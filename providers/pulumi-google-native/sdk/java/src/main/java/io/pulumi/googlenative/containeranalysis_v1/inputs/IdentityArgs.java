@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The revision number of the update.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
     public Output<Integer> getRevision() {
@@ -34,7 +34,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The revision independent identifier of the update.
      * 
      */
-    @InputImport(name="updateId")
+    @Import(name="updateId")
       private final @Nullable Output<String> updateId;
 
     public Output<String> getUpdateId() {

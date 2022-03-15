@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntentFulfillmentActivityCodeHook {
     /**
      * The version of the request-response that you want Amazon Lex to use
@@ -22,10 +22,10 @@ public final class IntentFulfillmentActivityCodeHook {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentFulfillmentActivityCodeHook(
-        @OutputCustomType.Parameter("messageVersion") String messageVersion,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("messageVersion") String messageVersion,
+        @CustomType.Parameter("uri") String uri) {
         this.messageVersion = messageVersion;
         this.uri = uri;
     }

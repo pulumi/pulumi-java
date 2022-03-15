@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionActionConditionProperties;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionLabelNameConditionProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
      * A single action condition.
      * 
      */
-    @InputImport(name="actionCondition")
+    @Import(name="actionCondition")
       private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
 
     public Optional<LoggingConfigurationConditionActionConditionProperties> getActionCondition() {
@@ -30,7 +30,7 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
      * A single label name condition.
      * 
      */
-    @InputImport(name="labelNameCondition")
+    @Import(name="labelNameCondition")
       private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
     public Optional<LoggingConfigurationConditionLabelNameConditionProperties> getLabelNameCondition() {

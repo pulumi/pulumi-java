@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
      * Number of milliseconds a token is valid after being authenticated.
      * 
      */
-    @InputImport(name="authTtl")
+    @Import(name="authTtl")
       private final @Nullable Output<Integer> authTtl;
 
     public Output<Integer> getAuthTtl() {
@@ -30,7 +30,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
      * Client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -41,7 +41,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
      * Number of milliseconds a token is valid after being issued to a user.
      * 
      */
-    @InputImport(name="iatTtl")
+    @Import(name="iatTtl")
       private final @Nullable Output<Integer> iatTtl;
 
     public Output<Integer> getIatTtl() {
@@ -52,7 +52,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
      * Issuer for the OpenID Connect configuration. The issuer returned by discovery MUST exactly match the value of iss in the ID Token.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
     public Output<String> getIssuer() {

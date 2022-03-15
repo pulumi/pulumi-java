@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainEbsOption {
     /**
      * Whether EBS volumes are attached to data nodes in the domain.
@@ -32,12 +32,12 @@ public final class GetDomainEbsOption {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainEbsOption(
-        @OutputCustomType.Parameter("ebsEnabled") Boolean ebsEnabled,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("ebsEnabled") Boolean ebsEnabled,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("volumeSize") Integer volumeSize,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.ebsEnabled = ebsEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;

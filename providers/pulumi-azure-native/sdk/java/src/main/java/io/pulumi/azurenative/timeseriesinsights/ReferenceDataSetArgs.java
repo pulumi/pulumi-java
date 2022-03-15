@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.DataStringComparisonBehavi
 import io.pulumi.azurenative.timeseriesinsights.inputs.ReferenceDataSetKeyPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
      * 
      */
-    @InputImport(name="dataStringComparisonBehavior")
+    @Import(name="dataStringComparisonBehavior")
       private final @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
     public Output<Either<String,DataStringComparisonBehavior>> getDataStringComparisonBehavior() {
@@ -34,7 +34,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -45,7 +45,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * The list of key properties for the reference data set.
      * 
      */
-    @InputImport(name="keyProperties", required=true)
+    @Import(name="keyProperties", required=true)
       private final Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
     public Output<List<ReferenceDataSetKeyPropertyArgs>> getKeyProperties() {
@@ -56,7 +56,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * Name of the reference data set.
      * 
      */
-    @InputImport(name="referenceDataSetName")
+    @Import(name="referenceDataSetName")
       private final @Nullable Output<String> referenceDataSetName;
 
     public Output<String> getReferenceDataSetName() {
@@ -78,7 +78,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class ReferenceDataSetArgs extends io.pulumi.resources.ResourceArgs
      * Key-value pairs of additional properties for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

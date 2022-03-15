@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContainerActionArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetQueryActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DatasetActionArgs Empty = new DatasetActionArgs();
 
-    @InputImport(name="actionName", required=true)
+    @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
     public Output<String> getActionName() {
         return this.actionName;
     }
 
-    @InputImport(name="containerAction")
+    @Import(name="containerAction")
       private final @Nullable Output<DatasetContainerActionArgs> containerAction;
 
     public Output<DatasetContainerActionArgs> getContainerAction() {
         return this.containerAction == null ? Output.empty() : this.containerAction;
     }
 
-    @InputImport(name="queryAction")
+    @Import(name="queryAction")
       private final @Nullable Output<DatasetQueryActionArgs> queryAction;
 
     public Output<DatasetQueryActionArgs> getQueryAction() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appplatform.outputs.AppResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.ManagedIdentityPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The Managed Identity type of the app resource
      * 
      */
-    @OutputExport(name="identity", type=ManagedIdentityPropertiesResponse.class, parameters={})
+    @Export(name="identity", type=ManagedIdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityPropertiesResponse> identity;
 
     /**
@@ -50,7 +50,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The GEO location of the application, always the same with its parent resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Properties of the App resource
      * 
      */
-    @OutputExport(name="properties", type=AppResourcePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=AppResourcePropertiesResponse.class, parameters={})
     private Output<AppResourcePropertiesResponse> properties;
 
     /**
@@ -92,7 +92,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

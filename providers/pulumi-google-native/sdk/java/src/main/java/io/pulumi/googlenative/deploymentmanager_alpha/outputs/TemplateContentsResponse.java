@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ImportFileResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TemplateContentsResponse {
     /**
      * Import files referenced by the main template.
@@ -37,13 +37,13 @@ public final class TemplateContentsResponse {
      */
     private final String template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateContentsResponse(
-        @OutputCustomType.Parameter("imports") List<ImportFileResponse> imports,
-        @OutputCustomType.Parameter("interpreter") String interpreter,
-        @OutputCustomType.Parameter("mainTemplate") String mainTemplate,
-        @OutputCustomType.Parameter("schema") String schema,
-        @OutputCustomType.Parameter("template") String template) {
+        @CustomType.Parameter("imports") List<ImportFileResponse> imports,
+        @CustomType.Parameter("interpreter") String interpreter,
+        @CustomType.Parameter("mainTemplate") String mainTemplate,
+        @CustomType.Parameter("schema") String schema,
+        @CustomType.Parameter("template") String template) {
         this.imports = imports;
         this.interpreter = interpreter;
         this.mainTemplate = mainTemplate;

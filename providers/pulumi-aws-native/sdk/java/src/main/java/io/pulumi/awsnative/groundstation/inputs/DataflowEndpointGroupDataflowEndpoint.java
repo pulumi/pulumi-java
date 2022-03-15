@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSocketAddress;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class DataflowEndpointGroupDataflowEndpoint extends io.pulumi.resou
 
     public static final DataflowEndpointGroupDataflowEndpoint Empty = new DataflowEndpointGroupDataflowEndpoint();
 
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable DataflowEndpointGroupSocketAddress address;
 
     public Optional<DataflowEndpointGroupSocketAddress> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Integer mtu;
 
     public Optional<Integer> getMtu() {
         return this.mtu == null ? Optional.empty() : Optional.ofNullable(this.mtu);
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoResponse {
     /**
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
@@ -38,13 +38,13 @@ public final class VideoResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoResponse(
-        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
-        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
+        @CustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @CustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.odataType = odataType;

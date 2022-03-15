@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigateway_v1.ApiArgs;
@@ -23,7 +23,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Created time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Optional. Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -51,7 +51,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -65,7 +65,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Optional. Immutable. The name of a Google Managed Service ( https://cloud.google.com/service-infrastructure/docs/glossary#managed). If not specified, a new Service will automatically be created in the same project as this API.
      * 
      */
-    @OutputExport(name="managedService", type=String.class, parameters={})
+    @Export(name="managedService", type=String.class, parameters={})
     private Output<String> managedService;
 
     /**
@@ -79,7 +79,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * State of the API.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -107,7 +107,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Updated time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

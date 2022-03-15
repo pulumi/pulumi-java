@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamedValueResult {
     /**
      * Unique name of NamedValue. It may contain only letters, digits, period, dash, and underscore characters.
@@ -55,16 +55,16 @@ public final class GetNamedValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNamedValueResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secret") @Nullable Boolean secret,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secret") @Nullable Boolean secret,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.displayName = displayName;
         this.id = id;
         this.keyVault = keyVault;

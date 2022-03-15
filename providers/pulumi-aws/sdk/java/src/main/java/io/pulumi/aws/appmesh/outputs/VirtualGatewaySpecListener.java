@@ -7,12 +7,12 @@ import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerConnectionPool;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerHealthCheck;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerPortMapping;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListenerTls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListener {
     /**
      * The connection pool information for the listener.
@@ -35,12 +35,12 @@ public final class VirtualGatewaySpecListener {
      */
     private final @Nullable VirtualGatewaySpecListenerTls tls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecListener(
-        @OutputCustomType.Parameter("connectionPool") @Nullable VirtualGatewaySpecListenerConnectionPool connectionPool,
-        @OutputCustomType.Parameter("healthCheck") @Nullable VirtualGatewaySpecListenerHealthCheck healthCheck,
-        @OutputCustomType.Parameter("portMapping") VirtualGatewaySpecListenerPortMapping portMapping,
-        @OutputCustomType.Parameter("tls") @Nullable VirtualGatewaySpecListenerTls tls) {
+        @CustomType.Parameter("connectionPool") @Nullable VirtualGatewaySpecListenerConnectionPool connectionPool,
+        @CustomType.Parameter("healthCheck") @Nullable VirtualGatewaySpecListenerHealthCheck healthCheck,
+        @CustomType.Parameter("portMapping") VirtualGatewaySpecListenerPortMapping portMapping,
+        @CustomType.Parameter("tls") @Nullable VirtualGatewaySpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.portMapping = portMapping;

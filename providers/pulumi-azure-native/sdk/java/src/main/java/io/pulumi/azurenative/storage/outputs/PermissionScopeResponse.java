@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PermissionScopeResponse {
     /**
      * The permissions for the local user. Possible values include: Read (r), Write (w), Delete (d), List (l), and Create (c).
@@ -25,11 +25,11 @@ public final class PermissionScopeResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PermissionScopeResponse(
-        @OutputCustomType.Parameter("permissions") String permissions,
-        @OutputCustomType.Parameter("resourceName") String resourceName,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("permissions") String permissions,
+        @CustomType.Parameter("resourceName") String resourceName,
+        @CustomType.Parameter("service") String service) {
         this.permissions = permissions;
         this.resourceName = resourceName;
         this.service = service;

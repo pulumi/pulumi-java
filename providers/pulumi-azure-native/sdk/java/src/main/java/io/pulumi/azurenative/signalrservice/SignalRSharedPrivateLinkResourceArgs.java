@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.signalrservice;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * The group id from the provider of resource the shared private link resource is for
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -29,7 +29,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * The resource id of the resource the shared private link resource is for
      * 
      */
-    @InputImport(name="privateLinkResourceId", required=true)
+    @Import(name="privateLinkResourceId", required=true)
       private final Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -40,7 +40,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * The request message for requesting approval of the shared private link resource
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {
@@ -51,7 +51,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * The name of the resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -73,7 +73,7 @@ public final class SignalRSharedPrivateLinkResourceArgs extends io.pulumi.resour
      * The name of the shared private link resource
      * 
      */
-    @InputImport(name="sharedPrivateLinkResourceName")
+    @Import(name="sharedPrivateLinkResourceName")
       private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
     public Output<String> getSharedPrivateLinkResourceName() {

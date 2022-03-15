@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyBooleanPolicyArgs;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyArgs;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyRestorePolicyArgs;
@@ -22,7 +22,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * A boolean policy is a constraint that is either enforced or not. Structure is documented below.
      * 
      */
-    @InputImport(name="booleanPolicy")
+    @Import(name="booleanPolicy")
       private final @Nullable Output<OrganizationPolicyBooleanPolicyArgs> booleanPolicy;
 
     public Output<OrganizationPolicyBooleanPolicyArgs> getBooleanPolicy() {
@@ -33,7 +33,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    @InputImport(name="constraint", required=true)
+    @Import(name="constraint", required=true)
       private final Output<String> constraint;
 
     public Output<String> getConstraint() {
@@ -44,7 +44,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
      * 
      */
-    @InputImport(name="folder", required=true)
+    @Import(name="folder", required=true)
       private final Output<String> folder;
 
     public Output<String> getFolder() {
@@ -56,7 +56,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    @InputImport(name="listPolicy")
+    @Import(name="listPolicy")
       private final @Nullable Output<OrganizationPolicyListPolicyArgs> listPolicy;
 
     public Output<OrganizationPolicyListPolicyArgs> getListPolicy() {
@@ -67,7 +67,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    @InputImport(name="restorePolicy")
+    @Import(name="restorePolicy")
       private final @Nullable Output<OrganizationPolicyRestorePolicyArgs> restorePolicy;
 
     public Output<OrganizationPolicyRestorePolicyArgs> getRestorePolicy() {
@@ -78,7 +78,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Version of the Policy. Default version is 0.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

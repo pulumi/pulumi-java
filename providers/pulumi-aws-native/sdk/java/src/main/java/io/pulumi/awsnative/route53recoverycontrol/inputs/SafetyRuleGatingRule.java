@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
      * The gating controls for the gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
      * 
      */
-    @InputImport(name="gatingControls", required=true)
+    @Import(name="gatingControls", required=true)
       private final List<String> gatingControls;
 
     public List<String> getGatingControls() {
@@ -34,7 +34,7 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
      * In other words, your ability to change the routing controls that you have specified as TargetControls is gated by the rule that you set for the routing controls in GatingControls.
      * 
      */
-    @InputImport(name="targetControls", required=true)
+    @Import(name="targetControls", required=true)
       private final List<String> targetControls;
 
     public List<String> getTargetControls() {
@@ -45,7 +45,7 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
      * An evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail. This helps prevent "flapping" of state. The wait period is 5000 ms by default, but you can choose a custom value.
      * 
      */
-    @InputImport(name="waitPeriodMs", required=true)
+    @Import(name="waitPeriodMs", required=true)
       private final Integer waitPeriodMs;
 
     public Integer getWaitPeriodMs() {

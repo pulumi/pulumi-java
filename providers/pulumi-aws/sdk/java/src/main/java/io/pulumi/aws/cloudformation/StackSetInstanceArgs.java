@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudformation;
 
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -32,7 +32,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
-    @InputImport(name="deploymentTargets")
+    @Import(name="deploymentTargets")
       private final @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
 
     public Output<StackSetInstanceDeploymentTargetsArgs> getDeploymentTargets() {
@@ -43,7 +43,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Key-value map of input parameters to override from the StackSet for this Instance.
      * 
      */
-    @InputImport(name="parameterOverrides")
+    @Import(name="parameterOverrides")
       private final @Nullable Output<Map<String,String>> parameterOverrides;
 
     public Output<Map<String,String>> getParameterOverrides() {
@@ -54,7 +54,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -65,7 +65,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
      * 
      */
-    @InputImport(name="retainStack")
+    @Import(name="retainStack")
       private final @Nullable Output<Boolean> retainStack;
 
     public Output<Boolean> getRetainStack() {
@@ -76,7 +76,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Name of the StackSet.
      * 
      */
-    @InputImport(name="stackSetName", required=true)
+    @Import(name="stackSetName", required=true)
       private final Output<String> stackSetName;
 
     public Output<String> getStackSetName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigtable.inputs.TableColumnFamilyArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
      * 
      */
-    @InputImport(name="columnFamilies")
+    @Import(name="columnFamilies")
       private final @Nullable Output<List<TableColumnFamilyArgs>> columnFamilies;
 
     public Output<List<TableColumnFamilyArgs>> getColumnFamilies() {
@@ -31,7 +31,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Bigtable instance.
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -42,7 +42,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the table.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -67,7 +67,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */
-    @InputImport(name="splitKeys")
+    @Import(name="splitKeys")
       private final @Nullable Output<List<String>> splitKeys;
 
     public Output<List<String>> getSplitKeys() {

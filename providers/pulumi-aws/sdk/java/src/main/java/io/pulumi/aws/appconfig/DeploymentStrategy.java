@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appconfig.DeploymentStrategyArgs;
 import io.pulumi.aws.appconfig.inputs.DeploymentStrategyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -35,7 +35,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the AppConfig Deployment Strategy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * Total amount of time for a deployment to last. Minimum value of 0, maximum value of 1440.
      * 
      */
-    @OutputExport(name="deploymentDurationInMinutes", type=Integer.class, parameters={})
+    @Export(name="deploymentDurationInMinutes", type=Integer.class, parameters={})
     private Output<Integer> deploymentDurationInMinutes;
 
     /**
@@ -63,7 +63,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * A description of the deployment strategy. Can be at most 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * The amount of time AWS AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic roll back. Minimum value of 0, maximum value of 1440.
      * 
      */
-    @OutputExport(name="finalBakeTimeInMinutes", type=Integer.class, parameters={})
+    @Export(name="finalBakeTimeInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> finalBakeTimeInMinutes;
 
     /**
@@ -91,7 +91,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * The percentage of targets to receive a deployed configuration during each interval. Minimum value of 1.0, maximum value of 100.0.
      * 
      */
-    @OutputExport(name="growthFactor", type=Double.class, parameters={})
+    @Export(name="growthFactor", type=Double.class, parameters={})
     private Output<Double> growthFactor;
 
     /**
@@ -105,7 +105,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * The algorithm used to define how percentage grows over time. Valid value: `LINEAR` and `EXPONENTIAL`. Defaults to `LINEAR`.
      * 
      */
-    @OutputExport(name="growthType", type=String.class, parameters={})
+    @Export(name="growthType", type=String.class, parameters={})
     private Output</* @Nullable */ String> growthType;
 
     /**
@@ -119,7 +119,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * A name for the deployment strategy. Must be between 1 and 64 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * Where to save the deployment strategy. Valid values: `NONE` and `SSM_DOCUMENT`.
      * 
      */
-    @OutputExport(name="replicateTo", type=String.class, parameters={})
+    @Export(name="replicateTo", type=String.class, parameters={})
     private Output<String> replicateTo;
 
     /**
@@ -147,7 +147,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -161,7 +161,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
      * The name of a CloudEvents attribute. Currently, only a subset of attributes can be specified. All triggers MUST provide a matching criteria for the 'type' attribute.
      * 
      */
-    @InputImport(name="attribute", required=true)
+    @Import(name="attribute", required=true)
       private final String attribute;
 
     public String getAttribute() {
@@ -31,7 +31,7 @@ public final class MatchingCriteriaResponse extends io.pulumi.resources.InvokeAr
      * The value for the attribute.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

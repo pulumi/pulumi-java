@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * The flag indicating whether the Azure File shared mounted as a volume is read-only.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Boolean readOnly;
 
     public Optional<Boolean> getReadOnly() {
@@ -34,7 +34,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * The name of the Azure File share to be mounted as a volume.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final String shareName;
 
     public String getShareName() {
@@ -45,7 +45,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * The storage account access key used to access the Azure File share.
      * 
      */
-    @InputImport(name="storageAccountKey")
+    @Import(name="storageAccountKey")
       private final @Nullable String storageAccountKey;
 
     public Optional<String> getStorageAccountKey() {
@@ -56,7 +56,7 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
      * The name of the storage account that contains the Azure File share.
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
     public String getStorageAccountName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
      * Fqdn that resolves to private endpoint ip address.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
@@ -34,7 +34,7 @@ public final class CustomDnsConfigPropertiesFormatResponse extends io.pulumi.res
      * A list of private ip addresses of the private endpoint.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {

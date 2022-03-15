@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAddressResult {
     /**
      * The IP of the created resource.
@@ -33,15 +33,15 @@ public final class GetAddressResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAddressResult(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("status") String status) {
         this.address = address;
         this.id = id;
         this.name = name;

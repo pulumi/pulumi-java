@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the network profile.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
      * 
      */
-    @InputImport(name="downlinkBandwidthBits")
+    @Import(name="downlinkBandwidthBits")
       private final @Nullable Output<Integer> downlinkBandwidthBits;
 
     public Output<Integer> getDownlinkBandwidthBits() {
@@ -42,7 +42,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    @InputImport(name="downlinkDelayMs")
+    @Import(name="downlinkDelayMs")
       private final @Nullable Output<Integer> downlinkDelayMs;
 
     public Output<Integer> getDownlinkDelayMs() {
@@ -53,7 +53,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    @InputImport(name="downlinkJitterMs")
+    @Import(name="downlinkJitterMs")
       private final @Nullable Output<Integer> downlinkJitterMs;
 
     public Output<Integer> getDownlinkJitterMs() {
@@ -64,7 +64,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Proportion of received packets that fail to arrive from `0` to `100` percent.
      * 
      */
-    @InputImport(name="downlinkLossPercent")
+    @Import(name="downlinkLossPercent")
       private final @Nullable Output<Integer> downlinkLossPercent;
 
     public Output<Integer> getDownlinkLossPercent() {
@@ -75,7 +75,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the network profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the project for the network profile.
      * 
      */
-    @InputImport(name="projectArn", required=true)
+    @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
     public Output<String> getProjectArn() {
@@ -97,7 +97,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -119,7 +119,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The type of network profile to create. Valid values are listed are `PRIVATE` and `CURATED`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -130,7 +130,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
      * 
      */
-    @InputImport(name="uplinkBandwidthBits")
+    @Import(name="uplinkBandwidthBits")
       private final @Nullable Output<Integer> uplinkBandwidthBits;
 
     public Output<Integer> getUplinkBandwidthBits() {
@@ -141,7 +141,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    @InputImport(name="uplinkDelayMs")
+    @Import(name="uplinkDelayMs")
       private final @Nullable Output<Integer> uplinkDelayMs;
 
     public Output<Integer> getUplinkDelayMs() {
@@ -152,7 +152,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    @InputImport(name="uplinkJitterMs")
+    @Import(name="uplinkJitterMs")
       private final @Nullable Output<Integer> uplinkJitterMs;
 
     public Output<Integer> getUplinkJitterMs() {
@@ -163,7 +163,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Proportion of received packets that fail to arrive from `0` to `100` percent.
      * 
      */
-    @InputImport(name="uplinkLossPercent")
+    @Import(name="uplinkLossPercent")
       private final @Nullable Output<Integer> uplinkLossPercent;
 
     public Output<Integer> getUplinkLossPercent() {

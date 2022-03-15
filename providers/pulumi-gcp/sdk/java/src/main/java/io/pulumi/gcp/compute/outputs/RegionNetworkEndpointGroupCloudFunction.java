@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionNetworkEndpointGroupCloudFunction {
     /**
      * A user-defined name of the Cloud Function.
@@ -29,10 +29,10 @@ public final class RegionNetworkEndpointGroupCloudFunction {
      */
     private final @Nullable String urlMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionNetworkEndpointGroupCloudFunction(
-        @OutputCustomType.Parameter("function") @Nullable String function,
-        @OutputCustomType.Parameter("urlMask") @Nullable String urlMask) {
+        @CustomType.Parameter("function") @Nullable String function,
+        @CustomType.Parameter("urlMask") @Nullable String urlMask) {
         this.function = function;
         this.urlMask = urlMask;
     }

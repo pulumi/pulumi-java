@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.AWSElasticBlockStoreVolumeSource;
 import io.pulumi.kubernetes.core_v1.outputs.AzureDiskVolumeSource;
 import io.pulumi.kubernetes.core_v1.outputs.AzureFilePersistentVolumeSource;
@@ -35,7 +35,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeSpec {
     /**
      * AccessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes
@@ -193,38 +193,38 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable VsphereVirtualDiskVolumeSource vsphereVolume;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeSpec(
-        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
-        @OutputCustomType.Parameter("awsElasticBlockStore") @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore,
-        @OutputCustomType.Parameter("azureDisk") @Nullable AzureDiskVolumeSource azureDisk,
-        @OutputCustomType.Parameter("azureFile") @Nullable AzureFilePersistentVolumeSource azureFile,
-        @OutputCustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
-        @OutputCustomType.Parameter("cephfs") @Nullable CephFSPersistentVolumeSource cephfs,
-        @OutputCustomType.Parameter("cinder") @Nullable CinderPersistentVolumeSource cinder,
-        @OutputCustomType.Parameter("claimRef") @Nullable ObjectReference claimRef,
-        @OutputCustomType.Parameter("csi") @Nullable CSIPersistentVolumeSource csi,
-        @OutputCustomType.Parameter("fc") @Nullable FCVolumeSource fc,
-        @OutputCustomType.Parameter("flexVolume") @Nullable FlexPersistentVolumeSource flexVolume,
-        @OutputCustomType.Parameter("flocker") @Nullable FlockerVolumeSource flocker,
-        @OutputCustomType.Parameter("gcePersistentDisk") @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk,
-        @OutputCustomType.Parameter("glusterfs") @Nullable GlusterfsPersistentVolumeSource glusterfs,
-        @OutputCustomType.Parameter("hostPath") @Nullable HostPathVolumeSource hostPath,
-        @OutputCustomType.Parameter("iscsi") @Nullable ISCSIPersistentVolumeSource iscsi,
-        @OutputCustomType.Parameter("local") @Nullable LocalVolumeSource local,
-        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
-        @OutputCustomType.Parameter("nfs") @Nullable NFSVolumeSource nfs,
-        @OutputCustomType.Parameter("nodeAffinity") @Nullable VolumeNodeAffinity nodeAffinity,
-        @OutputCustomType.Parameter("persistentVolumeReclaimPolicy") @Nullable String persistentVolumeReclaimPolicy,
-        @OutputCustomType.Parameter("photonPersistentDisk") @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk,
-        @OutputCustomType.Parameter("portworxVolume") @Nullable PortworxVolumeSource portworxVolume,
-        @OutputCustomType.Parameter("quobyte") @Nullable QuobyteVolumeSource quobyte,
-        @OutputCustomType.Parameter("rbd") @Nullable RBDPersistentVolumeSource rbd,
-        @OutputCustomType.Parameter("scaleIO") @Nullable ScaleIOPersistentVolumeSource scaleIO,
-        @OutputCustomType.Parameter("storageClassName") @Nullable String storageClassName,
-        @OutputCustomType.Parameter("storageos") @Nullable StorageOSPersistentVolumeSource storageos,
-        @OutputCustomType.Parameter("volumeMode") @Nullable String volumeMode,
-        @OutputCustomType.Parameter("vsphereVolume") @Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
+        @CustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @CustomType.Parameter("awsElasticBlockStore") @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore,
+        @CustomType.Parameter("azureDisk") @Nullable AzureDiskVolumeSource azureDisk,
+        @CustomType.Parameter("azureFile") @Nullable AzureFilePersistentVolumeSource azureFile,
+        @CustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
+        @CustomType.Parameter("cephfs") @Nullable CephFSPersistentVolumeSource cephfs,
+        @CustomType.Parameter("cinder") @Nullable CinderPersistentVolumeSource cinder,
+        @CustomType.Parameter("claimRef") @Nullable ObjectReference claimRef,
+        @CustomType.Parameter("csi") @Nullable CSIPersistentVolumeSource csi,
+        @CustomType.Parameter("fc") @Nullable FCVolumeSource fc,
+        @CustomType.Parameter("flexVolume") @Nullable FlexPersistentVolumeSource flexVolume,
+        @CustomType.Parameter("flocker") @Nullable FlockerVolumeSource flocker,
+        @CustomType.Parameter("gcePersistentDisk") @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk,
+        @CustomType.Parameter("glusterfs") @Nullable GlusterfsPersistentVolumeSource glusterfs,
+        @CustomType.Parameter("hostPath") @Nullable HostPathVolumeSource hostPath,
+        @CustomType.Parameter("iscsi") @Nullable ISCSIPersistentVolumeSource iscsi,
+        @CustomType.Parameter("local") @Nullable LocalVolumeSource local,
+        @CustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @CustomType.Parameter("nfs") @Nullable NFSVolumeSource nfs,
+        @CustomType.Parameter("nodeAffinity") @Nullable VolumeNodeAffinity nodeAffinity,
+        @CustomType.Parameter("persistentVolumeReclaimPolicy") @Nullable String persistentVolumeReclaimPolicy,
+        @CustomType.Parameter("photonPersistentDisk") @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk,
+        @CustomType.Parameter("portworxVolume") @Nullable PortworxVolumeSource portworxVolume,
+        @CustomType.Parameter("quobyte") @Nullable QuobyteVolumeSource quobyte,
+        @CustomType.Parameter("rbd") @Nullable RBDPersistentVolumeSource rbd,
+        @CustomType.Parameter("scaleIO") @Nullable ScaleIOPersistentVolumeSource scaleIO,
+        @CustomType.Parameter("storageClassName") @Nullable String storageClassName,
+        @CustomType.Parameter("storageos") @Nullable StorageOSPersistentVolumeSource storageos,
+        @CustomType.Parameter("volumeMode") @Nullable String volumeMode,
+        @CustomType.Parameter("vsphereVolume") @Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
         this.accessModes = accessModes;
         this.awsElasticBlockStore = awsElasticBlockStore;
         this.azureDisk = azureDisk;

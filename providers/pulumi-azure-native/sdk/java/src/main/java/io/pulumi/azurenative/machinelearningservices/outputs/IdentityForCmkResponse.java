@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentityForCmkResponse {
     /**
      * The ArmId of the user assigned identity that will be used to access the customer managed key vault
@@ -15,8 +15,8 @@ public final class IdentityForCmkResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
-    private IdentityForCmkResponse(@OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
+    @CustomType.Constructor
+    private IdentityForCmkResponse(@CustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 

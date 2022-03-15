@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeInstanceApplicationResponse {
     /**
      * Name of the ComputeInstance application.
@@ -22,10 +22,10 @@ public final class ComputeInstanceApplicationResponse {
      */
     private final @Nullable String endpointUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeInstanceApplicationResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("endpointUri") @Nullable String endpointUri) {
         this.displayName = displayName;
         this.endpointUri = endpointUri;
     }

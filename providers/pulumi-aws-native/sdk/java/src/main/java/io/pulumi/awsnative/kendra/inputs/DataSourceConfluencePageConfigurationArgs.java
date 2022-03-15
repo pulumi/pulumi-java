@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluencePageToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DataSourceConfluencePageConfigurationArgs extends io.pulumi.r
 
     public static final DataSourceConfluencePageConfigurationArgs Empty = new DataSourceConfluencePageConfigurationArgs();
 
-    @InputImport(name="pageFieldMappings")
+    @Import(name="pageFieldMappings")
       private final @Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
 
     public Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> getPageFieldMappings() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpHeaderMatchResponse {
     /**
      * The name of the HTTP header to match. For matching against the HTTP request's authority, use a headerMatch with the header name ":authority". For matching a request's method, use the headerName ":method".
@@ -20,10 +20,10 @@ public final class HttpHeaderMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpHeaderMatchResponse(
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("regexMatch") String regexMatch) {
         this.headerName = headerName;
         this.regexMatch = regexMatch;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.ErrorDetailResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * The hybrid machine agent full version.
      * 
      */
-    @InputImport(name="agentVersion", required=true)
+    @Import(name="agentVersion", required=true)
       private final String agentVersion;
 
     public String getAgentVersion() {
@@ -33,7 +33,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * Details about the error state.
      * 
      */
-    @InputImport(name="errorDetails", required=true)
+    @Import(name="errorDetails", required=true)
       private final List<ErrorDetailResponse> errorDetails;
 
     public List<ErrorDetailResponse> getErrorDetails() {
@@ -44,7 +44,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * The time of the last status change.
      * 
      */
-    @InputImport(name="lastStatusChange", required=true)
+    @Import(name="lastStatusChange", required=true)
       private final String lastStatusChange;
 
     public String getLastStatusChange() {
@@ -55,7 +55,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * The status of the hybrid machine agent.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -66,7 +66,7 @@ public final class GuestAgentProfileResponse extends io.pulumi.resources.InvokeA
      * Specifies the VM's unique SMBIOS ID.
      * 
      */
-    @InputImport(name="vmUuid", required=true)
+    @Import(name="vmUuid", required=true)
       private final String vmUuid;
 
     public String getVmUuid() {

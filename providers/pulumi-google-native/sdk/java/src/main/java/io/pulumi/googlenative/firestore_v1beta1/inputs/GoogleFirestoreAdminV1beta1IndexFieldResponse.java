@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends io.pulu
      * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
      * 
      */
-    @InputImport(name="fieldPath", required=true)
+    @Import(name="fieldPath", required=true)
       private final String fieldPath;
 
     public String getFieldPath() {
@@ -31,7 +31,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse extends io.pulu
      * The field's mode.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {

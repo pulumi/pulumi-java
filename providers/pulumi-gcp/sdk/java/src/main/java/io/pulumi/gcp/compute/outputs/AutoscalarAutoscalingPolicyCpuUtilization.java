@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalarAutoscalingPolicyCpuUtilization {
     /**
      * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
@@ -27,10 +27,10 @@ public final class AutoscalarAutoscalingPolicyCpuUtilization {
      */
     private final Double target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalarAutoscalingPolicyCpuUtilization(
-        @OutputCustomType.Parameter("predictiveMethod") @Nullable String predictiveMethod,
-        @OutputCustomType.Parameter("target") Double target) {
+        @CustomType.Parameter("predictiveMethod") @Nullable String predictiveMethod,
+        @CustomType.Parameter("target") Double target) {
         this.predictiveMethod = predictiveMethod;
         this.target = target;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainerPort {
     private final Integer containerPort;
     /**
@@ -18,11 +18,11 @@ public final class GetServiceTemplateSpecContainerPort {
     private final String name;
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecContainerPort(
-        @OutputCustomType.Parameter("containerPort") Integer containerPort,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("containerPort") Integer containerPort,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protocol") String protocol) {
         this.containerPort = containerPort;
         this.name = name;
         this.protocol = protocol;

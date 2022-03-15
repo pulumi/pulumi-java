@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
      * ARM resource id of the image version in the shared image gallery
      * 
      */
-    @InputImport(name="imageVersionId", required=true)
+    @Import(name="imageVersionId", required=true)
       private final Output<String> imageVersionId;
 
     public Output<String> getImageVersionId() {
@@ -33,7 +33,7 @@ public final class ImageTemplateSharedImageVersionSourceArgs extends io.pulumi.r
      * Expected value is 'SharedImageVersion'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

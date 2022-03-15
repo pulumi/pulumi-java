@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.A2AProtectedManagedDiskDet
 import io.pulumi.azurenative.recoveryservices.outputs.A2AUnprotectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureToAzureVmSyncedConfigDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class A2AReplicationDetailsResponse {
     /**
      * The agent version.
@@ -232,50 +232,50 @@ public final class A2AReplicationDetailsResponse {
      */
     private final @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private A2AReplicationDetailsResponse(
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("fabricObjectId") @Nullable String fabricObjectId,
-        @OutputCustomType.Parameter("initialPrimaryFabricLocation") String initialPrimaryFabricLocation,
-        @OutputCustomType.Parameter("initialPrimaryZone") String initialPrimaryZone,
-        @OutputCustomType.Parameter("initialRecoveryFabricLocation") String initialRecoveryFabricLocation,
-        @OutputCustomType.Parameter("initialRecoveryZone") String initialRecoveryZone,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("isReplicationAgentUpdateRequired") @Nullable Boolean isReplicationAgentUpdateRequired,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
-        @OutputCustomType.Parameter("lifecycleId") @Nullable String lifecycleId,
-        @OutputCustomType.Parameter("managementId") @Nullable String managementId,
-        @OutputCustomType.Parameter("monitoringJobType") @Nullable String monitoringJobType,
-        @OutputCustomType.Parameter("monitoringPercentageCompletion") @Nullable Integer monitoringPercentageCompletion,
-        @OutputCustomType.Parameter("multiVmGroupCreateOption") @Nullable String multiVmGroupCreateOption,
-        @OutputCustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
-        @OutputCustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("primaryFabricLocation") @Nullable String primaryFabricLocation,
-        @OutputCustomType.Parameter("protectedDisks") @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks,
-        @OutputCustomType.Parameter("protectedManagedDisks") @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks,
-        @OutputCustomType.Parameter("recoveryAvailabilitySet") @Nullable String recoveryAvailabilitySet,
-        @OutputCustomType.Parameter("recoveryAvailabilityZone") @Nullable String recoveryAvailabilityZone,
-        @OutputCustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
-        @OutputCustomType.Parameter("recoveryAzureVMName") @Nullable String recoveryAzureVMName,
-        @OutputCustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
-        @OutputCustomType.Parameter("recoveryBootDiagStorageAccountId") @Nullable String recoveryBootDiagStorageAccountId,
-        @OutputCustomType.Parameter("recoveryCloudService") @Nullable String recoveryCloudService,
-        @OutputCustomType.Parameter("recoveryFabricLocation") @Nullable String recoveryFabricLocation,
-        @OutputCustomType.Parameter("recoveryFabricObjectId") @Nullable String recoveryFabricObjectId,
-        @OutputCustomType.Parameter("recoveryProximityPlacementGroupId") @Nullable String recoveryProximityPlacementGroupId,
-        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
-        @OutputCustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
-        @OutputCustomType.Parameter("selectedTfoAzureNetworkId") @Nullable String selectedTfoAzureNetworkId,
-        @OutputCustomType.Parameter("testFailoverRecoveryFabricObjectId") @Nullable String testFailoverRecoveryFabricObjectId,
-        @OutputCustomType.Parameter("tfoAzureVMName") @Nullable String tfoAzureVMName,
-        @OutputCustomType.Parameter("unprotectedDisks") @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks,
-        @OutputCustomType.Parameter("vmEncryptionType") String vmEncryptionType,
-        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
-        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
-        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription,
-        @OutputCustomType.Parameter("vmSyncedConfigDetails") @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("fabricObjectId") @Nullable String fabricObjectId,
+        @CustomType.Parameter("initialPrimaryFabricLocation") String initialPrimaryFabricLocation,
+        @CustomType.Parameter("initialPrimaryZone") String initialPrimaryZone,
+        @CustomType.Parameter("initialRecoveryFabricLocation") String initialRecoveryFabricLocation,
+        @CustomType.Parameter("initialRecoveryZone") String initialRecoveryZone,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("isReplicationAgentUpdateRequired") @Nullable Boolean isReplicationAgentUpdateRequired,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @CustomType.Parameter("lifecycleId") @Nullable String lifecycleId,
+        @CustomType.Parameter("managementId") @Nullable String managementId,
+        @CustomType.Parameter("monitoringJobType") @Nullable String monitoringJobType,
+        @CustomType.Parameter("monitoringPercentageCompletion") @Nullable Integer monitoringPercentageCompletion,
+        @CustomType.Parameter("multiVmGroupCreateOption") @Nullable String multiVmGroupCreateOption,
+        @CustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
+        @CustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("primaryFabricLocation") @Nullable String primaryFabricLocation,
+        @CustomType.Parameter("protectedDisks") @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks,
+        @CustomType.Parameter("protectedManagedDisks") @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks,
+        @CustomType.Parameter("recoveryAvailabilitySet") @Nullable String recoveryAvailabilitySet,
+        @CustomType.Parameter("recoveryAvailabilityZone") @Nullable String recoveryAvailabilityZone,
+        @CustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
+        @CustomType.Parameter("recoveryAzureVMName") @Nullable String recoveryAzureVMName,
+        @CustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
+        @CustomType.Parameter("recoveryBootDiagStorageAccountId") @Nullable String recoveryBootDiagStorageAccountId,
+        @CustomType.Parameter("recoveryCloudService") @Nullable String recoveryCloudService,
+        @CustomType.Parameter("recoveryFabricLocation") @Nullable String recoveryFabricLocation,
+        @CustomType.Parameter("recoveryFabricObjectId") @Nullable String recoveryFabricObjectId,
+        @CustomType.Parameter("recoveryProximityPlacementGroupId") @Nullable String recoveryProximityPlacementGroupId,
+        @CustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @CustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
+        @CustomType.Parameter("selectedTfoAzureNetworkId") @Nullable String selectedTfoAzureNetworkId,
+        @CustomType.Parameter("testFailoverRecoveryFabricObjectId") @Nullable String testFailoverRecoveryFabricObjectId,
+        @CustomType.Parameter("tfoAzureVMName") @Nullable String tfoAzureVMName,
+        @CustomType.Parameter("unprotectedDisks") @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks,
+        @CustomType.Parameter("vmEncryptionType") String vmEncryptionType,
+        @CustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @CustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @CustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription,
+        @CustomType.Parameter("vmSyncedConfigDetails") @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
         this.agentVersion = agentVersion;
         this.fabricObjectId = fabricObjectId;
         this.initialPrimaryFabricLocation = initialPrimaryFabricLocation;

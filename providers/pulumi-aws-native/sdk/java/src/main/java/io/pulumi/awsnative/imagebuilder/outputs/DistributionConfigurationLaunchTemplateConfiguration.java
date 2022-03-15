@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationLaunchTemplateConfiguration {
     /**
      * The account ID that this configuration applies to.
@@ -28,11 +28,11 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
      */
     private final @Nullable Boolean setDefaultVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationLaunchTemplateConfiguration(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
-        @OutputCustomType.Parameter("setDefaultVersion") @Nullable Boolean setDefaultVersion) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @CustomType.Parameter("setDefaultVersion") @Nullable Boolean setDefaultVersion) {
         this.accountId = accountId;
         this.launchTemplateId = launchTemplateId;
         this.setDefaultVersion = setDefaultVersion;

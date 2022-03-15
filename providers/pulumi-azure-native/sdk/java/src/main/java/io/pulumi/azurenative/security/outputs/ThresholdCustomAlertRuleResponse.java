@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ThresholdCustomAlertRuleResponse {
     /**
      * The description of the custom alert.
@@ -43,14 +43,14 @@ public final class ThresholdCustomAlertRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThresholdCustomAlertRuleResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("maxThreshold") Integer maxThreshold,
-        @OutputCustomType.Parameter("minThreshold") Integer minThreshold,
-        @OutputCustomType.Parameter("ruleType") String ruleType) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("maxThreshold") Integer maxThreshold,
+        @CustomType.Parameter("minThreshold") Integer minThreshold,
+        @CustomType.Parameter("ruleType") String ruleType) {
         this.description = description;
         this.displayName = displayName;
         this.isEnabled = isEnabled;

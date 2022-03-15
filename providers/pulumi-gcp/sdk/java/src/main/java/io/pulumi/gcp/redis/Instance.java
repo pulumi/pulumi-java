@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.redis.InstanceArgs;
@@ -61,7 +61,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [locationId].
      * 
      */
-    @OutputExport(name="alternativeLocationId", type=String.class, parameters={})
+    @Export(name="alternativeLocationId", type=String.class, parameters={})
     private Output<String> alternativeLocationId;
 
     /**
@@ -80,7 +80,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Default value is "false" meaning AUTH is disabled.
      * 
      */
-    @OutputExport(name="authEnabled", type=Boolean.class, parameters={})
+    @Export(name="authEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> authEnabled;
 
     /**
@@ -96,7 +96,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * AUTH String set on the instance. This field will only be populated if auth_enabled is true.
      * 
      */
-    @OutputExport(name="authString", type=String.class, parameters={})
+    @Export(name="authString", type=String.class, parameters={})
     private Output<String> authString;
 
     /**
@@ -112,7 +112,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * will be used.
      * 
      */
-    @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
+    @Export(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
     /**
@@ -130,7 +130,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
      */
-    @OutputExport(name="connectMode", type=String.class, parameters={})
+    @Export(name="connectMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectMode;
 
     /**
@@ -149,7 +149,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * resolution and up to nine fractional digits.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -168,7 +168,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [alternativeLocationId] and can change after a failover event.
      * 
      */
-    @OutputExport(name="currentLocationId", type=String.class, parameters={})
+    @Export(name="currentLocationId", type=String.class, parameters={})
     private Output<String> currentLocationId;
 
     /**
@@ -184,7 +184,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An arbitrary and optional user-provided name for the instance.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -198,7 +198,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -212,7 +212,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -230,7 +230,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * be different from [locationId].
      * 
      */
-    @OutputExport(name="locationId", type=String.class, parameters={})
+    @Export(name="locationId", type=String.class, parameters={})
     private Output<String> locationId;
 
     /**
@@ -249,7 +249,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="maintenancePolicy", type=InstanceMaintenancePolicy.class, parameters={})
+    @Export(name="maintenancePolicy", type=InstanceMaintenancePolicy.class, parameters={})
     private Output</* @Nullable */ InstanceMaintenancePolicy> maintenancePolicy;
 
     /**
@@ -265,7 +265,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="maintenanceSchedule", type=InstanceMaintenanceSchedule.class, parameters={})
+    @Export(name="maintenanceSchedule", type=InstanceMaintenanceSchedule.class, parameters={})
     private Output</* @Nullable */ InstanceMaintenanceSchedule> maintenanceSchedule;
 
     /**
@@ -280,7 +280,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Redis memory size in GiB.
      * 
      */
-    @OutputExport(name="memorySizeGb", type=Integer.class, parameters={})
+    @Export(name="memorySizeGb", type=Integer.class, parameters={})
     private Output<Integer> memorySizeGb;
 
     /**
@@ -294,7 +294,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ID of the instance or a fully qualified identifier for the instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -308,7 +308,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Output only. Info per node.
      * 
      */
-    @OutputExport(name="nodes", type=List.class, parameters={InstanceNode.class})
+    @Export(name="nodes", type=List.class, parameters={InstanceNode.class})
     private Output<List<InstanceNode>> nodes;
 
     /**
@@ -324,7 +324,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * operation.
      * 
      */
-    @OutputExport(name="persistenceIamIdentity", type=String.class, parameters={})
+    @Export(name="persistenceIamIdentity", type=String.class, parameters={})
     private Output<String> persistenceIamIdentity;
 
     /**
@@ -340,7 +340,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The port number of the exposed Redis endpoint.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -355,7 +355,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -372,7 +372,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * requests must target 'host'.
      * 
      */
-    @OutputExport(name="readEndpoint", type=String.class, parameters={})
+    @Export(name="readEndpoint", type=String.class, parameters={})
     private Output<String> readEndpoint;
 
     /**
@@ -389,7 +389,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 'port'.
      * 
      */
-    @OutputExport(name="readEndpointPort", type=Integer.class, parameters={})
+    @Export(name="readEndpointPort", type=Integer.class, parameters={})
     private Output<Integer> readEndpointPort;
 
     /**
@@ -408,7 +408,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * "READ_REPLICAS_DISABLED" Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"]
      * 
      */
-    @OutputExport(name="readReplicasMode", type=String.class, parameters={})
+    @Export(name="readReplicasMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> readReplicasMode;
 
     /**
@@ -428,7 +428,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
      * 
      */
-    @OutputExport(name="redisConfigs", type=Map.class, parameters={String.class, String.class})
+    @Export(name="redisConfigs", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> redisConfigs;
 
     /**
@@ -446,7 +446,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * at the top for the latest valid values.
      * 
      */
-    @OutputExport(name="redisVersion", type=String.class, parameters={})
+    @Export(name="redisVersion", type=String.class, parameters={})
     private Output<String> redisVersion;
 
     /**
@@ -462,7 +462,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the Redis region of the instance.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -478,7 +478,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is 1. The valid value for basic tier is 0 and the default is also 0.
      * 
      */
-    @OutputExport(name="replicaCount", type=Integer.class, parameters={})
+    @Export(name="replicaCount", type=Integer.class, parameters={})
     private Output<Integer> replicaCount;
 
     /**
@@ -498,7 +498,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * network.
      * 
      */
-    @OutputExport(name="reservedIpRange", type=String.class, parameters={})
+    @Export(name="reservedIpRange", type=String.class, parameters={})
     private Output<String> reservedIpRange;
 
     /**
@@ -516,7 +516,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * List of server CA certificates for the instance.
      * 
      */
-    @OutputExport(name="serverCaCerts", type=List.class, parameters={InstanceServerCaCert.class})
+    @Export(name="serverCaCerts", type=List.class, parameters={InstanceServerCaCert.class})
     private Output<List<InstanceServerCaCert>> serverCaCerts;
 
     /**
@@ -534,7 +534,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      *   Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output</* @Nullable */ String> tier;
 
     /**
@@ -555,7 +555,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
-    @OutputExport(name="transitEncryptionMode", type=String.class, parameters={})
+    @Export(name="transitEncryptionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitEncryptionMode;
 
     /**

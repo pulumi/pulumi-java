@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.ServicePerimeterConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServicePerimeterResult {
     /**
      * Description of the `ServicePerimeter` and its use. Does not affect behavior.
@@ -47,15 +47,15 @@ public final class GetServicePerimeterResult {
      */
     private final Boolean useExplicitDryRunSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServicePerimeterResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("perimeterType") String perimeterType,
-        @OutputCustomType.Parameter("spec") ServicePerimeterConfigResponse spec,
-        @OutputCustomType.Parameter("status") ServicePerimeterConfigResponse status,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("useExplicitDryRunSpec") Boolean useExplicitDryRunSpec) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("perimeterType") String perimeterType,
+        @CustomType.Parameter("spec") ServicePerimeterConfigResponse spec,
+        @CustomType.Parameter("status") ServicePerimeterConfigResponse status,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("useExplicitDryRunSpec") Boolean useExplicitDryRunSpec) {
         this.description = description;
         this.name = name;
         this.perimeterType = perimeterType;

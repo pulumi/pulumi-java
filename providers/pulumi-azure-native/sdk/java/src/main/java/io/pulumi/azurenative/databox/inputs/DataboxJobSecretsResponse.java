@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.inputs.DataBoxSecretResponse;
 import io.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
      * Dc Access Security Code for Customer Managed Shipping
      * 
      */
-    @InputImport(name="dcAccessSecurityCode", required=true)
+    @Import(name="dcAccessSecurityCode", required=true)
       private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
@@ -37,7 +37,7 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
      * Error while fetching the secrets.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final CloudErrorResponse error;
 
     public CloudErrorResponse getError() {
@@ -49,7 +49,7 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'DataBox'.
      * 
      */
-    @InputImport(name="jobSecretsType", required=true)
+    @Import(name="jobSecretsType", required=true)
       private final String jobSecretsType;
 
     public String getJobSecretsType() {
@@ -60,7 +60,7 @@ public final class DataboxJobSecretsResponse extends io.pulumi.resources.InvokeA
      * Contains the list of secret objects for a job.
      * 
      */
-    @InputImport(name="podSecrets")
+    @Import(name="podSecrets")
       private final @Nullable List<DataBoxSecretResponse> podSecrets;
 
     public List<DataBoxSecretResponse> getPodSecrets() {

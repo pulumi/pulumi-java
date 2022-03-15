@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageEventHandlerTriggerFulfillment;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageEventHandler {
     /**
      * The name of the event to handle.
@@ -42,13 +42,13 @@ public final class CxPageEventHandler {
      */
     private final @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxPageEventHandler(
-        @OutputCustomType.Parameter("event") @Nullable String event,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("targetFlow") @Nullable String targetFlow,
-        @OutputCustomType.Parameter("targetPage") @Nullable String targetPage,
-        @OutputCustomType.Parameter("triggerFulfillment") @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment) {
+        @CustomType.Parameter("event") @Nullable String event,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("targetFlow") @Nullable String targetFlow,
+        @CustomType.Parameter("targetPage") @Nullable String targetPage,
+        @CustomType.Parameter("triggerFulfillment") @Nullable CxPageEventHandlerTriggerFulfillment triggerFulfillment) {
         this.event = event;
         this.name = name;
         this.targetFlow = targetFlow;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The name of the key vault key.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The Uri of the key vault.
      * 
      */
-    @InputImport(name="keyVaultUri", required=true)
+    @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
     public Output<String> getKeyVaultUri() {
@@ -44,7 +44,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The version of the key vault key.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {
@@ -55,7 +55,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The user assigned identity (ARM resource id) that has access to the key.
      * 
      */
-    @InputImport(name="userIdentity")
+    @Import(name="userIdentity")
       private final @Nullable Output<String> userIdentity;
 
     public Output<String> getUserIdentity() {

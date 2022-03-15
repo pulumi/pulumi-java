@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.FindingAggregatorArgs;
 import io.pulumi.aws.securityhub.inputs.FindingAggregatorState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * Indicates whether to aggregate findings from all of the available Regions or from a specified list. The options are `ALL_REGIONS`, `ALL_REGIONS_EXCEPT_SPECIFIED` or `SPECIFIED_REGIONS`. When `ALL_REGIONS` or `ALL_REGIONS_EXCEPT_SPECIFIED` are used, Security Hub will automatically aggregate findings from new Regions as Security Hub supports them and you opt into them.
      * 
      */
-    @OutputExport(name="linkingMode", type=String.class, parameters={})
+    @Export(name="linkingMode", type=String.class, parameters={})
     private Output<String> linkingMode;
 
     /**
@@ -47,7 +47,7 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * List of regions to include or exclude (required if `linking_mode` is set to `ALL_REGIONS_EXCEPT_SPECIFIED` or `SPECIFIED_REGIONS`)
      * 
      */
-    @OutputExport(name="specifiedRegions", type=List.class, parameters={String.class})
+    @Export(name="specifiedRegions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> specifiedRegions;
 
     /**

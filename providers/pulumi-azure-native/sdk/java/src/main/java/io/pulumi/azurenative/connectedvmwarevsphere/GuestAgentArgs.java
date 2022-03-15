@@ -8,7 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.inputs.GuestCredentialArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.HttpProxyConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Username / Password Credentials to provision guest agent.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<GuestCredentialArgs> credentials;
 
     public Output<GuestCredentialArgs> getCredentials() {
@@ -33,7 +33,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP Proxy configuration for the VM.
      * 
      */
-    @InputImport(name="httpProxyConfig")
+    @Import(name="httpProxyConfig")
       private final @Nullable Output<HttpProxyConfigurationArgs> httpProxyConfig;
 
     public Output<HttpProxyConfigurationArgs> getHttpProxyConfig() {
@@ -44,7 +44,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the guestAgents.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the guest agent provisioning action.
      * 
      */
-    @InputImport(name="provisioningAction")
+    @Import(name="provisioningAction")
       private final @Nullable Output<Either<String,ProvisioningAction>> provisioningAction;
 
     public Output<Either<String,ProvisioningAction>> getProvisioningAction() {
@@ -66,7 +66,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the vm.
      * 
      */
-    @InputImport(name="virtualMachineName", required=true)
+    @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
 
     public Output<String> getVirtualMachineName() {

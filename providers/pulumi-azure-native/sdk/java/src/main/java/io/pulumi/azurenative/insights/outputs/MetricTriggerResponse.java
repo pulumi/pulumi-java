@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ScaleRuleMetricDimensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricTriggerResponse {
     /**
      * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
@@ -76,20 +76,20 @@ public final class MetricTriggerResponse {
      */
     private final String timeWindow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricTriggerResponse(
-        @OutputCustomType.Parameter("dimensions") @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
-        @OutputCustomType.Parameter("dividePerInstance") @Nullable Boolean dividePerInstance,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
-        @OutputCustomType.Parameter("metricResourceLocation") @Nullable String metricResourceLocation,
-        @OutputCustomType.Parameter("metricResourceUri") String metricResourceUri,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("statistic") String statistic,
-        @OutputCustomType.Parameter("threshold") Double threshold,
-        @OutputCustomType.Parameter("timeAggregation") String timeAggregation,
-        @OutputCustomType.Parameter("timeGrain") String timeGrain,
-        @OutputCustomType.Parameter("timeWindow") String timeWindow) {
+        @CustomType.Parameter("dimensions") @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
+        @CustomType.Parameter("dividePerInstance") @Nullable Boolean dividePerInstance,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @CustomType.Parameter("metricResourceLocation") @Nullable String metricResourceLocation,
+        @CustomType.Parameter("metricResourceUri") String metricResourceUri,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("statistic") String statistic,
+        @CustomType.Parameter("threshold") Double threshold,
+        @CustomType.Parameter("timeAggregation") String timeAggregation,
+        @CustomType.Parameter("timeGrain") String timeGrain,
+        @CustomType.Parameter("timeWindow") String timeWindow) {
         this.dimensions = dimensions;
         this.dividePerInstance = dividePerInstance;
         this.metricName = metricName;

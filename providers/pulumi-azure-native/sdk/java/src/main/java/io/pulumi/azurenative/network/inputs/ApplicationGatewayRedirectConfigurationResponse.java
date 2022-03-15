@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -36,7 +36,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Include path in the redirected url.
      * 
      */
-    @InputImport(name="includePath")
+    @Import(name="includePath")
       private final @Nullable Boolean includePath;
 
     public Optional<Boolean> getIncludePath() {
@@ -58,7 +58,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Include query string in the redirected url.
      * 
      */
-    @InputImport(name="includeQueryString")
+    @Import(name="includeQueryString")
       private final @Nullable Boolean includeQueryString;
 
     public Optional<Boolean> getIncludeQueryString() {
@@ -69,7 +69,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Name of the redirect configuration that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Path rules specifying redirect configuration.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable List<SubResourceResponse> pathRules;
 
     public List<SubResourceResponse> getPathRules() {
@@ -91,7 +91,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * HTTP redirection type.
      * 
      */
-    @InputImport(name="redirectType")
+    @Import(name="redirectType")
       private final @Nullable String redirectType;
 
     public Optional<String> getRedirectType() {
@@ -102,7 +102,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Request routing specifying redirect configuration.
      * 
      */
-    @InputImport(name="requestRoutingRules")
+    @Import(name="requestRoutingRules")
       private final @Nullable List<SubResourceResponse> requestRoutingRules;
 
     public List<SubResourceResponse> getRequestRoutingRules() {
@@ -113,7 +113,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Reference to a listener to redirect the request to.
      * 
      */
-    @InputImport(name="targetListener")
+    @Import(name="targetListener")
       private final @Nullable SubResourceResponse targetListener;
 
     public Optional<SubResourceResponse> getTargetListener() {
@@ -124,7 +124,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Url to redirect the request to.
      * 
      */
-    @InputImport(name="targetUrl")
+    @Import(name="targetUrl")
       private final @Nullable String targetUrl;
 
     public Optional<String> getTargetUrl() {
@@ -135,7 +135,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -146,7 +146,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * Url path maps specifying default redirect configuration.
      * 
      */
-    @InputImport(name="urlPathMaps")
+    @Import(name="urlPathMaps")
       private final @Nullable List<SubResourceResponse> urlPathMaps;
 
     public List<SubResourceResponse> getUrlPathMaps() {

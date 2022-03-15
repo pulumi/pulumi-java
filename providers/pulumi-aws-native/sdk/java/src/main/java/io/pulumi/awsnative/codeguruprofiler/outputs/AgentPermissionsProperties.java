@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.codeguruprofiler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AgentPermissionsProperties {
     /**
      * The principals for the agent permissions.
@@ -16,8 +16,8 @@ public final class AgentPermissionsProperties {
      */
     private final List<String> principals;
 
-    @OutputCustomType.Constructor
-    private AgentPermissionsProperties(@OutputCustomType.Parameter("principals") List<String> principals) {
+    @CustomType.Constructor
+    private AgentPermissionsProperties(@CustomType.Parameter("principals") List<String> principals) {
         this.principals = principals;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hybridcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HybridComputePrivateLinkScopePropertiesResponse {
     /**
      * The Guid id of the private link scope.
@@ -27,11 +27,11 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HybridComputePrivateLinkScopePropertiesResponse(
-        @OutputCustomType.Parameter("privateLinkScopeId") String privateLinkScopeId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
+        @CustomType.Parameter("privateLinkScopeId") String privateLinkScopeId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.privateLinkScopeId = privateLinkScopeId;
         this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;

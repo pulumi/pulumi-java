@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGoodTotalRatioGetArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SloRequestBasedSliGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="distributionCut")
+    @Import(name="distributionCut")
       private final @Nullable Output<SloRequestBasedSliDistributionCutGetArgs> distributionCut;
 
     public Output<SloRequestBasedSliDistributionCutGetArgs> getDistributionCut() {
@@ -40,7 +40,7 @@ public final class SloRequestBasedSliGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="goodTotalRatio")
+    @Import(name="goodTotalRatio")
       private final @Nullable Output<SloRequestBasedSliGoodTotalRatioGetArgs> goodTotalRatio;
 
     public Output<SloRequestBasedSliGoodTotalRatioGetArgs> getGoodTotalRatio() {

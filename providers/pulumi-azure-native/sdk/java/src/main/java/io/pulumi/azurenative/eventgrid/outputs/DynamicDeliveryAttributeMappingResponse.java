@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DynamicDeliveryAttributeMappingResponse {
     /**
      * Name of the delivery attribute or header.
@@ -28,11 +28,11 @@ public final class DynamicDeliveryAttributeMappingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DynamicDeliveryAttributeMappingResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sourceField") @Nullable String sourceField,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceField") @Nullable String sourceField,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.sourceField = sourceField;
         this.type = type;

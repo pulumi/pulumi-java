@@ -11,7 +11,7 @@ import io.pulumi.azurenative.media.outputs.PresentationTimeRangeResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * The first quality.
      * 
      */
-    @OutputExport(name="firstQuality", type=FirstQualityResponse.class, parameters={})
+    @Export(name="firstQuality", type=FirstQualityResponse.class, parameters={})
     private Output</* @Nullable */ FirstQualityResponse> firstQuality;
 
     /**
@@ -52,7 +52,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * The presentation time range.
      * 
      */
-    @OutputExport(name="presentationTimeRange", type=PresentationTimeRangeResponse.class, parameters={})
+    @Export(name="presentationTimeRange", type=PresentationTimeRangeResponse.class, parameters={})
     private Output</* @Nullable */ PresentationTimeRangeResponse> presentationTimeRange;
 
     /**
@@ -80,7 +80,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -94,7 +94,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * The tracks selection conditions.
      * 
      */
-    @OutputExport(name="tracks", type=List.class, parameters={FilterTrackSelectionResponse.class})
+    @Export(name="tracks", type=List.class, parameters={FilterTrackSelectionResponse.class})
     private Output</* @Nullable */ List<FilterTrackSelectionResponse>> tracks;
 
     /**
@@ -108,7 +108,7 @@ public class AssetFilter extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

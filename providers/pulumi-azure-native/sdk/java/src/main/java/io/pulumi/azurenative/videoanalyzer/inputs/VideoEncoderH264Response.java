@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoScaleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
      * 
      */
-    @InputImport(name="bitrateKbps")
+    @Import(name="bitrateKbps")
       private final @Nullable String bitrateKbps;
 
     public Optional<String> getBitrateKbps() {
@@ -34,7 +34,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * The frame rate (in frames per second) of the encoded video. The value must be greater than zero, and less than or equal to 300. If omitted, the encoder uses the average frame rate of the input video.
      * 
      */
-    @InputImport(name="frameRate")
+    @Import(name="frameRate")
       private final @Nullable String frameRate;
 
     public Optional<String> getFrameRate() {
@@ -45,7 +45,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * Describes the resolution of the encoded video. If omitted, the encoder uses the resolution of the input video.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable VideoScaleResponse scale;
 
     public Optional<VideoScaleResponse> getScale() {
@@ -57,7 +57,7 @@ public final class VideoEncoderH264Response extends io.pulumi.resources.InvokeAr
      * Expected value is '#Microsoft.VideoAnalyzer.VideoEncoderH264'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
      * A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
      * 
      */
-    @InputImport(name="audiences")
+    @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
     public Output<List<String>> getAudiences() {
@@ -30,7 +30,7 @@ public final class AuthorizerJwtConfigurationGetArgs extends io.pulumi.resources
      * The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {

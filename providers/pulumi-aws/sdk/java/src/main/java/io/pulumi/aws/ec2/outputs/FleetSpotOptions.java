@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.FleetSpotOptionsMaintenanceStrategies;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetSpotOptions {
     /**
      * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
@@ -34,12 +34,12 @@ public final class FleetSpotOptions {
      */
     private final @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetSpotOptions(
-        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
-        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
-        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
-        @OutputCustomType.Parameter("maintenanceStrategies") @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies) {
+        @CustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @CustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
+        @CustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @CustomType.Parameter("maintenanceStrategies") @Nullable FleetSpotOptionsMaintenanceStrategies maintenanceStrategies) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Max number of nodes to use
      * 
      */
-    @InputImport(name="maxNodeCount", required=true)
+    @Import(name="maxNodeCount", required=true)
       private final Output<Integer> maxNodeCount;
 
     public Output<Integer> getMaxNodeCount() {
@@ -34,7 +34,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Min number of nodes to use
      * 
      */
-    @InputImport(name="minNodeCount")
+    @Import(name="minNodeCount")
       private final @Nullable Output<Integer> minNodeCount;
 
     public Output<Integer> getMinNodeCount() {
@@ -45,7 +45,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.
      * 
      */
-    @InputImport(name="nodeIdleTimeBeforeScaleDown")
+    @Import(name="nodeIdleTimeBeforeScaleDown")
       private final @Nullable Output<String> nodeIdleTimeBeforeScaleDown;
 
     public Output<String> getNodeIdleTimeBeforeScaleDown() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateGetArgs extends io.pul
      * Override the instance launch template specification in the Launch Template.
      * 
      */
-    @InputImport(name="launchTemplateSpecification", required=true)
+    @Import(name="launchTemplateSpecification", required=true)
       private final Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs> launchTemplateSpecification;
 
     public Output<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationGetArgs> getLaunchTemplateSpecification() {
@@ -31,7 +31,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateGetArgs extends io.pul
      * List of nested arguments provides the ability to specify multiple instance types. This will override the same parameter in the launch template. For on-demand instances, Auto Scaling considers the order of preference of instance types to launch based on the order specified in the overrides list. Defined below.
      * 
      */
-    @InputImport(name="overrides")
+    @Import(name="overrides")
       private final @Nullable Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs>> overrides;
 
     public Output<List<GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs>> getOverrides() {

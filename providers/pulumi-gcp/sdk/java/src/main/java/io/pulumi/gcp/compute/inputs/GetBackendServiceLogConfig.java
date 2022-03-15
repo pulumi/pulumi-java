@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetBackendServiceLogConfig extends io.pulumi.resources.Invoke
 
     public static final GetBackendServiceLogConfig Empty = new GetBackendServiceLogConfig();
 
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
     }
 
-    @InputImport(name="sampleRate", required=true)
+    @Import(name="sampleRate", required=true)
       private final Double sampleRate;
 
     public Double getSampleRate() {

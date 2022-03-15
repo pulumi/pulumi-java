@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
 
     public static final TaskDefinitionRuntimePlatformArgs Empty = new TaskDefinitionRuntimePlatformArgs();
 
-    @InputImport(name="cpuArchitecture")
+    @Import(name="cpuArchitecture")
       private final @Nullable Output<String> cpuArchitecture;
 
     public Output<String> getCpuArchitecture() {
         return this.cpuArchitecture == null ? Output.empty() : this.cpuArchitecture;
     }
 
-    @InputImport(name="operatingSystemFamily")
+    @Import(name="operatingSystemFamily")
       private final @Nullable Output<String> operatingSystemFamily;
 
     public Output<String> getOperatingSystemFamily() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WarmStorageEnvironmentStatusResponse {
     /**
      * A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
@@ -28,11 +28,11 @@ public final class WarmStorageEnvironmentStatusResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WarmStorageEnvironmentStatusResponse(
-        @OutputCustomType.Parameter("currentCount") @Nullable Integer currentCount,
-        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("currentCount") @Nullable Integer currentCount,
+        @CustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.currentCount = currentCount;
         this.maxCount = maxCount;
         this.state = state;

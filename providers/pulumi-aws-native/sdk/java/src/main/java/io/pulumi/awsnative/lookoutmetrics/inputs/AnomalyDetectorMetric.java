@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricAggregationFunction;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,21 +19,21 @@ public final class AnomalyDetectorMetric extends io.pulumi.resources.InvokeArgs 
      * Operator used to aggregate metric values
      * 
      */
-    @InputImport(name="aggregationFunction", required=true)
+    @Import(name="aggregationFunction", required=true)
       private final AnomalyDetectorMetricAggregationFunction aggregationFunction;
 
     public AnomalyDetectorMetricAggregationFunction getAggregationFunction() {
         return this.aggregationFunction;
     }
 
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {

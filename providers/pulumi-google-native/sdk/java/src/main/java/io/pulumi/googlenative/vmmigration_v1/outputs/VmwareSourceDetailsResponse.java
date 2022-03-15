@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmwareSourceDetailsResponse {
     /**
      * Input only. The credentials password. This is write only and can not be read in a GET operation.
@@ -30,12 +30,12 @@ public final class VmwareSourceDetailsResponse {
      */
     private final String vcenterIp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmwareSourceDetailsResponse(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("username") String username,
-        @OutputCustomType.Parameter("vcenterIp") String vcenterIp) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("username") String username,
+        @CustomType.Parameter("vcenterIp") String vcenterIp) {
         this.password = password;
         this.thumbprint = thumbprint;
         this.username = username;

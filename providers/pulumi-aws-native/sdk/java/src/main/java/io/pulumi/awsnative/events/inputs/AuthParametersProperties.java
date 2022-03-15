@@ -7,7 +7,7 @@ import io.pulumi.awsnative.events.inputs.ConnectionApiKeyAuthParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionBasicAuthParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionOAuthParameters;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class AuthParametersProperties extends io.pulumi.resources.InvokeAr
 
     public static final AuthParametersProperties Empty = new AuthParametersProperties();
 
-    @InputImport(name="apiKeyAuthParameters")
+    @Import(name="apiKeyAuthParameters")
       private final @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters;
 
     public Optional<ConnectionApiKeyAuthParameters> getApiKeyAuthParameters() {
         return this.apiKeyAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.apiKeyAuthParameters);
     }
 
-    @InputImport(name="basicAuthParameters")
+    @Import(name="basicAuthParameters")
       private final @Nullable ConnectionBasicAuthParameters basicAuthParameters;
 
     public Optional<ConnectionBasicAuthParameters> getBasicAuthParameters() {
         return this.basicAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.basicAuthParameters);
     }
 
-    @InputImport(name="invocationHttpParameters")
+    @Import(name="invocationHttpParameters")
       private final @Nullable ConnectionHttpParameters invocationHttpParameters;
 
     public Optional<ConnectionHttpParameters> getInvocationHttpParameters() {
         return this.invocationHttpParameters == null ? Optional.empty() : Optional.ofNullable(this.invocationHttpParameters);
     }
 
-    @InputImport(name="oAuthParameters")
+    @Import(name="oAuthParameters")
       private final @Nullable ConnectionOAuthParameters oAuthParameters;
 
     public Optional<ConnectionOAuthParameters> getOAuthParameters() {

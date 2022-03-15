@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointsResponse {
     /**
      * Endpoint for the HCX Cloud Manager
@@ -25,11 +25,11 @@ public final class EndpointsResponse {
      */
     private final String vcsa;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointsResponse(
-        @OutputCustomType.Parameter("hcxCloudManager") String hcxCloudManager,
-        @OutputCustomType.Parameter("nsxtManager") String nsxtManager,
-        @OutputCustomType.Parameter("vcsa") String vcsa) {
+        @CustomType.Parameter("hcxCloudManager") String hcxCloudManager,
+        @CustomType.Parameter("nsxtManager") String nsxtManager,
+        @CustomType.Parameter("vcsa") String vcsa) {
         this.hcxCloudManager = hcxCloudManager;
         this.nsxtManager = nsxtManager;
         this.vcsa = vcsa;

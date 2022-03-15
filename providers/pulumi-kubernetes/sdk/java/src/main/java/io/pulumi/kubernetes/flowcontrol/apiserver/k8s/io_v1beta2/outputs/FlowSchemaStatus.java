@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.FlowSchemaCondition;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSchemaStatus {
     /**
      * `conditions` is a list of the current states of FlowSchema.
@@ -17,8 +17,8 @@ public final class FlowSchemaStatus {
      */
     private final @Nullable List<FlowSchemaCondition> conditions;
 
-    @OutputCustomType.Constructor
-    private FlowSchemaStatus(@OutputCustomType.Parameter("conditions") @Nullable List<FlowSchemaCondition> conditions) {
+    @CustomType.Constructor
+    private FlowSchemaStatus(@CustomType.Parameter("conditions") @Nullable List<FlowSchemaCondition> conditions) {
         this.conditions = conditions;
     }
 

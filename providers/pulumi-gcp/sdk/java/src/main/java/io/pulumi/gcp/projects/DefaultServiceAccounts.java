@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.DefaultServiceAccountsArgs;
@@ -43,7 +43,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -57,7 +57,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * The project ID where service accounts are created.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -74,7 +74,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
      * 
      */
-    @OutputExport(name="restorePolicy", type=String.class, parameters={})
+    @Export(name="restorePolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> restorePolicy;
 
     /**
@@ -91,7 +91,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
      * 
      */
-    @OutputExport(name="serviceAccounts", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="serviceAccounts", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> serviceAccounts;
 
     /**

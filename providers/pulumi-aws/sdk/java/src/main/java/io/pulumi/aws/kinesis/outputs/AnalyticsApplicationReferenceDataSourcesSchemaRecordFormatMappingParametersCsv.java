@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv {
     /**
      * The Column Delimiter.
@@ -20,10 +20,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      */
     private final String recordRowDelimiter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv(
-        @OutputCustomType.Parameter("recordColumnDelimiter") String recordColumnDelimiter,
-        @OutputCustomType.Parameter("recordRowDelimiter") String recordRowDelimiter) {
+        @CustomType.Parameter("recordColumnDelimiter") String recordColumnDelimiter,
+        @CustomType.Parameter("recordRowDelimiter") String recordRowDelimiter) {
         this.recordColumnDelimiter = recordColumnDelimiter;
         this.recordRowDelimiter = recordRowDelimiter;
     }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.ImageAnnotationType;
 import io.pulumi.azurenative.machinelearningservices.enums.MediaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
      * Annotation type of image labeling tasks.
      * 
      */
-    @InputImport(name="annotationType")
+    @Import(name="annotationType")
       private final @Nullable Output<Either<String,ImageAnnotationType>> annotationType;
 
     public Output<Either<String,ImageAnnotationType>> getAnnotationType() {
@@ -32,7 +32,7 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
      * Media type of data asset.
      * 
      */
-    @InputImport(name="mediaType", required=true)
+    @Import(name="mediaType", required=true)
       private final Output<Either<String,MediaType>> mediaType;
 
     public Output<Either<String,MediaType>> getMediaType() {

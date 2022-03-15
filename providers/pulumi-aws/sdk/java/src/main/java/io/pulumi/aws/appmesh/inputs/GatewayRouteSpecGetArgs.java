@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteGetArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttp2RouteGetArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class GatewayRouteSpecGetArgs extends io.pulumi.resources.ResourceA
      * The specification of a gRPC gateway route.
      * 
      */
-    @InputImport(name="grpcRoute")
+    @Import(name="grpcRoute")
       private final @Nullable Output<GatewayRouteSpecGrpcRouteGetArgs> grpcRoute;
 
     public Output<GatewayRouteSpecGrpcRouteGetArgs> getGrpcRoute() {
@@ -31,7 +31,7 @@ public final class GatewayRouteSpecGetArgs extends io.pulumi.resources.ResourceA
      * The specification of an HTTP/2 gateway route.
      * 
      */
-    @InputImport(name="http2Route")
+    @Import(name="http2Route")
       private final @Nullable Output<GatewayRouteSpecHttp2RouteGetArgs> http2Route;
 
     public Output<GatewayRouteSpecHttp2RouteGetArgs> getHttp2Route() {
@@ -42,7 +42,7 @@ public final class GatewayRouteSpecGetArgs extends io.pulumi.resources.ResourceA
      * The specification of an HTTP gateway route.
      * 
      */
-    @InputImport(name="httpRoute")
+    @Import(name="httpRoute")
       private final @Nullable Output<GatewayRouteSpecHttpRouteGetArgs> httpRoute;
 
     public Output<GatewayRouteSpecHttpRouteGetArgs> getHttpRoute() {

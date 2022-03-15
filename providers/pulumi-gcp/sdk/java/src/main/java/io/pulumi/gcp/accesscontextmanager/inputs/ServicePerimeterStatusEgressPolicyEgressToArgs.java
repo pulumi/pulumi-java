@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyEgressToOperationArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
      * Structure is documented below.
      * 
      */
-    @InputImport(name="operations")
+    @Import(name="operations")
       private final @Nullable Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> operations;
 
     public Output<List<ServicePerimeterStatusEgressPolicyEgressToOperationArgs>> getOperations() {
@@ -37,7 +37,7 @@ public final class ServicePerimeterStatusEgressPolicyEgressToArgs extends io.pul
      * the perimeter.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {

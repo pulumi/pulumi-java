@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FollowerDatabaseDefinitionResponse {
     /**
      * Resource name of the attached database configuration in the follower cluster.
@@ -25,11 +25,11 @@ public final class FollowerDatabaseDefinitionResponse {
      */
     private final String kustoPoolResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FollowerDatabaseDefinitionResponse(
-        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId) {
+        @CustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.databaseName = databaseName;
         this.kustoPoolResourceId = kustoPoolResourceId;

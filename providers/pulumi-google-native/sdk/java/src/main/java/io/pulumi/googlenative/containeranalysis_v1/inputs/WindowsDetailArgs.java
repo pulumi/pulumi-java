@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.KnowledgeBaseArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
      * 
      */
-    @InputImport(name="cpeUri", required=true)
+    @Import(name="cpeUri", required=true)
       private final Output<String> cpeUri;
 
     public Output<String> getCpeUri() {
@@ -31,7 +31,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this vulnerability.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The names of the KBs which have hotfixes to mitigate this vulnerability. Note that there may be multiple hotfixes (and thus multiple KBs) that mitigate a given vulnerability. Currently any listed KBs presence is considered a fix.
      * 
      */
-    @InputImport(name="fixingKbs", required=true)
+    @Import(name="fixingKbs", required=true)
       private final Output<List<KnowledgeBaseArgs>> fixingKbs;
 
     public Output<List<KnowledgeBaseArgs>> getFixingKbs() {
@@ -53,7 +53,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
      * The name of this vulnerability.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

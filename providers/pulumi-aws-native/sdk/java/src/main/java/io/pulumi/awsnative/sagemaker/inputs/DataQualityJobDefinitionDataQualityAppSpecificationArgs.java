@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * An array of arguments for the container used to run the monitoring job.
      * 
      */
-    @InputImport(name="containerArguments")
+    @Import(name="containerArguments")
       private final @Nullable Output<List<String>> containerArguments;
 
     public Output<List<String>> getContainerArguments() {
@@ -35,7 +35,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * Specifies the entrypoint for a container used to run the monitoring job.
      * 
      */
-    @InputImport(name="containerEntrypoint")
+    @Import(name="containerEntrypoint")
       private final @Nullable Output<List<String>> containerEntrypoint;
 
     public Output<List<String>> getContainerEntrypoint() {
@@ -46,7 +46,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * Sets the environment variables in the Docker container
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<Object> environment;
 
     public Output<Object> getEnvironment() {
@@ -57,7 +57,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * The container image to be run by the monitoring job.
      * 
      */
-    @InputImport(name="imageUri", required=true)
+    @Import(name="imageUri", required=true)
       private final Output<String> imageUri;
 
     public Output<String> getImageUri() {
@@ -68,7 +68,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * An Amazon S3 URI to a script that is called after analysis has been performed. Applicable only for the built-in (first party) containers.
      * 
      */
-    @InputImport(name="postAnalyticsProcessorSourceUri")
+    @Import(name="postAnalyticsProcessorSourceUri")
       private final @Nullable Output<String> postAnalyticsProcessorSourceUri;
 
     public Output<String> getPostAnalyticsProcessorSourceUri() {
@@ -79,7 +79,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * An Amazon S3 URI to a script that is called per row prior to running analysis. It can base64 decode the payload and convert it into a flatted json so that the built-in container can use the converted data. Applicable only for the built-in (first party) containers
      * 
      */
-    @InputImport(name="recordPreprocessorSourceUri")
+    @Import(name="recordPreprocessorSourceUri")
       private final @Nullable Output<String> recordPreprocessorSourceUri;
 
     public Output<String> getRecordPreprocessorSourceUri() {

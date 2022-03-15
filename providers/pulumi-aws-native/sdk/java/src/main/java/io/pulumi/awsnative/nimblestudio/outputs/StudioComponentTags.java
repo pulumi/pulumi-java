@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentTags {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioComponentTags() {
     }
 

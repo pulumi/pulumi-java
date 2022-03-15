@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallConfigArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallConfigState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ResolverFirewallConfig extends io.pulumi.resources.CustomResource {
      * Determines how Route 53 Resolver handles queries during failures, for example when all traffic that is sent to DNS Firewall fails to receive a reply. By default, fail open is disabled, which means the failure mode is closed. This approach favors security over availability. DNS Firewall blocks queries that it is unable to evaluate properly. If you enable this option, the failure mode is open. This approach favors availability over security. DNS Firewall allows queries to proceed if it is unable to properly evaluate them. Valid values: `ENABLED`, `DISABLED`.
      * 
      */
-    @OutputExport(name="firewallFailOpen", type=String.class, parameters={})
+    @Export(name="firewallFailOpen", type=String.class, parameters={})
     private Output<String> firewallFailOpen;
 
     /**
@@ -46,7 +46,7 @@ public class ResolverFirewallConfig extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the owner of the VPC that this firewall configuration applies to.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -60,7 +60,7 @@ public class ResolverFirewallConfig extends io.pulumi.resources.CustomResource {
      * The ID of the VPC that the configuration is for.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**

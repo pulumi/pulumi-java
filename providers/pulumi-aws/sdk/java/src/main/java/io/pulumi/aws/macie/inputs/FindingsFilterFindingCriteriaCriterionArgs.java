@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property exclusively matches (equals an exact match for) all the specified values. If you specify multiple values, Amazon Macie uses AND logic to join the values.
      * 
      */
-    @InputImport(name="eqExactMatches")
+    @Import(name="eqExactMatches")
       private final @Nullable Output<List<String>> eqExactMatches;
 
     public Output<List<String>> getEqExactMatches() {
@@ -30,7 +30,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
      */
-    @InputImport(name="eqs")
+    @Import(name="eqs")
       private final @Nullable Output<List<String>> eqs;
 
     public Output<List<String>> getEqs() {
@@ -41,7 +41,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The name of the field to be evaluated.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final Output<String> field;
 
     public Output<String> getField() {
@@ -52,7 +52,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property is greater than the specified value.
      * 
      */
-    @InputImport(name="gt")
+    @Import(name="gt")
       private final @Nullable Output<String> gt;
 
     public Output<String> getGt() {
@@ -63,7 +63,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property is greater than or equal to the specified value.
      * 
      */
-    @InputImport(name="gte")
+    @Import(name="gte")
       private final @Nullable Output<String> gte;
 
     public Output<String> getGte() {
@@ -74,7 +74,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property is less than the specified value.
      * 
      */
-    @InputImport(name="lt")
+    @Import(name="lt")
       private final @Nullable Output<String> lt;
 
     public Output<String> getLt() {
@@ -85,7 +85,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property is less than or equal to the specified value.
      * 
      */
-    @InputImport(name="lte")
+    @Import(name="lte")
       private final @Nullable Output<String> lte;
 
     public Output<String> getLte() {
@@ -96,7 +96,7 @@ public final class FindingsFilterFindingCriteriaCriterionArgs extends io.pulumi.
      * The value for the property doesn't match (doesn't equal) the specified value. If you specify multiple values, Amazon Macie uses OR logic to join the values.
      * 
      */
-    @InputImport(name="neqs")
+    @Import(name="neqs")
       private final @Nullable Output<List<String>> neqs;
 
     public Output<List<String>> getNeqs() {

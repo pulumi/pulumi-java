@@ -8,7 +8,7 @@ import io.pulumi.azurenative.appplatform.CustomDomainArgs;
 import io.pulumi.azurenative.appplatform.outputs.CustomDomainPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * Properties of the custom domain resource.
      * 
      */
-    @OutputExport(name="properties", type=CustomDomainPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=CustomDomainPropertiesResponse.class, parameters={})
     private Output<CustomDomainPropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class CustomDomain extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPreferencesResponse {
     /**
      * Defines secondary layer of software-based encryption enablement.
@@ -17,8 +17,8 @@ public final class EncryptionPreferencesResponse {
      */
     private final @Nullable String doubleEncryption;
 
-    @OutputCustomType.Constructor
-    private EncryptionPreferencesResponse(@OutputCustomType.Parameter("doubleEncryption") @Nullable String doubleEncryption) {
+    @CustomType.Constructor
+    private EncryptionPreferencesResponse(@CustomType.Parameter("doubleEncryption") @Nullable String doubleEncryption) {
         this.doubleEncryption = doubleEncryption;
     }
 

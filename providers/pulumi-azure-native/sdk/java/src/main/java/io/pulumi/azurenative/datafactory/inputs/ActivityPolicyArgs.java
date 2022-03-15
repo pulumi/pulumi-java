@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="retry")
+    @Import(name="retry")
       private final @Nullable Output<Object> retry;
 
     public Output<Object> getRetry() {
@@ -35,7 +35,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Interval between each retry attempt (in seconds). The default is 30 sec.
      * 
      */
-    @InputImport(name="retryIntervalInSeconds")
+    @Import(name="retryIntervalInSeconds")
       private final @Nullable Output<Integer> retryIntervalInSeconds;
 
     public Output<Integer> getRetryIntervalInSeconds() {
@@ -46,7 +46,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
      * 
      */
-    @InputImport(name="secureInput")
+    @Import(name="secureInput")
       private final @Nullable Output<Boolean> secureInput;
 
     public Output<Boolean> getSecureInput() {
@@ -57,7 +57,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
      * 
      */
-    @InputImport(name="secureOutput")
+    @Import(name="secureOutput")
       private final @Nullable Output<Boolean> secureOutput;
 
     public Output<Boolean> getSecureOutput() {
@@ -68,7 +68,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Object> timeout;
 
     public Output<Object> getTimeout() {

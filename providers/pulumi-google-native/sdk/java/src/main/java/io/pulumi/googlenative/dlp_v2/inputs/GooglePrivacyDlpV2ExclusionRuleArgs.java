@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ExclusionRuleMatchingType;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExcludeInfoTypesArgs;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * Dictionary which defines the rule.
      * 
      */
-    @InputImport(name="dictionary")
+    @Import(name="dictionary")
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * Set of infoTypes for which findings would affect this rule.
      * 
      */
-    @InputImport(name="excludeInfoTypes")
+    @Import(name="excludeInfoTypes")
       private final @Nullable Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes;
 
     public Output<GooglePrivacyDlpV2ExcludeInfoTypesArgs> getExcludeInfoTypes() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * How the rule is applied, see MatchingType documentation for details.
      * 
      */
-    @InputImport(name="matchingType")
+    @Import(name="matchingType")
       private final @Nullable Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType;
 
     public Output<GooglePrivacyDlpV2ExclusionRuleMatchingType> getMatchingType() {
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
      * Regular expression which defines the rule.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {

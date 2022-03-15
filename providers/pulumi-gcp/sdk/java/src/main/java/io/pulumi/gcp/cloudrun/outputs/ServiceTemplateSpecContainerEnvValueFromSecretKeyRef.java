@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     /**
      * The Cloud Secret Manager secret version.
@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainerEnvValueFromSecretKeyRef(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }

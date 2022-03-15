@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.AttributeResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserDataMappingResult {
     /**
      * Indicates the time when this mapping was archived.
@@ -43,14 +43,14 @@ public final class GetUserDataMappingResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserDataMappingResult(
-        @OutputCustomType.Parameter("archiveTime") String archiveTime,
-        @OutputCustomType.Parameter("archived") Boolean archived,
-        @OutputCustomType.Parameter("dataId") String dataId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceAttributes") List<AttributeResponse> resourceAttributes,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("archiveTime") String archiveTime,
+        @CustomType.Parameter("archived") Boolean archived,
+        @CustomType.Parameter("dataId") String dataId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceAttributes") List<AttributeResponse> resourceAttributes,
+        @CustomType.Parameter("userId") String userId) {
         this.archiveTime = archiveTime;
         this.archived = archived;
         this.dataId = dataId;

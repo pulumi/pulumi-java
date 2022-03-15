@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
     /**
      * A representation of a Datastore kind.
@@ -24,10 +24,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      */
     private final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(
-        @OutputCustomType.Parameter("kind") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
-        @OutputCustomType.Parameter("partitionId") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
+        @CustomType.Parameter("kind") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
+        @CustomType.Parameter("partitionId") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }

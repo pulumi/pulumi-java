@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AddressableResponse {
     private final String url;
 
-    @OutputCustomType.Constructor
-    private AddressableResponse(@OutputCustomType.Parameter("url") String url) {
+    @CustomType.Constructor
+    private AddressableResponse(@CustomType.Parameter("url") String url) {
         this.url = url;
     }
 

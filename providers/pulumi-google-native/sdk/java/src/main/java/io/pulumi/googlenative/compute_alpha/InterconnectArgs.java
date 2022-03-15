@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.InterconnectInterconnectType;
 import io.pulumi.googlenative.compute_alpha.enums.InterconnectLinkType;
 import io.pulumi.googlenative.compute_alpha.inputs.InterconnectMacsecArgs;
@@ -24,7 +24,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
      * 
      */
-    @InputImport(name="adminEnabled")
+    @Import(name="adminEnabled")
       private final @Nullable Output<Boolean> adminEnabled;
 
     public Output<Boolean> getAdminEnabled() {
@@ -35,7 +35,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Customer name, to put in the Letter of Authorization as the party authorized to request a crossconnect.
      * 
      */
-    @InputImport(name="customerName")
+    @Import(name="customerName")
       private final @Nullable Output<String> customerName;
 
     public Output<String> getCustomerName() {
@@ -46,7 +46,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed interconnection shared between customers though a partner. - DEDICATED: A dedicated physical interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of DEDICATED.
      * 
      */
-    @InputImport(name="interconnectType")
+    @Import(name="interconnectType")
       private final @Nullable Output<InterconnectInterconnectType> interconnectType;
 
     public Output<InterconnectInterconnectType> getInterconnectType() {
@@ -68,7 +68,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -79,7 +79,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Type of link requested, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G Ethernet with LR optics. Note that this field indicates the speed of each of the links in the bundle, not the speed of the entire bundle.
      * 
      */
-    @InputImport(name="linkType")
+    @Import(name="linkType")
       private final @Nullable Output<InterconnectLinkType> linkType;
 
     public Output<InterconnectLinkType> getLinkType() {
@@ -90,7 +90,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the InterconnectLocation object that represents where this connection is to be provisioned.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -101,7 +101,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration to enable Media Access Control security (MACsec) on the Interconnect between Google and your on-premises router.
      * 
      */
-    @InputImport(name="macsec")
+    @Import(name="macsec")
       private final @Nullable Output<InterconnectMacsecArgs> macsec;
 
     public Output<InterconnectMacsecArgs> getMacsec() {
@@ -112,7 +112,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Enable or disable MACsec on this Interconnect. MACsec enablement will fail if the macsec object is not specified.
      * 
      */
-    @InputImport(name="macsecEnabled")
+    @Import(name="macsecEnabled")
       private final @Nullable Output<Boolean> macsecEnabled;
 
     public Output<Boolean> getMacsecEnabled() {
@@ -123,7 +123,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -134,21 +134,21 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Email address to contact the customer NOC for operations and maintenance notifications regarding this Interconnect. If specified, this will be used for notifications in addition to all other forms described, such as Stackdriver logs alerting and Cloud Notifications.
      * 
      */
-    @InputImport(name="nocContactEmail")
+    @Import(name="nocContactEmail")
       private final @Nullable Output<String> nocContactEmail;
 
     public Output<String> getNocContactEmail() {
         return this.nocContactEmail == null ? Output.empty() : this.nocContactEmail;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -159,7 +159,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
      * Target number of physical links in the link bundle, as requested by the customer.
      * 
      */
-    @InputImport(name="requestedLinkCount")
+    @Import(name="requestedLinkCount")
       private final @Nullable Output<Integer> requestedLinkCount;
 
     public Output<Integer> getRequestedLinkCount() {

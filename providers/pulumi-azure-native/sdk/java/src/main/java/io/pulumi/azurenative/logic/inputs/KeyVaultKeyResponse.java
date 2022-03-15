@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyResponseAttributes;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The key attributes.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable KeyVaultKeyResponseAttributes attributes;
 
     public Optional<KeyVaultKeyResponseAttributes> getAttributes() {
@@ -34,7 +34,7 @@ public final class KeyVaultKeyResponse extends io.pulumi.resources.InvokeArgs {
      * The key id.
      * 
      */
-    @InputImport(name="kid")
+    @Import(name="kid")
       private final @Nullable String kid;
 
     public Optional<String> getKid() {

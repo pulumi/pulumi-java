@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ConfigUplinkEchoConfigArgs extends io.pulumi.resources.Resour
 
     public static final ConfigUplinkEchoConfigArgs Empty = new ConfigUplinkEchoConfigArgs();
 
-    @InputImport(name="antennaUplinkConfigArn")
+    @Import(name="antennaUplinkConfigArn")
       private final @Nullable Output<String> antennaUplinkConfigArn;
 
     public Output<String> getAntennaUplinkConfigArn() {
         return this.antennaUplinkConfigArn == null ? Output.empty() : this.antennaUplinkConfigArn;
     }
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

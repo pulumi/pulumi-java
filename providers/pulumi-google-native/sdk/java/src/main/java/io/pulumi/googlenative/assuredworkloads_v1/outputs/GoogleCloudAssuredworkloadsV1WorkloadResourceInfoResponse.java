@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
     /**
      * Resource identifier. For a project this represents project_number.
@@ -20,10 +20,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }

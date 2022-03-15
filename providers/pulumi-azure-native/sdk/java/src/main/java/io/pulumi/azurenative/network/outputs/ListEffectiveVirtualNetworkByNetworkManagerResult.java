@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.EffectiveVirtualNetworkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListEffectiveVirtualNetworkByNetworkManagerResult {
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
@@ -24,10 +24,10 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerResult {
      */
     private final @Nullable List<EffectiveVirtualNetworkResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListEffectiveVirtualNetworkByNetworkManagerResult(
-        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
-        @OutputCustomType.Parameter("value") @Nullable List<EffectiveVirtualNetworkResponse> value) {
+        @CustomType.Parameter("skipToken") @Nullable String skipToken,
+        @CustomType.Parameter("value") @Nullable List<EffectiveVirtualNetworkResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

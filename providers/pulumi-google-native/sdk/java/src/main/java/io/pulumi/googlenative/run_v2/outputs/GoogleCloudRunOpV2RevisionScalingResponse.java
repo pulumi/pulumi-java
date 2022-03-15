@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2RevisionScalingResponse {
     /**
      * Maximum number of serving instances that this resource should have.
@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
      */
     private final Integer minInstanceCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2RevisionScalingResponse(
-        @OutputCustomType.Parameter("maxInstanceCount") Integer maxInstanceCount,
-        @OutputCustomType.Parameter("minInstanceCount") Integer minInstanceCount) {
+        @CustomType.Parameter("maxInstanceCount") Integer maxInstanceCount,
+        @CustomType.Parameter("minInstanceCount") Integer minInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
     }

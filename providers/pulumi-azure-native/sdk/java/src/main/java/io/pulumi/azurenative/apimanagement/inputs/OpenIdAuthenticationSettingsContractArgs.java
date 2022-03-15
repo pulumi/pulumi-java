@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.BearerTokenSendingMethods;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * How to send token to the server.
      * 
      */
-    @InputImport(name="bearerTokenSendingMethods")
+    @Import(name="bearerTokenSendingMethods")
       private final @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
     public Output<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
@@ -36,7 +36,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * OAuth authorization server identifier.
      * 
      */
-    @InputImport(name="openidProviderId")
+    @Import(name="openidProviderId")
       private final @Nullable Output<String> openidProviderId;
 
     public Output<String> getOpenidProviderId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FunctionFileSystemConfig {
     /**
      * Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
@@ -20,10 +20,10 @@ public final class FunctionFileSystemConfig {
      */
     private final String localMountPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionFileSystemConfig(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("localMountPath") String localMountPath) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("localMountPath") String localMountPath) {
         this.arn = arn;
         this.localMountPath = localMountPath;
     }

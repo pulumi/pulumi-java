@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllocationSpecificSKUReservationResponse {
     /**
      * Specifies the number of resources that are allocated.
@@ -26,11 +26,11 @@ public final class AllocationSpecificSKUReservationResponse {
      */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllocationSpecificSKUReservationResponse(
-        @OutputCustomType.Parameter("count") String count,
-        @OutputCustomType.Parameter("inUseCount") String inUseCount,
-        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        @CustomType.Parameter("count") String count,
+        @CustomType.Parameter("inUseCount") String inUseCount,
+        @CustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
         this.count = count;
         this.inUseCount = inUseCount;
         this.instanceProperties = instanceProperties;

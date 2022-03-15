@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.OutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FailureDetailArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.InconclusiveDetailArgs;
@@ -26,7 +26,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
      * 
      */
-    @InputImport(name="failureDetail")
+    @Import(name="failureDetail")
       private final @Nullable Output<FailureDetailArgs> failureDetail;
 
     public Output<FailureDetailArgs> getFailureDetail() {
@@ -37,7 +37,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
      * 
      */
-    @InputImport(name="inconclusiveDetail")
+    @Import(name="inconclusiveDetail")
       private final @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
 
     public Output<InconclusiveDetailArgs> getInconclusiveDetail() {
@@ -48,7 +48,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
      * 
      */
-    @InputImport(name="skippedDetail")
+    @Import(name="skippedDetail")
       private final @Nullable Output<SkippedDetailArgs> skippedDetail;
 
     public Output<SkippedDetailArgs> getSkippedDetail() {
@@ -59,7 +59,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
      * 
      */
-    @InputImport(name="successDetail")
+    @Import(name="successDetail")
       private final @Nullable Output<SuccessDetailArgs> successDetail;
 
     public Output<SuccessDetailArgs> getSuccessDetail() {
@@ -70,7 +70,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * The simplest way to interpret a result. Required
      * 
      */
-    @InputImport(name="summary")
+    @Import(name="summary")
       private final @Nullable Output<OutcomeSummary> summary;
 
     public Output<OutcomeSummary> getSummary() {

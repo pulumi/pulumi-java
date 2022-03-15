@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.enums.DomainAuthMode;
 import io.pulumi.awsnative.sagemaker.outputs.DomainTag;
 import io.pulumi.awsnative.sagemaker.outputs.DomainUserSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
      * 
      */
-    @OutputExport(name="appNetworkAccessType", type=DomainAppNetworkAccessType.class, parameters={})
+    @Export(name="appNetworkAccessType", type=DomainAppNetworkAccessType.class, parameters={})
     private Output</* @Nullable */ DomainAppNetworkAccessType> appNetworkAccessType;
 
     /**
@@ -40,7 +40,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The mode of authentication that members use to access the domain.
      * 
      */
-    @OutputExport(name="authMode", type=DomainAuthMode.class, parameters={})
+    @Export(name="authMode", type=DomainAuthMode.class, parameters={})
     private Output<DomainAuthMode> authMode;
 
     /**
@@ -54,7 +54,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The default user settings.
      * 
      */
-    @OutputExport(name="defaultUserSettings", type=DomainUserSettings.class, parameters={})
+    @Export(name="defaultUserSettings", type=DomainUserSettings.class, parameters={})
     private Output<DomainUserSettings> defaultUserSettings;
 
     /**
@@ -68,7 +68,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the created domain.
      * 
      */
-    @OutputExport(name="domainArn", type=String.class, parameters={})
+    @Export(name="domainArn", type=String.class, parameters={})
     private Output<String> domainArn;
 
     /**
@@ -82,7 +82,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The domain name.
      * 
      */
-    @OutputExport(name="domainId", type=String.class, parameters={})
+    @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
@@ -96,7 +96,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A name for the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -110,7 +110,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
-    @OutputExport(name="homeEfsFileSystemId", type=String.class, parameters={})
+    @Export(name="homeEfsFileSystemId", type=String.class, parameters={})
     private Output<String> homeEfsFileSystemId;
 
     /**
@@ -124,7 +124,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -138,7 +138,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The SSO managed application instance ID.
      * 
      */
-    @OutputExport(name="singleSignOnManagedApplicationInstanceId", type=String.class, parameters={})
+    @Export(name="singleSignOnManagedApplicationInstanceId", type=String.class, parameters={})
     private Output<String> singleSignOnManagedApplicationInstanceId;
 
     /**
@@ -152,7 +152,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The VPC subnets that Studio uses for communication.
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -166,7 +166,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A list of tags to apply to the user profile.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DomainTag.class})
+    @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**
@@ -180,7 +180,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The URL to the created domain.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
@@ -194,7 +194,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

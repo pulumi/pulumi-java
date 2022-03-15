@@ -6,14 +6,14 @@ package io.pulumi.awsnative.codestarnotifications.outputs;
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleDetailType;
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.outputs.NotificationRuleTarget;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationRuleResult {
     private final @Nullable String arn;
     private final @Nullable String createdBy;
@@ -25,17 +25,17 @@ public final class GetNotificationRuleResult {
     private final @Nullable String targetAddress;
     private final @Nullable List<NotificationRuleTarget> targets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationRuleResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("detailType") @Nullable NotificationRuleDetailType detailType,
-        @OutputCustomType.Parameter("eventTypeId") @Nullable String eventTypeId,
-        @OutputCustomType.Parameter("eventTypeIds") @Nullable List<String> eventTypeIds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("status") @Nullable NotificationRuleStatus status,
-        @OutputCustomType.Parameter("targetAddress") @Nullable String targetAddress,
-        @OutputCustomType.Parameter("targets") @Nullable List<NotificationRuleTarget> targets) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("detailType") @Nullable NotificationRuleDetailType detailType,
+        @CustomType.Parameter("eventTypeId") @Nullable String eventTypeId,
+        @CustomType.Parameter("eventTypeIds") @Nullable List<String> eventTypeIds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("status") @Nullable NotificationRuleStatus status,
+        @CustomType.Parameter("targetAddress") @Nullable String targetAddress,
+        @CustomType.Parameter("targets") @Nullable List<NotificationRuleTarget> targets) {
         this.arn = arn;
         this.createdBy = createdBy;
         this.detailType = detailType;

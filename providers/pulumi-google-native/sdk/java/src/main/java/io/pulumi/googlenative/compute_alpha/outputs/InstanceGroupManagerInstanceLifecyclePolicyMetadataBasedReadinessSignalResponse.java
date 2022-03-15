@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse {
     /**
      * The number of seconds to wait for a readiness signal during initialization before timing out.
@@ -15,8 +15,8 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      */
     private final Integer timeoutSec;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(@OutputCustomType.Parameter("timeoutSec") Integer timeoutSec) {
+    @CustomType.Constructor
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(@CustomType.Parameter("timeoutSec") Integer timeoutSec) {
         this.timeoutSec = timeoutSec;
     }
 

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.outputs.OnPremiseResourceDetailsResponse;
 import io.pulumi.azurenative.security.outputs.OnPremiseSqlResourceDetailsResponse;
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentPartnerDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssessmentResult {
     /**
      * Additional data regarding the assessment
@@ -71,18 +71,18 @@ public final class GetAssessmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssessmentResult(
-        @OutputCustomType.Parameter("additionalData") @Nullable Map<String,String> additionalData,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("links") AssessmentLinksResponse links,
-        @OutputCustomType.Parameter("metadata") @Nullable SecurityAssessmentMetadataPropertiesResponse metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnersData") @Nullable SecurityAssessmentPartnerDataResponse partnersData,
-        @OutputCustomType.Parameter("resourceDetails") Object resourceDetails,
-        @OutputCustomType.Parameter("status") AssessmentStatusResponse status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalData") @Nullable Map<String,String> additionalData,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("links") AssessmentLinksResponse links,
+        @CustomType.Parameter("metadata") @Nullable SecurityAssessmentMetadataPropertiesResponse metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnersData") @Nullable SecurityAssessmentPartnerDataResponse partnersData,
+        @CustomType.Parameter("resourceDetails") Object resourceDetails,
+        @CustomType.Parameter("status") AssessmentStatusResponse status,
+        @CustomType.Parameter("type") String type) {
         this.additionalData = additionalData;
         this.displayName = displayName;
         this.id = id;

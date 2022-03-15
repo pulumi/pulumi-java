@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNatAddressResult {
     /**
      * The static IPV4 address.
@@ -25,11 +25,11 @@ public final class GetNatAddressResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNatAddressResult(
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.ipAddress = ipAddress;
         this.name = name;
         this.state = state;

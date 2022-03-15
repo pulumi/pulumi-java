@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2;
 
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerDefaultActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
      * 
      */
-    @InputImport(name="alpnPolicy")
+    @Import(name="alpnPolicy")
       private final @Nullable Output<String> alpnPolicy;
 
     public Output<String> getAlpnPolicy() {
@@ -33,7 +33,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -44,7 +44,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for default actions. Detailed below.
      * 
      */
-    @InputImport(name="defaultActions", required=true)
+    @Import(name="defaultActions", required=true)
       private final Output<List<ListenerDefaultActionArgs>> defaultActions;
 
     public Output<List<ListenerDefaultActionArgs>> getDefaultActions() {
@@ -55,7 +55,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerArn", required=true)
+    @Import(name="loadBalancerArn", required=true)
       private final Output<String> loadBalancerArn;
 
     public Output<String> getLoadBalancerArn() {
@@ -66,7 +66,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -77,7 +77,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -88,7 +88,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
      * 
      */
-    @InputImport(name="sslPolicy")
+    @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
     public Output<String> getSslPolicy() {
@@ -99,7 +99,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

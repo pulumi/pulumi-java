@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
@@ -38,7 +38,7 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
      * Tag identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="tagId", required=true)
+    @Import(name="tagId", required=true)
       private final String tagId;
 
     public String getTagId() {

@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricCounterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricCounterSetResponse {
     /**
      * The counters that should be collected in this set.
@@ -16,8 +16,8 @@ public final class MetricCounterSetResponse {
      */
     private final List<MetricCounterResponse> counters;
 
-    @OutputCustomType.Constructor
-    private MetricCounterSetResponse(@OutputCustomType.Parameter("counters") List<MetricCounterResponse> counters) {
+    @CustomType.Constructor
+    private MetricCounterSetResponse(@CustomType.Parameter("counters") List<MetricCounterResponse> counters) {
         this.counters = counters;
     }
 

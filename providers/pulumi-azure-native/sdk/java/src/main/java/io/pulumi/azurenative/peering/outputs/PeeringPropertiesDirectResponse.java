@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.DirectConnectionResponse;
 import io.pulumi.azurenative.peering.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeeringPropertiesDirectResponse {
     /**
      * The set of connections that constitute a direct peering.
@@ -36,12 +36,12 @@ public final class PeeringPropertiesDirectResponse {
      */
     private final Boolean useForPeeringService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeeringPropertiesDirectResponse(
-        @OutputCustomType.Parameter("connections") @Nullable List<DirectConnectionResponse> connections,
-        @OutputCustomType.Parameter("directPeeringType") @Nullable String directPeeringType,
-        @OutputCustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn,
-        @OutputCustomType.Parameter("useForPeeringService") Boolean useForPeeringService) {
+        @CustomType.Parameter("connections") @Nullable List<DirectConnectionResponse> connections,
+        @CustomType.Parameter("directPeeringType") @Nullable String directPeeringType,
+        @CustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn,
+        @CustomType.Parameter("useForPeeringService") Boolean useForPeeringService) {
         this.connections = connections;
         this.directPeeringType = directPeeringType;
         this.peerAsn = peerAsn;

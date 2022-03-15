@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class TaskDefinitionDeviceArgs extends io.pulumi.resources.Resource
 
     public static final TaskDefinitionDeviceArgs Empty = new TaskDefinitionDeviceArgs();
 
-    @InputImport(name="containerPath")
+    @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
     public Output<String> getContainerPath() {
         return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
-    @InputImport(name="hostPath")
+    @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
     public Output<String> getHostPath() {
         return this.hostPath == null ? Output.empty() : this.hostPath;
     }
 
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {

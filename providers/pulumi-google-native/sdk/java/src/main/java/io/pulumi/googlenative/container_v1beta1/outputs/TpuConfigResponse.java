@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TpuConfigResponse {
     /**
      * Whether Cloud TPU integration is enabled or not.
@@ -26,11 +26,11 @@ public final class TpuConfigResponse {
      */
     private final Boolean useServiceNetworking;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TpuConfigResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("ipv4CidrBlock") String ipv4CidrBlock,
-        @OutputCustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("ipv4CidrBlock") String ipv4CidrBlock,
+        @CustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
         this.enabled = enabled;
         this.ipv4CidrBlock = ipv4CidrBlock;
         this.useServiceNetworking = useServiceNetworking;

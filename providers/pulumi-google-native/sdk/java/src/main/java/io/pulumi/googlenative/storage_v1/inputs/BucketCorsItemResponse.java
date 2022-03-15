@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * The value, in seconds, to return in the  Access-Control-Max-Age header used in preflight responses.
      * 
      */
-    @InputImport(name="maxAgeSeconds", required=true)
+    @Import(name="maxAgeSeconds", required=true)
       private final Integer maxAgeSeconds;
 
     public Integer getMaxAgeSeconds() {
@@ -29,7 +29,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
      * 
      */
-    @InputImport(name="method", required=true)
+    @Import(name="method", required=true)
       private final List<String> method;
 
     public List<String> getMethod() {
@@ -40,7 +40,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * The list of Origins eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
      * 
      */
-    @InputImport(name="origin", required=true)
+    @Import(name="origin", required=true)
       private final List<String> origin;
 
     public List<String> getOrigin() {
@@ -51,7 +51,7 @@ public final class BucketCorsItemResponse extends io.pulumi.resources.InvokeArgs
      * The list of HTTP headers other than the simple response headers to give permission for the user-agent to share across domains.
      * 
      */
-    @InputImport(name="responseHeader", required=true)
+    @Import(name="responseHeader", required=true)
       private final List<String> responseHeader;
 
     public List<String> getResponseHeader() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
      * The number of disks per node.
      * 
      */
-    @InputImport(name="disksPerNode")
+    @Import(name="disksPerNode")
       private final @Nullable Output<Integer> disksPerNode;
 
     public Output<Integer> getDisksPerNode() {

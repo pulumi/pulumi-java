@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeinterlaceResponse {
     /**
      * The deinterlacing mode. Defaults to AutoPixelAdaptive.
@@ -22,10 +22,10 @@ public final class DeinterlaceResponse {
      */
     private final @Nullable String parity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeinterlaceResponse(
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("parity") @Nullable String parity) {
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("parity") @Nullable String parity) {
         this.mode = mode;
         this.parity = parity;
     }

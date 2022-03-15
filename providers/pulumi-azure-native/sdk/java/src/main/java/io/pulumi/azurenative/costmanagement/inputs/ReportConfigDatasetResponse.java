@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportConfigDatasetConfigurat
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigFilterResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigGroupingResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigSortingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
      * 
      */
-    @InputImport(name="aggregation")
+    @Import(name="aggregation")
       private final @Nullable Map<String,ReportConfigAggregationResponse> aggregation;
 
     public Map<String,ReportConfigAggregationResponse> getAggregation() {
@@ -40,7 +40,7 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable ReportConfigDatasetConfigurationResponse configuration;
 
     public Optional<ReportConfigDatasetConfigurationResponse> getConfiguration() {
@@ -51,7 +51,7 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
      * Has filter expression to use in the report.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable ReportConfigFilterResponse filter;
 
     public Optional<ReportConfigFilterResponse> getFilter() {
@@ -62,7 +62,7 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
      * The granularity of rows in the report.
      * 
      */
-    @InputImport(name="granularity")
+    @Import(name="granularity")
       private final @Nullable String granularity;
 
     public Optional<String> getGranularity() {
@@ -73,7 +73,7 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
      * 
      */
-    @InputImport(name="grouping")
+    @Import(name="grouping")
       private final @Nullable List<ReportConfigGroupingResponse> grouping;
 
     public List<ReportConfigGroupingResponse> getGrouping() {
@@ -84,7 +84,7 @@ public final class ReportConfigDatasetResponse extends io.pulumi.resources.Invok
      * Array of order by expression to use in the report.
      * 
      */
-    @InputImport(name="sorting")
+    @Import(name="sorting")
       private final @Nullable List<ReportConfigSortingResponse> sorting;
 
     public List<ReportConfigSortingResponse> getSorting() {

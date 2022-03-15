@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionMonitoringOutput;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionMonitoringOutputConfig {
     /**
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
@@ -24,10 +24,10 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
      */
     private final List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelBiasJobDefinitionMonitoringOutputConfig(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("monitoringOutputs") List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("monitoringOutputs") List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.DedicatedCloudNodeArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Availability Zone id, e.g. "az1"
      * 
      */
-    @OutputExport(name="availabilityZoneId", type=String.class, parameters={})
+    @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
     /**
@@ -51,7 +51,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Availability Zone name, e.g. "Availability Zone 1"
      * 
      */
-    @OutputExport(name="availabilityZoneName", type=String.class, parameters={})
+    @Export(name="availabilityZoneName", type=String.class, parameters={})
     private Output<String> availabilityZoneName;
 
     /**
@@ -65,7 +65,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * VMWare Cloud Rack Name
      * 
      */
-    @OutputExport(name="cloudRackName", type=String.class, parameters={})
+    @Export(name="cloudRackName", type=String.class, parameters={})
     private Output<String> cloudRackName;
 
     /**
@@ -79,7 +79,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * date time the resource was created
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -93,7 +93,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Azure region
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * SKU's name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * count of nodes to create
      * 
      */
-    @OutputExport(name="nodesCount", type=Integer.class, parameters={})
+    @Export(name="nodesCount", type=Integer.class, parameters={})
     private Output<Integer> nodesCount;
 
     /**
@@ -135,7 +135,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Placement Group id, e.g. "n1"
      * 
      */
-    @OutputExport(name="placementGroupId", type=String.class, parameters={})
+    @Export(name="placementGroupId", type=String.class, parameters={})
     private Output<String> placementGroupId;
 
     /**
@@ -149,7 +149,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Placement Name, e.g. "Placement Group 1"
      * 
      */
-    @OutputExport(name="placementGroupName", type=String.class, parameters={})
+    @Export(name="placementGroupName", type=String.class, parameters={})
     private Output<String> placementGroupName;
 
     /**
@@ -163,7 +163,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Private Cloud Id
      * 
      */
-    @OutputExport(name="privateCloudId", type=String.class, parameters={})
+    @Export(name="privateCloudId", type=String.class, parameters={})
     private Output<String> privateCloudId;
 
     /**
@@ -177,7 +177,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Resource Pool Name
      * 
      */
-    @OutputExport(name="privateCloudName", type=String.class, parameters={})
+    @Export(name="privateCloudName", type=String.class, parameters={})
     private Output<String> privateCloudName;
 
     /**
@@ -191,7 +191,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -205,7 +205,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * purchase id
      * 
      */
-    @OutputExport(name="purchaseId", type=String.class, parameters={})
+    @Export(name="purchaseId", type=String.class, parameters={})
     private Output<String> purchaseId;
 
     /**
@@ -219,7 +219,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Dedicated Cloud Nodes SKU
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -233,7 +233,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Node status, indicates is private cloud set up on this node or not
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -247,7 +247,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * Dedicated Cloud Nodes tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -261,7 +261,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * {resourceProviderNamespace}/{resourceType}
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -275,7 +275,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * VMWare Cluster Name
      * 
      */
-    @OutputExport(name="vmwareClusterName", type=String.class, parameters={})
+    @Export(name="vmwareClusterName", type=String.class, parameters={})
     private Output<String> vmwareClusterName;
 
     /**

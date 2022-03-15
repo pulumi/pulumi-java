@@ -8,7 +8,7 @@ import io.pulumi.aws.memorydb.SnapshotArgs;
 import io.pulumi.aws.memorydb.inputs.SnapshotState;
 import io.pulumi.aws.memorydb.outputs.SnapshotClusterConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The ARN of the snapshot.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The configuration of the cluster from which the snapshot was taken.
      * 
      */
-    @OutputExport(name="clusterConfigurations", type=List.class, parameters={SnapshotClusterConfiguration.class})
+    @Export(name="clusterConfigurations", type=List.class, parameters={SnapshotClusterConfiguration.class})
     private Output<List<SnapshotClusterConfiguration>> clusterConfigurations;
 
     /**
@@ -65,7 +65,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Name of the MemoryDB cluster to take a snapshot of.
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
@@ -79,7 +79,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * ARN of the KMS key used to encrypt the snapshot at rest.
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
@@ -93,7 +93,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Name of the cluster.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -121,7 +121,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Indicates whether the snapshot is from an automatic backup (`automated`) or was created manually (`manual`).
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
     /**
@@ -135,7 +135,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

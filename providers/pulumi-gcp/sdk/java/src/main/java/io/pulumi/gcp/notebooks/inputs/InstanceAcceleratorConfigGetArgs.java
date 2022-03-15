@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
      * Count of cores of this accelerator.
      * 
      */
-    @InputImport(name="coreCount", required=true)
+    @Import(name="coreCount", required=true)
       private final Output<Integer> coreCount;
 
     public Output<Integer> getCoreCount() {
@@ -30,7 +30,7 @@ public final class InstanceAcceleratorConfigGetArgs extends io.pulumi.resources.
      * Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

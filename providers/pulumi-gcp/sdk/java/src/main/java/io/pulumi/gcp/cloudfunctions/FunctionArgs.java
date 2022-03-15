@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionSourceRepositoryArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Memory (in MB), available to the function. Default value is `256`. Possible values include `128`, `256`, `512`, `1024`, etc.
      * 
      */
-    @InputImport(name="availableMemoryMb")
+    @Import(name="availableMemoryMb")
       private final @Nullable Output<Integer> availableMemoryMb;
 
     public Output<Integer> getAvailableMemoryMb() {
@@ -35,7 +35,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value environment variable pairs available during build time.
      * 
      */
-    @InputImport(name="buildEnvironmentVariables")
+    @Import(name="buildEnvironmentVariables")
       private final @Nullable Output<Map<String,Object>> buildEnvironmentVariables;
 
     public Output<Map<String,Object>> getBuildEnvironmentVariables() {
@@ -46,7 +46,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the function.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the function that will be executed when the Google Cloud Function is triggered.
      * 
      */
-    @InputImport(name="entryPoint")
+    @Import(name="entryPoint")
       private final @Nullable Output<String> entryPoint;
 
     public Output<String> getEntryPoint() {
@@ -68,7 +68,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value environment variable pairs to assign to the function.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,Object>> environmentVariables;
 
     public Output<Map<String,Object>> getEnvironmentVariables() {
@@ -79,7 +79,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
      * 
      */
-    @InputImport(name="eventTrigger")
+    @Import(name="eventTrigger")
       private final @Nullable Output<FunctionEventTriggerArgs> eventTrigger;
 
     public Output<FunctionEventTriggerArgs> getEventTrigger() {
@@ -90,7 +90,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * URL which triggers function execution. Returned only if `trigger_http` is used.
      * 
      */
-    @InputImport(name="httpsTriggerUrl")
+    @Import(name="httpsTriggerUrl")
       private final @Nullable Output<String> httpsTriggerUrl;
 
     public Output<String> getHttpsTriggerUrl() {
@@ -101,7 +101,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Check [ingress documentation](https://cloud.google.com/functions/docs/networking/network-settings#ingress_settings) to see the impact of each settings value. Changes to this field will recreate the cloud function.
      * 
      */
-    @InputImport(name="ingressSettings")
+    @Import(name="ingressSettings")
       private final @Nullable Output<String> ingressSettings;
 
     public Output<String> getIngressSettings() {
@@ -112,7 +112,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
     public Output<Map<String,Object>> getLabels() {
@@ -123,7 +123,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The limit on the maximum number of function instances that may coexist at a given time.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
@@ -134,7 +134,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The limit on the minimum number of function instances that may coexist at a given time.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
@@ -145,7 +145,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * A user-defined name of the function. Function names must be unique globally.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -156,7 +156,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Project of the function. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -167,7 +167,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Region of function. If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -179,7 +179,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Eg. `"nodejs10"`, `"nodejs12"`, `"nodejs14"`, `"python37"`, `"python38"`, `"python39"`, `"dotnet3"`, `"go113"`, `"java11"`, `"ruby27"`, etc. Check the [official doc](https://cloud.google.com/functions/docs/concepts/exec#runtimes) for the up-to-date list.
      * 
      */
-    @InputImport(name="runtime", required=true)
+    @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -190,7 +190,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, the self-provided service account to run the function with.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -201,7 +201,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The GCS bucket containing the zip archive which contains the function.
      * 
      */
-    @InputImport(name="sourceArchiveBucket")
+    @Import(name="sourceArchiveBucket")
       private final @Nullable Output<String> sourceArchiveBucket;
 
     public Output<String> getSourceArchiveBucket() {
@@ -212,7 +212,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The source archive object (file) in archive bucket.
      * 
      */
-    @InputImport(name="sourceArchiveObject")
+    @Import(name="sourceArchiveObject")
       private final @Nullable Output<String> sourceArchiveObject;
 
     public Output<String> getSourceArchiveObject() {
@@ -224,7 +224,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
      * 
      */
-    @InputImport(name="sourceRepository")
+    @Import(name="sourceRepository")
       private final @Nullable Output<FunctionSourceRepositoryArgs> sourceRepository;
 
     public Output<FunctionSourceRepositoryArgs> getSourceRepository() {
@@ -235,7 +235,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -246,7 +246,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `event_trigger`.
      * 
      */
-    @InputImport(name="triggerHttp")
+    @Import(name="triggerHttp")
       private final @Nullable Output<Boolean> triggerHttp;
 
     public Output<Boolean> getTriggerHttp() {
@@ -257,7 +257,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*`.
      * 
      */
-    @InputImport(name="vpcConnector")
+    @Import(name="vpcConnector")
       private final @Nullable Output<String> vpcConnector;
 
     public Output<String> getVpcConnector() {
@@ -268,7 +268,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
      * 
      */
-    @InputImport(name="vpcConnectorEgressSettings")
+    @Import(name="vpcConnectorEgressSettings")
       private final @Nullable Output<String> vpcConnectorEgressSettings;
 
     public Output<String> getVpcConnectorEgressSettings() {

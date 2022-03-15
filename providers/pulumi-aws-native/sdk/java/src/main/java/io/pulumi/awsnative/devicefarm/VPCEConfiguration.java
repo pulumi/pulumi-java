@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.VPCEConfigurationArgs;
 import io.pulumi.awsnative.devicefarm.outputs.VPCEConfigurationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,37 +19,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devicefarm:VPCEConfiguration")
 public class VPCEConfiguration extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="serviceDnsName", type=String.class, parameters={})
+    @Export(name="serviceDnsName", type=String.class, parameters={})
     private Output<String> serviceDnsName;
 
     public Output<String> getServiceDnsName() {
         return this.serviceDnsName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={VPCEConfigurationTag.class})
+    @Export(name="tags", type=List.class, parameters={VPCEConfigurationTag.class})
     private Output</* @Nullable */ List<VPCEConfigurationTag>> tags;
 
     public Output</* @Nullable */ List<VPCEConfigurationTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="vpceConfigurationDescription", type=String.class, parameters={})
+    @Export(name="vpceConfigurationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpceConfigurationDescription;
 
     public Output</* @Nullable */ String> getVpceConfigurationDescription() {
         return this.vpceConfigurationDescription;
     }
-    @OutputExport(name="vpceConfigurationName", type=String.class, parameters={})
+    @Export(name="vpceConfigurationName", type=String.class, parameters={})
     private Output<String> vpceConfigurationName;
 
     public Output<String> getVpceConfigurationName() {
         return this.vpceConfigurationName;
     }
-    @OutputExport(name="vpceServiceName", type=String.class, parameters={})
+    @Export(name="vpceServiceName", type=String.class, parameters={})
     private Output<String> vpceServiceName;
 
     public Output<String> getVpceServiceName() {

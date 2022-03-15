@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.CorsPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpFaultInjectionResponse;
@@ -14,7 +14,7 @@ import io.pulumi.googlenative.compute_v1.outputs.WeightedBackendServiceResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRouteActionResponse {
     /**
      * The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard. Not supported when the URL map is bound to a target gRPC proxy.
@@ -57,16 +57,16 @@ public final class HttpRouteActionResponse {
      */
     private final List<WeightedBackendServiceResponse> weightedBackendServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRouteActionResponse(
-        @OutputCustomType.Parameter("corsPolicy") CorsPolicyResponse corsPolicy,
-        @OutputCustomType.Parameter("faultInjectionPolicy") HttpFaultInjectionResponse faultInjectionPolicy,
-        @OutputCustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
-        @OutputCustomType.Parameter("requestMirrorPolicy") RequestMirrorPolicyResponse requestMirrorPolicy,
-        @OutputCustomType.Parameter("retryPolicy") HttpRetryPolicyResponse retryPolicy,
-        @OutputCustomType.Parameter("timeout") DurationResponse timeout,
-        @OutputCustomType.Parameter("urlRewrite") UrlRewriteResponse urlRewrite,
-        @OutputCustomType.Parameter("weightedBackendServices") List<WeightedBackendServiceResponse> weightedBackendServices) {
+        @CustomType.Parameter("corsPolicy") CorsPolicyResponse corsPolicy,
+        @CustomType.Parameter("faultInjectionPolicy") HttpFaultInjectionResponse faultInjectionPolicy,
+        @CustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
+        @CustomType.Parameter("requestMirrorPolicy") RequestMirrorPolicyResponse requestMirrorPolicy,
+        @CustomType.Parameter("retryPolicy") HttpRetryPolicyResponse retryPolicy,
+        @CustomType.Parameter("timeout") DurationResponse timeout,
+        @CustomType.Parameter("urlRewrite") UrlRewriteResponse urlRewrite,
+        @CustomType.Parameter("weightedBackendServices") List<WeightedBackendServiceResponse> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.maxStreamDuration = maxStreamDuration;

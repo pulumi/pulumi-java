@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheNetworkSettingsResponse {
     /**
      * DNS search domain
@@ -39,13 +39,13 @@ public final class CacheNetworkSettingsResponse {
      */
     private final List<String> utilityAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheNetworkSettingsResponse(
-        @OutputCustomType.Parameter("dnsSearchDomain") @Nullable String dnsSearchDomain,
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("mtu") @Nullable Integer mtu,
-        @OutputCustomType.Parameter("ntpServer") @Nullable String ntpServer,
-        @OutputCustomType.Parameter("utilityAddresses") List<String> utilityAddresses) {
+        @CustomType.Parameter("dnsSearchDomain") @Nullable String dnsSearchDomain,
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("mtu") @Nullable Integer mtu,
+        @CustomType.Parameter("ntpServer") @Nullable String ntpServer,
+        @CustomType.Parameter("utilityAddresses") List<String> utilityAddresses) {
         this.dnsSearchDomain = dnsSearchDomain;
         this.dnsServers = dnsServers;
         this.mtu = mtu;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerBackendResponse {
     /**
      * Name of a Compute Engine instance or network endpoint.
@@ -36,13 +36,13 @@ public final class LoadBalancerBackendResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerBackendResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("healthCheckAllowingFirewallRules") List<String> healthCheckAllowingFirewallRules,
-        @OutputCustomType.Parameter("healthCheckBlockingFirewallRules") List<String> healthCheckBlockingFirewallRules,
-        @OutputCustomType.Parameter("healthCheckFirewallState") String healthCheckFirewallState,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("healthCheckAllowingFirewallRules") List<String> healthCheckAllowingFirewallRules,
+        @CustomType.Parameter("healthCheckBlockingFirewallRules") List<String> healthCheckBlockingFirewallRules,
+        @CustomType.Parameter("healthCheckFirewallState") String healthCheckFirewallState,
+        @CustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
         this.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;

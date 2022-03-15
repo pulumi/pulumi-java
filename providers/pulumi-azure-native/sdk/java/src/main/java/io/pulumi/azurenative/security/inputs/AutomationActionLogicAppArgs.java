@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * Expected value is 'LogicApp'.
      * 
      */
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
     public Output<String> getActionType() {
@@ -34,7 +34,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * The triggered Logic App Azure Resource ID. This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
      * 
      */
-    @InputImport(name="logicAppResourceId")
+    @Import(name="logicAppResourceId")
       private final @Nullable Output<String> logicAppResourceId;
 
     public Output<String> getLogicAppResourceId() {
@@ -45,7 +45,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
      * The Logic App trigger URI endpoint (it will not be included in any response).
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

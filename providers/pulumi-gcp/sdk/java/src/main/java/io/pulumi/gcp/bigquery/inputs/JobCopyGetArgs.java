@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobCopyDestinationEncryptionConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobCopyDestinationTableGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobCopySourceTableGetArgs;
@@ -27,7 +27,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
      */
-    @InputImport(name="createDisposition")
+    @Import(name="createDisposition")
       private final @Nullable Output<String> createDisposition;
 
     public Output<String> getCreateDisposition() {
@@ -39,7 +39,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destinationEncryptionConfiguration")
+    @Import(name="destinationEncryptionConfiguration")
       private final @Nullable Output<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
     public Output<JobCopyDestinationEncryptionConfigurationGetArgs> getDestinationEncryptionConfiguration() {
@@ -51,7 +51,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destinationTable")
+    @Import(name="destinationTable")
       private final @Nullable Output<JobCopyDestinationTableGetArgs> destinationTable;
 
     public Output<JobCopyDestinationTableGetArgs> getDestinationTable() {
@@ -63,7 +63,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceTables", required=true)
+    @Import(name="sourceTables", required=true)
       private final Output<List<JobCopySourceTableGetArgs>> sourceTables;
 
     public Output<List<JobCopySourceTableGetArgs>> getSourceTables() {
@@ -81,7 +81,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
      */
-    @InputImport(name="writeDisposition")
+    @Import(name="writeDisposition")
       private final @Nullable Output<String> writeDisposition;
 
     public Output<String> getWriteDisposition() {

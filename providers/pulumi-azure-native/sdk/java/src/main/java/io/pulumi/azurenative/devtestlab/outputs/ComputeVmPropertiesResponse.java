@@ -5,14 +5,14 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ComputeDataDiskResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ComputeVmInstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeVmPropertiesResponse {
     /**
      * Gets data disks blob uri for the virtual machine.
@@ -50,15 +50,15 @@ public final class ComputeVmPropertiesResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeVmPropertiesResponse(
-        @OutputCustomType.Parameter("dataDiskIds") @Nullable List<String> dataDiskIds,
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<ComputeDataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("osDiskId") @Nullable String osDiskId,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("statuses") @Nullable List<ComputeVmInstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("dataDiskIds") @Nullable List<String> dataDiskIds,
+        @CustomType.Parameter("dataDisks") @Nullable List<ComputeDataDiskResponse> dataDisks,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("osDiskId") @Nullable String osDiskId,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("statuses") @Nullable List<ComputeVmInstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.dataDiskIds = dataDiskIds;
         this.dataDisks = dataDisks;
         this.networkInterfaceId = networkInterfaceId;

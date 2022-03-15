@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
      */
-    @InputImport(name="authenticationRequestExtraParams")
+    @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
 
     public Output<Map<String,String>> getAuthenticationRequestExtraParams() {
@@ -31,7 +31,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
      */
-    @InputImport(name="onUnauthenticatedRequest")
+    @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
     public Output<String> getOnUnauthenticatedRequest() {
@@ -42,7 +42,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The set of user claims to be requested from the IdP.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -53,7 +53,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The name of the cookie used to maintain session information.
      * 
      */
-    @InputImport(name="sessionCookieName")
+    @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
     public Output<String> getSessionCookieName() {
@@ -64,7 +64,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The maximum duration of the authentication session, in seconds.
      * 
      */
-    @InputImport(name="sessionTimeout")
+    @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
     public Output<Integer> getSessionTimeout() {
@@ -75,7 +75,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The ARN of the Cognito user pool.
      * 
      */
-    @InputImport(name="userPoolArn", required=true)
+    @Import(name="userPoolArn", required=true)
       private final Output<String> userPoolArn;
 
     public Output<String> getUserPoolArn() {
@@ -86,7 +86,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The ID of the Cognito user pool client.
      * 
      */
-    @InputImport(name="userPoolClientId", required=true)
+    @Import(name="userPoolClientId", required=true)
       private final Output<String> userPoolClientId;
 
     public Output<String> getUserPoolClientId() {
@@ -97,7 +97,7 @@ public final class ListenerRuleActionAuthenticateCognitoArgs extends io.pulumi.r
      * The domain prefix or fully-qualified domain name of the Cognito user pool.
      * 
      */
-    @InputImport(name="userPoolDomain", required=true)
+    @Import(name="userPoolDomain", required=true)
       private final Output<String> userPoolDomain;
 
     public Output<String> getUserPoolDomain() {

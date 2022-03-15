@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesIPConfigurationResponse {
     /**
      * IP address of the Kubernetes node.
@@ -22,10 +22,10 @@ public final class KubernetesIPConfigurationResponse {
      */
     private final String port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesIPConfigurationResponse(
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("port") String port) {
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("port") String port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }

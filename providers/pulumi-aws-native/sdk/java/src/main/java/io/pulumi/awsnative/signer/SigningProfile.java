@@ -9,7 +9,7 @@ import io.pulumi.awsnative.signer.enums.SigningProfilePlatformId;
 import io.pulumi.awsnative.signer.outputs.SigningProfileSignatureValidityPeriod;
 import io.pulumi.awsnative.signer.outputs.SigningProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified signing profile.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * The ID of the target signing platform.
      * 
      */
-    @OutputExport(name="platformId", type=SigningProfilePlatformId.class, parameters={})
+    @Export(name="platformId", type=SigningProfilePlatformId.class, parameters={})
     private Output<SigningProfilePlatformId> platformId;
 
     /**
@@ -53,7 +53,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * A name for the signing profile. AWS CloudFormation generates a unique physical ID and uses that ID for the signing profile name.
      * 
      */
-    @OutputExport(name="profileName", type=String.class, parameters={})
+    @Export(name="profileName", type=String.class, parameters={})
     private Output<String> profileName;
 
     /**
@@ -67,7 +67,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * A version for the signing profile. AWS Signer generates a unique version for each profile of the same profile name.
      * 
      */
-    @OutputExport(name="profileVersion", type=String.class, parameters={})
+    @Export(name="profileVersion", type=String.class, parameters={})
     private Output<String> profileVersion;
 
     /**
@@ -81,7 +81,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified signing profile version.
      * 
      */
-    @OutputExport(name="profileVersionArn", type=String.class, parameters={})
+    @Export(name="profileVersionArn", type=String.class, parameters={})
     private Output<String> profileVersionArn;
 
     /**
@@ -95,7 +95,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * Signature validity period of the profile.
      * 
      */
-    @OutputExport(name="signatureValidityPeriod", type=SigningProfileSignatureValidityPeriod.class, parameters={})
+    @Export(name="signatureValidityPeriod", type=SigningProfileSignatureValidityPeriod.class, parameters={})
     private Output</* @Nullable */ SigningProfileSignatureValidityPeriod> signatureValidityPeriod;
 
     /**
@@ -109,7 +109,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * A list of tags associated with the signing profile.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SigningProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={SigningProfileTag.class})
     private Output</* @Nullable */ List<SigningProfileTag>> tags;
 
     /**

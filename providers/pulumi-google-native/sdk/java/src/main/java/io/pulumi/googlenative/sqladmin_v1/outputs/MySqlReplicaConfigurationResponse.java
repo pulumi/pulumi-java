@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MySqlReplicaConfigurationResponse {
     /**
      * PEM representation of the trusted CA's x509 certificate.
@@ -67,19 +67,19 @@ public final class MySqlReplicaConfigurationResponse {
      */
     private final Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MySqlReplicaConfigurationResponse(
-        @OutputCustomType.Parameter("caCertificate") String caCertificate,
-        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
-        @OutputCustomType.Parameter("clientKey") String clientKey,
-        @OutputCustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
-        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("masterHeartbeatPeriod") String masterHeartbeatPeriod,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("sslCipher") String sslCipher,
-        @OutputCustomType.Parameter("username") String username,
-        @OutputCustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
+        @CustomType.Parameter("caCertificate") String caCertificate,
+        @CustomType.Parameter("clientCertificate") String clientCertificate,
+        @CustomType.Parameter("clientKey") String clientKey,
+        @CustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
+        @CustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("masterHeartbeatPeriod") String masterHeartbeatPeriod,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("sslCipher") String sslCipher,
+        @CustomType.Parameter("username") String username,
+        @CustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

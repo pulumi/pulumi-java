@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
 
     public static final ConsentStoreIamMemberArgs Empty = new ConsentStoreIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamMemberConditionArgs> condition;
 
     public Output<ConsentStoreIamMemberConditionArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
@@ -39,14 +39,14 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
     public Output<String> getDataset() {
         return this.dataset;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -59,7 +59,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

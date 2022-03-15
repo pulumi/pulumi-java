@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.digitaltwins.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The name of the Azure Data Explorer database.
      * 
      */
-    @InputImport(name="adxDatabaseName", required=true)
+    @Import(name="adxDatabaseName", required=true)
       private final Output<String> adxDatabaseName;
 
     public Output<String> getAdxDatabaseName() {
@@ -33,7 +33,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The URI of the Azure Data Explorer endpoint.
      * 
      */
-    @InputImport(name="adxEndpointUri", required=true)
+    @Import(name="adxEndpointUri", required=true)
       private final Output<String> adxEndpointUri;
 
     public Output<String> getAdxEndpointUri() {
@@ -44,7 +44,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The resource ID of the Azure Data Explorer cluster.
      * 
      */
-    @InputImport(name="adxResourceId", required=true)
+    @Import(name="adxResourceId", required=true)
       private final Output<String> adxResourceId;
 
     public Output<String> getAdxResourceId() {
@@ -55,7 +55,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The name of the Azure Data Explorer table.
      * 
      */
-    @InputImport(name="adxTableName")
+    @Import(name="adxTableName")
       private final @Nullable Output<String> adxTableName;
 
     public Output<String> getAdxTableName() {
@@ -67,7 +67,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * Expected value is 'AzureDataExplorer'.
      * 
      */
-    @InputImport(name="connectionType", required=true)
+    @Import(name="connectionType", required=true)
       private final Output<String> connectionType;
 
     public Output<String> getConnectionType() {
@@ -78,7 +78,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The EventHub consumer group to use when ADX reads from EventHub. Defaults to $Default.
      * 
      */
-    @InputImport(name="eventHubConsumerGroup")
+    @Import(name="eventHubConsumerGroup")
       private final @Nullable Output<String> eventHubConsumerGroup;
 
     public Output<String> getEventHubConsumerGroup() {
@@ -89,7 +89,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
      * 
      */
-    @InputImport(name="eventHubEndpointUri", required=true)
+    @Import(name="eventHubEndpointUri", required=true)
       private final Output<String> eventHubEndpointUri;
 
     public Output<String> getEventHubEndpointUri() {
@@ -100,7 +100,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The EventHub name in the EventHub namespace for identity-based authentication.
      * 
      */
-    @InputImport(name="eventHubEntityPath", required=true)
+    @Import(name="eventHubEntityPath", required=true)
       private final Output<String> eventHubEntityPath;
 
     public Output<String> getEventHubEntityPath() {
@@ -111,7 +111,7 @@ public final class AzureDataExplorerConnectionPropertiesArgs extends io.pulumi.r
      * The resource ID of the EventHub namespace.
      * 
      */
-    @InputImport(name="eventHubNamespaceResourceId", required=true)
+    @Import(name="eventHubNamespaceResourceId", required=true)
       private final Output<String> eventHubNamespaceResourceId;
 
     public Output<String> getEventHubNamespaceResourceId() {

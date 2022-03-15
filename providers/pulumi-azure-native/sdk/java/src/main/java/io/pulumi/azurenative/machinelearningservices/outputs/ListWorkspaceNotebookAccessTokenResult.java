@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListWorkspaceNotebookAccessTokenResult {
     private final String accessToken;
     private final Integer expiresIn;
@@ -19,16 +19,16 @@ public final class ListWorkspaceNotebookAccessTokenResult {
     private final String scope;
     private final String tokenType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWorkspaceNotebookAccessTokenResult(
-        @OutputCustomType.Parameter("accessToken") String accessToken,
-        @OutputCustomType.Parameter("expiresIn") Integer expiresIn,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("notebookResourceId") String notebookResourceId,
-        @OutputCustomType.Parameter("publicDns") String publicDns,
-        @OutputCustomType.Parameter("refreshToken") String refreshToken,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("tokenType") String tokenType) {
+        @CustomType.Parameter("accessToken") String accessToken,
+        @CustomType.Parameter("expiresIn") Integer expiresIn,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("notebookResourceId") String notebookResourceId,
+        @CustomType.Parameter("publicDns") String publicDns,
+        @CustomType.Parameter("refreshToken") String refreshToken,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("tokenType") String tokenType) {
         this.accessToken = accessToken;
         this.expiresIn = expiresIn;
         this.hostName = hostName;

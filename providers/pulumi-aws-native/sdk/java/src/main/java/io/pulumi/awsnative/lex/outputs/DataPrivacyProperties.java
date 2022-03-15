@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataPrivacyProperties {
     private final Boolean childDirected;
 
-    @OutputCustomType.Constructor
-    private DataPrivacyProperties(@OutputCustomType.Parameter("childDirected") Boolean childDirected) {
+    @CustomType.Constructor
+    private DataPrivacyProperties(@CustomType.Parameter("childDirected") Boolean childDirected) {
         this.childDirected = childDirected;
     }
 

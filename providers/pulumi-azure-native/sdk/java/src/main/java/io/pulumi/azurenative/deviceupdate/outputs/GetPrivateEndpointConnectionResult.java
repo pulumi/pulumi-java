@@ -6,14 +6,14 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
      * Array of group IDs.
@@ -56,16 +56,16 @@ public final class GetPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateEndpointConnectionResult(
-        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.groupIds = groupIds;
         this.id = id;
         this.name = name;

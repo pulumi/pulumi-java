@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilteringTagResponse {
     /**
      * Valid actions for a filtering tag. Exclusion takes priority over inclusion.
@@ -27,11 +27,11 @@ public final class FilteringTagResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilteringTagResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.action = action;
         this.name = name;
         this.value = value;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectIamPolicyBindingsItemResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetObjectIamPolicyResult {
     /**
      * An association between a role, which comes with a set of permissions, and members who may assume that role.
@@ -38,13 +38,13 @@ public final class GetObjectIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetObjectIamPolicyResult(
-        @OutputCustomType.Parameter("bindings") List<ObjectIamPolicyBindingsItemResponse> bindings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("bindings") List<ObjectIamPolicyBindingsItemResponse> bindings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.kind = kind;

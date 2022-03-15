@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
     /**
      * - 
@@ -118,20 +118,20 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigDataDisk(
-        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
-        @OutputCustomType.Parameter("boot") @Nullable Boolean boot,
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("guestOsFeatures") @Nullable List<String> guestOsFeatures,
-        @OutputCustomType.Parameter("index") @Nullable Integer index,
-        @OutputCustomType.Parameter("initializeParams") @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
-        @OutputCustomType.Parameter("interface") @Nullable String $interface,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("licenses") @Nullable List<String> licenses,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @CustomType.Parameter("boot") @Nullable Boolean boot,
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("guestOsFeatures") @Nullable List<String> guestOsFeatures,
+        @CustomType.Parameter("index") @Nullable Integer index,
+        @CustomType.Parameter("initializeParams") @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
+        @CustomType.Parameter("interface") @Nullable String $interface,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("licenses") @Nullable List<String> licenses,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusEgressPolicyGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusIngressPolicyGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusVpcAccessibleServicesGetArgs;
@@ -30,7 +30,7 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
      * 
      */
-    @InputImport(name="accessLevels")
+    @Import(name="accessLevels")
       private final @Nullable Output<List<String>> accessLevels;
 
     public Output<List<String>> getAccessLevels() {
@@ -45,7 +45,7 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="egressPolicies")
+    @Import(name="egressPolicies")
       private final @Nullable Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> egressPolicies;
 
     public Output<List<ServicePerimeterStatusEgressPolicyGetArgs>> getEgressPolicies() {
@@ -60,7 +60,7 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ingressPolicies")
+    @Import(name="ingressPolicies")
       private final @Nullable Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> ingressPolicies;
 
     public Output<List<ServicePerimeterStatusIngressPolicyGetArgs>> getIngressPolicies() {
@@ -75,7 +75,7 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * the perimeter.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
@@ -90,7 +90,7 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * restrictions.
      * 
      */
-    @InputImport(name="restrictedServices")
+    @Import(name="restrictedServices")
       private final @Nullable Output<List<String>> restrictedServices;
 
     public Output<List<String>> getRestrictedServices() {
@@ -103,7 +103,7 @@ public final class ServicePerimeterStatusGetArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vpcAccessibleServices")
+    @Import(name="vpcAccessibleServices")
       private final @Nullable Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> vpcAccessibleServices;
 
     public Output<ServicePerimeterStatusVpcAccessibleServicesGetArgs> getVpcAccessibleServices() {

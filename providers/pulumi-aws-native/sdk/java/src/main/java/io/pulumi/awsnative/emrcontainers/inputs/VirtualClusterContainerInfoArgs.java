@@ -5,7 +5,7 @@ package io.pulumi.awsnative.emrcontainers.inputs;
 
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterEksInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
 
     public static final VirtualClusterContainerInfoArgs Empty = new VirtualClusterContainerInfoArgs();
 
-    @InputImport(name="eksInfo", required=true)
+    @Import(name="eksInfo", required=true)
       private final Output<VirtualClusterEksInfoArgs> eksInfo;
 
     public Output<VirtualClusterEksInfoArgs> getEksInfo() {

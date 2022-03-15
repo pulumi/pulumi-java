@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.StaticSiteCustomDomainArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * The date and time on which the custom domain was created for the static site.
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -48,7 +48,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * The domain name for the static site custom domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -58,7 +58,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
     public Output<String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     public Output<String> getErrorMessage() {
@@ -68,7 +68,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -82,7 +82,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * The status of the custom domain
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -110,7 +110,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -124,7 +124,7 @@ public class StaticSiteCustomDomain extends io.pulumi.resources.CustomResource {
      * The TXT record validation token
      * 
      */
-    @OutputExport(name="validationToken", type=String.class, parameters={})
+    @Export(name="validationToken", type=String.class, parameters={})
     private Output<String> validationToken;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RadiusServerResponse {
     /**
      * The address of this radius server.
@@ -28,11 +28,11 @@ public final class RadiusServerResponse {
      */
     private final @Nullable String radiusServerSecret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RadiusServerResponse(
-        @OutputCustomType.Parameter("radiusServerAddress") String radiusServerAddress,
-        @OutputCustomType.Parameter("radiusServerScore") @Nullable Double radiusServerScore,
-        @OutputCustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret) {
+        @CustomType.Parameter("radiusServerAddress") String radiusServerAddress,
+        @CustomType.Parameter("radiusServerScore") @Nullable Double radiusServerScore,
+        @CustomType.Parameter("radiusServerSecret") @Nullable String radiusServerSecret) {
         this.radiusServerAddress = radiusServerAddress;
         this.radiusServerScore = radiusServerScore;
         this.radiusServerSecret = radiusServerSecret;

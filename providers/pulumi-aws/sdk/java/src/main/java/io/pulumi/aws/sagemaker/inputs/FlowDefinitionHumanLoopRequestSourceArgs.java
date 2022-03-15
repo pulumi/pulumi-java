@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FlowDefinitionHumanLoopRequestSourceArgs extends io.pulumi.re
      * Specifies whether Amazon Rekognition or Amazon Textract are used as the integration source. Valid values are: `AWS/Rekognition/DetectModerationLabels/Image/V3` and `AWS/Textract/AnalyzeDocument/Forms/V1`.
      * 
      */
-    @InputImport(name="awsManagedHumanLoopRequestSource", required=true)
+    @Import(name="awsManagedHumanLoopRequestSource", required=true)
       private final Output<String> awsManagedHumanLoopRequestSource;
 
     public Output<String> getAwsManagedHumanLoopRequestSource() {

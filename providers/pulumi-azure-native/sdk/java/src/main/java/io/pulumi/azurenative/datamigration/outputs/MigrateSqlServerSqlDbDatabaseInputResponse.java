@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbDatabaseInputResponse {
     /**
      * Whether to set database read only before migration
@@ -34,12 +34,12 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
      */
     private final @Nullable String targetDatabaseName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbDatabaseInputResponse(
-        @OutputCustomType.Parameter("makeSourceDbReadOnly") @Nullable Boolean makeSourceDbReadOnly,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
-        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName) {
+        @CustomType.Parameter("makeSourceDbReadOnly") @Nullable Boolean makeSourceDbReadOnly,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
+        @CustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName) {
         this.makeSourceDbReadOnly = makeSourceDbReadOnly;
         this.name = name;
         this.tableMap = tableMap;

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolPublishingOptions {
     /**
      * When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access"
@@ -25,10 +25,10 @@ public final class CaPoolPublishingOptions {
      */
     private final Boolean publishCrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolPublishingOptions(
-        @OutputCustomType.Parameter("publishCaCert") Boolean publishCaCert,
-        @OutputCustomType.Parameter("publishCrl") Boolean publishCrl) {
+        @CustomType.Parameter("publishCaCert") Boolean publishCaCert,
+        @CustomType.Parameter("publishCrl") Boolean publishCrl) {
         this.publishCaCert = publishCaCert;
         this.publishCrl = publishCrl;
     }

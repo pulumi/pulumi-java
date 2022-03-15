@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.InstallationResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GrafeasV1beta1PackageDetailsResponse extends io.pulumi.resour
      * Where the package was installed.
      * 
      */
-    @InputImport(name="installation", required=true)
+    @Import(name="installation", required=true)
       private final InstallationResponse installation;
 
     public InstallationResponse getInstallation() {

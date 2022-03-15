@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The amount of storage (in gigabytes) to be initially allocated for the replication instance.
      * 
      */
-    @InputImport(name="allocatedStorage")
+    @Import(name="allocatedStorage")
       private final @Nullable Output<Integer> allocatedStorage;
 
     public Output<Integer> getAllocatedStorage() {
@@ -33,7 +33,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * Indicates that major version upgrades are allowed.
      * 
      */
-    @InputImport(name="allowMajorVersionUpgrade")
+    @Import(name="allowMajorVersionUpgrade")
       private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
     public Output<Boolean> getAllowMajorVersionUpgrade() {
@@ -44,7 +44,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -55,7 +55,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
@@ -66,7 +66,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The EC2 Availability Zone that the replication instance will be created in.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -77,7 +77,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The engine version number of the replication instance.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -88,7 +88,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -99,7 +99,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * Specifies if the replication instance is a multi-az deployment. You cannot set the `availability_zone` parameter if the `multi_az` parameter is set to `true`.
      * 
      */
-    @InputImport(name="multiAz")
+    @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
     public Output<Boolean> getMultiAz() {
@@ -110,7 +110,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
      * 
      */
-    @InputImport(name="preferredMaintenanceWindow")
+    @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
@@ -121,7 +121,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
      * 
      */
-    @InputImport(name="publiclyAccessible")
+    @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
     public Output<Boolean> getPubliclyAccessible() {
@@ -132,7 +132,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) of the replication instance.
      * 
      */
-    @InputImport(name="replicationInstanceArn")
+    @Import(name="replicationInstanceArn")
       private final @Nullable Output<String> replicationInstanceArn;
 
     public Output<String> getReplicationInstanceArn() {
@@ -143,7 +143,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The compute and memory capacity of the replication instance as specified by the replication instance class. See [AWS DMS User Guide](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.Types.html) for available instance sizes and advice on which one to choose.
      * 
      */
-    @InputImport(name="replicationInstanceClass")
+    @Import(name="replicationInstanceClass")
       private final @Nullable Output<String> replicationInstanceClass;
 
     public Output<String> getReplicationInstanceClass() {
@@ -154,7 +154,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * The replication instance identifier. This parameter is stored as a lowercase string.
      * 
      */
-    @InputImport(name="replicationInstanceId")
+    @Import(name="replicationInstanceId")
       private final @Nullable Output<String> replicationInstanceId;
 
     public Output<String> getReplicationInstanceId() {
@@ -165,7 +165,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * A list of the private IP addresses of the replication instance.
      * 
      */
-    @InputImport(name="replicationInstancePrivateIps")
+    @Import(name="replicationInstancePrivateIps")
       private final @Nullable Output<List<String>> replicationInstancePrivateIps;
 
     public Output<List<String>> getReplicationInstancePrivateIps() {
@@ -176,7 +176,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * A list of the public IP addresses of the replication instance.
      * 
      */
-    @InputImport(name="replicationInstancePublicIps")
+    @Import(name="replicationInstancePublicIps")
       private final @Nullable Output<List<String>> replicationInstancePublicIps;
 
     public Output<List<String>> getReplicationInstancePublicIps() {
@@ -187,7 +187,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * A subnet group to associate with the replication instance.
      * 
      */
-    @InputImport(name="replicationSubnetGroupId")
+    @Import(name="replicationSubnetGroupId")
       private final @Nullable Output<String> replicationSubnetGroupId;
 
     public Output<String> getReplicationSubnetGroupId() {
@@ -198,7 +198,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -209,7 +209,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -220,7 +220,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
      * A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -30,7 +30,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml). </br> - `Swagger` Schema use `application/vnd.ms-azure-apim.swagger.definitions+json` </br> - `WSDL` Schema use `application/vnd.ms-azure-apim.xsd+xml` </br> - `OpenApi` Schema use `application/vnd.oai.openapi.components+json` </br> - `WADL Schema` use `application/vnd.ms-azure-apim.wadl.grammars+xml`.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -41,7 +41,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Types definitions. Used for Swagger/OpenAPI schemas only, null otherwise.
      * 
      */
-    @InputImport(name="definitions")
+    @Import(name="definitions")
       private final @Nullable Output<Object> definitions;
 
     public Output<Object> getDefinitions() {
@@ -52,7 +52,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Schema identifier within an API. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="schemaId")
+    @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
@@ -74,7 +74,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -85,7 +85,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Json escaped string defining the document representing the Schema. Used for schemas other than Swagger/OpenAPI.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

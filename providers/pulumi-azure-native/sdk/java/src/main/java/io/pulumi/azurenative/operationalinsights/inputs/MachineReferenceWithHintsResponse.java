@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * Last known display name.
      * 
      */
-    @InputImport(name="displayNameHint", required=true)
+    @Import(name="displayNameHint", required=true)
       private final String displayNameHint;
 
     public String getDisplayNameHint() {
@@ -31,7 +31,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * Resource URI.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -43,7 +43,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * Expected value is 'ref:machinewithhints'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -54,7 +54,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -65,7 +65,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * Last known operating system family.
      * 
      */
-    @InputImport(name="osFamilyHint", required=true)
+    @Import(name="osFamilyHint", required=true)
       private final String osFamilyHint;
 
     public String getOsFamilyHint() {
@@ -76,7 +76,7 @@ public final class MachineReferenceWithHintsResponse extends io.pulumi.resources
      * Resource type qualifier.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

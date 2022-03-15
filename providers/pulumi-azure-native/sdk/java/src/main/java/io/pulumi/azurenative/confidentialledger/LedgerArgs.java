@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger;
 
 import io.pulumi.azurenative.confidentialledger.inputs.LedgerPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Confidential Ledger
      * 
      */
-    @InputImport(name="ledgerName")
+    @Import(name="ledgerName")
       private final @Nullable Output<String> ledgerName;
 
     public Output<String> getLedgerName() {
@@ -31,7 +31,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure location where the Confidential Ledger is running.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of Confidential Ledger Resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<LedgerPropertiesArgs> properties;
 
     public Output<LedgerPropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * Additional tags for Confidential Ledger
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

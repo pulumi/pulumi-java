@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceAliasIpRangeGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateNetworkInterfaceIpv6AccessConfigGetArgs;
@@ -19,28 +19,28 @@ public final class InstanceFromTemplateNetworkInterfaceGetArgs extends io.pulumi
 
     public static final InstanceFromTemplateNetworkInterfaceGetArgs Empty = new InstanceFromTemplateNetworkInterfaceGetArgs();
 
-    @InputImport(name="accessConfigs")
+    @Import(name="accessConfigs")
       private final @Nullable Output<List<InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
 
     public Output<List<InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs>> getAccessConfigs() {
         return this.accessConfigs == null ? Output.empty() : this.accessConfigs;
     }
 
-    @InputImport(name="aliasIpRanges")
+    @Import(name="aliasIpRanges")
       private final @Nullable Output<List<InstanceFromTemplateNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
 
     public Output<List<InstanceFromTemplateNetworkInterfaceAliasIpRangeGetArgs>> getAliasIpRanges() {
         return this.aliasIpRanges == null ? Output.empty() : this.aliasIpRanges;
     }
 
-    @InputImport(name="ipv6AccessConfigs")
+    @Import(name="ipv6AccessConfigs")
       private final @Nullable Output<List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
 
     public Output<List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Output.empty() : this.ipv6AccessConfigs;
     }
 
-    @InputImport(name="ipv6AccessType")
+    @Import(name="ipv6AccessType")
       private final @Nullable Output<String> ipv6AccessType;
 
     public Output<String> getIpv6AccessType() {
@@ -52,56 +52,56 @@ public final class InstanceFromTemplateNetworkInterfaceGetArgs extends io.pulumi
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
         return this.network == null ? Output.empty() : this.network;
     }
 
-    @InputImport(name="networkIp")
+    @Import(name="networkIp")
       private final @Nullable Output<String> networkIp;
 
     public Output<String> getNetworkIp() {
         return this.networkIp == null ? Output.empty() : this.networkIp;
     }
 
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
     public Output<String> getNicType() {
         return this.nicType == null ? Output.empty() : this.nicType;
     }
 
-    @InputImport(name="queueCount")
+    @Import(name="queueCount")
       private final @Nullable Output<Integer> queueCount;
 
     public Output<Integer> getQueueCount() {
         return this.queueCount == null ? Output.empty() : this.queueCount;
     }
 
-    @InputImport(name="stackType")
+    @Import(name="stackType")
       private final @Nullable Output<String> stackType;
 
     public Output<String> getStackType() {
         return this.stackType == null ? Output.empty() : this.stackType;
     }
 
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
         return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
-    @InputImport(name="subnetworkProject")
+    @Import(name="subnetworkProject")
       private final @Nullable Output<String> subnetworkProject;
 
     public Output<String> getSubnetworkProject() {

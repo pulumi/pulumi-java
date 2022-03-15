@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterSetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * Host name for the IoT hub associated to the device.
      * 
      */
-    @InputImport(name="counterSets", required=true)
+    @Import(name="counterSets", required=true)
       private final List<MetricCounterSetResponse> counterSets;
 
     public List<MetricCounterSetResponse> getCounterSets() {
@@ -35,7 +35,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * The MDM account to which the counters should be pushed.
      * 
      */
-    @InputImport(name="mdmAccount")
+    @Import(name="mdmAccount")
       private final @Nullable String mdmAccount;
 
     public Optional<String> getMdmAccount() {
@@ -46,7 +46,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
      * 
      */
-    @InputImport(name="metricNameSpace")
+    @Import(name="metricNameSpace")
       private final @Nullable String metricNameSpace;
 
     public Optional<String> getMetricNameSpace() {
@@ -57,7 +57,7 @@ public final class MetricConfigurationResponse extends io.pulumi.resources.Invok
      * The Resource ID on which the metrics should be pushed.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

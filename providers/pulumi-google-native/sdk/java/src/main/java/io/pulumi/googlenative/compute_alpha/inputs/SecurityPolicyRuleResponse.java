@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleHttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleRateLimitOptionsResponse;
@@ -27,7 +27,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(): deny access to target, returns the HTTP response code specified (valid values are 403, 404, and 502). - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -38,7 +38,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -49,7 +49,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * The direction in which this rule applies. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -60,7 +60,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules. This field may only be specified when the versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="enableLogging", required=true)
+    @Import(name="enableLogging", required=true)
       private final Boolean enableLogging;
 
     public Boolean getEnableLogging() {
@@ -71,7 +71,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Optional, additional actions that are performed on headers.
      * 
      */
-    @InputImport(name="headerAction", required=true)
+    @Import(name="headerAction", required=true)
       private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
 
     public SecurityPolicyRuleHttpHeaderActionResponse getHeaderAction() {
@@ -82,7 +82,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * [Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -93,7 +93,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final SecurityPolicyRuleMatcherResponse match;
 
     public SecurityPolicyRuleMatcherResponse getMatch() {
@@ -104,7 +104,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * If set to true, the specified action is not enforced.
      * 
      */
-    @InputImport(name="preview", required=true)
+    @Import(name="preview", required=true)
       private final Boolean preview;
 
     public Boolean getPreview() {
@@ -115,7 +115,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -126,7 +126,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="rateLimitOptions", required=true)
+    @Import(name="rateLimitOptions", required=true)
       private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
 
     public SecurityPolicyRuleRateLimitOptionsResponse getRateLimitOptions() {
@@ -137,7 +137,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Parameters defining the redirect action. Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="redirectOptions", required=true)
+    @Import(name="redirectOptions", required=true)
       private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse getRedirectOptions() {
@@ -148,7 +148,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * This must be specified for redirect actions. Cannot be specified for any other actions.
      * 
      */
-    @InputImport(name="redirectTarget", required=true)
+    @Import(name="redirectTarget", required=true)
       private final String redirectTarget;
 
     public String getRedirectTarget() {
@@ -159,7 +159,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
      * 
      */
-    @InputImport(name="ruleNumber", required=true)
+    @Import(name="ruleNumber", required=true)
       private final String ruleNumber;
 
     public String getRuleNumber() {
@@ -170,7 +170,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Calculation of the complexity of a single firewall security policy rule.
      * 
      */
-    @InputImport(name="ruleTupleCount", required=true)
+    @Import(name="ruleTupleCount", required=true)
       private final Integer ruleTupleCount;
 
     public Integer getRuleTupleCount() {
@@ -181,7 +181,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. This field may only be specified when versioned_expr is set to FIREWALL.
      * 
      */
-    @InputImport(name="targetResources", required=true)
+    @Import(name="targetResources", required=true)
       private final List<String> targetResources;
 
     public List<String> getTargetResources() {
@@ -192,7 +192,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
      */
-    @InputImport(name="targetServiceAccounts", required=true)
+    @Import(name="targetServiceAccounts", required=true)
       private final List<String> targetServiceAccounts;
 
     public List<String> getTargetServiceAccounts() {

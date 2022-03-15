@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
      * Set this flag to disable supplemental results retrieval, setting a flag here will not retrieve supplemental results for queries associated with a given search application. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for supplemental results.
      * 
      */
-    @InputImport(name="forceDisableSupplementalResults")
+    @Import(name="forceDisableSupplementalResults")
       private final @Nullable Output<Boolean> forceDisableSupplementalResults;
 
     public Output<Boolean> getForceDisableSupplementalResults() {
@@ -33,7 +33,7 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
      * Enable this flag to turn off all internal optimizations like natural language (NL) interpretation of queries, supplemental results retrieval, and usage of synonyms including custom ones. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for verbatim mode.
      * 
      */
-    @InputImport(name="forceVerbatimMode")
+    @Import(name="forceVerbatimMode")
       private final @Nullable Output<Boolean> forceVerbatimMode;
 
     public Output<Boolean> getForceVerbatimMode() {

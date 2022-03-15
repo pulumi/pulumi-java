@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
      * Allowed features. Valid values: `GetObject-Range`, `GetObject-PartNumber`.
      * 
      */
-    @InputImport(name="allowedFeatures")
+    @Import(name="allowedFeatures")
       private final @Nullable Output<List<String>> allowedFeatures;
 
     public Output<List<String>> getAllowedFeatures() {
@@ -32,7 +32,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
      * Whether or not the CloudWatch metrics configuration is enabled.
      * 
      */
-    @InputImport(name="cloudWatchMetricsEnabled")
+    @Import(name="cloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
     public Output<Boolean> getCloudWatchMetricsEnabled() {
@@ -43,7 +43,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
      * Standard access point associated with the Object Lambda Access Point.
      * 
      */
-    @InputImport(name="supportingAccessPoint", required=true)
+    @Import(name="supportingAccessPoint", required=true)
       private final Output<String> supportingAccessPoint;
 
     public Output<String> getSupportingAccessPoint() {
@@ -54,7 +54,7 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
      * List of transformation configurations for the Object Lambda Access Point. See Transformation Configuration below for more details.
      * 
      */
-    @InputImport(name="transformationConfigurations", required=true)
+    @Import(name="transformationConfigurations", required=true)
       private final Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations;
 
     public Output<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> getTransformationConfigurations() {

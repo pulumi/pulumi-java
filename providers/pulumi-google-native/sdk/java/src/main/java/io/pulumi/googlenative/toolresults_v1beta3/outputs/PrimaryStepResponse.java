@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IndividualOutcomeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrimaryStepResponse {
     /**
      * Step Id and outcome of each individual step.
@@ -22,10 +22,10 @@ public final class PrimaryStepResponse {
      */
     private final String rollUp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrimaryStepResponse(
-        @OutputCustomType.Parameter("individualOutcome") List<IndividualOutcomeResponse> individualOutcome,
-        @OutputCustomType.Parameter("rollUp") String rollUp) {
+        @CustomType.Parameter("individualOutcome") List<IndividualOutcomeResponse> individualOutcome,
+        @CustomType.Parameter("rollUp") String rollUp) {
         this.individualOutcome = individualOutcome;
         this.rollUp = rollUp;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
      * The device state data.
      * 
      */
-    @InputImport(name="binaryData", required=true)
+    @Import(name="binaryData", required=true)
       private final String binaryData;
 
     public String getBinaryData() {
@@ -31,7 +31,7 @@ public final class DeviceStateResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] The time at which this state version was updated in Cloud IoT Core.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

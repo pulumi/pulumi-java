@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
      * .NET Framework version.
      * 
      */
-    @InputImport(name="netFrameworkVersion")
+    @Import(name="netFrameworkVersion")
       private final @Nullable String netFrameworkVersion;
 
     public Optional<String> getNetFrameworkVersion() {

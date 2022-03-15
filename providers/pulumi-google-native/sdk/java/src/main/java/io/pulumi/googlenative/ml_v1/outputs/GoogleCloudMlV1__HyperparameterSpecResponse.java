@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__ParameterSpecResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__HyperparameterSpecResponse {
     /**
      * Optional. The search algorithm specified for the hyperparameter tuning job. Uses the default AI Platform hyperparameter tuning algorithm if unspecified.
@@ -59,17 +59,17 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
      */
     private final String resumePreviousJobId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__HyperparameterSpecResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("enableTrialEarlyStopping") Boolean enableTrialEarlyStopping,
-        @OutputCustomType.Parameter("goal") String goal,
-        @OutputCustomType.Parameter("hyperparameterMetricTag") String hyperparameterMetricTag,
-        @OutputCustomType.Parameter("maxFailedTrials") Integer maxFailedTrials,
-        @OutputCustomType.Parameter("maxParallelTrials") Integer maxParallelTrials,
-        @OutputCustomType.Parameter("maxTrials") Integer maxTrials,
-        @OutputCustomType.Parameter("params") List<GoogleCloudMlV1__ParameterSpecResponse> params,
-        @OutputCustomType.Parameter("resumePreviousJobId") String resumePreviousJobId) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("enableTrialEarlyStopping") Boolean enableTrialEarlyStopping,
+        @CustomType.Parameter("goal") String goal,
+        @CustomType.Parameter("hyperparameterMetricTag") String hyperparameterMetricTag,
+        @CustomType.Parameter("maxFailedTrials") Integer maxFailedTrials,
+        @CustomType.Parameter("maxParallelTrials") Integer maxParallelTrials,
+        @CustomType.Parameter("maxTrials") Integer maxTrials,
+        @CustomType.Parameter("params") List<GoogleCloudMlV1__ParameterSpecResponse> params,
+        @CustomType.Parameter("resumePreviousJobId") String resumePreviousJobId) {
         this.algorithm = algorithm;
         this.enableTrialEarlyStopping = enableTrialEarlyStopping;
         this.goal = goal;

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v1.outputs.CrossVersionObjectReference;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalerSpec {
     /**
      * upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
@@ -33,12 +33,12 @@ public final class HorizontalPodAutoscalerSpec {
      */
     private final @Nullable Integer targetCPUUtilizationPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HorizontalPodAutoscalerSpec(
-        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
-        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
-        @OutputCustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef,
-        @OutputCustomType.Parameter("targetCPUUtilizationPercentage") @Nullable Integer targetCPUUtilizationPercentage) {
+        @CustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @CustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @CustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef,
+        @CustomType.Parameter("targetCPUUtilizationPercentage") @Nullable Integer targetCPUUtilizationPercentage) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.scaleTargetRef = scaleTargetRef;

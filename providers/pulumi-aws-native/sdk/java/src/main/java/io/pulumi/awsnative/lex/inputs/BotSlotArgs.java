@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotMultipleValuesSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotObfuscationSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueElicitationSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,42 +21,42 @@ public final class BotSlotArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotSlotArgs Empty = new BotSlotArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="multipleValuesSetting")
+    @Import(name="multipleValuesSetting")
       private final @Nullable Output<BotMultipleValuesSettingArgs> multipleValuesSetting;
 
     public Output<BotMultipleValuesSettingArgs> getMultipleValuesSetting() {
         return this.multipleValuesSetting == null ? Output.empty() : this.multipleValuesSetting;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="obfuscationSetting")
+    @Import(name="obfuscationSetting")
       private final @Nullable Output<BotObfuscationSettingArgs> obfuscationSetting;
 
     public Output<BotObfuscationSettingArgs> getObfuscationSetting() {
         return this.obfuscationSetting == null ? Output.empty() : this.obfuscationSetting;
     }
 
-    @InputImport(name="slotTypeName", required=true)
+    @Import(name="slotTypeName", required=true)
       private final Output<String> slotTypeName;
 
     public Output<String> getSlotTypeName() {
         return this.slotTypeName;
     }
 
-    @InputImport(name="valueElicitationSetting", required=true)
+    @Import(name="valueElicitationSetting", required=true)
       private final Output<BotSlotValueElicitationSettingArgs> valueElicitationSetting;
 
     public Output<BotSlotValueElicitationSettingArgs> getValueElicitationSetting() {

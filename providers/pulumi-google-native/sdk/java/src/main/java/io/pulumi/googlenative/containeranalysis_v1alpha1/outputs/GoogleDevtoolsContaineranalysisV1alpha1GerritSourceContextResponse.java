@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
@@ -31,12 +31,12 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(
-        @OutputCustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        @OutputCustomType.Parameter("gerritProject") String gerritProject,
-        @OutputCustomType.Parameter("hostUri") String hostUri,
-        @OutputCustomType.Parameter("revisionId") String revisionId) {
+        @CustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
+        @CustomType.Parameter("gerritProject") String gerritProject,
+        @CustomType.Parameter("hostUri") String hostUri,
+        @CustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.gerritProject = gerritProject;
         this.hostUri = hostUri;

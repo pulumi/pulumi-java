@@ -6,12 +6,12 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.QuarantinePolicyResponse;
 import io.pulumi.azurenative.containerregistry.outputs.RetentionPolicyResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TrustPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PoliciesResponse {
     /**
      * The quarantine policy for a container registry.
@@ -29,11 +29,11 @@ public final class PoliciesResponse {
      */
     private final @Nullable TrustPolicyResponse trustPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PoliciesResponse(
-        @OutputCustomType.Parameter("quarantinePolicy") @Nullable QuarantinePolicyResponse quarantinePolicy,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
-        @OutputCustomType.Parameter("trustPolicy") @Nullable TrustPolicyResponse trustPolicy) {
+        @CustomType.Parameter("quarantinePolicy") @Nullable QuarantinePolicyResponse quarantinePolicy,
+        @CustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
+        @CustomType.Parameter("trustPolicy") @Nullable TrustPolicyResponse trustPolicy) {
         this.quarantinePolicy = quarantinePolicy;
         this.retentionPolicy = retentionPolicy;
         this.trustPolicy = trustPolicy;

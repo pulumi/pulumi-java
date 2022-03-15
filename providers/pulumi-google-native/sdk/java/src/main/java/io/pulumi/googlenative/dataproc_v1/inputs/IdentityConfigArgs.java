@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Map of user to service account.
      * 
      */
-    @InputImport(name="userServiceAccountMapping", required=true)
+    @Import(name="userServiceAccountMapping", required=true)
       private final Output<Map<String,String>> userServiceAccountMapping;
 
     public Output<Map<String,String>> getUserServiceAccountMapping() {

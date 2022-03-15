@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthenticatorGroupsConfigResponse {
     /**
      * Whether this cluster should return group membership lookups during authentication using a group of security groups.
@@ -21,10 +21,10 @@ public final class AuthenticatorGroupsConfigResponse {
      */
     private final String securityGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthenticatorGroupsConfigResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("securityGroup") String securityGroup) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("securityGroup") String securityGroup) {
         this.enabled = enabled;
         this.securityGroup = securityGroup;
     }

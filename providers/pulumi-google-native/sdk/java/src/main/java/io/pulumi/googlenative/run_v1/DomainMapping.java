@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.run_v1.DomainMappingArgs;
@@ -25,7 +25,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The API version for this call such as "domains.cloudrun.com/v1".
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output<String> apiVersion;
 
     /**
@@ -39,7 +39,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The kind of resource, in this case "DomainMapping".
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -53,7 +53,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Metadata associated with this BuildTemplate.
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMetaResponse.class, parameters={})
+    @Export(name="metadata", type=ObjectMetaResponse.class, parameters={})
     private Output<ObjectMetaResponse> metadata;
 
     /**
@@ -67,7 +67,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The spec for this DomainMapping.
      * 
      */
-    @OutputExport(name="spec", type=DomainMappingSpecResponse.class, parameters={})
+    @Export(name="spec", type=DomainMappingSpecResponse.class, parameters={})
     private Output<DomainMappingSpecResponse> spec;
 
     /**
@@ -81,7 +81,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The current status of the DomainMapping.
      * 
      */
-    @OutputExport(name="status", type=DomainMappingStatusResponse.class, parameters={})
+    @Export(name="status", type=DomainMappingStatusResponse.class, parameters={})
     private Output<DomainMappingStatusResponse> status;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.SchedulingArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
      * 
      */
-    @InputImport(name="overhead")
+    @Import(name="overhead")
       private final @Nullable Output<OverheadArgs> overhead;
 
     public Output<OverheadArgs> getOverhead() {
@@ -35,7 +35,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * RuntimeHandler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node & CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called "runc" might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The RuntimeHandler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
      * 
      */
-    @InputImport(name="runtimeHandler", required=true)
+    @Import(name="runtimeHandler", required=true)
       private final Output<String> runtimeHandler;
 
     public Output<String> getRuntimeHandler() {
@@ -46,7 +46,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
     public Output<SchedulingArgs> getScheduling() {

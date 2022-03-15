@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentLinksResponse {
     /**
      * Link to assessment in Azure Portal
@@ -15,8 +15,8 @@ public final class AssessmentLinksResponse {
      */
     private final String azurePortalUri;
 
-    @OutputCustomType.Constructor
-    private AssessmentLinksResponse(@OutputCustomType.Parameter("azurePortalUri") String azurePortalUri) {
+    @CustomType.Constructor
+    private AssessmentLinksResponse(@CustomType.Parameter("azurePortalUri") String azurePortalUri) {
         this.azurePortalUri = azurePortalUri;
     }
 

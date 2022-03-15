@@ -3,18 +3,18 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceModeReplicated {
     private final @Nullable Integer replicas;
 
-    @OutputCustomType.Constructor
-    private ServiceModeReplicated(@OutputCustomType.Parameter("replicas") @Nullable Integer replicas) {
+    @CustomType.Constructor
+    private ServiceModeReplicated(@CustomType.Parameter("replicas") @Nullable Integer replicas) {
         this.replicas = replicas;
     }
 

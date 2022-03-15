@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.DHCPOptionsTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * This value is used to complete unqualified DNS hostnames.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -32,7 +32,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
      * 
      */
-    @InputImport(name="domainNameServers")
+    @Import(name="domainNameServers")
       private final @Nullable Output<List<String>> domainNameServers;
 
     public Output<List<String>> getDomainNameServers() {
@@ -43,7 +43,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 addresses of up to four NetBIOS name servers.
      * 
      */
-    @InputImport(name="netbiosNameServers")
+    @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
     public Output<List<String>> getNetbiosNameServers() {
@@ -54,7 +54,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The NetBIOS node type (1, 2, 4, or 8).
      * 
      */
-    @InputImport(name="netbiosNodeType")
+    @Import(name="netbiosNodeType")
       private final @Nullable Output<Integer> netbiosNodeType;
 
     public Output<Integer> getNetbiosNodeType() {
@@ -65,7 +65,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
      * 
      */
-    @InputImport(name="ntpServers")
+    @Import(name="ntpServers")
       private final @Nullable Output<List<String>> ntpServers;
 
     public Output<List<String>> getNtpServers() {
@@ -76,7 +76,7 @@ public final class DHCPOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Any tags assigned to the DHCP options set.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DHCPOptionsTagArgs>> tags;
 
     public Output<List<DHCPOptionsTagArgs>> getTags() {

@@ -4,13 +4,13 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationMetricsEventThreshold;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestinationMetrics {
     /**
      * A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
@@ -23,10 +23,10 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigRuleDestinationMetrics(
-        @OutputCustomType.Parameter("eventThreshold") @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("eventThreshold") @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
+        @CustomType.Parameter("status") String status) {
         this.eventThreshold = eventThreshold;
         this.status = status;
     }

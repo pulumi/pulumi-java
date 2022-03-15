@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CanaryVpcConfigGetArgs extends io.pulumi.resources.ResourceAr
      * IDs of the security groups for this canary.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -30,7 +30,7 @@ public final class CanaryVpcConfigGetArgs extends io.pulumi.resources.ResourceAr
      * IDs of the subnets where this canary is to run.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -41,7 +41,7 @@ public final class CanaryVpcConfigGetArgs extends io.pulumi.resources.ResourceAr
      * ID of the VPC where this canary is to run.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.SkuName;
 import io.pulumi.azurenative.eventhub.enums.SkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The Event Hubs throughput units, value should be 0 to 20 throughput units.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -37,7 +37,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * Name of this SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,SkuName>> name;
 
     public Output<Either<String,SkuName>> getName() {
@@ -48,7 +48,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The billing tier of this particular SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,SkuTier>> tier;
 
     public Output<Either<String,SkuTier>> getTier() {

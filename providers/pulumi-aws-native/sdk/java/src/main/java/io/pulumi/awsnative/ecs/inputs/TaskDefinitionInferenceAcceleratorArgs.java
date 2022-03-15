@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
 
     public static final TaskDefinitionInferenceAcceleratorArgs Empty = new TaskDefinitionInferenceAcceleratorArgs();
 
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
         return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
-    @InputImport(name="deviceType")
+    @Import(name="deviceType")
       private final @Nullable Output<String> deviceType;
 
     public Output<String> getDeviceType() {

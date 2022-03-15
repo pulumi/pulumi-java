@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.MultiClusterRoutingUseAnyArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SingleClusterRoutingArgs;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppProfileArgs Empty = new AppProfileArgs();
 
-    @InputImport(name="appProfileId", required=true)
+    @Import(name="appProfileId", required=true)
       private final Output<String> appProfileId;
 
     public Output<String> getAppProfileId() {
@@ -27,7 +27,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Long form description of the use case for this AppProfile.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -38,21 +38,21 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="ignoreWarnings")
+    @Import(name="ignoreWarnings")
       private final @Nullable Output<String> ignoreWarnings;
 
     public Output<String> getIgnoreWarnings() {
         return this.ignoreWarnings == null ? Output.empty() : this.ignoreWarnings;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -63,7 +63,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Use a multi-cluster routing policy.
      * 
      */
-    @InputImport(name="multiClusterRoutingUseAny")
+    @Import(name="multiClusterRoutingUseAny")
       private final @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
 
     public Output<MultiClusterRoutingUseAnyArgs> getMultiClusterRoutingUseAny() {
@@ -74,14 +74,14 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -92,7 +92,7 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Use a single-cluster routing policy.
      * 
      */
-    @InputImport(name="singleClusterRouting")
+    @Import(name="singleClusterRouting")
       private final @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting;
 
     public Output<SingleClusterRoutingArgs> getSingleClusterRouting() {

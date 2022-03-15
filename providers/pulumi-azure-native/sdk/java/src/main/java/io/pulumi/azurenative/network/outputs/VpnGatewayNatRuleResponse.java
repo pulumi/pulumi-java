@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnNatRuleMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnGatewayNatRuleResponse {
     /**
      * List of egress VpnSiteLinkConnections.
@@ -70,19 +70,19 @@ public final class VpnGatewayNatRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnGatewayNatRuleResponse(
-        @OutputCustomType.Parameter("egressVpnSiteLinkConnections") List<SubResourceResponse> egressVpnSiteLinkConnections,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ingressVpnSiteLinkConnections") List<SubResourceResponse> ingressVpnSiteLinkConnections,
-        @OutputCustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
-        @OutputCustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("egressVpnSiteLinkConnections") List<SubResourceResponse> egressVpnSiteLinkConnections,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ingressVpnSiteLinkConnections") List<SubResourceResponse> ingressVpnSiteLinkConnections,
+        @CustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
+        @CustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.egressVpnSiteLinkConnections = egressVpnSiteLinkConnections;
         this.etag = etag;
         this.externalMappings = externalMappings;

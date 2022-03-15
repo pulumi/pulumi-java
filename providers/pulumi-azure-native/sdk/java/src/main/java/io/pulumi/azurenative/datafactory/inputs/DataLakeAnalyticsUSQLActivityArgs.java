@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Compilation mode of U-SQL. Must be one of these values : Semantic, Full and SingleBox. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="compilationMode")
+    @Import(name="compilationMode")
       private final @Nullable Output<Object> compilationMode;
 
     public Output<Object> getCompilationMode() {
@@ -40,7 +40,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * The maximum number of nodes simultaneously used to run the job. Default value is 1. Type: integer (or Expression with resultType integer), minimum: 1.
      * 
      */
-    @InputImport(name="degreeOfParallelism")
+    @Import(name="degreeOfParallelism")
       private final @Nullable Output<Object> degreeOfParallelism;
 
     public Output<Object> getDegreeOfParallelism() {
@@ -51,7 +51,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -62,7 +62,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -73,7 +73,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -84,7 +84,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Parameters for U-SQL job request.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
@@ -106,7 +106,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -117,7 +117,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Determines which jobs out of all that are queued should be selected to run first. The lower the number, the higher the priority. Default value is 1000. Type: integer (or Expression with resultType integer), minimum: 1.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Object> priority;
 
     public Output<Object> getPriority() {
@@ -128,7 +128,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Runtime version of the U-SQL engine to use. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable Output<Object> runtimeVersion;
 
     public Output<Object> getRuntimeVersion() {
@@ -139,7 +139,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Script linked service reference.
      * 
      */
-    @InputImport(name="scriptLinkedService", required=true)
+    @Import(name="scriptLinkedService", required=true)
       private final Output<LinkedServiceReferenceArgs> scriptLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getScriptLinkedService() {
@@ -150,7 +150,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Case-sensitive path to folder that contains the U-SQL script. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="scriptPath", required=true)
+    @Import(name="scriptPath", required=true)
       private final Output<Object> scriptPath;
 
     public Output<Object> getScriptPath() {
@@ -162,7 +162,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Expected value is 'DataLakeAnalyticsU-SQL'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -173,7 +173,7 @@ public final class DataLakeAnalyticsUSQLActivityArgs extends io.pulumi.resources
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

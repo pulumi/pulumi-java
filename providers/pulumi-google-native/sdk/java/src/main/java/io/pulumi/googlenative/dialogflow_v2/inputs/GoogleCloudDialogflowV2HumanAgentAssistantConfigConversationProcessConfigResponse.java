@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
      * 
      */
-    @InputImport(name="recentSentencesCount", required=true)
+    @Import(name="recentSentencesCount", required=true)
       private final Integer recentSentencesCount;
 
     public Integer getRecentSentencesCount() {

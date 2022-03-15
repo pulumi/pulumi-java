@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
      * 
      */
-    @InputImport(name="customFragment")
+    @Import(name="customFragment")
       private final @Nullable String customFragment;
 
     public Optional<String> getCustomFragment() {
@@ -33,7 +33,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * Host to redirect. Leave empty to use the incoming host as the destination host.
      * 
      */
-    @InputImport(name="customHost")
+    @Import(name="customHost")
       private final @Nullable String customHost;
 
     public Optional<String> getCustomHost() {
@@ -44,7 +44,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
      * 
      */
-    @InputImport(name="customPath")
+    @Import(name="customPath")
       private final @Nullable String customPath;
 
     public Optional<String> getCustomPath() {
@@ -55,7 +55,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
      * 
      */
-    @InputImport(name="customQueryString")
+    @Import(name="customQueryString")
       private final @Nullable String customQueryString;
 
     public Optional<String> getCustomQueryString() {
@@ -66,7 +66,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * Expected value is '#Microsoft.Azure.FrontDoor.Models.FrontdoorRedirectConfiguration'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -77,7 +77,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * The protocol of the destination to where the traffic is redirected
      * 
      */
-    @InputImport(name="redirectProtocol")
+    @Import(name="redirectProtocol")
       private final @Nullable String redirectProtocol;
 
     public Optional<String> getRedirectProtocol() {
@@ -88,7 +88,7 @@ public final class RedirectConfigurationResponse extends io.pulumi.resources.Inv
      * The redirect type the rule will use when redirecting traffic.
      * 
      */
-    @InputImport(name="redirectType")
+    @Import(name="redirectType")
       private final @Nullable String redirectType;
 
     public Optional<String> getRedirectType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EventSourceMappingFilterCriteriaFilterArgs extends io.pulumi.
      * A filter pattern up to 4096 characters. See [Filter Rule Syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
      * 
      */
-    @InputImport(name="pattern")
+    @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {

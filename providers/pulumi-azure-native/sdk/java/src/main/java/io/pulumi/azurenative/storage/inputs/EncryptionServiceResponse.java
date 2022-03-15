@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeA
      * A boolean indicating whether or not the service encrypts the data as it is stored.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeA
      * Encryption key type to be used for the encryption service. 'Account' key type implies that an account-scoped encryption key will be used. 'Service' key type implies that a default service key is used.
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable String keyType;
 
     public Optional<String> getKeyType() {
@@ -45,7 +45,7 @@ public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeA
      * Gets a rough estimate of the date/time when the encryption was last enabled by the user. Only returned when encryption is enabled. There might be some unencrypted blobs which were written after this time, as it is just a rough estimate.
      * 
      */
-    @InputImport(name="lastEnabledTime", required=true)
+    @Import(name="lastEnabledTime", required=true)
       private final String lastEnabledTime;
 
     public String getLastEnabledTime() {

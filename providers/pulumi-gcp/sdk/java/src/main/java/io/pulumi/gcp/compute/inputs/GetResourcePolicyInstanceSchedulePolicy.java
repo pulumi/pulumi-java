@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicyInstanceSchedulePolicyVmStartSchedule;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 import java.lang.String;
@@ -15,35 +15,35 @@ public final class GetResourcePolicyInstanceSchedulePolicy extends io.pulumi.res
 
     public static final GetResourcePolicyInstanceSchedulePolicy Empty = new GetResourcePolicyInstanceSchedulePolicy();
 
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
     }
 
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final String timeZone;
 
     public String getTimeZone() {
         return this.timeZone;
     }
 
-    @InputImport(name="vmStartSchedules", required=true)
+    @Import(name="vmStartSchedules", required=true)
       private final List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules;
 
     public List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> getVmStartSchedules() {
         return this.vmStartSchedules;
     }
 
-    @InputImport(name="vmStopSchedules", required=true)
+    @Import(name="vmStopSchedules", required=true)
       private final List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules;
 
     public List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> getVmStopSchedules() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.RoleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The list of roles in the cluster.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
 
     public Output<List<RoleArgs>> getRoles() {

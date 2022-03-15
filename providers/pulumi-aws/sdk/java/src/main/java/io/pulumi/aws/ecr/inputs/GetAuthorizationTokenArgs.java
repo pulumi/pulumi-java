@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
      * AWS account ID of the ECR Repository. If not specified the default account is assumed.
      * 
      */
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable String registryId;
 
     public Optional<String> getRegistryId() {

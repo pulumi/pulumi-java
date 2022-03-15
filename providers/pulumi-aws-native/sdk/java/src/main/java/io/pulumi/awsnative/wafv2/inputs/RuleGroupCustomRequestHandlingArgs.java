@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeaderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class RuleGroupCustomRequestHandlingArgs extends io.pulumi.resource
      * Collection of HTTP headers.
      * 
      */
-    @InputImport(name="insertHeaders", required=true)
+    @Import(name="insertHeaders", required=true)
       private final Output<List<RuleGroupCustomHTTPHeaderArgs>> insertHeaders;
 
     public Output<List<RuleGroupCustomHTTPHeaderArgs>> getInsertHeaders() {

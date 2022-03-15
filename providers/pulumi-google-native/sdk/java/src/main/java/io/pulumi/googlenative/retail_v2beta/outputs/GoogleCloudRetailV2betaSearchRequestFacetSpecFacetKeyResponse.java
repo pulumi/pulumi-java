@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaIntervalResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse {
     /**
      * Only get facet values that contains the given strings. For example, suppose "categories" has three values "Women > Shoe", "Women > Dress" and "Men > Shoe". If set "contains" to "Shoe", the "categories" facet will give only "Women > Shoe" and "Men > Shoe". Only supported on textual fields. Maximum is 10.
@@ -47,15 +47,15 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      */
     private final List<String> restrictedValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(
-        @OutputCustomType.Parameter("contains") List<String> contains,
-        @OutputCustomType.Parameter("intervals") List<GoogleCloudRetailV2betaIntervalResponse> intervals,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("orderBy") String orderBy,
-        @OutputCustomType.Parameter("prefixes") List<String> prefixes,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("restrictedValues") List<String> restrictedValues) {
+        @CustomType.Parameter("contains") List<String> contains,
+        @CustomType.Parameter("intervals") List<GoogleCloudRetailV2betaIntervalResponse> intervals,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("orderBy") String orderBy,
+        @CustomType.Parameter("prefixes") List<String> prefixes,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("restrictedValues") List<String> restrictedValues) {
         this.contains = contains;
         this.intervals = intervals;
         this.key = key;

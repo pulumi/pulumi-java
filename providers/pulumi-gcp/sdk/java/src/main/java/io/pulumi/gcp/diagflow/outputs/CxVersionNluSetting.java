@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxVersionNluSetting {
     private final @Nullable Double classificationThreshold;
     private final @Nullable String modelTrainingMode;
     private final @Nullable String modelType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxVersionNluSetting(
-        @OutputCustomType.Parameter("classificationThreshold") @Nullable Double classificationThreshold,
-        @OutputCustomType.Parameter("modelTrainingMode") @Nullable String modelTrainingMode,
-        @OutputCustomType.Parameter("modelType") @Nullable String modelType) {
+        @CustomType.Parameter("classificationThreshold") @Nullable Double classificationThreshold,
+        @CustomType.Parameter("modelTrainingMode") @Nullable String modelTrainingMode,
+        @CustomType.Parameter("modelType") @Nullable String modelType) {
         this.classificationThreshold = classificationThreshold;
         this.modelTrainingMode = modelTrainingMode;
         this.modelType = modelType;

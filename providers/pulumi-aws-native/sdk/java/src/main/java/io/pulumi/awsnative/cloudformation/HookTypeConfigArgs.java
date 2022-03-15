@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration data for the extension, in this account and region.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
     public Output<String> getConfiguration() {
@@ -30,7 +30,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * An alias by which to refer to this extension configuration data.
      * 
      */
-    @InputImport(name="configurationAlias")
+    @Import(name="configurationAlias")
       private final @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
 
     public Output<HookTypeConfigConfigurationAlias> getConfigurationAlias() {
@@ -41,7 +41,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    @InputImport(name="typeArn")
+    @Import(name="typeArn")
       private final @Nullable Output<String> typeArn;
 
     public Output<String> getTypeArn() {
@@ -54,7 +54,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {

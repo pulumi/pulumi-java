@@ -5,12 +5,12 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AzureBlobStorageHttpLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.FileSystemHttpLogsConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpLogsConfigResponse {
     /**
      * Http logs to azure blob storage configuration.
@@ -23,10 +23,10 @@ public final class HttpLogsConfigResponse {
      */
     private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpLogsConfigResponse(
-        @OutputCustomType.Parameter("azureBlobStorage") @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage,
-        @OutputCustomType.Parameter("fileSystem") @Nullable FileSystemHttpLogsConfigResponse fileSystem) {
+        @CustomType.Parameter("azureBlobStorage") @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage,
+        @CustomType.Parameter("fileSystem") @Nullable FileSystemHttpLogsConfigResponse fileSystem) {
         this.azureBlobStorage = azureBlobStorage;
         this.fileSystem = fileSystem;
     }

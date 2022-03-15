@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * Description of the newly generated repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * Whether or not the newly generated repository is a private repository. Defaults to false (i.e. public).
      * 
      */
-    @InputImport(name="isPrivate")
+    @Import(name="isPrivate")
       private final @Nullable Boolean isPrivate;
 
     public Optional<Boolean> getIsPrivate() {
@@ -45,7 +45,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * Owner of the newly generated repository.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable String owner;
 
     public Optional<String> getOwner() {
@@ -56,7 +56,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * Name of the newly generated repository.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable String repositoryName;
 
     public Optional<String> getRepositoryName() {
@@ -67,7 +67,7 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
      * URL of the template repository. The newly generated repository will be based on this one.
      * 
      */
-    @InputImport(name="templateRepositoryUrl")
+    @Import(name="templateRepositoryUrl")
       private final @Nullable String templateRepositoryUrl;
 
     public Optional<String> getTemplateRepositoryUrl() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudfunctions.outputs.FunctionEventTriggerFailurePolicy;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionEventTrigger {
     /**
      * The type of event to observe. For example: `"google.storage.object.finalize"`.
@@ -31,11 +31,11 @@ public final class FunctionEventTrigger {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionEventTrigger(
-        @OutputCustomType.Parameter("eventType") String eventType,
-        @OutputCustomType.Parameter("failurePolicy") @Nullable FunctionEventTriggerFailurePolicy failurePolicy,
-        @OutputCustomType.Parameter("resource") String resource) {
+        @CustomType.Parameter("eventType") String eventType,
+        @CustomType.Parameter("failurePolicy") @Nullable FunctionEventTriggerFailurePolicy failurePolicy,
+        @CustomType.Parameter("resource") String resource) {
         this.eventType = eventType;
         this.failurePolicy = failurePolicy;
         this.resource = resource;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.APIServiceConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
      * Current service state of apiService.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<APIServiceConditionArgs>> conditions;
 
     public Output<List<APIServiceConditionArgs>> getConditions() {

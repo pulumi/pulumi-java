@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetFleetLaunchTemplateSpecification {
     private final @Nullable String launchTemplateId;
     private final @Nullable String launchTemplateName;
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetFleetLaunchTemplateSpecification(
-        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
-        @OutputCustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @CustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
+        @CustomType.Parameter("version") String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;

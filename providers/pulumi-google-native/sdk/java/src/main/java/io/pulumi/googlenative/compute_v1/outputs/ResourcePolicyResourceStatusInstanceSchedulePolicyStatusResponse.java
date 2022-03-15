@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse {
     /**
      * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
@@ -20,10 +20,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      */
     private final String nextRunStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(
-        @OutputCustomType.Parameter("lastRunStartTime") String lastRunStartTime,
-        @OutputCustomType.Parameter("nextRunStartTime") String nextRunStartTime) {
+        @CustomType.Parameter("lastRunStartTime") String lastRunStartTime,
+        @CustomType.Parameter("nextRunStartTime") String nextRunStartTime) {
         this.lastRunStartTime = lastRunStartTime;
         this.nextRunStartTime = nextRunStartTime;
     }

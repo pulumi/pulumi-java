@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
      * Optional. CPU request and limit for Airflow web server.
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final Double cpu;
 
     public Double getCpu() {
@@ -31,7 +31,7 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
      * Optional. Memory (GB) request and limit for Airflow web server.
      * 
      */
-    @InputImport(name="memoryGb", required=true)
+    @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
     public Double getMemoryGb() {
@@ -42,7 +42,7 @@ public final class WebServerResourceResponse extends io.pulumi.resources.InvokeA
      * Optional. Storage (GB) request and limit for Airflow web server.
      * 
      */
-    @InputImport(name="storageGb", required=true)
+    @Import(name="storageGb", required=true)
       private final Double storageGb;
 
     public Double getStorageGb() {

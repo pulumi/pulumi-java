@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.IPAllocationMethod;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * The name of application gateway private link ip configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * Whether the ip configuration is primary or not.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
     public Output<Boolean> getPrimary() {
@@ -59,7 +59,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * The private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
@@ -70,7 +70,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
@@ -81,7 +81,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationArgs extends io.p
      * Reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {

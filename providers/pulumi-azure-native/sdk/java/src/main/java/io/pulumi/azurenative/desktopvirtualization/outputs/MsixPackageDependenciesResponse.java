@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MsixPackageDependenciesResponse {
     /**
      * Name of package dependency.
@@ -27,11 +27,11 @@ public final class MsixPackageDependenciesResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MsixPackageDependenciesResponse(
-        @OutputCustomType.Parameter("dependencyName") @Nullable String dependencyName,
-        @OutputCustomType.Parameter("minVersion") @Nullable String minVersion,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
+        @CustomType.Parameter("dependencyName") @Nullable String dependencyName,
+        @CustomType.Parameter("minVersion") @Nullable String minVersion,
+        @CustomType.Parameter("publisher") @Nullable String publisher) {
         this.dependencyName = dependencyName;
         this.minVersion = minVersion;
         this.publisher = publisher;

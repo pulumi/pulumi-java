@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.LiveEventInputResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventPreviewResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventTranscriptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLiveEventResult {
     /**
      * The creation time for the live event
@@ -116,27 +116,27 @@ public final class GetLiveEventResult {
      */
     private final @Nullable Boolean useStaticHostname;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLiveEventResult(
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encoding") @Nullable LiveEventEncodingResponse encoding,
-        @OutputCustomType.Parameter("hostnamePrefix") @Nullable String hostnamePrefix,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("input") LiveEventInputResponse input,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("preview") @Nullable LiveEventPreviewResponse preview,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("streamOptions") @Nullable List<String> streamOptions,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("transcriptions") @Nullable List<LiveEventTranscriptionResponse> transcriptions,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useStaticHostname") @Nullable Boolean useStaticHostname) {
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encoding") @Nullable LiveEventEncodingResponse encoding,
+        @CustomType.Parameter("hostnamePrefix") @Nullable String hostnamePrefix,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("input") LiveEventInputResponse input,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("preview") @Nullable LiveEventPreviewResponse preview,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("streamOptions") @Nullable List<String> streamOptions,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("transcriptions") @Nullable List<LiveEventTranscriptionResponse> transcriptions,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useStaticHostname") @Nullable Boolean useStaticHostname) {
         this.created = created;
         this.crossSiteAccessPolicies = crossSiteAccessPolicies;
         this.description = description;

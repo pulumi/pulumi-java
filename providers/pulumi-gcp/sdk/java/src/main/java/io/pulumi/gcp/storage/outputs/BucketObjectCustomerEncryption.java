@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketObjectCustomerEncryption {
     /**
      * Encryption algorithm. Default: AES256
@@ -22,10 +22,10 @@ public final class BucketObjectCustomerEncryption {
      */
     private final String encryptionKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketObjectCustomerEncryption(
-        @OutputCustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
-        @OutputCustomType.Parameter("encryptionKey") String encryptionKey) {
+        @CustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
+        @CustomType.Parameter("encryptionKey") String encryptionKey) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionKey = encryptionKey;
     }

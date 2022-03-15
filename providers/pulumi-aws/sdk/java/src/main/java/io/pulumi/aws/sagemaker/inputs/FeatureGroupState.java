@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.FeatureGroupFeatureDefinitionGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * A free-form description of a Feature Group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the feature that stores the EventTime of a Record in a Feature Group.
      * 
      */
-    @InputImport(name="eventTimeFeatureName")
+    @Import(name="eventTimeFeatureName")
       private final @Nullable Output<String> eventTimeFeatureName;
 
     public Output<String> getEventTimeFeatureName() {
@@ -56,7 +56,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * A list of Feature names and types. See Feature Definition Below.
      * 
      */
-    @InputImport(name="featureDefinitions")
+    @Import(name="featureDefinitions")
       private final @Nullable Output<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions;
 
     public Output<List<FeatureGroupFeatureDefinitionGetArgs>> getFeatureDefinitions() {
@@ -67,7 +67,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
      * 
      */
-    @InputImport(name="featureGroupName")
+    @Import(name="featureGroupName")
       private final @Nullable Output<String> featureGroupName;
 
     public Output<String> getFeatureGroupName() {
@@ -78,7 +78,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The Offline Feature Store Configuration. See Offline Store Config Below.
      * 
      */
-    @InputImport(name="offlineStoreConfig")
+    @Import(name="offlineStoreConfig")
       private final @Nullable Output<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig;
 
     public Output<FeatureGroupOfflineStoreConfigGetArgs> getOfflineStoreConfig() {
@@ -89,7 +89,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The Online Feature Store Configuration. See Online Store Config Below.
      * 
      */
-    @InputImport(name="onlineStoreConfig")
+    @Import(name="onlineStoreConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig;
 
     public Output<FeatureGroupOnlineStoreConfigGetArgs> getOnlineStoreConfig() {
@@ -100,7 +100,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
      * 
      */
-    @InputImport(name="recordIdentifierFeatureName")
+    @Import(name="recordIdentifierFeatureName")
       private final @Nullable Output<String> recordIdentifierFeatureName;
 
     public Output<String> getRecordIdentifierFeatureName() {
@@ -111,7 +111,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -122,7 +122,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * Map of resource tags for the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -133,7 +133,7 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetVpcEndpointDnsEntry;
 import io.pulumi.aws.ec2.outputs.GetVpcEndpointFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcEndpointResult {
     /**
      * The Amazon Resource Name (ARN) of the VPC endpoint.
@@ -87,27 +87,27 @@ public final class GetVpcEndpointResult {
     private final String vpcEndpointType;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcEndpointResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
-        @OutputCustomType.Parameter("dnsEntries") List<GetVpcEndpointDnsEntry> dnsEntries,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcEndpointFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("networkInterfaceIds") List<String> networkInterfaceIds,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("policy") String policy,
-        @OutputCustomType.Parameter("prefixListId") String prefixListId,
-        @OutputCustomType.Parameter("privateDnsEnabled") Boolean privateDnsEnabled,
-        @OutputCustomType.Parameter("requesterManaged") Boolean requesterManaged,
-        @OutputCustomType.Parameter("routeTableIds") List<String> routeTableIds,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcEndpointType") String vpcEndpointType,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @CustomType.Parameter("dnsEntries") List<GetVpcEndpointDnsEntry> dnsEntries,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcEndpointFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("networkInterfaceIds") List<String> networkInterfaceIds,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("policy") String policy,
+        @CustomType.Parameter("prefixListId") String prefixListId,
+        @CustomType.Parameter("privateDnsEnabled") Boolean privateDnsEnabled,
+        @CustomType.Parameter("requesterManaged") Boolean requesterManaged,
+        @CustomType.Parameter("routeTableIds") List<String> routeTableIds,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcEndpointType") String vpcEndpointType,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.cidrBlocks = cidrBlocks;
         this.dnsEntries = dnsEntries;

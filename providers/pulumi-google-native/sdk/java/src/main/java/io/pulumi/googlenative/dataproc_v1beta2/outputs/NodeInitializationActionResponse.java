@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeInitializationActionResponse {
     /**
      * Cloud Storage URI of executable file.
@@ -20,10 +20,10 @@ public final class NodeInitializationActionResponse {
      */
     private final String executionTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeInitializationActionResponse(
-        @OutputCustomType.Parameter("executableFile") String executableFile,
-        @OutputCustomType.Parameter("executionTimeout") String executionTimeout) {
+        @CustomType.Parameter("executableFile") String executableFile,
+        @CustomType.Parameter("executionTimeout") String executionTimeout) {
         this.executableFile = executableFile;
         this.executionTimeout = executionTimeout;
     }

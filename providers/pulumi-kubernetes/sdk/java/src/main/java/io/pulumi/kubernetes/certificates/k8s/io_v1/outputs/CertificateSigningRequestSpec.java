@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateSigningRequestSpec {
     /**
      * expirationSeconds is the requested duration of validity of the issued certificate. The certificate signer may issue a certificate with a different validity duration so a client must check the delta between the notBefore and and notAfter fields in the issued certificate to determine the actual duration.
@@ -101,16 +101,16 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateSigningRequestSpec(
-        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds,
-        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
-        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
-        @OutputCustomType.Parameter("request") String request,
-        @OutputCustomType.Parameter("signerName") String signerName,
-        @OutputCustomType.Parameter("uid") @Nullable String uid,
-        @OutputCustomType.Parameter("usages") @Nullable List<String> usages,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds,
+        @CustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @CustomType.Parameter("groups") @Nullable List<String> groups,
+        @CustomType.Parameter("request") String request,
+        @CustomType.Parameter("signerName") String signerName,
+        @CustomType.Parameter("uid") @Nullable String uid,
+        @CustomType.Parameter("usages") @Nullable List<String> usages,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.expirationSeconds = expirationSeconds;
         this.extra = extra;
         this.groups = groups;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageTransitionRouteTriggerFulfillmentMessageText {
     /**
      * - 
@@ -25,10 +25,10 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageText {
      */
     private final @Nullable List<String> texts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxPageTransitionRouteTriggerFulfillmentMessageText(
-        @OutputCustomType.Parameter("allowPlaybackInterruption") @Nullable Boolean allowPlaybackInterruption,
-        @OutputCustomType.Parameter("texts") @Nullable List<String> texts) {
+        @CustomType.Parameter("allowPlaybackInterruption") @Nullable Boolean allowPlaybackInterruption,
+        @CustomType.Parameter("texts") @Nullable List<String> texts) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.texts = texts;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationResponse {
     /**
      * Email addresses to send the budget notification to when the threshold is exceeded. Must have at least one contact email or contact group specified at the Subscription or Resource Group scopes. All other scopes must have at least one contact email specified.
@@ -55,16 +55,16 @@ public final class NotificationResponse {
      */
     private final @Nullable String thresholdType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationResponse(
-        @OutputCustomType.Parameter("contactEmails") List<String> contactEmails,
-        @OutputCustomType.Parameter("contactGroups") @Nullable List<String> contactGroups,
-        @OutputCustomType.Parameter("contactRoles") @Nullable List<String> contactRoles,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("locale") @Nullable String locale,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("threshold") Double threshold,
-        @OutputCustomType.Parameter("thresholdType") @Nullable String thresholdType) {
+        @CustomType.Parameter("contactEmails") List<String> contactEmails,
+        @CustomType.Parameter("contactGroups") @Nullable List<String> contactGroups,
+        @CustomType.Parameter("contactRoles") @Nullable List<String> contactRoles,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("locale") @Nullable String locale,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("threshold") Double threshold,
+        @CustomType.Parameter("thresholdType") @Nullable String thresholdType) {
         this.contactEmails = contactEmails;
         this.contactGroups = contactGroups;
         this.contactRoles = contactRoles;

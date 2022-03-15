@@ -5,21 +5,21 @@ package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerTargetGroupStickinessConfig;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerTargetGroupTuple;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerForwardConfig {
     private final @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig;
     private final @Nullable List<ListenerTargetGroupTuple> targetGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerForwardConfig(
-        @OutputCustomType.Parameter("targetGroupStickinessConfig") @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig,
-        @OutputCustomType.Parameter("targetGroups") @Nullable List<ListenerTargetGroupTuple> targetGroups) {
+        @CustomType.Parameter("targetGroupStickinessConfig") @Nullable ListenerTargetGroupStickinessConfig targetGroupStickinessConfig,
+        @CustomType.Parameter("targetGroups") @Nullable List<ListenerTargetGroupTuple> targetGroups) {
         this.targetGroupStickinessConfig = targetGroupStickinessConfig;
         this.targetGroups = targetGroups;
     }

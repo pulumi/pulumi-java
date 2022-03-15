@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutGetArgs;
@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * this field.
      * 
      */
-    @InputImport(name="baseline")
+    @Import(name="baseline")
       private final @Nullable Output<Boolean> baseline;
 
     public Output<Boolean> getBaseline() {
@@ -36,7 +36,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Output only. Indicates that this revision deletes the OS policy assignment.
      * 
      */
-    @InputImport(name="deleted")
+    @Import(name="deleted")
       private final @Nullable Output<Boolean> deleted;
 
     public Output<Boolean> getDeleted() {
@@ -47,7 +47,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -69,7 +69,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Required. Filter to select VMs.
      * 
      */
-    @InputImport(name="instanceFilter")
+    @Import(name="instanceFilter")
       private final @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
     public Output<OsPolicyAssignmentInstanceFilterGetArgs> getInstanceFilter() {
@@ -80,7 +80,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * The location for the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -91,7 +91,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Required. The name of the repository.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -102,7 +102,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Required. List of OS policies to be applied to the VMs.
      * 
      */
-    @InputImport(name="osPolicies")
+    @Import(name="osPolicies")
       private final @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
     public Output<List<OsPolicyAssignmentOsPolicyGetArgs>> getOsPolicies() {
@@ -113,7 +113,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -125,7 +125,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
      * 
      */
-    @InputImport(name="reconciling")
+    @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
     public Output<Boolean> getReconciling() {
@@ -136,7 +136,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Output only. The timestamp that the revision was created.
      * 
      */
-    @InputImport(name="revisionCreateTime")
+    @Import(name="revisionCreateTime")
       private final @Nullable Output<String> revisionCreateTime;
 
     public Output<String> getRevisionCreateTime() {
@@ -148,7 +148,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * assignment
      * 
      */
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
@@ -159,7 +159,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    @InputImport(name="rollout")
+    @Import(name="rollout")
       private final @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
 
     public Output<OsPolicyAssignmentRolloutGetArgs> getRollout() {
@@ -171,7 +171,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * CANCELLED, SUCCEEDED
      * 
      */
-    @InputImport(name="rolloutState")
+    @Import(name="rolloutState")
       private final @Nullable Output<String> rolloutState;
 
     public Output<String> getRolloutState() {
@@ -182,7 +182,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * Output only. Server generated unique id for the OS policy assignment resource.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {

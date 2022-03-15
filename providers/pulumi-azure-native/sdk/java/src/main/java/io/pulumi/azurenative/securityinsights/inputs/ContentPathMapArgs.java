@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.ContentType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
      * Content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<Either<String,ContentType>> contentType;
 
     public Output<Either<String,ContentType>> getContentType() {
@@ -35,7 +35,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
      * The path to the content.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

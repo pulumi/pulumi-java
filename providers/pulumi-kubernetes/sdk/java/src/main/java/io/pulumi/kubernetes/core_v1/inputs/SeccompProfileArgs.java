@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      * localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
      * 
      */
-    @InputImport(name="localhostProfile")
+    @Import(name="localhostProfile")
       private final @Nullable Output<String> localhostProfile;
 
     public Output<String> getLocalhostProfile() {
@@ -40,7 +40,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Unconfined"` indicates no seccomp profile is applied (A.K.A. unconfined).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

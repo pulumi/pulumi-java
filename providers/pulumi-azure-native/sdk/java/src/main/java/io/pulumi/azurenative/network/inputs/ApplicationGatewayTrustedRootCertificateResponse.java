@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * Certificate public data.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable String data;
 
     public Optional<String> getData() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -44,7 +44,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -55,7 +55,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * Secret Id of (base-64 encoded unencrypted pfx) 'Secret' or 'Certificate' object stored in KeyVault.
      * 
      */
-    @InputImport(name="keyVaultSecretId")
+    @Import(name="keyVaultSecretId")
       private final @Nullable String keyVaultSecretId;
 
     public Optional<String> getKeyVaultSecretId() {
@@ -66,7 +66,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * Name of the trusted root certificate that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -77,7 +77,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * The provisioning state of the trusted root certificate resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -88,7 +88,7 @@ public final class ApplicationGatewayTrustedRootCertificateResponse extends io.p
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

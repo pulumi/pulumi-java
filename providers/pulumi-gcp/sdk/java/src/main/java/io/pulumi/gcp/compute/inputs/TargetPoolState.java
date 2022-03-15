@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * failover\_ratio.
      * 
      */
-    @InputImport(name="backupPool")
+    @Import(name="backupPool")
       private final @Nullable Output<String> backupPool;
 
     public Output<String> getBackupPool() {
@@ -32,7 +32,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * Textual description field.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * backup pool (which must also be set).
      * 
      */
-    @InputImport(name="failoverRatio")
+    @Import(name="failoverRatio")
       private final @Nullable Output<Double> failoverRatio;
 
     public Output<Double> getFailoverRatio() {
@@ -56,7 +56,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * legacy `gcp.compute.HttpHealthCheck` is supported.
      * 
      */
-    @InputImport(name="healthChecks")
+    @Import(name="healthChecks")
       private final @Nullable Output<String> healthChecks;
 
     public Output<String> getHealthChecks() {
@@ -71,7 +71,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * target pool.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -83,7 +83,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * this forces a new resource to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -107,7 +107,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -118,7 +118,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -131,7 +131,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
      * 
      */
-    @InputImport(name="sessionAffinity")
+    @Import(name="sessionAffinity")
       private final @Nullable Output<String> sessionAffinity;
 
     public Output<String> getSessionAffinity() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeClaimTemplate {
     /**
      * May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
@@ -23,10 +23,10 @@ public final class PersistentVolumeClaimTemplate {
      */
     private final PersistentVolumeClaimSpec spec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeClaimTemplate(
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") PersistentVolumeClaimSpec spec) {
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") PersistentVolumeClaimSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

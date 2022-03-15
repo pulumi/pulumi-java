@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
      * The name of the private dns zone group.
      * 
      */
-    @InputImport(name="privateDnsZoneGroupName", required=true)
+    @Import(name="privateDnsZoneGroupName", required=true)
       private final String privateDnsZoneGroupName;
 
     public String getPrivateDnsZoneGroupName() {
@@ -27,7 +27,7 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
      * The name of the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointName", required=true)
+    @Import(name="privateEndpointName", required=true)
       private final String privateEndpointName;
 
     public String getPrivateEndpointName() {
@@ -38,7 +38,7 @@ public final class GetPrivateDnsZoneGroupArgs extends io.pulumi.resources.Invoke
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

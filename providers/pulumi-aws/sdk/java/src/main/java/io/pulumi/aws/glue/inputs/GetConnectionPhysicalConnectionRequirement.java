@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class GetConnectionPhysicalConnectionRequirement extends io.pulumi.
 
     public static final GetConnectionPhysicalConnectionRequirement Empty = new GetConnectionPhysicalConnectionRequirement();
 
-    @InputImport(name="availabilityZone", required=true)
+    @Import(name="availabilityZone", required=true)
       private final String availabilityZone;
 
     public String getAvailabilityZone() {
         return this.availabilityZone;
     }
 
-    @InputImport(name="securityGroupIdLists", required=true)
+    @Import(name="securityGroupIdLists", required=true)
       private final List<String> securityGroupIdLists;
 
     public List<String> getSecurityGroupIdLists() {
         return this.securityGroupIdLists;
     }
 
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final String subnetId;
 
     public String getSubnetId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.ReplicaSetSpec;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.ReplicaSetStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicaSet {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -40,13 +40,13 @@ public final class ReplicaSet {
      */
     private final @Nullable ReplicaSetStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicaSet(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable ReplicaSetSpec spec,
-        @OutputCustomType.Parameter("status") @Nullable ReplicaSetStatus status) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable ReplicaSetSpec spec,
+        @CustomType.Parameter("status") @Nullable ReplicaSetStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

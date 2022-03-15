@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
      * Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
      * 
      */
-    @InputImport(name="outputSchema")
+    @Import(name="outputSchema")
       private final @Nullable Output<String> outputSchema;
 
     public Output<String> getOutputSchema() {
@@ -38,7 +38,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigG
      * Structure is documented below.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> table;
 
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs> getTable() {

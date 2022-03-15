@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.enums.ConnectorTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the connector.
      * 
      */
-    @InputImport(name="connectorName")
+    @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
     public Output<String> getConnectorName() {
@@ -34,7 +34,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The connector properties.
      * 
      */
-    @InputImport(name="connectorProperties", required=true)
+    @Import(name="connectorProperties", required=true)
       private final Output<Map<String,Object>> connectorProperties;
 
     public Output<Map<String,Object>> getConnectorProperties() {
@@ -45,7 +45,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Type of connector.
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final Output<Either<String,ConnectorTypes>> connectorType;
 
     public Output<Either<String,ConnectorTypes>> getConnectorType() {
@@ -56,7 +56,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the connector.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the connector.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -78,7 +78,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -89,7 +89,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * If this is an internal connector.
      * 
      */
-    @InputImport(name="isInternal")
+    @Import(name="isInternal")
       private final @Nullable Output<Boolean> isInternal;
 
     public Output<Boolean> getIsInternal() {
@@ -100,7 +100,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

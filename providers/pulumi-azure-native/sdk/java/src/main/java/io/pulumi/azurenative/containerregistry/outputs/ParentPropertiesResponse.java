@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SyncPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParentPropertiesResponse {
     /**
      * The resource ID of the parent to which the connected registry will be associated.
@@ -23,10 +23,10 @@ public final class ParentPropertiesResponse {
      */
     private final SyncPropertiesResponse syncProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParentPropertiesResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("syncProperties") SyncPropertiesResponse syncProperties) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("syncProperties") SyncPropertiesResponse syncProperties) {
         this.id = id;
         this.syncProperties = syncProperties;
     }

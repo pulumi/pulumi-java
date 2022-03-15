@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
      * The resource id of the playbook resource
      * 
      */
-    @InputImport(name="logicAppResourceId")
+    @Import(name="logicAppResourceId")
       private final @Nullable String logicAppResourceId;
 
     public Optional<String> getLogicAppResourceId() {
@@ -33,7 +33,7 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
      * The tenant id of the playbook resource
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

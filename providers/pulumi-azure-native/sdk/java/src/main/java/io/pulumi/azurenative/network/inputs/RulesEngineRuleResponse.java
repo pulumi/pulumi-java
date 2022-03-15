@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.RulesEngineActionResponse;
 import io.pulumi.azurenative.network.inputs.RulesEngineMatchConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * Actions to perform on the request and response if all of the match conditions are met.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final RulesEngineActionResponse action;
 
     public RulesEngineActionResponse getAction() {
@@ -37,7 +37,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.
      * 
      */
-    @InputImport(name="matchConditions")
+    @Import(name="matchConditions")
       private final @Nullable List<RulesEngineMatchConditionResponse> matchConditions;
 
     public List<RulesEngineMatchConditionResponse> getMatchConditions() {
@@ -48,7 +48,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
-    @InputImport(name="matchProcessingBehavior")
+    @Import(name="matchProcessingBehavior")
       private final @Nullable String matchProcessingBehavior;
 
     public Optional<String> getMatchProcessingBehavior() {
@@ -59,7 +59,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * A name to refer to this specific rule.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -70,7 +70,7 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
      * A priority assigned to this rule.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {

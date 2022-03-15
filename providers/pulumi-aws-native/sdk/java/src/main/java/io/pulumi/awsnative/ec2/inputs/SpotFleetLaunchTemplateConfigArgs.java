@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetFleetLaunchTemplateSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetLaunchTemplateOverridesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class SpotFleetLaunchTemplateConfigArgs extends io.pulumi.resources
 
     public static final SpotFleetLaunchTemplateConfigArgs Empty = new SpotFleetLaunchTemplateConfigArgs();
 
-    @InputImport(name="launchTemplateSpecification")
+    @Import(name="launchTemplateSpecification")
       private final @Nullable Output<SpotFleetFleetLaunchTemplateSpecificationArgs> launchTemplateSpecification;
 
     public Output<SpotFleetFleetLaunchTemplateSpecificationArgs> getLaunchTemplateSpecification() {
         return this.launchTemplateSpecification == null ? Output.empty() : this.launchTemplateSpecification;
     }
 
-    @InputImport(name="overrides")
+    @Import(name="overrides")
       private final @Nullable Output<List<SpotFleetLaunchTemplateOverridesArgs>> overrides;
 
     public Output<List<SpotFleetLaunchTemplateOverridesArgs>> getOverrides() {

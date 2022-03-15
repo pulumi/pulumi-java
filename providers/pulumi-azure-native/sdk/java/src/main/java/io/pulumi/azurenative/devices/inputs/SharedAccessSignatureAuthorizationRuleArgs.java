@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.AccessRights;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
      * The name of the shared access policy.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -34,7 +34,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
      * The primary key.
      * 
      */
-    @InputImport(name="primaryKey")
+    @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
@@ -45,7 +45,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
      * The permissions assigned to the shared access policy.
      * 
      */
-    @InputImport(name="rights", required=true)
+    @Import(name="rights", required=true)
       private final Output<AccessRights> rights;
 
     public Output<AccessRights> getRights() {
@@ -56,7 +56,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
      * The secondary key.
      * 
      */
-    @InputImport(name="secondaryKey")
+    @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
     public Output<String> getSecondaryKey() {

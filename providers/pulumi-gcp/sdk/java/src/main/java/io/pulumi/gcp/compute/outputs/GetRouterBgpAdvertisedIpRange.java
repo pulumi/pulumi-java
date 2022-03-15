@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouterBgpAdvertisedIpRange {
     private final String description;
     private final String range;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouterBgpAdvertisedIpRange(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("range") String range) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("range") String range) {
         this.description = description;
         this.range = range;
     }

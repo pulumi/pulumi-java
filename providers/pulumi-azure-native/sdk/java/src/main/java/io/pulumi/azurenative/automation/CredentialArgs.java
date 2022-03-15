@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -29,7 +29,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters supplied to the create or update credential operation.
      * 
      */
-    @InputImport(name="credentialName")
+    @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
     public Output<String> getCredentialName() {
@@ -40,7 +40,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description of the credential.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the credential.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the password of the credential.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -73,7 +73,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -84,7 +84,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the user name of the credential.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

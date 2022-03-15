@@ -5,14 +5,14 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipActivitySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipRoleSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRosettaNetProcessConfigurationResult {
     /**
      * The RosettaNet process configuration activity settings.
@@ -90,23 +90,23 @@ public final class GetRosettaNetProcessConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRosettaNetProcessConfigurationResult(
-        @OutputCustomType.Parameter("activitySettings") RosettaNetPipActivitySettingsResponse activitySettings,
-        @OutputCustomType.Parameter("changedTime") String changedTime,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("initiatorRoleSettings") RosettaNetPipRoleSettingsResponse initiatorRoleSettings,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("processCode") String processCode,
-        @OutputCustomType.Parameter("processName") String processName,
-        @OutputCustomType.Parameter("processVersion") String processVersion,
-        @OutputCustomType.Parameter("responderRoleSettings") RosettaNetPipRoleSettingsResponse responderRoleSettings,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("activitySettings") RosettaNetPipActivitySettingsResponse activitySettings,
+        @CustomType.Parameter("changedTime") String changedTime,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("initiatorRoleSettings") RosettaNetPipRoleSettingsResponse initiatorRoleSettings,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("processCode") String processCode,
+        @CustomType.Parameter("processName") String processName,
+        @CustomType.Parameter("processVersion") String processVersion,
+        @CustomType.Parameter("responderRoleSettings") RosettaNetPipRoleSettingsResponse responderRoleSettings,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.activitySettings = activitySettings;
         this.changedTime = changedTime;
         this.createdTime = createdTime;

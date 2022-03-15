@@ -6,7 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
      * The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
      * 
      */
-    @InputImport(name="timeBasedCanary")
+    @Import(name="timeBasedCanary")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> timeBasedCanary;
 
     public Output<DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs> getTimeBasedCanary() {
@@ -31,7 +31,7 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
      * The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
      * 
      */
-    @InputImport(name="timeBasedLinear")
+    @Import(name="timeBasedLinear")
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> timeBasedLinear;
 
     public Output<DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs> getTimeBasedLinear() {
@@ -42,7 +42,7 @@ public final class DeploymentConfigTrafficRoutingConfigArgs extends io.pulumi.re
      * Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesArgs extends io.pulu
      * - The frequency with which AWS Config recurringly delivers configuration snapshotsE.g., `One_Hour` or `Three_Hours`. Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
      * 
      */
-    @InputImport(name="deliveryFrequency")
+    @Import(name="deliveryFrequency")
       private final @Nullable Output<String> deliveryFrequency;
 
     public Output<String> getDeliveryFrequency() {

@@ -18,7 +18,7 @@ import io.pulumi.awsnative.databrew.outputs.JobSample;
 import io.pulumi.awsnative.databrew.outputs.JobTag;
 import io.pulumi.awsnative.databrew.outputs.JobValidationConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,13 +33,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:databrew:Job")
 public class Job extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="dataCatalogOutputs", type=List.class, parameters={JobDataCatalogOutput.class})
+    @Export(name="dataCatalogOutputs", type=List.class, parameters={JobDataCatalogOutput.class})
     private Output</* @Nullable */ List<JobDataCatalogOutput>> dataCatalogOutputs;
 
     public Output</* @Nullable */ List<JobDataCatalogOutput>> getDataCatalogOutputs() {
         return this.dataCatalogOutputs;
     }
-    @OutputExport(name="databaseOutputs", type=List.class, parameters={JobDatabaseOutput.class})
+    @Export(name="databaseOutputs", type=List.class, parameters={JobDatabaseOutput.class})
     private Output</* @Nullable */ List<JobDatabaseOutput>> databaseOutputs;
 
     public Output</* @Nullable */ List<JobDatabaseOutput>> getDatabaseOutputs() {
@@ -49,7 +49,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Dataset name
      * 
      */
-    @OutputExport(name="datasetName", type=String.class, parameters={})
+    @Export(name="datasetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datasetName;
 
     /**
@@ -63,7 +63,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Encryption Key Arn
      * 
      */
-    @OutputExport(name="encryptionKeyArn", type=String.class, parameters={})
+    @Export(name="encryptionKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyArn;
 
     /**
@@ -77,7 +77,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Encryption mode
      * 
      */
-    @OutputExport(name="encryptionMode", type=JobEncryptionMode.class, parameters={})
+    @Export(name="encryptionMode", type=JobEncryptionMode.class, parameters={})
     private Output</* @Nullable */ JobEncryptionMode> encryptionMode;
 
     /**
@@ -91,7 +91,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Job Sample
      * 
      */
-    @OutputExport(name="jobSample", type=JobSample.class, parameters={})
+    @Export(name="jobSample", type=JobSample.class, parameters={})
     private Output</* @Nullable */ JobSample> jobSample;
 
     /**
@@ -105,7 +105,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Log subscription
      * 
      */
-    @OutputExport(name="logSubscription", type=JobLogSubscription.class, parameters={})
+    @Export(name="logSubscription", type=JobLogSubscription.class, parameters={})
     private Output</* @Nullable */ JobLogSubscription> logSubscription;
 
     /**
@@ -119,7 +119,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Max capacity
      * 
      */
-    @OutputExport(name="maxCapacity", type=Integer.class, parameters={})
+    @Export(name="maxCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxCapacity;
 
     /**
@@ -133,7 +133,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Max retries
      * 
      */
-    @OutputExport(name="maxRetries", type=Integer.class, parameters={})
+    @Export(name="maxRetries", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetries;
 
     /**
@@ -147,7 +147,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Job name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -161,7 +161,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Output location
      * 
      */
-    @OutputExport(name="outputLocation", type=JobOutputLocation.class, parameters={})
+    @Export(name="outputLocation", type=JobOutputLocation.class, parameters={})
     private Output</* @Nullable */ JobOutputLocation> outputLocation;
 
     /**
@@ -171,7 +171,7 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ JobOutputLocation> getOutputLocation() {
         return this.outputLocation;
     }
-    @OutputExport(name="outputs", type=List.class, parameters={JobOutput.class})
+    @Export(name="outputs", type=List.class, parameters={JobOutput.class})
     private Output</* @Nullable */ List<JobOutput>> outputs;
 
     public Output</* @Nullable */ List<JobOutput>> getOutputs() {
@@ -181,7 +181,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Profile Job configuration
      * 
      */
-    @OutputExport(name="profileConfiguration", type=JobProfileConfiguration.class, parameters={})
+    @Export(name="profileConfiguration", type=JobProfileConfiguration.class, parameters={})
     private Output</* @Nullable */ JobProfileConfiguration> profileConfiguration;
 
     /**
@@ -195,7 +195,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Project name
      * 
      */
-    @OutputExport(name="projectName", type=String.class, parameters={})
+    @Export(name="projectName", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectName;
 
     /**
@@ -205,7 +205,7 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getProjectName() {
         return this.projectName;
     }
-    @OutputExport(name="recipe", type=JobRecipe.class, parameters={})
+    @Export(name="recipe", type=JobRecipe.class, parameters={})
     private Output</* @Nullable */ JobRecipe> recipe;
 
     public Output</* @Nullable */ JobRecipe> getRecipe() {
@@ -215,7 +215,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Role arn
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -225,7 +225,7 @@ public class Job extends io.pulumi.resources.CustomResource {
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="tags", type=List.class, parameters={JobTag.class})
+    @Export(name="tags", type=List.class, parameters={JobTag.class})
     private Output</* @Nullable */ List<JobTag>> tags;
 
     public Output</* @Nullable */ List<JobTag>> getTags() {
@@ -235,7 +235,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Timeout
      * 
      */
-    @OutputExport(name="timeout", type=Integer.class, parameters={})
+    @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
@@ -249,7 +249,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Job type
      * 
      */
-    @OutputExport(name="type", type=JobType.class, parameters={})
+    @Export(name="type", type=JobType.class, parameters={})
     private Output<JobType> type;
 
     /**
@@ -263,7 +263,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Data quality rules configuration
      * 
      */
-    @OutputExport(name="validationConfigurations", type=List.class, parameters={JobValidationConfiguration.class})
+    @Export(name="validationConfigurations", type=List.class, parameters={JobValidationConfiguration.class})
     private Output</* @Nullable */ List<JobValidationConfiguration>> validationConfigurations;
 
     /**

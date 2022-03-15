@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * APIGroup holds the API group of the referenced subject. Defaults to "" for ServiceAccount subjects. Defaults to "rbac.authorization.k8s.io" for User and Group subjects.
      * 
      */
-    @InputImport(name="apiGroup")
+    @Import(name="apiGroup")
       private final @Nullable Output<String> apiGroup;
 
     public Output<String> getApiGroup() {
@@ -33,7 +33,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of object being referenced. Values defined by this API group are "User", "Group", and "ServiceAccount". If the Authorizer does not recognized the kind value, the Authorizer should report an error.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the object being referenced.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty the Authorizer should report an error.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {

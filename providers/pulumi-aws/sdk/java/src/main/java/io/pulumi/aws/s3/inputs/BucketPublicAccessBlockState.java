@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * * PUT Object calls will fail if the request includes an object ACL.
      * 
      */
-    @InputImport(name="blockPublicAcls")
+    @Import(name="blockPublicAcls")
       private final @Nullable Output<Boolean> blockPublicAcls;
 
     public Output<Boolean> getBlockPublicAcls() {
@@ -33,7 +33,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
@@ -44,7 +44,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * S3 Bucket to which this Public Access Block configuration should be applied.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -56,7 +56,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * * Ignore public ACLs on this bucket and any objects that it contains.
      * 
      */
-    @InputImport(name="ignorePublicAcls")
+    @Import(name="ignorePublicAcls")
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
     public Output<Boolean> getIgnorePublicAcls() {
@@ -68,7 +68,7 @@ public final class BucketPublicAccessBlockState extends io.pulumi.resources.Reso
      * * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
      * 
      */
-    @InputImport(name="restrictPublicBuckets")
+    @Import(name="restrictPublicBuckets")
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
     public Output<Boolean> getRestrictPublicBuckets() {

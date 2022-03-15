@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkAclTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkAclResult {
     private final @Nullable String id;
     /**
@@ -20,10 +20,10 @@ public final class GetNetworkAclResult {
      */
     private final @Nullable List<NetworkAclTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkAclResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkAclTag> tags) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("tags") @Nullable List<NetworkAclTag> tags) {
         this.id = id;
         this.tags = tags;
     }

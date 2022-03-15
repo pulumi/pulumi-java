@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * Groups for configuration
      * 
      */
-    @InputImport(name="appliesToGroups")
+    @Import(name="appliesToGroups")
       private final @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
 
     public Output<List<NetworkManagerSecurityGroupItemArgs>> getAppliesToGroups() {
@@ -31,7 +31,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * The name of the network manager security Configuration.
      * 
      */
-    @InputImport(name="configurationName", required=true)
+    @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -42,7 +42,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * A description of the rule collection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * A display name of the rule collection.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -64,7 +64,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
     public Output<String> getNetworkManagerName() {
@@ -75,7 +75,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
      * The name of the network manager security Configuration rule collection.
      * 
      */
-    @InputImport(name="ruleCollectionName")
+    @Import(name="ruleCollectionName")
       private final @Nullable Output<String> ruleCollectionName;
 
     public Output<String> getRuleCollectionName() {

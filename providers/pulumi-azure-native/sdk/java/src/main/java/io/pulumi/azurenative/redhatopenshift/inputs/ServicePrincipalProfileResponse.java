@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
      * The client ID used for the cluster (immutable).
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -33,7 +33,7 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
      * The client secret used for the cluster (immutable).
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {

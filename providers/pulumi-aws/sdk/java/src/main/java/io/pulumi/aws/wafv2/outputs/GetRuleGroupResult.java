@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the entity.
@@ -27,13 +27,13 @@ public final class GetRuleGroupResult {
     private final String name;
     private final String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scope") String scope) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scope") String scope) {
         this.arn = arn;
         this.description = description;
         this.id = id;

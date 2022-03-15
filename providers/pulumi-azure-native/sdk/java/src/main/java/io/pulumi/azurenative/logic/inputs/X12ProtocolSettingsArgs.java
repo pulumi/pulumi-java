@@ -16,7 +16,7 @@ import io.pulumi.azurenative.logic.inputs.X12SecuritySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.X12ValidationOverrideArgs;
 import io.pulumi.azurenative.logic.inputs.X12ValidationSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 acknowledgment settings.
      * 
      */
-    @InputImport(name="acknowledgementSettings", required=true)
+    @Import(name="acknowledgementSettings", required=true)
       private final Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
 
     public Output<X12AcknowledgementSettingsArgs> getAcknowledgementSettings() {
@@ -45,7 +45,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 envelope override settings.
      * 
      */
-    @InputImport(name="envelopeOverrides")
+    @Import(name="envelopeOverrides")
       private final @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
 
     public Output<List<X12EnvelopeOverrideArgs>> getEnvelopeOverrides() {
@@ -56,7 +56,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 envelope settings.
      * 
      */
-    @InputImport(name="envelopeSettings", required=true)
+    @Import(name="envelopeSettings", required=true)
       private final Output<X12EnvelopeSettingsArgs> envelopeSettings;
 
     public Output<X12EnvelopeSettingsArgs> getEnvelopeSettings() {
@@ -67,7 +67,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 framing settings.
      * 
      */
-    @InputImport(name="framingSettings", required=true)
+    @Import(name="framingSettings", required=true)
       private final Output<X12FramingSettingsArgs> framingSettings;
 
     public Output<X12FramingSettingsArgs> getFramingSettings() {
@@ -78,7 +78,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 message filter.
      * 
      */
-    @InputImport(name="messageFilter", required=true)
+    @Import(name="messageFilter", required=true)
       private final Output<X12MessageFilterArgs> messageFilter;
 
     public Output<X12MessageFilterArgs> getMessageFilter() {
@@ -89,7 +89,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 message filter list.
      * 
      */
-    @InputImport(name="messageFilterList")
+    @Import(name="messageFilterList")
       private final @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
 
     public Output<List<X12MessageIdentifierArgs>> getMessageFilterList() {
@@ -100,7 +100,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 processing settings.
      * 
      */
-    @InputImport(name="processingSettings", required=true)
+    @Import(name="processingSettings", required=true)
       private final Output<X12ProcessingSettingsArgs> processingSettings;
 
     public Output<X12ProcessingSettingsArgs> getProcessingSettings() {
@@ -111,7 +111,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 schema references.
      * 
      */
-    @InputImport(name="schemaReferences", required=true)
+    @Import(name="schemaReferences", required=true)
       private final Output<List<X12SchemaReferenceArgs>> schemaReferences;
 
     public Output<List<X12SchemaReferenceArgs>> getSchemaReferences() {
@@ -122,7 +122,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 security settings.
      * 
      */
-    @InputImport(name="securitySettings", required=true)
+    @Import(name="securitySettings", required=true)
       private final Output<X12SecuritySettingsArgs> securitySettings;
 
     public Output<X12SecuritySettingsArgs> getSecuritySettings() {
@@ -133,7 +133,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 validation override settings.
      * 
      */
-    @InputImport(name="validationOverrides")
+    @Import(name="validationOverrides")
       private final @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
 
     public Output<List<X12ValidationOverrideArgs>> getValidationOverrides() {
@@ -144,7 +144,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 validation settings.
      * 
      */
-    @InputImport(name="validationSettings", required=true)
+    @Import(name="validationSettings", required=true)
       private final Output<X12ValidationSettingsArgs> validationSettings;
 
     public Output<X12ValidationSettingsArgs> getValidationSettings() {
@@ -155,7 +155,7 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * The X12 delimiter override settings.
      * 
      */
-    @InputImport(name="x12DelimiterOverrides")
+    @Import(name="x12DelimiterOverrides")
       private final @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
 
     public Output<List<X12DelimiterOverridesArgs>> getX12DelimiterOverrides() {

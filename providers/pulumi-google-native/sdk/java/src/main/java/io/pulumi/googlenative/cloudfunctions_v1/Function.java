@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudfunctions_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudfunctions_v1.FunctionArgs;
@@ -29,7 +29,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The amount of memory in MB available for a function. Defaults to 256MB.
      * 
      */
-    @OutputExport(name="availableMemoryMb", type=Integer.class, parameters={})
+    @Export(name="availableMemoryMb", type=Integer.class, parameters={})
     private Output<Integer> availableMemoryMb;
 
     /**
@@ -43,7 +43,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Build environment variables that shall be available during build time.
      * 
      */
-    @OutputExport(name="buildEnvironmentVariables", type=Map.class, parameters={String.class, String.class})
+    @Export(name="buildEnvironmentVariables", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> buildEnvironmentVariables;
 
     /**
@@ -57,7 +57,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Cloud Build ID of the latest successful deployment of the function.
      * 
      */
-    @OutputExport(name="buildId", type=String.class, parameters={})
+    @Export(name="buildId", type=String.class, parameters={})
     private Output<String> buildId;
 
     /**
@@ -71,7 +71,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Cloud Build Name of the function deployment. `projects//locations//builds/`.
      * 
      */
-    @OutputExport(name="buildName", type=String.class, parameters={})
+    @Export(name="buildName", type=String.class, parameters={})
     private Output<String> buildName;
 
     /**
@@ -85,7 +85,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and `{region}` are the project id and region respectively where the worker pool is defined and `{workerPool}` is the short name of the worker pool. If the project id is not the same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-robot.iam.gserviceaccount.com`) must be granted the role Cloud Build Custom Workers Builder (`roles/cloudbuild.customworkers.builder`) in the project.
      * 
      */
-    @OutputExport(name="buildWorkerPool", type=String.class, parameters={})
+    @Export(name="buildWorkerPool", type=String.class, parameters={})
     private Output<String> buildWorkerPool;
 
     /**
@@ -99,7 +99,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * User-provided description of a function.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -113,7 +113,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * User managed repository created in Artifact Registry optionally with a customer managed encryption key. If specified, deployments will use Artifact Registry. If unspecified and the deployment is eligible to use Artifact Registry, GCF will create and use a repository named 'gcf-artifacts' for every deployed region. This is the repository to which the function docker image will be pushed after it is built by Cloud Build. It must match the pattern `projects/{project}/locations/{location}/repositories/{repository}`. Cross-project repositories are not supported. Cross-location repositories are not supported. Repository format must be 'DOCKER'.
      * 
      */
-    @OutputExport(name="dockerRepository", type=String.class, parameters={})
+    @Export(name="dockerRepository", type=String.class, parameters={})
     private Output<String> dockerRepository;
 
     /**
@@ -127,7 +127,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function". For Node.js this is name of a function exported by the module specified in `source_location`.
      * 
      */
-    @OutputExport(name="entryPoint", type=String.class, parameters={})
+    @Export(name="entryPoint", type=String.class, parameters={})
     private Output<String> entryPoint;
 
     /**
@@ -141,7 +141,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Environment variables that shall be available during function execution.
      * 
      */
-    @OutputExport(name="environmentVariables", type=Map.class, parameters={String.class, String.class})
+    @Export(name="environmentVariables", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> environmentVariables;
 
     /**
@@ -155,7 +155,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * A source that fires events in response to a condition in another service.
      * 
      */
-    @OutputExport(name="eventTrigger", type=EventTriggerResponse.class, parameters={})
+    @Export(name="eventTrigger", type=EventTriggerResponse.class, parameters={})
     private Output<EventTriggerResponse> eventTrigger;
 
     /**
@@ -169,7 +169,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * An HTTPS endpoint type of source that can be triggered via URL.
      * 
      */
-    @OutputExport(name="httpsTrigger", type=HttpsTriggerResponse.class, parameters={})
+    @Export(name="httpsTrigger", type=HttpsTriggerResponse.class, parameters={})
     private Output<HttpsTriggerResponse> httpsTrigger;
 
     /**
@@ -183,7 +183,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The ingress settings for the function, controlling what traffic can reach it.
      * 
      */
-    @OutputExport(name="ingressSettings", type=String.class, parameters={})
+    @Export(name="ingressSettings", type=String.class, parameters={})
     private Output<String> ingressSettings;
 
     /**
@@ -197,7 +197,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`. If specified, you must also provide an artifact registry repository using the `docker_repository` field that was created with the same KMS crypto key. The following service accounts need to be granted the role 'Cloud KMS CryptoKey Encrypter/Decrypter (roles/cloudkms.cryptoKeyEncrypterDecrypter)' on the Key/KeyRing/Project/Organization (least access preferred). 1. Google Cloud Functions service account (service-{project_number}@gcf-admin-robot.iam.gserviceaccount.com) - Required to protect the function's image. 2. Google Storage service account (service-{project_number}@gs-project-accounts.iam.gserviceaccount.com) - Required to protect the function's source code. If this service account does not exist, deploying a function without a KMS key or retrieving the service agent name provisions it. For more information, see https://cloud.google.com/storage/docs/projects#service-agents and https://cloud.google.com/storage/docs/getting-service-agent#gsutil. Google Cloud Functions delegates access to service agents to protect function resources in internal projects that are not accessible by the end user.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
@@ -211,7 +211,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Labels associated with this Cloud Function.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -225,7 +225,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
      * 
      */
-    @OutputExport(name="maxInstances", type=Integer.class, parameters={})
+    @Export(name="maxInstances", type=Integer.class, parameters={})
     private Output<Integer> maxInstances;
 
     /**
@@ -239,7 +239,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * A lower bound for the number function instances that may coexist at a given time.
      * 
      */
-    @OutputExport(name="minInstances", type=Integer.class, parameters={})
+    @Export(name="minInstances", type=Integer.class, parameters={})
     private Output<Integer> minInstances;
 
     /**
@@ -253,7 +253,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * A user-defined name of the function. Function names must be unique globally and match pattern `projects/*{@literal /}locations/*{@literal /}functions/*`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -267,7 +267,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The VPC Network that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network resource. If the short network name is used, the network must belong to the same project. Otherwise, it must belong to a project within the same organization. The format of this field is either `projects/{project}/global/networks/{network}` or `{network}`, where `{project}` is a project id where the network is defined, and `{network}` is the short name of the network. This field is mutually exclusive with `vpc_connector` and will be replaced by it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -281,7 +281,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The runtime in which to run the function. Required when deploying a new function, optional when updating an existing function. For a complete list of possible choices, see the [`gcloud` command reference](https://cloud.google.com/sdk/gcloud/reference/functions/deploy#--runtime).
      * 
      */
-    @OutputExport(name="runtime", type=String.class, parameters={})
+    @Export(name="runtime", type=String.class, parameters={})
     private Output<String> runtime;
 
     /**
@@ -295,7 +295,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Secret environment variables configuration.
      * 
      */
-    @OutputExport(name="secretEnvironmentVariables", type=List.class, parameters={SecretEnvVarResponse.class})
+    @Export(name="secretEnvironmentVariables", type=List.class, parameters={SecretEnvVarResponse.class})
     private Output<List<SecretEnvVarResponse>> secretEnvironmentVariables;
 
     /**
@@ -309,7 +309,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Secret volumes configuration.
      * 
      */
-    @OutputExport(name="secretVolumes", type=List.class, parameters={SecretVolumeResponse.class})
+    @Export(name="secretVolumes", type=List.class, parameters={SecretVolumeResponse.class})
     private Output<List<SecretVolumeResponse>> secretVolumes;
 
     /**
@@ -323,7 +323,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The email of the function's service account. If empty, defaults to `{project_id}@appspot.gserviceaccount.com`.
      * 
      */
-    @OutputExport(name="serviceAccountEmail", type=String.class, parameters={})
+    @Export(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
     /**
@@ -337,7 +337,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Google Cloud Storage URL, starting with `gs://`, pointing to the zip archive which contains the function.
      * 
      */
-    @OutputExport(name="sourceArchiveUrl", type=String.class, parameters={})
+    @Export(name="sourceArchiveUrl", type=String.class, parameters={})
     private Output<String> sourceArchiveUrl;
 
     /**
@@ -351,7 +351,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * **Beta Feature** The source repository where a function is hosted.
      * 
      */
-    @OutputExport(name="sourceRepository", type=SourceRepositoryResponse.class, parameters={})
+    @Export(name="sourceRepository", type=SourceRepositoryResponse.class, parameters={})
     private Output<SourceRepositoryResponse> sourceRepository;
 
     /**
@@ -365,7 +365,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Input only. An identifier for Firebase function sources. Disclaimer: This field is only supported for Firebase function deployments.
      * 
      */
-    @OutputExport(name="sourceToken", type=String.class, parameters={})
+    @Export(name="sourceToken", type=String.class, parameters={})
     private Output<String> sourceToken;
 
     /**
@@ -379,7 +379,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The Google Cloud Storage signed URL used for source uploading, generated by calling [google.cloud.functions.v1.GenerateUploadUrl]. The signature is validated on write methods (Create, Update) The signature is stripped from the Function object on read methods (Get, List)
      * 
      */
-    @OutputExport(name="sourceUploadUrl", type=String.class, parameters={})
+    @Export(name="sourceUploadUrl", type=String.class, parameters={})
     private Output<String> sourceUploadUrl;
 
     /**
@@ -393,7 +393,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Status of the function deployment.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -407,7 +407,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The function execution timeout. Execution is considered failed and can be terminated if the function is not completed at the end of the timeout period. Defaults to 60 seconds.
      * 
      */
-    @OutputExport(name="timeout", type=String.class, parameters={})
+    @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**
@@ -421,7 +421,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The last update timestamp of a Cloud Function.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -435,7 +435,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The version identifier of the Cloud Function. Each deployment attempt results in a new version of a function being created.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
@@ -449,7 +449,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is `projects/*{@literal /}locations/*{@literal /}connectors/*` This field is mutually exclusive with `network` field and will eventually replace it. See [the VPC documentation](https://cloud.google.com/compute/docs/vpc) for more information on connecting Cloud projects.
      * 
      */
-    @OutputExport(name="vpcConnector", type=String.class, parameters={})
+    @Export(name="vpcConnector", type=String.class, parameters={})
     private Output<String> vpcConnector;
 
     /**
@@ -463,7 +463,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The egress settings for the connector, controlling what traffic is diverted through it.
      * 
      */
-    @OutputExport(name="vpcConnectorEgressSettings", type=String.class, parameters={})
+    @Export(name="vpcConnectorEgressSettings", type=String.class, parameters={})
     private Output<String> vpcConnectorEgressSettings;
 
     /**

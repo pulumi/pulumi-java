@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * The app consistent snapshot frequency in minutes.
      * 
      */
-    @InputImport(name="appConsistentFrequencyInMinutes")
+    @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Integer appConsistentFrequencyInMinutes;
 
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
@@ -34,7 +34,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * The crash consistent snapshot frequency in minutes.
      * 
      */
-    @InputImport(name="crashConsistentFrequencyInMinutes")
+    @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
@@ -46,7 +46,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * Expected value is 'VMwareCbt'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -57,7 +57,7 @@ public final class VmwareCbtPolicyDetailsResponse extends io.pulumi.resources.In
      * The duration in minutes until which the recovery points need to be stored.
      * 
      */
-    @InputImport(name="recoveryPointHistoryInMinutes")
+    @Import(name="recoveryPointHistoryInMinutes")
       private final @Nullable Integer recoveryPointHistoryInMinutes;
 
     public Optional<Integer> getRecoveryPointHistoryInMinutes() {

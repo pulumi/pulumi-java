@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,7 +59,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -71,7 +71,7 @@ public final class RegionTargetHttpProxyArgs extends io.pulumi.resources.Resourc
      * to the BackendService.
      * 
      */
-    @InputImport(name="urlMap", required=true)
+    @Import(name="urlMap", required=true)
       private final Output<String> urlMap;
 
     public Output<String> getUrlMap() {

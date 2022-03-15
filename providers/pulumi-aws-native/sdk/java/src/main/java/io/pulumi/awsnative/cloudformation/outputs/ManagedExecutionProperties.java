@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedExecutionProperties {
     private final @Nullable Boolean active;
 
-    @OutputCustomType.Constructor
-    private ManagedExecutionProperties(@OutputCustomType.Parameter("active") @Nullable Boolean active) {
+    @CustomType.Constructor
+    private ManagedExecutionProperties(@CustomType.Parameter("active") @Nullable Boolean active) {
         this.active = active;
     }
 

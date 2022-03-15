@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudTieringSpaceSavingsResponse {
     /**
      * Cached content size on the server
@@ -42,14 +42,14 @@ public final class CloudTieringSpaceSavingsResponse {
      */
     private final Double volumeSizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudTieringSpaceSavingsResponse(
-        @OutputCustomType.Parameter("cachedSizeBytes") Double cachedSizeBytes,
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
-        @OutputCustomType.Parameter("spaceSavingsBytes") Double spaceSavingsBytes,
-        @OutputCustomType.Parameter("spaceSavingsPercent") Integer spaceSavingsPercent,
-        @OutputCustomType.Parameter("totalSizeCloudBytes") Double totalSizeCloudBytes,
-        @OutputCustomType.Parameter("volumeSizeBytes") Double volumeSizeBytes) {
+        @CustomType.Parameter("cachedSizeBytes") Double cachedSizeBytes,
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @CustomType.Parameter("spaceSavingsBytes") Double spaceSavingsBytes,
+        @CustomType.Parameter("spaceSavingsPercent") Integer spaceSavingsPercent,
+        @CustomType.Parameter("totalSizeCloudBytes") Double totalSizeCloudBytes,
+        @CustomType.Parameter("volumeSizeBytes") Double volumeSizeBytes) {
         this.cachedSizeBytes = cachedSizeBytes;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.spaceSavingsBytes = spaceSavingsBytes;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     /**
      * Current instances' config revision. This value is in RFC3339 text format.
@@ -21,10 +21,10 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
      */
     private final Boolean effective;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerStatusAllInstancesConfigResponse(
-        @OutputCustomType.Parameter("currentRevision") String currentRevision,
-        @OutputCustomType.Parameter("effective") Boolean effective) {
+        @CustomType.Parameter("currentRevision") String currentRevision,
+        @CustomType.Parameter("effective") Boolean effective) {
         this.currentRevision = currentRevision;
         this.effective = effective;
     }

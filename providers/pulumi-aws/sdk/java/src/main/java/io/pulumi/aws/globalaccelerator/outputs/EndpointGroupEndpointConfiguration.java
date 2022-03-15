@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointGroupEndpointConfiguration {
     /**
      * Indicates whether client IP address preservation is enabled for an Application Load Balancer endpoint. See the [AWS documentation](https://docs.aws.amazon.com/global-accelerator/latest/dg/preserve-client-ip-address.html) for more details. The default value is `false`.
@@ -30,11 +30,11 @@ public final class EndpointGroupEndpointConfiguration {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointGroupEndpointConfiguration(
-        @OutputCustomType.Parameter("clientIpPreservationEnabled") @Nullable Boolean clientIpPreservationEnabled,
-        @OutputCustomType.Parameter("endpointId") @Nullable String endpointId,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("clientIpPreservationEnabled") @Nullable Boolean clientIpPreservationEnabled,
+        @CustomType.Parameter("endpointId") @Nullable String endpointId,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.clientIpPreservationEnabled = clientIpPreservationEnabled;
         this.endpointId = endpointId;
         this.weight = weight;

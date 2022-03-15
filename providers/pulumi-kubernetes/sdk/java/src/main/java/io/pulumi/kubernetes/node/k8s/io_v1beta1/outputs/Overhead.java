@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Overhead {
     /**
      * PodFixed represents the fixed resource overhead associated with running a pod.
@@ -17,8 +17,8 @@ public final class Overhead {
      */
     private final @Nullable Map<String,String> podFixed;
 
-    @OutputCustomType.Constructor
-    private Overhead(@OutputCustomType.Parameter("podFixed") @Nullable Map<String,String> podFixed) {
+    @CustomType.Constructor
+    private Overhead(@CustomType.Parameter("podFixed") @Nullable Map<String,String> podFixed) {
         this.podFixed = podFixed;
     }
 

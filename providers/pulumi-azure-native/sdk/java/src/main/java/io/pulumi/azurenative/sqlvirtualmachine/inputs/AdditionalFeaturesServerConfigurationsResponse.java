@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse extends io.pul
      * Enable or disable R services (SQL 2016 onwards).
      * 
      */
-    @InputImport(name="isRServicesEnabled")
+    @Import(name="isRServicesEnabled")
       private final @Nullable Boolean isRServicesEnabled;
 
     public Optional<Boolean> getIsRServicesEnabled() {

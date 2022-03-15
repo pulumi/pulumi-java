@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
      * Day of week (`1-7`), starting on Monday
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<Integer> day;
 
     public Output<Integer> getDay() {
@@ -30,7 +30,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
      * Hour of day (`0-23`), ignored if `day` not set
      * 
      */
-    @InputImport(name="hour")
+    @Import(name="hour")
       private final @Nullable Output<Integer> hour;
 
     public Output<Integer> getHour() {
@@ -42,7 +42,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
      * (`stable`)
      * 
      */
-    @InputImport(name="updateTrack")
+    @Import(name="updateTrack")
       private final @Nullable Output<String> updateTrack;
 
     public Output<String> getUpdateTrack() {

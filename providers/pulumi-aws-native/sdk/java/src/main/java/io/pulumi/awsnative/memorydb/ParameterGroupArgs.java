@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb;
 
 import io.pulumi.awsnative.memorydb.inputs.ParameterGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the parameter group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the parameter group family that this parameter group is compatible with.
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final Output<String> family;
 
     public Output<String> getFamily() {
@@ -43,7 +43,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the parameter group.
      * 
      */
-    @InputImport(name="parameterGroupName")
+    @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
@@ -54,7 +54,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An map of parameter names and values for the parameter update. You must supply at least one parameter name and value; subsequent arguments are optional.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
@@ -65,7 +65,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this parameter group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ParameterGroupTagArgs>> tags;
 
     public Output<List<ParameterGroupTagArgs>> getTags() {

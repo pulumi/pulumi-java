@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMultiRegionAccessPointPolicyArgs extends io.pulumi.resourc
      * The name of the Multi Region Access Point to apply policy
      * 
      */
-    @InputImport(name="mrapName", required=true)
+    @Import(name="mrapName", required=true)
       private final String mrapName;
 
     public String getMrapName() {

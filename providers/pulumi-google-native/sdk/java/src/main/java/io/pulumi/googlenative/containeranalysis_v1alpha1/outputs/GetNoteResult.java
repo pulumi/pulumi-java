@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationAuthorityResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BasisResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BuildTypeResponse;
@@ -23,7 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNoteResult {
     /**
      * A note describing an attestation role.
@@ -136,30 +136,30 @@ public final class GetNoteResult {
      */
     private final VulnerabilityTypeResponse vulnerabilityType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNoteResult(
-        @OutputCustomType.Parameter("attestationAuthority") AttestationAuthorityResponse attestationAuthority,
-        @OutputCustomType.Parameter("baseImage") BasisResponse baseImage,
-        @OutputCustomType.Parameter("buildType") BuildTypeResponse buildType,
-        @OutputCustomType.Parameter("compliance") ComplianceNoteResponse compliance,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deployable") DeployableResponse deployable,
-        @OutputCustomType.Parameter("discovery") DiscoveryResponse discovery,
-        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("longDescription") String longDescription,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("package") PackageResponse $package,
-        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
-        @OutputCustomType.Parameter("sbom") DocumentNoteResponse sbom,
-        @OutputCustomType.Parameter("shortDescription") String shortDescription,
-        @OutputCustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
-        @OutputCustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
-        @OutputCustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
-        @OutputCustomType.Parameter("vulnerabilityType") VulnerabilityTypeResponse vulnerabilityType) {
+        @CustomType.Parameter("attestationAuthority") AttestationAuthorityResponse attestationAuthority,
+        @CustomType.Parameter("baseImage") BasisResponse baseImage,
+        @CustomType.Parameter("buildType") BuildTypeResponse buildType,
+        @CustomType.Parameter("compliance") ComplianceNoteResponse compliance,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deployable") DeployableResponse deployable,
+        @CustomType.Parameter("discovery") DiscoveryResponse discovery,
+        @CustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("longDescription") String longDescription,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("package") PackageResponse $package,
+        @CustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @CustomType.Parameter("sbom") DocumentNoteResponse sbom,
+        @CustomType.Parameter("shortDescription") String shortDescription,
+        @CustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
+        @CustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
+        @CustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
+        @CustomType.Parameter("vulnerabilityType") VulnerabilityTypeResponse vulnerabilityType) {
         this.attestationAuthority = attestationAuthority;
         this.baseImage = baseImage;
         this.buildType = buildType;

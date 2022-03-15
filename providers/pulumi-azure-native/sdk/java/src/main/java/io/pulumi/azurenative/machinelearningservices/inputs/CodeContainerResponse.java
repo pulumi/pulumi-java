@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CodeContainerResponse extends io.pulumi.resources.InvokeArgs 
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class CodeContainerResponse extends io.pulumi.resources.InvokeArgs 
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -45,7 +45,7 @@ public final class CodeContainerResponse extends io.pulumi.resources.InvokeArgs 
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

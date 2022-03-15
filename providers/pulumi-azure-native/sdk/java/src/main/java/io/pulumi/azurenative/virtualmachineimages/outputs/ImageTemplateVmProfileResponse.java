@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
 import io.pulumi.azurenative.virtualmachineimages.outputs.VirtualNetworkConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateVmProfileResponse {
     /**
      * Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.
@@ -29,11 +29,11 @@ public final class ImageTemplateVmProfileResponse {
      */
     private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateVmProfileResponse(
-        @OutputCustomType.Parameter("osDiskSizeGB") @Nullable Integer osDiskSizeGB,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize,
-        @OutputCustomType.Parameter("vnetConfig") @Nullable VirtualNetworkConfigResponse vnetConfig) {
+        @CustomType.Parameter("osDiskSizeGB") @Nullable Integer osDiskSizeGB,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize,
+        @CustomType.Parameter("vnetConfig") @Nullable VirtualNetworkConfigResponse vnetConfig) {
         this.osDiskSizeGB = osDiskSizeGB;
         this.vmSize = vmSize;
         this.vnetConfig = vnetConfig;

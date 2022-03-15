@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
      * 
      */
-    @InputImport(name="extra")
+    @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
 
     public Output<Map<String,List<String>>> getExtra() {
@@ -37,7 +37,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * Groups is the groups you're testing for.
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -48,7 +48,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * NonResourceAttributes describes information for a non-resource access request
      * 
      */
-    @InputImport(name="nonResourceAttributes")
+    @Import(name="nonResourceAttributes")
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
     public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
@@ -59,7 +59,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * ResourceAuthorizationAttributes describes information for a resource access request
      * 
      */
-    @InputImport(name="resourceAttributes")
+    @Import(name="resourceAttributes")
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
     public Output<ResourceAttributesArgs> getResourceAttributes() {
@@ -70,7 +70,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * UID information about the requesting user.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -81,7 +81,7 @@ public final class SubjectAccessReviewSpecArgs extends io.pulumi.resources.Resou
      * User is the user you're testing for. If you specify "User" but not "Groups", then is it interpreted as "What if User were not a member of any groups
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

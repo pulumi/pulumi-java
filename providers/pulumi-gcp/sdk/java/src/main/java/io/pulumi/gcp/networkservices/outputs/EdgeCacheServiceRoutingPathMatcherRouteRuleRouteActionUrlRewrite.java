@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite {
     /**
      * Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.
@@ -37,11 +37,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      */
     private final @Nullable String pathTemplateRewrite;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite(
-        @OutputCustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
-        @OutputCustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite,
-        @OutputCustomType.Parameter("pathTemplateRewrite") @Nullable String pathTemplateRewrite) {
+        @CustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
+        @CustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite,
+        @CustomType.Parameter("pathTemplateRewrite") @Nullable String pathTemplateRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
         this.pathTemplateRewrite = pathTemplateRewrite;

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.helm.sh_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryOpts {
     /**
      * The Repository's CA File
@@ -42,14 +42,14 @@ public final class RepositoryOpts {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryOpts(
-        @OutputCustomType.Parameter("caFile") @Nullable String caFile,
-        @OutputCustomType.Parameter("certFile") @Nullable String certFile,
-        @OutputCustomType.Parameter("keyFile") @Nullable String keyFile,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("repo") @Nullable String repo,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("caFile") @Nullable String caFile,
+        @CustomType.Parameter("certFile") @Nullable String certFile,
+        @CustomType.Parameter("keyFile") @Nullable String keyFile,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("repo") @Nullable String repo,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.caFile = caFile;
         this.certFile = certFile;
         this.keyFile = keyFile;

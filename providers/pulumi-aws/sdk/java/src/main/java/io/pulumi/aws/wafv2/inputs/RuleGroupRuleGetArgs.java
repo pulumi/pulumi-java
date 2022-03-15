@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleRuleLabelGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleVisibilityConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * The action that AWS WAF should take on a web request when it matches the rule's statement. Settings at the `aws.wafv2.WebAcl` level can override the rule action setting. See Action below for details.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RuleGroupRuleActionGetArgs> action;
 
     public Output<RuleGroupRuleActionGetArgs> getAction() {
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * A friendly name of the rule.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * If you define more than one Rule in a WebACL, AWS WAF evaluates each request against the `rules` in order based on the value of `priority`. AWS WAF processes rules with lower priority first.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -57,7 +57,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * Labels to apply to web requests that match the rule match statement. See Rule Label below for details.
      * 
      */
-    @InputImport(name="ruleLabels")
+    @Import(name="ruleLabels")
       private final @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
 
     public Output<List<RuleGroupRuleRuleLabelGetArgs>> getRuleLabels() {
@@ -68,7 +68,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * The AWS WAF processing statement for the rule, for example `byte_match_statement` or `geo_match_statement`. See Statement below for details.
      * 
      */
-    @InputImport(name="statement", required=true)
+    @Import(name="statement", required=true)
       private final Output<RuleGroupRuleStatementGetArgs> statement;
 
     public Output<RuleGroupRuleStatementGetArgs> getStatement() {
@@ -79,7 +79,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
-    @InputImport(name="visibilityConfig", required=true)
+    @Import(name="visibilityConfig", required=true)
       private final Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
 
     public Output<RuleGroupRuleVisibilityConfigGetArgs> getVisibilityConfig() {

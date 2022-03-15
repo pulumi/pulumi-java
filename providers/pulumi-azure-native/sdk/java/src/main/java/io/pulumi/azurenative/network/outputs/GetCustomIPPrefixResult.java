@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomIPPrefixResult {
     /**
      * The prefix range in CIDR notation. Should include the start address and the prefix length.
@@ -81,21 +81,21 @@ public final class GetCustomIPPrefixResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomIPPrefixResult(
-        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
-        @OutputCustomType.Parameter("commissionedState") @Nullable String commissionedState,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIpPrefixes") List<SubResourceResponse> publicIpPrefixes,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("cidr") @Nullable String cidr,
+        @CustomType.Parameter("commissionedState") @Nullable String commissionedState,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIpPrefixes") List<SubResourceResponse> publicIpPrefixes,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.cidr = cidr;
         this.commissionedState = commissionedState;
         this.etag = etag;

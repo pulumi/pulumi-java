@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.EmailTemplateParametersContractPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Email Template Body. This should be a valid XDocument
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -31,7 +31,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the Email Template.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Email Template Parameter values.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<EmailTemplateParametersContractPropertiesArgs>> parameters;
 
     public Output<List<EmailTemplateParametersContractPropertiesArgs>> getParameters() {
@@ -53,7 +53,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -75,7 +75,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Subject of the Template.
      * 
      */
-    @InputImport(name="subject")
+    @Import(name="subject")
       private final @Nullable Output<String> subject;
 
     public Output<String> getSubject() {
@@ -86,7 +86,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Email Template Name Identifier.
      * 
      */
-    @InputImport(name="templateName")
+    @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
     public Output<String> getTemplateName() {
@@ -97,7 +97,7 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Title of the Template.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

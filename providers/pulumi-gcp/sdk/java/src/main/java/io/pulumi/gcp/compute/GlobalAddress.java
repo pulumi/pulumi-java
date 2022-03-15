@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.GlobalAddressArgs;
@@ -51,7 +51,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * address or omitted to allow GCP to choose a valid one for you.
      * 
      */
-    @OutputExport(name="address", type=String.class, parameters={})
+    @Export(name="address", type=String.class, parameters={})
     private Output<String> address;
 
     /**
@@ -71,7 +71,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      *   Possible values are `EXTERNAL` and `INTERNAL`.
      * 
      */
-    @OutputExport(name="addressType", type=String.class, parameters={})
+    @Export(name="addressType", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressType;
 
     /**
@@ -89,7 +89,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -103,7 +103,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -118,7 +118,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    @OutputExport(name="ipVersion", type=String.class, parameters={})
+    @Export(name="ipVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipVersion;
 
     /**
@@ -133,7 +133,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -147,7 +147,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * Labels to apply to this address.  A list of key->value pairs.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -167,7 +167,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -190,7 +190,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * This should only be set when using an Internal address.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output</* @Nullable */ String> network;
 
     /**
@@ -210,7 +210,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT
      * 
      */
-    @OutputExport(name="prefixLength", type=Integer.class, parameters={})
+    @Export(name="prefixLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> prefixLength;
 
     /**
@@ -228,7 +228,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -245,7 +245,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * * PRIVATE_SERVICE_CONNECT - for Private Service Connect networks
      * 
      */
-    @OutputExport(name="purpose", type=String.class, parameters={})
+    @Export(name="purpose", type=String.class, parameters={})
     private Output</* @Nullable */ String> purpose;
 
     /**
@@ -261,7 +261,7 @@ public class GlobalAddress extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

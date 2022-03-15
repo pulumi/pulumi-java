@@ -5,7 +5,7 @@ package io.pulumi.aws.s3;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
      * 
      */
-    @InputImport(name="acl")
+    @Import(name="acl")
       private final @Nullable Output<String> acl;
 
     public Output<String> getAcl() {
@@ -32,7 +32,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -43,7 +43,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
      */
-    @InputImport(name="bucketKeyEnabled")
+    @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
     public Output<Boolean> getBucketKeyEnabled() {
@@ -54,7 +54,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
      * 
      */
-    @InputImport(name="cacheControl")
+    @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
     public Output<String> getCacheControl() {
@@ -65,7 +65,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -76,7 +76,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
      * 
      */
-    @InputImport(name="contentBase64")
+    @Import(name="contentBase64")
       private final @Nullable Output<String> contentBase64;
 
     public Output<String> getContentBase64() {
@@ -87,7 +87,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
      * 
      */
-    @InputImport(name="contentDisposition")
+    @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
     public Output<String> getContentDisposition() {
@@ -98,7 +98,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
      * 
      */
-    @InputImport(name="contentEncoding")
+    @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
     public Output<String> getContentEncoding() {
@@ -109,7 +109,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Language the content is in e.g., en-US or en-GB.
      * 
      */
-    @InputImport(name="contentLanguage")
+    @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
     public Output<String> getContentLanguage() {
@@ -120,7 +120,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -131,7 +131,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -142,7 +142,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -153,7 +153,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the object once it is in the bucket.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -164,7 +164,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -175,7 +175,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -186,7 +186,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
      * 
      */
-    @InputImport(name="objectLockLegalHoldStatus")
+    @Import(name="objectLockLegalHoldStatus")
       private final @Nullable Output<String> objectLockLegalHoldStatus;
 
     public Output<String> getObjectLockLegalHoldStatus() {
@@ -197,7 +197,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
      * 
      */
-    @InputImport(name="objectLockMode")
+    @Import(name="objectLockMode")
       private final @Nullable Output<String> objectLockMode;
 
     public Output<String> getObjectLockMode() {
@@ -208,7 +208,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
      * 
      */
-    @InputImport(name="objectLockRetainUntilDate")
+    @Import(name="objectLockRetainUntilDate")
       private final @Nullable Output<String> objectLockRetainUntilDate;
 
     public Output<String> getObjectLockRetainUntilDate() {
@@ -219,7 +219,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
      * 
      */
-    @InputImport(name="serverSideEncryption")
+    @Import(name="serverSideEncryption")
       private final @Nullable Output<String> serverSideEncryption;
 
     public Output<String> getServerSideEncryption() {
@@ -230,7 +230,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Path to a file that will be read and uploaded as raw bytes for the object content.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
@@ -241,7 +241,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
      * 
      */
-    @InputImport(name="sourceHash")
+    @Import(name="sourceHash")
       private final @Nullable Output<String> sourceHash;
 
     public Output<String> getSourceHash() {
@@ -252,7 +252,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Storage Class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html#AmazonS3-PutObject-request-header-StorageClass) for the object. Defaults to "`STANDARD`".
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -263,7 +263,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -274,7 +274,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
      * 
      */
-    @InputImport(name="websiteRedirect")
+    @Import(name="websiteRedirect")
       private final @Nullable Output<String> websiteRedirect;
 
     public Output<String> getWebsiteRedirect() {

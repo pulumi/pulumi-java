@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53.HealthCheckArgs;
 import io.pulumi.awsnative.route53.outputs.HealthCheckConfigProperties;
 import io.pulumi.awsnative.route53.outputs.HealthCheckTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A complex type that contains information about the health check.
      * 
      */
-    @OutputExport(name="healthCheckConfig", type=HealthCheckConfigProperties.class, parameters={})
+    @Export(name="healthCheckConfig", type=HealthCheckConfigProperties.class, parameters={})
     private Output<HealthCheckConfigProperties> healthCheckConfig;
 
     /**
@@ -34,7 +34,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
     public Output<HealthCheckConfigProperties> getHealthCheckConfig() {
         return this.healthCheckConfig;
     }
-    @OutputExport(name="healthCheckId", type=String.class, parameters={})
+    @Export(name="healthCheckId", type=String.class, parameters={})
     private Output<String> healthCheckId;
 
     public Output<String> getHealthCheckId() {
@@ -44,7 +44,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="healthCheckTags", type=List.class, parameters={HealthCheckTag.class})
+    @Export(name="healthCheckTags", type=List.class, parameters={HealthCheckTag.class})
     private Output</* @Nullable */ List<HealthCheckTag>> healthCheckTags;
 
     /**

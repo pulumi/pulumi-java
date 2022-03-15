@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.enums.DocumentAttachmentsSourceKey;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * The key of a key-value pair that identifies the location of an attachment to a document.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<DocumentAttachmentsSourceKey> key;
 
     public Output<DocumentAttachmentsSourceKey> getKey() {
@@ -31,7 +31,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * The name of the document attachment file.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * The value of a key-value pair that identifies the location of an attachment to a document. The format for Value depends on the type of key you specify.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.Condition;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodDisruptionBudgetStatus {
     /**
      * Conditions contain conditions for PDB. The disruption controller sets the DisruptionAllowed condition. The following are known values for the reason field (additional reasons could be added in the future): - SyncFailed: The controller encountered an error and wasn't able to compute
@@ -59,15 +59,15 @@ public final class PodDisruptionBudgetStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodDisruptionBudgetStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<Condition> conditions,
-        @OutputCustomType.Parameter("currentHealthy") Integer currentHealthy,
-        @OutputCustomType.Parameter("desiredHealthy") Integer desiredHealthy,
-        @OutputCustomType.Parameter("disruptedPods") @Nullable Map<String,String> disruptedPods,
-        @OutputCustomType.Parameter("disruptionsAllowed") Integer disruptionsAllowed,
-        @OutputCustomType.Parameter("expectedPods") Integer expectedPods,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
+        @CustomType.Parameter("conditions") @Nullable List<Condition> conditions,
+        @CustomType.Parameter("currentHealthy") Integer currentHealthy,
+        @CustomType.Parameter("desiredHealthy") Integer desiredHealthy,
+        @CustomType.Parameter("disruptedPods") @Nullable Map<String,String> disruptedPods,
+        @CustomType.Parameter("disruptionsAllowed") Integer disruptionsAllowed,
+        @CustomType.Parameter("expectedPods") Integer expectedPods,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.conditions = conditions;
         this.currentHealthy = currentHealthy;
         this.desiredHealthy = desiredHealthy;

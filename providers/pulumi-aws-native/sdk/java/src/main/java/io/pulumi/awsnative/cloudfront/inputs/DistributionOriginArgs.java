@@ -8,7 +8,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginCustomHeaderArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginShieldArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionS3OriginConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,63 +20,63 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
 
     public static final DistributionOriginArgs Empty = new DistributionOriginArgs();
 
-    @InputImport(name="connectionAttempts")
+    @Import(name="connectionAttempts")
       private final @Nullable Output<Integer> connectionAttempts;
 
     public Output<Integer> getConnectionAttempts() {
         return this.connectionAttempts == null ? Output.empty() : this.connectionAttempts;
     }
 
-    @InputImport(name="connectionTimeout")
+    @Import(name="connectionTimeout")
       private final @Nullable Output<Integer> connectionTimeout;
 
     public Output<Integer> getConnectionTimeout() {
         return this.connectionTimeout == null ? Output.empty() : this.connectionTimeout;
     }
 
-    @InputImport(name="customOriginConfig")
+    @Import(name="customOriginConfig")
       private final @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig;
 
     public Output<DistributionCustomOriginConfigArgs> getCustomOriginConfig() {
         return this.customOriginConfig == null ? Output.empty() : this.customOriginConfig;
     }
 
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName;
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
         return this.id;
     }
 
-    @InputImport(name="originCustomHeaders")
+    @Import(name="originCustomHeaders")
       private final @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders;
 
     public Output<List<DistributionOriginCustomHeaderArgs>> getOriginCustomHeaders() {
         return this.originCustomHeaders == null ? Output.empty() : this.originCustomHeaders;
     }
 
-    @InputImport(name="originPath")
+    @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
     public Output<String> getOriginPath() {
         return this.originPath == null ? Output.empty() : this.originPath;
     }
 
-    @InputImport(name="originShield")
+    @Import(name="originShield")
       private final @Nullable Output<DistributionOriginShieldArgs> originShield;
 
     public Output<DistributionOriginShieldArgs> getOriginShield() {
         return this.originShield == null ? Output.empty() : this.originShield;
     }
 
-    @InputImport(name="s3OriginConfig")
+    @Import(name="s3OriginConfig")
       private final @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig;
 
     public Output<DistributionS3OriginConfigArgs> getS3OriginConfig() {

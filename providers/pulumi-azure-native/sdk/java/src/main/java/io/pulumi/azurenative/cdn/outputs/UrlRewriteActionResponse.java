@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.UrlRewriteActionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlRewriteActionResponse {
     /**
      * The name of the action for the delivery rule.
@@ -22,10 +22,10 @@ public final class UrlRewriteActionResponse {
      */
     private final UrlRewriteActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlRewriteActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") UrlRewriteActionParametersResponse parameters) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") UrlRewriteActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }

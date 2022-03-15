@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
      * The availability zones used by the domain.
      * 
      */
-    @InputImport(name="availabilityZones", required=true)
+    @Import(name="availabilityZones", required=true)
       private final List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
@@ -28,7 +28,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
      * The security groups used by the domain.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
@@ -39,7 +39,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
      * The subnets used by the domain.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
@@ -50,7 +50,7 @@ public final class GetDomainVpcOption extends io.pulumi.resources.InvokeArgs {
      * The VPC used by the domain.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

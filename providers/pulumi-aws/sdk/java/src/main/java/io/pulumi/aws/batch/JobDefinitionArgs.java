@@ -6,7 +6,7 @@ package io.pulumi.aws.batch;
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyArgs;
 import io.pulumi.aws.batch.inputs.JobDefinitionTimeoutArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
      * 
      */
-    @InputImport(name="containerProperties")
+    @Import(name="containerProperties")
       private final @Nullable Output<String> containerProperties;
 
     public Output<String> getContainerProperties() {
@@ -35,7 +35,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the job definition.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the parameter substitution placeholders to set in the job definition.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -57,7 +57,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The platform capabilities required by the job definition. If no value is specified, it defaults to `EC2`. To run the job on Fargate resources, specify `FARGATE`.
      * 
      */
-    @InputImport(name="platformCapabilities")
+    @Import(name="platformCapabilities")
       private final @Nullable Output<List<String>> platformCapabilities;
 
     public Output<List<String>> getPlatformCapabilities() {
@@ -68,7 +68,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is `false`.
      * 
      */
-    @InputImport(name="propagateTags")
+    @Import(name="propagateTags")
       private final @Nullable Output<Boolean> propagateTags;
 
     public Output<Boolean> getPropagateTags() {
@@ -80,7 +80,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum number of `retry_strategy` is `1`.  Defined below.
      * 
      */
-    @InputImport(name="retryStrategy")
+    @Import(name="retryStrategy")
       private final @Nullable Output<JobDefinitionRetryStrategyArgs> retryStrategy;
 
     public Output<JobDefinitionRetryStrategyArgs> getRetryStrategy() {
@@ -91,7 +91,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -102,7 +102,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<JobDefinitionTimeoutArgs> timeout;
 
     public Output<JobDefinitionTimeoutArgs> getTimeout() {
@@ -113,7 +113,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The type of job definition.  Must be `container`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

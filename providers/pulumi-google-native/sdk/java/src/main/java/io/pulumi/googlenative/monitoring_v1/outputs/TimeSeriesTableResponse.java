@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TableDataSetResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeSeriesTableResponse {
     /**
      * The data displayed in this table.
@@ -16,8 +16,8 @@ public final class TimeSeriesTableResponse {
      */
     private final List<TableDataSetResponse> dataSets;
 
-    @OutputCustomType.Constructor
-    private TimeSeriesTableResponse(@OutputCustomType.Parameter("dataSets") List<TableDataSetResponse> dataSets) {
+    @CustomType.Constructor
+    private TimeSeriesTableResponse(@CustomType.Parameter("dataSets") List<TableDataSetResponse> dataSets) {
         this.dataSets = dataSets;
     }
 

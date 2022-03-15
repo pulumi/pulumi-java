@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.chatbot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSlackChannelConfigurationResult {
     /**
      * Amazon Resource Name (ARN) of the configuration
@@ -49,15 +49,15 @@ public final class GetSlackChannelConfigurationResult {
      */
     private final @Nullable Boolean userRoleRequired;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSlackChannelConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("guardrailPolicies") @Nullable List<String> guardrailPolicies,
-        @OutputCustomType.Parameter("iamRoleArn") @Nullable String iamRoleArn,
-        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
-        @OutputCustomType.Parameter("slackChannelId") @Nullable String slackChannelId,
-        @OutputCustomType.Parameter("snsTopicArns") @Nullable List<String> snsTopicArns,
-        @OutputCustomType.Parameter("userRoleRequired") @Nullable Boolean userRoleRequired) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("guardrailPolicies") @Nullable List<String> guardrailPolicies,
+        @CustomType.Parameter("iamRoleArn") @Nullable String iamRoleArn,
+        @CustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @CustomType.Parameter("slackChannelId") @Nullable String slackChannelId,
+        @CustomType.Parameter("snsTopicArns") @Nullable List<String> snsTopicArns,
+        @CustomType.Parameter("userRoleRequired") @Nullable Boolean userRoleRequired) {
         this.arn = arn;
         this.guardrailPolicies = guardrailPolicies;
         this.iamRoleArn = iamRoleArn;

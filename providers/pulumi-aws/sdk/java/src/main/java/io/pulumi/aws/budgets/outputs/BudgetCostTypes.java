@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetCostTypes {
     /**
      * A boolean value whether to include credits in the cost budget. Defaults to `true`
@@ -67,19 +67,19 @@ public final class BudgetCostTypes {
      */
     private final @Nullable Boolean useBlended;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetCostTypes(
-        @OutputCustomType.Parameter("includeCredit") @Nullable Boolean includeCredit,
-        @OutputCustomType.Parameter("includeDiscount") @Nullable Boolean includeDiscount,
-        @OutputCustomType.Parameter("includeOtherSubscription") @Nullable Boolean includeOtherSubscription,
-        @OutputCustomType.Parameter("includeRecurring") @Nullable Boolean includeRecurring,
-        @OutputCustomType.Parameter("includeRefund") @Nullable Boolean includeRefund,
-        @OutputCustomType.Parameter("includeSubscription") @Nullable Boolean includeSubscription,
-        @OutputCustomType.Parameter("includeSupport") @Nullable Boolean includeSupport,
-        @OutputCustomType.Parameter("includeTax") @Nullable Boolean includeTax,
-        @OutputCustomType.Parameter("includeUpfront") @Nullable Boolean includeUpfront,
-        @OutputCustomType.Parameter("useAmortized") @Nullable Boolean useAmortized,
-        @OutputCustomType.Parameter("useBlended") @Nullable Boolean useBlended) {
+        @CustomType.Parameter("includeCredit") @Nullable Boolean includeCredit,
+        @CustomType.Parameter("includeDiscount") @Nullable Boolean includeDiscount,
+        @CustomType.Parameter("includeOtherSubscription") @Nullable Boolean includeOtherSubscription,
+        @CustomType.Parameter("includeRecurring") @Nullable Boolean includeRecurring,
+        @CustomType.Parameter("includeRefund") @Nullable Boolean includeRefund,
+        @CustomType.Parameter("includeSubscription") @Nullable Boolean includeSubscription,
+        @CustomType.Parameter("includeSupport") @Nullable Boolean includeSupport,
+        @CustomType.Parameter("includeTax") @Nullable Boolean includeTax,
+        @CustomType.Parameter("includeUpfront") @Nullable Boolean includeUpfront,
+        @CustomType.Parameter("useAmortized") @Nullable Boolean useAmortized,
+        @CustomType.Parameter("useBlended") @Nullable Boolean useBlended) {
         this.includeCredit = includeCredit;
         this.includeDiscount = includeDiscount;
         this.includeOtherSubscription = includeOtherSubscription;

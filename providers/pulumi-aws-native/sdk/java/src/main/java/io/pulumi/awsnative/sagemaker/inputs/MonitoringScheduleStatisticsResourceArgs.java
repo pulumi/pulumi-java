@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MonitoringScheduleStatisticsResourceArgs extends io.pulumi.re
      * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
      * 
      */
-    @InputImport(name="s3Uri")
+    @Import(name="s3Uri")
       private final @Nullable Output<String> s3Uri;
 
     public Output<String> getS3Uri() {

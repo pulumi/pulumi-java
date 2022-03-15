@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.eventarc.outputs.TriggerDestinationCloudRunService;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerDestination {
     /**
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
@@ -23,10 +23,10 @@ public final class TriggerDestination {
      */
     private final @Nullable TriggerDestinationCloudRunService cloudRunService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerDestination(
-        @OutputCustomType.Parameter("cloudFunction") @Nullable String cloudFunction,
-        @OutputCustomType.Parameter("cloudRunService") @Nullable TriggerDestinationCloudRunService cloudRunService) {
+        @CustomType.Parameter("cloudFunction") @Nullable String cloudFunction,
+        @CustomType.Parameter("cloudRunService") @Nullable TriggerDestinationCloudRunService cloudRunService) {
         this.cloudFunction = cloudFunction;
         this.cloudRunService = cloudRunService;
     }

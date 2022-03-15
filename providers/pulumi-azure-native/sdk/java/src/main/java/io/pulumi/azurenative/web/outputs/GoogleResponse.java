@@ -6,13 +6,13 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AllowedAudiencesValidationResponse;
 import io.pulumi.azurenative.web.outputs.ClientRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GoogleResponse {
     /**
      * <code>false</code> if the Google provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -35,12 +35,12 @@ public final class GoogleResponse {
      */
     private final @Nullable AllowedAudiencesValidationResponse validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
-        @OutputCustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration,
-        @OutputCustomType.Parameter("validation") @Nullable AllowedAudiencesValidationResponse validation) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @CustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration,
+        @CustomType.Parameter("validation") @Nullable AllowedAudiencesValidationResponse validation) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

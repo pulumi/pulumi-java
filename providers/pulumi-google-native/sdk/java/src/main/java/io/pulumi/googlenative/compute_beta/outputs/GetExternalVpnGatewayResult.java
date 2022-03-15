@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ExternalVpnGatewayInterfaceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExternalVpnGatewayResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -58,17 +58,17 @@ public final class GetExternalVpnGatewayResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExternalVpnGatewayResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("interfaces") List<ExternalVpnGatewayInterfaceResponse> interfaces,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("redundancyType") String redundancyType,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("interfaces") List<ExternalVpnGatewayInterfaceResponse> interfaces,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("redundancyType") String redundancyType,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.interfaces = interfaces;

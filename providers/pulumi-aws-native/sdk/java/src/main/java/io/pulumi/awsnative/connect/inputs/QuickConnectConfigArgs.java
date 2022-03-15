@@ -8,7 +8,7 @@ import io.pulumi.awsnative.connect.inputs.QuickConnectPhoneNumberQuickConnectCon
 import io.pulumi.awsnative.connect.inputs.QuickConnectQueueQuickConnectConfigArgs;
 import io.pulumi.awsnative.connect.inputs.QuickConnectUserQuickConnectConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,28 +21,28 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final QuickConnectConfigArgs Empty = new QuickConnectConfigArgs();
 
-    @InputImport(name="phoneConfig")
+    @Import(name="phoneConfig")
       private final @Nullable Output<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig;
 
     public Output<QuickConnectPhoneNumberQuickConnectConfigArgs> getPhoneConfig() {
         return this.phoneConfig == null ? Output.empty() : this.phoneConfig;
     }
 
-    @InputImport(name="queueConfig")
+    @Import(name="queueConfig")
       private final @Nullable Output<QuickConnectQueueQuickConnectConfigArgs> queueConfig;
 
     public Output<QuickConnectQueueQuickConnectConfigArgs> getQueueConfig() {
         return this.queueConfig == null ? Output.empty() : this.queueConfig;
     }
 
-    @InputImport(name="quickConnectType", required=true)
+    @Import(name="quickConnectType", required=true)
       private final Output<QuickConnectType> quickConnectType;
 
     public Output<QuickConnectType> getQuickConnectType() {
         return this.quickConnectType;
     }
 
-    @InputImport(name="userConfig")
+    @Import(name="userConfig")
       private final @Nullable Output<QuickConnectUserQuickConnectConfigArgs> userConfig;
 
     public Output<QuickConnectUserQuickConnectConfigArgs> getUserConfig() {

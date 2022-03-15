@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
      * This is the filter tag name, it can have 1 - 128 characters
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
      * This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported
      * 
      */
-    @InputImport(name="op", required=true)
+    @Import(name="op", required=true)
       private final String op;
 
     public String getOp() {
@@ -42,7 +42,7 @@ public final class TagFilterResponse extends io.pulumi.resources.InvokeArgs {
      * This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

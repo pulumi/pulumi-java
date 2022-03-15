@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Time To Live (in minutes) for events.
      * 
      */
-    @InputImport(name="eventTimeToLiveInMinutes")
+    @Import(name="eventTimeToLiveInMinutes")
       private final @Nullable Integer eventTimeToLiveInMinutes;
 
     public Optional<Integer> getEventTimeToLiveInMinutes() {
@@ -33,7 +33,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum number of delivery retry attempts for events.
      * 
      */
-    @InputImport(name="maxDeliveryAttempts")
+    @Import(name="maxDeliveryAttempts")
       private final @Nullable Integer maxDeliveryAttempts;
 
     public Optional<Integer> getMaxDeliveryAttempts() {

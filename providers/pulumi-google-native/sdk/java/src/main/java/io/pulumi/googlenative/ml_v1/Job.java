@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.JobArgs;
@@ -29,7 +29,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * When the job was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -43,7 +43,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * When the job processing was completed.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -57,7 +57,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The details of a failure or a cancellation.
      * 
      */
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
@@ -71,7 +71,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a job from overwriting each other. It is strongly suggested that systems make use of the `etag` in the read-modify-write cycle to perform job updates in order to avoid race conditions: An `etag` is returned in the response to `GetJob`, and systems are expected to put that etag in the request to `UpdateJob` to ensure that their change will be applied to the same version of the job.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -85,7 +85,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The user-specified id of the job.
      * 
      */
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     /**
@@ -99,7 +99,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * It's only effect when the job is in QUEUED state. If it's positive, it indicates the job's position in the job scheduler. It's 0 when the job is already scheduled.
      * 
      */
-    @OutputExport(name="jobPosition", type=String.class, parameters={})
+    @Export(name="jobPosition", type=String.class, parameters={})
     private Output<String> jobPosition;
 
     /**
@@ -113,7 +113,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. One or more labels that you can add, to organize your jobs. Each label is a key-value pair, where both the key and the value are arbitrary strings that you supply. For more information, see the documentation on using labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -127,7 +127,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Input parameters to create a prediction job.
      * 
      */
-    @OutputExport(name="predictionInput", type=GoogleCloudMlV1__PredictionInputResponse.class, parameters={})
+    @Export(name="predictionInput", type=GoogleCloudMlV1__PredictionInputResponse.class, parameters={})
     private Output<GoogleCloudMlV1__PredictionInputResponse> predictionInput;
 
     /**
@@ -141,7 +141,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The current prediction job result.
      * 
      */
-    @OutputExport(name="predictionOutput", type=GoogleCloudMlV1__PredictionOutputResponse.class, parameters={})
+    @Export(name="predictionOutput", type=GoogleCloudMlV1__PredictionOutputResponse.class, parameters={})
     private Output<GoogleCloudMlV1__PredictionOutputResponse> predictionOutput;
 
     /**
@@ -155,7 +155,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * When the job processing was started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -169,7 +169,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The detailed state of a job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -183,7 +183,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Input parameters to create a training job.
      * 
      */
-    @OutputExport(name="trainingInput", type=GoogleCloudMlV1__TrainingInputResponse.class, parameters={})
+    @Export(name="trainingInput", type=GoogleCloudMlV1__TrainingInputResponse.class, parameters={})
     private Output<GoogleCloudMlV1__TrainingInputResponse> trainingInput;
 
     /**
@@ -197,7 +197,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The current training job result.
      * 
      */
-    @OutputExport(name="trainingOutput", type=GoogleCloudMlV1__TrainingOutputResponse.class, parameters={})
+    @Export(name="trainingOutput", type=GoogleCloudMlV1__TrainingOutputResponse.class, parameters={})
     private Output<GoogleCloudMlV1__TrainingOutputResponse> trainingOutput;
 
     /**

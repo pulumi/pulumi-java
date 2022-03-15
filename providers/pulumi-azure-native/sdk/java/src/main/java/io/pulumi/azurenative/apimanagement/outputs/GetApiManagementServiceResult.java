@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.outputs.ApiVersionConstraintResponse;
 import io.pulumi.azurenative.apimanagement.outputs.CertificateConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.HostnameConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiManagementServiceResult {
     /**
      * Additional datacenter locations of the API Management service.
@@ -187,41 +187,41 @@ public final class GetApiManagementServiceResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiManagementServiceResult(
-        @OutputCustomType.Parameter("additionalLocations") @Nullable List<AdditionalLocationResponse> additionalLocations,
-        @OutputCustomType.Parameter("apiVersionConstraint") @Nullable ApiVersionConstraintResponse apiVersionConstraint,
-        @OutputCustomType.Parameter("certificates") @Nullable List<CertificateConfigurationResponse> certificates,
-        @OutputCustomType.Parameter("createdAtUtc") String createdAtUtc,
-        @OutputCustomType.Parameter("customProperties") @Nullable Map<String,String> customProperties,
-        @OutputCustomType.Parameter("developerPortalUrl") String developerPortalUrl,
-        @OutputCustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
-        @OutputCustomType.Parameter("enableClientCertificate") @Nullable Boolean enableClientCertificate,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
-        @OutputCustomType.Parameter("gatewayUrl") String gatewayUrl,
-        @OutputCustomType.Parameter("hostnameConfigurations") @Nullable List<HostnameConfigurationResponse> hostnameConfigurations,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ApiManagementServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managementApiUrl") String managementApiUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationSenderEmail") @Nullable String notificationSenderEmail,
-        @OutputCustomType.Parameter("portalUrl") String portalUrl,
-        @OutputCustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
-        @OutputCustomType.Parameter("publisherEmail") String publisherEmail,
-        @OutputCustomType.Parameter("publisherName") String publisherName,
-        @OutputCustomType.Parameter("restore") @Nullable Boolean restore,
-        @OutputCustomType.Parameter("scmUrl") String scmUrl,
-        @OutputCustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetProvisioningState") String targetProvisioningState,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @OutputCustomType.Parameter("virtualNetworkType") @Nullable String virtualNetworkType,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("additionalLocations") @Nullable List<AdditionalLocationResponse> additionalLocations,
+        @CustomType.Parameter("apiVersionConstraint") @Nullable ApiVersionConstraintResponse apiVersionConstraint,
+        @CustomType.Parameter("certificates") @Nullable List<CertificateConfigurationResponse> certificates,
+        @CustomType.Parameter("createdAtUtc") String createdAtUtc,
+        @CustomType.Parameter("customProperties") @Nullable Map<String,String> customProperties,
+        @CustomType.Parameter("developerPortalUrl") String developerPortalUrl,
+        @CustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
+        @CustomType.Parameter("enableClientCertificate") @Nullable Boolean enableClientCertificate,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
+        @CustomType.Parameter("gatewayUrl") String gatewayUrl,
+        @CustomType.Parameter("hostnameConfigurations") @Nullable List<HostnameConfigurationResponse> hostnameConfigurations,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ApiManagementServiceIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managementApiUrl") String managementApiUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationSenderEmail") @Nullable String notificationSenderEmail,
+        @CustomType.Parameter("portalUrl") String portalUrl,
+        @CustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
+        @CustomType.Parameter("publisherEmail") String publisherEmail,
+        @CustomType.Parameter("publisherName") String publisherName,
+        @CustomType.Parameter("restore") @Nullable Boolean restore,
+        @CustomType.Parameter("scmUrl") String scmUrl,
+        @CustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetProvisioningState") String targetProvisioningState,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @CustomType.Parameter("virtualNetworkType") @Nullable String virtualNetworkType,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalLocations = additionalLocations;
         this.apiVersionConstraint = apiVersionConstraint;
         this.certificates = certificates;

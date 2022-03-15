@@ -43,7 +43,7 @@ import io.pulumi.azurenative.datafactory.outputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +51,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UntilActivityResponse {
     /**
      * List of activities to execute.
@@ -95,16 +95,16 @@ public final class UntilActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UntilActivityResponse(
-        @OutputCustomType.Parameter("activities") List<Object> activities,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expression") ExpressionResponse expression,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("timeout") @Nullable Object timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("activities") List<Object> activities,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expression") ExpressionResponse expression,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("timeout") @Nullable Object timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.activities = activities;
         this.dependsOn = dependsOn;
         this.description = description;

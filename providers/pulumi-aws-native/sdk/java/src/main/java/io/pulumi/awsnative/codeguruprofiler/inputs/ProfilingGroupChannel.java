@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codeguruprofiler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class ProfilingGroupChannel extends io.pulumi.resources.InvokeArgs 
 
     public static final ProfilingGroupChannel Empty = new ProfilingGroupChannel();
 
-    @InputImport(name="channelId")
+    @Import(name="channelId")
       private final @Nullable String channelId;
 
     public Optional<String> getChannelId() {
         return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
     }
 
-    @InputImport(name="channelUri", required=true)
+    @Import(name="channelUri", required=true)
       private final String channelUri;
 
     public String getChannelUri() {

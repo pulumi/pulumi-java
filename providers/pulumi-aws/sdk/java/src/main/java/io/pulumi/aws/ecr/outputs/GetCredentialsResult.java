@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCredentialsResult {
     private final String authorizationToken;
     private final String expiresAt;
@@ -19,13 +19,13 @@ public final class GetCredentialsResult {
     private final String proxyEndpoint;
     private final String registryId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCredentialsResult(
-        @OutputCustomType.Parameter("authorizationToken") String authorizationToken,
-        @OutputCustomType.Parameter("expiresAt") String expiresAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("proxyEndpoint") String proxyEndpoint,
-        @OutputCustomType.Parameter("registryId") String registryId) {
+        @CustomType.Parameter("authorizationToken") String authorizationToken,
+        @CustomType.Parameter("expiresAt") String expiresAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("proxyEndpoint") String proxyEndpoint,
+        @CustomType.Parameter("registryId") String registryId) {
         this.authorizationToken = authorizationToken;
         this.expiresAt = expiresAt;
         this.id = id;

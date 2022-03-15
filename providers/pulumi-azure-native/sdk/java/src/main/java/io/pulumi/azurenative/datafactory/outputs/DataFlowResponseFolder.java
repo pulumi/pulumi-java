@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataFlowResponseFolder {
     /**
      * The name of the folder that this data flow is in.
@@ -17,8 +17,8 @@ public final class DataFlowResponseFolder {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private DataFlowResponseFolder(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private DataFlowResponseFolder(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

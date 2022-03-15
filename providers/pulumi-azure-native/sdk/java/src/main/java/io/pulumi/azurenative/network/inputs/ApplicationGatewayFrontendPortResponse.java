@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayFrontendPortResponse extends io.pulumi.reso
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayFrontendPortResponse extends io.pulumi.reso
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class ApplicationGatewayFrontendPortResponse extends io.pulumi.reso
      * Name of the frontend port that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class ApplicationGatewayFrontendPortResponse extends io.pulumi.reso
      * Frontend port.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -67,7 +67,7 @@ public final class ApplicationGatewayFrontendPortResponse extends io.pulumi.reso
      * The provisioning state of the frontend port resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -78,7 +78,7 @@ public final class ApplicationGatewayFrontendPortResponse extends io.pulumi.reso
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

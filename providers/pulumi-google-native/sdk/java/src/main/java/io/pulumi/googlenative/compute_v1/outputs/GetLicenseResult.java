@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.LicenseResourceRequirementsResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLicenseResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -48,16 +48,16 @@ public final class GetLicenseResult {
      */
     private final Boolean transferable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLicenseResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("licenseCode") String licenseCode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceRequirements") LicenseResourceRequirementsResponse resourceRequirements,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("transferable") Boolean transferable) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("licenseCode") String licenseCode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceRequirements") LicenseResourceRequirementsResponse resourceRequirements,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("transferable") Boolean transferable) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

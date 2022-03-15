@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoArgs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * Azure Active Directory Application the DMS instance will use to connect to the target instance of Azure SQL Database Managed Instance and the Azure Storage Account
      * 
      */
-    @InputImport(name="azureApp", required=true)
+    @Import(name="azureApp", required=true)
       private final Output<AzureActiveDirectoryAppArgs> azureApp;
 
     public Output<AzureActiveDirectoryAppArgs> getAzureApp() {
@@ -39,7 +39,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * Backup file share information for all selected databases.
      * 
      */
-    @InputImport(name="backupFileShare")
+    @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
     public Output<FileShareArgs> getBackupFileShare() {
@@ -50,7 +50,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
     public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
@@ -61,7 +61,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * Connection information for source SQL Server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
@@ -72,7 +72,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * Fully qualified resourceId of storage
      * 
      */
-    @InputImport(name="storageResourceId", required=true)
+    @Import(name="storageResourceId", required=true)
       private final Output<String> storageResourceId;
 
     public Output<String> getStorageResourceId() {
@@ -83,7 +83,7 @@ public final class ValidateMigrationInputSqlServerSqlMISyncTaskInputArgs extends
      * Connection information for Azure SQL Database Managed Instance
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {

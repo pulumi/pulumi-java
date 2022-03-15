@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigQueryModelTrainingResponse {
     /**
      * [Output-only, Beta] Index of current ML training iteration. Updated during create model query job to show job progress.
@@ -21,10 +21,10 @@ public final class BigQueryModelTrainingResponse {
      */
     private final String expectedTotalIterations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BigQueryModelTrainingResponse(
-        @OutputCustomType.Parameter("currentIteration") Integer currentIteration,
-        @OutputCustomType.Parameter("expectedTotalIterations") String expectedTotalIterations) {
+        @CustomType.Parameter("currentIteration") Integer currentIteration,
+        @CustomType.Parameter("expectedTotalIterations") String expectedTotalIterations) {
         this.currentIteration = currentIteration;
         this.expectedTotalIterations = expectedTotalIterations;
     }

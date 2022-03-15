@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2AutomatedAgentConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse;
@@ -13,7 +13,7 @@ import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2Speec
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConversationProfileResult {
     /**
      * Configuration for an automated agent to use with this profile.
@@ -86,22 +86,22 @@ public final class GetConversationProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConversationProfileResult(
-        @OutputCustomType.Parameter("automatedAgentConfig") GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("humanAgentAssistantConfig") GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig,
-        @OutputCustomType.Parameter("humanAgentHandoffConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("loggingConfig") GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("newMessageEventNotificationConfig") GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig,
-        @OutputCustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig,
-        @OutputCustomType.Parameter("securitySettings") String securitySettings,
-        @OutputCustomType.Parameter("sttConfig") GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("automatedAgentConfig") GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("humanAgentAssistantConfig") GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig,
+        @CustomType.Parameter("humanAgentHandoffConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("loggingConfig") GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("newMessageEventNotificationConfig") GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig,
+        @CustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig,
+        @CustomType.Parameter("securitySettings") String securitySettings,
+        @CustomType.Parameter("sttConfig") GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.automatedAgentConfig = automatedAgentConfig;
         this.createTime = createTime;
         this.displayName = displayName;

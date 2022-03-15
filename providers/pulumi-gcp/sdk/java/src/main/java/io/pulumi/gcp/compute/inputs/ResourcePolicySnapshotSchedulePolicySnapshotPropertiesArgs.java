@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * Whether to perform a 'guest aware' snapshot.
      * 
      */
-    @InputImport(name="guestFlush")
+    @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
     public Output<Boolean> getGuestFlush() {
@@ -31,7 +31,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * A set of key-value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -43,7 +43,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * (regional or multi-regional)
      * 
      */
-    @InputImport(name="storageLocations")
+    @Import(name="storageLocations")
       private final @Nullable Output<String> storageLocations;
 
     public Output<String> getStorageLocations() {

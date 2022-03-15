@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesResponseBounds;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration e
      * Minimum and maximum number of scale units to deploy.
      * 
      */
-    @InputImport(name="bounds")
+    @Import(name="bounds")
       private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
     public Optional<ExpressRouteGatewayPropertiesResponseBounds> getBounds() {

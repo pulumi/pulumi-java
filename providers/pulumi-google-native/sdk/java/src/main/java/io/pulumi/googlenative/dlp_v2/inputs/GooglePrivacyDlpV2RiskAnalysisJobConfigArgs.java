@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrivacyMetricArgs;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
      * Actions to execute at the completion of the job. Are executed in the order provided.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
     public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
      * Privacy metric to compute.
      * 
      */
-    @InputImport(name="privacyMetric")
+    @Import(name="privacyMetric")
       private final @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
 
     public Output<GooglePrivacyDlpV2PrivacyMetricArgs> getPrivacyMetric() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
      * Input dataset to compute metrics over.
      * 
      */
-    @InputImport(name="sourceTable")
+    @Import(name="sourceTable")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
 
     public Output<GooglePrivacyDlpV2BigQueryTableArgs> getSourceTable() {

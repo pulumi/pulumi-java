@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthProviderResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthenticationRuleResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthenticationResponse {
     /**
      * Defines a set of authentication providers that a service supports.
@@ -22,10 +22,10 @@ public final class AuthenticationResponse {
      */
     private final List<AuthenticationRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthenticationResponse(
-        @OutputCustomType.Parameter("providers") List<AuthProviderResponse> providers,
-        @OutputCustomType.Parameter("rules") List<AuthenticationRuleResponse> rules) {
+        @CustomType.Parameter("providers") List<AuthProviderResponse> providers,
+        @CustomType.Parameter("rules") List<AuthenticationRuleResponse> rules) {
         this.providers = providers;
         this.rules = rules;
     }

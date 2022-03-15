@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.msk.ConfigurationArgs;
 import io.pulumi.aws.msk.inputs.ConfigurationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Description of the configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * List of Apache Kafka versions which can use this configuration.
      * 
      */
-    @OutputExport(name="kafkaVersions", type=List.class, parameters={String.class})
+    @Export(name="kafkaVersions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> kafkaVersions;
 
     /**
@@ -76,7 +76,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Latest revision of the configuration.
      * 
      */
-    @OutputExport(name="latestRevision", type=Integer.class, parameters={})
+    @Export(name="latestRevision", type=Integer.class, parameters={})
     private Output<Integer> latestRevision;
 
     /**
@@ -90,7 +90,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Name of the configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
      * 
      */
-    @OutputExport(name="serverProperties", type=String.class, parameters={})
+    @Export(name="serverProperties", type=String.class, parameters={})
     private Output<String> serverProperties;
 
     /**

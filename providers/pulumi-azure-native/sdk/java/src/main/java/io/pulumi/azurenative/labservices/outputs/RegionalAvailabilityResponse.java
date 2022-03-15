@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.SizeAvailabilityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionalAvailabilityResponse {
     /**
      * Corresponding region
@@ -24,10 +24,10 @@ public final class RegionalAvailabilityResponse {
      */
     private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionalAvailabilityResponse(
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("sizeAvailabilities") @Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("sizeAvailabilities") @Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
         this.region = region;
         this.sizeAvailabilities = sizeAvailabilities;
     }

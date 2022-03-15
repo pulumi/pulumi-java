@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -43,7 +43,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -55,7 +55,7 @@ public final class CxEnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="versionConfigs", required=true)
+    @Import(name="versionConfigs", required=true)
       private final Output<List<CxEnvironmentVersionConfigArgs>> versionConfigs;
 
     public Output<List<CxEnvironmentVersionConfigArgs>> getVersionConfigs() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolNodeConfigShieldedInstanceConfig {
     /**
      * Defines if the instance has integrity monitoring enabled.
@@ -22,10 +22,10 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfig {
      */
     private final @Nullable Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodePoolNodeConfigShieldedInstanceConfig(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot) {
+        @CustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }

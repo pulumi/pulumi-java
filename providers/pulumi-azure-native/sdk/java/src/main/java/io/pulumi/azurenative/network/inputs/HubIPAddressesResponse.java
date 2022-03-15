@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.HubPublicIPAddressesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HubIPAddressesResponse extends io.pulumi.resources.InvokeArgs
      * Private IP Address associated with azure firewall.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -34,7 +34,7 @@ public final class HubIPAddressesResponse extends io.pulumi.resources.InvokeArgs
      * Public IP addresses associated with azure firewall.
      * 
      */
-    @InputImport(name="publicIPs")
+    @Import(name="publicIPs")
       private final @Nullable HubPublicIPAddressesResponse publicIPs;
 
     public Optional<HubPublicIPAddressesResponse> getPublicIPs() {

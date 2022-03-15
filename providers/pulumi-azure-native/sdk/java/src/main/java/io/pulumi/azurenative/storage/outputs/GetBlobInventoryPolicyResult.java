@@ -5,11 +5,11 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicySchemaResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBlobInventoryPolicyResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -42,14 +42,14 @@ public final class GetBlobInventoryPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBlobInventoryPolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") BlobInventoryPolicySchemaResponse policy,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") BlobInventoryPolicySchemaResponse policy,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.name = name;

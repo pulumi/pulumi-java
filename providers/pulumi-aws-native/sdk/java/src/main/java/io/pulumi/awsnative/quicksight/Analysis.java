@@ -13,7 +13,7 @@ import io.pulumi.awsnative.quicksight.outputs.AnalysisSheet;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisSourceEntity;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:quicksight:Analysis")
 public class Analysis extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="analysisId", type=String.class, parameters={})
+    @Export(name="analysisId", type=String.class, parameters={})
     private Output<String> analysisId;
 
     public Output<String> getAnalysisId() {
@@ -35,7 +35,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -45,7 +45,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -55,7 +55,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>The time that the analysis was created.</p>
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -69,7 +69,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>The ARNs of the datasets of the analysis.</p>
      * 
      */
-    @OutputExport(name="dataSetArns", type=List.class, parameters={String.class})
+    @Export(name="dataSetArns", type=List.class, parameters={String.class})
     private Output<List<String>> dataSetArns;
 
     /**
@@ -83,7 +83,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>Errors associated with the analysis.</p>
      * 
      */
-    @OutputExport(name="errors", type=List.class, parameters={AnalysisError.class})
+    @Export(name="errors", type=List.class, parameters={AnalysisError.class})
     private Output</* @Nullable */ List<AnalysisError>> errors;
 
     /**
@@ -97,7 +97,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>The time that the analysis was last updated.</p>
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -111,7 +111,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>The descriptive name of the analysis.</p>
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -121,7 +121,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="parameters", type=AnalysisParameters.class, parameters={})
+    @Export(name="parameters", type=AnalysisParameters.class, parameters={})
     private Output</* @Nullable */ AnalysisParameters> parameters;
 
     public Output</* @Nullable */ AnalysisParameters> getParameters() {
@@ -136,7 +136,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      *         <p>To specify no permissions, omit <code>Permissions</code>.</p>
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={AnalysisResourcePermission.class})
+    @Export(name="permissions", type=List.class, parameters={AnalysisResourcePermission.class})
     private Output</* @Nullable */ List<AnalysisResourcePermission>> permissions;
 
     /**
@@ -155,7 +155,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>A list of the associated sheets with the unique identifier and name of each sheet.</p>
      * 
      */
-    @OutputExport(name="sheets", type=List.class, parameters={AnalysisSheet.class})
+    @Export(name="sheets", type=List.class, parameters={AnalysisSheet.class})
     private Output<List<AnalysisSheet>> sheets;
 
     /**
@@ -165,13 +165,13 @@ public class Analysis extends io.pulumi.resources.CustomResource {
     public Output<List<AnalysisSheet>> getSheets() {
         return this.sheets;
     }
-    @OutputExport(name="sourceEntity", type=AnalysisSourceEntity.class, parameters={})
+    @Export(name="sourceEntity", type=AnalysisSourceEntity.class, parameters={})
     private Output<AnalysisSourceEntity> sourceEntity;
 
     public Output<AnalysisSourceEntity> getSourceEntity() {
         return this.sourceEntity;
     }
-    @OutputExport(name="status", type=AnalysisResourceStatus.class, parameters={})
+    @Export(name="status", type=AnalysisResourceStatus.class, parameters={})
     private Output<AnalysisResourceStatus> status;
 
     public Output<AnalysisResourceStatus> getStatus() {
@@ -182,7 +182,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      *             analysis.</p>
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AnalysisTag.class})
+    @Export(name="tags", type=List.class, parameters={AnalysisTag.class})
     private Output</* @Nullable */ List<AnalysisTag>> tags;
 
     /**
@@ -197,7 +197,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * <p>The ARN of the theme of the analysis.</p>
      * 
      */
-    @OutputExport(name="themeArn", type=String.class, parameters={})
+    @Export(name="themeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> themeArn;
 
     /**

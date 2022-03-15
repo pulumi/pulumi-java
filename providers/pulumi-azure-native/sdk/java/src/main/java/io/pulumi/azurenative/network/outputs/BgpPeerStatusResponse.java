@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BgpPeerStatusResponse {
     /**
      * The autonomous system number of the remote BGP peer.
@@ -51,16 +51,16 @@ public final class BgpPeerStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BgpPeerStatusResponse(
-        @OutputCustomType.Parameter("asn") Double asn,
-        @OutputCustomType.Parameter("connectedDuration") String connectedDuration,
-        @OutputCustomType.Parameter("localAddress") String localAddress,
-        @OutputCustomType.Parameter("messagesReceived") Double messagesReceived,
-        @OutputCustomType.Parameter("messagesSent") Double messagesSent,
-        @OutputCustomType.Parameter("neighbor") String neighbor,
-        @OutputCustomType.Parameter("routesReceived") Double routesReceived,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("asn") Double asn,
+        @CustomType.Parameter("connectedDuration") String connectedDuration,
+        @CustomType.Parameter("localAddress") String localAddress,
+        @CustomType.Parameter("messagesReceived") Double messagesReceived,
+        @CustomType.Parameter("messagesSent") Double messagesSent,
+        @CustomType.Parameter("neighbor") String neighbor,
+        @CustomType.Parameter("routesReceived") Double routesReceived,
+        @CustomType.Parameter("state") String state) {
         this.asn = asn;
         this.connectedDuration = connectedDuration;
         this.localAddress = localAddress;

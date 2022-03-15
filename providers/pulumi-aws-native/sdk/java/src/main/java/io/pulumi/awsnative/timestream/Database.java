@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.timestream.DatabaseArgs;
 import io.pulumi.awsnative.timestream.outputs.DatabaseTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:timestream:Database")
 public class Database extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
@@ -43,7 +43,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -57,7 +57,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DatabaseTag.class})
+    @Export(name="tags", type=List.class, parameters={DatabaseTag.class})
     private Output</* @Nullable */ List<DatabaseTag>> tags;
 
     /**

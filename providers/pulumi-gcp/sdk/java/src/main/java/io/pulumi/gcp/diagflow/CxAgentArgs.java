@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxAgentSpeechToTextSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
      * 
      */
-    @InputImport(name="avatarUri")
+    @Import(name="avatarUri")
       private final @Nullable Output<String> avatarUri;
 
     public Output<String> getAvatarUri() {
@@ -33,7 +33,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * for a list of the currently supported language codes. This field cannot be updated after creation.
      * 
      */
-    @InputImport(name="defaultLanguageCode", required=true)
+    @Import(name="defaultLanguageCode", required=true)
       private final Output<String> defaultLanguageCode;
 
     public Output<String> getDefaultLanguageCode() {
@@ -44,7 +44,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the agent, unique within the location.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -66,7 +66,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if automatic spell correction is enabled in detect intent requests.
      * 
      */
-    @InputImport(name="enableSpellCorrection")
+    @Import(name="enableSpellCorrection")
       private final @Nullable Output<Boolean> enableSpellCorrection;
 
     public Output<Boolean> getEnableSpellCorrection() {
@@ -77,7 +77,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether this agent should log conversation queries.
      * 
      */
-    @InputImport(name="enableStackdriverLogging")
+    @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
     public Output<Boolean> getEnableStackdriverLogging() {
@@ -91,7 +91,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Another options is to use global location so you don't need to manually configure location settings.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -103,7 +103,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -114,7 +114,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
      * 
      */
-    @InputImport(name="securitySettings")
+    @Import(name="securitySettings")
       private final @Nullable Output<String> securitySettings;
 
     public Output<String> getSecuritySettings() {
@@ -126,7 +126,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="speechToTextSettings")
+    @Import(name="speechToTextSettings")
       private final @Nullable Output<CxAgentSpeechToTextSettingsArgs> speechToTextSettings;
 
     public Output<CxAgentSpeechToTextSettingsArgs> getSpeechToTextSettings() {
@@ -137,7 +137,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * The list of all languages supported by this agent (except for the default_language_code).
      * 
      */
-    @InputImport(name="supportedLanguageCodes")
+    @Import(name="supportedLanguageCodes")
       private final @Nullable Output<List<String>> supportedLanguageCodes;
 
     public Output<List<String>> getSupportedLanguageCodes() {
@@ -149,7 +149,7 @@ public final class CxAgentArgs extends io.pulumi.resources.ResourceArgs {
      * Europe/Paris.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {

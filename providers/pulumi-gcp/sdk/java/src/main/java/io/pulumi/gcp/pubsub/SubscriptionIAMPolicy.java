@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMPolicyArgs;
@@ -56,7 +56,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the subscription's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -71,7 +71,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -87,7 +87,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -102,7 +102,7 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
      * The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    @OutputExport(name="subscription", type=String.class, parameters={})
+    @Export(name="subscription", type=String.class, parameters={})
     private Output<String> subscription;
 
     /**

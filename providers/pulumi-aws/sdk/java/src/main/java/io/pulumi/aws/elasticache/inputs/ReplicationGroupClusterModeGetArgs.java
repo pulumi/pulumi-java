@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ReplicationGroupClusterModeGetArgs extends io.pulumi.resource
      * Number of node groups (shards) for this Redis replication group. Changing this number will trigger an online resizing operation before other settings modifications. Required unless `global_replication_group_id` is set.
      * 
      */
-    @InputImport(name="numNodeGroups")
+    @Import(name="numNodeGroups")
       private final @Nullable Output<Integer> numNodeGroups;
 
     public Output<Integer> getNumNodeGroups() {
@@ -29,7 +29,7 @@ public final class ReplicationGroupClusterModeGetArgs extends io.pulumi.resource
      * Number of replica nodes in each node group. Valid values are 0 to 5. Changing this number will trigger an online resizing operation before other settings modifications.
      * 
      */
-    @InputImport(name="replicasPerNodeGroup", required=true)
+    @Import(name="replicasPerNodeGroup", required=true)
       private final Output<Integer> replicasPerNodeGroup;
 
     public Output<Integer> getReplicasPerNodeGroup() {

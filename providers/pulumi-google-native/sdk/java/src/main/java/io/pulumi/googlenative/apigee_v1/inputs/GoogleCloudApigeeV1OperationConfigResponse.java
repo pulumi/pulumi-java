@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QuotaResponse;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
      * Name of the API proxy or remote service with which the resources, methods, and quota are associated.
      * 
      */
-    @InputImport(name="apiSource", required=true)
+    @Import(name="apiSource", required=true)
       private final String apiSource;
 
     public String getApiSource() {
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
      * Custom attributes associated with the operation.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
     public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
      * List of resource/method pairs for the API proxy or remote service to which quota will applied. **Note**: Currently, you can specify only a single resource/method pair. The call will fail if more than one resource/method pair is provided.
      * 
      */
-    @InputImport(name="operations", required=true)
+    @Import(name="operations", required=true)
       private final List<GoogleCloudApigeeV1OperationResponse> operations;
 
     public List<GoogleCloudApigeeV1OperationResponse> getOperations() {
@@ -57,7 +57,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends io.pulumi.
      * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
      * 
      */
-    @InputImport(name="quota", required=true)
+    @Import(name="quota", required=true)
       private final GoogleCloudApigeeV1QuotaResponse quota;
 
     public GoogleCloudApigeeV1QuotaResponse getQuota() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.RestorePointCollectionSourcePropert
 import io.pulumi.azurenative.compute.outputs.RestorePointResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -51,7 +51,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * The provisioning state of the restore point collection.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -79,7 +79,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * The unique id of the restore point collection.
      * 
      */
-    @OutputExport(name="restorePointCollectionId", type=String.class, parameters={})
+    @Export(name="restorePointCollectionId", type=String.class, parameters={})
     private Output<String> restorePointCollectionId;
 
     /**
@@ -93,7 +93,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * A list containing all restore points created under this restore point collection.
      * 
      */
-    @OutputExport(name="restorePoints", type=List.class, parameters={RestorePointResponse.class})
+    @Export(name="restorePoints", type=List.class, parameters={RestorePointResponse.class})
     private Output<List<RestorePointResponse>> restorePoints;
 
     /**
@@ -107,7 +107,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * The properties of the source resource that this restore point collection is created from.
      * 
      */
-    @OutputExport(name="source", type=RestorePointCollectionSourcePropertiesResponse.class, parameters={})
+    @Export(name="source", type=RestorePointCollectionSourcePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> source;
 
     /**
@@ -121,7 +121,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

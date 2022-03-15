@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetFeedbackMessageArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetFeedbackMessageArgs Empty = new GetFeedbackMessageArgs();
 
-    @InputImport(name="annotatedDatasetId", required=true)
+    @Import(name="annotatedDatasetId", required=true)
       private final String annotatedDatasetId;
 
     public String getAnnotatedDatasetId() {
         return this.annotatedDatasetId;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="feedbackMessageId", required=true)
+    @Import(name="feedbackMessageId", required=true)
       private final String feedbackMessageId;
 
     public String getFeedbackMessageId() {
         return this.feedbackMessageId;
     }
 
-    @InputImport(name="feedbackThreadId", required=true)
+    @Import(name="feedbackThreadId", required=true)
       private final String feedbackThreadId;
 
     public String getFeedbackThreadId() {
         return this.feedbackThreadId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

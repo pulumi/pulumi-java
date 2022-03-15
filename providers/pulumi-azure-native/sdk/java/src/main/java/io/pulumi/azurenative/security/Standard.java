@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.outputs.StandardComponentPropertiesRespons
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * category of the standard provided
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output</* @Nullable */ String> category;
 
     /**
@@ -51,7 +51,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
      * 
      */
-    @OutputExport(name="components", type=List.class, parameters={StandardComponentPropertiesResponse.class})
+    @Export(name="components", type=List.class, parameters={StandardComponentPropertiesResponse.class})
     private Output</* @Nullable */ List<StandardComponentPropertiesResponse>> components;
 
     /**
@@ -65,7 +65,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * description of the standard
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * display name of the standard, equivalent to the standardId
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -93,7 +93,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -107,7 +107,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * Kind of the resource
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -121,7 +121,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * Location where the resource is stored
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -135,7 +135,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * standard type (Custom or BuiltIn only currently)
      * 
      */
-    @OutputExport(name="standardType", type=String.class, parameters={})
+    @Export(name="standardType", type=String.class, parameters={})
     private Output<String> standardType;
 
     /**
@@ -163,7 +163,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -177,7 +177,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -191,7 +191,7 @@ public class Standard extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

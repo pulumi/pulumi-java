@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MetricRuleArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.QuotaLimitArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
      * List of `QuotaLimit` definitions for the service.
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<List<QuotaLimitArgs>> limits;
 
     public Output<List<QuotaLimitArgs>> getLimits() {
@@ -35,7 +35,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
      * List of `MetricRule` definitions, each one mapping a selected method to one or more metrics.
      * 
      */
-    @InputImport(name="metricRules")
+    @Import(name="metricRules")
       private final @Nullable Output<List<MetricRuleArgs>> metricRules;
 
     public Output<List<MetricRuleArgs>> getMetricRules() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebPubSubSharedPrivateLinkResourceResult {
     /**
      * The group id from the provider of resource the shared private link resource is for
@@ -58,17 +58,17 @@ public final class GetWebPubSubSharedPrivateLinkResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebPubSubSharedPrivateLinkResourceResult(
-        @OutputCustomType.Parameter("groupId") String groupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateLinkResourceId") String privateLinkResourceId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("groupId") String groupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateLinkResourceId") String privateLinkResourceId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.assuredworkloads_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.assuredworkloads_v1.WorkloadArgs;
@@ -28,7 +28,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
      * 
      */
-    @OutputExport(name="billingAccount", type=String.class, parameters={})
+    @Export(name="billingAccount", type=String.class, parameters={})
     private Output<String> billingAccount;
 
     /**
@@ -42,7 +42,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Immutable. Compliance Regime associated with this workload.
      * 
      */
-    @OutputExport(name="complianceRegime", type=String.class, parameters={})
+    @Export(name="complianceRegime", type=String.class, parameters={})
     private Output<String> complianceRegime;
 
     /**
@@ -56,7 +56,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Immutable. The Workload creation timestamp.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -70,7 +70,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -84,7 +84,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
      * 
      */
-    @OutputExport(name="enableSovereignControls", type=Boolean.class, parameters={})
+    @Export(name="enableSovereignControls", type=Boolean.class, parameters={})
     private Output<Boolean> enableSovereignControls;
 
     /**
@@ -98,7 +98,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -112,7 +112,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Represents the KAJ enrollment state of the given workload.
      * 
      */
-    @OutputExport(name="kajEnrollmentState", type=String.class, parameters={})
+    @Export(name="kajEnrollmentState", type=String.class, parameters={})
     private Output<String> kajEnrollmentState;
 
     /**
@@ -126,7 +126,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
      * 
      */
-    @OutputExport(name="kmsSettings", type=GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse.class, parameters={})
+    @Export(name="kmsSettings", type=GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse.class, parameters={})
     private Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse> kmsSettings;
 
     /**
@@ -140,7 +140,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Optional. Labels applied to the workload.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -154,7 +154,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -168,7 +168,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
      * 
      */
-    @OutputExport(name="provisionedResourcesParent", type=String.class, parameters={})
+    @Export(name="provisionedResourcesParent", type=String.class, parameters={})
     private Output<String> provisionedResourcesParent;
 
     /**
@@ -182,7 +182,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
      * 
      */
-    @OutputExport(name="resourceSettings", type=List.class, parameters={GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse.class})
+    @Export(name="resourceSettings", type=List.class, parameters={GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse.class})
     private Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse>> resourceSettings;
 
     /**
@@ -196,7 +196,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * The resources associated with this workload. These resources will be created when creating the workload. If any of the projects already exist, the workload creation will fail. Always read only.
      * 
      */
-    @OutputExport(name="resources", type=List.class, parameters={GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse.class})
+    @Export(name="resources", type=List.class, parameters={GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse.class})
     private Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse>> resources;
 
     /**
@@ -210,7 +210,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * Represents the SAA enrollment response of the given workload. SAA enrollment response is queried during GetWorkload call. In failure cases, user friendly error message is shown in SAA details page.
      * 
      */
-    @OutputExport(name="saaEnrollmentResponse", type=GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse.class, parameters={})
+    @Export(name="saaEnrollmentResponse", type=GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse.class, parameters={})
     private Output<GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse> saaEnrollmentResponse;
 
     /**

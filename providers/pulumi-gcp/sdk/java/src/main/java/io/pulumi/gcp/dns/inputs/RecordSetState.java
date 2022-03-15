@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * reside.
      * 
      */
-    @InputImport(name="managedZone")
+    @Import(name="managedZone")
       private final @Nullable Output<String> managedZone;
 
     public Output<String> getManagedZone() {
@@ -32,7 +32,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * The DNS name this record set will apply to.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -58,7 +58,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * string (e.g. "first255characters\"\"morecharacters").
      * 
      */
-    @InputImport(name="rrdatas")
+    @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
     public Output<List<String>> getRrdatas() {
@@ -69,7 +69,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * The time-to-live of this record set (seconds).
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
@@ -80,7 +80,7 @@ public final class RecordSetState extends io.pulumi.resources.ResourceArgs {
      * The DNS record set type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

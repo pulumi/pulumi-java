@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StreamingImageEncryptionConfigurationKeyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamingImageEncryptionConfiguration {
     /**
      * <p>The ARN for a KMS key that is used to encrypt studio data.</p>
@@ -19,10 +19,10 @@ public final class StreamingImageEncryptionConfiguration {
     private final @Nullable String keyArn;
     private final StreamingImageEncryptionConfigurationKeyType keyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingImageEncryptionConfiguration(
-        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
-        @OutputCustomType.Parameter("keyType") StreamingImageEncryptionConfigurationKeyType keyType) {
+        @CustomType.Parameter("keyArn") @Nullable String keyArn,
+        @CustomType.Parameter("keyType") StreamingImageEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
         this.keyType = keyType;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.TagPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LegalHoldPropertiesResponse extends io.pulumi.resources.Invok
      * The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.
      * 
      */
-    @InputImport(name="hasLegalHold", required=true)
+    @Import(name="hasLegalHold", required=true)
       private final Boolean hasLegalHold;
 
     public Boolean getHasLegalHold() {
@@ -35,7 +35,7 @@ public final class LegalHoldPropertiesResponse extends io.pulumi.resources.Invok
      * The list of LegalHold tags of a blob container.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable List<TagPropertyResponse> tags;
 
     public List<TagPropertyResponse> getTags() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.enums.DoubleEncryptionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
      * Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
      * 
      */
-    @InputImport(name="doubleEncryptionStatus")
+    @Import(name="doubleEncryptionStatus")
       private final @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 
     public Output<Either<String,DoubleEncryptionStatus>> getDoubleEncryptionStatus() {

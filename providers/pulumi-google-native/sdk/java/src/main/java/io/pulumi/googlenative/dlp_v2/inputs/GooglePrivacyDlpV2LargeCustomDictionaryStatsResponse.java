@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
      * Approximate number of distinct phrases in the dictionary.
      * 
      */
-    @InputImport(name="approxNumPhrases", required=true)
+    @Import(name="approxNumPhrases", required=true)
       private final String approxNumPhrases;
 
     public String getApproxNumPhrases() {

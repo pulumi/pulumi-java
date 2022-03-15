@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
      * Required.
      * 
      */
-    @InputImport(name="googleCloudStorage", required=true)
+    @Import(name="googleCloudStorage", required=true)
       private final Output<GoogleCloudStorageArgs> googleCloudStorage;
 
     public Output<GoogleCloudStorageArgs> getGoogleCloudStorage() {
@@ -34,7 +34,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
      * The tool results history that contains the tool results execution that results are written to. If not provided, the service will choose an appropriate value.
      * 
      */
-    @InputImport(name="toolResultsHistory")
+    @Import(name="toolResultsHistory")
       private final @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
     public Output<ToolResultsHistoryArgs> getToolResultsHistory() {

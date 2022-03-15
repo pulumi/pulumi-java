@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceSourceCodeVersionType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceCodeVersion {
     /**
      * Source Code Version Type
@@ -21,10 +21,10 @@ public final class ServiceSourceCodeVersion {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceCodeVersion(
-        @OutputCustomType.Parameter("type") ServiceSourceCodeVersionType type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") ServiceSourceCodeVersionType type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

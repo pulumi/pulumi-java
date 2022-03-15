@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.inputs.ImageStorageProfileArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location of the Image.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -35,7 +35,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
      */
-    @InputImport(name="hyperVGeneration")
+    @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration;
 
     public Output<Either<String,HyperVGenerationTypes>> getHyperVGeneration() {
@@ -46,7 +46,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the image.
      * 
      */
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -57,7 +57,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -79,7 +79,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * The source virtual machine from which Image is created.
      * 
      */
-    @InputImport(name="sourceVirtualMachine")
+    @Import(name="sourceVirtualMachine")
       private final @Nullable Output<SubResourceArgs> sourceVirtualMachine;
 
     public Output<SubResourceArgs> getSourceVirtualMachine() {
@@ -90,7 +90,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage settings for the virtual machine disks.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<ImageStorageProfileArgs> storageProfile;
 
     public Output<ImageStorageProfileArgs> getStorageProfile() {
@@ -101,7 +101,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

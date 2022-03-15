@@ -7,7 +7,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.MigrationRequestPrope
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationGroupResult {
     /**
      * Resource Type of ApplicationGroup.
@@ -101,27 +101,27 @@ public final class GetApplicationGroupResult {
      */
     private final String workspaceArmPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationGroupResult(
-        @OutputCustomType.Parameter("applicationGroupType") String applicationGroupType,
-        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("hostPoolArmPath") String hostPoolArmPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("migrationRequest") @Nullable MigrationRequestPropertiesResponse migrationRequest,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workspaceArmPath") String workspaceArmPath) {
+        @CustomType.Parameter("applicationGroupType") String applicationGroupType,
+        @CustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("hostPoolArmPath") String hostPoolArmPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("migrationRequest") @Nullable MigrationRequestPropertiesResponse migrationRequest,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @CustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workspaceArmPath") String workspaceArmPath) {
         this.applicationGroupType = applicationGroupType;
         this.cloudPcResource = cloudPcResource;
         this.description = description;

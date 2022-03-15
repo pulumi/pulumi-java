@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.features.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
      * The feature name.
      * 
      */
-    @InputImport(name="featureName", required=true)
+    @Import(name="featureName", required=true)
       private final String featureName;
 
     public String getFeatureName() {
@@ -27,7 +27,7 @@ public final class GetSubscriptionFeatureRegistrationArgs extends io.pulumi.reso
      * The provider namespace.
      * 
      */
-    @InputImport(name="providerNamespace", required=true)
+    @Import(name="providerNamespace", required=true)
       private final String providerNamespace;
 
     public String getProviderNamespace() {

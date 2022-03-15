@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPermissionsDatabase extends io.pulumi.resources.InvokeArgs
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final String catalogId;
 
     public String getCatalogId() {
@@ -27,7 +27,7 @@ public final class GetPermissionsDatabase extends io.pulumi.resources.InvokeArgs
      * Name of the table resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

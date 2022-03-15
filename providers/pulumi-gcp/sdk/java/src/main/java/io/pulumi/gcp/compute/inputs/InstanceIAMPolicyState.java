@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -29,7 +29,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -41,7 +41,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -53,7 +53,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -66,7 +66,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * zone is specified, it is taken from the provider configuration.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * purposes.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * belong to this group.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {
@@ -45,7 +45,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * groups that are clusters.
      * 
      */
-    @InputImport(name="isCluster")
+    @Import(name="isCluster")
       private final @Nullable Output<Boolean> isCluster;
 
     public Output<Boolean> getIsCluster() {
@@ -58,7 +58,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * groups with no parent, parentName is the empty string, "".
      * 
      */
-    @InputImport(name="parentName")
+    @Import(name="parentName")
       private final @Nullable Output<String> parentName;
 
     public Output<String> getParentName() {
@@ -70,7 +70,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

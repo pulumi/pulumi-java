@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFunctionReceiverResponse {
     /**
      * The azure resource id of the function app.
@@ -38,13 +38,13 @@ public final class AzureFunctionReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFunctionReceiverResponse(
-        @OutputCustomType.Parameter("functionAppResourceId") String functionAppResourceId,
-        @OutputCustomType.Parameter("functionName") String functionName,
-        @OutputCustomType.Parameter("httpTriggerUrl") String httpTriggerUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
+        @CustomType.Parameter("functionAppResourceId") String functionAppResourceId,
+        @CustomType.Parameter("functionName") String functionName,
+        @CustomType.Parameter("httpTriggerUrl") String httpTriggerUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.functionAppResourceId = functionAppResourceId;
         this.functionName = functionName;
         this.httpTriggerUrl = httpTriggerUrl;

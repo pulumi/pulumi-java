@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SnowflakeImportCopyCommandResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -35,7 +35,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * Snowflake import settings.
      * 
      */
-    @InputImport(name="importSettings")
+    @Import(name="importSettings")
       private final @Nullable SnowflakeImportCopyCommandResponse importSettings;
 
     public Optional<SnowflakeImportCopyCommandResponse> getImportSettings() {
@@ -46,7 +46,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -57,7 +57,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * SQL pre-copy script. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="preCopyScript")
+    @Import(name="preCopyScript")
       private final @Nullable Object preCopyScript;
 
     public Optional<Object> getPreCopyScript() {
@@ -68,7 +68,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sinkRetryCount")
+    @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
@@ -79,7 +79,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sinkRetryWait")
+    @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
@@ -91,7 +91,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * Expected value is 'SnowflakeSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -102,7 +102,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="writeBatchSize")
+    @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
@@ -113,7 +113,7 @@ public final class SnowflakeSinkResponse extends io.pulumi.resources.InvokeArgs 
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="writeBatchTimeout")
+    @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {

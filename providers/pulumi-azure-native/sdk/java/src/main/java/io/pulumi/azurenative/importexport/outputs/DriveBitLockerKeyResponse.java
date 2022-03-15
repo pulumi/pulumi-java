@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DriveBitLockerKeyResponse {
     /**
      * BitLocker recovery key or password
@@ -22,10 +22,10 @@ public final class DriveBitLockerKeyResponse {
      */
     private final @Nullable String driveId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DriveBitLockerKeyResponse(
-        @OutputCustomType.Parameter("bitLockerKey") @Nullable String bitLockerKey,
-        @OutputCustomType.Parameter("driveId") @Nullable String driveId) {
+        @CustomType.Parameter("bitLockerKey") @Nullable String bitLockerKey,
+        @CustomType.Parameter("driveId") @Nullable String driveId) {
         this.bitLockerKey = bitLockerKey;
         this.driveId = driveId;
     }

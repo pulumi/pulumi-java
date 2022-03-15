@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAgentArgs extends io.pulumi.resources.InvokeArgs {
      * The DataSync Agent ARN.
      * 
      */
-    @InputImport(name="agentArn", required=true)
+    @Import(name="agentArn", required=true)
       private final String agentArn;
 
     public String getAgentArn() {

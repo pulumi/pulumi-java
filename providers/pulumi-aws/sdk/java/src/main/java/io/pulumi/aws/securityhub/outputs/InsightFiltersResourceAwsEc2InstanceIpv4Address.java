@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.securityhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
     /**
      * A finding's CIDR value.
@@ -15,8 +15,8 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
      */
     private final String cidr;
 
-    @OutputCustomType.Constructor
-    private InsightFiltersResourceAwsEc2InstanceIpv4Address(@OutputCustomType.Parameter("cidr") String cidr) {
+    @CustomType.Constructor
+    private InsightFiltersResourceAwsEc2InstanceIpv4Address(@CustomType.Parameter("cidr") String cidr) {
         this.cidr = cidr;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * Name of the project scoping this PublicDelegatedSubPrefix.
      * 
      */
-    @InputImport(name="delegateeProject", required=true)
+    @Import(name="delegateeProject", required=true)
       private final String delegateeProject;
 
     public String getDelegateeProject() {
@@ -32,7 +32,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
     public String getIpCidrRange() {
@@ -54,7 +54,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * Whether the sub prefix is delegated to create Address resources in the delegatee project.
      * 
      */
-    @InputImport(name="isAddress", required=true)
+    @Import(name="isAddress", required=true)
       private final Boolean isAddress;
 
     public Boolean getIsAddress() {
@@ -65,7 +65,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * The name of the sub public delegated prefix.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -76,7 +76,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -87,7 +87,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse extends
      * The status of the sub public delegated prefix.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

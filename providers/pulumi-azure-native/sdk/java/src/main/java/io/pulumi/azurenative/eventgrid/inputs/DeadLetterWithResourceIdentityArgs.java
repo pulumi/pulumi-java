@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 import io.pulumi.azurenative.eventgrid.inputs.EventSubscriptionIdentityArgs;
 import io.pulumi.azurenative.eventgrid.inputs.StorageBlobDeadLetterDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
      * Uses the managed identity setup on the parent resource (namely, topic or domain) to acquire the authentication tokens being used during delivery / dead-lettering.
      * 
      */
-    @InputImport(name="deadLetterDestination")
+    @Import(name="deadLetterDestination")
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
@@ -35,7 +35,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
      * The identity to use when dead-lettering events.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
     public Output<EventSubscriptionIdentityArgs> getIdentity() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.NodePoolNodeConfigEphemeralStorageConfig;
 import io.pulumi.gcp.container.outputs.NodePoolNodeConfigGcfsConfig;
 import io.pulumi.gcp.container.outputs.NodePoolNodeConfigGuestAccelerator;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodePoolNodeConfig {
     private final @Nullable String bootDiskKmsKey;
     private final @Nullable Integer diskSizeGb;
@@ -49,32 +49,32 @@ public final class NodePoolNodeConfig {
     private final @Nullable List<NodePoolNodeConfigTaint> taints;
     private final @Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodePoolNodeConfig(
-        @OutputCustomType.Parameter("bootDiskKmsKey") @Nullable String bootDiskKmsKey,
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("ephemeralStorageConfig") @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
-        @OutputCustomType.Parameter("gcfsConfig") @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig,
-        @OutputCustomType.Parameter("guestAccelerators") @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators,
-        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
-        @OutputCustomType.Parameter("kubeletConfig") @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("linuxNodeConfig") @Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig,
-        @OutputCustomType.Parameter("localSsdCount") @Nullable Integer localSsdCount,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
-        @OutputCustomType.Parameter("nodeGroup") @Nullable String nodeGroup,
-        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
-        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible,
-        @OutputCustomType.Parameter("sandboxConfig") @Nullable NodePoolNodeConfigSandboxConfig sandboxConfig,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @OutputCustomType.Parameter("spot") @Nullable Boolean spot,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("taints") @Nullable List<NodePoolNodeConfigTaint> taints,
-        @OutputCustomType.Parameter("workloadMetadataConfig") @Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
+        @CustomType.Parameter("bootDiskKmsKey") @Nullable String bootDiskKmsKey,
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("ephemeralStorageConfig") @Nullable NodePoolNodeConfigEphemeralStorageConfig ephemeralStorageConfig,
+        @CustomType.Parameter("gcfsConfig") @Nullable NodePoolNodeConfigGcfsConfig gcfsConfig,
+        @CustomType.Parameter("guestAccelerators") @Nullable List<NodePoolNodeConfigGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("imageType") @Nullable String imageType,
+        @CustomType.Parameter("kubeletConfig") @Nullable NodePoolNodeConfigKubeletConfig kubeletConfig,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("linuxNodeConfig") @Nullable NodePoolNodeConfigLinuxNodeConfig linuxNodeConfig,
+        @CustomType.Parameter("localSsdCount") @Nullable Integer localSsdCount,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @CustomType.Parameter("nodeGroup") @Nullable String nodeGroup,
+        @CustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @CustomType.Parameter("preemptible") @Nullable Boolean preemptible,
+        @CustomType.Parameter("sandboxConfig") @Nullable NodePoolNodeConfigSandboxConfig sandboxConfig,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @CustomType.Parameter("shieldedInstanceConfig") @Nullable NodePoolNodeConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @CustomType.Parameter("spot") @Nullable Boolean spot,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("taints") @Nullable List<NodePoolNodeConfigTaint> taints,
+        @CustomType.Parameter("workloadMetadataConfig") @Nullable NodePoolNodeConfigWorkloadMetadataConfig workloadMetadataConfig) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

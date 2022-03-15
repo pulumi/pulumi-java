@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1beta1.GroupArgs;
@@ -27,7 +27,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Additional entity key aliases for a Group.
      * 
      */
-    @OutputExport(name="additionalGroupKeys", type=List.class, parameters={EntityKeyResponse.class})
+    @Export(name="additionalGroupKeys", type=List.class, parameters={EntityKeyResponse.class})
     private Output<List<EntityKeyResponse>> additionalGroupKeys;
 
     /**
@@ -41,7 +41,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The time when the `Group` was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -69,7 +69,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The display name of the `Group`.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -83,7 +83,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Optional. Dynamic group metadata like queries and status.
      * 
      */
-    @OutputExport(name="dynamicGroupMetadata", type=DynamicGroupMetadataResponse.class, parameters={})
+    @Export(name="dynamicGroupMetadata", type=DynamicGroupMetadataResponse.class, parameters={})
     private Output<DynamicGroupMetadataResponse> dynamicGroupMetadata;
 
     /**
@@ -97,7 +97,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The `EntityKey` of the `Group`.
      * 
      */
-    @OutputExport(name="groupKey", type=EntityKeyResponse.class, parameters={})
+    @Export(name="groupKey", type=EntityKeyResponse.class, parameters={})
     private Output<EntityKeyResponse> groupKey;
 
     /**
@@ -111,7 +111,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -125,7 +125,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`. Shall be of the form `groups/{group_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source_id}` for external- identity-mapped groups or `customers/{customer_id}` for Google Groups. The `customer_id` must begin with "C" (for example, 'C046psxkn').
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -153,7 +153,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Optional. The POSIX groups associated with the `Group`.
      * 
      */
-    @OutputExport(name="posixGroups", type=List.class, parameters={PosixGroupResponse.class})
+    @Export(name="posixGroups", type=List.class, parameters={PosixGroupResponse.class})
     private Output<List<PosixGroupResponse>> posixGroups;
 
     /**
@@ -167,7 +167,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The time when the `Group` was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

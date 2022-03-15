@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="badServiceFilter")
+    @Import(name="badServiceFilter")
       private final @Nullable Output<String> badServiceFilter;
 
     public Output<String> getBadServiceFilter() {
@@ -33,7 +33,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="goodServiceFilter")
+    @Import(name="goodServiceFilter")
       private final @Nullable Output<String> goodServiceFilter;
 
     public Output<String> getGoodServiceFilter() {
@@ -44,7 +44,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="totalServiceFilter")
+    @Import(name="totalServiceFilter")
       private final @Nullable Output<String> totalServiceFilter;
 
     public Output<String> getTotalServiceFilter() {

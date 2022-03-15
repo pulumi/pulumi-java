@@ -5,7 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.azurenative.notificationhubs.enums.AccessRights;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
      * The rights associated with the rule.
      * 
      */
-    @InputImport(name="rights")
+    @Import(name="rights")
       private final @Nullable Output<List<AccessRights>> rights;
 
     public Output<List<AccessRights>> getRights() {

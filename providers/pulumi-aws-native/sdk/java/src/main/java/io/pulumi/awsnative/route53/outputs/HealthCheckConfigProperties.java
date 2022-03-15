@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53.outputs;
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesInsufficientDataHealthStatus;
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesType;
 import io.pulumi.awsnative.route53.outputs.HealthCheckAlarmIdentifier;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthCheckConfigProperties {
     private final @Nullable HealthCheckAlarmIdentifier alarmIdentifier;
     private final @Nullable List<String> childHealthChecks;
@@ -35,25 +35,25 @@ public final class HealthCheckConfigProperties {
     private final @Nullable String searchString;
     private final HealthCheckConfigPropertiesType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthCheckConfigProperties(
-        @OutputCustomType.Parameter("alarmIdentifier") @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
-        @OutputCustomType.Parameter("childHealthChecks") @Nullable List<String> childHealthChecks,
-        @OutputCustomType.Parameter("enableSNI") @Nullable Boolean enableSNI,
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
-        @OutputCustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
-        @OutputCustomType.Parameter("healthThreshold") @Nullable Integer healthThreshold,
-        @OutputCustomType.Parameter("iPAddress") @Nullable String iPAddress,
-        @OutputCustomType.Parameter("insufficientDataHealthStatus") @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
-        @OutputCustomType.Parameter("inverted") @Nullable Boolean inverted,
-        @OutputCustomType.Parameter("measureLatency") @Nullable Boolean measureLatency,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
-        @OutputCustomType.Parameter("requestInterval") @Nullable Integer requestInterval,
-        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
-        @OutputCustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
-        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
-        @OutputCustomType.Parameter("type") HealthCheckConfigPropertiesType type) {
+        @CustomType.Parameter("alarmIdentifier") @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
+        @CustomType.Parameter("childHealthChecks") @Nullable List<String> childHealthChecks,
+        @CustomType.Parameter("enableSNI") @Nullable Boolean enableSNI,
+        @CustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @CustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
+        @CustomType.Parameter("healthThreshold") @Nullable Integer healthThreshold,
+        @CustomType.Parameter("iPAddress") @Nullable String iPAddress,
+        @CustomType.Parameter("insufficientDataHealthStatus") @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
+        @CustomType.Parameter("inverted") @Nullable Boolean inverted,
+        @CustomType.Parameter("measureLatency") @Nullable Boolean measureLatency,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("regions") @Nullable List<String> regions,
+        @CustomType.Parameter("requestInterval") @Nullable Integer requestInterval,
+        @CustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @CustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
+        @CustomType.Parameter("searchString") @Nullable String searchString,
+        @CustomType.Parameter("type") HealthCheckConfigPropertiesType type) {
         this.alarmIdentifier = alarmIdentifier;
         this.childHealthChecks = childHealthChecks;
         this.enableSNI = enableSNI;

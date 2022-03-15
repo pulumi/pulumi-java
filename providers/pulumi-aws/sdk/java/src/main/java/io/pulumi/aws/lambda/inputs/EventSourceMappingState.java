@@ -8,7 +8,7 @@ import io.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaGetArgs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingSelfManagedEventSourceGetArgs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingSourceAccessConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,21 +27,21 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * * `destination_config`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
     public Output<Integer> getBatchSize() {
         return this.batchSize == null ? Output.empty() : this.batchSize;
     }
 
-    @InputImport(name="bisectBatchOnFunctionError")
+    @Import(name="bisectBatchOnFunctionError")
       private final @Nullable Output<Boolean> bisectBatchOnFunctionError;
 
     public Output<Boolean> getBisectBatchOnFunctionError() {
         return this.bisectBatchOnFunctionError == null ? Output.empty() : this.bisectBatchOnFunctionError;
     }
 
-    @InputImport(name="destinationConfig")
+    @Import(name="destinationConfig")
       private final @Nullable Output<EventSourceMappingDestinationConfigGetArgs> destinationConfig;
 
     public Output<EventSourceMappingDestinationConfigGetArgs> getDestinationConfig() {
@@ -52,7 +52,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * Determines if the mapping will be enabled on creation. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -63,7 +63,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker or MSK cluster.  It is incompatible with a Self Managed Kafka source.
      * 
      */
-    @InputImport(name="eventSourceArn")
+    @Import(name="eventSourceArn")
       private final @Nullable Output<String> eventSourceArn;
 
     public Output<String> getEventSourceArn() {
@@ -74,7 +74,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The criteria to use for [event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) Kinesis stream, DynamoDB stream, SQS queue event sources. Detailed below.
      * 
      */
-    @InputImport(name="filterCriteria")
+    @Import(name="filterCriteria")
       private final @Nullable Output<EventSourceMappingFilterCriteriaGetArgs> filterCriteria;
 
     public Output<EventSourceMappingFilterCriteriaGetArgs> getFilterCriteria() {
@@ -85,7 +85,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `function_name` above.)
      * 
      */
-    @InputImport(name="functionArn")
+    @Import(name="functionArn")
       private final @Nullable Output<String> functionArn;
 
     public Output<String> getFunctionArn() {
@@ -96,7 +96,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The name or the ARN of the Lambda function that will be subscribing to events.
      * 
      */
-    @InputImport(name="functionName")
+    @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -107,7 +107,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * A list of current response type enums applied to the event source mapping for [AWS Lambda checkpointing](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html#services-ddb-batchfailurereporting). Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: `ReportBatchItemFailures`.
      * 
      */
-    @InputImport(name="functionResponseTypes")
+    @Import(name="functionResponseTypes")
       private final @Nullable Output<List<String>> functionResponseTypes;
 
     public Output<List<String>> getFunctionResponseTypes() {
@@ -118,7 +118,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The date this resource was last modified.
      * 
      */
-    @InputImport(name="lastModified")
+    @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
     public Output<String> getLastModified() {
@@ -129,7 +129,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The result of the last AWS Lambda invocation of your Lambda function.
      * 
      */
-    @InputImport(name="lastProcessingResult")
+    @Import(name="lastProcessingResult")
       private final @Nullable Output<String> lastProcessingResult;
 
     public Output<String> getLastProcessingResult() {
@@ -143,28 +143,28 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * * `parallelization_factor`: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.
      * 
      */
-    @InputImport(name="maximumBatchingWindowInSeconds")
+    @Import(name="maximumBatchingWindowInSeconds")
       private final @Nullable Output<Integer> maximumBatchingWindowInSeconds;
 
     public Output<Integer> getMaximumBatchingWindowInSeconds() {
         return this.maximumBatchingWindowInSeconds == null ? Output.empty() : this.maximumBatchingWindowInSeconds;
     }
 
-    @InputImport(name="maximumRecordAgeInSeconds")
+    @Import(name="maximumRecordAgeInSeconds")
       private final @Nullable Output<Integer> maximumRecordAgeInSeconds;
 
     public Output<Integer> getMaximumRecordAgeInSeconds() {
         return this.maximumRecordAgeInSeconds == null ? Output.empty() : this.maximumRecordAgeInSeconds;
     }
 
-    @InputImport(name="maximumRetryAttempts")
+    @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
     public Output<Integer> getMaximumRetryAttempts() {
         return this.maximumRetryAttempts == null ? Output.empty() : this.maximumRetryAttempts;
     }
 
-    @InputImport(name="parallelizationFactor")
+    @Import(name="parallelizationFactor")
       private final @Nullable Output<Integer> parallelizationFactor;
 
     public Output<Integer> getParallelizationFactor() {
@@ -177,21 +177,21 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * * `source_access_configuration`: (Optional) For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include `self_managed_event_source`. Detailed below.
      * 
      */
-    @InputImport(name="queues")
+    @Import(name="queues")
       private final @Nullable Output<List<String>> queues;
 
     public Output<List<String>> getQueues() {
         return this.queues == null ? Output.empty() : this.queues;
     }
 
-    @InputImport(name="selfManagedEventSource")
+    @Import(name="selfManagedEventSource")
       private final @Nullable Output<EventSourceMappingSelfManagedEventSourceGetArgs> selfManagedEventSource;
 
     public Output<EventSourceMappingSelfManagedEventSourceGetArgs> getSelfManagedEventSource() {
         return this.selfManagedEventSource == null ? Output.empty() : this.selfManagedEventSource;
     }
 
-    @InputImport(name="sourceAccessConfigurations")
+    @Import(name="sourceAccessConfigurations")
       private final @Nullable Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> sourceAccessConfigurations;
 
     public Output<List<EventSourceMappingSourceAccessConfigurationGetArgs>> getSourceAccessConfigurations() {
@@ -202,7 +202,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis, DynamoDB or MSK. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
      * 
      */
-    @InputImport(name="startingPosition")
+    @Import(name="startingPosition")
       private final @Nullable Output<String> startingPosition;
 
     public Output<String> getStartingPosition() {
@@ -213,7 +213,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of the data record which to start reading when using `starting_position` set to `AT_TIMESTAMP`. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.
      * 
      */
-    @InputImport(name="startingPositionTimestamp")
+    @Import(name="startingPositionTimestamp")
       private final @Nullable Output<String> startingPositionTimestamp;
 
     public Output<String> getStartingPositionTimestamp() {
@@ -224,7 +224,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The state of the event source mapping.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -235,7 +235,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The reason the event source mapping is in its current state.
      * 
      */
-    @InputImport(name="stateTransitionReason")
+    @Import(name="stateTransitionReason")
       private final @Nullable Output<String> stateTransitionReason;
 
     public Output<String> getStateTransitionReason() {
@@ -246,7 +246,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.
      * 
      */
-    @InputImport(name="topics")
+    @Import(name="topics")
       private final @Nullable Output<List<String>> topics;
 
     public Output<List<String>> getTopics() {
@@ -257,7 +257,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The duration in seconds of a processing window for [AWS Lambda streaming analytics](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html#services-kinesis-windows). The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).
      * 
      */
-    @InputImport(name="tumblingWindowInSeconds")
+    @Import(name="tumblingWindowInSeconds")
       private final @Nullable Output<Integer> tumblingWindowInSeconds;
 
     public Output<Integer> getTumblingWindowInSeconds() {
@@ -268,7 +268,7 @@ public final class EventSourceMappingState extends io.pulumi.resources.ResourceA
      * The UUID of the created event source mapping.
      * 
      */
-    @InputImport(name="uuid")
+    @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
     public Output<String> getUuid() {

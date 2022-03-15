@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResource;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroup {
     /**
      * List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
      */
     private final List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroup(
-        @OutputCustomType.Parameter("inventoryFilters") @Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters,
-        @OutputCustomType.Parameter("resources") List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
+        @CustomType.Parameter("inventoryFilters") @Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters,
+        @CustomType.Parameter("resources") List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
         this.inventoryFilters = inventoryFilters;
         this.resources = resources;
     }

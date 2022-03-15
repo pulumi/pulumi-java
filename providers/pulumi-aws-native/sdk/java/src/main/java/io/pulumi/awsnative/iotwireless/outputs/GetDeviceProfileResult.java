@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.DeviceProfileLoRaWANDeviceProfile;
 import io.pulumi.awsnative.iotwireless.outputs.DeviceProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceProfileResult {
     /**
      * Service profile Arn. Returned after successful create.
@@ -40,13 +40,13 @@ public final class GetDeviceProfileResult {
      */
     private final @Nullable List<DeviceProfileTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceProfileResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loRaWAN") @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<DeviceProfileTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loRaWAN") @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<DeviceProfileTag> tags) {
         this.arn = arn;
         this.id = id;
         this.loRaWAN = loRaWAN;

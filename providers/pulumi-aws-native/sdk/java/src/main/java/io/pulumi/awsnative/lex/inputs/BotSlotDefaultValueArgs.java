@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BotSlotDefaultValueArgs extends io.pulumi.resources.ResourceA
      * The default value to use when a user doesn't provide a value for a slot.
      * 
      */
-    @InputImport(name="defaultValue", required=true)
+    @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {

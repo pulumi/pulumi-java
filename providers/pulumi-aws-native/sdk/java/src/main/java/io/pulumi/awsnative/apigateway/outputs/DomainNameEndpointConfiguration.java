@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainNameEndpointConfiguration {
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor
-    private DomainNameEndpointConfiguration(@OutputCustomType.Parameter("types") @Nullable List<String> types) {
+    @CustomType.Constructor
+    private DomainNameEndpointConfiguration(@CustomType.Parameter("types") @Nullable List<String> types) {
         this.types = types;
     }
 

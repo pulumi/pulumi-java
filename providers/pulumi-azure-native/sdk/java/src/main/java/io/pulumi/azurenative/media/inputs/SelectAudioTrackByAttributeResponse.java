@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * The TrackAttribute to filter the tracks by.
      * 
      */
-    @InputImport(name="attribute", required=true)
+    @Import(name="attribute", required=true)
       private final String attribute;
 
     public String getAttribute() {
@@ -33,7 +33,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
      * 
      */
-    @InputImport(name="channelMapping")
+    @Import(name="channelMapping")
       private final @Nullable String channelMapping;
 
     public Optional<String> getChannelMapping() {
@@ -44,7 +44,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {
@@ -55,7 +55,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
      * 
      */
-    @InputImport(name="filterValue")
+    @Import(name="filterValue")
       private final @Nullable String filterValue;
 
     public Optional<String> getFilterValue() {
@@ -67,7 +67,7 @@ public final class SelectAudioTrackByAttributeResponse extends io.pulumi.resourc
      * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

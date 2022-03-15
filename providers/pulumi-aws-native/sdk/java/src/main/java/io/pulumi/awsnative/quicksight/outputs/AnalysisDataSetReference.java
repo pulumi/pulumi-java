@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalysisDataSetReference {
     /**
      * <p>Dataset Amazon Resource Name (ARN).</p>
@@ -20,10 +20,10 @@ public final class AnalysisDataSetReference {
      */
     private final String dataSetPlaceholder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalysisDataSetReference(
-        @OutputCustomType.Parameter("dataSetArn") String dataSetArn,
-        @OutputCustomType.Parameter("dataSetPlaceholder") String dataSetPlaceholder) {
+        @CustomType.Parameter("dataSetArn") String dataSetArn,
+        @CustomType.Parameter("dataSetPlaceholder") String dataSetPlaceholder) {
         this.dataSetArn = dataSetArn;
         this.dataSetPlaceholder = dataSetPlaceholder;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * Number of instances or nodes.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -36,7 +36,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * SKU type to run on.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -47,7 +47,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * Set to true for jobs running on local compute.
      * 
      */
-    @InputImport(name="isLocal")
+    @Import(name="isLocal")
       private final @Nullable Output<Boolean> isLocal;
 
     public Output<Boolean> getIsLocal() {
@@ -58,7 +58,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * Location for virtual cluster run.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,7 +69,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * Additional properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -80,7 +80,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
      * ARM resource ID of the compute resource.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigResponse;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * Actions to execute at the completion of the job.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final List<GooglePrivacyDlpV2ActionResponse> actions;
 
     public List<GooglePrivacyDlpV2ActionResponse> getActions() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * How and what to scan for.
      * 
      */
-    @InputImport(name="inspectConfig", required=true)
+    @Import(name="inspectConfig", required=true)
       private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
      * 
      */
-    @InputImport(name="inspectTemplateName", required=true)
+    @Import(name="inspectTemplateName", required=true)
       private final String inspectTemplateName;
 
     public String getInspectTemplateName() {
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse extends io.pulumi.
      * The data to scan.
      * 
      */
-    @InputImport(name="storageConfig", required=true)
+    @Import(name="storageConfig", required=true)
       private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
     public GooglePrivacyDlpV2StorageConfigResponse getStorageConfig() {

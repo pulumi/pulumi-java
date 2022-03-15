@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolAccountRecoverySettingRecoveryMechanism {
     /**
      * Name of the attribute.
@@ -21,10 +21,10 @@ public final class UserPoolAccountRecoverySettingRecoveryMechanism {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolAccountRecoverySettingRecoveryMechanism(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority) {
         this.name = name;
         this.priority = priority;
     }

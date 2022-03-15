@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyGroupPlacementPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyInstanceSchedulePolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyResourceStatusResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicySnapshotScheduleP
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -61,19 +61,19 @@ public final class GetResourcePolicyResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicyResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("groupPlacementPolicy") ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy,
-        @OutputCustomType.Parameter("instanceSchedulePolicy") ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("resourceStatus") ResourcePolicyResourceStatusResponse resourceStatus,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("snapshotSchedulePolicy") ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("groupPlacementPolicy") ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy,
+        @CustomType.Parameter("instanceSchedulePolicy") ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("resourceStatus") ResourcePolicyResourceStatusResponse resourceStatus,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("snapshotSchedulePolicy") ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy,
+        @CustomType.Parameter("status") String status) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.groupPlacementPolicy = groupPlacementPolicy;

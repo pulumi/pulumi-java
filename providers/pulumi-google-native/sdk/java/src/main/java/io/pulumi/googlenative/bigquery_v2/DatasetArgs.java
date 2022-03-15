@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessItemArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetTagsItemArgs;
@@ -25,7 +25,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
      * 
      */
-    @InputImport(name="access")
+    @Import(name="access")
       private final @Nullable Output<List<DatasetAccessItemArgs>> access;
 
     public Output<List<DatasetAccessItemArgs>> getAccess() {
@@ -36,14 +36,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] A reference that identifies the dataset.
      * 
      */
-    @InputImport(name="datasetReference")
+    @Import(name="datasetReference")
       private final @Nullable Output<DatasetReferenceArgs> datasetReference;
 
     public Output<DatasetReferenceArgs> getDatasetReference() {
         return this.datasetReference == null ? Output.empty() : this.datasetReference;
     }
 
-    @InputImport(name="defaultEncryptionConfiguration")
+    @Import(name="defaultEncryptionConfiguration")
       private final @Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     public Output<EncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
@@ -54,7 +54,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] The default partition expiration for all partitioned tables in the dataset, in milliseconds. Once this property is set, all newly-created partitioned tables in the dataset will have an expirationMs property in the timePartitioning settings set to this value, and changing the value will only affect new tables, not existing ones. The storage in a partition will have an expiration time of its partition time plus this value. Setting this property overrides the use of defaultTableExpirationMs for partitioned tables: only one of defaultTableExpirationMs and defaultPartitionExpirationMs will be used for any new partitioned table. If you provide an explicit timePartitioning.expirationMs when creating or updating a partitioned table, that value takes precedence over the default partition expiration time indicated by this property.
      * 
      */
-    @InputImport(name="defaultPartitionExpirationMs")
+    @Import(name="defaultPartitionExpirationMs")
       private final @Nullable Output<String> defaultPartitionExpirationMs;
 
     public Output<String> getDefaultPartitionExpirationMs() {
@@ -65,7 +65,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] The default lifetime of all tables in the dataset, in milliseconds. The minimum value is 3600000 milliseconds (one hour). Once this property is set, all newly-created tables in the dataset will have an expirationTime property set to the creation time plus the value in this property, and changing the value will only affect new tables, not existing ones. When the expirationTime for a given table is reached, that table will be deleted automatically. If a table's expirationTime is modified or removed before the table expires, or if you provide an explicit expirationTime when creating a table, that value takes precedence over the default expiration time indicated by this property.
      * 
      */
-    @InputImport(name="defaultTableExpirationMs")
+    @Import(name="defaultTableExpirationMs")
       private final @Nullable Output<String> defaultTableExpirationMs;
 
     public Output<String> getDefaultTableExpirationMs() {
@@ -76,7 +76,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] A user-friendly description of the dataset.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -87,7 +87,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] A descriptive name for the dataset.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -98,7 +98,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional] Indicates if table names are case insensitive in the dataset.
      * 
      */
-    @InputImport(name="isCaseInsensitive")
+    @Import(name="isCaseInsensitive")
       private final @Nullable Output<Boolean> isCaseInsensitive;
 
     public Output<Boolean> getIsCaseInsensitive() {
@@ -109,7 +109,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this dataset. You can use these to organize and group your datasets. You can set this property when inserting or updating a dataset. See Creating and Updating Dataset Labels for more information.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -120,14 +120,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The geographic location where the dataset should reside. The default value is US. See details at https://cloud.google.com/bigquery/docs/locations.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -138,7 +138,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * [Optional]The tags associated with this dataset. Tag keys are globally unique.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DatasetTagsItemArgs>> tags;
 
     public Output<List<DatasetTagsItemArgs>> getTags() {

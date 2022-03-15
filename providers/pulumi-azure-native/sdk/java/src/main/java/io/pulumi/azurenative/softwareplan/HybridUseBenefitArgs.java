@@ -5,7 +5,7 @@ package io.pulumi.azurenative.softwareplan;
 
 import io.pulumi.azurenative.softwareplan.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * This is a unique identifier for a plan. Should be a guid.
      * 
      */
-    @InputImport(name="planId")
+    @Import(name="planId")
       private final @Nullable Output<String> planId;
 
     public Output<String> getPlanId() {
@@ -30,7 +30,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -41,7 +41,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * Hybrid use benefit SKU
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {

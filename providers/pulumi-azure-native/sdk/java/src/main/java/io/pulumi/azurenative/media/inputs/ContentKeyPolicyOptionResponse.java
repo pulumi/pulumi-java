@@ -11,7 +11,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyTokenRestrictionRespon
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyUnknownConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyUnknownRestrictionResponse;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyWidevineConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * The key delivery configuration.
      * 
      */
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Object configuration;
 
     public Object getConfiguration() {
@@ -42,7 +42,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * The Policy Option description.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -53,7 +53,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * The legacy Policy Option ID.
      * 
      */
-    @InputImport(name="policyOptionId", required=true)
+    @Import(name="policyOptionId", required=true)
       private final String policyOptionId;
 
     public String getPolicyOptionId() {
@@ -64,7 +64,7 @@ public final class ContentKeyPolicyOptionResponse extends io.pulumi.resources.In
      * The requirements that must be met to deliver keys with this configuration
      * 
      */
-    @InputImport(name="restriction", required=true)
+    @Import(name="restriction", required=true)
       private final Object restriction;
 
     public Object getRestriction() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.AutoscalingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.EndpointConfigResponse;
@@ -32,7 +32,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Autoscaling config for the policy associated with the cluster. Cluster does not autoscale if this field is unset.
      * 
      */
-    @InputImport(name="autoscalingConfig", required=true)
+    @Import(name="autoscalingConfig", required=true)
       private final AutoscalingConfigResponse autoscalingConfig;
 
     public AutoscalingConfigResponse getAutoscalingConfig() {
@@ -43,7 +43,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)). This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
      * 
      */
-    @InputImport(name="configBucket", required=true)
+    @Import(name="configBucket", required=true)
       private final String configBucket;
 
     public String getConfigBucket() {
@@ -54,7 +54,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Encryption settings for the cluster.
      * 
      */
-    @InputImport(name="encryptionConfig", required=true)
+    @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse getEncryptionConfig() {
@@ -65,7 +65,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Port/endpoint configuration for this cluster
      * 
      */
-    @InputImport(name="endpointConfig", required=true)
+    @Import(name="endpointConfig", required=true)
       private final EndpointConfigResponse endpointConfig;
 
     public EndpointConfigResponse getEndpointConfig() {
@@ -76,7 +76,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The shared Compute Engine config settings for all instances in a cluster.
      * 
      */
-    @InputImport(name="gceClusterConfig", required=true)
+    @Import(name="gceClusterConfig", required=true)
       private final GceClusterConfigResponse gceClusterConfig;
 
     public GceClusterConfigResponse getGceClusterConfig() {
@@ -87,7 +87,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The Kubernetes Engine config for Dataproc clusters deployed to Kubernetes. Setting this is considered mutually exclusive with Compute Engine-based options such as gce_cluster_config, master_config, worker_config, secondary_worker_config, and autoscaling_config.
      * 
      */
-    @InputImport(name="gkeClusterConfig", required=true)
+    @Import(name="gkeClusterConfig", required=true)
       private final GkeClusterConfigResponse gkeClusterConfig;
 
     public GkeClusterConfigResponse getGkeClusterConfig() {
@@ -98,7 +98,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Commands to execute on each node after config is completed. By default, executables are run on master and all worker nodes. You can test a node's role metadata to run an executable on a master or worker node, as shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-Flavor:Google http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
      * 
      */
-    @InputImport(name="initializationActions", required=true)
+    @Import(name="initializationActions", required=true)
       private final List<NodeInitializationActionResponse> initializationActions;
 
     public List<NodeInitializationActionResponse> getInitializationActions() {
@@ -109,7 +109,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The config setting for auto delete cluster schedule.
      * 
      */
-    @InputImport(name="lifecycleConfig", required=true)
+    @Import(name="lifecycleConfig", required=true)
       private final LifecycleConfigResponse lifecycleConfig;
 
     public LifecycleConfigResponse getLifecycleConfig() {
@@ -120,7 +120,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The Compute Engine config settings for the master instance in a cluster.
      * 
      */
-    @InputImport(name="masterConfig", required=true)
+    @Import(name="masterConfig", required=true)
       private final InstanceGroupConfigResponse masterConfig;
 
     public InstanceGroupConfigResponse getMasterConfig() {
@@ -131,7 +131,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Metastore configuration.
      * 
      */
-    @InputImport(name="metastoreConfig", required=true)
+    @Import(name="metastoreConfig", required=true)
       private final MetastoreConfigResponse metastoreConfig;
 
     public MetastoreConfigResponse getMetastoreConfig() {
@@ -142,7 +142,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The Compute Engine config settings for additional worker instances in a cluster.
      * 
      */
-    @InputImport(name="secondaryWorkerConfig", required=true)
+    @Import(name="secondaryWorkerConfig", required=true)
       private final InstanceGroupConfigResponse secondaryWorkerConfig;
 
     public InstanceGroupConfigResponse getSecondaryWorkerConfig() {
@@ -153,7 +153,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. Security related configuration.
      * 
      */
-    @InputImport(name="securityConfig", required=true)
+    @Import(name="securityConfig", required=true)
       private final SecurityConfigResponse securityConfig;
 
     public SecurityConfigResponse getSecurityConfig() {
@@ -164,7 +164,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The config settings for software inside the cluster.
      * 
      */
-    @InputImport(name="softwareConfig", required=true)
+    @Import(name="softwareConfig", required=true)
       private final SoftwareConfigResponse softwareConfig;
 
     public SoftwareConfigResponse getSoftwareConfig() {
@@ -175,7 +175,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the Compute Engine zone where your cluster is deployed, and then create and manage this project-level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL (or none) if you specify a bucket. This field requires a Cloud Storage bucket name, not a URI to a Cloud Storage bucket.
      * 
      */
-    @InputImport(name="tempBucket", required=true)
+    @Import(name="tempBucket", required=true)
       private final String tempBucket;
 
     public String getTempBucket() {
@@ -186,7 +186,7 @@ public final class ClusterConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The Compute Engine config settings for worker instances in a cluster.
      * 
      */
-    @InputImport(name="workerConfig", required=true)
+    @Import(name="workerConfig", required=true)
       private final InstanceGroupConfigResponse workerConfig;
 
     public InstanceGroupConfigResponse getWorkerConfig() {

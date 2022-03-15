@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageCardButtonResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
     /**
      * Optional. The collection of card buttons.
@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageCardResponse(
-        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons,
-        @OutputCustomType.Parameter("imageUri") String imageUri,
-        @OutputCustomType.Parameter("subtitle") String subtitle,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("buttons") List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons,
+        @CustomType.Parameter("imageUri") String imageUri,
+        @CustomType.Parameter("subtitle") String subtitle,
+        @CustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.imageUri = imageUri;
         this.subtitle = subtitle;

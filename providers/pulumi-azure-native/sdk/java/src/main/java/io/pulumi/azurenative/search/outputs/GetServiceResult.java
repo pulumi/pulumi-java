@@ -8,7 +8,7 @@ import io.pulumi.azurenative.search.outputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourceResponse;
 import io.pulumi.azurenative.search.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
@@ -105,25 +105,25 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("hostingMode") @Nullable String hostingMode,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
-        @OutputCustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
-        @OutputCustomType.Parameter("sharedPrivateLinkResources") List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hostingMode") @Nullable String hostingMode,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
+        @CustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @CustomType.Parameter("sharedPrivateLinkResources") List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.hostingMode = hostingMode;
         this.id = id;
         this.identity = identity;

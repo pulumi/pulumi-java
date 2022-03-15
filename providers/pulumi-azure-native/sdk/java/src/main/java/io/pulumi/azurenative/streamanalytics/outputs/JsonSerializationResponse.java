@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JsonSerializationResponse {
     /**
      * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
@@ -28,11 +28,11 @@ public final class JsonSerializationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JsonSerializationResponse(
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.format = format;
         this.type = type;

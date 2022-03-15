@@ -5,7 +5,7 @@ package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * The private endpoint resource from Microsoft.Network provider.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint;
 
     public Optional<PrivateEndpointConnectionPropertiesResponsePrivateEndpoint> getPrivateEndpoint() {
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * Describes the current state of an existing Private Link Service connection to the Azure Private Endpoint.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
     public Optional<PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState> getPrivateLinkServiceConnectionState() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.ProjectArgs;
 import io.pulumi.aws.sagemaker.inputs.ProjectState;
 import io.pulumi.aws.sagemaker.outputs.ProjectServiceCatalogProvisioningDetails;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Project.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A description for the project.
      * 
      */
-    @OutputExport(name="projectDescription", type=String.class, parameters={})
+    @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
     /**
@@ -64,7 +64,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The ID of the project.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
@@ -78,7 +78,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The name of the Project.
      * 
      */
-    @OutputExport(name="projectName", type=String.class, parameters={})
+    @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
     /**
@@ -92,7 +92,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The product ID and provisioning artifact ID to provision a service catalog. See Service Catalog Provisioning Details below.
      * 
      */
-    @OutputExport(name="serviceCatalogProvisioningDetails", type=ProjectServiceCatalogProvisioningDetails.class, parameters={})
+    @Export(name="serviceCatalogProvisioningDetails", type=ProjectServiceCatalogProvisioningDetails.class, parameters={})
     private Output<ProjectServiceCatalogProvisioningDetails> serviceCatalogProvisioningDetails;
 
     /**
@@ -106,7 +106,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -120,7 +120,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

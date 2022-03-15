@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
     public Output<String> getBackupId() {
@@ -26,7 +26,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,21 +37,21 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -62,7 +62,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the file share in the source Cloud Filestore instance that the backup is created from.
      * 
      */
-    @InputImport(name="sourceFileShare")
+    @Import(name="sourceFileShare")
       private final @Nullable Output<String> sourceFileShare;
 
     public Output<String> getSourceFileShare() {
@@ -73,7 +73,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the source Cloud Filestore instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
      * 
      */
-    @InputImport(name="sourceInstance")
+    @Import(name="sourceInstance")
       private final @Nullable Output<String> sourceInstance;
 
     public Output<String> getSourceInstance() {

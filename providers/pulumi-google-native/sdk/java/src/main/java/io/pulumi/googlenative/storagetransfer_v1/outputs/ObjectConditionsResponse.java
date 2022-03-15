@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectConditionsResponse {
     /**
      * If you specify `exclude_prefixes`, Storage Transfer Service uses the items in the `exclude_prefixes` array to determine which objects to exclude from a transfer. Objects must not start with one of the matching `exclude_prefixes` for inclusion in a transfer. The following are requirements of `exclude_prefixes`: * Each exclude-prefix can contain any sequence of Unicode characters, to a max length of 1024 bytes when UTF8-encoded, and must not contain Carriage Return or Line Feed characters. Wildcard matching and regular expression matching are not supported. * Each exclude-prefix must omit the leading slash. For example, to exclude the object `s3://my-aws-bucket/logs/y=2015/requests.gz`, specify the exclude-prefix as `logs/y=2015/requests.gz`. * None of the exclude-prefix values can be empty, if specified. * Each exclude-prefix must exclude a distinct portion of the object namespace. No exclude-prefix may be a prefix of another exclude-prefix. * If include_prefixes is specified, then each exclude-prefix must start with the value of a path explicitly included by `include_prefixes`. The max size of `exclude_prefixes` is 1000. For more information, see [Filtering objects from transfers](/storage-transfer/docs/filtering-objects-from-transfers).
@@ -41,14 +41,14 @@ public final class ObjectConditionsResponse {
      */
     private final String minTimeElapsedSinceLastModification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectConditionsResponse(
-        @OutputCustomType.Parameter("excludePrefixes") List<String> excludePrefixes,
-        @OutputCustomType.Parameter("includePrefixes") List<String> includePrefixes,
-        @OutputCustomType.Parameter("lastModifiedBefore") String lastModifiedBefore,
-        @OutputCustomType.Parameter("lastModifiedSince") String lastModifiedSince,
-        @OutputCustomType.Parameter("maxTimeElapsedSinceLastModification") String maxTimeElapsedSinceLastModification,
-        @OutputCustomType.Parameter("minTimeElapsedSinceLastModification") String minTimeElapsedSinceLastModification) {
+        @CustomType.Parameter("excludePrefixes") List<String> excludePrefixes,
+        @CustomType.Parameter("includePrefixes") List<String> includePrefixes,
+        @CustomType.Parameter("lastModifiedBefore") String lastModifiedBefore,
+        @CustomType.Parameter("lastModifiedSince") String lastModifiedSince,
+        @CustomType.Parameter("maxTimeElapsedSinceLastModification") String maxTimeElapsedSinceLastModification,
+        @CustomType.Parameter("minTimeElapsedSinceLastModification") String minTimeElapsedSinceLastModification) {
         this.excludePrefixes = excludePrefixes;
         this.includePrefixes = includePrefixes;
         this.lastModifiedBefore = lastModifiedBefore;

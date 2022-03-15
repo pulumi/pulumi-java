@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackStorageConnector {
     /**
      * Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
@@ -28,11 +28,11 @@ public final class StackStorageConnector {
      */
     private final @Nullable String resourceIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackStorageConnector(
-        @OutputCustomType.Parameter("connectorType") String connectorType,
-        @OutputCustomType.Parameter("domains") @Nullable List<String> domains,
-        @OutputCustomType.Parameter("resourceIdentifier") @Nullable String resourceIdentifier) {
+        @CustomType.Parameter("connectorType") String connectorType,
+        @CustomType.Parameter("domains") @Nullable List<String> domains,
+        @CustomType.Parameter("resourceIdentifier") @Nullable String resourceIdentifier) {
         this.connectorType = connectorType;
         this.domains = domains;
         this.resourceIdentifier = resourceIdentifier;

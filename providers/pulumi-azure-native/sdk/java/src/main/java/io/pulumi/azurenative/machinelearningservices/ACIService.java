@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -56,7 +56,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -70,7 +70,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -84,7 +84,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * Service properties
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -98,7 +98,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * The sku of the workspace.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -112,7 +112,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -126,7 +126,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -140,7 +140,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.enums.InstanceOperationType;
 import io.pulumi.azurenative.customerinsights.inputs.ParticipantPropertyReferenceArgs;
 import io.pulumi.azurenative.customerinsights.inputs.TypePropertiesMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Localized descriptions for the Link.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
@@ -36,7 +36,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Localized display name for the Link.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
@@ -47,7 +47,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -58,7 +58,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the link.
      * 
      */
-    @InputImport(name="linkName")
+    @Import(name="linkName")
       private final @Nullable Output<String> linkName;
 
     public Output<String> getLinkName() {
@@ -69,7 +69,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The set of properties mappings between the source and target Types.
      * 
      */
-    @InputImport(name="mappings")
+    @Import(name="mappings")
       private final @Nullable Output<List<TypePropertiesMappingArgs>> mappings;
 
     public Output<List<TypePropertiesMappingArgs>> getMappings() {
@@ -80,7 +80,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether this link is supposed to create or delete instances if Link is NOT Reference Only.
      * 
      */
-    @InputImport(name="operationType")
+    @Import(name="operationType")
       private final @Nullable Output<InstanceOperationType> operationType;
 
     public Output<InstanceOperationType> getOperationType() {
@@ -91,7 +91,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that represent the participating profile.
      * 
      */
-    @InputImport(name="participantPropertyReferences", required=true)
+    @Import(name="participantPropertyReferences", required=true)
       private final Output<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
 
     public Output<List<ParticipantPropertyReferenceArgs>> getParticipantPropertyReferences() {
@@ -102,7 +102,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Indicating whether the link is reference only link. This flag is ignored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles.
      * 
      */
-    @InputImport(name="referenceOnly")
+    @Import(name="referenceOnly")
       private final @Nullable Output<Boolean> referenceOnly;
 
     public Output<Boolean> getReferenceOnly() {
@@ -113,7 +113,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -124,7 +124,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Type of source entity.
      * 
      */
-    @InputImport(name="sourceEntityType", required=true)
+    @Import(name="sourceEntityType", required=true)
       private final Output<EntityType> sourceEntityType;
 
     public Output<EntityType> getSourceEntityType() {
@@ -135,7 +135,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the source Entity Type.
      * 
      */
-    @InputImport(name="sourceEntityTypeName", required=true)
+    @Import(name="sourceEntityTypeName", required=true)
       private final Output<String> sourceEntityTypeName;
 
     public Output<String> getSourceEntityTypeName() {
@@ -146,7 +146,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Type of target entity.
      * 
      */
-    @InputImport(name="targetEntityType", required=true)
+    @Import(name="targetEntityType", required=true)
       private final Output<EntityType> targetEntityType;
 
     public Output<EntityType> getTargetEntityType() {
@@ -157,7 +157,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the target Entity Type.
      * 
      */
-    @InputImport(name="targetEntityTypeName", required=true)
+    @Import(name="targetEntityTypeName", required=true)
       private final Output<String> targetEntityTypeName;
 
     public Output<String> getTargetEntityTypeName() {

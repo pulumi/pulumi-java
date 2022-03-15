@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
      * 
      */
-    @InputImport(name="httpRetryEvents")
+    @Import(name="httpRetryEvents")
       private final @Nullable Output<List<String>> httpRetryEvents;
 
     public Output<List<String>> getHttpRetryEvents() {
@@ -34,7 +34,7 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * The maximum number of retries.
      * 
      */
-    @InputImport(name="maxRetries", required=true)
+    @Import(name="maxRetries", required=true)
       private final Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
@@ -45,7 +45,7 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * The per-retry timeout.
      * 
      */
-    @InputImport(name="perRetryTimeout", required=true)
+    @Import(name="perRetryTimeout", required=true)
       private final Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> perRetryTimeout;
 
     public Output<RouteSpecHttp2RouteRetryPolicyPerRetryTimeoutGetArgs> getPerRetryTimeout() {
@@ -56,7 +56,7 @@ public final class RouteSpecHttp2RouteRetryPolicyGetArgs extends io.pulumi.resou
      * List of TCP retry events. The only valid value is `connection-error`.
      * 
      */
-    @InputImport(name="tcpRetryEvents")
+    @Import(name="tcpRetryEvents")
       private final @Nullable Output<List<String>> tcpRetryEvents;
 
     public Output<List<String>> getTcpRetryEvents() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -30,7 +30,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * Name of the deployment slot. If a slot is not specified, the API will add or update connections for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {
@@ -63,7 +63,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
-    @InputImport(name="subnetResourceId")
+    @Import(name="subnetResourceId")
       private final @Nullable Output<String> subnetResourceId;
 
     public Output<String> getSubnetResourceId() {
@@ -74,7 +74,7 @@ public final class WebAppSwiftVirtualNetworkConnectionSlotArgs extends io.pulumi
      * A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
      */
-    @InputImport(name="swiftSupported")
+    @Import(name="swiftSupported")
       private final @Nullable Output<Boolean> swiftSupported;
 
     public Output<Boolean> getSwiftSupported() {

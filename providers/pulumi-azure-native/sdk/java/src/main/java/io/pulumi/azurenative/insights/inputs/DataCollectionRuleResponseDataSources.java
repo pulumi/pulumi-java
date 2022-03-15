@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ExtensionDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.PerfCounterDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.SyslogDataSourceResponse;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * The list of Azure VM extension data source configurations.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable List<ExtensionDataSourceResponse> extensions;
 
     public List<ExtensionDataSourceResponse> getExtensions() {
@@ -38,7 +38,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * The list of performance counter data source configurations.
      * 
      */
-    @InputImport(name="performanceCounters")
+    @Import(name="performanceCounters")
       private final @Nullable List<PerfCounterDataSourceResponse> performanceCounters;
 
     public List<PerfCounterDataSourceResponse> getPerformanceCounters() {
@@ -49,7 +49,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * The list of Syslog data source configurations.
      * 
      */
-    @InputImport(name="syslog")
+    @Import(name="syslog")
       private final @Nullable List<SyslogDataSourceResponse> syslog;
 
     public List<SyslogDataSourceResponse> getSyslog() {
@@ -60,7 +60,7 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
      * The list of Windows Event Log data source configurations.
      * 
      */
-    @InputImport(name="windowsEventLogs")
+    @Import(name="windowsEventLogs")
       private final @Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs;
 
     public List<WindowsEventLogDataSourceResponse> getWindowsEventLogs() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
     /**
      * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
@@ -21,10 +21,10 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
      */
     private final Double weightFactor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSchedulingPolicyFairSharePolicyShareDistribution(
-        @OutputCustomType.Parameter("shareIdentifier") String shareIdentifier,
-        @OutputCustomType.Parameter("weightFactor") Double weightFactor) {
+        @CustomType.Parameter("shareIdentifier") String shareIdentifier,
+        @CustomType.Parameter("weightFactor") Double weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
     /**
      * A a file with this content. The size of the content is limited to 1024 characters.
@@ -39,13 +39,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceFile(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("permissions") @Nullable String permissions,
+        @CustomType.Parameter("state") String state) {
         this.content = content;
         this.file = file;
         this.path = path;

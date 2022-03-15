@@ -4,7 +4,7 @@
 package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListenerRuleActionForwardTargetGroupGetArgs extends io.pulumi
      * The Amazon Resource Name (ARN) of the target group.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ListenerRuleActionForwardTargetGroupGetArgs extends io.pulumi
      * The weight. The range is 0 to 999.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

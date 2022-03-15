@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
      * Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
      * 
      */
-    @InputImport(name="evaluateTargetHealth", required=true)
+    @Import(name="evaluateTargetHealth", required=true)
       private final Output<Boolean> evaluateTargetHealth;
 
     public Output<Boolean> getEvaluateTargetHealth() {
@@ -29,7 +29,7 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
      * DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
      * Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
      * 
      */
-    @InputImport(name="zoneId", required=true)
+    @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
     public Output<String> getZoneId() {

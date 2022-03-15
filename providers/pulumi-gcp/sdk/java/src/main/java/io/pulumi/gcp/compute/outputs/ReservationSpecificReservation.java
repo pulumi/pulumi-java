@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstanceProperties;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReservationSpecificReservation {
     /**
      * The number of resources that are allocated.
@@ -30,11 +30,11 @@ public final class ReservationSpecificReservation {
      */
     private final ReservationSpecificReservationInstanceProperties instanceProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationSpecificReservation(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("inUseCount") @Nullable Integer inUseCount,
-        @OutputCustomType.Parameter("instanceProperties") ReservationSpecificReservationInstanceProperties instanceProperties) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("inUseCount") @Nullable Integer inUseCount,
+        @CustomType.Parameter("instanceProperties") ReservationSpecificReservationInstanceProperties instanceProperties) {
         this.count = count;
         this.inUseCount = inUseCount;
         this.instanceProperties = instanceProperties;

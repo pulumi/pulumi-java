@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.NotificationReceiverValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationEventReceiverResponse {
     /**
      * The type of the notification event receiver.
@@ -23,10 +23,10 @@ public final class NotificationEventReceiverResponse {
      */
     private final @Nullable NotificationReceiverValueResponse receiverValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationEventReceiverResponse(
-        @OutputCustomType.Parameter("receiverType") @Nullable String receiverType,
-        @OutputCustomType.Parameter("receiverValue") @Nullable NotificationReceiverValueResponse receiverValue) {
+        @CustomType.Parameter("receiverType") @Nullable String receiverType,
+        @CustomType.Parameter("receiverValue") @Nullable NotificationReceiverValueResponse receiverValue) {
         this.receiverType = receiverType;
         this.receiverValue = receiverValue;
     }

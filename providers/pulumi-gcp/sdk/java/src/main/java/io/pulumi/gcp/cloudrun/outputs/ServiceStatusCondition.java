@@ -3,25 +3,25 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceStatusCondition {
     private final @Nullable String message;
     private final @Nullable String reason;
     private final @Nullable String status;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceStatusCondition(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.message = message;
         this.reason = reason;
         this.status = status;

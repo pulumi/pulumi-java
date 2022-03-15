@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleAssetPropertyTimestamp {
     private final @Nullable String offsetInNanos;
     private final String timeInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleAssetPropertyTimestamp(
-        @OutputCustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
-        @OutputCustomType.Parameter("timeInSeconds") String timeInSeconds) {
+        @CustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
+        @CustomType.Parameter("timeInSeconds") String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
         this.timeInSeconds = timeInSeconds;
     }

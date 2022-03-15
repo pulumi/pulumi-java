@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.ScheduleArgs;
@@ -25,7 +25,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Time the schedule was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -39,7 +39,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Cron-tab formatted schedule by which the job will execute. Format: minute, hour, day of month, month, day of week, e.g. 0 0 * * WED = every Wednesday More examples: https://crontab.guru/examples.html
      * 
      */
-    @OutputExport(name="cronSchedule", type=String.class, parameters={})
+    @Export(name="cronSchedule", type=String.class, parameters={})
     private Output<String> cronSchedule;
 
     /**
@@ -53,7 +53,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * A brief description of this environment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -67,7 +67,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Display name used for UI purposes. Name can only contain alphanumeric characters, hyphens '-', and underscores '_'.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -81,7 +81,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Notebook Execution Template corresponding to this schedule.
      * 
      */
-    @OutputExport(name="executionTemplate", type=ExecutionTemplateResponse.class, parameters={})
+    @Export(name="executionTemplate", type=ExecutionTemplateResponse.class, parameters={})
     private Output<ExecutionTemplateResponse> executionTemplate;
 
     /**
@@ -95,7 +95,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The name of this schedule. Format: `projects/{project_id}/locations/{location}/schedules/{schedule_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The most recent execution names triggered from this schedule and their corresponding states.
      * 
      */
-    @OutputExport(name="recentExecutions", type=List.class, parameters={ExecutionResponse.class})
+    @Export(name="recentExecutions", type=List.class, parameters={ExecutionResponse.class})
     private Output<List<ExecutionResponse>> recentExecutions;
 
     /**
@@ -119,7 +119,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
     public Output<List<ExecutionResponse>> getRecentExecutions() {
         return this.recentExecutions;
     }
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     public Output<String> getState() {
@@ -129,7 +129,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Timezone on which the cron_schedule. The value of this field must be a time zone name from the tz database. TZ Database: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
@@ -143,7 +143,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Time the schedule was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

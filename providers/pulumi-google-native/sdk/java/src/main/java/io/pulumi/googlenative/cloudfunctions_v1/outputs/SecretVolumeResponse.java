@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretVersionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretVolumeResponse {
     /**
      * The path within the container to mount the secret volume. For example, setting the mount_path as `/etc/secrets` would mount the secret value files under the `/etc/secrets` directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: /etc/secrets Restricted mount paths: /cloudsql, /dev/log, /pod, /proc, /var/log
@@ -32,12 +32,12 @@ public final class SecretVolumeResponse {
      */
     private final List<SecretVersionResponse> versions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretVolumeResponse(
-        @OutputCustomType.Parameter("mountPath") String mountPath,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("secret") String secret,
-        @OutputCustomType.Parameter("versions") List<SecretVersionResponse> versions) {
+        @CustomType.Parameter("mountPath") String mountPath,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("secret") String secret,
+        @CustomType.Parameter("versions") List<SecretVersionResponse> versions) {
         this.mountPath = mountPath;
         this.project = project;
         this.secret = secret;

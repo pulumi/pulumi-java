@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.enums.AfdMinimumTlsVersion;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * Defines the source of the SSL certificate.
      * 
      */
-    @InputImport(name="certificateType", required=true)
+    @Import(name="certificateType", required=true)
       private final Output<Either<String,AfdCertificateType>> certificateType;
 
     public Output<Either<String,AfdCertificateType>> getCertificateType() {
@@ -37,7 +37,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * TLS protocol version that will be used for Https
      * 
      */
-    @InputImport(name="minimumTlsVersion")
+    @Import(name="minimumTlsVersion")
       private final @Nullable Output<AfdMinimumTlsVersion> minimumTlsVersion;
 
     public Output<AfdMinimumTlsVersion> getMinimumTlsVersion() {
@@ -48,7 +48,7 @@ public final class AFDDomainHttpsParametersArgs extends io.pulumi.resources.Reso
      * Resource reference to the secret. ie. subs/rg/profile/secret
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<ResourceReferenceArgs> secret;
 
     public Output<ResourceReferenceArgs> getSecret() {

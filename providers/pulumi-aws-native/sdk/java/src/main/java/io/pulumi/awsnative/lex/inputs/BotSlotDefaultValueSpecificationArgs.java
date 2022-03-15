@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotSlotDefaultValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
      * A list of slot default values
      * 
      */
-    @InputImport(name="defaultValueList", required=true)
+    @Import(name="defaultValueList", required=true)
       private final Output<List<BotSlotDefaultValueArgs>> defaultValueList;
 
     public Output<List<BotSlotDefaultValueArgs>> getDefaultValueList() {

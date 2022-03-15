@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineSourceTriggerDescriptorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PipelineTriggerDescriptorResponse extends io.pulumi.resources
      * The source trigger that caused the pipeline run.
      * 
      */
-    @InputImport(name="sourceTrigger")
+    @Import(name="sourceTrigger")
       private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
     public Optional<PipelineSourceTriggerDescriptorResponse> getSourceTrigger() {

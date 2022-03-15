@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FutureReservationTimeWindowResponse {
     private final DurationResponse duration;
     private final String endTime;
@@ -18,11 +18,11 @@ public final class FutureReservationTimeWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FutureReservationTimeWindowResponse(
-        @OutputCustomType.Parameter("duration") DurationResponse duration,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("duration") DurationResponse duration,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.endTime = endTime;
         this.startTime = startTime;

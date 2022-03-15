@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsResourcesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
      * A flag to indicate if the insights are enabled on the policy.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -35,7 +35,7 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
      * Workspaces needed to configure the Firewall Policy Insights.
      * 
      */
-    @InputImport(name="logAnalyticsResources")
+    @Import(name="logAnalyticsResources")
       private final @Nullable Output<FirewallPolicyLogAnalyticsResourcesArgs> logAnalyticsResources;
 
     public Output<FirewallPolicyLogAnalyticsResourcesArgs> getLogAnalyticsResources() {
@@ -46,7 +46,7 @@ public final class FirewallPolicyInsightsArgs extends io.pulumi.resources.Resour
      * Number of days the insights should be enabled on the policy.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {

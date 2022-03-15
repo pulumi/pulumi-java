@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CompatibilityResponse {
     /**
      * Full error message if any compatibility issues are found
@@ -34,12 +34,12 @@ public final class CompatibilityResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompatibilityResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("isCompatible") @Nullable Boolean isCompatible,
-        @OutputCustomType.Parameter("issues") @Nullable List<String> issues,
-        @OutputCustomType.Parameter("message") @Nullable String message) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("isCompatible") @Nullable Boolean isCompatible,
+        @CustomType.Parameter("issues") @Nullable List<String> issues,
+        @CustomType.Parameter("message") @Nullable String message) {
         this.description = description;
         this.isCompatible = isCompatible;
         this.issues = issues;

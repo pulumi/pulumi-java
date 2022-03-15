@@ -14,7 +14,7 @@ import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TaskRunRequestResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * How the run should be forced to rerun even if the run request configuration has not changed
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -57,7 +57,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityPropertiesResponse.class, parameters={})
+    @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
@@ -71,7 +71,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * The location of the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -85,7 +85,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -99,7 +99,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * The provisioning state of this task run
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -113,7 +113,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * The request (parameters) for the run
      * 
      */
-    @OutputExport(name="runRequest", type=Object.class, parameters={})
+    @Export(name="runRequest", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> runRequest;
 
     /**
@@ -127,7 +127,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * The result of this task run
      * 
      */
-    @OutputExport(name="runResult", type=RunResponse.class, parameters={})
+    @Export(name="runResult", type=RunResponse.class, parameters={})
     private Output<RunResponse> runResult;
 
     /**
@@ -141,7 +141,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -155,7 +155,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

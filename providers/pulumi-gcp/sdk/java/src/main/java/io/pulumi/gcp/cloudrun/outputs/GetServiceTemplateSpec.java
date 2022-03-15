@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainer;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecVolume;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpec {
     private final Integer containerConcurrency;
     private final List<GetServiceTemplateSpecContainer> containers;
@@ -20,14 +20,14 @@ public final class GetServiceTemplateSpec {
     private final Integer timeoutSeconds;
     private final List<GetServiceTemplateSpecVolume> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpec(
-        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
-        @OutputCustomType.Parameter("containers") List<GetServiceTemplateSpecContainer> containers,
-        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
-        @OutputCustomType.Parameter("servingState") String servingState,
-        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
-        @OutputCustomType.Parameter("volumes") List<GetServiceTemplateSpecVolume> volumes) {
+        @CustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @CustomType.Parameter("containers") List<GetServiceTemplateSpecContainer> containers,
+        @CustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @CustomType.Parameter("servingState") String servingState,
+        @CustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
+        @CustomType.Parameter("volumes") List<GetServiceTemplateSpecVolume> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.serviceAccountName = serviceAccountName;

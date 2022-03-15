@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ClientIPConfig;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SessionAffinityConfig {
     /**
      * clientIP contains the configurations of Client IP based session affinity.
@@ -17,8 +17,8 @@ public final class SessionAffinityConfig {
      */
     private final @Nullable ClientIPConfig clientIP;
 
-    @OutputCustomType.Constructor
-    private SessionAffinityConfig(@OutputCustomType.Parameter("clientIP") @Nullable ClientIPConfig clientIP) {
+    @CustomType.Constructor
+    private SessionAffinityConfig(@CustomType.Parameter("clientIP") @Nullable ClientIPConfig clientIP) {
         this.clientIP = clientIP;
     }
 

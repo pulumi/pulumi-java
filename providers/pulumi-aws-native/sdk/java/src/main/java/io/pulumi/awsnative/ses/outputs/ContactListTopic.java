@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactListTopic {
     private final String defaultSubscriptionStatus;
     /**
@@ -28,12 +28,12 @@ public final class ContactListTopic {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactListTopic(
-        @OutputCustomType.Parameter("defaultSubscriptionStatus") String defaultSubscriptionStatus,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("topicName") String topicName) {
+        @CustomType.Parameter("defaultSubscriptionStatus") String defaultSubscriptionStatus,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("topicName") String topicName) {
         this.defaultSubscriptionStatus = defaultSubscriptionStatus;
         this.description = description;
         this.displayName = displayName;

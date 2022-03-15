@@ -10,7 +10,7 @@ import io.pulumi.awsnative.frauddetector.outputs.EventTypeEventVariable;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeLabel;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class EventType extends io.pulumi.resources.CustomResource {
      * The ARN of the event type.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class EventType extends io.pulumi.resources.CustomResource {
      * The time when the event type was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -54,7 +54,7 @@ public class EventType extends io.pulumi.resources.CustomResource {
      * The description of the event type.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,19 +64,19 @@ public class EventType extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="entityTypes", type=List.class, parameters={EventTypeEntityType.class})
+    @Export(name="entityTypes", type=List.class, parameters={EventTypeEntityType.class})
     private Output<List<EventTypeEntityType>> entityTypes;
 
     public Output<List<EventTypeEntityType>> getEntityTypes() {
         return this.entityTypes;
     }
-    @OutputExport(name="eventVariables", type=List.class, parameters={EventTypeEventVariable.class})
+    @Export(name="eventVariables", type=List.class, parameters={EventTypeEventVariable.class})
     private Output<List<EventTypeEventVariable>> eventVariables;
 
     public Output<List<EventTypeEventVariable>> getEventVariables() {
         return this.eventVariables;
     }
-    @OutputExport(name="labels", type=List.class, parameters={EventTypeLabel.class})
+    @Export(name="labels", type=List.class, parameters={EventTypeLabel.class})
     private Output<List<EventTypeLabel>> labels;
 
     public Output<List<EventTypeLabel>> getLabels() {
@@ -86,7 +86,7 @@ public class EventType extends io.pulumi.resources.CustomResource {
      * The time when the event type was last updated.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -100,7 +100,7 @@ public class EventType extends io.pulumi.resources.CustomResource {
      * The name for the event type
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -114,7 +114,7 @@ public class EventType extends io.pulumi.resources.CustomResource {
      * Tags associated with this event type.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={EventTypeTag.class})
+    @Export(name="tags", type=List.class, parameters={EventTypeTag.class})
     private Output</* @Nullable */ List<EventTypeTag>> tags;
 
     /**

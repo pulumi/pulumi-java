@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.OrganizationArgs;
@@ -26,7 +26,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Addon configurations of the Apigee organization.
      * 
      */
-    @OutputExport(name="addonsConfig", type=GoogleCloudApigeeV1AddonsConfigResponse.class, parameters={})
+    @Export(name="addonsConfig", type=GoogleCloudApigeeV1AddonsConfigResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1AddonsConfigResponse> addonsConfig;
 
     /**
@@ -40,7 +40,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    @OutputExport(name="analyticsRegion", type=String.class, parameters={})
+    @Export(name="analyticsRegion", type=String.class, parameters={})
     private Output<String> analyticsRegion;
 
     /**
@@ -54,7 +54,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Not used by Apigee.
      * 
      */
-    @OutputExport(name="attributes", type=List.class, parameters={String.class})
+    @Export(name="attributes", type=List.class, parameters={String.class})
     private Output<List<String>> attributes;
 
     /**
@@ -68,7 +68,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.
      * 
      */
-    @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
+    @Export(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
     /**
@@ -82,7 +82,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
      * 
      */
-    @OutputExport(name="billingType", type=String.class, parameters={})
+    @Export(name="billingType", type=String.class, parameters={})
     private Output<String> billingType;
 
     /**
@@ -96,7 +96,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
      * 
      */
-    @OutputExport(name="caCertificate", type=String.class, parameters={})
+    @Export(name="caCertificate", type=String.class, parameters={})
     private Output<String> caCertificate;
 
     /**
@@ -110,7 +110,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Time that the Apigee organization was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -124,7 +124,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Not used by Apigee.
      * 
      */
-    @OutputExport(name="customerName", type=String.class, parameters={})
+    @Export(name="customerName", type=String.class, parameters={})
     private Output<String> customerName;
 
     /**
@@ -138,7 +138,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Description of the Apigee organization.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -152,7 +152,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Display name for the Apigee organization. Unused, but reserved for future use.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -166,7 +166,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * List of environments in the Apigee organization.
      * 
      */
-    @OutputExport(name="environments", type=List.class, parameters={String.class})
+    @Export(name="environments", type=List.class, parameters={String.class})
     private Output<List<String>> environments;
 
     /**
@@ -180,7 +180,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Time that the Apigee organization is scheduled for deletion.
      * 
      */
-    @OutputExport(name="expiresAt", type=String.class, parameters={})
+    @Export(name="expiresAt", type=String.class, parameters={})
     private Output<String> expiresAt;
 
     /**
@@ -194,7 +194,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Time that the Apigee organization was last modified in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -208,7 +208,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Name of the Apigee organization.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -222,7 +222,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Configuration for the Portals settings.
      * 
      */
-    @OutputExport(name="portalDisabled", type=Boolean.class, parameters={})
+    @Export(name="portalDisabled", type=Boolean.class, parameters={})
     private Output<Boolean> portalDisabled;
 
     /**
@@ -236,7 +236,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Project ID associated with the Apigee organization.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -250,7 +250,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Properties defined in the Apigee organization profile.
      * 
      */
-    @OutputExport(name="properties", type=GoogleCloudApigeeV1PropertiesResponse.class, parameters={})
+    @Export(name="properties", type=GoogleCloudApigeeV1PropertiesResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1PropertiesResponse> properties;
 
     /**
@@ -264,7 +264,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
      * 
      */
-    @OutputExport(name="runtimeDatabaseEncryptionKeyName", type=String.class, parameters={})
+    @Export(name="runtimeDatabaseEncryptionKeyName", type=String.class, parameters={})
     private Output<String> runtimeDatabaseEncryptionKeyName;
 
     /**
@@ -278,7 +278,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Runtime type of the Apigee organization based on the Apigee subscription purchased.
      * 
      */
-    @OutputExport(name="runtimeType", type=String.class, parameters={})
+    @Export(name="runtimeType", type=String.class, parameters={})
     private Output<String> runtimeType;
 
     /**
@@ -292,7 +292,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * State of the organization. Values other than ACTIVE means the resource is not ready to use.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -306,7 +306,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Not used by Apigee.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

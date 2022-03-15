@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FunctionDeadLetterConfigGetArgs extends io.pulumi.resources.R
      * ARN of an SNS topic or SQS queue to notify when an invocation fails. If this option is used, the function's IAM role must be granted suitable access to write to the target object, which means allowing either the `sns:Publish` or `sqs:SendMessage` action on this ARN, depending on which service is targeted.
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

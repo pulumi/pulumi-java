@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute.inputs;
 
 import io.pulumi.azurenative.hybridcompute.inputs.MachineExtensionInstanceViewResponseStatus;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * The machine extension name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -34,7 +34,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * Instance view status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable MachineExtensionInstanceViewResponseStatus status;
 
     public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
@@ -45,7 +45,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -56,7 +56,7 @@ public final class MachineExtensionInstanceViewResponse extends io.pulumi.resour
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion", required=true)
+    @Import(name="typeHandlerVersion", required=true)
       private final String typeHandlerVersion;
 
     public String getTypeHandlerVersion() {

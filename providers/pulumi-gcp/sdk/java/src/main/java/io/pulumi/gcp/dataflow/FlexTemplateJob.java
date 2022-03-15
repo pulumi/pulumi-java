@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataflow.FlexTemplateJobArgs;
@@ -55,7 +55,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * Template.
      * 
      */
-    @OutputExport(name="containerSpecGcsPath", type=String.class, parameters={})
+    @Export(name="containerSpecGcsPath", type=String.class, parameters={})
     private Output<String> containerSpecGcsPath;
 
     /**
@@ -70,7 +70,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * The unique ID of this job.
      * 
      */
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     /**
@@ -94,7 +94,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Deprecated until the API supports this field */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> labels;
 
     /**
@@ -114,7 +114,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * A unique name for the resource, required by Dataflow.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -129,7 +129,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * deletion during `pulumi destroy`.  See above note.
      * 
      */
-    @OutputExport(name="onDelete", type=String.class, parameters={})
+    @Export(name="onDelete", type=String.class, parameters={})
     private Output</* @Nullable */ String> onDelete;
 
     /**
@@ -146,7 +146,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> parameters;
 
     /**
@@ -163,7 +163,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -178,7 +178,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * The region in which the created job should run.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -192,7 +192,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

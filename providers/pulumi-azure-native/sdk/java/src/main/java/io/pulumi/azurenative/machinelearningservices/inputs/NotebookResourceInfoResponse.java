@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.NotebookPreparationErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
 
     public static final NotebookResourceInfoResponse Empty = new NotebookResourceInfoResponse();
 
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
@@ -26,7 +26,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
      * The error that occurs when preparing notebook.
      * 
      */
-    @InputImport(name="notebookPreparationError")
+    @Import(name="notebookPreparationError")
       private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
 
     public Optional<NotebookPreparationErrorResponse> getNotebookPreparationError() {
@@ -37,7 +37,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
      * the data plane resourceId that used to initialize notebook component
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

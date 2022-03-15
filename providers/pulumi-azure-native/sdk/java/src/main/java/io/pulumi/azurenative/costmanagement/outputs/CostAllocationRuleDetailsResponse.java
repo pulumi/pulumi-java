@@ -5,12 +5,12 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.SourceCostAllocationResourceResponse;
 import io.pulumi.azurenative.costmanagement.outputs.TargetCostAllocationResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CostAllocationRuleDetailsResponse {
     /**
      * Source resources for cost allocation. At this time, this list can contain no more than one element.
@@ -23,10 +23,10 @@ public final class CostAllocationRuleDetailsResponse {
      */
     private final @Nullable List<TargetCostAllocationResourceResponse> targetResources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CostAllocationRuleDetailsResponse(
-        @OutputCustomType.Parameter("sourceResources") @Nullable List<SourceCostAllocationResourceResponse> sourceResources,
-        @OutputCustomType.Parameter("targetResources") @Nullable List<TargetCostAllocationResourceResponse> targetResources) {
+        @CustomType.Parameter("sourceResources") @Nullable List<SourceCostAllocationResourceResponse> sourceResources,
+        @CustomType.Parameter("targetResources") @Nullable List<TargetCostAllocationResourceResponse> targetResources) {
         this.sourceResources = sourceResources;
         this.targetResources = targetResources;
     }

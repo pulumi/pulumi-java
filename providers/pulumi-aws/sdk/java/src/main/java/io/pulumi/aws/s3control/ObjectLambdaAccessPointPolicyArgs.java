@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
 
     public static final ObjectLambdaAccessPointPolicyArgs Empty = new ObjectLambdaAccessPointPolicyArgs();
 
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -25,7 +25,7 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
      * The name of the Object Lambda Access Point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -36,7 +36,7 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
      * The Object Lambda Access Point resource policy document.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

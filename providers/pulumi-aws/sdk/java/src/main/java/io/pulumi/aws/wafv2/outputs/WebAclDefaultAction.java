@@ -5,12 +5,12 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclDefaultActionAllow;
 import io.pulumi.aws.wafv2.outputs.WebAclDefaultActionBlock;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclDefaultAction {
     /**
      * Specifies that AWS WAF should allow requests by default. See Allow below for details.
@@ -23,10 +23,10 @@ public final class WebAclDefaultAction {
      */
     private final @Nullable WebAclDefaultActionBlock block;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclDefaultAction(
-        @OutputCustomType.Parameter("allow") @Nullable WebAclDefaultActionAllow allow,
-        @OutputCustomType.Parameter("block") @Nullable WebAclDefaultActionBlock block) {
+        @CustomType.Parameter("allow") @Nullable WebAclDefaultActionAllow allow,
+        @CustomType.Parameter("block") @Nullable WebAclDefaultActionBlock block) {
         this.allow = allow;
         this.block = block;
     }

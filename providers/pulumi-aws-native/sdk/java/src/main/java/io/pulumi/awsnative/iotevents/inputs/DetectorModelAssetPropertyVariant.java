@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * The asset property value is a Boolean value that must be `TRUE` or `FALSE`. You can also specify an expression. If you use an expression, the evaluated result should be a Boolean value.
      * 
      */
-    @InputImport(name="booleanValue")
+    @Import(name="booleanValue")
       private final @Nullable String booleanValue;
 
     public Optional<String> getBooleanValue() {
@@ -33,7 +33,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * The asset property value is a double. You can also specify an expression. If you use an expression, the evaluated result should be a double.
      * 
      */
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable String doubleValue;
 
     public Optional<String> getDoubleValue() {
@@ -44,7 +44,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * The asset property value is an integer. You can also specify an expression. If you use an expression, the evaluated result should be an integer.
      * 
      */
-    @InputImport(name="integerValue")
+    @Import(name="integerValue")
       private final @Nullable String integerValue;
 
     public Optional<String> getIntegerValue() {
@@ -55,7 +55,7 @@ public final class DetectorModelAssetPropertyVariant extends io.pulumi.resources
      * The asset property value is a string. You can also specify an expression. If you use an expression, the evaluated result should be a string.
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable String stringValue;
 
     public Optional<String> getStringValue() {

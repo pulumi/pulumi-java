@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.glue.SchemaVersionArgs;
 import io.pulumi.awsnative.glue.outputs.SchemaVersionSchema;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:glue:SchemaVersion")
 public class SchemaVersion extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="schema", type=SchemaVersionSchema.class, parameters={})
+    @Export(name="schema", type=SchemaVersionSchema.class, parameters={})
     private Output<SchemaVersionSchema> schema;
 
     public Output<SchemaVersionSchema> getSchema() {
@@ -28,7 +28,7 @@ public class SchemaVersion extends io.pulumi.resources.CustomResource {
      * Complete definition of the schema in plain-text.
      * 
      */
-    @OutputExport(name="schemaDefinition", type=String.class, parameters={})
+    @Export(name="schemaDefinition", type=String.class, parameters={})
     private Output<String> schemaDefinition;
 
     /**
@@ -42,7 +42,7 @@ public class SchemaVersion extends io.pulumi.resources.CustomResource {
      * Represents the version ID associated with the schema version.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**

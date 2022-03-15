@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.ElasticPoolPerDatabaseSettingsResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetElasticPoolResult {
     /**
      * The creation date of the elastic pool (ISO8601 format).
@@ -89,22 +89,22 @@ public final class GetElasticPoolResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetElasticPoolResult(
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
-        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("perDatabaseSettings") @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @CustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("perDatabaseSettings") @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.creationDate = creationDate;
         this.id = id;
         this.kind = kind;

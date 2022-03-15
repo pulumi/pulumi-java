@@ -14,7 +14,7 @@ import io.pulumi.azurenative.compute.inputs.PurchasePlanArgs;
 import io.pulumi.azurenative.compute.inputs.SnapshotSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
      */
-    @InputImport(name="creationData", required=true)
+    @Import(name="creationData", required=true)
       private final Output<CreationDataArgs> creationData;
 
     public Output<CreationDataArgs> getCreationData() {
@@ -42,7 +42,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
      */
-    @InputImport(name="diskAccessId")
+    @Import(name="diskAccessId")
       private final @Nullable Output<String> diskAccessId;
 
     public Output<String> getDiskAccessId() {
@@ -53,7 +53,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -64,7 +64,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionArgs> encryption;
 
     public Output<EncryptionArgs> getEncryption() {
@@ -75,7 +75,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
      */
-    @InputImport(name="encryptionSettingsCollection")
+    @Import(name="encryptionSettingsCollection")
       private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
     public Output<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
@@ -86,7 +86,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location where the snapshot will be created. Extended location cannot be changed.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -97,7 +97,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    @InputImport(name="hyperVGeneration")
+    @Import(name="hyperVGeneration")
       private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
     public Output<Either<String,HyperVGeneration>> getHyperVGeneration() {
@@ -108,7 +108,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
      * 
      */
-    @InputImport(name="incremental")
+    @Import(name="incremental")
       private final @Nullable Output<Boolean> incremental;
 
     public Output<Boolean> getIncremental() {
@@ -119,7 +119,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -130,7 +130,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Policy for accessing the disk via network.
      * 
      */
-    @InputImport(name="networkAccessPolicy")
+    @Import(name="networkAccessPolicy")
       private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
     public Output<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
@@ -141,7 +141,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The Operating System type.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<OperatingSystemTypes> osType;
 
     public Output<OperatingSystemTypes> getOsType() {
@@ -152,7 +152,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Purchase plan information for the image from which the source disk for the snapshot was originally created.
      * 
      */
-    @InputImport(name="purchasePlan")
+    @Import(name="purchasePlan")
       private final @Nullable Output<PurchasePlanArgs> purchasePlan;
 
     public Output<PurchasePlanArgs> getPurchasePlan() {
@@ -163,7 +163,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -174,7 +174,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SnapshotSkuArgs> sku;
 
     public Output<SnapshotSkuArgs> getSku() {
@@ -185,7 +185,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the snapshot that is being created. The name can't be changed after the snapshot is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The max name length is 80 characters.
      * 
      */
-    @InputImport(name="snapshotName")
+    @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
@@ -196,7 +196,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the OS on a snapshot supports hibernation.
      * 
      */
-    @InputImport(name="supportsHibernation")
+    @Import(name="supportsHibernation")
       private final @Nullable Output<Boolean> supportsHibernation;
 
     public Output<Boolean> getSupportsHibernation() {
@@ -207,7 +207,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

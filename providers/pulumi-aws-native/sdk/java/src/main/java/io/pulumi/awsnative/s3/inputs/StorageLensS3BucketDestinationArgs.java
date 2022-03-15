@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationFormat;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVersion;
 import io.pulumi.awsnative.s3.inputs.StorageLensEncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * The AWS account ID that owns the destination S3 bucket.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -36,14 +36,14 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * The ARN of the bucket to which Amazon S3 Storage Lens exports will be placed.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<StorageLensEncryptionArgs> encryption;
 
     public Output<StorageLensEncryptionArgs> getEncryption() {
@@ -54,7 +54,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * Specifies the file format to use when exporting Amazon S3 Storage Lens metrics export.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<StorageLensS3BucketDestinationFormat> format;
 
     public Output<StorageLensS3BucketDestinationFormat> getFormat() {
@@ -65,7 +65,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * The version of the output schema to use when exporting Amazon S3 Storage Lens metrics.
      * 
      */
-    @InputImport(name="outputSchemaVersion", required=true)
+    @Import(name="outputSchemaVersion", required=true)
       private final Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
 
     public Output<StorageLensS3BucketDestinationOutputSchemaVersion> getOutputSchemaVersion() {
@@ -76,7 +76,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * The prefix to use for Amazon S3 Storage Lens export.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

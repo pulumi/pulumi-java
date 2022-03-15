@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomDataSourceLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -43,13 +43,13 @@ public final class CustomDataSourceLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomDataSourceLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;

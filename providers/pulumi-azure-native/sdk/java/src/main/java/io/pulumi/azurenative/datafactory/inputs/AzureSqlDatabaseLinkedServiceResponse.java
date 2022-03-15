@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.azurenative.datafactory.inputs.SqlAlwaysEncryptedPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * Sql always encrypted properties.
      * 
      */
-    @InputImport(name="alwaysEncryptedSettings")
+    @Import(name="alwaysEncryptedSettings")
       private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
 
     public Optional<SqlAlwaysEncryptedPropertiesResponse> getAlwaysEncryptedSettings() {
@@ -43,7 +43,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -54,7 +54,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="azureCloudType")
+    @Import(name="azureCloudType")
       private final @Nullable Object azureCloudType;
 
     public Optional<Object> getAzureCloudType() {
@@ -65,7 +65,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -76,7 +76,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Object connectionString;
 
     public Object getConnectionString() {
@@ -87,7 +87,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -98,7 +98,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -109,7 +109,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -120,7 +120,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -131,7 +131,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The Azure key vault secret reference of password in connection string.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable AzureKeyVaultSecretReferenceResponse password;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> getPassword() {
@@ -142,7 +142,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The ID of the service principal used to authenticate against Azure SQL Database. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -153,7 +153,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The key of the service principal used to authenticate against Azure SQL Database.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
@@ -164,7 +164,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
@@ -176,7 +176,7 @@ public final class AzureSqlDatabaseLinkedServiceResponse extends io.pulumi.resou
      * Expected value is 'AzureSqlDatabase'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * Whether major version upgrades can be applied during maintenance period
@@ -166,39 +166,39 @@ public final class GetClusterResult {
      */
     private final List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("allowVersionUpgrade") Boolean allowVersionUpgrade,
-        @OutputCustomType.Parameter("automatedSnapshotRetentionPeriod") Integer automatedSnapshotRetentionPeriod,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier,
-        @OutputCustomType.Parameter("clusterParameterGroupName") String clusterParameterGroupName,
-        @OutputCustomType.Parameter("clusterPublicKey") String clusterPublicKey,
-        @OutputCustomType.Parameter("clusterRevisionNumber") String clusterRevisionNumber,
-        @OutputCustomType.Parameter("clusterSecurityGroups") List<String> clusterSecurityGroups,
-        @OutputCustomType.Parameter("clusterSubnetGroupName") String clusterSubnetGroupName,
-        @OutputCustomType.Parameter("clusterType") String clusterType,
-        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("elasticIp") String elasticIp,
-        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("enhancedVpcRouting") Boolean enhancedVpcRouting,
-        @OutputCustomType.Parameter("iamRoles") List<String> iamRoles,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("masterUsername") String masterUsername,
-        @OutputCustomType.Parameter("nodeType") String nodeType,
-        @OutputCustomType.Parameter("numberOfNodes") Integer numberOfNodes,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("preferredMaintenanceWindow") String preferredMaintenanceWindow,
-        @OutputCustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
-        @OutputCustomType.Parameter("s3KeyPrefix") String s3KeyPrefix,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("allowVersionUpgrade") Boolean allowVersionUpgrade,
+        @CustomType.Parameter("automatedSnapshotRetentionPeriod") Integer automatedSnapshotRetentionPeriod,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("clusterIdentifier") String clusterIdentifier,
+        @CustomType.Parameter("clusterParameterGroupName") String clusterParameterGroupName,
+        @CustomType.Parameter("clusterPublicKey") String clusterPublicKey,
+        @CustomType.Parameter("clusterRevisionNumber") String clusterRevisionNumber,
+        @CustomType.Parameter("clusterSecurityGroups") List<String> clusterSecurityGroups,
+        @CustomType.Parameter("clusterSubnetGroupName") String clusterSubnetGroupName,
+        @CustomType.Parameter("clusterType") String clusterType,
+        @CustomType.Parameter("clusterVersion") String clusterVersion,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("elasticIp") String elasticIp,
+        @CustomType.Parameter("enableLogging") Boolean enableLogging,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("enhancedVpcRouting") Boolean enhancedVpcRouting,
+        @CustomType.Parameter("iamRoles") List<String> iamRoles,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("masterUsername") String masterUsername,
+        @CustomType.Parameter("nodeType") String nodeType,
+        @CustomType.Parameter("numberOfNodes") Integer numberOfNodes,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("preferredMaintenanceWindow") String preferredMaintenanceWindow,
+        @CustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
+        @CustomType.Parameter("s3KeyPrefix") String s3KeyPrefix,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId,
+        @CustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         this.availabilityZone = availabilityZone;

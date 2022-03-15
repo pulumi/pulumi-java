@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1beta4.inputs.SqlServerDatabaseDetailsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud SQL charset value.
      * 
      */
-    @InputImport(name="charset")
+    @Import(name="charset")
       private final @Nullable Output<String> charset;
 
     public Output<String> getCharset() {
@@ -30,7 +30,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud SQL collation value.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -41,7 +41,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -52,7 +52,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * This is always `sql#database`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -63,7 +63,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database in the Cloud SQL instance. This does not include the project ID or instance name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed if applicable.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -85,14 +85,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of this resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
         return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
-    @InputImport(name="sqlserverDatabaseDetails")
+    @Import(name="sqlserverDatabaseDetails")
       private final @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 
     public Output<SqlServerDatabaseDetailsArgs> getSqlserverDatabaseDetails() {

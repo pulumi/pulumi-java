@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.signer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningJobSignedObjectS3 {
     private final String bucket;
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSigningJobSignedObjectS3(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("key") String key) {
         this.bucket = bucket;
         this.key = key;
     }

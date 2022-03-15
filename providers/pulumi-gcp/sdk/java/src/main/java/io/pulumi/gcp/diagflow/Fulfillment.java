@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.FulfillmentArgs;
@@ -42,7 +42,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * The human-readable name of the fulfillment, unique within the agent.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -56,7 +56,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * Whether fulfillment is enabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -71,7 +71,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="features", type=List.class, parameters={FulfillmentFeature.class})
+    @Export(name="features", type=List.class, parameters={FulfillmentFeature.class})
     private Output</* @Nullable */ List<FulfillmentFeature>> features;
 
     /**
@@ -87,7 +87,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="genericWebService", type=FulfillmentGenericWebService.class, parameters={})
+    @Export(name="genericWebService", type=FulfillmentGenericWebService.class, parameters={})
     private Output</* @Nullable */ FulfillmentGenericWebService> genericWebService;
 
     /**
@@ -103,7 +103,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * ID>/locations/<Location ID>/agent/fulfillment
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class Fulfillment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoSignatureArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LinkArgs;
 import java.util.List;
@@ -20,14 +20,14 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
 
     public static final GrafeasV1beta1IntotoDetailsArgs Empty = new GrafeasV1beta1IntotoDetailsArgs();
 
-    @InputImport(name="signatures")
+    @Import(name="signatures")
       private final @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
     public Output<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
         return this.signatures == null ? Output.empty() : this.signatures;
     }
 
-    @InputImport(name="signed")
+    @Import(name="signed")
       private final @Nullable Output<LinkArgs> signed;
 
     public Output<LinkArgs> getSigned() {

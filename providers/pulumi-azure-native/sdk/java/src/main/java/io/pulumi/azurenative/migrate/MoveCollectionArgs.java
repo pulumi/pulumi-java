@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.IdentityArgs;
 import io.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the MSI properties of the Move Collection.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -32,7 +32,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * The Move Collection Name.
      * 
      */
-    @InputImport(name="moveCollectionName")
+    @Import(name="moveCollectionName")
       private final @Nullable Output<String> moveCollectionName;
 
     public Output<String> getMoveCollectionName() {
@@ -54,7 +54,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the move collection properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MoveCollectionPropertiesArgs> properties;
 
     public Output<MoveCollectionPropertiesArgs> getProperties() {
@@ -65,7 +65,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

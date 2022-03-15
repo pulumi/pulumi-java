@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
      * Schema name for interim table. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="interimSchemaName")
+    @Import(name="interimSchemaName")
       private final @Nullable Output<Object> interimSchemaName;
 
     public Output<Object> getInterimSchemaName() {
@@ -33,7 +33,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
      * Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<Object> keys;
 
     public Output<Object> getKeys() {
@@ -44,7 +44,7 @@ public final class SqlUpsertSettingsArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to use temp db for upsert interim table. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="useTempDB")
+    @Import(name="useTempDB")
       private final @Nullable Output<Object> useTempDB;
 
     public Output<Object> getUseTempDB() {

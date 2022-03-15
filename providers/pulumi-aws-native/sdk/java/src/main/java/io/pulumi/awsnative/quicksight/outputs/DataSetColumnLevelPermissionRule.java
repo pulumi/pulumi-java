@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSetColumnLevelPermissionRule {
     private final @Nullable List<String> columnNames;
     private final @Nullable List<String> principals;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSetColumnLevelPermissionRule(
-        @OutputCustomType.Parameter("columnNames") @Nullable List<String> columnNames,
-        @OutputCustomType.Parameter("principals") @Nullable List<String> principals) {
+        @CustomType.Parameter("columnNames") @Nullable List<String> columnNames,
+        @CustomType.Parameter("principals") @Nullable List<String> principals) {
         this.columnNames = columnNames;
         this.principals = principals;
     }

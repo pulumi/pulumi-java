@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * The base authority for Azure Active Directory authentication.
      * 
      */
-    @InputImport(name="aadAuthority", required=true)
+    @Import(name="aadAuthority", required=true)
       private final Output<String> aadAuthority;
 
     public Output<String> getAadAuthority() {
@@ -32,7 +32,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -43,7 +43,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="audience", required=true)
+    @Import(name="audience", required=true)
       private final Output<String> audience;
 
     public Output<String> getAudience() {
@@ -54,7 +54,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -65,7 +65,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
     public Output<String> getTenantId() {

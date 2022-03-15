@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricValueStatus;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExternalMetricStatus {
     /**
      * current contains the current value for the given metric
@@ -21,10 +21,10 @@ public final class ExternalMetricStatus {
      */
     private final MetricIdentifier metric;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalMetricStatus(
-        @OutputCustomType.Parameter("current") MetricValueStatus current,
-        @OutputCustomType.Parameter("metric") MetricIdentifier metric) {
+        @CustomType.Parameter("current") MetricValueStatus current,
+        @CustomType.Parameter("metric") MetricIdentifier metric) {
         this.current = current;
         this.metric = metric;
     }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorCloudwatchConfig
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRDSSourceConfig;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRedshiftSourceConfig;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorS3SourceConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,35 +18,35 @@ public final class AnomalyDetectorMetricSource extends io.pulumi.resources.Invok
 
     public static final AnomalyDetectorMetricSource Empty = new AnomalyDetectorMetricSource();
 
-    @InputImport(name="appFlowConfig")
+    @Import(name="appFlowConfig")
       private final @Nullable AnomalyDetectorAppFlowConfig appFlowConfig;
 
     public Optional<AnomalyDetectorAppFlowConfig> getAppFlowConfig() {
         return this.appFlowConfig == null ? Optional.empty() : Optional.ofNullable(this.appFlowConfig);
     }
 
-    @InputImport(name="cloudwatchConfig")
+    @Import(name="cloudwatchConfig")
       private final @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig;
 
     public Optional<AnomalyDetectorCloudwatchConfig> getCloudwatchConfig() {
         return this.cloudwatchConfig == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchConfig);
     }
 
-    @InputImport(name="rDSSourceConfig")
+    @Import(name="rDSSourceConfig")
       private final @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig;
 
     public Optional<AnomalyDetectorRDSSourceConfig> getRDSSourceConfig() {
         return this.rDSSourceConfig == null ? Optional.empty() : Optional.ofNullable(this.rDSSourceConfig);
     }
 
-    @InputImport(name="redshiftSourceConfig")
+    @Import(name="redshiftSourceConfig")
       private final @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig;
 
     public Optional<AnomalyDetectorRedshiftSourceConfig> getRedshiftSourceConfig() {
         return this.redshiftSourceConfig == null ? Optional.empty() : Optional.ofNullable(this.redshiftSourceConfig);
     }
 
-    @InputImport(name="s3SourceConfig")
+    @Import(name="s3SourceConfig")
       private final @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig;
 
     public Optional<AnomalyDetectorS3SourceConfig> getS3SourceConfig() {

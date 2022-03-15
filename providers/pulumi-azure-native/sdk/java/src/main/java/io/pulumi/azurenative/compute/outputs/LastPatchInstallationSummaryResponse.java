@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LastPatchInstallationSummaryResponse {
     /**
      * The errors that were encountered during execution of the operation. The details array contains the list of them.
@@ -68,19 +68,19 @@ public final class LastPatchInstallationSummaryResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LastPatchInstallationSummaryResponse(
-        @OutputCustomType.Parameter("error") ApiErrorResponse error,
-        @OutputCustomType.Parameter("excludedPatchCount") Integer excludedPatchCount,
-        @OutputCustomType.Parameter("failedPatchCount") Integer failedPatchCount,
-        @OutputCustomType.Parameter("installationActivityId") String installationActivityId,
-        @OutputCustomType.Parameter("installedPatchCount") Integer installedPatchCount,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("maintenanceWindowExceeded") Boolean maintenanceWindowExceeded,
-        @OutputCustomType.Parameter("notSelectedPatchCount") Integer notSelectedPatchCount,
-        @OutputCustomType.Parameter("pendingPatchCount") Integer pendingPatchCount,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("error") ApiErrorResponse error,
+        @CustomType.Parameter("excludedPatchCount") Integer excludedPatchCount,
+        @CustomType.Parameter("failedPatchCount") Integer failedPatchCount,
+        @CustomType.Parameter("installationActivityId") String installationActivityId,
+        @CustomType.Parameter("installedPatchCount") Integer installedPatchCount,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("maintenanceWindowExceeded") Boolean maintenanceWindowExceeded,
+        @CustomType.Parameter("notSelectedPatchCount") Integer notSelectedPatchCount,
+        @CustomType.Parameter("pendingPatchCount") Integer pendingPatchCount,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status) {
         this.error = error;
         this.excludedPatchCount = excludedPatchCount;
         this.failedPatchCount = failedPatchCount;

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 import io.pulumi.azurenative.deploymentmanager.outputs.MessageResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ResourceOperationResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepOperationInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RolloutStepResponse {
     /**
      * Supplementary informative messages during rollout.
@@ -46,14 +46,14 @@ public final class RolloutStepResponse {
      */
     private final @Nullable String stepGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RolloutStepResponse(
-        @OutputCustomType.Parameter("messages") List<MessageResponse> messages,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationInfo") StepOperationInfoResponse operationInfo,
-        @OutputCustomType.Parameter("resourceOperations") List<ResourceOperationResponse> resourceOperations,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("stepGroup") @Nullable String stepGroup) {
+        @CustomType.Parameter("messages") List<MessageResponse> messages,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationInfo") StepOperationInfoResponse operationInfo,
+        @CustomType.Parameter("resourceOperations") List<ResourceOperationResponse> resourceOperations,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("stepGroup") @Nullable String stepGroup) {
         this.messages = messages;
         this.name = name;
         this.operationInfo = operationInfo;

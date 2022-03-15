@@ -18,7 +18,7 @@ import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.azurenative.eventgrid.outputs.WebHookEventSubscriptionDestinationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -46,7 +46,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The DeadLetter destination of the event subscription.
      * 
      */
-    @OutputExport(name="deadLetterDestination", type=StorageBlobDeadLetterDestinationResponse.class, parameters={})
+    @Export(name="deadLetterDestination", type=StorageBlobDeadLetterDestinationResponse.class, parameters={})
     private Output</* @Nullable */ StorageBlobDeadLetterDestinationResponse> deadLetterDestination;
 
     /**
@@ -60,7 +60,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Information about the destination where events have to be delivered for the event subscription.
      * 
      */
-    @OutputExport(name="destination", type=Object.class, parameters={})
+    @Export(name="destination", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> destination;
 
     /**
@@ -74,7 +74,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The event delivery schema for the event subscription.
      * 
      */
-    @OutputExport(name="eventDeliverySchema", type=String.class, parameters={})
+    @Export(name="eventDeliverySchema", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventDeliverySchema;
 
     /**
@@ -88,7 +88,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Expiration time of the event subscription.
      * 
      */
-    @OutputExport(name="expirationTimeUtc", type=String.class, parameters={})
+    @Export(name="expirationTimeUtc", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationTimeUtc;
 
     /**
@@ -102,7 +102,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Information about the filter for the event subscription.
      * 
      */
-    @OutputExport(name="filter", type=EventSubscriptionFilterResponse.class, parameters={})
+    @Export(name="filter", type=EventSubscriptionFilterResponse.class, parameters={})
     private Output</* @Nullable */ EventSubscriptionFilterResponse> filter;
 
     /**
@@ -116,7 +116,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * List of user defined labels.
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={String.class})
+    @Export(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
     /**
@@ -130,7 +130,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -144,7 +144,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Provisioning state of the event subscription.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -158,7 +158,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The retry policy for events. This can be used to configure maximum number of delivery attempts and time to live for events.
      * 
      */
-    @OutputExport(name="retryPolicy", type=RetryPolicyResponse.class, parameters={})
+    @Export(name="retryPolicy", type=RetryPolicyResponse.class, parameters={})
     private Output</* @Nullable */ RetryPolicyResponse> retryPolicy;
 
     /**
@@ -172,7 +172,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The system metadata relating to Event Subscription resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -186,7 +186,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Name of the topic of the event subscription.
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**
@@ -200,7 +200,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersProcessLaunchedAtDateRangeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InsightFiltersProcessLaunchedAtArgs extends io.pulumi.resourc
      * A configuration block of the date range for the date filter. See date_range below for more details.
      * 
      */
-    @InputImport(name="dateRange")
+    @Import(name="dateRange")
       private final @Nullable Output<InsightFiltersProcessLaunchedAtDateRangeArgs> dateRange;
 
     public Output<InsightFiltersProcessLaunchedAtDateRangeArgs> getDateRange() {
@@ -30,7 +30,7 @@ public final class InsightFiltersProcessLaunchedAtArgs extends io.pulumi.resourc
      * An end date for the date filter. Required with `start` if `date_range` is not specified.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Output<String> end;
 
     public Output<String> getEnd() {
@@ -41,7 +41,7 @@ public final class InsightFiltersProcessLaunchedAtArgs extends io.pulumi.resourc
      * A start date for the date filter. Required with `end` if `date_range` is not specified.
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Output<String> start;
 
     public Output<String> getStart() {

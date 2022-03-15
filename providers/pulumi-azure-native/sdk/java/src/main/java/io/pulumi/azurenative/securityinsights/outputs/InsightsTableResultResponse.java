@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.InsightsTableResultResponseColumns;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InsightsTableResultResponse {
     /**
      * Columns Metadata of the table
@@ -23,10 +23,10 @@ public final class InsightsTableResultResponse {
      */
     private final @Nullable List<List<String>> rows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InsightsTableResultResponse(
-        @OutputCustomType.Parameter("columns") @Nullable List<InsightsTableResultResponseColumns> columns,
-        @OutputCustomType.Parameter("rows") @Nullable List<List<String>> rows) {
+        @CustomType.Parameter("columns") @Nullable List<InsightsTableResultResponseColumns> columns,
+        @CustomType.Parameter("rows") @Nullable List<List<String>> rows) {
         this.columns = columns;
         this.rows = rows;
     }

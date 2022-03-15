@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range;
 
     public Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> getRange() {
@@ -41,7 +41,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeArgs extends io.pulumi.res
      * `range.min <= X <= range.max` for a good window.
      * 
      */
-    @InputImport(name="timeSeries", required=true)
+    @Import(name="timeSeries", required=true)
       private final Output<String> timeSeries;
 
     public Output<String> getTimeSeries() {

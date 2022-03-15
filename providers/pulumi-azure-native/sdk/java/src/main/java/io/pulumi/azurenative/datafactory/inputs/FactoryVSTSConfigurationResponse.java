@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * Account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -33,7 +33,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * Collaboration branch.
      * 
      */
-    @InputImport(name="collaborationBranch", required=true)
+    @Import(name="collaborationBranch", required=true)
       private final String collaborationBranch;
 
     public String getCollaborationBranch() {
@@ -44,7 +44,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * Last commit id.
      * 
      */
-    @InputImport(name="lastCommitId")
+    @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
 
     public Optional<String> getLastCommitId() {
@@ -55,7 +55,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * VSTS project name.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final String projectName;
 
     public String getProjectName() {
@@ -66,7 +66,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * Repository name.
      * 
      */
-    @InputImport(name="repositoryName", required=true)
+    @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
     public String getRepositoryName() {
@@ -77,7 +77,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * Root folder.
      * 
      */
-    @InputImport(name="rootFolder", required=true)
+    @Import(name="rootFolder", required=true)
       private final String rootFolder;
 
     public String getRootFolder() {
@@ -88,7 +88,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * VSTS tenant id.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -100,7 +100,7 @@ public final class FactoryVSTSConfigurationResponse extends io.pulumi.resources.
      * Expected value is 'FactoryVSTSConfiguration'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

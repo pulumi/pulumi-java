@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.FieldResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TypeResponse {
     /**
      * The (sub) fields this type has (if not primitive).
@@ -27,11 +27,11 @@ public final class TypeResponse {
      */
     private final String primitive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TypeResponse(
-        @OutputCustomType.Parameter("fields") List<FieldResponse> fields,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primitive") String primitive) {
+        @CustomType.Parameter("fields") List<FieldResponse> fields,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primitive") String primitive) {
         this.fields = fields;
         this.name = name;
         this.primitive = primitive;

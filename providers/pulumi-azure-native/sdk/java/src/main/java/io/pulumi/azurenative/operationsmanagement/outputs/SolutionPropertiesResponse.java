@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SolutionPropertiesResponse {
     /**
      * The azure resources that will be contained within the solutions. They will be locked and gets deleted automatically when the solution is deleted.
@@ -32,12 +32,12 @@ public final class SolutionPropertiesResponse {
      */
     private final String workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SolutionPropertiesResponse(
-        @OutputCustomType.Parameter("containedResources") @Nullable List<String> containedResources,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("referencedResources") @Nullable List<String> referencedResources,
-        @OutputCustomType.Parameter("workspaceResourceId") String workspaceResourceId) {
+        @CustomType.Parameter("containedResources") @Nullable List<String> containedResources,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("referencedResources") @Nullable List<String> referencedResources,
+        @CustomType.Parameter("workspaceResourceId") String workspaceResourceId) {
         this.containedResources = containedResources;
         this.provisioningState = provisioningState;
         this.referencedResources = referencedResources;

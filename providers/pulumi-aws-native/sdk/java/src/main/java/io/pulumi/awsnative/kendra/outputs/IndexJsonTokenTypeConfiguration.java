@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IndexJsonTokenTypeConfiguration {
     private final String groupAttributeField;
     private final String userNameAttributeField;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexJsonTokenTypeConfiguration(
-        @OutputCustomType.Parameter("groupAttributeField") String groupAttributeField,
-        @OutputCustomType.Parameter("userNameAttributeField") String userNameAttributeField) {
+        @CustomType.Parameter("groupAttributeField") String groupAttributeField,
+        @CustomType.Parameter("userNameAttributeField") String userNameAttributeField) {
         this.groupAttributeField = groupAttributeField;
         this.userNameAttributeField = userNameAttributeField;
     }

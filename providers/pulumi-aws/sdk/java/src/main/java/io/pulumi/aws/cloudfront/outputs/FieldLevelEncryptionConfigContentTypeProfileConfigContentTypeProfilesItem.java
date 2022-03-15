@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem {
     /**
      * he content type for a field-level encryption content type-profile mapping. Valid value is `application/x-www-form-urlencoded`.
@@ -27,11 +27,11 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      */
     private final @Nullable String profileId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("profileId") @Nullable String profileId) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("profileId") @Nullable String profileId) {
         this.contentType = contentType;
         this.format = format;
         this.profileId = profileId;

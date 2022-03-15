@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.CloudErrorBodyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * Unique identifier to track the request for ARM-based resources.
      * 
      */
-    @InputImport(name="correlationId", required=true)
+    @Import(name="correlationId", required=true)
       private final String correlationId;
 
     public String getCorrelationId() {
@@ -34,7 +34,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * The name of the ARM deployment initiated as part of the step.
      * 
      */
-    @InputImport(name="deploymentName", required=true)
+    @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
     public String getDeploymentName() {
@@ -45,7 +45,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * End time of the action in UTC.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -56,7 +56,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * The errors, if any, for the action.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable CloudErrorBodyResponse error;
 
     public Optional<CloudErrorBodyResponse> getError() {
@@ -67,7 +67,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * Last time in UTC this operation was updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime", required=true)
+    @Import(name="lastUpdatedTime", required=true)
       private final String lastUpdatedTime;
 
     public String getLastUpdatedTime() {
@@ -78,7 +78,7 @@ public final class StepOperationInfoResponse extends io.pulumi.resources.InvokeA
      * Start time of the action in UTC.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

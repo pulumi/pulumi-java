@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tpu;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.tpu.inputs.NodeSchedulingConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * The type of hardware accelerators associated with this node.
      * 
      */
-    @InputImport(name="acceleratorType", required=true)
+    @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {
@@ -39,7 +39,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * is peered with another network that is using that CIDR block.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -50,7 +50,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * The user-supplied description of the TPU. Maximum of 512 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -61,7 +61,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -72,7 +72,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * The immutable name of the TPU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * used.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -98,7 +98,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -110,7 +110,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schedulingConfig")
+    @Import(name="schedulingConfig")
       private final @Nullable Output<NodeSchedulingConfigArgs> schedulingConfig;
 
     public Output<NodeSchedulingConfigArgs> getSchedulingConfig() {
@@ -121,7 +121,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * The version of Tensorflow running in the Node.
      * 
      */
-    @InputImport(name="tensorflowVersion", required=true)
+    @Import(name="tensorflowVersion", required=true)
       private final Output<String> tensorflowVersion;
 
     public Output<String> getTensorflowVersion() {
@@ -135,7 +135,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
      * 
      */
-    @InputImport(name="useServiceNetworking")
+    @Import(name="useServiceNetworking")
       private final @Nullable Output<Boolean> useServiceNetworking;
 
     public Output<Boolean> getUseServiceNetworking() {
@@ -146,7 +146,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * The GCP location for the TPU. If it is not provided, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

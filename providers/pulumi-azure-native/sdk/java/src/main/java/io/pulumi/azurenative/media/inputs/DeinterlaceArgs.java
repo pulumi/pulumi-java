@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.DeinterlaceMode;
 import io.pulumi.azurenative.media.enums.DeinterlaceParity;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
      * The deinterlacing mode. Defaults to AutoPixelAdaptive.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,DeinterlaceMode>> mode;
 
     public Output<Either<String,DeinterlaceMode>> getMode() {
@@ -36,7 +36,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
      * The field parity for de-interlacing, defaults to Auto.
      * 
      */
-    @InputImport(name="parity")
+    @Import(name="parity")
       private final @Nullable Output<Either<String,DeinterlaceParity>> parity;
 
     public Output<Either<String,DeinterlaceParity>> getParity() {

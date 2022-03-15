@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.customerinsights.inputs.HubBillingInfoFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Billing settings of the hub.
      * 
      */
-    @InputImport(name="hubBillingInfo")
+    @Import(name="hubBillingInfo")
       private final @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
 
     public Output<HubBillingInfoFormatArgs> getHubBillingInfo() {
@@ -32,7 +32,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Hub.
      * 
      */
-    @InputImport(name="hubName")
+    @Import(name="hubName")
       private final @Nullable Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -43,7 +43,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0.
      * 
      */
-    @InputImport(name="tenantFeatures")
+    @Import(name="tenantFeatures")
       private final @Nullable Output<Integer> tenantFeatures;
 
     public Output<Integer> getTenantFeatures() {

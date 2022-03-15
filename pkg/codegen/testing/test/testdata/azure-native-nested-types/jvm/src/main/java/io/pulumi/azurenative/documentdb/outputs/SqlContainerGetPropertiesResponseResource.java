@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.IndexingPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlContainerGetPropertiesResponseResource {
     /**
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
@@ -17,8 +17,8 @@ public final class SqlContainerGetPropertiesResponseResource {
      */
     private final @Nullable IndexingPolicyResponse indexingPolicy;
 
-    @OutputCustomType.Constructor
-    private SqlContainerGetPropertiesResponseResource(@OutputCustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy) {
+    @CustomType.Constructor
+    private SqlContainerGetPropertiesResponseResource(@CustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy) {
         this.indexingPolicy = indexingPolicy;
     }
 

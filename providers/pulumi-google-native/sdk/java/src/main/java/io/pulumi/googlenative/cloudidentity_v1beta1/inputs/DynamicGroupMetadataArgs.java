@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
      * Memberships will be the union of all queries. Only one entry with USER resource is currently supported. Customers can create up to 100 dynamic groups.
      * 
      */
-    @InputImport(name="queries")
+    @Import(name="queries")
       private final @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
     public Output<List<DynamicGroupQueryArgs>> getQueries() {

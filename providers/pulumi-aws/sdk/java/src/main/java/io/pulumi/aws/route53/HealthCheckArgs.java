@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
      * 
      */
-    @InputImport(name="childHealthThreshold")
+    @Import(name="childHealthThreshold")
       private final @Nullable Output<Integer> childHealthThreshold;
 
     public Output<Integer> getChildHealthThreshold() {
@@ -33,7 +33,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
      * 
      */
-    @InputImport(name="childHealthchecks")
+    @Import(name="childHealthchecks")
       private final @Nullable Output<List<String>> childHealthchecks;
 
     public Output<List<String>> getChildHealthchecks() {
@@ -44,7 +44,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the CloudWatch alarm.
      * 
      */
-    @InputImport(name="cloudwatchAlarmName")
+    @Import(name="cloudwatchAlarmName")
       private final @Nullable Output<String> cloudwatchAlarmName;
 
     public Output<String> getCloudwatchAlarmName() {
@@ -55,7 +55,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The CloudWatchRegion that the CloudWatch alarm was created in.
      * 
      */
-    @InputImport(name="cloudwatchAlarmRegion")
+    @Import(name="cloudwatchAlarmRegion")
       private final @Nullable Output<String> cloudwatchAlarmRegion;
 
     public Output<String> getCloudwatchAlarmRegion() {
@@ -69,7 +69,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -80,7 +80,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
      * 
      */
-    @InputImport(name="enableSni")
+    @Import(name="enableSni")
       private final @Nullable Output<Boolean> enableSni;
 
     public Output<Boolean> getEnableSni() {
@@ -91,7 +91,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The number of consecutive health checks that an endpoint must pass or fail.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -102,7 +102,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified domain name of the endpoint to be checked.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -113,7 +113,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
      * 
      */
-    @InputImport(name="insufficientDataHealthStatus")
+    @Import(name="insufficientDataHealthStatus")
       private final @Nullable Output<String> insufficientDataHealthStatus;
 
     public Output<String> getInsufficientDataHealthStatus() {
@@ -124,7 +124,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
      * 
      */
-    @InputImport(name="invertHealthcheck")
+    @Import(name="invertHealthcheck")
       private final @Nullable Output<Boolean> invertHealthcheck;
 
     public Output<Boolean> getInvertHealthcheck() {
@@ -135,7 +135,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address of the endpoint to be checked.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -146,7 +146,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
      * 
      */
-    @InputImport(name="measureLatency")
+    @Import(name="measureLatency")
       private final @Nullable Output<Boolean> measureLatency;
 
     public Output<Boolean> getMeasureLatency() {
@@ -157,7 +157,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The port of the endpoint to be checked.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -169,7 +169,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * (helpful for identifying single health_check set amongst others)
      * 
      */
-    @InputImport(name="referenceName")
+    @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
     public Output<String> getReferenceName() {
@@ -180,7 +180,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
@@ -191,7 +191,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
      * 
      */
-    @InputImport(name="requestInterval")
+    @Import(name="requestInterval")
       private final @Nullable Output<Integer> requestInterval;
 
     public Output<Integer> getRequestInterval() {
@@ -202,7 +202,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The path that you want Amazon Route 53 to request when performing health checks.
      * 
      */
-    @InputImport(name="resourcePath")
+    @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
     public Output<String> getResourcePath() {
@@ -213,7 +213,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
      * 
      */
-    @InputImport(name="routingControlArn")
+    @Import(name="routingControlArn")
       private final @Nullable Output<String> routingControlArn;
 
     public Output<String> getRoutingControlArn() {
@@ -224,7 +224,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
      * 
      */
-    @InputImport(name="searchString")
+    @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
     public Output<String> getSearchString() {
@@ -235,7 +235,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -246,7 +246,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

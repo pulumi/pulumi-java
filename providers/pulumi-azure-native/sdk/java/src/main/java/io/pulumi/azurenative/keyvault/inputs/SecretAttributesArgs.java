@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
      * Determines whether the object is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="expires")
+    @Import(name="expires")
       private final @Nullable Output<Integer> expires;
 
     public Output<Integer> getExpires() {
@@ -45,7 +45,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
      * Not before date in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="notBefore")
+    @Import(name="notBefore")
       private final @Nullable Output<Integer> notBefore;
 
     public Output<Integer> getNotBefore() {

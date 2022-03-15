@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vision_v1.outputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProductSetResult {
     /**
      * The user-provided name for this ProductSet. Must not be empty. Must be at most 4096 characters long.
@@ -31,12 +31,12 @@ public final class GetProductSetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductSetResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("indexError") StatusResponse indexError,
-        @OutputCustomType.Parameter("indexTime") String indexTime,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("indexError") StatusResponse indexError,
+        @CustomType.Parameter("indexTime") String indexTime,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.indexError = indexError;
         this.indexTime = indexTime;

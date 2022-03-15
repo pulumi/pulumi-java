@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateLicenseSpecification {
     /**
      * ARN of the license configuration.
@@ -15,8 +15,8 @@ public final class LaunchTemplateLicenseSpecification {
      */
     private final String licenseConfigurationArn;
 
-    @OutputCustomType.Constructor
-    private LaunchTemplateLicenseSpecification(@OutputCustomType.Parameter("licenseConfigurationArn") String licenseConfigurationArn) {
+    @CustomType.Constructor
+    private LaunchTemplateLicenseSpecification(@CustomType.Parameter("licenseConfigurationArn") String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
     }
 

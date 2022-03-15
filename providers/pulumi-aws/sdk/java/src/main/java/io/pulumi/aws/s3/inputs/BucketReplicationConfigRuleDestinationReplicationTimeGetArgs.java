@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
      * The status of the Replication Time Control. Either `"Enabled"` or `"Disabled"`.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {
@@ -29,7 +29,7 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeGetArgs 
      * A configuration block specifying the time by which replication should be complete for all objects and operations on objects documented below.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> time;
 
     public Output<BucketReplicationConfigRuleDestinationReplicationTimeTimeGetArgs> getTime() {

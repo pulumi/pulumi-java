@@ -5,7 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.aws.backup.inputs.PlanRuleCopyActionLifecycleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
      * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
      * 
      */
-    @InputImport(name="destinationVaultArn", required=true)
+    @Import(name="destinationVaultArn", required=true)
       private final Output<String> destinationVaultArn;
 
     public Output<String> getDestinationVaultArn() {
@@ -30,7 +30,7 @@ public final class PlanRuleCopyActionArgs extends io.pulumi.resources.ResourceAr
      * The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
      * 
      */
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable Output<PlanRuleCopyActionLifecycleArgs> lifecycle;
 
     public Output<PlanRuleCopyActionLifecycleArgs> getLifecycle() {

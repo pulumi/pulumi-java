@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.MonitoringComponentConfigEnableComponentsItem;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
      * Select components to collect metrics. An empty set would disable all monitoring.
      * 
      */
-    @InputImport(name="enableComponents")
+    @Import(name="enableComponents")
       private final @Nullable Output<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
     public Output<List<MonitoringComponentConfigEnableComponentsItem>> getEnableComponents() {

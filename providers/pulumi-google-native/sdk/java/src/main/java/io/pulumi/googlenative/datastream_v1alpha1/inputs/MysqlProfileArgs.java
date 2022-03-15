@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlSslConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Hostname for the MySQL connection.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -35,7 +35,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. Password for the MySQL connection.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -46,7 +46,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Port for the MySQL connection, default value is 3306.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -57,7 +57,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
      * SSL configuration for the MySQL connection.
      * 
      */
-    @InputImport(name="sslConfig")
+    @Import(name="sslConfig")
       private final @Nullable Output<MysqlSslConfigArgs> sslConfig;
 
     public Output<MysqlSslConfigArgs> getSslConfig() {
@@ -68,7 +68,7 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Username for the MySQL connection.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

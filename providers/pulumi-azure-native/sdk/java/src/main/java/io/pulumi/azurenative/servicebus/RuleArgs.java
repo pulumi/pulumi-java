@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicebus.inputs.ActionArgs;
 import io.pulumi.azurenative.servicebus.inputs.CorrelationFilterArgs;
 import io.pulumi.azurenative.servicebus.inputs.SqlFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<ActionArgs> action;
 
     public Output<ActionArgs> getAction() {
@@ -33,7 +33,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of correlationFilter
      * 
      */
-    @InputImport(name="correlationFilter")
+    @Import(name="correlationFilter")
       private final @Nullable Output<CorrelationFilterArgs> correlationFilter;
 
     public Output<CorrelationFilterArgs> getCorrelationFilter() {
@@ -44,7 +44,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Filter type that is evaluated against a BrokeredMessage.
      * 
      */
-    @InputImport(name="filterType")
+    @Import(name="filterType")
       private final @Nullable Output<FilterType> filterType;
 
     public Output<FilterType> getFilterType() {
@@ -55,7 +55,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -66,7 +66,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The rule name.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -88,7 +88,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of sqlFilter
      * 
      */
-    @InputImport(name="sqlFilter")
+    @Import(name="sqlFilter")
       private final @Nullable Output<SqlFilterArgs> sqlFilter;
 
     public Output<SqlFilterArgs> getSqlFilter() {
@@ -99,7 +99,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The subscription name.
      * 
      */
-    @InputImport(name="subscriptionName", required=true)
+    @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
 
     public Output<String> getSubscriptionName() {
@@ -110,7 +110,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The topic name.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
     public Output<String> getTopicName() {

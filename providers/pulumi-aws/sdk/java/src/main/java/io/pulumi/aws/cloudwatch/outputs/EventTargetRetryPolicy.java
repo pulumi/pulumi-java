@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetRetryPolicy {
     /**
      * The age in seconds to continue to make retry attempts.
@@ -22,10 +22,10 @@ public final class EventTargetRetryPolicy {
      */
     private final @Nullable Integer maximumRetryAttempts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTargetRetryPolicy(
-        @OutputCustomType.Parameter("maximumEventAgeInSeconds") @Nullable Integer maximumEventAgeInSeconds,
-        @OutputCustomType.Parameter("maximumRetryAttempts") @Nullable Integer maximumRetryAttempts) {
+        @CustomType.Parameter("maximumEventAgeInSeconds") @Nullable Integer maximumEventAgeInSeconds,
+        @CustomType.Parameter("maximumRetryAttempts") @Nullable Integer maximumRetryAttempts) {
         this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
         this.maximumRetryAttempts = maximumRetryAttempts;
     }

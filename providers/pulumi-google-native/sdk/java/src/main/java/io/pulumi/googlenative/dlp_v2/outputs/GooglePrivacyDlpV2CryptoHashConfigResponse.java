@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
     /**
      * The key used by the hash function.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
      */
     private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2CryptoHashConfigResponse(@OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2CryptoHashConfigResponse(@CustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
         this.cryptoKey = cryptoKey;
     }
 

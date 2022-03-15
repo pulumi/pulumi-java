@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      *     "*" matches all non-resource urls. if it is present, it must be the only entry. Required.
      * 
      */
-    @InputImport(name="nonResourceURLs", required=true)
+    @Import(name="nonResourceURLs", required=true)
       private final Output<List<String>> nonResourceURLs;
 
     public Output<List<String>> getNonResourceURLs() {
@@ -39,7 +39,7 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
      * `verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.
      * 
      */
-    @InputImport(name="verbs", required=true)
+    @Import(name="verbs", required=true)
       private final Output<List<String>> verbs;
 
     public Output<List<String>> getVerbs() {

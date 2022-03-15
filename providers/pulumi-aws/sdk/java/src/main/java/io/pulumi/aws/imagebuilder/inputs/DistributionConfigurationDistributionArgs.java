@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationArgs;
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
      * 
      */
-    @InputImport(name="amiDistributionConfiguration")
+    @Import(name="amiDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> amiDistributionConfiguration;
 
     public Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> getAmiDistributionConfiguration() {
@@ -32,7 +32,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * Configuration block with container distribution settings. Detailed below.
      * 
      */
-    @InputImport(name="containerDistributionConfiguration")
+    @Import(name="containerDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> containerDistributionConfiguration;
 
     public Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> getContainerDistributionConfiguration() {
@@ -43,7 +43,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
      */
-    @InputImport(name="licenseConfigurationArns")
+    @Import(name="licenseConfigurationArns")
       private final @Nullable Output<List<String>> licenseConfigurationArns;
 
     public Output<List<String>> getLicenseConfigurationArns() {
@@ -54,7 +54,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * AWS Region for the distribution.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {

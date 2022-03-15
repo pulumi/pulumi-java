@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
      * A list of IAM Groups to add the user to
      * 
      */
-    @InputImport(name="groups", required=true)
+    @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -29,7 +29,7 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
      * The name of the IAM User to add to groups
      * 
      */
-    @InputImport(name="user", required=true)
+    @Import(name="user", required=true)
       private final Output<String> user;
 
     public Output<String> getUser() {

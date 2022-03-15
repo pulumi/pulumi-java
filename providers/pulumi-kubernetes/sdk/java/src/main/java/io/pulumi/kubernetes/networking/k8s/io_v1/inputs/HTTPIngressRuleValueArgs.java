@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.HTTPIngressPathArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
      * A collection of paths that map requests to backends.
      * 
      */
-    @InputImport(name="paths", required=true)
+    @Import(name="paths", required=true)
       private final Output<List<HTTPIngressPathArgs>> paths;
 
     public Output<List<HTTPIngressPathArgs>> getPaths() {

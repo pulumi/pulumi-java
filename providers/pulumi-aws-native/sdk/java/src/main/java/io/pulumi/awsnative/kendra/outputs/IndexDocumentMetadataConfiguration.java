@@ -6,25 +6,25 @@ package io.pulumi.awsnative.kendra.outputs;
 import io.pulumi.awsnative.kendra.enums.IndexDocumentAttributeValueType;
 import io.pulumi.awsnative.kendra.outputs.IndexRelevance;
 import io.pulumi.awsnative.kendra.outputs.IndexSearch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexDocumentMetadataConfiguration {
     private final String name;
     private final @Nullable IndexRelevance relevance;
     private final @Nullable IndexSearch search;
     private final IndexDocumentAttributeValueType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexDocumentMetadataConfiguration(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("relevance") @Nullable IndexRelevance relevance,
-        @OutputCustomType.Parameter("search") @Nullable IndexSearch search,
-        @OutputCustomType.Parameter("type") IndexDocumentAttributeValueType type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("relevance") @Nullable IndexRelevance relevance,
+        @CustomType.Parameter("search") @Nullable IndexSearch search,
+        @CustomType.Parameter("type") IndexDocumentAttributeValueType type) {
         this.name = name;
         this.relevance = relevance;
         this.search = search;

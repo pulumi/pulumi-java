@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.GatewayIamBindingArgs;
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:apigateway/gatewayIamBinding:GatewayIamBinding")
 public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=GatewayIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=GatewayIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ GatewayIamBindingCondition> condition;
 
     public Output</* @Nullable */ GatewayIamBindingCondition> getCondition() {
@@ -68,7 +68,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -78,13 +78,13 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="gateway", type=String.class, parameters={})
+    @Export(name="gateway", type=String.class, parameters={})
     private Output<String> gateway;
 
     public Output<String> getGateway() {
         return this.gateway;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -95,7 +95,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -113,7 +113,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * region is specified, it is taken from the provider configuration.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -132,7 +132,7 @@ public class GatewayIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

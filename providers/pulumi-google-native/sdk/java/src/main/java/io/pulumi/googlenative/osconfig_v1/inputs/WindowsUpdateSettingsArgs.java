@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.enums.WindowsUpdateSettingsClassificationsItem;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
      * 
      */
-    @InputImport(name="classifications")
+    @Import(name="classifications")
       private final @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications;
 
     public Output<List<WindowsUpdateSettingsClassificationsItem>> getClassifications() {
@@ -35,7 +35,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * List of KBs to exclude from update.
      * 
      */
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
@@ -46,7 +46,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * An exclusive list of kbs to be updated. These are the only patches that will be updated. This field must not be used with other patch configurations.
      * 
      */
-    @InputImport(name="exclusivePatches")
+    @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
 
     public Output<List<String>> getExclusivePatches() {

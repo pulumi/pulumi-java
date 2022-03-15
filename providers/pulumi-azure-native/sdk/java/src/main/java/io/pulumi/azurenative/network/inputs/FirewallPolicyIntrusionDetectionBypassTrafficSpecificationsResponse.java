@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * Description of the bypass traffic rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * List of destination IP addresses or ranges for this rule.
      * 
      */
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
@@ -45,7 +45,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * List of destination IpGroups for this rule.
      * 
      */
-    @InputImport(name="destinationIpGroups")
+    @Import(name="destinationIpGroups")
       private final @Nullable List<String> destinationIpGroups;
 
     public List<String> getDestinationIpGroups() {
@@ -56,7 +56,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * List of destination ports or ranges.
      * 
      */
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
@@ -67,7 +67,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * Name of the bypass traffic rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -78,7 +78,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * The rule bypass protocol.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -89,7 +89,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * List of source IP addresses or ranges for this rule.
      * 
      */
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
@@ -100,7 +100,7 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
      * List of source IpGroups for this rule.
      * 
      */
-    @InputImport(name="sourceIpGroups")
+    @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {

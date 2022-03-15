@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptMessageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
      * The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
      * 
      */
-    @InputImport(name="maxAttempts", required=true)
+    @Import(name="maxAttempts", required=true)
       private final Output<Integer> maxAttempts;
 
     public Output<Integer> getMaxAttempts() {
@@ -34,7 +34,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
      * Attributes are documented under message. Must contain between 1 and 15 messages.
      * 
      */
-    @InputImport(name="messages", required=true)
+    @Import(name="messages", required=true)
       private final Output<List<IntentSlotValueElicitationPromptMessageArgs>> messages;
 
     public Output<List<IntentSlotValueElicitationPromptMessageArgs>> getMessages() {
@@ -47,7 +47,7 @@ public final class IntentSlotValueElicitationPromptArgs extends io.pulumi.resour
      * [Example: Using a Response Card](https://docs.aws.amazon.com/lex/latest/dg/ex-resp-card.html). Must be less than or equal to 50000 characters in length.
      * 
      */
-    @InputImport(name="responseCard")
+    @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
     public Output<String> getResponseCard() {

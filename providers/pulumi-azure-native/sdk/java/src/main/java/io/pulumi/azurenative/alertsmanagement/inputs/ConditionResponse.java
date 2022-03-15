@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * operator for a given condition
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable String operator;
 
     public Optional<String> getOperator() {
@@ -34,7 +34,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * list of values to match for a given condition.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<String> values;
 
     public List<String> getValues() {

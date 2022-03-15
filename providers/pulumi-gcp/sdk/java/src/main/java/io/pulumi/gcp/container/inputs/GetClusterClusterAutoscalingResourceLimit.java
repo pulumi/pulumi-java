@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class GetClusterClusterAutoscalingResourceLimit extends io.pulumi.r
 
     public static final GetClusterClusterAutoscalingResourceLimit Empty = new GetClusterClusterAutoscalingResourceLimit();
 
-    @InputImport(name="maximum", required=true)
+    @Import(name="maximum", required=true)
       private final Integer maximum;
 
     public Integer getMaximum() {
         return this.maximum;
     }
 
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final Integer minimum;
 
     public Integer getMinimum() {
         return this.minimum;
     }
 
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {

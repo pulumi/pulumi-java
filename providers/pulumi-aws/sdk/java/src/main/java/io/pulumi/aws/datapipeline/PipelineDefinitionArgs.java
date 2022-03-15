@@ -7,7 +7,7 @@ import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    @InputImport(name="parameterObjects")
+    @Import(name="parameterObjects")
       private final @Nullable Output<List<PipelineDefinitionParameterObjectArgs>> parameterObjects;
 
     public Output<List<PipelineDefinitionParameterObjectArgs>> getParameterObjects() {
@@ -33,7 +33,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    @InputImport(name="parameterValues")
+    @Import(name="parameterValues")
       private final @Nullable Output<List<PipelineDefinitionParameterValueArgs>> parameterValues;
 
     public Output<List<PipelineDefinitionParameterValueArgs>> getParameterValues() {
@@ -44,7 +44,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * ID of the pipeline.
      * 
      */
-    @InputImport(name="pipelineId", required=true)
+    @Import(name="pipelineId", required=true)
       private final Output<String> pipelineId;
 
     public Output<String> getPipelineId() {
@@ -55,7 +55,7 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
      * Configuration block for the objects that define the pipeline. See below
      * 
      */
-    @InputImport(name="pipelineObjects", required=true)
+    @Import(name="pipelineObjects", required=true)
       private final Output<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects;
 
     public Output<List<PipelineDefinitionPipelineObjectArgs>> getPipelineObjects() {

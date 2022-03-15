@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerTransportPubsub {
     /**
      * - 
@@ -23,10 +23,10 @@ public final class TriggerTransportPubsub {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerTransportPubsub(
-        @OutputCustomType.Parameter("subscription") @Nullable String subscription,
-        @OutputCustomType.Parameter("topic") @Nullable String topic) {
+        @CustomType.Parameter("subscription") @Nullable String subscription,
+        @CustomType.Parameter("topic") @Nullable String topic) {
         this.subscription = subscription;
         this.topic = topic;
     }

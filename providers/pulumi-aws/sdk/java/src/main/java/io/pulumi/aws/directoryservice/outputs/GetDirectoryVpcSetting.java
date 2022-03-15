@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.directoryservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectoryVpcSetting {
     private final List<String> availabilityZones;
     /**
@@ -22,11 +22,11 @@ public final class GetDirectoryVpcSetting {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectoryVpcSetting(
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;

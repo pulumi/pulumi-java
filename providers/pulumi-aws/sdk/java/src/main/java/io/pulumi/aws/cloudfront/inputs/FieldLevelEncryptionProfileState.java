@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * Internal value used by CloudFront to allow future updates to the Field Level Encryption Profile.
      * 
      */
-    @InputImport(name="callerReference")
+    @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
     public Output<String> getCallerReference() {
@@ -30,7 +30,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * An optional comment about the Field Level Encryption Profile.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -41,7 +41,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * The encryption entities config block for field-level encryption profiles that contains an attribute `items` which includes the encryption key and field pattern specifications.
      * 
      */
-    @InputImport(name="encryptionEntities")
+    @Import(name="encryptionEntities")
       private final @Nullable Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> encryptionEntities;
 
     public Output<FieldLevelEncryptionProfileEncryptionEntitiesGetArgs> getEncryptionEntities() {
@@ -52,7 +52,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * The current version of the Field Level Encryption Profile. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -63,7 +63,7 @@ public final class FieldLevelEncryptionProfileState extends io.pulumi.resources.
      * The name of the Field Level Encryption Profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

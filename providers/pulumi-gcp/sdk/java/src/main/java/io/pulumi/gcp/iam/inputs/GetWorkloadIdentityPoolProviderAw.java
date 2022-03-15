@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetWorkloadIdentityPoolProviderAw extends io.pulumi.resources
 
     public static final GetWorkloadIdentityPoolProviderAw Empty = new GetWorkloadIdentityPoolProviderAw();
 
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {

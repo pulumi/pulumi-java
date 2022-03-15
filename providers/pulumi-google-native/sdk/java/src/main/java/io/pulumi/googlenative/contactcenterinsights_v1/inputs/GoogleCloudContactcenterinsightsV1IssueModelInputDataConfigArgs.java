@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * A filter to reduce the conversations used for training the model to a specific subset.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * Medium of conversations used in training data. This field is being deprecated. To specify the medium to be used in training a new issue model, set the `medium` field on `filter`.
      * 
      */
-    @InputImport(name="medium")
+    @Import(name="medium")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
     public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> getMedium() {

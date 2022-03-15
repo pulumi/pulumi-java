@@ -5,13 +5,13 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.LinuxOsInfoResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WindowsOsInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomImagePropertiesFromVmResponse {
     /**
      * The Linux OS information of the VM.
@@ -29,11 +29,11 @@ public final class CustomImagePropertiesFromVmResponse {
      */
     private final @Nullable WindowsOsInfoResponse windowsOsInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomImagePropertiesFromVmResponse(
-        @OutputCustomType.Parameter("linuxOsInfo") @Nullable LinuxOsInfoResponse linuxOsInfo,
-        @OutputCustomType.Parameter("sourceVmId") @Nullable String sourceVmId,
-        @OutputCustomType.Parameter("windowsOsInfo") @Nullable WindowsOsInfoResponse windowsOsInfo) {
+        @CustomType.Parameter("linuxOsInfo") @Nullable LinuxOsInfoResponse linuxOsInfo,
+        @CustomType.Parameter("sourceVmId") @Nullable String sourceVmId,
+        @CustomType.Parameter("windowsOsInfo") @Nullable WindowsOsInfoResponse windowsOsInfo) {
         this.linuxOsInfo = linuxOsInfo;
         this.sourceVmId = sourceVmId;
         this.windowsOsInfo = windowsOsInfo;

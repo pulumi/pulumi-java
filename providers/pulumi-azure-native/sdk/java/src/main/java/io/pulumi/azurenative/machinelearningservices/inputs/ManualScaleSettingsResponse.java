@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * Fixed number of instances for this deployment.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
@@ -30,7 +30,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * Maximum number of instances for this deployment.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Integer maxInstances;
 
     public Optional<Integer> getMaxInstances() {
@@ -41,7 +41,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * Minimum number of instances for this deployment.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Integer minInstances;
 
     public Optional<Integer> getMinInstances() {
@@ -52,7 +52,7 @@ public final class ManualScaleSettingsResponse extends io.pulumi.resources.Invok
      * Expected value is 'Manual'.
      * 
      */
-    @InputImport(name="scaleType", required=true)
+    @Import(name="scaleType", required=true)
       private final String scaleType;
 
     public String getScaleType() {

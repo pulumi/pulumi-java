@@ -6,10 +6,10 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.StorageAccountDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataImportDetailsResponse {
     /**
      * Account details of the data to be transferred
@@ -17,8 +17,8 @@ public final class DataImportDetailsResponse {
      */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
-    @OutputCustomType.Constructor
-    private DataImportDetailsResponse(@OutputCustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
+    @CustomType.Constructor
+    private DataImportDetailsResponse(@CustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
         this.accountDetails = accountDetails;
     }
 

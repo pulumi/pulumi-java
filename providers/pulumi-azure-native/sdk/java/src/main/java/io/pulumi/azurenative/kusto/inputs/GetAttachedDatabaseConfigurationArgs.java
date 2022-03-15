@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
      * The name of the attached database configuration.
      * 
      */
-    @InputImport(name="attachedDatabaseConfigurationName", required=true)
+    @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
 
     public String getAttachedDatabaseConfigurationName() {
@@ -27,7 +27,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -38,7 +38,7 @@ public final class GetAttachedDatabaseConfigurationArgs extends io.pulumi.resour
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

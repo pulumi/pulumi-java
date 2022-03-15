@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -33,7 +33,7 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -55,7 +55,7 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceNamespace")
+    @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;
 
     public Output<String> getServiceNamespace() {

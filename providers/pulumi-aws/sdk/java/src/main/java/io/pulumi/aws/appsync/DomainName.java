@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appsync.DomainNameArgs;
 import io.pulumi.aws.appsync.inputs.DomainNameState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The domain name that AppSync provides.
      * 
      */
-    @OutputExport(name="appsyncDomainName", type=String.class, parameters={})
+    @Export(name="appsyncDomainName", type=String.class, parameters={})
     private Output<String> appsyncDomainName;
 
     /**
@@ -46,7 +46,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the certificate. This can be an Certificate Manager (ACM) certificate or an Identity and Access Management (IAM) server certificate. The certifiacte must reside in us-east-1.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
@@ -60,7 +60,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * A description of the Domain Name.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -74,7 +74,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The domain name.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -88,7 +88,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The ID of your Amazon Route 53 hosted zone.
      * 
      */
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**

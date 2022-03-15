@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownWindowsEventLogDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -39,7 +39,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownWindowsEventLogDataSourceStreams>>> getStreams() {
@@ -50,7 +50,7 @@ public final class WindowsEventLogDataSourceArgs extends io.pulumi.resources.Res
      * A list of Windows Event Log queries in XPATH format.
      * 
      */
-    @InputImport(name="xPathQueries")
+    @Import(name="xPathQueries")
       private final @Nullable Output<List<String>> xPathQueries;
 
     public Output<List<String>> getXPathQueries() {

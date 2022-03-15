@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorSuccessThresholdResponse {
     /**
      * The maximum percentage of failed checks permitted for a test to evaluate as successful.
@@ -23,10 +23,10 @@ public final class ConnectionMonitorSuccessThresholdResponse {
      */
     private final @Nullable Double roundTripTimeMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorSuccessThresholdResponse(
-        @OutputCustomType.Parameter("checksFailedPercent") @Nullable Integer checksFailedPercent,
-        @OutputCustomType.Parameter("roundTripTimeMs") @Nullable Double roundTripTimeMs) {
+        @CustomType.Parameter("checksFailedPercent") @Nullable Integer checksFailedPercent,
+        @CustomType.Parameter("roundTripTimeMs") @Nullable Double roundTripTimeMs) {
         this.checksFailedPercent = checksFailedPercent;
         this.roundTripTimeMs = roundTripTimeMs;
     }

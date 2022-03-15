@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConsolePropertiesResponse {
     /**
      * The operating system type of the cloud shell.
@@ -25,11 +25,11 @@ public final class ConsolePropertiesResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsolePropertiesResponse(
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("uri") String uri) {
         this.osType = osType;
         this.provisioningState = provisioningState;
         this.uri = uri;

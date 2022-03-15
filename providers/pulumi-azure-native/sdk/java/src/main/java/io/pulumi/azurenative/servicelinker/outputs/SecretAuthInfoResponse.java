@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretAuthInfoResponse {
     /**
      * The authentication type.
@@ -28,11 +28,11 @@ public final class SecretAuthInfoResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretAuthInfoResponse(
-        @OutputCustomType.Parameter("authType") String authType,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("secret") @Nullable String secret) {
+        @CustomType.Parameter("authType") String authType,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("secret") @Nullable String secret) {
         this.authType = authType;
         this.name = name;
         this.secret = secret;

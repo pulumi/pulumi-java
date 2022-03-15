@@ -6,12 +6,12 @@ package io.pulumi.aws.appmesh.outputs;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust {
     /**
      * The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
@@ -29,11 +29,11 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust 
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust(
-        @OutputCustomType.Parameter("acm") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
-        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
-        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
+        @CustomType.Parameter("acm") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
+        @CustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
+        @CustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
      * 
      */
-    @InputImport(name="maxOccurs", required=true)
+    @Import(name="maxOccurs", required=true)
       private final Integer maxOccurs;
 
     public Integer getMaxOccurs() {
@@ -32,7 +32,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum number of times this field must be present/repeated.
      * 
      */
-    @InputImport(name="minOccurs", required=true)
+    @Import(name="minOccurs", required=true)
       private final Integer minOccurs;
 
     public Integer getMinOccurs() {
@@ -43,7 +43,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the field. For example, "PID-1" or just "1".
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -54,7 +54,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final String table;
 
     public String getTable() {
@@ -65,7 +65,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

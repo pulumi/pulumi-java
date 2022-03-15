@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
      * Returns the document in the specified format. The document format can be either JSON or YAML. JSON is the default format.
      * 
      */
-    @InputImport(name="documentFormat")
+    @Import(name="documentFormat")
       private final @Nullable String documentFormat;
 
     public Optional<String> getDocumentFormat() {
@@ -29,7 +29,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
      * The document version for which you want information.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable String documentVersion;
 
     public Optional<String> getDocumentVersion() {
@@ -40,7 +40,7 @@ public final class GetDocumentArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Systems Manager document.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

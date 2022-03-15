@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.CertificatePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * The entity tag.
@@ -36,13 +36,13 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") CertificatePropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") CertificatePropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

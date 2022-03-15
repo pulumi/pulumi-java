@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
     /**
      * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
      */
     private final String term;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaRuleReplacementActionResponse(
-        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
-        @OutputCustomType.Parameter("replacementTerm") String replacementTerm,
-        @OutputCustomType.Parameter("term") String term) {
+        @CustomType.Parameter("queryTerms") List<String> queryTerms,
+        @CustomType.Parameter("replacementTerm") String replacementTerm,
+        @CustomType.Parameter("term") String term) {
         this.queryTerms = queryTerms;
         this.replacementTerm = replacementTerm;
         this.term = term;

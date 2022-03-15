@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1.AccessLevelArgs;
@@ -23,7 +23,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * A `BasicLevel` composed of `Conditions`.
      * 
      */
-    @OutputExport(name="basic", type=BasicLevelResponse.class, parameters={})
+    @Export(name="basic", type=BasicLevelResponse.class, parameters={})
     private Output<BasicLevelResponse> basic;
 
     /**
@@ -37,7 +37,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * A `CustomLevel` written in the Common Expression Language.
      * 
      */
-    @OutputExport(name="custom", type=CustomLevelResponse.class, parameters={})
+    @Export(name="custom", type=CustomLevelResponse.class, parameters={})
     private Output<CustomLevelResponse> custom;
 
     /**
@@ -51,7 +51,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Description of the `AccessLevel` and its use. Does not affect behavior.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{access_policy}/accessLevels/{access_level}`. The maximum length of the `access_level` component is 50 characters.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

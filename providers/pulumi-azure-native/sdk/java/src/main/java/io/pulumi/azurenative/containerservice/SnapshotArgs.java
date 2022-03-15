@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.SnapshotType;
 import io.pulumi.azurenative.containerservice.inputs.CreationDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
      */
-    @InputImport(name="creationData")
+    @Import(name="creationData")
       private final @Nullable Output<CreationDataArgs> creationData;
 
     public Output<CreationDataArgs> getCreationData() {
@@ -33,7 +33,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the managed cluster resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -66,7 +66,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The type of a snapshot. The default is NodePool.
      * 
      */
-    @InputImport(name="snapshotType")
+    @Import(name="snapshotType")
       private final @Nullable Output<Either<String,SnapshotType>> snapshotType;
 
     public Output<Either<String,SnapshotType>> getSnapshotType() {
@@ -77,7 +77,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

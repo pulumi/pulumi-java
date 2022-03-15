@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
     /**
      * The environment ID associated with the metrics.
@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(
-        @OutputCustomType.Parameter("env") String env,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("location") String location) {
+        @CustomType.Parameter("env") String env,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("location") String location) {
         this.env = env;
         this.instanceId = instanceId;
         this.location = location;

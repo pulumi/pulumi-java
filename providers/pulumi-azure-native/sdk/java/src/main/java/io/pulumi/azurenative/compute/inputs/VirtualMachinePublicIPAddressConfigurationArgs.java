@@ -12,7 +12,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineIpTagArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * Specify what happens to the public IP address when the VM is deleted
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
     public Output<Either<String,DeleteOptions>> getDeleteOption() {
@@ -43,7 +43,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * The dns settings to be applied on the publicIP addresses .
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings;
 
     public Output<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> getDnsSettings() {
@@ -54,7 +54,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * The idle timeout of the public IP address.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
@@ -65,7 +65,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * The list of IP tags associated with the public IP address.
      * 
      */
-    @InputImport(name="ipTags")
+    @Import(name="ipTags")
       private final @Nullable Output<List<VirtualMachineIpTagArgs>> ipTags;
 
     public Output<List<VirtualMachineIpTagArgs>> getIpTags() {
@@ -76,7 +76,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * The publicIP address configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * Available from Api-Version 2019-07-01 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4. Possible values are: 'IPv4' and 'IPv6'.
      * 
      */
-    @InputImport(name="publicIPAddressVersion")
+    @Import(name="publicIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersions>> publicIPAddressVersion;
 
     public Output<Either<String,IPVersions>> getPublicIPAddressVersion() {
@@ -98,7 +98,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * Specify the public IP allocation type
      * 
      */
-    @InputImport(name="publicIPAllocationMethod")
+    @Import(name="publicIPAllocationMethod")
       private final @Nullable Output<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod;
 
     public Output<Either<String,PublicIPAllocationMethod>> getPublicIPAllocationMethod() {
@@ -109,7 +109,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * The PublicIPPrefix from which to allocate publicIP addresses.
      * 
      */
-    @InputImport(name="publicIPPrefix")
+    @Import(name="publicIPPrefix")
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
     public Output<SubResourceArgs> getPublicIPPrefix() {
@@ -120,7 +120,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * Describes the public IP Sku
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;
 
     public Output<PublicIPAddressSkuArgs> getSku() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupVisibilityConfig {
     /**
      * A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
@@ -26,11 +26,11 @@ public final class RuleGroupVisibilityConfig {
      */
     private final Boolean sampledRequestsEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupVisibilityConfig(
-        @OutputCustomType.Parameter("cloudwatchMetricsEnabled") Boolean cloudwatchMetricsEnabled,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("sampledRequestsEnabled") Boolean sampledRequestsEnabled) {
+        @CustomType.Parameter("cloudwatchMetricsEnabled") Boolean cloudwatchMetricsEnabled,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("sampledRequestsEnabled") Boolean sampledRequestsEnabled) {
         this.cloudwatchMetricsEnabled = cloudwatchMetricsEnabled;
         this.metricName = metricName;
         this.sampledRequestsEnabled = sampledRequestsEnabled;

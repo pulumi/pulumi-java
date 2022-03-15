@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1.inputs.CpuUtilizationArgs;
 import io.pulumi.googlenative.appengine_v1.inputs.DiskUtilizationArgs;
 import io.pulumi.googlenative.appengine_v1.inputs.NetworkUtilizationArgs;
@@ -28,7 +28,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="coolDownPeriod")
+    @Import(name="coolDownPeriod")
       private final @Nullable Output<String> coolDownPeriod;
 
     public Output<String> getCoolDownPeriod() {
@@ -39,7 +39,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Target scaling by CPU usage.
      * 
      */
-    @InputImport(name="cpuUtilization")
+    @Import(name="cpuUtilization")
       private final @Nullable Output<CpuUtilizationArgs> cpuUtilization;
 
     public Output<CpuUtilizationArgs> getCpuUtilization() {
@@ -50,7 +50,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Target scaling by disk usage.
      * 
      */
-    @InputImport(name="diskUtilization")
+    @Import(name="diskUtilization")
       private final @Nullable Output<DiskUtilizationArgs> diskUtilization;
 
     public Output<DiskUtilizationArgs> getDiskUtilization() {
@@ -61,7 +61,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
      * 
      */
-    @InputImport(name="maxConcurrentRequests")
+    @Import(name="maxConcurrentRequests")
       private final @Nullable Output<Integer> maxConcurrentRequests;
 
     public Output<Integer> getMaxConcurrentRequests() {
@@ -72,7 +72,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Maximum number of idle instances that should be maintained for this version.
      * 
      */
-    @InputImport(name="maxIdleInstances")
+    @Import(name="maxIdleInstances")
       private final @Nullable Output<Integer> maxIdleInstances;
 
     public Output<Integer> getMaxIdleInstances() {
@@ -83,7 +83,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
-    @InputImport(name="maxPendingLatency")
+    @Import(name="maxPendingLatency")
       private final @Nullable Output<String> maxPendingLatency;
 
     public Output<String> getMaxPendingLatency() {
@@ -94,7 +94,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Maximum number of instances that should be started to handle requests for this version.
      * 
      */
-    @InputImport(name="maxTotalInstances")
+    @Import(name="maxTotalInstances")
       private final @Nullable Output<Integer> maxTotalInstances;
 
     public Output<Integer> getMaxTotalInstances() {
@@ -105,7 +105,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
      */
-    @InputImport(name="minIdleInstances")
+    @Import(name="minIdleInstances")
       private final @Nullable Output<Integer> minIdleInstances;
 
     public Output<Integer> getMinIdleInstances() {
@@ -116,7 +116,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
-    @InputImport(name="minPendingLatency")
+    @Import(name="minPendingLatency")
       private final @Nullable Output<String> minPendingLatency;
 
     public Output<String> getMinPendingLatency() {
@@ -127,7 +127,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Minimum number of running instances that should be maintained for this version.
      * 
      */
-    @InputImport(name="minTotalInstances")
+    @Import(name="minTotalInstances")
       private final @Nullable Output<Integer> minTotalInstances;
 
     public Output<Integer> getMinTotalInstances() {
@@ -138,7 +138,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Target scaling by network usage.
      * 
      */
-    @InputImport(name="networkUtilization")
+    @Import(name="networkUtilization")
       private final @Nullable Output<NetworkUtilizationArgs> networkUtilization;
 
     public Output<NetworkUtilizationArgs> getNetworkUtilization() {
@@ -149,7 +149,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Target scaling by request utilization.
      * 
      */
-    @InputImport(name="requestUtilization")
+    @Import(name="requestUtilization")
       private final @Nullable Output<RequestUtilizationArgs> requestUtilization;
 
     public Output<RequestUtilizationArgs> getRequestUtilization() {
@@ -160,7 +160,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * Scheduler settings for standard environment.
      * 
      */
-    @InputImport(name="standardSchedulerSettings")
+    @Import(name="standardSchedulerSettings")
       private final @Nullable Output<StandardSchedulerSettingsArgs> standardSchedulerSettings;
 
     public Output<StandardSchedulerSettingsArgs> getStandardSchedulerSettings() {

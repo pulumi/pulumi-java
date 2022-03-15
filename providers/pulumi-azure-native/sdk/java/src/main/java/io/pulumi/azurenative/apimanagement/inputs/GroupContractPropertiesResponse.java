@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
      * 
      */
-    @InputImport(name="builtIn", required=true)
+    @Import(name="builtIn", required=true)
       private final Boolean builtIn;
 
     public Boolean getBuiltIn() {
@@ -34,7 +34,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * Group description. Can contain HTML formatting tags.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -45,7 +45,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * Group name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -56,7 +56,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable String externalId;
 
     public Optional<String> getExternalId() {
@@ -67,7 +67,7 @@ public final class GroupContractPropertiesResponse extends io.pulumi.resources.I
      * Group type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

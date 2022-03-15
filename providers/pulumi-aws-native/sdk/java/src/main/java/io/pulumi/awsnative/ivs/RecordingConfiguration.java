@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationDestinationConfigur
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationTag;
 import io.pulumi.awsnative.ivs.outputs.RecordingConfigurationThumbnailConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
      * Recording Configuration ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -36,7 +36,7 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="destinationConfiguration", type=RecordingConfigurationDestinationConfiguration.class, parameters={})
+    @Export(name="destinationConfiguration", type=RecordingConfigurationDestinationConfiguration.class, parameters={})
     private Output<RecordingConfigurationDestinationConfiguration> destinationConfiguration;
 
     public Output<RecordingConfigurationDestinationConfiguration> getDestinationConfiguration() {
@@ -46,7 +46,7 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
      * Recording Configuration Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -60,7 +60,7 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
      * Recording Configuration State.
      * 
      */
-    @OutputExport(name="state", type=RecordingConfigurationState.class, parameters={})
+    @Export(name="state", type=RecordingConfigurationState.class, parameters={})
     private Output<RecordingConfigurationState> state;
 
     /**
@@ -74,7 +74,7 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RecordingConfigurationTag.class})
+    @Export(name="tags", type=List.class, parameters={RecordingConfigurationTag.class})
     private Output</* @Nullable */ List<RecordingConfigurationTag>> tags;
 
     /**
@@ -84,7 +84,7 @@ public class RecordingConfiguration extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<RecordingConfigurationTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="thumbnailConfiguration", type=RecordingConfigurationThumbnailConfiguration.class, parameters={})
+    @Export(name="thumbnailConfiguration", type=RecordingConfigurationThumbnailConfiguration.class, parameters={})
     private Output</* @Nullable */ RecordingConfigurationThumbnailConfiguration> thumbnailConfiguration;
 
     public Output</* @Nullable */ RecordingConfigurationThumbnailConfiguration> getThumbnailConfiguration() {

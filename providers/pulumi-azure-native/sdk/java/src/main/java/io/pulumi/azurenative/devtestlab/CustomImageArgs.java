@@ -8,7 +8,7 @@ import io.pulumi.azurenative.devtestlab.inputs.CustomImagePropertiesFromPlanArgs
 import io.pulumi.azurenative.devtestlab.inputs.CustomImagePropertiesFromVmArgs;
 import io.pulumi.azurenative.devtestlab.inputs.DataDiskStorageTypeInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The author of the custom image.
      * 
      */
-    @InputImport(name="author")
+    @Import(name="author")
       private final @Nullable Output<String> author;
 
     public Output<String> getAuthor() {
@@ -36,7 +36,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * Storage information about the plan related to this custom image
      * 
      */
-    @InputImport(name="customImagePlan")
+    @Import(name="customImagePlan")
       private final @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
     public Output<CustomImagePropertiesFromPlanArgs> getCustomImagePlan() {
@@ -47,7 +47,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * Storage information about the data disks present in the custom image
      * 
      */
-    @InputImport(name="dataDiskStorageInfo")
+    @Import(name="dataDiskStorageInfo")
       private final @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
     public Output<List<DataDiskStorageTypeInfoArgs>> getDataDiskStorageInfo() {
@@ -58,7 +58,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the custom image.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -69,7 +69,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
      * 
      */
-    @InputImport(name="isPlanAuthorized")
+    @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
 
     public Output<Boolean> getIsPlanAuthorized() {
@@ -80,7 +80,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -91,7 +91,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -102,7 +102,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Managed Image Id backing the custom image.
      * 
      */
-    @InputImport(name="managedImageId")
+    @Import(name="managedImageId")
       private final @Nullable Output<String> managedImageId;
 
     public Output<String> getManagedImageId() {
@@ -113,7 +113,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Managed Snapshot Id backing the custom image.
      * 
      */
-    @InputImport(name="managedSnapshotId")
+    @Import(name="managedSnapshotId")
       private final @Nullable Output<String> managedSnapshotId;
 
     public Output<String> getManagedSnapshotId() {
@@ -124,7 +124,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom image.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -135,7 +135,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -146,7 +146,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -157,7 +157,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The VHD from which the image is to be created.
      * 
      */
-    @InputImport(name="vhd")
+    @Import(name="vhd")
       private final @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
 
     public Output<CustomImagePropertiesCustomArgs> getVhd() {
@@ -168,7 +168,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual machine from which the image is to be created.
      * 
      */
-    @InputImport(name="vm")
+    @Import(name="vm")
       private final @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
 
     public Output<CustomImagePropertiesFromVmArgs> getVm() {

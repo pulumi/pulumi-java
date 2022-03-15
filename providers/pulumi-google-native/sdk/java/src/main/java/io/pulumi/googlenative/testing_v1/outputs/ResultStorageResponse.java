@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.GoogleCloudStorageResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ToolResultsExecutionResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ToolResultsHistoryResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResultStorageResponse {
     /**
      * Required.
@@ -33,12 +33,12 @@ public final class ResultStorageResponse {
      */
     private final ToolResultsHistoryResponse toolResultsHistory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResultStorageResponse(
-        @OutputCustomType.Parameter("googleCloudStorage") GoogleCloudStorageResponse googleCloudStorage,
-        @OutputCustomType.Parameter("resultsUrl") String resultsUrl,
-        @OutputCustomType.Parameter("toolResultsExecution") ToolResultsExecutionResponse toolResultsExecution,
-        @OutputCustomType.Parameter("toolResultsHistory") ToolResultsHistoryResponse toolResultsHistory) {
+        @CustomType.Parameter("googleCloudStorage") GoogleCloudStorageResponse googleCloudStorage,
+        @CustomType.Parameter("resultsUrl") String resultsUrl,
+        @CustomType.Parameter("toolResultsExecution") ToolResultsExecutionResponse toolResultsExecution,
+        @CustomType.Parameter("toolResultsHistory") ToolResultsHistoryResponse toolResultsHistory) {
         this.googleCloudStorage = googleCloudStorage;
         this.resultsUrl = resultsUrl;
         this.toolResultsExecution = toolResultsExecution;

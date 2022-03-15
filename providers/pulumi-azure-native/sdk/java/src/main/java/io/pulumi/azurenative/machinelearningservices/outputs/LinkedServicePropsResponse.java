@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinkedServicePropsResponse {
     /**
      * The creation time of the linked service.
@@ -32,12 +32,12 @@ public final class LinkedServicePropsResponse {
      */
     private final @Nullable String modifiedTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedServicePropsResponse(
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
-        @OutputCustomType.Parameter("linkedServiceResourceId") String linkedServiceResourceId,
-        @OutputCustomType.Parameter("modifiedTime") @Nullable String modifiedTime) {
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("linkType") @Nullable String linkType,
+        @CustomType.Parameter("linkedServiceResourceId") String linkedServiceResourceId,
+        @CustomType.Parameter("modifiedTime") @Nullable String modifiedTime) {
         this.createdTime = createdTime;
         this.linkType = linkType;
         this.linkedServiceResourceId = linkedServiceResourceId;

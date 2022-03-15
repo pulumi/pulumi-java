@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.inputs.LinuxPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.TargetPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.WindowsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * List of azure resource Ids for azure virtual machines targeted by the software update configuration.
      * 
      */
-    @InputImport(name="azureVirtualMachines")
+    @Import(name="azureVirtualMachines")
       private final @Nullable Output<List<String>> azureVirtualMachines;
 
     public Output<List<String>> getAzureVirtualMachines() {
@@ -38,7 +38,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
@@ -49,7 +49,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * Linux specific update configuration.
      * 
      */
-    @InputImport(name="linux")
+    @Import(name="linux")
       private final @Nullable Output<LinuxPropertiesArgs> linux;
 
     public Output<LinuxPropertiesArgs> getLinux() {
@@ -60,7 +60,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * List of names of non-azure machines targeted by the software update configuration.
      * 
      */
-    @InputImport(name="nonAzureComputerNames")
+    @Import(name="nonAzureComputerNames")
       private final @Nullable Output<List<String>> nonAzureComputerNames;
 
     public Output<List<String>> getNonAzureComputerNames() {
@@ -71,7 +71,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * operating system of target machines
      * 
      */
-    @InputImport(name="operatingSystem", required=true)
+    @Import(name="operatingSystem", required=true)
       private final Output<OperatingSystemType> operatingSystem;
 
     public Output<OperatingSystemType> getOperatingSystem() {
@@ -82,7 +82,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * Group targets for the software update configuration.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<TargetPropertiesArgs> targets;
 
     public Output<TargetPropertiesArgs> getTargets() {
@@ -93,7 +93,7 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * Windows specific update configuration.
      * 
      */
-    @InputImport(name="windows")
+    @Import(name="windows")
       private final @Nullable Output<WindowsPropertiesArgs> windows;
 
     public Output<WindowsPropertiesArgs> getWindows() {

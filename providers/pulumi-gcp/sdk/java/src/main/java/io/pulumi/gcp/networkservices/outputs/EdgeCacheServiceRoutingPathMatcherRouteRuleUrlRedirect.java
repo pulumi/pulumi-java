@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
     /**
      * The host that will be used in the redirect response instead of the one that was supplied in the request.
@@ -50,14 +50,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect {
      */
     private final @Nullable Boolean stripQuery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect(
-        @OutputCustomType.Parameter("hostRedirect") @Nullable String hostRedirect,
-        @OutputCustomType.Parameter("httpsRedirect") @Nullable Boolean httpsRedirect,
-        @OutputCustomType.Parameter("pathRedirect") @Nullable String pathRedirect,
-        @OutputCustomType.Parameter("prefixRedirect") @Nullable String prefixRedirect,
-        @OutputCustomType.Parameter("redirectResponseCode") @Nullable String redirectResponseCode,
-        @OutputCustomType.Parameter("stripQuery") @Nullable Boolean stripQuery) {
+        @CustomType.Parameter("hostRedirect") @Nullable String hostRedirect,
+        @CustomType.Parameter("httpsRedirect") @Nullable Boolean httpsRedirect,
+        @CustomType.Parameter("pathRedirect") @Nullable String pathRedirect,
+        @CustomType.Parameter("prefixRedirect") @Nullable String prefixRedirect,
+        @CustomType.Parameter("redirectResponseCode") @Nullable String redirectResponseCode,
+        @CustomType.Parameter("stripQuery") @Nullable Boolean stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;

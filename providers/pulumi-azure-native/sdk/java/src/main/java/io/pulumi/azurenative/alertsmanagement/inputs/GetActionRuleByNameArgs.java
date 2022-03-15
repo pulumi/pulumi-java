@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
      * The name of action rule that needs to be fetched
      * 
      */
-    @InputImport(name="actionRuleName", required=true)
+    @Import(name="actionRuleName", required=true)
       private final String actionRuleName;
 
     public String getActionRuleName() {
@@ -27,7 +27,7 @@ public final class GetActionRuleByNameArgs extends io.pulumi.resources.InvokeArg
      * Resource group name where the resource is created.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
      * The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
      * 
      */
-    @InputImport(name="blobListBlobPath")
+    @Import(name="blobListBlobPath")
       private final @Nullable String blobListBlobPath;
 
     public Optional<String> getBlobListBlobPath() {
@@ -34,7 +34,7 @@ public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
      * A collection of blob-path strings.
      * 
      */
-    @InputImport(name="blobPath")
+    @Import(name="blobPath")
       private final @Nullable List<String> blobPath;
 
     public List<String> getBlobPath() {
@@ -45,7 +45,7 @@ public final class ExportResponse extends io.pulumi.resources.InvokeArgs {
      * A collection of blob-prefix strings.
      * 
      */
-    @InputImport(name="blobPathPrefix")
+    @Import(name="blobPathPrefix")
       private final @Nullable List<String> blobPathPrefix;
 
     public List<String> getBlobPathPrefix() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.BgpPeerStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
     /**
      * List of BGP peers.
@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
      */
     private final @Nullable List<BgpPeerStatusResponse> value;
 
-    @OutputCustomType.Constructor
-    private GetVirtualNetworkGatewayBgpPeerStatusResult(@OutputCustomType.Parameter("value") @Nullable List<BgpPeerStatusResponse> value) {
+    @CustomType.Constructor
+    private GetVirtualNetworkGatewayBgpPeerStatusResult(@CustomType.Parameter("value") @Nullable List<BgpPeerStatusResponse> value) {
         this.value = value;
     }
 

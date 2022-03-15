@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetCompositeTypeArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCompositeTypeArgs Empty = new GetCompositeTypeArgs();
 
-    @InputImport(name="compositeType", required=true)
+    @Import(name="compositeType", required=true)
       private final String compositeType;
 
     public String getCompositeType() {
         return this.compositeType;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

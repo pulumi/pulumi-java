@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.file_v1.outputs.FileShareConfigResponse;
 import io.pulumi.googlenative.file_v1.outputs.NetworkConfigResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The time when the instance was created.
@@ -80,21 +80,21 @@ public final class GetInstanceResult {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("fileShares") List<FileShareConfigResponse> fileShares,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networks") List<NetworkConfigResponse> networks,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("fileShares") List<FileShareConfigResponse> fileShares,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networks") List<NetworkConfigResponse> networks,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
+        @CustomType.Parameter("tier") String tier) {
         this.createTime = createTime;
         this.description = description;
         this.etag = etag;

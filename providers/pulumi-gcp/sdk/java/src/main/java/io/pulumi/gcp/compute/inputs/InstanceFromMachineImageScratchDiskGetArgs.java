@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class InstanceFromMachineImageScratchDiskGetArgs extends io.pulumi.
 
     public static final InstanceFromMachineImageScratchDiskGetArgs Empty = new InstanceFromMachineImageScratchDiskGetArgs();
 
-    @InputImport(name="interface", required=true)
+    @Import(name="interface", required=true)
       private final Output<String> $interface;
 
     public Output<String> get$interface() {

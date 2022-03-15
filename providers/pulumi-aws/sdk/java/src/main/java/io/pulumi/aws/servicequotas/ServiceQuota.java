@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicequotas.ServiceQuotaArgs;
 import io.pulumi.aws.servicequotas.inputs.ServiceQuotaState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -36,7 +36,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Whether the service quota can be increased.
      * 
      */
-    @OutputExport(name="adjustable", type=Boolean.class, parameters={})
+    @Export(name="adjustable", type=Boolean.class, parameters={})
     private Output<Boolean> adjustable;
 
     /**
@@ -50,7 +50,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the service quota.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Default value of the service quota.
      * 
      */
-    @OutputExport(name="defaultValue", type=Double.class, parameters={})
+    @Export(name="defaultValue", type=Double.class, parameters={})
     private Output<Double> defaultValue;
 
     /**
@@ -78,7 +78,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Code of the service quota to track. For example: `L-F678F1CE`. Available values can be found with the [AWS CLI service-quotas list-service-quotas command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-service-quotas.html).
      * 
      */
-    @OutputExport(name="quotaCode", type=String.class, parameters={})
+    @Export(name="quotaCode", type=String.class, parameters={})
     private Output<String> quotaCode;
 
     /**
@@ -92,7 +92,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Name of the quota.
      * 
      */
-    @OutputExport(name="quotaName", type=String.class, parameters={})
+    @Export(name="quotaName", type=String.class, parameters={})
     private Output<String> quotaName;
 
     /**
@@ -102,13 +102,13 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
     public Output<String> getQuotaName() {
         return this.quotaName;
     }
-    @OutputExport(name="requestId", type=String.class, parameters={})
+    @Export(name="requestId", type=String.class, parameters={})
     private Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId;
     }
-    @OutputExport(name="requestStatus", type=String.class, parameters={})
+    @Export(name="requestStatus", type=String.class, parameters={})
     private Output<String> requestStatus;
 
     public Output<String> getRequestStatus() {
@@ -118,7 +118,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Code of the service to track. For example: `vpc`. Available values can be found with the [AWS CLI service-quotas list-services command](https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html).
      * 
      */
-    @OutputExport(name="serviceCode", type=String.class, parameters={})
+    @Export(name="serviceCode", type=String.class, parameters={})
     private Output<String> serviceCode;
 
     /**
@@ -132,7 +132,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Name of the service.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
@@ -146,7 +146,7 @@ public class ServiceQuota extends io.pulumi.resources.CustomResource {
      * Float specifying the desired value for the service quota. If the desired value is higher than the current value, a quota increase request is submitted. When a known request is submitted and pending, the value reflects the desired value of the pending request.
      * 
      */
-    @OutputExport(name="value", type=Double.class, parameters={})
+    @Export(name="value", type=Double.class, parameters={})
     private Output<Double> value;
 
     /**

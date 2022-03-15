@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.ManagedPrometheusConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.MonitoringComponentConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringConfigResponse {
     /**
      * Monitoring components configuration
@@ -21,10 +21,10 @@ public final class MonitoringConfigResponse {
      */
     private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringConfigResponse(
-        @OutputCustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig,
-        @OutputCustomType.Parameter("managedPrometheusConfig") ManagedPrometheusConfigResponse managedPrometheusConfig) {
+        @CustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig,
+        @CustomType.Parameter("managedPrometheusConfig") ManagedPrometheusConfigResponse managedPrometheusConfig) {
         this.componentConfig = componentConfig;
         this.managedPrometheusConfig = managedPrometheusConfig;
     }

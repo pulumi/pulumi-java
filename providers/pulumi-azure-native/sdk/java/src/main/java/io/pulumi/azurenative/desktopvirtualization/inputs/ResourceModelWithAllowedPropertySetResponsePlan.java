@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
      * A user defined name of the 3rd Party Artifact that is being procured.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -29,7 +29,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
      * The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
      * 
      */
-    @InputImport(name="product", required=true)
+    @Import(name="product", required=true)
       private final String product;
 
     public String getProduct() {
@@ -40,7 +40,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
      * A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
      * 
      */
-    @InputImport(name="promotionCode")
+    @Import(name="promotionCode")
       private final @Nullable String promotionCode;
 
     public Optional<String> getPromotionCode() {
@@ -51,7 +51,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
      * The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final String publisher;
 
     public String getPublisher() {
@@ -62,7 +62,7 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends io.pu
      * The version of the desired product/artifact.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

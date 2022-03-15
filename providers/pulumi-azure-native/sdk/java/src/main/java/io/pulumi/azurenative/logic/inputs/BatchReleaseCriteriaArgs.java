@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.WorkflowTriggerRecurrenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
      * The batch size in bytes.
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
     public Output<Integer> getBatchSize() {
@@ -34,7 +34,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
      * The message count.
      * 
      */
-    @InputImport(name="messageCount")
+    @Import(name="messageCount")
       private final @Nullable Output<Integer> messageCount;
 
     public Output<Integer> getMessageCount() {
@@ -45,7 +45,7 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
      * The recurrence.
      * 
      */
-    @InputImport(name="recurrence")
+    @Import(name="recurrence")
       private final @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
 
     public Output<WorkflowTriggerRecurrenceArgs> getRecurrence() {

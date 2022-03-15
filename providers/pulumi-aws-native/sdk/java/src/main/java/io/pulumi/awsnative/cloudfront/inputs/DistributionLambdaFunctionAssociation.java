@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class DistributionLambdaFunctionAssociation extends io.pulumi.resou
 
     public static final DistributionLambdaFunctionAssociation Empty = new DistributionLambdaFunctionAssociation();
 
-    @InputImport(name="eventType")
+    @Import(name="eventType")
       private final @Nullable String eventType;
 
     public Optional<String> getEventType() {
         return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
     }
 
-    @InputImport(name="includeBody")
+    @Import(name="includeBody")
       private final @Nullable Boolean includeBody;
 
     public Optional<Boolean> getIncludeBody() {
         return this.includeBody == null ? Optional.empty() : Optional.ofNullable(this.includeBody);
     }
 
-    @InputImport(name="lambdaFunctionARN")
+    @Import(name="lambdaFunctionARN")
       private final @Nullable String lambdaFunctionARN;
 
     public Optional<String> getLambdaFunctionARN() {

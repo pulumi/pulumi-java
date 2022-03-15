@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigLambdaConflictHandlerConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
      * The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
      * 
      */
-    @InputImport(name="conflictDetection")
+    @Import(name="conflictDetection")
       private final @Nullable Output<String> conflictDetection;
 
     public Output<String> getConflictDetection() {
@@ -30,7 +30,7 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
      * The Conflict Resolution strategy to perform in the event of a conflict. Valid values are `NONE`, `OPTIMISTIC_CONCURRENCY`, `AUTOMERGE`, and `LAMBDA`.
      * 
      */
-    @InputImport(name="conflictHandler")
+    @Import(name="conflictHandler")
       private final @Nullable Output<String> conflictHandler;
 
     public Output<String> getConflictHandler() {
@@ -41,7 +41,7 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
      * The Lambda Conflict Handler Config when configuring `LAMBDA` as the Conflict Handler. See Lambda Conflict Handler Config.
      * 
      */
-    @InputImport(name="lambdaConflictHandlerConfig")
+    @Import(name="lambdaConflictHandlerConfig")
       private final @Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigGetArgs> lambdaConflictHandlerConfig;
 
     public Output<ResolverSyncConfigLambdaConflictHandlerConfigGetArgs> getLambdaConflictHandlerConfig() {

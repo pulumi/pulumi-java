@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSettingMaintenanceWindow {
     private final Integer day;
     private final Integer hour;
     private final String updateTrack;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSettingMaintenanceWindow(
-        @OutputCustomType.Parameter("day") Integer day,
-        @OutputCustomType.Parameter("hour") Integer hour,
-        @OutputCustomType.Parameter("updateTrack") String updateTrack) {
+        @CustomType.Parameter("day") Integer day,
+        @CustomType.Parameter("hour") Integer hour,
+        @CustomType.Parameter("updateTrack") String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.updateTrack = updateTrack;

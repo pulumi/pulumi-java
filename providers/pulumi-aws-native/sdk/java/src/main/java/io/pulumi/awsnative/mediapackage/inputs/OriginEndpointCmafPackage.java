@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointCmafEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsManifest;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
 
     public static final OriginEndpointCmafPackage Empty = new OriginEndpointCmafPackage();
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable OriginEndpointCmafEncryption encryption;
 
     public Optional<OriginEndpointCmafEncryption> getEncryption() {
@@ -34,7 +34,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
      * A list of HLS manifest configurations
      * 
      */
-    @InputImport(name="hlsManifests")
+    @Import(name="hlsManifests")
       private final @Nullable List<OriginEndpointHlsManifest> hlsManifests;
 
     public List<OriginEndpointHlsManifest> getHlsManifests() {
@@ -45,7 +45,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
      * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
      * 
      */
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
@@ -56,14 +56,14 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
      * An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
      * 
      */
-    @InputImport(name="segmentPrefix")
+    @Import(name="segmentPrefix")
       private final @Nullable String segmentPrefix;
 
     public Optional<String> getSegmentPrefix() {
         return this.segmentPrefix == null ? Optional.empty() : Optional.ofNullable(this.segmentPrefix);
     }
 
-    @InputImport(name="streamSelection")
+    @Import(name="streamSelection")
       private final @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> getStreamSelection() {

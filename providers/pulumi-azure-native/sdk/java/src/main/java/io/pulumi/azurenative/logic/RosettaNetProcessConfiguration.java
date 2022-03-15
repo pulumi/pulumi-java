@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.outputs.RosettaNetPipActivitySettingsResponse
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipRoleSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The RosettaNet process configuration activity settings.
      * 
      */
-    @OutputExport(name="activitySettings", type=RosettaNetPipActivitySettingsResponse.class, parameters={})
+    @Export(name="activitySettings", type=RosettaNetPipActivitySettingsResponse.class, parameters={})
     private Output<RosettaNetPipActivitySettingsResponse> activitySettings;
 
     /**
@@ -51,7 +51,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The changed time.
      * 
      */
-    @OutputExport(name="changedTime", type=String.class, parameters={})
+    @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
@@ -65,7 +65,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The created time.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -79,7 +79,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The integration account RosettaNet ProcessConfiguration properties.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -93,7 +93,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The RosettaNet initiator role settings.
      * 
      */
-    @OutputExport(name="initiatorRoleSettings", type=RosettaNetPipRoleSettingsResponse.class, parameters={})
+    @Export(name="initiatorRoleSettings", type=RosettaNetPipRoleSettingsResponse.class, parameters={})
     private Output<RosettaNetPipRoleSettingsResponse> initiatorRoleSettings;
 
     /**
@@ -107,7 +107,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -121,7 +121,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -135,7 +135,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The integration account RosettaNet process code.
      * 
      */
-    @OutputExport(name="processCode", type=String.class, parameters={})
+    @Export(name="processCode", type=String.class, parameters={})
     private Output<String> processCode;
 
     /**
@@ -163,7 +163,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The integration account RosettaNet process name.
      * 
      */
-    @OutputExport(name="processName", type=String.class, parameters={})
+    @Export(name="processName", type=String.class, parameters={})
     private Output<String> processName;
 
     /**
@@ -177,7 +177,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The integration account RosettaNet process version.
      * 
      */
-    @OutputExport(name="processVersion", type=String.class, parameters={})
+    @Export(name="processVersion", type=String.class, parameters={})
     private Output<String> processVersion;
 
     /**
@@ -191,7 +191,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The RosettaNet responder role settings.
      * 
      */
-    @OutputExport(name="responderRoleSettings", type=RosettaNetPipRoleSettingsResponse.class, parameters={})
+    @Export(name="responderRoleSettings", type=RosettaNetPipRoleSettingsResponse.class, parameters={})
     private Output<RosettaNetPipRoleSettingsResponse> responderRoleSettings;
 
     /**
@@ -205,7 +205,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -219,7 +219,7 @@ public class RosettaNetProcessConfiguration extends io.pulumi.resources.CustomRe
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

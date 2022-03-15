@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileCredentialsArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfilePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
 
     public static final ConnectorProfileConfigArgs Empty = new ConnectorProfileConfigArgs();
 
-    @InputImport(name="connectorProfileCredentials", required=true)
+    @Import(name="connectorProfileCredentials", required=true)
       private final Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
 
     public Output<ConnectorProfileCredentialsArgs> getConnectorProfileCredentials() {
         return this.connectorProfileCredentials;
     }
 
-    @InputImport(name="connectorProfileProperties")
+    @Import(name="connectorProfileProperties")
       private final @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties;
 
     public Output<ConnectorProfilePropertiesArgs> getConnectorProfileProperties() {

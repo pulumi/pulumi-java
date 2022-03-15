@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
      * Operation response description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -37,7 +37,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
      * Collection of operation response headers.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable List<ParameterContractResponse> headers;
 
     public List<ParameterContractResponse> getHeaders() {
@@ -48,7 +48,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
      * Collection of operation response representations.
      * 
      */
-    @InputImport(name="representations")
+    @Import(name="representations")
       private final @Nullable List<RepresentationContractResponse> representations;
 
     public List<RepresentationContractResponse> getRepresentations() {
@@ -59,7 +59,7 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
      * Operation response HTTP status code.
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Integer statusCode;
 
     public Integer getStatusCode() {

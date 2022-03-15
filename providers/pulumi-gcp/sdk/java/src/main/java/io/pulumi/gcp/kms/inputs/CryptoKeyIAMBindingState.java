@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<CryptoKeyIAMBindingConditionGetArgs> condition;
 
     public Output<CryptoKeyIAMBindingConditionGetArgs> getCondition() {
@@ -35,7 +35,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * the provider's project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="cryptoKeyId")
+    @Import(name="cryptoKeyId")
       private final @Nullable Output<String> cryptoKeyId;
 
     public Output<String> getCryptoKeyId() {
@@ -46,14 +46,14 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * (Computed) The etag of the project's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -65,7 +65,7 @@ public final class CryptoKeyIAMBindingState extends io.pulumi.resources.Resource
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

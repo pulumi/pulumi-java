@@ -4,14 +4,14 @@
 package io.pulumi.aws.batch.outputs;
 
 import io.pulumi.aws.batch.outputs.JobDefinitionRetryStrategyEvaluateOnExit;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDefinitionRetryStrategy {
     /**
      * The number of times to move a job to the `RUNNABLE` status. You may specify between `1` and `10` attempts.
@@ -24,10 +24,10 @@ public final class JobDefinitionRetryStrategy {
      */
     private final @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDefinitionRetryStrategy(
-        @OutputCustomType.Parameter("attempts") @Nullable Integer attempts,
-        @OutputCustomType.Parameter("evaluateOnExits") @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
+        @CustomType.Parameter("attempts") @Nullable Integer attempts,
+        @CustomType.Parameter("evaluateOnExits") @Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
         this.attempts = attempts;
         this.evaluateOnExits = evaluateOnExits;
     }

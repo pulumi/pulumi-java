@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiResourceBackendServiceResponse {
     /**
      * The service URL.
@@ -17,8 +17,8 @@ public final class ApiResourceBackendServiceResponse {
      */
     private final @Nullable String serviceUrl;
 
-    @OutputCustomType.Constructor
-    private ApiResourceBackendServiceResponse(@OutputCustomType.Parameter("serviceUrl") @Nullable String serviceUrl) {
+    @CustomType.Constructor
+    private ApiResourceBackendServiceResponse(@CustomType.Parameter("serviceUrl") @Nullable String serviceUrl) {
         this.serviceUrl = serviceUrl;
     }
 

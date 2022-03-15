@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.forecast.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionConfigProperties {
     private final @Nullable String kmsKeyArn;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionConfigProperties(
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.kmsKeyArn = kmsKeyArn;
         this.roleArn = roleArn;
     }

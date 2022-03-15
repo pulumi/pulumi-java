@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionMonitoringGroundTruthS3Input {
     /**
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
@@ -15,8 +15,8 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3Input {
      */
     private final String s3Uri;
 
-    @OutputCustomType.Constructor
-    private ModelBiasJobDefinitionMonitoringGroundTruthS3Input(@OutputCustomType.Parameter("s3Uri") String s3Uri) {
+    @CustomType.Constructor
+    private ModelBiasJobDefinitionMonitoringGroundTruthS3Input(@CustomType.Parameter("s3Uri") String s3Uri) {
         this.s3Uri = s3Uri;
     }
 

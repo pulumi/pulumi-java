@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig {
     /**
      * Optional. The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
@@ -33,12 +33,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig 
      */
     private final @Nullable String idleStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig(
-        @OutputCustomType.Parameter("autoDeleteTime") @Nullable String autoDeleteTime,
-        @OutputCustomType.Parameter("autoDeleteTtl") @Nullable String autoDeleteTtl,
-        @OutputCustomType.Parameter("idleDeleteTtl") @Nullable String idleDeleteTtl,
-        @OutputCustomType.Parameter("idleStartTime") @Nullable String idleStartTime) {
+        @CustomType.Parameter("autoDeleteTime") @Nullable String autoDeleteTime,
+        @CustomType.Parameter("autoDeleteTtl") @Nullable String autoDeleteTtl,
+        @CustomType.Parameter("idleDeleteTtl") @Nullable String idleDeleteTtl,
+        @CustomType.Parameter("idleStartTime") @Nullable String idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.autoDeleteTtl = autoDeleteTtl;
         this.idleDeleteTtl = idleDeleteTtl;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether a profile should be created when data is received.
      * 
      */
-    @InputImport(name="allowProfileCreation")
+    @Import(name="allowProfileCreation")
       private final @Nullable Output<Boolean> allowProfileCreation;
 
     public Output<Boolean> getAllowProfileCreation() {
@@ -35,7 +35,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the profile object type.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the domain.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -57,7 +57,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The default encryption key
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -68,7 +68,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The default number of days until the data within the domain expires.
      * 
      */
-    @InputImport(name="expirationDays")
+    @Import(name="expirationDays")
       private final @Nullable Output<Integer> expirationDays;
 
     public Output<Integer> getExpirationDays() {
@@ -79,7 +79,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the name and ObjectType field.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<ObjectTypeFieldMapArgs>> fields;
 
     public Output<List<ObjectTypeFieldMapArgs>> getFields() {
@@ -90,7 +90,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * A list of unique keys that can be used to map data to the profile.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<List<ObjectTypeKeyMapArgs>> keys;
 
     public Output<List<ObjectTypeKeyMapArgs>> getKeys() {
@@ -101,7 +101,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the profile object type.
      * 
      */
-    @InputImport(name="objectTypeName")
+    @Import(name="objectTypeName")
       private final @Nullable Output<String> objectTypeName;
 
     public Output<String> getObjectTypeName() {
@@ -112,7 +112,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The tags (keys and values) associated with the integration.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ObjectTypeTagArgs>> tags;
 
     public Output<List<ObjectTypeTagArgs>> getTags() {
@@ -123,7 +123,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * A unique identifier for the object template.
      * 
      */
-    @InputImport(name="templateId")
+    @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
     public Output<String> getTemplateId() {

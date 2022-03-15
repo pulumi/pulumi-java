@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleLambdaAction {
     private final @Nullable String functionArn;
 
-    @OutputCustomType.Constructor
-    private TopicRuleLambdaAction(@OutputCustomType.Parameter("functionArn") @Nullable String functionArn) {
+    @CustomType.Constructor
+    private TopicRuleLambdaAction(@CustomType.Parameter("functionArn") @Nullable String functionArn) {
         this.functionArn = functionArn;
     }
 

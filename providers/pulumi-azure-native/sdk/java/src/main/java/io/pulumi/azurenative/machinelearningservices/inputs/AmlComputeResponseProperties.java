@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ScaleSettingsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAccountCredentialsResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineImageResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.
      * 
      */
-    @InputImport(name="allocationState", required=true)
+    @Import(name="allocationState", required=true)
       private final String allocationState;
 
     public String getAllocationState() {
@@ -42,7 +42,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * The time at which the compute entered its current allocation state.
      * 
      */
-    @InputImport(name="allocationStateTransitionTime", required=true)
+    @Import(name="allocationStateTransitionTime", required=true)
       private final String allocationStateTransitionTime;
 
     public String getAllocationStateTransitionTime() {
@@ -53,7 +53,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * The number of compute nodes currently assigned to the compute.
      * 
      */
-    @InputImport(name="currentNodeCount", required=true)
+    @Import(name="currentNodeCount", required=true)
       private final Integer currentNodeCount;
 
     public Integer getCurrentNodeCount() {
@@ -64,7 +64,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
      * 
      */
-    @InputImport(name="enableNodePublicIp")
+    @Import(name="enableNodePublicIp")
       private final @Nullable Boolean enableNodePublicIp;
 
     public Optional<Boolean> getEnableNodePublicIp() {
@@ -75,7 +75,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Collection of errors encountered by various compute nodes during node setup.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<MachineLearningServiceErrorResponse> errors;
 
     public List<MachineLearningServiceErrorResponse> getErrors() {
@@ -86,7 +86,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Network is isolated or not
      * 
      */
-    @InputImport(name="isolatedNetwork")
+    @Import(name="isolatedNetwork")
       private final @Nullable Boolean isolatedNetwork;
 
     public Optional<Boolean> getIsolatedNetwork() {
@@ -97,7 +97,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Counts of various node states on the compute.
      * 
      */
-    @InputImport(name="nodeStateCounts", required=true)
+    @Import(name="nodeStateCounts", required=true)
       private final NodeStateCountsResponse nodeStateCounts;
 
     public NodeStateCountsResponse getNodeStateCounts() {
@@ -108,7 +108,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Compute OS Type
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -119,7 +119,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
      * 
      */
-    @InputImport(name="remoteLoginPortPublicAccess")
+    @Import(name="remoteLoginPortPublicAccess")
       private final @Nullable String remoteLoginPortPublicAccess;
 
     public Optional<String> getRemoteLoginPortPublicAccess() {
@@ -130,7 +130,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Scale settings for AML Compute
      * 
      */
-    @InputImport(name="scaleSettings")
+    @Import(name="scaleSettings")
       private final @Nullable ScaleSettingsResponse scaleSettings;
 
     public Optional<ScaleSettingsResponse> getScaleSettings() {
@@ -141,7 +141,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Virtual network subnet resource ID the compute nodes belong to.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable ResourceIdResponse subnet;
 
     public Optional<ResourceIdResponse> getSubnet() {
@@ -152,7 +152,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.
      * 
      */
-    @InputImport(name="targetNodeCount", required=true)
+    @Import(name="targetNodeCount", required=true)
       private final Integer targetNodeCount;
 
     public Integer getTargetNodeCount() {
@@ -163,7 +163,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Credentials for an administrator user account that will be created on each compute node.
      * 
      */
-    @InputImport(name="userAccountCredentials")
+    @Import(name="userAccountCredentials")
       private final @Nullable UserAccountCredentialsResponse userAccountCredentials;
 
     public Optional<UserAccountCredentialsResponse> getUserAccountCredentials() {
@@ -174,7 +174,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Virtual Machine image for AML Compute - windows only
      * 
      */
-    @InputImport(name="virtualMachineImage")
+    @Import(name="virtualMachineImage")
       private final @Nullable VirtualMachineImageResponse virtualMachineImage;
 
     public Optional<VirtualMachineImageResponse> getVirtualMachineImage() {
@@ -185,7 +185,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Virtual Machine priority
      * 
      */
-    @InputImport(name="vmPriority")
+    @Import(name="vmPriority")
       private final @Nullable String vmPriority;
 
     public Optional<String> getVmPriority() {
@@ -196,7 +196,7 @@ public final class AmlComputeResponseProperties extends io.pulumi.resources.Invo
      * Virtual Machine Size
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {

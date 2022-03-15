@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BaseImageTriggerResponse {
     /**
      * The type of the auto trigger for base image dependency updates.
@@ -37,13 +37,13 @@ public final class BaseImageTriggerResponse {
      */
     private final @Nullable String updateTriggerPayloadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BaseImageTriggerResponse(
-        @OutputCustomType.Parameter("baseImageTriggerType") String baseImageTriggerType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("updateTriggerEndpoint") @Nullable String updateTriggerEndpoint,
-        @OutputCustomType.Parameter("updateTriggerPayloadType") @Nullable String updateTriggerPayloadType) {
+        @CustomType.Parameter("baseImageTriggerType") String baseImageTriggerType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("updateTriggerEndpoint") @Nullable String updateTriggerEndpoint,
+        @CustomType.Parameter("updateTriggerPayloadType") @Nullable String updateTriggerPayloadType) {
         this.baseImageTriggerType = baseImageTriggerType;
         this.name = name;
         this.status = status;

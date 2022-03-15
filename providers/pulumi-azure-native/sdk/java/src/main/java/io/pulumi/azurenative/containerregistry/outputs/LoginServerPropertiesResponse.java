@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.TlsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoginServerPropertiesResponse {
     /**
      * The host of the connected registry. Can be FQDN or IP.
@@ -21,10 +21,10 @@ public final class LoginServerPropertiesResponse {
      */
     private final TlsPropertiesResponse tls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoginServerPropertiesResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("tls") TlsPropertiesResponse tls) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("tls") TlsPropertiesResponse tls) {
         this.host = host;
         this.tls = tls;
     }

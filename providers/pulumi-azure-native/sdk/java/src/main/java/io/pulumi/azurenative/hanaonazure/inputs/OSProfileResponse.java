@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the host OS name of the HANA instance.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable String computerName;
 
     public Optional<String> getComputerName() {
@@ -33,7 +33,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * This property allows you to specify the type of the OS.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final String osType;
 
     public String getOsType() {
@@ -44,7 +44,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the SSH public key used to access the operating system.
      * 
      */
-    @InputImport(name="sshPublicKey")
+    @Import(name="sshPublicKey")
       private final @Nullable String sshPublicKey;
 
     public Optional<String> getSshPublicKey() {
@@ -55,7 +55,7 @@ public final class OSProfileResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies version of operating system.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

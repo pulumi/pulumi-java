@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RouteTablePropagationState extends io.pulumi.resources.Resour
      * Identifier of the resource
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -29,7 +29,7 @@ public final class RouteTablePropagationState extends io.pulumi.resources.Resour
      * Type of the resource
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -40,7 +40,7 @@ public final class RouteTablePropagationState extends io.pulumi.resources.Resour
      * Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId")
+    @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -51,7 +51,7 @@ public final class RouteTablePropagationState extends io.pulumi.resources.Resour
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @InputImport(name="transitGatewayRouteTableId")
+    @Import(name="transitGatewayRouteTableId")
       private final @Nullable Output<String> transitGatewayRouteTableId;
 
     public Output<String> getTransitGatewayRouteTableId() {

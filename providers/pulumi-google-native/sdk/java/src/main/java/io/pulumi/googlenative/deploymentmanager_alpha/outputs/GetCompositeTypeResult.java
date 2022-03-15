@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.CompositeTypeLabelEntryResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.OperationResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.TemplateContentsResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCompositeTypeResult {
     /**
      * An optional textual description of the resource; provided by the client when the resource is created.
@@ -50,16 +50,16 @@ public final class GetCompositeTypeResult {
      */
     private final TemplateContentsResponse templateContents;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCompositeTypeResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("insertTime") String insertTime,
-        @OutputCustomType.Parameter("labels") List<CompositeTypeLabelEntryResponse> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operation") OperationResponse operation,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("templateContents") TemplateContentsResponse templateContents) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("insertTime") String insertTime,
+        @CustomType.Parameter("labels") List<CompositeTypeLabelEntryResponse> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operation") OperationResponse operation,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("templateContents") TemplateContentsResponse templateContents) {
         this.description = description;
         this.insertTime = insertTime;
         this.labels = labels;

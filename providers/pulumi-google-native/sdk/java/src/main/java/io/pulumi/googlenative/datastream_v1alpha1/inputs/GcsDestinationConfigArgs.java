@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.AvroFileFormatArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.JsonFileFormatArgs;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * AVRO file format configuration.
      * 
      */
-    @InputImport(name="avroFileFormat")
+    @Import(name="avroFileFormat")
       private final @Nullable Output<AvroFileFormatArgs> avroFileFormat;
 
     public Output<AvroFileFormatArgs> getAvroFileFormat() {
@@ -36,7 +36,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * The maximum duration for which new events are added before a file is closed and a new file is created.
      * 
      */
-    @InputImport(name="fileRotationInterval")
+    @Import(name="fileRotationInterval")
       private final @Nullable Output<String> fileRotationInterval;
 
     public Output<String> getFileRotationInterval() {
@@ -47,7 +47,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * The maximum file size to be saved in the bucket.
      * 
      */
-    @InputImport(name="fileRotationMb")
+    @Import(name="fileRotationMb")
       private final @Nullable Output<Integer> fileRotationMb;
 
     public Output<Integer> getFileRotationMb() {
@@ -58,7 +58,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * JSON file format configuration.
      * 
      */
-    @InputImport(name="jsonFileFormat")
+    @Import(name="jsonFileFormat")
       private final @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
 
     public Output<JsonFileFormatArgs> getJsonFileFormat() {
@@ -69,7 +69,7 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
      * Path inside the Cloud Storage bucket to write data to.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

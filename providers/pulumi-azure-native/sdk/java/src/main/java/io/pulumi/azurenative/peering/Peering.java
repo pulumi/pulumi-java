@@ -10,7 +10,7 @@ import io.pulumi.azurenative.peering.outputs.PeeringPropertiesExchangeResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The properties that define a direct peering.
      * 
      */
-    @OutputExport(name="direct", type=PeeringPropertiesDirectResponse.class, parameters={})
+    @Export(name="direct", type=PeeringPropertiesDirectResponse.class, parameters={})
     private Output</* @Nullable */ PeeringPropertiesDirectResponse> direct;
 
     /**
@@ -52,7 +52,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The properties that define an exchange peering.
      * 
      */
-    @OutputExport(name="exchange", type=PeeringPropertiesExchangeResponse.class, parameters={})
+    @Export(name="exchange", type=PeeringPropertiesExchangeResponse.class, parameters={})
     private Output</* @Nullable */ PeeringPropertiesExchangeResponse> exchange;
 
     /**
@@ -66,7 +66,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The kind of the peering.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -94,7 +94,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The location of the peering.
      * 
      */
-    @OutputExport(name="peeringLocation", type=String.class, parameters={})
+    @Export(name="peeringLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringLocation;
 
     /**
@@ -122,7 +122,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -136,7 +136,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The SKU that defines the tier and kind of the peering.
      * 
      */
-    @OutputExport(name="sku", type=PeeringSkuResponse.class, parameters={})
+    @Export(name="sku", type=PeeringSkuResponse.class, parameters={})
     private Output<PeeringSkuResponse> sku;
 
     /**
@@ -150,7 +150,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

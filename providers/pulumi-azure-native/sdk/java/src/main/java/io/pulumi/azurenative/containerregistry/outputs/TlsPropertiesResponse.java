@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.TlsCertificatePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TlsPropertiesResponse {
     /**
      * The certificate used to configure HTTPS for the login server.
@@ -21,10 +21,10 @@ public final class TlsPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsPropertiesResponse(
-        @OutputCustomType.Parameter("certificate") TlsCertificatePropertiesResponse certificate,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("certificate") TlsCertificatePropertiesResponse certificate,
+        @CustomType.Parameter("status") String status) {
         this.certificate = certificate;
         this.status = status;
     }

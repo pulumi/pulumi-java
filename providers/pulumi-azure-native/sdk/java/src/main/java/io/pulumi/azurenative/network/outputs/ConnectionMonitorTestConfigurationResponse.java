@@ -7,14 +7,14 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorHttpConfigurationR
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorIcmpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorSuccessThresholdResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTcpConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorTestConfigurationResponse {
     /**
      * The parameters used to perform test evaluation over HTTP.
@@ -57,16 +57,16 @@ public final class ConnectionMonitorTestConfigurationResponse {
      */
     private final @Nullable Integer testFrequencySec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorTestConfigurationResponse(
-        @OutputCustomType.Parameter("httpConfiguration") @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
-        @OutputCustomType.Parameter("icmpConfiguration") @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("preferredIPVersion") @Nullable String preferredIPVersion,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("successThreshold") @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
-        @OutputCustomType.Parameter("tcpConfiguration") @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
-        @OutputCustomType.Parameter("testFrequencySec") @Nullable Integer testFrequencySec) {
+        @CustomType.Parameter("httpConfiguration") @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
+        @CustomType.Parameter("icmpConfiguration") @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("preferredIPVersion") @Nullable String preferredIPVersion,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("successThreshold") @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
+        @CustomType.Parameter("tcpConfiguration") @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
+        @CustomType.Parameter("testFrequencySec") @Nullable Integer testFrequencySec) {
         this.httpConfiguration = httpConfiguration;
         this.icmpConfiguration = icmpConfiguration;
         this.name = name;

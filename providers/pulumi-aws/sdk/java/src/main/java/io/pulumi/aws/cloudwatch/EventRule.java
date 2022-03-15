@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.EventRuleArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventRuleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The description of the rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The event bus to associate with this rule. If you omit this, the `default` event bus is used.
      * 
      */
-    @OutputExport(name="eventBusName", type=String.class, parameters={})
+    @Export(name="eventBusName", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventBusName;
 
     /**
@@ -78,7 +78,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The event pattern described a JSON object. At least one of `schedule_expression` or `event_pattern` is required. See full documentation of [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) for details.
      * 
      */
-    @OutputExport(name="eventPattern", type=String.class, parameters={})
+    @Export(name="eventPattern", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventPattern;
 
     /**
@@ -92,7 +92,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * Whether the rule should be enabled (defaults to `true`).
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
@@ -106,7 +106,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The name of the rule. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -134,7 +134,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) associated with the role that is used for target invocation.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**
@@ -148,7 +148,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * The scheduling expression. For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`. At least one of `schedule_expression` or `event_pattern` is required. Can only be used on the default event bus. For more information, refer to the AWS documentation [Schedule Expressions for Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html).
      * 
      */
-    @OutputExport(name="scheduleExpression", type=String.class, parameters={})
+    @Export(name="scheduleExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduleExpression;
 
     /**
@@ -162,7 +162,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -176,7 +176,7 @@ public class EventRule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

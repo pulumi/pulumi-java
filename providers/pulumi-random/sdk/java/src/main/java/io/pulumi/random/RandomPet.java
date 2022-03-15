@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomPetArgs;
 import io.pulumi.random.Utilities;
@@ -29,7 +29,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
@@ -43,7 +43,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * The length (in words) of the pet name.
      * 
      */
-    @OutputExport(name="length", type=Integer.class, parameters={})
+    @Export(name="length", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> length;
 
     /**
@@ -57,7 +57,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * A string to prefix the name with.
      * 
      */
-    @OutputExport(name="prefix", type=String.class, parameters={})
+    @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
@@ -71,7 +71,7 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
      * The character to separate words in the pet name.
      * 
      */
-    @OutputExport(name="separator", type=String.class, parameters={})
+    @Export(name="separator", type=String.class, parameters={})
     private Output</* @Nullable */ String> separator;
 
     /**

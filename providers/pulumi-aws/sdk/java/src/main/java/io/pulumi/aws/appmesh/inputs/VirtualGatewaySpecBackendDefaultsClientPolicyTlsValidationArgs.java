@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArg
      * The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
      * 
      */
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs> subjectAlternativeNames;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesArgs> getSubjectAlternativeNames() {
@@ -30,7 +30,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArg
      * The TLS validation context trust.
      * 
      */
-    @InputImport(name="trust", required=true)
+    @Import(name="trust", required=true)
       private final Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustArgs> trust;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustArgs> getTrust() {

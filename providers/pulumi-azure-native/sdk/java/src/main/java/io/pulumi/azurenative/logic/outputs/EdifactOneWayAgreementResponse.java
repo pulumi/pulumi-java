@@ -5,10 +5,10 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactProtocolSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdifactOneWayAgreementResponse {
     /**
      * The EDIFACT protocol settings.
@@ -26,11 +26,11 @@ public final class EdifactOneWayAgreementResponse {
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactOneWayAgreementResponse(
-        @OutputCustomType.Parameter("protocolSettings") EdifactProtocolSettingsResponse protocolSettings,
-        @OutputCustomType.Parameter("receiverBusinessIdentity") BusinessIdentityResponse receiverBusinessIdentity,
-        @OutputCustomType.Parameter("senderBusinessIdentity") BusinessIdentityResponse senderBusinessIdentity) {
+        @CustomType.Parameter("protocolSettings") EdifactProtocolSettingsResponse protocolSettings,
+        @CustomType.Parameter("receiverBusinessIdentity") BusinessIdentityResponse receiverBusinessIdentity,
+        @CustomType.Parameter("senderBusinessIdentity") BusinessIdentityResponse senderBusinessIdentity) {
         this.protocolSettings = protocolSettings;
         this.receiverBusinessIdentity = receiverBusinessIdentity;
         this.senderBusinessIdentity = senderBusinessIdentity;

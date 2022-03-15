@@ -8,7 +8,7 @@ import io.pulumi.aws.redshift.ParameterGroupArgs;
 import io.pulumi.aws.redshift.inputs.ParameterGroupState;
 import io.pulumi.aws.redshift.outputs.ParameterGroupParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of parameter group
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The description of the Redshift parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -63,7 +63,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The family of the Redshift parameter group.
      * 
      */
-    @OutputExport(name="family", type=String.class, parameters={})
+    @Export(name="family", type=String.class, parameters={})
     private Output<String> family;
 
     /**
@@ -77,7 +77,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The name of the Redshift parameter.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A list of Redshift parameters to apply.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ParameterGroupParameter.class})
+    @Export(name="parameters", type=List.class, parameters={ParameterGroupParameter.class})
     private Output</* @Nullable */ List<ParameterGroupParameter>> parameters;
 
     /**
@@ -105,7 +105,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -119,7 +119,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

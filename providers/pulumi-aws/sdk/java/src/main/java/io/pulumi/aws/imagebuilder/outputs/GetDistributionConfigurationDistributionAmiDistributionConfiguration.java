@@ -4,13 +4,13 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionConfigurationDistributionAmiDistributionConfiguration {
     /**
      * Key-value map of tags to apply to distributed AMI.
@@ -43,14 +43,14 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final List<String> targetAccountIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfiguration(
-        @OutputCustomType.Parameter("amiTags") Map<String,String> amiTags,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("launchPermissions") List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("targetAccountIds") List<String> targetAccountIds) {
+        @CustomType.Parameter("amiTags") Map<String,String> amiTags,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("launchPermissions") List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("targetAccountIds") List<String> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;

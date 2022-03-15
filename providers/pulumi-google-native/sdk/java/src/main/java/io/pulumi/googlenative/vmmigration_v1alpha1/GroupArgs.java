@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided description of the group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,21 +29,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Display name is a user defined name for this group which can be updated.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
     public Output<String> getGroupId() {
         return this.groupId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,21 +54,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Group name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

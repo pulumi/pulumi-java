@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends io.pulumi.res
      * The field/property in the event based on which you want to filter.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable String key;
 
     public Optional<String> getKey() {
@@ -34,7 +34,7 @@ public final class IsNullOrUndefinedAdvancedFilterResponse extends io.pulumi.res
      * Expected value is 'IsNullOrUndefined'.
      * 
      */
-    @InputImport(name="operatorType", required=true)
+    @Import(name="operatorType", required=true)
       private final String operatorType;
 
     public String getOperatorType() {

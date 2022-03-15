@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasCloudWatchLogGroupLogDestination;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BotAliasTextLogDestination extends io.pulumi.resources.Invoke
 
     public static final BotAliasTextLogDestination Empty = new BotAliasTextLogDestination();
 
-    @InputImport(name="cloudWatch")
+    @Import(name="cloudWatch")
       private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
     public Optional<BotAliasCloudWatchLogGroupLogDestination> getCloudWatch() {

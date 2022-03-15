@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportPlanTag {
     /**
      * The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
@@ -22,10 +22,10 @@ public final class ReportPlanTag {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportPlanTag(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.value = value;
     }

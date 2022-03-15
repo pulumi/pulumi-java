@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class DataAccessOptionsResponse extends io.pulumi.resources.InvokeA
 
     public static final DataAccessOptionsResponse Empty = new DataAccessOptionsResponse();
 
-    @InputImport(name="logMode", required=true)
+    @Import(name="logMode", required=true)
       private final String logMode;
 
     public String getLogMode() {

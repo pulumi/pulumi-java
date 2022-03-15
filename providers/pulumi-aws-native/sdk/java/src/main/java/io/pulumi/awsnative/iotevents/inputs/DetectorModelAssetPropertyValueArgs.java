@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyTimestampArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyVariantArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,21 +24,21 @@ public final class DetectorModelAssetPropertyValueArgs extends io.pulumi.resourc
      * The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
      * 
      */
-    @InputImport(name="quality")
+    @Import(name="quality")
       private final @Nullable Output<String> quality;
 
     public Output<String> getQuality() {
         return this.quality == null ? Output.empty() : this.quality;
     }
 
-    @InputImport(name="timestamp")
+    @Import(name="timestamp")
       private final @Nullable Output<DetectorModelAssetPropertyTimestampArgs> timestamp;
 
     public Output<DetectorModelAssetPropertyTimestampArgs> getTimestamp() {
         return this.timestamp == null ? Output.empty() : this.timestamp;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<DetectorModelAssetPropertyVariantArgs> value;
 
     public Output<DetectorModelAssetPropertyVariantArgs> getValue() {

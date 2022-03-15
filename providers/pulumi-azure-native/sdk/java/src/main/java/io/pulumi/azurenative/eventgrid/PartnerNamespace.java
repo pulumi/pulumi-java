@@ -10,7 +10,7 @@ import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointConnectionResponse
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
      * 
      */
-    @OutputExport(name="disableLocalAuth", type=Boolean.class, parameters={})
+    @Export(name="disableLocalAuth", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableLocalAuth;
 
     /**
@@ -53,7 +53,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * Endpoint for the partner namespace.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -67,7 +67,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    @OutputExport(name="inboundIpRules", type=List.class, parameters={InboundIpRuleResponse.class})
+    @Export(name="inboundIpRules", type=List.class, parameters={InboundIpRuleResponse.class})
     private Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules;
 
     /**
@@ -81,7 +81,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -95,7 +95,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
      * 
      */
-    @OutputExport(name="partnerRegistrationFullyQualifiedId", type=String.class, parameters={})
+    @Export(name="partnerRegistrationFullyQualifiedId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerRegistrationFullyQualifiedId;
 
     /**
@@ -121,7 +121,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getPartnerRegistrationFullyQualifiedId() {
         return this.partnerRegistrationFullyQualifiedId;
     }
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
@@ -131,7 +131,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * Provisioning state of the partner namespace.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -146,7 +146,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules" />
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -161,7 +161,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * The system metadata relating to Partner Namespace resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -175,7 +175,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * Tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -189,7 +189,7 @@ public class PartnerNamespace extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

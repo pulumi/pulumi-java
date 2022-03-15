@@ -6,14 +6,14 @@ package io.pulumi.azurenative.peering.outputs;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesDirectResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringPropertiesExchangeResponse;
 import io.pulumi.azurenative.peering.outputs.PeeringSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPeeringResult {
     /**
      * The properties that define a direct peering.
@@ -71,19 +71,19 @@ public final class GetPeeringResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPeeringResult(
-        @OutputCustomType.Parameter("direct") @Nullable PeeringPropertiesDirectResponse direct,
-        @OutputCustomType.Parameter("exchange") @Nullable PeeringPropertiesExchangeResponse exchange,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") PeeringSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("direct") @Nullable PeeringPropertiesDirectResponse direct,
+        @CustomType.Parameter("exchange") @Nullable PeeringPropertiesExchangeResponse exchange,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") PeeringSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.direct = direct;
         this.exchange = exchange;
         this.id = id;

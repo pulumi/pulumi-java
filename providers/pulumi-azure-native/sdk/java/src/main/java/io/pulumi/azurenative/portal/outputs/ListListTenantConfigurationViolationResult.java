@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.ViolationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListListTenantConfigurationViolationResult {
     /**
      * The URL to use for getting the next set of results.
@@ -24,10 +24,10 @@ public final class ListListTenantConfigurationViolationResult {
      */
     private final @Nullable List<ViolationResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListListTenantConfigurationViolationResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<ViolationResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<ViolationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetBaselineEbsBandwidthMbpsRequest {
     private final @Nullable Integer max;
     private final @Nullable Integer min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetBaselineEbsBandwidthMbpsRequest(
-        @OutputCustomType.Parameter("max") @Nullable Integer max,
-        @OutputCustomType.Parameter("min") @Nullable Integer min) {
+        @CustomType.Parameter("max") @Nullable Integer max,
+        @CustomType.Parameter("min") @Nullable Integer min) {
         this.max = max;
         this.min = min;
     }

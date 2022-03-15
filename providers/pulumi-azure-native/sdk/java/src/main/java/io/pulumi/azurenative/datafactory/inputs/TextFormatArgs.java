@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The column delimiter. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="columnDelimiter")
+    @Import(name="columnDelimiter")
       private final @Nullable Output<Object> columnDelimiter;
 
     public Output<Object> getColumnDelimiter() {
@@ -34,7 +34,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Deserializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="deserializer")
+    @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
     public Output<Object> getDeserializer() {
@@ -45,7 +45,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The code page name of the preferred encoding. If miss, the default value is ΓÇ£utf-8ΓÇ¥, unless BOM denotes another Unicode encoding. Refer to the ΓÇ£NameΓÇ¥ column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encodingName")
+    @Import(name="encodingName")
       private final @Nullable Output<Object> encodingName;
 
     public Output<Object> getEncodingName() {
@@ -56,7 +56,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The escape character. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="escapeChar")
+    @Import(name="escapeChar")
       private final @Nullable Output<Object> escapeChar;
 
     public Output<Object> getEscapeChar() {
@@ -67,7 +67,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="firstRowAsHeader")
+    @Import(name="firstRowAsHeader")
       private final @Nullable Output<Object> firstRowAsHeader;
 
     public Output<Object> getFirstRowAsHeader() {
@@ -78,7 +78,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The null value string. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="nullValue")
+    @Import(name="nullValue")
       private final @Nullable Output<Object> nullValue;
 
     public Output<Object> getNullValue() {
@@ -89,7 +89,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The quote character. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="quoteChar")
+    @Import(name="quoteChar")
       private final @Nullable Output<Object> quoteChar;
 
     public Output<Object> getQuoteChar() {
@@ -100,7 +100,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The row delimiter. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="rowDelimiter")
+    @Import(name="rowDelimiter")
       private final @Nullable Output<Object> rowDelimiter;
 
     public Output<Object> getRowDelimiter() {
@@ -111,7 +111,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Serializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serializer")
+    @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
     public Output<Object> getSerializer() {
@@ -122,7 +122,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * The number of lines/rows to be skipped when parsing text files. The default value is 0. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="skipLineCount")
+    @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
 
     public Output<Object> getSkipLineCount() {
@@ -133,7 +133,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Treat empty column values in the text file as null. The default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="treatEmptyAsNull")
+    @Import(name="treatEmptyAsNull")
       private final @Nullable Output<Object> treatEmptyAsNull;
 
     public Output<Object> getTreatEmptyAsNull() {
@@ -145,7 +145,7 @@ public final class TextFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'TextFormat'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

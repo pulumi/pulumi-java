@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProjectSecondarySourceBuildStatusConfigArgs extends io.pulumi
      * Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -29,7 +29,7 @@ public final class ProjectSecondarySourceBuildStatusConfigArgs extends io.pulumi
      * Specifies the target url of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
      * 
      */
-    @InputImport(name="targetUrl")
+    @Import(name="targetUrl")
       private final @Nullable Output<String> targetUrl;
 
     public Output<String> getTargetUrl() {

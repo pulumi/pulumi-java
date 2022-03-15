@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appconfiguration;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the configuration store.
      * 
      */
-    @InputImport(name="configStoreName", required=true)
+    @Import(name="configStoreName", required=true)
       private final Output<String> configStoreName;
 
     public Output<String> getConfigStoreName() {
@@ -31,7 +31,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -42,7 +42,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of key and label combination. Key and label are joined by $ character. Label is optional.
      * 
      */
-    @InputImport(name="keyValueName")
+    @Import(name="keyValueName")
       private final @Nullable Output<String> keyValueName;
 
     public Output<String> getKeyValueName() {
@@ -53,7 +53,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the key-value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

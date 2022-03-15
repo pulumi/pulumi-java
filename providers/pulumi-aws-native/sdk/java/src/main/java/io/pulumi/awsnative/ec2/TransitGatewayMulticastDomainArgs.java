@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayMulticastDomainTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
      * The options for the transit gateway multicast domain.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<OptionsPropertiesArgs> options;
 
     public Output<OptionsPropertiesArgs> getOptions() {
@@ -32,7 +32,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
      * The tags for the transit gateway multicast domain.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
     public Output<List<TransitGatewayMulticastDomainTagArgs>> getTags() {
@@ -43,7 +43,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
      * The ID of the transit gateway.
      * 
      */
-    @InputImport(name="transitGatewayId", required=true)
+    @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {

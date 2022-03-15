@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationRootPolicyType {
     /**
      * The status of the policy type as it relates to the associated root
@@ -16,10 +16,10 @@ public final class GetOrganizationRootPolicyType {
     private final String status;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationRootPolicyType(
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.status = status;
         this.type = type;
     }

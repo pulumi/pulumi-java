@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionResponse {
     /**
      * Enumerates the possible value of keySource for Encryption
@@ -23,10 +23,10 @@ public final class EncryptionResponse {
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionResponse(
-        @OutputCustomType.Parameter("keySource") @Nullable String keySource,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        @CustomType.Parameter("keySource") @Nullable String keySource,
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;
     }

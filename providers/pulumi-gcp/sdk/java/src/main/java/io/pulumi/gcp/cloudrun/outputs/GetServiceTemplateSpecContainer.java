@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnv;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFrom;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerPort;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainer {
     private final List<String> args;
     private final List<String> commands;
@@ -25,17 +25,17 @@ public final class GetServiceTemplateSpecContainer {
     private final List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts;
     private final String workingDir;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecContainer(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("commands") List<String> commands,
-        @OutputCustomType.Parameter("envFroms") List<GetServiceTemplateSpecContainerEnvFrom> envFroms,
-        @OutputCustomType.Parameter("envs") List<GetServiceTemplateSpecContainerEnv> envs,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("ports") List<GetServiceTemplateSpecContainerPort> ports,
-        @OutputCustomType.Parameter("resources") List<GetServiceTemplateSpecContainerResource> resources,
-        @OutputCustomType.Parameter("volumeMounts") List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts,
-        @OutputCustomType.Parameter("workingDir") String workingDir) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("commands") List<String> commands,
+        @CustomType.Parameter("envFroms") List<GetServiceTemplateSpecContainerEnvFrom> envFroms,
+        @CustomType.Parameter("envs") List<GetServiceTemplateSpecContainerEnv> envs,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("ports") List<GetServiceTemplateSpecContainerPort> ports,
+        @CustomType.Parameter("resources") List<GetServiceTemplateSpecContainerResource> resources,
+        @CustomType.Parameter("volumeMounts") List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts,
+        @CustomType.Parameter("workingDir") String workingDir) {
         this.args = args;
         this.commands = commands;
         this.envFroms = envFroms;

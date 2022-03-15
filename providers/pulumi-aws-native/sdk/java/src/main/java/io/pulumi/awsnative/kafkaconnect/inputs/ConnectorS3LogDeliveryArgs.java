@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
      * The name of the S3 bucket that is the destination for log delivery.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -34,7 +34,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
      * Specifies whether the logs get sent to the specified Amazon S3 destination.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -45,7 +45,7 @@ public final class ConnectorS3LogDeliveryArgs extends io.pulumi.resources.Resour
      * The S3 prefix that is the destination for log delivery.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

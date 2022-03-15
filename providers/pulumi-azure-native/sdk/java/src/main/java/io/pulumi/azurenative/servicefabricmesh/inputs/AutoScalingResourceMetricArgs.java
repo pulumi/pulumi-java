@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.enums.AutoScalingResourceMetricName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * Expected value is 'Resource'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -35,7 +35,7 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * Name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,AutoScalingResourceMetricName>> name;
 
     public Output<Either<String,AutoScalingResourceMetricName>> getName() {

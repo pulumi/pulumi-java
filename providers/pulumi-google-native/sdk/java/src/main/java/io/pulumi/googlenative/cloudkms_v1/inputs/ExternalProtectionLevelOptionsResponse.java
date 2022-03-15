@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
      * The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of external_key_uri when using an EkmConnection.
      * 
      */
-    @InputImport(name="ekmConnectionKeyPath", required=true)
+    @Import(name="ekmConnectionKeyPath", required=true)
       private final String ekmConnectionKeyPath;
 
     public String getEkmConnectionKeyPath() {
@@ -31,7 +31,7 @@ public final class ExternalProtectionLevelOptionsResponse extends io.pulumi.reso
      * The URI for an external resource that this CryptoKeyVersion represents.
      * 
      */
-    @InputImport(name="externalKeyUri", required=true)
+    @Import(name="externalKeyUri", required=true)
       private final String externalKeyUri;
 
     public String getExternalKeyUri() {

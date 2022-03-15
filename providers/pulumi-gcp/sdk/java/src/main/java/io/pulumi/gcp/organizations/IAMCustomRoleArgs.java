@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable description for the role.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The numeric ID of the organization in which you want to create a custom role.
      * 
      */
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -41,7 +41,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
@@ -52,7 +52,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The role id to use for this role.
      * 
      */
-    @InputImport(name="roleId", required=true)
+    @Import(name="roleId", required=true)
       private final Output<String> roleId;
 
     public Output<String> getRoleId() {
@@ -65,7 +65,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {
@@ -76,7 +76,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable title for the role.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

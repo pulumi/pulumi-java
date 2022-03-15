@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudsearch.inputs.DomainEndpointOptionsGetArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainIndexFieldGetArgs;
 import io.pulumi.aws.cloudsearch.inputs.DomainScalingParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The domain's ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The service endpoint for updating documents in a search domain.
      * 
      */
-    @InputImport(name="documentServiceEndpoint")
+    @Import(name="documentServiceEndpoint")
       private final @Nullable Output<String> documentServiceEndpoint;
 
     public Output<String> getDocumentServiceEndpoint() {
@@ -45,7 +45,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * An internally generated unique identifier for the domain.
      * 
      */
-    @InputImport(name="domainId")
+    @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -56,7 +56,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * Domain endpoint options. Documented below.
      * 
      */
-    @InputImport(name="endpointOptions")
+    @Import(name="endpointOptions")
       private final @Nullable Output<DomainEndpointOptionsGetArgs> endpointOptions;
 
     public Output<DomainEndpointOptionsGetArgs> getEndpointOptions() {
@@ -67,7 +67,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The index fields for documents added to the domain. Documented below.
      * 
      */
-    @InputImport(name="indexFields")
+    @Import(name="indexFields")
       private final @Nullable Output<List<DomainIndexFieldGetArgs>> indexFields;
 
     public Output<List<DomainIndexFieldGetArgs>> getIndexFields() {
@@ -78,7 +78,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
      * 
      */
-    @InputImport(name="multiAz")
+    @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
     public Output<Boolean> getMultiAz() {
@@ -89,7 +89,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * Domain scaling parameters. Documented below.
      * 
      */
-    @InputImport(name="scalingParameters")
+    @Import(name="scalingParameters")
       private final @Nullable Output<DomainScalingParametersGetArgs> scalingParameters;
 
     public Output<DomainScalingParametersGetArgs> getScalingParameters() {
@@ -111,7 +111,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The service endpoint for requesting search results from a search domain.
      * 
      */
-    @InputImport(name="searchServiceEndpoint")
+    @Import(name="searchServiceEndpoint")
       private final @Nullable Output<String> searchServiceEndpoint;
 
     public Output<String> getSearchServiceEndpoint() {

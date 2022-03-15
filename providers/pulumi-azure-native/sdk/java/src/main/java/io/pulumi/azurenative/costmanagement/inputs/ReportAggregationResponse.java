@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ReportAggregationResponse extends io.pulumi.resources.InvokeA
      * The name of the aggregation function to use.
      * 
      */
-    @InputImport(name="function", required=true)
+    @Import(name="function", required=true)
       private final String function;
 
     public String getFunction() {
@@ -31,7 +31,7 @@ public final class ReportAggregationResponse extends io.pulumi.resources.InvokeA
      * The name of the column to aggregate.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

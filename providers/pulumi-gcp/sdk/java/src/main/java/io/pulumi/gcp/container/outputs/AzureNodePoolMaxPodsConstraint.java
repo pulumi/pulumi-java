@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureNodePoolMaxPodsConstraint {
     /**
      * Required. The maximum number of pods to schedule on a single node.
@@ -15,8 +15,8 @@ public final class AzureNodePoolMaxPodsConstraint {
      */
     private final Integer maxPodsPerNode;
 
-    @OutputCustomType.Constructor
-    private AzureNodePoolMaxPodsConstraint(@OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode) {
+    @CustomType.Constructor
+    private AzureNodePoolMaxPodsConstraint(@CustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode) {
         this.maxPodsPerNode = maxPodsPerNode;
     }
 

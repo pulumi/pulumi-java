@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.LongTermRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureSqlProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -32,11 +32,11 @@ public final class AzureSqlProtectionPolicyResponse {
      */
     private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureSqlProtectionPolicyResponse(
-        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
-        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
+        @CustomType.Parameter("backupManagementType") String backupManagementType,
+        @CustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @CustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
         this.backupManagementType = backupManagementType;
         this.protectedItemsCount = protectedItemsCount;
         this.retentionPolicy = retentionPolicy;

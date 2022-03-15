@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleConfiguration {
     /**
      * A lifecycle rule for individual objects in an Amazon S3 bucket.
@@ -16,8 +16,8 @@ public final class BucketLifecycleConfiguration {
      */
     private final List<BucketRule> rules;
 
-    @OutputCustomType.Constructor
-    private BucketLifecycleConfiguration(@OutputCustomType.Parameter("rules") List<BucketRule> rules) {
+    @CustomType.Constructor
+    private BucketLifecycleConfiguration(@CustomType.Parameter("rules") List<BucketRule> rules) {
         this.rules = rules;
     }
 

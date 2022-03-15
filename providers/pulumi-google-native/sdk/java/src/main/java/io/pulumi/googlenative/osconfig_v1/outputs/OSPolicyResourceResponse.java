@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceExecResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceFileResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceRepositoryResourceResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceResponse {
     /**
      * Exec resource
@@ -33,12 +33,12 @@ public final class OSPolicyResourceResponse {
      */
     private final OSPolicyResourceRepositoryResourceResponse repository;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceResponse(
-        @OutputCustomType.Parameter("exec") OSPolicyResourceExecResourceResponse exec,
-        @OutputCustomType.Parameter("file") OSPolicyResourceFileResourceResponse file,
-        @OutputCustomType.Parameter("pkg") OSPolicyResourcePackageResourceResponse pkg,
-        @OutputCustomType.Parameter("repository") OSPolicyResourceRepositoryResourceResponse repository) {
+        @CustomType.Parameter("exec") OSPolicyResourceExecResourceResponse exec,
+        @CustomType.Parameter("file") OSPolicyResourceFileResourceResponse file,
+        @CustomType.Parameter("pkg") OSPolicyResourcePackageResourceResponse pkg,
+        @CustomType.Parameter("repository") OSPolicyResourceRepositoryResourceResponse repository) {
         this.exec = exec;
         this.file = file;
         this.pkg = pkg;

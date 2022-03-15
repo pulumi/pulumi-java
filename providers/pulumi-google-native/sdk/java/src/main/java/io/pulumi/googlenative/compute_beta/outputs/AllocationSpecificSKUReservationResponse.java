@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllocationSpecificSKUReservationResponse {
     /**
      * Indicates how many instances are actually usable currently.
@@ -31,12 +31,12 @@ public final class AllocationSpecificSKUReservationResponse {
      */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllocationSpecificSKUReservationResponse(
-        @OutputCustomType.Parameter("assuredCount") String assuredCount,
-        @OutputCustomType.Parameter("count") String count,
-        @OutputCustomType.Parameter("inUseCount") String inUseCount,
-        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        @CustomType.Parameter("assuredCount") String assuredCount,
+        @CustomType.Parameter("count") String count,
+        @CustomType.Parameter("inUseCount") String inUseCount,
+        @CustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
         this.assuredCount = assuredCount;
         this.count = count;
         this.inUseCount = inUseCount;

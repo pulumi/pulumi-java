@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
      * Description of the device
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -33,7 +33,7 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
      * The name of the device
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -44,7 +44,7 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
      * AWS Internet of Things (IoT) object name.
      * 
      */
-    @InputImport(name="iotThingName")
+    @Import(name="iotThingName")
       private final @Nullable String iotThingName;
 
     public Optional<String> getIotThingName() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.DeviceFleetArgs;
 import io.pulumi.awsnative.sagemaker.outputs.DeviceFleetEdgeOutputConfig;
 import io.pulumi.awsnative.sagemaker.outputs.DeviceFleetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * Description for the edge device fleet
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * The name of the edge device fleet
      * 
      */
-    @OutputExport(name="deviceFleetName", type=String.class, parameters={})
+    @Export(name="deviceFleetName", type=String.class, parameters={})
     private Output<String> deviceFleetName;
 
     /**
@@ -52,7 +52,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * S3 bucket and an ecryption key id (if available) to store outputs for the fleet
      * 
      */
-    @OutputExport(name="outputConfig", type=DeviceFleetEdgeOutputConfig.class, parameters={})
+    @Export(name="outputConfig", type=DeviceFleetEdgeOutputConfig.class, parameters={})
     private Output<DeviceFleetEdgeOutputConfig> outputConfig;
 
     /**
@@ -66,7 +66,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * Role associated with the device fleet
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -80,7 +80,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * Associate tags with the resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DeviceFleetTag.class})
+    @Export(name="tags", type=List.class, parameters={DeviceFleetTag.class})
     private Output</* @Nullable */ List<DeviceFleetTag>> tags;
 
     /**

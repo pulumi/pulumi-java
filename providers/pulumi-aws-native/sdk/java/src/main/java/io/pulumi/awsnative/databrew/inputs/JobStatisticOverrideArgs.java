@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobParameterMapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class JobStatisticOverrideArgs extends io.pulumi.resources.Resource
 
     public static final JobStatisticOverrideArgs Empty = new JobStatisticOverrideArgs();
 
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<JobParameterMapArgs> parameters;
 
     public Output<JobParameterMapArgs> getParameters() {
         return this.parameters;
     }
 
-    @InputImport(name="statistic", required=true)
+    @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
     public Output<String> getStatistic() {

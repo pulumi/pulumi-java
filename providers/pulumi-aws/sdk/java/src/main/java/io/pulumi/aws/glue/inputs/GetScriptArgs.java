@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.GetScriptDagEdge;
 import io.pulumi.aws.glue.inputs.GetScriptDagNode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * A list of the edges in the DAG. Defined below.
      * 
      */
-    @InputImport(name="dagEdges", required=true)
+    @Import(name="dagEdges", required=true)
       private final List<GetScriptDagEdge> dagEdges;
 
     public List<GetScriptDagEdge> getDagEdges() {
@@ -32,7 +32,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * A list of the nodes in the DAG. Defined below.
      * 
      */
-    @InputImport(name="dagNodes", required=true)
+    @Import(name="dagNodes", required=true)
       private final List<GetScriptDagNode> dagNodes;
 
     public List<GetScriptDagNode> getDagNodes() {
@@ -43,7 +43,7 @@ public final class GetScriptArgs extends io.pulumi.resources.InvokeArgs {
      * The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
      * 
      */
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable String language;
 
     public Optional<String> getLanguage() {

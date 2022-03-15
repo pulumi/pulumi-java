@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends io.pulumi.reso
      * The KMS key ARN or ID
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -28,7 +28,7 @@ public final class PipelineArtifactStoreEncryptionKeyArgs extends io.pulumi.reso
      * The type of key; currently only `KMS` is supported
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

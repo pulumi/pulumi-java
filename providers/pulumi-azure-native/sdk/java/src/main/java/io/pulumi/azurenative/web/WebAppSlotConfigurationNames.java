@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppSlotConfigurationNamesArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * List of application settings names.
      * 
      */
-    @OutputExport(name="appSettingNames", type=List.class, parameters={String.class})
+    @Export(name="appSettingNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> appSettingNames;
 
     /**
@@ -45,7 +45,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * List of external Azure storage account identifiers.
      * 
      */
-    @OutputExport(name="azureStorageConfigNames", type=List.class, parameters={String.class})
+    @Export(name="azureStorageConfigNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> azureStorageConfigNames;
 
     /**
@@ -59,7 +59,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * List of connection string names.
      * 
      */
-    @OutputExport(name="connectionStringNames", type=List.class, parameters={String.class})
+    @Export(name="connectionStringNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> connectionStringNames;
 
     /**
@@ -73,7 +73,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -87,7 +87,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -101,7 +101,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

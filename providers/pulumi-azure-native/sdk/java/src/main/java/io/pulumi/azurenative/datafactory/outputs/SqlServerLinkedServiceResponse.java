@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.azurenative.datafactory.outputs.SqlAlwaysEncryptedPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlServerLinkedServiceResponse {
     /**
      * Sql always encrypted properties.
@@ -72,18 +72,18 @@ public final class SqlServerLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlServerLinkedServiceResponse(
-        @OutputCustomType.Parameter("alwaysEncryptedSettings") @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionString") Object connectionString,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
+        @CustomType.Parameter("alwaysEncryptedSettings") @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionString") Object connectionString,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable Object userName) {
         this.alwaysEncryptedSettings = alwaysEncryptedSettings;
         this.annotations = annotations;
         this.connectVia = connectVia;

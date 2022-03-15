@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSettingInsightsConfig {
     private final Boolean queryInsightsEnabled;
     private final Integer queryStringLength;
     private final Boolean recordApplicationTags;
     private final Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSettingInsightsConfig(
-        @OutputCustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
-        @OutputCustomType.Parameter("queryStringLength") Integer queryStringLength,
-        @OutputCustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
-        @OutputCustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
+        @CustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
+        @CustomType.Parameter("queryStringLength") Integer queryStringLength,
+        @CustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
+        @CustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryStringLength = queryStringLength;
         this.recordApplicationTags = recordApplicationTags;

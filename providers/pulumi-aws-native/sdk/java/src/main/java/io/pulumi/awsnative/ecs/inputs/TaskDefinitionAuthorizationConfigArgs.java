@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskDefinitionAuthorizationConfigIAM;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
 
     public static final TaskDefinitionAuthorizationConfigArgs Empty = new TaskDefinitionAuthorizationConfigArgs();
 
-    @InputImport(name="accessPointId")
+    @Import(name="accessPointId")
       private final @Nullable Output<String> accessPointId;
 
     public Output<String> getAccessPointId() {
         return this.accessPointId == null ? Output.empty() : this.accessPointId;
     }
 
-    @InputImport(name="iAM")
+    @Import(name="iAM")
       private final @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM;
 
     public Output<TaskDefinitionAuthorizationConfigIAM> getIAM() {

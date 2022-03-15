@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
      * 
      */
-    @InputImport(name="averageUtilization")
+    @Import(name="averageUtilization")
       private final @Nullable Output<Integer> averageUtilization;
 
     public Output<Integer> getAverageUtilization() {
@@ -34,7 +34,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * averageValue is the target value of the average of the metric across all relevant pods (as a quantity)
      * 
      */
-    @InputImport(name="averageValue")
+    @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
 
     public Output<String> getAverageValue() {
@@ -45,7 +45,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * type represents whether the metric type is Utilization, Value, or AverageValue
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -56,7 +56,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
      * value is the target value of the metric (as a quantity).
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

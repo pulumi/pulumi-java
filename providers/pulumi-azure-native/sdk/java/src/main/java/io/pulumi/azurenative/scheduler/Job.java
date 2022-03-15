@@ -8,7 +8,7 @@ import io.pulumi.azurenative.scheduler.JobArgs;
 import io.pulumi.azurenative.scheduler.outputs.JobPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Gets the job resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -45,7 +45,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Gets or sets the job properties.
      * 
      */
-    @OutputExport(name="properties", type=JobPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=JobPropertiesResponse.class, parameters={})
     private Output<JobPropertiesResponse> properties;
 
     /**
@@ -59,7 +59,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Gets the job resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

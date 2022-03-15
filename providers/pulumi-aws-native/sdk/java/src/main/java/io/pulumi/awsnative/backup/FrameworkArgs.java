@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
      * 
      */
-    @InputImport(name="frameworkControls", required=true)
+    @Import(name="frameworkControls", required=true)
       private final Output<List<FrameworkControlArgs>> frameworkControls;
 
     public Output<List<FrameworkControlArgs>> getFrameworkControls() {
@@ -32,7 +32,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of the framework with a maximum 1,024 characters.
      * 
      */
-    @InputImport(name="frameworkDescription")
+    @Import(name="frameworkDescription")
       private final @Nullable Output<String> frameworkDescription;
 
     public Output<String> getFrameworkDescription() {
@@ -43,7 +43,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    @InputImport(name="frameworkName")
+    @Import(name="frameworkName")
       private final @Nullable Output<String> frameworkName;
 
     public Output<String> getFrameworkName() {
@@ -54,7 +54,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="frameworkTags")
+    @Import(name="frameworkTags")
       private final @Nullable Output<List<FrameworkTagArgs>> frameworkTags;
 
     public Output<List<FrameworkTagArgs>> getFrameworkTags() {

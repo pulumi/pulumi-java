@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
      * The default is false.
      * 
      */
-    @InputImport(name="disableConnectionDrainOnFailover")
+    @Import(name="disableConnectionDrainOnFailover")
       private final @Nullable Output<Boolean> disableConnectionDrainOnFailover;
 
     public Output<Boolean> getDisableConnectionDrainOnFailover() {
@@ -40,7 +40,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
      * The default is false.
      * 
      */
-    @InputImport(name="dropTrafficIfUnhealthy")
+    @Import(name="dropTrafficIfUnhealthy")
       private final @Nullable Output<Boolean> dropTrafficIfUnhealthy;
 
     public Output<Boolean> getDropTrafficIfUnhealthy() {
@@ -58,7 +58,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
      * This field is only used with l4 load balancing.
      * 
      */
-    @InputImport(name="failoverRatio")
+    @Import(name="failoverRatio")
       private final @Nullable Output<Double> failoverRatio;
 
     public Output<Double> getFailoverRatio() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.signer;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.signer.ProfilePermissionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,31 +17,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:signer:ProfilePermission")
 public class ProfilePermission extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     public Output<String> getAction() {
         return this.action;
     }
-    @OutputExport(name="principal", type=String.class, parameters={})
+    @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
     public Output<String> getPrincipal() {
         return this.principal;
     }
-    @OutputExport(name="profileName", type=String.class, parameters={})
+    @Export(name="profileName", type=String.class, parameters={})
     private Output<String> profileName;
 
     public Output<String> getProfileName() {
         return this.profileName;
     }
-    @OutputExport(name="profileVersion", type=String.class, parameters={})
+    @Export(name="profileVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> profileVersion;
 
     public Output</* @Nullable */ String> getProfileVersion() {
         return this.profileVersion;
     }
-    @OutputExport(name="statementId", type=String.class, parameters={})
+    @Export(name="statementId", type=String.class, parameters={})
     private Output<String> statementId;
 
     public Output<String> getStatementId() {

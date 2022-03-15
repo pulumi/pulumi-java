@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
@@ -34,7 +34,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * The consistency level specifies how many Cassandra servers must respond to a read request before returning data to the client application. Cassandra checks the specified number of Cassandra servers for data to satisfy the read request. Must be one of cassandraSourceReadConsistencyLevels. The default value is 'ONE'. It is case-insensitive.
      * 
      */
-    @InputImport(name="consistencyLevel")
+    @Import(name="consistencyLevel")
       private final @Nullable String consistencyLevel;
 
     public Optional<String> getConsistencyLevel() {
@@ -45,7 +45,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -56,7 +56,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -67,7 +67,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * Database query. Should be a SQL-92 query expression or Cassandra Query Language (CQL) command. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Object query;
 
     public Optional<Object> getQuery() {
@@ -78,7 +78,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
@@ -89,7 +89,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
@@ -100,7 +100,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
@@ -112,7 +112,7 @@ public final class CassandraSourceResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'CassandraSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

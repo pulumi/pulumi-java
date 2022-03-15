@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
      * The name of the connection to use to connect to the Delta table target.
      * 
      */
-    @InputImport(name="connectionName", required=true)
+    @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -30,7 +30,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
      * A list of glob patterns used to exclude from the crawl.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<String>> exclusions;
 
     public Output<List<String>> getExclusions() {
@@ -41,7 +41,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {

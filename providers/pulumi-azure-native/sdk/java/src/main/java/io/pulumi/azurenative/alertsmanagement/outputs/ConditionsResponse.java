@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.ConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConditionsResponse {
     /**
      * filter alerts by alert context (payload)
@@ -47,15 +47,15 @@ public final class ConditionsResponse {
      */
     private final @Nullable ConditionResponse targetResourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConditionsResponse(
-        @OutputCustomType.Parameter("alertContext") @Nullable ConditionResponse alertContext,
-        @OutputCustomType.Parameter("alertRuleId") @Nullable ConditionResponse alertRuleId,
-        @OutputCustomType.Parameter("description") @Nullable ConditionResponse description,
-        @OutputCustomType.Parameter("monitorCondition") @Nullable ConditionResponse monitorCondition,
-        @OutputCustomType.Parameter("monitorService") @Nullable ConditionResponse monitorService,
-        @OutputCustomType.Parameter("severity") @Nullable ConditionResponse severity,
-        @OutputCustomType.Parameter("targetResourceType") @Nullable ConditionResponse targetResourceType) {
+        @CustomType.Parameter("alertContext") @Nullable ConditionResponse alertContext,
+        @CustomType.Parameter("alertRuleId") @Nullable ConditionResponse alertRuleId,
+        @CustomType.Parameter("description") @Nullable ConditionResponse description,
+        @CustomType.Parameter("monitorCondition") @Nullable ConditionResponse monitorCondition,
+        @CustomType.Parameter("monitorService") @Nullable ConditionResponse monitorService,
+        @CustomType.Parameter("severity") @Nullable ConditionResponse severity,
+        @CustomType.Parameter("targetResourceType") @Nullable ConditionResponse targetResourceType) {
         this.alertContext = alertContext;
         this.alertRuleId = alertRuleId;
         this.description = description;

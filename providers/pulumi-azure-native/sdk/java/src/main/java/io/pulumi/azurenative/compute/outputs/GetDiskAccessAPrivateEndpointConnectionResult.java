@@ -5,11 +5,11 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.compute.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskAccessAPrivateEndpointConnectionResult {
     /**
      * private endpoint connection Id
@@ -42,14 +42,14 @@ public final class GetDiskAccessAPrivateEndpointConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskAccessAPrivateEndpointConnectionResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpoint") PrivateEndpointResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpoint") PrivateEndpointResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.privateEndpoint = privateEndpoint;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs;
 import io.pulumi.awsnative.ecs.inputs.CapacityProviderAutoScalingGroupProviderArgs;
 import io.pulumi.awsnative.ecs.inputs.CapacityProviderTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
 
     public static final CapacityProviderArgs Empty = new CapacityProviderArgs();
 
-    @InputImport(name="autoScalingGroupProvider", required=true)
+    @Import(name="autoScalingGroupProvider", required=true)
       private final Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
 
     public Output<CapacityProviderAutoScalingGroupProviderArgs> getAutoScalingGroupProvider() {
         return this.autoScalingGroupProvider;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CapacityProviderTagArgs>> tags;
 
     public Output<List<CapacityProviderTagArgs>> getTags() {

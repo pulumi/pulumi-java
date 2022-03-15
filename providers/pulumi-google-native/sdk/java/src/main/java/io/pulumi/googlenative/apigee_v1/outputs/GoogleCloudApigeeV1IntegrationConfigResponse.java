@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1IntegrationConfigResponse {
     /**
      * Flag that specifies whether the Integration add-on is enabled.
@@ -15,8 +15,8 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudApigeeV1IntegrationConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GoogleCloudApigeeV1IntegrationConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

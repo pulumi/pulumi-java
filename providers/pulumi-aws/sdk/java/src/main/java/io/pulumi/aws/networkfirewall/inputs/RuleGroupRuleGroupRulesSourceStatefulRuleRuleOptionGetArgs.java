@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs ex
      * See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.amazonaws.com/node31.html) or [Suricata Rule Options](https://suricata.readthedocs.io/en/suricata-5.0.1/rules/intro.html#rule-options) for more details.
      * 
      */
-    @InputImport(name="keyword", required=true)
+    @Import(name="keyword", required=true)
       private final Output<String> keyword;
 
     public Output<String> getKeyword() {
@@ -31,7 +31,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs ex
      * Set of strings for additional settings to use in stateful rule inspection.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<List<String>> settings;
 
     public Output<List<String>> getSettings() {

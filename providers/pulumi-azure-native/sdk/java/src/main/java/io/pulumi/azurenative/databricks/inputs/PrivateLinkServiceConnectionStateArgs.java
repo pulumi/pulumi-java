@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databricks.inputs;
 import io.pulumi.azurenative.databricks.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * Actions required for a private endpoint connection
      * 
      */
-    @InputImport(name="actionRequired")
+    @Import(name="actionRequired")
       private final @Nullable Output<String> actionRequired;
 
     public Output<String> getActionRequired() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The description for the current state of a private endpoint connection
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The status of a private endpoint connection
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {

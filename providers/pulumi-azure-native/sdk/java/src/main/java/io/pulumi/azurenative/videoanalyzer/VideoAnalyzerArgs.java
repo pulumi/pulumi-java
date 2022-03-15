@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.AccountEncryptionArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.StorageAccountArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoAnalyzerIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The Video Analyzer account name.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -34,7 +34,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The account encryption properties.
      * 
      */
-    @InputImport(name="encryption", required=true)
+    @Import(name="encryption", required=true)
       private final Output<AccountEncryptionArgs> encryption;
 
     public Output<AccountEncryptionArgs> getEncryption() {
@@ -45,7 +45,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The set of managed identities associated with the Video Analyzer resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<VideoAnalyzerIdentityArgs> identity;
 
     public Output<VideoAnalyzerIdentityArgs> getIdentity() {
@@ -56,7 +56,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -78,7 +78,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * The storage accounts for this resource.
      * 
      */
-    @InputImport(name="storageAccounts", required=true)
+    @Import(name="storageAccounts", required=true)
       private final Output<List<StorageAccountArgs>> storageAccounts;
 
     public Output<List<StorageAccountArgs>> getStorageAccounts() {
@@ -89,7 +89,7 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

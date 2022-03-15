@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
      * The ARN of the Lambda function to invoke
      * 
      */
-    @InputImport(name="functionArn", required=true)
+    @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
     public Output<String> getFunctionArn() {
@@ -30,7 +30,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
      * `Event` or `RequestResponse`
      * 
      */
-    @InputImport(name="invocationType")
+    @Import(name="invocationType")
       private final @Nullable Output<String> invocationType;
 
     public Output<String> getInvocationType() {
@@ -41,7 +41,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
      * The position of the action in the receipt rule
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<Integer> position;
 
     public Output<Integer> getPosition() {
@@ -52,7 +52,7 @@ public final class ReceiptRuleLambdaActionGetArgs extends io.pulumi.resources.Re
      * The ARN of an SNS topic to notify
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

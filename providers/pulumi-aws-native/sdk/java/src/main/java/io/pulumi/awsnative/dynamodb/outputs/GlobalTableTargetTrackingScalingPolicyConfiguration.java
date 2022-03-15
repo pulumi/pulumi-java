@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
     private final @Nullable Boolean disableScaleIn;
     private final @Nullable Integer scaleInCooldown;
     private final @Nullable Integer scaleOutCooldown;
     private final Double targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableTargetTrackingScalingPolicyConfiguration(
-        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
-        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
-        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
-        @OutputCustomType.Parameter("targetValue") Double targetValue) {
+        @CustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @CustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @CustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @CustomType.Parameter("targetValue") Double targetValue) {
         this.disableScaleIn = disableScaleIn;
         this.scaleInCooldown = scaleInCooldown;
         this.scaleOutCooldown = scaleOutCooldown;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.PolicyExemptionArgs;
 import io.pulumi.azurenative.authorization.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The description of the policy exemption.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -50,7 +50,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The display name of the policy exemption.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The policy exemption category. Possible values are Waiver and Mitigated.
      * 
      */
-    @OutputExport(name="exemptionCategory", type=String.class, parameters={})
+    @Export(name="exemptionCategory", type=String.class, parameters={})
     private Output<String> exemptionCategory;
 
     /**
@@ -78,7 +78,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
      * 
      */
-    @OutputExport(name="expiresOn", type=String.class, parameters={})
+    @Export(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
     /**
@@ -92,7 +92,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -106,7 +106,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The name of the policy exemption.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The ID of the policy assignment that is being exempted.
      * 
      */
-    @OutputExport(name="policyAssignmentId", type=String.class, parameters={})
+    @Export(name="policyAssignmentId", type=String.class, parameters={})
     private Output<String> policyAssignmentId;
 
     /**
@@ -134,7 +134,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
      * 
      */
-    @OutputExport(name="policyDefinitionReferenceIds", type=List.class, parameters={String.class})
+    @Export(name="policyDefinitionReferenceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> policyDefinitionReferenceIds;
 
     /**
@@ -148,7 +148,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -162,7 +162,7 @@ public class PolicyExemption extends io.pulumi.resources.CustomResource {
      * The type of the resource (Microsoft.Authorization/policyExemptions).
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

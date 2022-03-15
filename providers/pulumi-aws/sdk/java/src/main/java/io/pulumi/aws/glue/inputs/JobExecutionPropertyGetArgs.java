@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobExecutionPropertyGetArgs extends io.pulumi.resources.Resou
      * The maximum number of concurrent runs allowed for a job. The default is 1.
      * 
      */
-    @InputImport(name="maxConcurrentRuns")
+    @Import(name="maxConcurrentRuns")
       private final @Nullable Output<Integer> maxConcurrentRuns;
 
     public Output<Integer> getMaxConcurrentRuns() {

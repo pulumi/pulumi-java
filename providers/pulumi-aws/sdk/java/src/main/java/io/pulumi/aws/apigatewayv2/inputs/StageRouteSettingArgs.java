@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class StageRouteSettingArgs extends io.pulumi.resources.ResourceArg
      * Defaults to `false`. Supported only for WebSocket APIs.
      * 
      */
-    @InputImport(name="dataTraceEnabled")
+    @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
     public Output<Boolean> getDataTraceEnabled() {
@@ -33,7 +33,7 @@ public final class StageRouteSettingArgs extends io.pulumi.resources.ResourceArg
      * Whether detailed metrics are enabled for the route. Defaults to `false`.
      * 
      */
-    @InputImport(name="detailedMetricsEnabled")
+    @Import(name="detailedMetricsEnabled")
       private final @Nullable Output<Boolean> detailedMetricsEnabled;
 
     public Output<Boolean> getDetailedMetricsEnabled() {
@@ -45,7 +45,7 @@ public final class StageRouteSettingArgs extends io.pulumi.resources.ResourceArg
      * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
@@ -56,7 +56,7 @@ public final class StageRouteSettingArgs extends io.pulumi.resources.ResourceArg
      * Route key.
      * 
      */
-    @InputImport(name="routeKey", required=true)
+    @Import(name="routeKey", required=true)
       private final Output<String> routeKey;
 
     public Output<String> getRouteKey() {
@@ -67,7 +67,7 @@ public final class StageRouteSettingArgs extends io.pulumi.resources.ResourceArg
      * The throttling burst limit for the route.
      * 
      */
-    @InputImport(name="throttlingBurstLimit")
+    @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
     public Output<Integer> getThrottlingBurstLimit() {
@@ -78,7 +78,7 @@ public final class StageRouteSettingArgs extends io.pulumi.resources.ResourceArg
      * The throttling rate limit for the route.
      * 
      */
-    @InputImport(name="throttlingRateLimit")
+    @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
     public Output<Double> getThrottlingRateLimit() {

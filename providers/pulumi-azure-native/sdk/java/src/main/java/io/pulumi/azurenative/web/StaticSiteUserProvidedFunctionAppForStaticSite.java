@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.StaticSiteUserProvidedFunctionAppForStaticSiteArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * The date and time on which the function app was registered with the static site.
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -48,7 +48,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * The region of the function app registered with the static site
      * 
      */
-    @OutputExport(name="functionAppRegion", type=String.class, parameters={})
+    @Export(name="functionAppRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAppRegion;
 
     /**
@@ -62,7 +62,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * The resource id of the function app registered with the static site
      * 
      */
-    @OutputExport(name="functionAppResourceId", type=String.class, parameters={})
+    @Export(name="functionAppResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAppResourceId;
 
     /**
@@ -76,7 +76,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -90,7 +90,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class StaticSiteUserProvidedFunctionAppForStaticSite extends io.pulumi.re
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

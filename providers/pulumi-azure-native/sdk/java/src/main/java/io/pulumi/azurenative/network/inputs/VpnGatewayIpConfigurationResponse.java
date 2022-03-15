@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
      * The identifier of the IP configuration for a VPN Gateway.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
      * The private IP address of this IP configuration.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
@@ -44,7 +44,7 @@ public final class VpnGatewayIpConfigurationResponse extends io.pulumi.resources
      * The public IP address of this IP configuration.
      * 
      */
-    @InputImport(name="publicIpAddress")
+    @Import(name="publicIpAddress")
       private final @Nullable String publicIpAddress;
 
     public Optional<String> getPublicIpAddress() {

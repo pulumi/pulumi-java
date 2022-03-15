@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAppArgs Empty = new GetAppArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
-    @InputImport(name="developerId", required=true)
+    @Import(name="developerId", required=true)
       private final String developerId;
 
     public String getDeveloperId() {
         return this.developerId;
     }
 
-    @InputImport(name="entity")
+    @Import(name="entity")
       private final @Nullable String entity;
 
     public Optional<String> getEntity() {
         return this.entity == null ? Optional.empty() : Optional.ofNullable(this.entity);
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {

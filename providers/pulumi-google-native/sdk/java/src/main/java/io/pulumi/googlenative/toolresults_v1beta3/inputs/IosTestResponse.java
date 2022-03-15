@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosAppInfoResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosRoboTestResponse;
@@ -24,7 +24,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * Information about the application under test.
      * 
      */
-    @InputImport(name="iosAppInfo", required=true)
+    @Import(name="iosAppInfo", required=true)
       private final IosAppInfoResponse iosAppInfo;
 
     public IosAppInfoResponse getIosAppInfo() {
@@ -35,7 +35,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * An iOS Robo test.
      * 
      */
-    @InputImport(name="iosRoboTest", required=true)
+    @Import(name="iosRoboTest", required=true)
       private final IosRoboTestResponse iosRoboTest;
 
     public IosRoboTestResponse getIosRoboTest() {
@@ -46,7 +46,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * An iOS test loop.
      * 
      */
-    @InputImport(name="iosTestLoop", required=true)
+    @Import(name="iosTestLoop", required=true)
       private final IosTestLoopResponse iosTestLoop;
 
     public IosTestLoopResponse getIosTestLoop() {
@@ -57,7 +57,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * An iOS XCTest.
      * 
      */
-    @InputImport(name="iosXcTest", required=true)
+    @Import(name="iosXcTest", required=true)
       private final IosXcTestResponse iosXcTest;
 
     public IosXcTestResponse getIosXcTest() {
@@ -68,7 +68,7 @@ public final class IosTestResponse extends io.pulumi.resources.InvokeArgs {
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
      */
-    @InputImport(name="testTimeout", required=true)
+    @Import(name="testTimeout", required=true)
       private final DurationResponse testTimeout;
 
     public DurationResponse getTestTimeout() {

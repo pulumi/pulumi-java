@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceEphemeralBlockDevice {
     /**
      * The name of the block device to mount on the instance.
@@ -28,11 +28,11 @@ public final class InstanceEphemeralBlockDevice {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceEphemeralBlockDevice(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("noDevice") @Nullable Boolean noDevice,
-        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("noDevice") @Nullable Boolean noDevice,
+        @CustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.noDevice = noDevice;
         this.virtualName = virtualName;

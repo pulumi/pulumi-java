@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecipeConditionExpression {
     /**
      * Input condition to be applied to the target column
@@ -27,11 +27,11 @@ public final class RecipeConditionExpression {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecipeConditionExpression(
-        @OutputCustomType.Parameter("condition") String condition,
-        @OutputCustomType.Parameter("targetColumn") String targetColumn,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("condition") String condition,
+        @CustomType.Parameter("targetColumn") String targetColumn,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.condition = condition;
         this.targetColumn = targetColumn;
         this.value = value;

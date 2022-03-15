@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.fms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyIEMap {
     private final @Nullable List<String> aCCOUNT;
     private final @Nullable List<String> oRGUNIT;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyIEMap(
-        @OutputCustomType.Parameter("aCCOUNT") @Nullable List<String> aCCOUNT,
-        @OutputCustomType.Parameter("oRGUNIT") @Nullable List<String> oRGUNIT) {
+        @CustomType.Parameter("aCCOUNT") @Nullable List<String> aCCOUNT,
+        @CustomType.Parameter("oRGUNIT") @Nullable List<String> oRGUNIT) {
         this.aCCOUNT = aCCOUNT;
         this.oRGUNIT = oRGUNIT;
     }

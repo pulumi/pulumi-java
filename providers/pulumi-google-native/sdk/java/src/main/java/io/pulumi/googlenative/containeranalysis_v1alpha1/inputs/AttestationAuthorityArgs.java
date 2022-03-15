@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationAuthorityHintArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AttestationAuthorityArgs extends io.pulumi.resources.Resource
 
     public static final AttestationAuthorityArgs Empty = new AttestationAuthorityArgs();
 
-    @InputImport(name="hint")
+    @Import(name="hint")
       private final @Nullable Output<AttestationAuthorityHintArgs> hint;
 
     public Output<AttestationAuthorityHintArgs> getHint() {

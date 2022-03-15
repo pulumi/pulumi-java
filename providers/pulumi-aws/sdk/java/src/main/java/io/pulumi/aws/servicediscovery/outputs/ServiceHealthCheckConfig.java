@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.servicediscovery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceHealthCheckConfig {
     /**
      * The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.
@@ -28,11 +28,11 @@ public final class ServiceHealthCheckConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceHealthCheckConfig(
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
-        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @CustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.failureThreshold = failureThreshold;
         this.resourcePath = resourcePath;
         this.type = type;

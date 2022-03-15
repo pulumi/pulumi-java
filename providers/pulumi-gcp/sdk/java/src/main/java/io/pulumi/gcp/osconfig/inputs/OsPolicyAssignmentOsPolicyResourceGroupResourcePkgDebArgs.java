@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
      * Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
      * 
      */
-    @InputImport(name="pullDeps")
+    @Import(name="pullDeps")
       private final @Nullable Output<Boolean> pullDeps;
 
     public Output<Boolean> getPullDeps() {
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs ext
      * Required. An rpm package.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> source;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceArgs> getSource() {

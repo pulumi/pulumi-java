@@ -46,7 +46,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -64,7 +64,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * List of activities in pipeline.
      * 
      */
-    @InputImport(name="activities")
+    @Import(name="activities")
       private final @Nullable Output<List<Object>> activities;
 
     public Output<List<Object>> getActivities() {
@@ -75,7 +75,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * List of tags that can be used for describing the Pipeline.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -86,7 +86,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The max number of concurrent runs for the pipeline.
      * 
      */
-    @InputImport(name="concurrency")
+    @Import(name="concurrency")
       private final @Nullable Output<Integer> concurrency;
 
     public Output<Integer> getConcurrency() {
@@ -97,7 +97,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the pipeline.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -108,7 +108,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -119,7 +119,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The folder that this Pipeline is in. If not specified, Pipeline will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<PipelineFolderArgs> folder;
 
     public Output<PipelineFolderArgs> getFolder() {
@@ -130,7 +130,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * List of parameters for pipeline.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -141,7 +141,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The pipeline name.
      * 
      */
-    @InputImport(name="pipelineName")
+    @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
 
     public Output<String> getPipelineName() {
@@ -152,7 +152,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Pipeline Policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<PipelinePolicyArgs> policy;
 
     public Output<PipelinePolicyArgs> getPolicy() {
@@ -163,7 +163,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -174,7 +174,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Dimensions emitted by Pipeline.
      * 
      */
-    @InputImport(name="runDimensions")
+    @Import(name="runDimensions")
       private final @Nullable Output<Map<String,Object>> runDimensions;
 
     public Output<Map<String,Object>> getRunDimensions() {
@@ -185,7 +185,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * List of variables for pipeline.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
     public Output<Map<String,VariableSpecificationArgs>> getVariables() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserRoleResponseResponse {
     /**
      * User roles on configured in Logz.io account.
@@ -17,8 +17,8 @@ public final class UserRoleResponseResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor
-    private UserRoleResponseResponse(@OutputCustomType.Parameter("role") @Nullable String role) {
+    @CustomType.Constructor
+    private UserRoleResponseResponse(@CustomType.Parameter("role") @Nullable String role) {
         this.role = role;
     }
 

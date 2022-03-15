@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetServiceActionAssociationArgs extends io.pulumi.resources.I
 
     public static final GetServiceActionAssociationArgs Empty = new GetServiceActionAssociationArgs();
 
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final String productId;
 
     public String getProductId() {
         return this.productId;
     }
 
-    @InputImport(name="provisioningArtifactId", required=true)
+    @Import(name="provisioningArtifactId", required=true)
       private final String provisioningArtifactId;
 
     public String getProvisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
-    @InputImport(name="serviceActionId", required=true)
+    @Import(name="serviceActionId", required=true)
       private final String serviceActionId;
 
     public String getServiceActionId() {

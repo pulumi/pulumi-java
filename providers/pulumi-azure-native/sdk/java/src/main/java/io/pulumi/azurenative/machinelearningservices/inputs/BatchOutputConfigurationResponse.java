@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
      * Customized output file name for append_row output action.
      * 
      */
-    @InputImport(name="appendRowFileName")
+    @Import(name="appendRowFileName")
       private final @Nullable String appendRowFileName;
 
     public Optional<String> getAppendRowFileName() {
@@ -33,7 +33,7 @@ public final class BatchOutputConfigurationResponse extends io.pulumi.resources.
      * Indicates how the output will be organized.
      * 
      */
-    @InputImport(name="outputAction")
+    @Import(name="outputAction")
       private final @Nullable String outputAction;
 
     public Optional<String> getOutputAction() {

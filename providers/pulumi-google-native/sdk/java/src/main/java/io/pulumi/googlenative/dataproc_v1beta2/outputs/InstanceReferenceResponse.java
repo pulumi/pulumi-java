@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceReferenceResponse {
     /**
      * The unique identifier of the Compute Engine instance.
@@ -25,11 +25,11 @@ public final class InstanceReferenceResponse {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceReferenceResponse(
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("instanceName") String instanceName,
-        @OutputCustomType.Parameter("publicKey") String publicKey) {
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("instanceName") String instanceName,
+        @CustomType.Parameter("publicKey") String publicKey) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.publicKey = publicKey;

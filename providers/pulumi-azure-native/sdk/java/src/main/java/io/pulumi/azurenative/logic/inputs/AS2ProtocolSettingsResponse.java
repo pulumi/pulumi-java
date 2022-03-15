@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.inputs.AS2MdnSettingsResponse;
 import io.pulumi.azurenative.logic.inputs.AS2MessageConnectionSettingsResponse;
 import io.pulumi.azurenative.logic.inputs.AS2SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.inputs.AS2ValidationSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -26,7 +26,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The acknowledgement connection settings.
      * 
      */
-    @InputImport(name="acknowledgementConnectionSettings", required=true)
+    @Import(name="acknowledgementConnectionSettings", required=true)
       private final AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings;
 
     public AS2AcknowledgementConnectionSettingsResponse getAcknowledgementConnectionSettings() {
@@ -37,7 +37,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The envelope settings.
      * 
      */
-    @InputImport(name="envelopeSettings", required=true)
+    @Import(name="envelopeSettings", required=true)
       private final AS2EnvelopeSettingsResponse envelopeSettings;
 
     public AS2EnvelopeSettingsResponse getEnvelopeSettings() {
@@ -48,7 +48,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The error settings.
      * 
      */
-    @InputImport(name="errorSettings", required=true)
+    @Import(name="errorSettings", required=true)
       private final AS2ErrorSettingsResponse errorSettings;
 
     public AS2ErrorSettingsResponse getErrorSettings() {
@@ -59,7 +59,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The MDN settings.
      * 
      */
-    @InputImport(name="mdnSettings", required=true)
+    @Import(name="mdnSettings", required=true)
       private final AS2MdnSettingsResponse mdnSettings;
 
     public AS2MdnSettingsResponse getMdnSettings() {
@@ -70,7 +70,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The message connection settings.
      * 
      */
-    @InputImport(name="messageConnectionSettings", required=true)
+    @Import(name="messageConnectionSettings", required=true)
       private final AS2MessageConnectionSettingsResponse messageConnectionSettings;
 
     public AS2MessageConnectionSettingsResponse getMessageConnectionSettings() {
@@ -81,7 +81,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The security settings.
      * 
      */
-    @InputImport(name="securitySettings", required=true)
+    @Import(name="securitySettings", required=true)
       private final AS2SecuritySettingsResponse securitySettings;
 
     public AS2SecuritySettingsResponse getSecuritySettings() {
@@ -92,7 +92,7 @@ public final class AS2ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * The validation settings.
      * 
      */
-    @InputImport(name="validationSettings", required=true)
+    @Import(name="validationSettings", required=true)
       private final AS2ValidationSettingsResponse validationSettings;
 
     public AS2ValidationSettingsResponse getValidationSettings() {

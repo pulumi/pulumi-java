@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
      * The deny assignment excluded actions.
      * 
      */
-    @InputImport(name="allowedActions")
+    @Import(name="allowedActions")
       private final @Nullable List<String> allowedActions;
 
     public List<String> getAllowedActions() {
@@ -34,7 +34,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
      * The deny assignment excluded data actions.
      * 
      */
-    @InputImport(name="allowedDataActions")
+    @Import(name="allowedDataActions")
       private final @Nullable List<String> allowedDataActions;
 
     public List<String> getAllowedDataActions() {

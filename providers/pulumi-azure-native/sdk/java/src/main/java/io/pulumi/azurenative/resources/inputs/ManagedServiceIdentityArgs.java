@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.inputs;
 import io.pulumi.azurenative.resources.enums.ManagedServiceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * Type of the managed identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
     public Output<Either<String,ManagedServiceIdentityType>> getType() {
@@ -37,7 +37,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * The list of user-assigned managed identities associated with the resource. Key is the Azure resource Id of the managed identity.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {

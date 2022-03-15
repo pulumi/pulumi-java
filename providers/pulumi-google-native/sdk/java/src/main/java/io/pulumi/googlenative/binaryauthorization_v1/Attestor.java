@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.binaryauthorization_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.binaryauthorization_v1.AttestorArgs;
@@ -22,7 +22,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * Optional. A descriptive comment. This field may be updated. The field may be displayed in chooser dialogs.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -36,7 +36,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * The resource name, in the format: `projects/*{@literal /}attestors/*`. This field may not be updated.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * Time when the attestor was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -64,7 +64,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * This specifies how an attestation will be read, and how it will be used during policy enforcement.
      * 
      */
-    @OutputExport(name="userOwnedGrafeasNote", type=UserOwnedGrafeasNoteResponse.class, parameters={})
+    @Export(name="userOwnedGrafeasNote", type=UserOwnedGrafeasNoteResponse.class, parameters={})
     private Output<UserOwnedGrafeasNoteResponse> userOwnedGrafeasNote;
 
     /**

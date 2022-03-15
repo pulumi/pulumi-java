@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketLogging {
     private final String logBucket;
     private final String logObjectPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketLogging(
-        @OutputCustomType.Parameter("logBucket") String logBucket,
-        @OutputCustomType.Parameter("logObjectPrefix") String logObjectPrefix) {
+        @CustomType.Parameter("logBucket") String logBucket,
+        @CustomType.Parameter("logObjectPrefix") String logObjectPrefix) {
         this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }

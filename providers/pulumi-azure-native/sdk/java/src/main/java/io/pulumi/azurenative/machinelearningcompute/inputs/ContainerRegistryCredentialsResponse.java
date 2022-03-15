@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * The ACR login server name. User name is the first part of the FQDN.
      * 
      */
-    @InputImport(name="loginServer", required=true)
+    @Import(name="loginServer", required=true)
       private final String loginServer;
 
     public String getLoginServer() {
@@ -31,7 +31,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * The ACR primary password.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -42,7 +42,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * The ACR secondary password.
      * 
      */
-    @InputImport(name="password2", required=true)
+    @Import(name="password2", required=true)
       private final String password2;
 
     public String getPassword2() {
@@ -53,7 +53,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * The ACR login username.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

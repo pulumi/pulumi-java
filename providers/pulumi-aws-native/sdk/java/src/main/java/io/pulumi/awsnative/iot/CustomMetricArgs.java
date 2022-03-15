@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.CustomMetricMetricType;
 import io.pulumi.awsnative.iot.inputs.CustomMetricTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
      * 
      */
-    @InputImport(name="metricName")
+    @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -43,7 +43,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
      * 
      */
-    @InputImport(name="metricType", required=true)
+    @Import(name="metricType", required=true)
       private final Output<CustomMetricMetricType> metricType;
 
     public Output<CustomMetricMetricType> getMetricType() {
@@ -54,7 +54,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CustomMetricTagArgs>> tags;
 
     public Output<List<CustomMetricTagArgs>> getTags() {

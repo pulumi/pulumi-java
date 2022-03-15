@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage {
     /**
      * The key may be used to sign certificates.
@@ -57,17 +57,17 @@ public final class CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage {
      */
     private final @Nullable Boolean keyEncipherment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage(
-        @OutputCustomType.Parameter("certSign") @Nullable Boolean certSign,
-        @OutputCustomType.Parameter("contentCommitment") @Nullable Boolean contentCommitment,
-        @OutputCustomType.Parameter("crlSign") @Nullable Boolean crlSign,
-        @OutputCustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
-        @OutputCustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
-        @OutputCustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
-        @OutputCustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
-        @OutputCustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
-        @OutputCustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment) {
+        @CustomType.Parameter("certSign") @Nullable Boolean certSign,
+        @CustomType.Parameter("contentCommitment") @Nullable Boolean contentCommitment,
+        @CustomType.Parameter("crlSign") @Nullable Boolean crlSign,
+        @CustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
+        @CustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
+        @CustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
+        @CustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
+        @CustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
+        @CustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment) {
         this.certSign = certSign;
         this.contentCommitment = contentCommitment;
         this.crlSign = crlSign;

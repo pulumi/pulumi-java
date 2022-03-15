@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
 
     public static final FlowErrorHandlingConfigArgs Empty = new FlowErrorHandlingConfigArgs();
 
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
-    @InputImport(name="failOnFirstError")
+    @Import(name="failOnFirstError")
       private final @Nullable Output<Boolean> failOnFirstError;
 
     public Output<Boolean> getFailOnFirstError() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeAnalysisFindingsFound;
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeAnalysisStatus;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeAnalysisTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInsightsAccessScopeAnalysisResult {
     private final @Nullable Integer analyzedEniCount;
     private final @Nullable String endDate;
@@ -26,17 +26,17 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
     private final @Nullable String statusMessage;
     private final @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInsightsAccessScopeAnalysisResult(
-        @OutputCustomType.Parameter("analyzedEniCount") @Nullable Integer analyzedEniCount,
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("findingsFound") @Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound,
-        @OutputCustomType.Parameter("networkInsightsAccessScopeAnalysisArn") @Nullable String networkInsightsAccessScopeAnalysisArn,
-        @OutputCustomType.Parameter("networkInsightsAccessScopeAnalysisId") @Nullable String networkInsightsAccessScopeAnalysisId,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("status") @Nullable NetworkInsightsAccessScopeAnalysisStatus status,
-        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
+        @CustomType.Parameter("analyzedEniCount") @Nullable Integer analyzedEniCount,
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("findingsFound") @Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound,
+        @CustomType.Parameter("networkInsightsAccessScopeAnalysisArn") @Nullable String networkInsightsAccessScopeAnalysisArn,
+        @CustomType.Parameter("networkInsightsAccessScopeAnalysisId") @Nullable String networkInsightsAccessScopeAnalysisId,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("status") @Nullable NetworkInsightsAccessScopeAnalysisStatus status,
+        @CustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @CustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
         this.analyzedEniCount = analyzedEniCount;
         this.endDate = endDate;
         this.findingsFound = findingsFound;

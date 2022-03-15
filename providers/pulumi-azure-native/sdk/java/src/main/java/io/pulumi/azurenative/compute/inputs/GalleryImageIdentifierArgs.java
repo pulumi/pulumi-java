@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * The name of the gallery image definition offer.
      * 
      */
-    @InputImport(name="offer", required=true)
+    @Import(name="offer", required=true)
       private final Output<String> offer;
 
     public Output<String> getOffer() {
@@ -32,7 +32,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * The name of the gallery image definition publisher.
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -43,7 +43,7 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
      * The name of the gallery image definition SKU.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<String> sku;
 
     public Output<String> getSku() {

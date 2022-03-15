@@ -8,7 +8,7 @@ import io.pulumi.awsnative.transfer.WorkflowArgs;
 import io.pulumi.awsnative.transfer.outputs.WorkflowStep;
 import io.pulumi.awsnative.transfer.outputs.WorkflowTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Specifies the unique Amazon Resource Name (ARN) for the workflow.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * A textual description for the workflow.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
      * 
      */
-    @OutputExport(name="onExceptionSteps", type=List.class, parameters={WorkflowStep.class})
+    @Export(name="onExceptionSteps", type=List.class, parameters={WorkflowStep.class})
     private Output</* @Nullable */ List<WorkflowStep>> onExceptionSteps;
 
     /**
@@ -66,7 +66,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Specifies the details for the steps that are in the specified workflow.
      * 
      */
-    @OutputExport(name="steps", type=List.class, parameters={WorkflowStep.class})
+    @Export(name="steps", type=List.class, parameters={WorkflowStep.class})
     private Output<List<WorkflowStep>> steps;
 
     /**
@@ -80,7 +80,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={WorkflowTag.class})
+    @Export(name="tags", type=List.class, parameters={WorkflowTag.class})
     private Output</* @Nullable */ List<WorkflowTag>> tags;
 
     /**
@@ -94,7 +94,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * A unique identifier for the workflow.
      * 
      */
-    @OutputExport(name="workflowId", type=String.class, parameters={})
+    @Export(name="workflowId", type=String.class, parameters={})
     private Output<String> workflowId;
 
     /**

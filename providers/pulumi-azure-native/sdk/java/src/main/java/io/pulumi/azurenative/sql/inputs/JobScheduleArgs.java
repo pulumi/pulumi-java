@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.enums.JobScheduleType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not the schedule is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule end time.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -46,7 +46,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Value of the schedule's recurring interval, if the ScheduleType is recurring. ISO8601 duration format.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
@@ -57,7 +57,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -68,7 +68,7 @@ public final class JobScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule interval type
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<JobScheduleType> type;
 
     public Output<JobScheduleType> getType() {

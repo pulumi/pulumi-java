@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatistics3Response {
     /**
      * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
@@ -35,13 +35,13 @@ public final class JobStatistics3Response {
      */
     private final String outputRows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatistics3Response(
-        @OutputCustomType.Parameter("badRecords") String badRecords,
-        @OutputCustomType.Parameter("inputFileBytes") String inputFileBytes,
-        @OutputCustomType.Parameter("inputFiles") String inputFiles,
-        @OutputCustomType.Parameter("outputBytes") String outputBytes,
-        @OutputCustomType.Parameter("outputRows") String outputRows) {
+        @CustomType.Parameter("badRecords") String badRecords,
+        @CustomType.Parameter("inputFileBytes") String inputFileBytes,
+        @CustomType.Parameter("inputFiles") String inputFiles,
+        @CustomType.Parameter("outputBytes") String outputBytes,
+        @CustomType.Parameter("outputRows") String outputRows) {
         this.badRecords = badRecords;
         this.inputFileBytes = inputFileBytes;
         this.inputFiles = inputFiles;

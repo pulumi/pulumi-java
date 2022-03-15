@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.BackendServiceIAPOAuth2ClientInfoResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -33,7 +33,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * OAuth2 client ID to use for the authentication flow.
      * 
      */
-    @InputImport(name="oauth2ClientId", required=true)
+    @Import(name="oauth2ClientId", required=true)
       private final String oauth2ClientId;
 
     public String getOauth2ClientId() {
@@ -44,7 +44,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * [Input Only] OAuth client info required to generate client id to be used for IAP.
      * 
      */
-    @InputImport(name="oauth2ClientInfo", required=true)
+    @Import(name="oauth2ClientInfo", required=true)
       private final BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo;
 
     public BackendServiceIAPOAuth2ClientInfoResponse getOauth2ClientInfo() {
@@ -55,7 +55,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
      * 
      */
-    @InputImport(name="oauth2ClientSecret", required=true)
+    @Import(name="oauth2ClientSecret", required=true)
       private final String oauth2ClientSecret;
 
     public String getOauth2ClientSecret() {
@@ -66,7 +66,7 @@ public final class BackendServiceIAPResponse extends io.pulumi.resources.InvokeA
      * SHA256 hash value for the field oauth2_client_secret above.
      * 
      */
-    @InputImport(name="oauth2ClientSecretSha256", required=true)
+    @Import(name="oauth2ClientSecretSha256", required=true)
       private final String oauth2ClientSecretSha256;
 
     public String getOauth2ClientSecretSha256() {

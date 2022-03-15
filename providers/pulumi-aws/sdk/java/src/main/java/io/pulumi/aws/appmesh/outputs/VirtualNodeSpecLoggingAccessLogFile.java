@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecLoggingAccessLogFile {
     /**
      * The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecLoggingAccessLogFile {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecLoggingAccessLogFile(@OutputCustomType.Parameter("path") String path) {
+    @CustomType.Constructor
+    private VirtualNodeSpecLoggingAccessLogFile(@CustomType.Parameter("path") String path) {
         this.path = path;
     }
 

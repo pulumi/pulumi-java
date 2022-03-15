@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardStickinessGetArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardTargetGroupGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ListenerRuleActionForwardGetArgs extends io.pulumi.resources.
      * The target group stickiness for the rule.
      * 
      */
-    @InputImport(name="stickiness")
+    @Import(name="stickiness")
       private final @Nullable Output<ListenerRuleActionForwardStickinessGetArgs> stickiness;
 
     public Output<ListenerRuleActionForwardStickinessGetArgs> getStickiness() {
@@ -31,7 +31,7 @@ public final class ListenerRuleActionForwardGetArgs extends io.pulumi.resources.
      * One or more target groups block.
      * 
      */
-    @InputImport(name="targetGroups", required=true)
+    @Import(name="targetGroups", required=true)
       private final Output<List<ListenerRuleActionForwardTargetGroupGetArgs>> targetGroups;
 
     public Output<List<ListenerRuleActionForwardTargetGroupGetArgs>> getTargetGroups() {

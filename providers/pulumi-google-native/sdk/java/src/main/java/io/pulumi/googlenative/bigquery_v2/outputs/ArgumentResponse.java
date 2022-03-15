@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArgumentResponse {
     /**
      * Optional. Defaults to FIXED_TYPE.
@@ -31,12 +31,12 @@ public final class ArgumentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArgumentResponse(
-        @OutputCustomType.Parameter("argumentKind") String argumentKind,
-        @OutputCustomType.Parameter("dataType") StandardSqlDataTypeResponse dataType,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("argumentKind") String argumentKind,
+        @CustomType.Parameter("dataType") StandardSqlDataTypeResponse dataType,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("name") String name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;

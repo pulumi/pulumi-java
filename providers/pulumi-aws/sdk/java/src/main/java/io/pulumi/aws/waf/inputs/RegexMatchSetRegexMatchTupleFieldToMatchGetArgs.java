@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatchGetArgs extends io.pu
      * If `type` is any other value, omit this field.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -33,7 +33,7 @@ public final class RegexMatchSetRegexMatchTupleFieldToMatchGetArgs extends io.pu
      * for all supported values.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

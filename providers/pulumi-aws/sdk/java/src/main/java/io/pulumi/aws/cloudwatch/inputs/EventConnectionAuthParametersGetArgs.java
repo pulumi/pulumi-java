@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersBasicGetArgs
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHttpParametersGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
      * 
      */
-    @InputImport(name="apiKey")
+    @Import(name="apiKey")
       private final @Nullable Output<EventConnectionAuthParametersApiKeyGetArgs> apiKey;
 
     public Output<EventConnectionAuthParametersApiKeyGetArgs> getApiKey() {
@@ -32,7 +32,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * Parameters used for BASIC authorization. A maximum of 1 are allowed. Conflicts with `api_key` and `oauth`. Documented below.
      * 
      */
-    @InputImport(name="basic")
+    @Import(name="basic")
       private final @Nullable Output<EventConnectionAuthParametersBasicGetArgs> basic;
 
     public Output<EventConnectionAuthParametersBasicGetArgs> getBasic() {
@@ -43,7 +43,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * Invocation Http Parameters are additional credentials used to sign each Invocation of the ApiDestination created from this Connection. If the ApiDestination Rule Target has additional HttpParameters, the values will be merged together, with the Connection Invocation Http Parameters taking precedence. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
      * 
      */
-    @InputImport(name="invocationHttpParameters")
+    @Import(name="invocationHttpParameters")
       private final @Nullable Output<EventConnectionAuthParametersInvocationHttpParametersGetArgs> invocationHttpParameters;
 
     public Output<EventConnectionAuthParametersInvocationHttpParametersGetArgs> getInvocationHttpParameters() {
@@ -54,7 +54,7 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
      * Parameters used for OAUTH_CLIENT_CREDENTIALS authorization. A maximum of 1 are allowed. Conflicts with `basic` and `api_key`. Documented below.
      * 
      */
-    @InputImport(name="oauth")
+    @Import(name="oauth")
       private final @Nullable Output<EventConnectionAuthParametersOauthGetArgs> oauth;
 
     public Output<EventConnectionAuthParametersOauthGetArgs> getOauth() {

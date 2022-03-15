@@ -12,7 +12,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.SearchResultsResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)
      * 
      */
-    @OutputExport(name="archiveRetentionInDays", type=Integer.class, parameters={})
+    @Export(name="archiveRetentionInDays", type=Integer.class, parameters={})
     private Output<Integer> archiveRetentionInDays;
 
     /**
@@ -54,7 +54,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The timestamp that table plan was last modified (UTC).
      * 
      */
-    @OutputExport(name="lastPlanModifiedDate", type=String.class, parameters={})
+    @Export(name="lastPlanModifiedDate", type=String.class, parameters={})
     private Output<String> lastPlanModifiedDate;
 
     /**
@@ -68,7 +68,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The table plan.
      * 
      */
-    @OutputExport(name="plan", type=String.class, parameters={})
+    @Export(name="plan", type=String.class, parameters={})
     private Output</* @Nullable */ String> plan;
 
     /**
@@ -96,7 +96,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Table's current provisioning state. If set to 'updating', indicates a resource lock due to ongoing operation, forbidding any update to the table until the ongoing operation is concluded.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -110,7 +110,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Parameters of the restore operation that initiated this table.
      * 
      */
-    @OutputExport(name="restoredLogs", type=RestoredLogsResponse.class, parameters={})
+    @Export(name="restoredLogs", type=RestoredLogsResponse.class, parameters={})
     private Output</* @Nullable */ RestoredLogsResponse> restoredLogs;
 
     /**
@@ -124,7 +124,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Search job execution statistics.
      * 
      */
-    @OutputExport(name="resultStatistics", type=ResultStatisticsResponse.class, parameters={})
+    @Export(name="resultStatistics", type=ResultStatisticsResponse.class, parameters={})
     private Output</* @Nullable */ ResultStatisticsResponse> resultStatistics;
 
     /**
@@ -138,7 +138,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The data table data retention in days, between 4 and 730. Setting this property to null will default to the workspace retention.
      * 
      */
-    @OutputExport(name="retentionInDays", type=Integer.class, parameters={})
+    @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
@@ -152,7 +152,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Table schema.
      * 
      */
-    @OutputExport(name="schema", type=SchemaResponse.class, parameters={})
+    @Export(name="schema", type=SchemaResponse.class, parameters={})
     private Output</* @Nullable */ SchemaResponse> schema;
 
     /**
@@ -166,7 +166,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Parameters of the search job that initiated this table.
      * 
      */
-    @OutputExport(name="searchResults", type=SearchResultsResponse.class, parameters={})
+    @Export(name="searchResults", type=SearchResultsResponse.class, parameters={})
     private Output</* @Nullable */ SearchResultsResponse> searchResults;
 
     /**
@@ -180,7 +180,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -194,7 +194,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The table data total retention in days, between 4 and 2555. Setting this property to null will default to table retention.
      * 
      */
-    @OutputExport(name="totalRetentionInDays", type=Integer.class, parameters={})
+    @Export(name="totalRetentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> totalRetentionInDays;
 
     /**
@@ -208,7 +208,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

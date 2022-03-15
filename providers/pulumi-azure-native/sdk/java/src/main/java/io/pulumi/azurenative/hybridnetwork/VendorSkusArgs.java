@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.enums.SkuType;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionTemplateArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The sku deployment mode.
      * 
      */
-    @InputImport(name="deploymentMode")
+    @Import(name="deploymentMode")
       private final @Nullable Output<Either<String,SkuDeploymentMode>> deploymentMode;
 
     public Output<Either<String,SkuDeploymentMode>> getDeploymentMode() {
@@ -35,7 +35,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters for the managed application to be supplied by the vendor.
      * 
      */
-    @InputImport(name="managedApplicationParameters")
+    @Import(name="managedApplicationParameters")
       private final @Nullable Output<Object> managedApplicationParameters;
 
     public Output<Object> getManagedApplicationParameters() {
@@ -46,7 +46,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The template for the managed application deployment.
      * 
      */
-    @InputImport(name="managedApplicationTemplate")
+    @Import(name="managedApplicationTemplate")
       private final @Nullable Output<Object> managedApplicationTemplate;
 
     public Output<Object> getManagedApplicationTemplate() {
@@ -57,7 +57,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The template definition of the network function.
      * 
      */
-    @InputImport(name="networkFunctionTemplate")
+    @Import(name="networkFunctionTemplate")
       private final @Nullable Output<NetworkFunctionTemplateArgs> networkFunctionTemplate;
 
     public Output<NetworkFunctionTemplateArgs> getNetworkFunctionTemplate() {
@@ -68,7 +68,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if the vendor sku is in preview mode.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -79,7 +79,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the sku.
      * 
      */
-    @InputImport(name="skuName")
+    @Import(name="skuName")
       private final @Nullable Output<String> skuName;
 
     public Output<String> getSkuName() {
@@ -90,7 +90,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The sku type.
      * 
      */
-    @InputImport(name="skuType")
+    @Import(name="skuType")
       private final @Nullable Output<Either<String,SkuType>> skuType;
 
     public Output<Either<String,SkuType>> getSkuType() {
@@ -101,7 +101,7 @@ public final class VendorSkusArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the vendor.
      * 
      */
-    @InputImport(name="vendorName", required=true)
+    @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
     public Output<String> getVendorName() {

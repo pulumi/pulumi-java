@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotS3Location {
     /**
      * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
@@ -27,11 +27,11 @@ public final class BotS3Location {
      */
     private final @Nullable String s3ObjectVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotS3Location(
-        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
-        @OutputCustomType.Parameter("s3ObjectKey") String s3ObjectKey,
-        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion) {
+        @CustomType.Parameter("s3Bucket") String s3Bucket,
+        @CustomType.Parameter("s3ObjectKey") String s3ObjectKey,
+        @CustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion) {
         this.s3Bucket = s3Bucket;
         this.s3ObjectKey = s3ObjectKey;
         this.s3ObjectVersion = s3ObjectVersion;

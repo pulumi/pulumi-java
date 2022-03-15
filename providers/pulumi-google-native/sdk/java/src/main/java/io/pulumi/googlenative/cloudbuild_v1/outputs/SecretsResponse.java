@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.InlineSecretResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.SecretManagerSecretResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretsResponse {
     /**
      * Secrets encrypted with KMS key and the associated secret environment variable.
@@ -22,10 +22,10 @@ public final class SecretsResponse {
      */
     private final List<SecretManagerSecretResponse> secretManager;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretsResponse(
-        @OutputCustomType.Parameter("inline") List<InlineSecretResponse> inline,
-        @OutputCustomType.Parameter("secretManager") List<SecretManagerSecretResponse> secretManager) {
+        @CustomType.Parameter("inline") List<InlineSecretResponse> inline,
+        @CustomType.Parameter("secretManager") List<SecretManagerSecretResponse> secretManager) {
         this.inline = inline;
         this.secretManager = secretManager;
     }

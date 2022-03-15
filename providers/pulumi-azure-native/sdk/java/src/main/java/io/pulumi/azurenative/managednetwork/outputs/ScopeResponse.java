@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScopeResponse {
     /**
      * The collection of management groups covered by the Managed Network
@@ -32,12 +32,12 @@ public final class ScopeResponse {
      */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScopeResponse(
-        @OutputCustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
-        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
-        @OutputCustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
-        @OutputCustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
+        @CustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
+        @CustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
+        @CustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
+        @CustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
         this.managementGroups = managementGroups;
         this.subnets = subnets;
         this.subscriptions = subscriptions;

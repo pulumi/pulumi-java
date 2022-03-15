@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The ARN for this account.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -41,21 +41,21 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * If set to `ALLOW`, the new account enables IAM users to access account billing information if they have the required permissions. If set to `DENY`, then only the root user of the new account can access account billing information.
      * 
      */
-    @InputImport(name="iamUserAccessToBilling")
+    @Import(name="iamUserAccessToBilling")
       private final @Nullable Output<String> iamUserAccessToBilling;
 
     public Output<String> getIamUserAccessToBilling() {
         return this.iamUserAccessToBilling == null ? Output.empty() : this.iamUserAccessToBilling;
     }
 
-    @InputImport(name="joinedMethod")
+    @Import(name="joinedMethod")
       private final @Nullable Output<String> joinedMethod;
 
     public Output<String> getJoinedMethod() {
         return this.joinedMethod == null ? Output.empty() : this.joinedMethod;
     }
 
-    @InputImport(name="joinedTimestamp")
+    @Import(name="joinedTimestamp")
       private final @Nullable Output<String> joinedTimestamp;
 
     public Output<String> getJoinedTimestamp() {
@@ -66,7 +66,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the member account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.
      * 
      */
-    @InputImport(name="parentId")
+    @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -88,14 +88,14 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. The Organizations API provides no method for reading this information after account creation, so this provider cannot perform drift detection on its value and will always show a difference for a configured value after import unless [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) is used.
      * 
      */
-    @InputImport(name="roleName")
+    @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
         return this.roleName == null ? Output.empty() : this.roleName;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -106,7 +106,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -117,7 +117,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

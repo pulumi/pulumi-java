@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.PersonArgs;
 import io.pulumi.example.Utilities;
@@ -15,13 +15,13 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Person")
 public class Person extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="pets", type=List.class, parameters={Pet.class})
+    @Export(name="pets", type=List.class, parameters={Pet.class})
     private Output</* @Nullable */ List<Pet>> pets;
 
     public Output</* @Nullable */ List<Pet>> getPets() {

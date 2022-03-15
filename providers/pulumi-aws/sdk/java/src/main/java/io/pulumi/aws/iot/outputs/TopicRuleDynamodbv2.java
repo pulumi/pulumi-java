@@ -4,13 +4,13 @@
 package io.pulumi.aws.iot.outputs;
 
 import io.pulumi.aws.iot.outputs.TopicRuleDynamodbv2PutItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleDynamodbv2 {
     /**
      * Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
@@ -23,10 +23,10 @@ public final class TopicRuleDynamodbv2 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleDynamodbv2(
-        @OutputCustomType.Parameter("putItem") @Nullable TopicRuleDynamodbv2PutItem putItem,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("putItem") @Nullable TopicRuleDynamodbv2PutItem putItem,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.putItem = putItem;
         this.roleArn = roleArn;
     }

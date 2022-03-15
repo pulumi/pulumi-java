@@ -8,14 +8,14 @@ import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleActionAuthentica
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleActionFixedResponse;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleActionForward;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleActionRedirect;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleAction {
     /**
      * Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
@@ -54,16 +54,16 @@ public final class ListenerRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleAction(
-        @OutputCustomType.Parameter("authenticateCognito") @Nullable ListenerRuleActionAuthenticateCognito authenticateCognito,
-        @OutputCustomType.Parameter("authenticateOidc") @Nullable ListenerRuleActionAuthenticateOidc authenticateOidc,
-        @OutputCustomType.Parameter("fixedResponse") @Nullable ListenerRuleActionFixedResponse fixedResponse,
-        @OutputCustomType.Parameter("forward") @Nullable ListenerRuleActionForward forward,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("redirect") @Nullable ListenerRuleActionRedirect redirect,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authenticateCognito") @Nullable ListenerRuleActionAuthenticateCognito authenticateCognito,
+        @CustomType.Parameter("authenticateOidc") @Nullable ListenerRuleActionAuthenticateOidc authenticateOidc,
+        @CustomType.Parameter("fixedResponse") @Nullable ListenerRuleActionFixedResponse fixedResponse,
+        @CustomType.Parameter("forward") @Nullable ListenerRuleActionForward forward,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("redirect") @Nullable ListenerRuleActionRedirect redirect,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @CustomType.Parameter("type") String type) {
         this.authenticateCognito = authenticateCognito;
         this.authenticateOidc = authenticateOidc;
         this.fixedResponse = fixedResponse;

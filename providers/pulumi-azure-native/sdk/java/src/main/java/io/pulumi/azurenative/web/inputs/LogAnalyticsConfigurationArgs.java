@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
 
     public static final LogAnalyticsConfigurationArgs Empty = new LogAnalyticsConfigurationArgs();
 
-    @InputImport(name="customerId")
+    @Import(name="customerId")
       private final @Nullable Output<String> customerId;
 
     public Output<String> getCustomerId() {
         return this.customerId == null ? Output.empty() : this.customerId;
     }
 
-    @InputImport(name="sharedKey")
+    @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
     public Output<String> getSharedKey() {

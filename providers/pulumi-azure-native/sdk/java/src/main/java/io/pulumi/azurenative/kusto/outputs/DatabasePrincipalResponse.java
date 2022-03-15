@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabasePrincipalResponse {
     /**
      * Application id - relevant only for application principal type.
@@ -47,15 +47,15 @@ public final class DatabasePrincipalResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabasePrincipalResponse(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("fqn") @Nullable String fqn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("tenantName") String tenantName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("fqn") @Nullable String fqn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("tenantName") String tenantName,
+        @CustomType.Parameter("type") String type) {
         this.appId = appId;
         this.email = email;
         this.fqn = fqn;

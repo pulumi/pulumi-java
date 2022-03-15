@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SSISChildPackageResponse {
     /**
      * Content for embedded child package. Type: string (or Expression with resultType string).
@@ -33,12 +33,12 @@ public final class SSISChildPackageResponse {
      */
     private final Object packagePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSISChildPackageResponse(
-        @OutputCustomType.Parameter("packageContent") Object packageContent,
-        @OutputCustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
-        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
-        @OutputCustomType.Parameter("packagePath") Object packagePath) {
+        @CustomType.Parameter("packageContent") Object packageContent,
+        @CustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
+        @CustomType.Parameter("packageName") @Nullable String packageName,
+        @CustomType.Parameter("packagePath") Object packagePath) {
         this.packageContent = packageContent;
         this.packageLastModifiedDate = packageLastModifiedDate;
         this.packageName = packageName;

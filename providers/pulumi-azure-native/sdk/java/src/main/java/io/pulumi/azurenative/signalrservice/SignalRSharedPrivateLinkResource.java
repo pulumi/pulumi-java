@@ -8,7 +8,7 @@ import io.pulumi.azurenative.signalrservice.SignalRSharedPrivateLinkResourceArgs
 import io.pulumi.azurenative.signalrservice.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * The group id from the provider of resource the shared private link resource is for
      * 
      */
-    @OutputExport(name="groupId", type=String.class, parameters={})
+    @Export(name="groupId", type=String.class, parameters={})
     private Output<String> groupId;
 
     /**
@@ -49,7 +49,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * The resource id of the resource the shared private link resource is for
      * 
      */
-    @OutputExport(name="privateLinkResourceId", type=String.class, parameters={})
+    @Export(name="privateLinkResourceId", type=String.class, parameters={})
     private Output<String> privateLinkResourceId;
 
     /**
@@ -77,7 +77,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * Provisioning state of the shared private link resource
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -91,7 +91,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * The request message for requesting approval of the shared private link resource
      * 
      */
-    @OutputExport(name="requestMessage", type=String.class, parameters={})
+    @Export(name="requestMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestMessage;
 
     /**
@@ -105,7 +105,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * Status of the shared private link resource
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -119,7 +119,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -133,7 +133,7 @@ public class SignalRSharedPrivateLinkResource extends io.pulumi.resources.Custom
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.Kind;
 import io.pulumi.azurenative.insights.inputs.WorkbookManagedIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Workbook category, as defined by the user at creation time.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final Output<String> category;
 
     public Output<String> getCategory() {
@@ -33,7 +33,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * The user-defined name (display name) of the workbook.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -55,7 +55,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Identity used for BYOS
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<WorkbookManagedIdentityArgs> identity;
 
     public Output<WorkbookManagedIdentityArgs> getIdentity() {
@@ -66,7 +66,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of workbook. Choices are user and shared.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -77,7 +77,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -88,7 +88,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -121,7 +121,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration of this particular workbook. Configuration data is a string containing valid JSON
      * 
      */
-    @InputImport(name="serializedData", required=true)
+    @Import(name="serializedData", required=true)
       private final Output<String> serializedData;
 
     public Output<String> getSerializedData() {
@@ -132,7 +132,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * ResourceId for a source resource.
      * 
      */
-    @InputImport(name="sourceId")
+    @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
     public Output<String> getSourceId() {
@@ -143,7 +143,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * BYOS Storage Account URI
      * 
      */
-    @InputImport(name="storageUri")
+    @Import(name="storageUri")
       private final @Nullable Output<String> storageUri;
 
     public Output<String> getStorageUri() {
@@ -154,7 +154,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -165,7 +165,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource type
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -176,7 +176,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * Workbook version
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

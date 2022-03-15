@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.GeoFilterResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointResult {
     /**
      * List of content types on which compression applies. The value should be a valid MIME type.
@@ -148,33 +148,33 @@ public final class GetEndpointResult {
      */
     private final @Nullable EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointResult(
-        @OutputCustomType.Parameter("contentTypesToCompress") @Nullable List<String> contentTypesToCompress,
-        @OutputCustomType.Parameter("defaultOriginGroup") @Nullable ResourceReferenceResponse defaultOriginGroup,
-        @OutputCustomType.Parameter("deliveryPolicy") @Nullable EndpointPropertiesUpdateParametersResponseDeliveryPolicy deliveryPolicy,
-        @OutputCustomType.Parameter("geoFilters") @Nullable List<GeoFilterResponse> geoFilters,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isCompressionEnabled") @Nullable Boolean isCompressionEnabled,
-        @OutputCustomType.Parameter("isHttpAllowed") @Nullable Boolean isHttpAllowed,
-        @OutputCustomType.Parameter("isHttpsAllowed") @Nullable Boolean isHttpsAllowed,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("optimizationType") @Nullable String optimizationType,
-        @OutputCustomType.Parameter("originGroups") @Nullable List<DeepCreatedOriginGroupResponse> originGroups,
-        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
-        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
-        @OutputCustomType.Parameter("origins") List<DeepCreatedOriginResponse> origins,
-        @OutputCustomType.Parameter("probePath") @Nullable String probePath,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("queryStringCachingBehavior") @Nullable String queryStringCachingBehavior,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("urlSigningKeys") @Nullable List<UrlSigningKeyResponse> urlSigningKeys,
-        @OutputCustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        @CustomType.Parameter("contentTypesToCompress") @Nullable List<String> contentTypesToCompress,
+        @CustomType.Parameter("defaultOriginGroup") @Nullable ResourceReferenceResponse defaultOriginGroup,
+        @CustomType.Parameter("deliveryPolicy") @Nullable EndpointPropertiesUpdateParametersResponseDeliveryPolicy deliveryPolicy,
+        @CustomType.Parameter("geoFilters") @Nullable List<GeoFilterResponse> geoFilters,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isCompressionEnabled") @Nullable Boolean isCompressionEnabled,
+        @CustomType.Parameter("isHttpAllowed") @Nullable Boolean isHttpAllowed,
+        @CustomType.Parameter("isHttpsAllowed") @Nullable Boolean isHttpsAllowed,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("optimizationType") @Nullable String optimizationType,
+        @CustomType.Parameter("originGroups") @Nullable List<DeepCreatedOriginGroupResponse> originGroups,
+        @CustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @CustomType.Parameter("originPath") @Nullable String originPath,
+        @CustomType.Parameter("origins") List<DeepCreatedOriginResponse> origins,
+        @CustomType.Parameter("probePath") @Nullable String probePath,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("queryStringCachingBehavior") @Nullable String queryStringCachingBehavior,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("urlSigningKeys") @Nullable List<UrlSigningKeyResponse> urlSigningKeys,
+        @CustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
         this.contentTypesToCompress = contentTypesToCompress;
         this.defaultOriginGroup = defaultOriginGroup;
         this.deliveryPolicy = deliveryPolicy;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.outputs;
 import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeepCreatedOriginGroupResponse {
     /**
      * Health probe settings to the origin that is used to determine the health of the origin.
@@ -42,13 +42,13 @@ public final class DeepCreatedOriginGroupResponse {
      */
     private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeepCreatedOriginGroupResponse(
-        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
-        @OutputCustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
-        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        @CustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
+        @CustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
+        @CustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
         this.healthProbeSettings = healthProbeSettings;
         this.name = name;
         this.origins = origins;

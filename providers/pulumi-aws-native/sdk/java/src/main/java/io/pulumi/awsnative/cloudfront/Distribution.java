@@ -8,7 +8,7 @@ import io.pulumi.awsnative.cloudfront.DistributionArgs;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionConfig;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,19 +22,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:Distribution")
 public class Distribution extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="distributionConfig", type=DistributionConfig.class, parameters={})
+    @Export(name="distributionConfig", type=DistributionConfig.class, parameters={})
     private Output<DistributionConfig> distributionConfig;
 
     public Output<DistributionConfig> getDistributionConfig() {
         return this.distributionConfig;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DistributionTag.class})
+    @Export(name="tags", type=List.class, parameters={DistributionTag.class})
     private Output</* @Nullable */ List<DistributionTag>> tags;
 
     public Output</* @Nullable */ List<DistributionTag>> getTags() {

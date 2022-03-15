@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceIAMBindingArgs;
@@ -61,7 +61,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:spanner/instanceIAMBinding:InstanceIAMBinding")
 public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=InstanceIAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=InstanceIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIAMBindingCondition> condition;
 
     public Output</* @Nullable */ InstanceIAMBindingCondition> getCondition() {
@@ -71,7 +71,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the instance's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -85,7 +85,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * The name of the instance.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -95,7 +95,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getInstance() {
         return this.instance;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -106,7 +106,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -123,7 +123,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

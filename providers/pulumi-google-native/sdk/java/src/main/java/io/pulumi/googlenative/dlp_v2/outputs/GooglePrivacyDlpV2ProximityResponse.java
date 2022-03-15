@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ProximityResponse {
     /**
      * Number of characters after the finding to consider.
@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2ProximityResponse {
      */
     private final Integer windowBefore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ProximityResponse(
-        @OutputCustomType.Parameter("windowAfter") Integer windowAfter,
-        @OutputCustomType.Parameter("windowBefore") Integer windowBefore) {
+        @CustomType.Parameter("windowAfter") Integer windowAfter,
+        @CustomType.Parameter("windowBefore") Integer windowBefore) {
         this.windowAfter = windowAfter;
         this.windowBefore = windowBefore;
     }

@@ -8,7 +8,7 @@ import io.pulumi.aws.cognito.ResourceServerArgs;
 import io.pulumi.aws.cognito.inputs.ResourceServerState;
 import io.pulumi.aws.cognito.outputs.ResourceServerScope;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * An identifier for the resource server.
      * 
      */
-    @OutputExport(name="identifier", type=String.class, parameters={})
+    @Export(name="identifier", type=String.class, parameters={})
     private Output<String> identifier;
 
     /**
@@ -48,7 +48,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * A name for the resource server.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * A list of all scopes configured for this resource server in the format identifier/scope_name.
      * 
      */
-    @OutputExport(name="scopeIdentifiers", type=List.class, parameters={String.class})
+    @Export(name="scopeIdentifiers", type=List.class, parameters={String.class})
     private Output<List<String>> scopeIdentifiers;
 
     /**
@@ -76,7 +76,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
      * A list of Authorization Scope.
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={ResourceServerScope.class})
+    @Export(name="scopes", type=List.class, parameters={ResourceServerScope.class})
     private Output</* @Nullable */ List<ResourceServerScope>> scopes;
 
     /**
@@ -86,7 +86,7 @@ public class ResourceServer extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<ResourceServerScope>> getScopes() {
         return this.scopes;
     }
-    @OutputExport(name="userPoolId", type=String.class, parameters={})
+    @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

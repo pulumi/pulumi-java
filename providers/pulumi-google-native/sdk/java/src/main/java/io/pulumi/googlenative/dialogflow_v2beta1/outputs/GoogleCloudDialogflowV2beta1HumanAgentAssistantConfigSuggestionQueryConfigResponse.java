@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse;
@@ -12,7 +12,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse {
     /**
      * Confidence threshold of query result. Agent Assist gives each suggestion a score in the range [0.0, 1.0], based on the relevance between the suggestion and the current conversation context. A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with a score greater than or equal to the value of this field are included in the results. For a baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom model, there is no recommended value. Tune this value by starting from a very low value and slowly increasing until you have desired results. If this field is not set, it is default to 0.0, which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ, SMART_REPLY, SMART_COMPOSE.
@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final Integer maxResults;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse(
-        @OutputCustomType.Parameter("confidenceThreshold") Double confidenceThreshold,
-        @OutputCustomType.Parameter("contextFilterSettings") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
-        @OutputCustomType.Parameter("dialogflowQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
-        @OutputCustomType.Parameter("documentQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
-        @OutputCustomType.Parameter("knowledgeBaseQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
-        @OutputCustomType.Parameter("maxResults") Integer maxResults) {
+        @CustomType.Parameter("confidenceThreshold") Double confidenceThreshold,
+        @CustomType.Parameter("contextFilterSettings") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
+        @CustomType.Parameter("dialogflowQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
+        @CustomType.Parameter("documentQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
+        @CustomType.Parameter("knowledgeBaseQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
+        @CustomType.Parameter("maxResults") Integer maxResults) {
         this.confidenceThreshold = confidenceThreshold;
         this.contextFilterSettings = contextFilterSettings;
         this.dialogflowQuerySource = dialogflowQuerySource;

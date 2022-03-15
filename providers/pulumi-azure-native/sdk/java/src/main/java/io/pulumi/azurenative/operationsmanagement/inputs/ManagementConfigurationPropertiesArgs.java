@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement.inputs;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ArmTemplateParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * The applicationId of the appliance for this Management.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -36,7 +36,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * Parameters to run the ARM template
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<List<ArmTemplateParameterArgs>> parameters;
 
     public Output<List<ArmTemplateParameterArgs>> getParameters() {
@@ -47,7 +47,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * The type of the parent resource.
      * 
      */
-    @InputImport(name="parentResourceType", required=true)
+    @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
     public Output<String> getParentResourceType() {
@@ -58,7 +58,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
      * The Json object containing the ARM template to deploy
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<Object> template;
 
     public Output<Object> getTemplate() {

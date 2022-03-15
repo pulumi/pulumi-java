@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -29,7 +29,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * The configuration profile ID.
      * 
      */
-    @InputImport(name="configurationProfileId", required=true)
+    @Import(name="configurationProfileId", required=true)
       private final Output<String> configurationProfileId;
 
     public Output<String> getConfigurationProfileId() {
@@ -40,7 +40,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * The content of the configuration or the configuration data.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -51,7 +51,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * A standard MIME type describing the format of the configuration content. For more information, see [Content-Type](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17).
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -62,7 +62,7 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
      * A description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {

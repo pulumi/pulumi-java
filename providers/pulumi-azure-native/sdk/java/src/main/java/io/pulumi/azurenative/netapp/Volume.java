@@ -10,7 +10,7 @@ import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseDataProtecti
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseExportPolicy;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -40,7 +40,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * UUID v4 or resource identifier used to identify the Backup.
      * 
      */
-    @OutputExport(name="backupId", type=String.class, parameters={})
+    @Export(name="backupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupId;
 
     /**
@@ -54,7 +54,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Unique Baremetal Tenant Identifier.
      * 
      */
-    @OutputExport(name="baremetalTenantId", type=String.class, parameters={})
+    @Export(name="baremetalTenantId", type=String.class, parameters={})
     private Output<String> baremetalTenantId;
 
     /**
@@ -68,7 +68,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * A unique file path for the volume. Used when creating mount targets
      * 
      */
-    @OutputExport(name="creationToken", type=String.class, parameters={})
+    @Export(name="creationToken", type=String.class, parameters={})
     private Output<String> creationToken;
 
     /**
@@ -82,7 +82,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * DataProtection type volumes include an object containing details of the replication
      * 
      */
-    @OutputExport(name="dataProtection", type=VolumePropertiesResponseDataProtection.class, parameters={})
+    @Export(name="dataProtection", type=VolumePropertiesResponseDataProtection.class, parameters={})
     private Output</* @Nullable */ VolumePropertiesResponseDataProtection> dataProtection;
 
     /**
@@ -96,7 +96,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'
      * 
      */
-    @OutputExport(name="encryptionKeySource", type=String.class, parameters={})
+    @Export(name="encryptionKeySource", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeySource;
 
     /**
@@ -110,7 +110,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Set of export policy rules
      * 
      */
-    @OutputExport(name="exportPolicy", type=VolumePropertiesResponseExportPolicy.class, parameters={})
+    @Export(name="exportPolicy", type=VolumePropertiesResponseExportPolicy.class, parameters={})
     private Output</* @Nullable */ VolumePropertiesResponseExportPolicy> exportPolicy;
 
     /**
@@ -124,7 +124,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Unique FileSystem Identifier.
      * 
      */
-    @OutputExport(name="fileSystemId", type=String.class, parameters={})
+    @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
     /**
@@ -138,7 +138,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Restoring
      * 
      */
-    @OutputExport(name="isRestoring", type=Boolean.class, parameters={})
+    @Export(name="isRestoring", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRestoring;
 
     /**
@@ -152,7 +152,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @OutputExport(name="kerberosEnabled", type=Boolean.class, parameters={})
+    @Export(name="kerberosEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> kerberosEnabled;
 
     /**
@@ -166,7 +166,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Specifies whether LDAP is enabled or not for a given NFS volume.
      * 
      */
-    @OutputExport(name="ldapEnabled", type=Boolean.class, parameters={})
+    @Export(name="ldapEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ldapEnabled;
 
     /**
@@ -180,7 +180,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -194,7 +194,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * List of mount targets
      * 
      */
-    @OutputExport(name="mountTargets", type=List.class, parameters={MountTargetPropertiesResponse.class})
+    @Export(name="mountTargets", type=List.class, parameters={MountTargetPropertiesResponse.class})
     private Output<List<MountTargetPropertiesResponse>> mountTargets;
 
     /**
@@ -208,7 +208,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -222,7 +222,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Set of protocol types, default NFSv3, CIFS for SMB protocol
      * 
      */
-    @OutputExport(name="protocolTypes", type=List.class, parameters={String.class})
+    @Export(name="protocolTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> protocolTypes;
 
     /**
@@ -236,7 +236,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -250,7 +250,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
      * 
      */
-    @OutputExport(name="securityStyle", type=String.class, parameters={})
+    @Export(name="securityStyle", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityStyle;
 
     /**
@@ -264,7 +264,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The service level of the file system
      * 
      */
-    @OutputExport(name="serviceLevel", type=String.class, parameters={})
+    @Export(name="serviceLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceLevel;
 
     /**
@@ -278,7 +278,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Enables continuously available share property for smb volume. Only applicable for SMB volume
      * 
      */
-    @OutputExport(name="smbContinuouslyAvailable", type=Boolean.class, parameters={})
+    @Export(name="smbContinuouslyAvailable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> smbContinuouslyAvailable;
 
     /**
@@ -292,7 +292,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
      * 
      */
-    @OutputExport(name="smbEncryption", type=Boolean.class, parameters={})
+    @Export(name="smbEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> smbEncryption;
 
     /**
@@ -306,7 +306,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).
      * 
      */
-    @OutputExport(name="snapshotDirectoryVisible", type=Boolean.class, parameters={})
+    @Export(name="snapshotDirectoryVisible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> snapshotDirectoryVisible;
 
     /**
@@ -320,7 +320,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * UUID v4 or resource identifier used to identify the Snapshot.
      * 
      */
-    @OutputExport(name="snapshotId", type=String.class, parameters={})
+    @Export(name="snapshotId", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotId;
 
     /**
@@ -334,7 +334,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -348,7 +348,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -358,7 +358,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="throughputMibps", type=Double.class, parameters={})
+    @Export(name="throughputMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> throughputMibps;
 
     public Output</* @Nullable */ Double> getThroughputMibps() {
@@ -368,7 +368,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -382,7 +382,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.
      * 
      */
-    @OutputExport(name="usageThreshold", type=Double.class, parameters={})
+    @Export(name="usageThreshold", type=Double.class, parameters={})
     private Output<Double> usageThreshold;
 
     /**
@@ -396,7 +396,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * What type of volume is this
      * 
      */
-    @OutputExport(name="volumeType", type=String.class, parameters={})
+    @Export(name="volumeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeType;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="deliveryConfig")
+    @Import(name="deliveryConfig")
       private final @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
     public Output<LiteSubscriptionDeliveryConfigArgs> getDeliveryConfig() {
@@ -31,7 +31,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * Name of the subscription.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -54,7 +54,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * The region of the pubsub lite topic.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -65,7 +65,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * A reference to a Topic resource.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {
@@ -76,7 +76,7 @@ public final class LiteSubscriptionArgs extends io.pulumi.resources.ResourceArgs
      * The zone of the pubsub lite topic.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

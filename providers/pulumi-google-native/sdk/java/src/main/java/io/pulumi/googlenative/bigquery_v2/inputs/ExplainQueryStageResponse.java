@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.ExplainQueryStepResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Number of parallel input segments completed.
      * 
      */
-    @InputImport(name="completedParallelInputs", required=true)
+    @Import(name="completedParallelInputs", required=true)
       private final String completedParallelInputs;
 
     public String getCompletedParallelInputs() {
@@ -30,7 +30,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the average shard spent on CPU-bound tasks.
      * 
      */
-    @InputImport(name="computeMsAvg", required=true)
+    @Import(name="computeMsAvg", required=true)
       private final String computeMsAvg;
 
     public String getComputeMsAvg() {
@@ -41,7 +41,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the slowest shard spent on CPU-bound tasks.
      * 
      */
-    @InputImport(name="computeMsMax", required=true)
+    @Import(name="computeMsMax", required=true)
       private final String computeMsMax;
 
     public String getComputeMsMax() {
@@ -52,7 +52,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the average shard spent on CPU-bound tasks.
      * 
      */
-    @InputImport(name="computeRatioAvg", required=true)
+    @Import(name="computeRatioAvg", required=true)
       private final Double computeRatioAvg;
 
     public Double getComputeRatioAvg() {
@@ -63,7 +63,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the slowest shard spent on CPU-bound tasks.
      * 
      */
-    @InputImport(name="computeRatioMax", required=true)
+    @Import(name="computeRatioMax", required=true)
       private final Double computeRatioMax;
 
     public Double getComputeRatioMax() {
@@ -74,7 +74,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Stage end time represented as milliseconds since epoch.
      * 
      */
-    @InputImport(name="endMs", required=true)
+    @Import(name="endMs", required=true)
       private final String endMs;
 
     public String getEndMs() {
@@ -85,7 +85,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * IDs for stages that are inputs to this stage.
      * 
      */
-    @InputImport(name="inputStages", required=true)
+    @Import(name="inputStages", required=true)
       private final List<String> inputStages;
 
     public List<String> getInputStages() {
@@ -96,7 +96,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Human-readable name for stage.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -107,7 +107,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Number of parallel input segments to be processed.
      * 
      */
-    @InputImport(name="parallelInputs", required=true)
+    @Import(name="parallelInputs", required=true)
       private final String parallelInputs;
 
     public String getParallelInputs() {
@@ -118,7 +118,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the average shard spent reading input.
      * 
      */
-    @InputImport(name="readMsAvg", required=true)
+    @Import(name="readMsAvg", required=true)
       private final String readMsAvg;
 
     public String getReadMsAvg() {
@@ -129,7 +129,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the slowest shard spent reading input.
      * 
      */
-    @InputImport(name="readMsMax", required=true)
+    @Import(name="readMsMax", required=true)
       private final String readMsMax;
 
     public String getReadMsMax() {
@@ -140,7 +140,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the average shard spent reading input.
      * 
      */
-    @InputImport(name="readRatioAvg", required=true)
+    @Import(name="readRatioAvg", required=true)
       private final Double readRatioAvg;
 
     public Double getReadRatioAvg() {
@@ -151,7 +151,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the slowest shard spent reading input.
      * 
      */
-    @InputImport(name="readRatioMax", required=true)
+    @Import(name="readRatioMax", required=true)
       private final Double readRatioMax;
 
     public Double getReadRatioMax() {
@@ -162,7 +162,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Number of records read into the stage.
      * 
      */
-    @InputImport(name="recordsRead", required=true)
+    @Import(name="recordsRead", required=true)
       private final String recordsRead;
 
     public String getRecordsRead() {
@@ -173,7 +173,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Number of records written by the stage.
      * 
      */
-    @InputImport(name="recordsWritten", required=true)
+    @Import(name="recordsWritten", required=true)
       private final String recordsWritten;
 
     public String getRecordsWritten() {
@@ -184,7 +184,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Total number of bytes written to shuffle.
      * 
      */
-    @InputImport(name="shuffleOutputBytes", required=true)
+    @Import(name="shuffleOutputBytes", required=true)
       private final String shuffleOutputBytes;
 
     public String getShuffleOutputBytes() {
@@ -195,7 +195,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Total number of bytes written to shuffle and spilled to disk.
      * 
      */
-    @InputImport(name="shuffleOutputBytesSpilled", required=true)
+    @Import(name="shuffleOutputBytesSpilled", required=true)
       private final String shuffleOutputBytesSpilled;
 
     public String getShuffleOutputBytesSpilled() {
@@ -206,7 +206,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Slot-milliseconds used by the stage.
      * 
      */
-    @InputImport(name="slotMs", required=true)
+    @Import(name="slotMs", required=true)
       private final String slotMs;
 
     public String getSlotMs() {
@@ -217,7 +217,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Stage start time represented as milliseconds since epoch.
      * 
      */
-    @InputImport(name="startMs", required=true)
+    @Import(name="startMs", required=true)
       private final String startMs;
 
     public String getStartMs() {
@@ -228,7 +228,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Current status for the stage.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -239,7 +239,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * List of operations within the stage in dependency order (approximately chronological).
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final List<ExplainQueryStepResponse> steps;
 
     public List<ExplainQueryStepResponse> getSteps() {
@@ -250,7 +250,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the average shard spent waiting to be scheduled.
      * 
      */
-    @InputImport(name="waitMsAvg", required=true)
+    @Import(name="waitMsAvg", required=true)
       private final String waitMsAvg;
 
     public String getWaitMsAvg() {
@@ -261,7 +261,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the slowest shard spent waiting to be scheduled.
      * 
      */
-    @InputImport(name="waitMsMax", required=true)
+    @Import(name="waitMsMax", required=true)
       private final String waitMsMax;
 
     public String getWaitMsMax() {
@@ -272,7 +272,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the average shard spent waiting to be scheduled.
      * 
      */
-    @InputImport(name="waitRatioAvg", required=true)
+    @Import(name="waitRatioAvg", required=true)
       private final Double waitRatioAvg;
 
     public Double getWaitRatioAvg() {
@@ -283,7 +283,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the slowest shard spent waiting to be scheduled.
      * 
      */
-    @InputImport(name="waitRatioMax", required=true)
+    @Import(name="waitRatioMax", required=true)
       private final Double waitRatioMax;
 
     public Double getWaitRatioMax() {
@@ -294,7 +294,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the average shard spent on writing output.
      * 
      */
-    @InputImport(name="writeMsAvg", required=true)
+    @Import(name="writeMsAvg", required=true)
       private final String writeMsAvg;
 
     public String getWriteMsAvg() {
@@ -305,7 +305,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Milliseconds the slowest shard spent on writing output.
      * 
      */
-    @InputImport(name="writeMsMax", required=true)
+    @Import(name="writeMsMax", required=true)
       private final String writeMsMax;
 
     public String getWriteMsMax() {
@@ -316,7 +316,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the average shard spent on writing output.
      * 
      */
-    @InputImport(name="writeRatioAvg", required=true)
+    @Import(name="writeRatioAvg", required=true)
       private final Double writeRatioAvg;
 
     public Double getWriteRatioAvg() {
@@ -327,7 +327,7 @@ public final class ExplainQueryStageResponse extends io.pulumi.resources.InvokeA
      * Relative amount of time the slowest shard spent on writing output.
      * 
      */
-    @InputImport(name="writeRatioMax", required=true)
+    @Import(name="writeRatioMax", required=true)
       private final Double writeRatioMax;
 
     public Double getWriteRatioMax() {

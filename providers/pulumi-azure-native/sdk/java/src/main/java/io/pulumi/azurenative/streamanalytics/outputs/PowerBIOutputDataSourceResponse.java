@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PowerBIOutputDataSourceResponse {
     /**
      * The name of the Power BI dataset. Required on PUT (CreateOrReplace) requests.
@@ -53,16 +53,16 @@ public final class PowerBIOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PowerBIOutputDataSourceResponse(
-        @OutputCustomType.Parameter("dataset") @Nullable String dataset,
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
-        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
-        @OutputCustomType.Parameter("table") @Nullable String table,
-        @OutputCustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
-        @OutputCustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataset") @Nullable String dataset,
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("groupName") @Nullable String groupName,
+        @CustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @CustomType.Parameter("table") @Nullable String table,
+        @CustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
+        @CustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
+        @CustomType.Parameter("type") String type) {
         this.dataset = dataset;
         this.groupId = groupId;
         this.groupName = groupName;

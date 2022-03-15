@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSecretValueArgs extends io.pulumi.resources.InvokeArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetSecretValueArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the secret resource.
      * 
      */
-    @InputImport(name="secretResourceName", required=true)
+    @Import(name="secretResourceName", required=true)
       private final String secretResourceName;
 
     public String getSecretResourceName() {
@@ -38,7 +38,7 @@ public final class GetSecretValueArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the secret resource value which is typically the version identifier for the value.
      * 
      */
-    @InputImport(name="secretValueResourceName", required=true)
+    @Import(name="secretValueResourceName", required=true)
       private final String secretValueResourceName;
 
     public String getSecretValueResourceName() {

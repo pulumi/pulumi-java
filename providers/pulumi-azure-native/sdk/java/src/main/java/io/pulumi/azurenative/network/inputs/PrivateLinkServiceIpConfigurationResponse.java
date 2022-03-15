@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * The name of private link service ip configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -57,7 +57,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * Whether the ip configuration is primary or not.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
@@ -68,7 +68,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * The private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -79,7 +79,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
      * 
      */
-    @InputImport(name="privateIPAddressVersion")
+    @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
     public Optional<String> getPrivateIPAddressVersion() {
@@ -90,7 +90,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
@@ -101,7 +101,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * The provisioning state of the private link service IP configuration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -112,7 +112,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * The reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {
@@ -123,7 +123,7 @@ public final class PrivateLinkServiceIpConfigurationResponse extends io.pulumi.r
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

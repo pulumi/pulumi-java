@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource {
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote remote;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource(
-        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
-        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs gcs,
-        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
-        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote remote) {
+        @CustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @CustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcs gcs,
+        @CustomType.Parameter("localPath") @Nullable String localPath,
+        @CustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

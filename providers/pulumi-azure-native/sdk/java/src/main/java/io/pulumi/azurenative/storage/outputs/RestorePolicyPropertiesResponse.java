@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestorePolicyPropertiesResponse {
     /**
      * how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.
@@ -34,12 +34,12 @@ public final class RestorePolicyPropertiesResponse {
      */
     private final String minRestoreTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestorePolicyPropertiesResponse(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("lastEnabledTime") String lastEnabledTime,
-        @OutputCustomType.Parameter("minRestoreTime") String minRestoreTime) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("lastEnabledTime") String lastEnabledTime,
+        @CustomType.Parameter("minRestoreTime") String minRestoreTime) {
         this.days = days;
         this.enabled = enabled;
         this.lastEnabledTime = lastEnabledTime;

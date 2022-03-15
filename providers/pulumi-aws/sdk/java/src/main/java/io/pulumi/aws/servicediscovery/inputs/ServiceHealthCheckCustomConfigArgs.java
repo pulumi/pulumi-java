@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServiceHealthCheckCustomConfigArgs extends io.pulumi.resource
      * The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {

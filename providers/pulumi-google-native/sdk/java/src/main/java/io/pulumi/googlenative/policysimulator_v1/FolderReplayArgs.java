@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.policysimulator_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.policysimulator_v1.inputs.GoogleCloudPolicysimulatorV1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +19,21 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration used for the `Replay`.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config;
 
     public Output<GoogleCloudPolicysimulatorV1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
-    @InputImport(name="folderId", required=true)
+    @Import(name="folderId", required=true)
       private final Output<String> folderId;
 
     public Output<String> getFolderId() {
         return this.folderId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {

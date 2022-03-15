@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkedTemplateArtifactResponse {
     /**
      * A filesystem safe relative path of the artifact.
@@ -21,10 +21,10 @@ public final class LinkedTemplateArtifactResponse {
      */
     private final Object template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedTemplateArtifactResponse(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("template") Object template) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("template") Object template) {
         this.path = path;
         this.template = template;
     }

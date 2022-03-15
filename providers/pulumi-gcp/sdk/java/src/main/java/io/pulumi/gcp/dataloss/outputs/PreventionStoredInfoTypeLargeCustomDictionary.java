@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPath;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionary {
     /**
      * Field in a BigQuery table where each cell represents a dictionary phrase.
@@ -33,11 +33,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
      */
     private final PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionary(
-        @OutputCustomType.Parameter("bigQueryField") @Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField bigQueryField,
-        @OutputCustomType.Parameter("cloudStorageFileSet") @Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet cloudStorageFileSet,
-        @OutputCustomType.Parameter("outputPath") PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath) {
+        @CustomType.Parameter("bigQueryField") @Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField bigQueryField,
+        @CustomType.Parameter("cloudStorageFileSet") @Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet cloudStorageFileSet,
+        @CustomType.Parameter("outputPath") PreventionStoredInfoTypeLargeCustomDictionaryOutputPath outputPath) {
         this.bigQueryField = bigQueryField;
         this.cloudStorageFileSet = cloudStorageFileSet;
         this.outputPath = outputPath;

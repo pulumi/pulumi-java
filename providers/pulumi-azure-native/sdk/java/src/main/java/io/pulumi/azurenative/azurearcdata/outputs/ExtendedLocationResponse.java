@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExtendedLocationResponse {
     /**
      * The name of the extended location.
@@ -22,10 +22,10 @@ public final class ExtendedLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExtendedLocationResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.type = type;
     }

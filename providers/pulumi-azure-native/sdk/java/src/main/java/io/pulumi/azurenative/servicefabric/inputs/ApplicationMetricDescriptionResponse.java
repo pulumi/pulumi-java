@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * When updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.
      * 
      */
-    @InputImport(name="maximumCapacity")
+    @Import(name="maximumCapacity")
       private final @Nullable Double maximumCapacity;
 
     public Optional<Double> getMaximumCapacity() {
@@ -38,7 +38,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * The name of the metric.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -53,7 +53,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * When setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.
      * 
      */
-    @InputImport(name="reservationCapacity")
+    @Import(name="reservationCapacity")
       private final @Nullable Double reservationCapacity;
 
     public Optional<Double> getReservationCapacity() {
@@ -66,7 +66,7 @@ public final class ApplicationMetricDescriptionResponse extends io.pulumi.resour
      * When creating a new application with application capacity defined, the product of MaximumNodes and MaximumCapacity must always be smaller than or equal to this value.
      * 
      */
-    @InputImport(name="totalApplicationCapacity")
+    @Import(name="totalApplicationCapacity")
       private final @Nullable Double totalApplicationCapacity;
 
     public Optional<Double> getTotalApplicationCapacity() {

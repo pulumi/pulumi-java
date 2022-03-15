@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KindExpressionResponse {
     /**
      * The name of the kind.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2KindExpressionResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2KindExpressionResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

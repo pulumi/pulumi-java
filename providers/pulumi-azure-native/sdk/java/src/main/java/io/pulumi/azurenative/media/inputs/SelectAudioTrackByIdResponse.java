@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
      * 
      */
-    @InputImport(name="channelMapping")
+    @Import(name="channelMapping")
       private final @Nullable String channelMapping;
 
     public Optional<String> getChannelMapping() {
@@ -35,7 +35,7 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
      * Expected value is '#Microsoft.Media.SelectAudioTrackById'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -46,7 +46,7 @@ public final class SelectAudioTrackByIdResponse extends io.pulumi.resources.Invo
      * Track identifier to select
      * 
      */
-    @InputImport(name="trackId", required=true)
+    @Import(name="trackId", required=true)
       private final Double trackId;
 
     public Double getTrackId() {

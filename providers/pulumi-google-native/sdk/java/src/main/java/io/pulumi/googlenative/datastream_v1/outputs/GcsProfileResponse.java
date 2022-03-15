@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GcsProfileResponse {
     /**
      * The Cloud Storage bucket name.
@@ -20,10 +20,10 @@ public final class GcsProfileResponse {
      */
     private final String rootPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GcsProfileResponse(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("rootPath") String rootPath) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("rootPath") String rootPath) {
         this.bucket = bucket;
         this.rootPath = rootPath;
     }

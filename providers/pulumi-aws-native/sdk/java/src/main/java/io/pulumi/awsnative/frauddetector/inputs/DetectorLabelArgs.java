@@ -5,7 +5,7 @@ package io.pulumi.awsnative.frauddetector.inputs;
 
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DetectorLabelArgs Empty = new DetectorLabelArgs();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -28,7 +28,7 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the label was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -39,14 +39,14 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="inline")
+    @Import(name="inline")
       private final @Nullable Output<Boolean> inline;
 
     public Output<Boolean> getInline() {
@@ -57,14 +57,14 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the label was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class DetectorLabelArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with this label.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
     public Output<List<DetectorTagArgs>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
      * If the path is relative, base will the site's root directory.
      * 
      */
-    @InputImport(name="configFilePath")
+    @Import(name="configFilePath")
       private final @Nullable Output<String> configFilePath;
 
     public Output<String> getConfigFilePath() {
@@ -35,7 +35,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -47,7 +47,7 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
      * The setting in this value can control the behavior of certain features in the Authentication / Authorization module.
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {

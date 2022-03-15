@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestSinkResponse {
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
@@ -74,20 +74,20 @@ public final class RestSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestSinkResponse(
-        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("httpCompressionType") @Nullable Object httpCompressionType,
-        @OutputCustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("requestInterval") @Nullable Object requestInterval,
-        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
+        @CustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("httpCompressionType") @Nullable Object httpCompressionType,
+        @CustomType.Parameter("httpRequestTimeout") @Nullable Object httpRequestTimeout,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("requestInterval") @Nullable Object requestInterval,
+        @CustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;
         this.httpCompressionType = httpCompressionType;

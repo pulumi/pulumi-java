@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FleetLocationCapacity {
     /**
      * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between the minimum and maximum size limits.
@@ -25,11 +25,11 @@ public final class FleetLocationCapacity {
      */
     private final Integer minSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetLocationCapacity(
-        @OutputCustomType.Parameter("desiredEC2Instances") Integer desiredEC2Instances,
-        @OutputCustomType.Parameter("maxSize") Integer maxSize,
-        @OutputCustomType.Parameter("minSize") Integer minSize) {
+        @CustomType.Parameter("desiredEC2Instances") Integer desiredEC2Instances,
+        @CustomType.Parameter("maxSize") Integer maxSize,
+        @CustomType.Parameter("minSize") Integer minSize) {
         this.desiredEC2Instances = desiredEC2Instances;
         this.maxSize = maxSize;
         this.minSize = minSize;

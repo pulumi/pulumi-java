@@ -4,22 +4,22 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.LightHouseAuthorizationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
     private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
     private final @Nullable String managedByTenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderHubMetadataResponseThirdPartyProviderAuthorization(
-        @OutputCustomType.Parameter("authorizations") @Nullable List<LightHouseAuthorizationResponse> authorizations,
-        @OutputCustomType.Parameter("managedByTenantId") @Nullable String managedByTenantId) {
+        @CustomType.Parameter("authorizations") @Nullable List<LightHouseAuthorizationResponse> authorizations,
+        @CustomType.Parameter("managedByTenantId") @Nullable String managedByTenantId) {
         this.authorizations = authorizations;
         this.managedByTenantId = managedByTenantId;
     }

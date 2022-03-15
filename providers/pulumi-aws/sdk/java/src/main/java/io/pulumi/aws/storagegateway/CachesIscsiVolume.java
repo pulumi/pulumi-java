@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.storagegateway.CachesIscsiVolumeArgs;
 import io.pulumi.aws.storagegateway.inputs.CachesIscsiVolumeState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Volume Amazon Resource Name (ARN), e.g., `arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678`.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -55,7 +55,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Whether mutual CHAP is enabled for the iSCSI target.
      * 
      */
-    @OutputExport(name="chapEnabled", type=Boolean.class, parameters={})
+    @Export(name="chapEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> chapEnabled;
 
     /**
@@ -69,7 +69,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @OutputExport(name="gatewayArn", type=String.class, parameters={})
+    @Export(name="gatewayArn", type=String.class, parameters={})
     private Output<String> gatewayArn;
 
     /**
@@ -83,7 +83,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Set to `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3.
      * 
      */
-    @OutputExport(name="kmsEncrypted", type=Boolean.class, parameters={})
+    @Export(name="kmsEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> kmsEncrypted;
 
     /**
@@ -97,7 +97,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. Is required when `kms_encrypted` is set.
      * 
      */
-    @OutputExport(name="kmsKey", type=String.class, parameters={})
+    @Export(name="kmsKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKey;
 
     /**
@@ -111,7 +111,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Logical disk number.
      * 
      */
-    @OutputExport(name="lunNumber", type=Integer.class, parameters={})
+    @Export(name="lunNumber", type=Integer.class, parameters={})
     private Output<Integer> lunNumber;
 
     /**
@@ -125,7 +125,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -139,7 +139,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The port used to communicate with iSCSI targets.
      * 
      */
-    @OutputExport(name="networkInterfacePort", type=Integer.class, parameters={})
+    @Export(name="networkInterfacePort", type=Integer.class, parameters={})
     private Output<Integer> networkInterfacePort;
 
     /**
@@ -153,7 +153,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The snapshot ID of the snapshot to restore as the new cached volumeE.g., `snap-1122aabb`.
      * 
      */
-    @OutputExport(name="snapshotId", type=String.class, parameters={})
+    @Export(name="snapshotId", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotId;
 
     /**
@@ -167,7 +167,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The ARN for an existing volume. Specifying this ARN makes the new volume into an exact copy of the specified existing volume's latest recovery point. The `volume_size_in_bytes` value for this new volume must be equal to or larger than the size of the existing volume, in bytes.
      * 
      */
-    @OutputExport(name="sourceVolumeArn", type=String.class, parameters={})
+    @Export(name="sourceVolumeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceVolumeArn;
 
     /**
@@ -181,7 +181,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -195,7 +195,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -209,7 +209,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Target Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/target/iqn.1997-05.com.amazon:TargetName`.
      * 
      */
-    @OutputExport(name="targetArn", type=String.class, parameters={})
+    @Export(name="targetArn", type=String.class, parameters={})
     private Output<String> targetArn;
 
     /**
@@ -223,7 +223,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The name of the iSCSI target used by initiators to connect to the target and as a suffix for the target ARN. The target name must be unique across all volumes of a gateway.
      * 
      */
-    @OutputExport(name="targetName", type=String.class, parameters={})
+    @Export(name="targetName", type=String.class, parameters={})
     private Output<String> targetName;
 
     /**
@@ -237,7 +237,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Volume Amazon Resource Name (ARN), e.g. `arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678/volume/vol-12345678`.
      * 
      */
-    @OutputExport(name="volumeArn", type=String.class, parameters={})
+    @Export(name="volumeArn", type=String.class, parameters={})
     private Output<String> volumeArn;
 
     /**
@@ -251,7 +251,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * Volume ID, e.g. `vol-12345678`.
      * 
      */
-    @OutputExport(name="volumeId", type=String.class, parameters={})
+    @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;
 
     /**
@@ -265,7 +265,7 @@ public class CachesIscsiVolume extends io.pulumi.resources.CustomResource {
      * The size of the volume in bytes.
      * 
      */
-    @OutputExport(name="volumeSizeInBytes", type=Integer.class, parameters={})
+    @Export(name="volumeSizeInBytes", type=Integer.class, parameters={})
     private Output<Integer> volumeSizeInBytes;
 
     /**

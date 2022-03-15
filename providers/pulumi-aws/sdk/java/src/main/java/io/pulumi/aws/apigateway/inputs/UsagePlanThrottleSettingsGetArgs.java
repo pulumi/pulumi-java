@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
      * The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
      * 
      */
-    @InputImport(name="burstLimit")
+    @Import(name="burstLimit")
       private final @Nullable Output<Integer> burstLimit;
 
     public Output<Integer> getBurstLimit() {
@@ -30,7 +30,7 @@ public final class UsagePlanThrottleSettingsGetArgs extends io.pulumi.resources.
      * The API request steady-state rate limit.
      * 
      */
-    @InputImport(name="rateLimit")
+    @Import(name="rateLimit")
       private final @Nullable Output<Double> rateLimit;
 
     public Output<Double> getRateLimit() {

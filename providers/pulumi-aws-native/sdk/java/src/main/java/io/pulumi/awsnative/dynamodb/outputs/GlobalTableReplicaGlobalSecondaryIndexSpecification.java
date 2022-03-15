@@ -5,23 +5,23 @@ package io.pulumi.awsnative.dynamodb.outputs;
 
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableContributorInsightsSpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableReadProvisionedThroughputSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
     private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
     private final String indexName;
     private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableReplicaGlobalSecondaryIndexSpecification(
-        @OutputCustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        @OutputCustomType.Parameter("indexName") String indexName,
-        @OutputCustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
+        @CustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
+        @CustomType.Parameter("indexName") String indexName,
+        @CustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.indexName = indexName;
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;

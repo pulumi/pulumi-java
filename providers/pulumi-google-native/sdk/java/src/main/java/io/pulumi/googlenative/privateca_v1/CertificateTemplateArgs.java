@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstraintsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateIdentityConstraintsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
@@ -18,7 +18,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
 
     public static final CertificateTemplateArgs Empty = new CertificateTemplateArgs();
 
-    @InputImport(name="certificateTemplateId", required=true)
+    @Import(name="certificateTemplateId", required=true)
       private final Output<String> certificateTemplateId;
 
     public Output<String> getCertificateTemplateId() {
@@ -29,7 +29,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. A human-readable description of scenarios this template is intended for.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
      * 
      */
-    @InputImport(name="identityConstraints")
+    @Import(name="identityConstraints")
       private final @Nullable Output<CertificateIdentityConstraintsArgs> identityConstraints;
 
     public Output<CertificateIdentityConstraintsArgs> getIdentityConstraints() {
@@ -51,14 +51,14 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,7 +69,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
      * 
      */
-    @InputImport(name="passthroughExtensions")
+    @Import(name="passthroughExtensions")
       private final @Nullable Output<CertificateExtensionConstraintsArgs> passthroughExtensions;
 
     public Output<CertificateExtensionConstraintsArgs> getPassthroughExtensions() {
@@ -80,21 +80,21 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
      * 
      */
-    @InputImport(name="predefinedValues")
+    @Import(name="predefinedValues")
       private final @Nullable Output<X509ParametersArgs> predefinedValues;
 
     public Output<X509ParametersArgs> getPredefinedValues() {
         return this.predefinedValues == null ? Output.empty() : this.predefinedValues;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

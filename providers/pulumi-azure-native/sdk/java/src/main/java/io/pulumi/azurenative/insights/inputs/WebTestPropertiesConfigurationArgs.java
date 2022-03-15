@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
      * The XML specification of a WebTest to run against an application.
      * 
      */
-    @InputImport(name="webTest")
+    @Import(name="webTest")
       private final @Nullable Output<String> webTest;
 
     public Output<String> getWebTest() {

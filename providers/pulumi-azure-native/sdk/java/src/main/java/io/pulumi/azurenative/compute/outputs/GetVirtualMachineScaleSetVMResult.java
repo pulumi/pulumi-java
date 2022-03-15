@@ -17,7 +17,7 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMNetworkProfileConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProtectionPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineScaleSetVMResult {
     /**
      * Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
@@ -164,35 +164,35 @@ public final class GetVirtualMachineScaleSetVMResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineScaleSetVMResult(
-        @OutputCustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
-        @OutputCustomType.Parameter("availabilitySet") @Nullable SubResourceResponse availabilitySet,
-        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("instanceView") VirtualMachineScaleSetVMInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("latestModelApplied") Boolean latestModelApplied,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("modelDefinitionApplied") String modelDefinitionApplied,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("networkProfileConfiguration") @Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration,
-        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
-        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
-        @OutputCustomType.Parameter("protectionPolicy") @Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resources") List<VirtualMachineExtensionResponse> resources,
-        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userData") @Nullable String userData,
-        @OutputCustomType.Parameter("vmId") String vmId,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
+        @CustomType.Parameter("availabilitySet") @Nullable SubResourceResponse availabilitySet,
+        @CustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @CustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("instanceView") VirtualMachineScaleSetVMInstanceViewResponse instanceView,
+        @CustomType.Parameter("latestModelApplied") Boolean latestModelApplied,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("modelDefinitionApplied") String modelDefinitionApplied,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("networkProfileConfiguration") @Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationResponse networkProfileConfiguration,
+        @CustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @CustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @CustomType.Parameter("protectionPolicy") @Nullable VirtualMachineScaleSetVMProtectionPolicyResponse protectionPolicy,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resources") List<VirtualMachineExtensionResponse> resources,
+        @CustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userData") @Nullable String userData,
+        @CustomType.Parameter("vmId") String vmId,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilitySet = availabilitySet;
         this.diagnosticsProfile = diagnosticsProfile;

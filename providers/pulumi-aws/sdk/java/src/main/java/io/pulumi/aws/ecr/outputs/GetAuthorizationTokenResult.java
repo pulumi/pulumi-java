@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizationTokenResult {
     /**
      * Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
@@ -43,15 +43,15 @@ public final class GetAuthorizationTokenResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizationTokenResult(
-        @OutputCustomType.Parameter("authorizationToken") String authorizationToken,
-        @OutputCustomType.Parameter("expiresAt") String expiresAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("proxyEndpoint") String proxyEndpoint,
-        @OutputCustomType.Parameter("registryId") @Nullable String registryId,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("authorizationToken") String authorizationToken,
+        @CustomType.Parameter("expiresAt") String expiresAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("proxyEndpoint") String proxyEndpoint,
+        @CustomType.Parameter("registryId") @Nullable String registryId,
+        @CustomType.Parameter("userName") String userName) {
         this.authorizationToken = authorizationToken;
         this.expiresAt = expiresAt;
         this.id = id;

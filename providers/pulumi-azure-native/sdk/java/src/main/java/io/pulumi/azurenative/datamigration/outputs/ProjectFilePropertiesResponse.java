@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectFilePropertiesResponse {
     /**
      * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
@@ -38,13 +38,13 @@ public final class ProjectFilePropertiesResponse {
      */
     private final Double size;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectFilePropertiesResponse(
-        @OutputCustomType.Parameter("extension") @Nullable String extension,
-        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
-        @OutputCustomType.Parameter("size") Double size) {
+        @CustomType.Parameter("extension") @Nullable String extension,
+        @CustomType.Parameter("filePath") @Nullable String filePath,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("mediaType") @Nullable String mediaType,
+        @CustomType.Parameter("size") Double size) {
         this.extension = extension;
         this.filePath = filePath;
         this.lastModified = lastModified;

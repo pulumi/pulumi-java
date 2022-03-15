@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.DaprComponentResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * Dapr application identifier
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable String appId;
 
     public Optional<String> getAppId() {
@@ -37,7 +37,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * Port on which the Dapr side car
      * 
      */
-    @InputImport(name="appPort")
+    @Import(name="appPort")
       private final @Nullable Integer appPort;
 
     public Optional<Integer> getAppPort() {
@@ -48,7 +48,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * Collection of Dapr components
      * 
      */
-    @InputImport(name="components")
+    @Import(name="components")
       private final @Nullable List<DaprComponentResponse> components;
 
     public List<DaprComponentResponse> getComponents() {
@@ -59,7 +59,7 @@ public final class DaprResponse extends io.pulumi.resources.InvokeArgs {
      * Boolean indicating if the Dapr side car is enabled
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

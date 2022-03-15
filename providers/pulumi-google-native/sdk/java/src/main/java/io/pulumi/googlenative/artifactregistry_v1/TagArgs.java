@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.artifactregistry_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TagArgs Empty = new TagArgs();
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -25,35 +25,35 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="packageId", required=true)
+    @Import(name="packageId", required=true)
       private final Output<String> packageId;
 
     public Output<String> getPackageId() {
         return this.packageId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="repositoryId", required=true)
+    @Import(name="repositoryId", required=true)
       private final Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
         return this.repositoryId;
     }
 
-    @InputImport(name="tagId")
+    @Import(name="tagId")
       private final @Nullable Output<String> tagId;
 
     public Output<String> getTagId() {
@@ -64,7 +64,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the version the tag refers to, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID parts contain slashes, the slashes are escaped.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.InstanceDisk;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceHardware {
     /**
      * CPU count of the Instance.
@@ -29,11 +29,11 @@ public final class InstanceHardware {
      */
     private final @Nullable Integer ramSizeInGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceHardware(
-        @OutputCustomType.Parameter("cpuCount") @Nullable Integer cpuCount,
-        @OutputCustomType.Parameter("disks") @Nullable List<InstanceDisk> disks,
-        @OutputCustomType.Parameter("ramSizeInGb") @Nullable Integer ramSizeInGb) {
+        @CustomType.Parameter("cpuCount") @Nullable Integer cpuCount,
+        @CustomType.Parameter("disks") @Nullable List<InstanceDisk> disks,
+        @CustomType.Parameter("ramSizeInGb") @Nullable Integer ramSizeInGb) {
         this.cpuCount = cpuCount;
         this.disks = disks;
         this.ramSizeInGb = ramSizeInGb;

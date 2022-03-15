@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -36,7 +36,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * List of paths using which data within the container can be partitioned
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable List<String> paths;
 
     public List<String> getPaths() {
@@ -47,7 +47,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * Indicates if the container is using a system generated partition key
      * 
      */
-    @InputImport(name="systemKey", required=true)
+    @Import(name="systemKey", required=true)
       private final Boolean systemKey;
 
     public Boolean getSystemKey() {
@@ -58,7 +58,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * Indicates the version of the partition key definition
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Integer version;
 
     public Optional<Integer> getVersion() {

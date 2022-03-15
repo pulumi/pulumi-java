@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.workflowexecutions_v1.inputs.PositionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
      * The source position information of the stack trace element.
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final PositionResponse position;
 
     public PositionResponse getPosition() {
@@ -32,7 +32,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
      * The routine where the error occurred.
      * 
      */
-    @InputImport(name="routine", required=true)
+    @Import(name="routine", required=true)
       private final String routine;
 
     public String getRoutine() {
@@ -43,7 +43,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
      * The step the error occurred at.
      * 
      */
-    @InputImport(name="step", required=true)
+    @Import(name="step", required=true)
       private final String step;
 
     public String getStep() {

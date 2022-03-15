@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobLoadDestinationEncryptionConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobLoadDestinationTableGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobLoadTimePartitioningGetArgs;
@@ -26,7 +26,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
      * 
      */
-    @InputImport(name="allowJaggedRows")
+    @Import(name="allowJaggedRows")
       private final @Nullable Output<Boolean> allowJaggedRows;
 
     public Output<Boolean> getAllowJaggedRows() {
@@ -38,7 +38,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is false.
      * 
      */
-    @InputImport(name="allowQuotedNewlines")
+    @Import(name="allowQuotedNewlines")
       private final @Nullable Output<Boolean> allowQuotedNewlines;
 
     public Output<Boolean> getAllowQuotedNewlines() {
@@ -49,7 +49,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if we should automatically infer the options and schema for CSV and JSON sources.
      * 
      */
-    @InputImport(name="autodetect")
+    @Import(name="autodetect")
       private final @Nullable Output<Boolean> autodetect;
 
     public Output<Boolean> getAutodetect() {
@@ -65,7 +65,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
      * 
      */
-    @InputImport(name="createDisposition")
+    @Import(name="createDisposition")
       private final @Nullable Output<String> createDisposition;
 
     public Output<String> getCreateDisposition() {
@@ -77,7 +77,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destinationEncryptionConfiguration")
+    @Import(name="destinationEncryptionConfiguration")
       private final @Nullable Output<JobLoadDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
     public Output<JobLoadDestinationEncryptionConfigurationGetArgs> getDestinationEncryptionConfiguration() {
@@ -89,7 +89,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destinationTable", required=true)
+    @Import(name="destinationTable", required=true)
       private final Output<JobLoadDestinationTableGetArgs> destinationTable;
 
     public Output<JobLoadDestinationTableGetArgs> getDestinationTable() {
@@ -102,7 +102,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * has been split using the values of the quote and fieldDelimiter properties.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -114,7 +114,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Default is ','
      * 
      */
-    @InputImport(name="fieldDelimiter")
+    @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
     public Output<String> getFieldDelimiter() {
@@ -130,7 +130,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * JSON: Named values that don't match any column names
      * 
      */
-    @InputImport(name="ignoreUnknownValues")
+    @Import(name="ignoreUnknownValues")
       private final @Nullable Output<Boolean> ignoreUnknownValues;
 
     public Output<Boolean> getIgnoreUnknownValues() {
@@ -142,7 +142,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
      * 
      */
-    @InputImport(name="maxBadRecords")
+    @Import(name="maxBadRecords")
       private final @Nullable Output<Integer> maxBadRecords;
 
     public Output<Integer> getMaxBadRecords() {
@@ -156,7 +156,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * an empty value.
      * 
      */
-    @InputImport(name="nullMarker")
+    @Import(name="nullMarker")
       private final @Nullable Output<String> nullMarker;
 
     public Output<String> getNullMarker() {
@@ -169,7 +169,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
      * 
      */
-    @InputImport(name="projectionFields")
+    @Import(name="projectionFields")
       private final @Nullable Output<List<String>> projectionFields;
 
     public Output<List<String>> getProjectionFields() {
@@ -183,7 +183,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
      * 
      */
-    @InputImport(name="quote")
+    @Import(name="quote")
       private final @Nullable Output<String> quote;
 
     public Output<String> getQuote() {
@@ -199,7 +199,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
      */
-    @InputImport(name="schemaUpdateOptions")
+    @Import(name="schemaUpdateOptions")
       private final @Nullable Output<List<String>> schemaUpdateOptions;
 
     public Output<List<String>> getSchemaUpdateOptions() {
@@ -217,7 +217,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
      * 
      */
-    @InputImport(name="skipLeadingRows")
+    @Import(name="skipLeadingRows")
       private final @Nullable Output<Integer> skipLeadingRows;
 
     public Output<Integer> getSkipLeadingRows() {
@@ -231,7 +231,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is CSV.
      * 
      */
-    @InputImport(name="sourceFormat")
+    @Import(name="sourceFormat")
       private final @Nullable Output<String> sourceFormat;
 
     public Output<String> getSourceFormat() {
@@ -247,7 +247,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
      * 
      */
-    @InputImport(name="sourceUris", required=true)
+    @Import(name="sourceUris", required=true)
       private final Output<List<String>> sourceUris;
 
     public Output<List<String>> getSourceUris() {
@@ -259,7 +259,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timePartitioning")
+    @Import(name="timePartitioning")
       private final @Nullable Output<JobLoadTimePartitioningGetArgs> timePartitioning;
 
     public Output<JobLoadTimePartitioningGetArgs> getTimePartitioning() {
@@ -277,7 +277,7 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
      * 
      */
-    @InputImport(name="writeDisposition")
+    @Import(name="writeDisposition")
       private final @Nullable Output<String> writeDisposition;
 
     public Output<String> getWriteDisposition() {

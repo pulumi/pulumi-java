@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * The value that is selected when tuning your transform for a balance between accuracy and cost.
      * 
      */
-    @InputImport(name="accuracyCostTradeOff")
+    @Import(name="accuracyCostTradeOff")
       private final @Nullable Output<Double> accuracyCostTradeOff;
 
     public Output<Double> getAccuracyCostTradeOff() {
@@ -31,7 +31,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * The value to switch on or off to force the output to match the provided labels from users.
      * 
      */
-    @InputImport(name="enforceProvidedLabels")
+    @Import(name="enforceProvidedLabels")
       private final @Nullable Output<Boolean> enforceProvidedLabels;
 
     public Output<Boolean> getEnforceProvidedLabels() {
@@ -42,7 +42,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * The value selected when tuning your transform for a balance between precision and recall.
      * 
      */
-    @InputImport(name="precisionRecallTradeOff")
+    @Import(name="precisionRecallTradeOff")
       private final @Nullable Output<Double> precisionRecallTradeOff;
 
     public Output<Double> getPrecisionRecallTradeOff() {
@@ -53,7 +53,7 @@ public final class MLTransformParametersFindMatchesParametersArgs extends io.pul
      * The name of a column that uniquely identifies rows in the source table.
      * 
      */
-    @InputImport(name="primaryKeyColumnName")
+    @Import(name="primaryKeyColumnName")
       private final @Nullable Output<String> primaryKeyColumnName;
 
     public Output<String> getPrimaryKeyColumnName() {

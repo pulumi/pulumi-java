@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.workflowexecutions_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.workflowexecutions_v1.enums.ExecutionCallLogLevel;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
      * 
      */
-    @InputImport(name="argument")
+    @Import(name="argument")
       private final @Nullable Output<String> argument;
 
     public Output<String> getArgument() {
@@ -30,28 +30,28 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * The call logging level associated to this execution.
      * 
      */
-    @InputImport(name="callLogLevel")
+    @Import(name="callLogLevel")
       private final @Nullable Output<ExecutionCallLogLevel> callLogLevel;
 
     public Output<ExecutionCallLogLevel> getCallLogLevel() {
         return this.callLogLevel == null ? Output.empty() : this.callLogLevel;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="workflowId", required=true)
+    @Import(name="workflowId", required=true)
       private final Output<String> workflowId;
 
     public Output<String> getWorkflowId() {

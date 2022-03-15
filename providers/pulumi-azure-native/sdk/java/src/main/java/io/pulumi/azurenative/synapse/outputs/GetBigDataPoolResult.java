@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.outputs.AutoScalePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.DynamicExecutorAllocationResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryInfoResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryRequirementsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBigDataPoolResult {
     /**
      * Auto-pausing properties
@@ -136,31 +136,31 @@ public final class GetBigDataPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBigDataPoolResult(
-        @OutputCustomType.Parameter("autoPause") @Nullable AutoPausePropertiesResponse autoPause,
-        @OutputCustomType.Parameter("autoScale") @Nullable AutoScalePropertiesResponse autoScale,
-        @OutputCustomType.Parameter("cacheSize") @Nullable Integer cacheSize,
-        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
-        @OutputCustomType.Parameter("customLibraries") @Nullable List<LibraryInfoResponse> customLibraries,
-        @OutputCustomType.Parameter("defaultSparkLogFolder") @Nullable String defaultSparkLogFolder,
-        @OutputCustomType.Parameter("dynamicExecutorAllocation") @Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isComputeIsolationEnabled") @Nullable Boolean isComputeIsolationEnabled,
-        @OutputCustomType.Parameter("lastSucceededTimestamp") String lastSucceededTimestamp,
-        @OutputCustomType.Parameter("libraryRequirements") @Nullable LibraryRequirementsResponse libraryRequirements,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
-        @OutputCustomType.Parameter("nodeSize") @Nullable String nodeSize,
-        @OutputCustomType.Parameter("nodeSizeFamily") @Nullable String nodeSizeFamily,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("sessionLevelPackagesEnabled") @Nullable Boolean sessionLevelPackagesEnabled,
-        @OutputCustomType.Parameter("sparkConfigProperties") @Nullable LibraryRequirementsResponse sparkConfigProperties,
-        @OutputCustomType.Parameter("sparkEventsFolder") @Nullable String sparkEventsFolder,
-        @OutputCustomType.Parameter("sparkVersion") @Nullable String sparkVersion,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoPause") @Nullable AutoPausePropertiesResponse autoPause,
+        @CustomType.Parameter("autoScale") @Nullable AutoScalePropertiesResponse autoScale,
+        @CustomType.Parameter("cacheSize") @Nullable Integer cacheSize,
+        @CustomType.Parameter("creationDate") @Nullable String creationDate,
+        @CustomType.Parameter("customLibraries") @Nullable List<LibraryInfoResponse> customLibraries,
+        @CustomType.Parameter("defaultSparkLogFolder") @Nullable String defaultSparkLogFolder,
+        @CustomType.Parameter("dynamicExecutorAllocation") @Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isComputeIsolationEnabled") @Nullable Boolean isComputeIsolationEnabled,
+        @CustomType.Parameter("lastSucceededTimestamp") String lastSucceededTimestamp,
+        @CustomType.Parameter("libraryRequirements") @Nullable LibraryRequirementsResponse libraryRequirements,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @CustomType.Parameter("nodeSize") @Nullable String nodeSize,
+        @CustomType.Parameter("nodeSizeFamily") @Nullable String nodeSizeFamily,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("sessionLevelPackagesEnabled") @Nullable Boolean sessionLevelPackagesEnabled,
+        @CustomType.Parameter("sparkConfigProperties") @Nullable LibraryRequirementsResponse sparkConfigProperties,
+        @CustomType.Parameter("sparkEventsFolder") @Nullable String sparkEventsFolder,
+        @CustomType.Parameter("sparkVersion") @Nullable String sparkVersion,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.autoPause = autoPause;
         this.autoScale = autoScale;
         this.cacheSize = cacheSize;

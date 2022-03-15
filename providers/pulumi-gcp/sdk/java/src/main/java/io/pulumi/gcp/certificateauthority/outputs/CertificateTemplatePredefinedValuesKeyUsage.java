@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValuesKeyUsage {
     /**
      * Describes high-level ways in which a key may be used.
@@ -30,11 +30,11 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
      */
     private final @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePredefinedValuesKeyUsage(
-        @OutputCustomType.Parameter("baseKeyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage baseKeyUsage,
-        @OutputCustomType.Parameter("extendedKeyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
-        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @CustomType.Parameter("baseKeyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage baseKeyUsage,
+        @CustomType.Parameter("extendedKeyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
+        @CustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

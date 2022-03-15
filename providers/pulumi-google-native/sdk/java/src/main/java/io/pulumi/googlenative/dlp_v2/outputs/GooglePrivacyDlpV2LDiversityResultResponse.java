@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LDiversityHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LDiversityResultResponse {
     /**
      * Histogram of l-diversity equivalence class sensitive value frequencies.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
      */
     private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2LDiversityResultResponse(@OutputCustomType.Parameter("sensitiveValueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2LDiversityResultResponse(@CustomType.Parameter("sensitiveValueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
         this.sensitiveValueFrequencyHistogramBuckets = sensitiveValueFrequencyHistogramBuckets;
     }
 

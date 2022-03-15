@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.OrganizationSecurityPolicyRuleMatchConfig;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationSecurityPolicyRuleMatch {
     /**
      * The configuration options for matching the rule.
@@ -32,11 +32,11 @@ public final class OrganizationSecurityPolicyRuleMatch {
      */
     private final @Nullable String versionedExpr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationSecurityPolicyRuleMatch(
-        @OutputCustomType.Parameter("config") OrganizationSecurityPolicyRuleMatchConfig config,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("versionedExpr") @Nullable String versionedExpr) {
+        @CustomType.Parameter("config") OrganizationSecurityPolicyRuleMatchConfig config,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("versionedExpr") @Nullable String versionedExpr) {
         this.config = config;
         this.description = description;
         this.versionedExpr = versionedExpr;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
     /**
      * When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
@@ -37,12 +37,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
      */
     private final PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigTimespanConfig(
-        @OutputCustomType.Parameter("enableAutoPopulationOfTimespanConfig") @Nullable Boolean enableAutoPopulationOfTimespanConfig,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("timestampField") PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
+        @CustomType.Parameter("enableAutoPopulationOfTimespanConfig") @Nullable Boolean enableAutoPopulationOfTimespanConfig,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("timestampField") PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;

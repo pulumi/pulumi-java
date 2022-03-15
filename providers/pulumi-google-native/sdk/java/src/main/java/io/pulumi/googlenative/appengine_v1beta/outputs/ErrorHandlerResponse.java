@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorHandlerResponse {
     /**
      * Error condition this handler applies to.
@@ -25,11 +25,11 @@ public final class ErrorHandlerResponse {
      */
     private final String staticFile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorHandlerResponse(
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("mimeType") String mimeType,
-        @OutputCustomType.Parameter("staticFile") String staticFile) {
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("mimeType") String mimeType,
+        @CustomType.Parameter("staticFile") String staticFile) {
         this.errorCode = errorCode;
         this.mimeType = mimeType;
         this.staticFile = staticFile;

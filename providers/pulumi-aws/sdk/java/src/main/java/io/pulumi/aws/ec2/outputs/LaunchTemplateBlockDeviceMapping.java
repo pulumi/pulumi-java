@@ -4,13 +4,13 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.LaunchTemplateBlockDeviceMappingEbs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateBlockDeviceMapping {
     /**
      * The name of the device to mount.
@@ -35,12 +35,12 @@ public final class LaunchTemplateBlockDeviceMapping {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateBlockDeviceMapping(
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("ebs") @Nullable LaunchTemplateBlockDeviceMappingEbs ebs,
-        @OutputCustomType.Parameter("noDevice") @Nullable String noDevice,
-        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("ebs") @Nullable LaunchTemplateBlockDeviceMappingEbs ebs,
+        @CustomType.Parameter("noDevice") @Nullable String noDevice,
+        @CustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

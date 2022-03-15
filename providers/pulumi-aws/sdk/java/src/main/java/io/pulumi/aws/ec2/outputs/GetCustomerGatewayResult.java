@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetCustomerGatewayFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomerGatewayResult {
     /**
      * The ARN of the customer gateway.
@@ -52,17 +52,17 @@ public final class GetCustomerGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomerGatewayResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("bgpAsn") Integer bgpAsn,
-        @OutputCustomType.Parameter("certificateArn") String certificateArn,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetCustomerGatewayFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("bgpAsn") Integer bgpAsn,
+        @CustomType.Parameter("certificateArn") String certificateArn,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("filters") @Nullable List<GetCustomerGatewayFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.arn = arn;
         this.bgpAsn = bgpAsn;
         this.certificateArn = certificateArn;

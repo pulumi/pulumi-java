@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the secret.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.
      * 
      */
-    @InputImport(name="secretBinary")
+    @Import(name="secretBinary")
       private final @Nullable Output<String> secretBinary;
 
     public Output<String> getSecretBinary() {
@@ -41,7 +41,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
      * 
      */
-    @InputImport(name="secretId")
+    @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
     public Output<String> getSecretId() {
@@ -52,7 +52,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.
      * 
      */
-    @InputImport(name="secretString")
+    @Import(name="secretString")
       private final @Nullable Output<String> secretString;
 
     public Output<String> getSecretString() {
@@ -63,7 +63,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the version of the secret.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {
@@ -74,7 +74,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that's already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label `AWSCURRENT` to this new version on creation.
      * 
      */
-    @InputImport(name="versionStages")
+    @Import(name="versionStages")
       private final @Nullable Output<List<String>> versionStages;
 
     public Output<List<String>> getVersionStages() {

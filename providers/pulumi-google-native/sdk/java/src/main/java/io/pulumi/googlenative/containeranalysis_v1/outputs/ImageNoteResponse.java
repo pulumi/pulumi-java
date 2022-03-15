@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.FingerprintResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageNoteResponse {
     /**
      * Immutable. The fingerprint of the base image.
@@ -21,10 +21,10 @@ public final class ImageNoteResponse {
      */
     private final String resourceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageNoteResponse(
-        @OutputCustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
-        @OutputCustomType.Parameter("resourceUrl") String resourceUrl) {
+        @CustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
+        @CustomType.Parameter("resourceUrl") String resourceUrl) {
         this.fingerprint = fingerprint;
         this.resourceUrl = resourceUrl;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -28,7 +28,7 @@ public final class VideoStreamingResponse extends io.pulumi.resources.InvokeArgs
      * Moreover, an ongoing video recording can be played in "live mode" with latencies which are approximately double of the chosen video segment length.
      * 
      */
-    @InputImport(name="archiveBaseUrl")
+    @Import(name="archiveBaseUrl")
       private final @Nullable String archiveBaseUrl;
 
     public Optional<String> getArchiveBaseUrl() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IssuanceModesResponse {
     /**
      * When true, allows callers to create Certificates by specifying a CertificateConfig.
@@ -20,10 +20,10 @@ public final class IssuanceModesResponse {
      */
     private final Boolean allowCsrBasedIssuance;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IssuanceModesResponse(
-        @OutputCustomType.Parameter("allowConfigBasedIssuance") Boolean allowConfigBasedIssuance,
-        @OutputCustomType.Parameter("allowCsrBasedIssuance") Boolean allowCsrBasedIssuance) {
+        @CustomType.Parameter("allowConfigBasedIssuance") Boolean allowConfigBasedIssuance,
+        @CustomType.Parameter("allowCsrBasedIssuance") Boolean allowCsrBasedIssuance) {
         this.allowConfigBasedIssuance = allowConfigBasedIssuance;
         this.allowCsrBasedIssuance = allowCsrBasedIssuance;
     }

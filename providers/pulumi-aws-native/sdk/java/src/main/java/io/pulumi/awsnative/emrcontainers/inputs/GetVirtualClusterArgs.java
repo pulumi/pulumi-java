@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.emrcontainers.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualClusterArgs extends io.pulumi.resources.InvokeArgs 
      * Id of the virtual cluster.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

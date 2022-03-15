@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.outputs.AssignmentPrincipalRespons
 import io.pulumi.azurenative.customerinsights.outputs.ResourceSetDescriptionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The name of the metadata object.
      * 
      */
-    @OutputExport(name="assignmentName", type=String.class, parameters={})
+    @Export(name="assignmentName", type=String.class, parameters={})
     private Output<String> assignmentName;
 
     /**
@@ -51,7 +51,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Widget types set for the assignment.
      * 
      */
-    @OutputExport(name="conflationPolicies", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="conflationPolicies", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> conflationPolicies;
 
     /**
@@ -65,7 +65,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Connectors set for the assignment.
      * 
      */
-    @OutputExport(name="connectors", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="connectors", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> connectors;
 
     /**
@@ -79,7 +79,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Localized description for the metadata.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -93,7 +93,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Localized display names for the metadata.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -107,7 +107,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Interactions set for the assignment.
      * 
      */
-    @OutputExport(name="interactions", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="interactions", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> interactions;
 
     /**
@@ -121,7 +121,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Kpis set for the assignment.
      * 
      */
-    @OutputExport(name="kpis", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="kpis", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> kpis;
 
     /**
@@ -135,7 +135,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Links set for the assignment.
      * 
      */
-    @OutputExport(name="links", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="links", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> links;
 
     /**
@@ -149,7 +149,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -163,7 +163,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The principals being assigned to.
      * 
      */
-    @OutputExport(name="principals", type=List.class, parameters={AssignmentPrincipalResponse.class})
+    @Export(name="principals", type=List.class, parameters={AssignmentPrincipalResponse.class})
     private Output<List<AssignmentPrincipalResponse>> principals;
 
     /**
@@ -177,7 +177,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Profiles set for the assignment.
      * 
      */
-    @OutputExport(name="profiles", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="profiles", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> profiles;
 
     /**
@@ -191,7 +191,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -205,7 +205,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The Role assignments set for the relationship links.
      * 
      */
-    @OutputExport(name="relationshipLinks", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="relationshipLinks", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> relationshipLinks;
 
     /**
@@ -219,7 +219,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The Role assignments set for the relationships.
      * 
      */
-    @OutputExport(name="relationships", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="relationships", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> relationships;
 
     /**
@@ -233,7 +233,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Type of roles.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -247,7 +247,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The Role assignments set for the assignment.
      * 
      */
-    @OutputExport(name="roleAssignments", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="roleAssignments", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> roleAssignments;
 
     /**
@@ -261,7 +261,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Sas Policies set for the assignment.
      * 
      */
-    @OutputExport(name="sasPolicies", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="sasPolicies", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> sasPolicies;
 
     /**
@@ -275,7 +275,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The Role assignments set for the assignment.
      * 
      */
-    @OutputExport(name="segments", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="segments", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> segments;
 
     /**
@@ -289,7 +289,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -303,7 +303,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -317,7 +317,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Views set for the assignment.
      * 
      */
-    @OutputExport(name="views", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="views", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> views;
 
     /**
@@ -331,7 +331,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Widget types set for the assignment.
      * 
      */
-    @OutputExport(name="widgetTypes", type=ResourceSetDescriptionResponse.class, parameters={})
+    @Export(name="widgetTypes", type=ResourceSetDescriptionResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetDescriptionResponse> widgetTypes;
 
     /**

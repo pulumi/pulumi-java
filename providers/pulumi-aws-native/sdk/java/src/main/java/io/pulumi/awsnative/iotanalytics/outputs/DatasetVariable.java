@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetContentVersionValue;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetOutputFileUriValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetVariable {
     private final @Nullable DatasetContentVersionValue datasetContentVersionValue;
     private final @Nullable Double doubleValue;
@@ -20,13 +20,13 @@ public final class DatasetVariable {
     private final @Nullable String stringValue;
     private final String variableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetVariable(
-        @OutputCustomType.Parameter("datasetContentVersionValue") @Nullable DatasetContentVersionValue datasetContentVersionValue,
-        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
-        @OutputCustomType.Parameter("outputFileUriValue") @Nullable DatasetOutputFileUriValue outputFileUriValue,
-        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
-        @OutputCustomType.Parameter("variableName") String variableName) {
+        @CustomType.Parameter("datasetContentVersionValue") @Nullable DatasetContentVersionValue datasetContentVersionValue,
+        @CustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @CustomType.Parameter("outputFileUriValue") @Nullable DatasetOutputFileUriValue outputFileUriValue,
+        @CustomType.Parameter("stringValue") @Nullable String stringValue,
+        @CustomType.Parameter("variableName") String variableName) {
         this.datasetContentVersionValue = datasetContentVersionValue;
         this.doubleValue = doubleValue;
         this.outputFileUriValue = outputFileUriValue;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse {
     /**
      * Format: projects//locations//agents//flows//versions/.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
      */
     private final String version;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(@OutputCustomType.Parameter("version") String version) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(@CustomType.Parameter("version") String version) {
         this.version = version;
     }
 

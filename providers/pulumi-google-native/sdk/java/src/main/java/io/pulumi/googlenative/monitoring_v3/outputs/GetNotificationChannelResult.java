@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.MutationRecordResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationChannelResult {
     /**
      * Record of the creation of this channel.
@@ -64,18 +64,18 @@ public final class GetNotificationChannelResult {
      */
     private final String verificationStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationChannelResult(
-        @OutputCustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mutationRecords") List<MutationRecordResponse> mutationRecords,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
-        @OutputCustomType.Parameter("verificationStatus") String verificationStatus) {
+        @CustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mutationRecords") List<MutationRecordResponse> mutationRecords,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @CustomType.Parameter("verificationStatus") String verificationStatus) {
         this.creationRecord = creationRecord;
         this.description = description;
         this.displayName = displayName;

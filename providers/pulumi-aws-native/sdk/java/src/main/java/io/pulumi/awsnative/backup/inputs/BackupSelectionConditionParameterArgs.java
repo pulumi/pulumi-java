@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class BackupSelectionConditionParameterArgs extends io.pulumi.resou
 
     public static final BackupSelectionConditionParameterArgs Empty = new BackupSelectionConditionParameterArgs();
 
-    @InputImport(name="conditionKey")
+    @Import(name="conditionKey")
       private final @Nullable Output<String> conditionKey;
 
     public Output<String> getConditionKey() {
         return this.conditionKey == null ? Output.empty() : this.conditionKey;
     }
 
-    @InputImport(name="conditionValue")
+    @Import(name="conditionValue")
       private final @Nullable Output<String> conditionValue;
 
     public Output<String> getConditionValue() {

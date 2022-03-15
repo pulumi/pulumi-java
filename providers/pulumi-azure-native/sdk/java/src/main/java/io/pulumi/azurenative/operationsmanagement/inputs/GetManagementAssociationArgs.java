@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * User ManagementAssociation Name.
      * 
      */
-    @InputImport(name="managementAssociationName", required=true)
+    @Import(name="managementAssociationName", required=true)
       private final String managementAssociationName;
 
     public String getManagementAssociationName() {
@@ -27,7 +27,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * Provider name for the parent resource.
      * 
      */
-    @InputImport(name="providerName", required=true)
+    @Import(name="providerName", required=true)
       private final String providerName;
 
     public String getProviderName() {
@@ -38,7 +38,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * The name of the resource group to get. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * Parent resource name.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {
@@ -60,7 +60,7 @@ public final class GetManagementAssociationArgs extends io.pulumi.resources.Invo
      * Resource type for the parent resource
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {

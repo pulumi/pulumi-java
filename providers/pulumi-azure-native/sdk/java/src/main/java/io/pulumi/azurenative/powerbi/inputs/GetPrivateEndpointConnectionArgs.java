@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbi.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the Azure resource.
      * 
      */
-    @InputImport(name="azureResourceName", required=true)
+    @Import(name="azureResourceName", required=true)
       private final String azureResourceName;
 
     public String getAzureResourceName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointName", required=true)
+    @Import(name="privateEndpointName", required=true)
       private final String privateEndpointName;
 
     public String getPrivateEndpointName() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

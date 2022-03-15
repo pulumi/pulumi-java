@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.genomics_v1alpha2.enums.DiskType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * Required at create time and cannot be overridden at run time. Specifies the path in the docker container where files on this disk should be located. For example, if `mountPoint` is `/mnt/disk`, and the parameter has `localPath` `inputs/file.txt`, the docker container can access the data at `/mnt/disk/inputs/file.txt`.
      * 
      */
-    @InputImport(name="mountPoint")
+    @Import(name="mountPoint")
       private final @Nullable Output<String> mountPoint;
 
     public Output<String> getMountPoint() {
@@ -36,7 +36,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the disk that can be used in the pipeline parameters. Must be 1 - 63 characters. The name "boot" is reserved for system use.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how a sourced-base persistent disk will be mounted. See https://cloud.google.com/compute/docs/disks/persistent-disks#use_multi_instances for more details. Can only be set at create time.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -58,7 +58,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the disk. Defaults to 500 (GB). This field is not applicable for local SSD.
      * 
      */
-    @InputImport(name="sizeGb")
+    @Import(name="sizeGb")
       private final @Nullable Output<Integer> sizeGb;
 
     public Output<Integer> getSizeGb() {
@@ -69,7 +69,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The full or partial URL of the persistent disk to attach. See https://cloud.google.com/compute/docs/reference/latest/instances#resource and https://cloud.google.com/compute/docs/disks/persistent-disks#snapshots for more details.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -80,7 +80,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the disk to create.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<DiskType> type;
 
     public Output<DiskType> getType() {

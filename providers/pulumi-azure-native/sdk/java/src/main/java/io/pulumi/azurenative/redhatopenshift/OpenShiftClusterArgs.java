@@ -12,7 +12,7 @@ import io.pulumi.azurenative.redhatopenshift.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.ServicePrincipalProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.WorkerProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster API server profile.
      * 
      */
-    @InputImport(name="apiserverProfile")
+    @Import(name="apiserverProfile")
       private final @Nullable Output<APIServerProfileArgs> apiserverProfile;
 
     public Output<APIServerProfileArgs> getApiserverProfile() {
@@ -39,7 +39,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster profile.
      * 
      */
-    @InputImport(name="clusterProfile")
+    @Import(name="clusterProfile")
       private final @Nullable Output<ClusterProfileArgs> clusterProfile;
 
     public Output<ClusterProfileArgs> getClusterProfile() {
@@ -50,7 +50,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The console profile.
      * 
      */
-    @InputImport(name="consoleProfile")
+    @Import(name="consoleProfile")
       private final @Nullable Output<ConsoleProfileArgs> consoleProfile;
 
     public Output<ConsoleProfileArgs> getConsoleProfile() {
@@ -61,7 +61,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster ingress profiles.
      * 
      */
-    @InputImport(name="ingressProfiles")
+    @Import(name="ingressProfiles")
       private final @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
 
     public Output<List<IngressProfileArgs>> getIngressProfiles() {
@@ -72,7 +72,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -83,7 +83,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster master profile.
      * 
      */
-    @InputImport(name="masterProfile")
+    @Import(name="masterProfile")
       private final @Nullable Output<MasterProfileArgs> masterProfile;
 
     public Output<MasterProfileArgs> getMasterProfile() {
@@ -94,7 +94,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster network profile.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
@@ -105,7 +105,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster provisioning state (immutable).
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -116,7 +116,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -127,7 +127,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The name of the OpenShift cluster resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -138,7 +138,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster service principal profile.
      * 
      */
-    @InputImport(name="servicePrincipalProfile")
+    @Import(name="servicePrincipalProfile")
       private final @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
 
     public Output<ServicePrincipalProfileArgs> getServicePrincipalProfile() {
@@ -149,7 +149,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -160,7 +160,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * The cluster worker profiles.
      * 
      */
-    @InputImport(name="workerProfiles")
+    @Import(name="workerProfiles")
       private final @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
 
     public Output<List<WorkerProfileArgs>> getWorkerProfiles() {

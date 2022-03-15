@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerPort;
 import io.pulumi.kubernetes.core_v1.outputs.EnvFromSource;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVar;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EphemeralContainer {
     /**
      * Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. "$$(VAR_NAME)" will produce the string literal "$(VAR_NAME)". Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
@@ -149,31 +149,31 @@ public final class EphemeralContainer {
      */
     private final @Nullable String workingDir;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EphemeralContainer(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("env") @Nullable List<EnvVar> env,
-        @OutputCustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("imagePullPolicy") @Nullable String imagePullPolicy,
-        @OutputCustomType.Parameter("lifecycle") @Nullable Lifecycle lifecycle,
-        @OutputCustomType.Parameter("livenessProbe") @Nullable Probe livenessProbe,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPort> ports,
-        @OutputCustomType.Parameter("readinessProbe") @Nullable Probe readinessProbe,
-        @OutputCustomType.Parameter("resources") @Nullable ResourceRequirements resources,
-        @OutputCustomType.Parameter("securityContext") @Nullable SecurityContext securityContext,
-        @OutputCustomType.Parameter("startupProbe") @Nullable Probe startupProbe,
-        @OutputCustomType.Parameter("stdin") @Nullable Boolean stdin,
-        @OutputCustomType.Parameter("stdinOnce") @Nullable Boolean stdinOnce,
-        @OutputCustomType.Parameter("targetContainerName") @Nullable String targetContainerName,
-        @OutputCustomType.Parameter("terminationMessagePath") @Nullable String terminationMessagePath,
-        @OutputCustomType.Parameter("terminationMessagePolicy") @Nullable String terminationMessagePolicy,
-        @OutputCustomType.Parameter("tty") @Nullable Boolean tty,
-        @OutputCustomType.Parameter("volumeDevices") @Nullable List<VolumeDevice> volumeDevices,
-        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
-        @OutputCustomType.Parameter("workingDir") @Nullable String workingDir) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("env") @Nullable List<EnvVar> env,
+        @CustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("imagePullPolicy") @Nullable String imagePullPolicy,
+        @CustomType.Parameter("lifecycle") @Nullable Lifecycle lifecycle,
+        @CustomType.Parameter("livenessProbe") @Nullable Probe livenessProbe,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ports") @Nullable List<ContainerPort> ports,
+        @CustomType.Parameter("readinessProbe") @Nullable Probe readinessProbe,
+        @CustomType.Parameter("resources") @Nullable ResourceRequirements resources,
+        @CustomType.Parameter("securityContext") @Nullable SecurityContext securityContext,
+        @CustomType.Parameter("startupProbe") @Nullable Probe startupProbe,
+        @CustomType.Parameter("stdin") @Nullable Boolean stdin,
+        @CustomType.Parameter("stdinOnce") @Nullable Boolean stdinOnce,
+        @CustomType.Parameter("targetContainerName") @Nullable String targetContainerName,
+        @CustomType.Parameter("terminationMessagePath") @Nullable String terminationMessagePath,
+        @CustomType.Parameter("terminationMessagePolicy") @Nullable String terminationMessagePolicy,
+        @CustomType.Parameter("tty") @Nullable Boolean tty,
+        @CustomType.Parameter("volumeDevices") @Nullable List<VolumeDevice> volumeDevices,
+        @CustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
+        @CustomType.Parameter("workingDir") @Nullable String workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;

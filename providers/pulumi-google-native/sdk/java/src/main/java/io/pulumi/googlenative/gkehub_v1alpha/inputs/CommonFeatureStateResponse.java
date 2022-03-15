@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.FeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ServiceMeshFeatureStateResponse;
@@ -22,7 +22,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * Appdevexperience specific state.
      * 
      */
-    @InputImport(name="appdevexperience", required=true)
+    @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureStateResponse appdevexperience;
 
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
@@ -33,7 +33,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * Service Mesh-specific state.
      * 
      */
-    @InputImport(name="servicemesh", required=true)
+    @Import(name="servicemesh", required=true)
       private final ServiceMeshFeatureStateResponse servicemesh;
 
     public ServiceMeshFeatureStateResponse getServicemesh() {
@@ -44,7 +44,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * The "running state" of the Feature in this Hub.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final FeatureStateResponse state;
 
     public FeatureStateResponse getState() {

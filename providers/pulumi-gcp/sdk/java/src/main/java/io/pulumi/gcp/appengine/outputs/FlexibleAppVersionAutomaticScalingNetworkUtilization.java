@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
     /**
      * Target bytes received per second.
@@ -32,12 +32,12 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
      */
     private final @Nullable Integer targetSentPacketsPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionAutomaticScalingNetworkUtilization(
-        @OutputCustomType.Parameter("targetReceivedBytesPerSecond") @Nullable Integer targetReceivedBytesPerSecond,
-        @OutputCustomType.Parameter("targetReceivedPacketsPerSecond") @Nullable Integer targetReceivedPacketsPerSecond,
-        @OutputCustomType.Parameter("targetSentBytesPerSecond") @Nullable Integer targetSentBytesPerSecond,
-        @OutputCustomType.Parameter("targetSentPacketsPerSecond") @Nullable Integer targetSentPacketsPerSecond) {
+        @CustomType.Parameter("targetReceivedBytesPerSecond") @Nullable Integer targetReceivedBytesPerSecond,
+        @CustomType.Parameter("targetReceivedPacketsPerSecond") @Nullable Integer targetReceivedPacketsPerSecond,
+        @CustomType.Parameter("targetSentBytesPerSecond") @Nullable Integer targetSentBytesPerSecond,
+        @CustomType.Parameter("targetSentPacketsPerSecond") @Nullable Integer targetSentPacketsPerSecond) {
         this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
         this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
         this.targetSentBytesPerSecond = targetSentBytesPerSecond;

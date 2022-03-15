@@ -6,7 +6,7 @@ package io.pulumi.aws.efs.inputs;
 import io.pulumi.aws.efs.inputs.AccessPointPosixUserGetArgs;
 import io.pulumi.aws.efs.inputs.AccessPointRootDirectoryGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * ARN of the access point.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * ARN of the file system.
      * 
      */
-    @InputImport(name="fileSystemArn")
+    @Import(name="fileSystemArn")
       private final @Nullable Output<String> fileSystemArn;
 
     public Output<String> getFileSystemArn() {
@@ -43,14 +43,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * ID of the file system for which the access point is intended.
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
         return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
     }
 
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -61,7 +61,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * Operating system user and group applied to all file system requests made using the access point. Detailed below.
      * 
      */
-    @InputImport(name="posixUser")
+    @Import(name="posixUser")
       private final @Nullable Output<AccessPointPosixUserGetArgs> posixUser;
 
     public Output<AccessPointPosixUserGetArgs> getPosixUser() {
@@ -72,7 +72,7 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
      * 
      */
-    @InputImport(name="rootDirectory")
+    @Import(name="rootDirectory")
       private final @Nullable Output<AccessPointRootDirectoryGetArgs> rootDirectory;
 
     public Output<AccessPointRootDirectoryGetArgs> getRootDirectory() {
@@ -83,14 +83,14 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

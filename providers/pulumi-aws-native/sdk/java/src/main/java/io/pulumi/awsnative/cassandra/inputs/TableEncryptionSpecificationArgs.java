@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableEncryptionType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
 
     public static final TableEncryptionSpecificationArgs Empty = new TableEncryptionSpecificationArgs();
 
-    @InputImport(name="encryptionType", required=true)
+    @Import(name="encryptionType", required=true)
       private final Output<TableEncryptionType> encryptionType;
 
     public Output<TableEncryptionType> getEncryptionType() {
         return this.encryptionType;
     }
 
-    @InputImport(name="kmsKeyIdentifier")
+    @Import(name="kmsKeyIdentifier")
       private final @Nullable Output<String> kmsKeyIdentifier;
 
     public Output<String> getKmsKeyIdentifier() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.AuthorizationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
      */
-    @InputImport(name="authorizations", required=true)
+    @Import(name="authorizations", required=true)
       private final List<AuthorizationResponse> authorizations;
 
     public List<AuthorizationResponse> getAuthorizations() {
@@ -35,7 +35,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * Description of the registration definition.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * Id of the managedBy tenant.
      * 
      */
-    @InputImport(name="managedByTenantId", required=true)
+    @Import(name="managedByTenantId", required=true)
       private final String managedByTenantId;
 
     public String getManagedByTenantId() {
@@ -57,7 +57,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * Name of the managedBy tenant.
      * 
      */
-    @InputImport(name="managedByTenantName", required=true)
+    @Import(name="managedByTenantName", required=true)
       private final String managedByTenantName;
 
     public String getManagedByTenantName() {
@@ -68,7 +68,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * Current state of the registration definition.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -79,7 +79,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * Name of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionName")
+    @Import(name="registrationDefinitionName")
       private final @Nullable String registrationDefinitionName;
 
     public Optional<String> getRegistrationDefinitionName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetOrganizationSourceIamPolicyArgs extends io.pulumi.resource
 
     public static final GetOrganizationSourceIamPolicyArgs Empty = new GetOrganizationSourceIamPolicyArgs();
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final String sourceId;
 
     public String getSourceId() {

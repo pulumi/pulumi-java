@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValuesCaOptions {
     /**
      * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
@@ -23,10 +23,10 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
      */
     private final @Nullable Integer maxIssuerPathLength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePredefinedValuesCaOptions(
-        @OutputCustomType.Parameter("isCa") @Nullable Boolean isCa,
-        @OutputCustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength) {
+        @CustomType.Parameter("isCa") @Nullable Boolean isCa,
+        @CustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
     }

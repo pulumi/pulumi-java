@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
      * 
      */
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
@@ -31,7 +31,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * Behavior when a Spot Instance is interrupted. Valid values: `hibernate`, `stop`, `terminate`. Default: `terminate`.
      * 
      */
-    @InputImport(name="instanceInterruptionBehavior")
+    @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
     public Output<String> getInstanceInterruptionBehavior() {
@@ -42,7 +42,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * Number of Spot pools across which to allocate your target Spot capacity. Valid only when Spot `allocation_strategy` is set to `lowestPrice`. Default: `1`.
      * 
      */
-    @InputImport(name="instancePoolsToUseCount")
+    @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
     public Output<Integer> getInstancePoolsToUseCount() {
@@ -53,7 +53,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
      * Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
      */
-    @InputImport(name="maintenanceStrategies")
+    @Import(name="maintenanceStrategies")
       private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
 
     public Output<FleetSpotOptionsMaintenanceStrategiesArgs> getMaintenanceStrategies() {

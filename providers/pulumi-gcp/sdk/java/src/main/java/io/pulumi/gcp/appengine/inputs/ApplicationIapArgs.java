@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApplicationIapArgs extends io.pulumi.resources.ResourceArgs {
      * (default is false)
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -31,7 +31,7 @@ public final class ApplicationIapArgs extends io.pulumi.resources.ResourceArgs {
      * OAuth2 client ID to use for the authentication flow.
      * 
      */
-    @InputImport(name="oauth2ClientId", required=true)
+    @Import(name="oauth2ClientId", required=true)
       private final Output<String> oauth2ClientId;
 
     public Output<String> getOauth2ClientId() {
@@ -43,7 +43,7 @@ public final class ApplicationIapArgs extends io.pulumi.resources.ResourceArgs {
      * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
      * 
      */
-    @InputImport(name="oauth2ClientSecret", required=true)
+    @Import(name="oauth2ClientSecret", required=true)
       private final Output<String> oauth2ClientSecret;
 
     public Output<String> getOauth2ClientSecret() {
@@ -54,7 +54,7 @@ public final class ApplicationIapArgs extends io.pulumi.resources.ResourceArgs {
      * Hex-encoded SHA-256 hash of the client secret.
      * 
      */
-    @InputImport(name="oauth2ClientSecretSha256")
+    @Import(name="oauth2ClientSecretSha256")
       private final @Nullable Output<String> oauth2ClientSecretSha256;
 
     public Output<String> getOauth2ClientSecretSha256() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ServiceProviderPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ServiceProviderResponse extends io.pulumi.resources.InvokeArg
      * The Properties of a Service Provider Object
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable ServiceProviderPropertiesResponse properties;
 
     public Optional<ServiceProviderPropertiesResponse> getProperties() {

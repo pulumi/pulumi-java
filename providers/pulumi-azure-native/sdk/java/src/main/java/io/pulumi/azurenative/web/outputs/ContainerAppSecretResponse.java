@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerAppSecretResponse {
     /**
      * Secret Name.
@@ -20,10 +20,10 @@ public final class ContainerAppSecretResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerAppSecretResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

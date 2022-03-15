@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CorsPolicyResponse {
     /**
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
@@ -53,16 +53,16 @@ public final class CorsPolicyResponse {
      */
     private final Integer maxAge;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CorsPolicyResponse(
-        @OutputCustomType.Parameter("allowCredentials") Boolean allowCredentials,
-        @OutputCustomType.Parameter("allowHeaders") List<String> allowHeaders,
-        @OutputCustomType.Parameter("allowMethods") List<String> allowMethods,
-        @OutputCustomType.Parameter("allowOriginRegexes") List<String> allowOriginRegexes,
-        @OutputCustomType.Parameter("allowOrigins") List<String> allowOrigins,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("exposeHeaders") List<String> exposeHeaders,
-        @OutputCustomType.Parameter("maxAge") Integer maxAge) {
+        @CustomType.Parameter("allowCredentials") Boolean allowCredentials,
+        @CustomType.Parameter("allowHeaders") List<String> allowHeaders,
+        @CustomType.Parameter("allowMethods") List<String> allowMethods,
+        @CustomType.Parameter("allowOriginRegexes") List<String> allowOriginRegexes,
+        @CustomType.Parameter("allowOrigins") List<String> allowOrigins,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("exposeHeaders") List<String> exposeHeaders,
+        @CustomType.Parameter("maxAge") Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

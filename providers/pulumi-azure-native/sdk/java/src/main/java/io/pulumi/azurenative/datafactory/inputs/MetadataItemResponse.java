@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata item key name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Object name;
 
     public Optional<Object> getName() {
@@ -33,7 +33,7 @@ public final class MetadataItemResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata item value. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Object value;
 
     public Optional<Object> getValue() {

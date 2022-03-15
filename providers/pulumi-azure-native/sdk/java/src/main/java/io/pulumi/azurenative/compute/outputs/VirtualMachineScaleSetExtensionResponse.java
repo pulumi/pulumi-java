@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetExtensionResponse {
     /**
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
@@ -75,20 +75,20 @@ public final class VirtualMachineScaleSetExtensionResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetExtensionResponse(
-        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
-        @OutputCustomType.Parameter("enableAutomaticUpgrade") @Nullable Boolean enableAutomaticUpgrade,
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
-        @OutputCustomType.Parameter("provisionAfterExtensions") @Nullable List<String> provisionAfterExtensions,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("settings") @Nullable Object settings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
+        @CustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @CustomType.Parameter("enableAutomaticUpgrade") @Nullable Boolean enableAutomaticUpgrade,
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protectedSettings") @Nullable Object protectedSettings,
+        @CustomType.Parameter("provisionAfterExtensions") @Nullable List<String> provisionAfterExtensions,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("settings") @Nullable Object settings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.enableAutomaticUpgrade = enableAutomaticUpgrade;
         this.forceUpdateTag = forceUpdateTag;

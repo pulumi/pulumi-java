@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyRsaTokenKeyResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicySymmetricTokenKeyResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyTokenClaimResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyX509CertificateTokenKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyTokenRestrictionResponse {
     /**
      * A list of alternative verification keys.
@@ -59,16 +59,16 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
      */
     private final String restrictionTokenType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyTokenRestrictionResponse(
-        @OutputCustomType.Parameter("alternateVerificationKeys") @Nullable List<Object> alternateVerificationKeys,
-        @OutputCustomType.Parameter("audience") String audience,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("openIdConnectDiscoveryDocument") @Nullable String openIdConnectDiscoveryDocument,
-        @OutputCustomType.Parameter("primaryVerificationKey") Object primaryVerificationKey,
-        @OutputCustomType.Parameter("requiredClaims") @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
-        @OutputCustomType.Parameter("restrictionTokenType") String restrictionTokenType) {
+        @CustomType.Parameter("alternateVerificationKeys") @Nullable List<Object> alternateVerificationKeys,
+        @CustomType.Parameter("audience") String audience,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("openIdConnectDiscoveryDocument") @Nullable String openIdConnectDiscoveryDocument,
+        @CustomType.Parameter("primaryVerificationKey") Object primaryVerificationKey,
+        @CustomType.Parameter("requiredClaims") @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
+        @CustomType.Parameter("restrictionTokenType") String restrictionTokenType) {
         this.alternateVerificationKeys = alternateVerificationKeys;
         this.audience = audience;
         this.issuer = issuer;

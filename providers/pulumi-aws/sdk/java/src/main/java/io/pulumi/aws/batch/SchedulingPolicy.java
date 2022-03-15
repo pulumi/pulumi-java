@@ -8,7 +8,7 @@ import io.pulumi.aws.batch.SchedulingPolicyArgs;
 import io.pulumi.aws.batch.inputs.SchedulingPolicyState;
 import io.pulumi.aws.batch.outputs.SchedulingPolicyFairSharePolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name of the scheduling policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="fairSharePolicy", type=SchedulingPolicyFairSharePolicy.class, parameters={})
+    @Export(name="fairSharePolicy", type=SchedulingPolicyFairSharePolicy.class, parameters={})
     private Output</* @Nullable */ SchedulingPolicyFairSharePolicy> fairSharePolicy;
 
     public Output</* @Nullable */ SchedulingPolicyFairSharePolicy> getFairSharePolicy() {
@@ -54,7 +54,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * Specifies the name of the scheduling policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -68,7 +68,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -82,7 +82,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

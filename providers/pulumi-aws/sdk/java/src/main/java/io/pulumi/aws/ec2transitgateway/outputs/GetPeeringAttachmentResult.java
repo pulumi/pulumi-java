@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2transitgateway.outputs;
 
 import io.pulumi.aws.ec2transitgateway.outputs.GetPeeringAttachmentFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPeeringAttachmentResult {
     private final @Nullable List<GetPeeringAttachmentFilter> filters;
     private final String id;
@@ -37,15 +37,15 @@ public final class GetPeeringAttachmentResult {
      */
     private final String transitGatewayId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPeeringAttachmentResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetPeeringAttachmentFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("peerAccountId") String peerAccountId,
-        @OutputCustomType.Parameter("peerRegion") String peerRegion,
-        @OutputCustomType.Parameter("peerTransitGatewayId") String peerTransitGatewayId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId) {
+        @CustomType.Parameter("filters") @Nullable List<GetPeeringAttachmentFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("peerAccountId") String peerAccountId,
+        @CustomType.Parameter("peerRegion") String peerRegion,
+        @CustomType.Parameter("peerTransitGatewayId") String peerTransitGatewayId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("transitGatewayId") String transitGatewayId) {
         this.filters = filters;
         this.id = id;
         this.peerAccountId = peerAccountId;

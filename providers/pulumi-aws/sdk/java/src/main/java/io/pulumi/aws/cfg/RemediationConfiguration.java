@@ -9,7 +9,7 @@ import io.pulumi.aws.cfg.inputs.RemediationConfigurationState;
 import io.pulumi.aws.cfg.outputs.RemediationConfigurationExecutionControls;
 import io.pulumi.aws.cfg.outputs.RemediationConfigurationParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * ARN of the Config Remediation Configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Remediation is triggered automatically if `true`.
      * 
      */
-    @OutputExport(name="automatic", type=Boolean.class, parameters={})
+    @Export(name="automatic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> automatic;
 
     /**
@@ -67,7 +67,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Name of the AWS Config rule.
      * 
      */
-    @OutputExport(name="configRuleName", type=String.class, parameters={})
+    @Export(name="configRuleName", type=String.class, parameters={})
     private Output<String> configRuleName;
 
     /**
@@ -81,7 +81,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Configuration block for execution controls. See below.
      * 
      */
-    @OutputExport(name="executionControls", type=RemediationConfigurationExecutionControls.class, parameters={})
+    @Export(name="executionControls", type=RemediationConfigurationExecutionControls.class, parameters={})
     private Output</* @Nullable */ RemediationConfigurationExecutionControls> executionControls;
 
     /**
@@ -95,7 +95,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.
      * 
      */
-    @OutputExport(name="maximumAutomaticAttempts", type=Integer.class, parameters={})
+    @Export(name="maximumAutomaticAttempts", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumAutomaticAttempts;
 
     /**
@@ -109,7 +109,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Can be specified multiple times for each parameter. Each parameter block supports arguments below.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={RemediationConfigurationParameter.class})
+    @Export(name="parameters", type=List.class, parameters={RemediationConfigurationParameter.class})
     private Output</* @Nullable */ List<RemediationConfigurationParameter>> parameters;
 
     /**
@@ -123,7 +123,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Type of resource.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
     /**
@@ -137,7 +137,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Maximum time in seconds that AWS Config runs auto-remediation. If you do not select a number, the default is 60 seconds.
      * 
      */
-    @OutputExport(name="retryAttemptSeconds", type=Integer.class, parameters={})
+    @Export(name="retryAttemptSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retryAttemptSeconds;
 
     /**
@@ -151,7 +151,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Target ID is the name of the public document.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
@@ -165,7 +165,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Type of the target. Target executes remediation. For example, SSM document.
      * 
      */
-    @OutputExport(name="targetType", type=String.class, parameters={})
+    @Export(name="targetType", type=String.class, parameters={})
     private Output<String> targetType;
 
     /**
@@ -179,7 +179,7 @@ public class RemediationConfiguration extends io.pulumi.resources.CustomResource
      * Version of the target. For example, version of the SSM document
      * 
      */
-    @OutputExport(name="targetVersion", type=String.class, parameters={})
+    @Export(name="targetVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetVersion;
 
     /**

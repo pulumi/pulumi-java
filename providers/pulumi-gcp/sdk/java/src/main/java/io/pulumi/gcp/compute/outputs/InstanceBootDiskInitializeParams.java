@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceBootDiskInitializeParams {
     /**
      * The image from which to initialize this disk. This can be
@@ -44,12 +44,12 @@ public final class InstanceBootDiskInitializeParams {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceBootDiskInitializeParams(
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,Object> labels,
-        @OutputCustomType.Parameter("size") @Nullable Integer size,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("labels") @Nullable Map<String,Object> labels,
+        @CustomType.Parameter("size") @Nullable Integer size,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.image = image;
         this.labels = labels;
         this.size = size;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomExprArgs;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AccessLevelsAccessLevelCustomArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="expr", required=true)
+    @Import(name="expr", required=true)
       private final Output<AccessLevelsAccessLevelCustomExprArgs> expr;
 
     public Output<AccessLevelsAccessLevelCustomExprArgs> getExpr() {

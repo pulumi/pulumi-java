@@ -5,14 +5,14 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AppRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FacebookResponse {
     /**
      * <code>false</code> if the Facebook provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -35,12 +35,12 @@ public final class FacebookResponse {
      */
     private final @Nullable AppRegistrationResponse registration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FacebookResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("graphApiVersion") @Nullable String graphApiVersion,
-        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
-        @OutputCustomType.Parameter("registration") @Nullable AppRegistrationResponse registration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("graphApiVersion") @Nullable String graphApiVersion,
+        @CustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @CustomType.Parameter("registration") @Nullable AppRegistrationResponse registration) {
         this.enabled = enabled;
         this.graphApiVersion = graphApiVersion;
         this.login = login;

@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageThrottleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * API Id of the associated API stage in a usage plan.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -31,7 +31,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * API stage name of the associated API stage in a usage plan.
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final Output<String> stage;
 
     public Output<String> getStage() {
@@ -42,7 +42,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * The throttling limits of the usage plan.
      * 
      */
-    @InputImport(name="throttles")
+    @Import(name="throttles")
       private final @Nullable Output<List<UsagePlanApiStageThrottleArgs>> throttles;
 
     public Output<List<UsagePlanApiStageThrottleArgs>> getThrottles() {

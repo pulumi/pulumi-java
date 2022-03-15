@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotPlainTextMessage {
     /**
      * The message to send to the user.
@@ -15,8 +15,8 @@ public final class BotPlainTextMessage {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private BotPlainTextMessage(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private BotPlainTextMessage(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

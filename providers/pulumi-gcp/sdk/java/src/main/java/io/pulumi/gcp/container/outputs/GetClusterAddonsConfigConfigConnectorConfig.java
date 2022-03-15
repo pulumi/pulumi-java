@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterAddonsConfigConfigConnectorConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GetClusterAddonsConfigConfigConnectorConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GetClusterAddonsConfigConfigConnectorConfig(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

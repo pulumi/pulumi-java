@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.Policy;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.Webhook;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuditSinkSpec {
     /**
      * Policy defines the policy for selecting which events should be sent to the webhook required
@@ -21,10 +21,10 @@ public final class AuditSinkSpec {
      */
     private final Webhook webhook;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuditSinkSpec(
-        @OutputCustomType.Parameter("policy") Policy policy,
-        @OutputCustomType.Parameter("webhook") Webhook webhook) {
+        @CustomType.Parameter("policy") Policy policy,
+        @CustomType.Parameter("webhook") Webhook webhook) {
         this.policy = policy;
         this.webhook = webhook;
     }

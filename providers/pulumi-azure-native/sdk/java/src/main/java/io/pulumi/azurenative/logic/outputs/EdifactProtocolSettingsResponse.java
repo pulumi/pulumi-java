@@ -14,12 +14,12 @@ import io.pulumi.azurenative.logic.outputs.EdifactProcessingSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactSchemaReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactValidationOverrideResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactValidationSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactProtocolSettingsResponse {
     /**
      * The EDIFACT acknowledgement settings.
@@ -77,19 +77,19 @@ public final class EdifactProtocolSettingsResponse {
      */
     private final EdifactValidationSettingsResponse validationSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactProtocolSettingsResponse(
-        @OutputCustomType.Parameter("acknowledgementSettings") EdifactAcknowledgementSettingsResponse acknowledgementSettings,
-        @OutputCustomType.Parameter("edifactDelimiterOverrides") @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides,
-        @OutputCustomType.Parameter("envelopeOverrides") @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides,
-        @OutputCustomType.Parameter("envelopeSettings") EdifactEnvelopeSettingsResponse envelopeSettings,
-        @OutputCustomType.Parameter("framingSettings") EdifactFramingSettingsResponse framingSettings,
-        @OutputCustomType.Parameter("messageFilter") EdifactMessageFilterResponse messageFilter,
-        @OutputCustomType.Parameter("messageFilterList") @Nullable List<EdifactMessageIdentifierResponse> messageFilterList,
-        @OutputCustomType.Parameter("processingSettings") EdifactProcessingSettingsResponse processingSettings,
-        @OutputCustomType.Parameter("schemaReferences") List<EdifactSchemaReferenceResponse> schemaReferences,
-        @OutputCustomType.Parameter("validationOverrides") @Nullable List<EdifactValidationOverrideResponse> validationOverrides,
-        @OutputCustomType.Parameter("validationSettings") EdifactValidationSettingsResponse validationSettings) {
+        @CustomType.Parameter("acknowledgementSettings") EdifactAcknowledgementSettingsResponse acknowledgementSettings,
+        @CustomType.Parameter("edifactDelimiterOverrides") @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides,
+        @CustomType.Parameter("envelopeOverrides") @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides,
+        @CustomType.Parameter("envelopeSettings") EdifactEnvelopeSettingsResponse envelopeSettings,
+        @CustomType.Parameter("framingSettings") EdifactFramingSettingsResponse framingSettings,
+        @CustomType.Parameter("messageFilter") EdifactMessageFilterResponse messageFilter,
+        @CustomType.Parameter("messageFilterList") @Nullable List<EdifactMessageIdentifierResponse> messageFilterList,
+        @CustomType.Parameter("processingSettings") EdifactProcessingSettingsResponse processingSettings,
+        @CustomType.Parameter("schemaReferences") List<EdifactSchemaReferenceResponse> schemaReferences,
+        @CustomType.Parameter("validationOverrides") @Nullable List<EdifactValidationOverrideResponse> validationOverrides,
+        @CustomType.Parameter("validationSettings") EdifactValidationSettingsResponse validationSettings) {
         this.acknowledgementSettings = acknowledgementSettings;
         this.edifactDelimiterOverrides = edifactDelimiterOverrides;
         this.envelopeOverrides = envelopeOverrides;

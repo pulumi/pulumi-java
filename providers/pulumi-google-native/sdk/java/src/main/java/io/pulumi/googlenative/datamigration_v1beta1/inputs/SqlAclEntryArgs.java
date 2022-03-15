@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
@@ -33,7 +33,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * A label to identify this entry.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -44,7 +44,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The time-to-leave of this access control entry.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {
@@ -55,7 +55,7 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * The allowlisted value for the access control list.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

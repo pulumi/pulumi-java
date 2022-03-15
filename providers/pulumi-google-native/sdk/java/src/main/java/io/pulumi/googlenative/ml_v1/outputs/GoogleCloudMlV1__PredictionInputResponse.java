@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__PredictionInputResponse {
     /**
      * Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
@@ -71,20 +71,20 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__PredictionInputResponse(
-        @OutputCustomType.Parameter("batchSize") String batchSize,
-        @OutputCustomType.Parameter("dataFormat") String dataFormat,
-        @OutputCustomType.Parameter("inputPaths") List<String> inputPaths,
-        @OutputCustomType.Parameter("maxWorkerCount") String maxWorkerCount,
-        @OutputCustomType.Parameter("modelName") String modelName,
-        @OutputCustomType.Parameter("outputDataFormat") String outputDataFormat,
-        @OutputCustomType.Parameter("outputPath") String outputPath,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
-        @OutputCustomType.Parameter("signatureName") String signatureName,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("versionName") String versionName) {
+        @CustomType.Parameter("batchSize") String batchSize,
+        @CustomType.Parameter("dataFormat") String dataFormat,
+        @CustomType.Parameter("inputPaths") List<String> inputPaths,
+        @CustomType.Parameter("maxWorkerCount") String maxWorkerCount,
+        @CustomType.Parameter("modelName") String modelName,
+        @CustomType.Parameter("outputDataFormat") String outputDataFormat,
+        @CustomType.Parameter("outputPath") String outputPath,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @CustomType.Parameter("signatureName") String signatureName,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("versionName") String versionName) {
         this.batchSize = batchSize;
         this.dataFormat = dataFormat;
         this.inputPaths = inputPaths;

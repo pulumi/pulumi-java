@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
     /**
      * Is arc auto provisioning enabled
@@ -23,10 +23,10 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
      */
     private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefenderForServersAwsOfferingResponseArcAutoProvisioning(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("servicePrincipalSecretMetadata") @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("servicePrincipalSecretMetadata") @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
         this.enabled = enabled;
         this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
     }

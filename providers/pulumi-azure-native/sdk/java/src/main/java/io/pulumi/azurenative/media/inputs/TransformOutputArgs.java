@@ -12,7 +12,7 @@ import io.pulumi.azurenative.media.inputs.StandardEncoderPresetArgs;
 import io.pulumi.azurenative.media.inputs.VideoAnalyzerPresetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
      * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
      * 
      */
-    @InputImport(name="onError")
+    @Import(name="onError")
       private final @Nullable Output<Either<String,OnErrorType>> onError;
 
     public Output<Either<String,OnErrorType>> getOnError() {
@@ -42,7 +42,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
      * Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.
      * 
      */
-    @InputImport(name="preset", required=true)
+    @Import(name="preset", required=true)
       private final Output<Object> preset;
 
     public Output<Object> getPreset() {
@@ -53,7 +53,7 @@ public final class TransformOutputArgs extends io.pulumi.resources.ResourceArgs 
      * Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.
      * 
      */
-    @InputImport(name="relativePriority")
+    @Import(name="relativePriority")
       private final @Nullable Output<Either<String,Priority>> relativePriority;
 
     public Output<Either<String,Priority>> getRelativePriority() {

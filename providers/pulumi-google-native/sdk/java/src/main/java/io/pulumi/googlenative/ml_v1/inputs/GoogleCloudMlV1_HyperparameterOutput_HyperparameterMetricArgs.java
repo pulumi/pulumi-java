@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
      * The objective value at this training step.
      * 
      */
-    @InputImport(name="objectiveValue")
+    @Import(name="objectiveValue")
       private final @Nullable Output<Double> objectiveValue;
 
     public Output<Double> getObjectiveValue() {
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
      * The global training step for this metric.
      * 
      */
-    @InputImport(name="trainingStep")
+    @Import(name="trainingStep")
       private final @Nullable Output<String> trainingStep;
 
     public Output<String> getTrainingStep() {

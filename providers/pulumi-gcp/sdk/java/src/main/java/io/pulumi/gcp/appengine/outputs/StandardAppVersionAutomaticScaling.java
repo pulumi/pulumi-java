@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionAutomaticScalingStandardSchedulerSettings;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionAutomaticScaling {
     /**
      * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
@@ -48,14 +48,14 @@ public final class StandardAppVersionAutomaticScaling {
      */
     private final @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardAppVersionAutomaticScaling(
-        @OutputCustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
-        @OutputCustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
-        @OutputCustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
-        @OutputCustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
-        @OutputCustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
-        @OutputCustomType.Parameter("standardSchedulerSettings") @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings) {
+        @CustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
+        @CustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
+        @CustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
+        @CustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
+        @CustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
+        @CustomType.Parameter("standardSchedulerSettings") @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings) {
         this.maxConcurrentRequests = maxConcurrentRequests;
         this.maxIdleInstances = maxIdleInstances;
         this.maxPendingLatency = maxPendingLatency;

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.DefenderSettingsPropertiesResponseMdeIntegration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDefenderSettingResult {
     /**
      * Size of the device quota. Value is required to be in multiples of 100.
@@ -53,16 +53,16 @@ public final class GetDefenderSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDefenderSettingResult(
-        @OutputCustomType.Parameter("deviceQuota") Integer deviceQuota,
-        @OutputCustomType.Parameter("evaluationEndTime") String evaluationEndTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("mdeIntegration") DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("onboardingKind") String onboardingKind,
-        @OutputCustomType.Parameter("sentinelWorkspaceResourceIds") List<String> sentinelWorkspaceResourceIds,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deviceQuota") Integer deviceQuota,
+        @CustomType.Parameter("evaluationEndTime") String evaluationEndTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("mdeIntegration") DefenderSettingsPropertiesResponseMdeIntegration mdeIntegration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("onboardingKind") String onboardingKind,
+        @CustomType.Parameter("sentinelWorkspaceResourceIds") List<String> sentinelWorkspaceResourceIds,
+        @CustomType.Parameter("type") String type) {
         this.deviceQuota = deviceQuota;
         this.evaluationEndTime = evaluationEndTime;
         this.id = id;

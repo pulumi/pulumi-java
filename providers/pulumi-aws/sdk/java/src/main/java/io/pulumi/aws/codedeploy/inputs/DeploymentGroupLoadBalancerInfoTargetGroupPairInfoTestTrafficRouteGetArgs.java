@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTraffic
      * List of Amazon Resource Names (ARNs) of the load balancer listeners.
      * 
      */
-    @InputImport(name="listenerArns", required=true)
+    @Import(name="listenerArns", required=true)
       private final Output<List<String>> listenerArns;
 
     public Output<List<String>> getListenerArns() {

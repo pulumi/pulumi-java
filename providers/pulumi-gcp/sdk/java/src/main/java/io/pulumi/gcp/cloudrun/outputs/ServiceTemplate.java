@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateMetadata;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpec;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplate {
     /**
      * Metadata associated with this Service, including name, namespace, labels,
@@ -26,10 +26,10 @@ public final class ServiceTemplate {
      */
     private final @Nullable ServiceTemplateSpec spec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplate(
-        @OutputCustomType.Parameter("metadata") @Nullable ServiceTemplateMetadata metadata,
-        @OutputCustomType.Parameter("spec") @Nullable ServiceTemplateSpec spec) {
+        @CustomType.Parameter("metadata") @Nullable ServiceTemplateMetadata metadata,
+        @CustomType.Parameter("spec") @Nullable ServiceTemplateSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

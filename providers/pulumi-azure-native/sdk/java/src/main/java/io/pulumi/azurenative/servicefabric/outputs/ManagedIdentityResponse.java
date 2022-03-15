@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.UserAssignedIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIdentityResponse {
     /**
      * The principal id of the managed identity. This property will only be provided for a system assigned identity.
@@ -35,12 +35,12 @@ public final class ManagedIdentityResponse {
      */
     private final @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable Map<String,UserAssignedIdentityResponse> userAssignedIdentities) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

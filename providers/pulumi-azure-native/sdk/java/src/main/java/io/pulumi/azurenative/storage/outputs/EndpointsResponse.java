@@ -5,13 +5,13 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.StorageAccountInternetEndpointsResponse;
 import io.pulumi.azurenative.storage.outputs.StorageAccountMicrosoftEndpointsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointsResponse {
     /**
      * Gets the blob endpoint.
@@ -54,16 +54,16 @@ public final class EndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointsResponse(
-        @OutputCustomType.Parameter("blob") String blob,
-        @OutputCustomType.Parameter("dfs") String dfs,
-        @OutputCustomType.Parameter("file") String file,
-        @OutputCustomType.Parameter("internetEndpoints") @Nullable StorageAccountInternetEndpointsResponse internetEndpoints,
-        @OutputCustomType.Parameter("microsoftEndpoints") @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints,
-        @OutputCustomType.Parameter("queue") String queue,
-        @OutputCustomType.Parameter("table") String table,
-        @OutputCustomType.Parameter("web") String web) {
+        @CustomType.Parameter("blob") String blob,
+        @CustomType.Parameter("dfs") String dfs,
+        @CustomType.Parameter("file") String file,
+        @CustomType.Parameter("internetEndpoints") @Nullable StorageAccountInternetEndpointsResponse internetEndpoints,
+        @CustomType.Parameter("microsoftEndpoints") @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints,
+        @CustomType.Parameter("queue") String queue,
+        @CustomType.Parameter("table") String table,
+        @CustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;

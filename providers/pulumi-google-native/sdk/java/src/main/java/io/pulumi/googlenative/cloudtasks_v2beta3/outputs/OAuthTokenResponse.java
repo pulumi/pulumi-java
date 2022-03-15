@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OAuthTokenResponse {
     /**
      * OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.
@@ -20,10 +20,10 @@ public final class OAuthTokenResponse {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OAuthTokenResponse(
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.scope = scope;
         this.serviceAccountEmail = serviceAccountEmail;
     }

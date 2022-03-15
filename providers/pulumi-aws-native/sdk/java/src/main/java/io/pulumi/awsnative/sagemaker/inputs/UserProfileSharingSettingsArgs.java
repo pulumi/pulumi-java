@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.UserProfileSharingSettingsNotebookOutputOption;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * Whether to include the notebook cell output when sharing the notebook. The default is Disabled.
      * 
      */
-    @InputImport(name="notebookOutputOption")
+    @Import(name="notebookOutputOption")
       private final @Nullable Output<UserProfileSharingSettingsNotebookOutputOption> notebookOutputOption;
 
     public Output<UserProfileSharingSettingsNotebookOutputOption> getNotebookOutputOption() {
@@ -34,7 +34,7 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * When NotebookOutputOption is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
      * 
      */
-    @InputImport(name="s3KmsKeyId")
+    @Import(name="s3KmsKeyId")
       private final @Nullable Output<String> s3KmsKeyId;
 
     public Output<String> getS3KmsKeyId() {
@@ -45,7 +45,7 @@ public final class UserProfileSharingSettingsArgs extends io.pulumi.resources.Re
      * When NotebookOutputOption is Allowed, the Amazon S3 bucket used to store the shared notebook snapshots.
      * 
      */
-    @InputImport(name="s3OutputPath")
+    @Import(name="s3OutputPath")
       private final @Nullable Output<String> s3OutputPath;
 
     public Output<String> getS3OutputPath() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.StorageLensCloudWatchMetricsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensS3BucketDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class StorageLensDataExportArgs extends io.pulumi.resources.Resourc
 
     public static final StorageLensDataExportArgs Empty = new StorageLensDataExportArgs();
 
-    @InputImport(name="cloudWatchMetrics")
+    @Import(name="cloudWatchMetrics")
       private final @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics;
 
     public Output<StorageLensCloudWatchMetricsArgs> getCloudWatchMetrics() {
         return this.cloudWatchMetrics == null ? Output.empty() : this.cloudWatchMetrics;
     }
 
-    @InputImport(name="s3BucketDestination")
+    @Import(name="s3BucketDestination")
       private final @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination;
 
     public Output<StorageLensS3BucketDestinationArgs> getS3BucketDestination() {

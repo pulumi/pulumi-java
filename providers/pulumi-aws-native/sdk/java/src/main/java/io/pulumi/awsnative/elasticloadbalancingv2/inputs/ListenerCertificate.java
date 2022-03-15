@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class ListenerCertificate extends io.pulumi.resources.InvokeArgs {
 
     public static final ListenerCertificate Empty = new ListenerCertificate();
 
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable String certificateArn;
 
     public Optional<String> getCertificateArn() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
      */
-    @InputImport(name="authFailAction")
+    @Import(name="authFailAction")
       private final @Nullable Output<String> authFailAction;
 
     public Output<String> getAuthFailAction() {
@@ -33,7 +33,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
@@ -44,7 +44,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * Path to the script from the application root directory.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final Output<String> script;
 
     public Output<String> getScript() {
@@ -56,7 +56,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
      */
-    @InputImport(name="securityLevel")
+    @Import(name="securityLevel")
       private final @Nullable Output<String> securityLevel;
 
     public Output<String> getSecurityLevel() {
@@ -67,7 +67,7 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
      * URL to serve the endpoint at.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

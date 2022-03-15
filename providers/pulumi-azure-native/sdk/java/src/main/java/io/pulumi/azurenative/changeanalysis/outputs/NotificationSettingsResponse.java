@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.changeanalysis.outputs;
 
 import io.pulumi.azurenative.changeanalysis.outputs.AzureMonitorWorkspacePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationSettingsResponse {
     /**
      * The state of notifications feature.
@@ -23,10 +23,10 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationSettingsResponse(
-        @OutputCustomType.Parameter("activationState") @Nullable String activationState,
-        @OutputCustomType.Parameter("azureMonitorWorkspaceProperties") @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
+        @CustomType.Parameter("activationState") @Nullable String activationState,
+        @CustomType.Parameter("azureMonitorWorkspaceProperties") @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
         this.activationState = activationState;
         this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
     }

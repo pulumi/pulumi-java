@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLogging {
     /**
      * The bucket that will receive log objects.
@@ -23,10 +23,10 @@ public final class BucketLogging {
      */
     private final @Nullable String logObjectPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLogging(
-        @OutputCustomType.Parameter("logBucket") String logBucket,
-        @OutputCustomType.Parameter("logObjectPrefix") @Nullable String logObjectPrefix) {
+        @CustomType.Parameter("logBucket") String logBucket,
+        @CustomType.Parameter("logObjectPrefix") @Nullable String logObjectPrefix) {
         this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }

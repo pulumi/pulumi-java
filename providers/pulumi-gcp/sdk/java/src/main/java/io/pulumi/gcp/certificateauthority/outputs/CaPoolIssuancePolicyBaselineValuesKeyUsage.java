@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
     /**
      * Describes high-level ways in which a key may be used.
@@ -32,11 +32,11 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolIssuancePolicyBaselineValuesKeyUsage(
-        @OutputCustomType.Parameter("baseKeyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage,
-        @OutputCustomType.Parameter("extendedKeyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
-        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @CustomType.Parameter("baseKeyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage,
+        @CustomType.Parameter("extendedKeyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
+        @CustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

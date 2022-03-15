@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PermissionResponse {
     /**
      * Allowed actions.
@@ -32,12 +32,12 @@ public final class PermissionResponse {
      */
     private final @Nullable List<String> notDataActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PermissionResponse(
-        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
-        @OutputCustomType.Parameter("dataActions") @Nullable List<String> dataActions,
-        @OutputCustomType.Parameter("notActions") @Nullable List<String> notActions,
-        @OutputCustomType.Parameter("notDataActions") @Nullable List<String> notDataActions) {
+        @CustomType.Parameter("actions") @Nullable List<String> actions,
+        @CustomType.Parameter("dataActions") @Nullable List<String> dataActions,
+        @CustomType.Parameter("notActions") @Nullable List<String> notActions,
+        @CustomType.Parameter("notDataActions") @Nullable List<String> notDataActions) {
         this.actions = actions;
         this.dataActions = dataActions;
         this.notActions = notActions;

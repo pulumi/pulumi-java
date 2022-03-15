@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PacketMirroringFilter {
     /**
      * IP CIDR ranges that apply as a filter on the source (ingress) or
@@ -32,11 +32,11 @@ public final class PacketMirroringFilter {
      */
     private final @Nullable List<String> ipProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketMirroringFilter(
-        @OutputCustomType.Parameter("cidrRanges") @Nullable List<String> cidrRanges,
-        @OutputCustomType.Parameter("direction") @Nullable String direction,
-        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols) {
+        @CustomType.Parameter("cidrRanges") @Nullable List<String> cidrRanges,
+        @CustomType.Parameter("direction") @Nullable String direction,
+        @CustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols) {
         this.cidrRanges = cidrRanges;
         this.direction = direction;
         this.ipProtocols = ipProtocols;

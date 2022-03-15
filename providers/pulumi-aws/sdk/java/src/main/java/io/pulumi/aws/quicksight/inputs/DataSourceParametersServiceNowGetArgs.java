@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataSourceParametersServiceNowGetArgs extends io.pulumi.resou
      * The base URL of the Jira instance's site to which to connect.
      * 
      */
-    @InputImport(name="siteBaseUrl", required=true)
+    @Import(name="siteBaseUrl", required=true)
       private final Output<String> siteBaseUrl;
 
     public Output<String> getSiteBaseUrl() {

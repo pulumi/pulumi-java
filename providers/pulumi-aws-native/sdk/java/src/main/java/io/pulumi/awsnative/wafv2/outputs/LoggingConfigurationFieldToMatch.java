@@ -5,13 +5,13 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchJsonBodyProperties;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchSingleHeaderProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationFieldToMatch {
     /**
      * Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
@@ -39,13 +39,13 @@ public final class LoggingConfigurationFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingConfigurationFieldToMatch(
-        @OutputCustomType.Parameter("jsonBody") @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
-        @OutputCustomType.Parameter("method") @Nullable Object method,
-        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
-        @OutputCustomType.Parameter("singleHeader") @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
-        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
+        @CustomType.Parameter("jsonBody") @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
+        @CustomType.Parameter("method") @Nullable Object method,
+        @CustomType.Parameter("queryString") @Nullable Object queryString,
+        @CustomType.Parameter("singleHeader") @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
+        @CustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.jsonBody = jsonBody;
         this.method = method;
         this.queryString = queryString;

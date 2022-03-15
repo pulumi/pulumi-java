@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
     private final Integer concurrencyLimit;
 
-    @OutputCustomType.Constructor
-    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(@OutputCustomType.Parameter("concurrencyLimit") Integer concurrencyLimit) {
+    @CustomType.Constructor
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(@CustomType.Parameter("concurrencyLimit") Integer concurrencyLimit) {
         this.concurrencyLimit = concurrencyLimit;
     }
 

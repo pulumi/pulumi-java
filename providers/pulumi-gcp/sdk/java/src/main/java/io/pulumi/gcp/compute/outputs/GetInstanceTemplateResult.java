@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateAdvancedMachineFeature;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateConfidentialInstanceConfig;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateDisk;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateResult {
     private final List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures;
     /**
@@ -184,38 +184,38 @@ public final class GetInstanceTemplateResult {
      */
     private final String tagsFingerprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateResult(
-        @OutputCustomType.Parameter("advancedMachineFeatures") List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures,
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("confidentialInstanceConfigs") List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disks") List<GetInstanceTemplateDisk> disks,
-        @OutputCustomType.Parameter("enableDisplay") Boolean enableDisplay,
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("guestAccelerators") List<GetInstanceTemplateGuestAccelerator> guestAccelerators,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceDescription") String instanceDescription,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") Map<String,Object> metadata,
-        @OutputCustomType.Parameter("metadataFingerprint") String metadataFingerprint,
-        @OutputCustomType.Parameter("metadataStartupScript") String metadataStartupScript,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namePrefix") String namePrefix,
-        @OutputCustomType.Parameter("networkInterfaces") List<GetInstanceTemplateNetworkInterface> networkInterfaces,
-        @OutputCustomType.Parameter("networkPerformanceConfigs") List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("reservationAffinities") List<GetInstanceTemplateReservationAffinity> reservationAffinities,
-        @OutputCustomType.Parameter("schedulings") List<GetInstanceTemplateScheduling> schedulings,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serviceAccounts") List<GetInstanceTemplateServiceAccount> serviceAccounts,
-        @OutputCustomType.Parameter("shieldedInstanceConfigs") List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("tagsFingerprint") String tagsFingerprint) {
+        @CustomType.Parameter("advancedMachineFeatures") List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures,
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("confidentialInstanceConfigs") List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disks") List<GetInstanceTemplateDisk> disks,
+        @CustomType.Parameter("enableDisplay") Boolean enableDisplay,
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("guestAccelerators") List<GetInstanceTemplateGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceDescription") String instanceDescription,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") Map<String,Object> metadata,
+        @CustomType.Parameter("metadataFingerprint") String metadataFingerprint,
+        @CustomType.Parameter("metadataStartupScript") String metadataStartupScript,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namePrefix") String namePrefix,
+        @CustomType.Parameter("networkInterfaces") List<GetInstanceTemplateNetworkInterface> networkInterfaces,
+        @CustomType.Parameter("networkPerformanceConfigs") List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("reservationAffinities") List<GetInstanceTemplateReservationAffinity> reservationAffinities,
+        @CustomType.Parameter("schedulings") List<GetInstanceTemplateScheduling> schedulings,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serviceAccounts") List<GetInstanceTemplateServiceAccount> serviceAccounts,
+        @CustomType.Parameter("shieldedInstanceConfigs") List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("tagsFingerprint") String tagsFingerprint) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfigs = confidentialInstanceConfigs;

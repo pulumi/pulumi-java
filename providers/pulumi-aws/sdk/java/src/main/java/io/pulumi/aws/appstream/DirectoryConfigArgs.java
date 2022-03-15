@@ -5,7 +5,7 @@ package io.pulumi.aws.appstream;
 
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Fully qualified name of the directory.
      * 
      */
-    @InputImport(name="directoryName", required=true)
+    @Import(name="directoryName", required=true)
       private final Output<String> directoryName;
 
     public Output<String> getDirectoryName() {
@@ -30,7 +30,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Distinguished names of the organizational units for computer accounts.
      * 
      */
-    @InputImport(name="organizationalUnitDistinguishedNames", required=true)
+    @Import(name="organizationalUnitDistinguishedNames", required=true)
       private final Output<List<String>> organizationalUnitDistinguishedNames;
 
     public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
@@ -41,7 +41,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the directory config to a Microsoft Active Directory domain. See `service_account_credentials` below.
      * 
      */
-    @InputImport(name="serviceAccountCredentials", required=true)
+    @Import(name="serviceAccountCredentials", required=true)
       private final Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
     public Output<DirectoryConfigServiceAccountCredentialsArgs> getServiceAccountCredentials() {

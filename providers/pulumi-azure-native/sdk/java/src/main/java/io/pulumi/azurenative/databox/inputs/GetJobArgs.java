@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
      * $expand is supported on details parameter for job, which provides details on the job stages.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the job Resource within the specified resource group. job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final String jobName;
 
     public String getJobName() {
@@ -40,7 +40,7 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
      * The Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

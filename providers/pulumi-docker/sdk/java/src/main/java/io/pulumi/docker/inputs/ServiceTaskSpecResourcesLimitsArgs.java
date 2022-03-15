@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ServiceTaskSpecResourcesLimitsArgs extends io.pulumi.resource
 
     public static final ServiceTaskSpecResourcesLimitsArgs Empty = new ServiceTaskSpecResourcesLimitsArgs();
 
-    @InputImport(name="memoryBytes")
+    @Import(name="memoryBytes")
       private final @Nullable Output<Integer> memoryBytes;
 
     public Output<Integer> getMemoryBytes() {
         return this.memoryBytes == null ? Output.empty() : this.memoryBytes;
     }
 
-    @InputImport(name="nanoCpus")
+    @Import(name="nanoCpus")
       private final @Nullable Output<Integer> nanoCpus;
 
     public Output<Integer> getNanoCpus() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MountPointMapResponse {
     /**
      * Mount point for the share.
@@ -35,13 +35,13 @@ public final class MountPointMapResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MountPointMapResponse(
-        @OutputCustomType.Parameter("mountPoint") String mountPoint,
-        @OutputCustomType.Parameter("mountType") String mountType,
-        @OutputCustomType.Parameter("roleId") String roleId,
-        @OutputCustomType.Parameter("roleType") String roleType,
-        @OutputCustomType.Parameter("shareId") String shareId) {
+        @CustomType.Parameter("mountPoint") String mountPoint,
+        @CustomType.Parameter("mountType") String mountType,
+        @CustomType.Parameter("roleId") String roleId,
+        @CustomType.Parameter("roleType") String roleType,
+        @CustomType.Parameter("shareId") String shareId) {
         this.mountPoint = mountPoint;
         this.mountType = mountType;
         this.roleId = roleId;

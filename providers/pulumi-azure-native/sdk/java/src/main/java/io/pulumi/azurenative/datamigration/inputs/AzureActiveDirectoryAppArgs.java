@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * Key used to authenticate to the Azure Active Directory Application
      * 
      */
-    @InputImport(name="appKey", required=true)
+    @Import(name="appKey", required=true)
       private final Output<String> appKey;
 
     public Output<String> getAppKey() {
@@ -32,7 +32,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * Application ID of the Azure Active Directory Application
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -43,7 +43,7 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
      * Tenant id of the customer
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
     public Output<String> getTenantId() {

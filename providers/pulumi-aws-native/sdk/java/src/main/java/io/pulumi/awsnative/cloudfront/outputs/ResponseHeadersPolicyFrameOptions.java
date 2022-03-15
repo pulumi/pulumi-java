@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyFrameOptions {
     private final String frameOption;
     private final Boolean override;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyFrameOptions(
-        @OutputCustomType.Parameter("frameOption") String frameOption,
-        @OutputCustomType.Parameter("override") Boolean override) {
+        @CustomType.Parameter("frameOption") String frameOption,
+        @CustomType.Parameter("override") Boolean override) {
         this.frameOption = frameOption;
         this.override = override;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * ARM resource ID of the datastore where the asset is located.
      * 
      */
-    @InputImport(name="datastoreId")
+    @Import(name="datastoreId")
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
@@ -33,7 +33,7 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * The path of the file/directory in the datastore.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -45,7 +45,7 @@ public final class DataPathAssetReferenceArgs extends io.pulumi.resources.Resour
      * Expected value is 'DataPath'.
      * 
      */
-    @InputImport(name="referenceType", required=true)
+    @Import(name="referenceType", required=true)
       private final Output<String> referenceType;
 
     public Output<String> getReferenceType() {

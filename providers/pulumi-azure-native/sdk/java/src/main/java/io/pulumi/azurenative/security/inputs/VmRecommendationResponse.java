@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * The configuration status of the machines group or machine or rule
      * 
      */
-    @InputImport(name="configurationStatus")
+    @Import(name="configurationStatus")
       private final @Nullable String configurationStatus;
 
     public Optional<String> getConfigurationStatus() {
@@ -33,7 +33,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * The machine supportability of Enforce feature
      * 
      */
-    @InputImport(name="enforcementSupport")
+    @Import(name="enforcementSupport")
       private final @Nullable String enforcementSupport;
 
     public Optional<String> getEnforcementSupport() {
@@ -44,7 +44,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * The recommendation action of the machine or rule
      * 
      */
-    @InputImport(name="recommendationAction")
+    @Import(name="recommendationAction")
       private final @Nullable String recommendationAction;
 
     public Optional<String> getRecommendationAction() {
@@ -55,7 +55,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * The full resource id of the machine
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

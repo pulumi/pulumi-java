@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * Filter parameters to fetch time series.
      * 
      */
-    @InputImport(name="timeSeriesFilter")
+    @Import(name="timeSeriesFilter")
       private final @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
 
     public Output<TimeSeriesFilterArgs> getTimeSeriesFilter() {
@@ -35,7 +35,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * Parameters to fetch a ratio between two time series filters.
      * 
      */
-    @InputImport(name="timeSeriesFilterRatio")
+    @Import(name="timeSeriesFilterRatio")
       private final @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
 
     public Output<TimeSeriesFilterRatioArgs> getTimeSeriesFilterRatio() {
@@ -46,7 +46,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * A query used to fetch time series.
      * 
      */
-    @InputImport(name="timeSeriesQueryLanguage")
+    @Import(name="timeSeriesQueryLanguage")
       private final @Nullable Output<String> timeSeriesQueryLanguage;
 
     public Output<String> getTimeSeriesQueryLanguage() {
@@ -57,7 +57,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * The unit of data contained in fetched time series. If non-empty, this unit will override any unit that accompanies fetched data. The format is the same as the unit (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors) field in MetricDescriptor.
      * 
      */
-    @InputImport(name="unitOverride")
+    @Import(name="unitOverride")
       private final @Nullable Output<String> unitOverride;
 
     public Output<String> getUnitOverride() {

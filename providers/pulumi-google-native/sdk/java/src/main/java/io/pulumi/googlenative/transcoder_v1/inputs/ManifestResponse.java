@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the generated file. The default is `manifest` with the extension suffix corresponding to the `Manifest.type`.
      * 
      */
-    @InputImport(name="fileName", required=true)
+    @Import(name="fileName", required=true)
       private final String fileName;
 
     public String getFileName() {
@@ -32,7 +32,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
      * List of user given `MuxStream.key`s that should appear in this manifest. When `Manifest.type` is `HLS`, a media manifest with name `MuxStream.key` and `.m3u8` extension is generated for each element of the `Manifest.mux_streams`.
      * 
      */
-    @InputImport(name="muxStreams", required=true)
+    @Import(name="muxStreams", required=true)
       private final List<String> muxStreams;
 
     public List<String> getMuxStreams() {
@@ -43,7 +43,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the manifest, can be `HLS` or `DASH`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

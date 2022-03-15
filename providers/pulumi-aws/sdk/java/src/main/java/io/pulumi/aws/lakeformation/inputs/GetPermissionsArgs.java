@@ -7,7 +7,7 @@ import io.pulumi.aws.lakeformation.inputs.GetPermissionsDataLocation;
 import io.pulumi.aws.lakeformation.inputs.GetPermissionsDatabase;
 import io.pulumi.aws.lakeformation.inputs.GetPermissionsTable;
 import io.pulumi.aws.lakeformation.inputs.GetPermissionsTableWithColumns;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
@@ -34,7 +34,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
      * 
      */
-    @InputImport(name="catalogResource")
+    @Import(name="catalogResource")
       private final @Nullable Boolean catalogResource;
 
     public Optional<Boolean> getCatalogResource() {
@@ -45,7 +45,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block for a data location resource. Detailed below.
      * 
      */
-    @InputImport(name="dataLocation")
+    @Import(name="dataLocation")
       private final @Nullable GetPermissionsDataLocation dataLocation;
 
     public Optional<GetPermissionsDataLocation> getDataLocation() {
@@ -56,7 +56,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block for a database resource. Detailed below.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable GetPermissionsDatabase database;
 
     public Optional<GetPermissionsDatabase> getDatabase() {
@@ -67,7 +67,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final String principal;
 
     public String getPrincipal() {
@@ -78,7 +78,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block for a table resource. Detailed below.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable GetPermissionsTable table;
 
     public Optional<GetPermissionsTable> getTable() {
@@ -89,7 +89,7 @@ public final class GetPermissionsArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block for a table with columns resource. Detailed below.
      * 
      */
-    @InputImport(name="tableWithColumns")
+    @Import(name="tableWithColumns")
       private final @Nullable GetPermissionsTableWithColumns tableWithColumns;
 
     public Optional<GetPermissionsTableWithColumns> getTableWithColumns() {

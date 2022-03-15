@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TokenReviewSpec {
     /**
      * Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
@@ -23,10 +23,10 @@ public final class TokenReviewSpec {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenReviewSpec(
-        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
-        @OutputCustomType.Parameter("token") @Nullable String token) {
+        @CustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @CustomType.Parameter("token") @Nullable String token) {
         this.audiences = audiences;
         this.token = token;
     }

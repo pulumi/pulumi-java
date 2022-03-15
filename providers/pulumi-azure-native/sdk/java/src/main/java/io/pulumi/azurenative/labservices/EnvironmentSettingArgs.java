@@ -7,7 +7,7 @@ import io.pulumi.azurenative.labservices.enums.ConfigurationState;
 import io.pulumi.azurenative.labservices.inputs.ResourceSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * Describes the user's progress in configuring their environment setting
      * 
      */
-    @InputImport(name="configurationState")
+    @Import(name="configurationState")
       private final @Nullable Output<Either<String,ConfigurationState>> configurationState;
 
     public Output<Either<String,ConfigurationState>> getConfigurationState() {
@@ -33,7 +33,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * Describes the environment and its resource settings
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The name of the environment Setting.
      * 
      */
-    @InputImport(name="environmentSettingName")
+    @Import(name="environmentSettingName")
       private final @Nullable Output<String> environmentSettingName;
 
     public Output<String> getEnvironmentSettingName() {
@@ -55,7 +55,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The name of the lab Account.
      * 
      */
-    @InputImport(name="labAccountName", required=true)
+    @Import(name="labAccountName", required=true)
       private final Output<String> labAccountName;
 
     public Output<String> getLabAccountName() {
@@ -66,7 +66,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -77,7 +77,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -88,7 +88,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The provisioning status of the resource.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -99,7 +99,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The resource specific settings
      * 
      */
-    @InputImport(name="resourceSettings", required=true)
+    @Import(name="resourceSettings", required=true)
       private final Output<ResourceSettingsArgs> resourceSettings;
 
     public Output<ResourceSettingsArgs> getResourceSettings() {
@@ -121,7 +121,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -132,7 +132,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * Brief title describing the environment and its resource settings
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -143,7 +143,7 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @InputImport(name="uniqueIdentifier")
+    @Import(name="uniqueIdentifier")
       private final @Nullable Output<String> uniqueIdentifier;
 
     public Output<String> getUniqueIdentifier() {

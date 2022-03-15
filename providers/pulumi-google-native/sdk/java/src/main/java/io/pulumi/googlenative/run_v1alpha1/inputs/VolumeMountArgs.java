@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * Path within the container at which the volume should be mounted. Must not contain ':'.
      * 
      */
-    @InputImport(name="mountPath")
+    @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
     public Output<String> getMountPath() {
@@ -34,7 +34,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the volume. There must be a corresponding Volume with the same name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Only true is accepted. Defaults to true.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -56,7 +56,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
      * 
      */
-    @InputImport(name="subPath")
+    @Import(name="subPath")
       private final @Nullable Output<String> subPath;
 
     public Output<String> getSubPath() {

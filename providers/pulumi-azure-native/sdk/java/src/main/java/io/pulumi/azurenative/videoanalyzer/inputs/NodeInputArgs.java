@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NodeInputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the upstream node in the pipeline which output is used as input of the current node.
      * 
      */
-    @InputImport(name="nodeName", required=true)
+    @Import(name="nodeName", required=true)
       private final Output<String> nodeName;
 
     public Output<String> getNodeName() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.IPAMArgs;
 import io.pulumi.awsnative.ec2.outputs.IPAMIpamOperatingRegion;
 import io.pulumi.awsnative.ec2.outputs.IPAMTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IPAM.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -35,7 +35,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
@@ -45,7 +45,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * Id of the IPAM.
      * 
      */
-    @OutputExport(name="ipamId", type=String.class, parameters={})
+    @Export(name="ipamId", type=String.class, parameters={})
     private Output<String> ipamId;
 
     /**
@@ -59,7 +59,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * The regions IPAM is enabled for. Allows pools to be created in these regions, as well as enabling monitoring
      * 
      */
-    @OutputExport(name="operatingRegions", type=List.class, parameters={IPAMIpamOperatingRegion.class})
+    @Export(name="operatingRegions", type=List.class, parameters={IPAMIpamOperatingRegion.class})
     private Output</* @Nullable */ List<IPAMIpamOperatingRegion>> operatingRegions;
 
     /**
@@ -73,7 +73,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
      */
-    @OutputExport(name="privateDefaultScopeId", type=String.class, parameters={})
+    @Export(name="privateDefaultScopeId", type=String.class, parameters={})
     private Output<String> privateDefaultScopeId;
 
     /**
@@ -87,7 +87,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * The Id of the default scope for publicly routable IP space, created with this IPAM.
      * 
      */
-    @OutputExport(name="publicDefaultScopeId", type=String.class, parameters={})
+    @Export(name="publicDefaultScopeId", type=String.class, parameters={})
     private Output<String> publicDefaultScopeId;
 
     /**
@@ -101,7 +101,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * The number of scopes that currently exist in this IPAM.
      * 
      */
-    @OutputExport(name="scopeCount", type=Integer.class, parameters={})
+    @Export(name="scopeCount", type=Integer.class, parameters={})
     private Output<Integer> scopeCount;
 
     /**
@@ -115,7 +115,7 @@ public class IPAM extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={IPAMTag.class})
+    @Export(name="tags", type=List.class, parameters={IPAMTag.class})
     private Output</* @Nullable */ List<IPAMTag>> tags;
 
     /**

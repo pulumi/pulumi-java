@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerservice.outputs.AgentPoolUpgradeSettingsRe
 import io.pulumi.azurenative.containerservice.outputs.KubeletConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.LinuxOSConfigResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAgentPoolResult {
     /**
      * Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
@@ -206,45 +206,45 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable String vnetSubnetID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAgentPoolResult(
-        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("enableAutoScaling") @Nullable Boolean enableAutoScaling,
-        @OutputCustomType.Parameter("enableEncryptionAtHost") @Nullable Boolean enableEncryptionAtHost,
-        @OutputCustomType.Parameter("enableFIPS") @Nullable Boolean enableFIPS,
-        @OutputCustomType.Parameter("enableNodePublicIP") @Nullable Boolean enableNodePublicIP,
-        @OutputCustomType.Parameter("gpuInstanceProfile") @Nullable String gpuInstanceProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kubeletConfig") @Nullable KubeletConfigResponse kubeletConfig,
-        @OutputCustomType.Parameter("kubeletDiskType") @Nullable String kubeletDiskType,
-        @OutputCustomType.Parameter("linuxOSConfig") @Nullable LinuxOSConfigResponse linuxOSConfig,
-        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
-        @OutputCustomType.Parameter("maxPods") @Nullable Integer maxPods,
-        @OutputCustomType.Parameter("minCount") @Nullable Integer minCount,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeImageVersion") String nodeImageVersion,
-        @OutputCustomType.Parameter("nodeLabels") @Nullable Map<String,String> nodeLabels,
-        @OutputCustomType.Parameter("nodePublicIPPrefixID") @Nullable String nodePublicIPPrefixID,
-        @OutputCustomType.Parameter("nodeTaints") @Nullable List<String> nodeTaints,
-        @OutputCustomType.Parameter("orchestratorVersion") @Nullable String orchestratorVersion,
-        @OutputCustomType.Parameter("osDiskSizeGB") @Nullable Integer osDiskSizeGB,
-        @OutputCustomType.Parameter("osDiskType") @Nullable String osDiskType,
-        @OutputCustomType.Parameter("osSKU") @Nullable String osSKU,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("podSubnetID") @Nullable String podSubnetID,
-        @OutputCustomType.Parameter("powerState") PowerStateResponse powerState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("proximityPlacementGroupID") @Nullable String proximityPlacementGroupID,
-        @OutputCustomType.Parameter("scaleSetEvictionPolicy") @Nullable String scaleSetEvictionPolicy,
-        @OutputCustomType.Parameter("scaleSetPriority") @Nullable String scaleSetPriority,
-        @OutputCustomType.Parameter("spotMaxPrice") @Nullable Double spotMaxPrice,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("upgradeSettings") @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize,
-        @OutputCustomType.Parameter("vnetSubnetID") @Nullable String vnetSubnetID) {
+        @CustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("enableAutoScaling") @Nullable Boolean enableAutoScaling,
+        @CustomType.Parameter("enableEncryptionAtHost") @Nullable Boolean enableEncryptionAtHost,
+        @CustomType.Parameter("enableFIPS") @Nullable Boolean enableFIPS,
+        @CustomType.Parameter("enableNodePublicIP") @Nullable Boolean enableNodePublicIP,
+        @CustomType.Parameter("gpuInstanceProfile") @Nullable String gpuInstanceProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kubeletConfig") @Nullable KubeletConfigResponse kubeletConfig,
+        @CustomType.Parameter("kubeletDiskType") @Nullable String kubeletDiskType,
+        @CustomType.Parameter("linuxOSConfig") @Nullable LinuxOSConfigResponse linuxOSConfig,
+        @CustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @CustomType.Parameter("maxPods") @Nullable Integer maxPods,
+        @CustomType.Parameter("minCount") @Nullable Integer minCount,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeImageVersion") String nodeImageVersion,
+        @CustomType.Parameter("nodeLabels") @Nullable Map<String,String> nodeLabels,
+        @CustomType.Parameter("nodePublicIPPrefixID") @Nullable String nodePublicIPPrefixID,
+        @CustomType.Parameter("nodeTaints") @Nullable List<String> nodeTaints,
+        @CustomType.Parameter("orchestratorVersion") @Nullable String orchestratorVersion,
+        @CustomType.Parameter("osDiskSizeGB") @Nullable Integer osDiskSizeGB,
+        @CustomType.Parameter("osDiskType") @Nullable String osDiskType,
+        @CustomType.Parameter("osSKU") @Nullable String osSKU,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("podSubnetID") @Nullable String podSubnetID,
+        @CustomType.Parameter("powerState") PowerStateResponse powerState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("proximityPlacementGroupID") @Nullable String proximityPlacementGroupID,
+        @CustomType.Parameter("scaleSetEvictionPolicy") @Nullable String scaleSetEvictionPolicy,
+        @CustomType.Parameter("scaleSetPriority") @Nullable String scaleSetPriority,
+        @CustomType.Parameter("spotMaxPrice") @Nullable Double spotMaxPrice,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("upgradeSettings") @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize,
+        @CustomType.Parameter("vnetSubnetID") @Nullable String vnetSubnetID) {
         this.availabilityZones = availabilityZones;
         this.count = count;
         this.enableAutoScaling = enableAutoScaling;

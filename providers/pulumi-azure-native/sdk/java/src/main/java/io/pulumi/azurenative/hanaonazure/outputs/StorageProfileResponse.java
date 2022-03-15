@@ -5,13 +5,13 @@ package io.pulumi.azurenative.hanaonazure.outputs;
 
 import io.pulumi.azurenative.hanaonazure.outputs.DiskResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.SAPSystemIDResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * Specifies information related to SAP system IDs for the hana instance.
@@ -29,11 +29,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable List<DiskResponse> osDisks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageProfileResponse(
-        @OutputCustomType.Parameter("hanaSids") @Nullable List<SAPSystemIDResponse> hanaSids,
-        @OutputCustomType.Parameter("nfsIpAddress") String nfsIpAddress,
-        @OutputCustomType.Parameter("osDisks") @Nullable List<DiskResponse> osDisks) {
+        @CustomType.Parameter("hanaSids") @Nullable List<SAPSystemIDResponse> hanaSids,
+        @CustomType.Parameter("nfsIpAddress") String nfsIpAddress,
+        @CustomType.Parameter("osDisks") @Nullable List<DiskResponse> osDisks) {
         this.hanaSids = hanaSids;
         this.nfsIpAddress = nfsIpAddress;
         this.osDisks = osDisks;

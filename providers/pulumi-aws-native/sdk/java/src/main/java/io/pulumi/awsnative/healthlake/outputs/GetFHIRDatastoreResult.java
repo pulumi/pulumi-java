@@ -6,14 +6,14 @@ package io.pulumi.awsnative.healthlake.outputs;
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastoreDatastoreStatus;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreCreatedAt;
 import io.pulumi.awsnative.healthlake.outputs.FHIRDatastoreTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFHIRDatastoreResult {
     private final @Nullable FHIRDatastoreCreatedAt createdAt;
     private final @Nullable String datastoreArn;
@@ -22,14 +22,14 @@ public final class GetFHIRDatastoreResult {
     private final @Nullable FHIRDatastoreDatastoreStatus datastoreStatus;
     private final @Nullable List<FHIRDatastoreTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFHIRDatastoreResult(
-        @OutputCustomType.Parameter("createdAt") @Nullable FHIRDatastoreCreatedAt createdAt,
-        @OutputCustomType.Parameter("datastoreArn") @Nullable String datastoreArn,
-        @OutputCustomType.Parameter("datastoreEndpoint") @Nullable String datastoreEndpoint,
-        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
-        @OutputCustomType.Parameter("datastoreStatus") @Nullable FHIRDatastoreDatastoreStatus datastoreStatus,
-        @OutputCustomType.Parameter("tags") @Nullable List<FHIRDatastoreTag> tags) {
+        @CustomType.Parameter("createdAt") @Nullable FHIRDatastoreCreatedAt createdAt,
+        @CustomType.Parameter("datastoreArn") @Nullable String datastoreArn,
+        @CustomType.Parameter("datastoreEndpoint") @Nullable String datastoreEndpoint,
+        @CustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @CustomType.Parameter("datastoreStatus") @Nullable FHIRDatastoreDatastoreStatus datastoreStatus,
+        @CustomType.Parameter("tags") @Nullable List<FHIRDatastoreTag> tags) {
         this.createdAt = createdAt;
         this.datastoreArn = datastoreArn;
         this.datastoreEndpoint = datastoreEndpoint;

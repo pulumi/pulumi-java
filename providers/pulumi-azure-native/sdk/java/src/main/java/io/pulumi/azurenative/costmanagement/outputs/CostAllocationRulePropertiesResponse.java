@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.CostAllocationRuleDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CostAllocationRulePropertiesResponse {
     /**
      * Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
@@ -38,13 +38,13 @@ public final class CostAllocationRulePropertiesResponse {
      */
     private final String updatedDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CostAllocationRulePropertiesResponse(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("details") CostAllocationRuleDetailsResponse details,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("updatedDate") String updatedDate) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("details") CostAllocationRuleDetailsResponse details,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("updatedDate") String updatedDate) {
         this.createdDate = createdDate;
         this.description = description;
         this.details = details;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateInAppMessageContent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInAppTemplateResult {
     private final @Nullable String arn;
     private final @Nullable List<InAppTemplateInAppMessageContent> content;
@@ -22,14 +22,14 @@ public final class GetInAppTemplateResult {
     private final @Nullable Object tags;
     private final @Nullable String templateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInAppTemplateResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("content") @Nullable List<InAppTemplateInAppMessageContent> content,
-        @OutputCustomType.Parameter("customConfig") @Nullable Object customConfig,
-        @OutputCustomType.Parameter("layout") @Nullable InAppTemplateLayout layout,
-        @OutputCustomType.Parameter("tags") @Nullable Object tags,
-        @OutputCustomType.Parameter("templateDescription") @Nullable String templateDescription) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("content") @Nullable List<InAppTemplateInAppMessageContent> content,
+        @CustomType.Parameter("customConfig") @Nullable Object customConfig,
+        @CustomType.Parameter("layout") @Nullable InAppTemplateLayout layout,
+        @CustomType.Parameter("tags") @Nullable Object tags,
+        @CustomType.Parameter("templateDescription") @Nullable String templateDescription) {
         this.arn = arn;
         this.content = content;
         this.customConfig = customConfig;

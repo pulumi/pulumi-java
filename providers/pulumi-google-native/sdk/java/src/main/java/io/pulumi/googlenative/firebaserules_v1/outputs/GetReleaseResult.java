@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReleaseResult {
     /**
      * Time the release was created.
@@ -30,12 +30,12 @@ public final class GetReleaseResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReleaseResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rulesetName") String rulesetName,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rulesetName") String rulesetName,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.name = name;
         this.rulesetName = rulesetName;

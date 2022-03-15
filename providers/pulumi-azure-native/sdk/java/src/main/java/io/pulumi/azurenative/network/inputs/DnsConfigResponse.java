@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The fully-qualified domain name (FQDN) of the Traffic Manager profile. This is formed from the concatenation of the RelativeName with the DNS domain used by Azure Traffic Manager.
      * 
      */
-    @InputImport(name="fqdn", required=true)
+    @Import(name="fqdn", required=true)
       private final String fqdn;
 
     public String getFqdn() {
@@ -34,7 +34,7 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The relative DNS name provided by this Traffic Manager profile. This value is combined with the DNS domain name used by Azure Traffic Manager to form the fully-qualified domain name (FQDN) of the profile.
      * 
      */
-    @InputImport(name="relativeName")
+    @Import(name="relativeName")
       private final @Nullable String relativeName;
 
     public Optional<String> getRelativeName() {
@@ -45,7 +45,7 @@ public final class DnsConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The DNS Time-To-Live (TTL), in seconds. This informs the local DNS resolvers and DNS clients how long to cache DNS responses provided by this Traffic Manager profile.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Double ttl;
 
     public Optional<Double> getTtl() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The end IP address of the server firewall rule. Must be IPv4 format.
      * 
      */
-    @InputImport(name="endIpAddress", required=true)
+    @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
 
     public Output<String> getEndIpAddress() {
@@ -29,7 +29,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server firewall rule.
      * 
      */
-    @InputImport(name="firewallRuleName")
+    @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
     public Output<String> getFirewallRuleName() {
@@ -40,7 +40,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -62,7 +62,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The start IP address of the server firewall rule. Must be IPv4 format.
      * 
      */
-    @InputImport(name="startIpAddress", required=true)
+    @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;
 
     public Output<String> getStartIpAddress() {

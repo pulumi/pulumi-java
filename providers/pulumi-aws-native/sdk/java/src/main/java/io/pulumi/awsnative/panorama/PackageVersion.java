@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.panorama.PackageVersionArgs;
 import io.pulumi.awsnative.panorama.enums.PackageVersionStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,73 +20,73 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:panorama:PackageVersion")
 public class PackageVersion extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="isLatestPatch", type=Boolean.class, parameters={})
+    @Export(name="isLatestPatch", type=Boolean.class, parameters={})
     private Output<Boolean> isLatestPatch;
 
     public Output<Boolean> getIsLatestPatch() {
         return this.isLatestPatch;
     }
-    @OutputExport(name="markLatest", type=Boolean.class, parameters={})
+    @Export(name="markLatest", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> markLatest;
 
     public Output</* @Nullable */ Boolean> getMarkLatest() {
         return this.markLatest;
     }
-    @OutputExport(name="ownerAccount", type=String.class, parameters={})
+    @Export(name="ownerAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerAccount;
 
     public Output</* @Nullable */ String> getOwnerAccount() {
         return this.ownerAccount;
     }
-    @OutputExport(name="packageArn", type=String.class, parameters={})
+    @Export(name="packageArn", type=String.class, parameters={})
     private Output<String> packageArn;
 
     public Output<String> getPackageArn() {
         return this.packageArn;
     }
-    @OutputExport(name="packageId", type=String.class, parameters={})
+    @Export(name="packageId", type=String.class, parameters={})
     private Output<String> packageId;
 
     public Output<String> getPackageId() {
         return this.packageId;
     }
-    @OutputExport(name="packageName", type=String.class, parameters={})
+    @Export(name="packageName", type=String.class, parameters={})
     private Output<String> packageName;
 
     public Output<String> getPackageName() {
         return this.packageName;
     }
-    @OutputExport(name="packageVersion", type=String.class, parameters={})
+    @Export(name="packageVersion", type=String.class, parameters={})
     private Output<String> packageVersion;
 
     public Output<String> getPackageVersion() {
         return this.packageVersion;
     }
-    @OutputExport(name="patchVersion", type=String.class, parameters={})
+    @Export(name="patchVersion", type=String.class, parameters={})
     private Output<String> patchVersion;
 
     public Output<String> getPatchVersion() {
         return this.patchVersion;
     }
-    @OutputExport(name="registeredTime", type=Integer.class, parameters={})
+    @Export(name="registeredTime", type=Integer.class, parameters={})
     private Output<Integer> registeredTime;
 
     public Output<Integer> getRegisteredTime() {
         return this.registeredTime;
     }
-    @OutputExport(name="status", type=PackageVersionStatus.class, parameters={})
+    @Export(name="status", type=PackageVersionStatus.class, parameters={})
     private Output<PackageVersionStatus> status;
 
     public Output<PackageVersionStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="statusDescription", type=String.class, parameters={})
+    @Export(name="statusDescription", type=String.class, parameters={})
     private Output<String> statusDescription;
 
     public Output<String> getStatusDescription() {
         return this.statusDescription;
     }
-    @OutputExport(name="updatedLatestPatchVersion", type=String.class, parameters={})
+    @Export(name="updatedLatestPatchVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> updatedLatestPatchVersion;
 
     public Output</* @Nullable */ String> getUpdatedLatestPatchVersion() {

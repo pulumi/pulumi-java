@@ -4,12 +4,12 @@
 package io.pulumi.aws.ecr.outputs;
 
 import io.pulumi.aws.ecr.outputs.RegistryScanningConfigurationRuleRepositoryFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegistryScanningConfigurationRule {
     /**
      * One or more repository filter blocks, containing a `filter` (required string filtering repositories, see pattern regex [here](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_ScanningRepositoryFilter.html)) and a `filter_type` (required string, currently only `WILDCARD` is supported).
@@ -22,10 +22,10 @@ public final class RegistryScanningConfigurationRule {
      */
     private final String scanFrequency;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryScanningConfigurationRule(
-        @OutputCustomType.Parameter("repositoryFilters") List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
-        @OutputCustomType.Parameter("scanFrequency") String scanFrequency) {
+        @CustomType.Parameter("repositoryFilters") List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
+        @CustomType.Parameter("scanFrequency") String scanFrequency) {
         this.repositoryFilters = repositoryFilters;
         this.scanFrequency = scanFrequency;
     }

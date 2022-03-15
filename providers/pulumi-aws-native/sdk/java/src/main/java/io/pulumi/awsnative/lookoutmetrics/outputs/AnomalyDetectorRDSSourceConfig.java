@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorRDSSourceConfig {
     private final String dBInstanceIdentifier;
     private final String databaseHost;
@@ -20,16 +20,16 @@ public final class AnomalyDetectorRDSSourceConfig {
     private final String tableName;
     private final AnomalyDetectorVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorRDSSourceConfig(
-        @OutputCustomType.Parameter("dBInstanceIdentifier") String dBInstanceIdentifier,
-        @OutputCustomType.Parameter("databaseHost") String databaseHost,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("databasePort") Integer databasePort,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("secretManagerArn") String secretManagerArn,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("vpcConfiguration") AnomalyDetectorVpcConfiguration vpcConfiguration) {
+        @CustomType.Parameter("dBInstanceIdentifier") String dBInstanceIdentifier,
+        @CustomType.Parameter("databaseHost") String databaseHost,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("databasePort") Integer databasePort,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("secretManagerArn") String secretManagerArn,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("vpcConfiguration") AnomalyDetectorVpcConfiguration vpcConfiguration) {
         this.dBInstanceIdentifier = dBInstanceIdentifier;
         this.databaseHost = databaseHost;
         this.databaseName = databaseName;

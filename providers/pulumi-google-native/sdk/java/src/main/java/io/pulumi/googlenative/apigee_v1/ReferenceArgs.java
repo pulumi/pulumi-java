@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A human-readable description of this reference.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -36,14 +36,14 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource id of this reference. Values must match the regular expression [\w\s\-.]+.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -54,7 +54,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resource_type.
      * 
      */
-    @InputImport(name="refers", required=true)
+    @Import(name="refers", required=true)
       private final Output<String> refers;
 
     public Output<String> getRefers() {
@@ -65,7 +65,7 @@ public final class ReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * The type of resource referred to by this reference. Valid values are 'KeyStore' or 'TrustStore'.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

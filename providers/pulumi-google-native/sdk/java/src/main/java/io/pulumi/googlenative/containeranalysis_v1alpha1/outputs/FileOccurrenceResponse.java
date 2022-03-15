@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.LicenseResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileOccurrenceResponse {
     /**
      * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
@@ -47,15 +47,15 @@ public final class FileOccurrenceResponse {
      */
     private final String notice;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileOccurrenceResponse(
-        @OutputCustomType.Parameter("attributions") List<String> attributions,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("contributors") List<String> contributors,
-        @OutputCustomType.Parameter("copyright") String copyright,
-        @OutputCustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
-        @OutputCustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
-        @OutputCustomType.Parameter("notice") String notice) {
+        @CustomType.Parameter("attributions") List<String> attributions,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("contributors") List<String> contributors,
+        @CustomType.Parameter("copyright") String copyright,
+        @CustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
+        @CustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
+        @CustomType.Parameter("notice") String notice) {
         this.attributions = attributions;
         this.comment = comment;
         this.contributors = contributors;

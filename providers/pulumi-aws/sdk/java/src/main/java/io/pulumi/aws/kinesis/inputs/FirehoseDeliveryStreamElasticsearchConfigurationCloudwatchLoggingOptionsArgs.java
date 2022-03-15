@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLog
      * Enables or disables the logging. Defaults to `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLog
      * The CloudWatch group name for logging. This value is required if `enabled` is true.
      * 
      */
-    @InputImport(name="logGroupName")
+    @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
@@ -41,7 +41,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLog
      * The CloudWatch log stream name for logging. This value is required if `enabled` is true.
      * 
      */
-    @InputImport(name="logStreamName")
+    @Import(name="logStreamName")
       private final @Nullable Output<String> logStreamName;
 
     public Output<String> getLogStreamName() {

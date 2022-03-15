@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretRespon
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Encrypted storage key.
      * 
      */
-    @OutputExport(name="accountKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
+    @Export(name="accountKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accountKey;
 
     /**
@@ -50,7 +50,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Type of storage accessed on the storage account.
      * 
      */
-    @OutputExport(name="accountType", type=String.class, parameters={})
+    @Export(name="accountType", type=String.class, parameters={})
     private Output<String> accountType;
 
     /**
@@ -64,7 +64,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Alias for the storage account.
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
@@ -78,7 +78,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Blob end point for private clouds.
      * 
      */
-    @OutputExport(name="blobDomainName", type=String.class, parameters={})
+    @Export(name="blobDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> blobDomainName;
 
     /**
@@ -92,7 +92,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Connection string for the storage account. Use this string if username and account key are not specified.
      * 
      */
-    @OutputExport(name="connectionString", type=String.class, parameters={})
+    @Export(name="connectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionString;
 
     /**
@@ -106,7 +106,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Signifies whether SSL needs to be enabled or not.
      * 
      */
-    @OutputExport(name="sslStatus", type=String.class, parameters={})
+    @Export(name="sslStatus", type=String.class, parameters={})
     private Output<String> sslStatus;
 
     /**
@@ -134,7 +134,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Id of the storage account.
      * 
      */
-    @OutputExport(name="storageAccountId", type=String.class, parameters={})
+    @Export(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
     /**
@@ -148,7 +148,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * StorageAccountCredential object
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -162,7 +162,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -176,7 +176,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Username for the storage account.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
     /**

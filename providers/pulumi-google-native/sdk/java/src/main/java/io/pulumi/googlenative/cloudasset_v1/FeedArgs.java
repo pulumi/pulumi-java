@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudasset_v1.enums.FeedContentType;
 import io.pulumi.googlenative.cloudasset_v1.inputs.ExprArgs;
 import io.pulumi.googlenative.cloudasset_v1.inputs.FeedOutputConfigArgs;
@@ -22,7 +22,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
      * 
      */
-    @InputImport(name="assetNames")
+    @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
     public Output<List<String>> getAssetNames() {
@@ -33,7 +33,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * A list of types of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `"compute.googleapis.com/Disk"` See [this topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for a list of all supported asset types.
      * 
      */
-    @InputImport(name="assetTypes")
+    @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
     public Output<List<String>> getAssetTypes() {
@@ -44,7 +44,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, `expression` field in the `Expr` must be a valid [CEL expression] (https://github.com/google/cel-spec) on a TemporalAsset with name `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted == true") will only publish Asset deletions. Other fields of `Expr` are optional. See our [user guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes-with-condition) for detailed instructions.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ExprArgs> condition;
 
     public Output<ExprArgs> getCondition() {
@@ -55,7 +55,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * Asset content type. If not specified, no content but the asset name and type will be returned.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<FeedContentType> contentType;
 
     public Output<FeedContentType> getContentType() {
@@ -66,7 +66,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent project/folder/organization.
      * 
      */
-    @InputImport(name="feedId", required=true)
+    @Import(name="feedId", required=true)
       private final Output<String> feedId;
 
     public Output<String> getFeedId() {
@@ -77,7 +77,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * Feed output configuration defining where the asset updates are published to.
      * 
      */
-    @InputImport(name="feedOutputConfig", required=true)
+    @Import(name="feedOutputConfig", required=true)
       private final Output<FeedOutputConfigArgs> feedOutputConfig;
 
     public Output<FeedOutputConfigArgs> getFeedOutputConfig() {
@@ -88,7 +88,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or folders/{folder_number}/feeds/{client-assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned feed identifier must be unique within the parent project/folder/organization.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -99,21 +99,21 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationship updates on the [asset_names] or the [asset_types]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or [asset_types], or any of the [asset_names] or the [asset_types] doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships of the types of [asset_names] and [asset_types] or returns an error if any of the [asset_names] or the [asset_types] has no replationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.
      * 
      */
-    @InputImport(name="relationshipTypes")
+    @Import(name="relationshipTypes")
       private final @Nullable Output<List<String>> relationshipTypes;
 
     public Output<List<String>> getRelationshipTypes() {
         return this.relationshipTypes == null ? Output.empty() : this.relationshipTypes;
     }
 
-    @InputImport(name="v1Id", required=true)
+    @Import(name="v1Id", required=true)
       private final Output<String> v1Id;
 
     public Output<String> getV1Id() {
         return this.v1Id;
     }
 
-    @InputImport(name="v1Id1", required=true)
+    @Import(name="v1Id1", required=true)
       private final Output<String> v1Id1;
 
     public Output<String> getV1Id1() {

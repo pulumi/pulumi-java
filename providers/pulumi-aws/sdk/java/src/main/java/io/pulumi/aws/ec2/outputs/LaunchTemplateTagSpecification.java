@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateTagSpecification {
     /**
      * The type of resource to tag.
@@ -23,10 +23,10 @@ public final class LaunchTemplateTagSpecification {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateTagSpecification(
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

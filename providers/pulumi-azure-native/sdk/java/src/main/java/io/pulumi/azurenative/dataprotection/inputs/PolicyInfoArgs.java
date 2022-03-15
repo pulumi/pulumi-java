@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.PolicyParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyInfoArgs Empty = new PolicyInfoArgs();
 
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -30,7 +30,7 @@ public final class PolicyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Policy parameters for the backup instance
      * 
      */
-    @InputImport(name="policyParameters")
+    @Import(name="policyParameters")
       private final @Nullable Output<PolicyParametersArgs> policyParameters;
 
     public Output<PolicyParametersArgs> getPolicyParameters() {

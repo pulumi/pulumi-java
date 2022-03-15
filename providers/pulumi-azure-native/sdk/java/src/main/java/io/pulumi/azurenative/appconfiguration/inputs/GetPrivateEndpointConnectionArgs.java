@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the configuration store.
      * 
      */
-    @InputImport(name="configStoreName", required=true)
+    @Import(name="configStoreName", required=true)
       private final String configStoreName;
 
     public String getConfigStoreName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * Private endpoint connection name
      * 
      */
-    @InputImport(name="privateEndpointConnectionName", required=true)
+    @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionArgs extends io.pulumi.resources.
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

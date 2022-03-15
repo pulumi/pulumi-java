@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceIamBindingArgs;
@@ -16,37 +16,37 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:compute/backendServiceIamBinding:BackendServiceIamBinding")
 public class BackendServiceIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=BackendServiceIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=BackendServiceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ BackendServiceIamBindingCondition> condition;
 
     public Output</* @Nullable */ BackendServiceIamBindingCondition> getCondition() {
         return this.condition;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     public Output<String> getRole() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * Password for the share.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -32,7 +32,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * Name of the share.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final String shareName;
 
     public String getShareName() {
@@ -43,7 +43,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * Type of the share.
      * 
      */
-    @InputImport(name="shareType", required=true)
+    @Import(name="shareType", required=true)
       private final String shareType;
 
     public String getShareType() {
@@ -54,7 +54,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * Access protocols supported on the device.
      * 
      */
-    @InputImport(name="supportedAccessProtocols", required=true)
+    @Import(name="supportedAccessProtocols", required=true)
       private final List<String> supportedAccessProtocols;
 
     public List<String> getSupportedAccessProtocols() {
@@ -65,7 +65,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * User name for the share.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

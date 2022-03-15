@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudRunServiceResponse {
     /**
      * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
@@ -25,11 +25,11 @@ public final class CloudRunServiceResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudRunServiceResponse(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("service") String service) {
         this.path = path;
         this.region = region;
         this.service = service;

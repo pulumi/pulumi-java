@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataAccessOptionsResponse {
     private final String logMode;
 
-    @OutputCustomType.Constructor
-    private DataAccessOptionsResponse(@OutputCustomType.Parameter("logMode") String logMode) {
+    @CustomType.Constructor
+    private DataAccessOptionsResponse(@CustomType.Parameter("logMode") String logMode) {
         this.logMode = logMode;
     }
 

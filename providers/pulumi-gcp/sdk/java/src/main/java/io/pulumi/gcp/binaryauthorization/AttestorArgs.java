@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNoteArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="attestationAuthorityNote", required=true)
+    @Import(name="attestationAuthorityNote", required=true)
       private final Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
 
     public Output<AttestorAttestationAuthorityNoteArgs> getAttestationAuthorityNote() {
@@ -32,7 +32,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * displayed in chooser dialogs.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class AttestorArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

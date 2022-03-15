@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.VirtualMachineConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineResponse {
     /**
      * The unique identifier of the Managed Compute Engine instance.
@@ -26,11 +26,11 @@ public final class VirtualMachineResponse {
      */
     private final VirtualMachineConfigResponse virtualMachineConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineResponse(
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("instanceName") String instanceName,
-        @OutputCustomType.Parameter("virtualMachineConfig") VirtualMachineConfigResponse virtualMachineConfig) {
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("instanceName") String instanceName,
+        @CustomType.Parameter("virtualMachineConfig") VirtualMachineConfigResponse virtualMachineConfig) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.virtualMachineConfig = virtualMachineConfig;

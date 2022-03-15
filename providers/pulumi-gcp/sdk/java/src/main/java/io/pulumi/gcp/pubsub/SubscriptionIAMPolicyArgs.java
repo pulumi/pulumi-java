@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -31,7 +31,7 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -42,7 +42,7 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
      * The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    @InputImport(name="subscription", required=true)
+    @Import(name="subscription", required=true)
       private final Output<String> subscription;
 
     public Output<String> getSubscription() {

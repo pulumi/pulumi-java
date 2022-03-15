@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.enums.RuntimeVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
     public Output<Integer> getCpu() {
@@ -37,7 +37,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * Collection of environment variables
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -48,7 +48,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * JVM parameter
      * 
      */
-    @InputImport(name="jvmOptions")
+    @Import(name="jvmOptions")
       private final @Nullable Output<String> jvmOptions;
 
     public Output<String> getJvmOptions() {
@@ -59,7 +59,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
      * 
      */
-    @InputImport(name="memoryInGB")
+    @Import(name="memoryInGB")
       private final @Nullable Output<Integer> memoryInGB;
 
     public Output<Integer> getMemoryInGB() {
@@ -70,7 +70,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * The path to the .NET executable relative to zip root
      * 
      */
-    @InputImport(name="netCoreMainEntryPath")
+    @Import(name="netCoreMainEntryPath")
       private final @Nullable Output<String> netCoreMainEntryPath;
 
     public Output<String> getNetCoreMainEntryPath() {
@@ -81,7 +81,7 @@ public final class DeploymentSettingsArgs extends io.pulumi.resources.ResourceAr
      * Runtime version
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
 
     public Output<Either<String,RuntimeVersion>> getRuntimeVersion() {

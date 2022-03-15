@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7", "dockerhub.io/google_containers/hyperkube:v1.0.7"]
      * 
      */
-    @InputImport(name="names", required=true)
+    @Import(name="names", required=true)
       private final Output<List<String>> names;
 
     public Output<List<String>> getNames() {
@@ -35,7 +35,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the image in bytes.
      * 
      */
-    @InputImport(name="sizeBytes")
+    @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
     public Output<Integer> getSizeBytes() {

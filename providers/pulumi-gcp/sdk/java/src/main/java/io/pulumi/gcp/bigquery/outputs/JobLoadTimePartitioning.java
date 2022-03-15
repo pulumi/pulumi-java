@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobLoadTimePartitioning {
     /**
      * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
@@ -30,11 +30,11 @@ public final class JobLoadTimePartitioning {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobLoadTimePartitioning(
-        @OutputCustomType.Parameter("expirationMs") @Nullable String expirationMs,
-        @OutputCustomType.Parameter("field") @Nullable String field,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expirationMs") @Nullable String expirationMs,
+        @CustomType.Parameter("field") @Nullable String field,
+        @CustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.type = type;

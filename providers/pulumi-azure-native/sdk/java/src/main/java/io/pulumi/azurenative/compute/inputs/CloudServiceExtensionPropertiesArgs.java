@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultAndSecretReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
     public Output<Boolean> getAutoUpgradeMinorVersion() {
@@ -40,7 +40,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * it is up to handler implementation whether to re-run it or not
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -51,14 +51,14 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * Protected settings for the extension which are encrypted before sent to the role instance.
      * 
      */
-    @InputImport(name="protectedSettings")
+    @Import(name="protectedSettings")
       private final @Nullable Output<String> protectedSettings;
 
     public Output<String> getProtectedSettings() {
         return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
     }
 
-    @InputImport(name="protectedSettingsFromKeyVault")
+    @Import(name="protectedSettingsFromKeyVault")
       private final @Nullable Output<CloudServiceVaultAndSecretReferenceArgs> protectedSettingsFromKeyVault;
 
     public Output<CloudServiceVaultAndSecretReferenceArgs> getProtectedSettingsFromKeyVault() {
@@ -69,7 +69,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * The name of the extension handler publisher.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -80,7 +80,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.
      * 
      */
-    @InputImport(name="rolesAppliedTo")
+    @Import(name="rolesAppliedTo")
       private final @Nullable Output<List<String>> rolesAppliedTo;
 
     public Output<List<String>> getRolesAppliedTo() {
@@ -91,7 +91,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<String> settings;
 
     public Output<String> getSettings() {
@@ -102,7 +102,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * Specifies the type of the extension.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -113,7 +113,7 @@ public final class CloudServiceExtensionPropertiesArgs extends io.pulumi.resourc
      * Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.
      * 
      */
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
     public Output<String> getTypeHandlerVersion() {

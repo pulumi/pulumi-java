@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IdentityForCmkArgs extends io.pulumi.resources.ResourceArgs {
      * The ArmId of the user assigned identity that will be used to access the customer managed key vault
      * 
      */
-    @InputImport(name="userAssignedIdentity", required=true)
+    @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;
 
     public Output<String> getUserAssignedIdentity() {

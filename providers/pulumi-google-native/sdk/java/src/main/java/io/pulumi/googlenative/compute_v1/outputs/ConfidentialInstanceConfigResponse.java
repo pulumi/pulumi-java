@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfidentialInstanceConfigResponse {
     /**
      * Defines whether the instance should have confidential compute enabled.
@@ -15,8 +15,8 @@ public final class ConfidentialInstanceConfigResponse {
      */
     private final Boolean enableConfidentialCompute;
 
-    @OutputCustomType.Constructor
-    private ConfidentialInstanceConfigResponse(@OutputCustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
+    @CustomType.Constructor
+    private ConfidentialInstanceConfigResponse(@CustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 

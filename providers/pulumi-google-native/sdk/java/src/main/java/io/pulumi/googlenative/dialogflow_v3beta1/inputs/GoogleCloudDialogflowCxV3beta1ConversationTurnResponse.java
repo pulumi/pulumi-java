@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
      * The user input.
      * 
      */
-    @InputImport(name="userInput", required=true)
+    @Import(name="userInput", required=true)
       private final GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse userInput;
 
     public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse getUserInput() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnResponse extend
      * The virtual agent output.
      * 
      */
-    @InputImport(name="virtualAgentOutput", required=true)
+    @Import(name="virtualAgentOutput", required=true)
       private final GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
     public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {

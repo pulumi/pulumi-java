@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * The Name of the alert rule template used to create this rule.
      * 
      */
-    @InputImport(name="alertRuleTemplateName", required=true)
+    @Import(name="alertRuleTemplateName", required=true)
       private final Output<String> alertRuleTemplateName;
 
     public Output<String> getAlertRuleTemplateName() {
@@ -30,7 +30,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Determines whether this alert rule is enabled or disabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -42,7 +42,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'Fusion'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -53,7 +53,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Alert rule ID
      * 
      */
-    @InputImport(name="ruleId")
+    @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -75,7 +75,7 @@ public final class FusionAlertRuleArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

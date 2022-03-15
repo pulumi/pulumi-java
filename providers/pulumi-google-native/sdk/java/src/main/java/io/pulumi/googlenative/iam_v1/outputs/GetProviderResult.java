@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.iam_v1.outputs.AwsResponse;
 import io.pulumi.googlenative.iam_v1.outputs.OidcResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProviderResult {
     /**
      * [A Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credential are accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ```"'admins' in google.groups"```
@@ -59,17 +59,17 @@ public final class GetProviderResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProviderResult(
-        @OutputCustomType.Parameter("attributeCondition") String attributeCondition,
-        @OutputCustomType.Parameter("attributeMapping") Map<String,String> attributeMapping,
-        @OutputCustomType.Parameter("aws") AwsResponse aws,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("oidc") OidcResponse oidc,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("attributeCondition") String attributeCondition,
+        @CustomType.Parameter("attributeMapping") Map<String,String> attributeMapping,
+        @CustomType.Parameter("aws") AwsResponse aws,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("oidc") OidcResponse oidc,
+        @CustomType.Parameter("state") String state) {
         this.attributeCondition = attributeCondition;
         this.attributeMapping = attributeMapping;
         this.aws = aws;

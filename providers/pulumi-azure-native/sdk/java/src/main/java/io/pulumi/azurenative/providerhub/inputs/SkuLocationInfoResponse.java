@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuZoneDetailResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class SkuLocationInfoResponse extends io.pulumi.resources.InvokeArg
 
     public static final SkuLocationInfoResponse Empty = new SkuLocationInfoResponse();
 
-    @InputImport(name="extendedLocations")
+    @Import(name="extendedLocations")
       private final @Nullable List<String> extendedLocations;
 
     public List<String> getExtendedLocations() {
         return this.extendedLocations == null ? List.of() : this.extendedLocations;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
-    @InputImport(name="zoneDetails")
+    @Import(name="zoneDetails")
       private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
 
     public List<SkuZoneDetailResponse> getZoneDetails() {
         return this.zoneDetails == null ? List.of() : this.zoneDetails;
     }
 
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable List<String> zones;
 
     public List<String> getZones() {

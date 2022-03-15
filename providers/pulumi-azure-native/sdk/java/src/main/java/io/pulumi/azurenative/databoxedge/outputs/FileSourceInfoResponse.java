@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileSourceInfoResponse {
     /**
      * File share ID.
@@ -15,8 +15,8 @@ public final class FileSourceInfoResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor
-    private FileSourceInfoResponse(@OutputCustomType.Parameter("shareId") String shareId) {
+    @CustomType.Constructor
+    private FileSourceInfoResponse(@CustomType.Parameter("shareId") String shareId) {
         this.shareId = shareId;
     }
 

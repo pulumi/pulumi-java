@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlobalParameterSpecificationResponse {
     /**
      * Global Parameter type.
@@ -21,10 +21,10 @@ public final class GlobalParameterSpecificationResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalParameterSpecificationResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") Object value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") Object value) {
         this.type = type;
         this.value = value;
     }

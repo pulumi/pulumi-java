@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResponse {
     /**
      * A list of IP configurations of the network interface.
@@ -34,12 +34,12 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String vmSwitchType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResponse(
-        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("macAddress") @Nullable String macAddress,
-        @OutputCustomType.Parameter("networkInterfaceName") @Nullable String networkInterfaceName,
-        @OutputCustomType.Parameter("vmSwitchType") @Nullable String vmSwitchType) {
+        @CustomType.Parameter("ipConfigurations") @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("macAddress") @Nullable String macAddress,
+        @CustomType.Parameter("networkInterfaceName") @Nullable String networkInterfaceName,
+        @CustomType.Parameter("vmSwitchType") @Nullable String vmSwitchType) {
         this.ipConfigurations = ipConfigurations;
         this.macAddress = macAddress;
         this.networkInterfaceName = networkInterfaceName;

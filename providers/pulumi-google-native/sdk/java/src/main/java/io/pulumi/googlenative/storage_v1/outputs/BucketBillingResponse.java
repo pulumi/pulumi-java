@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketBillingResponse {
     /**
      * When set to true, Requester Pays is enabled for this bucket.
@@ -15,8 +15,8 @@ public final class BucketBillingResponse {
      */
     private final Boolean requesterPays;
 
-    @OutputCustomType.Constructor
-    private BucketBillingResponse(@OutputCustomType.Parameter("requesterPays") Boolean requesterPays) {
+    @CustomType.Constructor
+    private BucketBillingResponse(@CustomType.Parameter("requesterPays") Boolean requesterPays) {
         this.requesterPays = requesterPays;
     }
 

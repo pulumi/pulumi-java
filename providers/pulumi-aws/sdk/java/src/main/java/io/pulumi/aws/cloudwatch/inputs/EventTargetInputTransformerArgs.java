@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
      * * The keys can't start with "AWS".
      * 
      */
-    @InputImport(name="inputPaths")
+    @Import(name="inputPaths")
       private final @Nullable Output<Map<String,String>> inputPaths;
 
     public Output<Map<String,String>> getInputPaths() {
@@ -33,7 +33,7 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
      * Template to customize data sent to the target. Must be valid JSON. To send a string value, the string value must include double quotes. Values must be escaped for both JSON and the provider, e.g., `"\"Your string goes here.\\nA new line.\""`
      * 
      */
-    @InputImport(name="inputTemplate", required=true)
+    @Import(name="inputTemplate", required=true)
       private final Output<String> inputTemplate;
 
     public Output<String> getInputTemplate() {

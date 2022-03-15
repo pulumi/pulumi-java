@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryPubsubConfig {
     private final String messageFormat;
     private final String serviceAccountEmail;
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryPubsubConfig(
-        @OutputCustomType.Parameter("messageFormat") String messageFormat,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("messageFormat") String messageFormat,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.serviceAccountEmail = serviceAccountEmail;
         this.topic = topic;

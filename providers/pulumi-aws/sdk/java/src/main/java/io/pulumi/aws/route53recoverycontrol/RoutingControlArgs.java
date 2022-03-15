@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the cluster in which this routing control will reside.
      * 
      */
-    @InputImport(name="clusterArn", required=true)
+    @Import(name="clusterArn", required=true)
       private final Output<String> clusterArn;
 
     public Output<String> getClusterArn() {
@@ -29,7 +29,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the control panel in which this routing control will reside.
      * 
      */
-    @InputImport(name="controlPanelArn")
+    @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
     public Output<String> getControlPanelArn() {
@@ -40,7 +40,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
      * The name describing the routing control.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.InviteAccepterArgs;
 import io.pulumi.aws.securityhub.inputs.InviteAccepterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
      * The ID of the invitation.
      * 
      */
-    @OutputExport(name="invitationId", type=String.class, parameters={})
+    @Export(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
     /**
@@ -48,7 +48,7 @@ public class InviteAccepter extends io.pulumi.resources.CustomResource {
      * The account ID of the master Security Hub account whose invitation you're accepting.
      * 
      */
-    @OutputExport(name="masterId", type=String.class, parameters={})
+    @Export(name="masterId", type=String.class, parameters={})
     private Output<String> masterId;
 
     /**

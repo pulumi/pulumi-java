@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableTimePartitioning {
     /**
      * Number of milliseconds for which to keep the
@@ -39,12 +39,12 @@ public final class TableTimePartitioning {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableTimePartitioning(
-        @OutputCustomType.Parameter("expirationMs") @Nullable Integer expirationMs,
-        @OutputCustomType.Parameter("field") @Nullable String field,
-        @OutputCustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("expirationMs") @Nullable Integer expirationMs,
+        @CustomType.Parameter("field") @Nullable String field,
+        @CustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
+        @CustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;

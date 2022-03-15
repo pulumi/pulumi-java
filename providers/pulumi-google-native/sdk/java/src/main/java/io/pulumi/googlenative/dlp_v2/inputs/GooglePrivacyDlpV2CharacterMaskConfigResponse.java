@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharsToIgnoreResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
      * 
      */
-    @InputImport(name="charactersToIgnore", required=true)
+    @Import(name="charactersToIgnore", required=true)
       private final List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
 
     public List<GooglePrivacyDlpV2CharsToIgnoreResponse> getCharactersToIgnore() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * Character to use to mask the sensitive values—for example, `*` for an alphabetic string such as a name, or `0` for a numeric string such as ZIP code or credit card number. This string must have a length of 1. If not supplied, this value defaults to `*` for strings, and `0` for digits.
      * 
      */
-    @InputImport(name="maskingCharacter", required=true)
+    @Import(name="maskingCharacter", required=true)
       private final String maskingCharacter;
 
     public String getMaskingCharacter() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * Number of characters to mask. If not set, all matching chars will be masked. Skipped characters do not count towards this tally.
      * 
      */
-    @InputImport(name="numberToMask", required=true)
+    @Import(name="numberToMask", required=true)
       private final Integer numberToMask;
 
     public Integer getNumberToMask() {
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * Mask characters in reverse order. For example, if `masking_character` is `0`, `number_to_mask` is `14`, and `reverse_order` is `false`, then the input string `1234-5678-9012-3456` is masked as `00000000000000-3456`. If `masking_character` is `*`, `number_to_mask` is `3`, and `reverse_order` is `true`, then the string `12345` is masked as `12***`.
      * 
      */
-    @InputImport(name="reverseOrder", required=true)
+    @Import(name="reverseOrder", required=true)
       private final Boolean reverseOrder;
 
     public Boolean getReverseOrder() {

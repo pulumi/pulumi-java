@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowOperatorPropertiesKeys;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
 
     public static final FlowTaskPropertiesObjectArgs Empty = new FlowTaskPropertiesObjectArgs();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<FlowOperatorPropertiesKeys> key;
 
     public Output<FlowOperatorPropertiesKeys> getKey() {
         return this.key;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

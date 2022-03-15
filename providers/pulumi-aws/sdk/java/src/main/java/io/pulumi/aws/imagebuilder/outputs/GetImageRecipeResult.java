@@ -5,14 +5,14 @@ package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetImageRecipeBlockDeviceMapping;
 import io.pulumi.aws.imagebuilder.outputs.GetImageRecipeComponent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageRecipeResult {
     private final String arn;
     /**
@@ -81,22 +81,22 @@ public final class GetImageRecipeResult {
      */
     private final String workingDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageRecipeResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("blockDeviceMappings") List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings,
-        @OutputCustomType.Parameter("components") List<GetImageRecipeComponent> components,
-        @OutputCustomType.Parameter("dateCreated") String dateCreated,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("parentImage") String parentImage,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("userDataBase64") String userDataBase64,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("workingDirectory") String workingDirectory) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("blockDeviceMappings") List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("components") List<GetImageRecipeComponent> components,
+        @CustomType.Parameter("dateCreated") String dateCreated,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("parentImage") String parentImage,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("userDataBase64") String userDataBase64,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("workingDirectory") String workingDirectory) {
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;
         this.components = components;

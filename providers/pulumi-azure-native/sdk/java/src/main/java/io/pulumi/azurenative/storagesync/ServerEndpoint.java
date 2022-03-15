@@ -10,7 +10,7 @@ import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallStatusRespo
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncStatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Cloud Tiering.
      * 
      */
-    @OutputExport(name="cloudTiering", type=String.class, parameters={})
+    @Export(name="cloudTiering", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudTiering;
 
     /**
@@ -52,7 +52,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Cloud tiering status. Only populated if cloud tiering is enabled.
      * 
      */
-    @OutputExport(name="cloudTieringStatus", type=ServerEndpointCloudTieringStatusResponse.class, parameters={})
+    @Export(name="cloudTieringStatus", type=ServerEndpointCloudTieringStatusResponse.class, parameters={})
     private Output<ServerEndpointCloudTieringStatusResponse> cloudTieringStatus;
 
     /**
@@ -66,7 +66,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Friendly Name
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -80,7 +80,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Policy for how namespace and files are recalled during FastDr.
      * 
      */
-    @OutputExport(name="initialDownloadPolicy", type=String.class, parameters={})
+    @Export(name="initialDownloadPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> initialDownloadPolicy;
 
     /**
@@ -94,7 +94,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Resource Last Operation Name
      * 
      */
-    @OutputExport(name="lastOperationName", type=String.class, parameters={})
+    @Export(name="lastOperationName", type=String.class, parameters={})
     private Output<String> lastOperationName;
 
     /**
@@ -108,7 +108,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * ServerEndpoint lastWorkflowId
      * 
      */
-    @OutputExport(name="lastWorkflowId", type=String.class, parameters={})
+    @Export(name="lastWorkflowId", type=String.class, parameters={})
     private Output<String> lastWorkflowId;
 
     /**
@@ -122,7 +122,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Policy for enabling follow-the-sun business models: link local cache to cloud behavior to pre-populate before local access.
      * 
      */
-    @OutputExport(name="localCacheMode", type=String.class, parameters={})
+    @Export(name="localCacheMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> localCacheMode;
 
     /**
@@ -136,7 +136,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Offline data transfer
      * 
      */
-    @OutputExport(name="offlineDataTransfer", type=String.class, parameters={})
+    @Export(name="offlineDataTransfer", type=String.class, parameters={})
     private Output</* @Nullable */ String> offlineDataTransfer;
 
     /**
@@ -164,7 +164,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Offline data transfer share name
      * 
      */
-    @OutputExport(name="offlineDataTransferShareName", type=String.class, parameters={})
+    @Export(name="offlineDataTransferShareName", type=String.class, parameters={})
     private Output</* @Nullable */ String> offlineDataTransferShareName;
 
     /**
@@ -178,7 +178,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Offline data transfer storage account resource ID
      * 
      */
-    @OutputExport(name="offlineDataTransferStorageAccountResourceId", type=String.class, parameters={})
+    @Export(name="offlineDataTransferStorageAccountResourceId", type=String.class, parameters={})
     private Output<String> offlineDataTransferStorageAccountResourceId;
 
     /**
@@ -192,7 +192,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Offline data transfer storage account tenant ID
      * 
      */
-    @OutputExport(name="offlineDataTransferStorageAccountTenantId", type=String.class, parameters={})
+    @Export(name="offlineDataTransferStorageAccountTenantId", type=String.class, parameters={})
     private Output<String> offlineDataTransferStorageAccountTenantId;
 
     /**
@@ -206,7 +206,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * ServerEndpoint Provisioning State
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -220,7 +220,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Recall status. Only populated if cloud tiering is enabled.
      * 
      */
-    @OutputExport(name="recallStatus", type=ServerEndpointRecallStatusResponse.class, parameters={})
+    @Export(name="recallStatus", type=ServerEndpointRecallStatusResponse.class, parameters={})
     private Output<ServerEndpointRecallStatusResponse> recallStatus;
 
     /**
@@ -234,7 +234,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Server Local path.
      * 
      */
-    @OutputExport(name="serverLocalPath", type=String.class, parameters={})
+    @Export(name="serverLocalPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverLocalPath;
 
     /**
@@ -248,7 +248,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Server Resource Id.
      * 
      */
-    @OutputExport(name="serverResourceId", type=String.class, parameters={})
+    @Export(name="serverResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverResourceId;
 
     /**
@@ -262,7 +262,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Server Endpoint sync status
      * 
      */
-    @OutputExport(name="syncStatus", type=ServerEndpointSyncStatusResponse.class, parameters={})
+    @Export(name="syncStatus", type=ServerEndpointSyncStatusResponse.class, parameters={})
     private Output<ServerEndpointSyncStatusResponse> syncStatus;
 
     /**
@@ -276,7 +276,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Tier files older than days.
      * 
      */
-    @OutputExport(name="tierFilesOlderThanDays", type=Integer.class, parameters={})
+    @Export(name="tierFilesOlderThanDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tierFilesOlderThanDays;
 
     /**
@@ -290,7 +290,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -304,7 +304,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * Level of free space to be maintained by Cloud Tiering if it is enabled.
      * 
      */
-    @OutputExport(name="volumeFreeSpacePercent", type=Integer.class, parameters={})
+    @Export(name="volumeFreeSpacePercent", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> volumeFreeSpacePercent;
 
     /**

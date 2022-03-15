@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization;
 
 import io.pulumi.azurenative.authorization.inputs.PermissionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Role definition assignable scopes.
      * 
      */
-    @InputImport(name="assignableScopes")
+    @Import(name="assignableScopes")
       private final @Nullable Output<List<String>> assignableScopes;
 
     public Output<List<String>> getAssignableScopes() {
@@ -31,7 +31,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The role definition description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Role definition permissions.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<PermissionArgs>> permissions;
 
     public Output<List<PermissionArgs>> getPermissions() {
@@ -53,7 +53,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the role definition.
      * 
      */
-    @InputImport(name="roleDefinitionId")
+    @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
@@ -64,7 +64,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The role name.
      * 
      */
-    @InputImport(name="roleName")
+    @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
@@ -75,7 +75,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The role type.
      * 
      */
-    @InputImport(name="roleType")
+    @Import(name="roleType")
       private final @Nullable Output<String> roleType;
 
     public Output<String> getRoleType() {
@@ -86,7 +86,7 @@ public final class RoleDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of the role definition.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

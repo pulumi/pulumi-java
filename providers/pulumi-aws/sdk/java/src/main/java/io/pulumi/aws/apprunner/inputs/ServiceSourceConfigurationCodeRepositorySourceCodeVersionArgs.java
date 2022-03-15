@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs
      * The type of version identifier. For a git-based repository, branches represent versions. Valid values: `BRANCH`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -28,7 +28,7 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersionArgs
      * A source code version. For a git-based repository, a branch name maps to a specific version. App Runner uses the most recent commit to the branch.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

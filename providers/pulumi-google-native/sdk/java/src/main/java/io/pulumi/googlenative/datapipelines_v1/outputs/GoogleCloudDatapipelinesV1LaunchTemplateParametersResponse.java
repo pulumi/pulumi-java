@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
     /**
      * The runtime environment for the job.
@@ -38,13 +38,13 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
      */
     private final Boolean update;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(
-        @OutputCustomType.Parameter("environment") GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
-        @OutputCustomType.Parameter("jobName") String jobName,
-        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
-        @OutputCustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
-        @OutputCustomType.Parameter("update") Boolean update) {
+        @CustomType.Parameter("environment") GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
+        @CustomType.Parameter("jobName") String jobName,
+        @CustomType.Parameter("parameters") Map<String,String> parameters,
+        @CustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
+        @CustomType.Parameter("update") Boolean update) {
         this.environment = environment;
         this.jobName = jobName;
         this.parameters = parameters;

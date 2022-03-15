@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobFilterDetailsResponse {
     /**
      * List of full path of the blobs to be transferred.
@@ -27,11 +27,11 @@ public final class BlobFilterDetailsResponse {
      */
     private final @Nullable List<String> containerList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobFilterDetailsResponse(
-        @OutputCustomType.Parameter("blobPathList") @Nullable List<String> blobPathList,
-        @OutputCustomType.Parameter("blobPrefixList") @Nullable List<String> blobPrefixList,
-        @OutputCustomType.Parameter("containerList") @Nullable List<String> containerList) {
+        @CustomType.Parameter("blobPathList") @Nullable List<String> blobPathList,
+        @CustomType.Parameter("blobPrefixList") @Nullable List<String> blobPrefixList,
+        @CustomType.Parameter("containerList") @Nullable List<String> containerList) {
         this.blobPathList = blobPathList;
         this.blobPrefixList = blobPrefixList;
         this.containerList = containerList;

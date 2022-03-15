@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata {
     /**
      * expiration date of service principal secret
@@ -27,11 +27,11 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      */
     private final @Nullable String parameterStoreRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(
-        @OutputCustomType.Parameter("expiryDate") @Nullable String expiryDate,
-        @OutputCustomType.Parameter("parameterNameInStore") @Nullable String parameterNameInStore,
-        @OutputCustomType.Parameter("parameterStoreRegion") @Nullable String parameterStoreRegion) {
+        @CustomType.Parameter("expiryDate") @Nullable String expiryDate,
+        @CustomType.Parameter("parameterNameInStore") @Nullable String parameterNameInStore,
+        @CustomType.Parameter("parameterStoreRegion") @Nullable String parameterStoreRegion) {
         this.expiryDate = expiryDate;
         this.parameterNameInStore = parameterNameInStore;
         this.parameterStoreRegion = parameterStoreRegion;

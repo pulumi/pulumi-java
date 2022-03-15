@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionColumnName")
+    @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
 
     public Output<Object> getPartitionColumnName() {
@@ -34,7 +34,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionLowerBound")
+    @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
 
     public Output<Object> getPartitionLowerBound() {
@@ -45,7 +45,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * Names of the physical partitions of AmazonRdsForOracle table.
      * 
      */
-    @InputImport(name="partitionNames")
+    @Import(name="partitionNames")
       private final @Nullable Output<List<Object>> partitionNames;
 
     public Output<List<Object>> getPartitionNames() {
@@ -56,7 +56,7 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionUpperBound")
+    @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;
 
     public Output<Object> getPartitionUpperBound() {

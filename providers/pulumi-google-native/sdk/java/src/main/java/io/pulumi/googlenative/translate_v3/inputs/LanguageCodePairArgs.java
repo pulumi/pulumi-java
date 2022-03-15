@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
      * The BCP-47 language code of the input text, for example, "en-US". Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
-    @InputImport(name="sourceLanguageCode", required=true)
+    @Import(name="sourceLanguageCode", required=true)
       private final Output<String> sourceLanguageCode;
 
     public Output<String> getSourceLanguageCode() {
@@ -32,7 +32,7 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
      * The BCP-47 language code for translation output, for example, "zh-CN". Expected to be an exact match for GlossaryTerm.language_code.
      * 
      */
-    @InputImport(name="targetLanguageCode", required=true)
+    @Import(name="targetLanguageCode", required=true)
       private final Output<String> targetLanguageCode;
 
     public Output<String> getTargetLanguageCode() {

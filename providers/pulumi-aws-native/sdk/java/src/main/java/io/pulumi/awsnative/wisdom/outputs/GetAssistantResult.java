@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.wisdom.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssistantResult {
     private final @Nullable String assistantArn;
     private final @Nullable String assistantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssistantResult(
-        @OutputCustomType.Parameter("assistantArn") @Nullable String assistantArn,
-        @OutputCustomType.Parameter("assistantId") @Nullable String assistantId) {
+        @CustomType.Parameter("assistantArn") @Nullable String assistantArn,
+        @CustomType.Parameter("assistantId") @Nullable String assistantId) {
         this.assistantArn = assistantArn;
         this.assistantId = assistantId;
     }

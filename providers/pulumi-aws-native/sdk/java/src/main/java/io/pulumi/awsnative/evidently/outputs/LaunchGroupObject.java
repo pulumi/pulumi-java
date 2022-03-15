@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchGroupObject {
     private final @Nullable String description;
     private final String feature;
     private final String groupName;
     private final String variation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchGroupObject(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("feature") String feature,
-        @OutputCustomType.Parameter("groupName") String groupName,
-        @OutputCustomType.Parameter("variation") String variation) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("feature") String feature,
+        @CustomType.Parameter("groupName") String groupName,
+        @CustomType.Parameter("variation") String variation) {
         this.description = description;
         this.feature = feature;
         this.groupName = groupName;

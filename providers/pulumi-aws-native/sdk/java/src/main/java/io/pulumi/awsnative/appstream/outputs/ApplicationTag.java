@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationTag {
     private final String tagKey;
     private final String tagValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationTag(
-        @OutputCustomType.Parameter("tagKey") String tagKey,
-        @OutputCustomType.Parameter("tagValue") String tagValue) {
+        @CustomType.Parameter("tagKey") String tagKey,
+        @CustomType.Parameter("tagValue") String tagValue) {
         this.tagKey = tagKey;
         this.tagValue = tagValue;
     }

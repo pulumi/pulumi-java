@@ -5,13 +5,13 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeComputePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeSsisPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIntegrationRuntimeResponse {
     /**
      * The compute resource for managed integration runtime.
@@ -40,13 +40,13 @@ public final class ManagedIntegrationRuntimeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIntegrationRuntimeResponse(
-        @OutputCustomType.Parameter("computeProperties") @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("ssisProperties") @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("computeProperties") @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("ssisProperties") @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.computeProperties = computeProperties;
         this.description = description;
         this.ssisProperties = ssisProperties;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CIFSMountConfigurationResponse {
     /**
      * These are 'net use' options in Windows and 'mount' options in Linux.
@@ -25,13 +25,13 @@ public final class CIFSMountConfigurationResponse {
     private final String source;
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CIFSMountConfigurationResponse(
-        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("username") String username) {
         this.mountOptions = mountOptions;
         this.password = password;
         this.relativeMountPath = relativeMountPath;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.PolicyContentFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -31,7 +31,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Format of the policyContent.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Either<String,PolicyContentFormat>> format;
 
     public Output<Either<String,PolicyContentFormat>> getFormat() {
@@ -42,7 +42,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Operation identifier within an API. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="operationId", required=true)
+    @Import(name="operationId", required=true)
       private final Output<String> operationId;
 
     public Output<String> getOperationId() {
@@ -53,7 +53,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The identifier of the Policy.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -64,7 +64,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -86,7 +86,7 @@ public final class ApiOperationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Contents of the Policy as defined by the format.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

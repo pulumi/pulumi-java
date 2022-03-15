@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.GroupArgs;
@@ -43,7 +43,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * purposes.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -59,7 +59,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * belong to this group.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -76,7 +76,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups that are clusters.
      * 
      */
-    @OutputExport(name="isCluster", type=Boolean.class, parameters={})
+    @Export(name="isCluster", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isCluster;
 
     /**
@@ -92,7 +92,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups with no parent, parentName is the empty string, "".
      * 
      */
-    @OutputExport(name="parentName", type=String.class, parameters={})
+    @Export(name="parentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentName;
 
     /**
@@ -125,7 +125,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firestore_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleFirestoreAdminV1IndexFieldResponse {
     /**
      * Indicates that this field supports operations on `array_value`s.
@@ -25,11 +25,11 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse {
      */
     private final String order;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleFirestoreAdminV1IndexFieldResponse(
-        @OutputCustomType.Parameter("arrayConfig") String arrayConfig,
-        @OutputCustomType.Parameter("fieldPath") String fieldPath,
-        @OutputCustomType.Parameter("order") String order) {
+        @CustomType.Parameter("arrayConfig") String arrayConfig,
+        @CustomType.Parameter("fieldPath") String fieldPath,
+        @CustomType.Parameter("order") String order) {
         this.arrayConfig = arrayConfig;
         this.fieldPath = fieldPath;
         this.order = order;

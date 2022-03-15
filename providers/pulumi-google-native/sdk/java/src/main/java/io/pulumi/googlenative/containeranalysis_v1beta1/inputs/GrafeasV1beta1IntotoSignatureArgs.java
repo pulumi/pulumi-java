@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class GrafeasV1beta1IntotoSignatureArgs extends io.pulumi.resources
 
     public static final GrafeasV1beta1IntotoSignatureArgs Empty = new GrafeasV1beta1IntotoSignatureArgs();
 
-    @InputImport(name="keyid")
+    @Import(name="keyid")
       private final @Nullable Output<String> keyid;
 
     public Output<String> getKeyid() {
         return this.keyid == null ? Output.empty() : this.keyid;
     }
 
-    @InputImport(name="sig")
+    @Import(name="sig")
       private final @Nullable Output<String> sig;
 
     public Output<String> getSig() {

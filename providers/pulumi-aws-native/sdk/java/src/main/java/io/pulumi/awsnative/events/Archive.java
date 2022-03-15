@@ -6,7 +6,7 @@ package io.pulumi.awsnative.events;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.events.ArchiveArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -19,37 +19,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:events:Archive")
 public class Archive extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="archiveName", type=String.class, parameters={})
+    @Export(name="archiveName", type=String.class, parameters={})
     private Output<String> archiveName;
 
     public Output<String> getArchiveName() {
         return this.archiveName;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="eventPattern", type=Object.class, parameters={})
+    @Export(name="eventPattern", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> eventPattern;
 
     public Output</* @Nullable */ Object> getEventPattern() {
         return this.eventPattern;
     }
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     public Output</* @Nullable */ Integer> getRetentionDays() {
         return this.retentionDays;
     }
-    @OutputExport(name="sourceArn", type=String.class, parameters={})
+    @Export(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;
 
     public Output<String> getSourceArn() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigEventTypesItem;
 import io.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigPayloadFormat;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * Event types for which a notification is desired. If empty, send notifications for all event types.
      * 
      */
-    @InputImport(name="eventTypes")
+    @Import(name="eventTypes")
       private final @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
 
     public Output<List<NotificationConfigEventTypesItem>> getEventTypes() {
@@ -36,7 +36,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The desired format of the notification message payloads.
      * 
      */
-    @InputImport(name="payloadFormat", required=true)
+    @Import(name="payloadFormat", required=true)
       private final Output<NotificationConfigPayloadFormat> payloadFormat;
 
     public Output<NotificationConfigPayloadFormat> getPayloadFormat() {
@@ -47,7 +47,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The `Topic.name` of the Pub/Sub topic to which to publish notifications. Must be of the format: `projects/{project}/topics/{topic}`. Not matching this format results in an INVALID_ARGUMENT error.
      * 
      */
-    @InputImport(name="pubsubTopic", required=true)
+    @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {

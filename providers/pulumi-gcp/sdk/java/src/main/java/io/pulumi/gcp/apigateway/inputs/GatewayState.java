@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
      * 
      */
-    @InputImport(name="apiConfig")
+    @Import(name="apiConfig")
       private final @Nullable Output<String> apiConfig;
 
     public Output<String> getApiConfig() {
@@ -31,7 +31,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.
      * 
      */
-    @InputImport(name="defaultHostname")
+    @Import(name="defaultHostname")
       private final @Nullable Output<String> defaultHostname;
 
     public Output<String> getDefaultHostname() {
@@ -42,7 +42,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * A user-visible name for the API.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -53,7 +53,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
      * 
      */
-    @InputImport(name="gatewayId")
+    @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -64,7 +64,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -75,7 +75,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -98,7 +98,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The region of the gateway for the API.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

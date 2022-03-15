@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetGroupHealthCheck {
     /**
      * Boolean to enable / disable `stickiness`. Default is `true`.
@@ -59,17 +59,17 @@ public final class TargetGroupHealthCheck {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetGroupHealthCheck(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("matcher") @Nullable String matcher,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("matcher") @Nullable String matcher,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.enabled = enabled;
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;

@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.certificatemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountExpiryEventsConfiguration {
     private final @Nullable Integer daysBeforeExpiry;
 
-    @OutputCustomType.Constructor
-    private AccountExpiryEventsConfiguration(@OutputCustomType.Parameter("daysBeforeExpiry") @Nullable Integer daysBeforeExpiry) {
+    @CustomType.Constructor
+    private AccountExpiryEventsConfiguration(@CustomType.Parameter("daysBeforeExpiry") @Nullable Integer daysBeforeExpiry) {
         this.daysBeforeExpiry = daysBeforeExpiry;
     }
 

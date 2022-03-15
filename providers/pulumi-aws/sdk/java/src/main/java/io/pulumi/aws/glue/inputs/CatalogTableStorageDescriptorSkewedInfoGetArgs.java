@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
      * List of names of columns that contain skewed values.
      * 
      */
-    @InputImport(name="skewedColumnNames")
+    @Import(name="skewedColumnNames")
       private final @Nullable Output<List<String>> skewedColumnNames;
 
     public Output<List<String>> getSkewedColumnNames() {
@@ -31,7 +31,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
      * List of values that appear so frequently as to be considered skewed.
      * 
      */
-    @InputImport(name="skewedColumnValueLocationMaps")
+    @Import(name="skewedColumnValueLocationMaps")
       private final @Nullable Output<Map<String,String>> skewedColumnValueLocationMaps;
 
     public Output<Map<String,String>> getSkewedColumnValueLocationMaps() {
@@ -42,7 +42,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoGetArgs extends io.pul
      * Map of skewed values to the columns that contain them.
      * 
      */
-    @InputImport(name="skewedColumnValues")
+    @Import(name="skewedColumnValues")
       private final @Nullable Output<List<String>> skewedColumnValues;
 
     public Output<List<String>> getSkewedColumnValues() {

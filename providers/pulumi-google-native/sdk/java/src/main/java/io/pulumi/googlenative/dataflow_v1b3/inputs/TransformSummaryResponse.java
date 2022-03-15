@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * Transform-specific display data.
      * 
      */
-    @InputImport(name="displayData", required=true)
+    @Import(name="displayData", required=true)
       private final List<DisplayDataResponse> displayData;
 
     public List<DisplayDataResponse> getDisplayData() {
@@ -33,7 +33,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * User names for all collection inputs to this transform.
      * 
      */
-    @InputImport(name="inputCollectionName", required=true)
+    @Import(name="inputCollectionName", required=true)
       private final List<String> inputCollectionName;
 
     public List<String> getInputCollectionName() {
@@ -44,7 +44,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * Type of transform.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -55,7 +55,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * User provided name for this transform instance.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -66,7 +66,7 @@ public final class TransformSummaryResponse extends io.pulumi.resources.InvokeAr
      * User names for all collection outputs to this transform.
      * 
      */
-    @InputImport(name="outputCollectionName", required=true)
+    @Import(name="outputCollectionName", required=true)
       private final List<String> outputCollectionName;
 
     public List<String> getOutputCollectionName() {

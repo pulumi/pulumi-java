@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.mediaconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFlowVpcInterfaceResult {
     /**
      * IDs of the network interfaces created in customer's account by MediaConnect.
@@ -33,12 +33,12 @@ public final class GetFlowVpcInterfaceResult {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFlowVpcInterfaceResult(
-        @OutputCustomType.Parameter("networkInterfaceIds") @Nullable List<String> networkInterfaceIds,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("networkInterfaceIds") @Nullable List<String> networkInterfaceIds,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.networkInterfaceIds = networkInterfaceIds;
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;

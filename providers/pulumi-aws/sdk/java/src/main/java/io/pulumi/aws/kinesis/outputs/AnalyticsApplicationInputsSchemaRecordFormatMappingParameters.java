@@ -5,12 +5,12 @@ package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters {
     /**
      * Mapping information when the record format uses delimiters.
@@ -25,10 +25,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      */
     private final @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationInputsSchemaRecordFormatMappingParameters(
-        @OutputCustomType.Parameter("csv") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv csv,
-        @OutputCustomType.Parameter("json") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
+        @CustomType.Parameter("csv") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv csv,
+        @CustomType.Parameter("json") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
         this.csv = csv;
         this.json = json;
     }

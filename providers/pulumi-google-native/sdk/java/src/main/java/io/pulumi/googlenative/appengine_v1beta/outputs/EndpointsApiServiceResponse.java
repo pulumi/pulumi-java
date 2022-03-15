@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointsApiServiceResponse {
     /**
      * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
@@ -31,12 +31,12 @@ public final class EndpointsApiServiceResponse {
      */
     private final String rolloutStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointsApiServiceResponse(
-        @OutputCustomType.Parameter("configId") String configId,
-        @OutputCustomType.Parameter("disableTraceSampling") Boolean disableTraceSampling,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rolloutStrategy") String rolloutStrategy) {
+        @CustomType.Parameter("configId") String configId,
+        @CustomType.Parameter("disableTraceSampling") Boolean disableTraceSampling,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rolloutStrategy") String rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = name;

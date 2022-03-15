@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.VaultPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * The supported Azure location where the key vault should be created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the vault
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<VaultPropertiesArgs> properties;
 
     public Output<VaultPropertiesArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Resource Group to which the server belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * The tags that will be assigned to the key vault.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the vault
      * 
      */
-    @InputImport(name="vaultName")
+    @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;
 
     public Output<String> getVaultName() {

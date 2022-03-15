@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
      * The primary key.
      * 
      */
-    @InputImport(name="primaryKey")
+    @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
@@ -33,7 +33,7 @@ public final class EndpointAuthKeysArgs extends io.pulumi.resources.ResourceArgs
      * The secondary key.
      * 
      */
-    @InputImport(name="secondaryKey")
+    @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
     public Output<String> getSecondaryKey() {

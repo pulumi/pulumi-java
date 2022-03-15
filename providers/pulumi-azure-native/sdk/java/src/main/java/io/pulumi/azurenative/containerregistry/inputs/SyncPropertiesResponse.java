@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The gateway endpoint used by the connected registry to communicate with its parent.
      * 
      */
-    @InputImport(name="gatewayEndpoint", required=true)
+    @Import(name="gatewayEndpoint", required=true)
       private final String gatewayEndpoint;
 
     public String getGatewayEndpoint() {
@@ -33,7 +33,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The last time a sync occurred between the connected registry and its parent.
      * 
      */
-    @InputImport(name="lastSyncTime", required=true)
+    @Import(name="lastSyncTime", required=true)
       private final String lastSyncTime;
 
     public String getLastSyncTime() {
@@ -44,7 +44,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
      * 
      */
-    @InputImport(name="messageTtl", required=true)
+    @Import(name="messageTtl", required=true)
       private final String messageTtl;
 
     public String getMessageTtl() {
@@ -55,7 +55,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The cron expression indicating the schedule that the connected registry will sync with its parent.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable String schedule;
 
     public Optional<String> getSchedule() {
@@ -66,7 +66,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.
      * 
      */
-    @InputImport(name="syncWindow")
+    @Import(name="syncWindow")
       private final @Nullable String syncWindow;
 
     public Optional<String> getSyncWindow() {
@@ -77,7 +77,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.
      * 
      */
-    @InputImport(name="tokenId", required=true)
+    @Import(name="tokenId", required=true)
       private final String tokenId;
 
     public String getTokenId() {

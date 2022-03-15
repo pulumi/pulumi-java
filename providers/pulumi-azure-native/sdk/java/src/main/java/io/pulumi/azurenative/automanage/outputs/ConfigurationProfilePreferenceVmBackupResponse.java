@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automanage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationProfilePreferenceVmBackupResponse {
     /**
      * Instant RP retention policy range in days
@@ -33,12 +33,12 @@ public final class ConfigurationProfilePreferenceVmBackupResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationProfilePreferenceVmBackupResponse(
-        @OutputCustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable String retentionPolicy,
-        @OutputCustomType.Parameter("schedulePolicy") @Nullable String schedulePolicy,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
+        @CustomType.Parameter("retentionPolicy") @Nullable String retentionPolicy,
+        @CustomType.Parameter("schedulePolicy") @Nullable String schedulePolicy,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;

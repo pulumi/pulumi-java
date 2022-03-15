@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IapTestServiceAccountInfoResponse {
     /**
      * Describes OAuth2 Client ID of resources protected by Identity-Aware-Proxy(IAP).
@@ -15,8 +15,8 @@ public final class IapTestServiceAccountInfoResponse {
      */
     private final String targetAudienceClientId;
 
-    @OutputCustomType.Constructor
-    private IapTestServiceAccountInfoResponse(@OutputCustomType.Parameter("targetAudienceClientId") String targetAudienceClientId) {
+    @CustomType.Constructor
+    private IapTestServiceAccountInfoResponse(@CustomType.Parameter("targetAudienceClientId") String targetAudienceClientId) {
         this.targetAudienceClientId = targetAudienceClientId;
     }
 

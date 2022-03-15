@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.SafetyRuleRuleType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SafetyRuleRuleConfig {
     /**
      * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
@@ -23,11 +23,11 @@ public final class SafetyRuleRuleConfig {
     private final Integer threshold;
     private final SafetyRuleRuleType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SafetyRuleRuleConfig(
-        @OutputCustomType.Parameter("inverted") Boolean inverted,
-        @OutputCustomType.Parameter("threshold") Integer threshold,
-        @OutputCustomType.Parameter("type") SafetyRuleRuleType type) {
+        @CustomType.Parameter("inverted") Boolean inverted,
+        @CustomType.Parameter("threshold") Integer threshold,
+        @CustomType.Parameter("type") SafetyRuleRuleType type) {
         this.inverted = inverted;
         this.threshold = threshold;
         this.type = type;

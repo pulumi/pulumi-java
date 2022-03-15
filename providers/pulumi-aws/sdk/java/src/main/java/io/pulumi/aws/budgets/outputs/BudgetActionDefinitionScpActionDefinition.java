@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetActionDefinitionScpActionDefinition {
     /**
      * The policy ID attached.
@@ -21,10 +21,10 @@ public final class BudgetActionDefinitionScpActionDefinition {
      */
     private final List<String> targetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetActionDefinitionScpActionDefinition(
-        @OutputCustomType.Parameter("policyId") String policyId,
-        @OutputCustomType.Parameter("targetIds") List<String> targetIds) {
+        @CustomType.Parameter("policyId") String policyId,
+        @CustomType.Parameter("targetIds") List<String> targetIds) {
         this.policyId = policyId;
         this.targetIds = targetIds;
     }

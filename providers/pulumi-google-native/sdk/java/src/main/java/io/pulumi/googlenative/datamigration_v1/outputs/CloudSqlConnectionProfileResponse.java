@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datamigration_v1.outputs.CloudSqlSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudSqlConnectionProfileResponse {
     /**
      * The Cloud SQL instance ID that this connection profile is associated with.
@@ -31,12 +31,12 @@ public final class CloudSqlConnectionProfileResponse {
      */
     private final CloudSqlSettingsResponse settings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudSqlConnectionProfileResponse(
-        @OutputCustomType.Parameter("cloudSqlId") String cloudSqlId,
-        @OutputCustomType.Parameter("privateIp") String privateIp,
-        @OutputCustomType.Parameter("publicIp") String publicIp,
-        @OutputCustomType.Parameter("settings") CloudSqlSettingsResponse settings) {
+        @CustomType.Parameter("cloudSqlId") String cloudSqlId,
+        @CustomType.Parameter("privateIp") String privateIp,
+        @CustomType.Parameter("publicIp") String publicIp,
+        @CustomType.Parameter("settings") CloudSqlSettingsResponse settings) {
         this.cloudSqlId = cloudSqlId;
         this.privateIp = privateIp;
         this.publicIp = publicIp;

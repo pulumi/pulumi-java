@@ -6,14 +6,14 @@ package io.pulumi.awsnative.databrew.outputs;
 import io.pulumi.awsnative.databrew.enums.DatasetParameterType;
 import io.pulumi.awsnative.databrew.outputs.DatasetDatetimeOptions;
 import io.pulumi.awsnative.databrew.outputs.DatasetFilterExpression;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetParameter {
     /**
      * Add the value of this parameter as a column in a dataset.
@@ -29,13 +29,13 @@ public final class DatasetParameter {
      */
     private final DatasetParameterType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetParameter(
-        @OutputCustomType.Parameter("createColumn") @Nullable Boolean createColumn,
-        @OutputCustomType.Parameter("datetimeOptions") @Nullable DatasetDatetimeOptions datetimeOptions,
-        @OutputCustomType.Parameter("filter") @Nullable DatasetFilterExpression filter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") DatasetParameterType type) {
+        @CustomType.Parameter("createColumn") @Nullable Boolean createColumn,
+        @CustomType.Parameter("datetimeOptions") @Nullable DatasetDatetimeOptions datetimeOptions,
+        @CustomType.Parameter("filter") @Nullable DatasetFilterExpression filter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") DatasetParameterType type) {
         this.createColumn = createColumn;
         this.datetimeOptions = datetimeOptions;
         this.filter = filter;

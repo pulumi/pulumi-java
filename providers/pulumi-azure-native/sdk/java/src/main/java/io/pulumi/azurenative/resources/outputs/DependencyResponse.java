@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.BasicDependencyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DependencyResponse {
     /**
      * The list of dependencies.
@@ -34,12 +34,12 @@ public final class DependencyResponse {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DependencyResponse(
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<BasicDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
+        @CustomType.Parameter("dependsOn") @Nullable List<BasicDependencyResponse> dependsOn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.dependsOn = dependsOn;
         this.id = id;
         this.resourceName = resourceName;

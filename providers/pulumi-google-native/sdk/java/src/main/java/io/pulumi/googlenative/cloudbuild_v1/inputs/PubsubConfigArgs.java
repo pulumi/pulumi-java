@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.enums.PubsubConfigState;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Service account that will make the push request.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -34,7 +34,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<PubsubConfigState> state;
 
     public Output<PubsubConfigState> getState() {
@@ -45,7 +45,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
      * 
      */
-    @InputImport(name="topic")
+    @Import(name="topic")
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {

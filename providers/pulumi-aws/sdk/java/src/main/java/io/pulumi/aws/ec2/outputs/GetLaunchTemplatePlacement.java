@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplatePlacement {
     private final String affinity;
     private final String availabilityZone;
@@ -19,16 +19,16 @@ public final class GetLaunchTemplatePlacement {
     private final String spreadDomain;
     private final String tenancy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplatePlacement(
-        @OutputCustomType.Parameter("affinity") String affinity,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("groupName") String groupName,
-        @OutputCustomType.Parameter("hostId") String hostId,
-        @OutputCustomType.Parameter("hostResourceGroupArn") String hostResourceGroupArn,
-        @OutputCustomType.Parameter("partitionNumber") Integer partitionNumber,
-        @OutputCustomType.Parameter("spreadDomain") String spreadDomain,
-        @OutputCustomType.Parameter("tenancy") String tenancy) {
+        @CustomType.Parameter("affinity") String affinity,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("groupName") String groupName,
+        @CustomType.Parameter("hostId") String hostId,
+        @CustomType.Parameter("hostResourceGroupArn") String hostResourceGroupArn,
+        @CustomType.Parameter("partitionNumber") Integer partitionNumber,
+        @CustomType.Parameter("spreadDomain") String spreadDomain,
+        @CustomType.Parameter("tenancy") String tenancy) {
         this.affinity = affinity;
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DisallowedResponse {
     /**
      * A list of disk types.
@@ -17,8 +17,8 @@ public final class DisallowedResponse {
      */
     private final @Nullable List<String> diskTypes;
 
-    @OutputCustomType.Constructor
-    private DisallowedResponse(@OutputCustomType.Parameter("diskTypes") @Nullable List<String> diskTypes) {
+    @CustomType.Constructor
+    private DisallowedResponse(@CustomType.Parameter("diskTypes") @Nullable List<String> diskTypes) {
         this.diskTypes = diskTypes;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the storage resource payload.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<StorageAccountArgs> properties;
 
     public Output<StorageAccountArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -41,7 +41,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -52,7 +52,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage resource.
      * 
      */
-    @InputImport(name="storageName")
+    @Import(name="storageName")
       private final @Nullable Output<String> storageName;
 
     public Output<String> getStorageName() {

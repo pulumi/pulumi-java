@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceCustomBooleanParameterResponse {
     /**
      * The type of variable that this is
@@ -21,10 +21,10 @@ public final class WorkspaceCustomBooleanParameterResponse {
      */
     private final Boolean value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceCustomBooleanParameterResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") Boolean value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") Boolean value) {
         this.type = type;
         this.value = value;
     }

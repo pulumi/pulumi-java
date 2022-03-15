@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupSizeConstraintStatementCompariso
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -21,28 +21,28 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
 
     public static final RuleGroupSizeConstraintStatementArgs Empty = new RuleGroupSizeConstraintStatementArgs();
 
-    @InputImport(name="comparisonOperator", required=true)
+    @Import(name="comparisonOperator", required=true)
       private final Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
 
     public Output<RuleGroupSizeConstraintStatementComparisonOperator> getComparisonOperator() {
         return this.comparisonOperator;
     }
 
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<Double> size;
 
     public Output<Double> getSize() {
         return this.size;
     }
 
-    @InputImport(name="textTransformations", required=true)
+    @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SlotTypeEnumerationValue {
     /**
      * Additional values related to the slot type value. Each item must be less than or equal to 140 characters in length.
@@ -22,10 +22,10 @@ public final class SlotTypeEnumerationValue {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SlotTypeEnumerationValue(
-        @OutputCustomType.Parameter("synonyms") @Nullable List<String> synonyms,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("synonyms") @Nullable List<String> synonyms,
+        @CustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

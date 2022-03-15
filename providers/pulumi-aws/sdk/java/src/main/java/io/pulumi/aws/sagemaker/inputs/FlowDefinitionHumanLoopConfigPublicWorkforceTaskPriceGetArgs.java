@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceGetArgs 
      * Defines the amount of money paid to an Amazon Mechanical Turk worker in United States dollars. See Amount In Usd details below.
      * 
      */
-    @InputImport(name="amountInUsd")
+    @Import(name="amountInUsd")
       private final @Nullable Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> amountInUsd;
 
     public Output<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsdGetArgs> getAmountInUsd() {

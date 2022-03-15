@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.CustomMetricArgs;
 import io.pulumi.awsnative.iot.enums.CustomMetricMetricType;
 import io.pulumi.awsnative.iot.outputs.CustomMetricTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -40,7 +40,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Number (ARN) of the custom metric.
      * 
      */
-    @OutputExport(name="metricArn", type=String.class, parameters={})
+    @Export(name="metricArn", type=String.class, parameters={})
     private Output<String> metricArn;
 
     /**
@@ -54,7 +54,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't begin with aws: . Cannot be updated once defined.
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output</* @Nullable */ String> metricName;
 
     /**
@@ -68,7 +68,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
      * 
      */
-    @OutputExport(name="metricType", type=CustomMetricMetricType.class, parameters={})
+    @Export(name="metricType", type=CustomMetricMetricType.class, parameters={})
     private Output<CustomMetricMetricType> metricType;
 
     /**
@@ -82,7 +82,7 @@ public class CustomMetric extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={CustomMetricTag.class})
+    @Export(name="tags", type=List.class, parameters={CustomMetricTag.class})
     private Output</* @Nullable */ List<CustomMetricTag>> tags;
 
     /**

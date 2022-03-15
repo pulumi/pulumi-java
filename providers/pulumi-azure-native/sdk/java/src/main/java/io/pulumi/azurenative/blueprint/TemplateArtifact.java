@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.TemplateArtifactArgs;
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    @OutputExport(name="dependsOn", type=List.class, parameters={String.class})
+    @Export(name="dependsOn", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dependsOn;
 
     /**
@@ -51,7 +51,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Multi-line explain this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * One-liner string explain this resource.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Expected value is 'template'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -95,7 +95,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Resource Manager template blueprint artifact parameter values.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterValueResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterValueResponse.class})
     private Output<Map<String,ParameterValueResponse>> parameters;
 
     /**
@@ -123,7 +123,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * If applicable, the name of the resource group placeholder to which the Resource Manager template blueprint artifact will be deployed.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
     /**
@@ -137,7 +137,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * The Resource Manager template blueprint artifact body.
      * 
      */
-    @OutputExport(name="template", type=Object.class, parameters={})
+    @Export(name="template", type=Object.class, parameters={})
     private Output<Object> template;
 
     /**
@@ -151,7 +151,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

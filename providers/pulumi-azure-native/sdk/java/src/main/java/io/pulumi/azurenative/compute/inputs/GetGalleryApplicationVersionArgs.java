@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * The expand expression to apply on the operation.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * The name of the gallery Application Definition in which the Application Version resides.
      * 
      */
-    @InputImport(name="galleryApplicationName", required=true)
+    @Import(name="galleryApplicationName", required=true)
       private final String galleryApplicationName;
 
     public String getGalleryApplicationName() {
@@ -40,7 +40,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * The name of the gallery Application Version to be retrieved.
      * 
      */
-    @InputImport(name="galleryApplicationVersionName", required=true)
+    @Import(name="galleryApplicationVersionName", required=true)
       private final String galleryApplicationVersionName;
 
     public String getGalleryApplicationVersionName() {
@@ -51,7 +51,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * The name of the Shared Application Gallery in which the Application Definition resides.
      * 
      */
-    @InputImport(name="galleryName", required=true)
+    @Import(name="galleryName", required=true)
       private final String galleryName;
 
     public String getGalleryName() {
@@ -62,7 +62,7 @@ public final class GetGalleryApplicationVersionArgs extends io.pulumi.resources.
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

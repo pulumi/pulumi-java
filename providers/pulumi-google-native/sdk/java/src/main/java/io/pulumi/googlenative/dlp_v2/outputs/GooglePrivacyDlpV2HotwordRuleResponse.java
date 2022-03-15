@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LikelihoodAdjustmentResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ProximityResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RegexResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2HotwordRuleResponse {
     /**
      * Regular expression pattern defining what qualifies as a hotword.
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
      */
     private final GooglePrivacyDlpV2ProximityResponse proximity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2HotwordRuleResponse(
-        @OutputCustomType.Parameter("hotwordRegex") GooglePrivacyDlpV2RegexResponse hotwordRegex,
-        @OutputCustomType.Parameter("likelihoodAdjustment") GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
-        @OutputCustomType.Parameter("proximity") GooglePrivacyDlpV2ProximityResponse proximity) {
+        @CustomType.Parameter("hotwordRegex") GooglePrivacyDlpV2RegexResponse hotwordRegex,
+        @CustomType.Parameter("likelihoodAdjustment") GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
+        @CustomType.Parameter("proximity") GooglePrivacyDlpV2ProximityResponse proximity) {
         this.hotwordRegex = hotwordRegex;
         this.likelihoodAdjustment = likelihoodAdjustment;
         this.proximity = proximity;

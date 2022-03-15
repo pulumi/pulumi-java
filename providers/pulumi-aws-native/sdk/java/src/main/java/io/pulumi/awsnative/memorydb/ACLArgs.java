@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb;
 
 import io.pulumi.awsnative.memorydb.inputs.ACLTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the acl.
      * 
      */
-    @InputImport(name="aCLName")
+    @Import(name="aCLName")
       private final @Nullable Output<String> aCLName;
 
     public Output<String> getACLName() {
@@ -31,7 +31,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this cluster.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ACLTagArgs>> tags;
 
     public Output<List<ACLTagArgs>> getTags() {
@@ -42,7 +42,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
      * List of users associated to this acl.
      * 
      */
-    @InputImport(name="userNames")
+    @Import(name="userNames")
       private final @Nullable Output<List<String>> userNames;
 
     public Output<List<String>> getUserNames() {

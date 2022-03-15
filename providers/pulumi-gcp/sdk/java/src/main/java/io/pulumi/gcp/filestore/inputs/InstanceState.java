@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesGetArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceNetworkGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -33,7 +33,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * A description of the instance.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -57,7 +57,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fileShares")
+    @Import(name="fileShares")
       private final @Nullable Output<InstanceFileSharesGetArgs> fileShares;
 
     public Output<InstanceFileSharesGetArgs> getFileShares() {
@@ -68,7 +68,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -79,7 +79,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -90,7 +90,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The name of the fileshare (16 characters or less)
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<InstanceNetworkGetArgs>> networks;
 
     public Output<List<InstanceNetworkGetArgs>> getNetworks() {
@@ -115,7 +115,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -127,7 +127,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -144,7 +144,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Deprecated in favor of location. */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     @Deprecated /* Deprecated in favor of location. */

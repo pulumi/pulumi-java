@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final FeedbackMessageArgs Empty = new FeedbackMessageArgs();
 
-    @InputImport(name="annotatedDatasetId", required=true)
+    @Import(name="annotatedDatasetId", required=true)
       private final Output<String> annotatedDatasetId;
 
     public Output<String> getAnnotatedDatasetId() {
@@ -27,7 +27,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * String content of the feedback. Maximum of 10000 characters.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -38,21 +38,21 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * Create time.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime == null ? Output.empty() : this.createTime;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="feedbackThreadId", required=true)
+    @Import(name="feedbackThreadId", required=true)
       private final Output<String> feedbackThreadId;
 
     public Output<String> getFeedbackThreadId() {
@@ -63,7 +63,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * The image storing this feedback if the feedback is an image representing operator's comments.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -74,28 +74,28 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the feedback message in a feedback thread. Format: 'project/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset_id}/feedbackThreads/{feedback_thread_id}/feedbackMessage/{feedback_message_id}'
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="operatorFeedbackMetadata")
+    @Import(name="operatorFeedbackMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> getOperatorFeedbackMetadata() {
         return this.operatorFeedbackMetadata == null ? Output.empty() : this.operatorFeedbackMetadata;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requesterFeedbackMetadata")
+    @Import(name="requesterFeedbackMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> getRequesterFeedbackMetadata() {

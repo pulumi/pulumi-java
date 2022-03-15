@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.SslCertArgs;
@@ -22,7 +22,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * PEM representation.
      * 
      */
-    @OutputExport(name="cert", type=String.class, parameters={})
+    @Export(name="cert", type=String.class, parameters={})
     private Output<String> cert;
 
     /**
@@ -36,7 +36,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * Serial number, as extracted from the certificate.
      * 
      */
-    @OutputExport(name="certSerialNumber", type=String.class, parameters={})
+    @Export(name="certSerialNumber", type=String.class, parameters={})
     private Output<String> certSerialNumber;
 
     /**
@@ -50,7 +50,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * User supplied name. Constrained to [a-zA-Z.-_ ]+.
      * 
      */
-    @OutputExport(name="commonName", type=String.class, parameters={})
+    @Export(name="commonName", type=String.class, parameters={})
     private Output<String> commonName;
 
     /**
@@ -64,7 +64,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -78,7 +78,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="expirationTime", type=String.class, parameters={})
+    @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
@@ -92,7 +92,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * Name of the database instance.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -106,7 +106,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * This is always `sql#sslCert`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -120,7 +120,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * The URI of this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -134,7 +134,7 @@ public class SslCert extends io.pulumi.resources.CustomResource {
      * Sha1 Fingerprint.
      * 
      */
-    @OutputExport(name="sha1Fingerprint", type=String.class, parameters={})
+    @Export(name="sha1Fingerprint", type=String.class, parameters={})
     private Output<String> sha1Fingerprint;
 
     /**

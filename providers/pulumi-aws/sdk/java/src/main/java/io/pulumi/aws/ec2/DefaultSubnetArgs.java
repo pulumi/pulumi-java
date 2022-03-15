@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,49 +20,49 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
      * AZ for the subnet.
      * 
      */
-    @InputImport(name="availabilityZone", required=true)
+    @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone;
     }
 
-    @InputImport(name="customerOwnedIpv4Pool")
+    @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
     public Output<String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Output.empty() : this.customerOwnedIpv4Pool;
     }
 
-    @InputImport(name="enableDns64")
+    @Import(name="enableDns64")
       private final @Nullable Output<Boolean> enableDns64;
 
     public Output<Boolean> getEnableDns64() {
         return this.enableDns64 == null ? Output.empty() : this.enableDns64;
     }
 
-    @InputImport(name="enableResourceNameDnsARecordOnLaunch")
+    @Import(name="enableResourceNameDnsARecordOnLaunch")
       private final @Nullable Output<Boolean> enableResourceNameDnsARecordOnLaunch;
 
     public Output<Boolean> getEnableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch == null ? Output.empty() : this.enableResourceNameDnsARecordOnLaunch;
     }
 
-    @InputImport(name="enableResourceNameDnsAaaaRecordOnLaunch")
+    @Import(name="enableResourceNameDnsAaaaRecordOnLaunch")
       private final @Nullable Output<Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
 
     public Output<Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
         return this.enableResourceNameDnsAaaaRecordOnLaunch == null ? Output.empty() : this.enableResourceNameDnsAaaaRecordOnLaunch;
     }
 
-    @InputImport(name="ipv6Native")
+    @Import(name="ipv6Native")
       private final @Nullable Output<Boolean> ipv6Native;
 
     public Output<Boolean> getIpv6Native() {
         return this.ipv6Native == null ? Output.empty() : this.ipv6Native;
     }
 
-    @InputImport(name="mapCustomerOwnedIpOnLaunch")
+    @Import(name="mapCustomerOwnedIpOnLaunch")
       private final @Nullable Output<Boolean> mapCustomerOwnedIpOnLaunch;
 
     public Output<Boolean> getMapCustomerOwnedIpOnLaunch() {
@@ -73,21 +73,21 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether instances launched into the subnet should be assigned a public IP address.
      * 
      */
-    @InputImport(name="mapPublicIpOnLaunch")
+    @Import(name="mapPublicIpOnLaunch")
       private final @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
     public Output<Boolean> getMapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch == null ? Output.empty() : this.mapPublicIpOnLaunch;
     }
 
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
         return this.outpostArn == null ? Output.empty() : this.outpostArn;
     }
 
-    @InputImport(name="privateDnsHostnameTypeOnLaunch")
+    @Import(name="privateDnsHostnameTypeOnLaunch")
       private final @Nullable Output<String> privateDnsHostnameTypeOnLaunch;
 
     public Output<String> getPrivateDnsHostnameTypeOnLaunch() {
@@ -98,7 +98,7 @@ public final class DefaultSubnetArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

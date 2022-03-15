@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebase_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebase_v1beta1.WebAppArgs;
@@ -24,7 +24,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -38,7 +38,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * The URLs where the `WebApp` is hosted.
      * 
      */
-    @OutputExport(name="appUrls", type=List.class, parameters={String.class})
+    @Export(name="appUrls", type=List.class, parameters={String.class})
     private Output<List<String>> appUrls;
 
     /**
@@ -52,7 +52,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * The user-assigned display name for the `WebApp`.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -94,7 +94,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases, use `appId` to identify or reference the App. The `webId` value is only unique within a `FirebaseProject` and its associated Apps.
      * 
      */
-    @OutputExport(name="webId", type=String.class, parameters={})
+    @Export(name="webId", type=String.class, parameters={})
     private Output<String> webId;
 
     /**

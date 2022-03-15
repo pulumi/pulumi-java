@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.MetricStatisticType;
 import io.pulumi.azurenative.insights.enums.TimeAggregationType;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleMetricDimensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * List of dimension conditions. For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<List<ScaleRuleMetricDimensionArgs>> dimensions;
 
     public Output<List<ScaleRuleMetricDimensionArgs>> getDimensions() {
@@ -40,7 +40,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * a value indicating whether metric should divide per instance.
      * 
      */
-    @InputImport(name="dividePerInstance")
+    @Import(name="dividePerInstance")
       private final @Nullable Output<Boolean> dividePerInstance;
 
     public Output<Boolean> getDividePerInstance() {
@@ -51,7 +51,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the name of the metric that defines what the rule monitors.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -62,7 +62,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the namespace of the metric that defines what the rule monitors.
      * 
      */
-    @InputImport(name="metricNamespace")
+    @Import(name="metricNamespace")
       private final @Nullable Output<String> metricNamespace;
 
     public Output<String> getMetricNamespace() {
@@ -73,7 +73,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the location of the resource the rule monitors.
      * 
      */
-    @InputImport(name="metricResourceLocation")
+    @Import(name="metricResourceLocation")
       private final @Nullable Output<String> metricResourceLocation;
 
     public Output<String> getMetricResourceLocation() {
@@ -84,7 +84,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the resource identifier of the resource the rule monitors.
      * 
      */
-    @InputImport(name="metricResourceUri", required=true)
+    @Import(name="metricResourceUri", required=true)
       private final Output<String> metricResourceUri;
 
     public Output<String> getMetricResourceUri() {
@@ -95,7 +95,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the operator that is used to compare the metric data and the threshold.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<ComparisonOperationType> operator;
 
     public Output<ComparisonOperationType> getOperator() {
@@ -106,7 +106,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the metric statistic type. How the metrics from multiple instances are combined.
      * 
      */
-    @InputImport(name="statistic", required=true)
+    @Import(name="statistic", required=true)
       private final Output<MetricStatisticType> statistic;
 
     public Output<MetricStatisticType> getStatistic() {
@@ -117,7 +117,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the threshold of the metric that triggers the scale action.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -128,7 +128,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * time aggregation type. How the data that is collected should be combined over time. The default value is Average.
      * 
      */
-    @InputImport(name="timeAggregation", required=true)
+    @Import(name="timeAggregation", required=true)
       private final Output<TimeAggregationType> timeAggregation;
 
     public Output<TimeAggregationType> getTimeAggregation() {
@@ -139,7 +139,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric definitions for the metric. Must be between 12 hours and 1 minute.
      * 
      */
-    @InputImport(name="timeGrain", required=true)
+    @Import(name="timeGrain", required=true)
       private final Output<String> timeGrain;
 
     public Output<String> getTimeGrain() {
@@ -150,7 +150,7 @@ public final class MetricTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * the range of time in which instance data is collected. This value must be greater than the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
      * 
      */
-    @InputImport(name="timeWindow", required=true)
+    @Import(name="timeWindow", required=true)
       private final Output<String> timeWindow;
 
     public Output<String> getTimeWindow() {

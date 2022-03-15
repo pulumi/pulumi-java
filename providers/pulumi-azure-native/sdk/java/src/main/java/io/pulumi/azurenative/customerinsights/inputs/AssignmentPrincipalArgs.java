@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * The principal id being assigned to.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -34,7 +34,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * Other metadata for the principal.
      * 
      */
-    @InputImport(name="principalMetadata")
+    @Import(name="principalMetadata")
       private final @Nullable Output<Map<String,String>> principalMetadata;
 
     public Output<Map<String,String>> getPrincipalMetadata() {
@@ -45,7 +45,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
      * The Type of the principal ID.
      * 
      */
-    @InputImport(name="principalType", required=true)
+    @Import(name="principalType", required=true)
       private final Output<String> principalType;
 
     public Output<String> getPrincipalType() {

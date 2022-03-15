@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkedStorageAccountResult {
     /**
      * Linked storage accounts type.
@@ -37,13 +37,13 @@ public final class GetLinkedStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkedStorageAccountResult(
-        @OutputCustomType.Parameter("dataSourceType") String dataSourceType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("storageAccountIds") @Nullable List<String> storageAccountIds,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataSourceType") String dataSourceType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("storageAccountIds") @Nullable List<String> storageAccountIds,
+        @CustomType.Parameter("type") String type) {
         this.dataSourceType = dataSourceType;
         this.id = id;
         this.name = name;

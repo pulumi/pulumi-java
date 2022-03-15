@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasic;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelCustom;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelsAccessLevel {
     /**
      * A set of predefined conditions for the access level and a combining function.
@@ -44,13 +44,13 @@ public final class AccessLevelsAccessLevel {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelsAccessLevel(
-        @OutputCustomType.Parameter("basic") @Nullable AccessLevelsAccessLevelBasic basic,
-        @OutputCustomType.Parameter("custom") @Nullable AccessLevelsAccessLevelCustom custom,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("basic") @Nullable AccessLevelsAccessLevelBasic basic,
+        @CustomType.Parameter("custom") @Nullable AccessLevelsAccessLevelCustom custom,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("title") String title) {
         this.basic = basic;
         this.custom = custom;
         this.description = description;

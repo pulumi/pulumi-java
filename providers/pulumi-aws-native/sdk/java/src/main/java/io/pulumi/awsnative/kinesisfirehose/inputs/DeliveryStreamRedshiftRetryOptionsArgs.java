@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DeliveryStreamRedshiftRetryOptionsArgs extends io.pulumi.reso
 
     public static final DeliveryStreamRedshiftRetryOptionsArgs Empty = new DeliveryStreamRedshiftRetryOptionsArgs();
 
-    @InputImport(name="durationInSeconds")
+    @Import(name="durationInSeconds")
       private final @Nullable Output<Integer> durationInSeconds;
 
     public Output<Integer> getDurationInSeconds() {

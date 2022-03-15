@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFunctionEventTriggerFailurePolicy extends io.pulumi.resour
      * Whether the function should be retried on failure.
      * 
      */
-    @InputImport(name="retry", required=true)
+    @Import(name="retry", required=true)
       private final Boolean retry;
 
     public Boolean getRetry() {

@@ -5,12 +5,12 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ManagedRuleSetResponse;
 import io.pulumi.azurenative.network.outputs.OwaspCrsExclusionEntryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRulesDefinitionResponse {
     /**
      * The Exclusions that are applied on the policy.
@@ -23,10 +23,10 @@ public final class ManagedRulesDefinitionResponse {
      */
     private final List<ManagedRuleSetResponse> managedRuleSets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRulesDefinitionResponse(
-        @OutputCustomType.Parameter("exclusions") @Nullable List<OwaspCrsExclusionEntryResponse> exclusions,
-        @OutputCustomType.Parameter("managedRuleSets") List<ManagedRuleSetResponse> managedRuleSets) {
+        @CustomType.Parameter("exclusions") @Nullable List<OwaspCrsExclusionEntryResponse> exclusions,
+        @CustomType.Parameter("managedRuleSets") List<ManagedRuleSetResponse> managedRuleSets) {
         this.exclusions = exclusions;
         this.managedRuleSets = managedRuleSets;
     }

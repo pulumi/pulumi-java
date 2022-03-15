@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * Date of the month
      * 
      */
-    @InputImport(name="date")
+    @Import(name="date")
       private final @Nullable Output<Integer> date;
 
     public Output<Integer> getDate() {
@@ -34,7 +34,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * Whether Date is last date of month
      * 
      */
-    @InputImport(name="isLast")
+    @Import(name="isLast")
       private final @Nullable Output<Boolean> isLast;
 
     public Output<Boolean> getIsLast() {

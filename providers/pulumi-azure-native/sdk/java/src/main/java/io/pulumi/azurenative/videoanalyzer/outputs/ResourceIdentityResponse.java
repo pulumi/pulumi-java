@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceIdentityResponse {
     /**
      * The user assigned managed identity's resource identifier to use when accessing a resource.
@@ -15,8 +15,8 @@ public final class ResourceIdentityResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
-    private ResourceIdentityResponse(@OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
+    @CustomType.Constructor
+    private ResourceIdentityResponse(@CustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 

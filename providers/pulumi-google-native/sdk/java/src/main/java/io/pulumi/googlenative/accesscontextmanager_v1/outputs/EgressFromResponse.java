@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EgressFromResponse {
     /**
      * A list of identities that are allowed access through this [EgressPolicy]. Should be in the format of email address. The email address should represent individual user or service account only.
@@ -21,10 +21,10 @@ public final class EgressFromResponse {
      */
     private final String identityType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EgressFromResponse(
-        @OutputCustomType.Parameter("identities") List<String> identities,
-        @OutputCustomType.Parameter("identityType") String identityType) {
+        @CustomType.Parameter("identities") List<String> identities,
+        @CustomType.Parameter("identityType") String identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }

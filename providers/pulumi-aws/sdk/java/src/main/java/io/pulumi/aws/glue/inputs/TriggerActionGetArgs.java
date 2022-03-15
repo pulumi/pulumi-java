@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.TriggerActionNotificationPropertyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
      * Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<Map<String,String>> arguments;
 
     public Output<Map<String,String>> getArguments() {
@@ -32,7 +32,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
      * 
      */
-    @InputImport(name="crawlerName")
+    @Import(name="crawlerName")
       private final @Nullable Output<String> crawlerName;
 
     public Output<String> getCrawlerName() {
@@ -43,7 +43,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
      * 
      */
-    @InputImport(name="jobName")
+    @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -54,7 +54,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
      * Specifies configuration properties of a job run notification. See Notification Property details below.
      * 
      */
-    @InputImport(name="notificationProperty")
+    @Import(name="notificationProperty")
       private final @Nullable Output<TriggerActionNotificationPropertyGetArgs> notificationProperty;
 
     public Output<TriggerActionNotificationPropertyGetArgs> getNotificationProperty() {
@@ -65,7 +65,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Security Configuration structure to be used with this action.
      * 
      */
-    @InputImport(name="securityConfiguration")
+    @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
@@ -76,7 +76,7 @@ public final class TriggerActionGetArgs extends io.pulumi.resources.ResourceArgs
      * The job run timeout in minutes. It overrides the timeout value of the job.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {

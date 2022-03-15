@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight;
 
 import io.pulumi.azurenative.hdinsight.inputs.ApplicationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The constant value for the application name.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -31,7 +31,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -42,7 +42,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the application.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ApplicationPropertiesArgs> properties;
 
     public Output<ApplicationPropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the application.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

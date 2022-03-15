@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketReplicaModificationsArgs;
 import io.pulumi.awsnative.s3.inputs.BucketSseKmsEncryptedObjectsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * A filter that you can specify for selection for modifications on replicas.
      * 
      */
-    @InputImport(name="replicaModifications")
+    @Import(name="replicaModifications")
       private final @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
 
     public Output<BucketReplicaModificationsArgs> getReplicaModifications() {
@@ -34,7 +34,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS.
      * 
      */
-    @InputImport(name="sseKmsEncryptedObjects")
+    @Import(name="sseKmsEncryptedObjects")
       private final @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
     public Output<BucketSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {

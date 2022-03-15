@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
      * Name of the category.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
      * Name of the portal.
      * 
      */
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final String siteId;
 
     public String getSiteId() {
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse extends io.pulumi.
      * Time the category was last modified in milliseconds since epoch.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

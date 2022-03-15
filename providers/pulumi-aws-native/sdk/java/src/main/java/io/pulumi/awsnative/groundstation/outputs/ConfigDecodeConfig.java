@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigDecodeConfig {
     private final @Nullable String unvalidatedJSON;
 
-    @OutputCustomType.Constructor
-    private ConfigDecodeConfig(@OutputCustomType.Parameter("unvalidatedJSON") @Nullable String unvalidatedJSON) {
+    @CustomType.Constructor
+    private ConfigDecodeConfig(@CustomType.Parameter("unvalidatedJSON") @Nullable String unvalidatedJSON) {
         this.unvalidatedJSON = unvalidatedJSON;
     }
 

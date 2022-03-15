@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigMasterAuthorizedNetworksConfig {
     private final @Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigMasterAuthorizedNetworksConfig(
-        @OutputCustomType.Parameter("cidrBlocks") @Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("cidrBlocks") @Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = enabled;
     }

@@ -7,14 +7,14 @@ import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicyStatefu
 import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicyStatefulRuleGroupReference;
 import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicyStatelessCustomAction;
 import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicyStatelessRuleGroupReference;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFirewallPolicy {
     /**
      * Set of actions to take on a packet if it does not match any stateful rules in the policy. This can only be specified if the policy has a `stateful_engine_options` block with a `rule_order` value of `STRICT_ORDER`. You can specify one of either or neither values of `aws:drop_strict` or `aws:drop_established`, as well as any combination of `aws:alert_strict` and `aws:alert_established`.
@@ -54,15 +54,15 @@ public final class FirewallPolicyFirewallPolicy {
      */
     private final @Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyFirewallPolicy(
-        @OutputCustomType.Parameter("statefulDefaultActions") @Nullable List<String> statefulDefaultActions,
-        @OutputCustomType.Parameter("statefulEngineOptions") @Nullable FirewallPolicyFirewallPolicyStatefulEngineOptions statefulEngineOptions,
-        @OutputCustomType.Parameter("statefulRuleGroupReferences") @Nullable List<FirewallPolicyFirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
-        @OutputCustomType.Parameter("statelessCustomActions") @Nullable List<FirewallPolicyFirewallPolicyStatelessCustomAction> statelessCustomActions,
-        @OutputCustomType.Parameter("statelessDefaultActions") List<String> statelessDefaultActions,
-        @OutputCustomType.Parameter("statelessFragmentDefaultActions") List<String> statelessFragmentDefaultActions,
-        @OutputCustomType.Parameter("statelessRuleGroupReferences") @Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
+        @CustomType.Parameter("statefulDefaultActions") @Nullable List<String> statefulDefaultActions,
+        @CustomType.Parameter("statefulEngineOptions") @Nullable FirewallPolicyFirewallPolicyStatefulEngineOptions statefulEngineOptions,
+        @CustomType.Parameter("statefulRuleGroupReferences") @Nullable List<FirewallPolicyFirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
+        @CustomType.Parameter("statelessCustomActions") @Nullable List<FirewallPolicyFirewallPolicyStatelessCustomAction> statelessCustomActions,
+        @CustomType.Parameter("statelessDefaultActions") List<String> statelessDefaultActions,
+        @CustomType.Parameter("statelessFragmentDefaultActions") List<String> statelessFragmentDefaultActions,
+        @CustomType.Parameter("statelessRuleGroupReferences") @Nullable List<FirewallPolicyFirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
         this.statefulDefaultActions = statefulDefaultActions;
         this.statefulEngineOptions = statefulEngineOptions;
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;

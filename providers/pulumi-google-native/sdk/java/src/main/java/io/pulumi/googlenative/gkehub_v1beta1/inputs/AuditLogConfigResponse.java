@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
      */
-    @InputImport(name="exemptedMembers", required=true)
+    @Import(name="exemptedMembers", required=true)
       private final List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
@@ -32,7 +32,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
      * The log type that this config enables.
      * 
      */
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final String logType;
 
     public String getLogType() {

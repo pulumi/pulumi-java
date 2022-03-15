@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.policysimulator_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.policysimulator_v1.enums.GoogleCloudPolicysimulatorV1ReplayConfigLogSource;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
      * The logs to use as input for the Replay.
      * 
      */
-    @InputImport(name="logSource")
+    @Import(name="logSource")
       private final @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
 
     public Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> getLogSource() {
@@ -35,7 +35,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
      * A mapping of the resources that you want to simulate policies for and the policies that you want to simulate. Keys are the full resource names for the resources. For example, `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-resource-names. Values are Policy objects representing the policies that you want to simulate. Replays automatically take into account any IAM policies inherited through the resource hierarchy, and any policies set on descendant resources. You do not need to include these policies in the policy overlay.
      * 
      */
-    @InputImport(name="policyOverlay")
+    @Import(name="policyOverlay")
       private final @Nullable Output<Map<String,String>> policyOverlay;
 
     public Output<Map<String,String>> getPolicyOverlay() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the user
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -40,7 +40,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The email address of the user that you want to register.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -51,7 +51,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM user or role that you are registering with Amazon QuickSight.
      * 
      */
-    @InputImport(name="iamArn")
+    @Import(name="iamArn")
       private final @Nullable Output<String> iamArn;
 
     public Output<String> getIamArn() {
@@ -62,7 +62,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  `IAM` or `QUICKSIGHT`. If `IAM` is specified, the `iam_arn` must also be specified.
      * 
      */
-    @InputImport(name="identityType")
+    @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
     public Output<String> getIdentityType() {
@@ -73,7 +73,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The namespace. Currently, you should set this to `default`.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -84,7 +84,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.
      * 
      */
-    @InputImport(name="sessionName")
+    @Import(name="sessionName")
       private final @Nullable Output<String> sessionName;
 
     public Output<String> getSessionName() {
@@ -95,7 +95,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with `identity_type` set to `QUICKSIGHT`.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
@@ -106,7 +106,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The Amazon QuickSight role of the user. The user role can be one of the following: `READER`, `AUTHOR`, or `ADMIN`
      * 
      */
-    @InputImport(name="userRole")
+    @Import(name="userRole")
       private final @Nullable Output<String> userRole;
 
     public Output<String> getUserRole() {

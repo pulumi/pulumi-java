@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Boolean autoUpgradeMinorVersion;
 
     public Optional<Boolean> getAutoUpgradeMinorVersion() {
@@ -36,7 +36,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable String forceUpdateTag;
 
     public Optional<String> getForceUpdateTag() {
@@ -47,7 +47,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the extension.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -58,7 +58,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @InputImport(name="protectedSettings")
+    @Import(name="protectedSettings")
       private final @Nullable Object protectedSettings;
 
     public Optional<Object> getProtectedSettings() {
@@ -69,7 +69,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * Collection of extension names after which this extension needs to be provisioned.
      * 
      */
-    @InputImport(name="provisionAfterExtensions")
+    @Import(name="provisionAfterExtensions")
       private final @Nullable List<String> provisionAfterExtensions;
 
     public List<String> getProvisionAfterExtensions() {
@@ -80,7 +80,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * The provisioning state, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -91,7 +91,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the extension handler publisher.
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final String publisher;
 
     public String getPublisher() {
@@ -102,7 +102,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * Json formatted public settings for the extension.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Object settings;
 
     public Optional<Object> getSettings() {
@@ -113,7 +113,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -124,7 +124,7 @@ public final class VMSSExtensionResponse extends io.pulumi.resources.InvokeArgs 
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion", required=true)
+    @Import(name="typeHandlerVersion", required=true)
       private final String typeHandlerVersion;
 
     public String getTypeHandlerVersion() {

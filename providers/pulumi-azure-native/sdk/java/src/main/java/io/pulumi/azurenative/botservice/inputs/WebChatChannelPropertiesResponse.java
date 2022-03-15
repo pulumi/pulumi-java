@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.WebChatSiteResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
      * The list of Web Chat sites
      * 
      */
-    @InputImport(name="sites")
+    @Import(name="sites")
       private final @Nullable List<WebChatSiteResponse> sites;
 
     public List<WebChatSiteResponse> getSites() {
@@ -35,7 +35,7 @@ public final class WebChatChannelPropertiesResponse extends io.pulumi.resources.
      * Web chat control embed code
      * 
      */
-    @InputImport(name="webChatEmbedCode", required=true)
+    @Import(name="webChatEmbedCode", required=true)
       private final String webChatEmbedCode;
 
     public String getWebChatEmbedCode() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class DistributionOriginCustomHeader extends io.pulumi.resources.In
 
     public static final DistributionOriginCustomHeader Empty = new DistributionOriginCustomHeader();
 
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
     }
 
-    @InputImport(name="headerValue", required=true)
+    @Import(name="headerValue", required=true)
       private final String headerValue;
 
     public String getHeaderValue() {

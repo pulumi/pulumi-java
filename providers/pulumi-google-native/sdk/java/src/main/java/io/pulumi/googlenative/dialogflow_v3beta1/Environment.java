@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.EnvironmentArgs;
@@ -24,7 +24,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -38,7 +38,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -52,7 +52,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The name of the environment. Format: `projects//locations//agents//environments/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The test cases config for continuous tests of this environment.
      * 
      */
-    @OutputExport(name="testCasesConfig", type=GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse.class, parameters={})
+    @Export(name="testCasesConfig", type=GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse> testCasesConfig;
 
     /**
@@ -80,7 +80,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Update time of this environment.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -94,7 +94,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * A list of configurations for flow versions. You should include version configs for all flows that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
      * 
      */
-    @OutputExport(name="versionConfigs", type=List.class, parameters={GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse.class})
+    @Export(name="versionConfigs", type=List.class, parameters={GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse>> versionConfigs;
 
     /**

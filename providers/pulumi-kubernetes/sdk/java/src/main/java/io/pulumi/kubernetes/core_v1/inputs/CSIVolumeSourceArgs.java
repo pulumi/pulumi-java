@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
      * 
      */
-    @InputImport(name="driver", required=true)
+    @Import(name="driver", required=true)
       private final Output<String> driver;
 
     public Output<String> getDriver() {
@@ -36,7 +36,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Filesystem type to mount. Ex. "ext4", "xfs", "ntfs". If not provided, the empty value is passed to the associated CSI driver which will determine the default filesystem to apply.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -47,7 +47,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * NodePublishSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume calls. This field is optional, and  may be empty if no secret is required. If the secret object contains more than one secret, all secret references are passed.
      * 
      */
-    @InputImport(name="nodePublishSecretRef")
+    @Import(name="nodePublishSecretRef")
       private final @Nullable Output<LocalObjectReferenceArgs> nodePublishSecretRef;
 
     public Output<LocalObjectReferenceArgs> getNodePublishSecretRef() {
@@ -58,7 +58,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -69,7 +69,7 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.
      * 
      */
-    @InputImport(name="volumeAttributes")
+    @Import(name="volumeAttributes")
       private final @Nullable Output<Map<String,String>> volumeAttributes;
 
     public Output<Map<String,String>> getVolumeAttributes() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
 
     public static final ModelEnvironmentDefinitionResponseResponsePython Empty = new ModelEnvironmentDefinitionResponseResponsePython();
 
-    @InputImport(name="baseCondaEnvironment")
+    @Import(name="baseCondaEnvironment")
       private final @Nullable String baseCondaEnvironment;
 
     public Optional<String> getBaseCondaEnvironment() {
@@ -31,7 +31,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
      * A JObject containing Conda dependencies.
      * 
      */
-    @InputImport(name="condaDependencies")
+    @Import(name="condaDependencies")
       private final @Nullable Object condaDependencies;
 
     public Optional<Object> getCondaDependencies() {
@@ -42,7 +42,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
      * The python interpreter path to use if an environment build is not required. The path specified gets used to call the user script.
      * 
      */
-    @InputImport(name="interpreterPath")
+    @Import(name="interpreterPath")
       private final @Nullable String interpreterPath;
 
     public Optional<String> getInterpreterPath() {
@@ -53,7 +53,7 @@ public final class ModelEnvironmentDefinitionResponseResponsePython extends io.p
      * True means that AzureML reuses an existing python environment; False means that AzureML will create a python environment based on the Conda dependencies specification.
      * 
      */
-    @InputImport(name="userManagedDependencies")
+    @Import(name="userManagedDependencies")
       private final @Nullable Boolean userManagedDependencies;
 
     public Optional<Boolean> getUserManagedDependencies() {

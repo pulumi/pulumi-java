@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelsArgs;
@@ -47,7 +47,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="accessLevels", type=List.class, parameters={AccessLevelsAccessLevel.class})
+    @Export(name="accessLevels", type=List.class, parameters={AccessLevelsAccessLevel.class})
     private Output</* @Nullable */ List<AccessLevelsAccessLevel>> accessLevels;
 
     /**
@@ -63,7 +63,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**

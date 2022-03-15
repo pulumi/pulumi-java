@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * Policy Export Format.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable String format;
 
     public Optional<String> getFormat() {
@@ -29,7 +29,7 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier of the Policy.
      * 
      */
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final String policyId;
 
     public String getPolicyId() {
@@ -40,7 +40,7 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * Product identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final String productId;
 
     public String getProductId() {
@@ -51,7 +51,7 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class GetProductPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

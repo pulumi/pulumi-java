@@ -5,7 +5,7 @@ package io.pulumi.awsnative.redshift.outputs;
 
 import io.pulumi.awsnative.redshift.enums.ScheduledActionState;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduledActionResult {
     /**
      * If true, the schedule is enabled. If false, the scheduled action does not trigger.
@@ -61,17 +61,17 @@ public final class GetScheduledActionResult {
      */
     private final @Nullable ScheduledActionType targetAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduledActionResult(
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("iamRole") @Nullable String iamRole,
-        @OutputCustomType.Parameter("nextInvocations") @Nullable List<String> nextInvocations,
-        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
-        @OutputCustomType.Parameter("scheduledActionDescription") @Nullable String scheduledActionDescription,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("state") @Nullable ScheduledActionState state,
-        @OutputCustomType.Parameter("targetAction") @Nullable ScheduledActionType targetAction) {
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("iamRole") @Nullable String iamRole,
+        @CustomType.Parameter("nextInvocations") @Nullable List<String> nextInvocations,
+        @CustomType.Parameter("schedule") @Nullable String schedule,
+        @CustomType.Parameter("scheduledActionDescription") @Nullable String scheduledActionDescription,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("state") @Nullable ScheduledActionState state,
+        @CustomType.Parameter("targetAction") @Nullable ScheduledActionType targetAction) {
         this.enable = enable;
         this.endTime = endTime;
         this.iamRole = iamRole;

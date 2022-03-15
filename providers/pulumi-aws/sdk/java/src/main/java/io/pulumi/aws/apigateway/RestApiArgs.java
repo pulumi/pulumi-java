@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Source of the API key for requests. Valid values are `HEADER` (default) and `AUTHORIZER`. If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-api-key-source` extension](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-api-key-source.html). If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="apiKeySource")
+    @Import(name="apiKeySource")
       private final @Nullable Output<String> apiKeySource;
 
     public Output<String> getApiKeySource() {
@@ -34,7 +34,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * List of binary media types supported by the REST API. By default, the REST API supports only UTF-8-encoded text payloads. If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-binary-media-types` extension](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-binary-media-types.html). If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="binaryMediaTypes")
+    @Import(name="binaryMediaTypes")
       private final @Nullable Output<List<String>> binaryMediaTypes;
 
     public Output<List<String>> getBinaryMediaTypes() {
@@ -45,7 +45,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * OpenAPI specification that defines the set of routes and integrations to create as part of the REST API. This configuration, and any updates to it, will replace all REST API configuration except values overridden in this resource configuration and other resource updates applied after this resource but before any `aws.apigateway.Deployment` creation. More information about REST API OpenAPI support can be found in the [API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api.html).
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -56,7 +56,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the REST API. If importing an OpenAPI specification via the `body` argument, this corresponds to the `info.description` field. If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint. Defaults to `false`. If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-endpoint-configuration` extension `disableExecuteApiEndpoint` property](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-endpoint-configuration.html). If the argument value is `true` and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="disableExecuteApiEndpoint")
+    @Import(name="disableExecuteApiEndpoint")
       private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
     public Output<Boolean> getDisableExecuteApiEndpoint() {
@@ -78,7 +78,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block defining API endpoint configuration including endpoint type. Defined below.
      * 
      */
-    @InputImport(name="endpointConfiguration")
+    @Import(name="endpointConfiguration")
       private final @Nullable Output<RestApiEndpointConfigurationArgs> endpointConfiguration;
 
     public Output<RestApiEndpointConfigurationArgs> getEndpointConfiguration() {
@@ -89,7 +89,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum response size to compress for the REST API. Integer between `-1` and `10485760` (10MB). Setting a value greater than `-1` will enable compression, `-1` disables compression (default). If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-minimum-compression-size` extension](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-openapi-minimum-compression-size.html). If the argument value (_except_ `-1`) is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="minimumCompressionSize")
+    @Import(name="minimumCompressionSize")
       private final @Nullable Output<Integer> minimumCompressionSize;
 
     public Output<Integer> getMinimumCompressionSize() {
@@ -100,7 +100,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the REST API. If importing an OpenAPI specification via the `body` argument, this corresponds to the `info.title` field. If the argument value is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Map of customizations for importing the specification in the `body` argument. For example, to exclude DocumentationParts from an imported API, set `ignore` equal to `documentation`. Additional documentation, including other parameters such as `basepath`, can be found in the [API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api.html).
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -122,7 +122,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead. If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-policy` extension](https://docs.aws.amazon.com/apigateway/latest/developerguide/openapi-extensions-policy.html). If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -133,7 +133,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

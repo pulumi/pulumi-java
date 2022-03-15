@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the value of the fixed delay interval.
      * 
      */
-    @InputImport(name="fixedDelay")
+    @Import(name="fixedDelay")
       private final @Nullable Output<DurationArgs> fixedDelay;
 
     public Output<DurationArgs> getFixedDelay() {
@@ -34,7 +34,7 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
      * The percentage of traffic for connections, operations, or requests for which a delay is introduced as part of fault injection. The value must be from 0.0 to 100.0 inclusive.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
     public Output<Double> getPercentage() {

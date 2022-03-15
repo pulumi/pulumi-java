@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FileSetResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
     /**
      * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value then the rest of the bytes are omitted. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
@@ -39,14 +39,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
     private final Integer filesLimitPercent;
     private final String sampleMethod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CloudStorageOptionsResponse(
-        @OutputCustomType.Parameter("bytesLimitPerFile") String bytesLimitPerFile,
-        @OutputCustomType.Parameter("bytesLimitPerFilePercent") Integer bytesLimitPerFilePercent,
-        @OutputCustomType.Parameter("fileSet") GooglePrivacyDlpV2FileSetResponse fileSet,
-        @OutputCustomType.Parameter("fileTypes") List<String> fileTypes,
-        @OutputCustomType.Parameter("filesLimitPercent") Integer filesLimitPercent,
-        @OutputCustomType.Parameter("sampleMethod") String sampleMethod) {
+        @CustomType.Parameter("bytesLimitPerFile") String bytesLimitPerFile,
+        @CustomType.Parameter("bytesLimitPerFilePercent") Integer bytesLimitPerFilePercent,
+        @CustomType.Parameter("fileSet") GooglePrivacyDlpV2FileSetResponse fileSet,
+        @CustomType.Parameter("fileTypes") List<String> fileTypes,
+        @CustomType.Parameter("filesLimitPercent") Integer filesLimitPercent,
+        @CustomType.Parameter("sampleMethod") String sampleMethod) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
         this.fileSet = fileSet;

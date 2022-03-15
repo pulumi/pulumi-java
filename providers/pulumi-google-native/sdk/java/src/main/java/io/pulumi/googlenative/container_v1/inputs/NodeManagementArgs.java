@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.AutoUpgradeOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic repair action will be triggered.
      * 
      */
-    @InputImport(name="autoRepair")
+    @Import(name="autoRepair")
       private final @Nullable Output<Boolean> autoRepair;
 
     public Output<Boolean> getAutoRepair() {
@@ -34,7 +34,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of Kubernetes.
      * 
      */
-    @InputImport(name="autoUpgrade")
+    @Import(name="autoUpgrade")
       private final @Nullable Output<Boolean> autoUpgrade;
 
     public Output<Boolean> getAutoUpgrade() {
@@ -45,7 +45,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the Auto Upgrade knobs for the node pool.
      * 
      */
-    @InputImport(name="upgradeOptions")
+    @Import(name="upgradeOptions")
       private final @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
     public Output<AutoUpgradeOptionsArgs> getUpgradeOptions() {

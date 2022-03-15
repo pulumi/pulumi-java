@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPluginResult {
     private final @Nullable String alias;
     private final Boolean enabled;
@@ -21,15 +21,15 @@ public final class GetPluginResult {
     private final String name;
     private final String pluginReference;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPluginResult(
-        @OutputCustomType.Parameter("alias") @Nullable String alias,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("envs") List<String> envs,
-        @OutputCustomType.Parameter("grantAllPermissions") Boolean grantAllPermissions,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pluginReference") String pluginReference) {
+        @CustomType.Parameter("alias") @Nullable String alias,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("envs") List<String> envs,
+        @CustomType.Parameter("grantAllPermissions") Boolean grantAllPermissions,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pluginReference") String pluginReference) {
         this.alias = alias;
         this.enabled = enabled;
         this.envs = envs;

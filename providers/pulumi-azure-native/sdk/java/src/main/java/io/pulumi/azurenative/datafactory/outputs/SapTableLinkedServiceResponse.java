@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SapTableLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -126,29 +126,29 @@ public final class SapTableLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SapTableLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("language") @Nullable Object language,
-        @OutputCustomType.Parameter("logonGroup") @Nullable Object logonGroup,
-        @OutputCustomType.Parameter("messageServer") @Nullable Object messageServer,
-        @OutputCustomType.Parameter("messageServerService") @Nullable Object messageServerService,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("server") @Nullable Object server,
-        @OutputCustomType.Parameter("sncLibraryPath") @Nullable Object sncLibraryPath,
-        @OutputCustomType.Parameter("sncMode") @Nullable Object sncMode,
-        @OutputCustomType.Parameter("sncMyName") @Nullable Object sncMyName,
-        @OutputCustomType.Parameter("sncPartnerName") @Nullable Object sncPartnerName,
-        @OutputCustomType.Parameter("sncQop") @Nullable Object sncQop,
-        @OutputCustomType.Parameter("systemId") @Nullable Object systemId,
-        @OutputCustomType.Parameter("systemNumber") @Nullable Object systemNumber,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("clientId") @Nullable Object clientId,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("language") @Nullable Object language,
+        @CustomType.Parameter("logonGroup") @Nullable Object logonGroup,
+        @CustomType.Parameter("messageServer") @Nullable Object messageServer,
+        @CustomType.Parameter("messageServerService") @Nullable Object messageServerService,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("server") @Nullable Object server,
+        @CustomType.Parameter("sncLibraryPath") @Nullable Object sncLibraryPath,
+        @CustomType.Parameter("sncMode") @Nullable Object sncMode,
+        @CustomType.Parameter("sncMyName") @Nullable Object sncMyName,
+        @CustomType.Parameter("sncPartnerName") @Nullable Object sncPartnerName,
+        @CustomType.Parameter("sncQop") @Nullable Object sncQop,
+        @CustomType.Parameter("systemId") @Nullable Object systemId,
+        @CustomType.Parameter("systemNumber") @Nullable Object systemNumber,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.clientId = clientId;
         this.connectVia = connectVia;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -33,7 +33,7 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -44,7 +44,7 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -66,7 +66,7 @@ public final class IdentifierResponse extends io.pulumi.resources.InvokeArgs {
      * String representation of the identity.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

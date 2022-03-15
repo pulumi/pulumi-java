@@ -5,7 +5,7 @@ package io.pulumi.azurenative.saas;
 
 import io.pulumi.azurenative.saas.inputs.SaasCreationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * Resource location. Only value allowed for SaaS is 'global'
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * The resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * Properties of the SaaS resource that are relevant for creation.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SaasCreationPropertiesArgs> properties;
 
     public Output<SaasCreationPropertiesArgs> getProperties() {
@@ -53,7 +53,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * The name of the resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -75,7 +75,7 @@ public final class SaasSubscriptionLevelArgs extends io.pulumi.resources.Resourc
      * the resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

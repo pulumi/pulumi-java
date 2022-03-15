@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasCodeHookSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasLocaleSettings {
     private final @Nullable BotAliasCodeHookSpecification codeHookSpecification;
     /**
@@ -19,10 +19,10 @@ public final class BotAliasLocaleSettings {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasLocaleSettings(
-        @OutputCustomType.Parameter("codeHookSpecification") @Nullable BotAliasCodeHookSpecification codeHookSpecification,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("codeHookSpecification") @Nullable BotAliasCodeHookSpecification codeHookSpecification,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.codeHookSpecification = codeHookSpecification;
         this.enabled = enabled;
     }

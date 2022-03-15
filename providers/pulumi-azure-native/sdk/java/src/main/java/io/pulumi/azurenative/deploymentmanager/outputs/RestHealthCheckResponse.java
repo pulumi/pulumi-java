@@ -5,13 +5,13 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RestRequestResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.RestResponseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestHealthCheckResponse {
     /**
      * A unique name for this check.
@@ -29,11 +29,11 @@ public final class RestHealthCheckResponse {
      */
     private final @Nullable RestResponseResponse response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestHealthCheckResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("request") RestRequestResponse request,
-        @OutputCustomType.Parameter("response") @Nullable RestResponseResponse response) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("request") RestRequestResponse request,
+        @CustomType.Parameter("response") @Nullable RestResponseResponse response) {
         this.name = name;
         this.request = request;
         this.response = response;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * is 'COUNT', we will retain this many backups.
      * 
      */
-    @InputImport(name="retainedBackups", required=true)
+    @Import(name="retainedBackups", required=true)
       private final Output<Integer> retainedBackups;
 
     public Output<Integer> getRetainedBackups() {
@@ -31,7 +31,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * The unit that 'retained_backups' represents. Defaults to `COUNT`.
      * 
      */
-    @InputImport(name="retentionUnit")
+    @Import(name="retentionUnit")
       private final @Nullable Output<String> retentionUnit;
 
     public Output<String> getRetentionUnit() {

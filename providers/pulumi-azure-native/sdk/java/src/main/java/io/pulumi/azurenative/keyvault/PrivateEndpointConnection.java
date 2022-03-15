@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Modified whenever there is a change in the state of private endpoint connection.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Azure location of the key vault resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Name of the key vault resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Properties of the private endpoint object.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -93,7 +93,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Approval state of the private link connection.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -107,7 +107,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Provisioning state of the private endpoint connection.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Tags assigned to the key vault resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Resource type of the key vault resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

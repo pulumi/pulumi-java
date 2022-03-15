@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.evidently.outputs;
 
 import io.pulumi.awsnative.evidently.outputs.ExperimentTreatmentToWeight;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentOnlineAbConfigObject {
     private final @Nullable String controlTreatmentName;
     private final @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentOnlineAbConfigObject(
-        @OutputCustomType.Parameter("controlTreatmentName") @Nullable String controlTreatmentName,
-        @OutputCustomType.Parameter("treatmentWeights") @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
+        @CustomType.Parameter("controlTreatmentName") @Nullable String controlTreatmentName,
+        @CustomType.Parameter("treatmentWeights") @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
         this.controlTreatmentName = controlTreatmentName;
         this.treatmentWeights = treatmentWeights;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentStatusResponse {
     /**
      * Last modified time of this blueprint definition.
@@ -26,11 +26,11 @@ public final class AssignmentStatusResponse {
      */
     private final String timeCreated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentStatusResponse(
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("managedResources") List<String> managedResources,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated) {
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("managedResources") List<String> managedResources,
+        @CustomType.Parameter("timeCreated") String timeCreated) {
         this.lastModified = lastModified;
         this.managedResources = managedResources;
         this.timeCreated = timeCreated;

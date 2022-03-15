@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetModelResult {
     /**
      * The default version of the model. This version will be used to handle prediction requests that do not specify a version. You can change the default version by calling projects.models.versions.setDefault.
@@ -54,16 +54,16 @@ public final class GetModelResult {
      */
     private final List<String> regions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetModelResult(
-        @OutputCustomType.Parameter("defaultVersion") GoogleCloudMlV1__VersionResponse defaultVersion,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("onlinePredictionConsoleLogging") Boolean onlinePredictionConsoleLogging,
-        @OutputCustomType.Parameter("onlinePredictionLogging") Boolean onlinePredictionLogging,
-        @OutputCustomType.Parameter("regions") List<String> regions) {
+        @CustomType.Parameter("defaultVersion") GoogleCloudMlV1__VersionResponse defaultVersion,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("onlinePredictionConsoleLogging") Boolean onlinePredictionConsoleLogging,
+        @CustomType.Parameter("onlinePredictionLogging") Boolean onlinePredictionLogging,
+        @CustomType.Parameter("regions") List<String> regions) {
         this.defaultVersion = defaultVersion;
         this.description = description;
         this.etag = etag;

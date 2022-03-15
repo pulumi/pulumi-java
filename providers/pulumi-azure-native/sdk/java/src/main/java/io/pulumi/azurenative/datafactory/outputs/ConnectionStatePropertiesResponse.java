@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionStatePropertiesResponse {
     /**
      * The actions required on the managed private endpoint
@@ -25,11 +25,11 @@ public final class ConnectionStatePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionStatePropertiesResponse(
-        @OutputCustomType.Parameter("actionsRequired") String actionsRequired,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("actionsRequired") String actionsRequired,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

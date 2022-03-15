@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.authorization.enums.ExemptionCategory;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The description of the policy exemption.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The display name of the policy exemption.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The policy exemption category. Possible values are Waiver and Mitigated.
      * 
      */
-    @InputImport(name="exemptionCategory", required=true)
+    @Import(name="exemptionCategory", required=true)
       private final Output<Either<String,ExemptionCategory>> exemptionCategory;
 
     public Output<Either<String,ExemptionCategory>> getExemptionCategory() {
@@ -55,7 +55,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
      * 
      */
-    @InputImport(name="expiresOn")
+    @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
     public Output<String> getExpiresOn() {
@@ -66,7 +66,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The policy exemption metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -77,7 +77,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the policy assignment that is being exempted.
      * 
      */
-    @InputImport(name="policyAssignmentId", required=true)
+    @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
 
     public Output<String> getPolicyAssignmentId() {
@@ -88,7 +88,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The policy definition reference ID list when the associated policy assignment is an assignment of a policy set definition.
      * 
      */
-    @InputImport(name="policyDefinitionReferenceIds")
+    @Import(name="policyDefinitionReferenceIds")
       private final @Nullable Output<List<String>> policyDefinitionReferenceIds;
 
     public Output<List<String>> getPolicyDefinitionReferenceIds() {
@@ -99,7 +99,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the policy exemption to delete.
      * 
      */
-    @InputImport(name="policyExemptionName")
+    @Import(name="policyExemptionName")
       private final @Nullable Output<String> policyExemptionName;
 
     public Output<String> getPolicyExemptionName() {
@@ -110,7 +110,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
      * The scope of the policy exemption. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

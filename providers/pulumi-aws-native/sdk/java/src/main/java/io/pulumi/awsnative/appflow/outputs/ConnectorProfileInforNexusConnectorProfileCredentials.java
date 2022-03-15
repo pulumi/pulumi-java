@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileInforNexusConnectorProfileCredentials {
     /**
      * The Access Key portion of the credentials.
@@ -30,12 +30,12 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileInforNexusConnectorProfileCredentials(
-        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
-        @OutputCustomType.Parameter("datakey") String datakey,
-        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("accessKeyId") String accessKeyId,
+        @CustomType.Parameter("datakey") String datakey,
+        @CustomType.Parameter("secretAccessKey") String secretAccessKey,
+        @CustomType.Parameter("userId") String userId) {
         this.accessKeyId = accessKeyId;
         this.datakey = datakey;
         this.secretAccessKey = secretAccessKey;

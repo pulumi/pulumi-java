@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SplitArgs extends io.pulumi.resources.ResourceArgs {
      * Row key to use as an initial tablet boundary.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {

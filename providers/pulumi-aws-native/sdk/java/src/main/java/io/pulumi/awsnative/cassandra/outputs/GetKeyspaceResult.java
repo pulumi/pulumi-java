@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.cassandra.outputs;
 
 import io.pulumi.awsnative.cassandra.outputs.KeyspaceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyspaceResult {
     private final @Nullable List<KeyspaceTag> tags;
 
-    @OutputCustomType.Constructor
-    private GetKeyspaceResult(@OutputCustomType.Parameter("tags") @Nullable List<KeyspaceTag> tags) {
+    @CustomType.Constructor
+    private GetKeyspaceResult(@CustomType.Parameter("tags") @Nullable List<KeyspaceTag> tags) {
         this.tags = tags;
     }
 

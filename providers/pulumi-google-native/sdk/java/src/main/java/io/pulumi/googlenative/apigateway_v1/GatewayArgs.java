@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
      * 
      */
-    @InputImport(name="apiConfig", required=true)
+    @Import(name="apiConfig", required=true)
       private final Output<String> apiConfig;
 
     public Output<String> getApiConfig() {
@@ -30,14 +30,14 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -48,21 +48,21 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageAssetResponse {
     /**
      * The Asset Id.
@@ -33,12 +33,12 @@ public final class ImageAssetResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageAssetResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType,
-        @OutputCustomType.Parameter("unpack") @Nullable Boolean unpack,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("mimeType") @Nullable String mimeType,
+        @CustomType.Parameter("unpack") @Nullable Boolean unpack,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.id = id;
         this.mimeType = mimeType;
         this.unpack = unpack;

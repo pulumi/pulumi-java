@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVolumeContainerResult {
     /**
      * The bandwidth-rate set on the volume container.
@@ -75,20 +75,20 @@ public final class GetVolumeContainerResult {
      */
     private final Integer volumeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVolumeContainerResult(
-        @OutputCustomType.Parameter("bandWidthRateInMbps") @Nullable Integer bandWidthRateInMbps,
-        @OutputCustomType.Parameter("bandwidthSettingId") @Nullable String bandwidthSettingId,
-        @OutputCustomType.Parameter("encryptionKey") @Nullable AsymmetricEncryptedSecretResponse encryptionKey,
-        @OutputCustomType.Parameter("encryptionStatus") String encryptionStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerShipStatus") String ownerShipStatus,
-        @OutputCustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId,
-        @OutputCustomType.Parameter("totalCloudStorageUsageInBytes") Double totalCloudStorageUsageInBytes,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeCount") Integer volumeCount) {
+        @CustomType.Parameter("bandWidthRateInMbps") @Nullable Integer bandWidthRateInMbps,
+        @CustomType.Parameter("bandwidthSettingId") @Nullable String bandwidthSettingId,
+        @CustomType.Parameter("encryptionKey") @Nullable AsymmetricEncryptedSecretResponse encryptionKey,
+        @CustomType.Parameter("encryptionStatus") String encryptionStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerShipStatus") String ownerShipStatus,
+        @CustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId,
+        @CustomType.Parameter("totalCloudStorageUsageInBytes") Double totalCloudStorageUsageInBytes,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeCount") Integer volumeCount) {
         this.bandWidthRateInMbps = bandWidthRateInMbps;
         this.bandwidthSettingId = bandwidthSettingId;
         this.encryptionKey = encryptionKey;

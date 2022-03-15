@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerCertificate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerResult {
     private final @Nullable List<String> alpnPolicy;
     private final @Nullable List<ListenerCertificate> certificates;
@@ -23,15 +23,15 @@ public final class GetListenerResult {
     private final @Nullable String protocol;
     private final @Nullable String sslPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerResult(
-        @OutputCustomType.Parameter("alpnPolicy") @Nullable List<String> alpnPolicy,
-        @OutputCustomType.Parameter("certificates") @Nullable List<ListenerCertificate> certificates,
-        @OutputCustomType.Parameter("defaultActions") @Nullable List<ListenerAction> defaultActions,
-        @OutputCustomType.Parameter("listenerArn") @Nullable String listenerArn,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("sslPolicy") @Nullable String sslPolicy) {
+        @CustomType.Parameter("alpnPolicy") @Nullable List<String> alpnPolicy,
+        @CustomType.Parameter("certificates") @Nullable List<ListenerCertificate> certificates,
+        @CustomType.Parameter("defaultActions") @Nullable List<ListenerAction> defaultActions,
+        @CustomType.Parameter("listenerArn") @Nullable String listenerArn,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("sslPolicy") @Nullable String sslPolicy) {
         this.alpnPolicy = alpnPolicy;
         this.certificates = certificates;
         this.defaultActions = defaultActions;

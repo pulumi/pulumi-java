@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.PostalAddressResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContactResponse {
     /**
      * Email address of the contact.
@@ -31,12 +31,12 @@ public final class ContactResponse {
      */
     private final PostalAddressResponse postalAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactResponse(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("faxNumber") String faxNumber,
-        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
-        @OutputCustomType.Parameter("postalAddress") PostalAddressResponse postalAddress) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("faxNumber") String faxNumber,
+        @CustomType.Parameter("phoneNumber") String phoneNumber,
+        @CustomType.Parameter("postalAddress") PostalAddressResponse postalAddress) {
         this.email = email;
         this.faxNumber = faxNumber;
         this.phoneNumber = phoneNumber;

@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.agfoodplatform.outputs;
 
 import io.pulumi.azurenative.agfoodplatform.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExtensionResult {
     /**
      * The ETag value to implement optimistic concurrency.
@@ -61,18 +61,18 @@ public final class GetExtensionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExtensionResult(
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("extensionApiDocsLink") String extensionApiDocsLink,
-        @OutputCustomType.Parameter("extensionAuthLink") String extensionAuthLink,
-        @OutputCustomType.Parameter("extensionCategory") String extensionCategory,
-        @OutputCustomType.Parameter("extensionId") String extensionId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("installedExtensionVersion") String installedExtensionVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("extensionApiDocsLink") String extensionApiDocsLink,
+        @CustomType.Parameter("extensionAuthLink") String extensionAuthLink,
+        @CustomType.Parameter("extensionCategory") String extensionCategory,
+        @CustomType.Parameter("extensionId") String extensionId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("installedExtensionVersion") String installedExtensionVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.extensionApiDocsLink = extensionApiDocsLink;
         this.extensionAuthLink = extensionAuthLink;

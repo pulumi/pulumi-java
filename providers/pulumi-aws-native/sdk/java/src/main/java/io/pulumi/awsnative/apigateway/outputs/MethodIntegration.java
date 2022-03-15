@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodIntegrationContentHandling;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationPassthroughBehavior;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationType;
 import io.pulumi.awsnative.apigateway.outputs.MethodIntegrationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MethodIntegration {
     /**
      * A list of request parameters whose values API Gateway caches.
@@ -90,22 +90,22 @@ public final class MethodIntegration {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MethodIntegration(
-        @OutputCustomType.Parameter("cacheKeyParameters") @Nullable List<String> cacheKeyParameters,
-        @OutputCustomType.Parameter("cacheNamespace") @Nullable String cacheNamespace,
-        @OutputCustomType.Parameter("connectionId") @Nullable String connectionId,
-        @OutputCustomType.Parameter("connectionType") @Nullable MethodIntegrationConnectionType connectionType,
-        @OutputCustomType.Parameter("contentHandling") @Nullable MethodIntegrationContentHandling contentHandling,
-        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
-        @OutputCustomType.Parameter("integrationHttpMethod") @Nullable String integrationHttpMethod,
-        @OutputCustomType.Parameter("integrationResponses") @Nullable List<MethodIntegrationResponse> integrationResponses,
-        @OutputCustomType.Parameter("passthroughBehavior") @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior,
-        @OutputCustomType.Parameter("requestParameters") @Nullable Object requestParameters,
-        @OutputCustomType.Parameter("requestTemplates") @Nullable Object requestTemplates,
-        @OutputCustomType.Parameter("timeoutInMillis") @Nullable Integer timeoutInMillis,
-        @OutputCustomType.Parameter("type") MethodIntegrationType type,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("cacheKeyParameters") @Nullable List<String> cacheKeyParameters,
+        @CustomType.Parameter("cacheNamespace") @Nullable String cacheNamespace,
+        @CustomType.Parameter("connectionId") @Nullable String connectionId,
+        @CustomType.Parameter("connectionType") @Nullable MethodIntegrationConnectionType connectionType,
+        @CustomType.Parameter("contentHandling") @Nullable MethodIntegrationContentHandling contentHandling,
+        @CustomType.Parameter("credentials") @Nullable String credentials,
+        @CustomType.Parameter("integrationHttpMethod") @Nullable String integrationHttpMethod,
+        @CustomType.Parameter("integrationResponses") @Nullable List<MethodIntegrationResponse> integrationResponses,
+        @CustomType.Parameter("passthroughBehavior") @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior,
+        @CustomType.Parameter("requestParameters") @Nullable Object requestParameters,
+        @CustomType.Parameter("requestTemplates") @Nullable Object requestTemplates,
+        @CustomType.Parameter("timeoutInMillis") @Nullable Integer timeoutInMillis,
+        @CustomType.Parameter("type") MethodIntegrationType type,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.cacheKeyParameters = cacheKeyParameters;
         this.cacheNamespace = cacheNamespace;
         this.connectionId = connectionId;

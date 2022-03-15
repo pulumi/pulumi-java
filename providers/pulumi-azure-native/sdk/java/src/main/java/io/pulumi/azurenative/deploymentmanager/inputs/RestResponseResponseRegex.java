@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RestResponseResponseRegex extends io.pulumi.resources.InvokeA
      * Indicates whether any or all of the expressions should match with the response content.
      * 
      */
-    @InputImport(name="matchQuantifier")
+    @Import(name="matchQuantifier")
       private final @Nullable String matchQuantifier;
 
     public Optional<String> getMatchQuantifier() {
@@ -34,7 +34,7 @@ public final class RestResponseResponseRegex extends io.pulumi.resources.InvokeA
      * The list of regular expressions.
      * 
      */
-    @InputImport(name="matches")
+    @Import(name="matches")
       private final @Nullable List<String> matches;
 
     public List<String> getMatches() {

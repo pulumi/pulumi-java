@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupGeneratedRulesType;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTargetType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class RuleGroupRulesSourceList extends io.pulumi.resources.InvokeAr
 
     public static final RuleGroupRulesSourceList Empty = new RuleGroupRulesSourceList();
 
-    @InputImport(name="generatedRulesType", required=true)
+    @Import(name="generatedRulesType", required=true)
       private final RuleGroupGeneratedRulesType generatedRulesType;
 
     public RuleGroupGeneratedRulesType getGeneratedRulesType() {
         return this.generatedRulesType;
     }
 
-    @InputImport(name="targetTypes", required=true)
+    @Import(name="targetTypes", required=true)
       private final List<RuleGroupTargetType> targetTypes;
 
     public List<RuleGroupTargetType> getTargetTypes() {
         return this.targetTypes;
     }
 
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final List<String> targets;
 
     public List<String> getTargets() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterIpAllocationPolicy {
     /**
      * The IP address range for the cluster pod IPs.
@@ -45,12 +45,12 @@ public final class ClusterIpAllocationPolicy {
      */
     private final @Nullable String servicesSecondaryRangeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterIpAllocationPolicy(
-        @OutputCustomType.Parameter("clusterIpv4CidrBlock") @Nullable String clusterIpv4CidrBlock,
-        @OutputCustomType.Parameter("clusterSecondaryRangeName") @Nullable String clusterSecondaryRangeName,
-        @OutputCustomType.Parameter("servicesIpv4CidrBlock") @Nullable String servicesIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesSecondaryRangeName") @Nullable String servicesSecondaryRangeName) {
+        @CustomType.Parameter("clusterIpv4CidrBlock") @Nullable String clusterIpv4CidrBlock,
+        @CustomType.Parameter("clusterSecondaryRangeName") @Nullable String clusterSecondaryRangeName,
+        @CustomType.Parameter("servicesIpv4CidrBlock") @Nullable String servicesIpv4CidrBlock,
+        @CustomType.Parameter("servicesSecondaryRangeName") @Nullable String servicesSecondaryRangeName) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

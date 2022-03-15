@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firestore_v1.enums.GoogleFirestoreAdminV1IndexFieldArrayConfig;
 import io.pulumi.googlenative.firestore_v1.enums.GoogleFirestoreAdminV1IndexFieldOrder;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
      * Indicates that this field supports operations on `array_value`s.
      * 
      */
-    @InputImport(name="arrayConfig")
+    @Import(name="arrayConfig")
       private final @Nullable Output<GoogleFirestoreAdminV1IndexFieldArrayConfig> arrayConfig;
 
     public Output<GoogleFirestoreAdminV1IndexFieldArrayConfig> getArrayConfig() {
@@ -35,7 +35,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
      * Can be __name__. For single field indexes, this must match the name of the field or may be omitted.
      * 
      */
-    @InputImport(name="fieldPath")
+    @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
     public Output<String> getFieldPath() {
@@ -46,7 +46,7 @@ public final class GoogleFirestoreAdminV1IndexFieldArgs extends io.pulumi.resour
      * Indicates that this field supports ordering by the specified order or comparing using =, !=, <, <=, >, >=.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<GoogleFirestoreAdminV1IndexFieldOrder> order;
 
     public Output<GoogleFirestoreAdminV1IndexFieldOrder> getOrder() {

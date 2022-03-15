@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayCustomDomainPropertiesResponse {
     /**
      * The thumbprint of bound certificate.
@@ -17,8 +17,8 @@ public final class GatewayCustomDomainPropertiesResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
-    private GatewayCustomDomainPropertiesResponse(@OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+    @CustomType.Constructor
+    private GatewayCustomDomainPropertiesResponse(@CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.thumbprint = thumbprint;
     }
 

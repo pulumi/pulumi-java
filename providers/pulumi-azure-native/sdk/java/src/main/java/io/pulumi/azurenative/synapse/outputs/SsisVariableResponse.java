@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsisVariableResponse {
     /**
      * Variable type.
@@ -49,15 +49,15 @@ public final class SsisVariableResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsisVariableResponse(
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable Double id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sensitive") @Nullable Boolean sensitive,
-        @OutputCustomType.Parameter("sensitiveValue") @Nullable String sensitiveValue,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable Double id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sensitive") @Nullable Boolean sensitive,
+        @CustomType.Parameter("sensitiveValue") @Nullable String sensitiveValue,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.dataType = dataType;
         this.description = description;
         this.id = id;

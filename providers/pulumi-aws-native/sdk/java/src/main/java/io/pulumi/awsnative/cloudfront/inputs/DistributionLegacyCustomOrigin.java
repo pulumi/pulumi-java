@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,35 +16,35 @@ public final class DistributionLegacyCustomOrigin extends io.pulumi.resources.In
 
     public static final DistributionLegacyCustomOrigin Empty = new DistributionLegacyCustomOrigin();
 
-    @InputImport(name="dNSName", required=true)
+    @Import(name="dNSName", required=true)
       private final String dNSName;
 
     public String getDNSName() {
         return this.dNSName;
     }
 
-    @InputImport(name="hTTPPort")
+    @Import(name="hTTPPort")
       private final @Nullable Integer hTTPPort;
 
     public Optional<Integer> getHTTPPort() {
         return this.hTTPPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPPort);
     }
 
-    @InputImport(name="hTTPSPort")
+    @Import(name="hTTPSPort")
       private final @Nullable Integer hTTPSPort;
 
     public Optional<Integer> getHTTPSPort() {
         return this.hTTPSPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPSPort);
     }
 
-    @InputImport(name="originProtocolPolicy", required=true)
+    @Import(name="originProtocolPolicy", required=true)
       private final String originProtocolPolicy;
 
     public String getOriginProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
-    @InputImport(name="originSSLProtocols", required=true)
+    @Import(name="originSSLProtocols", required=true)
       private final List<String> originSSLProtocols;
 
     public List<String> getOriginSSLProtocols() {

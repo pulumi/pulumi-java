@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
      * The physical address.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -33,7 +33,7 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
      * The latitude.
      * 
      */
-    @InputImport(name="latitude")
+    @Import(name="latitude")
       private final @Nullable Output<String> latitude;
 
     public Output<String> getLatitude() {
@@ -44,7 +44,7 @@ public final class DeviceLocationArgs extends io.pulumi.resources.ResourceArgs {
      * The longitude.
      * 
      */
-    @InputImport(name="longitude")
+    @Import(name="longitude")
       private final @Nullable Output<String> longitude;
 
     public Output<String> getLongitude() {

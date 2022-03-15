@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotfleethub;
 
 import io.pulumi.awsnative.iotfleethub.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Application Description, should be between 1 and 2048 characters.
      * 
      */
-    @InputImport(name="applicationDescription")
+    @Import(name="applicationDescription")
       private final @Nullable Output<String> applicationDescription;
 
     public Output<String> getApplicationDescription() {
@@ -31,7 +31,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Application Name, should be between 1 and 256 characters.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -42,7 +42,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -53,7 +53,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the application.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
     public Output<List<ApplicationTagArgs>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Cert data
      * 
      */
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
@@ -33,7 +33,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * CNAME of the cert
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable Output<String> cname;
 
     public Output<String> getCname() {
@@ -44,7 +44,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Key data
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -55,7 +55,7 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Enable or disable ssl for scoring
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

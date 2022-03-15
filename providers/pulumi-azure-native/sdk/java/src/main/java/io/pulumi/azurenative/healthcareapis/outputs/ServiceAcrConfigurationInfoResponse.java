@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAcrConfigurationInfoResponse {
     /**
      * The list of the ACR login servers.
@@ -17,8 +17,8 @@ public final class ServiceAcrConfigurationInfoResponse {
      */
     private final @Nullable List<String> loginServers;
 
-    @OutputCustomType.Constructor
-    private ServiceAcrConfigurationInfoResponse(@OutputCustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
+    @CustomType.Constructor
+    private ServiceAcrConfigurationInfoResponse(@CustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
         this.loginServers = loginServers;
     }
 

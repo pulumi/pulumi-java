@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
      * The name of the destination bucket (e.g., gs://mybucket).
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -31,7 +31,7 @@ public final class SqlServerAuditConfigResponse extends io.pulumi.resources.Invo
      * This is always sql#sqlServerAuditConfig
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {

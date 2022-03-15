@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.ReplicationArgs;
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * The provisioning state of the replication at the time the operation was called.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -78,7 +78,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * The status of the replication at the time the operation was called.
      * 
      */
-    @OutputExport(name="status", type=StatusResponse.class, parameters={})
+    @Export(name="status", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> status;
 
     /**
@@ -92,7 +92,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class Replication extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

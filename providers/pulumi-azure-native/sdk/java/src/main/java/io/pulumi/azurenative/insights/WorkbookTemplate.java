@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.WorkbookTemplateGalleryResponse;
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateLocalizedGalleryResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -39,7 +39,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Information about the author of the workbook template.
      * 
      */
-    @OutputExport(name="author", type=String.class, parameters={})
+    @Export(name="author", type=String.class, parameters={})
     private Output</* @Nullable */ String> author;
 
     /**
@@ -53,7 +53,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Workbook galleries supported by the template.
      * 
      */
-    @OutputExport(name="galleries", type=List.class, parameters={WorkbookTemplateGalleryResponse.class})
+    @Export(name="galleries", type=List.class, parameters={WorkbookTemplateGalleryResponse.class})
     private Output<List<WorkbookTemplateGalleryResponse>> galleries;
 
     /**
@@ -67,7 +67,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.
      * 
      */
-    @OutputExport(name="localized", type=Map.class, parameters={String.class, List.class})
+    @Export(name="localized", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<WorkbookTemplateLocalizedGalleryResponse>>> localized;
 
     /**
@@ -81,7 +81,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -95,7 +95,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Priority of the template. Determines which template to open when a workbook gallery is opened in viewer mode.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -123,7 +123,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -137,7 +137,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Valid JSON object containing workbook template payload.
      * 
      */
-    @OutputExport(name="templateData", type=Object.class, parameters={})
+    @Export(name="templateData", type=Object.class, parameters={})
     private Output<Object> templateData;
 
     /**
@@ -151,7 +151,7 @@ public class WorkbookTemplate extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

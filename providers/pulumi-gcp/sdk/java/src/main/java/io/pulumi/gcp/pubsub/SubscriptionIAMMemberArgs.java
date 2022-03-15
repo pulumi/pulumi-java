@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
 
     public static final SubscriptionIAMMemberArgs Empty = new SubscriptionIAMMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<SubscriptionIAMMemberConditionArgs> condition;
 
     public Output<SubscriptionIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -34,7 +34,7 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -47,7 +47,7 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -58,7 +58,7 @@ public final class SubscriptionIAMMemberArgs extends io.pulumi.resources.Resourc
      * The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    @InputImport(name="subscription", required=true)
+    @Import(name="subscription", required=true)
       private final Output<String> subscription;
 
     public Output<String> getSubscription() {

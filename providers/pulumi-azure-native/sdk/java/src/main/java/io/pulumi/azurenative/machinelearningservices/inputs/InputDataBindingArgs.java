@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
      * ARM resource ID of the registered dataVersion.
      * 
      */
-    @InputImport(name="dataId")
+    @Import(name="dataId")
       private final @Nullable Output<String> dataId;
 
     public Output<String> getDataId() {
@@ -31,7 +31,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
      * Mechanism for accessing the data artifact.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
 
     public Output<Either<String,DataBindingMode>> getMode() {
@@ -42,7 +42,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
      * Location of data inside the container process.
      * 
      */
-    @InputImport(name="pathOnCompute")
+    @Import(name="pathOnCompute")
       private final @Nullable Output<String> pathOnCompute;
 
     public Output<String> getPathOnCompute() {

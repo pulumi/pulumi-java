@@ -5,7 +5,7 @@ package io.pulumi.awsnative.frauddetector;
 
 import io.pulumi.awsnative.frauddetector.inputs.OutcomeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * The outcome description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the outcome.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with this outcome.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<OutcomeTagArgs>> tags;
 
     public Output<List<OutcomeTagArgs>> getTags() {

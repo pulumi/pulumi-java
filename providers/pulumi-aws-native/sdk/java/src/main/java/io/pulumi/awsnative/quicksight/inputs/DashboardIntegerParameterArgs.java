@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DashboardIntegerParameterArgs extends io.pulumi.resources.Res
      * <p>The name of the integer parameter.</p>
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class DashboardIntegerParameterArgs extends io.pulumi.resources.Res
      * <p>The values for the integer parameter.</p>
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<Double>> values;
 
     public Output<List<Double>> getValues() {

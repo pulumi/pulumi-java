@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponseTimeZoneOffset;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocalTimestampResponse {
     /**
      * An enum that represents the format of the local timestamp property that needs to be set.
@@ -23,10 +23,10 @@ public final class LocalTimestampResponse {
      */
     private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocalTimestampResponse(
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("timeZoneOffset") @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("timeZoneOffset") @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
         this.format = format;
         this.timeZoneOffset = timeZoneOffset;
     }

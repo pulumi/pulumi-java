@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationUserAssignedIdentityResponse {
     /**
      * The friendly name of user assigned identity.
@@ -20,10 +20,10 @@ public final class ApplicationUserAssignedIdentityResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationUserAssignedIdentityResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalId") String principalId) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalId") String principalId) {
         this.name = name;
         this.principalId = principalId;
     }

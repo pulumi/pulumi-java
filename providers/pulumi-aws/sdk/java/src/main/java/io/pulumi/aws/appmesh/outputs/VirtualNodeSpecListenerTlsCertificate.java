@@ -6,12 +6,12 @@ package io.pulumi.aws.appmesh.outputs;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsCertificateAcm;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsCertificateFile;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsCertificateSds;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTlsCertificate {
     /**
      * An AWS Certificate Manager (ACM) certificate.
@@ -29,11 +29,11 @@ public final class VirtualNodeSpecListenerTlsCertificate {
      */
     private final @Nullable VirtualNodeSpecListenerTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTlsCertificate(
-        @OutputCustomType.Parameter("acm") @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm,
-        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsCertificateFile file,
-        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
+        @CustomType.Parameter("acm") @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm,
+        @CustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsCertificateFile file,
+        @CustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;

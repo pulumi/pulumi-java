@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresentationTimeRangeResponse {
     /**
      * The absolute end time boundary.
@@ -43,14 +43,14 @@ public final class PresentationTimeRangeResponse {
      */
     private final @Nullable Double timescale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresentationTimeRangeResponse(
-        @OutputCustomType.Parameter("endTimestamp") @Nullable Double endTimestamp,
-        @OutputCustomType.Parameter("forceEndTimestamp") @Nullable Boolean forceEndTimestamp,
-        @OutputCustomType.Parameter("liveBackoffDuration") @Nullable Double liveBackoffDuration,
-        @OutputCustomType.Parameter("presentationWindowDuration") @Nullable Double presentationWindowDuration,
-        @OutputCustomType.Parameter("startTimestamp") @Nullable Double startTimestamp,
-        @OutputCustomType.Parameter("timescale") @Nullable Double timescale) {
+        @CustomType.Parameter("endTimestamp") @Nullable Double endTimestamp,
+        @CustomType.Parameter("forceEndTimestamp") @Nullable Boolean forceEndTimestamp,
+        @CustomType.Parameter("liveBackoffDuration") @Nullable Double liveBackoffDuration,
+        @CustomType.Parameter("presentationWindowDuration") @Nullable Double presentationWindowDuration,
+        @CustomType.Parameter("startTimestamp") @Nullable Double startTimestamp,
+        @CustomType.Parameter("timescale") @Nullable Double timescale) {
         this.endTimestamp = endTimestamp;
         this.forceEndTimestamp = forceEndTimestamp;
         this.liveBackoffDuration = liveBackoffDuration;

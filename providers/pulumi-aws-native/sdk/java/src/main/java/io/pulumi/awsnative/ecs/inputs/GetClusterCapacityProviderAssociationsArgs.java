@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetClusterCapacityProviderAssociationsArgs extends io.pulumi.
 
     public static final GetClusterCapacityProviderAssociationsArgs Empty = new GetClusterCapacityProviderAssociationsArgs();
 
-    @InputImport(name="cluster", required=true)
+    @Import(name="cluster", required=true)
       private final String cluster;
 
     public String getCluster() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
      * 
      */
-    @InputImport(name="endIpAddress")
+    @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
     public Output<String> getEndIpAddress() {
@@ -29,7 +29,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The IP firewall rule name
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -51,7 +51,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The start IP address of the firewall rule. Must be IPv4 format
      * 
      */
-    @InputImport(name="startIpAddress")
+    @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
     public Output<String> getStartIpAddress() {
@@ -62,7 +62,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

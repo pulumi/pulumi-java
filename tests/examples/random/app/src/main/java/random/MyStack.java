@@ -2,7 +2,7 @@ package random;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.random.*;
 
 import java.util.List;
@@ -10,32 +10,32 @@ import java.util.Map;
 
 public final class MyStack extends Stack {
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> randomPassword;
 
     // FIXME: this does show up in stack outputs on the first run.
-    @OutputExport(type = Map.class, parameters = {String.class, Object.class})
+    @Export(type = Map.class, parameters = {String.class, Object.class})
     private final Output<Map<String, Object>> randomPetKeepers;
 
-    @OutputExport(type = Integer.class)
+    @Export(type = Integer.class)
     private final Output<Integer> randomInteger;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> randomString;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> randomIdHex;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> randomUuid;
 
-    @OutputExport(type = List.class, parameters = {String.class})
+    @Export(type = List.class, parameters = {String.class})
     private final Output<List<String>> shuffled;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private final Output<String> randomTuple;
 
-    @OutputExport(type = List.class, parameters = {String.class})
+    @Export(type = List.class, parameters = {String.class})
     private final Output<List<String>> randomAll;
 
     public MyStack() {
@@ -78,6 +78,6 @@ public final class MyStack extends Stack {
         this.randomTuple = Output.tuple(this.randomString, this.randomUuid)
                 .applyValue(t -> t.t1 + t.t2);
 
-        this.randomAll = Output.allOutputs(this.randomString, this.randomUuid);
+        this.randomAll = Output.all(this.randomString, this.randomUuid);
     }
 }

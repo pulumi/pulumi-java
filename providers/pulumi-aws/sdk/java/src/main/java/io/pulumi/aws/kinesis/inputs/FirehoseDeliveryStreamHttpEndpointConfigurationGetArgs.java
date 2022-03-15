@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurat
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
@@ -33,7 +33,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300 (5 minutes).
      * 
      */
-    @InputImport(name="bufferingInterval")
+    @Import(name="bufferingInterval")
       private final @Nullable Output<Integer> bufferingInterval;
 
     public Output<Integer> getBufferingInterval() {
@@ -44,7 +44,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
      * 
      */
-    @InputImport(name="bufferingSize")
+    @Import(name="bufferingSize")
       private final @Nullable Output<Integer> bufferingSize;
 
     public Output<Integer> getBufferingSize() {
@@ -55,7 +55,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * The CloudWatch Logging Options for the delivery stream. More details are given below.
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Output<FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
@@ -66,7 +66,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * The HTTP endpoint name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * The data processing configuration.  More details are given below.
      * 
      */
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
     public Output<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
@@ -88,7 +88,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * The request configuration.  More details are given below.
      * 
      */
-    @InputImport(name="requestConfiguration")
+    @Import(name="requestConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> requestConfiguration;
 
     public Output<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs> getRequestConfiguration() {
@@ -99,7 +99,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * Total amount of seconds Firehose spends on retries. This duration starts after the initial attempt fails, It does not include the time periods during which Firehose waits for acknowledgment from the specified destination after each attempt. Valid values between `0` and `7200`. Default is `300`.
      * 
      */
-    @InputImport(name="retryDuration")
+    @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
     public Output<Integer> getRetryDuration() {
@@ -110,7 +110,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs. The pattern needs to be `arn:.*`.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -121,7 +121,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDataOnly` and `AllData`.  Default value is `FailedDataOnly`.
      * 
      */
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
     public Output<String> getS3BackupMode() {
@@ -132,7 +132,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs extend
      * The HTTP endpoint URL to which Kinesis Firehose sends your data.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

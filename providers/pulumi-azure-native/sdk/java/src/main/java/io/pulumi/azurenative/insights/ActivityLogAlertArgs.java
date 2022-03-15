@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.ActionListArgs;
 import io.pulumi.azurenative.insights.inputs.AlertRuleAllOfConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * The actions that will activate when the condition is met.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<ActionListArgs> actions;
 
     public Output<ActionListArgs> getActions() {
@@ -34,7 +34,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Activity Log Alert rule.
      * 
      */
-    @InputImport(name="activityLogAlertName")
+    @Import(name="activityLogAlertName")
       private final @Nullable Output<String> activityLogAlertName;
 
     public Output<String> getActivityLogAlertName() {
@@ -45,7 +45,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * The condition that will cause this alert to activate.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final Output<AlertRuleAllOfConditionArgs> condition;
 
     public Output<AlertRuleAllOfConditionArgs> getCondition() {
@@ -56,7 +56,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * A description of this Activity Log Alert rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -78,7 +78,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
      * 
      */
-    @InputImport(name="scopes", required=true)
+    @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
@@ -111,7 +111,7 @@ public final class ActivityLogAlertArgs extends io.pulumi.resources.ResourceArgs
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

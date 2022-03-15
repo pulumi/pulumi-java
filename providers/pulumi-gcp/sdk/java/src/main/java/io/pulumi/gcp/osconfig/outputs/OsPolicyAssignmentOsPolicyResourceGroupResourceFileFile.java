@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
     /**
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile(
-        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
-        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs,
-        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
-        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote) {
+        @CustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @CustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs,
+        @CustomType.Parameter("localPath") @Nullable String localPath,
+        @CustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

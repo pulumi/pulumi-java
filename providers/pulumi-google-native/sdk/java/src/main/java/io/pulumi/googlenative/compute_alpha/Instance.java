@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.InstanceArgs;
@@ -44,7 +44,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Controls for advanced machine-related behavior features.
      * 
      */
-    @OutputExport(name="advancedMachineFeatures", type=AdvancedMachineFeaturesResponse.class, parameters={})
+    @Export(name="advancedMachineFeatures", type=AdvancedMachineFeaturesResponse.class, parameters={})
     private Output<AdvancedMachineFeaturesResponse> advancedMachineFeatures;
 
     /**
@@ -58,7 +58,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Allows this instance to send and receive packets with non-matching destination or source IPs. This is required if you plan to use this instance to forward routes. For more information, see Enabling IP Forwarding .
      * 
      */
-    @OutputExport(name="canIpForward", type=Boolean.class, parameters={})
+    @Export(name="canIpForward", type=Boolean.class, parameters={})
     private Output<Boolean> canIpForward;
 
     /**
@@ -68,7 +68,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getCanIpForward() {
         return this.canIpForward;
     }
-    @OutputExport(name="confidentialInstanceConfig", type=ConfidentialInstanceConfigResponse.class, parameters={})
+    @Export(name="confidentialInstanceConfig", type=ConfidentialInstanceConfigResponse.class, parameters={})
     private Output<ConfidentialInstanceConfigResponse> confidentialInstanceConfig;
 
     public Output<ConfidentialInstanceConfigResponse> getConfidentialInstanceConfig() {
@@ -78,7 +78,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The CPU platform used by this instance.
      * 
      */
-    @OutputExport(name="cpuPlatform", type=String.class, parameters={})
+    @Export(name="cpuPlatform", type=String.class, parameters={})
     private Output<String> cpuPlatform;
 
     /**
@@ -92,7 +92,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -106,7 +106,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Whether the resource should be protected against deletion.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output<Boolean> deletionProtection;
 
     /**
@@ -120,7 +120,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -134,7 +134,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Array of disks associated with this instance. Persistent disks must be created before you can assign them.
      * 
      */
-    @OutputExport(name="disks", type=List.class, parameters={AttachedDiskResponse.class})
+    @Export(name="disks", type=List.class, parameters={AttachedDiskResponse.class})
     private Output<List<AttachedDiskResponse>> disks;
 
     /**
@@ -148,7 +148,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Enables display device for the instance.
      * 
      */
-    @OutputExport(name="displayDevice", type=DisplayDeviceResponse.class, parameters={})
+    @Export(name="displayDevice", type=DisplayDeviceResponse.class, parameters={})
     private Output<DisplayDeviceResponse> displayDevice;
 
     /**
@@ -162,7 +162,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies whether the disks restored from source snapshots or source machine image should erase Windows specific VSS signature.
      * 
      */
-    @OutputExport(name="eraseWindowsVssSignature", type=Boolean.class, parameters={})
+    @Export(name="eraseWindowsVssSignature", type=Boolean.class, parameters={})
     private Output<Boolean> eraseWindowsVssSignature;
 
     /**
@@ -176,7 +176,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies a fingerprint for this resource, which is essentially a hash of the instance's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update the instance. You must always provide an up-to-date fingerprint hash in order to update the instance. To see the latest fingerprint, make get() request to the instance.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -190,7 +190,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A list of the type and count of accelerator cards attached to the instance.
      * 
      */
-    @OutputExport(name="guestAccelerators", type=List.class, parameters={AcceleratorConfigResponse.class})
+    @Export(name="guestAccelerators", type=List.class, parameters={AcceleratorConfigResponse.class})
     private Output<List<AcceleratorConfigResponse>> guestAccelerators;
 
     /**
@@ -204,7 +204,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies the hostname of the instance. The specified hostname must be RFC1035 compliant. If hostname is not specified, the default hostname is [INSTANCE_NAME].c.[PROJECT_ID].internal when using the global DNS, and [INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal when using zonal DNS.
      * 
      */
-    @OutputExport(name="hostname", type=String.class, parameters={})
+    @Export(name="hostname", type=String.class, parameters={})
     private Output<String> hostname;
 
     /**
@@ -218,7 +218,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Encrypts or decrypts data for an instance with a customer-supplied encryption key. If you are creating a new instance, this field encrypts the local SSD and in-memory contents of the instance using a key that you provide. If you are restarting an instance protected with a customer-supplied encryption key, you must provide the correct key in order to successfully restart the instance. If you do not provide an encryption key when creating the instance, then the local SSD and in-memory contents will be encrypted using an automatically generated key and you do not need to provide a key to start the instance later. Instance templates do not store customer-supplied encryption keys, so you cannot use your own keys to encrypt local SSDs and in-memory content in a managed instance group.
      * 
      */
-    @OutputExport(name="instanceEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
+    @Export(name="instanceEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
     private Output<CustomerEncryptionKeyResponse> instanceEncryptionKey;
 
     /**
@@ -232,7 +232,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * KeyRevocationActionType of the instance.
      * 
      */
-    @OutputExport(name="keyRevocationActionType", type=String.class, parameters={})
+    @Export(name="keyRevocationActionType", type=String.class, parameters={})
     private Output<String> keyRevocationActionType;
 
     /**
@@ -246,7 +246,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#instance for instances.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -260,7 +260,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A fingerprint for this request, which is essentially a hash of the label's contents and used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels. To see the latest fingerprint, make get() request to the instance.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -274,7 +274,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Labels to apply to this instance. These can be later modified by the setLabels method.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -288,7 +288,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Last start timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="lastStartTimestamp", type=String.class, parameters={})
+    @Export(name="lastStartTimestamp", type=String.class, parameters={})
     private Output<String> lastStartTimestamp;
 
     /**
@@ -302,7 +302,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Last stop timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="lastStopTimestamp", type=String.class, parameters={})
+    @Export(name="lastStopTimestamp", type=String.class, parameters={})
     private Output<String> lastStopTimestamp;
 
     /**
@@ -316,7 +316,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Last suspended timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="lastSuspendedTimestamp", type=String.class, parameters={})
+    @Export(name="lastSuspendedTimestamp", type=String.class, parameters={})
     private Output<String> lastSuspendedTimestamp;
 
     /**
@@ -330,7 +330,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Full or partial URL of the machine type resource to use for this instance, in the format: zones/zone/machineTypes/machine-type. This is provided by the client when the instance is created. For example, the following is a valid partial url to a predefined machine type: zones/us-central1-f/machineTypes/n1-standard-1 To create a custom machine type, provide a URL to a machine type in the following format, where CPUS is 1 or an even number up to 32 (2, 4, 6, ... 24, etc), and MEMORY is the total memory for this instance. Memory must be a multiple of 256 MB and must be supplied in MB (e.g. 5 GB of memory is 5120 MB): zones/zone/machineTypes/custom-CPUS-MEMORY For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions, read the Specifications for custom machine types.
      * 
      */
-    @OutputExport(name="machineType", type=String.class, parameters={})
+    @Export(name="machineType", type=String.class, parameters={})
     private Output<String> machineType;
 
     /**
@@ -344,7 +344,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The metadata key/value pairs assigned to this instance. This includes custom metadata and predefined keys.
      * 
      */
-    @OutputExport(name="metadata", type=MetadataResponse.class, parameters={})
+    @Export(name="metadata", type=MetadataResponse.class, parameters={})
     private Output<MetadataResponse> metadata;
 
     /**
@@ -358,7 +358,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge".
      * 
      */
-    @OutputExport(name="minCpuPlatform", type=String.class, parameters={})
+    @Export(name="minCpuPlatform", type=String.class, parameters={})
     private Output<String> minCpuPlatform;
 
     /**
@@ -372,7 +372,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -386,7 +386,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An array of network configurations for this instance. These specify how interfaces are configured to interact with other network services, such as connecting to the internet. Multiple interfaces are supported per instance.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
@@ -396,7 +396,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output<List<NetworkInterfaceResponse>> getNetworkInterfaces() {
         return this.networkInterfaces;
     }
-    @OutputExport(name="networkPerformanceConfig", type=NetworkPerformanceConfigResponse.class, parameters={})
+    @Export(name="networkPerformanceConfig", type=NetworkPerformanceConfigResponse.class, parameters={})
     private Output<NetworkPerformanceConfigResponse> networkPerformanceConfig;
 
     public Output<NetworkPerformanceConfigResponse> getNetworkPerformanceConfig() {
@@ -406,7 +406,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
      * 
      */
-    @OutputExport(name="params", type=InstanceParamsResponse.class, parameters={})
+    @Export(name="params", type=InstanceParamsResponse.class, parameters={})
     private Output<InstanceParamsResponse> params;
 
     /**
@@ -420,7 +420,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * PostKeyRevocationActionType of the instance.
      * 
      */
-    @OutputExport(name="postKeyRevocationActionType", type=String.class, parameters={})
+    @Export(name="postKeyRevocationActionType", type=String.class, parameters={})
     private Output<String> postKeyRevocationActionType;
 
     /**
@@ -434,7 +434,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Total amount of preserved state for SUSPENDED instances. Read-only in the api.
      * 
      */
-    @OutputExport(name="preservedStateSizeGb", type=String.class, parameters={})
+    @Export(name="preservedStateSizeGb", type=String.class, parameters={})
     private Output<String> preservedStateSizeGb;
 
     /**
@@ -448,7 +448,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The private IPv6 google access type for the VM. If not specified, use INHERIT_FROM_SUBNETWORK as default.
      * 
      */
-    @OutputExport(name="privateIpv6GoogleAccess", type=String.class, parameters={})
+    @Export(name="privateIpv6GoogleAccess", type=String.class, parameters={})
     private Output<String> privateIpv6GoogleAccess;
 
     /**
@@ -462,7 +462,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies the reservations that this instance can consume from.
      * 
      */
-    @OutputExport(name="reservationAffinity", type=ReservationAffinityResponse.class, parameters={})
+    @Export(name="reservationAffinity", type=ReservationAffinityResponse.class, parameters={})
     private Output<ReservationAffinityResponse> reservationAffinity;
 
     /**
@@ -476,7 +476,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource policies applied to this instance.
      * 
      */
-    @OutputExport(name="resourcePolicies", type=List.class, parameters={String.class})
+    @Export(name="resourcePolicies", type=List.class, parameters={String.class})
     private Output<List<String>> resourcePolicies;
 
     /**
@@ -490,7 +490,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies values set for instance attributes as compared to the values requested by user in the corresponding input only field.
      * 
      */
-    @OutputExport(name="resourceStatus", type=ResourceStatusResponse.class, parameters={})
+    @Export(name="resourceStatus", type=ResourceStatusResponse.class, parameters={})
     private Output<ResourceStatusResponse> resourceStatus;
 
     /**
@@ -504,7 +504,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Reserved for future use.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -518,7 +518,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Sets the scheduling options for this instance.
      * 
      */
-    @OutputExport(name="scheduling", type=SchedulingResponse.class, parameters={})
+    @Export(name="scheduling", type=SchedulingResponse.class, parameters={})
     private Output<SchedulingResponse> scheduling;
 
     /**
@@ -532,7 +532,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [Input Only] Secure tags to apply to this instance. These can be later modified by the update method. Maximum number of secure tags allowed is 50.
      * 
      */
-    @OutputExport(name="secureTags", type=List.class, parameters={String.class})
+    @Export(name="secureTags", type=List.class, parameters={String.class})
     private Output<List<String>> secureTags;
 
     /**
@@ -546,7 +546,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -560,7 +560,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -574,7 +574,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A list of service accounts, with their specified scopes, authorized for this instance. Only one service account per VM instance is supported. Service accounts generate access tokens that can be accessed through the metadata server and used to authenticate applications on the instance. See Service Accounts for more information.
      * 
      */
-    @OutputExport(name="serviceAccounts", type=List.class, parameters={ServiceAccountResponse.class})
+    @Export(name="serviceAccounts", type=List.class, parameters={ServiceAccountResponse.class})
     private Output<List<ServiceAccountResponse>> serviceAccounts;
 
     /**
@@ -584,13 +584,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output<List<ServiceAccountResponse>> getServiceAccounts() {
         return this.serviceAccounts;
     }
-    @OutputExport(name="shieldedInstanceConfig", type=ShieldedInstanceConfigResponse.class, parameters={})
+    @Export(name="shieldedInstanceConfig", type=ShieldedInstanceConfigResponse.class, parameters={})
     private Output<ShieldedInstanceConfigResponse> shieldedInstanceConfig;
 
     public Output<ShieldedInstanceConfigResponse> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
     }
-    @OutputExport(name="shieldedInstanceIntegrityPolicy", type=ShieldedInstanceIntegrityPolicyResponse.class, parameters={})
+    @Export(name="shieldedInstanceIntegrityPolicy", type=ShieldedInstanceIntegrityPolicyResponse.class, parameters={})
     private Output<ShieldedInstanceIntegrityPolicyResponse> shieldedInstanceIntegrityPolicy;
 
     public Output<ShieldedInstanceIntegrityPolicyResponse> getShieldedInstanceIntegrityPolicy() {
@@ -600,7 +600,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Deprecating, please use shielded_instance_config.
      * 
      */
-    @OutputExport(name="shieldedVmConfig", type=ShieldedVmConfigResponse.class, parameters={})
+    @Export(name="shieldedVmConfig", type=ShieldedVmConfigResponse.class, parameters={})
     private Output<ShieldedVmConfigResponse> shieldedVmConfig;
 
     /**
@@ -614,7 +614,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Deprecating, please use shielded_instance_integrity_policy.
      * 
      */
-    @OutputExport(name="shieldedVmIntegrityPolicy", type=ShieldedVmIntegrityPolicyResponse.class, parameters={})
+    @Export(name="shieldedVmIntegrityPolicy", type=ShieldedVmIntegrityPolicyResponse.class, parameters={})
     private Output<ShieldedVmIntegrityPolicyResponse> shieldedVmIntegrityPolicy;
 
     /**
@@ -628,7 +628,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Source machine image
      * 
      */
-    @OutputExport(name="sourceMachineImage", type=String.class, parameters={})
+    @Export(name="sourceMachineImage", type=String.class, parameters={})
     private Output<String> sourceMachineImage;
 
     /**
@@ -642,7 +642,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Source machine image encryption key when creating an instance from a machine image.
      * 
      */
-    @OutputExport(name="sourceMachineImageEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
+    @Export(name="sourceMachineImageEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
     private Output<CustomerEncryptionKeyResponse> sourceMachineImageEncryptionKey;
 
     /**
@@ -656,7 +656,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Whether a VM has been restricted for start because Compute Engine has detected suspicious activity.
      * 
      */
-    @OutputExport(name="startRestricted", type=Boolean.class, parameters={})
+    @Export(name="startRestricted", type=Boolean.class, parameters={})
     private Output<Boolean> startRestricted;
 
     /**
@@ -670,7 +670,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The status of the instance. One of the following values: PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about the status of the instance, see Instance life cycle.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -684,7 +684,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An optional, human-readable explanation of the status.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -698,7 +698,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Tags to apply to this instance. Tags are used to identify valid sources or targets for network firewalls and are specified by the client during instance creation. The tags can be later modified by the setTags method. Each tag within the list must comply with RFC1035. Multiple tags can be specified via the 'tags.items' field.
      * 
      */
-    @OutputExport(name="tags", type=TagsResponse.class, parameters={})
+    @Export(name="tags", type=TagsResponse.class, parameters={})
     private Output<TagsResponse> tags;
 
     /**
@@ -712,7 +712,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Specifies upcoming maintenance for the instance.
      * 
      */
-    @OutputExport(name="upcomingMaintenance", type=UpcomingMaintenanceResponse.class, parameters={})
+    @Export(name="upcomingMaintenance", type=UpcomingMaintenanceResponse.class, parameters={})
     private Output<UpcomingMaintenanceResponse> upcomingMaintenance;
 
     /**
@@ -726,7 +726,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * URL of the zone where the instance resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

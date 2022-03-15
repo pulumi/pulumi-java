@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.ConfigMapVolumeSourceResponse;
 import io.pulumi.googlenative.run_v1.outputs.SecretVolumeSourceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VolumeResponse {
     private final ConfigMapVolumeSourceResponse configMap;
     /**
@@ -19,11 +19,11 @@ public final class VolumeResponse {
     private final String name;
     private final SecretVolumeSourceResponse secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeResponse(
-        @OutputCustomType.Parameter("configMap") ConfigMapVolumeSourceResponse configMap,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secret") SecretVolumeSourceResponse secret) {
+        @CustomType.Parameter("configMap") ConfigMapVolumeSourceResponse configMap,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secret") SecretVolumeSourceResponse secret) {
         this.configMap = configMap;
         this.name = name;
         this.secret = secret;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cache.outputs.RedisCommonPropertiesResponseRedisCon
 import io.pulumi.azurenative.cache.outputs.RedisInstanceDetailsResponse;
 import io.pulumi.azurenative.cache.outputs.RedisLinkedServerResponse;
 import io.pulumi.azurenative.cache.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRedisResult {
     /**
      * The keys of the Redis cache - not set if this object is not the response to Create or Update redis cache
@@ -147,33 +147,33 @@ public final class GetRedisResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRedisResult(
-        @OutputCustomType.Parameter("accessKeys") RedisAccessKeysResponse accessKeys,
-        @OutputCustomType.Parameter("enableNonSslPort") @Nullable Boolean enableNonSslPort,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instances") List<RedisInstanceDetailsResponse> instances,
-        @OutputCustomType.Parameter("linkedServers") List<RedisLinkedServerResponse> linkedServers,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("redisConfiguration") @Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration,
-        @OutputCustomType.Parameter("redisVersion") String redisVersion,
-        @OutputCustomType.Parameter("replicasPerMaster") @Nullable Integer replicasPerMaster,
-        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("sslPort") Integer sslPort,
-        @OutputCustomType.Parameter("staticIP") @Nullable String staticIP,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantSettings") @Nullable Map<String,String> tenantSettings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("accessKeys") RedisAccessKeysResponse accessKeys,
+        @CustomType.Parameter("enableNonSslPort") @Nullable Boolean enableNonSslPort,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instances") List<RedisInstanceDetailsResponse> instances,
+        @CustomType.Parameter("linkedServers") List<RedisLinkedServerResponse> linkedServers,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("redisConfiguration") @Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration,
+        @CustomType.Parameter("redisVersion") String redisVersion,
+        @CustomType.Parameter("replicasPerMaster") @Nullable Integer replicasPerMaster,
+        @CustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("sslPort") Integer sslPort,
+        @CustomType.Parameter("staticIP") @Nullable String staticIP,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantSettings") @Nullable Map<String,String> tenantSettings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.accessKeys = accessKeys;
         this.enableNonSslPort = enableNonSslPort;
         this.hostName = hostName;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSVariantResponseResponse {
     /**
      * The compute environment type for the service.
@@ -67,18 +67,18 @@ public final class AKSVariantResponseResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSVariantResponseResponse(
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.computeType = computeType;
         this.deploymentType = deploymentType;
         this.description = description;

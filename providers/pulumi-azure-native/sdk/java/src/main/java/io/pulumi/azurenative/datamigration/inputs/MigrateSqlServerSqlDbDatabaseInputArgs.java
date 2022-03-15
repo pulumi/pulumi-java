@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * Whether to set database read only before migration
      * 
      */
-    @InputImport(name="makeSourceDbReadOnly")
+    @Import(name="makeSourceDbReadOnly")
       private final @Nullable Output<Boolean> makeSourceDbReadOnly;
 
     public Output<Boolean> getMakeSourceDbReadOnly() {
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * Name of the database
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * Mapping of source to target tables
      * 
      */
-    @InputImport(name="tableMap")
+    @Import(name="tableMap")
       private final @Nullable Output<Map<String,String>> tableMap;
 
     public Output<Map<String,String>> getTableMap() {
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbDatabaseInputArgs extends io.pulumi.reso
      * Name of target database. Note: Target database will be truncated before starting migration.
      * 
      */
-    @InputImport(name="targetDatabaseName")
+    @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
     public Output<String> getTargetDatabaseName() {

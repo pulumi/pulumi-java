@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsManifest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationHlsPackage {
     private final @Nullable PackagingConfigurationHlsEncryption encryption;
     /**
@@ -28,12 +28,12 @@ public final class PackagingConfigurationHlsPackage {
      */
     private final @Nullable Boolean useAudioRenditionGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationHlsPackage(
-        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationHlsEncryption encryption,
-        @OutputCustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
-        @OutputCustomType.Parameter("useAudioRenditionGroup") @Nullable Boolean useAudioRenditionGroup) {
+        @CustomType.Parameter("encryption") @Nullable PackagingConfigurationHlsEncryption encryption,
+        @CustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @CustomType.Parameter("useAudioRenditionGroup") @Nullable Boolean useAudioRenditionGroup) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;

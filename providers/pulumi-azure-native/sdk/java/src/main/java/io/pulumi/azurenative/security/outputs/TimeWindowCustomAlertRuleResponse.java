@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeWindowCustomAlertRuleResponse {
     /**
      * The description of the custom alert.
@@ -48,15 +48,15 @@ public final class TimeWindowCustomAlertRuleResponse {
      */
     private final String timeWindowSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeWindowCustomAlertRuleResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("maxThreshold") Integer maxThreshold,
-        @OutputCustomType.Parameter("minThreshold") Integer minThreshold,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("timeWindowSize") String timeWindowSize) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("maxThreshold") Integer maxThreshold,
+        @CustomType.Parameter("minThreshold") Integer minThreshold,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("timeWindowSize") String timeWindowSize) {
         this.description = description;
         this.displayName = displayName;
         this.isEnabled = isEnabled;

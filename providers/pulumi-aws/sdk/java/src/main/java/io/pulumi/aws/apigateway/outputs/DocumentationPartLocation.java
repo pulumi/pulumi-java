@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DocumentationPartLocation {
     /**
      * The HTTP verb of a method. The default value is `*` for any method.
@@ -37,13 +37,13 @@ public final class DocumentationPartLocation {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentationPartLocation(
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("statusCode") @Nullable String statusCode,
+        @CustomType.Parameter("type") String type) {
         this.method = method;
         this.name = name;
         this.path = path;

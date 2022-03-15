@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWebCrawlerBasicAuthentication {
     private final String credentials;
     private final String host;
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceWebCrawlerBasicAuthentication(
-        @OutputCustomType.Parameter("credentials") String credentials,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("credentials") String credentials,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port) {
         this.credentials = credentials;
         this.host = host;
         this.port = port;

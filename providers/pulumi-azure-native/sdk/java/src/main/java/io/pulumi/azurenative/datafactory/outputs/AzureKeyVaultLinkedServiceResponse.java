@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureKeyVaultLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -54,15 +54,15 @@ public final class AzureKeyVaultLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureKeyVaultLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("baseUrl") Object baseUrl,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("baseUrl") Object baseUrl,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.baseUrl = baseUrl;
         this.connectVia = connectVia;

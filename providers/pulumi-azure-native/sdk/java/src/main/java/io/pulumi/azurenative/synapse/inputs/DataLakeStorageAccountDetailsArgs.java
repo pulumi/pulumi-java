@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
      * Account URL
      * 
      */
-    @InputImport(name="accountUrl")
+    @Import(name="accountUrl")
       private final @Nullable Output<String> accountUrl;
 
     public Output<String> getAccountUrl() {
@@ -33,7 +33,7 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
      * Filesystem name
      * 
      */
-    @InputImport(name="filesystem")
+    @Import(name="filesystem")
       private final @Nullable Output<String> filesystem;
 
     public Output<String> getFilesystem() {

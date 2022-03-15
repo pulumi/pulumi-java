@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
      * List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
@@ -30,7 +30,7 @@ public final class DataLakeSettingsCreateTableDefaultPermissionArgs extends io.p
      * Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
      * 
      */
-    @InputImport(name="principal")
+    @Import(name="principal")
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MonitoringScheduleStoppingCondition extends io.pulumi.resourc
      * The maximum runtime allowed in seconds.
      * 
      */
-    @InputImport(name="maxRuntimeInSeconds", required=true)
+    @Import(name="maxRuntimeInSeconds", required=true)
       private final Integer maxRuntimeInSeconds;
 
     public Integer getMaxRuntimeInSeconds() {

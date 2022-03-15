@@ -5,13 +5,13 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseAlertNotifications;
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseNotificationsByRole;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecurityContactResult {
     /**
      * Defines whether to send email notifications about new security alerts
@@ -49,15 +49,15 @@ public final class GetSecurityContactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecurityContactResult(
-        @OutputCustomType.Parameter("alertNotifications") @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications,
-        @OutputCustomType.Parameter("emails") @Nullable String emails,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationsByRole") @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole,
-        @OutputCustomType.Parameter("phone") @Nullable String phone,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alertNotifications") @Nullable SecurityContactPropertiesResponseAlertNotifications alertNotifications,
+        @CustomType.Parameter("emails") @Nullable String emails,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationsByRole") @Nullable SecurityContactPropertiesResponseNotificationsByRole notificationsByRole,
+        @CustomType.Parameter("phone") @Nullable String phone,
+        @CustomType.Parameter("type") String type) {
         this.alertNotifications = alertNotifications;
         this.emails = emails;
         this.id = id;

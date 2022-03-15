@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasTextLogDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasTextLogSetting {
     private final @Nullable BotAliasTextLogDestination destination;
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasTextLogSetting(
-        @OutputCustomType.Parameter("destination") @Nullable BotAliasTextLogDestination destination,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("destination") @Nullable BotAliasTextLogDestination destination,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.destination = destination;
         this.enabled = enabled;
     }

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.AgentDiskDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AgentDetailsResponse {
     /**
      * The Id of the agent running on the server.
@@ -37,13 +37,13 @@ public final class AgentDetailsResponse {
      */
     private final String machineId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AgentDetailsResponse(
-        @OutputCustomType.Parameter("agentId") String agentId,
-        @OutputCustomType.Parameter("biosId") String biosId,
-        @OutputCustomType.Parameter("disks") List<AgentDiskDetailsResponse> disks,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("machineId") String machineId) {
+        @CustomType.Parameter("agentId") String agentId,
+        @CustomType.Parameter("biosId") String biosId,
+        @CustomType.Parameter("disks") List<AgentDiskDetailsResponse> disks,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("machineId") String machineId) {
         this.agentId = agentId;
         this.biosId = biosId;
         this.disks = disks;

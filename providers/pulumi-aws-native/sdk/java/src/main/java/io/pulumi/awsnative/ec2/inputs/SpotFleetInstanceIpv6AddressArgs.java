@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
 
     public static final SpotFleetInstanceIpv6AddressArgs Empty = new SpotFleetInstanceIpv6AddressArgs();
 
-    @InputImport(name="ipv6Address", required=true)
+    @Import(name="ipv6Address", required=true)
       private final Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {

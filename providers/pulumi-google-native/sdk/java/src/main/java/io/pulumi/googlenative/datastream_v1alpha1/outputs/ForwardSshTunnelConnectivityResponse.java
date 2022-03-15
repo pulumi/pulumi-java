@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ForwardSshTunnelConnectivityResponse {
     /**
      * Hostname for the SSH tunnel.
@@ -36,13 +36,13 @@ public final class ForwardSshTunnelConnectivityResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardSshTunnelConnectivityResponse(
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("privateKey") String privateKey,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("privateKey") String privateKey,
+        @CustomType.Parameter("username") String username) {
         this.hostname = hostname;
         this.password = password;
         this.port = port;

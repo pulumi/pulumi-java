@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainMappingStatusResourceRecord {
     /**
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
@@ -19,11 +19,11 @@ public final class DomainMappingStatusResourceRecord {
     private final @Nullable String rrdata;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMappingStatusResourceRecord(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("rrdata") @Nullable String rrdata,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("rrdata") @Nullable String rrdata,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.rrdata = rrdata;
         this.type = type;

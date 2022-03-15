@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Business of the company
      * 
      */
-    @InputImport(name="business")
+    @Import(name="business")
       private final @Nullable Output<String> business;
 
     public Output<String> getBusiness() {
@@ -33,7 +33,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Country of the company location.
      * 
      */
-    @InputImport(name="country")
+    @Import(name="country")
       private final @Nullable Output<String> country;
 
     public Output<String> getCountry() {
@@ -44,7 +44,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Domain of the company
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -55,7 +55,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Number of employees in the company
      * 
      */
-    @InputImport(name="employeesNumber")
+    @Import(name="employeesNumber")
       private final @Nullable Output<String> employeesNumber;
 
     public Output<String> getEmployeesNumber() {
@@ -66,7 +66,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * State of the company location.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

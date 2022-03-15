@@ -8,7 +8,7 @@ import io.pulumi.azurenative.migrate.SolutionArgs;
 import io.pulumi.azurenative.migrate.outputs.SolutionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Gets or sets the ETAG for optimistic concurrency control.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -49,7 +49,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Gets the name of this REST resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Gets or sets the properties of the solution.
      * 
      */
-    @OutputExport(name="properties", type=SolutionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=SolutionPropertiesResponse.class, parameters={})
     private Output<SolutionPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Gets the type of this REST resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

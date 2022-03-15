@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.TemplateResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TemplateArgs Empty = new TemplateArgs();
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -29,7 +29,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A display name for the template.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,14 +40,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A list of resource permissions to be set on the template. </p>
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<TemplateResourcePermissionArgs>> permissions;
 
     public Output<List<TemplateResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Output.empty() : this.permissions;
     }
 
-    @InputImport(name="sourceEntity", required=true)
+    @Import(name="sourceEntity", required=true)
       private final Output<TemplateSourceEntityArgs> sourceEntity;
 
     public Output<TemplateSourceEntityArgs> getSourceEntity() {
@@ -58,14 +58,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.</p>
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TemplateTagArgs>> tags;
 
     public Output<List<TemplateTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="templateId", required=true)
+    @Import(name="templateId", required=true)
       private final Output<String> templateId;
 
     public Output<String> getTemplateId() {
@@ -79,7 +79,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 			in the <code>VersionDescription</code> field.</p>
      * 
      */
-    @InputImport(name="versionDescription")
+    @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
     public Output<String> getVersionDescription() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectReplicationPolicyRuleResponse {
     /**
      * Required. Destination container name.
@@ -33,12 +33,12 @@ public final class ObjectReplicationPolicyRuleResponse {
      */
     private final String sourceContainer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectReplicationPolicyRuleResponse(
-        @OutputCustomType.Parameter("destinationContainer") String destinationContainer,
-        @OutputCustomType.Parameter("filters") @Nullable ObjectReplicationPolicyFilterResponse filters,
-        @OutputCustomType.Parameter("ruleId") @Nullable String ruleId,
-        @OutputCustomType.Parameter("sourceContainer") String sourceContainer) {
+        @CustomType.Parameter("destinationContainer") String destinationContainer,
+        @CustomType.Parameter("filters") @Nullable ObjectReplicationPolicyFilterResponse filters,
+        @CustomType.Parameter("ruleId") @Nullable String ruleId,
+        @CustomType.Parameter("sourceContainer") String sourceContainer) {
         this.destinationContainer = destinationContainer;
         this.filters = filters;
         this.ruleId = ruleId;

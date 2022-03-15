@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * Human readable description of the realm.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * ETag of the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -41,7 +41,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this realm. Each label is a key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -52,7 +52,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * Location of the Realm.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * 'projects/my-project/locations/{location}/realms/my-realm'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -87,7 +87,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * GCP region of the Realm.
      * 
      */
-    @InputImport(name="realmId")
+    @Import(name="realmId")
       private final @Nullable Output<String> realmId;
 
     public Output<String> getRealmId() {
@@ -100,7 +100,7 @@ public final class RealmState extends io.pulumi.resources.ResourceArgs {
      * https://www.iana.org/time-zones.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestOSCustomizationResponse {
     /**
      * List of dns servers to use
@@ -38,13 +38,13 @@ public final class GuestOSCustomizationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestOSCustomizationResponse(
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.dnsServers = dnsServers;
         this.hostName = hostName;
         this.password = password;

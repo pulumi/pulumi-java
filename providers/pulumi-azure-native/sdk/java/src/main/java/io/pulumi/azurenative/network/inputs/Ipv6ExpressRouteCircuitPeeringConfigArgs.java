@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringConfigArgs
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
      * The Microsoft peering configuration.
      * 
      */
-    @InputImport(name="microsoftPeeringConfig")
+    @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
     public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
@@ -37,7 +37,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
      * The primary address prefix.
      * 
      */
-    @InputImport(name="primaryPeerAddressPrefix")
+    @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
 
     public Output<String> getPrimaryPeerAddressPrefix() {
@@ -48,7 +48,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
      * The reference to the RouteFilter resource.
      * 
      */
-    @InputImport(name="routeFilter")
+    @Import(name="routeFilter")
       private final @Nullable Output<SubResourceArgs> routeFilter;
 
     public Output<SubResourceArgs> getRouteFilter() {
@@ -59,7 +59,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
      * The secondary address prefix.
      * 
      */
-    @InputImport(name="secondaryPeerAddressPrefix")
+    @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
     public Output<String> getSecondaryPeerAddressPrefix() {
@@ -70,7 +70,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
      * The state of peering.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;
 
     public Output<Either<String,ExpressRouteCircuitPeeringState>> getState() {

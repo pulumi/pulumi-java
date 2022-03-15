@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.resourcegroups.outputs;
 
 import io.pulumi.awsnative.resourcegroups.outputs.GroupTagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupQuery {
     private final @Nullable List<String> resourceTypeFilters;
     private final @Nullable String stackIdentifier;
     private final @Nullable List<GroupTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupQuery(
-        @OutputCustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
-        @OutputCustomType.Parameter("stackIdentifier") @Nullable String stackIdentifier,
-        @OutputCustomType.Parameter("tagFilters") @Nullable List<GroupTagFilter> tagFilters) {
+        @CustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
+        @CustomType.Parameter("stackIdentifier") @Nullable String stackIdentifier,
+        @CustomType.Parameter("tagFilters") @Nullable List<GroupTagFilter> tagFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         this.stackIdentifier = stackIdentifier;
         this.tagFilters = tagFilters;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
      * The name of the remediation.
      * 
      */
-    @InputImport(name="remediationName", required=true)
+    @Import(name="remediationName", required=true)
       private final String remediationName;
 
     public String getRemediationName() {
@@ -27,7 +27,7 @@ public final class GetRemediationAtResourceGroupArgs extends io.pulumi.resources
      * Resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

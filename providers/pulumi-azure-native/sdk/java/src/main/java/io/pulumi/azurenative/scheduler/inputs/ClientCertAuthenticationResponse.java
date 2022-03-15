@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the certificate expiration date.
      * 
      */
-    @InputImport(name="certificateExpirationDate")
+    @Import(name="certificateExpirationDate")
       private final @Nullable String certificateExpirationDate;
 
     public Optional<String> getCertificateExpirationDate() {
@@ -29,7 +29,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the certificate subject name.
      * 
      */
-    @InputImport(name="certificateSubjectName")
+    @Import(name="certificateSubjectName")
       private final @Nullable String certificateSubjectName;
 
     public Optional<String> getCertificateSubjectName() {
@@ -40,7 +40,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the certificate thumbprint.
      * 
      */
-    @InputImport(name="certificateThumbprint")
+    @Import(name="certificateThumbprint")
       private final @Nullable String certificateThumbprint;
 
     public Optional<String> getCertificateThumbprint() {
@@ -51,7 +51,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the certificate password, return value will always be empty.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -62,7 +62,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
      * 
      */
-    @InputImport(name="pfx")
+    @Import(name="pfx")
       private final @Nullable String pfx;
 
     public Optional<String> getPfx() {
@@ -74,7 +74,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * Expected value is 'ClientCertificate'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

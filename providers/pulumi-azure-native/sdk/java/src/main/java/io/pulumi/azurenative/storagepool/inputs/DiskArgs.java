@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagepool.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * Unique Azure Resource ID of the Managed Disk.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {

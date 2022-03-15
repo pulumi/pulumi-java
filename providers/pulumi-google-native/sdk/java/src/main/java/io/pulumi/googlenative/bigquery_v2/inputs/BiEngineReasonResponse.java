@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs
      * High-level BI Engine reason for partial or disabled acceleration.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -27,7 +27,7 @@ public final class BiEngineReasonResponse extends io.pulumi.resources.InvokeArgs
      * Free form human-readable reason for partial or disabled acceleration.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

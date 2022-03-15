@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InsightFiltersFirstObservedAtDateRangeArgs extends io.pulumi.
      * A date range unit for the date filter. Valid values: `DAYS`.
      * 
      */
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final Output<String> unit;
 
     public Output<String> getUnit() {
@@ -29,7 +29,7 @@ public final class InsightFiltersFirstObservedAtDateRangeArgs extends io.pulumi.
      * A date range value for the date filter, provided as an Integer.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Integer> value;
 
     public Output<Integer> getValue() {

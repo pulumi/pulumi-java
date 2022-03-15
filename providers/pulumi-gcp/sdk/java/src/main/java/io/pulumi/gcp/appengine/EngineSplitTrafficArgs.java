@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.EngineSplitTrafficSplitArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * If set to true traffic will be migrated to this version.
      * 
      */
-    @InputImport(name="migrateTraffic")
+    @Import(name="migrateTraffic")
       private final @Nullable Output<Boolean> migrateTraffic;
 
     public Output<Boolean> getMigrateTraffic() {
@@ -32,7 +32,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -43,7 +43,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * The name of the service these settings apply to.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {
@@ -55,7 +55,7 @@ public final class EngineSplitTrafficArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="split", required=true)
+    @Import(name="split", required=true)
       private final Output<EngineSplitTrafficSplitArgs> split;
 
     public Output<EngineSplitTrafficSplitArgs> getSplit() {

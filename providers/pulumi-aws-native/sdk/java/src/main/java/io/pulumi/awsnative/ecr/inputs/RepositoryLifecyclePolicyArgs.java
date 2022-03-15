@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
 
     public static final RepositoryLifecyclePolicyArgs Empty = new RepositoryLifecyclePolicyArgs();
 
-    @InputImport(name="lifecyclePolicyText")
+    @Import(name="lifecyclePolicyText")
       private final @Nullable Output<String> lifecyclePolicyText;
 
     public Output<String> getLifecyclePolicyText() {
         return this.lifecyclePolicyText == null ? Output.empty() : this.lifecyclePolicyText;
     }
 
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {

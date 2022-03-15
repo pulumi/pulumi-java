@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.billing.inputs.AccountIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,35 +16,35 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
 
     public static final AccountIamBindingState Empty = new AccountIamBindingState();
 
-    @InputImport(name="billingAccountId")
+    @Import(name="billingAccountId")
       private final @Nullable Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
         return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
     }
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<AccountIamBindingConditionGetArgs> condition;
 
     public Output<AccountIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members == null ? Output.empty() : this.members;
     }
 
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

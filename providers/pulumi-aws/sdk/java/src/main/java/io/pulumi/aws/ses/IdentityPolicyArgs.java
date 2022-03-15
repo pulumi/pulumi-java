@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IdentityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name or Amazon Resource Name (ARN) of the SES Identity.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<String> identity;
 
     public Output<String> getIdentity() {
@@ -29,7 +29,7 @@ public final class IdentityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class IdentityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * JSON string of the policy.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

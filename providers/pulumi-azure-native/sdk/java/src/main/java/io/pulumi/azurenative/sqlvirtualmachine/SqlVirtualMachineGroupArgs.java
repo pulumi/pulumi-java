@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.SqlVmGroupImageSku;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -33,7 +33,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -44,7 +44,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    @InputImport(name="sqlImageOffer")
+    @Import(name="sqlImageOffer")
       private final @Nullable Output<String> sqlImageOffer;
 
     public Output<String> getSqlImageOffer() {
@@ -55,7 +55,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * SQL image sku.
      * 
      */
-    @InputImport(name="sqlImageSku")
+    @Import(name="sqlImageSku")
       private final @Nullable Output<Either<String,SqlVmGroupImageSku>> sqlImageSku;
 
     public Output<Either<String,SqlVmGroupImageSku>> getSqlImageSku() {
@@ -66,7 +66,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * Name of the SQL virtual machine group.
      * 
      */
-    @InputImport(name="sqlVirtualMachineGroupName")
+    @Import(name="sqlVirtualMachineGroupName")
       private final @Nullable Output<String> sqlVirtualMachineGroupName;
 
     public Output<String> getSqlVirtualMachineGroupName() {
@@ -77,7 +77,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
      * Cluster Active Directory domain profile.
      * 
      */
-    @InputImport(name="wsfcDomainProfile")
+    @Import(name="wsfcDomainProfile")
       private final @Nullable Output<WsfcDomainProfileArgs> wsfcDomainProfile;
 
     public Output<WsfcDomainProfileArgs> getWsfcDomainProfile() {

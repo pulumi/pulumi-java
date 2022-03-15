@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * Allows the TPU node to send and receive packets with non-matching destination or source IPs. This is required if you plan to use the TPU workers to forward routes.
@@ -31,12 +31,12 @@ public final class NetworkConfigResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigResponse(
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("enableExternalIps") Boolean enableExternalIps,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("enableExternalIps") Boolean enableExternalIps,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.canIpForward = canIpForward;
         this.enableExternalIps = enableExternalIps;
         this.network = network;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Azimuth of the antenna at the end of the contact in decimal degrees.
      * 
      */
-    @InputImport(name="endAzimuthDegrees", required=true)
+    @Import(name="endAzimuthDegrees", required=true)
       private final Double endAzimuthDegrees;
 
     public Double getEndAzimuthDegrees() {
@@ -35,7 +35,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Spacecraft elevation above the horizon at contact end.
      * 
      */
-    @InputImport(name="endElevationDegrees", required=true)
+    @Import(name="endElevationDegrees", required=true)
       private final Double endElevationDegrees;
 
     public Double getEndElevationDegrees() {
@@ -46,7 +46,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Name of Azure Ground Station.
      * 
      */
-    @InputImport(name="groundStationName", required=true)
+    @Import(name="groundStationName", required=true)
       private final String groundStationName;
 
     public String getGroundStationName() {
@@ -57,7 +57,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Maximum elevation of the antenna during the contact in decimal degrees.
      * 
      */
-    @InputImport(name="maximumElevationDegrees", required=true)
+    @Import(name="maximumElevationDegrees", required=true)
       private final Double maximumElevationDegrees;
 
     public Double getMaximumElevationDegrees() {
@@ -68,7 +68,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Time to lost receiving a signal.
      * 
      */
-    @InputImport(name="rxEndTime", required=true)
+    @Import(name="rxEndTime", required=true)
       private final String rxEndTime;
 
     public String getRxEndTime() {
@@ -79,7 +79,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Earliest time to receive a signal.
      * 
      */
-    @InputImport(name="rxStartTime", required=true)
+    @Import(name="rxStartTime", required=true)
       private final String rxStartTime;
 
     public String getRxStartTime() {
@@ -90,7 +90,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * The reference to the spacecraft resource.
      * 
      */
-    @InputImport(name="spacecraft")
+    @Import(name="spacecraft")
       private final @Nullable ResourceReferenceResponse spacecraft;
 
     public Optional<ResourceReferenceResponse> getSpacecraft() {
@@ -101,7 +101,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Azimuth of the antenna at the start of the contact in decimal degrees.
      * 
      */
-    @InputImport(name="startAzimuthDegrees", required=true)
+    @Import(name="startAzimuthDegrees", required=true)
       private final Double startAzimuthDegrees;
 
     public Double getStartAzimuthDegrees() {
@@ -112,7 +112,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Spacecraft elevation above the horizon at contact start.
      * 
      */
-    @InputImport(name="startElevationDegrees", required=true)
+    @Import(name="startElevationDegrees", required=true)
       private final Double startElevationDegrees;
 
     public Double getStartElevationDegrees() {
@@ -123,7 +123,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Time at which antenna transmit will be disabled.
      * 
      */
-    @InputImport(name="txEndTime", required=true)
+    @Import(name="txEndTime", required=true)
       private final String txEndTime;
 
     public String getTxEndTime() {
@@ -134,7 +134,7 @@ public final class AvailableContactsResponse extends io.pulumi.resources.InvokeA
      * Time at which antenna transmit will be enabled.
      * 
      */
-    @InputImport(name="txStartTime", required=true)
+    @Import(name="txStartTime", required=true)
       private final String txStartTime;
 
     public String getTxStartTime() {

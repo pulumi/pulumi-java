@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rum.outputs;
 
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppMonitorConfiguration {
     /**
      * If you set this to true, the RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
@@ -61,17 +61,17 @@ public final class AppMonitorConfiguration {
      */
     private final @Nullable List<AppMonitorTelemetry> telemetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppMonitorConfiguration(
-        @OutputCustomType.Parameter("allowCookies") @Nullable Boolean allowCookies,
-        @OutputCustomType.Parameter("enableXRay") @Nullable Boolean enableXRay,
-        @OutputCustomType.Parameter("excludedPages") @Nullable List<String> excludedPages,
-        @OutputCustomType.Parameter("favoritePages") @Nullable List<String> favoritePages,
-        @OutputCustomType.Parameter("guestRoleArn") @Nullable String guestRoleArn,
-        @OutputCustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
-        @OutputCustomType.Parameter("includedPages") @Nullable List<String> includedPages,
-        @OutputCustomType.Parameter("sessionSampleRate") @Nullable Double sessionSampleRate,
-        @OutputCustomType.Parameter("telemetries") @Nullable List<AppMonitorTelemetry> telemetries) {
+        @CustomType.Parameter("allowCookies") @Nullable Boolean allowCookies,
+        @CustomType.Parameter("enableXRay") @Nullable Boolean enableXRay,
+        @CustomType.Parameter("excludedPages") @Nullable List<String> excludedPages,
+        @CustomType.Parameter("favoritePages") @Nullable List<String> favoritePages,
+        @CustomType.Parameter("guestRoleArn") @Nullable String guestRoleArn,
+        @CustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
+        @CustomType.Parameter("includedPages") @Nullable List<String> includedPages,
+        @CustomType.Parameter("sessionSampleRate") @Nullable Double sessionSampleRate,
+        @CustomType.Parameter("telemetries") @Nullable List<AppMonitorTelemetry> telemetries) {
         this.allowCookies = allowCookies;
         this.enableXRay = enableXRay;
         this.excludedPages = excludedPages;

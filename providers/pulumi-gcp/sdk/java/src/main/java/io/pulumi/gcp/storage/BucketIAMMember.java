@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketIAMMemberArgs;
@@ -65,7 +65,7 @@ public class BucketIAMMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -80,7 +80,7 @@ public class BucketIAMMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=BucketIAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=BucketIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ BucketIAMMemberCondition> condition;
 
     /**
@@ -95,7 +95,7 @@ public class BucketIAMMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -105,7 +105,7 @@ public class BucketIAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -117,7 +117,7 @@ public class BucketIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

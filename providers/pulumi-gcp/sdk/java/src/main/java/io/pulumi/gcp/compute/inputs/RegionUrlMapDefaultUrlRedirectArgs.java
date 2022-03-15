@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegionUrlMapDefaultUrlRedirectArgs extends io.pulumi.resource
      * supplied in the request. The value must be between 1 and 255 characters.
      * 
      */
-    @InputImport(name="hostRedirect")
+    @Import(name="hostRedirect")
       private final @Nullable Output<String> hostRedirect;
 
     public Output<String> getHostRedirect() {
@@ -34,7 +34,7 @@ public final class RegionUrlMapDefaultUrlRedirectArgs extends io.pulumi.resource
      * true for TargetHttpsProxy is not permitted. The default is set to false.
      * 
      */
-    @InputImport(name="httpsRedirect")
+    @Import(name="httpsRedirect")
       private final @Nullable Output<Boolean> httpsRedirect;
 
     public Output<Boolean> getHttpsRedirect() {
@@ -49,7 +49,7 @@ public final class RegionUrlMapDefaultUrlRedirectArgs extends io.pulumi.resource
      * characters.
      * 
      */
-    @InputImport(name="pathRedirect")
+    @Import(name="pathRedirect")
       private final @Nullable Output<String> pathRedirect;
 
     public Output<String> getPathRedirect() {
@@ -64,7 +64,7 @@ public final class RegionUrlMapDefaultUrlRedirectArgs extends io.pulumi.resource
      * the redirect. The value must be between 1 and 1024 characters.
      * 
      */
-    @InputImport(name="prefixRedirect")
+    @Import(name="prefixRedirect")
       private final @Nullable Output<String> prefixRedirect;
 
     public Output<String> getPrefixRedirect() {
@@ -82,7 +82,7 @@ public final class RegionUrlMapDefaultUrlRedirectArgs extends io.pulumi.resource
      *   the request method will be retained.
      * 
      */
-    @InputImport(name="redirectResponseCode")
+    @Import(name="redirectResponseCode")
       private final @Nullable Output<String> redirectResponseCode;
 
     public Output<String> getRedirectResponseCode() {
@@ -96,7 +96,7 @@ public final class RegionUrlMapDefaultUrlRedirectArgs extends io.pulumi.resource
      * This field is required to ensure an empty block is not set. The normal default value is false.
      * 
      */
-    @InputImport(name="stripQuery", required=true)
+    @Import(name="stripQuery", required=true)
       private final Output<Boolean> stripQuery;
 
     public Output<Boolean> getStripQuery() {

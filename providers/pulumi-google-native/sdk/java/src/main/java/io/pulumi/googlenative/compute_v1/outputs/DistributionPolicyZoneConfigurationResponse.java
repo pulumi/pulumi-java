@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionPolicyZoneConfigurationResponse {
     /**
      * The URL of the zone. The zone must exist in the region where the managed instance group is located.
@@ -15,8 +15,8 @@ public final class DistributionPolicyZoneConfigurationResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
-    private DistributionPolicyZoneConfigurationResponse(@OutputCustomType.Parameter("zone") String zone) {
+    @CustomType.Constructor
+    private DistributionPolicyZoneConfigurationResponse(@CustomType.Parameter("zone") String zone) {
         this.zone = zone;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverRulesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -27,14 +27,14 @@ public final class GetResolverRulesResult {
     private final @Nullable String ruleType;
     private final @Nullable String shareStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverRulesResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
-        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
-        @OutputCustomType.Parameter("resolverRuleIds") List<String> resolverRuleIds,
-        @OutputCustomType.Parameter("ruleType") @Nullable String ruleType,
-        @OutputCustomType.Parameter("shareStatus") @Nullable String shareStatus) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId,
+        @CustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @CustomType.Parameter("resolverRuleIds") List<String> resolverRuleIds,
+        @CustomType.Parameter("ruleType") @Nullable String ruleType,
+        @CustomType.Parameter("shareStatus") @Nullable String shareStatus) {
         this.id = id;
         this.ownerId = ownerId;
         this.resolverEndpointId = resolverEndpointId;

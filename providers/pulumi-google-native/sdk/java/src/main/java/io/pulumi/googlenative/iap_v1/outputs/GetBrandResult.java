@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.iap_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrandResult {
     /**
      * Application name displayed on OAuth consent screen.
@@ -31,12 +31,12 @@ public final class GetBrandResult {
      */
     private final String supportEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrandResult(
-        @OutputCustomType.Parameter("applicationTitle") String applicationTitle,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orgInternalOnly") Boolean orgInternalOnly,
-        @OutputCustomType.Parameter("supportEmail") String supportEmail) {
+        @CustomType.Parameter("applicationTitle") String applicationTitle,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orgInternalOnly") Boolean orgInternalOnly,
+        @CustomType.Parameter("supportEmail") String supportEmail) {
         this.applicationTitle = applicationTitle;
         this.name = name;
         this.orgInternalOnly = orgInternalOnly;

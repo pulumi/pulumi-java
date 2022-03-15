@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.events.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.EventSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.events.k8s.io_v1beta1.inputs.EventSeriesArgs;
@@ -27,7 +27,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -38,7 +38,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -49,7 +49,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    @InputImport(name="deprecatedCount")
+    @Import(name="deprecatedCount")
       private final @Nullable Output<Integer> deprecatedCount;
 
     public Output<Integer> getDeprecatedCount() {
@@ -60,7 +60,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    @InputImport(name="deprecatedFirstTimestamp")
+    @Import(name="deprecatedFirstTimestamp")
       private final @Nullable Output<String> deprecatedFirstTimestamp;
 
     public Output<String> getDeprecatedFirstTimestamp() {
@@ -71,7 +71,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    @InputImport(name="deprecatedLastTimestamp")
+    @Import(name="deprecatedLastTimestamp")
       private final @Nullable Output<String> deprecatedLastTimestamp;
 
     public Output<String> getDeprecatedLastTimestamp() {
@@ -82,7 +82,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
      * 
      */
-    @InputImport(name="deprecatedSource")
+    @Import(name="deprecatedSource")
       private final @Nullable Output<EventSourceArgs> deprecatedSource;
 
     public Output<EventSourceArgs> getDeprecatedSource() {
@@ -93,7 +93,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * eventTime is the time when this Event was first observed. It is required.
      * 
      */
-    @InputImport(name="eventTime", required=true)
+    @Import(name="eventTime", required=true)
       private final Output<String> eventTime;
 
     public Output<String> getEventTime() {
@@ -104,7 +104,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -115,7 +115,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -126,7 +126,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
      * 
      */
-    @InputImport(name="note")
+    @Import(name="note")
       private final @Nullable Output<String> note;
 
     public Output<String> getNote() {
@@ -137,7 +137,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * reason is why the action was taken. It is human-readable. This field can have at most 128 characters.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -148,7 +148,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
      * 
      */
-    @InputImport(name="regarding")
+    @Import(name="regarding")
       private final @Nullable Output<ObjectReferenceArgs> regarding;
 
     public Output<ObjectReferenceArgs> getRegarding() {
@@ -159,7 +159,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
      * 
      */
-    @InputImport(name="related")
+    @Import(name="related")
       private final @Nullable Output<ObjectReferenceArgs> related;
 
     public Output<ObjectReferenceArgs> getRelated() {
@@ -170,7 +170,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
      * 
      */
-    @InputImport(name="reportingController")
+    @Import(name="reportingController")
       private final @Nullable Output<String> reportingController;
 
     public Output<String> getReportingController() {
@@ -181,7 +181,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
      * 
      */
-    @InputImport(name="reportingInstance")
+    @Import(name="reportingInstance")
       private final @Nullable Output<String> reportingInstance;
 
     public Output<String> getReportingInstance() {
@@ -192,7 +192,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * series is data about the Event series this event represents or nil if it's a singleton Event.
      * 
      */
-    @InputImport(name="series")
+    @Import(name="series")
       private final @Nullable Output<EventSeriesArgs> series;
 
     public Output<EventSeriesArgs> getSeries() {
@@ -203,7 +203,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

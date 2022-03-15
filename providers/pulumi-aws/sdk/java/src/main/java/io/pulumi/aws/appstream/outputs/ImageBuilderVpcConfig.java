@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageBuilderVpcConfig {
     /**
      * Identifiers of the security groups for the image builder or image builder.
@@ -22,10 +22,10 @@ public final class ImageBuilderVpcConfig {
      */
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageBuilderVpcConfig(
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }

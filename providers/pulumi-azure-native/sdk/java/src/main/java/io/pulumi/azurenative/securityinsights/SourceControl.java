@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.RepositoryResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * Array of source control content types.
      * 
      */
-    @OutputExport(name="contentTypes", type=List.class, parameters={String.class})
+    @Export(name="contentTypes", type=List.class, parameters={String.class})
     private Output<List<String>> contentTypes;
 
     /**
@@ -50,7 +50,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
@@ -64,7 +64,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The identity that created the resource.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
@@ -78,7 +78,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The type of identity that created the resource.
      * 
      */
-    @OutputExport(name="createdByType", type=String.class, parameters={})
+    @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
@@ -92,7 +92,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * A description of the source control
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -106,7 +106,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The display name of the source control
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -120,7 +120,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -134,7 +134,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
@@ -148,7 +148,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -162,7 +162,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The type of identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedByType", type=String.class, parameters={})
+    @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
@@ -176,7 +176,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -190,7 +190,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The repository type of the source control
      * 
      */
-    @OutputExport(name="repoType", type=String.class, parameters={})
+    @Export(name="repoType", type=String.class, parameters={})
     private Output<String> repoType;
 
     /**
@@ -204,7 +204,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * Repository metadata.
      * 
      */
-    @OutputExport(name="repository", type=RepositoryResponse.class, parameters={})
+    @Export(name="repository", type=RepositoryResponse.class, parameters={})
     private Output<RepositoryResponse> repository;
 
     /**
@@ -218,7 +218,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -232,7 +232,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

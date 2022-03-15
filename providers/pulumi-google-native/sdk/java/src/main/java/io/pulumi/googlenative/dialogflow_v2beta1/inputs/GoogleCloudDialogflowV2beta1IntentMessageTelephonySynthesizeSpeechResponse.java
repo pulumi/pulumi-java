@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
      * 
      */
-    @InputImport(name="ssml", required=true)
+    @Import(name="ssml", required=true)
       private final String ssml;
 
     public String getSsml() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * The raw text to be synthesized.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final String text;
 
     public String getText() {

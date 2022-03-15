@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_Measurement_MetricResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__MeasurementResponse {
     /**
      * Time that the trial has been running at the point of this measurement.
@@ -27,11 +27,11 @@ public final class GoogleCloudMlV1__MeasurementResponse {
      */
     private final String stepCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__MeasurementResponse(
-        @OutputCustomType.Parameter("elapsedTime") String elapsedTime,
-        @OutputCustomType.Parameter("metrics") List<GoogleCloudMlV1_Measurement_MetricResponse> metrics,
-        @OutputCustomType.Parameter("stepCount") String stepCount) {
+        @CustomType.Parameter("elapsedTime") String elapsedTime,
+        @CustomType.Parameter("metrics") List<GoogleCloudMlV1_Measurement_MetricResponse> metrics,
+        @CustomType.Parameter("stepCount") String stepCount) {
         this.elapsedTime = elapsedTime;
         this.metrics = metrics;
         this.stepCount = stepCount;

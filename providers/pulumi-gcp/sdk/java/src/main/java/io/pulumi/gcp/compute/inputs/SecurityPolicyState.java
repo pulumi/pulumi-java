@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
      */
-    @InputImport(name="adaptiveProtectionConfig")
+    @Import(name="adaptiveProtectionConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> getAdaptiveProtectionConfig() {
@@ -32,7 +32,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * An optional description of this rule. Max size is 64.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * Fingerprint of this resource.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -54,7 +54,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * The name of the security policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -79,7 +79,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * security policy, a default rule with action "allow" will be added. Structure is documented below.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
 
     public Output<List<SecurityPolicyRuleGetArgs>> getRules() {
@@ -90,7 +90,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
      * The URI of the created resourc
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {

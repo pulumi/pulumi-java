@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
      * The name of the Time Series Insights environment associated with the specified resource group.
      * 
      */
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final String environmentName;
 
     public String getEnvironmentName() {
@@ -29,7 +29,7 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
      * Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -40,7 +40,7 @@ public final class GetGen1EnvironmentArgs extends io.pulumi.resources.InvokeArgs
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

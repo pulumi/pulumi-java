@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The type of the OS on the VM.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -33,7 +33,7 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The id of the disk containing the OS.
      * 
      */
-    @InputImport(name="osVhdId")
+    @Import(name="osVhdId")
       private final @Nullable String osVhdId;
 
     public Optional<String> getOsVhdId() {
@@ -44,7 +44,7 @@ public final class OSDiskDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * The OS disk VHD name.
      * 
      */
-    @InputImport(name="vhdName")
+    @Import(name="vhdName")
       private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {

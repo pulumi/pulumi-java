@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.HttpsHealthCheckArgs;
@@ -22,7 +22,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * How often (in seconds) to send a health check. The default value is 5 seconds.
      * 
      */
-    @OutputExport(name="checkIntervalSec", type=Integer.class, parameters={})
+    @Export(name="checkIntervalSec", type=Integer.class, parameters={})
     private Output<Integer> checkIntervalSec;
 
     /**
@@ -36,7 +36,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -50,7 +50,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -64,7 +64,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
      * 
      */
-    @OutputExport(name="healthyThreshold", type=Integer.class, parameters={})
+    @Export(name="healthyThreshold", type=Integer.class, parameters={})
     private Output<Integer> healthyThreshold;
 
     /**
@@ -78,7 +78,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -92,7 +92,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -106,7 +106,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * The TCP port number for the HTTPS health check request. The default value is 443.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -134,7 +134,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * The request path of the HTTPS health check request. The default value is "/".
      * 
      */
-    @OutputExport(name="requestPath", type=String.class, parameters={})
+    @Export(name="requestPath", type=String.class, parameters={})
     private Output<String> requestPath;
 
     /**
@@ -148,7 +148,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -162,7 +162,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -176,7 +176,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have a greater value than checkIntervalSec.
      * 
      */
-    @OutputExport(name="timeoutSec", type=Integer.class, parameters={})
+    @Export(name="timeoutSec", type=Integer.class, parameters={})
     private Output<Integer> timeoutSec;
 
     /**
@@ -190,7 +190,7 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
      * A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
      * 
      */
-    @OutputExport(name="unhealthyThreshold", type=Integer.class, parameters={})
+    @Export(name="unhealthyThreshold", type=Integer.class, parameters={})
     private Output<Integer> unhealthyThreshold;
 
     /**

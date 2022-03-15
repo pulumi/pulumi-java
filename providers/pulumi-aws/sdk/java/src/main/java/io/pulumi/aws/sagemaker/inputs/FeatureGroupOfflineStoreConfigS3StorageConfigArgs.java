@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
      * The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -29,7 +29,7 @@ public final class FeatureGroupOfflineStoreConfigS3StorageConfigArgs extends io.
      * The S3 URI, or location in Amazon S3, of OfflineStore.
      * 
      */
-    @InputImport(name="s3Uri", required=true)
+    @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;
 
     public Output<String> getS3Uri() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ApiProductRefResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1CredentialResponse {
     /**
      * List of API products this credential can be used for.
@@ -53,16 +53,16 @@ public final class GoogleCloudApigeeV1CredentialResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1CredentialResponse(
-        @OutputCustomType.Parameter("apiProducts") List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts,
-        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        @OutputCustomType.Parameter("consumerKey") String consumerKey,
-        @OutputCustomType.Parameter("consumerSecret") String consumerSecret,
-        @OutputCustomType.Parameter("expiresAt") String expiresAt,
-        @OutputCustomType.Parameter("issuedAt") String issuedAt,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("apiProducts") List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts,
+        @CustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @CustomType.Parameter("consumerKey") String consumerKey,
+        @CustomType.Parameter("consumerSecret") String consumerSecret,
+        @CustomType.Parameter("expiresAt") String expiresAt,
+        @CustomType.Parameter("issuedAt") String issuedAt,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.attributes = attributes;
         this.consumerKey = consumerKey;

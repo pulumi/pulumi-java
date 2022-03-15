@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StackUserSetting {
     /**
      * Action that is enabled or disabled. Valid values are: `CLIPBOARD_COPY_FROM_LOCAL_DEVICE`,  `CLIPBOARD_COPY_TO_LOCAL_DEVICE`, `FILE_UPLOAD`, `FILE_DOWNLOAD`, `PRINTING_TO_LOCAL_DEVICE`, `DOMAIN_PASSWORD_SIGNIN`, `DOMAIN_SMART_CARD_SIGNIN`.
@@ -20,10 +20,10 @@ public final class StackUserSetting {
      */
     private final String permission;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackUserSetting(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("permission") String permission) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("permission") String permission) {
         this.action = action;
         this.permission = permission;
     }

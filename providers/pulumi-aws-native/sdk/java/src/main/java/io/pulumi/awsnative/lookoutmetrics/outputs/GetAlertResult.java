@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAlertResult {
     /**
      * ARN assigned to the alert.
@@ -17,8 +17,8 @@ public final class GetAlertResult {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private GetAlertResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private GetAlertResult(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

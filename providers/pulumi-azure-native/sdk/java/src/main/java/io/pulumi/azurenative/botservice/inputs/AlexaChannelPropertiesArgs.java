@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
      * The Alexa skill Id
      * 
      */
-    @InputImport(name="alexaSkillId", required=true)
+    @Import(name="alexaSkillId", required=true)
       private final Output<String> alexaSkillId;
 
     public Output<String> getAlexaSkillId() {
@@ -33,7 +33,7 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.RuleWithOperations;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.WebhookClientConfig;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidatingWebhook {
     /**
      * AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the Webhook expects. API server will try to use first version in the list which it supports. If none of the versions specified in this list supported by API server, validation will fail for this object. If a persisted webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail and be subject to the failure policy. Default to `['v1beta1']`.
@@ -103,18 +103,18 @@ public final class ValidatingWebhook {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidatingWebhook(
-        @OutputCustomType.Parameter("admissionReviewVersions") @Nullable List<String> admissionReviewVersions,
-        @OutputCustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
-        @OutputCustomType.Parameter("failurePolicy") @Nullable String failurePolicy,
-        @OutputCustomType.Parameter("matchPolicy") @Nullable String matchPolicy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
-        @OutputCustomType.Parameter("objectSelector") @Nullable LabelSelector objectSelector,
-        @OutputCustomType.Parameter("rules") @Nullable List<RuleWithOperations> rules,
-        @OutputCustomType.Parameter("sideEffects") @Nullable String sideEffects,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("admissionReviewVersions") @Nullable List<String> admissionReviewVersions,
+        @CustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
+        @CustomType.Parameter("failurePolicy") @Nullable String failurePolicy,
+        @CustomType.Parameter("matchPolicy") @Nullable String matchPolicy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @CustomType.Parameter("objectSelector") @Nullable LabelSelector objectSelector,
+        @CustomType.Parameter("rules") @Nullable List<RuleWithOperations> rules,
+        @CustomType.Parameter("sideEffects") @Nullable String sideEffects,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.admissionReviewVersions = admissionReviewVersions;
         this.clientConfig = clientConfig;
         this.failurePolicy = failurePolicy;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork;
 
 import io.pulumi.azurenative.managednetwork.inputs.ScopeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Managed Network.
      * 
      */
-    @InputImport(name="managedNetworkName")
+    @Import(name="managedNetworkName")
       private final @Nullable Output<String> managedNetworkName;
 
     public Output<String> getManagedNetworkName() {
@@ -42,7 +42,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of management groups, subscriptions, virtual networks, and subnets by the Managed Network. This is a read-only property that is reflective of all ScopeAssignments for this Managed Network
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
     public Output<ScopeArgs> getScope() {
@@ -64,7 +64,7 @@ public final class ManagedNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * Instant RP retention policy range in days
      * 
      */
-    @InputImport(name="instantRpRetentionRangeInDays")
+    @Import(name="instantRpRetentionRangeInDays")
       private final @Nullable Integer instantRpRetentionRangeInDays;
 
     public Optional<Integer> getInstantRpRetentionRangeInDays() {
@@ -34,7 +34,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * Retention policy with the details on backup copy retention ranges.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable String retentionPolicy;
 
     public Optional<String> getRetentionPolicy() {
@@ -45,7 +45,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * Backup schedule specified as part of backup policy.
      * 
      */
-    @InputImport(name="schedulePolicy")
+    @Import(name="schedulePolicy")
       private final @Nullable String schedulePolicy;
 
     public Optional<String> getSchedulePolicy() {
@@ -56,7 +56,7 @@ public final class ConfigurationProfilePreferenceVmBackupResponse extends io.pul
      * TimeZone optional input as string. For example: Pacific Standard Time
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {

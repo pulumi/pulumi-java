@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.WidgetResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GridLayoutResponse {
     /**
      * The number of columns into which the view's width is divided. If omitted or set to zero, a system default will be used while rendering.
@@ -22,10 +22,10 @@ public final class GridLayoutResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GridLayoutResponse(
-        @OutputCustomType.Parameter("columns") String columns,
-        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
+        @CustomType.Parameter("columns") String columns,
+        @CustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.columns = columns;
         this.widgets = widgets;
     }

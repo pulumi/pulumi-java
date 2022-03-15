@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayResult {
     private final @Nullable String associationDefaultRouteTableId;
     private final @Nullable String autoAcceptSharedAttachments;
@@ -25,19 +25,19 @@ public final class GetTransitGatewayResult {
     private final @Nullable List<String> transitGatewayCidrBlocks;
     private final @Nullable String vpnEcmpSupport;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayResult(
-        @OutputCustomType.Parameter("associationDefaultRouteTableId") @Nullable String associationDefaultRouteTableId,
-        @OutputCustomType.Parameter("autoAcceptSharedAttachments") @Nullable String autoAcceptSharedAttachments,
-        @OutputCustomType.Parameter("defaultRouteTableAssociation") @Nullable String defaultRouteTableAssociation,
-        @OutputCustomType.Parameter("defaultRouteTablePropagation") @Nullable String defaultRouteTablePropagation,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("dnsSupport") @Nullable String dnsSupport,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("propagationDefaultRouteTableId") @Nullable String propagationDefaultRouteTableId,
-        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayTag> tags,
-        @OutputCustomType.Parameter("transitGatewayCidrBlocks") @Nullable List<String> transitGatewayCidrBlocks,
-        @OutputCustomType.Parameter("vpnEcmpSupport") @Nullable String vpnEcmpSupport) {
+        @CustomType.Parameter("associationDefaultRouteTableId") @Nullable String associationDefaultRouteTableId,
+        @CustomType.Parameter("autoAcceptSharedAttachments") @Nullable String autoAcceptSharedAttachments,
+        @CustomType.Parameter("defaultRouteTableAssociation") @Nullable String defaultRouteTableAssociation,
+        @CustomType.Parameter("defaultRouteTablePropagation") @Nullable String defaultRouteTablePropagation,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("dnsSupport") @Nullable String dnsSupport,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("propagationDefaultRouteTableId") @Nullable String propagationDefaultRouteTableId,
+        @CustomType.Parameter("tags") @Nullable List<TransitGatewayTag> tags,
+        @CustomType.Parameter("transitGatewayCidrBlocks") @Nullable List<String> transitGatewayCidrBlocks,
+        @CustomType.Parameter("vpnEcmpSupport") @Nullable String vpnEcmpSupport) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;

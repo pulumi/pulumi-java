@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorResponseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ErrorResponseWrapperResponse {
     /**
      * The error response.
@@ -17,8 +17,8 @@ public final class ErrorResponseWrapperResponse {
      */
     private final @Nullable ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor
-    private ErrorResponseWrapperResponse(@OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error) {
+    @CustomType.Constructor
+    private ErrorResponseWrapperResponse(@CustomType.Parameter("error") @Nullable ErrorResponseResponse error) {
         this.error = error;
     }
 

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * List of applicationGroup links.
      * 
      */
-    @OutputExport(name="applicationGroupReferences", type=List.class, parameters={String.class})
+    @Export(name="applicationGroupReferences", type=List.class, parameters={String.class})
     private Output<List<String>> applicationGroupReferences;
 
     /**
@@ -56,7 +56,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Is cloud pc resource.
      * 
      */
-    @OutputExport(name="cloudPcResource", type=Boolean.class, parameters={})
+    @Export(name="cloudPcResource", type=Boolean.class, parameters={})
     private Output<Boolean> cloudPcResource;
 
     /**
@@ -70,7 +70,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Custom rdp property of HostPool.
      * 
      */
-    @OutputExport(name="customRdpProperty", type=String.class, parameters={})
+    @Export(name="customRdpProperty", type=String.class, parameters={})
     private Output</* @Nullable */ String> customRdpProperty;
 
     /**
@@ -84,7 +84,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Description of HostPool.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -98,7 +98,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -112,7 +112,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Friendly name of HostPool.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -126,7 +126,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * HostPool type for desktop.
      * 
      */
-    @OutputExport(name="hostPoolType", type=String.class, parameters={})
+    @Export(name="hostPoolType", type=String.class, parameters={})
     private Output<String> hostPoolType;
 
     /**
@@ -136,7 +136,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
     public Output<String> getHostPoolType() {
         return this.hostPoolType;
     }
-    @OutputExport(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
+    @Export(name="identity", type=ResourceModelWithAllowedPropertySetResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> identity;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseIdentity> getIdentity() {
@@ -146,7 +146,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -160,7 +160,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The type of the load balancer.
      * 
      */
-    @OutputExport(name="loadBalancerType", type=String.class, parameters={})
+    @Export(name="loadBalancerType", type=String.class, parameters={})
     private Output<String> loadBalancerType;
 
     /**
@@ -174,7 +174,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -188,7 +188,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
@@ -202,7 +202,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The max session limit of HostPool.
      * 
      */
-    @OutputExport(name="maxSessionLimit", type=Integer.class, parameters={})
+    @Export(name="maxSessionLimit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSessionLimit;
 
     /**
@@ -216,7 +216,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The registration info of HostPool.
      * 
      */
-    @OutputExport(name="migrationRequest", type=MigrationRequestPropertiesResponse.class, parameters={})
+    @Export(name="migrationRequest", type=MigrationRequestPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ MigrationRequestPropertiesResponse> migrationRequest;
 
     /**
@@ -230,7 +230,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -244,7 +244,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * ObjectId of HostPool. (internal use)
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output<String> objectId;
 
     /**
@@ -258,7 +258,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * PersonalDesktopAssignment type for HostPool.
      * 
      */
-    @OutputExport(name="personalDesktopAssignmentType", type=String.class, parameters={})
+    @Export(name="personalDesktopAssignmentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> personalDesktopAssignmentType;
 
     /**
@@ -268,7 +268,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getPersonalDesktopAssignmentType() {
         return this.personalDesktopAssignmentType;
     }
-    @OutputExport(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
+    @Export(name="plan", type=ResourceModelWithAllowedPropertySetResponsePlan.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> plan;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponsePlan> getPlan() {
@@ -278,7 +278,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The type of preferred application group type, default to Desktop Application Group
      * 
      */
-    @OutputExport(name="preferredAppGroupType", type=String.class, parameters={})
+    @Export(name="preferredAppGroupType", type=String.class, parameters={})
     private Output<String> preferredAppGroupType;
 
     /**
@@ -292,7 +292,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The registration info of HostPool.
      * 
      */
-    @OutputExport(name="registrationInfo", type=RegistrationInfoResponse.class, parameters={})
+    @Export(name="registrationInfo", type=RegistrationInfoResponse.class, parameters={})
     private Output</* @Nullable */ RegistrationInfoResponse> registrationInfo;
 
     /**
@@ -306,7 +306,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The ring number of HostPool.
      * 
      */
-    @OutputExport(name="ring", type=Integer.class, parameters={})
+    @Export(name="ring", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ring;
 
     /**
@@ -316,7 +316,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getRing() {
         return this.ring;
     }
-    @OutputExport(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
+    @Export(name="sku", type=ResourceModelWithAllowedPropertySetResponseSku.class, parameters={})
     private Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> sku;
 
     public Output</* @Nullable */ ResourceModelWithAllowedPropertySetResponseSku> getSku() {
@@ -326,7 +326,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * ClientId for the registered Relying Party used to issue WVD SSO certificates.
      * 
      */
-    @OutputExport(name="ssoClientId", type=String.class, parameters={})
+    @Export(name="ssoClientId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ssoClientId;
 
     /**
@@ -340,7 +340,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Path to Azure KeyVault storing the secret used for communication to ADFS.
      * 
      */
-    @OutputExport(name="ssoClientSecretKeyVaultPath", type=String.class, parameters={})
+    @Export(name="ssoClientSecretKeyVaultPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> ssoClientSecretKeyVaultPath;
 
     /**
@@ -354,7 +354,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The type of single sign on Secret Type.
      * 
      */
-    @OutputExport(name="ssoSecretType", type=String.class, parameters={})
+    @Export(name="ssoSecretType", type=String.class, parameters={})
     private Output</* @Nullable */ String> ssoSecretType;
 
     /**
@@ -368,7 +368,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * URL to customer ADFS server for signing WVD SSO certificates.
      * 
      */
-    @OutputExport(name="ssoadfsAuthority", type=String.class, parameters={})
+    @Export(name="ssoadfsAuthority", type=String.class, parameters={})
     private Output</* @Nullable */ String> ssoadfsAuthority;
 
     /**
@@ -382,7 +382,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The flag to turn on/off StartVMOnConnect feature.
      * 
      */
-    @OutputExport(name="startVMOnConnect", type=Boolean.class, parameters={})
+    @Export(name="startVMOnConnect", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> startVMOnConnect;
 
     /**
@@ -396,7 +396,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -410,7 +410,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -424,7 +424,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * Is validation environment.
      * 
      */
-    @OutputExport(name="validationEnvironment", type=Boolean.class, parameters={})
+    @Export(name="validationEnvironment", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validationEnvironment;
 
     /**
@@ -438,7 +438,7 @@ public class HostPool extends io.pulumi.resources.CustomResource {
      * VM template for sessionhosts configuration within hostpool.
      * 
      */
-    @OutputExport(name="vmTemplate", type=String.class, parameters={})
+    @Export(name="vmTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmTemplate;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
      * Type of the account of data
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
     public String getDataAccountType() {
@@ -34,7 +34,7 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
      * To indicate if all Azure blobs have to be transferred
      * 
      */
-    @InputImport(name="transferAllBlobs")
+    @Import(name="transferAllBlobs")
       private final @Nullable Boolean transferAllBlobs;
 
     public Optional<Boolean> getTransferAllBlobs() {
@@ -45,7 +45,7 @@ public final class TransferAllDetailsResponse extends io.pulumi.resources.Invoke
      * To indicate if all Azure Files have to be transferred
      * 
      */
-    @InputImport(name="transferAllFiles")
+    @Import(name="transferAllFiles")
       private final @Nullable Boolean transferAllFiles;
 
     public Optional<Boolean> getTransferAllFiles() {

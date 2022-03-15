@@ -4,10 +4,10 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsProcessingConfigurationLambda;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputsProcessingConfiguration {
     /**
      * The Lambda function configuration. See Lambda below for more details.
@@ -15,8 +15,8 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
      */
     private final AnalyticsApplicationInputsProcessingConfigurationLambda lambda;
 
-    @OutputCustomType.Constructor
-    private AnalyticsApplicationInputsProcessingConfiguration(@OutputCustomType.Parameter("lambda") AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
+    @CustomType.Constructor
+    private AnalyticsApplicationInputsProcessingConfiguration(@CustomType.Parameter("lambda") AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
         this.lambda = lambda;
     }
 

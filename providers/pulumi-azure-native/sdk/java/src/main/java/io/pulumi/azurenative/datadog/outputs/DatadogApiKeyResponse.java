@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatadogApiKeyResponse {
     /**
      * The time of creation of the API key.
@@ -32,12 +32,12 @@ public final class DatadogApiKeyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatadogApiKeyResponse(
-        @OutputCustomType.Parameter("created") @Nullable String created,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("created") @Nullable String created,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.created = created;
         this.createdBy = createdBy;
         this.key = key;

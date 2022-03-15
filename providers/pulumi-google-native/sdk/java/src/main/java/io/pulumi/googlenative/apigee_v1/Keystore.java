@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.KeystoreArgs;
@@ -22,7 +22,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * Aliases in this keystore.
      * 
      */
-    @OutputExport(name="aliases", type=List.class, parameters={String.class})
+    @Export(name="aliases", type=List.class, parameters={String.class})
     private Output<List<String>> aliases;
 
     /**
@@ -36,7 +36,7 @@ public class Keystore extends io.pulumi.resources.CustomResource {
      * Resource ID for this keystore. Values must match the regular expression `[\w[:space:]-.]{1,255}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

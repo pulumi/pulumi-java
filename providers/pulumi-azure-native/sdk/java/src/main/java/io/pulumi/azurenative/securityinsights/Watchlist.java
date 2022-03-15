@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The content type of the raw content. Example : text/csv or text/tsv
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -52,7 +52,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The time the watchlist was created
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output</* @Nullable */ String> created;
 
     /**
@@ -66,7 +66,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * Describes a user that created the watchlist
      * 
      */
-    @OutputExport(name="createdBy", type=WatchlistUserInfoResponse.class, parameters={})
+    @Export(name="createdBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> createdBy;
 
     /**
@@ -80,7 +80,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The default duration of a watchlist (in ISO 8601 duration format)
      * 
      */
-    @OutputExport(name="defaultDuration", type=String.class, parameters={})
+    @Export(name="defaultDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultDuration;
 
     /**
@@ -94,7 +94,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * A description of the watchlist
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -108,7 +108,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The display name of the watchlist
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -122,7 +122,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -136,7 +136,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * A flag that indicates if the watchlist is deleted or not
      * 
      */
-    @OutputExport(name="isDeleted", type=Boolean.class, parameters={})
+    @Export(name="isDeleted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDeleted;
 
     /**
@@ -150,7 +150,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
      * 
      */
-    @OutputExport(name="itemsSearchKey", type=String.class, parameters={})
+    @Export(name="itemsSearchKey", type=String.class, parameters={})
     private Output<String> itemsSearchKey;
 
     /**
@@ -164,7 +164,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * List of labels relevant to this watchlist
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={String.class})
+    @Export(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
     /**
@@ -178,7 +178,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -192,7 +192,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The number of lines in a csv/tsv content to skip before the header
      * 
      */
-    @OutputExport(name="numberOfLinesToSkip", type=Integer.class, parameters={})
+    @Export(name="numberOfLinesToSkip", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfLinesToSkip;
 
     /**
@@ -206,7 +206,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The provider of the watchlist
      * 
      */
-    @OutputExport(name="provider", type=String.class, parameters={})
+    @Export(name="provider", type=String.class, parameters={})
     private Output<String> provider;
 
     /**
@@ -220,7 +220,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it's the content of the file that will parsed by the endpoint
      * 
      */
-    @OutputExport(name="rawContent", type=String.class, parameters={})
+    @Export(name="rawContent", type=String.class, parameters={})
     private Output</* @Nullable */ String> rawContent;
 
     /**
@@ -234,7 +234,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The source of the watchlist
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
     /**
@@ -248,7 +248,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -262,7 +262,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The tenantId where the watchlist belongs to
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -276,7 +276,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -290,7 +290,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The last time the watchlist was updated
      * 
      */
-    @OutputExport(name="updated", type=String.class, parameters={})
+    @Export(name="updated", type=String.class, parameters={})
     private Output</* @Nullable */ String> updated;
 
     /**
@@ -304,7 +304,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * Describes a user that updated the watchlist
      * 
      */
-    @OutputExport(name="updatedBy", type=WatchlistUserInfoResponse.class, parameters={})
+    @Export(name="updatedBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy;
 
     /**
@@ -318,7 +318,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
      * 
      */
-    @OutputExport(name="uploadStatus", type=String.class, parameters={})
+    @Export(name="uploadStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> uploadStatus;
 
     /**
@@ -332,7 +332,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The alias of the watchlist
      * 
      */
-    @OutputExport(name="watchlistAlias", type=String.class, parameters={})
+    @Export(name="watchlistAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistAlias;
 
     /**
@@ -346,7 +346,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The id (a Guid) of the watchlist
      * 
      */
-    @OutputExport(name="watchlistId", type=String.class, parameters={})
+    @Export(name="watchlistId", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistId;
 
     /**
@@ -360,7 +360,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The number of Watchlist Items in the Watchlist
      * 
      */
-    @OutputExport(name="watchlistItemsCount", type=Integer.class, parameters={})
+    @Export(name="watchlistItemsCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> watchlistItemsCount;
 
     /**
@@ -374,7 +374,7 @@ public class Watchlist extends io.pulumi.resources.CustomResource {
      * The type of the watchlist
      * 
      */
-    @OutputExport(name="watchlistType", type=String.class, parameters={})
+    @Export(name="watchlistType", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistType;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.BackendAuthorizationHeaderCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendCredentialsContractResponse {
     /**
      * Authorization header authentication
@@ -40,13 +40,13 @@ public final class BackendCredentialsContractResponse {
      */
     private final @Nullable Map<String,List<String>> query;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendCredentialsContractResponse(
-        @OutputCustomType.Parameter("authorization") @Nullable BackendAuthorizationHeaderCredentialsResponse authorization,
-        @OutputCustomType.Parameter("certificate") @Nullable List<String> certificate,
-        @OutputCustomType.Parameter("certificateIds") @Nullable List<String> certificateIds,
-        @OutputCustomType.Parameter("header") @Nullable Map<String,List<String>> header,
-        @OutputCustomType.Parameter("query") @Nullable Map<String,List<String>> query) {
+        @CustomType.Parameter("authorization") @Nullable BackendAuthorizationHeaderCredentialsResponse authorization,
+        @CustomType.Parameter("certificate") @Nullable List<String> certificate,
+        @CustomType.Parameter("certificateIds") @Nullable List<String> certificateIds,
+        @CustomType.Parameter("header") @Nullable Map<String,List<String>> header,
+        @CustomType.Parameter("query") @Nullable Map<String,List<String>> query) {
         this.authorization = authorization;
         this.certificate = certificate;
         this.certificateIds = certificateIds;

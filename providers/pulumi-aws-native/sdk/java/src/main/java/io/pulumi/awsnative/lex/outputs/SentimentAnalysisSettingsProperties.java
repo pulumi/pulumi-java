@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SentimentAnalysisSettingsProperties {
     /**
      * Enable to call Amazon Comprehend for Sentiment natively within Lex
@@ -15,8 +15,8 @@ public final class SentimentAnalysisSettingsProperties {
      */
     private final Boolean detectSentiment;
 
-    @OutputCustomType.Constructor
-    private SentimentAnalysisSettingsProperties(@OutputCustomType.Parameter("detectSentiment") Boolean detectSentiment) {
+    @CustomType.Constructor
+    private SentimentAnalysisSettingsProperties(@CustomType.Parameter("detectSentiment") Boolean detectSentiment) {
         this.detectSentiment = detectSentiment;
     }
 

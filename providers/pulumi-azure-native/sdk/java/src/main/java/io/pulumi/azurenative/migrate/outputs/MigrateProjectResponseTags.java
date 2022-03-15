@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateProjectResponseTags {
     private final @Nullable String additionalProperties;
 
-    @OutputCustomType.Constructor
-    private MigrateProjectResponseTags(@OutputCustomType.Parameter("additionalProperties") @Nullable String additionalProperties) {
+    @CustomType.Constructor
+    private MigrateProjectResponseTags(@CustomType.Parameter("additionalProperties") @Nullable String additionalProperties) {
         this.additionalProperties = additionalProperties;
     }
 

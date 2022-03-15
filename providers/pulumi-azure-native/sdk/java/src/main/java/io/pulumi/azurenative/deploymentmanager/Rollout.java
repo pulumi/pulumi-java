@@ -9,7 +9,7 @@ import io.pulumi.azurenative.deploymentmanager.outputs.IdentityResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The reference to the artifact source resource Id where the payload is located.
      * 
      */
-    @OutputExport(name="artifactSourceId", type=String.class, parameters={})
+    @Export(name="artifactSourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> artifactSourceId;
 
     /**
@@ -51,7 +51,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The version of the build being deployed.
      * 
      */
-    @OutputExport(name="buildVersion", type=String.class, parameters={})
+    @Export(name="buildVersion", type=String.class, parameters={})
     private Output<String> buildVersion;
 
     /**
@@ -65,7 +65,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output<IdentityResponse> identity;
 
     /**
@@ -79,7 +79,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -93,7 +93,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The list of step groups that define the orchestration.
      * 
      */
-    @OutputExport(name="stepGroups", type=List.class, parameters={StepGroupResponse.class})
+    @Export(name="stepGroups", type=List.class, parameters={StepGroupResponse.class})
     private Output<List<StepGroupResponse>> stepGroups;
 
     /**
@@ -121,7 +121,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The resource Id of the service topology from which service units are being referenced in step groups to be deployed.
      * 
      */
-    @OutputExport(name="targetServiceTopologyId", type=String.class, parameters={})
+    @Export(name="targetServiceTopologyId", type=String.class, parameters={})
     private Output<String> targetServiceTopologyId;
 
     /**
@@ -149,7 +149,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

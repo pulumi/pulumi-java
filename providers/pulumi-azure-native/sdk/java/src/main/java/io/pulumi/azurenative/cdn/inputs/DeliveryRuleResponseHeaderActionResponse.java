@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.HeaderActionParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.re
      * Expected value is 'ModifyResponseHeader'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class DeliveryRuleResponseHeaderActionResponse extends io.pulumi.re
      * Defines the parameters for the action.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final HeaderActionParametersResponse parameters;
 
     public HeaderActionParametersResponse getParameters() {

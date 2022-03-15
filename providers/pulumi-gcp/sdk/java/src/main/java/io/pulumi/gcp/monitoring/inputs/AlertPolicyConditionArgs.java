@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMatchedLogArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageArgs;
@@ -24,7 +24,7 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditionAbsent")
+    @Import(name="conditionAbsent")
       private final @Nullable Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent;
 
     public Output<AlertPolicyConditionConditionAbsentArgs> getConditionAbsent() {
@@ -37,7 +37,7 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditionMatchedLog")
+    @Import(name="conditionMatchedLog")
       private final @Nullable Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog;
 
     public Output<AlertPolicyConditionConditionMatchedLogArgs> getConditionMatchedLog() {
@@ -49,7 +49,7 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditionMonitoringQueryLanguage")
+    @Import(name="conditionMonitoringQueryLanguage")
       private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage;
 
     public Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> getConditionMonitoringQueryLanguage() {
@@ -62,7 +62,7 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditionThreshold")
+    @Import(name="conditionThreshold")
       private final @Nullable Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold;
 
     public Output<AlertPolicyConditionConditionThresholdArgs> getConditionThreshold() {
@@ -77,7 +77,7 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
      * policy.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -94,7 +94,7 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
      * policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

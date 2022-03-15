@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedPrivateEndpointResult {
     /**
      * The groupId in which the managed private endpoint is created.
@@ -58,17 +58,17 @@ public final class GetManagedPrivateEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedPrivateEndpointResult(
-        @OutputCustomType.Parameter("groupId") String groupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateLinkResourceId") String privateLinkResourceId,
-        @OutputCustomType.Parameter("privateLinkResourceRegion") @Nullable String privateLinkResourceRegion,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("groupId") String groupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateLinkResourceId") String privateLinkResourceId,
+        @CustomType.Parameter("privateLinkResourceRegion") @Nullable String privateLinkResourceRegion,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;

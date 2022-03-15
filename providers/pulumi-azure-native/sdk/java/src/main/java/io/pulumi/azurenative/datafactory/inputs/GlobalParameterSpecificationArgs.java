@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.GlobalParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
      * Global Parameter type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,GlobalParameterType>> type;
 
     public Output<Either<String,GlobalParameterType>> getType() {
@@ -35,7 +35,7 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
      * Value of parameter.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Object> value;
 
     public Output<Object> getValue() {

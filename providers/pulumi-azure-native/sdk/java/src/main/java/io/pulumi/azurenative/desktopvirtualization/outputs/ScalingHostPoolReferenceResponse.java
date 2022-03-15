@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingHostPoolReferenceResponse {
     /**
      * Arm path of referenced hostpool.
@@ -23,10 +23,10 @@ public final class ScalingHostPoolReferenceResponse {
      */
     private final @Nullable Boolean scalingPlanEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingHostPoolReferenceResponse(
-        @OutputCustomType.Parameter("hostPoolArmPath") @Nullable String hostPoolArmPath,
-        @OutputCustomType.Parameter("scalingPlanEnabled") @Nullable Boolean scalingPlanEnabled) {
+        @CustomType.Parameter("hostPoolArmPath") @Nullable String hostPoolArmPath,
+        @CustomType.Parameter("scalingPlanEnabled") @Nullable Boolean scalingPlanEnabled) {
         this.hostPoolArmPath = hostPoolArmPath;
         this.scalingPlanEnabled = scalingPlanEnabled;
     }

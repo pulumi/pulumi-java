@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleLambda {
     /**
      * The ARN of the Lambda function.
@@ -15,8 +15,8 @@ public final class TopicRuleLambda {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor
-    private TopicRuleLambda(@OutputCustomType.Parameter("functionArn") String functionArn) {
+    @CustomType.Constructor
+    private TopicRuleLambda(@CustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 

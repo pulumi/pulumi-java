@@ -8,7 +8,7 @@ import io.pulumi.azurenative.search.SharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourcePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
      * Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
      * 
      */
-    @OutputExport(name="properties", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=SharedPrivateLinkResourcePropertiesResponse.class, parameters={})
     private Output<SharedPrivateLinkResourcePropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class SharedPrivateLinkResource extends io.pulumi.resources.CustomResourc
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

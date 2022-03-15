@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
      * 
      */
-    @InputImport(name="addonName")
+    @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
@@ -32,7 +32,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * match one of the versions returned by [describe-addon-versions](https://docs.aws.amazon.com/cli/latest/reference/eks/describe-addon-versions.html).
      * 
      */
-    @InputImport(name="addonVersion")
+    @Import(name="addonVersion")
       private final @Nullable Output<String> addonVersion;
 
     public Output<String> getAddonVersion() {
@@ -43,7 +43,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the EKS add-on.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -54,7 +54,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -65,7 +65,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -76,7 +76,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the EKS add-on was updated.
      * 
      */
-    @InputImport(name="modifiedAt")
+    @Import(name="modifiedAt")
       private final @Nullable Output<String> modifiedAt;
 
     public Output<String> getModifiedAt() {
@@ -89,7 +89,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * version updates to the add-on. Valid values are `NONE` and `OVERWRITE`.
      * 
      */
-    @InputImport(name="resolveConflicts")
+    @Import(name="resolveConflicts")
       private final @Nullable Output<String> resolveConflicts;
 
     public Output<String> getResolveConflicts() {
@@ -105,7 +105,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * in the Amazon EKS User Guide.
      * 
      */
-    @InputImport(name="serviceAccountRoleArn")
+    @Import(name="serviceAccountRoleArn")
       private final @Nullable Output<String> serviceAccountRoleArn;
 
     public Output<String> getServiceAccountRoleArn() {
@@ -116,7 +116,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -127,7 +127,7 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
      * (Optional) Key-value map of resource tags, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

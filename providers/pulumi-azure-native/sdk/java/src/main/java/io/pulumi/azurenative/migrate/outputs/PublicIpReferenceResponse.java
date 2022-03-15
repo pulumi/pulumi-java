@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublicIpReferenceResponse {
     /**
      * Gets the ARM resource ID of the tracked resource being referenced.
@@ -15,8 +15,8 @@ public final class PublicIpReferenceResponse {
      */
     private final String sourceArmResourceId;
 
-    @OutputCustomType.Constructor
-    private PublicIpReferenceResponse(@OutputCustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
+    @CustomType.Constructor
+    private PublicIpReferenceResponse(@CustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
         this.sourceArmResourceId = sourceArmResourceId;
     }
 

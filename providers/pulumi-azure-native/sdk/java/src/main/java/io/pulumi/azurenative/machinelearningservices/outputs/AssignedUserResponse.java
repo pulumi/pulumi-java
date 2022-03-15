@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssignedUserResponse {
     /**
      * User’s AAD Object Id.
@@ -20,10 +20,10 @@ public final class AssignedUserResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignedUserResponse(
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.objectId = objectId;
         this.tenantId = tenantId;
     }

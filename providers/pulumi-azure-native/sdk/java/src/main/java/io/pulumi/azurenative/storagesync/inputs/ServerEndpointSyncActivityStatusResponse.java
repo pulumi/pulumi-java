@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Applied bytes
      * 
      */
-    @InputImport(name="appliedBytes", required=true)
+    @Import(name="appliedBytes", required=true)
       private final Double appliedBytes;
 
     public Double getAppliedBytes() {
@@ -32,7 +32,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Applied item count.
      * 
      */
-    @InputImport(name="appliedItemCount", required=true)
+    @Import(name="appliedItemCount", required=true)
       private final Double appliedItemCount;
 
     public Double getAppliedItemCount() {
@@ -43,7 +43,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Per item error count
      * 
      */
-    @InputImport(name="perItemErrorCount", required=true)
+    @Import(name="perItemErrorCount", required=true)
       private final Double perItemErrorCount;
 
     public Double getPerItemErrorCount() {
@@ -54,7 +54,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Sync mode
      * 
      */
-    @InputImport(name="syncMode", required=true)
+    @Import(name="syncMode", required=true)
       private final String syncMode;
 
     public String getSyncMode() {
@@ -65,7 +65,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Timestamp when properties were updated
      * 
      */
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final String timestamp;
 
     public String getTimestamp() {
@@ -76,7 +76,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Total bytes (if available)
      * 
      */
-    @InputImport(name="totalBytes", required=true)
+    @Import(name="totalBytes", required=true)
       private final Double totalBytes;
 
     public Double getTotalBytes() {
@@ -87,7 +87,7 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
      * Total item count (if available)
      * 
      */
-    @InputImport(name="totalItemCount", required=true)
+    @Import(name="totalItemCount", required=true)
       private final Double totalItemCount;
 
     public Double getTotalItemCount() {

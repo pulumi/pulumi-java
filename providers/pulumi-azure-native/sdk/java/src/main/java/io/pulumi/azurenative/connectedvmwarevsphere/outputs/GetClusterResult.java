@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * Gets the name of the corresponding resource in Kubernetes.
@@ -107,26 +107,26 @@ public final class GetClusterResult {
      */
     private final @Nullable String vCenterId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("customResourceName") String customResourceName,
-        @OutputCustomType.Parameter("datastoreIds") List<String> datastoreIds,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("moName") String moName,
-        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkIds") List<String> networkIds,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uuid") String uuid,
-        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId) {
+        @CustomType.Parameter("customResourceName") String customResourceName,
+        @CustomType.Parameter("datastoreIds") List<String> datastoreIds,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("moName") String moName,
+        @CustomType.Parameter("moRefId") @Nullable String moRefId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkIds") List<String> networkIds,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uuid") String uuid,
+        @CustomType.Parameter("vCenterId") @Nullable String vCenterId) {
         this.customResourceName = customResourceName;
         this.datastoreIds = datastoreIds;
         this.extendedLocation = extendedLocation;

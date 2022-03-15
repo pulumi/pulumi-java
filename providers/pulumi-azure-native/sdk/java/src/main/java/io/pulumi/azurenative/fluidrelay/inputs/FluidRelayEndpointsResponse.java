@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.fluidrelay.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FluidRelayEndpointsResponse extends io.pulumi.resources.Invok
      * The Fluid Relay Orderer endpoints.
      * 
      */
-    @InputImport(name="ordererEndpoints", required=true)
+    @Import(name="ordererEndpoints", required=true)
       private final List<String> ordererEndpoints;
 
     public List<String> getOrdererEndpoints() {
@@ -32,7 +32,7 @@ public final class FluidRelayEndpointsResponse extends io.pulumi.resources.Invok
      * The Fluid Relay storage endpoints.
      * 
      */
-    @InputImport(name="storageEndpoints", required=true)
+    @Import(name="storageEndpoints", required=true)
       private final List<String> storageEndpoints;
 
     public List<String> getStorageEndpoints() {

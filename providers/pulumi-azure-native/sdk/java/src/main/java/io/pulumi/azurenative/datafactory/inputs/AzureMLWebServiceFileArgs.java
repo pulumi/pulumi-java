@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
      * The relative file path, including container name, in the Azure Blob Storage specified by the LinkedService. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="filePath", required=true)
+    @Import(name="filePath", required=true)
       private final Output<Object> filePath;
 
     public Output<Object> getFilePath() {
@@ -33,7 +33,7 @@ public final class AzureMLWebServiceFileArgs extends io.pulumi.resources.Resourc
      * Reference to an Azure Storage LinkedService, where Azure ML WebService Input/Output file located.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {

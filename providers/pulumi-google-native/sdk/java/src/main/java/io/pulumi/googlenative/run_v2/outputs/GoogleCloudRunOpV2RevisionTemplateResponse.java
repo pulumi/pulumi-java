@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ContainerResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionScalingResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2VolumeResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2RevisionTemplateResponse {
     /**
      * KRM-style annotations for the resource.
@@ -83,21 +83,21 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse {
      */
     private final GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2RevisionTemplateResponse(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("confidential") Boolean confidential,
-        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
-        @OutputCustomType.Parameter("containers") List<GoogleCloudRunOpV2ContainerResponse> containers,
-        @OutputCustomType.Parameter("encryptionKey") String encryptionKey,
-        @OutputCustomType.Parameter("executionEnvironment") String executionEnvironment,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("revision") String revision,
-        @OutputCustomType.Parameter("scaling") GoogleCloudRunOpV2RevisionScalingResponse scaling,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("timeout") String timeout,
-        @OutputCustomType.Parameter("volumes") List<GoogleCloudRunOpV2VolumeResponse> volumes,
-        @OutputCustomType.Parameter("vpcAccess") GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("confidential") Boolean confidential,
+        @CustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @CustomType.Parameter("containers") List<GoogleCloudRunOpV2ContainerResponse> containers,
+        @CustomType.Parameter("encryptionKey") String encryptionKey,
+        @CustomType.Parameter("executionEnvironment") String executionEnvironment,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("revision") String revision,
+        @CustomType.Parameter("scaling") GoogleCloudRunOpV2RevisionScalingResponse scaling,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("timeout") String timeout,
+        @CustomType.Parameter("volumes") List<GoogleCloudRunOpV2VolumeResponse> volumes,
+        @CustomType.Parameter("vpcAccess") GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
         this.annotations = annotations;
         this.confidential = confidential;
         this.containerConcurrency = containerConcurrency;

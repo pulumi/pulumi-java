@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1.enums.UtilizationReportTimeFrame;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmUtilizationInfoArgs;
 import java.lang.String;
@@ -21,35 +21,35 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
      * The report display name, as assigned by the user.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
     public Output<String> getSourceId() {
@@ -60,14 +60,14 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
      * Time frame of the report.
      * 
      */
-    @InputImport(name="timeFrame")
+    @Import(name="timeFrame")
       private final @Nullable Output<UtilizationReportTimeFrame> timeFrame;
 
     public Output<UtilizationReportTimeFrame> getTimeFrame() {
         return this.timeFrame == null ? Output.empty() : this.timeFrame;
     }
 
-    @InputImport(name="utilizationReportId", required=true)
+    @Import(name="utilizationReportId", required=true)
       private final Output<String> utilizationReportId;
 
     public Output<String> getUtilizationReportId() {
@@ -78,7 +78,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
      * List of utilization information per VM. When sent as part of the request, the "vm_id" field is used in order to specify which VMs to include in the report. In that case all other fields are ignored.
      * 
      */
-    @InputImport(name="vms")
+    @Import(name="vms")
       private final @Nullable Output<List<VmUtilizationInfoArgs>> vms;
 
     public Output<List<VmUtilizationInfoArgs>> getVms() {

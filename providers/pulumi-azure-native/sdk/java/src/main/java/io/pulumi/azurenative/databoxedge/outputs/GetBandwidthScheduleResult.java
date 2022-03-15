@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBandwidthScheduleResult {
     /**
      * The days of the week when this schedule is applicable.
@@ -53,16 +53,16 @@ public final class GetBandwidthScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBandwidthScheduleResult(
-        @OutputCustomType.Parameter("days") List<String> days,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rateInMbps") Integer rateInMbps,
-        @OutputCustomType.Parameter("start") String start,
-        @OutputCustomType.Parameter("stop") String stop,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("days") List<String> days,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rateInMbps") Integer rateInMbps,
+        @CustomType.Parameter("start") String start,
+        @CustomType.Parameter("stop") String stop,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.days = days;
         this.id = id;
         this.name = name;

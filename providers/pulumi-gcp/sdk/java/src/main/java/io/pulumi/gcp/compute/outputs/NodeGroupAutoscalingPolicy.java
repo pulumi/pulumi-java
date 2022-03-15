@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupAutoscalingPolicy {
     /**
      * Maximum size of the node group. Set to a value less than or equal
@@ -36,11 +36,11 @@ public final class NodeGroupAutoscalingPolicy {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupAutoscalingPolicy(
-        @OutputCustomType.Parameter("maxNodes") @Nullable Integer maxNodes,
-        @OutputCustomType.Parameter("minNodes") @Nullable Integer minNodes,
-        @OutputCustomType.Parameter("mode") @Nullable String mode) {
+        @CustomType.Parameter("maxNodes") @Nullable Integer maxNodes,
+        @CustomType.Parameter("minNodes") @Nullable Integer minNodes,
+        @CustomType.Parameter("mode") @Nullable String mode) {
         this.maxNodes = maxNodes;
         this.minNodes = minNodes;
         this.mode = mode;

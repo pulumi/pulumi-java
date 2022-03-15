@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerStateWaiting {
     /**
      * Message regarding why the container is not yet running.
@@ -22,10 +22,10 @@ public final class ContainerStateWaiting {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerStateWaiting(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason) {
         this.message = message;
         this.reason = reason;
     }

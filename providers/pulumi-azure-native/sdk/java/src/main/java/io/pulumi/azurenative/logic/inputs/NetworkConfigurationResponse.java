@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentAccessEndpointResponse;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * The access endpoint.
      * 
      */
-    @InputImport(name="accessEndpoint")
+    @Import(name="accessEndpoint")
       private final @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
 
     public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> getAccessEndpoint() {
@@ -36,7 +36,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * The subnets.
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable List<ResourceReferenceResponse> subnets;
 
     public List<ResourceReferenceResponse> getSubnets() {
@@ -47,7 +47,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * Gets the virtual network address space.
      * 
      */
-    @InputImport(name="virtualNetworkAddressSpace")
+    @Import(name="virtualNetworkAddressSpace")
       private final @Nullable String virtualNetworkAddressSpace;
 
     public Optional<String> getVirtualNetworkAddressSpace() {

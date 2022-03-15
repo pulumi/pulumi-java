@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.AssetHierarchy;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetProperty;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The ARN of the asset
      * 
      */
-    @OutputExport(name="assetArn", type=String.class, parameters={})
+    @Export(name="assetArn", type=String.class, parameters={})
     private Output<String> assetArn;
 
     /**
@@ -35,7 +35,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
     public Output<String> getAssetArn() {
         return this.assetArn;
     }
-    @OutputExport(name="assetHierarchies", type=List.class, parameters={AssetHierarchy.class})
+    @Export(name="assetHierarchies", type=List.class, parameters={AssetHierarchy.class})
     private Output</* @Nullable */ List<AssetHierarchy>> assetHierarchies;
 
     public Output</* @Nullable */ List<AssetHierarchy>> getAssetHierarchies() {
@@ -45,7 +45,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The ID of the asset
      * 
      */
-    @OutputExport(name="assetId", type=String.class, parameters={})
+    @Export(name="assetId", type=String.class, parameters={})
     private Output<String> assetId;
 
     /**
@@ -59,7 +59,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The ID of the asset model from which to create the asset.
      * 
      */
-    @OutputExport(name="assetModelId", type=String.class, parameters={})
+    @Export(name="assetModelId", type=String.class, parameters={})
     private Output<String> assetModelId;
 
     /**
@@ -73,7 +73,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * A unique, friendly name for the asset.
      * 
      */
-    @OutputExport(name="assetName", type=String.class, parameters={})
+    @Export(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
     /**
@@ -83,7 +83,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
     public Output<String> getAssetName() {
         return this.assetName;
     }
-    @OutputExport(name="assetProperties", type=List.class, parameters={AssetProperty.class})
+    @Export(name="assetProperties", type=List.class, parameters={AssetProperty.class})
     private Output</* @Nullable */ List<AssetProperty>> assetProperties;
 
     public Output</* @Nullable */ List<AssetProperty>> getAssetProperties() {
@@ -93,7 +93,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the asset.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AssetTag.class})
+    @Export(name="tags", type=List.class, parameters={AssetTag.class})
     private Output</* @Nullable */ List<AssetTag>> tags;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions {
     /**
      * The rule description
@@ -53,16 +53,16 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      */
     private final @Nullable Boolean supportsEmailNotifications;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("helpUrl") @Nullable String helpUrl,
-        @OutputCustomType.Parameter("isEnabledByDefault") @Nullable Boolean isEnabledByDefault,
-        @OutputCustomType.Parameter("isHidden") @Nullable Boolean isHidden,
-        @OutputCustomType.Parameter("isInPreview") @Nullable Boolean isInPreview,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("supportsEmailNotifications") @Nullable Boolean supportsEmailNotifications) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("helpUrl") @Nullable String helpUrl,
+        @CustomType.Parameter("isEnabledByDefault") @Nullable Boolean isEnabledByDefault,
+        @CustomType.Parameter("isHidden") @Nullable Boolean isHidden,
+        @CustomType.Parameter("isInPreview") @Nullable Boolean isInPreview,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("supportsEmailNotifications") @Nullable Boolean supportsEmailNotifications) {
         this.description = description;
         this.displayName = displayName;
         this.helpUrl = helpUrl;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
      * 
      */
-    @InputImport(name="osUpdateType", required=true)
+    @Import(name="osUpdateType", required=true)
       private final Output<String> osUpdateType;
 
     public Output<String> getOsUpdateType() {
@@ -33,7 +33,7 @@ public final class TargetOSInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the target OSs to be tested.
      * 
      */
-    @InputImport(name="targetOSs", required=true)
+    @Import(name="targetOSs", required=true)
       private final Output<List<String>> targetOSs;
 
     public Output<List<String>> getTargetOSs() {

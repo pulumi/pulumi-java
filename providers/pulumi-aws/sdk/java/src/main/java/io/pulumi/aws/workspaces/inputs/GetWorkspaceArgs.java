@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the directory for the WorkSpace. You have to specify `user_name` along with `directory_id`. You cannot combine this parameter with `workspace_id`.
      * 
      */
-    @InputImport(name="directoryId")
+    @Import(name="directoryId")
       private final @Nullable String directoryId;
 
     public Optional<String> getDirectoryId() {
@@ -30,7 +30,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * The tags for the WorkSpace.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -41,7 +41,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace. You cannot combine this parameter with `workspace_id`.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {
@@ -52,7 +52,7 @@ public final class GetWorkspaceArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the WorkSpace. You cannot combine this parameter with `directory_id`.
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {

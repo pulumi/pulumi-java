@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the BackendService resource.
      * 
      */
-    @InputImport(name="backendService", required=true)
+    @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
     public Output<String> getBackendService() {
@@ -30,7 +30,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -73,7 +73,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `NONE` and `PROXY_V1`.
      * 
      */
-    @InputImport(name="proxyHeader")
+    @Import(name="proxyHeader")
       private final @Nullable Output<String> proxyHeader;
 
     public Output<String> getProxyHeader() {
@@ -86,7 +86,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * SSL certificate must be specified.
      * 
      */
-    @InputImport(name="sslCertificates", required=true)
+    @Import(name="sslCertificates", required=true)
       private final Output<List<String>> sslCertificates;
 
     public Output<List<String>> getSslCertificates() {
@@ -99,7 +99,7 @@ public final class TargetSSLProxyArgs extends io.pulumi.resources.ResourceArgs {
      * resource will not have any SSL policy configured.
      * 
      */
-    @InputImport(name="sslPolicy")
+    @Import(name="sslPolicy")
       private final @Nullable Output<String> sslPolicy;
 
     public Output<String> getSslPolicy() {

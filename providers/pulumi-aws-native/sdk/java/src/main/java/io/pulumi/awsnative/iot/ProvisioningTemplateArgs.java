@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.ProvisioningTemplateProvisioningHookArgs;
 import io.pulumi.awsnative.iot.inputs.ProvisioningTemplateTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
 
     public static final ProvisioningTemplateArgs Empty = new ProvisioningTemplateArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="preProvisioningHook")
+    @Import(name="preProvisioningHook")
       private final @Nullable Output<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook;
 
     public Output<ProvisioningTemplateProvisioningHookArgs> getPreProvisioningHook() {
         return this.preProvisioningHook == null ? Output.empty() : this.preProvisioningHook;
     }
 
-    @InputImport(name="provisioningRoleArn", required=true)
+    @Import(name="provisioningRoleArn", required=true)
       private final Output<String> provisioningRoleArn;
 
     public Output<String> getProvisioningRoleArn() {
         return this.provisioningRoleArn;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProvisioningTemplateTagArgs>> tags;
 
     public Output<List<ProvisioningTemplateTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="templateBody", required=true)
+    @Import(name="templateBody", required=true)
       private final Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
         return this.templateBody;
     }
 
-    @InputImport(name="templateName")
+    @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
     public Output<String> getTemplateName() {

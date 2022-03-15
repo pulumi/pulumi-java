@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
      * A filesystem safe relative path of the artifact.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -33,7 +33,7 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
      * The Azure Resource Manager template.
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<Object> template;
 
     public Output<Object> getTemplate() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.WsdlServiceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * The WSDL content
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -34,7 +34,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * The WSDL import method
      * 
      */
-    @InputImport(name="importMethod")
+    @Import(name="importMethod")
       private final @Nullable String importMethod;
 
     public Optional<String> getImportMethod() {
@@ -45,7 +45,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * The service with name and endpoint names
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable WsdlServiceResponse service;
 
     public Optional<WsdlServiceResponse> getService() {
@@ -56,7 +56,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * The WSDL URL
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

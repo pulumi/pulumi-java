@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.aws.ram.inputs.GetResourceShareFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * A filter used to scope the list e.g., by tags. See [related docs] (https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html).
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetResourceShareFilter> filters;
 
     public List<GetResourceShareFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the tag key to filter on.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS
      * 
      */
-    @InputImport(name="resourceOwner", required=true)
+    @Import(name="resourceOwner", required=true)
       private final String resourceOwner;
 
     public String getResourceOwner() {
@@ -54,7 +54,7 @@ public final class GetResourceShareArgs extends io.pulumi.resources.InvokeArgs {
      * The Tags attached to the RAM share
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

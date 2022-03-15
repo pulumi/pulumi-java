@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
 
     public static final EnvironmentConfigWebServerConfigGetArgs Empty = new EnvironmentConfigWebServerConfigGetArgs();
 
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {

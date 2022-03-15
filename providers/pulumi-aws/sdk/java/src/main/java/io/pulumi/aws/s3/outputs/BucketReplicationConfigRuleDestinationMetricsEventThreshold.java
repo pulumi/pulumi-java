@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestinationMetricsEventThreshold {
     /**
      * Time in minutes. Valid values: `15`.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationMetricsEventThreshold {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigRuleDestinationMetricsEventThreshold(@OutputCustomType.Parameter("minutes") Integer minutes) {
+    @CustomType.Constructor
+    private BucketReplicationConfigRuleDestinationMetricsEventThreshold(@CustomType.Parameter("minutes") Integer minutes) {
         this.minutes = minutes;
     }
 

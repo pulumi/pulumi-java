@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ManagedInstanceAdministratorArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * Type of the managed instance administrator.
      * 
      */
-    @OutputExport(name="administratorType", type=String.class, parameters={})
+    @Export(name="administratorType", type=String.class, parameters={})
     private Output<String> administratorType;
 
     /**
@@ -48,7 +48,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * Login name of the managed instance administrator.
      * 
      */
-    @OutputExport(name="login", type=String.class, parameters={})
+    @Export(name="login", type=String.class, parameters={})
     private Output<String> login;
 
     /**
@@ -62,7 +62,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * SID (object ID) of the managed instance administrator.
      * 
      */
-    @OutputExport(name="sid", type=String.class, parameters={})
+    @Export(name="sid", type=String.class, parameters={})
     private Output<String> sid;
 
     /**
@@ -90,7 +90,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * Tenant ID of the managed instance administrator.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -104,7 +104,7 @@ public class ManagedInstanceAdministrator extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

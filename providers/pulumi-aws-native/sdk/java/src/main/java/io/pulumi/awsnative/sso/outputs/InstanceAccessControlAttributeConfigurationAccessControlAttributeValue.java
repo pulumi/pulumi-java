@@ -3,17 +3,17 @@
 
 package io.pulumi.awsnative.sso.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceAccessControlAttributeConfigurationAccessControlAttributeValue {
     private final List<String> source;
 
-    @OutputCustomType.Constructor
-    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(@OutputCustomType.Parameter("source") List<String> source) {
+    @CustomType.Constructor
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(@CustomType.Parameter("source") List<String> source) {
         this.source = source;
     }
 

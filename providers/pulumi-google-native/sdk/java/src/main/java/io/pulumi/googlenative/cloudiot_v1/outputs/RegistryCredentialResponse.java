@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.PublicKeyCertificateResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegistryCredentialResponse {
     /**
      * A public key certificate used to verify the device credentials.
@@ -15,8 +15,8 @@ public final class RegistryCredentialResponse {
      */
     private final PublicKeyCertificateResponse publicKeyCertificate;
 
-    @OutputCustomType.Constructor
-    private RegistryCredentialResponse(@OutputCustomType.Parameter("publicKeyCertificate") PublicKeyCertificateResponse publicKeyCertificate) {
+    @CustomType.Constructor
+    private RegistryCredentialResponse(@CustomType.Parameter("publicKeyCertificate") PublicKeyCertificateResponse publicKeyCertificate) {
         this.publicKeyCertificate = publicKeyCertificate;
     }
 

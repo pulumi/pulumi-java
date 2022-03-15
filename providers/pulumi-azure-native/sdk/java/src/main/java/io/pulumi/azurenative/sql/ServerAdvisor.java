@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.ServerAdvisorArgs;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
      * 
      */
-    @OutputExport(name="advisorStatus", type=String.class, parameters={})
+    @Export(name="advisorStatus", type=String.class, parameters={})
     private Output<String> advisorStatus;
 
     /**
@@ -49,7 +49,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
      * 
      */
-    @OutputExport(name="autoExecuteStatus", type=String.class, parameters={})
+    @Export(name="autoExecuteStatus", type=String.class, parameters={})
     private Output<String> autoExecuteStatus;
 
     /**
@@ -63,7 +63,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are 'Subscription', 'Server', 'ElasticPool', 'Database' and 'Default' (when status is not explicitly set on any level).
      * 
      */
-    @OutputExport(name="autoExecuteStatusInheritedFrom", type=String.class, parameters={})
+    @Export(name="autoExecuteStatusInheritedFrom", type=String.class, parameters={})
     private Output<String> autoExecuteStatusInheritedFrom;
 
     /**
@@ -77,7 +77,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Resource kind.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -91,7 +91,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Gets the time when the current resource was analyzed for recommendations by this advisor.
      * 
      */
-    @OutputExport(name="lastChecked", type=String.class, parameters={})
+    @Export(name="lastChecked", type=String.class, parameters={})
     private Output<String> lastChecked;
 
     /**
@@ -105,7 +105,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -119,7 +119,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, 'Ok' (Recommendations available),LowActivity (not enough workload to analyze), 'DbSeemsTuned' (Database is doing well), etc.
      * 
      */
-    @OutputExport(name="recommendationsStatus", type=String.class, parameters={})
+    @Export(name="recommendationsStatus", type=String.class, parameters={})
     private Output<String> recommendationsStatus;
 
     /**
@@ -147,7 +147,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Gets the recommended actions for this advisor.
      * 
      */
-    @OutputExport(name="recommendedActions", type=List.class, parameters={RecommendedActionResponse.class})
+    @Export(name="recommendedActions", type=List.class, parameters={RecommendedActionResponse.class})
     private Output<List<RecommendedActionResponse>> recommendedActions;
 
     /**
@@ -161,7 +161,7 @@ public class ServerAdvisor extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetStepArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStepArgs Empty = new GetStepArgs();
 
-    @InputImport(name="executionId", required=true)
+    @Import(name="executionId", required=true)
       private final String executionId;
 
     public String getExecutionId() {
         return this.executionId;
     }
 
-    @InputImport(name="historyId", required=true)
+    @Import(name="historyId", required=true)
       private final String historyId;
 
     public String getHistoryId() {
         return this.historyId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="stepId", required=true)
+    @Import(name="stepId", required=true)
       private final String stepId;
 
     public String getStepId() {

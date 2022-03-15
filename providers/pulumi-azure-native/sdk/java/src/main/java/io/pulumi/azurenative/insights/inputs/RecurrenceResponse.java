@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RecurrentScheduleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
      * the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning each week will have the same set of profiles. For example, to set a daily schedule, set **schedule** to every day of the week. The frequency property specifies that the schedule is repeated weekly.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final String frequency;
 
     public String getFrequency() {
@@ -32,7 +32,7 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
      * the scheduling constraints for when the profile begins.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final RecurrentScheduleResponse schedule;
 
     public RecurrentScheduleResponse getSchedule() {

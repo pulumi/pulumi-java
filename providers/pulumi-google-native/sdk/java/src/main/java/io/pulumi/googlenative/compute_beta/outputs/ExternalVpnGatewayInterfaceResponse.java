@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExternalVpnGatewayInterfaceResponse {
     /**
      * IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.
@@ -15,8 +15,8 @@ public final class ExternalVpnGatewayInterfaceResponse {
      */
     private final String ipAddress;
 
-    @OutputCustomType.Constructor
-    private ExternalVpnGatewayInterfaceResponse(@OutputCustomType.Parameter("ipAddress") String ipAddress) {
+    @CustomType.Constructor
+    private ExternalVpnGatewayInterfaceResponse(@CustomType.Parameter("ipAddress") String ipAddress) {
         this.ipAddress = ipAddress;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
      * Localized names of the enum member.
      * 
      */
-    @InputImport(name="localizedValueNames")
+    @Import(name="localizedValueNames")
       private final @Nullable Map<String,String> localizedValueNames;
 
     public Map<String,String> getLocalizedValueNames() {
@@ -35,7 +35,7 @@ public final class ProfileEnumValidValuesFormatResponse extends io.pulumi.resour
      * The integer value of the enum member.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Integer value;
 
     public Optional<Integer> getValue() {

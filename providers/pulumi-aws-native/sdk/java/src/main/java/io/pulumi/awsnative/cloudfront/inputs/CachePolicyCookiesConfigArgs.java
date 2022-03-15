@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class CachePolicyCookiesConfigArgs extends io.pulumi.resources.Reso
 
     public static final CachePolicyCookiesConfigArgs Empty = new CachePolicyCookiesConfigArgs();
 
-    @InputImport(name="cookieBehavior", required=true)
+    @Import(name="cookieBehavior", required=true)
       private final Output<String> cookieBehavior;
 
     public Output<String> getCookieBehavior() {
         return this.cookieBehavior;
     }
 
-    @InputImport(name="cookies")
+    @Import(name="cookies")
       private final @Nullable Output<List<String>> cookies;
 
     public Output<List<String>> getCookies() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -30,7 +30,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * The ID of an IPv4 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
      * 
      */
-    @InputImport(name="ipv4IpamPoolId")
+    @Import(name="ipv4IpamPoolId")
       private final @Nullable Output<String> ipv4IpamPoolId;
 
     public Output<String> getIpv4IpamPoolId() {
@@ -41,7 +41,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
      * 
      */
-    @InputImport(name="ipv4NetmaskLength")
+    @Import(name="ipv4NetmaskLength")
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
     public Output<Integer> getIpv4NetmaskLength() {
@@ -52,7 +52,7 @@ public final class VpcIpv4CidrBlockAssociationState extends io.pulumi.resources.
      * The ID of the VPC to make the association with.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

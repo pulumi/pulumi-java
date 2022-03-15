@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
 
     public static final TagTemplateIamPolicyArgs Empty = new TagTemplateIamPolicyArgs();
 
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
         return this.policyData;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
         return this.region == null ? Output.empty() : this.region;
     }
 
-    @InputImport(name="tagTemplate", required=true)
+    @Import(name="tagTemplate", required=true)
       private final Output<String> tagTemplate;
 
     public Output<String> getTagTemplate() {

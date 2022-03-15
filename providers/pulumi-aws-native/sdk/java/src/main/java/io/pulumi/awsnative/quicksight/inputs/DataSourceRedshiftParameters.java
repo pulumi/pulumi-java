@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      *             provided.</p>
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable String clusterId;
 
     public Optional<String> getClusterId() {
@@ -37,7 +37,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * <p>Database.</p>
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
@@ -48,7 +48,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * <p>Host. This field can be blank if <code>ClusterId</code> is provided.</p>
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable String host;
 
     public Optional<String> getHost() {
@@ -59,7 +59,7 @@ public final class DataSourceRedshiftParameters extends io.pulumi.resources.Invo
      * <p>Port. This field can be blank if the <code>ClusterId</code> is provided.</p>
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Double port;
 
     public Optional<Double> getPort() {

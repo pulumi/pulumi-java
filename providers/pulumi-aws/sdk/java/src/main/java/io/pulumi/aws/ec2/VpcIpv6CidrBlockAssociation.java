@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcIpv6CidrBlockAssociationArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpv6CidrBlockAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The IPv6 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv6_netmask_length`. This parameter is required if `ipv6_netmask_length` is not set and he IPAM pool does not have `allocation_default_netmask` set.
      * 
      */
-    @OutputExport(name="ipv6CidrBlock", type=String.class, parameters={})
+    @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output<String> ipv6CidrBlock;
 
     /**
@@ -49,7 +49,7 @@ public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The ID of an IPv6 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts.
      * 
      */
-    @OutputExport(name="ipv6IpamPoolId", type=String.class, parameters={})
+    @Export(name="ipv6IpamPoolId", type=String.class, parameters={})
     private Output<String> ipv6IpamPoolId;
 
     /**
@@ -63,7 +63,7 @@ public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The netmask length of the IPv6 CIDR you want to allocate to this VPC. Requires specifying a `ipv6_ipam_pool_id`. This parameter is optional if the IPAM pool has `allocation_default_netmask` set, otherwise it or `cidr_block` are required
      * 
      */
-    @OutputExport(name="ipv6NetmaskLength", type=Integer.class, parameters={})
+    @Export(name="ipv6NetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv6NetmaskLength;
 
     /**
@@ -77,7 +77,7 @@ public class VpcIpv6CidrBlockAssociation extends io.pulumi.resources.CustomResou
      * The ID of the VPC to make the association with.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

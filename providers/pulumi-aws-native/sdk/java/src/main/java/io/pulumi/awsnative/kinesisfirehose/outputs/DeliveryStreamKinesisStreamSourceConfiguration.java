@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamKinesisStreamSourceConfiguration {
     private final String kinesisStreamARN;
     private final String roleARN;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamKinesisStreamSourceConfiguration(
-        @OutputCustomType.Parameter("kinesisStreamARN") String kinesisStreamARN,
-        @OutputCustomType.Parameter("roleARN") String roleARN) {
+        @CustomType.Parameter("kinesisStreamARN") String kinesisStreamARN,
+        @CustomType.Parameter("roleARN") String roleARN) {
         this.kinesisStreamARN = kinesisStreamARN;
         this.roleARN = roleARN;
     }

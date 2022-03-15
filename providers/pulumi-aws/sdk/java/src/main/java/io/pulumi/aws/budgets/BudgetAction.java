@@ -10,7 +10,7 @@ import io.pulumi.aws.budgets.outputs.BudgetActionActionThreshold;
 import io.pulumi.aws.budgets.outputs.BudgetActionDefinition;
 import io.pulumi.aws.budgets.outputs.BudgetActionSubscriber;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The ID of the target account for budget. Will use current user's account_id by default if omitted.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -50,7 +50,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The id of the budget action.
      * 
      */
-    @OutputExport(name="actionId", type=String.class, parameters={})
+    @Export(name="actionId", type=String.class, parameters={})
     private Output<String> actionId;
 
     /**
@@ -64,7 +64,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The trigger threshold of the action. See Action Threshold.
      * 
      */
-    @OutputExport(name="actionThreshold", type=BudgetActionActionThreshold.class, parameters={})
+    @Export(name="actionThreshold", type=BudgetActionActionThreshold.class, parameters={})
     private Output<BudgetActionActionThreshold> actionThreshold;
 
     /**
@@ -78,7 +78,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
      * 
      */
-    @OutputExport(name="actionType", type=String.class, parameters={})
+    @Export(name="actionType", type=String.class, parameters={})
     private Output<String> actionType;
 
     /**
@@ -92,7 +92,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
      * 
      */
-    @OutputExport(name="approvalModel", type=String.class, parameters={})
+    @Export(name="approvalModel", type=String.class, parameters={})
     private Output<String> approvalModel;
 
     /**
@@ -106,7 +106,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The ARN of the budget action.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -120,7 +120,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The name of a budget.
      * 
      */
-    @OutputExport(name="budgetName", type=String.class, parameters={})
+    @Export(name="budgetName", type=String.class, parameters={})
     private Output<String> budgetName;
 
     /**
@@ -134,7 +134,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * Specifies all of the type-specific parameters. See Definition.
      * 
      */
-    @OutputExport(name="definition", type=BudgetActionDefinition.class, parameters={})
+    @Export(name="definition", type=BudgetActionDefinition.class, parameters={})
     private Output<BudgetActionDefinition> definition;
 
     /**
@@ -148,7 +148,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The role passed for action execution and reversion. Roles and actions must be in the same account.
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     /**
@@ -162,7 +162,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
      * 
      */
-    @OutputExport(name="notificationType", type=String.class, parameters={})
+    @Export(name="notificationType", type=String.class, parameters={})
     private Output<String> notificationType;
 
     /**
@@ -176,7 +176,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * The status of the budget action.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -190,7 +190,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * A list of subscribers. See Subscriber.
      * 
      */
-    @OutputExport(name="subscribers", type=List.class, parameters={BudgetActionSubscriber.class})
+    @Export(name="subscribers", type=List.class, parameters={BudgetActionSubscriber.class})
     private Output<List<BudgetActionSubscriber>> subscribers;
 
     /**

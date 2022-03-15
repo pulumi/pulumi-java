@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class JobOutputResponse extends io.pulumi.resources.InvokeArgs {
      * ARM ID of the datastore where the job logs and artifacts are stored, or null for the default container ("azureml") in the workspace's storage account.
      * 
      */
-    @InputImport(name="datastoreId", required=true)
+    @Import(name="datastoreId", required=true)
       private final String datastoreId;
 
     public String getDatastoreId() {
@@ -31,7 +31,7 @@ public final class JobOutputResponse extends io.pulumi.resources.InvokeArgs {
      * Path within the datastore to the job logs and artifacts.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {

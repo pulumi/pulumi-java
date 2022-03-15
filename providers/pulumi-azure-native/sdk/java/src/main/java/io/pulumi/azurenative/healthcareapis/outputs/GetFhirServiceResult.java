@@ -10,7 +10,7 @@ import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceCorsConfiguration
 import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceExportConfigurationResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFhirServiceResult {
     /**
      * Fhir Service access policies.
@@ -96,23 +96,23 @@ public final class GetFhirServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFhirServiceResult(
-        @OutputCustomType.Parameter("accessPolicies") @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies,
-        @OutputCustomType.Parameter("acrConfiguration") @Nullable FhirServiceAcrConfigurationResponse acrConfiguration,
-        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
-        @OutputCustomType.Parameter("corsConfiguration") @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("exportConfiguration") @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessPolicies") @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies,
+        @CustomType.Parameter("acrConfiguration") @Nullable FhirServiceAcrConfigurationResponse acrConfiguration,
+        @CustomType.Parameter("authenticationConfiguration") @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
+        @CustomType.Parameter("corsConfiguration") @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("exportConfiguration") @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accessPolicies = accessPolicies;
         this.acrConfiguration = acrConfiguration;
         this.authenticationConfiguration = authenticationConfiguration;

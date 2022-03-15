@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpGroupRule {
     /**
      * The description.
@@ -22,10 +22,10 @@ public final class IpGroupRule {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpGroupRule(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("source") String source) {
         this.description = description;
         this.source = source;
     }

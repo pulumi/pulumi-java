@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobReferenceResponse {
     /**
      * [Required] The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
@@ -25,11 +25,11 @@ public final class JobReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobReferenceResponse(
-        @OutputCustomType.Parameter("jobId") String jobId,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("jobId") String jobId,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("project") String project) {
         this.jobId = jobId;
         this.location = location;
         this.project = project;

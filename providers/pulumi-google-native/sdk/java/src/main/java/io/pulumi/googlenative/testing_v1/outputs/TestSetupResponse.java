@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AccountResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ApkResponse;
 import io.pulumi.googlenative.testing_v1.outputs.DeviceFileResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestSetupResponse {
     /**
      * The device will be logged in on this account for the duration of the test.
@@ -51,15 +51,15 @@ public final class TestSetupResponse {
      */
     private final String networkProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestSetupResponse(
-        @OutputCustomType.Parameter("account") AccountResponse account,
-        @OutputCustomType.Parameter("additionalApks") List<ApkResponse> additionalApks,
-        @OutputCustomType.Parameter("directoriesToPull") List<String> directoriesToPull,
-        @OutputCustomType.Parameter("dontAutograntPermissions") Boolean dontAutograntPermissions,
-        @OutputCustomType.Parameter("environmentVariables") List<EnvironmentVariableResponse> environmentVariables,
-        @OutputCustomType.Parameter("filesToPush") List<DeviceFileResponse> filesToPush,
-        @OutputCustomType.Parameter("networkProfile") String networkProfile) {
+        @CustomType.Parameter("account") AccountResponse account,
+        @CustomType.Parameter("additionalApks") List<ApkResponse> additionalApks,
+        @CustomType.Parameter("directoriesToPull") List<String> directoriesToPull,
+        @CustomType.Parameter("dontAutograntPermissions") Boolean dontAutograntPermissions,
+        @CustomType.Parameter("environmentVariables") List<EnvironmentVariableResponse> environmentVariables,
+        @CustomType.Parameter("filesToPush") List<DeviceFileResponse> filesToPush,
+        @CustomType.Parameter("networkProfile") String networkProfile) {
         this.account = account;
         this.additionalApks = additionalApks;
         this.directoriesToPull = directoriesToPull;

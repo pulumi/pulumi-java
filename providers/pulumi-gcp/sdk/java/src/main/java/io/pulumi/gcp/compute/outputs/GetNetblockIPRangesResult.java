@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetblockIPRangesResult {
     /**
      * Retrieve list of all CIDR blocks.
@@ -34,13 +34,13 @@ public final class GetNetblockIPRangesResult {
     private final String id;
     private final @Nullable String rangeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetblockIPRangesResult(
-        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
-        @OutputCustomType.Parameter("cidrBlocksIpv4s") List<String> cidrBlocksIpv4s,
-        @OutputCustomType.Parameter("cidrBlocksIpv6s") List<String> cidrBlocksIpv6s,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("rangeType") @Nullable String rangeType) {
+        @CustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @CustomType.Parameter("cidrBlocksIpv4s") List<String> cidrBlocksIpv4s,
+        @CustomType.Parameter("cidrBlocksIpv6s") List<String> cidrBlocksIpv6s,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("rangeType") @Nullable String rangeType) {
         this.cidrBlocks = cidrBlocks;
         this.cidrBlocksIpv4s = cidrBlocksIpv4s;
         this.cidrBlocksIpv6s = cidrBlocksIpv6s;

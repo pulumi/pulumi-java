@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountMicrosoftEndpointsResponse {
     /**
      * Gets the blob endpoint.
@@ -40,14 +40,14 @@ public final class StorageAccountMicrosoftEndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountMicrosoftEndpointsResponse(
-        @OutputCustomType.Parameter("blob") String blob,
-        @OutputCustomType.Parameter("dfs") String dfs,
-        @OutputCustomType.Parameter("file") String file,
-        @OutputCustomType.Parameter("queue") String queue,
-        @OutputCustomType.Parameter("table") String table,
-        @OutputCustomType.Parameter("web") String web) {
+        @CustomType.Parameter("blob") String blob,
+        @CustomType.Parameter("dfs") String dfs,
+        @CustomType.Parameter("file") String file,
+        @CustomType.Parameter("queue") String queue,
+        @CustomType.Parameter("table") String table,
+        @CustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;

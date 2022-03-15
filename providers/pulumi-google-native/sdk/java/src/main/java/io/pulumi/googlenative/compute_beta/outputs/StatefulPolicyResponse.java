@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.StatefulPolicyPreservedStateResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatefulPolicyResponse {
     private final StatefulPolicyPreservedStateResponse preservedState;
 
-    @OutputCustomType.Constructor
-    private StatefulPolicyResponse(@OutputCustomType.Parameter("preservedState") StatefulPolicyPreservedStateResponse preservedState) {
+    @CustomType.Constructor
+    private StatefulPolicyResponse(@CustomType.Parameter("preservedState") StatefulPolicyPreservedStateResponse preservedState) {
         this.preservedState = preservedState;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallSubnetMapping;
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallResult {
     private final @Nullable Boolean deleteProtection;
     private final @Nullable String description;
@@ -26,18 +26,18 @@ public final class GetFirewallResult {
     private final @Nullable List<FirewallSubnetMapping> subnetMappings;
     private final @Nullable List<FirewallTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallResult(
-        @OutputCustomType.Parameter("deleteProtection") @Nullable Boolean deleteProtection,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("endpointIds") @Nullable List<String> endpointIds,
-        @OutputCustomType.Parameter("firewallArn") @Nullable String firewallArn,
-        @OutputCustomType.Parameter("firewallId") @Nullable String firewallId,
-        @OutputCustomType.Parameter("firewallPolicyArn") @Nullable String firewallPolicyArn,
-        @OutputCustomType.Parameter("firewallPolicyChangeProtection") @Nullable Boolean firewallPolicyChangeProtection,
-        @OutputCustomType.Parameter("subnetChangeProtection") @Nullable Boolean subnetChangeProtection,
-        @OutputCustomType.Parameter("subnetMappings") @Nullable List<FirewallSubnetMapping> subnetMappings,
-        @OutputCustomType.Parameter("tags") @Nullable List<FirewallTag> tags) {
+        @CustomType.Parameter("deleteProtection") @Nullable Boolean deleteProtection,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("endpointIds") @Nullable List<String> endpointIds,
+        @CustomType.Parameter("firewallArn") @Nullable String firewallArn,
+        @CustomType.Parameter("firewallId") @Nullable String firewallId,
+        @CustomType.Parameter("firewallPolicyArn") @Nullable String firewallPolicyArn,
+        @CustomType.Parameter("firewallPolicyChangeProtection") @Nullable Boolean firewallPolicyChangeProtection,
+        @CustomType.Parameter("subnetChangeProtection") @Nullable Boolean subnetChangeProtection,
+        @CustomType.Parameter("subnetMappings") @Nullable List<FirewallSubnetMapping> subnetMappings,
+        @CustomType.Parameter("tags") @Nullable List<FirewallTag> tags) {
         this.deleteProtection = deleteProtection;
         this.description = description;
         this.endpointIds = endpointIds;

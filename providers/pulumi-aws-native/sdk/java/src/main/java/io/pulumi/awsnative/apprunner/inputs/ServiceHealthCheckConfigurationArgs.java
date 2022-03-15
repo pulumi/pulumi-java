@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceHealthCheckConfigurationProtocol;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * Health check Healthy Threshold
      * 
      */
-    @InputImport(name="healthyThreshold")
+    @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -35,7 +35,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * Health check Interval
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -46,7 +46,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * Health check Path
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -57,7 +57,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * Health Check Protocol
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<ServiceHealthCheckConfigurationProtocol> protocol;
 
     public Output<ServiceHealthCheckConfigurationProtocol> getProtocol() {
@@ -68,7 +68,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * Health check Timeout
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -79,7 +79,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
      * Health check Unhealthy Threshold
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

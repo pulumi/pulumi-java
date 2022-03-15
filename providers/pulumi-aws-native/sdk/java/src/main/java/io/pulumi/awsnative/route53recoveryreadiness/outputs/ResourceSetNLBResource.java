@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetNLBResource {
     /**
      * A Network Load Balancer resource Amazon Resource Name (ARN).
@@ -17,8 +17,8 @@ public final class ResourceSetNLBResource {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private ResourceSetNLBResource(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private ResourceSetNLBResource(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

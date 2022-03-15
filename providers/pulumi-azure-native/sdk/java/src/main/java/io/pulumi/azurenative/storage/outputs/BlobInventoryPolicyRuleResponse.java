@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicyDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BlobInventoryPolicyRuleResponse {
     /**
      * An object that defines the blob inventory policy rule.
@@ -27,11 +27,11 @@ public final class BlobInventoryPolicyRuleResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobInventoryPolicyRuleResponse(
-        @OutputCustomType.Parameter("definition") BlobInventoryPolicyDefinitionResponse definition,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("definition") BlobInventoryPolicyDefinitionResponse definition,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("name") String name) {
         this.definition = definition;
         this.enabled = enabled;
         this.name = name;

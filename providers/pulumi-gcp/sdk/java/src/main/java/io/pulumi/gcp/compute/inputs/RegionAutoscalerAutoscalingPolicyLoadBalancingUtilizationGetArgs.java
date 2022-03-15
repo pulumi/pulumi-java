@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationGetA
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<Double> target;
 
     public Output<Double> getTarget() {

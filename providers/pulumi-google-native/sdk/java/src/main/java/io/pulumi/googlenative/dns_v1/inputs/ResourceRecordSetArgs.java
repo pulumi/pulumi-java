@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
 
     public static final ResourceRecordSetArgs Empty = new ResourceRecordSetArgs();
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -32,7 +32,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * For example, www.example.com.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * Configures dynamic query responses based on geo location of querying user or a weighted round robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or routing_policy (dynamic). An error is returned otherwise.
      * 
      */
-    @InputImport(name="routingPolicy")
+    @Import(name="routingPolicy")
       private final @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
 
     public Output<RRSetRoutingPolicyArgs> getRoutingPolicy() {
@@ -54,7 +54,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
      * 
      */
-    @InputImport(name="rrdatas")
+    @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
     public Output<List<String>> getRrdatas() {
@@ -65,7 +65,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * As defined in RFC 4034 (section 3.2).
      * 
      */
-    @InputImport(name="signatureRrdatas")
+    @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
     public Output<List<String>> getSignatureRrdatas() {
@@ -76,7 +76,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * Number of seconds that this ResourceRecordSet can be cached by resolvers.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
@@ -87,7 +87,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * The identifier of a supported record type. See the list of Supported DNS record types.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

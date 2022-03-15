@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * Specifies a registered or custom content type for this representation, e.g. application/xml.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final String contentType;
 
     public String getContentType() {
@@ -35,7 +35,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
      * 
      */
-    @InputImport(name="formParameters")
+    @Import(name="formParameters")
       private final @Nullable List<ParameterContractResponse> formParameters;
 
     public List<ParameterContractResponse> getFormParameters() {
@@ -46,7 +46,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * An example of the representation.
      * 
      */
-    @InputImport(name="sample")
+    @Import(name="sample")
       private final @Nullable String sample;
 
     public Optional<String> getSample() {
@@ -57,7 +57,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
      * 
      */
-    @InputImport(name="schemaId")
+    @Import(name="schemaId")
       private final @Nullable String schemaId;
 
     public Optional<String> getSchemaId() {
@@ -68,7 +68,7 @@ public final class RepresentationContractResponse extends io.pulumi.resources.In
      * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable String typeName;
 
     public Optional<String> getTypeName() {

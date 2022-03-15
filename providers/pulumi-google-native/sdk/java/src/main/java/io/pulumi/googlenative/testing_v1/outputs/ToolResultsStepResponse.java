@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ToolResultsStepResponse {
     /**
      * A tool results execution ID.
@@ -30,12 +30,12 @@ public final class ToolResultsStepResponse {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ToolResultsStepResponse(
-        @OutputCustomType.Parameter("executionId") String executionId,
-        @OutputCustomType.Parameter("historyId") String historyId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("stepId") String stepId) {
+        @CustomType.Parameter("executionId") String executionId,
+        @CustomType.Parameter("historyId") String historyId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("stepId") String stepId) {
         this.executionId = executionId;
         this.historyId = historyId;
         this.project = project;

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceManifestFileLocation {
     /**
      * <p>Amazon S3 bucket.</p>
@@ -20,10 +20,10 @@ public final class DataSourceManifestFileLocation {
      */
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceManifestFileLocation(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("key") String key) {
         this.bucket = bucket;
         this.key = key;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Image name in Skaffold configuration.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -33,7 +33,7 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Image tag to use. This will generally be the full path to an image, such as "gcr.io/my-project/busybox:1.2.3" or "gcr.io/my-project/busybox@sha256:abc123".
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

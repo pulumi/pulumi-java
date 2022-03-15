@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.ErrorAdditionalInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorDetailResponse {
     /**
      * The error additional info.
@@ -37,13 +37,13 @@ public final class ErrorDetailResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorDetailResponse(
-        @OutputCustomType.Parameter("additionalInfo") List<ErrorAdditionalInfoResponse> additionalInfo,
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") List<ErrorDetailResponse> details,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("additionalInfo") List<ErrorAdditionalInfoResponse> additionalInfo,
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") List<ErrorDetailResponse> details,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("target") String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;

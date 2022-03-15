@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseResponseRegex;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
      * The regular expressions to match the response content with.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable RestResponseResponseRegex regex;
 
     public Optional<RestResponseResponseRegex> getRegex() {
@@ -35,7 +35,7 @@ public final class RestResponseResponse extends io.pulumi.resources.InvokeArgs {
      * The HTTP status codes expected in a successful health check response. The response is expected to match one of the given status codes. If no expected status codes are provided, default expected status code is 200 OK.
      * 
      */
-    @InputImport(name="successStatusCodes")
+    @Import(name="successStatusCodes")
       private final @Nullable List<String> successStatusCodes;
 
     public List<String> getSuccessStatusCodes() {

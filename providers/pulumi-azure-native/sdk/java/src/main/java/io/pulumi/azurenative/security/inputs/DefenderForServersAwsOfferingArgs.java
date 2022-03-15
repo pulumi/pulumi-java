@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArcAutoProvisioningArgs;
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingDefenderForServersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
      * The ARC autoprovisioning configuration
      * 
      */
-    @InputImport(name="arcAutoProvisioning")
+    @Import(name="arcAutoProvisioning")
       private final @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
     public Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> getArcAutoProvisioning() {
@@ -35,7 +35,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
      * The Defender for servers connection configuration
      * 
      */
-    @InputImport(name="defenderForServers")
+    @Import(name="defenderForServers")
       private final @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
     public Output<DefenderForServersAwsOfferingDefenderForServersArgs> getDefenderForServers() {
@@ -47,7 +47,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
      * Expected value is 'DefenderForServersAWS'.
      * 
      */
-    @InputImport(name="offeringType", required=true)
+    @Import(name="offeringType", required=true)
       private final Output<String> offeringType;
 
     public Output<String> getOfferingType() {

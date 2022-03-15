@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1EvaluationConfigResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse;
@@ -17,7 +17,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse {
     /**
      * Prediction keys that tell Data Labeling Service where to find the data for evaluation in your BigQuery table. When the service samples prediction input and output from your model version and saves it to BigQuery, the data gets stored as JSON strings in the BigQuery table. These keys tell Data Labeling Service how to parse the JSON. You can provide the following entries in this field: * `data_json_key`: the data key for prediction input. You must provide either this key or `reference_json_key`. * `reference_json_key`: the data reference key for prediction input. You must provide either this key or `data_json_key`. * `label_json_key`: the label key for prediction output. Required. * `label_score_json_key`: the score key for prediction output. Required. * `bounding_box_json_key`: the bounding box key for prediction output. Required if your model version perform image object detection. Learn [how to configure prediction keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
@@ -70,18 +70,18 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(
-        @OutputCustomType.Parameter("bigqueryImportKeys") Map<String,String> bigqueryImportKeys,
-        @OutputCustomType.Parameter("boundingPolyConfig") GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig,
-        @OutputCustomType.Parameter("evaluationConfig") GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig,
-        @OutputCustomType.Parameter("evaluationJobAlertConfig") GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig,
-        @OutputCustomType.Parameter("exampleCount") Integer exampleCount,
-        @OutputCustomType.Parameter("exampleSamplePercentage") Double exampleSamplePercentage,
-        @OutputCustomType.Parameter("humanAnnotationConfig") GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig,
-        @OutputCustomType.Parameter("imageClassificationConfig") GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig,
-        @OutputCustomType.Parameter("inputConfig") GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig,
-        @OutputCustomType.Parameter("textClassificationConfig") GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
+        @CustomType.Parameter("bigqueryImportKeys") Map<String,String> bigqueryImportKeys,
+        @CustomType.Parameter("boundingPolyConfig") GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig,
+        @CustomType.Parameter("evaluationConfig") GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig,
+        @CustomType.Parameter("evaluationJobAlertConfig") GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig,
+        @CustomType.Parameter("exampleCount") Integer exampleCount,
+        @CustomType.Parameter("exampleSamplePercentage") Double exampleSamplePercentage,
+        @CustomType.Parameter("humanAnnotationConfig") GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig,
+        @CustomType.Parameter("imageClassificationConfig") GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig,
+        @CustomType.Parameter("inputConfig") GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig,
+        @CustomType.Parameter("textClassificationConfig") GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
         this.bigqueryImportKeys = bigqueryImportKeys;
         this.boundingPolyConfig = boundingPolyConfig;
         this.evaluationConfig = evaluationConfig;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
      * Client App Id associated with this identity.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -33,7 +33,7 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
      * Azure Active Directory principal ID associated with this Identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * Expected value is 'ClientCertificate'.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -37,7 +37,7 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * Password for the PFX file.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -48,7 +48,7 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * Base64-encoded contents of a PFX file.
      * 
      */
-    @InputImport(name="pfx", required=true)
+    @Import(name="pfx", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> pfx;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPfx() {
@@ -59,7 +59,7 @@ public final class WebClientCertificateAuthenticationArgs extends io.pulumi.reso
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<Object> url;
 
     public Output<Object> getUrl() {

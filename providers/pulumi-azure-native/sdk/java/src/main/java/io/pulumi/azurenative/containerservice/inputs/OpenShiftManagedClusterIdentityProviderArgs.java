@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterAADIdentityProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
      * Name of the provider.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class OpenShiftManagedClusterIdentityProviderArgs extends io.pulumi
      * Configuration of the provider.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<OpenShiftManagedClusterAADIdentityProviderArgs> provider;
 
     public Output<OpenShiftManagedClusterAADIdentityProviderArgs> getProvider() {

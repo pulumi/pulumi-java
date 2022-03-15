@@ -9,14 +9,14 @@ import io.pulumi.awsnative.frauddetector.outputs.DetectorEventType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorModel;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorRule;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDetectorResult {
     /**
      * The ARN of the detector.
@@ -66,19 +66,19 @@ public final class GetDetectorResult {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDetectorResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("associatedModels") @Nullable List<DetectorModel> associatedModels,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("detectorVersionId") @Nullable String detectorVersionId,
-        @OutputCustomType.Parameter("detectorVersionStatus") @Nullable DetectorVersionStatus detectorVersionStatus,
-        @OutputCustomType.Parameter("eventType") @Nullable DetectorEventType eventType,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("ruleExecutionMode") @Nullable DetectorRuleExecutionMode ruleExecutionMode,
-        @OutputCustomType.Parameter("rules") @Nullable List<DetectorRule> rules,
-        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("associatedModels") @Nullable List<DetectorModel> associatedModels,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("detectorVersionId") @Nullable String detectorVersionId,
+        @CustomType.Parameter("detectorVersionStatus") @Nullable DetectorVersionStatus detectorVersionStatus,
+        @CustomType.Parameter("eventType") @Nullable DetectorEventType eventType,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("ruleExecutionMode") @Nullable DetectorRuleExecutionMode ruleExecutionMode,
+        @CustomType.Parameter("rules") @Nullable List<DetectorRule> rules,
+        @CustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.associatedModels = associatedModels;
         this.createdTime = createdTime;

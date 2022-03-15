@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallNetworkRuleResponse {
     /**
      * Description of the rule.
@@ -58,17 +58,17 @@ public final class AzureFirewallNetworkRuleResponse {
      */
     private final @Nullable List<String> sourceIpGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFirewallNetworkRuleResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("destinationFqdns") @Nullable List<String> destinationFqdns,
-        @OutputCustomType.Parameter("destinationIpGroups") @Nullable List<String> destinationIpGroups,
-        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocols") @Nullable List<String> protocols,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("destinationFqdns") @Nullable List<String> destinationFqdns,
+        @CustomType.Parameter("destinationIpGroups") @Nullable List<String> destinationIpGroups,
+        @CustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocols") @Nullable List<String> protocols,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationFqdns = destinationFqdns;

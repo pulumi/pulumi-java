@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.azurenative.dataprotection.inputs.DppIdentityDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * Optional ETag.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -31,7 +31,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * Input Managed Identity Details
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<DppIdentityDetailsArgs> identity;
 
     public Output<DppIdentityDetailsArgs> getIdentity() {
@@ -42,7 +42,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * BackupVaultResource properties
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> properties;
 
     public Output<io.pulumi.azurenative.dataprotection.inputs.BackupVaultArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group where the backup vault is present.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the backup vault.
      * 
      */
-    @InputImport(name="vaultName")
+    @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;
 
     public Output<String> getVaultName() {

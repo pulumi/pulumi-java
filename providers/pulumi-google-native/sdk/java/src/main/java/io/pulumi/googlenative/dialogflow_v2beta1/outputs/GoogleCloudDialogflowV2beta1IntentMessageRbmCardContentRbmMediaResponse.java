@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse {
     /**
      * Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      */
     private final String thumbnailUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(
-        @OutputCustomType.Parameter("fileUri") String fileUri,
-        @OutputCustomType.Parameter("height") String height,
-        @OutputCustomType.Parameter("thumbnailUri") String thumbnailUri) {
+        @CustomType.Parameter("fileUri") String fileUri,
+        @CustomType.Parameter("height") String height,
+        @CustomType.Parameter("thumbnailUri") String thumbnailUri) {
         this.fileUri = fileUri;
         this.height = height;
         this.thumbnailUri = thumbnailUri;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConditionResponse {
     /**
      * The issue requiring attention.
@@ -20,10 +20,10 @@ public final class ConditionResponse {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConditionResponse(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("timestamp") String timestamp) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("timestamp") String timestamp) {
         this.message = message;
         this.timestamp = timestamp;
     }

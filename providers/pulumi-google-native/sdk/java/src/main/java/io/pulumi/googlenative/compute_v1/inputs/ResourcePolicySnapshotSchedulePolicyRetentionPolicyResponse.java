@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
      * Maximum age of the snapshot that is allowed to be kept.
      * 
      */
-    @InputImport(name="maxRetentionDays", required=true)
+    @Import(name="maxRetentionDays", required=true)
       private final Integer maxRetentionDays;
 
     public Integer getMaxRetentionDays() {
@@ -32,7 +32,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse e
      * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
      * 
      */
-    @InputImport(name="onSourceDiskDelete", required=true)
+    @Import(name="onSourceDiskDelete", required=true)
       private final String onSourceDiskDelete;
 
     public String getOnSourceDiskDelete() {

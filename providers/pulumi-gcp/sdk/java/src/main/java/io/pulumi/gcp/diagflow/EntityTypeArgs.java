@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeEntityArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of this entity type to be displayed on the console.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Enables fuzzy entity extraction during classification.
      * 
      */
-    @InputImport(name="enableFuzzyExtraction")
+    @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
@@ -44,7 +44,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="entities")
+    @Import(name="entities")
       private final @Nullable Output<List<EntityTypeEntityArgs>> entities;
 
     public Output<List<EntityTypeEntityArgs>> getEntities() {
@@ -60,7 +60,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -72,7 +72,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

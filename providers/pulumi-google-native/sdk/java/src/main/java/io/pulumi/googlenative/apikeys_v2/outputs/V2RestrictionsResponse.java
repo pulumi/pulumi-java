@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2AndroidKeyRestrictionsResponse;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2ApiTargetResponse;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2BrowserKeyRestrictionsResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.apikeys_v2.outputs.V2ServerKeyRestrictionsResponse
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class V2RestrictionsResponse {
     /**
      * The Android apps that are allowed to use the key.
@@ -40,13 +40,13 @@ public final class V2RestrictionsResponse {
      */
     private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private V2RestrictionsResponse(
-        @OutputCustomType.Parameter("androidKeyRestrictions") V2AndroidKeyRestrictionsResponse androidKeyRestrictions,
-        @OutputCustomType.Parameter("apiTargets") List<V2ApiTargetResponse> apiTargets,
-        @OutputCustomType.Parameter("browserKeyRestrictions") V2BrowserKeyRestrictionsResponse browserKeyRestrictions,
-        @OutputCustomType.Parameter("iosKeyRestrictions") V2IosKeyRestrictionsResponse iosKeyRestrictions,
-        @OutputCustomType.Parameter("serverKeyRestrictions") V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
+        @CustomType.Parameter("androidKeyRestrictions") V2AndroidKeyRestrictionsResponse androidKeyRestrictions,
+        @CustomType.Parameter("apiTargets") List<V2ApiTargetResponse> apiTargets,
+        @CustomType.Parameter("browserKeyRestrictions") V2BrowserKeyRestrictionsResponse browserKeyRestrictions,
+        @CustomType.Parameter("iosKeyRestrictions") V2IosKeyRestrictionsResponse iosKeyRestrictions,
+        @CustomType.Parameter("serverKeyRestrictions") V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
         this.androidKeyRestrictions = androidKeyRestrictions;
         this.apiTargets = apiTargets;
         this.browserKeyRestrictions = browserKeyRestrictions;

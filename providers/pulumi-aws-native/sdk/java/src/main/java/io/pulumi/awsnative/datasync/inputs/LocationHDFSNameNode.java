@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
      * The DNS name or IP address of the Name Node in the customer's on premises HDFS cluster.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final String hostname;
 
     public String getHostname() {
@@ -32,7 +32,7 @@ public final class LocationHDFSNameNode extends io.pulumi.resources.InvokeArgs {
      * The port on which the Name Node is listening on for client requests.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

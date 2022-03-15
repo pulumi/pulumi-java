@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobHttpTargetOauthToken;
 import io.pulumi.gcp.cloudscheduler.outputs.JobHttpTargetOidcToken;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobHttpTarget {
     /**
      * HTTP request body.
@@ -53,14 +53,14 @@ public final class JobHttpTarget {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobHttpTarget(
-        @OutputCustomType.Parameter("body") @Nullable String body,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
-        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
-        @OutputCustomType.Parameter("oauthToken") @Nullable JobHttpTargetOauthToken oauthToken,
-        @OutputCustomType.Parameter("oidcToken") @Nullable JobHttpTargetOidcToken oidcToken,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("body") @Nullable String body,
+        @CustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @CustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @CustomType.Parameter("oauthToken") @Nullable JobHttpTargetOauthToken oauthToken,
+        @CustomType.Parameter("oidcToken") @Nullable JobHttpTargetOidcToken oidcToken,
+        @CustomType.Parameter("uri") String uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;

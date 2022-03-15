@@ -10,7 +10,7 @@ import io.pulumi.aws.waf.outputs.WebAclDefaultAction;
 import io.pulumi.aws.waf.outputs.WebAclLoggingConfiguration;
 import io.pulumi.aws.waf.outputs.WebAclRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * The ARN of the WAF WebACL.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * Configuration block with action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL. Detailed below.
      * 
      */
-    @OutputExport(name="defaultAction", type=WebAclDefaultAction.class, parameters={})
+    @Export(name="defaultAction", type=WebAclDefaultAction.class, parameters={})
     private Output<WebAclDefaultAction> defaultAction;
 
     /**
@@ -65,7 +65,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * Configuration block to enable WAF logging. Detailed below.
      * 
      */
-    @OutputExport(name="loggingConfiguration", type=WebAclLoggingConfiguration.class, parameters={})
+    @Export(name="loggingConfiguration", type=WebAclLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ WebAclLoggingConfiguration> loggingConfiguration;
 
     /**
@@ -79,7 +79,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * The name or description for the Amazon CloudWatch metric of this web ACL.
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
@@ -93,7 +93,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * The name or description of the web ACL.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={WebAclRule.class})
+    @Export(name="rules", type=List.class, parameters={WebAclRule.class})
     private Output</* @Nullable */ List<WebAclRule>> rules;
 
     /**
@@ -121,7 +121,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class WebAcl extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

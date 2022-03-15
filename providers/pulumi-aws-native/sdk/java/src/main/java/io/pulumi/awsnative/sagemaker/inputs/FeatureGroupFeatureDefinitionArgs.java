@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.FeatureGroupFeatureDefinitionFeatureType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
 
     public static final FeatureGroupFeatureDefinitionArgs Empty = new FeatureGroupFeatureDefinitionArgs();
 
-    @InputImport(name="featureName", required=true)
+    @Import(name="featureName", required=true)
       private final Output<String> featureName;
 
     public Output<String> getFeatureName() {
         return this.featureName;
     }
 
-    @InputImport(name="featureType", required=true)
+    @Import(name="featureType", required=true)
       private final Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
     public Output<FeatureGroupFeatureDefinitionFeatureType> getFeatureType() {

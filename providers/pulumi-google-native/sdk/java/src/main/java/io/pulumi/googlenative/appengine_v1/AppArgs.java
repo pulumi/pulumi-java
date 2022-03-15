@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1.enums.AppDatabaseType;
 import io.pulumi.googlenative.appengine_v1.enums.AppServingStatus;
 import io.pulumi.googlenative.appengine_v1.inputs.FeatureSettingsArgs;
@@ -24,7 +24,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Google Apps authentication domain that controls which users can access this application.Defaults to open access for any Google Account.
      * 
      */
-    @InputImport(name="authDomain")
+    @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
     public Output<String> getAuthDomain() {
@@ -35,7 +35,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the Cloud Firestore or Cloud Datastore database associated with this application.
      * 
      */
-    @InputImport(name="databaseType")
+    @Import(name="databaseType")
       private final @Nullable Output<AppDatabaseType> databaseType;
 
     public Output<AppDatabaseType> getDatabaseType() {
@@ -46,7 +46,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Cookie expiration policy for this application.
      * 
      */
-    @InputImport(name="defaultCookieExpiration")
+    @Import(name="defaultCookieExpiration")
       private final @Nullable Output<String> defaultCookieExpiration;
 
     public Output<String> getDefaultCookieExpiration() {
@@ -57,7 +57,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP path dispatch rules for requests to the application that do not explicitly target a service or version. Rules are order-dependent. Up to 20 dispatch rules can be supported.
      * 
      */
-    @InputImport(name="dispatchRules")
+    @Import(name="dispatchRules")
       private final @Nullable Output<List<UrlDispatchRuleArgs>> dispatchRules;
 
     public Output<List<UrlDispatchRuleArgs>> getDispatchRules() {
@@ -68,7 +68,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The feature specific settings to be used in the application.
      * 
      */
-    @InputImport(name="featureSettings")
+    @Import(name="featureSettings")
       private final @Nullable Output<FeatureSettingsArgs> featureSettings;
 
     public Output<FeatureSettingsArgs> getFeatureSettings() {
@@ -79,14 +79,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The Google Container Registry domain used for storing managed build docker images for this application.
      * 
      */
-    @InputImport(name="gcrDomain")
+    @Import(name="gcrDomain")
       private final @Nullable Output<String> gcrDomain;
 
     public Output<String> getGcrDomain() {
         return this.gcrDomain == null ? Output.empty() : this.gcrDomain;
     }
 
-    @InputImport(name="iap")
+    @Import(name="iap")
       private final @Nullable Output<IdentityAwareProxyArgs> iap;
 
     public Output<IdentityAwareProxyArgs> getIap() {
@@ -97,7 +97,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Application resource. This identifier is equivalent to the project ID of the Google Cloud Platform project where you want to deploy your application. Example: myapp.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -108,7 +108,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Location from which this application runs. Application instances run out of the data centers in the specified location, which is also where all of the application's end user content is stored.Defaults to us-central.View the list of supported locations (https://cloud.google.com/appengine/docs/locations).
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -119,7 +119,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The service account associated with the application. This is the app-level default identity. If no identity provided during create version, Admin API will fallback to this one.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -130,7 +130,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * Serving status of this application.
      * 
      */
-    @InputImport(name="servingStatus")
+    @Import(name="servingStatus")
       private final @Nullable Output<AppServingStatus> servingStatus;
 
     public Output<AppServingStatus> getServingStatus() {

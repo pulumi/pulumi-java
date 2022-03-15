@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
      * 
      */
-    @InputImport(name="blackhole")
+    @Import(name="blackhole")
       private final @Nullable Output<Boolean> blackhole;
 
     public Output<Boolean> getBlackhole() {
@@ -30,14 +30,14 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * Identifier of EC2 Prefix List.
      * 
      */
-    @InputImport(name="prefixListId")
+    @Import(name="prefixListId")
       private final @Nullable Output<String> prefixListId;
 
     public Output<String> getPrefixListId() {
         return this.prefixListId == null ? Output.empty() : this.prefixListId;
     }
 
-    @InputImport(name="prefixListOwnerId")
+    @Import(name="prefixListOwnerId")
       private final @Nullable Output<String> prefixListOwnerId;
 
     public Output<String> getPrefixListOwnerId() {
@@ -48,7 +48,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId")
+    @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -59,7 +59,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @InputImport(name="transitGatewayRouteTableId")
+    @Import(name="transitGatewayRouteTableId")
       private final @Nullable Output<String> transitGatewayRouteTableId;
 
     public Output<String> getTransitGatewayRouteTableId() {

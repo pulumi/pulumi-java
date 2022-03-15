@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
      * Whether or not `CheckAndMutateRow` and `ReadModifyWriteRow` requests are allowed by this app profile. It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
      */
-    @InputImport(name="allowTransactionalWrites", required=true)
+    @Import(name="allowTransactionalWrites", required=true)
       private final Boolean allowTransactionalWrites;
 
     public Boolean getAllowTransactionalWrites() {
@@ -32,7 +32,7 @@ public final class SingleClusterRoutingResponse extends io.pulumi.resources.Invo
      * The cluster to which read/write requests should be routed.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final String clusterId;
 
     public String getClusterId() {

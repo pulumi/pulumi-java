@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * The id of directory.
      * 
      */
-    @InputImport(name="directoryId", required=true)
+    @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
@@ -29,7 +29,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * A list of forwarder IP addresses.
      * 
      */
-    @InputImport(name="dnsIps", required=true)
+    @Import(name="dnsIps", required=true)
       private final Output<List<String>> dnsIps;
 
     public Output<List<String>> getDnsIps() {
@@ -40,7 +40,7 @@ public final class ConditionalForwaderArgs extends io.pulumi.resources.ResourceA
      * The fully qualified domain name of the remote domain for which forwarders will be used.
      * 
      */
-    @InputImport(name="remoteDomainName", required=true)
+    @Import(name="remoteDomainName", required=true)
       private final Output<String> remoteDomainName;
 
     public Output<String> getRemoteDomainName() {

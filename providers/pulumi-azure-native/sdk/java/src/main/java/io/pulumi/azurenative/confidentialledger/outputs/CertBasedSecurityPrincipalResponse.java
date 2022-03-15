@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.confidentialledger.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertBasedSecurityPrincipalResponse {
     /**
      * Base64 encoded public key of the user cert (.pem or .cer)
@@ -22,10 +22,10 @@ public final class CertBasedSecurityPrincipalResponse {
      */
     private final @Nullable String ledgerRoleName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertBasedSecurityPrincipalResponse(
-        @OutputCustomType.Parameter("cert") @Nullable String cert,
-        @OutputCustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName) {
+        @CustomType.Parameter("cert") @Nullable String cert,
+        @CustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName) {
         this.cert = cert;
         this.ledgerRoleName = ledgerRoleName;
     }

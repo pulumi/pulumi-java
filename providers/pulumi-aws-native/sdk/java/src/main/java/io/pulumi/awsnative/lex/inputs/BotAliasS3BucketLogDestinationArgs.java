@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * The Amazon Resource Name (ARN) of an AWS Key Management Service (KMS) key for encrypting audio log files stored in an S3 bucket.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -33,7 +33,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * The Amazon S3 key of the deployment package.
      * 
      */
-    @InputImport(name="logPrefix", required=true)
+    @Import(name="logPrefix", required=true)
       private final Output<String> logPrefix;
 
     public Output<String> getLogPrefix() {
@@ -44,7 +44,7 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * The Amazon Resource Name (ARN) of an Amazon S3 bucket where audio log files are stored.
      * 
      */
-    @InputImport(name="s3BucketArn", required=true)
+    @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
 
     public Output<String> getS3BucketArn() {

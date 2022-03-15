@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Size of file share
      * 
      */
-    @InputImport(name="diskSizeInGB")
+    @Import(name="diskSizeInGB")
       private final @Nullable Integer diskSizeInGB;
 
     public Optional<Integer> getDiskSizeInGB() {
@@ -34,7 +34,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
      * 
      */
-    @InputImport(name="fileShareName")
+    @Import(name="fileShareName")
       private final @Nullable String fileShareName;
 
     public Optional<String> getFileShareName() {
@@ -45,7 +45,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Full resource ID of storage account.
      * 
      */
-    @InputImport(name="storageAccountResourceId")
+    @Import(name="storageAccountResourceId")
       private final @Nullable String storageAccountResourceId;
 
     public Optional<String> getStorageAccountResourceId() {

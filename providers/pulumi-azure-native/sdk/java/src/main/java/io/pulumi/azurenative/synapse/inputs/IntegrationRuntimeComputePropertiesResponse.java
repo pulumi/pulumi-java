@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeDataFlowPropertiesResponse;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeVNetPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * Data flow properties for managed integration runtime.
      * 
      */
-    @InputImport(name="dataFlowProperties")
+    @Import(name="dataFlowProperties")
       private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
 
     public Optional<IntegrationRuntimeDataFlowPropertiesResponse> getDataFlowProperties() {
@@ -36,7 +36,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * The location for managed integration runtime. The supported regions could be found on https://docs.microsoft.com/en-us/azure/data-factory/data-factory-data-movement-activities
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -47,7 +47,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * Maximum parallel executions count per node for managed integration runtime.
      * 
      */
-    @InputImport(name="maxParallelExecutionsPerNode")
+    @Import(name="maxParallelExecutionsPerNode")
       private final @Nullable Integer maxParallelExecutionsPerNode;
 
     public Optional<Integer> getMaxParallelExecutionsPerNode() {
@@ -58,7 +58,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * The node size requirement to managed integration runtime.
      * 
      */
-    @InputImport(name="nodeSize")
+    @Import(name="nodeSize")
       private final @Nullable String nodeSize;
 
     public Optional<String> getNodeSize() {
@@ -69,7 +69,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * The required number of nodes for managed integration runtime.
      * 
      */
-    @InputImport(name="numberOfNodes")
+    @Import(name="numberOfNodes")
       private final @Nullable Integer numberOfNodes;
 
     public Optional<Integer> getNumberOfNodes() {
@@ -80,7 +80,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * VNet properties for managed integration runtime.
      * 
      */
-    @InputImport(name="vNetProperties")
+    @Import(name="vNetProperties")
       private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
     public Optional<IntegrationRuntimeVNetPropertiesResponse> getVNetProperties() {

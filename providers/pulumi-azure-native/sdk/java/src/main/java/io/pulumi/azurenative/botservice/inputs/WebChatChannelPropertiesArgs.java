@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.WebChatSiteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
      * The list of Web Chat sites
      * 
      */
-    @InputImport(name="sites")
+    @Import(name="sites")
       private final @Nullable Output<List<WebChatSiteArgs>> sites;
 
     public Output<List<WebChatSiteArgs>> getSites() {

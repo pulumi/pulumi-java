@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1InputConfigAnnotationType;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1InputConfigDataType;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BigQuerySourceArgs;
@@ -27,7 +27,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * Optional. The type of annotation to be performed on this data. You must specify this field if you are using this InputConfig in an EvaluationJob.
      * 
      */
-    @InputImport(name="annotationType")
+    @Import(name="annotationType")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> annotationType;
 
     public Output<GoogleCloudDatalabelingV1beta1InputConfigAnnotationType> getAnnotationType() {
@@ -38,7 +38,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * Source located in BigQuery. You must specify this field if you are using this InputConfig in an EvaluationJob.
      * 
      */
-    @InputImport(name="bigquerySource")
+    @Import(name="bigquerySource")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> bigquerySource;
 
     public Output<GoogleCloudDatalabelingV1beta1BigQuerySourceArgs> getBigquerySource() {
@@ -49,7 +49,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * Optional. Metadata about annotations for the input. You must specify this field if you are using this InputConfig in an EvaluationJob for a model version that performs classification.
      * 
      */
-    @InputImport(name="classificationMetadata")
+    @Import(name="classificationMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> classificationMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs> getClassificationMetadata() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * Data type must be specifed when user tries to import data.
      * 
      */
-    @InputImport(name="dataType", required=true)
+    @Import(name="dataType", required=true)
       private final Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> dataType;
 
     public Output<GoogleCloudDatalabelingV1beta1InputConfigDataType> getDataType() {
@@ -71,7 +71,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * Source located in Cloud Storage.
      * 
      */
-    @InputImport(name="gcsSource")
+    @Import(name="gcsSource")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> gcsSource;
 
     public Output<GoogleCloudDatalabelingV1beta1GcsSourceArgs> getGcsSource() {
@@ -82,7 +82,7 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigArgs extends io.pulu
      * Required for text import, as language code must be specified.
      * 
      */
-    @InputImport(name="textMetadata")
+    @Import(name="textMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> textMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1TextMetadataArgs> getTextMetadata() {

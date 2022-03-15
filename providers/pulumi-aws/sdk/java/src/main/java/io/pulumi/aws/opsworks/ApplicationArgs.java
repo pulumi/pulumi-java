@@ -7,7 +7,7 @@ import io.pulumi.aws.opsworks.inputs.ApplicationAppSourceArgs;
 import io.pulumi.aws.opsworks.inputs.ApplicationEnvironmentArgs;
 import io.pulumi.aws.opsworks.inputs.ApplicationSslConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * SCM configuration of the app as described below.
      * 
      */
-    @InputImport(name="appSources")
+    @Import(name="appSources")
       private final @Nullable Output<List<ApplicationAppSourceArgs>> appSources;
 
     public Output<List<ApplicationAppSourceArgs>> getAppSources() {
@@ -34,7 +34,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Run bundle install when deploying for application of type `rails`.
      * 
      */
-    @InputImport(name="autoBundleOnDeploy")
+    @Import(name="autoBundleOnDeploy")
       private final @Nullable Output<String> autoBundleOnDeploy;
 
     public Output<String> getAutoBundleOnDeploy() {
@@ -45,7 +45,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Specify activity and workflow workers for your app using the aws-flow gem.
      * 
      */
-    @InputImport(name="awsFlowRubySettings")
+    @Import(name="awsFlowRubySettings")
       private final @Nullable Output<String> awsFlowRubySettings;
 
     public Output<String> getAwsFlowRubySettings() {
@@ -56,7 +56,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The data source's ARN.
      * 
      */
-    @InputImport(name="dataSourceArn")
+    @Import(name="dataSourceArn")
       private final @Nullable Output<String> dataSourceArn;
 
     public Output<String> getDataSourceArn() {
@@ -67,7 +67,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The database name.
      * 
      */
-    @InputImport(name="dataSourceDatabaseName")
+    @Import(name="dataSourceDatabaseName")
       private final @Nullable Output<String> dataSourceDatabaseName;
 
     public Output<String> getDataSourceDatabaseName() {
@@ -78,7 +78,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
      * 
      */
-    @InputImport(name="dataSourceType")
+    @Import(name="dataSourceType")
       private final @Nullable Output<String> dataSourceType;
 
     public Output<String> getDataSourceType() {
@@ -89,7 +89,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the app.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -100,7 +100,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Subfolder for the document root for application of type `rails`.
      * 
      */
-    @InputImport(name="documentRoot")
+    @Import(name="documentRoot")
       private final @Nullable Output<String> documentRoot;
 
     public Output<String> getDocumentRoot() {
@@ -111,7 +111,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of virtual host alias.
      * 
      */
-    @InputImport(name="domains")
+    @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {
@@ -122,7 +122,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
      * 
      */
-    @InputImport(name="enableSsl")
+    @Import(name="enableSsl")
       private final @Nullable Output<Boolean> enableSsl;
 
     public Output<Boolean> getEnableSsl() {
@@ -133,7 +133,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Object to define environment variables.  Object is described below.
      * 
      */
-    @InputImport(name="environments")
+    @Import(name="environments")
       private final @Nullable Output<List<ApplicationEnvironmentArgs>> environments;
 
     public Output<List<ApplicationEnvironmentArgs>> getEnvironments() {
@@ -144,7 +144,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable name for the application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -155,7 +155,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Rails environment for application of type `rails`.
      * 
      */
-    @InputImport(name="railsEnv")
+    @Import(name="railsEnv")
       private final @Nullable Output<String> railsEnv;
 
     public Output<String> getRailsEnv() {
@@ -166,7 +166,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
      * 
      */
-    @InputImport(name="shortName")
+    @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {
@@ -177,7 +177,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The SSL configuration of the app. Object is described below.
      * 
      */
-    @InputImport(name="sslConfigurations")
+    @Import(name="sslConfigurations")
       private final @Nullable Output<List<ApplicationSslConfigurationArgs>> sslConfigurations;
 
     public Output<List<ApplicationSslConfigurationArgs>> getSslConfigurations() {
@@ -188,7 +188,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the stack the application will belong to.
      * 
      */
-    @InputImport(name="stackId", required=true)
+    @Import(name="stackId", required=true)
       private final Output<String> stackId;
 
     public Output<String> getStackId() {
@@ -199,7 +199,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

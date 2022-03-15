@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolRule;
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDevicePoolResult {
     private final @Nullable String arn;
     private final @Nullable String description;
@@ -22,14 +22,14 @@ public final class GetDevicePoolResult {
     private final @Nullable List<DevicePoolRule> rules;
     private final @Nullable List<DevicePoolTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDevicePoolResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("maxDevices") @Nullable Integer maxDevices,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("rules") @Nullable List<DevicePoolRule> rules,
-        @OutputCustomType.Parameter("tags") @Nullable List<DevicePoolTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("maxDevices") @Nullable Integer maxDevices,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("rules") @Nullable List<DevicePoolRule> rules,
+        @CustomType.Parameter("tags") @Nullable List<DevicePoolTag> tags) {
         this.arn = arn;
         this.description = description;
         this.maxDevices = maxDevices;

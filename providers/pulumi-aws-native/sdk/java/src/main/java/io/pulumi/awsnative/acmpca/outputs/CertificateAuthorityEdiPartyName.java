@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityEdiPartyName {
     private final String nameAssigner;
     private final String partyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityEdiPartyName(
-        @OutputCustomType.Parameter("nameAssigner") String nameAssigner,
-        @OutputCustomType.Parameter("partyName") String partyName) {
+        @CustomType.Parameter("nameAssigner") String nameAssigner,
+        @CustomType.Parameter("partyName") String partyName) {
         this.nameAssigner = nameAssigner;
         this.partyName = partyName;
     }

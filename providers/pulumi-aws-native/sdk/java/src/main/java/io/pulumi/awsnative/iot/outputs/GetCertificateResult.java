@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.CertificateStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     private final @Nullable String arn;
     private final @Nullable String id;
     private final @Nullable CertificateStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("status") @Nullable CertificateStatus status) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("status") @Nullable CertificateStatus status) {
         this.arn = arn;
         this.id = id;
         this.status = status;

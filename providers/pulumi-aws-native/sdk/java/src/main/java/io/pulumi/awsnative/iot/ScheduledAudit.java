@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iot.enums.ScheduledAuditDayOfWeek;
 import io.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import io.pulumi.awsnative.iot.outputs.ScheduledAuditTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
      * 
      */
-    @OutputExport(name="dayOfMonth", type=String.class, parameters={})
+    @Export(name="dayOfMonth", type=String.class, parameters={})
     private Output</* @Nullable */ String> dayOfMonth;
 
     /**
@@ -41,7 +41,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
      * 
      */
-    @OutputExport(name="dayOfWeek", type=ScheduledAuditDayOfWeek.class, parameters={})
+    @Export(name="dayOfWeek", type=ScheduledAuditDayOfWeek.class, parameters={})
     private Output</* @Nullable */ ScheduledAuditDayOfWeek> dayOfWeek;
 
     /**
@@ -55,7 +55,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
      * 
      */
-    @OutputExport(name="frequency", type=ScheduledAuditFrequency.class, parameters={})
+    @Export(name="frequency", type=ScheduledAuditFrequency.class, parameters={})
     private Output<ScheduledAuditFrequency> frequency;
 
     /**
@@ -69,7 +69,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon resource name) of the scheduled audit.
      * 
      */
-    @OutputExport(name="scheduledAuditArn", type=String.class, parameters={})
+    @Export(name="scheduledAuditArn", type=String.class, parameters={})
     private Output<String> scheduledAuditArn;
 
     /**
@@ -83,7 +83,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * The name you want to give to the scheduled audit.
      * 
      */
-    @OutputExport(name="scheduledAuditName", type=String.class, parameters={})
+    @Export(name="scheduledAuditName", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduledAuditName;
 
     /**
@@ -97,7 +97,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ScheduledAuditTag.class})
+    @Export(name="tags", type=List.class, parameters={ScheduledAuditTag.class})
     private Output</* @Nullable */ List<ScheduledAuditTag>> tags;
 
     /**
@@ -111,7 +111,7 @@ public class ScheduledAudit extends io.pulumi.resources.CustomResource {
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
      * 
      */
-    @OutputExport(name="targetCheckNames", type=List.class, parameters={String.class})
+    @Export(name="targetCheckNames", type=List.class, parameters={String.class})
     private Output<List<String>> targetCheckNames;
 
     /**

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cdn.inputs.PolicySettingsArgs;
 import io.pulumi.azurenative.cdn.inputs.RateLimitRuleListArgs;
 import io.pulumi.azurenative.cdn.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Describes custom rules inside the policy.
      * 
      */
-    @InputImport(name="customRules")
+    @Import(name="customRules")
       private final @Nullable Output<CustomRuleListArgs> customRules;
 
     public Output<CustomRuleListArgs> getCustomRules() {
@@ -35,7 +35,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -46,7 +46,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Describes managed rules inside the policy.
      * 
      */
-    @InputImport(name="managedRules")
+    @Import(name="managedRules")
       private final @Nullable Output<ManagedRuleSetListArgs> managedRules;
 
     public Output<ManagedRuleSetListArgs> getManagedRules() {
@@ -57,7 +57,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the CdnWebApplicationFirewallPolicy.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -68,7 +68,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Describes  policySettings for policy
      * 
      */
-    @InputImport(name="policySettings")
+    @Import(name="policySettings")
       private final @Nullable Output<PolicySettingsArgs> policySettings;
 
     public Output<PolicySettingsArgs> getPolicySettings() {
@@ -79,7 +79,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Describes rate limit rules inside the policy.
      * 
      */
-    @InputImport(name="rateLimitRules")
+    @Import(name="rateLimitRules")
       private final @Nullable Output<RateLimitRuleListArgs> rateLimitRules;
 
     public Output<RateLimitRuleListArgs> getRateLimitRules() {
@@ -90,7 +90,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -112,7 +112,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.s3control.MultiRegionAccessPointPolicyArgs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyState;
 import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointPolicyDetails;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:s3control/multiRegionAccessPointPolicy:MultiRegionAccessPointPolicy")
 public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -39,7 +39,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * A configuration block containing details about the policy for the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    @OutputExport(name="details", type=MultiRegionAccessPointPolicyDetails.class, parameters={})
+    @Export(name="details", type=MultiRegionAccessPointPolicyDetails.class, parameters={})
     private Output<MultiRegionAccessPointPolicyDetails> details;
 
     /**
@@ -53,7 +53,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * The last established policy for the Multi-Region Access Point.
      * 
      */
-    @OutputExport(name="established", type=String.class, parameters={})
+    @Export(name="established", type=String.class, parameters={})
     private Output<String> established;
 
     /**
@@ -67,7 +67,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * The proposed policy for the Multi-Region Access Point.
      * 
      */
-    @OutputExport(name="proposed", type=String.class, parameters={})
+    @Export(name="proposed", type=String.class, parameters={})
     private Output<String> proposed;
 
     /**

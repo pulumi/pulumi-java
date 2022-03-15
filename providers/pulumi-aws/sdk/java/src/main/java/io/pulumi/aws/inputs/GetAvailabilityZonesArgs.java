@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetAvailabilityZonesFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
      * 
      */
-    @InputImport(name="allAvailabilityZones")
+    @Import(name="allAvailabilityZones")
       private final @Nullable Boolean allAvailabilityZones;
 
     public Optional<Boolean> getAllAvailabilityZones() {
@@ -32,7 +32,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * List of Availability Zone names to exclude.
      * 
      */
-    @InputImport(name="excludeNames")
+    @Import(name="excludeNames")
       private final @Nullable List<String> excludeNames;
 
     public List<String> getExcludeNames() {
@@ -43,7 +43,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * List of Availability Zone IDs to exclude.
      * 
      */
-    @InputImport(name="excludeZoneIds")
+    @Import(name="excludeZoneIds")
       private final @Nullable List<String> excludeZoneIds;
 
     public List<String> getExcludeZoneIds() {
@@ -54,7 +54,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetAvailabilityZonesFilter> filters;
 
     public List<GetAvailabilityZonesFilter> getFilters() {
@@ -68,7 +68,7 @@ public final class GetAvailabilityZonesArgs extends io.pulumi.resources.InvokeAr
      * to which the underlying AWS account has access, regardless of their state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

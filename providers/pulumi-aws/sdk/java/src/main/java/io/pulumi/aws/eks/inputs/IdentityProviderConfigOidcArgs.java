@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * Client ID for the OpenID Connect identity provider.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -30,7 +30,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * The JWT claim that the provider will use to return groups.
      * 
      */
-    @InputImport(name="groupsClaim")
+    @Import(name="groupsClaim")
       private final @Nullable Output<String> groupsClaim;
 
     public Output<String> getGroupsClaim() {
@@ -41,7 +41,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * A prefix that is prepended to group claims e.g., `oidc:`.
      * 
      */
-    @InputImport(name="groupsPrefix")
+    @Import(name="groupsPrefix")
       private final @Nullable Output<String> groupsPrefix;
 
     public Output<String> getGroupsPrefix() {
@@ -52,7 +52,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * The name of the identity provider config.
      * 
      */
-    @InputImport(name="identityProviderConfigName", required=true)
+    @Import(name="identityProviderConfigName", required=true)
       private final Output<String> identityProviderConfigName;
 
     public Output<String> getIdentityProviderConfigName() {
@@ -63,7 +63,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * Issuer URL for the OpenID Connect identity provider.
      * 
      */
-    @InputImport(name="issuerUrl", required=true)
+    @Import(name="issuerUrl", required=true)
       private final Output<String> issuerUrl;
 
     public Output<String> getIssuerUrl() {
@@ -74,7 +74,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * The key value pairs that describe required claims in the identity token.
      * 
      */
-    @InputImport(name="requiredClaims")
+    @Import(name="requiredClaims")
       private final @Nullable Output<Map<String,String>> requiredClaims;
 
     public Output<Map<String,String>> getRequiredClaims() {
@@ -85,7 +85,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * The JWT claim that the provider will use as the username.
      * 
      */
-    @InputImport(name="usernameClaim")
+    @Import(name="usernameClaim")
       private final @Nullable Output<String> usernameClaim;
 
     public Output<String> getUsernameClaim() {
@@ -96,7 +96,7 @@ public final class IdentityProviderConfigOidcArgs extends io.pulumi.resources.Re
      * A prefix that is prepended to username claims.
      * 
      */
-    @InputImport(name="usernamePrefix")
+    @Import(name="usernamePrefix")
       private final @Nullable Output<String> usernamePrefix;
 
     public Output<String> getUsernamePrefix() {

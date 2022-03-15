@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.serialconsole.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSerialPortResult {
     /**
      * Resource Id
@@ -32,12 +32,12 @@ public final class GetSerialPortResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSerialPortResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.state = state;

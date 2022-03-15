@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * The number of seconds between health probes.Default is 240sec.
      * 
      */
-    @InputImport(name="probeIntervalInSeconds")
+    @Import(name="probeIntervalInSeconds")
       private final @Nullable Integer probeIntervalInSeconds;
 
     public Optional<Integer> getProbeIntervalInSeconds() {
@@ -34,7 +34,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * The path relative to the origin that is used to determine the health of the origin.
      * 
      */
-    @InputImport(name="probePath")
+    @Import(name="probePath")
       private final @Nullable String probePath;
 
     public Optional<String> getProbePath() {
@@ -45,7 +45,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * Protocol to use for health probe.
      * 
      */
-    @InputImport(name="probeProtocol")
+    @Import(name="probeProtocol")
       private final @Nullable String probeProtocol;
 
     public Optional<String> getProbeProtocol() {
@@ -56,7 +56,7 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
      * The type of health probe request that is made.
      * 
      */
-    @InputImport(name="probeRequestType")
+    @Import(name="probeRequestType")
       private final @Nullable String probeRequestType;
 
     public Optional<String> getProbeRequestType() {

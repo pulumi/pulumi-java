@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ObjectReferenceDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * Total number of times that the HelmRelease failed to install or upgrade
      * 
      */
-    @InputImport(name="failureCount")
+    @Import(name="failureCount")
       private final @Nullable Double failureCount;
 
     public Optional<Double> getFailureCount() {
@@ -30,7 +30,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * The reference to the HelmChart object used as the source to this HelmRelease
      * 
      */
-    @InputImport(name="helmChartRef")
+    @Import(name="helmChartRef")
       private final @Nullable ObjectReferenceDefinitionResponse helmChartRef;
 
     public Optional<ObjectReferenceDefinitionResponse> getHelmChartRef() {
@@ -41,7 +41,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * Number of times that the HelmRelease failed to install
      * 
      */
-    @InputImport(name="installFailureCount")
+    @Import(name="installFailureCount")
       private final @Nullable Double installFailureCount;
 
     public Optional<Double> getInstallFailureCount() {
@@ -52,7 +52,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * The revision number of the last released object change
      * 
      */
-    @InputImport(name="lastRevisionApplied")
+    @Import(name="lastRevisionApplied")
       private final @Nullable Double lastRevisionApplied;
 
     public Optional<Double> getLastRevisionApplied() {
@@ -63,7 +63,7 @@ public final class HelmReleasePropertiesDefinitionResponse extends io.pulumi.res
      * Number of times that the HelmRelease failed to upgrade
      * 
      */
-    @InputImport(name="upgradeFailureCount")
+    @Import(name="upgradeFailureCount")
       private final @Nullable Double upgradeFailureCount;
 
     public Optional<Double> getUpgradeFailureCount() {

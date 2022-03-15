@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * The IP address assigned to the transit gateway multicast group.
      * 
      */
-    @InputImport(name="groupIpAddress", required=true)
+    @Import(name="groupIpAddress", required=true)
       private final Output<String> groupIpAddress;
 
     public Output<String> getGroupIpAddress() {
@@ -28,7 +28,7 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * The ID of the transit gateway attachment.
      * 
      */
-    @InputImport(name="networkInterfaceId", required=true)
+    @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -39,7 +39,7 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * The ID of the transit gateway multicast domain.
      * 
      */
-    @InputImport(name="transitGatewayMulticastDomainId", required=true)
+    @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;
 
     public Output<String> getTransitGatewayMulticastDomainId() {

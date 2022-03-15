@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeDataFlowPropertiesResponse {
     /**
      * Compute type of the cluster which will execute data flow job.
@@ -28,11 +28,11 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
      */
     private final @Nullable Integer timeToLive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeDataFlowPropertiesResponse(
-        @OutputCustomType.Parameter("computeType") @Nullable String computeType,
-        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
-        @OutputCustomType.Parameter("timeToLive") @Nullable Integer timeToLive) {
+        @CustomType.Parameter("computeType") @Nullable String computeType,
+        @CustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @CustomType.Parameter("timeToLive") @Nullable Integer timeToLive) {
         this.computeType = computeType;
         this.coreCount = coreCount;
         this.timeToLive = timeToLive;

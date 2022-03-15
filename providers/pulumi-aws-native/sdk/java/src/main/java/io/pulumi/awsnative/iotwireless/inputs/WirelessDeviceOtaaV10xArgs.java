@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class WirelessDeviceOtaaV10xArgs extends io.pulumi.resources.Resour
 
     public static final WirelessDeviceOtaaV10xArgs Empty = new WirelessDeviceOtaaV10xArgs();
 
-    @InputImport(name="appEui", required=true)
+    @Import(name="appEui", required=true)
       private final Output<String> appEui;
 
     public Output<String> getAppEui() {
         return this.appEui;
     }
 
-    @InputImport(name="appKey", required=true)
+    @Import(name="appKey", required=true)
       private final Output<String> appKey;
 
     public Output<String> getAppKey() {

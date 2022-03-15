@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) that identifies the firewall policy.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * A friendly description of the firewall policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
      * 
      */
-    @InputImport(name="firewallPolicy")
+    @Import(name="firewallPolicy")
       private final @Nullable Output<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy;
 
     public Output<FirewallPolicyFirewallPolicyGetArgs> getFirewallPolicy() {
@@ -53,7 +53,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * A friendly name of the firewall policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -86,7 +86,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * A string token used when updating a firewall policy.
      * 
      */
-    @InputImport(name="updateToken")
+    @Import(name="updateToken")
       private final @Nullable Output<String> updateToken;
 
     public Output<String> getUpdateToken() {

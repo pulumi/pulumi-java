@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallIpGroupsResponse {
     /**
      * The iteration number.
@@ -20,10 +20,10 @@ public final class AzureFirewallIpGroupsResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFirewallIpGroupsResponse(
-        @OutputCustomType.Parameter("changeNumber") String changeNumber,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("changeNumber") String changeNumber,
+        @CustomType.Parameter("id") String id) {
         this.changeNumber = changeNumber;
         this.id = id;
     }

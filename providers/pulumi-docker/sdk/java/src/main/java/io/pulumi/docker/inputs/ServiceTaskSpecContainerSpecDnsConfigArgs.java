@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
 
     public static final ServiceTaskSpecContainerSpecDnsConfigArgs Empty = new ServiceTaskSpecContainerSpecDnsConfigArgs();
 
-    @InputImport(name="nameservers", required=true)
+    @Import(name="nameservers", required=true)
       private final Output<List<String>> nameservers;
 
     public Output<List<String>> getNameservers() {
         return this.nameservers;
     }
 
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<String>> options;
 
     public Output<List<String>> getOptions() {
         return this.options == null ? Output.empty() : this.options;
     }
 
-    @InputImport(name="searches")
+    @Import(name="searches")
       private final @Nullable Output<List<String>> searches;
 
     public Output<List<String>> getSearches() {

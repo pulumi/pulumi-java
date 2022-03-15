@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.enums.AndroidInstrumentationTestOrchestratorOption;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
@@ -27,7 +27,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The APK for the application under test.
      * 
      */
-    @InputImport(name="appApk")
+    @Import(name="appApk")
       private final @Nullable Output<FileReferenceArgs> appApk;
 
     public Output<FileReferenceArgs> getAppApk() {
@@ -38,7 +38,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * A multi-apk app bundle for the application under test.
      * 
      */
-    @InputImport(name="appBundle")
+    @Import(name="appBundle")
       private final @Nullable Output<AppBundleArgs> appBundle;
 
     public Output<AppBundleArgs> getAppBundle() {
@@ -49,7 +49,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The java package for the application under test. The default value is determined by examining the application's manifest.
      * 
      */
-    @InputImport(name="appPackageId")
+    @Import(name="appPackageId")
       private final @Nullable Output<String> appPackageId;
 
     public Output<String> getAppPackageId() {
@@ -60,7 +60,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The option of whether running each test within its own invocation of instrumentation with Android Test Orchestrator or not. ** Orchestrator is only compatible with AndroidJUnitRunner version 1.1 or higher! ** Orchestrator offers the following benefits: - No shared state - Crashes are isolated - Logs are scoped per test See for more information about Android Test Orchestrator. If not set, the test will be run without the orchestrator.
      * 
      */
-    @InputImport(name="orchestratorOption")
+    @Import(name="orchestratorOption")
       private final @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
 
     public Output<AndroidInstrumentationTestOrchestratorOption> getOrchestratorOption() {
@@ -71,7 +71,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The option to run tests in multiple shards in parallel.
      * 
      */
-    @InputImport(name="shardingOption")
+    @Import(name="shardingOption")
       private final @Nullable Output<ShardingOptionArgs> shardingOption;
 
     public Output<ShardingOptionArgs> getShardingOption() {
@@ -82,7 +82,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The APK containing the test code to be executed.
      * 
      */
-    @InputImport(name="testApk", required=true)
+    @Import(name="testApk", required=true)
       private final Output<FileReferenceArgs> testApk;
 
     public Output<FileReferenceArgs> getTestApk() {
@@ -93,7 +93,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The java package for the test to be executed. The default value is determined by examining the application's manifest.
      * 
      */
-    @InputImport(name="testPackageId")
+    @Import(name="testPackageId")
       private final @Nullable Output<String> testPackageId;
 
     public Output<String> getTestPackageId() {
@@ -104,7 +104,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * The InstrumentationTestRunner class. The default value is determined by examining the application's manifest.
      * 
      */
-    @InputImport(name="testRunnerClass")
+    @Import(name="testRunnerClass")
       private final @Nullable Output<String> testRunnerClass;
 
     public Output<String> getTestRunnerClass() {
@@ -115,7 +115,7 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
      * Each target must be fully qualified with the package name or class name, in one of these formats: - "package package_name" - "class package_name.class_name" - "class package_name.class_name#method_name" If empty, all targets in the module will be run.
      * 
      */
-    @InputImport(name="testTargets")
+    @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
     public Output<List<String>> getTestTargets() {

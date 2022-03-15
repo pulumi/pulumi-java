@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeA
      * The language extension name.
      * 
      */
-    @InputImport(name="languageExtensionName")
+    @Import(name="languageExtensionName")
       private final @Nullable String languageExtensionName;
 
     public Optional<String> getLanguageExtensionName() {

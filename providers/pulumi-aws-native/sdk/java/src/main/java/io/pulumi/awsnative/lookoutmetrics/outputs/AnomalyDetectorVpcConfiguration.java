@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorVpcConfiguration {
     private final List<String> securityGroupIdList;
     private final List<String> subnetIdList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorVpcConfiguration(
-        @OutputCustomType.Parameter("securityGroupIdList") List<String> securityGroupIdList,
-        @OutputCustomType.Parameter("subnetIdList") List<String> subnetIdList) {
+        @CustomType.Parameter("securityGroupIdList") List<String> securityGroupIdList,
+        @CustomType.Parameter("subnetIdList") List<String> subnetIdList) {
         this.securityGroupIdList = securityGroupIdList;
         this.subnetIdList = subnetIdList;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityandcompliance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicesResourceResponseIdentity {
     /**
      * The principal ID of the resource identity.
@@ -27,11 +27,11 @@ public final class ServicesResourceResponseIdentity {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicesResourceResponseIdentity(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.principalId = principalId;
         this.tenantId = tenantId;
         this.type = type;

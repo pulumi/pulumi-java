@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.ManagementPolicySchemaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Storage Account Management Policy. It should always be 'default'
      * 
      */
-    @InputImport(name="managementPolicyName")
+    @Import(name="managementPolicyName")
       private final @Nullable Output<String> managementPolicyName;
 
     public Output<String> getManagementPolicyName() {
@@ -41,7 +41,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<ManagementPolicySchemaArgs> policy;
 
     public Output<ManagementPolicySchemaArgs> getPolicy() {
@@ -52,7 +52,7 @@ public final class ManagementPolicyArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

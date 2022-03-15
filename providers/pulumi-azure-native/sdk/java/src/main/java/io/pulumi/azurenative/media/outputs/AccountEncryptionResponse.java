@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountEncryptionResponse {
     /**
      * The properties of the key used to encrypt the account.
@@ -23,10 +23,10 @@ public final class AccountEncryptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountEncryptionResponse(
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("type") String type) {
         this.keyVaultProperties = keyVaultProperties;
         this.type = type;
     }

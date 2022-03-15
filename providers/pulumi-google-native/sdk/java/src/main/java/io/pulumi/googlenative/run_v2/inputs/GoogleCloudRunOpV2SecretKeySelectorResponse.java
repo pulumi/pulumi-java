@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
      * The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a different project.
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final String secret;
 
     public String getSecret() {
@@ -31,7 +31,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
      * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

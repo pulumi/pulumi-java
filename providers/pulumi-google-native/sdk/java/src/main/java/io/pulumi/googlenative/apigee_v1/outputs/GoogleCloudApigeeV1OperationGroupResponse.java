@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1OperationConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1OperationGroupResponse {
     /**
      * Flag that specifes whether the configuration is for Apigee API proxy or a remote service. Valid values include `proxy` or `remoteservice`. Defaults to `proxy`. Set to `proxy` when Apigee API proxies are associated with the API product. Set to `remoteservice` when non-Apigee proxies like Istio-Envoy are associated with the API product.
@@ -22,10 +22,10 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
      */
     private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1OperationGroupResponse(
-        @OutputCustomType.Parameter("operationConfigType") String operationConfigType,
-        @OutputCustomType.Parameter("operationConfigs") List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
+        @CustomType.Parameter("operationConfigType") String operationConfigType,
+        @CustomType.Parameter("operationConfigs") List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
         this.operationConfigType = operationConfigType;
         this.operationConfigs = operationConfigs;
     }

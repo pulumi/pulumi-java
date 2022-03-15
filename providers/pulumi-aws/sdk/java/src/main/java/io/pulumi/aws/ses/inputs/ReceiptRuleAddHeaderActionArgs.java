@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ReceiptRuleAddHeaderActionArgs extends io.pulumi.resources.Re
      * The name of the header to add
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -29,7 +29,7 @@ public final class ReceiptRuleAddHeaderActionArgs extends io.pulumi.resources.Re
      * The value of the header to add
      * 
      */
-    @InputImport(name="headerValue", required=true)
+    @Import(name="headerValue", required=true)
       private final Output<String> headerValue;
 
     public Output<String> getHeaderValue() {
@@ -40,7 +40,7 @@ public final class ReceiptRuleAddHeaderActionArgs extends io.pulumi.resources.Re
      * The position of the action in the receipt rule
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<Integer> position;
 
     public Output<Integer> getPosition() {

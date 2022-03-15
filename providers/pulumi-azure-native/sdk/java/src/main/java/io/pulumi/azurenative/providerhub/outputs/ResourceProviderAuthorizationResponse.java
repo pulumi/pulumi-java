@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderAuthorizationResponse {
     private final @Nullable String applicationId;
     private final @Nullable String managedByRoleDefinitionId;
     private final @Nullable String roleDefinitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceProviderAuthorizationResponse(
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("managedByRoleDefinitionId") @Nullable String managedByRoleDefinitionId,
-        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId) {
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("managedByRoleDefinitionId") @Nullable String managedByRoleDefinitionId,
+        @CustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId) {
         this.applicationId = applicationId;
         this.managedByRoleDefinitionId = managedByRoleDefinitionId;
         this.roleDefinitionId = roleDefinitionId;

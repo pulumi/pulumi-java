@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersSpark {
     /**
      * The host to which to connect.
@@ -21,10 +21,10 @@ public final class DataSourceParametersSpark {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParametersSpark(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port) {
         this.host = host;
         this.port = port;
     }

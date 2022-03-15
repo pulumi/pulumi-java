@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
      * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.
      * 
      */
-    @InputImport(name="ingestDelay", required=true)
+    @Import(name="ingestDelay", required=true)
       private final String ingestDelay;
 
     public String getIngestDelay() {
@@ -31,7 +31,7 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
      * The sampling period of metric data points. For metrics which are written periodically, consecutive data points are stored at this time interval, excluding data loss due to errors. Metrics with a higher granularity have a smaller sampling period.
      * 
      */
-    @InputImport(name="samplePeriod", required=true)
+    @Import(name="samplePeriod", required=true)
       private final String samplePeriod;
 
     public String getSamplePeriod() {

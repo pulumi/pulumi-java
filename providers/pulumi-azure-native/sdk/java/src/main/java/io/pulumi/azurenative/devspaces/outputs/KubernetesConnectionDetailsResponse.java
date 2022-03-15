@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesConnectionDetailsResponse {
     /**
      * Gets the Instance type.
@@ -23,10 +23,10 @@ public final class KubernetesConnectionDetailsResponse {
      */
     private final @Nullable String kubeConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesConnectionDetailsResponse(
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("kubeConfig") @Nullable String kubeConfig) {
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("kubeConfig") @Nullable String kubeConfig) {
         this.instanceType = instanceType;
         this.kubeConfig = kubeConfig;
     }

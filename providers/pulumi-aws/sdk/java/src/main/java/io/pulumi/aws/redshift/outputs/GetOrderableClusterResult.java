@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrderableClusterResult {
     /**
      * List of Availability Zone names where the Redshit Cluster is available.
@@ -26,14 +26,14 @@ public final class GetOrderableClusterResult {
     private final String nodeType;
     private final @Nullable List<String> preferredNodeTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrderableClusterResult(
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("clusterType") String clusterType,
-        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("nodeType") String nodeType,
-        @OutputCustomType.Parameter("preferredNodeTypes") @Nullable List<String> preferredNodeTypes) {
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("clusterType") String clusterType,
+        @CustomType.Parameter("clusterVersion") String clusterVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("nodeType") String nodeType,
+        @CustomType.Parameter("preferredNodeTypes") @Nullable List<String> preferredNodeTypes) {
         this.availabilityZones = availabilityZones;
         this.clusterType = clusterType;
         this.clusterVersion = clusterVersion;

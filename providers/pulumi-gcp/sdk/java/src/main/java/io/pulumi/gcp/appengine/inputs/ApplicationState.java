@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleGetArgs;
@@ -22,7 +22,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the app, usually `{PROJECT_ID}`
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -33,7 +33,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The domain to authenticate users with when using App Engine's User API.
      * 
      */
-    @InputImport(name="authDomain")
+    @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
     public Output<String> getAuthDomain() {
@@ -44,7 +44,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The GCS bucket code is being stored in for this app.
      * 
      */
-    @InputImport(name="codeBucket")
+    @Import(name="codeBucket")
       private final @Nullable Output<String> codeBucket;
 
     public Output<String> getCodeBucket() {
@@ -58,7 +58,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * by the provider, but will be rejected by the API.
      * 
      */
-    @InputImport(name="databaseType")
+    @Import(name="databaseType")
       private final @Nullable Output<String> databaseType;
 
     public Output<String> getDatabaseType() {
@@ -69,7 +69,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The GCS bucket content is being stored in for this app.
      * 
      */
-    @InputImport(name="defaultBucket")
+    @Import(name="defaultBucket")
       private final @Nullable Output<String> defaultBucket;
 
     public Output<String> getDefaultBucket() {
@@ -80,7 +80,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The default hostname for this app.
      * 
      */
-    @InputImport(name="defaultHostname")
+    @Import(name="defaultHostname")
       private final @Nullable Output<String> defaultHostname;
 
     public Output<String> getDefaultHostname() {
@@ -91,7 +91,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A block of optional settings to configure specific App Engine features:
      * 
      */
-    @InputImport(name="featureSettings")
+    @Import(name="featureSettings")
       private final @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
 
     public Output<ApplicationFeatureSettingsGetArgs> getFeatureSettings() {
@@ -102,7 +102,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The GCR domain used for storing managed Docker images for this app.
      * 
      */
-    @InputImport(name="gcrDomain")
+    @Import(name="gcrDomain")
       private final @Nullable Output<String> gcrDomain;
 
     public Output<String> getGcrDomain() {
@@ -113,7 +113,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Settings for enabling Cloud Identity Aware Proxy
      * 
      */
-    @InputImport(name="iap")
+    @Import(name="iap")
       private final @Nullable Output<ApplicationIapGetArgs> iap;
 
     public Output<ApplicationIapGetArgs> getIap() {
@@ -125,7 +125,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * to serve the app from.
      * 
      */
-    @InputImport(name="locationId")
+    @Import(name="locationId")
       private final @Nullable Output<String> locationId;
 
     public Output<String> getLocationId() {
@@ -136,7 +136,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Unique name of the app, usually `apps/{PROJECT_ID}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -149,7 +149,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * you may get a "Permission denied" error.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -160,7 +160,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The serving status of the app.
      * 
      */
-    @InputImport(name="servingStatus")
+    @Import(name="servingStatus")
       private final @Nullable Output<String> servingStatus;
 
     public Output<String> getServingStatus() {
@@ -171,7 +171,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
      * 
      */
-    @InputImport(name="urlDispatchRules")
+    @Import(name="urlDispatchRules")
       private final @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
 
     public Output<List<ApplicationUrlDispatchRuleGetArgs>> getUrlDispatchRules() {

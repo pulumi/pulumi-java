@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketObjectLockRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketObjectLockConfiguration {
     private final @Nullable String objectLockEnabled;
     private final @Nullable BucketObjectLockRule rule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketObjectLockConfiguration(
-        @OutputCustomType.Parameter("objectLockEnabled") @Nullable String objectLockEnabled,
-        @OutputCustomType.Parameter("rule") @Nullable BucketObjectLockRule rule) {
+        @CustomType.Parameter("objectLockEnabled") @Nullable String objectLockEnabled,
+        @CustomType.Parameter("rule") @Nullable BucketObjectLockRule rule) {
         this.objectLockEnabled = objectLockEnabled;
         this.rule = rule;
     }

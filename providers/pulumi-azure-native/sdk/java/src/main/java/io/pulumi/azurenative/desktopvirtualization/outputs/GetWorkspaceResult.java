@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization.outputs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     /**
      * List of applicationGroup resource Ids.
@@ -86,24 +86,24 @@ public final class GetWorkspaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("applicationGroupReferences") @Nullable List<String> applicationGroupReferences,
-        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("applicationGroupReferences") @Nullable List<String> applicationGroupReferences,
+        @CustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @CustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.applicationGroupReferences = applicationGroupReferences;
         this.cloudPcResource = cloudPcResource;
         this.description = description;

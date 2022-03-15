@@ -7,11 +7,11 @@ import io.pulumi.azurenative.dataprotection.outputs.CopyOnExpiryOptionResponse;
 import io.pulumi.azurenative.dataprotection.outputs.CustomCopyOptionResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ImmediateCopyOptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TargetCopySettingResponse {
     /**
      * It can be CustomCopyOption or ImmediateCopyOption.
@@ -24,10 +24,10 @@ public final class TargetCopySettingResponse {
      */
     private final DataStoreInfoBaseResponse dataStore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetCopySettingResponse(
-        @OutputCustomType.Parameter("copyAfter") Object copyAfter,
-        @OutputCustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore) {
+        @CustomType.Parameter("copyAfter") Object copyAfter,
+        @CustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore) {
         this.copyAfter = copyAfter;
         this.dataStore = dataStore;
     }

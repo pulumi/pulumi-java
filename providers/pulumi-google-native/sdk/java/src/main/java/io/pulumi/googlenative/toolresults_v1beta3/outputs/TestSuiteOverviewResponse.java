@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FileReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestSuiteOverviewResponse {
     /**
      * Elapsed time of test suite.
@@ -53,16 +53,16 @@ public final class TestSuiteOverviewResponse {
      */
     private final FileReferenceResponse xmlSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestSuiteOverviewResponse(
-        @OutputCustomType.Parameter("elapsedTime") DurationResponse elapsedTime,
-        @OutputCustomType.Parameter("errorCount") Integer errorCount,
-        @OutputCustomType.Parameter("failureCount") Integer failureCount,
-        @OutputCustomType.Parameter("flakyCount") Integer flakyCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("skippedCount") Integer skippedCount,
-        @OutputCustomType.Parameter("totalCount") Integer totalCount,
-        @OutputCustomType.Parameter("xmlSource") FileReferenceResponse xmlSource) {
+        @CustomType.Parameter("elapsedTime") DurationResponse elapsedTime,
+        @CustomType.Parameter("errorCount") Integer errorCount,
+        @CustomType.Parameter("failureCount") Integer failureCount,
+        @CustomType.Parameter("flakyCount") Integer flakyCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("skippedCount") Integer skippedCount,
+        @CustomType.Parameter("totalCount") Integer totalCount,
+        @CustomType.Parameter("xmlSource") FileReferenceResponse xmlSource) {
         this.elapsedTime = elapsedTime;
         this.errorCount = errorCount;
         this.failureCount = failureCount;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
      * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<Map<String,String>> limits;
 
     public Output<Map<String,String>> getLimits() {
@@ -36,7 +36,7 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
      * https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
      */
-    @InputImport(name="requests")
+    @Import(name="requests")
       private final @Nullable Output<Map<String,String>> requests;
 
     public Output<Map<String,String>> getRequests() {

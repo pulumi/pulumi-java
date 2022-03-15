@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationPolicyClaimResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
      * The access policy claims.
      * 
      */
-    @InputImport(name="claims")
+    @Import(name="claims")
       private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
 
     public List<OpenAuthenticationPolicyClaimResponse> getClaims() {
@@ -35,7 +35,7 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
      * Type of provider for OAuth.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

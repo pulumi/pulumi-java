@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScanConfigErrorResponse {
     /**
      * Indicates the reason code for a configuration failure.
@@ -20,10 +20,10 @@ public final class ScanConfigErrorResponse {
      */
     private final String fieldName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScanConfigErrorResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("fieldName") String fieldName) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("fieldName") String fieldName) {
         this.code = code;
         this.fieldName = fieldName;
     }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabricmesh.VolumeArgs;
 import io.pulumi.azurenative.servicefabricmesh.outputs.VolumeProviderParametersAzureFileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * This type describes a volume provided by an Azure Files file share.
      * 
      */
-    @OutputExport(name="azureFileParameters", type=VolumeProviderParametersAzureFileResponse.class, parameters={})
+    @Export(name="azureFileParameters", type=VolumeProviderParametersAzureFileResponse.class, parameters={})
     private Output</* @Nullable */ VolumeProviderParametersAzureFileResponse> azureFileParameters;
 
     /**
@@ -50,7 +50,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * User readable description of the volume.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -78,7 +78,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Provider of the volume.
      * 
      */
-    @OutputExport(name="provider", type=String.class, parameters={})
+    @Export(name="provider", type=String.class, parameters={})
     private Output<String> provider;
 
     /**
@@ -106,7 +106,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * State of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -120,7 +120,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Status of the volume.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -134,7 +134,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Gives additional information about the current status of the volume.
      * 
      */
-    @OutputExport(name="statusDetails", type=String.class, parameters={})
+    @Export(name="statusDetails", type=String.class, parameters={})
     private Output<String> statusDetails;
 
     /**
@@ -148,7 +148,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class Volume extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubjectResponse {
     /**
      * The country code of the subject.
@@ -45,15 +45,15 @@ public final class SubjectResponse {
      */
     private final String streetAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectResponse(
-        @OutputCustomType.Parameter("countryCode") String countryCode,
-        @OutputCustomType.Parameter("locality") String locality,
-        @OutputCustomType.Parameter("organization") String organization,
-        @OutputCustomType.Parameter("organizationalUnit") String organizationalUnit,
-        @OutputCustomType.Parameter("postalCode") String postalCode,
-        @OutputCustomType.Parameter("province") String province,
-        @OutputCustomType.Parameter("streetAddress") String streetAddress) {
+        @CustomType.Parameter("countryCode") String countryCode,
+        @CustomType.Parameter("locality") String locality,
+        @CustomType.Parameter("organization") String organization,
+        @CustomType.Parameter("organizationalUnit") String organizationalUnit,
+        @CustomType.Parameter("postalCode") String postalCode,
+        @CustomType.Parameter("province") String province,
+        @CustomType.Parameter("streetAddress") String streetAddress) {
         this.countryCode = countryCode;
         this.locality = locality;
         this.organization = organization;

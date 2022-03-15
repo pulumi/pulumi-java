@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContinuousModeBackupPolicyResponse {
     /**
      * Describes the mode of backups.
@@ -16,8 +16,8 @@ public final class ContinuousModeBackupPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ContinuousModeBackupPolicyResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ContinuousModeBackupPolicyResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

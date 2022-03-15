@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind {
     /**
      * The name of the Datastore kind.
@@ -15,8 +15,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKi
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.LinuxUserConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.WindowsUserConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserAccountResponse {
     /**
      * nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin.
@@ -31,13 +31,13 @@ public final class UserAccountResponse {
      */
     private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAccountResponse(
-        @OutputCustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
-        @OutputCustomType.Parameter("linuxUserConfiguration") @Nullable LinuxUserConfigurationResponse linuxUserConfiguration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("windowsUserConfiguration") @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
+        @CustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
+        @CustomType.Parameter("linuxUserConfiguration") @Nullable LinuxUserConfigurationResponse linuxUserConfiguration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("windowsUserConfiguration") @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
         this.elevationLevel = elevationLevel;
         this.linuxUserConfiguration = linuxUserConfiguration;
         this.name = name;

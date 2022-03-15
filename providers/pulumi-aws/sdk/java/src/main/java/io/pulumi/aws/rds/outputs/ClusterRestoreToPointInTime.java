@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterRestoreToPointInTime {
     /**
      * Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
@@ -34,12 +34,12 @@ public final class ClusterRestoreToPointInTime {
      */
     private final @Nullable Boolean useLatestRestorableTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterRestoreToPointInTime(
-        @OutputCustomType.Parameter("restoreToTime") @Nullable String restoreToTime,
-        @OutputCustomType.Parameter("restoreType") @Nullable String restoreType,
-        @OutputCustomType.Parameter("sourceClusterIdentifier") String sourceClusterIdentifier,
-        @OutputCustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
+        @CustomType.Parameter("restoreToTime") @Nullable String restoreToTime,
+        @CustomType.Parameter("restoreType") @Nullable String restoreType,
+        @CustomType.Parameter("sourceClusterIdentifier") String sourceClusterIdentifier,
+        @CustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
         this.restoreToTime = restoreToTime;
         this.restoreType = restoreType;
         this.sourceClusterIdentifier = sourceClusterIdentifier;

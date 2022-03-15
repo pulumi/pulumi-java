@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
      * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
      * 
      */
-    @InputImport(name="identifyingFields", required=true)
+    @Import(name="identifyingFields", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getIdentifyingFields() {

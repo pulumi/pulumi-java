@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
      * The id of the reviewer(user/servicePrincipal)
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {

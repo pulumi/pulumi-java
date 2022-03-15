@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
 
     public static final BotOutputContextArgs Empty = new BotOutputContextArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="timeToLiveInSeconds", required=true)
+    @Import(name="timeToLiveInSeconds", required=true)
       private final Output<Integer> timeToLiveInSeconds;
 
     public Output<Integer> getTimeToLiveInSeconds() {
         return this.timeToLiveInSeconds;
     }
 
-    @InputImport(name="turnsToLive", required=true)
+    @Import(name="turnsToLive", required=true)
       private final Output<Integer> turnsToLive;
 
     public Output<Integer> getTurnsToLive() {

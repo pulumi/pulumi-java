@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
      * 
      */
-    @InputImport(name="instanceCount", required=true)
+    @Import(name="instanceCount", required=true)
       private final Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -34,7 +34,7 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * The ML compute instance type for the processing job.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -45,7 +45,7 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance(s) that run the model monitoring job.
      * 
      */
-    @InputImport(name="volumeKmsKeyId")
+    @Import(name="volumeKmsKeyId")
       private final @Nullable Output<String> volumeKmsKeyId;
 
     public Output<String> getVolumeKmsKeyId() {
@@ -56,7 +56,7 @@ public final class ModelBiasJobDefinitionClusterConfigArgs extends io.pulumi.res
      * The size of the ML storage volume, in gigabytes, that you want to provision. You must specify sufficient ML storage for your scenario.
      * 
      */
-    @InputImport(name="volumeSizeInGB", required=true)
+    @Import(name="volumeSizeInGB", required=true)
       private final Output<Integer> volumeSizeInGB;
 
     public Output<Integer> getVolumeSizeInGB() {

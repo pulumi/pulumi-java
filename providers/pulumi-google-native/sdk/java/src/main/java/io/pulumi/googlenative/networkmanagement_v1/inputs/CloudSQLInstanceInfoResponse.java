@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
      * Name of a Cloud SQL instance.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
      * External IP address of a Cloud SQL instance.
      * 
      */
-    @InputImport(name="externalIp", required=true)
+    @Import(name="externalIp", required=true)
       private final String externalIp;
 
     public String getExternalIp() {
@@ -42,7 +42,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
      * Internal IP address of a Cloud SQL instance.
      * 
      */
-    @InputImport(name="internalIp", required=true)
+    @Import(name="internalIp", required=true)
       private final String internalIp;
 
     public String getInternalIp() {
@@ -53,7 +53,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
      * URI of a Cloud SQL instance network or empty string if the instance does not have one.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -64,7 +64,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
      * Region in which the Cloud SQL instance is running.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -75,7 +75,7 @@ public final class CloudSQLInstanceInfoResponse extends io.pulumi.resources.Invo
      * URI of a Cloud SQL instance.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

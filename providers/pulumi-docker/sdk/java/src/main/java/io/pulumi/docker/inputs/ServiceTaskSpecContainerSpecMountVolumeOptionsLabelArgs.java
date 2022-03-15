@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs exten
 
     public static final ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs Empty = new ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs();
 
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final Output<String> label;
 
     public Output<String> getLabel() {
         return this.label;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

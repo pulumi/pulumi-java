@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kusto.enums.DefaultPrincipalsModificationKind;
 import io.pulumi.azurenative.kusto.inputs.TableLevelSharingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * The name of the attached database configuration.
      * 
      */
-    @InputImport(name="attachedDatabaseConfigurationName")
+    @Import(name="attachedDatabaseConfigurationName")
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
 
     public Output<String> getAttachedDatabaseConfigurationName() {
@@ -32,7 +32,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -43,7 +43,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * The resource id of the cluster where the databases you would like to attach reside.
      * 
      */
-    @InputImport(name="clusterResourceId", required=true)
+    @Import(name="clusterResourceId", required=true)
       private final Output<String> clusterResourceId;
 
     public Output<String> getClusterResourceId() {
@@ -54,7 +54,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * The name of the database which you would like to attach, use * if you want to follow all current and future databases.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -65,7 +65,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * The default principals modification kind
      * 
      */
-    @InputImport(name="defaultPrincipalsModificationKind", required=true)
+    @Import(name="defaultPrincipalsModificationKind", required=true)
       private final Output<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind;
 
     public Output<Either<String,DefaultPrincipalsModificationKind>> getDefaultPrincipalsModificationKind() {
@@ -76,7 +76,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -87,7 +87,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
      * Table level sharing specifications
      * 
      */
-    @InputImport(name="tableLevelSharingProperties")
+    @Import(name="tableLevelSharingProperties")
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
     public Output<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {

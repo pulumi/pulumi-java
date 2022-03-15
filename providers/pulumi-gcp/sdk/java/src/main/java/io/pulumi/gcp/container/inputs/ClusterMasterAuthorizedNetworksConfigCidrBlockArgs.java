@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
      * Must be specified in CIDR notation.
      * 
      */
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -30,7 +30,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
      * Field for users to identify CIDR blocks.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {

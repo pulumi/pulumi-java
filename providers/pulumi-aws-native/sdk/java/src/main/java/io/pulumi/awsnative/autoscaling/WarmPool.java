@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.autoscaling.WarmPoolArgs;
 import io.pulumi.awsnative.autoscaling.outputs.WarmPoolInstanceReusePolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:autoscaling:WarmPool")
 public class WarmPool extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="autoScalingGroupName", type=String.class, parameters={})
+    @Export(name="autoScalingGroupName", type=String.class, parameters={})
     private Output<String> autoScalingGroupName;
 
     public Output<String> getAutoScalingGroupName() {
         return this.autoScalingGroupName;
     }
-    @OutputExport(name="instanceReusePolicy", type=WarmPoolInstanceReusePolicy.class, parameters={})
+    @Export(name="instanceReusePolicy", type=WarmPoolInstanceReusePolicy.class, parameters={})
     private Output</* @Nullable */ WarmPoolInstanceReusePolicy> instanceReusePolicy;
 
     public Output</* @Nullable */ WarmPoolInstanceReusePolicy> getInstanceReusePolicy() {
         return this.instanceReusePolicy;
     }
-    @OutputExport(name="maxGroupPreparedCapacity", type=Integer.class, parameters={})
+    @Export(name="maxGroupPreparedCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxGroupPreparedCapacity;
 
     public Output</* @Nullable */ Integer> getMaxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity;
     }
-    @OutputExport(name="minSize", type=Integer.class, parameters={})
+    @Export(name="minSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSize;
 
     public Output</* @Nullable */ Integer> getMinSize() {
         return this.minSize;
     }
-    @OutputExport(name="poolState", type=String.class, parameters={})
+    @Export(name="poolState", type=String.class, parameters={})
     private Output</* @Nullable */ String> poolState;
 
     public Output</* @Nullable */ String> getPoolState() {

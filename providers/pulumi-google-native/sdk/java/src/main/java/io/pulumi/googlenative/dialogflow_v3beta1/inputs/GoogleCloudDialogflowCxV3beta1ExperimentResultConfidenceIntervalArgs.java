@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
      * 
      */
-    @InputImport(name="confidenceLevel")
+    @Import(name="confidenceLevel")
       private final @Nullable Output<Double> confidenceLevel;
 
     public Output<Double> getConfidenceLevel() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * Lower bound of the interval.
      * 
      */
-    @InputImport(name="lowerBound")
+    @Import(name="lowerBound")
       private final @Nullable Output<Double> lowerBound;
 
     public Output<Double> getLowerBound() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * The percent change between an experiment metric's value and the value for its control.
      * 
      */
-    @InputImport(name="ratio")
+    @Import(name="ratio")
       private final @Nullable Output<Double> ratio;
 
     public Output<Double> getRatio() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      * Upper bound of the interval.
      * 
      */
-    @InputImport(name="upperBound")
+    @Import(name="upperBound")
       private final @Nullable Output<Double> upperBound;
 
     public Output<Double> getUpperBound() {

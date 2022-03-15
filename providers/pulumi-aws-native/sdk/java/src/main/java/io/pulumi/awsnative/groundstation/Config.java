@@ -8,7 +8,7 @@ import io.pulumi.awsnative.groundstation.ConfigArgs;
 import io.pulumi.awsnative.groundstation.outputs.ConfigData;
 import io.pulumi.awsnative.groundstation.outputs.ConfigTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,31 +20,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:groundstation:Config")
 public class Config extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="configData", type=ConfigData.class, parameters={})
+    @Export(name="configData", type=ConfigData.class, parameters={})
     private Output<ConfigData> configData;
 
     public Output<ConfigData> getConfigData() {
         return this.configData;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ConfigTag.class})
+    @Export(name="tags", type=List.class, parameters={ConfigTag.class})
     private Output</* @Nullable */ List<ConfigTag>> tags;
 
     public Output</* @Nullable */ List<ConfigTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     public Output<String> getType() {

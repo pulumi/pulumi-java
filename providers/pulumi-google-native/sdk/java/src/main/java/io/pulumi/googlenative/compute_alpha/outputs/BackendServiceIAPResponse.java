@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendServiceIAPOAuth2ClientInfoResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceIAPResponse {
     /**
      * Whether the serving infrastructure will authenticate and authorize all incoming requests. If true, the oauth2ClientId and oauth2ClientSecret fields must be non-empty.
@@ -37,13 +37,13 @@ public final class BackendServiceIAPResponse {
      */
     private final String oauth2ClientSecretSha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceIAPResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
-        @OutputCustomType.Parameter("oauth2ClientInfo") BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo,
-        @OutputCustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
-        @OutputCustomType.Parameter("oauth2ClientSecretSha256") String oauth2ClientSecretSha256) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @CustomType.Parameter("oauth2ClientInfo") BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo,
+        @CustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
+        @CustomType.Parameter("oauth2ClientSecretSha256") String oauth2ClientSecretSha256) {
         this.enabled = enabled;
         this.oauth2ClientId = oauth2ClientId;
         this.oauth2ClientInfo = oauth2ClientInfo;

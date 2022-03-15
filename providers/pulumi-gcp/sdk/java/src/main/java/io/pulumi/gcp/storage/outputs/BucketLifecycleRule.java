@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.BucketLifecycleRuleAction;
 import io.pulumi.gcp.storage.outputs.BucketLifecycleRuleCondition;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRule {
     /**
      * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
@@ -21,10 +21,10 @@ public final class BucketLifecycleRule {
      */
     private final BucketLifecycleRuleCondition condition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRule(
-        @OutputCustomType.Parameter("action") BucketLifecycleRuleAction action,
-        @OutputCustomType.Parameter("condition") BucketLifecycleRuleCondition condition) {
+        @CustomType.Parameter("action") BucketLifecycleRuleAction action,
+        @CustomType.Parameter("condition") BucketLifecycleRuleCondition condition) {
         this.action = action;
         this.condition = condition;
     }

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectS3Destination {
     private final String bucketName;
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectS3Destination(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketName = bucketName;
         this.prefix = prefix;
     }

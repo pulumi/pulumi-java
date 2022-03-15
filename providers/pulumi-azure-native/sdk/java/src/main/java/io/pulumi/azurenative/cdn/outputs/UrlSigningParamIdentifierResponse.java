@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UrlSigningParamIdentifierResponse {
     /**
      * Indicates the purpose of the parameter
@@ -20,10 +20,10 @@ public final class UrlSigningParamIdentifierResponse {
      */
     private final String paramName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlSigningParamIdentifierResponse(
-        @OutputCustomType.Parameter("paramIndicator") String paramIndicator,
-        @OutputCustomType.Parameter("paramName") String paramName) {
+        @CustomType.Parameter("paramIndicator") String paramIndicator,
+        @CustomType.Parameter("paramName") String paramName) {
         this.paramIndicator = paramIndicator;
         this.paramName = paramName;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * The CIDR you want to assign to the pool.
      * 
      */
-    @InputImport(name="cidr")
+    @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -31,7 +31,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * The description for the allocation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    @InputImport(name="disallowedCidrs")
+    @Import(name="disallowedCidrs")
       private final @Nullable Output<List<String>> disallowedCidrs;
 
     public Output<List<String>> getDisallowedCidrs() {
@@ -53,7 +53,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    @InputImport(name="ipamPoolId", required=true)
+    @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
     public Output<String> getIpamPoolId() {
@@ -64,7 +64,7 @@ public final class VpcIpamPoolCidrAllocationArgs extends io.pulumi.resources.Res
      * The netmask length of the CIDR you would like to allocate to the IPAM pool. Valid Values: `0-32`.
      * 
      */
-    @InputImport(name="netmaskLength")
+    @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
     public Output<Integer> getNetmaskLength() {

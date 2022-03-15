@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedInterconnectAttachmentsArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedVpnTunnelsArgs;
@@ -22,7 +22,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of the spoke.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The URI of the hub that this spoke is attached to.
      * 
      */
-    @InputImport(name="hub", required=true)
+    @Import(name="hub", required=true)
       private final Output<String> hub;
 
     public Output<String> getHub() {
@@ -44,7 +44,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -55,7 +55,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
      * 
      */
-    @InputImport(name="linkedInterconnectAttachments")
+    @Import(name="linkedInterconnectAttachments")
       private final @Nullable Output<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
     public Output<SpokeLinkedInterconnectAttachmentsArgs> getLinkedInterconnectAttachments() {
@@ -66,7 +66,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The URIs of linked Router appliance resources
      * 
      */
-    @InputImport(name="linkedRouterApplianceInstances")
+    @Import(name="linkedRouterApplianceInstances")
       private final @Nullable Output<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
     public Output<SpokeLinkedRouterApplianceInstancesArgs> getLinkedRouterApplianceInstances() {
@@ -77,7 +77,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The URIs of linked VPN tunnel resources
      * 
      */
-    @InputImport(name="linkedVpnTunnels")
+    @Import(name="linkedVpnTunnels")
       private final @Nullable Output<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels;
 
     public Output<SpokeLinkedVpnTunnelsArgs> getLinkedVpnTunnels() {
@@ -88,7 +88,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -99,7 +99,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of the spoke. Spoke names must be unique.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

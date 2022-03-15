@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__ContainerPortResponse {
     /**
      * Number of the port to expose on the container. This must be a valid port number: 0 < PORT_NUMBER < 65536.
@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1__ContainerPortResponse {
      */
     private final Integer containerPort;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1__ContainerPortResponse(@OutputCustomType.Parameter("containerPort") Integer containerPort) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1__ContainerPortResponse(@CustomType.Parameter("containerPort") Integer containerPort) {
         this.containerPort = containerPort;
     }
 

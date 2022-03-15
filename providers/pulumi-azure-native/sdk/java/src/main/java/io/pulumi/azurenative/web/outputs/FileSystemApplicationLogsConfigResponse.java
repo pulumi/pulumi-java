@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileSystemApplicationLogsConfigResponse {
     /**
      * Log level.
@@ -17,8 +17,8 @@ public final class FileSystemApplicationLogsConfigResponse {
      */
     private final @Nullable String level;
 
-    @OutputCustomType.Constructor
-    private FileSystemApplicationLogsConfigResponse(@OutputCustomType.Parameter("level") @Nullable String level) {
+    @CustomType.Constructor
+    private FileSystemApplicationLogsConfigResponse(@CustomType.Parameter("level") @Nullable String level) {
         this.level = level;
     }
 

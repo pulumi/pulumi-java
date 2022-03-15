@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.MoveResourcePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMoveResourceResult {
     /**
      * Fully qualified resource Id for the resource.
@@ -31,12 +31,12 @@ public final class GetMoveResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMoveResourceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") MoveResourcePropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") MoveResourcePropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

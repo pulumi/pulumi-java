@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.AccessReviewHistoryInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewScopeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessReviewHistoryDefinitionByIdResult {
     /**
      * Date time when history definition was created
@@ -111,27 +111,27 @@ public final class GetAccessReviewHistoryDefinitionByIdResult {
      */
     private final String userPrincipalName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessReviewHistoryDefinitionByIdResult(
-        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
-        @OutputCustomType.Parameter("decisions") @Nullable List<String> decisions,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instances") @Nullable List<AccessReviewHistoryInstanceResponse> instances,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfOccurrences") @Nullable Integer numberOfOccurrences,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("principalName") String principalName,
-        @OutputCustomType.Parameter("principalType") String principalType,
-        @OutputCustomType.Parameter("reviewHistoryPeriodEndDateTime") String reviewHistoryPeriodEndDateTime,
-        @OutputCustomType.Parameter("reviewHistoryPeriodStartDateTime") String reviewHistoryPeriodStartDateTime,
-        @OutputCustomType.Parameter("scopes") @Nullable List<AccessReviewScopeResponse> scopes,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userPrincipalName") String userPrincipalName) {
+        @CustomType.Parameter("createdDateTime") String createdDateTime,
+        @CustomType.Parameter("decisions") @Nullable List<String> decisions,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instances") @Nullable List<AccessReviewHistoryInstanceResponse> instances,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfOccurrences") @Nullable Integer numberOfOccurrences,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("principalName") String principalName,
+        @CustomType.Parameter("principalType") String principalType,
+        @CustomType.Parameter("reviewHistoryPeriodEndDateTime") String reviewHistoryPeriodEndDateTime,
+        @CustomType.Parameter("reviewHistoryPeriodStartDateTime") String reviewHistoryPeriodStartDateTime,
+        @CustomType.Parameter("scopes") @Nullable List<AccessReviewScopeResponse> scopes,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userPrincipalName") String userPrincipalName) {
         this.createdDateTime = createdDateTime;
         this.decisions = decisions;
         this.displayName = displayName;

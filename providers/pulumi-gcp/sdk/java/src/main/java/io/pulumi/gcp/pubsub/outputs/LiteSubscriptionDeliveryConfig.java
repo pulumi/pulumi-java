@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LiteSubscriptionDeliveryConfig {
     /**
      * When this subscription should send messages to subscribers relative to messages persistence in storage.
@@ -16,8 +16,8 @@ public final class LiteSubscriptionDeliveryConfig {
      */
     private final String deliveryRequirement;
 
-    @OutputCustomType.Constructor
-    private LiteSubscriptionDeliveryConfig(@OutputCustomType.Parameter("deliveryRequirement") String deliveryRequirement) {
+    @CustomType.Constructor
+    private LiteSubscriptionDeliveryConfig(@CustomType.Parameter("deliveryRequirement") String deliveryRequirement) {
         this.deliveryRequirement = deliveryRequirement;
     }
 

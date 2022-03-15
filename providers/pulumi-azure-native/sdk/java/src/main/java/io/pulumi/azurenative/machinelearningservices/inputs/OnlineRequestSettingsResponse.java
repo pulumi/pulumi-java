@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OnlineRequestSettingsResponse extends io.pulumi.resources.Inv
      * The number of requests allowed to queue at once for this deployment.
      * 
      */
-    @InputImport(name="maxConcurrentRequestsPerInstance")
+    @Import(name="maxConcurrentRequestsPerInstance")
       private final @Nullable Integer maxConcurrentRequestsPerInstance;
 
     public Optional<Integer> getMaxConcurrentRequestsPerInstance() {
@@ -34,7 +34,7 @@ public final class OnlineRequestSettingsResponse extends io.pulumi.resources.Inv
      * The maximum queue wait time in ISO 8601 format. Supports millisecond precision.
      * 
      */
-    @InputImport(name="maxQueueWait")
+    @Import(name="maxQueueWait")
       private final @Nullable String maxQueueWait;
 
     public Optional<String> getMaxQueueWait() {
@@ -45,7 +45,7 @@ public final class OnlineRequestSettingsResponse extends io.pulumi.resources.Inv
      * The request timeout in ISO 8601 format. Supports millisecond precision.
      * 
      */
-    @InputImport(name="requestTimeout")
+    @Import(name="requestTimeout")
       private final @Nullable String requestTimeout;
 
     public Optional<String> getRequestTimeout() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
      * The resource Id of the lab
      * 
      */
-    @InputImport(name="labId")
+    @Import(name="labId")
       private final @Nullable String labId;
 
     public Optional<String> getLabId() {
@@ -29,7 +29,7 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
      * The name of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

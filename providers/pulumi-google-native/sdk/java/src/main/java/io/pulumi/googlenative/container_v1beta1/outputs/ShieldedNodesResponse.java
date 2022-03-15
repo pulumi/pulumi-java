@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShieldedNodesResponse {
     /**
      * Whether Shielded Nodes features are enabled on all nodes in this cluster.
@@ -15,8 +15,8 @@ public final class ShieldedNodesResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ShieldedNodesResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private ShieldedNodesResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

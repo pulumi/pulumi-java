@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class AuthorizationActionMappingResponse extends io.pulumi.resource
 
     public static final AuthorizationActionMappingResponse Empty = new AuthorizationActionMappingResponse();
 
-    @InputImport(name="desired")
+    @Import(name="desired")
       private final @Nullable String desired;
 
     public Optional<String> getDesired() {
         return this.desired == null ? Optional.empty() : Optional.ofNullable(this.desired);
     }
 
-    @InputImport(name="original")
+    @Import(name="original")
       private final @Nullable String original;
 
     public Optional<String> getOriginal() {

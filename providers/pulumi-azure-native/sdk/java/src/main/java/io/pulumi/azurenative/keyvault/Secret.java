@@ -8,7 +8,7 @@ import io.pulumi.azurenative.keyvault.SecretArgs;
 import io.pulumi.azurenative.keyvault.outputs.SecretPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Azure location of the key vault resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Name of the key vault resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Properties of the secret
      * 
      */
-    @OutputExport(name="properties", type=SecretPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=SecretPropertiesResponse.class, parameters={})
     private Output<SecretPropertiesResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Tags assigned to the key vault resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -92,7 +92,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Resource type of the key vault resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

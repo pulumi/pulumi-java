@@ -4,7 +4,7 @@
 package io.pulumi.awsnative;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * Dictionary of the extension resource properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Map<String,Object>> properties;
 
     public Output<Map<String,Object>> getProperties() {
@@ -30,7 +30,7 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
      * CloudFormation type name.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

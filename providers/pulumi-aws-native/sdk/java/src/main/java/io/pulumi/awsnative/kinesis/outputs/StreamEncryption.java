@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.kinesis.outputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StreamEncryption {
     /**
      * The encryption type to use. The only valid value is KMS.
@@ -21,10 +21,10 @@ public final class StreamEncryption {
      */
     private final String keyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamEncryption(
-        @OutputCustomType.Parameter("encryptionType") StreamEncryptionEncryptionType encryptionType,
-        @OutputCustomType.Parameter("keyId") String keyId) {
+        @CustomType.Parameter("encryptionType") StreamEncryptionEncryptionType encryptionType,
+        @CustomType.Parameter("keyId") String keyId) {
         this.encryptionType = encryptionType;
         this.keyId = keyId;
     }

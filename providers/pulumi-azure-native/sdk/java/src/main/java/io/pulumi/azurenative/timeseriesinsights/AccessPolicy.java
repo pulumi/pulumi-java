@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.AccessPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * An description of the access policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The objectId of the principal in Azure Active Directory.
      * 
      */
-    @OutputExport(name="principalObjectId", type=String.class, parameters={})
+    @Export(name="principalObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalObjectId;
 
     /**
@@ -76,7 +76,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * The list of roles the principal is assigned on the environment.
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={String.class})
+    @Export(name="roles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> roles;
 
     /**
@@ -90,7 +90,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

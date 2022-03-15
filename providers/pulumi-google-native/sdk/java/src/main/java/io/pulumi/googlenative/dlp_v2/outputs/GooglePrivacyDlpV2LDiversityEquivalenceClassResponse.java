@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueFrequencyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
     /**
      * Size of the k-anonymity equivalence class.
@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
      */
     private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(
-        @OutputCustomType.Parameter("equivalenceClassSize") String equivalenceClassSize,
-        @OutputCustomType.Parameter("numDistinctSensitiveValues") String numDistinctSensitiveValues,
-        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues,
-        @OutputCustomType.Parameter("topSensitiveValues") List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
+        @CustomType.Parameter("equivalenceClassSize") String equivalenceClassSize,
+        @CustomType.Parameter("numDistinctSensitiveValues") String numDistinctSensitiveValues,
+        @CustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues,
+        @CustomType.Parameter("topSensitiveValues") List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
         this.equivalenceClassSize = equivalenceClassSize;
         this.numDistinctSensitiveValues = numDistinctSensitiveValues;
         this.quasiIdsValues = quasiIdsValues;

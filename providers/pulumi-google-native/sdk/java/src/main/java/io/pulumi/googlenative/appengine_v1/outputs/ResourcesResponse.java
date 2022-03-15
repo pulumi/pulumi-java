@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.VolumeResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcesResponse {
     /**
      * Number of CPU cores needed.
@@ -38,13 +38,13 @@ public final class ResourcesResponse {
      */
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcesResponse(
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("diskGb") Double diskGb,
-        @OutputCustomType.Parameter("kmsKeyReference") String kmsKeyReference,
-        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
-        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("diskGb") Double diskGb,
+        @CustomType.Parameter("kmsKeyReference") String kmsKeyReference,
+        @CustomType.Parameter("memoryGb") Double memoryGb,
+        @CustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.kmsKeyReference = kmsKeyReference;

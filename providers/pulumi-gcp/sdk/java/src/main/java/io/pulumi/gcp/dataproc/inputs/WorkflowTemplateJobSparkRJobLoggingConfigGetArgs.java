@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkflowTemplateJobSparkRJobLoggingConfigGetArgs extends io.p
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
      * 
      */
-    @InputImport(name="driverLogLevels")
+    @Import(name="driverLogLevels")
       private final @Nullable Output<Map<String,String>> driverLogLevels;
 
     public Output<Map<String,String>> getDriverLogLevels() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensSelectionCriteria {
     /**
      * Delimiter to divide S3 key into hierarchy of prefixes.
@@ -29,11 +29,11 @@ public final class StorageLensSelectionCriteria {
      */
     private final @Nullable Double minStorageBytesPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageLensSelectionCriteria(
-        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
-        @OutputCustomType.Parameter("maxDepth") @Nullable Integer maxDepth,
-        @OutputCustomType.Parameter("minStorageBytesPercentage") @Nullable Double minStorageBytesPercentage) {
+        @CustomType.Parameter("delimiter") @Nullable String delimiter,
+        @CustomType.Parameter("maxDepth") @Nullable Integer maxDepth,
+        @CustomType.Parameter("minStorageBytesPercentage") @Nullable Double minStorageBytesPercentage) {
         this.delimiter = delimiter;
         this.maxDepth = maxDepth;
         this.minStorageBytesPercentage = minStorageBytesPercentage;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttributeResponse {
     /**
      * Indicates the name of an attribute defined in the consent store.
@@ -21,10 +21,10 @@ public final class AttributeResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttributeResponse(
-        @OutputCustomType.Parameter("attributeDefinitionId") String attributeDefinitionId,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("attributeDefinitionId") String attributeDefinitionId,
+        @CustomType.Parameter("values") List<String> values) {
         this.attributeDefinitionId = attributeDefinitionId;
         this.values = values;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetPoolResult {
     /**
      * The server-defined URL for the resource. This field is applicable only when the containing target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is properly set to a value between [0, 1]. backupPool and failoverRatio together define the fallback behavior of the primary target pool: if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic arriving at the load-balanced IP will be directed to the backup pool. In case where failoverRatio and backupPool are not set, or all the instances in the backup pool are unhealthy, the traffic will be directed back to the primary pool in the "force" mode, where traffic will be spread to the healthy instances with the best effort, or to all instances when no instance is healthy.
@@ -72,20 +72,20 @@ public final class GetTargetPoolResult {
      */
     private final String sessionAffinity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetPoolResult(
-        @OutputCustomType.Parameter("backupPool") String backupPool,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("failoverRatio") Double failoverRatio,
-        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
-        @OutputCustomType.Parameter("instances") List<String> instances,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("sessionAffinity") String sessionAffinity) {
+        @CustomType.Parameter("backupPool") String backupPool,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("failoverRatio") Double failoverRatio,
+        @CustomType.Parameter("healthChecks") List<String> healthChecks,
+        @CustomType.Parameter("instances") List<String> instances,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("sessionAffinity") String sessionAffinity) {
         this.backupPool = backupPool;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleActionAuthenticateOidc {
     /**
      * The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
@@ -69,19 +69,19 @@ public final class ListenerRuleActionAuthenticateOidc {
      */
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleActionAuthenticateOidc(
-        @OutputCustomType.Parameter("authenticationRequestExtraParams") @Nullable Map<String,String> authenticationRequestExtraParams,
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
-        @OutputCustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
-        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
-        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
+        @CustomType.Parameter("authenticationRequestExtraParams") @Nullable Map<String,String> authenticationRequestExtraParams,
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
+        @CustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
+        @CustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @CustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;

@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelBiasJobDefinitionConstraintsResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionModelBiasBaselineConfig {
     private final @Nullable String baseliningJobName;
     private final @Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelBiasJobDefinitionModelBiasBaselineConfig(
-        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
-        @OutputCustomType.Parameter("constraintsResource") @Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
+        @CustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @CustomType.Parameter("constraintsResource") @Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
     }

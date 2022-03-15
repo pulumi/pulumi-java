@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType {
     /**
      * CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing
@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      */
     private final Integer maxFindings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType(
-        @OutputCustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
-        @OutputCustomType.Parameter("maxFindings") Integer maxFindings) {
+        @CustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
+        @CustomType.Parameter("maxFindings") Integer maxFindings) {
         this.infoType = infoType;
         this.maxFindings = maxFindings;
     }

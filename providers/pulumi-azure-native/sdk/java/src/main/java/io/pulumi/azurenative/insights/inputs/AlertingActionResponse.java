@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AzNsActionGroupResponse;
 import io.pulumi.azurenative.insights.inputs.TriggerConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * Azure action group reference.
      * 
      */
-    @InputImport(name="aznsAction")
+    @Import(name="aznsAction")
       private final @Nullable AzNsActionGroupResponse aznsAction;
 
     public Optional<AzNsActionGroupResponse> getAznsAction() {
@@ -37,7 +37,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -48,7 +48,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * Severity of the alert
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {
@@ -59,7 +59,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * time (in minutes) for which Alerts should be throttled or suppressed.
      * 
      */
-    @InputImport(name="throttlingInMin")
+    @Import(name="throttlingInMin")
       private final @Nullable Integer throttlingInMin;
 
     public Optional<Integer> getThrottlingInMin() {
@@ -70,7 +70,7 @@ public final class AlertingActionResponse extends io.pulumi.resources.InvokeArgs
      * The trigger condition that results in the alert rule being.
      * 
      */
-    @InputImport(name="trigger", required=true)
+    @Import(name="trigger", required=true)
       private final TriggerConditionResponse trigger;
 
     public TriggerConditionResponse getTrigger() {

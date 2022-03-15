@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ApiOAuthSettingsParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiOAuthSettingsResponse {
     /**
      * Resource provider client id
@@ -51,15 +51,15 @@ public final class ApiOAuthSettingsResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiOAuthSettingsResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("customParameters") @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
-        @OutputCustomType.Parameter("identityProvider") @Nullable String identityProvider,
-        @OutputCustomType.Parameter("properties") @Nullable Object properties,
-        @OutputCustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
-        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("customParameters") @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
+        @CustomType.Parameter("identityProvider") @Nullable String identityProvider,
+        @CustomType.Parameter("properties") @Nullable Object properties,
+        @CustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
+        @CustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.customParameters = customParameters;

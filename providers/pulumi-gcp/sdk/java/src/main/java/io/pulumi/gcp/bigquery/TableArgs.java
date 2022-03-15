@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.TableEncryptionConfigurationArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationArgs;
 import io.pulumi.gcp.bigquery.inputs.TableMaterializedViewArgs;
@@ -30,7 +30,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * descending priority order.
      * 
      */
-    @InputImport(name="clusterings")
+    @Import(name="clusterings")
       private final @Nullable Output<List<String>> clusterings;
 
     public Output<List<String>> getClusterings() {
@@ -42,7 +42,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -54,7 +54,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * in state, a `=destroy` or `=update` that would delete the instance will fail.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -65,7 +65,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The field description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * is transparent to the user.  Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<TableEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<TableEncryptionConfigurationArgs> getEncryptionConfiguration() {
@@ -92,7 +92,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * reclaimed.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<Integer> expirationTime;
 
     public Output<Integer> getExpirationTime() {
@@ -106,7 +106,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * if it were a standard BigQuery table. Structure is documented below.
      * 
      */
-    @InputImport(name="externalDataConfiguration")
+    @Import(name="externalDataConfiguration")
       private final @Nullable Output<TableExternalDataConfigurationArgs> externalDataConfiguration;
 
     public Output<TableExternalDataConfigurationArgs> getExternalDataConfiguration() {
@@ -117,7 +117,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the table.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -128,7 +128,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * A mapping of labels to assign to the resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -140,7 +140,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="materializedView")
+    @Import(name="materializedView")
       private final @Nullable Output<TableMaterializedViewArgs> materializedView;
 
     public Output<TableMaterializedViewArgs> getMaterializedView() {
@@ -152,7 +152,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -164,7 +164,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    @InputImport(name="rangePartitioning")
+    @Import(name="rangePartitioning")
       private final @Nullable Output<TableRangePartitioningArgs> rangePartitioning;
 
     public Output<TableRangePartitioningArgs> getRangePartitioning() {
@@ -185,7 +185,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * `google_bigquery_table.schema`
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -197,7 +197,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
     public Output<String> getTableId() {
@@ -209,7 +209,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    @InputImport(name="timePartitioning")
+    @Import(name="timePartitioning")
       private final @Nullable Output<TableTimePartitioningArgs> timePartitioning;
 
     public Output<TableTimePartitioningArgs> getTimePartitioning() {
@@ -221,7 +221,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable Output<TableViewArgs> view;
 
     public Output<TableViewArgs> getView() {

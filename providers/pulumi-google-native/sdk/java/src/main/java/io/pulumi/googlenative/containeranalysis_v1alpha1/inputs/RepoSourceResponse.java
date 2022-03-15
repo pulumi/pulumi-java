@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the branch to build.
      * 
      */
-    @InputImport(name="branchName", required=true)
+    @Import(name="branchName", required=true)
       private final String branchName;
 
     public String getBranchName() {
@@ -31,7 +31,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Explicit commit SHA to build.
      * 
      */
-    @InputImport(name="commitSha", required=true)
+    @Import(name="commitSha", required=true)
       private final String commitSha;
 
     public String getCommitSha() {
@@ -42,7 +42,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * ID of the project that owns the repo.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -53,7 +53,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the repo.
      * 
      */
-    @InputImport(name="repoName", required=true)
+    @Import(name="repoName", required=true)
       private final String repoName;
 
     public String getRepoName() {
@@ -64,7 +64,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the tag to build.
      * 
      */
-    @InputImport(name="tagName", required=true)
+    @Import(name="tagName", required=true)
       private final String tagName;
 
     public String getTagName() {

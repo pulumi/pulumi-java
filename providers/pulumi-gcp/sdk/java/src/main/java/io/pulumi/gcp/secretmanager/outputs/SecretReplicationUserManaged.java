@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.secretmanager.outputs.SecretReplicationUserManagedReplica;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretReplicationUserManaged {
     /**
      * The list of Replicas for this Secret. Cannot be empty.
@@ -17,8 +17,8 @@ public final class SecretReplicationUserManaged {
      */
     private final List<SecretReplicationUserManagedReplica> replicas;
 
-    @OutputCustomType.Constructor
-    private SecretReplicationUserManaged(@OutputCustomType.Parameter("replicas") List<SecretReplicationUserManagedReplica> replicas) {
+    @CustomType.Constructor
+    private SecretReplicationUserManaged(@CustomType.Parameter("replicas") List<SecretReplicationUserManagedReplica> replicas) {
         this.replicas = replicas;
     }
 

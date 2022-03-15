@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.resourcegroups.outputs;
 
 import io.pulumi.awsnative.resourcegroups.outputs.GroupConfigurationParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupConfigurationItem {
     private final @Nullable List<GroupConfigurationParameter> parameters;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupConfigurationItem(
-        @OutputCustomType.Parameter("parameters") @Nullable List<GroupConfigurationParameter> parameters,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("parameters") @Nullable List<GroupConfigurationParameter> parameters,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.parameters = parameters;
         this.type = type;
     }

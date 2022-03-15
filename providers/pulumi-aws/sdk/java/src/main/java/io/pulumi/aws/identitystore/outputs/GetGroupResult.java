@@ -4,12 +4,12 @@
 package io.pulumi.aws.identitystore.outputs;
 
 import io.pulumi.aws.identitystore.outputs.GetGroupFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * The group's display name value.
@@ -25,13 +25,13 @@ public final class GetGroupResult {
     private final String id;
     private final String identityStoreId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("filters") List<GetGroupFilter> filters,
-        @OutputCustomType.Parameter("groupId") String groupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identityStoreId") String identityStoreId) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filters") List<GetGroupFilter> filters,
+        @CustomType.Parameter("groupId") String groupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identityStoreId") String identityStoreId) {
         this.displayName = displayName;
         this.filters = filters;
         this.groupId = groupId;

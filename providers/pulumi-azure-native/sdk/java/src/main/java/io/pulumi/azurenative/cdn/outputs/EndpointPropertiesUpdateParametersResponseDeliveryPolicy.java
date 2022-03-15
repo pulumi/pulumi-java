@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
     /**
      * User-friendly description of the policy.
@@ -24,10 +24,10 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
      */
     private final List<DeliveryRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointPropertiesUpdateParametersResponseDeliveryPolicy(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("rules") List<DeliveryRuleResponse> rules) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("rules") List<DeliveryRuleResponse> rules) {
         this.description = description;
         this.rules = rules;
     }

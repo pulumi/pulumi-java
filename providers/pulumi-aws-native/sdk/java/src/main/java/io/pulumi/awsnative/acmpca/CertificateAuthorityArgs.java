@@ -8,7 +8,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityRevocationConfigura
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
      * 
      */
-    @InputImport(name="csrExtensions")
+    @Import(name="csrExtensions")
       private final @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
     public Output<CertificateAuthorityCsrExtensionsArgs> getCsrExtensions() {
@@ -34,7 +34,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
      * 
      */
-    @InputImport(name="keyAlgorithm", required=true)
+    @Import(name="keyAlgorithm", required=true)
       private final Output<String> keyAlgorithm;
 
     public Output<String> getKeyAlgorithm() {
@@ -45,7 +45,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
      * 
      */
-    @InputImport(name="keyStorageSecurityStandard")
+    @Import(name="keyStorageSecurityStandard")
       private final @Nullable Output<String> keyStorageSecurityStandard;
 
     public Output<String> getKeyStorageSecurityStandard() {
@@ -56,7 +56,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
      * 
      */
-    @InputImport(name="revocationConfiguration")
+    @Import(name="revocationConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
     public Output<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
@@ -67,7 +67,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Algorithm your CA uses to sign certificate requests.
      * 
      */
-    @InputImport(name="signingAlgorithm", required=true)
+    @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
     public Output<String> getSigningAlgorithm() {
@@ -78,14 +78,14 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Structure that contains X.500 distinguished name information for your CA.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final Output<CertificateAuthoritySubjectArgs> subject;
 
     public Output<CertificateAuthoritySubjectArgs> getSubject() {
         return this.subject;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CertificateAuthorityTagArgs>> tags;
 
     public Output<List<CertificateAuthorityTagArgs>> getTags() {
@@ -96,7 +96,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * The type of the certificate authority.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

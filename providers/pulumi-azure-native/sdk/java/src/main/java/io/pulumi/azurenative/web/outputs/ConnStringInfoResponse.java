@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnStringInfoResponse {
     /**
      * Connection string value.
@@ -27,11 +27,11 @@ public final class ConnStringInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnStringInfoResponse(
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.connectionString = connectionString;
         this.name = name;
         this.type = type;

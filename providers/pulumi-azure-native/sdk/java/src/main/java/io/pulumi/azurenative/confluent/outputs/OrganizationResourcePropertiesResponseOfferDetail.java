@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.confluent.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationResourcePropertiesResponseOfferDetail {
     /**
      * Offer Id
@@ -42,14 +42,14 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
      */
     private final @Nullable String termUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationResourcePropertiesResponseOfferDetail(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("planId") @Nullable String planId,
-        @OutputCustomType.Parameter("planName") @Nullable String planName,
-        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("termUnit") @Nullable String termUnit) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("planId") @Nullable String planId,
+        @CustomType.Parameter("planName") @Nullable String planName,
+        @CustomType.Parameter("publisherId") @Nullable String publisherId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("termUnit") @Nullable String termUnit) {
         this.id = id;
         this.planId = planId;
         this.planName = planName;

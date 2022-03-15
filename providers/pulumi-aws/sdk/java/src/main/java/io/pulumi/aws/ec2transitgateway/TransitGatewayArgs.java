@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is `64512` to `65534` for 16-bit ASNs and `4200000000` to `4294967294` for 32-bit ASNs. Default value: `64512`.
      * 
      */
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable Output<Integer> amazonSideAsn;
 
     public Output<Integer> getAmazonSideAsn() {
@@ -31,7 +31,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Whether resource attachment requests are automatically accepted. Valid values: `disable`, `enable`. Default value: `disable`.
      * 
      */
-    @InputImport(name="autoAcceptSharedAttachments")
+    @Import(name="autoAcceptSharedAttachments")
       private final @Nullable Output<String> autoAcceptSharedAttachments;
 
     public Output<String> getAutoAcceptSharedAttachments() {
@@ -42,7 +42,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @InputImport(name="defaultRouteTableAssociation")
+    @Import(name="defaultRouteTableAssociation")
       private final @Nullable Output<String> defaultRouteTableAssociation;
 
     public Output<String> getDefaultRouteTableAssociation() {
@@ -53,7 +53,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @InputImport(name="defaultRouteTablePropagation")
+    @Import(name="defaultRouteTablePropagation")
       private final @Nullable Output<String> defaultRouteTablePropagation;
 
     public Output<String> getDefaultRouteTablePropagation() {
@@ -64,7 +64,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -75,7 +75,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @InputImport(name="dnsSupport")
+    @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
     public Output<String> getDnsSupport() {
@@ -86,7 +86,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value tags for the EC2 Transit Gateway. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @InputImport(name="vpnEcmpSupport")
+    @Import(name="vpnEcmpSupport")
       private final @Nullable Output<String> vpnEcmpSupport;
 
     public Output<String> getVpnEcmpSupport() {

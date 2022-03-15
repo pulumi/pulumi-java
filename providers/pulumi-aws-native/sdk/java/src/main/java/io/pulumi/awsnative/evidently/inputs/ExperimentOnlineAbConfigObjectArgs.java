@@ -5,7 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentToWeightArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ExperimentOnlineAbConfigObjectArgs extends io.pulumi.resource
 
     public static final ExperimentOnlineAbConfigObjectArgs Empty = new ExperimentOnlineAbConfigObjectArgs();
 
-    @InputImport(name="controlTreatmentName")
+    @Import(name="controlTreatmentName")
       private final @Nullable Output<String> controlTreatmentName;
 
     public Output<String> getControlTreatmentName() {
         return this.controlTreatmentName == null ? Output.empty() : this.controlTreatmentName;
     }
 
-    @InputImport(name="treatmentWeights")
+    @Import(name="treatmentWeights")
       private final @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
 
     public Output<List<ExperimentTreatmentToWeightArgs>> getTreatmentWeights() {

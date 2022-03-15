@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterPropertiesResponseAutoScalerProfile {
     private final @Nullable String balanceSimilarNodeGroups;
     private final @Nullable String expander;
@@ -29,25 +29,25 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile {
     private final @Nullable String skipNodesWithLocalStorage;
     private final @Nullable String skipNodesWithSystemPods;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterPropertiesResponseAutoScalerProfile(
-        @OutputCustomType.Parameter("balanceSimilarNodeGroups") @Nullable String balanceSimilarNodeGroups,
-        @OutputCustomType.Parameter("expander") @Nullable String expander,
-        @OutputCustomType.Parameter("maxEmptyBulkDelete") @Nullable String maxEmptyBulkDelete,
-        @OutputCustomType.Parameter("maxGracefulTerminationSec") @Nullable String maxGracefulTerminationSec,
-        @OutputCustomType.Parameter("maxNodeProvisionTime") @Nullable String maxNodeProvisionTime,
-        @OutputCustomType.Parameter("maxTotalUnreadyPercentage") @Nullable String maxTotalUnreadyPercentage,
-        @OutputCustomType.Parameter("newPodScaleUpDelay") @Nullable String newPodScaleUpDelay,
-        @OutputCustomType.Parameter("okTotalUnreadyCount") @Nullable String okTotalUnreadyCount,
-        @OutputCustomType.Parameter("scaleDownDelayAfterAdd") @Nullable String scaleDownDelayAfterAdd,
-        @OutputCustomType.Parameter("scaleDownDelayAfterDelete") @Nullable String scaleDownDelayAfterDelete,
-        @OutputCustomType.Parameter("scaleDownDelayAfterFailure") @Nullable String scaleDownDelayAfterFailure,
-        @OutputCustomType.Parameter("scaleDownUnneededTime") @Nullable String scaleDownUnneededTime,
-        @OutputCustomType.Parameter("scaleDownUnreadyTime") @Nullable String scaleDownUnreadyTime,
-        @OutputCustomType.Parameter("scaleDownUtilizationThreshold") @Nullable String scaleDownUtilizationThreshold,
-        @OutputCustomType.Parameter("scanInterval") @Nullable String scanInterval,
-        @OutputCustomType.Parameter("skipNodesWithLocalStorage") @Nullable String skipNodesWithLocalStorage,
-        @OutputCustomType.Parameter("skipNodesWithSystemPods") @Nullable String skipNodesWithSystemPods) {
+        @CustomType.Parameter("balanceSimilarNodeGroups") @Nullable String balanceSimilarNodeGroups,
+        @CustomType.Parameter("expander") @Nullable String expander,
+        @CustomType.Parameter("maxEmptyBulkDelete") @Nullable String maxEmptyBulkDelete,
+        @CustomType.Parameter("maxGracefulTerminationSec") @Nullable String maxGracefulTerminationSec,
+        @CustomType.Parameter("maxNodeProvisionTime") @Nullable String maxNodeProvisionTime,
+        @CustomType.Parameter("maxTotalUnreadyPercentage") @Nullable String maxTotalUnreadyPercentage,
+        @CustomType.Parameter("newPodScaleUpDelay") @Nullable String newPodScaleUpDelay,
+        @CustomType.Parameter("okTotalUnreadyCount") @Nullable String okTotalUnreadyCount,
+        @CustomType.Parameter("scaleDownDelayAfterAdd") @Nullable String scaleDownDelayAfterAdd,
+        @CustomType.Parameter("scaleDownDelayAfterDelete") @Nullable String scaleDownDelayAfterDelete,
+        @CustomType.Parameter("scaleDownDelayAfterFailure") @Nullable String scaleDownDelayAfterFailure,
+        @CustomType.Parameter("scaleDownUnneededTime") @Nullable String scaleDownUnneededTime,
+        @CustomType.Parameter("scaleDownUnreadyTime") @Nullable String scaleDownUnreadyTime,
+        @CustomType.Parameter("scaleDownUtilizationThreshold") @Nullable String scaleDownUtilizationThreshold,
+        @CustomType.Parameter("scanInterval") @Nullable String scanInterval,
+        @CustomType.Parameter("skipNodesWithLocalStorage") @Nullable String skipNodesWithLocalStorage,
+        @CustomType.Parameter("skipNodesWithSystemPods") @Nullable String skipNodesWithSystemPods) {
         this.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
         this.expander = expander;
         this.maxEmptyBulkDelete = maxEmptyBulkDelete;

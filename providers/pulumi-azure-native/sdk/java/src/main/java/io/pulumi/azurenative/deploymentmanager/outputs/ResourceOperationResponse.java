@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceOperationResponse {
     /**
      * Unique identifier of the operation. For ARM resources, this is the operationId obtained from ARM service.
@@ -42,14 +42,14 @@ public final class ResourceOperationResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceOperationResponse(
-        @OutputCustomType.Parameter("operationId") String operationId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("statusCode") String statusCode,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
+        @CustomType.Parameter("operationId") String operationId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("statusCode") String statusCode,
+        @CustomType.Parameter("statusMessage") String statusMessage) {
         this.operationId = operationId;
         this.provisioningState = provisioningState;
         this.resourceName = resourceName;

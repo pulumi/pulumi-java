@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkResponse {
     /**
      * Network on which the workers are created. "default" network is used if empty.
@@ -25,11 +25,11 @@ public final class NetworkResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkResponse(
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.network = network;
         this.project = project;
         this.subnetwork = subnetwork;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitHubActionContainerConfigurationResponse {
     /**
      * The image name for the build.
@@ -32,12 +32,12 @@ public final class GitHubActionContainerConfigurationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubActionContainerConfigurationResponse(
-        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("serverUrl") @Nullable String serverUrl,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("imageName") @Nullable String imageName,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("serverUrl") @Nullable String serverUrl,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.imageName = imageName;
         this.password = password;
         this.serverUrl = serverUrl;

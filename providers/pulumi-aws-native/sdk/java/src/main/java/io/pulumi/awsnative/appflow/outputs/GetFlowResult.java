@@ -8,14 +8,14 @@ import io.pulumi.awsnative.appflow.outputs.FlowSourceFlowConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowTag;
 import io.pulumi.awsnative.appflow.outputs.FlowTask;
 import io.pulumi.awsnative.appflow.outputs.FlowTriggerConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFlowResult {
     /**
      * Description of the flow.
@@ -53,15 +53,15 @@ public final class GetFlowResult {
      */
     private final @Nullable FlowTriggerConfig triggerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFlowResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationFlowConfigList") @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList,
-        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
-        @OutputCustomType.Parameter("sourceFlowConfig") @Nullable FlowSourceFlowConfig sourceFlowConfig,
-        @OutputCustomType.Parameter("tags") @Nullable List<FlowTag> tags,
-        @OutputCustomType.Parameter("tasks") @Nullable List<FlowTask> tasks,
-        @OutputCustomType.Parameter("triggerConfig") @Nullable FlowTriggerConfig triggerConfig) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationFlowConfigList") @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList,
+        @CustomType.Parameter("flowArn") @Nullable String flowArn,
+        @CustomType.Parameter("sourceFlowConfig") @Nullable FlowSourceFlowConfig sourceFlowConfig,
+        @CustomType.Parameter("tags") @Nullable List<FlowTag> tags,
+        @CustomType.Parameter("tasks") @Nullable List<FlowTask> tasks,
+        @CustomType.Parameter("triggerConfig") @Nullable FlowTriggerConfig triggerConfig) {
         this.description = description;
         this.destinationFlowConfigList = destinationFlowConfigList;
         this.flowArn = flowArn;

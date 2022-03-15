@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.TriggerOperation;
 import io.pulumi.azurenative.documentdb.enums.TriggerType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * Body of the Trigger
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -36,7 +36,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * Name of the Cosmos DB SQL trigger
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * The operation the trigger is associated with
      * 
      */
-    @InputImport(name="triggerOperation")
+    @Import(name="triggerOperation")
       private final @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
 
     public Output<Either<String,TriggerOperation>> getTriggerOperation() {
@@ -58,7 +58,7 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * Type of the Trigger
      * 
      */
-    @InputImport(name="triggerType")
+    @Import(name="triggerType")
       private final @Nullable Output<Either<String,TriggerType>> triggerType;
 
     public Output<Either<String,TriggerType>> getTriggerType() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.CarrierGatewayTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the carrier gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CarrierGatewayTagArgs>> tags;
 
     public Output<List<CarrierGatewayTagArgs>> getTags() {
@@ -31,7 +31,7 @@ public final class CarrierGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

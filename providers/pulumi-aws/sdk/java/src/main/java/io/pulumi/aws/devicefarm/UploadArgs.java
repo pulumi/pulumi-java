@@ -4,7 +4,7 @@
 package io.pulumi.aws.devicefarm;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * The upload's content type (for example, application/octet-stream).
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -29,7 +29,7 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * The upload's file name. The name should not contain any forward slashes (/). If you are uploading an iOS app, the file name must end with the .ipa extension. If you are uploading an Android app, the file name must end with the .apk extension. For all others, the file name must end with the .zip file extension.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the project for the upload.
      * 
      */
-    @InputImport(name="projectArn", required=true)
+    @Import(name="projectArn", required=true)
       private final Output<String> projectArn;
 
     public Output<String> getProjectArn() {
@@ -51,7 +51,7 @@ public final class UploadArgs extends io.pulumi.resources.ResourceArgs {
      * The upload's upload type. See [AWS Docs](https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_CreateUpload.html#API_CreateUpload_RequestSyntax) for valid list of values.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterNatLogConfig {
     /**
      * Indicates whether or not to export logs.
@@ -22,10 +22,10 @@ public final class RouterNatLogConfig {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterNatLogConfig(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("filter") String filter) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("filter") String filter) {
         this.enable = enable;
         this.filter = filter;
     }

@@ -8,7 +8,7 @@ import io.pulumi.aws.guardduty.DetectorArgs;
 import io.pulumi.aws.guardduty.inputs.DetectorState;
 import io.pulumi.aws.guardduty.outputs.DetectorDatasources;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the GuardDuty detector
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -51,7 +51,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the GuardDuty detector
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -65,7 +65,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * Describes which data sources will be enabled for the detector. See Data Sources below for more details.
      * 
      */
-    @OutputExport(name="datasources", type=DetectorDatasources.class, parameters={})
+    @Export(name="datasources", type=DetectorDatasources.class, parameters={})
     private Output<DetectorDatasources> datasources;
 
     /**
@@ -79,7 +79,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
      * 
      */
-    @OutputExport(name="enable", type=Boolean.class, parameters={})
+    @Export(name="enable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enable;
 
     /**
@@ -93,7 +93,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
      * 
      */
-    @OutputExport(name="findingPublishingFrequency", type=String.class, parameters={})
+    @Export(name="findingPublishingFrequency", type=String.class, parameters={})
     private Output<String> findingPublishingFrequency;
 
     /**
@@ -107,7 +107,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

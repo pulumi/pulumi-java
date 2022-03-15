@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureMachineLearningWebServiceOutputColumnResponse {
     /**
      * The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .
@@ -22,10 +22,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureMachineLearningWebServiceOutputColumnResponse(
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.dataType = dataType;
         this.name = name;
     }

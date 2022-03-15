@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * Set to true to run an import data repository task to import metadata from the data repository to the file system after the data repository association is created. Defaults to `false`.
      * 
      */
-    @InputImport(name="batchImportMetaDataOnCreate")
+    @Import(name="batchImportMetaDataOnCreate")
       private final @Nullable Output<Boolean> batchImportMetaDataOnCreate;
 
     public Output<Boolean> getBatchImportMetaDataOnCreate() {
@@ -33,7 +33,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * The path to the Amazon S3 data repository that will be linked to the file system. The path must be an S3 bucket s3://myBucket/myPrefix/. This path specifies where in the S3 data repository files will be imported from or exported to. The same S3 bucket cannot be linked more than once to the same file system.
      * 
      */
-    @InputImport(name="dataRepositoryPath", required=true)
+    @Import(name="dataRepositoryPath", required=true)
       private final Output<String> dataRepositoryPath;
 
     public Output<String> getDataRepositoryPath() {
@@ -44,7 +44,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * Set to true to delete files from the file system upon deleting this data repository association. Defaults to `false`.
      * 
      */
-    @InputImport(name="deleteDataInFilesystem")
+    @Import(name="deleteDataInFilesystem")
       private final @Nullable Output<Boolean> deleteDataInFilesystem;
 
     public Output<Boolean> getDeleteDataInFilesystem() {
@@ -55,7 +55,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * The ID of the Amazon FSx file system to on which to create a data repository association.
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -66,7 +66,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * A path on the file system that points to a high-level directory (such as `/ns1/`) or subdirectory (such as `/ns1/subdir/`) that will be mapped 1-1 with `data_repository_path`. The leading forward slash in the name is required. Two data repository associations cannot have overlapping file system paths. For example, if a data repository is associated with file system path `/ns1/`, then you cannot link another data repository with file system path `/ns1/ns2`. This path specifies where in your file system files will be exported from or imported to. This file system directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * 
      */
-    @InputImport(name="fileSystemPath", required=true)
+    @Import(name="fileSystemPath", required=true)
       private final Output<String> fileSystemPath;
 
     public Output<String> getFileSystemPath() {
@@ -77,7 +77,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.
      * 
      */
-    @InputImport(name="importedFileChunkSize")
+    @Import(name="importedFileChunkSize")
       private final @Nullable Output<Integer> importedFileChunkSize;
 
     public Output<Integer> getImportedFileChunkSize() {
@@ -89,7 +89,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.
      * 
      */
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<DataRepositoryAssociationS3Args> s3;
 
     public Output<DataRepositoryAssociationS3Args> getS3() {
@@ -100,7 +100,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * A map of tags to assign to the data repository association. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class DataRepositoryAssociationArgs extends io.pulumi.resources.Res
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

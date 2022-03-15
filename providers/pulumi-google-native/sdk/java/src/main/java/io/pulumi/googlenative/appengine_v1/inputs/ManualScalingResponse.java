@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManualScalingResponse extends io.pulumi.resources.InvokeArgs 
      * Number of instances to assign to the service at the start. This number can later be altered by using the Modules API (https://cloud.google.com/appengine/docs/python/modules/functions) set_num_instances() function.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final Integer instances;
 
     public Integer getInstances() {

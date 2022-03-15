@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends i
      * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
-    @InputImport(name="shareIdentifier", required=true)
+    @Import(name="shareIdentifier", required=true)
       private final String shareIdentifier;
 
     public String getShareIdentifier() {
@@ -28,7 +28,7 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution extends i
      * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
-    @InputImport(name="weightFactor", required=true)
+    @Import(name="weightFactor", required=true)
       private final Double weightFactor;
 
     public Double getWeightFactor() {

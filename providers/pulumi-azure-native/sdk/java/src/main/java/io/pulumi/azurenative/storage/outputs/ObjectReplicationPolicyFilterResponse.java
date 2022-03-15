@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectReplicationPolicyFilterResponse {
     /**
      * Blobs created after the time will be replicated to the destination. It must be in datetime format 'yyyy-MM-ddTHH:mm:ssZ'. Example: 2020-02-19T16:05:00Z
@@ -23,10 +23,10 @@ public final class ObjectReplicationPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectReplicationPolicyFilterResponse(
-        @OutputCustomType.Parameter("minCreationTime") @Nullable String minCreationTime,
-        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
+        @CustomType.Parameter("minCreationTime") @Nullable String minCreationTime,
+        @CustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.minCreationTime = minCreationTime;
         this.prefixMatch = prefixMatch;
     }

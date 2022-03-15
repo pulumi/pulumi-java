@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionDiskIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
 
     public static final RegionDiskIamBindingState Empty = new RegionDiskIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<RegionDiskIamBindingConditionGetArgs> condition;
 
     public Output<RegionDiskIamBindingConditionGetArgs> getCondition() {
@@ -27,14 +27,14 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -45,7 +45,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,14 +57,14 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -77,7 +77,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

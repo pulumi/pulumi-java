@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
      * Describes the override action to be applied when rule matches.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable String action;
 
     public Optional<String> getAction() {
@@ -33,7 +33,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -44,7 +44,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
      * Identifier for the managed rule.
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final String ruleId;
 
     public String getRuleId() {

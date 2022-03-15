@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.FolderArgs;
@@ -49,7 +49,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -65,7 +65,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The folder id from the name "folders/{folder_id}"
      * 
      */
-    @OutputExport(name="folderId", type=String.class, parameters={})
+    @Export(name="folderId", type=String.class, parameters={})
     private Output<String> folderId;
 
     /**
@@ -94,7 +94,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The lifecycle state of the folder such as `ACTIVE` or `DELETE_REQUESTED`.
      * 
      */
-    @OutputExport(name="lifecycleState", type=String.class, parameters={})
+    @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
@@ -108,7 +108,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * The resource name of the Folder. Its format is folders/{folder_id}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**

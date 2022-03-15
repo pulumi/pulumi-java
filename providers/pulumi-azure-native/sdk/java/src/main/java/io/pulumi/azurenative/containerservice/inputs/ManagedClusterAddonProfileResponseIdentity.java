@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
      * The client id of the user assigned identity.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -33,7 +33,7 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
      * The object id of the user assigned identity.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -44,7 +44,7 @@ public final class ManagedClusterAddonProfileResponseIdentity extends io.pulumi.
      * The resource id of the user assigned identity.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

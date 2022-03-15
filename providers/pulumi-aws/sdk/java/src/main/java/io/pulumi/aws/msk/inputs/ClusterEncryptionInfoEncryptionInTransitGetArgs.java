@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
      * Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
      * 
      */
-    @InputImport(name="clientBroker")
+    @Import(name="clientBroker")
       private final @Nullable Output<String> clientBroker;
 
     public Output<String> getClientBroker() {
@@ -30,7 +30,7 @@ public final class ClusterEncryptionInfoEncryptionInTransitGetArgs extends io.pu
      * Whether data communication among broker nodes is encrypted. Default value: `true`.
      * 
      */
-    @InputImport(name="inCluster")
+    @Import(name="inCluster")
       private final @Nullable Output<Boolean> inCluster;
 
     public Output<Boolean> getInCluster() {

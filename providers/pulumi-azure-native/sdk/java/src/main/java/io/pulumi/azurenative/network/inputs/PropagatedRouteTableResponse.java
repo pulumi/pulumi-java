@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PropagatedRouteTableResponse extends io.pulumi.resources.Invo
      * The list of resource ids of all the RouteTables.
      * 
      */
-    @InputImport(name="ids")
+    @Import(name="ids")
       private final @Nullable List<SubResourceResponse> ids;
 
     public List<SubResourceResponse> getIds() {
@@ -35,7 +35,7 @@ public final class PropagatedRouteTableResponse extends io.pulumi.resources.Invo
      * The list of labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable List<String> labels;
 
     public List<String> getLabels() {

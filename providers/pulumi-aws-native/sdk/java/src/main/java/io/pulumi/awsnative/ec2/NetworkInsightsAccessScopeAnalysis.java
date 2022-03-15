@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeAnalysisFindingsF
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeAnalysisStatus;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeAnalysisTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,61 +22,61 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:NetworkInsightsAccessScopeAnalysis")
 public class NetworkInsightsAccessScopeAnalysis extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="analyzedEniCount", type=Integer.class, parameters={})
+    @Export(name="analyzedEniCount", type=Integer.class, parameters={})
     private Output<Integer> analyzedEniCount;
 
     public Output<Integer> getAnalyzedEniCount() {
         return this.analyzedEniCount;
     }
-    @OutputExport(name="endDate", type=String.class, parameters={})
+    @Export(name="endDate", type=String.class, parameters={})
     private Output<String> endDate;
 
     public Output<String> getEndDate() {
         return this.endDate;
     }
-    @OutputExport(name="findingsFound", type=NetworkInsightsAccessScopeAnalysisFindingsFound.class, parameters={})
+    @Export(name="findingsFound", type=NetworkInsightsAccessScopeAnalysisFindingsFound.class, parameters={})
     private Output<NetworkInsightsAccessScopeAnalysisFindingsFound> findingsFound;
 
     public Output<NetworkInsightsAccessScopeAnalysisFindingsFound> getFindingsFound() {
         return this.findingsFound;
     }
-    @OutputExport(name="networkInsightsAccessScopeAnalysisArn", type=String.class, parameters={})
+    @Export(name="networkInsightsAccessScopeAnalysisArn", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeAnalysisArn;
 
     public Output<String> getNetworkInsightsAccessScopeAnalysisArn() {
         return this.networkInsightsAccessScopeAnalysisArn;
     }
-    @OutputExport(name="networkInsightsAccessScopeAnalysisId", type=String.class, parameters={})
+    @Export(name="networkInsightsAccessScopeAnalysisId", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeAnalysisId;
 
     public Output<String> getNetworkInsightsAccessScopeAnalysisId() {
         return this.networkInsightsAccessScopeAnalysisId;
     }
-    @OutputExport(name="networkInsightsAccessScopeId", type=String.class, parameters={})
+    @Export(name="networkInsightsAccessScopeId", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeId;
 
     public Output<String> getNetworkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
     public Output<String> getStartDate() {
         return this.startDate;
     }
-    @OutputExport(name="status", type=NetworkInsightsAccessScopeAnalysisStatus.class, parameters={})
+    @Export(name="status", type=NetworkInsightsAccessScopeAnalysisStatus.class, parameters={})
     private Output<NetworkInsightsAccessScopeAnalysisStatus> status;
 
     public Output<NetworkInsightsAccessScopeAnalysisStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
-    @OutputExport(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeAnalysisTag.class})
+    @Export(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeAnalysisTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> tags;
 
     public Output</* @Nullable */ List<NetworkInsightsAccessScopeAnalysisTag>> getTags() {

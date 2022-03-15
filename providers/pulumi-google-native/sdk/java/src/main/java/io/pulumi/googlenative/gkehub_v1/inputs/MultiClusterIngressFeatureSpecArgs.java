@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
      * 
      */
-    @InputImport(name="configMembership")
+    @Import(name="configMembership")
       private final @Nullable Output<String> configMembership;
 
     public Output<String> getConfigMembership() {

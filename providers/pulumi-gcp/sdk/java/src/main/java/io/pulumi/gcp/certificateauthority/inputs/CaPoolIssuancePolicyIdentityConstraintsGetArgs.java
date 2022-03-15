@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
      * Otherwise, the requested SubjectAltNames will be discarded.
      * 
      */
-    @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
+    @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Output<Boolean> allowSubjectAltNamesPassthrough;
 
     public Output<Boolean> getAllowSubjectAltNamesPassthrough() {
@@ -32,7 +32,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
      * Otherwise, the requested Subject will be discarded.
      * 
      */
-    @InputImport(name="allowSubjectPassthrough", required=true)
+    @Import(name="allowSubjectPassthrough", required=true)
       private final Output<Boolean> allowSubjectPassthrough;
 
     public Output<Boolean> getAllowSubjectPassthrough() {
@@ -46,7 +46,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
      * Structure is documented below.
      * 
      */
-    @InputImport(name="celExpression")
+    @Import(name="celExpression")
       private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
 
     public Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> getCelExpression() {

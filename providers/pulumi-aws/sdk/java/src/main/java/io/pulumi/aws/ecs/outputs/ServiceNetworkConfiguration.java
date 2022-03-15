@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceNetworkConfiguration {
     /**
      * Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
@@ -29,11 +29,11 @@ public final class ServiceNetworkConfiguration {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceNetworkConfiguration(
-        @OutputCustomType.Parameter("assignPublicIp") @Nullable Boolean assignPublicIp,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("subnets") List<String> subnets) {
+        @CustomType.Parameter("assignPublicIp") @Nullable Boolean assignPublicIp,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("subnets") List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;

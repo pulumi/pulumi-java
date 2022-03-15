@@ -12,7 +12,7 @@ import io.pulumi.azurenative.insights.outputs.SourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Action needs to be taken on rule execution.
      * 
      */
-    @OutputExport(name="action", type=Either.class, parameters={AlertingActionResponse.class, LogToMetricActionResponse.class})
+    @Export(name="action", type=Either.class, parameters={AlertingActionResponse.class, LogToMetricActionResponse.class})
     private Output<Either<AlertingActionResponse,LogToMetricActionResponse>> action;
 
     /**
@@ -55,7 +55,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
      */
-    @OutputExport(name="autoMitigate", type=Boolean.class, parameters={})
+    @Export(name="autoMitigate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoMitigate;
 
     /**
@@ -69,7 +69,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * The api-version used when creating this alert rule
      * 
      */
-    @OutputExport(name="createdWithApiVersion", type=String.class, parameters={})
+    @Export(name="createdWithApiVersion", type=String.class, parameters={})
     private Output<String> createdWithApiVersion;
 
     /**
@@ -83,7 +83,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * The description of the Log Search rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -97,7 +97,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * The display name of the alert rule
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -111,7 +111,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
      */
-    @OutputExport(name="enabled", type=String.class, parameters={})
+    @Export(name="enabled", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabled;
 
     /**
@@ -125,7 +125,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -139,7 +139,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * True if alert rule is legacy Log Analytic rule
      * 
      */
-    @OutputExport(name="isLegacyLogAnalyticsRule", type=Boolean.class, parameters={})
+    @Export(name="isLegacyLogAnalyticsRule", type=Boolean.class, parameters={})
     private Output<Boolean> isLegacyLogAnalyticsRule;
 
     /**
@@ -153,7 +153,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -167,7 +167,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Last time the rule was updated in IS08601 format.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -181,7 +181,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -195,7 +195,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -209,7 +209,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Provisioning state of the scheduled query rule
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -223,7 +223,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
      */
-    @OutputExport(name="schedule", type=ScheduleResponse.class, parameters={})
+    @Export(name="schedule", type=ScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ScheduleResponse> schedule;
 
     /**
@@ -237,7 +237,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Data Source against which rule will Query Data
      * 
      */
-    @OutputExport(name="source", type=SourceResponse.class, parameters={})
+    @Export(name="source", type=SourceResponse.class, parameters={})
     private Output<SourceResponse> source;
 
     /**
@@ -251,7 +251,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -265,7 +265,7 @@ public class ScheduledQueryRule extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

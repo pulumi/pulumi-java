@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
      * ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -31,7 +31,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
      * ARN of the load balancer. Required if `arn` is not set.
      * 
      */
-    @InputImport(name="loadBalancerArn")
+    @Import(name="loadBalancerArn")
       private final @Nullable String loadBalancerArn;
 
     public Optional<String> getLoadBalancerArn() {
@@ -42,14 +42,14 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
      * Port of the listener. Required if `arn` is not set.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

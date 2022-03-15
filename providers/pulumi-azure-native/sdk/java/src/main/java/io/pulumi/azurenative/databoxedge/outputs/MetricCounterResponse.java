@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricDimensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricCounterResponse {
     /**
      * The additional dimensions to be added to metric.
@@ -34,12 +34,12 @@ public final class MetricCounterResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricCounterResponse(
-        @OutputCustomType.Parameter("additionalDimensions") @Nullable List<MetricDimensionResponse> additionalDimensions,
-        @OutputCustomType.Parameter("dimensionFilter") @Nullable List<MetricDimensionResponse> dimensionFilter,
-        @OutputCustomType.Parameter("instance") @Nullable String instance,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("additionalDimensions") @Nullable List<MetricDimensionResponse> additionalDimensions,
+        @CustomType.Parameter("dimensionFilter") @Nullable List<MetricDimensionResponse> dimensionFilter,
+        @CustomType.Parameter("instance") @Nullable String instance,
+        @CustomType.Parameter("name") String name) {
         this.additionalDimensions = additionalDimensions;
         this.dimensionFilter = dimensionFilter;
         this.instance = instance;

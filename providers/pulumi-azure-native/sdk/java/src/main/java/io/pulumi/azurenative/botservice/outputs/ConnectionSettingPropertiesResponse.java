@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ConnectionSettingParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionSettingPropertiesResponse {
     /**
      * Client Id associated with the Connection Setting.
@@ -64,18 +64,18 @@ public final class ConnectionSettingPropertiesResponse {
      */
     private final String settingId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionSettingPropertiesResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ConnectionSettingParameterResponse> parameters,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("scopes") @Nullable String scopes,
-        @OutputCustomType.Parameter("serviceProviderDisplayName") @Nullable String serviceProviderDisplayName,
-        @OutputCustomType.Parameter("serviceProviderId") @Nullable String serviceProviderId,
-        @OutputCustomType.Parameter("settingId") String settingId) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("parameters") @Nullable List<ConnectionSettingParameterResponse> parameters,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("scopes") @Nullable String scopes,
+        @CustomType.Parameter("serviceProviderDisplayName") @Nullable String serviceProviderDisplayName,
+        @CustomType.Parameter("serviceProviderId") @Nullable String serviceProviderId,
+        @CustomType.Parameter("settingId") String settingId) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.id = id;

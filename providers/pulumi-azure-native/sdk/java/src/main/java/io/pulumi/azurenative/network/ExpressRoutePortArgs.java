@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteLinkArgs;
 import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * Bandwidth of procured ports in Gbps.
      * 
      */
-    @InputImport(name="bandwidthInGbps")
+    @Import(name="bandwidthInGbps")
       private final @Nullable Output<Integer> bandwidthInGbps;
 
     public Output<Integer> getBandwidthInGbps() {
@@ -36,7 +36,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * Encapsulation method on physical ports.
      * 
      */
-    @InputImport(name="encapsulation")
+    @Import(name="encapsulation")
       private final @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
     public Output<Either<String,ExpressRoutePortsEncapsulation>> getEncapsulation() {
@@ -47,7 +47,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * The name of the ExpressRoutePort resource.
      * 
      */
-    @InputImport(name="expressRoutePortName")
+    @Import(name="expressRoutePortName")
       private final @Nullable Output<String> expressRoutePortName;
 
     public Output<String> getExpressRoutePortName() {
@@ -58,7 +58,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -69,7 +69,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * The identity of ExpressRoutePort, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -80,7 +80,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * The set of physical links of the ExpressRoutePort resource.
      * 
      */
-    @InputImport(name="links")
+    @Import(name="links")
       private final @Nullable Output<List<ExpressRouteLinkArgs>> links;
 
     public Output<List<ExpressRouteLinkArgs>> getLinks() {
@@ -91,7 +91,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -102,7 +102,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * The name of the peering location that the ExpressRoutePort is mapped to physically.
      * 
      */
-    @InputImport(name="peeringLocation")
+    @Import(name="peeringLocation")
       private final @Nullable Output<String> peeringLocation;
 
     public Output<String> getPeeringLocation() {
@@ -113,7 +113,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -124,7 +124,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

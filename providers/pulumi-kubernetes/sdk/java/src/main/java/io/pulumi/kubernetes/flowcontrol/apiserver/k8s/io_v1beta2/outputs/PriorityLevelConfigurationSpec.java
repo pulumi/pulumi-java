@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.LimitedPriorityLevelConfiguration;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PriorityLevelConfigurationSpec {
     /**
      * `limited` specifies how requests are handled for a Limited priority level. This field must be non-empty if and only if `type` is `"Limited"`.
@@ -23,10 +23,10 @@ public final class PriorityLevelConfigurationSpec {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PriorityLevelConfigurationSpec(
-        @OutputCustomType.Parameter("limited") @Nullable LimitedPriorityLevelConfiguration limited,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("limited") @Nullable LimitedPriorityLevelConfiguration limited,
+        @CustomType.Parameter("type") String type) {
         this.limited = limited;
         this.type = type;
     }

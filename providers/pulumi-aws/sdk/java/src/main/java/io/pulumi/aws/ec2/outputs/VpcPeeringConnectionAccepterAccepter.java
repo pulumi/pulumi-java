@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpcPeeringConnectionAccepterAccepter {
     /**
      * Indicates whether a local ClassicLink connection can communicate
@@ -30,11 +30,11 @@ public final class VpcPeeringConnectionAccepterAccepter {
      */
     private final @Nullable Boolean allowVpcToRemoteClassicLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcPeeringConnectionAccepterAccepter(
-        @OutputCustomType.Parameter("allowClassicLinkToRemoteVpc") @Nullable Boolean allowClassicLinkToRemoteVpc,
-        @OutputCustomType.Parameter("allowRemoteVpcDnsResolution") @Nullable Boolean allowRemoteVpcDnsResolution,
-        @OutputCustomType.Parameter("allowVpcToRemoteClassicLink") @Nullable Boolean allowVpcToRemoteClassicLink) {
+        @CustomType.Parameter("allowClassicLinkToRemoteVpc") @Nullable Boolean allowClassicLinkToRemoteVpc,
+        @CustomType.Parameter("allowRemoteVpcDnsResolution") @Nullable Boolean allowRemoteVpcDnsResolution,
+        @CustomType.Parameter("allowVpcToRemoteClassicLink") @Nullable Boolean allowVpcToRemoteClassicLink) {
         this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
         this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
         this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
      * The name or self link of the instance.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final String instance;
 
     public String getInstance() {
@@ -29,7 +29,7 @@ public final class GetCaCertsArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

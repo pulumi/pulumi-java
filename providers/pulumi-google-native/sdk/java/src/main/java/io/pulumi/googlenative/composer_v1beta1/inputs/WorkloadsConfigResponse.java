@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1beta1.inputs.SchedulerResourceResponse;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WebServerResourceResponse;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WorkerResourceResponse;
@@ -22,7 +22,7 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Resources used by Airflow schedulers.
      * 
      */
-    @InputImport(name="scheduler", required=true)
+    @Import(name="scheduler", required=true)
       private final SchedulerResourceResponse scheduler;
 
     public SchedulerResourceResponse getScheduler() {
@@ -33,7 +33,7 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Resources used by Airflow web server.
      * 
      */
-    @InputImport(name="webServer", required=true)
+    @Import(name="webServer", required=true)
       private final WebServerResourceResponse webServer;
 
     public WebServerResourceResponse getWebServer() {
@@ -44,7 +44,7 @@ public final class WorkloadsConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Resources used by Airflow workers.
      * 
      */
-    @InputImport(name="worker", required=true)
+    @Import(name="worker", required=true)
       private final WorkerResourceResponse worker;
 
     public WorkerResourceResponse getWorker() {

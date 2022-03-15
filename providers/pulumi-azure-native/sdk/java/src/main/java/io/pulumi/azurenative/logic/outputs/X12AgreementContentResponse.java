@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.X12OneWayAgreementResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X12AgreementContentResponse {
     /**
      * The X12 one-way receive agreement.
@@ -20,10 +20,10 @@ public final class X12AgreementContentResponse {
      */
     private final X12OneWayAgreementResponse sendAgreement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X12AgreementContentResponse(
-        @OutputCustomType.Parameter("receiveAgreement") X12OneWayAgreementResponse receiveAgreement,
-        @OutputCustomType.Parameter("sendAgreement") X12OneWayAgreementResponse sendAgreement) {
+        @CustomType.Parameter("receiveAgreement") X12OneWayAgreementResponse receiveAgreement,
+        @CustomType.Parameter("sendAgreement") X12OneWayAgreementResponse sendAgreement) {
         this.receiveAgreement = receiveAgreement;
         this.sendAgreement = sendAgreement;
     }

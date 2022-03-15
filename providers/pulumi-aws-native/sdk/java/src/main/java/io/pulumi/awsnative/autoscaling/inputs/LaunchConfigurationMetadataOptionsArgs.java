@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
      * This parameter enables or disables the HTTP metadata endpoint on your instances.
      * 
      */
-    @InputImport(name="httpEndpoint")
+    @Import(name="httpEndpoint")
       private final @Nullable Output<String> httpEndpoint;
 
     public Output<String> getHttpEndpoint() {
@@ -34,7 +34,7 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
      * The desired HTTP PUT response hop limit for instance metadata requests.
      * 
      */
-    @InputImport(name="httpPutResponseHopLimit")
+    @Import(name="httpPutResponseHopLimit")
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
     public Output<Integer> getHttpPutResponseHopLimit() {
@@ -45,7 +45,7 @@ public final class LaunchConfigurationMetadataOptionsArgs extends io.pulumi.reso
      * The state of token usage for your instance metadata requests.
      * 
      */
-    @InputImport(name="httpTokens")
+    @Import(name="httpTokens")
       private final @Nullable Output<String> httpTokens;
 
     public Output<String> getHttpTokens() {

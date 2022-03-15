@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
      * Command to display the non-compliant files.
      * 
      */
-    @InputImport(name="displayCommand", required=true)
+    @Import(name="displayCommand", required=true)
       private final String displayCommand;
 
     public String getDisplayCommand() {
@@ -31,7 +31,7 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
      * display_command is a single command that can be used to display a list of non compliant files. When there is no such command, we can also iterate a list of non compliant file using 'path'. Empty if `display_command` is set.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -42,7 +42,7 @@ public final class NonCompliantFileResponse extends io.pulumi.resources.InvokeAr
      * Explains why a file is non compliant for a CIS check.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {

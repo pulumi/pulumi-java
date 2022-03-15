@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
      * Defines supported metric goals for hyperparameter tuning
      * 
      */
-    @InputImport(name="goal", required=true)
+    @Import(name="goal", required=true)
       private final String goal;
 
     public String getGoal() {
@@ -31,7 +31,7 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the metric to optimize.
      * 
      */
-    @InputImport(name="primaryMetric", required=true)
+    @Import(name="primaryMetric", required=true)
       private final String primaryMetric;
 
     public String getPrimaryMetric() {

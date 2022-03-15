@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +19,21 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for this template.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<JobConfigArgs> config;
 
     public Output<JobConfigArgs> getConfig() {
         return this.config == null ? Output.empty() : this.config;
     }
 
-    @InputImport(name="jobTemplateId", required=true)
+    @Import(name="jobTemplateId", required=true)
       private final Output<String> jobTemplateId;
 
     public Output<String> getJobTemplateId() {
         return this.jobTemplateId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,14 +44,14 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the job template. Format: `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

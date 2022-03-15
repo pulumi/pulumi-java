@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.GatewayAssociationArgs;
 import io.pulumi.aws.directconnect.inputs.GatewayAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
      * 
      */
-    @OutputExport(name="allowedPrefixes", type=List.class, parameters={String.class})
+    @Export(name="allowedPrefixes", type=List.class, parameters={String.class})
     private Output<List<String>> allowedPrefixes;
 
     /**
@@ -52,7 +52,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * Used for single account Direct Connect gateway associations.
      * 
      */
-    @OutputExport(name="associatedGatewayId", type=String.class, parameters={})
+    @Export(name="associatedGatewayId", type=String.class, parameters={})
     private Output<String> associatedGatewayId;
 
     /**
@@ -68,7 +68,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    @OutputExport(name="associatedGatewayOwnerAccountId", type=String.class, parameters={})
+    @Export(name="associatedGatewayOwnerAccountId", type=String.class, parameters={})
     private Output<String> associatedGatewayOwnerAccountId;
 
     /**
@@ -83,7 +83,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
      * 
      */
-    @OutputExport(name="associatedGatewayType", type=String.class, parameters={})
+    @Export(name="associatedGatewayType", type=String.class, parameters={})
     private Output<String> associatedGatewayType;
 
     /**
@@ -97,7 +97,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the Direct Connect gateway association.
      * 
      */
-    @OutputExport(name="dxGatewayAssociationId", type=String.class, parameters={})
+    @Export(name="dxGatewayAssociationId", type=String.class, parameters={})
     private Output<String> dxGatewayAssociationId;
 
     /**
@@ -111,7 +111,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the Direct Connect gateway.
      * 
      */
-    @OutputExport(name="dxGatewayId", type=String.class, parameters={})
+    @Export(name="dxGatewayId", type=String.class, parameters={})
     private Output<String> dxGatewayId;
 
     /**
@@ -125,7 +125,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the AWS account that owns the Direct Connect gateway.
      * 
      */
-    @OutputExport(name="dxGatewayOwnerAccountId", type=String.class, parameters={})
+    @Export(name="dxGatewayOwnerAccountId", type=String.class, parameters={})
     private Output<String> dxGatewayOwnerAccountId;
 
     /**
@@ -140,7 +140,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * Used for cross-account Direct Connect gateway associations.
      * 
      */
-    @OutputExport(name="proposalId", type=String.class, parameters={})
+    @Export(name="proposalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> proposalId;
 
     /**
@@ -157,7 +157,7 @@ public class GatewayAssociation extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* use 'associated_gateway_id' argument instead */
-    @OutputExport(name="vpnGatewayId", type=String.class, parameters={})
+    @Export(name="vpnGatewayId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGatewayId;
 
     public Output</* @Nullable */ String> getVpnGatewayId() {

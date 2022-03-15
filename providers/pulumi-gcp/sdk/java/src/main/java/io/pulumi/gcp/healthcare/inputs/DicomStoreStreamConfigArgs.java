@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigBigqueryDestinationArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bigqueryDestination", required=true)
+    @Import(name="bigqueryDestination", required=true)
       private final Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Output<DicomStoreStreamConfigBigqueryDestinationArgs> getBigqueryDestination() {

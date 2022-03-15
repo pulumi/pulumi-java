@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * The identity
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Integer clusterId;
 
     public Integer getClusterId() {
@@ -33,7 +33,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * The cluster size
      * 
      */
-    @InputImport(name="clusterSize", required=true)
+    @Import(name="clusterSize", required=true)
       private final Integer clusterSize;
 
     public Integer getClusterSize() {
@@ -44,7 +44,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * The hosts
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final List<String> hosts;
 
     public List<String> getHosts() {
@@ -55,7 +55,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * The state of the cluster provisioning
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

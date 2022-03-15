@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.outputs;
 import io.pulumi.azurenative.solutions.outputs.ApplicationClientDetailsResponse;
 import io.pulumi.azurenative.solutions.outputs.JitAuthorizationPoliciesResponse;
 import io.pulumi.azurenative.solutions.outputs.JitSchedulingPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJitRequestResult {
     /**
      * The parent application id.
@@ -82,21 +82,21 @@ public final class GetJitRequestResult {
      */
     private final ApplicationClientDetailsResponse updatedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJitRequestResult(
-        @OutputCustomType.Parameter("applicationResourceId") String applicationResourceId,
-        @OutputCustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("jitAuthorizationPolicies") List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies,
-        @OutputCustomType.Parameter("jitRequestState") String jitRequestState,
-        @OutputCustomType.Parameter("jitSchedulingPolicy") JitSchedulingPolicyResponse jitSchedulingPolicy,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publisherTenantId") String publisherTenantId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
+        @CustomType.Parameter("applicationResourceId") String applicationResourceId,
+        @CustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("jitAuthorizationPolicies") List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies,
+        @CustomType.Parameter("jitRequestState") String jitRequestState,
+        @CustomType.Parameter("jitSchedulingPolicy") JitSchedulingPolicyResponse jitSchedulingPolicy,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publisherTenantId") String publisherTenantId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
         this.applicationResourceId = applicationResourceId;
         this.createdBy = createdBy;
         this.id = id;

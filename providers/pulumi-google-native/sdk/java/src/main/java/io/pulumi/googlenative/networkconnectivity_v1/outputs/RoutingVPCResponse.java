@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RoutingVPCResponse {
     /**
      * If true, indicates that this VPC network is currently associated with spokes that use the data transfer feature (spokes where the site_to_site_data_transfer field is set to true). If you create new spokes that use data transfer, they must be associated with this VPC network. At most, one VPC network will have this field set to true.
@@ -21,10 +21,10 @@ public final class RoutingVPCResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingVPCResponse(
-        @OutputCustomType.Parameter("requiredForNewSiteToSiteDataTransferSpokes") Boolean requiredForNewSiteToSiteDataTransferSpokes,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("requiredForNewSiteToSiteDataTransferSpokes") Boolean requiredForNewSiteToSiteDataTransferSpokes,
+        @CustomType.Parameter("uri") String uri) {
         this.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
         this.uri = uri;
     }

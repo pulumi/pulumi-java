@@ -9,7 +9,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolClientState;
 import io.pulumi.aws.cognito.outputs.UserPoolClientAnalyticsConfiguration;
 import io.pulumi.aws.cognito.outputs.UserPoolClientTokenValidityUnits;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
      */
-    @OutputExport(name="accessTokenValidity", type=Integer.class, parameters={})
+    @Export(name="accessTokenValidity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> accessTokenValidity;
 
     /**
@@ -51,7 +51,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of allowed OAuth flows (code, implicit, client_credentials).
      * 
      */
-    @OutputExport(name="allowedOauthFlows", type=List.class, parameters={String.class})
+    @Export(name="allowedOauthFlows", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedOauthFlows;
 
     /**
@@ -65,7 +65,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
      * 
      */
-    @OutputExport(name="allowedOauthFlowsUserPoolClient", type=Boolean.class, parameters={})
+    @Export(name="allowedOauthFlowsUserPoolClient", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowedOauthFlowsUserPoolClient;
 
     /**
@@ -79,7 +79,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
      * 
      */
-    @OutputExport(name="allowedOauthScopes", type=List.class, parameters={String.class})
+    @Export(name="allowedOauthScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedOauthScopes;
 
     /**
@@ -93,7 +93,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
      * 
      */
-    @OutputExport(name="analyticsConfiguration", type=UserPoolClientAnalyticsConfiguration.class, parameters={})
+    @Export(name="analyticsConfiguration", type=UserPoolClientAnalyticsConfiguration.class, parameters={})
     private Output</* @Nullable */ UserPoolClientAnalyticsConfiguration> analyticsConfiguration;
 
     /**
@@ -107,7 +107,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of allowed callback URLs for the identity providers.
      * 
      */
-    @OutputExport(name="callbackUrls", type=List.class, parameters={String.class})
+    @Export(name="callbackUrls", type=List.class, parameters={String.class})
     private Output<List<String>> callbackUrls;
 
     /**
@@ -121,7 +121,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Client secret of the user pool client.
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output<String> clientSecret;
 
     /**
@@ -135,7 +135,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Default redirect URI. Must be in the list of callback URLs.
      * 
      */
-    @OutputExport(name="defaultRedirectUri", type=String.class, parameters={})
+    @Export(name="defaultRedirectUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRedirectUri;
 
     /**
@@ -149,7 +149,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Enables or disables token revocation.
      * 
      */
-    @OutputExport(name="enableTokenRevocation", type=Boolean.class, parameters={})
+    @Export(name="enableTokenRevocation", type=Boolean.class, parameters={})
     private Output<Boolean> enableTokenRevocation;
 
     /**
@@ -163,7 +163,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
      * 
      */
-    @OutputExport(name="explicitAuthFlows", type=List.class, parameters={String.class})
+    @Export(name="explicitAuthFlows", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> explicitAuthFlows;
 
     /**
@@ -177,7 +177,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Should an application secret be generated.
      * 
      */
-    @OutputExport(name="generateSecret", type=Boolean.class, parameters={})
+    @Export(name="generateSecret", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> generateSecret;
 
     /**
@@ -191,7 +191,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
      */
-    @OutputExport(name="idTokenValidity", type=Integer.class, parameters={})
+    @Export(name="idTokenValidity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idTokenValidity;
 
     /**
@@ -205,7 +205,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of allowed logout URLs for the identity providers.
      * 
      */
-    @OutputExport(name="logoutUrls", type=List.class, parameters={String.class})
+    @Export(name="logoutUrls", type=List.class, parameters={String.class})
     private Output<List<String>> logoutUrls;
 
     /**
@@ -219,7 +219,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Name of the application client.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -233,7 +233,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
      * 
      */
-    @OutputExport(name="preventUserExistenceErrors", type=String.class, parameters={})
+    @Export(name="preventUserExistenceErrors", type=String.class, parameters={})
     private Output<String> preventUserExistenceErrors;
 
     /**
@@ -247,7 +247,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of user pool attributes the application client can read from.
      * 
      */
-    @OutputExport(name="readAttributes", type=List.class, parameters={String.class})
+    @Export(name="readAttributes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> readAttributes;
 
     /**
@@ -261,7 +261,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Time limit in days refresh tokens are valid for.
      * 
      */
-    @OutputExport(name="refreshTokenValidity", type=Integer.class, parameters={})
+    @Export(name="refreshTokenValidity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> refreshTokenValidity;
 
     /**
@@ -275,7 +275,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
      * 
      */
-    @OutputExport(name="supportedIdentityProviders", type=List.class, parameters={String.class})
+    @Export(name="supportedIdentityProviders", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportedIdentityProviders;
 
     /**
@@ -289,7 +289,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * Configuration block for units in which the validity times are represented in. Detailed below.
      * 
      */
-    @OutputExport(name="tokenValidityUnits", type=UserPoolClientTokenValidityUnits.class, parameters={})
+    @Export(name="tokenValidityUnits", type=UserPoolClientTokenValidityUnits.class, parameters={})
     private Output</* @Nullable */ UserPoolClientTokenValidityUnits> tokenValidityUnits;
 
     /**
@@ -303,7 +303,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * User pool the client belongs to.
      * 
      */
-    @OutputExport(name="userPoolId", type=String.class, parameters={})
+    @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
     /**
@@ -317,7 +317,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * List of user pool attributes the application client can write to.
      * 
      */
-    @OutputExport(name="writeAttributes", type=List.class, parameters={String.class})
+    @Export(name="writeAttributes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> writeAttributes;
 
     /**

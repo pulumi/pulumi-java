@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFailoverGroupReadWriteEndpointResponse {
     /**
      * Failover policy of the read-write endpoint for the failover group. If failoverPolicy is Automatic then failoverWithDataLossGracePeriodMinutes is required.
@@ -23,10 +23,10 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
      */
     private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFailoverGroupReadWriteEndpointResponse(
-        @OutputCustomType.Parameter("failoverPolicy") String failoverPolicy,
-        @OutputCustomType.Parameter("failoverWithDataLossGracePeriodMinutes") @Nullable Integer failoverWithDataLossGracePeriodMinutes) {
+        @CustomType.Parameter("failoverPolicy") String failoverPolicy,
+        @CustomType.Parameter("failoverWithDataLossGracePeriodMinutes") @Nullable Integer failoverWithDataLossGracePeriodMinutes) {
         this.failoverPolicy = failoverPolicy;
         this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
     }

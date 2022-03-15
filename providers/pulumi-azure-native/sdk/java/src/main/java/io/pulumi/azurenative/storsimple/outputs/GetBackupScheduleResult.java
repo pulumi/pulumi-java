@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.ScheduleRecurrenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupScheduleResult {
     /**
      * The type of backup which needs to be taken.
@@ -64,18 +64,18 @@ public final class GetBackupScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupScheduleResult(
-        @OutputCustomType.Parameter("backupType") String backupType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastSuccessfulRun") String lastSuccessfulRun,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("retentionCount") Double retentionCount,
-        @OutputCustomType.Parameter("scheduleRecurrence") ScheduleRecurrenceResponse scheduleRecurrence,
-        @OutputCustomType.Parameter("scheduleStatus") String scheduleStatus,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backupType") String backupType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastSuccessfulRun") String lastSuccessfulRun,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("retentionCount") Double retentionCount,
+        @CustomType.Parameter("scheduleRecurrence") ScheduleRecurrenceResponse scheduleRecurrence,
+        @CustomType.Parameter("scheduleStatus") String scheduleStatus,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("type") String type) {
         this.backupType = backupType;
         this.id = id;
         this.kind = kind;

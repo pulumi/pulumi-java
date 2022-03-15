@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterAutoUpgradeProfileResponse {
     /**
      * upgrade channel for auto upgrade.
@@ -17,8 +17,8 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
      */
     private final @Nullable String upgradeChannel;
 
-    @OutputCustomType.Constructor
-    private ManagedClusterAutoUpgradeProfileResponse(@OutputCustomType.Parameter("upgradeChannel") @Nullable String upgradeChannel) {
+    @CustomType.Constructor
+    private ManagedClusterAutoUpgradeProfileResponse(@CustomType.Parameter("upgradeChannel") @Nullable String upgradeChannel) {
         this.upgradeChannel = upgradeChannel;
     }
 

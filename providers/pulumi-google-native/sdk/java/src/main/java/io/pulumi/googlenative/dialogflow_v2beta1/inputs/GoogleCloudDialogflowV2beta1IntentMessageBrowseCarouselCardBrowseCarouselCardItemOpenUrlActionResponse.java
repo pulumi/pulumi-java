@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * URL
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening via web browser.
      * 
      */
-    @InputImport(name="urlTypeHint", required=true)
+    @Import(name="urlTypeHint", required=true)
       private final String urlTypeHint;
 
     public String getUrlTypeHint() {

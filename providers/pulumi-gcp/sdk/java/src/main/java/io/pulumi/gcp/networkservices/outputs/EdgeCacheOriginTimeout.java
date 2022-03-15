@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheOriginTimeout {
     /**
      * The maximum duration to wait for the origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.
@@ -30,11 +30,11 @@ public final class EdgeCacheOriginTimeout {
      */
     private final @Nullable String responseTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheOriginTimeout(
-        @OutputCustomType.Parameter("connectTimeout") @Nullable String connectTimeout,
-        @OutputCustomType.Parameter("maxAttemptsTimeout") @Nullable String maxAttemptsTimeout,
-        @OutputCustomType.Parameter("responseTimeout") @Nullable String responseTimeout) {
+        @CustomType.Parameter("connectTimeout") @Nullable String connectTimeout,
+        @CustomType.Parameter("maxAttemptsTimeout") @Nullable String maxAttemptsTimeout,
+        @CustomType.Parameter("responseTimeout") @Nullable String responseTimeout) {
         this.connectTimeout = connectTimeout;
         this.maxAttemptsTimeout = maxAttemptsTimeout;
         this.responseTimeout = responseTimeout;

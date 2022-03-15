@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * Override dynamic thing groups with static thing groups when 10-group limit is reached. If a thing belongs to 10 thing groups, and one or more of those groups are dynamic thing groups, adding a thing to a static group removes the thing from the last dynamic group.
      * 
      */
-    @InputImport(name="overrideDynamicGroup")
+    @Import(name="overrideDynamicGroup")
       private final @Nullable Output<Boolean> overrideDynamicGroup;
 
     public Output<Boolean> getOverrideDynamicGroup() {
@@ -30,7 +30,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * The name of the group to which you are adding a thing.
      * 
      */
-    @InputImport(name="thingGroupName")
+    @Import(name="thingGroupName")
       private final @Nullable Output<String> thingGroupName;
 
     public Output<String> getThingGroupName() {
@@ -41,7 +41,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
      * The name of the thing to add to a group.
      * 
      */
-    @InputImport(name="thingName")
+    @Import(name="thingName")
       private final @Nullable Output<String> thingName;
 
     public Output<String> getThingName() {

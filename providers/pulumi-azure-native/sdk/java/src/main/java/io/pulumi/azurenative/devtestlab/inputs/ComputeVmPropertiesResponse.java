@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.ComputeDataDiskResponse;
 import io.pulumi.azurenative.devtestlab.inputs.ComputeVmInstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets data disks blob uri for the virtual machine.
      * 
      */
-    @InputImport(name="dataDiskIds")
+    @Import(name="dataDiskIds")
       private final @Nullable List<String> dataDiskIds;
 
     public List<String> getDataDiskIds() {
@@ -36,7 +36,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets all data disks attached to the virtual machine.
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable List<ComputeDataDiskResponse> dataDisks;
 
     public List<ComputeDataDiskResponse> getDataDisks() {
@@ -47,7 +47,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets the network interface ID of the virtual machine.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
     public Optional<String> getNetworkInterfaceId() {
@@ -58,7 +58,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets OS disk blob uri for the virtual machine.
      * 
      */
-    @InputImport(name="osDiskId")
+    @Import(name="osDiskId")
       private final @Nullable String osDiskId;
 
     public Optional<String> getOsDiskId() {
@@ -69,7 +69,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets the OS type of the virtual machine.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -80,7 +80,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets the statuses of the virtual machine.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<ComputeVmInstanceViewStatusResponse> statuses;
 
     public List<ComputeVmInstanceViewStatusResponse> getStatuses() {
@@ -91,7 +91,7 @@ public final class ComputeVmPropertiesResponse extends io.pulumi.resources.Invok
      * Gets the size of the virtual machine.
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {

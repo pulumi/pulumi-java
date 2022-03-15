@@ -9,7 +9,7 @@ import io.pulumi.azurenative.maps.outputs.MapsAccountPropertiesResponse;
 import io.pulumi.azurenative.maps.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -51,7 +51,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The name of the Maps Account, which is unique within a Resource Group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The map account properties.
      * 
      */
-    @OutputExport(name="properties", type=MapsAccountPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=MapsAccountPropertiesResponse.class, parameters={})
     private Output<MapsAccountPropertiesResponse> properties;
 
     /**
@@ -79,7 +79,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The SKU of this account.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -93,7 +93,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Gets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -107,7 +107,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

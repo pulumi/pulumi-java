@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetIotSecuritySolutionArgs extends io.pulumi.resources.Invoke
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetIotSecuritySolutionArgs extends io.pulumi.resources.Invoke
      * The name of the IoT Security solution.
      * 
      */
-    @InputImport(name="solutionName", required=true)
+    @Import(name="solutionName", required=true)
       private final String solutionName;
 
     public String getSolutionName() {

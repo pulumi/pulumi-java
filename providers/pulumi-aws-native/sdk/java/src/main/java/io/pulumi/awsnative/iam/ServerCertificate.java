@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iam.ServerCertificateArgs;
 import io.pulumi.awsnative.iam.outputs.ServerCertificateTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the server certificate
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -33,37 +33,37 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="certificateBody", type=String.class, parameters={})
+    @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
     public Output</* @Nullable */ String> getCertificateBody() {
         return this.certificateBody;
     }
-    @OutputExport(name="certificateChain", type=String.class, parameters={})
+    @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     public Output</* @Nullable */ String> getCertificateChain() {
         return this.certificateChain;
     }
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     public Output</* @Nullable */ String> getPath() {
         return this.path;
     }
-    @OutputExport(name="privateKey", type=String.class, parameters={})
+    @Export(name="privateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateKey;
 
     public Output</* @Nullable */ String> getPrivateKey() {
         return this.privateKey;
     }
-    @OutputExport(name="serverCertificateName", type=String.class, parameters={})
+    @Export(name="serverCertificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverCertificateName;
 
     public Output</* @Nullable */ String> getServerCertificateName() {
         return this.serverCertificateName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ServerCertificateTag.class})
+    @Export(name="tags", type=List.class, parameters={ServerCertificateTag.class})
     private Output</* @Nullable */ List<ServerCertificateTag>> tags;
 
     public Output</* @Nullable */ List<ServerCertificateTag>> getTags() {

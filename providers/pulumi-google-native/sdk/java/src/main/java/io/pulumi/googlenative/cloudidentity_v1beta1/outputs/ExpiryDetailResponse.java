@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExpiryDetailResponse {
     /**
      * The time at which the `MembershipRole` will expire.
@@ -15,8 +15,8 @@ public final class ExpiryDetailResponse {
      */
     private final String expireTime;
 
-    @OutputCustomType.Constructor
-    private ExpiryDetailResponse(@OutputCustomType.Parameter("expireTime") String expireTime) {
+    @CustomType.Constructor
+    private ExpiryDetailResponse(@CustomType.Parameter("expireTime") String expireTime) {
         this.expireTime = expireTime;
     }
 

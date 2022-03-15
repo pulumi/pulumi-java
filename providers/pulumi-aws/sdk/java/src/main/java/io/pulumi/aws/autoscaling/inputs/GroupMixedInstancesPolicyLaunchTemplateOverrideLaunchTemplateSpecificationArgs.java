@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
      * The ID of the launch template. Conflicts with `launch_template_name`.
      * 
      */
-    @InputImport(name="launchTemplateId")
+    @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
     public Output<String> getLaunchTemplateId() {
@@ -29,7 +29,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
      * The name of the launch template. Conflicts with `launch_template_id`.
      * 
      */
-    @InputImport(name="launchTemplateName")
+    @Import(name="launchTemplateName")
       private final @Nullable Output<String> launchTemplateName;
 
     public Output<String> getLaunchTemplateName() {
@@ -40,7 +40,7 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplate
      * Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

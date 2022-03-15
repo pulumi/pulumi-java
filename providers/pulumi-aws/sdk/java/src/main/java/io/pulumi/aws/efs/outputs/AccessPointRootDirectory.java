@@ -4,13 +4,13 @@
 package io.pulumi.aws.efs.outputs;
 
 import io.pulumi.aws.efs.outputs.AccessPointRootDirectoryCreationInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointRootDirectory {
     /**
      * POSIX IDs and permissions to apply to the access point's Root Directory. See Creation Info below.
@@ -23,10 +23,10 @@ public final class AccessPointRootDirectory {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointRootDirectory(
-        @OutputCustomType.Parameter("creationInfo") @Nullable AccessPointRootDirectoryCreationInfo creationInfo,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("creationInfo") @Nullable AccessPointRootDirectoryCreationInfo creationInfo,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.creationInfo = creationInfo;
         this.path = path;
     }

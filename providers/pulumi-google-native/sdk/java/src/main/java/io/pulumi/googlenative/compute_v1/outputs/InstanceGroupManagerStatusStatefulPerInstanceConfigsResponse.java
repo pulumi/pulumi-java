@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse {
     /**
      * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
@@ -15,8 +15,8 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
      */
     private final Boolean allEffective;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(@OutputCustomType.Parameter("allEffective") Boolean allEffective) {
+    @CustomType.Constructor
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(@CustomType.Parameter("allEffective") Boolean allEffective) {
         this.allEffective = allEffective;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
      * 
      */
-    @InputImport(name="force", required=true)
+    @Import(name="force", required=true)
       private final Boolean force;
 
     public Boolean getForce() {
@@ -32,7 +32,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * BigQuery URI to a table, up to 2000 characters long, in the format `bq://projectId.bqDatasetId.tableId`
      * 
      */
-    @InputImport(name="tableUri", required=true)
+    @Import(name="tableUri", required=true)
       private final String tableUri;
 
     public String getTableUri() {
@@ -43,7 +43,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      * Determines whether the existing table in the destination is to be overwritten or appended to. If a write_disposition is specified, the `force` parameter is ignored.
      * 
      */
-    @InputImport(name="writeDisposition", required=true)
+    @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
     public String getWriteDisposition() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionState
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * Intrusion detection configuration properties.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
     public Output<FirewallPolicyIntrusionDetectionConfigurationArgs> getConfiguration() {
@@ -36,7 +36,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * Intrusion detection general state.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
     public Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {

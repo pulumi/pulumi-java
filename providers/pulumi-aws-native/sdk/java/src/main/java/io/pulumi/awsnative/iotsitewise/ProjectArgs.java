@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.ProjectTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The IDs of the assets to be associated to the project.
      * 
      */
-    @InputImport(name="assetIds")
+    @Import(name="assetIds")
       private final @Nullable Output<List<String>> assetIds;
 
     public Output<List<String>> getAssetIds() {
@@ -31,7 +31,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the portal in which to create the project.
      * 
      */
-    @InputImport(name="portalId", required=true)
+    @Import(name="portalId", required=true)
       private final Output<String> portalId;
 
     public Output<String> getPortalId() {
@@ -42,7 +42,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the project.
      * 
      */
-    @InputImport(name="projectDescription")
+    @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
     public Output<String> getProjectDescription() {
@@ -53,7 +53,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the project.
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -64,7 +64,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the project.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
     public Output<List<ProjectTagArgs>> getTags() {

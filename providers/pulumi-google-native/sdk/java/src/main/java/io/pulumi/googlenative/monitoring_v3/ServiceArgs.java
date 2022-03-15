@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.AppEngineArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.CloudEndpointsArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.ClusterIstioArgs;
@@ -26,7 +26,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Type used for App Engine services.
      * 
      */
-    @InputImport(name="appEngine")
+    @Import(name="appEngine")
       private final @Nullable Output<AppEngineArgs> appEngine;
 
     public Output<AppEngineArgs> getAppEngine() {
@@ -37,7 +37,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Type used for Cloud Endpoints services.
      * 
      */
-    @InputImport(name="cloudEndpoints")
+    @Import(name="cloudEndpoints")
       private final @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
 
     public Output<CloudEndpointsArgs> getCloudEndpoints() {
@@ -48,7 +48,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Type used for Istio services that live in a Kubernetes cluster.
      * 
      */
-    @InputImport(name="clusterIstio")
+    @Import(name="clusterIstio")
       private final @Nullable Output<ClusterIstioArgs> clusterIstio;
 
     public Output<ClusterIstioArgs> getClusterIstio() {
@@ -59,7 +59,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Custom service type.
      * 
      */
-    @InputImport(name="custom")
+    @Import(name="custom")
       private final @Nullable Output<CustomArgs> custom;
 
     public Output<CustomArgs> getCustom() {
@@ -70,7 +70,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name used for UI elements listing this Service.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -81,7 +81,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
      * 
      */
-    @InputImport(name="istioCanonicalService")
+    @Import(name="istioCanonicalService")
       private final @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
 
     public Output<IstioCanonicalServiceArgs> getIstioCanonicalService() {
@@ -92,7 +92,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Type used for Istio services scoped to an Istio mesh.
      * 
      */
-    @InputImport(name="meshIstio")
+    @Import(name="meshIstio")
       private final @Nullable Output<MeshIstioArgs> meshIstio;
 
     public Output<MeshIstioArgs> getMeshIstio() {
@@ -103,14 +103,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="serviceId")
+    @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
     public Output<String> getServiceId() {
@@ -121,7 +121,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for how to query telemetry on a Service.
      * 
      */
-    @InputImport(name="telemetry")
+    @Import(name="telemetry")
       private final @Nullable Output<TelemetryArgs> telemetry;
 
     public Output<TelemetryArgs> getTelemetry() {
@@ -132,21 +132,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
-    @InputImport(name="v3Id", required=true)
+    @Import(name="v3Id", required=true)
       private final Output<String> v3Id;
 
     public Output<String> getV3Id() {
         return this.v3Id;
     }
 
-    @InputImport(name="v3Id1", required=true)
+    @Import(name="v3Id1", required=true)
       private final Output<String> v3Id1;
 
     public Output<String> getV3Id1() {

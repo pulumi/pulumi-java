@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UrlSigningKeyParametersResponse {
     /**
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
@@ -34,12 +34,12 @@ public final class UrlSigningKeyParametersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlSigningKeyParametersResponse(
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
-        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
+        @CustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @CustomType.Parameter("type") String type) {
         this.keyId = keyId;
         this.secretSource = secretSource;
         this.secretVersion = secretVersion;

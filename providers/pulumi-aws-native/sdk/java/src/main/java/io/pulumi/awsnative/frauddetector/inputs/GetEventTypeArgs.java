@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.frauddetector.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the event type.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

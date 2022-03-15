@@ -11,7 +11,7 @@ import io.pulumi.azurenative.databoxedge.inputs.IoTEdgeAgentInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource allocation
      * 
      */
-    @InputImport(name="computeResource")
+    @Import(name="computeResource")
       private final @Nullable Output<ComputeResourceArgs> computeResource;
 
     public Output<ComputeResourceArgs> getComputeResource() {
@@ -37,7 +37,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -48,7 +48,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Host OS supported by the IoT role.
      * 
      */
-    @InputImport(name="hostPlatform", required=true)
+    @Import(name="hostPlatform", required=true)
       private final Output<Either<String,PlatformType>> hostPlatform;
 
     public Output<Either<String,PlatformType>> getHostPlatform() {
@@ -59,7 +59,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * IoT device metadata to which data box edge device needs to be connected.
      * 
      */
-    @InputImport(name="ioTDeviceDetails", required=true)
+    @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
@@ -70,7 +70,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Iot edge agent details to download the agent and bootstrap iot runtime.
      * 
      */
-    @InputImport(name="ioTEdgeAgentInfo")
+    @Import(name="ioTEdgeAgentInfo")
       private final @Nullable Output<IoTEdgeAgentInfoArgs> ioTEdgeAgentInfo;
 
     public Output<IoTEdgeAgentInfoArgs> getIoTEdgeAgentInfo() {
@@ -81,7 +81,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * IoT edge device to which the IoT role needs to be configured.
      * 
      */
-    @InputImport(name="ioTEdgeDeviceDetails", required=true)
+    @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
@@ -93,7 +93,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'IOT'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -104,7 +104,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The role name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -115,7 +115,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -126,7 +126,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Role status.
      * 
      */
-    @InputImport(name="roleStatus", required=true)
+    @Import(name="roleStatus", required=true)
       private final Output<Either<String,RoleStatus>> roleStatus;
 
     public Output<Either<String,RoleStatus>> getRoleStatus() {
@@ -137,7 +137,7 @@ public final class IoTRoleArgs extends io.pulumi.resources.ResourceArgs {
      * Mount points of shares in role(s).
      * 
      */
-    @InputImport(name="shareMappings")
+    @Import(name="shareMappings")
       private final @Nullable Output<List<MountPointMapArgs>> shareMappings;
 
     public Output<List<MountPointMapArgs>> getShareMappings() {

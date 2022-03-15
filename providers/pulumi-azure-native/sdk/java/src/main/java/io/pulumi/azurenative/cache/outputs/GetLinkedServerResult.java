@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkedServerResult {
     /**
      * Resource ID.
@@ -45,15 +45,15 @@ public final class GetLinkedServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkedServerResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkedRedisCacheId") String linkedRedisCacheId,
-        @OutputCustomType.Parameter("linkedRedisCacheLocation") String linkedRedisCacheLocation,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serverRole") String serverRole,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkedRedisCacheId") String linkedRedisCacheId,
+        @CustomType.Parameter("linkedRedisCacheLocation") String linkedRedisCacheLocation,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serverRole") String serverRole,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedRedisCacheId = linkedRedisCacheId;
         this.linkedRedisCacheLocation = linkedRedisCacheLocation;

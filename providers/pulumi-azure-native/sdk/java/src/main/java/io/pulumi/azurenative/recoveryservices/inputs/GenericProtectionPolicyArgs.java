@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * Expected value is 'GenericProtectionPolicy'.
      * 
      */
-    @InputImport(name="backupManagementType", required=true)
+    @Import(name="backupManagementType", required=true)
       private final Output<String> backupManagementType;
 
     public Output<String> getBackupManagementType() {
@@ -37,7 +37,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * Name of this policy's fabric.
      * 
      */
-    @InputImport(name="fabricName")
+    @Import(name="fabricName")
       private final @Nullable Output<String> fabricName;
 
     public Output<String> getFabricName() {
@@ -48,7 +48,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * Number of items associated with this policy.
      * 
      */
-    @InputImport(name="protectedItemsCount")
+    @Import(name="protectedItemsCount")
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
@@ -59,7 +59,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * List of sub-protection policies which includes schedule and retention
      * 
      */
-    @InputImport(name="subProtectionPolicy")
+    @Import(name="subProtectionPolicy")
       private final @Nullable Output<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
     public Output<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
@@ -70,7 +70,7 @@ public final class GenericProtectionPolicyArgs extends io.pulumi.resources.Resou
      * TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

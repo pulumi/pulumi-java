@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
      * The name of the Data Lake Store account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetVirtualNetworkRuleArgs extends io.pulumi.resources.InvokeA
      * The name of the virtual network rule to retrieve.
      * 
      */
-    @InputImport(name="virtualNetworkRuleName", required=true)
+    @Import(name="virtualNetworkRuleName", required=true)
       private final String virtualNetworkRuleName;
 
     public String getVirtualNetworkRuleName() {

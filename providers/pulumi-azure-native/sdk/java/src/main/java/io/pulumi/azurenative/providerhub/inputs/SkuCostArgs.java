@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuCostArgs Empty = new SkuCostArgs();
 
-    @InputImport(name="extendedUnit")
+    @Import(name="extendedUnit")
       private final @Nullable Output<String> extendedUnit;
 
     public Output<String> getExtendedUnit() {
         return this.extendedUnit == null ? Output.empty() : this.extendedUnit;
     }
 
-    @InputImport(name="meterId", required=true)
+    @Import(name="meterId", required=true)
       private final Output<String> meterId;
 
     public Output<String> getMeterId() {
         return this.meterId;
     }
 
-    @InputImport(name="quantity")
+    @Import(name="quantity")
       private final @Nullable Output<Integer> quantity;
 
     public Output<Integer> getQuantity() {

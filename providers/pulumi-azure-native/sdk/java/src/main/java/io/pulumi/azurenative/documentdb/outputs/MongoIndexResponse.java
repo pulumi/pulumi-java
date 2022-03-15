@@ -5,12 +5,12 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.MongoIndexKeysResponse;
 import io.pulumi.azurenative.documentdb.outputs.MongoIndexOptionsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MongoIndexResponse {
     /**
      * Cosmos DB MongoDB collection index keys
@@ -23,10 +23,10 @@ public final class MongoIndexResponse {
      */
     private final @Nullable MongoIndexOptionsResponse options;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MongoIndexResponse(
-        @OutputCustomType.Parameter("key") @Nullable MongoIndexKeysResponse key,
-        @OutputCustomType.Parameter("options") @Nullable MongoIndexOptionsResponse options) {
+        @CustomType.Parameter("key") @Nullable MongoIndexKeysResponse key,
+        @CustomType.Parameter("options") @Nullable MongoIndexOptionsResponse options) {
         this.key = key;
         this.options = options;
     }

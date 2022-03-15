@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.signer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSigningJobArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the signing job on output.
      * 
      */
-    @InputImport(name="jobId", required=true)
+    @Import(name="jobId", required=true)
       private final String jobId;
 
     public String getJobId() {

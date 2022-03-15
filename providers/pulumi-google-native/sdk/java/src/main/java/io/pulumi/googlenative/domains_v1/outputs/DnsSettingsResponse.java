@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.domains_v1.outputs.CustomDnsResponse;
 import io.pulumi.googlenative.domains_v1.outputs.GlueRecordResponse;
 import io.pulumi.googlenative.domains_v1.outputs.GoogleDomainsDnsResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DnsSettingsResponse {
     /**
      * An arbitrary DNS provider identified by its name servers.
@@ -28,11 +28,11 @@ public final class DnsSettingsResponse {
      */
     private final GoogleDomainsDnsResponse googleDomainsDns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DnsSettingsResponse(
-        @OutputCustomType.Parameter("customDns") CustomDnsResponse customDns,
-        @OutputCustomType.Parameter("glueRecords") List<GlueRecordResponse> glueRecords,
-        @OutputCustomType.Parameter("googleDomainsDns") GoogleDomainsDnsResponse googleDomainsDns) {
+        @CustomType.Parameter("customDns") CustomDnsResponse customDns,
+        @CustomType.Parameter("glueRecords") List<GlueRecordResponse> glueRecords,
+        @CustomType.Parameter("googleDomainsDns") GoogleDomainsDnsResponse googleDomainsDns) {
         this.customDns = customDns;
         this.glueRecords = glueRecords;
         this.googleDomainsDns = googleDomainsDns;

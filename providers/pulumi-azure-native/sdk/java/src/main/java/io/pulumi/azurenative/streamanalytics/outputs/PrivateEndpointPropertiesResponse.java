@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.PrivateLinkServiceConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointPropertiesResponse {
     /**
      * The date when this private endpoint was created.
@@ -23,10 +23,10 @@ public final class PrivateEndpointPropertiesResponse {
      */
     private final @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointPropertiesResponse(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
         this.createdDate = createdDate;
         this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
     }

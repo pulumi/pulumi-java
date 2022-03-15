@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
      * The resource Id of the step to be run.
      * 
      */
-    @InputImport(name="stepId", required=true)
+    @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
     public Output<String> getStepId() {

@@ -11,14 +11,14 @@ import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoSinkResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineTopologyResult {
     /**
      * An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
@@ -76,19 +76,19 @@ public final class GetPipelineTopologyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineTopologyResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDeclarationResponse> parameters,
-        @OutputCustomType.Parameter("processors") @Nullable List<EncoderProcessorResponse> processors,
-        @OutputCustomType.Parameter("sinks") List<VideoSinkResponse> sinks,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("sources") List<Either<RtspSourceResponse,VideoSourceResponse>> sources,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable List<ParameterDeclarationResponse> parameters,
+        @CustomType.Parameter("processors") @Nullable List<EncoderProcessorResponse> processors,
+        @CustomType.Parameter("sinks") List<VideoSinkResponse> sinks,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("sources") List<Either<RtspSourceResponse,VideoSourceResponse>> sources,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.kind = kind;

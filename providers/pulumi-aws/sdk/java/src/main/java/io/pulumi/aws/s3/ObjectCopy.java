@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.ObjectCopyArgs;
 import io.pulumi.aws.s3.inputs.ObjectCopyState;
 import io.pulumi.aws.s3.outputs.ObjectCopyGrant;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
      * 
      */
-    @OutputExport(name="acl", type=String.class, parameters={})
+    @Export(name="acl", type=String.class, parameters={})
     private Output</* @Nullable */ String> acl;
 
     /**
@@ -42,7 +42,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Name of the bucket to put the file in.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -52,7 +52,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
     public Output<String> getBucket() {
         return this.bucket;
     }
-    @OutputExport(name="bucketKeyEnabled", type=Boolean.class, parameters={})
+    @Export(name="bucketKeyEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> bucketKeyEnabled;
 
     public Output<Boolean> getBucketKeyEnabled() {
@@ -62,7 +62,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
      * 
      */
-    @OutputExport(name="cacheControl", type=String.class, parameters={})
+    @Export(name="cacheControl", type=String.class, parameters={})
     private Output<String> cacheControl;
 
     /**
@@ -76,7 +76,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
      * 
      */
-    @OutputExport(name="contentDisposition", type=String.class, parameters={})
+    @Export(name="contentDisposition", type=String.class, parameters={})
     private Output<String> contentDisposition;
 
     /**
@@ -90,7 +90,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
      * 
      */
-    @OutputExport(name="contentEncoding", type=String.class, parameters={})
+    @Export(name="contentEncoding", type=String.class, parameters={})
     private Output<String> contentEncoding;
 
     /**
@@ -104,7 +104,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Language the content is in e.g., en-US or en-GB.
      * 
      */
-    @OutputExport(name="contentLanguage", type=String.class, parameters={})
+    @Export(name="contentLanguage", type=String.class, parameters={})
     private Output<String> contentLanguage;
 
     /**
@@ -118,7 +118,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Standard MIME type describing the format of the object data, e.g., `application/octet-stream`. All Valid MIME Types are valid for this input.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -132,7 +132,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Copies the object if its entity tag (ETag) matches the specified tag.
      * 
      */
-    @OutputExport(name="copyIfMatch", type=String.class, parameters={})
+    @Export(name="copyIfMatch", type=String.class, parameters={})
     private Output</* @Nullable */ String> copyIfMatch;
 
     /**
@@ -146,7 +146,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @OutputExport(name="copyIfModifiedSince", type=String.class, parameters={})
+    @Export(name="copyIfModifiedSince", type=String.class, parameters={})
     private Output</* @Nullable */ String> copyIfModifiedSince;
 
     /**
@@ -160,7 +160,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Copies the object if its entity tag (ETag) is different than the specified ETag.
      * 
      */
-    @OutputExport(name="copyIfNoneMatch", type=String.class, parameters={})
+    @Export(name="copyIfNoneMatch", type=String.class, parameters={})
     private Output</* @Nullable */ String> copyIfNoneMatch;
 
     /**
@@ -174,7 +174,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Copies the object if it hasn't been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @OutputExport(name="copyIfUnmodifiedSince", type=String.class, parameters={})
+    @Export(name="copyIfUnmodifiedSince", type=String.class, parameters={})
     private Output</* @Nullable */ String> copyIfUnmodifiedSince;
 
     /**
@@ -188,7 +188,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the algorithm to use to when encrypting the object (for example, AES256).
      * 
      */
-    @OutputExport(name="customerAlgorithm", type=String.class, parameters={})
+    @Export(name="customerAlgorithm", type=String.class, parameters={})
     private Output<String> customerAlgorithm;
 
     /**
@@ -202,7 +202,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
      * 
      */
-    @OutputExport(name="customerKey", type=String.class, parameters={})
+    @Export(name="customerKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerKey;
 
     /**
@@ -216,7 +216,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
      * 
      */
-    @OutputExport(name="customerKeyMd5", type=String.class, parameters={})
+    @Export(name="customerKeyMd5", type=String.class, parameters={})
     private Output<String> customerKeyMd5;
 
     /**
@@ -230,7 +230,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * The ETag generated for the object (an MD5 sum of the object content). For plaintext objects or objects encrypted with an AWS-managed key, the hash is an MD5 digest of the object data. For objects encrypted with a KMS key or objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5 digest, regardless of the method of encryption. More information on possible values can be found on [Common Response Headers](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html).
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -244,7 +244,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
      * 
      */
-    @OutputExport(name="expectedBucketOwner", type=String.class, parameters={})
+    @Export(name="expectedBucketOwner", type=String.class, parameters={})
     private Output</* @Nullable */ String> expectedBucketOwner;
 
     /**
@@ -258,7 +258,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
      * 
      */
-    @OutputExport(name="expectedSourceBucketOwner", type=String.class, parameters={})
+    @Export(name="expectedSourceBucketOwner", type=String.class, parameters={})
     private Output</* @Nullable */ String> expectedSourceBucketOwner;
 
     /**
@@ -272,7 +272,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * If the object expiration is configured, this attribute will be set.
      * 
      */
-    @OutputExport(name="expiration", type=String.class, parameters={})
+    @Export(name="expiration", type=String.class, parameters={})
     private Output<String> expiration;
 
     /**
@@ -286,7 +286,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @OutputExport(name="expires", type=String.class, parameters={})
+    @Export(name="expires", type=String.class, parameters={})
     private Output</* @Nullable */ String> expires;
 
     /**
@@ -300,7 +300,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -314,7 +314,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Configuration block for header grants. Documented below. Conflicts with `acl`.
      * 
      */
-    @OutputExport(name="grants", type=List.class, parameters={ObjectCopyGrant.class})
+    @Export(name="grants", type=List.class, parameters={ObjectCopyGrant.class})
     private Output</* @Nullable */ List<ObjectCopyGrant>> grants;
 
     /**
@@ -328,7 +328,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Name of the object once it is in the bucket.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -342,7 +342,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the AWS KMS Encryption Context to use for object encryption. The value is a base64-encoded UTF-8 string holding JSON with the encryption context key-value pairs.
      * 
      */
-    @OutputExport(name="kmsEncryptionContext", type=String.class, parameters={})
+    @Export(name="kmsEncryptionContext", type=String.class, parameters={})
     private Output<String> kmsEncryptionContext;
 
     /**
@@ -356,7 +356,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the AWS KMS Key ARN to use for object encryption. This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`, use the exported `arn` attribute: `kms_key_id = aws_kms_key.foo.arn`
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -370,7 +370,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Returns the date that the object was last modified, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -384,7 +384,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
@@ -398,7 +398,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
      * 
      */
-    @OutputExport(name="metadataDirective", type=String.class, parameters={})
+    @Export(name="metadataDirective", type=String.class, parameters={})
     private Output</* @Nullable */ String> metadataDirective;
 
     /**
@@ -412,7 +412,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
      * 
      */
-    @OutputExport(name="objectLockLegalHoldStatus", type=String.class, parameters={})
+    @Export(name="objectLockLegalHoldStatus", type=String.class, parameters={})
     private Output<String> objectLockLegalHoldStatus;
 
     /**
@@ -426,7 +426,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
      * 
      */
-    @OutputExport(name="objectLockMode", type=String.class, parameters={})
+    @Export(name="objectLockMode", type=String.class, parameters={})
     private Output<String> objectLockMode;
 
     /**
@@ -440,7 +440,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * The date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
      * 
      */
-    @OutputExport(name="objectLockRetainUntilDate", type=String.class, parameters={})
+    @Export(name="objectLockRetainUntilDate", type=String.class, parameters={})
     private Output<String> objectLockRetainUntilDate;
 
     /**
@@ -454,7 +454,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * If present, indicates that the requester was successfully charged for the request.
      * 
      */
-    @OutputExport(name="requestCharged", type=Boolean.class, parameters={})
+    @Export(name="requestCharged", type=Boolean.class, parameters={})
     private Output<Boolean> requestCharged;
 
     /**
@@ -468,7 +468,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
      * 
      */
-    @OutputExport(name="requestPayer", type=String.class, parameters={})
+    @Export(name="requestPayer", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestPayer;
 
     /**
@@ -482,7 +482,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
      * 
      */
-    @OutputExport(name="serverSideEncryption", type=String.class, parameters={})
+    @Export(name="serverSideEncryption", type=String.class, parameters={})
     private Output<String> serverSideEncryption;
 
     /**
@@ -496,7 +496,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the source object for the copy operation. You specify the value in one of two formats. For objects not accessed through an access point, specify the name of the source bucket and the key of the source object, separated by a slash (`/`). For example, `testbucket/test1.json`. For objects accessed through access points, specify the Amazon Resource Name (ARN) of the object as accessed through the access point, in the format `arn:aws:s3:<Region>:<account-id>:accesspoint/<access-point-name>/object/<key>`. For example, `arn:aws:s3:us-west-2:9999912999:accesspoint/my-access-point/object/testbucket/test1.json`.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output<String> source;
 
     /**
@@ -510,7 +510,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the algorithm to use when decrypting the source object (for example, AES256).
      * 
      */
-    @OutputExport(name="sourceCustomerAlgorithm", type=String.class, parameters={})
+    @Export(name="sourceCustomerAlgorithm", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceCustomerAlgorithm;
 
     /**
@@ -524,7 +524,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
      * 
      */
-    @OutputExport(name="sourceCustomerKey", type=String.class, parameters={})
+    @Export(name="sourceCustomerKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceCustomerKey;
 
     /**
@@ -538,7 +538,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
      * 
      */
-    @OutputExport(name="sourceCustomerKeyMd5", type=String.class, parameters={})
+    @Export(name="sourceCustomerKeyMd5", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceCustomerKeyMd5;
 
     /**
@@ -552,7 +552,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Version of the copied object in the source bucket.
      * 
      */
-    @OutputExport(name="sourceVersionId", type=String.class, parameters={})
+    @Export(name="sourceVersionId", type=String.class, parameters={})
     private Output<String> sourceVersionId;
 
     /**
@@ -566,7 +566,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies the desired [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html#AmazonS3-CopyObject-request-header-StorageClass) for the object. Defaults to `STANDARD`.
      * 
      */
-    @OutputExport(name="storageClass", type=String.class, parameters={})
+    @Export(name="storageClass", type=String.class, parameters={})
     private Output<String> storageClass;
 
     /**
@@ -580,7 +580,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
      * 
      */
-    @OutputExport(name="taggingDirective", type=String.class, parameters={})
+    @Export(name="taggingDirective", type=String.class, parameters={})
     private Output</* @Nullable */ String> taggingDirective;
 
     /**
@@ -594,7 +594,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -608,7 +608,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -622,7 +622,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Version ID of the newly created copy.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
@@ -636,7 +636,7 @@ public class ObjectCopy extends io.pulumi.resources.CustomResource {
      * Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
      * 
      */
-    @OutputExport(name="websiteRedirect", type=String.class, parameters={})
+    @Export(name="websiteRedirect", type=String.class, parameters={})
     private Output<String> websiteRedirect;
 
     /**

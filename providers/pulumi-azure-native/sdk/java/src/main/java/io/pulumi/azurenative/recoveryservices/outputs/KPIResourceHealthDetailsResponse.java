@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ResourceHealthDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KPIResourceHealthDetailsResponse {
     /**
      * Resource Health Status
@@ -24,10 +24,10 @@ public final class KPIResourceHealthDetailsResponse {
      */
     private final @Nullable String resourceHealthStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KPIResourceHealthDetailsResponse(
-        @OutputCustomType.Parameter("resourceHealthDetails") @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails,
-        @OutputCustomType.Parameter("resourceHealthStatus") @Nullable String resourceHealthStatus) {
+        @CustomType.Parameter("resourceHealthDetails") @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails,
+        @CustomType.Parameter("resourceHealthStatus") @Nullable String resourceHealthStatus) {
         this.resourceHealthDetails = resourceHealthDetails;
         this.resourceHealthStatus = resourceHealthStatus;
     }

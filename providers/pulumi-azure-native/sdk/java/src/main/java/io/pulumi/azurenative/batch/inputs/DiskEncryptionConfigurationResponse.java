@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DiskEncryptionConfigurationResponse extends io.pulumi.resourc
      * On Linux pool, only "TemporaryDisk" is supported; on Windows pool, "OsDisk" and "TemporaryDisk" must be specified.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable List<String> targets;
 
     public List<String> getTargets() {

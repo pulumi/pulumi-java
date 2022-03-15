@@ -5,13 +5,13 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseTableResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserTablesSqlSyncTaskOutputResponse {
     /**
      * Mapping from database name to list of source tables
@@ -34,12 +34,12 @@ public final class GetUserTablesSqlSyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserTablesSqlSyncTaskOutputResponse(
-        @OutputCustomType.Parameter("databasesToSourceTables") Map<String,List<DatabaseTableResponse>> databasesToSourceTables,
-        @OutputCustomType.Parameter("databasesToTargetTables") Map<String,List<DatabaseTableResponse>> databasesToTargetTables,
-        @OutputCustomType.Parameter("tableValidationErrors") Map<String,List<String>> tableValidationErrors,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("databasesToSourceTables") Map<String,List<DatabaseTableResponse>> databasesToSourceTables,
+        @CustomType.Parameter("databasesToTargetTables") Map<String,List<DatabaseTableResponse>> databasesToTargetTables,
+        @CustomType.Parameter("tableValidationErrors") Map<String,List<String>> tableValidationErrors,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databasesToSourceTables = databasesToSourceTables;
         this.databasesToTargetTables = databasesToTargetTables;
         this.tableValidationErrors = tableValidationErrors;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.IamPolicyAnalysisQueryResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryContentResponse {
     /**
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
@@ -15,8 +15,8 @@ public final class QueryContentResponse {
      */
     private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
-    @OutputCustomType.Constructor
-    private QueryContentResponse(@OutputCustomType.Parameter("iamPolicyAnalysisQuery") IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
+    @CustomType.Constructor
+    private QueryContentResponse(@CustomType.Parameter("iamPolicyAnalysisQuery") IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
         this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
     }
 

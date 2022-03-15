@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayCustomErrorResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayHttpListenerResponse {
     /**
      * Custom error configurations of the HTTP listener.
@@ -91,23 +91,23 @@ public final class ApplicationGatewayHttpListenerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayHttpListenerResponse(
-        @OutputCustomType.Parameter("customErrorConfigurations") @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
-        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
-        @OutputCustomType.Parameter("frontendPort") @Nullable SubResourceResponse frontendPort,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("hostNames") @Nullable List<String> hostNames,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requireServerNameIndication") @Nullable Boolean requireServerNameIndication,
-        @OutputCustomType.Parameter("sslCertificate") @Nullable SubResourceResponse sslCertificate,
-        @OutputCustomType.Parameter("sslProfile") @Nullable SubResourceResponse sslProfile,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("customErrorConfigurations") @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @CustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @CustomType.Parameter("frontendPort") @Nullable SubResourceResponse frontendPort,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("hostNames") @Nullable List<String> hostNames,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requireServerNameIndication") @Nullable Boolean requireServerNameIndication,
+        @CustomType.Parameter("sslCertificate") @Nullable SubResourceResponse sslCertificate,
+        @CustomType.Parameter("sslProfile") @Nullable SubResourceResponse sslProfile,
+        @CustomType.Parameter("type") String type) {
         this.customErrorConfigurations = customErrorConfigurations;
         this.etag = etag;
         this.firewallPolicy = firewallPolicy;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.LogAnalyticsQueryPackQu
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Object Id of user creating the query.
      * 
      */
-    @OutputExport(name="author", type=String.class, parameters={})
+    @Export(name="author", type=String.class, parameters={})
     private Output<String> author;
 
     /**
@@ -52,7 +52,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Body of the query.
      * 
      */
-    @OutputExport(name="body", type=String.class, parameters={})
+    @Export(name="body", type=String.class, parameters={})
     private Output<String> body;
 
     /**
@@ -66,7 +66,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Description of the query.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Unique display name for your query within the Query Pack.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -94,7 +94,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Additional properties that can be set for the query.
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -122,7 +122,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * The related metadata items for the function.
      * 
      */
-    @OutputExport(name="related", type=LogAnalyticsQueryPackQueryPropertiesResponseRelated.class, parameters={})
+    @Export(name="related", type=LogAnalyticsQueryPackQueryPropertiesResponseRelated.class, parameters={})
     private Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> related;
 
     /**
@@ -136,7 +136,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -150,7 +150,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Tags associated with the query.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, List.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Creation Date for the Log Analytics Query, in ISO 8601 format.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
@@ -178,7 +178,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Last modified date of the Log Analytics Query, in ISO 8601 format.
      * 
      */
-    @OutputExport(name="timeModified", type=String.class, parameters={})
+    @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
@@ -192,7 +192,7 @@ public class Query extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

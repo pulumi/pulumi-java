@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * Commit Time.
      * 
      */
-    @InputImport(name="commitTime")
+    @Import(name="commitTime")
       private final @Nullable String commitTime;
 
     public Optional<String> getCommitTime() {
@@ -34,7 +34,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * List of configuration ids.
      * 
      */
-    @InputImport(name="configurationIds")
+    @Import(name="configurationIds")
       private final @Nullable List<String> configurationIds;
 
     public List<String> getConfigurationIds() {
@@ -45,7 +45,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * Deployment Status.
      * 
      */
-    @InputImport(name="deploymentStatus")
+    @Import(name="deploymentStatus")
       private final @Nullable String deploymentStatus;
 
     public Optional<String> getDeploymentStatus() {
@@ -56,7 +56,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * Configuration Deployment Type.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable String deploymentType;
 
     public Optional<String> getDeploymentType() {
@@ -67,7 +67,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * Error Message.
      * 
      */
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
@@ -78,7 +78,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * Region Name.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {

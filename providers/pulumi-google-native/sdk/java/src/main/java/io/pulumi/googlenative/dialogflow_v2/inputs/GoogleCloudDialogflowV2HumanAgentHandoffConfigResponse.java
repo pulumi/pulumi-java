@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
      * Uses LivePerson (https://www.liveperson.com).
      * 
      */
-    @InputImport(name="livePersonConfig", required=true)
+    @Import(name="livePersonConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse getLivePersonConfig() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse extend
      * Uses Salesforce Live Agent.
      * 
      */
-    @InputImport(name="salesforceLiveAgentConfig", required=true)
+    @Import(name="salesforceLiveAgentConfig", required=true)
       private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse getSalesforceLiveAgentConfig() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.RealtimeLogConfigKinesisStreamConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class RealtimeLogConfigEndPointArgs extends io.pulumi.resources.Res
 
     public static final RealtimeLogConfigEndPointArgs Empty = new RealtimeLogConfigEndPointArgs();
 
-    @InputImport(name="kinesisStreamConfig", required=true)
+    @Import(name="kinesisStreamConfig", required=true)
       private final Output<RealtimeLogConfigKinesisStreamConfigArgs> kinesisStreamConfig;
 
     public Output<RealtimeLogConfigKinesisStreamConfigArgs> getKinesisStreamConfig() {
         return this.kinesisStreamConfig;
     }
 
-    @InputImport(name="streamType", required=true)
+    @Import(name="streamType", required=true)
       private final Output<String> streamType;
 
     public Output<String> getStreamType() {

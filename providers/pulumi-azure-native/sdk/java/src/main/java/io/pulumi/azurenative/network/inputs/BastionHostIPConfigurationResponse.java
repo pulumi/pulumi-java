@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * Private IP allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
@@ -67,7 +67,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * The provisioning state of the bastion host IP configuration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -78,7 +78,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * Reference of the PublicIP resource.
      * 
      */
-    @InputImport(name="publicIPAddress", required=true)
+    @Import(name="publicIPAddress", required=true)
       private final SubResourceResponse publicIPAddress;
 
     public SubResourceResponse getPublicIPAddress() {
@@ -89,7 +89,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * Reference of the subnet resource.
      * 
      */
-    @InputImport(name="subnet", required=true)
+    @Import(name="subnet", required=true)
       private final SubResourceResponse subnet;
 
     public SubResourceResponse getSubnet() {
@@ -100,7 +100,7 @@ public final class BastionHostIPConfigurationResponse extends io.pulumi.resource
      * Ip configuration type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

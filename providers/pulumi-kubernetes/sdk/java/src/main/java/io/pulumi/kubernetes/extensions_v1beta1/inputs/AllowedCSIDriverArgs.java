@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AllowedCSIDriverArgs extends io.pulumi.resources.ResourceArgs
      * Name is the registered name of the CSI driver
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

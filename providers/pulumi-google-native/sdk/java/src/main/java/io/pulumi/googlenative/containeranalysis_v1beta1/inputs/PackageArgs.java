@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DistributionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The various channels by which a package is distributed.
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Output<List<DistributionArgs>> distribution;
 
     public Output<List<DistributionArgs>> getDistribution() {
@@ -35,7 +35,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of the package.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

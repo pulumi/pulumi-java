@@ -6,7 +6,7 @@ package io.pulumi.aws.backup.inputs;
 import io.pulumi.aws.backup.inputs.SelectionConditionGetArgs;
 import io.pulumi.aws.backup.inputs.SelectionSelectionTagGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * A list of conditions that you define to assign resources to your backup plans using tags.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<SelectionConditionGetArgs>> conditions;
 
     public Output<List<SelectionConditionGetArgs>> getConditions() {
@@ -32,7 +32,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
      * 
      */
-    @InputImport(name="iamRoleArn")
+    @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -43,7 +43,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * The display name of a resource selection document.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to exclude from a backup plan.
      * 
      */
-    @InputImport(name="notResources")
+    @Import(name="notResources")
       private final @Nullable Output<List<String>> notResources;
 
     public Output<List<String>> getNotResources() {
@@ -65,7 +65,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * The backup plan ID to be associated with the selection of resources.
      * 
      */
-    @InputImport(name="planId")
+    @Import(name="planId")
       private final @Nullable Output<String> planId;
 
     public Output<String> getPlanId() {
@@ -76,7 +76,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
@@ -87,7 +87,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
      * Tag-based conditions used to specify a set of resources to assign to a backup plan.
      * 
      */
-    @InputImport(name="selectionTags")
+    @Import(name="selectionTags")
       private final @Nullable Output<List<SelectionSelectionTagGetArgs>> selectionTags;
 
     public Output<List<SelectionSelectionTagGetArgs>> getSelectionTags() {

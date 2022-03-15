@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs extends io.pul
      * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsArgs extends io.pul
      * Name of the Cloudwatch Log Group to deliver logs to.
      * 
      */
-    @InputImport(name="logGroup")
+    @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
     public Output<String> getLogGroup() {

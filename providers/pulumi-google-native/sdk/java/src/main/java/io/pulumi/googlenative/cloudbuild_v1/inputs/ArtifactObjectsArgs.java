@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/". (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Files in the workspace matching any path pattern will be uploaded to Cloud Storage with this location as a prefix.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -34,7 +34,7 @@ public final class ArtifactObjectsArgs extends io.pulumi.resources.ResourceArgs 
      * Path globs used to match files in the build's workspace.
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {

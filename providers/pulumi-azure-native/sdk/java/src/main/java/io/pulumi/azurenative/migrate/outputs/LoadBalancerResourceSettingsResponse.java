@@ -5,14 +5,14 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.LBBackendAddressPoolResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.outputs.LBFrontendIPConfigurationResourceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerResourceSettingsResponse {
     /**
      * Gets or sets the backend address pools of the load balancer.
@@ -47,14 +47,14 @@ public final class LoadBalancerResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerResourceSettingsResponse(
-        @OutputCustomType.Parameter("backendAddressPools") @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
-        @OutputCustomType.Parameter("frontendIPConfigurations") @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
-        @OutputCustomType.Parameter("zones") @Nullable String zones) {
+        @CustomType.Parameter("backendAddressPools") @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
+        @CustomType.Parameter("frontendIPConfigurations") @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("targetResourceName") String targetResourceName,
+        @CustomType.Parameter("zones") @Nullable String zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
         this.resourceType = resourceType;

@@ -10,12 +10,12 @@ import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedFieldQueryS
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedFieldSingleHeader;
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedFieldSingleQueryArgument;
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedFieldUriPath;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclLoggingConfigurationRedactedField {
     /**
      * Redact all query arguments.
@@ -65,15 +65,15 @@ public final class WebAclLoggingConfigurationRedactedField {
      */
     private final @Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclLoggingConfigurationRedactedField(
-        @OutputCustomType.Parameter("allQueryArguments") @Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments,
-        @OutputCustomType.Parameter("body") @Nullable WebAclLoggingConfigurationRedactedFieldBody body,
-        @OutputCustomType.Parameter("method") @Nullable WebAclLoggingConfigurationRedactedFieldMethod method,
-        @OutputCustomType.Parameter("queryString") @Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString,
-        @OutputCustomType.Parameter("singleHeader") @Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader,
-        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument,
-        @OutputCustomType.Parameter("uriPath") @Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
+        @CustomType.Parameter("allQueryArguments") @Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArguments allQueryArguments,
+        @CustomType.Parameter("body") @Nullable WebAclLoggingConfigurationRedactedFieldBody body,
+        @CustomType.Parameter("method") @Nullable WebAclLoggingConfigurationRedactedFieldMethod method,
+        @CustomType.Parameter("queryString") @Nullable WebAclLoggingConfigurationRedactedFieldQueryString queryString,
+        @CustomType.Parameter("singleHeader") @Nullable WebAclLoggingConfigurationRedactedFieldSingleHeader singleHeader,
+        @CustomType.Parameter("singleQueryArgument") @Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgument singleQueryArgument,
+        @CustomType.Parameter("uriPath") @Nullable WebAclLoggingConfigurationRedactedFieldUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

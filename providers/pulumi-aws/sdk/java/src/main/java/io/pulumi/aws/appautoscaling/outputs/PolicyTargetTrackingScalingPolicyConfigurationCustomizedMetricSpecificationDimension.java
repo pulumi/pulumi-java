@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appautoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension {
     /**
      * The name of the policy. Must be between 1 and 255 characters in length.
@@ -20,10 +20,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PublicIPAddressResourceSettingsResponse {
     /**
      * Gets or sets the domain name label.
@@ -48,15 +48,15 @@ public final class PublicIPAddressResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicIPAddressResourceSettingsResponse(
-        @OutputCustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("publicIpAllocationMethod") @Nullable String publicIpAllocationMethod,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
-        @OutputCustomType.Parameter("zones") @Nullable String zones) {
+        @CustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("publicIpAllocationMethod") @Nullable String publicIpAllocationMethod,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("targetResourceName") String targetResourceName,
+        @CustomType.Parameter("zones") @Nullable String zones) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;

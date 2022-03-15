@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHiveJsonSerDe;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOpenXJsonSerDe;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class DeliveryStreamDeserializer extends io.pulumi.resources.Invoke
 
     public static final DeliveryStreamDeserializer Empty = new DeliveryStreamDeserializer();
 
-    @InputImport(name="hiveJsonSerDe")
+    @Import(name="hiveJsonSerDe")
       private final @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
 
     public Optional<DeliveryStreamHiveJsonSerDe> getHiveJsonSerDe() {
         return this.hiveJsonSerDe == null ? Optional.empty() : Optional.ofNullable(this.hiveJsonSerDe);
     }
 
-    @InputImport(name="openXJsonSerDe")
+    @Import(name="openXJsonSerDe")
       private final @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
 
     public Optional<DeliveryStreamOpenXJsonSerDe> getOpenXJsonSerDe() {

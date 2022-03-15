@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.RegionalAvailabilityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLabAccountRegionalAvailabilityResult {
     /**
      * Availability information for different size categories per region
@@ -17,8 +17,8 @@ public final class GetLabAccountRegionalAvailabilityResult {
      */
     private final @Nullable List<RegionalAvailabilityResponse> regionalAvailability;
 
-    @OutputCustomType.Constructor
-    private GetLabAccountRegionalAvailabilityResult(@OutputCustomType.Parameter("regionalAvailability") @Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
+    @CustomType.Constructor
+    private GetLabAccountRegionalAvailabilityResult(@CustomType.Parameter("regionalAvailability") @Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
         this.regionalAvailability = regionalAvailability;
     }
 

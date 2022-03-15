@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Glue Connection.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -43,7 +43,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A map of key-value pairs used as parameters for this connection.
      * 
      */
-    @InputImport(name="connectionProperties")
+    @Import(name="connectionProperties")
       private final @Nullable Output<Map<String,String>> connectionProperties;
 
     public Output<Map<String,String>> getConnectionProperties() {
@@ -54,7 +54,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
      * 
      */
-    @InputImport(name="connectionType")
+    @Import(name="connectionType")
       private final @Nullable Output<String> connectionType;
 
     public Output<String> getConnectionType() {
@@ -65,7 +65,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Description of the connection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -76,7 +76,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A list of criteria that can be used in selecting this connection.
      * 
      */
-    @InputImport(name="matchCriterias")
+    @Import(name="matchCriterias")
       private final @Nullable Output<List<String>> matchCriterias;
 
     public Output<List<String>> getMatchCriterias() {
@@ -87,7 +87,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.
      * 
      */
-    @InputImport(name="physicalConnectionRequirements")
+    @Import(name="physicalConnectionRequirements")
       private final @Nullable Output<ConnectionPhysicalConnectionRequirementsGetArgs> physicalConnectionRequirements;
 
     public Output<ConnectionPhysicalConnectionRequirementsGetArgs> getPhysicalConnectionRequirements() {
@@ -109,7 +109,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

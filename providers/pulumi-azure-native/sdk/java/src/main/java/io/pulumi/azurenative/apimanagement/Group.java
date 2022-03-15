@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.GroupArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
      * 
      */
-    @OutputExport(name="builtIn", type=Boolean.class, parameters={})
+    @Export(name="builtIn", type=Boolean.class, parameters={})
     private Output<Boolean> builtIn;
 
     /**
@@ -49,7 +49,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Group description. Can contain HTML formatting tags.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Group name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
      * 
      */
-    @OutputExport(name="externalId", type=String.class, parameters={})
+    @Export(name="externalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalId;
 
     /**
@@ -91,7 +91,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

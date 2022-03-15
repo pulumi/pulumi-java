@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.HubResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * Groups for configuration
      * 
      */
-    @OutputExport(name="appliesToGroups", type=List.class, parameters={ConnectivityGroupItemResponse.class})
+    @Export(name="appliesToGroups", type=List.class, parameters={ConnectivityGroupItemResponse.class})
     private Output</* @Nullable */ List<ConnectivityGroupItemResponse>> appliesToGroups;
 
     /**
@@ -51,7 +51,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * Connectivity topology type.
      * 
      */
-    @OutputExport(name="connectivityTopology", type=String.class, parameters={})
+    @Export(name="connectivityTopology", type=String.class, parameters={})
     private Output<String> connectivityTopology;
 
     /**
@@ -65,7 +65,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * Flag if need to remove current existing peerings.
      * 
      */
-    @OutputExport(name="deleteExistingPeering", type=String.class, parameters={})
+    @Export(name="deleteExistingPeering", type=String.class, parameters={})
     private Output</* @Nullable */ String> deleteExistingPeering;
 
     /**
@@ -79,7 +79,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * A description of the connectivity configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -93,7 +93,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * A friendly name for the resource.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -107,7 +107,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -121,7 +121,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * List of hubItems
      * 
      */
-    @OutputExport(name="hubs", type=List.class, parameters={HubResponse.class})
+    @Export(name="hubs", type=List.class, parameters={HubResponse.class})
     private Output</* @Nullable */ List<HubResponse>> hubs;
 
     /**
@@ -135,7 +135,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * Flag if global mesh is supported.
      * 
      */
-    @OutputExport(name="isGlobal", type=String.class, parameters={})
+    @Export(name="isGlobal", type=String.class, parameters={})
     private Output</* @Nullable */ String> isGlobal;
 
     /**
@@ -149,7 +149,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -163,7 +163,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * The provisioning state of the connectivity configuration resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -177,7 +177,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * The system metadata related to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -191,7 +191,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

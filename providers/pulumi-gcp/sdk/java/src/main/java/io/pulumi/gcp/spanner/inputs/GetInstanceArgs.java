@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable String config;
 
     public Optional<String> getConfig() {
         return this.config == null ? Optional.empty() : Optional.ofNullable(this.config);
     }
 
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the spanner instance.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

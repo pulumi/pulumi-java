@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of concurrent tasks that Cloud Tasks allows to be dispatched for this queue. After this threshold has been reached, Cloud Tasks stops dispatching tasks until the number of concurrent requests decreases. If unspecified when the queue is created, Cloud Tasks will pick the default. The maximum allowed value is 5,000. This field has the same meaning as [max_concurrent_requests in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
      * 
      */
-    @InputImport(name="maxConcurrentDispatches")
+    @Import(name="maxConcurrentDispatches")
       private final @Nullable Output<Integer> maxConcurrentDispatches;
 
     public Output<Integer> getMaxConcurrentDispatches() {
@@ -34,7 +34,7 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum rate at which tasks are dispatched from this queue. If unspecified when the queue is created, Cloud Tasks will pick the default. * The maximum allowed value is 500. This field has the same meaning as [rate in queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
      * 
      */
-    @InputImport(name="maxDispatchesPerSecond")
+    @Import(name="maxDispatchesPerSecond")
       private final @Nullable Output<Double> maxDispatchesPerSecond;
 
     public Output<Double> getMaxDispatchesPerSecond() {

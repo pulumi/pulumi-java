@@ -8,7 +8,7 @@ import io.pulumi.awsnative.location.TrackerArgs;
 import io.pulumi.awsnative.location.enums.TrackerPositionFiltering;
 import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -19,61 +19,61 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:location:Tracker")
 public class Tracker extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
-    @OutputExport(name="positionFiltering", type=TrackerPositionFiltering.class, parameters={})
+    @Export(name="positionFiltering", type=TrackerPositionFiltering.class, parameters={})
     private Output</* @Nullable */ TrackerPositionFiltering> positionFiltering;
 
     public Output</* @Nullable */ TrackerPositionFiltering> getPositionFiltering() {
         return this.positionFiltering;
     }
-    @OutputExport(name="pricingPlan", type=TrackerPricingPlan.class, parameters={})
+    @Export(name="pricingPlan", type=TrackerPricingPlan.class, parameters={})
     private Output</* @Nullable */ TrackerPricingPlan> pricingPlan;
 
     public Output</* @Nullable */ TrackerPricingPlan> getPricingPlan() {
         return this.pricingPlan;
     }
-    @OutputExport(name="pricingPlanDataSource", type=String.class, parameters={})
+    @Export(name="pricingPlanDataSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> pricingPlanDataSource;
 
     public Output</* @Nullable */ String> getPricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
-    @OutputExport(name="trackerArn", type=String.class, parameters={})
+    @Export(name="trackerArn", type=String.class, parameters={})
     private Output<String> trackerArn;
 
     public Output<String> getTrackerArn() {
         return this.trackerArn;
     }
-    @OutputExport(name="trackerName", type=String.class, parameters={})
+    @Export(name="trackerName", type=String.class, parameters={})
     private Output<String> trackerName;
 
     public Output<String> getTrackerName() {
         return this.trackerName;
     }
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

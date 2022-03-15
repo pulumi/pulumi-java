@@ -6,7 +6,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 import io.pulumi.azurenative.virtualmachineimages.enums.SharedImageStorageAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
      */
-    @InputImport(name="artifactTags")
+    @Import(name="artifactTags")
       private final @Nullable Output<Map<String,String>> artifactTags;
 
     public Output<Map<String,String>> getArtifactTags() {
@@ -38,7 +38,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).
      * 
      */
-    @InputImport(name="excludeFromLatest")
+    @Import(name="excludeFromLatest")
       private final @Nullable Output<Boolean> excludeFromLatest;
 
     public Output<Boolean> getExcludeFromLatest() {
@@ -49,7 +49,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * Resource Id of the Shared Image Gallery image
      * 
      */
-    @InputImport(name="galleryImageId", required=true)
+    @Import(name="galleryImageId", required=true)
       private final Output<String> galleryImageId;
 
     public Output<String> getGalleryImageId() {
@@ -60,7 +60,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * A list of regions that the image will be replicated to
      * 
      */
-    @InputImport(name="replicationRegions", required=true)
+    @Import(name="replicationRegions", required=true)
       private final Output<List<String>> replicationRegions;
 
     public Output<List<String>> getReplicationRegions() {
@@ -71,7 +71,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * The name to be used for the associated RunOutput.
      * 
      */
-    @InputImport(name="runOutputName", required=true)
+    @Import(name="runOutputName", required=true)
       private final Output<String> runOutputName;
 
     public Output<String> getRunOutputName() {
@@ -82,7 +82,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType;
 
     public Output<Either<String,SharedImageStorageAccountType>> getStorageAccountType() {
@@ -94,7 +94,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
      * Expected value is 'SharedImage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

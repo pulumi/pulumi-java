@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.insights.inputs.PrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Azure resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Azure resource name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Private endpoint which the connection belongs to.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
@@ -57,7 +57,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Connection state of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
@@ -68,7 +68,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * State of the private endpoint connection.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -79,7 +79,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Azure resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

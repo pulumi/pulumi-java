@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentInstanceFilterGroupLabel;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentInstanceFilter {
     /**
      * Target all VM instances in the project. If true, no other criteria is permitted.
@@ -44,13 +44,13 @@ public final class PatchDeploymentInstanceFilter {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentInstanceFilter(
-        @OutputCustomType.Parameter("all") @Nullable Boolean all,
-        @OutputCustomType.Parameter("groupLabels") @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels,
-        @OutputCustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
-        @OutputCustomType.Parameter("instances") @Nullable List<String> instances,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("all") @Nullable Boolean all,
+        @CustomType.Parameter("groupLabels") @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels,
+        @CustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
+        @CustomType.Parameter("instances") @Nullable List<String> instances,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;

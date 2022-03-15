@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2BucketResponse {
     /**
      * Upper bound of the range, exclusive; type must match min.
@@ -25,11 +25,11 @@ public final class GooglePrivacyDlpV2BucketResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse replacementValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2BucketResponse(
-        @OutputCustomType.Parameter("max") GooglePrivacyDlpV2ValueResponse max,
-        @OutputCustomType.Parameter("min") GooglePrivacyDlpV2ValueResponse min,
-        @OutputCustomType.Parameter("replacementValue") GooglePrivacyDlpV2ValueResponse replacementValue) {
+        @CustomType.Parameter("max") GooglePrivacyDlpV2ValueResponse max,
+        @CustomType.Parameter("min") GooglePrivacyDlpV2ValueResponse min,
+        @CustomType.Parameter("replacementValue") GooglePrivacyDlpV2ValueResponse replacementValue) {
         this.max = max;
         this.min = min;
         this.replacementValue = replacementValue;

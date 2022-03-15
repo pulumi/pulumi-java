@@ -7,24 +7,24 @@ import io.pulumi.awsnative.quicksight.outputs.ThemeDataColorPalette;
 import io.pulumi.awsnative.quicksight.outputs.ThemeSheetStyle;
 import io.pulumi.awsnative.quicksight.outputs.ThemeTypography;
 import io.pulumi.awsnative.quicksight.outputs.ThemeUIColorPalette;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeConfiguration {
     private final @Nullable ThemeDataColorPalette dataColorPalette;
     private final @Nullable ThemeSheetStyle sheet;
     private final @Nullable ThemeTypography typography;
     private final @Nullable ThemeUIColorPalette uIColorPalette;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeConfiguration(
-        @OutputCustomType.Parameter("dataColorPalette") @Nullable ThemeDataColorPalette dataColorPalette,
-        @OutputCustomType.Parameter("sheet") @Nullable ThemeSheetStyle sheet,
-        @OutputCustomType.Parameter("typography") @Nullable ThemeTypography typography,
-        @OutputCustomType.Parameter("uIColorPalette") @Nullable ThemeUIColorPalette uIColorPalette) {
+        @CustomType.Parameter("dataColorPalette") @Nullable ThemeDataColorPalette dataColorPalette,
+        @CustomType.Parameter("sheet") @Nullable ThemeSheetStyle sheet,
+        @CustomType.Parameter("typography") @Nullable ThemeTypography typography,
+        @CustomType.Parameter("uIColorPalette") @Nullable ThemeUIColorPalette uIColorPalette) {
         this.dataColorPalette = dataColorPalette;
         this.sheet = sheet;
         this.typography = typography;

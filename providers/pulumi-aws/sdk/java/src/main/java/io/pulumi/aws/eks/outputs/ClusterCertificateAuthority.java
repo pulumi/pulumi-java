@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterCertificateAuthority {
     /**
      * Base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
@@ -17,8 +17,8 @@ public final class ClusterCertificateAuthority {
      */
     private final @Nullable String data;
 
-    @OutputCustomType.Constructor
-    private ClusterCertificateAuthority(@OutputCustomType.Parameter("data") @Nullable String data) {
+    @CustomType.Constructor
+    private ClusterCertificateAuthority(@CustomType.Parameter("data") @Nullable String data) {
         this.data = data;
     }
 

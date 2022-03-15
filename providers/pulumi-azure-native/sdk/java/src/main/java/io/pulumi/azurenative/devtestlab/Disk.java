@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.DiskArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The creation date of the disk.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -50,7 +50,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * When backed by a blob, the name of the VHD blob without extension.
      * 
      */
-    @OutputExport(name="diskBlobName", type=String.class, parameters={})
+    @Export(name="diskBlobName", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskBlobName;
 
     /**
@@ -64,7 +64,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The size of the disk in Gibibytes.
      * 
      */
-    @OutputExport(name="diskSizeGiB", type=Integer.class, parameters={})
+    @Export(name="diskSizeGiB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> diskSizeGiB;
 
     /**
@@ -78,7 +78,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The storage type for the disk (i.e. Standard, Premium).
      * 
      */
-    @OutputExport(name="diskType", type=String.class, parameters={})
+    @Export(name="diskType", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskType;
 
     /**
@@ -92,7 +92,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * When backed by a blob, the URI of underlying blob.
      * 
      */
-    @OutputExport(name="diskUri", type=String.class, parameters={})
+    @Export(name="diskUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskUri;
 
     /**
@@ -106,7 +106,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).
      * 
      */
-    @OutputExport(name="hostCaching", type=String.class, parameters={})
+    @Export(name="hostCaching", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostCaching;
 
     /**
@@ -120,7 +120,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The resource ID of the VM to which this disk is leased.
      * 
      */
-    @OutputExport(name="leasedByLabVmId", type=String.class, parameters={})
+    @Export(name="leasedByLabVmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> leasedByLabVmId;
 
     /**
@@ -134,7 +134,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -148,7 +148,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * When backed by managed disk, this is the ID of the compute disk resource.
      * 
      */
-    @OutputExport(name="managedDiskId", type=String.class, parameters={})
+    @Export(name="managedDiskId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedDiskId;
 
     /**
@@ -162,7 +162,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -176,7 +176,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -190,7 +190,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * When backed by a blob, the storage account where the blob is.
      * 
      */
-    @OutputExport(name="storageAccountId", type=String.class, parameters={})
+    @Export(name="storageAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountId;
 
     /**
@@ -204,7 +204,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -218,7 +218,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -232,7 +232,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**

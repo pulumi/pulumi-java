@@ -9,7 +9,7 @@ import io.pulumi.azurenative.healthcareapis.outputs.IotMappingPropertiesResponse
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * FHIR Mappings
      * 
      */
-    @OutputExport(name="fhirMapping", type=IotMappingPropertiesResponse.class, parameters={})
+    @Export(name="fhirMapping", type=IotMappingPropertiesResponse.class, parameters={})
     private Output<IotMappingPropertiesResponse> fhirMapping;
 
     /**
@@ -64,7 +64,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * Fully qualified resource id of the FHIR service to connect to.
      * 
      */
-    @OutputExport(name="fhirServiceResourceId", type=String.class, parameters={})
+    @Export(name="fhirServiceResourceId", type=String.class, parameters={})
     private Output<String> fhirServiceResourceId;
 
     /**
@@ -78,7 +78,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -92,7 +92,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * Determines how resource identity is resolved on the destination.
      * 
      */
-    @OutputExport(name="resourceIdentityResolutionType", type=String.class, parameters={})
+    @Export(name="resourceIdentityResolutionType", type=String.class, parameters={})
     private Output<String> resourceIdentityResolutionType;
 
     /**
@@ -120,7 +120,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -134,7 +134,7 @@ public class IotConnectorFhirDestination extends io.pulumi.resources.CustomResou
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

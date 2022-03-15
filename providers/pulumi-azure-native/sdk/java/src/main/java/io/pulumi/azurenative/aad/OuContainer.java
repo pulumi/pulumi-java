@@ -9,7 +9,7 @@ import io.pulumi.azurenative.aad.outputs.ContainerAccountResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * The list of container accounts
      * 
      */
-    @OutputExport(name="accounts", type=List.class, parameters={ContainerAccountResponse.class})
+    @Export(name="accounts", type=List.class, parameters={ContainerAccountResponse.class})
     private Output</* @Nullable */ List<ContainerAccountResponse>> accounts;
 
     /**
@@ -51,7 +51,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * The OuContainer name
      * 
      */
-    @OutputExport(name="containerId", type=String.class, parameters={})
+    @Export(name="containerId", type=String.class, parameters={})
     private Output<String> containerId;
 
     /**
@@ -65,7 +65,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * The Deployment id
      * 
      */
-    @OutputExport(name="deploymentId", type=String.class, parameters={})
+    @Export(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
     /**
@@ -79,7 +79,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Distinguished Name of OuContainer instance
      * 
      */
-    @OutputExport(name="distinguishedName", type=String.class, parameters={})
+    @Export(name="distinguishedName", type=String.class, parameters={})
     private Output<String> distinguishedName;
 
     /**
@@ -93,7 +93,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * The domain name of Domain Services.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -107,7 +107,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Resource etag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -121,7 +121,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -135,7 +135,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -163,7 +163,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Status of OuContainer instance
      * 
      */
-    @OutputExport(name="serviceStatus", type=String.class, parameters={})
+    @Export(name="serviceStatus", type=String.class, parameters={})
     private Output<String> serviceStatus;
 
     /**
@@ -177,7 +177,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -191,7 +191,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -205,7 +205,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Azure Active Directory tenant id
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -219,7 +219,7 @@ public class OuContainer extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

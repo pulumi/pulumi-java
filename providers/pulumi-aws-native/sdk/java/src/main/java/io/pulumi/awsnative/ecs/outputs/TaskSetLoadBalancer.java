@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskSetLoadBalancer {
     /**
      * The name of the container (as it appears in a container definition) to associate with the load balancer.
@@ -33,12 +33,12 @@ public final class TaskSetLoadBalancer {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskSetLoadBalancer(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
-        @OutputCustomType.Parameter("loadBalancerName") @Nullable String loadBalancerName,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @CustomType.Parameter("loadBalancerName") @Nullable String loadBalancerName,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.loadBalancerName = loadBalancerName;

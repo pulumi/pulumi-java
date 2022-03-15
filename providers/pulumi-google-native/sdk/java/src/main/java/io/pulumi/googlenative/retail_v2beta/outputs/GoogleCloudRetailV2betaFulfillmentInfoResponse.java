@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaFulfillmentInfoResponse {
     /**
      * The IDs for this type, such as the store IDs for FulfillmentInfo.type.pickup-in-store or the region IDs for FulfillmentInfo.type.same-day-delivery. A maximum of 3000 values are allowed. Each value must be a string with a length limit of 30 characters, matching the pattern `[a-zA-Z0-9_-]+`, such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is returned.
@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaFulfillmentInfoResponse(
-        @OutputCustomType.Parameter("placeIds") List<String> placeIds,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("placeIds") List<String> placeIds,
+        @CustomType.Parameter("type") String type) {
         this.placeIds = placeIds;
         this.type = type;
     }

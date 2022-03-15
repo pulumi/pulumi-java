@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchSingleHeaderPropert
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupJsonBodyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * All query arguments of a web request.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<Object> allQueryArguments;
 
     public Output<Object> getAllQueryArguments() {
@@ -36,14 +36,14 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * The body of a web request. This immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<Object> body;
 
     public Output<Object> getBody() {
         return this.body == null ? Output.empty() : this.body;
     }
 
-    @InputImport(name="jsonBody")
+    @Import(name="jsonBody")
       private final @Nullable Output<RuleGroupJsonBodyArgs> jsonBody;
 
     public Output<RuleGroupJsonBodyArgs> getJsonBody() {
@@ -54,7 +54,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<Object> method;
 
     public Output<Object> getMethod() {
@@ -65,14 +65,14 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<Object> queryString;
 
     public Output<Object> getQueryString() {
         return this.queryString == null ? Output.empty() : this.queryString;
     }
 
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
     public Output<RuleGroupFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
@@ -83,7 +83,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
     public Output<RuleGroupFieldToMatchSingleQueryArgumentPropertiesArgs> getSingleQueryArgument() {
@@ -94,7 +94,7 @@ public final class RuleGroupFieldToMatchArgs extends io.pulumi.resources.Resourc
      * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<Object> uriPath;
 
     public Output<Object> getUriPath() {

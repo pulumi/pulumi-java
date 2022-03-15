@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.ContainerPublicDomainNameArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerServiceDeploymentArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
      */
-    @InputImport(name="containerServiceDeployment")
+    @Import(name="containerServiceDeployment")
       private final @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
     public Output<ContainerServiceDeploymentArgs> getContainerServiceDeployment() {
@@ -35,7 +35,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * A Boolean value to indicate whether the container service is disabled.
      * 
      */
-    @InputImport(name="isDisabled")
+    @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
 
     public Output<Boolean> getIsDisabled() {
@@ -46,7 +46,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The power specification for the container service.
      * 
      */
-    @InputImport(name="power", required=true)
+    @Import(name="power", required=true)
       private final Output<String> power;
 
     public Output<String> getPower() {
@@ -57,7 +57,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The public domain names to use with the container service, such as example.com and www.example.com.
      * 
      */
-    @InputImport(name="publicDomainNames")
+    @Import(name="publicDomainNames")
       private final @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
     public Output<List<ContainerPublicDomainNameArgs>> getPublicDomainNames() {
@@ -68,7 +68,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The scale specification for the container service.
      * 
      */
-    @InputImport(name="scale", required=true)
+    @Import(name="scale", required=true)
       private final Output<Integer> scale;
 
     public Output<Integer> getScale() {
@@ -79,7 +79,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the container service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -90,7 +90,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ContainerTagArgs>> tags;
 
     public Output<List<ContainerTagArgs>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomStreamConfigArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
 import java.lang.String;
@@ -18,14 +18,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DicomStoreArgs Empty = new DicomStoreArgs();
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="dicomStoreId")
+    @Import(name="dicomStoreId")
       private final @Nullable Output<String> dicomStoreId;
 
     public Output<String> getDicomStoreId() {
@@ -36,14 +36,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -54,7 +54,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,14 +65,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * Notification destination for new DICOM instances. Supplied by the client.
      * 
      */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
     public Output<NotificationConfigArgs> getNotificationConfig() {
         return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -83,7 +83,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * A list of streaming configs used to configure the destination of streaming exports for every DICOM instance insertion in this DICOM store. After a new config is added to `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config is removed from `stream_configs`, the server stops streaming to that destination. Each config must contain a unique destination.
      * 
      */
-    @InputImport(name="streamConfigs")
+    @Import(name="streamConfigs")
       private final @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 
     public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> getStreamConfigs() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.SlotTypeEnumerationValueGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * not included as an argument because the resource will add it automatically when updating the slot type.
      * 
      */
-    @InputImport(name="checksum")
+    @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
     public Output<String> getChecksum() {
@@ -34,7 +34,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * update. Defaults to `false`.
      * 
      */
-    @InputImport(name="createVersion")
+    @Import(name="createVersion")
       private final @Nullable Output<Boolean> createVersion;
 
     public Output<Boolean> getCreateVersion() {
@@ -45,7 +45,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * The date when the slot type version was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -56,7 +56,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * A description of the slot type. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -70,7 +70,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * documented under enumeration_value.
      * 
      */
-    @InputImport(name="enumerationValues")
+    @Import(name="enumerationValues")
       private final @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
 
     public Output<List<SlotTypeEnumerationValueGetArgs>> getEnumerationValues() {
@@ -81,7 +81,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * The date when the `$LATEST` version of this slot type was updated.
      * 
      */
-    @InputImport(name="lastUpdatedDate")
+    @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
     public Output<String> getLastUpdatedDate() {
@@ -92,7 +92,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * The name of the slot type. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -106,7 +106,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * if there is a resolution list for the slot, otherwise null is returned. Defaults to `ORIGINAL_VALUE`.
      * 
      */
-    @InputImport(name="valueSelectionStrategy")
+    @Import(name="valueSelectionStrategy")
       private final @Nullable Output<String> valueSelectionStrategy;
 
     public Output<String> getValueSelectionStrategy() {
@@ -117,7 +117,7 @@ public final class SlotTypeState extends io.pulumi.resources.ResourceArgs {
      * The version of the slot type.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

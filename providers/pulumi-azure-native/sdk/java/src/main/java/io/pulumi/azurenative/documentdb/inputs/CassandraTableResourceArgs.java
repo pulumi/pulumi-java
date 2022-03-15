@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.CassandraSchemaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * Analytical TTL.
      * 
      */
-    @InputImport(name="analyticalStorageTtl")
+    @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Integer> analyticalStorageTtl;
 
     public Output<Integer> getAnalyticalStorageTtl() {
@@ -35,7 +35,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * Time to live of the Cosmos DB Cassandra table
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
     public Output<Integer> getDefaultTtl() {
@@ -46,7 +46,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * Name of the Cosmos DB Cassandra table
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -57,7 +57,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * Schema of the Cosmos DB Cassandra table
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<CassandraSchemaArgs> schema;
 
     public Output<CassandraSchemaArgs> getSchema() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulum
      * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
      * 
      */
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
@@ -31,7 +31,7 @@ public final class ComputeInstanceConnectivityEndpointsResponse extends io.pulum
      * Public IP Address of this ComputeInstance.
      * 
      */
-    @InputImport(name="publicIpAddress", required=true)
+    @Import(name="publicIpAddress", required=true)
       private final String publicIpAddress;
 
     public String getPublicIpAddress() {

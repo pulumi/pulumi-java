@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DedicatedHostGroupInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDedicatedHostGroupResult {
     /**
      * A list of references to all dedicated hosts in the dedicated host group.
@@ -68,18 +68,18 @@ public final class GetDedicatedHostGroupResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDedicatedHostGroupResult(
-        @OutputCustomType.Parameter("hosts") List<SubResourceReadOnlyResponse> hosts,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceView") DedicatedHostGroupInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platformFaultDomainCount") Integer platformFaultDomainCount,
-        @OutputCustomType.Parameter("supportAutomaticPlacement") @Nullable Boolean supportAutomaticPlacement,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("hosts") List<SubResourceReadOnlyResponse> hosts,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceView") DedicatedHostGroupInstanceViewResponse instanceView,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platformFaultDomainCount") Integer platformFaultDomainCount,
+        @CustomType.Parameter("supportAutomaticPlacement") @Nullable Boolean supportAutomaticPlacement,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.hosts = hosts;
         this.id = id;
         this.instanceView = instanceView;

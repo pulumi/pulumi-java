@@ -5,13 +5,13 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3InputMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelExplainabilityJobDefinitionEndpointInput {
     private final String endpointName;
     /**
@@ -45,15 +45,15 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
      */
     private final @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelExplainabilityJobDefinitionEndpointInput(
-        @OutputCustomType.Parameter("endpointName") String endpointName,
-        @OutputCustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
-        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
-        @OutputCustomType.Parameter("localPath") String localPath,
-        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
-        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        @CustomType.Parameter("endpointName") String endpointName,
+        @CustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
+        @CustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @CustomType.Parameter("localPath") String localPath,
+        @CustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @CustomType.Parameter("s3DataDistributionType") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @CustomType.Parameter("s3InputMode") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;
         this.inferenceAttribute = inferenceAttribute;

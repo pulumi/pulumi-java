@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateEndpointPropertiesArgs extends io.pulumi.resources.Res
      * A list of connections to the remote resource. Immutable after it is set.
      * 
      */
-    @InputImport(name="manualPrivateLinkServiceConnections")
+    @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
     public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {

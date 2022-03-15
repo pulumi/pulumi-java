@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AxisResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.ChartOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.DataSetResponse;
@@ -25,7 +25,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * Display options for the chart.
      * 
      */
-    @InputImport(name="chartOptions", required=true)
+    @Import(name="chartOptions", required=true)
       private final ChartOptionsResponse chartOptions;
 
     public ChartOptionsResponse getChartOptions() {
@@ -36,7 +36,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * The data displayed in this chart.
      * 
      */
-    @InputImport(name="dataSets", required=true)
+    @Import(name="dataSets", required=true)
       private final List<DataSetResponse> dataSets;
 
     public List<DataSetResponse> getDataSets() {
@@ -47,7 +47,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * Threshold lines drawn horizontally across the chart.
      * 
      */
-    @InputImport(name="thresholds", required=true)
+    @Import(name="thresholds", required=true)
       private final List<ThresholdResponse> thresholds;
 
     public List<ThresholdResponse> getThresholds() {
@@ -58,7 +58,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * The duration used to display a comparison chart. A comparison chart simultaneously shows values from two similar-length time periods (e.g., week-over-week metrics). The duration must be positive, and it can only be applied to charts with data sets of LINE plot type.
      * 
      */
-    @InputImport(name="timeshiftDuration", required=true)
+    @Import(name="timeshiftDuration", required=true)
       private final String timeshiftDuration;
 
     public String getTimeshiftDuration() {
@@ -69,7 +69,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * The properties applied to the X axis.
      * 
      */
-    @InputImport(name="xAxis", required=true)
+    @Import(name="xAxis", required=true)
       private final AxisResponse xAxis;
 
     public AxisResponse getXAxis() {
@@ -80,7 +80,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * The properties applied to the Y2 axis.
      * 
      */
-    @InputImport(name="y2Axis", required=true)
+    @Import(name="y2Axis", required=true)
       private final AxisResponse y2Axis;
 
     public AxisResponse getY2Axis() {
@@ -91,7 +91,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * The properties applied to the Y axis.
      * 
      */
-    @InputImport(name="yAxis", required=true)
+    @Import(name="yAxis", required=true)
       private final AxisResponse yAxis;
 
     public AxisResponse getYAxis() {

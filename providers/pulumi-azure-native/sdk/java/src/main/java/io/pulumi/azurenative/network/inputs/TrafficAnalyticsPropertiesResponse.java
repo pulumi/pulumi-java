@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsConfigurationPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TrafficAnalyticsPropertiesResponse extends io.pulumi.resource
      * Parameters that define the configuration of traffic analytics.
      * 
      */
-    @InputImport(name="networkWatcherFlowAnalyticsConfiguration")
+    @Import(name="networkWatcherFlowAnalyticsConfiguration")
       private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
     public Optional<TrafficAnalyticsConfigurationPropertiesResponse> getNetworkWatcherFlowAnalyticsConfiguration() {

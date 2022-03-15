@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GlobalTableContributorInsightsSpecification extends io.pulumi
 
     public static final GlobalTableContributorInsightsSpecification Empty = new GlobalTableContributorInsightsSpecification();
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {

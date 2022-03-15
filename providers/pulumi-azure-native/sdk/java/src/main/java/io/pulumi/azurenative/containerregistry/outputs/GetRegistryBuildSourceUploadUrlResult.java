@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryBuildSourceUploadUrlResult {
     /**
      * The relative path to the source. This is used to submit the subsequent queue build request.
@@ -22,10 +22,10 @@ public final class GetRegistryBuildSourceUploadUrlResult {
      */
     private final @Nullable String uploadUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryBuildSourceUploadUrlResult(
-        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
-        @OutputCustomType.Parameter("uploadUrl") @Nullable String uploadUrl) {
+        @CustomType.Parameter("relativePath") @Nullable String relativePath,
+        @CustomType.Parameter("uploadUrl") @Nullable String uploadUrl) {
         this.relativePath = relativePath;
         this.uploadUrl = uploadUrl;
     }

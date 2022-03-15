@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
      * A filter that chooses which log entries to return. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the filter are returned. An empty filter matches all log entries.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final String filter;
 
     public String getFilter() {
@@ -32,7 +32,7 @@ public final class LogsPanelResponse extends io.pulumi.resources.InvokeArgs {
      * The names of logging resources to collect logs for. Currently only projects are supported. If empty, the widget will default to the host project.
      * 
      */
-    @InputImport(name="resourceNames", required=true)
+    @Import(name="resourceNames", required=true)
       private final List<String> resourceNames;
 
     public List<String> getResourceNames() {

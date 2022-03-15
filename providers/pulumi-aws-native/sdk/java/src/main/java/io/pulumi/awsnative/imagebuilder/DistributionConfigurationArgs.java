@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * The description of the distribution configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * The distributions of the distribution configuration.
      * 
      */
-    @InputImport(name="distributions", required=true)
+    @Import(name="distributions", required=true)
       private final Output<List<DistributionConfigurationDistributionArgs>> distributions;
 
     public Output<List<DistributionConfigurationDistributionArgs>> getDistributions() {
@@ -43,7 +43,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * The name of the distribution configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * The tags associated with the component.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {

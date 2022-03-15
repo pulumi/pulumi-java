@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.DefaultKeyArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
      * Default content key for an encryption scheme
      * 
      */
-    @InputImport(name="defaultKey")
+    @Import(name="defaultKey")
       private final @Nullable Output<DefaultKeyArgs> defaultKey;
 
     public Output<DefaultKeyArgs> getDefaultKey() {
@@ -35,7 +35,7 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
      * Representing tracks needs separate content key
      * 
      */
-    @InputImport(name="keyToTrackMappings")
+    @Import(name="keyToTrackMappings")
       private final @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
     public Output<List<StreamingPolicyContentKeyArgs>> getKeyToTrackMappings() {

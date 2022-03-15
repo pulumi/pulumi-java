@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationGetArgs 
      * ARN of the IAM role that grants the App Runner service access to a source repository. Required for ECR image repositories (but not for ECR Public)
      * 
      */
-    @InputImport(name="accessRoleArn")
+    @Import(name="accessRoleArn")
       private final @Nullable Output<String> accessRoleArn;
 
     public Output<String> getAccessRoleArn() {
@@ -29,7 +29,7 @@ public final class ServiceSourceConfigurationAuthenticationConfigurationGetArgs 
      * ARN of the App Runner connection that enables the App Runner service to connect to a source repository. Required for GitHub code repositories.
      * 
      */
-    @InputImport(name="connectionArn")
+    @Import(name="connectionArn")
       private final @Nullable Output<String> connectionArn;
 
     public Output<String> getConnectionArn() {

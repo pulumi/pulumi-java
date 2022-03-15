@@ -4,13 +4,13 @@
 package io.pulumi.aws.connect.outputs;
 
 import io.pulumi.aws.connect.outputs.GetQuickConnectQuickConnectConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQuickConnectResult {
     /**
      * The Amazon Resource Name (ARN) of the Quick Connect.
@@ -45,16 +45,16 @@ public final class GetQuickConnectResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQuickConnectResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("quickConnectConfigs") List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
-        @OutputCustomType.Parameter("quickConnectId") String quickConnectId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("quickConnectConfigs") List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
+        @CustomType.Parameter("quickConnectId") String quickConnectId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

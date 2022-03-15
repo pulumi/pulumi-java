@@ -12,7 +12,7 @@ import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Resource allocation
      * 
      */
-    @OutputExport(name="computeResource", type=ComputeResourceResponse.class, parameters={})
+    @Export(name="computeResource", type=ComputeResourceResponse.class, parameters={})
     private Output</* @Nullable */ ComputeResourceResponse> computeResource;
 
     /**
@@ -53,7 +53,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Host OS supported by the IoT role.
      * 
      */
-    @OutputExport(name="hostPlatform", type=String.class, parameters={})
+    @Export(name="hostPlatform", type=String.class, parameters={})
     private Output<String> hostPlatform;
 
     /**
@@ -67,7 +67,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Platform where the Iot runtime is hosted.
      * 
      */
-    @OutputExport(name="hostPlatformType", type=String.class, parameters={})
+    @Export(name="hostPlatformType", type=String.class, parameters={})
     private Output<String> hostPlatformType;
 
     /**
@@ -81,7 +81,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * IoT device metadata to which data box edge device needs to be connected.
      * 
      */
-    @OutputExport(name="ioTDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
+    @Export(name="ioTDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
     private Output<IoTDeviceInfoResponse> ioTDeviceDetails;
 
     /**
@@ -95,7 +95,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Iot edge agent details to download the agent and bootstrap iot runtime.
      * 
      */
-    @OutputExport(name="ioTEdgeAgentInfo", type=IoTEdgeAgentInfoResponse.class, parameters={})
+    @Export(name="ioTEdgeAgentInfo", type=IoTEdgeAgentInfoResponse.class, parameters={})
     private Output</* @Nullable */ IoTEdgeAgentInfoResponse> ioTEdgeAgentInfo;
 
     /**
@@ -109,7 +109,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * IoT edge device to which the IoT role needs to be configured.
      * 
      */
-    @OutputExport(name="ioTEdgeDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
+    @Export(name="ioTEdgeDeviceDetails", type=IoTDeviceInfoResponse.class, parameters={})
     private Output<IoTDeviceInfoResponse> ioTEdgeDeviceDetails;
 
     /**
@@ -124,7 +124,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Expected value is 'IOT'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -139,7 +139,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Role status.
      * 
      */
-    @OutputExport(name="roleStatus", type=String.class, parameters={})
+    @Export(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
     /**
@@ -167,7 +167,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Mount points of shares in role(s).
      * 
      */
-    @OutputExport(name="shareMappings", type=List.class, parameters={MountPointMapResponse.class})
+    @Export(name="shareMappings", type=List.class, parameters={MountPointMapResponse.class})
     private Output</* @Nullable */ List<MountPointMapResponse>> shareMappings;
 
     /**
@@ -181,7 +181,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Role configured on ASE resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -195,7 +195,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

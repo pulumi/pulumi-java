@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ContainerRecipeTargetContainerRepositoryService;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -34,7 +34,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
      * Specifies the service in which this image was registered.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
 
     public Output<ContainerRecipeTargetContainerRepositoryService> getService() {

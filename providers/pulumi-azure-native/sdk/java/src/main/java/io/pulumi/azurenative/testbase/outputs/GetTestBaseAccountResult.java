@@ -5,13 +5,13 @@ package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.azurenative.testbase.outputs.TestBaseAccountSKUResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTestBaseAccountResult {
     /**
      * The access level of the Test Base Account.
@@ -64,18 +64,18 @@ public final class GetTestBaseAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestBaseAccountResult(
-        @OutputCustomType.Parameter("accessLevel") String accessLevel,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") TestBaseAccountSKUResponse sku,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessLevel") String accessLevel,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") TestBaseAccountSKUResponse sku,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.accessLevel = accessLevel;
         this.etag = etag;
         this.id = id;

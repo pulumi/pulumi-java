@@ -14,14 +14,14 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.ReliableCollectionsRefRes
 import io.pulumi.azurenative.servicefabricmesh.outputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.SettingResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.VolumeReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerCodePackagePropertiesResponse {
     /**
      * Command array to execute within the container in exec form.
@@ -99,23 +99,23 @@ public final class ContainerCodePackagePropertiesResponse {
      */
     private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerCodePackagePropertiesResponse(
-        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
-        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<EndpointPropertiesResponse> endpoints,
-        @OutputCustomType.Parameter("entrypoint") @Nullable String entrypoint,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("imageRegistryCredential") @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
-        @OutputCustomType.Parameter("instanceView") ContainerInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("labels") @Nullable List<ContainerLabelResponse> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reliableCollectionsRefs") @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
-        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
-        @OutputCustomType.Parameter("settings") @Nullable List<SettingResponse> settings,
-        @OutputCustomType.Parameter("volumeRefs") @Nullable List<VolumeReferenceResponse> volumeRefs,
-        @OutputCustomType.Parameter("volumes") @Nullable List<ApplicationScopedVolumeResponse> volumes) {
+        @CustomType.Parameter("commands") @Nullable List<String> commands,
+        @CustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
+        @CustomType.Parameter("endpoints") @Nullable List<EndpointPropertiesResponse> endpoints,
+        @CustomType.Parameter("entrypoint") @Nullable String entrypoint,
+        @CustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("imageRegistryCredential") @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
+        @CustomType.Parameter("instanceView") ContainerInstanceViewResponse instanceView,
+        @CustomType.Parameter("labels") @Nullable List<ContainerLabelResponse> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reliableCollectionsRefs") @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
+        @CustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @CustomType.Parameter("settings") @Nullable List<SettingResponse> settings,
+        @CustomType.Parameter("volumeRefs") @Nullable List<VolumeReferenceResponse> volumeRefs,
+        @CustomType.Parameter("volumes") @Nullable List<ApplicationScopedVolumeResponse> volumes) {
         this.commands = commands;
         this.diagnostics = diagnostics;
         this.endpoints = endpoints;

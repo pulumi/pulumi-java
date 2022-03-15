@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse {
     /**
      * List of DNS servers IP addresses
@@ -17,8 +17,8 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
      */
     private final @Nullable List<String> dnsServers;
 
-    @OutputCustomType.Constructor
-    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(@OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers) {
+    @CustomType.Constructor
+    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(@CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers) {
         this.dnsServers = dnsServers;
     }
 

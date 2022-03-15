@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainSubDomainSetting {
     private final String branchName;
     private final String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainSubDomainSetting(
-        @OutputCustomType.Parameter("branchName") String branchName,
-        @OutputCustomType.Parameter("prefix") String prefix) {
+        @CustomType.Parameter("branchName") String branchName,
+        @CustomType.Parameter("prefix") String prefix) {
         this.branchName = branchName;
         this.prefix = prefix;
     }

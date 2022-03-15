@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * The encryption key name.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -31,7 +31,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * The encryption key version.
      * 
      */
-    @InputImport(name="keyVersion", required=true)
+    @Import(name="keyVersion", required=true)
       private final String keyVersion;
 
     public String getKeyVersion() {
@@ -42,7 +42,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * The keyvault base url.
      * 
      */
-    @InputImport(name="vaultBaseUrl", required=true)
+    @Import(name="vaultBaseUrl", required=true)
       private final String vaultBaseUrl;
 
     public String getVaultBaseUrl() {

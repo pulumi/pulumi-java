@@ -15,7 +15,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyResponse;
 import io.pulumi.azurenative.databox.inputs.PackageShippingDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.PreferencesResponse;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Shared access key to download the chain of custody logs
      * 
      */
-    @InputImport(name="chainOfCustodySasKey", required=true)
+    @Import(name="chainOfCustodySasKey", required=true)
       private final String chainOfCustodySasKey;
 
     public String getChainOfCustodySasKey() {
@@ -48,7 +48,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Contact details for notification and shipping.
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse getContactDetails() {
@@ -59,7 +59,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * List of copy log details.
      * 
      */
-    @InputImport(name="copyLogDetails", required=true)
+    @Import(name="copyLogDetails", required=true)
       private final List<Object> copyLogDetails;
 
     public List<Object> getCopyLogDetails() {
@@ -70,7 +70,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Copy progress per storage account.
      * 
      */
-    @InputImport(name="copyProgress", required=true)
+    @Import(name="copyProgress", required=true)
       private final List<CopyProgressResponse> copyProgress;
 
     public List<CopyProgressResponse> getCopyProgress() {
@@ -81,7 +81,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Details of the data to be exported from azure.
      * 
      */
-    @InputImport(name="dataExportDetails")
+    @Import(name="dataExportDetails")
       private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
     public List<DataExportDetailsResponse> getDataExportDetails() {
@@ -92,7 +92,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Details of the data to be imported into azure.
      * 
      */
-    @InputImport(name="dataImportDetails")
+    @Import(name="dataImportDetails")
       private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
     public List<DataImportDetailsResponse> getDataImportDetails() {
@@ -103,7 +103,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Delivery package shipping details.
      * 
      */
-    @InputImport(name="deliveryPackage", required=true)
+    @Import(name="deliveryPackage", required=true)
       private final PackageShippingDetailsResponse deliveryPackage;
 
     public PackageShippingDetailsResponse getDeliveryPackage() {
@@ -114,7 +114,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
      * 
      */
-    @InputImport(name="devicePassword")
+    @Import(name="devicePassword")
       private final @Nullable String devicePassword;
 
     public Optional<String> getDevicePassword() {
@@ -125,7 +125,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
      */
-    @InputImport(name="expectedDataSizeInTeraBytes")
+    @Import(name="expectedDataSizeInTeraBytes")
       private final @Nullable Integer expectedDataSizeInTeraBytes;
 
     public Optional<Integer> getExpectedDataSizeInTeraBytes() {
@@ -137,7 +137,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'DataBox'.
      * 
      */
-    @InputImport(name="jobDetailsType", required=true)
+    @Import(name="jobDetailsType", required=true)
       private final String jobDetailsType;
 
     public String getJobDetailsType() {
@@ -148,7 +148,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * List of stages that run in the job.
      * 
      */
-    @InputImport(name="jobStages", required=true)
+    @Import(name="jobStages", required=true)
       private final List<JobStagesResponse> jobStages;
 
     public List<JobStagesResponse> getJobStages() {
@@ -159,7 +159,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Details about which key encryption type is being used.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
     public Optional<KeyEncryptionKeyResponse> getKeyEncryptionKey() {
@@ -170,7 +170,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Preferences for the order.
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> getPreferences() {
@@ -181,7 +181,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Return package shipping details.
      * 
      */
-    @InputImport(name="returnPackage", required=true)
+    @Import(name="returnPackage", required=true)
       private final PackageShippingDetailsResponse returnPackage;
 
     public PackageShippingDetailsResponse getReturnPackage() {
@@ -192,7 +192,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Shared access key to download the return shipment label
      * 
      */
-    @InputImport(name="reverseShipmentLabelSasKey", required=true)
+    @Import(name="reverseShipmentLabelSasKey", required=true)
       private final String reverseShipmentLabelSasKey;
 
     public String getReverseShipmentLabelSasKey() {
@@ -203,7 +203,7 @@ public final class DataBoxJobDetailsResponse extends io.pulumi.resources.InvokeA
      * Shipping address of the customer.
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> getShippingAddress() {

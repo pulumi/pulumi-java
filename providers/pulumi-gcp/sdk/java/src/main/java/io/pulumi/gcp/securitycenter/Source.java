@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.securitycenter.SourceArgs;
@@ -45,7 +45,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * The description of the source (max of 1024 characters).
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * and underscores, and can be no longer than 32 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -81,7 +81,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * lives in.
      * 
      */
-    @OutputExport(name="organization", type=String.class, parameters={})
+    @Export(name="organization", type=String.class, parameters={})
     private Output<String> organization;
 
     /**

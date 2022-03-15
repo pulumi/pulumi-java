@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__IntegratedGradientsAttributionArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__SampledShapleyAttributionArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__XraiAttributionArgs;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
      * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
      * 
      */
-    @InputImport(name="integratedGradientsAttribution")
+    @Import(name="integratedGradientsAttribution")
       private final @Nullable Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> integratedGradientsAttribution;
 
     public Output<GoogleCloudMlV1__IntegratedGradientsAttributionArgs> getIntegratedGradientsAttribution() {
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
      * An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features.
      * 
      */
-    @InputImport(name="sampledShapleyAttribution")
+    @Import(name="sampledShapleyAttribution")
       private final @Nullable Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> sampledShapleyAttribution;
 
     public Output<GoogleCloudMlV1__SampledShapleyAttributionArgs> getSampledShapleyAttribution() {
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__ExplanationConfigArgs extends io.pulumi.reso
      * Attributes credit by computing the XRAI taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1906.02825 Currently only implemented for models with natural image inputs.
      * 
      */
-    @InputImport(name="xraiAttribution")
+    @Import(name="xraiAttribution")
       private final @Nullable Output<GoogleCloudMlV1__XraiAttributionArgs> xraiAttribution;
 
     public Output<GoogleCloudMlV1__XraiAttributionArgs> getXraiAttribution() {

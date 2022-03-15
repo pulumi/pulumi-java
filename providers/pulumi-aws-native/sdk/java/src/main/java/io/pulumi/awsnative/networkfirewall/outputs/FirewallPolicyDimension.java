@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyDimension {
     private final String value;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyDimension(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private FirewallPolicyDimension(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

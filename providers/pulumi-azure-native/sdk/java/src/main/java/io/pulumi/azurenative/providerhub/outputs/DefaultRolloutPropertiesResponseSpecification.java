@@ -11,13 +11,13 @@ import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutSpecificationResp
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne;
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo;
 import io.pulumi.azurenative.providerhub.outputs.ResourceTypeRegistrationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultRolloutPropertiesResponseSpecification {
     private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
     private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
@@ -28,16 +28,16 @@ public final class DefaultRolloutPropertiesResponseSpecification {
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultRolloutPropertiesResponseSpecification(
-        @OutputCustomType.Parameter("canary") @Nullable DefaultRolloutSpecificationResponseCanary canary,
-        @OutputCustomType.Parameter("highTraffic") @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
-        @OutputCustomType.Parameter("lowTraffic") @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
-        @OutputCustomType.Parameter("mediumTraffic") @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
-        @OutputCustomType.Parameter("providerRegistration") @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
-        @OutputCustomType.Parameter("resourceTypeRegistrations") @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
-        @OutputCustomType.Parameter("restOfTheWorldGroupOne") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
-        @OutputCustomType.Parameter("restOfTheWorldGroupTwo") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
+        @CustomType.Parameter("canary") @Nullable DefaultRolloutSpecificationResponseCanary canary,
+        @CustomType.Parameter("highTraffic") @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
+        @CustomType.Parameter("lowTraffic") @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
+        @CustomType.Parameter("mediumTraffic") @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
+        @CustomType.Parameter("providerRegistration") @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
+        @CustomType.Parameter("resourceTypeRegistrations") @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
+        @CustomType.Parameter("restOfTheWorldGroupOne") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
+        @CustomType.Parameter("restOfTheWorldGroupTwo") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
         this.canary = canary;
         this.highTraffic = highTraffic;
         this.lowTraffic = lowTraffic;

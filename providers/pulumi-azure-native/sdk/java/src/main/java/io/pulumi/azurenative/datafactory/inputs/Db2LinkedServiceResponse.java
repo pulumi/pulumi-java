@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * AuthenticationType to be used for connection. It is mutually exclusive with connectionString property.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -52,7 +52,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Certificate Common Name when TLS is enabled. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="certificateCommonName")
+    @Import(name="certificateCommonName")
       private final @Nullable Object certificateCommonName;
 
     public Optional<Object> getCertificateCommonName() {
@@ -63,7 +63,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -74,7 +74,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * The connection string. It is mutually exclusive with server, database, authenticationType, userName, packageCollection and certificateCommonName property. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Object connectionString;
 
     public Optional<Object> getConnectionString() {
@@ -85,7 +85,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Database name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Object database;
 
     public Optional<Object> getDatabase() {
@@ -96,7 +96,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -107,7 +107,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -118,7 +118,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Under where packages are created when querying database. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packageCollection")
+    @Import(name="packageCollection")
       private final @Nullable Object packageCollection;
 
     public Optional<Object> getPackageCollection() {
@@ -129,7 +129,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -140,7 +140,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Password for authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -151,7 +151,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Server name for connection. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server")
+    @Import(name="server")
       private final @Nullable Object server;
 
     public Optional<Object> getServer() {
@@ -163,7 +163,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'Db2'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -174,7 +174,7 @@ public final class Db2LinkedServiceResponse extends io.pulumi.resources.InvokeAr
      * Username for authentication. It is mutually exclusive with connectionString property. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Object username;
 
     public Optional<Object> getUsername() {

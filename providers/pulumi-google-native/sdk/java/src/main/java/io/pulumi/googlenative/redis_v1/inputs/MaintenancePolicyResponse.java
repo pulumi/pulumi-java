@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.redis_v1.inputs.WeeklyMaintenanceWindowResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * The time when the policy was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -33,7 +33,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -44,7 +44,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * The time when the policy was last updated.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {
@@ -55,7 +55,7 @@ public final class MaintenancePolicyResponse extends io.pulumi.resources.InvokeA
      * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
      * 
      */
-    @InputImport(name="weeklyMaintenanceWindow", required=true)
+    @Import(name="weeklyMaintenanceWindow", required=true)
       private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
     public List<WeeklyMaintenanceWindowResponse> getWeeklyMaintenanceWindow() {

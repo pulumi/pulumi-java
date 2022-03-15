@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerCertificateResult {
     private final String arn;
     private final String certificateBody;
@@ -28,19 +28,19 @@ public final class GetServerCertificateResult {
     private final @Nullable String pathPrefix;
     private final String uploadDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerCertificateResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificateBody") String certificateBody,
-        @OutputCustomType.Parameter("certificateChain") String certificateChain,
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latest") @Nullable Boolean latest,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
-        @OutputCustomType.Parameter("uploadDate") String uploadDate) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificateBody") String certificateBody,
+        @CustomType.Parameter("certificateChain") String certificateChain,
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latest") @Nullable Boolean latest,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
+        @CustomType.Parameter("uploadDate") String uploadDate) {
         this.arn = arn;
         this.certificateBody = certificateBody;
         this.certificateChain = certificateChain;

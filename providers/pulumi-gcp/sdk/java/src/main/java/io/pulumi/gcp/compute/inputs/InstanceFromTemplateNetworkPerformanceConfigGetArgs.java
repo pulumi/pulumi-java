@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class InstanceFromTemplateNetworkPerformanceConfigGetArgs extends i
 
     public static final InstanceFromTemplateNetworkPerformanceConfigGetArgs Empty = new InstanceFromTemplateNetworkPerformanceConfigGetArgs();
 
-    @InputImport(name="totalEgressBandwidthTier", required=true)
+    @Import(name="totalEgressBandwidthTier", required=true)
       private final Output<String> totalEgressBandwidthTier;
 
     public Output<String> getTotalEgressBandwidthTier() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.ResourceServerScopeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * An identifier for the resource server.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -31,7 +31,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * A name for the resource server.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * A list of all scopes configured for this resource server in the format identifier/scope_name.
      * 
      */
-    @InputImport(name="scopeIdentifiers")
+    @Import(name="scopeIdentifiers")
       private final @Nullable Output<List<String>> scopeIdentifiers;
 
     public Output<List<String>> getScopeIdentifiers() {
@@ -53,14 +53,14 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
      * A list of Authorization Scope.
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<ResourceServerScopeGetArgs>> scopes;
 
     public Output<List<ResourceServerScopeGetArgs>> getScopes() {
         return this.scopes == null ? Output.empty() : this.scopes;
     }
 
-    @InputImport(name="userPoolId")
+    @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

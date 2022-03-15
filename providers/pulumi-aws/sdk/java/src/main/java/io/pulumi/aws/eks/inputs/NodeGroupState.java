@@ -10,7 +10,7 @@ import io.pulumi.aws.eks.inputs.NodeGroupScalingConfigGetArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupTaintGetArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupUpdateConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Type of Amazon Machine Image (AMI) associated with the EKS Node Group. See the [AWS documentation](https://docs.aws.amazon.com/eks/latest/APIReference/API_Nodegroup.html#AmazonEKS-Type-Nodegroup-amiType) for valid values. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="amiType")
+    @Import(name="amiType")
       private final @Nullable Output<String> amiType;
 
     public Output<String> getAmiType() {
@@ -39,7 +39,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the EKS Node Group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -50,7 +50,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="capacityType")
+    @Import(name="capacityType")
       private final @Nullable Output<String> capacityType;
 
     public Output<String> getCapacityType() {
@@ -61,7 +61,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -72,7 +72,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="diskSize")
+    @Import(name="diskSize")
       private final @Nullable Output<Integer> diskSize;
 
     public Output<Integer> getDiskSize() {
@@ -83,7 +83,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
      * 
      */
-    @InputImport(name="forceUpdateVersion")
+    @Import(name="forceUpdateVersion")
       private final @Nullable Output<Boolean> forceUpdateVersion;
 
     public Output<Boolean> getForceUpdateVersion() {
@@ -94,7 +94,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * List of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="instanceTypes")
+    @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
     public Output<List<String>> getInstanceTypes() {
@@ -105,7 +105,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -116,7 +116,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with Launch Template settings. Detailed below.
      * 
      */
-    @InputImport(name="launchTemplate")
+    @Import(name="launchTemplate")
       private final @Nullable Output<NodeGroupLaunchTemplateGetArgs> launchTemplate;
 
     public Output<NodeGroupLaunchTemplateGetArgs> getLaunchTemplate() {
@@ -127,7 +127,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Name of the EKS Node Group. If omitted, this provider will assign a random, unique name. Conflicts with `node_group_name_prefix`.
      * 
      */
-    @InputImport(name="nodeGroupName")
+    @Import(name="nodeGroupName")
       private final @Nullable Output<String> nodeGroupName;
 
     public Output<String> getNodeGroupName() {
@@ -138,7 +138,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `node_group_name`.
      * 
      */
-    @InputImport(name="nodeGroupNamePrefix")
+    @Import(name="nodeGroupNamePrefix")
       private final @Nullable Output<String> nodeGroupNamePrefix;
 
     public Output<String> getNodeGroupNamePrefix() {
@@ -149,7 +149,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
      * 
      */
-    @InputImport(name="nodeRoleArn")
+    @Import(name="nodeRoleArn")
       private final @Nullable Output<String> nodeRoleArn;
 
     public Output<String> getNodeRoleArn() {
@@ -160,7 +160,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
      * 
      */
-    @InputImport(name="releaseVersion")
+    @Import(name="releaseVersion")
       private final @Nullable Output<String> releaseVersion;
 
     public Output<String> getReleaseVersion() {
@@ -171,7 +171,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with remote access settings. Detailed below.
      * 
      */
-    @InputImport(name="remoteAccess")
+    @Import(name="remoteAccess")
       private final @Nullable Output<NodeGroupRemoteAccessGetArgs> remoteAccess;
 
     public Output<NodeGroupRemoteAccessGetArgs> getRemoteAccess() {
@@ -182,7 +182,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * List of objects containing information about underlying resources.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<NodeGroupResourceGetArgs>> resources;
 
     public Output<List<NodeGroupResourceGetArgs>> getResources() {
@@ -193,7 +193,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with scaling settings. Detailed below.
      * 
      */
-    @InputImport(name="scalingConfig")
+    @Import(name="scalingConfig")
       private final @Nullable Output<NodeGroupScalingConfigGetArgs> scalingConfig;
 
     public Output<NodeGroupScalingConfigGetArgs> getScalingConfig() {
@@ -204,7 +204,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Status of the EKS Node Group.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -215,7 +215,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -226,7 +226,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider defaultTags present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -237,7 +237,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -248,14 +248,14 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * The Kubernetes taints to be applied to the nodes in the node group. Maximum of 50 taints per node group. Detailed below.
      * 
      */
-    @InputImport(name="taints")
+    @Import(name="taints")
       private final @Nullable Output<List<NodeGroupTaintGetArgs>> taints;
 
     public Output<List<NodeGroupTaintGetArgs>> getTaints() {
         return this.taints == null ? Output.empty() : this.taints;
     }
 
-    @InputImport(name="updateConfig")
+    @Import(name="updateConfig")
       private final @Nullable Output<NodeGroupUpdateConfigGetArgs> updateConfig;
 
     public Output<NodeGroupUpdateConfigGetArgs> getUpdateConfig() {
@@ -266,7 +266,7 @@ public final class NodeGroupState extends io.pulumi.resources.ResourceArgs {
      * EC2 Launch Template version number. While the API accepts values like `$Default` and `$Latest`, the API will convert the value to the associated version number (e.g. `1`) on read and This provider will show a difference on next plan. Using the `default_version` or `latest_version` attribute of the `aws.ec2.LaunchTemplate` resource or data source is recommended for this argument.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

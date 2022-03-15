@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * Type of link
      * 
      */
-    @InputImport(name="linkType", required=true)
+    @Import(name="linkType", required=true)
       private final String linkType;
 
     public String getLinkType() {
@@ -31,7 +31,7 @@ public final class LinkResponse extends io.pulumi.resources.InvokeArgs {
      * Url of the link
      * 
      */
-    @InputImport(name="linkUrl", required=true)
+    @Import(name="linkUrl", required=true)
       private final String linkUrl;
 
     public String getLinkUrl() {

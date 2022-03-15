@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The name of the CloudWatch log group where you want to send command output. If you don't specify a group name, Systems Manager automatically creates a log group for you. The log group uses the following naming format: aws/ssm/SystemsManagerDocumentName.
      * 
      */
-    @InputImport(name="cloudwatchLogGroupName")
+    @Import(name="cloudwatchLogGroupName")
       private final @Nullable Output<String> cloudwatchLogGroupName;
 
     public Output<String> getCloudwatchLogGroupName() {
@@ -30,7 +30,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * Enables Systems Manager to send command output to CloudWatch Logs.
      * 
      */
-    @InputImport(name="cloudwatchOutputEnabled")
+    @Import(name="cloudwatchOutputEnabled")
       private final @Nullable Output<Boolean> cloudwatchOutputEnabled;
 
     public Output<Boolean> getCloudwatchOutputEnabled() {

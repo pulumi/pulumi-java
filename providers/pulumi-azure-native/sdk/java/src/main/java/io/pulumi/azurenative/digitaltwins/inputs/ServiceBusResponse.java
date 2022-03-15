@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -33,7 +33,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * Time when the Endpoint was added to DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -44,7 +44,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="deadLetterSecret")
+    @Import(name="deadLetterSecret")
       private final @Nullable String deadLetterSecret;
 
     public Optional<String> getDeadLetterSecret() {
@@ -55,7 +55,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * Dead letter storage URL for identity-based authentication.
      * 
      */
-    @InputImport(name="deadLetterUri")
+    @Import(name="deadLetterUri")
       private final @Nullable String deadLetterUri;
 
     public Optional<String> getDeadLetterUri() {
@@ -67,7 +67,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'ServiceBus'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final String endpointType;
 
     public String getEndpointType() {
@@ -78,7 +78,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * The URL of the ServiceBus namespace for identity-based authentication. It must include the protocol sb://
      * 
      */
-    @InputImport(name="endpointUri")
+    @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
@@ -89,7 +89,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * The ServiceBus Topic name for identity-based authentication
      * 
      */
-    @InputImport(name="entityPath")
+    @Import(name="entityPath")
       private final @Nullable String entityPath;
 
     public Optional<String> getEntityPath() {
@@ -100,7 +100,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="primaryConnectionString")
+    @Import(name="primaryConnectionString")
       private final @Nullable String primaryConnectionString;
 
     public Optional<String> getPrimaryConnectionString() {
@@ -111,7 +111,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -122,7 +122,7 @@ public final class ServiceBusResponse extends io.pulumi.resources.InvokeArgs {
      * SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="secondaryConnectionString")
+    @Import(name="secondaryConnectionString")
       private final @Nullable String secondaryConnectionString;
 
     public Optional<String> getSecondaryConnectionString() {

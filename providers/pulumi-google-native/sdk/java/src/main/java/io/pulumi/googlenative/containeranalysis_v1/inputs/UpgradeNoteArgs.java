@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.WindowsUpdateArgs;
@@ -26,7 +26,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata about the upgrade for each specific operating system.
      * 
      */
-    @InputImport(name="distributions")
+    @Import(name="distributions")
       private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
 
     public Output<List<UpgradeDistributionArgs>> getDistributions() {
@@ -37,7 +37,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Required for non-Windows OS. The package this Upgrade is for.
      * 
      */
-    @InputImport(name="package")
+    @Import(name="package")
       private final @Nullable Output<String> $package;
 
     public Output<String> get$package() {
@@ -48,7 +48,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Required for non-Windows OS. The version of the package in machine + human readable form.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<VersionArgs> version;
 
     public Output<VersionArgs> getVersion() {
@@ -59,7 +59,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
      * Required for Windows OS. Represents the metadata about the Windows update.
      * 
      */
-    @InputImport(name="windowsUpdate")
+    @Import(name="windowsUpdate")
       private final @Nullable Output<WindowsUpdateArgs> windowsUpdate;
 
     public Output<WindowsUpdateArgs> getWindowsUpdate() {

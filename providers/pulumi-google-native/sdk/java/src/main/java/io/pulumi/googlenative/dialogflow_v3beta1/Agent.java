@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.AgentArgs;
@@ -25,7 +25,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
      * 
      */
-    @OutputExport(name="advancedSettings", type=GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse.class, parameters={})
+    @Export(name="advancedSettings", type=GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse> advancedSettings;
 
     /**
@@ -39,7 +39,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo) integration.
      * 
      */
-    @OutputExport(name="avatarUri", type=String.class, parameters={})
+    @Export(name="avatarUri", type=String.class, parameters={})
     private Output<String> avatarUri;
 
     /**
@@ -53,7 +53,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Immutable. The default language of the agent as a language tag. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
      * 
      */
-    @OutputExport(name="defaultLanguageCode", type=String.class, parameters={})
+    @Export(name="defaultLanguageCode", type=String.class, parameters={})
     private Output<String> defaultLanguageCode;
 
     /**
@@ -67,7 +67,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The description of the agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -81,7 +81,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The human-readable name of the agent, unique within the location.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -95,7 +95,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Indicates if automatic spell correction is enabled in detect intent requests.
      * 
      */
-    @OutputExport(name="enableSpellCorrection", type=Boolean.class, parameters={})
+    @Export(name="enableSpellCorrection", type=Boolean.class, parameters={})
     private Output<Boolean> enableSpellCorrection;
 
     /**
@@ -109,7 +109,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings instead.
      * 
      */
-    @OutputExport(name="enableStackdriverLogging", type=Boolean.class, parameters={})
+    @Export(name="enableStackdriverLogging", type=Boolean.class, parameters={})
     private Output<Boolean> enableStackdriverLogging;
 
     /**
@@ -123,7 +123,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Name of the SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
      */
-    @OutputExport(name="securitySettings", type=String.class, parameters={})
+    @Export(name="securitySettings", type=String.class, parameters={})
     private Output<String> securitySettings;
 
     /**
@@ -151,7 +151,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Speech recognition related settings.
      * 
      */
-    @OutputExport(name="speechToTextSettings", type=GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse.class, parameters={})
+    @Export(name="speechToTextSettings", type=GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse> speechToTextSettings;
 
     /**
@@ -165,7 +165,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * Immutable. Name of the start flow in this agent. A start flow will be automatically created when the agent is created, and can only be deleted by deleting the agent. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @OutputExport(name="startFlow", type=String.class, parameters={})
+    @Export(name="startFlow", type=String.class, parameters={})
     private Output<String> startFlow;
 
     /**
@@ -179,7 +179,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The list of all languages supported by the agent (except for the `default_language_code`).
      * 
      */
-    @OutputExport(name="supportedLanguageCodes", type=List.class, parameters={String.class})
+    @Export(name="supportedLanguageCodes", type=List.class, parameters={String.class})
     private Output<List<String>> supportedLanguageCodes;
 
     /**
@@ -193,7 +193,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**

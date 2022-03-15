@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GlobalTableReplicaSSESpecification extends io.pulumi.resource
 
     public static final GlobalTableReplicaSSESpecification Empty = new GlobalTableReplicaSSESpecification();
 
-    @InputImport(name="kMSMasterKeyId", required=true)
+    @Import(name="kMSMasterKeyId", required=true)
       private final String kMSMasterKeyId;
 
     public String getKMSMasterKeyId() {

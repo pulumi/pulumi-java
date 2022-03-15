@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.Ipv6CircuitConnectionConfigArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * /29 IP address space to carve out Customer addresses for tunnels.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
     public Output<String> getAddressPrefix() {
@@ -35,7 +35,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * The authorization key.
      * 
      */
-    @InputImport(name="authorizationKey")
+    @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
     public Output<String> getAuthorizationKey() {
@@ -46,7 +46,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * Reference to Express Route Circuit Private Peering Resource of the circuit initiating connection.
      * 
      */
-    @InputImport(name="expressRouteCircuitPeering")
+    @Import(name="expressRouteCircuitPeering")
       private final @Nullable Output<SubResourceArgs> expressRouteCircuitPeering;
 
     public Output<SubResourceArgs> getExpressRouteCircuitPeering() {
@@ -57,7 +57,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -68,7 +68,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * IPv6 Address PrefixProperties of the express route circuit connection.
      * 
      */
-    @InputImport(name="ipv6CircuitConnectionConfig")
+    @Import(name="ipv6CircuitConnectionConfig")
       private final @Nullable Output<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig;
 
     public Output<Ipv6CircuitConnectionConfigArgs> getIpv6CircuitConnectionConfig() {
@@ -79,7 +79,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
      * Reference to Express Route Circuit Private Peering Resource of the peered circuit.
      * 
      */
-    @InputImport(name="peerExpressRouteCircuitPeering")
+    @Import(name="peerExpressRouteCircuitPeering")
       private final @Nullable Output<SubResourceArgs> peerExpressRouteCircuitPeering;
 
     public Output<SubResourceArgs> getPeerExpressRouteCircuitPeering() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotPriority {
     private final Integer priority;
     /**
@@ -17,10 +17,10 @@ public final class BotSlotPriority {
      */
     private final String slotName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotSlotPriority(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("slotName") String slotName) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("slotName") String slotName) {
         this.priority = priority;
         this.slotName = slotName;
     }

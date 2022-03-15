@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MeshIstioResponse {
     /**
      * Identifier for the mesh in which this Istio service is defined. Corresponds to the mesh_uid metric label in Istio metrics.
@@ -25,11 +25,11 @@ public final class MeshIstioResponse {
      */
     private final String serviceNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MeshIstioResponse(
-        @OutputCustomType.Parameter("meshUid") String meshUid,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace) {
+        @CustomType.Parameter("meshUid") String meshUid,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("serviceNamespace") String serviceNamespace) {
         this.meshUid = meshUid;
         this.serviceName = serviceName;
         this.serviceNamespace = serviceNamespace;

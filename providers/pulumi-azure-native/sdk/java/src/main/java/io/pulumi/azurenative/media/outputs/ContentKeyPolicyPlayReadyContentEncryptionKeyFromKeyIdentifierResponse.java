@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse {
     /**
      * The content key ID.
@@ -21,10 +21,10 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse(
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("odataType") String odataType) {
         this.keyId = keyId;
         this.odataType = odataType;
     }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.AssetArgs;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The alternate ID of the Asset.
      * 
      */
-    @OutputExport(name="alternateId", type=String.class, parameters={})
+    @Export(name="alternateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternateId;
 
     /**
@@ -49,7 +49,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The Asset ID.
      * 
      */
-    @OutputExport(name="assetId", type=String.class, parameters={})
+    @Export(name="assetId", type=String.class, parameters={})
     private Output<String> assetId;
 
     /**
@@ -63,7 +63,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The name of the asset blob container.
      * 
      */
-    @OutputExport(name="container", type=String.class, parameters={})
+    @Export(name="container", type=String.class, parameters={})
     private Output</* @Nullable */ String> container;
 
     /**
@@ -77,7 +77,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The creation date of the Asset.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -91,7 +91,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The Asset description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -105,7 +105,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The last modified date of the Asset.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -119,7 +119,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The name of the storage account.
      * 
      */
-    @OutputExport(name="storageAccountName", type=String.class, parameters={})
+    @Export(name="storageAccountName", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountName;
 
     /**
@@ -147,7 +147,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The Asset encryption format. One of None or MediaStorageEncryption.
      * 
      */
-    @OutputExport(name="storageEncryptionFormat", type=String.class, parameters={})
+    @Export(name="storageEncryptionFormat", type=String.class, parameters={})
     private Output<String> storageEncryptionFormat;
 
     /**
@@ -161,7 +161,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -175,7 +175,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

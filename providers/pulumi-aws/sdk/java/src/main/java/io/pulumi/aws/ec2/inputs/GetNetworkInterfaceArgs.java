@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetNetworkInterfaceFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
      * One or more name/value pairs to filter off of. There are several valid keys, for a full reference, check out [describe-network-interfaces](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-network-interfaces.html) in the AWS CLI reference.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetNetworkInterfaceFilter> filters;
 
     public List<GetNetworkInterfaceFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
      * The identifier for the network interface.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetNetworkInterfaceArgs extends io.pulumi.resources.InvokeArg
      * Any tags assigned to the network interface.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

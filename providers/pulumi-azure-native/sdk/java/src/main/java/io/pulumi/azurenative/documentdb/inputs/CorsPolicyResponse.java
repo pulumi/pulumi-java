@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The request headers that the origin domain may specify on the CORS request.
      * 
      */
-    @InputImport(name="allowedHeaders")
+    @Import(name="allowedHeaders")
       private final @Nullable String allowedHeaders;
 
     public Optional<String> getAllowedHeaders() {
@@ -34,7 +34,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The methods (HTTP request verbs) that the origin domain may use for a CORS request.
      * 
      */
-    @InputImport(name="allowedMethods")
+    @Import(name="allowedMethods")
       private final @Nullable String allowedMethods;
 
     public Optional<String> getAllowedMethods() {
@@ -45,7 +45,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The origin domains that are permitted to make a request against the service via CORS.
      * 
      */
-    @InputImport(name="allowedOrigins", required=true)
+    @Import(name="allowedOrigins", required=true)
       private final String allowedOrigins;
 
     public String getAllowedOrigins() {
@@ -56,7 +56,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
      * 
      */
-    @InputImport(name="exposedHeaders")
+    @Import(name="exposedHeaders")
       private final @Nullable String exposedHeaders;
 
     public Optional<String> getExposedHeaders() {
@@ -67,7 +67,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The maximum amount time that a browser should cache the preflight OPTIONS request.
      * 
      */
-    @InputImport(name="maxAgeInSeconds")
+    @Import(name="maxAgeInSeconds")
       private final @Nullable Double maxAgeInSeconds;
 
     public Optional<Double> getMaxAgeInSeconds() {

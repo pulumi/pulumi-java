@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CredentialResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     /**
      * List of API products associated with the developer app.
@@ -78,21 +78,21 @@ public final class GetAppResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("apiProducts") List<String> apiProducts,
-        @OutputCustomType.Parameter("appFamily") String appFamily,
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("credentials") List<GoogleCloudApigeeV1CredentialResponse> credentials,
-        @OutputCustomType.Parameter("developerId") String developerId,
-        @OutputCustomType.Parameter("keyExpiresIn") String keyExpiresIn,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("apiProducts") List<String> apiProducts,
+        @CustomType.Parameter("appFamily") String appFamily,
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @CustomType.Parameter("callbackUrl") String callbackUrl,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("credentials") List<GoogleCloudApigeeV1CredentialResponse> credentials,
+        @CustomType.Parameter("developerId") String developerId,
+        @CustomType.Parameter("keyExpiresIn") String keyExpiresIn,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.appFamily = appFamily;
         this.appId = appId;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
      * Group identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -29,7 +29,7 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -51,7 +51,7 @@ public final class GroupUserArgs extends io.pulumi.resources.ResourceArgs {
      * User identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {

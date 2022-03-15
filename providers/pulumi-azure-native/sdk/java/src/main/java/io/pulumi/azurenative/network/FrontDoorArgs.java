@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.inputs.LoadBalancingSettingsModelArgs;
 import io.pulumi.azurenative.network.inputs.RoutingRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Backend pools available to routing rules.
      * 
      */
-    @InputImport(name="backendPools")
+    @Import(name="backendPools")
       private final @Nullable Output<List<BackendPoolArgs>> backendPools;
 
     public Output<List<BackendPoolArgs>> getBackendPools() {
@@ -39,7 +39,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for all backendPools
      * 
      */
-    @InputImport(name="backendPoolsSettings")
+    @Import(name="backendPoolsSettings")
       private final @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
 
     public Output<BackendPoolsSettingsArgs> getBackendPoolsSettings() {
@@ -50,7 +50,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
 
     public Output<Either<String,FrontDoorEnabledState>> getEnabledState() {
@@ -61,7 +61,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the frontDoor
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -72,7 +72,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Front Door which is globally unique.
      * 
      */
-    @InputImport(name="frontDoorName")
+    @Import(name="frontDoorName")
       private final @Nullable Output<String> frontDoorName;
 
     public Output<String> getFrontDoorName() {
@@ -83,7 +83,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Frontend endpoints available to routing rules.
      * 
      */
-    @InputImport(name="frontendEndpoints")
+    @Import(name="frontendEndpoints")
       private final @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
 
     public Output<List<FrontendEndpointArgs>> getFrontendEndpoints() {
@@ -94,7 +94,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Health probe settings associated with this Front Door instance.
      * 
      */
-    @InputImport(name="healthProbeSettings")
+    @Import(name="healthProbeSettings")
       private final @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
     public Output<List<HealthProbeSettingsModelArgs>> getHealthProbeSettings() {
@@ -105,7 +105,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Load balancing settings associated with this Front Door instance.
      * 
      */
-    @InputImport(name="loadBalancingSettings")
+    @Import(name="loadBalancingSettings")
       private final @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
     public Output<List<LoadBalancingSettingsModelArgs>> getLoadBalancingSettings() {
@@ -116,7 +116,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -127,7 +127,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -138,7 +138,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Routing rules associated with this Front Door.
      * 
      */
-    @InputImport(name="routingRules")
+    @Import(name="routingRules")
       private final @Nullable Output<List<RoutingRuleArgs>> routingRules;
 
     public Output<List<RoutingRuleArgs>> getRoutingRules() {
@@ -149,7 +149,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

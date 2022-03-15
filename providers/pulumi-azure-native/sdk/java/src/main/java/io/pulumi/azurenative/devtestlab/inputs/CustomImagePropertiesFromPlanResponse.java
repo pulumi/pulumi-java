@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CustomImagePropertiesFromPlanResponse extends io.pulumi.resou
      * The id of the plan, equivalent to name of the plan
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class CustomImagePropertiesFromPlanResponse extends io.pulumi.resou
      * The offer for the plan from the marketplace image the custom image is derived from
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable String offer;
 
     public Optional<String> getOffer() {
@@ -44,7 +44,7 @@ public final class CustomImagePropertiesFromPlanResponse extends io.pulumi.resou
      * The publisher for the plan from the marketplace image the custom image is derived from
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {

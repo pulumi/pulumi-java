@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.TokenBodyParameterContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizationServerResult {
     /**
      * OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.
@@ -110,27 +110,27 @@ public final class GetAuthorizationServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizationServerResult(
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("authorizationMethods") @Nullable List<String> authorizationMethods,
-        @OutputCustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
-        @OutputCustomType.Parameter("clientAuthenticationMethod") @Nullable List<String> clientAuthenticationMethod,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientRegistrationEndpoint") String clientRegistrationEndpoint,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("defaultScope") @Nullable String defaultScope,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("grantTypes") List<String> grantTypes,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
-        @OutputCustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername,
-        @OutputCustomType.Parameter("supportState") @Nullable Boolean supportState,
-        @OutputCustomType.Parameter("tokenBodyParameters") @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
-        @OutputCustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("authorizationMethods") @Nullable List<String> authorizationMethods,
+        @CustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
+        @CustomType.Parameter("clientAuthenticationMethod") @Nullable List<String> clientAuthenticationMethod,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientRegistrationEndpoint") String clientRegistrationEndpoint,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("defaultScope") @Nullable String defaultScope,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("grantTypes") List<String> grantTypes,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
+        @CustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername,
+        @CustomType.Parameter("supportState") @Nullable Boolean supportState,
+        @CustomType.Parameter("tokenBodyParameters") @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
+        @CustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
+        @CustomType.Parameter("type") String type) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.authorizationMethods = authorizationMethods;
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;

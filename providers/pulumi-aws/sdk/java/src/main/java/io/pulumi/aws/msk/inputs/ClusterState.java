@@ -10,7 +10,7 @@ import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -37,7 +37,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Comma separated list of one or more hostname:port pairs of kafka brokers suitable to bootstrap connectivity to the kafka cluster. Contains a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `PLAINTEXT` or `TLS_PLAINTEXT`. The resource sorts values alphabetically. AWS may not always return all endpoints so this value is not guaranteed to be stable across applies.
      * 
      */
-    @InputImport(name="bootstrapBrokers")
+    @Import(name="bootstrapBrokers")
       private final @Nullable Output<String> bootstrapBrokers;
 
     public Output<String> getBootstrapBrokers() {
@@ -48,7 +48,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * One or more DNS names (or IP addresses) and SASL IAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9098`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.iam` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
      * 
      */
-    @InputImport(name="bootstrapBrokersSaslIam")
+    @Import(name="bootstrapBrokersSaslIam")
       private final @Nullable Output<String> bootstrapBrokersSaslIam;
 
     public Output<String> getBootstrapBrokersSaslIam() {
@@ -59,7 +59,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * One or more DNS names (or IP addresses) and SASL SCRAM port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9096`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication.0.sasl.0.scram` is set to `true`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
      * 
      */
-    @InputImport(name="bootstrapBrokersSaslScram")
+    @Import(name="bootstrapBrokersSaslScram")
       private final @Nullable Output<String> bootstrapBrokersSaslScram;
 
     public Output<String> getBootstrapBrokersSaslScram() {
@@ -70,7 +70,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * One or more DNS names (or IP addresses) and TLS port pairs. For example, `b-1.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-2.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094,b-3.exampleClusterName.abcde.c2.kafka.us-east-1.amazonaws.com:9094`. This attribute will have a value if `encryption_info.0.encryption_in_transit.0.client_broker` is set to `TLS_PLAINTEXT` or `TLS`. The resource sorts the list alphabetically. AWS may not always return all endpoints so the values may not be stable across applies.
      * 
      */
-    @InputImport(name="bootstrapBrokersTls")
+    @Import(name="bootstrapBrokersTls")
       private final @Nullable Output<String> bootstrapBrokersTls;
 
     public Output<String> getBootstrapBrokersTls() {
@@ -81,7 +81,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the broker nodes of the Kafka cluster.
      * 
      */
-    @InputImport(name="brokerNodeGroupInfo")
+    @Import(name="brokerNodeGroupInfo")
       private final @Nullable Output<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo;
 
     public Output<ClusterBrokerNodeGroupInfoGetArgs> getBrokerNodeGroupInfo() {
@@ -92,7 +92,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for specifying a client authentication. See below.
      * 
      */
-    @InputImport(name="clientAuthentication")
+    @Import(name="clientAuthentication")
       private final @Nullable Output<ClusterClientAuthenticationGetArgs> clientAuthentication;
 
     public Output<ClusterClientAuthenticationGetArgs> getClientAuthentication() {
@@ -103,7 +103,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Name of the MSK cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -114,7 +114,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
      * 
      */
-    @InputImport(name="configurationInfo")
+    @Import(name="configurationInfo")
       private final @Nullable Output<ClusterConfigurationInfoGetArgs> configurationInfo;
 
     public Output<ClusterConfigurationInfoGetArgs> getConfigurationInfo() {
@@ -126,7 +126,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
      * 
      */
-    @InputImport(name="currentVersion")
+    @Import(name="currentVersion")
       private final @Nullable Output<String> currentVersion;
 
     public Output<String> getCurrentVersion() {
@@ -137,7 +137,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for specifying encryption. See below.
      * 
      */
-    @InputImport(name="encryptionInfo")
+    @Import(name="encryptionInfo")
       private final @Nullable Output<ClusterEncryptionInfoGetArgs> encryptionInfo;
 
     public Output<ClusterEncryptionInfoGetArgs> getEncryptionInfo() {
@@ -148,7 +148,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
      * 
      */
-    @InputImport(name="enhancedMonitoring")
+    @Import(name="enhancedMonitoring")
       private final @Nullable Output<String> enhancedMonitoring;
 
     public Output<String> getEnhancedMonitoring() {
@@ -159,7 +159,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Specify the desired Kafka software version.
      * 
      */
-    @InputImport(name="kafkaVersion")
+    @Import(name="kafkaVersion")
       private final @Nullable Output<String> kafkaVersion;
 
     public Output<String> getKafkaVersion() {
@@ -170,7 +170,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.
      * 
      */
-    @InputImport(name="loggingInfo")
+    @Import(name="loggingInfo")
       private final @Nullable Output<ClusterLoggingInfoGetArgs> loggingInfo;
 
     public Output<ClusterLoggingInfoGetArgs> getLoggingInfo() {
@@ -181,7 +181,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
      * 
      */
-    @InputImport(name="numberOfBrokerNodes")
+    @Import(name="numberOfBrokerNodes")
       private final @Nullable Output<Integer> numberOfBrokerNodes;
 
     public Output<Integer> getNumberOfBrokerNodes() {
@@ -192,7 +192,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for JMX and Node monitoring for the MSK cluster. See below.
      * 
      */
-    @InputImport(name="openMonitoring")
+    @Import(name="openMonitoring")
       private final @Nullable Output<ClusterOpenMonitoringGetArgs> openMonitoring;
 
     public Output<ClusterOpenMonitoringGetArgs> getOpenMonitoring() {
@@ -203,7 +203,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -214,7 +214,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -225,7 +225,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
      * 
      */
-    @InputImport(name="zookeeperConnectString")
+    @Import(name="zookeeperConnectString")
       private final @Nullable Output<String> zookeeperConnectString;
 
     public Output<String> getZookeeperConnectString() {
@@ -236,7 +236,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster via TLS. The returned values are sorted alphbetically. The AWS API may not return all endpoints, so this value is not guaranteed to be stable across applies.
      * 
      */
-    @InputImport(name="zookeeperConnectStringTls")
+    @Import(name="zookeeperConnectStringTls")
       private final @Nullable Output<String> zookeeperConnectStringTls;
 
     public Output<String> getZookeeperConnectStringTls() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices;
 
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * Properties of a registration assignment.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<RegistrationAssignmentPropertiesArgs> properties;
 
     public Output<RegistrationAssignmentPropertiesArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * Guid of the registration assignment.
      * 
      */
-    @InputImport(name="registrationAssignmentId")
+    @Import(name="registrationAssignmentId")
       private final @Nullable Output<String> registrationAssignmentId;
 
     public Output<String> getRegistrationAssignmentId() {
@@ -41,7 +41,7 @@ public final class RegistrationAssignmentArgs extends io.pulumi.resources.Resour
      * Scope of the resource.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

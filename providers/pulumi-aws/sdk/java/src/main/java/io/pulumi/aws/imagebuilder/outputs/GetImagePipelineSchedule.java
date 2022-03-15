@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImagePipelineSchedule {
     /**
      * Condition when the pipeline should trigger a new image build.
@@ -20,10 +20,10 @@ public final class GetImagePipelineSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImagePipelineSchedule(
-        @OutputCustomType.Parameter("pipelineExecutionStartCondition") String pipelineExecutionStartCondition,
-        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+        @CustomType.Parameter("pipelineExecutionStartCondition") String pipelineExecutionStartCondition,
+        @CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * The absolute end time boundary.
      * 
      */
-    @InputImport(name="endTimestamp")
+    @Import(name="endTimestamp")
       private final @Nullable Output<Double> endTimestamp;
 
     public Output<Double> getEndTimestamp() {
@@ -34,7 +34,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * The indicator of forcing existing of end time stamp.
      * 
      */
-    @InputImport(name="forceEndTimestamp")
+    @Import(name="forceEndTimestamp")
       private final @Nullable Output<Boolean> forceEndTimestamp;
 
     public Output<Boolean> getForceEndTimestamp() {
@@ -45,7 +45,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * The relative to end right edge.
      * 
      */
-    @InputImport(name="liveBackoffDuration")
+    @Import(name="liveBackoffDuration")
       private final @Nullable Output<Double> liveBackoffDuration;
 
     public Output<Double> getLiveBackoffDuration() {
@@ -56,7 +56,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * The relative to end sliding window.
      * 
      */
-    @InputImport(name="presentationWindowDuration")
+    @Import(name="presentationWindowDuration")
       private final @Nullable Output<Double> presentationWindowDuration;
 
     public Output<Double> getPresentationWindowDuration() {
@@ -67,7 +67,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * The absolute start time boundary.
      * 
      */
-    @InputImport(name="startTimestamp")
+    @Import(name="startTimestamp")
       private final @Nullable Output<Double> startTimestamp;
 
     public Output<Double> getStartTimestamp() {
@@ -78,7 +78,7 @@ public final class PresentationTimeRangeArgs extends io.pulumi.resources.Resourc
      * The time scale of time stamps.
      * 
      */
-    @InputImport(name="timescale")
+    @Import(name="timescale")
       private final @Nullable Output<Double> timescale;
 
     public Output<Double> getTimescale() {

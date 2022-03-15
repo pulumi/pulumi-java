@@ -7,7 +7,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.PrivateLinkScopedResour
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceCappingResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceFeaturesResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     /**
      * Workspace creation date.
@@ -110,26 +110,26 @@ public final class GetWorkspaceResult {
      */
     private final @Nullable WorkspaceCappingResponse workspaceCapping;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("customerId") String customerId,
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("features") @Nullable WorkspaceFeaturesResponse features,
-        @OutputCustomType.Parameter("forceCmkForQuery") @Nullable Boolean forceCmkForQuery,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("modifiedDate") String modifiedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccessForIngestion") @Nullable String publicNetworkAccessForIngestion,
-        @OutputCustomType.Parameter("publicNetworkAccessForQuery") @Nullable String publicNetworkAccessForQuery,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
-        @OutputCustomType.Parameter("sku") @Nullable WorkspaceSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workspaceCapping") @Nullable WorkspaceCappingResponse workspaceCapping) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("customerId") String customerId,
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("features") @Nullable WorkspaceFeaturesResponse features,
+        @CustomType.Parameter("forceCmkForQuery") @Nullable Boolean forceCmkForQuery,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("modifiedDate") String modifiedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("publicNetworkAccessForIngestion") @Nullable String publicNetworkAccessForIngestion,
+        @CustomType.Parameter("publicNetworkAccessForQuery") @Nullable String publicNetworkAccessForQuery,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @CustomType.Parameter("sku") @Nullable WorkspaceSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workspaceCapping") @Nullable WorkspaceCappingResponse workspaceCapping) {
         this.createdDate = createdDate;
         this.customerId = customerId;
         this.eTag = eTag;

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceGitPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationServiceSettingsResponse {
     /**
      * Property of git environment.
@@ -17,8 +17,8 @@ public final class ConfigurationServiceSettingsResponse {
      */
     private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
-    @OutputCustomType.Constructor
-    private ConfigurationServiceSettingsResponse(@OutputCustomType.Parameter("gitProperty") @Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
+    @CustomType.Constructor
+    private ConfigurationServiceSettingsResponse(@CustomType.Parameter("gitProperty") @Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
         this.gitProperty = gitProperty;
     }
 

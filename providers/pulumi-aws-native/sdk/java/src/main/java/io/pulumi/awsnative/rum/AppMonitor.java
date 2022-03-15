@@ -8,7 +8,7 @@ import io.pulumi.awsnative.rum.AppMonitorArgs;
 import io.pulumi.awsnative.rum.outputs.AppMonitorConfiguration;
 import io.pulumi.awsnative.rum.outputs.AppMonitorTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:rum:AppMonitor")
 public class AppMonitor extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appMonitorConfiguration", type=AppMonitorConfiguration.class, parameters={})
+    @Export(name="appMonitorConfiguration", type=AppMonitorConfiguration.class, parameters={})
     private Output</* @Nullable */ AppMonitorConfiguration> appMonitorConfiguration;
 
     public Output</* @Nullable */ AppMonitorConfiguration> getAppMonitorConfiguration() {
@@ -31,7 +31,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
      * 
      */
-    @OutputExport(name="cwLogEnabled", type=Boolean.class, parameters={})
+    @Export(name="cwLogEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cwLogEnabled;
 
     /**
@@ -45,7 +45,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * The top-level internet domain name for which your application has administrative authority.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -59,7 +59,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
      * A name for the app monitor
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -69,7 +69,7 @@ public class AppMonitor extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={AppMonitorTag.class})
+    @Export(name="tags", type=List.class, parameters={AppMonitorTag.class})
     private Output</* @Nullable */ List<AppMonitorTag>> tags;
 
     public Output</* @Nullable */ List<AppMonitorTag>> getTags() {

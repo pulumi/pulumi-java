@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkProfileResult {
     /**
      * List of chid container network interface configurations.
@@ -66,18 +66,18 @@ public final class GetNetworkProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkProfileResult(
-        @OutputCustomType.Parameter("containerNetworkInterfaceConfigurations") @Nullable List<ContainerNetworkInterfaceConfigurationResponse> containerNetworkInterfaceConfigurations,
-        @OutputCustomType.Parameter("containerNetworkInterfaces") List<ContainerNetworkInterfaceResponse> containerNetworkInterfaces,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containerNetworkInterfaceConfigurations") @Nullable List<ContainerNetworkInterfaceConfigurationResponse> containerNetworkInterfaceConfigurations,
+        @CustomType.Parameter("containerNetworkInterfaces") List<ContainerNetworkInterfaceResponse> containerNetworkInterfaces,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.containerNetworkInterfaceConfigurations = containerNetworkInterfaceConfigurations;
         this.containerNetworkInterfaces = containerNetworkInterfaces;
         this.etag = etag;

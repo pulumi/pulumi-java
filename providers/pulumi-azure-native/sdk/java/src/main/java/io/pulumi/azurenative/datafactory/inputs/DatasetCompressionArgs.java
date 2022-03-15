@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
      * The dataset compression level. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<Object> level;
 
     public Output<Object> getLevel() {
@@ -33,7 +33,7 @@ public final class DatasetCompressionArgs extends io.pulumi.resources.ResourceAr
      * Type of dataset compression. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Object> type;
 
     public Output<Object> getType() {

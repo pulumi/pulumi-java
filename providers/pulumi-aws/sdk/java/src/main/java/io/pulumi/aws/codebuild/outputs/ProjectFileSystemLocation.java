@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectFileSystemLocation {
     /**
      * The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
@@ -37,13 +37,13 @@ public final class ProjectFileSystemLocation {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectFileSystemLocation(
-        @OutputCustomType.Parameter("identifier") @Nullable String identifier,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
-        @OutputCustomType.Parameter("mountPoint") @Nullable String mountPoint,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("identifier") @Nullable String identifier,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @CustomType.Parameter("mountPoint") @Nullable String mountPoint,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.identifier = identifier;
         this.location = location;
         this.mountOptions = mountOptions;

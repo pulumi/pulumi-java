@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.CloneJobResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDefaultsResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.CutoverJobResponse;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMigratingVmResult {
     /**
      * Details of the target VM in Compute Engine.
@@ -104,25 +104,25 @@ public final class GetMigratingVmResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMigratingVmResult(
-        @OutputCustomType.Parameter("computeEngineTargetDefaults") ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("currentSyncInfo") ReplicationCycleResponse currentSyncInfo,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastSync") ReplicationSyncResponse lastSync,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") SchedulePolicyResponse policy,
-        @OutputCustomType.Parameter("recentCloneJobs") List<CloneJobResponse> recentCloneJobs,
-        @OutputCustomType.Parameter("recentCutoverJobs") List<CutoverJobResponse> recentCutoverJobs,
-        @OutputCustomType.Parameter("sourceVmId") String sourceVmId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateTime") String stateTime,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("computeEngineTargetDefaults") ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("currentSyncInfo") ReplicationCycleResponse currentSyncInfo,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastSync") ReplicationSyncResponse lastSync,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") SchedulePolicyResponse policy,
+        @CustomType.Parameter("recentCloneJobs") List<CloneJobResponse> recentCloneJobs,
+        @CustomType.Parameter("recentCutoverJobs") List<CutoverJobResponse> recentCutoverJobs,
+        @CustomType.Parameter("sourceVmId") String sourceVmId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.computeEngineTargetDefaults = computeEngineTargetDefaults;
         this.createTime = createTime;
         this.currentSyncInfo = currentSyncInfo;

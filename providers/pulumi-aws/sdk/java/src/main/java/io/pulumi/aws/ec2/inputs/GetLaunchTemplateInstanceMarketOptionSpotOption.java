@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,35 +13,35 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption extends io.pu
 
     public static final GetLaunchTemplateInstanceMarketOptionSpotOption Empty = new GetLaunchTemplateInstanceMarketOptionSpotOption();
 
-    @InputImport(name="blockDurationMinutes", required=true)
+    @Import(name="blockDurationMinutes", required=true)
       private final Integer blockDurationMinutes;
 
     public Integer getBlockDurationMinutes() {
         return this.blockDurationMinutes;
     }
 
-    @InputImport(name="instanceInterruptionBehavior", required=true)
+    @Import(name="instanceInterruptionBehavior", required=true)
       private final String instanceInterruptionBehavior;
 
     public String getInstanceInterruptionBehavior() {
         return this.instanceInterruptionBehavior;
     }
 
-    @InputImport(name="maxPrice", required=true)
+    @Import(name="maxPrice", required=true)
       private final String maxPrice;
 
     public String getMaxPrice() {
         return this.maxPrice;
     }
 
-    @InputImport(name="spotInstanceType", required=true)
+    @Import(name="spotInstanceType", required=true)
       private final String spotInstanceType;
 
     public String getSpotInstanceType() {
         return this.spotInstanceType;
     }
 
-    @InputImport(name="validUntil", required=true)
+    @Import(name="validUntil", required=true)
       private final String validUntil;
 
     public String getValidUntil() {

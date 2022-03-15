@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.NotificationEndpointGrpcSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionNotificationEndpointResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -46,15 +46,15 @@ public final class GetRegionNotificationEndpointResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionNotificationEndpointResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("grpcSettings") NotificationEndpointGrpcSettingsResponse grpcSettings,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("grpcSettings") NotificationEndpointGrpcSettingsResponse grpcSettings,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.grpcSettings = grpcSettings;

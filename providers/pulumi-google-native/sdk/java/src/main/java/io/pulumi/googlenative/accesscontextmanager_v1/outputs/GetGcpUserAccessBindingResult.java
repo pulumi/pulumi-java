@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGcpUserAccessBindingResult {
     /**
      * Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
@@ -26,11 +26,11 @@ public final class GetGcpUserAccessBindingResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGcpUserAccessBindingResult(
-        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
-        @OutputCustomType.Parameter("groupKey") String groupKey,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("accessLevels") List<String> accessLevels,
+        @CustomType.Parameter("groupKey") String groupKey,
+        @CustomType.Parameter("name") String name) {
         this.accessLevels = accessLevels;
         this.groupKey = groupKey;
         this.name = name;

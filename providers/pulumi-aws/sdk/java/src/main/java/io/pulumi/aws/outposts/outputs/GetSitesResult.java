@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSitesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -21,10 +21,10 @@ public final class GetSitesResult {
      */
     private final List<String> ids;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSitesResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids) {
         this.id = id;
         this.ids = ids;
     }

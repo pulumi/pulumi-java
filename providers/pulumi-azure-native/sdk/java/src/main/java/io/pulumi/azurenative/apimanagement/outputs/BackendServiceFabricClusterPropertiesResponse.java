@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.X509CertificateNameResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceFabricClusterPropertiesResponse {
     /**
      * The client certificate id for the management endpoint.
@@ -45,14 +45,14 @@ public final class BackendServiceFabricClusterPropertiesResponse {
      */
     private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceFabricClusterPropertiesResponse(
-        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
-        @OutputCustomType.Parameter("clientCertificatethumbprint") @Nullable String clientCertificatethumbprint,
-        @OutputCustomType.Parameter("managementEndpoints") List<String> managementEndpoints,
-        @OutputCustomType.Parameter("maxPartitionResolutionRetries") @Nullable Integer maxPartitionResolutionRetries,
-        @OutputCustomType.Parameter("serverCertificateThumbprints") @Nullable List<String> serverCertificateThumbprints,
-        @OutputCustomType.Parameter("serverX509Names") @Nullable List<X509CertificateNameResponse> serverX509Names) {
+        @CustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @CustomType.Parameter("clientCertificatethumbprint") @Nullable String clientCertificatethumbprint,
+        @CustomType.Parameter("managementEndpoints") List<String> managementEndpoints,
+        @CustomType.Parameter("maxPartitionResolutionRetries") @Nullable Integer maxPartitionResolutionRetries,
+        @CustomType.Parameter("serverCertificateThumbprints") @Nullable List<String> serverCertificateThumbprints,
+        @CustomType.Parameter("serverX509Names") @Nullable List<X509CertificateNameResponse> serverX509Names) {
         this.clientCertificateId = clientCertificateId;
         this.clientCertificatethumbprint = clientCertificatethumbprint;
         this.managementEndpoints = managementEndpoints;

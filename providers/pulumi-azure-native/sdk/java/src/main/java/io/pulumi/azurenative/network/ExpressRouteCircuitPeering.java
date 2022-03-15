@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.PeerExpressRouteCircuitConnectionRe
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -43,7 +43,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The Azure ASN.
      * 
      */
-    @OutputExport(name="azureASN", type=Integer.class, parameters={})
+    @Export(name="azureASN", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> azureASN;
 
     /**
@@ -57,7 +57,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The list of circuit connections associated with Azure Private Peering for this circuit.
      * 
      */
-    @OutputExport(name="connections", type=List.class, parameters={ExpressRouteCircuitConnectionResponse.class})
+    @Export(name="connections", type=List.class, parameters={ExpressRouteCircuitConnectionResponse.class})
     private Output</* @Nullable */ List<ExpressRouteCircuitConnectionResponse>> connections;
 
     /**
@@ -71,7 +71,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -85,7 +85,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The ExpressRoute connection.
      * 
      */
-    @OutputExport(name="expressRouteConnection", type=ExpressRouteConnectionIdResponse.class, parameters={})
+    @Export(name="expressRouteConnection", type=ExpressRouteConnectionIdResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteConnectionIdResponse> expressRouteConnection;
 
     /**
@@ -99,7 +99,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The GatewayManager Etag.
      * 
      */
-    @OutputExport(name="gatewayManagerEtag", type=String.class, parameters={})
+    @Export(name="gatewayManagerEtag", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayManagerEtag;
 
     /**
@@ -113,7 +113,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The IPv6 peering configuration.
      * 
      */
-    @OutputExport(name="ipv6PeeringConfig", type=Ipv6ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
+    @Export(name="ipv6PeeringConfig", type=Ipv6ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
     private Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig;
 
     /**
@@ -127,7 +127,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * Who was the last to modify the peering.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
     /**
@@ -141,7 +141,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The Microsoft peering configuration.
      * 
      */
-    @OutputExport(name="microsoftPeeringConfig", type=ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
+    @Export(name="microsoftPeeringConfig", type=ExpressRouteCircuitPeeringConfigResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig;
 
     /**
@@ -155,7 +155,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -169,7 +169,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The peer ASN.
      * 
      */
-    @OutputExport(name="peerASN", type=Double.class, parameters={})
+    @Export(name="peerASN", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerASN;
 
     /**
@@ -183,7 +183,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The list of peered circuit connections associated with Azure Private Peering for this circuit.
      * 
      */
-    @OutputExport(name="peeredConnections", type=List.class, parameters={PeerExpressRouteCircuitConnectionResponse.class})
+    @Export(name="peeredConnections", type=List.class, parameters={PeerExpressRouteCircuitConnectionResponse.class})
     private Output<List<PeerExpressRouteCircuitConnectionResponse>> peeredConnections;
 
     /**
@@ -197,7 +197,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The peering type.
      * 
      */
-    @OutputExport(name="peeringType", type=String.class, parameters={})
+    @Export(name="peeringType", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringType;
 
     /**
@@ -211,7 +211,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The primary port.
      * 
      */
-    @OutputExport(name="primaryAzurePort", type=String.class, parameters={})
+    @Export(name="primaryAzurePort", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryAzurePort;
 
     /**
@@ -225,7 +225,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The primary address prefix.
      * 
      */
-    @OutputExport(name="primaryPeerAddressPrefix", type=String.class, parameters={})
+    @Export(name="primaryPeerAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryPeerAddressPrefix;
 
     /**
@@ -239,7 +239,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The provisioning state of the express route circuit peering resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -253,7 +253,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The reference to the RouteFilter resource.
      * 
      */
-    @OutputExport(name="routeFilter", type=SubResourceResponse.class, parameters={})
+    @Export(name="routeFilter", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> routeFilter;
 
     /**
@@ -267,7 +267,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The secondary port.
      * 
      */
-    @OutputExport(name="secondaryAzurePort", type=String.class, parameters={})
+    @Export(name="secondaryAzurePort", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAzurePort;
 
     /**
@@ -281,7 +281,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The secondary address prefix.
      * 
      */
-    @OutputExport(name="secondaryPeerAddressPrefix", type=String.class, parameters={})
+    @Export(name="secondaryPeerAddressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryPeerAddressPrefix;
 
     /**
@@ -295,7 +295,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The shared key.
      * 
      */
-    @OutputExport(name="sharedKey", type=String.class, parameters={})
+    @Export(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
     /**
@@ -309,7 +309,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The peering state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -323,7 +323,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The peering stats of express route circuit.
      * 
      */
-    @OutputExport(name="stats", type=ExpressRouteCircuitStatsResponse.class, parameters={})
+    @Export(name="stats", type=ExpressRouteCircuitStatsResponse.class, parameters={})
     private Output</* @Nullable */ ExpressRouteCircuitStatsResponse> stats;
 
     /**
@@ -337,7 +337,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -351,7 +351,7 @@ public class ExpressRouteCircuitPeering extends io.pulumi.resources.CustomResour
      * The VLAN ID.
      * 
      */
-    @OutputExport(name="vlanId", type=Integer.class, parameters={})
+    @Export(name="vlanId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vlanId;
 
     /**

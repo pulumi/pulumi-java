@@ -4,7 +4,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Optionals;
 import io.pulumi.core.internal.Reflection;
 import io.pulumi.exceptions.RunException;
@@ -21,12 +21,12 @@ import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
-public final class OutputMetadata<T> extends InputOutputMetadata<OutputExport, Output<T>> {
+public final class OutputMetadata<T> extends InputOutputMetadata<Export, Output<T>> {
 
-    private final OutputExport annotation;
+    private final Export annotation;
     private final TypeShape<T> dataShape;
 
-    private OutputMetadata(Field field, OutputExport annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
+    private OutputMetadata(Field field, Export annotation, Class<Output<T>> fieldType, TypeShape<T> dataShape) {
         super(field, fieldType);
         this.annotation = requireNonNull(annotation);
         this.dataShape = requireNonNull(dataShape);
@@ -37,7 +37,7 @@ public final class OutputMetadata<T> extends InputOutputMetadata<OutputExport, O
     }
 
     @Override
-    public OutputExport getAnnotation() {
+    public Export getAnnotation() {
         return annotation;
     }
 
@@ -62,11 +62,11 @@ public final class OutputMetadata<T> extends InputOutputMetadata<OutputExport, O
 
     public static ImmutableMap<String, OutputMetadata<?>> of(Class<?> extractionType, Predicate<Field> fieldFilter) {
         var fields = Reflection.allFields(extractionType).stream()
-                .filter(field1 -> field1.isAnnotationPresent(OutputExport.class))
+                .filter(field1 -> field1.isAnnotationPresent(Export.class))
                 .filter(fieldFilter)
                 .peek(field1 -> field1.setAccessible(true))
                 .collect(toImmutableMap(
-                        f -> Optional.ofNullable(f.getAnnotation(OutputExport.class))
+                        f -> Optional.ofNullable(f.getAnnotation(Export.class))
                                 .flatMap(a -> Optionals.ofBlank(a.name())).orElse(f.getName()),
                         Function.identity()
                 ));
@@ -84,18 +84,18 @@ public final class OutputMetadata<T> extends InputOutputMetadata<OutputExport, O
             throw new RunException(String.format(
                     "Output(s) '%s' have incorrect type. @%s annotated fields must be instances of Output<>",
                     String.join(", ", wrongFields),
-                    OutputExport.class.getSimpleName()
+                    Export.class.getSimpleName()
             ));
         }
 
         return fields.values().stream()
                 .map(f -> {
                     @Nullable
-                    var export = f.getAnnotation(OutputExport.class);
+                    var export = f.getAnnotation(Export.class);
                     if (export == null) {
                         throw new IllegalArgumentException(String.format(
                                 "Expected field '%s' of class '%s' to be annotated with '%s'",
-                                f.getName(), f.getDeclaringClass().getTypeName(), OutputExport.class
+                                f.getName(), f.getDeclaringClass().getTypeName(), Export.class
                         ));
                     }
                     var fieldType = f.getType();
@@ -115,7 +115,7 @@ public final class OutputMetadata<T> extends InputOutputMetadata<OutputExport, O
 
     private static <T> OutputMetadata<T> of(
             Field field,
-            OutputExport exportAnnotation,
+            Export exportAnnotation,
             Class<?> fieldType,
             Class<T> dataType, Class<?>[] dataTypeParameters
     ) {

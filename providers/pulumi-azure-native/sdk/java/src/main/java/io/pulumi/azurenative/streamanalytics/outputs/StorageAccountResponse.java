@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountResponse {
     /**
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
@@ -22,10 +22,10 @@ public final class StorageAccountResponse {
      */
     private final @Nullable String accountName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName) {
+        @CustomType.Parameter("accountKey") @Nullable String accountKey,
+        @CustomType.Parameter("accountName") @Nullable String accountName) {
         this.accountKey = accountKey;
         this.accountName = accountName;
     }

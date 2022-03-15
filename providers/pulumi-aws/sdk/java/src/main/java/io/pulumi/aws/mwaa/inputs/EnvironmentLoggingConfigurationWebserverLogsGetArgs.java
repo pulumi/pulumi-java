@@ -4,7 +4,7 @@
 package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class EnvironmentLoggingConfigurationWebserverLogsGetArgs extends i
 
     public static final EnvironmentLoggingConfigurationWebserverLogsGetArgs Empty = new EnvironmentLoggingConfigurationWebserverLogsGetArgs();
 
-    @InputImport(name="cloudWatchLogGroupArn")
+    @Import(name="cloudWatchLogGroupArn")
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
     public Output<String> getCloudWatchLogGroupArn() {
@@ -26,7 +26,7 @@ public final class EnvironmentLoggingConfigurationWebserverLogsGetArgs extends i
      * Enabling or disabling the collection of logs
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -37,7 +37,7 @@ public final class EnvironmentLoggingConfigurationWebserverLogsGetArgs extends i
      * Logging level. Valid values: `CRITICAL`, `ERROR`, `WARNING`, `INFO`, `DEBUG`. Will be `INFO` by default.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {

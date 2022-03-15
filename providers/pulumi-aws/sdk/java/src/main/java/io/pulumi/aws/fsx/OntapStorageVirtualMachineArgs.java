@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.
      * 
      */
-    @InputImport(name="activeDirectoryConfiguration")
+    @Import(name="activeDirectoryConfiguration")
       private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
     public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
@@ -31,7 +31,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * The ID of the Amazon FSx ONTAP File System that this SVM will be created on.
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -42,7 +42,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * The name of the SVM. You can use a maximum of 47 alphanumeric characters, plus the underscore (_) special character.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,14 +53,14 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * Specifies the root volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. All volumes created under this SVM will inherit the root security style unless the security style is specified on the volume. Default value is `UNIX`.
      * 
      */
-    @InputImport(name="rootVolumeSecurityStyle")
+    @Import(name="rootVolumeSecurityStyle")
       private final @Nullable Output<String> rootVolumeSecurityStyle;
 
     public Output<String> getRootVolumeSecurityStyle() {
         return this.rootVolumeSecurityStyle == null ? Output.empty() : this.rootVolumeSecurityStyle;
     }
 
-    @InputImport(name="svmAdminPassword")
+    @Import(name="svmAdminPassword")
       private final @Nullable Output<String> svmAdminPassword;
 
     public Output<String> getSvmAdminPassword() {
@@ -71,7 +71,7 @@ public final class OntapStorageVirtualMachineArgs extends io.pulumi.resources.Re
      * A map of tags to assign to the storage virtual machine. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

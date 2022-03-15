@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntryBigqueryTableSpecTableSpec {
     private final @Nullable String groupedEntry;
 
-    @OutputCustomType.Constructor
-    private EntryBigqueryTableSpecTableSpec(@OutputCustomType.Parameter("groupedEntry") @Nullable String groupedEntry) {
+    @CustomType.Constructor
+    private EntryBigqueryTableSpecTableSpec(@CustomType.Parameter("groupedEntry") @Nullable String groupedEntry) {
         this.groupedEntry = groupedEntry;
     }
 

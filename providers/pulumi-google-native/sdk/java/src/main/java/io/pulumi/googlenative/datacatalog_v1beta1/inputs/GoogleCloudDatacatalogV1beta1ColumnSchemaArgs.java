@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
      * Name of the column.
      * 
      */
-    @InputImport(name="column", required=true)
+    @Import(name="column", required=true)
       private final Output<String> column;
 
     public Output<String> getColumn() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
      * Optional. Description of the column. Default value is an empty string.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
      * Optional. A column's mode indicates whether the values in this column are required, nullable, etc. Only `NULLABLE`, `REQUIRED` and `REPEATED` are supported. Default mode is `NULLABLE`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
      * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
      * 
      */
-    @InputImport(name="subcolumns")
+    @Import(name="subcolumns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> subcolumns;
 
     public Output<List<GoogleCloudDatacatalogV1beta1ColumnSchemaArgs>> getSubcolumns() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaArgs extends io.pulu
      * Type of the column.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

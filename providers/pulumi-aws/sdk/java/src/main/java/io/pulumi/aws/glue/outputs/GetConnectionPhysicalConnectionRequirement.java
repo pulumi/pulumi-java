@@ -3,22 +3,22 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionPhysicalConnectionRequirement {
     private final String availabilityZone;
     private final List<String> securityGroupIdLists;
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionPhysicalConnectionRequirement(
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("securityGroupIdLists") List<String> securityGroupIdLists,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("securityGroupIdLists") List<String> securityGroupIdLists,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.availabilityZone = availabilityZone;
         this.securityGroupIdLists = securityGroupIdLists;
         this.subnetId = subnetId;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * requests per container of the Revision. Values are:
      * 
      */
-    @InputImport(name="containerConcurrency")
+    @Import(name="containerConcurrency")
       private final @Nullable Output<Integer> containerConcurrency;
 
     public Output<Integer> getContainerConcurrency() {
@@ -39,7 +39,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
 
     public Output<List<ServiceTemplateSpecContainerArgs>> getContainers() {
@@ -53,7 +53,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * will use the project's default service account.
      * 
      */
-    @InputImport(name="serviceAccountName")
+    @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {
@@ -72,7 +72,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
-    @InputImport(name="servingState")
+    @Import(name="servingState")
       private final @Nullable Output<String> servingState;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
@@ -84,7 +84,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {
@@ -96,7 +96,7 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
 
     public Output<List<ServiceTemplateSpecVolumeArgs>> getVolumes() {

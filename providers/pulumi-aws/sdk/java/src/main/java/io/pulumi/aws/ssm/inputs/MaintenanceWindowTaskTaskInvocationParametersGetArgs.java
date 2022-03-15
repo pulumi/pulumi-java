@@ -8,7 +8,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersLam
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * The parameters for an AUTOMATION task type. Documented below.
      * 
      */
-    @InputImport(name="automationParameters")
+    @Import(name="automationParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> automationParameters;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs> getAutomationParameters() {
@@ -32,7 +32,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * The parameters for a LAMBDA task type. Documented below.
      * 
      */
-    @InputImport(name="lambdaParameters")
+    @Import(name="lambdaParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> lambdaParameters;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersLambdaParametersGetArgs> getLambdaParameters() {
@@ -43,7 +43,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * The parameters for a RUN_COMMAND task type. Documented below.
      * 
      */
-    @InputImport(name="runCommandParameters")
+    @Import(name="runCommandParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> runCommandParameters;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersGetArgs> getRunCommandParameters() {
@@ -54,7 +54,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersGetArgs extends 
      * The parameters for a STEP_FUNCTIONS task type. Documented below.
      * 
      */
-    @InputImport(name="stepFunctionsParameters")
+    @Import(name="stepFunctionsParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> stepFunctionsParameters;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersGetArgs> getStepFunctionsParameters() {

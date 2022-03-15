@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1NotificationConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse {
     /**
      * Configuration for agent assistance of end user participant. Currently, this feature is not general available, please contact Google to get access.
@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      */
     private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(
-        @OutputCustomType.Parameter("endUserSuggestionConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig,
-        @OutputCustomType.Parameter("humanAgentSuggestionConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig,
-        @OutputCustomType.Parameter("messageAnalysisConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig,
-        @OutputCustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
+        @CustomType.Parameter("endUserSuggestionConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig,
+        @CustomType.Parameter("humanAgentSuggestionConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig,
+        @CustomType.Parameter("messageAnalysisConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig,
+        @CustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
         this.endUserSuggestionConfig = endUserSuggestionConfig;
         this.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
         this.messageAnalysisConfig = messageAnalysisConfig;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingRes
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKinesisToS3;
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKubernetesScubaReader;
 import io.pulumi.azurenative.security.inputs.DefenderForContainersAwsOfferingResponseKubernetesService;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
      * The cloudwatch to kinesis connection configuration
      * 
      */
-    @InputImport(name="cloudWatchToKinesis")
+    @Import(name="cloudWatchToKinesis")
       private final @Nullable DefenderForContainersAwsOfferingResponseCloudWatchToKinesis cloudWatchToKinesis;
 
     public Optional<DefenderForContainersAwsOfferingResponseCloudWatchToKinesis> getCloudWatchToKinesis() {
@@ -37,7 +37,7 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
      * The offering description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -48,7 +48,7 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
      * The kinesis to s3 connection configuration
      * 
      */
-    @InputImport(name="kinesisToS3")
+    @Import(name="kinesisToS3")
       private final @Nullable DefenderForContainersAwsOfferingResponseKinesisToS3 kinesisToS3;
 
     public Optional<DefenderForContainersAwsOfferingResponseKinesisToS3> getKinesisToS3() {
@@ -59,7 +59,7 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
      * The kubernetes to scuba connection configuration
      * 
      */
-    @InputImport(name="kubernetesScubaReader")
+    @Import(name="kubernetesScubaReader")
       private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesScubaReader kubernetesScubaReader;
 
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesScubaReader> getKubernetesScubaReader() {
@@ -70,7 +70,7 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
      * The kubernetes service connection configuration
      * 
      */
-    @InputImport(name="kubernetesService")
+    @Import(name="kubernetesService")
       private final @Nullable DefenderForContainersAwsOfferingResponseKubernetesService kubernetesService;
 
     public Optional<DefenderForContainersAwsOfferingResponseKubernetesService> getKubernetesService() {
@@ -82,7 +82,7 @@ public final class DefenderForContainersAwsOfferingResponse extends io.pulumi.re
      * Expected value is 'DefenderForContainersAws'.
      * 
      */
-    @InputImport(name="offeringType", required=true)
+    @Import(name="offeringType", required=true)
       private final String offeringType;
 
     public String getOfferingType() {

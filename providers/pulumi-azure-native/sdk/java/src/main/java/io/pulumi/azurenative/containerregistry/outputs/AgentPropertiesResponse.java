@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AgentPropertiesResponse {
     /**
      * The CPU configuration in terms of number of cores required for the run.
@@ -17,8 +17,8 @@ public final class AgentPropertiesResponse {
      */
     private final @Nullable Integer cpu;
 
-    @OutputCustomType.Constructor
-    private AgentPropertiesResponse(@OutputCustomType.Parameter("cpu") @Nullable Integer cpu) {
+    @CustomType.Constructor
+    private AgentPropertiesResponse(@CustomType.Parameter("cpu") @Nullable Integer cpu) {
         this.cpu = cpu;
     }
 

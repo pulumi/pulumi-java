@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
      * The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
      * 
      */
-    @InputImport(name="primaryAuthKeyHash", required=true)
+    @Import(name="primaryAuthKeyHash", required=true)
       private final Output<String> primaryAuthKeyHash;
 
     public Output<String> getPrimaryAuthKeyHash() {
@@ -32,7 +32,7 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
      * The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
      * 
      */
-    @InputImport(name="secondaryAuthKeyHash", required=true)
+    @Import(name="secondaryAuthKeyHash", required=true)
       private final Output<String> secondaryAuthKeyHash;
 
     public Output<String> getSecondaryAuthKeyHash() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class EtwEventConfigurationResponse extends io.pulumi.resources.Inv
 
     public static final EtwEventConfigurationResponse Empty = new EtwEventConfigurationResponse();
 
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Integer id;
 
     public Integer getId() {
         return this.id;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

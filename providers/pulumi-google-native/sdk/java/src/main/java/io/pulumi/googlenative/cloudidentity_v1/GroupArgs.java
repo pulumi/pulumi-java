@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.DynamicGroupMetadataArgs;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.EntityKeyArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the `Group`.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -43,7 +43,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Dynamic group metadata like queries and status.
      * 
      */
-    @InputImport(name="dynamicGroupMetadata")
+    @Import(name="dynamicGroupMetadata")
       private final @Nullable Output<DynamicGroupMetadataArgs> dynamicGroupMetadata;
 
     public Output<DynamicGroupMetadataArgs> getDynamicGroupMetadata() {
@@ -54,14 +54,14 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The `EntityKey` of the `Group`.
      * 
      */
-    @InputImport(name="groupKey", required=true)
+    @Import(name="groupKey", required=true)
       private final Output<EntityKeyArgs> groupKey;
 
     public Output<EntityKeyArgs> getGroupKey() {
         return this.groupKey;
     }
 
-    @InputImport(name="initialGroupConfig")
+    @Import(name="initialGroupConfig")
       private final @Nullable Output<String> initialGroupConfig;
 
     public Output<String> getInitialGroupConfig() {
@@ -72,7 +72,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * One or more label entries that apply to the Group. Currently supported labels contain a key with an empty value. Google Groups are the default type of group and have a label with a key of `cloudidentity.googleapis.com/groups.discussion_forum` and an empty value. Existing Google Groups can have an additional label with a key of `cloudidentity.googleapis.com/groups.security` and an empty value added to them. **This is an immutable change and the security label cannot be removed once added.** Dynamic groups have a label with a key of `cloudidentity.googleapis.com/groups.dynamic`. Identity-mapped groups for Cloud Search have a label with a key of `system/groups/external` and an empty value.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -83,7 +83,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The resource name of the entity under which this `Group` resides in the Cloud Identity resource hierarchy. Must be of the form `identitysources/{identity_source}` for external- identity-mapped groups or `customers/{customer}` for Google Groups. The `customer` must begin with "C" (for example, 'C046psxkn').
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

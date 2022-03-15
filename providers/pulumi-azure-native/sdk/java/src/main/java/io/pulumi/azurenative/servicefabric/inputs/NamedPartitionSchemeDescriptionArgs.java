@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
      * The number of partitions.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
      * Array of size specified by the ‘count’ parameter, for the names of the partitions.
      * 
      */
-    @InputImport(name="names", required=true)
+    @Import(name="names", required=true)
       private final Output<List<String>> names;
 
     public Output<List<String>> getNames() {
@@ -46,7 +46,7 @@ public final class NamedPartitionSchemeDescriptionArgs extends io.pulumi.resourc
      * Expected value is 'Named'.
      * 
      */
-    @InputImport(name="partitionScheme", required=true)
+    @Import(name="partitionScheme", required=true)
       private final Output<String> partitionScheme;
 
     public Output<String> getPartitionScheme() {

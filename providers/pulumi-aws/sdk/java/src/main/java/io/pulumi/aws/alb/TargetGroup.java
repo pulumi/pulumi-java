@@ -10,7 +10,7 @@ import io.pulumi.aws.alb.outputs.TargetGroupHealthCheck;
 import io.pulumi.aws.alb.outputs.TargetGroupStickiness;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * ARN of the Target Group (matches `id`).
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -55,7 +55,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * ARN suffix for use with CloudWatch Metrics.
      * 
      */
-    @OutputExport(name="arnSuffix", type=String.class, parameters={})
+    @Export(name="arnSuffix", type=String.class, parameters={})
     private Output<String> arnSuffix;
 
     /**
@@ -69,7 +69,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Whether to terminate connections at the end of the deregistration timeout on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#deregistration-delay) for more information. Default is `false`.
      * 
      */
-    @OutputExport(name="connectionTermination", type=Boolean.class, parameters={})
+    @Export(name="connectionTermination", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> connectionTermination;
 
     /**
@@ -83,7 +83,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
      * 
      */
-    @OutputExport(name="deregistrationDelay", type=Integer.class, parameters={})
+    @Export(name="deregistrationDelay", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> deregistrationDelay;
 
     /**
@@ -97,7 +97,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Health Check configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="healthCheck", type=TargetGroupHealthCheck.class, parameters={})
+    @Export(name="healthCheck", type=TargetGroupHealthCheck.class, parameters={})
     private Output<TargetGroupHealthCheck> healthCheck;
 
     /**
@@ -111,7 +111,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
      * 
      */
-    @OutputExport(name="lambdaMultiValueHeadersEnabled", type=Boolean.class, parameters={})
+    @Export(name="lambdaMultiValueHeadersEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> lambdaMultiValueHeadersEnabled;
 
     /**
@@ -125,7 +125,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Determines how the load balancer selects targets when routing requests. Only applicable for Application Load Balancer Target Groups. The value is `round_robin` or `least_outstanding_requests`. The default is `round_robin`.
      * 
      */
-    @OutputExport(name="loadBalancingAlgorithmType", type=String.class, parameters={})
+    @Export(name="loadBalancingAlgorithmType", type=String.class, parameters={})
     private Output<String> loadBalancingAlgorithmType;
 
     /**
@@ -139,7 +139,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Name of the target group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`. Cannot be longer than 6 characters.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -167,7 +167,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -181,7 +181,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
      * 
      */
-    @OutputExport(name="preserveClientIp", type=String.class, parameters={})
+    @Export(name="preserveClientIp", type=String.class, parameters={})
     private Output<String> preserveClientIp;
 
     /**
@@ -195,7 +195,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
@@ -209,7 +209,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
      * 
      */
-    @OutputExport(name="protocolVersion", type=String.class, parameters={})
+    @Export(name="protocolVersion", type=String.class, parameters={})
     private Output<String> protocolVersion;
 
     /**
@@ -223,7 +223,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
      * 
      */
-    @OutputExport(name="proxyProtocolV2", type=Boolean.class, parameters={})
+    @Export(name="proxyProtocolV2", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> proxyProtocolV2;
 
     /**
@@ -237,7 +237,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
      * 
      */
-    @OutputExport(name="slowStart", type=Integer.class, parameters={})
+    @Export(name="slowStart", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> slowStart;
 
     /**
@@ -251,7 +251,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Stickiness configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="stickiness", type=TargetGroupStickiness.class, parameters={})
+    @Export(name="stickiness", type=TargetGroupStickiness.class, parameters={})
     private Output<TargetGroupStickiness> stickiness;
 
     /**
@@ -265,7 +265,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -279,7 +279,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -293,7 +293,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Type of target that you must specify when registering targets with this target group. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) for supported values. The default is `instance`.
      * 
      */
-    @OutputExport(name="targetType", type=String.class, parameters={})
+    @Export(name="targetType", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetType;
 
     /**
@@ -307,7 +307,7 @@ public class TargetGroup extends io.pulumi.resources.CustomResource {
      * Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
     /**

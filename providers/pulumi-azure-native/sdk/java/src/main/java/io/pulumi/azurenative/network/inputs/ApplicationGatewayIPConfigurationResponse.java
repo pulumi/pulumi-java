@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -34,7 +34,7 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
      * Name of the IP configuration that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
      * The provisioning state of the application gateway IP configuration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -67,7 +67,7 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
      * Reference to the subnet resource. A subnet from where application gateway gets its private address.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
@@ -78,7 +78,7 @@ public final class ApplicationGatewayIPConfigurationResponse extends io.pulumi.r
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

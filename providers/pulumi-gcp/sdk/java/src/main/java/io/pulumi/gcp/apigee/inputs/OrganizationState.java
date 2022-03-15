@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    @InputImport(name="analyticsRegion")
+    @Import(name="analyticsRegion")
       private final @Nullable Output<String> analyticsRegion;
 
     public Output<String> getAnalyticsRegion() {
@@ -31,7 +31,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -43,7 +43,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * is CLOUD. A base64-encoded string.
      * 
      */
-    @InputImport(name="caCertificate")
+    @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
@@ -54,7 +54,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Description of the Apigee organization.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * The display name of the Apigee organization.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -76,7 +76,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Output only. Name of the Apigee organization.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * The project ID associated with the Apigee organization.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -101,7 +101,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
      * 
      */
-    @InputImport(name="runtimeDatabaseEncryptionKeyName")
+    @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
     public Output<String> getRuntimeDatabaseEncryptionKeyName() {
@@ -114,7 +114,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CLOUD` and `HYBRID`.
      * 
      */
-    @InputImport(name="runtimeType")
+    @Import(name="runtimeType")
       private final @Nullable Output<String> runtimeType;
 
     public Output<String> getRuntimeType() {
@@ -126,7 +126,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
      * purposes only) or paid (full subscription has been purchased).
      * 
      */
-    @InputImport(name="subscriptionType")
+    @Import(name="subscriptionType")
       private final @Nullable Output<String> subscriptionType;
 
     public Output<String> getSubscriptionType() {

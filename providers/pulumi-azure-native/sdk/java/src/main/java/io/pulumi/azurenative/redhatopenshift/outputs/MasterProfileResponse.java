@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MasterProfileResponse {
     /**
      * The Azure resource ID of the master subnet (immutable).
@@ -22,10 +22,10 @@ public final class MasterProfileResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MasterProfileResponse(
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.subnetId = subnetId;
         this.vmSize = vmSize;
     }

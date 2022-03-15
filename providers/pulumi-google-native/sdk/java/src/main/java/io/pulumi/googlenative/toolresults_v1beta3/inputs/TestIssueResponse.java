@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AnyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * Category of issue. Required.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final String category;
 
     public String getCategory() {
@@ -32,7 +32,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * A brief human-readable message describing the issue. Required.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -43,7 +43,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * Severity of issue. Required.
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {
@@ -54,7 +54,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * Type of issue. Required.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -65,7 +65,7 @@ public final class TestIssueResponse extends io.pulumi.resources.InvokeArgs {
      * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
      * 
      */
-    @InputImport(name="warning", required=true)
+    @Import(name="warning", required=true)
       private final AnyResponse warning;
 
     public AnyResponse getWarning() {

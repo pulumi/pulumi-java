@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * List of application settings names.
      * 
      */
-    @InputImport(name="appSettingNames")
+    @Import(name="appSettingNames")
       private final @Nullable Output<List<String>> appSettingNames;
 
     public Output<List<String>> getAppSettingNames() {
@@ -30,7 +30,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * List of external Azure storage account identifiers.
      * 
      */
-    @InputImport(name="azureStorageConfigNames")
+    @Import(name="azureStorageConfigNames")
       private final @Nullable Output<List<String>> azureStorageConfigNames;
 
     public Output<List<String>> getAzureStorageConfigNames() {
@@ -41,7 +41,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * List of connection string names.
      * 
      */
-    @InputImport(name="connectionStringNames")
+    @Import(name="connectionStringNames")
       private final @Nullable Output<List<String>> connectionStringNames;
 
     public Output<List<String>> getConnectionStringNames() {
@@ -52,7 +52,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -63,7 +63,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

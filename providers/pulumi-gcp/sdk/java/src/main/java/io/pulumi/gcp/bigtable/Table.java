@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.TableArgs;
@@ -46,7 +46,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
      * 
      */
-    @OutputExport(name="columnFamilies", type=List.class, parameters={TableColumnFamily.class})
+    @Export(name="columnFamilies", type=List.class, parameters={TableColumnFamily.class})
     private Output</* @Nullable */ List<TableColumnFamily>> columnFamilies;
 
     /**
@@ -60,7 +60,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the Bigtable instance.
      * 
      */
-    @OutputExport(name="instanceName", type=String.class, parameters={})
+    @Export(name="instanceName", type=String.class, parameters={})
     private Output<String> instanceName;
 
     /**
@@ -74,7 +74,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the table.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -89,7 +89,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -106,7 +106,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */
-    @OutputExport(name="splitKeys", type=List.class, parameters={String.class})
+    @Export(name="splitKeys", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> splitKeys;
 
     /**

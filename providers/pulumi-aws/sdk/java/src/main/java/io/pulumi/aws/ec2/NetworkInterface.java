@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.NetworkInterfaceArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceState;
 import io.pulumi.aws.ec2.outputs.NetworkInterfaceAttachment;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -53,7 +53,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * ARN of the network interface.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Configuration block to define the attachment of the ENI. See below.
      * 
      */
-    @OutputExport(name="attachments", type=List.class, parameters={NetworkInterfaceAttachment.class})
+    @Export(name="attachments", type=List.class, parameters={NetworkInterfaceAttachment.class})
     private Output<List<NetworkInterfaceAttachment>> attachments;
 
     /**
@@ -81,7 +81,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Description for the network interface.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -95,7 +95,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Type of network interface to create. Set to `efa` for Elastic Fabric Adapter. Changing `interface_type` will cause the resource to be destroyed and re-created.
      * 
      */
-    @OutputExport(name="interfaceType", type=String.class, parameters={})
+    @Export(name="interfaceType", type=String.class, parameters={})
     private Output<String> interfaceType;
 
     /**
@@ -109,7 +109,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Number of IPv4 prefixes that AWS automatically assigns to the network interface.
      * 
      */
-    @OutputExport(name="ipv4PrefixCount", type=Integer.class, parameters={})
+    @Export(name="ipv4PrefixCount", type=Integer.class, parameters={})
     private Output<Integer> ipv4PrefixCount;
 
     /**
@@ -123,7 +123,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * One or more IPv4 prefixes assigned to the network interface.
      * 
      */
-    @OutputExport(name="ipv4Prefixes", type=List.class, parameters={String.class})
+    @Export(name="ipv4Prefixes", type=List.class, parameters={String.class})
     private Output<List<String>> ipv4Prefixes;
 
     /**
@@ -137,7 +137,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Number of IPv6 addresses to assign to a network interface. You can't use this option if specifying specific `ipv6_addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
      * 
      */
-    @OutputExport(name="ipv6AddressCount", type=Integer.class, parameters={})
+    @Export(name="ipv6AddressCount", type=Integer.class, parameters={})
     private Output<Integer> ipv6AddressCount;
 
     /**
@@ -147,7 +147,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
     public Output<Integer> getIpv6AddressCount() {
         return this.ipv6AddressCount;
     }
-    @OutputExport(name="ipv6AddressListEnabled", type=Boolean.class, parameters={})
+    @Export(name="ipv6AddressListEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6AddressListEnabled;
 
     public Output</* @Nullable */ Boolean> getIpv6AddressListEnabled() {
@@ -157,7 +157,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * List of private IPs to assign to the ENI in sequential order.
      * 
      */
-    @OutputExport(name="ipv6AddressLists", type=List.class, parameters={String.class})
+    @Export(name="ipv6AddressLists", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6AddressLists;
 
     /**
@@ -171,7 +171,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying `ipv6_address_count`.
      * 
      */
-    @OutputExport(name="ipv6Addresses", type=List.class, parameters={String.class})
+    @Export(name="ipv6Addresses", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6Addresses;
 
     /**
@@ -185,7 +185,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Number of IPv6 prefixes that AWS automatically assigns to the network interface.
      * 
      */
-    @OutputExport(name="ipv6PrefixCount", type=Integer.class, parameters={})
+    @Export(name="ipv6PrefixCount", type=Integer.class, parameters={})
     private Output<Integer> ipv6PrefixCount;
 
     /**
@@ -199,7 +199,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * One or more IPv6 prefixes assigned to the network interface.
      * 
      */
-    @OutputExport(name="ipv6Prefixes", type=List.class, parameters={String.class})
+    @Export(name="ipv6Prefixes", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6Prefixes;
 
     /**
@@ -213,7 +213,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * MAC address of the network interface.
      * 
      */
-    @OutputExport(name="macAddress", type=String.class, parameters={})
+    @Export(name="macAddress", type=String.class, parameters={})
     private Output<String> macAddress;
 
     /**
@@ -223,7 +223,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
     public Output<String> getMacAddress() {
         return this.macAddress;
     }
-    @OutputExport(name="outpostArn", type=String.class, parameters={})
+    @Export(name="outpostArn", type=String.class, parameters={})
     private Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
@@ -233,7 +233,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * AWS account ID of the owner of the network interface.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -247,7 +247,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Private DNS name of the network interface (IPv4).
      * 
      */
-    @OutputExport(name="privateDnsName", type=String.class, parameters={})
+    @Export(name="privateDnsName", type=String.class, parameters={})
     private Output<String> privateDnsName;
 
     /**
@@ -257,13 +257,13 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
     public Output<String> getPrivateDnsName() {
         return this.privateDnsName;
     }
-    @OutputExport(name="privateIp", type=String.class, parameters={})
+    @Export(name="privateIp", type=String.class, parameters={})
     private Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
         return this.privateIp;
     }
-    @OutputExport(name="privateIpListEnabled", type=Boolean.class, parameters={})
+    @Export(name="privateIpListEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privateIpListEnabled;
 
     public Output</* @Nullable */ Boolean> getPrivateIpListEnabled() {
@@ -273,7 +273,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * List of private IPs to assign to the ENI in sequential order. Requires setting `private_ip_list_enable` to `true`.
      * 
      */
-    @OutputExport(name="privateIpLists", type=List.class, parameters={String.class})
+    @Export(name="privateIpLists", type=List.class, parameters={String.class})
     private Output<List<String>> privateIpLists;
 
     /**
@@ -287,7 +287,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * List of private IPs to assign to the ENI without regard to order.
      * 
      */
-    @OutputExport(name="privateIps", type=List.class, parameters={String.class})
+    @Export(name="privateIps", type=List.class, parameters={String.class})
     private Output<List<String>> privateIps;
 
     /**
@@ -301,7 +301,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + `private_ips_count`, as a primary private IP will be assiged to an ENI by default.
      * 
      */
-    @OutputExport(name="privateIpsCount", type=Integer.class, parameters={})
+    @Export(name="privateIpsCount", type=Integer.class, parameters={})
     private Output<Integer> privateIpsCount;
 
     /**
@@ -315,7 +315,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * List of security group IDs to assign to the ENI.
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
@@ -329,7 +329,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Whether to enable source destination checking for the ENI. Default true.
      * 
      */
-    @OutputExport(name="sourceDestCheck", type=Boolean.class, parameters={})
+    @Export(name="sourceDestCheck", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sourceDestCheck;
 
     /**
@@ -343,7 +343,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Subnet ID to create the ENI in.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -357,7 +357,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -371,7 +371,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

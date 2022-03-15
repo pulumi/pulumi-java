@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork {
     /**
      * The Id of the databricks virtual network.
@@ -17,8 +17,8 @@ public final class VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtua
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

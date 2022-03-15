@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
      *    Enabling this setting doesn't affect existing policies or ACLs.
      * 
      */
-    @InputImport(name="blockPublicAcls")
+    @Import(name="blockPublicAcls")
       private final @Nullable Output<Boolean> blockPublicAcls;
 
     public Output<Boolean> getBlockPublicAcls() {
@@ -37,7 +37,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
      * Enabling this setting doesn't affect existing bucket policies.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
@@ -49,7 +49,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
      * Enabling this setting doesn't affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set.
      * 
      */
-    @InputImport(name="ignorePublicAcls")
+    @Import(name="ignorePublicAcls")
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
     public Output<Boolean> getIgnorePublicAcls() {
@@ -61,7 +61,7 @@ public final class BucketPublicAccessBlockConfigurationArgs extends io.pulumi.re
      * Enabling this setting doesn't affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked.
      * 
      */
-    @InputImport(name="restrictPublicBuckets")
+    @Import(name="restrictPublicBuckets")
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
     public Output<Boolean> getRestrictPublicBuckets() {

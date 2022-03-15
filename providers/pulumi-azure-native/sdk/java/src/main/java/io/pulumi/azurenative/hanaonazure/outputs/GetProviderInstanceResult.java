@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProviderInstanceResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -42,14 +42,14 @@ public final class GetProviderInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProviderInstanceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("metadata") @Nullable String metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") String properties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("metadata") @Nullable String metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") String properties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.metadata = metadata;
         this.name = name;

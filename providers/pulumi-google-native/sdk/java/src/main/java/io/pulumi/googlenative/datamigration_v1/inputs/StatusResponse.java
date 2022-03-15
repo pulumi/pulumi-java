@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * The status code, which should be an enum value of google.rpc.Code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final Integer code;
 
     public Integer getCode() {
@@ -34,7 +34,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * A list of messages that carry the error details. There is a common set of message types for APIs to use.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<Map<String,String>> details;
 
     public List<Map<String,String>> getDetails() {
@@ -45,7 +45,7 @@ public final class StatusResponse extends io.pulumi.resources.InvokeArgs {
      * A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

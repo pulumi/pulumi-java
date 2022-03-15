@@ -4,7 +4,7 @@
 package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.outputs.Container;
@@ -18,31 +18,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:RubberTree")
 public class RubberTree extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="container", type=Container.class, parameters={})
+    @Export(name="container", type=Container.class, parameters={})
     private Output</* @Nullable */ Container> container;
 
     public Output</* @Nullable */ Container> getContainer() {
         return this.container;
     }
-    @OutputExport(name="diameter", type=Diameter.class, parameters={})
+    @Export(name="diameter", type=Diameter.class, parameters={})
     private Output<Diameter> diameter;
 
     public Output<Diameter> getDiameter() {
         return this.diameter;
     }
-    @OutputExport(name="farm", type=String.class, parameters={})
+    @Export(name="farm", type=String.class, parameters={})
     private Output</* @Nullable */ String> farm;
 
     public Output</* @Nullable */ String> getFarm() {
         return this.farm;
     }
-    @OutputExport(name="size", type=TreeSize.class, parameters={})
+    @Export(name="size", type=TreeSize.class, parameters={})
     private Output</* @Nullable */ TreeSize> size;
 
     public Output</* @Nullable */ TreeSize> getSize() {
         return this.size;
     }
-    @OutputExport(name="type", type=RubberTreeVariety.class, parameters={})
+    @Export(name="type", type=RubberTreeVariety.class, parameters={})
     private Output<RubberTreeVariety> type;
 
     public Output<RubberTreeVariety> getType() {

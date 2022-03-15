@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudasset_v1.SavedQueryArgs;
@@ -24,7 +24,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The query content.
      * 
      */
-    @OutputExport(name="content", type=QueryContentResponse.class, parameters={})
+    @Export(name="content", type=QueryContentResponse.class, parameters={})
     private Output<QueryContentResponse> content;
 
     /**
@@ -38,7 +38,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The create time of this saved query.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The account's email address who has created this saved query.
      * 
      */
-    @OutputExport(name="creator", type=String.class, parameters={})
+    @Export(name="creator", type=String.class, parameters={})
     private Output<String> creator;
 
     /**
@@ -66,7 +66,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The description of this saved query. This value should be fewer than 255 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -80,7 +80,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -94,7 +94,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The last update time of this saved query.
      * 
      */
-    @OutputExport(name="lastUpdateTime", type=String.class, parameters={})
+    @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
@@ -108,7 +108,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The account's email address who has updated this saved query most recently.
      * 
      */
-    @OutputExport(name="lastUpdater", type=String.class, parameters={})
+    @Export(name="lastUpdater", type=String.class, parameters={})
     private Output<String> lastUpdater;
 
     /**
@@ -122,7 +122,7 @@ public class SavedQuery extends io.pulumi.resources.CustomResource {
      * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

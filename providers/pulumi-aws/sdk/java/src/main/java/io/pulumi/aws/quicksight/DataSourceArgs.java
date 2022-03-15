@@ -9,7 +9,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourcePermissionArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceSslPropertiesArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceVpcConnectionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID for the AWS account that the data source is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -36,7 +36,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The credentials Amazon QuickSight uses to connect to your underlying source. Currently, only credentials based on user name and password are supported. See Credentials below for more details.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<DataSourceCredentialsArgs> credentials;
 
     public Output<DataSourceCredentialsArgs> getCredentials() {
@@ -47,7 +47,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * An identifier for the data source.
      * 
      */
-    @InputImport(name="dataSourceId", required=true)
+    @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
     public Output<String> getDataSourceId() {
@@ -58,7 +58,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the data source, maximum of 128 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters used to connect to this data source (exactly one).
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<DataSourceParametersArgs> parameters;
 
     public Output<DataSourceParametersArgs> getParameters() {
@@ -80,7 +80,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * A set of resource permissions on the data source. Maximum of 64 items. See Permission below for more details.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<DataSourcePermissionArgs>> permissions;
 
     public Output<List<DataSourcePermissionArgs>> getPermissions() {
@@ -91,7 +91,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your underlying source. See SSL Properties below for more details.
      * 
      */
-    @InputImport(name="sslProperties")
+    @Import(name="sslProperties")
       private final @Nullable Output<DataSourceSslPropertiesArgs> sslProperties;
 
     public Output<DataSourceSslPropertiesArgs> getSslProperties() {
@@ -102,7 +102,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -113,7 +113,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the data source. See the [AWS Documentation](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateDataSource.html#QS-CreateDataSource-request-Type) for the complete list of valid values.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -124,7 +124,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source. See VPC Connection Properties below for more details.
      * 
      */
-    @InputImport(name="vpcConnectionProperties")
+    @Import(name="vpcConnectionProperties")
       private final @Nullable Output<DataSourceVpcConnectionPropertiesArgs> vpcConnectionProperties;
 
     public Output<DataSourceVpcConnectionPropertiesArgs> getVpcConnectionProperties() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
      * A day in a week.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable String day;
 
     public Optional<String> getDay() {
@@ -35,7 +35,7 @@ public final class TimeInWeekResponse extends io.pulumi.resources.InvokeArgs {
      * hour slots in a day.
      * 
      */
-    @InputImport(name="hourSlots")
+    @Import(name="hourSlots")
       private final @Nullable List<Integer> hourSlots;
 
     public List<Integer> getHourSlots() {

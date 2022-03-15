@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.frauddetector.outputs;
 
 import io.pulumi.awsnative.frauddetector.outputs.EntityTypeTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEntityTypeResult {
     /**
      * The entity type ARN.
@@ -39,13 +39,13 @@ public final class GetEntityTypeResult {
      */
     private final @Nullable List<EntityTypeTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntityTypeResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("tags") @Nullable List<EntityTypeTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("tags") @Nullable List<EntityTypeTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

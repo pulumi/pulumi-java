@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
      * The expand expression to apply on the operation.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
      * The instance ID of the virtual machine.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -40,7 +40,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
      * The name of the virtual machine run command.
      * 
      */
-    @InputImport(name="runCommandName", required=true)
+    @Import(name="runCommandName", required=true)
       private final String runCommandName;
 
     public String getRunCommandName() {
@@ -62,7 +62,7 @@ public final class GetVirtualMachineScaleSetVMRunCommandArgs extends io.pulumi.r
      * The name of the VM scale set.
      * 
      */
-    @InputImport(name="vmScaleSetName", required=true)
+    @Import(name="vmScaleSetName", required=true)
       private final String vmScaleSetName;
 
     public String getVmScaleSetName() {

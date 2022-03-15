@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse {
     /**
      * Account number of the LivePerson account to connect. This is the account number you input at the login page.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
      */
     private final String accountNumber;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse(@OutputCustomType.Parameter("accountNumber") String accountNumber) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse(@CustomType.Parameter("accountNumber") String accountNumber) {
         this.accountNumber = accountNumber;
     }
 

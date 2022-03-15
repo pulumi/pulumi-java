@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.EnvironmentArgs;
@@ -24,7 +24,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Use a container image to start the notebook instance.
      * 
      */
-    @OutputExport(name="containerImage", type=ContainerImageResponse.class, parameters={})
+    @Export(name="containerImage", type=ContainerImageResponse.class, parameters={})
     private Output<ContainerImageResponse> containerImage;
 
     /**
@@ -38,7 +38,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The time at which this environment was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * A brief description of this environment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Display name of this environment for the UI.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Name of this environment. Format: `projects/{project_id}/locations/{location}/environments/{environment_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
      * 
      */
-    @OutputExport(name="postStartupScript", type=String.class, parameters={})
+    @Export(name="postStartupScript", type=String.class, parameters={})
     private Output<String> postStartupScript;
 
     /**
@@ -108,7 +108,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Use a Compute Engine VM image to start the notebook instance.
      * 
      */
-    @OutputExport(name="vmImage", type=VmImageResponse.class, parameters={})
+    @Export(name="vmImage", type=VmImageResponse.class, parameters={})
     private Output<VmImageResponse> vmImage;
 
     /**

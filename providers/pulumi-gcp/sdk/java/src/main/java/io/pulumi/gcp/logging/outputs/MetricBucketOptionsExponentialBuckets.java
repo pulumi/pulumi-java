@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricBucketOptionsExponentialBuckets {
     /**
      * Must be greater than 1.
@@ -28,11 +28,11 @@ public final class MetricBucketOptionsExponentialBuckets {
      */
     private final @Nullable Double scale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricBucketOptionsExponentialBuckets(
-        @OutputCustomType.Parameter("growthFactor") @Nullable Double growthFactor,
-        @OutputCustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
-        @OutputCustomType.Parameter("scale") @Nullable Double scale) {
+        @CustomType.Parameter("growthFactor") @Nullable Double growthFactor,
+        @CustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
+        @CustomType.Parameter("scale") @Nullable Double scale) {
         this.growthFactor = growthFactor;
         this.numFiniteBuckets = numFiniteBuckets;
         this.scale = scale;

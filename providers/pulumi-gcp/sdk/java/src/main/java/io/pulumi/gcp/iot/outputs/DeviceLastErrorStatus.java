@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -13,17 +13,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceLastErrorStatus {
     private final @Nullable List<Map<String,Object>> details;
     private final @Nullable String message;
     private final @Nullable Integer number;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceLastErrorStatus(
-        @OutputCustomType.Parameter("details") @Nullable List<Map<String,Object>> details,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("number") @Nullable Integer number) {
+        @CustomType.Parameter("details") @Nullable List<Map<String,Object>> details,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("number") @Nullable Integer number) {
         this.details = details;
         this.message = message;
         this.number = number;

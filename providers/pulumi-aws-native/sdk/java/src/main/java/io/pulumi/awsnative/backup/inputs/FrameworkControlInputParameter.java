@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class FrameworkControlInputParameter extends io.pulumi.resources.In
 
     public static final FrameworkControlInputParameter Empty = new FrameworkControlInputParameter();
 
-    @InputImport(name="parameterName", required=true)
+    @Import(name="parameterName", required=true)
       private final String parameterName;
 
     public String getParameterName() {
         return this.parameterName;
     }
 
-    @InputImport(name="parameterValue", required=true)
+    @Import(name="parameterValue", required=true)
       private final String parameterValue;
 
     public String getParameterValue() {

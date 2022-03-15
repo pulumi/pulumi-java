@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.LocationObjectStorageArgs;
 import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.outputs.LocationObjectStorageTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * Optional. The access key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    @OutputExport(name="accessKey", type=String.class, parameters={})
+    @Export(name="accessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessKey;
 
     /**
@@ -41,7 +41,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
      * 
      */
-    @OutputExport(name="agentArns", type=List.class, parameters={String.class})
+    @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output<List<String>> agentArns;
 
     /**
@@ -55,7 +55,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The name of the bucket on the self-managed object storage server.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -69,7 +69,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the location that is created.
      * 
      */
-    @OutputExport(name="locationArn", type=String.class, parameters={})
+    @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
@@ -83,7 +83,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The URL of the object storage location that was described.
      * 
      */
-    @OutputExport(name="locationUri", type=String.class, parameters={})
+    @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
@@ -97,7 +97,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * Optional. The secret key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    @OutputExport(name="secretKey", type=String.class, parameters={})
+    @Export(name="secretKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretKey;
 
     /**
@@ -111,7 +111,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
      * 
      */
-    @OutputExport(name="serverHostname", type=String.class, parameters={})
+    @Export(name="serverHostname", type=String.class, parameters={})
     private Output<String> serverHostname;
 
     /**
@@ -125,7 +125,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The port that your self-managed server accepts inbound network traffic on.
      * 
      */
-    @OutputExport(name="serverPort", type=Integer.class, parameters={})
+    @Export(name="serverPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> serverPort;
 
     /**
@@ -139,7 +139,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The protocol that the object storage server uses to communicate.
      * 
      */
-    @OutputExport(name="serverProtocol", type=LocationObjectStorageServerProtocol.class, parameters={})
+    @Export(name="serverProtocol", type=LocationObjectStorageServerProtocol.class, parameters={})
     private Output</* @Nullable */ LocationObjectStorageServerProtocol> serverProtocol;
 
     /**
@@ -153,7 +153,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * The subdirectory in the self-managed object storage server that is used to read data from.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
@@ -167,7 +167,7 @@ public class LocationObjectStorage extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LocationObjectStorageTag.class})
+    @Export(name="tags", type=List.class, parameters={LocationObjectStorageTag.class})
     private Output</* @Nullable */ List<LocationObjectStorageTag>> tags;
 
     /**

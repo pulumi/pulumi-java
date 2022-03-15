@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmMobilityAgentDetailsResponse {
     /**
      * The agent version expiry date.
@@ -56,17 +56,17 @@ public final class InMageRcmMobilityAgentDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmMobilityAgentDetailsResponse(
-        @OutputCustomType.Parameter("agentVersionExpiryDate") String agentVersionExpiryDate,
-        @OutputCustomType.Parameter("driverVersion") String driverVersion,
-        @OutputCustomType.Parameter("driverVersionExpiryDate") String driverVersionExpiryDate,
-        @OutputCustomType.Parameter("isUpgradeable") String isUpgradeable,
-        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
-        @OutputCustomType.Parameter("latestUpgradableVersionWithoutReboot") String latestUpgradableVersionWithoutReboot,
-        @OutputCustomType.Parameter("latestVersion") String latestVersion,
-        @OutputCustomType.Parameter("reasonsBlockingUpgrade") List<String> reasonsBlockingUpgrade,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("agentVersionExpiryDate") String agentVersionExpiryDate,
+        @CustomType.Parameter("driverVersion") String driverVersion,
+        @CustomType.Parameter("driverVersionExpiryDate") String driverVersionExpiryDate,
+        @CustomType.Parameter("isUpgradeable") String isUpgradeable,
+        @CustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @CustomType.Parameter("latestUpgradableVersionWithoutReboot") String latestUpgradableVersionWithoutReboot,
+        @CustomType.Parameter("latestVersion") String latestVersion,
+        @CustomType.Parameter("reasonsBlockingUpgrade") List<String> reasonsBlockingUpgrade,
+        @CustomType.Parameter("version") String version) {
         this.agentVersionExpiryDate = agentVersionExpiryDate;
         this.driverVersion = driverVersion;
         this.driverVersionExpiryDate = driverVersionExpiryDate;

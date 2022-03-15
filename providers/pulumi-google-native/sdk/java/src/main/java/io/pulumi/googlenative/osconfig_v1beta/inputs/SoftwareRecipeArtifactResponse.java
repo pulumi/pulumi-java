@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactGcsResponse;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactRemoteResponse;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
      * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
      * 
      */
-    @InputImport(name="allowInsecure", required=true)
+    @Import(name="allowInsecure", required=true)
       private final Boolean allowInsecure;
 
     public Boolean getAllowInsecure() {
@@ -33,7 +33,7 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
      * A Google Cloud Storage artifact.
      * 
      */
-    @InputImport(name="gcs", required=true)
+    @Import(name="gcs", required=true)
       private final SoftwareRecipeArtifactGcsResponse gcs;
 
     public SoftwareRecipeArtifactGcsResponse getGcs() {
@@ -44,7 +44,7 @@ public final class SoftwareRecipeArtifactResponse extends io.pulumi.resources.In
      * A generic remote artifact.
      * 
      */
-    @InputImport(name="remote", required=true)
+    @Import(name="remote", required=true)
       private final SoftwareRecipeArtifactRemoteResponse remote;
 
     public SoftwareRecipeArtifactRemoteResponse getRemote() {

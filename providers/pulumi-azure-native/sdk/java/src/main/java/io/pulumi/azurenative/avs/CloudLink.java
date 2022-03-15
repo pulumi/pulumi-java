@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.CloudLinkArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class CloudLink extends io.pulumi.resources.CustomResource {
      * Identifier of the other private cloud participating in the link.
      * 
      */
-    @OutputExport(name="linkedCloud", type=String.class, parameters={})
+    @Export(name="linkedCloud", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedCloud;
 
     /**
@@ -48,7 +48,7 @@ public class CloudLink extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class CloudLink extends io.pulumi.resources.CustomResource {
      * The state of the cloud link.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -76,7 +76,7 @@ public class CloudLink extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

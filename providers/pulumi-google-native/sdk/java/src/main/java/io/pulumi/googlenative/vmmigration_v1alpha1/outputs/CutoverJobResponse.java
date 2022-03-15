@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CutoverJobResponse {
     /**
      * Details of the target VM in Compute Engine.
@@ -58,17 +58,17 @@ public final class CutoverJobResponse {
      */
     private final String stateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CutoverJobResponse(
-        @OutputCustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("progress") Integer progress,
-        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateMessage") String stateMessage,
-        @OutputCustomType.Parameter("stateTime") String stateTime) {
+        @CustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("progress") Integer progress,
+        @CustomType.Parameter("progressPercent") Integer progressPercent,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateMessage") String stateMessage,
+        @CustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
         this.error = error;

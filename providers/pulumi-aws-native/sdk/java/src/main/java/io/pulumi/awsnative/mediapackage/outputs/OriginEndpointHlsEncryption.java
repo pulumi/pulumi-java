@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointHlsEncryption {
     /**
      * A constant initialization vector for encryption (optional). When not specified the initialization vector will be periodically rotated.
@@ -37,13 +37,13 @@ public final class OriginEndpointHlsEncryption {
     private final @Nullable Boolean repeatExtXKey;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointHlsEncryption(
-        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
-        @OutputCustomType.Parameter("encryptionMethod") @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
-        @OutputCustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
-        @OutputCustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
-        @OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        @CustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @CustomType.Parameter("encryptionMethod") @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
+        @CustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
+        @CustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
+        @CustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;

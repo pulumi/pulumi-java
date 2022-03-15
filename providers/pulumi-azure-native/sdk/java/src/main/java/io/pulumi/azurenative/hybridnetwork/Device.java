@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.DeviceArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The type of the device.
      * 
      */
-    @OutputExport(name="deviceType", type=String.class, parameters={})
+    @Export(name="deviceType", type=String.class, parameters={})
     private Output<String> deviceType;
 
     /**
@@ -50,7 +50,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -64,7 +64,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The list of network functions deployed on the device.
      * 
      */
-    @OutputExport(name="networkFunctions", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="networkFunctions", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> networkFunctions;
 
     /**
@@ -92,7 +92,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The provisioning state of the device resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The current device status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -120,7 +120,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

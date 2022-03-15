@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.azurenative.eventgrid.inputs.ConnectionStateResponse;
 import io.pulumi.azurenative.eventgrid.inputs.PrivateEndpointResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * GroupIds from the private link service resource.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
@@ -32,7 +32,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Fully qualified identifier of the resource.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -43,7 +43,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -54,7 +54,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * The Private Endpoint resource for this Connection.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
@@ -65,7 +65,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Details about the state of the connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<ConnectionStateResponse> getPrivateLinkServiceConnectionState() {
@@ -76,7 +76,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Provisioning state of the Private Endpoint Connection.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -87,7 +87,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MachineImageMachineImageEncryptionKey {
     /**
      * The name of the encryption key that is stored in Google Cloud KMS.
@@ -36,12 +36,12 @@ public final class MachineImageMachineImageEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MachineImageMachineImageEncryptionKey(
-        @OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
-        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
-        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
-        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
+        @CustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
+        @CustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @CustomType.Parameter("rawKey") @Nullable String rawKey,
+        @CustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;

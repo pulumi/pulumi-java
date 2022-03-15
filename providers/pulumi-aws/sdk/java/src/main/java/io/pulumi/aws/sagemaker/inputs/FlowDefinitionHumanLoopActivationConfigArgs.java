@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
      * defines under what conditions SageMaker creates a human loop. See Human Loop Activation Conditions Config details below.
      * 
      */
-    @InputImport(name="humanLoopActivationConditionsConfig")
+    @Import(name="humanLoopActivationConditionsConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig;
 
     public Output<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> getHumanLoopActivationConditionsConfig() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EccTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.RsaTokenKeyResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.TokenClaimResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * List of expected token audiences. Token audience is valid if it matches at least one of the given values.
      * 
      */
-    @InputImport(name="audiences")
+    @Import(name="audiences")
       private final @Nullable List<String> audiences;
 
     public List<String> getAudiences() {
@@ -38,7 +38,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
      * 
      */
-    @InputImport(name="claims")
+    @Import(name="claims")
       private final @Nullable List<TokenClaimResponse> claims;
 
     public List<TokenClaimResponse> getClaims() {
@@ -49,7 +49,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
      * 
      */
-    @InputImport(name="issuers")
+    @Import(name="issuers")
       private final @Nullable List<String> issuers;
 
     public List<String> getIssuers() {
@@ -60,7 +60,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
 
     public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> getKeys() {
@@ -72,7 +72,7 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
      * Expected value is '#Microsoft.VideoAnalyzer.JwtAuthentication'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

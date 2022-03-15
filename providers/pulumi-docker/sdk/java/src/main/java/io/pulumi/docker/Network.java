@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.docker.NetworkArgs;
 import io.pulumi.docker.Utilities;
@@ -82,7 +82,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Enable manual container attachment to the network.
      * 
      */
-    @OutputExport(name="attachable", type=Boolean.class, parameters={})
+    @Export(name="attachable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> attachable;
 
     /**
@@ -96,7 +96,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Requests daemon to check for networks with same name.
      * 
      */
-    @OutputExport(name="checkDuplicate", type=Boolean.class, parameters={})
+    @Export(name="checkDuplicate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> checkDuplicate;
 
     /**
@@ -111,7 +111,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * docs](https://docs.docker.com/network/#network-drivers) for more details.
      * 
      */
-    @OutputExport(name="driver", type=String.class, parameters={})
+    @Export(name="driver", type=String.class, parameters={})
     private Output<String> driver;
 
     /**
@@ -126,7 +126,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Create swarm routing-mesh network. Defaults to `false`.
      * 
      */
-    @OutputExport(name="ingress", type=Boolean.class, parameters={})
+    @Export(name="ingress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ingress;
 
     /**
@@ -140,7 +140,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Whether the network is internal.
      * 
      */
-    @OutputExport(name="internal", type=Boolean.class, parameters={})
+    @Export(name="internal", type=Boolean.class, parameters={})
     private Output<Boolean> internal;
 
     /**
@@ -154,7 +154,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * The IPAM configuration options
      * 
      */
-    @OutputExport(name="ipamConfigs", type=List.class, parameters={NetworkIpamConfig.class})
+    @Export(name="ipamConfigs", type=List.class, parameters={NetworkIpamConfig.class})
     private Output<List<NetworkIpamConfig>> ipamConfigs;
 
     /**
@@ -168,7 +168,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Driver used by the custom IP scheme of the network. Defaults to `default`
      * 
      */
-    @OutputExport(name="ipamDriver", type=String.class, parameters={})
+    @Export(name="ipamDriver", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipamDriver;
 
     /**
@@ -182,7 +182,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Enable IPv6 networking. Defaults to `false`.
      * 
      */
-    @OutputExport(name="ipv6", type=Boolean.class, parameters={})
+    @Export(name="ipv6", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6;
 
     /**
@@ -196,7 +196,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * User-defined key/value metadata
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={NetworkLabel.class})
+    @Export(name="labels", type=List.class, parameters={NetworkLabel.class})
     private Output</* @Nullable */ List<NetworkLabel>> labels;
 
     /**
@@ -210,7 +210,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * The name of the Docker network.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -225,7 +225,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
      * 
      */
-    @OutputExport(name="options", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="options", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> options;
 
     /**
@@ -240,7 +240,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Scope of the network. One of `swarm`, `global`, or `local`.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**

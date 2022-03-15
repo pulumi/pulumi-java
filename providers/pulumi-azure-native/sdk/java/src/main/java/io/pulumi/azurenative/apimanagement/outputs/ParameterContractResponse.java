@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterContractResponse {
     /**
      * Default parameter value.
@@ -44,14 +44,14 @@ public final class ParameterContractResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParameterContractResponse(
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("required") @Nullable Boolean required,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("required") @Nullable Boolean required,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.name = name;

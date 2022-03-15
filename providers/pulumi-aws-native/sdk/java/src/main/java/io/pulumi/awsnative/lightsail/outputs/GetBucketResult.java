@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.BucketAccessRules;
 import io.pulumi.awsnative.lightsail.outputs.BucketTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketResult {
     /**
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle. You can update a bucket's bundle only one time within a monthly AWS billing cycle.
@@ -53,17 +53,17 @@ public final class GetBucketResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketResult(
-        @OutputCustomType.Parameter("ableToUpdateBundle") @Nullable Boolean ableToUpdateBundle,
-        @OutputCustomType.Parameter("accessRules") @Nullable BucketAccessRules accessRules,
-        @OutputCustomType.Parameter("bucketArn") @Nullable String bucketArn,
-        @OutputCustomType.Parameter("bundleId") @Nullable String bundleId,
-        @OutputCustomType.Parameter("objectVersioning") @Nullable Boolean objectVersioning,
-        @OutputCustomType.Parameter("readOnlyAccessAccounts") @Nullable List<String> readOnlyAccessAccounts,
-        @OutputCustomType.Parameter("resourcesReceivingAccess") @Nullable List<String> resourcesReceivingAccess,
-        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("ableToUpdateBundle") @Nullable Boolean ableToUpdateBundle,
+        @CustomType.Parameter("accessRules") @Nullable BucketAccessRules accessRules,
+        @CustomType.Parameter("bucketArn") @Nullable String bucketArn,
+        @CustomType.Parameter("bundleId") @Nullable String bundleId,
+        @CustomType.Parameter("objectVersioning") @Nullable Boolean objectVersioning,
+        @CustomType.Parameter("readOnlyAccessAccounts") @Nullable List<String> readOnlyAccessAccounts,
+        @CustomType.Parameter("resourcesReceivingAccess") @Nullable List<String> resourcesReceivingAccess,
+        @CustomType.Parameter("tags") @Nullable List<BucketTag> tags,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.ableToUpdateBundle = ableToUpdateBundle;
         this.accessRules = accessRules;
         this.bucketArn = bucketArn;

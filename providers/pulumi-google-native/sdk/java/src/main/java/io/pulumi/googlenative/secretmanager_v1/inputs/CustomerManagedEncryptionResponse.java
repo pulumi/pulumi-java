@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CustomerManagedEncryptionResponse extends io.pulumi.resources
      * The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
     public String getKmsKeyName() {

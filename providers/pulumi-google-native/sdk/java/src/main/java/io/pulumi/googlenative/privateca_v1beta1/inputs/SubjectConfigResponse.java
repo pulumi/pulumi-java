@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The "common name" of the distinguished name.
      * 
      */
-    @InputImport(name="commonName", required=true)
+    @Import(name="commonName", required=true)
       private final String commonName;
 
     public String getCommonName() {
@@ -33,7 +33,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Contains distinguished name fields such as the location and organization.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final SubjectResponse subject;
 
     public SubjectResponse getSubject() {
@@ -44,7 +44,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
      * Optional. The subject alternative name fields.
      * 
      */
-    @InputImport(name="subjectAltName", required=true)
+    @Import(name="subjectAltName", required=true)
       private final SubjectAltNamesResponse subjectAltName;
 
     public SubjectAltNamesResponse getSubjectAltName() {

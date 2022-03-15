@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CollectionOverrideArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CredentialArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.OptionsArgs;
@@ -23,7 +23,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Allows resource handling overrides for specific collections
      * 
      */
-    @InputImport(name="collectionOverrides")
+    @Import(name="collectionOverrides")
       private final @Nullable Output<List<CollectionOverrideArgs>> collectionOverrides;
 
     public Output<List<CollectionOverrideArgs>> getCollectionOverrides() {
@@ -34,7 +34,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Credential used when interacting with this type.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialArgs> credential;
 
     public Output<CredentialArgs> getCredential() {
@@ -45,7 +45,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
      * 
      */
-    @InputImport(name="customCertificateAuthorityRoots")
+    @Import(name="customCertificateAuthorityRoots")
       private final @Nullable Output<List<String>> customCertificateAuthorityRoots;
 
     public Output<List<String>> getCustomCertificateAuthorityRoots() {
@@ -56,7 +56,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Descriptor Url for the this type provider.
      * 
      */
-    @InputImport(name="descriptorUrl")
+    @Import(name="descriptorUrl")
       private final @Nullable Output<String> descriptorUrl;
 
     public Output<String> getDescriptorUrl() {
@@ -78,7 +78,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<TypeProviderLabelEntryArgs>> labels;
 
     public Output<List<TypeProviderLabelEntryArgs>> getLabels() {
@@ -89,7 +89,7 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,14 +100,14 @@ public final class TypeProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Options to apply when handling any resources in this service.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<OptionsArgs> options;
 
     public Output<OptionsArgs> getOptions() {
         return this.options == null ? Output.empty() : this.options;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

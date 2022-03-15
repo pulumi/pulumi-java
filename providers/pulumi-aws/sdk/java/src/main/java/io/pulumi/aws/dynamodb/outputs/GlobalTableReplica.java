@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableReplica {
     /**
      * AWS region name of replica DynamoDB TableE.g., `us-east-1`
@@ -15,8 +15,8 @@ public final class GlobalTableReplica {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor
-    private GlobalTableReplica(@OutputCustomType.Parameter("regionName") String regionName) {
+    @CustomType.Constructor
+    private GlobalTableReplica(@CustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 

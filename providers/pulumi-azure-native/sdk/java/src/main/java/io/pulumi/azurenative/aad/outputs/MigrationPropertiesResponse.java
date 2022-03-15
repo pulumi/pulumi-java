@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.MigrationProgressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrationPropertiesResponse {
     /**
      * Migration Progress
@@ -26,11 +26,11 @@ public final class MigrationPropertiesResponse {
      */
     private final String oldVnetSiteId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationPropertiesResponse(
-        @OutputCustomType.Parameter("migrationProgress") MigrationProgressResponse migrationProgress,
-        @OutputCustomType.Parameter("oldSubnetId") String oldSubnetId,
-        @OutputCustomType.Parameter("oldVnetSiteId") String oldVnetSiteId) {
+        @CustomType.Parameter("migrationProgress") MigrationProgressResponse migrationProgress,
+        @CustomType.Parameter("oldSubnetId") String oldSubnetId,
+        @CustomType.Parameter("oldVnetSiteId") String oldVnetSiteId) {
         this.migrationProgress = migrationProgress;
         this.oldSubnetId = oldSubnetId;
         this.oldVnetSiteId = oldVnetSiteId;

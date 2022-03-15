@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GlobalTableReplicaArgs extends io.pulumi.resources.ResourceAr
      * AWS region name of replica DynamoDB TableE.g., `us-east-1`
      * 
      */
-    @InputImport(name="regionName", required=true)
+    @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
     public Output<String> getRegionName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs;
@@ -23,7 +23,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Possible values are `FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED`, `NUMERIC`, `HEXADECIMAL`, `UPPER_CASE_ALPHA_NUMERIC`, and `ALPHA_NUMERIC`.
      * 
      */
-    @InputImport(name="commonAlphabet")
+    @Import(name="commonAlphabet")
       private final @Nullable Output<String> commonAlphabet;
 
     public Output<String> getCommonAlphabet() {
@@ -43,7 +43,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      *     Structure is documented below.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> context;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> getContext() {
@@ -55,7 +55,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cryptoKey")
+    @Import(name="cryptoKey")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> cryptoKey;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> getCryptoKey() {
@@ -67,7 +67,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * ``0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~`!@#$%^&*()_-+={[}]|:;"'<,>.?/``
      * 
      */
-    @InputImport(name="customAlphabet")
+    @Import(name="customAlphabet")
       private final @Nullable Output<String> customAlphabet;
 
     public Output<String> getCustomAlphabet() {
@@ -78,7 +78,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * The native way to select the alphabet. Must be in the range \[2, 95\].
      * 
      */
-    @InputImport(name="radix")
+    @Import(name="radix")
       private final @Nullable Output<Integer> radix;
 
     public Output<Integer> getRadix() {
@@ -93,7 +93,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
      */
-    @InputImport(name="surrogateInfoType")
+    @Import(name="surrogateInfoType")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> surrogateInfoType;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> getSurrogateInfoType() {

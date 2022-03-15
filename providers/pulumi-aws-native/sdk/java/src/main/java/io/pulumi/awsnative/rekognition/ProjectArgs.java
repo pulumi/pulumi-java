@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rekognition;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnclaveCertificateIamRoleAssociationResult {
     /**
      * The name of the Amazon S3 bucket to which the certificate was uploaded.
@@ -27,11 +27,11 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
      */
     private final @Nullable String encryptionKmsKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnclaveCertificateIamRoleAssociationResult(
-        @OutputCustomType.Parameter("certificateS3BucketName") @Nullable String certificateS3BucketName,
-        @OutputCustomType.Parameter("certificateS3ObjectKey") @Nullable String certificateS3ObjectKey,
-        @OutputCustomType.Parameter("encryptionKmsKeyId") @Nullable String encryptionKmsKeyId) {
+        @CustomType.Parameter("certificateS3BucketName") @Nullable String certificateS3BucketName,
+        @CustomType.Parameter("certificateS3ObjectKey") @Nullable String certificateS3ObjectKey,
+        @CustomType.Parameter("encryptionKmsKeyId") @Nullable String encryptionKmsKeyId) {
         this.certificateS3BucketName = certificateS3BucketName;
         this.certificateS3ObjectKey = certificateS3ObjectKey;
         this.encryptionKmsKeyId = encryptionKmsKeyId;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -52,7 +52,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Properties used to connect to Xero. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
      */
-    @InputImport(name="connectionProperties")
+    @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
     public Output<Object> getConnectionProperties() {
@@ -63,7 +63,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The consumer key associated with the Xero application.
      * 
      */
-    @InputImport(name="consumerKey")
+    @Import(name="consumerKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerKey() {
@@ -74,7 +74,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -85,7 +85,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -96,7 +96,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * The endpoint of the Xero server. (i.e. api.xero.com)
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<Object> host;
 
     public Output<Object> getHost() {
@@ -107,7 +107,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -119,7 +119,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * ).
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKey() {
@@ -131,7 +131,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'Xero'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -142,7 +142,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
      */
-    @InputImport(name="useEncryptedEndpoints")
+    @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
     public Output<Object> getUseEncryptedEndpoints() {
@@ -153,7 +153,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="useHostVerification")
+    @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
 
     public Output<Object> getUseHostVerification() {
@@ -164,7 +164,7 @@ public final class XeroLinkedServiceArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="usePeerVerification")
+    @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;
 
     public Output<Object> getUsePeerVerification() {

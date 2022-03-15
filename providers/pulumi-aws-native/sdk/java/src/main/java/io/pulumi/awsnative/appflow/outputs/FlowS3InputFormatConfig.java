@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowS3InputFormatConfigS3InputFileType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowS3InputFormatConfig {
     private final @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType;
 
-    @OutputCustomType.Constructor
-    private FlowS3InputFormatConfig(@OutputCustomType.Parameter("s3InputFileType") @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
+    @CustomType.Constructor
+    private FlowS3InputFormatConfig(@CustomType.Parameter("s3InputFileType") @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
         this.s3InputFileType = s3InputFileType;
     }
 

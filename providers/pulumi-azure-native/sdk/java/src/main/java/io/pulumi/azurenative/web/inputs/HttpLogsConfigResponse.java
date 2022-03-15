@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AzureBlobStorageHttpLogsConfigResponse;
 import io.pulumi.azurenative.web.inputs.FileSystemHttpLogsConfigResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Http logs to azure blob storage configuration.
      * 
      */
-    @InputImport(name="azureBlobStorage")
+    @Import(name="azureBlobStorage")
       private final @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
 
     public Optional<AzureBlobStorageHttpLogsConfigResponse> getAzureBlobStorage() {
@@ -34,7 +34,7 @@ public final class HttpLogsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Http logs to file system configuration.
      * 
      */
-    @InputImport(name="fileSystem")
+    @Import(name="fileSystem")
       private final @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
     public Optional<FileSystemHttpLogsConfigResponse> getFileSystem() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayApiRouteResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
      * The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
      * 
      */
-    @InputImport(name="appResourceId")
+    @Import(name="appResourceId")
       private final @Nullable String appResourceId;
 
     public Optional<String> getAppResourceId() {
@@ -35,7 +35,7 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
      * State of the Spring Cloud Gateway route config.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -46,7 +46,7 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
      * Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable List<GatewayApiRouteResponse> routes;
 
     public List<GatewayApiRouteResponse> getRoutes() {

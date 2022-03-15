@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProviderNoteIamPolicyResult {
     /**
      * Associates a list of `members`, or principals, with a `role`. Optionally, may specify a `condition` that determines how and when the `bindings` are applied. Each of the `bindings` must contain at least one principal. The `bindings` in a `Policy` can refer to up to 1,500 principals; up to 250 of these principals can be Google groups. Each occurrence of a principal counts towards these limits. For example, if the `bindings` grant 50 different roles to `user:alice@example.com`, and not to any other principal, then you can add another 1,450 principals to the `bindings` in the `Policy`.
@@ -28,11 +28,11 @@ public final class GetProviderNoteIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProviderNoteIamPolicyResult(
-        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.version = version;

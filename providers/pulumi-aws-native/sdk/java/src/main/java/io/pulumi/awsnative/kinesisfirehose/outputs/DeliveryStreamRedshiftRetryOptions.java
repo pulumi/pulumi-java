@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamRedshiftRetryOptions {
     private final @Nullable Integer durationInSeconds;
 
-    @OutputCustomType.Constructor
-    private DeliveryStreamRedshiftRetryOptions(@OutputCustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds) {
+    @CustomType.Constructor
+    private DeliveryStreamRedshiftRetryOptions(@CustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
     }
 

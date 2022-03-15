@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetParticipantResult {
     /**
      * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
@@ -31,12 +31,12 @@ public final class GetParticipantResult {
      */
     private final String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetParticipantResult(
-        @OutputCustomType.Parameter("documentsMetadataFilters") Map<String,String> documentsMetadataFilters,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
-        @OutputCustomType.Parameter("role") String role) {
+        @CustomType.Parameter("documentsMetadataFilters") Map<String,String> documentsMetadataFilters,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
+        @CustomType.Parameter("role") String role) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         this.name = name;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;

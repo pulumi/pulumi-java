@@ -12,7 +12,7 @@ import io.pulumi.azurenative.securityinsights.outputs.ClientInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * The actions to execute when the automation rule is triggered
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={Either.class})
+    @Export(name="actions", type=List.class, parameters={Either.class})
     private Output<List<Either<AutomationRuleModifyPropertiesActionResponse,AutomationRuleRunPlaybookActionResponse>>> actions;
 
     /**
@@ -54,7 +54,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * Describes the client that created the automation rule
      * 
      */
-    @OutputExport(name="createdBy", type=ClientInfoResponse.class, parameters={})
+    @Export(name="createdBy", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> createdBy;
 
     /**
@@ -68,7 +68,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * The time the automation rule was created
      * 
      */
-    @OutputExport(name="createdTimeUtc", type=String.class, parameters={})
+    @Export(name="createdTimeUtc", type=String.class, parameters={})
     private Output<String> createdTimeUtc;
 
     /**
@@ -82,7 +82,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * The display name of the automation  rule
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -96,7 +96,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * Describes the client that last updated the automation rule
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=ClientInfoResponse.class, parameters={})
+    @Export(name="lastModifiedBy", type=ClientInfoResponse.class, parameters={})
     private Output<ClientInfoResponse> lastModifiedBy;
 
     /**
@@ -124,7 +124,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * The last time the automation rule was updated
      * 
      */
-    @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
@@ -138,7 +138,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -152,7 +152,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * The order of execution of the automation rule
      * 
      */
-    @OutputExport(name="order", type=Integer.class, parameters={})
+    @Export(name="order", type=Integer.class, parameters={})
     private Output<Integer> order;
 
     /**
@@ -166,7 +166,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * The triggering logic of the automation rule
      * 
      */
-    @OutputExport(name="triggeringLogic", type=AutomationRuleTriggeringLogicResponse.class, parameters={})
+    @Export(name="triggeringLogic", type=AutomationRuleTriggeringLogicResponse.class, parameters={})
     private Output<AutomationRuleTriggeringLogicResponse> triggeringLogic;
 
     /**
@@ -180,7 +180,7 @@ public class AutomationRule extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

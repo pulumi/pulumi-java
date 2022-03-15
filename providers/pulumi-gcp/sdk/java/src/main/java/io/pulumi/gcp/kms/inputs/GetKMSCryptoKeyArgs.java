@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
      * The `id` of the Google Cloud Platform KeyRing to which the key belongs.
      * 
      */
-    @InputImport(name="keyRing", required=true)
+    @Import(name="keyRing", required=true)
       private final String keyRing;
 
     public String getKeyRing() {
@@ -28,7 +28,7 @@ public final class GetKMSCryptoKeyArgs extends io.pulumi.resources.InvokeArgs {
      * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
      * Account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
      * The ID of the private endpoint connection proxy object.
      * 
      */
-    @InputImport(name="privateEndpointConnectionProxyId", required=true)
+    @Import(name="privateEndpointConnectionProxyId", required=true)
       private final String privateEndpointConnectionProxyId;
 
     public String getPrivateEndpointConnectionProxyId() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionProxyArgs extends io.pulumi.resou
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

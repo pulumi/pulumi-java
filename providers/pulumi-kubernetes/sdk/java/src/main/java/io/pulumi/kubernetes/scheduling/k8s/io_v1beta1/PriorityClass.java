@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.scheduling.k8s.io_v1beta1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -26,7 +26,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -40,7 +40,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * description is an arbitrary string that usually provides guidelines on when this priority class should be used.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
      * 
      */
-    @OutputExport(name="globalDefault", type=Boolean.class, parameters={})
+    @Export(name="globalDefault", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> globalDefault;
 
     /**
@@ -68,7 +68,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -82,7 +82,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -96,7 +96,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.
      * 
      */
-    @OutputExport(name="preemptionPolicy", type=String.class, parameters={})
+    @Export(name="preemptionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> preemptionPolicy;
 
     /**
@@ -110,7 +110,7 @@ public class PriorityClass extends io.pulumi.resources.CustomResource {
      * The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
      * 
      */
-    @OutputExport(name="value", type=Integer.class, parameters={})
+    @Export(name="value", type=Integer.class, parameters={})
     private Output<Integer> value;
 
     /**

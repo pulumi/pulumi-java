@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AiMetadataStoreEncryptionSpec {
     /**
      * Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource.
@@ -18,8 +18,8 @@ public final class AiMetadataStoreEncryptionSpec {
      */
     private final @Nullable String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private AiMetadataStoreEncryptionSpec(@OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName) {
+    @CustomType.Constructor
+    private AiMetadataStoreEncryptionSpec(@CustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

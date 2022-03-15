@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.enums.ManagedHsmSkuFamily;
 import io.pulumi.azurenative.keyvault.enums.ManagedHsmSkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU Family of the managed HSM Pool
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final Output<Either<String,ManagedHsmSkuFamily>> family;
 
     public Output<Either<String,ManagedHsmSkuFamily>> getFamily() {
@@ -35,7 +35,7 @@ public final class ManagedHsmSkuArgs extends io.pulumi.resources.ResourceArgs {
      * SKU of the managed HSM Pool
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<ManagedHsmSkuName> name;
 
     public Output<ManagedHsmSkuName> getName() {

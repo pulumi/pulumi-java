@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.FingerprintResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ImageNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The fingerprint of the base image.
      * 
      */
-    @InputImport(name="fingerprint", required=true)
+    @Import(name="fingerprint", required=true)
       private final FingerprintResponse fingerprint;
 
     public FingerprintResponse getFingerprint() {
@@ -32,7 +32,7 @@ public final class ImageNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Immutable. The resource_url for the resource representing the basis of associated occurrence images.
      * 
      */
-    @InputImport(name="resourceUrl", required=true)
+    @Import(name="resourceUrl", required=true)
       private final String resourceUrl;
 
     public String getResourceUrl() {

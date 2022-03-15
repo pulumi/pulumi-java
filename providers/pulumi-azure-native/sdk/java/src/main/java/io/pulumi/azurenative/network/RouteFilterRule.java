@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.RouteFilterRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * The access type of the rule.
      * 
      */
-    @OutputExport(name="access", type=String.class, parameters={})
+    @Export(name="access", type=String.class, parameters={})
     private Output<String> access;
 
     /**
@@ -48,7 +48,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
      * 
      */
-    @OutputExport(name="communities", type=List.class, parameters={String.class})
+    @Export(name="communities", type=List.class, parameters={String.class})
     private Output<List<String>> communities;
 
     /**
@@ -62,7 +62,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -76,7 +76,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -90,7 +90,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -104,7 +104,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * The provisioning state of the route filter rule resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -118,7 +118,7 @@ public class RouteFilterRule extends io.pulumi.resources.CustomResource {
      * The rule type of the rule.
      * 
      */
-    @OutputExport(name="routeFilterRuleType", type=String.class, parameters={})
+    @Export(name="routeFilterRuleType", type=String.class, parameters={})
     private Output<String> routeFilterRuleType;
 
     /**

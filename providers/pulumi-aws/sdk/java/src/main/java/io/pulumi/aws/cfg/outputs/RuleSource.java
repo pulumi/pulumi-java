@@ -4,13 +4,13 @@
 package io.pulumi.aws.cfg.outputs;
 
 import io.pulumi.aws.cfg.outputs.RuleSourceSourceDetail;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleSource {
     /**
      * Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are `AWS` or `CUSTOM_LAMBDA`. For more information about managed rules, see the [AWS Config Managed Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html). For more information about custom rules, see the [AWS Config Custom Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html). Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the `aws.lambda.Permission` resource.
@@ -28,11 +28,11 @@ public final class RuleSource {
      */
     private final String sourceIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleSource(
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("sourceDetails") @Nullable List<RuleSourceSourceDetail> sourceDetails,
-        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier) {
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("sourceDetails") @Nullable List<RuleSourceSourceDetail> sourceDetails,
+        @CustomType.Parameter("sourceIdentifier") String sourceIdentifier) {
         this.owner = owner;
         this.sourceDetails = sourceDetails;
         this.sourceIdentifier = sourceIdentifier;

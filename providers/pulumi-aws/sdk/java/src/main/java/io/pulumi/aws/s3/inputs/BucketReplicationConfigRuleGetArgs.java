@@ -9,7 +9,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleExistingObjectReplicat
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Whether delete markers are replicated. This argument is only valid with V2 replication configurations (i.e., when `filter` is used)documented below.
      * 
      */
-    @InputImport(name="deleteMarkerReplication")
+    @Import(name="deleteMarkerReplication")
       private final @Nullable Output<BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs> deleteMarkerReplication;
 
     public Output<BucketReplicationConfigRuleDeleteMarkerReplicationGetArgs> getDeleteMarkerReplication() {
@@ -35,7 +35,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Specifies the destination for the rule documented below.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<BucketReplicationConfigRuleDestinationGetArgs> destination;
 
     public Output<BucketReplicationConfigRuleDestinationGetArgs> getDestination() {
@@ -46,7 +46,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Replicate existing objects in the source bucket according to the rule configurations documented below.
      * 
      */
-    @InputImport(name="existingObjectReplication")
+    @Import(name="existingObjectReplication")
       private final @Nullable Output<BucketReplicationConfigRuleExistingObjectReplicationGetArgs> existingObjectReplication;
 
     public Output<BucketReplicationConfigRuleExistingObjectReplicationGetArgs> getExistingObjectReplication() {
@@ -57,7 +57,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Filter that identifies subset of objects to which the replication rule applies documented below.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketReplicationConfigRuleFilterGetArgs> filter;
 
     public Output<BucketReplicationConfigRuleFilterGetArgs> getFilter() {
@@ -68,7 +68,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -79,7 +79,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Object key name prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -90,7 +90,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * The priority associated with the rule. Priority should only be set if `filter` is configured. If not provided, defaults to `0`. Priority must be unique between multiple rules.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -101,7 +101,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * Specifies special object selection criteria documented below.
      * 
      */
-    @InputImport(name="sourceSelectionCriteria")
+    @Import(name="sourceSelectionCriteria")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs> sourceSelectionCriteria;
 
     public Output<BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs> getSourceSelectionCriteria() {
@@ -112,7 +112,7 @@ public final class BucketReplicationConfigRuleGetArgs extends io.pulumi.resource
      * The status of the rule. Either `"Enabled"` or `"Disabled"`. The rule is ignored if status is not "Enabled".
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {

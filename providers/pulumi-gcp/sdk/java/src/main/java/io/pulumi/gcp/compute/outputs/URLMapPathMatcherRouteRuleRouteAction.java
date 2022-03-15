@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteActionCorsPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherRouteRuleRouteAction {
     /**
      * The specification for allowing client side cross-origin requests. Please see
@@ -76,15 +76,15 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      */
     private final @Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteAction(
-        @OutputCustomType.Parameter("corsPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
-        @OutputCustomType.Parameter("faultInjectionPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
-        @OutputCustomType.Parameter("requestMirrorPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
-        @OutputCustomType.Parameter("retryPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy,
-        @OutputCustomType.Parameter("timeout") @Nullable URLMapPathMatcherRouteRuleRouteActionTimeout timeout,
-        @OutputCustomType.Parameter("urlRewrite") @Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite,
-        @OutputCustomType.Parameter("weightedBackendServices") @Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
+        @CustomType.Parameter("corsPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
+        @CustomType.Parameter("faultInjectionPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
+        @CustomType.Parameter("requestMirrorPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
+        @CustomType.Parameter("retryPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy,
+        @CustomType.Parameter("timeout") @Nullable URLMapPathMatcherRouteRuleRouteActionTimeout timeout,
+        @CustomType.Parameter("urlRewrite") @Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite,
+        @CustomType.Parameter("weightedBackendServices") @Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.requestMirrorPolicy = requestMirrorPolicy;

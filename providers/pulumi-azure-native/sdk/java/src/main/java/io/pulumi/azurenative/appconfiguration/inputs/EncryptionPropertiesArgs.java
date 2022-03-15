@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appconfiguration.inputs;
 
 import io.pulumi.azurenative.appconfiguration.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * Key vault properties.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {

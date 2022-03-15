@@ -12,7 +12,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationRestO
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,56 +22,56 @@ public final class DefaultRolloutPropertiesSpecificationArgs extends io.pulumi.r
 
     public static final DefaultRolloutPropertiesSpecificationArgs Empty = new DefaultRolloutPropertiesSpecificationArgs();
 
-    @InputImport(name="canary")
+    @Import(name="canary")
       private final @Nullable Output<DefaultRolloutSpecificationCanaryArgs> canary;
 
     public Output<DefaultRolloutSpecificationCanaryArgs> getCanary() {
         return this.canary == null ? Output.empty() : this.canary;
     }
 
-    @InputImport(name="highTraffic")
+    @Import(name="highTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationHighTrafficArgs> highTraffic;
 
     public Output<DefaultRolloutSpecificationHighTrafficArgs> getHighTraffic() {
         return this.highTraffic == null ? Output.empty() : this.highTraffic;
     }
 
-    @InputImport(name="lowTraffic")
+    @Import(name="lowTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationLowTrafficArgs> lowTraffic;
 
     public Output<DefaultRolloutSpecificationLowTrafficArgs> getLowTraffic() {
         return this.lowTraffic == null ? Output.empty() : this.lowTraffic;
     }
 
-    @InputImport(name="mediumTraffic")
+    @Import(name="mediumTraffic")
       private final @Nullable Output<DefaultRolloutSpecificationMediumTrafficArgs> mediumTraffic;
 
     public Output<DefaultRolloutSpecificationMediumTrafficArgs> getMediumTraffic() {
         return this.mediumTraffic == null ? Output.empty() : this.mediumTraffic;
     }
 
-    @InputImport(name="providerRegistration")
+    @Import(name="providerRegistration")
       private final @Nullable Output<DefaultRolloutSpecificationProviderRegistrationArgs> providerRegistration;
 
     public Output<DefaultRolloutSpecificationProviderRegistrationArgs> getProviderRegistration() {
         return this.providerRegistration == null ? Output.empty() : this.providerRegistration;
     }
 
-    @InputImport(name="resourceTypeRegistrations")
+    @Import(name="resourceTypeRegistrations")
       private final @Nullable Output<List<ResourceTypeRegistrationArgs>> resourceTypeRegistrations;
 
     public Output<List<ResourceTypeRegistrationArgs>> getResourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? Output.empty() : this.resourceTypeRegistrations;
     }
 
-    @InputImport(name="restOfTheWorldGroupOne")
+    @Import(name="restOfTheWorldGroupOne")
       private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> restOfTheWorldGroupOne;
 
     public Output<DefaultRolloutSpecificationRestOfTheWorldGroupOneArgs> getRestOfTheWorldGroupOne() {
         return this.restOfTheWorldGroupOne == null ? Output.empty() : this.restOfTheWorldGroupOne;
     }
 
-    @InputImport(name="restOfTheWorldGroupTwo")
+    @Import(name="restOfTheWorldGroupTwo")
       private final @Nullable Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> restOfTheWorldGroupTwo;
 
     public Output<DefaultRolloutSpecificationRestOfTheWorldGroupTwoArgs> getRestOfTheWorldGroupTwo() {

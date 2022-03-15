@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AccessHomeDirectoryMappingArgs extends io.pulumi.resources.Re
      * Represents an entry and a target.
      * 
      */
-    @InputImport(name="entry", required=true)
+    @Import(name="entry", required=true)
       private final Output<String> entry;
 
     public Output<String> getEntry() {
@@ -28,7 +28,7 @@ public final class AccessHomeDirectoryMappingArgs extends io.pulumi.resources.Re
      * Represents the map target.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {

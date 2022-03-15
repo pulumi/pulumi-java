@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterBootstrapAction {
     /**
      * List of command line arguments passed to the JAR file's main function when executed.
@@ -27,11 +27,11 @@ public final class ClusterBootstrapAction {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterBootstrapAction(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path) {
         this.args = args;
         this.name = name;
         this.path = path;

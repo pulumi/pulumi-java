@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationMetricDescriptionResponse {
     /**
      * The maximum node capacity for Service Fabric application.
@@ -43,12 +43,12 @@ public final class ApplicationMetricDescriptionResponse {
      */
     private final @Nullable Double totalApplicationCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationMetricDescriptionResponse(
-        @OutputCustomType.Parameter("maximumCapacity") @Nullable Double maximumCapacity,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("reservationCapacity") @Nullable Double reservationCapacity,
-        @OutputCustomType.Parameter("totalApplicationCapacity") @Nullable Double totalApplicationCapacity) {
+        @CustomType.Parameter("maximumCapacity") @Nullable Double maximumCapacity,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("reservationCapacity") @Nullable Double reservationCapacity,
+        @CustomType.Parameter("totalApplicationCapacity") @Nullable Double totalApplicationCapacity) {
         this.maximumCapacity = maximumCapacity;
         this.name = name;
         this.reservationCapacity = reservationCapacity;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionParameterObjectAttribute;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetPipelineDefinitionParameterObject extends io.pulumi.resour
 
     public static final GetPipelineDefinitionParameterObject Empty = new GetPipelineDefinitionParameterObject();
 
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final List<GetPipelineDefinitionParameterObjectAttribute> attributes;
 
     public List<GetPipelineDefinitionParameterObjectAttribute> getAttributes() {
@@ -25,7 +25,7 @@ public final class GetPipelineDefinitionParameterObject extends io.pulumi.resour
      * ID of the object.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

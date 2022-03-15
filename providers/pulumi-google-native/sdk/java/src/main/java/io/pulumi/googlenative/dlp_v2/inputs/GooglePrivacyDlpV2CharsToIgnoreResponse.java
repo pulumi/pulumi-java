@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
      * Characters to not transform when masking.
      * 
      */
-    @InputImport(name="charactersToSkip", required=true)
+    @Import(name="charactersToSkip", required=true)
       private final String charactersToSkip;
 
     public String getCharactersToSkip() {
@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
      * Common characters to not transform when masking. Useful to avoid removing punctuation.
      * 
      */
-    @InputImport(name="commonCharactersToIgnore", required=true)
+    @Import(name="commonCharactersToIgnore", required=true)
       private final String commonCharactersToIgnore;
 
     public String getCommonCharactersToIgnore() {

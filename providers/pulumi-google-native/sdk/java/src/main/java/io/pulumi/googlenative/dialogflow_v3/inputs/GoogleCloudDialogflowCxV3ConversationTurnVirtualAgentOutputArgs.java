@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3PageArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTextArgs;
@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * The Page on which the utterance was spoken. Only name and displayName will be set.
      * 
      */
-    @InputImport(name="currentPage")
+    @Import(name="currentPage")
       private final @Nullable Output<GoogleCloudDialogflowCxV3PageArgs> currentPage;
 
     public Output<GoogleCloudDialogflowCxV3PageArgs> getCurrentPage() {
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * Input only. The diagnostic info output for the turn. Required to calculate the testing coverage.
      * 
      */
-    @InputImport(name="diagnosticInfo", required=true)
+    @Import(name="diagnosticInfo", required=true)
       private final Output<Map<String,String>> diagnosticInfo;
 
     public Output<Map<String,String>> getDiagnosticInfo() {
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * The session parameters available to the bot at this point.
      * 
      */
-    @InputImport(name="sessionParameters")
+    @Import(name="sessionParameters")
       private final @Nullable Output<Map<String,String>> sessionParameters;
 
     public Output<Map<String,String>> getSessionParameters() {
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * Response error from the agent in the test result. If set, other output is empty.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;
 
     public Output<GoogleRpcStatusArgs> getStatus() {
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * The text responses from the agent for the turn.
      * 
      */
-    @InputImport(name="textResponses")
+    @Import(name="textResponses")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses;
 
     public Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> getTextResponses() {
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
      * The Intent that triggered the response. Only name and displayName will be set.
      * 
      */
-    @InputImport(name="triggeredIntent")
+    @Import(name="triggeredIntent")
       private final @Nullable Output<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent;
 
     public Output<GoogleCloudDialogflowCxV3IntentArgs> getTriggeredIntent() {

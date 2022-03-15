@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.FileContentBufferResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * The Key Database (db).
      * 
      */
-    @InputImport(name="dbs", required=true)
+    @Import(name="dbs", required=true)
       private final List<FileContentBufferResponse> dbs;
 
     public List<FileContentBufferResponse> getDbs() {
@@ -32,7 +32,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * The forbidden key database (dbx).
      * 
      */
-    @InputImport(name="dbxs", required=true)
+    @Import(name="dbxs", required=true)
       private final List<FileContentBufferResponse> dbxs;
 
     public List<FileContentBufferResponse> getDbxs() {
@@ -43,7 +43,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * The Key Exchange Key (KEK).
      * 
      */
-    @InputImport(name="keks", required=true)
+    @Import(name="keks", required=true)
       private final List<FileContentBufferResponse> keks;
 
     public List<FileContentBufferResponse> getKeks() {
@@ -54,7 +54,7 @@ public final class InitialStateConfigResponse extends io.pulumi.resources.Invoke
      * The Platform Key (PK).
      * 
      */
-    @InputImport(name="pk", required=true)
+    @Import(name="pk", required=true)
       private final FileContentBufferResponse pk;
 
     public FileContentBufferResponse getPk() {

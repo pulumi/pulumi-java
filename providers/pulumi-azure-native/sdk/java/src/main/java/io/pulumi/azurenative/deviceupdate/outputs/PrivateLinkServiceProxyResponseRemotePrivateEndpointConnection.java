@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection {
     /**
      * Remote private endpoint connection ID.
@@ -15,8 +15,8 @@ public final class PrivateLinkServiceProxyResponseRemotePrivateEndpointConnectio
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupPortRange {
     private final Integer fromPort;
     private final Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupPortRange(
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("toPort") Integer toPort) {
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

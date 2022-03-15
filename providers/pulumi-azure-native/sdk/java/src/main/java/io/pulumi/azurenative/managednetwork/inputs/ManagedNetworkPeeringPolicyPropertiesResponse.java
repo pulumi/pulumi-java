@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * Gets or sets the hub virtual network ID
      * 
      */
-    @InputImport(name="hub")
+    @Import(name="hub")
       private final @Nullable ResourceIdResponse hub;
 
     public Optional<ResourceIdResponse> getHub() {
@@ -46,7 +46,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * Gets or sets the mesh group IDs
      * 
      */
-    @InputImport(name="mesh")
+    @Import(name="mesh")
       private final @Nullable List<ResourceIdResponse> mesh;
 
     public List<ResourceIdResponse> getMesh() {
@@ -57,7 +57,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * Provisioning state of the ManagedNetwork resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -68,7 +68,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * Gets or sets the spokes group IDs
      * 
      */
-    @InputImport(name="spokes")
+    @Import(name="spokes")
       private final @Nullable List<ResourceIdResponse> spokes;
 
     public List<ResourceIdResponse> getSpokes() {
@@ -79,7 +79,7 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse extends io.pulu
      * Gets or sets the connectivity type of a network structure policy
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

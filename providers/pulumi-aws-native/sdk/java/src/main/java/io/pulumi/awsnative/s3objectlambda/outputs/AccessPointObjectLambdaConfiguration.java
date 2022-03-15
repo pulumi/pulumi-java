@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointTransformationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,19 +12,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointObjectLambdaConfiguration {
     private final @Nullable List<String> allowedFeatures;
     private final @Nullable Boolean cloudWatchMetricsEnabled;
     private final String supportingAccessPoint;
     private final List<AccessPointTransformationConfiguration> transformationConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointObjectLambdaConfiguration(
-        @OutputCustomType.Parameter("allowedFeatures") @Nullable List<String> allowedFeatures,
-        @OutputCustomType.Parameter("cloudWatchMetricsEnabled") @Nullable Boolean cloudWatchMetricsEnabled,
-        @OutputCustomType.Parameter("supportingAccessPoint") String supportingAccessPoint,
-        @OutputCustomType.Parameter("transformationConfigurations") List<AccessPointTransformationConfiguration> transformationConfigurations) {
+        @CustomType.Parameter("allowedFeatures") @Nullable List<String> allowedFeatures,
+        @CustomType.Parameter("cloudWatchMetricsEnabled") @Nullable Boolean cloudWatchMetricsEnabled,
+        @CustomType.Parameter("supportingAccessPoint") String supportingAccessPoint,
+        @CustomType.Parameter("transformationConfigurations") List<AccessPointTransformationConfiguration> transformationConfigurations) {
         this.allowedFeatures = allowedFeatures;
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         this.supportingAccessPoint = supportingAccessPoint;

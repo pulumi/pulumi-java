@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class Nfs3TargetResponse extends io.pulumi.resources.InvokeArgs {
      * IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {
@@ -33,7 +33,7 @@ public final class Nfs3TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Identifies the StorageCache usage model to be used for this storage target.
      * 
      */
-    @InputImport(name="usageModel")
+    @Import(name="usageModel")
       private final @Nullable String usageModel;
 
     public Optional<String> getUsageModel() {

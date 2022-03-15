@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InboundIpRuleResponse {
     /**
      * Action to perform based on the match or no match of the IpMask.
@@ -22,10 +22,10 @@ public final class InboundIpRuleResponse {
      */
     private final @Nullable String ipMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InboundIpRuleResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("ipMask") @Nullable String ipMask) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("ipMask") @Nullable String ipMask) {
         this.action = action;
         this.ipMask = ipMask;
     }

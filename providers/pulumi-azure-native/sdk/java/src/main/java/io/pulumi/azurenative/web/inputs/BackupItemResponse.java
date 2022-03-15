@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.DatabaseBackupSettingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Id of the backup.
      * 
      */
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final Integer backupId;
 
     public Integer getBackupId() {
@@ -38,7 +38,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the blob which contains data for this backup.
      * 
      */
-    @InputImport(name="blobName", required=true)
+    @Import(name="blobName", required=true)
       private final String blobName;
 
     public String getBlobName() {
@@ -49,7 +49,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Unique correlation identifier. Please use this along with the timestamp while communicating with Azure support.
      * 
      */
-    @InputImport(name="correlationId", required=true)
+    @Import(name="correlationId", required=true)
       private final String correlationId;
 
     public String getCorrelationId() {
@@ -60,7 +60,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Timestamp of the backup creation.
      * 
      */
-    @InputImport(name="created", required=true)
+    @Import(name="created", required=true)
       private final String created;
 
     public String getCreated() {
@@ -71,7 +71,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * List of databases included in the backup.
      * 
      */
-    @InputImport(name="databases", required=true)
+    @Import(name="databases", required=true)
       private final List<DatabaseBackupSettingResponse> databases;
 
     public List<DatabaseBackupSettingResponse> getDatabases() {
@@ -82,7 +82,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Timestamp when this backup finished.
      * 
      */
-    @InputImport(name="finishedTimeStamp", required=true)
+    @Import(name="finishedTimeStamp", required=true)
       private final String finishedTimeStamp;
 
     public String getFinishedTimeStamp() {
@@ -93,7 +93,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -104,7 +104,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -115,7 +115,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Timestamp of a last restore operation which used this backup.
      * 
      */
-    @InputImport(name="lastRestoreTimeStamp", required=true)
+    @Import(name="lastRestoreTimeStamp", required=true)
       private final String lastRestoreTimeStamp;
 
     public String getLastRestoreTimeStamp() {
@@ -126,7 +126,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Details regarding this backup. Might contain an error message.
      * 
      */
-    @InputImport(name="log", required=true)
+    @Import(name="log", required=true)
       private final String log;
 
     public String getLog() {
@@ -137,7 +137,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -148,7 +148,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * True if this backup has been created due to a schedule being triggered.
      * 
      */
-    @InputImport(name="scheduled", required=true)
+    @Import(name="scheduled", required=true)
       private final Boolean scheduled;
 
     public Boolean getScheduled() {
@@ -159,7 +159,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Size of the backup in bytes.
      * 
      */
-    @InputImport(name="sizeInBytes", required=true)
+    @Import(name="sizeInBytes", required=true)
       private final Double sizeInBytes;
 
     public Double getSizeInBytes() {
@@ -170,7 +170,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Backup status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -181,7 +181,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * SAS URL for the storage account container which contains this backup.
      * 
      */
-    @InputImport(name="storageAccountUrl", required=true)
+    @Import(name="storageAccountUrl", required=true)
       private final String storageAccountUrl;
 
     public String getStorageAccountUrl() {
@@ -192,7 +192,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -203,7 +203,7 @@ public final class BackupItemResponse extends io.pulumi.resources.InvokeArgs {
      * Size of the original web app which has been backed up.
      * 
      */
-    @InputImport(name="websiteSizeInBytes", required=true)
+    @Import(name="websiteSizeInBytes", required=true)
       private final Double websiteSizeInBytes;
 
     public Double getWebsiteSizeInBytes() {

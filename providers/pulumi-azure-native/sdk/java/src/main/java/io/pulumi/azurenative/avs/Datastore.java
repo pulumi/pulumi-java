@@ -9,7 +9,7 @@ import io.pulumi.azurenative.avs.outputs.DiskPoolVolumeResponse;
 import io.pulumi.azurenative.avs.outputs.NetAppVolumeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * An iSCSI volume
      * 
      */
-    @OutputExport(name="diskPoolVolume", type=DiskPoolVolumeResponse.class, parameters={})
+    @Export(name="diskPoolVolume", type=DiskPoolVolumeResponse.class, parameters={})
     private Output</* @Nullable */ DiskPoolVolumeResponse> diskPoolVolume;
 
     /**
@@ -50,7 +50,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * An Azure NetApp Files volume
      * 
      */
-    @OutputExport(name="netAppVolume", type=NetAppVolumeResponse.class, parameters={})
+    @Export(name="netAppVolume", type=NetAppVolumeResponse.class, parameters={})
     private Output</* @Nullable */ NetAppVolumeResponse> netAppVolume;
 
     /**
@@ -78,7 +78,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * The state of the datastore provisioning
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class Datastore extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

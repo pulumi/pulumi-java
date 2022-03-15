@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<Map<String,String>> limits;
 
     public Output<Map<String,String>> getLimits() {
@@ -34,7 +34,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
      * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
      * 
      */
-    @InputImport(name="requests")
+    @Import(name="requests")
       private final @Nullable Output<Map<String,String>> requests;
 
     public Output<Map<String,String>> getRequests() {

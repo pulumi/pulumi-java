@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasLambdaCodeHook;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class BotAliasCodeHookSpecification extends io.pulumi.resources.Inv
 
     public static final BotAliasCodeHookSpecification Empty = new BotAliasCodeHookSpecification();
 
-    @InputImport(name="lambdaCodeHook", required=true)
+    @Import(name="lambdaCodeHook", required=true)
       private final BotAliasLambdaCodeHook lambdaCodeHook;
 
     public BotAliasLambdaCodeHook getLambdaCodeHook() {

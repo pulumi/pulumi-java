@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.InventoryDestinationArgs;
 import io.pulumi.aws.s3.inputs.InventoryFilterArgs;
 import io.pulumi.aws.s3.inputs.InventoryScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the source bucket that inventory lists the objects for.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -34,7 +34,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * Contains information about where to publish the inventory results (documented below).
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<InventoryDestinationArgs> destination;
 
     public Output<InventoryDestinationArgs> getDestination() {
@@ -45,7 +45,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the inventory is enabled or disabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -56,7 +56,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies an inventory filter. The inventory only includes objects that meet the filter's criteria (documented below).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<InventoryFilterArgs> filter;
 
     public Output<InventoryFilterArgs> getFilter() {
@@ -67,7 +67,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * Object versions to include in the inventory list. Valid values: `All`, `Current`.
      * 
      */
-    @InputImport(name="includedObjectVersions", required=true)
+    @Import(name="includedObjectVersions", required=true)
       private final Output<String> includedObjectVersions;
 
     public Output<String> getIncludedObjectVersions() {
@@ -78,7 +78,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier of the inventory configuration for the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * List of optional fields that are included in the inventory results. Please refer to the S3 [documentation](https://docs.aws.amazon.com/AmazonS3/latest/API/API_InventoryConfiguration.html#AmazonS3-Type-InventoryConfiguration-OptionalFields) for more details.
      * 
      */
-    @InputImport(name="optionalFields")
+    @Import(name="optionalFields")
       private final @Nullable Output<List<String>> optionalFields;
 
     public Output<List<String>> getOptionalFields() {
@@ -100,7 +100,7 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the schedule for generating inventory results (documented below).
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<InventoryScheduleArgs> schedule;
 
     public Output<InventoryScheduleArgs> getSchedule() {

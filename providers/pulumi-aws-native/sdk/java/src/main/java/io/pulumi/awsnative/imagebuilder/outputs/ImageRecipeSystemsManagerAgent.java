@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRecipeSystemsManagerAgent {
     /**
      * Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so that it is included in the new AMI. The default value is false.
@@ -17,8 +17,8 @@ public final class ImageRecipeSystemsManagerAgent {
      */
     private final @Nullable Boolean uninstallAfterBuild;
 
-    @OutputCustomType.Constructor
-    private ImageRecipeSystemsManagerAgent(@OutputCustomType.Parameter("uninstallAfterBuild") @Nullable Boolean uninstallAfterBuild) {
+    @CustomType.Constructor
+    private ImageRecipeSystemsManagerAgent(@CustomType.Parameter("uninstallAfterBuild") @Nullable Boolean uninstallAfterBuild) {
         this.uninstallAfterBuild = uninstallAfterBuild;
     }
 

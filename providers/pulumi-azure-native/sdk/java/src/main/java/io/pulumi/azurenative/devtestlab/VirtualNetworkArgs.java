@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetArgs;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetOverrideArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The allowed subnets of the virtual network.
      * 
      */
-    @InputImport(name="allowedSubnets")
+    @Import(name="allowedSubnets")
       private final @Nullable Output<List<SubnetArgs>> allowedSubnets;
 
     public Output<List<SubnetArgs>> getAllowedSubnets() {
@@ -33,7 +33,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the virtual network.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The Microsoft.Network resource identifier of the virtual network.
      * 
      */
-    @InputImport(name="externalProviderResourceId")
+    @Import(name="externalProviderResourceId")
       private final @Nullable Output<String> externalProviderResourceId;
 
     public Output<String> getExternalProviderResourceId() {
@@ -55,7 +55,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -66,7 +66,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the virtual network.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The subnet overrides of the virtual network.
      * 
      */
-    @InputImport(name="subnetOverrides")
+    @Import(name="subnetOverrides")
       private final @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
 
     public Output<List<SubnetOverrideArgs>> getSubnetOverrides() {
@@ -110,7 +110,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

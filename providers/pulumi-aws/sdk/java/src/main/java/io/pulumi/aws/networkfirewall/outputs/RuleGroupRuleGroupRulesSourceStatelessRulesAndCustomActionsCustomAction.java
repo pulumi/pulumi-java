@@ -4,11 +4,11 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction {
     /**
      * A configuration block describing the custom action associated with the `action_name`. See Action Definition below for details.
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      */
     private final String actionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction(
-        @OutputCustomType.Parameter("actionDefinition") RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition actionDefinition,
-        @OutputCustomType.Parameter("actionName") String actionName) {
+        @CustomType.Parameter("actionDefinition") RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition actionDefinition,
+        @CustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

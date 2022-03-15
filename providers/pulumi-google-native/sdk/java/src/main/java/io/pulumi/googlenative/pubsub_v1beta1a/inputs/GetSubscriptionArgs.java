@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
     public String getSubscriptionId() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * ARN assigned by AWS to the instance profile.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * Creation timestamp of the instance profile.
      * 
      */
-    @InputImport(name="createDate")
+    @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
     public Output<String> getCreateDate() {
@@ -41,7 +41,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * Name of the instance profile. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`. Can be a string of characters consisting of upper and lowercase alphanumeric characters and these special characters: `_`, `+`, `=`, `,`, `.`, `@`, `-`. Spaces are not allowed.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -63,7 +63,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * Path to the instance profile. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the IAM User Guide. Can be a string of characters consisting of either a forward slash (`/`) by itself or a string that must begin and end with forward slashes. Can include any ASCII character from the ! (\u0021) through the DEL character (\u007F), including most punctuation characters, digits, and upper and lowercase letters.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -74,7 +74,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * Name of the role to add to the profile.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -85,7 +85,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * Map of resource tags for the IAM Instance Profile. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -96,7 +96,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -107,7 +107,7 @@ public final class InstanceProfileState extends io.pulumi.resources.ResourceArgs
      * [Unique ID][1] assigned by AWS.
      * 
      */
-    @InputImport(name="uniqueId")
+    @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
     public Output<String> getUniqueId() {

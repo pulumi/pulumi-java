@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.mixedreality.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListSpatialAnchorsAccountKeysResult {
     /**
      * value of primary key.
@@ -20,10 +20,10 @@ public final class ListSpatialAnchorsAccountKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSpatialAnchorsAccountKeysResult(
-        @OutputCustomType.Parameter("primaryKey") String primaryKey,
-        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
+        @CustomType.Parameter("primaryKey") String primaryKey,
+        @CustomType.Parameter("secondaryKey") String secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }

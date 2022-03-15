@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.NetworkInterfaceSecurityGroupAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceSecurityGroupAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources
      * The ID of the network interface to attach to.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -47,7 +47,7 @@ public class NetworkInterfaceSecurityGroupAttachment extends io.pulumi.resources
      * The ID of the security group.
      * 
      */
-    @OutputExport(name="securityGroupId", type=String.class, parameters={})
+    @Export(name="securityGroupId", type=String.class, parameters={})
     private Output<String> securityGroupId;
 
     /**

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.outputs.FlowDestinationConnectorProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowDestinationFlowConfig {
     /**
      * Name of destination connector profile
@@ -29,11 +29,11 @@ public final class FlowDestinationFlowConfig {
      */
     private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowDestinationFlowConfig(
-        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
-        @OutputCustomType.Parameter("connectorType") FlowConnectorType connectorType,
-        @OutputCustomType.Parameter("destinationConnectorProperties") FlowDestinationConnectorProperties destinationConnectorProperties) {
+        @CustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @CustomType.Parameter("connectorType") FlowConnectorType connectorType,
+        @CustomType.Parameter("destinationConnectorProperties") FlowDestinationConnectorProperties destinationConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.destinationConnectorProperties = destinationConnectorProperties;

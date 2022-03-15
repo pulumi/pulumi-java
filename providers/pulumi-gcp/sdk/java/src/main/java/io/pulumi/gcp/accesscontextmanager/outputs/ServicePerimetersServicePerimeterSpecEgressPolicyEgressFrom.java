@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
     /**
      * A list of identities that are allowed access through this `EgressPolicy`.
@@ -28,10 +28,10 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
      */
     private final @Nullable String identityType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom(
-        @OutputCustomType.Parameter("identities") @Nullable List<String> identities,
-        @OutputCustomType.Parameter("identityType") @Nullable String identityType) {
+        @CustomType.Parameter("identities") @Nullable List<String> identities,
+        @CustomType.Parameter("identityType") @Nullable String identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }

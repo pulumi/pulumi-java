@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.NodeGroupAffinityResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ReservationAffinityResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ShieldedInstanceConfigResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GceClusterConfigResponse {
     /**
      * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This internal_ip_only restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
@@ -76,20 +76,20 @@ public final class GceClusterConfigResponse {
      */
     private final String zoneUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GceClusterConfigResponse(
-        @OutputCustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("nodeGroupAffinity") NodeGroupAffinityResponse nodeGroupAffinity,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("subnetworkUri") String subnetworkUri,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("zoneUri") String zoneUri) {
+        @CustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("nodeGroupAffinity") NodeGroupAffinityResponse nodeGroupAffinity,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("subnetworkUri") String subnetworkUri,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("zoneUri") String zoneUri) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.networkUri = networkUri;

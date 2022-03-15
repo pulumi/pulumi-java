@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.InstanceDisk;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
      * CPU count of the Instance.
      * 
      */
-    @InputImport(name="cpuCount")
+    @Import(name="cpuCount")
       private final @Nullable Integer cpuCount;
 
     public Optional<Integer> getCpuCount() {
@@ -35,7 +35,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
      * Disks attached to the Instance.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable List<InstanceDisk> disks;
 
     public List<InstanceDisk> getDisks() {
@@ -46,7 +46,7 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
      * RAM Size of the Instance.
      * 
      */
-    @InputImport(name="ramSizeInGb")
+    @Import(name="ramSizeInGb")
       private final @Nullable Integer ramSizeInGb;
 
     public Optional<Integer> getRamSizeInGb() {

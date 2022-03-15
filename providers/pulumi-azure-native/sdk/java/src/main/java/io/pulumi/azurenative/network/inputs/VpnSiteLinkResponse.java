@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsResponse;
 import io.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The set of bgp properties.
      * 
      */
-    @InputImport(name="bgpProperties")
+    @Import(name="bgpProperties")
       private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
 
     public Optional<VpnLinkBgpSettingsResponse> getBgpProperties() {
@@ -35,7 +35,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -46,7 +46,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * FQDN of vpn-site-link.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
@@ -57,7 +57,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -68,7 +68,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The ip-address for the vpn-site-link.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -79,7 +79,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The link provider properties.
      * 
      */
-    @InputImport(name="linkProperties")
+    @Import(name="linkProperties")
       private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
 
     public Optional<VpnLinkProviderPropertiesResponse> getLinkProperties() {
@@ -90,7 +90,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -101,7 +101,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the VPN site link resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -112,7 +112,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubject;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltName;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionSubjectDescription {
     private final @Nullable String hexSerialNumber;
     /**
@@ -37,14 +37,14 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      */
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescription(
-        @OutputCustomType.Parameter("hexSerialNumber") @Nullable String hexSerialNumber,
-        @OutputCustomType.Parameter("lifetime") @Nullable String lifetime,
-        @OutputCustomType.Parameter("notAfterTime") @Nullable String notAfterTime,
-        @OutputCustomType.Parameter("notBeforeTime") @Nullable String notBeforeTime,
-        @OutputCustomType.Parameter("subjectAltNames") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames,
-        @OutputCustomType.Parameter("subjects") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
+        @CustomType.Parameter("hexSerialNumber") @Nullable String hexSerialNumber,
+        @CustomType.Parameter("lifetime") @Nullable String lifetime,
+        @CustomType.Parameter("notAfterTime") @Nullable String notAfterTime,
+        @CustomType.Parameter("notBeforeTime") @Nullable String notBeforeTime,
+        @CustomType.Parameter("subjectAltNames") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames,
+        @CustomType.Parameter("subjects") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;
         this.notAfterTime = notAfterTime;

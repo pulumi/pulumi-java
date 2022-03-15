@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterPodIdentityExceptionResponse {
     /**
      * Name of the pod identity exception.
@@ -26,11 +26,11 @@ public final class ManagedClusterPodIdentityExceptionResponse {
      */
     private final Map<String,String> podLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterPodIdentityExceptionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("podLabels") Map<String,String> podLabels) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("podLabels") Map<String,String> podLabels) {
         this.name = name;
         this.namespace = namespace;
         this.podLabels = podLabels;

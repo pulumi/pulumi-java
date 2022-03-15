@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseAccountConnectionStringResponse {
     /**
      * Value of the connection string
@@ -20,10 +20,10 @@ public final class DatabaseAccountConnectionStringResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseAccountConnectionStringResponse(
-        @OutputCustomType.Parameter("connectionString") String connectionString,
-        @OutputCustomType.Parameter("description") String description) {
+        @CustomType.Parameter("connectionString") String connectionString,
+        @CustomType.Parameter("description") String description) {
         this.connectionString = connectionString;
         this.description = description;
     }

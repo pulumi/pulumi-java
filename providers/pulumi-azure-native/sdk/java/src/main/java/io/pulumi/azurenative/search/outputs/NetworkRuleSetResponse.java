@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.IpRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleSetResponse {
     /**
      * A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
@@ -17,8 +17,8 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<IpRuleResponse> ipRules;
 
-    @OutputCustomType.Constructor
-    private NetworkRuleSetResponse(@OutputCustomType.Parameter("ipRules") @Nullable List<IpRuleResponse> ipRules) {
+    @CustomType.Constructor
+    private NetworkRuleSetResponse(@CustomType.Parameter("ipRules") @Nullable List<IpRuleResponse> ipRules) {
         this.ipRules = ipRules;
     }
 

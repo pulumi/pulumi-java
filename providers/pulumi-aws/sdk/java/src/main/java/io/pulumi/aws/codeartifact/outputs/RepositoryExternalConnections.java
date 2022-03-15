@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codeartifact.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryExternalConnections {
     /**
      * The name of the external connection associated with a repository.
@@ -19,11 +19,11 @@ public final class RepositoryExternalConnections {
     private final @Nullable String packageFormat;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryExternalConnections(
-        @OutputCustomType.Parameter("externalConnectionName") String externalConnectionName,
-        @OutputCustomType.Parameter("packageFormat") @Nullable String packageFormat,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("externalConnectionName") String externalConnectionName,
+        @CustomType.Parameter("packageFormat") @Nullable String packageFormat,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.externalConnectionName = externalConnectionName;
         this.packageFormat = packageFormat;
         this.status = status;

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAmiBlockDeviceMapping {
     /**
      * The physical name of the device.
@@ -31,12 +31,12 @@ public final class GetAmiBlockDeviceMapping {
      */
     private final String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAmiBlockDeviceMapping(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("ebs") Map<String,String> ebs,
-        @OutputCustomType.Parameter("noDevice") String noDevice,
-        @OutputCustomType.Parameter("virtualName") String virtualName) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("ebs") Map<String,String> ebs,
+        @CustomType.Parameter("noDevice") String noDevice,
+        @CustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

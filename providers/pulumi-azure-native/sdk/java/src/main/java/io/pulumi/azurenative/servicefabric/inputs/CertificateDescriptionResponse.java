@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Thumbprint of the primary certificate.
      * 
      */
-    @InputImport(name="thumbprint", required=true)
+    @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
     public String getThumbprint() {
@@ -33,7 +33,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * Thumbprint of the secondary certificate.
      * 
      */
-    @InputImport(name="thumbprintSecondary")
+    @Import(name="thumbprintSecondary")
       private final @Nullable String thumbprintSecondary;
 
     public Optional<String> getThumbprintSecondary() {
@@ -44,7 +44,7 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
      * The local certificate store location.
      * 
      */
-    @InputImport(name="x509StoreName")
+    @Import(name="x509StoreName")
       private final @Nullable String x509StoreName;
 
     public Optional<String> getX509StoreName() {

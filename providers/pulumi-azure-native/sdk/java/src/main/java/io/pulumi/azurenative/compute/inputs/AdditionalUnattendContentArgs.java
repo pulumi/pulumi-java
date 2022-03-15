@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.ComponentNames;
 import io.pulumi.azurenative.compute.enums.PassNames;
 import io.pulumi.azurenative.compute.enums.SettingNames;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
      * 
      */
-    @InputImport(name="componentName")
+    @Import(name="componentName")
       private final @Nullable Output<ComponentNames> componentName;
 
     public Output<ComponentNames> getComponentName() {
@@ -36,7 +36,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -47,7 +47,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * The pass name. Currently, the only allowable value is OobeSystem.
      * 
      */
-    @InputImport(name="passName")
+    @Import(name="passName")
       private final @Nullable Output<PassNames> passName;
 
     public Output<PassNames> getPassName() {
@@ -58,7 +58,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
      * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
      * 
      */
-    @InputImport(name="settingName")
+    @Import(name="settingName")
       private final @Nullable Output<SettingNames> settingName;
 
     public Output<SettingNames> getSettingName() {

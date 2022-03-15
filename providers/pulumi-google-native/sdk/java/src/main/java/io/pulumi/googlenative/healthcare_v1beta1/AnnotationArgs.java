@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.AnnotationSourceArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageAnnotationArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ResourceAnnotationArgs;
@@ -23,14 +23,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * Details of the source.
      * 
      */
-    @InputImport(name="annotationSource")
+    @Import(name="annotationSource")
       private final @Nullable Output<AnnotationSourceArgs> annotationSource;
 
     public Output<AnnotationSourceArgs> getAnnotationSource() {
         return this.annotationSource == null ? Output.empty() : this.annotationSource;
     }
 
-    @InputImport(name="annotationStoreId", required=true)
+    @Import(name="annotationStoreId", required=true)
       private final Output<String> annotationStoreId;
 
     public Output<String> getAnnotationStoreId() {
@@ -41,14 +41,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * Additional information for this annotation record, such as annotator and verifier information or study campaign.
      * 
      */
-    @InputImport(name="customData")
+    @Import(name="customData")
       private final @Nullable Output<Map<String,String>> customData;
 
     public Output<Map<String,String>> getCustomData() {
         return this.customData == null ? Output.empty() : this.customData;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -59,14 +59,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * Annotations for images. For example, bounding polygons.
      * 
      */
-    @InputImport(name="imageAnnotation")
+    @Import(name="imageAnnotation")
       private final @Nullable Output<ImageAnnotationArgs> imageAnnotation;
 
     public Output<ImageAnnotationArgs> getImageAnnotation() {
         return this.imageAnnotation == null ? Output.empty() : this.imageAnnotation;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,14 +77,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -95,7 +95,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * Annotations for resource. For example, classification tags.
      * 
      */
-    @InputImport(name="resourceAnnotation")
+    @Import(name="resourceAnnotation")
       private final @Nullable Output<ResourceAnnotationArgs> resourceAnnotation;
 
     public Output<ResourceAnnotationArgs> getResourceAnnotation() {
@@ -106,7 +106,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
      * Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
      * 
      */
-    @InputImport(name="textAnnotation")
+    @Import(name="textAnnotation")
       private final @Nullable Output<SensitiveTextAnnotationArgs> textAnnotation;
 
     public Output<SensitiveTextAnnotationArgs> getTextAnnotation() {

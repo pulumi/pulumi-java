@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataprocParametersResponse {
     /**
      * URI for cluster used to run Dataproc execution. Format: `projects/{PROJECT_ID}/regions/{REGION}/clusters/{CLUSTER_NAME}`
@@ -15,8 +15,8 @@ public final class DataprocParametersResponse {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor
-    private DataprocParametersResponse(@OutputCustomType.Parameter("cluster") String cluster) {
+    @CustomType.Constructor
+    private DataprocParametersResponse(@CustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 

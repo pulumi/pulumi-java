@@ -9,7 +9,7 @@ import io.pulumi.awsnative.licensemanager.inputs.LicenseIssuerDataArgs;
 import io.pulumi.awsnative.licensemanager.inputs.LicenseMetadataArgs;
 import io.pulumi.awsnative.licensemanager.inputs.LicenseValidityDateFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,21 +24,21 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Beneficiary of the license.
      * 
      */
-    @InputImport(name="beneficiary")
+    @Import(name="beneficiary")
       private final @Nullable Output<String> beneficiary;
 
     public Output<String> getBeneficiary() {
         return this.beneficiary == null ? Output.empty() : this.beneficiary;
     }
 
-    @InputImport(name="consumptionConfiguration", required=true)
+    @Import(name="consumptionConfiguration", required=true)
       private final Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
 
     public Output<LicenseConsumptionConfigurationArgs> getConsumptionConfiguration() {
         return this.consumptionConfiguration;
     }
 
-    @InputImport(name="entitlements", required=true)
+    @Import(name="entitlements", required=true)
       private final Output<List<LicenseEntitlementArgs>> entitlements;
 
     public Output<List<LicenseEntitlementArgs>> getEntitlements() {
@@ -49,21 +49,21 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Home region for the created license.
      * 
      */
-    @InputImport(name="homeRegion", required=true)
+    @Import(name="homeRegion", required=true)
       private final Output<String> homeRegion;
 
     public Output<String> getHomeRegion() {
         return this.homeRegion;
     }
 
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final Output<LicenseIssuerDataArgs> issuer;
 
     public Output<LicenseIssuerDataArgs> getIssuer() {
         return this.issuer;
     }
 
-    @InputImport(name="licenseMetadata")
+    @Import(name="licenseMetadata")
       private final @Nullable Output<List<LicenseMetadataArgs>> licenseMetadata;
 
     public Output<List<LicenseMetadataArgs>> getLicenseMetadata() {
@@ -74,7 +74,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Name for the created license.
      * 
      */
-    @InputImport(name="licenseName")
+    @Import(name="licenseName")
       private final @Nullable Output<String> licenseName;
 
     public Output<String> getLicenseName() {
@@ -85,7 +85,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * Product name for the created license.
      * 
      */
-    @InputImport(name="productName", required=true)
+    @Import(name="productName", required=true)
       private final Output<String> productName;
 
     public Output<String> getProductName() {
@@ -96,21 +96,21 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * ProductSKU of the license.
      * 
      */
-    @InputImport(name="productSKU")
+    @Import(name="productSKU")
       private final @Nullable Output<String> productSKU;
 
     public Output<String> getProductSKU() {
         return this.productSKU == null ? Output.empty() : this.productSKU;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="validity", required=true)
+    @Import(name="validity", required=true)
       private final Output<LicenseValidityDateFormatArgs> validity;
 
     public Output<LicenseValidityDateFormatArgs> getValidity() {

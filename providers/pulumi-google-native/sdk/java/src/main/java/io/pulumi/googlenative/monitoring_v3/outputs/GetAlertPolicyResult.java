@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AlertStrategyResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.ConditionResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.DocumentationResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAlertPolicyResult {
     /**
      * Control over how this alert policy's notification channels are notified.
@@ -78,20 +78,20 @@ public final class GetAlertPolicyResult {
      */
     private final StatusResponse validity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAlertPolicyResult(
-        @OutputCustomType.Parameter("alertStrategy") AlertStrategyResponse alertStrategy,
-        @OutputCustomType.Parameter("combiner") String combiner,
-        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
-        @OutputCustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("documentation") DocumentationResponse documentation,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("mutationRecord") MutationRecordResponse mutationRecord,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationChannels") List<String> notificationChannels,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
-        @OutputCustomType.Parameter("validity") StatusResponse validity) {
+        @CustomType.Parameter("alertStrategy") AlertStrategyResponse alertStrategy,
+        @CustomType.Parameter("combiner") String combiner,
+        @CustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @CustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("documentation") DocumentationResponse documentation,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("mutationRecord") MutationRecordResponse mutationRecord,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationChannels") List<String> notificationChannels,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @CustomType.Parameter("validity") StatusResponse validity) {
         this.alertStrategy = alertStrategy;
         this.combiner = combiner;
         this.conditions = conditions;

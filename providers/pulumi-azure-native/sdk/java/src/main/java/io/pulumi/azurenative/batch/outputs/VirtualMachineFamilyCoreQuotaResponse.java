@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineFamilyCoreQuotaResponse {
     /**
      * The core quota for the VM family for the Batch account.
@@ -21,10 +21,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineFamilyCoreQuotaResponse(
-        @OutputCustomType.Parameter("coreQuota") Integer coreQuota,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("coreQuota") Integer coreQuota,
+        @CustomType.Parameter("name") String name) {
         this.coreQuota = coreQuota;
         this.name = name;
     }

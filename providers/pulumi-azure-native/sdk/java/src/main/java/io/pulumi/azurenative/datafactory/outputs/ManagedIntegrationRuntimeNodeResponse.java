@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIntegrationRuntimeNodeResponse {
     /**
      * The errors that occurred on this integration runtime node.
@@ -28,11 +28,11 @@ public final class ManagedIntegrationRuntimeNodeResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIntegrationRuntimeNodeResponse(
-        @OutputCustomType.Parameter("errors") @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
-        @OutputCustomType.Parameter("nodeId") String nodeId,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("errors") @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
+        @CustomType.Parameter("nodeId") String nodeId,
+        @CustomType.Parameter("status") String status) {
         this.errors = errors;
         this.nodeId = nodeId;
         this.status = status;

@@ -5,12 +5,12 @@ package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.devices.outputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointConnectionPropertiesResponse {
     /**
      * The private endpoint property of a private endpoint connection
@@ -23,10 +23,10 @@ public final class PrivateEndpointConnectionPropertiesResponse {
      */
     private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateEndpointConnectionPropertiesResponse(
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }

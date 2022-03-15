@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.enums.WorkloadType;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -42,7 +42,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Expected value is 'VMAppContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final Output<String> containerType;
 
     public Output<String> getContainerType() {
@@ -53,7 +53,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Additional details of a workload container.
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
     public Output<AzureWorkloadContainerExtendedInfoArgs> getExtendedInfo() {
@@ -64,7 +64,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -75,7 +75,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable Output<String> healthStatus;
 
     public Output<String> getHealthStatus() {
@@ -86,7 +86,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Time stamp when this container was updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
@@ -97,7 +97,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Re-Do Operation
      * 
      */
-    @InputImport(name="operationType")
+    @Import(name="operationType")
       private final @Nullable Output<Either<String,OperationType>> operationType;
 
     public Output<Either<String,OperationType>> getOperationType() {
@@ -108,7 +108,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable Output<String> registrationStatus;
 
     public Output<String> getRegistrationStatus() {
@@ -119,7 +119,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * ARM ID of the virtual machine represented by this Azure Workload Container
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
@@ -130,7 +130,7 @@ public final class AzureVMAppContainerProtectionContainerArgs extends io.pulumi.
      * Workload type for which registration was sent.
      * 
      */
-    @InputImport(name="workloadType")
+    @Import(name="workloadType")
       private final @Nullable Output<Either<String,WorkloadType>> workloadType;
 
     public Output<Either<String,WorkloadType>> getWorkloadType() {

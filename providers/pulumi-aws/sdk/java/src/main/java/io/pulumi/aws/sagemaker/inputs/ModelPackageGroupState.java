@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) assigned by AWS to this Model Package Group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * A description for the model group.
      * 
      */
-    @InputImport(name="modelPackageGroupDescription")
+    @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
     public Output<String> getModelPackageGroupDescription() {
@@ -41,7 +41,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * The name of the model group.
      * 
      */
-    @InputImport(name="modelPackageGroupName")
+    @Import(name="modelPackageGroupName")
       private final @Nullable Output<String> modelPackageGroupName;
 
     public Output<String> getModelPackageGroupName() {
@@ -52,7 +52,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class ModelPackageGroupState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

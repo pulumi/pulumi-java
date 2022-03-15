@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
      * Amazon Resource Name (ARN) or alias of the KMS key. The KMS key must be symmetric, created in the same region as the cluster, and if the KMS key was created in a different account, the user must have access to the KMS key.
      * 
      */
-    @InputImport(name="keyArn")
+    @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {

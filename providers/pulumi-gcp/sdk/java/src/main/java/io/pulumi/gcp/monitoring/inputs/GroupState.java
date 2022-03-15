@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * purposes.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * belong to this group.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -45,7 +45,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * groups that are clusters.
      * 
      */
-    @InputImport(name="isCluster")
+    @Import(name="isCluster")
       private final @Nullable Output<Boolean> isCluster;
 
     public Output<Boolean> getIsCluster() {
@@ -56,7 +56,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * A unique identifier for this group. The format is "projects/{project_id_or_number}/groups/{group_id}".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * groups with no parent, parentName is the empty string, "".
      * 
      */
-    @InputImport(name="parentName")
+    @Import(name="parentName")
       private final @Nullable Output<String> parentName;
 
     public Output<String> getParentName() {
@@ -81,7 +81,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

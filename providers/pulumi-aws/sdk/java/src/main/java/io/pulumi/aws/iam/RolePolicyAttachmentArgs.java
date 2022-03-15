@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
      * The ARN of the policy you want to apply
      * 
      */
-    @InputImport(name="policyArn", required=true)
+    @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
     public Output<String> getPolicyArn() {
@@ -28,7 +28,7 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
      * The name of the IAM role to which the policy should be applied
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

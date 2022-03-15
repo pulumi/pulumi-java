@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceCdnPolicyCacheKeyPolicy;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionBackendServiceCdnPolicy {
     /**
      * The CacheKeyPolicy for this CdnPolicy.
@@ -76,17 +76,17 @@ public final class RegionBackendServiceCdnPolicy {
      */
     private final @Nullable Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionBackendServiceCdnPolicy(
-        @OutputCustomType.Parameter("cacheKeyPolicy") @Nullable RegionBackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy,
-        @OutputCustomType.Parameter("cacheMode") @Nullable String cacheMode,
-        @OutputCustomType.Parameter("clientTtl") @Nullable Integer clientTtl,
-        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
-        @OutputCustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
-        @OutputCustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
-        @OutputCustomType.Parameter("negativeCachingPolicies") @Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        @OutputCustomType.Parameter("serveWhileStale") @Nullable Integer serveWhileStale,
-        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") @Nullable Integer signedUrlCacheMaxAgeSec) {
+        @CustomType.Parameter("cacheKeyPolicy") @Nullable RegionBackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy,
+        @CustomType.Parameter("cacheMode") @Nullable String cacheMode,
+        @CustomType.Parameter("clientTtl") @Nullable Integer clientTtl,
+        @CustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @CustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
+        @CustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
+        @CustomType.Parameter("negativeCachingPolicies") @Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @CustomType.Parameter("serveWhileStale") @Nullable Integer serveWhileStale,
+        @CustomType.Parameter("signedUrlCacheMaxAgeSec") @Nullable Integer signedUrlCacheMaxAgeSec) {
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;

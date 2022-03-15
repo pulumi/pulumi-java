@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.FlowLogDestinationOptionsPropertiesFileFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DestinationOptionsProperties {
     private final FlowLogDestinationOptionsPropertiesFileFormat fileFormat;
     private final Boolean hiveCompatiblePartitions;
     private final Boolean perHourPartition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DestinationOptionsProperties(
-        @OutputCustomType.Parameter("fileFormat") FlowLogDestinationOptionsPropertiesFileFormat fileFormat,
-        @OutputCustomType.Parameter("hiveCompatiblePartitions") Boolean hiveCompatiblePartitions,
-        @OutputCustomType.Parameter("perHourPartition") Boolean perHourPartition) {
+        @CustomType.Parameter("fileFormat") FlowLogDestinationOptionsPropertiesFileFormat fileFormat,
+        @CustomType.Parameter("hiveCompatiblePartitions") Boolean hiveCompatiblePartitions,
+        @CustomType.Parameter("perHourPartition") Boolean perHourPartition) {
         this.fileFormat = fileFormat;
         this.hiveCompatiblePartitions = hiveCompatiblePartitions;
         this.perHourPartition = perHourPartition;

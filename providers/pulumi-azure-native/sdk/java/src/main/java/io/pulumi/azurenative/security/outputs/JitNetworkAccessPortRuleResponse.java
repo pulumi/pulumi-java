@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JitNetworkAccessPortRuleResponse {
     /**
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
@@ -31,13 +31,13 @@ public final class JitNetworkAccessPortRuleResponse {
     private final Integer number;
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JitNetworkAccessPortRuleResponse(
-        @OutputCustomType.Parameter("allowedSourceAddressPrefix") @Nullable String allowedSourceAddressPrefix,
-        @OutputCustomType.Parameter("allowedSourceAddressPrefixes") @Nullable List<String> allowedSourceAddressPrefixes,
-        @OutputCustomType.Parameter("maxRequestAccessDuration") String maxRequestAccessDuration,
-        @OutputCustomType.Parameter("number") Integer number,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("allowedSourceAddressPrefix") @Nullable String allowedSourceAddressPrefix,
+        @CustomType.Parameter("allowedSourceAddressPrefixes") @Nullable List<String> allowedSourceAddressPrefixes,
+        @CustomType.Parameter("maxRequestAccessDuration") String maxRequestAccessDuration,
+        @CustomType.Parameter("number") Integer number,
+        @CustomType.Parameter("protocol") String protocol) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
         this.maxRequestAccessDuration = maxRequestAccessDuration;

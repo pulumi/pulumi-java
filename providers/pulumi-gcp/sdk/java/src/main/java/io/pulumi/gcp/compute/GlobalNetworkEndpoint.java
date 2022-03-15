@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.GlobalNetworkEndpointArgs;
@@ -50,7 +50,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output</* @Nullable */ String> fqdn;
 
     /**
@@ -65,7 +65,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * The global network endpoint group this endpoint is part of.
      * 
      */
-    @OutputExport(name="globalNetworkEndpointGroup", type=String.class, parameters={})
+    @Export(name="globalNetworkEndpointGroup", type=String.class, parameters={})
     private Output<String> globalNetworkEndpointGroup;
 
     /**
@@ -79,7 +79,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * IPv4 address external endpoint.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
     /**
@@ -93,7 +93,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * Port number of the external endpoint.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -108,7 +108,7 @@ public class GlobalNetworkEndpoint extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

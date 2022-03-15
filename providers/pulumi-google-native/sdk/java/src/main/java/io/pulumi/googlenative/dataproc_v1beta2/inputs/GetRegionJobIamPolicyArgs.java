@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetRegionJobIamPolicyArgs extends io.pulumi.resources.InvokeA
 
     public static final GetRegionJobIamPolicyArgs Empty = new GetRegionJobIamPolicyArgs();
 
-    @InputImport(name="jobId", required=true)
+    @Import(name="jobId", required=true)
       private final String jobId;
 
     public String getJobId() {
         return this.jobId;
     }
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="regionId", required=true)
+    @Import(name="regionId", required=true)
       private final String regionId;
 
     public String getRegionId() {

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.InstanceMonthlyTransfer;
 import io.pulumi.awsnative.lightsail.outputs.InstancePort;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNetworking {
     private final @Nullable InstanceMonthlyTransfer monthlyTransfer;
     /**
@@ -20,10 +20,10 @@ public final class InstanceNetworking {
      */
     private final List<InstancePort> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNetworking(
-        @OutputCustomType.Parameter("monthlyTransfer") @Nullable InstanceMonthlyTransfer monthlyTransfer,
-        @OutputCustomType.Parameter("ports") List<InstancePort> ports) {
+        @CustomType.Parameter("monthlyTransfer") @Nullable InstanceMonthlyTransfer monthlyTransfer,
+        @CustomType.Parameter("ports") List<InstancePort> ports) {
         this.monthlyTransfer = monthlyTransfer;
         this.ports = ports;
     }

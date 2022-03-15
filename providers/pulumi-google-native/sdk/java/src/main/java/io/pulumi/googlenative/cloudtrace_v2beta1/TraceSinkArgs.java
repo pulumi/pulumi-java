@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtrace_v2beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudtrace_v2beta1.inputs.OutputConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,14 +30,14 @@ public final class TraceSinkArgs extends io.pulumi.resources.ResourceArgs {
      * The export destination.
      * 
      */
-    @InputImport(name="outputConfig", required=true)
+    @Import(name="outputConfig", required=true)
       private final Output<OutputConfigArgs> outputConfig;
 
     public Output<OutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

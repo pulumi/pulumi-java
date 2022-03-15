@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.docdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalClusterGlobalClusterMember {
     /**
      * Amazon Resource Name (ARN) of member DB Cluster.
@@ -23,10 +23,10 @@ public final class GlobalClusterGlobalClusterMember {
      */
     private final @Nullable Boolean isWriter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalClusterGlobalClusterMember(
-        @OutputCustomType.Parameter("dbClusterArn") @Nullable String dbClusterArn,
-        @OutputCustomType.Parameter("isWriter") @Nullable Boolean isWriter) {
+        @CustomType.Parameter("dbClusterArn") @Nullable String dbClusterArn,
+        @CustomType.Parameter("isWriter") @Nullable Boolean isWriter) {
         this.dbClusterArn = dbClusterArn;
         this.isWriter = isWriter;
     }

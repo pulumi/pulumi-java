@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock {
     private final String cidrBlock;
     private final String displayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock(
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("displayName") String displayName) {
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("displayName") String displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }

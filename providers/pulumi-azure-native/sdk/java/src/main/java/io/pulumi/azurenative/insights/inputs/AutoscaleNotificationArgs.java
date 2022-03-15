@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.OperationType;
 import io.pulumi.azurenative.insights.inputs.EmailNotificationArgs;
 import io.pulumi.azurenative.insights.inputs.WebhookNotificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * the email notification.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<EmailNotificationArgs> email;
 
     public Output<EmailNotificationArgs> getEmail() {
@@ -36,7 +36,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * the operation associated with the notification and its value must be "scale"
      * 
      */
-    @InputImport(name="operation", required=true)
+    @Import(name="operation", required=true)
       private final Output<OperationType> operation;
 
     public Output<OperationType> getOperation() {
@@ -47,7 +47,7 @@ public final class AutoscaleNotificationArgs extends io.pulumi.resources.Resourc
      * the collection of webhook notifications.
      * 
      */
-    @InputImport(name="webhooks")
+    @Import(name="webhooks")
       private final @Nullable Output<List<WebhookNotificationArgs>> webhooks;
 
     public Output<List<WebhookNotificationArgs>> getWebhooks() {

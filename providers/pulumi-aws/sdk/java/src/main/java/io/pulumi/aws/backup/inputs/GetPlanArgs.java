@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.backup.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetPlanArgs extends io.pulumi.resources.InvokeArgs {
      * The backup plan ID.
      * 
      */
-    @InputImport(name="planId", required=true)
+    @Import(name="planId", required=true)
       private final String planId;
 
     public String getPlanId() {
@@ -30,7 +30,7 @@ public final class GetPlanArgs extends io.pulumi.resources.InvokeArgs {
      * Metadata that you can assign to help organize the plans you create.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

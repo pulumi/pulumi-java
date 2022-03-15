@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.Scheme;
 import io.pulumi.azurenative.containerinstance.inputs.HttpHeadersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * The HTTP headers.
      * 
      */
-    @InputImport(name="httpHeaders")
+    @Import(name="httpHeaders")
       private final @Nullable Output<HttpHeadersArgs> httpHeaders;
 
     public Output<HttpHeadersArgs> getHttpHeaders() {
@@ -37,7 +37,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * The path to probe.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -48,7 +48,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * The port number to probe.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -59,7 +59,7 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
      * The scheme.
      * 
      */
-    @InputImport(name="scheme")
+    @Import(name="scheme")
       private final @Nullable Output<Either<String,Scheme>> scheme;
 
     public Output<Either<String,Scheme>> getScheme() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceCrowdingConfigResponse {
     /**
      * Maximum number of results allowed from a datasource in a result page as long as results from other sources are not exhausted. Value specified must not be negative. A default value is used if this value is equal to 0. To disable crowding, set the value greater than 100.
@@ -20,10 +20,10 @@ public final class SourceCrowdingConfigResponse {
      */
     private final Integer numSuggestions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceCrowdingConfigResponse(
-        @OutputCustomType.Parameter("numResults") Integer numResults,
-        @OutputCustomType.Parameter("numSuggestions") Integer numSuggestions) {
+        @CustomType.Parameter("numResults") Integer numResults,
+        @CustomType.Parameter("numSuggestions") Integer numSuggestions) {
         this.numResults = numResults;
         this.numSuggestions = numSuggestions;
     }

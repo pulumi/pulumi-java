@@ -6,7 +6,7 @@ package io.pulumi.awsnative.macie.outputs;
 import io.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterFindingCriteria;
 import io.pulumi.awsnative.macie.outputs.FindingsFilterListItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFindingsFilterResult {
     /**
      * Findings filter action.
@@ -57,16 +57,16 @@ public final class GetFindingsFilterResult {
      */
     private final @Nullable Integer position;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFindingsFilterResult(
-        @OutputCustomType.Parameter("action") @Nullable FindingsFilterFindingFilterAction action,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("findingCriteria") @Nullable FindingsFilterFindingCriteria findingCriteria,
-        @OutputCustomType.Parameter("findingsFilterListItems") @Nullable List<FindingsFilterListItem> findingsFilterListItems,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("position") @Nullable Integer position) {
+        @CustomType.Parameter("action") @Nullable FindingsFilterFindingFilterAction action,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("findingCriteria") @Nullable FindingsFilterFindingCriteria findingCriteria,
+        @CustomType.Parameter("findingsFilterListItems") @Nullable List<FindingsFilterListItem> findingsFilterListItems,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("position") @Nullable Integer position) {
         this.action = action;
         this.arn = arn;
         this.description = description;

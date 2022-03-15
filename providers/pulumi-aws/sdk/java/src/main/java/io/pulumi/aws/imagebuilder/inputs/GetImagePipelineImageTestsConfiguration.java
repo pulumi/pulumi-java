@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetImagePipelineImageTestsConfiguration extends io.pulumi.res
      * Whether image tests are enabled.
      * 
      */
-    @InputImport(name="imageTestsEnabled", required=true)
+    @Import(name="imageTestsEnabled", required=true)
       private final Boolean imageTestsEnabled;
 
     public Boolean getImageTestsEnabled() {
@@ -28,7 +28,7 @@ public final class GetImagePipelineImageTestsConfiguration extends io.pulumi.res
      * Number of minutes before image tests time out.
      * 
      */
-    @InputImport(name="timeoutMinutes", required=true)
+    @Import(name="timeoutMinutes", required=true)
       private final Integer timeoutMinutes;
 
     public Integer getTimeoutMinutes() {

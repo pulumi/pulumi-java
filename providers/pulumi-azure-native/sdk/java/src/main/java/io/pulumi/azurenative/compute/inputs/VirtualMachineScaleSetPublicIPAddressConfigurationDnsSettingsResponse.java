@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
      * The Domain name label.The concatenation of the domain name label and vm index will be the domain name labels of the PublicIPAddress resources that will be created
      * 
      */
-    @InputImport(name="domainNameLabel", required=true)
+    @Import(name="domainNameLabel", required=true)
       private final String domainNameLabel;
 
     public String getDomainNameLabel() {

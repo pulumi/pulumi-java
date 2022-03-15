@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventOutputTranscriptionTrackResponse {
     /**
      * The output track name. This property is reserved for future use, any value set on this property will be ignored.
@@ -15,8 +15,8 @@ public final class LiveEventOutputTranscriptionTrackResponse {
      */
     private final String trackName;
 
-    @OutputCustomType.Constructor
-    private LiveEventOutputTranscriptionTrackResponse(@OutputCustomType.Parameter("trackName") String trackName) {
+    @CustomType.Constructor
+    private LiveEventOutputTranscriptionTrackResponse(@CustomType.Parameter("trackName") String trackName) {
         this.trackName = trackName;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScriptActionResponse {
     /**
      * The user provided name of the script action.
@@ -33,12 +33,12 @@ public final class ScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
-        @OutputCustomType.Parameter("roles") Object roles,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable String parameters,
+        @CustomType.Parameter("roles") Object roles,
+        @CustomType.Parameter("uri") String uri) {
         this.name = name;
         this.parameters = parameters;
         this.roles = roles;

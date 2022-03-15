@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyGroupPlacementPolicy {
     private final Integer availabilityDomainCount;
     private final String collocation;
     private final Integer vmCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicyGroupPlacementPolicy(
-        @OutputCustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
-        @OutputCustomType.Parameter("collocation") String collocation,
-        @OutputCustomType.Parameter("vmCount") Integer vmCount) {
+        @CustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
+        @CustomType.Parameter("collocation") String collocation,
+        @CustomType.Parameter("vmCount") Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.vmCount = vmCount;

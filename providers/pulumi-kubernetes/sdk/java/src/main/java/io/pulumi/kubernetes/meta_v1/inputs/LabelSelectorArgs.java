@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorRequirementArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
      * 
      */
-    @InputImport(name="matchExpressions")
+    @Import(name="matchExpressions")
       private final @Nullable Output<List<LabelSelectorRequirementArgs>> matchExpressions;
 
     public Output<List<LabelSelectorRequirementArgs>> getMatchExpressions() {
@@ -36,7 +36,7 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
      * 
      */
-    @InputImport(name="matchLabels")
+    @Import(name="matchLabels")
       private final @Nullable Output<Map<String,String>> matchLabels;
 
     public Output<Map<String,String>> getMatchLabels() {

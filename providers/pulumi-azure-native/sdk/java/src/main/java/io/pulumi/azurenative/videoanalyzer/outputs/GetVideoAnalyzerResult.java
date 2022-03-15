@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EndpointResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoAnalyzerIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVideoAnalyzerResult {
     /**
      * The account encryption properties.
@@ -69,18 +69,18 @@ public final class GetVideoAnalyzerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVideoAnalyzerResult(
-        @OutputCustomType.Parameter("encryption") AccountEncryptionResponse encryption,
-        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable VideoAnalyzerIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("storageAccounts") List<StorageAccountResponse> storageAccounts,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("encryption") AccountEncryptionResponse encryption,
+        @CustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable VideoAnalyzerIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("storageAccounts") List<StorageAccountResponse> storageAccounts,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.endpoints = endpoints;
         this.id = id;

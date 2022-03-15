@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.BuildArtifactArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -32,14 +32,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * List of artifacts to pass through to Skaffold command.
      * 
      */
-    @InputImport(name="buildArtifacts")
+    @Import(name="buildArtifacts")
       private final @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
 
     public Output<List<BuildArtifactArgs>> getBuildArtifacts() {
         return this.buildArtifacts == null ? Output.empty() : this.buildArtifacts;
     }
 
-    @InputImport(name="deliveryPipelineId", required=true)
+    @Import(name="deliveryPipelineId", required=true)
       private final Output<String> deliveryPipelineId;
 
     public Output<String> getDeliveryPipelineId() {
@@ -50,7 +50,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the `Release`. Max length is 255 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -61,7 +61,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -72,14 +72,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -90,28 +90,28 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Name of the `Release`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/a-z{0,62}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="releaseId", required=true)
+    @Import(name="releaseId", required=true)
       private final Output<String> releaseId;
 
     public Output<String> getReleaseId() {
         return this.releaseId;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -122,7 +122,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Filepath of the Skaffold config inside of the config URI.
      * 
      */
-    @InputImport(name="skaffoldConfigPath")
+    @Import(name="skaffoldConfigPath")
       private final @Nullable Output<String> skaffoldConfigPath;
 
     public Output<String> getSkaffoldConfigPath() {
@@ -133,7 +133,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Storage URI of tar.gz archive containing Skaffold configuration.
      * 
      */
-    @InputImport(name="skaffoldConfigUri")
+    @Import(name="skaffoldConfigUri")
       private final @Nullable Output<String> skaffoldConfigUri;
 
     public Output<String> getSkaffoldConfigUri() {
@@ -144,14 +144,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * The Skaffold version to use when operating on this release, such as "1.20.0". Not all versions are valid; Google Cloud Deploy supports a specific set of versions. If unset, the most recent supported Skaffold version will be used.
      * 
      */
-    @InputImport(name="skaffoldVersion")
+    @Import(name="skaffoldVersion")
       private final @Nullable Output<String> skaffoldVersion;
 
     public Output<String> getSkaffoldVersion() {
         return this.skaffoldVersion == null ? Output.empty() : this.skaffoldVersion;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

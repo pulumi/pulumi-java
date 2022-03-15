@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.enums.StorageSettingStoreTypes;
 import io.pulumi.azurenative.dataprotection.enums.StorageSettingTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the type of the datastore.
      * 
      */
-    @InputImport(name="datastoreType")
+    @Import(name="datastoreType")
       private final @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
 
     public Output<Either<String,StorageSettingStoreTypes>> getDatastoreType() {
@@ -36,7 +36,7 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,StorageSettingTypes>> type;
 
     public Output<Either<String,StorageSettingTypes>> getType() {

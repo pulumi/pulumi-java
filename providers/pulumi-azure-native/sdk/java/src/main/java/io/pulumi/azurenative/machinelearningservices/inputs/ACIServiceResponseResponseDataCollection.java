@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ACIServiceResponseResponseDataCollection extends io.pulumi.re
      * Option for enabling/disabling Event Hub.
      * 
      */
-    @InputImport(name="eventHubEnabled")
+    @Import(name="eventHubEnabled")
       private final @Nullable Boolean eventHubEnabled;
 
     public Optional<Boolean> getEventHubEnabled() {
@@ -33,7 +33,7 @@ public final class ACIServiceResponseResponseDataCollection extends io.pulumi.re
      * Option for enabling/disabling storage.
      * 
      */
-    @InputImport(name="storageEnabled")
+    @Import(name="storageEnabled")
       private final @Nullable Boolean storageEnabled;
 
     public Optional<Boolean> getStorageEnabled() {

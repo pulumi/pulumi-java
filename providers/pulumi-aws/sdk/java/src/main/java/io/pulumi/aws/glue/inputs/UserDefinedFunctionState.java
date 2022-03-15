@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
 
     public static final UserDefinedFunctionState Empty = new UserDefinedFunctionState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -27,7 +27,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * ID of the Glue Catalog to create the function in. If omitted, this defaults to the AWS Account ID.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -38,14 +38,14 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * The Java class that contains the function code.
      * 
      */
-    @InputImport(name="className")
+    @Import(name="className")
       private final @Nullable Output<String> className;
 
     public Output<String> getClassName() {
         return this.className == null ? Output.empty() : this.className;
     }
 
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -56,7 +56,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * The name of the Database to create the Function.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -67,7 +67,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * The name of the function.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * The owner of the function.
      * 
      */
-    @InputImport(name="ownerName")
+    @Import(name="ownerName")
       private final @Nullable Output<String> ownerName;
 
     public Output<String> getOwnerName() {
@@ -89,7 +89,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * The owner type. can be one of `USER`, `ROLE`, and `GROUP`.
      * 
      */
-    @InputImport(name="ownerType")
+    @Import(name="ownerType")
       private final @Nullable Output<String> ownerType;
 
     public Output<String> getOwnerType() {
@@ -100,7 +100,7 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
      * The configuration block for Resource URIs. See resource uris below for more details.
      * 
      */
-    @InputImport(name="resourceUris")
+    @Import(name="resourceUris")
       private final @Nullable Output<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris;
 
     public Output<List<UserDefinedFunctionResourceUriGetArgs>> getResourceUris() {

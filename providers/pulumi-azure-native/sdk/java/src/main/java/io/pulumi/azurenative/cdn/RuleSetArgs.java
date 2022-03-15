@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -29,7 +29,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class RuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the rule set under the profile which is unique globally
      * 
      */
-    @InputImport(name="ruleSetName")
+    @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {

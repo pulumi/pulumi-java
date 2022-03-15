@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
      * The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.
      * 
      */
-    @InputImport(name="ttl", required=true)
+    @Import(name="ttl", required=true)
       private final Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
@@ -29,7 +29,7 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
      * The type of health check that you want to create, which indicates how Route 53 determines whether an endpoint is healthy. Valid Values: HTTP, HTTPS, TCP
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

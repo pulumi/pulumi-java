@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.DiagnosticArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable Output<List<DiagnosticArgs>> diagnostics;
 
     public Output<List<DiagnosticArgs>> getDiagnostics() {
@@ -31,7 +31,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * JsonPath expression that determines if the request failed.
      * 
      */
-    @InputImport(name="failCondition")
+    @Import(name="failCondition")
       private final @Nullable Output<String> failCondition;
 
     public Output<String> getFailCondition() {
@@ -42,7 +42,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * JsonPath expression that determines if the request is completed.
      * 
      */
-    @InputImport(name="finishCondition")
+    @Import(name="finishCondition")
       private final @Nullable Output<String> finishCondition;
 
     public Output<String> getFinishCondition() {
@@ -53,7 +53,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * JsonPath expression that evaluates to string, it indicates where to poll.
      * 
      */
-    @InputImport(name="pollingLink")
+    @Import(name="pollingLink")
       private final @Nullable Output<String> pollingLink;
 
     public Output<String> getPollingLink() {
@@ -64,7 +64,7 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * JsonPath expression, after polling is completed, indicates where to fetch the resource.
      * 
      */
-    @InputImport(name="targetLink")
+    @Import(name="targetLink")
       private final @Nullable Output<String> targetLink;
 
     public Output<String> getTargetLink() {

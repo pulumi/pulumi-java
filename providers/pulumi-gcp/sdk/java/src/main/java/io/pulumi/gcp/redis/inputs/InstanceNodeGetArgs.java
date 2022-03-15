@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class InstanceNodeGetArgs extends io.pulumi.resources.ResourceArgs 
      * an identifier for the resource with format `projects/{{project}}/locations/{{region}}/instances/{{name}}`
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

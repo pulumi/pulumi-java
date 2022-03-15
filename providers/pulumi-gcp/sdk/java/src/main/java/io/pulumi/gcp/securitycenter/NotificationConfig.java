@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.securitycenter.NotificationConfigArgs;
@@ -49,7 +49,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * This must be unique within the organization.
      * 
      */
-    @OutputExport(name="configId", type=String.class, parameters={})
+    @Export(name="configId", type=String.class, parameters={})
     private Output<String> configId;
 
     /**
@@ -63,7 +63,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The description of the notification config (max of 1024 characters).
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -78,7 +78,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * Config lives in.
      * 
      */
-    @OutputExport(name="organization", type=String.class, parameters={})
+    @Export(name="organization", type=String.class, parameters={})
     private Output<String> organization;
 
     /**
@@ -110,7 +110,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * "projects/[project_id]/topics/[topic]".
      * 
      */
-    @OutputExport(name="pubsubTopic", type=String.class, parameters={})
+    @Export(name="pubsubTopic", type=String.class, parameters={})
     private Output<String> pubsubTopic;
 
     /**
@@ -125,7 +125,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -140,7 +140,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="streamingConfig", type=NotificationConfigStreamingConfig.class, parameters={})
+    @Export(name="streamingConfig", type=NotificationConfigStreamingConfig.class, parameters={})
     private Output<NotificationConfigStreamingConfig> streamingConfig;
 
     /**

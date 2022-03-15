@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoExportPolicyGetArgs;
 import io.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3AutoImportPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class DataRepositoryAssociationS3GetArgs extends io.pulumi.resource
      * Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the `events` configuration block.
      * 
      */
-    @InputImport(name="autoExportPolicy")
+    @Import(name="autoExportPolicy")
       private final @Nullable Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> autoExportPolicy;
 
     public Output<DataRepositoryAssociationS3AutoExportPolicyGetArgs> getAutoExportPolicy() {
@@ -30,7 +30,7 @@ public final class DataRepositoryAssociationS3GetArgs extends io.pulumi.resource
      * Specifies the type of updated objects that will be automatically imported from the linked S3 bucket to your file system. See the `events` configuration block.
      * 
      */
-    @InputImport(name="autoImportPolicy")
+    @Import(name="autoImportPolicy")
       private final @Nullable Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> autoImportPolicy;
 
     public Output<DataRepositoryAssociationS3AutoImportPolicyGetArgs> getAutoImportPolicy() {

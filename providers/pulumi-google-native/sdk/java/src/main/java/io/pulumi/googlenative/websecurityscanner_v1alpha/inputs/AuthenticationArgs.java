@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.GoogleAccountArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication using a custom account.
      * 
      */
-    @InputImport(name="customAccount")
+    @Import(name="customAccount")
       private final @Nullable Output<CustomAccountArgs> customAccount;
 
     public Output<CustomAccountArgs> getCustomAccount() {
@@ -34,7 +34,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication using a Google account.
      * 
      */
-    @InputImport(name="googleAccount")
+    @Import(name="googleAccount")
       private final @Nullable Output<GoogleAccountArgs> googleAccount;
 
     public Output<GoogleAccountArgs> getGoogleAccount() {

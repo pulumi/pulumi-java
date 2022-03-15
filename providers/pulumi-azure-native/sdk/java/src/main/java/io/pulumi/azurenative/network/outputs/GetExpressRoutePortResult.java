@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteLinkResponse;
 import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExpressRoutePortResult {
     /**
      * Date of the physical port allocation to be used in Letter of Authorization.
@@ -109,26 +109,26 @@ public final class GetExpressRoutePortResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExpressRoutePortResult(
-        @OutputCustomType.Parameter("allocationDate") String allocationDate,
-        @OutputCustomType.Parameter("bandwidthInGbps") @Nullable Integer bandwidthInGbps,
-        @OutputCustomType.Parameter("circuits") List<SubResourceResponse> circuits,
-        @OutputCustomType.Parameter("encapsulation") @Nullable String encapsulation,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("etherType") String etherType,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("links") @Nullable List<ExpressRouteLinkResponse> links,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mtu") String mtu,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
-        @OutputCustomType.Parameter("provisionedBandwidthInGbps") Double provisionedBandwidthInGbps,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allocationDate") String allocationDate,
+        @CustomType.Parameter("bandwidthInGbps") @Nullable Integer bandwidthInGbps,
+        @CustomType.Parameter("circuits") List<SubResourceResponse> circuits,
+        @CustomType.Parameter("encapsulation") @Nullable String encapsulation,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("etherType") String etherType,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("links") @Nullable List<ExpressRouteLinkResponse> links,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mtu") String mtu,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @CustomType.Parameter("provisionedBandwidthInGbps") Double provisionedBandwidthInGbps,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.allocationDate = allocationDate;
         this.bandwidthInGbps = bandwidthInGbps;
         this.circuits = circuits;

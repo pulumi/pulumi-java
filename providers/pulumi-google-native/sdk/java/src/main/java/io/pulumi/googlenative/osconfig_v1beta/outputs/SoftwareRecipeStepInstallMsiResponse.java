@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepInstallMsiResponse {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
@@ -27,11 +27,11 @@ public final class SoftwareRecipeStepInstallMsiResponse {
      */
     private final List<String> flags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeStepInstallMsiResponse(
-        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("flags") List<String> flags) {
+        @CustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("flags") List<String> flags) {
         this.allowedExitCodes = allowedExitCodes;
         this.artifactId = artifactId;
         this.flags = flags;

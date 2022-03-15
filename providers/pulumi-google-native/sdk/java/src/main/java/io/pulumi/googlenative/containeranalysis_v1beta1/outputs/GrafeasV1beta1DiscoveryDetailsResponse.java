@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DiscoveredResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1DiscoveryDetailsResponse {
     /**
      * Analysis status for the discovered resource.
@@ -15,8 +15,8 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
      */
     private final DiscoveredResponse discovered;
 
-    @OutputCustomType.Constructor
-    private GrafeasV1beta1DiscoveryDetailsResponse(@OutputCustomType.Parameter("discovered") DiscoveredResponse discovered) {
+    @CustomType.Constructor
+    private GrafeasV1beta1DiscoveryDetailsResponse(@CustomType.Parameter("discovered") DiscoveredResponse discovered) {
         this.discovered = discovered;
     }
 

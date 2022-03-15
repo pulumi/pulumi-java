@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
     private final String kind;
     /**
@@ -23,12 +23,12 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
      */
     private final List<String> signatureRrdatas;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("rrdatas") List<String> rrdatas,
-        @OutputCustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("rrdatas") List<String> rrdatas,
+        @CustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas) {
         this.kind = kind;
         this.location = location;
         this.rrdatas = rrdatas;

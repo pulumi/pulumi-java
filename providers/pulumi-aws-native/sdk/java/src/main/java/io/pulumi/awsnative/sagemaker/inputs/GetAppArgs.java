@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.AppType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the app.
      * 
      */
-    @InputImport(name="appName", required=true)
+    @Import(name="appName", required=true)
       private final String appName;
 
     public String getAppName() {
@@ -28,7 +28,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
      * The type of app.
      * 
      */
-    @InputImport(name="appType", required=true)
+    @Import(name="appType", required=true)
       private final AppType appType;
 
     public AppType getAppType() {
@@ -39,7 +39,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
      * The domain ID.
      * 
      */
-    @InputImport(name="domainId", required=true)
+    @Import(name="domainId", required=true)
       private final String domainId;
 
     public String getDomainId() {
@@ -50,7 +50,7 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
      * The user profile name.
      * 
      */
-    @InputImport(name="userProfileName", required=true)
+    @Import(name="userProfileName", required=true)
       private final String userProfileName;
 
     public String getUserProfileName() {

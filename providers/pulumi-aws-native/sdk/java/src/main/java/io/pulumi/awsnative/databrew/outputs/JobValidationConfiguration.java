@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.enums.JobValidationMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobValidationConfiguration {
     /**
      * Arn of the Ruleset
@@ -19,10 +19,10 @@ public final class JobValidationConfiguration {
     private final String rulesetArn;
     private final @Nullable JobValidationMode validationMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobValidationConfiguration(
-        @OutputCustomType.Parameter("rulesetArn") String rulesetArn,
-        @OutputCustomType.Parameter("validationMode") @Nullable JobValidationMode validationMode) {
+        @CustomType.Parameter("rulesetArn") String rulesetArn,
+        @CustomType.Parameter("validationMode") @Nullable JobValidationMode validationMode) {
         this.rulesetArn = rulesetArn;
         this.validationMode = validationMode;
     }

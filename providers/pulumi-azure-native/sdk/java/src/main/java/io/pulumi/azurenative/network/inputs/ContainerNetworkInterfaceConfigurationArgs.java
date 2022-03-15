@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.IPConfigurationProfileArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * A list of container network interfaces created from this container network interface configuration.
      * 
      */
-    @InputImport(name="containerNetworkInterfaces")
+    @Import(name="containerNetworkInterfaces")
       private final @Nullable Output<List<SubResourceArgs>> containerNetworkInterfaces;
 
     public Output<List<SubResourceArgs>> getContainerNetworkInterfaces() {
@@ -36,7 +36,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -47,7 +47,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * A list of ip configurations of the container network interface configuration.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable Output<List<IPConfigurationProfileArgs>> ipConfigurations;
 
     public Output<List<IPConfigurationProfileArgs>> getIpConfigurations() {
@@ -58,7 +58,7 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
      * The name of the resource. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

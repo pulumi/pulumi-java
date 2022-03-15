@@ -9,7 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.MetricStreamState;
 import io.pulumi.aws.cloudwatch.outputs.MetricStreamExcludeFilter;
 import io.pulumi.aws.cloudwatch.outputs.MetricStreamIncludeFilter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * ARN of the metric stream.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the metric stream was created.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -64,7 +64,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
      * 
      */
-    @OutputExport(name="excludeFilters", type=List.class, parameters={MetricStreamExcludeFilter.class})
+    @Export(name="excludeFilters", type=List.class, parameters={MetricStreamExcludeFilter.class})
     private Output</* @Nullable */ List<MetricStreamExcludeFilter>> excludeFilters;
 
     /**
@@ -78,7 +78,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * ARN of the Amazon Kinesis Firehose delivery stream to use for this metric stream.
      * 
      */
-    @OutputExport(name="firehoseArn", type=String.class, parameters={})
+    @Export(name="firehoseArn", type=String.class, parameters={})
     private Output<String> firehoseArn;
 
     /**
@@ -92,7 +92,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
      * 
      */
-    @OutputExport(name="includeFilters", type=List.class, parameters={MetricStreamIncludeFilter.class})
+    @Export(name="includeFilters", type=List.class, parameters={MetricStreamIncludeFilter.class})
     private Output</* @Nullable */ List<MetricStreamIncludeFilter>> includeFilters;
 
     /**
@@ -106,7 +106,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the metric stream was last updated.
      * 
      */
-    @OutputExport(name="lastUpdateDate", type=String.class, parameters={})
+    @Export(name="lastUpdateDate", type=String.class, parameters={})
     private Output<String> lastUpdateDate;
 
     /**
@@ -116,7 +116,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
     public Output<String> getLastUpdateDate() {
         return this.lastUpdateDate;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
@@ -126,7 +126,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -140,7 +140,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Output format for the stream. Possible values are `json` and `opentelemetry0.7`. For more information about output formats, see [Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html).
      * 
      */
-    @OutputExport(name="outputFormat", type=String.class, parameters={})
+    @Export(name="outputFormat", type=String.class, parameters={})
     private Output<String> outputFormat;
 
     /**
@@ -154,7 +154,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * ARN of the IAM role that this metric stream will use to access Amazon Kinesis Firehose resources. For more information about role permissions, see [Trust between CloudWatch and Kinesis Data Firehose](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html).
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -168,7 +168,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * State of the metric stream. Possible values are `running` and `stopped`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -182,7 +182,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -196,7 +196,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -6,12 +6,12 @@ package io.pulumi.aws.cloudwatch.outputs;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersInvocationHttpParametersBody;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersInvocationHttpParametersHeader;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersInvocationHttpParametersQueryString;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventConnectionAuthParametersInvocationHttpParameters {
     /**
      * Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
@@ -29,11 +29,11 @@ public final class EventConnectionAuthParametersInvocationHttpParameters {
      */
     private final @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventConnectionAuthParametersInvocationHttpParameters(
-        @OutputCustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies,
-        @OutputCustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers,
-        @OutputCustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
+        @CustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies,
+        @CustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers,
+        @CustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
         this.bodies = bodies;
         this.headers = headers;
         this.queryStrings = queryStrings;

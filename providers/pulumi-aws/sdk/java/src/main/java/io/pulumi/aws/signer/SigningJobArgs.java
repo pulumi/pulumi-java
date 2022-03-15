@@ -6,7 +6,7 @@ package io.pulumi.aws.signer;
 import io.pulumi.aws.signer.inputs.SigningJobDestinationArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * The S3 bucket in which to save your signed object. See Destination below for details.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<SigningJobDestinationArgs> destination;
 
     public Output<SigningJobDestinationArgs> getDestination() {
@@ -32,7 +32,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
      * 
      */
-    @InputImport(name="ignoreSigningJobFailure")
+    @Import(name="ignoreSigningJobFailure")
       private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
     public Output<Boolean> getIgnoreSigningJobFailure() {
@@ -43,7 +43,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the profile to initiate the signing operation.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -54,7 +54,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
      * The S3 bucket that contains the object to sign. See Source below for details.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<SigningJobSourceArgs> source;
 
     public Output<SigningJobSourceArgs> getSource() {

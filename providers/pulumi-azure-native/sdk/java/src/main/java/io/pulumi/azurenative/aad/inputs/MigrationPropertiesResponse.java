@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.azurenative.aad.inputs.MigrationProgressResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
      * Migration Progress
      * 
      */
-    @InputImport(name="migrationProgress", required=true)
+    @Import(name="migrationProgress", required=true)
       private final MigrationProgressResponse migrationProgress;
 
     public MigrationProgressResponse getMigrationProgress() {
@@ -32,7 +32,7 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
      * Old Subnet Id
      * 
      */
-    @InputImport(name="oldSubnetId", required=true)
+    @Import(name="oldSubnetId", required=true)
       private final String oldSubnetId;
 
     public String getOldSubnetId() {
@@ -43,7 +43,7 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
      * Old Vnet Site Id
      * 
      */
-    @InputImport(name="oldVnetSiteId", required=true)
+    @Import(name="oldVnetSiteId", required=true)
       private final String oldVnetSiteId;
 
     public String getOldVnetSiteId() {

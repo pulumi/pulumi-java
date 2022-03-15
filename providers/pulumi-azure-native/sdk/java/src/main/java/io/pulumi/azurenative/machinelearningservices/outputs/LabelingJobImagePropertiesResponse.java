@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelingJobImagePropertiesResponse {
     /**
      * Annotation type of image labeling tasks.
@@ -22,10 +22,10 @@ public final class LabelingJobImagePropertiesResponse {
      */
     private final String mediaType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelingJobImagePropertiesResponse(
-        @OutputCustomType.Parameter("annotationType") @Nullable String annotationType,
-        @OutputCustomType.Parameter("mediaType") String mediaType) {
+        @CustomType.Parameter("annotationType") @Nullable String annotationType,
+        @CustomType.Parameter("mediaType") String mediaType) {
         this.annotationType = annotationType;
         this.mediaType = mediaType;
     }

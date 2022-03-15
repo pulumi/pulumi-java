@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedZoneResult {
     /**
      * A textual description field.
@@ -43,15 +43,15 @@ public final class GetManagedZoneResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedZoneResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("visibility") String visibility) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameServers") List<String> nameServers,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("visibility") String visibility) {
         this.description = description;
         this.dnsName = dnsName;
         this.id = id;

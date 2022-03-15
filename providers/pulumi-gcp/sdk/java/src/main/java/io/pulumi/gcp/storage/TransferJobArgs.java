@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * Unique description to identify the Transfer Job.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -43,7 +43,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<TransferJobScheduleArgs> schedule;
 
     public Output<TransferJobScheduleArgs> getSchedule() {
@@ -54,7 +54,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -65,7 +65,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * Transfer specification. Structure documented below.
      * 
      */
-    @InputImport(name="transferSpec", required=true)
+    @Import(name="transferSpec", required=true)
       private final Output<TransferJobTransferSpecArgs> transferSpec;
 
     public Output<TransferJobTransferSpecArgs> getTransferSpec() {

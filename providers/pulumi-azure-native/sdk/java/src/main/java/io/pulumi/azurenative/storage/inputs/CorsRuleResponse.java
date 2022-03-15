@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
      * 
      */
-    @InputImport(name="allowedHeaders", required=true)
+    @Import(name="allowedHeaders", required=true)
       private final List<String> allowedHeaders;
 
     public List<String> getAllowedHeaders() {
@@ -33,7 +33,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the origin.
      * 
      */
-    @InputImport(name="allowedMethods", required=true)
+    @Import(name="allowedMethods", required=true)
       private final List<String> allowedMethods;
 
     public List<String> getAllowedMethods() {
@@ -44,7 +44,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*" to allow all domains
      * 
      */
-    @InputImport(name="allowedOrigins", required=true)
+    @Import(name="allowedOrigins", required=true)
       private final List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
@@ -55,7 +55,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Required if CorsRule element is present. A list of response headers to expose to CORS clients.
      * 
      */
-    @InputImport(name="exposedHeaders", required=true)
+    @Import(name="exposedHeaders", required=true)
       private final List<String> exposedHeaders;
 
     public List<String> getExposedHeaders() {
@@ -66,7 +66,7 @@ public final class CorsRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Required if CorsRule element is present. The number of seconds that the client/browser should cache a preflight response.
      * 
      */
-    @InputImport(name="maxAgeInSeconds", required=true)
+    @Import(name="maxAgeInSeconds", required=true)
       private final Integer maxAgeInSeconds;
 
     public Integer getMaxAgeInSeconds() {

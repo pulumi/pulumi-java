@@ -5,13 +5,13 @@ package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelAssetPropertyTimestamp;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelAssetPropertyVariant;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelAssetPropertyValue {
     /**
      * The quality of the asset property value. The value must be `GOOD`, `BAD`, or `UNCERTAIN`. You can also specify an expression.
@@ -21,11 +21,11 @@ public final class DetectorModelAssetPropertyValue {
     private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
     private final DetectorModelAssetPropertyVariant value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelAssetPropertyValue(
-        @OutputCustomType.Parameter("quality") @Nullable String quality,
-        @OutputCustomType.Parameter("timestamp") @Nullable DetectorModelAssetPropertyTimestamp timestamp,
-        @OutputCustomType.Parameter("value") DetectorModelAssetPropertyVariant value) {
+        @CustomType.Parameter("quality") @Nullable String quality,
+        @CustomType.Parameter("timestamp") @Nullable DetectorModelAssetPropertyTimestamp timestamp,
+        @CustomType.Parameter("value") DetectorModelAssetPropertyVariant value) {
         this.quality = quality;
         this.timestamp = timestamp;
         this.value = value;

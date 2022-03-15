@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="retry")
+    @Import(name="retry")
       private final @Nullable Object retry;
 
     public Optional<Object> getRetry() {
@@ -35,7 +35,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * Interval between each retry attempt (in seconds). The default is 30 sec.
      * 
      */
-    @InputImport(name="retryIntervalInSeconds")
+    @Import(name="retryIntervalInSeconds")
       private final @Nullable Integer retryIntervalInSeconds;
 
     public Optional<Integer> getRetryIntervalInSeconds() {
@@ -46,7 +46,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * When set to true, Input from activity is considered as secure and will not be logged to monitoring.
      * 
      */
-    @InputImport(name="secureInput")
+    @Import(name="secureInput")
       private final @Nullable Boolean secureInput;
 
     public Optional<Boolean> getSecureInput() {
@@ -57,7 +57,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * When set to true, Output from activity is considered as secure and will not be logged to monitoring.
      * 
      */
-    @InputImport(name="secureOutput")
+    @Import(name="secureOutput")
       private final @Nullable Boolean secureOutput;
 
     public Optional<Boolean> getSecureOutput() {
@@ -68,7 +68,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the timeout for the activity to run. The default timeout is 7 days. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Object timeout;
 
     public Optional<Object> getTimeout() {

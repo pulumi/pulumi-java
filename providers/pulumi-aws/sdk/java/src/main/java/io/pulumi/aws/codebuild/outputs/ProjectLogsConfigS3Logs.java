@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectLogsConfigS3Logs {
     /**
      * Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects. Valid values are `NONE`, `READ_ONLY`, and `FULL`. your CodeBuild service role must have the `s3:PutBucketAcl` permission. This permission allows CodeBuild to modify the access control list for the bucket.
@@ -33,12 +33,12 @@ public final class ProjectLogsConfigS3Logs {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectLogsConfigS3Logs(
-        @OutputCustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
-        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
+        @CustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;
         this.location = location;

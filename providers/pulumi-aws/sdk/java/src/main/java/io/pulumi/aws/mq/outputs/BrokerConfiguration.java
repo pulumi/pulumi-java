@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BrokerConfiguration {
     /**
      * The Configuration ID.
@@ -23,10 +23,10 @@ public final class BrokerConfiguration {
      */
     private final @Nullable Integer revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BrokerConfiguration(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("revision") @Nullable Integer revision) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("revision") @Nullable Integer revision) {
         this.id = id;
         this.revision = revision;
     }

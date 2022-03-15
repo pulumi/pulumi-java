@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryInterpretationConfigResponse {
     /**
      * Set this flag to disable supplemental results retrieval, setting a flag here will not retrieve supplemental results for queries associated with a given search application. If this flag is set to True, it will take precedence over the option set at Query level. For the default value of False, query level flag will set the correct interpretation for supplemental results.
@@ -20,10 +20,10 @@ public final class QueryInterpretationConfigResponse {
      */
     private final Boolean forceVerbatimMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryInterpretationConfigResponse(
-        @OutputCustomType.Parameter("forceDisableSupplementalResults") Boolean forceDisableSupplementalResults,
-        @OutputCustomType.Parameter("forceVerbatimMode") Boolean forceVerbatimMode) {
+        @CustomType.Parameter("forceDisableSupplementalResults") Boolean forceDisableSupplementalResults,
+        @CustomType.Parameter("forceVerbatimMode") Boolean forceVerbatimMode) {
         this.forceDisableSupplementalResults = forceDisableSupplementalResults;
         this.forceVerbatimMode = forceVerbatimMode;
     }

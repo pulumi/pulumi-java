@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
      * Parent database of the user
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
@@ -33,7 +33,7 @@ public final class OrphanedUserInfoResponse extends io.pulumi.resources.InvokeAr
      * Name of the orphaned user
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

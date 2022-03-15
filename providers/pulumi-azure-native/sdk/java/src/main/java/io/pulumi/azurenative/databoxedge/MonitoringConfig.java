@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.MonitoringConfigArgs;
 import io.pulumi.azurenative.databoxedge.outputs.MetricConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * The metrics configuration details
      * 
      */
-    @OutputExport(name="metricConfigurations", type=List.class, parameters={MetricConfigurationResponse.class})
+    @Export(name="metricConfigurations", type=List.class, parameters={MetricConfigurationResponse.class})
     private Output<List<MetricConfigurationResponse>> metricConfigurations;
 
     /**
@@ -49,7 +49,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

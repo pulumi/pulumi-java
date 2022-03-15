@@ -6,7 +6,7 @@ package io.pulumi.awsnative.opsworkscm;
 import io.pulumi.awsnative.opsworkscm.inputs.ServerEngineAttributeArgs;
 import io.pulumi.awsnative.opsworkscm.inputs.ServerTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,147 +19,147 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServerArgs Empty = new ServerArgs();
 
-    @InputImport(name="associatePublicIpAddress")
+    @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
     public Output<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
     }
 
-    @InputImport(name="backupId")
+    @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
     public Output<String> getBackupId() {
         return this.backupId == null ? Output.empty() : this.backupId;
     }
 
-    @InputImport(name="backupRetentionCount")
+    @Import(name="backupRetentionCount")
       private final @Nullable Output<Integer> backupRetentionCount;
 
     public Output<Integer> getBackupRetentionCount() {
         return this.backupRetentionCount == null ? Output.empty() : this.backupRetentionCount;
     }
 
-    @InputImport(name="customCertificate")
+    @Import(name="customCertificate")
       private final @Nullable Output<String> customCertificate;
 
     public Output<String> getCustomCertificate() {
         return this.customCertificate == null ? Output.empty() : this.customCertificate;
     }
 
-    @InputImport(name="customDomain")
+    @Import(name="customDomain")
       private final @Nullable Output<String> customDomain;
 
     public Output<String> getCustomDomain() {
         return this.customDomain == null ? Output.empty() : this.customDomain;
     }
 
-    @InputImport(name="customPrivateKey")
+    @Import(name="customPrivateKey")
       private final @Nullable Output<String> customPrivateKey;
 
     public Output<String> getCustomPrivateKey() {
         return this.customPrivateKey == null ? Output.empty() : this.customPrivateKey;
     }
 
-    @InputImport(name="disableAutomatedBackup")
+    @Import(name="disableAutomatedBackup")
       private final @Nullable Output<Boolean> disableAutomatedBackup;
 
     public Output<Boolean> getDisableAutomatedBackup() {
         return this.disableAutomatedBackup == null ? Output.empty() : this.disableAutomatedBackup;
     }
 
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
         return this.engine == null ? Output.empty() : this.engine;
     }
 
-    @InputImport(name="engineAttributes")
+    @Import(name="engineAttributes")
       private final @Nullable Output<List<ServerEngineAttributeArgs>> engineAttributes;
 
     public Output<List<ServerEngineAttributeArgs>> getEngineAttributes() {
         return this.engineAttributes == null ? Output.empty() : this.engineAttributes;
     }
 
-    @InputImport(name="engineModel")
+    @Import(name="engineModel")
       private final @Nullable Output<String> engineModel;
 
     public Output<String> getEngineModel() {
         return this.engineModel == null ? Output.empty() : this.engineModel;
     }
 
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
         return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
-    @InputImport(name="instanceProfileArn", required=true)
+    @Import(name="instanceProfileArn", required=true)
       private final Output<String> instanceProfileArn;
 
     public Output<String> getInstanceProfileArn() {
         return this.instanceProfileArn;
     }
 
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
-    @InputImport(name="keyPair")
+    @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
     public Output<String> getKeyPair() {
         return this.keyPair == null ? Output.empty() : this.keyPair;
     }
 
-    @InputImport(name="preferredBackupWindow")
+    @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
     public Output<String> getPreferredBackupWindow() {
         return this.preferredBackupWindow == null ? Output.empty() : this.preferredBackupWindow;
     }
 
-    @InputImport(name="preferredMaintenanceWindow")
+    @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
     }
 
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
-    @InputImport(name="serverName")
+    @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
         return this.serverName == null ? Output.empty() : this.serverName;
     }
 
-    @InputImport(name="serviceRoleArn", required=true)
+    @Import(name="serviceRoleArn", required=true)
       private final Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
         return this.serviceRoleArn;
     }
 
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Output.empty() : this.subnetIds;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ServerTagArgs>> tags;
 
     public Output<List<ServerTagArgs>> getTags() {

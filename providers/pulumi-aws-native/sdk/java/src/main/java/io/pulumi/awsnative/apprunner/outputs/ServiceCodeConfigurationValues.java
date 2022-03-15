@@ -5,14 +5,14 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationValuesRuntime;
 import io.pulumi.awsnative.apprunner.outputs.ServiceKeyValuePair;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCodeConfigurationValues {
     /**
      * Build Command
@@ -36,13 +36,13 @@ public final class ServiceCodeConfigurationValues {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCodeConfigurationValues(
-        @OutputCustomType.Parameter("buildCommand") @Nullable String buildCommand,
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("runtime") ServiceCodeConfigurationValuesRuntime runtime,
-        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
+        @CustomType.Parameter("buildCommand") @Nullable String buildCommand,
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("runtime") ServiceCodeConfigurationValuesRuntime runtime,
+        @CustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
+        @CustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = runtime;

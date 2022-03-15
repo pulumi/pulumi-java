@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs;
 
 import io.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Configuration block for the provider for the ECS auto scaling group. Detailed below.
      * 
      */
-    @InputImport(name="autoScalingGroupProvider", required=true)
+    @Import(name="autoScalingGroupProvider", required=true)
       private final Output<CapacityProviderAutoScalingGroupProviderArgs> autoScalingGroupProvider;
 
     public Output<CapacityProviderAutoScalingGroupProviderArgs> getAutoScalingGroupProvider() {
@@ -31,7 +31,7 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Name of the capacity provider.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class CapacityProviderArgs extends io.pulumi.resources.ResourceArgs
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

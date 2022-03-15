@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceConsistentHashHttpCooky;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceConsistentHash {
     private final List<GetBackendServiceConsistentHashHttpCooky> httpCookies;
     private final String httpHeaderName;
     private final Integer minimumRingSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceConsistentHash(
-        @OutputCustomType.Parameter("httpCookies") List<GetBackendServiceConsistentHashHttpCooky> httpCookies,
-        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
-        @OutputCustomType.Parameter("minimumRingSize") Integer minimumRingSize) {
+        @CustomType.Parameter("httpCookies") List<GetBackendServiceConsistentHashHttpCooky> httpCookies,
+        @CustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @CustomType.Parameter("minimumRingSize") Integer minimumRingSize) {
         this.httpCookies = httpCookies;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;

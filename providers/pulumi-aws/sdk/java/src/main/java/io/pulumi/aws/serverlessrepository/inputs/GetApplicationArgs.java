@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.serverlessrepository.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the application.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final String applicationId;
 
     public String getApplicationId() {
@@ -29,7 +29,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * The requested version of the application. By default, retrieves the latest version.
      * 
      */
-    @InputImport(name="semanticVersion")
+    @Import(name="semanticVersion")
       private final @Nullable String semanticVersion;
 
     public Optional<String> getSemanticVersion() {

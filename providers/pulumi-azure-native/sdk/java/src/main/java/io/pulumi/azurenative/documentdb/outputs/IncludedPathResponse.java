@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.IndexesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IncludedPathResponse {
     /**
      * List of indexes for this path
@@ -24,10 +24,10 @@ public final class IncludedPathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IncludedPathResponse(
-        @OutputCustomType.Parameter("indexes") @Nullable List<IndexesResponse> indexes,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("indexes") @Nullable List<IndexesResponse> indexes,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.indexes = indexes;
         this.path = path;
     }

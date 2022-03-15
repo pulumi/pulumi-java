@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
@@ -33,7 +33,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="defaultConsentTtl")
+    @Import(name="defaultConsentTtl")
       private final @Nullable Output<String> defaultConsentTtl;
 
     public Output<String> getDefaultConsentTtl() {
@@ -44,7 +44,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
      * 
      */
-    @InputImport(name="enableConsentCreateOnUpdate")
+    @Import(name="enableConsentCreateOnUpdate")
       private final @Nullable Output<Boolean> enableConsentCreateOnUpdate;
 
     public Output<Boolean> getEnableConsentCreateOnUpdate() {
@@ -62,7 +62,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -74,7 +74,7 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
      * "consent1"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

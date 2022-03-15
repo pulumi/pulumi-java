@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NfsAccessRuleResponse {
     /**
      * Access allowed by this rule.
@@ -53,16 +53,16 @@ public final class NfsAccessRuleResponse {
      */
     private final @Nullable Boolean suid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NfsAccessRuleResponse(
-        @OutputCustomType.Parameter("access") String access,
-        @OutputCustomType.Parameter("anonymousGID") @Nullable String anonymousGID,
-        @OutputCustomType.Parameter("anonymousUID") @Nullable String anonymousUID,
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("rootSquash") @Nullable Boolean rootSquash,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("submountAccess") @Nullable Boolean submountAccess,
-        @OutputCustomType.Parameter("suid") @Nullable Boolean suid) {
+        @CustomType.Parameter("access") String access,
+        @CustomType.Parameter("anonymousGID") @Nullable String anonymousGID,
+        @CustomType.Parameter("anonymousUID") @Nullable String anonymousUID,
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("rootSquash") @Nullable Boolean rootSquash,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("submountAccess") @Nullable Boolean submountAccess,
+        @CustomType.Parameter("suid") @Nullable Boolean suid) {
         this.access = access;
         this.anonymousGID = anonymousGID;
         this.anonymousUID = anonymousUID;

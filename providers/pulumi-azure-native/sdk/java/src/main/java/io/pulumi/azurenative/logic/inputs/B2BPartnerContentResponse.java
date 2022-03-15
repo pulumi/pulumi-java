@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class B2BPartnerContentResponse extends io.pulumi.resources.InvokeA
      * The list of partner business identities.
      * 
      */
-    @InputImport(name="businessIdentities")
+    @Import(name="businessIdentities")
       private final @Nullable List<BusinessIdentityResponse> businessIdentities;
 
     public List<BusinessIdentityResponse> getBusinessIdentities() {

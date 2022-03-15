@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointRootDirectoryCreationInfo {
     /**
      * POSIX owner group ID
@@ -26,11 +26,11 @@ public final class GetAccessPointRootDirectoryCreationInfo {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointRootDirectoryCreationInfo(
-        @OutputCustomType.Parameter("ownerGid") Integer ownerGid,
-        @OutputCustomType.Parameter("ownerUid") Integer ownerUid,
-        @OutputCustomType.Parameter("permissions") String permissions) {
+        @CustomType.Parameter("ownerGid") Integer ownerGid,
+        @CustomType.Parameter("ownerUid") Integer ownerUid,
+        @CustomType.Parameter("permissions") String permissions) {
         this.ownerGid = ownerGid;
         this.ownerUid = ownerUid;
         this.permissions = permissions;

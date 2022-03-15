@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectMacsecPreSharedKeyResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectMacsecResponse {
     /**
      * If set to true, the Interconnect will be configured with a should-secure MACsec security policy, that allows the Google router to fallback to cleartext traffic if the MKA session cannot be established. By default, the Interconnect will be configured with a must-secure security policy that drops all traffic if the MKA session cannot be established with your router.
@@ -22,10 +22,10 @@ public final class InterconnectMacsecResponse {
      */
     private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InterconnectMacsecResponse(
-        @OutputCustomType.Parameter("failOpen") Boolean failOpen,
-        @OutputCustomType.Parameter("preSharedKeys") List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
+        @CustomType.Parameter("failOpen") Boolean failOpen,
+        @CustomType.Parameter("preSharedKeys") List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
         this.failOpen = failOpen;
         this.preSharedKeys = preSharedKeys;
     }

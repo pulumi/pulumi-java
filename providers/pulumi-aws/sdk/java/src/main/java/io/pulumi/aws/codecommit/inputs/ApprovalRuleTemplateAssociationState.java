@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
      * The name for the approval rule template.
      * 
      */
-    @InputImport(name="approvalRuleTemplateName")
+    @Import(name="approvalRuleTemplateName")
       private final @Nullable Output<String> approvalRuleTemplateName;
 
     public Output<String> getApprovalRuleTemplateName() {
@@ -29,7 +29,7 @@ public final class ApprovalRuleTemplateAssociationState extends io.pulumi.resour
      * The name of the repository that you want to associate with the template.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {

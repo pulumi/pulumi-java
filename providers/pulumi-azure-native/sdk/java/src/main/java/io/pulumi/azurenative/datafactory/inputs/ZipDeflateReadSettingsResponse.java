@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ZipDeflateReadSettingsResponse extends io.pulumi.resources.In
      * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="preserveZipFileNameAsFolder")
+    @Import(name="preserveZipFileNameAsFolder")
       private final @Nullable Object preserveZipFileNameAsFolder;
 
     public Optional<Object> getPreserveZipFileNameAsFolder() {
@@ -35,7 +35,7 @@ public final class ZipDeflateReadSettingsResponse extends io.pulumi.resources.In
      * Expected value is 'ZipDeflateReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

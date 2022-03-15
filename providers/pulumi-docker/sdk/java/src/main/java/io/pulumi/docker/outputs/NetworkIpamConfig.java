@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkIpamConfig {
     private final @Nullable Map<String,Object> auxAddress;
     private final @Nullable String gateway;
     private final @Nullable String ipRange;
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkIpamConfig(
-        @OutputCustomType.Parameter("auxAddress") @Nullable Map<String,Object> auxAddress,
-        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
-        @OutputCustomType.Parameter("ipRange") @Nullable String ipRange,
-        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
+        @CustomType.Parameter("auxAddress") @Nullable Map<String,Object> auxAddress,
+        @CustomType.Parameter("gateway") @Nullable String gateway,
+        @CustomType.Parameter("ipRange") @Nullable String ipRange,
+        @CustomType.Parameter("subnet") @Nullable String subnet) {
         this.auxAddress = auxAddress;
         this.gateway = gateway;
         this.ipRange = ipRange;

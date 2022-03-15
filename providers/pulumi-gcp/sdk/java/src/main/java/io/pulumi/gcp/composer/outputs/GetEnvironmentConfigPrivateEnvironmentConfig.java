@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigPrivateEnvironmentConfig {
     private final String cloudComposerConnectionSubnetwork;
     private final String cloudComposerNetworkIpv4CidrBlock;
@@ -18,15 +18,15 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig {
     private final String masterIpv4CidrBlock;
     private final String webServerIpv4CidrBlock;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigPrivateEnvironmentConfig(
-        @OutputCustomType.Parameter("cloudComposerConnectionSubnetwork") String cloudComposerConnectionSubnetwork,
-        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
-        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
-        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
-        @OutputCustomType.Parameter("enablePrivatelyUsedPublicIps") Boolean enablePrivatelyUsedPublicIps,
-        @OutputCustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
-        @OutputCustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock) {
+        @CustomType.Parameter("cloudComposerConnectionSubnetwork") String cloudComposerConnectionSubnetwork,
+        @CustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
+        @CustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
+        @CustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @CustomType.Parameter("enablePrivatelyUsedPublicIps") Boolean enablePrivatelyUsedPublicIps,
+        @CustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
+        @CustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock) {
         this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;

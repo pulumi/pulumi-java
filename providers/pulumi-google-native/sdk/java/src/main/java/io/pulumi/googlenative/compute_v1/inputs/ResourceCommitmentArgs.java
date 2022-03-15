@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.ResourceCommitmentType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
      * 
      */
-    @InputImport(name="acceleratorType")
+    @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {
@@ -34,7 +34,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of 256 MB, with up to 6.5GB of memory per every vCPU.
      * 
      */
-    @InputImport(name="amount")
+    @Import(name="amount")
       private final @Nullable Output<String> amount;
 
     public Output<String> getAmount() {
@@ -45,7 +45,7 @@ public final class ResourceCommitmentArgs extends io.pulumi.resources.ResourceAr
      * Type of resource for which this commitment applies. Possible values are VCPU and MEMORY
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ResourceCommitmentType> type;
 
     public Output<ResourceCommitmentType> getType() {

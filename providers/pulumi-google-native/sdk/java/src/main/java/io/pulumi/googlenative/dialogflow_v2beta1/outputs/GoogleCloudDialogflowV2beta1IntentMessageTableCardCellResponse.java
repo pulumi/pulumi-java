@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse {
     /**
      * Text in this cell.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
      */
     private final String text;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(@OutputCustomType.Parameter("text") String text) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(@CustomType.Parameter("text") String text) {
         this.text = text;
     }
 

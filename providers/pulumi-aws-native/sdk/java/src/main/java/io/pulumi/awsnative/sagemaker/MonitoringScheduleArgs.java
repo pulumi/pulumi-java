@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringExecutionSummaryArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
 
     public static final MonitoringScheduleArgs Empty = new MonitoringScheduleArgs();
 
-    @InputImport(name="endpointName")
+    @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -30,7 +30,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * Contains the reason a monitoring job failed, if it failed.
      * 
      */
-    @InputImport(name="failureReason")
+    @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
     public Output<String> getFailureReason() {
@@ -41,21 +41,21 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * Describes metadata on the last execution to run, if there was one.
      * 
      */
-    @InputImport(name="lastMonitoringExecutionSummary")
+    @Import(name="lastMonitoringExecutionSummary")
       private final @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
     public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> getLastMonitoringExecutionSummary() {
         return this.lastMonitoringExecutionSummary == null ? Output.empty() : this.lastMonitoringExecutionSummary;
     }
 
-    @InputImport(name="monitoringScheduleConfig", required=true)
+    @Import(name="monitoringScheduleConfig", required=true)
       private final Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
 
     public Output<MonitoringScheduleConfigArgs> getMonitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
 
-    @InputImport(name="monitoringScheduleName")
+    @Import(name="monitoringScheduleName")
       private final @Nullable Output<String> monitoringScheduleName;
 
     public Output<String> getMonitoringScheduleName() {
@@ -66,7 +66,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * The status of a schedule job.
      * 
      */
-    @InputImport(name="monitoringScheduleStatus")
+    @Import(name="monitoringScheduleStatus")
       private final @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
 
     public Output<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
@@ -77,7 +77,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
     public Output<List<MonitoringScheduleTagArgs>> getTags() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeAccessConfigResponse {
     /**
      * The type of access mode this instance.
@@ -25,11 +25,11 @@ public final class RuntimeAccessConfigResponse {
      */
     private final String runtimeOwner;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeAccessConfigResponse(
-        @OutputCustomType.Parameter("accessType") String accessType,
-        @OutputCustomType.Parameter("proxyUri") String proxyUri,
-        @OutputCustomType.Parameter("runtimeOwner") String runtimeOwner) {
+        @CustomType.Parameter("accessType") String accessType,
+        @CustomType.Parameter("proxyUri") String proxyUri,
+        @CustomType.Parameter("runtimeOwner") String runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;

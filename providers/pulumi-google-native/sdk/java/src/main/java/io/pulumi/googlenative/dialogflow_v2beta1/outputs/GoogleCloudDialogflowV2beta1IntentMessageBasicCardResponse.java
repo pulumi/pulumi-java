@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse {
     /**
      * Optional. The collection of card buttons.
@@ -38,13 +38,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse(
-        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
-        @OutputCustomType.Parameter("formattedText") String formattedText,
-        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        @OutputCustomType.Parameter("subtitle") String subtitle,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
+        @CustomType.Parameter("formattedText") String formattedText,
+        @CustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @CustomType.Parameter("subtitle") String subtitle,
+        @CustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.formattedText = formattedText;
         this.image = image;

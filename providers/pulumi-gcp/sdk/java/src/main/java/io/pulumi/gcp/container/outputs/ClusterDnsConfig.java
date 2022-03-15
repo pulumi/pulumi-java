@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterDnsConfig {
     /**
      * Which in-cluster DNS provider should be used. `PROVIDER_UNSPECIFIED` (default) or `PLATFORM_DEFAULT` or `CLOUD_DNS`.
@@ -27,11 +27,11 @@ public final class ClusterDnsConfig {
      */
     private final @Nullable String clusterDnsScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterDnsConfig(
-        @OutputCustomType.Parameter("clusterDns") @Nullable String clusterDns,
-        @OutputCustomType.Parameter("clusterDnsDomain") @Nullable String clusterDnsDomain,
-        @OutputCustomType.Parameter("clusterDnsScope") @Nullable String clusterDnsScope) {
+        @CustomType.Parameter("clusterDns") @Nullable String clusterDns,
+        @CustomType.Parameter("clusterDnsDomain") @Nullable String clusterDnsDomain,
+        @CustomType.Parameter("clusterDnsScope") @Nullable String clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2BinaryAuthorizationResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ConditionResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionTemplateResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
@@ -158,36 +158,36 @@ public final class GetServiceResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("binaryAuthorization") GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization,
-        @OutputCustomType.Parameter("client") String client,
-        @OutputCustomType.Parameter("clientVersion") String clientVersion,
-        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunOpV2ConditionResponse> conditions,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("creator") String creator,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("generation") String generation,
-        @OutputCustomType.Parameter("ingress") String ingress,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastModifier") String lastModifier,
-        @OutputCustomType.Parameter("latestCreatedRevision") String latestCreatedRevision,
-        @OutputCustomType.Parameter("latestReadyRevision") String latestReadyRevision,
-        @OutputCustomType.Parameter("launchStage") String launchStage,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("observedGeneration") String observedGeneration,
-        @OutputCustomType.Parameter("reconciling") Boolean reconciling,
-        @OutputCustomType.Parameter("template") GoogleCloudRunOpV2RevisionTemplateResponse template,
-        @OutputCustomType.Parameter("terminalCondition") GoogleCloudRunOpV2ConditionResponse terminalCondition,
-        @OutputCustomType.Parameter("traffic") List<GoogleCloudRunOpV2TrafficTargetResponse> traffic,
-        @OutputCustomType.Parameter("trafficStatuses") List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses,
-        @OutputCustomType.Parameter("uid") String uid,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("binaryAuthorization") GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization,
+        @CustomType.Parameter("client") String client,
+        @CustomType.Parameter("clientVersion") String clientVersion,
+        @CustomType.Parameter("conditions") List<GoogleCloudRunOpV2ConditionResponse> conditions,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creator") String creator,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("generation") String generation,
+        @CustomType.Parameter("ingress") String ingress,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastModifier") String lastModifier,
+        @CustomType.Parameter("latestCreatedRevision") String latestCreatedRevision,
+        @CustomType.Parameter("latestReadyRevision") String latestReadyRevision,
+        @CustomType.Parameter("launchStage") String launchStage,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("observedGeneration") String observedGeneration,
+        @CustomType.Parameter("reconciling") Boolean reconciling,
+        @CustomType.Parameter("template") GoogleCloudRunOpV2RevisionTemplateResponse template,
+        @CustomType.Parameter("terminalCondition") GoogleCloudRunOpV2ConditionResponse terminalCondition,
+        @CustomType.Parameter("traffic") List<GoogleCloudRunOpV2TrafficTargetResponse> traffic,
+        @CustomType.Parameter("trafficStatuses") List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses,
+        @CustomType.Parameter("uid") String uid,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("uri") String uri) {
         this.annotations = annotations;
         this.binaryAuthorization = binaryAuthorization;
         this.client = client;

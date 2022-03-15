@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmwareVmDetailsResponse {
     /**
      * The VM Boot Option.
@@ -71,20 +71,20 @@ public final class VmwareVmDetailsResponse {
      */
     private final String vmId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmwareVmDetailsResponse(
-        @OutputCustomType.Parameter("bootOption") String bootOption,
-        @OutputCustomType.Parameter("committedStorageMb") String committedStorageMb,
-        @OutputCustomType.Parameter("cpuCount") Integer cpuCount,
-        @OutputCustomType.Parameter("datacenterDescription") String datacenterDescription,
-        @OutputCustomType.Parameter("datacenterId") String datacenterId,
-        @OutputCustomType.Parameter("diskCount") Integer diskCount,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("guestDescription") String guestDescription,
-        @OutputCustomType.Parameter("memoryMb") Integer memoryMb,
-        @OutputCustomType.Parameter("powerState") String powerState,
-        @OutputCustomType.Parameter("uuid") String uuid,
-        @OutputCustomType.Parameter("vmId") String vmId) {
+        @CustomType.Parameter("bootOption") String bootOption,
+        @CustomType.Parameter("committedStorageMb") String committedStorageMb,
+        @CustomType.Parameter("cpuCount") Integer cpuCount,
+        @CustomType.Parameter("datacenterDescription") String datacenterDescription,
+        @CustomType.Parameter("datacenterId") String datacenterId,
+        @CustomType.Parameter("diskCount") Integer diskCount,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("guestDescription") String guestDescription,
+        @CustomType.Parameter("memoryMb") Integer memoryMb,
+        @CustomType.Parameter("powerState") String powerState,
+        @CustomType.Parameter("uuid") String uuid,
+        @CustomType.Parameter("vmId") String vmId) {
         this.bootOption = bootOption;
         this.committedStorageMb = committedStorageMb;
         this.cpuCount = cpuCount;

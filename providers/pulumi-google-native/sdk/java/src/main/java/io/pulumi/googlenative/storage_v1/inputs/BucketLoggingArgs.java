@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * The destination bucket where the current bucket's logs should be placed.
      * 
      */
-    @InputImport(name="logBucket")
+    @Import(name="logBucket")
       private final @Nullable Output<String> logBucket;
 
     public Output<String> getLogBucket() {
@@ -33,7 +33,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * A prefix for log object names.
      * 
      */
-    @InputImport(name="logObjectPrefix")
+    @Import(name="logObjectPrefix")
       private final @Nullable Output<String> logObjectPrefix;
 
     public Output<String> getLogObjectPrefix() {

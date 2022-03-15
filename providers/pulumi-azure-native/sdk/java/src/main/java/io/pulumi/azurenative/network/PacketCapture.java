@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.PacketCaptureFilterResponse;
 import io.pulumi.azurenative.network.outputs.PacketCaptureStorageLocationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * Number of bytes captured per packet, the remaining bytes are truncated.
      * 
      */
-    @OutputExport(name="bytesToCapturePerPacket", type=Double.class, parameters={})
+    @Export(name="bytesToCapturePerPacket", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> bytesToCapturePerPacket;
 
     /**
@@ -52,7 +52,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -66,7 +66,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * A list of packet capture filters.
      * 
      */
-    @OutputExport(name="filters", type=List.class, parameters={PacketCaptureFilterResponse.class})
+    @Export(name="filters", type=List.class, parameters={PacketCaptureFilterResponse.class})
     private Output</* @Nullable */ List<PacketCaptureFilterResponse>> filters;
 
     /**
@@ -80,7 +80,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * Name of the packet capture session.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * The provisioning state of the packet capture session.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -108,7 +108,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * The storage location for a packet capture session.
      * 
      */
-    @OutputExport(name="storageLocation", type=PacketCaptureStorageLocationResponse.class, parameters={})
+    @Export(name="storageLocation", type=PacketCaptureStorageLocationResponse.class, parameters={})
     private Output<PacketCaptureStorageLocationResponse> storageLocation;
 
     /**
@@ -122,7 +122,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * The ID of the targeted resource, only VM is currently supported.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output<String> target;
 
     /**
@@ -136,7 +136,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * Maximum duration of the capture session in seconds.
      * 
      */
-    @OutputExport(name="timeLimitInSeconds", type=Integer.class, parameters={})
+    @Export(name="timeLimitInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeLimitInSeconds;
 
     /**
@@ -150,7 +150,7 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
      * Maximum size of the capture output.
      * 
      */
-    @OutputExport(name="totalBytesPerSession", type=Double.class, parameters={})
+    @Export(name="totalBytesPerSession", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> totalBytesPerSession;
 
     /**

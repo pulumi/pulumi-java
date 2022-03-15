@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VnetRouteResponse {
     /**
      * The ending address for this route. If the start address is specified in CIDR notation, this must be omitted.
@@ -52,15 +52,15 @@ public final class VnetRouteResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VnetRouteResponse(
-        @OutputCustomType.Parameter("endAddress") @Nullable String endAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("routeType") @Nullable String routeType,
-        @OutputCustomType.Parameter("startAddress") @Nullable String startAddress,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endAddress") @Nullable String endAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("routeType") @Nullable String routeType,
+        @CustomType.Parameter("startAddress") @Nullable String startAddress,
+        @CustomType.Parameter("type") String type) {
         this.endAddress = endAddress;
         this.id = id;
         this.kind = kind;

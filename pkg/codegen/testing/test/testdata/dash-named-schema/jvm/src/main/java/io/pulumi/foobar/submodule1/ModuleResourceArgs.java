@@ -4,7 +4,7 @@
 package io.pulumi.foobar.submodule1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.foobar.inputs.TopLevelArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
-    @InputImport(name="thing")
+    @Import(name="thing")
       private final @Nullable Output<TopLevelArgs> thing;
 
     public Output<TopLevelArgs> getThing() {

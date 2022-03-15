@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.TriggerActionNotificationProperty;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerAction {
     /**
      * Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.
@@ -45,14 +45,14 @@ public final class TriggerAction {
      */
     private final @Nullable Integer timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerAction(
-        @OutputCustomType.Parameter("arguments") @Nullable Map<String,String> arguments,
-        @OutputCustomType.Parameter("crawlerName") @Nullable String crawlerName,
-        @OutputCustomType.Parameter("jobName") @Nullable String jobName,
-        @OutputCustomType.Parameter("notificationProperty") @Nullable TriggerActionNotificationProperty notificationProperty,
-        @OutputCustomType.Parameter("securityConfiguration") @Nullable String securityConfiguration,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout) {
+        @CustomType.Parameter("arguments") @Nullable Map<String,String> arguments,
+        @CustomType.Parameter("crawlerName") @Nullable String crawlerName,
+        @CustomType.Parameter("jobName") @Nullable String jobName,
+        @CustomType.Parameter("notificationProperty") @Nullable TriggerActionNotificationProperty notificationProperty,
+        @CustomType.Parameter("securityConfiguration") @Nullable String securityConfiguration,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout) {
         this.arguments = arguments;
         this.crawlerName = crawlerName;
         this.jobName = jobName;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.notificationhubs;
 
 import io.pulumi.azurenative.notificationhubs.inputs.SharedAccessAuthorizationRulePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * Authorization Rule Name.
      * 
      */
-    @InputImport(name="authorizationRuleName")
+    @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
     public Output<String> getAuthorizationRuleName() {
@@ -30,7 +30,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * The namespace name.
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -41,7 +41,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * The notification hub name.
      * 
      */
-    @InputImport(name="notificationHubName", required=true)
+    @Import(name="notificationHubName", required=true)
       private final Output<String> notificationHubName;
 
     public Output<String> getNotificationHubName() {
@@ -52,7 +52,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * Properties of the Namespace AuthorizationRules.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
     public Output<SharedAccessAuthorizationRulePropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

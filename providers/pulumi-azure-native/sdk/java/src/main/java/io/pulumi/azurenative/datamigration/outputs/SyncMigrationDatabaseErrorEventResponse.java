@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SyncMigrationDatabaseErrorEventResponse {
     /**
      * Event text.
@@ -25,11 +25,11 @@ public final class SyncMigrationDatabaseErrorEventResponse {
      */
     private final String timestampString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SyncMigrationDatabaseErrorEventResponse(
-        @OutputCustomType.Parameter("eventText") String eventText,
-        @OutputCustomType.Parameter("eventTypeString") String eventTypeString,
-        @OutputCustomType.Parameter("timestampString") String timestampString) {
+        @CustomType.Parameter("eventText") String eventText,
+        @CustomType.Parameter("eventTypeString") String eventTypeString,
+        @CustomType.Parameter("timestampString") String timestampString) {
         this.eventText = eventText;
         this.eventTypeString = eventTypeString;
         this.timestampString = timestampString;

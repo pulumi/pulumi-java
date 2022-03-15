@@ -4,7 +4,6 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ExportArgs;
@@ -23,7 +22,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Time the export job was created.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -37,7 +36,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Name of the datastore that is the destination of the export job [datastore]
      * 
      */
-    @OutputExport(name="datastoreName", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="datastoreName", type=String.class, parameters={})
     private Output<String> datastoreName;
 
     /**
@@ -51,7 +50,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Description of the export job.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +64,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Error is set when export fails
      * 
      */
-    @OutputExport(name="error", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="error", type=String.class, parameters={})
     private Output<String> error;
 
     /**
@@ -79,7 +78,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Execution time for this export job. If the job is still in progress, it will be set to the amount of time that has elapsed since`created`, in seconds. Else, it will set to (`updated` - `created`), in seconds.
      * 
      */
-    @OutputExport(name="executionTime", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="executionTime", type=String.class, parameters={})
     private Output<String> executionTime;
 
     /**
@@ -93,7 +92,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Display name of the export job.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +106,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Self link of the export job. A URI that can be used to retrieve the status of an export job. Example: `/organizations/myorg/environments/myenv/analytics/exports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
      * 
      */
-    @OutputExport(name="self", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="self", type=String.class, parameters={})
     private Output<String> self;
 
     /**
@@ -121,7 +120,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Status of the export job. Valid values include `enqueued`, `running`, `completed`, and `failed`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -135,7 +134,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * Time the export job was last updated.
      * 
      */
-    @OutputExport(name="updated", type=String.class, parameters={})
+    @io.pulumi.core.annotations.Export(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
     /**

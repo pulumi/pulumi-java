@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSubnetFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * Availability zone where the subnet must reside.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
@@ -33,7 +33,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * ID of the Availability Zone for the subnet. This argument is not supported in all regions or partitions. If necessary, use `availability_zone` instead.
      * 
      */
-    @InputImport(name="availabilityZoneId")
+    @Import(name="availabilityZoneId")
       private final @Nullable String availabilityZoneId;
 
     public Optional<String> getAvailabilityZoneId() {
@@ -44,7 +44,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * CIDR block of the desired subnet.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable String cidrBlock;
 
     public Optional<String> getCidrBlock() {
@@ -55,7 +55,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * Whether the desired subnet must be the default subnet for its associated availability zone.
      * 
      */
-    @InputImport(name="defaultForAz")
+    @Import(name="defaultForAz")
       private final @Nullable Boolean defaultForAz;
 
     public Optional<Boolean> getDefaultForAz() {
@@ -66,7 +66,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSubnetFilter> filters;
 
     public List<GetSubnetFilter> getFilters() {
@@ -77,7 +77,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * ID of the specific subnet to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -88,7 +88,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * IPv6 CIDR block of the desired subnet.
      * 
      */
-    @InputImport(name="ipv6CidrBlock")
+    @Import(name="ipv6CidrBlock")
       private final @Nullable String ipv6CidrBlock;
 
     public Optional<String> getIpv6CidrBlock() {
@@ -99,7 +99,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * State that the desired subnet must have.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -110,7 +110,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * Map of tags, each pair of which must exactly match a pair on the desired subnet.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -121,7 +121,7 @@ public final class GetSubnetArgs extends io.pulumi.resources.InvokeArgs {
      * ID of the VPC that the desired subnet belongs to.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {

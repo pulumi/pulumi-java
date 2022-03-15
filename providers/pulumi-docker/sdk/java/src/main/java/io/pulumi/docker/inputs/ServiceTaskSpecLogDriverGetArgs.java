@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ServiceTaskSpecLogDriverGetArgs extends io.pulumi.resources.R
 
     public static final ServiceTaskSpecLogDriverGetArgs Empty = new ServiceTaskSpecLogDriverGetArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
     public Output<Map<String,String>> getOptions() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.AutoprovisioningNodePoolDefaultsResponse;
 import io.pulumi.googlenative.container_v1.inputs.ResourceLimitResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
      * 
      */
-    @InputImport(name="autoprovisioningLocations", required=true)
+    @Import(name="autoprovisioningLocations", required=true)
       private final List<String> autoprovisioningLocations;
 
     public List<String> getAutoprovisioningLocations() {
@@ -35,7 +35,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
      * 
      */
-    @InputImport(name="autoprovisioningNodePoolDefaults", required=true)
+    @Import(name="autoprovisioningNodePoolDefaults", required=true)
       private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
 
     public AutoprovisioningNodePoolDefaultsResponse getAutoprovisioningNodePoolDefaults() {
@@ -46,7 +46,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * Defines autoscaling behaviour.
      * 
      */
-    @InputImport(name="autoscalingProfile", required=true)
+    @Import(name="autoscalingProfile", required=true)
       private final String autoscalingProfile;
 
     public String getAutoscalingProfile() {
@@ -57,7 +57,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * Enables automatic node pool creation and deletion.
      * 
      */
-    @InputImport(name="enableNodeAutoprovisioning", required=true)
+    @Import(name="enableNodeAutoprovisioning", required=true)
       private final Boolean enableNodeAutoprovisioning;
 
     public Boolean getEnableNodeAutoprovisioning() {
@@ -68,7 +68,7 @@ public final class ClusterAutoscalingResponse extends io.pulumi.resources.Invoke
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
      * 
      */
-    @InputImport(name="resourceLimits", required=true)
+    @Import(name="resourceLimits", required=true)
       private final List<ResourceLimitResponse> resourceLimits;
 
     public List<ResourceLimitResponse> getResourceLimits() {

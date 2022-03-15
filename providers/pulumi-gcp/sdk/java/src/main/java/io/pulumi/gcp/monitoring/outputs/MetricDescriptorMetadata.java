@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricDescriptorMetadata {
     /**
      * The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors. In `[duration format](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf?&_ga=2.264881487.1507873253.1593446723-935052455.1591817775#google.protobuf.Duration)`.
@@ -22,10 +22,10 @@ public final class MetricDescriptorMetadata {
      */
     private final @Nullable String samplePeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricDescriptorMetadata(
-        @OutputCustomType.Parameter("ingestDelay") @Nullable String ingestDelay,
-        @OutputCustomType.Parameter("samplePeriod") @Nullable String samplePeriod) {
+        @CustomType.Parameter("ingestDelay") @Nullable String ingestDelay,
+        @CustomType.Parameter("samplePeriod") @Nullable String samplePeriod) {
         this.ingestDelay = ingestDelay;
         this.samplePeriod = samplePeriod;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ApplicationGatewayCustomErrorStatusCode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
      * Error page URL of the application gateway customer error.
      * 
      */
-    @InputImport(name="customErrorPageUrl")
+    @Import(name="customErrorPageUrl")
       private final @Nullable Output<String> customErrorPageUrl;
 
     public Output<String> getCustomErrorPageUrl() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayCustomErrorArgs extends io.pulumi.resources
      * Status code of the application gateway customer error.
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> statusCode;
 
     public Output<Either<String,ApplicationGatewayCustomErrorStatusCode>> getStatusCode() {

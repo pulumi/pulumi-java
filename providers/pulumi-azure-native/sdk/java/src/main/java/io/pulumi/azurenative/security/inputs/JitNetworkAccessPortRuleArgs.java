@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
      * Mutually exclusive with the "allowedSourceAddressPrefixes" parameter. Should be an IP address or CIDR, for example "192.168.0.3" or "192.168.0.0/16".
      * 
      */
-    @InputImport(name="allowedSourceAddressPrefix")
+    @Import(name="allowedSourceAddressPrefix")
       private final @Nullable Output<String> allowedSourceAddressPrefix;
 
     public Output<String> getAllowedSourceAddressPrefix() {
@@ -33,7 +33,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
      * Mutually exclusive with the "allowedSourceAddressPrefix" parameter.
      * 
      */
-    @InputImport(name="allowedSourceAddressPrefixes")
+    @Import(name="allowedSourceAddressPrefixes")
       private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
     public Output<List<String>> getAllowedSourceAddressPrefixes() {
@@ -44,21 +44,21 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
      * Maximum duration requests can be made for. In ISO 8601 duration format. Minimum 5 minutes, maximum 1 day
      * 
      */
-    @InputImport(name="maxRequestAccessDuration", required=true)
+    @Import(name="maxRequestAccessDuration", required=true)
       private final Output<String> maxRequestAccessDuration;
 
     public Output<String> getMaxRequestAccessDuration() {
         return this.maxRequestAccessDuration;
     }
 
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final Output<Integer> number;
 
     public Output<Integer> getNumber() {
         return this.number;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
     public Output<Either<String,Protocol>> getProtocol() {

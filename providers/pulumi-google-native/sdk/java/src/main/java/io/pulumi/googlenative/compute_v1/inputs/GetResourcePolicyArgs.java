@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetResourcePolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetResourcePolicyArgs Empty = new GetResourcePolicyArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
-    @InputImport(name="resourcePolicy", required=true)
+    @Import(name="resourcePolicy", required=true)
       private final String resourcePolicy;
 
     public String getResourcePolicy() {

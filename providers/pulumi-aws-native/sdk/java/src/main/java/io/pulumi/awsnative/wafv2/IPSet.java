@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.enums.IPSetIPAddressVersion;
 import io.pulumi.awsnative.wafv2.enums.IPSetScope;
 import io.pulumi.awsnative.wafv2.outputs.IPSetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * List of IPAddresses.
      * 
      */
-    @OutputExport(name="addresses", type=List.class, parameters={String.class})
+    @Export(name="addresses", type=List.class, parameters={String.class})
     private Output<List<String>> addresses;
 
     /**
@@ -35,37 +35,37 @@ public class IPSet extends io.pulumi.resources.CustomResource {
     public Output<List<String>> getAddresses() {
         return this.addresses;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="iPAddressVersion", type=IPSetIPAddressVersion.class, parameters={})
+    @Export(name="iPAddressVersion", type=IPSetIPAddressVersion.class, parameters={})
     private Output<IPSetIPAddressVersion> iPAddressVersion;
 
     public Output<IPSetIPAddressVersion> getIPAddressVersion() {
         return this.iPAddressVersion;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="scope", type=IPSetScope.class, parameters={})
+    @Export(name="scope", type=IPSetScope.class, parameters={})
     private Output<IPSetScope> scope;
 
     public Output<IPSetScope> getScope() {
         return this.scope;
     }
-    @OutputExport(name="tags", type=List.class, parameters={IPSetTag.class})
+    @Export(name="tags", type=List.class, parameters={IPSetTag.class})
     private Output</* @Nullable */ List<IPSetTag>> tags;
 
     public Output</* @Nullable */ List<IPSetTag>> getTags() {

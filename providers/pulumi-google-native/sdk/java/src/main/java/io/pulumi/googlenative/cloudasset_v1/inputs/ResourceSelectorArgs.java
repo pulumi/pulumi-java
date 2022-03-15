@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
      * The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
      * 
      */
-    @InputImport(name="fullResourceName", required=true)
+    @Import(name="fullResourceName", required=true)
       private final Output<String> fullResourceName;
 
     public Output<String> getFullResourceName() {

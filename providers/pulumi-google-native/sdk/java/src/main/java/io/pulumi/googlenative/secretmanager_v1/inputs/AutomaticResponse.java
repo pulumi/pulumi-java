@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AutomaticResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The customer-managed encryption configuration of the Secret. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
      * 
      */
-    @InputImport(name="customerManagedEncryption", required=true)
+    @Import(name="customerManagedEncryption", required=true)
       private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
     public CustomerManagedEncryptionResponse getCustomerManagedEncryption() {

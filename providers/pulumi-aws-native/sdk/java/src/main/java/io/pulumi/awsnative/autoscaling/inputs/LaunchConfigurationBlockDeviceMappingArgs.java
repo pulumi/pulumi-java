@@ -5,7 +5,7 @@ package io.pulumi.awsnative.autoscaling.inputs;
 
 import io.pulumi.awsnative.autoscaling.inputs.LaunchConfigurationBlockDeviceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * The device name exposed to the EC2 instance (for example, /dev/sdh or xvdh).
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -35,7 +35,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * Parameters used to automatically set up EBS volumes when an instance is launched.
      * 
      */
-    @InputImport(name="ebs")
+    @Import(name="ebs")
       private final @Nullable Output<LaunchConfigurationBlockDeviceArgs> ebs;
 
     public Output<LaunchConfigurationBlockDeviceArgs> getEbs() {
@@ -46,7 +46,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * Setting this value to true suppresses the specified device included in the block device mapping of the AMI.
      * 
      */
-    @InputImport(name="noDevice")
+    @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
     public Output<Boolean> getNoDevice() {
@@ -57,7 +57,7 @@ public final class LaunchConfigurationBlockDeviceMappingArgs extends io.pulumi.r
      * The name of the virtual device.
      * 
      */
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {

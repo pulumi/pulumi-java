@@ -4,13 +4,13 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRuleGroupReferenceStatementExcludedRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementRuleGroupReferenceStatement {
     /**
      * The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
@@ -23,10 +23,10 @@ public final class WebAclRuleStatementRuleGroupReferenceStatement {
      */
     private final @Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementRuleGroupReferenceStatement(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRule> excludedRules) {
         this.arn = arn;
         this.excludedRules = excludedRules;
     }

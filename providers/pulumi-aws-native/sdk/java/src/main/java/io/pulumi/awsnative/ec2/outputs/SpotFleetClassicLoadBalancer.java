@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetClassicLoadBalancer {
     private final String name;
 
-    @OutputCustomType.Constructor
-    private SpotFleetClassicLoadBalancer(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private SpotFleetClassicLoadBalancer(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

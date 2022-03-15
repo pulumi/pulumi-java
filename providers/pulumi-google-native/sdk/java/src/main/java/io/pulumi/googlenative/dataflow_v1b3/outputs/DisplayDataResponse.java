@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DisplayDataResponse {
     /**
      * Contains value if the data is of a boolean type.
@@ -72,20 +72,20 @@ public final class DisplayDataResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DisplayDataResponse(
-        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
-        @OutputCustomType.Parameter("durationValue") String durationValue,
-        @OutputCustomType.Parameter("floatValue") Double floatValue,
-        @OutputCustomType.Parameter("int64Value") String int64Value,
-        @OutputCustomType.Parameter("javaClassValue") String javaClassValue,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("shortStrValue") String shortStrValue,
-        @OutputCustomType.Parameter("strValue") String strValue,
-        @OutputCustomType.Parameter("timestampValue") String timestampValue,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("boolValue") Boolean boolValue,
+        @CustomType.Parameter("durationValue") String durationValue,
+        @CustomType.Parameter("floatValue") Double floatValue,
+        @CustomType.Parameter("int64Value") String int64Value,
+        @CustomType.Parameter("javaClassValue") String javaClassValue,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("shortStrValue") String shortStrValue,
+        @CustomType.Parameter("strValue") String strValue,
+        @CustomType.Parameter("timestampValue") String timestampValue,
+        @CustomType.Parameter("url") String url) {
         this.boolValue = boolValue;
         this.durationValue = durationValue;
         this.floatValue = floatValue;

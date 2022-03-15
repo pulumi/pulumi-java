@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * The bucket name used to store the data.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final String bucketName;
 
     public String getBucketName() {
@@ -33,7 +33,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * Either SSE_KMS or SSE_S3.
      * 
      */
-    @InputImport(name="encryptionOption", required=true)
+    @Import(name="encryptionOption", required=true)
       private final String encryptionOption;
 
     public String getEncryptionOption() {
@@ -44,7 +44,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * Must be provided if SSE_KMS is specified as the encryption option
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable String kmsKeyId;
 
     public Optional<String> getKmsKeyId() {
@@ -55,7 +55,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * String used to prefix all data in the bucket.
      * 
      */
-    @InputImport(name="objectKeyPrefix")
+    @Import(name="objectKeyPrefix")
       private final @Nullable String objectKeyPrefix;
 
     public Optional<String> getObjectKeyPrefix() {

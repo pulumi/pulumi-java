@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetRouteTableFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetRouteTableFilter> filters;
 
     public List<GetRouteTableFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
      * 
      */
-    @InputImport(name="gatewayId")
+    @Import(name="gatewayId")
       private final @Nullable String gatewayId;
 
     public Optional<String> getGatewayId() {
@@ -43,7 +43,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * ID of the specific Route Table to retrieve.
      * 
      */
-    @InputImport(name="routeTableId")
+    @Import(name="routeTableId")
       private final @Nullable String routeTableId;
 
     public Optional<String> getRouteTableId() {
@@ -54,7 +54,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
@@ -65,7 +65,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * Map of tags, each pair of which must exactly match a pair on the desired Route Table.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -76,7 +76,7 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
      * ID of the VPC that the desired Route Table belongs to.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {

@@ -13,7 +13,7 @@ import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
 import io.pulumi.azurenative.storagecache.outputs.UnknownTargetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Properties when targetType is blobNfs.
      * 
      */
-    @OutputExport(name="blobNfs", type=BlobNfsTargetResponse.class, parameters={})
+    @Export(name="blobNfs", type=BlobNfsTargetResponse.class, parameters={})
     private Output</* @Nullable */ BlobNfsTargetResponse> blobNfs;
 
     /**
@@ -54,7 +54,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Properties when targetType is clfs.
      * 
      */
-    @OutputExport(name="clfs", type=ClfsTargetResponse.class, parameters={})
+    @Export(name="clfs", type=ClfsTargetResponse.class, parameters={})
     private Output</* @Nullable */ ClfsTargetResponse> clfs;
 
     /**
@@ -68,7 +68,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * List of Cache namespace junctions to target for namespace associations.
      * 
      */
-    @OutputExport(name="junctions", type=List.class, parameters={NamespaceJunctionResponse.class})
+    @Export(name="junctions", type=List.class, parameters={NamespaceJunctionResponse.class})
     private Output</* @Nullable */ List<NamespaceJunctionResponse>> junctions;
 
     /**
@@ -82,7 +82,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Region name string.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Name of the Storage Target.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Properties when targetType is nfs3.
      * 
      */
-    @OutputExport(name="nfs3", type=Nfs3TargetResponse.class, parameters={})
+    @Export(name="nfs3", type=Nfs3TargetResponse.class, parameters={})
     private Output</* @Nullable */ Nfs3TargetResponse> nfs3;
 
     /**
@@ -124,7 +124,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -138,7 +138,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -152,7 +152,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Type of the Storage Target.
      * 
      */
-    @OutputExport(name="targetType", type=String.class, parameters={})
+    @Export(name="targetType", type=String.class, parameters={})
     private Output<String> targetType;
 
     /**
@@ -166,7 +166,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -180,7 +180,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * Properties when targetType is unknown.
      * 
      */
-    @OutputExport(name="unknown", type=UnknownTargetResponse.class, parameters={})
+    @Export(name="unknown", type=UnknownTargetResponse.class, parameters={})
     private Output</* @Nullable */ UnknownTargetResponse> unknown;
 
     /**

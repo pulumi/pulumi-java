@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iot.AuthorizerArgs;
 import io.pulumi.aws.iot.inputs.AuthorizerState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The ARN of the authorizer.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The ARN of the authorizer's Lambda function.
      * 
      */
-    @OutputExport(name="authorizerFunctionArn", type=String.class, parameters={})
+    @Export(name="authorizerFunctionArn", type=String.class, parameters={})
     private Output<String> authorizerFunctionArn;
 
     /**
@@ -62,7 +62,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The name of the authorizer.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Specifies whether AWS IoT validates the token signature in an authorization request. Default: `false`.
      * 
      */
-    @OutputExport(name="signingDisabled", type=Boolean.class, parameters={})
+    @Export(name="signingDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> signingDisabled;
 
     /**
@@ -90,7 +90,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The status of Authorizer request at creation. Valid values: `ACTIVE`, `INACTIVE`. Default: `ACTIVE`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -104,7 +104,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The name of the token key used to extract the token from the HTTP headers. This value is required if signing is enabled in your authorizer.
      * 
      */
-    @OutputExport(name="tokenKeyName", type=String.class, parameters={})
+    @Export(name="tokenKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKeyName;
 
     /**
@@ -118,7 +118,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The public keys used to verify the digital signature returned by your custom authentication service. This value is required if signing is enabled in your authorizer.
      * 
      */
-    @OutputExport(name="tokenSigningPublicKeys", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tokenSigningPublicKeys", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tokenSigningPublicKeys;
 
     /**

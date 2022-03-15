@@ -5,14 +5,14 @@ package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ClusterHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ClusterUpgradeDeltaHealthPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterUpgradePolicyResponse {
     /**
      * The cluster delta health policy used when upgrading the cluster.
@@ -60,17 +60,17 @@ public final class ClusterUpgradePolicyResponse {
      */
     private final String upgradeTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterUpgradePolicyResponse(
-        @OutputCustomType.Parameter("deltaHealthPolicy") @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
-        @OutputCustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
-        @OutputCustomType.Parameter("healthCheckRetryTimeout") String healthCheckRetryTimeout,
-        @OutputCustomType.Parameter("healthCheckStableDuration") String healthCheckStableDuration,
-        @OutputCustomType.Parameter("healthCheckWaitDuration") String healthCheckWaitDuration,
-        @OutputCustomType.Parameter("healthPolicy") ClusterHealthPolicyResponse healthPolicy,
-        @OutputCustomType.Parameter("upgradeDomainTimeout") String upgradeDomainTimeout,
-        @OutputCustomType.Parameter("upgradeReplicaSetCheckTimeout") String upgradeReplicaSetCheckTimeout,
-        @OutputCustomType.Parameter("upgradeTimeout") String upgradeTimeout) {
+        @CustomType.Parameter("deltaHealthPolicy") @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
+        @CustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
+        @CustomType.Parameter("healthCheckRetryTimeout") String healthCheckRetryTimeout,
+        @CustomType.Parameter("healthCheckStableDuration") String healthCheckStableDuration,
+        @CustomType.Parameter("healthCheckWaitDuration") String healthCheckWaitDuration,
+        @CustomType.Parameter("healthPolicy") ClusterHealthPolicyResponse healthPolicy,
+        @CustomType.Parameter("upgradeDomainTimeout") String upgradeDomainTimeout,
+        @CustomType.Parameter("upgradeReplicaSetCheckTimeout") String upgradeReplicaSetCheckTimeout,
+        @CustomType.Parameter("upgradeTimeout") String upgradeTimeout) {
         this.deltaHealthPolicy = deltaHealthPolicy;
         this.forceRestart = forceRestart;
         this.healthCheckRetryTimeout = healthCheckRetryTimeout;

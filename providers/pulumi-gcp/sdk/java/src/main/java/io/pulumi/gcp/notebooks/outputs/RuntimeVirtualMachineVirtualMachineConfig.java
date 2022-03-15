@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfigContainerImage;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfigDataDisk;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfig {
     /**
      * The Compute Engine accelerator configuration for this runtime.
@@ -136,23 +136,23 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfig(
-        @OutputCustomType.Parameter("acceleratorConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig,
-        @OutputCustomType.Parameter("containerImages") @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages,
-        @OutputCustomType.Parameter("dataDisk") RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk,
-        @OutputCustomType.Parameter("encryptionConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig,
-        @OutputCustomType.Parameter("guestAttributes") @Nullable Map<String,String> guestAttributes,
-        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("network") @Nullable String network,
-        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("acceleratorConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig,
+        @CustomType.Parameter("containerImages") @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages,
+        @CustomType.Parameter("dataDisk") RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk,
+        @CustomType.Parameter("encryptionConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig,
+        @CustomType.Parameter("guestAttributes") @Nullable Map<String,String> guestAttributes,
+        @CustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("network") @Nullable String network,
+        @CustomType.Parameter("nicType") @Nullable String nicType,
+        @CustomType.Parameter("shieldedInstanceConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @CustomType.Parameter("subnet") @Nullable String subnet,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;

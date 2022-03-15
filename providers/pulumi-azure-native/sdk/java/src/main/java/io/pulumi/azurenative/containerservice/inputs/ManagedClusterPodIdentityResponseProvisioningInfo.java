@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.CloudErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
      * Pod identity assignment error (if any).
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable CloudErrorResponse error;
 
     public Optional<CloudErrorResponse> getError() {

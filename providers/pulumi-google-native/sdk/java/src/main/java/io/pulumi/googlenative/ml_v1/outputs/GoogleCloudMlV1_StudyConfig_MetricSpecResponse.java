@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     /**
      * The optimization goal of the metric.
@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_StudyConfig_MetricSpecResponse(
-        @OutputCustomType.Parameter("goal") String goal,
-        @OutputCustomType.Parameter("metric") String metric) {
+        @CustomType.Parameter("goal") String goal,
+        @CustomType.Parameter("metric") String metric) {
         this.goal = goal;
         this.metric = metric;
     }

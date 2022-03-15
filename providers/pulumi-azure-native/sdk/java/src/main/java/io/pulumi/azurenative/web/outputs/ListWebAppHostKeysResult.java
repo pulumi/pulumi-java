@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppHostKeysResult {
     /**
      * Host level function keys.
@@ -28,11 +28,11 @@ public final class ListWebAppHostKeysResult {
      */
     private final @Nullable Map<String,String> systemKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppHostKeysResult(
-        @OutputCustomType.Parameter("functionKeys") @Nullable Map<String,String> functionKeys,
-        @OutputCustomType.Parameter("masterKey") @Nullable String masterKey,
-        @OutputCustomType.Parameter("systemKeys") @Nullable Map<String,String> systemKeys) {
+        @CustomType.Parameter("functionKeys") @Nullable Map<String,String> functionKeys,
+        @CustomType.Parameter("masterKey") @Nullable String masterKey,
+        @CustomType.Parameter("systemKeys") @Nullable Map<String,String> systemKeys) {
         this.functionKeys = functionKeys;
         this.masterKey = masterKey;
         this.systemKeys = systemKeys;

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.inspectorv2.outputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterAction;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterCriteria;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFilterResult {
     /**
      * Findings filter ARN.
@@ -39,13 +39,13 @@ public final class GetFilterResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFilterResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("filterAction") @Nullable FilterAction filterAction,
-        @OutputCustomType.Parameter("filterCriteria") @Nullable FilterCriteria filterCriteria,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("filterAction") @Nullable FilterAction filterAction,
+        @CustomType.Parameter("filterCriteria") @Nullable FilterCriteria filterCriteria,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.description = description;
         this.filterAction = filterAction;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SolutionDetailsResponse {
     /**
      * Gets or sets the count of assessments reported by the solution.
@@ -29,11 +29,11 @@ public final class SolutionDetailsResponse {
      */
     private final @Nullable Integer groupCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SolutionDetailsResponse(
-        @OutputCustomType.Parameter("assessmentCount") @Nullable Integer assessmentCount,
-        @OutputCustomType.Parameter("extendedDetails") @Nullable Map<String,String> extendedDetails,
-        @OutputCustomType.Parameter("groupCount") @Nullable Integer groupCount) {
+        @CustomType.Parameter("assessmentCount") @Nullable Integer assessmentCount,
+        @CustomType.Parameter("extendedDetails") @Nullable Map<String,String> extendedDetails,
+        @CustomType.Parameter("groupCount") @Nullable Integer groupCount) {
         this.assessmentCount = assessmentCount;
         this.extendedDetails = extendedDetails;
         this.groupCount = groupCount;

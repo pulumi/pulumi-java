@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.ManagedDiskParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
      * Gets the caching type.
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable String caching;
 
     public Optional<String> getCaching() {
@@ -36,7 +36,7 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
      * Gets the disk restore point Id.
      * 
      */
-    @InputImport(name="diskRestorePoint")
+    @Import(name="diskRestorePoint")
       private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
     public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
@@ -47,7 +47,7 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
      * Gets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -58,7 +58,7 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
      * Gets the logical unit number.
      * 
      */
-    @InputImport(name="lun")
+    @Import(name="lun")
       private final @Nullable Integer lun;
 
     public Optional<Integer> getLun() {
@@ -69,7 +69,7 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
      * Gets the managed disk details
      * 
      */
-    @InputImport(name="managedDisk")
+    @Import(name="managedDisk")
       private final @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
@@ -80,7 +80,7 @@ public final class RestorePointSourceVMDataDiskResponse extends io.pulumi.resour
      * Gets the disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * The number of accepted routes.
      * 
      */
-    @InputImport(name="acceptedRouteCount")
+    @Import(name="acceptedRouteCount")
       private final @Nullable Output<Integer> acceptedRouteCount;
 
     public Output<Integer> getAcceptedRouteCount() {
@@ -30,7 +30,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * The Amazon Resource Name (ARN) of the VPN tunnel endpoint certificate.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -41,7 +41,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * The date and time of the last change in status.
      * 
      */
-    @InputImport(name="lastStatusChange")
+    @Import(name="lastStatusChange")
       private final @Nullable Output<String> lastStatusChange;
 
     public Output<String> getLastStatusChange() {
@@ -52,7 +52,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * The Internet-routable IP address of the virtual private gateway's outside interface.
      * 
      */
-    @InputImport(name="outsideIpAddress")
+    @Import(name="outsideIpAddress")
       private final @Nullable Output<String> outsideIpAddress;
 
     public Output<String> getOutsideIpAddress() {
@@ -63,7 +63,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * The status of the VPN tunnel.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -74,7 +74,7 @@ public final class VpnConnectionVgwTelemetryGetArgs extends io.pulumi.resources.
      * If an error occurs, a description of the error.
      * 
      */
-    @InputImport(name="statusMessage")
+    @Import(name="statusMessage")
       private final @Nullable Output<String> statusMessage;
 
     public Output<String> getStatusMessage() {

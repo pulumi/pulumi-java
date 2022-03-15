@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerinstance.inputs.ContainerPropertiesRespons
 import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The commands to execute within the container instance in exec form.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable List<String> command;
 
     public List<String> getCommand() {
@@ -40,7 +40,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The environment variables to set in the container instance.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
@@ -51,7 +51,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the image used to create the container instance.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
@@ -62,7 +62,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The instance view of the container instance. Only valid in response.
      * 
      */
-    @InputImport(name="instanceView", required=true)
+    @Import(name="instanceView", required=true)
       private final ContainerPropertiesResponseInstanceView instanceView;
 
     public ContainerPropertiesResponseInstanceView getInstanceView() {
@@ -73,7 +73,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The liveness probe.
      * 
      */
-    @InputImport(name="livenessProbe")
+    @Import(name="livenessProbe")
       private final @Nullable ContainerProbeResponse livenessProbe;
 
     public Optional<ContainerProbeResponse> getLivenessProbe() {
@@ -84,7 +84,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The user-provided name of the container instance.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -95,7 +95,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The exposed ports on the container instance.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable List<ContainerPortResponse> ports;
 
     public List<ContainerPortResponse> getPorts() {
@@ -106,7 +106,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The readiness probe.
      * 
      */
-    @InputImport(name="readinessProbe")
+    @Import(name="readinessProbe")
       private final @Nullable ContainerProbeResponse readinessProbe;
 
     public Optional<ContainerProbeResponse> getReadinessProbe() {
@@ -117,7 +117,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The resource requirements of the container instance.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse getResources() {
@@ -128,7 +128,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * The volume mounts available to the container instance.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable List<VolumeMountResponse> volumeMounts;
 
     public List<VolumeMountResponse> getVolumeMounts() {

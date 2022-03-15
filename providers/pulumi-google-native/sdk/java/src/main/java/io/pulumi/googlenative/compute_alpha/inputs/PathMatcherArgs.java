@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpRouteActionArgs;
@@ -28,7 +28,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. UrlMaps for external HTTP(S) load balancers support only the urlRewrite action within a path matcher's defaultRouteAction.
      * 
      */
-    @InputImport(name="defaultRouteAction")
+    @Import(name="defaultRouteAction")
       private final @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
 
     public Output<HttpRouteActionArgs> getDefaultRouteAction() {
@@ -39,7 +39,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The full or partial URL to the BackendService resource. This URL is used if none of the pathRules or routeRules defined by this PathMatcher are matched. For example, the following are all valid URLs to a BackendService resource: - https://www.googleapis.com/compute/v1/projects/project /global/backendServices/backendService - compute/v1/projects/project/global/backendServices/backendService - global/backendServices/backendService If defaultRouteAction is also specified, advanced routing actions, such as URL rewrites, take effect before sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if defaultRouteAction specifies any weightedBackendServices, defaultService must not be specified. Only one of defaultService, defaultUrlRedirect , or defaultRouteAction.weightedBackendService must be set. Authorization requires one or more of the following Google IAM permissions on the specified resource default_service: - compute.backendBuckets.use - compute.backendServices.use
      * 
      */
-    @InputImport(name="defaultService")
+    @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
@@ -50,7 +50,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * When none of the specified pathRules or routeRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set. Not supported when the URL map is bound to a target gRPC proxy.
      * 
      */
-    @InputImport(name="defaultUrlRedirect")
+    @Import(name="defaultUrlRedirect")
       private final @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
 
     public Output<HttpRedirectActionArgs> getDefaultUrlRedirect() {
@@ -61,7 +61,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -72,7 +72,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies changes to request and response headers that need to take effect for the selected backend service. HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap HeaderAction is not supported for load balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
     public Output<HttpHeaderActionArgs> getHeaderAction() {
@@ -83,7 +83,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The name to which this PathMatcher is referred by the HostRule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -94,7 +94,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list. Within a given pathMatcher, only one of pathRules or routeRules must be set.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable Output<List<PathRuleArgs>> pathRules;
 
     public Output<List<PathRuleArgs>> getPathRules() {
@@ -105,7 +105,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The list of HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. routeRules are evaluated in order of priority, from the lowest to highest number. Within a given pathMatcher, you can set only one of pathRules or routeRules.
      * 
      */
-    @InputImport(name="routeRules")
+    @Import(name="routeRules")
       private final @Nullable Output<List<HttpRouteRuleArgs>> routeRules;
 
     public Output<List<HttpRouteRuleArgs>> getRouteRules() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GetRegistryImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
-    @InputImport(name="insecureSkipVerify")
+    @Import(name="insecureSkipVerify")
       private final @Nullable Boolean insecureSkipVerify;
 
     public Optional<Boolean> getInsecureSkipVerify() {
         return this.insecureSkipVerify == null ? Optional.empty() : Optional.ofNullable(this.insecureSkipVerify);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

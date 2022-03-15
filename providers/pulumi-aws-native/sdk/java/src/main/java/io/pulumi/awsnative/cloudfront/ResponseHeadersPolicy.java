@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.ResponseHeadersPolicyArgs;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,13 +18,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:ResponseHeadersPolicy")
 public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    @OutputExport(name="responseHeadersPolicyConfig", type=ResponseHeadersPolicyConfig.class, parameters={})
+    @Export(name="responseHeadersPolicyConfig", type=ResponseHeadersPolicyConfig.class, parameters={})
     private Output<ResponseHeadersPolicyConfig> responseHeadersPolicyConfig;
 
     public Output<ResponseHeadersPolicyConfig> getResponseHeadersPolicyConfig() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -31,7 +31,7 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
      * final component of the resource name.
      * 
      */
-    @InputImport(name="workloadIdentityPoolId", required=true)
+    @Import(name="workloadIdentityPoolId", required=true)
       private final String workloadIdentityPoolId;
 
     public String getWorkloadIdentityPoolId() {

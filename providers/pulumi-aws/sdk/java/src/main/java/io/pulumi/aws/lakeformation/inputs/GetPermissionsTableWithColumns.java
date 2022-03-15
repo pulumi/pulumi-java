@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final String catalogId;
 
     public String getCatalogId() {
@@ -31,7 +31,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * Set of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
      * 
      */
-    @InputImport(name="columnNames")
+    @Import(name="columnNames")
       private final @Nullable List<String> columnNames;
 
     public List<String> getColumnNames() {
@@ -42,7 +42,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -53,7 +53,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * Set of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
      * 
      */
-    @InputImport(name="excludedColumnNames")
+    @Import(name="excludedColumnNames")
       private final @Nullable List<String> excludedColumnNames;
 
     public List<String> getExcludedColumnNames() {
@@ -64,7 +64,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * Name of the table resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -75,7 +75,7 @@ public final class GetPermissionsTableWithColumns extends io.pulumi.resources.In
      * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
      * 
      */
-    @InputImport(name="wildcard")
+    @Import(name="wildcard")
       private final @Nullable Boolean wildcard;
 
     public Optional<Boolean> getWildcard() {

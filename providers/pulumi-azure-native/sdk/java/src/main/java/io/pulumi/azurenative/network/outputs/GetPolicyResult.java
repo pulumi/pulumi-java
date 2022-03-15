@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.ManagedRuleSetListResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleLinkResponse;
 import io.pulumi.azurenative.network.outputs.SecurityPolicyLinkResponse;
 import io.pulumi.azurenative.network.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyResult {
     /**
      * Describes custom rules inside the policy.
@@ -92,23 +92,23 @@ public final class GetPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyResult(
-        @OutputCustomType.Parameter("customRules") @Nullable CustomRuleListResponse customRules,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("frontendEndpointLinks") List<FrontendEndpointLinkResponse> frontendEndpointLinks,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedRules") @Nullable ManagedRuleSetListResponse managedRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policySettings") @Nullable FrontDoorPolicySettingsResponse policySettings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("routingRuleLinks") List<RoutingRuleLinkResponse> routingRuleLinks,
-        @OutputCustomType.Parameter("securityPolicyLinks") List<SecurityPolicyLinkResponse> securityPolicyLinks,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("customRules") @Nullable CustomRuleListResponse customRules,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("frontendEndpointLinks") List<FrontendEndpointLinkResponse> frontendEndpointLinks,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedRules") @Nullable ManagedRuleSetListResponse managedRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policySettings") @Nullable FrontDoorPolicySettingsResponse policySettings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("routingRuleLinks") List<RoutingRuleLinkResponse> routingRuleLinks,
+        @CustomType.Parameter("securityPolicyLinks") List<SecurityPolicyLinkResponse> securityPolicyLinks,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.customRules = customRules;
         this.etag = etag;
         this.frontendEndpointLinks = frontendEndpointLinks;

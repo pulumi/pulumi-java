@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QuickBooksLinkedServiceResponse {
     /**
      * The access token for OAuth 1.0 authentication.
@@ -91,22 +91,22 @@ public final class QuickBooksLinkedServiceResponse {
      */
     private final @Nullable Object useEncryptedEndpoints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuickBooksLinkedServiceResponse(
-        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @OutputCustomType.Parameter("accessTokenSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("companyId") @Nullable Object companyId,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
-        @OutputCustomType.Parameter("consumerKey") @Nullable Object consumerKey,
-        @OutputCustomType.Parameter("consumerSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("endpoint") @Nullable Object endpoint,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints) {
+        @CustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @CustomType.Parameter("accessTokenSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("companyId") @Nullable Object companyId,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @CustomType.Parameter("consumerKey") @Nullable Object consumerKey,
+        @CustomType.Parameter("consumerSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("endpoint") @Nullable Object endpoint,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useEncryptedEndpoints") @Nullable Object useEncryptedEndpoints) {
         this.accessToken = accessToken;
         this.accessTokenSecret = accessTokenSecret;
         this.annotations = annotations;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagepool.inputs.AclArgs;
 import io.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * Access Control List (ACL) for an iSCSI target portal group.
      * 
      */
-    @InputImport(name="acls", required=true)
+    @Import(name="acls", required=true)
       private final Output<List<AclArgs>> acls;
 
     public Output<List<AclArgs>> getAcls() {
@@ -35,7 +35,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * Attributes of an iSCSI target portal group.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final Output<AttributesArgs> attributes;
 
     public Output<AttributesArgs> getAttributes() {
@@ -46,7 +46,7 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
      * List of LUNs to be exposed through the iSCSI target portal group.
      * 
      */
-    @InputImport(name="luns", required=true)
+    @Import(name="luns", required=true)
       private final Output<List<IscsiLunArgs>> luns;
 
     public Output<List<IscsiLunArgs>> getLuns() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Output<Boolean> override;
 
     public Output<Boolean> getOverride() {
@@ -29,7 +29,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicyArgs 
      * The value of the `Referrer-Policy` HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
      * 
      */
-    @InputImport(name="referrerPolicy", required=true)
+    @Import(name="referrerPolicy", required=true)
       private final Output<String> referrerPolicy;
 
     public Output<String> getReferrerPolicy() {

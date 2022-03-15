@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportDeliveryChannelProperties {
     /**
      * A list of the format of your reports: CSV, JSON, or both. If not specified, the default format is CSV.
@@ -28,11 +28,11 @@ public final class ReportDeliveryChannelProperties {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportDeliveryChannelProperties(
-        @OutputCustomType.Parameter("formats") @Nullable List<String> formats,
-        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
-        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
+        @CustomType.Parameter("formats") @Nullable List<String> formats,
+        @CustomType.Parameter("s3BucketName") String s3BucketName,
+        @CustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.formats = formats;
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;

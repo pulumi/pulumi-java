@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
      * The installer version.
      * 
      */
-    @InputImport(name="installerVersion")
+    @Import(name="installerVersion")
       private final @Nullable String installerVersion;
 
     public Optional<String> getInstallerVersion() {
@@ -29,7 +29,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
      * The tool.
      * 
      */
-    @InputImport(name="tool")
+    @Import(name="tool")
       private final @Nullable String tool;
 
     public Optional<String> getTool() {
@@ -40,7 +40,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
      * The tool version.
      * 
      */
-    @InputImport(name="toolVersion")
+    @Import(name="toolVersion")
       private final @Nullable String toolVersion;
 
     public Optional<String> getToolVersion() {

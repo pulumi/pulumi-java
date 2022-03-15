@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * The start date of recurrence.
      * 
      */
-    @InputImport(name="from", required=true)
+    @Import(name="from", required=true)
       private final Output<String> from;
 
     public Output<String> getFrom() {
@@ -33,7 +33,7 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * The end date of recurrence.
      * 
      */
-    @InputImport(name="to")
+    @Import(name="to")
       private final @Nullable Output<String> to;
 
     public Output<String> getTo() {

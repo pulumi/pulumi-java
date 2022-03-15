@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AzureClusterControlPlaneReplicaPlacementArgs extends io.pulum
      * For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
      * 
      */
-    @InputImport(name="azureAvailabilityZone", required=true)
+    @Import(name="azureAvailabilityZone", required=true)
       private final Output<String> azureAvailabilityZone;
 
     public Output<String> getAzureAvailabilityZone() {
@@ -28,7 +28,7 @@ public final class AzureClusterControlPlaneReplicaPlacementArgs extends io.pulum
      * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
 
     public static final NamespaceIamMemberArgs Empty = new NamespaceIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<NamespaceIamMemberConditionArgs> condition;
 
     public Output<NamespaceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -33,7 +33,7 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

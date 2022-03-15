@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A maximum time limit on application initialization, measured from moment the application successfully replies to a healthcheck until it is ready to serve traffic.
      * 
      */
-    @InputImport(name="appStartTimeout")
+    @Import(name="appStartTimeout")
       private final @Nullable Output<String> appStartTimeout;
 
     public Output<String> getAppStartTimeout() {
@@ -34,7 +34,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Interval between health checks.
      * 
      */
-    @InputImport(name="checkInterval")
+    @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
 
     public Output<String> getCheckInterval() {
@@ -45,7 +45,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Number of consecutive failed checks required before removing traffic.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
@@ -56,7 +56,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -67,7 +67,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The request path.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -78,7 +78,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Number of consecutive successful checks required before receiving traffic.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
     public Output<Integer> getSuccessThreshold() {
@@ -89,7 +89,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Time before the check is considered failed.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

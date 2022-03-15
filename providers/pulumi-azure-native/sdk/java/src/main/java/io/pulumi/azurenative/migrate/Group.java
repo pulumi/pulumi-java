@@ -8,7 +8,7 @@ import io.pulumi.azurenative.migrate.GroupArgs;
 import io.pulumi.azurenative.migrate.outputs.GroupPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * For optimistic concurrency control.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -49,7 +49,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Name of the group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Properties of the group.
      * 
      */
-    @OutputExport(name="properties", type=GroupPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=GroupPropertiesResponse.class, parameters={})
     private Output<GroupPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Type of the object = [Microsoft.Migrate/assessmentProjects/groups].
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

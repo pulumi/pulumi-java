@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SingletonPartitionSchemeDescriptionResponse {
     /**
      * Enumerates the ways that a service can be partitioned.
@@ -16,8 +16,8 @@ public final class SingletonPartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor
-    private SingletonPartitionSchemeDescriptionResponse(@OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
+    @CustomType.Constructor
+    private SingletonPartitionSchemeDescriptionResponse(@CustomType.Parameter("partitionScheme") String partitionScheme) {
         this.partitionScheme = partitionScheme;
     }
 

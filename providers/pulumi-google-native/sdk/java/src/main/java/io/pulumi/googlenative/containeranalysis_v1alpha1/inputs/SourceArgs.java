@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StorageSourceArgs;
@@ -27,7 +27,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, some of the source code used for the build may be found in these locations, in the case where the source repository had multiple remotes or submodules. This list will not include the context specified in the context field.
      * 
      */
-    @InputImport(name="additionalContexts")
+    @Import(name="additionalContexts")
       private final @Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
 
     public Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> getAdditionalContexts() {
@@ -38,7 +38,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, the input binary artifacts for the build came from this location.
      * 
      */
-    @InputImport(name="artifactStorageSource")
+    @Import(name="artifactStorageSource")
       private final @Nullable Output<StorageSourceArgs> artifactStorageSource;
 
     public Output<StorageSourceArgs> getArtifactStorageSource() {
@@ -49,7 +49,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, the source code used for the build came from this location.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> getContext() {
@@ -60,7 +60,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * Hash(es) of the build source, which can be used to verify that the original source integrity was maintained in the build. The keys to this map are file paths used as build source and the values contain the hash values for those files. If the build source came in a single package such as a gzipped tarfile (.tar.gz), the FileHash will be for the single path to that file.
      * 
      */
-    @InputImport(name="fileHashes")
+    @Import(name="fileHashes")
       private final @Nullable Output<Map<String,String>> fileHashes;
 
     public Output<Map<String,String>> getFileHashes() {
@@ -71,7 +71,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, get source from this location in a Cloud Repo.
      * 
      */
-    @InputImport(name="repoSource")
+    @Import(name="repoSource")
       private final @Nullable Output<RepoSourceArgs> repoSource;
 
     public Output<RepoSourceArgs> getRepoSource() {
@@ -82,7 +82,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * If provided, get the source from this location in in Google Cloud Storage.
      * 
      */
-    @InputImport(name="storageSource")
+    @Import(name="storageSource")
       private final @Nullable Output<StorageSourceArgs> storageSource;
 
     public Output<StorageSourceArgs> getStorageSource() {

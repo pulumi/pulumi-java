@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterInstanceGroupEbsConfig {
     /**
      * Number of I/O operations per second (IOPS) that the volume supports.
@@ -33,12 +33,12 @@ public final class ClusterMasterInstanceGroupEbsConfig {
      */
     private final @Nullable Integer volumesPerInstance;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMasterInstanceGroupEbsConfig(
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumesPerInstance") @Nullable Integer volumesPerInstance) {
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumesPerInstance") @Nullable Integer volumesPerInstance) {
         this.iops = iops;
         this.size = size;
         this.type = type;

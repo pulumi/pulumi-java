@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTableFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
 
     public static final GetLocalGatewayRouteTableArgs Empty = new GetLocalGatewayRouteTableArgs();
 
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetLocalGatewayRouteTableFilter> filters;
 
     public List<GetLocalGatewayRouteTableFilter> getFilters() {
@@ -28,7 +28,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * The id of the specific local gateway route table to retrieve.
      * 
      */
-    @InputImport(name="localGatewayId")
+    @Import(name="localGatewayId")
       private final @Nullable String localGatewayId;
 
     public Optional<String> getLocalGatewayId() {
@@ -39,7 +39,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * Local Gateway Route Table Id assigned to desired local gateway route table
      * 
      */
-    @InputImport(name="localGatewayRouteTableId")
+    @Import(name="localGatewayRouteTableId")
       private final @Nullable String localGatewayRouteTableId;
 
     public Optional<String> getLocalGatewayRouteTableId() {
@@ -50,7 +50,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * The arn of the Outpost the local gateway route table is associated with.
      * 
      */
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable String outpostArn;
 
     public Optional<String> getOutpostArn() {
@@ -61,7 +61,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * The state of the local gateway route table.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -73,7 +73,7 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
      * a pair on the desired local gateway route table.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

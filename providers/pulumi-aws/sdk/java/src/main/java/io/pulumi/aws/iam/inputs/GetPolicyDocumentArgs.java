@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatement;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * IAM policy document whose statements with non-blank `sid`s will override statements with the same `sid` from documents assigned to the `source_json`, `source_policy_documents`, and `override_policy_documents` arguments. Non-overriding statements will be added to the exported document.
      * 
      */
-    @InputImport(name="overrideJson")
+    @Import(name="overrideJson")
       private final @Nullable String overrideJson;
 
     public Optional<String> getOverrideJson() {
@@ -31,7 +31,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * List of IAM policy documents that are merged together into the exported document. In merging, statements with non-blank `sid`s will override statements with the same `sid` from earlier documents in the list. Statements with non-blank `sid`s will also override statements with the same `sid` from documents provided in the `source_json` and `source_policy_documents` arguments.  Non-overriding statements will be added to the exported document.
      * 
      */
-    @InputImport(name="overridePolicyDocuments")
+    @Import(name="overridePolicyDocuments")
       private final @Nullable List<String> overridePolicyDocuments;
 
     public List<String> getOverridePolicyDocuments() {
@@ -42,7 +42,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * ID for the policy document.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
@@ -53,7 +53,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * IAM policy document used as a base for the exported policy document. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
      * 
      */
-    @InputImport(name="sourceJson")
+    @Import(name="sourceJson")
       private final @Nullable String sourceJson;
 
     public Optional<String> getSourceJson() {
@@ -64,7 +64,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * List of IAM policy documents that are merged together into the exported document. Statements defined in `source_policy_documents` or `source_json` must have unique `sid`s. Statements with the same `sid` from documents assigned to the `override_json` and `override_policy_documents` arguments will override source statements.
      * 
      */
-    @InputImport(name="sourcePolicyDocuments")
+    @Import(name="sourcePolicyDocuments")
       private final @Nullable List<String> sourcePolicyDocuments;
 
     public List<String> getSourcePolicyDocuments() {
@@ -75,7 +75,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * Configuration block for a policy statement. Detailed below.
      * 
      */
-    @InputImport(name="statements")
+    @Import(name="statements")
       private final @Nullable List<GetPolicyDocumentStatement> statements;
 
     public List<GetPolicyDocumentStatement> getStatements() {
@@ -86,7 +86,7 @@ public final class GetPolicyDocumentArgs extends io.pulumi.resources.InvokeArgs 
      * IAM policy document version. Valid values are `2008-10-17` and `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

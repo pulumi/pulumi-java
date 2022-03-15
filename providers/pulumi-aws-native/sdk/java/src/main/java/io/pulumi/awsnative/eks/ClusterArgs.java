@@ -9,7 +9,7 @@ import io.pulumi.awsnative.eks.inputs.ClusterLoggingArgs;
 import io.pulumi.awsnative.eks.inputs.ClusterResourcesVpcConfigArgs;
 import io.pulumi.awsnative.eks.inputs.ClusterTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterArgs Empty = new ClusterArgs();
 
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<List<ClusterEncryptionConfigArgs>> encryptionConfig;
 
     public Output<List<ClusterEncryptionConfigArgs>> getEncryptionConfig() {
         return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
-    @InputImport(name="kubernetesNetworkConfig")
+    @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigArgs> kubernetesNetworkConfig;
 
     public Output<ClusterKubernetesNetworkConfigArgs> getKubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig == null ? Output.empty() : this.kubernetesNetworkConfig;
     }
 
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<ClusterLoggingArgs> logging;
 
     public Output<ClusterLoggingArgs> getLogging() {
@@ -45,14 +45,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name to give to your cluster.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="resourcesVpcConfig", required=true)
+    @Import(name="resourcesVpcConfig", required=true)
       private final Output<ClusterResourcesVpcConfigArgs> resourcesVpcConfig;
 
     public Output<ClusterResourcesVpcConfigArgs> getResourcesVpcConfig() {
@@ -63,7 +63,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -74,7 +74,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ClusterTagArgs>> tags;
 
     public Output<List<ClusterTagArgs>> getTags() {
@@ -85,7 +85,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final String field;
 
     public String getField() {
@@ -27,7 +27,7 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
      * Level to record this diagnostic.
      * 
      */
-    @InputImport(name="level", required=true)
+    @Import(name="level", required=true)
       private final String level;
 
     public String getLevel() {

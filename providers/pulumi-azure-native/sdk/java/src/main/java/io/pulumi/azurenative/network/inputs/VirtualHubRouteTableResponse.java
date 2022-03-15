@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualHubRouteTableResponse extends io.pulumi.resources.Invo
      * List of all routes.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable List<VirtualHubRouteResponse> routes;
 
     public List<VirtualHubRouteResponse> getRoutes() {

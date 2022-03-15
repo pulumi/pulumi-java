@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LicenseValidityDateFormat {
     /**
      * Validity begin date for the license.
@@ -20,10 +20,10 @@ public final class LicenseValidityDateFormat {
      */
     private final String end;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseValidityDateFormat(
-        @OutputCustomType.Parameter("begin") String begin,
-        @OutputCustomType.Parameter("end") String end) {
+        @CustomType.Parameter("begin") String begin,
+        @CustomType.Parameter("end") String end) {
         this.begin = begin;
         this.end = end;
     }

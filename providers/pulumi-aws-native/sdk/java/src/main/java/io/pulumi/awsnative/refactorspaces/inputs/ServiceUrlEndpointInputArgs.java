@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.refactorspaces.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
 
     public static final ServiceUrlEndpointInputArgs Empty = new ServiceUrlEndpointInputArgs();
 
-    @InputImport(name="healthUrl")
+    @Import(name="healthUrl")
       private final @Nullable Output<String> healthUrl;
 
     public Output<String> getHealthUrl() {
         return this.healthUrl == null ? Output.empty() : this.healthUrl;
     }
 
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

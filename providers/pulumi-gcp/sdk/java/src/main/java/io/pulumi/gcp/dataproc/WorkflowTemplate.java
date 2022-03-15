@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.WorkflowTemplateArgs;
@@ -46,7 +46,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Output only. The time template was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -60,7 +60,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * (Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
      * 
      */
-    @OutputExport(name="dagTimeout", type=String.class, parameters={})
+    @Export(name="dagTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> dagTimeout;
 
     /**
@@ -74,7 +74,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Required. The Directed Acyclic Graph of Jobs to submit.
      * 
      */
-    @OutputExport(name="jobs", type=List.class, parameters={WorkflowTemplateJob.class})
+    @Export(name="jobs", type=List.class, parameters={WorkflowTemplateJob.class})
     private Output<List<WorkflowTemplateJob>> jobs;
 
     /**
@@ -88,7 +88,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -102,7 +102,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * The location for the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -116,7 +116,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -130,7 +130,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={WorkflowTemplateParameter.class})
+    @Export(name="parameters", type=List.class, parameters={WorkflowTemplateParameter.class})
     private Output</* @Nullable */ List<WorkflowTemplateParameter>> parameters;
 
     /**
@@ -144,7 +144,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Required. WorkflowTemplate scheduling information.
      * 
      */
-    @OutputExport(name="placement", type=WorkflowTemplatePlacement.class, parameters={})
+    @Export(name="placement", type=WorkflowTemplatePlacement.class, parameters={})
     private Output<WorkflowTemplatePlacement> placement;
 
     /**
@@ -158,7 +158,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * The project for the resource
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -172,7 +172,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * Output only. The time template was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -190,7 +190,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppEngineRoutingResponse {
     /**
      * The host that the task is sent to. The host is constructed from the domain name of the app associated with the queue's project ID (for example .appspot.com), and the service, version, and instance. Tasks which were created using the App Engine SDK might have a custom domain name. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed).
@@ -30,12 +30,12 @@ public final class AppEngineRoutingResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppEngineRoutingResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("version") String version) {
         this.host = host;
         this.instance = instance;
         this.service = service;

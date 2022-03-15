@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleActionSetArgs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * Set of actions to be done as part of the rewrite Rule.
      * 
      */
-    @InputImport(name="actionSet")
+    @Import(name="actionSet")
       private final @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
 
     public Output<ApplicationGatewayRewriteRuleActionSetArgs> getActionSet() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * Conditions based on which the action set execution will be evaluated.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
 
     public Output<List<ApplicationGatewayRewriteRuleConditionArgs>> getConditions() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * Name of the rewrite rule that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
      * Rule Sequence of the rewrite rule that determines the order of execution of a particular rule in a RewriteRuleSet.
      * 
      */
-    @InputImport(name="ruleSequence")
+    @Import(name="ruleSequence")
       private final @Nullable Output<Integer> ruleSequence;
 
     public Output<Integer> getRuleSequence() {

@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.DatasetFilterValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetFilterExpression {
     /**
      * Filtering expression for a parameter
@@ -18,10 +18,10 @@ public final class DatasetFilterExpression {
     private final String expression;
     private final List<DatasetFilterValue> valuesMap;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetFilterExpression(
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("valuesMap") List<DatasetFilterValue> valuesMap) {
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("valuesMap") List<DatasetFilterValue> valuesMap) {
         this.expression = expression;
         this.valuesMap = valuesMap;
     }

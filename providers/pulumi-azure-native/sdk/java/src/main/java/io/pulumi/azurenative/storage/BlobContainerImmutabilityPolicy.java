@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.BlobContainerImmutabilityPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
      * 
      */
-    @OutputExport(name="allowProtectedAppendWrites", type=Boolean.class, parameters={})
+    @Export(name="allowProtectedAppendWrites", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowProtectedAppendWrites;
 
     /**
@@ -50,7 +50,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * Resource Etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
      */
-    @OutputExport(name="immutabilityPeriodSinceCreationInDays", type=Integer.class, parameters={})
+    @Export(name="immutabilityPeriodSinceCreationInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> immutabilityPeriodSinceCreationInDays;
 
     /**
@@ -78,7 +78,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -106,7 +106,7 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

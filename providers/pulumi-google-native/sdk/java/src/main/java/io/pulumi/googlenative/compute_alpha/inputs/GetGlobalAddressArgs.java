@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetGlobalAddressArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGlobalAddressArgs Empty = new GetGlobalAddressArgs();
 
-    @InputImport(name="address", required=true)
+    @Import(name="address", required=true)
       private final String address;
 
     public String getAddress() {
         return this.address;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
      * Uniquely identifies the user within his/her organization.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {
@@ -31,7 +31,7 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
      * Name of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {
@@ -42,7 +42,7 @@ public final class ComputeInstanceCreatedByResponse extends io.pulumi.resources.
      * Uniquely identifies user' Azure Active Directory organization.
      * 
      */
-    @InputImport(name="userOrgId", required=true)
+    @Import(name="userOrgId", required=true)
       private final String userOrgId;
 
     public String getUserOrgId() {

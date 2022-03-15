@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name describing the resource set.
      * 
      */
-    @InputImport(name="resourceSetName", required=true)
+    @Import(name="resourceSetName", required=true)
       private final Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
@@ -32,7 +32,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the resources in the resource set.
      * 
      */
-    @InputImport(name="resourceSetType", required=true)
+    @Import(name="resourceSetType", required=true)
       private final Output<String> resourceSetType;
 
     public Output<String> getResourceSetType() {
@@ -43,7 +43,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * List of resources to add to this resource set. See below.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<List<ResourceSetResourceArgs>> resources;
 
     public Output<List<ResourceSetResourceArgs>> getResources() {
@@ -54,7 +54,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

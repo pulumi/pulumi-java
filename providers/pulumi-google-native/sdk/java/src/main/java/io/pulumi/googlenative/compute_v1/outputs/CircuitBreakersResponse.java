@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CircuitBreakersResponse {
     /**
      * Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
@@ -35,13 +35,13 @@ public final class CircuitBreakersResponse {
      */
     private final Integer maxRetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CircuitBreakersResponse(
-        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
-        @OutputCustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
-        @OutputCustomType.Parameter("maxRequests") Integer maxRequests,
-        @OutputCustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
-        @OutputCustomType.Parameter("maxRetries") Integer maxRetries) {
+        @CustomType.Parameter("maxConnections") Integer maxConnections,
+        @CustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
+        @CustomType.Parameter("maxRequests") Integer maxRequests,
+        @CustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
+        @CustomType.Parameter("maxRetries") Integer maxRetries) {
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
         this.maxRequests = maxRequests;

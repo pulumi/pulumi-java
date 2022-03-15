@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * The ID of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="clientVpnEndpointId", required=true)
+    @Import(name="clientVpnEndpointId", required=true)
       private final Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
@@ -30,7 +30,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -41,7 +41,7 @@ public final class NetworkAssociationArgs extends io.pulumi.resources.ResourceAr
      * The ID of the subnet to associate with the Client VPN endpoint.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

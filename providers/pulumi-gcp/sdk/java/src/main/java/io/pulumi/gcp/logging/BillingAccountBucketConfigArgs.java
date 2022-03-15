@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * The parent resource that contains the logging bucket.
      * 
      */
-    @InputImport(name="billingAccount", required=true)
+    @Import(name="billingAccount", required=true)
       private final Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
@@ -30,7 +30,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
      * 
      */
-    @InputImport(name="bucketId", required=true)
+    @Import(name="bucketId", required=true)
       private final Output<String> bucketId;
 
     public Output<String> getBucketId() {
@@ -41,7 +41,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * Describes this bucket.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * The location of the bucket.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,7 +63,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.DefaultObjectAccessControlArgs;
@@ -53,7 +53,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The name of the bucket.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -67,7 +67,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The domain associated with the entity.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -81,7 +81,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The email address associated with the entity.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -103,7 +103,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * * allAuthenticatedUsers
      * 
      */
-    @OutputExport(name="entity", type=String.class, parameters={})
+    @Export(name="entity", type=String.class, parameters={})
     private Output<String> entity;
 
     /**
@@ -125,7 +125,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The ID for the entity
      * 
      */
-    @OutputExport(name="entityId", type=String.class, parameters={})
+    @Export(name="entityId", type=String.class, parameters={})
     private Output<String> entityId;
 
     /**
@@ -139,7 +139,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The content generation of the object, if applied to an object.
      * 
      */
-    @OutputExport(name="generation", type=Integer.class, parameters={})
+    @Export(name="generation", type=Integer.class, parameters={})
     private Output<Integer> generation;
 
     /**
@@ -153,7 +153,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The name of the object, if applied to an object.
      * 
      */
-    @OutputExport(name="object", type=String.class, parameters={})
+    @Export(name="object", type=String.class, parameters={})
     private Output</* @Nullable */ String> object;
 
     /**
@@ -167,7 +167,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * The project team associated with the entity
      * 
      */
-    @OutputExport(name="projectTeams", type=List.class, parameters={DefaultObjectAccessControlProjectTeam.class})
+    @Export(name="projectTeams", type=List.class, parameters={DefaultObjectAccessControlProjectTeam.class})
     private Output<List<DefaultObjectAccessControlProjectTeam>> projectTeams;
 
     /**
@@ -182,7 +182,7 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
      * Possible values are `OWNER` and `READER`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

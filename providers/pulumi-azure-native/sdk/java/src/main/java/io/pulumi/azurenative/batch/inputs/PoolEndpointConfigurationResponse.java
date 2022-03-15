@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.InboundNatPoolResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PoolEndpointConfigurationResponse extends io.pulumi.resources
      * The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.
      * 
      */
-    @InputImport(name="inboundNatPools", required=true)
+    @Import(name="inboundNatPools", required=true)
       private final List<InboundNatPoolResponse> inboundNatPools;
 
     public List<InboundNatPoolResponse> getInboundNatPools() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsBackupConfiguration;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsDatabaseFlag;
 import io.pulumi.gcp.sql.outputs.DatabaseInstanceSettingsInsightsConfig;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceSettings {
     /**
      * This specifies when the instance should be
@@ -81,25 +81,25 @@ public final class DatabaseInstanceSettings {
     private final @Nullable Map<String,String> userLabels;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceSettings(
-        @OutputCustomType.Parameter("activationPolicy") @Nullable String activationPolicy,
-        @OutputCustomType.Parameter("availabilityType") @Nullable String availabilityType,
-        @OutputCustomType.Parameter("backupConfiguration") @Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration,
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("databaseFlags") @Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags,
-        @OutputCustomType.Parameter("diskAutoresize") @Nullable Boolean diskAutoresize,
-        @OutputCustomType.Parameter("diskAutoresizeLimit") @Nullable Integer diskAutoresizeLimit,
-        @OutputCustomType.Parameter("diskSize") @Nullable Integer diskSize,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("insightsConfig") @Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig,
-        @OutputCustomType.Parameter("ipConfiguration") @Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration,
-        @OutputCustomType.Parameter("locationPreference") @Nullable DatabaseInstanceSettingsLocationPreference locationPreference,
-        @OutputCustomType.Parameter("maintenanceWindow") @Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow,
-        @OutputCustomType.Parameter("pricingPlan") @Nullable String pricingPlan,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("activationPolicy") @Nullable String activationPolicy,
+        @CustomType.Parameter("availabilityType") @Nullable String availabilityType,
+        @CustomType.Parameter("backupConfiguration") @Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration,
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("databaseFlags") @Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags,
+        @CustomType.Parameter("diskAutoresize") @Nullable Boolean diskAutoresize,
+        @CustomType.Parameter("diskAutoresizeLimit") @Nullable Integer diskAutoresizeLimit,
+        @CustomType.Parameter("diskSize") @Nullable Integer diskSize,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("insightsConfig") @Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig,
+        @CustomType.Parameter("ipConfiguration") @Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration,
+        @CustomType.Parameter("locationPreference") @Nullable DatabaseInstanceSettingsLocationPreference locationPreference,
+        @CustomType.Parameter("maintenanceWindow") @Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow,
+        @CustomType.Parameter("pricingPlan") @Nullable String pricingPlan,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.activationPolicy = activationPolicy;
         this.availabilityType = availabilityType;
         this.backupConfiguration = backupConfiguration;

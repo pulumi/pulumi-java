@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
      * Identifier for the managed rule.
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final String ruleId;
 
     public String getRuleId() {
@@ -33,7 +33,7 @@ public final class ManagedRuleOverrideResponse extends io.pulumi.resources.Invok
      * The state of the managed rule. Defaults to Disabled if not specified.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

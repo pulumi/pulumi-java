@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.enums.ServiceImageRepositoryImageRepositoryType;
 import io.pulumi.awsnative.apprunner.inputs.ServiceImageConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
 
     public static final ServiceImageRepositoryArgs Empty = new ServiceImageRepositoryArgs();
 
-    @InputImport(name="imageConfiguration")
+    @Import(name="imageConfiguration")
       private final @Nullable Output<ServiceImageConfigurationArgs> imageConfiguration;
 
     public Output<ServiceImageConfigurationArgs> getImageConfiguration() {
@@ -31,7 +31,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
      * Image Identifier
      * 
      */
-    @InputImport(name="imageIdentifier", required=true)
+    @Import(name="imageIdentifier", required=true)
       private final Output<String> imageIdentifier;
 
     public Output<String> getImageIdentifier() {
@@ -42,7 +42,7 @@ public final class ServiceImageRepositoryArgs extends io.pulumi.resources.Resour
      * Image Repository Type
      * 
      */
-    @InputImport(name="imageRepositoryType", required=true)
+    @Import(name="imageRepositoryType", required=true)
       private final Output<ServiceImageRepositoryImageRepositoryType> imageRepositoryType;
 
     public Output<ServiceImageRepositoryImageRepositoryType> getImageRepositoryType() {

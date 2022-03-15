@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 480,000,000.
      * 
      */
-    @InputImport(name="bitrateBps", required=true)
+    @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
 
     public Integer getBitrateBps() {
@@ -33,7 +33,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * Target CRF level. Must be between 10 and 36, where 10 is the highest quality and 36 is the most efficient compression. The default is 21. *Note*: This field is not supported.
      * 
      */
-    @InputImport(name="crfLevel", required=true)
+    @Import(name="crfLevel", required=true)
       private final Integer crfLevel;
 
     public Integer getCrfLevel() {
@@ -44,7 +44,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * The target video frame rate in frames per second (FPS). Must be less than or equal to 120. Will default to the input frame rate if larger than the input frame rate. The API will generate an output FPS that is divisible by the input FPS, and smaller or equal to the target FPS. See [Calculating frame rate](https://cloud.google.com/transcoder/docs/concepts/frame-rate) for more information.
      * 
      */
-    @InputImport(name="frameRate", required=true)
+    @Import(name="frameRate", required=true)
       private final Double frameRate;
 
     public Double getFrameRate() {
@@ -55,7 +55,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * Select the GOP size based on the specified duration. The default is `3s`. Note that `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
      * 
      */
-    @InputImport(name="gopDuration", required=true)
+    @Import(name="gopDuration", required=true)
       private final String gopDuration;
 
     public String getGopDuration() {
@@ -66,7 +66,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * Select the GOP size based on the specified frame count. Must be greater than zero.
      * 
      */
-    @InputImport(name="gopFrameCount", required=true)
+    @Import(name="gopFrameCount", required=true)
       private final Integer gopFrameCount;
 
     public Integer getGopFrameCount() {
@@ -77,7 +77,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * The height of the video in pixels. Must be an even integer. When not specified, the height is adjusted to match the specified width and input aspect ratio. If both are omitted, the input height is used.
      * 
      */
-    @InputImport(name="heightPixels", required=true)
+    @Import(name="heightPixels", required=true)
       private final Integer heightPixels;
 
     public Integer getHeightPixels() {
@@ -88,7 +88,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * Pixel format to use. The default is `yuv420p`. Supported pixel formats: - `yuv420p` pixel format - `yuv422p` pixel format - `yuv444p` pixel format - `yuv420p10` 10-bit HDR pixel format - `yuv422p10` 10-bit HDR pixel format - `yuv444p10` 10-bit HDR pixel format - `yuv420p12` 12-bit HDR pixel format - `yuv422p12` 12-bit HDR pixel format - `yuv444p12` 12-bit HDR pixel format
      * 
      */
-    @InputImport(name="pixelFormat", required=true)
+    @Import(name="pixelFormat", required=true)
       private final String pixelFormat;
 
     public String getPixelFormat() {
@@ -99,7 +99,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * Enforces the specified codec profile. The following profiles are supported: * `profile0` (default) * `profile1` * `profile2` * `profile3` The available options are [WebM-compatible](https://www.webmproject.org/vp9/profiles/). Note that certain values for this field may cause the transcoder to override other fields you set in the `Vp9CodecSettings` message.
      * 
      */
-    @InputImport(name="profile", required=true)
+    @Import(name="profile", required=true)
       private final String profile;
 
     public String getProfile() {
@@ -110,7 +110,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * Specify the `rate_control_mode`. The default is `vbr`. Supported rate control modes: - `vbr` - variable bitrate
      * 
      */
-    @InputImport(name="rateControlMode", required=true)
+    @Import(name="rateControlMode", required=true)
       private final String rateControlMode;
 
     public String getRateControlMode() {
@@ -121,7 +121,7 @@ public final class Vp9CodecSettingsResponse extends io.pulumi.resources.InvokeAr
      * The width of the video in pixels. Must be an even integer. When not specified, the width is adjusted to match the specified height and input aspect ratio. If both are omitted, the input width is used.
      * 
      */
-    @InputImport(name="widthPixels", required=true)
+    @Import(name="widthPixels", required=true)
       private final Integer widthPixels;
 
     public Integer getWidthPixels() {

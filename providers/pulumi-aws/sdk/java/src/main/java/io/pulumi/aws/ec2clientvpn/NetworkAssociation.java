@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2clientvpn.NetworkAssociationArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.NetworkAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * The unique ID of the target network association.
      * 
      */
-    @OutputExport(name="associationId", type=String.class, parameters={})
+    @Export(name="associationId", type=String.class, parameters={})
     private Output<String> associationId;
 
     /**
@@ -48,7 +48,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the Client VPN endpoint.
      * 
      */
-    @OutputExport(name="clientVpnEndpointId", type=String.class, parameters={})
+    @Export(name="clientVpnEndpointId", type=String.class, parameters={})
     private Output<String> clientVpnEndpointId;
 
     /**
@@ -62,7 +62,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
@@ -76,7 +76,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * The current state of the target network association.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -90,7 +90,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the subnet to associate with the Client VPN endpoint.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -104,7 +104,7 @@ public class NetworkAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the VPC in which the target subnet is located.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

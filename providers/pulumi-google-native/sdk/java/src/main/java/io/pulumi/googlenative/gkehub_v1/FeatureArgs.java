@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1.inputs.CommonFeatureSpecArgs;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FeatureArgs Empty = new FeatureArgs();
 
-    @InputImport(name="featureId")
+    @Import(name="featureId")
       private final @Nullable Output<String> featureId;
 
     public Output<String> getFeatureId() {
@@ -27,14 +27,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * GCP labels for this Feature.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,21 +45,21 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
      * 
      */
-    @InputImport(name="membershipSpecs")
+    @Import(name="membershipSpecs")
       private final @Nullable Output<Map<String,String>> membershipSpecs;
 
     public Output<Map<String,String>> getMembershipSpecs() {
         return this.membershipSpecs == null ? Output.empty() : this.membershipSpecs;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -70,7 +70,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<CommonFeatureSpecArgs> spec;
 
     public Output<CommonFeatureSpecArgs> getSpec() {

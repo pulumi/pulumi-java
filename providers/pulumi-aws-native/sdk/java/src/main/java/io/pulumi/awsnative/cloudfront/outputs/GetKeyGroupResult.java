@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.KeyGroupConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyGroupResult {
     private final @Nullable String id;
     private final @Nullable KeyGroupConfig keyGroupConfig;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyGroupResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("keyGroupConfig") @Nullable KeyGroupConfig keyGroupConfig,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("keyGroupConfig") @Nullable KeyGroupConfig keyGroupConfig,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.id = id;
         this.keyGroupConfig = keyGroupConfig;
         this.lastModifiedTime = lastModifiedTime;

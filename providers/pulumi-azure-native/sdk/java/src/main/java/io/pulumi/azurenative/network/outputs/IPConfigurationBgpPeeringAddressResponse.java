@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPConfigurationBgpPeeringAddressResponse {
     /**
      * The list of custom BGP peering addresses which belong to IP configuration.
@@ -33,12 +33,12 @@ public final class IPConfigurationBgpPeeringAddressResponse {
      */
     private final List<String> tunnelIpAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPConfigurationBgpPeeringAddressResponse(
-        @OutputCustomType.Parameter("customBgpIpAddresses") @Nullable List<String> customBgpIpAddresses,
-        @OutputCustomType.Parameter("defaultBgpIpAddresses") List<String> defaultBgpIpAddresses,
-        @OutputCustomType.Parameter("ipconfigurationId") @Nullable String ipconfigurationId,
-        @OutputCustomType.Parameter("tunnelIpAddresses") List<String> tunnelIpAddresses) {
+        @CustomType.Parameter("customBgpIpAddresses") @Nullable List<String> customBgpIpAddresses,
+        @CustomType.Parameter("defaultBgpIpAddresses") List<String> defaultBgpIpAddresses,
+        @CustomType.Parameter("ipconfigurationId") @Nullable String ipconfigurationId,
+        @CustomType.Parameter("tunnelIpAddresses") List<String> tunnelIpAddresses) {
         this.customBgpIpAddresses = customBgpIpAddresses;
         this.defaultBgpIpAddresses = defaultBgpIpAddresses;
         this.ipconfigurationId = ipconfigurationId;

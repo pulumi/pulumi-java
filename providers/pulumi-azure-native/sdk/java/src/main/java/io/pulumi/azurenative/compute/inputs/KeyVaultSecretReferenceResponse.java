@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
      * The URL referencing a secret in a Key Vault.
      * 
      */
-    @InputImport(name="secretUrl", required=true)
+    @Import(name="secretUrl", required=true)
       private final String secretUrl;
 
     public String getSecretUrl() {
@@ -32,7 +32,7 @@ public final class KeyVaultSecretReferenceResponse extends io.pulumi.resources.I
      * The relative URL of the Key Vault containing the secret.
      * 
      */
-    @InputImport(name="sourceVault", required=true)
+    @Import(name="sourceVault", required=true)
       private final SubResourceResponse sourceVault;
 
     public SubResourceResponse getSourceVault() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      * The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
      * 
      */
-    @InputImport(name="contentSecurityPolicy", required=true)
+    @Import(name="contentSecurityPolicy", required=true)
       private final Output<String> contentSecurityPolicy;
 
     public Output<String> getContentSecurityPolicy() {
@@ -29,7 +29,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Output<Boolean> override;
 
     public Output<Boolean> getOverride() {

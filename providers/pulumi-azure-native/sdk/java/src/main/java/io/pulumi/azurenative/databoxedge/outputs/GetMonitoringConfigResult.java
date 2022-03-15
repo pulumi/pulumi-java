@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMonitoringConfigResult {
     /**
      * The path ID that uniquely identifies the object.
@@ -32,12 +32,12 @@ public final class GetMonitoringConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMonitoringConfigResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("metricConfigurations") List<MetricConfigurationResponse> metricConfigurations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("metricConfigurations") List<MetricConfigurationResponse> metricConfigurations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.metricConfigurations = metricConfigurations;
         this.name = name;

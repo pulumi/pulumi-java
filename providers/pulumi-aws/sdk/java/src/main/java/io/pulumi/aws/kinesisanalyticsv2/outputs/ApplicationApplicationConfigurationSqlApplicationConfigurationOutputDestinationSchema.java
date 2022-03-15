@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema {
     /**
      * Specifies the format of the records on the output stream. Valid values: `CSV`, `JSON`.
@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String recordFormatType;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema(@OutputCustomType.Parameter("recordFormatType") String recordFormatType) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema(@CustomType.Parameter("recordFormatType") String recordFormatType) {
         this.recordFormatType = recordFormatType;
     }
 

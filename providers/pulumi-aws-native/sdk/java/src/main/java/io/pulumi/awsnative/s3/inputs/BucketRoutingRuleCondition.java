@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BucketRoutingRuleCondition extends io.pulumi.resources.Invoke
      * The HTTP error code when the redirect is applied.
      * 
      */
-    @InputImport(name="httpErrorCodeReturnedEquals")
+    @Import(name="httpErrorCodeReturnedEquals")
       private final @Nullable String httpErrorCodeReturnedEquals;
 
     public Optional<String> getHttpErrorCodeReturnedEquals() {
@@ -33,7 +33,7 @@ public final class BucketRoutingRuleCondition extends io.pulumi.resources.Invoke
      * The object key name prefix when the redirect is applied.
      * 
      */
-    @InputImport(name="keyPrefixEquals")
+    @Import(name="keyPrefixEquals")
       private final @Nullable String keyPrefixEquals;
 
     public Optional<String> getKeyPrefixEquals() {

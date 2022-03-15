@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * Search results table's Description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * The timestamp to end the search by (UTC)
      * 
      */
-    @InputImport(name="endSearchTime")
+    @Import(name="endSearchTime")
       private final @Nullable String endSearchTime;
 
     public Optional<String> getEndSearchTime() {
@@ -45,7 +45,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * Limit the search job to return up to specified number of rows.
      * 
      */
-    @InputImport(name="limit")
+    @Import(name="limit")
       private final @Nullable Integer limit;
 
     public Optional<Integer> getLimit() {
@@ -56,7 +56,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * Search job query.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {
@@ -67,7 +67,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * The table to search data from.
      * 
      */
-    @InputImport(name="sourceTable", required=true)
+    @Import(name="sourceTable", required=true)
       private final String sourceTable;
 
     public String getSourceTable() {
@@ -78,7 +78,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * The timestamp to start the search from (UTC)
      * 
      */
-    @InputImport(name="startSearchTime")
+    @Import(name="startSearchTime")
       private final @Nullable String startSearchTime;
 
     public Optional<String> getStartSearchTime() {

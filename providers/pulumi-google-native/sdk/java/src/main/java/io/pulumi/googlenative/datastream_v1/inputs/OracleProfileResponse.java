@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Connection string attributes
      * 
      */
-    @InputImport(name="connectionAttributes", required=true)
+    @Import(name="connectionAttributes", required=true)
       private final Map<String,String> connectionAttributes;
 
     public Map<String,String> getConnectionAttributes() {
@@ -33,7 +33,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Database for the Oracle connection.
      * 
      */
-    @InputImport(name="databaseService", required=true)
+    @Import(name="databaseService", required=true)
       private final String databaseService;
 
     public String getDatabaseService() {
@@ -44,7 +44,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Hostname for the Oracle connection.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final String hostname;
 
     public String getHostname() {
@@ -55,7 +55,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Password for the Oracle connection.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -66,7 +66,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Port for the Oracle connection, default value is 1521.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -77,7 +77,7 @@ public final class OracleProfileResponse extends io.pulumi.resources.InvokeArgs 
      * Username for the Oracle connection.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

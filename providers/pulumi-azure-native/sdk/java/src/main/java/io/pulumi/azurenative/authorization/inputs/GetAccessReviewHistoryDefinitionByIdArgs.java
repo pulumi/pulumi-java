@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
      * The id of the access review history definition.
      * 
      */
-    @InputImport(name="historyDefinitionId", required=true)
+    @Import(name="historyDefinitionId", required=true)
       private final String historyDefinitionId;
 
     public String getHistoryDefinitionId() {

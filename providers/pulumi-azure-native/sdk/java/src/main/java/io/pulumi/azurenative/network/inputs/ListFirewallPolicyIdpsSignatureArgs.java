@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FilterItems;
 import io.pulumi.azurenative.network.inputs.OrderBy;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * Contain all filters names and values
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<FilterItems> filters;
 
     public List<FilterItems> getFilters() {
@@ -33,7 +33,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * The name of the Firewall Policy.
      * 
      */
-    @InputImport(name="firewallPolicyName", required=true)
+    @Import(name="firewallPolicyName", required=true)
       private final String firewallPolicyName;
 
     public String getFirewallPolicyName() {
@@ -44,7 +44,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * Column to sort response by
      * 
      */
-    @InputImport(name="orderBy")
+    @Import(name="orderBy")
       private final @Nullable OrderBy orderBy;
 
     public Optional<OrderBy> getOrderBy() {
@@ -55,7 +55,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * The number of the results to return in each page
      * 
      */
-    @InputImport(name="resultsPerPage")
+    @Import(name="resultsPerPage")
       private final @Nullable Integer resultsPerPage;
 
     public Optional<Integer> getResultsPerPage() {
@@ -77,7 +77,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * Search term in all columns
      * 
      */
-    @InputImport(name="search")
+    @Import(name="search")
       private final @Nullable String search;
 
     public Optional<String> getSearch() {
@@ -88,7 +88,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * The number of records matching the filter to skip
      * 
      */
-    @InputImport(name="skip")
+    @Import(name="skip")
       private final @Nullable Integer skip;
 
     public Optional<Integer> getSkip() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CatalogTableTargetTable {
     /**
      * ID of the Data Catalog in which the table resides.
@@ -25,11 +25,11 @@ public final class CatalogTableTargetTable {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CatalogTableTargetTable(
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;

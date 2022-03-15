@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata about the upgrade for each specific operating system.
      * 
      */
-    @InputImport(name="distributions", required=true)
+    @Import(name="distributions", required=true)
       private final List<UpgradeDistributionResponse> distributions;
 
     public List<UpgradeDistributionResponse> getDistributions() {
@@ -34,7 +34,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Required - The package this Upgrade is for.
      * 
      */
-    @InputImport(name="package", required=true)
+    @Import(name="package", required=true)
       private final String $package;
 
     public String get$package() {
@@ -45,7 +45,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * Required - The version of the package in machine + human readable form.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final VersionResponse version;
 
     public VersionResponse getVersion() {

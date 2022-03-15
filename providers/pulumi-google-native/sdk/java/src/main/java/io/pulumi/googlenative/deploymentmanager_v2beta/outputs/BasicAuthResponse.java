@@ -3,19 +3,19 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BasicAuthResponse {
     private final String password;
     private final String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BasicAuthResponse(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("user") String user) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("user") String user) {
         this.password = password;
         this.user = user;
     }

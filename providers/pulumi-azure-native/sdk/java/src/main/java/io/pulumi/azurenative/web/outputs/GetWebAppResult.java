@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
 import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.outputs.SiteConfigResponse;
 import io.pulumi.azurenative.web.outputs.SlotSwapStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppResult {
     /**
      * Management information availability state for the app.
@@ -264,55 +264,55 @@ public final class GetWebAppResult {
      */
     private final @Nullable String virtualNetworkSubnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppResult(
-        @OutputCustomType.Parameter("availabilityState") String availabilityState,
-        @OutputCustomType.Parameter("clientAffinityEnabled") @Nullable Boolean clientAffinityEnabled,
-        @OutputCustomType.Parameter("clientCertEnabled") @Nullable Boolean clientCertEnabled,
-        @OutputCustomType.Parameter("clientCertExclusionPaths") @Nullable String clientCertExclusionPaths,
-        @OutputCustomType.Parameter("clientCertMode") @Nullable String clientCertMode,
-        @OutputCustomType.Parameter("containerSize") @Nullable Integer containerSize,
-        @OutputCustomType.Parameter("customDomainVerificationId") @Nullable String customDomainVerificationId,
-        @OutputCustomType.Parameter("dailyMemoryTimeQuota") @Nullable Integer dailyMemoryTimeQuota,
-        @OutputCustomType.Parameter("defaultHostName") String defaultHostName,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("enabledHostNames") List<String> enabledHostNames,
-        @OutputCustomType.Parameter("hostNameSslStates") @Nullable List<HostNameSslStateResponse> hostNameSslStates,
-        @OutputCustomType.Parameter("hostNames") List<String> hostNames,
-        @OutputCustomType.Parameter("hostNamesDisabled") @Nullable Boolean hostNamesDisabled,
-        @OutputCustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
-        @OutputCustomType.Parameter("hyperV") @Nullable Boolean hyperV,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("inProgressOperationId") String inProgressOperationId,
-        @OutputCustomType.Parameter("isDefaultContainer") Boolean isDefaultContainer,
-        @OutputCustomType.Parameter("isXenon") @Nullable Boolean isXenon,
-        @OutputCustomType.Parameter("keyVaultReferenceIdentity") @Nullable String keyVaultReferenceIdentity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maxNumberOfWorkers") Integer maxNumberOfWorkers,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outboundIpAddresses") String outboundIpAddresses,
-        @OutputCustomType.Parameter("possibleOutboundIpAddresses") String possibleOutboundIpAddresses,
-        @OutputCustomType.Parameter("redundancyMode") @Nullable String redundancyMode,
-        @OutputCustomType.Parameter("repositorySiteName") String repositorySiteName,
-        @OutputCustomType.Parameter("reserved") @Nullable Boolean reserved,
-        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
-        @OutputCustomType.Parameter("scmSiteAlsoStopped") @Nullable Boolean scmSiteAlsoStopped,
-        @OutputCustomType.Parameter("serverFarmId") @Nullable String serverFarmId,
-        @OutputCustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig,
-        @OutputCustomType.Parameter("slotSwapStatus") SlotSwapStatusResponse slotSwapStatus,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageAccountRequired") @Nullable Boolean storageAccountRequired,
-        @OutputCustomType.Parameter("suspendedTill") String suspendedTill,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetSwapSlot") String targetSwapSlot,
-        @OutputCustomType.Parameter("trafficManagerHostNames") List<String> trafficManagerHostNames,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("usageState") String usageState,
-        @OutputCustomType.Parameter("virtualNetworkSubnetId") @Nullable String virtualNetworkSubnetId) {
+        @CustomType.Parameter("availabilityState") String availabilityState,
+        @CustomType.Parameter("clientAffinityEnabled") @Nullable Boolean clientAffinityEnabled,
+        @CustomType.Parameter("clientCertEnabled") @Nullable Boolean clientCertEnabled,
+        @CustomType.Parameter("clientCertExclusionPaths") @Nullable String clientCertExclusionPaths,
+        @CustomType.Parameter("clientCertMode") @Nullable String clientCertMode,
+        @CustomType.Parameter("containerSize") @Nullable Integer containerSize,
+        @CustomType.Parameter("customDomainVerificationId") @Nullable String customDomainVerificationId,
+        @CustomType.Parameter("dailyMemoryTimeQuota") @Nullable Integer dailyMemoryTimeQuota,
+        @CustomType.Parameter("defaultHostName") String defaultHostName,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("enabledHostNames") List<String> enabledHostNames,
+        @CustomType.Parameter("hostNameSslStates") @Nullable List<HostNameSslStateResponse> hostNameSslStates,
+        @CustomType.Parameter("hostNames") List<String> hostNames,
+        @CustomType.Parameter("hostNamesDisabled") @Nullable Boolean hostNamesDisabled,
+        @CustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @CustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @CustomType.Parameter("hyperV") @Nullable Boolean hyperV,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("inProgressOperationId") String inProgressOperationId,
+        @CustomType.Parameter("isDefaultContainer") Boolean isDefaultContainer,
+        @CustomType.Parameter("isXenon") @Nullable Boolean isXenon,
+        @CustomType.Parameter("keyVaultReferenceIdentity") @Nullable String keyVaultReferenceIdentity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maxNumberOfWorkers") Integer maxNumberOfWorkers,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outboundIpAddresses") String outboundIpAddresses,
+        @CustomType.Parameter("possibleOutboundIpAddresses") String possibleOutboundIpAddresses,
+        @CustomType.Parameter("redundancyMode") @Nullable String redundancyMode,
+        @CustomType.Parameter("repositorySiteName") String repositorySiteName,
+        @CustomType.Parameter("reserved") @Nullable Boolean reserved,
+        @CustomType.Parameter("resourceGroup") String resourceGroup,
+        @CustomType.Parameter("scmSiteAlsoStopped") @Nullable Boolean scmSiteAlsoStopped,
+        @CustomType.Parameter("serverFarmId") @Nullable String serverFarmId,
+        @CustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig,
+        @CustomType.Parameter("slotSwapStatus") SlotSwapStatusResponse slotSwapStatus,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageAccountRequired") @Nullable Boolean storageAccountRequired,
+        @CustomType.Parameter("suspendedTill") String suspendedTill,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetSwapSlot") String targetSwapSlot,
+        @CustomType.Parameter("trafficManagerHostNames") List<String> trafficManagerHostNames,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("usageState") String usageState,
+        @CustomType.Parameter("virtualNetworkSubnetId") @Nullable String virtualNetworkSubnetId) {
         this.availabilityState = availabilityState;
         this.clientAffinityEnabled = clientAffinityEnabled;
         this.clientCertEnabled = clientCertEnabled;

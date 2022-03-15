@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UsernamePasswordCredentialsResponse {
     /**
      * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
@@ -26,11 +26,11 @@ public final class UsernamePasswordCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsernamePasswordCredentialsResponse(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("username") String username) {
         this.password = password;
         this.type = type;
         this.username = username;

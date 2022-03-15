@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingBackupConfiguration;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingDatabaseFlag;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingInsightsConfig;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSetting {
     private final String activationPolicy;
     private final String availabilityType;
@@ -37,25 +37,25 @@ public final class GetDatabaseInstanceSetting {
     private final Map<String,String> userLabels;
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSetting(
-        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
-        @OutputCustomType.Parameter("availabilityType") String availabilityType,
-        @OutputCustomType.Parameter("backupConfigurations") List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations,
-        @OutputCustomType.Parameter("collation") String collation,
-        @OutputCustomType.Parameter("databaseFlags") List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags,
-        @OutputCustomType.Parameter("diskAutoresize") Boolean diskAutoresize,
-        @OutputCustomType.Parameter("diskAutoresizeLimit") Integer diskAutoresizeLimit,
-        @OutputCustomType.Parameter("diskSize") Integer diskSize,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("insightsConfigs") List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs,
-        @OutputCustomType.Parameter("ipConfigurations") List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations,
-        @OutputCustomType.Parameter("locationPreferences") List<GetDatabaseInstanceSettingLocationPreference> locationPreferences,
-        @OutputCustomType.Parameter("maintenanceWindows") List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows,
-        @OutputCustomType.Parameter("pricingPlan") String pricingPlan,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("activationPolicy") String activationPolicy,
+        @CustomType.Parameter("availabilityType") String availabilityType,
+        @CustomType.Parameter("backupConfigurations") List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations,
+        @CustomType.Parameter("collation") String collation,
+        @CustomType.Parameter("databaseFlags") List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags,
+        @CustomType.Parameter("diskAutoresize") Boolean diskAutoresize,
+        @CustomType.Parameter("diskAutoresizeLimit") Integer diskAutoresizeLimit,
+        @CustomType.Parameter("diskSize") Integer diskSize,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("insightsConfigs") List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs,
+        @CustomType.Parameter("ipConfigurations") List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations,
+        @CustomType.Parameter("locationPreferences") List<GetDatabaseInstanceSettingLocationPreference> locationPreferences,
+        @CustomType.Parameter("maintenanceWindows") List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows,
+        @CustomType.Parameter("pricingPlan") String pricingPlan,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @CustomType.Parameter("version") Integer version) {
         this.activationPolicy = activationPolicy;
         this.availabilityType = availabilityType;
         this.backupConfigurations = backupConfigurations;

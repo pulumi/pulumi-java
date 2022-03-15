@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
      * The target AWS account ID to grant or revoke access for.
      * 
      */
-    @InputImport(name="account", required=true)
+    @Import(name="account", required=true)
       private final String account;
 
     public String getAccount() {
@@ -27,7 +27,7 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
      * The cluster identifier.
      * 
      */
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
     public String getClusterIdentifier() {

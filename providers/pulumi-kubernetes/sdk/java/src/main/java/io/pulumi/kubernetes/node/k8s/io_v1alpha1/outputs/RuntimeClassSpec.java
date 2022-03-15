@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs.Overhead;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs.Scheduling;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeClassSpec {
     /**
      * Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. For more details, see https://git.k8s.io/enhancements/keps/sig-node/688-pod-overhead/README.md This field is beta-level as of Kubernetes v1.18, and is only honored by servers that enable the PodOverhead feature.
@@ -29,11 +29,11 @@ public final class RuntimeClassSpec {
      */
     private final @Nullable Scheduling scheduling;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeClassSpec(
-        @OutputCustomType.Parameter("overhead") @Nullable Overhead overhead,
-        @OutputCustomType.Parameter("runtimeHandler") String runtimeHandler,
-        @OutputCustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
+        @CustomType.Parameter("overhead") @Nullable Overhead overhead,
+        @CustomType.Parameter("runtimeHandler") String runtimeHandler,
+        @CustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
         this.overhead = overhead;
         this.runtimeHandler = runtimeHandler;
         this.scheduling = scheduling;

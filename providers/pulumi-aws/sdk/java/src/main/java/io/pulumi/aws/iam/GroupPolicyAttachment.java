@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.GroupPolicyAttachmentArgs;
 import io.pulumi.aws.iam.inputs.GroupPolicyAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class GroupPolicyAttachment extends io.pulumi.resources.CustomResource {
      * The group the policy should be applied to
      * 
      */
-    @OutputExport(name="group", type=String.class, parameters={})
+    @Export(name="group", type=String.class, parameters={})
     private Output<String> group;
 
     /**
@@ -48,7 +48,7 @@ public class GroupPolicyAttachment extends io.pulumi.resources.CustomResource {
      * The ARN of the policy you want to apply
      * 
      */
-    @OutputExport(name="policyArn", type=String.class, parameters={})
+    @Export(name="policyArn", type=String.class, parameters={})
     private Output<String> policyArn;
 
     /**

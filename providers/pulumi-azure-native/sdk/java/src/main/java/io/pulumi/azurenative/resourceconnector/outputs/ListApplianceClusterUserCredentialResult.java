@@ -5,11 +5,11 @@ package io.pulumi.azurenative.resourceconnector.outputs;
 
 import io.pulumi.azurenative.resourceconnector.outputs.ApplianceCredentialKubeconfigResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.HybridConnectionConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListApplianceClusterUserCredentialResult {
     /**
      * Contains the REP (rendezvous endpoint) and “Listener” access token from notification service (NS).
@@ -22,10 +22,10 @@ public final class ListApplianceClusterUserCredentialResult {
      */
     private final List<ApplianceCredentialKubeconfigResponse> kubeconfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListApplianceClusterUserCredentialResult(
-        @OutputCustomType.Parameter("hybridConnectionConfig") HybridConnectionConfigResponse hybridConnectionConfig,
-        @OutputCustomType.Parameter("kubeconfigs") List<ApplianceCredentialKubeconfigResponse> kubeconfigs) {
+        @CustomType.Parameter("hybridConnectionConfig") HybridConnectionConfigResponse hybridConnectionConfig,
+        @CustomType.Parameter("kubeconfigs") List<ApplianceCredentialKubeconfigResponse> kubeconfigs) {
         this.hybridConnectionConfig = hybridConnectionConfig;
         this.kubeconfigs = kubeconfigs;
     }

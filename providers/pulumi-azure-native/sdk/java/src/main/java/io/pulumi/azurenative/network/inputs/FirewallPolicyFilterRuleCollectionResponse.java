@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationRuleResponse;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleCollectionActionResponse;
 import io.pulumi.azurenative.network.inputs.NatRuleResponse;
 import io.pulumi.azurenative.network.inputs.NetworkRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * The action type of a Filter rule collection.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
 
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> getAction() {
@@ -40,7 +40,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * The name of the rule collection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -51,7 +51,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * Priority of the Firewall Policy Rule Collection resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -63,7 +63,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * Expected value is 'FirewallPolicyFilterRuleCollection'.
      * 
      */
-    @InputImport(name="ruleCollectionType", required=true)
+    @Import(name="ruleCollectionType", required=true)
       private final String ruleCollectionType;
 
     public String getRuleCollectionType() {
@@ -74,7 +74,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
      * List of rules included in a rule collection.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable List<Object> rules;
 
     public List<Object> getRules() {

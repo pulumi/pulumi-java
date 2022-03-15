@@ -11,13 +11,13 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamCloudWatchLoggi
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration {
     private final @Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints;
     private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
@@ -33,21 +33,21 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
     private final @Nullable String typeName;
     private final @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamAmazonopensearchserviceDestinationConfiguration(
-        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints,
-        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @OutputCustomType.Parameter("clusterEndpoint") @Nullable String clusterEndpoint,
-        @OutputCustomType.Parameter("domainARN") @Nullable String domainARN,
-        @OutputCustomType.Parameter("indexName") String indexName,
-        @OutputCustomType.Parameter("indexRotationPeriod") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamAmazonopensearchserviceRetryOptions retryOptions,
-        @OutputCustomType.Parameter("roleARN") String roleARN,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode s3BackupMode,
-        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
-        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
+        @CustomType.Parameter("bufferingHints") @Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints,
+        @CustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @CustomType.Parameter("clusterEndpoint") @Nullable String clusterEndpoint,
+        @CustomType.Parameter("domainARN") @Nullable String domainARN,
+        @CustomType.Parameter("indexName") String indexName,
+        @CustomType.Parameter("indexRotationPeriod") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
+        @CustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("retryOptions") @Nullable DeliveryStreamAmazonopensearchserviceRetryOptions retryOptions,
+        @CustomType.Parameter("roleARN") String roleARN,
+        @CustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode s3BackupMode,
+        @CustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
+        @CustomType.Parameter("typeName") @Nullable String typeName,
+        @CustomType.Parameter("vpcConfiguration") @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterEndpoint = clusterEndpoint;

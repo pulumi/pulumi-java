@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SandboxConfigResponse {
     /**
      * Type of the sandbox to use for the node (e.g. 'gvisor')
@@ -20,10 +20,10 @@ public final class SandboxConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SandboxConfigResponse(
-        @OutputCustomType.Parameter("sandboxType") String sandboxType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("sandboxType") String sandboxType,
+        @CustomType.Parameter("type") String type) {
         this.sandboxType = sandboxType;
         this.type = type;
     }

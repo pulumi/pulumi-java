@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetConsentArtifactArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetConsentArtifactArgs Empty = new GetConsentArtifactArgs();
 
-    @InputImport(name="consentArtifactId", required=true)
+    @Import(name="consentArtifactId", required=true)
       private final String consentArtifactId;
 
     public String getConsentArtifactId() {
         return this.consentArtifactId;
     }
 
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final String consentStoreId;
 
     public String getConsentStoreId() {
         return this.consentStoreId;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

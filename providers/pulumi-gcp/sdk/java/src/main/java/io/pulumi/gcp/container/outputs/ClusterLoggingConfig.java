@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLoggingConfig {
     /**
      * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
@@ -16,8 +16,8 @@ public final class ClusterLoggingConfig {
      */
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor
-    private ClusterLoggingConfig(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
+    @CustomType.Constructor
+    private ClusterLoggingConfig(@CustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 

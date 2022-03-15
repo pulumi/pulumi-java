@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration {
     /**
      * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
@@ -17,8 +17,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable String inputStartingPosition;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration(@OutputCustomType.Parameter("inputStartingPosition") @Nullable String inputStartingPosition) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration(@CustomType.Parameter("inputStartingPosition") @Nullable String inputStartingPosition) {
         this.inputStartingPosition = inputStartingPosition;
     }
 

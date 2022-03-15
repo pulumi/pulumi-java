@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuZoneDetailArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final SkuLocationInfoArgs Empty = new SkuLocationInfoArgs();
 
-    @InputImport(name="extendedLocations")
+    @Import(name="extendedLocations")
       private final @Nullable Output<List<String>> extendedLocations;
 
     public Output<List<String>> getExtendedLocations() {
         return this.extendedLocations == null ? Output.empty() : this.extendedLocations;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
         return this.location;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="zoneDetails")
+    @Import(name="zoneDetails")
       private final @Nullable Output<List<SkuZoneDetailArgs>> zoneDetails;
 
     public Output<List<SkuZoneDetailArgs>> getZoneDetails() {
         return this.zoneDetails == null ? Output.empty() : this.zoneDetails;
     }
 
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

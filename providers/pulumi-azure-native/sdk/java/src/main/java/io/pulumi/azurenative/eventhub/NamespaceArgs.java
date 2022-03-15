@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.eventhub.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Value that indicates whether AutoInflate is enabled for eventhub namespace.
      * 
      */
-    @InputImport(name="isAutoInflateEnabled")
+    @Import(name="isAutoInflateEnabled")
       private final @Nullable Output<Boolean> isAutoInflateEnabled;
 
     public Output<Boolean> getIsAutoInflateEnabled() {
@@ -33,7 +33,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Value that indicates whether Kafka is enabled for eventhub namespace.
      * 
      */
-    @InputImport(name="kafkaEnabled")
+    @Import(name="kafkaEnabled")
       private final @Nullable Output<Boolean> kafkaEnabled;
 
     public Output<Boolean> getKafkaEnabled() {
@@ -44,7 +44,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Upper limit of throughput units when AutoInflate is enabled, value should be within 0 to 20 throughput units. ( '0' if AutoInflateEnabled = true)
      * 
      */
-    @InputImport(name="maximumThroughputUnits")
+    @Import(name="maximumThroughputUnits")
       private final @Nullable Output<Integer> maximumThroughputUnits;
 
     public Output<Integer> getMaximumThroughputUnits() {
@@ -66,7 +66,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName")
+    @Import(name="namespaceName")
       private final @Nullable Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -77,7 +77,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of sku resource
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -99,7 +99,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConnectionErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionStatusDefinitionResponse {
     /**
      * Connection error
@@ -28,11 +28,11 @@ public final class ConnectionStatusDefinitionResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionStatusDefinitionResponse(
-        @OutputCustomType.Parameter("error") @Nullable ConnectionErrorResponse error,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("error") @Nullable ConnectionErrorResponse error,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.error = error;
         this.status = status;
         this.target = target;

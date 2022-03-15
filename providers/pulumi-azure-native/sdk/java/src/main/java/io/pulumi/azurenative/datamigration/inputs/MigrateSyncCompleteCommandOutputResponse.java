@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MigrateSyncCompleteCommandOutputResponse extends io.pulumi.re
      * List of errors that happened during the command execution
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<ReportableExceptionResponse> errors;
 
     public List<ReportableExceptionResponse> getErrors() {
@@ -33,7 +33,7 @@ public final class MigrateSyncCompleteCommandOutputResponse extends io.pulumi.re
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

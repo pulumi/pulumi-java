@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -30,7 +30,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * The metrics configuration details
      * 
      */
-    @InputImport(name="metricConfigurations", required=true)
+    @Import(name="metricConfigurations", required=true)
       private final Output<List<MetricConfigurationArgs>> metricConfigurations;
 
     public Output<List<MetricConfigurationArgs>> getMetricConfigurations() {
@@ -41,7 +41,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * The role name.
      * 
      */
-    @InputImport(name="roleName", required=true)
+    @Import(name="roleName", required=true)
       private final Output<String> roleName;
 
     public Output<String> getRoleName() {

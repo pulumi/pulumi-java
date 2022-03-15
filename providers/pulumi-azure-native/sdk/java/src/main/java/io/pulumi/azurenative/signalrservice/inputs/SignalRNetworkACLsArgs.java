@@ -8,7 +8,7 @@ import io.pulumi.azurenative.signalrservice.inputs.NetworkACLArgs;
 import io.pulumi.azurenative.signalrservice.inputs.PrivateEndpointACLArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
      * Default action when no other rule matches
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable Output<Either<String,ACLAction>> defaultAction;
 
     public Output<Either<String,ACLAction>> getDefaultAction() {
@@ -38,7 +38,7 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
      * ACLs for requests from private endpoints
      * 
      */
-    @InputImport(name="privateEndpoints")
+    @Import(name="privateEndpoints")
       private final @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
 
     public Output<List<PrivateEndpointACLArgs>> getPrivateEndpoints() {
@@ -49,7 +49,7 @@ public final class SignalRNetworkACLsArgs extends io.pulumi.resources.ResourceAr
      * ACL for requests from public network
      * 
      */
-    @InputImport(name="publicNetwork")
+    @Import(name="publicNetwork")
       private final @Nullable Output<NetworkACLArgs> publicNetwork;
 
     public Output<NetworkACLArgs> getPublicNetwork() {

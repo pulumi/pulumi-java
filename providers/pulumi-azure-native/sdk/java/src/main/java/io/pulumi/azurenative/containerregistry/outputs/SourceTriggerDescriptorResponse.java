@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceTriggerDescriptorResponse {
     /**
      * The branch name in the repository.
@@ -47,15 +47,15 @@ public final class SourceTriggerDescriptorResponse {
      */
     private final @Nullable String repositoryUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceTriggerDescriptorResponse(
-        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
-        @OutputCustomType.Parameter("commitId") @Nullable String commitId,
-        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("providerType") @Nullable String providerType,
-        @OutputCustomType.Parameter("pullRequestId") @Nullable String pullRequestId,
-        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl) {
+        @CustomType.Parameter("branchName") @Nullable String branchName,
+        @CustomType.Parameter("commitId") @Nullable String commitId,
+        @CustomType.Parameter("eventType") @Nullable String eventType,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("providerType") @Nullable String providerType,
+        @CustomType.Parameter("pullRequestId") @Nullable String pullRequestId,
+        @CustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl) {
         this.branchName = branchName;
         this.commitId = commitId;
         this.eventType = eventType;

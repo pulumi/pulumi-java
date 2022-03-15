@@ -9,13 +9,13 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamCopyCommand;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamRedshiftRetryOptions;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamRedshiftDestinationConfiguration {
     private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
     private final String clusterJDBCURL;
@@ -29,19 +29,19 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamRedshiftDestinationConfiguration(
-        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @OutputCustomType.Parameter("clusterJDBCURL") String clusterJDBCURL,
-        @OutputCustomType.Parameter("copyCommand") DeliveryStreamCopyCommand copyCommand,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRedshiftRetryOptions retryOptions,
-        @OutputCustomType.Parameter("roleARN") String roleARN,
-        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode,
-        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @CustomType.Parameter("clusterJDBCURL") String clusterJDBCURL,
+        @CustomType.Parameter("copyCommand") DeliveryStreamCopyCommand copyCommand,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("retryOptions") @Nullable DeliveryStreamRedshiftRetryOptions retryOptions,
+        @CustomType.Parameter("roleARN") String roleARN,
+        @CustomType.Parameter("s3BackupConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
+        @CustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode,
+        @CustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
+        @CustomType.Parameter("username") String username) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterJDBCURL = clusterJDBCURL;
         this.copyCommand = copyCommand;

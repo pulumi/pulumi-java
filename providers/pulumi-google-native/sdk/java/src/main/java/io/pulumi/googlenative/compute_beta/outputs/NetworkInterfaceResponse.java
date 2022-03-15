@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.AccessConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.AliasIpRangeResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResponse {
     /**
      * An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.
@@ -84,22 +84,22 @@ public final class NetworkInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResponse(
-        @OutputCustomType.Parameter("accessConfigs") List<AccessConfigResponse> accessConfigs,
-        @OutputCustomType.Parameter("aliasIpRanges") List<AliasIpRangeResponse> aliasIpRanges,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("ipv6AccessConfigs") List<AccessConfigResponse> ipv6AccessConfigs,
-        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
-        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkIP") String networkIP,
-        @OutputCustomType.Parameter("nicType") String nicType,
-        @OutputCustomType.Parameter("queueCount") Integer queueCount,
-        @OutputCustomType.Parameter("stackType") String stackType,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("accessConfigs") List<AccessConfigResponse> accessConfigs,
+        @CustomType.Parameter("aliasIpRanges") List<AliasIpRangeResponse> aliasIpRanges,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("ipv6AccessConfigs") List<AccessConfigResponse> ipv6AccessConfigs,
+        @CustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @CustomType.Parameter("ipv6Address") String ipv6Address,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkIP") String networkIP,
+        @CustomType.Parameter("nicType") String nicType,
+        @CustomType.Parameter("queueCount") Integer queueCount,
+        @CustomType.Parameter("stackType") String stackType,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.fingerprint = fingerprint;

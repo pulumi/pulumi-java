@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.AccessControlRecordArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class AccessControlRecord extends io.pulumi.resources.CustomResource {
      * The iSCSI initiator name (IQN).
      * 
      */
-    @OutputExport(name="initiatorName", type=String.class, parameters={})
+    @Export(name="initiatorName", type=String.class, parameters={})
     private Output<String> initiatorName;
 
     /**
@@ -49,7 +49,7 @@ public class AccessControlRecord extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -63,7 +63,7 @@ public class AccessControlRecord extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class AccessControlRecord extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -91,7 +91,7 @@ public class AccessControlRecord extends io.pulumi.resources.CustomResource {
      * The number of volumes using the access control record.
      * 
      */
-    @OutputExport(name="volumeCount", type=Integer.class, parameters={})
+    @Export(name="volumeCount", type=Integer.class, parameters={})
     private Output<Integer> volumeCount;
 
     /**

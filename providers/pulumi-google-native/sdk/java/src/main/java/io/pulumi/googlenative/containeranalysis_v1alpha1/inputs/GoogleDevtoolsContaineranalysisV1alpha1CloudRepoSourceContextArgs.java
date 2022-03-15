@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * An alias, which may be a branch or tag.
      * 
      */
-    @InputImport(name="aliasContext")
+    @Import(name="aliasContext")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> getAliasContext() {
@@ -35,7 +35,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * The ID of the repo.
      * 
      */
-    @InputImport(name="repoId")
+    @Import(name="repoId")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> getRepoId() {
@@ -46,7 +46,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * A revision ID.
      * 
      */
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {

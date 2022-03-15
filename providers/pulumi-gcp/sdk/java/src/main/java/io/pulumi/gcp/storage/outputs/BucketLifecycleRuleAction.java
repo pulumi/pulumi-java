@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleAction {
     /**
      * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
@@ -22,10 +22,10 @@ public final class BucketLifecycleRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleAction(
-        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("storageClass") @Nullable String storageClass,
+        @CustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }

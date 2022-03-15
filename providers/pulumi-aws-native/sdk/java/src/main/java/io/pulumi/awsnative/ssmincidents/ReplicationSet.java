@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ssmincidents.ReplicationSetArgs;
 import io.pulumi.awsnative.ssmincidents.outputs.ReplicationSetReplicationRegion;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
      * The ARN of the ReplicationSet.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -34,7 +34,7 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="deletionProtected", type=Boolean.class, parameters={})
+    @Export(name="deletionProtected", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtected;
 
     public Output</* @Nullable */ Boolean> getDeletionProtected() {
@@ -44,7 +44,7 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
      * The ReplicationSet configuration.
      * 
      */
-    @OutputExport(name="regions", type=List.class, parameters={ReplicationSetReplicationRegion.class})
+    @Export(name="regions", type=List.class, parameters={ReplicationSetReplicationRegion.class})
     private Output<List<ReplicationSetReplicationRegion>> regions;
 
     /**

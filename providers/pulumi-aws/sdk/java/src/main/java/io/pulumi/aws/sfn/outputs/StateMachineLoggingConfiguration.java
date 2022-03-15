@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.sfn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineLoggingConfiguration {
     /**
      * Determines whether execution data is included in your log. When set to `false`, data is excluded.
@@ -28,11 +28,11 @@ public final class StateMachineLoggingConfiguration {
      */
     private final @Nullable String logDestination;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StateMachineLoggingConfiguration(
-        @OutputCustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("logDestination") @Nullable String logDestination) {
+        @CustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("logDestination") @Nullable String logDestination) {
         this.includeExecutionData = includeExecutionData;
         this.level = level;
         this.logDestination = logDestination;

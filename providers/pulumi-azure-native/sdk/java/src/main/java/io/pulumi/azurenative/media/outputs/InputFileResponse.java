@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.SelectAudioTrackByIdResponse;
 import io.pulumi.azurenative.media.outputs.SelectVideoTrackByAttributeResponse;
 import io.pulumi.azurenative.media.outputs.SelectVideoTrackByIdResponse;
 import io.pulumi.azurenative.media.outputs.VideoTrackDescriptorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InputFileResponse {
     /**
      * Name of the file that this input definition applies to.
@@ -36,11 +36,11 @@ public final class InputFileResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InputFileResponse(
-        @OutputCustomType.Parameter("filename") @Nullable String filename,
-        @OutputCustomType.Parameter("includedTracks") @Nullable List<Object> includedTracks,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("filename") @Nullable String filename,
+        @CustomType.Parameter("includedTracks") @Nullable List<Object> includedTracks,
+        @CustomType.Parameter("odataType") String odataType) {
         this.filename = filename;
         this.includedTracks = includedTracks;
         this.odataType = odataType;

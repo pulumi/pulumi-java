@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildStepVolume;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildStep {
     /**
      * A list of arguments that will be presented to the step when it is started.
@@ -106,19 +106,19 @@ public final class TriggerBuildStep {
      */
     private final @Nullable List<String> waitFors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildStep(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("dir") @Nullable String dir,
-        @OutputCustomType.Parameter("entrypoint") @Nullable String entrypoint,
-        @OutputCustomType.Parameter("envs") @Nullable List<String> envs,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secretEnvs") @Nullable List<String> secretEnvs,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
-        @OutputCustomType.Parameter("timing") @Nullable String timing,
-        @OutputCustomType.Parameter("volumes") @Nullable List<TriggerBuildStepVolume> volumes,
-        @OutputCustomType.Parameter("waitFors") @Nullable List<String> waitFors) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("dir") @Nullable String dir,
+        @CustomType.Parameter("entrypoint") @Nullable String entrypoint,
+        @CustomType.Parameter("envs") @Nullable List<String> envs,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secretEnvs") @Nullable List<String> secretEnvs,
+        @CustomType.Parameter("timeout") @Nullable String timeout,
+        @CustomType.Parameter("timing") @Nullable String timing,
+        @CustomType.Parameter("volumes") @Nullable List<TriggerBuildStepVolume> volumes,
+        @CustomType.Parameter("waitFors") @Nullable List<String> waitFors) {
         this.args = args;
         this.dir = dir;
         this.entrypoint = entrypoint;

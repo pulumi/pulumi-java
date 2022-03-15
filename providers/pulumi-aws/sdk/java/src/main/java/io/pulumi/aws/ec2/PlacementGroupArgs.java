@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.enums.PlacementStrategy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the placement group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * `"partition"`.  Valid values are 1 - 7 (default is `2`).
      * 
      */
-    @InputImport(name="partitionCount")
+    @Import(name="partitionCount")
       private final @Nullable Output<Integer> partitionCount;
 
     public Output<Integer> getPartitionCount() {
@@ -46,7 +46,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
      * 
      */
-    @InputImport(name="strategy", required=true)
+    @Import(name="strategy", required=true)
       private final Output<Either<String,PlacementStrategy>> strategy;
 
     public Output<Either<String,PlacementStrategy>> getStrategy() {
@@ -57,7 +57,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

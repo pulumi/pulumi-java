@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
      * SQL query timeout. Unit in seconds.
      * 
      */
-    @InputImport(name="queryTimeout", required=true)
+    @Import(name="queryTimeout", required=true)
       private final Double queryTimeout;
 
     public Double getQueryTimeout() {
@@ -32,7 +32,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
      * SQL query
      * 
      */
-    @InputImport(name="sqlQuery", required=true)
+    @Import(name="sqlQuery", required=true)
       private final String sqlQuery;
 
     public String getSqlQuery() {
@@ -43,7 +43,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
      * SQL storedProcedure name
      * 
      */
-    @InputImport(name="sqlStoredProcedureName", required=true)
+    @Import(name="sqlStoredProcedureName", required=true)
       private final String sqlStoredProcedureName;
 
     public String getSqlStoredProcedureName() {
@@ -54,7 +54,7 @@ public final class DatasetResponseSqlDataPath extends io.pulumi.resources.Invoke
      * SQL table name
      * 
      */
-    @InputImport(name="sqlTableName", required=true)
+    @Import(name="sqlTableName", required=true)
       private final String sqlTableName;
 
     public String getSqlTableName() {

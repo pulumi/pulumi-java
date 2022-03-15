@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse {
     /**
      * Start time of the current step.
@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse {
      */
     private final Integer stepIndex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1RolloutStateResponse(
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("step") String step,
-        @OutputCustomType.Parameter("stepIndex") Integer stepIndex) {
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("step") String step,
+        @CustomType.Parameter("stepIndex") Integer stepIndex) {
         this.startTime = startTime;
         this.step = step;
         this.stepIndex = stepIndex;

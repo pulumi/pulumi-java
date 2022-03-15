@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataSourceVpcConnectionPropertiesArgs extends io.pulumi.resou
      * The Amazon Resource Name (ARN) for the VPC connection.
      * 
      */
-    @InputImport(name="vpcConnectionArn", required=true)
+    @Import(name="vpcConnectionArn", required=true)
       private final Output<String> vpcConnectionArn;
 
     public Output<String> getVpcConnectionArn() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigResponse;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceResponse;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigResponse;
@@ -22,7 +22,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The crowding configuration for the source.
      * 
      */
-    @InputImport(name="crowdingConfig", required=true)
+    @Import(name="crowdingConfig", required=true)
       private final SourceCrowdingConfigResponse crowdingConfig;
 
     public SourceCrowdingConfigResponse getCrowdingConfig() {
@@ -33,7 +33,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The scoring configuration for the source.
      * 
      */
-    @InputImport(name="scoringConfig", required=true)
+    @Import(name="scoringConfig", required=true)
       private final SourceScoringConfigResponse scoringConfig;
 
     public SourceScoringConfigResponse getScoringConfig() {
@@ -44,7 +44,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The source for which this configuration is to be used.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final SourceResponse source;
 
     public SourceResponse getSource() {

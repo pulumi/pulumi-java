@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCanaryEvaluationResult {
     /**
      * The stable version that is serving requests.
@@ -56,17 +56,17 @@ public final class GetCanaryEvaluationResult {
      */
     private final String verdict;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCanaryEvaluationResult(
-        @OutputCustomType.Parameter("control") String control,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("metricLabels") GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("treatment") String treatment,
-        @OutputCustomType.Parameter("verdict") String verdict) {
+        @CustomType.Parameter("control") String control,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("metricLabels") GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("treatment") String treatment,
+        @CustomType.Parameter("verdict") String verdict) {
         this.control = control;
         this.createTime = createTime;
         this.endTime = endTime;

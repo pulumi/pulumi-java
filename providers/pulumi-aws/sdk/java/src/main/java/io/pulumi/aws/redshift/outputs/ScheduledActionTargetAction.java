@@ -6,12 +6,12 @@ package io.pulumi.aws.redshift.outputs;
 import io.pulumi.aws.redshift.outputs.ScheduledActionTargetActionPauseCluster;
 import io.pulumi.aws.redshift.outputs.ScheduledActionTargetActionResizeCluster;
 import io.pulumi.aws.redshift.outputs.ScheduledActionTargetActionResumeCluster;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledActionTargetAction {
     /**
      * An action that runs a `PauseCluster` API operation. Documented below.
@@ -29,11 +29,11 @@ public final class ScheduledActionTargetAction {
      */
     private final @Nullable ScheduledActionTargetActionResumeCluster resumeCluster;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledActionTargetAction(
-        @OutputCustomType.Parameter("pauseCluster") @Nullable ScheduledActionTargetActionPauseCluster pauseCluster,
-        @OutputCustomType.Parameter("resizeCluster") @Nullable ScheduledActionTargetActionResizeCluster resizeCluster,
-        @OutputCustomType.Parameter("resumeCluster") @Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
+        @CustomType.Parameter("pauseCluster") @Nullable ScheduledActionTargetActionPauseCluster pauseCluster,
+        @CustomType.Parameter("resizeCluster") @Nullable ScheduledActionTargetActionResizeCluster resizeCluster,
+        @CustomType.Parameter("resumeCluster") @Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;

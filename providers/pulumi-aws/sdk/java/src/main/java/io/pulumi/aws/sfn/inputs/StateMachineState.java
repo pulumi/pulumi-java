@@ -6,7 +6,7 @@ package io.pulumi.aws.sfn.inputs;
 import io.pulumi.aws.sfn.inputs.StateMachineLoggingConfigurationGetArgs;
 import io.pulumi.aws.sfn.inputs.StateMachineTracingConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the state machine.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * The date the state machine was created.
      * 
      */
-    @InputImport(name="creationDate")
+    @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
@@ -43,7 +43,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * The [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html) definition of the state machine.
      * 
      */
-    @InputImport(name="definition")
+    @Import(name="definition")
       private final @Nullable Output<String> definition;
 
     public Output<String> getDefinition() {
@@ -54,7 +54,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * Defines what execution history events are logged and where they are logged. The `logging_configuration` parameter is only valid when `type` is set to `EXPRESS`. Defaults to `OFF`. For more information see [Logging Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) and [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide.
      * 
      */
-    @InputImport(name="loggingConfiguration")
+    @Import(name="loggingConfiguration")
       private final @Nullable Output<StateMachineLoggingConfigurationGetArgs> loggingConfiguration;
 
     public Output<StateMachineLoggingConfigurationGetArgs> getLoggingConfiguration() {
@@ -65,7 +65,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * The name of the state machine. To enable logging with CloudWatch Logs, the name should only contain `0`-`9`, `A`-`Z`, `a`-`z`, `-` and `_`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -87,7 +87,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * The current status of the state machine. Either `ACTIVE` or `DELETING`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -98,7 +98,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -120,7 +120,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * Selects whether AWS X-Ray tracing is enabled.
      * 
      */
-    @InputImport(name="tracingConfiguration")
+    @Import(name="tracingConfiguration")
       private final @Nullable Output<StateMachineTracingConfigurationGetArgs> tracingConfiguration;
 
     public Output<StateMachineTracingConfigurationGetArgs> getTracingConfiguration() {
@@ -131,7 +131,7 @@ public final class StateMachineState extends io.pulumi.resources.ResourceArgs {
      * Determines whether a Standard or Express state machine is created. The default is `STANDARD`. You cannot update the type of a state machine once it has been created. Valid values: `STANDARD`, `EXPRESS`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.enums.ParameterType;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * Description of this graph parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,7 +37,7 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * Association links for this parameter to nodes in the graph.
      * 
      */
-    @InputImport(name="links", required=true)
+    @Import(name="links", required=true)
       private final Output<List<GraphParameterLinkArgs>> links;
 
     public Output<List<GraphParameterLinkArgs>> getLinks() {
@@ -48,7 +48,7 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * Graph parameter's type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> getType() {

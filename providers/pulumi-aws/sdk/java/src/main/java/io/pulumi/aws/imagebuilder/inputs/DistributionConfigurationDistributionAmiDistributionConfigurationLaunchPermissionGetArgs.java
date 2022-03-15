@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
      * 
      */
-    @InputImport(name="userGroups")
+    @Import(name="userGroups")
       private final @Nullable Output<List<String>> userGroups;
 
     public Output<List<String>> getUserGroups() {
@@ -30,7 +30,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Set of AWS Account identifiers to assign.
      * 
      */
-    @InputImport(name="userIds")
+    @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
     public Output<List<String>> getUserIds() {

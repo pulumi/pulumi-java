@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -14,21 +14,21 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
 
     public static final GetServiceTemplateMetadata Empty = new GetServiceTemplateMetadata();
 
-    @InputImport(name="annotations", required=true)
+    @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
 
-    @InputImport(name="generation", required=true)
+    @Import(name="generation", required=true)
       private final Integer generation;
 
     public Integer getGeneration() {
         return this.generation;
     }
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -39,35 +39,35 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
      * The name of the Cloud Run Service.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
     }
 
-    @InputImport(name="resourceVersion", required=true)
+    @Import(name="resourceVersion", required=true)
       private final String resourceVersion;
 
     public String getResourceVersion() {
         return this.resourceVersion;
     }
 
-    @InputImport(name="selfLink", required=true)
+    @Import(name="selfLink", required=true)
       private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
     }
 
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final String uid;
 
     public String getUid() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupTaint {
     /**
      * The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
@@ -27,11 +27,11 @@ public final class NodeGroupTaint {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupTaint(
-        @OutputCustomType.Parameter("effect") String effect,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("effect") String effect,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.value = value;

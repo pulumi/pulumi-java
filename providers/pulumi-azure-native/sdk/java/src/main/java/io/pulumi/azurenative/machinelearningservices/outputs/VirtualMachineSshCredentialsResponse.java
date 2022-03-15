@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineSshCredentialsResponse {
     /**
      * Password of admin account
@@ -32,12 +32,12 @@ public final class VirtualMachineSshCredentialsResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineSshCredentialsResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("privateKeyData") @Nullable String privateKeyData,
-        @OutputCustomType.Parameter("publicKeyData") @Nullable String publicKeyData,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("privateKeyData") @Nullable String privateKeyData,
+        @CustomType.Parameter("publicKeyData") @Nullable String publicKeyData,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.privateKeyData = privateKeyData;
         this.publicKeyData = publicKeyData;

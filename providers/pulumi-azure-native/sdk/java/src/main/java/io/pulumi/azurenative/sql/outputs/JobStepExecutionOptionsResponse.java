@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStepExecutionOptionsResponse {
     /**
      * Initial delay between retries for job step execution.
@@ -38,13 +38,13 @@ public final class JobStepExecutionOptionsResponse {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStepExecutionOptionsResponse(
-        @OutputCustomType.Parameter("initialRetryIntervalSeconds") @Nullable Integer initialRetryIntervalSeconds,
-        @OutputCustomType.Parameter("maximumRetryIntervalSeconds") @Nullable Integer maximumRetryIntervalSeconds,
-        @OutputCustomType.Parameter("retryAttempts") @Nullable Integer retryAttempts,
-        @OutputCustomType.Parameter("retryIntervalBackoffMultiplier") @Nullable Double retryIntervalBackoffMultiplier,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("initialRetryIntervalSeconds") @Nullable Integer initialRetryIntervalSeconds,
+        @CustomType.Parameter("maximumRetryIntervalSeconds") @Nullable Integer maximumRetryIntervalSeconds,
+        @CustomType.Parameter("retryAttempts") @Nullable Integer retryAttempts,
+        @CustomType.Parameter("retryIntervalBackoffMultiplier") @Nullable Double retryIntervalBackoffMultiplier,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
         this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
         this.retryAttempts = retryAttempts;

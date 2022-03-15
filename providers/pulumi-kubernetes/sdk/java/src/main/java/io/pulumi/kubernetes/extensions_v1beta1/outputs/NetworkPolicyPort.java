@@ -4,14 +4,14 @@
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicyPort {
     /**
      * If specified, the port on the given protocol.  This can either be a numerical or named port on a pod.  If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
@@ -24,10 +24,10 @@ public final class NetworkPolicyPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicyPort(
-        @OutputCustomType.Parameter("port") @Nullable Either<Integer,String> port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("port") @Nullable Either<Integer,String> port,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

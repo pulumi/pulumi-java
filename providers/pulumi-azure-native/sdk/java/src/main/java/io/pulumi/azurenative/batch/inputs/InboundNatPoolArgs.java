@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.InboundEndpointProtocol;
 import io.pulumi.azurenative.batch.inputs.NetworkSecurityGroupRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="backendPort", required=true)
+    @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
     public Output<Integer> getBackendPort() {
@@ -33,7 +33,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="frontendPortRangeEnd", required=true)
+    @Import(name="frontendPortRangeEnd", required=true)
       private final Output<Integer> frontendPortRangeEnd;
 
     public Output<Integer> getFrontendPortRangeEnd() {
@@ -44,7 +44,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="frontendPortRangeStart", required=true)
+    @Import(name="frontendPortRangeStart", required=true)
       private final Output<Integer> frontendPortRangeStart;
 
     public Output<Integer> getFrontendPortRangeStart() {
@@ -55,7 +55,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -66,14 +66,14 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25. If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort. If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.
      * 
      */
-    @InputImport(name="networkSecurityGroupRules")
+    @Import(name="networkSecurityGroupRules")
       private final @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
 
     public Output<List<NetworkSecurityGroupRuleArgs>> getNetworkSecurityGroupRules() {
         return this.networkSecurityGroupRules == null ? Output.empty() : this.networkSecurityGroupRules;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<InboundEndpointProtocol> protocol;
 
     public Output<InboundEndpointProtocol> getProtocol() {

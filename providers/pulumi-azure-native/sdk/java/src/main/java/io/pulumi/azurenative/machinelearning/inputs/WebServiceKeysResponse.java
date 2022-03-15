@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
      * The primary access key.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable String primary;
 
     public Optional<String> getPrimary() {
@@ -33,7 +33,7 @@ public final class WebServiceKeysResponse extends io.pulumi.resources.InvokeArgs
      * The secondary access key.
      * 
      */
-    @InputImport(name="secondary")
+    @Import(name="secondary")
       private final @Nullable String secondary;
 
     public Optional<String> getSecondary() {

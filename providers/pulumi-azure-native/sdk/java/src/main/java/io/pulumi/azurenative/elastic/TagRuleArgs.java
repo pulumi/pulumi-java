@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic;
 
 import io.pulumi.azurenative.elastic.inputs.MonitoringTagRulesPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName", required=true)
+    @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
     public Output<String> getMonitorName() {
@@ -30,7 +30,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the monitoring tag rules.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MonitoringTagRulesPropertiesArgs> properties;
 
     public Output<MonitoringTagRulesPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the Elastic resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class TagRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Tag Rule Set resource name
      * 
      */
-    @InputImport(name="ruleSetName")
+    @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {

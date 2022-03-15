@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * A map contains the attributes of the instance. Check the [doc](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html#API_RegisterInstance_RequestSyntax) for the supported attributes and syntax.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -30,7 +30,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the service instance.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -41,7 +41,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the service that you want to use to create the instance.
      * 
      */
-    @InputImport(name="serviceId")
+    @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
     public Output<String> getServiceId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityResponse {
     /**
      * An identity provider that reflects the `issuer` in the workload identity pool.
@@ -30,12 +30,12 @@ public final class AuthorityResponse {
      */
     private final String workloadIdentityPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityResponse(
-        @OutputCustomType.Parameter("identityProvider") String identityProvider,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("oidcJwks") String oidcJwks,
-        @OutputCustomType.Parameter("workloadIdentityPool") String workloadIdentityPool) {
+        @CustomType.Parameter("identityProvider") String identityProvider,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("oidcJwks") String oidcJwks,
+        @CustomType.Parameter("workloadIdentityPool") String workloadIdentityPool) {
         this.identityProvider = identityProvider;
         this.issuer = issuer;
         this.oidcJwks = oidcJwks;

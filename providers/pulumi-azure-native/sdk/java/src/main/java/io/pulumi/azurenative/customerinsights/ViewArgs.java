@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * View definition.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<String> definition;
 
     public Output<String> getDefinition() {
@@ -30,7 +30,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * Localized display name for the view.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
@@ -41,7 +41,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -52,7 +52,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * the user ID.
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
@@ -74,7 +74,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the view.
      * 
      */
-    @InputImport(name="viewName")
+    @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
     public Output<String> getViewName() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.athena;
 
 import io.pulumi.aws.athena.inputs.DatabaseEncryptionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Name of s3 bucket to save the results of the query execution.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An `encryption_configuration` block is documented below.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<DatabaseEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<DatabaseEncryptionConfigurationArgs> getEncryptionConfiguration() {
@@ -42,7 +42,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean that indicates all tables should be deleted from the database so that the database can be destroyed without error. The tables are *not* recoverable.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -53,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the database to create.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

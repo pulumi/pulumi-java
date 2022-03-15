@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.PrivateDnsZoneConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -31,7 +31,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
      * A collection of private dns zone configurations of the private dns zone group.
      * 
      */
-    @InputImport(name="privateDnsZoneConfigs")
+    @Import(name="privateDnsZoneConfigs")
       private final @Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs;
 
     public Output<List<PrivateDnsZoneConfigArgs>> getPrivateDnsZoneConfigs() {
@@ -53,7 +53,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the private dns zone group.
      * 
      */
-    @InputImport(name="privateDnsZoneGroupName")
+    @Import(name="privateDnsZoneGroupName")
       private final @Nullable Output<String> privateDnsZoneGroupName;
 
     public Output<String> getPrivateDnsZoneGroupName() {
@@ -64,7 +64,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointName", required=true)
+    @Import(name="privateEndpointName", required=true)
       private final Output<String> privateEndpointName;
 
     public Output<String> getPrivateEndpointName() {
@@ -75,7 +75,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

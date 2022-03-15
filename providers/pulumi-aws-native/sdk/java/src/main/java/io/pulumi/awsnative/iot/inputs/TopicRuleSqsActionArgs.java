@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
 
     public static final TopicRuleSqsActionArgs Empty = new TopicRuleSqsActionArgs();
 
-    @InputImport(name="queueUrl", required=true)
+    @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
     public Output<String> getQueueUrl() {
         return this.queueUrl;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="useBase64")
+    @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;
 
     public Output<Boolean> getUseBase64() {

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonitoringSettingComponentConfigurationMode;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationComponentConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationComponentMonitoringSetting {
     /**
      * The ARN of the compnonent.
@@ -44,14 +44,14 @@ public final class ApplicationComponentMonitoringSetting {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationComponentMonitoringSetting(
-        @OutputCustomType.Parameter("componentARN") @Nullable String componentARN,
-        @OutputCustomType.Parameter("componentConfigurationMode") ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
-        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
-        @OutputCustomType.Parameter("customComponentConfiguration") @Nullable ApplicationComponentConfiguration customComponentConfiguration,
-        @OutputCustomType.Parameter("defaultOverwriteComponentConfiguration") @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("componentARN") @Nullable String componentARN,
+        @CustomType.Parameter("componentConfigurationMode") ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
+        @CustomType.Parameter("componentName") @Nullable String componentName,
+        @CustomType.Parameter("customComponentConfiguration") @Nullable ApplicationComponentConfiguration customComponentConfiguration,
+        @CustomType.Parameter("defaultOverwriteComponentConfiguration") @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
+        @CustomType.Parameter("tier") String tier) {
         this.componentARN = componentARN;
         this.componentConfigurationMode = componentConfigurationMode;
         this.componentName = componentName;

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PhotonPersistentDiskVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
@@ -22,10 +22,10 @@ public final class PhotonPersistentDiskVolumeSource {
      */
     private final String pdID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PhotonPersistentDiskVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("pdID") String pdID) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("pdID") String pdID) {
         this.fsType = fsType;
         this.pdID = pdID;
     }

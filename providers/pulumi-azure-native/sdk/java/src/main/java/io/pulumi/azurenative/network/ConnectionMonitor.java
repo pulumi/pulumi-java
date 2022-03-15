@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestConfigurationR
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorTestGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -43,7 +43,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Determines if the connection monitor will start automatically once created.
      * 
      */
-    @OutputExport(name="autoStart", type=Boolean.class, parameters={})
+    @Export(name="autoStart", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoStart;
 
     /**
@@ -57,7 +57,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Type of connection monitor.
      * 
      */
-    @OutputExport(name="connectionMonitorType", type=String.class, parameters={})
+    @Export(name="connectionMonitorType", type=String.class, parameters={})
     private Output<String> connectionMonitorType;
 
     /**
@@ -71,7 +71,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Describes the destination of connection monitor.
      * 
      */
-    @OutputExport(name="destination", type=ConnectionMonitorDestinationResponse.class, parameters={})
+    @Export(name="destination", type=ConnectionMonitorDestinationResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionMonitorDestinationResponse> destination;
 
     /**
@@ -85,7 +85,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * List of connection monitor endpoints.
      * 
      */
-    @OutputExport(name="endpoints", type=List.class, parameters={ConnectionMonitorEndpointResponse.class})
+    @Export(name="endpoints", type=List.class, parameters={ConnectionMonitorEndpointResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorEndpointResponse>> endpoints;
 
     /**
@@ -99,7 +99,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -113,7 +113,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Connection monitor location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -127,7 +127,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Monitoring interval in seconds.
      * 
      */
-    @OutputExport(name="monitoringIntervalInSeconds", type=Integer.class, parameters={})
+    @Export(name="monitoringIntervalInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> monitoringIntervalInSeconds;
 
     /**
@@ -141,7 +141,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * The monitoring status of the connection monitor.
      * 
      */
-    @OutputExport(name="monitoringStatus", type=String.class, parameters={})
+    @Export(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
     /**
@@ -155,7 +155,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Name of the connection monitor.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -169,7 +169,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Optional notes to be associated with the connection monitor.
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -183,7 +183,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * List of connection monitor outputs.
      * 
      */
-    @OutputExport(name="outputs", type=List.class, parameters={ConnectionMonitorOutputResponse.class})
+    @Export(name="outputs", type=List.class, parameters={ConnectionMonitorOutputResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorOutputResponse>> outputs;
 
     /**
@@ -197,7 +197,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * The provisioning state of the connection monitor.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -211,7 +211,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Describes the source of connection monitor.
      * 
      */
-    @OutputExport(name="source", type=ConnectionMonitorSourceResponse.class, parameters={})
+    @Export(name="source", type=ConnectionMonitorSourceResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionMonitorSourceResponse> source;
 
     /**
@@ -225,7 +225,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * The date and time when the connection monitor was started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -239,7 +239,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Connection monitor tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -253,7 +253,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * List of connection monitor test configurations.
      * 
      */
-    @OutputExport(name="testConfigurations", type=List.class, parameters={ConnectionMonitorTestConfigurationResponse.class})
+    @Export(name="testConfigurations", type=List.class, parameters={ConnectionMonitorTestConfigurationResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorTestConfigurationResponse>> testConfigurations;
 
     /**
@@ -267,7 +267,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * List of connection monitor test groups.
      * 
      */
-    @OutputExport(name="testGroups", type=List.class, parameters={ConnectionMonitorTestGroupResponse.class})
+    @Export(name="testGroups", type=List.class, parameters={ConnectionMonitorTestGroupResponse.class})
     private Output</* @Nullable */ List<ConnectionMonitorTestGroupResponse>> testGroups;
 
     /**
@@ -281,7 +281,7 @@ public class ConnectionMonitor extends io.pulumi.resources.CustomResource {
      * Connection monitor type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

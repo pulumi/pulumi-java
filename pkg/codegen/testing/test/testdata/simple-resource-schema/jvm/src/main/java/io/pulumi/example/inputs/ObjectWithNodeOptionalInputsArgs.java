@@ -4,7 +4,7 @@
 package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
 
     public static final ObjectWithNodeOptionalInputsArgs Empty = new ObjectWithNodeOptionalInputsArgs();
 
-    @InputImport(name="bar")
+    @Import(name="bar")
       private final @Nullable Output<Integer> bar;
 
     public Output<Integer> getBar() {
         return this.bar == null ? Output.empty() : this.bar;
     }
 
-    @InputImport(name="foo", required=true)
+    @Import(name="foo", required=true)
       private final Output<String> foo;
 
     public Output<String> getFoo() {

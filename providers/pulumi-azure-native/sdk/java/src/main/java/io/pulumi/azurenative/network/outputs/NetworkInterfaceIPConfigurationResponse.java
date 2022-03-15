@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationPriv
 import io.pulumi.azurenative.network.outputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkTapResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceIPConfigurationResponse {
     /**
      * The reference to ApplicationGatewayBackendAddressPool resource.
@@ -107,25 +107,25 @@ public final class NetworkInterfaceIPConfigurationResponse {
      */
     private final @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceIPConfigurationResponse(
-        @OutputCustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools,
-        @OutputCustomType.Parameter("applicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools,
-        @OutputCustomType.Parameter("loadBalancerInboundNatRules") @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
-        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
-        @OutputCustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
-        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
-        @OutputCustomType.Parameter("privateLinkConnectionProperties") NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIPAddress") @Nullable PublicIPAddressResponse publicIPAddress,
-        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("virtualNetworkTaps") @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
+        @CustomType.Parameter("applicationGatewayBackendAddressPools") @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools,
+        @CustomType.Parameter("applicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools,
+        @CustomType.Parameter("loadBalancerInboundNatRules") @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("primary") @Nullable Boolean primary,
+        @CustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @CustomType.Parameter("privateIPAddressVersion") @Nullable String privateIPAddressVersion,
+        @CustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @CustomType.Parameter("privateLinkConnectionProperties") NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIPAddress") @Nullable PublicIPAddressResponse publicIPAddress,
+        @CustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("virtualNetworkTaps") @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.etag = etag;

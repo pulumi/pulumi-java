@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * The resource ID of the environment.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -30,7 +30,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -41,7 +41,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
      * The name of the newly created attachment (output parameter).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

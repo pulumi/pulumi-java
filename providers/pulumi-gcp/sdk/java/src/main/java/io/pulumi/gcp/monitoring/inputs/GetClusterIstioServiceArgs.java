@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * is defined. Corresponds to the clusterName resource label in k8s_cluster resources.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -31,7 +31,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * is defined. Corresponds to the location resource label in k8s_cluster resources.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -43,7 +43,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -55,7 +55,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * Corresponds to the destination_service_name metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
@@ -67,7 +67,7 @@ public final class GetClusterIstioServiceArgs extends io.pulumi.resources.Invoke
      * Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
      */
-    @InputImport(name="serviceNamespace", required=true)
+    @Import(name="serviceNamespace", required=true)
       private final String serviceNamespace;
 
     public String getServiceNamespace() {

@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration {
     private final String documentDataFieldName;
     private final @Nullable String documentTitleFieldName;
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration(
-        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
-        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @CustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @CustomType.Parameter("name") String name) {
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;

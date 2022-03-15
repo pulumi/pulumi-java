@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedVirtualNetworkReferenceResponse {
     /**
      * Reference ManagedVirtualNetwork name.
@@ -20,10 +20,10 @@ public final class ManagedVirtualNetworkReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedVirtualNetworkReferenceResponse(
-        @OutputCustomType.Parameter("referenceName") String referenceName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("referenceName") String referenceName,
+        @CustomType.Parameter("type") String type) {
         this.referenceName = referenceName;
         this.type = type;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * Resource Type of Application.
@@ -99,25 +99,25 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("applicationType") @Nullable String applicationType,
-        @OutputCustomType.Parameter("commandLineArguments") @Nullable String commandLineArguments,
-        @OutputCustomType.Parameter("commandLineSetting") String commandLineSetting,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("iconContent") String iconContent,
-        @OutputCustomType.Parameter("iconHash") String iconHash,
-        @OutputCustomType.Parameter("iconIndex") @Nullable Integer iconIndex,
-        @OutputCustomType.Parameter("iconPath") @Nullable String iconPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("msixPackageApplicationId") @Nullable String msixPackageApplicationId,
-        @OutputCustomType.Parameter("msixPackageFamilyName") @Nullable String msixPackageFamilyName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("showInPortal") @Nullable Boolean showInPortal,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("applicationType") @Nullable String applicationType,
+        @CustomType.Parameter("commandLineArguments") @Nullable String commandLineArguments,
+        @CustomType.Parameter("commandLineSetting") String commandLineSetting,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("filePath") @Nullable String filePath,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("iconContent") String iconContent,
+        @CustomType.Parameter("iconHash") String iconHash,
+        @CustomType.Parameter("iconIndex") @Nullable Integer iconIndex,
+        @CustomType.Parameter("iconPath") @Nullable String iconPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("msixPackageApplicationId") @Nullable String msixPackageApplicationId,
+        @CustomType.Parameter("msixPackageFamilyName") @Nullable String msixPackageFamilyName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("showInPortal") @Nullable Boolean showInPortal,
+        @CustomType.Parameter("type") String type) {
         this.applicationType = applicationType;
         this.commandLineArguments = commandLineArguments;
         this.commandLineSetting = commandLineSetting;

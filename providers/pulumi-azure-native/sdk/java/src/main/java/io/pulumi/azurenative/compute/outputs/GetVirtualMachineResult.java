@@ -18,7 +18,7 @@ import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineInstanceViewResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineResult {
     /**
      * Specifies additional capabilities enabled or disabled on the virtual machine.
@@ -195,41 +195,41 @@ public final class GetVirtualMachineResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineResult(
-        @OutputCustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
-        @OutputCustomType.Parameter("availabilitySet") @Nullable SubResourceResponse availabilitySet,
-        @OutputCustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
-        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("extensionsTimeBudget") @Nullable String extensionsTimeBudget,
-        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
-        @OutputCustomType.Parameter("host") @Nullable SubResourceResponse host,
-        @OutputCustomType.Parameter("hostGroup") @Nullable SubResourceResponse hostGroup,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable VirtualMachineIdentityResponse identity,
-        @OutputCustomType.Parameter("instanceView") VirtualMachineInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
-        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
-        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
-        @OutputCustomType.Parameter("priority") @Nullable String priority,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
-        @OutputCustomType.Parameter("resources") List<VirtualMachineExtensionResponse> resources,
-        @OutputCustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
-        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userData") @Nullable String userData,
-        @OutputCustomType.Parameter("virtualMachineScaleSet") @Nullable SubResourceResponse virtualMachineScaleSet,
-        @OutputCustomType.Parameter("vmId") String vmId,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
+        @CustomType.Parameter("availabilitySet") @Nullable SubResourceResponse availabilitySet,
+        @CustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
+        @CustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @CustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("extensionsTimeBudget") @Nullable String extensionsTimeBudget,
+        @CustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @CustomType.Parameter("host") @Nullable SubResourceResponse host,
+        @CustomType.Parameter("hostGroup") @Nullable SubResourceResponse hostGroup,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable VirtualMachineIdentityResponse identity,
+        @CustomType.Parameter("instanceView") VirtualMachineInstanceViewResponse instanceView,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @CustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @CustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @CustomType.Parameter("priority") @Nullable String priority,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @CustomType.Parameter("resources") List<VirtualMachineExtensionResponse> resources,
+        @CustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
+        @CustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userData") @Nullable String userData,
+        @CustomType.Parameter("virtualMachineScaleSet") @Nullable SubResourceResponse virtualMachineScaleSet,
+        @CustomType.Parameter("vmId") String vmId,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilitySet = availabilitySet;
         this.billingProfile = billingProfile;

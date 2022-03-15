@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfig;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigPreemptibleWorkerConfig {
     /**
      * Disk Config
@@ -27,11 +27,11 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      */
     private final @Nullable Integer numInstances;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigPreemptibleWorkerConfig(
-        @OutputCustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig,
-        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
-        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances) {
+        @CustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig,
+        @CustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @CustomType.Parameter("numInstances") @Nullable Integer numInstances) {
         this.diskConfig = diskConfig;
         this.instanceNames = instanceNames;
         this.numInstances = numInstances;

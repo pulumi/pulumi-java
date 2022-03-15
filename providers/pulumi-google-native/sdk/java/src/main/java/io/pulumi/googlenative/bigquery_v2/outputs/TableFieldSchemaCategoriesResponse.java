@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableFieldSchemaCategoriesResponse {
     /**
      * A list of category resource names. For example, "projects/1/taxonomies/2/categories/3". At most 5 categories are allowed.
@@ -16,8 +16,8 @@ public final class TableFieldSchemaCategoriesResponse {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
-    private TableFieldSchemaCategoriesResponse(@OutputCustomType.Parameter("names") List<String> names) {
+    @CustomType.Constructor
+    private TableFieldSchemaCategoriesResponse(@CustomType.Parameter("names") List<String> names) {
         this.names = names;
     }
 

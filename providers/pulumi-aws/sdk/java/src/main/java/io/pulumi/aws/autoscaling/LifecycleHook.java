@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.autoscaling.LifecycleHookArgs;
 import io.pulumi.aws.autoscaling.inputs.LifecycleHookState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +45,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The name of the Auto Scaling group to which you want to assign the lifecycle hook
      * 
      */
-    @OutputExport(name="autoscalingGroupName", type=String.class, parameters={})
+    @Export(name="autoscalingGroupName", type=String.class, parameters={})
     private Output<String> autoscalingGroupName;
 
     /**
@@ -59,7 +59,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
      * 
      */
-    @OutputExport(name="defaultResult", type=String.class, parameters={})
+    @Export(name="defaultResult", type=String.class, parameters={})
     private Output<String> defaultResult;
 
     /**
@@ -73,7 +73,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
      * 
      */
-    @OutputExport(name="heartbeatTimeout", type=Integer.class, parameters={})
+    @Export(name="heartbeatTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> heartbeatTimeout;
 
     /**
@@ -87,7 +87,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
      * 
      */
-    @OutputExport(name="lifecycleTransition", type=String.class, parameters={})
+    @Export(name="lifecycleTransition", type=String.class, parameters={})
     private Output<String> lifecycleTransition;
 
     /**
@@ -101,7 +101,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The name of the lifecycle hook.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -115,7 +115,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
      * 
      */
-    @OutputExport(name="notificationMetadata", type=String.class, parameters={})
+    @Export(name="notificationMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationMetadata;
 
     /**
@@ -129,7 +129,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
      * 
      */
-    @OutputExport(name="notificationTargetArn", type=String.class, parameters={})
+    @Export(name="notificationTargetArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationTargetArn;
 
     /**
@@ -143,7 +143,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**

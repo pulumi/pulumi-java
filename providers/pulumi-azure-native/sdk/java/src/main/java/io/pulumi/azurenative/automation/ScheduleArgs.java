@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.ScheduleFrequency;
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the AdvancedSchedule.
      * 
      */
-    @InputImport(name="advancedSchedule")
+    @Import(name="advancedSchedule")
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
     public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
@@ -33,7 +33,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -44,7 +44,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description of the schedule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the end time of the schedule.
      * 
      */
-    @InputImport(name="expiryTime")
+    @Import(name="expiryTime")
       private final @Nullable Output<String> expiryTime;
 
     public Output<String> getExpiryTime() {
@@ -66,7 +66,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the frequency of the schedule.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<Either<String,ScheduleFrequency>> frequency;
 
     public Output<Either<String,ScheduleFrequency>> getFrequency() {
@@ -77,7 +77,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the interval of the schedule.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Object> interval;
 
     public Output<Object> getInterval() {
@@ -88,7 +88,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the Schedule.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The schedule name.
      * 
      */
-    @InputImport(name="scheduleName")
+    @Import(name="scheduleName")
       private final @Nullable Output<String> scheduleName;
 
     public Output<String> getScheduleName() {
@@ -121,7 +121,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the start time of the schedule.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -132,7 +132,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the time zone of the schedule.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VolumeDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * devicePath is the path inside of the container that the device will be mapped to.
      * 
      */
-    @InputImport(name="devicePath", required=true)
+    @Import(name="devicePath", required=true)
       private final Output<String> devicePath;
 
     public Output<String> getDevicePath() {
@@ -32,7 +32,7 @@ public final class VolumeDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * name must match the name of a persistentVolumeClaim in the pod
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.HttpMessageDiagnosticResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDiagnosticSettingsResponse {
     /**
      * Diagnostic settings for request.
@@ -22,10 +22,10 @@ public final class PipelineDiagnosticSettingsResponse {
      */
     private final @Nullable HttpMessageDiagnosticResponse response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDiagnosticSettingsResponse(
-        @OutputCustomType.Parameter("request") @Nullable HttpMessageDiagnosticResponse request,
-        @OutputCustomType.Parameter("response") @Nullable HttpMessageDiagnosticResponse response) {
+        @CustomType.Parameter("request") @Nullable HttpMessageDiagnosticResponse request,
+        @CustomType.Parameter("response") @Nullable HttpMessageDiagnosticResponse response) {
         this.request = request;
         this.response = response;
     }

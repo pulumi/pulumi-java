@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.SkuZoneDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuLocationInfoResponse {
     private final @Nullable List<String> extendedLocations;
     private final String location;
@@ -19,13 +19,13 @@ public final class SkuLocationInfoResponse {
     private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuLocationInfoResponse(
-        @OutputCustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("zoneDetails") @Nullable List<SkuZoneDetailResponse> zoneDetails,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("zoneDetails") @Nullable List<SkuZoneDetailResponse> zoneDetails,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.extendedLocations = extendedLocations;
         this.location = location;
         this.type = type;

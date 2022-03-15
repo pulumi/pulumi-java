@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CacheKeyPolicyResponse {
     /**
      * If true, requests to different hosts will be cached separately.
@@ -47,15 +47,15 @@ public final class CacheKeyPolicyResponse {
      */
     private final List<String> queryStringWhitelist;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheKeyPolicyResponse(
-        @OutputCustomType.Parameter("includeHost") Boolean includeHost,
-        @OutputCustomType.Parameter("includeHttpHeaders") List<String> includeHttpHeaders,
-        @OutputCustomType.Parameter("includeNamedCookies") List<String> includeNamedCookies,
-        @OutputCustomType.Parameter("includeProtocol") Boolean includeProtocol,
-        @OutputCustomType.Parameter("includeQueryString") Boolean includeQueryString,
-        @OutputCustomType.Parameter("queryStringBlacklist") List<String> queryStringBlacklist,
-        @OutputCustomType.Parameter("queryStringWhitelist") List<String> queryStringWhitelist) {
+        @CustomType.Parameter("includeHost") Boolean includeHost,
+        @CustomType.Parameter("includeHttpHeaders") List<String> includeHttpHeaders,
+        @CustomType.Parameter("includeNamedCookies") List<String> includeNamedCookies,
+        @CustomType.Parameter("includeProtocol") Boolean includeProtocol,
+        @CustomType.Parameter("includeQueryString") Boolean includeQueryString,
+        @CustomType.Parameter("queryStringBlacklist") List<String> queryStringBlacklist,
+        @CustomType.Parameter("queryStringWhitelist") List<String> queryStringWhitelist) {
         this.includeHost = includeHost;
         this.includeHttpHeaders = includeHttpHeaders;
         this.includeNamedCookies = includeNamedCookies;

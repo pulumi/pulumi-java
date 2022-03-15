@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption {
     /**
      * A KMS key ARN that is used to encrypt the connection password.
@@ -21,10 +21,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
      */
     private final Boolean returnConnectionPasswordEncrypted;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(
-        @OutputCustomType.Parameter("awsKmsKeyId") String awsKmsKeyId,
-        @OutputCustomType.Parameter("returnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
+        @CustomType.Parameter("awsKmsKeyId") String awsKmsKeyId,
+        @CustomType.Parameter("returnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
         this.awsKmsKeyId = awsKmsKeyId;
         this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
     }

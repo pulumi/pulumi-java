@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeSoftwareConfigResponse {
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored. If not specified, we'll automatically choose from official GPU drivers.
@@ -54,16 +54,16 @@ public final class RuntimeSoftwareConfigResponse {
      */
     private final String postStartupScript;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeSoftwareConfigResponse(
-        @OutputCustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
-        @OutputCustomType.Parameter("enableHealthMonitoring") Boolean enableHealthMonitoring,
-        @OutputCustomType.Parameter("idleShutdown") Boolean idleShutdown,
-        @OutputCustomType.Parameter("idleShutdownTimeout") Integer idleShutdownTimeout,
-        @OutputCustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
-        @OutputCustomType.Parameter("kernels") List<ContainerImageResponse> kernels,
-        @OutputCustomType.Parameter("notebookUpgradeSchedule") String notebookUpgradeSchedule,
-        @OutputCustomType.Parameter("postStartupScript") String postStartupScript) {
+        @CustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
+        @CustomType.Parameter("enableHealthMonitoring") Boolean enableHealthMonitoring,
+        @CustomType.Parameter("idleShutdown") Boolean idleShutdown,
+        @CustomType.Parameter("idleShutdownTimeout") Integer idleShutdownTimeout,
+        @CustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
+        @CustomType.Parameter("kernels") List<ContainerImageResponse> kernels,
+        @CustomType.Parameter("notebookUpgradeSchedule") String notebookUpgradeSchedule,
+        @CustomType.Parameter("postStartupScript") String postStartupScript) {
         this.customGpuDriverPath = customGpuDriverPath;
         this.enableHealthMonitoring = enableHealthMonitoring;
         this.idleShutdown = idleShutdown;

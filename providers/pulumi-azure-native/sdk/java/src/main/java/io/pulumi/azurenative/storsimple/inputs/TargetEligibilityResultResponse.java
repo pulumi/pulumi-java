@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.TargetEligibilityErrorMessageResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
      * The eligibility status of device, as a failover target device.
      * 
      */
-    @InputImport(name="eligibilityStatus")
+    @Import(name="eligibilityStatus")
       private final @Nullable String eligibilityStatus;
 
     public Optional<String> getEligibilityStatus() {
@@ -35,7 +35,7 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
      * The list of error messages, if a device does not qualify as a failover target device.
      * 
      */
-    @InputImport(name="messages")
+    @Import(name="messages")
       private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
     public List<TargetEligibilityErrorMessageResponse> getMessages() {

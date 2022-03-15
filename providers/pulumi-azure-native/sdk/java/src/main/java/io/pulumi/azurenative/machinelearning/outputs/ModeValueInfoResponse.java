@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.ModuleAssetParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModeValueInfoResponse {
     /**
      * The interface string name for the nested parameter.
@@ -24,10 +24,10 @@ public final class ModeValueInfoResponse {
      */
     private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModeValueInfoResponse(
-        @OutputCustomType.Parameter("interfaceString") @Nullable String interfaceString,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters) {
+        @CustomType.Parameter("interfaceString") @Nullable String interfaceString,
+        @CustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters) {
         this.interfaceString = interfaceString;
         this.parameters = parameters;
     }

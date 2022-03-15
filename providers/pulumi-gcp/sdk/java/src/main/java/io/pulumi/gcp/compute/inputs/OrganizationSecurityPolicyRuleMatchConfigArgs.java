@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * EGRESS rules.
      * 
      */
-    @InputImport(name="destIpRanges")
+    @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
 
     public Output<List<String>> getDestIpRanges() {
@@ -33,7 +33,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="layer4Configs", required=true)
+    @Import(name="layer4Configs", required=true)
       private final Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> layer4Configs;
 
     public Output<List<OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigArgs>> getLayer4Configs() {
@@ -45,7 +45,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigArgs extends io.pulu
      * INGRESS rules.
      * 
      */
-    @InputImport(name="srcIpRanges")
+    @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
     public Output<List<String>> getSrcIpRanges() {

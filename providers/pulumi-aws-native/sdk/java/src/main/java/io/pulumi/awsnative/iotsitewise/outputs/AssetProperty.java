@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.enums.AssetPropertyNotificationState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetProperty {
     /**
      * The property alias that identifies the property.
@@ -28,11 +28,11 @@ public final class AssetProperty {
      */
     private final @Nullable AssetPropertyNotificationState notificationState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetProperty(
-        @OutputCustomType.Parameter("alias") @Nullable String alias,
-        @OutputCustomType.Parameter("logicalId") String logicalId,
-        @OutputCustomType.Parameter("notificationState") @Nullable AssetPropertyNotificationState notificationState) {
+        @CustomType.Parameter("alias") @Nullable String alias,
+        @CustomType.Parameter("logicalId") String logicalId,
+        @CustomType.Parameter("notificationState") @Nullable AssetPropertyNotificationState notificationState) {
         this.alias = alias;
         this.logicalId = logicalId;
         this.notificationState = notificationState;

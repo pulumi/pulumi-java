@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.azurenative.datafactory.inputs.PrivateLinkConnectionApprovalRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -30,7 +30,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The private endpoint connection name.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -41,7 +41,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Core resource properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<PrivateLinkConnectionApprovalRequestArgs> properties;
 
     public Output<PrivateLinkConnectionApprovalRequestArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

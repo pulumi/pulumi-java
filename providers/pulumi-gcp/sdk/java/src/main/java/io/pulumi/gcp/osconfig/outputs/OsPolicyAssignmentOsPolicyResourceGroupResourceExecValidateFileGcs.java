@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs {
     /**
      * Required. Bucket of the Cloud Storage object.
@@ -28,11 +28,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      */
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("generation") @Nullable Integer generation,
+        @CustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

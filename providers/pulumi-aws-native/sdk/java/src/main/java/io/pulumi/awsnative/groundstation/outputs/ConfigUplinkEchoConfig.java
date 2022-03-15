@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigUplinkEchoConfig {
     private final @Nullable String antennaUplinkConfigArn;
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigUplinkEchoConfig(
-        @OutputCustomType.Parameter("antennaUplinkConfigArn") @Nullable String antennaUplinkConfigArn,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("antennaUplinkConfigArn") @Nullable String antennaUplinkConfigArn,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.antennaUplinkConfigArn = antennaUplinkConfigArn;
         this.enabled = enabled;
     }

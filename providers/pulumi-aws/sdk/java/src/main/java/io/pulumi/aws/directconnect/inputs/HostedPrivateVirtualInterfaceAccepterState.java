@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * The ARN of the virtual interface.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    @InputImport(name="dxGatewayId")
+    @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
     public Output<String> getDxGatewayId() {
@@ -41,7 +41,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -52,7 +52,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -63,7 +63,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * The ID of the Direct Connect virtual interface to accept.
      * 
      */
-    @InputImport(name="virtualInterfaceId")
+    @Import(name="virtualInterfaceId")
       private final @Nullable Output<String> virtualInterfaceId;
 
     public Output<String> getVirtualInterfaceId() {
@@ -74,7 +74,7 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
      * The ID of the virtual private gateway to which to connect the virtual interface.
      * 
      */
-    @InputImport(name="vpnGatewayId")
+    @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
     public Output<String> getVpnGatewayId() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagArgs;
@@ -45,7 +45,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * `outer_column.inner_column`
      * 
      */
-    @OutputExport(name="column", type=String.class, parameters={})
+    @Export(name="column", type=String.class, parameters={})
     private Output</* @Nullable */ String> column;
 
     /**
@@ -64,7 +64,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={TagField.class})
+    @Export(name="fields", type=List.class, parameters={TagField.class})
     private Output<List<TagField>> fields;
 
     /**
@@ -83,7 +83,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * identifier. Note that this Tag may not actually be stored in the location in this name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -101,7 +101,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * all entries in that group.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
     /**
@@ -118,7 +118,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * This field cannot be modified after creation.
      * 
      */
-    @OutputExport(name="template", type=String.class, parameters={})
+    @Export(name="template", type=String.class, parameters={})
     private Output<String> template;
 
     /**
@@ -134,7 +134,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * The display name of the tag template.
      * 
      */
-    @OutputExport(name="templateDisplayname", type=String.class, parameters={})
+    @Export(name="templateDisplayname", type=String.class, parameters={})
     private Output<String> templateDisplayname;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetTimePeriodResponse {
     /**
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
@@ -22,10 +22,10 @@ public final class BudgetTimePeriodResponse {
      */
     private final String startDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetTimePeriodResponse(
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("startDate") String startDate) {
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("startDate") String startDate) {
         this.endDate = endDate;
         this.startDate = startDate;
     }

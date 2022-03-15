@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MachineReferenceWithHintsResponse {
     /**
      * Last known display name.
@@ -41,14 +41,14 @@ public final class MachineReferenceWithHintsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MachineReferenceWithHintsResponse(
-        @OutputCustomType.Parameter("displayNameHint") String displayNameHint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osFamilyHint") String osFamilyHint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("displayNameHint") String displayNameHint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osFamilyHint") String osFamilyHint,
+        @CustomType.Parameter("type") String type) {
         this.displayNameHint = displayNameHint;
         this.id = id;
         this.kind = kind;

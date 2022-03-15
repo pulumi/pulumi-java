@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.outputs.LocationObjectStorageTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationObjectStorageResult {
     /**
      * Optional. The access key is used if credentials are required to access the self-managed object storage server.
@@ -51,15 +51,15 @@ public final class GetLocationObjectStorageResult {
      */
     private final @Nullable List<LocationObjectStorageTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationObjectStorageResult(
-        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
-        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("serverPort") @Nullable Integer serverPort,
-        @OutputCustomType.Parameter("serverProtocol") @Nullable LocationObjectStorageServerProtocol serverProtocol,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationObjectStorageTag> tags) {
+        @CustomType.Parameter("accessKey") @Nullable String accessKey,
+        @CustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("serverPort") @Nullable Integer serverPort,
+        @CustomType.Parameter("serverProtocol") @Nullable LocationObjectStorageServerProtocol serverProtocol,
+        @CustomType.Parameter("tags") @Nullable List<LocationObjectStorageTag> tags) {
         this.accessKey = accessKey;
         this.agentArns = agentArns;
         this.locationArn = locationArn;

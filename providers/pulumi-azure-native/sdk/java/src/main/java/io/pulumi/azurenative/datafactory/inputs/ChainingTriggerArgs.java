@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -37,7 +37,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Upstream Pipelines.
      * 
      */
-    @InputImport(name="dependsOn", required=true)
+    @Import(name="dependsOn", required=true)
       private final Output<List<PipelineReferenceArgs>> dependsOn;
 
     public Output<List<PipelineReferenceArgs>> getDependsOn() {
@@ -48,7 +48,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Pipeline for which runs are created when all upstream pipelines complete successfully.
      * 
      */
-    @InputImport(name="pipeline", required=true)
+    @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
 
     public Output<TriggerPipelineReferenceArgs> getPipeline() {
@@ -70,7 +70,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Run Dimension property that needs to be emitted by upstream pipelines.
      * 
      */
-    @InputImport(name="runDimension", required=true)
+    @Import(name="runDimension", required=true)
       private final Output<String> runDimension;
 
     public Output<String> getRunDimension() {
@@ -82,7 +82,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'ChainingTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

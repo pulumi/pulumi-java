@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eventschemas;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RegistryPolicyArgs Empty = new RegistryPolicyArgs();
 
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<Object> policy;
 
     public Output<Object> getPolicy() {
         return this.policy;
     }
 
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
         return this.registryName;
     }
 
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {

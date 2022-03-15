@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KubeletConfigResponse {
     /**
      * Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).
@@ -70,19 +70,19 @@ public final class KubeletConfigResponse {
      */
     private final @Nullable String topologyManagerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubeletConfigResponse(
-        @OutputCustomType.Parameter("allowedUnsafeSysctls") @Nullable List<String> allowedUnsafeSysctls,
-        @OutputCustomType.Parameter("containerLogMaxFiles") @Nullable Integer containerLogMaxFiles,
-        @OutputCustomType.Parameter("containerLogMaxSizeMB") @Nullable Integer containerLogMaxSizeMB,
-        @OutputCustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
-        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
-        @OutputCustomType.Parameter("cpuManagerPolicy") @Nullable String cpuManagerPolicy,
-        @OutputCustomType.Parameter("failSwapOn") @Nullable Boolean failSwapOn,
-        @OutputCustomType.Parameter("imageGcHighThreshold") @Nullable Integer imageGcHighThreshold,
-        @OutputCustomType.Parameter("imageGcLowThreshold") @Nullable Integer imageGcLowThreshold,
-        @OutputCustomType.Parameter("podMaxPids") @Nullable Integer podMaxPids,
-        @OutputCustomType.Parameter("topologyManagerPolicy") @Nullable String topologyManagerPolicy) {
+        @CustomType.Parameter("allowedUnsafeSysctls") @Nullable List<String> allowedUnsafeSysctls,
+        @CustomType.Parameter("containerLogMaxFiles") @Nullable Integer containerLogMaxFiles,
+        @CustomType.Parameter("containerLogMaxSizeMB") @Nullable Integer containerLogMaxSizeMB,
+        @CustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
+        @CustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
+        @CustomType.Parameter("cpuManagerPolicy") @Nullable String cpuManagerPolicy,
+        @CustomType.Parameter("failSwapOn") @Nullable Boolean failSwapOn,
+        @CustomType.Parameter("imageGcHighThreshold") @Nullable Integer imageGcHighThreshold,
+        @CustomType.Parameter("imageGcLowThreshold") @Nullable Integer imageGcLowThreshold,
+        @CustomType.Parameter("podMaxPids") @Nullable Integer podMaxPids,
+        @CustomType.Parameter("topologyManagerPolicy") @Nullable String topologyManagerPolicy) {
         this.allowedUnsafeSysctls = allowedUnsafeSysctls;
         this.containerLogMaxFiles = containerLogMaxFiles;
         this.containerLogMaxSizeMB = containerLogMaxSizeMB;

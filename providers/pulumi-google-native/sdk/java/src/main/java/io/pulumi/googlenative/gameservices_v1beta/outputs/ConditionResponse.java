@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConditionResponse {
     /**
      * Trusted attributes supplied by the IAM system.
@@ -36,13 +36,13 @@ public final class ConditionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConditionResponse(
-        @OutputCustomType.Parameter("iam") String iam,
-        @OutputCustomType.Parameter("op") String op,
-        @OutputCustomType.Parameter("svc") String svc,
-        @OutputCustomType.Parameter("sys") String sys,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("iam") String iam,
+        @CustomType.Parameter("op") String op,
+        @CustomType.Parameter("svc") String svc,
+        @CustomType.Parameter("sys") String sys,
+        @CustomType.Parameter("values") List<String> values) {
         this.iam = iam;
         this.op = op;
         this.svc = svc;

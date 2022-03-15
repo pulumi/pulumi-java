@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.RequestMethodMatchConditionParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.
      * Expected value is 'RequestMethod'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class DeliveryRuleRequestMethodConditionResponse extends io.pulumi.
      * Defines the parameters for the condition.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final RequestMethodMatchConditionParametersResponse parameters;
 
     public RequestMethodMatchConditionParametersResponse getParameters() {

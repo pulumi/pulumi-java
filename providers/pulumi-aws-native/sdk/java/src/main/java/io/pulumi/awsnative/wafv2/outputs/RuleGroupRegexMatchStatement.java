@@ -5,22 +5,22 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRegexMatchStatement {
     private final RuleGroupFieldToMatch fieldToMatch;
     private final String regexString;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRegexMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("regexString") String regexString,
-        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @CustomType.Parameter("regexString") String regexString,
+        @CustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.regexString = regexString;
         this.textTransformations = textTransformations;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final PublicKeyConfigArgs Empty = new PublicKeyConfigArgs();
 
-    @InputImport(name="callerReference", required=true)
+    @Import(name="callerReference", required=true)
       private final Output<String> callerReference;
 
     public Output<String> getCallerReference() {
         return this.callerReference;
     }
 
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
         return this.comment == null ? Output.empty() : this.comment;
     }
 
-    @InputImport(name="encodedKey", required=true)
+    @Import(name="encodedKey", required=true)
       private final Output<String> encodedKey;
 
     public Output<String> getEncodedKey() {
         return this.encodedKey;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

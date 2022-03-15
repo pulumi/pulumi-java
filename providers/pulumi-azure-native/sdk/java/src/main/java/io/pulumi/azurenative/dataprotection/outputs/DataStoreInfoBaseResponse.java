@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataStoreInfoBaseResponse {
     /**
      * type of datastore; Operational/Vault/Archive
@@ -20,10 +20,10 @@ public final class DataStoreInfoBaseResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataStoreInfoBaseResponse(
-        @OutputCustomType.Parameter("dataStoreType") String dataStoreType,
-        @OutputCustomType.Parameter("objectType") String objectType) {
+        @CustomType.Parameter("dataStoreType") String dataStoreType,
+        @CustomType.Parameter("objectType") String objectType) {
         this.dataStoreType = dataStoreType;
         this.objectType = objectType;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
      * CloudWatch log group ARN to send query logs.
      * 
      */
-    @InputImport(name="cloudwatchLogGroupArn", required=true)
+    @Import(name="cloudwatchLogGroupArn", required=true)
       private final Output<String> cloudwatchLogGroupArn;
 
     public Output<String> getCloudwatchLogGroupArn() {
@@ -28,7 +28,7 @@ public final class QueryLogArgs extends io.pulumi.resources.ResourceArgs {
      * Route53 hosted zone ID to enable query logs.
      * 
      */
-    @InputImport(name="zoneId", required=true)
+    @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
     public Output<String> getZoneId() {

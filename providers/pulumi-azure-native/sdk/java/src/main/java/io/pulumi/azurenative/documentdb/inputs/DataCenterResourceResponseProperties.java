@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.SeedNodeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
      * 
      */
-    @InputImport(name="base64EncodedCassandraYamlFragment")
+    @Import(name="base64EncodedCassandraYamlFragment")
       private final @Nullable String base64EncodedCassandraYamlFragment;
 
     public Optional<String> getBase64EncodedCassandraYamlFragment() {
@@ -36,7 +36,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * The region this data center should be created in.
      * 
      */
-    @InputImport(name="dataCenterLocation")
+    @Import(name="dataCenterLocation")
       private final @Nullable String dataCenterLocation;
 
     public Optional<String> getDataCenterLocation() {
@@ -47,7 +47,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.
      * 
      */
-    @InputImport(name="delegatedSubnetId")
+    @Import(name="delegatedSubnetId")
       private final @Nullable String delegatedSubnetId;
 
     public Optional<String> getDelegatedSubnetId() {
@@ -58,7 +58,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.
      * 
      */
-    @InputImport(name="nodeCount")
+    @Import(name="nodeCount")
       private final @Nullable Integer nodeCount;
 
     public Optional<Integer> getNodeCount() {
@@ -69,7 +69,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * The status of the resource at the time the operation was called.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -80,7 +80,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.
      * 
      */
-    @InputImport(name="seedNodes", required=true)
+    @Import(name="seedNodes", required=true)
       private final List<SeedNodeResponse> seedNodes;
 
     public List<SeedNodeResponse> getSeedNodes() {

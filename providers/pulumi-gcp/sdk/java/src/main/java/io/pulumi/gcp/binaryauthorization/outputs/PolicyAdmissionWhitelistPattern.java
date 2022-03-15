@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAdmissionWhitelistPattern {
     /**
      * An image name pattern to whitelist, in the form
@@ -18,8 +18,8 @@ public final class PolicyAdmissionWhitelistPattern {
      */
     private final String namePattern;
 
-    @OutputCustomType.Constructor
-    private PolicyAdmissionWhitelistPattern(@OutputCustomType.Parameter("namePattern") String namePattern) {
+    @CustomType.Constructor
+    private PolicyAdmissionWhitelistPattern(@CustomType.Parameter("namePattern") String namePattern) {
         this.namePattern = namePattern;
     }
 

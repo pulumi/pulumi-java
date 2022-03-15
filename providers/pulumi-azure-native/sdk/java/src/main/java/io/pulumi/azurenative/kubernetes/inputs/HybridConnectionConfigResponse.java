@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetes.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * Timestamp when this token will be expired.
      * 
      */
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final Double expirationTime;
 
     public Double getExpirationTime() {
@@ -32,7 +32,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * Name of the connection
      * 
      */
-    @InputImport(name="hybridConnectionName", required=true)
+    @Import(name="hybridConnectionName", required=true)
       private final String hybridConnectionName;
 
     public String getHybridConnectionName() {
@@ -43,7 +43,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * Name of the relay.
      * 
      */
-    @InputImport(name="relay", required=true)
+    @Import(name="relay", required=true)
       private final String relay;
 
     public String getRelay() {
@@ -54,7 +54,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * Sender access token
      * 
      */
-    @InputImport(name="token", required=true)
+    @Import(name="token", required=true)
       private final String token;
 
     public String getToken() {

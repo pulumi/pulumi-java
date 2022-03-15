@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.RetentionPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLogProfileResult {
     /**
      * the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'
@@ -65,18 +65,18 @@ public final class GetLogProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLogProfileResult(
-        @OutputCustomType.Parameter("categories") List<String> categories,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locations") List<String> locations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("retentionPolicy") RetentionPolicyResponse retentionPolicy,
-        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
-        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("categories") List<String> categories,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locations") List<String> locations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("retentionPolicy") RetentionPolicyResponse retentionPolicy,
+        @CustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @CustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.categories = categories;
         this.id = id;
         this.location = location;

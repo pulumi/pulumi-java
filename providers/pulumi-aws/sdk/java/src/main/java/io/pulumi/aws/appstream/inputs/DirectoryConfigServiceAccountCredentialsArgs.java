@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DirectoryConfigServiceAccountCredentialsArgs extends io.pulum
      * User name of the account. This account must have the following privileges: create computer objects, join computers to the domain, and change/reset the password on descendant computer objects for the organizational units specified.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -28,7 +28,7 @@ public final class DirectoryConfigServiceAccountCredentialsArgs extends io.pulum
      * Password for the account.
      * 
      */
-    @InputImport(name="accountPassword", required=true)
+    @Import(name="accountPassword", required=true)
       private final Output<String> accountPassword;
 
     public Output<String> getAccountPassword() {

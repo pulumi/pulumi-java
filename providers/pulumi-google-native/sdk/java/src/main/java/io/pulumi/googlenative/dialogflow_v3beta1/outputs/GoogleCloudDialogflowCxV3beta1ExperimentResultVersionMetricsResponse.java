@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse {
     /**
      * The metrics and corresponding confidence intervals in the inference result.
@@ -28,11 +28,11 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse(
-        @OutputCustomType.Parameter("metrics") List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics,
-        @OutputCustomType.Parameter("sessionCount") Integer sessionCount,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("metrics") List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse> metrics,
+        @CustomType.Parameter("sessionCount") Integer sessionCount,
+        @CustomType.Parameter("version") String version) {
         this.metrics = metrics;
         this.sessionCount = sessionCount;
         this.version = version;

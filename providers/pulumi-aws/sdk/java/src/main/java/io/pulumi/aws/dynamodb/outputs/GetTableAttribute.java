@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableAttribute {
     /**
      * The name of the DynamoDB table.
@@ -16,10 +16,10 @@ public final class GetTableAttribute {
     private final String name;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableAttribute(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }

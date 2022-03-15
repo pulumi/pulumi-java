@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -34,7 +34,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * A field for creators of the SPDX file to provide general comments about the creation of the SPDX file or any other relevant comment not included in the other fields
      * 
      */
-    @InputImport(name="creatorComment")
+    @Import(name="creatorComment")
       private final @Nullable Output<String> creatorComment;
 
     public Output<String> getCreatorComment() {
@@ -45,7 +45,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * Identify who (or what, in the case of a tool) created the SPDX file. If the SPDX file was created by an individual, indicate the person's name
      * 
      */
-    @InputImport(name="creators")
+    @Import(name="creators")
       private final @Nullable Output<List<String>> creators;
 
     public Output<List<String>> getCreators() {
@@ -56,7 +56,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * A field for creators of the SPDX file content to provide comments to the consumers of the SPDX document
      * 
      */
-    @InputImport(name="documentComment")
+    @Import(name="documentComment")
       private final @Nullable Output<String> documentComment;
 
     public Output<String> getDocumentComment() {
@@ -67,7 +67,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * Identify any external SPDX documents referenced within this SPDX document
      * 
      */
-    @InputImport(name="externalDocumentRefs")
+    @Import(name="externalDocumentRefs")
       private final @Nullable Output<List<String>> externalDocumentRefs;
 
     public Output<List<String>> getExternalDocumentRefs() {
@@ -78,7 +78,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * Identify the current SPDX document which may be referenced in relationships by other files, packages internally and documents externally
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -89,7 +89,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * A field for creators of the SPDX file to provide the version of the SPDX License List used when the SPDX file was created
      * 
      */
-    @InputImport(name="licenseListVersion")
+    @Import(name="licenseListVersion")
       private final @Nullable Output<String> licenseListVersion;
 
     public Output<String> getLicenseListVersion() {
@@ -100,7 +100,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * Provide an SPDX document specific namespace as a unique absolute Uniform Resource Identifier (URI) as specified in RFC-3986, with the exception of the ‘#’ delimiter
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -111,7 +111,7 @@ public final class DocumentOccurrenceArgs extends io.pulumi.resources.ResourceAr
      * Identify name of this document as designated by creator
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

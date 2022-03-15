@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionResponse;
 import io.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
      * Provides a mechanism to select the audio track in the input live feed, to which speech-to-text transcription is applied. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
-    @InputImport(name="inputTrackSelection")
+    @Import(name="inputTrackSelection")
       private final @Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection;
 
     public List<LiveEventInputTrackSelectionResponse> getInputTrackSelection() {
@@ -36,7 +36,7 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
      * Specifies the language (locale) to be used for speech-to-text transcription – it should match the spoken language in the audio track. The value should be in BCP-47 format (e.g: 'en-US'). See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature and the list of supported languages.
      * 
      */
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable String language;
 
     public Optional<String> getLanguage() {
@@ -47,7 +47,7 @@ public final class LiveEventTranscriptionResponse extends io.pulumi.resources.In
      * Describes a transcription track in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored.
      * 
      */
-    @InputImport(name="outputTranscriptionTrack")
+    @Import(name="outputTranscriptionTrack")
       private final @Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack;
 
     public Optional<LiveEventOutputTranscriptionTrackResponse> getOutputTranscriptionTrack() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthClientCertificateConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
 
     public static final ClusterMasterAuthGetArgs Empty = new ClusterMasterAuthGetArgs();
 
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
@@ -26,21 +26,21 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
      * Whether client certificate authorization is enabled for this cluster.  For example:
      * 
      */
-    @InputImport(name="clientCertificateConfig", required=true)
+    @Import(name="clientCertificateConfig", required=true)
       private final Output<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig;
 
     public Output<ClusterMasterAuthClientCertificateConfigGetArgs> getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }
 
-    @InputImport(name="clientKey")
+    @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
         return this.clientKey == null ? Output.empty() : this.clientKey;
     }
 
-    @InputImport(name="clusterCaCertificate")
+    @Import(name="clusterCaCertificate")
       private final @Nullable Output<String> clusterCaCertificate;
 
     public Output<String> getClusterCaCertificate() {

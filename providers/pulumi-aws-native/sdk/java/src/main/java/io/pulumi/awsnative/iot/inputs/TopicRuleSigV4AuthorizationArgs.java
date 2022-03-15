@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class TopicRuleSigV4AuthorizationArgs extends io.pulumi.resources.R
 
     public static final TopicRuleSigV4AuthorizationArgs Empty = new TopicRuleSigV4AuthorizationArgs();
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
         return this.serviceName;
     }
 
-    @InputImport(name="signingRegion", required=true)
+    @Import(name="signingRegion", required=true)
       private final Output<String> signingRegion;
 
     public Output<String> getSigningRegion() {

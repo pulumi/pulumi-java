@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
      * The resource id of the private dns zone.
      * 
      */
-    @InputImport(name="privateDnsZoneId")
+    @Import(name="privateDnsZoneId")
       private final @Nullable Output<String> privateDnsZoneId;
 
     public Output<String> getPrivateDnsZoneId() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingSelfManagedEventSource {
     /**
      * A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be `KAFKA_BOOTSTRAP_SERVERS` and the value should be a string with a comma separated list of broker endpoints.
@@ -16,8 +16,8 @@ public final class EventSourceMappingSelfManagedEventSource {
      */
     private final Map<String,String> endpoints;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingSelfManagedEventSource(@OutputCustomType.Parameter("endpoints") Map<String,String> endpoints) {
+    @CustomType.Constructor
+    private EventSourceMappingSelfManagedEventSource(@CustomType.Parameter("endpoints") Map<String,String> endpoints) {
         this.endpoints = endpoints;
     }
 

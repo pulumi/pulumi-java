@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
      * Machine-readable operation type.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -28,7 +28,7 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
      * Human-readable stage descriptions.
      * 
      */
-    @InputImport(name="substeps", required=true)
+    @Import(name="substeps", required=true)
       private final List<String> substeps;
 
     public List<String> getSubsteps() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetComponentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetComponentArgs Empty = new GetComponentArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final String appId;
 
     public String getAppId() {
         return this.appId;
     }
 
-    @InputImport(name="environmentName", required=true)
+    @Import(name="environmentName", required=true)
       private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

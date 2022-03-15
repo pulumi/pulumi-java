@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoggingComponentConfigResponse extends io.pulumi.resources.In
      * Select components to collect logs. An empty set would disable all logging.
      * 
      */
-    @InputImport(name="enableComponents", required=true)
+    @Import(name="enableComponents", required=true)
       private final List<String> enableComponents;
 
     public List<String> getEnableComponents() {

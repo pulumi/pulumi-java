@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResourceRecordSetResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetChangeResult {
     /**
      * Which ResourceRecordSets to add?
@@ -39,14 +39,14 @@ public final class GetChangeResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChangeResult(
-        @OutputCustomType.Parameter("additions") List<ResourceRecordSetResponse> additions,
-        @OutputCustomType.Parameter("deletions") List<ResourceRecordSetResponse> deletions,
-        @OutputCustomType.Parameter("isServing") Boolean isServing,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("additions") List<ResourceRecordSetResponse> additions,
+        @CustomType.Parameter("deletions") List<ResourceRecordSetResponse> deletions,
+        @CustomType.Parameter("isServing") Boolean isServing,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status) {
         this.additions = additions;
         this.deletions = deletions;
         this.isServing = isServing;

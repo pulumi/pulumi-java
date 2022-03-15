@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
      * 
      */
-    @InputImport(name="isCloudFunction", required=true)
+    @Import(name="isCloudFunction", required=true)
       private final Boolean isCloudFunction;
 
     public Boolean getIsCloudFunction() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * The password for HTTP Basic authentication.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * The HTTP request headers to send together with fulfillment requests.
      * 
      */
-    @InputImport(name="requestHeaders", required=true)
+    @Import(name="requestHeaders", required=true)
       private final Map<String,String> requestHeaders;
 
     public Map<String,String> getRequestHeaders() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * The fulfillment URI for receiving POST requests. It must use https protocol.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * The user name for HTTP Basic authentication.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

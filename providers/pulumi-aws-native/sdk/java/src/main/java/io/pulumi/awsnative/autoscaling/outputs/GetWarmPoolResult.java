@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.autoscaling.outputs;
 
 import io.pulumi.awsnative.autoscaling.outputs.WarmPoolInstanceReusePolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWarmPoolResult {
     private final @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy;
     private final @Nullable Integer maxGroupPreparedCapacity;
     private final @Nullable Integer minSize;
     private final @Nullable String poolState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWarmPoolResult(
-        @OutputCustomType.Parameter("instanceReusePolicy") @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy,
-        @OutputCustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
-        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
-        @OutputCustomType.Parameter("poolState") @Nullable String poolState) {
+        @CustomType.Parameter("instanceReusePolicy") @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy,
+        @CustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
+        @CustomType.Parameter("minSize") @Nullable Integer minSize,
+        @CustomType.Parameter("poolState") @Nullable String poolState) {
         this.instanceReusePolicy = instanceReusePolicy;
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         this.minSize = minSize;

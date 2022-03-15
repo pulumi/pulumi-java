@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.IAMBindingArgs;
@@ -71,7 +71,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=IAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
     /**
@@ -86,7 +86,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the service account IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -96,7 +96,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -108,7 +108,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -124,7 +124,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * The fully-qualified name of the service account to apply policy to.
      * 
      */
-    @OutputExport(name="serviceAccountId", type=String.class, parameters={})
+    @Export(name="serviceAccountId", type=String.class, parameters={})
     private Output<String> serviceAccountId;
 
     /**

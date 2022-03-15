@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.ScalarFunctionPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionResponse {
     /**
      * Resource Id
@@ -33,12 +33,12 @@ public final class FunctionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("properties") @Nullable ScalarFunctionPropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("properties") @Nullable ScalarFunctionPropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;

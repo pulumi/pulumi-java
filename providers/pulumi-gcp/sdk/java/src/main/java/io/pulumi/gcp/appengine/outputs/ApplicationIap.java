@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationIap {
     /**
      * (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
@@ -35,12 +35,12 @@ public final class ApplicationIap {
      */
     private final @Nullable String oauth2ClientSecretSha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationIap(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
-        @OutputCustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
-        @OutputCustomType.Parameter("oauth2ClientSecretSha256") @Nullable String oauth2ClientSecretSha256) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @CustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
+        @CustomType.Parameter("oauth2ClientSecretSha256") @Nullable String oauth2ClientSecretSha256) {
         this.enabled = enabled;
         this.oauth2ClientId = oauth2ClientId;
         this.oauth2ClientSecret = oauth2ClientSecret;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.ExperimentArgs;
@@ -27,7 +27,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Creation time of this experiment.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -41,7 +41,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The definition of the experiment.
      * 
      */
-    @OutputExport(name="definition", type=GoogleCloudDialogflowCxV3ExperimentDefinitionResponse.class, parameters={})
+    @Export(name="definition", type=GoogleCloudDialogflowCxV3ExperimentDefinitionResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3ExperimentDefinitionResponse> definition;
 
     /**
@@ -55,7 +55,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The human-readable description of the experiment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -69,7 +69,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The human-readable name of the experiment (unique in an environment). Limit of 64 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -83,7 +83,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * End time of this experiment.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -97,7 +97,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Maximum number of days to run the experiment/rollout. If auto-rollout is not enabled, default value and maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
      * 
      */
-    @OutputExport(name="experimentLength", type=String.class, parameters={})
+    @Export(name="experimentLength", type=String.class, parameters={})
     private Output<String> experimentLength;
 
     /**
@@ -111,7 +111,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Last update time of this experiment.
      * 
      */
-    @OutputExport(name="lastUpdateTime", type=String.class, parameters={})
+    @Export(name="lastUpdateTime", type=String.class, parameters={})
     private Output<String> lastUpdateTime;
 
     /**
@@ -125,7 +125,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Inference result of the experiment.
      * 
      */
-    @OutputExport(name="result", type=GoogleCloudDialogflowCxV3ExperimentResultResponse.class, parameters={})
+    @Export(name="result", type=GoogleCloudDialogflowCxV3ExperimentResultResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3ExperimentResultResponse> result;
 
     /**
@@ -153,7 +153,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The configuration for auto rollout. If set, there should be exactly two variants in the experiment (control variant being the default version of the flow), the traffic allocation for the non-control variant will gradually increase to 100% when conditions are met, and eventually replace the control variant to become the default version of the flow.
      * 
      */
-    @OutputExport(name="rolloutConfig", type=GoogleCloudDialogflowCxV3RolloutConfigResponse.class, parameters={})
+    @Export(name="rolloutConfig", type=GoogleCloudDialogflowCxV3RolloutConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3RolloutConfigResponse> rolloutConfig;
 
     /**
@@ -167,7 +167,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
      * 
      */
-    @OutputExport(name="rolloutFailureReason", type=String.class, parameters={})
+    @Export(name="rolloutFailureReason", type=String.class, parameters={})
     private Output<String> rolloutFailureReason;
 
     /**
@@ -181,7 +181,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * State of the auto rollout process.
      * 
      */
-    @OutputExport(name="rolloutState", type=GoogleCloudDialogflowCxV3RolloutStateResponse.class, parameters={})
+    @Export(name="rolloutState", type=GoogleCloudDialogflowCxV3RolloutStateResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3RolloutStateResponse> rolloutState;
 
     /**
@@ -195,7 +195,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * Start time of this experiment.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -209,7 +209,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The current state of the experiment. Transition triggered by Experiments.StartExperiment: DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or RUNNING->DONE.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -223,7 +223,7 @@ public class Experiment extends io.pulumi.resources.CustomResource {
      * The history of updates to the experiment variants.
      * 
      */
-    @OutputExport(name="variantsHistory", type=List.class, parameters={GoogleCloudDialogflowCxV3VariantsHistoryResponse.class})
+    @Export(name="variantsHistory", type=List.class, parameters={GoogleCloudDialogflowCxV3VariantsHistoryResponse.class})
     private Output<List<GoogleCloudDialogflowCxV3VariantsHistoryResponse>> variantsHistory;
 
     /**

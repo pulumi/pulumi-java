@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.google.protobuf.Value;
-import io.pulumi.core.InputOutput;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.annotations.OutputMetadata;
@@ -23,10 +22,10 @@ public class OutputCompletionSource<T> {
 
     protected final ImmutableSet<Resource> resources;
     protected final TypeShape<T> dataTypeShape;
-    protected CompletableFuture<InputOutputData<T>> mutableData;
+    protected CompletableFuture<OutputData<T>> mutableData;
 
     public OutputCompletionSource(
-            CompletableFuture<InputOutputData<T>> data,
+            CompletableFuture<OutputData<T>> data,
             ImmutableSet<Resource> resources,
             TypeShape<T> dataTypeShape
     ) {
@@ -40,7 +39,7 @@ public class OutputCompletionSource<T> {
     }
 
     public void trySetDefaultResult(boolean isKnown) {
-        mutableData.complete(InputOutputData.ofNullable(
+        mutableData.complete(OutputData.ofNullable(
                 ImmutableSet.of(), null, isKnown, false) // TODO: check if this does not break things later on
         );
     }
@@ -63,7 +62,7 @@ public class OutputCompletionSource<T> {
             );
         }
         //noinspection unchecked
-        mutableData.complete(InputOutputData.ofNullable(
+        mutableData.complete(OutputData.ofNullable(
                 this.resources,
                 (T) value,
                 isKnown,
@@ -71,8 +70,8 @@ public class OutputCompletionSource<T> {
         ));
     }
 
-    public void setValue(InputOutputData<T> data) {
-        mutableData.complete(InputOutputData.ofNullable(
+    public void setValue(OutputData<T> data) {
+        mutableData.complete(OutputData.ofNullable(
                 Sets.union(this.resources, data.getResources()).immutableCopy(),
                 data.getValueNullable(),
                 data.isKnown(),
@@ -95,12 +94,12 @@ public class OutputCompletionSource<T> {
         return dataTypeShape;
     }
 
-    public static <T, IO extends InputOutput<T, IO> & Copyable<IO>> OutputCompletionSource<T> of(
-            InputOutput<T, IO> inputOutput,
+    public static <T> OutputCompletionSource<T> of(
+            Output<T> output,
             ImmutableSet<Resource> resources,
             TypeShape<T> fieldTypeShape
     ) {
-        return new OutputCompletionSource<>(Internal.of(inputOutput).dataFuture, resources, fieldTypeShape);
+        return new OutputCompletionSource<>(Internal.of(output).getDataAsync(), resources, fieldTypeShape);
     }
 
     public static <T> OutputCompletionSource<T> from(

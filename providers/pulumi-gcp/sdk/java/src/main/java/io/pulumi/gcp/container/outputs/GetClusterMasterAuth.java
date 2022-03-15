@@ -3,25 +3,25 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterMasterAuthClientCertificateConfig;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterMasterAuth {
     private final String clientCertificate;
     private final List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs;
     private final String clientKey;
     private final String clusterCaCertificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterMasterAuth(
-        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
-        @OutputCustomType.Parameter("clientCertificateConfigs") List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
-        @OutputCustomType.Parameter("clientKey") String clientKey,
-        @OutputCustomType.Parameter("clusterCaCertificate") String clusterCaCertificate) {
+        @CustomType.Parameter("clientCertificate") String clientCertificate,
+        @CustomType.Parameter("clientCertificateConfigs") List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
+        @CustomType.Parameter("clientKey") String clientKey,
+        @CustomType.Parameter("clusterCaCertificate") String clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfigs = clientCertificateConfigs;
         this.clientKey = clientKey;

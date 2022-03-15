@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPPrefixSkuResponse;
 import io.pulumi.azurenative.network.outputs.ReferencedPublicIpAddressResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPublicIPPrefixResult {
     /**
      * The customIpPrefix that this prefix is associated with.
@@ -116,27 +116,27 @@ public final class GetPublicIPPrefixResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPublicIPPrefixResult(
-        @OutputCustomType.Parameter("customIPPrefix") @Nullable SubResourceResponse customIPPrefix,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipPrefix") String ipPrefix,
-        @OutputCustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
-        @OutputCustomType.Parameter("loadBalancerFrontendIpConfiguration") SubResourceResponse loadBalancerFrontendIpConfiguration,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
-        @OutputCustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
-        @OutputCustomType.Parameter("publicIPAddresses") List<ReferencedPublicIpAddressResponse> publicIPAddresses,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("sku") @Nullable PublicIPPrefixSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("customIPPrefix") @Nullable SubResourceResponse customIPPrefix,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipPrefix") String ipPrefix,
+        @CustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
+        @CustomType.Parameter("loadBalancerFrontendIpConfiguration") SubResourceResponse loadBalancerFrontendIpConfiguration,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
+        @CustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @CustomType.Parameter("publicIPAddresses") List<ReferencedPublicIpAddressResponse> publicIPAddresses,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("sku") @Nullable PublicIPPrefixSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.customIPPrefix = customIPPrefix;
         this.etag = etag;
         this.extendedLocation = extendedLocation;

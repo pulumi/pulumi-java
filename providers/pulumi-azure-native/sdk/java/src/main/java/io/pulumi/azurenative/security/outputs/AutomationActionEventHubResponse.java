@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationActionEventHubResponse {
     /**
      * The type of the action that will be triggered by the Automation
@@ -33,12 +33,12 @@ public final class AutomationActionEventHubResponse {
      */
     private final String sasPolicyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationActionEventHubResponse(
-        @OutputCustomType.Parameter("actionType") String actionType,
-        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
-        @OutputCustomType.Parameter("eventHubResourceId") @Nullable String eventHubResourceId,
-        @OutputCustomType.Parameter("sasPolicyName") String sasPolicyName) {
+        @CustomType.Parameter("actionType") String actionType,
+        @CustomType.Parameter("connectionString") @Nullable String connectionString,
+        @CustomType.Parameter("eventHubResourceId") @Nullable String eventHubResourceId,
+        @CustomType.Parameter("sasPolicyName") String sasPolicyName) {
         this.actionType = actionType;
         this.connectionString = connectionString;
         this.eventHubResourceId = eventHubResourceId;

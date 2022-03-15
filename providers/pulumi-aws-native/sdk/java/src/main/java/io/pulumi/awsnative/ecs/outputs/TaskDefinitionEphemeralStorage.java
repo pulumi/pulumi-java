@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionEphemeralStorage {
     private final @Nullable Integer sizeInGiB;
 
-    @OutputCustomType.Constructor
-    private TaskDefinitionEphemeralStorage(@OutputCustomType.Parameter("sizeInGiB") @Nullable Integer sizeInGiB) {
+    @CustomType.Constructor
+    private TaskDefinitionEphemeralStorage(@CustomType.Parameter("sizeInGiB") @Nullable Integer sizeInGiB) {
         this.sizeInGiB = sizeInGiB;
     }
 

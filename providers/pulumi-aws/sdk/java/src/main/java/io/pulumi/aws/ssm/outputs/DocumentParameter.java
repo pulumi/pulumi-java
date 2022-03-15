@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DocumentParameter {
     private final @Nullable String defaultValue;
     /**
@@ -24,12 +24,12 @@ public final class DocumentParameter {
     private final @Nullable String name;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentParameter(
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.name = name;

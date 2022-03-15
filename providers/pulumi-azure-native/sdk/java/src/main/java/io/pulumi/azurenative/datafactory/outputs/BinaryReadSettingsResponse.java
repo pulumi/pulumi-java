@@ -6,14 +6,14 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.TarGZipReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.TarReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZipDeflateReadSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BinaryReadSettingsResponse {
     /**
      * Compression settings.
@@ -27,10 +27,10 @@ public final class BinaryReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BinaryReadSettingsResponse(
-        @OutputCustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
+        @CustomType.Parameter("type") String type) {
         this.compressionProperties = compressionProperties;
         this.type = type;
     }

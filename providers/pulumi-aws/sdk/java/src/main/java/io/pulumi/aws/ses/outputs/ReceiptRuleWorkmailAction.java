@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleWorkmailAction {
     /**
      * The ARN of the WorkMail organization
@@ -28,11 +28,11 @@ public final class ReceiptRuleWorkmailAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleWorkmailAction(
-        @OutputCustomType.Parameter("organizationArn") String organizationArn,
-        @OutputCustomType.Parameter("position") Integer position,
-        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
+        @CustomType.Parameter("organizationArn") String organizationArn,
+        @CustomType.Parameter("position") Integer position,
+        @CustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.organizationArn = organizationArn;
         this.position = position;
         this.topicArn = topicArn;

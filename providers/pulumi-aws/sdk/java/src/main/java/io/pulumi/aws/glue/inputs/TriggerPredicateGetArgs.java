@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.TriggerPredicateConditionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
      * A list of the conditions that determine when the trigger will fire. See Conditions.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<TriggerPredicateConditionGetArgs>> conditions;
 
     public Output<List<TriggerPredicateConditionGetArgs>> getConditions() {
@@ -31,7 +31,7 @@ public final class TriggerPredicateGetArgs extends io.pulumi.resources.ResourceA
      * How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
      * 
      */
-    @InputImport(name="logical")
+    @Import(name="logical")
       private final @Nullable Output<String> logical;
 
     public Output<String> getLogical() {

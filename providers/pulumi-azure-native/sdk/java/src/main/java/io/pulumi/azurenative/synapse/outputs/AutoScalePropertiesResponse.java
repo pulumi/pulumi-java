@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoScalePropertiesResponse {
     /**
      * Whether automatic scaling is enabled for the Big Data pool.
@@ -28,11 +28,11 @@ public final class AutoScalePropertiesResponse {
      */
     private final @Nullable Integer minNodeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoScalePropertiesResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("maxNodeCount") @Nullable Integer maxNodeCount,
-        @OutputCustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("maxNodeCount") @Nullable Integer maxNodeCount,
+        @CustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount) {
         this.enabled = enabled;
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;

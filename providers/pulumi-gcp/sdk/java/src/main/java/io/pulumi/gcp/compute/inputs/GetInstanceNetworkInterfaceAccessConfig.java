@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
      * network ip.
      * 
      */
-    @InputImport(name="natIp", required=true)
+    @Import(name="natIp", required=true)
       private final String natIp;
 
     public String getNatIp() {
@@ -28,7 +28,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
      * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
      */
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final String networkTier;
 
     public String getNetworkTier() {
@@ -39,7 +39,7 @@ public final class GetInstanceNetworkInterfaceAccessConfig extends io.pulumi.res
      * The DNS domain name for the public PTR record.
      * 
      */
-    @InputImport(name="publicPtrDomainName", required=true)
+    @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {

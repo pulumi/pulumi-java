@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.GetImageVersionsImageVersion;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -24,12 +24,12 @@ public final class GetImageVersionsResult {
     private final String project;
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageVersionsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageVersions") List<GetImageVersionsImageVersion> imageVersions,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageVersions") List<GetImageVersionsImageVersion> imageVersions,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region) {
         this.id = id;
         this.imageVersions = imageVersions;
         this.project = project;

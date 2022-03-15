@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
      * Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final Map<String,String> attributes;
 
     public Map<String,String> getAttributes() {
@@ -32,7 +32,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The message payload for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.
      * 
      */
-    @InputImport(name="data", required=true)
+    @Import(name="data", required=true)
       private final String data;
 
     public String getData() {
@@ -43,7 +43,7 @@ public final class PubsubTargetResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by PubSub's [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final String topicName;
 
     public String getTopicName() {

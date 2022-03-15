@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceEndpointSpecPortArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class ServiceEndpointSpecArgs extends io.pulumi.resources.ResourceA
 
     public static final ServiceEndpointSpecArgs Empty = new ServiceEndpointSpecArgs();
 
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
         return this.mode == null ? Output.empty() : this.mode;
     }
 
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ServiceEndpointSpecPortArgs>> ports;
 
     public Output<List<ServiceEndpointSpecPortArgs>> getPorts() {

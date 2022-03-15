@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.DataDiskResponse;
 import io.pulumi.azurenative.compute.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.OSDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable List<DataDiskResponse> dataDisks;
 
     public List<DataDiskResponse> getDataDisks() {
@@ -36,7 +36,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
      * 
      */
-    @InputImport(name="imageReference")
+    @Import(name="imageReference")
       private final @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> getImageReference() {
@@ -47,7 +47,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
      * 
      */
-    @InputImport(name="osDisk")
+    @Import(name="osDisk")
       private final @Nullable OSDiskResponse osDisk;
 
     public Optional<OSDiskResponse> getOsDisk() {

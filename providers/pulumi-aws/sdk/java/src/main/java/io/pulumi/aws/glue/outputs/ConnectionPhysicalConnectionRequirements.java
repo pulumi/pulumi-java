@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionPhysicalConnectionRequirements {
     /**
      * The availability zone of the connection. This field is redundant and implied by `subnet_id`, but is currently an api requirement.
@@ -28,11 +28,11 @@ public final class ConnectionPhysicalConnectionRequirements {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionPhysicalConnectionRequirements(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("securityGroupIdLists") @Nullable List<String> securityGroupIdLists,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("securityGroupIdLists") @Nullable List<String> securityGroupIdLists,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.availabilityZone = availabilityZone;
         this.securityGroupIdLists = securityGroupIdLists;
         this.subnetId = subnetId;

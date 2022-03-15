@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
      * List of rules for traffic to bypass.
      * 
      */
-    @InputImport(name="bypassTrafficSettings")
+    @Import(name="bypassTrafficSettings")
       private final @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings;
 
     public List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> getBypassTrafficSettings() {
@@ -35,7 +35,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse extends
      * List of specific signatures states.
      * 
      */
-    @InputImport(name="signatureOverrides")
+    @Import(name="signatureOverrides")
       private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
     public List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> getSignatureOverrides() {

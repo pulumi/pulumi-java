@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MultiClusterIngressFeatureSpecResponse {
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
@@ -15,8 +15,8 @@ public final class MultiClusterIngressFeatureSpecResponse {
      */
     private final String configMembership;
 
-    @OutputCustomType.Constructor
-    private MultiClusterIngressFeatureSpecResponse(@OutputCustomType.Parameter("configMembership") String configMembership) {
+    @CustomType.Constructor
+    private MultiClusterIngressFeatureSpecResponse(@CustomType.Parameter("configMembership") String configMembership) {
         this.configMembership = configMembership;
     }
 

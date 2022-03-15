@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SafetyRuleAssertionRule {
     /**
      * The routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed. For example, you might include three routing controls, one for each of three AWS Regions.
@@ -22,10 +22,10 @@ public final class SafetyRuleAssertionRule {
      */
     private final Integer waitPeriodMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SafetyRuleAssertionRule(
-        @OutputCustomType.Parameter("assertedControls") List<String> assertedControls,
-        @OutputCustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
+        @CustomType.Parameter("assertedControls") List<String> assertedControls,
+        @CustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
         this.assertedControls = assertedControls;
         this.waitPeriodMs = waitPeriodMs;
     }

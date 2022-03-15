@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionG
      * Describes the Cloud KMS encryption key that will be used to protect destination secret.
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {

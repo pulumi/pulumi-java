@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceAdvancedMachineFeature;
 import io.pulumi.gcp.compute.outputs.GetInstanceAttachedDisk;
 import io.pulumi.gcp.compute.outputs.GetInstanceBootDisk;
@@ -24,7 +24,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     private final List<GetInstanceAdvancedMachineFeature> advancedMachineFeatures;
     private final Boolean allowStoppingForUpdate;
@@ -160,45 +160,45 @@ public final class GetInstanceResult {
     private final String tagsFingerprint;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("advancedMachineFeatures") List<GetInstanceAdvancedMachineFeature> advancedMachineFeatures,
-        @OutputCustomType.Parameter("allowStoppingForUpdate") Boolean allowStoppingForUpdate,
-        @OutputCustomType.Parameter("attachedDisks") List<GetInstanceAttachedDisk> attachedDisks,
-        @OutputCustomType.Parameter("bootDisks") List<GetInstanceBootDisk> bootDisks,
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("confidentialInstanceConfigs") List<GetInstanceConfidentialInstanceConfig> confidentialInstanceConfigs,
-        @OutputCustomType.Parameter("cpuPlatform") String cpuPlatform,
-        @OutputCustomType.Parameter("currentStatus") String currentStatus,
-        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("desiredStatus") String desiredStatus,
-        @OutputCustomType.Parameter("enableDisplay") Boolean enableDisplay,
-        @OutputCustomType.Parameter("guestAccelerators") List<GetInstanceGuestAccelerator> guestAccelerators,
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("metadataFingerprint") String metadataFingerprint,
-        @OutputCustomType.Parameter("metadataStartupScript") String metadataStartupScript,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<GetInstanceNetworkInterface> networkInterfaces,
-        @OutputCustomType.Parameter("networkPerformanceConfigs") List<GetInstanceNetworkPerformanceConfig> networkPerformanceConfigs,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("reservationAffinities") List<GetInstanceReservationAffinity> reservationAffinities,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("schedulings") List<GetInstanceScheduling> schedulings,
-        @OutputCustomType.Parameter("scratchDisks") List<GetInstanceScratchDisk> scratchDisks,
-        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
-        @OutputCustomType.Parameter("serviceAccounts") List<GetInstanceServiceAccount> serviceAccounts,
-        @OutputCustomType.Parameter("shieldedInstanceConfigs") List<GetInstanceShieldedInstanceConfig> shieldedInstanceConfigs,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("tagsFingerprint") String tagsFingerprint,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("advancedMachineFeatures") List<GetInstanceAdvancedMachineFeature> advancedMachineFeatures,
+        @CustomType.Parameter("allowStoppingForUpdate") Boolean allowStoppingForUpdate,
+        @CustomType.Parameter("attachedDisks") List<GetInstanceAttachedDisk> attachedDisks,
+        @CustomType.Parameter("bootDisks") List<GetInstanceBootDisk> bootDisks,
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("confidentialInstanceConfigs") List<GetInstanceConfidentialInstanceConfig> confidentialInstanceConfigs,
+        @CustomType.Parameter("cpuPlatform") String cpuPlatform,
+        @CustomType.Parameter("currentStatus") String currentStatus,
+        @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("desiredStatus") String desiredStatus,
+        @CustomType.Parameter("enableDisplay") Boolean enableDisplay,
+        @CustomType.Parameter("guestAccelerators") List<GetInstanceGuestAccelerator> guestAccelerators,
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("metadataFingerprint") String metadataFingerprint,
+        @CustomType.Parameter("metadataStartupScript") String metadataStartupScript,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkInterfaces") List<GetInstanceNetworkInterface> networkInterfaces,
+        @CustomType.Parameter("networkPerformanceConfigs") List<GetInstanceNetworkPerformanceConfig> networkPerformanceConfigs,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("reservationAffinities") List<GetInstanceReservationAffinity> reservationAffinities,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("schedulings") List<GetInstanceScheduling> schedulings,
+        @CustomType.Parameter("scratchDisks") List<GetInstanceScratchDisk> scratchDisks,
+        @CustomType.Parameter("selfLink") @Nullable String selfLink,
+        @CustomType.Parameter("serviceAccounts") List<GetInstanceServiceAccount> serviceAccounts,
+        @CustomType.Parameter("shieldedInstanceConfigs") List<GetInstanceShieldedInstanceConfig> shieldedInstanceConfigs,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("tagsFingerprint") String tagsFingerprint,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.allowStoppingForUpdate = allowStoppingForUpdate;
         this.attachedDisks = attachedDisks;

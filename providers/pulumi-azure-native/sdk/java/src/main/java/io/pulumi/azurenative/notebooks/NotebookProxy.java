@@ -8,7 +8,7 @@ import io.pulumi.azurenative.notebooks.NotebookProxyArgs;
 import io.pulumi.azurenative.notebooks.outputs.NotebookResourceSystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The friendly string identifier of the creator of the NotebookProxy resource.
      * 
      */
-    @OutputExport(name="hostname", type=String.class, parameters={})
+    @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
     /**
@@ -49,7 +49,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The public DNS name
      * 
      */
-    @OutputExport(name="publicDns", type=String.class, parameters={})
+    @Export(name="publicDns", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicDns;
 
     /**
@@ -77,7 +77,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * Allow public network access on a V-Net locked notebook resource
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -91,7 +91,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The region of the NotebookProxy resource.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -105,7 +105,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The unique identifier (a GUID) generated for every resource.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -119,7 +119,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The alternate application ID used for auth token request in the data plane
      * 
      */
-    @OutputExport(name="secondaryAppId", type=String.class, parameters={})
+    @Export(name="secondaryAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryAppId;
 
     /**
@@ -133,7 +133,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * System data for notebook resource
      * 
      */
-    @OutputExport(name="systemData", type=NotebookResourceSystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=NotebookResourceSystemDataResponse.class, parameters={})
     private Output</* @Nullable */ NotebookResourceSystemDataResponse> systemData;
 
     /**
@@ -147,7 +147,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Storage/storageAccounts or Microsoft.Notebooks/notebookProxies.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

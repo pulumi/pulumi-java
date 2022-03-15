@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
      * Code for the compliance of the guest configuration assignment resource.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends io.p
      * Reason for the compliance of the guest configuration assignment resource.
      * 
      */
-    @InputImport(name="phrase", required=true)
+    @Import(name="phrase", required=true)
       private final String phrase;
 
     public String getPhrase() {

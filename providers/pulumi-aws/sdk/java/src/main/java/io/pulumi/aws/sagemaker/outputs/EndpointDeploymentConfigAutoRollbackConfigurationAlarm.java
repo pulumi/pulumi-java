@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
     /**
      * The name of a CloudWatch alarm in your account.
@@ -15,8 +15,8 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
      */
     private final String alarmName;
 
-    @OutputCustomType.Constructor
-    private EndpointDeploymentConfigAutoRollbackConfigurationAlarm(@OutputCustomType.Parameter("alarmName") String alarmName) {
+    @CustomType.Constructor
+    private EndpointDeploymentConfigAutoRollbackConfigurationAlarm(@CustomType.Parameter("alarmName") String alarmName) {
         this.alarmName = alarmName;
     }
 

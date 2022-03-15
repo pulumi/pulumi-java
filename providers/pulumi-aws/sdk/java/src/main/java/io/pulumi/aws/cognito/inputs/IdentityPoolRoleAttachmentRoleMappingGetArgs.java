@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
      * 
      */
-    @InputImport(name="ambiguousRoleResolution")
+    @Import(name="ambiguousRoleResolution")
       private final @Nullable Output<String> ambiguousRoleResolution;
 
     public Output<String> getAmbiguousRoleResolution() {
@@ -31,7 +31,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id". Depends on `cognito_identity_providers` set on `aws.cognito.IdentityPool` resource or a `aws.cognito.IdentityProvider` resource.
      * 
      */
-    @InputImport(name="identityProvider", required=true)
+    @Import(name="identityProvider", required=true)
       private final Output<String> identityProvider;
 
     public Output<String> getIdentityProvider() {
@@ -42,7 +42,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
      * 
      */
-    @InputImport(name="mappingRules")
+    @Import(name="mappingRules")
       private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> mappingRules;
 
     public Output<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> getMappingRules() {
@@ -53,7 +53,7 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
      * The role mapping type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

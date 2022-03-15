@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ExperimentDefinitionResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3ExperimentResultResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3RolloutConfigResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExperimentResult {
     /**
      * Creation time of this experiment.
@@ -91,23 +91,23 @@ public final class GetExperimentResult {
      */
     private final List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExperimentResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("definition") GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("experimentLength") String experimentLength,
-        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("result") GoogleCloudDialogflowCxV3ExperimentResultResponse result,
-        @OutputCustomType.Parameter("rolloutConfig") GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig,
-        @OutputCustomType.Parameter("rolloutFailureReason") String rolloutFailureReason,
-        @OutputCustomType.Parameter("rolloutState") GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("variantsHistory") List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("definition") GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("experimentLength") String experimentLength,
+        @CustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("result") GoogleCloudDialogflowCxV3ExperimentResultResponse result,
+        @CustomType.Parameter("rolloutConfig") GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig,
+        @CustomType.Parameter("rolloutFailureReason") String rolloutFailureReason,
+        @CustomType.Parameter("rolloutState") GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("variantsHistory") List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
         this.createTime = createTime;
         this.definition = definition;
         this.description = description;

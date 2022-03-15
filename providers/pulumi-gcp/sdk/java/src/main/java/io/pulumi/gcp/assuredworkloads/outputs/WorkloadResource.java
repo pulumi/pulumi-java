@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.assuredworkloads.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadResource {
     /**
      * Resource identifier. For a project this represents project_number. If the project is already taken, the workload creation will fail.
@@ -23,10 +23,10 @@ public final class WorkloadResource {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadResource(
-        @OutputCustomType.Parameter("resourceId") @Nullable Integer resourceId,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
+        @CustomType.Parameter("resourceId") @Nullable Integer resourceId,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }

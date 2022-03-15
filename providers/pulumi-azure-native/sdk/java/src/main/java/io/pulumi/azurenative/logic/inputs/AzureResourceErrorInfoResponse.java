@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
      * The error code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -34,7 +34,7 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
      * The error details.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<AzureResourceErrorInfoResponse> details;
 
     public List<AzureResourceErrorInfoResponse> getDetails() {
@@ -45,7 +45,7 @@ public final class AzureResourceErrorInfoResponse extends io.pulumi.resources.In
      * The error message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

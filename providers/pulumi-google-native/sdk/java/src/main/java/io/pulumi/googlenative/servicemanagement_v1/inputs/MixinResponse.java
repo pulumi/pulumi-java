@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MixinResponse extends io.pulumi.resources.InvokeArgs {
      * The fully qualified name of the interface which is included.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class MixinResponse extends io.pulumi.resources.InvokeArgs {
      * If non-empty specifies a path under which inherited HTTP paths are rooted.
      * 
      */
-    @InputImport(name="root", required=true)
+    @Import(name="root", required=true)
       private final String root;
 
     public String getRoot() {

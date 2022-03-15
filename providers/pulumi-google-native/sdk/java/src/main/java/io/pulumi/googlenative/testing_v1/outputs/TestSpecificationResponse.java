@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidInstrumentationTestResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidRoboTestResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidTestLoopResponse;
@@ -15,7 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestSpecificationResponse {
     /**
      * An Android instrumentation test.
@@ -68,18 +68,18 @@ public final class TestSpecificationResponse {
      */
     private final String testTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestSpecificationResponse(
-        @OutputCustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
-        @OutputCustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
-        @OutputCustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
-        @OutputCustomType.Parameter("disablePerformanceMetrics") Boolean disablePerformanceMetrics,
-        @OutputCustomType.Parameter("disableVideoRecording") Boolean disableVideoRecording,
-        @OutputCustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
-        @OutputCustomType.Parameter("iosTestSetup") IosTestSetupResponse iosTestSetup,
-        @OutputCustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
-        @OutputCustomType.Parameter("testSetup") TestSetupResponse testSetup,
-        @OutputCustomType.Parameter("testTimeout") String testTimeout) {
+        @CustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
+        @CustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
+        @CustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
+        @CustomType.Parameter("disablePerformanceMetrics") Boolean disablePerformanceMetrics,
+        @CustomType.Parameter("disableVideoRecording") Boolean disableVideoRecording,
+        @CustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
+        @CustomType.Parameter("iosTestSetup") IosTestSetupResponse iosTestSetup,
+        @CustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
+        @CustomType.Parameter("testSetup") TestSetupResponse testSetup,
+        @CustomType.Parameter("testTimeout") String testTimeout) {
         this.androidInstrumentationTest = androidInstrumentationTest;
         this.androidRoboTest = androidRoboTest;
         this.androidTestLoop = androidTestLoop;

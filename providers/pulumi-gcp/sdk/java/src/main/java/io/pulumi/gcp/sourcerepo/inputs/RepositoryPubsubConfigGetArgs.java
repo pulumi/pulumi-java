@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      *   Possible values are `PROTOBUF` and `JSON`.
      * 
      */
-    @InputImport(name="messageFormat", required=true)
+    @Import(name="messageFormat", required=true)
       private final Output<String> messageFormat;
 
     public Output<String> getMessageFormat() {
@@ -35,7 +35,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * If unspecified, it defaults to the compute engine default service account.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -46,7 +46,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
      * The identifier for this object. Format specified above.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

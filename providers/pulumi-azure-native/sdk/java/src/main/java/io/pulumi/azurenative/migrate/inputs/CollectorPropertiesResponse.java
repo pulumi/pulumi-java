@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorAgentPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
 
     public static final CollectorPropertiesResponse Empty = new CollectorPropertiesResponse();
 
-    @InputImport(name="agentProperties")
+    @Import(name="agentProperties")
       private final @Nullable CollectorAgentPropertiesResponse agentProperties;
 
     public Optional<CollectorAgentPropertiesResponse> getAgentProperties() {
@@ -26,7 +26,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
      * Time when this collector was created. Date-Time represented in ISO-8601 format.
      * 
      */
-    @InputImport(name="createdTimestamp", required=true)
+    @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
@@ -37,7 +37,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
      * The ARM id of the discovery service site.
      * 
      */
-    @InputImport(name="discoverySiteId")
+    @Import(name="discoverySiteId")
       private final @Nullable String discoverySiteId;
 
     public Optional<String> getDiscoverySiteId() {
@@ -48,7 +48,7 @@ public final class CollectorPropertiesResponse extends io.pulumi.resources.Invok
      * Time when this collector was updated. Date-Time represented in ISO-8601 format.
      * 
      */
-    @InputImport(name="updatedTimestamp", required=true)
+    @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name for the Registry.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the registry in which the schema will be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

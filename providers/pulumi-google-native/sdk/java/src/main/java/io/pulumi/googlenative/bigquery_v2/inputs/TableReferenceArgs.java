@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The ID of the dataset containing this table.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -29,7 +29,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The ID of the project containing this table.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -40,7 +40,7 @@ public final class TableReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * [Required] The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.
      * 
      */
-    @InputImport(name="tableId")
+    @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
     public Output<String> getTableId() {

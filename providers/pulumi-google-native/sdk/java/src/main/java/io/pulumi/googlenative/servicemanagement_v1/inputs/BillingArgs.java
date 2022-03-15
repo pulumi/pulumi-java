@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BillingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
      * Billing configurations for sending metrics to the consumer project. There can be multiple consumer destinations per service, each one must have a different monitored resource type. A metric can be used in at most one consumer destination.
      * 
      */
-    @InputImport(name="consumerDestinations")
+    @Import(name="consumerDestinations")
       private final @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
     public Output<List<BillingDestinationArgs>> getConsumerDestinations() {

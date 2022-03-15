@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.
      * 
      */
-    @InputImport(name="calculated", required=true)
+    @Import(name="calculated", required=true)
       private final Integer calculated;
 
     public Integer getCalculated() {
@@ -31,7 +31,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * Specifies a fixed number of VM instances. This must be a positive integer.
      * 
      */
-    @InputImport(name="fixed", required=true)
+    @Import(name="fixed", required=true)
       private final Integer fixed;
 
     public Integer getFixed() {
@@ -42,7 +42,7 @@ public final class FixedOrPercentResponse extends io.pulumi.resources.InvokeArgs
      * Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
      * 
      */
-    @InputImport(name="percent", required=true)
+    @Import(name="percent", required=true)
       private final Integer percent;
 
     public Integer getPercent() {

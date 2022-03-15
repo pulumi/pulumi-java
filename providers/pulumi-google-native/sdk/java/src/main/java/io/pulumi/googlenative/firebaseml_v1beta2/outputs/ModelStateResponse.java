@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.StatusResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelStateResponse {
     /**
      * Indicates if this model has been published.
@@ -21,10 +21,10 @@ public final class ModelStateResponse {
      */
     private final StatusResponse validationError;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelStateResponse(
-        @OutputCustomType.Parameter("published") Boolean published,
-        @OutputCustomType.Parameter("validationError") StatusResponse validationError) {
+        @CustomType.Parameter("published") Boolean published,
+        @CustomType.Parameter("validationError") StatusResponse validationError) {
         this.published = published;
         this.validationError = validationError;
     }

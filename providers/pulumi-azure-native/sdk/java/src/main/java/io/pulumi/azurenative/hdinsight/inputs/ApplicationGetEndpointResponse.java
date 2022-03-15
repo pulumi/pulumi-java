@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * The destination port to connect to.
      * 
      */
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
 
     public Optional<Integer> getDestinationPort() {
@@ -34,7 +34,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * The location of the endpoint.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -45,7 +45,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * The private ip address of the endpoint.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -56,7 +56,7 @@ public final class ApplicationGetEndpointResponse extends io.pulumi.resources.In
      * The public port to connect to.
      * 
      */
-    @InputImport(name="publicPort")
+    @Import(name="publicPort")
       private final @Nullable Integer publicPort;
 
     public Optional<Integer> getPublicPort() {

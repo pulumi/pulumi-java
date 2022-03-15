@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.artifactregistry.RepositoryIamMemberArgs;
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:artifactregistry/repositoryIamMember:RepositoryIamMember")
 public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=RepositoryIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=RepositoryIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ RepositoryIamMemberCondition> condition;
 
     public Output</* @Nullable */ RepositoryIamMemberCondition> getCondition() {
@@ -67,7 +67,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -82,7 +82,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -93,7 +93,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getLocation() {
         return this.location;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -104,7 +104,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -119,7 +119,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="repository", type=String.class, parameters={})
+    @Export(name="repository", type=String.class, parameters={})
     private Output<String> repository;
 
     /**
@@ -135,7 +135,7 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AKSReplicaStatusResponseError;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSServiceResponseResponseDeploymentStatus {
     /**
      * The number of available replicas.
@@ -33,12 +33,12 @@ public final class AKSServiceResponseResponseDeploymentStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSServiceResponseResponseDeploymentStatus(
-        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
-        @OutputCustomType.Parameter("desiredReplicas") @Nullable Integer desiredReplicas,
-        @OutputCustomType.Parameter("error") @Nullable AKSReplicaStatusResponseError error,
-        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
+        @CustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @CustomType.Parameter("desiredReplicas") @Nullable Integer desiredReplicas,
+        @CustomType.Parameter("error") @Nullable AKSReplicaStatusResponseError error,
+        @CustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.desiredReplicas = desiredReplicas;
         this.error = error;

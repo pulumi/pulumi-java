@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
 
     public static final FeatureMembershipConfigmanagementConfigSyncGitGetArgs Empty = new FeatureMembershipConfigmanagementConfigSyncGitGetArgs();
 
-    @InputImport(name="gcpServiceAccountEmail")
+    @Import(name="gcpServiceAccountEmail")
       private final @Nullable Output<String> gcpServiceAccountEmail;
 
     public Output<String> getGcpServiceAccountEmail() {
@@ -25,7 +25,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * URL for the HTTPS proxy to be used when communicating with the Git repo.
      * 
      */
-    @InputImport(name="httpsProxy")
+    @Import(name="httpsProxy")
       private final @Nullable Output<String> httpsProxy;
 
     public Output<String> getHttpsProxy() {
@@ -36,7 +36,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * The path within the Git repository that represents the top level of the repo to sync. Default: the root directory of the repository.
      * 
      */
-    @InputImport(name="policyDir")
+    @Import(name="policyDir")
       private final @Nullable Output<String> policyDir;
 
     public Output<String> getPolicyDir() {
@@ -47,7 +47,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * Type of secret configured for access to the Git repo.
      * 
      */
-    @InputImport(name="secretType")
+    @Import(name="secretType")
       private final @Nullable Output<String> secretType;
 
     public Output<String> getSecretType() {
@@ -58,7 +58,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * The branch of the repository to sync from. Default: master.
      * 
      */
-    @InputImport(name="syncBranch")
+    @Import(name="syncBranch")
       private final @Nullable Output<String> syncBranch;
 
     public Output<String> getSyncBranch() {
@@ -69,7 +69,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * The URL of the Git repository to use as the source of truth.
      * 
      */
-    @InputImport(name="syncRepo")
+    @Import(name="syncRepo")
       private final @Nullable Output<String> syncRepo;
 
     public Output<String> getSyncRepo() {
@@ -80,7 +80,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * Git revision (tag or hash) to check out. Default HEAD.
      * 
      */
-    @InputImport(name="syncRev")
+    @Import(name="syncRev")
       private final @Nullable Output<String> syncRev;
 
     public Output<String> getSyncRev() {
@@ -91,7 +91,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
      * Period in seconds between consecutive syncs. Default: 15.
      * 
      */
-    @InputImport(name="syncWaitSecs")
+    @Import(name="syncWaitSecs")
       private final @Nullable Output<String> syncWaitSecs;
 
     public Output<String> getSyncWaitSecs() {

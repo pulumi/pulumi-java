@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends io.pul
      * authentication key
      * 
      */
-    @InputImport(name="base64Key")
+    @Import(name="base64Key")
       private final @Nullable String base64Key;
 
     public Optional<String> getBase64Key() {
@@ -33,7 +33,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends io.pul
      * The expiration time of the authentication key.
      * 
      */
-    @InputImport(name="expiration")
+    @Import(name="expiration")
       private final @Nullable String expiration;
 
     public Optional<String> getExpiration() {
@@ -44,7 +44,7 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends io.pul
      * identifier of the key
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable String identifier;
 
     public Optional<String> getIdentifier() {

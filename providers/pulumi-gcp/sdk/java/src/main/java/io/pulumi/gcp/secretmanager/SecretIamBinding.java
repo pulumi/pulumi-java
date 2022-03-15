@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretIamBindingArgs;
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:secretmanager/secretIamBinding:SecretIamBinding")
 public class SecretIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=SecretIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=SecretIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ SecretIamBindingCondition> condition;
 
     public Output</* @Nullable */ SecretIamBindingCondition> getCondition() {
@@ -68,7 +68,7 @@ public class SecretIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class SecretIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -89,7 +89,7 @@ public class SecretIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -106,7 +106,7 @@ public class SecretIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -118,7 +118,7 @@ public class SecretIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getRole() {
         return this.role;
     }
-    @OutputExport(name="secretId", type=String.class, parameters={})
+    @Export(name="secretId", type=String.class, parameters={})
     private Output<String> secretId;
 
     public Output<String> getSecretId() {

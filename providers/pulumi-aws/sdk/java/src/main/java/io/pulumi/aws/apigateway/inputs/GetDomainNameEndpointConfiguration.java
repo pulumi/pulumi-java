@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetDomainNameEndpointConfiguration extends io.pulumi.resource
      * List of endpoint types.
      * 
      */
-    @InputImport(name="types", required=true)
+    @Import(name="types", required=true)
       private final List<String> types;
 
     public List<String> getTypes() {

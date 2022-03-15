@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.inputs.SubordinateConfigChainResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
      * This can refer to a CertificateAuthority that was used to create a subordinate CertificateAuthority. This field is used for information and usability purposes only. The resource name is in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      * 
      */
-    @InputImport(name="certificateAuthority", required=true)
+    @Import(name="certificateAuthority", required=true)
       private final String certificateAuthority;
 
     public String getCertificateAuthority() {
@@ -32,7 +32,7 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
      * Contains the PEM certificate chain for the issuers of this CertificateAuthority, but not pem certificate for this CA itself.
      * 
      */
-    @InputImport(name="pemIssuerChain", required=true)
+    @Import(name="pemIssuerChain", required=true)
       private final SubordinateConfigChainResponse pemIssuerChain;
 
     public SubordinateConfigChainResponse getPemIssuerChain() {

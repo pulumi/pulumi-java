@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.datasync.inputs.LocationSMBMountOptionsArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationSMBTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Names (ARNs) of agents to use for a Simple Message Block (SMB) location.
      * 
      */
-    @InputImport(name="agentArns", required=true)
+    @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -32,14 +32,14 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Windows domain that the SMB server belongs to.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
         return this.domain == null ? Output.empty() : this.domain;
     }
 
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<LocationSMBMountOptionsArgs> mountOptions;
 
     public Output<LocationSMBMountOptionsArgs> getMountOptions() {
@@ -50,7 +50,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * The password of the user who can mount the share and has the permissions to access files and folders in the SMB share.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -61,7 +61,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SMB server. This value is the IP address or Domain Name Service (DNS) name of the SMB server.
      * 
      */
-    @InputImport(name="serverHostname", required=true)
+    @Import(name="serverHostname", required=true)
       private final Output<String> serverHostname;
 
     public Output<String> getServerHostname() {
@@ -72,7 +72,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * The subdirectory in the SMB file system that is used to read data from the SMB source location or write data to the SMB destination
      * 
      */
-    @InputImport(name="subdirectory", required=true)
+    @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -83,7 +83,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationSMBTagArgs>> tags;
 
     public Output<List<LocationSMBTagArgs>> getTags() {
@@ -94,7 +94,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
      * The user who can mount the share, has the permissions to access files and folders in the SMB share.
      * 
      */
-    @InputImport(name="user", required=true)
+    @Import(name="user", required=true)
       private final Output<String> user;
 
     public Output<String> getUser() {

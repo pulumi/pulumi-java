@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the hash.
      * 
      */
-    @InputImport(name="contentHash")
+    @Import(name="contentHash")
       private final @Nullable Output<ContentHashArgs> contentHash;
 
     public Output<ContentHashArgs> getContentHash() {
@@ -34,7 +34,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the uri of the runbook content.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
@@ -45,7 +45,7 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the version of the content.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimeterSpecIngressPolicyIngressFromSource {
     /**
      * An `AccessLevel` resource name that allow resources within the
@@ -34,10 +34,10 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSource {
      */
     private final @Nullable String resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimeterSpecIngressPolicyIngressFromSource(
-        @OutputCustomType.Parameter("accessLevel") @Nullable String accessLevel,
-        @OutputCustomType.Parameter("resource") @Nullable String resource) {
+        @CustomType.Parameter("accessLevel") @Nullable String accessLevel,
+        @CustomType.Parameter("resource") @Nullable String resource) {
         this.accessLevel = accessLevel;
         this.resource = resource;
     }

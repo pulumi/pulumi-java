@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.SubscriptionArgs;
@@ -24,7 +24,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Name of the API product for which the developer is purchasing a subscription.
      * 
      */
-    @OutputExport(name="apiproduct", type=String.class, parameters={})
+    @Export(name="apiproduct", type=String.class, parameters={})
     private Output<String> apiproduct;
 
     /**
@@ -38,7 +38,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Time when the API product subscription was created in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -52,7 +52,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Time when the API product subscription ends in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -66,7 +66,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Time when the API product subscription was last modified in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output<String> lastModifiedAt;
 
     /**
@@ -80,7 +80,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Name of the API product subscription.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Time when the API product subscription starts in milliseconds since epoch.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**

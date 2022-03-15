@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureBlobFSWriteSettingsResponse extends io.pulumi.resources.
      * Indicates the block size(MB) when writing data to blob. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="blockSizeInMB")
+    @Import(name="blockSizeInMB")
       private final @Nullable Object blockSizeInMB;
 
     public Optional<Object> getBlockSizeInMB() {
@@ -34,7 +34,7 @@ public final class AzureBlobFSWriteSettingsResponse extends io.pulumi.resources.
      * The type of copy behavior for copy sink.
      * 
      */
-    @InputImport(name="copyBehavior")
+    @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
     public Optional<Object> getCopyBehavior() {
@@ -45,7 +45,7 @@ public final class AzureBlobFSWriteSettingsResponse extends io.pulumi.resources.
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -56,7 +56,7 @@ public final class AzureBlobFSWriteSettingsResponse extends io.pulumi.resources.
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -68,7 +68,7 @@ public final class AzureBlobFSWriteSettingsResponse extends io.pulumi.resources.
      * Expected value is 'AzureBlobFSWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

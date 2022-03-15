@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
 
     public static final StorageLensBucketsAndRegionsArgs Empty = new StorageLensBucketsAndRegionsArgs();
 
-    @InputImport(name="buckets")
+    @Import(name="buckets")
       private final @Nullable Output<List<String>> buckets;
 
     public Output<List<String>> getBuckets() {
         return this.buckets == null ? Output.empty() : this.buckets;
     }
 
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {

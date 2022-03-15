@@ -9,7 +9,7 @@ import io.pulumi.aws.eks.inputs.ClusterIdentityGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterKubernetesNetworkConfigGetArgs;
 import io.pulumi.aws.eks.inputs.ClusterVpcConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * ARN of the cluster.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Attribute block containing `certificate-authority-data` for your cluster. Detailed below.
      * 
      */
-    @InputImport(name="certificateAuthority")
+    @Import(name="certificateAuthority")
       private final @Nullable Output<ClusterCertificateAuthorityGetArgs> certificateAuthority;
 
     public Output<ClusterCertificateAuthorityGetArgs> getCertificateAuthority() {
@@ -47,7 +47,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Unix epoch timestamp in seconds for when the cluster was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -58,7 +58,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of the desired control plane logging to enable. For more information, see [Amazon EKS Control Plane Logging](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html).
      * 
      */
-    @InputImport(name="enabledClusterLogTypes")
+    @Import(name="enabledClusterLogTypes")
       private final @Nullable Output<List<String>> enabledClusterLogTypes;
 
     public Output<List<String>> getEnabledClusterLogTypes() {
@@ -69,7 +69,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterEncryptionConfigGetArgs> encryptionConfig;
 
     public Output<ClusterEncryptionConfigGetArgs> getEncryptionConfig() {
@@ -80,7 +80,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Endpoint for your Kubernetes API server.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -91,7 +91,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Attribute block containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. Detailed below.
      * 
      */
-    @InputImport(name="identities")
+    @Import(name="identities")
       private final @Nullable Output<List<ClusterIdentityGetArgs>> identities;
 
     public Output<List<ClusterIdentityGetArgs>> getIdentities() {
@@ -102,7 +102,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with kubernetes network configuration for the cluster. Detailed below. If removed, this provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="kubernetesNetworkConfig")
+    @Import(name="kubernetesNetworkConfig")
       private final @Nullable Output<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig;
 
     public Output<ClusterKubernetesNetworkConfigGetArgs> getKubernetesNetworkConfig() {
@@ -113,7 +113,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Name of the cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -124,7 +124,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Platform version for the cluster.
      * 
      */
-    @InputImport(name="platformVersion")
+    @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
     public Output<String> getPlatformVersion() {
@@ -135,7 +135,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -146,7 +146,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Status of the EKS cluster. One of `CREATING`, `ACTIVE`, `DELETING`, `FAILED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -157,7 +157,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -168,7 +168,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -179,7 +179,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -190,7 +190,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the VPC associated with your cluster. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the Amazon EKS User Guide. Detailed below. Also contains attributes detailed in the Attributes section.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<ClusterVpcConfigGetArgs> vpcConfig;
 
     public Output<ClusterVpcConfigGetArgs> getVpcConfig() {

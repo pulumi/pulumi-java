@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2clientvpn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConnectionLogOptions {
     /**
      * The name of the CloudWatch Logs log group.
@@ -28,11 +28,11 @@ public final class EndpointConnectionLogOptions {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConnectionLogOptions(
-        @OutputCustomType.Parameter("cloudwatchLogGroup") @Nullable String cloudwatchLogGroup,
-        @OutputCustomType.Parameter("cloudwatchLogStream") @Nullable String cloudwatchLogStream,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("cloudwatchLogGroup") @Nullable String cloudwatchLogGroup,
+        @CustomType.Parameter("cloudwatchLogStream") @Nullable String cloudwatchLogStream,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         this.cloudwatchLogStream = cloudwatchLogStream;
         this.enabled = enabled;

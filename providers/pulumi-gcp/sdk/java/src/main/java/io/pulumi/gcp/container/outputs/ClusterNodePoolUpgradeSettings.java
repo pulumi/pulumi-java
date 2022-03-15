@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolUpgradeSettings {
     private final Integer maxSurge;
     private final Integer maxUnavailable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodePoolUpgradeSettings(
-        @OutputCustomType.Parameter("maxSurge") Integer maxSurge,
-        @OutputCustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
+        @CustomType.Parameter("maxSurge") Integer maxSurge,
+        @CustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }

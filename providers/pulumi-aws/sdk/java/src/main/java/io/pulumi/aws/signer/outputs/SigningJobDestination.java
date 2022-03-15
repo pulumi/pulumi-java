@@ -4,10 +4,10 @@
 package io.pulumi.aws.signer.outputs;
 
 import io.pulumi.aws.signer.outputs.SigningJobDestinationS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SigningJobDestination {
     /**
      * A configuration block describing the S3 Destination object: See S3 Destination below for details.
@@ -15,8 +15,8 @@ public final class SigningJobDestination {
      */
     private final SigningJobDestinationS3 s3;
 
-    @OutputCustomType.Constructor
-    private SigningJobDestination(@OutputCustomType.Parameter("s3") SigningJobDestinationS3 s3) {
+    @CustomType.Constructor
+    private SigningJobDestination(@CustomType.Parameter("s3") SigningJobDestinationS3 s3) {
         this.s3 = s3;
     }
 

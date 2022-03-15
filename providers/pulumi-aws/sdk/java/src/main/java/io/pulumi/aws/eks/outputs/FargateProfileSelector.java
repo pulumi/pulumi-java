@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FargateProfileSelector {
     /**
      * Key-value map of Kubernetes labels for selection.
@@ -22,10 +22,10 @@ public final class FargateProfileSelector {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FargateProfileSelector(
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("namespace") String namespace) {
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("namespace") String namespace) {
         this.labels = labels;
         this.namespace = namespace;
     }

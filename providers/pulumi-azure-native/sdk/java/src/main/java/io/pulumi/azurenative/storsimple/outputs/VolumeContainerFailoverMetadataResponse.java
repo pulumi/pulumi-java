@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.VolumeFailoverMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeContainerFailoverMetadataResponse {
     /**
      * The path ID of the volume container.
@@ -24,10 +24,10 @@ public final class VolumeContainerFailoverMetadataResponse {
      */
     private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeContainerFailoverMetadataResponse(
-        @OutputCustomType.Parameter("volumeContainerId") @Nullable String volumeContainerId,
-        @OutputCustomType.Parameter("volumes") @Nullable List<VolumeFailoverMetadataResponse> volumes) {
+        @CustomType.Parameter("volumeContainerId") @Nullable String volumeContainerId,
+        @CustomType.Parameter("volumes") @Nullable List<VolumeFailoverMetadataResponse> volumes) {
         this.volumeContainerId = volumeContainerId;
         this.volumes = volumes;
     }

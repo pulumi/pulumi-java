@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Service account that will make the push request.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
     public String getServiceAccountEmail() {
@@ -31,7 +31,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Potential issues with the underlying Pub/Sub subscription configuration. Only populated on get requests.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -42,7 +42,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the subscription. Format is `projects/{project}/subscriptions/{subscription}`.
      * 
      */
-    @InputImport(name="subscription", required=true)
+    @Import(name="subscription", required=true)
       private final String subscription;
 
     public String getSubscription() {
@@ -53,7 +53,7 @@ public final class PubsubConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the topic from which this subscription is receiving messages. Format is `projects/{project}/topics/{topic}`.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final String topic;
 
     public String getTopic() {

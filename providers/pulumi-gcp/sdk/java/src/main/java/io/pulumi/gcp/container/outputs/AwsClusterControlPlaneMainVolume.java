@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AwsClusterControlPlaneMainVolume {
     /**
      * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
@@ -33,12 +33,12 @@ public final class AwsClusterControlPlaneMainVolume {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsClusterControlPlaneMainVolume(
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("sizeGib") @Nullable Integer sizeGib,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("sizeGib") @Nullable Integer sizeGib,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.iops = iops;
         this.kmsKeyArn = kmsKeyArn;
         this.sizeGib = sizeGib;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.deploymentmanager.inputs.HealthCheckStepPropertiesA
 import io.pulumi.azurenative.deploymentmanager.inputs.WaitStepPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -33,7 +33,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that define the step.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties;
 
     public Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> getProperties() {
@@ -44,7 +44,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the deployment step.
      * 
      */
-    @InputImport(name="stepName")
+    @Import(name="stepName")
       private final @Nullable Output<String> stepName;
 
     public Output<String> getStepName() {
@@ -66,7 +66,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,12 +4,12 @@
 package io.pulumi.kubernetes.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HelmReleaseSettingsArgs {
     /**
      * The backend storage driver for Helm. Values are: configmap, secret, memory, sql.
@@ -37,13 +37,13 @@ public final class HelmReleaseSettingsArgs {
      */
     private final @Nullable Output<String> repositoryConfigPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HelmReleaseSettingsArgs(
-        @OutputCustomType.Parameter("driver") @Nullable Output<String> driver,
-        @OutputCustomType.Parameter("pluginsPath") @Nullable Output<String> pluginsPath,
-        @OutputCustomType.Parameter("registryConfigPath") @Nullable Output<String> registryConfigPath,
-        @OutputCustomType.Parameter("repositoryCache") @Nullable Output<String> repositoryCache,
-        @OutputCustomType.Parameter("repositoryConfigPath") @Nullable Output<String> repositoryConfigPath) {
+        @CustomType.Parameter("driver") @Nullable Output<String> driver,
+        @CustomType.Parameter("pluginsPath") @Nullable Output<String> pluginsPath,
+        @CustomType.Parameter("registryConfigPath") @Nullable Output<String> registryConfigPath,
+        @CustomType.Parameter("repositoryCache") @Nullable Output<String> repositoryCache,
+        @CustomType.Parameter("repositoryConfigPath") @Nullable Output<String> repositoryConfigPath) {
         this.driver = driver;
         this.pluginsPath = pluginsPath;
         this.registryConfigPath = registryConfigPath;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * Gets or sets actions required
      * 
      */
-    @InputImport(name="actionRequired")
+    @Import(name="actionRequired")
       private final @Nullable String actionRequired;
 
     public Optional<String> getActionRequired() {
@@ -33,7 +33,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * Gets or sets description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * Gets or sets the status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

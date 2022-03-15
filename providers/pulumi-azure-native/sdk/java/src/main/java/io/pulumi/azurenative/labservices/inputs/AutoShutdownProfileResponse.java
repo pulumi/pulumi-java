@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
      * 
      */
-    @InputImport(name="disconnectDelay")
+    @Import(name="disconnectDelay")
       private final @Nullable String disconnectDelay;
 
     public Optional<String> getDisconnectDelay() {
@@ -33,7 +33,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * The amount of time a VM will idle before it is shutdown if this behavior is enabled.
      * 
      */
-    @InputImport(name="idleDelay")
+    @Import(name="idleDelay")
       private final @Nullable String idleDelay;
 
     public Optional<String> getIdleDelay() {
@@ -44,7 +44,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
      * 
      */
-    @InputImport(name="noConnectDelay")
+    @Import(name="noConnectDelay")
       private final @Nullable String noConnectDelay;
 
     public Optional<String> getNoConnectDelay() {
@@ -55,7 +55,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * Whether shutdown on disconnect is enabled
      * 
      */
-    @InputImport(name="shutdownOnDisconnect")
+    @Import(name="shutdownOnDisconnect")
       private final @Nullable String shutdownOnDisconnect;
 
     public Optional<String> getShutdownOnDisconnect() {
@@ -66,7 +66,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * Whether a VM will get shutdown when it has idled for a period of time.
      * 
      */
-    @InputImport(name="shutdownOnIdle")
+    @Import(name="shutdownOnIdle")
       private final @Nullable String shutdownOnIdle;
 
     public Optional<String> getShutdownOnIdle() {
@@ -77,7 +77,7 @@ public final class AutoShutdownProfileResponse extends io.pulumi.resources.Invok
      * Whether a VM will get shutdown when it hasn't been connected to after a period of time.
      * 
      */
-    @InputImport(name="shutdownWhenNotConnected")
+    @Import(name="shutdownWhenNotConnected")
       private final @Nullable String shutdownWhenNotConnected;
 
     public Optional<String> getShutdownWhenNotConnected() {

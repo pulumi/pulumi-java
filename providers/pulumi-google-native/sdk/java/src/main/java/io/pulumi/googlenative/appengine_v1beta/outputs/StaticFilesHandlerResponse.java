@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StaticFilesHandlerResponse {
     /**
      * Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.
@@ -47,15 +47,15 @@ public final class StaticFilesHandlerResponse {
      */
     private final String uploadPathRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticFilesHandlerResponse(
-        @OutputCustomType.Parameter("applicationReadable") Boolean applicationReadable,
-        @OutputCustomType.Parameter("expiration") String expiration,
-        @OutputCustomType.Parameter("httpHeaders") Map<String,String> httpHeaders,
-        @OutputCustomType.Parameter("mimeType") String mimeType,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("requireMatchingFile") Boolean requireMatchingFile,
-        @OutputCustomType.Parameter("uploadPathRegex") String uploadPathRegex) {
+        @CustomType.Parameter("applicationReadable") Boolean applicationReadable,
+        @CustomType.Parameter("expiration") String expiration,
+        @CustomType.Parameter("httpHeaders") Map<String,String> httpHeaders,
+        @CustomType.Parameter("mimeType") String mimeType,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("requireMatchingFile") Boolean requireMatchingFile,
+        @CustomType.Parameter("uploadPathRegex") String uploadPathRegex) {
         this.applicationReadable = applicationReadable;
         this.expiration = expiration;
         this.httpHeaders = httpHeaders;

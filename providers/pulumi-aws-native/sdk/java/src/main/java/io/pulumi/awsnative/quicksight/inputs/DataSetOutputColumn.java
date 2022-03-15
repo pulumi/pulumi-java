@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetColumnDataType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
      * <p>A description for a column.</p>
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,14 +34,14 @@ public final class DataSetOutputColumn extends io.pulumi.resources.InvokeArgs {
      * <p>A display name for the dataset.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable DataSetColumnDataType type;
 
     public Optional<DataSetColumnDataType> getType() {

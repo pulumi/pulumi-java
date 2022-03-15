@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
     /**
      * Set of port ranges.
@@ -16,8 +16,8 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetPortSet {
      */
     private final List<String> definitions;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleGroupRuleVariablesPortSetPortSet(@OutputCustomType.Parameter("definitions") List<String> definitions) {
+    @CustomType.Constructor
+    private RuleGroupRuleGroupRuleVariablesPortSetPortSet(@CustomType.Parameter("definitions") List<String> definitions) {
         this.definitions = definitions;
     }
 

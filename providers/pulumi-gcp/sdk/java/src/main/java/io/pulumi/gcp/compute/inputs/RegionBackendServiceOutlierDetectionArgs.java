@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceOutlierDetectionIntervalArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="baseEjectionTime")
+    @Import(name="baseEjectionTime")
       private final @Nullable Output<RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs> baseEjectionTime;
 
     public Output<RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs> getBaseEjectionTime() {
@@ -36,7 +36,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * Defaults to 5.
      * 
      */
-    @InputImport(name="consecutiveErrors")
+    @Import(name="consecutiveErrors")
       private final @Nullable Output<Integer> consecutiveErrors;
 
     public Output<Integer> getConsecutiveErrors() {
@@ -49,7 +49,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * gateway failure ejection occurs. Defaults to 5.
      * 
      */
-    @InputImport(name="consecutiveGatewayFailure")
+    @Import(name="consecutiveGatewayFailure")
       private final @Nullable Output<Integer> consecutiveGatewayFailure;
 
     public Output<Integer> getConsecutiveGatewayFailure() {
@@ -62,7 +62,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * ejection or to ramp it up slowly. Defaults to 100.
      * 
      */
-    @InputImport(name="enforcingConsecutiveErrors")
+    @Import(name="enforcingConsecutiveErrors")
       private final @Nullable Output<Integer> enforcingConsecutiveErrors;
 
     public Output<Integer> getEnforcingConsecutiveErrors() {
@@ -75,7 +75,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * used to disable ejection or to ramp it up slowly. Defaults to 0.
      * 
      */
-    @InputImport(name="enforcingConsecutiveGatewayFailure")
+    @Import(name="enforcingConsecutiveGatewayFailure")
       private final @Nullable Output<Integer> enforcingConsecutiveGatewayFailure;
 
     public Output<Integer> getEnforcingConsecutiveGatewayFailure() {
@@ -88,7 +88,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * disable ejection or to ramp it up slowly. Defaults to 100.
      * 
      */
-    @InputImport(name="enforcingSuccessRate")
+    @Import(name="enforcingSuccessRate")
       private final @Nullable Output<Integer> enforcingSuccessRate;
 
     public Output<Integer> getEnforcingSuccessRate() {
@@ -101,7 +101,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<RegionBackendServiceOutlierDetectionIntervalArgs> interval;
 
     public Output<RegionBackendServiceOutlierDetectionIntervalArgs> getInterval() {
@@ -113,7 +113,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * that can be ejected. Defaults to 10%.
      * 
      */
-    @InputImport(name="maxEjectionPercent")
+    @Import(name="maxEjectionPercent")
       private final @Nullable Output<Integer> maxEjectionPercent;
 
     public Output<Integer> getMaxEjectionPercent() {
@@ -127,7 +127,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * cluster. Defaults to 5.
      * 
      */
-    @InputImport(name="successRateMinimumHosts")
+    @Import(name="successRateMinimumHosts")
       private final @Nullable Output<Integer> successRateMinimumHosts;
 
     public Output<Integer> getSuccessRateMinimumHosts() {
@@ -142,7 +142,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * to 100.
      * 
      */
-    @InputImport(name="successRateRequestVolume")
+    @Import(name="successRateRequestVolume")
       private final @Nullable Output<Integer> successRateRequestVolume;
 
     public Output<Integer> getSuccessRateRequestVolume() {
@@ -158,7 +158,7 @@ public final class RegionBackendServiceOutlierDetectionArgs extends io.pulumi.re
      * runtime value should be 1900. Defaults to 1900.
      * 
      */
-    @InputImport(name="successRateStdevFactor")
+    @Import(name="successRateStdevFactor")
       private final @Nullable Output<Integer> successRateStdevFactor;
 
     public Output<Integer> getSuccessRateStdevFactor() {

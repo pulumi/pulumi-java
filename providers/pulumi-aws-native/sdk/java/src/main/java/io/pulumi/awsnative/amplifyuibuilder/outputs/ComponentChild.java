@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.amplifyuibuilder.outputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentChild {
     private final @Nullable List<ComponentChild> children;
     private final String componentType;
     private final String name;
     private final ComponentProperties properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentChild(
-        @OutputCustomType.Parameter("children") @Nullable List<ComponentChild> children,
-        @OutputCustomType.Parameter("componentType") String componentType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") ComponentProperties properties) {
+        @CustomType.Parameter("children") @Nullable List<ComponentChild> children,
+        @CustomType.Parameter("componentType") String componentType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") ComponentProperties properties) {
         this.children = children;
         this.componentType = componentType;
         this.name = name;

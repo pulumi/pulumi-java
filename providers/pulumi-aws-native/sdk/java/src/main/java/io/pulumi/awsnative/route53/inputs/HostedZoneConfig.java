@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class HostedZoneConfig extends io.pulumi.resources.InvokeArgs {
      * Any comments that you want to include about the hosted zone.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable String comment;
 
     public Optional<String> getComment() {

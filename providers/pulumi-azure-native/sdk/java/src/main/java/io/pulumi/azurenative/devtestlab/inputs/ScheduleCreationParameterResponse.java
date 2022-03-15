@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.inputs.DayDetailsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.inputs.WeekDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * If the schedule will occur once each day of the week, specify the daily recurrence.
      * 
      */
-    @InputImport(name="dailyRecurrence")
+    @Import(name="dailyRecurrence")
       private final @Nullable DayDetailsResponse dailyRecurrence;
 
     public Optional<DayDetailsResponse> getDailyRecurrence() {
@@ -38,7 +38,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * If the schedule will occur multiple times a day, specify the hourly recurrence.
      * 
      */
-    @InputImport(name="hourlyRecurrence")
+    @Import(name="hourlyRecurrence")
       private final @Nullable HourDetailsResponse hourlyRecurrence;
 
     public Optional<HourDetailsResponse> getHourlyRecurrence() {
@@ -49,7 +49,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The location of the new virtual machine or environment
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -60,7 +60,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The name of the virtual machine or environment
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -71,7 +71,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * Notification settings.
      * 
      */
-    @InputImport(name="notificationSettings")
+    @Import(name="notificationSettings")
       private final @Nullable NotificationSettingsResponse notificationSettings;
 
     public Optional<NotificationSettingsResponse> getNotificationSettings() {
@@ -82,7 +82,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The status of the schedule (i.e. Enabled, Disabled)
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -93,7 +93,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -104,7 +104,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The resource ID to which the schedule belongs
      * 
      */
-    @InputImport(name="targetResourceId")
+    @Import(name="targetResourceId")
       private final @Nullable String targetResourceId;
 
     public Optional<String> getTargetResourceId() {
@@ -115,7 +115,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).
      * 
      */
-    @InputImport(name="taskType")
+    @Import(name="taskType")
       private final @Nullable String taskType;
 
     public Optional<String> getTaskType() {
@@ -126,7 +126,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * The time zone ID (e.g. Pacific Standard time).
      * 
      */
-    @InputImport(name="timeZoneId")
+    @Import(name="timeZoneId")
       private final @Nullable String timeZoneId;
 
     public Optional<String> getTimeZoneId() {
@@ -137,7 +137,7 @@ public final class ScheduleCreationParameterResponse extends io.pulumi.resources
      * If the schedule will occur only some days of the week, specify the weekly recurrence.
      * 
      */
-    @InputImport(name="weeklyRecurrence")
+    @Import(name="weeklyRecurrence")
       private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
     public Optional<WeekDetailsResponse> getWeeklyRecurrence() {

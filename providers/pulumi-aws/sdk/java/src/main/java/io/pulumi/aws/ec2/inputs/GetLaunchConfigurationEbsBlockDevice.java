@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * Whether the EBS Volume will be deleted on instance termination.
      * 
      */
-    @InputImport(name="deleteOnTermination", required=true)
+    @Import(name="deleteOnTermination", required=true)
       private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
@@ -29,7 +29,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * The Name of the device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -40,7 +40,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * Whether the volume is Encrypted.
      * 
      */
-    @InputImport(name="encrypted", required=true)
+    @Import(name="encrypted", required=true)
       private final Boolean encrypted;
 
     public Boolean getEncrypted() {
@@ -51,7 +51,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * The provisioned IOPs of the volume.
      * 
      */
-    @InputImport(name="iops", required=true)
+    @Import(name="iops", required=true)
       private final Integer iops;
 
     public Integer getIops() {
@@ -62,7 +62,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * Whether the device in the block device mapping of the AMI is suppressed.
      * 
      */
-    @InputImport(name="noDevice", required=true)
+    @Import(name="noDevice", required=true)
       private final Boolean noDevice;
 
     public Boolean getNoDevice() {
@@ -73,7 +73,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * The Snapshot ID of the mount.
      * 
      */
-    @InputImport(name="snapshotId", required=true)
+    @Import(name="snapshotId", required=true)
       private final String snapshotId;
 
     public String getSnapshotId() {
@@ -84,7 +84,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * The Throughput of the volume.
      * 
      */
-    @InputImport(name="throughput", required=true)
+    @Import(name="throughput", required=true)
       private final Boolean throughput;
 
     public Boolean getThroughput() {
@@ -95,7 +95,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * The Size of the volume.
      * 
      */
-    @InputImport(name="volumeSize", required=true)
+    @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
     public Integer getVolumeSize() {
@@ -106,7 +106,7 @@ public final class GetLaunchConfigurationEbsBlockDevice extends io.pulumi.resour
      * The Type of the volume.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final String volumeType;
 
     public String getVolumeType() {

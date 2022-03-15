@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
      * If left empty and multiple backups exist for the instance, `most_recent` must be set to `true`.
      * 
      */
-    @InputImport(name="backupId")
+    @Import(name="backupId")
       private final @Nullable Integer backupId;
 
     public Optional<Integer> getBackupId() {
@@ -32,7 +32,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the instance the backup is taken from.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final String instance;
 
     public String getInstance() {
@@ -44,7 +44,7 @@ public final class GetBackupRunArgs extends io.pulumi.resources.InvokeArgs {
      * Cloud SQL instance.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {

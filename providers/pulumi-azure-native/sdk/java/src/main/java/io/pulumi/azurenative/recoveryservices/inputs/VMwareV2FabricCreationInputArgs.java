@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
      * Expected value is 'VMwareV2'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -34,7 +34,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
      * The ARM Id of the migration solution.
      * 
      */
-    @InputImport(name="migrationSolutionId", required=true)
+    @Import(name="migrationSolutionId", required=true)
       private final Output<String> migrationSolutionId;
 
     public Output<String> getMigrationSolutionId() {
@@ -45,7 +45,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
      * The ARM Id of the VMware site.
      * 
      */
-    @InputImport(name="vmwareSiteId", required=true)
+    @Import(name="vmwareSiteId", required=true)
       private final Output<String> vmwareSiteId;
 
     public Output<String> getVmwareSiteId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FailureDetailResponse {
     /**
      * If the failure was severe because the system (app) under test crashed.
@@ -45,15 +45,15 @@ public final class FailureDetailResponse {
      */
     private final Boolean unableToCrawl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FailureDetailResponse(
-        @OutputCustomType.Parameter("crashed") Boolean crashed,
-        @OutputCustomType.Parameter("deviceOutOfMemory") Boolean deviceOutOfMemory,
-        @OutputCustomType.Parameter("failedRoboscript") Boolean failedRoboscript,
-        @OutputCustomType.Parameter("notInstalled") Boolean notInstalled,
-        @OutputCustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash,
-        @OutputCustomType.Parameter("timedOut") Boolean timedOut,
-        @OutputCustomType.Parameter("unableToCrawl") Boolean unableToCrawl) {
+        @CustomType.Parameter("crashed") Boolean crashed,
+        @CustomType.Parameter("deviceOutOfMemory") Boolean deviceOutOfMemory,
+        @CustomType.Parameter("failedRoboscript") Boolean failedRoboscript,
+        @CustomType.Parameter("notInstalled") Boolean notInstalled,
+        @CustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash,
+        @CustomType.Parameter("timedOut") Boolean timedOut,
+        @CustomType.Parameter("unableToCrawl") Boolean unableToCrawl) {
         this.crashed = crashed;
         this.deviceOutOfMemory = deviceOutOfMemory;
         this.failedRoboscript = failedRoboscript;

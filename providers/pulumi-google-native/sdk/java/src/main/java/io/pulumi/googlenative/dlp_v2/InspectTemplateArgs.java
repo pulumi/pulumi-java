@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * Short description (max 256 chars).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * Display name (max 256 chars).
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,21 +41,21 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * The core content of the template. Configuration of the scanning process.
      * 
      */
-    @InputImport(name="inspectConfig")
+    @Import(name="inspectConfig")
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
     public Output<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
         return this.inspectConfig == null ? Output.empty() : this.inspectConfig;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -66,7 +66,7 @@ public final class InspectTemplateArgs extends io.pulumi.resources.ResourceArgs 
      * The template id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
      * 
      */
-    @InputImport(name="templateId")
+    @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
     public Output<String> getTemplateId() {

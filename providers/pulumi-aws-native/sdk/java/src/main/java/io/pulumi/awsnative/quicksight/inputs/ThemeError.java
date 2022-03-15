@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.ThemeErrorType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class ThemeError extends io.pulumi.resources.InvokeArgs {
      * <p>The error message.</p>
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable ThemeErrorType type;
 
     public Optional<ThemeErrorType> getType() {

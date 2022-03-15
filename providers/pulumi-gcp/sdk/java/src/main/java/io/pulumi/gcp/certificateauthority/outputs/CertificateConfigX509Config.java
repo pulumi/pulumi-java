@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigKeyUsage;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateConfigX509Config {
     /**
      * Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
@@ -47,13 +47,13 @@ public final class CertificateConfigX509Config {
      */
     private final @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateConfigX509Config(
-        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions,
-        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
-        @OutputCustomType.Parameter("caOptions") @Nullable CertificateConfigX509ConfigCaOptions caOptions,
-        @OutputCustomType.Parameter("keyUsage") CertificateConfigX509ConfigKeyUsage keyUsage,
-        @OutputCustomType.Parameter("policyIds") @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds) {
+        @CustomType.Parameter("additionalExtensions") @Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions,
+        @CustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @CustomType.Parameter("caOptions") @Nullable CertificateConfigX509ConfigCaOptions caOptions,
+        @CustomType.Parameter("keyUsage") CertificateConfigX509ConfigKeyUsage keyUsage,
+        @CustomType.Parameter("policyIds") @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

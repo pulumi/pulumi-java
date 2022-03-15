@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupsGroup;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupsResult {
     /**
      * The list of groups under the provided customer or namespace. Structure is documented below.
@@ -23,11 +23,11 @@ public final class GetGroupsResult {
     private final String id;
     private final String parent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupsResult(
-        @OutputCustomType.Parameter("groups") List<GetGroupsGroup> groups,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parent") String parent) {
+        @CustomType.Parameter("groups") List<GetGroupsGroup> groups,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parent") String parent) {
         this.groups = groups;
         this.id = id;
         this.parent = parent;

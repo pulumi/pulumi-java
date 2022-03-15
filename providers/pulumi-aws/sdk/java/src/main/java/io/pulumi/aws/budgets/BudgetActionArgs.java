@@ -7,7 +7,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionActionThresholdArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionSubscriberArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the target account for budget. Will use current user's account_id by default if omitted.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -33,7 +33,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * The trigger threshold of the action. See Action Threshold.
      * 
      */
-    @InputImport(name="actionThreshold", required=true)
+    @Import(name="actionThreshold", required=true)
       private final Output<BudgetActionActionThresholdArgs> actionThreshold;
 
     public Output<BudgetActionActionThresholdArgs> getActionThreshold() {
@@ -44,7 +44,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
      * 
      */
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final Output<String> actionType;
 
     public Output<String> getActionType() {
@@ -55,7 +55,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
      * 
      */
-    @InputImport(name="approvalModel", required=true)
+    @Import(name="approvalModel", required=true)
       private final Output<String> approvalModel;
 
     public Output<String> getApprovalModel() {
@@ -66,7 +66,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of a budget.
      * 
      */
-    @InputImport(name="budgetName", required=true)
+    @Import(name="budgetName", required=true)
       private final Output<String> budgetName;
 
     public Output<String> getBudgetName() {
@@ -77,7 +77,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies all of the type-specific parameters. See Definition.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<BudgetActionDefinitionArgs> definition;
 
     public Output<BudgetActionDefinitionArgs> getDefinition() {
@@ -88,7 +88,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * The role passed for action execution and reversion. Roles and actions must be in the same account.
      * 
      */
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -99,7 +99,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
      * 
      */
-    @InputImport(name="notificationType", required=true)
+    @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
     public Output<String> getNotificationType() {
@@ -110,7 +110,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
      * A list of subscribers. See Subscriber.
      * 
      */
-    @InputImport(name="subscribers", required=true)
+    @Import(name="subscribers", required=true)
       private final Output<List<BudgetActionSubscriberArgs>> subscribers;
 
     public Output<List<BudgetActionSubscriberArgs>> getSubscribers() {

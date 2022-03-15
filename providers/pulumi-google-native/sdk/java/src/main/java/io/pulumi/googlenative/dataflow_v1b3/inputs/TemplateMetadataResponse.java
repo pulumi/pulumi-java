@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ParameterMetadataResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
      * Optional. A description of the template.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -33,7 +33,7 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
      * The name of the template.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class TemplateMetadataResponse extends io.pulumi.resources.InvokeAr
      * The parameters for the template.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<ParameterMetadataResponse> parameters;
 
     public List<ParameterMetadataResponse> getParameters() {

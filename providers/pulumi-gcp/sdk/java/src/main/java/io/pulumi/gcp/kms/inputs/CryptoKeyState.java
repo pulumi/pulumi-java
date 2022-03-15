@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * If not specified at creation time, the default duration is 24 hours.
      * 
      */
-    @InputImport(name="destroyScheduledDuration")
+    @Import(name="destroyScheduledDuration")
       private final @Nullable Output<String> destroyScheduledDuration;
 
     public Output<String> getDestroyScheduledDuration() {
@@ -33,7 +33,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * Whether this key may contain imported versions only.
      * 
      */
-    @InputImport(name="importOnly")
+    @Import(name="importOnly")
       private final @Nullable Output<Boolean> importOnly;
 
     public Output<Boolean> getImportOnly() {
@@ -45,7 +45,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
      * 
      */
-    @InputImport(name="keyRing")
+    @Import(name="keyRing")
       private final @Nullable Output<String> keyRing;
 
     public Output<String> getKeyRing() {
@@ -56,7 +56,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * Labels with user-defined metadata to apply to this resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -67,7 +67,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * The resource name for the CryptoKey.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
@@ -96,7 +96,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * letter `s` (seconds). It must be greater than a day (ie, 86400).
      * 
      */
-    @InputImport(name="rotationPeriod")
+    @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
     public Output<String> getRotationPeriod() {
@@ -108,7 +108,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
      * 
      */
-    @InputImport(name="skipInitialVersionCreation")
+    @Import(name="skipInitialVersionCreation")
       private final @Nullable Output<Boolean> skipInitialVersionCreation;
 
     public Output<Boolean> getSkipInitialVersionCreation() {
@@ -120,7 +120,7 @@ public final class CryptoKeyState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="versionTemplate")
+    @Import(name="versionTemplate")
       private final @Nullable Output<CryptoKeyVersionTemplateGetArgs> versionTemplate;
 
     public Output<CryptoKeyVersionTemplateGetArgs> getVersionTemplate() {

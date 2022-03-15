@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyResponse {
     /**
      * Automation key name.
@@ -25,11 +25,11 @@ public final class KeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("permissions") String permissions,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("permissions") String permissions,
+        @CustomType.Parameter("value") String value) {
         this.keyName = keyName;
         this.permissions = permissions;
         this.value = value;

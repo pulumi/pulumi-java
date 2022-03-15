@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azureactivedirectory.inputs;
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUName;
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUTier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU for the tenant.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<B2CResourceSKUName> name;
 
     public Output<B2CResourceSKUName> getName() {
@@ -34,7 +34,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of the tenant.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<B2CResourceSKUTier> tier;
 
     public Output<B2CResourceSKUTier> getTier() {

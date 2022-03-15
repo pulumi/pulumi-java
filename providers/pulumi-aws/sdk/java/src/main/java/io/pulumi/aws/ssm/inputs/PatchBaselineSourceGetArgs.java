@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
      * The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
      * 
      */
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Output<String> configuration;
 
     public Output<String> getConfiguration() {
@@ -29,7 +29,7 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
      * The name specified to identify the patch source.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
      * The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
      * 
      */
-    @InputImport(name="products", required=true)
+    @Import(name="products", required=true)
       private final Output<List<String>> products;
 
     public Output<List<String>> getProducts() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CorsPolicyResponse {
     /**
      * The request headers that the origin domain may specify on the CORS request.
@@ -38,13 +38,13 @@ public final class CorsPolicyResponse {
      */
     private final @Nullable Double maxAgeInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CorsPolicyResponse(
-        @OutputCustomType.Parameter("allowedHeaders") @Nullable String allowedHeaders,
-        @OutputCustomType.Parameter("allowedMethods") @Nullable String allowedMethods,
-        @OutputCustomType.Parameter("allowedOrigins") String allowedOrigins,
-        @OutputCustomType.Parameter("exposedHeaders") @Nullable String exposedHeaders,
-        @OutputCustomType.Parameter("maxAgeInSeconds") @Nullable Double maxAgeInSeconds) {
+        @CustomType.Parameter("allowedHeaders") @Nullable String allowedHeaders,
+        @CustomType.Parameter("allowedMethods") @Nullable String allowedMethods,
+        @CustomType.Parameter("allowedOrigins") String allowedOrigins,
+        @CustomType.Parameter("exposedHeaders") @Nullable String exposedHeaders,
+        @CustomType.Parameter("maxAgeInSeconds") @Nullable Double maxAgeInSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
      */
-    @InputImport(name="env", required=true)
+    @Import(name="env", required=true)
       private final Output<String> env;
 
     public Output<String> getEnv() {
@@ -31,7 +31,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
      * Resource name of the SecretVersion. In format: projects/*{@literal /}secrets/*{@literal /}versions/*
      * 
      */
-    @InputImport(name="versionName", required=true)
+    @Import(name="versionName", required=true)
       private final Output<String> versionName;
 
     public Output<String> getVersionName() {

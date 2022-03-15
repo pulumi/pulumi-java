@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network. Must be in the format `projects/{project}/global/networks/{network}`, where `{project}` is a project number, such as `12345`, and `{network}` is the name of a VPC network in the project. See [Understanding network configuration options](https://cloud.google.com/cloud-build/docs/custom-workers/set-up-custom-worker-pool-environment#understanding_the_network_configuration_options)
      * 
      */
-    @InputImport(name="peeredNetwork", required=true)
+    @Import(name="peeredNetwork", required=true)
       private final Output<String> peeredNetwork;
 
     public Output<String> getPeeredNetwork() {

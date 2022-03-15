@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessViewArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * domain specified will be granted the specified access
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -31,7 +31,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * An email address of a Google Group to grant access to.
      * 
      */
-    @InputImport(name="groupByEmail")
+    @Import(name="groupByEmail")
       private final @Nullable Output<String> groupByEmail;
 
     public Output<String> getGroupByEmail() {
@@ -46,7 +46,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -57,7 +57,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * A special group to grant access to. Possible values include:
      * 
      */
-    @InputImport(name="specialGroup")
+    @Import(name="specialGroup")
       private final @Nullable Output<String> specialGroup;
 
     public Output<String> getSpecialGroup() {
@@ -69,7 +69,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * fred@example.com
      * 
      */
-    @InputImport(name="userByEmail")
+    @Import(name="userByEmail")
       private final @Nullable Output<String> userByEmail;
 
     public Output<String> getUserByEmail() {
@@ -85,7 +85,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable Output<DatasetAccessViewArgs> view;
 
     public Output<DatasetAccessViewArgs> getView() {

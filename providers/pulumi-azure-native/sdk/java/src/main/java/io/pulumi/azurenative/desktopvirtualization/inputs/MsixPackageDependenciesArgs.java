@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * Name of package dependency.
      * 
      */
-    @InputImport(name="dependencyName")
+    @Import(name="dependencyName")
       private final @Nullable Output<String> dependencyName;
 
     public Output<String> getDependencyName() {
@@ -33,7 +33,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * Dependency version required.
      * 
      */
-    @InputImport(name="minVersion")
+    @Import(name="minVersion")
       private final @Nullable Output<String> minVersion;
 
     public Output<String> getMinVersion() {
@@ -44,7 +44,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * Name of dependency publisher.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {

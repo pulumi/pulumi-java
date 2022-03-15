@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.RuleStatus;
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRuleDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * Description of a cost allocation rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * Resource information for the cost allocation rule
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final Output<CostAllocationRuleDetailsArgs> details;
 
     public Output<CostAllocationRuleDetailsArgs> getDetails() {
@@ -47,7 +47,7 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
      * Status of the rule
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<Either<String,RuleStatus>> status;
 
     public Output<Either<String,RuleStatus>> getStatus() {

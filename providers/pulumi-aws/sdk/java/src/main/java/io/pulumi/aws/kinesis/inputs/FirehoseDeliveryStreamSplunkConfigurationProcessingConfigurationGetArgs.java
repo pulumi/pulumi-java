@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * Enables or disables data processing.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * Array of data processors. More details are given below
      * 
      */
-    @InputImport(name="processors")
+    @Import(name="processors")
       private final @Nullable Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorGetArgs>> processors;
 
     public Output<List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorGetArgs>> getProcessors() {

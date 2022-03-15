@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointFilterResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointScopeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorEndpointResponse {
     /**
      * Address of the connection monitor endpoint (IP or domain name).
@@ -49,15 +49,15 @@ public final class ConnectionMonitorEndpointResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorEndpointResponse(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("coverageLevel") @Nullable String coverageLevel,
-        @OutputCustomType.Parameter("filter") @Nullable ConnectionMonitorEndpointFilterResponse filter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("scope") @Nullable ConnectionMonitorEndpointScopeResponse scope,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("coverageLevel") @Nullable String coverageLevel,
+        @CustomType.Parameter("filter") @Nullable ConnectionMonitorEndpointFilterResponse filter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("scope") @Nullable ConnectionMonitorEndpointScopeResponse scope,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.coverageLevel = coverageLevel;
         this.filter = filter;

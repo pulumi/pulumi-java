@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
      * Will be [deprecated = true] post migration;
      * 
      */
-    @InputImport(name="onewayTerms", required=true)
+    @Import(name="onewayTerms", required=true)
       private final List<String> onewayTerms;
 
     public List<String> getOnewayTerms() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
      * Terms from the search query. Will treat synonyms as their synonyms. Not themselves synonyms of the synonyms. Can specify up to 100 terms.
      * 
      */
-    @InputImport(name="queryTerms", required=true)
+    @Import(name="queryTerms", required=true)
       private final List<String> queryTerms;
 
     public List<String> getQueryTerms() {
@@ -43,7 +43,7 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse exte
      * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100 synonyms.
      * 
      */
-    @InputImport(name="synonyms", required=true)
+    @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
     public List<String> getSynonyms() {

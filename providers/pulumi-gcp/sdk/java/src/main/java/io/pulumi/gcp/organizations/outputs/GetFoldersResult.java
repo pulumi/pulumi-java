@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.organizations.outputs.GetFoldersFolder;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFoldersResult {
     /**
      * A list of projects matching the provided filter. Structure is defined below.
@@ -23,11 +23,11 @@ public final class GetFoldersResult {
     private final String id;
     private final String parentId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFoldersResult(
-        @OutputCustomType.Parameter("folders") List<GetFoldersFolder> folders,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parentId") String parentId) {
+        @CustomType.Parameter("folders") List<GetFoldersFolder> folders,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parentId") String parentId) {
         this.folders = folders;
         this.id = id;
         this.parentId = parentId;

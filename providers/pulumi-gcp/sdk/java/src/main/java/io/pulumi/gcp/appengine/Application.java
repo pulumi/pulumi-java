@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ApplicationArgs;
@@ -44,7 +44,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Identifier of the app, usually `{PROJECT_ID}`
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -58,7 +58,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The domain to authenticate users with when using App Engine's User API.
      * 
      */
-    @OutputExport(name="authDomain", type=String.class, parameters={})
+    @Export(name="authDomain", type=String.class, parameters={})
     private Output<String> authDomain;
 
     /**
@@ -72,7 +72,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The GCS bucket code is being stored in for this app.
      * 
      */
-    @OutputExport(name="codeBucket", type=String.class, parameters={})
+    @Export(name="codeBucket", type=String.class, parameters={})
     private Output<String> codeBucket;
 
     /**
@@ -89,7 +89,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * by the provider, but will be rejected by the API.
      * 
      */
-    @OutputExport(name="databaseType", type=String.class, parameters={})
+    @Export(name="databaseType", type=String.class, parameters={})
     private Output<String> databaseType;
 
     /**
@@ -106,7 +106,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The GCS bucket content is being stored in for this app.
      * 
      */
-    @OutputExport(name="defaultBucket", type=String.class, parameters={})
+    @Export(name="defaultBucket", type=String.class, parameters={})
     private Output<String> defaultBucket;
 
     /**
@@ -120,7 +120,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The default hostname for this app.
      * 
      */
-    @OutputExport(name="defaultHostname", type=String.class, parameters={})
+    @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
@@ -134,7 +134,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A block of optional settings to configure specific App Engine features:
      * 
      */
-    @OutputExport(name="featureSettings", type=ApplicationFeatureSettings.class, parameters={})
+    @Export(name="featureSettings", type=ApplicationFeatureSettings.class, parameters={})
     private Output<ApplicationFeatureSettings> featureSettings;
 
     /**
@@ -148,7 +148,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The GCR domain used for storing managed Docker images for this app.
      * 
      */
-    @OutputExport(name="gcrDomain", type=String.class, parameters={})
+    @Export(name="gcrDomain", type=String.class, parameters={})
     private Output<String> gcrDomain;
 
     /**
@@ -162,7 +162,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Settings for enabling Cloud Identity Aware Proxy
      * 
      */
-    @OutputExport(name="iap", type=ApplicationIap.class, parameters={})
+    @Export(name="iap", type=ApplicationIap.class, parameters={})
     private Output<ApplicationIap> iap;
 
     /**
@@ -177,7 +177,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * to serve the app from.
      * 
      */
-    @OutputExport(name="locationId", type=String.class, parameters={})
+    @Export(name="locationId", type=String.class, parameters={})
     private Output<String> locationId;
 
     /**
@@ -192,7 +192,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Unique name of the app, usually `apps/{PROJECT_ID}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -208,7 +208,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * you may get a "Permission denied" error.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -224,7 +224,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The serving status of the app.
      * 
      */
-    @OutputExport(name="servingStatus", type=String.class, parameters={})
+    @Export(name="servingStatus", type=String.class, parameters={})
     private Output<String> servingStatus;
 
     /**
@@ -238,7 +238,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
      * 
      */
-    @OutputExport(name="urlDispatchRules", type=List.class, parameters={ApplicationUrlDispatchRule.class})
+    @Export(name="urlDispatchRules", type=List.class, parameters={ApplicationUrlDispatchRule.class})
     private Output<List<ApplicationUrlDispatchRule>> urlDispatchRules;
 
     /**

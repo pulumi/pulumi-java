@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleDestinationHttpUrlDestinationSummary {
     private final @Nullable String confirmationUrl;
 
-    @OutputCustomType.Constructor
-    private TopicRuleDestinationHttpUrlDestinationSummary(@OutputCustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl) {
+    @CustomType.Constructor
+    private TopicRuleDestinationHttpUrlDestinationSummary(@CustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
     }
 

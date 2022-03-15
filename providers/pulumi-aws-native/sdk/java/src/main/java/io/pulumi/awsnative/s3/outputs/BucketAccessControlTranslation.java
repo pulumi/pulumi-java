@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketAccessControlTranslation {
     private final String owner;
 
-    @OutputCustomType.Constructor
-    private BucketAccessControlTranslation(@OutputCustomType.Parameter("owner") String owner) {
+    @CustomType.Constructor
+    private BucketAccessControlTranslation(@CustomType.Parameter("owner") String owner) {
         this.owner = owner;
     }
 

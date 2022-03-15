@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AppCustomRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * The condition for a URL rewrite or redirect rule, such as a country code.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
@@ -29,7 +29,7 @@ public final class AppCustomRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * The source pattern for a URL rewrite or redirect rule.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {
@@ -40,7 +40,7 @@ public final class AppCustomRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * The status code for a URL rewrite or redirect rule. Valid values: `200`, `301`, `302`, `404`, `404-200`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -51,7 +51,7 @@ public final class AppCustomRuleGetArgs extends io.pulumi.resources.ResourceArgs
      * The target pattern for a URL rewrite or redirect rule.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {

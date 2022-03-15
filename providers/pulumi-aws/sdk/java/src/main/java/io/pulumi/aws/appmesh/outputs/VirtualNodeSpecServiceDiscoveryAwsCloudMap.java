@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
     /**
      * A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
@@ -28,11 +28,11 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecServiceDiscoveryAwsCloudMap(
-        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
-        @OutputCustomType.Parameter("namespaceName") String namespaceName,
-        @OutputCustomType.Parameter("serviceName") String serviceName) {
+        @CustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @CustomType.Parameter("namespaceName") String namespaceName,
+        @CustomType.Parameter("serviceName") String serviceName) {
         this.attributes = attributes;
         this.namespaceName = namespaceName;
         this.serviceName = serviceName;

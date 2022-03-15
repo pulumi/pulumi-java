@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
 
     public static final ResponseHeadersPolicyArgs Empty = new ResponseHeadersPolicyArgs();
 
-    @InputImport(name="responseHeadersPolicyConfig", required=true)
+    @Import(name="responseHeadersPolicyConfig", required=true)
       private final Output<ResponseHeadersPolicyConfigArgs> responseHeadersPolicyConfig;
 
     public Output<ResponseHeadersPolicyConfigArgs> getResponseHeadersPolicyConfig() {

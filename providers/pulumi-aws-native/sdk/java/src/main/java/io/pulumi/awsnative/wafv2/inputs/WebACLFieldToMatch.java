@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonBody;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * All query arguments of a web request.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Object allQueryArguments;
 
     public Optional<Object> getAllQueryArguments() {
@@ -36,14 +36,14 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * The body of a web request. This immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Object body;
 
     public Optional<Object> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
     }
 
-    @InputImport(name="jsonBody")
+    @Import(name="jsonBody")
       private final @Nullable WebACLJsonBody jsonBody;
 
     public Optional<WebACLJsonBody> getJsonBody() {
@@ -54,7 +54,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Object method;
 
     public Optional<Object> getMethod() {
@@ -65,14 +65,14 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Object queryString;
 
     public Optional<Object> getQueryString() {
         return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
     }
 
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader;
 
     public Optional<WebACLFieldToMatchSingleHeaderProperties> getSingleHeader() {
@@ -83,7 +83,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
 
     public Optional<WebACLFieldToMatchSingleQueryArgumentProperties> getSingleQueryArgument() {
@@ -94,7 +94,7 @@ public final class WebACLFieldToMatch extends io.pulumi.resources.InvokeArgs {
      * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Object uriPath;
 
     public Optional<Object> getUriPath() {

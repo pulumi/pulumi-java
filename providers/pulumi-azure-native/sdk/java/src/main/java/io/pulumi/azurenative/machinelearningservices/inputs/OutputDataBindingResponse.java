@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
      * ARM resource ID of the datastore where the data output will be stored.
      * 
      */
-    @InputImport(name="datastoreId")
+    @Import(name="datastoreId")
       private final @Nullable String datastoreId;
 
     public Optional<String> getDatastoreId() {
@@ -29,7 +29,7 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
      * Mechanism for data movement to datastore.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -40,7 +40,7 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
      * Location of data inside the container process.
      * 
      */
-    @InputImport(name="pathOnCompute")
+    @Import(name="pathOnCompute")
       private final @Nullable String pathOnCompute;
 
     public Optional<String> getPathOnCompute() {
@@ -51,7 +51,7 @@ public final class OutputDataBindingResponse extends io.pulumi.resources.InvokeA
      * Path within the datastore to the data.
      * 
      */
-    @InputImport(name="pathOnDatastore")
+    @Import(name="pathOnDatastore")
       private final @Nullable String pathOnDatastore;
 
     public Optional<String> getPathOnDatastore() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.EntityKeyArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.MembershipRoleArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MembershipArgs Empty = new MembershipArgs();
 
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -28,7 +28,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
      * 
      */
-    @InputImport(name="memberKey")
+    @Import(name="memberKey")
       private final @Nullable Output<EntityKeyArgs> memberKey;
 
     public Output<EntityKeyArgs> getMemberKey() {
@@ -39,7 +39,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.
      * 
      */
-    @InputImport(name="preferredMemberKey", required=true)
+    @Import(name="preferredMemberKey", required=true)
       private final Output<EntityKeyArgs> preferredMemberKey;
 
     public Output<EntityKeyArgs> getPreferredMemberKey() {
@@ -50,7 +50,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<MembershipRoleArgs>> roles;
 
     public Output<List<MembershipRoleArgs>> getRoles() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasicCondition;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelsAccessLevelBasic {
     /**
      * How the conditions list should be combined to determine if a request
@@ -31,10 +31,10 @@ public final class AccessLevelsAccessLevelBasic {
      */
     private final List<AccessLevelsAccessLevelBasicCondition> conditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelsAccessLevelBasic(
-        @OutputCustomType.Parameter("combiningFunction") @Nullable String combiningFunction,
-        @OutputCustomType.Parameter("conditions") List<AccessLevelsAccessLevelBasicCondition> conditions) {
+        @CustomType.Parameter("combiningFunction") @Nullable String combiningFunction,
+        @CustomType.Parameter("conditions") List<AccessLevelsAccessLevelBasicCondition> conditions) {
         this.combiningFunction = combiningFunction;
         this.conditions = conditions;
     }

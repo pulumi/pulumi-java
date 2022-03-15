@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
      * Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable String encoding;
 
     public Optional<String> getEncoding() {
@@ -33,7 +33,7 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
      * Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="fieldDelimiter")
+    @Import(name="fieldDelimiter")
       private final @Nullable String fieldDelimiter;
 
     public Optional<String> getFieldDelimiter() {
@@ -45,7 +45,7 @@ public final class CsvSerializationResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'Csv'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

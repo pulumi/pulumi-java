@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsArgs;
@@ -23,7 +23,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by Android apps.
      * 
      */
-    @InputImport(name="androidSettings")
+    @Import(name="androidSettings")
       private final @Nullable Output<EnterpriseKeyAndroidSettingsArgs> androidSettings;
 
     public Output<EnterpriseKeyAndroidSettingsArgs> getAndroidSettings() {
@@ -34,7 +34,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable display name of this key. Modifiable by user.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by iOS apps.
      * 
      */
-    @InputImport(name="iosSettings")
+    @Import(name="iosSettings")
       private final @Nullable Output<EnterpriseKeyIosSettingsArgs> iosSettings;
 
     public Output<EnterpriseKeyIosSettingsArgs> getIosSettings() {
@@ -56,7 +56,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -67,7 +67,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -78,7 +78,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Options for user acceptance testing.
      * 
      */
-    @InputImport(name="testingOptions")
+    @Import(name="testingOptions")
       private final @Nullable Output<EnterpriseKeyTestingOptionsArgs> testingOptions;
 
     public Output<EnterpriseKeyTestingOptionsArgs> getTestingOptions() {
@@ -89,7 +89,7 @@ public final class EnterpriseKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by websites.
      * 
      */
-    @InputImport(name="webSettings")
+    @Import(name="webSettings")
       private final @Nullable Output<EnterpriseKeyWebSettingsArgs> webSettings;
 
     public Output<EnterpriseKeyWebSettingsArgs> getWebSettings() {

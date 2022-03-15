@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * Specifies a registered or custom content type for this representation, e.g. application/xml.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -35,7 +35,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * Collection of form parameters. Required if 'contentType' value is either 'application/x-www-form-urlencoded' or 'multipart/form-data'..
      * 
      */
-    @InputImport(name="formParameters")
+    @Import(name="formParameters")
       private final @Nullable Output<List<ParameterContractArgs>> formParameters;
 
     public Output<List<ParameterContractArgs>> getFormParameters() {
@@ -46,7 +46,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * An example of the representation.
      * 
      */
-    @InputImport(name="sample")
+    @Import(name="sample")
       private final @Nullable Output<String> sample;
 
     public Output<String> getSample() {
@@ -57,7 +57,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * Schema identifier. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
      * 
      */
-    @InputImport(name="schemaId")
+    @Import(name="schemaId")
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
@@ -68,7 +68,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {

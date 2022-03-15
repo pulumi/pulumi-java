@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupPublishMetricAction {
     private final List<RuleGroupDimension> dimensions;
 
-    @OutputCustomType.Constructor
-    private RuleGroupPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<RuleGroupDimension> dimensions) {
+    @CustomType.Constructor
+    private RuleGroupPublishMetricAction(@CustomType.Parameter("dimensions") List<RuleGroupDimension> dimensions) {
         this.dimensions = dimensions;
     }
 

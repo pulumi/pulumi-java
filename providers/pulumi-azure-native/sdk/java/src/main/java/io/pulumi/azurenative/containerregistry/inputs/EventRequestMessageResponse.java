@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.EventContentResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * The content of the event request message.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable EventContentResponse content;
 
     public Optional<EventContentResponse> getContent() {
@@ -35,7 +35,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * The headers of the event request message.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
@@ -46,7 +46,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * The HTTP method used to send the event request message.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable String method;
 
     public Optional<String> getMethod() {
@@ -57,7 +57,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * The URI used to send the event request message.
      * 
      */
-    @InputImport(name="requestUri")
+    @Import(name="requestUri")
       private final @Nullable String requestUri;
 
     public Optional<String> getRequestUri() {
@@ -68,7 +68,7 @@ public final class EventRequestMessageResponse extends io.pulumi.resources.Invok
      * The HTTP message version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

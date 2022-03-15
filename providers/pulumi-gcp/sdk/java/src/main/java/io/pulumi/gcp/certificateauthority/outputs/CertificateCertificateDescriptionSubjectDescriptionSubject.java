@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
     /**
      * The common name of the distinguished name.
@@ -52,16 +52,16 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
      */
     private final @Nullable String streetAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescriptionSubject(
-        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
-        @OutputCustomType.Parameter("countryCode") @Nullable String countryCode,
-        @OutputCustomType.Parameter("locality") @Nullable String locality,
-        @OutputCustomType.Parameter("organization") @Nullable String organization,
-        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
-        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
-        @OutputCustomType.Parameter("province") @Nullable String province,
-        @OutputCustomType.Parameter("streetAddress") @Nullable String streetAddress) {
+        @CustomType.Parameter("commonName") @Nullable String commonName,
+        @CustomType.Parameter("countryCode") @Nullable String countryCode,
+        @CustomType.Parameter("locality") @Nullable String locality,
+        @CustomType.Parameter("organization") @Nullable String organization,
+        @CustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @CustomType.Parameter("postalCode") @Nullable String postalCode,
+        @CustomType.Parameter("province") @Nullable String province,
+        @CustomType.Parameter("streetAddress") @Nullable String streetAddress) {
         this.commonName = commonName;
         this.countryCode = countryCode;
         this.locality = locality;

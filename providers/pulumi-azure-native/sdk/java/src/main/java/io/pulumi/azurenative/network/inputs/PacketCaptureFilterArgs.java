@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.PcProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
      * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
-    @InputImport(name="localIPAddress")
+    @Import(name="localIPAddress")
       private final @Nullable Output<String> localIPAddress;
 
     public Output<String> getLocalIPAddress() {
@@ -35,7 +35,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
      * Local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
-    @InputImport(name="localPort")
+    @Import(name="localPort")
       private final @Nullable Output<String> localPort;
 
     public Output<String> getLocalPort() {
@@ -46,7 +46,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
      * Protocol to be filtered on.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Either<String,PcProtocol>> protocol;
 
     public Output<Either<String,PcProtocol>> getProtocol() {
@@ -57,7 +57,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
      * Local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
-    @InputImport(name="remoteIPAddress")
+    @Import(name="remoteIPAddress")
       private final @Nullable Output<String> remoteIPAddress;
 
     public Output<String> getRemoteIPAddress() {
@@ -68,7 +68,7 @@ public final class PacketCaptureFilterArgs extends io.pulumi.resources.ResourceA
      * Remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
      * 
      */
-    @InputImport(name="remotePort")
+    @Import(name="remotePort")
       private final @Nullable Output<String> remotePort;
 
     public Output<String> getRemotePort() {

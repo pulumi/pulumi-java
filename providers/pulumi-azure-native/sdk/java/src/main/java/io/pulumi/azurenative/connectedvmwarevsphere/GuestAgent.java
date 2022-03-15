@@ -11,7 +11,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusRespon
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * Username / Password Credentials to provision guest agent.
      * 
      */
-    @OutputExport(name="credentials", type=GuestCredentialResponse.class, parameters={})
+    @Export(name="credentials", type=GuestCredentialResponse.class, parameters={})
     private Output</* @Nullable */ GuestCredentialResponse> credentials;
 
     /**
@@ -52,7 +52,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    @OutputExport(name="customResourceName", type=String.class, parameters={})
+    @Export(name="customResourceName", type=String.class, parameters={})
     private Output<String> customResourceName;
 
     /**
@@ -66,7 +66,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * HTTP Proxy configuration for the VM.
      * 
      */
-    @OutputExport(name="httpProxyConfig", type=HttpProxyConfigurationResponse.class, parameters={})
+    @Export(name="httpProxyConfig", type=HttpProxyConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ HttpProxyConfigurationResponse> httpProxyConfig;
 
     /**
@@ -80,7 +80,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * Gets or sets the guest agent provisioning action.
      * 
      */
-    @OutputExport(name="provisioningAction", type=String.class, parameters={})
+    @Export(name="provisioningAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningAction;
 
     /**
@@ -108,7 +108,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * Gets or sets the guest agent status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -136,7 +136,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * The resource status information.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={ResourceStatusResponse.class})
     private Output<List<ResourceStatusResponse>> statuses;
 
     /**
@@ -150,7 +150,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -164,7 +164,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -178,7 +178,7 @@ public class GuestAgent extends io.pulumi.resources.CustomResource {
      * Gets or sets a unique identifier for this resource.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetIPAMAllocationArgs Empty = new GetIPAMAllocationArgs();
 
-    @InputImport(name="cidr", required=true)
+    @Import(name="cidr", required=true)
       private final String cidr;
 
     public String getCidr() {
@@ -23,7 +23,7 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
      * Id of the allocation.
      * 
      */
-    @InputImport(name="ipamPoolAllocationId", required=true)
+    @Import(name="ipamPoolAllocationId", required=true)
       private final String ipamPoolAllocationId;
 
     public String getIpamPoolAllocationId() {
@@ -34,7 +34,7 @@ public final class GetIPAMAllocationArgs extends io.pulumi.resources.InvokeArgs 
      * Id of the IPAM Pool.
      * 
      */
-    @InputImport(name="ipamPoolId", required=true)
+    @Import(name="ipamPoolId", required=true)
       private final String ipamPoolId;
 
     public String getIpamPoolId() {

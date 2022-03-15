@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appintegrations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataIntegrationScheduleConfig {
     /**
      * The start date for objects to import in the first flow run. Epoch or ISO timestamp format is supported.
@@ -25,11 +25,11 @@ public final class DataIntegrationScheduleConfig {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataIntegrationScheduleConfig(
-        @OutputCustomType.Parameter("firstExecutionFrom") String firstExecutionFrom,
-        @OutputCustomType.Parameter("object") String object,
-        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+        @CustomType.Parameter("firstExecutionFrom") String firstExecutionFrom,
+        @CustomType.Parameter("object") String object,
+        @CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.firstExecutionFrom = firstExecutionFrom;
         this.object = object;
         this.scheduleExpression = scheduleExpression;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
      * The OS type.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -33,7 +33,7 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
      * The reboot status of the update - whether it is required or not.
      * 
      */
-    @InputImport(name="rebootStatus")
+    @Import(name="rebootStatus")
       private final @Nullable String rebootStatus;
 
     public Optional<String> getRebootStatus() {
@@ -44,7 +44,7 @@ public final class MobilityServiceUpdateResponse extends io.pulumi.resources.Inv
      * The version of the latest update.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

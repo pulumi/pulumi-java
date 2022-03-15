@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * List of EC2 Availability Zones that instances in the DocDB cluster snapshot can be restored in.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -32,7 +32,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * The DocDB Cluster Identifier from which to take the snapshot.
      * 
      */
-    @InputImport(name="dbClusterIdentifier")
+    @Import(name="dbClusterIdentifier")
       private final @Nullable Output<String> dbClusterIdentifier;
 
     public Output<String> getDbClusterIdentifier() {
@@ -43,7 +43,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) for the DocDB Cluster Snapshot.
      * 
      */
-    @InputImport(name="dbClusterSnapshotArn")
+    @Import(name="dbClusterSnapshotArn")
       private final @Nullable Output<String> dbClusterSnapshotArn;
 
     public Output<String> getDbClusterSnapshotArn() {
@@ -54,7 +54,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * The Identifier for the snapshot.
      * 
      */
-    @InputImport(name="dbClusterSnapshotIdentifier")
+    @Import(name="dbClusterSnapshotIdentifier")
       private final @Nullable Output<String> dbClusterSnapshotIdentifier;
 
     public Output<String> getDbClusterSnapshotIdentifier() {
@@ -65,7 +65,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * Specifies the name of the database engine.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -76,7 +76,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * Version of the database engine for this DocDB cluster snapshot.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -87,7 +87,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * If storage_encrypted is true, the AWS KMS key identifier for the encrypted DocDB cluster snapshot.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -98,21 +98,21 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * Port that the DocDB cluster was listening on at the time of the snapshot.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="snapshotType")
+    @Import(name="snapshotType")
       private final @Nullable Output<String> snapshotType;
 
     public Output<String> getSnapshotType() {
         return this.snapshotType == null ? Output.empty() : this.snapshotType;
     }
 
-    @InputImport(name="sourceDbClusterSnapshotArn")
+    @Import(name="sourceDbClusterSnapshotArn")
       private final @Nullable Output<String> sourceDbClusterSnapshotArn;
 
     public Output<String> getSourceDbClusterSnapshotArn() {
@@ -123,7 +123,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * The status of this DocDB Cluster Snapshot.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -134,7 +134,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * Specifies whether the DocDB cluster snapshot is encrypted.
      * 
      */
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {
@@ -145,7 +145,7 @@ public final class ClusterSnapshotState extends io.pulumi.resources.ResourceArgs
      * The VPC ID associated with the DocDB cluster snapshot.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

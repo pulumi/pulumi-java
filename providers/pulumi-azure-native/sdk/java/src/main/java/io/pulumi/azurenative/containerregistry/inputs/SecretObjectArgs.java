@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.SecretObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * interpreted.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,SecretObjectType>> type;
 
     public Output<Either<String,SecretObjectType>> getType() {
@@ -38,7 +38,7 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * used as is without any modification.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

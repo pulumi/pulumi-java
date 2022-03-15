@@ -19,12 +19,12 @@ import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSnowflakeConnectorPro
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileTrendmicroConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileVeevaConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileZendeskConnectorProfileCredentials;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileCredentials {
     private final @Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude;
     private final @Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog;
@@ -43,24 +43,24 @@ public final class ConnectorProfileCredentials {
     private final @Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva;
     private final @Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileCredentials(
-        @OutputCustomType.Parameter("amplitude") @Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude,
-        @OutputCustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog,
-        @OutputCustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace,
-        @OutputCustomType.Parameter("googleAnalytics") @Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics,
-        @OutputCustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus,
-        @OutputCustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo,
-        @OutputCustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift,
-        @OutputCustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData,
-        @OutputCustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce,
-        @OutputCustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow,
-        @OutputCustomType.Parameter("singular") @Nullable ConnectorProfileSingularConnectorProfileCredentials singular,
-        @OutputCustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileCredentials slack,
-        @OutputCustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake,
-        @OutputCustomType.Parameter("trendmicro") @Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro,
-        @OutputCustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva,
-        @OutputCustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
+        @CustomType.Parameter("amplitude") @Nullable ConnectorProfileAmplitudeConnectorProfileCredentials amplitude,
+        @CustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileCredentials datadog,
+        @CustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileCredentials dynatrace,
+        @CustomType.Parameter("googleAnalytics") @Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentials googleAnalytics,
+        @CustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileCredentials inforNexus,
+        @CustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileCredentials marketo,
+        @CustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileCredentials redshift,
+        @CustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileCredentials sAPOData,
+        @CustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileCredentials salesforce,
+        @CustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileCredentials serviceNow,
+        @CustomType.Parameter("singular") @Nullable ConnectorProfileSingularConnectorProfileCredentials singular,
+        @CustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileCredentials slack,
+        @CustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileCredentials snowflake,
+        @CustomType.Parameter("trendmicro") @Nullable ConnectorProfileTrendmicroConnectorProfileCredentials trendmicro,
+        @CustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileCredentials veeva,
+        @CustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileCredentials zendesk) {
         this.amplitude = amplitude;
         this.datadog = datadog;
         this.dynatrace = dynatrace;

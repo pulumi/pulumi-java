@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.firestore_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firestore_v1.outputs.GoogleFirestoreAdminV1IndexFieldResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIndexResult {
     /**
      * The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
@@ -32,12 +32,12 @@ public final class GetIndexResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIndexResult(
-        @OutputCustomType.Parameter("fields") List<GoogleFirestoreAdminV1IndexFieldResponse> fields,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("queryScope") String queryScope,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("fields") List<GoogleFirestoreAdminV1IndexFieldResponse> fields,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("queryScope") String queryScope,
+        @CustomType.Parameter("state") String state) {
         this.fields = fields;
         this.name = name;
         this.queryScope = queryScope;

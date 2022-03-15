@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.HTTPHeaderResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * The HTTP method to use.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable String method;
 
     public Optional<String> getMethod() {
@@ -37,7 +37,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * The path component of the URI. For instance, "/dir1/dir2".
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -48,7 +48,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * The port to connect to.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -59,7 +59,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * Value indicating whether HTTPS is preferred over HTTP in cases where the choice is not explicit.
      * 
      */
-    @InputImport(name="preferHTTPS")
+    @Import(name="preferHTTPS")
       private final @Nullable Boolean preferHTTPS;
 
     public Optional<Boolean> getPreferHTTPS() {
@@ -70,7 +70,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * The HTTP headers to transmit with the request.
      * 
      */
-    @InputImport(name="requestHeaders")
+    @Import(name="requestHeaders")
       private final @Nullable List<HTTPHeaderResponse> requestHeaders;
 
     public List<HTTPHeaderResponse> getRequestHeaders() {
@@ -81,7 +81,7 @@ public final class ConnectionMonitorHttpConfigurationResponse extends io.pulumi.
      * HTTP status codes to consider successful. For instance, "2xx,301-304,418".
      * 
      */
-    @InputImport(name="validStatusCodeRanges")
+    @Import(name="validStatusCodeRanges")
       private final @Nullable List<String> validStatusCodeRanges;
 
     public List<String> getValidStatusCodeRanges() {

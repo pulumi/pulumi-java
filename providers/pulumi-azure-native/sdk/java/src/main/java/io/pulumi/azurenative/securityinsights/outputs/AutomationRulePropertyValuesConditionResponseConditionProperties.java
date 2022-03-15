@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRulePropertyValuesConditionResponseConditionProperties {
     /**
      * The operator to use for evaluation the condition
@@ -28,11 +28,11 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      */
     private final @Nullable List<String> propertyValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRulePropertyValuesConditionResponseConditionProperties(
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("propertyName") @Nullable String propertyName,
-        @OutputCustomType.Parameter("propertyValues") @Nullable List<String> propertyValues) {
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("propertyName") @Nullable String propertyName,
+        @CustomType.Parameter("propertyValues") @Nullable List<String> propertyValues) {
         this.operator = operator;
         this.propertyName = propertyName;
         this.propertyValues = propertyValues;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentArgs;
@@ -42,7 +42,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Description of the environment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -56,7 +56,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Display name of the environment.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -70,7 +70,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The resource ID of the environment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -85,7 +85,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**

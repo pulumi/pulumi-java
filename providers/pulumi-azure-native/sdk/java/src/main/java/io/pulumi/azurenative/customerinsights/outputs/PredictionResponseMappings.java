@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PredictionResponseMappings {
     /**
      * The grade of the link mapping.
@@ -25,11 +25,11 @@ public final class PredictionResponseMappings {
      */
     private final String score;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PredictionResponseMappings(
-        @OutputCustomType.Parameter("grade") String grade,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("score") String score) {
+        @CustomType.Parameter("grade") String grade,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("score") String score) {
         this.grade = grade;
         this.reason = reason;
         this.score = score;

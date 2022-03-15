@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RsaTokenKeyResponse {
     /**
      * RSA algorithm to be used: RS256, RS384 or RS512.
@@ -36,13 +36,13 @@ public final class RsaTokenKeyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RsaTokenKeyResponse(
-        @OutputCustomType.Parameter("alg") String alg,
-        @OutputCustomType.Parameter("e") String e,
-        @OutputCustomType.Parameter("kid") String kid,
-        @OutputCustomType.Parameter("n") String n,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alg") String alg,
+        @CustomType.Parameter("e") String e,
+        @CustomType.Parameter("kid") String kid,
+        @CustomType.Parameter("n") String n,
+        @CustomType.Parameter("type") String type) {
         this.alg = alg;
         this.e = e;
         this.kid = kid;

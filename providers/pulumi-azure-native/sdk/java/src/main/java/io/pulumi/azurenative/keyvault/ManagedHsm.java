@@ -10,7 +10,7 @@ import io.pulumi.azurenative.keyvault.outputs.ManagedHsmSkuResponse;
 import io.pulumi.azurenative.keyvault.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -52,7 +52,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * The name of the managed HSM Pool.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * Properties of the managed HSM
      * 
      */
-    @OutputExport(name="properties", type=ManagedHsmPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ManagedHsmPropertiesResponse.class, parameters={})
     private Output<ManagedHsmPropertiesResponse> properties;
 
     /**
@@ -80,7 +80,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * SKU details
      * 
      */
-    @OutputExport(name="sku", type=ManagedHsmSkuResponse.class, parameters={})
+    @Export(name="sku", type=ManagedHsmSkuResponse.class, parameters={})
     private Output</* @Nullable */ ManagedHsmSkuResponse> sku;
 
     /**
@@ -94,7 +94,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the key vault resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -108,7 +108,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -122,7 +122,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * The resource type of the managed HSM Pool.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

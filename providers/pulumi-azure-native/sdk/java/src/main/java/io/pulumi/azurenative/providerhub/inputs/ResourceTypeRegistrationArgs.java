@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
 
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
     public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {

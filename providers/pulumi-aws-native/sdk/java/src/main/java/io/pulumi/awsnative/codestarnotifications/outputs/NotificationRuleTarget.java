@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.codestarnotifications.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationRuleTarget {
     private final String targetAddress;
     private final String targetType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationRuleTarget(
-        @OutputCustomType.Parameter("targetAddress") String targetAddress,
-        @OutputCustomType.Parameter("targetType") String targetType) {
+        @CustomType.Parameter("targetAddress") String targetAddress,
+        @CustomType.Parameter("targetType") String targetType) {
         this.targetAddress = targetAddress;
         this.targetType = targetType;
     }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
      * 
      */
-    @InputImport(name="jsonBody")
+    @Import(name="jsonBody")
       private final @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
 
     public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> getJsonBody() {
@@ -35,7 +35,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<Object> method;
 
     public Output<Object> getMethod() {
@@ -46,7 +46,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * Inspect the query string. This is the part of a URL that appears after a ? character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<Object> queryString;
 
     public Output<Object> getQueryString() {
@@ -57,7 +57,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn't case sensitive.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
     public Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
@@ -68,7 +68,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<Object> uriPath;
 
     public Output<Object> getUriPath() {

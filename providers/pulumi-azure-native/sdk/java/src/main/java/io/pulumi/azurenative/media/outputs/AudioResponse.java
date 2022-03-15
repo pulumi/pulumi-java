@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AudioResponse {
     /**
      * The bitrate, in bits per second, of the output encoded audio.
@@ -39,13 +39,13 @@ public final class AudioResponse {
      */
     private final @Nullable Integer samplingRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioResponse(
-        @OutputCustomType.Parameter("bitrate") @Nullable Integer bitrate,
-        @OutputCustomType.Parameter("channels") @Nullable Integer channels,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("samplingRate") @Nullable Integer samplingRate) {
+        @CustomType.Parameter("bitrate") @Nullable Integer bitrate,
+        @CustomType.Parameter("channels") @Nullable Integer channels,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("samplingRate") @Nullable Integer samplingRate) {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupAutoscalingPolicyResponse {
     /**
      * The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
@@ -26,11 +26,11 @@ public final class NodeGroupAutoscalingPolicyResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupAutoscalingPolicyResponse(
-        @OutputCustomType.Parameter("maxNodes") Integer maxNodes,
-        @OutputCustomType.Parameter("minNodes") Integer minNodes,
-        @OutputCustomType.Parameter("mode") String mode) {
+        @CustomType.Parameter("maxNodes") Integer maxNodes,
+        @CustomType.Parameter("minNodes") Integer minNodes,
+        @CustomType.Parameter("mode") String mode) {
         this.maxNodes = maxNodes;
         this.minNodes = minNodes;
         this.mode = mode;

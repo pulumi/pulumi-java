@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AFDDomainHttpsParametersResponse {
     /**
      * Defines the source of the SSL certificate.
@@ -28,11 +28,11 @@ public final class AFDDomainHttpsParametersResponse {
      */
     private final @Nullable ResourceReferenceResponse secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AFDDomainHttpsParametersResponse(
-        @OutputCustomType.Parameter("certificateType") String certificateType,
-        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
-        @OutputCustomType.Parameter("secret") @Nullable ResourceReferenceResponse secret) {
+        @CustomType.Parameter("certificateType") String certificateType,
+        @CustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @CustomType.Parameter("secret") @Nullable ResourceReferenceResponse secret) {
         this.certificateType = certificateType;
         this.minimumTlsVersion = minimumTlsVersion;
         this.secret = secret;

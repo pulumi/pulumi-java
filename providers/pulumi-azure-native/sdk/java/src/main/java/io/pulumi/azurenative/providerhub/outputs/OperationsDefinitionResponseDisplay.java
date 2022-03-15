@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationsDefinitionResponseDisplay {
     private final String description;
     private final String operation;
     private final String provider;
     private final String resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OperationsDefinitionResponseDisplay(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("provider") String provider,
-        @OutputCustomType.Parameter("resource") String resource) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("provider") String provider,
+        @CustomType.Parameter("resource") String resource) {
         this.description = description;
         this.operation = operation;
         this.provider = provider;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifest;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PackagingConfigurationMssPackage extends io.pulumi.resources.
 
     public static final PackagingConfigurationMssPackage Empty = new PackagingConfigurationMssPackage();
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable PackagingConfigurationMssEncryption encryption;
 
     public Optional<PackagingConfigurationMssEncryption> getEncryption() {
@@ -32,14 +32,14 @@ public final class PackagingConfigurationMssPackage extends io.pulumi.resources.
      * A list of MSS manifest configurations.
      * 
      */
-    @InputImport(name="mssManifests", required=true)
+    @Import(name="mssManifests", required=true)
       private final List<PackagingConfigurationMssManifest> mssManifests;
 
     public List<PackagingConfigurationMssManifest> getMssManifests() {
         return this.mssManifests;
     }
 
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {

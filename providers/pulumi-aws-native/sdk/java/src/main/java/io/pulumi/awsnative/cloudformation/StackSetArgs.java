@@ -13,7 +13,7 @@ import io.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetStackInstancesArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. Specify an IAM role only if you are using customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account.
      * 
      */
-    @InputImport(name="administrationRoleARN")
+    @Import(name="administrationRoleARN")
       private final @Nullable Output<String> administrationRoleARN;
 
     public Output<String> getAdministrationRoleARN() {
@@ -39,7 +39,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to the target organization or organizational unit (OU). Specify only if PermissionModel is SERVICE_MANAGED.
      * 
      */
-    @InputImport(name="autoDeployment")
+    @Import(name="autoDeployment")
       private final @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
     public Output<StackSetAutoDeploymentArgs> getAutoDeployment() {
@@ -50,7 +50,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the AWS account that you are acting from. By default, SELF is specified. For self-managed permissions, specify SELF; for service-managed permissions, if you are signed in to the organization's management account, specify SELF. If you are signed in to a delegated administrator account, specify DELEGATED_ADMIN.
      * 
      */
-    @InputImport(name="callAs")
+    @Import(name="callAs")
       private final @Nullable Output<StackSetCallAs> callAs;
 
     public Output<StackSetCallAs> getCallAs() {
@@ -61,7 +61,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * In some cases, you must explicitly acknowledge that your stack set template contains certain capabilities in order for AWS CloudFormation to create the stack set and related stack instances.
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<List<StackSetCapability>> capabilities;
 
     public Output<List<StackSetCapability>> getCapabilities() {
@@ -72,7 +72,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the stack set. You can use the description to identify the stack set's purpose or other important information.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -83,7 +83,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the IAM execution role to use to create the stack set. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation.
      * 
      */
-    @InputImport(name="executionRoleName")
+    @Import(name="executionRoleName")
       private final @Nullable Output<String> executionRoleName;
 
     public Output<String> getExecutionRoleName() {
@@ -94,14 +94,14 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * Describes whether StackSets performs non-conflicting operations concurrently and queues conflicting operations.
      * 
      */
-    @InputImport(name="managedExecution")
+    @Import(name="managedExecution")
       private final @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
 
     public Output<ManagedExecutionPropertiesArgs> getManagedExecution() {
         return this.managedExecution == null ? Output.empty() : this.managedExecution;
     }
 
-    @InputImport(name="operationPreferences")
+    @Import(name="operationPreferences")
       private final @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
 
     public Output<StackSetOperationPreferencesArgs> getOperationPreferences() {
@@ -112,7 +112,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * The input parameters for the stack set template.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<StackSetParameterArgs>> parameters;
 
     public Output<List<StackSetParameterArgs>> getParameters() {
@@ -123,7 +123,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * Describes how the IAM roles required for stack set operations are created. By default, SELF-MANAGED is specified.
      * 
      */
-    @InputImport(name="permissionModel", required=true)
+    @Import(name="permissionModel", required=true)
       private final Output<StackSetPermissionModel> permissionModel;
 
     public Output<StackSetPermissionModel> getPermissionModel() {
@@ -134,7 +134,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * A group of stack instances with parameters in some specific accounts and regions.
      * 
      */
-    @InputImport(name="stackInstancesGroup")
+    @Import(name="stackInstancesGroup")
       private final @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
     public Output<List<StackSetStackInstancesArgs>> getStackInstancesGroup() {
@@ -145,7 +145,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name to associate with the stack set. The name must be unique in the Region where you create your stack set.
      * 
      */
-    @InputImport(name="stackSetName")
+    @Import(name="stackSetName")
       private final @Nullable Output<String> stackSetName;
 
     public Output<String> getStackSetName() {
@@ -156,7 +156,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * The key-value pairs to associate with this stack set and the stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the stacks. A maximum number of 50 tags can be specified.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StackSetTagArgs>> tags;
 
     public Output<List<StackSetTagArgs>> getTags() {
@@ -167,7 +167,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes.
      * 
      */
-    @InputImport(name="templateBody")
+    @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
@@ -178,7 +178,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
      * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket.
      * 
      */
-    @InputImport(name="templateURL")
+    @Import(name="templateURL")
       private final @Nullable Output<String> templateURL;
 
     public Output<String> getTemplateURL() {

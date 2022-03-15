@@ -9,7 +9,7 @@ import io.pulumi.aws.dms.inputs.EndpointKinesisSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointMongodbSettingsGetArgs;
 import io.pulumi.aws.dms.inputs.EndpointS3SettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the certificate.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -36,7 +36,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The name of the endpoint database.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -47,7 +47,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with Elasticsearch settings. Detailed below.
      * 
      */
-    @InputImport(name="elasticsearchSettings")
+    @Import(name="elasticsearchSettings")
       private final @Nullable Output<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings;
 
     public Output<EndpointElasticsearchSettingsGetArgs> getElasticsearchSettings() {
@@ -58,7 +58,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the endpoint.
      * 
      */
-    @InputImport(name="endpointArn")
+    @Import(name="endpointArn")
       private final @Nullable Output<String> endpointArn;
 
     public Output<String> getEndpointArn() {
@@ -69,7 +69,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The database endpoint identifier.
      * 
      */
-    @InputImport(name="endpointId")
+    @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
     public Output<String> getEndpointId() {
@@ -80,7 +80,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The type of endpoint. Can be one of `source | target`.
      * 
      */
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -91,7 +91,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
      * 
      */
-    @InputImport(name="engineName")
+    @Import(name="engineName")
       private final @Nullable Output<String> engineName;
 
     public Output<String> getEngineName() {
@@ -102,7 +102,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib).
      * 
      */
-    @InputImport(name="extraConnectionAttributes")
+    @Import(name="extraConnectionAttributes")
       private final @Nullable Output<String> extraConnectionAttributes;
 
     public Output<String> getExtraConnectionAttributes() {
@@ -113,7 +113,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with Kafka settings. Detailed below.
      * 
      */
-    @InputImport(name="kafkaSettings")
+    @Import(name="kafkaSettings")
       private final @Nullable Output<EndpointKafkaSettingsGetArgs> kafkaSettings;
 
     public Output<EndpointKafkaSettingsGetArgs> getKafkaSettings() {
@@ -124,7 +124,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with Kinesis settings. Detailed below.
      * 
      */
-    @InputImport(name="kinesisSettings")
+    @Import(name="kinesisSettings")
       private final @Nullable Output<EndpointKinesisSettingsGetArgs> kinesisSettings;
 
     public Output<EndpointKinesisSettingsGetArgs> getKinesisSettings() {
@@ -135,7 +135,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -146,7 +146,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with MongoDB settings. Detailed below.
      * 
      */
-    @InputImport(name="mongodbSettings")
+    @Import(name="mongodbSettings")
       private final @Nullable Output<EndpointMongodbSettingsGetArgs> mongodbSettings;
 
     public Output<EndpointMongodbSettingsGetArgs> getMongodbSettings() {
@@ -157,7 +157,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The password to be used to login to the endpoint database.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -168,7 +168,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The port used by the endpoint database.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -179,7 +179,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with S3 settings. Detailed below.
      * 
      */
-    @InputImport(name="s3Settings")
+    @Import(name="s3Settings")
       private final @Nullable Output<EndpointS3SettingsGetArgs> s3Settings;
 
     public Output<EndpointS3SettingsGetArgs> getS3Settings() {
@@ -190,7 +190,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in SecretsManagerSecret.
      * 
      */
-    @InputImport(name="secretsManagerAccessRoleArn")
+    @Import(name="secretsManagerAccessRoleArn")
       private final @Nullable Output<String> secretsManagerAccessRoleArn;
 
     public Output<String> getSecretsManagerAccessRoleArn() {
@@ -201,7 +201,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The full ARN, partial ARN, or friendly name of the SecretsManagerSecret that contains the endpoint connection details. Supported only for `engine_name` as `oracle` and `postgres`.
      * 
      */
-    @InputImport(name="secretsManagerArn")
+    @Import(name="secretsManagerArn")
       private final @Nullable Output<String> secretsManagerArn;
 
     public Output<String> getSecretsManagerArn() {
@@ -212,7 +212,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The host name of the server.
      * 
      */
-    @InputImport(name="serverName")
+    @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -223,7 +223,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
      * 
      */
-    @InputImport(name="serviceAccessRole")
+    @Import(name="serviceAccessRole")
       private final @Nullable Output<String> serviceAccessRole;
 
     public Output<String> getServiceAccessRole() {
@@ -234,7 +234,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
      * 
      */
-    @InputImport(name="sslMode")
+    @Import(name="sslMode")
       private final @Nullable Output<String> sslMode;
 
     public Output<String> getSslMode() {
@@ -245,7 +245,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -256,7 +256,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -267,7 +267,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The user name to be used to login to the endpoint database.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

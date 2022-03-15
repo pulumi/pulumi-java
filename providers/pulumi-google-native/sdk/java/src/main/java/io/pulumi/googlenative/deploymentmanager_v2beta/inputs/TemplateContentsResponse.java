@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ImportFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * Import files referenced by the main template.
      * 
      */
-    @InputImport(name="imports", required=true)
+    @Import(name="imports", required=true)
       private final List<ImportFileResponse> imports;
 
     public List<ImportFileResponse> getImports() {
@@ -33,7 +33,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * Which interpreter (python or jinja) should be used during expansion.
      * 
      */
-    @InputImport(name="interpreter", required=true)
+    @Import(name="interpreter", required=true)
       private final String interpreter;
 
     public String getInterpreter() {
@@ -44,7 +44,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * The filename of the mainTemplate
      * 
      */
-    @InputImport(name="mainTemplate", required=true)
+    @Import(name="mainTemplate", required=true)
       private final String mainTemplate;
 
     public String getMainTemplate() {
@@ -55,7 +55,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * The contents of the template schema.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final String schema;
 
     public String getSchema() {
@@ -66,7 +66,7 @@ public final class TemplateContentsResponse extends io.pulumi.resources.InvokeAr
      * The contents of the main template file.
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final String template;
 
     public String getTemplate() {

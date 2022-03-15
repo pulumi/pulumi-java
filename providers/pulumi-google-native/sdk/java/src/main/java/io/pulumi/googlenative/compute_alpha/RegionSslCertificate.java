@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionSslCertificateArgs;
@@ -24,7 +24,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
      */
-    @OutputExport(name="certificate", type=String.class, parameters={})
+    @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
@@ -38,7 +38,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -52,7 +52,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Expire time of the certificate. RFC3339
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -80,7 +80,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#sslCertificate for SSL certificates.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -94,7 +94,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Configuration and status of a managed SSL certificate.
      * 
      */
-    @OutputExport(name="managed", type=SslCertificateManagedSslCertificateResponse.class, parameters={})
+    @Export(name="managed", type=SslCertificateManagedSslCertificateResponse.class, parameters={})
     private Output<SslCertificateManagedSslCertificateResponse> managed;
 
     /**
@@ -108,7 +108,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
      * 
      */
-    @OutputExport(name="privateKey", type=String.class, parameters={})
+    @Export(name="privateKey", type=String.class, parameters={})
     private Output<String> privateKey;
 
     /**
@@ -136,7 +136,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -150,7 +150,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * [Output only] Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -164,7 +164,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -178,7 +178,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Configuration and status of a self-managed SSL certificate.
      * 
      */
-    @OutputExport(name="selfManaged", type=SslCertificateSelfManagedSslCertificateResponse.class, parameters={})
+    @Export(name="selfManaged", type=SslCertificateSelfManagedSslCertificateResponse.class, parameters={})
     private Output<SslCertificateSelfManagedSslCertificateResponse> selfManaged;
 
     /**
@@ -192,7 +192,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * Domains associated with the certificate via Subject Alternative Name.
      * 
      */
-    @OutputExport(name="subjectAlternativeNames", type=List.class, parameters={String.class})
+    @Export(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output<List<String>> subjectAlternativeNames;
 
     /**
@@ -206,7 +206,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

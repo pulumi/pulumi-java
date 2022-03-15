@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HealthCheckAlarmIdentifier {
     /**
      * The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
@@ -20,10 +20,10 @@ public final class HealthCheckAlarmIdentifier {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthCheckAlarmIdentifier(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region) {
         this.name = name;
         this.region = region;
     }

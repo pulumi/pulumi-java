@@ -7,12 +7,10 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
-import io.pulumi.core.internal.CompletableFutures;
-import io.pulumi.core.internal.Copyable;
-import io.pulumi.core.internal.InputOutputData;
-import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.*;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -22,10 +20,10 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
-import static io.pulumi.core.internal.InputOutputData.allHelperAsync;
-import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
+import static io.pulumi.core.internal.OutputData.allHelperAsync;
+import static io.pulumi.core.internal.OutputInternal.TupleZeroOut;
 
-public interface Output<T> extends InputOutput<T, Output<T>> {
+public interface Output<T> extends Copyable<Output<T>> {
 
     /**
      * Transforms the data of this @see {@link Output<T>} with the provided {@code func}.
@@ -87,6 +85,24 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         });
     }
 
+    /**
+     * Creates a shallow copy (the underlying CompletableFuture is copied) of this @see {@link Output<T>}
+     * @return a shallow copy of the @see {@link Output<T>}
+     */
+    Output<T> copy();
+
+    /**
+     * Returns a new @see {@link Output<T>} which is a copy of the existing output but marked as
+     * a non-secret. The original output or input is not modified in any way.
+     */
+    Output<T> asPlaintext();
+
+    /**
+     * Returns a new @see {@link Output<T>} which is a copy of the existing output but marked as
+     * a secret. The original output or input is not modified in any way.
+     */
+    Output<T> asSecret();
+
     // Static section -----
 
     static <T> Output<T> of() {
@@ -94,19 +110,19 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     static <T> Output<T> of(T value) {
-        return new OutputDefault<>(value);
+        return new OutputInternal<>(value);
     }
 
     static <T> Output<T> of(CompletableFuture<T> value) {
-        return new OutputDefault<>(value, false);
+        return new OutputInternal<>(value, false);
     }
 
     static <T> Output<T> ofSecret(T value) {
-        return new OutputDefault<>(value, true);
+        return new OutputInternal<>(value, true);
     }
 
     static <T> Output<T> empty() {
-        return new OutputDefault<>(InputOutputData.empty());
+        return new OutputInternal<>(OutputData.empty());
     }
 
     static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
@@ -146,36 +162,14 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     /**
-     * Combines all the @see {@link Output<T>} values in {@code outputs}
-     * into a single @see {@link Output<T>} with an @see {@link java.util.List<T>}
-     * containing all their underlying values.
-     * <p/>
-     * If any of the @see {@link Output<T>}s are not known, the final result will be not known.
-     * Similarly, if any of the @see {@link Output<T>}s are secrets, then the final result will be a secret.
-     */
-    @Deprecated
-    @SafeVarargs // safe because we only call List.of, that is also @SafeVarargs
-    static <T> Output<List<T>> allOutputs(Output<T>... outputs) {
-        return all(List.of(outputs));
-    }
-
-    /**
-     * @see Output#allOutputs(Output[])  for more details.
+     * @see Output#all(Output[])  for more details.
      */
     static <T> Output<List<T>> all(Iterable<Output<T>> outputs) {
         return all(Lists.newArrayList(outputs));
     }
 
-    /**
-     * @see Output#allOutputs(Output[])  for more details.
-     */
-    @Deprecated
-    static <T> Output<List<T>> allOutputs(Iterable<Output<T>> outputs) {
-        return all(Lists.newArrayList(outputs));
-    }
-
     private static <T> Output<List<T>> all(List<Output<T>> outputs) {
-        return new OutputDefault<>(
+        return new OutputInternal<>(
                 allHelperAsync(outputs
                         .stream()
                         .map(output -> Internal.of(output).getDataAsync())
@@ -195,13 +189,12 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * Similarly, if any of the @see {@link Output}s are secrets,
      * then the final result will be a secret.
      */
-    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") InputOutput... arguments) {
-        var data = Lists.newArrayList(arguments)
-                .stream()
-                .map(InputOutputData::copyInputOutputData)
+    static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") Output... arguments) {
+        var data = Lists.newArrayList(arguments).stream()
+                .map(OutputData::copyInputOutputData)
                 .collect(Collectors.toList());
 
-        return new OutputDefault<>(
+        return new OutputInternal<>(
                 allHelperAsync(data)
                         .thenApply(objs -> objs.apply(
                                 v -> v == null ? null : String.format(formattableString, v.toArray())))
@@ -232,7 +225,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Output<Either<L, R>> ofLeft(Output<L> value) {
-        return new OutputDefault<>(Internal.of(value).getDataAsync()
+        return new OutputInternal<>(Internal.of(value).getDataAsync()
                 .thenApply(ioData -> ioData.apply(Either::<L, R>ofLeft)));
     }
 
@@ -240,7 +233,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Output<Either<L, R>> ofRight(Output<R> value) {
-        return new OutputDefault<>(Internal.of(value).getDataAsync()
+        return new OutputInternal<>(Internal.of(value).getDataAsync()
                 .thenApply(ioData -> ioData.apply(Either::ofRight)));
     }
 
@@ -264,7 +257,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
      * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> ofJson(Output<JsonElement> json) {
-        return new OutputDefault<>(Internal.of(json).getDataAsync());
+        return new OutputInternal<>(Internal.of(json).getDataAsync());
     }
 
     /**
@@ -443,16 +436,16 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     final class ListBuilder<E> {
-        private final CompletableFutures.Builder<InputOutputData.Builder<ImmutableList.Builder<E>>> builder;
+        private final CompletableFutures.Builder<OutputData.Builder<ImmutableList.Builder<E>>> builder;
 
         public ListBuilder() {
             builder = CompletableFutures.builder(
-                    CompletableFuture.completedFuture(InputOutputData.builder(ImmutableList.builder()))
+                    CompletableFuture.completedFuture(OutputData.builder(ImmutableList.builder()))
             );
         }
 
         @CanIgnoreReturnValue
-        public <IO extends InputOutput<E, IO> & Copyable<IO>> Output.ListBuilder<E> add(InputOutput<E, IO> value) {
+        public Output.ListBuilder<E> add(Output<E> value) {
             this.builder.accumulate(
                     Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
@@ -463,7 +456,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> add(E value) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(value)),
+                    CompletableFuture.completedFuture(OutputData.of(value)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
             );
             return this;
@@ -479,7 +472,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> addAll(Iterable<? extends E> elements) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(elements)),
+                    CompletableFuture.completedFuture(OutputData.of(elements)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::addAll)
             );
             return this;
@@ -488,14 +481,14 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> addAll(Iterator<? extends E> elements) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(elements)),
+                    CompletableFuture.completedFuture(OutputData.of(elements)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::addAll)
             );
             return this;
         }
 
         public Output<List<E>> build() {
-            return new OutputDefault<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
+            return new OutputInternal<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
         }
     }
 
@@ -657,16 +650,16 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
     }
 
     final class MapBuilder<V> {
-        private final CompletableFutures.Builder<InputOutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
+        private final CompletableFutures.Builder<OutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
 
         public MapBuilder() {
             builder = CompletableFutures.builder(
-                    CompletableFuture.completedFuture(InputOutputData.builder(ImmutableMap.builder()))
+                    CompletableFuture.completedFuture(OutputData.builder(ImmutableMap.builder()))
             );
         }
 
         @CanIgnoreReturnValue
-        public <IO extends InputOutput<V, IO> & Copyable<IO>> Output.MapBuilder<V> put(String key, InputOutput<V, IO> value) {
+        public Output.MapBuilder<V> put(String key, Output<V> value) {
             this.builder.accumulate(
                     Internal.of(value).getDataAsync(),
                     (dataBuilder, data) -> dataBuilder.accumulate(data,
@@ -678,7 +671,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> put(String key, V value) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(value)),
+                    CompletableFuture.completedFuture(OutputData.of(value)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data,
                             (mapBuilder, v) -> mapBuilder.put(key, v))
             );
@@ -688,7 +681,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> put(Map.Entry<? extends String, ? extends V> entry) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(entry)),
+                    CompletableFuture.completedFuture(OutputData.of(entry)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::put)
             );
             return this;
@@ -697,7 +690,7 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> putAll(Map<? extends String, ? extends V> map) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(map)),
+                    CompletableFuture.completedFuture(OutputData.of(map)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::putAll)
             );
             return this;
@@ -707,14 +700,14 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> putAll(Iterable<? extends Map.Entry<? extends String, ? extends V>> entries) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(entries)),
+                    CompletableFuture.completedFuture(OutputData.of(entries)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::putAll)
             );
             return this;
         }
 
         public Output<Map<String, V>> build() {
-            return new OutputDefault<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
+            return new OutputInternal<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
         }
     }
 
@@ -791,6 +784,6 @@ public interface Output<T> extends InputOutput<T, Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5, Output<T6> item6, Output<T7> item7, Output<T8> item8
     ) {
-        return new OutputDefault<>(InputOutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
+        return new OutputInternal<>(OutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
     }
 }

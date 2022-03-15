@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemediationConfigurationExecutionControlsSsmControls {
     /**
      * Maximum percentage of remediation actions allowed to run in parallel on the non-compliant resources for that specific rule. The default value is 10%.
@@ -22,10 +22,10 @@ public final class RemediationConfigurationExecutionControlsSsmControls {
      */
     private final @Nullable Integer errorPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemediationConfigurationExecutionControlsSsmControls(
-        @OutputCustomType.Parameter("concurrentExecutionRatePercentage") @Nullable Integer concurrentExecutionRatePercentage,
-        @OutputCustomType.Parameter("errorPercentage") @Nullable Integer errorPercentage) {
+        @CustomType.Parameter("concurrentExecutionRatePercentage") @Nullable Integer concurrentExecutionRatePercentage,
+        @CustomType.Parameter("errorPercentage") @Nullable Integer errorPercentage) {
         this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
         this.errorPercentage = errorPercentage;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterNotificationConfigPubsub;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNotificationConfig {
     /**
      * The pubsub config for the cluster's upgrade notifications.
@@ -15,8 +15,8 @@ public final class ClusterNotificationConfig {
      */
     private final ClusterNotificationConfigPubsub pubsub;
 
-    @OutputCustomType.Constructor
-    private ClusterNotificationConfig(@OutputCustomType.Parameter("pubsub") ClusterNotificationConfigPubsub pubsub) {
+    @CustomType.Constructor
+    private ClusterNotificationConfig(@CustomType.Parameter("pubsub") ClusterNotificationConfigPubsub pubsub) {
         this.pubsub = pubsub;
     }
 

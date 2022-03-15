@@ -12,7 +12,7 @@ import io.pulumi.aws.appsync.outputs.GraphQLApiLogConfig;
 import io.pulumi.aws.appsync.outputs.GraphQLApiOpenidConnectConfig;
 import io.pulumi.aws.appsync.outputs.GraphQLApiUserPoolConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * One or more additional authentication providers for the GraphqlApi. Defined below.
      * 
      */
-    @OutputExport(name="additionalAuthenticationProviders", type=List.class, parameters={GraphQLApiAdditionalAuthenticationProvider.class})
+    @Export(name="additionalAuthenticationProviders", type=List.class, parameters={GraphQLApiAdditionalAuthenticationProvider.class})
     private Output</* @Nullable */ List<GraphQLApiAdditionalAuthenticationProvider>> additionalAuthenticationProviders;
 
     /**
@@ -54,7 +54,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * The ARN
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -68,7 +68,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
      * 
      */
-    @OutputExport(name="authenticationType", type=String.class, parameters={})
+    @Export(name="authenticationType", type=String.class, parameters={})
     private Output<String> authenticationType;
 
     /**
@@ -82,7 +82,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * Nested argument containing Lambda authorizer configuration. Defined below.
      * 
      */
-    @OutputExport(name="lambdaAuthorizerConfig", type=GraphQLApiLambdaAuthorizerConfig.class, parameters={})
+    @Export(name="lambdaAuthorizerConfig", type=GraphQLApiLambdaAuthorizerConfig.class, parameters={})
     private Output</* @Nullable */ GraphQLApiLambdaAuthorizerConfig> lambdaAuthorizerConfig;
 
     /**
@@ -96,7 +96,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * Nested argument containing logging configuration. Defined below.
      * 
      */
-    @OutputExport(name="logConfig", type=GraphQLApiLogConfig.class, parameters={})
+    @Export(name="logConfig", type=GraphQLApiLogConfig.class, parameters={})
     private Output</* @Nullable */ GraphQLApiLogConfig> logConfig;
 
     /**
@@ -110,7 +110,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * A user-supplied name for the GraphqlApi.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * Nested argument containing OpenID Connect configuration. Defined below.
      * 
      */
-    @OutputExport(name="openidConnectConfig", type=GraphQLApiOpenidConnectConfig.class, parameters={})
+    @Export(name="openidConnectConfig", type=GraphQLApiOpenidConnectConfig.class, parameters={})
     private Output</* @Nullable */ GraphQLApiOpenidConnectConfig> openidConnectConfig;
 
     /**
@@ -138,7 +138,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @OutputExport(name="schema", type=String.class, parameters={})
+    @Export(name="schema", type=String.class, parameters={})
     private Output</* @Nullable */ String> schema;
 
     /**
@@ -152,7 +152,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -166,7 +166,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -180,7 +180,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * Map of URIs associated with the APIE.g., `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
      * 
      */
-    @OutputExport(name="uris", type=Map.class, parameters={String.class, String.class})
+    @Export(name="uris", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> uris;
 
     /**
@@ -194,7 +194,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * The Amazon Cognito User Pool configuration. Defined below.
      * 
      */
-    @OutputExport(name="userPoolConfig", type=GraphQLApiUserPoolConfig.class, parameters={})
+    @Export(name="userPoolConfig", type=GraphQLApiUserPoolConfig.class, parameters={})
     private Output</* @Nullable */ GraphQLApiUserPoolConfig> userPoolConfig;
 
     /**
@@ -208,7 +208,7 @@ public class GraphQLApi extends io.pulumi.resources.CustomResource {
      * Whether tracing with X-ray is enabled. Defaults to false.
      * 
      */
-    @OutputExport(name="xrayEnabled", type=Boolean.class, parameters={})
+    @Export(name="xrayEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> xrayEnabled;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.AccountCredentialDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.ApplianceNetworkConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
      * Per account level access credentials.
      * 
      */
-    @InputImport(name="accountCredentialDetails", required=true)
+    @Import(name="accountCredentialDetails", required=true)
       private final List<AccountCredentialDetailsResponse> accountCredentialDetails;
 
     public List<AccountCredentialDetailsResponse> getAccountCredentialDetails() {
@@ -34,7 +34,7 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
      * Password for out of the box experience on device.
      * 
      */
-    @InputImport(name="devicePassword", required=true)
+    @Import(name="devicePassword", required=true)
       private final String devicePassword;
 
     public String getDevicePassword() {
@@ -45,7 +45,7 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
      * Serial number of the assigned device.
      * 
      */
-    @InputImport(name="deviceSerialNumber", required=true)
+    @Import(name="deviceSerialNumber", required=true)
       private final String deviceSerialNumber;
 
     public String getDeviceSerialNumber() {
@@ -56,7 +56,7 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
      * The base 64 encoded public key to authenticate with the device
      * 
      */
-    @InputImport(name="encodedValidationCertPubKey", required=true)
+    @Import(name="encodedValidationCertPubKey", required=true)
       private final String encodedValidationCertPubKey;
 
     public String getEncodedValidationCertPubKey() {
@@ -67,7 +67,7 @@ public final class DataBoxHeavySecretResponse extends io.pulumi.resources.Invoke
      * Network configuration of the appliance.
      * 
      */
-    @InputImport(name="networkConfigurations", required=true)
+    @Import(name="networkConfigurations", required=true)
       private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
     public List<ApplianceNetworkConfigurationResponse> getNetworkConfigurations() {

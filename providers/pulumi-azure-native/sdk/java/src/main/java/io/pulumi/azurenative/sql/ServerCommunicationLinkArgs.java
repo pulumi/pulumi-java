@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * The name of the server communication link.
      * 
      */
-    @InputImport(name="communicationLinkName")
+    @Import(name="communicationLinkName")
       private final @Nullable Output<String> communicationLinkName;
 
     public Output<String> getCommunicationLinkName() {
@@ -29,7 +29,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * The name of the partner server.
      * 
      */
-    @InputImport(name="partnerServer", required=true)
+    @Import(name="partnerServer", required=true)
       private final Output<String> partnerServer;
 
     public Output<String> getPartnerServer() {
@@ -40,7 +40,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {

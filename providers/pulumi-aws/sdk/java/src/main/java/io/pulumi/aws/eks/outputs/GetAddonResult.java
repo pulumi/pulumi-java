@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAddonResult {
     private final String addonName;
     /**
@@ -45,17 +45,17 @@ public final class GetAddonResult {
     private final String serviceAccountRoleArn;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAddonResult(
-        @OutputCustomType.Parameter("addonName") String addonName,
-        @OutputCustomType.Parameter("addonVersion") String addonVersion,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("modifiedAt") String modifiedAt,
-        @OutputCustomType.Parameter("serviceAccountRoleArn") String serviceAccountRoleArn,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("addonName") String addonName,
+        @CustomType.Parameter("addonVersion") String addonVersion,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("modifiedAt") String modifiedAt,
+        @CustomType.Parameter("serviceAccountRoleArn") String serviceAccountRoleArn,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.addonName = addonName;
         this.addonVersion = addonVersion;
         this.arn = arn;

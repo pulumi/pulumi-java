@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
@@ -22,10 +22,10 @@ public final class SourceResponse {
      */
     private final @Nullable String instanceID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("addr") @Nullable String addr,
-        @OutputCustomType.Parameter("instanceID") @Nullable String instanceID) {
+        @CustomType.Parameter("addr") @Nullable String addr,
+        @CustomType.Parameter("instanceID") @Nullable String instanceID) {
         this.addr = addr;
         this.instanceID = instanceID;
     }

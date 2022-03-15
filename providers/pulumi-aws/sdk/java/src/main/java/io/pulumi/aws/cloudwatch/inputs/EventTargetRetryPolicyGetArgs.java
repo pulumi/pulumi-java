@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
      * The age in seconds to continue to make retry attempts.
      * 
      */
-    @InputImport(name="maximumEventAgeInSeconds")
+    @Import(name="maximumEventAgeInSeconds")
       private final @Nullable Output<Integer> maximumEventAgeInSeconds;
 
     public Output<Integer> getMaximumEventAgeInSeconds() {
@@ -29,7 +29,7 @@ public final class EventTargetRetryPolicyGetArgs extends io.pulumi.resources.Res
      * maximum number of retry attempts to make before the request fails
      * 
      */
-    @InputImport(name="maximumRetryAttempts")
+    @Import(name="maximumRetryAttempts")
       private final @Nullable Output<Integer> maximumRetryAttempts;
 
     public Output<Integer> getMaximumRetryAttempts() {

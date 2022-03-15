@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.IndexOrder;
 import io.pulumi.awsnative.kendra.inputs.IndexValueImportanceItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,35 +19,35 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexRelevanceArgs Empty = new IndexRelevanceArgs();
 
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
         return this.duration == null ? Output.empty() : this.duration;
     }
 
-    @InputImport(name="freshness")
+    @Import(name="freshness")
       private final @Nullable Output<Boolean> freshness;
 
     public Output<Boolean> getFreshness() {
         return this.freshness == null ? Output.empty() : this.freshness;
     }
 
-    @InputImport(name="importance")
+    @Import(name="importance")
       private final @Nullable Output<Integer> importance;
 
     public Output<Integer> getImportance() {
         return this.importance == null ? Output.empty() : this.importance;
     }
 
-    @InputImport(name="rankOrder")
+    @Import(name="rankOrder")
       private final @Nullable Output<IndexOrder> rankOrder;
 
     public Output<IndexOrder> getRankOrder() {
         return this.rankOrder == null ? Output.empty() : this.rankOrder;
     }
 
-    @InputImport(name="valueImportanceItems")
+    @Import(name="valueImportanceItems")
       private final @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
     public Output<List<IndexValueImportanceItemArgs>> getValueImportanceItems() {

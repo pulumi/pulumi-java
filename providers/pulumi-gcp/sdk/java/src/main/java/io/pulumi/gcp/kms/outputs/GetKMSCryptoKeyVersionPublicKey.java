@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSCryptoKeyVersionPublicKey {
     /**
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
@@ -20,10 +20,10 @@ public final class GetKMSCryptoKeyVersionPublicKey {
      */
     private final String pem;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSCryptoKeyVersionPublicKey(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("pem") String pem) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("pem") String pem) {
         this.algorithm = algorithm;
         this.pem = pem;
     }

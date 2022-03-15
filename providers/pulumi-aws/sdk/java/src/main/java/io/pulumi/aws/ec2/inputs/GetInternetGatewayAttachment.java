@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetInternetGatewayAttachment extends io.pulumi.resources.Invo
      * The current state of the attachment between the gateway and the VPC. Present only if a VPC is attached
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -27,7 +27,7 @@ public final class GetInternetGatewayAttachment extends io.pulumi.resources.Invo
      * The ID of an attached VPC.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

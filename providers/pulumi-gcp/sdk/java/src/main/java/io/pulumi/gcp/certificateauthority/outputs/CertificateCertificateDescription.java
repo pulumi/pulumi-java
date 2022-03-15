@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionAuthorityKeyId;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionCertFingerprint;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValue;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescription {
     private final @Nullable List<String> aiaIssuingCertificateUrls;
     private final @Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds;
@@ -31,16 +31,16 @@ public final class CertificateCertificateDescription {
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions;
     private final @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescription(
-        @OutputCustomType.Parameter("aiaIssuingCertificateUrls") @Nullable List<String> aiaIssuingCertificateUrls,
-        @OutputCustomType.Parameter("authorityKeyIds") @Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds,
-        @OutputCustomType.Parameter("certFingerprints") @Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints,
-        @OutputCustomType.Parameter("configValues") @Nullable List<CertificateCertificateDescriptionConfigValue> configValues,
-        @OutputCustomType.Parameter("crlDistributionPoints") @Nullable List<String> crlDistributionPoints,
-        @OutputCustomType.Parameter("publicKeys") @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys,
-        @OutputCustomType.Parameter("subjectDescriptions") @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions,
-        @OutputCustomType.Parameter("subjectKeyIds") @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
+        @CustomType.Parameter("aiaIssuingCertificateUrls") @Nullable List<String> aiaIssuingCertificateUrls,
+        @CustomType.Parameter("authorityKeyIds") @Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds,
+        @CustomType.Parameter("certFingerprints") @Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints,
+        @CustomType.Parameter("configValues") @Nullable List<CertificateCertificateDescriptionConfigValue> configValues,
+        @CustomType.Parameter("crlDistributionPoints") @Nullable List<String> crlDistributionPoints,
+        @CustomType.Parameter("publicKeys") @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys,
+        @CustomType.Parameter("subjectDescriptions") @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions,
+        @CustomType.Parameter("subjectKeyIds") @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyIds = authorityKeyIds;
         this.certFingerprints = certFingerprints;

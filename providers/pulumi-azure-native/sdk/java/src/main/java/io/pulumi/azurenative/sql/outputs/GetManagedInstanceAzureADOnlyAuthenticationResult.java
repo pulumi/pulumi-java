@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
     /**
      * Azure Active Directory only Authentication enabled.
@@ -31,12 +31,12 @@ public final class GetManagedInstanceAzureADOnlyAuthenticationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedInstanceAzureADOnlyAuthenticationResult(
-        @OutputCustomType.Parameter("azureADOnlyAuthentication") Boolean azureADOnlyAuthentication,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("azureADOnlyAuthentication") Boolean azureADOnlyAuthentication,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.azureADOnlyAuthentication = azureADOnlyAuthentication;
         this.id = id;
         this.name = name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
      * Conditions to apply to the expression.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final GooglePrivacyDlpV2ConditionsResponse conditions;
 
     public GooglePrivacyDlpV2ConditionsResponse getConditions() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2ExpressionsResponse extends io.pulumi.resou
      * The operator to apply to the result of conditions. Default and currently only supported value is `AND`.
      * 
      */
-    @InputImport(name="logicalOperator", required=true)
+    @Import(name="logicalOperator", required=true)
       private final String logicalOperator;
 
     public String getLogicalOperator() {

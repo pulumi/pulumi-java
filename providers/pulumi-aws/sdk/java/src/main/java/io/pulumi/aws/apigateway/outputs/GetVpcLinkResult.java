@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcLinkResult {
     /**
      * The description of the VPC link.
@@ -43,15 +43,15 @@ public final class GetVpcLinkResult {
      */
     private final List<String> targetArns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcLinkResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("targetArns") List<String> targetArns) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("targetArns") List<String> targetArns) {
         this.description = description;
         this.id = id;
         this.name = name;

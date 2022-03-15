@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector.inputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorOutcome;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTag;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
 
     public static final DetectorRule Empty = new DetectorRule();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -29,7 +29,7 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * The time when the event type was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
@@ -40,28 +40,28 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    @InputImport(name="detectorId")
+    @Import(name="detectorId")
       private final @Nullable String detectorId;
 
     public Optional<String> getDetectorId() {
         return this.detectorId == null ? Optional.empty() : Optional.ofNullable(this.detectorId);
     }
 
-    @InputImport(name="expression")
+    @Import(name="expression")
       private final @Nullable String expression;
 
     public Optional<String> getExpression() {
         return this.expression == null ? Optional.empty() : Optional.ofNullable(this.expression);
     }
 
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable DetectorRuleLanguage language;
 
     public Optional<DetectorRuleLanguage> getLanguage() {
@@ -72,28 +72,28 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * The time when the event type was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
-    @InputImport(name="outcomes")
+    @Import(name="outcomes")
       private final @Nullable List<DetectorOutcome> outcomes;
 
     public List<DetectorOutcome> getOutcomes() {
         return this.outcomes == null ? List.of() : this.outcomes;
     }
 
-    @InputImport(name="ruleId")
+    @Import(name="ruleId")
       private final @Nullable String ruleId;
 
     public Optional<String> getRuleId() {
         return this.ruleId == null ? Optional.empty() : Optional.ofNullable(this.ruleId);
     }
 
-    @InputImport(name="ruleVersion")
+    @Import(name="ruleVersion")
       private final @Nullable String ruleVersion;
 
     public Optional<String> getRuleVersion() {
@@ -104,7 +104,7 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * Tags associated with this event type.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable List<DetectorTag> tags;
 
     public List<DetectorTag> getTags() {

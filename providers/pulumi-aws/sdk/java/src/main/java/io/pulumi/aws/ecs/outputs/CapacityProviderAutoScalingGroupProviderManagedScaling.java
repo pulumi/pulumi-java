@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
     /**
      * Period of time, in seconds, after a newly launched Amazon EC2 instance can contribute to CloudWatch metrics for Auto Scaling group. If this parameter is omitted, the default value of 300 seconds is used.
@@ -38,13 +38,13 @@ public final class CapacityProviderAutoScalingGroupProviderManagedScaling {
      */
     private final @Nullable Integer targetCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityProviderAutoScalingGroupProviderManagedScaling(
-        @OutputCustomType.Parameter("instanceWarmupPeriod") @Nullable Integer instanceWarmupPeriod,
-        @OutputCustomType.Parameter("maximumScalingStepSize") @Nullable Integer maximumScalingStepSize,
-        @OutputCustomType.Parameter("minimumScalingStepSize") @Nullable Integer minimumScalingStepSize,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("targetCapacity") @Nullable Integer targetCapacity) {
+        @CustomType.Parameter("instanceWarmupPeriod") @Nullable Integer instanceWarmupPeriod,
+        @CustomType.Parameter("maximumScalingStepSize") @Nullable Integer maximumScalingStepSize,
+        @CustomType.Parameter("minimumScalingStepSize") @Nullable Integer minimumScalingStepSize,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("targetCapacity") @Nullable Integer targetCapacity) {
         this.instanceWarmupPeriod = instanceWarmupPeriod;
         this.maximumScalingStepSize = maximumScalingStepSize;
         this.minimumScalingStepSize = minimumScalingStepSize;

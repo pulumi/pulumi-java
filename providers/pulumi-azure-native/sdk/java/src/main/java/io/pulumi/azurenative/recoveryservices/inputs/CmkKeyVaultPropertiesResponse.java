@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CmkKeyVaultPropertiesResponse extends io.pulumi.resources.Inv
      * The key uri of the Customer Managed Key
      * 
      */
-    @InputImport(name="keyUri")
+    @Import(name="keyUri")
       private final @Nullable String keyUri;
 
     public Optional<String> getKeyUri() {

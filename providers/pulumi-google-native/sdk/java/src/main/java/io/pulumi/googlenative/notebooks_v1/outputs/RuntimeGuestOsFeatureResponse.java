@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeGuestOsFeatureResponse {
     /**
      * The ID of a supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Valid values: * FEATURE_TYPE_UNSPECIFIED * MULTI_IP_SUBNET * SECURE_BOOT * UEFI_COMPATIBLE * VIRTIO_SCSI_MULTIQUEUE * WINDOWS
@@ -15,8 +15,8 @@ public final class RuntimeGuestOsFeatureResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private RuntimeGuestOsFeatureResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private RuntimeGuestOsFeatureResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

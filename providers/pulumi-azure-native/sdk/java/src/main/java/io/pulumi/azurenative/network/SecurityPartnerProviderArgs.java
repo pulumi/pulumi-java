@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.SecurityProviderName;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * The name of the Security Partner Provider.
      * 
      */
-    @InputImport(name="securityPartnerProviderName")
+    @Import(name="securityPartnerProviderName")
       private final @Nullable Output<String> securityPartnerProviderName;
 
     public Output<String> getSecurityPartnerProviderName() {
@@ -66,7 +66,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * The security provider name.
      * 
      */
-    @InputImport(name="securityProviderName")
+    @Import(name="securityProviderName")
       private final @Nullable Output<Either<String,SecurityProviderName>> securityProviderName;
 
     public Output<Either<String,SecurityProviderName>> getSecurityProviderName() {
@@ -77,7 +77,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class SecurityPartnerProviderArgs extends io.pulumi.resources.Resou
      * The virtualHub to which the Security Partner Provider belongs.
      * 
      */
-    @InputImport(name="virtualHub")
+    @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
     public Output<SubResourceArgs> getVirtualHub() {

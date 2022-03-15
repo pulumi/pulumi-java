@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupLabel;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleAction;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRule {
     private final @Nullable RuleGroupRuleAction action;
     private final @Nullable RuleGroupCaptchaConfig captchaConfig;
@@ -30,15 +30,15 @@ public final class RuleGroupRule {
     private final RuleGroupStatement statement;
     private final RuleGroupVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRule(
-        @OutputCustomType.Parameter("action") @Nullable RuleGroupRuleAction action,
-        @OutputCustomType.Parameter("captchaConfig") @Nullable RuleGroupCaptchaConfig captchaConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleLabels") @Nullable List<RuleGroupLabel> ruleLabels,
-        @OutputCustomType.Parameter("statement") RuleGroupStatement statement,
-        @OutputCustomType.Parameter("visibilityConfig") RuleGroupVisibilityConfig visibilityConfig) {
+        @CustomType.Parameter("action") @Nullable RuleGroupRuleAction action,
+        @CustomType.Parameter("captchaConfig") @Nullable RuleGroupCaptchaConfig captchaConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleLabels") @Nullable List<RuleGroupLabel> ruleLabels,
+        @CustomType.Parameter("statement") RuleGroupStatement statement,
+        @CustomType.Parameter("visibilityConfig") RuleGroupVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
         this.name = name;

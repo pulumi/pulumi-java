@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.FollowerDatabaseDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListClusterFollowerDatabasesResult {
     /**
      * The list of follower database result.
@@ -17,8 +17,8 @@ public final class ListClusterFollowerDatabasesResult {
      */
     private final @Nullable List<FollowerDatabaseDefinitionResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListClusterFollowerDatabasesResult(@OutputCustomType.Parameter("value") @Nullable List<FollowerDatabaseDefinitionResponse> value) {
+    @CustomType.Constructor
+    private ListClusterFollowerDatabasesResult(@CustomType.Parameter("value") @Nullable List<FollowerDatabaseDefinitionResponse> value) {
         this.value = value;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the key should be in the format of `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      * 
      */
-    @InputImport(name="keyReference")
+    @Import(name="keyReference")
       private final @Nullable Output<String> keyReference;
 
     public Output<String> getKeyReference() {

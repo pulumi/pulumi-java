@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.elastic.outputs;
 
 import io.pulumi.azurenative.elastic.outputs.LogRulesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringTagRulesPropertiesResponse {
     /**
      * Rules for sending logs.
@@ -23,10 +23,10 @@ public final class MonitoringTagRulesPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringTagRulesPropertiesResponse(
-        @OutputCustomType.Parameter("logRules") @Nullable LogRulesResponse logRules,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
+        @CustomType.Parameter("logRules") @Nullable LogRulesResponse logRules,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.logRules = logRules;
         this.provisioningState = provisioningState;
     }

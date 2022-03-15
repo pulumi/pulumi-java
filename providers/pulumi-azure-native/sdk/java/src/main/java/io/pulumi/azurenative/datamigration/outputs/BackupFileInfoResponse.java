@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupFileInfoResponse {
     /**
      * Sequence number of the backup file in the backup set
@@ -28,11 +28,11 @@ public final class BackupFileInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupFileInfoResponse(
-        @OutputCustomType.Parameter("familySequenceNumber") @Nullable Integer familySequenceNumber,
-        @OutputCustomType.Parameter("fileLocation") @Nullable String fileLocation,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("familySequenceNumber") @Nullable Integer familySequenceNumber,
+        @CustomType.Parameter("fileLocation") @Nullable String fileLocation,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.familySequenceNumber = familySequenceNumber;
         this.fileLocation = fileLocation;
         this.status = status;

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.BastionShareableLinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBastionShareableLinkResult {
     /**
      * The URL to get the next set of results.
@@ -24,10 +24,10 @@ public final class GetBastionShareableLinkResult {
      */
     private final @Nullable List<BastionShareableLinkResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBastionShareableLinkResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<BastionShareableLinkResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<BastionShareableLinkResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

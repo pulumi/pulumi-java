@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
 
     public static final ConsentStoreIamBindingArgs Empty = new ConsentStoreIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamBindingConditionArgs> condition;
 
     public Output<ConsentStoreIamBindingConditionArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
@@ -40,14 +40,14 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
     public Output<String> getDataset() {
         return this.dataset;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -60,7 +60,7 @@ public final class ConsentStoreIamBindingArgs extends io.pulumi.resources.Resour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

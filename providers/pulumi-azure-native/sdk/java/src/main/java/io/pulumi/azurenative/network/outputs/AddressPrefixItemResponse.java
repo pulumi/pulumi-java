@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AddressPrefixItemResponse {
     /**
      * Address prefix.
@@ -22,10 +22,10 @@ public final class AddressPrefixItemResponse {
      */
     private final @Nullable String addressPrefixType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AddressPrefixItemResponse(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("addressPrefixType") @Nullable String addressPrefixType) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("addressPrefixType") @Nullable String addressPrefixType) {
         this.addressPrefix = addressPrefix;
         this.addressPrefixType = addressPrefixType;
     }

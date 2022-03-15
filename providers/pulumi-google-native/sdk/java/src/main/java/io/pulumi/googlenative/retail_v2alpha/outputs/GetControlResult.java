@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetControlResult {
     /**
      * List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
@@ -43,14 +43,14 @@ public final class GetControlResult {
      */
     private final List<String> solutionTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetControlResult(
-        @OutputCustomType.Parameter("associatedServingConfigIds") List<String> associatedServingConfigIds,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("facetSpec") GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rule") GoogleCloudRetailV2alphaRuleResponse rule,
-        @OutputCustomType.Parameter("solutionTypes") List<String> solutionTypes) {
+        @CustomType.Parameter("associatedServingConfigIds") List<String> associatedServingConfigIds,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("facetSpec") GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rule") GoogleCloudRetailV2alphaRuleResponse rule,
+        @CustomType.Parameter("solutionTypes") List<String> solutionTypes) {
         this.associatedServingConfigIds = associatedServingConfigIds;
         this.displayName = displayName;
         this.facetSpec = facetSpec;

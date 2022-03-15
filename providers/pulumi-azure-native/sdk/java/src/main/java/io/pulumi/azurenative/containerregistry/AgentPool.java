@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.AgentPoolArgs;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The count of agent machine
      * 
      */
-    @OutputExport(name="count", type=Integer.class, parameters={})
+    @Export(name="count", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> count;
 
     /**
@@ -52,7 +52,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -66,7 +66,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The OS of agent machine
      * 
      */
-    @OutputExport(name="os", type=String.class, parameters={})
+    @Export(name="os", type=String.class, parameters={})
     private Output</* @Nullable */ String> os;
 
     /**
@@ -94,7 +94,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The provisioning state of this agent pool
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -108,7 +108,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The Tier of agent machine
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output</* @Nullable */ String> tier;
 
     /**
@@ -150,7 +150,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -164,7 +164,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * The Virtual Network Subnet Resource Id of the agent machine
      * 
      */
-    @OutputExport(name="virtualNetworkSubnetResourceId", type=String.class, parameters={})
+    @Export(name="virtualNetworkSubnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkSubnetResourceId;
 
     /**

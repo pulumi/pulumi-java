@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JsonFieldWithDefaultResponse {
     /**
      * The default value to be used for mapping when a SourceField is not provided or if there's no property with the specified name in the published JSON event payload.
@@ -22,10 +22,10 @@ public final class JsonFieldWithDefaultResponse {
      */
     private final @Nullable String sourceField;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JsonFieldWithDefaultResponse(
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("sourceField") @Nullable String sourceField) {
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("sourceField") @Nullable String sourceField) {
         this.defaultValue = defaultValue;
         this.sourceField = sourceField;
     }

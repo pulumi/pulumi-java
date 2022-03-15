@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateExponentialRolloutRateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
      * The rate of increase for a job rollout. This parameter allows you to define an exponential rate for a job rollout.
      * 
      */
-    @InputImport(name="exponentialRolloutRate")
+    @Import(name="exponentialRolloutRate")
       private final @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
     public Output<JobTemplateExponentialRolloutRateArgs> getExponentialRolloutRate() {
@@ -34,7 +34,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
      * The maximum number of things that will be notified of a pending job, per minute. This parameter allows you to create a staged rollout.
      * 
      */
-    @InputImport(name="maximumPerMinute")
+    @Import(name="maximumPerMinute")
       private final @Nullable Output<Integer> maximumPerMinute;
 
     public Output<Integer> getMaximumPerMinute() {

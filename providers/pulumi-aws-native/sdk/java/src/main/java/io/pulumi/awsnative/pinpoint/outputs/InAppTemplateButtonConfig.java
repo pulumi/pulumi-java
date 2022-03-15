@@ -5,24 +5,24 @@ package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateDefaultButtonConfiguration;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateOverrideButtonConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InAppTemplateButtonConfig {
     private final @Nullable InAppTemplateOverrideButtonConfiguration android;
     private final @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig;
     private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
     private final @Nullable InAppTemplateOverrideButtonConfiguration web;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InAppTemplateButtonConfig(
-        @OutputCustomType.Parameter("android") @Nullable InAppTemplateOverrideButtonConfiguration android,
-        @OutputCustomType.Parameter("defaultConfig") @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
-        @OutputCustomType.Parameter("iOS") @Nullable InAppTemplateOverrideButtonConfiguration iOS,
-        @OutputCustomType.Parameter("web") @Nullable InAppTemplateOverrideButtonConfiguration web) {
+        @CustomType.Parameter("android") @Nullable InAppTemplateOverrideButtonConfiguration android,
+        @CustomType.Parameter("defaultConfig") @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
+        @CustomType.Parameter("iOS") @Nullable InAppTemplateOverrideButtonConfiguration iOS,
+        @CustomType.Parameter("web") @Nullable InAppTemplateOverrideButtonConfiguration web) {
         this.android = android;
         this.defaultConfig = defaultConfig;
         this.iOS = iOS;

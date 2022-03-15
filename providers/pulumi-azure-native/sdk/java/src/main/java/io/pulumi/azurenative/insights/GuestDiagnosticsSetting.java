@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.GuestDiagnosticsSettingArgs;
 import io.pulumi.azurenative.insights.outputs.DataSourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * the array of data source object which are configured to collect and send data
      * 
      */
-    @OutputExport(name="dataSources", type=List.class, parameters={DataSourceResponse.class})
+    @Export(name="dataSources", type=List.class, parameters={DataSourceResponse.class})
     private Output</* @Nullable */ List<DataSourceResponse>> dataSources;
 
     /**
@@ -50,7 +50,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -64,7 +64,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * Operating system type for the configuration
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
@@ -88,7 +88,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
-    @OutputExport(name="proxySetting", type=String.class, parameters={})
+    @Export(name="proxySetting", type=String.class, parameters={})
     private Output</* @Nullable */ String> proxySetting;
 
     public Output</* @Nullable */ String> getProxySetting() {
@@ -98,7 +98,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -112,7 +112,7 @@ public class GuestDiagnosticsSetting extends io.pulumi.resources.CustomResource 
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

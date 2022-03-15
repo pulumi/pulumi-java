@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.AddressPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AddressDetailsResponse {
     /**
      * Customer address and contact details. It should be address resource
@@ -20,10 +20,10 @@ public final class AddressDetailsResponse {
      */
     private final AddressPropertiesResponse returnAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AddressDetailsResponse(
-        @OutputCustomType.Parameter("forwardAddress") AddressPropertiesResponse forwardAddress,
-        @OutputCustomType.Parameter("returnAddress") AddressPropertiesResponse returnAddress) {
+        @CustomType.Parameter("forwardAddress") AddressPropertiesResponse forwardAddress,
+        @CustomType.Parameter("returnAddress") AddressPropertiesResponse returnAddress) {
         this.forwardAddress = forwardAddress;
         this.returnAddress = returnAddress;
     }

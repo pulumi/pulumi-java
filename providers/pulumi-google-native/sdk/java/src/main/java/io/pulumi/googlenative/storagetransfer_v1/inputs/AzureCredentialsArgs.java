@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AzureCredentialsArgs extends io.pulumi.resources.ResourceArgs
      * Azure shared access signature (SAS). For more information about SAS, see [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
      * 
      */
-    @InputImport(name="sasToken", required=true)
+    @Import(name="sasToken", required=true)
       private final Output<String> sasToken;
 
     public Output<String> getSasToken() {

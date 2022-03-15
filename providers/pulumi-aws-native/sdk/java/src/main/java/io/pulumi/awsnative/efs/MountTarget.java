@@ -6,7 +6,7 @@ package io.pulumi.awsnative.efs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.efs.MountTargetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -18,25 +18,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:efs:MountTarget")
 public class MountTarget extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="fileSystemId", type=String.class, parameters={})
+    @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
     public Output</* @Nullable */ String> getIpAddress() {
         return this.ipAddress;
     }
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
         return this.securityGroups;
     }
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     public Output<String> getSubnetId() {

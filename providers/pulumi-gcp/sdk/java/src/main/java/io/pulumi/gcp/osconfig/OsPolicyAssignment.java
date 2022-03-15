@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs;
@@ -47,7 +47,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * this field.
      * 
      */
-    @OutputExport(name="baseline", type=Boolean.class, parameters={})
+    @Export(name="baseline", type=Boolean.class, parameters={})
     private Output<Boolean> baseline;
 
     /**
@@ -63,7 +63,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Output only. Indicates that this revision deletes the OS policy assignment.
      * 
      */
-    @OutputExport(name="deleted", type=Boolean.class, parameters={})
+    @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
@@ -77,7 +77,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -91,7 +91,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -105,7 +105,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Required. Filter to select VMs.
      * 
      */
-    @OutputExport(name="instanceFilter", type=OsPolicyAssignmentInstanceFilter.class, parameters={})
+    @Export(name="instanceFilter", type=OsPolicyAssignmentInstanceFilter.class, parameters={})
     private Output<OsPolicyAssignmentInstanceFilter> instanceFilter;
 
     /**
@@ -119,7 +119,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * The location for the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -133,7 +133,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Required. The name of the repository.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -147,7 +147,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Required. List of OS policies to be applied to the VMs.
      * 
      */
-    @OutputExport(name="osPolicies", type=List.class, parameters={OsPolicyAssignmentOsPolicy.class})
+    @Export(name="osPolicies", type=List.class, parameters={OsPolicyAssignmentOsPolicy.class})
     private Output<List<OsPolicyAssignmentOsPolicy>> osPolicies;
 
     /**
@@ -161,7 +161,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * The project for the resource
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -176,7 +176,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * `rollout_state` is one of: * IN_PROGRESS * CANCELLING
      * 
      */
-    @OutputExport(name="reconciling", type=Boolean.class, parameters={})
+    @Export(name="reconciling", type=Boolean.class, parameters={})
     private Output<Boolean> reconciling;
 
     /**
@@ -191,7 +191,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Output only. The timestamp that the revision was created.
      * 
      */
-    @OutputExport(name="revisionCreateTime", type=String.class, parameters={})
+    @Export(name="revisionCreateTime", type=String.class, parameters={})
     private Output<String> revisionCreateTime;
 
     /**
@@ -206,7 +206,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * assignment
      * 
      */
-    @OutputExport(name="revisionId", type=String.class, parameters={})
+    @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
     /**
@@ -221,7 +221,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    @OutputExport(name="rollout", type=OsPolicyAssignmentRollout.class, parameters={})
+    @Export(name="rollout", type=OsPolicyAssignmentRollout.class, parameters={})
     private Output<OsPolicyAssignmentRollout> rollout;
 
     /**
@@ -236,7 +236,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * CANCELLED, SUCCEEDED
      * 
      */
-    @OutputExport(name="rolloutState", type=String.class, parameters={})
+    @Export(name="rolloutState", type=String.class, parameters={})
     private Output<String> rolloutState;
 
     /**
@@ -251,7 +251,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Output only. Server generated unique id for the OS policy assignment resource.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * Content item identifier.
      * 
      */
-    @InputImport(name="contentItemId")
+    @Import(name="contentItemId")
       private final @Nullable Output<String> contentItemId;
 
     public Output<String> getContentItemId() {
@@ -29,7 +29,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * Content type identifier.
      * 
      */
-    @InputImport(name="contentTypeId", required=true)
+    @Import(name="contentTypeId", required=true)
       private final Output<String> contentTypeId;
 
     public Output<String> getContentTypeId() {
@@ -40,7 +40,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class ContentItemArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

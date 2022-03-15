@@ -9,7 +9,7 @@ import io.pulumi.azurenative.eventgrid.outputs.IdentityInfoResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Identity information for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityInfoResponse.class, parameters={})
+    @Export(name="identity", type=IdentityInfoResponse.class, parameters={})
     private Output</* @Nullable */ IdentityInfoResponse> identity;
 
     /**
@@ -51,7 +51,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Metric resource id for the system topic.
      * 
      */
-    @OutputExport(name="metricResourceId", type=String.class, parameters={})
+    @Export(name="metricResourceId", type=String.class, parameters={})
     private Output<String> metricResourceId;
 
     /**
@@ -79,7 +79,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Provisioning state of the system topic.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Source for the system topic.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
@@ -121,7 +121,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * The system metadata relating to System Topic resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -135,7 +135,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * TopicType for the system topic.
      * 
      */
-    @OutputExport(name="topicType", type=String.class, parameters={})
+    @Export(name="topicType", type=String.class, parameters={})
     private Output</* @Nullable */ String> topicType;
 
     /**
@@ -163,7 +163,7 @@ public class SystemTopic extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

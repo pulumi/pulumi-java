@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstructionResult {
     /**
      * The names of any related resources that are blocking changes to the instruction.
@@ -52,16 +52,16 @@ public final class GetInstructionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstructionResult(
-        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dataType") String dataType,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pdfInstruction") GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("blockingResources") List<String> blockingResources,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dataType") String dataType,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pdfInstruction") GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.blockingResources = blockingResources;
         this.createTime = createTime;
         this.dataType = dataType;

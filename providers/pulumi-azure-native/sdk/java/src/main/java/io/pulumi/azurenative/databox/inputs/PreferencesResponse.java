@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.databox.inputs.TransportPreferencesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Preferences related to the Encryption.
      * 
      */
-    @InputImport(name="encryptionPreferences")
+    @Import(name="encryptionPreferences")
       private final @Nullable EncryptionPreferencesResponse encryptionPreferences;
 
     public Optional<EncryptionPreferencesResponse> getEncryptionPreferences() {
@@ -36,7 +36,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Preferred data center region.
      * 
      */
-    @InputImport(name="preferredDataCenterRegion")
+    @Import(name="preferredDataCenterRegion")
       private final @Nullable List<String> preferredDataCenterRegion;
 
     public List<String> getPreferredDataCenterRegion() {
@@ -47,7 +47,7 @@ public final class PreferencesResponse extends io.pulumi.resources.InvokeArgs {
      * Preferences related to the shipment logistics of the sku.
      * 
      */
-    @InputImport(name="transportPreferences")
+    @Import(name="transportPreferences")
       private final @Nullable TransportPreferencesResponse transportPreferences;
 
     public Optional<TransportPreferencesResponse> getTransportPreferences() {

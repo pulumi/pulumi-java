@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.BlobStorageEventType;
 import io.pulumi.azurenative.synapse.enums.EventGridDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The name of blob storage event type to process.
      * 
      */
-    @InputImport(name="blobStorageEventType")
+    @Import(name="blobStorageEventType")
       private final @Nullable Output<Either<String,BlobStorageEventType>> blobStorageEventType;
 
     public Output<Either<String,BlobStorageEventType>> getBlobStorageEventType() {
@@ -33,7 +33,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The event hub consumer group.
      * 
      */
-    @InputImport(name="consumerGroup", required=true)
+    @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
 
     public Output<String> getConsumerGroup() {
@@ -44,7 +44,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The name of the data connection.
      * 
      */
-    @InputImport(name="dataConnectionName")
+    @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
     public Output<String> getDataConnectionName() {
@@ -55,7 +55,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    @InputImport(name="dataFormat")
+    @Import(name="dataFormat")
       private final @Nullable Output<Either<String,EventGridDataFormat>> dataFormat;
 
     public Output<Either<String,EventGridDataFormat>> getDataFormat() {
@@ -66,7 +66,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The name of the database in the Kusto pool.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -77,7 +77,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The resource ID where the event grid is configured to send events.
      * 
      */
-    @InputImport(name="eventHubResourceId", required=true)
+    @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
 
     public Output<String> getEventHubResourceId() {
@@ -88,7 +88,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * A Boolean value that, if set to true, indicates that ingestion should ignore the first record of every file
      * 
      */
-    @InputImport(name="ignoreFirstRecord")
+    @Import(name="ignoreFirstRecord")
       private final @Nullable Output<Boolean> ignoreFirstRecord;
 
     public Output<Boolean> getIgnoreFirstRecord() {
@@ -100,7 +100,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * Expected value is 'EventGrid'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -111,7 +111,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName", required=true)
+    @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -122,7 +122,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -133,7 +133,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    @InputImport(name="mappingRuleName")
+    @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
 
     public Output<String> getMappingRuleName() {
@@ -144,7 +144,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -155,7 +155,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The resource ID of the storage account where the data resides.
      * 
      */
-    @InputImport(name="storageAccountResourceId", required=true)
+    @Import(name="storageAccountResourceId", required=true)
       private final Output<String> storageAccountResourceId;
 
     public Output<String> getStorageAccountResourceId() {
@@ -166,7 +166,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -177,7 +177,7 @@ public final class EventGridDataConnectionArgs extends io.pulumi.resources.Resou
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchemaVersion {
     /**
      * Indicates if the latest version needs to be updated.
@@ -23,10 +23,10 @@ public final class SchemaVersion {
      */
     private final @Nullable Integer versionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaVersion(
-        @OutputCustomType.Parameter("isLatest") @Nullable Boolean isLatest,
-        @OutputCustomType.Parameter("versionNumber") @Nullable Integer versionNumber) {
+        @CustomType.Parameter("isLatest") @Nullable Boolean isLatest,
+        @CustomType.Parameter("versionNumber") @Nullable Integer versionNumber) {
         this.isLatest = isLatest;
         this.versionNumber = versionNumber;
     }

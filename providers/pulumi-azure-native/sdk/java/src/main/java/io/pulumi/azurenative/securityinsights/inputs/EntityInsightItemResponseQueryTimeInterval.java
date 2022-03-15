@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.
      * Insight query end time
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -33,7 +33,7 @@ public final class EntityInsightItemResponseQueryTimeInterval extends io.pulumi.
      * Insight query start time
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {

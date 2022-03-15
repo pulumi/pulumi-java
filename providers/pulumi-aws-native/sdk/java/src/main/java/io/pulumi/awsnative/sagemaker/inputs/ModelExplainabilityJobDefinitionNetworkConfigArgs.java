@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends io.
      * Whether to encrypt all communications between distributed processing jobs. Choose True to encrypt communications. Encryption provides greater security for distributed processing jobs, but the processing might take longer.
      * 
      */
-    @InputImport(name="enableInterContainerTrafficEncryption")
+    @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
     public Output<Boolean> getEnableInterContainerTrafficEncryption() {
@@ -34,14 +34,14 @@ public final class ModelExplainabilityJobDefinitionNetworkConfigArgs extends io.
      * Whether to allow inbound and outbound network calls to and from the containers used for the processing job.
      * 
      */
-    @InputImport(name="enableNetworkIsolation")
+    @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
     public Output<Boolean> getEnableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Output.empty() : this.enableNetworkIsolation;
     }
 
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<ModelExplainabilityJobDefinitionVpcConfigArgs> vpcConfig;
 
     public Output<ModelExplainabilityJobDefinitionVpcConfigArgs> getVpcConfig() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoggingPropertiesResponse {
     /**
      * Indicates whether audit logs are enabled on the connected registry.
@@ -22,10 +22,10 @@ public final class LoggingPropertiesResponse {
      */
     private final @Nullable String logLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingPropertiesResponse(
-        @OutputCustomType.Parameter("auditLogStatus") @Nullable String auditLogStatus,
-        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel) {
+        @CustomType.Parameter("auditLogStatus") @Nullable String auditLogStatus,
+        @CustomType.Parameter("logLevel") @Nullable String logLevel) {
         this.auditLogStatus = auditLogStatus;
         this.logLevel = logLevel;
     }

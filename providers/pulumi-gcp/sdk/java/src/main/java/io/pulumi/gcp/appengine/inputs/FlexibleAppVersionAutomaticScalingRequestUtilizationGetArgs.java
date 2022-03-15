@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
      * Target number of concurrent requests.
      * 
      */
-    @InputImport(name="targetConcurrentRequests")
+    @Import(name="targetConcurrentRequests")
       private final @Nullable Output<Double> targetConcurrentRequests;
 
     public Output<Double> getTargetConcurrentRequests() {
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs e
      * Target requests per second.
      * 
      */
-    @InputImport(name="targetRequestCountPerSecond")
+    @Import(name="targetRequestCountPerSecond")
       private final @Nullable Output<String> targetRequestCountPerSecond;
 
     public Output<String> getTargetRequestCountPerSecond() {

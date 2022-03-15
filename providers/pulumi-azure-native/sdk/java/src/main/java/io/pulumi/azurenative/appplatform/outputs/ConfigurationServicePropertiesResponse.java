@@ -6,14 +6,14 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServiceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationServicePropertiesResponse {
     /**
      * Collection of instances belong to Application Configuration Service.
@@ -36,12 +36,12 @@ public final class ConfigurationServicePropertiesResponse {
      */
     private final @Nullable ConfigurationServiceSettingsResponse settings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationServicePropertiesResponse(
-        @OutputCustomType.Parameter("instances") List<ConfigurationServiceInstanceResponse> instances,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceRequests") ConfigurationServiceResourceRequestsResponse resourceRequests,
-        @OutputCustomType.Parameter("settings") @Nullable ConfigurationServiceSettingsResponse settings) {
+        @CustomType.Parameter("instances") List<ConfigurationServiceInstanceResponse> instances,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceRequests") ConfigurationServiceResourceRequestsResponse resourceRequests,
+        @CustomType.Parameter("settings") @Nullable ConfigurationServiceSettingsResponse settings) {
         this.instances = instances;
         this.provisioningState = provisioningState;
         this.resourceRequests = resourceRequests;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
      * Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -29,7 +29,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
      * Message body.
      * 
      */
-    @InputImport(name="messageBody")
+    @Import(name="messageBody")
       private final @Nullable Output<String> messageBody;
 
     public Output<String> getMessageBody() {
@@ -40,7 +40,7 @@ public final class ListenerDefaultActionFixedResponseGetArgs extends io.pulumi.r
      * HTTP redirect code. The redirect is either permanent (`HTTP_301`) or temporary (`HTTP_302`).
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
     public Output<String> getStatusCode() {

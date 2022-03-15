@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LicenseResponse {
     /**
      * Comments
@@ -20,10 +20,10 @@ public final class LicenseResponse {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LicenseResponse(
-        @OutputCustomType.Parameter("comments") String comments,
-        @OutputCustomType.Parameter("expression") String expression) {
+        @CustomType.Parameter("comments") String comments,
+        @CustomType.Parameter("expression") String expression) {
         this.comments = comments;
         this.expression = expression;
     }

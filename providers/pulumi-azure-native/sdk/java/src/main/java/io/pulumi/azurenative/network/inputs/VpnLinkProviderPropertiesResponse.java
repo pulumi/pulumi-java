@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources
      * Name of the link provider.
      * 
      */
-    @InputImport(name="linkProviderName")
+    @Import(name="linkProviderName")
       private final @Nullable String linkProviderName;
 
     public Optional<String> getLinkProviderName() {
@@ -34,7 +34,7 @@ public final class VpnLinkProviderPropertiesResponse extends io.pulumi.resources
      * Link speed.
      * 
      */
-    @InputImport(name="linkSpeedInMbps")
+    @Import(name="linkSpeedInMbps")
       private final @Nullable Integer linkSpeedInMbps;
 
     public Optional<Integer> getLinkSpeedInMbps() {

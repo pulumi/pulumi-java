@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceAccountResult {
     /**
      * Optional. A user-specified, human-readable description of the service account. The maximum length is 256 UTF-8 bytes.
@@ -51,16 +51,16 @@ public final class GetServiceAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceAccountResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("uniqueId") String uniqueId) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;

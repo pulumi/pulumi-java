@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.JobStatusError;
 import io.pulumi.gcp.bigquery.outputs.JobStatusErrorResult;
 import java.lang.String;
@@ -12,17 +12,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStatus {
     private final @Nullable List<JobStatusErrorResult> errorResults;
     private final @Nullable List<JobStatusError> errors;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatus(
-        @OutputCustomType.Parameter("errorResults") @Nullable List<JobStatusErrorResult> errorResults,
-        @OutputCustomType.Parameter("errors") @Nullable List<JobStatusError> errors,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("errorResults") @Nullable List<JobStatusErrorResult> errorResults,
+        @CustomType.Parameter("errors") @Nullable List<JobStatusError> errors,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.errorResults = errorResults;
         this.errors = errors;
         this.state = state;

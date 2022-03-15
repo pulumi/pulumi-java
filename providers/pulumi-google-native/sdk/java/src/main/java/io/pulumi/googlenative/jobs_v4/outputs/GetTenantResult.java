@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTenantResult {
     /**
      * Client side tenant identifier, used to uniquely identify the tenant. The maximum number of allowed characters is 255.
@@ -20,10 +20,10 @@ public final class GetTenantResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTenantResult(
-        @OutputCustomType.Parameter("externalId") String externalId,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("externalId") String externalId,
+        @CustomType.Parameter("name") String name) {
         this.externalId = externalId;
         this.name = name;
     }

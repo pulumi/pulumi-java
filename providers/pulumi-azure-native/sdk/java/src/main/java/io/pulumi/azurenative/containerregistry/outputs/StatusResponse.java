@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatusResponse {
     /**
      * The short label for the status.
@@ -25,11 +25,11 @@ public final class StatusResponse {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusResponse(
-        @OutputCustomType.Parameter("displayStatus") String displayStatus,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("timestamp") String timestamp) {
+        @CustomType.Parameter("displayStatus") String displayStatus,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("timestamp") String timestamp) {
         this.displayStatus = displayStatus;
         this.message = message;
         this.timestamp = timestamp;

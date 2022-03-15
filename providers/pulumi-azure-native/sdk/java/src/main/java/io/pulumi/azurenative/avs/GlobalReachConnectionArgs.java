@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * Authorization key from the peer express route used for the global reach connection
      * 
      */
-    @InputImport(name="authorizationKey")
+    @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
     public Output<String> getAuthorizationKey() {
@@ -29,7 +29,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * Name of the global reach connection in the private cloud
      * 
      */
-    @InputImport(name="globalReachConnectionName")
+    @Import(name="globalReachConnectionName")
       private final @Nullable Output<String> globalReachConnectionName;
 
     public Output<String> getGlobalReachConnectionName() {
@@ -40,7 +40,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * Identifier of the ExpressRoute Circuit to peer with in the global reach connection
      * 
      */
-    @InputImport(name="peerExpressRouteCircuit")
+    @Import(name="peerExpressRouteCircuit")
       private final @Nullable Output<String> peerExpressRouteCircuit;
 
     public Output<String> getPeerExpressRouteCircuit() {
@@ -51,7 +51,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * The name of the private cloud.
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -62,7 +62,7 @@ public final class GlobalReachConnectionArgs extends io.pulumi.resources.Resourc
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

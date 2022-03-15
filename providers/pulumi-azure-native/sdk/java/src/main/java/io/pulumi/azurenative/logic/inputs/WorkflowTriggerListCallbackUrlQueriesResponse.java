@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
      * The api version.
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable String apiVersion;
 
     public Optional<String> getApiVersion() {
@@ -33,7 +33,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
      * The SAS timestamp.
      * 
      */
-    @InputImport(name="se")
+    @Import(name="se")
       private final @Nullable String se;
 
     public Optional<String> getSe() {
@@ -44,7 +44,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
      * The SAS signature.
      * 
      */
-    @InputImport(name="sig")
+    @Import(name="sig")
       private final @Nullable String sig;
 
     public Optional<String> getSig() {
@@ -55,7 +55,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
      * The SAS permissions.
      * 
      */
-    @InputImport(name="sp")
+    @Import(name="sp")
       private final @Nullable String sp;
 
     public Optional<String> getSp() {
@@ -66,7 +66,7 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
      * The SAS version.
      * 
      */
-    @InputImport(name="sv")
+    @Import(name="sv")
       private final @Nullable String sv;
 
     public Optional<String> getSv() {

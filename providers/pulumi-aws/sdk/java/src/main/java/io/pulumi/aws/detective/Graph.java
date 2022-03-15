@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.detective.GraphArgs;
 import io.pulumi.aws.detective.inputs.GraphState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, when the Amazon Detective Graph was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -47,7 +47,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * ARN of the Detective Graph.
      * 
      */
-    @OutputExport(name="graphArn", type=String.class, parameters={})
+    @Export(name="graphArn", type=String.class, parameters={})
     private Output<String> graphArn;
 
     /**
@@ -61,7 +61,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -71,7 +71,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

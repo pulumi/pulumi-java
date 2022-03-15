@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and the maximum value can be 365.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -34,7 +34,7 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * Indicates whether DeleteRetentionPolicy is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

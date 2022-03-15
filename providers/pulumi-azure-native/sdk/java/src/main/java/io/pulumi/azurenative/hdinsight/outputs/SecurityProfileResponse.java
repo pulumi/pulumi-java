@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityProfileResponse {
     /**
      * The resource ID of the user's Azure Active Directory Domain Service.
@@ -58,17 +58,17 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable String organizationalUnitDN;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityProfileResponse(
-        @OutputCustomType.Parameter("aaddsResourceId") @Nullable String aaddsResourceId,
-        @OutputCustomType.Parameter("clusterUsersGroupDNs") @Nullable List<String> clusterUsersGroupDNs,
-        @OutputCustomType.Parameter("directoryType") @Nullable String directoryType,
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("domainUserPassword") @Nullable String domainUserPassword,
-        @OutputCustomType.Parameter("domainUsername") @Nullable String domainUsername,
-        @OutputCustomType.Parameter("ldapsUrls") @Nullable List<String> ldapsUrls,
-        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
-        @OutputCustomType.Parameter("organizationalUnitDN") @Nullable String organizationalUnitDN) {
+        @CustomType.Parameter("aaddsResourceId") @Nullable String aaddsResourceId,
+        @CustomType.Parameter("clusterUsersGroupDNs") @Nullable List<String> clusterUsersGroupDNs,
+        @CustomType.Parameter("directoryType") @Nullable String directoryType,
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("domainUserPassword") @Nullable String domainUserPassword,
+        @CustomType.Parameter("domainUsername") @Nullable String domainUsername,
+        @CustomType.Parameter("ldapsUrls") @Nullable List<String> ldapsUrls,
+        @CustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @CustomType.Parameter("organizationalUnitDN") @Nullable String organizationalUnitDN) {
         this.aaddsResourceId = aaddsResourceId;
         this.clusterUsersGroupDNs = clusterUsersGroupDNs;
         this.directoryType = directoryType;

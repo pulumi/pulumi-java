@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoHealCustomActionResponse {
     /**
      * Executable to be run.
@@ -22,10 +22,10 @@ public final class AutoHealCustomActionResponse {
      */
     private final @Nullable String parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoHealCustomActionResponse(
-        @OutputCustomType.Parameter("exe") @Nullable String exe,
-        @OutputCustomType.Parameter("parameters") @Nullable String parameters) {
+        @CustomType.Parameter("exe") @Nullable String exe,
+        @CustomType.Parameter("parameters") @Nullable String parameters) {
         this.exe = exe;
         this.parameters = parameters;
     }

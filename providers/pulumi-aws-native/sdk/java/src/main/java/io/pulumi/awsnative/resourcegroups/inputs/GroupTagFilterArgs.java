@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class GroupTagFilterArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final GroupTagFilterArgs Empty = new GroupTagFilterArgs();
 
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
         return this.key == null ? Output.empty() : this.key;
     }
 
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

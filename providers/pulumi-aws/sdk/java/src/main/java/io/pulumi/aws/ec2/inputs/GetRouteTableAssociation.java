@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
      * 
      */
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
     public String getGatewayId() {
@@ -28,7 +28,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * Whether the association is due to the main route table.
      * 
      */
-    @InputImport(name="main", required=true)
+    @Import(name="main", required=true)
       private final Boolean main;
 
     public Boolean getMain() {
@@ -39,7 +39,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * Association ID.
      * 
      */
-    @InputImport(name="routeTableAssociationId", required=true)
+    @Import(name="routeTableAssociationId", required=true)
       private final String routeTableAssociationId;
 
     public String getRouteTableAssociationId() {
@@ -50,7 +50,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * ID of the specific Route Table to retrieve.
      * 
      */
-    @InputImport(name="routeTableId", required=true)
+    @Import(name="routeTableId", required=true)
       private final String routeTableId;
 
     public String getRouteTableId() {
@@ -61,7 +61,7 @@ public final class GetRouteTableAssociation extends io.pulumi.resources.InvokeAr
      * ID of a Subnet which is connected to the Route Table (not exported if not passed as a parameter).
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final String subnetId;
 
     public String getSubnetId() {

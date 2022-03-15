@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.GrpcServiceConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SdsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration to access the SDS server over GRPC.
      * 
      */
-    @InputImport(name="grpcServiceConfig")
+    @Import(name="grpcServiceConfig")
       private final @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
 
     public Output<GrpcServiceConfigArgs> getGrpcServiceConfig() {

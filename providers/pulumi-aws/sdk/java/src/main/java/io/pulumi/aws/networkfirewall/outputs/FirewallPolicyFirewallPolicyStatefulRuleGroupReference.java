@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReference {
     /**
      * An integer setting that indicates the order in which to apply the stateful rule groups in a single policy. This argument must be specified if the policy has a `stateful_engine_options` block with a `rule_order` value of `STRICT_ORDER`. AWS Network Firewall applies each stateful rule group to a packet starting with the group that has the lowest priority setting.
@@ -23,10 +23,10 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReference {
      */
     private final String resourceArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyFirewallPolicyStatefulRuleGroupReference(
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("resourceArn") String resourceArn) {
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("resourceArn") String resourceArn) {
         this.priority = priority;
         this.resourceArn = resourceArn;
     }

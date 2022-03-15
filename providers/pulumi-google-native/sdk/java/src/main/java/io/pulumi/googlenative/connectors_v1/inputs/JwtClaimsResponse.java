@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
      * Value for the "aud" claim.
      * 
      */
-    @InputImport(name="audience", required=true)
+    @Import(name="audience", required=true)
       private final String audience;
 
     public String getAudience() {
@@ -31,7 +31,7 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
      * Value for the "iss" claim.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -42,7 +42,7 @@ public final class JwtClaimsResponse extends io.pulumi.resources.InvokeArgs {
      * Value for the "sub" claim.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final String subject;
 
     public String getSubject() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * If the ComparisonOperator calls for a set of CIDRs, use this to specify that set to be compared with the metric.
      * 
      */
-    @InputImport(name="cidrs")
+    @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
     public Output<List<String>> getCidrs() {
@@ -36,7 +36,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * If the ComparisonOperator calls for a numeric value, use this to specify that (integer) numeric value to be compared with the metric.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
@@ -47,7 +47,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * The numeral value of a metric.
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Double> number;
 
     public Output<Double> getNumber() {
@@ -58,7 +58,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * The numeral values of a metric.
      * 
      */
-    @InputImport(name="numbers")
+    @Import(name="numbers")
       private final @Nullable Output<List<Double>> numbers;
 
     public Output<List<Double>> getNumbers() {
@@ -69,7 +69,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * If the ComparisonOperator calls for a set of ports, use this to specify that set to be compared with the metric.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<Integer>> ports;
 
     public Output<List<Integer>> getPorts() {
@@ -80,7 +80,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * The string values of a metric.
      * 
      */
-    @InputImport(name="strings")
+    @Import(name="strings")
       private final @Nullable Output<List<String>> strings;
 
     public Output<List<String>> getStrings() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.azurestackhci.outputs;
 
 import io.pulumi.azurenative.azurestackhci.outputs.PerNodeStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetArcSettingResult {
     /**
      * Aggregate state of Arc agent across the nodes in this HCI cluster.
@@ -79,21 +79,21 @@ public final class GetArcSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetArcSettingResult(
-        @OutputCustomType.Parameter("aggregateState") String aggregateState,
-        @OutputCustomType.Parameter("arcInstanceResourceGroup") String arcInstanceResourceGroup,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("createdByType") @Nullable String createdByType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("perNodeDetails") List<PerNodeStateResponse> perNodeDetails,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("aggregateState") String aggregateState,
+        @CustomType.Parameter("arcInstanceResourceGroup") String arcInstanceResourceGroup,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("createdByType") @Nullable String createdByType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedAt") @Nullable String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedByType") @Nullable String lastModifiedByType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("perNodeDetails") List<PerNodeStateResponse> perNodeDetails,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.aggregateState = aggregateState;
         this.arcInstanceResourceGroup = arcInstanceResourceGroup;
         this.createdAt = createdAt;

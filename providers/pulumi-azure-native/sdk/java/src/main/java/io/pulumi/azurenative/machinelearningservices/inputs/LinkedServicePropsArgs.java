@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.LinkedServiceLinkType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * The creation time of the linked service.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -34,7 +34,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * Type of the link target.
      * 
      */
-    @InputImport(name="linkType")
+    @Import(name="linkType")
       private final @Nullable Output<LinkedServiceLinkType> linkType;
 
     public Output<LinkedServiceLinkType> getLinkType() {
@@ -45,7 +45,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * ResourceId of the link target of the linked service.
      * 
      */
-    @InputImport(name="linkedServiceResourceId", required=true)
+    @Import(name="linkedServiceResourceId", required=true)
       private final Output<String> linkedServiceResourceId;
 
     public Output<String> getLinkedServiceResourceId() {
@@ -56,7 +56,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * The last modified time of the linked service.
      * 
      */
-    @InputImport(name="modifiedTime")
+    @Import(name="modifiedTime")
       private final @Nullable Output<String> modifiedTime;
 
     public Output<String> getModifiedTime() {

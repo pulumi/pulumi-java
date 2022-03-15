@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.NotificationEndpointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationRegistrationResponseProperties {
     private final @Nullable List<String> includedEvents;
     private final @Nullable String messageScope;
@@ -19,13 +19,13 @@ public final class NotificationRegistrationResponseProperties {
     private final @Nullable String notificationMode;
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationRegistrationResponseProperties(
-        @OutputCustomType.Parameter("includedEvents") @Nullable List<String> includedEvents,
-        @OutputCustomType.Parameter("messageScope") @Nullable String messageScope,
-        @OutputCustomType.Parameter("notificationEndpoints") @Nullable List<NotificationEndpointResponse> notificationEndpoints,
-        @OutputCustomType.Parameter("notificationMode") @Nullable String notificationMode,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
+        @CustomType.Parameter("includedEvents") @Nullable List<String> includedEvents,
+        @CustomType.Parameter("messageScope") @Nullable String messageScope,
+        @CustomType.Parameter("notificationEndpoints") @Nullable List<NotificationEndpointResponse> notificationEndpoints,
+        @CustomType.Parameter("notificationMode") @Nullable String notificationMode,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.includedEvents = includedEvents;
         this.messageScope = messageScope;
         this.notificationEndpoints = notificationEndpoints;

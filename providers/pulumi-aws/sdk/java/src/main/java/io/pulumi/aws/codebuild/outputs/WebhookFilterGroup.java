@@ -4,12 +4,12 @@
 package io.pulumi.aws.codebuild.outputs;
 
 import io.pulumi.aws.codebuild.outputs.WebhookFilterGroupFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookFilterGroup {
     /**
      * A webhook filter for the group. Filter blocks are documented below.
@@ -17,8 +17,8 @@ public final class WebhookFilterGroup {
      */
     private final @Nullable List<WebhookFilterGroupFilter> filters;
 
-    @OutputCustomType.Constructor
-    private WebhookFilterGroup(@OutputCustomType.Parameter("filters") @Nullable List<WebhookFilterGroupFilter> filters) {
+    @CustomType.Constructor
+    private WebhookFilterGroup(@CustomType.Parameter("filters") @Nullable List<WebhookFilterGroupFilter> filters) {
         this.filters = filters;
     }
 

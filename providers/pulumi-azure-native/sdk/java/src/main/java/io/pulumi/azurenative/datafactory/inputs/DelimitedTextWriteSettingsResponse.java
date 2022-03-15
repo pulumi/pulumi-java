@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * The file extension used to create the files. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileExtension", required=true)
+    @Import(name="fileExtension", required=true)
       private final Object fileExtension;
 
     public Object getFileExtension() {
@@ -34,7 +34,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileNamePrefix")
+    @Import(name="fileNamePrefix")
       private final @Nullable Object fileNamePrefix;
 
     public Optional<Object> getFileNamePrefix() {
@@ -45,7 +45,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxRowsPerFile")
+    @Import(name="maxRowsPerFile")
       private final @Nullable Object maxRowsPerFile;
 
     public Optional<Object> getMaxRowsPerFile() {
@@ -56,7 +56,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * Indicates whether string values should always be enclosed with quotes. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="quoteAllText")
+    @Import(name="quoteAllText")
       private final @Nullable Object quoteAllText;
 
     public Optional<Object> getQuoteAllText() {
@@ -68,7 +68,7 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
      * Expected value is 'DelimitedTextWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

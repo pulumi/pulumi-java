@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.events;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -16,28 +16,28 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ArchiveArgs Empty = new ArchiveArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="eventPattern")
+    @Import(name="eventPattern")
       private final @Nullable Output<Object> eventPattern;
 
     public Output<Object> getEventPattern() {
         return this.eventPattern == null ? Output.empty() : this.eventPattern;
     }
 
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
         return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
-    @InputImport(name="sourceArn", required=true)
+    @Import(name="sourceArn", required=true)
       private final Output<String> sourceArn;
 
     public Output<String> getSourceArn() {

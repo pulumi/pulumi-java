@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.JobSampleMode;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class JobSample extends io.pulumi.resources.InvokeArgs {
 
     public static final JobSample Empty = new JobSample();
 
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable JobSampleMode mode;
 
     public Optional<JobSampleMode> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
     }
 
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Integer size;
 
     public Optional<Integer> getSize() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GameServerClusterConnectionInfoGkeClusterReference {
     /**
      * The full or partial name of a GKE cluster, using one of the following
@@ -22,8 +22,8 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor
-    private GameServerClusterConnectionInfoGkeClusterReference(@OutputCustomType.Parameter("cluster") String cluster) {
+    @CustomType.Constructor
+    private GameServerClusterConnectionInfoGkeClusterReference(@CustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The files and folders on this share will only be visible to users with read access. Default value is `false`.
      * 
      */
-    @InputImport(name="accessBasedEnumeration")
+    @Import(name="accessBasedEnumeration")
       private final @Nullable Output<Boolean> accessBasedEnumeration;
 
     public Output<Boolean> getAccessBasedEnumeration() {
@@ -33,7 +33,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
-    @InputImport(name="adminUserLists")
+    @Import(name="adminUserLists")
       private final @Nullable Output<List<String>> adminUserLists;
 
     public Output<List<String>> getAdminUserLists() {
@@ -44,7 +44,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
      * 
      */
-    @InputImport(name="auditDestinationArn")
+    @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
     public Output<String> getAuditDestinationArn() {
@@ -55,7 +55,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<String> authentication;
 
     public Output<String> getAuthentication() {
@@ -66,7 +66,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The region of the S3 buck used by the file share. Required when specifying a `vpc_endpoint_dns_name`.
      * 
      */
-    @InputImport(name="bucketRegion")
+    @Import(name="bucketRegion")
       private final @Nullable Output<String> bucketRegion;
 
     public Output<String> getBucketRegion() {
@@ -77,7 +77,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    @InputImport(name="cacheAttributes")
+    @Import(name="cacheAttributes")
       private final @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes;
 
     public Output<SmbFileShareCacheAttributesArgs> getCacheAttributes() {
@@ -88,7 +88,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
      * 
      */
-    @InputImport(name="caseSensitivity")
+    @Import(name="caseSensitivity")
       private final @Nullable Output<String> caseSensitivity;
 
     public Output<String> getCaseSensitivity() {
@@ -99,7 +99,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The default [storage class](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-DefaultStorageClass) for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`.
      * 
      */
-    @InputImport(name="defaultStorageClass")
+    @Import(name="defaultStorageClass")
       private final @Nullable Output<String> defaultStorageClass;
 
     public Output<String> getDefaultStorageClass() {
@@ -110,7 +110,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
      * 
      */
-    @InputImport(name="fileShareName")
+    @Import(name="fileShareName")
       private final @Nullable Output<String> fileShareName;
 
     public Output<String> getFileShareName() {
@@ -121,7 +121,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the file gateway.
      * 
      */
-    @InputImport(name="gatewayArn", required=true)
+    @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
     public Output<String> getGatewayArn() {
@@ -132,7 +132,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
      * 
      */
-    @InputImport(name="guessMimeTypeEnabled")
+    @Import(name="guessMimeTypeEnabled")
       private final @Nullable Output<Boolean> guessMimeTypeEnabled;
 
     public Output<Boolean> getGuessMimeTypeEnabled() {
@@ -143,7 +143,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
-    @InputImport(name="invalidUserLists")
+    @Import(name="invalidUserLists")
       private final @Nullable Output<List<String>> invalidUserLists;
 
     public Output<List<String>> getInvalidUserLists() {
@@ -154,7 +154,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
      * 
      */
-    @InputImport(name="kmsEncrypted")
+    @Import(name="kmsEncrypted")
       private final @Nullable Output<Boolean> kmsEncrypted;
 
     public Output<Boolean> getKmsEncrypted() {
@@ -165,7 +165,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -176,7 +176,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the backed storage used for storing file data.
      * 
      */
-    @InputImport(name="locationArn", required=true)
+    @Import(name="locationArn", required=true)
       private final Output<String> locationArn;
 
     public Output<String> getLocationArn() {
@@ -187,7 +187,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
      * 
      */
-    @InputImport(name="notificationPolicy")
+    @Import(name="notificationPolicy")
       private final @Nullable Output<String> notificationPolicy;
 
     public Output<String> getNotificationPolicy() {
@@ -198,7 +198,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Access Control List permission for S3 bucket objects. Defaults to `private`.
      * 
      */
-    @InputImport(name="objectAcl")
+    @Import(name="objectAcl")
       private final @Nullable Output<String> objectAcl;
 
     public Output<String> getObjectAcl() {
@@ -209,7 +209,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean to indicate Opportunistic lock (oplock) status. Defaults to `true`.
      * 
      */
-    @InputImport(name="oplocksEnabled")
+    @Import(name="oplocksEnabled")
       private final @Nullable Output<Boolean> oplocksEnabled;
 
     public Output<Boolean> getOplocksEnabled() {
@@ -220,7 +220,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -231,7 +231,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
      * 
      */
-    @InputImport(name="requesterPays")
+    @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;
 
     public Output<Boolean> getRequesterPays() {
@@ -242,7 +242,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -253,7 +253,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
      * 
      */
-    @InputImport(name="smbAclEnabled")
+    @Import(name="smbAclEnabled")
       private final @Nullable Output<Boolean> smbAclEnabled;
 
     public Output<Boolean> getSmbAclEnabled() {
@@ -264,7 +264,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -275,7 +275,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * A list of users in the Active Directory that are allowed to access the file share. If you need to specify an Active directory group, add '@' before the name of the group. It will be set on Allowed group in AWS console. Only valid if `authentication` is set to `ActiveDirectory`.
      * 
      */
-    @InputImport(name="validUserLists")
+    @Import(name="validUserLists")
       private final @Nullable Output<List<String>> validUserLists;
 
     public Output<List<String>> getValidUserLists() {
@@ -286,7 +286,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
      * The DNS name of the VPC endpoint for S3 private link.
      * 
      */
-    @InputImport(name="vpcEndpointDnsName")
+    @Import(name="vpcEndpointDnsName")
       private final @Nullable Output<String> vpcEndpointDnsName;
 
     public Output<String> getVpcEndpointDnsName() {

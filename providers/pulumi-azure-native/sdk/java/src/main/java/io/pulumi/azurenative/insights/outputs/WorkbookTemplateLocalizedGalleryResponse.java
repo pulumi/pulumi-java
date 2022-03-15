@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateGalleryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkbookTemplateLocalizedGalleryResponse {
     /**
      * Workbook galleries supported by the template.
@@ -24,10 +24,10 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
      */
     private final @Nullable Object templateData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkbookTemplateLocalizedGalleryResponse(
-        @OutputCustomType.Parameter("galleries") @Nullable List<WorkbookTemplateGalleryResponse> galleries,
-        @OutputCustomType.Parameter("templateData") @Nullable Object templateData) {
+        @CustomType.Parameter("galleries") @Nullable List<WorkbookTemplateGalleryResponse> galleries,
+        @CustomType.Parameter("templateData") @Nullable Object templateData) {
         this.galleries = galleries;
         this.templateData = templateData;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.servicedirectory_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicedirectory_v1beta1.outputs.EndpointResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * The timestamp when the service was created.
@@ -38,13 +38,13 @@ public final class GetServiceResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.endpoints = endpoints;
         this.metadata = metadata;

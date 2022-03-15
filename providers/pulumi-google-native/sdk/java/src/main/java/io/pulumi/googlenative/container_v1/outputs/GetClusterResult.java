@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.AddonsConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.AuthenticatorGroupsConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.AutopilotResponse;
@@ -39,7 +39,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * Configurations for the various addons available to run in the cluster.
@@ -302,60 +302,60 @@ public final class GetClusterResult {
      */
     private final WorkloadIdentityConfigResponse workloadIdentityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("addonsConfig") AddonsConfigResponse addonsConfig,
-        @OutputCustomType.Parameter("authenticatorGroupsConfig") AuthenticatorGroupsConfigResponse authenticatorGroupsConfig,
-        @OutputCustomType.Parameter("autopilot") AutopilotResponse autopilot,
-        @OutputCustomType.Parameter("autoscaling") ClusterAutoscalingResponse autoscaling,
-        @OutputCustomType.Parameter("binaryAuthorization") BinaryAuthorizationResponse binaryAuthorization,
-        @OutputCustomType.Parameter("clusterIpv4Cidr") String clusterIpv4Cidr,
-        @OutputCustomType.Parameter("conditions") List<StatusConditionResponse> conditions,
-        @OutputCustomType.Parameter("confidentialNodes") ConfidentialNodesResponse confidentialNodes,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("currentMasterVersion") String currentMasterVersion,
-        @OutputCustomType.Parameter("currentNodeVersion") String currentNodeVersion,
-        @OutputCustomType.Parameter("databaseEncryption") DatabaseEncryptionResponse databaseEncryption,
-        @OutputCustomType.Parameter("defaultMaxPodsConstraint") MaxPodsConstraintResponse defaultMaxPodsConstraint,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableKubernetesAlpha") Boolean enableKubernetesAlpha,
-        @OutputCustomType.Parameter("enableTpu") Boolean enableTpu,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("initialClusterVersion") String initialClusterVersion,
-        @OutputCustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("legacyAbac") LegacyAbacResponse legacyAbac,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locations") List<String> locations,
-        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
-        @OutputCustomType.Parameter("loggingService") String loggingService,
-        @OutputCustomType.Parameter("maintenancePolicy") MaintenancePolicyResponse maintenancePolicy,
-        @OutputCustomType.Parameter("masterAuth") MasterAuthResponse masterAuth,
-        @OutputCustomType.Parameter("masterAuthorizedNetworksConfig") MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig,
-        @OutputCustomType.Parameter("meshCertificates") MeshCertificatesResponse meshCertificates,
-        @OutputCustomType.Parameter("monitoringConfig") MonitoringConfigResponse monitoringConfig,
-        @OutputCustomType.Parameter("monitoringService") String monitoringService,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("networkPolicy") NetworkPolicyResponse networkPolicy,
-        @OutputCustomType.Parameter("nodeIpv4CidrSize") Integer nodeIpv4CidrSize,
-        @OutputCustomType.Parameter("nodePoolDefaults") NodePoolDefaultsResponse nodePoolDefaults,
-        @OutputCustomType.Parameter("nodePools") List<NodePoolResponse> nodePools,
-        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
-        @OutputCustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
-        @OutputCustomType.Parameter("releaseChannel") ReleaseChannelResponse releaseChannel,
-        @OutputCustomType.Parameter("resourceLabels") Map<String,String> resourceLabels,
-        @OutputCustomType.Parameter("resourceUsageExportConfig") ResourceUsageExportConfigResponse resourceUsageExportConfig,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("servicesIpv4Cidr") String servicesIpv4Cidr,
-        @OutputCustomType.Parameter("shieldedNodes") ShieldedNodesResponse shieldedNodes,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
-        @OutputCustomType.Parameter("verticalPodAutoscaling") VerticalPodAutoscalingResponse verticalPodAutoscaling,
-        @OutputCustomType.Parameter("workloadIdentityConfig") WorkloadIdentityConfigResponse workloadIdentityConfig) {
+        @CustomType.Parameter("addonsConfig") AddonsConfigResponse addonsConfig,
+        @CustomType.Parameter("authenticatorGroupsConfig") AuthenticatorGroupsConfigResponse authenticatorGroupsConfig,
+        @CustomType.Parameter("autopilot") AutopilotResponse autopilot,
+        @CustomType.Parameter("autoscaling") ClusterAutoscalingResponse autoscaling,
+        @CustomType.Parameter("binaryAuthorization") BinaryAuthorizationResponse binaryAuthorization,
+        @CustomType.Parameter("clusterIpv4Cidr") String clusterIpv4Cidr,
+        @CustomType.Parameter("conditions") List<StatusConditionResponse> conditions,
+        @CustomType.Parameter("confidentialNodes") ConfidentialNodesResponse confidentialNodes,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("currentMasterVersion") String currentMasterVersion,
+        @CustomType.Parameter("currentNodeVersion") String currentNodeVersion,
+        @CustomType.Parameter("databaseEncryption") DatabaseEncryptionResponse databaseEncryption,
+        @CustomType.Parameter("defaultMaxPodsConstraint") MaxPodsConstraintResponse defaultMaxPodsConstraint,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableKubernetesAlpha") Boolean enableKubernetesAlpha,
+        @CustomType.Parameter("enableTpu") Boolean enableTpu,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("initialClusterVersion") String initialClusterVersion,
+        @CustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("legacyAbac") LegacyAbacResponse legacyAbac,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locations") List<String> locations,
+        @CustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @CustomType.Parameter("loggingService") String loggingService,
+        @CustomType.Parameter("maintenancePolicy") MaintenancePolicyResponse maintenancePolicy,
+        @CustomType.Parameter("masterAuth") MasterAuthResponse masterAuth,
+        @CustomType.Parameter("masterAuthorizedNetworksConfig") MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig,
+        @CustomType.Parameter("meshCertificates") MeshCertificatesResponse meshCertificates,
+        @CustomType.Parameter("monitoringConfig") MonitoringConfigResponse monitoringConfig,
+        @CustomType.Parameter("monitoringService") String monitoringService,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @CustomType.Parameter("networkPolicy") NetworkPolicyResponse networkPolicy,
+        @CustomType.Parameter("nodeIpv4CidrSize") Integer nodeIpv4CidrSize,
+        @CustomType.Parameter("nodePoolDefaults") NodePoolDefaultsResponse nodePoolDefaults,
+        @CustomType.Parameter("nodePools") List<NodePoolResponse> nodePools,
+        @CustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @CustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
+        @CustomType.Parameter("releaseChannel") ReleaseChannelResponse releaseChannel,
+        @CustomType.Parameter("resourceLabels") Map<String,String> resourceLabels,
+        @CustomType.Parameter("resourceUsageExportConfig") ResourceUsageExportConfigResponse resourceUsageExportConfig,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("servicesIpv4Cidr") String servicesIpv4Cidr,
+        @CustomType.Parameter("shieldedNodes") ShieldedNodesResponse shieldedNodes,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
+        @CustomType.Parameter("verticalPodAutoscaling") VerticalPodAutoscalingResponse verticalPodAutoscaling,
+        @CustomType.Parameter("workloadIdentityConfig") WorkloadIdentityConfigResponse workloadIdentityConfig) {
         this.addonsConfig = addonsConfig;
         this.authenticatorGroupsConfig = authenticatorGroupsConfig;
         this.autopilot = autopilot;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiResourcePoliciesResponse {
     /**
      * The API level only policies XML as embedded content.
@@ -22,10 +22,10 @@ public final class ApiResourcePoliciesResponse {
      */
     private final @Nullable String contentLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiResourcePoliciesResponse(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("contentLink") @Nullable String contentLink) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("contentLink") @Nullable String contentLink) {
         this.content = content;
         this.contentLink = contentLink;
     }

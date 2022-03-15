@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DedicatedHostAvailableCapacityResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DedicatedHostInstanceViewResponse {
     /**
      * Specifies the unique id of the dedicated physical machine on which the dedicated host resides.
@@ -30,11 +30,11 @@ public final class DedicatedHostInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DedicatedHostInstanceViewResponse(
-        @OutputCustomType.Parameter("assetId") String assetId,
-        @OutputCustomType.Parameter("availableCapacity") @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
+        @CustomType.Parameter("assetId") String assetId,
+        @CustomType.Parameter("availableCapacity") @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.assetId = assetId;
         this.availableCapacity = availableCapacity;
         this.statuses = statuses;

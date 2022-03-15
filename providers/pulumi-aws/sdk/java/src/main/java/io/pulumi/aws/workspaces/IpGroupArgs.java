@@ -5,7 +5,7 @@ package io.pulumi.aws.workspaces;
 
 import io.pulumi.aws.workspaces.inputs.IpGroupRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the IP group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<IpGroupRuleArgs>> rules;
 
     public Output<List<IpGroupRuleArgs>> getRules() {
@@ -54,7 +54,7 @@ public final class IpGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

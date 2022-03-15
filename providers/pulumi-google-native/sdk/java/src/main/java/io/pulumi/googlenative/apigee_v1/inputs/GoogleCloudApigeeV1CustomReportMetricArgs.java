@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * aggregate function
      * 
      */
-    @InputImport(name="function")
+    @Import(name="function")
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * name of the metric
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

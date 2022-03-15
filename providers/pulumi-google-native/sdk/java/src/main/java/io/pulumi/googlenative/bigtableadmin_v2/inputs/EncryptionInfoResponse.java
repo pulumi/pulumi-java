@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
      * The status of encrypt/decrypt calls on underlying data for this resource. Regardless of status, the existing data is always encrypted at rest.
      * 
      */
-    @InputImport(name="encryptionStatus", required=true)
+    @Import(name="encryptionStatus", required=true)
       private final StatusResponse encryptionStatus;
 
     public StatusResponse getEncryptionStatus() {
@@ -32,7 +32,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
      * The type of encryption used to protect this resource.
      * 
      */
-    @InputImport(name="encryptionType", required=true)
+    @Import(name="encryptionType", required=true)
       private final String encryptionType;
 
     public String getEncryptionType() {
@@ -43,7 +43,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
      * The version of the Cloud KMS key specified in the parent cluster that is in use for the data underlying this table.
      * 
      */
-    @InputImport(name="kmsKeyVersion", required=true)
+    @Import(name="kmsKeyVersion", required=true)
       private final String kmsKeyVersion;
 
     public String getKmsKeyVersion() {

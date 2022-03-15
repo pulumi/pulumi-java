@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigBigqueryDestinationArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
      * Parameters for using BigQuery as the destination of resource usage export.
      * 
      */
-    @InputImport(name="bigqueryDestination", required=true)
+    @Import(name="bigqueryDestination", required=true)
       private final Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> getBigqueryDestination() {
@@ -31,7 +31,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
      * in the cluster to meter network egress traffic.
      * 
      */
-    @InputImport(name="enableNetworkEgressMetering")
+    @Import(name="enableNetworkEgressMetering")
       private final @Nullable Output<Boolean> enableNetworkEgressMetering;
 
     public Output<Boolean> getEnableNetworkEgressMetering() {
@@ -46,7 +46,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
      * billing export. Defaults to `true`.
      * 
      */
-    @InputImport(name="enableResourceConsumptionMetering")
+    @Import(name="enableResourceConsumptionMetering")
       private final @Nullable Output<Boolean> enableResourceConsumptionMetering;
 
     public Output<Boolean> getEnableResourceConsumptionMetering() {

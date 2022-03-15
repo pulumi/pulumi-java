@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp;
 import io.pulumi.azurenative.netapp.inputs.AccountEncryptionArgs;
 import io.pulumi.azurenative.netapp.inputs.ActiveDirectoryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the NetApp account
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Active Directories
      * 
      */
-    @InputImport(name="activeDirectories")
+    @Import(name="activeDirectories")
       private final @Nullable Output<List<ActiveDirectoryArgs>> activeDirectories;
 
     public Output<List<ActiveDirectoryArgs>> getActiveDirectories() {
@@ -44,7 +44,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption settings
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<AccountEncryptionArgs> encryption;
 
     public Output<AccountEncryptionArgs> getEncryption() {
@@ -55,7 +55,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

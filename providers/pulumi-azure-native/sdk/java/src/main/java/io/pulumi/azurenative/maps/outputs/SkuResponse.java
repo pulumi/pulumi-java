@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The name of the SKU, in standard format (such as S0).
@@ -20,10 +20,10 @@ public final class SkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") String tier) {
         this.name = name;
         this.tier = tier;
     }

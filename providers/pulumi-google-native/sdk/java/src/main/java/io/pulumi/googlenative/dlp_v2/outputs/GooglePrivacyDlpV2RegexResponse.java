@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2RegexResponse {
     /**
      * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2RegexResponse {
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2RegexResponse(
-        @OutputCustomType.Parameter("groupIndexes") List<Integer> groupIndexes,
-        @OutputCustomType.Parameter("pattern") String pattern) {
+        @CustomType.Parameter("groupIndexes") List<Integer> groupIndexes,
+        @CustomType.Parameter("pattern") String pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = pattern;
     }

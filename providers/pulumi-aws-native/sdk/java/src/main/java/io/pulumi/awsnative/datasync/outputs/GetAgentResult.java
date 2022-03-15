@@ -5,14 +5,14 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.AgentEndpointType;
 import io.pulumi.awsnative.datasync.outputs.AgentTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAgentResult {
     /**
      * The DataSync Agent ARN.
@@ -35,12 +35,12 @@ public final class GetAgentResult {
      */
     private final @Nullable List<AgentTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAgentResult(
-        @OutputCustomType.Parameter("agentArn") @Nullable String agentArn,
-        @OutputCustomType.Parameter("agentName") @Nullable String agentName,
-        @OutputCustomType.Parameter("endpointType") @Nullable AgentEndpointType endpointType,
-        @OutputCustomType.Parameter("tags") @Nullable List<AgentTag> tags) {
+        @CustomType.Parameter("agentArn") @Nullable String agentArn,
+        @CustomType.Parameter("agentName") @Nullable String agentName,
+        @CustomType.Parameter("endpointType") @Nullable AgentEndpointType endpointType,
+        @CustomType.Parameter("tags") @Nullable List<AgentTag> tags) {
         this.agentArn = agentArn;
         this.agentName = agentName;
         this.endpointType = endpointType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListenerRuleActionForwardStickinessArgs extends io.pulumi.res
      * The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final Output<Integer> duration;
 
     public Output<Integer> getDuration() {
@@ -30,7 +30,7 @@ public final class ListenerRuleActionForwardStickinessArgs extends io.pulumi.res
      * Indicates whether target group stickiness is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

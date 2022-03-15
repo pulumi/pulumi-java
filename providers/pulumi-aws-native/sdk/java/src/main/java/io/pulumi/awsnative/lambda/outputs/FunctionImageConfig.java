@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionImageConfig {
     /**
      * Command.
@@ -28,11 +28,11 @@ public final class FunctionImageConfig {
      */
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionImageConfig(
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("entryPoint") @Nullable List<String> entryPoint,
-        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("entryPoint") @Nullable List<String> entryPoint,
+        @CustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.command = command;
         this.entryPoint = entryPoint;
         this.workingDirectory = workingDirectory;

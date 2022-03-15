@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalogappregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetResourceAssociationArgs extends io.pulumi.resources.Invoke
 
     public static final GetResourceAssociationArgs Empty = new GetResourceAssociationArgs();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

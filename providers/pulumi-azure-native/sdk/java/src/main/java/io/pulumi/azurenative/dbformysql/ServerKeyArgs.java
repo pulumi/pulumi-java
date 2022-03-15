@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbformysql;
 import io.pulumi.azurenative.dbformysql.enums.ServerKeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the MySQL Server key to be operated on (updated or created).
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -31,7 +31,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The key type like 'AzureKeyVault'.
      * 
      */
-    @InputImport(name="serverKeyType", required=true)
+    @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
 
     public Output<Either<String,ServerKeyType>> getServerKeyType() {
@@ -53,7 +53,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -64,7 +64,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the key.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

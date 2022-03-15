@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customproviders.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomRPActionRouteDefinitionResponse {
     /**
      * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
@@ -27,11 +27,11 @@ public final class CustomRPActionRouteDefinitionResponse {
      */
     private final @Nullable String routingType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomRPActionRouteDefinitionResponse(
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("routingType") @Nullable String routingType) {
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("routingType") @Nullable String routingType) {
         this.endpoint = endpoint;
         this.name = name;
         this.routingType = routingType;

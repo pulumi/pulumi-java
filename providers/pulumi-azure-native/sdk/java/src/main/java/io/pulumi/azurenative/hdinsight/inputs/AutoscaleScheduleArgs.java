@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.enums.DaysOfWeek;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleTimeAndCapacityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
      * Days of the week for a schedule-based autoscale rule
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<List<DaysOfWeek>> days;
 
     public Output<List<DaysOfWeek>> getDays() {
@@ -35,7 +35,7 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
      * Time and capacity for a schedule-based autoscale rule
      * 
      */
-    @InputImport(name="timeAndCapacity")
+    @Import(name="timeAndCapacity")
       private final @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
     public Output<AutoscaleTimeAndCapacityArgs> getTimeAndCapacity() {

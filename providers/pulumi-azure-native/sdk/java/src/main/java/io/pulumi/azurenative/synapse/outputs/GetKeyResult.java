@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -38,13 +38,13 @@ public final class GetKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isActiveCMK") @Nullable Boolean isActiveCMK,
-        @OutputCustomType.Parameter("keyVaultUrl") @Nullable String keyVaultUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isActiveCMK") @Nullable Boolean isActiveCMK,
+        @CustomType.Parameter("keyVaultUrl") @Nullable String keyVaultUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.isActiveCMK = isActiveCMK;
         this.keyVaultUrl = keyVaultUrl;

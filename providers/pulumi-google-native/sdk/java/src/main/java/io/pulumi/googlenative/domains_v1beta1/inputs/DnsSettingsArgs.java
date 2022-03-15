@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.inputs.CustomDnsArgs;
 import io.pulumi.googlenative.domains_v1beta1.inputs.GlueRecordArgs;
 import io.pulumi.googlenative.domains_v1beta1.inputs.GoogleDomainsDnsArgs;
@@ -25,7 +25,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * An arbitrary DNS provider identified by its name servers.
      * 
      */
-    @InputImport(name="customDns")
+    @Import(name="customDns")
       private final @Nullable Output<CustomDnsArgs> customDns;
 
     public Output<CustomDnsArgs> getCustomDns() {
@@ -36,7 +36,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The list of glue records for this `Registration`. Commonly empty.
      * 
      */
-    @InputImport(name="glueRecords")
+    @Import(name="glueRecords")
       private final @Nullable Output<List<GlueRecordArgs>> glueRecords;
 
     public Output<List<GlueRecordArgs>> getGlueRecords() {
@@ -47,7 +47,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The free DNS zone provided by [Google Domains](https://domains.google/).
      * 
      */
-    @InputImport(name="googleDomainsDns")
+    @Import(name="googleDomainsDns")
       private final @Nullable Output<GoogleDomainsDnsArgs> googleDomainsDns;
 
     public Output<GoogleDomainsDnsArgs> getGoogleDomainsDns() {

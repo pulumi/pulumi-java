@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelCustomExpr;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelsAccessLevelCustom {
     /**
      * Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
@@ -18,8 +18,8 @@ public final class AccessLevelsAccessLevelCustom {
      */
     private final AccessLevelsAccessLevelCustomExpr expr;
 
-    @OutputCustomType.Constructor
-    private AccessLevelsAccessLevelCustom(@OutputCustomType.Parameter("expr") AccessLevelsAccessLevelCustomExpr expr) {
+    @CustomType.Constructor
+    private AccessLevelsAccessLevelCustom(@CustomType.Parameter("expr") AccessLevelsAccessLevelCustomExpr expr) {
         this.expr = expr;
     }
 

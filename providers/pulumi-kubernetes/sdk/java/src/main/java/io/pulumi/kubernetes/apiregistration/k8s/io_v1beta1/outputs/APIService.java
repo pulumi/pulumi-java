@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.APIServiceSpec;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.APIServiceStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class APIService {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -36,13 +36,13 @@ public final class APIService {
      */
     private final @Nullable APIServiceStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private APIService(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable APIServiceSpec spec,
-        @OutputCustomType.Parameter("status") @Nullable APIServiceStatus status) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable APIServiceSpec spec,
+        @CustomType.Parameter("status") @Nullable APIServiceStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

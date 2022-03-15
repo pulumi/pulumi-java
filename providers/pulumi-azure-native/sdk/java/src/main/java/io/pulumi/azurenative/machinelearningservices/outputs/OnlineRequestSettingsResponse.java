@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OnlineRequestSettingsResponse {
     /**
      * The number of requests allowed to queue at once for this deployment.
@@ -28,11 +28,11 @@ public final class OnlineRequestSettingsResponse {
      */
     private final @Nullable String requestTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnlineRequestSettingsResponse(
-        @OutputCustomType.Parameter("maxConcurrentRequestsPerInstance") @Nullable Integer maxConcurrentRequestsPerInstance,
-        @OutputCustomType.Parameter("maxQueueWait") @Nullable String maxQueueWait,
-        @OutputCustomType.Parameter("requestTimeout") @Nullable String requestTimeout) {
+        @CustomType.Parameter("maxConcurrentRequestsPerInstance") @Nullable Integer maxConcurrentRequestsPerInstance,
+        @CustomType.Parameter("maxQueueWait") @Nullable String maxQueueWait,
+        @CustomType.Parameter("requestTimeout") @Nullable String requestTimeout) {
         this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
         this.maxQueueWait = maxQueueWait;
         this.requestTimeout = requestTimeout;

@@ -8,7 +8,7 @@ import io.pulumi.aws.amplify.DomainAssociationArgs;
 import io.pulumi.aws.amplify.inputs.DomainAssociationState;
 import io.pulumi.aws.amplify.outputs.DomainAssociationSubDomain;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * The unique ID for an Amplify app.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -49,7 +49,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the domain association.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * The DNS record for certificate verification.
      * 
      */
-    @OutputExport(name="certificateVerificationDnsRecord", type=String.class, parameters={})
+    @Export(name="certificateVerificationDnsRecord", type=String.class, parameters={})
     private Output<String> certificateVerificationDnsRecord;
 
     /**
@@ -77,7 +77,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * The domain name for the domain association.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -91,7 +91,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * The setting for the subdomain. Documented below.
      * 
      */
-    @OutputExport(name="subDomains", type=List.class, parameters={DomainAssociationSubDomain.class})
+    @Export(name="subDomains", type=List.class, parameters={DomainAssociationSubDomain.class})
     private Output<List<DomainAssociationSubDomain>> subDomains;
 
     /**
@@ -105,7 +105,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
      * 
      */
-    @OutputExport(name="waitForVerification", type=Boolean.class, parameters={})
+    @Export(name="waitForVerification", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitForVerification;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleRestrictionEvaluationResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
      * Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.
      * 
      */
-    @InputImport(name="memberRestrictionEvaluation", required=true)
+    @Import(name="memberRestrictionEvaluation", required=true)
       private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
     public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {

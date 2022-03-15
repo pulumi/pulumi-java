@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,21 +18,21 @@ public final class UserIdentityInfo extends io.pulumi.resources.InvokeArgs {
 
     public static final UserIdentityInfo Empty = new UserIdentityInfo();
 
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
     }
 
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable String firstName;
 
     public Optional<String> getFirstName() {
         return this.firstName == null ? Optional.empty() : Optional.ofNullable(this.firstName);
     }
 
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable String lastName;
 
     public Optional<String> getLastName() {

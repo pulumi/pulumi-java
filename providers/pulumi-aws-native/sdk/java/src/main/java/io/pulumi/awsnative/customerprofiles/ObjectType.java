@@ -9,7 +9,7 @@ import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeFieldMap;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeKeyMap;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,7 +29,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * Indicates whether a profile should be created when data is received.
      * 
      */
-    @OutputExport(name="allowProfileCreation", type=Boolean.class, parameters={})
+    @Export(name="allowProfileCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowProfileCreation;
 
     /**
@@ -43,7 +43,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The time of this integration got created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -57,7 +57,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * Description of the profile object type.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -71,7 +71,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The unique name of the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -85,7 +85,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The default encryption key
      * 
      */
-    @OutputExport(name="encryptionKey", type=String.class, parameters={})
+    @Export(name="encryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKey;
 
     /**
@@ -99,7 +99,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The default number of days until the data within the domain expires.
      * 
      */
-    @OutputExport(name="expirationDays", type=Integer.class, parameters={})
+    @Export(name="expirationDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> expirationDays;
 
     /**
@@ -113,7 +113,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * A list of the name and ObjectType field.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={ObjectTypeFieldMap.class})
+    @Export(name="fields", type=List.class, parameters={ObjectTypeFieldMap.class})
     private Output</* @Nullable */ List<ObjectTypeFieldMap>> fields;
 
     /**
@@ -127,7 +127,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * A list of unique keys that can be used to map data to the profile.
      * 
      */
-    @OutputExport(name="keys", type=List.class, parameters={ObjectTypeKeyMap.class})
+    @Export(name="keys", type=List.class, parameters={ObjectTypeKeyMap.class})
     private Output</* @Nullable */ List<ObjectTypeKeyMap>> keys;
 
     /**
@@ -141,7 +141,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The time of this integration got last updated at.
      * 
      */
-    @OutputExport(name="lastUpdatedAt", type=String.class, parameters={})
+    @Export(name="lastUpdatedAt", type=String.class, parameters={})
     private Output<String> lastUpdatedAt;
 
     /**
@@ -155,7 +155,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The name of the profile object type.
      * 
      */
-    @OutputExport(name="objectTypeName", type=String.class, parameters={})
+    @Export(name="objectTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectTypeName;
 
     /**
@@ -169,7 +169,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * The tags (keys and values) associated with the integration.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ObjectTypeTag.class})
+    @Export(name="tags", type=List.class, parameters={ObjectTypeTag.class})
     private Output</* @Nullable */ List<ObjectTypeTag>> tags;
 
     /**
@@ -183,7 +183,7 @@ public class ObjectType extends io.pulumi.resources.CustomResource {
      * A unique identifier for the object template.
      * 
      */
-    @OutputExport(name="templateId", type=String.class, parameters={})
+    @Export(name="templateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateId;
 
     /**

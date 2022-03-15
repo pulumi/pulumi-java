@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.DataDiskResponse;
 import io.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.hybridnetwork.inputs.OsDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the parameters that are used to add a data disk to a virtual machine.
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable List<DataDiskResponse> dataDisks;
 
     public List<DataDiskResponse> getDataDisks() {
@@ -36,7 +36,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * The image reference properties.
      * 
      */
-    @InputImport(name="imageReference")
+    @Import(name="imageReference")
       private final @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> getImageReference() {
@@ -47,7 +47,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies information about the operating system disk used by the virtual machine.
      * 
      */
-    @InputImport(name="osDisk")
+    @Import(name="osDisk")
       private final @Nullable OsDiskResponse osDisk;
 
     public Optional<OsDiskResponse> getOsDisk() {

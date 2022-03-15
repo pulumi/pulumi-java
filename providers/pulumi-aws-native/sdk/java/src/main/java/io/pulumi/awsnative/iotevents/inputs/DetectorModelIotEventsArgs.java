@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
      * The name of the AWS IoT Events input where the data is sent.
      * 
      */
-    @InputImport(name="inputName", required=true)
+    @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
     public Output<String> getInputName() {
         return this.inputName;
     }
 
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
     public Output<DetectorModelPayloadArgs> getPayload() {

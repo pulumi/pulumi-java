@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactGcsArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactRemoteArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.
      * 
      */
-    @InputImport(name="allowInsecure")
+    @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
     public Output<Boolean> getAllowInsecure() {
@@ -36,7 +36,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * A Google Cloud Storage artifact.
      * 
      */
-    @InputImport(name="gcs")
+    @Import(name="gcs")
       private final @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs;
 
     public Output<SoftwareRecipeArtifactGcsArgs> getGcs() {
@@ -47,7 +47,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -58,7 +58,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * A generic remote artifact.
      * 
      */
-    @InputImport(name="remote")
+    @Import(name="remote")
       private final @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote;
 
     public Output<SoftwareRecipeArtifactRemoteArgs> getRemote() {

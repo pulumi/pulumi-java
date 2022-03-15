@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Recommended module naming pattern: company_or_organization::service::type::MODULE.
      * 
      */
-    @InputImport(name="moduleName", required=true)
+    @Import(name="moduleName", required=true)
       private final Output<String> moduleName;
 
     public Output<String> getModuleName() {
@@ -30,7 +30,7 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The url to the S3 bucket containing the schema and template fragment for the module you want to register.
      * 
      */
-    @InputImport(name="modulePackage", required=true)
+    @Import(name="modulePackage", required=true)
       private final Output<String> modulePackage;
 
     public Output<String> getModulePackage() {

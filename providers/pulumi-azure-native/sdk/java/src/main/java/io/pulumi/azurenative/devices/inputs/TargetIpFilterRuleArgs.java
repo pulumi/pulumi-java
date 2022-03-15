@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.IpFilterActionType;
 import io.pulumi.azurenative.devices.enums.IpFilterTargetType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * The desired action for requests captured by this rule.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<IpFilterActionType> action;
 
     public Output<IpFilterActionType> getAction() {
@@ -35,7 +35,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the IP filter rule.
      * 
      */
-    @InputImport(name="filterName", required=true)
+    @Import(name="filterName", required=true)
       private final Output<String> filterName;
 
     public Output<String> getFilterName() {
@@ -46,7 +46,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * A string that contains the IP address range in CIDR notation for the rule.
      * 
      */
-    @InputImport(name="ipMask", required=true)
+    @Import(name="ipMask", required=true)
       private final Output<String> ipMask;
 
     public Output<String> getIpMask() {
@@ -57,7 +57,7 @@ public final class TargetIpFilterRuleArgs extends io.pulumi.resources.ResourceAr
      * Target for requests captured by this rule.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<IpFilterTargetType> target;
 
     public Output<IpFilterTargetType> getTarget() {

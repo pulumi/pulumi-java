@@ -4,13 +4,13 @@
 package io.pulumi.aws.securityhub.outputs;
 
 import io.pulumi.aws.securityhub.outputs.InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersResourceAwsEc2InstanceLaunchedAt {
     /**
      * A configuration block of the date range for the date filter. See date_range below for more details.
@@ -28,11 +28,11 @@ public final class InsightFiltersResourceAwsEc2InstanceLaunchedAt {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InsightFiltersResourceAwsEc2InstanceLaunchedAt(
-        @OutputCustomType.Parameter("dateRange") @Nullable InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange dateRange,
-        @OutputCustomType.Parameter("end") @Nullable String end,
-        @OutputCustomType.Parameter("start") @Nullable String start) {
+        @CustomType.Parameter("dateRange") @Nullable InsightFiltersResourceAwsEc2InstanceLaunchedAtDateRange dateRange,
+        @CustomType.Parameter("end") @Nullable String end,
+        @CustomType.Parameter("start") @Nullable String start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;

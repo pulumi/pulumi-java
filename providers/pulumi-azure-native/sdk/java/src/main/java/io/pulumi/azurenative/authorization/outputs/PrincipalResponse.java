@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrincipalResponse {
     /**
      * The name of the principal made changes
@@ -32,12 +32,12 @@ public final class PrincipalResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrincipalResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.email = email;
         this.id = id;

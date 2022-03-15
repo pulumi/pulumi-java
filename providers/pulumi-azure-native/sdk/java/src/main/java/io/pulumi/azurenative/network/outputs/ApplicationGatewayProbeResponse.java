@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayProbeHealthResponseMatchResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayProbeResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -90,23 +90,23 @@ public final class ApplicationGatewayProbeResponse {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayProbeResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("match") @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
-        @OutputCustomType.Parameter("minServers") @Nullable Integer minServers,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("pickHostNameFromBackendHttpSettings") @Nullable Boolean pickHostNameFromBackendHttpSettings,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("match") @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
+        @CustomType.Parameter("minServers") @Nullable Integer minServers,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("pickHostNameFromBackendHttpSettings") @Nullable Boolean pickHostNameFromBackendHttpSettings,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.etag = etag;
         this.host = host;
         this.id = id;

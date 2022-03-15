@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.ManagedPrometheusConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.inputs.MonitoringComponentConfigResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
      * Monitoring components configuration
      * 
      */
-    @InputImport(name="componentConfig", required=true)
+    @Import(name="componentConfig", required=true)
       private final MonitoringComponentConfigResponse componentConfig;
 
     public MonitoringComponentConfigResponse getComponentConfig() {
@@ -32,7 +32,7 @@ public final class MonitoringConfigResponse extends io.pulumi.resources.InvokeAr
      * Enable Google Cloud Managed Service for Prometheus in the cluster.
      * 
      */
-    @InputImport(name="managedPrometheusConfig", required=true)
+    @Import(name="managedPrometheusConfig", required=true)
       private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 
     public ManagedPrometheusConfigResponse getManagedPrometheusConfig() {

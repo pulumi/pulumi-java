@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
      */
-    @InputImport(name="awsServiceAccessPrincipals")
+    @Import(name="awsServiceAccessPrincipals")
       private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
     public Output<List<String>> getAwsServiceAccessPrincipals() {
@@ -30,7 +30,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
      */
-    @InputImport(name="enabledPolicyTypes")
+    @Import(name="enabledPolicyTypes")
       private final @Nullable Output<List<String>> enabledPolicyTypes;
 
     public Output<List<String>> getEnabledPolicyTypes() {
@@ -41,7 +41,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Specify "ALL" (default) or "CONSOLIDATED_BILLING".
      * 
      */
-    @InputImport(name="featureSet")
+    @Import(name="featureSet")
       private final @Nullable Output<String> featureSet;
 
     public Output<String> getFeatureSet() {

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PipelineRunResponseRespon
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -51,7 +51,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * The provisioning state of a pipeline run.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -79,7 +79,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * The request parameters for a pipeline run.
      * 
      */
-    @OutputExport(name="request", type=PipelineRunRequestResponse.class, parameters={})
+    @Export(name="request", type=PipelineRunRequestResponse.class, parameters={})
     private Output</* @Nullable */ PipelineRunRequestResponse> request;
 
     /**
@@ -93,7 +93,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * The response of a pipeline run.
      * 
      */
-    @OutputExport(name="response", type=PipelineRunResponseResponse.class, parameters={})
+    @Export(name="response", type=PipelineRunResponseResponse.class, parameters={})
     private Output<PipelineRunResponseResponse> response;
 
     /**
@@ -107,7 +107,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -121,7 +121,7 @@ public class PipelineRun extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

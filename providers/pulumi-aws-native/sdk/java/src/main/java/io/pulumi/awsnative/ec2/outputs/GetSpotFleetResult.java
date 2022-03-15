@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetRequestConfigData;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSpotFleetResult {
     private final @Nullable String id;
     private final @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSpotFleetResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("spotFleetRequestConfigData") @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("spotFleetRequestConfigData") @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
         this.id = id;
         this.spotFleetRequestConfigData = spotFleetRequestConfigData;
     }

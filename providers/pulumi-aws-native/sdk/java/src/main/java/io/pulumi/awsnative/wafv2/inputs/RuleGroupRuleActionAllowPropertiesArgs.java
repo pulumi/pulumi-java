@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomRequestHandlingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class RuleGroupRuleActionAllowPropertiesArgs extends io.pulumi.reso
 
     public static final RuleGroupRuleActionAllowPropertiesArgs Empty = new RuleGroupRuleActionAllowPropertiesArgs();
 
-    @InputImport(name="customRequestHandling")
+    @Import(name="customRequestHandling")
       private final @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
     public Output<RuleGroupCustomRequestHandlingArgs> getCustomRequestHandling() {

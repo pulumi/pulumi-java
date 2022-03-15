@@ -7,13 +7,13 @@ import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoFlagsResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoMediaInfoResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoStreamingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVideoResult {
     /**
      * Optional video description provided by the user. Value can be up to 2048 characters long.
@@ -61,17 +61,17 @@ public final class GetVideoResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVideoResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("flags") VideoFlagsResponse flags,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("mediaInfo") VideoMediaInfoResponse mediaInfo,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("streaming") VideoStreamingResponse streaming,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("flags") VideoFlagsResponse flags,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("mediaInfo") VideoMediaInfoResponse mediaInfo,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("streaming") VideoStreamingResponse streaming,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.flags = flags;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates which minute snapshot should be taken
      * 
      */
-    @InputImport(name="minute")
+    @Import(name="minute")
       private final @Nullable Output<Integer> minute;
 
     public Output<Integer> getMinute() {
@@ -34,7 +34,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Hourly snapshot count to keep
      * 
      */
-    @InputImport(name="snapshotsToKeep")
+    @Import(name="snapshotsToKeep")
       private final @Nullable Output<Integer> snapshotsToKeep;
 
     public Output<Integer> getSnapshotsToKeep() {
@@ -45,7 +45,7 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource size in bytes, current storage usage for the volume in bytes
      * 
      */
-    @InputImport(name="usedBytes")
+    @Import(name="usedBytes")
       private final @Nullable Output<Double> usedBytes;
 
     public Output<Double> getUsedBytes() {

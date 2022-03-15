@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorApacheKafkaClusterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.Resourc
 
     public static final ConnectorKafkaClusterArgs Empty = new ConnectorKafkaClusterArgs();
 
-    @InputImport(name="apacheKafkaCluster", required=true)
+    @Import(name="apacheKafkaCluster", required=true)
       private final Output<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster;
 
     public Output<ConnectorApacheKafkaClusterArgs> getApacheKafkaCluster() {

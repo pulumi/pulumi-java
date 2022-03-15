@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
      * The name of the remediation.
      * 
      */
-    @InputImport(name="remediationName", required=true)
+    @Import(name="remediationName", required=true)
       private final String remediationName;
 
     public String getRemediationName() {
@@ -30,7 +30,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
      * Maximum number of records to return.
      * 
      */
-    @InputImport(name="top")
+    @Import(name="top")
       private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {

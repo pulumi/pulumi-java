@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingLimitsResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingTargetsResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterAutoscalingConfigResponse extends io.pulumi.resources.
      * Autoscaling limits for this cluster.
      * 
      */
-    @InputImport(name="autoscalingLimits", required=true)
+    @Import(name="autoscalingLimits", required=true)
       private final AutoscalingLimitsResponse autoscalingLimits;
 
     public AutoscalingLimitsResponse getAutoscalingLimits() {
@@ -32,7 +32,7 @@ public final class ClusterAutoscalingConfigResponse extends io.pulumi.resources.
      * Autoscaling targets for this cluster.
      * 
      */
-    @InputImport(name="autoscalingTargets", required=true)
+    @Import(name="autoscalingTargets", required=true)
       private final AutoscalingTargetsResponse autoscalingTargets;
 
     public AutoscalingTargetsResponse getAutoscalingTargets() {

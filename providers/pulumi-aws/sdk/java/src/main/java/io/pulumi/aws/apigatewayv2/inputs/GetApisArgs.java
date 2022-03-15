@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
      * The API name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -30,7 +30,7 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
      * The API protocol.
      * 
      */
-    @InputImport(name="protocolType")
+    @Import(name="protocolType")
       private final @Nullable String protocolType;
 
     public Optional<String> getProtocolType() {
@@ -42,7 +42,7 @@ public final class GetApisArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired APIs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

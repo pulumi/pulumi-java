@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Vp9CodecSettingsResponse {
     /**
      * The video bitrate in bits per second. The minimum value is 1,000. The maximum value is 480,000,000.
@@ -62,18 +62,18 @@ public final class Vp9CodecSettingsResponse {
      */
     private final Integer widthPixels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Vp9CodecSettingsResponse(
-        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
-        @OutputCustomType.Parameter("crfLevel") Integer crfLevel,
-        @OutputCustomType.Parameter("frameRate") Double frameRate,
-        @OutputCustomType.Parameter("gopDuration") String gopDuration,
-        @OutputCustomType.Parameter("gopFrameCount") Integer gopFrameCount,
-        @OutputCustomType.Parameter("heightPixels") Integer heightPixels,
-        @OutputCustomType.Parameter("pixelFormat") String pixelFormat,
-        @OutputCustomType.Parameter("profile") String profile,
-        @OutputCustomType.Parameter("rateControlMode") String rateControlMode,
-        @OutputCustomType.Parameter("widthPixels") Integer widthPixels) {
+        @CustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @CustomType.Parameter("crfLevel") Integer crfLevel,
+        @CustomType.Parameter("frameRate") Double frameRate,
+        @CustomType.Parameter("gopDuration") String gopDuration,
+        @CustomType.Parameter("gopFrameCount") Integer gopFrameCount,
+        @CustomType.Parameter("heightPixels") Integer heightPixels,
+        @CustomType.Parameter("pixelFormat") String pixelFormat,
+        @CustomType.Parameter("profile") String profile,
+        @CustomType.Parameter("rateControlMode") String rateControlMode,
+        @CustomType.Parameter("widthPixels") Integer widthPixels) {
         this.bitrateBps = bitrateBps;
         this.crfLevel = crfLevel;
         this.frameRate = frameRate;

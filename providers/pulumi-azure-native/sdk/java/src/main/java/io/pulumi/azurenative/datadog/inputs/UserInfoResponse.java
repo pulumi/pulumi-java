@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Email of the user used by Datadog for contacting them if needed
      * 
      */
-    @InputImport(name="emailAddress")
+    @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
@@ -33,7 +33,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the user
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -44,7 +44,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Phone number of the user used by Datadog for contacting them if needed
      * 
      */
-    @InputImport(name="phoneNumber")
+    @Import(name="phoneNumber")
       private final @Nullable String phoneNumber;
 
     public Optional<String> getPhoneNumber() {

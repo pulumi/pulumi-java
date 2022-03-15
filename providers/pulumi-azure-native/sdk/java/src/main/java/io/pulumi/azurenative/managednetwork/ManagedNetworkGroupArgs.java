@@ -7,7 +7,7 @@ import io.pulumi.azurenative.managednetwork.enums.Kind;
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * Responsibility role under which this Managed Network Group will be created
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
@@ -33,7 +33,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the Managed Network Group.
      * 
      */
-    @InputImport(name="managedNetworkGroupName")
+    @Import(name="managedNetworkGroupName")
       private final @Nullable Output<String> managedNetworkGroupName;
 
     public Output<String> getManagedNetworkGroupName() {
@@ -55,7 +55,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the Managed Network.
      * 
      */
-    @InputImport(name="managedNetworkName", required=true)
+    @Import(name="managedNetworkName", required=true)
       private final Output<String> managedNetworkName;
 
     public Output<String> getManagedNetworkName() {
@@ -66,7 +66,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The collection of management groups covered by the Managed Network
      * 
      */
-    @InputImport(name="managementGroups")
+    @Import(name="managementGroups")
       private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
 
     public Output<List<ResourceIdArgs>> getManagementGroups() {
@@ -77,7 +77,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The collection of  subnets covered by the Managed Network
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<ResourceIdArgs>> subnets;
 
     public Output<List<ResourceIdArgs>> getSubnets() {
@@ -99,7 +99,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The collection of subscriptions covered by the Managed Network
      * 
      */
-    @InputImport(name="subscriptions")
+    @Import(name="subscriptions")
       private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
 
     public Output<List<ResourceIdArgs>> getSubscriptions() {
@@ -110,7 +110,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
      * The collection of virtual nets covered by the Managed Network
      * 
      */
-    @InputImport(name="virtualNetworks")
+    @Import(name="virtualNetworks")
       private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
     public Output<List<ResourceIdArgs>> getVirtualNetworks() {

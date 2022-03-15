@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpReadSettingsResponse {
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
@@ -60,17 +60,17 @@ public final class HttpReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpReadSettingsResponse(
-        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
-        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
-        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
-        @OutputCustomType.Parameter("requestTimeout") @Nullable Object requestTimeout,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
+        @CustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @CustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @CustomType.Parameter("requestTimeout") @Nullable Object requestTimeout,
+        @CustomType.Parameter("type") String type) {
         this.additionalHeaders = additionalHeaders;
         this.disableMetricsCollection = disableMetricsCollection;
         this.enablePartitionDiscovery = enablePartitionDiscovery;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * The group ID of the resource.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -34,7 +34,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * The ID of the private link resource.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * The name of the private link resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * RequiredMembers of the resource
      * 
      */
-    @InputImport(name="requiredMembers")
+    @Import(name="requiredMembers")
       private final @Nullable Output<List<String>> requiredMembers;
 
     public Output<List<String>> getRequiredMembers() {
@@ -67,7 +67,7 @@ public final class PrivateLinkResourceArgs extends io.pulumi.resources.ResourceA
      * The resource type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

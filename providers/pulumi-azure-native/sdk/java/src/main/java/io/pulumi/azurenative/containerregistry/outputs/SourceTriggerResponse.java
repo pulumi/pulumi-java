@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SourcePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceTriggerResponse {
     /**
      * The name of the trigger.
@@ -34,12 +34,12 @@ public final class SourceTriggerResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceTriggerResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sourceRepository") SourcePropertiesResponse sourceRepository,
-        @OutputCustomType.Parameter("sourceTriggerEvents") List<String> sourceTriggerEvents,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sourceRepository") SourcePropertiesResponse sourceRepository,
+        @CustomType.Parameter("sourceTriggerEvents") List<String> sourceTriggerEvents,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.name = name;
         this.sourceRepository = sourceRepository;
         this.sourceTriggerEvents = sourceTriggerEvents;

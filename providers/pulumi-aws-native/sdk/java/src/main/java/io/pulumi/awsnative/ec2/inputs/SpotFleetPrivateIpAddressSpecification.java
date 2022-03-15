@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SpotFleetPrivateIpAddressSpecification extends io.pulumi.reso
 
     public static final SpotFleetPrivateIpAddressSpecification Empty = new SpotFleetPrivateIpAddressSpecification();
 
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
     }
 
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {

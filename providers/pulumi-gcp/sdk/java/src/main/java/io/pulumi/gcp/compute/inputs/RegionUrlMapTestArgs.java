@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * Host portion of the URL.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -40,7 +40,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * Path portion of the URL.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -51,7 +51,7 @@ public final class RegionUrlMapTestArgs extends io.pulumi.resources.ResourceArgs
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
      * The opaque diagnostic code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
      * The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -42,7 +42,7 @@ public final class DiagnosticConditionResponse extends io.pulumi.resources.Invok
      * The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.
      * 
      */
-    @InputImport(name="since", required=true)
+    @Import(name="since", required=true)
       private final String since;
 
     public String getSince() {

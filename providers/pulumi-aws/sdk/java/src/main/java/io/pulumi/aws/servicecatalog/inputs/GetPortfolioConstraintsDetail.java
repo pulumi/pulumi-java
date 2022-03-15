@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * Identifier of the constraint.
      * 
      */
-    @InputImport(name="constraintId", required=true)
+    @Import(name="constraintId", required=true)
       private final String constraintId;
 
     public String getConstraintId() {
@@ -27,14 +27,14 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * Description of the constraint.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
-    @InputImport(name="owner", required=true)
+    @Import(name="owner", required=true)
       private final String owner;
 
     public String getOwner() {
@@ -45,7 +45,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * Portfolio identifier.
      * 
      */
-    @InputImport(name="portfolioId", required=true)
+    @Import(name="portfolioId", required=true)
       private final String portfolioId;
 
     public String getPortfolioId() {
@@ -56,7 +56,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * Product identifier.
      * 
      */
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final String productId;
 
     public String getProductId() {
@@ -67,7 +67,7 @@ public final class GetPortfolioConstraintsDetail extends io.pulumi.resources.Inv
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `STACKSET`, and `TEMPLATE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

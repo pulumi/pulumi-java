@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HealthAlertResponse {
     /**
      * Health Alert Id
@@ -45,15 +45,15 @@ public final class HealthAlertResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthAlertResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("issue") String issue,
-        @OutputCustomType.Parameter("lastDetected") String lastDetected,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("raised") String raised,
-        @OutputCustomType.Parameter("resolutionUri") String resolutionUri,
-        @OutputCustomType.Parameter("severity") String severity) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("issue") String issue,
+        @CustomType.Parameter("lastDetected") String lastDetected,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("raised") String raised,
+        @CustomType.Parameter("resolutionUri") String resolutionUri,
+        @CustomType.Parameter("severity") String severity) {
         this.id = id;
         this.issue = issue;
         this.lastDetected = lastDetected;

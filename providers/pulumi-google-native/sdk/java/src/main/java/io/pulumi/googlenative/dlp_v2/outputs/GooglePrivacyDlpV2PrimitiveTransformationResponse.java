@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BucketingConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CharacterMaskConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoDeterministicConfigResponse;
@@ -18,7 +18,7 @@ import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ReplaceWithInfoTy
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TimePartConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
     /**
      * Bucketing
@@ -81,20 +81,20 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
      */
     private final GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2PrimitiveTransformationResponse(
-        @OutputCustomType.Parameter("bucketingConfig") GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig,
-        @OutputCustomType.Parameter("characterMaskConfig") GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig,
-        @OutputCustomType.Parameter("cryptoDeterministicConfig") GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig,
-        @OutputCustomType.Parameter("cryptoHashConfig") GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig,
-        @OutputCustomType.Parameter("cryptoReplaceFfxFpeConfig") GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig,
-        @OutputCustomType.Parameter("dateShiftConfig") GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig,
-        @OutputCustomType.Parameter("fixedSizeBucketingConfig") GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig,
-        @OutputCustomType.Parameter("redactConfig") GooglePrivacyDlpV2RedactConfigResponse redactConfig,
-        @OutputCustomType.Parameter("replaceConfig") GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig,
-        @OutputCustomType.Parameter("replaceDictionaryConfig") GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig,
-        @OutputCustomType.Parameter("replaceWithInfoTypeConfig") GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig,
-        @OutputCustomType.Parameter("timePartConfig") GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
+        @CustomType.Parameter("bucketingConfig") GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig,
+        @CustomType.Parameter("characterMaskConfig") GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig,
+        @CustomType.Parameter("cryptoDeterministicConfig") GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig,
+        @CustomType.Parameter("cryptoHashConfig") GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig,
+        @CustomType.Parameter("cryptoReplaceFfxFpeConfig") GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig,
+        @CustomType.Parameter("dateShiftConfig") GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig,
+        @CustomType.Parameter("fixedSizeBucketingConfig") GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig,
+        @CustomType.Parameter("redactConfig") GooglePrivacyDlpV2RedactConfigResponse redactConfig,
+        @CustomType.Parameter("replaceConfig") GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig,
+        @CustomType.Parameter("replaceDictionaryConfig") GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig,
+        @CustomType.Parameter("replaceWithInfoTypeConfig") GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig,
+        @CustomType.Parameter("timePartConfig") GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
         this.bucketingConfig = bucketingConfig;
         this.characterMaskConfig = characterMaskConfig;
         this.cryptoDeterministicConfig = cryptoDeterministicConfig;

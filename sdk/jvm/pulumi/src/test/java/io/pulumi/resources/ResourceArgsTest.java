@@ -2,7 +2,7 @@ package io.pulumi.resources;
 
 import io.pulumi.Log;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import org.junit.jupiter.api.Test;
@@ -20,11 +20,11 @@ class ResourceArgsTest {
     private final static Log log = DeploymentTests.mockLog();
 
     public static class ComplexResourceArgs1 extends ResourceArgs {
-        @InputImport
+        @Import
         @Nullable
         public Output<String> s = null;
 
-        @InputImport(name = "array")
+        @Import(name = "array")
         @Nullable
         private Output<List<Boolean>> array = null;
 
@@ -69,11 +69,11 @@ class ResourceArgsTest {
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
-        @InputImport(name = "array", json = true)
+        @Import(name = "array", json = true)
         @Nullable
         private Output<List<Boolean>> array = null;
 
-        @InputImport(name = "map", json = true)
+        @Import(name = "map", json = true)
         @Nullable
         private Output<Map<String, Integer>> map = null;
 

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.QueryExecutionResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.ValidationErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
      * List of queries executed and it's execution results in source and target
      * 
      */
-    @InputImport(name="queryResults", required=true)
+    @Import(name="queryResults", required=true)
       private final QueryExecutionResultResponse queryResults;
 
     public QueryExecutionResultResponse getQueryResults() {
@@ -32,7 +32,7 @@ public final class QueryAnalysisValidationResultResponse extends io.pulumi.resou
      * Errors that are part of the execution
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse getValidationErrors() {

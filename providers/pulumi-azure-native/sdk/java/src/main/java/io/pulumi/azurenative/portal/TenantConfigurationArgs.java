@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * The configuration name. Value must be 'default'
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -30,7 +30,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
      * When flag is set to true Markdown tile will require external storage configuration (URI). The inline content configuration will be prohibited.
      * 
      */
-    @InputImport(name="enforcePrivateMarkdownStorage")
+    @Import(name="enforcePrivateMarkdownStorage")
       private final @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
     public Output<Boolean> getEnforcePrivateMarkdownStorage() {

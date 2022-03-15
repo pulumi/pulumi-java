@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.ProviderResourceTypeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The provider ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -35,7 +35,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The namespace of the resource provider.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
@@ -46,7 +46,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The registration policy of the resource provider.
      * 
      */
-    @InputImport(name="registrationPolicy", required=true)
+    @Import(name="registrationPolicy", required=true)
       private final String registrationPolicy;
 
     public String getRegistrationPolicy() {
@@ -57,7 +57,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The registration state of the resource provider.
      * 
      */
-    @InputImport(name="registrationState", required=true)
+    @Import(name="registrationState", required=true)
       private final String registrationState;
 
     public String getRegistrationState() {
@@ -68,7 +68,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The collection of provider resource types.
      * 
      */
-    @InputImport(name="resourceTypes", required=true)
+    @Import(name="resourceTypes", required=true)
       private final List<ProviderResourceTypeResponse> resourceTypes;
 
     public List<ProviderResourceTypeResponse> getResourceTypes() {

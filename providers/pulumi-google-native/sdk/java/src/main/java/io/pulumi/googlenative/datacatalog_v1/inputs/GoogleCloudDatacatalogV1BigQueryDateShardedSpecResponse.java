@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * The Data Catalog resource name of the dataset entry the current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LOCATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final String dataset;
 
     public String getDataset() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * BigQuery resource name of the latest shard.
      * 
      */
-    @InputImport(name="latestShardResource", required=true)
+    @Import(name="latestShardResource", required=true)
       private final String latestShardResource;
 
     public String getLatestShardResource() {
@@ -42,7 +42,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * Total number of shards.
      * 
      */
-    @InputImport(name="shardCount", required=true)
+    @Import(name="shardCount", required=true)
       private final String shardCount;
 
     public String getShardCount() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse exten
      * The table name prefix of the shards. The name of any given shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101` shard, the `table_prefix` is `MyTable`.
      * 
      */
-    @InputImport(name="tablePrefix", required=true)
+    @Import(name="tablePrefix", required=true)
       private final String tablePrefix;
 
     public String getTablePrefix() {

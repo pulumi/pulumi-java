@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * Language granular marking model
      * 
      */
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
@@ -35,7 +35,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * marking reference granular marking model
      * 
      */
-    @InputImport(name="markingRef")
+    @Import(name="markingRef")
       private final @Nullable Output<Integer> markingRef;
 
     public Output<Integer> getMarkingRef() {
@@ -46,7 +46,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * granular marking model selectors
      * 
      */
-    @InputImport(name="selectors")
+    @Import(name="selectors")
       private final @Nullable Output<List<String>> selectors;
 
     public Output<List<String>> getSelectors() {

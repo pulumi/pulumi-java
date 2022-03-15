@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LoadBalancerIngress;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerStatus {
     /**
      * Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
@@ -17,8 +17,8 @@ public final class LoadBalancerStatus {
      */
     private final @Nullable List<LoadBalancerIngress> ingress;
 
-    @OutputCustomType.Constructor
-    private LoadBalancerStatus(@OutputCustomType.Parameter("ingress") @Nullable List<LoadBalancerIngress> ingress) {
+    @CustomType.Constructor
+    private LoadBalancerStatus(@CustomType.Parameter("ingress") @Nullable List<LoadBalancerIngress> ingress) {
         this.ingress = ingress;
     }
 

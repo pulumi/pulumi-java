@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobStorageApplicationLogsConfigResponse {
     /**
      * Log level.
@@ -30,11 +30,11 @@ public final class AzureBlobStorageApplicationLogsConfigResponse {
      */
     private final @Nullable String sasUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobStorageApplicationLogsConfigResponse(
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
-        @OutputCustomType.Parameter("sasUrl") @Nullable String sasUrl) {
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @CustomType.Parameter("sasUrl") @Nullable String sasUrl) {
         this.level = level;
         this.retentionInDays = retentionInDays;
         this.sasUrl = sasUrl;

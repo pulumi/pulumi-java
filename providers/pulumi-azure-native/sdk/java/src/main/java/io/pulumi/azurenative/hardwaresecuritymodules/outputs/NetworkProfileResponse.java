@@ -5,13 +5,13 @@ package io.pulumi.azurenative.hardwaresecuritymodules.outputs;
 
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.NetworkInterfaceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkProfileResponse {
     /**
      * Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
@@ -24,10 +24,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable ApiEntityReferenceResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkProfileResponse(
-        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
+        @CustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
         this.networkInterfaces = networkInterfaces;
         this.subnet = subnet;
     }

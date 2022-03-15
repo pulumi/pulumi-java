@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.PublisherInfoResponse;
 import io.pulumi.azurenative.security.outputs.UserRecommendationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PathRecommendationResponse {
     /**
      * The recommendation action of the machine or rule
@@ -53,17 +53,17 @@ public final class PathRecommendationResponse {
     private final @Nullable List<String> userSids;
     private final @Nullable List<UserRecommendationResponse> usernames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PathRecommendationResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("common") @Nullable Boolean common,
-        @OutputCustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
-        @OutputCustomType.Parameter("fileType") @Nullable String fileType,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("publisherInfo") @Nullable PublisherInfoResponse publisherInfo,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userSids") @Nullable List<String> userSids,
-        @OutputCustomType.Parameter("usernames") @Nullable List<UserRecommendationResponse> usernames) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("common") @Nullable Boolean common,
+        @CustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
+        @CustomType.Parameter("fileType") @Nullable String fileType,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("publisherInfo") @Nullable PublisherInfoResponse publisherInfo,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userSids") @Nullable List<String> userSids,
+        @CustomType.Parameter("usernames") @Nullable List<UserRecommendationResponse> usernames) {
         this.action = action;
         this.common = common;
         this.configurationStatus = configurationStatus;

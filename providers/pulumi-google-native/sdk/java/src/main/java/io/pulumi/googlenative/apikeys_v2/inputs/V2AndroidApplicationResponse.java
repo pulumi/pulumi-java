@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
      * The package name of the application.
      * 
      */
-    @InputImport(name="packageName", required=true)
+    @Import(name="packageName", required=true)
       private final String packageName;
 
     public String getPackageName() {
@@ -31,7 +31,7 @@ public final class V2AndroidApplicationResponse extends io.pulumi.resources.Invo
      * The SHA1 fingerprint of the application. For example, both sha1 formats are acceptable : DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09 or DA39A3EE5E6B4B0D3255BFEF95601890AFD80709. Output format is the latter.
      * 
      */
-    @InputImport(name="sha1Fingerprint", required=true)
+    @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {

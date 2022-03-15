@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.ServiceAwsVpcConfigurationAssignPublicIp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAwsVpcConfiguration {
     private final @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp;
     private final @Nullable List<String> securityGroups;
     private final @Nullable List<String> subnets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAwsVpcConfiguration(
-        @OutputCustomType.Parameter("assignPublicIp") @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("subnets") @Nullable List<String> subnets) {
+        @CustomType.Parameter("assignPublicIp") @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("subnets") @Nullable List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;

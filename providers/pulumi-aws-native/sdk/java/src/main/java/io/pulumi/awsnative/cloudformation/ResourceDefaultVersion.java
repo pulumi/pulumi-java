@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.ResourceDefaultVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a ResourceDefaultVersion
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**
@@ -53,7 +53,7 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    @OutputExport(name="typeVersionArn", type=String.class, parameters={})
+    @Export(name="typeVersionArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeVersionArn;
 
     /**
@@ -67,7 +67,7 @@ public class ResourceDefaultVersion extends io.pulumi.resources.CustomResource {
      * The ID of an existing version of the resource to set as the default.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionId;
 
     /**

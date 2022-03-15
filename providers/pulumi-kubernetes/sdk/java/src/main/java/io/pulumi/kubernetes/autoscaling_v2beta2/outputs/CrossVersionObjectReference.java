@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrossVersionObjectReference {
     /**
      * API version of the referent
@@ -27,11 +27,11 @@ public final class CrossVersionObjectReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrossVersionObjectReference(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.name = name;

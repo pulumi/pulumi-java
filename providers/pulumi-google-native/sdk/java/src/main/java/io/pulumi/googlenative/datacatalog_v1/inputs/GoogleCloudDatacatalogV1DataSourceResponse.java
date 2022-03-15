@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
      * Full name of a resource as defined by the service. For example: `//bigquery.googleapis.com/projects/{PROJECT_ID}/locations/{LOCATION}/datasets/{DATASET_ID}/tables/{TABLE_ID}`
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final String resource;
 
     public String getResource() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
      * Service that physically stores the data.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

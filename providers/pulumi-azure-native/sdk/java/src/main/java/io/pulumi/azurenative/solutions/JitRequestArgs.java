@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions;
 import io.pulumi.azurenative.solutions.inputs.JitAuthorizationPoliciesArgs;
 import io.pulumi.azurenative.solutions.inputs.JitSchedulingPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * The parent application id.
      * 
      */
-    @InputImport(name="applicationResourceId", required=true)
+    @Import(name="applicationResourceId", required=true)
       private final Output<String> applicationResourceId;
 
     public Output<String> getApplicationResourceId() {
@@ -33,7 +33,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * The JIT authorization policies.
      * 
      */
-    @InputImport(name="jitAuthorizationPolicies", required=true)
+    @Import(name="jitAuthorizationPolicies", required=true)
       private final Output<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies;
 
     public Output<List<JitAuthorizationPoliciesArgs>> getJitAuthorizationPolicies() {
@@ -44,7 +44,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the JIT request.
      * 
      */
-    @InputImport(name="jitRequestName")
+    @Import(name="jitRequestName")
       private final @Nullable Output<String> jitRequestName;
 
     public Output<String> getJitRequestName() {
@@ -55,7 +55,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * The JIT request properties.
      * 
      */
-    @InputImport(name="jitSchedulingPolicy", required=true)
+    @Import(name="jitSchedulingPolicy", required=true)
       private final Output<JitSchedulingPolicyArgs> jitSchedulingPolicy;
 
     public Output<JitSchedulingPolicyArgs> getJitSchedulingPolicy() {
@@ -66,7 +66,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

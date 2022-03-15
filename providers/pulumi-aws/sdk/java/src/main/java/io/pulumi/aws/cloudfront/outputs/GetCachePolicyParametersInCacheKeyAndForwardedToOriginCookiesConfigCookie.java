@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie {
     /**
      * A list of item names (`cookies`, `headers`, or `query_strings`).
@@ -16,8 +16,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      */
     private final List<String> items;
 
-    @OutputCustomType.Constructor
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(@OutputCustomType.Parameter("items") List<String> items) {
+    @CustomType.Constructor
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(@CustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

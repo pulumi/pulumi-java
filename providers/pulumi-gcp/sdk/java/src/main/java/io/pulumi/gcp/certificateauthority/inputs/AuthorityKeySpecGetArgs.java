@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
      * Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable Output<String> algorithm;
 
     public Output<String> getAlgorithm() {
@@ -32,7 +32,7 @@ public final class AuthorityKeySpecGetArgs extends io.pulumi.resources.ResourceA
      * `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      * 
      */
-    @InputImport(name="cloudKmsKeyVersion")
+    @Import(name="cloudKmsKeyVersion")
       private final @Nullable Output<String> cloudKmsKeyVersion;
 
     public Output<String> getCloudKmsKeyVersion() {

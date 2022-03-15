@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
      * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment regardless of score.
      * 
      */
-    @InputImport(name="magnitude", required=true)
+    @Import(name="magnitude", required=true)
       private final Double magnitude;
 
     public Double getMagnitude() {
@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
      * The sentiment score between -1.0 (negative) and 1.0 (positive).
      * 
      */
-    @InputImport(name="score", required=true)
+    @Import(name="score", required=true)
       private final Double score;
 
     public Double getScore() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedDiskDetailsResponse {
     /**
      * Account Type of the data to be transferred.
@@ -26,11 +26,11 @@ public final class ManagedDiskDetailsResponse {
      */
     private final String stagingStorageAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedDiskDetailsResponse(
-        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
-        @OutputCustomType.Parameter("resourceGroupId") String resourceGroupId,
-        @OutputCustomType.Parameter("stagingStorageAccountId") String stagingStorageAccountId) {
+        @CustomType.Parameter("dataAccountType") String dataAccountType,
+        @CustomType.Parameter("resourceGroupId") String resourceGroupId,
+        @CustomType.Parameter("stagingStorageAccountId") String stagingStorageAccountId) {
         this.dataAccountType = dataAccountType;
         this.resourceGroupId = resourceGroupId;
         this.stagingStorageAccountId = stagingStorageAccountId;

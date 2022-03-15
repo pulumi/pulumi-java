@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigWorkerConfigDiskConfig {
     /**
      * Size of the primary disk attached to each preemptible worker node, specified
@@ -33,11 +33,11 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
      */
     private final @Nullable Integer numLocalSsds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigWorkerConfigDiskConfig(
-        @OutputCustomType.Parameter("bootDiskSizeGb") @Nullable Integer bootDiskSizeGb,
-        @OutputCustomType.Parameter("bootDiskType") @Nullable String bootDiskType,
-        @OutputCustomType.Parameter("numLocalSsds") @Nullable Integer numLocalSsds) {
+        @CustomType.Parameter("bootDiskSizeGb") @Nullable Integer bootDiskSizeGb,
+        @CustomType.Parameter("bootDiskType") @Nullable String bootDiskType,
+        @CustomType.Parameter("numLocalSsds") @Nullable Integer numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.numLocalSsds = numLocalSsds;

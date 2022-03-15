@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSalesforceStandardObjectAttachmentConfiguration {
     private final @Nullable String documentTitleFieldName;
     private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceSalesforceStandardObjectAttachmentConfiguration(
-        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
-        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        @CustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @CustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
         this.documentTitleFieldName = documentTitleFieldName;
         this.fieldMappings = fieldMappings;
     }

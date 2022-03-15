@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DefaultObjectAccessControlProjectTeamResponse {
     /**
      * The project number.
@@ -20,10 +20,10 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
      */
     private final String team;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultObjectAccessControlProjectTeamResponse(
-        @OutputCustomType.Parameter("projectNumber") String projectNumber,
-        @OutputCustomType.Parameter("team") String team) {
+        @CustomType.Parameter("projectNumber") String projectNumber,
+        @CustomType.Parameter("team") String team) {
         this.projectNumber = projectNumber;
         this.team = team;
     }

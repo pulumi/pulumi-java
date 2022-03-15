@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The autonomous system number of the remote BGP peer.
      * 
      */
-    @InputImport(name="asn", required=true)
+    @Import(name="asn", required=true)
       private final Double asn;
 
     public Double getAsn() {
@@ -32,7 +32,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * For how long the peering has been up.
      * 
      */
-    @InputImport(name="connectedDuration", required=true)
+    @Import(name="connectedDuration", required=true)
       private final String connectedDuration;
 
     public String getConnectedDuration() {
@@ -43,7 +43,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The virtual network gateway's local address.
      * 
      */
-    @InputImport(name="localAddress", required=true)
+    @Import(name="localAddress", required=true)
       private final String localAddress;
 
     public String getLocalAddress() {
@@ -54,7 +54,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The number of BGP messages received.
      * 
      */
-    @InputImport(name="messagesReceived", required=true)
+    @Import(name="messagesReceived", required=true)
       private final Double messagesReceived;
 
     public Double getMessagesReceived() {
@@ -65,7 +65,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The number of BGP messages sent.
      * 
      */
-    @InputImport(name="messagesSent", required=true)
+    @Import(name="messagesSent", required=true)
       private final Double messagesSent;
 
     public Double getMessagesSent() {
@@ -76,7 +76,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The remote BGP peer.
      * 
      */
-    @InputImport(name="neighbor", required=true)
+    @Import(name="neighbor", required=true)
       private final String neighbor;
 
     public String getNeighbor() {
@@ -87,7 +87,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The number of routes learned from this peer.
      * 
      */
-    @InputImport(name="routesReceived", required=true)
+    @Import(name="routesReceived", required=true)
       private final Double routesReceived;
 
     public Double getRoutesReceived() {
@@ -98,7 +98,7 @@ public final class BgpPeerStatusResponse extends io.pulumi.resources.InvokeArgs 
      * The BGP peer state.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

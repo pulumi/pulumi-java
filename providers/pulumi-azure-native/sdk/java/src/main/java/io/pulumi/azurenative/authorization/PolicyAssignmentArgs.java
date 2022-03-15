@@ -9,7 +9,7 @@ import io.pulumi.azurenative.authorization.inputs.NonComplianceMessageArgs;
 import io.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * This message will be part of response in case of policy violation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,7 +37,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The display name of the policy assignment.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -48,7 +48,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The policy assignment enforcement mode. Possible values are Default and DoNotEnforce.
      * 
      */
-    @InputImport(name="enforcementMode")
+    @Import(name="enforcementMode")
       private final @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
 
     public Output<Either<String,EnforcementMode>> getEnforcementMode() {
@@ -59,7 +59,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The managed identity associated with the policy assignment.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -70,7 +70,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The location of the policy assignment. Only required when utilizing managed identity.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -81,7 +81,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The policy assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -92,7 +92,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The messages that describe why a resource is non-compliant with the policy.
      * 
      */
-    @InputImport(name="nonComplianceMessages")
+    @Import(name="nonComplianceMessages")
       private final @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
 
     public Output<List<NonComplianceMessageArgs>> getNonComplianceMessages() {
@@ -103,7 +103,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The policy's excluded scopes.
      * 
      */
-    @InputImport(name="notScopes")
+    @Import(name="notScopes")
       private final @Nullable Output<List<String>> notScopes;
 
     public Output<List<String>> getNotScopes() {
@@ -114,7 +114,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The parameter values for the assigned policy rule. The keys are the parameter names.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
     public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
@@ -125,7 +125,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The name of the policy assignment.
      * 
      */
-    @InputImport(name="policyAssignmentName")
+    @Import(name="policyAssignmentName")
       private final @Nullable Output<String> policyAssignmentName;
 
     public Output<String> getPolicyAssignmentName() {
@@ -136,7 +136,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The ID of the policy definition or policy set definition being assigned.
      * 
      */
-    @InputImport(name="policyDefinitionId")
+    @Import(name="policyDefinitionId")
       private final @Nullable Output<String> policyDefinitionId;
 
     public Output<String> getPolicyDefinitionId() {
@@ -147,7 +147,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
      * The scope of the policy assignment. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

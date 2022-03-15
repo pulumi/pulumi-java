@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterAddonsConfigCloudrunConfig;
 import io.pulumi.gcp.container.outputs.ClusterAddonsConfigConfigConnectorConfig;
 import io.pulumi.gcp.container.outputs.ClusterAddonsConfigDnsCacheConfig;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAddonsConfig {
     /**
      * . Structure is documented below.
@@ -90,18 +90,18 @@ public final class ClusterAddonsConfig {
      */
     private final @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterAddonsConfig(
-        @OutputCustomType.Parameter("cloudrunConfig") @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig,
-        @OutputCustomType.Parameter("configConnectorConfig") @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig,
-        @OutputCustomType.Parameter("dnsCacheConfig") @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
-        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfig") @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
-        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfig") @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
-        @OutputCustomType.Parameter("horizontalPodAutoscaling") @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
-        @OutputCustomType.Parameter("httpLoadBalancing") @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
-        @OutputCustomType.Parameter("istioConfig") @Nullable ClusterAddonsConfigIstioConfig istioConfig,
-        @OutputCustomType.Parameter("kalmConfig") @Nullable ClusterAddonsConfigKalmConfig kalmConfig,
-        @OutputCustomType.Parameter("networkPolicyConfig") @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
+        @CustomType.Parameter("cloudrunConfig") @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig,
+        @CustomType.Parameter("configConnectorConfig") @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig,
+        @CustomType.Parameter("dnsCacheConfig") @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
+        @CustomType.Parameter("gcePersistentDiskCsiDriverConfig") @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
+        @CustomType.Parameter("gcpFilestoreCsiDriverConfig") @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
+        @CustomType.Parameter("horizontalPodAutoscaling") @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
+        @CustomType.Parameter("httpLoadBalancing") @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
+        @CustomType.Parameter("istioConfig") @Nullable ClusterAddonsConfigIstioConfig istioConfig,
+        @CustomType.Parameter("kalmConfig") @Nullable ClusterAddonsConfigKalmConfig kalmConfig,
+        @CustomType.Parameter("networkPolicyConfig") @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
         this.cloudrunConfig = cloudrunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;

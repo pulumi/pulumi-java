@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
      * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -33,7 +33,7 @@ public final class OidcTokenArgs extends io.pulumi.resources.ResourceArgs {
      * [Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {

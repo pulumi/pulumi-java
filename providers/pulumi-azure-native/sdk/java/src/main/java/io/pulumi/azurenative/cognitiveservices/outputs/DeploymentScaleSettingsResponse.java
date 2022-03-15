@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentScaleSettingsResponse {
     /**
      * Deployment capacity.
@@ -23,10 +23,10 @@ public final class DeploymentScaleSettingsResponse {
      */
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentScaleSettingsResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.capacity = capacity;
         this.scaleType = scaleType;
     }

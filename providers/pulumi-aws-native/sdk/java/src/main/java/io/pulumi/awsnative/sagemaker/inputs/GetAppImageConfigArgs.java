@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAppImageConfigArgs extends io.pulumi.resources.InvokeArgs 
      * The Name of the AppImageConfig.
      * 
      */
-    @InputImport(name="appImageConfigName", required=true)
+    @Import(name="appImageConfigName", required=true)
       private final String appImageConfigName;
 
     public String getAppImageConfigName() {

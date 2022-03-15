@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerGithubPullRequest {
     /**
      * Regex of branches to match.  Specify only one of branch or tag.
@@ -29,11 +29,11 @@ public final class TriggerGithubPullRequest {
      */
     private final @Nullable Boolean invertRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerGithubPullRequest(
-        @OutputCustomType.Parameter("branch") String branch,
-        @OutputCustomType.Parameter("commentControl") @Nullable String commentControl,
-        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex) {
+        @CustomType.Parameter("branch") String branch,
+        @CustomType.Parameter("commentControl") @Nullable String commentControl,
+        @CustomType.Parameter("invertRegex") @Nullable Boolean invertRegex) {
         this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;

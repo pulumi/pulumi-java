@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.outputs;
 
 import io.pulumi.aws.memorydb.outputs.ClusterShardNode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterShard {
     /**
      * Name of this node.
@@ -36,12 +36,12 @@ public final class ClusterShard {
      */
     private final @Nullable String slots;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterShard(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("nodes") @Nullable List<ClusterShardNode> nodes,
-        @OutputCustomType.Parameter("numNodes") @Nullable Integer numNodes,
-        @OutputCustomType.Parameter("slots") @Nullable String slots) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("nodes") @Nullable List<ClusterShardNode> nodes,
+        @CustomType.Parameter("numNodes") @Nullable Integer numNodes,
+        @CustomType.Parameter("slots") @Nullable String slots) {
         this.name = name;
         this.nodes = nodes;
         this.numNodes = numNodes;

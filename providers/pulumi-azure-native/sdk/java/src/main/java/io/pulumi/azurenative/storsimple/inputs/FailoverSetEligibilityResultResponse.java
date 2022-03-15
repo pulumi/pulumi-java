@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
      * The error message, if the failover set is not eligible for failover.
      * 
      */
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
@@ -34,7 +34,7 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
      * Represents if this failover set is eligible for failover or not.
      * 
      */
-    @InputImport(name="isEligibleForFailover")
+    @Import(name="isEligibleForFailover")
       private final @Nullable Boolean isEligibleForFailover;
 
     public Optional<Boolean> getIsEligibleForFailover() {

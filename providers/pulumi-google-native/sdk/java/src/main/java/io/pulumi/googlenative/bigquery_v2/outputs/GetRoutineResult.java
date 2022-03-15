@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRoutineResult {
     /**
      * Optional.
@@ -86,22 +86,22 @@ public final class GetRoutineResult {
      */
     private final Boolean strictMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoutineResult(
-        @OutputCustomType.Parameter("arguments") List<ArgumentResponse> arguments,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("definitionBody") String definitionBody,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("determinismLevel") String determinismLevel,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("importedLibraries") List<String> importedLibraries,
-        @OutputCustomType.Parameter("language") String language,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("returnTableType") StandardSqlTableTypeResponse returnTableType,
-        @OutputCustomType.Parameter("returnType") StandardSqlDataTypeResponse returnType,
-        @OutputCustomType.Parameter("routineReference") RoutineReferenceResponse routineReference,
-        @OutputCustomType.Parameter("routineType") String routineType,
-        @OutputCustomType.Parameter("strictMode") Boolean strictMode) {
+        @CustomType.Parameter("arguments") List<ArgumentResponse> arguments,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("definitionBody") String definitionBody,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("determinismLevel") String determinismLevel,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("importedLibraries") List<String> importedLibraries,
+        @CustomType.Parameter("language") String language,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("returnTableType") StandardSqlTableTypeResponse returnTableType,
+        @CustomType.Parameter("returnType") StandardSqlDataTypeResponse returnType,
+        @CustomType.Parameter("routineReference") RoutineReferenceResponse routineReference,
+        @CustomType.Parameter("routineType") String routineType,
+        @CustomType.Parameter("strictMode") Boolean strictMode) {
         this.arguments = arguments;
         this.creationTime = creationTime;
         this.definitionBody = definitionBody;

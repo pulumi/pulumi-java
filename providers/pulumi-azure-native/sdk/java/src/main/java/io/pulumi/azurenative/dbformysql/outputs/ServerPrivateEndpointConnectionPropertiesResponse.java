@@ -5,13 +5,13 @@ package io.pulumi.azurenative.dbformysql.outputs;
 
 import io.pulumi.azurenative.dbformysql.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformysql.outputs.ServerPrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerPrivateEndpointConnectionPropertiesResponse {
     /**
      * Private endpoint which the connection belongs to.
@@ -29,11 +29,11 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerPrivateEndpointConnectionPropertiesResponse(
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointPropertyResponse privateEndpoint,
-        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointPropertyResponse privateEndpoint,
+        @CustomType.Parameter("privateLinkServiceConnectionState") @Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.provisioningState = provisioningState;

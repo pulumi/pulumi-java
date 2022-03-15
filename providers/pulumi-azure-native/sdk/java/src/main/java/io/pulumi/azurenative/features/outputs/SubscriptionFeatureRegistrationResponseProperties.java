@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.outputs;
 
 import io.pulumi.azurenative.features.outputs.AuthorizationProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionFeatureRegistrationResponseProperties {
     /**
      * The feature approval type.
@@ -85,22 +85,22 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionFeatureRegistrationResponseProperties(
-        @OutputCustomType.Parameter("approvalType") String approvalType,
-        @OutputCustomType.Parameter("authorizationProfile") @Nullable AuthorizationProfileResponse authorizationProfile,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("documentationLink") String documentationLink,
-        @OutputCustomType.Parameter("featureName") String featureName,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("providerNamespace") String providerNamespace,
-        @OutputCustomType.Parameter("registrationDate") String registrationDate,
-        @OutputCustomType.Parameter("releaseDate") String releaseDate,
-        @OutputCustomType.Parameter("shouldFeatureDisplayInPortal") @Nullable Boolean shouldFeatureDisplayInPortal,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("approvalType") String approvalType,
+        @CustomType.Parameter("authorizationProfile") @Nullable AuthorizationProfileResponse authorizationProfile,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("documentationLink") String documentationLink,
+        @CustomType.Parameter("featureName") String featureName,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("providerNamespace") String providerNamespace,
+        @CustomType.Parameter("registrationDate") String registrationDate,
+        @CustomType.Parameter("releaseDate") String releaseDate,
+        @CustomType.Parameter("shouldFeatureDisplayInPortal") @Nullable Boolean shouldFeatureDisplayInPortal,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.approvalType = approvalType;
         this.authorizationProfile = authorizationProfile;
         this.description = description;

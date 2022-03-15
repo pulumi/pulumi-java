@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.AdditionalWorkspaceDataType;
 import io.pulumi.azurenative.security.enums.AdditionalWorkspaceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
      * List of data types sent to workspace
      * 
      */
-    @InputImport(name="dataTypes")
+    @Import(name="dataTypes")
       private final @Nullable Output<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes;
 
     public Output<List<Either<String,AdditionalWorkspaceDataType>>> getDataTypes() {
@@ -37,7 +37,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
      * Workspace type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,AdditionalWorkspaceType>> type;
 
     public Output<Either<String,AdditionalWorkspaceType>> getType() {
@@ -48,7 +48,7 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
      * Workspace resource id
      * 
      */
-    @InputImport(name="workspace")
+    @Import(name="workspace")
       private final @Nullable Output<String> workspace;
 
     public Output<String> getWorkspace() {

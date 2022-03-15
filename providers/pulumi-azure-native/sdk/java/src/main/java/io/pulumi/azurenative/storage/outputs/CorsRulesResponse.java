@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.CorsRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CorsRulesResponse {
     /**
      * The List of CORS rules. You can include up to five CorsRule elements in the request.
@@ -17,8 +17,8 @@ public final class CorsRulesResponse {
      */
     private final @Nullable List<CorsRuleResponse> corsRules;
 
-    @OutputCustomType.Constructor
-    private CorsRulesResponse(@OutputCustomType.Parameter("corsRules") @Nullable List<CorsRuleResponse> corsRules) {
+    @CustomType.Constructor
+    private CorsRulesResponse(@CustomType.Parameter("corsRules") @Nullable List<CorsRuleResponse> corsRules) {
         this.corsRules = corsRules;
     }
 

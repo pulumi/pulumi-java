@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.RemoteImageBuildGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<RemoteImageBuildGetArgs> build;
 
     public Output<RemoteImageBuildGetArgs> getBuild() {
@@ -33,7 +33,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * If true, then the image is removed forcibly when the resource is destroyed.
      * 
      */
-    @InputImport(name="forceRemove")
+    @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
     public Output<Boolean> getForceRemove() {
@@ -45,7 +45,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * the docker local storage on destroy operation.
      * 
      */
-    @InputImport(name="keepLocally")
+    @Import(name="keepLocally")
       private final @Nullable Output<Boolean> keepLocally;
 
     public Output<Boolean> getKeepLocally() {
@@ -60,7 +60,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use repo_digest instead */
-    @InputImport(name="latest")
+    @Import(name="latest")
       private final @Nullable Output<String> latest;
 
     @Deprecated /* Use repo_digest instead */
@@ -72,7 +72,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * The name of the Docker image, including any tags or SHA256 repo digests.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Is unused and will be removed. */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable Output<String> output;
 
     @Deprecated /* Is unused and will be removed. */
@@ -101,7 +101,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use field pull_triggers instead */
-    @InputImport(name="pullTrigger")
+    @Import(name="pullTrigger")
       private final @Nullable Output<String> pullTrigger;
 
     @Deprecated /* Use field pull_triggers instead */
@@ -114,7 +114,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * using the [docker_registry_image](../data-sources/registry_image.md).
      * 
      */
-    @InputImport(name="pullTriggers")
+    @Import(name="pullTriggers")
       private final @Nullable Output<List<String>> pullTriggers;
 
     public Output<List<String>> getPullTriggers() {
@@ -125,7 +125,7 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
      * The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
      * 
      */
-    @InputImport(name="repoDigest")
+    @Import(name="repoDigest")
       private final @Nullable Output<String> repoDigest;
 
     public Output<String> getRepoDigest() {

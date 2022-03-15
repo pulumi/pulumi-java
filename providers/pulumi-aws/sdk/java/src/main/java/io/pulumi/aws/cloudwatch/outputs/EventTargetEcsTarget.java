@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.outputs;
 
 import io.pulumi.aws.cloudwatch.outputs.EventTargetEcsTargetNetworkConfiguration;
 import io.pulumi.aws.cloudwatch.outputs.EventTargetEcsTargetPlacementConstraint;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetEcsTarget {
     /**
      * Specifies whether to enable Amazon ECS managed tags for the task.
@@ -73,19 +73,19 @@ public final class EventTargetEcsTarget {
      */
     private final String taskDefinitionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTargetEcsTarget(
-        @OutputCustomType.Parameter("enableEcsManagedTags") @Nullable Boolean enableEcsManagedTags,
-        @OutputCustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("launchType") @Nullable String launchType,
-        @OutputCustomType.Parameter("networkConfiguration") @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration,
-        @OutputCustomType.Parameter("placementConstraints") @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints,
-        @OutputCustomType.Parameter("platformVersion") @Nullable String platformVersion,
-        @OutputCustomType.Parameter("propagateTags") @Nullable String propagateTags,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("taskCount") @Nullable Integer taskCount,
-        @OutputCustomType.Parameter("taskDefinitionArn") String taskDefinitionArn) {
+        @CustomType.Parameter("enableEcsManagedTags") @Nullable Boolean enableEcsManagedTags,
+        @CustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("launchType") @Nullable String launchType,
+        @CustomType.Parameter("networkConfiguration") @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration,
+        @CustomType.Parameter("placementConstraints") @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints,
+        @CustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @CustomType.Parameter("propagateTags") @Nullable String propagateTags,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("taskCount") @Nullable Integer taskCount,
+        @CustomType.Parameter("taskDefinitionArn") String taskDefinitionArn) {
         this.enableEcsManagedTags = enableEcsManagedTags;
         this.enableExecuteCommand = enableExecuteCommand;
         this.group = group;

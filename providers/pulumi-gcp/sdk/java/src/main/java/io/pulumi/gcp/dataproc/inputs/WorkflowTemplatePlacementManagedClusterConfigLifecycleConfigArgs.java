@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * Optional. The time when cluster will be auto-deleted (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="autoDeleteTime")
+    @Import(name="autoDeleteTime")
       private final @Nullable Output<String> autoDeleteTime;
 
     public Output<String> getAutoDeleteTime() {
@@ -29,7 +29,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="autoDeleteTtl")
+    @Import(name="autoDeleteTtl")
       private final @Nullable Output<String> autoDeleteTtl;
 
     public Output<String> getAutoDeleteTtl() {
@@ -40,7 +40,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json).
      * 
      */
-    @InputImport(name="idleDeleteTtl")
+    @Import(name="idleDeleteTtl")
       private final @Nullable Output<String> idleDeleteTtl;
 
     public Output<String> getIdleDeleteTtl() {
@@ -52,7 +52,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigA
      * Output only. The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="idleStartTime")
+    @Import(name="idleStartTime")
       private final @Nullable Output<String> idleStartTime;
 
     public Output<String> getIdleStartTime() {

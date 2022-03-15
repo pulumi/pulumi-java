@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
     /**
      * Unique identifier for database
@@ -53,16 +53,16 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse {
      */
     private final @Nullable Map<String,String> targetSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbSyncDatabaseInputResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName,
-        @OutputCustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
-        @OutputCustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
-        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
-        @OutputCustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("schemaName") @Nullable String schemaName,
+        @CustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
+        @CustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
+        @CustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
+        @CustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
         this.id = id;
         this.migrationSetting = migrationSetting;
         this.name = name;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasLocaleSettings;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BotAliasLocaleSettingsItem extends io.pulumi.resources.Invoke
 
     public static final BotAliasLocaleSettingsItem Empty = new BotAliasLocaleSettingsItem();
 
-    @InputImport(name="botAliasLocaleSetting", required=true)
+    @Import(name="botAliasLocaleSetting", required=true)
       private final BotAliasLocaleSettings botAliasLocaleSetting;
 
     public BotAliasLocaleSettings getBotAliasLocaleSetting() {
@@ -28,7 +28,7 @@ public final class BotAliasLocaleSettingsItem extends io.pulumi.resources.Invoke
      * A string used to identify the locale
      * 
      */
-    @InputImport(name="localeId", required=true)
+    @Import(name="localeId", required=true)
       private final String localeId;
 
     public String getLocaleId() {

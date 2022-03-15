@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Source code of the function
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final Output<String> code;
 
     public Output<String> getCode() {
@@ -30,7 +30,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Comment.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -41,7 +41,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name for your CloudFront Function.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to publish creation/change as Live CloudFront Function Version. Defaults to `true`.
      * 
      */
-    @InputImport(name="publish")
+    @Import(name="publish")
       private final @Nullable Output<Boolean> publish;
 
     public Output<Boolean> getPublish() {
@@ -63,7 +63,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the function's runtime. Currently only `cloudfront-js-1.0` is valid.
      * 
      */
-    @InputImport(name="runtime", required=true)
+    @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
     public Output<String> getRuntime() {

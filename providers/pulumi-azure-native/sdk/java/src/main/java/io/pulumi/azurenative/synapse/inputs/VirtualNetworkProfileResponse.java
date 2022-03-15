@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
      * Subnet ID used for computes in workspace
      * 
      */
-    @InputImport(name="computeSubnetId")
+    @Import(name="computeSubnetId")
       private final @Nullable String computeSubnetId;
 
     public Optional<String> getComputeSubnetId() {

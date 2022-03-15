@@ -5,13 +5,13 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.OpenIdConnectClientCredentialResponse;
 import io.pulumi.azurenative.web.outputs.OpenIdConnectConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenIdConnectRegistrationResponse {
     /**
      * The authentication credentials of the custom Open ID Connect provider.
@@ -29,11 +29,11 @@ public final class OpenIdConnectRegistrationResponse {
      */
     private final @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenIdConnectRegistrationResponse(
-        @OutputCustomType.Parameter("clientCredential") @Nullable OpenIdConnectClientCredentialResponse clientCredential,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("openIdConnectConfiguration") @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
+        @CustomType.Parameter("clientCredential") @Nullable OpenIdConnectClientCredentialResponse clientCredential,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("openIdConnectConfiguration") @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
         this.clientCredential = clientCredential;
         this.clientId = clientId;
         this.openIdConnectConfiguration = openIdConnectConfiguration;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.inputs.SkuCostArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingCapacityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,84 +19,84 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SkuSettingArgs Empty = new SkuSettingArgs();
 
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
     public Output<List<SkuCapabilityArgs>> getCapabilities() {
         return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<SkuSettingCapacityArgs> capacity;
 
     public Output<SkuSettingCapacityArgs> getCapacity() {
         return this.capacity == null ? Output.empty() : this.capacity;
     }
 
-    @InputImport(name="costs")
+    @Import(name="costs")
       private final @Nullable Output<List<SkuCostArgs>> costs;
 
     public Output<List<SkuCostArgs>> getCosts() {
         return this.costs == null ? Output.empty() : this.costs;
     }
 
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
         return this.family == null ? Output.empty() : this.family;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="locationInfo")
+    @Import(name="locationInfo")
       private final @Nullable Output<List<SkuLocationInfoArgs>> locationInfo;
 
     public Output<List<SkuLocationInfoArgs>> getLocationInfo() {
         return this.locationInfo == null ? Output.empty() : this.locationInfo;
     }
 
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
         return this.locations == null ? Output.empty() : this.locations;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
     public Output<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
-    @InputImport(name="requiredQuotaIds")
+    @Import(name="requiredQuotaIds")
       private final @Nullable Output<List<String>> requiredQuotaIds;
 
     public Output<List<String>> getRequiredQuotaIds() {
         return this.requiredQuotaIds == null ? Output.empty() : this.requiredQuotaIds;
     }
 
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
         return this.size == null ? Output.empty() : this.size;
     }
 
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

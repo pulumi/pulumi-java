@@ -9,7 +9,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3Configuratio
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The ARN of the S3 bucket
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -35,7 +35,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
      * 
      */
-    @InputImport(name="bufferInterval")
+    @Import(name="bufferInterval")
       private final @Nullable Output<Integer> bufferInterval;
 
     public Output<Integer> getBufferInterval() {
@@ -47,7 +47,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
      * 
      */
-    @InputImport(name="bufferSize")
+    @Import(name="bufferSize")
       private final @Nullable Output<Integer> bufferSize;
 
     public Output<Integer> getBufferSize() {
@@ -58,7 +58,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
@@ -69,7 +69,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The compression format. If no value is specified, the default is `UNCOMPRESSED`. Other supported values are `GZIP`, `ZIP`, `Snappy`, & `HADOOP_SNAPPY`.
      * 
      */
-    @InputImport(name="compressionFormat")
+    @Import(name="compressionFormat")
       private final @Nullable Output<String> compressionFormat;
 
     public Output<String> getCompressionFormat() {
@@ -80,14 +80,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
      * 
      */
-    @InputImport(name="dataFormatConversionConfiguration")
+    @Import(name="dataFormatConversionConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> dataFormatConversionConfiguration;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationGetArgs> getDataFormatConversionConfiguration() {
         return this.dataFormatConversionConfiguration == null ? Output.empty() : this.dataFormatConversionConfiguration;
     }
 
-    @InputImport(name="dynamicPartitioningConfiguration")
+    @Import(name="dynamicPartitioningConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> dynamicPartitioningConfiguration;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfigurationGetArgs> getDynamicPartitioningConfiguration() {
@@ -98,7 +98,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * Prefix added to failed records before writing them to S3. Not currently supported for `redshift` destination. This prefix appears immediately following the bucket name. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html).
      * 
      */
-    @InputImport(name="errorOutputPrefix")
+    @Import(name="errorOutputPrefix")
       private final @Nullable Output<String> errorOutputPrefix;
 
     public Output<String> getErrorOutputPrefix() {
@@ -110,7 +110,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * be used.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -121,7 +121,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -132,7 +132,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The data processing configuration.  More details are given below.
      * 
      */
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
@@ -143,7 +143,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -154,7 +154,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
      * 
      */
-    @InputImport(name="s3BackupConfiguration")
+    @Import(name="s3BackupConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> s3BackupConfiguration;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs> getS3BackupConfiguration() {
@@ -165,7 +165,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extends 
      * The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
      * 
      */
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
     public Output<String> getS3BackupMode() {

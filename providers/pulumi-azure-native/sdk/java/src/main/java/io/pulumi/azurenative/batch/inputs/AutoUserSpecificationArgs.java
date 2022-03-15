@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.AutoUserScope;
 import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * The default value is nonAdmin.
      * 
      */
-    @InputImport(name="elevationLevel")
+    @Import(name="elevationLevel")
       private final @Nullable Output<ElevationLevel> elevationLevel;
 
     public Output<ElevationLevel> getElevationLevel() {
@@ -30,7 +30,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * The default value is Pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by start tasks.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<AutoUserScope> scope;
 
     public Output<AutoUserScope> getScope() {

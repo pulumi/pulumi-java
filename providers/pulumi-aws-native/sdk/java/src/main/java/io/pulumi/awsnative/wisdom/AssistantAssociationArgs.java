@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wisdom.enums.AssistantAssociationAssociationType;
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationAssociationDataArgs;
 import io.pulumi.awsnative.wisdom.inputs.AssistantAssociationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
 
     public static final AssistantAssociationArgs Empty = new AssistantAssociationArgs();
 
-    @InputImport(name="assistantId", required=true)
+    @Import(name="assistantId", required=true)
       private final Output<String> assistantId;
 
     public Output<String> getAssistantId() {
         return this.assistantId;
     }
 
-    @InputImport(name="association", required=true)
+    @Import(name="association", required=true)
       private final Output<AssistantAssociationAssociationDataArgs> association;
 
     public Output<AssistantAssociationAssociationDataArgs> getAssociation() {
         return this.association;
     }
 
-    @InputImport(name="associationType", required=true)
+    @Import(name="associationType", required=true)
       private final Output<AssistantAssociationAssociationType> associationType;
 
     public Output<AssistantAssociationAssociationType> getAssociationType() {
         return this.associationType;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AssistantAssociationTagArgs>> tags;
 
     public Output<List<AssistantAssociationTagArgs>> getTags() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse {
     /**
      * If set to true, enables CAAP for L7 DDoS detection.
@@ -21,10 +21,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      */
     private final String ruleVisibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("ruleVisibility") String ruleVisibility) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("ruleVisibility") String ruleVisibility) {
         this.enable = enable;
         this.ruleVisibility = ruleVisibility;
     }

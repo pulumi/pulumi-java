@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2OutputStorageConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2SaveFindingsResponse {
     /**
      * Location to store findings outside of DLP.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
      */
     private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2SaveFindingsResponse(@OutputCustomType.Parameter("outputConfig") GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2SaveFindingsResponse(@CustomType.Parameter("outputConfig") GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
         this.outputConfig = outputConfig;
     }
 

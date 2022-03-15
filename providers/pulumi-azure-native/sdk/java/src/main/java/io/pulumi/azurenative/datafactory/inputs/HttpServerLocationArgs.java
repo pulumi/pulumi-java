@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
     public Output<Object> getFileName() {
@@ -34,7 +34,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
@@ -45,7 +45,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="relativeUrl")
+    @Import(name="relativeUrl")
       private final @Nullable Output<Object> relativeUrl;
 
     public Output<Object> getRelativeUrl() {
@@ -57,7 +57,7 @@ public final class HttpServerLocationArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'HttpServerLocation'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

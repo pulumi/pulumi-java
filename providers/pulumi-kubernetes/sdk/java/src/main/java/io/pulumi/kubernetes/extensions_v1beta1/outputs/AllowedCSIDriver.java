@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllowedCSIDriver {
     /**
      * Name is the registered name of the CSI driver
@@ -15,8 +15,8 @@ public final class AllowedCSIDriver {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private AllowedCSIDriver(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private AllowedCSIDriver(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

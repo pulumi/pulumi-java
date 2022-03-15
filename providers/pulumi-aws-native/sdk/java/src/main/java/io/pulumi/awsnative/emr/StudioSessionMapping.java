@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.emr.StudioSessionMappingArgs;
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
      * 
      */
-    @OutputExport(name="identityName", type=String.class, parameters={})
+    @Export(name="identityName", type=String.class, parameters={})
     private Output<String> identityName;
 
     /**
@@ -36,7 +36,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * Specifies whether the identity to map to the Studio is a user or a group.
      * 
      */
-    @OutputExport(name="identityType", type=StudioSessionMappingIdentityType.class, parameters={})
+    @Export(name="identityType", type=StudioSessionMappingIdentityType.class, parameters={})
     private Output<StudioSessionMappingIdentityType> identityType;
 
     /**
@@ -50,7 +50,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
      * 
      */
-    @OutputExport(name="sessionPolicyArn", type=String.class, parameters={})
+    @Export(name="sessionPolicyArn", type=String.class, parameters={})
     private Output<String> sessionPolicyArn;
 
     /**
@@ -64,7 +64,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    @OutputExport(name="studioId", type=String.class, parameters={})
+    @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**

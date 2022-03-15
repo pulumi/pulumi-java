@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetVpnGatewayFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpnGatewayResult {
     private final String amazonSideAsn;
     private final String arn;
@@ -22,16 +22,16 @@ public final class GetVpnGatewayResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpnGatewayResult(
-        @OutputCustomType.Parameter("amazonSideAsn") String amazonSideAsn,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("attachedVpcId") String attachedVpcId,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpnGatewayFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("amazonSideAsn") String amazonSideAsn,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("attachedVpcId") String attachedVpcId,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("filters") @Nullable List<GetVpnGatewayFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
         this.attachedVpcId = attachedVpcId;

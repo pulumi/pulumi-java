@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.stepfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineCloudWatchLogsLogGroup {
     private final @Nullable String logGroupArn;
 
-    @OutputCustomType.Constructor
-    private StateMachineCloudWatchLogsLogGroup(@OutputCustomType.Parameter("logGroupArn") @Nullable String logGroupArn) {
+    @CustomType.Constructor
+    private StateMachineCloudWatchLogsLogGroup(@CustomType.Parameter("logGroupArn") @Nullable String logGroupArn) {
         this.logGroupArn = logGroupArn;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
      */
-    @InputImport(name="archiveUris")
+    @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
     public Output<List<String>> getArchiveUris() {
@@ -34,7 +34,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The arguments to pass to the driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -45,7 +45,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
      */
-    @InputImport(name="fileUris")
+    @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
     public Output<List<String>> getFileUris() {
@@ -56,7 +56,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of jar files to add to the classpath of the Spark driver and tasks.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
@@ -67,7 +67,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The name of the driver main class. The jar file that contains the class must be in the classpath or specified in jar_file_uris.
      * 
      */
-    @InputImport(name="mainClass")
+    @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
 
     public Output<String> getMainClass() {
@@ -78,7 +78,7 @@ public final class SparkBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The HCFS URI of the jar file that contains the main class.
      * 
      */
-    @InputImport(name="mainJarFileUri")
+    @Import(name="mainJarFileUri")
       private final @Nullable Output<String> mainJarFileUri;
 
     public Output<String> getMainJarFileUri() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodsMetricSource {
     /**
      * metricName is the name of the metric in question
@@ -28,11 +28,11 @@ public final class PodsMetricSource {
      */
     private final String targetAverageValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodsMetricSource(
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("targetAverageValue") String targetAverageValue) {
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("targetAverageValue") String targetAverageValue) {
         this.metricName = metricName;
         this.selector = selector;
         this.targetAverageValue = targetAverageValue;

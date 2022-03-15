@@ -7,7 +7,7 @@ import io.pulumi.azurenative.healthcareapis.enums.IotIdentityResolutionType;
 import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * The name of IoT Connector FHIR destination resource.
      * 
      */
-    @InputImport(name="fhirDestinationName")
+    @Import(name="fhirDestinationName")
       private final @Nullable Output<String> fhirDestinationName;
 
     public Output<String> getFhirDestinationName() {
@@ -32,7 +32,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * FHIR Mappings
      * 
      */
-    @InputImport(name="fhirMapping", required=true)
+    @Import(name="fhirMapping", required=true)
       private final Output<IotMappingPropertiesArgs> fhirMapping;
 
     public Output<IotMappingPropertiesArgs> getFhirMapping() {
@@ -43,7 +43,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * Fully qualified resource id of the FHIR service to connect to.
      * 
      */
-    @InputImport(name="fhirServiceResourceId", required=true)
+    @Import(name="fhirServiceResourceId", required=true)
       private final Output<String> fhirServiceResourceId;
 
     public Output<String> getFhirServiceResourceId() {
@@ -54,7 +54,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * The name of IoT Connector resource.
      * 
      */
-    @InputImport(name="iotConnectorName", required=true)
+    @Import(name="iotConnectorName", required=true)
       private final Output<String> iotConnectorName;
 
     public Output<String> getIotConnectorName() {
@@ -65,7 +65,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * The name of the resource group that contains the service instance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * Determines how resource identity is resolved on the destination.
      * 
      */
-    @InputImport(name="resourceIdentityResolutionType", required=true)
+    @Import(name="resourceIdentityResolutionType", required=true)
       private final Output<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
     public Output<Either<String,IotIdentityResolutionType>> getResourceIdentityResolutionType() {
@@ -98,7 +98,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * The name of workspace resource.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

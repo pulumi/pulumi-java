@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LinuxPatchSettingsResponse extends io.pulumi.resources.Invoke
      * Specifies the mode of VM Guest Patch Assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine. <br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
      * 
      */
-    @InputImport(name="assessmentMode")
+    @Import(name="assessmentMode")
       private final @Nullable String assessmentMode;
 
     public Optional<String> getAssessmentMode() {
@@ -33,7 +33,7 @@ public final class LinuxPatchSettingsResponse extends io.pulumi.resources.Invoke
      * Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true
      * 
      */
-    @InputImport(name="patchMode")
+    @Import(name="patchMode")
       private final @Nullable String patchMode;
 
     public Optional<String> getPatchMode() {

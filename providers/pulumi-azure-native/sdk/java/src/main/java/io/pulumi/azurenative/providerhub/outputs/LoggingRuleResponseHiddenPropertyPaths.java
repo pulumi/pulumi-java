@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoggingRuleResponseHiddenPropertyPaths {
     private final @Nullable List<String> hiddenPathsOnRequest;
     private final @Nullable List<String> hiddenPathsOnResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingRuleResponseHiddenPropertyPaths(
-        @OutputCustomType.Parameter("hiddenPathsOnRequest") @Nullable List<String> hiddenPathsOnRequest,
-        @OutputCustomType.Parameter("hiddenPathsOnResponse") @Nullable List<String> hiddenPathsOnResponse) {
+        @CustomType.Parameter("hiddenPathsOnRequest") @Nullable List<String> hiddenPathsOnRequest,
+        @CustomType.Parameter("hiddenPathsOnResponse") @Nullable List<String> hiddenPathsOnResponse) {
         this.hiddenPathsOnRequest = hiddenPathsOnRequest;
         this.hiddenPathsOnResponse = hiddenPathsOnResponse;
     }

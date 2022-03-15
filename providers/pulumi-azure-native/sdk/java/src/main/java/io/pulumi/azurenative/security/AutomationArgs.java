@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.inputs.AutomationActionWorkspaceArgs;
 import io.pulumi.azurenative.security.inputs.AutomationScopeArgs;
 import io.pulumi.azurenative.security.inputs.AutomationSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<Object>> actions;
 
     public Output<List<Object>> getActions() {
@@ -38,7 +38,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * The security automation name.
      * 
      */
-    @InputImport(name="automationName")
+    @Import(name="automationName")
       private final @Nullable Output<String> automationName;
 
     public Output<String> getAutomationName() {
@@ -49,7 +49,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * The security automation description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the security automation is enabled.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -71,7 +71,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of the resource
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -82,7 +82,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * Location where the resource is stored
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -93,7 +93,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -104,7 +104,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<AutomationScopeArgs>> scopes;
 
     public Output<List<AutomationScopeArgs>> getScopes() {
@@ -115,7 +115,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of the source event types which evaluate the security automation set of rules.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<AutomationSourceArgs>> sources;
 
     public Output<List<AutomationSourceArgs>> getSources() {
@@ -126,7 +126,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

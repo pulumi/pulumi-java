@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
      * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers.
      * 
      */
-    @InputImport(name="logGroupName")
+    @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
@@ -29,7 +29,7 @@ public final class HookVersionLoggingConfigArgs extends io.pulumi.resources.Reso
      * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
      * 
      */
-    @InputImport(name="logRoleArn")
+    @Import(name="logRoleArn")
       private final @Nullable Output<String> logRoleArn;
 
     public Output<String> getLogRoleArn() {

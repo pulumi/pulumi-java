@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.CertificateArgs;
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * CNAME of the certificate to be issued via free certificate
      * 
      */
-    @OutputExport(name="canonicalName", type=String.class, parameters={})
+    @Export(name="canonicalName", type=String.class, parameters={})
     private Output</* @Nullable */ String> canonicalName;
 
     /**
@@ -51,7 +51,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Raw bytes of .cer file
      * 
      */
-    @OutputExport(name="cerBlob", type=String.class, parameters={})
+    @Export(name="cerBlob", type=String.class, parameters={})
     private Output<String> cerBlob;
 
     /**
@@ -65,7 +65,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Method of domain validation for free cert
      * 
      */
-    @OutputExport(name="domainValidationMethod", type=String.class, parameters={})
+    @Export(name="domainValidationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainValidationMethod;
 
     /**
@@ -79,7 +79,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Certificate expiration date.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output<String> expirationDate;
 
     /**
@@ -93,7 +93,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Friendly name of the certificate.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output<String> friendlyName;
 
     /**
@@ -107,7 +107,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Host names the certificate applies to.
      * 
      */
-    @OutputExport(name="hostNames", type=List.class, parameters={String.class})
+    @Export(name="hostNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> hostNames;
 
     /**
@@ -121,7 +121,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Specification for the App Service Environment to use for the certificate.
      * 
      */
-    @OutputExport(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
+    @Export(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
     private Output<HostingEnvironmentProfileResponse> hostingEnvironmentProfile;
 
     /**
@@ -135,7 +135,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Certificate issue Date.
      * 
      */
-    @OutputExport(name="issueDate", type=String.class, parameters={})
+    @Export(name="issueDate", type=String.class, parameters={})
     private Output<String> issueDate;
 
     /**
@@ -149,7 +149,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Certificate issuer.
      * 
      */
-    @OutputExport(name="issuer", type=String.class, parameters={})
+    @Export(name="issuer", type=String.class, parameters={})
     private Output<String> issuer;
 
     /**
@@ -163,7 +163,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Key Vault Csm resource Id.
      * 
      */
-    @OutputExport(name="keyVaultId", type=String.class, parameters={})
+    @Export(name="keyVaultId", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultId;
 
     /**
@@ -177,7 +177,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Key Vault secret name.
      * 
      */
-    @OutputExport(name="keyVaultSecretName", type=String.class, parameters={})
+    @Export(name="keyVaultSecretName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultSecretName;
 
     /**
@@ -191,7 +191,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Status of the Key Vault secret.
      * 
      */
-    @OutputExport(name="keyVaultSecretStatus", type=String.class, parameters={})
+    @Export(name="keyVaultSecretStatus", type=String.class, parameters={})
     private Output<String> keyVaultSecretStatus;
 
     /**
@@ -205,7 +205,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -219,7 +219,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -233,7 +233,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -247,7 +247,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Pfx blob.
      * 
      */
-    @OutputExport(name="pfxBlob", type=String.class, parameters={})
+    @Export(name="pfxBlob", type=String.class, parameters={})
     private Output</* @Nullable */ String> pfxBlob;
 
     /**
@@ -261,7 +261,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Public key hash.
      * 
      */
-    @OutputExport(name="publicKeyHash", type=String.class, parameters={})
+    @Export(name="publicKeyHash", type=String.class, parameters={})
     private Output<String> publicKeyHash;
 
     /**
@@ -275,7 +275,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Self link.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -289,7 +289,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
      */
-    @OutputExport(name="serverFarmId", type=String.class, parameters={})
+    @Export(name="serverFarmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverFarmId;
 
     /**
@@ -303,7 +303,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * App name.
      * 
      */
-    @OutputExport(name="siteName", type=String.class, parameters={})
+    @Export(name="siteName", type=String.class, parameters={})
     private Output<String> siteName;
 
     /**
@@ -317,7 +317,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Subject name of the certificate.
      * 
      */
-    @OutputExport(name="subjectName", type=String.class, parameters={})
+    @Export(name="subjectName", type=String.class, parameters={})
     private Output<String> subjectName;
 
     /**
@@ -331,7 +331,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -345,7 +345,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Certificate thumbprint.
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -359,7 +359,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -373,7 +373,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Is the certificate valid?.
      * 
      */
-    @OutputExport(name="valid", type=Boolean.class, parameters={})
+    @Export(name="valid", type=Boolean.class, parameters={})
     private Output<Boolean> valid;
 
     /**

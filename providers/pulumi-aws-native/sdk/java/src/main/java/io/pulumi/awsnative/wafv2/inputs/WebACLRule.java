@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLOverrideAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLRuleAction;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
 import io.pulumi.awsnative.wafv2.inputs.WebACLVisibilityConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,35 +26,35 @@ public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLRule Empty = new WebACLRule();
 
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable WebACLRuleAction action;
 
     public Optional<WebACLRuleAction> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
     }
 
-    @InputImport(name="captchaConfig")
+    @Import(name="captchaConfig")
       private final @Nullable WebACLCaptchaConfig captchaConfig;
 
     public Optional<WebACLCaptchaConfig> getCaptchaConfig() {
         return this.captchaConfig == null ? Optional.empty() : Optional.ofNullable(this.captchaConfig);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="overrideAction")
+    @Import(name="overrideAction")
       private final @Nullable WebACLOverrideAction overrideAction;
 
     public Optional<WebACLOverrideAction> getOverrideAction() {
         return this.overrideAction == null ? Optional.empty() : Optional.ofNullable(this.overrideAction);
     }
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -65,21 +65,21 @@ public final class WebACLRule extends io.pulumi.resources.InvokeArgs {
      * Collection of Rule Labels.
      * 
      */
-    @InputImport(name="ruleLabels")
+    @Import(name="ruleLabels")
       private final @Nullable List<WebACLLabel> ruleLabels;
 
     public List<WebACLLabel> getRuleLabels() {
         return this.ruleLabels == null ? List.of() : this.ruleLabels;
     }
 
-    @InputImport(name="statement", required=true)
+    @Import(name="statement", required=true)
       private final WebACLStatement statement;
 
     public WebACLStatement getStatement() {
         return this.statement;
     }
 
-    @InputImport(name="visibilityConfig", required=true)
+    @Import(name="visibilityConfig", required=true)
       private final WebACLVisibilityConfig visibilityConfig;
 
     public WebACLVisibilityConfig getVisibilityConfig() {

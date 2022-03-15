@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * List of base image dependencies for a step.
      * 
      */
-    @InputImport(name="baseImageDependencies", required=true)
+    @Import(name="baseImageDependencies", required=true)
       private final List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
@@ -36,7 +36,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
      */
-    @InputImport(name="contextAccessToken")
+    @Import(name="contextAccessToken")
       private final @Nullable String contextAccessToken;
 
     public Optional<String> getContextAccessToken() {
@@ -47,7 +47,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * The URL(absolute or relative) of the source context for the task step.
      * 
      */
-    @InputImport(name="contextPath")
+    @Import(name="contextPath")
       private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
@@ -58,7 +58,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * The task template/definition file path relative to the source context.
      * 
      */
-    @InputImport(name="taskFilePath", required=true)
+    @Import(name="taskFilePath", required=true)
       private final String taskFilePath;
 
     public String getTaskFilePath() {
@@ -70,7 +70,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'FileTask'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -81,7 +81,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * The collection of overridable values that can be passed when running a task.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
@@ -92,7 +92,7 @@ public final class FileTaskStepResponse extends io.pulumi.resources.InvokeArgs {
      * The task values/parameters file path relative to the source context.
      * 
      */
-    @InputImport(name="valuesFilePath")
+    @Import(name="valuesFilePath")
       private final @Nullable String valuesFilePath;
 
     public Optional<String> getValuesFilePath() {

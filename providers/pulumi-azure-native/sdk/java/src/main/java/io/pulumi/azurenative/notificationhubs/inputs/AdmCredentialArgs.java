@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the authorization token.
      * 
      */
-    @InputImport(name="authTokenUrl")
+    @Import(name="authTokenUrl")
       private final @Nullable Output<String> authTokenUrl;
 
     public Output<String> getAuthTokenUrl() {
@@ -33,7 +33,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The client identifier.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -44,7 +44,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The credential secret access key.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {

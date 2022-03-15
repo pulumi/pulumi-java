@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wisdom.enums.AssistantType;
 import io.pulumi.awsnative.wisdom.outputs.AssistantServerSideEncryptionConfiguration;
 import io.pulumi.awsnative.wisdom.outputs.AssistantTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,43 +21,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:wisdom:Assistant")
 public class Assistant extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="assistantArn", type=String.class, parameters={})
+    @Export(name="assistantArn", type=String.class, parameters={})
     private Output<String> assistantArn;
 
     public Output<String> getAssistantArn() {
         return this.assistantArn;
     }
-    @OutputExport(name="assistantId", type=String.class, parameters={})
+    @Export(name="assistantId", type=String.class, parameters={})
     private Output<String> assistantId;
 
     public Output<String> getAssistantId() {
         return this.assistantId;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="serverSideEncryptionConfiguration", type=AssistantServerSideEncryptionConfiguration.class, parameters={})
+    @Export(name="serverSideEncryptionConfiguration", type=AssistantServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
     public Output</* @Nullable */ AssistantServerSideEncryptionConfiguration> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
-    @OutputExport(name="tags", type=List.class, parameters={AssistantTag.class})
+    @Export(name="tags", type=List.class, parameters={AssistantTag.class})
     private Output</* @Nullable */ List<AssistantTag>> tags;
 
     public Output</* @Nullable */ List<AssistantTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=AssistantType.class, parameters={})
+    @Export(name="type", type=AssistantType.class, parameters={})
     private Output<AssistantType> type;
 
     public Output<AssistantType> getType() {

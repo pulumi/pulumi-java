@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NodeGroupAutoscalingPolicyGetArgs extends io.pulumi.resources
      * to 100 and greater than or equal to min-nodes.
      * 
      */
-    @InputImport(name="maxNodes")
+    @Import(name="maxNodes")
       private final @Nullable Output<Integer> maxNodes;
 
     public Output<Integer> getMaxNodes() {
@@ -32,7 +32,7 @@ public final class NodeGroupAutoscalingPolicyGetArgs extends io.pulumi.resources
      * than or equal to max-nodes. The default value is 0.
      * 
      */
-    @InputImport(name="minNodes")
+    @Import(name="minNodes")
       private final @Nullable Output<Integer> minNodes;
 
     public Output<Integer> getMinNodes() {
@@ -49,7 +49,7 @@ public final class NodeGroupAutoscalingPolicyGetArgs extends io.pulumi.resources
      *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {

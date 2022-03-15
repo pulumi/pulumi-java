@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallInfoResponse {
     /**
      * Possible values: ALLOW, DENY
@@ -62,18 +62,18 @@ public final class FirewallInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallInfoResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("firewallRuleType") String firewallRuleType,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("policy") String policy,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
-        @OutputCustomType.Parameter("targetTags") List<String> targetTags,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("firewallRuleType") String firewallRuleType,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("policy") String policy,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
+        @CustomType.Parameter("targetTags") List<String> targetTags,
+        @CustomType.Parameter("uri") String uri) {
         this.action = action;
         this.direction = direction;
         this.displayName = displayName;

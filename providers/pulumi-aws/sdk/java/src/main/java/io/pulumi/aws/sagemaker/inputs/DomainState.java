@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsGetArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly`. Valid values are `PublicInternetOnly` and `VpcOnly`.
      * 
      */
-    @InputImport(name="appNetworkAccessType")
+    @Import(name="appNetworkAccessType")
       private final @Nullable Output<String> appNetworkAccessType;
 
     public Output<String> getAppNetworkAccessType() {
@@ -33,7 +33,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) assigned by AWS to this Domain.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The mode of authentication that members use to access the domain. Valid values are `IAM` and `SSO`.
      * 
      */
-    @InputImport(name="authMode")
+    @Import(name="authMode")
       private final @Nullable Output<String> authMode;
 
     public Output<String> getAuthMode() {
@@ -55,7 +55,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The default user settings. See Default User Settings below.
      * 
      */
-    @InputImport(name="defaultUserSettings")
+    @Import(name="defaultUserSettings")
       private final @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
 
     public Output<DomainDefaultUserSettingsGetArgs> getDefaultUserSettings() {
@@ -66,7 +66,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The domain name.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -77,7 +77,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon Elastic File System (EFS) managed by this Domain.
      * 
      */
-    @InputImport(name="homeEfsFileSystemId")
+    @Import(name="homeEfsFileSystemId")
       private final @Nullable Output<String> homeEfsFileSystemId;
 
     public Output<String> getHomeEfsFileSystemId() {
@@ -88,7 +88,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -99,7 +99,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy;
 
     public Output<DomainRetentionPolicyGetArgs> getRetentionPolicy() {
@@ -110,7 +110,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The SSO managed application instance ID.
      * 
      */
-    @InputImport(name="singleSignOnManagedApplicationInstanceId")
+    @Import(name="singleSignOnManagedApplicationInstanceId")
       private final @Nullable Output<String> singleSignOnManagedApplicationInstanceId;
 
     public Output<String> getSingleSignOnManagedApplicationInstanceId() {
@@ -121,7 +121,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The VPC subnets that Studio uses for communication.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -132,7 +132,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -143,7 +143,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -154,7 +154,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The domain's URL.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -165,7 +165,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

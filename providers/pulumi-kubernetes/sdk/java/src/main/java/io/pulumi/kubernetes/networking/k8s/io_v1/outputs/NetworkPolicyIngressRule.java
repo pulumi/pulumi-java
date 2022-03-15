@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyPeer;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyPort;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicyIngressRule {
     /**
      * List of sources which should be able to access the pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all sources (traffic not restricted by source). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the from list.
@@ -23,10 +23,10 @@ public final class NetworkPolicyIngressRule {
      */
     private final @Nullable List<NetworkPolicyPort> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicyIngressRule(
-        @OutputCustomType.Parameter("from") @Nullable List<NetworkPolicyPeer> from,
-        @OutputCustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports) {
+        @CustomType.Parameter("from") @Nullable List<NetworkPolicyPeer> from,
+        @CustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports) {
         this.from = from;
         this.ports = ports;
     }

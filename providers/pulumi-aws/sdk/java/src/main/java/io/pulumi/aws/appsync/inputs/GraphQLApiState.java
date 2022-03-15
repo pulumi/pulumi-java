@@ -9,7 +9,7 @@ import io.pulumi.aws.appsync.inputs.GraphQLApiLogConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * One or more additional authentication providers for the GraphqlApi. Defined below.
      * 
      */
-    @InputImport(name="additionalAuthenticationProviders")
+    @Import(name="additionalAuthenticationProviders")
       private final @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
 
     public Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> getAdditionalAuthenticationProviders() {
@@ -37,7 +37,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * The ARN
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -48,7 +48,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -59,7 +59,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing Lambda authorizer configuration. Defined below.
      * 
      */
-    @InputImport(name="lambdaAuthorizerConfig")
+    @Import(name="lambdaAuthorizerConfig")
       private final @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
     public Output<GraphQLApiLambdaAuthorizerConfigGetArgs> getLambdaAuthorizerConfig() {
@@ -70,7 +70,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing logging configuration. Defined below.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig;
 
     public Output<GraphQLApiLogConfigGetArgs> getLogConfig() {
@@ -81,7 +81,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * A user-supplied name for the GraphqlApi.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing OpenID Connect configuration. Defined below.
      * 
      */
-    @InputImport(name="openidConnectConfig")
+    @Import(name="openidConnectConfig")
       private final @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
 
     public Output<GraphQLApiOpenidConnectConfigGetArgs> getOpenidConnectConfig() {
@@ -103,7 +103,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -114,7 +114,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -125,7 +125,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -136,7 +136,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * Map of URIs associated with the APIE.g., `uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql`
      * 
      */
-    @InputImport(name="uris")
+    @Import(name="uris")
       private final @Nullable Output<Map<String,String>> uris;
 
     public Output<Map<String,String>> getUris() {
@@ -147,7 +147,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Cognito User Pool configuration. Defined below.
      * 
      */
-    @InputImport(name="userPoolConfig")
+    @Import(name="userPoolConfig")
       private final @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
 
     public Output<GraphQLApiUserPoolConfigGetArgs> getUserPoolConfig() {
@@ -158,7 +158,7 @@ public final class GraphQLApiState extends io.pulumi.resources.ResourceArgs {
      * Whether tracing with X-ray is enabled. Defaults to false.
      * 
      */
-    @InputImport(name="xrayEnabled")
+    @Import(name="xrayEnabled")
       private final @Nullable Output<Boolean> xrayEnabled;
 
     public Output<Boolean> getXrayEnabled() {

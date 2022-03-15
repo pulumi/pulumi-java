@@ -5,14 +5,14 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentAccessEndpointResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigurationResponse {
     /**
      * The access endpoint.
@@ -30,11 +30,11 @@ public final class NetworkConfigurationResponse {
      */
     private final @Nullable String virtualNetworkAddressSpace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigurationResponse(
-        @OutputCustomType.Parameter("accessEndpoint") @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint,
-        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceReferenceResponse> subnets,
-        @OutputCustomType.Parameter("virtualNetworkAddressSpace") @Nullable String virtualNetworkAddressSpace) {
+        @CustomType.Parameter("accessEndpoint") @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint,
+        @CustomType.Parameter("subnets") @Nullable List<ResourceReferenceResponse> subnets,
+        @CustomType.Parameter("virtualNetworkAddressSpace") @Nullable String virtualNetworkAddressSpace) {
         this.accessEndpoint = accessEndpoint;
         this.subnets = subnets;
         this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;

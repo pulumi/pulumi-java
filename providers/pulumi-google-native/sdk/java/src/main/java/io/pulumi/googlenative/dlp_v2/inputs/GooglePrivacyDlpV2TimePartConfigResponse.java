@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends io.pulumi.re
      * The part of the time to keep.
      * 
      */
-    @InputImport(name="partToExtract", required=true)
+    @Import(name="partToExtract", required=true)
       private final String partToExtract;
 
     public String getPartToExtract() {

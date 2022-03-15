@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebServiceParameterResponse {
     /**
      * If the parameter value in 'value' field is encrypted, the thumbprint of the certificate should be put here.
@@ -23,10 +23,10 @@ public final class WebServiceParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebServiceParameterResponse(
-        @OutputCustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.certificateThumbprint = certificateThumbprint;
         this.value = value;
     }

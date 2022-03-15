@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * The name of the storage account within the specified resource group.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
      * 
      */
-    @InputImport(name="error404Document")
+    @Import(name="error404Document")
       private final @Nullable Output<String> error404Document;
 
     public Output<String> getError404Document() {
@@ -40,7 +40,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * The webpage that Azure Storage serves for requests to the root of a website or any sub-folder. For example, 'index.html'. The value is case-sensitive.
      * 
      */
-    @InputImport(name="indexDocument")
+    @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
 
     public Output<String> getIndexDocument() {
@@ -51,7 +51,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

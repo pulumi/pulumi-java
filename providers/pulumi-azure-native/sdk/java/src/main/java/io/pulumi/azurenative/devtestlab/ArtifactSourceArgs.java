@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.azurenative.devtestlab.enums.SourceControlType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The folder containing Azure Resource Manager templates.
      * 
      */
-    @InputImport(name="armTemplateFolderPath")
+    @Import(name="armTemplateFolderPath")
       private final @Nullable Output<String> armTemplateFolderPath;
 
     public Output<String> getArmTemplateFolderPath() {
@@ -33,7 +33,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The artifact source's branch reference.
      * 
      */
-    @InputImport(name="branchRef")
+    @Import(name="branchRef")
       private final @Nullable Output<String> branchRef;
 
     public Output<String> getBranchRef() {
@@ -44,7 +44,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The artifact source's display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The folder containing artifacts.
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
     public Output<String> getFolderPath() {
@@ -66,7 +66,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -77,7 +77,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -88,7 +88,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the artifact source.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The security token to authenticate to the artifact source.
      * 
      */
-    @InputImport(name="securityToken")
+    @Import(name="securityToken")
       private final @Nullable Output<String> securityToken;
 
     public Output<String> getSecurityToken() {
@@ -121,7 +121,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The artifact source's type.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<Either<String,SourceControlType>> sourceType;
 
     public Output<Either<String,SourceControlType>> getSourceType() {
@@ -132,7 +132,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if the artifact source is enabled (values: Enabled, Disabled).
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
     public Output<Either<String,EnableStatus>> getStatus() {
@@ -143,7 +143,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -154,7 +154,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The artifact source's URI.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

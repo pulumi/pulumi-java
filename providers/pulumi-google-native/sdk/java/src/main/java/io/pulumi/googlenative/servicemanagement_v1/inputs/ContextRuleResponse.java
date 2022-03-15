@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from client to backend.
      * 
      */
-    @InputImport(name="allowedRequestExtensions", required=true)
+    @Import(name="allowedRequestExtensions", required=true)
       private final List<String> allowedRequestExtensions;
 
     public List<String> getAllowedRequestExtensions() {
@@ -32,7 +32,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of full type names or extension IDs of extensions allowed in grpc side channel from backend to client.
      * 
      */
-    @InputImport(name="allowedResponseExtensions", required=true)
+    @Import(name="allowedResponseExtensions", required=true)
       private final List<String> allowedResponseExtensions;
 
     public List<String> getAllowedResponseExtensions() {
@@ -43,7 +43,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of full type names of provided contexts.
      * 
      */
-    @InputImport(name="provided", required=true)
+    @Import(name="provided", required=true)
       private final List<String> provided;
 
     public List<String> getProvided() {
@@ -54,7 +54,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of full type names of requested contexts.
      * 
      */
-    @InputImport(name="requested", required=true)
+    @Import(name="requested", required=true)
       private final List<String> requested;
 
     public List<String> getRequested() {
@@ -65,7 +65,7 @@ public final class ContextRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {

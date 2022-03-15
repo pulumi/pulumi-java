@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfig;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedCluster {
     /**
      * Required. The cluster name prefix. A unique cluster name will be formed by appending a random suffix. The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
@@ -28,11 +28,11 @@ public final class WorkflowTemplatePlacementManagedCluster {
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedCluster(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("config") WorkflowTemplatePlacementManagedClusterConfig config,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("config") WorkflowTemplatePlacementManagedClusterConfig config,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.clusterName = clusterName;
         this.config = config;
         this.labels = labels;

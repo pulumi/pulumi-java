@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricAggregationFunction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorMetric {
     /**
      * Operator used to aggregate metric values
@@ -20,11 +20,11 @@ public final class AnomalyDetectorMetric {
     private final String metricName;
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorMetric(
-        @OutputCustomType.Parameter("aggregationFunction") AnomalyDetectorMetricAggregationFunction aggregationFunction,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
+        @CustomType.Parameter("aggregationFunction") AnomalyDetectorMetricAggregationFunction aggregationFunction,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("namespace") @Nullable String namespace) {
         this.aggregationFunction = aggregationFunction;
         this.metricName = metricName;
         this.namespace = namespace;

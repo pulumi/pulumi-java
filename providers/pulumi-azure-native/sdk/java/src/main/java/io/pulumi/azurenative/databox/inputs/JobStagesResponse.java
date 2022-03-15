@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
      * Display name of the job stage.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -32,7 +32,7 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
      * Job Stage Details
      * 
      */
-    @InputImport(name="jobStageDetails", required=true)
+    @Import(name="jobStageDetails", required=true)
       private final Object jobStageDetails;
 
     public Object getJobStageDetails() {
@@ -43,7 +43,7 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the job stage.
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final String stageName;
 
     public String getStageName() {
@@ -54,7 +54,7 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
      * Status of the job stage.
      * 
      */
-    @InputImport(name="stageStatus", required=true)
+    @Import(name="stageStatus", required=true)
       private final String stageStatus;
 
     public String getStageStatus() {
@@ -65,7 +65,7 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
      * Time for the job stage in UTC ISO 8601 format.
      * 
      */
-    @InputImport(name="stageTime", required=true)
+    @Import(name="stageTime", required=true)
       private final String stageTime;
 
     public String getStageTime() {

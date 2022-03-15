@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.TIDataConnectorDataTypesResponseIndicators;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TIDataConnectorDataTypesResponse {
     /**
      * Data type for indicators connection.
@@ -17,8 +17,8 @@ public final class TIDataConnectorDataTypesResponse {
      */
     private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
-    @OutputCustomType.Constructor
-    private TIDataConnectorDataTypesResponse(@OutputCustomType.Parameter("indicators") @Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
+    @CustomType.Constructor
+    private TIDataConnectorDataTypesResponse(@CustomType.Parameter("indicators") @Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
         this.indicators = indicators;
     }
 

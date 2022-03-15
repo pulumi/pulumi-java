@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
      * The delivery stream name.
      * 
      */
-    @InputImport(name="deliveryStreamName", required=true)
+    @Import(name="deliveryStreamName", required=true)
       private final Output<String> deliveryStreamName;
 
     public Output<String> getDeliveryStreamName() {
@@ -29,7 +29,7 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
      * The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -40,7 +40,7 @@ public final class TopicRuleErrorActionFirehoseArgs extends io.pulumi.resources.
      * A character separator that is used to separate records written to the Firehose stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
      * 
      */
-    @InputImport(name="separator")
+    @Import(name="separator")
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {

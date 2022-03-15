@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * Number of instances or nodes.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
@@ -36,7 +36,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * SKU type to run on.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
@@ -47,7 +47,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * Set to true for jobs running on local compute.
      * 
      */
-    @InputImport(name="isLocal")
+    @Import(name="isLocal")
       private final @Nullable Boolean isLocal;
 
     public Optional<Boolean> getIsLocal() {
@@ -58,7 +58,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * Location for virtual cluster run.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -69,7 +69,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * Additional properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -80,7 +80,7 @@ public final class ComputeConfigurationResponse extends io.pulumi.resources.Invo
      * ARM resource ID of the compute resource.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

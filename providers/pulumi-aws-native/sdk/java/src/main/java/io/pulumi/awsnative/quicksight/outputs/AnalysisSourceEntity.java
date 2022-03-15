@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.AnalysisSourceTemplate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalysisSourceEntity {
     private final @Nullable AnalysisSourceTemplate sourceTemplate;
 
-    @OutputCustomType.Constructor
-    private AnalysisSourceEntity(@OutputCustomType.Parameter("sourceTemplate") @Nullable AnalysisSourceTemplate sourceTemplate) {
+    @CustomType.Constructor
+    private AnalysisSourceEntity(@CustomType.Parameter("sourceTemplate") @Nullable AnalysisSourceTemplate sourceTemplate) {
         this.sourceTemplate = sourceTemplate;
     }
 

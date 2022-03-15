@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.FunctionArgs;
 import io.pulumi.azurenative.streamanalytics.outputs.ScalarFunctionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * The properties that are associated with a function.
      * 
      */
-    @OutputExport(name="properties", type=ScalarFunctionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ScalarFunctionPropertiesResponse.class, parameters={})
     private Output<ScalarFunctionPropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

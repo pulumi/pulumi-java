@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iap_v1.IdentityAwareProxyClientArgs;
@@ -22,7 +22,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * Human-friendly name given to the OAuth client.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -36,7 +36,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * Unique identifier of the OAuth client.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * Client secret of the OAuth client.
      * 
      */
-    @OutputExport(name="secret", type=String.class, parameters={})
+    @Export(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
     /**

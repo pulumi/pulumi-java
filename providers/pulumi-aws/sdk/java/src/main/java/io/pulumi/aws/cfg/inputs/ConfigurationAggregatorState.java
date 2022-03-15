@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.ConfigurationAggregatorAccountAggregationSourceGetArgs;
 import io.pulumi.aws.cfg.inputs.ConfigurationAggregatorOrganizationAggregationSourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConfigurationAggregatorState extends io.pulumi.resources.Reso
      * The account(s) to aggregate config data from as documented below.
      * 
      */
-    @InputImport(name="accountAggregationSource")
+    @Import(name="accountAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorAccountAggregationSourceGetArgs> accountAggregationSource;
 
     public Output<ConfigurationAggregatorAccountAggregationSourceGetArgs> getAccountAggregationSource() {
@@ -32,7 +32,7 @@ public final class ConfigurationAggregatorState extends io.pulumi.resources.Reso
      * The ARN of the aggregator
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class ConfigurationAggregatorState extends io.pulumi.resources.Reso
      * The name of the configuration aggregator.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class ConfigurationAggregatorState extends io.pulumi.resources.Reso
      * The organization to aggregate config data from as documented below.
      * 
      */
-    @InputImport(name="organizationAggregationSource")
+    @Import(name="organizationAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceGetArgs> organizationAggregationSource;
 
     public Output<ConfigurationAggregatorOrganizationAggregationSourceGetArgs> getOrganizationAggregationSource() {
@@ -65,7 +65,7 @@ public final class ConfigurationAggregatorState extends io.pulumi.resources.Reso
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class ConfigurationAggregatorState extends io.pulumi.resources.Reso
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

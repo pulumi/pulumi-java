@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class InstantSnapshotResourceStatusResponse extends io.pulumi.resou
      * The storage size of this instant snapshot.
      * 
      */
-    @InputImport(name="storageSizeBytes", required=true)
+    @Import(name="storageSizeBytes", required=true)
       private final String storageSizeBytes;
 
     public String getStorageSizeBytes() {

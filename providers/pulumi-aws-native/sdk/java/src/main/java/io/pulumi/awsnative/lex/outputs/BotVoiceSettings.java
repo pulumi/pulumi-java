@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotVoiceSettings {
     /**
      * The Amazon Polly voice ID that Amazon Lex uses for voice interaction with the user.
@@ -15,8 +15,8 @@ public final class BotVoiceSettings {
      */
     private final String voiceId;
 
-    @OutputCustomType.Constructor
-    private BotVoiceSettings(@OutputCustomType.Parameter("voiceId") String voiceId) {
+    @CustomType.Constructor
+    private BotVoiceSettings(@CustomType.Parameter("voiceId") String voiceId) {
         this.voiceId = voiceId;
     }
 

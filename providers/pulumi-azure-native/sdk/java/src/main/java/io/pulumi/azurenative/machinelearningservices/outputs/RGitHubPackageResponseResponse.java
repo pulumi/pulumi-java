@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RGitHubPackageResponseResponse {
     /**
      * Repository address in the format username/repo[/subdir][@ref|#pull].
@@ -17,8 +17,8 @@ public final class RGitHubPackageResponseResponse {
      */
     private final @Nullable String repository;
 
-    @OutputCustomType.Constructor
-    private RGitHubPackageResponseResponse(@OutputCustomType.Parameter("repository") @Nullable String repository) {
+    @CustomType.Constructor
+    private RGitHubPackageResponseResponse(@CustomType.Parameter("repository") @Nullable String repository) {
         this.repository = repository;
     }
 

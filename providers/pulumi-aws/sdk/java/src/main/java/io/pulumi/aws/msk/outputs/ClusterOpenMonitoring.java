@@ -4,10 +4,10 @@
 package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterOpenMonitoringPrometheus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterOpenMonitoring {
     /**
      * Configuration block for Prometheus settings for open monitoring. See below.
@@ -15,8 +15,8 @@ public final class ClusterOpenMonitoring {
      */
     private final ClusterOpenMonitoringPrometheus prometheus;
 
-    @OutputCustomType.Constructor
-    private ClusterOpenMonitoring(@OutputCustomType.Parameter("prometheus") ClusterOpenMonitoringPrometheus prometheus) {
+    @CustomType.Constructor
+    private ClusterOpenMonitoring(@CustomType.Parameter("prometheus") ClusterOpenMonitoringPrometheus prometheus) {
         this.prometheus = prometheus;
     }
 

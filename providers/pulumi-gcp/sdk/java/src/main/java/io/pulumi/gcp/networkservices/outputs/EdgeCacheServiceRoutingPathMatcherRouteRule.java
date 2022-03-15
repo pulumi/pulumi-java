@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
     /**
      * A human-readable description of the resource.
@@ -61,15 +61,15 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRule(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("headerAction") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction,
-        @OutputCustomType.Parameter("matchRules") List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules,
-        @OutputCustomType.Parameter("origin") @Nullable String origin,
-        @OutputCustomType.Parameter("priority") String priority,
-        @OutputCustomType.Parameter("routeAction") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction,
-        @OutputCustomType.Parameter("urlRedirect") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("headerAction") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction,
+        @CustomType.Parameter("matchRules") List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules,
+        @CustomType.Parameter("origin") @Nullable String origin,
+        @CustomType.Parameter("priority") String priority,
+        @CustomType.Parameter("routeAction") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction,
+        @CustomType.Parameter("urlRedirect") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.matchRules = matchRules;

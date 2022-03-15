@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.TransitGatewayMulticastDomainAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * The ID of the resource.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -35,7 +35,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * The type of resource, for example a VPC attachment.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
@@ -49,7 +49,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * The state of the subnet association.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -63,7 +63,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * The IDs of the subnets to associate with the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -77,7 +77,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * The ID of the transit gateway attachment.
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
@@ -91,7 +91,7 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
      * The ID of the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
+    @Export(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainId;
 
     /**

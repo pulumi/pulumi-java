@@ -9,7 +9,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.FunctionOutputArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JavaScriptFunctionBindingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
      * 
      */
-    @InputImport(name="binding")
+    @Import(name="binding")
       private final @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
 
     public Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> getBinding() {
@@ -39,7 +39,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * A list of inputs describing the parameters of the function.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<List<FunctionInputArgs>> inputs;
 
     public Output<List<FunctionInputArgs>> getInputs() {
@@ -50,7 +50,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * The output of the function.
      * 
      */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable Output<FunctionOutputArgs> output;
 
     public Output<FunctionOutputArgs> getOutput() {
@@ -62,7 +62,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
      * Expected value is 'Scalar'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

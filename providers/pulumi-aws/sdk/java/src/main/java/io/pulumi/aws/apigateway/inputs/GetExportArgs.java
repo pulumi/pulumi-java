@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The content-type of the export. Valid values are `application/json` and `application/yaml` are supported for `export_type` `ofoas30` and `swagger`.
      * 
      */
-    @InputImport(name="accepts")
+    @Import(name="accepts")
       private final @Nullable String accepts;
 
     public Optional<String> getAccepts() {
@@ -30,7 +30,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The type of export. Acceptable values are `oas30` for OpenAPI 3.0.x and `swagger` for Swagger/OpenAPI 2.0.
      * 
      */
-    @InputImport(name="exportType", required=true)
+    @Import(name="exportType", required=true)
       private final String exportType;
 
     public String getExportType() {
@@ -41,7 +41,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * A key-value map of query string parameters that specify properties of the export. the following parameters are supported: `extensions='integrations'` or `extensions='apigateway'` will export the API with x-amazon-apigateway-integration extensions. `extensions='authorizers'` will export the API with x-amazon-apigateway-authorizer extensions.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
@@ -52,7 +52,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier of the associated REST API.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {
@@ -63,7 +63,7 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Stage that will be exported.
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final String stageName;
 
     public String getStageName() {

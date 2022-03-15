@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.PrivateEndpointConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * Gets or sets actions required
      * 
      */
-    @InputImport(name="actionRequired")
+    @Import(name="actionRequired")
       private final @Nullable Output<String> actionRequired;
 
     public Output<String> getActionRequired() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * Gets or sets description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * Gets or sets the status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointConnectionStatus>> status;
 
     public Output<Either<String,PrivateEndpointConnectionStatus>> getStatus() {

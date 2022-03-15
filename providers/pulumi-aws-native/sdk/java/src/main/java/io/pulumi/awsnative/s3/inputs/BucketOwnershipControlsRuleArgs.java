@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketOwnershipControlsRuleObjectOwnership;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
      * Specifies an object ownership rule.
      * 
      */
-    @InputImport(name="objectOwnership")
+    @Import(name="objectOwnership")
       private final @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
     public Output<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {

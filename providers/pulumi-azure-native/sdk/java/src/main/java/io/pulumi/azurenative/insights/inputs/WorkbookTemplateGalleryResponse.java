@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * Category for the gallery.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable String category;
 
     public Optional<String> getCategory() {
@@ -34,7 +34,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * Name of the workbook template in the gallery.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * Order of the template within the gallery.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Integer order;
 
     public Optional<Integer> getOrder() {
@@ -56,7 +56,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * Azure resource type supported by the gallery.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
@@ -67,7 +67,7 @@ public final class WorkbookTemplateGalleryResponse extends io.pulumi.resources.I
      * Type of workbook supported by the workbook template.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

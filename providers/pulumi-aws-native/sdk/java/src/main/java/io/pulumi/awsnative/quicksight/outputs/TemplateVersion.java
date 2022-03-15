@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.enums.TemplateResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.TemplateDataSetConfiguration;
 import io.pulumi.awsnative.quicksight.outputs.TemplateError;
 import io.pulumi.awsnative.quicksight.outputs.TemplateSheet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateVersion {
     /**
      * <p>The time that this template version was created.</p>
@@ -62,17 +62,17 @@ public final class TemplateVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateVersion(
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("dataSetConfigurations") @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("errors") @Nullable List<TemplateError> errors,
-        @OutputCustomType.Parameter("sheets") @Nullable List<TemplateSheet> sheets,
-        @OutputCustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
-        @OutputCustomType.Parameter("status") @Nullable TemplateResourceStatus status,
-        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn,
-        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("dataSetConfigurations") @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("errors") @Nullable List<TemplateError> errors,
+        @CustomType.Parameter("sheets") @Nullable List<TemplateSheet> sheets,
+        @CustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
+        @CustomType.Parameter("status") @Nullable TemplateResourceStatus status,
+        @CustomType.Parameter("themeArn") @Nullable String themeArn,
+        @CustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.createdTime = createdTime;
         this.dataSetConfigurations = dataSetConfigurations;
         this.description = description;

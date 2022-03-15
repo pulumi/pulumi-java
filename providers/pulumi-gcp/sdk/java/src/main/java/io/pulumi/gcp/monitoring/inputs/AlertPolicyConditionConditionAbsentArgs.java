@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentTriggerArgs;
 import java.lang.String;
@@ -34,7 +34,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="aggregations")
+    @Import(name="aggregations")
       private final @Nullable Output<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations;
 
     public Output<List<AlertPolicyConditionConditionAbsentAggregationArgs>> getAggregations() {
@@ -59,7 +59,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * alerted on quickly.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final Output<String> duration;
 
     public Output<String> getDuration() {
@@ -70,7 +70,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * A logs-based filter.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -89,7 +89,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="trigger")
+    @Import(name="trigger")
       private final @Nullable Output<AlertPolicyConditionConditionAbsentTriggerArgs> trigger;
 
     public Output<AlertPolicyConditionConditionAbsentTriggerArgs> getTrigger() {

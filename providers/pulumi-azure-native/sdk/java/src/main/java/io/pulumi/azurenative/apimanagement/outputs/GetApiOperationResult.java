@@ -6,14 +6,14 @@ package io.pulumi.azurenative.apimanagement.outputs;
 import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.RequestContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.ResponseContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiOperationResult {
     /**
      * Description of the operation. May include HTML formatting tags.
@@ -71,19 +71,19 @@ public final class GetApiOperationResult {
      */
     private final String urlTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiOperationResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("method") String method,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policies") @Nullable String policies,
-        @OutputCustomType.Parameter("request") @Nullable RequestContractResponse request,
-        @OutputCustomType.Parameter("responses") @Nullable List<ResponseContractResponse> responses,
-        @OutputCustomType.Parameter("templateParameters") @Nullable List<ParameterContractResponse> templateParameters,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("urlTemplate") String urlTemplate) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("method") String method,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policies") @Nullable String policies,
+        @CustomType.Parameter("request") @Nullable RequestContractResponse request,
+        @CustomType.Parameter("responses") @Nullable List<ResponseContractResponse> responses,
+        @CustomType.Parameter("templateParameters") @Nullable List<ParameterContractResponse> templateParameters,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("urlTemplate") String urlTemplate) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * ARN of the metric stream.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the metric stream was created.
      * 
      */
-    @InputImport(name="creationDate")
+    @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
@@ -44,7 +44,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
      * 
      */
-    @InputImport(name="excludeFilters")
+    @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamExcludeFilterGetArgs>> excludeFilters;
 
     public Output<List<MetricStreamExcludeFilterGetArgs>> getExcludeFilters() {
@@ -55,7 +55,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * ARN of the Amazon Kinesis Firehose delivery stream to use for this metric stream.
      * 
      */
-    @InputImport(name="firehoseArn")
+    @Import(name="firehoseArn")
       private final @Nullable Output<String> firehoseArn;
 
     public Output<String> getFirehoseArn() {
@@ -66,7 +66,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
      * 
      */
-    @InputImport(name="includeFilters")
+    @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamIncludeFilterGetArgs>> includeFilters;
 
     public Output<List<MetricStreamIncludeFilterGetArgs>> getIncludeFilters() {
@@ -77,14 +77,14 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the metric stream was last updated.
      * 
      */
-    @InputImport(name="lastUpdateDate")
+    @Import(name="lastUpdateDate")
       private final @Nullable Output<String> lastUpdateDate;
 
     public Output<String> getLastUpdateDate() {
         return this.lastUpdateDate == null ? Output.empty() : this.lastUpdateDate;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -106,7 +106,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * Output format for the stream. Possible values are `json` and `opentelemetry0.7`. For more information about output formats, see [Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html).
      * 
      */
-    @InputImport(name="outputFormat")
+    @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
     public Output<String> getOutputFormat() {
@@ -117,7 +117,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role that this metric stream will use to access Amazon Kinesis Firehose resources. For more information about role permissions, see [Trust between CloudWatch and Kinesis Data Firehose](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html).
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -128,7 +128,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * State of the metric stream. Possible values are `running` and `stopped`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -139,7 +139,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -150,7 +150,7 @@ public final class MetricStreamState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

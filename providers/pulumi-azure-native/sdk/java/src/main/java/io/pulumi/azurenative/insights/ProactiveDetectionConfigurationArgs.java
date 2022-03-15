@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * The ProactiveDetection configuration ID. This is unique within a Application Insights component.
      * 
      */
-    @InputImport(name="configurationId")
+    @Import(name="configurationId")
       private final @Nullable Output<String> configurationId;
 
     public Output<String> getConfigurationId() {
@@ -32,7 +32,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * Custom email addresses for this rule notifications
      * 
      */
-    @InputImport(name="customEmails")
+    @Import(name="customEmails")
       private final @Nullable Output<List<String>> customEmails;
 
     public Output<List<String>> getCustomEmails() {
@@ -43,7 +43,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * A flag that indicates whether this rule is enabled by the user
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -54,7 +54,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * The last time this rule was updated
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
@@ -65,7 +65,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * The rule name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -98,7 +98,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
      */
-    @InputImport(name="ruleDefinitions")
+    @Import(name="ruleDefinitions")
       private final @Nullable Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
     public Output<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> getRuleDefinitions() {
@@ -109,7 +109,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
      */
-    @InputImport(name="sendEmailsToSubscriptionOwners")
+    @Import(name="sendEmailsToSubscriptionOwners")
       private final @Nullable Output<Boolean> sendEmailsToSubscriptionOwners;
 
     public Output<Boolean> getSendEmailsToSubscriptionOwners() {

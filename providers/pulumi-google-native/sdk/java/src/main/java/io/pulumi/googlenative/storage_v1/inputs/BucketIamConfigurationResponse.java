@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyResponse;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
      * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
      * 
      */
-    @InputImport(name="bucketPolicyOnly", required=true)
+    @Import(name="bucketPolicyOnly", required=true)
       private final BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
 
     public BucketIamConfigurationBucketPolicyOnlyResponse getBucketPolicyOnly() {
@@ -33,7 +33,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
      * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
      * 
      */
-    @InputImport(name="publicAccessPrevention", required=true)
+    @Import(name="publicAccessPrevention", required=true)
       private final String publicAccessPrevention;
 
     public String getPublicAccessPrevention() {
@@ -44,7 +44,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
      * The bucket's uniform bucket-level access configuration.
      * 
      */
-    @InputImport(name="uniformBucketLevelAccess", required=true)
+    @Import(name="uniformBucketLevelAccess", required=true)
       private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
     public BucketIamConfigurationUniformBucketLevelAccessResponse getUniformBucketLevelAccess() {

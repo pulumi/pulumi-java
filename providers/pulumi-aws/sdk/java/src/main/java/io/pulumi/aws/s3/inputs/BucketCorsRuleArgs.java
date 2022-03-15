@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies which headers are allowed.
      * 
      */
-    @InputImport(name="allowedHeaders")
+    @Import(name="allowedHeaders")
       private final @Nullable Output<List<String>> allowedHeaders;
 
     public Output<List<String>> getAllowedHeaders() {
@@ -31,7 +31,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
      * 
      */
-    @InputImport(name="allowedMethods", required=true)
+    @Import(name="allowedMethods", required=true)
       private final Output<List<String>> allowedMethods;
 
     public Output<List<String>> getAllowedMethods() {
@@ -42,7 +42,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies which origins are allowed.
      * 
      */
-    @InputImport(name="allowedOrigins", required=true)
+    @Import(name="allowedOrigins", required=true)
       private final Output<List<String>> allowedOrigins;
 
     public Output<List<String>> getAllowedOrigins() {
@@ -53,7 +53,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies expose header in the response.
      * 
      */
-    @InputImport(name="exposeHeaders")
+    @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
     public Output<List<String>> getExposeHeaders() {
@@ -64,7 +64,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies time in seconds that browser can cache the response for a preflight request.
      * 
      */
-    @InputImport(name="maxAgeSeconds")
+    @Import(name="maxAgeSeconds")
       private final @Nullable Output<Integer> maxAgeSeconds;
 
     public Output<Integer> getMaxAgeSeconds() {

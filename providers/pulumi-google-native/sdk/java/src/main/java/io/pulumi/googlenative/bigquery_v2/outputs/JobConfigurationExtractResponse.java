@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ModelReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableReferenceResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConfigurationExtractResponse {
     /**
      * [Optional] The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro. Not applicable when extracting models.
@@ -59,17 +59,17 @@ public final class JobConfigurationExtractResponse {
      */
     private final Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConfigurationExtractResponse(
-        @OutputCustomType.Parameter("compression") String compression,
-        @OutputCustomType.Parameter("destinationFormat") String destinationFormat,
-        @OutputCustomType.Parameter("destinationUri") String destinationUri,
-        @OutputCustomType.Parameter("destinationUris") List<String> destinationUris,
-        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
-        @OutputCustomType.Parameter("printHeader") Boolean printHeader,
-        @OutputCustomType.Parameter("sourceModel") ModelReferenceResponse sourceModel,
-        @OutputCustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
-        @OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
+        @CustomType.Parameter("compression") String compression,
+        @CustomType.Parameter("destinationFormat") String destinationFormat,
+        @CustomType.Parameter("destinationUri") String destinationUri,
+        @CustomType.Parameter("destinationUris") List<String> destinationUris,
+        @CustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @CustomType.Parameter("printHeader") Boolean printHeader,
+        @CustomType.Parameter("sourceModel") ModelReferenceResponse sourceModel,
+        @CustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
+        @CustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUri = destinationUri;

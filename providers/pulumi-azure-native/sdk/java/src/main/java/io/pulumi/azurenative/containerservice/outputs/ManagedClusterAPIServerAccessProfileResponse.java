@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterAPIServerAccessProfileResponse {
     /**
      * Authorized IP Ranges to kubernetes API server.
@@ -29,11 +29,11 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
      */
     private final @Nullable String privateDNSZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterAPIServerAccessProfileResponse(
-        @OutputCustomType.Parameter("authorizedIPRanges") @Nullable List<String> authorizedIPRanges,
-        @OutputCustomType.Parameter("enablePrivateCluster") @Nullable Boolean enablePrivateCluster,
-        @OutputCustomType.Parameter("privateDNSZone") @Nullable String privateDNSZone) {
+        @CustomType.Parameter("authorizedIPRanges") @Nullable List<String> authorizedIPRanges,
+        @CustomType.Parameter("enablePrivateCluster") @Nullable Boolean enablePrivateCluster,
+        @CustomType.Parameter("privateDNSZone") @Nullable String privateDNSZone) {
         this.authorizedIPRanges = authorizedIPRanges;
         this.enablePrivateCluster = enablePrivateCluster;
         this.privateDNSZone = privateDNSZone;

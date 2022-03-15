@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLExcludedRuleArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
 
     public static final WebACLManagedRuleGroupStatementArgs Empty = new WebACLManagedRuleGroupStatementArgs();
 
-    @InputImport(name="excludedRules")
+    @Import(name="excludedRules")
       private final @Nullable Output<List<WebACLExcludedRuleArgs>> excludedRules;
 
     public Output<List<WebACLExcludedRuleArgs>> getExcludedRules() {
         return this.excludedRules == null ? Output.empty() : this.excludedRules;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="scopeDownStatement")
+    @Import(name="scopeDownStatement")
       private final @Nullable Output<WebACLStatementArgs> scopeDownStatement;
 
     public Output<WebACLStatementArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Output.empty() : this.scopeDownStatement;
     }
 
-    @InputImport(name="vendorName", required=true)
+    @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
     public Output<String> getVendorName() {
         return this.vendorName;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

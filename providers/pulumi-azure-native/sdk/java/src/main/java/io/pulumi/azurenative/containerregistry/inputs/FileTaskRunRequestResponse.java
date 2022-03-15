@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The machine configuration of the run agent.
      * 
      */
-    @InputImport(name="agentConfiguration")
+    @Import(name="agentConfiguration")
       private final @Nullable AgentPropertiesResponse agentConfiguration;
 
     public Optional<AgentPropertiesResponse> getAgentConfiguration() {
@@ -40,7 +40,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The dedicated agent pool for the run.
      * 
      */
-    @InputImport(name="agentPoolName")
+    @Import(name="agentPoolName")
       private final @Nullable String agentPoolName;
 
     public Optional<String> getAgentPoolName() {
@@ -51,7 +51,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The properties that describes a set of credentials that will be used when this run is invoked.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable CredentialsResponse credentials;
 
     public Optional<CredentialsResponse> getCredentials() {
@@ -62,7 +62,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The value that indicates whether archiving is enabled for the run or not.
      * 
      */
-    @InputImport(name="isArchiveEnabled")
+    @Import(name="isArchiveEnabled")
       private final @Nullable Boolean isArchiveEnabled;
 
     public Optional<Boolean> getIsArchiveEnabled() {
@@ -73,7 +73,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The template that describes the repository and tag information for run log artifact.
      * 
      */
-    @InputImport(name="logTemplate")
+    @Import(name="logTemplate")
       private final @Nullable String logTemplate;
 
     public Optional<String> getLogTemplate() {
@@ -84,7 +84,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The platform properties against which the run has to happen.
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final PlatformPropertiesResponse platform;
 
     public PlatformPropertiesResponse getPlatform() {
@@ -96,7 +96,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * If it is relative URL, the relative path should be obtained from calling listBuildSourceUploadUrl API.
      * 
      */
-    @InputImport(name="sourceLocation")
+    @Import(name="sourceLocation")
       private final @Nullable String sourceLocation;
 
     public Optional<String> getSourceLocation() {
@@ -107,7 +107,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The template/definition file path relative to the source.
      * 
      */
-    @InputImport(name="taskFilePath", required=true)
+    @Import(name="taskFilePath", required=true)
       private final String taskFilePath;
 
     public String getTaskFilePath() {
@@ -118,7 +118,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * Run timeout in seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
@@ -130,7 +130,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * Expected value is 'FileTaskRunRequest'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -141,7 +141,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The collection of overridable values that can be passed when running a task.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<SetValueResponse> values;
 
     public List<SetValueResponse> getValues() {
@@ -152,7 +152,7 @@ public final class FileTaskRunRequestResponse extends io.pulumi.resources.Invoke
      * The values/parameters file path relative to the source.
      * 
      */
-    @InputImport(name="valuesFilePath")
+    @Import(name="valuesFilePath")
       private final @Nullable String valuesFilePath;
 
     public Optional<String> getValuesFilePath() {

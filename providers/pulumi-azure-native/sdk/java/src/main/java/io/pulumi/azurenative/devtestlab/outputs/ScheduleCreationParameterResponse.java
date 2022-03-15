@@ -7,14 +7,14 @@ import io.pulumi.azurenative.devtestlab.outputs.DayDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.HourDetailsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WeekDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleCreationParameterResponse {
     /**
      * If the schedule will occur once each day of the week, specify the daily recurrence.
@@ -72,19 +72,19 @@ public final class ScheduleCreationParameterResponse {
      */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleCreationParameterResponse(
-        @OutputCustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
-        @OutputCustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
-        @OutputCustomType.Parameter("taskType") @Nullable String taskType,
-        @OutputCustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
-        @OutputCustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
+        @CustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
+        @CustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @CustomType.Parameter("taskType") @Nullable String taskType,
+        @CustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
+        @CustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;
         this.location = location;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -52,7 +52,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The database name of the Amazon Redshift source. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Object database;
 
     public Object getDatabase() {
@@ -63,7 +63,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -74,7 +74,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -96,7 +96,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The password of the Amazon Redshift source.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -107,7 +107,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The TCP port number that the Amazon Redshift server uses to listen for client connections. The default value is 5439. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Object port;
 
     public Optional<Object> getPort() {
@@ -118,7 +118,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The name of the Amazon Redshift server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server", required=true)
+    @Import(name="server", required=true)
       private final Object server;
 
     public Object getServer() {
@@ -130,7 +130,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * Expected value is 'AmazonRedshift'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -141,7 +141,7 @@ public final class AmazonRedshiftLinkedServiceResponse extends io.pulumi.resourc
      * The username of the Amazon Redshift source. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Object username;
 
     public Optional<Object> getUsername() {

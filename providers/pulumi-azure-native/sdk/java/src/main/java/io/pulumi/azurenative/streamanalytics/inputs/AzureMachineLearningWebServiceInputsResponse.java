@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputColumnResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureMachineLearningWebServiceInputsResponse extends io.pulum
      * A list of input columns for the Azure Machine Learning web service endpoint.
      * 
      */
-    @InputImport(name="columnNames")
+    @Import(name="columnNames")
       private final @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
 
     public List<AzureMachineLearningWebServiceInputColumnResponse> getColumnNames() {
@@ -35,7 +35,7 @@ public final class AzureMachineLearningWebServiceInputsResponse extends io.pulum
      * The name of the input. This is the name provided while authoring the endpoint.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

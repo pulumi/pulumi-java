@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.IamAuditConfigArgs;
@@ -34,7 +34,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    @OutputExport(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
+    @Export(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
     private Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs;
 
     /**
@@ -48,7 +48,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * The etag of iam policy
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -62,7 +62,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**
@@ -76,7 +76,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**

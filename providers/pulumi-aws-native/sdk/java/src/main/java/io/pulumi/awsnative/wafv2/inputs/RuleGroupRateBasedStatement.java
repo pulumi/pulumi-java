@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfiguration;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatement;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,28 +17,28 @@ public final class RuleGroupRateBasedStatement extends io.pulumi.resources.Invok
 
     public static final RuleGroupRateBasedStatement Empty = new RuleGroupRateBasedStatement();
 
-    @InputImport(name="aggregateKeyType", required=true)
+    @Import(name="aggregateKeyType", required=true)
       private final RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType;
 
     public RuleGroupRateBasedStatementAggregateKeyType getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
-    @InputImport(name="forwardedIPConfig")
+    @Import(name="forwardedIPConfig")
       private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
     public Optional<RuleGroupForwardedIPConfiguration> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
     }
 
-    @InputImport(name="limit", required=true)
+    @Import(name="limit", required=true)
       private final Integer limit;
 
     public Integer getLimit() {
         return this.limit;
     }
 
-    @InputImport(name="scopeDownStatement")
+    @Import(name="scopeDownStatement")
       private final @Nullable RuleGroupStatement scopeDownStatement;
 
     public Optional<RuleGroupStatement> getScopeDownStatement() {

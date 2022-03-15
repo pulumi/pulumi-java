@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LifecycleHandler;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Lifecycle {
     /**
      * PostStart is called immediately after a container is created. If the handler fails, the container is terminated and restarted according to its restart policy. Other management of the container blocks until the hook completes. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
@@ -22,10 +22,10 @@ public final class Lifecycle {
      */
     private final @Nullable LifecycleHandler preStop;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Lifecycle(
-        @OutputCustomType.Parameter("postStart") @Nullable LifecycleHandler postStart,
-        @OutputCustomType.Parameter("preStop") @Nullable LifecycleHandler preStop) {
+        @CustomType.Parameter("postStart") @Nullable LifecycleHandler postStart,
+        @CustomType.Parameter("preStop") @Nullable LifecycleHandler preStop) {
         this.postStart = postStart;
         this.preStop = preStop;
     }

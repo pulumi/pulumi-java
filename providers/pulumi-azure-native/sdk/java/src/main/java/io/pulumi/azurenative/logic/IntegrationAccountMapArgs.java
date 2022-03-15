@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.MapType;
 import io.pulumi.azurenative.logic.inputs.IntegrationAccountMapPropertiesParametersSchemaArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The content.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -34,7 +34,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The content type.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -45,7 +45,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -56,7 +56,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The integration account map name.
      * 
      */
-    @InputImport(name="mapName")
+    @Import(name="mapName")
       private final @Nullable Output<String> mapName;
 
     public Output<String> getMapName() {
@@ -78,7 +78,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The map type.
      * 
      */
-    @InputImport(name="mapType", required=true)
+    @Import(name="mapType", required=true)
       private final Output<Either<String,MapType>> mapType;
 
     public Output<Either<String,MapType>> getMapType() {
@@ -89,7 +89,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -100,7 +100,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The parameters schema of integration account map.
      * 
      */
-    @InputImport(name="parametersSchema")
+    @Import(name="parametersSchema")
       private final @Nullable Output<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
     public Output<IntegrationAccountMapPropertiesParametersSchemaArgs> getParametersSchema() {
@@ -111,7 +111,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -122,7 +122,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

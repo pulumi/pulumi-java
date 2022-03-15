@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceControlAuthInfoResponse {
     /**
      * Time in seconds that the token remains valid
@@ -38,13 +38,13 @@ public final class SourceControlAuthInfoResponse {
      */
     private final @Nullable String tokenType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceControlAuthInfoResponse(
-        @OutputCustomType.Parameter("expiresIn") @Nullable Integer expiresIn,
-        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("token") String token,
-        @OutputCustomType.Parameter("tokenType") @Nullable String tokenType) {
+        @CustomType.Parameter("expiresIn") @Nullable Integer expiresIn,
+        @CustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("token") String token,
+        @CustomType.Parameter("tokenType") @Nullable String tokenType) {
         this.expiresIn = expiresIn;
         this.refreshToken = refreshToken;
         this.scope = scope;

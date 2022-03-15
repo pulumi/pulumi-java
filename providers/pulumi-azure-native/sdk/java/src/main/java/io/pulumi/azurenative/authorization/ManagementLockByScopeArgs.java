@@ -7,7 +7,7 @@ import io.pulumi.azurenative.authorization.enums.LockLevel;
 import io.pulumi.azurenative.authorization.inputs.ManagementLockOwnerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
      * 
      */
-    @InputImport(name="level", required=true)
+    @Import(name="level", required=true)
       private final Output<Either<String,LockLevel>> level;
 
     public Output<Either<String,LockLevel>> getLevel() {
@@ -33,7 +33,7 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * The name of lock.
      * 
      */
-    @InputImport(name="lockName")
+    @Import(name="lockName")
       private final @Nullable Output<String> lockName;
 
     public Output<String> getLockName() {
@@ -44,7 +44,7 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * Notes about the lock. Maximum of 512 characters.
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -55,7 +55,7 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * The owners of the lock.
      * 
      */
-    @InputImport(name="owners")
+    @Import(name="owners")
       private final @Nullable Output<List<ManagementLockOwnerArgs>> owners;
 
     public Output<List<ManagementLockOwnerArgs>> getOwners() {
@@ -66,7 +66,7 @@ public final class ManagementLockByScopeArgs extends io.pulumi.resources.Resourc
      * The scope for the lock. When providing a scope for the assignment, use '/subscriptions/{subscriptionId}' for subscriptions, '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}' for resource groups, and '/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePathIfPresent}/{resourceType}/{resourceName}' for resources.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

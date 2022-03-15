@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ebs.SnapshotCopyArgs;
 import io.pulumi.aws.ebs.inputs.SnapshotCopyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -41,7 +41,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The data encryption key identifier for the snapshot.
      * 
      */
-    @OutputExport(name="dataEncryptionKeyId", type=String.class, parameters={})
+    @Export(name="dataEncryptionKeyId", type=String.class, parameters={})
     private Output<String> dataEncryptionKeyId;
 
     /**
@@ -55,7 +55,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * A description of what the snapshot is.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -69,7 +69,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * Whether the snapshot is encrypted.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encrypted;
 
     /**
@@ -83,7 +83,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The ARN for the KMS encryption key.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -93,7 +93,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getKmsKeyId() {
         return this.kmsKeyId;
     }
-    @OutputExport(name="outpostArn", type=String.class, parameters={})
+    @Export(name="outpostArn", type=String.class, parameters={})
     private Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
@@ -103,7 +103,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
      */
-    @OutputExport(name="ownerAlias", type=String.class, parameters={})
+    @Export(name="ownerAlias", type=String.class, parameters={})
     private Output<String> ownerAlias;
 
     /**
@@ -117,7 +117,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the snapshot owner.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -131,7 +131,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    @OutputExport(name="permanentRestore", type=Boolean.class, parameters={})
+    @Export(name="permanentRestore", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> permanentRestore;
 
     /**
@@ -145,7 +145,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The region of the source snapshot.
      * 
      */
-    @OutputExport(name="sourceRegion", type=String.class, parameters={})
+    @Export(name="sourceRegion", type=String.class, parameters={})
     private Output<String> sourceRegion;
 
     /**
@@ -159,7 +159,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The ARN for the snapshot to be copied.
      * 
      */
-    @OutputExport(name="sourceSnapshotId", type=String.class, parameters={})
+    @Export(name="sourceSnapshotId", type=String.class, parameters={})
     private Output<String> sourceSnapshotId;
 
     /**
@@ -173,7 +173,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
      * 
      */
-    @OutputExport(name="storageTier", type=String.class, parameters={})
+    @Export(name="storageTier", type=String.class, parameters={})
     private Output<String> storageTier;
 
     /**
@@ -183,7 +183,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
     public Output<String> getStorageTier() {
         return this.storageTier;
     }
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
@@ -193,7 +193,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -207,7 +207,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    @OutputExport(name="temporaryRestoreDays", type=Integer.class, parameters={})
+    @Export(name="temporaryRestoreDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> temporaryRestoreDays;
 
     /**
@@ -217,7 +217,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getTemporaryRestoreDays() {
         return this.temporaryRestoreDays;
     }
-    @OutputExport(name="volumeId", type=String.class, parameters={})
+    @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;
 
     public Output<String> getVolumeId() {
@@ -227,7 +227,7 @@ public class SnapshotCopy extends io.pulumi.resources.CustomResource {
      * The size of the drive in GiBs.
      * 
      */
-    @OutputExport(name="volumeSize", type=Integer.class, parameters={})
+    @Export(name="volumeSize", type=Integer.class, parameters={})
     private Output<Integer> volumeSize;
 
     /**

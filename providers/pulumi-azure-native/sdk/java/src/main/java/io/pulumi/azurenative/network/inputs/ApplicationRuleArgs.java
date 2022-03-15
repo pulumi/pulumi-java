@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleApplicationProtocolArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of destination IP addresses or Service Tags.
      * 
      */
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
     public Output<List<String>> getDestinationAddresses() {
@@ -47,7 +47,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of FQDN Tags for this rule.
      * 
      */
-    @InputImport(name="fqdnTags")
+    @Import(name="fqdnTags")
       private final @Nullable Output<List<String>> fqdnTags;
 
     public Output<List<String>> getFqdnTags() {
@@ -58,7 +58,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Array of Application Protocols.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
 
     public Output<List<FirewallPolicyRuleApplicationProtocolArgs>> getProtocols() {
@@ -81,7 +81,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'ApplicationRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
     public Output<String> getRuleType() {
@@ -92,7 +92,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of source IP addresses for this rule.
      * 
      */
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
     public Output<List<String>> getSourceAddresses() {
@@ -103,7 +103,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of source IpGroups for this rule.
      * 
      */
-    @InputImport(name="sourceIpGroups")
+    @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
     public Output<List<String>> getSourceIpGroups() {
@@ -114,7 +114,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of FQDNs for this rule.
      * 
      */
-    @InputImport(name="targetFqdns")
+    @Import(name="targetFqdns")
       private final @Nullable Output<List<String>> targetFqdns;
 
     public Output<List<String>> getTargetFqdns() {
@@ -125,7 +125,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of Urls for this rule condition.
      * 
      */
-    @InputImport(name="targetUrls")
+    @Import(name="targetUrls")
       private final @Nullable Output<List<String>> targetUrls;
 
     public Output<List<String>> getTargetUrls() {
@@ -136,7 +136,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Terminate TLS connections for this rule.
      * 
      */
-    @InputImport(name="terminateTLS")
+    @Import(name="terminateTLS")
       private final @Nullable Output<Boolean> terminateTLS;
 
     public Output<Boolean> getTerminateTLS() {
@@ -147,7 +147,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * List of destination azure web categories.
      * 
      */
-    @InputImport(name="webCategories")
+    @Import(name="webCategories")
       private final @Nullable Output<List<String>> webCategories;
 
     public Output<List<String>> getWebCategories() {

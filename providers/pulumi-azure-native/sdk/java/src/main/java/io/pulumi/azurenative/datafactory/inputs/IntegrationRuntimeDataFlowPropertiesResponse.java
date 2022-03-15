@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
      * 
      */
-    @InputImport(name="cleanup")
+    @Import(name="cleanup")
       private final @Nullable Boolean cleanup;
 
     public Optional<Boolean> getCleanup() {
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * Compute type of the cluster which will execute data flow job.
      * 
      */
-    @InputImport(name="computeType")
+    @Import(name="computeType")
       private final @Nullable String computeType;
 
     public Optional<String> getComputeType() {
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
      * 
      */
-    @InputImport(name="coreCount")
+    @Import(name="coreCount")
       private final @Nullable Integer coreCount;
 
     public Optional<Integer> getCoreCount() {
@@ -57,7 +57,7 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends io.pulum
      * Time to live (in minutes) setting of the cluster which will execute data flow job.
      * 
      */
-    @InputImport(name="timeToLive")
+    @Import(name="timeToLive")
       private final @Nullable Integer timeToLive;
 
     public Optional<Integer> getTimeToLive() {

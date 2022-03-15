@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaIntervalResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
      * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
      * 
      */
-    @InputImport(name="originalPrice", required=true)
+    @Import(name="originalPrice", required=true)
       private final GoogleCloudRetailV2betaIntervalResponse originalPrice;
 
     public GoogleCloudRetailV2betaIntervalResponse getOriginalPrice() {
@@ -31,7 +31,7 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse extends io
      * The inclusive Product.pricing_info.price interval of all variant Product having the same Product.primary_product_id.
      * 
      */
-    @InputImport(name="price", required=true)
+    @Import(name="price", required=true)
       private final GoogleCloudRetailV2betaIntervalResponse price;
 
     public GoogleCloudRetailV2betaIntervalResponse getPrice() {

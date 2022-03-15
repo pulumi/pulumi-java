@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
      * The ARN of the resource share.
      * 
      */
-    @InputImport(name="shareArn", required=true)
+    @Import(name="shareArn", required=true)
       private final Output<String> shareArn;
 
     public Output<String> getShareArn() {

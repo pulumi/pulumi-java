@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.ConsentArgs;
@@ -24,7 +24,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
      */
-    @OutputExport(name="consentArtifact", type=String.class, parameters={})
+    @Export(name="consentArtifact", type=String.class, parameters={})
     private Output<String> consentArtifact;
 
     /**
@@ -38,7 +38,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * Timestamp in UTC of when this Consent is considered expired.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -52,7 +52,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a letter - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be associated with a given consent.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
@@ -66,7 +66,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after creation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
      * 
      */
-    @OutputExport(name="policies", type=List.class, parameters={GoogleCloudHealthcareV1ConsentPolicyResponse.class})
+    @Export(name="policies", type=List.class, parameters={GoogleCloudHealthcareV1ConsentPolicyResponse.class})
     private Output<List<GoogleCloudHealthcareV1ConsentPolicyResponse>> policies;
 
     /**
@@ -94,7 +94,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * The timestamp that the revision was created.
      * 
      */
-    @OutputExport(name="revisionCreateTime", type=String.class, parameters={})
+    @Export(name="revisionCreateTime", type=String.class, parameters={})
     private Output<String> revisionCreateTime;
 
     /**
@@ -108,7 +108,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * The revision ID of the Consent. The format is an 8-character hexadecimal string. Refer to a specific revision of a Consent by appending `@{revision_id}` to the Consent's resource name.
      * 
      */
-    @OutputExport(name="revisionId", type=String.class, parameters={})
+    @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
     /**
@@ -122,7 +122,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * Indicates the current state of this Consent.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -136,7 +136,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * Input only. The time to live for this Consent from when it is created.
      * 
      */
-    @OutputExport(name="ttl", type=String.class, parameters={})
+    @Export(name="ttl", type=String.class, parameters={})
     private Output<String> ttl;
 
     /**
@@ -150,7 +150,7 @@ public class Consent extends io.pulumi.resources.CustomResource {
      * User's UUID provided by the client.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**

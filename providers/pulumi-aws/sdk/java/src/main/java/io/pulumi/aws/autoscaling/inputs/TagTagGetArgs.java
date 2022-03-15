@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
      * Tag name.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -29,7 +29,7 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to propagate the tags to instances launched by the ASG.
      * 
      */
-    @InputImport(name="propagateAtLaunch", required=true)
+    @Import(name="propagateAtLaunch", required=true)
       private final Output<Boolean> propagateAtLaunch;
 
     public Output<Boolean> getPropagateAtLaunch() {
@@ -40,7 +40,7 @@ public final class TagTagGetArgs extends io.pulumi.resources.ResourceArgs {
      * Tag value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

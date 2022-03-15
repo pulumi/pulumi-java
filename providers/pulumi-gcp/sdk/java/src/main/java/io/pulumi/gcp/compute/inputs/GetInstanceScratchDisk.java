@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetInstanceScratchDisk extends io.pulumi.resources.InvokeArgs
      * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
      * 
      */
-    @InputImport(name="interface", required=true)
+    @Import(name="interface", required=true)
       private final String $interface;
 
     public String get$interface() {

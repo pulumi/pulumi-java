@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListOrderDCAccessCodeResult {
     /**
      * DCAccess Code for the Self Managed shipment.
@@ -17,8 +17,8 @@ public final class ListOrderDCAccessCodeResult {
      */
     private final @Nullable String authCode;
 
-    @OutputCustomType.Constructor
-    private ListOrderDCAccessCodeResult(@OutputCustomType.Parameter("authCode") @Nullable String authCode) {
+    @CustomType.Constructor
+    private ListOrderDCAccessCodeResult(@CustomType.Parameter("authCode") @Nullable String authCode) {
         this.authCode = authCode;
     }
 

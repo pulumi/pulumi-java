@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupLoadBalancerInfoElbInfo {
     /**
      * The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
@@ -17,8 +17,8 @@ public final class DeploymentGroupLoadBalancerInfoElbInfo {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private DeploymentGroupLoadBalancerInfoElbInfo(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoElbInfo(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

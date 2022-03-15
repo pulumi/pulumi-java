@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The Amazon Resource Name (ARN) of the instance.
@@ -69,22 +69,22 @@ public final class GetInstanceResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("autoResolveBestVoicesEnabled") Boolean autoResolveBestVoicesEnabled,
-        @OutputCustomType.Parameter("contactFlowLogsEnabled") Boolean contactFlowLogsEnabled,
-        @OutputCustomType.Parameter("contactLensEnabled") Boolean contactLensEnabled,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("earlyMediaEnabled") Boolean earlyMediaEnabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identityManagementType") String identityManagementType,
-        @OutputCustomType.Parameter("inboundCallsEnabled") Boolean inboundCallsEnabled,
-        @OutputCustomType.Parameter("instanceAlias") String instanceAlias,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("outboundCallsEnabled") Boolean outboundCallsEnabled,
-        @OutputCustomType.Parameter("serviceRole") String serviceRole,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("autoResolveBestVoicesEnabled") Boolean autoResolveBestVoicesEnabled,
+        @CustomType.Parameter("contactFlowLogsEnabled") Boolean contactFlowLogsEnabled,
+        @CustomType.Parameter("contactLensEnabled") Boolean contactLensEnabled,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("earlyMediaEnabled") Boolean earlyMediaEnabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identityManagementType") String identityManagementType,
+        @CustomType.Parameter("inboundCallsEnabled") Boolean inboundCallsEnabled,
+        @CustomType.Parameter("instanceAlias") String instanceAlias,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("outboundCallsEnabled") Boolean outboundCallsEnabled,
+        @CustomType.Parameter("serviceRole") String serviceRole,
+        @CustomType.Parameter("status") String status) {
         this.arn = arn;
         this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
         this.contactFlowLogsEnabled = contactFlowLogsEnabled;

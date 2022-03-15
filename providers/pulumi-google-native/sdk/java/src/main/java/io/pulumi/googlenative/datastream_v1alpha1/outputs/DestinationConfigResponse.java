@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.GcsDestinationConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DestinationConfigResponse {
     /**
      * Destination connection profile identifier.
@@ -21,10 +21,10 @@ public final class DestinationConfigResponse {
      */
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DestinationConfigResponse(
-        @OutputCustomType.Parameter("destinationConnectionProfileName") String destinationConnectionProfileName,
-        @OutputCustomType.Parameter("gcsDestinationConfig") GcsDestinationConfigResponse gcsDestinationConfig) {
+        @CustomType.Parameter("destinationConnectionProfileName") String destinationConnectionProfileName,
+        @CustomType.Parameter("gcsDestinationConfig") GcsDestinationConfigResponse gcsDestinationConfig) {
         this.destinationConnectionProfileName = destinationConnectionProfileName;
         this.gcsDestinationConfig = gcsDestinationConfig;
     }

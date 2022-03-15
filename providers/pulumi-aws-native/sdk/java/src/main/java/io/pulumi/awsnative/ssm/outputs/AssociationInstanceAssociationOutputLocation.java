@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ssm.outputs;
 
 import io.pulumi.awsnative.ssm.outputs.AssociationS3OutputLocation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssociationInstanceAssociationOutputLocation {
     private final @Nullable AssociationS3OutputLocation s3Location;
 
-    @OutputCustomType.Constructor
-    private AssociationInstanceAssociationOutputLocation(@OutputCustomType.Parameter("s3Location") @Nullable AssociationS3OutputLocation s3Location) {
+    @CustomType.Constructor
+    private AssociationInstanceAssociationOutputLocation(@CustomType.Parameter("s3Location") @Nullable AssociationS3OutputLocation s3Location) {
         this.s3Location = s3Location;
     }
 

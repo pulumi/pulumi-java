@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.guardduty.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetectorDatasourcesS3Logs {
     /**
      * If true, enables [S3 Protection](https://docs.aws.amazon.com/guardduty/latest/ug/s3_detection.html). Defaults to `true`.
@@ -15,8 +15,8 @@ public final class DetectorDatasourcesS3Logs {
      */
     private final Boolean enable;
 
-    @OutputCustomType.Constructor
-    private DetectorDatasourcesS3Logs(@OutputCustomType.Parameter("enable") Boolean enable) {
+    @CustomType.Constructor
+    private DetectorDatasourcesS3Logs(@CustomType.Parameter("enable") Boolean enable) {
         this.enable = enable;
     }
 

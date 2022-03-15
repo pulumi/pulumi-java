@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Origin is enabled for load balancing or not
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -31,7 +31,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the endpoint under the profile which is unique globally.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -42,7 +42,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
      * 
      */
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -53,7 +53,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpPort")
+    @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
     public Output<Integer> getHttpPort() {
@@ -64,7 +64,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    @InputImport(name="httpsPort")
+    @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
     public Output<Integer> getHttpsPort() {
@@ -75,7 +75,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    @InputImport(name="originHostHeader")
+    @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
     public Output<String> getOriginHostHeader() {
@@ -86,7 +86,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the origin that is unique within the endpoint.
      * 
      */
-    @InputImport(name="originName")
+    @Import(name="originName")
       private final @Nullable Output<String> originName;
 
     public Output<String> getOriginName() {
@@ -97,7 +97,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -108,7 +108,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The Alias of the Private Link resource. Populating this optional field indicates that this origin is 'Private'
      * 
      */
-    @InputImport(name="privateLinkAlias")
+    @Import(name="privateLinkAlias")
       private final @Nullable Output<String> privateLinkAlias;
 
     public Output<String> getPrivateLinkAlias() {
@@ -119,7 +119,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * A custom message to be included in the approval request to connect to the Private Link.
      * 
      */
-    @InputImport(name="privateLinkApprovalMessage")
+    @Import(name="privateLinkApprovalMessage")
       private final @Nullable Output<String> privateLinkApprovalMessage;
 
     public Output<String> getPrivateLinkApprovalMessage() {
@@ -130,7 +130,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the Private Link resource. Required only if 'privateLinkResourceId' is populated
      * 
      */
-    @InputImport(name="privateLinkLocation")
+    @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
 
     public Output<String> getPrivateLinkLocation() {
@@ -141,7 +141,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Id of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -152,7 +152,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -163,7 +163,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -174,7 +174,7 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

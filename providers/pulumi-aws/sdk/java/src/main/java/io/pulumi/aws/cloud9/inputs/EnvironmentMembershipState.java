@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloud9.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * The ID of the environment that contains the environment member you want to add.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -29,7 +29,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * The type of environment member permissions you want to associate with this environment member. Allowed values are `read-only` and `read-write` .
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {
@@ -40,7 +40,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) of the environment member you want to add.
      * 
      */
-    @InputImport(name="userArn")
+    @Import(name="userArn")
       private final @Nullable Output<String> userArn;
 
     public Output<String> getUserArn() {
@@ -51,7 +51,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
      * he user ID in AWS Identity and Access Management (AWS IAM) of the environment member.
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceAccountResult {
     /**
      * The ARN of the AWS Redshift service account in the selected region.
@@ -23,11 +23,11 @@ public final class GetServiceAccountResult {
     private final String id;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceAccountResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.arn = arn;
         this.id = id;
         this.region = region;

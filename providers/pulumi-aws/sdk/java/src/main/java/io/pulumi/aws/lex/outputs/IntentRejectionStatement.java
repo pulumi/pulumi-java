@@ -4,14 +4,14 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.IntentRejectionStatementMessage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntentRejectionStatement {
     /**
      * A set of messages, each of which provides a message string and its type.
@@ -28,10 +28,10 @@ public final class IntentRejectionStatement {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentRejectionStatement(
-        @OutputCustomType.Parameter("messages") List<IntentRejectionStatementMessage> messages,
-        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
+        @CustomType.Parameter("messages") List<IntentRejectionStatementMessage> messages,
+        @CustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.messages = messages;
         this.responseCard = responseCard;
     }

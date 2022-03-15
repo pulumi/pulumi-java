@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetMachineImageArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMachineImageArgs Empty = new GetMachineImageArgs();
 
-    @InputImport(name="machineImage", required=true)
+    @Import(name="machineImage", required=true)
       private final String machineImage;
 
     public String getMachineImage() {
         return this.machineImage;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

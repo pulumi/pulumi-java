@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShieldedInstanceConfigResponse {
     /**
      * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created.
@@ -20,10 +20,10 @@ public final class ShieldedInstanceConfigResponse {
      */
     private final Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShieldedInstanceConfigResponse(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot) {
+        @CustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }

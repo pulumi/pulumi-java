@@ -6,12 +6,12 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfiguration {
     /**
      * Describes an application's checkpointing configuration.
@@ -29,11 +29,11 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfiguration(
-        @OutputCustomType.Parameter("checkpointConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration checkpointConfiguration,
-        @OutputCustomType.Parameter("monitoringConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration monitoringConfiguration,
-        @OutputCustomType.Parameter("parallelismConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration) {
+        @CustomType.Parameter("checkpointConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration checkpointConfiguration,
+        @CustomType.Parameter("monitoringConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration monitoringConfiguration,
+        @CustomType.Parameter("parallelismConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration parallelismConfiguration) {
         this.checkpointConfiguration = checkpointConfiguration;
         this.monitoringConfiguration = monitoringConfiguration;
         this.parallelismConfiguration = parallelismConfiguration;

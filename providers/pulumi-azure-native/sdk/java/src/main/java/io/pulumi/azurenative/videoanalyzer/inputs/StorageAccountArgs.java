@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -34,7 +34,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
      * A managed identity that Video Analyzer will use to access the storage account.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {

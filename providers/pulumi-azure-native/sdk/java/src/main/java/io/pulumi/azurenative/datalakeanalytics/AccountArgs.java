@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datalakeanalytics.inputs.AddStorageAccountWithAccou
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateComputePolicyWithAccountParametersArgs;
 import io.pulumi.azurenative.datalakeanalytics.inputs.CreateFirewallRuleWithAccountParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Data Lake Analytics account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -39,7 +39,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of compute policies associated with this account.
      * 
      */
-    @InputImport(name="computePolicies")
+    @Import(name="computePolicies")
       private final @Nullable Output<List<CreateComputePolicyWithAccountParametersArgs>> computePolicies;
 
     public Output<List<CreateComputePolicyWithAccountParametersArgs>> getComputePolicies() {
@@ -50,7 +50,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of Data Lake Store accounts associated with this account.
      * 
      */
-    @InputImport(name="dataLakeStoreAccounts", required=true)
+    @Import(name="dataLakeStoreAccounts", required=true)
       private final Output<List<AddDataLakeStoreWithAccountParametersArgs>> dataLakeStoreAccounts;
 
     public Output<List<AddDataLakeStoreWithAccountParametersArgs>> getDataLakeStoreAccounts() {
@@ -61,7 +61,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The default Data Lake Store account associated with this account.
      * 
      */
-    @InputImport(name="defaultDataLakeStoreAccount", required=true)
+    @Import(name="defaultDataLakeStoreAccount", required=true)
       private final Output<String> defaultDataLakeStoreAccount;
 
     public Output<String> getDefaultDataLakeStoreAccount() {
@@ -72,7 +72,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    @InputImport(name="firewallAllowAzureIps")
+    @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
     public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
@@ -83,7 +83,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of firewall rules associated with this account.
      * 
      */
-    @InputImport(name="firewallRules")
+    @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
     public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
@@ -94,7 +94,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of the IP address firewall for this account.
      * 
      */
-    @InputImport(name="firewallState")
+    @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
 
     public Output<FirewallState> getFirewallState() {
@@ -105,7 +105,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -116,7 +116,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum supported degree of parallelism for this account.
      * 
      */
-    @InputImport(name="maxDegreeOfParallelism")
+    @Import(name="maxDegreeOfParallelism")
       private final @Nullable Output<Integer> maxDegreeOfParallelism;
 
     public Output<Integer> getMaxDegreeOfParallelism() {
@@ -127,7 +127,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum supported degree of parallelism per job for this account.
      * 
      */
-    @InputImport(name="maxDegreeOfParallelismPerJob")
+    @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
@@ -138,7 +138,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum supported jobs running under the account at the same time.
      * 
      */
-    @InputImport(name="maxJobCount")
+    @Import(name="maxJobCount")
       private final @Nullable Output<Integer> maxJobCount;
 
     public Output<Integer> getMaxJobCount() {
@@ -149,7 +149,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum supported priority per job for this account.
      * 
      */
-    @InputImport(name="minPriorityPerJob")
+    @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
 
     public Output<Integer> getMinPriorityPerJob() {
@@ -160,7 +160,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The commitment tier for the next month.
      * 
      */
-    @InputImport(name="newTier")
+    @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
 
     public Output<TierType> getNewTier() {
@@ -171,7 +171,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The number of days that job metadata is retained.
      * 
      */
-    @InputImport(name="queryStoreRetention")
+    @Import(name="queryStoreRetention")
       private final @Nullable Output<Integer> queryStoreRetention;
 
     public Output<Integer> getQueryStoreRetention() {
@@ -182,7 +182,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -193,7 +193,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of Azure Blob Storage accounts associated with this account.
      * 
      */
-    @InputImport(name="storageAccounts")
+    @Import(name="storageAccounts")
       private final @Nullable Output<List<AddStorageAccountWithAccountParametersArgs>> storageAccounts;
 
     public Output<List<AddStorageAccountWithAccountParametersArgs>> getStorageAccounts() {
@@ -204,7 +204,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

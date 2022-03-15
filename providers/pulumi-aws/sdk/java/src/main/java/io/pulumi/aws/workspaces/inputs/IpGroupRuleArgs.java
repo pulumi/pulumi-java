@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IpGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class IpGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address range, in CIDR notation, e.g., `10.0.0.0/16`
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SSISExecutionParameterResponse {
     /**
      * SSIS package execution parameter value. Type: string (or Expression with resultType string).
@@ -15,8 +15,8 @@ public final class SSISExecutionParameterResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor
-    private SSISExecutionParameterResponse(@OutputCustomType.Parameter("value") Object value) {
+    @CustomType.Constructor
+    private SSISExecutionParameterResponse(@CustomType.Parameter("value") Object value) {
         this.value = value;
     }
 

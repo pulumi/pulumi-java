@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FhirServiceAcrConfigurationResponse {
     /**
      * The list of the Azure container registry login servers.
@@ -17,8 +17,8 @@ public final class FhirServiceAcrConfigurationResponse {
      */
     private final @Nullable List<String> loginServers;
 
-    @OutputCustomType.Constructor
-    private FhirServiceAcrConfigurationResponse(@OutputCustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
+    @CustomType.Constructor
+    private FhirServiceAcrConfigurationResponse(@CustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
         this.loginServers = loginServers;
     }
 

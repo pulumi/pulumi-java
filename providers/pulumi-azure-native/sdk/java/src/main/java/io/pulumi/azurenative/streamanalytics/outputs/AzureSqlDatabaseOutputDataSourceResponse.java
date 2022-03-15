@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureSqlDatabaseOutputDataSourceResponse {
     /**
      * The name of the Azure SQL database. Required on PUT (CreateOrReplace) requests.
@@ -43,14 +43,14 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureSqlDatabaseOutputDataSourceResponse(
-        @OutputCustomType.Parameter("database") @Nullable String database,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("server") @Nullable String server,
-        @OutputCustomType.Parameter("table") @Nullable String table,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("database") @Nullable String database,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("server") @Nullable String server,
+        @CustomType.Parameter("table") @Nullable String table,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.database = database;
         this.password = password;
         this.server = server;

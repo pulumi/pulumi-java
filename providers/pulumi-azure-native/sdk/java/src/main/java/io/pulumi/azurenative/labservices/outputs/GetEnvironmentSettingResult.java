@@ -5,14 +5,14 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentSettingResult {
     /**
      * Describes the user's progress in configuring their environment setting
@@ -90,23 +90,23 @@ public final class GetEnvironmentSettingResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentSettingResult(
-        @OutputCustomType.Parameter("configurationState") @Nullable String configurationState,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastChanged") String lastChanged,
-        @OutputCustomType.Parameter("lastPublished") String lastPublished,
-        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("publishingState") String publishingState,
-        @OutputCustomType.Parameter("resourceSettings") ResourceSettingsResponse resourceSettings,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
+        @CustomType.Parameter("configurationState") @Nullable String configurationState,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastChanged") String lastChanged,
+        @CustomType.Parameter("lastPublished") String lastPublished,
+        @CustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("publishingState") String publishingState,
+        @CustomType.Parameter("resourceSettings") ResourceSettingsResponse resourceSettings,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.configurationState = configurationState;
         this.description = description;
         this.id = id;

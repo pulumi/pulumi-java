@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.SettingsPropertiesResponseCache;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSettingResult {
     /**
      * Array of scopes with additional details used by Cost Management in the Azure portal.
@@ -49,15 +49,15 @@ public final class GetSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSettingResult(
-        @OutputCustomType.Parameter("cache") @Nullable List<SettingsPropertiesResponseCache> cache,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("startOn") @Nullable String startOn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cache") @Nullable List<SettingsPropertiesResponseCache> cache,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("startOn") @Nullable String startOn,
+        @CustomType.Parameter("type") String type) {
         this.cache = cache;
         this.id = id;
         this.kind = kind;

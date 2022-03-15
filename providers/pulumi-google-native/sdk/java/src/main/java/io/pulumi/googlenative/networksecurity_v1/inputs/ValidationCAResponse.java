@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networksecurity_v1.inputs.CertificateProviderInstanceResponse;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleCloudNetworksecurityV1GrpcEndpointResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
      * The certificate provider instance specification that will be passed to the data plane, which will be used to load necessary credential information.
      * 
      */
-    @InputImport(name="certificateProviderInstance", required=true)
+    @Import(name="certificateProviderInstance", required=true)
       private final CertificateProviderInstanceResponse certificateProviderInstance;
 
     public CertificateProviderInstanceResponse getCertificateProviderInstance() {
@@ -32,7 +32,7 @@ public final class ValidationCAResponse extends io.pulumi.resources.InvokeArgs {
      * gRPC specific configuration to access the gRPC server to obtain the CA certificate.
      * 
      */
-    @InputImport(name="grpcEndpoint", required=true)
+    @Import(name="grpcEndpoint", required=true)
       private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
 
     public GoogleCloudNetworksecurityV1GrpcEndpointResponse getGrpcEndpoint() {

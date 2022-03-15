@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscalerBehavior;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.MetricSpec;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalerSpec {
     /**
      * behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.
@@ -41,13 +41,13 @@ public final class HorizontalPodAutoscalerSpec {
      */
     private final CrossVersionObjectReference scaleTargetRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HorizontalPodAutoscalerSpec(
-        @OutputCustomType.Parameter("behavior") @Nullable HorizontalPodAutoscalerBehavior behavior,
-        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
-        @OutputCustomType.Parameter("metrics") @Nullable List<MetricSpec> metrics,
-        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
-        @OutputCustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef) {
+        @CustomType.Parameter("behavior") @Nullable HorizontalPodAutoscalerBehavior behavior,
+        @CustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @CustomType.Parameter("metrics") @Nullable List<MetricSpec> metrics,
+        @CustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @CustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef) {
         this.behavior = behavior;
         this.maxReplicas = maxReplicas;
         this.metrics = metrics;

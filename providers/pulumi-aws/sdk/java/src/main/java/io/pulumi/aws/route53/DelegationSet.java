@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.DelegationSetArgs;
 import io.pulumi.aws.route53.inputs.DelegationSetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Delegation Set.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * (effectively a list of NS records).
      * 
      */
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
@@ -64,7 +64,7 @@ public class DelegationSet extends io.pulumi.resources.CustomResource {
      * (helpful for identifying single delegation set amongst others)
      * 
      */
-    @OutputExport(name="referenceName", type=String.class, parameters={})
+    @Export(name="referenceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> referenceName;
 
     /**

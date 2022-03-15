@@ -5,13 +5,13 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.AppResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.ManagedIdentityPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppResult {
     /**
      * Fully qualified resource Id for the resource.
@@ -44,14 +44,14 @@ public final class GetAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityPropertiesResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") AppResourcePropertiesResponse properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedIdentityPropertiesResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") AppResourcePropertiesResponse properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

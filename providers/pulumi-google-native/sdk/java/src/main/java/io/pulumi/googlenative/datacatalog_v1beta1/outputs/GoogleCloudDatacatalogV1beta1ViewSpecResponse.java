@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
     /**
      * The query that defines the table view.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
      */
     private final String viewQuery;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatacatalogV1beta1ViewSpecResponse(@OutputCustomType.Parameter("viewQuery") String viewQuery) {
+    @CustomType.Constructor
+    private GoogleCloudDatacatalogV1beta1ViewSpecResponse(@CustomType.Parameter("viewQuery") String viewQuery) {
         this.viewQuery = viewQuery;
     }
 

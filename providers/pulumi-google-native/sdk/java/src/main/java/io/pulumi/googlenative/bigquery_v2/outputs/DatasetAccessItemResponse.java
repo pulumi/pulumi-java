@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetAccessEntryResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetAccessItemResponse {
     /**
      * [Pick one] A grant authorizing all resources of a particular type in a particular dataset access to this dataset. Only views are supported for now. The role field is not required when this field is set. If that dataset is deleted and re-created, its access needs to be granted again via an update operation.
@@ -58,17 +58,17 @@ public final class DatasetAccessItemResponse {
      */
     private final TableReferenceResponse view;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetAccessItemResponse(
-        @OutputCustomType.Parameter("dataset") DatasetAccessEntryResponse dataset,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("groupByEmail") String groupByEmail,
-        @OutputCustomType.Parameter("iamMember") String iamMember,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("routine") RoutineReferenceResponse routine,
-        @OutputCustomType.Parameter("specialGroup") String specialGroup,
-        @OutputCustomType.Parameter("userByEmail") String userByEmail,
-        @OutputCustomType.Parameter("view") TableReferenceResponse view) {
+        @CustomType.Parameter("dataset") DatasetAccessEntryResponse dataset,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("groupByEmail") String groupByEmail,
+        @CustomType.Parameter("iamMember") String iamMember,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("routine") RoutineReferenceResponse routine,
+        @CustomType.Parameter("specialGroup") String specialGroup,
+        @CustomType.Parameter("userByEmail") String userByEmail,
+        @CustomType.Parameter("view") TableReferenceResponse view) {
         this.dataset = dataset;
         this.domain = domain;
         this.groupByEmail = groupByEmail;

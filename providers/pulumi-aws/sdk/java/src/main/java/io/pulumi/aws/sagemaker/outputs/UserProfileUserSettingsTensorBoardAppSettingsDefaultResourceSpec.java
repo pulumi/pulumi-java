@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec {
     /**
      * The instance type.
@@ -32,12 +32,12 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceS
      */
     private final @Nullable String sagemakerImageVersionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpec(
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("lifecycleConfigArn") @Nullable String lifecycleConfigArn,
-        @OutputCustomType.Parameter("sagemakerImageArn") @Nullable String sagemakerImageArn,
-        @OutputCustomType.Parameter("sagemakerImageVersionArn") @Nullable String sagemakerImageVersionArn) {
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("lifecycleConfigArn") @Nullable String lifecycleConfigArn,
+        @CustomType.Parameter("sagemakerImageArn") @Nullable String sagemakerImageArn,
+        @CustomType.Parameter("sagemakerImageVersionArn") @Nullable String sagemakerImageVersionArn) {
         this.instanceType = instanceType;
         this.lifecycleConfigArn = lifecycleConfigArn;
         this.sagemakerImageArn = sagemakerImageArn;

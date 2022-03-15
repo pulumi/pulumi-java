@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebase_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAndroidAppResult {
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `AndroidApp`. This identifier should be treated as an opaque token, as the data format is not specified.
@@ -35,13 +35,13 @@ public final class GetAndroidAppResult {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAndroidAppResult(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("packageName") String packageName,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("packageName") String packageName,
+        @CustomType.Parameter("project") String project) {
         this.appId = appId;
         this.displayName = displayName;
         this.name = name;

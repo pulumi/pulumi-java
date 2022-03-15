@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketMetricsStatus;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class BucketMetricsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BucketMetricsArgs Empty = new BucketMetricsArgs();
 
-    @InputImport(name="eventThreshold")
+    @Import(name="eventThreshold")
       private final @Nullable Output<BucketReplicationTimeValueArgs> eventThreshold;
 
     public Output<BucketReplicationTimeValueArgs> getEventThreshold() {
         return this.eventThreshold == null ? Output.empty() : this.eventThreshold;
     }
 
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<BucketMetricsStatus> status;
 
     public Output<BucketMetricsStatus> getStatus() {

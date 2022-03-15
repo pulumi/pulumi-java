@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse {
     /**
      * The number of guest accelerator cards exposed to each VM.
@@ -20,10 +20,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(
-        @OutputCustomType.Parameter("acceleratorCount") String acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
+        @CustomType.Parameter("acceleratorCount") String acceleratorCount,
+        @CustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

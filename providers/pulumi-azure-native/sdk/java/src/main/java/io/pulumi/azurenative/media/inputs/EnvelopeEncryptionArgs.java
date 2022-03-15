@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * Representing which tracks should not be encrypted
      * 
      */
-    @InputImport(name="clearTracks")
+    @Import(name="clearTracks")
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
     public Output<List<TrackSelectionArgs>> getClearTracks() {
@@ -37,7 +37,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
      */
-    @InputImport(name="contentKeys")
+    @Import(name="contentKeys")
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
     public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
@@ -48,7 +48,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
      * 
      */
-    @InputImport(name="customKeyAcquisitionUrlTemplate")
+    @Import(name="customKeyAcquisitionUrlTemplate")
       private final @Nullable Output<String> customKeyAcquisitionUrlTemplate;
 
     public Output<String> getCustomKeyAcquisitionUrlTemplate() {
@@ -59,7 +59,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * Representing supported protocols
      * 
      */
-    @InputImport(name="enabledProtocols")
+    @Import(name="enabledProtocols")
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
     public Output<EnabledProtocolsArgs> getEnabledProtocols() {

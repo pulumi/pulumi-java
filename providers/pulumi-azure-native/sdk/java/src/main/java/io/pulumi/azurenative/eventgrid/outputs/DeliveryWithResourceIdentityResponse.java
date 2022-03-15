@@ -11,13 +11,13 @@ import io.pulumi.azurenative.eventgrid.outputs.ServiceBusQueueEventSubscriptionD
 import io.pulumi.azurenative.eventgrid.outputs.ServiceBusTopicEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StorageQueueEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.WebHookEventSubscriptionDestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryWithResourceIdentityResponse {
     /**
      * Information about the destination where events have to be delivered for the event subscription.
@@ -31,10 +31,10 @@ public final class DeliveryWithResourceIdentityResponse {
      */
     private final @Nullable EventSubscriptionIdentityResponse identity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryWithResourceIdentityResponse(
-        @OutputCustomType.Parameter("destination") @Nullable Object destination,
-        @OutputCustomType.Parameter("identity") @Nullable EventSubscriptionIdentityResponse identity) {
+        @CustomType.Parameter("destination") @Nullable Object destination,
+        @CustomType.Parameter("identity") @Nullable EventSubscriptionIdentityResponse identity) {
         this.destination = destination;
         this.identity = identity;
     }

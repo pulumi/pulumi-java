@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.PollingOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Method regex where this policy will apply.
      * 
      */
-    @InputImport(name="methodMatch")
+    @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
 
     public Output<String> getMethodMatch() {
@@ -34,7 +34,7 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Deployment manager will poll instances for this API resource setting a RUNNING state, and blocking until polling conditions tell whether the resource is completed or failed.
      * 
      */
-    @InputImport(name="pollingOptions")
+    @Import(name="pollingOptions")
       private final @Nullable Output<PollingOptionsArgs> pollingOptions;
 
     public Output<PollingOptionsArgs> getPollingOptions() {

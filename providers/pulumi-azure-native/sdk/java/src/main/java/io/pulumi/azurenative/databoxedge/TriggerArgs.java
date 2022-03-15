@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.enums.TriggerEventType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Creates or updates a trigger
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -31,7 +31,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Trigger Kind.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,TriggerEventType>> kind;
 
     public Output<Either<String,TriggerEventType>> getKind() {
@@ -42,7 +42,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The trigger name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

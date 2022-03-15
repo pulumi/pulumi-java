@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.OrganizationMuteConfigArgs;
@@ -21,7 +21,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -35,7 +35,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * A description of the mute config.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * The human readable name to be displayed for the mute config.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -63,7 +63,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -77,7 +77,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
      * 
      */
-    @OutputExport(name="mostRecentEditor", type=String.class, parameters={})
+    @Export(name="mostRecentEditor", type=String.class, parameters={})
     private Output<String> mostRecentEditor;
 
     /**
@@ -91,7 +91,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

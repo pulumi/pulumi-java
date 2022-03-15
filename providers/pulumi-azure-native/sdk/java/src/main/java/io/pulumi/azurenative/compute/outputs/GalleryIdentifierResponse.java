@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GalleryIdentifierResponse {
     /**
      * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
@@ -15,8 +15,8 @@ public final class GalleryIdentifierResponse {
      */
     private final String uniqueName;
 
-    @OutputCustomType.Constructor
-    private GalleryIdentifierResponse(@OutputCustomType.Parameter("uniqueName") String uniqueName) {
+    @CustomType.Constructor
+    private GalleryIdentifierResponse(@CustomType.Parameter("uniqueName") String uniqueName) {
         this.uniqueName = uniqueName;
     }
 

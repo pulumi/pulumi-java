@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudrun.DomainMappingArgs;
@@ -50,7 +50,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The location of the cloud run instance. eg us-central1
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="metadata", type=DomainMappingMetadata.class, parameters={})
+    @Export(name="metadata", type=DomainMappingMetadata.class, parameters={})
     private Output<DomainMappingMetadata> metadata;
 
     /**
@@ -80,7 +80,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -111,7 +111,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="spec", type=DomainMappingSpec.class, parameters={})
+    @Export(name="spec", type=DomainMappingSpec.class, parameters={})
     private Output<DomainMappingSpec> spec;
 
     /**
@@ -126,7 +126,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * The current status of the DomainMapping.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={DomainMappingStatus.class})
+    @Export(name="statuses", type=List.class, parameters={DomainMappingStatus.class})
     private Output<List<DomainMappingStatus>> statuses;
 
     /**

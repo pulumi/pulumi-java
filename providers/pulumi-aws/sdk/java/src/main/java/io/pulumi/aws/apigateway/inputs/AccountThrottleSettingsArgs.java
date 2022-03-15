@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
      * The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
      * 
      */
-    @InputImport(name="burstLimit")
+    @Import(name="burstLimit")
       private final @Nullable Output<Integer> burstLimit;
 
     public Output<Integer> getBurstLimit() {
@@ -30,7 +30,7 @@ public final class AccountThrottleSettingsArgs extends io.pulumi.resources.Resou
      * The number of times API Gateway allows the API to be called per second on average (RPS).
      * 
      */
-    @InputImport(name="rateLimit")
+    @Import(name="rateLimit")
       private final @Nullable Output<Double> rateLimit;
 
     public Output<Double> getRateLimit() {

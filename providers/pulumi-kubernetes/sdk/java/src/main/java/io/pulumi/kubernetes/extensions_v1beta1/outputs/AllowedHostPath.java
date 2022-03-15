@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AllowedHostPath {
     /**
      * pathPrefix is the path prefix that the host volume must match. It does not support `*`. Trailing slashes are trimmed when validating the path prefix with a host path.
@@ -25,10 +25,10 @@ public final class AllowedHostPath {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllowedHostPath(
-        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.pathPrefix = pathPrefix;
         this.readOnly = readOnly;
     }

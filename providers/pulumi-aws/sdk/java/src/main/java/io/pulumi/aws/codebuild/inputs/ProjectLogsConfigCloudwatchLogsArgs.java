@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
      * Group name of the logs in CloudWatch Logs.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -29,7 +29,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
      * Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -40,7 +40,7 @@ public final class ProjectLogsConfigCloudwatchLogsArgs extends io.pulumi.resourc
      * Stream name of the logs in CloudWatch Logs.
      * 
      */
-    @InputImport(name="streamName")
+    @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
     public Output<String> getStreamName() {

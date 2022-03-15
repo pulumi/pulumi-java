@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the instance.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
      * 
      */
-    @InputImport(name="diskEncryptionKeyName")
+    @Import(name="diskEncryptionKeyName")
       private final @Nullable Output<String> diskEncryptionKeyName;
 
     public Output<String> getDiskEncryptionKeyName() {
@@ -41,7 +41,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the instance.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -58,7 +58,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Input format: "a.b.c.d/22"
      * 
      */
-    @InputImport(name="ipRange")
+    @Import(name="ipRange")
       private final @Nullable Output<String> ipRange;
 
     public Output<String> getIpRange() {
@@ -71,7 +71,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * subscriptions, it should correspond to a Compute Engine region.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -82,7 +82,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID of the instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -94,7 +94,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -106,7 +106,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
      * 
      */
-    @InputImport(name="peeringCidrRange")
+    @Import(name="peeringCidrRange")
       private final @Nullable Output<String> peeringCidrRange;
 
     public Output<String> getPeeringCidrRange() {

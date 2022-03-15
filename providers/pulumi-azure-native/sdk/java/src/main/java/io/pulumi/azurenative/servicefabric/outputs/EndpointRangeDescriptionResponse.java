@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointRangeDescriptionResponse {
     /**
      * End port of a range of ports
@@ -20,10 +20,10 @@ public final class EndpointRangeDescriptionResponse {
      */
     private final Integer startPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointRangeDescriptionResponse(
-        @OutputCustomType.Parameter("endPort") Integer endPort,
-        @OutputCustomType.Parameter("startPort") Integer startPort) {
+        @CustomType.Parameter("endPort") Integer endPort,
+        @CustomType.Parameter("startPort") Integer startPort) {
         this.endPort = endPort;
         this.startPort = startPort;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
      * The recommendation action of the machine or rule
      * 
      */
-    @InputImport(name="recommendationAction")
+    @Import(name="recommendationAction")
       private final @Nullable Output<String> recommendationAction;
 
     public Output<String> getRecommendationAction() {
@@ -33,7 +33,7 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
      * Represents a user that is recommended to be allowed for a certain rule
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

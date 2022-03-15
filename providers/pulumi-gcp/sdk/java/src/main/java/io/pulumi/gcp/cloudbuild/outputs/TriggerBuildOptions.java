@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildOptionsVolume;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildOptions {
     /**
      * Requested disk size for the VM that runs the build. Note that this is NOT "disk free";
@@ -101,20 +101,20 @@ public final class TriggerBuildOptions {
      */
     private final @Nullable String workerPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildOptions(
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("dynamicSubstitutions") @Nullable Boolean dynamicSubstitutions,
-        @OutputCustomType.Parameter("envs") @Nullable List<String> envs,
-        @OutputCustomType.Parameter("logStreamingOption") @Nullable String logStreamingOption,
-        @OutputCustomType.Parameter("logging") @Nullable String logging,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("requestedVerifyOption") @Nullable String requestedVerifyOption,
-        @OutputCustomType.Parameter("secretEnvs") @Nullable List<String> secretEnvs,
-        @OutputCustomType.Parameter("sourceProvenanceHashes") @Nullable List<String> sourceProvenanceHashes,
-        @OutputCustomType.Parameter("substitutionOption") @Nullable String substitutionOption,
-        @OutputCustomType.Parameter("volumes") @Nullable List<TriggerBuildOptionsVolume> volumes,
-        @OutputCustomType.Parameter("workerPool") @Nullable String workerPool) {
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("dynamicSubstitutions") @Nullable Boolean dynamicSubstitutions,
+        @CustomType.Parameter("envs") @Nullable List<String> envs,
+        @CustomType.Parameter("logStreamingOption") @Nullable String logStreamingOption,
+        @CustomType.Parameter("logging") @Nullable String logging,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("requestedVerifyOption") @Nullable String requestedVerifyOption,
+        @CustomType.Parameter("secretEnvs") @Nullable List<String> secretEnvs,
+        @CustomType.Parameter("sourceProvenanceHashes") @Nullable List<String> sourceProvenanceHashes,
+        @CustomType.Parameter("substitutionOption") @Nullable String substitutionOption,
+        @CustomType.Parameter("volumes") @Nullable List<TriggerBuildOptionsVolume> volumes,
+        @CustomType.Parameter("workerPool") @Nullable String workerPool) {
         this.diskSizeGb = diskSizeGb;
         this.dynamicSubstitutions = dynamicSubstitutions;
         this.envs = envs;

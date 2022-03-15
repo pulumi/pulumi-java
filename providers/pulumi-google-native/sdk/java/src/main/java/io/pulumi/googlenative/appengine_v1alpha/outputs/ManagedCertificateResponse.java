@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedCertificateResponse {
     /**
      * Time at which the certificate was last renewed. The renewal process is fully managed. Certificate renewal will automatically occur before the certificate expires. Renewal errors can be tracked via ManagementStatus.
@@ -20,10 +20,10 @@ public final class ManagedCertificateResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedCertificateResponse(
-        @OutputCustomType.Parameter("lastRenewalTime") String lastRenewalTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("lastRenewalTime") String lastRenewalTime,
+        @CustomType.Parameter("status") String status) {
         this.lastRenewalTime = lastRenewalTime;
         this.status = status;
     }

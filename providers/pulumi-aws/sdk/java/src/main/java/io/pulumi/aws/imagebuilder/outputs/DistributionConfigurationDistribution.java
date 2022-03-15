@@ -5,14 +5,14 @@ package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfiguration;
 import io.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistribution {
     /**
      * Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.
@@ -35,12 +35,12 @@ public final class DistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistribution(
-        @OutputCustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
-        @OutputCustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
-        @OutputCustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
+        @CustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
+        @CustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
+        @CustomType.Parameter("region") String region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.licenseConfigurationArns = licenseConfigurationArns;

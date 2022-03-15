@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The ID of the approval rule template
      * 
      */
-    @InputImport(name="approvalRuleTemplateId")
+    @Import(name="approvalRuleTemplateId")
       private final @Nullable Output<String> approvalRuleTemplateId;
 
     public Output<String> getApprovalRuleTemplateId() {
@@ -29,7 +29,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The content of the approval rule template. Maximum of 3000 characters.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -40,7 +40,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="creationDate")
+    @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
@@ -51,7 +51,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The description of the approval rule template. Maximum of 1000 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -62,7 +62,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="lastModifiedDate")
+    @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
     public Output<String> getLastModifiedDate() {
@@ -73,7 +73,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
      * 
      */
-    @InputImport(name="lastModifiedUser")
+    @Import(name="lastModifiedUser")
       private final @Nullable Output<String> lastModifiedUser;
 
     public Output<String> getLastModifiedUser() {
@@ -84,7 +84,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The name for the approval rule template. Maximum of 100 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
      * The SHA-256 hash signature for the content of the approval rule template.
      * 
      */
-    @InputImport(name="ruleContentSha256")
+    @Import(name="ruleContentSha256")
       private final @Nullable Output<String> ruleContentSha256;
 
     public Output<String> getRuleContentSha256() {

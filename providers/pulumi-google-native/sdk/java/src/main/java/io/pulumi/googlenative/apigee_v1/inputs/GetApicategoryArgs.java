@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetApicategoryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApicategoryArgs Empty = new GetApicategoryArgs();
 
-    @InputImport(name="apicategoryId", required=true)
+    @Import(name="apicategoryId", required=true)
       private final String apicategoryId;
 
     public String getApicategoryId() {
         return this.apicategoryId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="siteId", required=true)
+    @Import(name="siteId", required=true)
       private final String siteId;
 
     public String getSiteId() {

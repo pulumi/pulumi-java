@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -32,7 +32,7 @@ public final class ClusterAddonsConfigCloudrunConfigGetArgs extends io.pulumi.re
      * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
      * 
      */
-    @InputImport(name="loadBalancerType")
+    @Import(name="loadBalancerType")
       private final @Nullable Output<String> loadBalancerType;
 
     public Output<String> getLoadBalancerType() {

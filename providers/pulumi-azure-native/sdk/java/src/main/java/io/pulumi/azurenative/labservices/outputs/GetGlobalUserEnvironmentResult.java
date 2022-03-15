@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.EnvironmentDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalUserEnvironmentResult {
     /**
      * Details of the environment
@@ -15,8 +15,8 @@ public final class GetGlobalUserEnvironmentResult {
      */
     private final EnvironmentDetailsResponse environment;
 
-    @OutputCustomType.Constructor
-    private GetGlobalUserEnvironmentResult(@OutputCustomType.Parameter("environment") EnvironmentDetailsResponse environment) {
+    @CustomType.Constructor
+    private GetGlobalUserEnvironmentResult(@CustomType.Parameter("environment") EnvironmentDetailsResponse environment) {
         this.environment = environment;
     }
 

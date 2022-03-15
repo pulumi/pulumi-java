@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerServiceCredentialsResponse {
     /**
      * The ACS kube config file.
@@ -26,11 +26,11 @@ public final class ContainerServiceCredentialsResponse {
      */
     private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerServiceCredentialsResponse(
-        @OutputCustomType.Parameter("acsKubeConfig") String acsKubeConfig,
-        @OutputCustomType.Parameter("imagePullSecretName") String imagePullSecretName,
-        @OutputCustomType.Parameter("servicePrincipalConfiguration") ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
+        @CustomType.Parameter("acsKubeConfig") String acsKubeConfig,
+        @CustomType.Parameter("imagePullSecretName") String imagePullSecretName,
+        @CustomType.Parameter("servicePrincipalConfiguration") ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
         this.acsKubeConfig = acsKubeConfig;
         this.imagePullSecretName = imagePullSecretName;
         this.servicePrincipalConfiguration = servicePrincipalConfiguration;

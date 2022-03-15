@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.CompositeTypeStatus;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.CompositeTypeLabelEntryArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.TemplateContentsArgs;
@@ -22,14 +22,14 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -40,7 +40,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Map of labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
 
     public Output<List<CompositeTypeLabelEntryArgs>> getLabels() {
@@ -51,21 +51,21 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<CompositeTypeStatus> status;
 
     public Output<CompositeTypeStatus> getStatus() {
@@ -76,7 +76,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Files for the template type.
      * 
      */
-    @InputImport(name="templateContents")
+    @Import(name="templateContents")
       private final @Nullable Output<TemplateContentsArgs> templateContents;
 
     public Output<TemplateContentsArgs> getTemplateContents() {

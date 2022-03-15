@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationInstanceMetadataOptions;
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationLogging;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInfrastructureConfigurationResult {
     /**
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
@@ -82,21 +82,21 @@ public final class GetInfrastructureConfigurationResult {
      */
     private final @Nullable Boolean terminateInstanceOnFailure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInfrastructureConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("instanceMetadataOptions") @Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions,
-        @OutputCustomType.Parameter("instanceProfileName") @Nullable String instanceProfileName,
-        @OutputCustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
-        @OutputCustomType.Parameter("keyPair") @Nullable String keyPair,
-        @OutputCustomType.Parameter("logging") @Nullable InfrastructureConfigurationLogging logging,
-        @OutputCustomType.Parameter("resourceTags") @Nullable Object resourceTags,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable Object tags,
-        @OutputCustomType.Parameter("terminateInstanceOnFailure") @Nullable Boolean terminateInstanceOnFailure) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("instanceMetadataOptions") @Nullable InfrastructureConfigurationInstanceMetadataOptions instanceMetadataOptions,
+        @CustomType.Parameter("instanceProfileName") @Nullable String instanceProfileName,
+        @CustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
+        @CustomType.Parameter("keyPair") @Nullable String keyPair,
+        @CustomType.Parameter("logging") @Nullable InfrastructureConfigurationLogging logging,
+        @CustomType.Parameter("resourceTags") @Nullable Object resourceTags,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("tags") @Nullable Object tags,
+        @CustomType.Parameter("terminateInstanceOnFailure") @Nullable Boolean terminateInstanceOnFailure) {
         this.arn = arn;
         this.description = description;
         this.instanceMetadataOptions = instanceMetadataOptions;

@@ -4,13 +4,13 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOnlineStoreConfigSecurityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupOnlineStoreConfig {
     /**
      * Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
@@ -23,10 +23,10 @@ public final class FeatureGroupOnlineStoreConfig {
      */
     private final @Nullable FeatureGroupOnlineStoreConfigSecurityConfig securityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureGroupOnlineStoreConfig(
-        @OutputCustomType.Parameter("enableOnlineStore") @Nullable Boolean enableOnlineStore,
-        @OutputCustomType.Parameter("securityConfig") @Nullable FeatureGroupOnlineStoreConfigSecurityConfig securityConfig) {
+        @CustomType.Parameter("enableOnlineStore") @Nullable Boolean enableOnlineStore,
+        @CustomType.Parameter("securityConfig") @Nullable FeatureGroupOnlineStoreConfigSecurityConfig securityConfig) {
         this.enableOnlineStore = enableOnlineStore;
         this.securityConfig = securityConfig;
     }

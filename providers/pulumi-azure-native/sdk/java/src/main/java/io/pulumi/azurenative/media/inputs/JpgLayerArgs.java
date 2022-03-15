@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable Output<String> height;
 
     public Output<String> getHeight() {
@@ -34,7 +34,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -46,7 +46,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.JpgLayer'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -57,7 +57,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The compression quality of the JPEG output. Range is from 0-100 and the default is 70.
      * 
      */
-    @InputImport(name="quality")
+    @Import(name="quality")
       private final @Nullable Output<Integer> quality;
 
     public Output<Integer> getQuality() {
@@ -68,7 +68,7 @@ public final class JpgLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<String> width;
 
     public Output<String> getWidth() {

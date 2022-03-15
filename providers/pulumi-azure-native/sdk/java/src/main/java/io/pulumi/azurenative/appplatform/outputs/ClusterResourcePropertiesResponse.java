@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.NetworkProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterResourcePropertiesResponse {
     /**
      * Network profile of the Service
@@ -34,12 +34,12 @@ public final class ClusterResourcePropertiesResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterResourcePropertiesResponse(
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceId") String serviceId,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceId") String serviceId,
+        @CustomType.Parameter("version") Integer version) {
         this.networkProfile = networkProfile;
         this.provisioningState = provisioningState;
         this.serviceId = serviceId;

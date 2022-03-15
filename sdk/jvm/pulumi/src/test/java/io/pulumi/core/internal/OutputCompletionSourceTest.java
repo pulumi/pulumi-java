@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import org.junit.jupiter.api.Test;
 
@@ -18,10 +18,10 @@ class OutputCompletionSourceTest {
 
     @SuppressWarnings("unused")
     private static class Tester {
-        @OutputExport(type = String.class)
+        @Export(type = String.class)
         Output<String> foo;
 
-        @OutputExport(type = Either.class, parameters = {Integer.class, String.class})
+        @Export(type = Either.class, parameters = {Integer.class, String.class})
         private Output<Either<Integer, String>> complex1;
     }
 

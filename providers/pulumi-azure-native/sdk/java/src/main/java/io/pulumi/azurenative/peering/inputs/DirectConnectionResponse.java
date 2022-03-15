@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.BgpSessionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The bandwidth of the connection.
      * 
      */
-    @InputImport(name="bandwidthInMbps")
+    @Import(name="bandwidthInMbps")
       private final @Nullable Integer bandwidthInMbps;
 
     public Optional<Integer> getBandwidthInMbps() {
@@ -36,7 +36,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The BGP session associated with the connection.
      * 
      */
-    @InputImport(name="bgpSession")
+    @Import(name="bgpSession")
       private final @Nullable BgpSessionResponse bgpSession;
 
     public Optional<BgpSessionResponse> getBgpSession() {
@@ -47,7 +47,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The unique identifier (GUID) for the connection.
      * 
      */
-    @InputImport(name="connectionIdentifier")
+    @Import(name="connectionIdentifier")
       private final @Nullable String connectionIdentifier;
 
     public Optional<String> getConnectionIdentifier() {
@@ -58,7 +58,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The state of the connection.
      * 
      */
-    @InputImport(name="connectionState", required=true)
+    @Import(name="connectionState", required=true)
       private final String connectionState;
 
     public String getConnectionState() {
@@ -69,7 +69,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The error message related to the connection state, if any.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -80,7 +80,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The ID used within Microsoft's peering provisioning system to track the connection
      * 
      */
-    @InputImport(name="microsoftTrackingId", required=true)
+    @Import(name="microsoftTrackingId", required=true)
       private final String microsoftTrackingId;
 
     public String getMicrosoftTrackingId() {
@@ -91,7 +91,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The PeeringDB.com ID of the facility at which the connection has to be set up.
      * 
      */
-    @InputImport(name="peeringDBFacilityId")
+    @Import(name="peeringDBFacilityId")
       private final @Nullable Integer peeringDBFacilityId;
 
     public Optional<Integer> getPeeringDBFacilityId() {
@@ -102,7 +102,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The bandwidth that is actually provisioned.
      * 
      */
-    @InputImport(name="provisionedBandwidthInMbps", required=true)
+    @Import(name="provisionedBandwidthInMbps", required=true)
       private final Integer provisionedBandwidthInMbps;
 
     public Integer getProvisionedBandwidthInMbps() {
@@ -113,7 +113,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The field indicating if Microsoft provides session ip addresses.
      * 
      */
-    @InputImport(name="sessionAddressProvider")
+    @Import(name="sessionAddressProvider")
       private final @Nullable String sessionAddressProvider;
 
     public Optional<String> getSessionAddressProvider() {
@@ -124,7 +124,7 @@ public final class DirectConnectionResponse extends io.pulumi.resources.InvokeAr
      * The flag that indicates whether or not the connection is used for peering service.
      * 
      */
-    @InputImport(name="useForPeeringService")
+    @Import(name="useForPeeringService")
       private final @Nullable Boolean useForPeeringService;
 
     public Optional<Boolean> getUseForPeeringService() {

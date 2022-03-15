@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
@@ -29,7 +29,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * Intended audience for the service principal.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable String audience;
 
     public Optional<String> getAudience() {
@@ -40,7 +40,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * AAD Authority URL which was used to request the token for the service principal.
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
@@ -51,7 +51,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -62,7 +62,7 @@ public final class CollectorBodyAgentSpnPropertiesResponse extends io.pulumi.res
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

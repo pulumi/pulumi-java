@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.datashare.enums.DataSetMappingKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the data set mapping to be created.
      * 
      */
-    @InputImport(name="dataSetMappingName")
+    @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
     public Output<String> getDataSetMappingName() {
@@ -42,7 +42,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of data set mapping.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,DataSetMappingKind>> kind;
 
     public Output<Either<String,DataSetMappingKind>> getKind() {
@@ -53,7 +53,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the share subscription which will hold the data set sink.
      * 
      */
-    @InputImport(name="shareSubscriptionName", required=true)
+    @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
     public Output<String> getShareSubscriptionName() {

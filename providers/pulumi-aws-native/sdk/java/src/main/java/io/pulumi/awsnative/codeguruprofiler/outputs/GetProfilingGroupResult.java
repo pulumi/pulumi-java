@@ -6,14 +6,14 @@ package io.pulumi.awsnative.codeguruprofiler.outputs;
 import io.pulumi.awsnative.codeguruprofiler.outputs.AgentPermissionsProperties;
 import io.pulumi.awsnative.codeguruprofiler.outputs.ProfilingGroupChannel;
 import io.pulumi.awsnative.codeguruprofiler.outputs.ProfilingGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProfilingGroupResult {
     /**
      * The agent permissions attached to this profiling group.
@@ -36,12 +36,12 @@ public final class GetProfilingGroupResult {
      */
     private final @Nullable List<ProfilingGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProfilingGroupResult(
-        @OutputCustomType.Parameter("agentPermissions") @Nullable AgentPermissionsProperties agentPermissions,
-        @OutputCustomType.Parameter("anomalyDetectionNotificationConfiguration") @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ProfilingGroupTag> tags) {
+        @CustomType.Parameter("agentPermissions") @Nullable AgentPermissionsProperties agentPermissions,
+        @CustomType.Parameter("anomalyDetectionNotificationConfiguration") @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable List<ProfilingGroupTag> tags) {
         this.agentPermissions = agentPermissions;
         this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
         this.arn = arn;

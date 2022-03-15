@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.connect.inputs.HoursOfOperationConfigArgs;
 import io.pulumi.awsnative.connect.inputs.HoursOfOperationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * Configuration information for the hours of operation: day, start time, and end time.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<List<HoursOfOperationConfigArgs>> config;
 
     public Output<List<HoursOfOperationConfigArgs>> getConfig() {
@@ -32,7 +32,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * The description of the hours of operation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -54,7 +54,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * The name of the hours of operation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * One or more tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<HoursOfOperationTagArgs>> tags;
 
     public Output<List<HoursOfOperationTagArgs>> getTags() {
@@ -76,7 +76,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * The time zone of the hours of operation.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {

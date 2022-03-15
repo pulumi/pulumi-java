@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateValidity {
     private final String type;
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateValidity(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") Double value) {
         this.type = type;
         this.value = value;
     }

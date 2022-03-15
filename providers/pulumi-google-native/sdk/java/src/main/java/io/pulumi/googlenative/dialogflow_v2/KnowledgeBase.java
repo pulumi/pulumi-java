@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.KnowledgeBaseArgs;
@@ -21,7 +21,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * The display name of the knowledge base. The name must be 1024 bytes or less; otherwise, the creation request fails.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -35,7 +35,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, expect this to be present for non en-us languages. When unspecified, the default language code en-us applies.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
@@ -49,7 +49,7 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
      * The knowledge base resource name. The name must be empty when creating a knowledge base. Format: `projects//locations//knowledgeBases/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

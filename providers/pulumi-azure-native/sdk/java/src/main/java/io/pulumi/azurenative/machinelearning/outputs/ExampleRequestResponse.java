@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExampleRequestResponse {
     /**
      * Sample input data for the web service's global parameters
@@ -24,10 +24,10 @@ public final class ExampleRequestResponse {
      */
     private final @Nullable Map<String,List<List<Object>>> inputs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExampleRequestResponse(
-        @OutputCustomType.Parameter("globalParameters") @Nullable Map<String,Object> globalParameters,
-        @OutputCustomType.Parameter("inputs") @Nullable Map<String,List<List<Object>>> inputs) {
+        @CustomType.Parameter("globalParameters") @Nullable Map<String,Object> globalParameters,
+        @CustomType.Parameter("inputs") @Nullable Map<String,List<List<Object>>> inputs) {
         this.globalParameters = globalParameters;
         this.inputs = inputs;
     }

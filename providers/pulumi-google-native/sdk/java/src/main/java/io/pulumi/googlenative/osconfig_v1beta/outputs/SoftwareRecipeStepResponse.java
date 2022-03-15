@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepCopyFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepExecFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepExtractArchiveResponse;
@@ -13,7 +13,7 @@ import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepInstallR
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepRunScriptResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepResponse {
     /**
      * Extracts an archive into the specified directory.
@@ -51,15 +51,15 @@ public final class SoftwareRecipeStepResponse {
      */
     private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeStepResponse(
-        @OutputCustomType.Parameter("archiveExtraction") SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
-        @OutputCustomType.Parameter("dpkgInstallation") SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
-        @OutputCustomType.Parameter("fileCopy") SoftwareRecipeStepCopyFileResponse fileCopy,
-        @OutputCustomType.Parameter("fileExec") SoftwareRecipeStepExecFileResponse fileExec,
-        @OutputCustomType.Parameter("msiInstallation") SoftwareRecipeStepInstallMsiResponse msiInstallation,
-        @OutputCustomType.Parameter("rpmInstallation") SoftwareRecipeStepInstallRpmResponse rpmInstallation,
-        @OutputCustomType.Parameter("scriptRun") SoftwareRecipeStepRunScriptResponse scriptRun) {
+        @CustomType.Parameter("archiveExtraction") SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
+        @CustomType.Parameter("dpkgInstallation") SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
+        @CustomType.Parameter("fileCopy") SoftwareRecipeStepCopyFileResponse fileCopy,
+        @CustomType.Parameter("fileExec") SoftwareRecipeStepExecFileResponse fileExec,
+        @CustomType.Parameter("msiInstallation") SoftwareRecipeStepInstallMsiResponse msiInstallation,
+        @CustomType.Parameter("rpmInstallation") SoftwareRecipeStepInstallRpmResponse rpmInstallation,
+        @CustomType.Parameter("scriptRun") SoftwareRecipeStepRunScriptResponse scriptRun) {
         this.archiveExtraction = archiveExtraction;
         this.dpkgInstallation = dpkgInstallation;
         this.fileCopy = fileCopy;

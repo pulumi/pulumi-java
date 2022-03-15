@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CodeRepositoryGitConfig {
     /**
      * The default branch for the Git repository.
@@ -27,11 +27,11 @@ public final class CodeRepositoryGitConfig {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CodeRepositoryGitConfig(
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
-        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @CustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.branch = branch;
         this.repositoryUrl = repositoryUrl;
         this.secretArn = secretArn;

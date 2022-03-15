@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ScaleCapacityResponse extends io.pulumi.resources.InvokeArgs 
      * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
      * 
      */
-    @InputImport(name="default", required=true)
+    @Import(name="default", required=true)
       private final String $default;
 
     public String get$default() {
@@ -31,7 +31,7 @@ public final class ScaleCapacityResponse extends io.pulumi.resources.InvokeArgs 
      * the maximum number of instances for the resource. The actual maximum number of instances is limited by the cores that are available in the subscription.
      * 
      */
-    @InputImport(name="maximum", required=true)
+    @Import(name="maximum", required=true)
       private final String maximum;
 
     public String getMaximum() {
@@ -42,7 +42,7 @@ public final class ScaleCapacityResponse extends io.pulumi.resources.InvokeArgs 
      * the minimum number of instances for the resource.
      * 
      */
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final String minimum;
 
     public String getMinimum() {

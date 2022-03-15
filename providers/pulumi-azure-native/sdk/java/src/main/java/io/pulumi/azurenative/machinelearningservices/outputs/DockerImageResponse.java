@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DockerImagePlatformResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DockerImageResponse {
     /**
      * Image name of a custom base image.
@@ -30,11 +30,11 @@ public final class DockerImageResponse {
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DockerImageResponse(
-        @OutputCustomType.Parameter("dockerImageUri") String dockerImageUri,
-        @OutputCustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
-        @OutputCustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
+        @CustomType.Parameter("dockerImageUri") String dockerImageUri,
+        @CustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
+        @CustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
         this.dockerImageUri = dockerImageUri;
         this.dockerSpecificationType = dockerSpecificationType;
         this.platform = platform;

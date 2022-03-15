@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appautoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification {
     /**
      * The metric type.
@@ -22,10 +22,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification(
-        @OutputCustomType.Parameter("predefinedMetricType") String predefinedMetricType,
-        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
+        @CustomType.Parameter("predefinedMetricType") String predefinedMetricType,
+        @CustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedMetricType = predefinedMetricType;
         this.resourceLabel = resourceLabel;
     }

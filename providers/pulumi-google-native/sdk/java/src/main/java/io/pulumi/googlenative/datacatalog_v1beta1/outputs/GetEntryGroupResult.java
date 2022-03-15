@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1SystemTimestampsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEntryGroupResult {
     /**
      * Timestamps about this EntryGroup. Default value is empty timestamps.
@@ -31,12 +31,12 @@ public final class GetEntryGroupResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntryGroupResult(
-        @OutputCustomType.Parameter("dataCatalogTimestamps") GoogleCloudDatacatalogV1beta1SystemTimestampsResponse dataCatalogTimestamps,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("dataCatalogTimestamps") GoogleCloudDatacatalogV1beta1SystemTimestampsResponse dataCatalogTimestamps,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name) {
         this.dataCatalogTimestamps = dataCatalogTimestamps;
         this.description = description;
         this.displayName = displayName;

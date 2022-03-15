@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class MetricBucketOptionsExplicitBucketsArgs extends io.pulumi.reso
      * The values must be monotonically increasing.
      * 
      */
-    @InputImport(name="bounds", required=true)
+    @Import(name="bounds", required=true)
       private final Output<List<Double>> bounds;
 
     public Output<List<Double>> getBounds() {

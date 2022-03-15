@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AmazonS3CompatibleLocationResponse extends io.pulumi.resource
      * Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Object bucketName;
 
     public Optional<Object> getBucketName() {
@@ -34,7 +34,7 @@ public final class AmazonS3CompatibleLocationResponse extends io.pulumi.resource
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Object fileName;
 
     public Optional<Object> getFileName() {
@@ -45,7 +45,7 @@ public final class AmazonS3CompatibleLocationResponse extends io.pulumi.resource
      * Specify the folder path of dataset. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
@@ -57,7 +57,7 @@ public final class AmazonS3CompatibleLocationResponse extends io.pulumi.resource
      * Expected value is 'AmazonS3CompatibleLocation'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -68,7 +68,7 @@ public final class AmazonS3CompatibleLocationResponse extends io.pulumi.resource
      * Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Object version;
 
     public Optional<Object> getVersion() {

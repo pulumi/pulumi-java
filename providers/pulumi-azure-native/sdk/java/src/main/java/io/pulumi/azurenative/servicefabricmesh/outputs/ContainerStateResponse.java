@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerStateResponse {
     /**
      * Human-readable status of this state.
@@ -37,13 +37,13 @@ public final class ContainerStateResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerStateResponse(
-        @OutputCustomType.Parameter("detailStatus") @Nullable String detailStatus,
-        @OutputCustomType.Parameter("exitCode") @Nullable String exitCode,
-        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("detailStatus") @Nullable String detailStatus,
+        @CustomType.Parameter("exitCode") @Nullable String exitCode,
+        @CustomType.Parameter("finishTime") @Nullable String finishTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.detailStatus = detailStatus;
         this.exitCode = exitCode;
         this.finishTime = finishTime;

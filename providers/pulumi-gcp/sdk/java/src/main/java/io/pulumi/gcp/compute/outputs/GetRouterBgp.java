@@ -3,26 +3,26 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetRouterBgpAdvertisedIpRange;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouterBgp {
     private final String advertiseMode;
     private final List<String> advertisedGroups;
     private final List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
     private final Integer asn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouterBgp(
-        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
-        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
-        @OutputCustomType.Parameter("advertisedIpRanges") List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
-        @OutputCustomType.Parameter("asn") Integer asn) {
+        @CustomType.Parameter("advertiseMode") String advertiseMode,
+        @CustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @CustomType.Parameter("advertisedIpRanges") List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
+        @CustomType.Parameter("asn") Integer asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

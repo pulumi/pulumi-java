@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends io.pu
      * Expected value is 'ServiceBusQueue'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -34,7 +34,7 @@ public final class ServiceBusQueueEventSubscriptionDestinationArgs extends io.pu
      * The Azure Resource Id that represents the endpoint of the Service Bus destination of an event subscription.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

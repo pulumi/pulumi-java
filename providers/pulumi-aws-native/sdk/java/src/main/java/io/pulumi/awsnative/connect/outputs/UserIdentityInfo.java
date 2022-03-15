@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserIdentityInfo {
     private final @Nullable String email;
     private final @Nullable String firstName;
     private final @Nullable String lastName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserIdentityInfo(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
-        @OutputCustomType.Parameter("lastName") @Nullable String lastName) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("firstName") @Nullable String firstName,
+        @CustomType.Parameter("lastName") @Nullable String lastName) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;

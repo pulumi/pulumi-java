@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appintegrations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventIntegrationEventFilter {
     /**
      * The source of the events.
@@ -15,8 +15,8 @@ public final class EventIntegrationEventFilter {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
-    private EventIntegrationEventFilter(@OutputCustomType.Parameter("source") String source) {
+    @CustomType.Constructor
+    private EventIntegrationEventFilter(@CustomType.Parameter("source") String source) {
         this.source = source;
     }
 

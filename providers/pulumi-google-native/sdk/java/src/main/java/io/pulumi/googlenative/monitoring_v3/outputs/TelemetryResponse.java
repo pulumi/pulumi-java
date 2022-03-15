@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TelemetryResponse {
     /**
      * The full name of the resource that defines this service. Formatted as described in https://cloud.google.com/apis/design/resource_names.
@@ -15,8 +15,8 @@ public final class TelemetryResponse {
      */
     private final String resourceName;
 
-    @OutputCustomType.Constructor
-    private TelemetryResponse(@OutputCustomType.Parameter("resourceName") String resourceName) {
+    @CustomType.Constructor
+    private TelemetryResponse(@CustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 

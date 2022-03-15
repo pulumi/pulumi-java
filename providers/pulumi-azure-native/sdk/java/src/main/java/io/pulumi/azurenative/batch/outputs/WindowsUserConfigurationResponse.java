@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsUserConfigurationResponse {
     /**
      * Specifies login mode for the user. The default value for VirtualMachineConfiguration pools is interactive mode and for CloudServiceConfiguration pools is batch mode.
@@ -17,8 +17,8 @@ public final class WindowsUserConfigurationResponse {
      */
     private final @Nullable String loginMode;
 
-    @OutputCustomType.Constructor
-    private WindowsUserConfigurationResponse(@OutputCustomType.Parameter("loginMode") @Nullable String loginMode) {
+    @CustomType.Constructor
+    private WindowsUserConfigurationResponse(@CustomType.Parameter("loginMode") @Nullable String loginMode) {
         this.loginMode = loginMode;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSkuResponse {
     /**
      * Optional, integer. The unit count of the resource. 1 by default.
@@ -46,13 +46,13 @@ public final class ResourceSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("size") String size,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("size") String size,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.family = family;
         this.name = name;

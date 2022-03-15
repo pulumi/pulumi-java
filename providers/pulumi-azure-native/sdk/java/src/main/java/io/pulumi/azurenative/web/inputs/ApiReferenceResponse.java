@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * Brand color
      * 
      */
-    @InputImport(name="brandColor")
+    @Import(name="brandColor")
       private final @Nullable String brandColor;
 
     public Optional<String> getBrandColor() {
@@ -30,7 +30,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * The custom API description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -41,7 +41,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * The display name
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -52,7 +52,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * The icon URI
      * 
      */
-    @InputImport(name="iconUri")
+    @Import(name="iconUri")
       private final @Nullable String iconUri;
 
     public Optional<String> getIconUri() {
@@ -63,7 +63,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * Resource reference id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -74,7 +74,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the API
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -85,7 +85,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * The JSON representation of the swagger
      * 
      */
-    @InputImport(name="swagger")
+    @Import(name="swagger")
       private final @Nullable Object swagger;
 
     public Optional<Object> getSwagger() {
@@ -96,7 +96,7 @@ public final class ApiReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * Resource reference type
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

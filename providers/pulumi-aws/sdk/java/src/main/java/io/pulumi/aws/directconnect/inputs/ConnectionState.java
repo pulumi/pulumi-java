@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the connection.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The Direct Connect endpoint on which the physical connection terminates.
      * 
      */
-    @InputImport(name="awsDevice")
+    @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
@@ -42,7 +42,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
      * 
      */
-    @InputImport(name="bandwidth")
+    @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
@@ -53,7 +53,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
      * 
      */
-    @InputImport(name="hasLogicalRedundancy")
+    @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
     public Output<String> getHasLogicalRedundancy() {
@@ -64,7 +64,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Boolean value representing if jumbo frames have been enabled for this connection.
      * 
      */
-    @InputImport(name="jumboFrameCapable")
+    @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
     public Output<Boolean> getJumboFrameCapable() {
@@ -75,7 +75,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The AWS Direct Connect location where the connection is located. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -86,7 +86,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS account that owns the connection.
      * 
      */
-    @InputImport(name="ownerAccountId")
+    @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
@@ -108,7 +108,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The name of the service provider associated with the connection.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -119,7 +119,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -130,7 +130,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

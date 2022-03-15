@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomEntityStoreAssignmentResult {
     /**
      * The link to entity store database.
@@ -43,14 +43,14 @@ public final class GetCustomEntityStoreAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomEntityStoreAssignmentResult(
-        @OutputCustomType.Parameter("entityStoreDatabaseLink") @Nullable String entityStoreDatabaseLink,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principal") @Nullable String principal,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("entityStoreDatabaseLink") @Nullable String entityStoreDatabaseLink,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principal") @Nullable String principal,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.entityStoreDatabaseLink = entityStoreDatabaseLink;
         this.id = id;
         this.name = name;

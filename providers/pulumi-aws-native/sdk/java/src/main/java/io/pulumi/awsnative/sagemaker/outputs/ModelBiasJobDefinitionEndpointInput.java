@@ -5,14 +5,14 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelBiasJobDefinitionEndpointInputS3InputMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelBiasJobDefinitionEndpointInput {
     /**
      * Monitoring end time offset, e.g. PT0H
@@ -57,18 +57,18 @@ public final class ModelBiasJobDefinitionEndpointInput {
      */
     private final @Nullable String startTimeOffset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelBiasJobDefinitionEndpointInput(
-        @OutputCustomType.Parameter("endTimeOffset") @Nullable String endTimeOffset,
-        @OutputCustomType.Parameter("endpointName") String endpointName,
-        @OutputCustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
-        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
-        @OutputCustomType.Parameter("localPath") String localPath,
-        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
-        @OutputCustomType.Parameter("probabilityThresholdAttribute") @Nullable Double probabilityThresholdAttribute,
-        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode,
-        @OutputCustomType.Parameter("startTimeOffset") @Nullable String startTimeOffset) {
+        @CustomType.Parameter("endTimeOffset") @Nullable String endTimeOffset,
+        @CustomType.Parameter("endpointName") String endpointName,
+        @CustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
+        @CustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @CustomType.Parameter("localPath") String localPath,
+        @CustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @CustomType.Parameter("probabilityThresholdAttribute") @Nullable Double probabilityThresholdAttribute,
+        @CustomType.Parameter("s3DataDistributionType") @Nullable ModelBiasJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @CustomType.Parameter("s3InputMode") @Nullable ModelBiasJobDefinitionEndpointInputS3InputMode s3InputMode,
+        @CustomType.Parameter("startTimeOffset") @Nullable String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;

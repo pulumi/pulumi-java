@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.oslogin_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSshPublicKeyResult {
     /**
      * An expiration time in microseconds since epoch.
@@ -30,12 +30,12 @@ public final class GetSshPublicKeyResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSshPublicKeyResult(
-        @OutputCustomType.Parameter("expirationTimeUsec") String expirationTimeUsec,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("expirationTimeUsec") String expirationTimeUsec,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("name") String name) {
         this.expirationTimeUsec = expirationTimeUsec;
         this.fingerprint = fingerprint;
         this.key = key;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.redshift.outputs;
 import io.pulumi.awsnative.redshift.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.redshift.outputs.ClusterLoggingProperties;
 import io.pulumi.awsnative.redshift.outputs.ClusterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * Major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default value is True
@@ -230,50 +230,50 @@ public final class GetClusterResult {
      */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("allowVersionUpgrade") @Nullable Boolean allowVersionUpgrade,
-        @OutputCustomType.Parameter("aquaConfigurationStatus") @Nullable String aquaConfigurationStatus,
-        @OutputCustomType.Parameter("automatedSnapshotRetentionPeriod") @Nullable Integer automatedSnapshotRetentionPeriod,
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("availabilityZoneRelocation") @Nullable Boolean availabilityZoneRelocation,
-        @OutputCustomType.Parameter("availabilityZoneRelocationStatus") @Nullable String availabilityZoneRelocationStatus,
-        @OutputCustomType.Parameter("classic") @Nullable Boolean classic,
-        @OutputCustomType.Parameter("clusterParameterGroupName") @Nullable String clusterParameterGroupName,
-        @OutputCustomType.Parameter("clusterSecurityGroups") @Nullable List<String> clusterSecurityGroups,
-        @OutputCustomType.Parameter("clusterType") @Nullable String clusterType,
-        @OutputCustomType.Parameter("clusterVersion") @Nullable String clusterVersion,
-        @OutputCustomType.Parameter("deferMaintenance") @Nullable Boolean deferMaintenance,
-        @OutputCustomType.Parameter("deferMaintenanceDuration") @Nullable Integer deferMaintenanceDuration,
-        @OutputCustomType.Parameter("deferMaintenanceEndTime") @Nullable String deferMaintenanceEndTime,
-        @OutputCustomType.Parameter("deferMaintenanceIdentifier") @Nullable String deferMaintenanceIdentifier,
-        @OutputCustomType.Parameter("deferMaintenanceStartTime") @Nullable String deferMaintenanceStartTime,
-        @OutputCustomType.Parameter("destinationRegion") @Nullable String destinationRegion,
-        @OutputCustomType.Parameter("elasticIp") @Nullable String elasticIp,
-        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
-        @OutputCustomType.Parameter("endpoint") @Nullable ClusterEndpoint endpoint,
-        @OutputCustomType.Parameter("enhancedVpcRouting") @Nullable Boolean enhancedVpcRouting,
-        @OutputCustomType.Parameter("hsmClientCertificateIdentifier") @Nullable String hsmClientCertificateIdentifier,
-        @OutputCustomType.Parameter("hsmConfigurationIdentifier") @Nullable String hsmConfigurationIdentifier,
-        @OutputCustomType.Parameter("iamRoles") @Nullable List<String> iamRoles,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("loggingProperties") @Nullable ClusterLoggingProperties loggingProperties,
-        @OutputCustomType.Parameter("maintenanceTrackName") @Nullable String maintenanceTrackName,
-        @OutputCustomType.Parameter("manualSnapshotRetentionPeriod") @Nullable Integer manualSnapshotRetentionPeriod,
-        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
-        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
-        @OutputCustomType.Parameter("publiclyAccessible") @Nullable Boolean publiclyAccessible,
-        @OutputCustomType.Parameter("resourceAction") @Nullable String resourceAction,
-        @OutputCustomType.Parameter("revisionTarget") @Nullable String revisionTarget,
-        @OutputCustomType.Parameter("rotateEncryptionKey") @Nullable Boolean rotateEncryptionKey,
-        @OutputCustomType.Parameter("snapshotCopyGrantName") @Nullable String snapshotCopyGrantName,
-        @OutputCustomType.Parameter("snapshotCopyManual") @Nullable Boolean snapshotCopyManual,
-        @OutputCustomType.Parameter("snapshotCopyRetentionPeriod") @Nullable Integer snapshotCopyRetentionPeriod,
-        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("allowVersionUpgrade") @Nullable Boolean allowVersionUpgrade,
+        @CustomType.Parameter("aquaConfigurationStatus") @Nullable String aquaConfigurationStatus,
+        @CustomType.Parameter("automatedSnapshotRetentionPeriod") @Nullable Integer automatedSnapshotRetentionPeriod,
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("availabilityZoneRelocation") @Nullable Boolean availabilityZoneRelocation,
+        @CustomType.Parameter("availabilityZoneRelocationStatus") @Nullable String availabilityZoneRelocationStatus,
+        @CustomType.Parameter("classic") @Nullable Boolean classic,
+        @CustomType.Parameter("clusterParameterGroupName") @Nullable String clusterParameterGroupName,
+        @CustomType.Parameter("clusterSecurityGroups") @Nullable List<String> clusterSecurityGroups,
+        @CustomType.Parameter("clusterType") @Nullable String clusterType,
+        @CustomType.Parameter("clusterVersion") @Nullable String clusterVersion,
+        @CustomType.Parameter("deferMaintenance") @Nullable Boolean deferMaintenance,
+        @CustomType.Parameter("deferMaintenanceDuration") @Nullable Integer deferMaintenanceDuration,
+        @CustomType.Parameter("deferMaintenanceEndTime") @Nullable String deferMaintenanceEndTime,
+        @CustomType.Parameter("deferMaintenanceIdentifier") @Nullable String deferMaintenanceIdentifier,
+        @CustomType.Parameter("deferMaintenanceStartTime") @Nullable String deferMaintenanceStartTime,
+        @CustomType.Parameter("destinationRegion") @Nullable String destinationRegion,
+        @CustomType.Parameter("elasticIp") @Nullable String elasticIp,
+        @CustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @CustomType.Parameter("endpoint") @Nullable ClusterEndpoint endpoint,
+        @CustomType.Parameter("enhancedVpcRouting") @Nullable Boolean enhancedVpcRouting,
+        @CustomType.Parameter("hsmClientCertificateIdentifier") @Nullable String hsmClientCertificateIdentifier,
+        @CustomType.Parameter("hsmConfigurationIdentifier") @Nullable String hsmConfigurationIdentifier,
+        @CustomType.Parameter("iamRoles") @Nullable List<String> iamRoles,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("loggingProperties") @Nullable ClusterLoggingProperties loggingProperties,
+        @CustomType.Parameter("maintenanceTrackName") @Nullable String maintenanceTrackName,
+        @CustomType.Parameter("manualSnapshotRetentionPeriod") @Nullable Integer manualSnapshotRetentionPeriod,
+        @CustomType.Parameter("nodeType") @Nullable String nodeType,
+        @CustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
+        @CustomType.Parameter("publiclyAccessible") @Nullable Boolean publiclyAccessible,
+        @CustomType.Parameter("resourceAction") @Nullable String resourceAction,
+        @CustomType.Parameter("revisionTarget") @Nullable String revisionTarget,
+        @CustomType.Parameter("rotateEncryptionKey") @Nullable Boolean rotateEncryptionKey,
+        @CustomType.Parameter("snapshotCopyGrantName") @Nullable String snapshotCopyGrantName,
+        @CustomType.Parameter("snapshotCopyManual") @Nullable Boolean snapshotCopyManual,
+        @CustomType.Parameter("snapshotCopyRetentionPeriod") @Nullable Integer snapshotCopyRetentionPeriod,
+        @CustomType.Parameter("tags") @Nullable List<ClusterTag> tags,
+        @CustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeviceStateResponse {
     /**
      * The device state data.
@@ -20,10 +20,10 @@ public final class DeviceStateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceStateResponse(
-        @OutputCustomType.Parameter("binaryData") String binaryData,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("binaryData") String binaryData,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.binaryData = binaryData;
         this.updateTime = updateTime;
     }

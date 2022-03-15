@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupCustomResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleActionBlockProperties {
     private final @Nullable RuleGroupCustomResponse customResponse;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleActionBlockProperties(@OutputCustomType.Parameter("customResponse") @Nullable RuleGroupCustomResponse customResponse) {
+    @CustomType.Constructor
+    private RuleGroupRuleActionBlockProperties(@CustomType.Parameter("customResponse") @Nullable RuleGroupCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 

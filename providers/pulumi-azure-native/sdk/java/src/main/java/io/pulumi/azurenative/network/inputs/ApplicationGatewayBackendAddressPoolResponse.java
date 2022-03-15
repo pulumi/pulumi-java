@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayBackendAddressResponse;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * Backend addresses.
      * 
      */
-    @InputImport(name="backendAddresses")
+    @Import(name="backendAddresses")
       private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
 
     public List<ApplicationGatewayBackendAddressResponse> getBackendAddresses() {
@@ -36,7 +36,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * Collection of references to IPs defined in network interfaces.
      * 
      */
-    @InputImport(name="backendIPConfigurations", required=true)
+    @Import(name="backendIPConfigurations", required=true)
       private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
@@ -47,7 +47,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -58,7 +58,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -69,7 +69,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * Name of the backend address pool that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * The provisioning state of the backend address pool resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -91,7 +91,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

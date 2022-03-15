@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.AvroFileFormatResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.JsonFileFormatResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GcsDestinationConfigResponse {
     /**
      * AVRO file format configuration.
@@ -38,13 +38,13 @@ public final class GcsDestinationConfigResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GcsDestinationConfigResponse(
-        @OutputCustomType.Parameter("avroFileFormat") AvroFileFormatResponse avroFileFormat,
-        @OutputCustomType.Parameter("fileRotationInterval") String fileRotationInterval,
-        @OutputCustomType.Parameter("fileRotationMb") Integer fileRotationMb,
-        @OutputCustomType.Parameter("jsonFileFormat") JsonFileFormatResponse jsonFileFormat,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("avroFileFormat") AvroFileFormatResponse avroFileFormat,
+        @CustomType.Parameter("fileRotationInterval") String fileRotationInterval,
+        @CustomType.Parameter("fileRotationMb") Integer fileRotationMb,
+        @CustomType.Parameter("jsonFileFormat") JsonFileFormatResponse jsonFileFormat,
+        @CustomType.Parameter("path") String path) {
         this.avroFileFormat = avroFileFormat;
         this.fileRotationInterval = fileRotationInterval;
         this.fileRotationMb = fileRotationMb;

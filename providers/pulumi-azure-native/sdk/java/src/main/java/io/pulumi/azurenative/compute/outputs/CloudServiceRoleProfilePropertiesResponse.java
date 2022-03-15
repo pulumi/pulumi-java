@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceRoleSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceRoleProfilePropertiesResponse {
     /**
      * Resource name.
@@ -23,10 +23,10 @@ public final class CloudServiceRoleProfilePropertiesResponse {
      */
     private final @Nullable CloudServiceRoleSkuResponse sku;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceRoleProfilePropertiesResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sku") @Nullable CloudServiceRoleSkuResponse sku) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sku") @Nullable CloudServiceRoleSkuResponse sku) {
         this.name = name;
         this.sku = sku;
     }

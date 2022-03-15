@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
      * A unique alphanumeric identiﬁer used to authenticate a user, developer, or calling program to your API.
      * 
      */
-    @InputImport(name="apiKey", required=true)
+    @Import(name="apiKey", required=true)
       private final Output<String> apiKey;
 
     public Output<String> getApiKey() {

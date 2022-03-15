@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.guardduty.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationConfigurationDatasourcesS3Logs {
     /**
      * When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
@@ -15,8 +15,8 @@ public final class OrganizationConfigurationDatasourcesS3Logs {
      */
     private final Boolean autoEnable;
 
-    @OutputCustomType.Constructor
-    private OrganizationConfigurationDatasourcesS3Logs(@OutputCustomType.Parameter("autoEnable") Boolean autoEnable) {
+    @CustomType.Constructor
+    private OrganizationConfigurationDatasourcesS3Logs(@CustomType.Parameter("autoEnable") Boolean autoEnable) {
         this.autoEnable = autoEnable;
     }
 

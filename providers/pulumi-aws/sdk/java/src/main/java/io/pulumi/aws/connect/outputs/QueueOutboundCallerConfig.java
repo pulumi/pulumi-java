@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QueueOutboundCallerConfig {
     /**
      * Specifies the caller ID name.
@@ -27,11 +27,11 @@ public final class QueueOutboundCallerConfig {
      */
     private final @Nullable String outboundFlowId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueOutboundCallerConfig(
-        @OutputCustomType.Parameter("outboundCallerIdName") @Nullable String outboundCallerIdName,
-        @OutputCustomType.Parameter("outboundCallerIdNumberId") @Nullable String outboundCallerIdNumberId,
-        @OutputCustomType.Parameter("outboundFlowId") @Nullable String outboundFlowId) {
+        @CustomType.Parameter("outboundCallerIdName") @Nullable String outboundCallerIdName,
+        @CustomType.Parameter("outboundCallerIdNumberId") @Nullable String outboundCallerIdNumberId,
+        @CustomType.Parameter("outboundFlowId") @Nullable String outboundFlowId) {
         this.outboundCallerIdName = outboundCallerIdName;
         this.outboundCallerIdNumberId = outboundCallerIdNumberId;
         this.outboundFlowId = outboundFlowId;

@@ -11,7 +11,7 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsPackage
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssPackage;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * The ARN of the PackagingConfiguration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -41,7 +41,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * A CMAF packaging configuration.
      * 
      */
-    @OutputExport(name="cmafPackage", type=PackagingConfigurationCmafPackage.class, parameters={})
+    @Export(name="cmafPackage", type=PackagingConfigurationCmafPackage.class, parameters={})
     private Output</* @Nullable */ PackagingConfigurationCmafPackage> cmafPackage;
 
     /**
@@ -55,7 +55,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * A Dynamic Adaptive Streaming over HTTP (DASH) packaging configuration.
      * 
      */
-    @OutputExport(name="dashPackage", type=PackagingConfigurationDashPackage.class, parameters={})
+    @Export(name="dashPackage", type=PackagingConfigurationDashPackage.class, parameters={})
     private Output</* @Nullable */ PackagingConfigurationDashPackage> dashPackage;
 
     /**
@@ -69,7 +69,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * An HTTP Live Streaming (HLS) packaging configuration.
      * 
      */
-    @OutputExport(name="hlsPackage", type=PackagingConfigurationHlsPackage.class, parameters={})
+    @Export(name="hlsPackage", type=PackagingConfigurationHlsPackage.class, parameters={})
     private Output</* @Nullable */ PackagingConfigurationHlsPackage> hlsPackage;
 
     /**
@@ -83,7 +83,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * A Microsoft Smooth Streaming (MSS) PackagingConfiguration.
      * 
      */
-    @OutputExport(name="mssPackage", type=PackagingConfigurationMssPackage.class, parameters={})
+    @Export(name="mssPackage", type=PackagingConfigurationMssPackage.class, parameters={})
     private Output</* @Nullable */ PackagingConfigurationMssPackage> mssPackage;
 
     /**
@@ -97,7 +97,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * The ID of a PackagingGroup.
      * 
      */
-    @OutputExport(name="packagingGroupId", type=String.class, parameters={})
+    @Export(name="packagingGroupId", type=String.class, parameters={})
     private Output<String> packagingGroupId;
 
     /**
@@ -111,7 +111,7 @@ public class PackagingConfiguration extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={PackagingConfigurationTag.class})
+    @Export(name="tags", type=List.class, parameters={PackagingConfigurationTag.class})
     private Output</* @Nullable */ List<PackagingConfigurationTag>> tags;
 
     /**

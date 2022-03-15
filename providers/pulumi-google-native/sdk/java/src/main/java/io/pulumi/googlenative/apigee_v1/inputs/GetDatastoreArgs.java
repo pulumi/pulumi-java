@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetDatastoreArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDatastoreArgs Empty = new GetDatastoreArgs();
 
-    @InputImport(name="datastoreId", required=true)
+    @Import(name="datastoreId", required=true)
       private final String datastoreId;
 
     public String getDatastoreId() {
         return this.datastoreId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

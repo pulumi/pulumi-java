@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GroupSubject {
     /**
      * name is the user group that matches, or "*" to match all user groups. See https://github.com/kubernetes/apiserver/blob/master/pkg/authentication/user/user.go for some well-known group names. Required.
@@ -15,8 +15,8 @@ public final class GroupSubject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GroupSubject(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GroupSubject(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

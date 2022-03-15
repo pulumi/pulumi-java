@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentSourceArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentTransformArgs;
@@ -27,7 +27,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Collections produced and consumed by component transforms of this stage.
      * 
      */
-    @InputImport(name="componentSource")
+    @Import(name="componentSource")
       private final @Nullable Output<List<ComponentSourceArgs>> componentSource;
 
     public Output<List<ComponentSourceArgs>> getComponentSource() {
@@ -38,7 +38,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Transforms that comprise this execution stage.
      * 
      */
-    @InputImport(name="componentTransform")
+    @Import(name="componentTransform")
       private final @Nullable Output<List<ComponentTransformArgs>> componentTransform;
 
     public Output<List<ComponentTransformArgs>> getComponentTransform() {
@@ -49,7 +49,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Dataflow service generated id for this stage.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -60,7 +60,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Input sources for this stage.
      * 
      */
-    @InputImport(name="inputSource")
+    @Import(name="inputSource")
       private final @Nullable Output<List<StageSourceArgs>> inputSource;
 
     public Output<List<StageSourceArgs>> getInputSource() {
@@ -71,7 +71,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Type of transform this stage is executing.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<ExecutionStageSummaryKind> kind;
 
     public Output<ExecutionStageSummaryKind> getKind() {
@@ -82,7 +82,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Dataflow service generated name for this stage.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -93,7 +93,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Output sources for this stage.
      * 
      */
-    @InputImport(name="outputSource")
+    @Import(name="outputSource")
       private final @Nullable Output<List<StageSourceArgs>> outputSource;
 
     public Output<List<StageSourceArgs>> getOutputSource() {
@@ -104,7 +104,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * Other stages that must complete before this stage can run.
      * 
      */
-    @InputImport(name="prerequisiteStage")
+    @Import(name="prerequisiteStage")
       private final @Nullable Output<List<String>> prerequisiteStage;
 
     public Output<List<String>> getPrerequisiteStage() {

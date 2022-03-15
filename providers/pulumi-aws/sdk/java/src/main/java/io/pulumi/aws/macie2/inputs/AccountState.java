@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The date and time, in UTC and extended RFC 3339 format, when the Amazon Macie account was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -29,7 +29,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Specifies how often to publish updates to policy findings for the account. This includes publishing updates to AWS Security Hub and Amazon EventBridge (formerly called Amazon CloudWatch Events). Valid values are `FIFTEEN_MINUTES`, `ONE_HOUR` or `SIX_HOURS`.
      * 
      */
-    @InputImport(name="findingPublishingFrequency")
+    @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
     public Output<String> getFindingPublishingFrequency() {
@@ -40,7 +40,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the service-linked role that allows Macie to monitor and analyze data in AWS resources for the account.
      * 
      */
-    @InputImport(name="serviceRole")
+    @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
@@ -51,7 +51,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -62,7 +62,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the Macie account.
      * 
      */
-    @InputImport(name="updatedAt")
+    @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;
 
     public Output<String> getUpdatedAt() {

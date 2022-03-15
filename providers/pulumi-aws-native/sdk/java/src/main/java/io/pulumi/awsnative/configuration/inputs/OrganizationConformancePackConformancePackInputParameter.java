@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class OrganizationConformancePackConformancePackInputParameter exte
 
     public static final OrganizationConformancePackConformancePackInputParameter Empty = new OrganizationConformancePackConformancePackInputParameter();
 
-    @InputImport(name="parameterName", required=true)
+    @Import(name="parameterName", required=true)
       private final String parameterName;
 
     public String getParameterName() {
         return this.parameterName;
     }
 
-    @InputImport(name="parameterValue", required=true)
+    @Import(name="parameterValue", required=true)
       private final String parameterValue;
 
     public String getParameterValue() {

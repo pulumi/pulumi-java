@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.cache.inputs.ScheduleEntryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Default string modeled as parameter for auto generation to work correctly.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Output<String> $default;
 
     public Output<String> get$default() {
@@ -31,7 +31,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Redis cache.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * List of patch schedules for a Redis cache.
      * 
      */
-    @InputImport(name="scheduleEntries", required=true)
+    @Import(name="scheduleEntries", required=true)
       private final Output<List<ScheduleEntryArgs>> scheduleEntries;
 
     public Output<List<ScheduleEntryArgs>> getScheduleEntries() {

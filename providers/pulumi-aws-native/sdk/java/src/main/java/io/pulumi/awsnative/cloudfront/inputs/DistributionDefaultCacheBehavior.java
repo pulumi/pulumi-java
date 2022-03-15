@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionForwardedValues;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionFunctionAssociation;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionLambdaFunctionAssociation;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,133 +20,133 @@ public final class DistributionDefaultCacheBehavior extends io.pulumi.resources.
 
     public static final DistributionDefaultCacheBehavior Empty = new DistributionDefaultCacheBehavior();
 
-    @InputImport(name="allowedMethods")
+    @Import(name="allowedMethods")
       private final @Nullable List<String> allowedMethods;
 
     public List<String> getAllowedMethods() {
         return this.allowedMethods == null ? List.of() : this.allowedMethods;
     }
 
-    @InputImport(name="cachePolicyId")
+    @Import(name="cachePolicyId")
       private final @Nullable String cachePolicyId;
 
     public Optional<String> getCachePolicyId() {
         return this.cachePolicyId == null ? Optional.empty() : Optional.ofNullable(this.cachePolicyId);
     }
 
-    @InputImport(name="cachedMethods")
+    @Import(name="cachedMethods")
       private final @Nullable List<String> cachedMethods;
 
     public List<String> getCachedMethods() {
         return this.cachedMethods == null ? List.of() : this.cachedMethods;
     }
 
-    @InputImport(name="compress")
+    @Import(name="compress")
       private final @Nullable Boolean compress;
 
     public Optional<Boolean> getCompress() {
         return this.compress == null ? Optional.empty() : Optional.ofNullable(this.compress);
     }
 
-    @InputImport(name="defaultTTL")
+    @Import(name="defaultTTL")
       private final @Nullable Double defaultTTL;
 
     public Optional<Double> getDefaultTTL() {
         return this.defaultTTL == null ? Optional.empty() : Optional.ofNullable(this.defaultTTL);
     }
 
-    @InputImport(name="fieldLevelEncryptionId")
+    @Import(name="fieldLevelEncryptionId")
       private final @Nullable String fieldLevelEncryptionId;
 
     public Optional<String> getFieldLevelEncryptionId() {
         return this.fieldLevelEncryptionId == null ? Optional.empty() : Optional.ofNullable(this.fieldLevelEncryptionId);
     }
 
-    @InputImport(name="forwardedValues")
+    @Import(name="forwardedValues")
       private final @Nullable DistributionForwardedValues forwardedValues;
 
     public Optional<DistributionForwardedValues> getForwardedValues() {
         return this.forwardedValues == null ? Optional.empty() : Optional.ofNullable(this.forwardedValues);
     }
 
-    @InputImport(name="functionAssociations")
+    @Import(name="functionAssociations")
       private final @Nullable List<DistributionFunctionAssociation> functionAssociations;
 
     public List<DistributionFunctionAssociation> getFunctionAssociations() {
         return this.functionAssociations == null ? List.of() : this.functionAssociations;
     }
 
-    @InputImport(name="lambdaFunctionAssociations")
+    @Import(name="lambdaFunctionAssociations")
       private final @Nullable List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations;
 
     public List<DistributionLambdaFunctionAssociation> getLambdaFunctionAssociations() {
         return this.lambdaFunctionAssociations == null ? List.of() : this.lambdaFunctionAssociations;
     }
 
-    @InputImport(name="maxTTL")
+    @Import(name="maxTTL")
       private final @Nullable Double maxTTL;
 
     public Optional<Double> getMaxTTL() {
         return this.maxTTL == null ? Optional.empty() : Optional.ofNullable(this.maxTTL);
     }
 
-    @InputImport(name="minTTL")
+    @Import(name="minTTL")
       private final @Nullable Double minTTL;
 
     public Optional<Double> getMinTTL() {
         return this.minTTL == null ? Optional.empty() : Optional.ofNullable(this.minTTL);
     }
 
-    @InputImport(name="originRequestPolicyId")
+    @Import(name="originRequestPolicyId")
       private final @Nullable String originRequestPolicyId;
 
     public Optional<String> getOriginRequestPolicyId() {
         return this.originRequestPolicyId == null ? Optional.empty() : Optional.ofNullable(this.originRequestPolicyId);
     }
 
-    @InputImport(name="realtimeLogConfigArn")
+    @Import(name="realtimeLogConfigArn")
       private final @Nullable String realtimeLogConfigArn;
 
     public Optional<String> getRealtimeLogConfigArn() {
         return this.realtimeLogConfigArn == null ? Optional.empty() : Optional.ofNullable(this.realtimeLogConfigArn);
     }
 
-    @InputImport(name="responseHeadersPolicyId")
+    @Import(name="responseHeadersPolicyId")
       private final @Nullable String responseHeadersPolicyId;
 
     public Optional<String> getResponseHeadersPolicyId() {
         return this.responseHeadersPolicyId == null ? Optional.empty() : Optional.ofNullable(this.responseHeadersPolicyId);
     }
 
-    @InputImport(name="smoothStreaming")
+    @Import(name="smoothStreaming")
       private final @Nullable Boolean smoothStreaming;
 
     public Optional<Boolean> getSmoothStreaming() {
         return this.smoothStreaming == null ? Optional.empty() : Optional.ofNullable(this.smoothStreaming);
     }
 
-    @InputImport(name="targetOriginId", required=true)
+    @Import(name="targetOriginId", required=true)
       private final String targetOriginId;
 
     public String getTargetOriginId() {
         return this.targetOriginId;
     }
 
-    @InputImport(name="trustedKeyGroups")
+    @Import(name="trustedKeyGroups")
       private final @Nullable List<String> trustedKeyGroups;
 
     public List<String> getTrustedKeyGroups() {
         return this.trustedKeyGroups == null ? List.of() : this.trustedKeyGroups;
     }
 
-    @InputImport(name="trustedSigners")
+    @Import(name="trustedSigners")
       private final @Nullable List<String> trustedSigners;
 
     public List<String> getTrustedSigners() {
         return this.trustedSigners == null ? List.of() : this.trustedSigners;
     }
 
-    @InputImport(name="viewerProtocolPolicy", required=true)
+    @Import(name="viewerProtocolPolicy", required=true)
       private final String viewerProtocolPolicy;
 
     public String getViewerProtocolPolicy() {

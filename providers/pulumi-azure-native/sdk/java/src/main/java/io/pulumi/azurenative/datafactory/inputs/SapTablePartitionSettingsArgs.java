@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
      * 
      */
-    @InputImport(name="maxPartitionsNumber")
+    @Import(name="maxPartitionsNumber")
       private final @Nullable Output<Object> maxPartitionsNumber;
 
     public Output<Object> getMaxPartitionsNumber() {
@@ -33,7 +33,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionColumnName")
+    @Import(name="partitionColumnName")
       private final @Nullable Output<Object> partitionColumnName;
 
     public Output<Object> getPartitionColumnName() {
@@ -44,7 +44,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionLowerBound")
+    @Import(name="partitionLowerBound")
       private final @Nullable Output<Object> partitionLowerBound;
 
     public Output<Object> getPartitionLowerBound() {
@@ -55,7 +55,7 @@ public final class SapTablePartitionSettingsArgs extends io.pulumi.resources.Res
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionUpperBound")
+    @Import(name="partitionUpperBound")
       private final @Nullable Output<Object> partitionUpperBound;
 
     public Output<Object> getPartitionUpperBound() {

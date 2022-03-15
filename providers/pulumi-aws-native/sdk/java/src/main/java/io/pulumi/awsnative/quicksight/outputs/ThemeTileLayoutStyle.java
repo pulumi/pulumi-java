@@ -5,20 +5,20 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.ThemeGutterStyle;
 import io.pulumi.awsnative.quicksight.outputs.ThemeMarginStyle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeTileLayoutStyle {
     private final @Nullable ThemeGutterStyle gutter;
     private final @Nullable ThemeMarginStyle margin;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeTileLayoutStyle(
-        @OutputCustomType.Parameter("gutter") @Nullable ThemeGutterStyle gutter,
-        @OutputCustomType.Parameter("margin") @Nullable ThemeMarginStyle margin) {
+        @CustomType.Parameter("gutter") @Nullable ThemeGutterStyle gutter,
+        @CustomType.Parameter("margin") @Nullable ThemeMarginStyle margin) {
         this.gutter = gutter;
         this.margin = margin;
     }

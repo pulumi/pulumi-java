@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1ScheduleSpecResponse;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1WorkloadResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     /**
      * Immutable. The timestamp when the pipeline was initially created. Set by the Data Pipelines service.
@@ -69,19 +69,19 @@ public final class GetPipelineResult {
      */
     private final GoogleCloudDatapipelinesV1WorkloadResponse workload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("jobCount") Integer jobCount,
-        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pipelineSources") Map<String,String> pipelineSources,
-        @OutputCustomType.Parameter("scheduleInfo") GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo,
-        @OutputCustomType.Parameter("schedulerServiceAccountEmail") String schedulerServiceAccountEmail,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("workload") GoogleCloudDatapipelinesV1WorkloadResponse workload) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("jobCount") Integer jobCount,
+        @CustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pipelineSources") Map<String,String> pipelineSources,
+        @CustomType.Parameter("scheduleInfo") GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo,
+        @CustomType.Parameter("schedulerServiceAccountEmail") String schedulerServiceAccountEmail,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("workload") GoogleCloudDatapipelinesV1WorkloadResponse workload) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.jobCount = jobCount;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosDeviceListResponse {
     /**
      * A list of iOS devices.
@@ -16,8 +16,8 @@ public final class IosDeviceListResponse {
      */
     private final List<IosDeviceResponse> iosDevices;
 
-    @OutputCustomType.Constructor
-    private IosDeviceListResponse(@OutputCustomType.Parameter("iosDevices") List<IosDeviceResponse> iosDevices) {
+    @CustomType.Constructor
+    private IosDeviceListResponse(@CustomType.Parameter("iosDevices") List<IosDeviceResponse> iosDevices) {
         this.iosDevices = iosDevices;
     }
 

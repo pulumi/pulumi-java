@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
      * The name of the host pool within the specified resource group
      * 
      */
-    @InputImport(name="hostPoolName", required=true)
+    @Import(name="hostPoolName", required=true)
       private final String hostPoolName;
 
     public String getHostPoolName() {
@@ -27,7 +27,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
      * The name of the private endpoint connection associated with the Azure resource
      * 
      */
-    @InputImport(name="privateEndpointConnectionName", required=true)
+    @Import(name="privateEndpointConnectionName", required=true)
       private final String privateEndpointConnectionName;
 
     public String getPrivateEndpointConnectionName() {
@@ -38,7 +38,7 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

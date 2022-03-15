@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). The default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -30,7 +30,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Whether the product version is active. Inactive provisioning artifacts are invisible to end users. End users cannot launch or update a provisioned product from an inactive provisioning artifact. Default is `true`.
      * 
      */
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
@@ -41,7 +41,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Time when the provisioning artifact was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -52,7 +52,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
      * 
      */
-    @InputImport(name="disableTemplateValidation")
+    @Import(name="disableTemplateValidation")
       private final @Nullable Output<Boolean> disableTemplateValidation;
 
     public Output<Boolean> getDisableTemplateValidation() {
@@ -74,7 +74,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Information set by the administrator to provide guidance to end users about which provisioning artifacts to use. Valid values are `DEFAULT` and `DEPRECATED`. The default is `DEFAULT`. Users are able to make updates to a provisioned product of a deprecated version but cannot launch new provisioned products using a deprecated version.
      * 
      */
-    @InputImport(name="guidance")
+    @Import(name="guidance")
       private final @Nullable Output<String> guidance;
 
     public Output<String> getGuidance() {
@@ -85,7 +85,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Identifier of the product.
      * 
      */
-    @InputImport(name="productId")
+    @Import(name="productId")
       private final @Nullable Output<String> productId;
 
     public Output<String> getProductId() {
@@ -107,7 +107,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
      * 
      */
-    @InputImport(name="templatePhysicalId")
+    @Import(name="templatePhysicalId")
       private final @Nullable Output<String> templatePhysicalId;
 
     public Output<String> getTemplatePhysicalId() {
@@ -118,7 +118,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Template source as URL of the CloudFormation template in Amazon S3.
      * 
      */
-    @InputImport(name="templateUrl")
+    @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
     public Output<String> getTemplateUrl() {
@@ -129,7 +129,7 @@ public final class ProvisioningArtifactState extends io.pulumi.resources.Resourc
      * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

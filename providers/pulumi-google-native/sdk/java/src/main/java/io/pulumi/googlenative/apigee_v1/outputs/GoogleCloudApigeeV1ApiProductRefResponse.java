@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1ApiProductRefResponse {
     /**
      * Name of the API product.
@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1ApiProductRefResponse(
-        @OutputCustomType.Parameter("apiproduct") String apiproduct,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("apiproduct") String apiproduct,
+        @CustomType.Parameter("status") String status) {
         this.apiproduct = apiproduct;
         this.status = status;
     }

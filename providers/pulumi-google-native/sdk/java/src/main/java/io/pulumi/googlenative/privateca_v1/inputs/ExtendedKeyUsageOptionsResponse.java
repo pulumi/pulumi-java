@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
      * 
      */
-    @InputImport(name="clientAuth", required=true)
+    @Import(name="clientAuth", required=true)
       private final Boolean clientAuth;
 
     public Boolean getClientAuth() {
@@ -31,7 +31,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
      * 
      */
-    @InputImport(name="codeSigning", required=true)
+    @Import(name="codeSigning", required=true)
       private final Boolean codeSigning;
 
     public Boolean getCodeSigning() {
@@ -42,7 +42,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
      * 
      */
-    @InputImport(name="emailProtection", required=true)
+    @Import(name="emailProtection", required=true)
       private final Boolean emailProtection;
 
     public Boolean getEmailProtection() {
@@ -53,7 +53,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
      * 
      */
-    @InputImport(name="ocspSigning", required=true)
+    @Import(name="ocspSigning", required=true)
       private final Boolean ocspSigning;
 
     public Boolean getOcspSigning() {
@@ -64,7 +64,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
      * 
      */
-    @InputImport(name="serverAuth", required=true)
+    @Import(name="serverAuth", required=true)
       private final Boolean serverAuth;
 
     public Boolean getServerAuth() {
@@ -75,7 +75,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
      * 
      */
-    @InputImport(name="timeStamping", required=true)
+    @Import(name="timeStamping", required=true)
       private final Boolean timeStamping;
 
     public Boolean getTimeStamping() {

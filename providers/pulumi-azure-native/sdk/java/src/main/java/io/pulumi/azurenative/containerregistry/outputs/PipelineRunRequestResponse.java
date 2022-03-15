@@ -5,14 +5,14 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunTargetPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineRunRequestResponse {
     /**
      * List of source artifacts to be transferred by the pipeline.
@@ -43,13 +43,13 @@ public final class PipelineRunRequestResponse {
      */
     private final @Nullable PipelineRunTargetPropertiesResponse target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineRunRequestResponse(
-        @OutputCustomType.Parameter("artifacts") @Nullable List<String> artifacts,
-        @OutputCustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
-        @OutputCustomType.Parameter("pipelineResourceId") @Nullable String pipelineResourceId,
-        @OutputCustomType.Parameter("source") @Nullable PipelineRunSourcePropertiesResponse source,
-        @OutputCustomType.Parameter("target") @Nullable PipelineRunTargetPropertiesResponse target) {
+        @CustomType.Parameter("artifacts") @Nullable List<String> artifacts,
+        @CustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
+        @CustomType.Parameter("pipelineResourceId") @Nullable String pipelineResourceId,
+        @CustomType.Parameter("source") @Nullable PipelineRunSourcePropertiesResponse source,
+        @CustomType.Parameter("target") @Nullable PipelineRunTargetPropertiesResponse target) {
         this.artifacts = artifacts;
         this.catalogDigest = catalogDigest;
         this.pipelineResourceId = pipelineResourceId;

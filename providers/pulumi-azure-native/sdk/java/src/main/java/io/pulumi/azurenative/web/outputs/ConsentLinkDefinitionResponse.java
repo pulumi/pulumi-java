@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConsentLinkDefinitionResponse {
     /**
      * Display name of the parameter in the connection provider's OAuth settings
@@ -32,12 +32,12 @@ public final class ConsentLinkDefinitionResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsentLinkDefinitionResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("firstPartyLoginUri") @Nullable String firstPartyLoginUri,
-        @OutputCustomType.Parameter("link") @Nullable String link,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("firstPartyLoginUri") @Nullable String firstPartyLoginUri,
+        @CustomType.Parameter("link") @Nullable String link,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.displayName = displayName;
         this.firstPartyLoginUri = firstPartyLoginUri;
         this.link = link;

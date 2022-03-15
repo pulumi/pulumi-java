@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ResourceInputArgs;
 import io.pulumi.example.Utilities;
@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::ResourceInput")
 public class ResourceInput extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="bar", type=String.class, parameters={})
+    @Export(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
     public Output</* @Nullable */ String> getBar() {

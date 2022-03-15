@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.AzureFileVolumeResponse;
 import io.pulumi.azurenative.containerinstance.inputs.GitRepoVolumeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure File volume.
      * 
      */
-    @InputImport(name="azureFile")
+    @Import(name="azureFile")
       private final @Nullable AzureFileVolumeResponse azureFile;
 
     public Optional<AzureFileVolumeResponse> getAzureFile() {
@@ -37,7 +37,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * The empty directory volume.
      * 
      */
-    @InputImport(name="emptyDir")
+    @Import(name="emptyDir")
       private final @Nullable Object emptyDir;
 
     public Optional<Object> getEmptyDir() {
@@ -48,7 +48,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * The git repo volume.
      * 
      */
-    @InputImport(name="gitRepo")
+    @Import(name="gitRepo")
       private final @Nullable GitRepoVolumeResponse gitRepo;
 
     public Optional<GitRepoVolumeResponse> getGitRepo() {
@@ -59,7 +59,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the volume.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -70,7 +70,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * The secret volume.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Map<String,String> secret;
 
     public Map<String,String> getSecret() {

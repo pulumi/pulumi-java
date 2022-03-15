@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AddressResponse {
     /**
      * The address line1.
@@ -47,15 +47,15 @@ public final class AddressResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AddressResponse(
-        @OutputCustomType.Parameter("addressLine1") @Nullable String addressLine1,
-        @OutputCustomType.Parameter("addressLine2") @Nullable String addressLine2,
-        @OutputCustomType.Parameter("addressLine3") @Nullable String addressLine3,
-        @OutputCustomType.Parameter("city") @Nullable String city,
-        @OutputCustomType.Parameter("country") String country,
-        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("addressLine1") @Nullable String addressLine1,
+        @CustomType.Parameter("addressLine2") @Nullable String addressLine2,
+        @CustomType.Parameter("addressLine3") @Nullable String addressLine3,
+        @CustomType.Parameter("city") @Nullable String city,
+        @CustomType.Parameter("country") String country,
+        @CustomType.Parameter("postalCode") @Nullable String postalCode,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.addressLine1 = addressLine1;
         this.addressLine2 = addressLine2;
         this.addressLine3 = addressLine3;

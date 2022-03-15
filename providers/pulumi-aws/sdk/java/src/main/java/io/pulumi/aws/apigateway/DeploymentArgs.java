@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the deployment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * REST API identifier.
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -41,7 +41,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Description to set on the stage managed by the `stage_name` argument.
      * 
      */
-    @InputImport(name="stageDescription")
+    @Import(name="stageDescription")
       private final @Nullable Output<String> stageDescription;
 
     public Output<String> getStageDescription() {
@@ -52,7 +52,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
@@ -63,7 +63,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
     public Output<Map<String,String>> getTriggers() {
@@ -74,7 +74,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Map to set on the stage managed by the `stage_name` argument.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {

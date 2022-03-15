@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateProvisioningHook;
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProvisioningTemplateResult {
     private final @Nullable String description;
     private final @Nullable Boolean enabled;
@@ -23,15 +23,15 @@ public final class GetProvisioningTemplateResult {
     private final @Nullable String templateArn;
     private final @Nullable String templateBody;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProvisioningTemplateResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("preProvisioningHook") @Nullable ProvisioningTemplateProvisioningHook preProvisioningHook,
-        @OutputCustomType.Parameter("provisioningRoleArn") @Nullable String provisioningRoleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ProvisioningTemplateTag> tags,
-        @OutputCustomType.Parameter("templateArn") @Nullable String templateArn,
-        @OutputCustomType.Parameter("templateBody") @Nullable String templateBody) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("preProvisioningHook") @Nullable ProvisioningTemplateProvisioningHook preProvisioningHook,
+        @CustomType.Parameter("provisioningRoleArn") @Nullable String provisioningRoleArn,
+        @CustomType.Parameter("tags") @Nullable List<ProvisioningTemplateTag> tags,
+        @CustomType.Parameter("templateArn") @Nullable String templateArn,
+        @CustomType.Parameter("templateBody") @Nullable String templateBody) {
         this.description = description;
         this.enabled = enabled;
         this.preProvisioningHook = preProvisioningHook;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopologySpreadConstraint {
     /**
      * LabelSelector is used to find matching pods. Pods that match this label selector are counted to determine the number of pods in their corresponding topology domain.
@@ -41,12 +41,12 @@ public final class TopologySpreadConstraint {
      */
     private final String whenUnsatisfiable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopologySpreadConstraint(
-        @OutputCustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
-        @OutputCustomType.Parameter("maxSkew") Integer maxSkew,
-        @OutputCustomType.Parameter("topologyKey") String topologyKey,
-        @OutputCustomType.Parameter("whenUnsatisfiable") String whenUnsatisfiable) {
+        @CustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
+        @CustomType.Parameter("maxSkew") Integer maxSkew,
+        @CustomType.Parameter("topologyKey") String topologyKey,
+        @CustomType.Parameter("whenUnsatisfiable") String whenUnsatisfiable) {
         this.labelSelector = labelSelector;
         this.maxSkew = maxSkew;
         this.topologyKey = topologyKey;

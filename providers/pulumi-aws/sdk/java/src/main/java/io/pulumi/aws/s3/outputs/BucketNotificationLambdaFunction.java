@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketNotificationLambdaFunction {
     /**
      * [Event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
@@ -38,13 +38,13 @@ public final class BucketNotificationLambdaFunction {
      */
     private final @Nullable String lambdaFunctionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketNotificationLambdaFunction(
-        @OutputCustomType.Parameter("events") List<String> events,
-        @OutputCustomType.Parameter("filterPrefix") @Nullable String filterPrefix,
-        @OutputCustomType.Parameter("filterSuffix") @Nullable String filterSuffix,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lambdaFunctionArn") @Nullable String lambdaFunctionArn) {
+        @CustomType.Parameter("events") List<String> events,
+        @CustomType.Parameter("filterPrefix") @Nullable String filterPrefix,
+        @CustomType.Parameter("filterSuffix") @Nullable String filterSuffix,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lambdaFunctionArn") @Nullable String lambdaFunctionArn) {
         this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;

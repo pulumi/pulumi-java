@@ -5,14 +5,14 @@ package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryMixedMeasureMappingMeasureValueType;
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryMultiMeasureAttributeMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryMixedMeasureMapping {
     private final @Nullable String measureName;
     private final ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType;
@@ -20,13 +20,13 @@ public final class ScheduledQueryMixedMeasureMapping {
     private final @Nullable String sourceColumn;
     private final @Nullable String targetMeasureName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledQueryMixedMeasureMapping(
-        @OutputCustomType.Parameter("measureName") @Nullable String measureName,
-        @OutputCustomType.Parameter("measureValueType") ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType,
-        @OutputCustomType.Parameter("multiMeasureAttributeMappings") @Nullable List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
-        @OutputCustomType.Parameter("sourceColumn") @Nullable String sourceColumn,
-        @OutputCustomType.Parameter("targetMeasureName") @Nullable String targetMeasureName) {
+        @CustomType.Parameter("measureName") @Nullable String measureName,
+        @CustomType.Parameter("measureValueType") ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType,
+        @CustomType.Parameter("multiMeasureAttributeMappings") @Nullable List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
+        @CustomType.Parameter("sourceColumn") @Nullable String sourceColumn,
+        @CustomType.Parameter("targetMeasureName") @Nullable String targetMeasureName) {
         this.measureName = measureName;
         this.measureValueType = measureValueType;
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;

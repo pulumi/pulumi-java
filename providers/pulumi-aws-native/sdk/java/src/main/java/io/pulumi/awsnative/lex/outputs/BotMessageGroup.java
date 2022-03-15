@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotMessageGroup {
     private final BotMessage message;
     /**
@@ -18,10 +18,10 @@ public final class BotMessageGroup {
      */
     private final @Nullable List<BotMessage> variations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotMessageGroup(
-        @OutputCustomType.Parameter("message") BotMessage message,
-        @OutputCustomType.Parameter("variations") @Nullable List<BotMessage> variations) {
+        @CustomType.Parameter("message") BotMessage message,
+        @CustomType.Parameter("variations") @Nullable List<BotMessage> variations) {
         this.message = message;
         this.variations = variations;
     }

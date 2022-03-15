@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryFieldArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageFileSetArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
      * Field in a BigQuery table where each cell represents a dictionary phrase.
      * 
      */
-    @InputImport(name="bigQueryField")
+    @Import(name="bigQueryField")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField;
 
     public Output<GooglePrivacyDlpV2BigQueryFieldArgs> getBigQueryField() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
      * Set of files containing newline-delimited lists of dictionary phrases.
      * 
      */
-    @InputImport(name="cloudStorageFileSet")
+    @Import(name="cloudStorageFileSet")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet;
 
     public Output<GooglePrivacyDlpV2CloudStorageFileSetArgs> getCloudStorageFileSet() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
      * Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API. If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
      * 
      */
-    @InputImport(name="outputPath")
+    @Import(name="outputPath")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath;
 
     public Output<GooglePrivacyDlpV2CloudStoragePathArgs> getOutputPath() {

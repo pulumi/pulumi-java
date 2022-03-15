@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs e
      * The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined. Defaults to `0`.
      * 
      */
-    @InputImport(name="base")
+    @Import(name="base")
       private final @Nullable Output<Integer> base;
 
     public Output<Integer> getBase() {
@@ -30,7 +30,7 @@ public final class ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs e
      * Name of the capacity provider.
      * 
      */
-    @InputImport(name="capacityProvider", required=true)
+    @Import(name="capacityProvider", required=true)
       private final Output<String> capacityProvider;
 
     public Output<String> getCapacityProvider() {
@@ -41,7 +41,7 @@ public final class ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs e
      * The relative percentage of the total number of launched tasks that should use the specified capacity provider. The `weight` value is taken into consideration after the `base` count of tasks has been satisfied. Defaults to `0`.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

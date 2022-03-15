@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareConfigResponse {
     /**
      * Optional. Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation". Section names must not contain hyphens ("-"), opening square brackets ("["), or closing square brackets ("]"). The property name must not be empty and must not contain an equals sign ("=") or semicolon (";"). Section and property names must not contain a period ("."). Apache Airflow configuration property names must be written in [snake_case](https://en.wikipedia.org/wiki/Snake_case). Property values can contain any character, and can be written in any lower/upper case format. Certain Apache Airflow configuration property values are [blocked](/composer/docs/concepts/airflow-configurations), and cannot be overridden.
@@ -42,14 +42,14 @@ public final class SoftwareConfigResponse {
      */
     private final Integer schedulerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareConfigResponse(
-        @OutputCustomType.Parameter("airflowConfigOverrides") Map<String,String> airflowConfigOverrides,
-        @OutputCustomType.Parameter("envVariables") Map<String,String> envVariables,
-        @OutputCustomType.Parameter("imageVersion") String imageVersion,
-        @OutputCustomType.Parameter("pypiPackages") Map<String,String> pypiPackages,
-        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
-        @OutputCustomType.Parameter("schedulerCount") Integer schedulerCount) {
+        @CustomType.Parameter("airflowConfigOverrides") Map<String,String> airflowConfigOverrides,
+        @CustomType.Parameter("envVariables") Map<String,String> envVariables,
+        @CustomType.Parameter("imageVersion") String imageVersion,
+        @CustomType.Parameter("pypiPackages") Map<String,String> pypiPackages,
+        @CustomType.Parameter("pythonVersion") String pythonVersion,
+        @CustomType.Parameter("schedulerCount") Integer schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;

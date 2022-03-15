@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

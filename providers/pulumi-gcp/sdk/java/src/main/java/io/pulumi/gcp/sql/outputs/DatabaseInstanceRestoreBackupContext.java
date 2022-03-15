@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceRestoreBackupContext {
     /**
      * The ID of the backup run to restore from.
@@ -29,11 +29,11 @@ public final class DatabaseInstanceRestoreBackupContext {
      */
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceRestoreBackupContext(
-        @OutputCustomType.Parameter("backupRunId") Integer backupRunId,
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("project") @Nullable String project) {
+        @CustomType.Parameter("backupRunId") Integer backupRunId,
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("project") @Nullable String project) {
         this.backupRunId = backupRunId;
         this.instanceId = instanceId;
         this.project = project;

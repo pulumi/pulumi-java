@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UniformShardingResponse {
     /**
      * Total number of shards. When any physical devices are selected, the number must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
@@ -15,8 +15,8 @@ public final class UniformShardingResponse {
      */
     private final Integer numShards;
 
-    @OutputCustomType.Constructor
-    private UniformShardingResponse(@OutputCustomType.Parameter("numShards") Integer numShards) {
+    @CustomType.Constructor
+    private UniformShardingResponse(@CustomType.Parameter("numShards") Integer numShards) {
         this.numShards = numShards;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.aws.ec2transitgateway.inputs.GetPeeringAttachmentFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetPeeringAttachmentArgs extends io.pulumi.resources.InvokeAr
      * One or more configuration blocks containing name-values filters. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetPeeringAttachmentFilter> filters;
 
     public List<GetPeeringAttachmentFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetPeeringAttachmentArgs extends io.pulumi.resources.InvokeAr
      * Identifier of the EC2 Transit Gateway Peering Attachment.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -44,7 +44,7 @@ public final class GetPeeringAttachmentArgs extends io.pulumi.resources.InvokeAr
      * a pair on the specific EC2 Transit Gateway Peering Attachment to retrieve.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

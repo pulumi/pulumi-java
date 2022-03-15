@@ -9,7 +9,7 @@ import io.pulumi.azurenative.migrate.outputs.MigrateProjectPropertiesResponse;
 import io.pulumi.azurenative.migrate.outputs.MigrateProjectResponseTags;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * Gets or sets the eTag for concurrency control.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -50,7 +50,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * Gets or sets the Azure location in which migrate project is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * Gets the name of the migrate project.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * Gets or sets the nested properties.
      * 
      */
-    @OutputExport(name="properties", type=MigrateProjectPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=MigrateProjectPropertiesResponse.class, parameters={})
     private Output<MigrateProjectPropertiesResponse> properties;
 
     /**
@@ -92,7 +92,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * Gets or sets the tags.
      * 
      */
-    @OutputExport(name="tags", type=MigrateProjectResponseTags.class, parameters={})
+    @Export(name="tags", type=MigrateProjectResponseTags.class, parameters={})
     private Output</* @Nullable */ MigrateProjectResponseTags> tags;
 
     /**
@@ -106,7 +106,7 @@ public class MigrateProject extends io.pulumi.resources.CustomResource {
      * Handled by resource provider. Type = Microsoft.Migrate/MigrateProject.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * One or more endpoint [events](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters) for which to receive notifications.
      * 
      */
-    @InputImport(name="connectionEvents", required=true)
+    @Import(name="connectionEvents", required=true)
       private final Output<List<String>> connectionEvents;
 
     public Output<List<String>> getConnectionEvents() {
@@ -30,7 +30,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * The ARN of the SNS topic for the notifications.
      * 
      */
-    @InputImport(name="connectionNotificationArn", required=true)
+    @Import(name="connectionNotificationArn", required=true)
       private final Output<String> connectionNotificationArn;
 
     public Output<String> getConnectionNotificationArn() {
@@ -41,7 +41,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * The ID of the VPC Endpoint to receive notifications for.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
@@ -52,7 +52,7 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
      * The ID of the VPC Endpoint Service to receive notifications for.
      * 
      */
-    @InputImport(name="vpcEndpointServiceId")
+    @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
     public Output<String> getVpcEndpointServiceId() {

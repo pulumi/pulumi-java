@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AlexaChannelPropertiesResponse {
     /**
      * The Alexa skill Id
@@ -31,12 +31,12 @@ public final class AlexaChannelPropertiesResponse {
      */
     private final String urlFragment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlexaChannelPropertiesResponse(
-        @OutputCustomType.Parameter("alexaSkillId") String alexaSkillId,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("serviceEndpointUri") String serviceEndpointUri,
-        @OutputCustomType.Parameter("urlFragment") String urlFragment) {
+        @CustomType.Parameter("alexaSkillId") String alexaSkillId,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("serviceEndpointUri") String serviceEndpointUri,
+        @CustomType.Parameter("urlFragment") String urlFragment) {
         this.alexaSkillId = alexaSkillId;
         this.isEnabled = isEnabled;
         this.serviceEndpointUri = serviceEndpointUri;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesListArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class PropertiesNetworkInjectionArgs extends io.pulumi.resources.Re
      * Network injection configuration
      * 
      */
-    @InputImport(name="virtualNetworks")
+    @Import(name="virtualNetworks")
       private final @Nullable Output<VirtualNetworkPropertiesListArgs> virtualNetworks;
 
     public Output<VirtualNetworkPropertiesListArgs> getVirtualNetworks() {

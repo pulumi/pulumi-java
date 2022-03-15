@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TarReadSettingsResponse {
     /**
      * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
@@ -24,10 +24,10 @@ public final class TarReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TarReadSettingsResponse(
-        @OutputCustomType.Parameter("preserveCompressionFileNameAsFolder") @Nullable Object preserveCompressionFileNameAsFolder,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("preserveCompressionFileNameAsFolder") @Nullable Object preserveCompressionFileNameAsFolder,
+        @CustomType.Parameter("type") String type) {
         this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
         this.type = type;
     }

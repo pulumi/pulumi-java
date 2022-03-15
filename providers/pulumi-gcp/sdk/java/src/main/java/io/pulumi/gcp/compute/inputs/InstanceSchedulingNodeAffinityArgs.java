@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceSchedulingNodeAffinityArgs extends io.pulumi.resource
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -30,7 +30,7 @@ public final class InstanceSchedulingNodeAffinityArgs extends io.pulumi.resource
      * or `NOT_IN` for anti-affinities.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<String> operator;
 
     public Output<String> getOperator() {
@@ -41,7 +41,7 @@ public final class InstanceSchedulingNodeAffinityArgs extends io.pulumi.resource
      * Corresponds to the label values of a reservation resource.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

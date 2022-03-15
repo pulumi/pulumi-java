@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UsagePlanThrottleSettings extends io.pulumi.resources.InvokeA
      * The maximum API request rate limit over a time ranging from one to a few seconds. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity.
      * 
      */
-    @InputImport(name="burstLimit")
+    @Import(name="burstLimit")
       private final @Nullable Integer burstLimit;
 
     public Optional<Integer> getBurstLimit() {
@@ -30,7 +30,7 @@ public final class UsagePlanThrottleSettings extends io.pulumi.resources.InvokeA
      * The API request steady-state rate limit (average requests per second over an extended period of time).
      * 
      */
-    @InputImport(name="rateLimit")
+    @Import(name="rateLimit")
       private final @Nullable Double rateLimit;
 
     public Optional<Double> getRateLimit() {

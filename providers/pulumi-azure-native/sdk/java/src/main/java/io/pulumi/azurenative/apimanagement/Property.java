@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.PropertyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -49,7 +49,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    @OutputExport(name="secret", type=Boolean.class, parameters={})
+    @Export(name="secret", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> secret;
 
     /**
@@ -77,7 +77,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * Optional tags that when provided can be used to filter the property list.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
     /**
@@ -91,7 +91,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -105,7 +105,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

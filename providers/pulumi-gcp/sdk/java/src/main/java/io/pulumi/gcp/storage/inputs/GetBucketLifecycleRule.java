@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.GetBucketLifecycleRuleAction;
 import io.pulumi.gcp.storage.inputs.GetBucketLifecycleRuleCondition;
 import java.util.List;
@@ -14,14 +14,14 @@ public final class GetBucketLifecycleRule extends io.pulumi.resources.InvokeArgs
 
     public static final GetBucketLifecycleRule Empty = new GetBucketLifecycleRule();
 
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final List<GetBucketLifecycleRuleAction> actions;
 
     public List<GetBucketLifecycleRuleAction> getActions() {
         return this.actions;
     }
 
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<GetBucketLifecycleRuleCondition> conditions;
 
     public List<GetBucketLifecycleRuleCondition> getConditions() {

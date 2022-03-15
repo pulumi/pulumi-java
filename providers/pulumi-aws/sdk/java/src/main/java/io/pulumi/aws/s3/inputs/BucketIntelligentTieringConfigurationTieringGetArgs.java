@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
      * S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
      * 
      */
-    @InputImport(name="accessTier", required=true)
+    @Import(name="accessTier", required=true)
       private final Output<String> accessTier;
 
     public Output<String> getAccessTier() {
@@ -29,7 +29,7 @@ public final class BucketIntelligentTieringConfigurationTieringGetArgs extends i
      * The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier.
      * 
      */
-    @InputImport(name="days", required=true)
+    @Import(name="days", required=true)
       private final Output<Integer> days;
 
     public Output<Integer> getDays() {

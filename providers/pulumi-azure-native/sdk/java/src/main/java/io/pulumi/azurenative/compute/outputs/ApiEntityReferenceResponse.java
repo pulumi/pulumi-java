@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiEntityReferenceResponse {
     /**
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
@@ -17,8 +17,8 @@ public final class ApiEntityReferenceResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private ApiEntityReferenceResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private ApiEntityReferenceResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

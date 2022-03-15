@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
 
     public static final DatasetFilterValueArgs Empty = new DatasetFilterValueArgs();
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {
@@ -28,7 +28,7 @@ public final class DatasetFilterValueArgs extends io.pulumi.resources.ResourceAr
      * Variable name
      * 
      */
-    @InputImport(name="valueReference", required=true)
+    @Import(name="valueReference", required=true)
       private final Output<String> valueReference;
 
     public Output<String> getValueReference() {

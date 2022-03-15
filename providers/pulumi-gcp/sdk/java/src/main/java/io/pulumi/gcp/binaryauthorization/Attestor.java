@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.binaryauthorization.AttestorArgs;
@@ -48,7 +48,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="attestationAuthorityNote", type=AttestorAttestationAuthorityNote.class, parameters={})
+    @Export(name="attestationAuthorityNote", type=AttestorAttestationAuthorityNote.class, parameters={})
     private Output<AttestorAttestationAuthorityNote> attestationAuthorityNote;
 
     /**
@@ -64,7 +64,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * displayed in chooser dialogs.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Attestor extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

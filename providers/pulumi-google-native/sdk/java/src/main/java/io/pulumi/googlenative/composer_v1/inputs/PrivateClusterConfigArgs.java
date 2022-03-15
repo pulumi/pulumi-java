@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * Optional. If `true`, access to the public endpoint of the GKE cluster is denied.
      * 
      */
-    @InputImport(name="enablePrivateEndpoint")
+    @Import(name="enablePrivateEndpoint")
       private final @Nullable Output<Boolean> enablePrivateEndpoint;
 
     public Output<Boolean> getEnablePrivateEndpoint() {
@@ -34,7 +34,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
      * Optional. The CIDR block from which IPv4 range for GKE master will be reserved. If left blank, the default value of '172.16.0.0/23' is used.
      * 
      */
-    @InputImport(name="masterIpv4CidrBlock")
+    @Import(name="masterIpv4CidrBlock")
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
     public Output<String> getMasterIpv4CidrBlock() {

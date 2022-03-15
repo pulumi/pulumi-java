@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentityMetaResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * Client ID that is used when authenticating.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -35,7 +35,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * AAD Tenant where this identity lives.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -46,7 +46,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * Defines values for a ResourceIdentity's type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -57,7 +57,7 @@ public final class ResourceIdentityResponse extends io.pulumi.resources.InvokeAr
      * Dictionary of the user assigned identities, key is ARM resource ID of the UAI.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedIdentityMetaResponse> userAssignedIdentities;
 
     public Map<String,UserAssignedIdentityMetaResponse> getUserAssignedIdentities() {

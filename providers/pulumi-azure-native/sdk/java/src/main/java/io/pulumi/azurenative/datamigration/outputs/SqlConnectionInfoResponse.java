@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlConnectionInfoResponse {
     /**
      * Additional connection settings
@@ -59,17 +59,17 @@ public final class SqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlConnectionInfoResponse(
-        @OutputCustomType.Parameter("additionalSettings") @Nullable String additionalSettings,
-        @OutputCustomType.Parameter("authentication") @Nullable String authentication,
-        @OutputCustomType.Parameter("dataSource") String dataSource,
-        @OutputCustomType.Parameter("encryptConnection") @Nullable Boolean encryptConnection,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("platform") @Nullable String platform,
-        @OutputCustomType.Parameter("trustServerCertificate") @Nullable Boolean trustServerCertificate,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("additionalSettings") @Nullable String additionalSettings,
+        @CustomType.Parameter("authentication") @Nullable String authentication,
+        @CustomType.Parameter("dataSource") String dataSource,
+        @CustomType.Parameter("encryptConnection") @Nullable Boolean encryptConnection,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("platform") @Nullable String platform,
+        @CustomType.Parameter("trustServerCertificate") @Nullable Boolean trustServerCertificate,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.additionalSettings = additionalSettings;
         this.authentication = authentication;
         this.dataSource = dataSource;

@@ -4,14 +4,14 @@
 package io.pulumi.aws.secretsmanager.outputs;
 
 import io.pulumi.aws.secretsmanager.outputs.GetSecretRotationRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretResult {
     /**
      * The Amazon Resource Name (ARN) of the secret.
@@ -72,18 +72,18 @@ public final class GetSecretResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") String policy,
-        @OutputCustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
-        @OutputCustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
-        @OutputCustomType.Parameter("rotationRules") List<GetSecretRotationRule> rotationRules,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") String policy,
+        @CustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
+        @CustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
+        @CustomType.Parameter("rotationRules") List<GetSecretRotationRule> rotationRules,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

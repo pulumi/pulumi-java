@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
      * 
      */
-    @InputImport(name="collection")
+    @Import(name="collection")
       private final @Nullable Output<String> collection;
 
     public Output<String> getCollection() {
@@ -29,7 +29,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 format.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -40,7 +40,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -51,7 +51,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The client-assigned document ID to use for this document during creation.
      * 
      */
-    @InputImport(name="documentId")
+    @Import(name="documentId")
       private final @Nullable Output<String> documentId;
 
     public Output<String> getDocumentId() {
@@ -62,7 +62,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<String> fields;
 
     public Output<String> getFields() {
@@ -74,7 +74,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 'projects/{{project_id}}/databases/{{database_id}}/documents/{{path}}/{{document_id}}'
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * A relative path to the collection this document exists within
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -97,7 +97,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -108,7 +108,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * Last update timestamp in RFC3339 format.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure;
 
 import io.pulumi.azurenative.offazure.inputs.SitePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * eTag for concurrency control.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -31,7 +31,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Azure location in which Sites is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the VMware site.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Nested properties of VMWare site.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SitePropertiesArgs> properties;
 
     public Output<SitePropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,14 +75,14 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * Site name.
      * 
      */
-    @InputImport(name="siteName")
+    @Import(name="siteName")
       private final @Nullable Output<String> siteName;
 
     public Output<String> getSiteName() {
         return this.siteName == null ? Output.empty() : this.siteName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

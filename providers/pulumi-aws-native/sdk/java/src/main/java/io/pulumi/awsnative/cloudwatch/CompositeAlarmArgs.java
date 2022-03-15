@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
      * 
      */
-    @InputImport(name="actionsEnabled")
+    @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
 
     public Output<Boolean> getActionsEnabled() {
@@ -31,7 +31,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Specify each action as an Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="alarmActions")
+    @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
 
     public Output<List<String>> getAlarmActions() {
@@ -42,7 +42,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the alarm
      * 
      */
-    @InputImport(name="alarmDescription")
+    @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
 
     public Output<String> getAlarmDescription() {
@@ -53,7 +53,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Composite Alarm
      * 
      */
-    @InputImport(name="alarmName", required=true)
+    @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
     public Output<String> getAlarmName() {
@@ -64,7 +64,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Expression which aggregates the state of other Alarms (Metric or Composite Alarms)
      * 
      */
-    @InputImport(name="alarmRule", required=true)
+    @Import(name="alarmRule", required=true)
       private final Output<String> alarmRule;
 
     public Output<String> getAlarmRule() {
@@ -75,7 +75,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The actions to execute when this alarm transitions to the INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="insufficientDataActions")
+    @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
 
     public Output<List<String>> getInsufficientDataActions() {
@@ -86,7 +86,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The actions to execute when this alarm transitions to the OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="oKActions")
+    @Import(name="oKActions")
       private final @Nullable Output<List<String>> oKActions;
 
     public Output<List<String>> getOKActions() {

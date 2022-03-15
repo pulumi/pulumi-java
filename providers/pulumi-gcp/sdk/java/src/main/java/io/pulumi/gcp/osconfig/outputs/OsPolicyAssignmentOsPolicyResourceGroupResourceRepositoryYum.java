@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum {
     /**
      * Required. The location of the repository directory.
@@ -33,12 +33,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum 
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum(
-        @OutputCustomType.Parameter("baseUrl") String baseUrl,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("gpgKeys") @Nullable List<String> gpgKeys,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("baseUrl") String baseUrl,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("gpgKeys") @Nullable List<String> gpgKeys,
+        @CustomType.Parameter("id") String id) {
         this.baseUrl = baseUrl;
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;

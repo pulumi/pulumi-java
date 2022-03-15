@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AcceleratorIpSet {
     /**
      * A list of IP addresses in the IP address set.
@@ -23,10 +23,10 @@ public final class AcceleratorIpSet {
      */
     private final @Nullable String ipFamily;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AcceleratorIpSet(
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("ipFamily") @Nullable String ipFamily) {
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("ipFamily") @Nullable String ipFamily) {
         this.ipAddresses = ipAddresses;
         this.ipFamily = ipFamily;
     }

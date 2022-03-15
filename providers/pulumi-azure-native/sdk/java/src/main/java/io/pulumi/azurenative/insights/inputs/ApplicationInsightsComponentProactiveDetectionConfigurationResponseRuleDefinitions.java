@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * The rule description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * The rule name as it is displayed in UI
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * URL which displays additional info about the proactive detection rule
      * 
      */
-    @InputImport(name="helpUrl")
+    @Import(name="helpUrl")
       private final @Nullable String helpUrl;
 
     public Optional<String> getHelpUrl() {
@@ -56,7 +56,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * A flag indicating whether the rule is enabled by default
      * 
      */
-    @InputImport(name="isEnabledByDefault")
+    @Import(name="isEnabledByDefault")
       private final @Nullable Boolean isEnabledByDefault;
 
     public Optional<Boolean> getIsEnabledByDefault() {
@@ -67,7 +67,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * A flag indicating whether the rule is hidden (from the UI)
      * 
      */
-    @InputImport(name="isHidden")
+    @Import(name="isHidden")
       private final @Nullable Boolean isHidden;
 
     public Optional<Boolean> getIsHidden() {
@@ -78,7 +78,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * A flag indicating whether the rule is in preview
      * 
      */
-    @InputImport(name="isInPreview")
+    @Import(name="isInPreview")
       private final @Nullable Boolean isInPreview;
 
     public Optional<Boolean> getIsInPreview() {
@@ -89,7 +89,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * The rule name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -100,7 +100,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      * A flag indicating whether email notifications are supported for detections for this rule
      * 
      */
-    @InputImport(name="supportsEmailNotifications")
+    @Import(name="supportsEmailNotifications")
       private final @Nullable Boolean supportsEmailNotifications;
 
     public Optional<Boolean> getSupportsEmailNotifications() {

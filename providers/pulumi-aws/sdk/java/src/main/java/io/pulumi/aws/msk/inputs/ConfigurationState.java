@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * List of Apache Kafka versions which can use this configuration.
      * 
      */
-    @InputImport(name="kafkaVersions")
+    @Import(name="kafkaVersions")
       private final @Nullable Output<List<String>> kafkaVersions;
 
     public Output<List<String>> getKafkaVersions() {
@@ -53,7 +53,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Latest revision of the configuration.
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
     public Output<Integer> getLatestRevision() {
@@ -64,7 +64,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Name of the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
      * 
      */
-    @InputImport(name="serverProperties")
+    @Import(name="serverProperties")
       private final @Nullable Output<String> serverProperties;
 
     public Output<String> getServerProperties() {

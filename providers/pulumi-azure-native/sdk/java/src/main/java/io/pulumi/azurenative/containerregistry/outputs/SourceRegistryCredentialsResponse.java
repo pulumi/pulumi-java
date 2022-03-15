@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceRegistryCredentialsResponse {
     /**
      * The authentication mode which determines the source registry login scope. The credentials for the source registry
@@ -19,8 +19,8 @@ public final class SourceRegistryCredentialsResponse {
      */
     private final @Nullable String loginMode;
 
-    @OutputCustomType.Constructor
-    private SourceRegistryCredentialsResponse(@OutputCustomType.Parameter("loginMode") @Nullable String loginMode) {
+    @CustomType.Constructor
+    private SourceRegistryCredentialsResponse(@CustomType.Parameter("loginMode") @Nullable String loginMode) {
         this.loginMode = loginMode;
     }
 

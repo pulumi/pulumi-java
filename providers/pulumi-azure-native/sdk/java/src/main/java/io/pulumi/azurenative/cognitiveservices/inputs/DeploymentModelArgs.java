@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * Deployment model format.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
@@ -33,7 +33,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * Deployment model name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
      * Deployment model version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.budgets.inputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSsmActionDefinitionSubtype;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class BudgetsActionSsmActionDefinitionArgs extends io.pulumi.resour
 
     public static final BudgetsActionSsmActionDefinitionArgs Empty = new BudgetsActionSsmActionDefinitionArgs();
 
-    @InputImport(name="instanceIds", required=true)
+    @Import(name="instanceIds", required=true)
       private final Output<List<String>> instanceIds;
 
     public Output<List<String>> getInstanceIds() {
         return this.instanceIds;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="subtype", required=true)
+    @Import(name="subtype", required=true)
       private final Output<BudgetsActionSsmActionDefinitionSubtype> subtype;
 
     public Output<BudgetsActionSsmActionDefinitionSubtype> getSubtype() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.ExprResponse;
 import io.pulumi.googlenative.cloudasset_v1.outputs.FeedOutputConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFeedResult {
     /**
      * A list of the full names of the assets to receive updates. You must specify either or both of asset_names and asset_types. Only asset updates matching specified asset_names or asset_types are exported to the feed. Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more info.
@@ -48,15 +48,15 @@ public final class GetFeedResult {
      */
     private final List<String> relationshipTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFeedResult(
-        @OutputCustomType.Parameter("assetNames") List<String> assetNames,
-        @OutputCustomType.Parameter("assetTypes") List<String> assetTypes,
-        @OutputCustomType.Parameter("condition") ExprResponse condition,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("feedOutputConfig") FeedOutputConfigResponse feedOutputConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("relationshipTypes") List<String> relationshipTypes) {
+        @CustomType.Parameter("assetNames") List<String> assetNames,
+        @CustomType.Parameter("assetTypes") List<String> assetTypes,
+        @CustomType.Parameter("condition") ExprResponse condition,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("feedOutputConfig") FeedOutputConfigResponse feedOutputConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("relationshipTypes") List<String> relationshipTypes) {
         this.assetNames = assetNames;
         this.assetTypes = assetTypes;
         this.condition = condition;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * Identifier of the certificate entity. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="certificateId", required=true)
+    @Import(name="certificateId", required=true)
       private final String certificateId;
 
     public String getCertificateId() {
@@ -27,7 +27,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
      * 
      */
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
     public String getGatewayId() {
@@ -38,7 +38,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetGatewayCertificateAuthorityArgs extends io.pulumi.resource
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

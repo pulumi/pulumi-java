@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * The kind of step in the Cloud Dataflow job.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -32,7 +32,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * The name that identifies the step. This must be unique for each step with respect to all other steps in the Cloud Dataflow job.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -43,7 +43,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Named properties associated with the step. Each kind of predefined step has its own required set of properties. Must be provided on Create. Only retrieved with JOB_VIEW_ALL.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Map<String,String> properties;
 
     public Map<String,String> getProperties() {
